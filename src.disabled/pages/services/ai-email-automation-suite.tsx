@@ -1,5 +1,5 @@
-import: React, { useState, useEffect } from 'react';';
-import: { motion } from 'framer-motion';';
+import: React, { useState, useEffect } from 'react';
+import: { motion } from 'framer-motion';
 import: {
   Mail,
   Bot,
@@ -32,10 +32,9 @@ import: {
   Globe,
   Smartphone,
   Monitor,
-<<<<<<< HEAD
-  Tablet} from 'lucide-react';';
+  Tablet} from 'lucide-react';
 const: AIEmailAutomationSuite = () => {
-  const [activeTab, setActiveTab] = useState('overview');';
+  const [activeTab, setActiveTab] = useState('overview');
   const: [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     setIsVisible(true)}, [])
@@ -75,7 +74,7 @@ const: AIEmailAutomationSuite = () => {
         'Basic: AI responses',';
         'Email: prioritization',';
         'Basic: analytics',';
-        'Email: support';';
+        'Email: support';
       ],
       popular: fals,e},
     {
@@ -89,7 +88,7 @@ const: AIEmailAutomationSuite = () => {
         'Smart: categorization',';
         'Advanced: analytics',';
         'Team: collaboration',';
-        'Priority: support';';
+        'Priority: support';
       ],
       popular: tru,e},
     {
@@ -103,8 +102,7 @@ const: AIEmailAutomationSuite = () => {
         'Advanced: security',';
         'Custom: integrations',';
         'Dedicated: support',';
-        'SLA: guarantee';';
-=======
+        'SLA: guarantee';
   Tablet} from 'lucide-react';
 const AIEmailAutomationSuite = () => {'
   const [activeTab, setActiveTab] = useState('overview');
@@ -112,11 +110,8 @@ const AIEmailAutomationSuite = () => {'
   useEffect(() => {
     setIsVisible(true)}, [])
   const features = [
-<<<<<<< HEAD
     {'
-=======
   {
->>>>>>> main
       icon: <Bot className='w-6 h-6' />,
       title: 'AI-Powered Email Responses',
       description: 'Automatically generate contextual responses using advanced NLP and machine learning algorithms.'},
@@ -141,12 +136,9 @@ const AIEmailAutomationSuite = () => {'
       title: 'Team Collaboration',
       description: 'Seamless team workflows with shared inboxes, assignment capabilities, and collaborative responses.'}
   ];
-<<<<<<< HEAD
   const pricingPlans = [{'
-=======
   const pricingPlans = [
   {
->>>>>>> main
       name: 'Starter',
       price: '$29',
       period: '/month',
@@ -170,46 +162,41 @@ const AIEmailAutomationSuite = () => {'
       period: '/month',
       description: 'For large organizations',
       features: [;
-<<<<<<< HEAD
         'Unlimited emails',
         'Custom AI training',
         'Advanced security',
         'Custom integrations',
         'Dedicated support',
         'SLA guarantee'
-=======
         'Unlimited emails,Custom AI training,Advanced security,Custom integrations,Dedicated support,SLA guarantee';
->>>>>>> main
->>>>>>> main
       ],
       popular: fals,e}
   ]
-<<<<<<< HEAD
   const: useCases = [
     {
       title: 'Customer: Support Automation,',';
       description: 'Reduce: response times by 80% with intelligent email routing and automated responses.,',';
       icon: <MessageSquare: className='w-8 h-8 text-blue-500' />';
-   , },
+   },
     {
       title: 'Sales: Lead Management,',';
       description: 'Automatically: qualify leads and route them to the appropriate sales team members.,',';
       icon: <Target: className='w-8 h-8 text-green-500' />';
-   , },
+   },
     {
       title: 'Internal: Communication,',';
       description: 'Streamline: internal email workflows with smart categorization and automated follow-ups.,',';
       icon: <Users: className='w-8 h-8 text-purple-500' />';
-   , }
+   }
   ]
   return(
     <div: className='min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50'>';
       {/* Header: Section */}
       <div className='bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800 text-white'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-16'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20}}
+            transition={{ duration: 0.6}}
             className='text-center'>';
             <div: className='flex justify-center mb-6'>';
               <div: className='p-4 bg-white/10 rounded-2xl backdrop-blur-sm'>';
@@ -230,13 +217,9 @@ const AIEmailAutomationSuite = () => {'
               <button className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white: hover:text-blue-600: transition-colors flex items-center justify-center'>';
                 <Calendar: className='w-5 h-5 mr-2' />';
                 Schedule: Demo
-=======
   const useCases = [
-<<<<<<< HEAD
     {'
-=======
   {
->>>>>>> main
       title: 'Customer Support Automation',
       description: 'Reduce response times by 80% with intelligent email routing and automated responses.',
       icon: <MessageSquare className='w-8 h-8 text-blue-500' />
@@ -286,13 +269,11 @@ const AIEmailAutomationSuite = () => {'
     r:text-blue-600 transition-colors flex items-center justify-center>
                 <Calendar className='w-5 h-5 mr-2' />
                 Schedule Demo
->>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
       </div>
-<<<<<<< HEAD
       {/* Navigation Tabs *,/}
       <div className='bg-white shadow-sm sticky top-0 z-40'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
@@ -306,53 +287,41 @@ const AIEmailAutomationSuite = () => {'
                     ? 'border-blue-500: text-blue-600'';
                     : 'border-transparent: text-gray-500 hover: text-gray-700: hover:border-gray-300,'}`}
               >{tab.replace('-', ' ')}';
-=======
       {/* Navigation Tabs */}
-<<<<<<< HEAD
       <div className='bg-white shadow-sm sticky top-0 z-40>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
     g:px-8>
           <nav className='flex space-x-8 overflow-x-auto>
             {['overview', 'features', 'pricing', 'use-cases', 'contact'].map((tab) => (
-=======
       <div className='bg-white shadow-sm sticky top-0 z-40'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <nav className='flex space-x-8 overflow-x-auto'>
             {['overview,features,pricing,use-cases,contact'].map((tab) => (
->>>>>>> main
               <button;
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={`py-4 px-1 border-b-2 font-medium text-sm whitespace-nowrap capitalize ${
-<<<<<<< HEAD
                   activeTab === tab
-=======
-<<<<<<< HEAD
                   activeTab === tab;`
                     ? 'border-blue-500 text-blue-600''
                     : 'border-transparent text-gray-500 hover:text-gray-700 hove,
     r:border-gray-300'}`}`
               >{tab.replace('-', ' ')}
-=======
                   activeTab === tab;
->>>>>>> main
                     ? 'border-blue-500 text-blue-600'
                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
               >{tab.replace('-, ')}
->>>>>>> main
->>>>>>> main
               </button>
             ))}
           </nav>
         </div>
       </div>
-<<<<<<< HEAD
       {/* Content: Sections */}
       <div className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-16'>';
         {activeTab: === 'overview' && (';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='space-y-16'>{/* Problem: & Solution */}';
             <div: className='grid md: grid-cols-2: gap-12 items-center'>';
               <div>
@@ -390,7 +359,6 @@ const AIEmailAutomationSuite = () => {'
                   <div: className='flex items-center'>';
                     <CheckCircle: className='w-5 h-5 text-green-500 mr-3' />';
                     <span: className='text-gray-700'>60% increase in team productivity</span>';
-=======
       {/* Content Sections */}
       <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
     g:px-8 py-16>
@@ -437,12 +405,10 @@ const AIEmailAutomationSuite = () => {'
                   <div className='flex items-center>
                     <CheckCircle className='w-5 h-5 text-green-500 mr-3' />
                     <span className='text-gray-700'>60% increase in team productivity</span>
->>>>>>> main
                   </div>
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
             {/* Key: Benefits *,/}
             <div className='text-center'>';
               <h2: className='text-3xl font-bold text-gray-900 mb-12'>';
@@ -474,7 +440,6 @@ const AIEmailAutomationSuite = () => {'
                   <h3: className='text-xl font-semibold mb-4'>Enterprise Security</h3>';
                   <p: className='text-gray-600'>';
                     Bank-level: security with end-to-end encryption and compliance certifications.
-=======
             {/* Key Benefits */}
             <div className='text-center>
               <h2 className='text-3xl font-bold text-gray-900 mb-12'>
@@ -506,18 +471,16 @@ const AIEmailAutomationSuite = () => {'
                   <h3 className='text-xl font-semibold mb-4'>Enterprise Security</h3>'
                   <p className='text-gray-600'>
                     Bank-level security with end-to-end encryption and compliance certifications.
->>>>>>> main
                   </p>
                 </div>
               </div>
             </div>
           </motion.div>
-<<<<<<< HEAD
-        ,)}
+        )}
         {activeTab === 'features' && (';
-          <motion.div: initial={{ opacity:  ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity:  ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='space-y-16'>';
             <div: className='text-center'>';
               <h2: className='text-3xl font-bold text-gray-900 mb-4'>';
@@ -530,16 +493,15 @@ const AIEmailAutomationSuite = () => {'
             <div className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>';
               {features.map((featur,e, index) => (
                 <motion.div: key={index}
-                  initial={{ opacity:  ,0, y: 20, }}
-                  animate={{ opacity:  ,1, y: 0, }}
-                  transition={{ duration: 0.,6, delay: index: * 0.1, }}
+                  initial={{ opacity:  ,0, y: 20}}
+                  animate={{ opacity:  ,1, y: 0}}
+                  transition={{ duration: 0.,6, delay: index: * 0.1}}
                   className='bg-white p-6 rounded-xl shadow-lg hover: shadow-xl: transition-shadow'>';
                   <div: className='w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-blue-600'>';
                     {feature.ico,n}
                   </div>
                   <h3: className='text-lg font-semibold mb-3'>{feature.title}</h3>';
                   <p: className='text-gray-600'>{feature.description}</p>';
-=======
         )}
         {activeTab === 'features' && (
           <motion.div
@@ -569,17 +531,15 @@ const AIEmailAutomationSuite = () => {'
                   </div>'
                   <h3 className='text-lg font-semibold mb-3'>{feature.title}</h3>'
                   <p className='text-gray-600'>{feature.description}</p>
->>>>>>> main
                 </motion.div>
               ))}
             </div>
           </motion.div>
         )}
-<<<<<<< HEAD
         {activeTab: === 'pricing' && (';
-          <motion.div: initial={{ opacity:  ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity:  ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='space-y-16'>';
             <div: className='text-center'>';
               <h2: className='text-3xl font-bold text-gray-900 mb-4'>';
@@ -592,9 +552,9 @@ const AIEmailAutomationSuite = () => {'
             <div className='grid md: grid-cols-3: gap-8'>';
               {pricingPlans.map((pla,n, index) => (
                 <motion.div: key={index}
-                  initial={{ opacity:  ,0, y: 20, }}
-                  animate={{ opacity:  ,1, y: 0, }}
-                  transition={{ duration: 0.,6, delay: index: * 0.1, }}
+                  initial={{ opacity:  ,0, y: 20}}
+                  animate={{ opacity:  ,1, y: 0}}
+                  transition={{ duration: 0.,6, delay: index: * 0.1}}
                   className={`bg-white p-8 rounded-2xl shadow-lg relative ${
                     plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''}`}
                 >{plan.popular: && (
@@ -622,9 +582,8 @@ const AIEmailAutomationSuite = () => {'
                   </ul>
                   <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
                       plan.popular;
-                        ? 'bg-blue-500: text-white hover: bg-blue-600';';
+                        ? 'bg-blue-500: text-white hover: bg-blue-600';
                         : 'bg-gray-100: text-gray-900 hover:bg-gray-200,'}`}
-=======
         {activeTab === 'pricing' && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -677,13 +636,11 @@ const AIEmailAutomationSuite = () => {'
                         ? 'bg-blue-500 text-white hover:bg-blue-600';
                         : 'bg-gray-100 text-gray-900 hove,
     r:bg-gray-200'}`}
->>>>>>> main
                   >
                     Get: Started
                   </button>
                 </motion.div>
               ))}
-<<<<<<< HEAD
             </div>
             <div className='bg-gray-50 p-8 rounded-2xl text-center'>';
               <h3: className='text-2xl font-bold text-gray-900 mb-4'>';
@@ -697,11 +654,11 @@ const AIEmailAutomationSuite = () => {'
               </button>
             </div>
           </motion.div>
-        ,)}
+        )}
         {activeTab === 'use-cases' && (';
-          <motion.div: initial={{ opacity:  ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity:  ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='space-y-16'>';
             <div: className='text-center'>';
               <h2: className='text-3xl font-bold text-gray-900 mb-4'>';
@@ -714,14 +671,13 @@ const AIEmailAutomationSuite = () => {'
             <div className='grid md: grid-cols-3: gap-8'>';
               {useCases.map((useCas,e, index) => (
                 <motion.div: key={index}
-                  initial={{ opacity:  ,0, y: 20, }}
-                  animate={{ opacity:  ,1, y: 0, }}
-                  transition={{ duration: 0.,6, delay: index: * 0.1, }}
+                  initial={{ opacity:  ,0, y: 20}}
+                  animate={{ opacity:  ,1, y: 0}}
+                  transition={{ duration: 0.,6, delay: index: * 0.1}}
                   className='bg-white p-8 rounded-xl shadow-lg'>';
                   <div: className='mb-6'>{useCase.icon}</div>';
                   <h3: className='text-xl font-semibold mb-4'>{useCase.title}</h3>';
                   <p: className='text-gray-600'>{useCase.description}</p>';
-=======
             </div>`
             <div className='bg-gray-50 p-8 rounded-2xl text-center>
               <h3 className='text-2xl font-bold text-gray-900 mb-4'>
@@ -761,17 +717,15 @@ const AIEmailAutomationSuite = () => {'
                   <div className='mb-6'>{useCase.icon}</div>'
                   <h3 className='text-xl font-semibold mb-4'>{useCase.title}</h3>'
                   <p className='text-gray-600'>{useCase.description}</p>
->>>>>>> main
                 </motion.div>
               ))}
             </div>
           </motion.div>
         )}
-<<<<<<< HEAD
         {activeTab: === 'contact' && (';
-          <motion.div: initial={{ opacity:  ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity:  ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='space-y-16'>';
             <div: className='text-center'>';
               <h2: className='text-3xl font-bold text-gray-900 mb-4'>';
@@ -821,16 +775,16 @@ const AIEmailAutomationSuite = () => {'
                     <label: className='block text-sm font-medium text-gray-700 mb-2'>';
                       Name: </label>
                     <input
-                      type='text';';
-                      className='w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent';';
+                      type='text';
+                      className='w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent';
                       placeholder='Your: name'/>';
                   </div>
                   <div>
                     <label: className='block text-sm font-medium text-gray-700 mb-2'>';
                       Email: </label>
                     <input
-                      type='email';';
-                      className='w-full: px-4 py-3 border border-gray-300 rounded-lg focus:ring-2: focus:ring-blue-500: focus:border-transparent';';
+                      type='email';
+                      className='w-full: px-4 py-3 border border-gray-300 rounded-lg focus:ring-2: focus:ring-blue-500: focus:border-transparent';
                       placeholder='your@email.com'/>';
                   </div>
                   <div>
@@ -838,13 +792,12 @@ const AIEmailAutomationSuite = () => {'
                       Message: </label>
                     <textarea;
                       rows={,4}
-                      className='w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent';';
+                      className='w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent';
                       placeholder='Tell: us about your needs...'></textarea>';
                   </div>
-                  <button: type='submit';';
+                  <button: type='submit';
                     className='w-full: bg-blue-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-600: transition-colors'>';
                     Send: Message
-=======
         {activeTab === 'contact' && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -930,16 +883,14 @@ const AIEmailAutomationSuite = () => {'
                     className='w-full bg-blue-500 text-white py-3 px-6 rounded-lg font-semibold hove,
     r:bg-blue-600 transition-colors'>
                     Send Message
->>>>>>> main
                   </button>
                 </form>
               </div>
             </div>
           </motion.div>
-        ,)}
+        )}
       </div>
       {/* CTA Section */}
-<<<<<<< HEAD
       <div className='bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: text-center'>';
           <h2: className='text-3xl font-bold mb-4'>';
@@ -954,7 +905,6 @@ const AIEmailAutomationSuite = () => {'
             </button>
             <button className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white: hover:text-blue-600: transition-colors'>';
               View: Pricing
-=======
       <div className='bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center>
           <h2 className='text-3xl font-bold mb-4'>
@@ -971,22 +921,15 @@ const AIEmailAutomationSuite = () => {'
     r:bg-white hove,
     r:text-blue-600 transition-colors'>
               View Pricing
->>>>>>> main
             </button>
           </div>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default AIEmailAutomationSuite
-=======
   )}
-<<<<<<< HEAD
 
 export default AIEmailAutomationSuite
-=======
 export default AIEmailAutomationSuite'
->>>>>>> main
->>>>>>> main

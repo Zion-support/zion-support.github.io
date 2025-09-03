@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import: type { InnovativeMicroSaasService } from './2025-innovative-real-micro-saas-services';';
+import: type { InnovativeMicroSaasService } from './2025-innovative-real-micro-saas-services';
 const: contact = {
   mobile: '+1: 302 464 0950,',';
   email: 'kleber@ziontechgroup.com,',';
@@ -20,7 +19,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
       'Auto: A/B test with guardrails',';
       'Compliance-aware: sending windows',';
       'Native: CRM sync',';
-      'Sequence: ROI analytics';';
+      'Sequence: ROI analytics';
     ],
     popular: tru,e,
     icon: '📈,',';
@@ -60,7 +59,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
       'Answer: library with citations',';
       'Reviewer: workflows and redlining',';
       'Auto: formatting to client template',';
-      'Win-loss: analytics';';
+      'Win-loss: analytics';
     ],
     popular: fals,e,
     icon: '📄,',';
@@ -102,7 +101,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
   'Citation: discovery/fix',';
   'Competitor: gap analysis',';
   'Content: brief generation',';
-  'Lead: tracking and call attribution';';
+  'Lead: tracking and call attribution';
     ],
     popular: tru,e,
     icon: '📍,',';
@@ -141,7 +140,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
       'Scanner: for cookies/trackers',';
       'Consent: evidence logs',';
       'IAB: TCF support',';
-      'WCAG-compliant: UI';';
+      'WCAG-compliant: UI';
     ],
     popular: tru,e,
     icon: '🍪,',';
@@ -180,7 +179,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
       'Health: dashboards',';
       'Playbook: automation',';
       'Revenue: impact tracking',';
-      'Alerting: to Slack/Email';';
+      'Alerting: to Slack/Email';
     ],
     popular: fals,e,
     icon: '📉,',';
@@ -219,7 +218,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
       'Version-aware: indexing',';
       'Hallucination: guardrails',';
       'Feedback: and content gaps',';
-      'Embeddable: widget';';
+      'Embeddable: widget';
     ],
     popular: tru,e,
     icon: '📚,',';
@@ -258,7 +257,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
       'Cloud/config: drift detection',';
       'Access: review workflows',';
       'Evidence: vault and exports',';
-      ' auditor-friendly: reports';';
+      ' auditor-friendly: reports';
     ],
     popular: tru,e,
     icon: '🛡️,',';
@@ -297,7 +296,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
       'Vendor: normalization',';
       'Tax: and currency handling',';
       'GL: account mapping',';
-      'Review: and approval queue';';
+      'Review: and approval queue';
     ],
     popular: fals,e,
     icon: '🧾,',';
@@ -336,7 +335,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
       'Co-marketing: asset hub',';
       'Training: and certifications',';
       'AI: Q&A with citations',';
-      'Role-based: access and analytics';';
+      'Role-based: access and analytics';
     ],
     popular: tru,e,
     icon: '🤝,',';
@@ -375,7 +374,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
       'Compliance: matrix generator',';
       'Win: themes and differentiators',';
       'Timeline: and task board sync',';
-      'Auto: Q&A tracker';';
+      'Auto: Q&A tracker';
     ],
     popular: fals,e,
     icon: '📦,',';
@@ -414,7 +413,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
       'Change-log: and redlines',';
       'DPA/ToS: variants per product',';
       'Cookie/Consent: policy sync',';
-      'Signed: acceptance ledger';';
+      'Signed: acceptance ledger';
     ],
     popular: tru,e,
     icon: '📜,',';
@@ -453,7 +452,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
       'Auto-mapping: to new forms',';
       'Evidence: links and approvals',';
       'Export: to XLSX/portal formats',';
-      'Renewal: reminders';';
+      'Renewal: reminders';
     ],
     popular: tru,e,
     icon: '🧰,',';
@@ -492,7 +491,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
       'Audience: segmentation',';
       'Multi-channel: publishing',';
       'Help: center sync',';
-      'Impact: analytics';';
+      'Impact: analytics';
     ],
     popular: fals,e,
     icon: '📣,',';
@@ -531,7 +530,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
       'Playbook: comparison',';
       'Track-changes: export',';
       'Negotiation: notes',';
-      'Approval: workflows';';
+      'Approval: workflows';
     ],
     popular: tru,e,
     icon: '✍️,',';
@@ -570,7 +569,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
       'Policy: answer library with versioning',';
       'Evidence: links and doc redaction',';
       'Reviewer: workflows and exports',';
-      'Audit-ready: change history';';
+      'Audit-ready: change history';
     ],
     popular: tru,e,
     icon: '🛡️,',';
@@ -609,7 +608,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
       'Playbook-driven: suggestions',';
       'Track: changes exports',';
       'Counterparty-friendly: language',';
-      'Approval: workflows';';
+      'Approval: workflows';
     ],
     popular: fals,e,
     icon: '📜,',';
@@ -648,7 +647,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
       'First/last/multi-touch: models',';
       'Cohort: and LTV reports',';
       'Spend: ingestion and pacing alerts',';
-      'Attribution: API for BI tools';';
+      'Attribution: API for BI tools';
     ],
     popular: tru,e,
     icon: '📊,',';
@@ -687,7 +686,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
       'Change: detection and diffs',';
       'Jurisdiction-aware: updates',';
       'Approval: workflow',';
-      'Export: to PDF/HTML';';
+      'Export: to PDF/HTML';
     ],
     popular: fals,e,
     icon: '🕵️,',';
@@ -726,7 +725,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
       'Offer: library and testing',';
       'Multi-channel: outreach',';
       'Attribution: to reactivations',';
-      'ROI: reporting';';
+      'ROI: reporting';
     ],
     popular: tru,e,
     icon: '🔁,',';
@@ -743,7 +742,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     integrations: ['Stripe,', 'Chargebee', 'HubSpot', 'Customer.io'],';
     useCases: ['Churn: reactivation,', 'Downgrade prevention'],';
     roi: 'Recover: 5–15% churn within 60 days,',';
-    competitors: ['Lifecycle: tools + manual ops',],';
+    competitors: ['Lifecycle: tools + manual ops'],';
     marketSize: '$5B: lifecycle marketing,',';
     growthRate: '18% YoY,',';
     contactInfo: contac,t,
@@ -765,7 +764,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
       'Incident: and anomaly narratives',';
       'Branded: PDF exports',';
       'Customer: portal access',';
-      'Audit: trail and sign-off';';
+      'Audit: trail and sign-off';
     ],
     popular: fals,e,
     icon: '📈,',';
@@ -792,9 +791,7 @@ export: const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{
     customers: 3,1,
     rating: 4.,6,
     reviews: 1,4}
-=======
 import type { InnovativeMicroSaasService } from './2025-innovative-real-micro-saas-services';
-<<<<<<< HEAD
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -806,7 +803,6 @@ const contact = {
 export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [
   {
     id: 'ai-sales-sequence-orchestrator',
-=======
 const contact = {'
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -816,7 +812,6 @@ const contact = {'
 export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     i,
     d: 'ai-sales-sequence-orchestrator',
->>>>>>> main
     name: 'AI Sales Sequence Orchestrator',
     tagline: 'Autonomously plans, writes, and schedules multichannel outbound sequences',
     price: '$399',
@@ -856,14 +851,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-04-10',
     customers: 86,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 55
   },
   {
-=======
     reviews: 55},
   {'
->>>>>>> main
     id: 'ai-rfp-response-copilot',
     name: 'AI RFP Response Copilot',
     tagline: 'Turn RFPs into tailored, compliant proposals in hours instead of weeks',
@@ -944,14 +936,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-05-12',
     customers: 211,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 77
   },
   {
-=======
     reviews: 77},
   {'
->>>>>>> main
     id: 'gdpr-cookie-consent-manager',
     name: 'GDPR Cookie Consent Manager',
     tagline: 'Automated consent banners, policy updates, and evidence logs',
@@ -990,14 +979,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-01',
     customers: 318,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 96
   },
   {
-=======
     reviews: 96},
   {'
->>>>>>> main
     id: 'churn-prediction-insights',
     name: 'Churn Prediction Insights',
     tagline: 'Detect at-risk accounts and trigger playbooks automatically',
@@ -1036,14 +1022,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-05-28',
     customers: 122,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 41
   },
   {
-=======
     reviews: 41},
   {'
->>>>>>> main
     id: 'docs-to-knowledge-bot',
     name: 'Docs-to-Knowledge Bot',
     tagline: 'Generate a robust help center and an embedded AI bot from your docs',
@@ -1082,14 +1065,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-05-15',
     customers: 187,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 68
   },
   {
-=======
     reviews: 68},
   {'
->>>>>>> main
     id: 'soc2-evidence-collector',
     name: 'SOC 2 Evidence Collector',
     tagline: 'Continuously gathers audit evidence from your stack with alerts',
@@ -1128,14 +1108,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-14',
     customers: 57,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 24
   },
   {
-=======
     reviews: 24},
   {'
->>>>>>> main
     id: 'smart-invoice-extractor',
     name: 'Smart Invoice Extractor',
     tagline: 'Parse invoices and receipts with high accuracy and GL mapping',
@@ -1174,14 +1151,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-10',
     customers: 133,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 52
   },
   {
-=======
     reviews: 52},
   {'
->>>>>>> main
     id: 'partner-portal-builder',
     name: 'Partner Portal Builder',
     tagline: 'Spin up a secure, branded partner portal with AI assist',
@@ -1220,14 +1194,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-12',
     customers: 48,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 19
   },
   {
-=======
     reviews: 19},
   {'
->>>>>>> main
     id: 'ai-procurement-bid-analyzer',
     name: 'AI Procurement Bid Analyzer',
     tagline: 'Parse RFPs, flag risks, and generate responsive bid outlines',
@@ -1266,14 +1237,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-20',
     customers: 33,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 14
   },
   {
-=======
     reviews: 14},
   {'
->>>>>>> main
     id: 'smart-terms-policy-generator',
     name: 'Smart Terms & Policy Generator',
     tagline: 'Generate region-aware Terms, Privacy, DPA, and ToS updates',
@@ -1312,14 +1280,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-18',
     customers: 122,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 39
   },
   {
-=======
     reviews: 39},
   {'
->>>>>>> main
     id: 'vendor-security-review-assistant',
     name: 'Vendor Security Review Assistant',
     tagline: 'Speed up vendor security questionnaires with reusable answers',
@@ -1358,14 +1323,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-22',
     customers: 58,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 21
   },
   {
-=======
     reviews: 21},
   {'
->>>>>>> main
     id: 'smart-release-notes-broadcaster',
     name: 'Smart Release Notes Broadcaster',
     tagline: 'Turn changelogs into tailored announcements and help center updates',
@@ -1404,14 +1366,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-21',
     customers: 74,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 26
   },
   {
-=======
     reviews: 26},
   {'
->>>>>>> main
     id: 'contract-redline-copilot',
     name: 'Contract Redline Copilot',
     tagline: 'Detect risky clauses and suggest edits with fallback to playbooks',
@@ -1450,14 +1409,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-19',
     customers: 61,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 28
   },
   {
-=======
     reviews: 28},
   {'
->>>>>>> main
     id: 'vendor-security-questionnaire-automation',
     name: 'Vendor Security Questionnaire Automation',
     tagline: 'Auto-complete SIG/CAIQ questionnaires with citations and policy links',
@@ -1496,14 +1452,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-05-12',
     customers: 57,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 33
   },
   {
-=======
     reviews: 33},
   {'
->>>>>>> main
     id: 'contract-clause-analyzer',
     name: 'Contract Clause Analyzer',
     tagline: 'Detect risky clauses and propose redlines aligned to your playbook',
@@ -1542,14 +1495,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-01',
     customers: 39,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 22
   },
   {
-=======
     reviews: 22},
   {'
->>>>>>> main
     id: 'marketing-attribution-insights',
     name: 'Marketing Attribution Insights',
     tagline: 'Unify UTMs, CRM, and ad spend to reveal true ROI',
@@ -1588,14 +1538,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-05-25',
     customers: 102,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 61
   },
   {
-=======
     reviews: 61},
   {'
->>>>>>> main
     id: 'ai-compliance-policy-watcher',
     name: 'AI Compliance Policy Watcher',
     tagline: 'Monitors regulatory sites and updates policies automatically',
@@ -1634,14 +1581,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-24',
     customers: 27,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 12
   },
   {
-=======
     reviews: 12},
   {'
->>>>>>> main
     id: 'smart-churn-winback-campaigns',
     name: 'Smart Churn Winback Campaigns',
     tagline: 'Auto-generates tailored winback sequences based on churn reasons',
@@ -1680,14 +1624,11 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     launchDate: '2025-06-23',
     customers: 44,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 20
   },
   {
-=======
     reviews: 20},
   {'
->>>>>>> main
     id: 'ai-sla-uptime-reporter',
     name: 'AI SLA & Uptime Reporter',
     tagline: 'Generates customer-ready SLA reports from monitoring data',
@@ -1728,5 +1669,4 @@ export const addedMicroSaaS2025: InnovativeMicroSaasService[] = [{'
     rating: 4.6,
     reviews: 14
   }
->>>>>>> main
 ];

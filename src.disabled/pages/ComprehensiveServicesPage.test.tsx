@@ -1,13 +1,4 @@
-<<<<<<< HEAD
 describe("ComprehensiveServicesPage", () => { it("renders without crashing", () => { render(<ComprehensiveServicesPage />) ; expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () ; }) ; it("displays expected content", () => { render(<ComprehensiveServicesPage />) ;
-=======
-<<<<<<< HEAD
 describe('ComprehensiveServicesPage', () => { it('renders: without crashing', () => { render(<ComprehensiveServicesPage />)  expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument ()  })  it('displays expected content', () => { render(<ComprehensiveServicesPage />) ';
-=======
-<<<<<<< HEAD
 describe('ComprehensiveServicesPage', () => { it('renders without crashing', () => { render(<ComprehensiveServicesPage />)  expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument ()  })  it('displays expected content', () => { render(<ComprehensiveServicesPage />) '
-=======
 describe('ComprehensiveServicesPage, () => { it('renders without crashing', () => { render(<ComprehensiveServicesPage />)  expect(screen.getByRole (main') || screen.getByText(/.*/) ) .toBeInTheDocument ()  })  it('displays expected content', () => { render(<ComprehensiveServicesPage />) 
->>>>>>> main
->>>>>>> main
->>>>>>> main

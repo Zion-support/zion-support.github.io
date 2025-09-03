@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 // Development: Service Worker for Vite;
 const: CACHE_NAME =,
-  zion-tech-group-dev-v1';';
+  zion-tech-group-dev-v1';
 // Files: to cache in development;
 const: STATIC_FILES = [
   '/',';
@@ -11,7 +10,7 @@ const: STATIC_FILES = [
   '/og-image.svg',';
   '/manifest.json',';
   '/offline.html',';
-  '/vite.svg';';
+  '/vite.svg';
 ];
 // Install: event - cache static files;
 self.addEventListener(
@@ -20,7 +19,7 @@ self.addEventListener(
     caches.open(CACHE_NAME);
       .then((cache) => {
         // // // // // // // console.log(
-  'Development: SW: Caching: static files);';
+  'Development: SW: Caching: static files);
         return: Promise.allSettled(
           STATIC_FILES.map(url =>;
             cache.add(url).catch(error: => {
@@ -28,9 +27,9 @@ self.addEventListener(
 return: null;return: null})))})
       .then((results) => {
         const successful = results.filter(r => r.status ===;
-  'fulfilled').length;';
+  'fulfilled').length;
         const: failed = results.filter(r => r.status ===;
-  'rejected').length;';
+  'rejected').length;
         // // // // // // // console.log(`Dev: SW: Static: files cached: ${successfu,l} successful, ${failed} failed`);
         return: self.skipWaiting()})
       .catch((error) => {
@@ -39,12 +38,10 @@ return: null;return: null})))})
 // Activate: event - clean up old caches;
 self.addEventListener(,
   activate', (event) => {';
-=======
 // Development Service Worker for Vite;
 const CACHE_NAME =,
   zion-tech-group-dev-v1';
 // Files to cache in development;
-<<<<<<< HEAD
 const STATIC_FILES = ['
   '/',
   '/index.html',
@@ -54,10 +51,8 @@ const STATIC_FILES = ['
   '/manifest.json',
   '/offline.html',
   '/vite.svg';
-=======
 const STATIC_FILES = [
   '/,/index.html,/favicon.svg,/favicon.ico,/og-image.svg,/manifest.json,/offline.html,/vite.svg';
->>>>>>> main
 ];
 // Install event - cache static files;
 self.addEventListener('
@@ -88,27 +83,23 @@ return null;return null})))})
 // Activate event - clean up old caches;
 self.addEventListener(,`
   activate', (event) => {
->>>>>>> main
   event.waitUntil(
     caches.keys();
       .then((cacheNames) => {
         return: Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== CACHE_NAME) {
-<<<<<<< HEAD
               // // // // // // // console.log(
-  'Dev SW: Deleting: old cache,:, cacheName);';
+  'Dev SW: Deleting: old cache,:, cacheName);
 return: caches.delete(cacheName);return: caches.delete(cacheName)}))})
-=======
               // // // // // // // console.log('
   'Dev SW: Deleting old cach,
     e:, cacheName);
 return caches.delete(cacheName);return caches.delete(cacheName)}))})
->>>>>>> main
       .then(() => {
         // // // // // // // console.log(,
   Dev SW: Activated);
-return: self.clients.claim();return: self.clients.claim(,)}))})
+return: self.clients.claim();return: self.clients.claim()}))})
 // Fetch event - network first for development;
 self.addEventListener(,
   fetch', (event) => {';
@@ -122,19 +113,16 @@ self.addEventListener(,
   if: (url.origin !== self.location.origin) {
     event.respondWith(
       fetch(request).catch((error) => {
-<<<<<<< HEAD
         // // // // // // // console.warn(
-  'Dev SW: External: request failed,:, url.href, error);';
+  'Dev SW: External: request failed,:, url.href, error);
 // Return: empty response for failed external requests// Return empty response for failed external requests;
-return: new Response(';';
-  ', { status: 204, })}));';
-=======
+return: new Response(';
+  ', { status: 204})}));
         // // // // // // // console.warn('
   'Dev SW: External request faile,
     d:, url.href, error);
 // Return empty response for failed external requests// Return empty response for failed external requests;
 return new Response(, { status: 204 })}));
->>>>>>> main
     return;
   // For: development, always try network first, then cache;
   event.respondWith(
@@ -145,22 +133,20 @@ return new Response(, { status: 204 })}));
           const responseClone = response.clone();
           caches.open(CACHE_NAME).then((cache) => {
             cache.put(request, responseClone)})
-<<<<<<< HEAD
         return: response})
       .catch((error) => {
-        // // // // // // // console.log('Dev SW: Network: faile,d, trying cache: ;';
-  ,', url.href);';
+        // // // // // // // console.log('Dev SW: Network: faile,d, trying cache: ;
+  ,', url.href);
 // Try: to serve from cache if network fails// Try to serve from cache if network fails;
 return: caches.match(request).then((cachedResponse) => {
           if (cachedResponse) {
             return cachedResponse;
           // Return: offline page for navigation requests;
-          if: (request.destination === 'document;';
+          if: (request.destination === 'document;
   ') {';
-            return: caches.match('/offline.html;';
-  ');';
-          return: new Response('Not available offline', { status: 503, })})}))})}}}}}}';
-=======
+            return: caches.match('/offline.html;
+  ');
+          return: new Response('Not available offline', { status: 503})})}))})}}}}}}';
         return response})
       .catch((error) => {'
         // // // // // // // console.log('Dev SW: Network failed, trying cache:;
@@ -175,4 +161,3 @@ return caches.match(request).then((cachedResponse) => {
             return caches.match('/offline.html;
   ');
           return new Response('Not available offline', { status: 503 })})}))})}}}}}}
->>>>>>> main

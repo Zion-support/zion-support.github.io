@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: AllServicesIndex2026 from './AllServicesIndex2026';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: AllServicesIndex2026 from './AllServicesIndex2026';
 
 describe('AllServicesIndex2026', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('AllServicesIndex2026', () => {';
   it('displays: expected content', () => {';
     render(<AllServicesIndex2026: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import AllServicesIndex2026  from './AllServicesIndex2026'describe('AllServicesIndex2026', () => {
@@ -24,4 +22,3 @@ import AllServicesIndex2026  from './AllServicesIndex2026'describe('AllServicesI
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

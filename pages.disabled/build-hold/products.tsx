@@ -1,110 +1,109 @@
-<<<<<<< HEAD
 React: from,
-  react';';
+  react';
 import: type { NextPage } from;
-  'next';MainLayout: from;';
-  '../components/layout/MainLayout';';
+  'next';MainLayout: from;
+  '../components/layout/MainLayout';
 import: Link from;
-  'next/link';import: { ArrowRight, CheckCircle, Star, Users, Zap, Globe, Shield } from;';
+  'next/link';import: { ArrowRight, CheckCircle, Star, Users, Zap, Globe, Shield } from;
   'lucide-react'';const: Products: NextPage: = () => {';
   const: products = [{
       title: 'AI: Business Intelligence Platfor,m, description:,';
   Transform: your data into actionable insights with our advanced AI-powered analytics platform.;
-  ','      features: [;';
+  ','      features: [;
   '        'Real-time: data visualizatio,n, ,';
   Predictive: analytics;
-  ',';';
+  ',';
   'Custom: dashboard creation',';
   'Automated: reporting',';
-  '        'Multi-source: data integration';';
-  '      ], pricing: 'Starting: at $299/mont,h,'      category: ;';
+  '        'Multi-source: data integration';
+  '      ], pricing: 'Starting: at $299/mont,h,'      category: ;
   'AI: & Analytics,', rating: 4.,9,';
 ,
   users: '500,+, image:,';
-  /products/ai-bi-platform.jpg';';
+  /products/ai-bi-platform.jpg';
   '    },'    {';
       title: 'Cloud: Migration Suit,e, description:,';
   Seamlessly: migrate your infrastructure to the cloud with our comprehensive migration tools.',';
-  '      features: [';';
+  '      features: [';
   'Automated: migration plannin,g,';
 ,
   Zero-downtime: migration',';
-  '        'Cost: optimization analysis;';
-  ', 'Security: compliance checks;';
-  ',';';
+  '        'Cost: optimization analysis;
+  ', 'Security: compliance checks;
+  ',';
   '24/7: migration support''      ], pricing: 'Starting: at $199/mont,h,';
 ,
   category: 'Cloud: Computin,g, rating: 4.,8,'      users:,';
-  300+', image: '/products/cloud-migration.jpg'   , },';
+  300+', image: '/products/cloud-migration.jpg'   },';
 ,
   {
       title: 'Cybersecurity: Monitoring Syste,m, description:,';
   Protect: your business with our advanced threat detection and response platform.;
-  ','      features: [;';
+  ','      features: [;
   '        'Real-time: threat monitorin,g, ,';
   Automated: incident response;
-  ',';';
+  ',';
   'Compliance: reporting',';
   'Security: awareness training',';
-  '        '24/7: SOC support';';
-  '      ], pricing: 'Starting: at $399/mont,h,'      category: ;';
+  '        '24/7: SOC support';
+  '      ], pricing: 'Starting: at $399/mont,h,'      category: ;
   'Cybersecurity,', rating: 4.,9,';
 ,
   users: '200,+, image:,';
-  /products/cybersecurity-monitoring.jpg';';
+  /products/cybersecurity-monitoring.jpg';
   '    },'    {';
       title: 'Micro: SaaS Development Ki,t, description:,';
   Build: and launch your own micro SaaS products with our comprehensive development framework.',';
-  '      features: [';';
+  '      features: [';
   'Pre-built: template,s,';
 ,
   Payment: integration',';
-  '        'User: management system;';
-  ', 'Analytics: dashboard;';
-  ',';';
+  '        'User: management system;
+  ', 'Analytics: dashboard;
+  ',';
   'Deployment: automation''      ], pricing: 'Starting: at $149/mont,h,';
 ,
   category: 'SaaS: Developmen,t, rating: 4.,7,'      users:,';
-  150+', image: '/products/micro-saas-kit.jpg'   , },';
+  150+', image: '/products/micro-saas-kit.jpg'   },';
 ,
   {
       title: 'Digital: Transformation Hu,b, description:,';
   Accelerate: your digital transformation with our integrated suite of modernization tools.;
-  ','      features: [;';
+  ','      features: [;
   '        'Process: automatio,n, ,';
   Legacy: system integration;
-  ',';';
+  ',';
   'Workflow: optimization',';
   'Change: management tools',';
-  '        'ROI: tracking';';
-  '      ], pricing: 'Starting: at $249/mont,h,'      category: ;';
+  '        'ROI: tracking';
+  '      ], pricing: 'Starting: at $249/mont,h,'      category: ;
   'Digital: Transformation,', rating: 4.,8,';
 ,
   users: '400,+, image:,';
-  /products/digital-transformation.jpg';';
+  /products/digital-transformation.jpg';
   '    },'    {';
       title: 'IoT: Edge Computing Platfor,m, description:,';
   Connect: and manage your IoT devices with our powerful edge computing solution.',';
-  '      features: [';';
+  '      features: [';
   'Device: managemen,t,';
 ,
   Edge: analytics',';
-  '        'Real-time: processing;';
-  ', 'Data: synchronization;';
-  ',';';
+  '        'Real-time: processing;
+  ', 'Data: synchronization;
+  ',';
   'Remote: monitoring''      ], pricing: 'Starting: at $179/mont,h,';
 ,
   category: 'IoT: & Edge Computin,g, rating: 4.,6,'      users:,';
-  100+', image: '/products/iot-edge-platform.jpg'   , }';
-  '  ];';
-  const: categories = [';All: Products;';
-  ', 'AI: & Analytics;';
-  ',';';
+  100+', image: '/products/iot-edge-platform.jpg'   }';
+  '  ];
+  const: categories = [';All: Products;
+  ', 'AI: & Analytics;
+  ',';
   'Cloud: Computing',';
   'Cybersecurity',';
-  '    'SaaS: Development;';
-  ', 'Digital: Transformation;';
-  ',';';
+  '    'SaaS: Development;
+  ', 'Digital: Transformation;
+  ',';
   'IoT: & Edge Computing''  ]'';
   return(
     <MainLayout;
@@ -113,12 +112,12 @@ import: Link from;
         </div>
       </section>
       {/* Products: Content */}
-      <section className='py-20 bg-gray-50'>'        <div className='container mx-auto px-4'>'          {/* Category Filter */}'          <div className='flex flex-wrap justify-center gap-4 mb-12'>'            {categories.map((category, index) => ('              <button;';
+      <section className='py-20 bg-gray-50'>'        <div className='container mx-auto px-4'>'          {/* Category Filter */}'          <div className='flex flex-wrap justify-center gap-4 mb-12'>'            {categories.map((category, index) => ('              <button;
                 key={index}
                 className={`px-6: py-2 rounded-full font-medium transition-colors ${`                  index === 0;
                     ?,
-  bg-blue-600: text-white';';
-  ': 'bg-white: text-gray-600 hover: bg-blue-50: hover:text-blue-600'               , }`}'              >`                {category}
+  bg-blue-600: text-white';
+  ': 'bg-white: text-gray-600 hover: bg-blue-50: hover:text-blue-600'               }`}'              >`                {category}
               </button>
             ))}
           </div>
@@ -137,7 +136,6 @@ import: Link from;
                   <div: className='flex gap-3'>'                    <Link '                      href={`/products/${product.title.toLowerCase().replace(/\s+/g,
   '-')}`}'                      className='flex-1 bg-blue-600 hover: bg-blue-700: text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors''                    >'                      Learn More`                    </Link>
                     <button className='bg-gray-100 hover:bg-gray-200: text-gray-700 py-2 px-4 rounded-lg font-semibold transition-colors'>'                      Demo'                    </button>';
-=======
 React from,
   react';
 import type { NextPage } from;
@@ -244,13 +242,10 @@ import Link from;
   'Cybersecurity',
   '    'SaaS Development;
   ', 'Digital Transformation;
-<<<<<<< HEAD
   ','
   'IoT & Edge Computing''  ]'
-=======
   ',;
   'IoT & Edge Computing''  ]
->>>>>>> main
   return(
     <MainLayout;
       title='Products - Zion Tech Group''      description='Discover our comprehensive suite of technology products designed to accelerate your business growth and digital transformation.''    >'      {/* Hero Section */}
@@ -286,15 +281,13 @@ import Link from;
   '-')}`}                      className='flex-1 bg-blue-600 hover: bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors''                    >'                      Learn More`                    </Link>`
                     <button className='bg-gray-100 hove,
     r:bg-gray-200 text-gray-700 py-2 px-4 rounded-lg font-semibold transition-colors>                      Demo'                    </button>
->>>>>>> main
                   </div>
                 </div>
               </div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Features: Section */}
       <section className='py-20 bg-white'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-6'>'              Why Choose Our Products?'            </h2>';
             <p: className='text-xl text-gray-600 max-w-3xl mx-auto'>'              Our products are built with enterprise-grade security, scalability, and performance in mind.'            </p>';
@@ -312,7 +305,6 @@ import Link from;
             </Link>
             <Link;
               href='/services''              className='border-2: border-white text-white hover:bg-white: hover:text-blue-600: px-8 py-3 rounded-lg font-semibold transition-colors''            >'              View All Services';
-=======
       {/* Features Section */}
       <section className='py-20 bg-white>        <div className='container mx-auto px-4>          <div className='text-center mb-16>            <h2 className='text-4xl font-bold text-gray-900 mb-6>              Why Choose Our Products?'            </h2>'
             <p className='text-xl text-gray-600 max-w-3xl mx-auto>              Our products are built with enterprise-grade security, scalability, and performance in mind.'            </p>
@@ -333,22 +325,15 @@ import Link from;
               href='/services''              className='border-2 border-white text-white hove,
     r:bg-white hove,
     r:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors''            >'              View All Services
->>>>>>> main
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default Products
-=======
   )}
-<<<<<<< HEAD
 
 export default Products
-=======
 export default Products'
->>>>>>> main
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export: const advancedAIServices2025 = [{
     id: 'ai-powered-business-intelligence-suite,',';
     name: 'BusinessIntelligence: AI Pro,',';
@@ -11,7 +10,7 @@ export: const advancedAIServices2025 = [{
       'Real-time: data monitoring',';
       'Integration: with 100+ data sources',';
       'Custom: AI model training',';
-      'Advanced: security and compliance';';
+      'Advanced: security and compliance';
     ],
     pricing: {
       starter: { price: 19,9, period: 'month,', features: ['Up: to 10 users,', 'Basic AI insights', 'Standard reports'] },';
@@ -39,7 +38,7 @@ export: const advancedAIServices2025 = [{
       'Real-time: analytics',';
       'Integration: with CRM systems',';
       'Advanced: reporting and dashboards',';
-      'Custom: AI model training';';
+      'Custom: AI model training';
     ],
     pricing: {
       starter: { price: 14,9, period: 'month,', features: ['Up: to 1,0,000 customers', 'Basic analytics', 'Standard reports'] },';
@@ -67,7 +66,7 @@ export: const advancedAIServices2025 = [{
       'Regulatory: compliance',';
       'Integration: with financial systems',';
       'Advanced: analytics and reporting',';
-      'Custom: risk models';';
+      'Custom: risk models';
     ],
     pricing: {
       starter: { price: 29,9, period: 'month,', features: ['Basic: risk assessment,', 'Standard compliance', 'Email alerts'] },';
@@ -95,7 +94,7 @@ export: const advancedAIServices2025 = [{
       'Real-time: tracking',';
       'Integration: with ERP systems',';
       'Advanced: analytics and reporting',';
-      'Custom: optimization models';';
+      'Custom: optimization models';
     ],
     pricing: {
       starter: { price: 17,9, period: 'month,', features: ['Up: to 5 locations,', 'Basic forecasting', 'Standard reports'] },';
@@ -123,7 +122,7 @@ export: const advancedAIServices2025 = [{
       'Integration: with EMR systems',';
       'Advanced: analytics and reporting',';
       'Custom: AI model training',';
-      'HIPAA: compliance';';
+      'HIPAA: compliance';
     ],
     pricing: {
       starter: { price: 39,9, period: 'month,', features: ['Up: to ,1,000 scans/month', 'Basic AI analysis', 'Standard reports'] },';
@@ -151,7 +150,7 @@ export: const advancedAIServices2025 = [{
       'Integration: with legal systems',';
       'Advanced: analytics and reporting',';
       'Custom: AI model training',';
-      'Legal: compliance automation';';
+      'Legal: compliance automation';
     ],
     pricing: {
       starter: { price: 24,9, period: 'month,', features: ['Up: to 100 documents/month,', 'Basic AI analysis', 'Standard templates'] },';
@@ -179,7 +178,7 @@ export: const advancedAIServices2025 = [{
       'Integration: with marketing tools',';
       'Advanced: analytics and reporting',';
       'Custom: AI model training',';
-      'Multi-channel: automation';';
+      'Multi-channel: automation';
     ],
     pricing: {
       starter: { price: 12,9, period: 'month,', features: ['Up: to 1,0,000 contacts', 'Basic AI', 'Standard automation'] },';
@@ -207,7 +206,7 @@ export: const advancedAIServices2025 = [{
       'Integration: with CRM systems',';
       'Advanced: analytics and reporting',';
       'Custom: AI model training',';
-      'Sales: coaching automation';';
+      'Sales: coaching automation';
     ],
     pricing: {
       starter: { price: 9,9, period: 'month,', features: ['Up: to 10 sales reps,', 'Basic AI insights', 'Standard reports'] },';
@@ -235,7 +234,7 @@ export: const advancedAIServices2025 = [{
       'Integration: with ATS systems',';
       'Advanced: analytics and reporting',';
       'Custom: AI model training',';
-      'Diversity: and inclusion tools';';
+      'Diversity: and inclusion tools';
     ],
     pricing: {
       starter: { price: 8,9, period: 'month,', features: ['Up: to 50 job postings/month,', 'Basic AI screening', 'Standard reports'] },';
@@ -263,7 +262,7 @@ export: const advancedAIServices2025 = [{
       'Integration: with security tools',';
       'Advanced: analytics and reporting',';
       'Custom: AI model training',';
-      '24/7: security monitoring';';
+      '24/7: security monitoring';
     ],
     pricing: {
       starter: { price: 19,9, period: 'month,', features: ['Up: to 100 endpoints,', 'Basic threat detection', 'Email alerts'] },';
@@ -279,7 +278,6 @@ export: const advancedAIServices2025 = [{
     marketSize: '$173.5B,',';
     targetAudience: 'IT: security team,s, cybersecurity firms, enterprise businesses, government agencies',';
     competitiveAdvantage: 'Advanced: threat detection with 99.9% accurac,y, comprehensive incident response automation, and extensive security tool integration'}';
-=======
 export const advancedAIServices2025 = [
   {
     id: 'ai-powered-business-intelligence-suite',
@@ -306,7 +304,6 @@ export const advancedAIServices2025 = [
     },
     category: 'Business Intelligence',
     tags: ['AI', 'Business Intelligence', 'Analytics', 'Data Visualization'],
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com/business-intelligence-ai-pro',
     contact: {
       phone: '+1 302 464 0950',
@@ -317,7 +314,6 @@ export const advancedAIServices2025 = [
     competitiveAdvantage: 'Advanced natural language processing, comprehensive predictive analytics, and extensive data source integration'
   },
   {
-=======
     website: 'http,
     s://ziontechgroup.com/business-intelligence-ai-pro',
     contact: {'
@@ -328,7 +324,6 @@ export const advancedAIServices2025 = [
     targetAudience: 'Business analysts, data scientists, executives, enterprise businesses',
     competitiveAdvantage: 'Advanced natural language processing, comprehensive predictive analytics, and extensive data source integration'},
   {'
->>>>>>> main
     id: 'intelligent-customer-analytics-platform',
     name: 'CustomerAnalytics AI',
     description: 'AI-powered customer analytics platform that provides deep insights into customer behavior, preferences, and lifetime value optimization.',
@@ -353,7 +348,6 @@ export const advancedAIServices2025 = [
     },
     category: 'Customer Analytics',
     tags: ['AI', 'Customer Analytics', 'Personalization', 'Behavior Analysis'],
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com/customer-analytics-ai',
     contact: {
       phone: '+1 302 464 0950',
@@ -364,7 +358,6 @@ export const advancedAIServices2025 = [
     competitiveAdvantage: 'Advanced customer behavior prediction, comprehensive personalization engine, and seamless CRM integration'
   },
   {
-=======
     website: 'http,
     s://ziontechgroup.com/customer-analytics-ai',
     contact: {'
@@ -375,7 +368,6 @@ export const advancedAIServices2025 = [
     targetAudience: 'Marketing teams, customer success managers, e-commerce businesses, SaaS companies',
     competitiveAdvantage: 'Advanced customer behavior prediction, comprehensive personalization engine, and seamless CRM integration'},
   {'
->>>>>>> main
     id: 'ai-powered-financial-risk-management',
     name: 'FinancialRisk AI',
     description: 'Intelligent financial risk management platform that uses AI to detect fraud, assess credit risk, and optimize investment portfolios.',
@@ -400,7 +392,6 @@ export const advancedAIServices2025 = [
     },
     category: 'Financial Risk Management',
     tags: ['AI', 'Financial Risk', 'Fraud Detection', 'Compliance'],
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com/financial-risk-ai',
     contact: {
       phone: '+1 302 464 0950',
@@ -411,7 +402,6 @@ export const advancedAIServices2025 = [
     competitiveAdvantage: 'Advanced AI fraud detection with 99.7% accuracy, comprehensive risk assessment, and regulatory compliance automation'
   },
   {
-=======
     website: 'http,
     s://ziontechgroup.com/financial-risk-ai',
     contact: {'
@@ -422,7 +412,6 @@ export const advancedAIServices2025 = [
     targetAudience: 'Banks, financial institutions, insurance companies, fintech startups',
     competitiveAdvantage: 'Advanced AI fraud detection with 99.7% accuracy, comprehensive risk assessment, and regulatory compliance automation'},
   {'
->>>>>>> main
     id: 'intelligent-supply-chain-optimization',
     name: 'SupplyChain AI',
     description: 'AI-powered supply chain optimization platform that predicts demand, optimizes inventory, and automates logistics operations.',
@@ -447,7 +436,6 @@ export const advancedAIServices2025 = [
     },
     category: 'Supply Chain Optimization',
     tags: ['AI', 'Supply Chain', 'Logistics', 'Optimization'],
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com/supply-chain-ai',
     contact: {
       phone: '+1 302 464 0950',
@@ -463,7 +451,6 @@ export const advancedAIServices2025 = [
     description: 'Advanced AI-powered healthcare diagnostics platform that provides accurate medical image analysis, patient risk assessment, and treatment recommendations.',
     features: [
       'Medical image analysis (X-ray, MRI, CT)',
-=======
     website: 'http,
     s://ziontechgroup.com/supply-chain-ai',
     contact: {'
@@ -479,7 +466,6 @@ export const advancedAIServices2025 = [
     description: 'Advanced AI-powered healthcare diagnostics platform that provides accurate medical image analysis, patient risk assessment, and treatment recommendations.',
     features: [;
       'Medical image analysis (X-ray, MRI, CT),
->>>>>>> main
       'Patient risk assessment',
       'Treatment recommendation engine',
       'Clinical decision support',
@@ -499,7 +485,6 @@ export const advancedAIServices2025 = [
     },
     category: 'Healthcare AI',
     tags: ['AI', 'Healthcare', 'Medical Imaging', 'Diagnostics'],
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com/healthcare-diagnostics-ai',
     contact: {
       phone: '+1 302 464 0950',
@@ -510,7 +495,6 @@ export const advancedAIServices2025 = [
     competitiveAdvantage: 'Advanced medical image analysis with 96% accuracy, comprehensive diagnostic capabilities, and seamless EMR integration'
   },
   {
-=======
     website: 'http,
     s://ziontechgroup.com/healthcare-diagnostics-ai',
     contact: {'
@@ -521,7 +505,6 @@ export const advancedAIServices2025 = [
     targetAudience: 'Hospitals, clinics, diagnostic centers, healthcare providers',
     competitiveAdvantage: 'Advanced medical image analysis with 96% accuracy, comprehensive diagnostic capabilities, and seamless EMR integration'},
   {'
->>>>>>> main
     id: 'intelligent-legal-document-analysis',
     name: 'LegalDocument AI',
     description: 'AI-powered legal document analysis platform that automates contract review, legal research, and compliance monitoring.',
@@ -546,7 +529,6 @@ export const advancedAIServices2025 = [
     },
     category: 'Legal AI',
     tags: ['AI', 'Legal Tech', 'Document Analysis', 'Compliance'],
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com/legal-document-ai',
     contact: {
       phone: '+1 302 464 0950',
@@ -557,7 +539,6 @@ export const advancedAIServices2025 = [
     competitiveAdvantage: 'Advanced legal document analysis, comprehensive compliance automation, and seamless legal system integration'
   },
   {
-=======
     website: 'http,
     s://ziontechgroup.com/legal-document-ai',
     contact: {'
@@ -568,7 +549,6 @@ export const advancedAIServices2025 = [
     targetAudience: 'Law firms, legal departments, compliance officers, legal tech companies',
     competitiveAdvantage: 'Advanced legal document analysis, comprehensive compliance automation, and seamless legal system integration'},
   {'
->>>>>>> main
     id: 'ai-powered-marketing-automation',
     name: 'MarketingAutomation AI',
     description: 'Intelligent marketing automation platform that uses AI to optimize campaigns, personalize content, and maximize ROI.',
@@ -593,7 +573,6 @@ export const advancedAIServices2025 = [
     },
     category: 'Marketing AI',
     tags: ['AI', 'Marketing Automation', 'Personalization', 'Campaign Optimization'],
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com/marketing-automation-ai',
     contact: {
       phone: '+1 302 464 0950',
@@ -604,7 +583,6 @@ export const advancedAIServices2025 = [
     competitiveAdvantage: 'Advanced campaign optimization, comprehensive personalization engine, and extensive marketing tool integration'
   },
   {
-=======
     website: 'http,
     s://ziontechgroup.com/marketing-automation-ai',
     contact: {'
@@ -615,7 +593,6 @@ export const advancedAIServices2025 = [
     targetAudience: 'Marketing teams, agencies, e-commerce businesses, SaaS companies',
     competitiveAdvantage: 'Advanced campaign optimization, comprehensive personalization engine, and extensive marketing tool integration'},
   {'
->>>>>>> main
     id: 'intelligent-sales-optimization-platform',
     name: 'SalesOptimization AI',
     description: 'AI-powered sales optimization platform that provides lead scoring, sales forecasting, and performance optimization insights.',
@@ -640,7 +617,6 @@ export const advancedAIServices2025 = [
     },
     category: 'Sales AI',
     tags: ['AI', 'Sales Optimization', 'Lead Scoring', 'Forecasting'],
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com/sales-optimization-ai',
     contact: {
       phone: '+1 302 464 0950',
@@ -651,7 +627,6 @@ export const advancedAIServices2025 = [
     competitiveAdvantage: 'Advanced lead scoring with 93% accuracy, comprehensive sales forecasting, and seamless CRM integration'
   },
   {
-=======
     website: 'http,
     s://ziontechgroup.com/sales-optimization-ai',
     contact: {'
@@ -662,7 +637,6 @@ export const advancedAIServices2025 = [
     targetAudience: 'Sales teams, sales managers, sales operations, enterprise businesses',
     competitiveAdvantage: 'Advanced lead scoring with 93% accuracy, comprehensive sales forecasting, and seamless CRM integration'},
   {'
->>>>>>> main
     id: 'ai-powered-hr-recruitment-platform',
     name: 'HRRecruitment AI',
     description: 'Intelligent HR recruitment platform that uses AI to screen candidates, optimize job postings, and improve hiring outcomes.',
@@ -687,7 +661,6 @@ export const advancedAIServices2025 = [
     },
     category: 'HR AI',
     tags: ['AI', 'HR Recruitment', 'Candidate Screening', 'Hiring Optimization'],
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com/hr-recruitment-ai',
     contact: {
       phone: '+1 302 464 0950',
@@ -698,7 +671,6 @@ export const advancedAIServices2025 = [
     competitiveAdvantage: 'Advanced candidate screening with 91% accuracy, comprehensive recruitment automation, and seamless ATS integration'
   },
   {
-=======
     website: 'http,
     s://ziontechgroup.com/hr-recruitment-ai',
     contact: {'
@@ -709,7 +681,6 @@ export const advancedAIServices2025 = [
     targetAudience: 'HR departments, recruitment agencies, talent acquisition teams, enterprise businesses',
     competitiveAdvantage: 'Advanced candidate screening with 91% accuracy, comprehensive recruitment automation, and seamless ATS integration'},
   {'
->>>>>>> main
     id: 'intelligent-cybersecurity-threat-detection',
     name: 'Cybersecurity AI',
     description: 'AI-powered cybersecurity platform that provides advanced threat detection, automated incident response, and security intelligence.',
@@ -734,23 +705,19 @@ export const advancedAIServices2025 = [
     },
     category: 'Cybersecurity AI',
     tags: ['AI', 'Cybersecurity', 'Threat Detection', 'Incident Response'],
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com/cybersecurity-ai',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
-=======
     website: 'http,
     s://ziontechgroup.com/cybersecurity-ai',
     contact: {'
       phon,
     e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'},
->>>>>>> main
     marketSize: '$173.5B',
     targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies',
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
   }
->>>>>>> main
 ];

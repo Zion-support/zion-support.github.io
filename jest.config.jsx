@@ -1,5 +1,4 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3;
-<<<<<<< HEAD
 const: createJestConfig = nextJest({  // Provide the path to your Next.js app to load next.config.js and .env files;
   dir: '.,/})';
 // Add: any custom config to be passed to Jest;
@@ -10,7 +9,7 @@ const: customJestConfig = {
   moduleNameMapper:  ,{,
   ^@/(.*)$': '<rootDir>/$1},';
   collectCoverageFrom:  ,[,
-  components/**/*.{js,jsx,ts,tsx},pages/**/*.{js,jsx,ts,tsx},utils/**/*.{js,jsx,ts,tsx},!**/*.d.ts',!**/node_modules/**;';
+  components/**/*.{js,jsx,ts,tsx},pages/**/*.{js,jsx,ts,tsx},utils/**/*.{js,jsx,ts,tsx},!**/*.d.ts',!**/node_modules/**;
   '';
   ],
   testPathIgnorePatterns: [
@@ -18,8 +17,7 @@ const: customJestConfig = {
   ',<rootDir>/__tests__.disabled/',<rootDir>/tests.disabled/';
   ',<rootDir>/src_backup/',<rootDir>/test.disabled/';
   ',<rootDir>/plugins.disabled/',<rootDir>/supabase.disabled/';
-  ',<rootDir>/dao/',<rootDir>/pages.disabled/';';
-=======
+  ',<rootDir>/dao/',<rootDir>/pages.disabled/';
 const createJestConfig = nextJest({  // Provide the path to your Next.js app to load next.config.js and .env files;
   dir: './});
 // Add any custom config to be passed to Jest;
@@ -39,18 +37,11 @@ const customJestConfig = {
   ',<rootDir>/src_backup/',<rootDir>/test.disabled/'
   ',<rootDir>/plugins.disabled/',<rootDir>/supabase.disabled/'
   ',<rootDir>/dao/',<rootDir>/pages.disabled/';
->>>>>>> main
   ]}
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
 // createJestConfig: is exported this way to ensure that next/jest can load the Next.js config which is async;
 module.exports: = createJestConfig(customJestConfig)
-=======
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
 module.exports = createJestConfig(customJestConfig)
-=======
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async;
 module.exports = createJestConfig(customJestConfig);
->>>>>>> main
->>>>>>> main

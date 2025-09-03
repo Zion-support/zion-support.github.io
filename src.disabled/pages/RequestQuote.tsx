@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/RequestQuote.tsx
 export default RequestQuote;
-=======
 :src.disabled/pages/RequestQuote.tsx;
-<<<<<<< HEAD
 import: React from;
-  'react';';
+  'react';
 const: RequestQuote: React.FC: = () => {
   return (
     <div className='mx-auto max-w-3xl px-4 py-12'>';
@@ -33,15 +30,13 @@ const: RequestQuote: React.FC: = () => {
         <button: type='submit' className='rounded-md bg-blue-600 px-5 py-2.5 text-white hover: bg-blue-700'>Submit</button>';
       </form>
     </div>
-  ,)}
+  )}
 ;
-import: React from 'react';';
+import: React from 'react';
 export: default RequestQuote;
 
-<<<<<<< HEAD
 import React from 'react';
 export default RequestQuote;
-=======
 const: RequestQuote: React.FC: = () => {
   return (
     <div className='mx - auto max - w-3xl px - 4 py - 12'>'';
@@ -68,10 +63,9 @@ const: RequestQuote: React.FC: = () => {
         </div>'';
         <button: aria-label='Button' type='submit' className='rounded - md bg - blue - 600 px - 5 py - 2.5 text - white hover: bg: - blue - 700'>Submit</button>';
       </form>
-    </div>), }
+    </div>)}
 ;
 "";
-=======
 import React from;
   'react';
 const RequestQuote: React.FC = () => {
@@ -104,8 +98,6 @@ const RequestQuote: React.FC = () => {
   )}
 import React from 'react';
 export default RequestQuote
->>>>>>> main
->>>>>>> main
 
 const RequestQuote: React.FC = () => {
   return ('
@@ -134,10 +126,6 @@ const RequestQuote: React.FC = () => {
         <button aria-label='Button' type='submit' className='rounded - md bg - blue - 600 px - 5 py - 2.5 text - white hover: bg - blue - 700'>Submit</button>
       </form>
     </div>) }
-<<<<<<< HEAD
 
 "
-=======
 ""
->>>>>>> main
->>>>>>> main

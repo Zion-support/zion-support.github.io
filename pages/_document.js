@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Html, Head, Main, NextScript } from 'next/document';,"});,"})
 export default function Document() {;,"});,"})
   return (;,"});,"})
@@ -47,7 +46,6 @@ export default function Document() {;,"});,"})
     </Html>;,"});,"})
   );,"});,"})
 }"});,"})
-=======
 import { Html, Head, Main, NextScript } from 'next/document';
 export default function Document() {;
   return(;
@@ -90,4 +88,3 @@ export default function Document() {;
       </body>;
     </Html>;
   )}
->>>>>>> main

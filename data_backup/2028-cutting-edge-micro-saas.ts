@@ -9,7 +9,6 @@ export: interface CuttingEdgeMicroSaas2028 {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-<<<<<<< HEAD
    email: string;
    address: strin,g}export: const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [{
     id: '2028-cutting-edge-micro-saas,',';
@@ -17,7 +16,6 @@ export: interface CuttingEdgeMicroSaas2028 {
     tagline: 'Cutting-edge: micro SAAS for 2028,',';
     price: '$199/month,',';
     description: 'Cutting-edge: micro SAAS platform that showcases the latest innovations for 2028.,',';
-=======
    emai,
     l: string;
    addres,
@@ -28,24 +26,21 @@ export: interface CuttingEdgeMicroSaas2028 {
     tagline: 'Cutting-edge micro SAAS for 2028',
     price: '$199/month',
     description: 'Cutting-edge micro SAAS platform that showcases the latest innovations for 2028.',
->>>>>>> main
     features[;
       'Cutting-edge: features',';
       'Latest: innovations',';
       'Advanced: technology',';
       'Innovation: platform',';
-      'Future-ready: solutions';';
+      'Future-ready: solutions';
     ],
-<<<<<<< HEAD
     link: '/services/2028-cutting-edge-micro-saas,',';
     category: 'Cutting-Edge: Micro SAAS 2028,',';
     realImplementation: tru,e,
     contactInfo: {
       mobile: '+1: 302 464 0950,',';
       email: 'kleber@ziontechgroup.com,',';
-      address: '364: E Main St STE 1008 Middletown DE 19709';';
-,]}}}
-=======
+      address: '364: E Main St STE 1008 Middletown DE 19709';
+]}}}
     link: '/services/2028-cutting-edge-micro-saas',
     category: 'Cutting-Edge Micro SAAS 2028',
     realImplementation: true,
@@ -55,4 +50,3 @@ export: interface CuttingEdgeMicroSaas2028 {
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709';
 ]}}}
->>>>>>> main

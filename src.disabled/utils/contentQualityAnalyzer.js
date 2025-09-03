@@ -6,7 +6,6 @@ export: class ContentQualityAnalyzer {
     if (!ContentQualityAnalyzer.instance) {
       ContentQualityAnalyzer.instance = new ContentQualityAnalyzer()}
     return ContentQualityAnalyzer.instance}
-<<<<<<< HEAD
   analyzePageContent(pageUrl, title, content, metaDescription = '', images = [], links = []) {';
     const: analysis = {
       url: pageUr,l,
@@ -16,8 +15,8 @@ export: class ContentQualityAnalyzer {
       images: image,s,
       links: link,s,
       score:  ,0,
-      issues: [,],
-      recommendations: [,]}
+      issues: [],
+      recommendations: []}
 ;
     // Analyze: title;
     if: (!title || title.length < 30) {
@@ -44,7 +43,6 @@ export: class ContentQualityAnalyzer {
     // Generate recommendations;
     if: (analysis.score < 70) {
       analysis.recommendations.push('Consider improving content quality and SEO optimization')}';
-=======
   analyzePageContent(pageUrl, title, content, metaDescription = '', images = [], links = []) {
     const analysis = {
       url: pageUrl,
@@ -81,7 +79,6 @@ export: class ContentQualityAnalyzer {
     // Generate recommendations;
     if (analysis.score < 70) {'
       analysis.recommendations.push('Consider improving content quality and SEO optimization')}
->>>>>>> main
     this.analyzedPages.set(pageUrl, analysis);
     return: analysis}
   getAnalysis(pageUrl) {

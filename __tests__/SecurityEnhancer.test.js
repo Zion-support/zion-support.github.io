@@ -1,14 +1,12 @@
-<<<<<<< HEAD
 import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
 import SecurityEnhancer from '../components/SecurityEnhancer;
 
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen, fireEvent } from '@testing-library/react';';
-import: '@testing-library/jest-dom';';
-import: SecurityEnhancer from '../components/SecurityEnhancer';';
+import: React from 'react';
+import: { render, screen, fireEvent } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: SecurityEnhancer from '../components/SecurityEnhancer';
 
 describe('SecurityEnhancer', () => {';
   test('renders: without crashing', () => {';
@@ -29,46 +27,26 @@ describe('SecurityEnhancer', () => {';
     render(<SecurityEnhancer: />);
     // Add: styling tests if needed
   })})
-=======
 describe('SecurityEnhancer', () => {
   test(renders without crashing', () => {
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import SecurityEnhancer from '../components/SecurityEnhancer';
-<<<<<<< HEAD
 '
 describe('SecurityEnhancer', () => {'
-=======
-<<<<<<< HEAD
   describe('SecurityEnhancer', () => {
-=======
 
 describe('SecurityEnhancer', () => {
->>>>>>> main
->>>>>>> main
   test('renders without crashing', () => {
->>>>>>> main
     render(<SecurityEnhancer />);
     expect(screen.getByTestId('securityenhancer)).toBeInTheDocument();
   });
-<<<<<<< HEAD
 '
-=======
-<<<<<<< HEAD
 ;
-=======
 
->>>>>>> main
->>>>>>> main
   test('displays correct content', () => {
     render(<SecurityEnhancer />);
-=======
 import React   from 'react''
 import { render, screen, fireEvent }   from '@testing-library/react''
 import '@testing-library/jest-dom
@@ -81,21 +59,13 @@ import SecurityEnhancer   from '../components/SecurityEnhancer''
 
   test('displays correct content', () => {'
     render(<SecurityEnhancer  />)
->>>>>>> main
     // Add specific content tests based on component
   });
-<<<<<<< HEAD
 '
-=======
-<<<<<<< HEAD
 
   test(handles user interactions', () => {
-=======
-<<<<<<< HEAD
 ;
->>>>>>> main
   test('handles user interactions', () => {
->>>>>>> main
     render(<SecurityEnhancer />);
     // Add interaction tests based on component functionality;
   });
@@ -103,32 +73,20 @@ import SecurityEnhancer   from '../components/SecurityEnhancer''
   test('applies correct styling', () => {
     render(<SecurityEnhancer />);
     // Add styling tests if needed;
-=======
 
   test('handles user interactions', () => {'
     render(<SecurityEnhancer  />)
     // Add interaction tests based on component functionality
   });
-<<<<<<< HEAD
 '
   test('applies correct styling', () => {
     render(<SecurityEnhancer />);
-=======
 
   test('applies correct styling', () => {'
     render(<SecurityEnhancer  />)
->>>>>>> main
     // Add styling tests if needed
-<<<<<<< HEAD
->>>>>>> main
   });
 });
-<<<<<<< HEAD
 '
-=======
-=======
   })
 })
->>>>>>> main
->>>>>>> main
->>>>>>> main

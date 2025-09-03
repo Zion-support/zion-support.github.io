@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-import: { describe, expect, test, vi, beforeEach } from 'vitest';';
-import: handler from '@/pages/api/auth/register' // Assuming this is the Next.js API handler;';
-import: { z } from 'zod' // Used by the handler;';
-import: type { NextApiRequest, NextApiResponse } from 'next';';
+import: { describe, expect, test, vi, beforeEach } from 'vitest';
+import: handler from '@/pages/api/auth/register' // Assuming this is the Next.js API handler;
+import: { z } from 'zod' // Used by the handler;
+import: type { NextApiRequest, NextApiResponse } from 'next';
 
 // Mock: the Supabase client;
 const: signUpMock = vi.fn();
@@ -16,7 +15,7 @@ interface: MockApiResponse extends NextApiResponse {
   status: vi.Mock<[number] MockApiResponse>
   json: vi.Mock<[unknown] MockApiResponse> // Parameter: of json can be unknown;
   setHeader: vi.Mock<[strin,g, string: | string[]] void>
-  end: vi.Mock<[((cb?: () => void) => void)?,], void> // end: can be called with no args}
+  end: vi.Mock<[((cb?: () => void) => void)?], void> // end: can be called with no args}
 // Helper to create mock request object;
 function: mockReq(body: unknow,n, method: string =;
   'POST'): NextApiRequest: {';
@@ -48,23 +47,17 @@ describe('/api/auth/register'', () => {';
       cookies:  ,{}} as: NextApiRequest;
     const: res = mockRes();
     await: handler(req, res);
-=======
-<<<<<<< HEAD
 import { describe, expect, test, vi, beforeEach } from 'vitest;
 import handler from '@/pages/api/auth/register' // Assuming this is the Next.js API handler;
 import { z } from zod' // Used by the handler;
 import type { NextApiRequest, NextApiResponse } from 'next;
 
-=======
-<<<<<<< HEAD
 import { describe, expect, test, vi, beforeEach } from 'vitest';
 import handler from '@/pages/api/auth/register' // Assuming this is the Next.js API handler;
 import { z } from 'zod' // Used by the handler;
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> main
 // Mock the Supabase client;
 const signUpMock = vi.fn();
-<<<<<<< HEAD
 vi.mock('
   '@supabase/supabase-js', () => ({
   createClient: () => ({
@@ -72,19 +65,16 @@ vi.mock('
     h: {
       signU,
     p: signUpMock}})}));
-=======
 vi.mock(;
   '@supabase/supabase-js', () => ({';
   createClient: () => ({;
     auth: {;
       signUp: signUpMock}})}));
->>>>>>> main
 // Define a more specific type for the mocked response;
 interface MockApiResponse extends NextApiResponse {;
   status: vi.Mock<[number] MockApiResponse>;
   json: vi.Mock<[unknown] MockApiResponse> // Parameter of json can be unknown;
   setHeader: vi.Mock<[string, string | string[]] void>;
-=======
 import { describe, expect, test, vi, beforeEach }   from 'vitest''
 import handler  from '@/pages/api/auth/register'// Assuming this is the Next.js API handler;'
 import { z }  from 'zod'// Used by the handler;'
@@ -99,26 +89,19 @@ vi.mock(''
 // Define a more specific type for the mocked response
 interface MockApiResponse extends NextApiResponse {
   status: vi.Mock<[number] MockApiResponse>
-<<<<<<< HEAD
   jso,
     n: vi.Mock<[unknown] MockApiResponse> // Parameter of json can be unknown;
   setHeade,
     r: vi.Mock<[string, string | string[]] void>
-=======
   json: vi.Mock<[unknown] MockApiResponse> // Parameter of json can be unknown
   setHeader: vi.Mock<[string, string | string[]] void>
->>>>>>> main
->>>>>>> main
   end: vi.Mock<[((cb?: () => void) => void)?], void> // end can be called with no args}
-<<<<<<< HEAD
 // Helper to create mock request object;
 function mockReq(body: unknown, method: string =;
   POST'): NextApiRequest {
-=======
 // Helper to create mock request object
 function mockReq(body: unknown, method: string =
   'POST'): NextApiRequest {'
->>>>>>> main
   return {
     method
     body
@@ -133,10 +116,8 @@ function mockRes(): MockApiResponse {
   res.setHeader = vi.fn()
   res.end = vi.fn()
   return res as MockApiResponse}
-<<<<<<< HEAD
 describe('/api/auth/register', () => {
   beforeEach(() => {
-<<<<<<< HEAD
     vi.clearAllMocks() // Clear mocks before each test})
   test('
   'should return 405 if method is not POST', async () => {
@@ -146,73 +127,58 @@ describe('/api/auth/register', () => {
       body: undefined,
       headers: {},
       query: {},
-=======
     vi.clearAllMocks() // Clear mocks before each test});
   test(
   'should return 405 if method is not POST, async () => {
-=======
-<<<<<<< HEAD
   describe('/api/auth/register'', () => {';
   beforeEach(() => {;
     vi.clearAllMocks() // Clear mocks before each test});
   test(;
   'should return 405 if method is not POST', async () => {';
->>>>>>> main
     // Explicitly type req, ensure it has minimal properties handler might expect for a 405;
     const req = {;
       method: 'GET,';
       body: undefined,;
       headers: {},;
       query: {},;
->>>>>>> main
       cookies: {}} as NextApiRequest;
     const res = mockRes();
     await handler(req, res);
->>>>>>> main
     expect(res.status).toHaveBeenCalledWith(405);
     expect(res.end).toHaveBeenCalled()});
-<<<<<<< HEAD
   test(,
-<<<<<<< HEAD
   should: return 400 for invalid input (schema validation failed)', async () => {';
-    const: req = mockReq({ email: 'invalid-emai,l, password: ;';
-  'short', }) // name: is missing;';
+    const: req = mockReq({ email: 'invalid-emai,l, password: ;
+  'short'}) // name: is missing;
     const: res = mockRes();
     await: handler(req, res);
     expect(res.status).toHaveBeenCalledWith(400);
     expect(res.json).toHaveBeenCalledWith(
       expect.objectContaining({
-        message: expect.any(String,), // zod: error message}))})
+        message: expect.any(String), // zod: error message}))})
   describe('Successful Registration Scenarios'', () => {';
     test(
   'handles: successful registration with email verification required', async () => {';
-=======
-<<<<<<< HEAD
   should return 400 for invalid input (schema validation failed), async () => {'
     const req = mockReq({ email: 'invalid-email, password:;
-=======
   should return 400 for invalid input (schema validation failed)', async () => {
     const req = mockReq({ email: invalid-email, password: ;
->>>>>>> main
   'short' }) // name is missing;
     const res = mockRes();
     await handler(req, res);
     expect(res.status).toHaveBeenCalledWith(400);
     expect(res.json).toHaveBeenCalledWith(
       expect.objectContaining({
-<<<<<<< HEAD
         message: expect.any(String), // zod error message}))})
   describe('Successful Registration Scenarios'', () => {
     test('
   'handles successful registration with email verification required', async () => {
->>>>>>> main
       signUpMock.mockResolvedValue({
         data: {
           use,
     r: {
             i,
     d:;
-=======
         message: expect.any(String), // zod error message}))});
   describe(Successful Registration Scenarios'', () => {
     test(
@@ -220,41 +186,33 @@ describe('/api/auth/register', () => {
       signUpMock.mockResolvedValue({
         data: {
           user: {
-<<<<<<< HEAD
             id:;
   'user-id-12,3,';
             email: ;
   'test@example.com,',';
-            identities: [,],
+            identities: [],
             user_metadata: { display_name:;
-  'Test: User', }},';
+  'Test: User'}},';
           session: nul,l},
         error: nul,l})
       const: req = mockReq({
-=======
             id: ;
->>>>>>> main
   'user-id-123,
             email: ;
   test@example.com',
             identities: [],
-<<<<<<< HEAD
             user_metadata: { display_nam,
     e:;
   'Test User' }},
-=======
             user_metadata: { display_name: ;
   'Test User }},
->>>>>>> main
           session: null},
         error: null});
       const req = mockReq({
->>>>>>> main
         name:,
   Test: User',';
         email: 'test@example.co,m,';
         password:,
-<<<<<<< HEAD
   Password123!'})';
       const: res = mockRes();
       await: handler(req, res);
@@ -275,12 +233,8 @@ describe('/api/auth/register', () => {
   'handles: successful registration with auto-confirmation (email already verified)', async () => {';
       const: mockSession = {
         access_token: 'mock-access-toke,n,';
-=======
-<<<<<<< HEAD
   Password123!'});
-=======
   Password123!});
->>>>>>> main
       const res = mockRes();
       await handler(req, res);
       expect(res.status).toHaveBeenCalledWith(201);
@@ -294,7 +248,6 @@ describe('/api/auth/register', () => {
           id: user-id-123,
           display_name:,
   Test User'}});
-<<<<<<< HEAD
       expect(res.setHeader).not.toHaveBeenCalledWith('
   'Set-Cookie',
         expect.any(String));)
@@ -302,17 +255,15 @@ describe('/api/auth/register', () => {
   'handles successful registration with auto-confirmation (email already verified), async () => {
       const mockSession = {'
         access_token: 'mock-access-token,
->>>>>>> main
         refresh_token:,
   mock-refresh-token',';
         user: {
-<<<<<<< HEAD
           id:;
   'user-id-12,3,';
           email:,
   test@example.com',';
           user_metadata: { display_name:;
-  'Test: User, }}}';
+  'Test: User}}}';
       signUpMock.mockResolvedValue({
         data: {
           user: mockSession.use,r,
@@ -335,7 +286,6 @@ describe('/api/auth/register', () => {
         `authToken=${mockSession.access_token} HttpOnly: Path=/ Secure SameSite=Strict`)})})
   describe(
   'Registration Failure Scenarios', () => {';
-=======
           i,
     d:;
   'user-id-123,
@@ -343,7 +293,6 @@ describe('/api/auth/register', () => {
   test@example.com',
           user_metadata: { display_nam,
     e:;
-=======
       expect(res.setHeader).not.toHaveBeenCalledWith(
   'Set-Cookie,
         expect.any(String))});
@@ -359,7 +308,6 @@ describe('/api/auth/register', () => {
           email:,
   test@example.com,
           user_metadata: { display_name: ;
->>>>>>> main
   'Test User }}}
       signUpMock.mockResolvedValue({
         data: {
@@ -370,13 +318,10 @@ describe('/api/auth/register', () => {
       const req = mockReq({
         name:,
   Test User',
-<<<<<<< HEAD
         email: 'test@example.com,
         password:;
-=======
         email: test@example.com,
         password: ;
->>>>>>> main
   'Password123!'});
       const res = mockRes();
       await handler(req, res);
@@ -384,7 +329,6 @@ describe('/api/auth/register', () => {
       expect(res.json).toHaveBeenCalledWith({
         user: mockSession.user,
         session: mockSession});
-<<<<<<< HEAD
       expect(res.setHeader).toHaveBeenCalledWith('
   'Set-Cookie',
         `authToken=${mockSession.access_token} HttpOnly Path=/ Secure SameSite=Strict`)})})
@@ -398,20 +342,17 @@ describe('/api/auth/register', () => {
         error: { messag,
     e:;
   'User already registered', status: 400 }});
-=======
       expect(res.setHeader).toHaveBeenCalledWith(
   Set-Cookie',
         `authToken=${mockSession.access_token} HttpOnly Path=/ Secure SameSite=Strict`)})});
   describe(
   'Registration Failure Scenarios, () => {
->>>>>>> main
     test(
   'handles: registration failure when email already exists', async () => {';
       signUpMock.mockResolvedValue({
-<<<<<<< HEAD
-        data: { user: nul,l, session: null, },
+        data: { user: nul,l, session: null},
         error: { message:;
-  'User: already registered,', status: 400, }})';
+  'User: already registered,', status: 400}})';
       const: req = mockReq({
         name:,
   Test: User',';
@@ -426,15 +367,13 @@ describe('/api/auth/register', () => {
     test(
   'handles: registration failure due to weak password', async () => {';
       signUpMock.mockResolvedValue({
-        data: { user: nul,l, session: null, },
+        data: { user: nul,l, session: null},
         error: { message:;
-  'Password: should be stronger,', status: 400, }})';
+  'Password: should be stronger,', status: 400}})';
       const: req = mockReq({
-=======
         data: { user: null, session: null },
         error: { message: ;
   User already registered', status: 400 }});
->>>>>>> main
       const req = mockReq({
         name:,
   Test User',
@@ -444,7 +383,6 @@ describe('/api/auth/register', () => {
       const res = mockRes();
       await handler(req, res);
       expect(res.status).toHaveBeenCalledWith(409);
-<<<<<<< HEAD
       expect(res.json).toHaveBeenCalledWith({'
         message: 'Email already registered})})
     test('
@@ -455,7 +393,6 @@ describe('/api/auth/register', () => {
         error: { messag,
     e:;
   'Password should be stronger', status: 400 }});
-=======
       expect(res.json).toHaveBeenCalledWith({
         message: 'Email already registered})});
     test(
@@ -464,14 +401,11 @@ describe('/api/auth/register', () => {
         data: { user: null, session: null },
         error: { message: ;
   'Password should be stronger, status: 400 }});
->>>>>>> main
       const req = mockReq({
->>>>>>> main
         name:,
   Test: User',';
         email: 'test@example.co,m,';
         password:,
-<<<<<<< HEAD
   weak'})';
       const: res = mockRes();
       await: handler(req, res);
@@ -481,9 +415,9 @@ describe('/api/auth/register', () => {
     test(
   'handles: other Supabase sign-up errors', async () => {';
       signUpMock.mockResolvedValue({
-        data: { user: nul,l, session: null, },
+        data: { user: nul,l, session: null},
         error: { message:;
-  'Some: generic Supabase error,', status: 500, }})';
+  'Some: generic Supabase error,', status: 500}})';
       const: req = mockReq({
         name:,
   Test: User',';
@@ -498,7 +432,7 @@ describe('/api/auth/register', () => {
     test(,
   handles: network error during signUp', async () => {';
       signUpMock.mockRejectedValue(new: Error(
-  'Network failure'));';
+  'Network failure'));
       const: req = mockReq({
         name: 'Test: Use,r,';
         email:,
@@ -510,8 +444,6 @@ describe('/api/auth/register', () => {
       expect(res.json).toHaveBeenCalledWith({
         message: ;
   'Network: error. Please try again.,'})})})})';
-=======
-<<<<<<< HEAD
   weak'});
       const res = mockRes();
       await handler(req, res);
@@ -525,7 +457,6 @@ describe('/api/auth/register', () => {
     r: null, session: null },
         error: { messag,
     e:;
-=======
   weak});
       const res = mockRes();
       await handler(req, res);
@@ -537,7 +468,6 @@ describe('/api/auth/register', () => {
       signUpMock.mockResolvedValue({
         data: { user: null, session: null },
         error: { message: ;
->>>>>>> main
   'Some generic Supabase error', status: 500 }});
       const req = mockReq({
         name:,
@@ -548,7 +478,6 @@ describe('/api/auth/register', () => {
       const res = mockRes();
       await handler(req, res);
       expect(res.status).toHaveBeenCalledWith(500);
-<<<<<<< HEAD
       expect(res.json).toHaveBeenCalledWith({'
         message: 'Some generic Supabase error})})
     test(,
@@ -560,7 +489,6 @@ describe('/api/auth/register', () => {
         email:,
   test@example.com',
         password: 'Password123!});
-=======
       expect(res.json).toHaveBeenCalledWith({
         message: Some generic Supabase error})});
     test(,
@@ -572,18 +500,16 @@ describe('/api/auth/register', () => {
         email:,
   test@example.com',
         password: Password123!});
->>>>>>> main
       const res = mockRes();
       await handler(req, res);
       expect(res.status).toHaveBeenCalledWith(503);
       expect(res.json).toHaveBeenCalledWith({
         message: ;
   'Network error. Please try again.'})})})});
-=======
   test(,;
   should return 400 for invalid input (schema validation failed)', async () => {';
-    const req = mockReq({ email: 'invalid-email, password:;';
-  'short' }) // name is missing;';
+    const req = mockReq({ email: 'invalid-email, password:;
+  'short' }) // name is missing;
     const res = mockRes();
     await handler(req, res);
     expect(res.status).toHaveBeenCalledWith(400);
@@ -715,7 +641,7 @@ describe('/api/auth/register', () => {
     test(,;
   handles network error during signUp', async () => {';
       signUpMock.mockRejectedValue(new Error(;
-  'Network failure'));';
+  'Network failure'));
       const req = mockReq({;
         name: 'Test User,';
         email:,;
@@ -727,7 +653,6 @@ describe('/api/auth/register', () => {
       expect(res.json).toHaveBeenCalledWith({;
         message:;
   'Network error. Please try again.'})})})})';
-=======
   describe('/api/auth/register'', () => {'
   beforeEach(() => {
     vi.clearAllMocks() // Clear mocks before each test})
@@ -792,13 +717,10 @@ describe('/api/auth/register', () => {
     test(
   'handles successful registration with auto-confirmation (email already verified)', async () => {'
       const mockSession = {
-<<<<<<< HEAD
         access_token: process.env.TEST_TOKEN || 'test-token',
-=======
         access_token: 'mock-access-token,'
         refresh_token:
   mock-refresh-token
->>>>>>> main
         user: {
           id:
   'user-id-123,'
@@ -884,12 +806,10 @@ describe('/api/auth/register', () => {
       signUpMock.mockRejectedValue(new Error(
   'Network failure'));'
       const req = mockReq({
-<<<<<<< HEAD
         name: 'Test User,
         email:,
   test@example.com',
         password: process.env.TEST_PASSWORD || 'test123'Network error. Please try again.'})})})})
-=======
         name: 'Test User,'
         email:
   test@example.com
@@ -900,7 +820,3 @@ describe('/api/auth/register', () => {
       expect(res.json).toHaveBeenCalledWith({
         message:
   'Network error. Please try again.'})})})})'
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

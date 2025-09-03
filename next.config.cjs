@@ -1,41 +1,28 @@
-<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
-=======
 /** @type {import(
   'next').NextConfig} */
->>>>>>> main
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
-    ignoreDuringBuilds: true,
-  },
-<<<<<<< HEAD
-<<<<<<< HEAD:next.config.js
+    ignoreDuringBuilds: true},
+:next.config.js
   typescript: {
     // Allow production builds to successfully complete even if
     // there are type errors.
-=======
   experimental: {
     // Removed deprecated options
   },
   typescript: {
->>>>>>> main
-    ignoreBuildErrors: true,
-  },
+    ignoreBuildErrors: true},
   images: {
     domains: ['ziontechgroup.com'],
-    unoptimized: true,
-  },
+    unoptimized: true},
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
+    removeConsole: process.env.NODE_ENV === 'production'},
   webpack: (config, { dev, isServer }) => {
     // Completely exclude problematic directories from the build
-<<<<<<< HEAD
-<<<<<<< HEAD:next.config.js
+:next.config.js
     // Keep default TS/JS handling; we already ignore build errors via config
-=======
->>>>>>> main
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       exclude: [
@@ -51,20 +38,15 @@ const nextConfig = {
         /contracts/,
         /hardhat/,
         /^components\//, // Exclude root components directory
-      ],
-    });
-<<<<<<< HEAD
+      ]});
     
-=======
 
->>>>>>> main
     // Add fallback for problematic modules
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
       net: false,
-      tls: false,
-    };
+      tls: false};
 
     return config;
   },
@@ -74,11 +56,8 @@ const nextConfig = {
     // period (in ms) where the server will keep pages in the buffer
     maxInactiveAge: 25 * 1000,
     // number of pages that should be kept simultaneously without being disposed
-    pagesBufferLength: 2,
-  },
-};
+    pagesBufferLength: 2}};
 
-<<<<<<< HEAD
 export default nextConfig;
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -118,6 +97,4 @@ const nextConfig = {
   }
 };
 
-=======
->>>>>>> main
 module.exports = nextConfig;

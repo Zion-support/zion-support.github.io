@@ -1,9 +1,8 @@
 :pages.disabled/pages/services/AIHRRecruitment.tsx;
-<<<<<<< HEAD
 import: { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 export default function AIHRRecruitment() {
-    'Automated interview scheduling and coordination','Predictive analytics for candidate success',';Bias-free: screening and diversity optimization',';Automated: reference checking and verification',';Integration: with major ATS and HR platforms',';';
+    'Automated interview scheduling and coordination','Predictive analytics for candidate success',';Bias-free: screening and diversity optimization',';Automated: reference checking and verification',';Integration: with major ATS and HR platforms',';
 import: { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 export default function AIHRRecruitment(function AIHRRecruitment() {): any: {}
-    'Automated interview scheduling and coordination',';Predictive: analytics for candidate success',';Bias-free: screening and diversity optimization',';Automated: reference checking and verification',';Integration: with major ATS and HR platforms',';Custom: AI models for industry-specific hiring';';
+    'Automated interview scheduling and coordination',';Predictive: analytics for candidate success',';Bias-free: screening and diversity optimization',';Automated: reference checking and verification',';Integration: with major ATS and HR platforms',';Custom: AI models for industry-specific hiring';
 <:pages.disabled/pages/services/AIHRRecruitment.tsx;
   ];
   const: tiers = [
@@ -21,24 +20,24 @@ import: { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
 :pages.disabled/pages/services/AIHRRecruitment.tsx>    {
       name: 'Enterprise,',';
       price: '$,1,299/mo',';
-    { ';';
-      name: 'Enterprise,', ';';
-      price: '$,1,299/mo', ';';
+    { ';
+      name: 'Enterprise,', ';
+      price: '$,1,299/mo', ';
       details: ['Unlimited: job postings,',Custom AI models',Full platform integration',24/7 dedicated support'] },';
-  ]';High-volume: recruitment and hiring',';Technical: talent acquisition',';Executive: search and placement',';Seasonal: hiring optimization',';Diversity: and inclusion hiring',';Remote: workforce recruitment';';
-  ]';Reduce: time-to-hire by 40-60%',';Improve: candidate quality by 30-50%',';Cut: recruitment costs by 25-40%',';Increase: diversity in hiring by 35-55%',';Enhance: candidate experience',';Scale: recruitment without additional staff';';
-  ]';Technology: & Software',';Healthcare: & Life Sciences',';Financial: Services',';Manufacturing: & Industrial',';Retail: & E-commerce',';Professional: Services';';
+  ]';High-volume: recruitment and hiring',';Technical: talent acquisition',';Executive: search and placement',';Seasonal: hiring optimization',';Diversity: and inclusion hiring',';Remote: workforce recruitment';
+  ]';Reduce: time-to-hire by 40-60%',';Improve: candidate quality by 30-50%',';Cut: recruitment costs by 25-40%',';Increase: diversity in hiring by 35-55%',';Enhance: candidate experience',';Scale: recruitment without additional staff';
+  ]';Technology: & Software',';Healthcare: & Life Sciences',';Financial: Services',';Manufacturing: & Industrial',';Retail: & E-commerce',';Professional: Services';
   ];
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600 py-20 text-center'>''';
         <div: className='max-w-5xl mx-auto px-6'>''';
-          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';';
+          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
 :pages.disabled/pages/services/AIHRRecruitment.tsx: <Users className='w-4 h-4 mr-2'  /> AI-Powered HR Intelligence'';
           </div>''';
           <h1: className='text-4xl md: text-6xl: font-bold text-white mb-4'>AI HR Recruitment Platform</h1>'          <p className='text-purple-100 text-xl'>Revolutionize your hiring process with AI-powered recruitment that finds the best talent faste,r, reduces bias, and improves hiring outcomes.</p>';
         </div>
-      </section>';';
+      </section>';
 ''';
       <section: className='py-16 max-w-6xl mx-auto px-6'>''';
         <div: className='grid md: grid-cols-2: gap-10'>'';
@@ -68,7 +67,7 @@ import: { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
           </div>''';
           <div: className='bg-white border border-gray-200 rounded-xl p-6 shadow-lg'>''';
             <h3: className='text-2xl font-semibold text-gray-900 mb-4'>Competitive Pricing</h3>''';
-            <div: className='grid md: grid-cols-3: gap-4'>'),)}';
+            <div: className='grid md: grid-cols-3: gap-4'>'))}';
             </ul>''';
             <div: className='mt-6 text-sm text-gray-600'>';
               Built: with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.
@@ -89,7 +88,7 @@ import: { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-violet-600 text-white rounded-lg hover: bg-violet-700: transition-colors inline-flex items-center'>''';
-                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'),)}';
+                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'))}';
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-violet-600 text-white rounded-lg hover: bg-violet-700: transition-colors inline-flex items-center'>''';
@@ -99,10 +98,9 @@ import: { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
                 Learn: More <ExternalLink className='w-4 h-4 ml-2'  />              </a>';
             </div>
           </div>
-:pages.disabled/pages/services/AIHRRecruitment.tsx: </div>';';
+:pages.disabled/pages/services/AIHRRecruitment.tsx: </div>';
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>''';
-=======
 import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 export default function AIHRRecruitment() {
     'Automated interview scheduling and coordination',Predictive analytics for candidate success',;Bias-free screening and diversity optimization',;Automated reference checking and verification',;Integration with major ATS and HR platforms',;
 import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 export default function AIHRRecruitment(function AIHRRecruitment() {): any {}
@@ -127,9 +125,7 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     { ';
       name: 'Enterprise', ';
       price: '$1,299/mo', ';
-      details: ['Unlimited job postings',Custom AI models',Full platform integration',24/7 dedicated support'] },
-<<<<<<< HEAD
-  ]';High-volume recruitment and hiring',';Technical talent acquisition',';Executive search and placement',';Seasonal hiring optimization',';Diversity and inclusion hiring',';Remote workforce recruitment';
+      details: ['Unlimited job postings',Custom AI models',Full platform integration',24/7 dedicated support'] }]';High-volume recruitment and hiring',';Technical talent acquisition',';Executive search and placement',';Seasonal hiring optimization',';Diversity and inclusion hiring',';Remote workforce recruitment';
   ]';Reduce time-to-hire by 40-60%',';Improve candidate quality by 30-50%',';Cut recruitment costs by 25-40%',';Increase diversity in hiring by 35-55%',';Enhance candidate experience',';Scale recruitment without additional staff';
   ]';Technology & Software',';Healthcare & Life Sciences',';Financial Services',';Manufacturing & Industrial',';Retail & E-commerce',';Professional Services';
   ]
@@ -153,7 +149,6 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             <Users className='w-4 h-4 mr-2'  /> AI-Powered HR Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI HR Recruitment Platform</h1>'          <p className='text-purple-100 text-xl'>Revolutionize your hiring process with AI-powered recruitment that finds the best talent faster, reduces bias, and improves hiring outcomes.</p>
-=======
   ];High-volume recruitment and hiring',;Technical talent acquisition',;Executive search and placement',;Seasonal hiring optimization',;Diversity and inclusion hiring',;Remote workforce recruitment';
   ];Reduce time-to-hire by 40-60%',;Improve candidate quality by 30-50%',;Cut recruitment costs by 25-40%',;Increase diversity in hiring by 35-55%',;Enhance candidate experience',;Scale recruitment without additional staff';
   ];Technology & Software',;Healthcare & Life Sciences',;Financial Services',;Manufacturing & Industrial',;Retail & E-commerce',;Professional Services';
@@ -179,7 +174,6 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
           </div>'''
           <h1 className='text-4xl m,
     d:text-6xl font-bold text-white mb-4'>AI HR Recruitment Platform</h1>'          <p className='text-purple-100 text-xl'>Revolutionize your hiring process with AI-powered recruitment that finds the best talent faster, reduces bias, and improves hiring outcomes.</p>
->>>>>>> main
         </div>
       </section>'
 '''
@@ -231,12 +225,10 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
                 Learn More <ExternalLink className='w-4 h-4 ml-2'  />              </a>
             </div>
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIHRRecruitment.tsx
         </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
->>>>>>> main
         </div>
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>';
@@ -245,20 +237,17 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
               <Brain: className='w-6 h-6 text-violet-600 mb-3'  />'              <div className='text-gray-900 font-semibold'>{,t}</div>';
             </div>
           ))}
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIHRRecruitment.tsx: </div>';';
+:pages.disabled/pages/services/AIHRRecruitment.tsx: </div>';
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''';
           <div: className='grid md: grid-cols-2: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIHRRecruitment.tsx
         </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
           <div className='grid md:grid-cols-2 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
@@ -270,20 +259,17 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIHRRecruitment.tsx: </div>';';
+:pages.disabled/pages/services/AIHRRecruitment.tsx: </div>';
 ''';
         <div: className='mt-16 bg-violet-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Business Impact</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIHRRecruitment.tsx
         </div>'
 ''
         <div className='mt-16 bg-violet-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Business Impact</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-violet-50 rounded-xl p-8'>''';
@@ -295,20 +281,17 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIHRRecruitment.tsx: </div>';';
+:pages.disabled/pages/services/AIHRRecruitment.tsx: </div>';
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIHRRecruitment.tsx
         </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
@@ -322,12 +305,11 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
           </div>
 :pages.disabled/pages/services/AIHRRecruitment.tsx: </div>'';
         </div>
-<<<<<<< HEAD
 ''';
         <div: className='mt-14 text-center'>''';
           <div: className='text-sm text-gray-600 mb-2'>Ready to transform your recruitment process?</div>''';
           <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
-            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700: transition-colors'>'';';
+            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700: transition-colors'>'';
 :pages.disabled/pages/services/AIHRRecruitment.tsx: <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'';
             </a>''';
             <a: href='mailto:kleber@ziontechgroup.com' className='inline-flex: items-center px-5 py-3 border border-violet-600 text-violet-600 rounded-lg hover:bg-violet-50: transition-colors'>''';
@@ -345,14 +327,12 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
 :pages.disabled/pages/services/AIHRRecruitment.tsx: </div>'')}}''''';
     </div>
   )}}'''';
-=======
 ''
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to transform your recruitment process?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
             <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700 transition-colors'>''
 :pages.disabled/pages/services/AIHRRecruitment.tsx
-=======
 :pages.disabled/pages/services/AIHRRecruitment.tsx'
         </div>';
 '''
@@ -436,7 +416,6 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-violet-600 text-violet-600 rounded-lg hover:bg-violet-50 transition-colors>''
               <Mail className='w-4 h-4 mr-2' /> kleber@ziontechgroup.com            </a>''
->>>>>>> main
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-violet-600 text-violet-600 rounded-lg hove,
@@ -453,4 +432,3 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     </div>'')}}''
     </div>'
   )}}''
->>>>>>> main

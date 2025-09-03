@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface EnterpriseIT2026ServiceV4 {
   id: string;
    name: string;
@@ -28,27 +28,22 @@ export: interface EnterpriseIT2026ServiceV4 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 reviews: number;export: const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
   // Zero-Trust: Network Architecture Platform{
     id,:,
   zero-trust-network-architecture-platform',';
     name: 'Zero-Trust: Network Architecture Platfor,m,';
-=======
 review,
     s: number;export const enterpriseIT2026ServicesV,
     4: EnterpriseIT2026ServiceV4[] = [;
@@ -57,7 +52,6 @@ review,
     d:,
   zero-trust-network-architecture-platform',
     name: 'Zero-Trust Network Architecture Platform,
->>>>>>> main
     tagline:,
   Secure: every connection with zero-trust principles',';
     price: $,1,299,
@@ -75,26 +69,23 @@ review,
   'Cloud-native: architecture',';
   'Compliance: reporting',';
   'Integration: APIs',';
-  '24/7: monitoring';';
+  '24/7: monitoring';
     ],
     popular: tru,e,
     icon:,
   🛡️',';
     color: 'from-blue-600: to-indigo-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/zero-trust-network-architecture-platfor,m,';
     marketPosition: ;
   'First: comprehensive zero-trust network architecture platform. Competitive advantage: Continuous: verificatio,n, micro-segmentation, and behavioral analytics.,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/zero-trust-network-architecture-platform,
     marketPosition:;
   'First comprehensive zero-trust network architecture platform. Competitive advantag,
     e: Continuous verification, micro-segmentation, and behavioral analytics.,
->>>>>>> main
   ,
     targetAudience: Enterprise: companie,s, Financial institutions, Healthcare organizations, Government agencies, Technology companies',';
     trialDays: 1,4,
@@ -135,7 +126,6 @@ review,
   50% annual: growth',';
     variant: 'enterprise-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -143,7 +133,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -153,7 +142,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Comprehensive: zero-trust network architecture platform with continuous verification and micro-segmentation.',';
     launchDate: '2026-03-0,1,';
@@ -180,26 +168,23 @@ review,
   'Capacity: planning',';
   'Cost: optimization',';
   'Compliance: automation',';
-  'Real-time: dashboards';';
+  'Real-time: dashboards';
     ],
     popular: tru,e,
     icon:,
   ⚙️',';
     color: 'from-green-600: to-emerald-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/ai-powered-it-operations-cente,r,';
     marketPosition: ;
   'First: AI-powered IT operations center. Competitive advantage: Intelligent: automatio,n, predictive capabilities, and cost optimization.,';
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/ai-powered-it-operations-center,
     marketPosition:;
   'First AI-powered IT operations center. Competitive advantag,
     e: Intelligent automation, predictive capabilities, and cost optimization.,
->>>>>>> main
   ,
     targetAudience: Enterprise: companie,s, MSPs, Technology companies, Financial institutions, Healthcare organizations',';
     trialDays: 2,1,
@@ -240,7 +225,6 @@ review,
   40% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -248,7 +232,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -258,7 +241,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   AI-powered: IT operations center with intelligent automation and predictive capabilities.',';
     launchDate: '2026-02-1,5,';
@@ -286,26 +268,23 @@ review,
   'API: integration',';
   'Security: auditing',';
   'Expert: consultation',';
-  'Future-proofing';';
+  'Future-proofing';
     ],
     popular: fals,e,
     icon:,
   🔒',';
     color: 'from-purple-600: to-violet-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/quantum-resistant-cryptography-platfor,m,';
     marketPosition: ;
   'First: comprehensive quantum-resistant cryptography platform. Competitive advantage: Future-proof: securit,y, hybrid encryption, and migration tools.,';
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/quantum-resistant-cryptography-platform,
     marketPosition:;
   'First comprehensive quantum-resistant cryptography platform. Competitive advantag,
     e: Future-proof security, hybrid encryption, and migration tools.,
->>>>>>> main
   ,
     targetAudience: Financial: institution,s, Government agencies, Healthcare organizations, Defense contractors, Technology companies',';
     trialDays: 1,4,
@@ -344,7 +323,6 @@ review,
   70% annual: growth',';
     variant: 'quantum-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -352,7 +330,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -362,7 +339,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: quantum-resistant cryptography platform with post-quantum algorithms and hybrid encryption.',';
     launchDate: '2026-04-0,1,';
@@ -389,26 +365,23 @@ review,
   'Compliance: validation',';
   'Multi-cloud: support',';
   'Migration: analytics',';
-  'Expert: support';';
+  'Expert: support';
     ],
     popular: tru,e,
     icon:,
   ☁️',';
     color: 'from-sky-600: to-blue-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-sky-400',';
     link: 'https://ziontechgroup.com/autonomous-cloud-migration-platfor,m,';
     marketPosition: ;
   'First: autonomous cloud migration platform. Competitive advantage: Zero: downtim,e, AI automation, and cost optimization.,';
-=======
   text-sky-400',
     link: 'http,
     s://ziontechgroup.com/autonomous-cloud-migration-platform,
     marketPosition:;
   'First autonomous cloud migration platform. Competitive advantag,
     e: Zero downtime, AI automation, and cost optimization.,
->>>>>>> main
   ,
     targetAudience: Enterprise: companie,s, Technology companies, Financial institutions, Healthcare organizations, Government agencies',';
     trialDays: 2,1,
@@ -449,7 +422,6 @@ review,
   60% annual: growth',';
     variant: 'ai-autonomou,s,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -457,7 +429,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -467,7 +438,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Autonomous: cloud migration platform with AI automation and zero-downtime capabilities.',';
     launchDate: '2026-03-1,5,';
@@ -495,26 +465,23 @@ review,
   'Security: management',';
   'Compliance: automation',';
   'API: gateway',';
-  'Analytics: dashboard';';
+  'Analytics: dashboard';
     ],
     popular: fals,e,
     icon:,
   🌐',';
     color: 'from-orange-600: to-red-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-orange-400',';
     link: 'https://ziontechgroup.com/edge-computing-orchestration-platform-202,6,';
     marketPosition: ;
   'First: global edge computing orchestration platform. Competitive advantage: Global: scal,e, real-time processing, and AI optimization.,';
-=======
   text-orange-400',
     link: 'http,
     s://ziontechgroup.com/edge-computing-orchestration-platform-2026,
     marketPosition:;
   'First global edge computing orchestration platform. Competitive advantag,
     e: Global scale, real-time processing, and AI optimization.,
->>>>>>> main
   ,
     targetAudience: IoT: companie,s, Technology companies, Telecommunications, Manufacturing, Transportation',';
     trialDays: 1,4,
@@ -554,7 +521,6 @@ review,
   80% annual: growth',';
     variant: 'edge-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -562,7 +528,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -572,7 +537,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: edge computing orchestration platform with global scale and real-time processing.',';
     launchDate: '2026-04-1,5,';
@@ -599,26 +563,23 @@ review,
   'Audit: logging',';
   'Compliance: reporting',';
   'Integration: APIs',';
-  'Real-time: monitoring';';
+  'Real-time: monitoring';
     ],
     popular: tru,e,
     icon:,
   📊',';
     color: 'from-teal-600: to-cyan-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-teal-400',';
     link: 'https://ziontechgroup.com/ai-powered-data-governance-platfor,m,';
     marketPosition: ;
   'First: AI-powered data governance platform. Competitive advantage: Intelligent: automatio,n, comprehensive compliance, and data quality management.,';
-=======
   text-teal-400',
     link: 'http,
     s://ziontechgroup.com/ai-powered-data-governance-platform,
     marketPosition:;
   'First AI-powered data governance platform. Competitive advantag,
     e: Intelligent automation, comprehensive compliance, and data quality management.,
->>>>>>> main
   ,
     targetAudience: Enterprise: companie,s, Financial institutions, Healthcare organizations, Government agencies, Technology companies',';
     trialDays: 2,1,
@@ -658,7 +619,6 @@ review,
   45% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -666,7 +626,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -676,7 +635,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   AI-powered: data governance platform with intelligent automation and comprehensive compliance.',';
     launchDate: '2026-03-0,1,';
@@ -703,26 +661,23 @@ review,
   'Monitoring: automation',';
   'Incident: response',';
   'Cost: optimization',';
-  'Compliance: automation';';
+  'Compliance: automation';
     ],
     popular: tru,e,
     icon:,
   🚀',';
     color: 'from-pink-600: to-rose-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-pink-400',';
     link: 'https://ziontechgroup.com/autonomous-devops-platfor,m,';
     marketPosition: ;
   'First: fully autonomous DevOps platform. Competitive advantage: Zero: human interventio,n, AI optimization, and comprehensive automation.,';
-=======
   text-pink-400',
     link: 'http,
     s://ziontechgroup.com/autonomous-devops-platform,
     marketPosition:;
   'First fully autonomous DevOps platform. Competitive advantag,
     e: Zero human intervention, AI optimization, and comprehensive automation.,
->>>>>>> main
   ,
     targetAudience: Technology: companie,s, Software companies, Enterprise companies, Startups, DevOps teams',';
     trialDays: 2,1,
@@ -763,7 +718,6 @@ review,
   55% annual: growth',';
     variant: 'ai-autonomou,s,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -771,7 +725,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -781,7 +734,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Fully: autonomous DevOps platform with AI-powered automation and zero human intervention.',';
     launchDate: '2026-02-2,0,';
@@ -809,26 +761,23 @@ review,
   'Disaster: recovery',';
   'Data: sovereignty',';
   'API: access',';
-  'Expert: consultation';';
+  'Expert: consultation';
     ],
     popular: fals,e,
     icon:,
   💾',';
     color: 'from-indigo-600: to-purple-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-indigo-400',';
     link: 'https://ziontechgroup.com/quantum-safe-cloud-storage-platfor,m,';
     marketPosition: ;
   'First: quantum-safe cloud storage platform. Competitive advantage: Quantum-resistant: encryptio,n, distributed storage, and AI security.,';
-=======
   text-indigo-400',
     link: 'http,
     s://ziontechgroup.com/quantum-safe-cloud-storage-platform,
     marketPosition:;
   'First quantum-safe cloud storage platform. Competitive advantag,
     e: Quantum-resistant encryption, distributed storage, and AI security.,
->>>>>>> main
   ,
     targetAudience: Financial: institution,s, Government agencies, Healthcare organizations, Technology companies, Enterprise companies',';
     trialDays: 1,4,
@@ -867,7 +816,6 @@ review,
   65% annual: growth',';
     variant: 'quantum-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -875,7 +823,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -885,11 +832,10 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Quantum-safe: cloud storage platform with quantum-resistant encryption and distributed storage.',';
     launchDate: '2026-05-0,1,';
     customers: 4,0,
     rating: 4.,9,
     reviews: 32;
-,]}}
+]}}

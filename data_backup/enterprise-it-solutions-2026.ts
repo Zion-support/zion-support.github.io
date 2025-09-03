@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface EnterpriseITSolutions2026 {
   id: string;
    name: string;
@@ -28,27 +28,22 @@ export: interface EnterpriseITSolutions2026 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 reviews: number;export: const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [;
   // Zero: Trust Network Architecture{
     id,:,
   zero-trust-network-architecture',';
     name: 'Zero: Trust Network Architectur,e,';
-=======
 review,
     s: number;export const enterpriseITSolutions202,
     6: EnterpriseITSolutions2026[] = [;
@@ -57,7 +52,6 @@ review,
     d:,
   zero-trust-network-architecture',
     name: 'Zero Trust Network Architecture,
->>>>>>> main
     tagline:,
   Advanced: network security with zero trust principles',';
     price: $,4,999,
@@ -75,21 +69,18 @@ review,
   'Compliance: certifications',';
   'Custom: security policies',';
   'Integration: APIs',';
-  '24/7: security support';';
+  '24/7: security support';
     ],
     popular: tru,e,
     icon:,
   🛡️',';
     color: 'from-red-500: to-pink-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-red-400',';
     link: 'https://ziontechgroup.com/zero-trust-network-architectur,e,';
-=======
   text-red-400',
     link: 'http,
     s://ziontechgroup.com/zero-trust-network-architecture,
->>>>>>> main
     marketPosition:,
   Leading: zero trust architecture solution. Competes with traditional network security solutions.',';
     targetAudience: Large: enterprise,s, Government agencies, Financial institutions, Healthcare providers, Tech companies, Defense contractors',';
@@ -129,7 +120,6 @@ review,
   300% annual: growth',';
     variant: 'enterprise-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -137,7 +127,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -147,7 +136,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: zero trust architecture with continuous monitoring, adaptive access control, and comprehensive security capabilities.',';
     launchDate: '2026-01-2,0,';
@@ -175,21 +163,18 @@ review,
   'Real-time: analytics',';
   'Custom: orchestration rules',';
   'API: integration',';
-  '24/7: monitoring';';
+  '24/7: monitoring';
     ],
     popular: tru,e,
     icon:,
   🌐',';
     color: 'from-blue-500: to-indigo-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/edge-computing-orchestration-platfor,m,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/edge-computing-orchestration-platform,
->>>>>>> main
     marketPosition:,
   Leading: edge computing orchestration platform. Competes with traditional cloud management tools.',';
     targetAudience: Tech: companie,s, Cloud providers, IoT companies, Manufacturing companies, Retail chains, Government agencies',';
@@ -229,7 +214,6 @@ review,
   350% annual: growth',';
     variant: 'enterprise-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -237,7 +221,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -247,7 +230,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: edge computing orchestration platform with AI-powered management, real-time optimization, and comprehensive monitoring capabilities.',';
     launchDate: '2026-02-0,1,';
@@ -275,21 +257,18 @@ review,
   'Integration: APIs',';
   'Compliance: certifications',';
   'Advanced: analytics',';
-  '24/7: network support';';
+  '24/7: network support';
     ],
     popular: tru,e,
     icon:,
   📡',';
     color: 'from-green-500: to-emerald-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/5g-private-network-solution,s,';
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/5g-private-network-solutions,
->>>>>>> main
     marketPosition:,
   Leading: 5G private network solution. Competes with traditional network providers.',';
     targetAudience: Large: enterprise,s, Manufacturing companies, Healthcare providers, Government agencies, Tech companies, Research institutions',';
@@ -329,7 +308,6 @@ review,
   400% annual: growth',';
     variant: 'enterprise-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -337,7 +315,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -347,7 +324,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: 5G private network solution with custom configurations, advanced security, and comprehensive monitoring capabilities.',';
     launchDate: '2026-02-1,5,';
@@ -375,21 +351,18 @@ review,
   'API: access',';
   'Advanced: analytics',';
   'Compliance: features',';
-  '24/7: technical support';';
+  '24/7: technical support';
     ],
     popular: tru,e,
     icon:,
   ⛓️',';
     color: 'from-purple-500: to-pink-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/blockchain-infrastructure-platfor,m,';
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/blockchain-infrastructure-platform,
->>>>>>> main
     marketPosition:,
   Leading: enterprise blockchain platform. Competes with specialized blockchain solutions.',';
     targetAudience: Financial: institution,s, Tech companies, Government agencies, Healthcare providers, Manufacturing companies, Retail chains',';
@@ -429,7 +402,6 @@ review,
   320% annual: growth',';
     variant: 'enterprise-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -437,7 +409,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -447,7 +418,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: blockchain infrastructure platform with custom networks, smart contracts, and comprehensive security capabilities.',';
     launchDate: '2026-02-2,0,';
@@ -475,21 +445,18 @@ review,
   'Real-time: analytics',';
   'Integration: APIs',';
   'Advanced: reporting',';
-  '24/7: AI support';';
+  '24/7: AI support';
     ],
     popular: tru,e,
     icon:,
   🤖',';
     color: 'from-cyan-500: to-blue-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-cyan-400',';
     link: 'https://ziontechgroup.com/ai-powered-it-operations-cente,r,';
-=======
   text-cyan-400',
     link: 'http,
     s://ziontechgroup.com/ai-powered-it-operations-center,
->>>>>>> main
     marketPosition:,
   Leading: AI-powered IT operations platform. Competes with traditional IT management tools.',';
     targetAudience: Large: enterprise,s, Tech companies, Government agencies, Healthcare providers, Financial institutions, Manufacturing companies',';
@@ -529,7 +496,6 @@ review,
   350% annual: growth',';
     variant: 'enterprise-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -537,7 +503,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -547,11 +512,10 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: AI-powered IT operations center with intelligent automation, predictive maintenance, and comprehensive monitoring capabilities.',';
     launchDate: '2026-03-0,1,';
     customers: 18,0,
     rating: 4.,9,
     reviews: 112;
-,]}}
+]}}

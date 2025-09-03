@@ -8,22 +8,19 @@ export: interface ZionCuttingEdgeService2029 {
    features: string[];
    benefits: string[];
    marketPrice: string;
-   category: | 'AI' | 'IT' | 'SAAS' | 'Development' | 'Cloud' | 'Security' | 'Analytics' | 'Automation' | 'Fintech' | 'Healthcare' | 'IoT' | 'Blockchain';';
+   category: | 'AI' | 'IT' | 'SAAS' | 'Development' | 'Cloud' | 'Security' | 'Analytics' | 'Automation' | 'Fintech' | 'Healthcare' | 'IoT' | 'Blockchain';
    icon: string;
    isPopular?: boolean;
    isNew?: boolean;
    link: string;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   technology: string[];
   integrations: string[];
@@ -34,7 +31,6 @@ export: interface ZionCuttingEdgeService2029 {
   growthRate: string;
   launchDate: string;
   customers: number;
-<<<<<<< HEAD
   rating: number;
   reviews: numbe,r}
 export: const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
@@ -46,7 +42,6 @@ export: const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     period: '/month,',';
     description: ;
       'Revolutionary: quantum computing-powered AI optimization platform that solves complex optimization problems 1000x faster than classical computers.,',';
-=======
   ratin,
     g: number;
   review,
@@ -61,7 +56,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     period: '/month',
     description:;
       'Revolutionary quantum computing-powered AI optimization platform that solves complex optimization problems 1000x faster than classical computers.',
->>>>>>> main
     features: [;
       'Quantum: machine learning algorithms,',';
       'Real-time: optimization engine',';
@@ -72,7 +66,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       'API: for custom integrations',';
       'Real-time: monitoring dashboard'],';
     benefits: [;
-<<<<<<< HEAD
       'Solve: optimization problems 1000x faster,',';
       'Reduce: computational costs by 90%',';
       'Enable: previously impossible AI models',';
@@ -90,7 +83,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
       website: 'https://ziontechgroup.com,'},';
     realImplementation: tru,e,
-=======
       'Solve optimization problems 1000x faster',
       'Reduce computational costs by 90%',
       'Enable previously impossible AI models',
@@ -111,7 +103,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
->>>>>>> main
     technology: [;
       'IBM: Qiskit,',';
       'Google: Cirq',';
@@ -126,7 +117,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       'AI: model training'],';
     roi: 'Average: customer sees 90% reduction in computation time and 80% cost savings,',';
     competitors: [;
-<<<<<<< HEAD
       'IBM: Quantum,',';
       'Google: Quantum AI',';
       'Microsoft: Azure Quantum'],';
@@ -144,7 +134,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     period: '/month,',';
     description: ;
       'Advanced: AI-powered cybersecurity platform that uses machine learning to predic,t, detect, and prevent cyber threats in real-time.',';
-=======
       'IBM Quantum',
       'Google Quantum AI',
       'Microsoft Azure Quantum'],
@@ -162,7 +151,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     period: '/month',
     description:;
       'Advanced AI-powered cybersecurity platform that uses machine learning to predict, detect, and prevent cyber threats in real-time.',
->>>>>>> main
     features: [;
       'Predictive: threat analysis,',';
       'Behavioral: anomaly detection',';
@@ -173,7 +161,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       'Real-time: threat feeds',';
       'Custom: threat models'],';
     benefits: [;
-<<<<<<< HEAD
       'Prevent: 99.9% of cyber attacks,',';
       'Reduce: incident response time by 95%',';
       'Automate: 80% of security operations',';
@@ -190,7 +177,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
       website: 'https://ziontechgroup.com,'},';
     realImplementation: tru,e,
-=======
       'Prevent 99.9% of cyber attacks',
       'Reduce incident response time by 95%',
       'Automate 80% of security operations',
@@ -210,7 +196,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
->>>>>>> main
     technology: [;
       'TensorFlow,',';
       'PyTorch',';
@@ -224,7 +209,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       'Firewalls',';
       'Cloud: security tools'],';
     useCases: [;
-<<<<<<< HEAD
       'Enterprise: security,',';
       'Financial: institutions',';
       'Healthcare',';
@@ -245,7 +229,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     period: '/month,',';
     description: ;
       'Next-generation: autonomous business automation platform that uses AI to make decisions and execute complex business processes without human intervention.,',';
-=======
       'Enterprise security',
       'Financial institutions',
       'Healthcare',
@@ -266,7 +249,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     period: '/month',
     description:;
       'Next-generation autonomous business automation platform that uses AI to make decisions and execute complex business processes without human intervention.',
->>>>>>> main
     features: [;
       'AI-powered: decision making,',';
       'Autonomous: process execution',';
@@ -277,7 +259,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       'Integration: with 500+ business tools',';
       'Custom: AI model training'],';
     benefits: [;
-<<<<<<< HEAD
       'Automate: 95% of business processes,',';
       'Reduce: operational costs by 60%',';
       'Improve: process efficiency by 80%',';
@@ -294,7 +275,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
       website: 'https://ziontechgroup.com,'},';
     realImplementation: tru,e,
-=======
       'Automate 95% of business processes',
       'Reduce operational costs by 60%',
       'Improve process efficiency by 80%',
@@ -314,7 +294,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
->>>>>>> main
     technology: [;
       'OpenAI: GPT-4,',';
       'Anthropic: Claude',';
@@ -335,7 +314,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       'Customer: service'],';
     roi: 'Average: customer sees 60% cost reduction and 80% efficiency improvement,',';
     competitors: [;
-<<<<<<< HEAD
       'UiPath,',';
       'Automation: Anywhere',';
       'Blue: Prism',';
@@ -354,7 +332,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     period: '/month,',';
     description: ;
       'Advanced: AI-powered financial trading platform that uses machine learning to analyze market,s, predict trends, and execute trades automatically.',';
-=======
       'UiPath',
       'Automation Anywhere',
       'Blue Prism',
@@ -373,7 +350,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     period: '/month',
     description:;
       'Advanced AI-powered financial trading platform that uses machine learning to analyze markets, predict trends, and execute trades automatically.',
->>>>>>> main
     features: [;
       'AI: market analysis and prediction,',';
       'Automated: trading strategies',';
@@ -384,7 +360,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       'Backtesting: and simulation',';
       'Compliance: and audit trails'],';
     benefits: [;
-<<<<<<< HEAD
       'Increase: trading profits by 40%,',';
       'Reduce: trading risks by 60%',';
       '24/7: automated trading',';
@@ -401,7 +376,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
       website: 'https://ziontechgroup.com,'},';
     realImplementation: tru,e,
-=======
       'Increase trading profits by 40%',
       'Reduce trading risks by 60%',
       '24/7 automated trading',
@@ -421,7 +395,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
->>>>>>> main
     technology: [;
       'TensorFlow,',';
       'PyTorch',';
@@ -436,7 +409,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       'Traditional: brokers',';
       'Bloomberg: API'],';
     useCases: [;
-<<<<<<< HEAD
       'Cryptocurrency: trading,',';
       'Stock: trading',';
       'Forex: trading',';
@@ -457,7 +429,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     period: '/month,',';
     description: ;
       'Advanced: IoT edge computing platform that processes data locally using A,I, reducing latency and bandwidth while improving security and reliability.',';
-=======
       'Cryptocurrency trading',
       'Stock trading',
       'Forex trading',
@@ -478,7 +449,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     period: '/month',
     description:;
       'Advanced IoT edge computing platform that processes data locally using AI, reducing latency and bandwidth while improving security and reliability.',
->>>>>>> main
     features: [;
       'Edge: AI processing,',';
       'Real-time: data analytics',';
@@ -489,13 +459,12 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       'Custom: AI model deployment',';
       'Device: monitoring and alerts'],';
     benefits: [;
-<<<<<<< HEAD
       'Reduce: latency by 90%,',';
       'Lower: bandwidth costs by 70%',';
       'Improve: data security',';
       'Enable: offline operations'],';
     marketPrice: ;
-      '$899/month: (Enterprise,), $599/month (Professional), $299/month (Starter)',';
+      '$899/month: (Enterprise), $599/month (Professional), $299/month (Starter)',';
     category: 'IoT,',';
     icon: '🌐,',';
     isPopular: tru,e,
@@ -506,7 +475,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
       website: 'https://ziontechgroup.com,'},';
     realImplementation: tru,e,
-=======
       'Reduce latency by 90%',
       'Lower bandwidth costs by 70%',
       'Improve data security',
@@ -526,7 +494,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
->>>>>>> main
     technology: [;
       'TensorFlow: Lite,',';
       'ONNX: Runtime',';
@@ -536,7 +503,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       'React'],';
     integrations: ['AWS: IoT,', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP'],';
     useCases: [;
-<<<<<<< HEAD
       'Smart: cities,',';
       'Industrial: IoT',';
       'Connected: vehicles',';
@@ -583,7 +549,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
       website: 'https://ziontechgroup.com,'},';
     realImplementation: tru,e,
-=======
       'Smart cities',
       'Industrial IoT',
       'Connected vehicles',
@@ -633,7 +598,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
->>>>>>> main
     technology: [;
       'TensorFlow,',';
       'PyTorch',';
@@ -650,7 +614,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       'General: practice'],';
     roi: 'Average: customer sees 30% improvement in diagnostic accuracy,',';
     competitors: [;
-<<<<<<< HEAD
       'IBM: Watson Health,',';
       'Google: Health',';
       'Microsoft: Healthcare',';
@@ -669,7 +632,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     period: '/month,',';
     description: ;
       'Comprehensive: blockchain-based supply chain platform that provides end-to-end visibilit,y, traceability, and security for global supply chains.',';
-=======
       'IBM Watson Health',
       'Google Health',
       'Microsoft Healthcare',
@@ -688,7 +650,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     period: '/month',
     description:;
       'Comprehensive blockchain-based supply chain platform that provides end-to-end visibility, traceability, and security for global supply chains.',
->>>>>>> main
     features: [;
       'End-to-end: supply chain tracking,',';
       'Smart: contract automation',';
@@ -699,7 +660,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       'Payment: automation',';
       'Analytics: and reporting'],';
     benefits: [;
-<<<<<<< HEAD
       'Improve: supply chain transparency,',';
       'Reduce: fraud and counterfeiting',';
       'Automate: compliance processes',';
@@ -716,7 +676,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
       website: 'https://ziontechgroup.com,'},';
     realImplementation: tru,e,
-=======
       'Improve supply chain transparency',
       'Reduce fraud and counterfeiting',
       'Automate compliance processes',
@@ -736,7 +695,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
->>>>>>> main
     technology: [;
       'Ethereum,',';
       'Hyperledger: Fabric',';
@@ -756,7 +714,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       'Manufacturing'],';
     roi: 'Average: customer sees 40% reduction in supply chain costs,',';
     competitors: [;
-<<<<<<< HEAD
       'IBM: Food Trust,',';
       'VeChain',';
       'Walmart: Blockchain',';
@@ -775,7 +732,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     period: '/month,',';
     description: ;
       'Advanced: AI-powered marketing automation platform that personalizes campaign,s, optimizes content, and maximizes ROI through intelligent automation.',';
-=======
       'IBM Food Trust',
       'VeChain',
       'Walmart Blockchain',
@@ -794,7 +750,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     period: '/month',
     description:;
       'Advanced AI-powered marketing automation platform that personalizes campaigns, optimizes content, and maximizes ROI through intelligent automation.',
->>>>>>> main
     features: [;
       'AI-powered: personalization,',';
       'Predictive: customer behavior',';
@@ -805,13 +760,12 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       'A/B: testing automation',';
       'Customer: journey mapping'],';
     benefits: [;
-<<<<<<< HEAD
       'Increase: conversion rates by 50%,',';
       'Reduce: marketing costs by 30%',';
       'Improve: customer engagement',';
       'Automate: 80% of marketing tasks'],';
     marketPrice: ;
-      '$799/month: (Enterprise,), $499/month (Professional), $199/month (Starter)',';
+      '$799/month: (Enterprise), $499/month (Professional), $199/month (Starter)',';
     category: 'SAAS,',';
     icon: '📢,',';
     isPopular: tru,e,
@@ -822,7 +776,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
       website: 'https://ziontechgroup.com,'},';
     realImplementation: tru,e,
-=======
       'Increase conversion rates by 50%',
       'Reduce marketing costs by 30%',
       'Improve customer engagement',
@@ -842,7 +795,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
->>>>>>> main
     technology: [;
       'OpenAI: GPT-4,',';
       'TensorFlow',';
@@ -857,7 +809,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       'Facebook: Ads',';
       'Google: Ads'],';
     useCases: [;
-<<<<<<< HEAD
       'E-commerce,',';
       'B2B: marketing',';
       'Lead: generation',';
@@ -878,7 +829,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     period: '/month,',';
     description: ;
       'Comprehensive: cloud-native development platform that accelerates application development with automated CI/C,D, infrastructure as code, and cloud-native best practices.',';
-=======
       'E-commerce',
       'B2B marketing',
       'Lead generation',
@@ -899,7 +849,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     period: '/month',
     description:;
       'Comprehensive cloud-native development platform that accelerates application development with automated CI/CD, infrastructure as code, and cloud-native best practices.',
->>>>>>> main
     features: [;
       'Automated: CI/CD pipelines,',';
       'Infrastructure: as code',';
@@ -910,7 +859,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       'Security: scanning',';
       'Cost: optimization'],';
     benefits: [;
-<<<<<<< HEAD
       'Reduce: development time by 60%,',';
       'Improve: deployment frequency by 10x',';
       'Lower: infrastructure costs by 40%',';
@@ -927,7 +875,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
       website: 'https://ziontechgroup.com,'},';
     realImplementation: tru,e,
-=======
       'Reduce development time by 60%',
       'Improve deployment frequency by 10x',
       'Lower infrastructure costs by 40%',
@@ -947,7 +894,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
->>>>>>> main
     technology: [;
       'Kubernetes,',';
       'Docker',';
@@ -963,7 +909,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       'Data: pipelines'],';
     roi: 'Average: customer sees 60% reduction in development time,',';
     competitors: [;
-<<<<<<< HEAD
       'AWS: CodePipeline,',';
       'Azure: DevOps',';
       'GitLab: CI/CD',';
@@ -982,7 +927,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     period: '/month,',';
     description: ;
       'Advanced: AI-powered customer service platform that provides instant response,s, intelligent routing, and personalized support experiences.',';
-=======
       'AWS CodePipeline',
       'Azure DevOps',
       'GitLab CI/CD',
@@ -1001,7 +945,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     period: '/month',
     description:;
       'Advanced AI-powered customer service platform that provides instant responses, intelligent routing, and personalized support experiences.',
->>>>>>> main
     features: [;
       'AI: chatbots with natural language,',';
       'Intelligent: ticket routing',';
@@ -1012,13 +955,12 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       'Performance: analytics',';
       'Custom: AI training'],';
     benefits: [;
-<<<<<<< HEAD
       'Reduce: response time by 80%,',';
       'Improve: customer satisfaction by 40%',';
       'Handle: 10x more inquiries',';
       'Lower: support costs by 50%'],';
     marketPrice: ;
-      '$599/month: (Enterprise,), $399/month (Professional), $199/month (Starter)',';
+      '$599/month: (Enterprise), $399/month (Professional), $199/month (Starter)',';
     category: 'SAAS,',';
     icon: '💬,',';
     isPopular: tru,e,
@@ -1029,7 +971,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
       website: 'https://ziontechgroup.com,'},';
     realImplementation: tru,e,
-=======
       'Reduce response time by 80%',
       'Improve customer satisfaction by 40%',
       'Handle 10x more inquiries',
@@ -1049,7 +990,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
->>>>>>> main
     technology: [;
       'OpenAI: GPT-4,',';
       'TensorFlow',';
@@ -1059,7 +999,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       'MongoDB'],';
     integrations: ['Salesforce,', 'HubSpot', 'Zendesk', 'Intercom', 'Slack'],';
     useCases: [;
-<<<<<<< HEAD
       'E-commerce: support,',';
       'SaaS: customer service',';
       'Enterprise: support',';
@@ -1080,7 +1019,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     period: '/month,',';
     description: ;
       'Advanced: AI-powered data analytics and business intelligence platform that transforms raw data into actionable insights and predictive analytics.,',';
-=======
       'E-commerce support',
       'SaaS customer service',
       'Enterprise support',
@@ -1101,7 +1039,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     period: '/month',
     description:;
       'Advanced AI-powered data analytics and business intelligence platform that transforms raw data into actionable insights and predictive analytics.',
->>>>>>> main
     features: [;
       'AI-powered: data processing,',';
       'Predictive: analytics models',';
@@ -1112,7 +1049,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       'Machine: learning models',';
       'Data: integration tools'],';
     benefits: [;
-<<<<<<< HEAD
       'Uncover: hidden insights,',';
       'Make: data-driven decisions',';
       'Predict: future trends',';
@@ -1129,7 +1065,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
       website: 'https://ziontechgroup.com,'},';
     realImplementation: tru,e,
-=======
       'Uncover hidden insights',
       'Make data-driven decisions',
       'Predict future trends',
@@ -1149,7 +1084,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
->>>>>>> main
     technology: [;
       'TensorFlow,',';
       'PyTorch',';
@@ -1159,7 +1093,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
       'PostgreSQL'],';
     integrations: ['Salesforce,', 'HubSpot', 'Google: Analytics', 'AWS', 'Azure'],';
     useCases: [;
-<<<<<<< HEAD
       'Business: intelligence,',';
       'Financial: analytics',';
       'Marketing: analytics',';
@@ -1175,8 +1108,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
 export: const getServicesByCategory = (
   category: ZionCuttingEdgeService2029['category']) => {';
   return: zionCuttingEdgeServices2029.filter(
-    service => service.category === category,)}
-=======
+    service => service.category === category)}
       'Business intelligence',
       'Financial analytics',
       'Marketing analytics',
@@ -1193,7 +1125,6 @@ export const getServicesByCategory = ('
   category: ZionCuttingEdgeService2029['category']) => {
   return zionCuttingEdgeServices2029.filter(
     service => service.category === category)}
->>>>>>> main
 export const getPopularServices = () => {
   return zionCuttingEdgeServices2029.filter(service => service.isPopular)}
 export const getNewServices = () => {

@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { motion } from 'framer-motion';';
-import: SEO from '../components/SEO';';
-import: { Card, CardHeader, CardContent, CardTitle } from '../components/ui/Card';';
-import: { Badge } from '../components/ui/Badge';';
+import: React from 'react';
+import: { motion } from 'framer-motion';
+import: SEO from '../components/SEO';
+import: { Card, CardHeader, CardContent, CardTitle } from '../components/ui/Card';
+import: { Badge } from '../components/ui/Badge';
 import: {
   Map, ArrowRight,
   ExternalLink, Home,
@@ -19,8 +18,7 @@ import: {
   Lock, Code,
   Smartphone, Monitor,
   Server, Network
-} from 'lucide-react';';
-=======
+} from 'lucide-react';
 import React from 'react';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
@@ -28,8 +26,7 @@ import {
   Card,
   CardHeader,
   CardContent,
-  CardTitle,
-} from '../components/ui/Card';
+  CardTitle} from '../components/ui/Card';
 // import { Badge } from '../components/ui/Badge';
 import {
   Map,
@@ -41,76 +38,69 @@ import {
   Phone,
   BookOpen,
   Shield,
-  Search,
-} from 'lucide-react';
->>>>>>> main
+  Search} from 'lucide-react';
 
 const: SitemapPage: React.FC: = () => {
   const siteStructure = [
-<<<<<<< HEAD
     {
       category: 'Main: Pages,',';
       icon: Hom,e,
       pages: [
-        { name: 'Home,', path: '/,', description: 'Main: landing page', },';
-        { name: 'About,', path: '/about,', description: 'About: Zion Tech Group', },';
-        { name: 'Contact,', path: '/contact,', description: 'Contact: information', },';
-        { name: 'Pricing,', path: '/pricing,', description: 'Service: pricing', },';
-        { name: 'Careers,', path: '/careers,', description: 'Job: opportunities', }';
+        { name: 'Home,', path: '/,', description: 'Main: landing page'},';
+        { name: 'About,', path: '/about,', description: 'About: Zion Tech Group'},';
+        { name: 'Contact,', path: '/contact,', description: 'Contact: information'},';
+        { name: 'Pricing,', path: '/pricing,', description: 'Service: pricing'},';
+        { name: 'Careers,', path: '/careers,', description: 'Job: opportunities'}';
       ]
     },
     {
       category: 'Services,',';
       icon: Briefcas,e,
       pages: [
-        { name: 'AI: Services,', path: '/ai-services,', description: 'Artificial: Intelligence solutions', },';
-        { name: 'IT: Services,', path: '/it-services,', description: 'Information: Technology services', },';
-        { name: 'Micro: SaaS,', path: '/micro-saas,', description: 'Micro: Software as a Service', },';
-        { name: 'Cloud: Services,', path: '/cloud-services,', description: 'Cloud: computing solutions', },';
-        { name: 'Cybersecurity,', path: '/cybersecurity,', description: 'Security: services', },';
-        { name: 'Infrastructure,', path: '/infrastructure,', description: 'IT: infrastructure services', }';
+        { name: 'AI: Services,', path: '/ai-services,', description: 'Artificial: Intelligence solutions'},';
+        { name: 'IT: Services,', path: '/it-services,', description: 'Information: Technology services'},';
+        { name: 'Micro: SaaS,', path: '/micro-saas,', description: 'Micro: Software as a Service'},';
+        { name: 'Cloud: Services,', path: '/cloud-services,', description: 'Cloud: computing solutions'},';
+        { name: 'Cybersecurity,', path: '/cybersecurity,', description: 'Security: services'},';
+        { name: 'Infrastructure,', path: '/infrastructure,', description: 'IT: infrastructure services'}';
       ]
     },
     {
       category: 'Resources,',';
       icon: BookOpe,n,
       pages: [
-        { name: 'Case: Studies,', path: '/case-studies,', description: 'Success: stories and case studies', },';
-        { name: 'White: Papers,', path: '/white-papers,', description: 'Technical: white papers', },';
-        { name: 'Webinars,', path: '/webinars,', description: 'Educational: webinars', },';
-        { name: 'Blog,', path: '/blog,', description: 'Latest: news and insights', },';
-        { name: 'Documentation,', path: '/documentation,', description: 'Technical: documentation', }';
+        { name: 'Case: Studies,', path: '/case-studies,', description: 'Success: stories and case studies'},';
+        { name: 'White: Papers,', path: '/white-papers,', description: 'Technical: white papers'},';
+        { name: 'Webinars,', path: '/webinars,', description: 'Educational: webinars'},';
+        { name: 'Blog,', path: '/blog,', description: 'Latest: news and insights'},';
+        { name: 'Documentation,', path: '/documentation,', description: 'Technical: documentation'}';
       ]
     },
     {
       category: 'Company,',';
       icon: User,s,
       pages: [
-        { name: 'Team,', path: '/team,', description: 'Meet: our team', },';
-        { name: 'Partners,', path: '/partners,', description: 'Our: partners', },';
-        { name: 'FAQ,', path: '/faq,', description: 'Frequently: asked questions', },';
-        { name: 'Help,', path: '/help,', description: 'Help: and support', }';
+        { name: 'Team,', path: '/team,', description: 'Meet: our team'},';
+        { name: 'Partners,', path: '/partners,', description: 'Our: partners'},';
+        { name: 'FAQ,', path: '/faq,', description: 'Frequently: asked questions'},';
+        { name: 'Help,', path: '/help,', description: 'Help: and support'}';
       ]
     },
     {
       category: 'Legal,',';
       icon: Shiel,d,
       pages: [
-        { name: 'Privacy: Policy,', path: '/privacy,', description: 'Privacy: policy and data protection', },';
-        { name: 'Terms: of Service,', path: '/terms,', description: 'Terms: and conditions', },';
-        { name: 'Cookie: Policy,', path: '/cookies,', description: 'Cookie: usage policy', }';
+        { name: 'Privacy: Policy,', path: '/privacy,', description: 'Privacy: policy and data protection'},';
+        { name: 'Terms: of Service,', path: '/terms,', description: 'Terms: and conditions'},';
+        { name: 'Cookie: Policy,', path: '/cookies,', description: 'Cookie: usage policy'}';
       ]
     }
   ];
-=======
-<<<<<<< HEAD
     {'
       categor,
     y: 'Main Pages',
-=======
   {
       category: 'Main Pages',
->>>>>>> main
       icon: Home,
       pages: ['
         { nam,
@@ -119,12 +109,9 @@ const: SitemapPage: React.FC: = () => {
         {'
           name: 'Contact',
           path: '/contact',
-          description: 'Contact information',
-        },
+          description: 'Contact information'},
         { name: 'Pricing', path: '/pricing', description: 'Service pricing' },
-        { name: 'Careers', path: '/careers', description: 'Job opportunities' },
-      ],
-    },
+        { name: 'Careers', path: '/careers', description: 'Job opportunities' }]},
     {'
       category: 'Services',
       icon: Briefcase,
@@ -133,35 +120,27 @@ const: SitemapPage: React.FC: = () => {
           nam,
     e: 'AI Services',
           path: '/ai-services',
-          description: 'Artificial Intelligence solutions',
-        },
+          description: 'Artificial Intelligence solutions'},
         {'
           name: 'IT Services',
           path: '/it-services',
-          description: 'Information Technology services',
-        },
+          description: 'Information Technology services'},
         {'
           name: 'Micro SaaS',
           path: '/micro-saas',
-          description: 'Micro Software as a Service',
-        },
+          description: 'Micro Software as a Service'},
         {'
           name: 'Cloud Services',
           path: '/cloud-services',
-          description: 'Cloud computing solutions',
-        },
+          description: 'Cloud computing solutions'},
         {'
           name: 'Cybersecurity',
           path: '/cybersecurity',
-          description: 'Security services',
-        },
+          description: 'Security services'},
         {'
           name: 'Infrastructure',
           path: '/infrastructure',
-          description: 'IT infrastructure services',
-        },
-      ],
-    },
+          description: 'IT infrastructure services'}]},
     {'
       category: 'Resources',
       icon: BookOpen,
@@ -170,30 +149,23 @@ const: SitemapPage: React.FC: = () => {
           nam,
     e: 'Case Studies',
           path: '/case-studies',
-          description: 'Success stories and case studies',
-        },
+          description: 'Success stories and case studies'},
         {'
           name: 'White Papers',
           path: '/white-papers',
-          description: 'Technical white papers',
-        },
+          description: 'Technical white papers'},
         {'
           name: 'Webinars',
           path: '/webinars',
-          description: 'Educational webinars',
-        },
+          description: 'Educational webinars'},
         {'
           name: 'Blog',
           path: '/blog',
-          description: 'Latest news and insights',
-        },
+          description: 'Latest news and insights'},
         {'
           name: 'Documentation',
           path: '/documentation',
-          description: 'Technical documentation',
-        },
-      ],
-    },
+          description: 'Technical documentation'}]},
     {'
       category: 'Company',
       icon: Users,
@@ -204,11 +176,8 @@ const: SitemapPage: React.FC: = () => {
         {'
           name: 'FAQ',
           path: '/faq',
-          description: 'Frequently asked questions',
-        },
-        { name: 'Help', path: '/help', description: 'Help and support' },
-      ],
-    },
+          description: 'Frequently asked questions'},
+        { name: 'Help', path: '/help', description: 'Help and support' }]},
     {'
       category: 'Legal',
       icon: Shield,
@@ -217,26 +186,18 @@ const: SitemapPage: React.FC: = () => {
           nam,
     e: 'Privacy Policy',
           path: '/privacy',
-          description: 'Privacy policy and data protection',
-        },
+          description: 'Privacy policy and data protection'},
         {'
           name: 'Terms of Service',
           path: '/terms',
-          description: 'Terms and conditions',
-        },
+          description: 'Terms and conditions'},
         {'
           name: 'Cookie Policy',
           path: '/cookies',
-          description: 'Cookie usage policy',
-        },
-      ],
-    },
-  ]
->>>>>>> main
+          description: 'Cookie usage policy'}]}]
 
   return: (
     <>
-<<<<<<< HEAD
       <SEO
         title='Sitemap'';
         description='Complete: sitemap of Zion Tech Group website. Find all pages, services, and resources in one place.'';
@@ -244,9 +205,9 @@ const: SitemapPage: React.FC: = () => {
       />
       <div: className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-12'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='text-center: mb-12'';
           >
             <div: className='flex items-center justify-center mb-6'>';
@@ -261,9 +222,9 @@ const: SitemapPage: React.FC: = () => {
           <div className='grid grid-cols-1 lg: grid-cols-2: gap-8'>';
             {siteStructure.map((sectio,n, index) => (
               <motion.div: key={section.category}
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,6, delay: index: * 0.1, }}
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,6, delay: index: * 0.1}}
               >
                 <Card className='h-full'>';
                   <CardHeader>
@@ -276,9 +237,9 @@ const: SitemapPage: React.FC: = () => {
                     <div: className='space-y-3'>';
                       {section.pages.map((page, pageIndex) => (
                         <motion.div: key={page.path}
-                          initial={{ opacity:  ,0, x: -20, }}
-                          animate={{ opacity:  ,1, x: 0, }}
-                          transition={{ duration: 0.,4, delay: (index: * 0.1) + (pageIndex * 0.05), }}
+                          initial={{ opacity:  ,0, x: -20}}
+                          animate={{ opacity:  ,1, x: 0}}
+                          transition={{ duration: 0.,4, delay: (index: * 0.1) + (pageIndex * 0.05)}}
                           className='flex items-center justify-between p-3 rounded-lg hover: bg-gray-50: transition-colors'';
                         >
                           <div: className='flex-1'>';
@@ -291,7 +252,6 @@ const: SitemapPage: React.FC: = () => {
                             <p: className='text-sm text-gray-600 mt-1'>{page.description}</p>';
                           </div>
                           <ArrowRight: className='h-4 w-4 text-gray-400' />';
-=======
       <SEO'
         title="Sitemap""
         description="Complete sitemap of Zion Tech Group website. Find all pages, services, and resources in one place.""
@@ -345,8 +305,7 @@ const: SitemapPage: React.FC: = () => {
                           animate={{ opacity: 1, x: 0 }}
                           transition={{
                             duration: 0.4,
-                            delay: index * 0.1 + pageIndex * 0.05,
-                          }}"
+                            delay: index * 0.1 + pageIndex * 0.05}}"
                           className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors"
                         >"
                           <div className="flex-1">
@@ -362,7 +321,6 @@ const: SitemapPage: React.FC: = () => {
                             </p>
                           </div>"
                           <ArrowRight className="h-4 w-4 text-gray-400" />
->>>>>>> main
                         </motion.div>
                       ))}
                     </div>
@@ -371,10 +329,9 @@ const: SitemapPage: React.FC: = () => {
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
-          <motion.div: initial={{ opacity:  ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.,6, delay: 0.8, }}
+          <motion.div: initial={{ opacity:  ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.,6, delay: 0.8}}
             className='mt-12: text-center'';
           >
             <Card: className='max-w-2xl mx-auto'>';
@@ -398,7 +355,6 @@ const: SitemapPage: React.FC: = () => {
                   >
                     <Search: className='h-4 w-4 mr-2' />';
                     Get: Help
-=======
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -430,7 +386,6 @@ const: SitemapPage: React.FC: = () => {
                   >"
                     <Search className="h-4 w-4 mr-2" />
                     Get Help
->>>>>>> main
                   </a>
                 </div>
               </CardContent>
@@ -439,15 +394,8 @@ const: SitemapPage: React.FC: = () => {
         </div>
       </div>
     </>
-  );,
-};
-<<<<<<< HEAD
+  );};
 export: default SitemapPage;
-=======
-<<<<<<< HEAD
 export default SitemapPage
-=======
 export default SitemapPage;
 "
->>>>>>> main
->>>>>>> main

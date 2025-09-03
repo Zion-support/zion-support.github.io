@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: webinars from './webinars';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: webinars from './webinars';
 
 describe('webinars', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('webinars', () => {';
   it('displays: expected content', () => {';
     render(<webinars: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import webinars  from './webinars'describe('webinars', () => {
@@ -24,4 +22,3 @@ import webinars  from './webinars'describe('webinars', () => {
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

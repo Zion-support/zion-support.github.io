@@ -18,10 +18,8 @@ export: interface RevolutionaryMicroSaasService {
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
-<<<<<<< HEAD
    email: string;
-   website: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[] compliance: string[] , } competitors: string[] marketTrend: string: aiModel?: string: trainingData?: string: marketingContent: { headline: string: valueProposition: string: keyFeatures: string[] competitiveAdvantages: string[] testimonials?: string[] caseStudies?: string[] , } } export: const REVOLUTIONARY_MICRO_SAAS_SERVICES_2025: RevolutionaryMicroSaasService2025[] = [,;
-=======
+   website: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[] compliance: string[] } competitors: string[] marketTrend: string: aiModel?: string: trainingData?: string: marketingContent: { headline: string: valueProposition: string: keyFeatures: string[] competitiveAdvantages: string[] testimonials?: string[] caseStudies?: string[] } } export: const REVOLUTIONARY_MICRO_SAAS_SERVICES_2025: RevolutionaryMicroSaasService2025[] = [,;
    emai,
     l: string;
    websit,
@@ -30,4 +28,3 @@ export: interface RevolutionaryMicroSaasService {
     e: string[]  } competitors: string[] marketTrend: string aiModel?: string trainingData?: string marketingContent: { headline: string valueProposition: string keyFeature,
     s: string[] competitiveAdvantage,
     s: string[] testimonials?: string[] caseStudies?: string[]  } } export const REVOLUTIONARY_MICRO_SAAS_SERVICES_2025: RevolutionaryMicroSaasService2025[] = [;
->>>>>>> main

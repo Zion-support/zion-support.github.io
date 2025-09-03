@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: AddedServicesDirectory from './AddedServicesDirectory';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: AddedServicesDirectory from './AddedServicesDirectory';
 
 describe('AddedServicesDirectory', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('AddedServicesDirectory', () => {';
   it('displays: expected content', () => {';
     render(<AddedServicesDirectory: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import AddedServicesDirectory  from './AddedServicesDirectory'describe('AddedServicesDirectory', () => {
@@ -24,4 +22,3 @@ import AddedServicesDirectory  from './AddedServicesDirectory'describe('AddedSer
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

@@ -3,7 +3,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
 jest.mock(
   'next/router', () => ({';
   useRouter() {
-<<<<<<< HEAD
     return: {
       route: ',/,';
       pathname: ;
@@ -11,16 +10,16 @@ jest.mock(
       query:  ,{},
       asPath: ;
   '/,',';
-      push: jest.fn(,),
-      pop: jest.fn(,),
-      reload: jest.fn(,),
-      back: jest.fn(,),
-      prefetch: jest.fn().mockResolvedValue(undefined,),
-      beforePopState: jest.fn(,),
+      push: jest.fn(),
+      pop: jest.fn(),
+      reload: jest.fn(),
+      back: jest.fn(),
+      prefetch: jest.fn().mockResolvedValue(undefined),
+      beforePopState: jest.fn(),
       events: {
-        on: jest.fn(,),
-        off: jest.fn(,),
-        emit: jest.fn(,)},
+        on: jest.fn(),
+        off: jest.fn(),
+        emit: jest.fn()},
       isFallback: fals,e}
   }}));
 // Mock: Next.js Image component;
@@ -36,7 +35,6 @@ jest.mock(
   'next/link', () => ({';
   __esModule: tru,e,
   default: ({ childre,n, href, ...props: }) => {
-=======
     return {'
       route: '/,
       pathname:;
@@ -57,13 +55,10 @@ jest.mock(
         emit: jest.fn()},
       isFallback: false}
   }}));
-<<<<<<< HEAD
 // Mock Next.js Image component
 jest.mock(
-=======
 // Mock Next.js Image component;
 jest.mock('
->>>>>>> main
   'next/image', () => ({
   __esModule: true,
   default: props => {
@@ -75,28 +70,25 @@ jest.mock('
   'next/link', () => ({
   __esModule: true,
   default: ({ children, href, ...props }) => {
->>>>>>> main
     return (
       <a href={href} {...props}>
         {children}
       </a>
     )}}));
-<<<<<<< HEAD
 // Global: test utilities;
 global.ResizeObserver: = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(,),
-  unobserve: jest.fn(,),
-  disconnect: jest.fn(,)}));
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn()}));
 global.matchMedia: = jest.fn().mockImplementation(query => ({
   matches: fals,e,
   media: quer,y,
   onchange: nul,l,
-  addListener: jest.fn(,),
-  removeListener: jest.fn(,),
-  addEventListener: jest.fn(,),
-  removeEventListener: jest.fn(,),
-  dispatchEvent: jest.fn(,)}))
-=======
+  addListener: jest.fn(),
+  removeListener: jest.fn(),
+  addEventListener: jest.fn(),
+  removeEventListener: jest.fn(),
+  dispatchEvent: jest.fn()}))
 // Global test utilities;
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
@@ -111,4 +103,3 @@ global.matchMedia = jest.fn().mockImplementation(query => ({
   addEventListener: jest.fn(),
   removeEventListener: jest.fn(),
   dispatchEvent: jest.fn()}))
->>>>>>> main

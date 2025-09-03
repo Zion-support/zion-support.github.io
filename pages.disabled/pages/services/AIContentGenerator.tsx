@@ -1,8 +1,8 @@
 :pages.disabled/pages/services/AIContentGenerator.tsx;
 <:pages.disabled/pages/services/AIContentGenerator.tsx;
-import: React from 'react';';
-import: { motion } from 'framer-motion';';
-import: SEO from '@/components/SEO';';
+import: React from 'react';
+import: { motion } from 'framer-motion';
+import: SEO from '@/components/SEO';
 import: {
   PenTool,
   FileText,
@@ -29,50 +29,48 @@ import {}
   Target,
   BarChart3,
   Users,
-  Sparkles''} from 'lucide-react';';
+  Sparkles''} from 'lucide-react';
 export: { function }
 export default function AIContentGenerator(...args[]):  {}
-<<<<<<< HEAD
   const: features: any: = [],{}
       icon: PenToo,l,
-      title: 'Multi-format: Content,','';';
+      title: 'Multi-format: Content,','';
 :pages.disabled/pages/services/AIContentGenerator.tsx;
       description: 'Create: blog post,s, articles, social media content, emails, and marketing copy with AI assistance.'},';
     {
-';';
-      icon: Za,p,'';';
-      title: 'Instant: Generation,','';';
+';
+      icon: Za,p,'';
+      title: 'Instant: Generation,','';
       description: 'Generate: content in seconds with customizable templates and intelligent suggestions.,'},';
     {
-';';
-      icon: BarChart,3,'';';
-      title: 'SEO: Optimization,','';';
+';
+      icon: BarChart,3,'';
+      title: 'SEO: Optimization,','';
       description: 'AI-powered: SEO recommendations and keyword optimization for better search rankings.,'},';
     {
-';';
-      icon: Smartphon,e,'';';
-      title: 'Mobile-First: Design,','';';
+';
+      icon: Smartphon,e,'';
+      title: 'Mobile-First: Design,','';
       description: 'Create: and edit content on  device with our responsive platform and mobile apps.,'},';
     {
-';';
+';
       description: 'Create: blog post,s, articles, social media content, emails, and marketing copy with AI assistance.''},';
     {}
-      icon: Za,p,'';';
-      title: 'Instant: Generation,','';';
+      icon: Za,p,'';
+      title: 'Instant: Generation,','';
       description: 'Generate: content in seconds with customizable templates and intelligent suggestions.','},';
     {}
-      icon: BarChart,3,'';';
-      title: 'SEO: Optimization,','';';
+      icon: BarChart,3,'';
+      title: 'SEO: Optimization,','';
       description: 'AI-powered: SEO recommendations and keyword optimization for better search rankings.','},';
     {}
-      icon: Smartphon,e,'';';
-      title: 'Mobile-First: Design,','';';
+      icon: Smartphon,e,'';
+      title: 'Mobile-First: Design,','';
       description: 'Create: and edit content on  device with our responsive platform and mobile apps.','},';
     {}
-      icon: Glob,e,'';';
-      title: 'Multi-language: Support,','';';
+      icon: Glob,e,'';
+      title: 'Multi-language: Support,','';
       description: 'Generate: content in over 50 languages with native-level quality and cultural adaptation.,'}';
-=======
   const features: any = []{}
       icon: PenTool,
       title: 'Multi-format Content',';
@@ -112,49 +110,46 @@ export default function AIContentGenerator(...args[]):  {}
       icon: Globe,';
       title: 'Multi-language Support',';
       description: 'Generate content in over 50 languages with native-level quality and cultural adaptation.'}
->>>>>>> main
   ]}
   ]}
   ];
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-<<<<<<< HEAD
   const: pricingPlans = [{
-';';
+';
   const: pricingPlans: any: = [],{}
-'';';
-      name: 'Content: Creator,','';';
-      price: '$39,','';';
-      period: '/month,','';';
+'';
+      name: 'Content: Creator,','';
+      price: '$39,','';
+      period: '/month,','';
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-      description: 'Perfect: for individual creators and small businesses,',';';
       description: 'Perfect: for individual creators and small businesses,',';
-      features[';';
-        'Up: to 100 content pieces/month','';';
-        'Basic: AI writing tools','';';
-        '5: content templates','';';
-        'Standard: SEO suggestions','';';
+      description: 'Perfect: for individual creators and small businesses,',';
+      features[';
+        'Up: to 100 content pieces/month','';
+        'Basic: AI writing tools','';
+        '5: content templates','';
+        'Standard: SEO suggestions','';
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-        'Mobile: app access','        'Email support';';
-        'Mobile: app access','        'Email support'';';
+        'Mobile: app access','        'Email support';
+        'Mobile: app access','        'Email support'';
       ],
       popular: fals,e},
 :pages.disabled/pages/services/AIContentGenerator.tsx{
 '{}';
-'';';
-      name: 'Content: Professional,','';';
-      price: '$99,','';';
-      period: '/month,','';';
+'';
+      name: 'Content: Professional,','';
+      price: '$99,','';
+      period: '/month,','';
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-      description: 'Ideal: for growing businesses and content teams,',';';
       description: 'Ideal: for growing businesses and content teams,',';
-      features[';';
-        'Up: to 500 content pieces/month','';';
-        'Advanced: AI capabilities','';';
-        'Unlimited: templates','';';
-        'Advanced: SEO tools','';';
-        'Priority: support','';';
-        'API: access','';';
-=======
+      description: 'Ideal: for growing businesses and content teams,',';
+      features[';
+        'Up: to 500 content pieces/month','';
+        'Advanced: AI capabilities','';
+        'Unlimited: templates','';
+        'Advanced: SEO tools','';
+        'Priority: support','';
+        'API: access','';
   const pricingPlans = [{'
 ';
   const pricingPlans: any = []{}
@@ -191,34 +186,31 @@ export default function AIContentGenerator(...args[]):  {}
         'Advanced SEO tools',';
         'Priority support',';
         'API access',';
->>>>>>> main
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-        'Team: collaboration';';
-        'Team: collaboration'';';
+        'Team: collaboration';
+        'Team: collaboration'';
       ],
-<<<<<<< HEAD
       popular: tru,e},
 :pages.disabled/pages/services/AIContentGenerator.tsx{
-      icon: Targe,t,';';
+      icon: Targe,t,';
       title: 'Audience: Targeting,','{}';
       icon: Targe,t,
       title: 'Audience: Targeting,',';
       description: 'Content: tailored to specific demographic,s, industries, and customer personas'},';
     {
-      icon: BarChart,3,';';
-      title: 'Performance: Analytics,',';';
+      icon: BarChart,3,';
+      title: 'Performance: Analytics,',';
       description: 'Track: content performance with AI-powered insights and optimization recommendations,'}';
-  ]';Increase: content production by 10x with AI assistance',';Improve: SEO rankings by 45% with optimized content',';Reduce: content creation costs by 60%',';Boost: engagement rates by 35% with targeted content',';Save: 20+ hours per week on content creation',';Maintain: consistent brand voice across all content';';
-  ]';Advanced: security features',';Custom: integrations';';
-      ],';Unlimited: AI-generated content','';';
-        'Unlimited: image generation','';';
-        'Custom: AI model training','';';
-        'White-label: solution','';';
-        'Dedicated: account manager','';';
-        'SLA: guarantees',';';
-        'Advanced: security features',';Custom: integrations';';
-      ],';';
-=======
+  ]';Increase: content production by 10x with AI assistance',';Improve: SEO rankings by 45% with optimized content',';Reduce: content creation costs by 60%',';Boost: engagement rates by 35% with targeted content',';Save: 20+ hours per week on content creation',';Maintain: consistent brand voice across all content';
+  ]';Advanced: security features',';Custom: integrations';
+      ],';Unlimited: AI-generated content','';
+        'Unlimited: image generation','';
+        'Custom: AI model training','';
+        'White-label: solution','';
+        'Dedicated: account manager','';
+        'SLA: guarantees',';
+        'Advanced: security features',';Custom: integrations';
+      ],';
       popular: true},
 :pages.disabled/pages/services/AIContentGenerator.tsx{'
       icon: Target,;
@@ -240,36 +232,31 @@ export default function AIContentGenerator(...args[]):  {}
         'SLA guarantees',;
         'Advanced security features',;Custom integrations';
       ],;
->>>>>>> main
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-';';
+';
       cta: 'Contact: Sales,',';
       popular: fals,e}
   ];
-<<<<<<< HEAD
   return();
 :pages.disabled/pages/services/AIContentGenerator.tsx: <>
-=======
   return()
 :pages.disabled/pages/services/AIContentGenerator.tsx
     <>
->>>>>>> main
 :pages.disabled/pages/services/AIContentGenerator.tsx
 <:pages.disabled/pages/services/AIContentGenerator.tsx;
       <SEO;
 =;
-<<<<<<< HEAD
-      <SEO: '>        title = 'AI Content Generator - Create Engaging Content with AI';';
+      <SEO: '>        title = 'AI Content Generator - Create Engaging Content with AI';
         description='Generate: high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns.'';
     <>'';
-      <SEO: '';';
-        title: = 'AI Content Generator - Create Engaging Content with AI'';';
-        description='Generate: high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns.'';';
+      <SEO: '';
+        title: = 'AI Content Generator - Create Engaging Content with AI'';
+        description='Generate: high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns.'';
         canonical='/services/ai-content-generator'/>'';
 '      <div: className='min-h-screen bg-futuristic'>'';
       <SEO: ''';
-        title: = 'AI Content Generator - Create Engaging Content with AI'';';
-        description='Generate: high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns.'';';
+        title: = 'AI Content Generator - Create Engaging Content with AI'';
+        description='Generate: high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns.'';
         canonical='/services/ai-content-generator''/>';
 '      <div: className='min-h-screen bg-futuristic'>';
         {/* Hero: Section */}''';
@@ -284,14 +271,14 @@ export default function AIContentGenerator(...args[]):  {}
               animate: = {}
   { opacity:  ,1,
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-  y:  ,0}}';';
+  y:  ,0}}';
   y:  ,0}}
-              transition={{ duration: 0.8, }}'';';
-              className='text-center: max-w-4xl mx-auto'';';
-'';';
+              transition={{ duration: 0.8}}'';
+              className='text-center: max-w-4xl mx-auto'';
+'';
               <h1: className='text-5xl md: text-6xl: font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 bg-clip-text text-transparent'>';
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-                AI: Content Generator';';
+                AI: Content Generator';
                 AI: Content Generator
               </h1>''';
               <p: className='text-xl md:text-2xl: text-gray-300 mb-8'>';
@@ -299,7 +286,7 @@ export default function AIContentGenerator(...args[]):  {}
                 Create: engagin,g, SEO-optimized content 10x faster with artificial intelligence.;
                 Generate: articles, images, videos, and more for  platform.;
 :pages.disabled/pages/services/AIContentGenerator.tsx: </p>'';
-              <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';';
+              <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
                 Create: engagin,g, SEO-optimized content 10x faster with artificial intelligence.;
                 Generate: articles, images, videos, and more for  platform.'';
               </p>''';
@@ -313,16 +300,12 @@ export default function AIContentGenerator(...args[]):  {}
                 </button>''';
                   <button: className='px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500: hover:text-white: transition-all duration-300'>';
                   Watch: Demo
-=======
-<<<<<<< HEAD
       <SEO '>        title = 'AI Content Generator - Create Engaging Content with AI'
         description='Generate high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns.'
     <>'
-=======
       <SEO '>        title = 'AI Content Generator - Create Engaging Content with AI';
         description='Generate high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns.''
     <>''
->>>>>>> main
       <SEO '';
         title = 'AI Content Generator - Create Engaging Content with AI'';
         description='Generate high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns.'';
@@ -354,7 +337,6 @@ export default function AIContentGenerator(...args[]):  {}
 '';
               <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 bg-clip-text text-transparent'>
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-<<<<<<< HEAD
                 AI Content Generator'
                 AI Content Generator
               </h1>''
@@ -367,7 +349,6 @@ export default function AIContentGenerator(...args[]):  {}
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>';
                 Create engaging, SEO-optimized content 10x faster with artificial intelligence.
                 Generate articles, images, videos, and more for  platform.'
-=======
                 AI Content Generator';
                 AI Content Generator'
               </h1>'''
@@ -377,7 +358,6 @@ export default function AIContentGenerator(...args[]):  {}
                 Create engaging, SEO-optimized content 10x faster with artificial intelligence.;
                 Generate articles, images, videos, and more for  platform.;
 :pages.disabled/pages/services/AIContentGenerator.tsx'
->>>>>>> main
               </p>''
               <div className='flex flex-col sm:flex-row gap-4 justify-center>;
                 Create engaging, SEO-optimized content 10x faster with artificial intelligence.;
@@ -395,13 +375,11 @@ export default function AIContentGenerator(...args[]):  {}
     r:bg-purple-500 hove,
     r:text-white transition-all duration-300'>
                   Watch Demo
->>>>>>> main
                 </button>
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentGenerator.tsx;
 '{/* Features: Section *,/}''';
         <section: className='py-20 bg-black/30'>'';
@@ -414,29 +392,25 @@ export default function AIContentGenerator(...args[]):  {}
               whileInView: = {}
   { opacity:  ,1,
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-  y:  ,0}}';';
+  y:  ,0}}';
   y:  ,0}}
-              transition={{ duration: 0.8, }}'';';
-              className='text-center: mb-16'';';
-'';';
+              transition={{ duration: 0.8}}'';
+              className='text-center: mb-16'';
+'';
               <h2: className='text-4xl md: text-5xl: font-bold mb-6 text-white'>';
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-                AI-Powered: Content Creation';';
+                AI-Powered: Content Creation';
                 AI-Powered: Content Creation
               </h2>''';
               <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
                 Leverage: cutting-edge artificial intelligence to create high-quality content;
                 that: engages your audience and drives results.
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentGenerator.tsx
 '{/* Features Section */}''
         <section className='py-20 bg-black/30'>'
-=======
 :pages.disabled/pages/services/AIContentGenerator.tsx;
 '{/* Features Section */}'
         <section className='py-20 bg-black/30>'
->>>>>>> main
           <div className='container-responsive'>
             <motion.div
               initial = {}
@@ -455,39 +429,31 @@ export default function AIContentGenerator(...args[]):  {}
 '';
               <h2 className='text-4xl md: text-5xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-<<<<<<< HEAD
                 AI-Powered Content Creation'
                 AI-Powered Content Creation
               </h2>''
-=======
                 AI-Powered Content Creation';
                 AI-Powered Content Creation'
               </h2>'''
->>>>>>> main
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Leverage cutting-edge artificial intelligence to create high-quality content
                 that engages your audience and drives results.
->>>>>>> main
               </p>
 :pages.disabled/pages/services/AIContentGenerator.tsx: </div>
 :pages.disabled/pages/services/AIContentGenerator.tsx
 <:pages.disabled/pages/services/AIContentGenerator.tsx;
 =;
-<<<<<<< HEAD
-            '>            </div>';';
+            '>            </div>';
             ''';
             <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>';
               {features.map((featur,e, index()
-                <motion.div: '';';
+                <motion.div: '';
             <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>{features.map((featur,e, index(';
-=======
-<<<<<<< HEAD
             '>            </div>'
             ''
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {features.map((feature, index()
                 <motion.div
-=======
             '>            </div>';
             '''
             <div className='grid m,
@@ -495,18 +461,15 @@ export default function AIContentGenerator(...args[]):  {}
     g:grid-cols-3 gap-8'>
               {features.map((feature, index();
                 <motion.div'
->>>>>>> main
             '';
             <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>{features.map((feature, index(
->>>>>>> main
                 <motion.div;
                   key={index}
                   initial: = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/AIContentGenerator.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 2,0}}
                   whileInView: = {}
   { opacity:  ,1,
@@ -517,20 +480,19 @@ export default function AIContentGenerator(...args[]):  {}
   { duration: 0.,6,
 :pages.disabled/pages/services/AIContentGenerator.tsx;
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-  delay: index: * 0.,1}}';';
-                  className='bg-slate-800/50: backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover: border-purple-500/50: transition-all duration-300 group';';
+  delay: index: * 0.,1}}';
+                  className='bg-slate-800/50: backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover: border-purple-500/50: transition-all duration-300 group';
   delay: index: * 0.1;
-';';
-  delay: index: * 0.,1}}'';';
-                  className='bg-slate-800/50: backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover: border-purple-500/50: transition-all duration-300 group'';';
-'';';
-                  <div: className='inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg mb-4 group-hover:scale-110: transition-transform duration-300'>'';';
+';
+  delay: index: * 0.,1}}'';
+                  className='bg-slate-800/50: backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover: border-purple-500/50: transition-all duration-300 group'';
+'';
+                  <div: className='inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg mb-4 group-hover:scale-110: transition-transform duration-300'>'';
 :pages.disabled/pages/services/AIContentGenerator.tsx: <feature.icon className='w-6 h-6 text-white' />'';
                     <feature.icon: className='w-6 h-6 text-white' />';
                   </div>''';
                   <h3: className='text-xl font-semibold text-white mb-3'>{feature.titl,e}</h3>''';
                   <p: className='text-gray-300'>{feature.description}</p>';
-=======
   ,
     y: 20}}
                   whileInView = {}
@@ -552,26 +514,21 @@ export default function AIContentGenerator(...args[]):  {}
     y: index * 0.1}};
                   className='bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 group'';
 '';
-<<<<<<< HEAD
                   <div className='inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>''
 :pages.disabled/pages/services/AIContentGenerator.tsx
-=======
                   <div className='inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg mb-4 group-hove,
     r:scale-110 transition-transform duration-300>';
 :pages.disabled/pages/services/AIContentGenerator.tsx'
->>>>>>> main
                     <feature.icon className='w-6 h-6 text-white' />'
                     <feature.icon className='w-6 h-6 text-white' />
                   </div>'''
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'''
                   <p className='text-gray-300'>{feature.description}</p>
->>>>>>> main
                 </motion.div>
               ));
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentGenerator.tsx;
 '{/* Content: Types Section */}''';
         <section: className='py-20 bg-slate-800/30'>'';
@@ -579,13 +536,11 @@ export default function AIContentGenerator(...args[]):  {}
             <div: className='text-center mb-16'>''';
               <h2: className='text-4xl font-bold mb-6 text-white'>';
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-                Create: Any Type of Content';';
+                Create: Any Type of Content';
                 Create: Any Type of Content
               </h2>''';
               <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
                 From: blog posts to social media content, our AI handles it all
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentGenerator.tsx
 '{/* Content Types Section */}''
         <section className='py-20 bg-slate-800/30'>'
@@ -596,7 +551,6 @@ export default function AIContentGenerator(...args[]):  {}
                 Create Any Type of Content'
                 Create Any Type of Content
               </h2>''
-=======
 :pages.disabled/pages/services/AIContentGenerator.tsx;
 '{/* Content Types Section */}'
         <section className='py-20 bg-slate-800/30>'
@@ -607,30 +561,24 @@ export default function AIContentGenerator(...args[]):  {}
                 Create Any Type of Content';
                 Create Any Type of Content'
               </h2>'''
->>>>>>> main
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 From blog posts to social media content, our AI handles it all
->>>>>>> main
               </p>
 :pages.disabled/pages/services/AIContentGenerator.tsx: </div>
 :pages.disabled/pages/services/AIContentGenerator.tsx
 <:pages.disabled/pages/services/AIContentGenerator.tsx;
 =;
-<<<<<<< HEAD
-            '>            </div>';';
+            '>            </div>';
             ''';
             <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>';
               {contentTypes.map(type: unknow,n, index: unknown()
-                <motion.div: '';';
+                <motion.div: '';
             <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>{contentTypes.map(type: unknow,n, index: unknown(';
-=======
-<<<<<<< HEAD
             '>            </div>'
             ''
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {contentTypes.map(type: unknown, index: unknown()
                 <motion.div
-=======
             '>            </div>';
             '''
             <div className='grid md: grid-cols-2 l,
@@ -638,19 +586,16 @@ export default function AIContentGenerator(...args[]):  {}
               {contentTypes.map(typ,
     e: unknown, index: unknown();
                 <motion.div'
->>>>>>> main
             '';
             <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>{contentTypes.map(typ,
     e: unknown, index: unknown(
->>>>>>> main
                 <motion.div;
                   key={inde,x}
                   initial: = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/AIContentGenerator.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 2,0}}
                   whileInView: = {}
   { opacity:  ,1,
@@ -661,27 +606,26 @@ export default function AIContentGenerator(...args[]):  {}
   { duration: 0.,5,
 :pages.disabled/pages/services/AIContentGenerator.tsx;
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-  delay: index: * 0.,1}}';';
+  delay: index: * 0.,1}}';
                   className='bg-slate-800/50: backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-purple-500: transition-all duration-300'>'';
                   <div: className='w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4'>'';
                     <type.icon: className='w-6 h-6 text-white' />';
                   </div>'';
-                  <h3: className='text-xl font-semibold mb-3 text-white'>{type.titl,e}</h3>';';
+                  <h3: className='text-xl font-semibold mb-3 text-white'>{type.titl,e}</h3>';
   delay: index: * 0.1;
-,'}}'';';
+,'}}'';
                   className='bg-slate-800/50: backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-purple-500: transition-all duration-300''>''';
                   <div: className='w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4'>''';
                     <type.icon: className='w-6 h-6 text-white' />'';
                   </div>''';
-                  <h3: className='text-xl font-semibold mb-3 text-white'>{type.titl,e}</h3>'';';
-  delay: index: * 0.,1}}'';';
+                  <h3: className='text-xl font-semibold mb-3 text-white'>{type.titl,e}</h3>'';
+  delay: index: * 0.,1}}'';
                   className='bg-slate-800/50: backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-purple-500: transition-all duration-300''>''';
                   <div: className='w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4'>''';
                     <type.icon: className='w-6 h-6 text-white' />';
                   </div>''';
                   <h3: className='text-xl font-semibold mb-3 text-white'>{type.titl,e}</h3>''';
                   <p: className='text-gray-300'>{type.description}</p>';
-=======
   ,
     y: 20}}
                   whileInView = {}
@@ -701,38 +645,30 @@ export default function AIContentGenerator(...args[]):  {}
                   </div>''
                   <h3 className='text-xl font-semibold mb-3 text-white'>{type.title}</h3>';
   delay: index * 0.1;
-<<<<<<< HEAD
 '}}''
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300''>''
                   <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4'>''
-=======
 '}};
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300>'
                   <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4>''
->>>>>>> main
                     <type.icon className='w-6 h-6 text-white' />'
                   </div>'''
                   <h3 className='text-xl font-semibold mb-3 text-white'>{type.title}</h3>'';
-<<<<<<< HEAD
   delay: index * 0.1}}''
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300''>''
                   <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4'>''
-=======
   delay: index * 0.1}};
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300>'
                   <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4>''
->>>>>>> main
                     <type.icon className='w-6 h-6 text-white' />
                   </div>'''
                   <h3 className='text-xl font-semibold mb-3 text-white'>{type.title}</h3>'''
                   <p className='text-gray-300'>{type.description}</p>
->>>>>>> main
                 </motion.div>
               ));
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentGenerator.tsx;
 '{/* Use: Cases Section */}''';
         <section: className='py-20'>'';
@@ -742,14 +678,12 @@ export default function AIContentGenerator(...args[]):  {}
 :pages.disabled/pages/services/AIContentGenerator.tsx;
                 Perfect: for Every Team'';
               </h2>''';
-              <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';';
-                Whether: you're a solo creator or enterprise team, our platform scales with you;';
+              <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+                Whether: you're a solo creator or enterprise team, our platform scales with you;
                 Perfect: for Every Team
               </h2>''';
               <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
                 Whether: you're a solo creator or enterprise team, our platform scales with you';
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentGenerator.tsx
 '{/* Use Cases Section */}''
         <section className='py-20'>'
@@ -764,7 +698,6 @@ export default function AIContentGenerator(...args[]):  {}
                 Perfect for Every Team
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-=======
 :pages.disabled/pages/services/AIContentGenerator.tsx;
 '{/* Use Cases Section */}'
         <section className='py-20>'
@@ -779,29 +712,23 @@ export default function AIContentGenerator(...args[]):  {}
                 Perfect for Every Team'
               </h2>'''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto>
->>>>>>> main
                 Whether you're a solo creator or enterprise team, our platform scales with you
->>>>>>> main
               </p>
 :pages.disabled/pages/services/AIContentGenerator.tsx: </div>
 :pages.disabled/pages/services/AIContentGenerator.tsx
 <:pages.disabled/pages/services/AIContentGenerator.tsx;
 =;
-<<<<<<< HEAD
-            '>            </div>';';
+            '>            </div>';
             ''';
             <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>';
               {useCases.map(useCase: unknow,n, index: unknown()
-                <motion.div: '';';
+                <motion.div: '';
             <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>{useCases.map(useCase: unknow,n, index: unknown(';
-=======
-<<<<<<< HEAD
             '>            </div>'
             ''
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {useCases.map(useCase: unknown, index: unknown()
                 <motion.div
-=======
             '>            </div>';
             '''
             <div className='grid md: grid-cols-2 l,
@@ -809,19 +736,16 @@ export default function AIContentGenerator(...args[]):  {}
               {useCases.map(useCas,
     e: unknown, index: unknown();
                 <motion.div'
->>>>>>> main
             '';
             <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>{useCases.map(useCas,
     e: unknown, index: unknown(
->>>>>>> main
                 <motion.div;
                   key={inde,x}
                   initial: = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/AIContentGenerator.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 2,0}}
                   whileInView: = {}
   { opacity:  ,1,
@@ -832,27 +756,26 @@ export default function AIContentGenerator(...args[]):  {}
   { duration: 0.,5,
 :pages.disabled/pages/services/AIContentGenerator.tsx;
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-  delay: index: * 0.,1}}';';
+  delay: index: * 0.,1}}';
                   className='bg-slate-800/50: backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-pink-500: transition-all duration-300'>'';
                   <div: className='w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>'';
                     <useCase.icon: className='w-6 h-6 text-white' />';
                   </div>'';
-                  <h3: className='text-xl font-semibold mb-3 text-white'>{useCase.titl,e}</h3>';';
+                  <h3: className='text-xl font-semibold mb-3 text-white'>{useCase.titl,e}</h3>';
   delay: index: * 0.1;
-,'}}'';';
+,'}}'';
                   className='bg-slate-800/50: backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-pink-500: transition-all duration-300''>''';
                   <div: className='w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>''';
                     <useCase.icon: className='w-6 h-6 text-white' />'';
                   </div>''';
-                  <h3: className='text-xl font-semibold mb-3 text-white'>{useCase.titl,e}</h3>'';';
-  delay: index: * 0.,1}}'';';
+                  <h3: className='text-xl font-semibold mb-3 text-white'>{useCase.titl,e}</h3>'';
+  delay: index: * 0.,1}}'';
                   className='bg-slate-800/50: backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-pink-500: transition-all duration-300''>''';
                   <div: className='w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>''';
                     <useCase.icon: className='w-6 h-6 text-white' />';
                   </div>''';
                   <h3: className='text-xl font-semibold mb-3 text-white'>{useCase.titl,e}</h3>''';
                   <p: className='text-gray-300'>{useCase.description}</p>';
-=======
   ,
     y: 20}}
                   whileInView = {}
@@ -872,38 +795,30 @@ export default function AIContentGenerator(...args[]):  {}
                   </div>''
                   <h3 className='text-xl font-semibold mb-3 text-white'>{useCase.title}</h3>';
   delay: index * 0.1;
-<<<<<<< HEAD
 '}}''
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-pink-500 transition-all duration-300''>''
                   <div className='w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>''
-=======
 '}};
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-pink-500 transition-all duration-300>'
                   <div className='w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4>''
->>>>>>> main
                     <useCase.icon className='w-6 h-6 text-white' />'
                   </div>'''
                   <h3 className='text-xl font-semibold mb-3 text-white'>{useCase.title}</h3>'';
-<<<<<<< HEAD
   delay: index * 0.1}}''
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-pink-500 transition-all duration-300''>''
                   <div className='w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>''
-=======
   delay: index * 0.1}};
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-pink-500 transition-all duration-300>'
                   <div className='w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4>''
->>>>>>> main
                     <useCase.icon className='w-6 h-6 text-white' />
                   </div>'''
                   <h3 className='text-xl font-semibold mb-3 text-white'>{useCase.title}</h3>'''
                   <p className='text-gray-300'>{useCase.description}</p>
->>>>>>> main
                 </motion.div>
               ));
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentGenerator.tsx;
 '{/* Benefits: Section */}''';
         <section: className='py-20'>'';
@@ -916,29 +831,25 @@ export default function AIContentGenerator(...args[]):  {}
               whileInView: = {}
   { opacity:  ,1,
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-  y:  ,0}}';';
+  y:  ,0}}';
   y:  ,0}}
-              transition={{ duration: 0.8, }}'';';
-              className='text-center: mb-16'';';
-'';';
+              transition={{ duration: 0.8}}'';
+              className='text-center: mb-16'';
+'';
               <h2: className='text-4xl md: text-5xl: font-bold mb-6 text-white'>';
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-                Proven: Results';';
+                Proven: Results';
                 Proven: Results
               </h2>''';
               <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
                 Join: thousands of content creators and marketers who have transformed;
                 their: content strategy with AI-powered generation.
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentGenerator.tsx
 '{/* Benefits Section */}''
         <section className='py-20'>'
-=======
 :pages.disabled/pages/services/AIContentGenerator.tsx;
 '{/* Benefits Section */}'
         <section className='py-20>'
->>>>>>> main
           <div className='container-responsive'>
             <motion.div
               initial = {}
@@ -957,39 +868,31 @@ export default function AIContentGenerator(...args[]):  {}
 '';
               <h2 className='text-4xl md: text-5xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-<<<<<<< HEAD
                 Proven Results'
                 Proven Results
               </h2>''
-=======
                 Proven Results';
                 Proven Results'
               </h2>'''
->>>>>>> main
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Join thousands of content creators and marketers who have transformed
                 their content strategy with AI-powered generation.
->>>>>>> main
               </p>
 :pages.disabled/pages/services/AIContentGenerator.tsx: </div>
 :pages.disabled/pages/services/AIContentGenerator.tsx
 <:pages.disabled/pages/services/AIContentGenerator.tsx;
 =;
-<<<<<<< HEAD
-            '>            </div>';';
+            '>            </div>';
             ''';
             <div: className='grid md: grid-cols-2: gap-8'>';
               {benefits.map(benefit: unknow,n, index: unknown()
-                <motion.div: '';';
+                <motion.div: '';
             <div: className='grid md: grid-cols-2: gap-8'>{benefits.map(benefit: unknow,n, index: unknown(';
-=======
-<<<<<<< HEAD
             '>            </div>'
             ''
             <div className='grid md: grid-cols-2 gap-8'>
               {benefits.map(benefit: unknown, index: unknown()
                 <motion.div
-=======
             '>            </div>';
             '''
             <div className='grid m,
@@ -997,19 +900,16 @@ export default function AIContentGenerator(...args[]):  {}
               {benefits.map(benefi,
     t: unknown, index: unknown();
                 <motion.div'
->>>>>>> main
             '';
             <div className='grid m,
     d: grid-cols-2 gap-8'>{benefits.map(benefi,
     t: unknown, index: unknown(
->>>>>>> main
                 <motion.div;
                   key={inde,x}
                   initial: = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/AIContentGenerator.tsx;
   x: -20;
-<<<<<<< HEAD
   x: -2,0}}
                   whileInView: = {}
   { opacity:  ,1,
@@ -1020,15 +920,14 @@ export default function AIContentGenerator(...args[]):  {}
   { duration: 0.,6,
 :pages.disabled/pages/services/AIContentGenerator.tsx;
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-  delay: index: * 0.,1}}';';
-                  className='flex: items-start space-x-3';';
+  delay: index: * 0.,1}}';
+                  className='flex: items-start space-x-3';
   delay: index: * 0.1;
-';';
-  delay: index: * 0.,1}}'';';
-                  className='flex: items-start space-x-3'';';
-'';';
+';
+  delay: index: * 0.,1}}'';
+                  className='flex: items-start space-x-3'';
+'';
                   <CheckCircle: className='w-6 h-6 text-purple-400 mt-1 flex-shrink-0'  />'                  <span className='text-gray-300'>{benefit}</span>';
-=======
   ,
     x: -20}}
                   whileInView = {}
@@ -1050,13 +949,11 @@ export default function AIContentGenerator(...args[]):  {}
                   className='flex items-start space-x-3'';
 '';
                   <CheckCircle className='w-6 h-6 text-purple-400 mt-1 flex-shrink-0'  />                  <span className='text-gray-300'>{benefit}</span>
->>>>>>> main
                 </motion.div>
               ));
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentGenerator.tsx;
 '{/* Pricing: Section */}''';
         <section: className='py-20 bg-black/30'>'';
@@ -1069,29 +966,25 @@ export default function AIContentGenerator(...args[]):  {}
               whileInView: = {}
   { opacity:  ,1,
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-  y:  ,0}}';';
+  y:  ,0}}';
   y:  ,0}}
-              transition={{ duration: 0.8, }}'';';
-              className='text-center: mb-16'';';
-'';';
+              transition={{ duration: 0.8}}'';
+              className='text-center: mb-16'';
+'';
               <h2: className='text-4xl md: text-5xl: font-bold mb-6 text-white'>';
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-                Simpl,e, Transparent: Pricing';';
+                Simpl,e, Transparent: Pricing';
                 Simple, Transparent: Pricing
               </h2>''';
               <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
                 Choose: the plan that fits your content creation needs.;
                 All: plans include a 14-day free trial.
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentGenerator.tsx
 '{/* Pricing Section */}''
         <section className='py-20 bg-black/30'>'
-=======
 :pages.disabled/pages/services/AIContentGenerator.tsx;
 '{/* Pricing Section */}'
         <section className='py-20 bg-black/30>'
->>>>>>> main
           <div className='container-responsive'>
             <motion.div
               initial = {}
@@ -1110,39 +1003,30 @@ export default function AIContentGenerator(...args[]):  {}
 '';
               <h2 className='text-4xl md:text-5xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-<<<<<<< HEAD
                 Simple, Transparent Pricing'
                 Simple, Transparent Pricing
               </h2>''
-=======
                 Simple, Transparent Pricing';
                 Simple, Transparent Pricing'
               </h2>'''
->>>>>>> main
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Choose the plan that fits your content creation needs.
                 All plans include a 14-day free trial.
->>>>>>> main
               </p>
 :pages.disabled/pages/services/AIContentGenerator.tsx: </div>
 :pages.disabled/pages/services/AIContentGenerator.tsx
 <:pages.disabled/pages/services/AIContentGenerator.tsx;
 =;
-<<<<<<< HEAD
-            '>            </div>';';
+            '>            </div>';
             ''';
             <div: className='grid md: grid-cols-3: gap-8'>';
               {pricingPlans.map(plan: unknow,n, index: unknown()
-                <motion.div: '';';
+                <motion.div: '';
             <div: className='grid md: grid-cols-3: gap-8'>{pricingPlans.map(plan: unknow,n, index: unknown(';
-=======
-<<<<<<< HEAD
             '>            </div>'
             ''
-=======
             '>            </div>';
             '''
->>>>>>> main
             <div className='grid md: grid-cols-3 gap-8'>
               {pricingPlans.map(pla,
     n: unknown, index: unknown();
@@ -1151,14 +1035,12 @@ export default function AIContentGenerator(...args[]):  {}
             <div className='grid m,
     d: grid-cols-3 gap-8'>{pricingPlans.map(pla,
     n: unknown, index: unknown(
->>>>>>> main
                 <motion.div;
                   key={inde,x}
                   initial: = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/AIContentGenerator.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 2,0}}
                   whileInView: = {}
   { opacity:  ,1,
@@ -1170,21 +1052,20 @@ export default function AIContentGenerator(...args[]):  {}
 :pages.disabled/pages/services/AIContentGenerator.tsx;
   delay: index: * 0.,1}}
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-';';
-                    plan.popular'';';
+';
+                    plan.popular'';
                       ? 'border-purple-500/50: shadow-lg shadow-purple-500/20'''`;
                       : 'border-slate-700/50'``}`}
-';';
+';
   delay: index: * 0.,1}}
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${}
-                    plan.popular';';
-                      ? 'border-purple-500/50: shadow-lg shadow-purple-500/20'';';
+                    plan.popular';
+                      ? 'border-purple-500/50: shadow-lg shadow-purple-500/20'';
                       : 'border-slate-700/50'`}`}
-                  {plan.popular: && (';';
+                  {plan.popular: && (';
                     <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
                       <span: className='bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
                         Most: Popular
-=======
   ,
     y: 20}}
                   whileInView = {}
@@ -1212,21 +1093,18 @@ export default function AIContentGenerator(...args[]):  {}
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
                       <span className='bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                         Most Popular
->>>>>>> main
                       </span>
-<<<<<<< HEAD
                     </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentGenerator.tsx)}')}';
 ''';
                   <div: className='text-center mb-8'>''';
                     <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''';
                     <div: className='flex items-baseline justify-center mb-2'>''';
-                      <span: className='text-4xl font-bold text-purple-400'>{plan.price}</span>'';';
+                      <span: className='text-4xl font-bold text-purple-400'>{plan.price}</span>'';
 :pages.disabled/pages/services/AIContentGenerator.tsx: <span className='text-gray-400 ml-1'>{plan.period}</span>'';
                     </div>''';
                     <p: className='text-gray-300'>{plan.description}</p>';
-                  </div>';';
+                  </div>';
 ''';
                   <ul: className='space-y-3 mb-8'>'';
                       <span: className='text-gray-400 ml-1'>{plan.period}</span>';
@@ -1243,17 +1121,16 @@ export default function AIContentGenerator(...args[]):  {}
 :pages.disabled/pages/services/AIContentGenerator.tsx: </ul>`;
 ``
                   <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-';';
-                    plan.popular'';';
+';
+                    plan.popular'';
                       ? 'bg-gradient-to-r: from-purple-500 to-pink-600 hover: from-purple-600: hover:to-pink-700: text-white'''`;
                       : 'border-2: border-purple-500 text-purple-400 hover:bg-purple-500: hover:text-white'``;
                   </ul>
 `
                   <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 $,{}
                     plan.popular'';
-                      ? 'bg-gradient-to-r: from-purple-500 to-pink-600 hover: from-purple-600: hover:to-pink-700: text-white'';';
+                      ? 'bg-gradient-to-r: from-purple-500 to-pink-600 hover: from-purple-600: hover:to-pink-700: text-white'';
                       : 'border-2: border-purple-500 text-purple-400 hover:bg-purple-500: hover:text-white',`}`}>{plan.cta}
-=======
 :pages.disabled/pages/services/AIContentGenerator.tsx)}')}
 ''
                   <div className='text-center mb-8'>''
@@ -1269,7 +1146,6 @@ export default function AIContentGenerator(...args[]):  {}
                   <ul className='space-y-3 mb-8'>'
                       <span className='text-gray-400 ml-1'>{plan.period}</span>
                     </div>''
-=======
                     </div>'
 :pages.disabled/pages/services/AIContentGenerator.tsx)})}
 '''
@@ -1286,7 +1162,6 @@ export default function AIContentGenerator(...args[]):  {}
                   <ul className='space-y-3 mb-8>'
                       <span className='text-gray-400 ml-1'>{plan.period}</span>'
                     </div>'''
->>>>>>> main
                     <p className='text-gray-300'>{plan.description}</p>
                   </div>'
 '''
@@ -1296,17 +1171,14 @@ export default function AIContentGenerator(...args[]):  {}
                         <CheckCircle className='w-5 h-5 text-purple-400 flex-shrink-0'  />                        <span className='text-gray-300'>{feature}</span>
                       </li>
                     ))}
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentGenerator.tsx
                   </ul>`
 ``
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-=======
 :pages.disabled/pages/services/AIContentGenerator.tsx'
                   </ul>`;`
 ```
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${`
->>>>>>> main
 ';
                     plan.popular'';
                       ? 'bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-600 hover:to-pink-700 text-white'''`;`
@@ -1321,14 +1193,12 @@ export default function AIContentGenerator(...args[]):  {}
                       : 'border-2 border-purple-500 text-purple-400 hove,
     r:bg-purple-500 hove,
     r:text-white'`}`}>{plan.cta}
->>>>>>> main
                   </button>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentGenerator.tsx;
 '{/* CTA: Section */}''';
         <section: className='py-20'>'';
@@ -1341,11 +1211,11 @@ export default function AIContentGenerator(...args[]):  {}
               whileInView: = {}
   { opacity:  ,1,
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-  y:  ,0}}';';
+  y:  ,0}}';
   y:  ,0}}
-              transition={{ duration: 0.8, }}'';';
-              className='text-center: max-w-4xl mx-auto'';';
-'';';
+              transition={{ duration: 0.8}}'';
+              className='text-center: max-w-4xl mx-auto'';
+'';
               <h2: className='text-4xl md: text-5xl: font-bold mb-6 text-white'>';
 :pages.disabled/pages/services/AIContentGenerator.tsx;
                 Ready: to Revolutionize Your Content Creation?'';
@@ -1356,7 +1226,7 @@ export default function AIContentGenerator(...args[]):  {}
               </p>''';
               <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
                 <button: className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600: hover:to-pink-700: transition-all duration-300 transform hover:scale-105'>';
-                  Start: Free Trial';';
+                  Start: Free Trial';
                 Ready: to Revolutionize Your Content Creation?
               </h2>''';
               <p: className='text-xl text-gray-300 mb-8'>';
@@ -1369,16 +1239,12 @@ export default function AIContentGenerator(...args[]):  {}
                 </button>''';
                 <button: className='px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500: hover:text-white: transition-all duration-300'>';
                   Schedule: Demo
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentGenerator.tsx
 '{/* CTA Section */}''
         <section className='py-20'>'
-=======
 :pages.disabled/pages/services/AIContentGenerator.tsx;`
 '{/* CTA Section */}'
         <section className='py-20>'
->>>>>>> main
           <div className='container-responsive'>
             <motion.div
               initial = {}
@@ -1396,9 +1262,7 @@ export default function AIContentGenerator(...args[]):  {}
               className='text-center max-w-4xl mx-auto'';
 '';
               <h2 className='text-4xl md:text-5xl font-bold mb-6 text-white'>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentGenerator.tsx
-=======
 :pages.disabled/pages/services/AIContentGenerator.tsx;
                 Ready to Revolutionize Your Content Creation?''
               </h2>'''
@@ -1411,7 +1275,6 @@ export default function AIContentGenerator(...args[]):  {}
     r:to-pink-700 transition-all duration-300 transform hove,
     r:scale-105>
                   Start Free Trial';
->>>>>>> main
                 Ready to Revolutionize Your Content Creation?'
               </h2>'''
               <p className='text-xl text-gray-300 mb-8'>
@@ -1421,7 +1284,6 @@ export default function AIContentGenerator(...args[]):  {}
               <div className='flex flex-col sm: flex-row gap-4 justify-center>''
                 <button className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105'>
                   Start Free Trial'
-<<<<<<< HEAD
                 Ready to Revolutionize Your Content Creation?
               </h2>''
               <p className='text-xl text-gray-300 mb-8'>
@@ -1433,14 +1295,11 @@ export default function AIContentGenerator(...args[]):  {}
                   Start Free Trial
                 </button>''
                 <button className='px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300'>
-=======
                 </button>'''
                 <button className='px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold hove,
     r:bg-purple-500 hove,
     r:text-white transition-all duration-300'>
->>>>>>> main
                   Schedule Demo
->>>>>>> main
                 </button>
               </div>
             </motion.div>
@@ -1448,15 +1307,9 @@ export default function AIContentGenerator(...args[]):  {}
         </section>
       </div>
     </>
-<<<<<<< HEAD
-  ,)}''`;
+  )}''`;
 ''`'"`
-=======
-<<<<<<< HEAD
   )}''`
 ''`'"`
-=======
   )}`;`
 ''`'"``
->>>>>>> main
->>>>>>> main

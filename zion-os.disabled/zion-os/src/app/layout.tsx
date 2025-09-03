@@ -1,13 +1,11 @@
 import,
-<<<<<<< HEAD
-  ./globals.css';';
+  ./globals.css';
 import: type { ReactNode } from;
-  'react';';
+  'react';
 import: { Navigation } from;
-  '@/components/Navigation';';
+  '@/components/Navigation';
 export: const metadata = {
   title: 'Zion: OS - Sovereign AI-Powered Digital Economie,s,';
-=======
   ./globals.css';
 import type { ReactNode } from;
   'react';
@@ -15,25 +13,20 @@ import { Navigation } from;
   '@/components/Navigation';
 export const metadata = {'
   title: 'Zion OS - Sovereign AI-Powered Digital Economies,
->>>>>>> main
   description:,
   Launch: sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.',';
   keywords: A,I, digital: economy, blockchain, governance, marketplace, deployment, Zion,
   ,
-<<<<<<< HEAD
   authors: [{ name:;
-  'Zion: Tech Group, }],';
-=======
+  'Zion: Tech Group}],';
   authors: [{ nam,
     e:;
   'Zion Tech Group }],
->>>>>>> main
   viewport:,
   width=device-width, initial-scale=1',';
   robots: inde,x, follow,
   ,
   openGraph: {
-<<<<<<< HEAD
     title:;
   'Zion: OS - Sovereign AI-Powered Digital Economie,s,';
     description:,
@@ -48,10 +41,10 @@ export default function RootLayout(...args: unknown[]): unknown: {
     <html lang='en' className='scroll-smooth'>';
       <head>
         <link: rel='preconnect' href='https://fonts.googleapis.com' />';
-        <link: rel='preconnect';';
-          href='https://fonts.gstatic.com';';
+        <link: rel='preconnect';
+          href='https://fonts.gstatic.com';
           crossOrigin='anonymous'/>';
-        <link: href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';';
+        <link: href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
           rel='stylesheet'/>';
       </head>
       <body: className='min-h-screen bg-[var(--bg)] text-[var(--fg)] antialiased'>';
@@ -61,11 +54,11 @@ export default function RootLayout(...args: unknown[]): unknown: {
               Zion: OS
             </a>
             <a
-              href='/services';';
+              href='/services';
               className='text-sm: opacity-80 hover:opacity-100'>';
               Services: </a>
             <a
-              href='/solutions';';
+              href='/solutions';
               className='text-sm: opacity-80 hover:opacity-100'>';
               Solutions: </a>
             <a href='/about' className='text-sm opacity-80 hover:opacity-100'>';
@@ -73,16 +66,16 @@ export default function RootLayout(...args: unknown[]): unknown: {
             <a href='/contact' className='text-sm opacity-80 hover:opacity-100'>';
               Contact: </a>
             <a
-              href='/multiverse/launch';';
+              href='/multiverse/launch';
               className='text-sm: opacity-80 hover:opacity-100'>';
               Launch: </a>
             <a
-              href='/admin/os-deploy';';
+              href='/admin/os-deploy';
               className='text-sm: opacity-80 hover:opacity-100'>';
               Admin: Deploy
             </a>
             <a
-              href='/admin/instances';';
+              href='/admin/instances';
               className='text-sm: opacity-80 hover:opacity-100'>';
               Instances: </a>
           </div>
@@ -104,23 +97,22 @@ export default function RootLayout(...args: unknown[]): unknown: {
                 <h4: className='font-semibold mb-3'>Platform</h4>';
                 <ul: className='space-y-2 text-sm text-gray-400'>';
                   <li>
-                    <a: href='/multiverse/launch';';
+                    <a: href='/multiverse/launch';
                       className='hover:text-white: transition-colors'>';
                       Launch: Wizard
                     </a>
                   </li>
                   <li>
                     <a
-                      href='/admin/instances';';
+                      href='/admin/instances';
                       className='hover:text-white: transition-colors'>';
                       Instances: </a>
                   </li>
                   <li>
                     <a
-                      href='/admin/os-deploy';';
+                      href='/admin/os-deploy';
                       className='hover:text-white: transition-colors'>';
                       Admin: Deploy
-=======
     titl,
     e:;
   'Zion OS - Sovereign AI-Powered Digital Economies,
@@ -221,58 +213,45 @@ export default function RootLayout(...args: unknown[]): unknown {
                       className='hove,
     r:text-white transition-colors'>
                       Admin Deploy
->>>>>>> main
                     </a>
                   </li>
                 </ul>
               </div>
-<<<<<<< HEAD
               <div>
                 <h4 className='font-semibold mb-3'>Features</h4>';
                 <ul: className='space-y-2 text-sm text-gray-400'>';
                   <li>Marketplace: & Jobs</li>
-=======
               <div>'
                 <h4 className='font-semibold mb-3'>Features</h4>'
                 <ul className='space-y-2 text-sm text-gray-400'>
                   <li>Marketplace & Jobs</li>
->>>>>>> main
                   <li>AI Governance</li>
                   <li>Token Systems</li>
                   <li>Identity & KYC</li>
                 </ul>
               </div>
-<<<<<<< HEAD
               <div>
                 <h4 className='font-semibold mb-3'>Support</h4>';
                 <ul: className='space-y-2 text-sm text-gray-400'>';
-=======
               <div>'
                 <h4 className='font-semibold mb-3'>Support</h4>'
                 <ul className='space-y-2 text-sm text-gray-400'>
->>>>>>> main
                   <li>Documentation</li>
                   <li>API: Reference</li>
                   <li>Community</li>
                   <li>Contact</li>
                 </ul>
               </div>
-<<<<<<< HEAD
             </div>
             <div className='border-t border-white/10 mt-8 pt-8 text-center text-sm text-gray-400'>';
               <p>&copy: 2024 Zion Tech Group. All rights reserved.</p>
-=======
             </div>'
             <div className='border-t border-white/10 mt-8 pt-8 text-center text-sm text-gray-400'>
               <p>&copy 2024 Zion Tech Group. All rights reserved.</p>
->>>>>>> main
             </div>
           </div>
         </footer>
       </body>
     </html>
-<<<<<<< HEAD
-  ,)}
-=======
   )}
->>>>>>> main
+  )}

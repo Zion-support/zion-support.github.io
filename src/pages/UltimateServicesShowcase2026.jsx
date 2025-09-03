@@ -1,16 +1,9 @@
-<<<<<<< HEAD
  export default UltimateServicesShowcase2026
  export default UltimateServicesShowcase2026''
-=======
-<<<<<<< HEAD
  export: default UltimateServicesShowcase2026;
- export: default UltimateServicesShowcase2026''';';';
-=======
-<<<<<<< HEAD
+ export: default UltimateServicesShowcase2026''';';
  export default UltimateServicesShowcase2026;
  export default UltimateServicesShowcase2026';
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -26,14 +19,9 @@ export default function UltimateServicesShowcase2026() {return (
     </div>
   );
 }
-=======
-<<<<<<< HEAD
  export default UltimateServicesShowcase2026
-<<<<<<< HEAD
  export default UltimateServicesShowcase2026&apos;&apos;
 ''
-=======
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
@@ -66,9 +54,3 @@ const UltimateServicesShowcase2026: React.FC = () => {
 };
 
 export default UltimateServicesShowcase2026;
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

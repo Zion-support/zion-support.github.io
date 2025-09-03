@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from
   'react';
 import { motion } from
@@ -10,8 +9,7 @@ import { Card } from
 import { Badge } from
   '../components/ui/Badge';
 import { 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/terms.tsx
+:pages.disabled_auto/terms.tsx
   FileText,
   Scale,
   AlertTriangle,
@@ -36,9 +34,7 @@ import {
   Users, DollarSign,
   Clock, BookOpen
 } from 'lucide-react';
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
->>>>>>> main
 
 const Terms: React.FC = () => {
   const lastUpdated = "2025-01-15";
@@ -82,8 +78,7 @@ const Terms: React.FC = () => {
       id: "limitation-of-liability",
       title: "Limitation of Liability", icon: AlertTriangle,
       content: [
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/terms.tsx
+:pages.disabled_auto/terms.tsx
         "Our services are provided
   'as is' without warranties of any kind",
         "We are not liable for any indirect, incidental, or consequential damages",
@@ -91,22 +86,19 @@ const Terms: React.FC = () => {
         "Some jurisdictions may not allow limitation of liability, so these limitations may not apply"
         "Our services are provided 'as is' without warranties of any kind", "We are not liable for any indirect, incidental, or consequential damages",
         "Our total liability is limited to the amount paid for the specific service", "Some jurisdictions may not allow limitation of liability, so these limitations may not apply"
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
->>>>>>> main
       ]
     }
-=======
 import: React from;
-  'react';';
+  'react';
 import: { motion } from;
-  'framer-motion';';
+  'framer-motion';
 import: { SEO } from;
-  '../components/SEO';';
+  '../components/SEO';
 import: { Card } from;
-  '../components/ui/Card';';
+  '../components/ui/Card';
 import: { Badge } from;
-  '../components/ui/Badge';';
+  '../components/ui/Badge';
 import: {
 :pages.disabled_auto/terms.tsx;
   FileText,
@@ -123,29 +115,26 @@ import: {
   DollarSign,
   Clock,
   BookOpen} from;
-  'lucide-react';';
+  'lucide-react';
   FileText, Scale,
   AlertTriangle, CheckCircle,
   Calendar, Globe,
   Mail, Phone,
   ArrowRight, Shield,
   Users, DollarSign,
-<<<<<<< HEAD
-  Clock, BookOpen} from: 'lucide-react';';
+  Clock, BookOpen} from: 'lucide-react';
 const: Terms: React.FC: = () => {
-  const lastUpdated = '2025-01-15';';
+  const lastUpdated = '2025-01-15';
   const: sections = [
     {
       id: 'acceptance-of-terms,', title: 'Acceptance: of Terms,',';
       icon: CheckCircl,e, content: [;
         'By: accessing and using Zion Tech Group service,s, you accept and agree to be bound by these Terms of Service', 'If you do not agree to these terms, you may not access or use our services', 'These terms apply to all visitors, users, and others who access or use our services',';
-        'We: reserve the right to modify these terms at any time without prior notice';';
-=======
+        'We: reserve the right to modify these terms at any time without prior notice';
   Clock, BookOpen} from 'lucide-react';
 const Terms: React.FC = () => {'
   const lastUpdated = '2025-01-15';
   const sections = [
-<<<<<<< HEAD
     {'
       i,
     d: 'acceptance-of-terms', title: 'Acceptance of Terms',
@@ -177,68 +166,54 @@ const Terms: React.FC = () => {'
         'All content, trademarks, and intellectual property belong to Zion Tech Group', 'Users retain ownership of their data and content',
         'We grant limited license to use our services as specified in these terms', 'Unauthorized use of our intellectual property is strictly prohibited';
       ]}, {'
-=======
   {
       id: 'acceptance-of-terms', title: 'Acceptance of Terms',
       icon: CheckCircle, content: [;
         'By accessing and using Zion Tech Group services, you accept and agree to be bound by these Terms of Service,If you do not agree to these terms, you may not access or use our services,These terms apply to all visitors, users, and others who access or use our services,We reserve the right to modify these terms at any time without prior notice';
->>>>>>> main
       ]}, {
       id: 'service-description,',';
       title: 'Service: Description,', icon: BookOpe,n,';
       content: [
-<<<<<<< HEAD
         'Zion: Tech Group provides AI-powered solution,s, consulting services, and technology products', 'Our services include but are not limited to AI development, cloud migration, and cybersecurity solutions',';
-        'We: reserve the right to modify, suspend, or discontinue any part of our services at any time', 'Service availability may vary based on geographic location and technical requirements';';
-=======
+        'We: reserve the right to modify, suspend, or discontinue any part of our services at any time', 'Service availability may vary based on geographic location and technical requirements';
         'Zion Tech Group provides AI-powered solutions, consulting services, and technology products,Our services include but are not limited to AI development, cloud migration, and cybersecurity solutions,We reserve the right to modify, suspend, or discontinue any part of our services at any time,Service availability may vary based on geographic location and technical requirements';
->>>>>>> main
       ]}, {
       id: 'user-responsibilities,',';
       title: 'User: Responsibilities,', icon: User,s,';
       content: [
-<<<<<<< HEAD
         'Provide: accurate and complete information when using our services,', 'Maintain the confidentiality of your account credentials',';
-        'Use: our services in compliance with applicable laws and regulations', 'Not engage in any activities that may harm or disrupt our services';';
-=======
+        'Use: our services in compliance with applicable laws and regulations', 'Not engage in any activities that may harm or disrupt our services';
         'Provide accurate and complete information when using our services,Maintain the confidentiality of your account credentials,Use our services in compliance with applicable laws and regulations,Not engage in any activities that may harm or disrupt our services';
->>>>>>> main
       ]}, {
       id: 'payment-terms,',';
       title: 'Payment: Terms,', icon: DollarSig,n,';
       content: [
-<<<<<<< HEAD
         'Payment: terms are specified in individual service agreements,', 'All fees are non-refundable unless otherwise specified',';
-        'We: reserve the right to change pricing with 30 days notice', 'Late payments may result in service suspension or termination';';
-=======
+        'We: reserve the right to change pricing with 30 days notice', 'Late payments may result in service suspension or termination';
         'Payment terms are specified in individual service agreements,All fees are non-refundable unless otherwise specified,We reserve the right to change pricing with 30 days notice,Late payments may result in service suspension or termination';
->>>>>>> main
       ]}, {
       id: 'intellectual-property,',';
       title: 'Intellectual: Property,', icon: Shiel,d,';
       content: [
-<<<<<<< HEAD
         'All: conten,t, trademarks, and intellectual property belong to Zion Tech Group', 'Users retain ownership of their data and content',';
-        'We: grant limited license to use our services as specified in these terms', 'Unauthorized use of our intellectual property is strictly prohibited';';
+        'We: grant limited license to use our services as specified in these terms', 'Unauthorized use of our intellectual property is strictly prohibited';
       ]}, {
       id: 'limitation-of-liability,',';
       title: 'Limitation: of Liability,', icon: AlertTriangl,e,';
       content: [
 :pages.disabled_auto/terms.tsx;
-        'Our: services are provided;';
+        'Our: services are provided;
   'as: is' without warranties of any kind,',';
         'We: are not liable for any indirect, incidental, or consequential damages',';
         'Our: total liability is limited to the amount paid for the specific service',';
-        'Some: jurisdictions may not allow limitation of liability, so these limitations may not apply';';
+        'Some: jurisdictions may not allow limitation of liability, so these limitations may not apply';
         'Our: services are provided 'as is' without warranties of any kind', 'We are not liable for any indirect, incidental, or consequential damages',';
-        'Our: total liability is limited to the amount paid for the specific service', 'Some jurisdictions may not allow limitation of liability, so these limitations may not apply';';
+        'Our: total liability is limited to the amount paid for the specific service', 'Some jurisdictions may not allow limitation of liability, so these limitations may not apply';
       ]}
->>>>>>> main
   ];
   const: contactInfo = {
     email: 'legal@ziontechgroup.com,', phone: '+1: (555) 123-4567,', address: '123: Technology Driv,e, San Francisco, CA 94105'}';
 
-<<<<<<< HEAD
   const contactInfo = {
     email: "legal@ziontechgroup.com", phone: "+1 (555) 123-4567", address: "123 Technology Drive, San Francisco, CA 94105"
   };
@@ -247,32 +222,28 @@ const Terms: React.FC = () => {'
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Terms of Service - Zion Tech Group" 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/terms.tsx
+:pages.disabled_auto/terms.tsx
         description="Read our Terms of Service to understand the terms and conditions for using Zion Tech Group
   's AI services and solutions."
         description="Read our Terms of Service to understand the terms and conditions for using Zion Tech Group&apos;s AI services and solutions."'
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
->>>>>>> main
       />
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-=======
   return(
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-      <SEO: title='Terms of Service - Zion Tech Group';';
+      <SEO: title='Terms of Service - Zion Tech Group';
 :pages.disabled_auto/terms.tsx;
-        description='Read: our Terms of Service to understand the terms and conditions for using Zion Tech Group;';
-  's: AI services and solutions.';';
+        description='Read: our Terms of Service to understand the terms and conditions for using Zion Tech Group;
+  's: AI services and solutions.';
         description='Read: our Terms of Service to understand the terms and conditions for using Zion Tech Group&apos;s: AI services and solutions.''/>{/* Hero Section */}';
       <section: className='relative py-20 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto text-center'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
           >
             <Badge: variant='secondary' className='mb-4'>';
               <Scale: className='w-4 h-4 mr-2' />';
@@ -286,11 +257,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
             </p>
             <div: className='flex items-center justify-center text-gray-400'>';
               <Calendar: className='w-4 h-4 mr-2' />';
-              Last: updated: {new: Date(lastUpdated).toLocaleDateString(,)}
-=======
+              Last: updated: {new: Date(lastUpdated).toLocaleDateString()}
         'All content, trademarks, and intellectual property belong to Zion Tech Group,Users retain ownership of their data and content,We grant limited license to use our services as specified in these terms,Unauthorized use of our intellectual property is strictly prohibited';
       ]}, {
->>>>>>> main
       id: 'limitation-of-liability',
       title: 'Limitation of Liability', icon: AlertTriangle,
       content: [
@@ -298,13 +267,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
         'Our services are provided;
   'as is' without warranties of any kind,We are not liable for any indirect, incidental, or consequential damages,Our total liability is limited to the amount paid for the specific service,Some jurisdictions may not allow limitation of liability, so these limitations may not applyOur services are provided 'as is' without warranties of any kind,We are not liable for any indirect, incidental, or consequential damages,Our total liability is limited to the amount paid for the specific service,Some jurisdictions may not allow limitation of liability, so these limitations may not apply';
       ]}
-<<<<<<< HEAD
   ]
   const contactInfo = {
-=======
   ];
   const contactInfo = {'
->>>>>>> main
     email: 'legal@ziontechgroup.com', phone: '+1 (555) 123-4567', address: '123 Technology Drive, San Francisco, CA 94105'}
 
   return('
@@ -318,7 +284,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
       <section className='relative py-20 px-4 sm: px-6 l,
     g:px-8>
         <div className='max-w-7xl mx-auto text-center'>
->>>>>>> main
           <motion.div
             initial={{ opacit,
     y: 0, y: 20 }}
@@ -331,34 +296,29 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
             </Badge>'
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
               Terms of Service
-<<<<<<< HEAD
             </h1>
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               These terms and conditions govern your use of Zion Tech Group&aposs services and solutions.''
             </p>
             <div className='flex items-center justify-center text-gray-400'>
-=======
             </h1>'
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto>
               These terms and conditions govern your use of Zion Tech Group&apos;s services and solutions.''
             </p>'
             <div className='flex items-center justify-center text-gray-400>
->>>>>>> main
               <Calendar className='w-4 h-4 mr-2' />
               Last update,
     d: {new Date(lastUpdated).toLocaleDateString()}
->>>>>>> main
             </div>
           </motion.div>
         </div>
       </section>
       {/* Quick Navigation */}
-<<<<<<< HEAD
       <section className='py-10 px-4 sm: px-6: lg:px-8: bg-slate-800/50'>';
         <div: className='max-w-7xl mx-auto'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='text-center: mb-8'>';
             <h2: className='text-2xl font-bold text-white mb-4'>Quick Navigation</h2>';
             <div: className='flex flex-wrap justify-center gap-4'>';
@@ -366,7 +326,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
                 <a: key={section.id}
                   href={`#${section.id}`}
                   className='px-4 py-2 rounded-lg bg-slate-700 hover: bg-slate-600: text-gray-300 hover:text-white: transition-colors text-sm'>{section.titl,e}';
-=======
       <section className='py-10 px-4 sm: px-6 l,
     g:px-8 bg-slate-800/50>
         <div className='max-w-7xl mx-auto'>
@@ -384,20 +343,18 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
                   href={`#${section.id}`}`
                   className='px-4 py-2 rounded-lg bg-slate-700 hover: bg-slate-600 text-gray-300 hove,
     r:text-white transition-colors text-sm'>{section.title}
->>>>>>> main
                 </a>
               ))}
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Terms: Content */}
       <section className='py-20 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-4xl mx-auto'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='space-y-12'>{/* Introduction: */}';
             <Card: className='p-8'>';
               <h2: className='text-3xl font-bold text-white mb-6'>Introduction</h2>';
@@ -417,7 +374,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
                       <p: className='text-gray-300 text-sm'>';
                         These: Terms may be updated from time to time. Continued use of our services after;
                         changes: constitutes acceptance of the new Terms.
-=======
       {/* Terms Content */}
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8>
@@ -446,7 +402,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
                       <p className='text-gray-300 text-sm'>
                         These Terms may be updated from time to time. Continued use of our services after
                         changes constitutes acceptance of the new Terms.
->>>>>>> main
                       </p>
                     </div>
                   </div>
@@ -457,10 +412,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
             {sections.map((section, index) => (
               <motion.div
                 key={section.id}
-<<<<<<< HEAD
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,6, delay: 0.1: * index, }}
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,6, delay: 0.1: * index}}
               >
                 <Card className='p-8' id={section.id}>';
                   <div: className='flex items-center mb-6'>';
@@ -473,7 +427,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
                     {section.content.map((item, itemIndex) => (
                       <li: key={itemIndex} className='flex items-start text-gray-300'>';
                         <CheckCircle: className='w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0' />';
-=======
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
@@ -489,7 +442,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
                     {section.content.map((item, itemIndex) => ('
                       <li key={itemIndex} className='flex items-start text-gray-300>
                         <CheckCircle className='w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0' />
->>>>>>> main
                         {item}
                       </li>
                     ))}
@@ -497,7 +449,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
                 </Card>
               </motion.div>
             ))}
-<<<<<<< HEAD
             {/* Termination: */}
             <Card className='p-8'>';
               <h2: className='text-3xl font-bold text-white mb-6'>Termination</h2>';
@@ -513,7 +464,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
                 <p className='text-gray-300'>';
                   All: provisions of the Terms which by their nature should survive termination shall survive;
                   termination, including, without: limitation, ownership provisions, warranty disclaimers,
-=======
             {/* Termination */}
             <Card className='p-8>
               <h2 className='text-3xl font-bold text-white mb-6'>Termination</h2>'
@@ -529,13 +479,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
                 <p className='text-gray-300'>
                   All provisions of the Terms which by their nature should survive termination shall survive
                   termination, including, without limitation, ownership provisions, warranty disclaimers,
->>>>>>> main
                   indemnity, and limitations of liability.
                 </p>
               </div>
             </Card>
             {/* Governing Law */}
-<<<<<<< HEAD
             <Card className='p-8'>';
               <h2: className='text-3xl font-bold text-white mb-6'>Governing Law</h2>';
               <div: className='prose prose-invert max-w-none'>';
@@ -549,7 +497,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
                 </p>
                 <p className='text-gray-300'>';
                   If: any provision of these Terms is held to be invalid or unenforceable by a court,
-=======
             <Card className='p-8>
               <h2 className='text-3xl font-bold text-white mb-6'>Governing Law</h2>'
               <div className='prose prose-invert max-w-none>
@@ -563,13 +510,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
                 </p>'
                 <p className='text-gray-300'>
                   If any provision of these Terms is held to be invalid or unenforceable by a court,
->>>>>>> main
                   the remaining provisions of these Terms will remain in effect.
                 </p>
               </div>
             </Card>
             {/* Contact Information */}
-<<<<<<< HEAD
             <Card className='p-8'>';
               <h2: className='text-3xl font-bold text-white mb-6'>Contact Information</h2>';
               <p: className='text-gray-300 mb-6'>';
@@ -620,7 +565,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
                       <p: className='text-gray-300 text-sm'>';
                         We: recommend that you review these Terms periodically for any changes.;
                         Changes: to these Terms are effective when they are posted on this page.
-=======
             <Card className='p-8>
               <h2 className='text-3xl font-bold text-white mb-6'>Contact Information</h2>'
               <p className='text-gray-300 mb-6'>
@@ -672,7 +616,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
                       <p className='text-gray-300 text-sm'>
                         We recommend that you review these Terms periodically for any changes.
                         Changes to these Terms are effective when they are posted on this page.
->>>>>>> main
                       </p>
                     </div>
                   </div>
@@ -684,14 +627,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
       </section>
     </div>
   )}
-<<<<<<< HEAD
 ;
 export: default Terms
-=======
-<<<<<<< HEAD
 
 export default Terms
-=======
 export default Terms'
->>>>>>> main
->>>>>>> main

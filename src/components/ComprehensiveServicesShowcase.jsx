@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';,"});,"})
 ;,"});,"})
 ;,"});,"})
@@ -13,7 +12,7 @@ const ComprehensiveServicesShowcase = () => {    const [selectedCategory, setSel
         ...expandedInnovativeServices2025,;,"});,"})
         ...emergingTechInnovationServices2025,;,"});,"})
         ...enterpriseITInnovationServices2025;,"});,"})
-    ];';,"});,"})
+    ];,"});,"})
     const categories = ['';,"});,"})
         { id: 'all', name: 'All Services', count: allServices.length },';,"});,"})
         { id: 'ai-content-marketing', name: 'AI Content & Marketing', count: allServices.filter(s => s.category.includes('Content') || s.category.includes('Marketing')).length },';,"});,"})
@@ -56,7 +55,7 @@ const ComprehensiveServicesShowcase = () => {    const [selectedCategory, setSel
         { id: 'enterprise-governance', name: 'Enterprise Data Governance', count: allServices.filter(s => s.category.includes('Enterprise') && s.category.includes('Data Governance')).length },';,"});,"})
         { id: 'enterprise-workflow-automation', name: 'Enterprise Workflow & Automation', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Workflow') || s.category.includes('Automation'))).length },';,"});,"})
         { id: 'enterprise-digital-twin-iot', name: 'Enterprise Digital Twin & IoT', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Digital Twin') || s.category.includes('IoT'))).length }"});,"})
-    ];';,"});,"})
+    ];,"});,"})
     const filteredServices = selectedCategory === 'all';,"});,"})
         ? allServices;,"});,"})
         : allServices.filter(service => {}"});,"})
@@ -74,12 +73,8 @@ export { ComprehensiveServicesShowcase };,"});,"})
 export { ComprehensiveServicesShowcase };,"});,"})
 ;,"});,"})
 export { ComprehensiveServicesShowcase };,"});,"})
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -95,12 +90,9 @@ export default function ComprehensiveServicesShowcase() {return (
     </div>
   );
 }
-=======
-<<<<<<< HEAD
 import React, { useState } from &apos;
-import { motion } from &apos;framer-motion';;react&apos;';
+import { motion } from &apos;framer-motion';;react&apos;
 import { motion, AnimatePresence } from &apos;framer-motion';
->>>>>>> main
 import {}
   Brain,;
   Shield,;
@@ -113,23 +105,17 @@ import {}
   TrendingUp,;
   CheckCircle,;
   DollarSign,';
-<<<<<<< HEAD
   Clock,';
   Target,'';
   Award''} from 'lucide-react';
 import { Link } from 'react-router-dom';
 ;
-=======
-  Clock,&apos;';
-  Target,&apos;&apos;';
-  Award&apos;&apos;'&apos;} from &apos;lucide-react&apos;';
+  Clock,&apos;
+  Target,&apos;&apos;
+  Award&apos;&apos;'&apos;} from &apos;lucide-react&apos;
 import { Link } from &apos;react-router-dom';
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react'';'
-<<<<<<< HEAD
 ""
-=======
 import { motion, AnimatePresence } from 'framer-motion';
 import {}
   Brain, Shield,
@@ -142,15 +128,11 @@ import {}
   Target, ''';'
   Award''''} from 'lucide-react'';'
 import { Link } from 'react-router-dom';
->>>>>>> main
 
->>>>>>> main
 // Import the new service data;
 ;&apos;&apos;
 const serviceCategories = []{}
-<<<<<<< HEAD
 ';
-<<<<<<< HEAD
     id: 'micro-saas','';
     name: 'Micro SAAS Solutions','';
     icon: <Rocket className='w-6 h-6' />,';
@@ -169,31 +151,28 @@ const serviceCategories = []{}
     name: 'AI Innovation Services','';
     icon: <Brain className='w-6 h-6' />,';
     color: 'from-blue-600 to-cyan-600',;
-=======
-    id: &apos;micro-saas&apos;,'&apos;&apos;';
-    name: &apos;Micro SAAS Solutions&apos;,'&apos;&apos;';
+    id: &apos;micro-saas&apos;,'&apos;&apos;
+    name: &apos;Micro SAAS Solutions&apos;,'&apos;&apos;
     icon:&apos;&apos; <Rocket className=&apos;w-6 h-6&apos; />,';
     color: &apos;from-purple-600 to-pink-600&apos;,
     services: revolutionary2027AdvancedMicroSaasServices},
   {}
 ';
-    id: &apos;it-infrastructure&apos;,'&apos;&apos;';
+    id: &apos;it-infrastructure&apos;,'&apos;&apos;
     name: &apos;IT Infrastructure & Cybersecurity&apos;,'&apos;&apos;'
     icon:&apos;&apos; <Shield className=&apos;w-6 h-6&apos; />,';
     color: &apos;from-red-600 to-orange-600&apos;,
     services: revolutionary2027ITInfrastructureCybersecurityServices},
   {}
 ';
-    id: &apos;ai-innovation&apos;,'&apos;&apos;';
+    id: &apos;ai-innovation&apos;,'&apos;&apos;
     name: &apos;AI Innovation Services&apos;,'&apos;&apos;'
     icon:&apos;&apos; <Brain className=&apos;w-6 h-6&apos; />,';
     color: &apos;from-blue-600 to-cyan-600&apos;,
->>>>>>> main
     services: revolutionary2027AIInnovationServices}
 ];&apos;&apos;
 export function ComprehensiveServicesShowcase() {}
 ';
-<<<<<<< HEAD
 ';
 '';
   const [selectedCategory, setSelectedCategory] = useState('micro-saas');
@@ -205,15 +184,13 @@ export function ComprehensiveServicesShowcase() {}
       transition: {}
         staggerChildren: 0.1,;
         delayChildren: 0.2}
-=======
-&apos;';
-&apos;&apos;';&apos;&apos;
+&apos;
+&apos;&apos;&apos;&apos;
   const [selectedCategory, setSelectedCategory] = useState(&apos;micro-saas&apos;);&apos;
   const [selectedService, setSelectedService] = useState(null);
   const containerVariants = {}
     hidden: { opacit,y: 0 },
     visible: {}
-=======
 ';'
     id: 'micro-saas', '''';
     name: 'Micro SAAS Solutions', '''';
@@ -240,16 +217,13 @@ export function ComprehensiveServicesShowcase() {}
   const [selectedService, setSelectedService] = useState(null);
   const containerVariants = {}
     hidden: { opacity: 0 }, visible: {}
->>>>>>> main
       opacity: 1,
       transition: {}
         staggerChildren: 0.1, delayChildren: 0.2}
->>>>>>> main
     }
   }
 ;
   const itemVariants = {}
-<<<<<<< HEAD
   hidden: { y: 20,;
   opacity: 0},;
     visible: {}
@@ -259,31 +233,22 @@ export function ComprehensiveServicesShowcase() {}
 '';
         duration: 0.5,'';
         ease: 'easeOut''}
-=======
-<<<<<<< HEAD
   hidden: { ,y: 20,
   opacity: 0},
-=======
   hidden: { y: 20, opacity: 0},
->>>>>>> main
     visible: {}
       y: 0, opacity: 1,
       transition: {}
-<<<<<<< HEAD
-&apos;&apos;';
+&apos;&apos;
         duration: 0.5,&apos;&apos;'';
         ease: &apos;easeOut&apos;&apos;'}
-=======
 ''';'
         duration: 0.5, '''';
         ease: 'easeOut'''}
->>>>>>> main
->>>>>>> main
     }
   }
 ;&apos;&apos;
   const cardVariants = {}
-<<<<<<< HEAD
   hidden: { scale: 0.95,;
   opacity: 0},;
     visible: {}
@@ -294,7 +259,7 @@ export function ComprehensiveServicesShowcase() {}
         duration: 0.4,'';
         ease: 'easeOut''}
     }
-  }';';
+  }';
   return ('';
     <section className='py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>'';
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -304,29 +269,23 @@ export function ComprehensiveServicesShowcase() {}
           initial = {}
   { opacity: 0,;
   y: 30}}
-=======
-<<<<<<< HEAD
   hidden: { scal,e: 0.95,
   opacity: 0},
-=======
   hidden: { scale: 0.95, opacity: 0},
->>>>>>> main
     visible: {}
       scale: 1, opacity: 1,
       transition: {}
-<<<<<<< HEAD
-&apos;&apos;';
+&apos;&apos;
         duration: 0.4,&apos;&apos;'';
         ease: &apos;easeOut&apos;&apos;'}
     }
-  }';';
+  }';
   return (&apos;&apos;'&apos;&apos;'
     <section className=&apos;py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light&apos;>'&apos;&apos;'&apos;&apos;
       <div className=&apos;max-w-7xl mx-auto px-4 sm:px-6 l,g:px-8&apos;>
         {/* Header Section */}&apos;&apos;'&apos;&apos;
         <motion.div &apos;&apos;'';
-          className=&apos;text-center mb-16&apos;&apos;';
-=======
+          className=&apos;text-center mb-16&apos;&apos;
 ''';'
         duration: 0.4, '''';
         ease: 'easeOut'''}
@@ -338,14 +297,11 @@ export function ComprehensiveServicesShowcase() {}
         {/* Header Section */}''''
         <motion.div '''';
           className='text-center mb-16''';
->>>>>>> main
           initial = {}
   { opacity: 0, y: 30}}
->>>>>>> main
           animate = {}
   { opacity: 1,;
   y: 0}}
-<<<<<<< HEAD
           transition={{ duration: 0.6 }}''>'';
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
             Revolutionary 2027 Services'';
@@ -387,29 +343,21 @@ export function ComprehensiveServicesShowcase() {}
           initial = {}
   { opacity: 0,;
   y: 20}}
-=======
-<<<<<<< HEAD
           transition={{ duration: 0.6 }}&apos;&apos;'>&apos;&apos;'&apos;&apos;'
           <h2 className=&apos;text-4xl md:text-5xl font-bold text-white mb-6&apos;>
             Revolutionary 2027 Services&apos;&apos;'&apos;&apos;
           </h2>&apos;&apos;'&apos;&apos;'
           <p className=&apos;text-xl text-zion-cyan-light max-w-3xl mx-auto&apos;>
-=======
           transition={{ duration: 0.6 }}'''>'''''
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
             Revolutionary 2027 Services''''
           </h2>''''
           <p className='text-xl text-zion-cyan-light max-w-3xl mx-auto'>
-<<<<<<< HEAD
             Discover cutting-edge micro SAAS solutions, advanced IT infrastructure, and innovative AI services
             designed to transform your business and drive exponential growth.
-=======
->>>>>>> main
             Discover cutting-edge micro SAAS solutions, advanced IT infrastructure, and innovative AI services;
             designed to transform your business and drive exponential growth.&apos;
->>>>>>> main
           </p>
-<<<<<<< HEAD
           &apos;&apos;'{/* Contact Information */}&apos;&apos;'&apos;&apos;'
           <div className=&apos;mt-8 p-6 bg-zion-slate-dark/50 rounded-2xl border border-zion-cyan/20&apos;>'&apos;&apos;'&apos;&apos;
             <h3 className=&apos;text-2xl font-semibold text-zion-cyan mb-4&apos;>Ready to Transform Your Business?&apos;</h3>&apos;&apos;'&apos;&apos;'
@@ -433,7 +381,6 @@ export function ComprehensiveServicesShowcase() {}
               </p>&apos;&apos;'&apos;&apos;'
               <p className=&apos;text-zion-cyan-light text-sm&apos;>
                 364 E Main St STE 1008 Middletown DE 19709&apos;
-=======
           '''{/* Contact Information */}'''''
           <div className='mt-8 p-6 bg-zion-slate-dark/50 rounded-2xl border border-zion-cyan/20'>''''
             <h3 className='text-2xl font-semibold text-zion-cyan mb-4'>Ready to Transform Your Business?</h3>''''
@@ -457,59 +404,44 @@ export function ComprehensiveServicesShowcase() {}
               </p>''''
               <p className='text-zion-cyan-light text-sm'>
                 364 E Main St STE 1008 Middletown DE 19709
->>>>>>> main
               </p>
             </div>
           </div>
         </motion.div>
-<<<<<<< HEAD
         {/* Category Navigation */}&apos;&apos;'&apos;&apos;
         <motion.div &apos;&apos;'&apos;
-          className=&apos;flex flex-wrap justify-center gap-4 mb-12&apos;&apos;';
-=======
+          className=&apos;flex flex-wrap justify-center gap-4 mb-12&apos;&apos;
         {/* Category Navigation */}''''
         <motion.div ''''
           className='flex flex-wrap justify-center gap-4 mb-12''';
->>>>>>> main
           initial = {}
   { opacity: 0, y: 20}}
->>>>>>> main
           animate = {}
   { opacity: 1,;
   y: 0}}
           transition = {}
-<<<<<<< HEAD
   { duration: 0.6,;
-=======
-<<<<<<< HEAD
   { duration: 0.6,
->>>>>>> main
   delay: 0.2}}
         >{serviceCategories.map ( (category) => (&apos;}&apos;<button;
-=======
   { duration: 0.6, delay: 0.2}}
         >{serviceCategories.map ( (category) => (<button;
->>>>>>> main
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
               className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${}
 `;
-<<<<<<< HEAD
 `'`;'
 `'`'`;
                 selectedCategory === category.id`'`'`'`'
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`''`'`'`
                   : 'bg-zion-slate-dark text-zion-cyan-light hover:bg-zion-slate hover:text-zion-cyan border border-zion-cyan/30'````}`}
             >{category.icon}
-=======
-<<<<<<< HEAD
 `&apos;`;
 `&apos;`&apos;`;
                 selectedCategory === category.id`&apos;`&apos;`&apos;`;
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`&apos;&apos;`&apos;`&apos;`
                   : &apos;bg-zion-slate-dark text-zion-cyan-light hover:bg-zion-slate hove,r:text-zion-cyan border border-zion-cyan/30&apos;````}`}
             >{category.icon}&apos;&apos;
->>>>>>> main
               <span>{category.name}</span>
             </button>) ) }
         </motion.div>
@@ -519,18 +451,18 @@ export function ComprehensiveServicesShowcase() {}
           variants={containerVariants}&apos;&apos;'';
           initial=&apos;hidden&apos;&apos;'';
           animate=&apos;visible&apos;&apos;'>{currentServices.map((service) => (&apos;}&apos;
-            <motion.div&apos;&apos;';
+            <motion.div&apos;&apos;
               key={service.id}&apos;&apos;'';
-              className=&apos;group cursor-pointer&apos;&apos;';
+              className=&apos;group cursor-pointer&apos;&apos;
               variants={itemVariants}
               onClick={ () => setSelectedService (service) }
             >&apos;&apos;'&apos;&apos;
               <motion.div&apos;&apos;'';
-                className=&apos;bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 h-full&apos;&apos;';
+                className=&apos;bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 h-full&apos;&apos;
                 variants={cardVariants}
                 whileHover = {}
   {}
-&apos;&apos;';
+&apos;&apos;
                   y: -8,&apos;&apos;'';
                   boxShadow: &apos;0 20px 40px rgba(0, 0, 0,&apos;&apos;'';
   0.3)&apos;}}
@@ -588,7 +520,7 @@ export function ComprehensiveServicesShowcase() {}
                 </div>
 &apos;&apos;'{/* CTA Button */}&apos;&apos;'&apos;&apos;'
                 <div className=&apos;flex items-center justify-between&apos;>&apos;'
-                  <Link&apos;&apos;';
+                  <Link&apos;&apos;
                     to={service.link}&apos;&apos;'';
                     className=&apos;flex items-center space-x-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg transition-all duration-300 group-hover:scale-105 &apos;>'&apos;&apos;''
                     <span>Learn More</span>&apos;&apos;'&apos;&apos;'
@@ -596,21 +528,16 @@ export function ComprehensiveServicesShowcase() {}
                   </Link>&apos;&apos;'&apos;&apos;'
                   <div className=&apos;text-xs text-zion-cyan-light&apos;>
                     {service.trialDays} day trial&apos;
-=======
 `'`;'
 `'`'`;
-<<<<<<< HEAD
                 selectedCategory === category.id`'`'`'`;
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`'`'`'`;
-=======
                 selectedCategory === category.id`'`'`'`;'
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`''`'`'`
->>>>>>> main
                   : 'bg-zion-slate-dark text-zion-cyan-light hover:bg-zion-slate hover:text-zion-cyan border border-zion-cyan/30'````}`}
             >{category.icon}
               <span>{category.name}</span>;
             </button>) ) }
-<<<<<<< HEAD
         </motion.div>;
         {/* Services Grid */}'';
         <motion.div'';
@@ -706,7 +633,6 @@ export function ComprehensiveServicesShowcase() {}
           initial = {}
   { opacity: 0,;
   y: 30}}
-=======
         </motion.div>
         {/* Services Grid */}''''
         <motion.div''''
@@ -791,29 +717,23 @@ export function ComprehensiveServicesShowcase() {}
                   </Link>''''
                   <div className='text-xs text-zion-cyan-light'>
                     {service.trialDays} day trial
->>>>>>> main
                   </div>
                 </div>
               </motion.div>
             </motion.div>) ) }
         </motion.div>
-<<<<<<< HEAD
         {/* Call to Action */}&apos;&apos;'&apos;&apos;
         <motion.div &apos;&apos;'';
-          className=&apos;text-center mt-16&apos;&apos;';
-=======
+          className=&apos;text-center mt-16&apos;&apos;
         {/* Call to Action */}''''
         <motion.div '''';
           className='text-center mt-16''';
->>>>>>> main
           initial = {}
   { opacity: 0, y: 30}}
->>>>>>> main
           animate = {}
   { opacity: 1,;
   y: 0}}
           transition = {}
-<<<<<<< HEAD
   { duration: 0.6,;
   delay: 0.4}}''>'';
           <div className='bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30'>'';
@@ -844,8 +764,6 @@ export function ComprehensiveServicesShowcase() {}
         {selectedService && ('';
           <motion.div'';
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'';
-=======
-<<<<<<< HEAD
   { duration: 0.6,
   delay: 0.4}}&apos;&apos;'>&apos;&apos;'&apos;&apos;'
           <div className=&apos;bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30&apos;>'&apos;&apos;'&apos;&apos;
@@ -866,7 +784,6 @@ export function ComprehensiveServicesShowcase() {}
                 href=&apos;tel:+13024640950&apos;&apos;'';
                 className=&apos;bg-zion-slate-dark text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate hover:border-zion-cyan/50 transition-all duration-300 &apos;>
                 Call No,w: +1 302 464 0950&apos;&apos;
-=======
   { duration: 0.6, delay: 0.4}}'''>'''''
           <div className='bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30'>''''
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -886,7 +803,6 @@ export function ComprehensiveServicesShowcase() {}
                 href='tel:+13024640950'''';'
                 className='bg-zion-slate-dark text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover: bg-zion-slate hover:border-zion-cyan/50 transition-all duration-300 '>
                 Call Now: +1 302 464 0950
->>>>>>> main
               </a>
             </div>
           </div>
@@ -894,45 +810,34 @@ export function ComprehensiveServicesShowcase() {}
       </div>
       {/* Service Detail Modal */}
       <AnimatePresence>
-<<<<<<< HEAD
         {selectedService && (&apos;&apos;'&apos;}&apos;
           <motion.div&apos;&apos;'';
-            className=&apos;fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4&apos;&apos;';
-=======
+            className=&apos;fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4&apos;&apos;
         {selectedService && (''''
           <motion.div'''';
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4''';
->>>>>>> main
->>>>>>> main
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={ () => setSelectedService (null) }
-<<<<<<< HEAD
           >'';
             <motion.div'';
               className='bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'';
               initial = {}
   { scale: 0.9,;
   opacity: 0}}
-=======
-<<<<<<< HEAD
           >&apos;&apos;'&apos;&apos;
             <motion.div&apos;&apos;'';
-              className=&apos;bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto&apos;&apos;';
-=======
+              className=&apos;bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto&apos;&apos;
           >''''
             <motion.div'''';
               className='bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto''';
->>>>>>> main
               initial = {}
   { scale: 0.9, opacity: 0}}
->>>>>>> main
               animate = {}
   { scale: 1,;
   opacity: 1}}
               exit = {}
-<<<<<<< HEAD
   { scale: 0.9,;
   opacity: 0}}
               onClick={(e) => e.stopPropagation()}''>'';
@@ -1012,22 +917,20 @@ export function ComprehensiveServicesShowcase() {}
     </section>;
   )}'`;
 '`'"`
-=======
-<<<<<<< HEAD
   { scale: 0.9,
   opacity: 0}}
               onClick={(e) => e.stopPropagation()}&apos;&apos;'>&apos;&apos;'&apos;&apos;'
               <div className=&apos;flex items-start justify-between mb-6&apos;>'&apos;&apos;'&apos;&apos;
                 <div className=&apos;text-6xl&apos;>{selectedService.icon}&apos;</div>
-                <button&apos;&apos;';
+                <button&apos;&apos;
                   onClick={() => setSelectedService(null)}&apos;&apos;'';
                   className=&apos;text-zion-cyan-light hover:text-white transition-colors &apos;>
                   ✕&apos;&apos;
                 </button>
-              </div>&apos;&apos;';
+              </div>&apos;&apos;
 &apos;&apos;'&apos;&apos;'
               <h2 className=&apos;text-3xl font-bold text-white mb-4&apos;>{selectedService.name}&apos;</h2>&apos;&apos;'&apos;&apos;'
-              <p className=&apos;text-zion-cyan-light text-lg mb-6&apos;>{selectedService.description}&apos;</p>&apos;&apos;';
+              <p className=&apos;text-zion-cyan-light text-lg mb-6&apos;>{selectedService.description}&apos;</p>&apos;&apos;
 &apos;&apos;'&apos;&apos;'
               <div className=&apos;grid md:grid-cols-2 gap-8&apos;>'&apos;&apos;''
                 <div>&apos;&apos;'&apos;&apos;'
@@ -1036,7 +939,6 @@ export function ComprehensiveServicesShowcase() {}
                       <li key={index} className=&apos;flex items-center space-x-2&apos;>'&apos;&apos;'&apos;&apos;
                         <CheckCircle className=&apos;w-5 h-5 text-green-400 flex-shrink-0&apos; />&apos;&apos;'&apos;&apos;'
                         <span className=&apos;text-zion-cyan-light&apos;>{feature}&apos;</span>
-=======
   { scale: 0.9, opacity: 0}}
               onClick={(e) => e.stopPropagation()}'''>'''''
               <div className='flex items-start justify-between mb-6'>''''
@@ -1058,12 +960,10 @@ export function ComprehensiveServicesShowcase() {}
                       <li key={index} className='flex items-center space-x-2'>''''
                         <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />''''
                         <span className='text-zion-cyan-light'>{feature}</span>
->>>>>>> main
                       </li>
                     ))}
                   </ul>
                 </div>
-<<<<<<< HEAD
 &apos;&apos;'&apos;&apos;
                 <div>&apos;&apos;'&apos;&apos;'
                   <h3 className=&apos;text-xl font-semibold text-white mb-4&apos;>Service Details&apos;</h3>&apos;&apos;'&apos;&apos;'
@@ -1088,14 +988,14 @@ export function ComprehensiveServicesShowcase() {}
                       <span className=&apos;text-zion-cyan-light&apos;>Rating:&apos;</span>&apos;&apos;'&apos;&apos;'
                       <span className=&apos;text-white font-medium&apos;>{selectedService.rating}/5 ({selectedService.reviews} reviews)&apos;</span>
                     </div>
-                  </div>&apos;&apos;';
+                  </div>&apos;&apos;
 &apos;&apos;'&apos;&apos;'
                   <div className=&apos;mt-6&apos;>'&apos;&apos;'&apos;&apos;
                     <h4 className=&apos;text-lg font-semibold text-white mb-2&apos;>ROI&apos;</h4>&apos;&apos;'&apos;&apos;'
                     <p className=&apos;text-zion-cyan-light text-sm&apos;>{selectedService.roi}&apos;</p>
                   </div>
                 </div>
-              </div>&apos;&apos;';
+              </div>&apos;&apos;
 &apos;&apos;'&apos;&apos;'
               <div className=&apos;mt-8 pt-6 border-t border-zion-cyan/20&apos;>'&apos;&apos;'&apos;&apos;
                 <div className=&apos;flex flex-col sm:flex-row gap-4 justify-center&apos;>&apos;'
@@ -1108,7 +1008,6 @@ export function ComprehensiveServicesShowcase() {}
                     href=&apos;tel:+13024640950&apos;&apos;'';
                     className=&apos;bg-zion-slate text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hove,r:bg-zion-slate-dark transition-all duration-300 text-center &apos;>
                     Call for Consultation&apos;&apos;
-=======
 ''''
                 <div>''''
                   <h3 className='text-xl font-semibold text-white mb-4'>Service Details</h3>''''
@@ -1153,7 +1052,6 @@ export function ComprehensiveServicesShowcase() {}
                     href='tel:+13024640950'''';'
                     className='bg-zion-slate text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover: bg-zion-slate-dark transition-all duration-300 text-center '>
                     Call for Consultation
->>>>>>> main
                   </a>
                 </div>
               </div>
@@ -1161,23 +1059,11 @@ export function ComprehensiveServicesShowcase() {}
           </motion.div>) }
       </AnimatePresence>
     </section>
-<<<<<<< HEAD
   )}''`
 ''`'"`'"
-=======
-<<<<<<< HEAD
   )}&apos;&apos;`;
 &apos;&apos;`&apos;&quot;`&quot;"
-=======
   )}''`;
 ''`'"`'"
-=======
 import React, { useState }  from 'react;'
 "
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

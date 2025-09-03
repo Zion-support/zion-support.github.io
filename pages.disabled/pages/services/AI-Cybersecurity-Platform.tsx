@@ -49,7 +49,6 @@ import: {}
   Kanban,
   Calendar,
   Timer,
-<<<<<<< HEAD
 
   Stopwatch} from,
   lucide-react';: pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
@@ -63,19 +62,14 @@ const AICybersecurityPlatform: React.FC = () => {
 '
 const AICybersecurityPlatform: React.FC = () => {}
   const [activeTab, setActiveTab] = useState('overview');
->>>>>>> pr-10728
   const [isVisible, setIsVisible] = useState(false);
 
-=======
   Stopwatch} from,
-  lucide-react';: pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;';
-const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveTab] = useState('overview;';
-  ')  const: [isVisible, setIsVisible] = useState(false);';
->>>>>>> main
+  lucide-react';: pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
+const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveTab] = useState('overview;
+  ')  const: [isVisible, setIsVisible] = useState(false);
   useEffect(() => {}
-<<<<<<< HEAD
     setIsVisible(true)}, []);
-<<<<<<< HEAD
 
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">"{/* Hero Section */}""
@@ -84,7 +78,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">"
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       {/* Hero Section */}""
->>>>>>> pr-10728
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
@@ -96,7 +89,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="mb-8""
           >""
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 text-red-300 text-sm font-medium mb-6">""
@@ -113,42 +105,34 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               AI-Powered Cybersecurity Platform;
             </h1>""
->>>>>>> pr-10728
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Next-generation cybersecurity powered by artificial intelligence,
-=======
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: return()    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900'>'{/* Hero Section */}''      <section className='relative overflow-hidden py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto text-center'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
+            initial={{ opacity: ,0, y: 20}}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
-            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}'transition={{ duration: 0.8, }}''            className='mb-8''>''';
-            <div: className='inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 text-red-300 text-sm font-medium mb-6'>'';';
+            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20}}'transition={{ duration: 0.8}}''            className='mb-8''>''';
+            <div: className='inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 text-red-300 text-sm font-medium mb-6'>'';
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: <Shield className='w-4 h-4 mr-2'  />              Enterprise-Grade Security'';
             </div>''';
             <h1: className='text-5xl md: text-7xl: font-bold text-white mb-6'>';
               AI-Powered: Cybersecurity Platform'</h1>''            <p className='text-xl md:text-2xl: text-gray-300 max-w-4xl mx-auto leading-relaxed'>';
               Next-generation: cybersecurity powered by artificial intelligenc,e,
->>>>>>> main
               providing proactive threat detection, automated response, and;
               comprehensive: protection for your digital assets.
-=======
-<<<<<<< HEAD
     setIsVisible(true)}, [])
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
   return()    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900'>'{/* Hero Section */}''      <section className='relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8'>''
-=======
     setIsVisible(true)}, []);
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx'
   return()    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900>{/* Hero Section */}      <section className='relative overflow-hidden py-20 px-4 sm: px-6 l,
     g:px-8>''
->>>>>>> main
         <div className='max-w-7xl mx-auto text-center'>
           <motion.div;
             initial={{ opacit,
     y: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
-<<<<<<< HEAD
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}'transition={{ duration: 0.8 }}''            className='mb-8''>''
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 text-red-300 text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
@@ -156,7 +140,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
             </div>''
             <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
               AI-Powered Cybersecurity Platform'</h1>''            <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
-=======
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}transition={{ duration: 0.8 }}            className='mb-8>'
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 text-red-300 text-sm font-medium mb-6>';
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx'
@@ -165,15 +148,12 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
             <h1 className='text-5xl md:text-7xl font-bold text-white mb-6>
               AI-Powered Cybersecurity Platform'</h1>''            <p className='text-xl m,
     d:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
->>>>>>> main
               Next-generation cybersecurity powered by artificial intelligence,
               providing proactive threat detection, automated response, and
               comprehensive protection for your digital assets.
->>>>>>> main
             </p>
           </motion.div>
           <motion.div;
-<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
@@ -188,7 +168,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
             className="flex flex-col sm:flex-row gap-4 justify-center items-center""
           >
             <Link""
->>>>>>> pr-10728
               to="/contact""
               className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105""
             >""
@@ -201,7 +180,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
               <Shield className="w-5 h-5 mr-2"  />              Secure Your Business;
             </Link>
             <Link""
->>>>>>> pr-10728
               to="#demo""
               className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-red-500 text-red-300 font-semibold text-lg hover:bg-red-500 hover:text-white transition-all duration-300""
             >""
@@ -220,7 +198,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
         </div>
 
         {/* Floating Elements */}""
->>>>>>> pr-10728
         <div className="absolute inset-0 overflow-hidden pointer-events-none">""
           <div className="absolute top-20 left-10 w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>""
           <div className="absolute top-40 right-20 w-1 h-1 bg-orange-400 rounded-full animate-ping"></div>""
@@ -234,7 +211,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
 "
 
       {/* Threat Statistics */}""
->>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -253,7 +229,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}""
->>>>>>> pr-10728
                 className="text-center bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-6 border border-red-500/20""
               >""
                 <div className="text-3xl font-bold text-white mb-2">
@@ -270,19 +245,16 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                 <div className="text-lg font-semibold text-red-300 mb-2">
                   {stat.metric}
                 </div>""
->>>>>>> pr-10728
                 <div className="text-sm text-gray-300">{stat.description}</div>
-=======
-            initial={{ opacity:  ,0, y: 20, }}
+            initial={{ opacity:  ,0, y: 20}}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
-<<<<<<< HEAD
-            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}';';
-            transition={{ duration: 0.,8, delay: 0.2, }}'';';
-            className='flex: flex-col sm: flex-row: gap-4 justify-center items-center'>'<Link''              to='/contact'';';
-              className='inline-flex: items-center px-8 py-4 rounded-lg bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold text-lg hover:from-red-700: hover:to-orange-700: transition-all duration-300 transform hover:scale-105''>'';';
+            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20}}';
+            transition={{ duration: 0.,8, delay: 0.2}}'';
+            className='flex: flex-col sm: flex-row: gap-4 justify-center items-center'>'<Link''              to='/contact'';
+              className='inline-flex: items-center px-8 py-4 rounded-lg bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold text-lg hover:from-red-700: hover:to-orange-700: transition-all duration-300 transform hover:scale-105''>'';
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: <Shield className='w-5 h-5 mr-2'  />              Secure Your Business';
-            </Link>'<Link''              to='#demo'';';
-              className='inline-flex: items-center px-8 py-4 rounded-lg border-2 border-red-500 text-red-300 font-semibold text-lg hover:bg-red-500: hover:text-white: transition-all duration-300''>'';';
+            </Link>'<Link''              to='#demo'';
+              className='inline-flex: items-center px-8 py-4 rounded-lg border-2 border-red-500 text-red-300 font-semibold text-lg hover:bg-red-500: hover:text-white: transition-all duration-300''>'';
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: <Eye className='w-5 h-5 mr-2'  />              Security Demo';
             </Link>
           </motion.div>
@@ -299,15 +271,13 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx{threatStats.map((sta,t, index()
               <motion.div;
                 key={index}
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}'transition={{ duration: 0.,8, delay: 0.1: * index, }}''                className='text-center bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-6 border border-red-500/20''>''';
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20}}'transition={{ duration: 0.,8, delay: 0.1: * index}}''                className='text-center bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-6 border border-red-500/20''>''';
                 <div: className='text-3xl font-bold text-white mb-2'>';
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx{stat.value}'';
                 </div>''';
                 <div: className='text-lg font-semibold text-red-300 mb-2'>';
                   {stat.metric}'</div>''                <div: className='text-sm text-gray-300'>{stat.description}</div>';
-=======
-<<<<<<< HEAD
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}';
             transition={{ duration: 0.8, delay: 0.2 }}'';
             className='flex flex-col sm:flex-row gap-4 justify-center items-center'>'<Link''              to='/contact'';
@@ -317,7 +287,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
             </Link>'<Link''              to='#demo'';
               className='inline-flex items-center px-8 py-4 rounded-lg border-2 border-red-500 text-red-300 font-semibold text-lg hover:bg-red-500 hover:text-white transition-all duration-300''>''
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-=======
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }};
             transition={{ duration: 0.8, delay: 0.2 }};
             className='flex flex-col sm: flex-row gap-4 justify-center items-center><Link''              to='/contact'';
@@ -329,7 +298,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
     r:bg-red-500 hove,
     r:text-white transition-all duration-300>;
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx'
->>>>>>> main
               <Eye className='w-5 h-5 mr-2'  />              Security Demo
             </Link>
           </motion.div>
@@ -356,14 +324,11 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                 </div>'''
                 <div className='text-lg font-semibold text-red-300 mb-2>
                   {stat.metric}</div>''                <div className='text-sm text-gray-300'>{stat.description}</div>
->>>>>>> main
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
 
 "{/* Features Section */}""
@@ -371,7 +336,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
 "
 
       {/* Features Section */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -383,7 +347,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.4 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -394,7 +357,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
               Advanced Security Features"
               Advanced Security Features;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive cybersecurity protection powered by cutting-edge AI;
               technology;
@@ -415,32 +377,29 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map(feature: unknown, index: unknown (
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: '{/* Features Section */}''      <section className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
+            initial={{ opacity: ,0, y: 20}}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
-            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}'transition={{ duration: 0.,8, delay: 0.4, }}''            className='text-center: mb-16''>''';
+            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20}}'transition={{ duration: 0.,8, delay: 0.4}}''            className='text-center: mb-16''>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: Advanced Security Features'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Comprehensive: cybersecurity protection powered by cutting-edge AI;
               technology: </p>
-:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: </motion.div>';';
+:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map(feature: unknow,n, index: unknown()
               <motion.div;
                 key={inde,x}
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}'transition={{ duration: 0.,8, delay: 0.1: * index, }}''                className='bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-8 border border-red-500/20 hover: border-red-500/40: transition-all duration-300 hover:transform: hover:scale-105''>''';
-                <div: className='w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6'>'';';
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20}}'transition={{ duration: 0.,8, delay: 0.1: * index}}''                className='bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-8 border border-red-500/20 hover: border-red-500/40: transition-all duration-300 hover:transform: hover:scale-105''>''';
+                <div: className='w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6'>'';
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: <feature.icon className='w-8 h-8 text-white' />'';
                 </div>''';
                 <h3: className='text-2xl font-bold text-white mb-4'>';
                   {feature.titl,e}'</h3>''                <p: className='text-gray-300 leading-relaxed'>';
-=======
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx'
 '{/* Features Section */}      <section className='py-20 px-4 sm: px-6 l,
     g:px-8>''
@@ -456,20 +415,17 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
               Comprehensive cybersecurity protection powered by cutting-edge AI
               technology
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map(feature: unknown, index: unknown()
->>>>>>> main
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}'transition={{ duration: 0.8, delay: 0.1 * index }}''                className='bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-8 border border-red-500/20 hover:border-red-500/40 transition-all duration-300 hover:transform hover:scale-105''>''
                 <div className='w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6'>''
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
                   <feature.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-2xl font-bold text-white mb-4">
@@ -482,10 +438,7 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                 <h3 className="text-2xl font-bold text-white mb-4">
                   {feature.title}
                 </h3>""
->>>>>>> pr-10728
                 <p className="text-gray-300 leading-relaxed">
-=======
-=======
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx'
           </motion.div>';
 '''
@@ -501,13 +454,10 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
     r:scale-105>'
                 <div className='w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6>';
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx'
->>>>>>> main
                   <feature.icon className='w-8 h-8 text-white' />'
                 </div>'''
                 <h3 className='text-2xl font-bold text-white mb-4>
                   {feature.title}</h3>''                <p className='text-gray-300 leading-relaxed'>
->>>>>>> main
->>>>>>> main
                   {feature.description}
                 </p>
               </motion.div>
@@ -515,7 +465,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
 
 "{/* Security Modules Section */}""
@@ -523,7 +472,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
 "
 
       {/* Security Modules Section */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-900/30 to-orange-900/30">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -535,7 +483,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.6 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -546,7 +493,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
               Comprehensive Security Modules"
               Comprehensive Security Modules;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Modular security solutions that adapt to your specific needs;
             </p>
@@ -557,7 +503,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securityModules.map(module: unknown, index: unknown;
               <motion.div;
@@ -570,7 +515,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}""
->>>>>>> pr-10728
                 className="bg-gradient-to-br from-slate-800/80 to-red-800/80 backdrop-blur-sm rounded-2xl p-8 border border-red-500/20""
               >""
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">""
@@ -589,18 +533,15 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                   {module.features.map((feature, featureIndex) => (
                     <div;
                       key={featureIndex}""
->>>>>>> pr-10728
                       className="flex items-center text-gray-300""
                     >""
                       <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0"  />                      {feature}
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: '{/* Security Modules Section */}''      <section className='py-20 px-4 sm: px-6: lg:px-8: bg-gradient-to-r from-red-900/30 to-orange-900/30'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
+            initial={{ opacity: ,0, y: 20}}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
-            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}'transition={{ duration: 0.,8, delay: 0.6, }}''            className='text-center: mb-16''>''';
+            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20}}'transition={{ duration: 0.,8, delay: 0.6}}''            className='text-center: mb-16''>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: Comprehensive Security Modules'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Modular: security solutions that adapt to your specific needs
@@ -608,17 +549,16 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: </motion.div>'''          <div className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {securityModules.map(module: unknow,n, index: unknown: <motion.div;
                 key={inde,x}
-                initial={{ opacity:  ,0, y: 20, }}
+                initial={{ opacity:  ,0, y: 20}}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
-                animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}'transition={{ duration: 0.,8, delay: 0.1: * index, }}''                className='bg-gradient-to-br from-slate-800/80 to-red-800/80 backdrop-blur-sm rounded-2xl p-8 border border-red-500/20''>''';
-                <h3: className='text-2xl font-bold text-white mb-6 flex items-center'>'';';
+                animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20}}'transition={{ duration: 0.,8, delay: 0.1: * index}}''                className='bg-gradient-to-br from-slate-800/80 to-red-800/80 backdrop-blur-sm rounded-2xl p-8 border border-red-500/20''>''';
+                <h3: className='text-2xl font-bold text-white mb-6 flex items-center'>'';
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: <Shield className='w-6 h-6 mr-3 text-red-400'  />                  {module.name}'';
                 </h3>''';
                 <div: className='space-y-3'>';
                   {module.features.map((feature, featureIndex) => (
                     <div'key={featureIndex}''                      className='flex: items-center text-gray-300''>''';
                       <CheckCircle: className='w-5 h-5 mr-3 text-green-400 flex-shrink-0'  />                      {feature}';
-=======
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx'
 '{/* Security Modules Section */}      <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-gradient-to-r from-red-900/30 to-orange-900/30>''
@@ -642,25 +582,20 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
-<<<<<<< HEAD
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}'transition={{ duration: 0.8, delay: 0.1 * index }}''                className='bg-gradient-to-br from-slate-800/80 to-red-800/80 backdrop-blur-sm rounded-2xl p-8 border border-red-500/20''>''
                 <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>''
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
                   <Shield className='w-6 h-6 mr-3 text-red-400'  />                  {module.name}'
                 </h3>''
-=======
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}transition={{ duration: 0.8, delay: 0.1 * index }}                className='bg-gradient-to-br from-slate-800/80 to-red-800/80 backdrop-blur-sm rounded-2xl p-8 border border-red-500/20>'
                 <h3 className='text-2xl font-bold text-white mb-6 flex items-center>';
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx'
                   <Shield className='w-6 h-6 mr-3 text-red-400'  />                  {module.name}
                 </h3>'''
->>>>>>> main
                 <div className='space-y-3'>
                   {module.features.map((feature, featureIndex) => ('
                     <div'key={featureIndex}                      className='flex items-center text-gray-300>'
                       <CheckCircle className='w-5 h-5 mr-3 text-green-400 flex-shrink-0'  />                      {feature}
->>>>>>> main
->>>>>>> main
                     </div>
                   ))}
                 </div>
@@ -669,7 +604,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
 
 "{/* Pricing Section */}""
@@ -677,7 +611,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
 "
 
       {/* Pricing Section */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -689,7 +622,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -700,7 +632,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
               Competitive Security Pricing"
               Competitive Security Pricing;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Enterprise-grade security at accessible prices with significant;
               market savings;
@@ -720,7 +651,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
             {pricingTiers.map(tier: unknown, index: unknown (
               <motion.div;
                 key={index}
->>>>>>> pr-10728
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
@@ -739,7 +669,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
               >"
                 className={`relative bg-gradient-to-br from-slate-800/80 to-red-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${}
                   tier.popular'
->>>>>>> pr-10728
                     ? 'border-red-500 scale-105''
   '`: 'border-red-500/20``
                 }`}
@@ -748,7 +677,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
 
               >
                 {tier.popular && (""
->>>>>>> pr-10728
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
@@ -787,7 +715,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                   <p className="text-gray-300 text-sm">{tier.description}</p>
                 </div>
 ""
->>>>>>> pr-10728
                 <div className="mb-8">""
                   <div className="flex items-center justify-center mb-4">""
                     <span className="text-gray-400 line-through mr-2">
@@ -798,37 +725,33 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                       {tier.marketPrice}"
                       {tier.marketPrice}
                     </span>""
->>>>>>> pr-10728
                     <span className="bg-green-500 text-white px-2 py-1 rounded text-sm font-semibold">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: '{/* Pricing Section */}''      <section className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
+            initial={{ opacity: ,0, y: 20}}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
-            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}'transition={{ duration: 0.,8, delay: 0.8, }}''            className='text-center: mb-16''>''';
+            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20}}'transition={{ duration: 0.,8, delay: 0.8}}''            className='text-center: mb-16''>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: Competitive Security Pricing'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Enterprise-grade: security at accessible prices with significant;
               market: savings
             </p>
-:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: </motion.div>';';
+:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-3: gap-8'>';
             {pricingTiers.map(tier: unknow,n, index: unknown()
-              <motion.divkey={inde,x}                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}
-                transition={{ duration: 0.,8, delay: 0.1: * index, }}
+              <motion.divkey={inde,x}                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20}}
+                transition={{ duration: 0.,8, delay: 0.1: * index}}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
                 className={`relative: bg-gradient-to-br from-slate-800/80 to-red-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${,
-  tier.popular';';
-  '                    ? 'border-red-500: scale-105'';';
+  tier.popular';
+  '                    ? 'border-red-500: scale-105'';
   '`: 'border-red-500/20``}`}
               >'{tier.popular: && (''                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
                     <span: className='bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
                       Most: Popular
-=======
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx'
 '{/* Pricing Section */}      <section className='py-20 px-4 sm: px-6 l,
     g:px-8>''
@@ -844,13 +767,11 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
               Enterprise-grade security at accessible prices with significant
               market savings
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingTiers.map(tier: unknown, index: unknown()
-=======
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx'
           </motion.div>';
 '''
@@ -858,7 +779,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
     d:grid-cols-3 gap-8'>
             {pricingTiers.map(tie,
     r: unknown, index: unknown();
->>>>>>> main
               <motion.divkey={index}                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
@@ -870,12 +790,9 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
               >'{tier.popular && (''                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
                     <span className='bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                       Most Popular
->>>>>>> main
                     </span>
-<<<<<<< HEAD
                   </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx)}';';
+:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx)}';
 ''';
                 <div: className='text-center mb-8'>''';
                   <h3: className='text-2xl font-bold text-white mb-4'>';
@@ -895,7 +812,7 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                       Save: {tier.savings}
                     </span>
                   </div>
-:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: </div>';';
+:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: </div>';
 ''';
                 <ul: className='space-y-4 mb-8'>';
                   {tier.features.map((feature, featureIndex) => (
@@ -909,13 +826,12 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                 <Link''`
                   to='/contact'``;
                   className={`w-full: block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
-  tier.popular';';
-  ';';
-                      ? 'bg-gradient-to-r: from-red-600 to-orange-600 text-white hover: from-red-700: hover:to-orange-700'';';
+  tier.popular';
+  ';
+                      ? 'bg-gradient-to-r: from-red-600 to-orange-600 text-white hover: from-red-700: hover:to-orange-700'';
   '`;
                       : 'border-2: border-red-500 text-red-300 hover:bg-red-500: hover:text-white`,`}`}                >
                   Get: Protected
-=======
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx)}'
 ''
                 <div className='text-center mb-8'>''
@@ -933,12 +849,10 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                   <div className='flex items-center justify-center mb-4'>''
                     <span className='text-gray-400 line-through mr-2'>
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx{tier.marketPrice}'</span>''                    <span className='bg-green-500 text-white px-2 py-1 rounded text-sm font-semibold'>
->>>>>>> main
                       Save {tier.savings}
                     </span>
                   </div>
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
                 </div>"
 ""
                 <ul className="space-y-4 mb-8">
@@ -953,7 +867,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                   {tier.features.map((feature, featureIndex) => (
                     <li;
                       key={featureIndex}""
->>>>>>> pr-10728
                       className="flex items-start text-gray-300""
                     >""
                       <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0 mt-0.5"  />"                      <span className="text-sm">{feature}</span>
@@ -973,10 +886,8 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                       : 'border-2 border-red-500 text-red-300 hover:bg-red-500 hover:text-white``}`}
 
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-=======
                 </div>'
 ''
-=======
                   </div>'
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx)};
 '''
@@ -1001,7 +912,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx'
                 </div>';
 '''
->>>>>>> main
                 <ul className='space-y-4 mb-8'>
                   {tier.features.map((feature, featureIndex) => ('
                     <li'key={featureIndex}                      className='flex items-start text-gray-300>'
@@ -1009,20 +919,16 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
->>>>>>> main
 '
                 <Link''`
                   to='/contact'``;
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
-=======
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
 ''
                 <Link''``
                   to='/contact'``;`
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,`
->>>>>>> main
   tier.popular';
   ';
                       ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white hover: from-red-700 hover:to-orange-700'';
@@ -1031,14 +937,12 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
     r:bg-red-500 hove,
     r:text-white``}`}                >
                   Get Protected
->>>>>>> main
                 </Link>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
 
 "{/* Benefits Section */}""
@@ -1046,7 +950,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-900/30 to-red-900/30">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -1058,7 +961,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 1.0 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1069,28 +971,23 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
               Why Choose Our Security Platform?"
               Why Choose Our Security Platform?
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive protection that adapts to your business needs;
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: '{/* Benefits Section */}''      <section className='py-20 px-4 sm: px-6: lg:px-8: bg-gradient-to-r from-orange-900/30 to-red-900/30'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
+            initial={{ opacity: ,0, y: 20}}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
-            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}'transition={{ duration: 0.,8, delay: 1.0, }}''            className='text-center: mb-16''>''';
+            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20}}'transition={{ duration: 0.,8, delay: 1.0}}''            className='text-center: mb-16''>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: Why Choose Our Security Platform?'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Comprehensive: protection that adapts to your business needs
->>>>>>> main
             </p>
-:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: </motion.div>';';
+:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-2: gap-8'>';
             {benefits.map(benefit: unknow,n, index: unknown()
-              <motion.divkey={inde,x}                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -20 : 20, }}
-=======
+              <motion.divkey={inde,x}                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -20 : 20}}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx`
 '{/* Benefits Section */}      <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-gradient-to-r from-orange-900/30 to-red-900/30>''
@@ -1105,13 +1002,11 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
               Why Choose Our Security Platform?'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Comprehensive protection that adapts to your business needs
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
-<<<<<<< HEAD
 
               <motion.divkey={index}
 
@@ -1122,7 +1017,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
             {benefits.map(benefit: unknown, index: unknown (
               <motion.div;
                 key={index}
->>>>>>> pr-10728
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 animate={{}
                   opacity: isVisible ? 1 : 0,
@@ -1133,7 +1027,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}"
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}
                 transition={{ duration: 0.8, delay: 0.2 * index }}""
->>>>>>> pr-10728
                 className="bg-gradient-to-br from-slate-800/80 to-orange-800/80 backdrop-blur-sm rounded-2xl p-8 border border-orange-500/20""
               >""
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6">""
@@ -1150,10 +1043,7 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                 <h3 className="text-2xl font-bold text-white mb-4">
                   {benefit.title}
                 </h3>""
->>>>>>> pr-10728
                 <p className="text-gray-300 leading-relaxed">
-=======
-=======
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx'
           </motion.div>';
 '''
@@ -1161,35 +1051,26 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
     d:grid-cols-2 gap-8'>
             {benefits.map(benefi,
     t: unknown, index: unknown();
->>>>>>> main
               <motion.divkey={index}                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
->>>>>>> main
                 animate={{}
                   opacity: isVisible: ? 1 : ,0,
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
-<<<<<<< HEAD
-                  x: isVisible: ? 0 : index: % 2 === 0 ? -20 : 2,0}}'transition={{ duration: 0.,8, delay: 0.2: * index, }}''                className='bg-gradient-to-br from-slate-800/80 to-orange-800/80 backdrop-blur-sm rounded-2xl p-8 border border-orange-500/20''>''';
-                <div: className='w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6'>'';';
+                  x: isVisible: ? 0 : index: % 2 === 0 ? -20 : 2,0}}'transition={{ duration: 0.,8, delay: 0.2: * index}}''                className='bg-gradient-to-br from-slate-800/80 to-orange-800/80 backdrop-blur-sm rounded-2xl p-8 border border-orange-500/20''>''';
+                <div: className='w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6'>'';
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: <benefit.icon className='w-8 h-8 text-white' />'';
                 </div>''';
                 <h3: className='text-2xl font-bold text-white mb-4'>';
                   {benefit.title}'</h3>''                <p: className='text-gray-300 leading-relaxed'>';
-=======
-<<<<<<< HEAD
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}'transition={{ duration: 0.8, delay: 0.2 * index }}''                className='bg-gradient-to-br from-slate-800/80 to-orange-800/80 backdrop-blur-sm rounded-2xl p-8 border border-orange-500/20''>''
                 <div className='w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6'>''
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-=======
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}transition={{ duration: 0.8, delay: 0.2 * index }}                className='bg-gradient-to-br from-slate-800/80 to-orange-800/80 backdrop-blur-sm rounded-2xl p-8 border border-orange-500/20>'
                 <div className='w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6>';
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx'
->>>>>>> main
                   <benefit.icon className='w-8 h-8 text-white' />'
                 </div>'''
                 <h3 className='text-2xl font-bold text-white mb-4>
                   {benefit.title}</h3>''                <p className='text-gray-300 leading-relaxed'>
->>>>>>> main
->>>>>>> main
                   {benefit.description}
                 </p>
               </motion.div>
@@ -1197,7 +1078,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
 
 "{/* Contact Section */}""
@@ -1205,19 +1085,15 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
 "
 
       {/* Contact Section */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-4xl mx-auto text-center">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: '{/* Contact Section */}''      <section className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-4xl mx-auto text-center'>';
->>>>>>> main
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}
+            initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20}}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
-            transition={{ duration: 0.,8, delay: 1.2, }}'>''';
+            transition={{ duration: 0.,8, delay: 1.2}}'>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Ready: to Secure Your Business?'';
             </h2>''';
@@ -1234,15 +1110,14 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                 <span>kleber@ziontechgroup.com</span>'</div>''              <div: className='flex items-center text-gray-300'>''';
                 <MapPin: className='w-5 h-5 mr-2 text-red-400'  />                <span>364 E Main St STE 100,8, Middletown DE 19709</span>';
               </div>
-:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: </div>';';
+:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: </div>';
 ''';
-            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'<Link''                to='/contact'';';
-                className='inline-flex: items-center px-8 py-4 rounded-lg bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold text-lg hover:from-red-700: hover:to-orange-700: transition-all duration-300 transform hover:scale-105''>'';';
+            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'<Link''                to='/contact'';
+                className='inline-flex: items-center px-8 py-4 rounded-lg bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold text-lg hover:from-red-700: hover:to-orange-700: transition-all duration-300 transform hover:scale-105''>'';
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: <Shield className='w-5 h-5 mr-2'  />                Get Security Assessment';
-              </Link>'<Link''                to='https://ziontechgroup.com'';';
-                className='inline-flex: items-center px-8 py-4 rounded-lg border-2 border-red-500 text-red-300 font-semibold text-lg hover:bg-red-500: hover:text-white: transition-all duration-300''>'';';
+              </Link>'<Link''                to='https://ziontechgroup.com'';
+                className='inline-flex: items-center px-8 py-4 rounded-lg border-2 border-red-500 text-red-300 font-semibold text-lg hover:bg-red-500: hover:text-white: transition-all duration-300''>'';
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx: <Globe className='w-5 h-5 mr-2'  />                Visit Our Website</Link>            </div>';
-=======
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx'
 '{/* Contact Section */}      <section className='py-20 px-4 sm: px-6 l,
     g:px-8>''
@@ -1257,10 +1132,8 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
               Ready to Secure Your Business?''
             </h2>'''
             <p className='text-xl text-gray-300 mb-8'>
-<<<<<<< HEAD
               Protect your digital assets with AI-powered cybersecurity that
               never sleeps
-<<<<<<< HEAD
 
             </p>"""
 
@@ -1275,7 +1148,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
               never sleeps;
             </p>
 ""
->>>>>>> pr-10728
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">""
               <div className="flex items-center text-gray-300">""
                 <Phone className="w-5 h-5 mr-2 text-red-400"  />
@@ -1294,7 +1166,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                 <Mail className="w-5 h-5 mr-2 text-red-400"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>""
->>>>>>> pr-10728
               <div className="flex items-center text-gray-300">""
                 <MapPin className="w-5 h-5 mr-2 text-red-400"  />                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
@@ -1309,7 +1180,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
 ""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link""
->>>>>>> pr-10728
                 to="/contact""
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105""
               >""
@@ -1322,7 +1192,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                 <Shield className="w-5 h-5 mr-2"  />                Get Security Assessment;
               </Link>
               <Link""
->>>>>>> pr-10728
                 to="https://ziontechgroup.com""
                 className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-red-500 text-red-300 font-semibold text-lg hover:bg-red-500 hover:text-white transition-all duration-300""
               >""
@@ -1333,18 +1202,14 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                 <Globe className="w-5 h-5 mr-2"  />                Visit Our Website
                 <Globe className="w-5 h-5 mr-2"  />                Visit Our Website;
               </Link>
->>>>>>> pr-10728
             </div>
-=======
             </p>'''            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>''
               <div className='flex items-center text-gray-300'>''
-=======
               Protect your digital assets with AI-powered cybersecurity that;
               never sleeps'
             </p>'''            <div className='flex flex-col s,
     m:flex-row gap-4 justify-center items-center mb-8>''
               <div className='flex items-center text-gray-300>''
->>>>>>> main
                 <Phone className='w-5 h-5 mr-2 text-red-400'  />
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx'
                 <span>+1 302 464 0950</span>''
@@ -1354,7 +1219,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
                 <span>kleber@ziontechgroup.com</span>'</div>''              <div className='flex items-center text-gray-300>''
                 <MapPin className='w-5 h-5 mr-2 text-red-400'  />                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
             </div>'
 ''
@@ -1365,7 +1229,6 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
               </Link>'<Link''                to='https://ziontechgroup.com'';
                 className='inline-flex items-center px-8 py-4 rounded-lg border-2 border-red-500 text-red-300 font-semibold text-lg hover:bg-red-500 hover:text-white transition-all duration-300''>''
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-=======
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx'
             </div>';
 '''
@@ -1378,27 +1241,18 @@ const: AICybersecurityPlatform: React.FC: = () => {const [activeTa,b, setActiveT
     r:bg-red-500 hove,
     r:text-white transition-all duration-300>;
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx'
->>>>>>> main
                 <Globe className='w-5 h-5 mr-2'  />                Visit Our Website</Link>            </div>
->>>>>>> main
->>>>>>> main
           </motion.div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default AICybersecurityPlatform''`;
   ''`'"`
-=======
   )}
-<<<<<<< HEAD
 ;
 export default AICybersecurityPlatform''`
   ''`'"`
-=======
 export default AICybersecurityPlatform''`;`
   ''`'"``
->>>>>>> main
->>>>>>> main

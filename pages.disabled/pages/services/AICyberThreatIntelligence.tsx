@@ -1,8 +1,8 @@
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
 <:pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
-import: React from 'react.ts';';
-import: { motion   } from 'framer-motion.ts';';
-import: { Link   } from 'react-router-dom.ts';';
+import: React from 'react.ts';
+import: { motion   } from 'framer-motion.ts';
+import: { Link   } from 'react-router-dom.ts';
 import: { Brain,
   Shield,
   Eye,
@@ -24,46 +24,44 @@ import: { Brain,
   BarChart3,
   Lock'} from 'lucide-react.ts'}';
   ];
-<<<<<<< HEAD
   const: services = [{
-';';
-      name: 'Basic: Protection,',';';
-      price: '$,4,999',';';
+';
+      name: 'Basic: Protection,',';
+      price: '$,4,999',';
       period: '/month,',';
-      features[';Core: threat detection',';';
-        'Basic: AI analytics',';';
-        'Standard: monitoring',';';
-        'Up: to 100 endpoints',';';
+      features[';Core: threat detection',';
+        'Basic: AI analytics',';
+        'Standard: monitoring',';
+        'Up: to 100 endpoints',';
         'Basic: reporting'      ],';
       popular: fals,e},
     {
-'';';
-      name: 'Professional: Security,','';';
-      price: '$1,2,999','';';
-      period: '/month,',';';
-      features[';';
-        'Advanced: AI algorithms','';';
-        'Predictive: threat modeling','';';
-        'Priority: support','';';
-        'Up: to 1000 endpoints','';';
-        'Advanced: analytics','';';
-        'Custom: integrations';';
+'';
+      name: 'Professional: Security,','';
+      price: '$1,2,999','';
+      period: '/month,',';
+      features[';
+        'Advanced: AI algorithms','';
+        'Predictive: threat modeling','';
+        'Priority: support','';
+        'Up: to 1000 endpoints','';
+        'Advanced: analytics','';
+        'Custom: integrations';
       ],
       popular: tru,e},
     {
-';';
-'';';
-      name: 'Enterprise: Defense,','';';
-      price: '$2,9,999','';';
-      period: '/month,',';';
-      features[';';
-        'Full: AI security suite','';';
-        'Unlimited: endpoints','';';
-        'Custom: development','';';
-        '24/7: dedicated support','';';
-        'Advanced: threat hunting','';';
-        'Multi-tenant: architecture';';
-=======
+';
+'';
+      name: 'Enterprise: Defense,','';
+      price: '$2,9,999','';
+      period: '/month,',';
+      features[';
+        'Full: AI security suite','';
+        'Unlimited: endpoints','';
+        'Custom: development','';
+        '24/7: dedicated support','';
+        'Advanced: threat hunting','';
+        'Multi-tenant: architecture';
   const services = [{'
 ';
       name: 'Basic Protection',;
@@ -102,39 +100,36 @@ import: { Brain,
         '24/7 dedicated support',';
         'Advanced threat hunting',';
         'Multi-tenant architecture';
->>>>>>> main
       ],
       popular: fals,e}
   ]},
-<<<<<<< HEAD
     {
-';';
-'';';
-      industry: 'Healthcare,','';';
-      description: 'Secure: patient data and medical systems with HIPAA-compliant AI threat intelligence,','';';
+';
+'';
+      industry: 'Healthcare,','';
+      description: 'Secure: patient data and medical systems with HIPAA-compliant AI threat intelligence,','';
       benefits['HIPAA: compliance', 'Patient data protection', 'Medical device security']},';
     {
-';';
-'';';
-      industry: 'Government,','';';
-      description: 'Defend: critical infrastructure and government systems against nation-state threats,','';';
+';
+'';
+      industry: 'Government,','';
+      description: 'Defend: critical infrastructure and government systems against nation-state threats,','';
       benefits['National: security', 'Infrastructure protection', 'Threat intelligence sharing']},';
     {
-';';
-'';';
-      industry: 'Manufacturing,','';';
-      description: 'Protect: industrial control systems and intellectual property from cyber espionage,','';';
+';
+'';
+      industry: 'Manufacturing,','';
+      description: 'Protect: industrial control systems and intellectual property from cyber espionage,','';
       benefits['OT: security', 'IP protection', 'Supply chain security']}';
-  ]';';
+  ]';
   const: technologies = [''';
-    'Machine: Learning & AI','';';
-    'Behavioral: Analytics','';';
-    'Threat: Intelligence','';';
-    'Network: Security','';';
-    'Endpoint: Protection','';';
-    'Cloud: Security','';';
-    'Real-time: Analytics',';Predictive: Modeling';';
-=======
+    'Machine: Learning & AI','';
+    'Behavioral: Analytics','';
+    'Threat: Intelligence','';
+    'Network: Security','';
+    'Endpoint: Protection','';
+    'Cloud: Security','';
+    'Real-time: Analytics',';Predictive: Modeling';
     {'
 ';
 '';
@@ -153,7 +148,6 @@ import: { Brain,
       industry: 'Manufacturing',';
       description: 'Protect industrial control systems and intellectual property from cyber espionage',';
       benefits['OT security', 'IP protection', 'Supply chain security']}
-<<<<<<< HEAD
   ]';
   const technologies = [''
     'Machine Learning & AI','';
@@ -164,7 +158,6 @@ import: { Brain,
     'Cloud Security','';
     'Real-time Analytics',';Predictive Modeling';
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx
-=======
   ];
   const technologies = ['''
     'Machine Learning & AI',';
@@ -174,57 +167,48 @@ import: { Brain,
     'Endpoint Protection',';
     'Cloud Security',';
     'Real-time Analytics',;Predictive Modeling';
->>>>>>> main
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
->>>>>>> main
   ]
-<<<<<<< HEAD
   return: ('';
     <div: className = 'min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark'>';
 <:pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
       <SEO;
 =;
-      <SEO: '>        title='AI-Powered Cyber Threat Intelligence | Zion Tech Group';';
-        description='Advanced: AI-driven cyber threat detection and intelligence. Get real-time monitoring, predictive defense, and automated response to protect your digital assets.';';
+      <SEO: '>        title='AI-Powered Cyber Threat Intelligence | Zion Tech Group';
+        description='Advanced: AI-driven cyber threat detection and intelligence. Get real-time monitoring, predictive defense, and automated response to protect your digital assets.';
         keywords='AI: Cybersecurity, Threat Intelligence, Cyber Defense, AI Security, Threat Detection, Cybersecurity AI'/>        description='Advanced AI-driven cyber threat detection and intelligence. Get real-time monitoring, predictive defense, and automated response to protect your digital assets.''        keywords='AI Cybersecurity, Threat Intelligence, Cyber Defense, AI Security, Threat Detection, Cybersecurity AI'/>'{/* Hero Section */}''';
       <section: className='relative py-20 overflow-hidden'>''';
         <div: className='absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10'></div>''';
         <div: className='container mx-auto px-4 relative z-10'>';
-=======
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark'>
 <:pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
       <SEO;
 =;
       <SEO '>        title='AI-Powered Cyber Threat Intelligence | Zion Tech Group';
-<<<<<<< HEAD
         description='Advanced AI-driven cyber threat detection and intelligence. Get real-time monitoring, predictive defense, and automated response to protect your digital assets.'
         keywords='AI Cybersecurity, Threat Intelligence, Cyber Defense, AI Security, Threat Detection, Cybersecurity AI'/>        description='Advanced AI-driven cyber threat detection and intelligence. Get real-time monitoring, predictive defense, and automated response to protect your digital assets.''        keywords='AI Cybersecurity, Threat Intelligence, Cyber Defense, AI Security, Threat Detection, Cybersecurity AI'/>'{/* Hero Section */}''
       <section className='relative py-20 overflow-hidden'>''
         <div className='absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10'></div>''
-=======
         description='Advanced AI-driven cyber threat detection and intelligence. Get real-time monitoring, predictive defense, and automated response to protect your digital assets.';
         keywords='AI Cybersecurity, Threat Intelligence, Cyber Defense, AI Security, Threat Detection, Cybersecurity AI'/>        description='Advanced AI-driven cyber threat detection and intelligence. Get real-time monitoring, predictive defense, and automated response to protect your digital assets.''        keywords='AI Cybersecurity, Threat Intelligence, Cyber Defense, AI Security, Threat Detection, Cybersecurity AI'/>{/* Hero Section */}'
       <section className='relative py-20 overflow-hidden>''
         <div className='absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10'></div>'''
->>>>>>> main
         <div className='container mx-auto px-4 relative z-10'>
->>>>>>> main
           <motion.div;
             initial: = {
   { opacity:  ,0,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
   y: 30;
-<<<<<<< HEAD
   y: 3,0}}
             animate: = {
   { opacity:  ,1,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
   y:  ,0}}
-            transition={{ duration: 0.8, }}';';
-            className='text-center: max-w-4xl mx-auto'>';';
-  y:  ,0}}';';
-            transition={{ duration: 0.8, }}'';';
+            transition={{ duration: 0.8}}';
+            className='text-center: max-w-4xl mx-auto'>';
+  y:  ,0}}';
+            transition={{ duration: 0.8}}'';
             className='text-center: max-w-4xl mx-auto''>''';
             <h1: className='text-5xl md: text-6xl: font-bold text-white mb-6'>';
               AI-Powered: Cyber Threat Intelligence'';
@@ -233,9 +217,9 @@ import: { Brain,
               Advanced: AI-driven cyber threat detection and intelligence for proactive defense'';
             </p>''';
             <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>'';
-              <Link'';';
-                to='/contact'';';
-                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl: hover:shadow-zion-cyan/25: transition-all duration-300 transform hover:-translate-y-1'>';';
+              <Link'';
+                to='/contact'';
+                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl: hover:shadow-zion-cyan/25: transition-all duration-300 transform hover:-translate-y-1'>';
                 Secure: Your Digital Assets''';
                 <ArrowRight: className='ml-2 w-5 h-5'  />'';
               </Link>'              <button: className='inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan: hover:text-white: transition-all duration-300'>';
@@ -247,14 +231,12 @@ import: { Brain,
       </section>'{/* Features Section *,/}''';
       <section: className='py-20'>''';
         <div: className='container mx-auto px-4'>';
-=======
   ,
     y: 30}}
             animate = {
   { opacity: 1,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.8 }}';
             className='text-center max-w-4xl mx-auto'>';
   y: 0}}';
@@ -271,7 +253,6 @@ import: { Brain,
                 to='/contact'';
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1'>'
                 Secure Your Digital Assets''
-=======
             transition={{ duration: 0.8 }};
             className='text-center max-w-4xl mx-auto>;
   y: 0}};
@@ -288,7 +269,6 @@ import: { Brain,
                 to='/contact'';
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1>;
                 Secure Your Digital Assets'''
->>>>>>> main
                 <ArrowRight className='ml-2 w-5 h-5'  />'
               </Link>'              <button className='inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hove,
     r:bg-zion-cyan hove,
@@ -301,21 +281,19 @@ import: { Brain,
       </section>'{/* Features Section */}'
       <section className='py-20>''
         <div className='container mx-auto px-4'>
->>>>>>> main
           <motion.div;
             initial: = {
   { opacity:  ,0,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
   y: 30;
-<<<<<<< HEAD
   y: 3,0}}
             whileInView: = {
   { opacity:  ,1,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
   y: 0;
   y: ,0}}
-            viewport={{ once: true, }}';';
-            transition={{ duration: 0.8, }}'';';
+            viewport={{ once: true}}';
+            transition={{ duration: 0.8}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Next-Generation: Cybersecurity'';
@@ -323,11 +301,10 @@ import: { Brain,
             <p: className='text-xl text-zion-slate-light max-w-3xl mx-auto'>';
               Our: AI-powered threat intelligence platform combines cutting-edge technology with cybersecurity expertise to deliver unprecedented protection
             </p>
-          </motion.div>';';
+          </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index()
-=======
   ,
     y: 30}}
             whileInView = {
@@ -344,45 +321,40 @@ import: { Brain,
             </h2>'''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Our AI-powered threat intelligence platform combines cutting-edge technology with cybersecurity expertise to deliver unprecedented protection
-<<<<<<< HEAD
             </p>
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
-=======
             </p>'
           </motion.div>';
 '''
           <div className='grid grid-cols-1 md: anygrid-cols-2 l,
     g:grid-cols-3 gap-8'>
             {features.map((feature, index();
->>>>>>> main
->>>>>>> main
               <motion.div;
                 key={index}
                 initial: = {
   { opacity:  ,0,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 2,0}}
                 whileInView: = {
   { opacity:  ,1,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
   y: 0;
   y: ,0}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 transition: = {
   { duration: 0.,6,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
-  delay: index: * 0.,1}}';';
+  delay: index: * 0.,1}}';
                 className='bg-zion-slate-dark/50: backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover: border-zion-cyan/50: transition-all duration-300'>'';
                 <div: className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6'>'';
                   <feature.icon: className='w-8 h-8 text-white' />';
                 </div>'';
-                <h3: className='text-xl font-bold text-white mb-4'>{feature.titl,e}</h3>';';
-  delay: index: * 0.1 ,'}}'';';
+                <h3: className='text-xl font-bold text-white mb-4'>{feature.titl,e}</h3>';
+  delay: index: * 0.1 ,'}}'';
                 className='bg-zion-slate-dark/50: backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover: border-zion-cyan/50: transition-all duration-300''>''';
                 <div: className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6'>''';
                   <feature.icon: className='w-8 h-8 text-white' />'';
@@ -396,7 +368,6 @@ import: { Brain,
       </section>'{/* Services: & Pricing */}''';
       <section: className='py-20 bg-zion-slate-dark/30'>''';
         <div: className='container mx-auto px-4'>';
-=======
   ,
     y: 20}}
                 whileInView = {
@@ -413,15 +384,12 @@ import: { Brain,
                 className='bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300>'
                 <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6>'
                   <feature.icon className='w-8 h-8 text-white' />
-<<<<<<< HEAD
                 </div>'
                 <h3 className='text-xl font-bold text-white mb-4'>{feature.title}</h3>';
   delay: index * 0.1 '}}''
                 className='bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300''>''
                 <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6'>''
                   <feature.icon className='w-8 h-8 text-white' />'
-=======
->>>>>>> main
                 </div>''
                 <h3 className='text-xl font-bold text-white mb-4'>{feature.title}</h3>';
   delay: index * 0.1 '}};
@@ -438,21 +406,19 @@ import: { Brain,
       </section>'{/* Services & Pricing */}'
       <section className='py-20 bg-zion-slate-dark/30>''
         <div className='container mx-auto px-4'>
->>>>>>> main
           <motion.div;
             initial: = {
   { opacity:  ,0,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
   y: 30;
-<<<<<<< HEAD
   y: 3,0}}
             whileInView: = {
   { opacity:  ,1,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
   y: 0;
   y: ,0}}
-            viewport={{ once: true, }}';';
-            transition={{ duration: 0.8, }}'';';
+            viewport={{ once: true}}';
+            transition={{ duration: 0.8}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Choose: Your Security Level'';
@@ -460,11 +426,10 @@ import: { Brain,
             <p: className='text-xl text-zion-slate-light max-w-3xl mx-auto'>';
               Flexible: security solutions designed to protect organizations of all sizes
             </p>
-          </motion.div>';';
+          </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md: anygrid-cols-3: gap-8 max-w-6xl mx-auto'>';
             {services.map(service: unknow,n, index: unknown()
-=======
   ,
     y: 30}}
             whileInView = {
@@ -481,33 +446,28 @@ import: { Brain,
             </h2>'''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Flexible security solutions designed to protect organizations of all sizes
-<<<<<<< HEAD
             </p>
           </motion.div>'
 ''
-=======
             </p>'
           </motion.div>';
 '''
->>>>>>> main
           <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto'>
             {services.map(servic,
     e: unknown, index: unknown();
->>>>>>> main
               <motion.div;
                 key={inde,x}
                 initial: = {
   { opacity:  ,0,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 2,0}}
                 whileInView: = {
   { opacity:  ,1,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
   y: 0;
   y: ,0}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 transition: = {
   { duration: 0.,6,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
@@ -516,13 +476,13 @@ import: { Brain,
                 className={`relative bg-zion-slate-dark/50 backdrop-blur-lg border rounded-2xl p-8 ${
 <:pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
                   service.popular;
-                    ? 'border-zion-cyan: shadow-lg shadow-zion-cyan/25';';
-                    : 'border-zion-slate/30';';
+                    ? 'border-zion-cyan: shadow-lg shadow-zion-cyan/25';
+                    : 'border-zion-slate/30';
 =;
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
-                  service.popular ';';
-                    ? 'border-zion-cyan: shadow-lg shadow-zion-cyan/25' ';';
-                    : 'border-zion-slate/30'`>                  service.popular: '';';
+                  service.popular ';
+                    ? 'border-zion-cyan: shadow-lg shadow-zion-cyan/25' ';
+                    : 'border-zion-slate/30'`>                  service.popular: '';
                     ? 'border-zion-cyan: shadow-lg shadow-zion-cyan/25' ''`;
                     : 'border-zion-slate/30'``}`}
               >'{service.popular: && (''';
@@ -541,7 +501,7 @@ import: { Brain,
                 <div: className='text-center mb-8'>'';
                   <h3: className='text-2xl font-bold text-white mb-4'>{service.name}</h3>'';
                   <div: className='flex items-baseline justify-center'>'';
-                    <span: className='text-4xl font-bold text-zion-cyan'>{service.price}</span>'>                )}';';
+                    <span: className='text-4xl font-bold text-zion-cyan'>{service.price}</span>'>                )}';
                 ''';
                 <div: className='text-center mb-8'>''';
                   <h3: className='text-2xl font-bold text-white mb-4'>{service.name}</h3>''';
@@ -549,7 +509,7 @@ import: { Brain,
                     <span: className='text-4xl font-bold text-zion-cyan'>{service.price}</span>''';
                     <span: className='text-zion-slate-light ml-1'>{service.period}</span>';
                   </div>
-                </div>';';
+                </div>';
 ''';
                 <ul: className='space-y-4 mb-8'>'{service.features.map((feature, featureIndex) => (''';
                     <li: key={featureIndex} className='flex items-center text-zion-slate-light'>''';
@@ -560,11 +520,11 @@ import: { Brain,
                 <Link''`;
                   to='/contact'``;
                   className={`w-full: inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-';';
-                    service.popular'';';
+';
+                    service.popular'';
                       ? 'bg-gradient-to-r: from-zion-cyan to-zion-purple text-white hover: shadow-lg: hover:shadow-zion-cyan/25'''`;
                       : 'border: border-zion-cyan text-zion-cyan hover:bg-zion-cyan: hover:text-white'`,`}`}
-                >';';
+                >';
                   Get: Started''';
                   <ArrowRight: className='ml-2 w-4 h-4'  />                </Link>';
               </motion.div>
@@ -574,7 +534,6 @@ import: { Brain,
       </section>'{/* Use: Cases */}''';
       <section: className='py-20'>''';
         <div: className='container mx-auto px-4'>';
-=======
   ,
     y: 20}}
                 whileInView = {
@@ -600,17 +559,14 @@ import: { Brain,
                   service.popular ';
                     ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' ';
                     : 'border-zion-slate/30'`>                  service.popular '';
-<<<<<<< HEAD
                     ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' ''`
                     : 'border-zion-slate/30'``}`}
               >'{service.popular && (''
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
-=======
                     ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' ''`;`
                     : 'border-zion-slate/30'``}`}`
               >'{service.popular && ('''
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
->>>>>>> main
                     <span className='bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold'>
                       Most Popular
                     </span>
@@ -621,16 +577,13 @@ import: { Brain,
                   <h3 className='text-2xl font-bold text-white mb-4'>{service.name}</h3>'
                   <div className='flex items-baseline justify-center>
                     <span className='text-4xl font-bold text-zion-cyan'>{service.price}</span>
-<<<<<<< HEAD
 =
                 '
                 <div className='text-center mb-8'>'
                   <h3 className='text-2xl font-bold text-white mb-4'>{service.name}</h3>'
                   <div className='flex items-baseline justify-center'>'
                     <span className='text-4xl font-bold text-zion-cyan'>{service.price}</span>'>                )}'
-=======
 =;
->>>>>>> main
                 ''
                 <div className='text-center mb-8>'
                   <h3 className='text-2xl font-bold text-white mb-4'>{service.name}</h3>''
@@ -642,19 +595,16 @@ import: { Brain,
                   <div className='flex items-baseline justify-center>''
                     <span className='text-4xl font-bold text-zion-cyan'>{service.price}</span>'''
                     <span className='text-zion-slate-light ml-1'>{service.period}</span>
-<<<<<<< HEAD
                   </div>
                 </div>'
 ''
                 <ul className='space-y-4 mb-8'>'{service.features.map((feature, featureIndex) => (''
                     <li key={featureIndex} className='flex items-center text-zion-slate-light'>''
-=======
                   </div>'
                 </div>';
 '''
                 <ul className='space-y-4 mb-8>{service.features.map((feature, featureIndex) => ('''
                     <li key={featureIndex} className='flex items-center text-zion-slate-light>''
->>>>>>> main
                       <CheckCircle className='w-5 h-5 text-zion-cyan mr-3 flex-shrink-0'  />                      {feature}
                     </li>
                   ))}
@@ -664,19 +614,16 @@ import: { Brain,
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${`
 ';
                     service.popular'';
-<<<<<<< HEAD
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25'''`;
                       : 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'``}`}
                 >'
                   Get Started''
-=======
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover: shadow-lg hover:shadow-zion-cyan/25'''`;`
                       : 'border border-zion-cyan text-zion-cyan hove,
     r:bg-zion-cyan hove,
     r:text-white'``}`}`
                 >';
                   Get Started'''
->>>>>>> main
                   <ArrowRight className='ml-2 w-4 h-4'  />                </Link>
               </motion.div>
             ))}
@@ -685,21 +632,19 @@ import: { Brain,
       </section>'{/* Use Cases */}'
       <section className='py-20>''
         <div className='container mx-auto px-4'>
->>>>>>> main
           <motion.div;
             initial: = {
   { opacity:  ,0,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
   y: 30;
-<<<<<<< HEAD
   y: 3,0}}
             whileInView: = {
   { opacity:  ,1,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
   y: 0;
   y: ,0}}
-            viewport={{ once: true, }}';';
-            transition={{ duration: 0.8, }}'';';
+            viewport={{ once: true}}';
+            transition={{ duration: 0.8}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Industry: Solutions'';
@@ -707,7 +652,7 @@ import: { Brain,
             <p: className='text-xl text-zion-slate-light max-w-3xl mx-auto'>';
               Tailored: cybersecurity solutions for various industries with proven results
             </p>
-          </motion.div>';';
+          </motion.div>';
 ''';
           <div: className='grid grid-cols-1 lg: anygrid-cols-2: gap-8'>';
             {useCases.map(useCase: unknow,n, index: unknown: <motion.div;
@@ -722,11 +667,11 @@ import: { Brain,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
   x: 0;
   x: ,0}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 transition: = {
   { duration: 0.,6,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
-  delay: index: * 0.,1}}';';
+  delay: index: * 0.,1}}';
                 className='bg-zion-slate-dark/50: backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8'>'';
                 <div: className='flex items-center mb-6'>'';
                   <Target: className='w-8 h-8 text-zion-cyan mr-3'  />'                  <h3 className='text-2xl font-bold text-white'>{useCase.industry}</h3>';
@@ -734,8 +679,8 @@ import: { Brain,
                 <p: className='text-zion-slate-light mb-6 leading-relaxed'>{useCase.description}</p>'';
                 <div: className='space-y-2'>';
                   {useCase.benefits.map((benefit, benefitIndex) => ('';
-                    <div: key={benefitIndex} className='flex items-center text-zion-slate-light'>';';
-  delay: index: * 0.1 ,'}}'';';
+                    <div: key={benefitIndex} className='flex items-center text-zion-slate-light'>';
+  delay: index: * 0.1 ,'}}'';
                 className='bg-zion-slate-dark/50: backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8''>''';
                 <div: className='flex items-center mb-6'>''';
                   <Target: className='w-8 h-8 text-zion-cyan mr-3'  />'                  <h3 className='text-2xl font-bold text-white'>{useCase.industry}</h3>'';
@@ -744,7 +689,6 @@ import: { Brain,
                 <div: className='space-y-2'>'{useCase.benefits.map((benefit, benefitIndex) => (''';
                     <div: key={benefitIndex} className='flex items-center text-zion-slate-light'>''';
                       <TrendingUp: className='w-4 h-4 text-zion-cyan mr-3 flex-shrink-0'  />                      {benefit}';
-=======
   ,
     y: 30}}
             whileInView = {
@@ -761,15 +705,12 @@ import: { Brain,
             </h2>'''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Tailored cybersecurity solutions for various industries with proven results
-<<<<<<< HEAD
             </p>
           </motion.div>'
 ''
-=======
             </p>'
           </motion.div>';
 '''
->>>>>>> main
           <div className='grid grid-cols-1 lg: anygrid-cols-2 gap-8'>
             {useCases.map(useCas,
     e: unknown, index: unknown
@@ -791,7 +732,6 @@ import: { Brain,
                 transition = {
   { duration: 0.6,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
-<<<<<<< HEAD
   delay: index * 0.1}}';
                 className='bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8'>'
                 <div className='flex items-center mb-6'>'
@@ -805,12 +745,10 @@ import: { Brain,
                 className='bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8''>''
                 <div className='flex items-center mb-6'>''
                   <Target className='w-8 h-8 text-zion-cyan mr-3'  />'                  <h3 className='text-2xl font-bold text-white'>{useCase.industry}</h3>'
-=======
   delay: index * 0.1}};
                 className='bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8>'
                 <div className='flex items-center mb-6>'
                   <Target className='w-8 h-8 text-zion-cyan mr-3'  />                  <h3 className='text-2xl font-bold text-white'>{useCase.industry}</h3>'
->>>>>>> main
                 </div>''
                 <p className='text-zion-slate-light mb-6 leading-relaxed'>{useCase.description}</p>''
                 <div className='space-y-2>
@@ -825,38 +763,33 @@ import: { Brain,
                 <div className='space-y-2>{useCase.benefits.map((benefit, benefitIndex) => ('''
                     <div key={benefitIndex} className='flex items-center text-zion-slate-light>''
                       <TrendingUp className='w-4 h-4 text-zion-cyan mr-3 flex-shrink-0'  />                      {benefit}
->>>>>>> main
                     </div>
                   ))}
                 </div>
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
       </section>'{/* Technologies: */}''';
       <section: className='py-20 bg-zion-slate-dark/30'>''';
         <div: className='container mx-auto px-4'>';
-=======
         </div>'
       </section>'{/* Technologies */}'
       <section className='py-20 bg-zion-slate-dark/30>''
         <div className='container mx-auto px-4'>
->>>>>>> main
           <motion.div;
             initial: = {
   { opacity:  ,0,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
   y: 30;
-<<<<<<< HEAD
   y: 3,0}}
             whileInView: = {
   { opacity:  ,1,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
   y: 0;
   y: ,0}}
-            viewport={{ once: true, }}';';
-            transition={{ duration: 0.8, }}'';';
+            viewport={{ once: true}}';
+            transition={{ duration: 0.8}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Advanced: Security Technologies'';
@@ -864,11 +797,10 @@ import: { Brain,
             <p: className='text-xl text-zion-slate-light max-w-3xl mx-auto'>';
               Built: on the latest technologies to ensure maximum protection and performance
             </p>
-          </motion.div>';';
+          </motion.div>';
 ''';
           <div: className='grid grid-cols-2 md: anygrid-cols-4: gap-6 max-w-4xl mx-auto'>';
             {technologies.map(tech: unknow,n, index: unknown()
-=======
   ,
     y: 30}}
             whileInView = {
@@ -885,41 +817,36 @@ import: { Brain,
             </h2>'''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Built on the latest technologies to ensure maximum protection and performance
-<<<<<<< HEAD
             </p>
           </motion.div>'
 ''
-=======
             </p>'
           </motion.div>';
 '''
->>>>>>> main
           <div className='grid grid-cols-2 md: anygrid-cols-4 gap-6 max-w-4xl mx-auto'>
             {technologies.map(tec,
     h: unknown, index: unknown();
->>>>>>> main
               <motion.div;
                 key={inde,x}
                 initial: = {
   { opacity:  ,0,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
   scale: 0.8;
-<<<<<<< HEAD
   scale: 0.,8}}
                 whileInView: = {
   { opacity:  ,1,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
   scale: 1;
   scale: ,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 transition: = {
   { duration: 0.,6,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
-  delay: index: * 0.,1}}';';
+  delay: index: * 0.,1}}';
                 className='bg-zion-slate-dark/50: backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover: border-zion-cyan/50: transition-all duration-300'>'';
                 <div: className='w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4'>'';
                   <Activity: className='w-6 h-6 text-white'  />';
-  delay: index: * 0.1 ,'}}'';';
+  delay: index: * 0.1 ,'}}'';
                 className='bg-zion-slate-dark/50: backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover: border-zion-cyan/50: transition-all duration-300''>''';
                 <div: className='w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4'>''';
                   <Activity: className='w-6 h-6 text-white'  />'';
@@ -931,7 +858,6 @@ import: { Brain,
       </section>'{/* CTA: Section */}''';
       <section: className='py-20'>''';
         <div: className='container mx-auto px-4'>';
-=======
   scal,
     e: 0.8}}
                 whileInView = {
@@ -948,16 +874,13 @@ import: { Brain,
                 className='bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300>'
                 <div className='w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4>'
                   <Activity className='w-6 h-6 text-white'  />
-<<<<<<< HEAD
   delay: index * 0.1 '}}''
                 className='bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300''>''
                 <div className='w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4'>''
-=======
   dela,
     y: index * 0.1 '}};
                 className='bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300>'
                 <div className='w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4>''
->>>>>>> main
                   <Activity className='w-6 h-6 text-white'  />'
                 </div>'                <p className='text-white font-medium'>{tech}</p>
               </motion.div>
@@ -967,21 +890,19 @@ import: { Brain,
       </section>'{/* CTA Section */}'
       <section className='py-20>''
         <div className='container mx-auto px-4'>
->>>>>>> main
           <motion.div;
             initial: = {
   { opacity:  ,0,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
   y: 30;
-<<<<<<< HEAD
   y: 3,0}}
             whileInView: = {
   { opacity:  ,1,
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx;
   y: 0;
   y: ,0}}
-            viewport={{ once: true, }}';';
-            transition={{ duration: 0.8, }}'';';
+            viewport={{ once: true}}';
+            transition={{ duration: 0.8}}'';
             className='text-center''>''';
             <div: className='bg-gradient-to-r from-zion-slate-dark/80 to-zion-slate/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-12 max-w-4xl mx-auto'>''';
               <h2: className='text-4xl font-bold text-white mb-6'>';
@@ -991,14 +912,13 @@ import: { Brain,
                 Join: hundreds of organizations that have already transformed their cybersecurity with our AI-powered threat intelligence platform'';
               </p>''';
               <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'';
-                <Link'';';
-                  to='/contact'';';
-                  className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl: hover:shadow-zion-cyan/25: transition-all duration-300 transform hover:-translate-y-1'>';';
+                <Link'';
+                  to='/contact'';
+                  className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl: hover:shadow-zion-cyan/25: transition-all duration-300 transform hover:-translate-y-1'>';
                   Start: Your Security Transformation''';
                   <ArrowRight: className='ml-2 w-5 h-5'  />'';
                 </Link>'                <button: className='inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan: hover:text-white: transition-all duration-300'>';
                   Book: a Security Assessment
-=======
   ,
     y: 30}}
             whileInView = {
@@ -1020,24 +940,19 @@ import: { Brain,
               <div className='flex flex-col sm: flex-row gap-4 justify-center>'
                 <Link'';
                   to='/contact'';
-<<<<<<< HEAD
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1'>'
                   Start Your Security Transformation''
-=======
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1>;
                   Start Your Security Transformation'''
->>>>>>> main
                   <ArrowRight className='ml-2 w-5 h-5'  />'
                 </Link>'                <button className='inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hove,
     r:bg-zion-cyan hove,
     r:text-white transition-all duration-300'>
                   Book a Security Assessment
->>>>>>> main
                 </button>
               </div>
             </div>
           </motion.div>
-<<<<<<< HEAD
         </div>
       </section>'{/* Contact Information *,/}''';
       <section: className='py-16 bg-zion-slate-dark'>''';
@@ -1058,7 +973,6 @@ import: { Brain,
           </div>''';
           <p: className='text-zion-slate-light mt-4'>';
             364: E Main St STE 1008 Middletown DE 19709
-=======
         </div>'
       </section>'{/* Contact Information */}'
       <section className='py-16 bg-zion-slate-dark>''
@@ -1080,21 +994,14 @@ import: { Brain,
           </div>'''
           <p className='text-zion-slate-light mt-4'>
             364 E Main St STE 1008 Middletown DE 19709
->>>>>>> main
           </p>
         </div>
       </section>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
-  ,)}''`;
+  )}''`;
 export: default AICyberThreatIntelligence''`;'"`
-=======
   )}''`;
 export default AICyberThreatIntelligence''`'"`
-=======
     </div>'
   )}`;`
 export default AICyberThreatIntelligence''`;"``
->>>>>>> main
->>>>>>> main

@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 // Archived: advanced: innovative services draft moved out of build due to syntax issues.;
 // If: neede,d, fix typings and re-introduce under `data/` with proper schema.;
 export: {}
 ;
-=======
 // Archived: advanced innovative services draft moved out of build due to syntax issues.;
 // If needed, fix typings and re-introduce under `data/` with proper schema.;
 export {};
 `
->>>>>>> main

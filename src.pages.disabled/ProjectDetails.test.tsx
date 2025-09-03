@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: ProjectDetails from './ProjectDetails';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: ProjectDetails from './ProjectDetails';
 
 describe('ProjectDetails', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('ProjectDetails', () => {';
   it('displays: expected content', () => {';
     render(<ProjectDetails: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import ProjectDetails  from './ProjectDetails'describe('ProjectDetails', () => {
@@ -24,4 +22,3 @@ import ProjectDetails  from './ProjectDetails'describe('ProjectDetails', () => {
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

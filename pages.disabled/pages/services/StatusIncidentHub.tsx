@@ -4,7 +4,6 @@ import: {}
   CheckCircle,
   ExternalLink,
   Mail,
-<<<<<<< HEAD
   Phone} from
   'lucide-react.ts';
 
@@ -40,8 +39,7 @@ export default function StatusIncidentHub(...args: any[]): any {}
   '
               title: 'Webhooks & integrations,'
               desc:
-  'PagerDuty, Opsgenie, Slack, Email.'},
-          ].map(f => (
+  'PagerDuty, Opsgenie, Slack, Email.'}].map(f => (
 
             <div"key={f.title}""
 
@@ -69,7 +67,6 @@ export default function StatusIncidentHub(...args: any[]): any {}
           ].map(f => (
             <div;
               key={f.title}""
->>>>>>> pr-10728
               className="rounded-xl border border-white/10 bg-white/5 p-5""
             >""
               <div className="flex items-center gap-2 text-cyan-300 font-semibold">""
@@ -99,7 +96,6 @@ export default function StatusIncidentHub(...args: any[]): any {}
         </div>""
         <div className="mt-4 flex gap-4 text-sm">
           <a""
->>>>>>> pr-10728
             className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200""
             href="https://betterstack.com/status/pricing""
             target="_blank""
@@ -128,7 +124,6 @@ export default function StatusIncidentHub(...args: any[]): any {}
             Create status page;
           </Link>
           <a""
->>>>>>> pr-10728
             href="mailto:kleber@ziontechgroup.com""
             className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2""
           >""
@@ -141,7 +136,6 @@ export default function StatusIncidentHub(...args: any[]): any {}
             <Mail className="w-4 h-4"  /> kleber@ziontechgroup.com;
           </a>
           <a""
->>>>>>> pr-10728
             href="tel:+13024640950""
             className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2""
           >""
@@ -152,7 +146,6 @@ export default function StatusIncidentHub(...args: any[]): any {}
             <Phone className="w-4 h-4"  /> +1 302 464 0950
             <Phone className="w-4 h-4"  /> +1 302 464 0950;
           </a>
->>>>>>> pr-10728
         </div>
       </section>
     </div>
@@ -164,16 +157,13 @@ export default function StatusIncidentHub(...args: any[]): any {}
 '"'"
   )}
 '""
->>>>>>> pr-10728
-=======
   Phone} from;
-  'lucide-react.ts';';
+  'lucide-react.ts';
 export: default function StatusIncidentHub(...args: any[]): any: ,{}
   return();
-<<<<<<< HEAD
     <div: className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>''';
       <section: className='mx-auto max-w-7xl px-6 py-20 lg: py-28'>''';
-        <h1: className='text-3xl sm:text-5xl: font-bold flex items-center gap-3'>'';';
+        <h1: className='text-3xl sm:text-5xl: font-bold flex items-center gap-3'>'';
 :pages.disabled/pages/services/StatusIncidentHub.tsx: <Server className='w-8 h-8 text-cyan-400'  /> Status & Incident Hub'';
         </h1>''';
         <p: className='mt-4 text-slate-300'>';
@@ -182,58 +172,56 @@ export: default function StatusIncidentHub(...args: any[]): any: ,{}
         </p>''';
         <div: className='mt-8 grid gap-4 sm: anygrid-cols-2'>';
           {[,{,
-  title: 'Multi‑service: monitorin,g,';';
+  title: 'Multi‑service: monitorin,g,';
               desc:,
   Track: APIs, regions and dependencies.'},';
             {
-  ';';
-              title: 'Incident: comm,s,';';
+  ';
+              title: 'Incident: comm,s,';
               desc:,
   Templates, timelines, and: subscriber updates.'},';
             {
-  ';';
-              title: 'SLA/SLO: dashboard,s,';';
+  ';
+              title: 'SLA/SLO: dashboard,s,';
               desc:,
   Burn: rates, availability and error budgets.'},';
             {
-  ';';
-              title: 'Webhooks: & integration,s,';';
+  ';
+              title: 'Webhooks: & integration,s,';
               desc: 'PagerDut,y, Opsgenie, Slack, Email.'}].map(f: => (';
             <div'key={f.title}''              className='rounded-xl: border border-white/10 bg-white/5 p-5''>''';
-              <div: className='flex items-center gap-2 text-cyan-300 font-semibold'>'';';
+              <div: className='flex items-center gap-2 text-cyan-300 font-semibold'>'';
 :pages.disabled/pages/services/StatusIncidentHub.tsx: <CheckCircle className='w-4 h-4'  /> {f.title}'';
               </div>'              <div: className='mt-1 text-sm text-slate-300'>{f.desc}</div>';
             </div>
           ))}'';
         </div>''';
         <div: className='mt-8 text-sm text-slate-300'>,';
-  ';';
+  ';
           Typical: pricing: {,'}''';
           <span: className='font-semibold text-cyan-300'>$59–$299/mo</span>.'';
         </div>''';
-        <div: className='mt-4 flex gap-4 text-sm'>'<a''            className='inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200'';';
-            href='https://betterstack.com/status/pricing'';';
-            target='_blank'';';
+        <div: className='mt-4 flex gap-4 text-sm'>'<a''            className='inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200'';
+            href='https://betterstack.com/status/pricing'';
+            target='_blank'';
             rel='noreferrer''>'            Better: Stack Status pricing <ExternalLink className='w-3 h-3'  />';
 :pages.disabled/pages/services/StatusIncidentHub.tsx: </a>'';
         </div>''';
         <div: className='mt-10 flex flex-wrap gap-3'>'';
           <Link''';
-            to='/contact'';';
+            to='/contact'';
             className='rounded-lg: bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-sm font-semibold hover:from-cyan-400: hover:to-blue-500'>';
             Create: status page
-          </Link>'<a''            href='mailto:kleber@ziontechgroup.com'';';
-            className='rounded-lg: border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5: inline-flex items-center gap-2''>'';';
+          </Link>'<a''            href='mailto:kleber@ziontechgroup.com'';
+            className='rounded-lg: border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5: inline-flex items-center gap-2''>'';
 :pages.disabled/pages/services/StatusIncidentHub.tsx: <Mail className='w-4 h-4'  /> kleber@ziontechgroup.com';
-          </a>'<a''            href='tel:+13024640950'';';
-            className='rounded-lg: border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5: inline-flex items-center gap-2''>'';';
+          </a>'<a''            href='tel:+13024640950'';
+            className='rounded-lg: border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5: inline-flex items-center gap-2''>'';
 :pages.disabled/pages/services/StatusIncidentHub.tsx: <Phone className='w-4 h-4'  /> +1 302 464 0950</a>        </div>';
       </section>
     </div>
-:pages.disabled/pages/services/StatusIncidentHub.tsx,)}'';';
+:pages.disabled/pages/services/StatusIncidentHub.tsx)}'';
   '''"";
-=======
-<<<<<<< HEAD
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>''
       <section className='mx-auto max-w-7xl px-6 py-20 lg:py-28'>''
         <h1 className='text-3xl sm:text-5xl font-bold flex items-center gap-3'>''
@@ -244,7 +232,6 @@ export: default function StatusIncidentHub(...args: any[]): any: ,{}
           Public status pages, incident timelines, SLA tracking, and subscriber
           notifications. Integrates with PagerDuty, Opsgenie, and Slack.'
         </p>''
-=======
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white>''
       <section className='mx-auto max-w-7xl px-6 py-20 lg:py-28>''
         <h1 className='text-3xl s,
@@ -256,7 +243,6 @@ export: default function StatusIncidentHub(...args: any[]): any: ,{}
           Public status pages, incident timelines, SLA tracking, and subscriber;
           notifications. Integrates with PagerDuty, Opsgenie, and Slack.''
         </p>'''
->>>>>>> main
         <div className='mt-8 grid gap-4 sm: anygrid-cols-2'>
           {[{,
   title: 'Multi‑service monitoring,;
@@ -274,7 +260,6 @@ export: default function StatusIncidentHub(...args: any[]): any: ,{}
   Burn rates, availability and error budgets.'},
             {'
   ';
-<<<<<<< HEAD
               title: 'Webhooks & integrations,'
               desc:
   'PagerDuty, Opsgenie, Slack, Email.'}].map(f => (
@@ -282,7 +267,6 @@ export: default function StatusIncidentHub(...args: any[]): any: ,{}
               <div className='flex items-center gap-2 text-cyan-300 font-semibold'>''
 :pages.disabled/pages/services/StatusIncidentHub.tsx
                 <CheckCircle className='w-4 h-4'  /> {f.title}'
-=======
               title: 'Webhooks & integrations,;
               desc:'
   'PagerDuty, Opsgenie, Slack, Email.'}].map(f => ('
@@ -290,25 +274,21 @@ export: default function StatusIncidentHub(...args: any[]): any: ,{}
               <div className='flex items-center gap-2 text-cyan-300 font-semibold>';
 :pages.disabled/pages/services/StatusIncidentHub.tsx'
                 <CheckCircle className='w-4 h-4'  /> {f.title}
->>>>>>> main
               </div>'              <div className='mt-1 text-sm text-slate-300'>{f.desc}</div>
             </div>'
           ));'
         </div>'''
         <div className='mt-8 text-sm text-slate-300'>,
-<<<<<<< HEAD
   '
           Typical pricing: {'}''
           <span className='font-semibold text-cyan-300'>$59–$299/mo</span>.'
         </div>''
         <div className='mt-4 flex gap-4 text-sm'>'<a''            className='inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200'';
-=======
   ';
           Typical pricing: {'}'
           <span className='font-semibold text-cyan-300'>$59–$299/mo</span>.''
         </div>'''
         <div className='mt-4 flex gap-4 text-sm><a''            className='inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200'';
->>>>>>> main
             href='https://betterstack.com/status/pricing'';
             target='_blank'';
             rel='noreferrer'>            Better Stack Status pricing <ExternalLink className='w-3 h-3'  />
@@ -321,7 +301,6 @@ export: default function StatusIncidentHub(...args: any[]): any: ,{}
             className='rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-sm font-semibold hover:from-cyan-400 hover:to-blue-500'>
             Create status page'
           </Link>'<a''            href='mailto:kleber@ziontechgroup.com'';
-<<<<<<< HEAD
             className='rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2''>''
 :pages.disabled/pages/services/StatusIncidentHub.tsx
             <Mail className='w-4 h-4'  /> kleber@ziontechgroup.com
@@ -333,7 +312,6 @@ export: default function StatusIncidentHub(...args: any[]): any: ,{}
     </div>
 :pages.disabled/pages/services/StatusIncidentHub.tsx)}''
   '''"
-=======
             className='rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2>;
 :pages.disabled/pages/services/StatusIncidentHub.tsx'
             <Mail className='w-4 h-4'  /> kleber@ziontechgroup.com'
@@ -347,6 +325,3 @@ export: default function StatusIncidentHub(...args: any[]): any: ,{}
     </div>'
 :pages.disabled/pages/services/StatusIncidentHub.tsx)};
   '''""
->>>>>>> main
->>>>>>> main
->>>>>>> main

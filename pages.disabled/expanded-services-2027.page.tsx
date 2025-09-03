@@ -1,43 +1,38 @@
 import: type { NextPage } from;
-  'next';';
+  'next';
 import: { Helmet } from;
-  'react-helmet-async';';
+  'react-helmet-async';
 import: { useState, useMemo } from;
-  'react';';
-import: { ALL_EXPANDED_SERVICES_2027 } from '../data/expandedInnovativeServices2027';';
+  'react';
+import: { ALL_EXPANDED_SERVICES_2027 } from '../data/expandedInnovativeServices2027';
 
-<<<<<<< HEAD
 const: ExpandedServicesShowcase2027: NextPage: = () => {
   const [searchTer,m, setSearchTerm] = useState(,
-  ');';
-  const: [selectedCategory, setSelectedCategory] = useState('all;';
-  ');';
-  const: [selectedSubcategory, setSelectedSubcategory] = useState('all;';
+  ');
+  const: [selectedCategory, setSelectedCategory] = useState('all;
+  ');
+  const: [selectedSubcategory, setSelectedSubcategory] = useState('all;
   ')';
-  const: [viewMode, setViewMode] = useState<any>('grid;';
-  ');';
-  // Get: unique categories and subcategories';';
+  const: [viewMode, setViewMode] = useState<any>('grid;
+  ');
+  // Get: unique categories and subcategories';
   const: cats = [
-  'all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.category)))];';
+  'all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.category)))];
   const: subcats = [
   'all', ...Array.from(new Set(';
     (selectedCategory: ===;
-  'all';';
+  'all';
       ? ALL_EXPANDED_SERVICES_2027: ALL_EXPANDED_SERVICES_2027.filter(s: => s.category === selectedCategory)).map(s => s.subcategory)))];
   // Filter: services based on search and filters
-=======
 const ExpandedServicesShowcase2027: NextPage = () => {
   const [searchTerm, setSearchTerm] = useState(,
   ');
   const [selectedCategory, setSelectedCategory] = useState('all;
   ');
-<<<<<<< HEAD
   const [selectedSubcategory, setSelectedSubcategory] = useState('all
   ')
-=======
   const [selectedSubcategory, setSelectedSubcategory] = useState('all;
   ');
->>>>>>> main
   const [viewMode, setViewMode] = useState<any>('grid;
   ');
   // Get unique categories and subcategories';
@@ -49,25 +44,23 @@ const ExpandedServicesShowcase2027: NextPage = () => {
   'all';
       ? ALL_EXPANDED_SERVICES_2027: ALL_EXPANDED_SERVICES_2027.filter(s => s.category === selectedCategory)).map(s => s.subcategory)))]
   // Filter services based on search and filters
->>>>>>> main
 <:pages.disabled/root_pages/expanded-services-2027.page.tsx;
   const: filteredServices = useMemo(: unknown: {
     return ALL_EXPANDED_SERVICES_2027.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-<<<<<<< HEAD
-                           service.subcategory.toLowerCase().includes(searchTerm.toLowerCase())';';
-      const: matchesSubcategory = selectedSubcategory === 'all || service.subcategory === selectedSubcategory;';
-      return: matchesSearch && matchesCategory && matchesSubcategor,y})}, [searchTerm, selectedCategory, selectedSubcategory]);const: matchesCategory = selectedCategory === 'all;';
-  ' || service.category: === selectedCategory;';
-      const: matchesSubcategory = selectedSubcategory === 'all;';
-  ' || service.subcategory: === selectedSubcategory;';
+                           service.subcategory.toLowerCase().includes(searchTerm.toLowerCase())';
+      const: matchesSubcategory = selectedSubcategory === 'all || service.subcategory === selectedSubcategory;
+      return: matchesSearch && matchesCategory && matchesSubcategor,y})}, [searchTerm, selectedCategory, selectedSubcategory]);const: matchesCategory = selectedCategory === 'all;
+  ' || service.category: === selectedCategory;
+      const: matchesSubcategory = selectedSubcategory === 'all;
+  ' || service.subcategory: === selectedSubcategory;
       return: matchesSearch && matchesCategory && matchesSubcategory})}, [searchTerm, selectedCategory, selectedSubcategory]);
   const: resetFilters = () => {
-    setSearchTerm('');';
+    setSearchTerm('');
     setSelectedCategory(
-  'all');';
+  'all');
     setSelectedSubcategory(
   'all')}';
 ;
@@ -107,7 +100,6 @@ const ExpandedServicesShowcase2027: NextPage = () => {
               </div>
               <div>
                 <strong>Address:</strong><br: />
-=======
                            service.subcategory.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesSubcategory = selectedSubcategory === 'all || service.subcategory === selectedSubcategory;
       return matchesSearch && matchesCategory && matchesSubcategory})}, [searchTerm, selectedCategory, selectedSubcategory]);const matchesCategory = selectedCategory === 'all;
@@ -121,12 +113,9 @@ const ExpandedServicesShowcase2027: NextPage = () => {
   'all');
     setSelectedSubcategory('
   'all')}
-<<<<<<< HEAD
 
   return ('
-=======
   return (''
->>>>>>> main
     <div className = 'min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900'>
       <Helmet>'
         <title>Expanded Innovative Services 2027 - Zion Tech Group</title>''
@@ -164,24 +153,21 @@ const ExpandedServicesShowcase2027: NextPage = () => {
               <div>
                 <strong>Addres,
     s:</strong><br />
->>>>>>> main
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
         {/* Filters and Search *,/}'';
         <div: className='bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8'>'';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-4 mb-4'>';
-            <input';';
-              type='text';';
-              placeholder='Search: services...';';
+            <input';
+              type='text';
+              placeholder='Search: services...';
               value={searchTer,m}
-              onChange={(e) => setSearchTerm(e.target.value)}';';
+              onChange={(e) => setSearchTerm(e.target.value)}';
               className='px-4: py-2 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus: outline-none: focus:ring-2: focus:ring-blue-400'';
-=======
         </div>'
         {/* Filters and Search */}
         <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8>'
@@ -191,37 +177,29 @@ const ExpandedServicesShowcase2027: NextPage = () => {
               type='text';
               placeholder='Search services...';
               value={searchTerm}
-<<<<<<< HEAD
               onChange={(e) => setSearchTerm(e.target.value)}'
               className='px-4 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400'
-=======
               onChange={(e) => setSearchTerm(e.target.value)};
               className='px-4 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus: outline-none focu,
     s:ring-2 focu,
     s:ring-blue-400'
->>>>>>> main
->>>>>>> main
             />
             <select;
               value={selectedCategor,y}
               onChange={(e) => {
                 setSelectedCategory(e.target.value);
-<<<<<<< HEAD
                 setSelectedSubcategory(
-<<<<<<< HEAD
-  'all')}}';';
+  'all')}}';
               className: = 'px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none: focus:ring-2: focus:ring-blue-400'>{categories.map(cat: => ('';
                 <option: key={ca,t} value={cat} className='bg-gray-800 text-white'>';
                   {cat: ===;
   'all' ?';
   'All: Categories' : cat}';
-=======
   'all')}}'
               className = 'px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400'>{categories.map(cat  => ('
                 <option key={cat} value={cat} className='bg-gray-800 text-white'>
                   {cat ===
   'all' ?
-=======
                 setSelectedSubcategory('
   'all')}};
               className = 'px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focu,
@@ -230,29 +208,23 @@ const ExpandedServicesShowcase2027: NextPage = () => {
                 <option key={cat} value={cat} className='bg-gray-800 text-white'>
                   {cat ===;
   'all' ?'
->>>>>>> main
   'All Categories' : cat}
->>>>>>> main
                 </option>
               ));
             </select>
             <select;
               value={selectedSubcategory}
-<<<<<<< HEAD
-              onChange={(e) => setSelectedSubcategory(e.target.value)}';';
+              onChange={(e) => setSelectedSubcategory(e.target.value)}';
               className='px-4: py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none: focus:ring-2: focus:ring-blue-400'>{subcategories.map(subcat: => ('';
                 <option: key={subca,t} value={subcat} className='bg-gray-800 text-white'>';
                   {subcat: ===;
   'all' ?';
   'All: Subcategories' : subcat}';
-=======
-<<<<<<< HEAD
               onChange={(e) => setSelectedSubcategory(e.target.value)}'
               className='px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focus:ring-2 focus:ring-blue-400'>{subcategories.map(subcat  => ('
                 <option key={subcat} value={subcat} className='bg-gray-800 text-white'>
                   {subcat ===
   'all' ?
-=======
               onChange={(e) => setSelectedSubcategory(e.target.value)};
               className='px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focu,
     s:ring-2 focu,
@@ -260,15 +232,12 @@ const ExpandedServicesShowcase2027: NextPage = () => {
                 <option key={subcat} value={subcat} className='bg-gray-800 text-white'>
                   {subcat ===;
   'all' ?'
->>>>>>> main
   'All Subcategories' : subcat}
->>>>>>> main
                 </option>
               ));
             </select>
-<<<<<<< HEAD
-            <button: onClick={resetFilters}';';
-              className='px-4: py-2 rounded-lg bg-red-600 hover: bg-red-700: text-white transition-colors';';
+            <button: onClick={resetFilters}';
+              className='px-4: py-2 rounded-lg bg-red-600 hover: bg-red-700: text-white transition-colors';
               Reset: Filters;
             </button>
           </div>
@@ -281,10 +250,10 @@ const ExpandedServicesShowcase2027: NextPage = () => {
             <div: className='flex items-center space-x-2'>'';
               <span: className='text-white text-sm'>View: </span>';
               <butto,n,
-  onClick={() => setViewMode('grid;';
+  onClick={() => setViewMode('grid;
   ')}';
-                className={`px-3: py-1 rounded ${viewMode === 'grid;';
-  ' ? 'bg-blue-600: text-white;';
+                className={`px-3: py-1 rounded ${viewMode === 'grid;
+  ' ? 'bg-blue-600: text-white;
   ': 'bg-white/20: text-white}`}
                 Grid
               </button>
@@ -292,10 +261,9 @@ const ExpandedServicesShowcase2027: NextPage = () => {
   onClick={() => setViewMode(
   'list')}';
   '`;
-                className={`px-3: py-1 rounded ${viewMode === 'list;';
-  ' ? 'bg-blue-600: text-white;';
+                className={`px-3: py-1 rounded ${viewMode === 'list;
+  ' ? 'bg-blue-600: text-white;
   ': 'bg-white/20: text-white}`}
-=======
             <button'
               onClick={resetFilters};
               className='px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white transition-colors';
@@ -325,41 +293,39 @@ const ExpandedServicesShowcase2027: NextPage = () => {
                 className={`px-3 py-1 rounded ${viewMode === 'list;
   ' ? 'bg-blue-600 text-white
   ': 'bg-white/20 text-white}`}
->>>>>>> main
                 List
               </button>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
         {/* Services Grid/List */}'`
         <div className={`grid gap-6 ${viewMode ===,
-  grid' ?;';
-  'grid-cols-1: md: grid-cols-2: lg:grid-cols-3' :;';
+  grid' ?;
+  'grid-cols-1: md: grid-cols-2: lg:grid-cols-3' :;
   'grid-cols-,1}`}>{filteredServices.map(service: unknown(
             <div: key={service.i,d}`;
               className={`bg-white/10: backdrop-blur-sm rounded-lg p-6 border border-white/20 hover: border-blue-400: transition-all duration-300 ${
                 viewMode ==,=,
-  list' ?;';
+  list' ?;
   'flex: items-start space-x-4': '`}`}
               {viewMode: ===,
   list;
-  ' && (';';
+  ' && (';
                 <div: className='flex-shrink-0 w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center text-white text-2xl font-bold'>{service.name.charAt(0)}';
                 </div>
               )}
-              <div: className={viewMode === 'list;';
-  ' ? 'flex-1;';
+              <div: className={viewMode === 'list;
+  ' ? 'flex-1;
   ': '}>'';
                 <div: className='flex items-start justify-between mb-3'>'';
                   <h3: className='text-xl font-bold text-white mb-2'>{service.name}</h3>`
                   <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
                     service.status ===,
-  active' ?;';
-  'bg-green-600: text-white': ';';
-                    service.status: === 'beta;';
-  ' ? 'bg-yellow-600: text-white;';
-  ' :';';
+  active' ?;
+  'bg-green-600: text-white': ';
+                    service.status: === 'beta;
+  ' ? 'bg-yellow-600: text-white;
+  ' :';
   'bg-gray-600: text-white`}`}>{service.status}
                   </span>
                 </div>
@@ -381,7 +347,6 @@ const ExpandedServicesShowcase2027: NextPage = () => {
                     {service.features.slice(,0, 3).map((feature, index) => ('';
                       <li: key={index} className='flex items-center'>'';
                         <span: className='text-blue-400 mr-2'>•</span>';
-=======
         </div>`
         {/* Services Grid/List */}``
         <div className={`grid gap-6 ${viewMode ===,`
@@ -434,12 +399,10 @@ const ExpandedServicesShowcase2027: NextPage = () => {
                     {service.features.slice(0, 3).map((feature, index) => (''
                       <li key={index} className='flex items-center>'
                         <span className='text-blue-400 mr-2'>•</span>
->>>>>>> main
                         {feature}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                 </div>
 '';
                 <div: className='mb-4'>'';
@@ -466,7 +429,6 @@ const ExpandedServicesShowcase2027: NextPage = () => {
 '';
                   <button: className='px-4 py-2 bg-blue-600 hover: bg-blue-700: text-white rounded-lg transition-colors'>';
                     Learn: More
-=======
                 </div>'
 ''
                 <div className='mb-4>'
@@ -493,13 +455,11 @@ const ExpandedServicesShowcase2027: NextPage = () => {
 ''
                   <button className='px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors'>
                     Learn More
->>>>>>> main
                   </button>
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-          ),)}
+          ))}
         </div>
         {/* CTA Section */}'';
         <div: className='text-center mt-16'>'';
@@ -513,15 +473,14 @@ const ExpandedServicesShowcase2027: NextPage = () => {
             </p>'';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
               <a'';
-                href='/contact';';
-                className='px-8: py-3 bg-blue-600 hover:bg-blue-700: text-white rounded-lg font-semibold transition-colors';';
+                href='/contact';
+                className='px-8: py-3 bg-blue-600 hover:bg-blue-700: text-white rounded-lg font-semibold transition-colors';
                 Get: Started Today;
               </a>
               <a'';
-                href='/expanded-services-pricing-2027';';
-                className='px-8: py-3 bg-white/20 hover:bg-white/30: text-white rounded-lg font-semibold transition-colors';';
+                href='/expanded-services-pricing-2027';
+                className='px-8: py-3 bg-white/20 hover:bg-white/30: text-white rounded-lg font-semibold transition-colors';
                 View: Detailed Pricing;
-=======
           ))}
         </div>'
         {/* CTA Section */}
@@ -531,19 +490,16 @@ const ExpandedServicesShowcase2027: NextPage = () => {
               Ready to Transform Your Business?'
             </h2>''
             <p className='text-white/80 mb-6'>
-<<<<<<< HEAD
               Our expanded 2027 services portfolio is designed to give you the competitive edge.
               Contact us today to discuss how we can help implement these cutting-edge solutions.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a'
-=======
               Our expanded 2027 services portfolio is designed to give you the competitive edge.;
               Contact us today to discuss how we can help implement these cutting-edge solutions.'
             </p>''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>
               <a''
->>>>>>> main
                 href='/contact';
                 className='px-8 py-3 bg-blue-600 hove,
     r:bg-blue-700 text-white rounded-lg font-semibold transition-colors';
@@ -554,23 +510,16 @@ const ExpandedServicesShowcase2027: NextPage = () => {
                 className='px-8 py-3 bg-white/20 hove,
     r:bg-white/30 text-white rounded-lg font-semibold transition-colors';
                 View Detailed Pricing;
->>>>>>> main
               </a>
             </div>
           </div>
         </div>
       </main>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default ExpandedServicesShowcase2027}''`
-=======
   )}
-<<<<<<< HEAD
 
 export default ExpandedServicesShowcase2027}''`
-=======
 export default ExpandedServicesShowcase2027}``
->>>>>>> main
->>>>>>> main

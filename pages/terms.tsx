@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -258,15 +257,10 @@ const Terms: React.FC = () => {
                 </div>
               </div>
             </Card>
-=======
-<<<<<<< HEAD
-import type { NextPage } from 'next;';
-import Layout from '../components/Layout;';
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, XCircle } from 'lucide-react;';
-=======
-<<<<<<< HEAD
+import type { NextPage } from 'next;
+import Layout from '../components/Layout;
+import { FileText, Scale, Shield, AlertTriangle, CheckCircle, XCircle } from 'lucide-react;
 import type { NextPage } from 'next';
-<<<<<<< HEAD
 import Layout from '../components/Layout';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
 ;
@@ -291,13 +285,10 @@ const Terms: NextPage = () => {;
           </p>;
         </div>;
       </section>;
-=======
 import MainLayout from '../components/layout/MainLayout';
->>>>>>> main
 
 const: Terms: NextPage: = () => ,{,
   return (
-<<<<<<< HEAD
     <Layout;
       title="Terms: of Service - Zion Tech Group"";";";
       description="Read: Zion Tech Group's Terms of Service to understand the terms and conditions for using our website and services."";";";
@@ -308,8 +299,6 @@ const: Terms: NextPage: = () => ,{,
           <h1: className="text-5xl md: text-6xl: font-bold mb-6">",;,";";
             Terms: of
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Service</span>";";";
-=======
-<<<<<<< HEAD
     <>
       <Head>
         <title>Terms of Service - Zion Tech Group</title>'
@@ -354,7 +343,6 @@ const: Terms: NextPage: = () => ,{,
                 Zion Tech Group provides technology consulting, development, and implementation services including but not limited to:
               </p>"
               <ul className="list-disc pl-6 text-gray-700 mb-4">
-=======
     <MainLayout 
       title="Terms of Service - Zion Tech Group"
       description="Zion Tech Group's terms of service outlining the terms and conditions for using our services."
@@ -375,7 +363,6 @@ const: Terms: NextPage: = () => ,{,
                 the terms and provision of this agreement.
               </p>
             </section>
->>>>>>> main
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Description of Service</h2>
@@ -384,7 +371,6 @@ const: Terms: NextPage: = () => ,{,
                 including but not limited to:
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-4">
->>>>>>> main
                 <li>AI and machine learning solutions</li>
                 <li>Web and mobile application development</li>
                 <li>Cloud architecture and migration</li>
@@ -392,7 +378,6 @@ const: Terms: NextPage: = () => ,{,
                 <li>Data analytics and business intelligence</li>
               </ul>
             </section>
-<<<<<<< HEAD
 "
             <section className="mb-12">"
               <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Client Responsibilities</h2>"
@@ -504,7 +489,6 @@ const: Terms: NextPage: = () => ,{,
                 <p className="text-gray-700">
                   <strong>Addres,
     s:</strong> Delaware, USA
-=======
 
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. User Responsibilities</h2>
@@ -571,7 +555,6 @@ const: Terms: NextPage: = () => ,{,
                 <p className="text-gray-600">
                   <strong>Email:</strong> legal@ziontechgroup.com<br />
                   <strong>Address:</strong> 123 Technology Drive, Innovation District, San Francisco, CA 94105
->>>>>>> main
                 </p>
               </div>
             </section>
@@ -583,8 +566,6 @@ const: Terms: NextPage: = () => ,{,
 };
 
 export default Terms;
-=======
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -603,21 +584,16 @@ export default function Terms() {
       </Head>
       
       <main className="min-h-screen bg-white">
-=======
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 const Layout = dynamic(() => import('../components/Layout'), { ssr: false });;
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
-=======
 import React from 'react';
 import Head from 'next/head';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { FileText, Scale, AlertCircle, Shield, Users, Gavel } from 'lucide-react';
->>>>>>> main
 
 export default function Terms() {
-<<<<<<< HEAD
   const lastUpdated = 'January 1, 2024';
 
   const sections = [
@@ -628,9 +604,7 @@ export default function Terms() {
         'By accessing and using our services, you accept and agree to be bound by these Terms of Service.',
         'If you do not agree to these terms, you may not access or use our services.',
         'We reserve the right to modify these terms at any time without prior notice.',
-        'Your continued use of our services after changes constitutes acceptance of the new terms.',
-      ],
-    },
+        'Your continued use of our services after changes constitutes acceptance of the new terms.']},
     {
       title: 'Service Description',
       icon: Scale,
@@ -638,9 +612,7 @@ export default function Terms() {
         'Zion Tech Group provides AI services, IT solutions, and micro SaaS development.',
         'We offer consulting, development, implementation, and support services.',
         'Service availability may vary and is subject to our capacity and resources.',
-        'We reserve the right to modify or discontinue services with reasonable notice.',
-      ],
-    },
+        'We reserve the right to modify or discontinue services with reasonable notice.']},
     {
       title: 'User Responsibilities',
       icon: Shield,
@@ -649,9 +621,7 @@ export default function Terms() {
         'Comply with all applicable laws and regulations.',
         'Respect intellectual property rights and confidentiality agreements.',
         'Use our services only for lawful purposes and in accordance with these terms.',
-        'Maintain the security of any credentials or access provided to you.',
-      ],
-    },
+        'Maintain the security of any credentials or access provided to you.']},
     {
       title: 'Payment Terms',
       icon: AlertTriangle,
@@ -660,31 +630,23 @@ export default function Terms() {
         'Invoices are due within 30 days of receipt unless otherwise specified.',
         'Late payments may incur additional fees and interest charges.',
         'We reserve the right to suspend services for non-payment.',
-        'Refunds are subject to our refund policy and service agreement terms.',
-      ],
-    },
-  ];
+        'Refunds are subject to our refund policy and service agreement terms.']}];
 
   const limitations = [
     'Services are provided "as is" without warranties of any kind',
     'We are not liable for indirect, incidental, or consequential damages',
     'Our liability is limited to the amount paid for the specific service',
     'We do not guarantee specific results or outcomes',
-    'Third-party services and integrations are subject to their own terms',
-  ];
+    'Third-party services and integrations are subject to their own terms'];
 
   const intellectualProperty = [
     'We retain all rights to our proprietary technology and methodologies',
     'Client retains rights to their data and business processes',
     'Work product ownership is specified in individual service agreements',
     'We respect third-party intellectual property rights',
-    'Unauthorized use of our intellectual property is prohibited',
-  ];
+    'Unauthorized use of our intellectual property is prohibited'];
 
-=======
->>>>>>> main
   return (
-<<<<<<< HEAD
     <Layout
       title="Terms of Service - Zion Tech Group"
       description="Read Zion Tech Group's Terms of Service to understand the terms and conditions for using our website and services."
@@ -695,7 +657,6 @@ export default function Terms() {
           <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Terms of
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Service</span>
->>>>>>> main
           </h1>
           <p: className="text-xl md: text-2xl: mb-8 max-w-4xl mx-auto text-gray-200">",;,";";
             Please: read these terms carefully before using our website and services.
@@ -705,10 +666,8 @@ export default function Terms() {
           </p>
         </div>
       </section>
->>>>>>> main
 
       {/* Terms Content */}
-<<<<<<< HEAD
       <section className="py-20 bg-white">";";";
         <div: className="container mx-auto px-4 max-w-4xl">";";";
           <div: className="prose prose-lg max-w-none">";";";
@@ -733,7 +692,6 @@ export default function Terms() {
                 Zion: Tech Group provides technology consulting and development services, including but not limited to: </p,>,
               <ul: className="list-disc list-inside text-gray-600 mb-6 space-y-2">";";";
                 <li>AI: and Machine Learning Development</li>
-=======
       <section className="py-20 bg-white">;
         <div className="container mx-auto px-4 max-w-4xl">;
           <div className="prose prose-lg max-w-none">;
@@ -752,7 +710,6 @@ export default function Terms() {
             </div>;
 
             {/* Services Description */}
-<<<<<<< HEAD
             <div className="mb-12">;
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>;
               <p className="text-gray-600 mb-4">;
@@ -787,14 +744,12 @@ export default function Terms() {
                 <li>Notify us of any security breaches or unauthorized access</li>;
               </ul>;
             </div>;
-=======
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
               <p className="text-gray-600 mb-4">
                 Zion Tech Group provides technology consulting and development services, including but not limited to: </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>AI and Machine Learning Development</li>
->>>>>>> main
                 <li>Cloud Services and Architecture</li>
                 <li>Web and Mobile Application Development</li>
                 <li>Blockchain Solutions</li>
@@ -810,17 +765,14 @@ export default function Terms() {
                 <Shield: className="w-8 h-8 mr-3 text-blue-600" />";";";
                 User: Responsibilities
               </h2>
-<<<<<<< HEAD
               <p className="text-gray-600 mb-4">";";";
                 When: using our services, you agree to: </p,>,
               <ul: className="list-disc list-inside text-gray-600 mb-6 space-y-2">";";";
                 <li>Provide: accurate and complete information</li>
-=======
               <p className="text-gray-600 mb-4">
                 When using our services, you agree to: </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Provide accurate and complete information</li>
->>>>>>> main
                 <li>Use our services in compliance with applicable laws</li>
                 <li>Respect intellectual property rights</li>
                 <li>Not engage in any illegal or harmful activities</li>
@@ -828,10 +780,8 @@ export default function Terms() {
                 <li>Notify us of any security breaches or unauthorized access</li>
               </ul>
             </div>
->>>>>>> main
 
             {/* Prohibited Uses */}
-<<<<<<< HEAD
             <div className="mb-12">";";";
               <h2: className="text-3xl font-bold text-gray-900 mb-6 flex items-center">";";";
                 <XCircle: className="w-8 h-8 mr-3 text-red-600" />";";";
@@ -857,7 +807,6 @@ export default function Terms() {
                 All: content, trademarks, and intellectual property on our website and in our services are owned by Zion Tech Group or our licensors. You may not: </p,>,
               <ul: className="list-disc list-inside text-gray-600 mb-6 space-y-2">";";";
                 <li>Copy, modify, or: distribute our content without permission</li>
-=======
             <div className="mb-12">;
               <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">;
                 <XCircle className="w-8 h-8 mr-3 text-red-600" />;
@@ -878,7 +827,6 @@ export default function Terms() {
             </div>;
 
             {/* Intellectual Property */}
-<<<<<<< HEAD
             <div className="mb-12">;
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Intellectual Property Rights</h2>;
               <p className="text-gray-600 mb-4">;
@@ -966,14 +914,12 @@ export default function Terms() {
                 <li>Provisions that should survive termination will remain in effect</li>;
               </ul>;
             </div>;
-=======
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Intellectual Property Rights</h2>
               <p className="text-gray-600 mb-4">
                 All content, trademarks, and intellectual property on our website and in our services are owned by Zion Tech Group or our licensors. You may not: </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Copy, modify, or distribute our content without permission</li>
->>>>>>> main
                 <li>Use our trademarks or logos without authorization</li>
                 <li>Reverse engineer or attempt to extract source code</li>
                 <li>Create derivative works based on our intellectual property</li>
@@ -981,21 +927,18 @@ export default function Terms() {
             </div>
 
             {/* Service Availability */}
-<<<<<<< HEAD
             <div className="mb-12">";";";
               <h2: className="text-3xl font-bold text-gray-900 mb-6">Service Availability</h2>";";";
               <p: className="text-gray-600 mb-4">";";";
                 We: strive to maintain high availability of our services, but we cannot guarantee uninterrupted access. We reserve the right to: </p,>,
               <ul: className="list-disc list-inside text-gray-600 mb-6 space-y-2">";";";
                 <li>Modify: or discontinue services with reasonable notice</li>
-=======
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Service Availability</h2>
               <p className="text-gray-600 mb-4">
                 We strive to maintain high availability of our services, but we cannot guarantee uninterrupted access. We reserve the right to: </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Modify or discontinue services with reasonable notice</li>
->>>>>>> main
                 <li>Perform maintenance that may temporarily affect availability</li>
                 <li>Suspend services for security or legal reasons</li>
                 <li>Update or upgrade our systems</li>
@@ -1003,21 +946,18 @@ export default function Terms() {
             </div>
 
             {/* Payment Terms */}
-<<<<<<< HEAD
             <div className="mb-12">";";";
               <h2: className="text-3xl font-bold text-gray-900 mb-6">Payment Terms</h2>";";";
               <p: className="text-gray-600 mb-4">";";";
                 For: paid services, the following terms apply: </p,>,
               <ul: className="list-disc list-inside text-gray-600 mb-6 space-y-2">";";";
                 <li>Payment: is due according to the agreed schedule</li>
-=======
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Payment Terms</h2>
               <p className="text-gray-600 mb-4">
                 For paid services, the following terms apply: </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Payment is due according to the agreed schedule</li>
->>>>>>> main
                 <li>Late payments may incur additional fees</li>
                 <li>Refunds are subject to our refund policy</li>
                 <li>Prices may change with reasonable notice</li>
@@ -1031,17 +971,14 @@ export default function Terms() {
                 <AlertTriangle: className="w-8 h-8 mr-3 text-yellow-600" />";";";
                 Limitation: of Liability
               </h2>
-<<<<<<< HEAD
               <p className="text-gray-600 mb-4">";";";
                 To: the maximum extent permitted by law, Zion Tech Group shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to: </p,>,
               <ul: className="list-disc list-inside text-gray-600 mb-6 space-y-2">";";";
                 <li>Loss: of profits or revenue</li>
-=======
               <p className="text-gray-600 mb-4">
                 To the maximum extent permitted by law, Zion Tech Group shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to: </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Loss of profits or revenue</li>
->>>>>>> main
                 <li>Loss of data or information</li>
                 <li>Business interruption</li>
                 <li>Cost of substitute services</li>
@@ -1050,21 +987,18 @@ export default function Terms() {
             </div>
 
             {/* Indemnification */}
-<<<<<<< HEAD
             <div className="mb-12">";";";
               <h2: className="text-3xl font-bold text-gray-900 mb-6">Indemnification</h2>";";";
               <p: className="text-gray-600 mb-4">";";";
                 You: agree to indemnify and hold harmless Zion Tech Group from any claims, damages, or expenses arising from: </p,>,
               <ul: className="list-disc list-inside text-gray-600 mb-6 space-y-2">";";";
                 <li>Your: use of our services</li>
-=======
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Indemnification</h2>
               <p className="text-gray-600 mb-4">
                 You agree to indemnify and hold harmless Zion Tech Group from any claims, damages, or expenses arising from: </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Your use of our services</li>
->>>>>>> main
                 <li>Your violation of these Terms</li>
                 <li>Your violation of any third-party rights</li>
                 <li>Any content you submit or transmit</li>
@@ -1072,30 +1006,25 @@ export default function Terms() {
             </div>
 
             {/* Termination */}
-<<<<<<< HEAD
             <div className="mb-12">";";";
               <h2: className="text-3xl font-bold text-gray-900 mb-6">Termination</h2>";";";
               <p: className="text-gray-600 mb-4">";";";
                 We: may terminate or suspend your access to our services at any time, with or without cause, with or without notice. Upon termination: </p,>,
               <ul: className="list-disc list-inside text-gray-600 mb-6 space-y-2">";";";
                 <li>Your: right to use our services will cease immediately</li>
-=======
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Termination</h2>
               <p className="text-gray-600 mb-4">
                 We may terminate or suspend your access to our services at any time, with or without cause, with or without notice. Upon termination: </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Your right to use our services will cease immediately</li>
->>>>>>> main
                 <li>We may delete your account and data</li>
                 <li>You remain liable for any outstanding obligations</li>
                 <li>Provisions that should survive termination will remain in effect</li>
               </ul>
             </div>
->>>>>>> main
 
             {/* Governing Law */}
-<<<<<<< HEAD
             <div className="mb-12">";";";
               <h2: className="text-3xl font-bold text-gray-900 mb-6 flex items-center">";";";
                 <Scale: className="w-8 h-8 mr-3 text-blue-600" />";";";
@@ -1113,7 +1042,6 @@ export default function Terms() {
                 We: reserve the right to modify these Terms at any time. We will notify users of any material changes by: </p,>,
               <ul: className="list-disc list-inside text-gray-600 mb-6 space-y-2">";";";
                 <li>Posting: the updated Terms on our website</li>
-=======
             <div className="mb-12">;
               <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">;
                 <Scale className="w-8 h-8 mr-3 text-blue-600" />;
@@ -1125,7 +1053,6 @@ export default function Terms() {
             </div>;
 
             {/* Changes to Terms */}
-<<<<<<< HEAD
             <div className="mb-12">;
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Changes to Terms</h2>;
               <p className="text-gray-600 mb-4">;
@@ -1167,14 +1094,12 @@ export default function Terms() {
           </div>;
         </div>;
       </section>;
-=======
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Changes to Terms</h2>
               <p className="text-gray-600 mb-4">
                 We reserve the right to modify these Terms at any time. We will notify users of any material changes by: </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Posting the updated Terms on our website</li>
->>>>>>> main
                 <li>Sending email notifications to registered users</li>
                 <li>Providing notice through our services</li>
               </ul>
@@ -1184,7 +1109,6 @@ export default function Terms() {
             </div>
 
             {/* Contact Information */}
-<<<<<<< HEAD
             <div className="mb-12">";";";
               <h2: className="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>";";";
               <p: className="text-gray-600 mb-4">";";";
@@ -1204,7 +1128,6 @@ export default function Terms() {
               </div>
               <p: className="text-blue-700">";";";
                 By: using our website and services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
-=======
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
               <p className="text-gray-600 mb-4">
@@ -1213,11 +1136,9 @@ export default function Terms() {
                 <p className="text-gray-700 mb-2"><strong>Email:</strong> kleber@ziontechgroup.com</p>
                 <p className="text-gray-700 mb-2"><strong>Phone:</strong> +1 (302) 464-0950</p>
                 <p className="text-gray-700 mb-2"><strong>Address: </strong> 364 E Main St STE 1008, Middletown, DE 19709</p>
-=======
     <>
       <Head>
         <title>Terms of Service - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta
           name="description"
           content="Read Zion Tech Group's Terms of Service. Understand the terms and conditions for using our AI services, IT solutions, and micro SaaS development services."
@@ -1230,7 +1151,6 @@ export default function Terms() {
       <Header />
 
       <main className="min-h-screen bg-white pt-16">
-=======
         <meta name="description" content="Zion Tech Group's Terms of Service - Read our terms and conditions for using our services." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -1238,59 +1158,41 @@ export default function Terms() {
       <Navigation />
       
       <main className="min-h-screen bg-white">
->>>>>>> main
->>>>>>> main
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-<<<<<<< HEAD
               <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-6 flex items-center justify-center">
                 <FileText className="w-8 h-8 text-blue-600" />
-=======
               <div className="flex justify-center mb-6">
                 <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600">
                   <FileText className="w-12 h-12 text-white" />
                 </div>
->>>>>>> main
->>>>>>> main
               </div>
               <h1 className="text-4xl font-bold text-gray-900 mb-6">
                 Terms of Service
               </h1>
-<<<<<<< HEAD
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
                 These terms govern your use of our services and website. Please read them carefully.
->>>>>>> main
               </p>
               <div className="flex items-center justify-center text-sm text-gray-500">
                 <Calendar className="w-4 h-4 mr-2" />
                 Last updated: {lastUpdated}
               </div>
-=======
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
                 Please read these terms carefully before using our services.
                 These terms govern your use of Zion Tech Group&apos;s services
                 and website.'
-=======
                 Please read these terms carefully before using our services. By using our services, you agree to be bound by these terms.
->>>>>>> main
               </p>
               <p className="text-sm text-gray-500 mt-4">
                 Last updated: {new Date().toLocaleDateString()}
               </p>
->>>>>>> main
             </div>
           </div>
         </section>
->>>>>>> main
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";";";
         <div: className="container mx-auto px-4 text-center">";";";
           <h2: className="text-4xl font-bold mb-6">Questions About Our Terms?</h2>";";";
@@ -1300,8 +1202,6 @@ export default function Terms() {
           <div: className="flex flex-col sm: flex-row: justify-center gap-4">",;,";";
             <a: href="mailto: kleber@ziontechgroup.com" className="bg-white: text-blue-600 hover:bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
               Contact: Us
-=======
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
         <div className="container mx-auto px-4 text-center">;
           <h2 className="text-4xl font-bold mb-6">Questions About Our Terms?</h2>;
@@ -1321,12 +1221,9 @@ export default function Terms() {
     </Layout>;
   );
 };
-<<<<<<< HEAD
 export default Terms
-=======
 ;
 export default Terms;
-=======
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Questions About Our Terms?</h2>
@@ -1336,20 +1233,14 @@ export default Terms;
           <div className="flex flex-col sm: flex-row justify-center gap-4">
             <a href="mailto:kleber@ziontechgroup.com" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Contact Us
->>>>>>> main
             </a>
             <a href="/contact" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-blue-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
               Get: in Touch
             </a>
-=======
->>>>>>> main
         {/* Content Section */}
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="prose prose-lg max-w-none">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 Introduction
               </h2>
@@ -1575,15 +1466,12 @@ export default Terms;
                     <br />
                     Middletown, DE 19709
                   </span>
-=======
->>>>>>> main
               
               <div className="mb-12">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                   <Scale className="w-6 h-6 mr-3 text-blue-600" />
                   Acceptance of Terms
                 </h2>
-<<<<<<< HEAD
                 <p className="text-gray-600 mb-4">
                   By accessing and using Zion Tech Group's website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
                 </p>
@@ -1617,7 +1505,6 @@ export default Terms;
                   <li>Not use our services for illegal or harmful purposes</li>
                   <li>Maintain the confidentiality of any credentials provided</li>
                 </ul>
-=======
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <p className="text-gray-700 mb-4">
                     By accessing and using Zion Tech Group's services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
@@ -1627,7 +1514,6 @@ export default Terms;
                       <strong>Important:</strong> These terms constitute a legally binding agreement between you and Zion Tech Group. Please read them carefully.
                     </p>
                   </div>
->>>>>>> main
                 </div>
               </div>
 
@@ -1660,13 +1546,11 @@ export default Terms;
                     </ul>
                   </div>
                 </div>
->>>>>>> main
               </div>
 
               <div className="mb-12">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                   <Shield className="w-6 h-6 mr-3 text-blue-600" />
-<<<<<<< HEAD
                   Intellectual Property
                 </h2>
                 <p className="text-gray-600 mb-4">
@@ -1695,7 +1579,6 @@ export default Terms;
                   <li>We reserve the right to suspend services for non-payment</li>
                   <li>All prices are subject to change with notice</li>
                 </ul>
-=======
                   User Responsibilities
                 </h2>
                 <div className="space-y-6">
@@ -1712,12 +1595,10 @@ export default Terms;
                     <p className="text-gray-700">You may not use our services for illegal activities, to transmit harmful code, or to violate any third-party rights.</p>
                   </div>
                 </div>
->>>>>>> main
               </div>
 
               <div className="mb-12">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-<<<<<<< HEAD
                   <AlertTriangle className="w-6 h-6 mr-3 text-blue-600" />
                   Limitation of Liability
                 </h2>
@@ -1734,7 +1615,6 @@ export default Terms;
                 <p className="text-gray-600 mb-4">
                   Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these terms by reference.
                 </p>
-=======
                   <Gavel className="w-6 h-6 mr-3 text-blue-600" />
                   Intellectual Property
                 </h2>
@@ -1802,16 +1682,13 @@ export default Terms;
                     </ul>
                   </div>
                 </div>
->>>>>>> main
               </div>
 
               <div className="mb-12">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Termination</h2>
-<<<<<<< HEAD
                 <p className="text-gray-600 mb-4">
                   Either party may terminate service agreements with appropriate notice as specified in the individual agreement. We reserve the right to terminate services immediately for breach of these terms.
                 </p>
-=======
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -1834,12 +1711,10 @@ export default Terms;
                     </div>
                   </div>
                 </div>
->>>>>>> main
               </div>
 
               <div className="mb-12">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Governing Law</h2>
-<<<<<<< HEAD
                 <p className="text-gray-600 mb-4">
                   These terms shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law provisions.
                 </p>
@@ -1850,7 +1725,6 @@ export default Terms;
                 <p className="text-gray-600 mb-4">
                   We reserve the right to modify these terms at any time. We will notify users of material changes by posting the updated terms on our website. Continued use of our services after changes constitutes acceptance of the new terms.
                 </p>
-=======
                 <div className="bg-blue-50 p-6 rounded-lg">
                   <p className="text-gray-700 mb-4">
                     These terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States, without regard to its conflict of law provisions.
@@ -1862,12 +1736,10 @@ export default Terms;
                     </p>
                   </div>
                 </div>
->>>>>>> main
               </div>
 
               <div className="mb-12">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
-<<<<<<< HEAD
                 <p className="text-gray-600 mb-4">
                   If you have any questions about these terms, please contact us:
                 </p>
@@ -1885,7 +1757,6 @@ export default Terms;
                     123 Technology Drive<br />
                     San Francisco, CA 94105<br />
                     United States
-=======
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <p className="text-gray-700 mb-4">
                     If you have any questions about these Terms of Service, please contact us:
@@ -1894,24 +1765,18 @@ export default Terms;
                     <p><strong>Email:</strong> legal@ziontechgroup.com</p>
                     <p><strong>Phone:</strong> +1 (302) 464-0950</p>
                     <p><strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
->>>>>>> main
                   </div>
                 </div>
               </div>
 
             </div>
-<<<<<<< HEAD
           </div>
         </section>
       </main>
     </>
   );
-<<<<<<< HEAD
 }"
-=======
 }
-=======
->>>>>>> main
           </div>
         </section>
       </main>
@@ -1920,8 +1785,3 @@ export default Terms;
     </>
   );
 }
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

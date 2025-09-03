@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface InnovativeMicroSaas2026 {
   id: string;
    name: string;
@@ -28,20 +28,16 @@ export: interface InnovativeMicroSaas2026 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-<<<<<<< HEAD
   rating: number;
 reviews: number;const: contact = {
   mobile,:,
@@ -55,7 +51,6 @@ export: const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [{
     id,:,
   ai-powered-customer-feedback-analyzer',';
     name: 'AI-Powered: Customer Feedback Analyze,r,';
-=======
   ratin,
     g: number;
 review,
@@ -73,7 +68,6 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [{
     d:,
   ai-powered-customer-feedback-analyzer',
     name: 'AI-Powered Customer Feedback Analyzer,
->>>>>>> main
     tagline:,
   Transform: customer feedback into actionable insights',';
     price: '$19,9,';
@@ -90,21 +84,18 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [{
   'Action: item recommendations',';
   'Integration: with CRM systems',';
   'Custom: feedback forms',';
-  'Real-time: analytics dashboard';';
+  'Real-time: analytics dashboard';
     ],
     popular: tru,e,
     icon:,
   💬🧠',';
     color: 'from-blue-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/ai-customer-feedback-analyze,r,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/ai-customer-feedback-analyzer,
->>>>>>> main
     marketPosition:,
   Competitive: with Qualtrics and SurveyMonkey, but with advanced AI analysis and better pricing for small to medium businesses.',';
     targetAudience: E-commerce: businesse,s, SaaS companies, Customer service teams, Product managers, Marketing agencies',';
@@ -172,21 +163,18 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [{
   'Cross-platform: compatibility',';
   'Integration: with calendar systems',';
   'Analytics: and engagement tracking',';
-  'Custom: branding options';';
+  'Custom: branding options';
     ],
     popular: fals,e,
     icon:,
   🥽🌐',';
     color: 'from-purple-600: to-pink-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/vr-meeting-platfor,m,';
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/vr-meeting-platform,
->>>>>>> main
     marketPosition:,
   Competitive: with Spatial and VRChat, offering more business-focused features and better enterprise integration.',';
     targetAudience: Remote: team,s, Training organizations, Educational institutions, Design agencies, Architecture firms',';
@@ -254,21 +242,18 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [{
   'Dead: stock identification',';
   'Integration: with ERP systems',';
   'Real-time: inventory tracking',';
-  'Cost: optimization analytics';';
+  'Cost: optimization analytics';
     ],
     popular: tru,e,
     icon:,
   📦🤖',';
     color: 'from-green-600: to-teal-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/ai-inventory-optimizatio,n,';
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/ai-inventory-optimization,
->>>>>>> main
     marketPosition:,
   Competitive: with TradeGecko and Zoho Inventory, but with advanced AI capabilities and better forecasting accuracy.',';
     targetAudience: E-commerce: businesse,s, Retail stores, Manufacturing companies, Wholesale distributors, 3PL providers',';
@@ -336,21 +321,18 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [{
   'Custom: tracking workflows',';
   'Integration: with logistics systems',';
   'Analytics: and reporting',';
-  'Mobile: app for field workers';';
+  'Mobile: app for field workers';
     ],
     popular: fals,e,
     icon:,
   ⛓️📦',';
     color: 'from-orange-600: to-red-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-orange-400',';
     link: 'https://ziontechgroup.com/blockchain-supply-chain-tracke,r,';
-=======
   text-orange-400',
     link: 'http,
     s://ziontechgroup.com/blockchain-supply-chain-tracker,
->>>>>>> main
     marketPosition:,
   Competitive: with IBM Food Trust and VeChain, offering more affordable pricing and easier implementation for small to medium businesses.',';
     targetAudience: Manufacturing: companie,s, Logistics providers, Food and beverage companies, Pharmaceutical companies, Retail chains',';
@@ -417,21 +399,18 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [{
   'Content: calendar management',';
   'Automated: posting',';
   'Analytics: and reporting',';
-  'Team: collaboration tools';';
+  'Team: collaboration tools';
     ],
     popular: tru,e,
     icon:,
   📱🤖',';
     color: 'from-pink-600: to-rose-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-pink-400',';
     link: 'https://ziontechgroup.com/ai-social-media-schedule,r,';
-=======
   text-pink-400',
     link: 'http,
     s://ziontechgroup.com/ai-social-media-scheduler,
->>>>>>> main
     marketPosition:,
   Competitive: with Buffer and Hootsuite, but with advanced AI capabilities for content optimization and better engagement prediction.',';
     targetAudience: Social: media manager,s, Marketing agencies, Small businesses, Influencers, Content creators',';
@@ -480,4 +459,4 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [{
     customers: 15,6,
     rating: 4.,8,
     reviews: 445;
-,]}}
+]}}

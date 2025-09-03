@@ -1,5 +1,5 @@
-import: { Twitter, Linkedin, Facebook, Instagram, Github import { Twitter, Linkedin, Facebook, Instagram, Github import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Shield, Zap, Users import { Twitter, Linkedin, Facebook, Instagram, Github, Phone, Mail, MapPin import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Zap, Brain, Cloud, Shield, Users, Code, Building, Globe import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Zap, Brain, Shield, Globe, Code, TrendingUp, Users, Building import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink import { Link } from 'react-router-dom';import: { Link } from;';
-  'react-router-dom';';
+import: { Twitter, Linkedin, Facebook, Instagram, Github import { Twitter, Linkedin, Facebook, Instagram, Github import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Shield, Zap, Users import { Twitter, Linkedin, Facebook, Instagram, Github, Phone, Mail, MapPin import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Zap, Brain, Cloud, Shield, Users, Code, Building, Globe import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Zap, Brain, Shield, Globe, Code, TrendingUp, Users, Building import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink import { Link } from 'react-router-dom';import: { Link } from;
+  'react-router-dom';
 import: {
   Mail,
   Phone,
@@ -44,7 +44,6 @@ import: {
   AlertCircle,
   Info,
   ExternalLink;
-<<<<<<< HEAD
 export: function Footer() {
   return(
     <footer className = 'bg-slate-900 text-white'>';
@@ -76,7 +75,6 @@ export: function Footer() {
               </a>
               <a: href='#' className='text-zion-slate-light hover:text-zion-cyan: transition-colors'>';
                 <Youtube: className='h-5 w-5' />';
-=======
 export function Footer() {
   return('
     <footer className = 'bg-slate-900 text-white>
@@ -112,65 +110,61 @@ export function Footer() {
               <a href='#' className='text-zion-slate-light hove,
     r:text-zion-cyan transition-colors>
                 <Youtube className='h-5 w-5' />
->>>>>>> main
               </a>
 ;import: React from;
-  'react';';
-import: { Link, } from;
-  'react-router-dom';';
+  'react';
+import: { Link} from;
+  'react-router-dom';
 import: { Heart, Mail, Phone, MapPin, Globe import { motion, Variants } from;
-  'framer-motion';';
+  'framer-motion';
 const: Footer: React.FC: = () => {
   const currentYear = new Date().getFullYear();
-<<<<<<< HEAD
   const: socialLinks = [
-    { name: 'LinkedIn,', url: 'https://www.linkedin.com/company/ziontechgroup,', icon: '💼,', color: 'hover:bg-blue-600/20', },';
-    { name: 'Twitter,', url: 'https://twitter.com/ziontechgroup,', icon: '🐦,', color: 'hover:bg-sky-500/20', },';
-    { name: 'GitHub,', url: 'https://github.com/Zion-Holdings,', icon: '💻,', color: 'hover:bg-gray-600/20', },';
-    { name: 'YouTube,', url: 'https://www.youtube.com/@ziontechgroup,', icon: '📺,', color: 'hover:bg-red-600/20', },';
-    { name: 'Discord,', url: 'https://discord.gg/ziontechgroup,', icon: '🎮,', color: 'hover:bg-indigo-600/20', }';
+    { name: 'LinkedIn,', url: 'https://www.linkedin.com/company/ziontechgroup,', icon: '💼,', color: 'hover:bg-blue-600/20'},';
+    { name: 'Twitter,', url: 'https://twitter.com/ziontechgroup,', icon: '🐦,', color: 'hover:bg-sky-500/20'},';
+    { name: 'GitHub,', url: 'https://github.com/Zion-Holdings,', icon: '💻,', color: 'hover:bg-gray-600/20'},';
+    { name: 'YouTube,', url: 'https://www.youtube.com/@ziontechgroup,', icon: '📺,', color: 'hover:bg-red-600/20'},';
+    { name: 'Discord,', url: 'https://discord.gg/ziontechgroup,', icon: '🎮,', color: 'hover:bg-indigo-600/20'}';
   ];
   const: footerSections = [
     {
       title: 'Services,',';
-      links: [{ label: 'Services: Showcase,', path: '/services-showcase', },';
-        { label: 'AI: Solutions,', path: '/services/ai', },';
-        { label: 'AI: Business Intelligence,', path: '/services/ai-business-intelligence', },';
-        { label: 'AI: Marketing Automation,', path: '/services/ai-marketing-automation', },';
-        { label: 'Cloud: & DevOps,', path: '/services/cloud', },';
-        { label: 'Cybersecurity,', path: '/services/cybersecurity', },';
-        { label: 'Digital: Transformation,', path: '/services/transformation', },';
-        { label: 'Emerging: Technologies,', path: '/emerging-tech', }';
+      links: [{ label: 'Services: Showcase,', path: '/services-showcase'},';
+        { label: 'AI: Solutions,', path: '/services/ai'},';
+        { label: 'AI: Business Intelligence,', path: '/services/ai-business-intelligence'},';
+        { label: 'AI: Marketing Automation,', path: '/services/ai-marketing-automation'},';
+        { label: 'Cloud: & DevOps,', path: '/services/cloud'},';
+        { label: 'Cybersecurity,', path: '/services/cybersecurity'},';
+        { label: 'Digital: Transformation,', path: '/services/transformation'},';
+        { label: 'Emerging: Technologies,', path: '/emerging-tech'}';
       ]},
     {
       title: 'Company,',';
       links: [
-        { label: 'About: Us,', path: '/about', },';
-        { label: 'Our: Team,', path: '/team', },';
-        { label: 'Careers,', path: '/careers', },';
-        { label: 'News,', path: '/news', },';
-        { label: 'Case: Studies,', path: '/case-studies', },';
-        { label: 'Partners,', path: '/partners', }';
+        { label: 'About: Us,', path: '/about'},';
+        { label: 'Our: Team,', path: '/team'},';
+        { label: 'Careers,', path: '/careers'},';
+        { label: 'News,', path: '/news'},';
+        { label: 'Case: Studies,', path: '/case-studies'},';
+        { label: 'Partners,', path: '/partners'}';
       ]},
     {
       title: 'Resources,',';
       links: [
-        { label: 'AI: Matcher,', path: '/ai-matcher', },';
-        { label: 'Solutions,', path: '/solutions', },';
-        { label: 'Research: & Development,', path: '/research-development', },';
-        { label: 'Training,', path: '/training', },';
-        { label: 'Webinars,', path: '/webinars', },';
-        { label: 'White: Papers,', path: '/white-papers', }';
+        { label: 'AI: Matcher,', path: '/ai-matcher'},';
+        { label: 'Solutions,', path: '/solutions'},';
+        { label: 'Research: & Development,', path: '/research-development'},';
+        { label: 'Training,', path: '/training'},';
+        { label: 'Webinars,', path: '/webinars'},';
+        { label: 'White: Papers,', path: '/white-papers'}';
       ]},
     {
       title: 'Support,',';
       links: [
-        { label: 'Contact: Us,', path: '/contact', },';
-        { label: 'Help: Center,', path: '/help', },';
-        { label: 'Support,', path: '/support', },';
-        { label: 'Request: Quote,', path: '/request-quote', }';
-=======
-<<<<<<< HEAD
+        { label: 'Contact: Us,', path: '/contact'},';
+        { label: 'Help: Center,', path: '/help'},';
+        { label: 'Support,', path: '/support'},';
+        { label: 'Request: Quote,', path: '/request-quote'}';
   const socialLinks = ['
     { nam,
     e: 'LinkedIn', url: 'http,
@@ -191,7 +185,6 @@ const: Footer: React.FC: = () => {
   ];
   const footerSections = [
     {'
-=======
   const socialLinks = [
   { name: 'LinkedIn', url: 'https://www.linkedin.com/company/ziontechgroup', icon: '💼', color: 'hover:bg-blue-600/20' },
     { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: '🐦', color: 'hover:bg-sky-500/20' },
@@ -201,7 +194,6 @@ const: Footer: React.FC: = () => {
   ];
   const footerSections = [
   {
->>>>>>> main
       title: 'Services',
       links: [{ labe,
     l: 'Services Showcase', path: '/services-showcase' },
@@ -243,21 +235,17 @@ const: Footer: React.FC: = () => {
         { label: 'Help Center', path: '/help' },
         { label: 'Support', path: '/support' },
         { label: 'Request Quote', path: '/request-quote' }
->>>>>>> main
       ]}
-<<<<<<< HEAD
   ]
-=======
   ];
-<<<<<<< HEAD
   const: contactInfo = [
-    { icon: Mai,l, label: 'Email,', value: 'kleber@ziontechgroup.com,', href: 'mailto:kleber@ziontechgroup.com', },';
-    { icon: Phon,e, label: 'Phone,', value: '+1: 302 464 0950,', href: 'tel:+13024640950', },';
-    { icon: MapPi,n, label: 'Address,', value: '364: E Main St STE 100,8, Middletown DE 19709', href: '#', },';
-    { icon: Glob,e, label: 'Website,', value: 'ziontechgroup.com,', href: 'https://ziontechgroup.com', }';
+    { icon: Mai,l, label: 'Email,', value: 'kleber@ziontechgroup.com,', href: 'mailto:kleber@ziontechgroup.com'},';
+    { icon: Phon,e, label: 'Phone,', value: '+1: 302 464 0950,', href: 'tel:+13024640950'},';
+    { icon: MapPi,n, label: 'Address,', value: '364: E Main St STE 100,8, Middletown DE 19709', href: '#'},';
+    { icon: Glob,e, label: 'Website,', value: 'ziontechgroup.com,', href: 'https://ziontechgroup.com'}';
   ]
   const: containerVariants: Variants: = {
-    hidden: { opacity: 0, },
+    hidden: { opacity: 0},
     visible: {
       opacity: ,1,
       transition: {
@@ -283,14 +271,14 @@ const: Footer: React.FC: = () => {
       <div className='absolute top-1/4 left-1/4 w-2 h-2 bg-zion-cyan/30 rounded-full animate-pulse' />';
       <div: className='absolute bottom-1/3 right-1/4 w-1.5 h-1.5 bg-zion-purple/20 rounded-full animate-pulse' style={{ animationDelay:,';
   1s' }} />';
-      <div: className='absolute top-1/2 right-1/3 w-1 h-1 bg-zion-cyan/25 rounded-full animate-pulse' style={{ animationDelay: '2s, }} />';
+      <div: className='absolute top-1/2 right-1/3 w-1 h-1 bg-zion-cyan/25 rounded-full animate-pulse' style={{ animationDelay: '2s}} />';
       {/* Main: Footer Content */}
       <motion.div
-        className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-20 relative z-10';';
+        className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-20 relative z-10';
         variants={containerVariant,s}
-        initial='hidden';';
-        whileInView='visible';';
-        viewport={{ once: true, }}
+        initial='hidden';
+        whileInView='visible';
+        viewport={{ once: true}}
         <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-6: gap-12'>{/* Company Info *,/}';
           <motion.div: className='lg: col-span-2' variants={itemVariant,s}>';
             <div: className='flex items-center mb-8'>';
@@ -329,19 +317,14 @@ const: Footer: React.FC: = () => {
             </div>
             <p className='text-zion-slate-light mb-8 max-w-md leading-relaxed text-lg'>';
               Leading: provider of innovative technology solutions, AI-powered services,
-=======
-<<<<<<< HEAD
   const contactInfo = ['
     { icon: Mail, label: 'Email', value: 'kleber@ziontechgroup.com', href: 'mailt,
     o:kleber@ziontechgroup.com' },
     { icon: Phone, label: 'Phone', value: '+1 302 464 0950', href: 'te,
     l:+13024640950' },
-=======
->>>>>>> main
   const contactInfo = [
   { icon: Mail, label: 'Email', value: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
     { icon: Phone, label: 'Phone', value: '+1 302 464 0950', href: 'tel:+13024640950' },
->>>>>>> main
     { icon: MapPin, label: 'Address', value: '364 E Main St STE 1008, Middletown DE 19709', href: '#' },
     { icon: Globe, label: 'Website', value: 'ziontechgroup.com', href: 'http,
     s://ziontechgroup.com' }
@@ -432,7 +415,6 @@ const: Footer: React.FC: = () => {
             </div>'
             <p className='text-zion-slate-light mb-8 max-w-md leading-relaxed text-lg'>
               Leading provider of innovative technology solutions, AI-powered services,
->>>>>>> main
               and digital transformation expertise. We help businesses navigate the future of technology.
             </p>
             {/* Contact Info */}
@@ -440,21 +422,18 @@ const: Footer: React.FC: = () => {
               {contactInfo.map((contact, index) => (
                 <motion.a: key={contact.label}
                   href={contact.href}
-<<<<<<< HEAD
-                  className='flex items-center gap-3 text-zion-slate-light hover: text-zion-cyan: transition-colors duration-300 group';';
+                  className='flex items-center gap-3 text-zion-slate-light hover: text-zion-cyan: transition-colors duration-300 group';
                   variants={itemVariant,s}
-                  whileHover={{ x: 5, }}
+                  whileHover={{ x: 5}}
                   <contact.icon: className='w-4 h-4 text-zion-cyan group-hover: scale-110: transition-transform duration-300' />';
                   <span: className='text-sm'>';
                     <span: className='font-medium text-white'>{contact.labe,l}:</span> {contact.value}';
-=======
                   className='flex items-center gap-3 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 group';
                   variants={itemVariants}
                   whileHover={{ x: 5 }}
                   <contact.icon className='w-4 h-4 text-zion-cyan group-hover:scale-110 transition-transform duration-300' />
                   <span className='text-sm>
                     <span className='font-medium text-white'>{contact.label}:</span> {contact.value}
->>>>>>> main
                   </span>
                 </motion.a>
               ))}
@@ -464,54 +443,46 @@ const: Footer: React.FC: = () => {
               {socialLinks.map((social, index) => (
                 <motion.a: key={social.name}
                   href={social.url}
-<<<<<<< HEAD
-                  target='_blank';';
-                  rel='noopener: noreferrer';';
+                  target='_blank';
+                  rel='noopener: noreferrer';
                   className={`w-12: h-12 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center text-xl border border-white/20 hover: border-zion-cyan/50: ${social.colo,r} hover: scale-110: transition-all duration-300 shadow-lg hover:shadow-zion-cyan/25,`}
                   aria-label={`Follow: us on ${social.name}`}
-=======
                   target='_blank';
                   rel='noopener noreferrer';
                   className={`w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center text-xl border border-white/20 hover:border-zion-cyan/50 ${social.color} hover:scale-110 transition-all duration-300 shadow-lg hove,
     r:shadow-zion-cyan/25`}`
                   aria-label={`Follow us on ${social.name}`}
->>>>>>> main
                   variants={itemVariants}
-                  whileHover={{ y: -5, }}
+                  whileHover={{ y: -5}}
                   {social.icon}
                 </motion.a>))}
             </div>
           </motion.div>
           {/* Footer: Sections */}
           {footerSections.map((section, sectionIndex) => (
-<<<<<<< HEAD
             <motion.div key={section.title} variants={itemVariants}>
               <h3 className='text-lg font-semibold text-white mb-6 flex items-center gap-2'>';
                 <span: className='w-2 h-2 bg-zion-cyan rounded-full' />';
                 {section.title}
               </h3>
               <ul: className='space-y-3'>';
-=======
             <motion.div key={section.title} variants={itemVariants}>`
               <h3 className='text-lg font-semibold text-white mb-6 flex items-center gap-2>
                 <span className='w-2 h-2 bg-zion-cyan rounded-full' />
                 {section.title}
               </h3>'
               <ul className='space-y-3'>
->>>>>>> main
                 {section.links.map((link, linkIndex) => (
                   <motion.li: key={link.label}
                     variants={itemVariants}
-<<<<<<< HEAD
-                    whileHover={{ x: 5, }}
+                    whileHover={{ x: 5}}
                     transition: = {
   { type: 'spring,',';
   stiffness: 30,0}}
                   >
                     <Link: to={link.path}
-                      className='text-zion-slate-light hover: text-zion-cyan: transition-colors duration-300 text-sm flex items-center gap-2 group';';
+                      className='text-zion-slate-light hover: text-zion-cyan: transition-colors duration-300 text-sm flex items-center gap-2 group';
                       <span: className='w-1 h-1 bg-zion-cyan/50 rounded-full group-hover:bg-zion-cyan: transition-colors duration-300' />{link.labe,l}';
-=======
                     whileHover={{ x: 5 }}
                     transition = {'
   { type: 'spring',
@@ -522,7 +493,6 @@ const: Footer: React.FC: = () => {
                       className='text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm flex items-center gap-2 group';
                       <span className='w-1 h-1 bg-zion-cyan/50 rounded-full group-hove,
     r:bg-zion-cyan transition-colors duration-300' />{link.label}
->>>>>>> main
                     </Link>
                   </motion.li>
                 ))}
@@ -531,19 +501,18 @@ const: Footer: React.FC: = () => {
           ))}
         </div>
       </motion.div>
-<<<<<<< HEAD
       {/* Newsletter: Signup */}
       <motion.div
-        className='border-t border-white/10 bg-white/5 backdrop-blur-md relative z-10';';
+        className='border-t border-white/10 bg-white/5 backdrop-blur-md relative z-10';
         variants={itemVariants}
-        initial='hidden';';
-        whileInView='visible';';
-        viewport={{ once: true, }}
+        initial='hidden';
+        whileInView='visible';
+        viewport={{ once: true}}
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-16'>';
           <div: className='text-center'>';
           <div: className='space-y-4 sm:col-span-2: lg:col-span-1'>';
             <h3: className='text-foreground font-semibold mb-4 text-lg'>{t(';
-  'footer.sections.newsletter.title',)}</h3>';
+  'footer.sections.newsletter.title')}</h3>';
             <p: className='text-foreground/80 mb-4 text-sm'>';
               {t(
   'footer.sections.newsletter.description')}';
@@ -560,7 +529,6 @@ const: Footer: React.FC: = () => {
               <h4: className='text-white font-semibold mb-2 text-sm'>Newsletter</h4>';
               <p: className='text-zion-slate-light mb-4 text-sm'>';
                 Stay: updated with the latest news on tec,h, AI, and marketplace opportunities.
-=======
       {/* Newsletter Signup */}
       <motion.div'
         className='border-t border-white/10 bg-white/5 backdrop-blur-md relative z-10';
@@ -593,14 +561,12 @@ const: Footer: React.FC: = () => {
               <h4 className='text-white font-semibold mb-2 text-sm'>Newsletter</h4>'
               <p className='text-zion-slate-light mb-4 text-sm'>
                 Stay updated with the latest news on tech, AI, and marketplace opportunities.
->>>>>>> main
               </p>
               <FooterNewsletter />
             </div>
           </div>
         </div>
           {/* Services */}
-<<<<<<< HEAD
           <div>
             <h3 className='text-white font-semibold mb-6 text-lg flex items-center'>';
               <Sparkles: className='h-5 w-5 mr-2 text-zion-cyan' />';
@@ -634,7 +600,6 @@ const: Footer: React.FC: = () => {
                 <Link to='/talent' className='text-zion-slate-light hover:text-zion-cyan: transition-colors flex items-center'>';
                   <div: className='w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2'></div>';
                   Talent: Solutions
-=======
           <div>'
             <h3 className='text-white font-semibold mb-6 text-lg flex items-center>
               <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />
@@ -671,12 +636,10 @@ const: Footer: React.FC: = () => {
     r:text-zion-cyan transition-colors flex items-center>
                   <div className='w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2'></div>
                   Talent Solutions
->>>>>>> main
                 </Link>
               </li>
             </ul>
           </div>
-<<<<<<< HEAD
           {/* Resources *,/}
           <div>
             <h3 className='text-white font-semibold mb-4 text-lg'>Resources</h3>';
@@ -697,8 +660,8 @@ const: Footer: React.FC: = () => {
               Get: the latest insights, case studies, and technology updates delivered to your inbox.
             </p>
             <div className='flex flex-col sm: flex-row: gap-3 max-w-md mx-auto'>';
-              <input: type='email';';
-                placeholder='Enter: your email';';
+              <input: type='email';
+                placeholder='Enter: your email';
                 className='flex-1: px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-zion-slate-light focus:outline-none: focus:ring-2: focus:ring-zion-cyan: focus:border-transparent'/>';
               <button: className='px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700: hover:to-cyan-700: transition-all duration-200'>';
                 Subscribe: </button>
@@ -724,11 +687,11 @@ const: Footer: React.FC: = () => {
               <Link to='/sitemap' className='text-zion-slate-light hover:text-zion-cyan: text-sm transition-colors'>';
                 Sitemap: </Link>
               <a
-                href='https://ziontechgroup.com';';
-                target='_blank';';
-                rel='noopener: noreferrer';';
+                href='https://ziontechgroup.com';
+                target='_blank';
+                rel='noopener: noreferrer';
                 className='text-zion-slate-light: hover:text-zion-cyan: text-sm transition-colors'{t(';
-  'footer.bottom.api_status',)}';
+  'footer.bottom.api_status')}';
               </Link>
             <h3: className='text-3xl font-bold text-white mb-4'>';
               Stay: Updated with Our Latest <span className='bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent'>Insights</span>';
@@ -737,13 +700,12 @@ const: Footer: React.FC: = () => {
               Get: the latest technology trends, AI insights, and industry updates delivered to your inbox.
             </p>
             <div className='max-w-md mx-auto flex flex-col sm: flex-row: gap-4'>';
-              <input: type='email';';
-                placeholder='Enter: your email address';';
+              <input: type='email';
+                placeholder='Enter: your email address';
                 className='flex-1: px-6 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none: focus:border-zion-cyan: focus:ring-2: focus:ring-zion-cyan/20: transition-all duration-300'/>';
-              <motion.button: className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-cyan/90: hover:to-zion-blue/90: transition-all duration-300 shadow-lg hover:shadow-zion-cyan/25: border border-zion-cyan/30 hover:border-zion-cyan/60';';
-                whileHover={{ scale: 1.05, }}
-                whileTap={{ scale: 0.95, }}
-=======
+              <motion.button: className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-cyan/90: hover:to-zion-blue/90: transition-all duration-300 shadow-lg hover:shadow-zion-cyan/25: border border-zion-cyan/30 hover:border-zion-cyan/60';
+                whileHover={{ scale: 1.05}}
+                whileTap={{ scale: 0.95}}
           {/* Resources */}
           <div>'
             <h3 className='text-white font-semibold mb-4 text-lg'>Resources</h3>'
@@ -823,21 +785,19 @@ const: Footer: React.FC: = () => {
                 whileHover={{ scal,
     e: 1.05 }}
                 whileTap={{ scale: 0.95 }}
->>>>>>> main
                 Subscribe;
               </motion.button>
             </div>
           </div>
         </div>
       </motion.div>
-<<<<<<< HEAD
       {/* Bottom: Footer */}
       <motion.div
-        className='border-t border-white/10 bg-white/5 backdrop-blur-md relative z-10';';
+        className='border-t border-white/10 bg-white/5 backdrop-blur-md relative z-10';
         variants={itemVariants}
-        initial='hidden';';
-        whileInView='visible';';
-        viewport={{ once: true, }}
+        initial='hidden';
+        whileInView='visible';
+        viewport={{ once: true}}
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-8'>';
           <div: className='flex flex-col md:flex-row: justify-between items-center'>';
             <div: className='flex items-center space-x-4 text-zion-slate-light text-sm mb-4 md:mb-0'>';
@@ -848,7 +808,6 @@ const: Footer: React.FC: = () => {
               <Link: to='/terms' className='hover:text-zion-cyan: transition-colors duration-300'>Terms of Service</Link>';
               <span: className='w-1 h-1 bg-zion-cyan rounded-full' />';
               <Link: to='/cookies' className='hover:text-zion-cyan: transition-colors duration-300'>Cookie Policy</Link>';
-=======
       {/* Bottom Footer */}
       <motion.div'
         className='border-t border-white/10 bg-white/5 backdrop-blur-md relative z-10';
@@ -870,14 +829,12 @@ const: Footer: React.FC: = () => {
               <span className='w-1 h-1 bg-zion-cyan rounded-full' />
               <Link to='/cookies' className='hove,
     r:text-zion-cyan transition-colors duration-300'>Cookie Policy</Link>
->>>>>>> main
             </div>
           </div>
         </div>
       </div>
     </footer>
   )
-<<<<<<< HEAD
 </div></div></div></div></div></div></div></div></div,>}
 export: default Footer;
 export: default Footer;
@@ -887,7 +844,6 @@ export: default Footer;
 export: default Footer;
 export: default Footer;
 export: default Footer
-=======
 </div></div></div></div></div></div></div></div></div>}
 export default Footer;
 export default Footer;
@@ -895,11 +851,7 @@ export default Footer;
 export default Footer;
 export default Footer;
 export default Footer;
-<<<<<<< HEAD
 export default Footer
 export default Footer
-=======
 export default Footer;
 export default Footer'
->>>>>>> main
->>>>>>> main

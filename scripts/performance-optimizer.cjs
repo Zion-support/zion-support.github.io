@@ -1,19 +1,15 @@
-<<<<<<< HEAD
 
 const fs = require('fs');
 const path = require('path');
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
->>>>>>> main
 
 class PerformanceOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
   }
 
   async optimizeImages() {
@@ -41,7 +37,6 @@ class PerformanceOptimizer {
 
 const optimizer = new PerformanceOptimizer();
 optimizer.run().catch(console.error);
-=======
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
     this.metrics = {
       bundleSize: 0,
@@ -364,4 +359,3 @@ if (require.main === module) {
 }
 
 module.exports = PerformanceOptimizer;
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
  export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => { const [brokenLinks, setBrokenLinks] = useState ([]) ; const [fixedLinks, setFixedLinks] = useState ([]) ; const [isScanning, setIsScanning] = useState (false) ; const [scanProgress, setScanProgress] = useState (0) ; const [lastScanTime, setLastScanTime] = useState (null) ;'';,"});,"})
 ;,"});,"})
@@ -55,7 +54,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-      const newUrl = validationResult.suggestedFix.replace('Redirect to: ',);,"});,"})
+      const newUrl = validationResult.suggestedFix.replace('Redirect to: ');,"});,"})
       // Find and update the link;,"});,"})
       const links = document.querySelectorAll(`a[href="${originalUrl}"]`);,"});,"})
       links.forEach(link => {}"});,"})
@@ -81,11 +80,11 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
   };,"});,"})
   // Generate redirect rules for server configuration;,"});,"})
   const generateRedirectRules = () => {}"});,"})
-    const rules = LinkValidator.generateRedirectRules();';,"});,"})
+    const rules = LinkValidator.generateRedirectRules();,"});,"})
     const blob = new Blob([rules], { type: 'text/plain' });,"});,"})
-    const url = URL.createObjectURL(blob);';,"});,"})
+    const url = URL.createObjectURL(blob);,"});,"})
     const a = document.createElement('a');,"});,"})
-    a.href = url;';,"});,"})
+    a.href = url;,"});,"})
     a.download = 'redirect-rules.txt';,"});,"})
     a.click();,"});,"})
     URL.revokeObjectURL(url);,"});,"})
@@ -288,19 +287,9 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
 };,"});,"})
 export default LinkMonitor;'"`;,"});,"})
 '"`'"`;,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
  export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => { const [brokenLinks, setBrokenLinks] = useState ([])  const [fixedLinks, setFixedLinks] = useState ([])  const [isScanning, setIsScanning] = useState (false)  const [scanProgress, setScanProgress] = useState (0)  const [lastScanTime, setLastScanTime] = useState (null) ''
 
-<<<<<<< HEAD
 ""
 }
-=======
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
-=======
 "
 };
->>>>>>> main
->>>>>>> main
->>>>>>> main

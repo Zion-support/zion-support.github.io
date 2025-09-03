@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
-<<<<<<< HEAD
 ;,"});,"})
-=======
 export default function Marketplace() {return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO title="Marketplace - Zion Tech Group" description="Professional Marketplace services by Zion Tech Group" />
@@ -19,16 +12,11 @@ export default function Marketplace() {return (
         </p>
       </div>
     </div>
-=======
-<<<<<<< HEAD
 import React from &apos;react';
 import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
-=======
->>>>>>> main
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-<<<<<<< HEAD
 import { ;
   ShoppingCart, Star, Users, Code, Database, ;
   Shield, Rocket, Brain, ArrowRight, Filter,;
@@ -145,12 +133,9 @@ export default function Marketplace() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">;
               {categories.map((category, index) => (;
                 <motion.div;
-=======
->>>>>>> main
 import { 
   ShoppingCart, Star, Users, Code, Database, Shield, Rocket, Brain, ArrowRight, Filter,
   Search, Grid, List, Heart, ExternalLink
-<<<<<<< HEAD
 } from &apos;lucide-react';&apos;&apos;
 
 export default function Marketplace() {}
@@ -220,73 +205,45 @@ export default function Marketplace() {}
         description=&quot;Discover and purchase cutting-edge technology solutions, AI tools, and micro SaaS applications from Zion Tech Group&apos;s marketplace.&quot;
         keywords=&quot;marketplace, technology solutions, AI tools, micro SaaS, software, Zion Tech Group&quot;
       />&quot;
-=======
 } from 'lucide-react';
 export default function Marketplace() {
   const products = [
-<<<<<<< HEAD
     { id: 1, name: "AI Content Generator Pro",
-=======
-<<<<<<< HEAD
     {
-=======
   {
->>>>>>> main
       id: 1, name: "AI Content Generator Pro",
->>>>>>> main
       description: "Advanced AI-powered content creation tool with natural language processing", price: "$99/month",
       category: "AI Tools", rating: 4.8,
       reviews: 124, image: "/api/placeholder/300/200",
-<<<<<<< HEAD
       featured: true, tags: ["AI", "Content", "NLP"]
-<<<<<<< HEAD
     }, { id: 2,
-=======
-=======
       featured: true, tags: ["AI,Content,NLP"]
->>>>>>> main
     }, {
       id: 2,
->>>>>>> main
       name: "Quantum Analytics Dashboard", description: "Real-time analytics dashboard powered by quantum computing algorithms",
       price: "$299/month", category: "Analytics",
       rating: 4.9, reviews: 89,
       image: "/api/placeholder/300/200", featured: true,
-<<<<<<< HEAD
       tags: ["Quantum", "Analytics", "Dashboard"]
-<<<<<<< HEAD
     }, { id: 3,
-=======
-=======
       tags: ["Quantum,Analytics,Dashboard"]
->>>>>>> main
     }, {
       id: 3,
->>>>>>> main
       name: "Micro SaaS Starter Kit", description: "Complete toolkit for building and launching micro SaaS applications",
       price: "$199/month", category: "Development",
       rating: 4.7, reviews: 156,
       image: "/api/placeholder/300/200", featured: false,
-<<<<<<< HEAD
       tags: ["SaaS", "Development", "Starter"]
-<<<<<<< HEAD
     }, { id: 4,
-=======
-=======
       tags: ["SaaS,Development,Starter"]
->>>>>>> main
     }, {
       id: 4,
->>>>>>> main
       name: "Cybersecurity Suite", description: "Comprehensive security solution for enterprise applications",
       price: "$499/month", category: "Security",
       rating: 4.9, reviews: 67,
       image: "/api/placeholder/300/200", featured: false,
-<<<<<<< HEAD
       tags: ["Security", "Enterprise", "Protection"]
-=======
       tags: ["Security,Enterprise,Protection"]
->>>>>>> main
     }
   ];
   const categories = [
@@ -300,18 +257,11 @@ export default function Marketplace() {
     <>
       <SEO 
         title="Marketplace - Zion Tech Group | Technology Solutions & Tools"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
         description="Discover and purchase cutting-edge technology solutions, AI tools, and micro SaaS applications from Zion Tech Group&apos;s marketplace."'
         keywords="marketplace, technology solutions, AI tools, micro SaaS, software, Zion Tech Group"
-=======
         description="Discover and purchase cutting-edge technology solutions, AI tools, and micro SaaS applications from Zion Tech Group's marketplace. 
         keywords='marketplace, technology solutions, AI tools, micro SaaS, software, Zion Tech Group"
->>>>>>> main
       />
->>>>>>> main
       
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>
         {/* Hero Section */}&quot;
@@ -320,28 +270,22 @@ export default function Marketplace() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8   }}
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Technology Marketplace
-=======
               transition={{ duration: 0.8 }}
               className=&quot;text-center max-w-4xl mx-auto&quot;
             >&quot;
               <h1 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>
                 Technology Marketplace&quot;
->>>>>>> main
               </h1>
-<<<<<<< HEAD
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Discover and purchase cutting-edge technology solutions, AI tools, 
                 and innovative software from our curated marketplace&quot;
-=======
               <p className="text-xl text-gray-300 mb-8">
                 Discover and purchase cutting-edge technology solutions, AI tools, and innovative software from our curated marketplace
->>>>>>> main
               </p>
               <div className=&quot;flex items-center justify-center&quot;>&quot;"
                 <ShoppingCart className=&quot;w-16 h-16 text-blue-400&quot; />&quot;
@@ -356,33 +300,28 @@ export default function Marketplace() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Browse Categories</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our curated collection of technology solutions organized by category
-=======
               transition={{ duration: 0.8 }}
               className=&quot;text-center mb-12&quot;
             >&quot;
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Browse Categories&quot;</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Explore our curated collection of technology solutions organized by category&quot;
->>>>>>> main
               </p>
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-5 gap-6&quot;>
               {categories.map((category, index) => (&quot;}
                 <motion.div
->>>>>>> main
                   key={category.name}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 cursor-pointer";
                 >;
                   <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-4`}>;
@@ -391,7 +330,6 @@ export default function Marketplace() {
                   <h3 className="text-lg font-bold text-white mb-2">{category.name}</h3>;
                   <p className="text-gray-400 text-sm">{category.count} products</p>;
                 </motion.div>;
-=======
                   className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hove,r:scale-105 cursor-pointer&quot;
                 >&quot;
                   <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-4`}>
@@ -400,14 +338,12 @@ export default function Marketplace() {
                   <h3 className=&quot;text-lg font-bold text-white mb-2&quot;>{category.name}&quot;</h3>
                   <p className=&quot;text-gray-400 text-sm&quot;>{category.count} products&quot;</p>
                 </motion.div>
->>>>>>> main
               ))}
             </div>;
           </div>;
         </section>;
 
         {/* Featured Products */}
-<<<<<<< HEAD
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;
           <div className="container mx-auto px-4">;
             <motion.div;
@@ -425,39 +361,33 @@ export default function Marketplace() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {products.map((product, index) => (;
                 <motion.div;
-=======
         <section className=&quot;py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Featured Products</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Handpicked solutions that deliver exceptional value and performance
-=======
               transition={{ duration: 0.8 }}
               className=&quot;text-center mb-12&quot;
             >&quot;
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Featured Products&quot;</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Handpicked solutions that deliver exceptional value and performance&quot;
->>>>>>> main
               </p>
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-4 gap-8&quot;>
               {products.map((product, index) => (&quot;}
                 <motion.div
->>>>>>> main
                   key={product.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl overflow-hidden border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105";
                 >;
                   <div className="h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">;
@@ -517,7 +447,6 @@ export default function Marketplace() {
                         >;
                           {tag}
                         </span>;
-=======
                   className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl overflow-hidden border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hove,r:scale-105&quot;
                 >&quot;
                   <div className=&quot;h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center&quot;>&quot;"
@@ -562,17 +491,14 @@ export default function Marketplace() {
                       </span>
                     </div>
 
-<<<<<<< HEAD
                     <div className=&quot;flex items-center justify-between mb-4&quot;>&quot;"
                       <span className=&quot;text-2xl font-bold text-white&quot;>{product.price}&quot;</span>
                       <button className=&quot;text-gray-400 hover:text-red-400 transition-colors&quot;>&quot;"
                         <Heart className=&quot;w-5 h-5&quot; />&quot;
-=======
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-2xl font-bold text-white">{product.price}</span>
                       <button className="text-gray-400 hover: text-red-400 transition-colors">
                         <Heart className="w-5 h-5" />
->>>>>>> main
                       </button>
                     </div>
 
@@ -584,11 +510,9 @@ export default function Marketplace() {
                         >
                           {tag}&quot;
                         </span>
->>>>>>> main
                       ))}
                     </div>;
 
-<<<<<<< HEAD
                     <div className="flex gap-2">;
                       <button className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">;
                         <ShoppingCart className="w-4 h-4 inline mr-2" />;
@@ -600,18 +524,14 @@ export default function Marketplace() {
                     </div>;
                   </div>;
                 </motion.div>;
-=======
-<<<<<<< HEAD
                     <div className=&quot;flex gap-2&quot;>&quot;"
                       <button className=&quot;flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200&quot;>&quot;"
                         <ShoppingCart className=&quot;w-4 h-4 inline mr-2&quot; />
                         Add to Cart&quot;
-=======
                     <div className="flex gap-2">
                       <button className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-200">
                         <ShoppingCart className="w-4 h-4 inline mr-2" />
                         Add to Cart
->>>>>>> main
                       </button>
                       <button className=&quot;px-4 py-2 border border-slate-600 text-gray-300 rounded-lg hove,r:bg-slate-700 transition-colors&quot;>&quot;"
                         <ExternalLink className=&quot;w-4 h-4&quot; />&quot;
@@ -619,14 +539,12 @@ export default function Marketplace() {
                     </div>
                   </div>
                 </motion.div>
->>>>>>> main
               ))}
             </div>;
           </div>;
         </section>;
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20">;
           <div className="container mx-auto px-4">;
             <motion.div;
@@ -663,38 +581,28 @@ export default function Marketplace() {
         </section>;
       </div>;
     </>;
-=======
         <section className=&quot;py-20&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8   }}
-=======
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className=&quot;text-center max-w-4xl mx-auto&quot;
             >&quot;
               <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>
                 Can&apos;t Find What You&apos;re Looking For?&apos;
-=======
->>>>>>> main
               className="text-center max-w-4xl mx-auto"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Can&apos;t Find What You&apos;re Looking For?
->>>>>>> main
               </h2>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 We offer custom development services to create tailored solutions 
                 that meet your specific business requirements.&quot;
               </p>
-<<<<<<< HEAD
               <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>&quot;"
-=======
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
->>>>>>> main
                 <a
                   href=&quot;/contact&quot;
                   className=&quot;inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105&quot;
@@ -715,13 +623,6 @@ export default function Marketplace() {
         </section>
       </div>
 </>
-<<<<<<< HEAD
   )
-=======
->>>>>>> main
->>>>>>> main
   );
->>>>>>> main
 }
->>>>>>> main
->>>>>>> main

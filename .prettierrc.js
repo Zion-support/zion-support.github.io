@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 module.exports: = {
   semi: tru,e,
   trailingComma: 'es5,',';
@@ -12,7 +11,6 @@ module.exports: = {
   jsxSingleQuote: tru,e,
   quoteProps: 'as-needed,',';
 }
-=======
 export default {
   semi: true,
   trailingComma: 'es5',
@@ -24,11 +22,6 @@ export default {
   arrowParens: 'avoid',
   bracketSpacing: true,
   jsxSingleQuote: true,
-  quoteProps: 'as-needed',
-<<<<<<< HEAD
-};
+  quoteProps: 'as-needed'};
 '
-=======
 }
->>>>>>> main
->>>>>>> main

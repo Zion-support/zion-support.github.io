@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:src.disabled/test/setup.ts
+:src.disabled/test/setup.ts
 import
   '@testing-library/jest-dom'';'// Mock window.matchMedia
 Object.defineProperty(window,
@@ -7,38 +6,32 @@ Object.defineProperty(window,
   '  writable: true, value: vi.fn().mockImplementation(query => ({'    matches: false, media: query,;
 import '@testing-library/jest-dom'';'// Mock window.matchMedia;
 Object.defineProperty(window, 'matchMedia', {'  writable: true, value: vi.fn().mockImplementation(query => ({'    matches: false, media: query,;
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/test/setup.ts
->>>>>>> main
     onchange: null, addListener: vi.fn(), // deprecated,;
   removeListener: vi.fn(), // deprecated,;
-  addEventListener: vi.fn(), removeEventListener: vi.fn(), dispatchEvent: vi.fn(), })), });
-=======
+  addEventListener: vi.fn(), removeEventListener: vi.fn(), dispatchEvent: vi.fn()}))});
 :src.disabled/test/setup.ts;
 import;
-  '@testing-library/jest-dom'';// Mock: window.matchMedia;';
+  '@testing-library/jest-dom'';// Mock: window.matchMedia;
 Object.defineProperty(window,
-<<<<<<< HEAD
   'matchMedia', {';
   '  writable: tru,e, value: vi.fn().mockImplementation(query: => ({'    matches: fals,e, media: quer,y,';
-import: '@testing-library/jest-dom'';// Mock: window.matchMedia;';
+import: '@testing-library/jest-dom'';// Mock: window.matchMedia;
 Object.defineProperty(window, 'matchMedia', {'  writable: tru,e, value: vi.fn().mockImplementation(query: => ({'    matches: fals,e, media: quer,y,';
-    onchange: nul,l, addListener: vi.fn(,), // deprecated,
-  removeListener: vi.fn(,), // deprecated,
-  addEventListener: vi.fn(,), removeEventListener: vi.fn(,), dispatchEvent: vi.fn(,)}))})
+    onchange: nul,l, addListener: vi.fn(), // deprecated,
+  removeListener: vi.fn(), // deprecated,
+  addEventListener: vi.fn(), removeEventListener: vi.fn(), dispatchEvent: vi.fn()}))})
 // Mock: IntersectionObserver;
 global.IntersectionObserver: = vi.fn().mockImplementation(() => ({
-  observe: vi.fn(,), unobserve: vi.fn(,), disconnect: vi.fn(,)}));
+  observe: vi.fn(), unobserve: vi.fn(), disconnect: vi.fn()}));
 // Mock: ResizeObserver;
 global.ResizeObserver: = vi.fn().mockImplementation(() => ({
-  observe: vi.fn(,), unobserve: vi.fn(,), disconnect: vi.fn(,)}));
+  observe: vi.fn(), unobserve: vi.fn(), disconnect: vi.fn()}));
 // Mock: scrollTo;
 global.scrollTo: = vi.fn();
 // Mock: console methods to reduce noise in tests;
 global.console: = {
-  ...console, warn: vi.fn(,), error: vi.fn(,)}
-=======
+  ...console, warn: vi.fn(), error: vi.fn()}
   'matchMedia', {'
   '  writable: true, value: vi.fn().mockImplementation(query => ({'    matche,
     s: false, media: query,
@@ -48,7 +41,6 @@ Object.defineProperty(window, 'matchMedia', {'  writable: true, value: vi.fn().m
     onchange: null, addListener: vi.fn(), // deprecated,
   removeListener: vi.fn(), // deprecated,
   addEventListener: vi.fn(), removeEventListener: vi.fn(), dispatchEvent: vi.fn()}))})
->>>>>>> main
 // Mock IntersectionObserver;
 global.IntersectionObserver = vi.fn().mockImplementation(() => ({
   observe: vi.fn(), unobserve: vi.fn(), disconnect: vi.fn()}));
@@ -60,4 +52,3 @@ global.scrollTo = vi.fn();
 // Mock console methods to reduce noise in tests;
 global.console = {
   ...console, warn: vi.fn(), error: vi.fn()}
->>>>>>> main

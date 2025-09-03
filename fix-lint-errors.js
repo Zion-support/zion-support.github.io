@@ -9,21 +9,17 @@ function fixLintErrors(content) {
   let fixed = content;
 
   // Fix missing semicolons after imports
-<<<<<<< HEAD
   fixed = fixed.replace(/import\s+[^;]+$/gm, match => {
     if (!match.endsWith(';')) {
-      return match + ';';
-=======
+      return match + ';
   fixed = fixed.replace(/import\s+[^;]+$/gm, (match) => {
     if (!match.endsWith()) {
       return match + ;
->>>>>>> main
     }
     return match;
   });
 
   // Fix malformed imports with missing commas
-<<<<<<< HEAD
   fixed = fixed.replace(
     /import\s*{\s*([^}]+)\s*}\s*from\s*['"][^'"]+['"]\s*$/gm,
     (match, imports) => {
@@ -37,26 +33,21 @@ function fixLintErrors(content) {
         return match.replace(imports, cleanImports);
       }
       return match;
-=======
   fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"][^'"]+['"]\s*$/gm, (match, imports) => {
     // Check if imports have proper commas
-    if (imports && !imports.includes(,) && imports.trim().split(/\s+/).length > 1) {
-      const cleanImports = imports.trim().split(/\s+/).join(,);
+    if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {
+      const cleanImports = imports.trim().split(/\s+/).join();
       return match.replace(imports, cleanImports);
->>>>>>> main
     }
   );
 
   // Fix missing semicolons after variable declarations
-<<<<<<< HEAD
   fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^;]+$/gm, match => {
     if (!match.endsWith(';')) {
-      return match + ';';
-=======
+      return match + ';
   fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^;]+$/gm, (match) => {
     if (!match.endsWith()) {
       return match + ;
->>>>>>> main
     }
     return match;
   });
@@ -81,8 +72,7 @@ function fixLintErrors(content) {
 async function main() {
   // Get all TypeScript/JavaScript files
   const files = await glob('src/**/*.{ts,tsx,js,jsx}', {
-    ignore: ['node_modules/**'],
-  });
+    ignore: ['node_modules/**']});
 
   console.log(`Found ${files.length} files to process...`);
 

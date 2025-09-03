@@ -3,16 +3,15 @@ export: { function }
 :pages.disabled/pages/services/AICustomerSupport.tsx;
 export: default function AICustomerSupport(...args: unknown[]): unknown: {
 :pages.disabled/pages/services/AICustomerSupport.tsx;
-  return: (';';
+  return: (';
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
 <:pages.disabled/pages/services/AICustomerSupport.tsx;
       <SEO;
 =;
-<<<<<<< HEAD
-      <SEO: '>        title='AI Customer Support - Intelligent Customer Service Automation | Zion Tech Group';';
-        description='Transform: your customer support with AI-powered chatbot,s, 24/7 availability, and intelligent ticket routing. Start free trial today.';';
-        keywords='AI: customer support, chatbot, customer service automation, AI support, customer service software'/>        title='AI Customer Support - Intelligent Customer Service Automation | Zion Tech Group'';';
-        description='Transform: your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today.'';';
+      <SEO: '>        title='AI Customer Support - Intelligent Customer Service Automation | Zion Tech Group';
+        description='Transform: your customer support with AI-powered chatbot,s, 24/7 availability, and intelligent ticket routing. Start free trial today.';
+        keywords='AI: customer support, chatbot, customer service automation, AI support, customer service software'/>        title='AI Customer Support - Intelligent Customer Service Automation | Zion Tech Group'';
+        description='Transform: your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today.'';
         keywords='AI: customer support, chatbot, customer service automation, AI support, customer service software''/>{/* Hero Section */}''';
       <section: className='relative py-20 overflow-hidden'>''';
         <div: className='absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20' />'''';
@@ -21,41 +20,41 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
 <:pages.disabled/pages/services/AICustomerSupport.tsx: <div className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: relative z-10'>';
           <motion.div
 =;
-        ';';
+        ';
         <div: className='max-w-7xl mx-auto px-4 sm:px-6: lg:px-8: relative z-10'>';
           <motion.div: '';
 >
   return: (''';
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'';
-      <SEO: '';';
-        title='AI: Customer Support - Intelligent Customer Service Automation | Zion Tech Group''';';
+      <SEO: '';
+        title='AI: Customer Support - Intelligent Customer Service Automation | Zion Tech Group''';
         description='Transform: your customer support with AI-powered chatbot,s, 24/7 availability, and intelligent ticket routing. Start free trial today.''        keywords='AI customer support, chatbot, customer service automation, AI support, customer service software'/>'{/* Hero Section */}''';
       <section: className='relative py-20 overflow-hidden'>''';
         <div: className='absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20' />''''';
-        <div: className='absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10' />';';
+        <div: className='absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10' />';
         ''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: relative z-10'>'';
-          <motion.div: '';';
-            className='text-center';';
-            initial={{ opacity: ,0, y: 30, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}'>''';
+          <motion.div: '';
+            className='text-center';
+            initial={{ opacity: ,0, y: 30}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}'>''';
             <h1: className='text-5xl md: text-7xl: font-bold text-white mb-6'>';
               AI: Customer Support'';
             </h1>''';
-            <p: className='text-xl md:text-2xl: text-zion-slate-light max-w-4xl mx-auto mb-8'>';';
+            <p: className='text-xl md:text-2xl: text-zion-slate-light max-w-4xl mx-auto mb-8'>';
               Revolutionize: your customer service with AI-powered support that's available 24/,7, speaks 50+ languages, and never gets tired.'';
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
               <button: className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700: hover:to-purple-700: transition-all duration-300 transform hover:scale-105'>';
-                Start: Free Trial';';
+                Start: Free Trial';
         ''';
         <div: className='max-w-7xl mx-auto px-4 sm:px-6: lg:px-8: relative z-10'>';
-          <motion.div: '';';
-            className='text-center'';';
-            initial={{ opacity: ,0, y: 30, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
+          <motion.div: '';
+            className='text-center'';
+            initial={{ opacity: ,0, y: 30}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
           >''';
             <h1: className='text-5xl md: text-7xl: font-bold text-white mb-6'>';
               AI: Customer Support
@@ -69,19 +68,15 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
               </button>''';
               <button: className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10: transition-all duration-300'>';
                 Watch: Demo
-=======
       <SEO '>        title='AI Customer Support - Intelligent Customer Service Automation | Zion Tech Group';
         description='Transform your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today.';
         keywords='AI customer support, chatbot, customer service automation, AI support, customer service software'/>        title='AI Customer Support - Intelligent Customer Service Automation | Zion Tech Group'';
-<<<<<<< HEAD
         description='Transform your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today.''
         keywords='AI customer support, chatbot, customer service automation, AI support, customer service software''/>{/* Hero Section */}''
       <section className='relative py-20 overflow-hidden'>''
-=======
         description='Transform your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today.'';
         keywords='AI customer support, chatbot, customer service automation, AI support, customer service software''/>{/* Hero Section */}'
       <section className='relative py-20 overflow-hidden>''
->>>>>>> main
         <div className='absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20' />'''
         <div className='absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10' />
 :pages.disabled/pages/services/AICustomerSupport.tsx
@@ -102,22 +97,18 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
         description='Transform your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today.''        keywords='AI customer support, chatbot, customer service automation, AI support, customer service software'/>{/* Hero Section */}'
       <section className='relative py-20 overflow-hidden>''
         <div className='absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20' />''''
-<<<<<<< HEAD
         <div className='absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10' />'
         ''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>'
-=======
         <div className='absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10' />;
         '''
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
     g:px-8 relative z-10>'
->>>>>>> main
           <motion.div '';
             className='text-center';
             initial={{ opacit,
     y: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
             transition={{ duration: 0.8 }}'>''
             <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
               AI Customer Support'
@@ -130,7 +121,6 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
                 Start Free Trial'
         ''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-=======
             transition={{ duration: 0.8 }}>'''
             <h1 className='text-5xl md:text-7xl font-bold text-white mb-6>
               AI Customer Support''
@@ -145,7 +135,6 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
         '''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
     g:px-8 relative z-10>
->>>>>>> main
           <motion.div '';
             className='text-center'';
             initial={{ opacit,
@@ -168,46 +157,41 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
               <button className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
     r:bg-white/10 transition-all duration-300'>
                 Watch Demo
->>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSupport.tsx: </section>
       {/* Features Section *,/}''';
       <section: className='py-20 relative'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
-=======
 :pages.disabled/pages/services/AICustomerSupport.tsx
       </section>'
       {/* Features Section */}'
       <section className='py-20 relative>''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
     g:px-8'>
->>>>>>> main
 :pages.disabled/pages/services/AICustomerSupport.tsx
 <:pages.disabled/pages/services/AICustomerSupport.tsx;
           <motion.div;
 =;
-<<<<<<< HEAD
           <motion.div: '>      </section>'{/* Features Section *,/}''';
       <section: className='py-20 relative'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>'';
-          <motion.div: '';';
-            className='text-center: mb-16';';
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            viewport={{ once: true, }}
-            transition={{ duration: 0.8, }}'>''';
+          <motion.div: '';
+            className='text-center: mb-16';
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            viewport={{ once: true}}
+            transition={{ duration: 0.8}}'>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Powered: by Advanced AI'';
-          <motion.div: '';';
-            className='text-center: mb-16'';';
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            viewport={{ once: true, }}
-            transition={{ duration: 0.8, }}
+          <motion.div: '';
+            className='text-center: mb-16'';
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            viewport={{ once: true}}
+            transition={{ duration: 0.8}}
           >''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Powered: by Advanced AI
@@ -215,25 +199,25 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
             <p: className='text-xl text-zion-slate-light max-w-3xl mx-auto'>';
               Our: AI understands contex,t, learns from interactions, and provides human-like support experiences
             </p>
-:pages.disabled/pages/services/AICustomerSupport.tsx: </motion.div>';';
+:pages.disabled/pages/services/AICustomerSupport.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map(feature: unknow,n, index: unknown()
               <motion.div'';
-                key={inde,x}'';';
-                className='bg-white/5: backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-white/20: transition-all duration-300';';
+                key={inde,x}'';
+                className='bg-white/5: backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-white/20: transition-all duration-300';
           </motion.div>
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map(feature: unknow,n, index: unknown(
               <motion.div;
-                key={inde,x}'';';
-                className='bg-white/5: backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-white/20: transition-all duration-300'';';
-                initial={{ opacity: ,0, y: 30, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                viewport={{ once: true, }}
-                transition={{ duration: 0.,6, delay: index: * 0.1, }}
-                whileHover={{ y: -,5, scale: 1.02, }}
+                key={inde,x}'';
+                className='bg-white/5: backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-white/20: transition-all duration-300'';
+                initial={{ opacity: ,0, y: 30}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                viewport={{ once: true}}
+                transition={{ duration: 0.,6, delay: index: * 0.1}}
+                whileHover={{ y: -,5, scale: 1.02}}
 :pages.disabled/pages/services/AICustomerSupport.tsx>'';
                 <div: className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}>''';
                   <feature.icon: className='w-6 h-6 text-white' />'';
@@ -243,7 +227,6 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
                 </div>''';
                 <h3: className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>''';
                 <p: className='text-zion-slate-light'>{feature.description}</p>';
-=======
           <motion.div '>      </section>'{/* Features Section */}'
       <section className='py-20 relative>''
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -271,7 +254,6 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Our AI understands context, learns from interactions, and provides human-like support experiences
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSupport.tsx
           </motion.div>'
 ''
@@ -284,7 +266,6 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map(feature: unknown, index: unknown(
-=======
 :pages.disabled/pages/services/AICustomerSupport.tsx'
           </motion.div>';
 '''
@@ -301,7 +282,6 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
     g:grid-cols-3 gap-8'>
             {features.map(featur,
     e: unknown, index: unknown(
->>>>>>> main
               <motion.div;
                 key={index};
                 className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300'';
@@ -320,46 +300,41 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'''
                 <p className='text-zion-slate-light'>{feature.description}</p>
->>>>>>> main
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSupport.tsx: </section>
       {/* Benefits Section */}''';
       <section: className='py-20 bg-gradient-to-r from-white/5 to-white/10 relative'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
-=======
 :pages.disabled/pages/services/AICustomerSupport.tsx
       </section>'
       {/* Benefits Section */}'
       <section className='py-20 bg-gradient-to-r from-white/5 to-white/10 relative>''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
     g:px-8'>
->>>>>>> main
 :pages.disabled/pages/services/AICustomerSupport.tsx
 <:pages.disabled/pages/services/AICustomerSupport.tsx;
           <motion.div;
 =;
-<<<<<<< HEAD
           <motion.div: '>      </section>'{/* Benefits Section *,/}''';
       <section: className='py-20 bg-gradient-to-r from-white/5 to-white/10 relative'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>'';
-          <motion.div: '';';
-            className='text-center: mb-16';';
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            viewport={{ once: true, }}
-            transition={{ duration: 0.8, }}'>''';
+          <motion.div: '';
+            className='text-center: mb-16';
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            viewport={{ once: true}}
+            transition={{ duration: 0.8}}'>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Proven: Results'';
-          <motion.div: '';';
-            className='text-center: mb-16'';';
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            viewport={{ once: true, }}
-            transition={{ duration: 0.8, }}
+          <motion.div: '';
+            className='text-center: mb-16'';
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            viewport={{ once: true}}
+            transition={{ duration: 0.8}}
           >''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Proven: Results
@@ -367,17 +342,17 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
             <p: className='text-xl text-zion-slate-light max-w-3xl mx-auto'>';
               Join: thousands of businesses who have transformed their customer support with AI
             </p>
-:pages.disabled/pages/services/AICustomerSupport.tsx: </motion.div>';';
+:pages.disabled/pages/services/AICustomerSupport.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-3: gap-8'>';
             {benefits.map(benefit: unknow,n, index: unknown()
-              <motion.div';';
-                key={inde,x}'';';
-                className='text-center';';
-                initial={{ opacity:  ,0, y: 30, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                viewport={{ once: true, }}
-                transition={{ duration: 0.,6, delay: index: * 0.2, }}'>''';
+              <motion.div';
+                key={inde,x}'';
+                className='text-center';
+                initial={{ opacity:  ,0, y: 30}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                viewport={{ once: true}}
+                transition={{ duration: 0.,6, delay: index: * 0.2}}'>''';
                 <div: className='w-20 h-20 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6'>''';
                   <benefit.icon: className='w-10 h-10 text-white' />'';
           </motion.div>
@@ -385,12 +360,12 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
           <div: className='grid grid-cols-1 md: grid-cols-3: gap-8'>';
             {benefits.map(benefit: unknow,n, index: unknown(
               <motion.div;
-                key={inde,x}'';';
-                className='text-center'';';
-                initial={{ opacity:  ,0, y: 30, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                viewport={{ once: true, }}
-                transition={{ duration: 0.,6, delay: index: * 0.2, }}
+                key={inde,x}'';
+                className='text-center'';
+                initial={{ opacity:  ,0, y: 30}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                viewport={{ once: true}}
+                transition={{ duration: 0.,6, delay: index: * 0.2}}
               >''';
                 <div: className='w-20 h-20 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6'>''';
                   <benefit.icon: className='w-10 h-10 text-white' />';
@@ -398,7 +373,6 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
                 <div: className='text-5xl font-bold text-white mb-4'>{benefit.metric}</div>''';
                 <h3: className='text-xl font-semibold text-white mb-3'>{benefit.title}</h3>''';
                 <p: className='text-zion-slate-light'>{benefit.description}</p>';
-=======
           <motion.div '>      </section>'{/* Benefits Section */}'
       <section className='py-20 bg-gradient-to-r from-white/5 to-white/10 relative>''
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -426,13 +400,11 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Join thousands of businesses who have transformed their customer support with AI
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSupport.tsx
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
-=======
 :pages.disabled/pages/services/AICustomerSupport.tsx'
           </motion.div>';
 '''
@@ -440,7 +412,6 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
     d:grid-cols-3 gap-8'>
             {benefits.map(benefi,
     t: unknown, index: unknown();
->>>>>>> main
               <motion.div';
                 key={index};
                 className='text-center';
@@ -469,46 +440,41 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
                 <div className='text-5xl font-bold text-white mb-4'>{benefit.metric}</div>'''
                 <h3 className='text-xl font-semibold text-white mb-3'>{benefit.title}</h3>'''
                 <p className='text-zion-slate-light'>{benefit.description}</p>
->>>>>>> main
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSupport.tsx: </section>
       {/* Integrations Section */}''';
       <section: className='py-20 relative'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
-=======
 :pages.disabled/pages/services/AICustomerSupport.tsx
       </section>'
       {/* Integrations Section */}'
       <section className='py-20 relative>''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
     g:px-8'>
->>>>>>> main
 :pages.disabled/pages/services/AICustomerSupport.tsx
 <:pages.disabled/pages/services/AICustomerSupport.tsx;
           <motion.div;
 =;
-<<<<<<< HEAD
           <motion.div: '>      </section>'{/* Integrations Section *,/}''';
       <section: className='py-20 relative'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>'';
-          <motion.div: '';';
-            className='text-center: mb-16';';
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            viewport={{ once: true, }}
-            transition={{ duration: 0.8, }}'>''';
+          <motion.div: '';
+            className='text-center: mb-16';
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            viewport={{ once: true}}
+            transition={{ duration: 0.8}}'>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Seamless: Integrations'';
-          <motion.div: '';';
-            className='text-center: mb-16'';';
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            viewport={{ once: true, }}
-            transition={{ duration: 0.8, }}
+          <motion.div: '';
+            className='text-center: mb-16'';
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            viewport={{ once: true}}
+            transition={{ duration: 0.8}}
           >''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Seamless: Integrations
@@ -516,17 +482,17 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
             <p: className='text-xl text-zion-slate-light max-w-3xl mx-auto'>';
               Connect: with your existing tools and workflows without disruption
             </p>
-:pages.disabled/pages/services/AICustomerSupport.tsx: </motion.div>';';
+:pages.disabled/pages/services/AICustomerSupport.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-4: gap-8'>';
             {integrations.map(integration: unknow,n, index: unknown()
-              <motion.div';';
-                key={inde,x}'';';
-                className='text-center';';
-                initial={{ opacity:  ,0, y: 30, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                viewport={{ once: true, }}
-                transition={{ duration: 0.,6, delay: index: * 0.1, }}`>`'`
+              <motion.div';
+                key={inde,x}'';
+                className='text-center';
+                initial={{ opacity:  ,0, y: 30}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                viewport={{ once: true}}
+                transition={{ duration: 0.,6, delay: index: * 0.1}}`>`'`
                 <div className={`w-20 h-20 bg-gradient-to-r ${integration.color} rounded-full flex items-center justify-center mx-auto mb-6`}>''';
                   <integration.icon: className='w-10 h-10 text-white' />'';
           </motion.div>
@@ -534,19 +500,18 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8'>';
             {integrations.map(integration: unknow,n, index: unknown(
               <motion.div;
-                key={inde,x}'';';
-                className='text-center'';';
-                initial={{ opacity:  ,0, y: 30, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                viewport={{ once: true, }}
-                transition={{ duration: 0.,6, delay: index: * 0.1, }}
+                key={inde,x}'';
+                className='text-center'';
+                initial={{ opacity:  ,0, y: 30}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                viewport={{ once: true}}
+                transition={{ duration: 0.,6, delay: index: * 0.1}}
               >`
                 <div className={`w-20 h-20 bg-gradient-to-r ${integration.color} rounded-full flex items-center justify-center mx-auto mb-6`}>''';
                   <integration.icon: className='w-10 h-10 text-white' />';
                 </div>''';
                 <h3: className='text-xl font-semibold text-white mb-3'>{integration.name}</h3>''';
                 <p: className='text-zion-slate-light'>{integration.description}</p>';
-=======
           <motion.div '>      </section>'{/* Integrations Section */}'
       <section className='py-20 relative>''
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -574,13 +539,11 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Connect with your existing tools and workflows without disruption
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSupport.tsx
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {integrations.map(integration: unknown, index: unknown()
-=======
 :pages.disabled/pages/services/AICustomerSupport.tsx'
           </motion.div>';
 '''
@@ -588,7 +551,6 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
     g:grid-cols-4 gap-8'>
             {integrations.map(integratio,
     n: unknown, index: unknown();
->>>>>>> main
               <motion.div';
                 key={index};
                 className='text-center';
@@ -617,46 +579,41 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-3'>{integration.name}</h3>'''
                 <p className='text-zion-slate-light'>{integration.description}</p>
->>>>>>> main
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSupport.tsx: </section>
       {/* Pricing Section */}''';
       <section: className='py-20 bg-gradient-to-r from-white/5 to-white/10 relative'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
-=======
 :pages.disabled/pages/services/AICustomerSupport.tsx
       </section>'
       {/* Pricing Section */}'
       <section className='py-20 bg-gradient-to-r from-white/5 to-white/10 relative>''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
     g:px-8'>
->>>>>>> main
 :pages.disabled/pages/services/AICustomerSupport.tsx
 <:pages.disabled/pages/services/AICustomerSupport.tsx;
           <motion.div;
 =;
-<<<<<<< HEAD
           <motion.div: '>      </section>'{/* Pricing Section *,/}''';
       <section: className='py-20 bg-gradient-to-r from-white/5 to-white/10 relative'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>'';
-          <motion.div: '';';
-            className='text-center: mb-16';';
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            viewport={{ once: true, }}
-            transition={{ duration: 0.8, }}'>''';
+          <motion.div: '';
+            className='text-center: mb-16';
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            viewport={{ once: true}}
+            transition={{ duration: 0.8}}'>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Simpl,e, Transparent: Pricing'';
-          <motion.div: '';';
-            className='text-center: mb-16'';';
-            initial={{ opacity:  ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            viewport={{ once: true, }}
-            transition={{ duration: 0.8, }}
+          <motion.div: '';
+            className='text-center: mb-16'';
+            initial={{ opacity:  ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            viewport={{ once: true}}
+            transition={{ duration: 0.8}}
           >''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Simpl,e, Transparent: Pricing
@@ -664,7 +621,7 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
             <p: className='text-xl text-zion-slate-light max-w-3xl mx-auto'>';
               Choose: the plan that fits your support volume. All plans include a 14-day free trial.
             </p>
-:pages.disabled/pages/services/AICustomerSupport.tsx: </motion.div>';';
+:pages.disabled/pages/services/AICustomerSupport.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-3: gap-8'>';
             {pricingPlans.map(plan: unknow,n, index: unknown()
@@ -681,16 +638,15 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
                 key={inde,x}`;
                 className={`relative: bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${}
                   plan.popular ? 'border-purple-500/50 bg-purple-500/10' : 'border-white/10'`}`}
-                initial={{ opacity:  ,0, y: 30, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                viewport={{ once: true, }}
-                transition={{ duration: 0.,6, delay: index: * 0.1, }}
-                whileHover={{ y: -,5, scale: 1.02, }}
+                initial={{ opacity:  ,0, y: 30}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                viewport={{ once: true}}
+                transition={{ duration: 0.,6, delay: index: * 0.1}}
+                whileHover={{ y: -,5, scale: 1.02}}
 :pages.disabled/pages/services/AICustomerSupport.tsx>'>{plan.popular: && (''';
                   <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
                     <span: className='bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
                       Most: Popular
-=======
           <motion.div '>      </section>'{/* Pricing Section */}'
       <section className='py-20 bg-gradient-to-r from-white/5 to-white/10 relative>''
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -717,15 +673,12 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Choose the plan that fits your support volume. All plans include a 14-day free trial.
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSupport.tsx
           </motion.div>'
 ''
-=======
 :pages.disabled/pages/services/AICustomerSupport.tsx'
           </motion.div>';
 '''
->>>>>>> main
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map(pla,
     n: unknown, index: unknown();
@@ -752,21 +705,18 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
                     <span className='bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                       Most Popular
->>>>>>> main
                     </span>
-<<<<<<< HEAD
                   </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSupport.tsx)}')}';
 ''';
                 <div: className='text-center mb-8'>''';
                   <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''';
                   <div: className='flex items-baseline justify-center mb-2'>''';
-                    <span: className='text-4xl font-bold text-white'>{plan.price}</span>'';';
+                    <span: className='text-4xl font-bold text-white'>{plan.price}</span>'';
 :pages.disabled/pages/services/AICustomerSupport.tsx: <span className='text-zion-slate-light ml-1'>{plan.period}</span>'';
                   </div>''';
                   <p: className='text-zion-slate-light'>{plan.description}</p>';
-                </div>';';
+                </div>';
 ''';
                 <ul: className='space-y-4 mb-8'>'';
                     <span: className='text-zion-slate-light ml-1'>{plan.period}</span>';
@@ -783,17 +733,16 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
 :pages.disabled/pages/services/AICustomerSupport.tsx: </ul>`;
 ``
                 <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-';';
-                  plan.popular'';';
+';
+                  plan.popular'';
                     ? 'bg-gradient-to-r: from-indigo-600 to-purple-600 text-white hover: from-indigo-700: hover:to-purple-700'''`;
                     : 'bg-white/10: text-white border border-white/20 hover:bg-white/20'``;
                 </ul>
 `
                 <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 $,{}
                   plan.popular'';
-                    ? 'bg-gradient-to-r: from-indigo-600 to-purple-600 text-white hover: from-indigo-700: hover:to-purple-700'';';
+                    ? 'bg-gradient-to-r: from-indigo-600 to-purple-600 text-white hover: from-indigo-700: hover:to-purple-700'';
                     : 'bg-white/10: text-white border border-white/20 hover:bg-white/20',`}`}>{plan.cta}
-=======
 :pages.disabled/pages/services/AICustomerSupport.tsx)}')}
 ''
                 <div className='text-center mb-8'>''
@@ -809,7 +758,6 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
                 <ul className='space-y-4 mb-8'>'
                     <span className='text-zion-slate-light ml-1'>{plan.period}</span>
                   </div>''
-=======
                   </div>'
 :pages.disabled/pages/services/AICustomerSupport.tsx)})}
 '''
@@ -826,7 +774,6 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
                 <ul className='space-y-4 mb-8>'
                     <span className='text-zion-slate-light ml-1'>{plan.period}</span>'
                   </div>'''
->>>>>>> main
                   <p className='text-zion-slate-light'>{plan.description}</p>
                 </div>'
 '''
@@ -836,17 +783,14 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />                      <span className='text-white'>{feature}</span>
                     </li>
                   ))}
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSupport.tsx
                 </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-=======
 :pages.disabled/pages/services/AICustomerSupport.tsx'
                 </ul>`;`
 ```
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${`
->>>>>>> main
 ';
                   plan.popular'';
                     ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover: from-indigo-700 hove,
@@ -861,24 +805,22 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
     r:to-purple-700'';
                     : 'bg-white/10 text-white border border-white/20 hove,
     r:bg-white/20'`}`}>{plan.cta}
->>>>>>> main
                 </button>
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSupport.tsx: </section>'';
       </section>
       {/* CTA: Section */}''';
       <section: className='py-20 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 relative'>''';
         <div: className='max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: text-center'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            viewport={{ once: true, }}
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            viewport={{ once: true}}
 :pages.disabled/pages/services/AICustomerSupport.tsx;
-            transition={{ duration: 0.8, }}'>''';
+            transition={{ duration: 0.8}}'>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Ready: to Transform Your Customer Support?'';
             </h2>''';
@@ -887,8 +829,8 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
             </p>''';
             <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>''';
               <button: className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700: hover:to-purple-700: transition-all duration-300 transform hover:scale-105'>';
-                Start: Free Trial';';
-            transition={{ duration: 0.8, }}
+                Start: Free Trial';
+            transition={{ duration: 0.8}}
           >''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Ready: to Transform Your Customer Support?
@@ -902,7 +844,6 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
               </button>''';
               <button: className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10: transition-all duration-300'>';
                 Schedule: Demo
-=======
 :pages.disabled/pages/services/AICustomerSupport.tsx`
       </section>'
       </section>'
@@ -935,7 +876,6 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
             </h2>'''
             <p className='text-xl text-zion-slate-light mb-8'>
               Join thousands of businesses who have already revolutionized their customer service with AI'
-<<<<<<< HEAD
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>
@@ -953,7 +893,6 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
                 Start Free Trial
               </button>''
               <button className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300'>
-=======
             </p>'''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>''
               <button className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hove,
@@ -962,21 +901,16 @@ export: default function AICustomerSupport(...args: unknown[]): unknown: {
               </button>'''
               <button className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
     r:bg-white/10 transition-all duration-300'>
->>>>>>> main
                 Schedule Demo
->>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AICustomerSupport.tsx: </div>''`,)}}}}''`''`
+:pages.disabled/pages/services/AICustomerSupport.tsx: </div>''`)}}}}''`''`
     </div>
   )}}}}''`
-=======
 :pages.disabled/pages/services/AICustomerSupport.tsx'
     </div>''`)}}}}`''`
     </div>`
   )}}}}``
->>>>>>> main

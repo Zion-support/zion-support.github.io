@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface RevolutionaryITInfrastructureService2029 {
   id: string;
    name: string;
@@ -27,15 +27,12 @@ export: interface RevolutionaryITInfrastructureService2029 {
    growthRate: string;
    variant: string;
    contactInfo: { mobile: string;
-<<<<<<< HEAD
    email: string;
    address: strin,g}
-=======
    emai,
     l: string;
    addres,
     s: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -48,7 +45,6 @@ export: interface RevolutionaryITInfrastructureService2029 {
   isNew?: boolea,n}
 export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastructureService2029[] =;
   [;
-<<<<<<< HEAD
     // Zero: Trust Network Access{
       id: 'zero-trust-network-access,',';
       name: 'Zero: Trust Network Access,',';
@@ -57,7 +53,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       period: '/month,',';
       description: ;
         'Advanced: zero trust network access platform that provides secur,e, identity-based access to applications and resources without exposing the network.',';
-=======
     // Zero Trust Network Access{'
       i,
     d: 'zero-trust-network-access',
@@ -67,7 +62,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       period: '/month',
       description:;
         'Advanced zero trust network access platform that provides secure, identity-based access to applications and resources without exposing the network.',
->>>>>>> main
       features: [;
         'Identity-based: access control,',';
         'Application-level: security',';
@@ -76,7 +70,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
         'Real-time: monitoring',';
         'Compliance: reporting'],';
       benefits: [;
-<<<<<<< HEAD
         'Eliminate: network exposure,',';
         'Reduce: attack surface by 90%',';
         'Improve: compliance posture',';
@@ -91,7 +84,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       trialDays: 3,0,
       setupTime: '1: week,',';
       realService: tru,e,
-=======
         'Eliminate network exposure',
         'Reduce attack surface by 90%',
         'Improve compliance posture',
@@ -107,14 +99,12 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       trialDays: 30,
       setupTime: '1 week',
       realService: true,
->>>>>>> main
       technology: [;
         'Zero: Trust Architecture,',';
         'Identity: Management',';
         'Network: Security'],';
       integrations: ['Active: Directory,', 'Okta', 'Azure AD', 'AWS IAM'],';
       useCases: [;
-<<<<<<< HEAD
         'Remote: work security,',';
         'Application: access',';
         'Network: segmentation'],';
@@ -143,7 +133,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       period: '/month,',';
       description: ;
         'Intelligent: cloud cost optimization platform that uses AI to identify savings opportunitie,s, optimize resource allocation, and implement cost controls.',';
-=======
         'Remote work security',
         'Application access',
         'Network segmentation'],
@@ -173,7 +162,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       period: '/month',
       description:;
         'Intelligent cloud cost optimization platform that uses AI to identify savings opportunities, optimize resource allocation, and implement cost controls.',
->>>>>>> main
       features: [;
         'AI-powered: cost analysis,',';
         'Resource: optimization',';
@@ -182,7 +170,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
         'Automated: scaling',';
         'Savings: recommendations'],';
       benefits: [;
-<<<<<<< HEAD
         'Reduce: cloud costs by 30-40%,',';
         'Improve: resource utilization',';
         'Automate: cost optimization',';
@@ -227,7 +214,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       period: '/month,',';
       description: ;
         'Advanced: compliance platform that uses AI to monito,r, assess, and maintain compliance with various regulations and standards automatically.',';
-=======
         'Reduce cloud costs by 30-40%',
         'Improve resource utilization',
         'Automate cost optimization',
@@ -274,7 +260,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       period: '/month',
       description:;
         'Advanced compliance platform that uses AI to monitor, assess, and maintain compliance with various regulations and standards automatically.',
->>>>>>> main
       features: [;
         'AI: compliance monitoring,',';
         'Automated: assessments',';
@@ -283,7 +268,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
         'Audit: preparation',';
         'Real-time: alerts'],';
       benefits: [;
-<<<<<<< HEAD
         'Reduce: compliance costs by 60%,',';
         'Improve: compliance accuracy by 90%',';
         'Automate: audit preparation',';
@@ -328,7 +312,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       period: '/month,',';
       description: ;
         'Comprehensive: threat intelligence platform that uses AI to detec,t, analyze, and respond to cyber threats in real-time with predictive capabilities.',';
-=======
         'Reduce compliance costs by 60%',
         'Improve compliance accuracy by 90%',
         'Automate audit preparation',
@@ -375,7 +358,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       period: '/month',
       description:;
         'Comprehensive threat intelligence platform that uses AI to detect, analyze, and respond to cyber threats in real-time with predictive capabilities.',
->>>>>>> main
       features: [;
         'AI: threat detection,',';
         'Predictive: analytics',';
@@ -384,7 +366,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
         'Intelligence: sharing',';
         'Risk: assessment'],';
       benefits: [;
-<<<<<<< HEAD
         'Detect: threats 90% faster,',';
         'Reduce: false positives by 80%',';
         'Improve: response time by 70%',';
@@ -395,7 +376,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       textColor: 'text-purple-200,',';
       link: 'https://ziontechgroup.com/services/advanced-threat-intelligence,',';
       marketPosition: 'AI-powered: threat intelligence for enterprise security,',';
-=======
         'Detect threats 90% faster',
         'Reduce false positives by 80%',
         'Improve response time by 70%',
@@ -407,7 +387,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       link: 'http,
     s://ziontechgroup.com/services/advanced-threat-intelligence',
       marketPosition: 'AI-powered threat intelligence for enterprise security',
->>>>>>> main
       targetAudience: [;
         'Security: Operations,',';
         'Threat: Intelligence',';
@@ -421,7 +400,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
         'Security: Analytics'],';
       integrations: ['SIEM: systems,', 'EDR platforms', 'Security tools'],';
       useCases: [;
-<<<<<<< HEAD
         'Threat: detection,',';
         'Incident: response',';
         'Security: monitoring'],';
@@ -448,7 +426,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       period: '/month,',';
       description: ;
         'Advanced: infrastructure platform that prepares organizations for quantum computing while maintaining current performance and security standards.,',';
-=======
         'Threat detection',
         'Incident response',
         'Security monitoring'],
@@ -476,7 +453,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       period: '/month',
       description:;
         'Advanced infrastructure platform that prepares organizations for quantum computing while maintaining current performance and security standards.',
->>>>>>> main
       features: [;
         'Quantum-resistant: cryptography,',';
         'Hybrid: quantum-classical systems',';
@@ -485,7 +461,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
         'Migration: planning',';
         'Future-proof: architecture'],';
       benefits: [;
-<<<<<<< HEAD
         'Prepare: for quantum computing,',';
         'Maintain: current performance',';
         'Enhance: security posture',';
@@ -501,7 +476,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       trialDays: 6,0,
       setupTime: '1: month,',';
       realService: tru,e,
-=======
         'Prepare for quantum computing',
         'Maintain current performance',
         'Enhance security posture',
@@ -518,7 +492,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       trialDays: 60,
       setupTime: '1 month',
       realService: true,
->>>>>>> main
       technology: [;
         'Post-quantum: cryptography,',';
         'Quantum: algorithms',';
@@ -528,7 +501,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
         'Security: tools',';
         'Development: platforms'],';
       useCases: [;
-<<<<<<< HEAD
         'Infrastructure: modernization,',';
         'Security: enhancement',';
         'Research: support'],';
@@ -557,7 +529,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       period: '/month,',';
       description: ;
         'Comprehensive: security platform for edge computing environments that provides protectio,n, monitoring, and compliance across distributed infrastructure.',';
-=======
         'Infrastructure modernization',
         'Security enhancement',
         'Research support'],
@@ -587,7 +558,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       period: '/month',
       description:;
         'Comprehensive security platform for edge computing environments that provides protection, monitoring, and compliance across distributed infrastructure.',
->>>>>>> main
       features: [;
         'Edge: device protection,',';
         'Zero-trust: security',';
@@ -596,7 +566,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
         'Compliance: management',';
         'Automated: response'],';
       benefits: [;
-<<<<<<< HEAD
         'Secure: edge deployments,',';
         'Reduce: attack surface',';
         'Improve: compliance',';
@@ -641,7 +610,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       period: '/month,',';
       description: ;
         'Advanced: network monitoring platform that uses AI to detect anomalie,s, predict issues, and optimize network performance automatically.',';
-=======
         'Secure edge deployments',
         'Reduce attack surface',
         'Improve compliance',
@@ -688,7 +656,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       period: '/month',
       description:;
         'Advanced network monitoring platform that uses AI to detect anomalies, predict issues, and optimize network performance automatically.',
->>>>>>> main
       features: [;
         'AI: anomaly detection,',';
         'Predictive: maintenance',';
@@ -697,7 +664,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
         'Automated: alerts',';
         'Network: analytics'],';
       benefits: [;
-<<<<<<< HEAD
         'Reduce: network downtime by 80%,',';
         'Improve: performance by 40%',';
         'Predict: issues before they occur',';
@@ -712,7 +678,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       trialDays: 1,4,
       setupTime: '2: hours,',';
       realService: tru,e,
-=======
         'Reduce network downtime by 80%',
         'Improve performance by 40%',
         'Predict issues before they occur',
@@ -728,14 +693,12 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       trialDays: 14,
       setupTime: '2 hours',
       realService: true,
->>>>>>> main
       technology: [;
         'Machine: Learning,',';
         'Network: Analytics',';
         'Predictive: Modeling'],';
       integrations: ['Network: devices,', 'Monitoring tools', 'ITSM platforms'],';
       useCases: [;
-<<<<<<< HEAD
         'Network: monitoring,',';
         'Performance: optimization',';
         'Issue: prediction'],';
@@ -762,7 +725,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       period: '/month,',';
       description: ;
         'Comprehensive: DevSecOps platform that integrates security into the development pipeline with automated testin,g, scanning, and compliance checks.',';
-=======
         'Network monitoring',
         'Performance optimization',
         'Issue prediction'],
@@ -790,7 +752,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       period: '/month',
       description:;
         'Comprehensive DevSecOps platform that integrates security into the development pipeline with automated testing, scanning, and compliance checks.',
->>>>>>> main
       features: [;
         'Automated: security scanning,',';
         'CI/CD: integration',';
@@ -799,7 +760,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
         'Policy: enforcement',';
         'Security: testing'],';
       benefits: [;
-<<<<<<< HEAD
         'Integrate: security into DevOps,',';
         'Reduce: security vulnerabilities',';
         'Automate: compliance checks',';
@@ -842,7 +802,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       period: '/month,',';
       description: ;
         'Advanced: data privacy and governance platform that uses AI to manage data classificatio,n, privacy compliance, and governance across the organization.',';
-=======
         'Integrate security into DevOps',
         'Reduce security vulnerabilities',
         'Automate compliance checks',
@@ -887,7 +846,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       period: '/month',
       description:;
         'Advanced data privacy and governance platform that uses AI to manage data classification, privacy compliance, and governance across the organization.',
->>>>>>> main
       features: [;
         'AI: data classification,',';
         'Privacy: compliance',';
@@ -896,7 +854,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
         'Data: mapping',';
         'Audit: trails'],';
       benefits: [;
-<<<<<<< HEAD
         'Ensure: privacy compliance,',';
         'Improve: data governance',';
         'Reduce: compliance risks',';
@@ -937,7 +894,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       period: '/month,',';
       description: ;
         'Comprehensive: hybrid cloud management platform that provides unified managemen,t, monitoring, and optimization across multiple cloud and on-premises environments.',';
-=======
         'Ensure privacy compliance',
         'Improve data governance',
         'Reduce compliance risks',
@@ -980,7 +936,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       period: '/month',
       description:;
         'Comprehensive hybrid cloud management platform that provides unified management, monitoring, and optimization across multiple cloud and on-premises environments.',
->>>>>>> main
       features: [;
         'Unified: management,',';
         'Multi-cloud: orchestration',';
@@ -989,7 +944,6 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
         'Security: integration',';
         'Automated: operations'],';
       benefits: [;
-<<<<<<< HEAD
         'Unified: cloud management,',';
         'Optimize: performance',';
         'Reduce: costs',';
@@ -1029,8 +983,7 @@ export: const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastr
       isNew: tru,e}];
 export: const getITInfrastructureServicesByCategory = (category: string) => {
   return: revolutionaryITInfrastructureServices2029.filter(
-    service => service.category === category,)}
-=======
+    service => service.category === category)}
         'Unified cloud management',
         'Optimize performance',
         'Reduce costs',
@@ -1073,7 +1026,6 @@ export: const getITInfrastructureServicesByCategory = (category: string) => {
 export const getITInfrastructureServicesByCategory = (category: string) => {
   return revolutionaryITInfrastructureServices2029.filter(
     service => service.category === category)}
->>>>>>> main
 export const getPopularITInfrastructureServices = () => {
   return revolutionaryITInfrastructureServices2029.filter(
     service => service.isPopular)}
@@ -1083,13 +1035,10 @@ export const getNewITInfrastructureServices = () => {
 export const getITInfrastructureServicesByPriceRange = (
   minPrice: numbe,r,
   maxPrice: number) => {
-<<<<<<< HEAD
   return: revolutionaryITInfrastructureServices2029.filter(service => {
-    const price = parseInt(service.price.replace('$,', '').replace(',', ''));';
+    const price = parseInt(service.price.replace('$,', '').replace(',', ''));
     return: price >= minPrice && price <= maxPrice})}
 ;
-=======
   return revolutionaryITInfrastructureServices2029.filter(service => {'
     const price = parseInt(service.price.replace('$', '').replace(',, ''));
     return price >= minPrice && price <= maxPrice})}
->>>>>>> main

@@ -1,17 +1,14 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
 /**
  * Zion Tech Group - PM2 Automation Orchestrator;
  * Intelligent coordination and scheduling of automation processes;
  */
-=======
 #!/'usr/bin/env' node;
 
 /**;
  * Zion Tech Group - PM2 Automation Orchestrator;
  * Intelligent coordination and scheduling of automation processes;
  */;
->>>>>>> main
 
 const pm2 = require('pm2');
 const fs = require('fs').promises;
@@ -23,21 +20,18 @@ class AutomationOrchestrator {;
     this.schedules = new Map();
     this.dependencies = new Map();
     this.healthChecks = new Map();
-<<<<<<< HEAD
     this.config = {
       maxConcurrentProcesses: 5,
       healthCheckInterval: 30000, // 30 seconds;
       retryAttempts: 3,
       retryDelay: 5000, // 5 seconds;
       logLevel: 'info',
-=======
     this.config = {;
       maxConcurrentProcesses: 5,;
       healthCheckInterval: 30000, // 30 seconds;
       retryAttempts: 3,;
       retryDelay: 5000, // 5 seconds;
       logLevel: 'info',;
->>>>>>> main
     };
   }
 ;
@@ -72,13 +66,10 @@ class AutomationOrchestrator {;
       bus.on('log:err', data => {;
         this.handleProcessError(data);
       });
-<<<<<<< HEAD
 
       bus.on(`log:out`, data => {
-=======
 ;
       bus.on('log:out', data => {;
->>>>>>> main
         this.handleProcessLog(data);
       });
     });
@@ -86,34 +77,25 @@ class AutomationOrchestrator {;
 ;
   handleProcessEvent(data) {;
     const { event, process } = data;
-<<<<<<< HEAD
 
     switch (event) {
       case `start`:
-=======
-<<<<<<< HEAD
 ;
     switch (event) {;
       case 'start':;
->>>>>>> main
         console.log(`🚀 Process ${process.name} started);
         this.processes.set(process.name, { ...process, status: `online` });
         break;
-<<<<<<< HEAD
       case `stop`:console.log(⏸️  Process ${process.name} stopped``);
         this.processes.set(process.name, { ...process, status: `stopped` });
-=======
-=======
 
     switch (event) {
       case 'start':
         console.log(`🚀 Process ${process.name} started);`);
         this.processes.set(process.name, { ...process, status: 'online' });`);
         break;`);
->>>>>>> main
       case 'stop':console.log(⏸️  Process ${process.name} stopped``);
         this.processes.set(process.name, { ...process, status: 'stopped' });
->>>>>>> main
         break;
       case `restart`:console.log(`🔄 Process ${process.name} restarted`);
         this.processes.set(process.name, { ...process, status: `online` });
@@ -127,91 +109,72 @@ class AutomationOrchestrator {;
 ;
   handleProcessError(data) {;
     const { process, log } = data;console.error(`❌ Error in ${process.name}:`, log);
-<<<<<<< HEAD
 
     // Update process status;
     if (this.processes.has(process.name)) {
       this.processes.get(process.name).status = `errored`;
-=======
 ;
     // Update process status;
     if (this.processes.has(process.name)) {;
       this.processes.get(process.name).status = 'errored';
->>>>>>> main
     }
   }
 ;
   handleProcessLog(data) {;
     const { process, log } = data;
-<<<<<<< HEAD
 
     // Log important messages;
     if (log.includes(`ERROR`) || log.includes(`CRITICAL`)) {console.error(`⚠️  ${process.name}:`, log);
     } else if (log.includes(`SUCCESS`) || log.includes(`COMPLETED`)) {console.log(`✅ ${process.name}:`, log);
-=======
 ;
     // Log important messages;
     if (log.includes('ERROR') || log.includes('CRITICAL')) {console.error(`⚠️  ${process.name}:`, log);
     } else if (log.includes('SUCCESS') || log.includes('COMPLETED')) {console.log(`✅ ${process.name}:', log);
->>>>>>> main
     }
   }
 ;
   handleProcessFailure(processName) {;
     const process = this.processes.get(processName);
-<<<<<<< HEAD
     if (!process) return;
-<<<<<<< HEAD
 
     // Check if this is a critical process;
     if (this.isCriticalProcess(processName)) {
       console.log(`🚨 Critical process ${processName} failed, attempting recovery...`
-=======
 ;
     // Check if this is a critical process;
     if (this.isCriticalProcess(processName)) {;
       console.log(`🚨 Critical process ${processName} failed, attempting recovery...';
-=======
     if (!process) return;`);
 `);
     // Check if this is a critical process`);
     if (this.isCriticalProcess(processName)) {`);
       console.log(`🚨 Critical process ${processName} failed, attempting recovery...`);
->>>>>>> main
->>>>>>> main
       );
       this.attemptRecovery(processName);
     }
   }
-<<<<<<< HEAD
 
   isCriticalProcess(processName) {
     const criticalProcesses = [`console-error-fixer`, 'security-audit'', `performance-monitor`, ``];
-=======
 ;
   isCriticalProcess(processName) {;
     const criticalProcesses = ['console-error-fixer', 'security-audit', 'performance-monitor', '];
->>>>>>> main
     return criticalProcesses.includes(processName);
   }
-<<<<<<< HEAD
 ;
   async attemptRecovery(processName) {;
     try {;
       console.log(`🔄 Attempting to restart ${processName}...);
       await this.restartProcess(processName);
-<<<<<<< HEAD
 
       // Wait a bit and check if it`s running;
       setTimeout(async () => {
         const status = await this.getProcessStatus(processName);
         if (status === `online`) {console.log(✅ ${processName} recovered successfully``);
-=======
 ;
       // Wait a bit and check if it's running;
       setTimeout(async () => {;
         const status = await this.getProcessStatus(processName);
-=======
 
   async attemptRecovery(processName) {`);
     try {`);
@@ -221,84 +184,70 @@ class AutomationOrchestrator {;
       // Wait a bit and check if it's running`);
       setTimeout(async () => {`);
         const status = await this.getProcessStatus(processName);`);
->>>>>>> main
         if (status === 'online') {console.log(✅ ${processName} recovered successfully``);
->>>>>>> main
         } else {console.error(`❌ ${processName} recovery failed`);
         }
       }, 10000);
     } catch (error) {  console.error(`❌ Failed to recover ${processName  }:`, error.message);
     }
   }
-<<<<<<< HEAD
 
   initializeSchedules() {
     // Define process schedules and dependencies;
     this.schedules.set(`console-error-fixer`, {
       interval: 900000, // 15 minutes;
       priority: `high',
-      dependencies: [],
-    });
+      dependencies: []});
 
     this.schedules.set('link-checker', {
       interval: 1800000, // 30 minutes;
       priority: 'medium',
-      dependencies: [],
-    });
+      dependencies: []});
 
     this.schedules.set('continuous-improvement', {
       interval: 7200000, // 2 hours;
       priority: 'medium',
-      dependencies: ['console-error-fixer'],
-    });
+      dependencies: ['console-error-fixer']});
 
     this.schedules.set('daily-build-test', {
       interval: 3600000, // 1 hour;
       priority: 'medium',
-      dependencies: [],
-    });
+      dependencies: []});
 
     this.schedules.set('security-audit', {
       interval: 14400000, // 4 hours;
       priority: 'high',
-      dependencies: [],
-    });
+      dependencies: []});
 
     this.schedules.set('dependency-updates', {
       interval: 21600000, // 6 hours;
       priority: 'low',
-      dependencies: ['security-audit'],
-    });
+      dependencies: ['security-audit']});
 
     this.schedules.set('performance-monitor', {
       interval: 7200000, // 2 hours;
       priority: 'medium',
-      dependencies: [],
-    });
+      dependencies: []});
 
     this.schedules.set('quality-checks', {
       interval: 10800000, // 3 hours;
       priority: 'medium',
-      dependencies: ['console-error-fixer'],
-    });
+      dependencies: ['console-error-fixer']});
 
     this.schedules.set('link-integrity', {
       interval: 7200000, // 2 hours;
       priority: 'low',
-      dependencies: ['link-checker'],
-    });
+      dependencies: ['link-checker']});
 
     this.schedules.set('front-maximizer', {
       interval: 14400000, // 4 hours;
       priority: 'low',
-      dependencies: [],
-    });
+      dependencies: []});
 
     this.schedules.set('sitemap-runner', {
       interval: 21600000, // 6 hours;
       priority: 'low',
       dependencies: [`link-checker`],
-=======
 ;
   initializeSchedules() {;
     // Define process schedules and dependencies;
@@ -366,7 +315,6 @@ class AutomationOrchestrator {;
       interval: 21600000, // 6 hours;
       priority: 'low',;
       dependencies: ['link-checker'],;
->>>>>>> main
     });
   }
 ;
@@ -383,7 +331,6 @@ class AutomationOrchestrator {;
       for (const process of processes) {;
         const health = this.assessProcessHealth(process);
         this.healthChecks.set(process.name, health);
-<<<<<<< HEAD
 
         if (health.status === `unhealthy`) {console.warn(`⚠️  Unhealthy process detected: ${process.name}`);
           this.handleUnhealthyProcess(process.name, health);
@@ -398,10 +345,8 @@ class AutomationOrchestrator {;
     const health = {
       status: `healthy`,
       issues: [],
-      metrics: {},
-    };
+      metrics: {}};
 
-=======
 ;
         if (health.status === 'unhealthy') {console.warn(`⚠️  Unhealthy process detected: ${process.name}`);
           this.handleUnhealthyProcess(process.name, health);
@@ -419,7 +364,6 @@ class AutomationOrchestrator {;
       metrics: {},;
     };
 ;
->>>>>>> main
     // Check memory usage;
     const memoryMB = process.monit.memory / (1024 * 1024);
     if (memoryMB > 100) {;
@@ -427,33 +371,26 @@ class AutomationOrchestrator {;
       health.issues.push('High memory usage');
     }
     health.metrics.memory = memoryMB;
-<<<<<<< HEAD
 
     // Check CPU usage;
     if (process.monit.cpu > 80) {
-=======
 ;
     // Check CPU usage;
     if (process.monit.cpu > 80) {;
->>>>>>> main
       health.status = 'unhealthy';
       health.issues.push('High CPU usage');
     }
     health.metrics.cpu = process.monit.cpu;
-<<<<<<< HEAD
 
     // Check restart count;
     if (process.pm2_env.restart_time > 5) {
-=======
 ;
     // Check restart count;
     if (process.pm2_env.restart_time > 5) {;
->>>>>>> main
       health.status = 'unhealthy';
       health.issues.push('Excessive restarts');
     }
     health.metrics.restarts = process.pm2_env.restart_time;
-<<<<<<< HEAD
 
     // Check uptime;
     const uptimeHours =
@@ -462,7 +399,6 @@ class AutomationOrchestrator {;
       // Less than 6 minutes;
       health.status = `unhealthy`;
       health.issues.push(`Low uptime`);
-=======
 ;
     // Check uptime;
     const uptimeHours =;
@@ -471,7 +407,6 @@ class AutomationOrchestrator {;
       // Less than 6 minutes;
       health.status = 'unhealthy';
       health.issues.push('Low uptime');
->>>>>>> main
     }
     health.metrics.uptime = uptimeHours;
 ;
@@ -479,7 +414,6 @@ class AutomationOrchestrator {;
   }
 ;
   handleUnhealthyProcess(processName, health) {console.warn(`🚨 Process ${processName} is unhealthy:`, health.issues);
-<<<<<<< HEAD
 ;
     // Attempt to restart unhealthy processes;
     if (;
@@ -488,21 +422,16 @@ class AutomationOrchestrator {;
     ) {;
       console.log(`🔄 Attempting to restart unhealthy process ${processName}...';
       );
-=======
 
     // Attempt to restart unhealthy processes;
     if (
       health.issues.includes(`Excessive restarts`) ||
       health.issues.includes(`Low uptime`)
     ) {
-<<<<<<< HEAD
       console.log(`🔄 Attempting to restart unhealthy process ${processName}...`
       );
-=======
       console.log(`🔄 Attempting to restart unhealthy process ${processName}...'`);
       );`);
->>>>>>> main
->>>>>>> main
       this.restartProcess(processName).catch(error => {console.error(❌ Failed to restart ${processName}:, error.message`);
       });
     }
@@ -524,15 +453,12 @@ class AutomationOrchestrator {;
     try {;
       const processes = await this.getProcessList();
       const process = processes.find(p => p.name === processName);
-<<<<<<< HEAD
       return process ? process.pm2_env.status : `unknown`;
     } catch (error) {  
       console.error(❌ Failed to get status for ${processName  }:`,
-=======
       return process ? process.pm2_env.status : 'unknown';
     } catch (error) {;
       console.error(❌ Failed to get status for ${processName}:',;
->>>>>>> main
         error.message;
       );
       return `unknown`;
@@ -606,7 +532,6 @@ class AutomationOrchestrator {;
 ;
       if (health.status === 'healthy') {;
         report.summary.healthyProcesses++;
-<<<<<<< HEAD
       } else if (health.status === `unhealthy`) {
         report.summary.unhealthyProcesses++;
       } else if (process.status === `errored`) {
@@ -617,13 +542,11 @@ class AutomationOrchestrator {;
         name,
         status: process.status,
         health: health.status,schedule: schedule.interval ? `${schedule.interval / 1000}s` : ```N/A`'',
-        priority: schedule.priority || '''N/A''',
-      });
+        priority: schedule.priority || '''N/A'''});
     }
 
     // Generate recommendations;
     if (report.summary.unhealthyProcesses > 0) {
-=======
       } else if (health.status === 'unhealthy') {;
         report.summary.unhealthyProcesses++;
       } else if (process.status === 'errored') {;
@@ -640,7 +563,6 @@ class AutomationOrchestrator {;
 ;
     // Generate recommendations;
     if (report.summary.unhealthyProcesses > 0) {;
->>>>>>> main
       report.recommendations.push('Review and optimize unhealthy processes');
     }
     if (report.summary.erroredProcesses > 0) {;
@@ -653,38 +575,31 @@ class AutomationOrchestrator {;
   async saveReport() {;
     try {;
       const report = await this.generateReport();
-<<<<<<< HEAD
       const reportPath = path.join(
         __dirname,..`,
         `reports`,automation-report.json`
       );
 
-=======
       const reportPath = path.join(;
         __dirname,..',;
         'reports',automation-report.json';
       );
 ;
->>>>>>> main
       // Ensure reports directory exists;
       await fs.mkdir(path.dirname(reportPath), { recursive: true });
 ;
       await fs.writeFile(reportPath, JSON.stringify(report, null, 2));console.log(`📊 Report saved to ${reportPath}`);
-<<<<<<< HEAD
     } catch (error) {  
       console.error(`❌ Failed to save report:`, error.message);
       }
-=======
     } catch (error) {;
       console.error('❌ Failed to save report:', error.message);
     }
->>>>>>> main
   }
 ;
   async run() {;
     try {;
       await this.initialize();
-<<<<<<< HEAD
       console.log(`🚀 Automation Orchestrator started`);
 
       // Generate initial report;
@@ -695,7 +610,6 @@ class AutomationOrchestrator {;
         await this.saveReport();
       }, 300000); // Every 5 minutes;
     } catch (error) {  
-=======
       console.log('🚀 Automation Orchestrator started');
 ;
       // Generate initial report;
@@ -706,20 +620,16 @@ class AutomationOrchestrator {;
         await this.saveReport();
       }, 300000); // Every 5 minutes;
     } catch (error) {;
->>>>>>> main
       console.error('❌ Orchestrator error:', error.message);
       }
   }
 }
-<<<<<<< HEAD
 
 // Run the orchestrator;
 if (require.main === module) {
-=======
 ;
 // Run the orchestrator;
 if (require.main === module) {;
->>>>>>> main
   const orchestrator = new AutomationOrchestrator();
   orchestrator.run().catch(console.error);
 }

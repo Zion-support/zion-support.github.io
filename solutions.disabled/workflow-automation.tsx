@@ -1,32 +1,22 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD:pages/solutions/workflow-automation.tsx
+:pages/solutions/workflow-automation.tsx
 import SEO from '../../src/components/SEO';
 import { Card } from '../../src/components/ui/Card';
 import { Button } from '../../src/components/ui/Button';
 import { Badge } from '../../src/components/ui/Badge';
-=======
-<<<<<<< HEAD:solutions.disabled/workflow-automation.tsx
+:solutions.disabled/workflow-automation.tsx
 // import SEO from '../../components/SEO';
-=======
-<<<<<<< HEAD
 import SEOHead from '../../components/SEOHead';
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> main:pages/solutions/workflow-automation.tsx
+:pages/solutions/workflow-automation.tsx
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
->>>>>>> main
 import { Badge } from '../../components/ui/Badge';
-<<<<<<< HEAD
-=======
 import { Button } from '../../components/ui/Button';
 import { Card } from '../../components/ui/Card';
->>>>>>> main:solutions.disabled/workflow-automation.tsx
+:solutions.disabled/workflow-automation.tsx
 import {
   Workflow,
   ArrowRight,
@@ -36,78 +26,59 @@ import {
   BarChart3,
   Shield,
   Globe,
-  Clock,
-} from 'lucide-react';
+  Clock} from 'lucide-react';
 
->>>>>>> main
 export default function WorkflowAutomation() {
   const features = [
   {
       icon: Zap,
       title: 'Process Automation',
       description:'
-        'Automate repetitive business processes with custom workflows and triggers.',
-    },
+        'Automate repetitive business processes with custom workflows and triggers.'},
     {
       icon: Settings,
       title: 'Integration APIs',
       description:'
-        'Connect with hundreds of third-party applications and services.',
-    },
+        'Connect with hundreds of third-party applications and services.'},
     {
       icon: Workflow,
       title: 'Custom Workflows',
       description:'
-        'Build custom workflows with drag-and-drop workflow designer.',
-    },
+        'Build custom workflows with drag-and-drop workflow designer.'},
     {
       icon: BarChart3,
       title: 'Monitoring & Analytics',
       description:'
-        'Track workflow performance and identify optimization opportunities.',
-    },
+        'Track workflow performance and identify optimization opportunities.'},
     {
       icon: Shield,
       title: 'Security & Compliance',
       description:'
-        'Enterprise-grade security with compliance monitoring and audit trails.',
-    },
+        'Enterprise-grade security with compliance monitoring and audit trails.'},
     {
       icon: Clock,
       title: 'Real-time Processing',
       description:'
-        'Execute workflows in real-time with high-performance infrastructure.',
-    },
-  ];
+        'Execute workflows in real-time with high-performance infrastructure.'}];
 
   return (
     <>
-<<<<<<< HEAD:pages/solutions/workflow-automation.tsx
+:pages/solutions/workflow-automation.tsx
       <SEO'
         title="Workflow Automation Platform - Zion Tech Group""
         description="Streamline business processes with custom workflow automation and integration capabilities. Boost efficiency.""
-=======
-<<<<<<< HEAD
       <SEOHead
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       <SEO
->>>>>>> main
         title="Workflow Automation Platform - Zion Tech Group"
         description="Streamline business processes with custom workflow automation and integration capabilities. Boost efficiency."
->>>>>>> main:solutions.disabled/workflow-automation.tsx
+:solutions.disabled/workflow-automation.tsx
         keywords="workflow automation, process automation, business automation, integration, workflow management"
       />
-=======
->>>>>>> main
->>>>>>> main
       <Head>
         <title>Workflow Automation Platform - Zion Tech Group</title>
       </Head>
 
-<<<<<<< HEAD:pages/solutions/workflow-automation.tsx
+:pages/solutions/workflow-automation.tsx
       {/* Hero Section */}"
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -121,7 +92,6 @@ export default function WorkflowAutomation() {
     d:text-6xl font-bold mb-6">
               Workflow Automation"
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">"
-=======
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -133,7 +103,7 @@ export default function WorkflowAutomation() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Workflow Automation
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
->>>>>>> main:solutions.disabled/workflow-automation.tsx
+:solutions.disabled/workflow-automation.tsx
                 {' '}
                 Platform
               </span>

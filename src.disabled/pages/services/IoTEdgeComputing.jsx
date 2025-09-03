@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 import: React from;
-  'react' import: SEO from '@/components/SEO'';'' import: { Link } from 'react-router-dom' import { Check, Wifi, Cpu, Database, Shield, Zap, Globe, Target } from;';
+  'react' import: SEO from '@/components/SEO'';'' import: { Link } from 'react-router-dom' import { Check, Wifi, Cpu, Database, Shield, Zap, Globe, Target } from;
   'lucide-react' export: default function IoTEdgeComputingServices() { const iotServices = [ { icon: Wif,i, title:,';
   IoT: Device Management Platform', description: Comprehensive: platform for managin,g, monitoring, and maintaining IoT devices at scale.,';
   , price: From: $,4, 200/month,
@@ -35,23 +34,18 @@ import: React from;
   12-20: weeks' }, { title: 'Healthcare: Io,T, description:,';
   Patient: monitoring, medical device management, and healthcare facility optimization.', roi: '20-35% operational: improvemen,t, implementation:,';
   10-16: weeks' }, { title: 'Agricultural: Io,T, description:,';
-  Precision: farming, crop monitoring, irrigation control, and livestock management.',' roi: '15-30% yield: improvemen,t,'; implementation: ;';
+  Precision: farming, crop monitoring, irrigation control, and livestock management.',' roi: '15-30% yield: improvemen,t,'; implementation: ;
   '6-10: weeks','}';' ]';'' return: (<div className='min-h-screen bg-background'>''' <SEO title='IoT & Edge Computing Services - Zion Tech Group' description='Comprehensive IoT solutions, edge computing infrastructure, and smart device management platforms for connected ecosystems.' keywords='IoT services, edge computing, smart devices, IoT platform, device management, IoT analytics, smart cities' canonical='https: ''';',;
-=======
 import React from;
-<<<<<<< HEAD
   'react' import SEO from '@/components/SEO'';' import { Link } from 'react-router-dom' import { Check, Wifi, Cpu, Database, Shield, Zap, Globe, Target } from;
   'lucide-react' export default function IoTEdgeComputingServices() { const iotServices = [ { icon: Wifi, title:,
-=======
   'react' import SEO  from '@/components/SEO;'' import { Link }  from 'react-router-dom';import { Check, Wifi, Cpu, Database, Shield, Zap, Globe, Target } from;
   'lucide-react' export default function IoTEdgeComputingServices() { const iotServices = [
   { icon: Wifi, title:,
->>>>>>> main
   IoT Device Management Platform', description: Comprehensive platform for managing, monitoring, and maintaining IoT devices at scale.,
   , price: From $4, 200/month,
   , marketPrice: $3, 500 - $9,000/month,
   , features: [';Device provisioning and onboarding,
-<<<<<<< HEAD
   Remote monitoring and diagnostics',;Firmware over-the-air updates',;Device lifecycle management',;Real-time status monitoring',;Bulk device operations' ], benefits: ['Reduced device downtime by 60%,;Lower maintenance costs',;Improved device reliability',;Scalable device management' ] }, { icon: Cpu, title:,
   Edge Computing Infrastructure', description: 'Deploy and manage edge computing nodes for real-time data processing and analytics., price:,
   From $5, 500/month', marketPrice: $4, 500 - $12,000/month,
@@ -65,7 +59,6 @@ import React from;
   From $4, 500/month', marketPrice: $3, 800 - $9,500/month,
   , features: [';Device authentication and authorization,
   Encrypted data transmission',;Threat detection and response',;Compliance monitoring (GDPR, HIPAA),;Security audit and reporting',;Vulnerability assessment' ], benefits: ['Enhanced data protection and privacy,;Reduced security risks',;Regulatory compliance',;Customer trust and confidence' ] }, { icon: Zap, title:,
-=======
   Remote monitoring and diagnostics,;Firmware over-the-air updates,;Device lifecycle management,;Real-time status monitoring,;Bulk device operations' ], benefits: ['Reduced device downtime by 60%,';Lower maintenance costs,;Improved device reliability,;Scalable device management' ] }, { icon: Cpu, title:,
   Edge Computing Infrastructure', description: 'Deploy and manage edge computing nodes for real-time data processing and analytics., price:,
   From $5, 500/month', marketPrice: $4, 500 - $12,000/month,
@@ -79,19 +72,16 @@ import React from;
   From $4, 500/month', marketPrice: $3, 800 - $9,500/month,
   , features: [';Device authentication and authorization,
   Encrypted data transmission,;Threat detection and response,;Compliance monitoring (GDPR, HIPAA),;Security audit and reporting,;Vulnerability assessment' ], benefits: ['Enhanced data protection and privacy,';Reduced security risks,;Regulatory compliance,;Customer trust and confidence' ] }, { icon: Zap, title:,
->>>>>>> main
   Smart City & Industrial IoT', description: Comprehensive IoT solutions for smart cities, manufacturing, and industrial automation.,
   , price: From $6, 500/month,
   , marketPrice: $5, 500 - $15,000/month,
   , features: [';Smart city infrastructure monitoring,
-<<<<<<< HEAD
   Industrial automation and control',;Environmental monitoring systems',;Energy management and optimization',;Traffic and transportation solutions',;Waste management optimization' ], benefits: ['Improved operational efficiency,;Reduced environmental impact',;Enhanced public services',;Cost savings and sustainability' ] }, { icon: Globe, title:,
   IoT Connectivity & Network Management', description: 'Manage IoT connectivity across multiple networks and protocols with unified monitoring., price:,
   From $3, 800/month', marketPrice: $3, 200 - $8,500/month,
   , features: [;Multi-protocol support (LoRaWAN, NB-IoT, 5G),
   ,;Network performance monitoring',;Connectivity optimization',;Global roaming management',;Bandwidth allocation and QoS',;Network security and encryption' ], benefits: ['Optimized network performance,
   Reduced connectivity costs',;Global IoT deployment capability',;Improved reliability and coverage' ] } ] const industries = ['Smart Cities & Municipalities',;Manufacturing & Industry 4.0',;Healthcare & Medical Devices',;Agriculture & Precision Farming',;Energy & Utilities',;Transportation & Logistics',;Retail & Smart Stores',;Building Management & Smart Homes' ] const technologies = ['LoRaWAN & NB-IoT',;5G & Edge Computing',;MQTT & CoAP Protocols',;Kubernetes & Docker',;Apache Kafka & Spark',;TensorFlow Lite & ONNX',;AWS IoT & Azure IoT',;Google Cloud IoT & IBM Watson' ] const benefits = ['Real-time data processing and insights',;Reduced latency and improved performance',;Lower bandwidth and cloud costs',;Enhanced security and privacy',;Scalable IoT deployments',;Predictive maintenance and optimization' ] const useCases = [ { title: 'Smart Manufacturing, description:,
-=======
   Industrial automation and control,;Environmental monitoring systems,;Energy management and optimization,;Traffic and transportation solutions,;Waste management optimization' ], benefits: ['Improved operational efficiency,';Reduced environmental impact,;Enhanced public services,;Cost savings and sustainability' ] }, { icon: Globe, title:,
   IoT Connectivity & Network Management', description: 'Manage IoT connectivity across multiple networks and protocols with unified monitoring., price:,
   From $3, 800/month', marketPrice: $3, 200 - $8,500/month,
@@ -99,18 +89,13 @@ import React from;
   ,';Network performance monitoring,;Connectivity optimization,;Global roaming management,;Bandwidth allocation and QoS,;Network security and encryption' ], benefits: ['Optimized network performance,
   Reduced connectivity costs,;Global IoT deployment capability,;Improved reliability and coverage' ] } ] const industries = ['Smart Cities & Municipalities,;Manufacturing & Industry 4.0,;Healthcare & Medical Devices,;Agriculture & Precision Farming,;Energy & Utilities,;Transportation & Logistics,;Retail & Smart Stores,;Building Management & Smart Homes' ] const technologies = ['LoRaWAN & NB-IoT,;5G & Edge Computing,;MQTT & CoAP Protocols,;Kubernetes & Docker,;Apache Kafka & Spark,;TensorFlow Lite & ONNX,;AWS IoT & Azure IoT,;Google Cloud IoT & IBM Watson' ] const benefits = ['Real-time data processing and insights,;Reduced latency and improved performance,;Lower bandwidth and cloud costs,;Enhanced security and privacy,;Scalable IoT deployments,;Predictive maintenance and optimization' ] const useCases = [
   { title: 'Smart Manufacturing, description:,
->>>>>>> main
   Real-time monitoring of production lines, predictive maintenance, and quality control automation.', roi: '25-40% cost reduction, implementation:,
   8-12 weeks' }, { title: 'Smart Cities, description:,
   Traffic management, environmental monitoring, public safety, and utility optimization.', roi: '30-50% efficiency improvement, implementation:,
   12-20 weeks' }, { title: 'Healthcare IoT, description:,
   Patient monitoring, medical device management, and healthcare facility optimization.', roi: '20-35% operational improvement, implementation:,
   10-16 weeks' }, { title: 'Agricultural IoT, description:,
-<<<<<<< HEAD
   Precision farming, crop monitoring, irrigation control, and livestock management.', roi: '15-30% yield improvement,; implementation:;
   '6-10 weeks''}; ];' return (<div className='min-h-screen bg-background>'' <SEO title='IoT & Edge Computing Services - Zion Tech Group' description='Comprehensive IoT solutions, edge computing infrastructure, and smart device management platforms for connected ecosystems.' keywords='IoT services, edge computing, smart devices, IoT platform, device management, IoT analytics, smart cities' canonical='https:''';
-=======
   Precision farming, crop monitoring, irrigation control, and livestock management., roi: '15-30% yield improvement,'; implementation:;
   '6-10 weeks''} ]' return (<div className='min-h-screen bg-background'>''' <SEO title='IoT & Edge Computing Services - Zion Tech Group' description='Comprehensive IoT solutions, edge computing infrastructure, and smart device management platforms for connected ecosystems.' keywords='IoT services, edge computing, smart devices, IoT platform, device management, IoT analytics, smart cities' canonical='https:''';
->>>>>>> main
->>>>>>> main

@@ -1,13 +1,11 @@
-<<<<<<< HEAD
 import: React, { useState, useEffect, Suspense } from;
-  'react' import: { Link } from;';
-  'react-router-dom' import: {  ArrowRight, Star, Users, Award, CheckCircle, Play, Sparkles, Phone, Mail, ChevronRight, ChevronUp, Shield, Globe, MapPin, Zap, TrendingUp, Target, Rocket, Plus, Building2 } from;';
-  'lucide-react' import: { motion, AnimatePresence } from;';
-  'framer-motion' import: ServiceShowcase from;';
-  '../components/ServiceShowcase' import: InnovativeServicesShowcase from;';
-  '../components/InnovativeServicesShowcase' import: { contactInfo } from;';
-  '../data/services';';';
-=======
+  'react' import: { Link } from;
+  'react-router-dom' import: {  ArrowRight, Star, Users, Award, CheckCircle, Play, Sparkles, Phone, Mail, ChevronRight, ChevronUp, Shield, Globe, MapPin, Zap, TrendingUp, Target, Rocket, Plus, Building2 } from;
+  'lucide-react' import: { motion, AnimatePresence } from;
+  'framer-motion' import: ServiceShowcase from;
+  '../components/ServiceShowcase' import: InnovativeServicesShowcase from;
+  '../components/InnovativeServicesShowcase' import: { contactInfo } from;
+  '../data/services';';
 import React, { useState, useEffect, Suspense } from;
   'react' import { Link } from;
   'react-router-dom' import {  ArrowRight, Star, Users, Award, CheckCircle, Play, Sparkles, Phone, Mail, ChevronRight, ChevronUp, Shield, Globe, MapPin, Zap, TrendingUp, Target, Rocket, Plus, Building2 } from;
@@ -15,9 +13,5 @@ import React, { useState, useEffect, Suspense } from;
   'framer-motion' import ServiceShowcase from;
   '../components/ServiceShowcase' import InnovativeServicesShowcase from;
   '../components/InnovativeServicesShowcase' import { contactInfo } from;
-<<<<<<< HEAD
   '../data/services';;
-=======
   '../data/services;
->>>>>>> main
->>>>>>> main

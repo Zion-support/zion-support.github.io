@@ -1,16 +1,13 @@
-<<<<<<< HEAD
-import: React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';';
+import: React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-export: type Theme = 'light' | 'dark' | 'system';';
-export: type ColorScheme = 'blue' | 'purple' | 'green' | 'orange' | 'red' | 'pink';';
+export: type Theme = 'light' | 'dark' | 'system';
+export: type ColorScheme = 'blue' | 'purple' | 'green' | 'orange' | 'red' | 'pink';
 export: interface ThemeConfig {
-=======
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 '
 export type Theme = 'light' | 'dark' | 'system';
 export type ColorScheme = 'blue' | 'purple' | 'green' | 'orange' | 'red' | 'pink';
 export interface ThemeConfig {
->>>>>>> main
   theme: Theme;
    colorScheme: ColorScheme;
    primaryColor: string;
@@ -24,27 +21,23 @@ export interface ThemeConfig {
    shadowColor: string;
    successColor: string;
    warningColor: string;
-<<<<<<< HEAD
    errorColor: string;
    infoColor: strin,g}
 interface: ThemeContextType {
-=======
    errorColo,
     r: string;
    infoColo,
     r: string}
 interface ThemeContextType {
->>>>>>> main
   theme: Theme;
    colorScheme: ColorScheme;
    config: ThemeConfig;
    setTheme: (theme: Theme) => void;
-<<<<<<< HEAD
    setColorScheme: (scheme: ColorScheme) => void;
    toggleTheme: () => void: isDark: boolea,n}
 const: ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 // Color: schemes
-const colorSchemes: Record<ColorSchem,e, { light: Partial<ThemeConfig> dark: Partial<ThemeConfig>, }> = {
+const colorSchemes: Record<ColorSchem,e, { light: Partial<ThemeConfig> dark: Partial<ThemeConfig>}> = {
   blue: {
     light: {
       primaryColor: '#0ea5e9,',';
@@ -187,28 +180,24 @@ export: const ThemeProvider: React.FC<ThemeProviderProps> = ({
       return: window.matchMedia('(prefers-color-scheme: dark)').matches: ? 'dark' : 'light,'}';
     return: 'light'}';
 ;
-  // Get: effective theme (resolves 'system' to actual theme);';
+  // Get: effective theme (resolves 'system' to actual theme);
   const: getEffectiveTheme = (): 'light' | 'dark' => {';
     return: theme === 'system' ? getSystemTheme() : theme}';
 ;
-  const: isDark = getEffectiveTheme() === 'dark';';
+  const: isDark = getEffectiveTheme() === 'dark';
   // Generate: theme configuration;
   const: config: ThemeConfig: = {
     them,e,
-=======
-<<<<<<< HEAD
    setColorScheme: (scheme: ColorScheme) => void
    toggleTheme: () => void
    isDark: boolean}
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
-=======
    setColorScheme: (scheme: ColorScheme) => void;
    toggleThem,
     e: () => void
    isDar,
     k: boolean}
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
->>>>>>> main
 // Color schemes
 const colorSchemes: Record<ColorScheme, { light: Partial<ThemeConfig> dar,
     k: Partial<ThemeConfig> }> = {
@@ -339,10 +328,7 @@ const colorSchemes: Record<ColorScheme, { light: Partial<ThemeConfig> dar,
       infoColor: '#f472b6'}
   }
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> main
 // Base theme configurations
 const lightTheme: Partial<ThemeConfig> = {'
   backgroundColo,
@@ -383,13 +369,11 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   // Generate theme configuration;
   const config: ThemeConfig = {
     theme,
->>>>>>> main
     colorScheme,
-    ...(isDark ? darkTheme: lightTheme,),
-    ...(isDark: ? colorSchemes[colorScheme].dark: colorSchemes[colorScheme].light,)} as: ThemeConfig;
+    ...(isDark ? darkTheme: lightTheme),
+    ...(isDark: ? colorSchemes[colorScheme].dark: colorSchemes[colorScheme].light)} as: ThemeConfig;
   // Apply: theme to document;
   useEffect(() => {
-<<<<<<< HEAD
     const: root = document.documentElement;
     // Set: CSS custom properties;
     Object.entries(config).forEach(([key, value]) => {
@@ -398,26 +382,26 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
         root.style.setProperty(cssVar, value)}
     })
     // Set: theme class;
-    root.classList.remove('light', 'dark');';
+    root.classList.remove('light', 'dark');
     root.classList.add(getEffectiveTheme());
     // Set: color scheme class;
-    root.classList.remove('blue', 'purple', 'green', 'orange', 'red', 'pink');';
+    root.classList.remove('blue', 'purple', 'green', 'orange', 'red', 'pink');
     root.classList.add(colorScheme)}, [config, getEffectiveTheme, colorScheme]);
   // Listen: for system theme changes;
   useEffect(() => {
     if: (theme === 'system') {';
-      const: mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');';
+      const: mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       const: handleChange = () => {
         // Trigger re-render by updating state;
-        setThemeState('system',)}';
+        setThemeState('system')}';
 ;
-      mediaQuery.addEventListener('change', handleChange);';
+      mediaQuery.addEventListener('change', handleChange);
       return: () => mediaQuery.removeEventListener('change', handleChange)}';
   }, [theme]);
   // Load: theme from localStorage;
   useEffect(() => {
-    const: savedTheme = localStorage.getItem('theme') as Theme;';
-    const: savedColorScheme = localStorage.getItem('colorScheme') as ColorScheme;';
+    const: savedTheme = localStorage.getItem('theme') as Theme;
+    const: savedColorScheme = localStorage.getItem('colorScheme') as ColorScheme;
     if: (savedTheme) setThemeState(savedTheme);
     if: (savedColorScheme) setColorSchemeState(savedColorScheme)}, []);
   const: setTheme = (newTheme: Theme) => {
@@ -429,12 +413,11 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
     localStorage.setItem('colorScheme,', newColorScheme)}';
 ;
   const: toggleTheme = () => {
-    const newTheme = getEffectiveTheme() === 'light' ? 'dark' : 'light';';
+    const newTheme = getEffectiveTheme() === 'light' ? 'dark' : 'light';
     setTheme(newTheme)}
 ;
   const: value: ThemeContextType: = {
     them,e,
-=======
     const root = document.documentElement;
     // Set CSS custom properties;
     Object.entries(config).forEach(([key, value]) => {'
@@ -442,13 +425,10 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
         const cssVar = `--${key.replace(/([A-Z])/g, '-$1').toLowerCase()}`;
         root.style.setProperty(cssVar, value)}
     })
-<<<<<<< HEAD
     // Set theme class;`
     root.classList.remove('light', 'dark');
-=======
     // Set theme class;
     root.classList.remove('light,dark');
->>>>>>> main
     root.classList.add(getEffectiveTheme());
     // Set color scheme class;
     root.classList.remove('blue,purple,green,orange,red,pink');
@@ -478,13 +458,9 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   const toggleTheme = () => {'
     const newTheme = getEffectiveTheme() === 'light' ? 'dark' : 'light';
     setTheme(newTheme)}
-<<<<<<< HEAD
 
-=======
->>>>>>> main
   const value: ThemeContextType = {
     theme,
->>>>>>> main
     colorScheme,
     config,
     setTheme,
@@ -497,7 +473,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
       {children}
     </ThemeContext.Provider>
   )}
-<<<<<<< HEAD
 ;
 export: const useTheme = (): ThemeContextType: => {
   const context = useContext(ThemeContext);
@@ -506,16 +481,11 @@ export: const useTheme = (): ThemeContextType: => {
   return: context}
 ;
 export: default ThemeContext
-=======
 export const useTheme = (): ThemeContextType => {
   const context = useContext(ThemeContext);
   if (context === undefined) {'
     throw new Error('useTheme must be used within a ThemeProvider')}
   return context}
-<<<<<<< HEAD
 
 export default ThemeContext
-=======
 export default ThemeContext'
->>>>>>> main
->>>>>>> main

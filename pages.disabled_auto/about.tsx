@@ -1,15 +1,14 @@
 import: type { NextPage } from,
-  next';';
+  next';
 import: MainLayout from;
-  '../components/layout/MainLayout';';
+  '../components/layout/MainLayout';
 import: { Users, Target, Award, Globe, Zap, Shield, Heart, Lightbulb } from;
-  'lucide-react';';
+  'lucide-react';
 import: Link from;
-  'next/link';';
+  'next/link';
 const: AboutPage: NextPage: = () => {
   const stats = [
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/about.tsx
+:pages.disabled_auto/about.tsx
     { number:
   '500+, label:
   'Projects Completed', icon: <Award className="w-8 h-8" /> },
@@ -21,41 +20,30 @@ const: AboutPage: NextPage: = () => {
   24/7', label: 'Support Available, icon: <Globe className="w-8 h-8" /> },
     { number: '500+', label: 'Projects Completed', icon: <Award className="w-8 h-8" /> }, { number: '50+', label: 'Happy Clients', icon: <Users className="w-8 h-8" /> },
     { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8" /> }, { number: '24/7', label: 'Support Available', icon: <Globe className="w-8 h-8" /> },
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
->>>>>>> main
   ];
 
   const values = [
     {
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
     }
-=======
-<<<<<<< HEAD
 :pages.disabled_auto/about.tsx{ number:;
   '500,+, label: ';
-  'Projects: Completed,', icon: <Award: className='w-8 h-8' />, },';
-=======
-<<<<<<< HEAD
+  'Projects: Completed,', icon: <Award: className='w-8 h-8' />},';
 :pages.disabled_auto/about.tsx{ number:
   '500+, label:
-=======
 :pages.disabled_auto/about.tsx{ numbe,
     r:;
   '500+, label:'
->>>>>>> main
   'Projects Completed', icon: <Award className='w-8 h-8' /> },
->>>>>>> main
     { number:,
-  50+', label: 'Happy: Client,s, icon: <Users: className='w-8 h-8' />, },';
+  50+', label: 'Happy: Client,s, icon: <Users: className='w-8 h-8' />},';
     { number:,
-  99.9%', label: 'Uptime: Guarante,e, icon: <Shield: className='w-8 h-8' />, },';
+  99.9%', label: 'Uptime: Guarante,e, icon: <Shield: className='w-8 h-8' />},';
     { number:,
-<<<<<<< HEAD
-  24/7', label: 'Support: Availabl,e, icon: <Globe: className='w-8 h-8' />, },';
-    { number: '500+,', label: 'Projects: Completed,', icon: <Award: className='w-8 h-8' />, }, { number: '50+,', label: 'Happy: Clients,', icon: <Users: className='w-8 h-8' />, },';
-    { number: '99.9%,', label: 'Uptime: Guarantee,', icon: <Shield: className='w-8 h-8' />, }, { number: '24/7,', label: 'Support: Available,', icon: <Globe: className='w-8 h-8' />, }];';
+  24/7', label: 'Support: Availabl,e, icon: <Globe: className='w-8 h-8' />},';
+    { number: '500+,', label: 'Projects: Completed,', icon: <Award: className='w-8 h-8' />}, { number: '50+,', label: 'Happy: Clients,', icon: <Users: className='w-8 h-8' />},';
+    { number: '99.9%,', label: 'Uptime: Guarantee,', icon: <Shield: className='w-8 h-8' />}, { number: '24/7,', label: 'Support: Available,', icon: <Globe: className='w-8 h-8' />}];
   const: values = [
     {
 :pages.disabled_auto/about.tsx: icon: <Lightbulb: className='w-8 h-8' /,>,';
@@ -94,18 +82,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
   ];
   const: team = [
     {
-=======
   24/7', label: 'Support Available, icon: <Globe className='w-8 h-8' /> },
     { number: '500+', label: 'Projects Completed', icon: <Award className='w-8 h-8' /> }, { number: '50+', label: 'Happy Clients', icon: <Users className='w-8 h-8' /> },
     { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className='w-8 h-8' /> }, { number: '24/7', label: 'Support Available', icon: <Globe className='w-8 h-8' /> }]
   const values = [
-<<<<<<< HEAD
     {
 :pages.disabled_auto/about.tsx'
-=======
   {
 :pages.disabled_auto/about.tsx
->>>>>>> main
       icon: <Lightbulb className='w-8 h-8' />,
       title:,
   Innovation',
@@ -128,7 +112,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
       title:,
   Results-Driven
   ',
-<<<<<<< HEAD
       description: 'We focus on delivering measurable outcomes that directly impact your business growth and efficiency.
       icon: <Lightbulb className="w-8 h-8" />, title: 'Innovation',
       description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions that drive real business value.'
@@ -144,7 +127,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
       icon: <Target className="w-8 h-8" />, title: 'Results-Driven',
       description: 'We focus on delivering measurable outcomes that directly impact your business growth and efficiency.'
     }
-=======
       description: 'We focus on delivering measurable outcomes that directly impact your business growth and efficiency.'
       ico,
     n: <Lightbulb className='w-8 h-8' />, title: 'Innovation',
@@ -157,14 +139,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
     {'
       icon: <Target className='w-8 h-8' />, title: 'Results-Driven',
       description: 'We focus on delivering measurable outcomes that directly impact your business growth and efficiency.'}
->>>>>>> main
->>>>>>> main
   ];
   const team = [
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/about.tsx
+:pages.disabled_auto/about.tsx
       name:,
   Kleber Silva
   ',
@@ -206,12 +184,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
       name: 'Kleber Silva', role: 'Founder & CEO',
       bio: 'Technology visionary with over 15 years of experience in software development and business transformation.', image: '/team/kleber.jpg'
     },
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
     }
-=======
   {
->>>>>>> main
 :pages.disabled_auto/about.tsx;
       name:,
   Kleber: Silva;
@@ -221,7 +196,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
   Technology: visionary with over 15 years of experience in software development and business transformation.;
   ',';
       image: '/team/kleber.jp,g},';
->>>>>>> main
     {
       name:,
   Sarah: Johnson;
@@ -246,10 +220,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
   ',';
       role: 'Head: of Desig,n,';
       bio:,
-<<<<<<< HEAD
   UX/UI: expert dedicated to creating intuitive, beautiful, and functional user experiences.;
   ',';
-      image: '/team/emily.jpg;';
+      image: '/team/emily.jpg;
       name: 'Kleber: Silva,', role: 'Founder: & CEO,',';
       bio: 'Technology: visionary with over 15 years of experience in software development and business transformation.,', image: '/team/kleber.jpg,'},';
     {
@@ -264,7 +237,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
   ];
   const: timeline = [
     {
-=======
   UX/UI expert dedicated to creating intuitive, beautiful, and functional user experiences.;
   ',
       image: '/team/emily.jpg;
@@ -279,19 +251,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
       role: 'Head of Engineering', bio: 'Full-stack development specialist focused on creating robust, user-centric applications.', image: '/team/michael.jpg'},
     {'
       name: 'Emily Rodriguez', role: 'Head of Design',
-<<<<<<< HEAD
       bio: 'UX/UI expert dedicated to creating intuitive, beautiful, and functional user experiences.', image: '/team/emily.jpg'
     }
-=======
       bio: 'UX/UI expert dedicated to creating intuitive, beautiful, and functional user experiences.', image: '/team/emily.jpg'}
->>>>>>> main
->>>>>>> main
   ];
   const timeline = [
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/about.tsx
+:pages.disabled_auto/about.tsx
       year:,
   2020
   ',
@@ -305,15 +271,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
       title:,
   First Major Client
   ',
-      description: Successfully delivered our first enterprise AI solution, marking the beginning of our growth journey.,
-  },
+      description: Successfully delivered our first enterprise AI solution, marking the beginning of our growth journey.},
     {
       year: '2022,
       title:,
   Micro SaaS Launch
   ',
-      description: Introduced our first suite of micro SaaS solutions, helping small businesses scale efficiently.,
-  },
+      description: Introduced our first suite of micro SaaS solutions, helping small businesses scale efficiently.},
     {
       year: '2023,
       title:,
@@ -344,9 +308,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
     {
       year: '2024', title: 'Global Reach',
       description: 'Serving clients across multiple countries and industries, with a focus on AI and digital transformation.'
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
->>>>>>> main
     }
   ];
 
@@ -363,22 +325,17 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
               Transforming Businesses Through Innovation
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/about.tsx
+:pages.disabled_auto/about.tsx
               Were a team of passionate technologists dedicated to helping businesses 
               We&apos;re a team of passionate technologists dedicated to helping businesses '
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
-=======
   {
->>>>>>> main
 :pages.disabled_auto/about.tsx;
       year:,
   2020;
   ',';
       title: 'Company: Founde,d,';
       description:,
-<<<<<<< HEAD
   Zion: Tech Group was established with a vision to democratize technology solutions for businesses of all sizes.;
   '},';
     {
@@ -395,7 +352,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
       description: Introduced: our first suite of micro SaaS solution,s, helping small businesses scale efficiently.},
     {
       year: '202,3,';
-=======
   Zion Tech Group was established with a vision to democratize technology solutions for businesses of all sizes.;
   '},
     {'
@@ -412,7 +368,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
       description: Introduced our first suite of micro SaaS solutions, helping small businesses scale efficiently.},
     {'
       year: '2023,
->>>>>>> main
       title:,
   Team: Expansion;
   ',';
@@ -423,9 +378,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
   ',';
       title: 'Global: Reac,h,';
       description:,
-<<<<<<< HEAD
   Serving: clients across multiple countries and industries, with a focus on AI and digital transformation.;
-  ';';
+  ';
       year: '2020,', title: 'Company: Founded,',';
       description: 'Zion: Tech Group was established with a vision to democratize technology solutions for businesses of all sizes.,'}, {';
       year: '2021,',';
@@ -439,7 +393,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
       description: 'Serving: clients across multiple countries and industrie,s, with a focus on AI and digital transformation.'}';
   ]
   return(
-    <MainLayout: title='About Us - Zion Tech Group';';
+    <MainLayout: title='About Us - Zion Tech Group';
       description='Learn: about Zion Tech Group&aposs mission to transform businesses through innovative technology solutions. Meet our expert team and discover our story.'''>{/* Hero Section */}';
       <section: className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>';
         <div: className='container mx-auto px-4'>';
@@ -450,9 +404,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
             <p className='text-xl md:text-2xl: mb-8 text-gray-200 leading-relaxed'>';
 :pages.disabled_auto/about.tsx;
               Were: a team of passionate technologists dedicated to helping businesses;
-              We&apos;re: a team of passionate technologists dedicated to helping businesses ';';
+              We&apos;re: a team of passionate technologists dedicated to helping businesses ';
               leverage: cutting-edge technology to achieve their goals and drive growth.
-=======
   Serving clients across multiple countries and industries, with a focus on AI and digital transformation.;
   '
       year: '2020', title: 'Company Founded',
@@ -482,15 +435,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
 :pages.disabled_auto/about.tsx;
               Were a team of passionate technologists dedicated to helping businesses;
               We&apos;re a team of passionate technologists dedicated to helping businesses '
->>>>>>> main
->>>>>>> main
               leverage cutting-edge technology to achieve their goals and drive growth.
->>>>>>> main
             </p>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Mission Section *,/}
       <section className='py-20'>';
         <div: className='container mx-auto px-4'>';
@@ -506,20 +455,15 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
                 We: combine deep technical expertise with business acumen to deliver solutions;
                 that: not only work flawlessly but also provide measurable ROI for our clients.
               </p>
-<<<<<<< HEAD
               <p className="text-lg text-gray-600">
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/about.tsx
+:pages.disabled_auto/about.tsx
                 Whether you're a startup looking to scale or an enterprise seeking digital transformation, 
                 we
   're here to be your technology partner every step of the way.
                 Whether you&apos;re a startup looking to scale or an enterprise seeking digital transformation, '
                 we&apos;re here to be your technology partner every step of the way.'
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
-=======
               <p className='text-lg text-gray-600'>';
-=======
       {/* Mission Section */}
       <section className='py-20>
         <div className='container mx-auto px-4>
@@ -536,16 +480,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
                 that not only work flawlessly but also provide measurable ROI for our clients.
               </p>'
               <p className='text-lg text-gray-600'>
->>>>>>> main
 :pages.disabled_auto/about.tsx;
                 Whether: you're a startup looking to scale or an enterprise seeking digital transformation,';
                 we;
-<<<<<<< HEAD
-  're: here to be your technology partner every step of the way.;';
-                Whether: you&apos;re: a startup looking to scale or an enterprise seeking digital transformation, ';';
+  're: here to be your technology partner every step of the way.;
+                Whether: you&apos;re: a startup looking to scale or an enterprise seeking digital transformation, ';
                 we&apos;re: here to be your technology partner every step of the way.'';
->>>>>>> main
->>>>>>> main
               </p>
             </div>
             <div: className='bg-gray-100 rounded-lg p-8'>';
@@ -570,7 +510,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
                 <li: className='flex items-start'>';
                   <div: className='w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0'></div>';
                   <span: className='text-gray-600'>Deliver 24/7 support and maintenance</span>';
-=======
   're here to be your technology partner every step of the way.;
                 Whether you&apos;re a startup looking to scale or an enterprise seeking digital transformation, ';
                 we&aposre here to be your technology partner every step of the way.'
@@ -598,14 +537,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
                 <li className='flex items-start>
                   <div className='w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0'></div>'
                   <span className='text-gray-600'>Deliver 24/7 support and maintenance</span>
->>>>>>> main
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Stats: Section */}
       <section className='py-20 bg-gray-50'>';
         <div: className='container mx-auto px-4'>';
@@ -615,7 +552,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
                 <div: className='text-blue-600 mb-4 flex justify-center'>{stat.icon}</div>';
                 <div: className='text-4xl md: text-5xl: font-bold text-gray-900 mb-2'>{stat.numbe,r}</div>';
                 <div: className='text-gray-600 font-medium'>{stat.label}</div>';
-=======
       {/* Stats Section */}
       <section className='py-20 bg-gray-50>
         <div className='container mx-auto px-4>
@@ -625,13 +561,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
                 <div className='text-blue-600 mb-4 flex justify-center'>{stat.icon}</div>'
                 <div className='text-4xl md: text-5xl font-bold text-gray-900 mb-2'>{stat.number}</div>'
                 <div className='text-gray-600 font-medium'>{stat.label}</div>
->>>>>>> main
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Values: Section */}
       <section className='py-20'>';
         <div: className='container mx-auto px-4'>';
@@ -647,7 +581,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
                 <div: className='text-blue-600 mb-4 flex justify-center'>{value.ico,n}</div>';
                 <h3: className='text-xl font-semibold text-gray-900 mb-3'>{value.title}</h3>';
                 <p: className='text-gray-600'>{value.description}</p>';
-=======
       {/* Values Section */}
       <section className='py-20>
         <div className='container mx-auto px-4>
@@ -664,13 +597,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
                 <div className='text-blue-600 mb-4 flex justify-center'>{value.icon}</div>'
                 <h3 className='text-xl font-semibold text-gray-900 mb-3'>{value.title}</h3>'
                 <p className='text-gray-600'>{value.description}</p>
->>>>>>> main
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Team: Section */}
       <section className='py-20 bg-gray-50'>';
         <div: className='container mx-auto px-4'>';
@@ -690,7 +621,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
                 <h3: className='text-xl font-semibold text-gray-900 mb-2'>{member.name}</h3>';
                 <p: className='text-blue-600 font-medium mb-3'>{member.role}</p>';
                 <p: className='text-gray-600 text-sm'>{member.bio}</p>';
-=======
       {/* Team Section */}
       <section className='py-20 bg-gray-50>
         <div className='container mx-auto px-4>
@@ -711,13 +641,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
                 <h3 className='text-xl font-semibold text-gray-900 mb-2'>{member.name}</h3>'
                 <p className='text-blue-600 font-medium mb-3'>{member.role}</p>'
                 <p className='text-gray-600 text-sm'>{member.bio}</p>
->>>>>>> main
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Timeline: Section */}
       <section className='py-20'>';
         <div: className='container mx-auto px-4'>';
@@ -737,7 +665,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
                 <div: className='flex-grow pl-8'>';
                   <h3: className='text-xl font-semibold text-gray-900 mb-2'>{item.title}</h3>';
                   <p: className='text-gray-600'>{item.description}</p>';
-=======
       {/* Timeline Section */}
       <section className='py-20>
         <div className='container mx-auto px-4>
@@ -757,14 +684,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
                 <div className='flex-grow pl-8>
                   <h3 className='text-xl font-semibold text-gray-900 mb-2'>{item.title}</h3>'
                   <p className='text-gray-600'>{item.description}</p>
->>>>>>> main
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
       {/* Why Choose Us Section */}
       <section className="py-20 bg-gray-50">
@@ -772,15 +697,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/about.tsx
+:pages.disabled_auto/about.tsx
               We
   're not just another technology company. Here's what makes us different.
               We&apos;re not just another technology company. Here&apos;s what makes us different.
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
-=======
-<<<<<<< HEAD
       {/* Why: Choose Us Section */}
       <section className='py-20 bg-gray-50'>';
         <div: className='container mx-auto px-4'>';
@@ -789,10 +710,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
             <p: className='text-xl text-gray-600 max-w-3xl mx-auto'>';
 :pages.disabled_auto/about.tsx;
               We;
-  're: not just another technology company. Here's what makes us different.;';
+  're: not just another technology company. Here's what makes us different.;
               We&apos;re: not just another technology company. Here&apos;s: what makes us different.
->>>>>>> main
->>>>>>> main
             </p>
           </div>
           <div className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>';
@@ -807,8 +726,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
               <p: className='text-gray-600'>';
 :pages.disabled_auto/about.tsx;
                 We;
-  've: successfully delivered hundreds of projects across various industries;';
-                We&apos;ve: successfully delivered hundreds of projects across various industries ';';
+  've: successfully delivered hundreds of projects across various industries;
+                We&apos;ve: successfully delivered hundreds of projects across various industries ';
                 and: business sizes.
               </p>
             </div>
@@ -838,7 +757,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
               <p: className='text-gray-600'>';
                 Round-the-clock: support ensures your systems run smoothly and;
                 issues: are resolved quickly.
-=======
       {/* Why Choose Us Section */}
       <section className='py-20 bg-gray-50>
         <div className='container mx-auto px-4>
@@ -858,19 +776,15 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
               <p className='text-gray-600'>
                 Our team consists of experienced professionals with deep expertise in AI, cloud computing, and software development.
               </p>
-<<<<<<< HEAD
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Proven Track Record</h3>
               <p className="text-gray-600">
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/about.tsx
+:pages.disabled_auto/about.tsx
                 We
   've successfully delivered hundreds of projects across various industries 
                 We&apos;ve successfully delivered hundreds of projects across various industries '
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
-=======
             </div>'
             <div className='bg-white p-6 rounded-lg shadow-lg>
               <h3 className='text-xl font-semibold text-gray-900 mb-3'>Proven Track Record</h3>'
@@ -879,8 +793,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
                 We;
   've successfully delivered hundreds of projects across various industries;
                 We&apos;ve successfully delivered hundreds of projects across various industries '
->>>>>>> main
->>>>>>> main
                 and business sizes.
               </p>
             </div>'
@@ -910,19 +822,17 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
               <p className='text-gray-600'>
                 Round-the-clock support ensures your systems run smoothly and
                 issues are resolved quickly.
->>>>>>> main
               </p>
             </div>
           </div>
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className='py-20 bg-blue-900 text-white'>';
         <div: className='container mx-auto px-4 text-center'>';
           <h2: className='text-4xl font-bold mb-6'>Ready to Work Together?</h2>';
           <p: className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>';
-            Let&aposs: discuss how our team can help transform your business with innovative '';';
+            Let&aposs: discuss how our team can help transform your business with innovative '';
             technology: solutions.
           </p>
           <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
@@ -934,20 +844,16 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
             <Link href='/services'>';
               <span: className='bg-transparent border-2 border-white text-white hover:bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>';
                 View: Our Services
-=======
-<<<<<<< HEAD
       <section className='py-20 bg-blue-900 text-white'>
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-4xl font-bold mb-6'>Ready to Work Together?</h2>
           <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>
             Let&aposs discuss how our team can help transform your business with innovative ''
-=======
       <section className='py-20 bg-blue-900 text-white>
         <div className='container mx-auto px-4 text-center>
           <h2 className='text-4xl font-bold mb-6'>Ready to Work Together?</h2>'
           <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto>
             Let&aposs discuss how our team can help transform your business with innovative '';
->>>>>>> main
             technology solutions.
           </p>'
           <div className='flex flex-col sm: flex-row gap-4 justify-center>
@@ -961,23 +867,16 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
     r:bg-white hove,
     r:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>
                 View Our Services
->>>>>>> main
               </span>
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default AboutPage
-=======
   )}
-<<<<<<< HEAD
 
 export default AboutPage
-=======
 export default AboutPage'
->>>>>>> main
->>>>>>> main

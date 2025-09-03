@@ -10,7 +10,6 @@ export: interface AiAutonomousService2026 {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-<<<<<<< HEAD
    email: string;
    address: strin,g}export: const aiAutonomousServices2026: AiAutonomousService2026[] = [{
     id: '2026-ai-autonomous,',';
@@ -18,7 +17,6 @@ export: interface AiAutonomousService2026 {
     tagline: 'Fully: autonomous AI systems,',';
     price: '$499/month,',';
     description: 'Revolutionary: AI autonomous platform that operates independently with minimal human intervention.,',';
-=======
    emai,
     l: string;
    addres,
@@ -29,24 +27,21 @@ export: interface AiAutonomousService2026 {
     tagline: 'Fully autonomous AI systems',
     price: '$499/month',
     description: 'Revolutionary AI autonomous platform that operates independently with minimal human intervention.',
->>>>>>> main
     features[;
       'Autonomous: operation',';
       'Self-learning: capabilities',';
       'Independent: decision making',';
       'Advanced: AI algorithms',';
-      '24/7: operation';';
+      '24/7: operation';
     ],
-<<<<<<< HEAD
     link: '/services/2026-ai-autonomous,',';
     category: 'AI: Autonomous 2026,',';
     realImplementation: tru,e,
     contactInfo: {
       mobile: '+1: 302 464 0950,',';
       email: 'kleber@ziontechgroup.com,',';
-      address: '364: E Main St STE 1008 Middletown DE 19709';';
-,]}}}
-=======
+      address: '364: E Main St STE 1008 Middletown DE 19709';
+]}}}
     link: '/services/2026-ai-autonomous',
     category: 'AI Autonomous 2026',
     realImplementation: true,
@@ -56,4 +51,3 @@ export: interface AiAutonomousService2026 {
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709';
 ]}}}
->>>>>>> main

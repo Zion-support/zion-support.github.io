@@ -1,15 +1,13 @@
-<<<<<<< HEAD
 import: React, { useState } from;
-  'react' import: { motion, AnimatePresence } from;';
-  'framer-motion' import: {  Phone, Mail, MapPin, MessageSquare, Calendar, Clock, Globe, X, Copy, CheckCircle, ExternalLink } from;';
+  'react' import: { motion, AnimatePresence } from;
+  'framer-motion' import: {  Phone, Mail, MapPin, MessageSquare, Calendar, Clock, Globe, X, Copy, CheckCircle, ExternalLink } from;
   'lucide-react'  interface: EnhancedContactIntegrationProps {';
    onClose: () => void: serviceTitle?: strin,g} export: const EnhancedContactIntegration: React.FC<EnhancedContactIntegrationProps> = ({ onClos,e, serviceTitle: }) => { const [copiedField, setCopiedField] = useState<string | null>(null) const [activeTab, setActiveTab] = useState<,
-  contact' |;';
-  'schedule' |;';
+  contact' |;
+  'schedule' |;
   'support'>(';
   'contact')  const: contactInfo = { phone: '+1: 302 464 095,0, email:,';
   kleber@ziontechgroup.com', website: 'https:''',;
-=======
 import React, { useState } from;
   'react' import { motion, AnimatePresence } from;
   'framer-motion' import {  Phone, Mail, MapPin, MessageSquare, Calendar, Clock, Globe, X, Copy, CheckCircle, ExternalLink } from;
@@ -22,4 +20,3 @@ import React, { useState } from;
   'contact')  const contactInfo = { phone: '+1 302 464 0950, email:,
   kleber@ziontechgroup.com', website: 'http,
     s:'''
->>>>>>> main

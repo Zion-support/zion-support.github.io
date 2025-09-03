@@ -62,7 +62,7 @@ const ContactFormEnhanced: React.FC = () => {
               <div className="relative">
                 <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
-<<<<<<< HEAD:components/ContactFormEnhanced.tsx
+:components/ContactFormEnhanced.tsx
                   type="text"
                   id="name"
                   name="name"
@@ -72,7 +72,6 @@ const ContactFormEnhanced: React.FC = () => {
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your full name"
                 />
-=======
                   type='text'
                   id='name'
                   name='name'
@@ -81,7 +80,7 @@ const ContactFormEnhanced: React.FC = () => {
                   required;
                   className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
                   placeholder='Your full name'/>
->>>>>>> main:components.disabled/components/ContactFormEnhanced.tsx
+:components.disabled/components/ContactFormEnhanced.tsx
               </div>
             </div>
 
@@ -92,7 +91,7 @@ const ContactFormEnhanced: React.FC = () => {
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
-<<<<<<< HEAD:components/ContactFormEnhanced.tsx
+:components/ContactFormEnhanced.tsx
                   type="email"
                   id="email"
                   name="email"
@@ -102,7 +101,6 @@ const ContactFormEnhanced: React.FC = () => {
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="your.email@example.com"
                 />
-=======
                   type='email'
                   id='email'
                   name='email'
@@ -111,7 +109,7 @@ const ContactFormEnhanced: React.FC = () => {
                   required;
                   className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
                   placeholder='your@email.com'/>
->>>>>>> main:components.disabled/components/ContactFormEnhanced.tsx
+:components.disabled/components/ContactFormEnhanced.tsx
               </div>
             </div>
           </div>
@@ -121,7 +119,7 @@ const ContactFormEnhanced: React.FC = () => {
               Subject *
             </label>
             <input
-<<<<<<< HEAD:components/ContactFormEnhanced.tsx
+:components/ContactFormEnhanced.tsx
               type="text"
               id="subject"
               name="subject"
@@ -131,7 +129,6 @@ const ContactFormEnhanced: React.FC = () => {
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="What can we help you with?"
             />
-=======
               type='text'
               id='subject'
               name='subject'
@@ -140,7 +137,7 @@ const ContactFormEnhanced: React.FC = () => {
               required;
               className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
               placeholder='What can we help you with?'/>
->>>>>>> main:components.disabled/components/ContactFormEnhanced.tsx
+:components.disabled/components/ContactFormEnhanced.tsx
           </div>
 
           <div>
@@ -150,7 +147,7 @@ const ContactFormEnhanced: React.FC = () => {
             <div className="relative">
               <MessageSquare className="absolute left-3 top-3 text-gray-400 w-5 h-5" />
               <textarea
-<<<<<<< HEAD:components/ContactFormEnhanced.tsx
+:components/ContactFormEnhanced.tsx
                 id="message"
                 name="message"
                 value={formData.message}
@@ -160,7 +157,6 @@ const ContactFormEnhanced: React.FC = () => {
                 className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                 placeholder="Tell us about your project or requirements..."
               />
-=======
                 id='message'
                 name='message'
                 value={formData.message}
@@ -169,16 +165,15 @@ const ContactFormEnhanced: React.FC = () => {
                 rows={5}
                 className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
                 placeholder='Tell us about your project or requirements...'/>
->>>>>>> main:components.disabled/components/ContactFormEnhanced.tsx
+:components.disabled/components/ContactFormEnhanced.tsx
             </div>
           </div>
 
           <motion.button
-<<<<<<< HEAD:components/ContactFormEnhanced.tsx
+:components/ContactFormEnhanced.tsx
             type="submit"
-=======
             type='submit'
->>>>>>> main:components.disabled/components/ContactFormEnhanced.tsx
+:components.disabled/components/ContactFormEnhanced.tsx
             disabled={isSubmitting}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}

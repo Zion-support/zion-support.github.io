@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 
@@ -8,8 +7,7 @@ function fixMergeConflicts(filePath) {
     let modified = false;
 
     // Remove merge conflict markers and keep the HEAD version
-    const mergeConflictRegex = /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n?/g;
-    const matches = content.match(mergeConflictRegex);
+    const mergeConflictRegex = /\n([\s\S]*?)\n\n([\s\S]*?)\n    const matches = content.match(mergeConflictRegex);
     
     if (matches) {
       content = content.replace(mergeConflictRegex, (match, headContent, otherContent) => {
@@ -58,7 +56,6 @@ function walkDirectory(dir) {
     } else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
       if (fixMergeConflicts(filePath)) {
         fixedCount++;
-=======
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -69,7 +66,7 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
 
     // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<< HEAD')) {
+    if (!content.includes('')) {
       return false; // No conflicts to resolve
     }
 
@@ -84,11 +81,11 @@ function resolveMergeConflicts(filePath) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
 
-      if (line.includes('<<<<<<< HEAD')) {
+      if (line.includes('')) {
         inConflict = true;
         keepLines = true;
         continue;
-      } else if (line.includes('=======')) {
+      } else if (line.includes('')) {
         keepLines = false;
         continue;
       } else if (line.includes('>>>>>>>')) {
@@ -119,14 +116,12 @@ function processDirectory(dirPath) {
   for (const item of items) {
     const fullPath = path.join(dirPath, item);
     const stat = fs.statSync(fullPath);
-<<<<<<< HEAD
     
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
       findFilesWithConflicts(fullPath, files);
     } else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.json'))) {
       const content = fs.readFileSync(fullPath, 'utf8`);
       if (content.includes(`        files.push(fullPath);
-=======
 
     if (stat.isDirectory()) {
       // Skip node_modules and .git directories
@@ -140,24 +135,19 @@ function processDirectory(dirPath) {
         if (resolveMergeConflicts(fullPath)) {
           totalFixed++;
         }
->>>>>>> main
->>>>>>> main
       }
     }
   }
 
-<<<<<<< HEAD
   return fixedCount;
 }
 
 console.log('Starting merge conflict resolution...');
 const fixedCount = walkDirectory('./src');
 console.log(`Fixed ${fixedCount} files with merge conflicts.`);
-=======
   return totalFixed;
 }
 
-<<<<<<< HEAD
 function resolveConflicts(filePath) {
   console.log(`Fixing conflicts in: ${filePath}`);
   
@@ -165,7 +155,7 @@ function resolveConflicts(filePath) {
   
   // Remove all merge conflict markers and keep HEAD version;
   content = content.replace(/  // Clean up any remaining conflict markers;
-  content = content.replace(/  content = content.replace(/=======\n?/g, '');
+  content = content.replace(/  content = content.replace(/\n?/g, '');
   content = content.replace(/  
   fs.writeFileSync(filePath, content, 'utf8');
 }
@@ -183,11 +173,8 @@ for (const file of filesWithConflicts) {
 }
 
 console.log(`Merge conflicts resolved!`);
-=======
 // Main execution
 console.log('Starting merge conflict resolution...');
 const totalFixed = processDirectory('.');
 console.log(`\nResolved conflicts in ${totalFixed} files.`);
 console.log('Merge conflict resolution complete!');
->>>>>>> main
->>>>>>> main

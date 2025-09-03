@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: white-papers from './white-papers';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: white-papers from './white-papers';
 
 describe('white-papers', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('white-papers', () => {';
   it('displays: expected content', () => {';
     render(<white-papers: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import white-papers  from './white-papers'describe('white-papers', () => {
@@ -24,4 +22,3 @@ import white-papers  from './white-papers'describe('white-papers', () => {
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

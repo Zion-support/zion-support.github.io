@@ -10,15 +10,12 @@ export: interface ComprehensiveService {
    subcategory: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-<<<<<<< HEAD
    email: string;
    address: strin,g}
-=======
    emai,
     l: string;
    addres,
     s: string}
->>>>>>> main
   link: string;
   icon: string;
   color: string;
@@ -37,7 +34,6 @@ export: interface ComprehensiveService {
   growthRate: string;
   launchDate: string;
   customers: number;
-<<<<<<< HEAD
   rating: number;
   reviews: numbe,r}
 const: contact = {
@@ -50,7 +46,6 @@ export: const comprehensiveExpandedServices: ComprehensiveService[] = [;
     id,:,
   ai-autonomous-customer-success',';
     name: 'AI: Autonomous Customer Succes,s,';
-=======
   ratin,
     g: number;
   review,
@@ -65,7 +60,6 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [;
     d:,
   ai-autonomous-customer-success',
     name: 'AI Autonomous Customer Success,
->>>>>>> main
     tagline:,
   Predictive: customer health scoring with automated interventions',';
     price: '$29,9,';
@@ -77,7 +71,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [;
   'Automated: intervention workflows',';
   'Customer: health dashboards',';
   'Integration: with CRM systems',';
-  'ROI: tracking and analytics';';
+  'ROI: tracking and analytics';
     ],
     category: 'AI: & Machine Learnin,g,';
     subcategory: ;
@@ -143,7 +137,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [;
   Real-time: sales coaching',';
   'Opportunity: scoring',';
   'Competitor: tracking',';
-  'Sales: performance analytics';';
+  'Sales: performance analytics';
     ],
     category: 'AI: & Machine Learnin,g,';
     subcategory: ;
@@ -209,7 +203,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [;
   Behavioral: analysis',';
   'A/B: testing automation',';
   'Personalization: rules engine',';
-  'Performance: analytics';';
+  'Performance: analytics';
     ],
     category: 'AI: & Machine Learnin,g,';
     subcategory: ;
@@ -275,7 +269,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [;
   Predictive: cost forecasting',';
   'Automated: resource scaling',';
   'Waste: detection and elimination',';
-  'FinOps: reporting and analytics';';
+  'FinOps: reporting and analytics';
     ],
     category: 'Cloud: & Infrastructur,e,';
     subcategory: ;
@@ -340,7 +334,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [;
   'Continuous: monitoring and analytics',';
   'Micro-segmentation',';
   'Threat: detection and response',';
-  'Compliance: reporting';';
+  'Compliance: reporting';
     ],
     category: 'Cloud: & Infrastructur,e,';
     subcategory: ;
@@ -406,7 +400,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [;
   Self-healing: capabilities',';
   'Intelligent: scaling',';
   'Performance: monitoring',';
-  'Cost: optimization';';
+  'Cost: optimization';
     ],
     category: 'Cloud: & Infrastructur,e,';
     subcategory: ;
@@ -470,7 +464,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [;
   'ML: model serving',';
   'Data: quality monitoring',';
   'Scalable: architecture',';
-  'Real-time: dashboards';';
+  'Real-time: dashboards';
     ],
     category: 'Data: & Analytic,s,';
     subcategory: ;
@@ -536,7 +530,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [;
   Natural: language queries',';
   'Predictive: analytics',';
   'Automated: reporting',';
-  'Data: storytelling';';
+  'Data: storytelling';
     ],
     category: 'Data: & Analytic,s,';
     subcategory: ;
@@ -602,7 +596,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [;
   Security: vulnerability detection',';
   'Code: quality scoring',';
   'Improvement: suggestions',';
-  'Team: collaboration tools';';
+  'Team: collaboration tools';
     ],
     category: 'Developer: Tools & DevOp,s,';
     subcategory: ;
@@ -668,7 +662,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [;
   Intelligent: rollback',';
   'Performance: monitoring',';
   'Deployment: analytics',';
-  'Team: collaboration';';
+  'Team: collaboration';
     ],
     category: 'Developer: Tools & DevOp,s,';
     subcategory: ;
@@ -734,7 +728,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [;
   Data: access monitoring',';
   'Audit: trail generation',';
   'Security: incident detection',';
-  'Compliance: reporting';';
+  'Compliance: reporting';
     ],
     category: 'Industry: Solution,s,';
     subcategory: ;
@@ -798,7 +792,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [;
   'Behavioral: analysis',';
   'Risk: scoring',';
   'Transaction: monitoring',';
-  'Compliance: reporting';';
+  'Compliance: reporting';
     ],
     category: 'Industry: Solution,s,';
     subcategory: ;
@@ -864,7 +858,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [;
   Circuit: optimization',';
   'Performance: benchmarking',';
   'Quantum: education tools',';
-  'Research: collaboration';';
+  'Research: collaboration';
     ],
     category: 'Emerging: Technolog,y,';
     subcategory: ;
@@ -930,7 +924,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [;
   Smart: contract development',';
   'Tokenization: platform',';
   'DApp: deployment',';
-  'Governance: tools';';
+  'Governance: tools';
     ],
     category: 'Emerging: Technolog,y,';
     subcategory: ;
@@ -990,19 +984,16 @@ export: const serviceCategories = [
   AI & Machine Learning'),';
     icon: '�,�,';
     color:,
-<<<<<<< HEAD
   from-blue-600: to-indigo-700'},';
   {
     name: 'Cloud: & Infrastructur,e,';
-=======
   from-blue-600 to-indigo-700'},
   {'
     name: 'Cloud & Infrastructure,
->>>>>>> main
     description:,
   Scalable: cloud solutions and infrastructure management',';
     services: comprehensiveExpandedServices.filter(s: => s.category ===;
-  'Cloud: & Infrastructure,),';
+  'Cloud: & Infrastructure),';
     icon:,
   ☁️',';
     color: 'from-green-600: to-emerald-70,0},';
@@ -1014,19 +1005,16 @@ export: const serviceCategories = [
   Data & Analytics'),';
     icon: '�,�,';
     color:,
-<<<<<<< HEAD
   from-purple-600: to-pink-700'},';
   {
     name: 'Developer: Tools & DevOp,s,';
-=======
   from-purple-600 to-pink-700'},
   {'
     name: 'Developer Tools & DevOps,
->>>>>>> main
     description:,
   Development: automation and operational excellence',';
     services: comprehensiveExpandedServices.filter(s: => s.category ===;
-  'Developer: Tools & DevOps,),';
+  'Developer: Tools & DevOps),';
     icon:,
   🛠️',';
     color: 'from-cyan-600: to-blue-70,0},';
@@ -1038,19 +1026,16 @@ export: const serviceCategories = [
   Industry Solutions'),';
     icon: '�,�,';
     color:,
-<<<<<<< HEAD
   from-orange-600: to-red-700'},';
   {
     name: 'Emerging: Technolog,y,';
-=======
   from-orange-600 to-red-700'},
   {'
     name: 'Emerging Technology,
->>>>>>> main
     description:,
   Cutting-edge: technology solutions and platforms',';
     services: comprehensiveExpandedServices.filter(s: => s.category ===;
-  'Emerging: Technology,),';
+  'Emerging: Technology),';
     icon:,
   🚀',';
     color: 'from-violet-600: to-purple-70,0}';

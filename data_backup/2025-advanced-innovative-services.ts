@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface AdvancedInnovativeService {
-=======
 import { ServiceVariant } from '../types/service-variants';
 
 export interface AdvancedInnovativeService {
->>>>>>> main
   id: string;
-<<<<<<< HEAD
   name: string;
   tagline: string;
   price: string;
@@ -39,7 +35,6 @@ export interface AdvancedInnovativeService {
     address: string;
     website: string;
   };
-=======
    name: string;
    tagline: string;
    price: string;
@@ -67,23 +62,17 @@ export interface AdvancedInnovativeService {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-<<<<<<< HEAD
   rating: number;
-<<<<<<< HEAD
 reviews: number;const: contact = {
   mobile,:,
   +1: 302 464 0950',';
@@ -96,7 +85,6 @@ export: const advancedInnovativeServices: AdvancedInnovativeService[] = [{
     id,:,
   metaverse-development-platform',';
     name: 'Metaverse: Development Platfor,m,';
-=======
   reviews: number;
 }
 
@@ -133,7 +121,6 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     link: 'https://ziontechgroup.com/metaverse-development-platform',
     marketPosition: 'Comprehensive metaverse platform competes with Roblox, Unity, Unreal Engine.',
     targetAudience: 'Game developers, Brands, Educational institutions',
-=======
   ratin,
     g: number;
 review,
@@ -151,7 +138,6 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
     d:,
   metaverse-development-platform',
     name: 'Metaverse Development Platform,
->>>>>>> main
     tagline:,
   Complete: platform for building immersive 3D virtual worlds and experiences',';
     price: '$59,9,';
@@ -167,14 +153,13 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
   'Monetization: and marketplace',';
   'Analytics: and user insights',';
   'Cross-platform: deployment',';
-  'Custom: branding and themes';';
+  'Custom: branding and themes';
     ],
     popular: tru,e,
     icon:,
   🌍',';
     color: 'from-purple-600: to-pink-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/metaverse-development-platfor,m,';
     marketPosition:,
@@ -225,17 +210,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
   'Clinical: trial optimization',';
   'Biomarker: discovery',';
   'Personalized: medicine modeling',';
-  'Integration: with research databases';';
+  'Integration: with research databases';
     ],
     popular: fals,e,
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/metaverse-development-platform,
     marketPosition:,
   Comprehensive metaverse platform competes with Roblox, Unity, Unreal Engine.',
     targetAudience: Game developers, Brands, Educational institutions',
->>>>>>> main
     trialDays: 21,
     setupTime: '1-2 weeks',
     category: 'Metaverse & Virtual Reality',
@@ -275,20 +258,16 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
       'Integration with research databases'
     ],
     popular: false,
-<<<<<<< HEAD
     icon: '🧬',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/quantum-bio-computing-platform',
     marketPosition: 'Specialized quantum bio-computing addresses pharmaceutical research needs.',
     targetAudience: 'Pharmaceutical companies, Research institutions, Biotech firms',
-=======
->>>>>>> main
     icon:,
   🧬',';
     color: 'from-green-600: to-emerald-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/quantum-bio-computing-platfor,m,';
     marketPosition:,
@@ -339,17 +318,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
   'Case: law analysis',';
   'Regulatory: updates tracking',';
   'Client: portal and collaboration',';
-  'Performance: analytics and reporting';';
+  'Performance: analytics and reporting';
     ],
     popular: tru,e,
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/quantum-bio-computing-platform,
     marketPosition:,
   Specialized quantum bio-computing addresses pharmaceutical research needs.',
     targetAudience: Pharmaceutical companies, Research institutions, Biotech firms',
->>>>>>> main
     trialDays: 45,
     setupTime: '1 month',
     category: 'Quantum Computing & Biotechnology',
@@ -389,20 +366,16 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
       'Performance analytics and reporting'
     ],
     popular: true,
-<<<<<<< HEAD
     icon: '⚖️',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-legal-automation-suite',
     marketPosition: 'AI-enhanced legal automation competes with LexisNexis, Westlaw, ContractPodAi.',
     targetAudience: 'Law firms, Corporate legal departments, Legal professionals',
-=======
->>>>>>> main
     icon:,
   ⚖️',';
     color: 'from-blue-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/ai-legal-automation-suit,e,';
     marketPosition:,
@@ -453,17 +426,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
   'Risk: assessment and mitigation',';
   'Sustainability: optimization',';
   'Performance: analytics',';
-  'Integration: with logistics systems';';
+  'Integration: with logistics systems';
     ],
     popular: fals,e,
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/ai-legal-automation-suite,
     marketPosition:,
   AI-enhanced legal automation competes with LexisNexis, Westlaw, ContractPodAi.',
     targetAudience: Law firms, Corporate legal departments, Legal professionals',
->>>>>>> main
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Legal Technology',
@@ -503,20 +474,16 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
       'Integration with logistics systems'
     ],
     popular: false,
-<<<<<<< HEAD
     icon: '🚚',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/quantum-logistics-optimization',
     marketPosition: 'Quantum-powered logistics specialized for complex optimization problems.',
     targetAudience: 'Logistics companies, E-commerce, Manufacturing',
-=======
->>>>>>> main
     icon:,
   🚚',';
     color: 'from-orange-600: to-red-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-orange-400',';
     link: 'https://ziontechgroup.com/quantum-logistics-optimizatio,n,';
     marketPosition:,
@@ -567,17 +534,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
   'Cross-domain: knowledge synthesis',';
   'Research: trend analysis',';
   'Collaboration: and sharing',';
-  'Integration: with research tools';';
+  'Integration: with research tools';
     ],
     popular: tru,e,
-=======
   text-orange-400',
     link: 'http,
     s://ziontechgroup.com/quantum-logistics-optimization,
     marketPosition:,
   Quantum-powered logistics specialized for complex optimization problems.',
     targetAudience: Logistics companies, E-commerce, Manufacturing',
->>>>>>> main
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'Quantum Computing & Logistics',
@@ -617,20 +582,16 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
       'Integration with research tools'
     ],
     popular: true,
-<<<<<<< HEAD
     icon: '🔬',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/autonomous-ai-research-assistant',
     marketPosition: 'Autonomous research AI specialized for research and discovery.',
     targetAudience: 'Researchers, Scientists, Business analysts, Students',
-=======
->>>>>>> main
     icon:,
   🔬',';
     color: 'from-cyan-600: to-blue-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-cyan-400',';
     link: 'https://ziontechgroup.com/autonomous-ai-research-assistan,t,';
     marketPosition:,
@@ -681,17 +642,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
   'Real-time: grid monitoring',';
   'Predictive: maintenance',';
   'Energy: trading optimization',';
-  'Sustainability: analytics';';
+  'Sustainability: analytics';
     ],
     popular: fals,e,
-=======
   text-cyan-400',
     link: 'http,
     s://ziontechgroup.com/autonomous-ai-research-assistant,
     marketPosition:,
   Autonomous research AI specialized for research and discovery.',
     targetAudience: Researchers, Scientists, Business analysts, Students',
->>>>>>> main
     trialDays: 14,
     setupTime: '1 week',
     category: 'AI & Research',
@@ -731,20 +690,16 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
       'Sustainability analytics'
     ],
     popular: false,
-<<<<<<< HEAD
     icon: '⚡',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-energy-optimization',
     marketPosition: 'Quantum-powered energy optimization specialized for complex energy systems.',
     targetAudience: 'Utility companies, Energy providers, Smart cities',
-=======
->>>>>>> main
     icon:,
   ⚡',';
     color: 'from-yellow-600: to-orange-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-yellow-400',';
     link: 'https://ziontechgroup.com/quantum-energy-optimizatio,n,';
     marketPosition:,
@@ -795,17 +750,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
   'Multi-format: export',';
   'Version: control and history',';
   'Integration: with design tools',';
-  'Client: feedback management';';
+  'Client: feedback management';
     ],
     popular: tru,e,
-=======
   text-yellow-400',
     link: 'http,
     s://ziontechgroup.com/quantum-energy-optimization,
     marketPosition:,
   Quantum-powered energy optimization specialized for complex energy systems.',
     targetAudience: Utility companies, Energy providers, Smart cities',
->>>>>>> main
     trialDays: 45,
     setupTime: '1 month',
     category: 'Quantum Computing & Energy',
@@ -845,20 +798,16 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
       'Client feedback management'
     ],
     popular: true,
-<<<<<<< HEAD
     icon: '🎨',
     color: 'from-pink-600 to-purple-700',
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-creative-design-platform',
     marketPosition: 'AI-enhanced design platform competes with Canva, Figma, Adobe Creative Suite.',
     targetAudience: 'Designers, Marketing teams, Small businesses',
-=======
->>>>>>> main
     icon:,
   🎨',';
     color: 'from-pink-600: to-purple-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-pink-400',';
     link: 'https://ziontechgroup.com/ai-creative-design-platfor,m,';
     marketPosition:,
@@ -909,17 +858,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
   'Performance: benchmarking',';
   'Integration: with ML frameworks',';
   'Real-time: optimization',';
-  'Scalable: quantum computing';';
+  'Scalable: quantum computing';
     ],
     popular: fals,e,
-=======
   text-pink-400',
     link: 'http,
     s://ziontechgroup.com/ai-creative-design-platform,
     marketPosition:,
   AI-enhanced design platform competes with Canva, Figma, Adobe Creative Suite.',
     targetAudience: Designers, Marketing teams, Small businesses',
->>>>>>> main
     trialDays: 7,
     setupTime: '1 day',
     category: 'Creative & Design',
@@ -959,20 +906,16 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
       'Scalable quantum computing'
     ],
     popular: false,
-<<<<<<< HEAD
     icon: '🧠',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/quantum-neural-network-platform',
     marketPosition: 'Cutting-edge quantum neural networks specialized for advanced ML applications.',
     targetAudience: 'AI researchers, ML engineers, Research institutions',
-=======
->>>>>>> main
     icon:,
   🧠',';
     color: 'from-violet-600: to-purple-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-violet-400',';
     link: 'https://ziontechgroup.com/quantum-neural-network-platfor,m,';
     marketPosition:,
@@ -1023,17 +966,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
   'Real-time: market analysis',';
   'Goal: tracking and monitoring',';
   'Financial: education resources',';
-  'Integration: with financial accounts';';
+  'Integration: with financial accounts';
     ],
     popular: tru,e,
-=======
   text-violet-400',
     link: 'http,
     s://ziontechgroup.com/quantum-neural-network-platform,
     marketPosition:,
   Cutting-edge quantum neural networks specialized for advanced ML applications.',
     targetAudience: AI researchers, ML engineers, Research institutions',
->>>>>>> main
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'Quantum Computing & AI',
@@ -1073,20 +1014,16 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
       'Integration with financial accounts'
     ],
     popular: true,
-<<<<<<< HEAD
     icon: '💼',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/intelligent-financial-planning',
     marketPosition: 'AI-enhanced financial planning competes with Betterment, Wealthfront, Personal Capital.',
     targetAudience: 'Individual investors, Financial advisors, Wealth management firms',
-=======
->>>>>>> main
     icon:,
   💼',';
     color: 'from-emerald-600: to-teal-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-emerald-400',';
     link: 'https://ziontechgroup.com/intelligent-financial-plannin,g,';
     marketPosition:,
@@ -1137,17 +1074,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
   'Compliance: monitoring',';
   'Performance: optimization',';
   'Integration: with IoT platforms',';
-  'Security: analytics dashboard';';
+  'Security: analytics dashboard';
     ],
     popular: fals,e,
-=======
   text-emerald-400',
     link: 'http,
     s://ziontechgroup.com/intelligent-financial-planning,
     marketPosition:,
   AI-enhanced financial planning competes with Betterment, Wealthfront, Personal Capital.',
     targetAudience: Individual investors, Financial advisors, Wealth management firms',
->>>>>>> main
     trialDays: 14,
     setupTime: '1 week',
     category: 'Financial Technology',
@@ -1187,20 +1122,16 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
       'Security analytics dashboard'
     ],
     popular: false,
-<<<<<<< HEAD
     icon: '🔐',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-iot-security-platform',
     marketPosition: 'Future-proof IoT security specialized for quantum-resistant protection.',
     targetAudience: 'IoT manufacturers, Smart cities, Industrial IoT',
-=======
->>>>>>> main
     icon:,
   🔐',';
     color: 'from-indigo-600: to-purple-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-indigo-400',';
     link: 'https://ziontechgroup.com/quantum-iot-security-platfor,m,';
     marketPosition:,
@@ -1251,17 +1182,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
   'Assessment: and evaluation',';
   'Collaborative: learning tools',';
   'Integration: with LMS systems',';
-  'Performance: insights dashboard';';
+  'Performance: insights dashboard';
     ],
     popular: tru,e,
-=======
   text-indigo-400',
     link: 'http,
     s://ziontechgroup.com/quantum-iot-security-platform,
     marketPosition:,
   Future-proof IoT security specialized for quantum-resistant protection.',
     targetAudience: IoT manufacturers, Smart cities, Industrial IoT',
->>>>>>> main
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Quantum Computing & IoT Security',
@@ -1301,20 +1230,16 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
       'Performance insights dashboard'
     ],
     popular: true,
-<<<<<<< HEAD
     icon: '🎓',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-education-platform',
     marketPosition: 'AI-enhanced education competes with Coursera, Udemy, Khan Academy.',
     targetAudience: 'Educational institutions, Corporate training, Online learning platforms',
-=======
->>>>>>> main
     icon:,
   🎓',';
     color: 'from-blue-600: to-cyan-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/ai-education-platfor,m,';
     marketPosition:,
@@ -1366,17 +1291,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
   'Satellite: communication optimization',';
   'Launch: window optimization',';
   'Space: weather prediction',';
-  'Integration: with space systems';';
+  'Integration: with space systems';
     ],
     popular: fals,e,
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/ai-education-platform,
     marketPosition:,
   AI-enhanced education competes with Coursera, Udemy, Khan Academy.',
     targetAudience: Educational institutions, Corporate training, Online learning platforms',
->>>>>>> main
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'Education Technology',
@@ -1416,20 +1339,16 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
       'Integration with space systems'
     ],
     popular: false,
-<<<<<<< HEAD
     icon: '🚀',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-space-technology',
     marketPosition: 'Cutting-edge quantum space technology specialized for space applications.',
     targetAudience: 'Space agencies, Satellite companies, Aerospace firms',
-=======
->>>>>>> main
     icon:,
   🚀',';
     color: 'from-purple-600: to-pink-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/quantum-space-technolog,y,';
     marketPosition:,
@@ -1480,17 +1399,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
   'Medical: report generation',';
   'Integration: with EHR systems',';
   'Compliance: and security',';
-  'Performance: analytics';';
+  'Performance: analytics';
     ],
     popular: tru,e,
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/quantum-space-technology,
     marketPosition:,
   Cutting-edge quantum space technology specialized for space applications.',
     targetAudience: Space agencies, Satellite companies, Aerospace firms',
->>>>>>> main
     trialDays: 45,
     setupTime: '1 month',
     category: 'Quantum Computing & Space Technology',
@@ -1530,20 +1447,16 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
       'Performance analytics'
     ],
     popular: true,
-<<<<<<< HEAD
     icon: '🏥',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-healthcare-diagnostics',
     marketPosition: 'AI-enhanced healthcare diagnostics competes with IBM Watson Health, Google Health.',
     targetAudience: 'Hospitals, Medical clinics, Healthcare professionals',
-=======
->>>>>>> main
     icon:,
   🏥',';
     color: 'from-red-600: to-pink-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-red-400',';
     link: 'https://ziontechgroup.com/ai-healthcare-diagnostic,s,';
     marketPosition:,
@@ -1594,17 +1507,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
   'Patent: analysis and research',';
   'Collaboration: tools',';
   'Integration: with research tools',';
-  'Analytics: and reporting';';
+  'Analytics: and reporting';
     ],
     popular: fals,e,
-=======
   text-red-400',
     link: 'http,
     s://ziontechgroup.com/ai-healthcare-diagnostics,
     marketPosition:,
   AI-enhanced healthcare diagnostics competes with IBM Watson Health, Google Health.',
     targetAudience: Hospitals, Medical clinics, Healthcare professionals',
->>>>>>> main
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'Healthcare & AI',
@@ -1644,20 +1555,16 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
       'Analytics and reporting'
     ],
     popular: false,
-<<<<<<< HEAD
     icon: '🔬',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/quantum-materials-discovery',
     marketPosition: 'Quantum-powered materials discovery specialized for advanced materials research.',
     targetAudience: 'Materials scientists, Research institutions, Manufacturing companies',
-=======
->>>>>>> main
     icon:,
   🔬',';
     color: 'from-green-600: to-emerald-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/quantum-materials-discover,y,';
     marketPosition:,
@@ -1708,17 +1615,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
   'Route: optimization',';
   'Integration: with vehicle systems',';
   'Real-time: analytics dashboard',';
-  'Mobile: app and notifications';';
+  'Mobile: app and notifications';
     ],
     popular: tru,e,
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/quantum-materials-discovery,
     marketPosition:,
   Quantum-powered materials discovery specialized for advanced materials research.',
     targetAudience: Materials scientists, Research institutions, Manufacturing companies',
->>>>>>> main
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'Quantum Computing & Materials Science',
@@ -1758,20 +1663,16 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
       'Mobile app and notifications'
     ],
     popular: true,
-<<<<<<< HEAD
     icon: '🚗',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/intelligent-automotive-platform',
     marketPosition: 'AI-enhanced automotive platform competes with Geotab, Fleet Complete, Samsara.',
     targetAudience: 'Fleet operators, Automotive companies, Transportation companies',
-=======
->>>>>>> main
     icon:,
   🚗',';
     color: 'from-blue-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/intelligent-automotive-platfor,m,';
     marketPosition:,
@@ -1822,17 +1723,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
   'Policy: impact assessment',';
   'Integration: with climate data',';
   'Performance: benchmarking',';
-  'Analytics: and reporting';';
+  'Analytics: and reporting';
     ],
     popular: fals,e,
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/intelligent-automotive-platform,
     marketPosition:,
   AI-enhanced automotive platform competes with Geotab, Fleet Complete, Samsara.',
     targetAudience: Fleet operators, Automotive companies, Transportation companies',
->>>>>>> main
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'Automotive & Transportation',
@@ -1872,20 +1771,16 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
       'Analytics and reporting'
     ],
     popular: false,
-<<<<<<< HEAD
     icon: '🌍',
     color: 'from-teal-600 to-cyan-700',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/quantum-climate-modeling',
     marketPosition: 'Quantum-powered climate modeling specialized for environmental analysis.',
     targetAudience: 'Environmental agencies, Research institutions, Sustainability companies',
-=======
->>>>>>> main
     icon:,
   🌍',';
     color: 'from-teal-600: to-cyan-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-teal-400',';
     link: 'https://ziontechgroup.com/quantum-climate-modelin,g,';
     marketPosition:,
@@ -1917,15 +1812,13 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
     customers: 3,4,
     rating: 4.,8,
     reviews: 26;
-,]}}
-=======
+]}}
   text-teal-400',
     link: 'http,
     s://ziontechgroup.com/quantum-climate-modeling,
     marketPosition:,
   Quantum-powered climate modeling specialized for environmental analysis.',
     targetAudience: Environmental agencies, Research institutions, Sustainability companies',
->>>>>>> main
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'Quantum Computing & Environmental Science',
@@ -1947,4 +1840,3 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
     reviews: 26
   }
 ];
->>>>>>> main

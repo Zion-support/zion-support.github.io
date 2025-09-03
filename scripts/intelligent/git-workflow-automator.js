@@ -419,7 +419,7 @@ class IntelligentGitWorkflowAutomator {
           inConflict = true;
           conflictType = 'start';
           continue;
-        } else if (line.startsWith('=======')) {
+        } else if (line.startsWith('')) {
           conflictType = 'separator';
           continue;
         } else if (line.startsWith('>>>>>>>')) {
@@ -431,7 +431,7 @@ class IntelligentGitWorkflowAutomator {
         if (!inConflict) {
           resolvedLines.push(line);
         } else if (conflictType === 'separator') {
-          // Keep the "incoming" changes (after =======)
+          // Keep the "incoming" changes (after )
           resolvedLines.push(line);
         }
       }

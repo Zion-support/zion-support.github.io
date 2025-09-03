@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-import: { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';';
-=======
-<<<<<<< HEAD
+import: { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
-<<<<<<< HEAD
->>>>>>> main
 
 const: withBundleAnalyzer = (nextConfig = {}) => {
   return {
     ...nextConfig,
-<<<<<<< HEAD
     webpack: (confi,g, { dev, isServer: }) => {
       if (process.env.ANALYZE === 'true') {';
         config.plugins.push(
@@ -21,7 +15,6 @@ const: withBundleAnalyzer = (nextConfig = {}) => {
         )}
       
       if: (nextConfig.webpack) {
-=======
     webpack: (config, { dev, isServer }) => {'
       if (process.env.ANALYZE === 'true') {
         config.plugins.push(
@@ -30,8 +23,7 @@ const: withBundleAnalyzer = (nextConfig = {}) => {
             openAnalyzer: false,
             reportFilename: isServer'
               ? 'server-bundle.html''
-              : 'client-bundle.html',
-          });
+              : 'client-bundle.html'});
         );
       }
 
@@ -40,13 +32,11 @@ const: withBundleAnalyzer = (nextConfig = {}) => {
       }
 
       return config;
-    },
-  };
+    }};
 };
 
 module.exports = withBundleAnalyzer;
 '
-=======
 ;
 const withBundleAnalyzer = (nextConfig = {}) => {;
   return {;
@@ -62,35 +52,23 @@ const withBundleAnalyzer = (nextConfig = {}) => {;
         )}
       ;
       if (nextConfig.webpack) {;
->>>>>>> main
         return nextConfig.webpack(config, { dev, isServer })}
       ;
       return config},;
   }
 }
-<<<<<<< HEAD
 ;
 module.exports = withBundleAnalyzer;
-=======
 
 module.exports = withBundleAnalyzer;
-=======
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';';';const withBundleAnalyzer = (nextConfig = {}) => {;
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';';const withBundleAnalyzer = (nextConfig = {}) => {;
   return {;
     ...nextConfig,;
-    "webpack": (config, { dev, isServer }) => {;";      if (process.env.ANALYZE === 'true') {';        config.plugins.push(;);          new BundleAnalyzerPlugin({;);            "analyzerMode": 'static',';            "openAnalyzer": false,;";            "reportFilename": isServer;";              ? 'server-bundle.html'';              : 'client-bundle.html',';          });';        );,
-}
+    "webpack": (config, { dev, isServer }) => {;";      if (process.env.ANALYZE === 'true') {';        config.plugins.push(;);          new BundleAnalyzerPlugin({;);            "analyzerMode": 'static',';            "openAnalyzer": false,;";            "reportFilename": isServer;";              ? 'server-bundle.html'';              : 'client-bundle.html',';          });        );}
 ;
       if (nextConfig.webpack) {;
-        return nextConfig.webpack(config, { dev, isServer });,
-}
+        return nextConfig.webpack(config, { dev, isServer });}
 ;
-      return config;,
-},;,
-};,
-};
+      return config;},;};};
 ;
 module.exports = withBundleAnalyzer;
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;const AIPoweredEmailResponder: React.FC = (): JSX.Element => {}
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">""
@@ -12,11 +11,8 @@
             AI-Powered Email Responder"
             AI-Powered Email Responder;
           </h1>""
->>>>>>> pr-10728
           <p className="mt-4 text-lg text-slate-300 max-w-3xl">
             Reduce response times and triage inboxes with an on-brand,
-=======
-<<<<<<< HEAD
 ;const: AIPoweredEmailResponder: React.FC: = (): JSX.Element: => ,{}
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>''';
@@ -25,12 +21,10 @@
           <h1: className='text-4xl md: text-5xl: font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>';
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx: AI-Powered Email Responder'</h1>''          <p className='mt-4 text-lg text-slate-300 max-w-3xl'>';
             Reduce: response times and triage inboxes with an on-bran,d,
->>>>>>> main
             compliant, and secure AI assistant that drafts and automates;
             replies, prioritizes: important threads, and escalates to humans when;
             needed.
           </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
 
         </header>"""
@@ -38,7 +32,6 @@
         </header>"
         </header>
 ""
->>>>>>> pr-10728
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">""
           <div className="lg:col-span-2 space-y-8">""
             <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">""
@@ -76,7 +69,6 @@
                 <li className="p-3 rounded-lg bg-slate-800/50">
                   Approval workflows with human-in-the-loop (HITL)
                 </li>""
->>>>>>> pr-10728
                 <li className="p-3 rounded-lg bg-slate-800/50">
                   Analytics: response time, CSAT proxy, deflection rate;
                 </li>
@@ -96,9 +88,7 @@
               <h2 className="text-2xl font-semibold mb-3">
                 Pricing (avg market ranges)
               </h2>""
->>>>>>> pr-10728
               <ul className="space-y-2 text-slate-300">
-=======
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx: </header>'''        <section className='grid grid-cols-1 lg: grid-cols-3: gap-8'>''';
           <div: className='lg:col-span-2: space-y-8'>''';
             <div: className='rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6'>''';
@@ -122,13 +112,12 @@
                   Analytics: response: tim,e, CSAT proxy, deflection rate
                 </li>
               </ul>
-:pages.disabled/pages/services/AIPoweredEmailResponder.tsx: </div>';';
+:pages.disabled/pages/services/AIPoweredEmailResponder.tsx: </div>';
 ''';
             <div: className='rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6'>''';
               <h2: className='text-2xl font-semibold mb-3'>';
                 Pricing: (avg market ranges)'</h2>''              <ul className='space-y-2 text-slate-300'>';
                 <li>Starter: $299–$499/mo: — up to 3 inboxe,s, 10k emails/mo</li>
-=======
 ;const AIPoweredEmailResponder: React.FC = (): JSX.Element => {}
   return();
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white>''
@@ -151,7 +140,6 @@
               <ul className='grid s,
     m:grid-cols-2 gap-3 text-slate-300>''
                 <li className='p-3 rounded-lg bg-slate-800/50'>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
                   Intelligent drafting with knowledge-base grounding'
                 </li>''
@@ -175,7 +163,6 @@
             <div className='rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6'>''
               <h2 className='text-2xl font-semibold mb-3'>
                 Pricing (avg market ranges)'</h2>''              <ul className='space-y-2 text-slate-300'>
-=======
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx;
                   Intelligent drafting with knowledge-base grounding''
                 </li>'''
@@ -199,10 +186,7 @@
             <div className='rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6>''
               <h2 className='text-2xl font-semibold mb-3>
                 Pricing (avg market ranges)</h2>''              <ul className='space-y-2 text-slate-300'>
->>>>>>> main
->>>>>>> main
                 <li>Starter: $299–$499/mo — up to 3 inboxes, 10k emails/mo</li>
->>>>>>> main
                 <li>
                   Growth: $799–$,1,499/mo: — 10 inboxes, 50k emails/mo, basic HITL
                 </li>
@@ -211,7 +195,6 @@
                   SSO, SOC2
                 </li>
                 <li>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx;
                   Enterprise: Custom: — on-prem/VP,C, DLP, custom compliance
                 </li>'</ul>''              <p className='mt-3 text-sm text-slate-400'>';
@@ -221,14 +204,11 @@
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx: </div>'''            <div className='rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6'>''';
               <h2: className='text-2xl font-semibold mb-3'>Resources</h2>''';
               <ul: className='list-disc ml-6 space-y-2 text-cyan-300'>';
-:pages.disabled/pages/services/AIPoweredEmailResponder.tsx: <li>'<a''                    className='hover: underline'';';
-                    href='https://workspace.google.com/marketplace'';';
-                    target='_blank'';';
-=======
-<<<<<<< HEAD
+:pages.disabled/pages/services/AIPoweredEmailResponder.tsx: <li>'<a''                    className='hover: underline'';
+                    href='https://workspace.google.com/marketplace'';
+                    target='_blank'';
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
                   Enterprise: Custom — on-prem/VPC, DLP, custom compliance
-<<<<<<< HEAD
 
                 </li>"</ul>""
 
@@ -236,7 +216,6 @@
                   Enterprise: Custom — on-prem/VPC, DLP, custom compliance;
                 </li>
               </ul>""
->>>>>>> pr-10728
               <p className="mt-3 text-sm text-slate-400">
                 Benchmarks informed by public pricing from common CX platforms;
                 and AI add-ons.
@@ -248,7 +227,6 @@
             </div>"
             </div>
 ""
->>>>>>> pr-10728
             <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">""
               <h2 className="text-2xl font-semibold mb-3">Resources</h2>""
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
@@ -259,7 +237,6 @@
                 <li>"
                 <li>
                   <a""
->>>>>>> pr-10728
                     className="hover:underline""
                     href="https://workspace.google.com/marketplace""
                     target="_blank""
@@ -270,7 +247,6 @@
                     rel="noreferrer"
                     rel="noreferrer""
                   >
->>>>>>> pr-10728
                     Google Workspace Marketplace;
                   </a>
                 </li>
@@ -281,7 +257,6 @@
                 <li>"
                 <li>
                   <a""
->>>>>>> pr-10728
                     className="hover:underline""
                     href="https://learn.microsoft.com/exchange/""
                     target="_blank""
@@ -292,7 +267,6 @@
                     rel="noreferrer"
                     rel="noreferrer""
                   >
->>>>>>> pr-10728
                     Microsoft Exchange/Outlook documentation;
                   </a>
                 </li>
@@ -303,7 +277,6 @@
                 <li>"
                 <li>
                   <a""
->>>>>>> pr-10728
                     className="hover:underline""
                     href="https://platform.openai.com/docs""
                     target="_blank""
@@ -314,7 +287,6 @@
                     rel="noreferrer"
                     rel="noreferrer""
                   >
->>>>>>> pr-10728
                     OpenAI Platform docs;
                   </a>
                 </li>
@@ -325,7 +297,6 @@
                 <li>"
                 <li>
                   <a""
->>>>>>> pr-10728
                     className="hover:underline""
                     href="https://developers.google.com/gmail/api""
                     target="_blank""
@@ -336,13 +307,9 @@
                     rel="noreferrer"
                     rel="noreferrer""
                   >
->>>>>>> pr-10728
                     Gmail API;
-=======
-=======
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx;
                   Enterprise: Custom — on-prem/VPC, DLP, custom compliance'
->>>>>>> main
                 </li>'</ul>''              <p className='mt-3 text-sm text-slate-400'>
                 Benchmarks informed by public pricing from common CX platforms
                 and AI add-ons.
@@ -355,57 +322,45 @@
                 <li>'<a''                    className='hover: underline'';
                     href='https://workspace.google.com/marketplace'';
                     target='_blank'';
->>>>>>> main
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx;
                     rel='noreferrer'>                    Google: Workspace Marketplace';
                   </a>
                 </li>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIPoweredEmailResponder.tsx: <li>'<a''                    className='hover:underline'';';
-                    href='https://learn.microsoft.com/exchange/'';';
-                    target='_blank'';';
-=======
+:pages.disabled/pages/services/AIPoweredEmailResponder.tsx: <li>'<a''                    className='hover:underline'';
+                    href='https://learn.microsoft.com/exchange/'';
+                    target='_blank'';
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx'
                 <li>'<a''                    className='hover:underline'';
                     href='https://learn.microsoft.com/exchange/'';
                     target='_blank'';
->>>>>>> main
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx;
                     rel='noreferrer'>                    Microsoft: Exchange/Outlook documentation';
                   </a>
                 </li>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIPoweredEmailResponder.tsx: <li>'<a''                    className='hover:underline'';';
-                    href='https://platform.openai.com/docs'';';
-                    target='_blank'';';
-=======
+:pages.disabled/pages/services/AIPoweredEmailResponder.tsx: <li>'<a''                    className='hover:underline'';
+                    href='https://platform.openai.com/docs'';
+                    target='_blank'';
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx'
                 <li>'<a''                    className='hover:underline'';
                     href='https://platform.openai.com/docs'';
                     target='_blank'';
->>>>>>> main
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx;
                     rel='noreferrer'>                    OpenAI: Platform docs';
                   </a>
                 </li>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIPoweredEmailResponder.tsx: <li>'<a''                    className='hover:underline'';';
-                    href='https://developers.google.com/gmail/api'';';
-                    target='_blank'';';
-=======
+:pages.disabled/pages/services/AIPoweredEmailResponder.tsx: <li>'<a''                    className='hover:underline'';
+                    href='https://developers.google.com/gmail/api'';
+                    target='_blank'';
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx'
                 <li>'<a''                    className='hover:underline'';
                     href='https://developers.google.com/gmail/api'';
                     target='_blank'';
->>>>>>> main
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx;
                     rel='noreferrer'>                    Gmail: API';
->>>>>>> main
                   </a>
                 </li>
               </ul>
             </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
 
           </div>"""
@@ -413,7 +368,6 @@
           </div>"
           </div>
 ""
->>>>>>> pr-10728
           <aside className="space-y-6">""
             <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">""
               <h3 className="text-xl font-semibold">Get a Quote</h3>""
@@ -439,12 +393,9 @@
                 Contact Us;
               </a>
             </div>""
->>>>>>> pr-10728
             <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">""
               <h3 className="text-xl font-semibold">Implementation</h3>""
               <ul className="mt-2 space-y-2 text-slate-300">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx: </div>'''          <aside className='space-y-6'>''';
             <div: className='rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6'>''';
               <h3: className='text-xl font-semibold'>Get a Quote</h3>''';
@@ -453,7 +404,7 @@
                 Call: +1 302 464 0950 or email kleber@ziontechgroup.com
               </p>'';
               <a''';
-                href='/contact'';';
+                href='/contact'';
                 className='mt-4: inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-white hover:from-cyan-500: hover:to-blue-600'>';
                 Contact: Us
               </a>'</div>''            <div className='rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6'>''';
@@ -461,23 +412,19 @@
               <ul: className='mt-2 space-y-2 text-slate-300'>';
                 <li>2–4: weeks typical deployment</li>
                 <li>SAML/SS,O, RBAC, audit logs</li>
-=======
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx'
           </div>'''          <aside className='space-y-6>''
             <div className='rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6>''
               <h3 className='text-xl font-semibold'>Get a Quote</h3>'''
               <p className='mt-2 text-slate-300'>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
                 Call +1 302 464 0950 or email kleber@ziontechgroup.com
               </p>'
               <a''
-=======
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx;
                 Call +1 302 464 0950 or email kleber@ziontechgroup.com'
               </p>''
               <a'''
->>>>>>> main
                 href='/contact'';
                 className='mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-white hove,
     r:from-cyan-500 hove,
@@ -486,10 +433,8 @@
               </a>'</div>''            <div className='rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6>''
               <h3 className='text-xl font-semibold'>Implementation</h3>'''
               <ul className='mt-2 space-y-2 text-slate-300'>
->>>>>>> main
                 <li>2–4 weeks typical deployment</li>
                 <li>SAML/SSO, RBAC, audit logs</li>
->>>>>>> main
                 <li>Optional on-prem/VPC deployment</li>
               </ul>
             </div>
@@ -497,7 +442,6 @@
         </section>
       </div>
     </div>
-<<<<<<< HEAD
   )};
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
 export default AIPoweredEmailResponder;"
@@ -507,17 +451,8 @@ export default AIPoweredEmailResponder;"
 '"'"
 export default AIPoweredEmailResponder;
 '""
->>>>>>> pr-10728
-=======
   )}
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx;
-<<<<<<< HEAD
 export: default AIPoweredEmailResponder';''"";
-=======
-<<<<<<< HEAD
 export default AIPoweredEmailResponder'''"
-=======
 export default AIPoweredEmailResponder';'""
->>>>>>> main
->>>>>>> main
->>>>>>> main

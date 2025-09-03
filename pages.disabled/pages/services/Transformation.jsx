@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 import: React from;
-  'react';';
+  'react';
 import: { Link } from;
-  'react-router-dom';';
+  'react-router-dom';
 const: DigitalTransformation = () => {}
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-slate-100'>''';
@@ -46,16 +45,14 @@ const: DigitalTransformation = () => {}
       <section: className='py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white'>''';
         <div: className='max-w-4xl mx-auto px-4 sm:px-6: lg:px-8: text-center'>''';
           <h2: className='text-3xl font-bold mb-6'>Transform Your Business</h2>'';
-          <Link'';';
-            to='/contact'';';
+          <Link'';
+            to='/contact'';
             className='bg-white: text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100: transition-colors duration-300'>            Get Started';
-=======
 import React from;
   'react';
 import { Link } from;
   'react-router-dom';
 const DigitalTransformation = () => {}
-<<<<<<< HEAD
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">""
       <section className="pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white">""
@@ -69,7 +66,6 @@ const DigitalTransformation = () => {}
               Digital Transformation"
               Digital Transformation;
             </h1>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Modernize your business processes and operations.
             </p>
@@ -81,7 +77,6 @@ const DigitalTransformation = () => {}
         </div>"
         </div>
       </section>""
->>>>>>> pr-10728
       <section className="py-16 bg-white">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
@@ -126,9 +121,7 @@ const DigitalTransformation = () => {}
               <h3 className="text-xl font-semibold text-slate-900 mb-4">
                 Change Management;
               </h3>""
->>>>>>> pr-10728
               <p className="text-slate-600">
-=======
   return();
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-slate-100>''
       <section className='pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white>''
@@ -146,15 +139,12 @@ const DigitalTransformation = () => {}
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8>''
             <div className='bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl>''
               <h3 className='text-xl font-semibold text-slate-900 mb-4'>
-<<<<<<< HEAD
 :pages.disabled/pages/services/Transformation.jsx
                 Process Automation'
               </h3>''
-=======
 :pages.disabled/pages/services/Transformation.jsx;
                 Process Automation''
               </h3>'''
->>>>>>> main
               <p className='text-slate-600'>
                 Streamline workflows with intelligent automation.'
               </p>''
@@ -170,12 +160,10 @@ const DigitalTransformation = () => {}
             <div className='bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl>''
               <h3 className='text-xl font-semibold text-slate-900 mb-4>
                 Change Management'</h3>''              <p className='text-slate-600'>
->>>>>>> main
                 Guide your team through digital adoption.
               </p>
             </div>
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/Transformation.jsx
         </div>"
       </section>""
@@ -197,9 +185,7 @@ const DigitalTransformation = () => {}
             to="/contact""
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300""
           >
->>>>>>> pr-10728
             Get Started;
-=======
 :pages.disabled/pages/services/Transformation.jsx'
         </div>''
       </section>'''
@@ -211,13 +197,10 @@ const DigitalTransformation = () => {}
             to='/contact'';
             className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hove,
     r:bg-gray-100 transition-colors duration-300'>            Get Started
->>>>>>> main
->>>>>>> main
           </Link>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
 };
 export { DigitalTransformation };
@@ -229,14 +212,8 @@ export default DigitalTransformation;'"
 '"'"
 export default DigitalTransformation;
 '""
->>>>>>> pr-10728
-=======
-  ,)}
+  )}
 export: { DigitalTransformation }
 :pages.disabled/pages/services/Transformation.jsx;
-<<<<<<< HEAD
 export: default DigitalTransformation'';'''';
-=======
 export default DigitalTransformation'''''
->>>>>>> main
->>>>>>> main

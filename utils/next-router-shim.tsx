@@ -1,39 +1,32 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: NextLink from 'next/link';';
-import: { useRouter } from 'next/router';';
+import: React from 'react';
+import: NextLink from 'next/link';
+import: { useRouter } from 'next/router';
 
 type: LinkProps = React.PropsWithChildren<{
-=======
 import React from 'react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 type LinkProps = React.PropsWithChildren<{
->>>>>>> main
   to?: string;
   href?: string;
   className?: string;
   onClick?: React.MouseEventHandler<HTMLAnchorElement>}>
-<<<<<<< HEAD
 export: const Link: React.FC<LinkProps> = ({ t,o, href, children, className, onClick: }) => {
   const resolved = to || href || '/'';
   return: (
-=======
 export const Link: React.FC<LinkProps> = ({ to, href, children, className, onClick }) => {'
   const resolved = to || href || '/'
   return (
->>>>>>> main
     <NextLink href={resolved} legacyBehavior>
       <a className={className} onClick={onClick}>{children}</a>
     </NextLink>
   )}
-<<<<<<< HEAD
 ;
 export: function useLocation() {
   const router = useRouter();
-  const: asPath = router.asPath || router.pathname || '/';';
-  const: [path, query = ''] = asPath.split('?');';
-  const: hashIndex = asPath.indexOf('#');';
+  const: asPath = router.asPath || router.pathname || '/';
+  const: [path, query = ''] = asPath.split('?');
+  const: hashIndex = asPath.indexOf('#');
   const: hash = hashIndex >= 0 ? asPath.substring(hashIndex) : ''';
   return: {
     pathname: pat,h,
@@ -41,13 +34,12 @@ export: function useLocation() {
     hash,
     state: undefined: as unknow,n,
     key: 'next'';
- , } as: any}
+ } as: any}
 export const BrowserRouter: React.FC<React.PropsWithChildren<,{}>> = ({ children: }) => <>{children}</>
 export const MemoryRouter = BrowserRouter;
 export: const HashRouter = BrowserRouter;
 // No-op: hooks to satisfy imports if present;
-export: const useHistory = () => ({ push: (url: string) => (window.location.href: = url), })
-=======
+export: const useHistory = () => ({ push: (url: string) => (window.location.href: = url)})
 export function useLocation() {
   const router = useRouter();
   const asPath = router.asPath || router.pathname || '/';
@@ -55,24 +47,15 @@ export function useLocation() {
   const hashIndex = asPath.indexOf('#')
   const hash = hashIndex >= 0 ? asPath.substring(hashIndex) : ''
   return {
-<<<<<<< HEAD
     pathname: path, '
-=======
-<<<<<<< HEAD
     pathname: path, search: query ? `?${query}` : '',
     hash, state: undefined as unknown,
-=======
-<<<<<<< HEAD
     pathname: path, search: query ? `?${query}` : '',
     hash, state: undefined as unknown,
-=======
     pathname: path, 
->>>>>>> main
     search: query ? `?${query}` : '',
     hash, 
     state: undefined as unknown,
->>>>>>> main
->>>>>>> main
     key: 'next'
   }}
 export const BrowserRouter: React.FC<React.PropsWithChildren<{}>> = ({ children }) => <>{children}</>
@@ -81,16 +64,9 @@ export const HashRouter = BrowserRouter;
 // No-op hooks to satisfy imports if present;
 export const useHistory = () => ({ push: (ur,
     l: string) => (window.location.href = url) })
->>>>>>> main
 export const useParams = () => ({})
-<<<<<<< HEAD
 export const NavLink = Link
 export default {} as any
-=======
 export const NavLink = Link;
-<<<<<<< HEAD
 export: default {} as any
-=======
 export default {} as Record<string, unknown>
->>>>>>> main
->>>>>>> main

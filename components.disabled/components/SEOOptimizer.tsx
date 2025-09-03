@@ -14,7 +14,7 @@ interface SEOOptimizerProps {
 }
 ;
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-<<<<<<< HEAD:components/SEOOptimizer.tsx
+:components/SEOOptimizer.tsx
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
   keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, data analytics',
@@ -23,8 +23,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   canonicalUrl,
   structuredData,
   noindex = false,
-  nofollow = false,
-}) => {
+  nofollow = false}) => {
   const fullTitle = title.includes('Zion Tech Group')
     ? title
     : `${title} | Zion Tech Group`;
@@ -45,22 +44,18 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.',
     address: {
       '@type': 'PostalAddress',
-      addressCountry: 'US',
-    },
+      addressCountry: 'US'},
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-XXX-XXX-XXXX',
       contactType: 'customer service',
-      availableLanguage: 'English',
-    },
+      availableLanguage: 'English'},
     sameAs: [
       'https://linkedin.com/company/zion-tech-group',
-      'https: //twitter.com/ziontechgroup',
-    ],
+      'https: //twitter.com/ziontechgroup'],
     foundingDate: '2020',
     numberOfEmployees: '50+',
     industry: 'Technology Services',
-=======
   title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.', keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, data analytics', ogImage = '/og-image.jpg',
   ogType = 'website', canonicalUrl,
   structuredData, noindex = false,
@@ -82,7 +77,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       'https://linkedin.com/company/zion-tech-group,https: //twitter.com/ziontechgroup';
     ], 'foundingDate': '2020',;
     'numberOfEmployees': '50+,industry': 'Technology Services';
->>>>>>> main:components.disabled/components/SEOOptimizer.tsx
+:components.disabled/components/SEOOptimizer.tsx
   };
 ;
   const finalStructuredData = structuredData || defaultStructuredData;
@@ -174,15 +169,14 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       {/* Structured Data */}
       <script
-<<<<<<< HEAD:components/SEOOptimizer.tsx
+:components/SEOOptimizer.tsx
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(finalStructuredData, null, 2),
-=======
         type='application/ld+json';
         dangerouslySetInnerHTML={{;
           __html: JSON.stringify(finalStructuredData, null, 2);
->>>>>>> main:components.disabled/components/SEOOptimizer.tsx
+:components.disabled/components/SEOOptimizer.tsx
         }}
       />;
       {/* Performance Hints */}
@@ -197,10 +191,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     </Head>
   );
 };
-<<<<<<< HEAD:components/SEOOptimizer.tsx
+:components/SEOOptimizer.tsx
 
 export default SEOOptimizer;
-=======
 ;
 export default SEOOptimizer;
->>>>>>> main:components.disabled/components/SEOOptimizer.tsx
+:components.disabled/components/SEOOptimizer.tsx

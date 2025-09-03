@@ -8,8 +8,7 @@ import {
   Database,
   Shield,
   ArrowRight,
-  CheckCircle,
-} from 'lucide-react';
+  CheckCircle} from 'lucide-react';
 
 export default function IoTSolutions() {
   const features = [
@@ -17,61 +16,48 @@ export default function IoTSolutions() {
       icon: Wifi,
       title: 'Device Connectivity',
       description:
-        'Seamless connection and communication between IoT devices and systems',
-    },
+        'Seamless connection and communication between IoT devices and systems'},
     {
       icon: Cpu,
       title: 'Edge Computing',
       description:
-        'Process data locally for faster response times and reduced latency',
-    },
+        'Process data locally for faster response times and reduced latency'},
     {
       icon: Database,
       title: 'Data Analytics',
-      description: 'Collect, analyze, and derive insights from IoT sensor data',
-    },
+      description: 'Collect, analyze, and derive insights from IoT sensor data'},
     {
       icon: Shield,
       title: 'Security & Privacy',
       description:
-        'Enterprise-grade security for IoT devices and data transmission',
-    },
-  ];
+        'Enterprise-grade security for IoT devices and data transmission'}];
 
   const benefits = [
-<<<<<<< HEAD
     'Real-time monitoring and control',
     'Predictive maintenance capabilities',
     'Improved operational efficiency',
     'Cost reduction through automation',
     'Enhanced customer experiences',
     'Data-driven decision making',
-=======
     'Real-time monitoring and control,Predictive maintenance capabilities,Improved operational efficiency,Cost reduction through automation,Enhanced customer experiences,Data-driven decision making'
->>>>>>> main
   ];
 
   const industries = [
   {
       title: 'Manufacturing',
       description:
-        'Smart factories with connected machines and predictive maintenance',
-    },
+        'Smart factories with connected machines and predictive maintenance'},
     {
       title: 'Healthcare',
-      description: 'Remote patient monitoring and medical device integration',
-    },
+      description: 'Remote patient monitoring and medical device integration'},
     {
       title: 'Agriculture',
       description:
-        'Precision farming with soil sensors and automated irrigation',
-    },
+        'Precision farming with soil sensors and automated irrigation'},
     {
       title: 'Smart Cities',
       description:
-        'Connected infrastructure for traffic, utilities, and public services',
-    },
-  ];
+        'Connected infrastructure for traffic, utilities, and public services'}];
 
   return (
     <>

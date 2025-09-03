@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
-=======
 #!/'usr/bin/env' node;
 
->>>>>>> main
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 ;
 console.log(`'🔍 Starting enhanced error detector...');
 ;
@@ -28,7 +24,6 @@ async function detectAllErrors() {;
       const tsResult = execSync('npx tsc --noEmit', {;
         encoding: 'utf8',;
         stdio: 'pipe',;
-=======
 
 console.log(`🔍 Starting enhanced error detector...`);
 
@@ -39,36 +34,27 @@ async function detectAllErrors() {
     build: [],
     dependencies: [],
     syntax: [],
-    timestamp: new Date().toISOString(),
-  };
+    timestamp: new Date().toISOString()};
 
   try {
-<<<<<<< HEAD
     // 1. Detect TypeScript errors;
     console.log(`'🔍 Detecting TypeScript errors...');
-=======
     // 1. Detect TypeScript errors
     console.log(`🔍 Detecting TypeScript errors...`);
->>>>>>> main
     try {
       const tsResult = execSync('npx tsc --noEmit', {
         encoding: 'utf8',
-        stdio: 'pipe',
->>>>>>> main
-      });
-<<<<<<< HEAD
+        stdio: 'pipe'});
     } catch (error) {  
       const tsOutput = error.stdout || error.stderr || '';
       errors.typescript = parseTypeScriptErrors(tsOutput);
       }
 
-=======
     } catch (error) {;
       const tsOutput = error.stdout || error.stderr || ';
       errors.typescript = parseTypeScriptErrors(tsOutput);
     }
 ;
->>>>>>> main
     // 2. Detect linting errors;
     console.log('🔍 Detecting linting errors...');
     try {;
@@ -76,19 +62,16 @@ async function detectAllErrors() {
         encoding: 'utf8',;
         stdio: 'pipe',;
       });
-<<<<<<< HEAD
     } catch (error) {  
       const lintOutput = error.stdout || error.stderr || '';
       errors.linting = parseLintingErrors(lintOutput);
       }
 
-=======
     } catch (error) {;
       const lintOutput = error.stdout || error.stderr || ';
       errors.linting = parseLintingErrors(lintOutput);
     }
 ;
->>>>>>> main
     // 3. Detect build errors;
     console.log('🔍 Detecting build errors...');
     try {;
@@ -96,19 +79,16 @@ async function detectAllErrors() {
         encoding: 'utf8',;
         stdio: 'pipe',;
       });
-<<<<<<< HEAD
     } catch (error) {  
       const buildOutput = error.stdout || error.stderr || '';
       errors.build = parseBuildErrors(buildOutput);
       }
 
-=======
     } catch (error) {;
       const buildOutput = error.stdout || error.stderr || ';
       errors.build = parseBuildErrors(buildOutput);
     }
 ;
->>>>>>> main
     // 4. Detect dependency issues;
     console.log('🔍 Detecting dependency issues...');
     try {;
@@ -118,7 +98,6 @@ async function detectAllErrors() {
       });
       const auditData = JSON.parse(auditResult);
       errors.dependencies = parseDependencyIssues(auditData);
-<<<<<<< HEAD
     } catch (error) {  
       console.log('⚠️  Could not run npm audit');
       }
@@ -129,7 +108,6 @@ async function detectAllErrors() {
 
     // Save error report;
     const reportPath = path.join(process.cwd(), `error-detection-report.json`);
-=======
     } catch (error) {;
       console.log('⚠️  Could not run npm audit');
     }
@@ -140,36 +118,29 @@ async function detectAllErrors() {
 ;
     // Save error report;
     const reportPath = path.join(process.cwd(), 'error-detection-report.json');
->>>>>>> main
     fs.writeFileSync(reportPath, JSON.stringify(errors, null, 2));
 ;
     console.log(✅ Error detection completed. Found:);console.log(   - ${errors.typescript.length} TypeScript errors``);console.log(`   - ${errors.linting.length} linting errors`);console.log(`   - ${errors.build.length} build errors`);console.log(`   - ${errors.dependencies.length} dependency issues`);console.log(`   - ${errors.syntax.length} syntax errors`);console.log(`📊 Report saved to: ${reportPath}`);
 ;
     return errors;
-<<<<<<< HEAD
   } catch (error) {  
     console.error(`❌ Error detection failed:`, error.message);
-=======
   } catch (error) {;
     console.error('❌ Error detection failed:', error.message);
->>>>>>> main
     return errors;
     }
 }
 ;
 function parseTypeScriptErrors(output) {;
   const errors = [];
-<<<<<<< HEAD
   const lines = output.split(`\n`);
 
   for (const line of lines) {
     if (line.includes('error TS')) {
-=======
   const lines = output.split('\n');
 ;
   for (const line of lines) {;
     if (line.includes('error TS')) {;
->>>>>>> main
       const match = line.match(/(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/);
       if (match) {;
         errors.push({;
@@ -236,7 +207,6 @@ function parseBuildErrors(output) {;
 ;
 function parseDependencyIssues(auditData) {;
   const issues = [];
-<<<<<<< HEAD
 
   if (auditData.vulnerabilities) {
     for (const ['packageName', 'vuln'] of Object.entries(
@@ -247,7 +217,6 @@ function parseDependencyIssues(auditData) {;
         severity: vuln.severity,
         title: vuln.title,
         type: 'dependency',
-=======
 ;
   if (auditData.vulnerabilities) {;
     for (const ['packageName', 'vuln'] of Object.entries(;
@@ -258,7 +227,6 @@ function parseDependencyIssues(auditData) {;
         severity: vuln.severity,;
         title: vuln.title,;
         type: 'dependency',;
->>>>>>> main
       });
     }
   }
@@ -273,7 +241,6 @@ async function detectSyntaxErrors() {;
   for (const dir of sourceDirs) {;
     if (fs.existsSync(dir)) {;
       const files = getAllFiles(dir);
-<<<<<<< HEAD
       for (const file of files) {
         if (
           file.endsWith('.tsx') ||
@@ -289,7 +256,6 @@ async function detectSyntaxErrors() {;
             errors.push({
               file: file,message: `Could not read file: ${error.message  }`,
               type: `syntax`,
-=======
       for (const file of files) {;
         if (;
           file.endsWith('.tsx') ||;
@@ -305,7 +271,6 @@ async function detectSyntaxErrors() {;
             errors.push({;
               file: file,message: `Could not read file: ${error.message}`,;
               type: 'syntax',;
->>>>>>> main
             });
           }
         }
@@ -321,13 +286,10 @@ function getAllFiles(dir) {;
 ;
   function traverse(currentDir) {;
     const items = fs.readdirSync(currentDir);
-<<<<<<< HEAD
     for (const item of items) {
       const fullPath = path.join(currentDir, `item);
-=======
     for (const item of items) {;
       const fullPath = path.join(currentDir, 'item);
->>>>>>> main
       const stat = fs.statSync(fullPath);
 ;
       if (stat.isDirectory()) {;
@@ -341,28 +303,22 @@ function getAllFiles(dir) {;
   traverse(dir);
   return files;
 }
-<<<<<<< HEAD
 
 function checkSyntaxErrors(content`, filePath) {
   const errors = [];
 
-=======
 ;
 function checkSyntaxErrors(content', filePath) {;
   const errors = [];
 ;
->>>>>>> main
   // Check for common syntax issues;
   const lines = content.split('\n');
 ;
   for (let i = 0; i < lines.length; i++) {;
     const line = lines[i];
     const lineNumber = i + 1;
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
     // Check for unmatched brackets;
     const openBrackets = (line.match(/\{/g) || []).length;
     const closeBrackets = (line.match(/\}/g) || []).length;
@@ -377,7 +333,6 @@ function checkSyntaxErrors(content', filePath) {;
         type: 'syntax',;
       });
     }
-<<<<<<< HEAD
 
     // Check for missing semicolons in ''JS/TS'' files;
     if (
@@ -398,7 +353,6 @@ function checkSyntaxErrors(content', filePath) {;
         line: lineNumber,
         message: 'Missing semicolon',
         type: 'syntax',
-=======
 ;
     // Check for missing semicolons in 'JS/TS' files;
     if (;
@@ -419,26 +373,22 @@ function checkSyntaxErrors(content', filePath) {;
         line: lineNumber,;
         message: 'Missing semicolon',;
         type: 'syntax',;
->>>>>>> main
       });
     }
   }
 ;
   return errors;
 }
-<<<<<<< HEAD
 
 // Run the error detection;
 if (require.main === module) {
   detectAllErrors()
     .then(errors => {
-=======
 ;
 // Run the error detection;
 if (require.main === module) {;
   detectAllErrors();
     .then(errors => {;
->>>>>>> main
       process.exit(0);
     });
     .catch(error => {;

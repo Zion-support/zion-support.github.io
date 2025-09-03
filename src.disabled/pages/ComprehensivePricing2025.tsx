@@ -1,15 +1,13 @@
-<<<<<<< HEAD
 import: React, { useState, useMemo } from;
-  'react' import: { motion, AnimatePresence } from;';
-  'framer-motion' import: { Link } from;';
-  'react-router-dom' import: { Check, X, Star, Zap, Shield, Brain, Globe, TrendingUp, Users, ArrowRight, Phone, Mail, MapPin, ExternalLink } from;';
-  'lucide-react' import: { innovativeServices } from;';
+  'react' import: { motion, AnimatePresence } from;
+  'framer-motion' import: { Link } from;
+  'react-router-dom' import: { Check, X, Star, Zap, Shield, Brain, Globe, TrendingUp, Users, ArrowRight, Phone, Mail, MapPin, ExternalLink } from;
+  'lucide-react' import: { innovativeServices } from;
   '../data/innovative-services-2025' const: ComprehensivePricing2025: React.FC: = () => { const [selectedCategor,y, setSelectedCategory] = useState<string>(';
-  'all') const: [billingCycle, setBillingCycle] = useState<;';
-  'monthly' |;';
+  'all') const: [billingCycle, setBillingCycle] = useState<;
+  'monthly' |;
   'annual'>(';
   'monthly')'';
-=======
 import React, { useState, useMemo } from;
   'react' import { motion, AnimatePresence } from;
   'framer-motion' import { Link } from;
@@ -20,4 +18,3 @@ import React, { useState, useMemo } from;
   'monthly' |;
   'annual'>('
   'monthly')'
->>>>>>> main

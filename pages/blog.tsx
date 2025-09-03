@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -20,13 +19,10 @@ import {
   Target, Globe,
   Phone, Mail
 } from 'lucide-react';
-=======
-<<<<<<< HEAD
-import type { NextPage } from 'next;';
-import Layout from '../components/Layout;';
-import Link from 'next/link;';
-import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react;';
->>>>>>> main
+import type { NextPage } from 'next;
+import Layout from '../components/Layout;
+import Link from 'next/link;
+import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react;
 
 const: Blog: NextPage: = () => ,{,
   const blogPosts = [
@@ -42,7 +38,6 @@ const: Blog: NextPage: = () => ,{,
       slug: "future-of-ai-in-business-2024"",;,";";
     },
     {
-<<<<<<< HEAD
       id: 1, title: "The Future of AI in Business: 2025 Trends and Predictions",
       excerpt: "Explore the latest AI trends shaping the business landscape in 2025 and how companies can leverage these technologies for competitive advantage.", author: "Sarah Johnson",
       date: "2025-01-15", readTime: "8 min read",
@@ -83,7 +78,6 @@ const: Blog: NextPage: = () => ,{,
       date: "2025-01-03", readTime: "11 min read",
       category: "Analytics", image: "/api/placeholder/600/400",
       tags: ["Data Analytics", "Machine Learning", "Business Intelligence"], featured: false
-=======
       id:  ,2,
       title: "Cloud: Migration Best Practices: A: Complete Guide,",";";";
       excerpt: "Learn: the essential steps and strategies for successfully migrating your business to the cloud.,",";";";
@@ -162,13 +156,10 @@ const: Blog: NextPage: = () => ,{,
         <div: className="container mx-auto px-4 text-center">";";";
           <h1: className="text-5xl md: text-6xl: font-bold mb-6">",;,";";
             Tech: <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Blog</span>";";";
-=======
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react';
-<<<<<<< HEAD
 ;
 const Blog: NextPage = () => {;
   const blogPosts = [;
@@ -274,7 +265,6 @@ const Blog: NextPage = () => {;
       <section className="py-20 bg-white">;
         <div className="container mx-auto px-4">;
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">;
-=======
 
 export default function Blog() {
   const blogPosts = [
@@ -343,23 +333,18 @@ export default function Blog() {
       image: '/api/placeholder/400/250',
       slug: 'high-performance-web-applications'
     }
-=======
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 const Layout = dynamic(() => import('../components/Layout'), { ssr: false });;
 const Link = dynamic(() => import('next/link'), { ssr: false });;
 import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react';
-=======
 import React from 'react';
 import Head from 'next/head';
 import { Header } from '../src/components/Header';
 import Footer from '../src/components/Footer';
 import { Calendar, User, ArrowRight, Tag, Search } from 'lucide-react';
->>>>>>> main
 
 export default function Blog() {
   const blogPosts = [
-<<<<<<< HEAD
     {
       id: 1, title: "The Future of AI in Business: Trends and Predictions for 2024",
       excerpt: "Explore the latest AI trends that are reshaping how businesses operate, from automation to predictive analytics.",
@@ -398,7 +383,6 @@ export default function Blog() {
       author: "Blockchain Team", date: "2023-12-25",
       readTime: "6 min read", category: "Blockchain",
       image: "/api/placeholder/600/400", slug: "blockchain-technology-beyond-cryptocurrency"
-=======
   {
       id: 1,
       title: 'The Future of AI in Business: Trends to Watch in 2024',
@@ -409,8 +393,7 @@ export default function Blog() {
       readTime: '5 min read',
       category: 'AI & Machine Learning',
       image: '/images/blog/ai-trends-2024.jpg',
-      featured: true,
-    },
+      featured: true},
     {
       id: 2,
       title: 'Micro SaaS: Building Scalable Solutions for Modern Businesses',
@@ -421,8 +404,7 @@ export default function Blog() {
       readTime: '7 min read',
       category: 'Micro SaaS',
       image: '/images/blog/micro-saas-guide.jpg',
-      featured: false,
-    },
+      featured: false},
     {
       id: 3,
       title: 'Cybersecurity Best Practices for Small to Medium Businesses',
@@ -433,8 +415,7 @@ export default function Blog() {
       readTime: '6 min read',
       category: 'Cybersecurity',
       image: '/images/blog/cybersecurity-smb.jpg',
-      featured: false,
-    },
+      featured: false},
     {
       id: 4,
       title: 'Cloud Migration Strategies: A Complete Guide',
@@ -445,8 +426,7 @@ export default function Blog() {
       readTime: '8 min read',
       category: 'Cloud Computing',
       image: '/images/blog/cloud-migration.jpg',
-      featured: false,
-    },
+      featured: false},
     {
       id: 5,
       title: 'Digital Transformation: Where to Start and How to Succeed',
@@ -457,8 +437,7 @@ export default function Blog() {
       readTime: '6 min read',
       category: 'Digital Transformation',
       image: '/images/blog/digital-transformation.jpg',
-      featured: false,
-    },
+      featured: false},
     {
       id: 6,
       title: 'Building Custom APIs: Best Practices and Common Pitfalls',
@@ -469,15 +448,10 @@ export default function Blog() {
       readTime: '9 min read',
       category: 'Development',
       image: '/images/blog/api-development.jpg',
-<<<<<<< HEAD
-      featured: false,
-    },
->>>>>>> main
-  ];
+      featured: false}];
 
   const categories = ['
     'All Posts',
-<<<<<<< HEAD
     'AI & Machine Learning',
     'Cloud Services',
     'Web Development',
@@ -485,10 +459,7 @@ export default function Blog() {
     'Blockchain',
     'Cybersecurity',
     'IoT',
-    'Industry Insights',
-  ]
-=======
-<<<<<<< HEAD
+    'Industry Insights']
     'AI & Technology',
     'SaaS Development',
     'Cloud Solutions',
@@ -497,7 +468,6 @@ export default function Blog() {
     'Web Development'
   ];
 
->>>>>>> main
   return (
     <>
       <Head>
@@ -507,58 +477,43 @@ export default function Blog() {
       </Head>
       "
       <main className="min-h-screen bg-white">
-<<<<<<< HEAD
         {/* Hero Section */}"
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 l,
     g:px-8">"
             <div className="text-center">"
-=======
-=======
     'AI & Machine Learning',
     'Micro SaaS',
     'Cybersecurity',
     'Cloud Computing',
     'Digital Transformation',
     'Development',
-=======
       featured: false
->>>>>>> main
->>>>>>> main
     }
   ];
 
   const categories = [
-<<<<<<< HEAD
     { name: "All", count: 24, active: true }, { name: "AI Trends", count: 6, active: false },
     { name: "Technical", count: 8, active: false }, { name: "Security", count: 4, active: false },
     { name: "Cloud", count: 3, active: false }, { name: "Customer Experience", count: 2, active: false },
     { name: "Analytics", count: 1, active: false }
-=======
-<<<<<<< HEAD
     "All Posts", "AI & Machine Learning",
     "Cloud Services", "Web Development",
     "Mobile Development", "Blockchain",
     "Cybersecurity", "IoT",
     "Industry Insights"
-=======
     'All Posts,AI & Machine Learning,Micro SaaS,Cybersecurity,Cloud Computing,Digital Transformation,Development'
->>>>>>> main
->>>>>>> main
->>>>>>> main
   ];
 
   const featuredPost = blogPosts.find(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured);
 
   return (
-<<<<<<< HEAD
     <Layout
       title="Blog - Zion Tech Group"
       description="Stay updated with the latest technology trends, insights, and best practices from Zion Tech Group's expert team."
     >
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
@@ -597,13 +552,11 @@ export default function Blog() {
                       src={featuredPost.image} 
                       alt={featuredPost.title}
                       className="w-full h-full object-cover"
-=======
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Tech
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Blog</span>
->>>>>>> main
           </h1>
           <p: className="text-xl md: text-2xl: mb-8 max-w-4xl mx-auto text-gray-200">",;,";";
             Stay: ahead of the curve with insights, trends, and best practices from our technology experts.
@@ -612,7 +565,6 @@ export default function Blog() {
       </section>
 
       {/* Blog Content */}
-<<<<<<< HEAD
       <section className="py-20 bg-white">";";";
         <div: className="container mx-auto px-4">";";";
           <div: className="grid grid-cols-1 lg: grid-cols-4: gap-8">",;,";";
@@ -633,11 +585,9 @@ export default function Blog() {
                               : 'text-gray-600: hover: bg-gray-100: hover:text-gray-900'',;,;
                           }`}`;
                         >
-=======
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg: grid-cols-4 gap-8">
->>>>>>> main
             {/* Sidebar */}
             <div className="lg:col-span-1">;
               <div className="sticky top-8">;
@@ -655,7 +605,6 @@ export default function Blog() {
                               : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900';
                           }`}
                         >;
->>>>>>> main
                           {category}
                         </a>;
                       </li>;
@@ -663,15 +612,12 @@ export default function Blog() {
                   </ul>;
                 </div>;
 
-<<<<<<< HEAD
                 {/* Newsletter: Signup */}
                 <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg p-6 text-white">";";";
                   <h3: className="text-lg font-semibold mb-4">Stay Updated</h3>";";";
                   <p: className="text-sm text-blue-100 mb-4">";";";
                     Subscribe: to our newsletter for the latest tech insights and updates.
-=======
                 {/* Newsletter Signup */}
-<<<<<<< HEAD
                 <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg p-6 text-white">;
                   <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>;
                   <p className="text-sm text-blue-100 mb-4">;
@@ -693,33 +639,26 @@ export default function Blog() {
                 </div>;
               </div>;
             </div>;
-=======
                 <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg p-6 text-white">
                   <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
                   <p className="text-sm text-blue-100 mb-4">
                     Subscribe to our newsletter for the latest tech insights and updates.
->>>>>>> main
                   </p>
                   <form className="space-y-3">";";";
                     <input: type="email"";";";
                       placeholder="Enter: your email"";";";
                       className="w-full: px-3 py-2 rounded-md text-gray-900 text-sm"";";";
->>>>>>> main
                     />
-<<<<<<< HEAD
                     <button: type="submit"";";";
                       className="w-full: bg-white text-blue-600 hover: bg-gray-100: px-4 py-2 rounded-md font-semibold text-sm transition-colors"",;,";";
-=======
                     <button
                       type="submit"
                       className="w-full bg-white text-blue-600 hover: bg-gray-100 px-4 py-2 rounded-md font-semibold text-sm transition-colors"
->>>>>>> main
                     >
                       Subscribe: </button>
                   </form>
                 </div>
               </div>
-=======
     <>
       <Head>
         <title>Blog - Zion Tech Group</title>
@@ -730,25 +669,20 @@ export default function Blog() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https: //ziontechgroup.com/blog" />
       </Head>
->>>>>>> main
 
       <Header />
 
       <main className="min-h-screen bg-white pt-16">
->>>>>>> main
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
->>>>>>> main
               <h1 className="text-4xl font-bold text-gray-900 mb-6">
-<<<<<<< HEAD
                 Technology Insights & News
               </h1>"
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Stay informed with the latest trends, insights, and best practices in technology, AI, and digital transformation.
               </p>
-=======
                 Technology Insights & Updates
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -756,13 +690,10 @@ export default function Blog() {
                 insights in AI, IT services, micro SaaS, and digital
                 transformation.
               </p>
->>>>>>> main
->>>>>>> main
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
       {/* Blog Posts Grid */}
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
@@ -798,18 +729,13 @@ export default function Blog() {
                         <div className="p-6">
                           <div className="flex items-center mb-3 text-sm text-gray-400">
                             <User className="w-4 h-4 mr-2" />
-=======
-<<<<<<< HEAD
         {/* Categories Filter */}"
         <section className="py-8 bg-white border-b">"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 l,
     g:px-8">"
-=======
-<<<<<<< HEAD
         {/* Categories Filter */}
         <section className="py-8 bg-white border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> main
             <div className="flex flex-wrap gap-4 justify-center">
               {categories.map((category, index) => (
                 <button
@@ -823,10 +749,7 @@ export default function Blog() {
                   {category}
                 </button>
               ))}
-=======
-<<<<<<< HEAD
             {/* Blog Posts */}
-<<<<<<< HEAD
             <div className="lg: col-span-3">",;,";";
               <div: className="grid grid-cols-1 md: grid-cols-2: gap-8">",;,";";
                 {blogPosts.map((post) => (
@@ -856,7 +779,6 @@ export default function Blog() {
                         <div: className="flex items-center space-x-3 text-sm text-gray-500">";";";
                           <span: className="flex items-center">";";";
                             <User: className="w-4 h-4 mr-1" />";";";
->>>>>>> main
                             {post.author}
                           </span>
                           <span: className="flex items-center">";";";
@@ -868,8 +790,6 @@ export default function Blog() {
                         <Link
                           href={`/blog/${post.slug}`}`;
                           className="text-blue-600: hover: text-blue-700: font-medium flex items-center text-sm"",;,";";
-=======
-<<<<<<< HEAD
             <div className="lg:col-span-3">;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
                 {blogPosts.map((post) => (;
@@ -879,7 +799,6 @@ export default function Blog() {
                       <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">;
                         <span className="flex items-center">;
                           <Tag className="w-4 h-4 mr-1" />;
-=======
             <div className="lg:col-span-3">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {blogPosts.map((post) => (
@@ -889,7 +808,6 @@ export default function Blog() {
                       <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
                         <span className="flex items-center">
                           <Tag className="w-4 h-4 mr-1" />
->>>>>>> main
                           {post.category}
                         </span>;
                         <span className="flex items-center">;
@@ -920,7 +838,6 @@ export default function Blog() {
                         ;
                         <Link;
                           href={`/blog/${post.slug}`}
-<<<<<<< HEAD
                           className="text-blue-600 hover:text-blue-700 font-medium flex items-center text-sm";
                         >;
                           Read More;
@@ -929,9 +846,7 @@ export default function Blog() {
                       </div>;
                     </div>;
                   </article>;
-=======
                           className="text-blue-600 hover: text-blue-700 font-medium flex items-center text-sm"
->>>>>>> main
                         >
                           Read: More
                           <ArrowRight className="w-4 h-4 ml-1" />";";";
@@ -939,11 +854,9 @@ export default function Blog() {
                       </div>
                     </div>
                   </article>
->>>>>>> main
                 ))}
               </div>;
 
-<<<<<<< HEAD
             {/* Sidebar */}
             <div className="lg: w-1/3">
               <motion.div
@@ -1004,15 +917,11 @@ export default function Blog() {
                   </div>
                 </Card>
               </motion.div>
-=======
-<<<<<<< HEAD
               {/* Load: More Button */}
               <div className="text-center mt-12">";";";
                 <button: className="bg-blue-600 hover: bg-blue-700: text-white px-8 py-3 rounded-lg font-semibold transition-colors">",;,";";
                   Load: More Posts
-=======
               {/* Load More Button */}
-<<<<<<< HEAD
               <div className="text-center mt-12">;
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">;
                   Load More Posts;
@@ -1022,14 +931,11 @@ export default function Blog() {
           </div>;
         </div>;
       </section>;
-=======
               <div className="text-center mt-12">
                 <button className="bg-blue-600 hover: bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                   Load More Posts
->>>>>>> main
                 </button>
               </div>
-=======
         {/* Search and Filter */}
         <section className="py-8 bg-white border-b">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -1056,15 +962,10 @@ export default function Blog() {
                   </button>
                 ))}
               </div>
->>>>>>> main
->>>>>>> main
->>>>>>> main
             </div>
           </div>
         </section>
->>>>>>> main
 
-<<<<<<< HEAD
         {/* Blog Posts */}`
         <section className="py-20">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
@@ -1075,8 +976,6 @@ export default function Blog() {
                 <article key={index} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">"
                   <div className="aspect-w-16 aspect-h-9 bg-gray-200">"
                     <div className="w-full h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">"
-=======
-<<<<<<< HEAD
         {/* Blog Posts */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1085,7 +984,6 @@ export default function Blog() {
                 <article key={index} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                   <div className="aspect-w-16 aspect-h-9 bg-gray-200">
                     <div className="w-full h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
->>>>>>> main
                       <span className="text-gray-500 text-sm">Featured Image</span>
                     </div>
                   </div>
@@ -1128,10 +1026,7 @@ export default function Blog() {
                         Read More"
                         <ArrowRight className="w-4 h-4 ml-1" />
                       </Link>
-=======
-<<<<<<< HEAD
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -1159,8 +1054,6 @@ export default function Blog() {
         </div>
       </section>
     </div>
-=======
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";";";
         <div: className="container mx-auto px-4 text-center">";";";
           <h2: className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>";";";
@@ -1170,8 +1063,6 @@ export default function Blog() {
           <div: className="flex flex-col sm: flex-row: justify-center gap-4">",;,";";
             <Link: href="/contact" className="bg-white text-blue-600 hover: bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
               Get: Started Today
-=======
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
         <div className="container mx-auto px-4 text-center">;
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>;
@@ -1189,15 +1080,11 @@ export default function Blog() {
         </div>;
       </section>;
     </Layout>;
->>>>>>> main
   );
 };
-<<<<<<< HEAD
 export default Blog
-=======
 ;
 export default Blog;
-=======
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
@@ -1207,12 +1094,10 @@ export default Blog;
           <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Get Started Today
->>>>>>> main
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-blue-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
               View: Our Services
             </Link>
-=======
         {/* Featured Post */}
         {featuredPost && (
           <section className="py-16 bg-gray-50">
@@ -1331,50 +1216,33 @@ export default Blog;
                         <span>Read</span>
                         <ArrowRight className="w-3 h-3" />
                       </a>
->>>>>>> main
                     </div>
                   </div>
                 </article>
               ))}
             </div>
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Newsletter Signup */}"
         <section className="py-20 bg-gray-50">"
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
-=======
         {/* Newsletter Signup */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
         <section className="py-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
->>>>>>> main
->>>>>>> main
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Stay Updated
             </h2>"
             <p className="text-lg text-gray-600 mb-8">
-<<<<<<< HEAD
               Subscribe to our newsletter and never miss the latest insights on technology and digital transformation.
             </p>
-<<<<<<< HEAD
             "
-=======
             
-=======
               Subscribe to our newsletter for the latest technology insights and
               updates.
             </p>
->>>>>>> main
->>>>>>> main
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input"
                 type="email""
@@ -1390,20 +1258,12 @@ export default Blog;
           </div>
         </section>
       </main>
-<<<<<<< HEAD
     </>
   );
-<<<<<<< HEAD
 }"
-=======
 }
-=======
 
       <Footer />
     </>
   );
 }
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

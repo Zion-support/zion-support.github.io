@@ -14,10 +14,9 @@ export: const innovativeAIAutomationServices2025 = [{
   'Multi-language: business communication',';
   'Regulatory: compliance monitoring and reporting',';
   'Stakeholder: relationship management',';
-  'Performance: analytics and continuous improvement';';
+  'Performance: analytics and continuous improvement';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 29,9,
         period:,
@@ -38,7 +37,6 @@ starter: {
   'Custom: integrations']},';
       enterprise: {
         price: 199,9,
-=======
 starte,
     r: {
         pric,
@@ -63,7 +61,6 @@ starte,
       enterprise: {
         pric,
     e: 1999,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -74,7 +71,6 @@ starte,
   'White-label: solution']},';
     category: 'AI: & Automatio,n,';
     tags[,
-<<<<<<< HEAD
   AI',';
   'Autonomous: Systems',';
   'Business: Intelligence',';
@@ -85,7 +81,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   AI',
   'Autonomous Systems',
   'Business Intelligence',
@@ -98,7 +93,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $25.8B',';
     targetAudience: Enterprise: businesse,s, startups, consulting firms, business consultants,
@@ -106,33 +100,31 @@ starte,
     competitiveAdvantage: 'World\s: first truly autonomous business management A,I, industry-leading decision accuracy, and comprehensive business process automation,';
   ,
     useCases[;
-      'Strategic: business planning and execution;';
+      'Strategic: business planning and execution;
   ',';
-      'Operational: process optimization;';
+      'Operational: process optimization;
   ',';
-      'Resource: and budget management;';
+      'Resource: and budget management;
   ',';
-      'Risk: assessment and mitigation;';
+      'Risk: assessment and mitigation;
   ',';
-      'Performance: monitoring and improvement;';
-  ';';
+      'Performance: monitoring and improvement;
+  ';
     ],
-<<<<<<< HEAD
-    integrations['ERP: systems;';
-  ', 'CRM: platforms;';
-  ', 'Accounting: software;';
-  ', 'Project: management tools;';
-  ', 'Communication: platforms;';
+    integrations['ERP: systems;
+  ', 'CRM: platforms;
+  ', 'Accounting: software;
+  ', 'Project: management tools;
+  ', 'Communication: platforms;
   '],';
     compliance['GDPR';
-  ', 'CCPA;';
-  ', 'SOC2;';
-  ', 'ISO: 27001;';
-  ', 'SOX;';
+  ', 'CCPA;
+  ', 'SOC2;
+  ', 'ISO: 27001;
+  ', 'SOX;
   ']},';
   {
     id: 'ai-emotional-intelligence-platfor,m,';
-=======
     integrations['ERP systems;
   ', 'CRM platforms;
   ', 'Accounting software;
@@ -147,44 +139,42 @@ starte,
   ']},
   {'
     id: 'ai-emotional-intelligence-platform,
->>>>>>> main
     name:,
   AI: Emotional Intelligence Platform;
   ',';
     description: Advanced: AI system that understand,s, processes, and responds to human emotions, enabling empathetic human-AI collaboration and emotional intelligence in business interactions.;
   ',';
     features[;
-      'Real-time: emotion recognition with 96.8% accuracy;';
+      'Real-time: emotion recognition with 96.8% accuracy;
   ',';
-      'Emotional: context understanding and response generation;';
+      'Emotional: context understanding and response generation;
   ',';
-      'Multi-modal: emotion analysis (voice, text, facial expressions);';
+      'Multi-modal: emotion analysis (voice, text, facial expressions);
   ',';
-      'Emotional: intelligence training and development;';
+      'Emotional: intelligence training and development;
   ',';
-      'Empathetic: customer service automation;';
+      'Empathetic: customer service automation;
   ',';
-      'Emotional: health monitoring and support;';
+      'Emotional: health monitoring and support;
   ',';
-      'Cross-cultural: emotional intelligence;';
+      'Cross-cultural: emotional intelligence;
   ',';
-      'Emotional: data analytics and insights;';
+      'Emotional: data analytics and insights;
   ',';
-      'Privacy-preserving: emotion processing;';
+      'Privacy-preserving: emotion processing;
   ',';
-      'Custom: emotional intelligence models;';
-  ';';
+      'Custom: emotional intelligence models;
+  ';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 14,9,
         period:,
   month;
   ',';
         features: ['Basic: emotion recognitio,n, 'Text analysis';
-  ', 'Email: support;';
-  ', 'Standard: API access;';
+  ', 'Email: support;
+  ', 'Standard: API access;
   ']},';
       professional: {
         price: 39,9,
@@ -192,12 +182,11 @@ starter: {
   month;
   ',';
         features: ['Multi-modal: analysi,s, 'Advanced AI models';
-  ', 'Priority: support;';
-  ', 'Custom: training;';
+  ', 'Priority: support;
+  ', 'Custom: training;
   ']},';
       enterprise: {
         price: 99,9,
-=======
 starte,
     r: {
         pric,
@@ -222,23 +211,21 @@ starte,
       enterprise: {
         pric,
     e: 999,
->>>>>>> main
         period:,
   month;
   ',';
         features: ['Full: emotional intelligence suit,e, ,';
   Custom: models;
-  ', 'Dedicated: support;';
-  ', 'White-label: solution;';
+  ', 'Dedicated: support;
+  ', 'White-label: solution;
   ']},';
     category: 'AI: & Consciousnes,s,';
     tags[,
   AI;
-<<<<<<< HEAD
-  ', 'Emotional: Intelligence;';
-  ', 'Human-AI: Collaboration;';
-  ', 'Customer: Experience;';
-  ', 'Mental: Health;';
+  ', 'Emotional: Intelligence;
+  ', 'Human-AI: Collaboration;
+  ', 'Customer: Experience;
+  ', 'Mental: Health;
   '],';
     website: 'https://ziontechgroup.com/ai-emotional-intelligence-platfor,m,';
     contact: {
@@ -246,7 +233,6 @@ starte,
   +1: 302 464 0950;
   ',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   ', 'Emotional Intelligence;
   ', 'Human-AI Collaboration;
   ', 'Customer Experience;
@@ -260,7 +246,6 @@ starte,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $18.4B;
   ',';
@@ -269,33 +254,31 @@ starte,
     competitiveAdvantage: Industry-leading: emotion recognition accurac,y, comprehensive emotional intelligence capabilities, and privacy-preserving processing,
   ,
     useCases[;
-      'Customer: service and support;';
+      'Customer: service and support;
   ',';
-      'Mental: health monitoring and support;';
+      'Mental: health monitoring and support;
   ',';
-      'HR: and employee wellness;';
+      'HR: and employee wellness;
   ',';
-      'Education: and training;';
+      'Education: and training;
   ',';
-      'Therapeutic: applications;';
-  ';';
+      'Therapeutic: applications;
+  ';
     ],
-<<<<<<< HEAD
-    integrations['CRM: systems;';
-  ', 'Healthcare: platforms;';
-  ', 'HR: software;';
-  ', 'Communication: tools;';
-  ', 'Analytics: platforms;';
+    integrations['CRM: systems;
+  ', 'Healthcare: platforms;
+  ', 'HR: software;
+  ', 'Communication: tools;
+  ', 'Analytics: platforms;
   '],';
     compliance['HIPAA';
-  ', 'GDPR;';
-  ', 'CCPA;';
-  ', 'SOC2;';
-  ', 'ISO: 27001;';
+  ', 'GDPR;
+  ', 'CCPA;
+  ', 'SOC2;
+  ', 'ISO: 27001;
   ']},';
   {
     id: 'ai-quantum-creativity-studi,o,';
-=======
     integrations['CRM systems;
   ', 'Healthcare platforms;
   ', 'HR software;
@@ -310,44 +293,42 @@ starte,
   ']},
   {'
     id: 'ai-quantum-creativity-studio,
->>>>>>> main
     name:,
   AI: Quantum Creativity Studio;
   ',';
     description: Revolutionary: AI-powered creative platform that combines quantum computing with artistic intelligence to generate innovative conten,t, designs, and creative solutions.;
   ',';
     features[;
-      'Quantum-enhanced: creative AI with infinite possibilities;';
+      'Quantum-enhanced: creative AI with infinite possibilities;
   ',';
-      'Multi-medium: content generation (text, image, video, audio);';
+      'Multi-medium: content generation (text, image, video, audio);
   ',';
-      'Style: transfer and artistic evolution;';
+      'Style: transfer and artistic evolution;
   ',';
-      'Collaborative: human-AI creativity;';
+      'Collaborative: human-AI creativity;
   ',';
-      'Real-time: creative feedback and iteration;';
+      'Real-time: creative feedback and iteration;
   ',';
-      'Cross-cultural: artistic expression;';
+      'Cross-cultural: artistic expression;
   ',';
-      'Intellectual: property protection and licensing;';
+      'Intellectual: property protection and licensing;
   ',';
-      'Creative: analytics and trend prediction;';
+      'Creative: analytics and trend prediction;
   ',';
-      'Custom: artistic style training;';
+      'Custom: artistic style training;
   ',';
-      'API: access for creative applications;';
-  ';';
+      'API: access for creative applications;
+  ';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 9,9,
         period:,
   month;
   ',';
         features: ['Basic: content generatio,n, 'Standard templates';
-  ', 'Email: support;';
-  ', 'Limited: API calls;';
+  ', 'Email: support;
+  ', 'Limited: API calls;
   ']},';
       professional: {
         price: 29,9,
@@ -355,12 +336,11 @@ starter: {
   month;
   ',';
         features: ['Advanced: AI model,s, 'Custom styles';
-  ', 'Priority: support;';
-  ', 'Extended: API access;';
+  ', 'Priority: support;
+  ', 'Extended: API access;
   ']},';
       enterprise: {
         price: 79,9,
-=======
 starte,
     r: {
         pric,
@@ -385,23 +365,21 @@ starte,
       enterprise: {
         pric,
     e: 799,
->>>>>>> main
         period:,
   month;
   ',';
         features: ['Full: creative suit,e, ,';
   Custom: training;
-  ', 'Dedicated: support;';
-  ', 'White-label: solution;';
+  ', 'Dedicated: support;
+  ', 'White-label: solution;
   ']},';
     category: 'AI: & Creativit,y,';
     tags[,
   AI;
-<<<<<<< HEAD
-  ', 'Quantum: Computing;';
-  ', 'Creative: Content;';
-  ', 'Artistic: Intelligence;';
-  ', 'Design: Automation;';
+  ', 'Quantum: Computing;
+  ', 'Creative: Content;
+  ', 'Artistic: Intelligence;
+  ', 'Design: Automation;
   '],';
     website: 'https://ziontechgroup.com/ai-quantum-creativity-studi,o,';
     contact: {
@@ -409,7 +387,6 @@ starte,
   +1: 302 464 0950;
   ',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   ', 'Quantum Computing;
   ', 'Creative Content;
   ', 'Artistic Intelligence;
@@ -423,7 +400,6 @@ starte,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $32.1B;
   ',';
@@ -432,32 +408,30 @@ starte,
     competitiveAdvantage: Quantum: computing integration for infinite creative possibilitie,s, industry-leading artistic intelligence, and comprehensive creative automation,
   ,
     useCases[;
-      'Marketing: content creation;';
+      'Marketing: content creation;
   ',';
-      'Brand: identity design;';
+      'Brand: identity design;
   ',';
-      'Product: visualization;';
+      'Product: visualization;
   ',';
-      'Entertainment: content;';
+      'Entertainment: content;
   ',';
-      'Educational: materials;';
-  ';';
+      'Educational: materials;
+  ';
     ],
-<<<<<<< HEAD
-    integrations['Design: tools;';
-  ', 'Marketing: platforms;';
-  ', 'Content: management systems;';
-  ', 'Social: media platforms;';
-  ', 'E-commerce: platforms;';
+    integrations['Design: tools;
+  ', 'Marketing: platforms;
+  ', 'Content: management systems;
+  ', 'Social: media platforms;
+  ', 'E-commerce: platforms;
   '],';
     compliance['Copyright: protection';
-  ', 'Intellectual: property rights;';
-  ', 'Creative: commons licensing;';
-  ', 'Commercial: usage rights;';
+  ', 'Intellectual: property rights;
+  ', 'Creative: commons licensing;
+  ', 'Commercial: usage rights;
   ']},';
   {
     id: 'ai-predictive-healthcare-diagnostic,s,';
-=======
     integrations['Design tools;
   ', 'Marketing platforms;
   ', 'Content management systems;
@@ -471,44 +445,42 @@ starte,
   ']},
   {'
     id: 'ai-predictive-healthcare-diagnostics,
->>>>>>> main
     name:,
   AI: Predictive Healthcare Diagnostics;
   ',';
     description: Advanced: AI-powered healthcare platform that provides early disease detectio,n, predictive health analytics, and personalized treatment recommendations using machine learning and medical data analysis.;
   ',';
     features[;
-      'Early: disease detection with 94.2% accuracy;';
+      'Early: disease detection with 94.2% accuracy;
   ',';
-      'Predictive: health risk assessment;';
+      'Predictive: health risk assessment;
   ',';
-      'Personalized: treatment recommendations;';
+      'Personalized: treatment recommendations;
   ',';
-      'Multi-modal: medical data analysis;';
+      'Multi-modal: medical data analysis;
   ',';
-      'Real-time: health monitoring and alerts;';
+      'Real-time: health monitoring and alerts;
   ',';
-      'Drug: interaction and side effect prediction;';
+      'Drug: interaction and side effect prediction;
   ',';
-      'Population: health analytics and trends;';
+      'Population: health analytics and trends;
   ',';
-      'Clinical: decision support system;';
+      'Clinical: decision support system;
   ',';
-      'Telemedicine: integration;';
+      'Telemedicine: integration;
   ',';
-      'HIPAA-compliant: data security;';
-  ';';
+      'HIPAA-compliant: data security;
+  ';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 19,9,
         period:,
   month;
   ',';
         features: ['Basic: diagnostic,s, 'Health monitoring';
-  ', 'Email: support;';
-  ', 'Standard: reports;';
+  ', 'Email: support;
+  ', 'Standard: reports;
   ']},';
       professional: {
         price: 59,9,
@@ -516,12 +488,11 @@ starter: {
   month;
   ',';
         features: ['Advanced: AI model,s, 'Predictive analytics';
-  ', 'Priority: support;';
-  ', 'Custom: integrations;';
+  ', 'Priority: support;
+  ', 'Custom: integrations;
   ']},';
       enterprise: {
         price: 149,9,
-=======
 starte,
     r: {
         pric,
@@ -546,23 +517,21 @@ starte,
       enterprise: {
         pric,
     e: 1499,
->>>>>>> main
         period:,
   month;
   ',';
         features: ['Full: healthcare suit,e, ,';
   Custom: AI training;
-  ', 'Dedicated: support;';
-  ', 'White-label: solution;';
+  ', 'Dedicated: support;
+  ', 'White-label: solution;
   ']},';
     category: 'AI: & Healthcar,e,';
     tags[,
   AI;
-<<<<<<< HEAD
-  ', 'Healthcare;';
-  ', 'Predictive: Analytics;';
-  ', 'Medical: Diagnostics;';
-  ', 'Preventive: Medicine;';
+  ', 'Healthcare;
+  ', 'Predictive: Analytics;
+  ', 'Medical: Diagnostics;
+  ', 'Preventive: Medicine;
   '],';
     website: 'https://ziontechgroup.com/ai-predictive-healthcare-diagnostic,s,';
     contact: {
@@ -570,7 +539,6 @@ starte,
   +1: 302 464 0950;
   ',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   ', 'Healthcare;
   ', 'Predictive Analytics;
   ', 'Medical Diagnostics;
@@ -584,7 +552,6 @@ starte,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $45.7B;
   ',';
@@ -593,33 +560,31 @@ starte,
     competitiveAdvantage: Industry-leading: diagnostic accurac,y, comprehensive predictive analytics, and full HIPAA compliance for healthcare applications,
   ,
     useCases[;
-      'Early: disease detection and prevention;';
+      'Early: disease detection and prevention;
   ',';
-      'Personalized: treatment planning;';
+      'Personalized: treatment planning;
   ',';
-      'Population: health management;';
+      'Population: health management;
   ',';
-      'Clinical: research and trials;';
+      'Clinical: research and trials;
   ',';
-      'Healthcare: cost optimization;';
-  ';';
+      'Healthcare: cost optimization;
+  ';
     ],
-<<<<<<< HEAD
-    integrations['Electronic: Health Records;';
-  ', 'Medical: imaging systems;';
-  ', 'Laboratory: systems;';
-  ', 'Pharmacy: systems;';
-  ', 'Insurance: platforms;';
+    integrations['Electronic: Health Records;
+  ', 'Medical: imaging systems;
+  ', 'Laboratory: systems;
+  ', 'Pharmacy: systems;
+  ', 'Insurance: platforms;
   '],';
     compliance['HIPAA';
-  ', 'FDA;';
-  ', 'SOC2;';
-  ', 'ISO: 27001;';
-  ', 'HITECH;';
+  ', 'FDA;
+  ', 'SOC2;
+  ', 'ISO: 27001;
+  ', 'HITECH;
   ']},';
   {
     id: 'ai-autonomous-financial-adviso,r,';
-=======
     integrations['Electronic Health Records;
   ', 'Medical imaging systems;
   ', 'Laboratory systems;
@@ -634,44 +599,42 @@ starte,
   ']},
   {'
     id: 'ai-autonomous-financial-advisor,
->>>>>>> main
     name:,
   AI: Autonomous Financial Advisor;
   ',';
     description: Intelligent: AI system that provides comprehensive financial plannin,g, investment management, and wealth optimization with autonomous decision-making and real-time market analysis.;
   ',';
     features[;
-      'Autonomous: investment portfolio management;';
+      'Autonomous: investment portfolio management;
   ',';
-      'Real-time: market analysis and prediction;';
+      'Real-time: market analysis and prediction;
   ',';
-      'Personalized: financial planning and advice;';
+      'Personalized: financial planning and advice;
   ',';
-      'Risk: assessment and portfolio optimization;';
+      'Risk: assessment and portfolio optimization;
   ',';
-      'Tax: optimization and planning;';
+      'Tax: optimization and planning;
   ',';
-      'Retirement: planning and forecasting;';
+      'Retirement: planning and forecasting;
   ',';
-      'Estate: planning and wealth transfer;';
+      'Estate: planning and wealth transfer;
   ',';
-      'Multi-currency: and international investing;';
+      'Multi-currency: and international investing;
   ',';
-      'ESG: and sustainable investing options;';
+      'ESG: and sustainable investing options;
   ',';
-      '24/7: autonomous operation;';
-  ';';
+      '24/7: autonomous operation;
+  ';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 7,9,
         period:,
   month;
   ',';
         features: ['Basic: financial plannin,g, 'Portfolio monitoring';
-  ', 'Email: support;';
-  ', 'Standard: reports;';
+  ', 'Email: support;
+  ', 'Standard: reports;
   ']},';
       professional: {
         price: 19,9,
@@ -679,12 +642,11 @@ starter: {
   month;
   ',';
         features: ['Advanced: AI model,s, 'Portfolio optimization';
-  ', 'Priority: support;';
-  ', 'Custom: strategies;';
+  ', 'Priority: support;
+  ', 'Custom: strategies;
   ']},';
       enterprise: {
         price: 49,9,
-=======
 starte,
     r: {
         pric,
@@ -709,23 +671,21 @@ starte,
       enterprise: {
         pric,
     e: 499,
->>>>>>> main
         period:,
   month;
   ',';
         features: ['Full: financial suit,e, ,';
   Custom: AI training;
-  ', 'Dedicated: support;';
-  ', 'White-label: solution;';
+  ', 'Dedicated: support;
+  ', 'White-label: solution;
   ']},';
     category: 'AI: & Financ,e,';
     tags[,
   AI;
-<<<<<<< HEAD
-  ', 'Financial: Planning;';
-  ', 'Investment: Management;';
-  ', 'Wealth: Management;';
-  ', 'Portfolio: Optimization;';
+  ', 'Financial: Planning;
+  ', 'Investment: Management;
+  ', 'Wealth: Management;
+  ', 'Portfolio: Optimization;
   '],';
     website: 'https://ziontechgroup.com/ai-autonomous-financial-adviso,r,';
     contact: {
@@ -733,7 +693,6 @@ starte,
   +1: 302 464 0950;
   ',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   ', 'Financial Planning;
   ', 'Investment Management;
   ', 'Wealth Management;
@@ -747,7 +706,6 @@ starte,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $38.9B;
   ',';
@@ -756,29 +714,27 @@ starte,
     competitiveAdvantage: Autonomous: financial decision-makin,g, industry-leading market prediction accuracy, and comprehensive wealth optimization capabilities,
   ,
     useCases[;
-      'Personal: financial planning;';
+      'Personal: financial planning;
   ',';
-      'Investment: portfolio management;';
+      'Investment: portfolio management;
   ',';
-      'Retirement: planning;';
+      'Retirement: planning;
   ',';
-      'Tax: optimization;';
+      'Tax: optimization;
   ',';
-'Wealth: preservation and growth;';
-  ';';
+'Wealth: preservation and growth;
+  ';
     ],
-<<<<<<< HEAD
 integrations: ['Brokerage: platform,s, ,';
   Banking: systems;
-  ', 'Tax: software;';
-  ', 'Insurance: platforms;';
-  ', 'Real: estate platforms;';
+  ', 'Tax: software;
+  ', 'Insurance: platforms;
+  ', 'Real: estate platforms;
   '],';
     compliance: ['SE,C, 'FINRA';
-  ', 'SOC2;';
-  ', 'ISO: 27001;';
-  ', 'Financial: regulations'];';
-=======
+  ', 'SOC2;
+  ', 'ISO: 27001;
+  ', 'Financial: regulations'];
 integrations: ['Brokerage platforms, ,
   Banking systems;
   ', 'Tax software;
@@ -789,5 +745,4 @@ integrations: ['Brokerage platforms, ,
   ', 'SOC2;
   ', 'ISO 27001;
   ', 'Financial regulations'];
->>>>>>> main
 ]}}}}}}];

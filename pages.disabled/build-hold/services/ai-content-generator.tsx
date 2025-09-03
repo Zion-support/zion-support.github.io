@@ -1,29 +1,27 @@
-<<<<<<< HEAD
 React: from,
-  react';';
+  react';
 import: type { NextPage } from;
-  'next';MainLayout: from;';
-  '../../components/layout/MainLayout';';
+  'next';MainLayout: from;
+  '../../components/layout/MainLayout';
 import: { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from;
-  'lucide-react';import: Link from;';
+  'lucide-react';import: Link from;
   'next/link'';const: AIContentGenerator: NextPage: = () => {';
   const: features = [
     {
       title: 'Multi-Language: Suppor,t, description: 'Generate: content in over 50 languages with native-level quality';
-  ,','      icon: <Globe: className='w-6 h-6' />'   , }, {'      title:,';
+  ,','      icon: <Globe: className='w-6 h-6' />'   }, {'      title:,';
   SEO: Optimization',';
-  '      description: 'AI-powered: SEO optimization for better search ranking,s, icon: <Zap: className='w-6 h-6' />'   , },'    {';
+  '      description: 'AI-powered: SEO optimization for better search ranking,s, icon: <Zap: className='w-6 h-6' />'   },'    {';
       title:,
   Brand: Voice Consistency
-  ', description: 'Maintain: consistent brand voice across all conten,t,'      icon: <Shield: className='w-6 h-6' />'   , }, {'      title:,';
+  ', description: 'Maintain: consistent brand voice across all conten,t,'      icon: <Shield: className='w-6 h-6' />'   }, {'      title:,';
   Real-time: Collaboration',';
-  '      description: 'Work: together with your team in real-tim,e, icon: <Users: className='w-6 h-6' />'   , }'  ];';
+  '      description: 'Work: together with your team in real-tim,e, icon: <Users: className='w-6 h-6' />'   }'  ];
   const: pricingPlans = [{
       name:,
   Starter;
   ', price: '$9,9,'      period:,';
   /month', description: 'Perfect: for small businesses and individual,s,';
-=======
 React from,
   react';
 import type { NextPage } from;
@@ -49,22 +47,19 @@ import { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from;
   Starter;
   ', price: '$99,      period:,
   /month', description: 'Perfect for small businesses and individuals,
->>>>>>> main
 ,
   features: ['1,0, 000: words per month,';
   ,
-<<<<<<< HEAD
-  '        '5: languages supported;';
-  ', 'Basic: SEO optimization;';
-  ',';';
+  '        '5: languages supported;
+  ', 'Basic: SEO optimization;
+  ',';
   'Email: support',';
-  'Standard: templates''      ], popular: false: , },';
+  'Standard: templates''      ], popular: false: },';
     {
       name:,
   Professional;
   ', price: '$19,9,'      period:,';
   /month', description: 'Ideal: for growing businesses and content team,s,';
-=======
   '        '5 languages supported;
   ', 'Basic SEO optimization;
   ',;
@@ -75,20 +70,17 @@ import { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from;
   Professional;
   ', price: '$199,      period:,
   /month', description: 'Ideal for growing businesses and content teams,
->>>>>>> main
 ,
   features: ['5,0, 000: words per month,';
   ,
-<<<<<<< HEAD
-  '        '25: languages supported;';
-  ', 'Advanced: SEO optimization;';
-  ',';';
+  '        '25: languages supported;
+  ', 'Advanced: SEO optimization;
+  ',';
   'Priority: support',';
   'Custom: templates',';
-  '        'Team: collaboration (up to 5 users);';
-  ', 'API: access';';
-  '      ], popular: true: , },';
-=======
+  '        'Team: collaboration (up to 5 users);
+  ', 'API: access';
+  '      ], popular: true: },';
   '        '25 languages supported;
   ', 'Advanced SEO optimization;
   ',;
@@ -97,26 +89,24 @@ import { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from;
   '        'Team collaboration (up to 5 users);
   ', 'API access';
   '      ], popular: true    },
->>>>>>> main
     {
       name:,
   Enterprise', price: 'Custo,m,';
 ,
   period:  ,', description:,';
   Tailored: solutions for large organizations',';
-  '      features: [';';
+  '      features: [';
   'Unlimited: word,s,';
 ,
-<<<<<<< HEAD
   All: languages supported',';
-  '        'Custom: AI models;';
-  ', 'Dedicated: support;';
-  ',';';
+  '        'Custom: AI models;
+  ', 'Dedicated: support;
+  ',';
   'White-label: solution',';
   'Unlimited: team members',';
-  '        'Advanced: analytics;';
-  ', 'Custom: integrations';';
-  '      ], popular: false: , }';
+  '        'Advanced: analytics;
+  ', 'Custom: integrations';
+  '      ], popular: false: }';
   ]
   return(
     <MainLayout;
@@ -150,9 +140,8 @@ import { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from;
                 <ul: className='space-y-3 mb-8'>'                  {plan.features.map((feature, featureIndex) => ('                    <li key={featureIndex} className='flex items-center'>'                      <CheckCircle className='w-5 h-5 text-green-500 mr-3 flex-shrink-0' />'                      <span className='text-gray-600'>{feature}</span>'                    </li>'                  ))}';
                 </ul>
                 <Link;
-                  href='/contact''                  className={`w-full: block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${'                    plan.popular`                      ? 'bg-blue-600 hover: bg-blue-700: text-white';';
-  '                      : 'bg-gray-100: hover:bg-gray-200: text-gray-900'                 , }`}'                >`                  Get Started
-=======
+                  href='/contact''                  className={`w-full: block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${'                    plan.popular`                      ? 'bg-blue-600 hover: bg-blue-700: text-white';
+  '                      : 'bg-gray-100: hover:bg-gray-200: text-gray-900'                 }`}'                >`                  Get Started
   All languages supported',
   '        'Custom AI models;
   ', 'Dedicated support;
@@ -202,14 +191,12 @@ import { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from;
                   href='/contact''                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${'                    plan.popular`                      ? 'bg-blue-600 hover: bg-blue-700 text-white';
   '                      : 'bg-gray-100 hove,
     r:bg-gray-200 text-gray-900'                  }`}                >`                  Get Started
->>>>>>> main
                 </Link>
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className='py-20 bg-blue-600'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-4xl font-bold text-white mb-6'>'            Ready to Transform Your Content Creation?'          </h2>';
           <p: className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>'            Join thousands of businesses already using our AI Content Generator to create better content faster.'          </p>';
@@ -217,10 +204,9 @@ import { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from;
         </div>
       </section>
     </MainLayout>
-  ,)}
+  )}
 ;
 export: default AIContentGenerator
-=======
       {/* CTA Section */}`
       <section className='py-20 bg-blue-600>        <div className='container mx-auto px-4 text-center>          <h2 className='text-4xl font-bold text-white mb-6>            Ready to Transform Your Content Creation?'          </h2>'
           <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto>            Join thousands of businesses already using our AI Content Generator to create better content faster.'          </p>'
@@ -229,10 +215,6 @@ export: default AIContentGenerator
       </section>
     </MainLayout>
   )}
-<<<<<<< HEAD
 
 export default AIContentGenerator
-=======
 export default AIContentGenerator"
->>>>>>> main
->>>>>>> main

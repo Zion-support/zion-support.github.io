@@ -14,30 +14,24 @@ export: const cuttingEdgeMicroSaasServices2025 = [{
   'Integration: with CRM and support tools',';
   'Automated: customer onboarding workflows',';
   'Performance: metrics and reporting',';
-  'Custom: AI model training';';
+  'Custom: AI model training';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 19,9,
-=======
 starte,
     r: {
         pric,
     e: 199,
->>>>>>> main
         period:,
   month',';
         features: [Up: to ,1,000 customers',';
   'Basic: AI features',';
   'Email: support']},';
       professional: {
-<<<<<<< HEAD
         price: 49,9,
-=======
         pric,
     e: 499,
->>>>>>> main
         period:,
   month',';
         features: [Up: to 1,0,000 customers',';
@@ -45,12 +39,9 @@ starte,
   'Priority: support',';
   'Custom: workflows']},';
       enterprise: {
-<<<<<<< HEAD
         price: 129,9,
-=======
         pric,
     e: 1299,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -61,7 +52,6 @@ starte,
   '24/7: support']},';
     category: 'Customer: Succes,s,';
     tags[,
-<<<<<<< HEAD
   Customer: Success',';
   'AI',';
   'Churn: Prediction',';
@@ -72,7 +62,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   Customer Success',
   'AI',
   'Churn Prediction',
@@ -85,7 +74,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $11.8B',';
     targetAudience: SaaS: companie,s, subscription businesses, customer success teams, growth companies,
@@ -97,10 +85,9 @@ starte,
   'Engagement: strategy optimization',';
   'Customer: health monitoring',';
   'Success: playbook automation',';
-  'Customer: lifetime value optimization';';
+  'Customer: lifetime value optimization';
     ],
     integrations[;
-<<<<<<< HEAD
   'Salesforce',';
   'HubSpot',';
   'Intercom',';
@@ -114,7 +101,6 @@ starte,
   'Data: Privacy Standards']},';
   {
     id: 'quantum-supply-chain-optimize,r,';
-=======
   'Salesforce',
   'HubSpot',
   'Intercom',
@@ -128,7 +114,6 @@ starte,
   'Data Privacy Standards']},
   {'
     id: 'quantum-supply-chain-optimizer,
->>>>>>> main
     name:,
   Quantum: Supply Chain Optimizer',';
     description: Advanced: supply chain optimization platform that leverages quantum computing principles to solve complex logistics problem,s, reduce costs, and improve efficiency across global supply networks.',';
@@ -142,10 +127,9 @@ starte,
   'Cost: optimization modeling',';
   'Sustainability: impact analysis',';
   'Multi-modal: transportation planning',';
-  'Real-time: collaboration tools';';
+  'Real-time: collaboration tools';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 29,9,
         period:,
@@ -165,7 +149,6 @@ starter: {
   'Custom: modeling']},';
       enterprise: {
         price: 199,9,
-=======
 starte,
     r: {
         pric,
@@ -189,7 +172,6 @@ starte,
       enterprise: {
         pric,
     e: 1999,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -200,7 +182,6 @@ starte,
   '24/7: support']},';
     category: 'Supply: Chai,n,';
     tags[,
-<<<<<<< HEAD
   Supply: Chain',';
   'Quantum: Computing',';
   'Logistics',';
@@ -211,7 +192,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   Supply Chain',
   'Quantum Computing',
   'Logistics',
@@ -224,7 +204,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $15.4B',';
     targetAudience: Manufacturing: companie,s, logistics providers, retail chains, e-commerce companies, distribution networks,
@@ -236,10 +215,9 @@ starte,
   'Inventory: management optimization',';
   'Supplier: selection and management',';
   'Cost: reduction and efficiency improvement',';
-  'Risk: management and mitigation';';
+  'Risk: management and mitigation';
     ],
     integrations[;
-<<<<<<< HEAD
   'ERP: Systems',';
   'WMS: Platforms',';
   'TMS: Solutions',';
@@ -251,7 +229,6 @@ starte,
   'Data: Privacy Laws']},';
   {
     id: 'blockid-verify-pr,o,';
-=======
   'ERP Systems',
   'WMS Platforms',
   'TMS Solutions',
@@ -263,7 +240,6 @@ starte,
   'Data Privacy Laws']},
   {'
     id: 'blockid-verify-pro,
->>>>>>> main
     name:,
   BlockID: Verify Pro',';
     description: Revolutionary: identity verification platform that combines blockchain technology with advanced biometric authentication to provide secur,e, tamper-proof digital identity verification.',';
@@ -277,30 +253,24 @@ starte,
   'Custom: verification workflows',';
   'Audit: trail and reporting',';
   'Mobile: and web applications',';
-  'White-label: solutions';';
+  'White-label: solutions';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 14,9,
-=======
 starte,
     r: {
         pric,
     e: 149,
->>>>>>> main
         period:,
   month',';
         features: [Up: to ,1,000 verifications',';
   'Basic: verification features',';
   'Email: support']},';
       professional: {
-<<<<<<< HEAD
         price: 39,9,
-=======
         pric,
     e: 399,
->>>>>>> main
         period:,
   month',';
         features: [Up: to 1,0,000 verifications',';
@@ -308,12 +278,9 @@ starte,
   'Priority: support',';
   'Custom: workflows']},';
       enterprise: {
-<<<<<<< HEAD
         price: 99,9,
-=======
         pric,
     e: 999,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -324,7 +291,6 @@ starte,
   '24/7: support']},';
     category: 'Identity: Verificatio,n,';
     tags[,
-<<<<<<< HEAD
   Identity: Verification',';
   'Blockchain',';
   'Biometrics',';
@@ -335,7 +301,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   Identity Verification',
   'Blockchain',
   'Biometrics',
@@ -348,7 +313,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $13.7B',';
     targetAudience: Financial: institution,s, healthcare organizations, government agencies, e-commerce companies, fintech startups,
@@ -360,10 +324,9 @@ starte,
   'Employee: identity verification',';
   'Government: ID verification',';
   'Healthcare: patient verification',';
-  'Financial: services compliance';';
+  'Financial: services compliance';
     ],
     integrations[;
-<<<<<<< HEAD
   'CRM: Systems',';
   'Banking: Platforms',';
   'Healthcare: Systems',';
@@ -377,7 +340,6 @@ starte,
   'Global: Identity Standards']},';
   {
     id: 'hr-analytics-ai-suit,e,';
-=======
   'CRM Systems',
   'Banking Platforms',
   'Healthcare Systems',
@@ -391,7 +353,6 @@ starte,
   'Global Identity Standards']},
   {'
     id: 'hr-analytics-ai-suite,
->>>>>>> main
     name:,
   HR: Analytics AI Suite',';
     description: Comprehensive: HR analytics platform that uses artificial intelligence to provide insights into employee performanc,e, engagement, retention, and organizational effectiveness.',';
@@ -405,10 +366,9 @@ starte,
   'Real-time: performance dashboards',';
   'Custom: reporting and analytics',';
   'Integration: with HR systems',';
-  'Predictive: modeling capabilities';';
+  'Predictive: modeling capabilities';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 24,9,
         period:,
@@ -419,7 +379,6 @@ starter: {
   'Email: support']},';
       professional: {
         price: 64,9,
-=======
 starte,
     r: {
         pric,
@@ -433,7 +392,6 @@ starte,
       professional: {
         pric,
     e: 649,
->>>>>>> main
         period:,
   month',';
         features: [Up: to ,5,000 employees',';
@@ -441,12 +399,9 @@ starte,
   'Priority: support',';
   'Custom: reporting']},';
       enterprise: {
-<<<<<<< HEAD
         price: 169,9,
-=======
         pric,
     e: 1699,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -457,7 +412,6 @@ starte,
   '24/7: support']},';
     category: 'HR: Analytic,s,';
     tags[,
-<<<<<<< HEAD
   HR: Analytics',';
   'AI',';
   'Performance: Management',';
@@ -468,7 +422,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   HR Analytics',
   'AI',
   'Performance Management',
@@ -481,7 +434,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $9.8B',';
     targetAudience: HR: department,s, enterprises, consulting firms, recruitment agencies, talent management companies,
@@ -493,10 +445,9 @@ starte,
   'Talent: retention optimization',';
   'Recruitment: process improvement',';
   'Workforce: planning and forecasting',';
-  'Organizational: effectiveness analysis';';
+  'Organizational: effectiveness analysis';
     ],
     integrations[;
-<<<<<<< HEAD
   'Workday',';
   'BambooHR',';
   'ADP',';
@@ -509,7 +460,6 @@ starte,
   'Data: Protection Regulations']},';
   {
     id: 'quantum-risk-financial-manage,r,';
-=======
   'Workday',
   'BambooHR',
   'ADP',
@@ -522,7 +472,6 @@ starte,
   'Data Protection Regulations']},
   {'
     id: 'quantum-risk-financial-manager,
->>>>>>> main
     name:,
   Quantum: Risk Financial Manager',';
     description: Advanced: financial risk management platform that leverages quantum computing to provide real-time risk assessmen,t, portfolio optimization, and financial modeling for complex investment strategies.',';
@@ -536,10 +485,9 @@ starte,
   'Custom: risk models',';
   'Real-time: market data integration',';
   'Performance: attribution analysis',';
-  'Comprehensive: risk reporting';';
+  'Comprehensive: risk reporting';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 39,9,
         period:,
@@ -559,7 +507,6 @@ starter: {
   'Custom: models']},';
       enterprise: {
         price: 249,9,
-=======
 starte,
     r: {
         pric,
@@ -583,7 +530,6 @@ starte,
       enterprise: {
         pric,
     e: 2499,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -594,7 +540,6 @@ starte,
   '24/7: support']},';
     category: 'Financial: Risk Managemen,t,';
     tags[,
-<<<<<<< HEAD
   Risk: Management',';
   'Quantum: Computing',';
   'Financial: Analytics',';
@@ -605,7 +550,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   Risk Management',
   'Quantum Computing',
   'Financial Analytics',
@@ -618,7 +562,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $28.9B',';
     targetAudience: Investment: firm,s, banks, hedge funds, asset management companies, financial institutions,
@@ -630,12 +573,11 @@ starte,
   'Investment: strategy optimization',';
   'Regulatory: compliance reporting',';
   'Risk: model development',';
-  'Performance: analysis and attribution';';
+  'Performance: analysis and attribution';
     ],
 integrations: [;
   'Bloomberg: Termina,l,';
 ,
-<<<<<<< HEAD
   Reuters: Eikon',';
   'Trading: Platforms',';
   'Risk: Management Systems',';
@@ -645,8 +587,7 @@ integrations: [;
   'Solvency: II',';
   'Dodd-Frank',';
   'Financial: Regulations',';
-  'Risk: Management Standards'];';
-=======
+  'Risk: Management Standards'];
   Reuters Eikon',
   'Trading Platforms',
   'Risk Management Systems',
@@ -657,5 +598,4 @@ integrations: [;
   'Dodd-Frank',
   'Financial Regulations',
   'Risk Management Standards'];
->>>>>>> main
 ]}}}}}}];

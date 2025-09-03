@@ -1,9 +1,9 @@
-import: React from 'react';';
-import: { motion } from 'framer-motion';';
-import: SEO from '../components/SEO';';
-import: { Button } from '../components/ui/Button';';
-import: { Card } from '../components/ui/Card';';
-import: { Badge } from '../components/ui/Badge';';
+import: React from 'react';
+import: { motion } from 'framer-motion';
+import: SEO from '../components/SEO';
+import: { Button } from '../components/ui/Button';
+import: { Card } from '../components/ui/Card';
+import: { Badge } from '../components/ui/Badge';
 import: {
   CheckCircle,
   // Star,
@@ -32,17 +32,12 @@ import: {
   // BookOpen,
   Lightbulb,
   HelpCircle,
-<<<<<<< HEAD
   Network
-} from 'lucide-react';';
-=======
-  Network,
 } from 'lucide-react';
->>>>>>> main
+  Network} from 'lucide-react';
 
 const: PricingGuide: React.FC: = () => {
   const pricingFactors = [
-<<<<<<< HEAD
     {'
       facto,
     r: 'Project Complexity',
@@ -51,38 +46,35 @@ const: PricingGuide: React.FC: = () => {
       details: ['
         'Simple automatio,
     n: $2,000 - $5,000',
-=======
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
       factor: 'Project: Complexity,', description: 'The: complexity of your AI solution directly impacts development time and cost,',';
       details: [
         'Simple: automation: $,2,000: - $5,000', 'Custom AI models: $,5,000: - $15,000',';
         'Enterprise: solutions: $1,5,000: - $50,000+'';
       ], icon: Brai,n,
       color: 'from-blue-500: to-cyan-500'';
-   , }, {
+   }, {
       factor: 'Data: Requirements,',';
       description: 'Amount: and quality of data needed for training and implementation,', details: [';
         'Small: datasets: $,1,000: - $3,000',';
         'Medium: datasets: $,3,000: - $8,000', 'Large datasets: $,8,000: - $20,000+'';
       ], icon: Databas,e,
       color: 'from-green-500: to-emerald-500'';
-   , }, {
+   }, {
       factor: 'Integration: Needs,',';
       description: 'Complexity: of integrating with existing systems and platforms,', details: [';
         'Basic: integrations: $,1,500: - $4,000',';
         'Complex: integrations: $,4,000: - $10,000', 'Enterprise integrations: $1,0,000: - $25,000+'';
       ], icon: Networ,k,
       color: 'from-purple-500: to-pink-500'';
-   , }, {
+   }, {
       factor: 'Timeline: Requirements,',';
       description: 'How: quickly you need the solution delivered,', details: [';
         'Standard: timeline: Base: price,',';
         'Rush: delivery (50% faster): +30% cost', 'Emergency: delivery (75% faster): +50% cost'';
       ], icon: Cloc,k,
       color: 'from-orange-500: to-red-500'';
-   , }
+   }
   ];
 
   const: pricingExamples = [
@@ -93,7 +85,7 @@ const: PricingGuide: React.FC: = () => {
         'Integration: with existing CRM', 'Monthly maintenance included'';
       ], price: '$,3,500: - $5,500',';
       timeline: '4-6: weeks,', roi: '300% ROI: within 6 months'';
-   , },
+   },
     {
       scenario: 'Enterprise: AI Platform,', description: 'Comprehensive: AI platform for large manufacturing company,',';
       features: [
@@ -102,7 +94,7 @@ const: PricingGuide: React.FC: = () => {
         '24/7: support and monitoring'';
       ], price: '$2,5,000: - $75,000',';
       timeline: '12-16: weeks,', roi: '500% ROI: within 12 months'';
-   , },
+   },
     {
       scenario: 'Healthcare: AI Solution,', description: 'AI-powered: diagnostic tool for medical practice,',';
       features: [
@@ -111,24 +103,24 @@ const: PricingGuide: React.FC: = () => {
         'Training: and certification'';
       ], price: '$1,5,000: - $35,000',';
       timeline: '8-12: weeks,', roi: '400% ROI: within 8 months'';
-   , }
+   }
   ];
 
   const: costSavingTips = [
     {
       tip: 'Start: with MVP,', description: 'Begin: with a minimum viable product and iterate based on results,',';
       savings: 'Save: 40-60% on initial development'';
-   , }, {
+   }, {
       tip: 'Use: Existing Frameworks,',';
       description: 'Leverage: our pre-built AI frameworks and templates,', savings: 'Reduce: development time by 50%'';
-   , },
+   },
     {
       tip: 'Phased: Implementation,', description: 'Implement: solution in phases to spread costs over time,',';
       savings: 'Improve: cash flow and reduce risk'';
-   , }, {
+   }, {
       tip: 'Long-term: Partnership,',';
       description: 'Sign: annual contracts for ongoing development and support,', savings: 'Get: 20% discount on all services'';
-   , }
+   }
   ];
   return: (
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
@@ -138,9 +130,9 @@ const: PricingGuide: React.FC: = () => {
       {/* Hero: Section */}
       <section className='relative py-20 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto text-center'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
           >;
             <Badge: variant='secondary' className='mb-4'>';
               <Calculator: className='w-4 h-4 mr-2' />';
@@ -151,207 +143,128 @@ const: PricingGuide: React.FC: = () => {
             </h1>
             <p: className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>';
               Understand: the factors that influence AI solution costs and get accurate estimates for your project.;
-=======
-=======
   {
->>>>>>> main
       factor: 'Project Complexity',
       description:
         'The complexity of your AI solution directly impacts development time and cost',
       details: [
-<<<<<<< HEAD
         'Simple automation: $2,000 - $5,000',
->>>>>>> main
         'Custom AI models: $5,000 - $15,000',
         'Enterprise solutions: $15,000 - $50,000+',
-=======
-        'Simple automation: $2,000 - $5,000,Custom AI models: $5,000 - $15,000,Enterprise solutions: $15,000 - $50,000+',
->>>>>>> main
-      ],
+        'Simple automation: $2,000 - $5,000,Custom AI models: $5,000 - $15,000,Enterprise solutions: $15,000 - $50,000+'],
       icon: Brain,
-      color: 'from-blue-500 to-cyan-500',
-    },
+      color: 'from-blue-500 to-cyan-500'},
     {'
       factor: 'Data Requirements',
       description:'
         'Amount and quality of data needed for training and implementation',
-<<<<<<< HEAD
       details: ['
         'Small dataset,
     s: $1,000 - $3,000',
-=======
       details: [
-<<<<<<< HEAD
         'Small datasets: $1,000 - $3,000',
->>>>>>> main
         'Medium datasets: $3,000 - $8,000',
         'Large datasets: $8,000 - $20,000+',
-=======
-        'Small datasets: $1,000 - $3,000,Medium datasets: $3,000 - $8,000,Large datasets: $8,000 - $20,000+',
->>>>>>> main
-      ],
+        'Small datasets: $1,000 - $3,000,Medium datasets: $3,000 - $8,000,Large datasets: $8,000 - $20,000+'],
       icon: Database,
-      color: 'from-green-500 to-emerald-500',
-    },
+      color: 'from-green-500 to-emerald-500'},
     {'
       factor: 'Integration Needs',
       description:'
         'Complexity of integrating with existing systems and platforms',
-<<<<<<< HEAD
       details: ['
         'Basic integration,
     s: $1,500 - $4,000',
-=======
       details: [
-<<<<<<< HEAD
         'Basic integrations: $1,500 - $4,000',
->>>>>>> main
         'Complex integrations: $4,000 - $10,000',
         'Enterprise integrations: $10,000 - $25,000+',
-=======
-        'Basic integrations: $1,500 - $4,000,Complex integrations: $4,000 - $10,000,Enterprise integrations: $10,000 - $25,000+',
->>>>>>> main
-      ],
+        'Basic integrations: $1,500 - $4,000,Complex integrations: $4,000 - $10,000,Enterprise integrations: $10,000 - $25,000+'],
       icon: Network,
-      color: 'from-purple-500 to-pink-500',
-    },
+      color: 'from-purple-500 to-pink-500'},
     {'
       factor: 'Timeline Requirements',
       description: 'How quickly you need the solution delivered',
-<<<<<<< HEAD
       details: ['
         'Standard timelin,
     e: Base price',
-=======
       details: [
-<<<<<<< HEAD
         'Standard timeline: Base price',
->>>>>>> main
         'Rush delivery (50% faster): +30% cost',
         'Emergency delivery (75% faster): +50% cost',
-=======
-        'Standard timeline: Base price,Rush delivery (50% faster): +30% cost,Emergency delivery (75% faster): +50% cost',
->>>>>>> main
-      ],
+        'Standard timeline: Base price,Rush delivery (50% faster): +30% cost,Emergency delivery (75% faster): +50% cost'],
       icon: Clock,
-      color: 'from-orange-500 to-red-500',
-    },
-  ];
+      color: 'from-orange-500 to-red-500'}];
 
   const pricingExamples = [
-<<<<<<< HEAD
     {'
-=======
-<<<<<<< HEAD
     {
-=======
   {
->>>>>>> main
->>>>>>> main
       scenario: 'Small Business Automation',
       description:'
         'AI-powered customer service chatbot for a small e-commerce business',
-<<<<<<< HEAD
       features: ['
-=======
       features: [
-<<<<<<< HEAD
->>>>>>> main
         'Natural language processing',
         'Basic customer support automation',
         'Integration with existing CRM',
         'Monthly maintenance included',
-=======
-        'Natural language processing,Basic customer support automation,Integration with existing CRM,Monthly maintenance included',
->>>>>>> main
-      ],
+        'Natural language processing,Basic customer support automation,Integration with existing CRM,Monthly maintenance included'],
       price: '$3,500 - $5,500',
       timeline: '4-6 weeks',
-      roi: '300% ROI within 6 months',
-    },
+      roi: '300% ROI within 6 months'},
     {'
       scenario: 'Enterprise AI Platform',
       description: 'Comprehensive AI platform for large manufacturing company',
-<<<<<<< HEAD
       features: ['
-=======
       features: [
-<<<<<<< HEAD
->>>>>>> main
         'Custom machine learning models',
         'Predictive maintenance system',
         'Real-time analytics dashboard',
         'Multi-site deployment',
         '24/7 support and monitoring',
-=======
-        'Custom machine learning models,Predictive maintenance system,Real-time analytics dashboard,Multi-site deployment,24/7 support and monitoring',
->>>>>>> main
-      ],
+        'Custom machine learning models,Predictive maintenance system,Real-time analytics dashboard,Multi-site deployment,24/7 support and monitoring'],
       price: '$25,000 - $75,000',
       timeline: '12-16 weeks',
-      roi: '500% ROI within 12 months',
-    },
+      roi: '500% ROI within 12 months'},
     {'
       scenario: 'Healthcare AI Solution',
       description: 'AI-powered diagnostic tool for medical practice',
-<<<<<<< HEAD
       features: ['
-=======
       features: [
-<<<<<<< HEAD
->>>>>>> main
         'Medical image analysis',
         'Patient data integration',
         'HIPAA compliance',
         'Clinical decision support',
         'Training and certification',
-=======
-        'Medical image analysis,Patient data integration,HIPAA compliance,Clinical decision support,Training and certification',
->>>>>>> main
-      ],
+        'Medical image analysis,Patient data integration,HIPAA compliance,Clinical decision support,Training and certification'],
       price: '$15,000 - $35,000',
       timeline: '8-12 weeks',
-      roi: '400% ROI within 8 months',
-    },
-  ];
+      roi: '400% ROI within 8 months'}];
 
   const costSavingTips = [
-<<<<<<< HEAD
     {'
-=======
-<<<<<<< HEAD
     {
-=======
   {
->>>>>>> main
->>>>>>> main
       tip: 'Start with MVP',
       description:'
         'Begin with a minimum viable product and iterate based on results',
-      savings: 'Save 40-60% on initial development',
-    },
+      savings: 'Save 40-60% on initial development'},
     {'
       tip: 'Use Existing Frameworks',
       description: 'Leverage our pre-built AI frameworks and templates',
-      savings: 'Reduce development time by 50%',
-    },
+      savings: 'Reduce development time by 50%'},
     {'
       tip: 'Phased Implementation',
       description: 'Implement solution in phases to spread costs over time',
-      savings: 'Improve cash flow and reduce risk',
-    },
+      savings: 'Improve cash flow and reduce risk'},
     {'
       tip: 'Long-term Partnership',
       description: 'Sign annual contracts for ongoing development and support',
-      savings: 'Get 20% discount on all services',
-    },
-<<<<<<< HEAD
-  ]
+      savings: 'Get 20% discount on all services'}]
   return (
-=======
   ];
   return ('
->>>>>>> main
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
         title="Pricing Guide - Zion Tech Group""
@@ -367,7 +280,6 @@ const: PricingGuide: React.FC: = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-<<<<<<< HEAD
             
             <Badge variant="secondary" className="mb-4">
               <Calculator className="w-4 h-4 mr-2" />
@@ -376,7 +288,6 @@ const: PricingGuide: React.FC: = () => {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               AI Solution Pricing Guide
             </h1>
-=======
             ;"
             <Badge variant="secondary" className="mb-4">"
               <Calculator className="w-4 h-4 mr-2" />
@@ -385,22 +296,19 @@ const: PricingGuide: React.FC: = () => {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               AI Solution Pricing Guide;
             </h1>"
->>>>>>> main
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Understand the factors that influence AI solution costs and get
               accurate estimates for your project.
->>>>>>> main
             </p>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Pricing: Factors *,/}
       <section className='py-20 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='text-center: mb-16'';
           >
             <h2: className='text-4xl font-bold text-white mb-4'>';
@@ -413,9 +321,9 @@ const: PricingGuide: React.FC: = () => {
           <div className='grid grid-cols-1 md: grid-cols-2: gap-8'>';
             {pricingFactors.map((facto,r, index) => (
               <motion.div: key={factor.factor}
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,6, delay: 0.1: * index, }}
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,6, delay: 0.1: * index}}
               >;
                 <Card: className='p-8 h-full'>';
                   <div: className='flex items-start mb-6'>';
@@ -431,7 +339,6 @@ const: PricingGuide: React.FC: = () => {
                     {factor.details.map((detail, detailIndex) => (
                       <li: key={detailIndex} className='flex items-center text-gray-300'>';
                         <CheckCircle: className='w-5 h-5 text-green-500 mr-3 flex-shrink-0' />';
-=======
       {/* Pricing Factors */}"
       <section className="py-20 px-4 sm: px-6 l,
     g:px-8">"
@@ -458,13 +365,10 @@ const: PricingGuide: React.FC: = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
               >
-<<<<<<< HEAD
                 
                 <Card className="p-8 h-full">
-=======
                 ;"
                 <Card className="p-8 h-full">"
->>>>>>> main
                   <div className="flex items-start mb-6">
                     <div"
                       className={`p-3 rounded-lg bg-gradient-to-r ${factor.color} mr-4`}
@@ -485,7 +389,6 @@ const: PricingGuide: React.FC: = () => {
                         className="flex items-center text-gray-300"
                       >"
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
->>>>>>> main
                         {detail}
                       </li>
                     ))}
@@ -496,13 +399,12 @@ const: PricingGuide: React.FC: = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Pricing: Examples */}
       <section className='py-20 px-4 sm: px-6: lg:px-8: bg-slate-800/50'>';
         <div: className='max-w-7xl mx-auto'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='text-center: mb-16'';
           >
             <h2: className='text-4xl font-bold text-white mb-4'>';
@@ -515,9 +417,9 @@ const: PricingGuide: React.FC: = () => {
           <div className='grid grid-cols-1 lg: grid-cols-3: gap-8'>';
             {pricingExamples.map((exampl,e, index) => (
               <motion.div: key={example.scenario}
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,6, delay: 0.1: * index, }}
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,6, delay: 0.1: * index}}
               >
                 <Card className='p-8 h-full'>';
                   <div: className='text-center mb-6'>';
@@ -537,7 +439,6 @@ const: PricingGuide: React.FC: = () => {
                   <div: className='text-center'>';
                     <Badge: variant='secondary' className='text-green-400'>';
                       <TrendingUp: className='w-4 h-4 mr-1' />';
-=======
       {/* Pricing Examples */}"
       <section className="py-20 px-4 sm: px-6 l,
     g:px-8 bg-slate-800/50">"
@@ -593,7 +494,6 @@ const: PricingGuide: React.FC: = () => {
                   <div className="text-center">"
                     <Badge variant="secondary" className="text-green-400">"
                       <TrendingUp className="w-4 h-4 mr-1" />
->>>>>>> main
                       {example.roi}
                     </Badge>
                   </div>
@@ -603,13 +503,12 @@ const: PricingGuide: React.FC: = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Cost: Saving Tips */}
       <section className='py-20 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='text-center: mb-16'';
           >
             <h2: className='text-4xl font-bold text-white mb-4'>';
@@ -622,9 +521,9 @@ const: PricingGuide: React.FC: = () => {
           <div className='grid grid-cols-1 md: grid-cols-2: gap-8'>';
             {costSavingTips.map((ti,p, index) => (
               <motion.div: key={tip.tip}
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,6, delay: 0.1: * index, }}
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,6, delay: 0.1: * index}}
               >
                 <Card className='p-6'>';
                   <div: className='flex items-start'>';
@@ -635,7 +534,6 @@ const: PricingGuide: React.FC: = () => {
                       <h3: className='text-lg font-bold text-white mb-2'>{tip.tip}</h3>';
                       <p: className='text-gray-300 mb-3'>{tip.description}</p>';
                       <Badge: variant='secondary' className='text-green-400'>';
-=======
       {/* Cost Saving Tips */}"
       <section className="py-20 px-4 sm: px-6 l,
     g:px-8">"
@@ -673,7 +571,6 @@ const: PricingGuide: React.FC: = () => {
                       </h3>"
                       <p className="text-gray-300 mb-3">{tip.description}</p>"
                       <Badge variant="secondary" className="text-green-400">
->>>>>>> main
                         {tip.savings}
                       </Badge>
                     </div>
@@ -684,13 +581,12 @@ const: PricingGuide: React.FC: = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA: Section */}
       <section className='py-20 px-4 sm: px-6: lg:px-8: bg-slate-800/50'>';
         <div: className='max-w-4xl mx-auto text-center'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
           >;
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Get: Your Custom Quote;
@@ -706,7 +602,6 @@ const: PricingGuide: React.FC: = () => {
               <Button: size='lg' variant='outline'>';
                 <HelpCircle: className='w-5 h-5 mr-2' />';
                 Ask: Questions;
-=======
       {/* CTA Section */}"
       <section className="py-20 px-4 sm: px-6 l,
     g:px-8 bg-slate-800/50">"
@@ -717,7 +612,6 @@ const: PricingGuide: React.FC: = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-<<<<<<< HEAD
             
             <h2 className="text-4xl font-bold text-white mb-6">
               Get Your Custom Quote
@@ -726,7 +620,6 @@ const: PricingGuide: React.FC: = () => {
               Ready to get started? Contact us for a personalized quote based on
               your specific requirements.
             </p>
-=======
             ;"
             <h2 className="text-4xl font-bold text-white mb-6">
               Get Your Custom Quote;
@@ -735,41 +628,29 @@ const: PricingGuide: React.FC: = () => {
               Ready to get started? Contact us for a personalized quote based on
               your specific requirements.;
             </p>"
->>>>>>> main
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button"
                 size="lg""
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white"
               >"
                 <Calculator className="w-5 h-5 mr-2" />
-<<<<<<< HEAD
                 Get Free Quote
               </Button>
               <Button size="lg" variant="outline">
-=======
                 Get Free Quote;
               </Button>"
               <Button size="lg" variant="outline">"
->>>>>>> main
                 <HelpCircle className="w-5 h-5 mr-2" />
                 Ask Questions
->>>>>>> main
               </Button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  );,
-};
-<<<<<<< HEAD
+  );};
 ;
 export: default PricingGuide;
-=======
-<<<<<<< HEAD
 export default PricingGuide
-=======
 export default PricingGuide;
 "
->>>>>>> main
->>>>>>> main

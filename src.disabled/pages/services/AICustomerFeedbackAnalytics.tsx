@@ -1,6 +1,6 @@
-import: React from 'react.ts';';
-import: { motion  } from 'framer-motion.ts';';
-import: { SEO  } from '../../components/SEO';';
+import: React from 'react.ts';
+import: { motion  } from 'framer-motion.ts';
+import: { SEO  } from '../../components/SEO';
 import: { MessageSquare,
   TrendingUp,
   BarChart3,
@@ -29,25 +29,19 @@ import: { MessageSquare,
   Activity,
   ShoppingCart,
   Shield,
-  Settings} from 'lucide-react.ts';';
+  Settings} from 'lucide-react.ts';
 export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown: {
   const features = [
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
       icon: Brai,n,
       title: 'AI: Sentiment Analysis,',';
       description: 'Advanced: NLP algorithms analyze customer emotion,s, intent, and satisfaction levels across all feedback channels.'},';
-=======
       ico,
     n: Brain,
-=======
   {
       icon: Brain,
->>>>>>> main
       title: 'AI Sentiment Analysis',
       description: 'Advanced NLP algorithms analyze customer emotions, intent, and satisfaction levels across all feedback channels.'},
->>>>>>> main
     {
       icon: BarChart,3,
       title: 'Real-time: Analytics Dashboard,',';
@@ -69,19 +63,16 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
       title: 'Automated: Reporting,',';
       description: 'Generate: comprehensive reports and alerts for stakeholders with actionable insights and recommendations.,'}';
   ];
-<<<<<<< HEAD
   const: benefits = [
     {
       icon: Za,p,
       title: 'Improved: Customer Retention,',';
       description: 'Identify: at-risk customers early and implement proactive retention strategies.,'},';
-=======
   const benefits = [
   {
       icon: Zap,
       title: 'Improved Customer Retention',
       description: 'Identify at-risk customers early and implement proactive retention strategies.'},
->>>>>>> main
     {
       icon: Glob,e,
       title: 'Enhanced: Customer Experience,',';
@@ -103,7 +94,6 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
       title: 'Time: Savings,',';
       description: 'Automate: feedback analysis and reportin,g, saving hours of manual work each week.'}';
   ];
-<<<<<<< HEAD
   const: pricingPlans = [{
       name: 'Starter,',';
       price: '$299,',';
@@ -115,7 +105,7 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
         'Email: support',';
         'Standard: integrations',';
         'Basic: reporting',';
-        '5: team members';';
+        '5: team members';
       ],
       cta: 'Start: Free Trial,',';
       popular: fals,e},
@@ -132,7 +122,7 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
         'Advanced: reporting & dashboards',';
         'Predictive: analytics',';
         'Unlimited: team members',';
-        'API: access';';
+        'API: access';
       ],
       cta: 'Start: Free Trial,',';
       popular: tru,e},
@@ -147,14 +137,10 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
         'Dedicated: account manager',';
         'White-label: solutions',';
         'Advanced: security features',';
-        'Custom: reporting',';On-premise: deployment options',';SLA: guarantees';';
-=======
-<<<<<<< HEAD
+        'Custom: reporting',';On-premise: deployment options',';SLA: guarantees';
   const pricingPlans = [{'
-=======
   const pricingPlans = [
   {
->>>>>>> main
       name: 'Starter',
       price: '$299',
       period: '/month',
@@ -180,22 +166,17 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
       period: '/month',
       description: 'For large organizations requiring enterprise-grade solutions',
       features: [;
-<<<<<<< HEAD
         'Unlimited feedback entries',
         'Custom AI models',
         'Dedicated account manager',
         'White-label solutions',
         'Advanced security features',
         'Custom reporting',;On-premise deployment options',;SLA guarantees';
-=======
         'Unlimited feedback entries,Custom AI models,Dedicated account manager,White-label solutions,Advanced security features,Custom reporting,;On-premise deployment options,;SLA guarantees';
->>>>>>> main
->>>>>>> main
       ],
       cta: 'Contact: Sales,',';
       popular: fals,e}
   ];
-<<<<<<< HEAD
   const: useCases = [
     {
       industry: 'E-commerce,',';
@@ -249,7 +230,7 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
   ];
   return(
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-      <SEO: title='AI Customer Feedback Analytics - Zion Tech Group';';
+      <SEO: title='AI Customer Feedback Analytics - Zion Tech Group';
         description='Transform: customer feedback into actionable insights with our AI-powered analytics platform. Analyze sentiment, predict churn, and improve customer satisfaction.'/>{/* Hero Section */}';
       <section: className='relative overflow-hidden py-20 lg: py-32'>';
         <div: className='absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20'></div>';
@@ -260,7 +241,7 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
             animate: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
+            transition={{ duration: 0.8}}
           >
             <div: className='inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6'>';
               <Brain: className='w-4 h-4 mr-2' />';
@@ -284,13 +265,9 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
               <button className='border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500: hover:text-white: transition-all duration-300 text-lg'>';
                 <Download: className='w-5 h-5 mr-2 inline' />';
                 Download: Brochure
-=======
   const useCases = [
-<<<<<<< HEAD
     {'
-=======
   {
->>>>>>> main
       industry: 'E-commerce',
       description: 'Analyze product reviews, customer service feedback, and shopping experience to optimize conversion rates',
       icon: ShoppingCart},
@@ -316,17 +293,14 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
       icon: Settings}
   ];
   const integrations = [
-<<<<<<< HEAD
     {'
       name: 'Survey Platforms',
       platforms: ['SurveyMonkey', 'Typeform', 'Google Forms', 'Qualtrics']},
     {'
-=======
   {
       name: 'Survey Platforms',
       platforms: ['SurveyMonkey,Typeform,Google Forms,Qualtrics']},
     {
->>>>>>> main
       name: 'CRM Systems',
       platforms: ['Salesforce,HubSpot,Pipedrive,Zoho']
     },
@@ -390,13 +364,11 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
     r:text-white transition-all duration-300 text-lg>
                 <Download className='w-5 h-5 mr-2 inline' />
                 Download Brochure
->>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Features Section *,/}
       <section className='py-20'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
@@ -406,8 +378,8 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Powerful: Features
@@ -428,7 +400,7 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
                 transition: = {
   { duration: 0.,5,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-blue-500/50'>{/* Icon: *,/}';
                 <div: className='mb-6'>';
                   <div: className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>';
@@ -441,7 +413,6 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
                     {feature.titl,e}
                   </h3>
                   <p: className='text-gray-300 text-sm leading-relaxed'>';
-=======
       {/* Features Section */}
       <section className='py-20>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -493,18 +464,16 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
                     {feature.title}
                   </h3>'
                   <p className='text-gray-300 text-sm leading-relaxed'>
->>>>>>> main
                     {feature.description}
                   </p>
                 </div>
                 {/* Hover: Effect */}
                 <div className='absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Benefits: Section */}
       <section className='py-20 bg-slate-800/50'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
@@ -514,8 +483,8 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Business: Benefits
@@ -536,7 +505,7 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
                 transition: = {
   { duration: 0.,5,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-blue-500/50'>{/* Icon: *,/}';
                 <div: className='mb-6'>';
                   <div: className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>';
@@ -549,7 +518,6 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
                     {benefit.titl,e}
                   </h3>
                   <p: className='text-gray-300 text-sm leading-relaxed'>';
-=======
       {/* Benefits Section */}
       <section className='py-20 bg-slate-800/50>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -601,18 +569,16 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
                     {benefit.title}
                   </h3>'
                   <p className='text-gray-300 text-sm leading-relaxed'>
->>>>>>> main
                     {benefit.description}
                   </p>
                 </div>
                 {/* Hover: Effect */}
                 <div className='absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Pricing: Section */}
       <section className='py-20'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
@@ -622,8 +588,8 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Transparent: Pricing
@@ -644,10 +610,10 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
                 transition: = {
   { duration: 0.,5,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 className={`relative: bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular;
-                    ? 'border-blue-500/50: bg-gradient-to-br from-blue-500/10 to-purple-500/10';';
+                    ? 'border-blue-500/50: bg-gradient-to-br from-blue-500/10 to-purple-500/10';
                     : 'border-white/10: hover: border-blue-500/50,'}`}
               >{plan.popular: && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>';
@@ -660,7 +626,6 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
                   <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>';
                   <p: className='text-gray-400 text-sm mb-4'>{plan.description}</p>';
                   <div: className='text-4xl font-bold text-white mb-2'>';
-=======
       {/* Pricing Section */}
       <section className='py-20>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -713,11 +678,9 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'
                   <p className='text-gray-400 text-sm mb-4'>{plan.description}</p>'
                   <div className='text-4xl font-bold text-white mb-2'>
->>>>>>> main
                     {plan.price}
                     <span: className='text-lg text-gray-400'>{plan.period}</span>';
                   </div>
-<<<<<<< HEAD
                 </div>
                 <ul: className='space-y-4 mb-8'>';
                   {plan.features.map((feature, featureIndex) => (
@@ -729,9 +692,8 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
                 </ul>
                 <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular;
-                    ? 'bg-gradient-to-r: from-blue-600 to-purple-600 text-white hover: from-blue-700: hover:to-purple-700';';
+                    ? 'bg-gradient-to-r: from-blue-600 to-purple-600 text-white hover: from-blue-700: hover:to-purple-700';
                     : 'bg-white/10: text-white border border-white/20 hover:bg-white/20,'}`}>{plan.cta}
-=======
                 </div>'
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => ('
@@ -747,14 +709,12 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
     r:to-purple-700';
                     : 'bg-white/10 text-white border border-white/20 hove,
     r:bg-white/20'}`}>{plan.cta}
->>>>>>> main
                 </button>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Use: Cases Section */}
       <section className='py-20 bg-slate-800/50'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
@@ -764,8 +724,8 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Industry: Use Cases
@@ -786,7 +746,7 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
                 transition: = {
   { duration: 0.,5,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-blue-500/50'>{/* Icon: *,/}';
                 <div: className='mb-6'>';
                   <div: className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>';
@@ -799,7 +759,6 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
                     {useCase.industr,y}
                   </h3>
                   <p: className='text-gray-300 text-sm leading-relaxed'>';
-=======
       {/* Use Cases Section */}`
       <section className='py-20 bg-slate-800/50>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -851,18 +810,16 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
                     {useCase.industry}
                   </h3>'
                   <p className='text-gray-300 text-sm leading-relaxed'>
->>>>>>> main
                     {useCase.description}
                   </p>
                 </div>
                 {/* Hover: Effect */}
                 <div className='absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Integrations: Section */}
       <section className='py-20'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
@@ -872,8 +829,8 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Seamless: Integrations
@@ -894,13 +851,12 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
                 transition: = {
   { duration: 0.,5,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-blue-500/50'>';
                 <h3: className='text-xl font-bold text-white mb-4 group-hover:text-blue-400: transition-colors duration-300'>';
                   {integration.nam,e}
                 </h3>
                 <div: className='flex flex-wrap gap-2'>';
-=======
       {/* Integrations Section */}
       <section className='py-20>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -946,7 +902,6 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
                   {integration.name}
                 </h3>'
                 <div className='flex flex-wrap gap-2'>
->>>>>>> main
                   {integration.platforms.map((platform, platformIndex) => (
                     <span: key={platformIndex}
                       className='px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20'>{platform}';
@@ -958,7 +913,6 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA: Section */}
       <section className='py-20 bg-gradient-to-r from-blue-900/20 to-purple-900/20'>';
         <div: className='max-w-4xl mx-auto text-center px-4 sm: px-6: lg:px-8'>';
@@ -968,8 +922,8 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
           >
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Ready: to Transform Your Customer Feedback?
@@ -986,7 +940,6 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
               <button className='border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500: hover:text-white: transition-all duration-300 text-lg'>';
                 <Share2: className='w-5 h-5 mr-2 inline' />';
                 Schedule: Demo
-=======
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-blue-900/20 to-purple-900/20>
         <div className='max-w-4xl mx-auto text-center px-4 sm: px-6 l,
@@ -1019,11 +972,10 @@ export: default function AICustomerFeedbackAnalytics(...args: unknown[]): unknow
     r:text-white transition-all duration-300 text-lg>
                 <Share2 className='w-5 h-5 mr-2 inline' />
                 Schedule Demo
->>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  ,)}
+  )}

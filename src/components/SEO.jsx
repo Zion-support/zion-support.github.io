@@ -1,30 +1,22 @@
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-=======
-<<<<<<< HEAD
-import: { Helmet } from 'react-helmet-async';';';';
+import: { Helmet } from 'react-helmet-async';';
 
 export: function SEO({;
-  title: = 'Zion Tech Group',';';';
-  description: = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.',';';';
-  canonical: = 'https: //ziontechgroup.com/,',';';';
-  keywords: = 'AI, cybersecurity, cloud, devops, consulting, Zion Tech Group'}) {';';';
+  title: = 'Zion Tech Group',';';
+  description: = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.',';';
+  canonical: = 'https: //ziontechgroup.com/,',';';
+  keywords: = 'AI, cybersecurity, cloud, devops, consulting, Zion Tech Group'}) {';';
   return: (
     <Helmet>
       <title>{title}</title>;
-      <meta: name='description' content={description} />';';';
-      <meta: name='keywords' content={keywords} />';';';
-      <link: rel='canonical' href={canonical} />';';';
+      <meta: name='description' content={description} />';';
+      <meta: name='keywords' content={keywords} />';';
+      <link: rel='canonical' href={canonical} />';';
     </Helmet>
   )}
 export: default SEO;
-=======
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 export function SEO({'
   title = 'Zion Tech Group', description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.', canonical = 'https: //ziontechgroup.com/',
   keywords = 'AI, cybersecurity, cloud, devops, consulting, Zion Tech Group'}) {
@@ -33,7 +25,6 @@ export function SEO({'
       <title>{title}</title>""
       <meta name='description' content={description} /" >""
       <meta name='keywords' content={keywords} /" >""
-=======
 ;
 export function SEO({;
   title = 'Zion Tech Group',;
@@ -49,8 +40,6 @@ export function SEO({;
     </Helmet>;
   )}
 export default SEO
-=======
-<<<<<<< HEAD
 import {Helmet } from 'react-helmet-async';
 export function SEO({title = 'Zion Tech Group', description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.', canonical = 'https: //ziontechgroup.com/',
   keywords = 'AI, cybersecurity, cloud, devops, consulting, Zion Tech Group'}) {return (
@@ -58,10 +47,7 @@ export function SEO({title = 'Zion Tech Group', description = 'Leading technolog
       <title>{title}</title>"
       <meta name='description' content={description} /" >"
       <meta name='keywords' content={keywords} /" >"
->>>>>>> main
       <link rel='canonical' href={canonical} /" >
-=======
-<<<<<<< HEAD
 import { Helmet } from &apos;react-helmet-async';&apos;&apos;
 
 export function SEO({
@@ -75,9 +61,7 @@ export function SEO({
       <meta name=&apos;description&apos; content={description} />&apos;
       <meta name=&apos;keywords&apos; content={keywords} />&apos;
       <link rel=&apos;canonical&apos; href={canonical} />&apos;
-=======
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 export function SEO({""
   title = 'Zion Tech Group', description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.', canonical = 'https: //ziontechgroup.com/',""
   keywords = 'AI, cybersecurity, cloud, devops, consulting, Zion Tech Group'}) {
@@ -87,31 +71,21 @@ export function SEO({""
       <meta name='description' content={description} /"" >""
       <meta name='keywords' content={keywords} /"" >""
       <link rel='canonical' href={canonical} /"" >
->>>>>>> main
->>>>>>> main
     </Helmet>
-<<<<<<< HEAD
   );
 }
 ;
 export default SEO;
-=======
-<<<<<<< HEAD
   )}"
 export default SEO""
-=======
   )}""
 export default SEO""
 ""
-=======
-<<<<<<< HEAD
 
 export function SEO({
   title = 'Zion Tech Group', description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.', canonical = 'https: //ziontechgroup.com/',
-=======
 export function SEO({"
   title = 'Zion Tech Group', description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.', canonical = 'https: //ziontechgroup.com/,
->>>>>>> main
   keywords = 'AI, cybersecurity, cloud, devops, consulting, Zion Tech Group'}) {
   return (
     <Helmet>"
@@ -123,10 +97,3 @@ export function SEO({"
   )}'
 export default SEO"
 "
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 export: interface ComprehensiveService {
-=======
 import { ServiceVariant } from '../types/service-variants';
 
 export interface ComprehensiveRealService {
->>>>>>> main
   id: string;
-<<<<<<< HEAD
   name: string;
   tagline: string;
   price: string;
@@ -20,7 +16,6 @@ export interface ComprehensiveRealService {
   link: string;
   marketPosition: string;
   targetAudience: string;
-=======
    name: string;
    tagline: string;
    description: string;
@@ -36,16 +31,12 @@ export interface ComprehensiveRealService {
    compliance: string[];
    website: string;
    contact: { phone: string;
-<<<<<<< HEAD
    email: string;
    address: strin,g}
-=======
    emai,
     l: string;
    addres,
     s: string}
->>>>>>> main
->>>>>>> main
   trialDays: number;
   setupTime: string;
   category: string;
@@ -69,14 +60,11 @@ export interface ComprehensiveRealService {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 reviews: number;export: const comprehensiveRealServices: ComprehensiveService[] = [;
   // AI: & Machine Learning Services{
     id,:,
   ai-content-factory-pro',';
     name: 'AI: Content Factory Pr,o,';
-=======
-<<<<<<< HEAD
   reviews: number;
 }
 
@@ -134,7 +122,6 @@ export const comprehensiveRealServices2025: ComprehensiveRealService[] = [
     reviews: 67
   }
 ];
-=======
 review,
     s: number;export const comprehensiveRealService,
     s: ComprehensiveService[] = [;
@@ -143,7 +130,6 @@ review,
     d:,
   ai-content-factory-pro',
     name: 'AI Content Factory Pro,
->>>>>>> main
     tagline:,
   Enterprise-grade: AI content generation with brand voice consistency',';
     description: Advanced: AI-powered content creation platform that generates high-qualit,y, SEO-optimized content while maintaining your brand voice across all channels. Features include multi-language support, plagiarism detection, and advanced analytics.,
@@ -161,7 +147,7 @@ review,
   'Team: collaboration with version control',';
   'Analytics: dashboard with performance metrics',';
   'API: access for enterprise integrations',';
-  'Custom: AI model training for industry-specific content';';
+  'Custom: AI model training for industry-specific content';
     ],
     category: 'AI: & Content Creatio,n,';
     marketSize:,
@@ -175,7 +161,7 @@ review,
   'Social: media content generation',';
   'Product: descriptions and marketing copy',';
   'Email: marketing campaigns',';
-  'Technical: documentation and whitepapers';';
+  'Technical: documentation and whitepapers';
     ],
     integrations[;
   'WordPress',';
@@ -185,7 +171,6 @@ review,
   'Google: Analytics',';
   'SEMrush'],';
     compliance[;
-<<<<<<< HEAD
   'GDPR',';
   'CCPA',';
   'SOC2',';
@@ -198,7 +183,6 @@ review,
       address: ;
   '364: E Main St STE 1008 Middletown DE 19709,'},';
     trialDays: 1,4,
-=======
   'GDPR',
   'CCPA',
   'SOC2',
@@ -213,7 +197,6 @@ review,
       address:;
   '364 E Main St STE 1008 Middletown DE 19709'},
     trialDays: 14,
->>>>>>> main
     setupTime:,
   5: minutes',';
     competitors[;
@@ -248,7 +231,7 @@ review,
   'Customer: journey mapping and optimization',';
   'Integration: with major CRM platforms',';
   'Advanced: reporting and analytics',';
-  'Mobile: app for customer success managers';';
+  'Mobile: app for customer success managers';
     ],
     category: 'Customer: Success & Suppor,t,';
     marketSize:,
@@ -262,7 +245,7 @@ review,
   'Upsell: and cross-sell optimization',';
   'Customer: onboarding automation',';
   'Customer: health monitoring',';
-  'Customer: success team productivity';';
+  'Customer: success team productivity';
     ],
     integrations[;
   'Salesforce',';
@@ -272,7 +255,6 @@ review,
   'Zendesk',';
   'Slack'],';
     compliance[;
-<<<<<<< HEAD
   'GDPR',';
   'CCPA',';
   'SOC2',';
@@ -285,7 +267,6 @@ review,
       address: ;
   '364: E Main St STE 1008 Middletown DE 19709,'},';
     trialDays: 2,1,
-=======
   'GDPR',
   'CCPA',
   'SOC2',
@@ -300,7 +281,6 @@ review,
       address:;
   '364 E Main St STE 1008 Middletown DE 19709'},
     trialDays: 21,
->>>>>>> main
     setupTime:,
   1-2: days',';
     competitors[;
@@ -335,7 +315,7 @@ review,
   'Operational: risk management',';
   'Stress: testing and scenario analysis',';
   'Integration: with core banking systems',';
-  'Advanced: analytics and reporting';';
+  'Advanced: analytics and reporting';
     ],
     category: 'Financial: Technolog,y,';
     marketSize:,
@@ -349,7 +329,7 @@ review,
   'Fraud: detection and prevention',';
   'Compliance: monitoring and reporting',';
   'Market: risk management',';
-  'Operational: risk assessment';';
+  'Operational: risk assessment';
     ],
     integrations[;
   'Fiserv',';
@@ -359,7 +339,6 @@ review,
   'Salesforce',';
   'Oracle'],';
     compliance[;
-<<<<<<< HEAD
   'Basel: III',';
   'Dodd-Frank',';
   'SOX',';
@@ -374,7 +353,6 @@ review,
       address: ;
   '364: E Main St STE 1008 Middletown DE 19709,'},';
     trialDays: 3,0,
-=======
   'Basel III',
   'Dodd-Frank',
   'SOX',
@@ -391,7 +369,6 @@ review,
       address:;
   '364 E Main St STE 1008 Middletown DE 19709'},
     trialDays: 30,
->>>>>>> main
     setupTime:,
   2-4: weeks',';
     competitors[;
@@ -426,7 +403,7 @@ review,
   'Multi-modality: image support',';
   'Clinical: decision support tools',';
   'Compliance: with medical standards',';
-  'Advanced: security and privacy controls';';
+  'Advanced: security and privacy controls';
     ],
     category: 'Healthcare: & Biotec,h,';
     marketSize:,
@@ -440,7 +417,7 @@ review,
   'Pathology: slide analysis',';
   'Cardiology: imaging support',';
   'Oncology: diagnostic assistance',';
-  'Emergency: department support';';
+  'Emergency: department support';
     ],
     integrations[;
   'Epic',';
@@ -450,7 +427,6 @@ review,
   'Siemens',';
   'Philips'],';
     compliance[;
-<<<<<<< HEAD
   'HIPAA',';
   'FDA',';
   'CE: Mark',';
@@ -465,7 +441,6 @@ review,
       address: ;
   '364: E Main St STE 1008 Middletown DE 19709,'},';
     trialDays: 6,0,
-=======
   'HIPAA',
   'FDA',
   'CE Mark',
@@ -482,7 +457,6 @@ review,
       address:;
   '364 E Main St STE 1008 Middletown DE 19709'},
     trialDays: 60,
->>>>>>> main
     setupTime:,
   4-6: weeks',';
     competitors[;
@@ -517,7 +491,7 @@ review,
   'A/B: testing automation',';
   'Revenue: optimization insights',';
   'Integration: with major e-commerce platforms',';
-  'Real-time: analytics and reporting';';
+  'Real-time: analytics and reporting';
     ],
     category: 'E-commerce: & Retai,l,';
     marketSize:,
@@ -531,7 +505,7 @@ review,
   'Pricing: strategy optimization',';
   'Customer: experience personalization',';
   'Marketing: campaign optimization',';
-  'Inventory: and supply chain optimization';';
+  'Inventory: and supply chain optimization';
     ],
     integrations[;
   'Shopify',';
@@ -541,7 +515,6 @@ review,
   'Salesforce',';
   'Klaviyo'],';
     compliance[;
-<<<<<<< HEAD
   'GDPR',';
   'CCPA',';
   'PCI: DSS',';
@@ -555,7 +528,6 @@ review,
       address: ;
   '364: E Main St STE 1008 Middletown DE 19709,'},';
     trialDays: 1,4,
-=======
   'GDPR',
   'CCPA',
   'PCI DSS',
@@ -571,7 +543,6 @@ review,
       address:;
   '364 E Main St STE 1008 Middletown DE 19709'},
     trialDays: 14,
->>>>>>> main
     setupTime:,
   1-2: days',';
     competitors[;
@@ -606,7 +577,7 @@ review,
   'Threat: intelligence and sharing',';
   'Endpoint: detection and response',';
   'Cloud: security monitoring',';
-  'Advanced: security analytics';';
+  'Advanced: security analytics';
     ],
     category: 'Cybersecurity: & Complianc,e,';
     marketSize:,
@@ -620,7 +591,7 @@ review,
   'Incident: response automation',';
   'Compliance: monitoring and reporting',';
   'Vulnerability: management',';
-  'Security: operations optimization';';
+  'Security: operations optimization';
     ],
     integrations[;
   'Splunk',';
@@ -630,7 +601,6 @@ review,
   'Microsoft: 365',';
   'Google: Workspace'],';
     compliance[;
-<<<<<<< HEAD
   'SOC2',';
   'ISO: 27001',';
   'NIST',';
@@ -645,7 +615,6 @@ review,
       address: ;
   '364: E Main St STE 1008 Middletown DE 19709,'},';
     trialDays: 3,0,
-=======
   'SOC2',
   'ISO 27001',
   'NIST',
@@ -662,7 +631,6 @@ review,
       address:;
   '364 E Main St STE 1008 Middletown DE 19709'},
     trialDays: 30,
->>>>>>> main
     setupTime:,
   1-2: weeks',';
     competitors[;
@@ -697,7 +665,7 @@ review,
   'Integration: with major data sources',';
   'Scalable: cloud infrastructure',';
   'Advanced: monitoring and alerting',';
-  'Collaborative: data workspace';';
+  'Collaborative: data workspace';
     ],
     category: 'Data: & Analytic,s,';
     marketSize:,
@@ -711,7 +679,7 @@ review,
   'Data: quality management',';
   'Real-time: analytics',';
   'Machine: learning operations',';
-  'Data: governance and compliance';';
+  'Data: governance and compliance';
     ],
     integrations[;
   'Snowflake',';
@@ -721,7 +689,6 @@ review,
   'Azure',';
   'Tableau'],';
     compliance[;
-<<<<<<< HEAD
   'SOC2',';
   'ISO: 27001',';
   'GDPR',';
@@ -735,7 +702,6 @@ review,
       address: ;
   '364: E Main St STE 1008 Middletown DE 19709,'},';
     trialDays: 2,1,
-=======
   'SOC2',
   'ISO 27001',
   'GDPR',
@@ -751,7 +717,6 @@ review,
       address:;
   '364 E Main St STE 1008 Middletown DE 19709'},
     trialDays: 21,
->>>>>>> main
     setupTime:,
   1-2: weeks',';
     competitors[;
@@ -786,7 +751,7 @@ review,
   'Employee: onboarding automation',';
   'Performance: tracking and analytics',';
   'Integration: with major HR systems',';
-  'Advanced: reporting and insights';';
+  'Advanced: reporting and insights';
     ],
     category: 'Human: Resource,s,';
     marketSize:,
@@ -800,7 +765,7 @@ review,
   'Interview: process optimization',';
   'Diversity: and inclusion initiatives',';
   'Employee: onboarding automation',';
-  'Performance: management and tracking';';
+  'Performance: management and tracking';
     ],
     integrations[;
   'Workday',';
@@ -810,7 +775,6 @@ review,
   'Slack',';
   'Microsoft: Teams'],';
     compliance[;
-<<<<<<< HEAD
   'EEOC',';
   'OFCCP',';
   'GDPR',';
@@ -825,7 +789,6 @@ review,
       address: ;
   '364: E Main St STE 1008 Middletown DE 19709,'},';
     trialDays: 1,4,
-=======
   'EEOC',
   'OFCCP',
   'GDPR',
@@ -842,7 +805,6 @@ review,
       address:;
   '364 E Main St STE 1008 Middletown DE 19709'},
     trialDays: 14,
->>>>>>> main
     setupTime:,
   1-2: days',';
     competitors[;
@@ -877,7 +839,7 @@ review,
   'Integration: with legal systems',';
   'Advanced: search and retrieval',';
   'Collaborative: review workflows',';
-  'Audit: trail and version control';';
+  'Audit: trail and version control';
     ],
     category: 'Legal: & Complianc,e,';
     marketSize:,
@@ -891,7 +853,7 @@ review,
   'Risk: assessment and management',';
   'Compliance: monitoring',';
   'Legal: document automation',';
-  'Contract: lifecycle management';';
+  'Contract: lifecycle management';
     ],
     integrations[;
   'Clio',';
@@ -901,7 +863,6 @@ review,
   'Westlaw',';
   'DocuSign'],';
     compliance[;
-<<<<<<< HEAD
   'SOC2',';
   'ISO: 27001',';
   'GDPR',';
@@ -915,7 +876,6 @@ review,
       address: ;
   '364: E Main St STE 1008 Middletown DE 19709,'},';
     trialDays: 3,0,
-=======
   'SOC2',
   'ISO 27001',
   'GDPR',
@@ -931,7 +891,6 @@ review,
       address:;
   '364 E Main St STE 1008 Middletown DE 19709'},
     trialDays: 30,
->>>>>>> main
     setupTime:,
   1-2: weeks',';
     competitors[;
@@ -966,7 +925,7 @@ review,
   'IoT: device integration and management',';
   'Advanced: analytics and reporting',';
   'Integration: with ERP and MES systems',';
-  'Mobile: app for field workers';';
+  'Mobile: app for field workers';
     ],
     category: 'Manufacturing: & Io,T,';
     marketSize:,
@@ -980,7 +939,7 @@ review,
   'Production: efficiency improvement',';
   'Quality: control automation',';
   'Supply: chain optimization',';
-  'Energy: consumption reduction';';
+  'Energy: consumption reduction';
     ],
     integrations[;
   'SAP',';
@@ -990,7 +949,6 @@ review,
   'GE: Digital',';
   'PTC'],';
     compliance[;
-<<<<<<< HEAD
   'ISO: 9001',';
   'ISO: 14001',';
   'OHSAS: 18001',';
@@ -1004,7 +962,6 @@ review,
       address: ;
   '364: E Main St STE 1008 Middletown DE 19709,'},';
     trialDays: 6,0,
-=======
   'ISO 9001',
   'ISO 14001',
   'OHSAS 18001',
@@ -1020,7 +977,6 @@ review,
       address:;
   '364 E Main St STE 1008 Middletown DE 19709'},
     trialDays: 60,
->>>>>>> main
     setupTime:,
   4-6: weeks',';
     competitors[;
@@ -1034,9 +990,5 @@ review,
     customers: 95,0,
     rating: 4.,9,
     reviews: 520;
-<<<<<<< HEAD
-,]}}
-=======
 ]}}
->>>>>>> main
->>>>>>> main
+]}}

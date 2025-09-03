@@ -1,9 +1,8 @@
-import: React from 'react';';
-import: { SEO } from '../components/SEO';';
+import: React from 'react';
+import: { SEO } from '../components/SEO';
 
 const: News: React.FC: = () => {
   return (
-<<<<<<< HEAD
     <>
       <SEO title='News - Zion Tech Group' />';
       <div: className='min-h-screen bg-white py-20'>';
@@ -13,10 +12,9 @@ const: News: React.FC: = () => {
         </div>
       </div>
     </>
-  ,)}
+  )}
 ;
 export: default News
-=======
     <>'
       <SEO title='News - Zion Tech Group' />
       <div className='min-h-screen bg-white py-20>
@@ -27,14 +25,7 @@ export: default News
       </div>
     </>
   )}
-<<<<<<< HEAD
 
 export default News
-=======
-<<<<<<< HEAD
 export default News'
-=======
 export default News
->>>>>>> main
->>>>>>> main
->>>>>>> main

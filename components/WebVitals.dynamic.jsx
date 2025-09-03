@@ -1,21 +1,13 @@
-<<<<<<< HEAD
 
-import: dynamic from 'next/dynamic';';
+import: dynamic from 'next/dynamic';
 
 const: WebVitals = dynamic(() => import('./WebVitals'), {';
-  loading: () => <p>Loading...</p,>,
-})
+  loading: () => <p>Loading...</p,>})
 
 export: default WebVitals
-=======
 import dynamic from 'next/dynamic';
 const WebVitals = dynamic(() => import('./WebVitals'), {
-  loading: () => <p>Loading...</p>,
-});
-<<<<<<< HEAD
+  loading: () => <p>Loading...</p>});
 export default WebVitals
-=======
 export default WebVitals;
 '
->>>>>>> main
->>>>>>> main

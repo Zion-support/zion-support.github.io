@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';''';,"});,"})
 import { motion } from 'framer-motion';,"});,"})
 import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = () => {}"});,"})
     const [isOpen, setIsOpen] = useState(false);,"});,"})
-    const [isAnalyzing, setIsAnalyzing] = useState(false);';,"});,"})
+    const [isAnalyzing, setIsAnalyzing] = useState(false);,"});,"})
     const [contentIssues, setContentIssues] = useState([]);'';,"});,"})
     const [report, setReport] = useState(null);''';,"});,"})
     const [selectedFilter, setSelectedFilter] = useState('all');''';,"});,"})
@@ -67,9 +66,9 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
         generateReport (sampleIssues) }, []) ;,"});,"})
     const generateReport = (issues) => {}"});,"})
         const totalPages = 79; // From analysis report;,"});,"})
-        const pagesWithIssues = issues.length;';,"});,"})
-        const criticalIssues = issues.filter(i => i.severity === 'high').length;';,"});,"})
-        const mediumIssues = issues.filter(i => i.severity === 'medium').length;';,"});,"})
+        const pagesWithIssues = issues.length;,"});,"})
+        const criticalIssues = issues.filter(i => i.severity === 'high').length;,"});,"})
+        const mediumIssues = issues.filter(i => i.severity === 'medium').length;,"});,"})
         const lowIssues = issues.filter(i => i.severity === 'low').length;,"});,"})
         setReport({}"});,"})
             totalPages,;,"});,"})
@@ -306,7 +305,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                           </td>""`;,"});,"})
                           <td className="px-6 py-4 whitespace-nowrap">``;,"});,"})
                             <span className={`text-sm font-medium ${getStatusColor(issue.status)}`}>';,"});,"})
-                              {issue.status.replace('_',).charAt(0).toUpperCase() + issue.status.replace('_',).slice(1)}"});,"})
+                              {issue.status.replace('_').charAt(0).toUpperCase() + issue.status.replace('_').slice(1)}"});,"})
                             </span>""";,"});,"})
                           </td>"""";,"});,"})
                           <td className="px-6 py-4 whitespace-nowrap">"""";,"});,"})
@@ -382,35 +381,15 @@ export { ContentQualityAnalyzer };,"});,"})
 export { ContentQualityAnalyzer };,"});,"})
 ;,"});,"})
 export { ContentQualityAnalyzer };,"});,"})
-=======
-<<<<<<< HEAD
  const: ContentQualityAnalyzer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [contentIssues, setContentIssues] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all')  const [searchTerm, setSearchTerm] = useState (') ';'";";";";
-=======
-<<<<<<< HEAD
  const ContentQualityAnalyzer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [contentIssues, setContentIssues] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all')  const [searchTerm, setSearchTerm] = useState (') ';'"'"
-=======
-<<<<<<< HEAD
  const ContentQualityAnalyzer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [contentIssues, setContentIssues] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all')  const [searchTerm, setSearchTerm] = useState (') ';";"
 "
-=======
-<<<<<<< HEAD
  const ContentQualityAnalyzer = () => {} const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [contentIssues, setContentIssues] = useState ([])  const [report, setReport] = useState (null)  const;const [selectedFilter, setSelectedFilter] = useState (&apos;all&apos;)&apos;'  const;const [searchTerm, setSearchTerm] = useState (&apos;) ';&apos;";
 &quot;"
-=======
-<<<<<<< HEAD
  const ContentQualityAnalyzer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [contentIssues, setContentIssues] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all')  const [searchTerm, setSearchTerm] = useState (') ';'";'"
-<<<<<<< HEAD
 ""
 }
-=======
-=======
  const ContentQualityAnalyzer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [contentIssues, setContentIssues] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all')  const [searchTerm, setSearchTerm] = useState (') "
 "
 }
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

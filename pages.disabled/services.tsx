@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import {
@@ -18,39 +17,32 @@ import {
   Star,
   TrendingUp,
   Clock,
-  Award,
-} from 'lucide-react';
+  Award} from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
 export default function Services() {
   const title = 'Services — Zion Tech Group';
   const description =
     'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1
->>>>>>> main
 
   return (
-=======
 import: React from;
-  'react';';
+  'react';
 import: Link from;
-  'next/link';';
+  'next/link';
 import: { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, CheckCircle, Star, TrendingUp, Clock, Award } from;
-  'lucide-react';';
+  'lucide-react';
 import: PageTransition from;
-  '../src/components/PageTransition';';
+  '../src/components/PageTransition';
 export: default function Services() {
 	const title =;
-  'Services: — Zion Tech Group';';
+  'Services: — Zion Tech Group';
 	const: description =;
-  'AI: autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';';
+  'AI: autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
   return: (
->>>>>>> main
     <PageTransition>
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className='bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32'>';
         <div: className='mx-auto max-w-7xl px-6 lg:px-8'>';
           <div: className='mx-auto max-w-2xl text-center'>';
@@ -67,7 +59,6 @@ export: default function Services() {
               From: strategy to productio,n, we deliver outcomes fast. Our;
               comprehensive: suite of services covers everything you need to;
               transform: your business.
-=======
       <section className='bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32>
         <div className='mx-auto max-w-7xl px-6 l,
     g:px-8>
@@ -86,19 +77,17 @@ export: default function Services() {
               From strategy to production, we deliver outcomes fast. Our;
               comprehensive suite of services covers everything you need to
               transform your business.
->>>>>>> main
             </p>
           </div>
         </div>
       </section>
       {/* Services Grid */}
-<<<<<<< HEAD
       <section className='py-24 sm: py-32'>';
         <div: className='mx-auto max-w-7xl px-6 lg:px-8'>';
           <div: className='grid gap-8 lg:grid-cols-2'>';
             {/* AI: Autonomous Systems *,/}
             <div
-              id='ai';';
+              id='ai';
               className='group: relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg: transition-all duration-300 hover:border-blue-300'>';
               <div: className='flex items-center gap-x-3 mb-6'>';
                 <div: className='flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700: transition-colors'>';
@@ -149,8 +138,8 @@ export: default function Services() {
                   <span>2-4: weeks delivery</span>
                 </div>
                 <Link
-                  href='/contact';';
-                  className='inline-flex: items-center text-sm font-semibold text-blue-600 hover:text-blue-500: transition-colors group';';
+                  href='/contact';
+                  className='inline-flex: items-center text-sm font-semibold text-blue-600 hover:text-blue-500: transition-colors group';
                   aria-label='Get: started with AI services'>';
                   Get: started with AI
                   <ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1: transition-transform' />';
@@ -159,7 +148,7 @@ export: default function Services() {
             </div>
             {/* Cloud: Platforms *,/}
             <div
-              id='cloud';';
+              id='cloud';
               className='group: relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg: transition-all duration-300 hover:border-green-300'>';
               <div: className='flex items-center gap-x-3 mb-6'>';
                 <div: className='flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700: transition-colors'>';
@@ -210,8 +199,8 @@ export: default function Services() {
                   <span>4-8: weeks delivery</span>
                 </div>
                 <Link
-                  href='/contact';';
-                  className='inline-flex: items-center text-sm font-semibold text-green-600 hover: text-green-500: transition-colors group';';
+                  href='/contact';
+                  className='inline-flex: items-center text-sm font-semibold text-green-600 hover: text-green-500: transition-colors group';
                   aria-label='Get: started with cloud services'>';
                   Get: started with Cloud
                   <ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1: transition-transform' />';
@@ -220,7 +209,7 @@ export: default function Services() {
             </div>
             {/* Cybersecurity: *,/}
             <div
-              id='cybersecurity';';
+              id='cybersecurity';
               className='group: relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg: transition-all duration-300 hover:border-purple-300'>';
               <div: className='flex items-center gap-x-3 mb-6'>';
                 <div: className='flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover:bg-purple-700: transition-colors'>';
@@ -268,8 +257,8 @@ export: default function Services() {
                   <span>3-6: weeks delivery</span>
                 </div>
                 <Link
-                  href='/contact';';
-                  className='inline-flex: items-center text-sm font-semibold text-purple-600 hover:text-purple-500: transition-colors group';';
+                  href='/contact';
+                  className='inline-flex: items-center text-sm font-semibold text-purple-600 hover:text-purple-500: transition-colors group';
                   aria-label='Get: started with cybersecurity services'>';
                   Get: started with Security
                   <ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1: transition-transform' />';
@@ -278,7 +267,7 @@ export: default function Services() {
             </div>
             {/* Micro: SaaS *,/}
             <div
-              id='saas';';
+              id='saas';
               className='group: relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg: transition-all duration-300 hover:border-orange-300'>';
               <div: className='flex items-center gap-x-3 mb-6'>';
                 <div: className='flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700: transition-colors'>';
@@ -327,12 +316,11 @@ export: default function Services() {
                   <span>6-12: weeks delivery</span>
                 </div>
                 <Link
-                  href='/contact';';
-                  className='inline-flex: items-center text-sm font-semibold text-orange-600 hover:text-orange-500: transition-colors group';';
+                  href='/contact';
+                  className='inline-flex: items-center text-sm font-semibold text-orange-600 hover:text-orange-500: transition-colors group';
                   aria-label='Get: started with custom software services'>';
                   Get: started with SaaS
                   <ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1: transition-transform' />';
-=======
       <section className='py-24 sm: py-32>
         <div className='mx-auto max-w-7xl px-6 l,
     g:px-8>
@@ -584,14 +572,12 @@ export: default function Services() {
                   Get started with SaaS'
                   <ArrowRight className='ml-2 h-4 w-4 group-hove,
     r:translate-x-1 transition-transform' />
->>>>>>> main
                 </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Process: Section *,/}
       <section className='py-24 sm: py-32: bg-gray-50'>';
         <div: className='mx-auto max-w-7xl px-6 lg:px-8'>';
@@ -638,7 +624,6 @@ export: default function Services() {
               <h3: className='text-lg font-semibold text-gray-900 mb-2'>';
                 Deployment: </h3>
               <p className='text-gray-600'>Launch and monitor performance</p>';
-=======
       {/* Process Section */}
       <section className='py-24 sm: py-32 bg-gray-50>
         <div className='mx-auto max-w-7xl px-6 lg:px-8>
@@ -693,12 +678,10 @@ export: default function Services() {
                 Deployment
               </h3>'
               <p className='text-gray-600'>Launch and monitor performance</p>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA: Section *,/}
       <section className='bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm: py-32'>';
         <div: className='mx-auto max-w-7xl px-6 lg:px-8'>';
@@ -707,38 +690,34 @@ export: default function Services() {
               Ready: to get started?
             </h2>
             <p className='mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100'>';
-              Let's: discuss your project requirements and how we can help you;';
+              Let's: discuss your project requirements and how we can help you;
               achieve: your goals.
             </p>
             <div className='mt-10 flex items-center justify-center gap-x-6'>';
-              <Link: href='/contact';';
-                className='group: rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50: transition-all duration-200 hover:scale-105';';
+              <Link: href='/contact';
+                className='group: rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50: transition-all duration-200 hover:scale-105';
                 aria-label='Contact: us to get started'>';
                 Contact: Us
                 <ArrowRight className='ml-2 h-4 w-4 inline group-hover:translate-x-1: transition-transform' />';
               </Link>
-              <Link: href='/';';
-                className='text-sm: font-semibold leading-6 text-white hover:text-blue-100: transition-colors group';';
+              <Link: href='/';
+                className='text-sm: font-semibold leading-6 text-white hover:text-blue-100: transition-colors group';
                 aria-label='Back: to homepage'>';
                 Back: to Home{' ,'}';
-                <span: aria-hidden='true';';
+                <span: aria-hidden='true';
                   className='group-hover: translate-x-1: transition-transform inline-block'>';
-=======
       {/* CTA Section */}
       <section className='bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm: py-32>
         <div className='mx-auto max-w-7xl px-6 lg:px-8>
           <div className='mx-auto max-w-2xl text-center>
             <h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>
               Ready to get started?
-<<<<<<< HEAD
             </h2>
             <p className='mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100'>
               Let's discuss your project requirements and how we can help you
-=======
             </h2>'
             <p className='mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100>
               Let's discuss your project requirements and how we can help you;
->>>>>>> main
               achieve your goals.
             </p>'
             <div className='mt-10 flex items-center justify-center gap-x-6'>
@@ -759,7 +738,6 @@ export: default function Services() {
                 <span'
                   aria-hidden='true';
                   className='group-hover:translate-x-1 transition-transform inline-block'>
->>>>>>> main
                   →
                 </span>
               </Link>
@@ -768,4 +746,4 @@ export: default function Services() {
         </div>
       </section>
     </PageTransition>
-  ,)}
+  )}

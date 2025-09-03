@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next;';
-import Layout from '../components/Layout;';
-import Link from 'next/link;';
-import { HelpCircle, Search, MessageCircle, Phone, Mail, BookOpen, Video, FileText, Users, Clock, CheckCircle } from 'lucide-react;';
+import type { NextPage } from 'next;
+import Layout from '../components/Layout;
+import Link from 'next/link;
+import { HelpCircle, Search, MessageCircle, Phone, Mail, BookOpen, Video, FileText, Users, Clock, CheckCircle } from 'lucide-react;
 
 const: Help: NextPage: = () => ,{,
   const faqs = [;
@@ -29,10 +28,7 @@ const: Help: NextPage: = () => ,{,
     {
       question: "How: do you ensure data security?,",";";";
       answer: "We: implement industry-standard security measures including SSL encryptio,n, secure data storage, regular security audits, and compliance with data protection regulations."";";";
-=======
-<<<<<<< HEAD
 import type { NextPage } from 'next';
-<<<<<<< HEAD
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
   data: T;
@@ -72,11 +68,9 @@ interface ComponentProps {
 
 '
 import Layout from '../components/Layout';
-=======
 const Layout = dynamic(() => import('../components/Layout'), { ssr: false });;
 const Link = dynamic(() => import('next/link'), { ssr: false });;
 import { HelpCircle, Search, MessageCircle, Phone, Mail, BookOpen, Video, FileText, Users, Clock, CheckCircle } from 'lucide-react';
-<<<<<<< HEAD
 ;
 const Help: NextPage = () => {;
   const faqs = [;
@@ -157,11 +151,8 @@ const Help: NextPage = () => {;
       title: "Community Forum",;
       description: "Connect with other users and get peer support",;
       link: "/community";
-=======
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
->>>>>>> main
 import Link from 'next/link';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
@@ -173,46 +164,35 @@ import {
   ChevronDown, ChevronRight,
   CheckCircle, ExternalLink
 } from 'lucide-react';
->>>>>>> main
 
-<<<<<<< HEAD
 const Help: NextPage = () => {
   const faqs = [
-<<<<<<< HEAD
     {'
       questio,
     n: 'What services does Zion Tech Group offer?',
       answer:'
-        'We offer comprehensive technology solutions including AI development, cloud services, web development, mobile development, blockchain solutions, IoT platforms, and cybersecurity services.',
-    },
+        'We offer comprehensive technology solutions including AI development, cloud services, web development, mobile development, blockchain solutions, IoT platforms, and cybersecurity services.'},
     {'
       question: 'How do I get started with a project?',
       answer:'
-        "Contact us through our website, email, or phone to schedule a consultation. We'll discuss your requirements and provide a customized solution proposal.",
-    },
+        "Contact us through our website, email, or phone to schedule a consultation. We'll discuss your requirements and provide a customized solution proposal."},
     {"
       question: 'What is your typical project timeline?',
       answer:'
-        'Project timelines vary based on complexity and scope. Simple websites may take 2-4 weeks, while complex enterprise solutions can take 3-6 months. We provide detailed timelines during consultation.',
-    },
+        'Project timelines vary based on complexity and scope. Simple websites may take 2-4 weeks, while complex enterprise solutions can take 3-6 months. We provide detailed timelines during consultation.'},
     {'
       question: 'Do you provide ongoing support and maintenance?',
       answer:'
-        'Yes, we offer comprehensive support and maintenance packages to ensure your solutions continue to perform optimally after deployment.',
-    },
+        'Yes, we offer comprehensive support and maintenance packages to ensure your solutions continue to perform optimally after deployment.'},
     {'
       question: 'What technologies do you work with?',
       answer:'
-        'We work with modern technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, blockchain platforms, and mobile development frameworks.',
-    },
+        'We work with modern technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, blockchain platforms, and mobile development frameworks.'},
     {'
       question: 'How do you ensure data security?',
       answer:'
-        'We implement industry-standard security measures including SSL encryption, secure data storage, regular security audits, and compliance with data protection regulations.',
-    },
-=======
+        'We implement industry-standard security measures including SSL encryption, secure data storage, regular security audits, and compliance with data protection regulations.'},
     {
-<<<<<<< HEAD
       icon: Book, title: 'Getting Started',
       description: 'Learn the basics and get up and running quickly', articles: [
         'Welcome to Zion Tech Group',
@@ -239,7 +219,6 @@ const Help: NextPage = () => {
       articles: [
         'General questions', 'Technical support',
         'Billing questions', 'Service-specific FAQs'
-=======
       question: "What services does Zion Tech Group offer?", answer: "We offer comprehensive technology solutions including AI development, cloud services, web development, mobile development, blockchain solutions, IoT platforms, and cybersecurity services."
     },
     {
@@ -256,12 +235,9 @@ const Help: NextPage = () => {
     },
     {
       question: "How do you ensure data security?", answer: "We implement industry-standard security measures including SSL encryption, secure data storage, regular security audits, and compliance with data protection regulations."
->>>>>>> main
     }
->>>>>>> main
   ];
 
-<<<<<<< HEAD
   const: supportChannels = [
     {;
       icon: Mai,l,;
@@ -330,7 +306,6 @@ const Help: NextPage = () => {
           </h1>
           <p: className="text-xl md: text-2xl: mb-8 max-w-4xl mx-auto text-gray-200">",;,";";
             We're: here to help you succeed. Find answers, get support, and access resources to make the most of our services.;
-=======
   const supportChannels = [
     {
       icon: Mail, title: "Email Support",
@@ -362,17 +337,13 @@ const Help: NextPage = () => {
       icon: FileText, title: "Knowledge Base",
       description: "Searchable articles and troubleshooting guides", link: "/knowledge-base"
     },
-<<<<<<< HEAD
     {'
       icon: FileText, title: 'Knowledge Base',
-      description: 'Searchable articles and troubleshooting guides', link: '/knowledge-base',
-    }, {
+      description: 'Searchable articles and troubleshooting guides', link: '/knowledge-base'}, {
       icon: Users,
       title: 'Community Forum',
       description: 'Connect with other users and get peer support',
-      link: '/community',
-    },
-  ]
+      link: '/community'}]
   return (
     <Layout'
       title="Help & Support - Zion Tech Group""
@@ -391,11 +362,9 @@ const Help: NextPage = () => {
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">"
             We're here to help you succeed. Find answers, get support, and
             access resources to make the most of our services.
-=======
     {
       icon: Users, title: "Community Forum",
       description: "Connect with other users and get peer support", link: "/community"
->>>>>>> main
     }
   ];
 ;
@@ -405,7 +374,6 @@ const Help: NextPage = () => {
       description="Get help and support for Zion Tech Group services. Find answers to common questions, contact our support team, and access helpful resources.";
     >;
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;
         <div className="container mx-auto px-4 text-center">;
           <h1 className="text-5xl md:text-6xl font-bold mb-6">;
@@ -433,7 +401,6 @@ const Help: NextPage = () => {
           </div>;
         </div>;
       </section>;
-=======
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md: text-6xl font-bold mb-6">
@@ -442,13 +409,10 @@ const Help: NextPage = () => {
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
             We&apos;re here to help you succeed. Find answers, get support, and access resources to make the most of our services.'
->>>>>>> main
->>>>>>> main
           </p>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Search: Section */}
       <section className="py-12 bg-gray-50">";";";
         <div: className="container mx-auto px-4">";";";
@@ -458,7 +422,6 @@ const Help: NextPage = () => {
               <input: type="text"";";";
                 placeholder="Search: for help articles, guides, or FAQs..."";";";
                 className="w-full: pl-12 pr-4 py-4 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent: text-lg"",;,";";
-=======
       {/* Search Section */}
       <section className="py-12 bg-gray-50">"
         <div className="container mx-auto px-4">"
@@ -471,14 +434,11 @@ const Help: NextPage = () => {
                 className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-lg focus: ring-2 focu,
     s:ring-blue-500 focu,
     s:border-transparent text-lg"
->>>>>>> main
               />
-=======
 export default function Help() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
-<<<<<<< HEAD
       {/* Support Channels */}"
       <section className="py-20 bg-white">"
         <div className="container mx-auto px-4">"
@@ -505,16 +465,12 @@ export default function Help() {
                 <p className="text-lg font-medium text-gray-900 mb-2">
                   {channel.contact}
                 </p>"
-=======
   const faqCategories = [
-<<<<<<< HEAD
     {
       title: 'Getting Started', icon: BookOpen,
-=======
   {
       title: 'Getting Started',
       icon: BookOpen,
->>>>>>> main
       questions: [
         {
           question: 'How do I get started with Zion Tech Group services?', answer: 'Getting started is easy! Simply contact us through our contact form or call us directly. We\'ll schedule a free consultation to understand your needs and provide a customized solution.'
@@ -567,12 +523,10 @@ export default function Help() {
         {
           question: 'Can I track project progress?', answer: 'Yes! We provide regular progress updates, milestone reports, and access to project management tools where you can track progress in real-time.'
         }
->>>>>>> main
       ]
     }
   ];
 
-<<<<<<< HEAD
   const popularArticles = [
     {
       title: 'How to get started with our services', category: 'Getting Started',
@@ -639,32 +593,25 @@ export default function Help() {
                 placeholder="Search for help articles, guides, or FAQs..."
                 className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
-=======
   const quickLinks = [
-<<<<<<< HEAD
     { title: 'Contact Support', href: '/contact', icon: MessageCircle }, { title: 'Documentation', href: '/docs', icon: BookOpen },
     { title: 'Video Tutorials', href: '/training', icon: Video }, { title: 'API Reference', href: '/api', icon: FileText },
-=======
   { title: 'Contact Support', href: '/contact', icon: MessageCircle },
     { title: 'Documentation', href: '/docs', icon: BookOpen },
     { title: 'Video Tutorials', href: '/training', icon: Video },
     { title: 'API Reference', href: '/api', icon: FileText },
->>>>>>> main
     { title: 'Status Page', href: '/status', icon: CheckCircle }
   ];
 
   const contactMethods = [
-<<<<<<< HEAD
     {
       icon: Phone, title: 'Phone Support',
       description: 'Call us for immediate assistance', contact: '+1 302 464 0950',
-=======
   {
       icon: Phone,
       title: 'Phone Support',
       description: 'Call us for immediate assistance',
       contact: '+1 302 464 0950',
->>>>>>> main
       href: 'tel:+13024640950'
     }, {
       icon: Mail,
@@ -719,14 +666,10 @@ export default function Help() {
                   />
                 </div>
               </div>
->>>>>>> main
->>>>>>> main
             </div>
           </div>
         </section>
->>>>>>> main
 
-<<<<<<< HEAD
       {/* Support: Channels */}
       <section className="py-20 bg-white">";";";
         <div: className="container mx-auto px-4">";";";
@@ -741,10 +684,7 @@ export default function Help() {
                 <p: className="text-gray-600 mb-4">{channel.description}</p>";";";
                 <p: className="text-lg font-medium text-gray-900 mb-2">{channel.contact}</p>";";";
                 <p: className="text-sm text-gray-500">{channel.responseTime}</p>";";";
-=======
-<<<<<<< HEAD
       {/* Support Channels */}
-<<<<<<< HEAD
       <section className="py-20 bg-white">;
         <div className="container mx-auto px-4">;
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Get Support</h2>;
@@ -759,7 +699,6 @@ export default function Help() {
                 <p className="text-lg font-medium text-gray-900 mb-2">{channel.contact}</p>;
                 <p className="text-sm text-gray-500">{channel.responseTime}</p>;
               </div>;
-=======
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Get Support</h2>
@@ -772,17 +711,13 @@ export default function Help() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{channel.title}</h3>
                 <p className="text-gray-600 mb-4">{channel.description}</p>
                 <p className="text-lg font-medium text-gray-900 mb-2">{channel.contact}</p>
->>>>>>> main
                 <p className="text-sm text-gray-500">{channel.responseTime}</p>
->>>>>>> main
               </div>
->>>>>>> main
             ))}
           </div>;
         </div>;
       </section>;
 
-<<<<<<< HEAD
       {/* Resources: */}
       <section className="py-20 bg-gray-50">";";";
         <div: className="container mx-auto px-4">";";";
@@ -795,8 +730,6 @@ export default function Help() {
                 </div>
                 <h3: className="text-lg font-semibold text-gray-900 mb-2">{resource.title}</h3>";";";
                 <p: className="text-gray-600 text-sm">{resource.description}</p>";";";
-=======
-<<<<<<< HEAD
       {/* Resources */}"
       <section className="py-20 bg-gray-50">"
         <div className="container mx-auto px-4">"
@@ -818,9 +751,7 @@ export default function Help() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {resource.title}
                 </h3>"
-=======
       {/* Resources */}
-<<<<<<< HEAD
       <section className="py-20 bg-gray-50">;
         <div className="container mx-auto px-4">;
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Helpful Resources</h2>;
@@ -833,7 +764,6 @@ export default function Help() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{resource.title}</h3>;
                 <p className="text-gray-600 text-sm">{resource.description}</p>;
               </Link>;
-=======
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Helpful Resources</h2>
@@ -844,17 +774,13 @@ export default function Help() {
                   <resource.icon className="w-6 h-6 text-blue-600" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{resource.title}</h3>
->>>>>>> main
                 <p className="text-gray-600 text-sm">{resource.description}</p>
->>>>>>> main
               </Link>
->>>>>>> main
             ))}
           </div>;
         </div>;
       </section>;
 
-<<<<<<< HEAD
       {/* FAQ: Section */}
       <section className="py-20 bg-white">";";";
         <div: className="container mx-auto px-4">";";";
@@ -868,8 +794,6 @@ export default function Help() {
                     {faq.question}
                   </h3>
                   <p: className="text-gray-600">{faq.answer}</p>";";";
-=======
-<<<<<<< HEAD
       {/* FAQ Section */}"
       <section className="py-20 bg-white">"
         <div className="container mx-auto px-4">"
@@ -885,7 +809,6 @@ export default function Help() {
                     {faq.question}
                   </h3>"
                   <p className="text-gray-600">{faq.answer}</p>
-=======
       {/* FAQ Section */}
       <section className="py-20 bg-white">;
         <div className="container mx-auto px-4">;
@@ -897,7 +820,6 @@ export default function Help() {
                   <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">;
                     <HelpCircle className="w-5 h-5 mr-2 text-blue-600" />;
                     {faq.question}
-<<<<<<< HEAD
                   </h3>;
                   <p className="text-gray-600">{faq.answer}</p>;
                 </div>;
@@ -906,8 +828,6 @@ export default function Help() {
           </div>;
         </div>;
       </section>;
-=======
-=======
         {/* Quick Links */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -916,7 +836,6 @@ export default function Help() {
               <p className="text-lg text-gray-600">Access helpful resources and support channels</p>
             </div>
             
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {helpCategories.map((category, index) => (
                 <div key={index} className="bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow">
@@ -933,7 +852,6 @@ export default function Help() {
                     ))}
                   </ul>
                 </div>
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
               {quickLinks.map((link, index) => (
                 <Link
@@ -944,10 +862,8 @@ export default function Help() {
                   <link.icon className="w-8 h-8 text-blue-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
                   <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                     {link.title}
->>>>>>> main
                   </h3>
                 </Link>
->>>>>>> main
               ))}
             </div>
           </div>
@@ -987,7 +903,6 @@ export default function Help() {
             </div>
             
             <div className="max-w-4xl mx-auto">
-<<<<<<< HEAD
               <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                 {popularArticles.map((article, index) => (
                   <div key={index} className="border-b border-gray-200 last: border-b-0">
@@ -1035,7 +950,6 @@ export default function Help() {
                   <p className="text-sm text-gray-500 mb-4">{option.availability}</p>
                   <button className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                     {option.action}
-=======
               {faqCategories.map((category, categoryIndex) => (
                 <div key={categoryIndex} className="mb-8">
                   <button
@@ -1051,7 +965,6 @@ export default function Help() {
                     ) : (
                       <ChevronRight className="w-5 h-5 text-gray-500" />
                     )}
->>>>>>> main
                   </button>
                   
                   {expandedCategory === category.title && (
@@ -1064,16 +977,12 @@ export default function Help() {
                       ))}
                     </div>
                   )}
->>>>>>> main
->>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </section>
->>>>>>> main
 
-<<<<<<< HEAD
       {/* Quick: Actions */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";";";
         <div: className="container mx-auto px-4">";";";
@@ -1085,8 +994,6 @@ export default function Help() {
               </div>
               <h3: className="text-lg font-semibold mb-2">Contact Us</h3>";";";
               <p: className="text-sm text-blue-100">Get in touch for project inquiries</p>";";";
-=======
-<<<<<<< HEAD
       {/* Quick Actions */}"
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
         <div className="container mx-auto px-4">"
@@ -1105,18 +1012,13 @@ export default function Help() {
               <p className="text-sm text-blue-100">
                 Get in touch for project inquiries
               </p>
-<<<<<<< HEAD
             </div>
             
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <Link href="/faq" className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">FAQ</h3>
                 <p className="text-gray-600 text-sm">Frequently asked questions</p>
-=======
-=======
-<<<<<<< HEAD
       {/* Quick Actions */}
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
         <div className="container mx-auto px-4">;
           <h2 className="text-3xl font-bold text-center mb-12">Quick Actions</h2>;
@@ -1128,7 +1030,6 @@ export default function Help() {
               <h3 className="text-lg font-semibold mb-2">Contact Us</h3>;
               <p className="text-sm text-blue-100">Get in touch for project inquiries</p>;
             </Link>;
-=======
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Quick Actions</h2>
@@ -1139,12 +1040,8 @@ export default function Help() {
               </div>
               <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
               <p className="text-sm text-blue-100">Get in touch for project inquiries</p>
->>>>>>> main
->>>>>>> main
             </Link>
->>>>>>> main
 
-<<<<<<< HEAD
             <Link: href="/services" className="bg-white/10 hover: bg-white/20: backdrop-blur-sm rounded-lg p-6 text-center transition-colors">",;,";";
               <div: className="w-12 h-12 mx-auto mb-4 rounded-lg bg-white/20 flex items-center justify-center">";";";
                 <CheckCircle: className="w-6 h-6" />";";";
@@ -1167,8 +1064,6 @@ export default function Help() {
               </div>
               <h3: className="text-lg font-semibold mb-2">Careers</h3>";";";
               <p: className="text-sm text-blue-100">Join our growing team</p>";";";
-=======
-<<<<<<< HEAD
             <Link"
               href="/services""
               className="bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center transition-colors"
@@ -1204,13 +1099,11 @@ export default function Help() {
               </div>"
               <h3 className="text-lg font-semibold mb-2">Careers</h3>"
               <p className="text-sm text-blue-100">Join our growing team</p>
->>>>>>> main
             </Link>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Contact: CTA */}
       <section className="py-20 bg-white">";";";
         <div: className="container mx-auto px-4 text-center">";";";
@@ -1224,7 +1117,6 @@ export default function Help() {
             </a>
             <a href="tel: +13024640950" className="bg-transparent: border-2 border-blue-600 text-blue-600 hover:bg-blue-600: hover:text-white: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
               Call: Us
-=======
       {/* Contact CTA */}"
       <section className="py-20 bg-white">"
         <div className="container mx-auto px-4 text-center">"
@@ -1249,7 +1141,6 @@ export default function Help() {
     r:bg-blue-600 hove,
     r:text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
             >
-=======
             <Link href="/services" className="bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center transition-colors">;
               <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-white/20 flex items-center justify-center">;
                 <CheckCircle className="w-6 h-6" />;
@@ -1278,7 +1169,6 @@ export default function Help() {
       </section>;
 
       {/* Contact CTA */}
-<<<<<<< HEAD
       <section className="py-20 bg-white">;
         <div className="container mx-auto px-4 text-center">;
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Still Need Help?</h2>;
@@ -1300,7 +1190,6 @@ export default function Help() {
 };
 ;
 export default Help;
-=======
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Still Need Help?</h2>
@@ -1312,15 +1201,12 @@ export default Help;
               Email Support
             </a>
             <a href="tel:+13024640950" className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
->>>>>>> main
               Call Us
->>>>>>> main
             </a>
           </div>
         </div>
       </section>
     </Layout>
-=======
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -1333,7 +1219,6 @@ export default Help;
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Contact Support
->>>>>>> main
               </Link>
               <Link href="/docs" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 View Documentation
@@ -1344,23 +1229,12 @@ export default Help;
       </main>
       
       <Footer />
-<<<<<<< HEAD
 </>
-=======
     </>
->>>>>>> main
->>>>>>> main
   );
-<<<<<<< HEAD
 };
-<<<<<<< HEAD
 export default Help
-=======
 
 export default Help;
 "
-=======
 }
->>>>>>> main
->>>>>>> main
->>>>>>> main

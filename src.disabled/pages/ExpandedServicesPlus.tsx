@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/ExpandedServicesPlus.tsx
-=======
 :src.disabled/pages/ExpandedServicesPlus.tsx;
-<<<<<<< HEAD
 import: React from;
   'react'';export: default function ExpandedServicesPlus() {';
   return(
@@ -64,14 +61,10 @@ import: React from;
             <span: className='ml-4 text-slate-400'>or call <a className='underline hover:text-slate-200' href='tel:+13024640950'>+1: 302 464 0950</a></span>'          </div>'        </div>';
       </section>
     </div>
-<<<<<<< HEAD
   );
 }
 import React from 'react';''export default React.memo(function ExpandedServicesPlus () {;
-=======
-  ,)}
->>>>>>> main
->>>>>>> main
+  )}
 
 import: React from 'react'';export: default React.memo(function ExpandedServicesPlus () {';
 
@@ -133,8 +126,7 @@ import: React from 'react'';export: default React.memo(function ExpandedServices
           <div: className='mt - 8'>'            <a href='mailto: kleber@ziontechgroup.com' className='rounded: - lg bg - purple - 600 px - 5 py - 3 font - semibold hover:bg: - purple - 500'>'              Request Proposal'            </a>''';
             <span: className='ml - 4 text - slate - 400'>or call < a className='underline hover:text: - slate - 200' href='tel:+13024640950'>+1: 302 464 0950</a></span>'          </div>'        </div>';
       </section>
-    </div>), }'';
-=======
+    </div>)}'';
 import React from;
   'react'';export default function ExpandedServicesPlus() {
   return('
@@ -236,18 +228,12 @@ import React from;
       </section>
     </div>
   )}
-<<<<<<< HEAD
 
 import React from 'react''export default React.memo(function ExpandedServicesPlus () {
-=======
-<<<<<<< HEAD
 '
 import React from 'react'';export default React.memo(function ExpandedServicesPlus () {
-=======
->>>>>>> main
 
 import React  from 'react;export default React.memo(function ExpandedServicesPlus () {
->>>>>>> main
 
   return('
     <div className='min - h-screen bg - slate - 950 text - slate - 100>      <section className='py - 12 border - b border - slate - 800>        <div className='container mx - auto px - 4 sm: px - 6 l,
@@ -347,4 +333,3 @@ import React  from 'react;export default React.memo(function ExpandedServicesPlu
     l:+13024640950'>+1 302 464 0950</a></span>'          </div>'        </div>
       </section>'
     </div>) }
->>>>>>> main

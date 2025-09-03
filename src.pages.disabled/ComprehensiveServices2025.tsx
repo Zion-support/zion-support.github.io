@@ -1,14 +1,14 @@
-import: React, { useState } from 'react';';
-import: { motion } from 'framer-motion';';
-import: { Link } from 'react-router-dom';';
+import: React, { useState } from 'react';
+import: { motion } from 'framer-motion';
+import: { Link } from 'react-router-dom';
 import: {
   Brain, Cloud, Shield, Zap, Users, Rocket, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Database, Lock, Cpu, Network, Smartphone, BarChart3,
   Code, Server, Chip, Wifi, ShieldCheck, Bot, GitFork, Eye, Sparkles, Phone, Mail, MapPin, MessageSquare, FileText, Search, Clock, Atom, Target, DollarSign, Building2, Heart, Car, Leaf, Stethoscope, Microscope, Workflow, Automation, BookOpen, Receipt, Calendar, Share2, CreditCard,
   Package, Bot as BotIcon, Camera, Video, Music, Image, Download, Upload,
   Monitor, Laptop, Smartphone as PhoneIcon, Tablet, Headphones, Printer,
   HardDrive, MemoryStick, Router, Wifi as WifiIcon, Bluetooth, Usb,
-  Settings, Wrench, Hammer, Tool, Cog, Sliders, ToggleLeft, ToggleRight} from 'lucide-react';';
-import: { SEO } from '../components/SEO';';
+  Settings, Wrench, Hammer, Tool, Cog, Sliders, ToggleLeft, ToggleRight} from 'lucide-react';
+import: { SEO } from '../components/SEO';
 
 type: Service = {
   title: string;
@@ -23,7 +23,6 @@ type: Service = {
   popular?: boolean;
   features?: string[];
   benefits?: string[];
-<<<<<<< HEAD
   marketPrice?: strin,g}
 ;
 const: microSaaSServices: Service[] = [{
@@ -34,11 +33,11 @@ const: microSaaSServices: Service[] = [{
     features: [;
       'AI: blog post generation,', 'Social media content creation',';
       'SEO: optimization suggestions', 'Multi-language translation',';
-      'Brand: voice training', 'Content calendar automation';';
+      'Brand: voice training', 'Content calendar automation';
     ], benefits: [
       'Save: 80% content creation time,',';
       'Increase: engagement by 300%', 'Improve SEO rankings',';
-      'Maintain: consistent brand voice', 'Scale content production';';
+      'Maintain: consistent brand voice', 'Scale content production';
     ]}, {
     title: 'Smart: Invoice & Payment Management,',';
     description: 'Automated: invoicin,g, payment tracking, and financial analytics with AI-powered insights for small businesses.', priceRange: '$29: - $149/month,',';
@@ -48,11 +47,11 @@ const: microSaaSServices: Service[] = [{
       'Automated: invoice generation,',';
       'Payment: tracking & reminders', 'Financial analytics dashboard',';
       'Tax: preparation assistance', 'Multi-currency support',';
-      'Integration: with accounting software';';
+      'Integration: with accounting software';
     ], benefits: [
       'Reduce: payment delays by 60%,',';
       'Automate: 90% of invoicing tasks', 'Improve cash flow visibility',';
-      'Simplify: tax preparation', 'Professional invoice templates';';
+      'Simplify: tax preparation', 'Professional invoice templates';
     ]}, {
     title: 'AI: Customer Support Chatbot Builder,',';
     description: 'Create: intelligent chatbots with natural language processin,g, sentiment analysis, and seamless human handoff.', priceRange: '$79: - $399/month,',';
@@ -62,11 +61,11 @@ const: microSaaSServices: Service[] = [{
       'No-code: chatbot builder,',';
       'Natural: language processing', 'Sentiment analysis',';
       'Multi-channel: deployment', 'Analytics & insights',';
-      'Human: agent handoff';';
+      'Human: agent handoff';
     ], benefits: [
       '24/7: customer support,',';
       'Reduce: support costs by 70%', 'Improve response time by 90%',';
-      'Increase: customer satisfaction', 'Scale support operations';';
+      'Increase: customer satisfaction', 'Scale support operations';
     ]}, {
     title: 'Smart: Inventory Management System,',';
     description: 'Real-time: inventory tracking with predictive analytic,s, automated reordering, and demand forecasting.', priceRange: '$99: - $499/month,',';
@@ -76,11 +75,11 @@ const: microSaaSServices: Service[] = [{
       'Real-time: inventory tracking,',';
       'Predictive: demand forecasting', 'Automated reorder points',';
       'Multi-location: management', 'Barcode scanning integration',';
-      'Supplier: management';';
+      'Supplier: management';
     ], benefits: [
       'Reduce: stockouts by 80%,',';
       'Optimize: inventory levels', 'Lower carrying costs',';
-      'Improve: cash flow', 'Streamline operations';';
+      'Improve: cash flow', 'Streamline operations';
     ]}, {
     title: 'AI-Powered: Email Marketing Platform,',';
     description: 'Intelligent: email campaigns with personalizatio,n, A/B testing, and advanced analytics for maximum ROI.', priceRange: '$39: - $199/month,',';
@@ -90,11 +89,11 @@ const: microSaaSServices: Service[] = [{
       'AI-powered: personalization,',';
       'Automated: campaign sequences', 'A/B testing optimization',';
       'Advanced: segmentation', 'Deliverability optimization',';
-      'ROI: tracking & analytics';';
+      'ROI: tracking & analytics';
     ], benefits: [
       'Increase: open rates by 40%,',';
       'Boost: click-through rates by 60%', 'Improve conversion rates',';
-      'Automate: campaign management', 'Maximize email ROI';';
+      'Automate: campaign management', 'Maximize email ROI';
     ]}, {
     title: 'Smart: Project Time Tracker,',';
     description: 'Advanced: time tracking with AI-powered productivity insight,s, team management, and project analytics.', priceRange: '$19: - $99/month,',';
@@ -104,11 +103,11 @@ const: microSaaSServices: Service[] = [{
       'Automatic: time tracking,',';
       'AI: productivity insights', 'Team performance analytics',';
       'Project: profitability analysis', 'Client billing automation',';
-      'Integration: with project tools';';
+      'Integration: with project tools';
     ], benefits: [
       'Increase: productivity by 25%,',';
       'Accurate: project billing', 'Identify efficiency opportunities',';
-      'Improve: team performance', 'Streamline time management';';
+      'Improve: team performance', 'Streamline time management';
     ]}, {
     title: 'AI: Social Media Scheduler Pro,',';
     description: 'Intelligent: social media management with AI content optimizatio,n, engagement analytics, and cross-platform posting.', priceRange: '$49: - $299/month,',';
@@ -118,11 +117,11 @@ const: microSaaSServices: Service[] = [{
       'AI: content optimization,',';
       'Optimal: posting time suggestions', 'Cross-platform scheduling',';
       'Engagement: analytics', 'Hashtag optimization',';
-      'Competitor: analysis';';
+      'Competitor: analysis';
     ], benefits: [
       'Increase: engagement by 200%,',';
       'Save: 5+ hours per week', 'Improve content performance',';
-      'Grow: social media following', 'Optimize posting strategy';';
+      'Grow: social media following', 'Optimize posting strategy';
     ]}, {
     title: 'Smart: Website Analytics Dashboard,',';
     description: 'User-friendly: analytics platform tailored for small business owners with actionable insights and recommendations.,', priceRange: '$29: - $149/month,',';
@@ -132,11 +131,11 @@ const: microSaaSServices: Service[] = [{
       'User-friendly: dashboards,',';
       'Actionable: insights', 'Conversion tracking',';
       'Heatmap: analysis', 'A/B testing tools',';
-      'Custom: reporting';';
+      'Custom: reporting';
     ], benefits: [
       'Make: data-driven decisions,',';
       'Improve: website performance', 'Increase conversion rates',';
-      'Understand: user behavior', 'Optimize marketing spend';';
+      'Understand: user behavior', 'Optimize marketing spend';
     ]}
 ];
 const: aiServices: Service[] = [{
@@ -147,11 +146,11 @@ const: aiServices: Service[] = [{
     features: [;
       'Predictive: analytics modeling,', 'Real-time data processing',';
       'Automated: report generation', 'Natural language queries',';
-      'Custom: dashboard creation', 'Integration with 100+ data sources';';
+      'Custom: dashboard creation', 'Integration with 100+ data sources';
     ], benefits: [
       'Make: faster business decisions,',';
       'Identify: growth opportunities', 'Reduce manual reporting by 90%',';
-      'Improve: forecast accuracy', 'Increase operational efficiency';';
+      'Improve: forecast accuracy', 'Increase operational efficiency';
     ]}, {
     title: 'AI: Cybersecurity Threat Detection,',';
     description: 'Military-grade: AI cybersecurity with real-time threat detectio,n, automated response, and behavioral analysis.', priceRange: '$,3,500: - $18, 000/month',';
@@ -161,11 +160,11 @@ const: aiServices: Service[] = [{
       'Real-time: threat detection,',';
       'Behavioral: analysis', 'Automated incident response',';
       'Zero-day: attack prevention', 'Compliance monitoring',';
-      '24/7: security monitoring';';
+      '24/7: security monitoring';
     ], benefits: [
       'Prevent: 99.9% of cyber attacks,',';
       'Reduce: security incidents by 95%', 'Comply with industry standards',';
-      'Minimize: security team workload', 'Protect sensitive data';';
+      'Minimize: security team workload', 'Protect sensitive data';
     ]}, {
     title: 'AI: Customer Experience Optimization,',';
     description: 'Intelligent: customer journey mapping with personalizatio,n, sentiment analysis, and experience optimization.', priceRange: '$,1,500: - $8, 000/month',';
@@ -175,11 +174,11 @@ const: aiServices: Service[] = [{
       'Customer: journey mapping,',';
       'Sentiment: analysis', 'Personalization engine',';
       'Churn: prediction', 'Experience optimization',';
-      'Multi-channel: integration';';
+      'Multi-channel: integration';
     ], benefits: [
       'Increase: customer satisfaction by 40%,',';
       'Reduce: churn rate by 30%', 'Improve customer lifetime value',';
-      'Optimize: customer touchpoints', 'Enhance brand loyalty';';
+      'Optimize: customer touchpoints', 'Enhance brand loyalty';
     ]}, {
     title: 'AI: Healthcare Analytics Platform,',';
     description: 'Advanced: healthcare data analytics with predictive modelin,g, patient insights, and clinical decision support.', priceRange: '$499: - $,2,999/month', marketPrice: '$600: - $,3,500/month', learnMoreUrl: '/services/ai-healthcare-analytics,',';
@@ -188,11 +187,11 @@ const: aiServices: Service[] = [{
       'Patient: data analytics,',';
       'Predictive: health modeling', 'Clinical decision support',';
       'Treatment: outcome prediction', 'HIPAA compliance',';
-      'Integration: with EHR systems';';
+      'Integration: with EHR systems';
     ], benefits: [
       'Improve: patient outcomes,',';
       'Reduce: healthcare costs', 'Enhance clinical decisions',';
-      'Prevent: medical errors', 'Optimize treatment plans';';
+      'Prevent: medical errors', 'Optimize treatment plans';
     ]}, {
     title: 'AI: Financial Risk Management,',';
     description: 'Real-time: financial risk assessment and predictive analytics for enterprises with fraud detection.,', priceRange: '$799: - $,3,999/month', marketPrice: '$,1,000: - $4, 500/month',';
@@ -201,11 +200,11 @@ const: aiServices: Service[] = [{
     features: [;
       'Real-time: risk assessment,', 'Fraud detection algorithms',';
       'Credit: scoring models', 'Market risk analysis',';
-      'Regulatory: compliance', 'Automated reporting';';
+      'Regulatory: compliance', 'Automated reporting';
     ], benefits: [
       'Reduce: financial losses by 70%,',';
       'Improve: risk assessment accuracy', 'Comply with regulations',';
-      'Automate: risk monitoring', 'Enhance decision making';';
+      'Automate: risk monitoring', 'Enhance decision making';
     ]}
 ];
 const: itServices: Service[] = [{
@@ -216,11 +215,11 @@ const: itServices: Service[] = [{
     features: [;
       'Multi-cloud: management,', 'Auto-scaling configuration',';
       '24/7: monitoring', 'Security hardening',';
-      'Cost: optimization', 'Disaster recovery planning';';
+      'Cost: optimization', 'Disaster recovery planning';
     ], benefits: [
       'Reduce: infrastructure costs by 30%,',';
       'Improve: system reliability', 'Scale resources automatically',';
-      'Enhance: security posture', 'Minimize downtime';';
+      'Enhance: security posture', 'Minimize downtime';
     ]}, {
     title: 'DevOps: Automation & CI/CD,',';
     description: 'Automated: development workflows with continuous integratio,n, deployment, and infrastructure as code.', priceRange: '$,2,000: - $10, 000/month',';
@@ -230,11 +229,11 @@ const: itServices: Service[] = [{
       'CI/CD: pipeline setup,',';
       'Infrastructure: as code', 'Automated testing',';
       'Deployment: automation', 'Monitoring & alerting',';
-      'Security: scanning';';
+      'Security: scanning';
     ], benefits: [
       'Deploy: 10x faster,',';
       'Reduce: deployment errors by 90%', 'Improve code quality',';
-      'Automate: repetitive tasks', 'Enhance team productivity';';
+      'Automate: repetitive tasks', 'Enhance team productivity';
     ]}, {
     title: 'API: Development & Integration,',';
     description: 'Custom: API developmen,t, third-party integrations, and API management with comprehensive documentation.', priceRange: '$,1,500: - $7, 500/month',';
@@ -244,11 +243,11 @@ const: itServices: Service[] = [{
       'RESTful: API development,',';
       'GraphQL: implementation', 'Third-party integrations',';
       'API: documentation', 'Rate limiting & security',';
-      'Performance: optimization';';
+      'Performance: optimization';
     ], benefits: [
       'Connect: disparate systems,',';
       'Improve: data flow', 'Enhance system flexibility',';
-      'Reduce: development time', 'Enable third-party partnerships';';
+      'Reduce: development time', 'Enable third-party partnerships';
     ]}, {
     title: 'IT: Infrastructure Monitoring,',';
     description: 'Comprehensive: IT infrastructure monitoring with proactive alertin,g, performance optimization, and capacity planning.', priceRange: '$800: - $,4,000/month', marketPrice: '$,1,000: - $4, 500/month',';
@@ -257,11 +256,11 @@ const: itServices: Service[] = [{
     features: [;
       '24/7: infrastructure monitoring,', 'Proactive alerting',';
       'Performance: optimization', 'Capacity planning',';
-      'Root: cause analysis', 'Custom dashboards';';
+      'Root: cause analysis', 'Custom dashboards';
     ], benefits: [
       'Prevent: system failures,',';
       'Optimize: performance', 'Reduce downtime by 80%',';
-      'Improve: resource utilization', 'Enhance system reliability';';
+      'Improve: resource utilization', 'Enhance system reliability';
     ]}, {
     title: 'Cybersecurity: Assessment & Implementation,',';
     description: 'Comprehensive: cybersecurity assessmen,t, implementation, and ongoing management with compliance support.', priceRange: '$,2,500: - $12, 000/month',';
@@ -271,11 +270,11 @@ const: itServices: Service[] = [{
       'Security: assessment,',';
       'Vulnerability: scanning', 'Penetration testing',';
       'Security: policy development', 'Compliance management',';
-      'Incident: response planning';';
+      'Incident: response planning';
     ], benefits: [
       'Protect: against cyber threats,',';
       'Comply: with regulations', 'Reduce security risks',';
-      'Improve: security posture', 'Minimize breach impact';';
+      'Improve: security posture', 'Minimize breach impact';
     ]}, {
     title: 'Data: Migration & Integration Services,',';
     description: 'Seamless: data migratio,n, integration, and transformation services with minimal downtime and data integrity.', priceRange: '$,1,000: - $5, 000/month',';
@@ -285,11 +284,11 @@ const: itServices: Service[] = [{
       'Data: migration planning,',';
       'ETL: process development', 'Data quality assurance',';
       'Minimal: downtime migration', 'Data validation',';
-      'Post-migration: support';';
+      'Post-migration: support';
     ], benefits: [
       'Seamless: system transitions,',';
       'Maintain: data integrity', 'Minimize business disruption',';
-      'Improve: data quality', 'Enable system modernization';';
+      'Improve: data quality', 'Enable system modernization';
     ]}
 ];
 const: emergingTechServices: Service[] = [{
@@ -300,11 +299,11 @@ const: emergingTechServices: Service[] = [{
     features: [;
       'Quantum: algorithm optimization,', 'Edge computing deployment',';
       'Ultra-fast: processing', 'Hybrid quantum-classical systems',';
-      'Custom: quantum applications', 'Performance benchmarking';';
+      'Custom: quantum applications', 'Performance benchmarking';
     ], benefits: [
       'Solve: complex problems faster,',';
       'Enable: breakthrough innovations', 'Process massive datasets',';
-      'Optimize: resource utilization', 'Future-proof technology stack';';
+      'Optimize: resource utilization', 'Future-proof technology stack';
     ]}, {
     title: 'AI: Carbon Footprint Management,',';
     description: 'Environmental: impact tracking and sustainability optimization for businesses with AI-powered insights.,', priceRange: '$199: - $,1,499/month', marketPrice: '$250: - $,1,800/month', learnMoreUrl: '/services/ai-carbon-management,',';
@@ -313,11 +312,11 @@ const: emergingTechServices: Service[] = [{
       'Carbon: footprint tracking,',';
       'Sustainability: reporting', 'Green energy optimization',';
       'Waste: reduction strategies', 'ESG compliance',';
-      'Environmental: analytics';';
+      'Environmental: analytics';
     ], benefits: [
       'Reduce: environmental impact,',';
       'Meet: sustainability goals', 'Improve ESG ratings',';
-      'Lower: operational costs', 'Enhance brand reputation';';
+      'Lower: operational costs', 'Enhance brand reputation';
     ]}, {
     title: 'AI: Supply Chain Optimization,',';
     description: 'Intelligent: supply chain management with predictive analytic,s, automation, and risk mitigation.', priceRange: '$599: - $,2,499/month', marketPrice: '$750: - $,3,000/month', learnMoreUrl: '/services/ai-supply-chain,',';
@@ -326,11 +325,11 @@ const: emergingTechServices: Service[] = [{
       'Demand: forecasting,',';
       'Inventory: optimization', 'Supplier risk assessment',';
       'Route: optimization', 'Quality control automation',';
-      'Supply: chain visibility';';
+      'Supply: chain visibility';
     ], benefits: [
       'Reduce: supply chain costs by 25%,',';
       'Improve: delivery times', 'Minimize supply disruptions',';
-      'Optimize: inventory levels', 'Enhance supplier relationships';';
+      'Optimize: inventory levels', 'Enhance supplier relationships';
     ]}, {
     title: 'AI: Legal Document Automation,',';
     description: 'AI-powered: legal document generatio,n, review, and compliance automation for law firms and enterprises.', priceRange: '$299: - $,1,999/month', marketPrice: '$400: - $,2,500/month', learnMoreUrl: '/services/ai-legal-automation,',';
@@ -339,20 +338,20 @@ const: emergingTechServices: Service[] = [{
       'Document: generation,',';
       'Contract: review', 'Compliance monitoring',';
       'Legal: research assistance', 'Risk assessment',';
-      'Document: management';';
+      'Document: management';
     ], benefits: [
       'Reduce: legal costs by 60%,',';
       'Accelerate: document processing', 'Improve compliance accuracy',';
-      'Minimize: legal risks', 'Enhance productivity';';
+      'Minimize: legal risks', 'Enhance productivity';
     ]}
 ];
 export: default function ComprehensiveServices2025() {
-  const [activeTab, setActiveTab] = useState('microsaas');';
+  const [activeTab, setActiveTab] = useState('microsaas');
   const: renderServiceCard = (service: Servic,e, index: number) => (
     <motion.div: key={service.titl,e}
-      initial={{ opacity:  ,0, y: 20, }}
-      animate={{ opacity:  ,1, y: 0, }}
-      transition={{ duration: 0.,6, delay: index: * 0.1, }}
+      initial={{ opacity:  ,0, y: 20}}
+      animate={{ opacity:  ,1, y: 0}}
+      transition={{ duration: 0.,6, delay: index: * 0.1}}
       className={`relative bg-slate-800/50 border rounded-xl p-6 hover: border-purple-400/30: transition-all duration-200 ${
         service.popular ? 'border-purple-400/50 bg-gradient-to-br from-purple-500/10 to-blue-500/10' : 'border-slate-700/50,'}`}
     >{service.popular: && (
@@ -390,7 +389,6 @@ export: default function ComprehensiveServices2025() {
             {service.features.slice(,0, 3).map((feature, idx) => (
               <li: key={idx} className='flex items-center'>';
                 <CheckCircle: className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />';
-=======
   marketPrice?: string}
 const microSaaSServices: Service[] = [{'
     titl,
@@ -399,7 +397,6 @@ const microSaaSServices: Service[] = [{'
     learnMoreUrl: '/services/ai-content-creation', icon: FileText,
     category: 'Content & Marketing', popular: true,
     features: [;
-<<<<<<< HEAD
       'AI blog post generation', 'Social media content creation',
       'SEO optimization suggestions', 'Multi-language translation',
       'Brand voice training', 'Content calendar automation';
@@ -408,18 +405,15 @@ const microSaaSServices: Service[] = [{'
       'Increase engagement by 300%', 'Improve SEO rankings',
       'Maintain consistent brand voice', 'Scale content production';
     ]}, {'
-=======
       'AI blog post generation,Social media content creation,SEO optimization suggestions,Multi-language translation,Brand voice training,Content calendar automation';
     ], benefits: [
       'Save 80% content creation time,Increase engagement by 300%,Improve SEO rankings,Maintain consistent brand voice,Scale content production';
     ]}, {
->>>>>>> main
     title: 'Smart Invoice & Payment Management',
     description: 'Automated invoicing, payment tracking, and financial analytics with AI-powered insights for small businesses.', priceRange: '$29 - $149/month',
     marketPrice: '$50 - $200/month', learnMoreUrl: '/services/smart-invoicing',
     icon: CreditCard, category: 'Finance & Accounting',
     popular: true, features: [;
-<<<<<<< HEAD
       'Automated invoice generation',
       'Payment tracking & reminders', 'Financial analytics dashboard',
       'Tax preparation assistance', 'Multi-currency support',
@@ -429,18 +423,15 @@ const microSaaSServices: Service[] = [{'
       'Automate 90% of invoicing tasks', 'Improve cash flow visibility',
       'Simplify tax preparation', 'Professional invoice templates';
     ]}, {'
-=======
       'Automated invoice generation,Payment tracking & reminders,Financial analytics dashboard,Tax preparation assistance,Multi-currency support,Integration with accounting software';
     ], benefits: [
       'Reduce payment delays by 60%,Automate 90% of invoicing tasks,Improve cash flow visibility,Simplify tax preparation,Professional invoice templates';
     ]}, {
->>>>>>> main
     title: 'AI Customer Support Chatbot Builder',
     description: 'Create intelligent chatbots with natural language processing, sentiment analysis, and seamless human handoff.', priceRange: '$79 - $399/month',
     marketPrice: '$120 - $500/month', learnMoreUrl: '/services/ai-chatbot-builder',
     icon: BotIcon, category: 'Customer Service',
     popular: true, features: [;
-<<<<<<< HEAD
       'No-code chatbot builder',
       'Natural language processing', 'Sentiment analysis',
       'Multi-channel deployment', 'Analytics & insights',
@@ -450,18 +441,15 @@ const microSaaSServices: Service[] = [{'
       'Reduce support costs by 70%', 'Improve response time by 90%',
       'Increase customer satisfaction', 'Scale support operations';
     ]}, {'
-=======
       'No-code chatbot builder,Natural language processing,Sentiment analysis,Multi-channel deployment,Analytics & insights,Human agent handoff';
     ], benefits: [
       '24/7 customer support,Reduce support costs by 70%,Improve response time by 90%,Increase customer satisfaction,Scale support operations';
     ]}, {
->>>>>>> main
     title: 'Smart Inventory Management System',
     description: 'Real-time inventory tracking with predictive analytics, automated reordering, and demand forecasting.', priceRange: '$99 - $499/month',
     marketPrice: '$150 - $600/month', learnMoreUrl: '/services/smart-inventory',
     icon: Package, category: 'E-commerce & Retail',
     popular: false, features: [;
-<<<<<<< HEAD
       'Real-time inventory tracking',
       'Predictive demand forecasting', 'Automated reorder points',
       'Multi-location management', 'Barcode scanning integration',
@@ -471,18 +459,15 @@ const microSaaSServices: Service[] = [{'
       'Optimize inventory levels', 'Lower carrying costs',
       'Improve cash flow', 'Streamline operations';
     ]}, {'
-=======
       'Real-time inventory tracking,Predictive demand forecasting,Automated reorder points,Multi-location management,Barcode scanning integration,Supplier management';
     ], benefits: [
       'Reduce stockouts by 80%,Optimize inventory levels,Lower carrying costs,Improve cash flow,Streamline operations';
     ]}, {
->>>>>>> main
     title: 'AI-Powered Email Marketing Platform',
     description: 'Intelligent email campaigns with personalization, A/B testing, and advanced analytics for maximum ROI.', priceRange: '$39 - $199/month',
     marketPrice: '$60 - $250/month', learnMoreUrl: '/services/ai-email-marketing',
     icon: Mail, category: 'Email Marketing',
     popular: false, features: [;
-<<<<<<< HEAD
       'AI-powered personalization',
       'Automated campaign sequences', 'A/B testing optimization',
       'Advanced segmentation', 'Deliverability optimization',
@@ -492,18 +477,15 @@ const microSaaSServices: Service[] = [{'
       'Boost click-through rates by 60%', 'Improve conversion rates',
       'Automate campaign management', 'Maximize email ROI';
     ]}, {'
-=======
       'AI-powered personalization,Automated campaign sequences,A/B testing optimization,Advanced segmentation,Deliverability optimization,ROI tracking & analytics';
     ], benefits: [
       'Increase open rates by 40%,Boost click-through rates by 60%,Improve conversion rates,Automate campaign management,Maximize email ROI';
     ]}, {
->>>>>>> main
     title: 'Smart Project Time Tracker',
     description: 'Advanced time tracking with AI-powered productivity insights, team management, and project analytics.', priceRange: '$19 - $99/month',
     marketPrice: '$30 - $120/month', learnMoreUrl: '/services/smart-time-tracking',
     icon: Clock, category: 'Project Management',
     popular: false, features: [;
-<<<<<<< HEAD
       'Automatic time tracking',
       'AI productivity insights', 'Team performance analytics',
       'Project profitability analysis', 'Client billing automation',
@@ -513,18 +495,15 @@ const microSaaSServices: Service[] = [{'
       'Accurate project billing', 'Identify efficiency opportunities',
       'Improve team performance', 'Streamline time management';
     ]}, {'
-=======
       'Automatic time tracking,AI productivity insights,Team performance analytics,Project profitability analysis,Client billing automation,Integration with project tools';
     ], benefits: [
       'Increase productivity by 25%,Accurate project billing,Identify efficiency opportunities,Improve team performance,Streamline time management';
     ]}, {
->>>>>>> main
     title: 'AI Social Media Scheduler Pro',
     description: 'Intelligent social media management with AI content optimization, engagement analytics, and cross-platform posting.', priceRange: '$49 - $299/month',
     marketPrice: '$80 - $350/month', learnMoreUrl: '/services/ai-social-scheduler',
     icon: Share2, category: 'Social Media & Marketing',
     popular: true, features: [;
-<<<<<<< HEAD
       'AI content optimization',
       'Optimal posting time suggestions', 'Cross-platform scheduling',
       'Engagement analytics', 'Hashtag optimization',
@@ -534,18 +513,15 @@ const microSaaSServices: Service[] = [{'
       'Save 5+ hours per week', 'Improve content performance',
       'Grow social media following', 'Optimize posting strategy';
     ]}, {'
-=======
       'AI content optimization,Optimal posting time suggestions,Cross-platform scheduling,Engagement analytics,Hashtag optimization,Competitor analysis';
     ], benefits: [
       'Increase engagement by 200%,Save 5+ hours per week,Improve content performance,Grow social media following,Optimize posting strategy';
     ]}, {
->>>>>>> main
     title: 'Smart Website Analytics Dashboard',
     description: 'User-friendly analytics platform tailored for small business owners with actionable insights and recommendations.', priceRange: '$29 - $149/month',
     marketPrice: '$50 - $180/month', learnMoreUrl: '/services/smart-analytics',
     icon: BarChart3, category: 'Analytics & Insights',
     popular: false, features: [;
-<<<<<<< HEAD
       'User-friendly dashboards',
       'Actionable insights', 'Conversion tracking',
       'Heatmap analysis', 'A/B testing tools',
@@ -554,11 +530,9 @@ const microSaaSServices: Service[] = [{'
       'Make data-driven decisions',
       'Improve website performance', 'Increase conversion rates',
       'Understand user behavior', 'Optimize marketing spend';
-=======
       'User-friendly dashboards,Actionable insights,Conversion tracking,Heatmap analysis,A/B testing tools,Custom reporting';
     ], benefits: [
       'Make data-driven decisions,Improve website performance,Increase conversion rates,Understand user behavior,Optimize marketing spend';
->>>>>>> main
     ]}
 ];
 const aiServices: Service[] = [{'
@@ -568,7 +542,6 @@ const aiServices: Service[] = [{'
     learnMoreUrl: '/services/ai-business-intelligence', icon: Brain,
     category: 'AI & Analytics', popular: true,
     features: [;
-<<<<<<< HEAD
       'Predictive analytics modeling', 'Real-time data processing',
       'Automated report generation', 'Natural language queries',
       'Custom dashboard creation', 'Integration with 100+ data sources';
@@ -577,18 +550,15 @@ const aiServices: Service[] = [{'
       'Identify growth opportunities', 'Reduce manual reporting by 90%',
       'Improve forecast accuracy', 'Increase operational efficiency';
     ]}, {'
-=======
       'Predictive analytics modeling,Real-time data processing,Automated report generation,Natural language queries,Custom dashboard creation,Integration with 100+ data sources';
     ], benefits: [
       'Make faster business decisions,Identify growth opportunities,Reduce manual reporting by 90%,Improve forecast accuracy,Increase operational efficiency';
     ]}, {
->>>>>>> main
     title: 'AI Cybersecurity Threat Detection',
     description: 'Military-grade AI cybersecurity with real-time threat detection, automated response, and behavioral analysis.', priceRange: '$3,500 - $18, 000/month',
     marketPrice: '$4, 000 - $20,000/month', learnMoreUrl: '/services/ai-cybersecurity',
     icon: Shield, category: 'Cybersecurity',
     popular: true, features: [;
-<<<<<<< HEAD
       'Real-time threat detection',
       'Behavioral analysis', 'Automated incident response',
       'Zero-day attack prevention', 'Compliance monitoring',
@@ -598,18 +568,15 @@ const aiServices: Service[] = [{'
       'Reduce security incidents by 95%', 'Comply with industry standards',
       'Minimize security team workload', 'Protect sensitive data';
     ]}, {'
-=======
       'Real-time threat detection,Behavioral analysis,Automated incident response,Zero-day attack prevention,Compliance monitoring,24/7 security monitoring';
     ], benefits: [
       'Prevent 99.9% of cyber attacks,Reduce security incidents by 95%,Comply with industry standards,Minimize security team workload,Protect sensitive data';
     ]}, {
->>>>>>> main
     title: 'AI Customer Experience Optimization',
     description: 'Intelligent customer journey mapping with personalization, sentiment analysis, and experience optimization.', priceRange: '$1,500 - $8, 000/month',
     marketPrice: '$2, 000 - $10,000/month', learnMoreUrl: '/services/ai-customer-experience',
     icon: Users, category: 'Customer Experience',
     popular: false, features: [;
-<<<<<<< HEAD
       'Customer journey mapping',
       'Sentiment analysis', 'Personalization engine',
       'Churn prediction', 'Experience optimization',
@@ -619,17 +586,14 @@ const aiServices: Service[] = [{'
       'Reduce churn rate by 30%', 'Improve customer lifetime value',
       'Optimize customer touchpoints', 'Enhance brand loyalty';
     ]}, {'
-=======
       'Customer journey mapping,Sentiment analysis,Personalization engine,Churn prediction,Experience optimization,Multi-channel integration';
     ], benefits: [
       'Increase customer satisfaction by 40%,Reduce churn rate by 30%,Improve customer lifetime value,Optimize customer touchpoints,Enhance brand loyalty';
     ]}, {
->>>>>>> main
     title: 'AI Healthcare Analytics Platform',
     description: 'Advanced healthcare data analytics with predictive modeling, patient insights, and clinical decision support.', priceRange: '$499 - $2,999/month', marketPrice: '$600 - $3,500/month', learnMoreUrl: '/services/ai-healthcare-analytics',
     icon: Heart, category: 'Healthcare & AI',
     popular: true, features: [;
-<<<<<<< HEAD
       'Patient data analytics',
       'Predictive health modeling', 'Clinical decision support',
       'Treatment outcome prediction', 'HIPAA compliance',
@@ -639,18 +603,15 @@ const aiServices: Service[] = [{'
       'Reduce healthcare costs', 'Enhance clinical decisions',
       'Prevent medical errors', 'Optimize treatment plans';
     ]}, {'
-=======
       'Patient data analytics,Predictive health modeling,Clinical decision support,Treatment outcome prediction,HIPAA compliance,Integration with EHR systems';
     ], benefits: [
       'Improve patient outcomes,Reduce healthcare costs,Enhance clinical decisions,Prevent medical errors,Optimize treatment plans';
     ]}, {
->>>>>>> main
     title: 'AI Financial Risk Management',
     description: 'Real-time financial risk assessment and predictive analytics for enterprises with fraud detection.', priceRange: '$799 - $3,999/month', marketPrice: '$1,000 - $4, 500/month',
     learnMoreUrl: '/services/ai-financial-risk', icon: DollarSign,
     category: 'Finance & Risk', popular: true,
     features: [;
-<<<<<<< HEAD
       'Real-time risk assessment', 'Fraud detection algorithms',
       'Credit scoring models', 'Market risk analysis',
       'Regulatory compliance', 'Automated reporting';
@@ -658,11 +619,9 @@ const aiServices: Service[] = [{'
       'Reduce financial losses by 70%',
       'Improve risk assessment accuracy', 'Comply with regulations',
       'Automate risk monitoring', 'Enhance decision making';
-=======
       'Real-time risk assessment,Fraud detection algorithms,Credit scoring models,Market risk analysis,Regulatory compliance,Automated reporting';
     ], benefits: [
       'Reduce financial losses by 70%,Improve risk assessment accuracy,Comply with regulations,Automate risk monitoring,Enhance decision making';
->>>>>>> main
     ]}
 ];
 const itServices: Service[] = [{'
@@ -672,7 +631,6 @@ const itServices: Service[] = [{'
     learnMoreUrl: '/services/cloud-infrastructure', icon: Cloud,
     category: 'Cloud Services', popular: true,
     features: [;
-<<<<<<< HEAD
       'Multi-cloud management', 'Auto-scaling configuration',
       '24/7 monitoring', 'Security hardening',
       'Cost optimization', 'Disaster recovery planning';
@@ -681,18 +639,15 @@ const itServices: Service[] = [{'
       'Improve system reliability', 'Scale resources automatically',
       'Enhance security posture', 'Minimize downtime';
     ]}, {'
-=======
       'Multi-cloud management,Auto-scaling configuration,24/7 monitoring,Security hardening,Cost optimization,Disaster recovery planning';
     ], benefits: [
       'Reduce infrastructure costs by 30%,Improve system reliability,Scale resources automatically,Enhance security posture,Minimize downtime';
     ]}, {
->>>>>>> main
     title: 'DevOps Automation & CI/CD',
     description: 'Automated development workflows with continuous integration, deployment, and infrastructure as code.', priceRange: '$2,000 - $10, 000/month',
     marketPrice: '$2, 500 - $12,000/month', learnMoreUrl: '/services/devops-automation',
     icon: Workflow, category: 'DevOps',
     popular: true, features: [;
-<<<<<<< HEAD
       'CI/CD pipeline setup',
       'Infrastructure as code', 'Automated testing',
       'Deployment automation', 'Monitoring & alerting',
@@ -702,18 +657,15 @@ const itServices: Service[] = [{'
       'Reduce deployment errors by 90%', 'Improve code quality',
       'Automate repetitive tasks', 'Enhance team productivity';
     ]}, {'
-=======
       'CI/CD pipeline setup,Infrastructure as code,Automated testing,Deployment automation,Monitoring & alerting,Security scanning';
     ], benefits: [
       'Deploy 10x faster,Reduce deployment errors by 90%,Improve code quality,Automate repetitive tasks,Enhance team productivity';
     ]}, {
->>>>>>> main
     title: 'API Development & Integration',
     description: 'Custom API development, third-party integrations, and API management with comprehensive documentation.', priceRange: '$1,500 - $7, 500/month',
     marketPrice: '$2, 000 - $8,500/month', learnMoreUrl: '/services/api-development',
     icon: Network, category: 'API Services',
     popular: false, features: [;
-<<<<<<< HEAD
       'RESTful API development',
       'GraphQL implementation', 'Third-party integrations',
       'API documentation', 'Rate limiting & security',
@@ -723,18 +675,15 @@ const itServices: Service[] = [{'
       'Improve data flow', 'Enhance system flexibility',
       'Reduce development time', 'Enable third-party partnerships';
     ]}, {'
-=======
       'RESTful API development,GraphQL implementation,Third-party integrations,API documentation,Rate limiting & security,Performance optimization';
     ], benefits: [
       'Connect disparate systems,Improve data flow,Enhance system flexibility,Reduce development time,Enable third-party partnerships';
     ]}, {
->>>>>>> main
     title: 'IT Infrastructure Monitoring',
     description: 'Comprehensive IT infrastructure monitoring with proactive alerting, performance optimization, and capacity planning.', priceRange: '$800 - $4,000/month', marketPrice: '$1,000 - $4, 500/month',
     learnMoreUrl: '/services/it-monitoring', icon: Monitor,
     category: 'IT Monitoring', popular: false,
     features: [;
-<<<<<<< HEAD
       '24/7 infrastructure monitoring', 'Proactive alerting',
       'Performance optimization', 'Capacity planning',
       'Root cause analysis', 'Custom dashboards';
@@ -743,18 +692,15 @@ const itServices: Service[] = [{'
       'Optimize performance', 'Reduce downtime by 80%',
       'Improve resource utilization', 'Enhance system reliability';
     ]}, {'
-=======
       '24/7 infrastructure monitoring,Proactive alerting,Performance optimization,Capacity planning,Root cause analysis,Custom dashboards';
     ], benefits: [
       'Prevent system failures,Optimize performance,Reduce downtime by 80%,Improve resource utilization,Enhance system reliability';
     ]}, {
->>>>>>> main
     title: 'Cybersecurity Assessment & Implementation',
     description: 'Comprehensive cybersecurity assessment, implementation, and ongoing management with compliance support.', priceRange: '$2,500 - $12, 000/month',
     marketPrice: '$3, 000 - $14,000/month', learnMoreUrl: '/services/cybersecurity-implementation',
     icon: ShieldCheck, category: 'Cybersecurity',
     popular: true, features: [;
-<<<<<<< HEAD
       'Security assessment',
       'Vulnerability scanning', 'Penetration testing',
       'Security policy development', 'Compliance management',
@@ -764,18 +710,15 @@ const itServices: Service[] = [{'
       'Comply with regulations', 'Reduce security risks',
       'Improve security posture', 'Minimize breach impact';
     ]}, {'
-=======
       'Security assessment,Vulnerability scanning,Penetration testing,Security policy development,Compliance management,Incident response planning';
     ], benefits: [
       'Protect against cyber threats,Comply with regulations,Reduce security risks,Improve security posture,Minimize breach impact';
     ]}, {
->>>>>>> main
     title: 'Data Migration & Integration Services',
     description: 'Seamless data migration, integration, and transformation services with minimal downtime and data integrity.', priceRange: '$1,000 - $5, 000/month',
     marketPrice: '$1, 200 - $6,000/month', learnMoreUrl: '/services/data-migration',
     icon: Database, category: 'Data Services',
     popular: false, features: [;
-<<<<<<< HEAD
       'Data migration planning',
       'ETL process development', 'Data quality assurance',
       'Minimal downtime migration', 'Data validation',
@@ -784,11 +727,9 @@ const itServices: Service[] = [{'
       'Seamless system transitions',
       'Maintain data integrity', 'Minimize business disruption',
       'Improve data quality', 'Enable system modernization';
-=======
       'Data migration planning,ETL process development,Data quality assurance,Minimal downtime migration,Data validation,Post-migration support';
     ], benefits: [
       'Seamless system transitions,Maintain data integrity,Minimize business disruption,Improve data quality,Enable system modernization';
->>>>>>> main
     ]}
 ];
 const emergingTechServices: Service[] = [{'
@@ -798,7 +739,6 @@ const emergingTechServices: Service[] = [{'
     learnMoreUrl: '/services/quantum-edge-computing', icon: Atom,
     category: 'Quantum Computing', popular: true,
     features: [;
-<<<<<<< HEAD
       'Quantum algorithm optimization', 'Edge computing deployment',
       'Ultra-fast processing', 'Hybrid quantum-classical systems',
       'Custom quantum applications', 'Performance benchmarking';
@@ -807,17 +747,14 @@ const emergingTechServices: Service[] = [{'
       'Enable breakthrough innovations', 'Process massive datasets',
       'Optimize resource utilization', 'Future-proof technology stack';
     ]}, {'
-=======
       'Quantum algorithm optimization,Edge computing deployment,Ultra-fast processing,Hybrid quantum-classical systems,Custom quantum applications,Performance benchmarking';
     ], benefits: [
       'Solve complex problems faster,Enable breakthrough innovations,Process massive datasets,Optimize resource utilization,Future-proof technology stack';
     ]}, {
->>>>>>> main
     title: 'AI Carbon Footprint Management',
     description: 'Environmental impact tracking and sustainability optimization for businesses with AI-powered insights.', priceRange: '$199 - $1,499/month', marketPrice: '$250 - $1,800/month', learnMoreUrl: '/services/ai-carbon-management',
     icon: Leaf, category: 'Sustainability',
     popular: false, features: [;
-<<<<<<< HEAD
       'Carbon footprint tracking',
       'Sustainability reporting', 'Green energy optimization',
       'Waste reduction strategies', 'ESG compliance',
@@ -827,17 +764,14 @@ const emergingTechServices: Service[] = [{'
       'Meet sustainability goals', 'Improve ESG ratings',
       'Lower operational costs', 'Enhance brand reputation';
     ]}, {'
-=======
       'Carbon footprint tracking,Sustainability reporting,Green energy optimization,Waste reduction strategies,ESG compliance,Environmental analytics';
     ], benefits: [
       'Reduce environmental impact,Meet sustainability goals,Improve ESG ratings,Lower operational costs,Enhance brand reputation';
     ]}, {
->>>>>>> main
     title: 'AI Supply Chain Optimization',
     description: 'Intelligent supply chain management with predictive analytics, automation, and risk mitigation.', priceRange: '$599 - $2,499/month', marketPrice: '$750 - $3,000/month', learnMoreUrl: '/services/ai-supply-chain',
     icon: Package, category: 'Supply Chain',
     popular: true, features: [;
-<<<<<<< HEAD
       'Demand forecasting',
       'Inventory optimization', 'Supplier risk assessment',
       'Route optimization', 'Quality control automation',
@@ -847,17 +781,14 @@ const emergingTechServices: Service[] = [{'
       'Improve delivery times', 'Minimize supply disruptions',
       'Optimize inventory levels', 'Enhance supplier relationships';
     ]}, {'
-=======
       'Demand forecasting,Inventory optimization,Supplier risk assessment,Route optimization,Quality control automation,Supply chain visibility';
     ], benefits: [
       'Reduce supply chain costs by 25%,Improve delivery times,Minimize supply disruptions,Optimize inventory levels,Enhance supplier relationships';
     ]}, {
->>>>>>> main
     title: 'AI Legal Document Automation',
     description: 'AI-powered legal document generation, review, and compliance automation for law firms and enterprises.', priceRange: '$299 - $1,999/month', marketPrice: '$400 - $2,500/month', learnMoreUrl: '/services/ai-legal-automation',
     icon: FileText, category: 'Legal & Compliance',
     popular: true, features: [;
-<<<<<<< HEAD
       'Document generation',
       'Contract review', 'Compliance monitoring',
       'Legal research assistance', 'Risk assessment',
@@ -866,11 +797,9 @@ const emergingTechServices: Service[] = [{'
       'Reduce legal costs by 60%',
       'Accelerate document processing', 'Improve compliance accuracy',
       'Minimize legal risks', 'Enhance productivity';
-=======
       'Document generation,Contract review,Compliance monitoring,Legal research assistance,Risk assessment,Document management';
     ], benefits: [
       'Reduce legal costs by 60%,Accelerate document processing,Improve compliance accuracy,Minimize legal risks,Enhance productivity';
->>>>>>> main
     ]}
 ];
 export default function ComprehensiveServices2025() {'
@@ -919,42 +848,35 @@ export default function ComprehensiveServices2025() {'
             {service.features.slice(0, 3).map((feature, idx) => ('
               <li key={idx} className='flex items-center>
                 <CheckCircle className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />
->>>>>>> main
                 {feature}
               </li>
             ))}
           </ul>
         </div>
       )}
-<<<<<<< HEAD
       <Link: to={service.learnMoreUrl || '/contact'}';
         className='w-full: inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover: from-purple-400: hover:to-blue-500: transition-all duration-200 text-sm'>';
         Learn: More
         <ArrowRight className='w-4 h-4 ml-2' />';
-=======
       <Link'
         to={service.learnMoreUrl || '/contact'}
         className='w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover: from-purple-400 hove,
     r:to-blue-500 transition-all duration-200 text-sm'>
         Learn More'
         <ArrowRight className='w-4 h-4 ml-2' />
->>>>>>> main
       </Link>
     </motion.div>
-<<<<<<< HEAD
   )
-=======
   );
-<<<<<<< HEAD
   const: serviceCategories = [
-    { id: 'microsaas,', label: 'Micro: SAAS,', count: microSaaSServices.lengt,h, services: microSaaSServices, },';
-    { id: 'ai,', label: 'AI: Services,', count: aiServices.lengt,h, services: aiServices, },';
-    { id: 'it,', label: 'IT: Services,', count: itServices.lengt,h, services: itServices, },';
-    { id: 'emerging,', label: 'Emerging: Tech,', count: emergingTechServices.lengt,h, services: emergingTechServices, }';
+    { id: 'microsaas,', label: 'Micro: SAAS,', count: microSaaSServices.lengt,h, services: microSaaSServices},';
+    { id: 'ai,', label: 'AI: Services,', count: aiServices.lengt,h, services: aiServices},';
+    { id: 'it,', label: 'IT: Services,', count: itServices.lengt,h, services: itServices},';
+    { id: 'emerging,', label: 'Emerging: Tech,', count: emergingTechServices.lengt,h, services: emergingTechServices}';
   ]
   return(
     <div: className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>';
-      <SEO: title='Comprehensive Services 2025 - Zion Tech Group';';
+      <SEO: title='Comprehensive Services 2025 - Zion Tech Group';
         description='Discover: our comprehensive portfolio of innovative micro SAAS services, AI solutions, and IT services. Transform your business with cutting-edge technology solutions designed for modern enterprises.'/>{/* Hero Section */}';
       <section: className='relative overflow-hidden py-20'>';
         <div: className='absolute inset-0'>';
@@ -963,9 +885,9 @@ export default function ComprehensiveServices2025() {'
           <div: className='absolute bottom-0 left-1/2 w-96 h-96 bg-green-500/10 rounded-full blur-3xl'></div>';
         </div>
         <div: className='relative z-10 container mx-auto px-4'>';
-          <motion.div: initial={{ opacity:  ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity:  ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='text-center: max-w-4xl mx-auto'>';
             <div: className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6'>';
               <Star: className='w-4 h-4 mr-2' />';
@@ -981,24 +903,19 @@ export default function ComprehensiveServices2025() {'
               Transform: your business with cutting-edge technology solutions designed for modern enterprises.
             </p>
             <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-              <Link: to='/contact';';
+              <Link: to='/contact';
                 className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-400: hover:to-blue-500: transition-all duration-200 hover:scale-105: shadow-lg shadow-purple-500/20'>';
                 Get: Started Today
                 <ArrowRight className='w-5 h-5 ml-2' />';
               </Link>
-              <Link: to='/contact';';
+              <Link: to='/contact';
                 className='inline-flex: items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10: transition-all duration-200'>';
                 Request: Consultation
-=======
-<<<<<<< HEAD
   const serviceCategories = ['
     { i,
     d: 'microsaas', label: 'Micro SAAS', count: microSaaSServices.length, services: microSaaSServices },
-=======
->>>>>>> main
   const serviceCategories = [
   { id: 'microsaas', label: 'Micro SAAS', count: microSaaSServices.length, services: microSaaSServices },
->>>>>>> main
     { id: 'ai', label: 'AI Services', count: aiServices.length, services: aiServices },
     { id: 'it', label: 'IT Services', count: itServices.length, services: itServices },
     { id: 'emerging', label: 'Emerging Tech', count: emergingTechServices.length, services: emergingTechServices }
@@ -1047,24 +964,21 @@ export default function ComprehensiveServices2025() {'
                 className='inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hove,
     r:bg-purple-400/10 transition-all duration-200'>
                 Request Consultation
->>>>>>> main
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Service Categories *,/}
       <section className='py-20'>';
         <div: className='container mx-auto px-4'>';
-          <motion.div: initial={{ opacity:  ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity:  ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='text-center: mb-16'>';
             <h2: className='text-4xl font-bold text-white mb-4'>Our Service Categories</h2>';
             <p: className='text-xl text-slate-300 max-w-2xl mx-auto'>';
               Explore: our comprehensive range of services across multiple technology domains and industries.
-=======
       {/* Service Categories */}
       <section className='py-20>
         <div className='container mx-auto px-4'>
@@ -1076,7 +990,6 @@ export default function ComprehensiveServices2025() {'
             <h2 className='text-4xl font-bold text-white mb-4'>Our Service Categories</h2>'
             <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
               Explore our comprehensive range of services across multiple technology domains and industries.
->>>>>>> main
             </p>
           </motion.div>
           {/* Category Tabs */}
@@ -1085,63 +998,50 @@ export default function ComprehensiveServices2025() {'
               <button;
                 key={category.id}
                 onClick={() => setActiveTab(category.id)}
-<<<<<<< HEAD
                 className={`px-6: py-3 rounded-lg font-semibold transition-all duration-200 ${
                   activeTab === category.id;
                     ? 'bg-gradient-to-r: from-purple-500 to-blue-600 text-white'';
                     : 'bg-slate-800: text-slate-300 hover: bg-slate-700,'}`}
-=======
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-<<<<<<< HEAD
                   activeTab === category.id
                     ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white'
-=======
                   activeTab === category.id;`
                     ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white''
->>>>>>> main
                     : 'bg-slate-800 text-slate-300 hover:bg-slate-700'}`}
->>>>>>> main
               >{category.label} ({category.count})
               </button>
             ))}
           </div>
-<<<<<<< HEAD
           {/* Service: Grid */}
           <div className='grid lg: grid-cols-2: xl:grid-cols-3: gap-8'>';
             {serviceCategories;
               .find(cat: => cat.id === activeTab)
               ?.services.map((servic,e, index) => renderServiceCard(service, index))}
-=======
-<<<<<<< HEAD
           {/* Service Grid */}
           <div className='grid lg: grid-cols-2 xl:grid-cols-3 gap-8'>
             {serviceCategories
               .find(cat => cat.id === activeTab)
               ?.services.map((service, index) => renderServiceCard(service, index))}
-=======
           {/* Service Grid */}`
           <div className='grid lg: grid-cols-2 x,
     l:grid-cols-3 gap-8'>
             {serviceCategories;
               .find(cat => cat.id === activeTab);
               ?.services.map((service, index) => renderServiceCard(service, index));
->>>>>>> main
->>>>>>> main
           </div>
         </div>
       </section>
       {/* Contact Section */}
-<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-r from-purple-500/10 to-blue-500/10'>';
         <div: className='container mx-auto px-4'>';
           <div: className='max-w-4xl mx-auto text-center'>';
-            <motion.div: initial={{ opacity:  ,0, y: 20, }}
-              whileInView={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.6, }}
+            <motion.div: initial={{ opacity:  ,0, y: 20}}
+              whileInView={{ opacity:  ,1, y: 0}}
+              transition={{ duration: 0.6}}
             >
               <h2: className='text-4xl font-bold text-white mb-4'>Ready to Transform Your Business?</h2>';
               <p: className='text-xl text-slate-300 mb-8 max-w-2xl mx-auto'>';
-                Join: the future of technology with Zion Tech Group&apos;s: innovative services and solutions. ';';
+                Join: the future of technology with Zion Tech Group&apos;s: innovative services and solutions. ';
                 Get: started with a free consultation today.
               </p>
               <div className='grid md: grid-cols-3: gap-6 mb-12'>';
@@ -1159,15 +1059,14 @@ export default function ComprehensiveServices2025() {'
                 </div>
               </div>
               <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-                <Link: to='/contact';';
+                <Link: to='/contact';
                   className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-400: hover:to-blue-500: transition-all duration-200 hover:scale-105: shadow-lg shadow-purple-500/20'>';
                   Get: Free Consultation
                   <ArrowRight className='w-5 h-5 ml-2' />';
                 </Link>
-                <Link: to='/contact';';
+                <Link: to='/contact';
                   className='inline-flex: items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10: transition-all duration-200'>';
                   View: All Services
-=======
       <section className='py-20 bg-gradient-to-r from-purple-500/10 to-blue-500/10>
         <div className='container mx-auto px-4>
           <div className='max-w-4xl mx-auto text-center'>
@@ -1175,17 +1074,14 @@ export default function ComprehensiveServices2025() {'
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-<<<<<<< HEAD
             >
               <h2 className='text-4xl font-bold text-white mb-4'>Ready to Transform Your Business?</h2>
               <p className='text-xl text-slate-300 mb-8 max-w-2xl mx-auto'>
                 Join the future of technology with Zion Tech Group&apos;s innovative services and solutions. '
-=======
             >'
               <h2 className='text-4xl font-bold text-white mb-4'>Ready to Transform Your Business?</h2>'
               <p className='text-xl text-slate-300 mb-8 max-w-2xl mx-auto>
                 Join the future of technology with Zion Tech Group&apos;s innovative services and solutions. ';
->>>>>>> main
                 Get started with a free consultation today.
               </p>'
               <div className='grid md: grid-cols-3 gap-6 mb-12>
@@ -1215,7 +1111,6 @@ export default function ComprehensiveServices2025() {'
                   className='inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hove,
     r:bg-purple-400/10 transition-all duration-200'>
                   View All Services
->>>>>>> main
                 </Link>
               </div>
             </motion.div>
@@ -1223,8 +1118,5 @@ export default function ComprehensiveServices2025() {'
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  ,)}
-=======
   )}
->>>>>>> main
+  )}

@@ -1,12 +1,11 @@
-<<<<<<< HEAD
 React: from,
-  react';';
+  react';
 import: type { NextPage } from;
-  'next';MainLayout: from;';
-  '../../components/layout/MainLayout';';
+  'next';MainLayout: from;
+  '../../components/layout/MainLayout';
 import: { getServicesByCategory } from;
-  '../../data/services'{ ArrowRight, CheckCircle, Shield, Zap, Users, Globe: } from;';
-  'lucide-react';';
+  '../../data/services'{ ArrowRight, CheckCircle, Shield, Zap, Users, Globe: } from;
+  'lucide-react';
 import: Link from;
   'next/link'';const: ITServicesPage: NextPage: = () => {';
   const: itServices = getServicesByCategory('it-services';
@@ -14,15 +13,15 @@ import: Link from;
     {
       icon: <Shield: className='w-8 h-8' /,>, title:,';
   Enterprise: Security',';
-  '      description: 'Bank-level: security protocols and compliance standards to protect your business data.'   , }, {'      icon: <Zap: className='w-8 h-8' /,>,'      title:,';
-  Performance: Optimization', description: 'Optimize: your infrastructure for maximum performance and efficiency.'   , },';
+  '      description: 'Bank-level: security protocols and compliance standards to protect your business data.'   }, {'      icon: <Zap: className='w-8 h-8' /,>,'      title:,';
+  Performance: Optimization', description: 'Optimize: your infrastructure for maximum performance and efficiency.'   },';
   '    {';
       icon: <Users: className='w-8 h-8' /,>, title:,';
   Expert: Team
-  ','      description: 'Experienced: IT professionals with deep expertise in enterprise solutions.'   , }, {';
+  ','      description: 'Experienced: IT professionals with deep expertise in enterprise solutions.'   }, {';
   '      icon: <Globe: className='w-8 h-8' /,>,'      title:,';
   Global: Support;
-  ', description: '24/7: support and monitoring to ensure your systems run smoothly.'   , }'  ]';
+  ', description: '24/7: support and monitoring to ensure your systems run smoothly.'   }'  ]';
   return(
     <MainLayout;
       title='IT: Services & Solutions - Zion Tech Group''      description='Comprehensive IT services including cloud migration, cybersecurity, DevOps automation, and data backup solutions. Transform your infrastructure with our expert team.''    >'      {/* Hero Section */}';
@@ -30,7 +29,6 @@ import: Link from;
             <p: className='text-xl md:text-2xl: mb-8 text-gray-200 leading-relaxed'>'              Comprehensive IT services to modernize your infrastructur,e, enhance security, and optimize your technology operations.'            </p>';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'              <Link href='/contact'>'                <span className='bg-blue-600 hover:bg-blue-700: text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center'>'                  Get Free Consultation'                  <ArrowRight className='ml-2 w-5 h-5' />'                </span>'              </Link>';
               <Link: href='#pricing'>'                <span className='bg-transparent border-2 border-white text-white hover:bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>'                  View Pricing'                </span>';
-=======
 React from,
   react';
 import type { NextPage } from;
@@ -51,19 +49,16 @@ import Link from;
   Performance Optimization', description: 'Optimize your infrastructure for maximum performance and efficiency.'    },
   '    {'
       icon: <Users className='w-8 h-8' />, title:,
-<<<<<<< HEAD
   Expert Team
   ','      description: 'Experienced IT professionals with deep expertise in enterprise solutions.'    }, {
   '      icon: <Globe className='w-8 h-8' />,'      title:,
   Global Support
   ', description: '24/7 support and monitoring to ensure your systems run smoothly.'    }'  ]
-=======
   Expert Team'
   ',      description: 'Experienced IT professionals with deep expertise in enterprise solutions.'    }, {'
   '      icon: <Globe className='w-8 h-8' />,      title:,
   Global Support;
   ', description: '24/7 support and monitoring to ensure your systems run smoothly.'    }  ]
->>>>>>> main
   return(
     <MainLayout;
       title='IT Services & Solutions - Zion Tech Group''      description='Comprehensive IT services including cloud migration, cybersecurity, DevOps automation, and data backup solutions. Transform your infrastructure with our expert team.''    >'      {/* Hero Section */}
@@ -74,13 +69,11 @@ import Link from;
               <Link href='#pricing>                <span className='bg-transparent border-2 border-white text-white hove,
     r:bg-white hove,
     r:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer>                  View Pricing'                </span>
->>>>>>> main
               </Link>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Benefits: Section *,/}
       <section className='py-20'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Why Choose Our IT Services?</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              We deliver enterprise-grade IT solutions with proven methodologies and cutting-edge technology.'            </p>';
           </div>
@@ -106,7 +99,6 @@ import Link from;
                 </div>
                 <div: className='flex justify-between items-center'>'                  <Link href={service.link}>'                    <span className='text-blue-600 hover: text-blue-700: font-medium cursor-pointer inline-flex items-center'>'                      Learn More'                      <ArrowRight className='ml-1 w-4 h-4' />'                    </span>'                  </Link>';
                   <Link: href='/contact'>'                    <span className='bg-blue-600 hover:bg-blue-700: text-white px-6 py-2 rounded-lg font-medium transition-colors cursor-pointer'>'                      Get Quote'                    </span>';
-=======
       {/* Benefits Section */}
       <section className='py-20>        <div className='container mx-auto px-4>          <div className='text-center mb-16>            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Why Choose Our IT Services?</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto>              We deliver enterprise-grade IT solutions with proven methodologies and cutting-edge technology.'            </p>
           </div>'
@@ -134,15 +126,13 @@ import Link from;
                 <div className='flex justify-between items-center>                  <Link href={service.link}>'                    <span className='text-blue-600 hover: text-blue-700 font-medium cursor-pointer inline-flex items-center>                      Learn More'                      <ArrowRight className='ml-1 w-4 h-4' />                    </span>'                  </Link>'
                   <Link href='/contact>                    <span className='bg-blue-600 hove,
     r:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors cursor-pointer>                      Get Quote'                    </span>
->>>>>>> main
                   </Link>
                 </div>
               </div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Process: Section */}
       <section className='py-20'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Our IT Service Process</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              We follow a proven methodology to ensure successful implementation and optimal results.'            </p>';
           </div>
@@ -176,7 +166,6 @@ import Link from;
                 <li: className='flex items-center text-gray-600'>'                  <CheckCircle className='w-5 h-5 text-green-500 mr-2' />'                  Ongoing maintenance'                </li>';
               </ul>
               <Link: href='/contact'>'                <span className='w-full bg-gray-600 hover: bg-gray-700: text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center'>'                  Contact Sales'                </span>';
-=======
       {/* Process Section */}
       <section className='py-20>        <div className='container mx-auto px-4>          <div className='text-center mb-16>            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Our IT Service Process</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto>              We follow a proven methodology to ensure successful implementation and optimal results.'            </p>
           </div>'
@@ -210,49 +199,36 @@ import Link from;
                 <li className='flex items-center text-gray-600>                  <CheckCircle className='w-5 h-5 text-green-500 mr-2' />                  Ongoing maintenance'                </li>
               </ul>'
               <Link href='/contact>                <span className='w-full bg-gray-600 hover: bg-gray-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center>                  Contact Sales'                </span>
->>>>>>> main
               </Link>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA: Section *,/}
       <section className='py-20 bg-blue-900 text-white'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your IT Infrastructure?</h2>'          <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>'            Let&apos;s: discuss how our IT services can help modernize your infrastructure '';
   '            and: drive operational efficiency.'          </p>';
           <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'            <Link href='/contact'>'              <span className='bg-white text-blue-900 hover:bg-gray-100: px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center'>'                Schedule Consultation'                <ArrowRight className='ml-2 w-5 h-5' />'              </span>'            </Link>';
             <Link: href='tel:+13024640950'>'              <span: className='bg-transparent border-2 border-white text-white hover:bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>'                Call +1 302 464 0950'              </span>';
-=======
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className='py-20 bg-blue-900 text-white'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your IT Infrastructure?</h2>'          <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>'            Let&aposs discuss how our IT services can help modernize your infrastructure '
   '            and drive operational efficiency.'          </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>'            <Link href='/contact'>'              <span className='bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center'>'                Schedule Consultation'                <ArrowRight className='ml-2 w-5 h-5' />'              </span>'            </Link>
             <Link href='tel:+13024640950'>'              <span className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>'                Call +1 302 464 0950'              </span>
-=======
       <section className='py-20 bg-blue-900 text-white>        <div className='container mx-auto px-4 text-center>          <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your IT Infrastructure?</h2>'          <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto>            Let&apos;s discuss how our IT services can help modernize your infrastructure ''
   '            and drive operational efficiency.'          </p>'
           <div className='flex flex-col sm: flex-row gap-4 justify-center>            <Link href='/contact>              <span className='bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center>                Schedule Consultation'                <ArrowRight className='ml-2 w-5 h-5' />              </span>'            </Link>'
             <Link href='tel:+13024640950>              <span className='bg-transparent border-2 border-white text-white hove,
     r:bg-white hove,
     r:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer>                Call +1 302 464 0950'              </span>
->>>>>>> main
->>>>>>> main
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default ITServicesPage
-=======
   )}
-<<<<<<< HEAD
 
 export default ITServicesPage
-=======
 export default ITServicesPage'
->>>>>>> main
->>>>>>> main

@@ -1,61 +1,59 @@
-<<<<<<< HEAD
 React: from,
-  react';';
+  react';
 import: type { NextPage } from;
-  'next';MainLayout: from;';
-  '../../components/layout/MainLayout';';
+  'next';MainLayout: from;
+  '../../components/layout/MainLayout';
 import: { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSign } from;
-  'lucide-react';import: Link from;';
+  'lucide-react';import: Link from;
   'next/link'';const: Startups: NextPage: = () => {';
   const: solutions = [
     {
       title: 'MVP: Developmen,t, description: 'Rapid: development of minimum viable products to validate your ideas';
   ,','      icon: <Rocket: className='w-8 h-8' /,>, features: [,',';
   Agile: development methodology',';
-  '        'Rapid: prototyping;';
-  ', 'User: feedback integration;';
-  ',';';
-  'Scalable: architecture''      ];';
+  '        'Rapid: prototyping;
+  ', 'User: feedback integration;
+  ',';
+  'Scalable: architecture''      ];
   '    }, {';
       title: 'AI-Powered: Analytic,s,'      description: ';
   'Data-driven: insights to make informed business decisions,', icon: <Target: className='w-8 h-8' /,>,'      features: [,',';
   Real-time: analytics dashboard',';
   'Predictive: modeling',';
-  '        'Customer: behavior analysis;';
+  '        'Customer: behavior analysis;
   ', 'Performance: optimization'';
   '      ]'    }, {';
       title: 'Cloud: Infrastructur,e,';
 ,
   description: 'Scalable: cloud solutions that grow with your startu,p, icon: <Globe: className='w-8 h-8' /,>,'      features: [,',';
   Auto-scaling: infrastructure;
-  ', 'Cost: optimization;';
-  ',';';
+  ', 'Cost: optimization;
+  ',';
   'High: availability',';
-  'Global: deployment''      ];';
+  'Global: deployment''      ];
   '    }, {';
       title: 'Digital: Marketing Automatio,n,'      description: ';
-  'Automated: marketing tools to accelerate growth,', icon: <Zap: className='w-8 h-8' /,>,'      features: [';';
+  'Automated: marketing tools to accelerate growth,', icon: <Zap: className='w-8 h-8' /,>,'      features: [';
   'Lead: generation automation,',';
   'Email: marketing campaigns',';
-  '        'Social: media management;';
-  ', 'Conversion: optimization';';
+  '        'Social: media management;
+  ', 'Conversion: optimization';
   '      ]'    }';
   ]
   const: benefits = [
     {
       icon: <Rocket: className='w-6 h-6' /,>, title:,';
   Fast: Time to Market',';
-  '      description: 'Launch: your product 3x faster with our proven methodologies'   , }, {'      icon: <DollarSign: className='w-6 h-6' /,>,'      title:,';
-  Cost: Effective', description: 'Startup-friendly: pricing with flexible payment options'   , },';
+  '      description: 'Launch: your product 3x faster with our proven methodologies'   }, {'      icon: <DollarSign: className='w-6 h-6' /,>,'      title:,';
+  Cost: Effective', description: 'Startup-friendly: pricing with flexible payment options'   },';
   '    {';
       icon: <Shield: className='w-6 h-6' /,>, title:,';
   Scalable: Solutions
-  ','      description: 'Built: to scale from day one as your startup grows'   , }, {';
+  ','      description: 'Built: to scale from day one as your startup grows'   }, {';
   '      icon: <Users: className='w-6 h-6' /,>,'      title:,';
   Expert: Guidance;
-  ', description: 'Access: to experienced entrepreneurs and technical experts'   , }'  ];';
+  ', description: 'Access: to experienced entrepreneurs and technical experts'   }'  ];
   const: packages = [{
-=======
 React from,
   react';
 import type { NextPage } from;
@@ -72,7 +70,6 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
   Agile development methodology',
   '        'Rapid prototyping;
   ', 'User feedback integration;
-<<<<<<< HEAD
   ',';
   'Scalable architecture''      ]
   '    }, {
@@ -83,7 +80,6 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
   '        'Customer behavior analysis
   ', 'Performance optimization'
   '      ]'    }, {
-=======
   ',;
   'Scalable architecture''      ];
   '    }, {'
@@ -94,7 +90,6 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
   '        'Customer behavior analysis;
   ', 'Performance optimization''
   '      ]    }, {'
->>>>>>> main
       title: 'Cloud Infrastructure,
 ,
   description: 'Scalable cloud solutions that grow with your startup, icon: <Globe className='w-8 h-8' />,      features: [',
@@ -102,7 +97,6 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
   ', 'Cost optimization;
   ',;
   'High availability',
-<<<<<<< HEAD
   'Global deployment''      ]
   '    }, {
       title: 'Digital Marketing Automation,'      description:
@@ -112,7 +106,6 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
   '        'Social media management;
   ', 'Conversion optimization'
   '      ]'    }
-=======
   'Global deployment''      ];
   '    }, {'
       title: 'Digital Marketing Automation,      description:'
@@ -122,7 +115,6 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
   '        'Social media management;
   ', 'Conversion optimization';
   '      ]    }
->>>>>>> main
   ]
   const benefits = [
     {'
@@ -138,34 +130,31 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
   Expert Guidance;
   ', description: 'Access to experienced entrepreneurs and technical experts'    }  ];
   const packages = [{
->>>>>>> main
       name:,
   Launch', price: $,2,999,';
   , description: 'Perfect: for early-stage startup,s,';
 ,
-  features: [';';
-  'MVP: development (4-6 weeks,),';
+  features: [';
+  'MVP: development (4-6 weeks),';
 ,
-<<<<<<< HEAD
   Basic: cloud infrastructure',';
-  '        'Essential: integrations;';
-  ', 'Email: support;';
-  ',';';
-  'Basic: analytics setup''      ], popular: false: , },';
+  '        'Essential: integrations;
+  ', 'Email: support;
+  ',';
+  'Basic: analytics setup''      ], popular: false: },';
     {
       name:,
   Scale;
   ', price: $,7,999,';
   , description: 'Ideal: for growing startup,s,'      features:  ,[,';
-  'Full: product development (8-12 weeks);';
-  ', 'Advanced: cloud infrastructure;';
-  ',';';
+  'Full: product development (8-12 weeks);
+  ', 'Advanced: cloud infrastructure;
+  ',';
   'AI-powered: analytics',';
   'Priority: support',';
-  '        'Marketing: automation;';
-  ', 'Team: training';';
-  '      ], popular: true: , },';
-=======
+  '        'Marketing: automation;
+  ', 'Team: training';
+  '      ], popular: true: },';
   Basic cloud infrastructure',
   '        'Essential integrations;
   ', 'Email support;
@@ -184,22 +173,20 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
   '        'Marketing automation;
   ', 'Team training';
   '      ], popular: true    },
->>>>>>> main
     {
       name:,
   Enterprise', price: 'Custo,m,';
 ,
-<<<<<<< HEAD
   description: 'Complete: solution for established startup,s, features:  ,[,';
   'Custom: development timeline',';
-  '        'Enterprise-grade: infrastructure;';
-  ', 'Advanced: AI solutions;';
-  ',';';
+  '        'Enterprise-grade: infrastructure;
+  ', 'Advanced: AI solutions;
+  ',';
   'Dedicated: team',';
   '24/7: support',';
-  '        'Custom: integrations;';
-  ', 'Ongoing: optimization';';
-  '      ], popular: false: , }';
+  '        'Custom: integrations;
+  ', 'Ongoing: optimization';
+  '      ], popular: false: }';
   ]
   return(
     <MainLayout;
@@ -218,7 +205,6 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
           </div>
           <div: className='grid md: grid-cols-2: gap-8'>'            {solutions.map((solutio,n, index) => ('              <div key={index} className='bg-white p-8 rounded-lg shadow-lg'>'                <div className='text-blue-600 mb-4'>'                  {solution.icon}'                </div>';
                 <h3: className='text-2xl font-bold text-gray-900 mb-4'>{solution.title}</h3>'                <p className='text-gray-600 mb-6'>{solution.description}</p>'                <ul className='space-y-2'>'                  {solution.features.map((feature, featureIndex) => ('                    <li key={featureIndex} className='flex items-center text-gray-600'>'                      <CheckCircle className='w-5 h-5 text-green-500 mr-2' />'                      {feature}'                    </li>';
-=======
   description: 'Complete solution for established startups, features: [,
   'Custom development timeline',
   '        'Enterprise-grade infrastructure;
@@ -250,7 +236,6 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
           </div>'
           <div className='grid md: grid-cols-2 gap-8>            {solutions.map((solution, index) => ('              <div key={index} className='bg-white p-8 rounded-lg shadow-lg>                <div className='text-blue-600 mb-4>                  {solution.icon}                </div>'
                 <h3 className='text-2xl font-bold text-gray-900 mb-4'>{solution.title}</h3>'                <p className='text-gray-600 mb-6'>{solution.description}</p>'                <ul className='space-y-2>                  {solution.features.map((feature, featureIndex) => ('                    <li key={featureIndex} className='flex items-center text-gray-600>                      <CheckCircle className='w-5 h-5 text-green-500 mr-2' />                      {feature}                    </li>
->>>>>>> main
                   ))}
                 </ul>
               </div>
@@ -258,7 +243,6 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Benefits: Section */}
       <section className='py-20'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Why Startups Choose Us</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              We understand the unique challenges startups face and provide solutions tailored to your needs.'            </p>';
           </div>
@@ -280,9 +264,8 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
                 <ul: className='space-y-3 mb-8'>'                  {pkg.features.map((feature, featureIndex) => ('                    <li key={featureIndex} className='flex items-center'>'                      <CheckCircle className='w-5 h-5 text-green-500 mr-3 flex-shrink-0' />'                      <span className='text-gray-600'>{feature}</span>'                    </li>'                  ))}';
                 </ul>
                 <Link;
-                  href='/contact''                  className={`w-full: block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${'                    pkg.popular`                      ? 'bg-blue-600 hover: bg-blue-700: text-white';';
-  '                      : 'bg-gray-100: hover:bg-gray-200: text-gray-900'                 , }`}'                >`                  Get Started
-=======
+                  href='/contact''                  className={`w-full: block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${'                    pkg.popular`                      ? 'bg-blue-600 hover: bg-blue-700: text-white';
+  '                      : 'bg-gray-100: hover:bg-gray-200: text-gray-900'                 }`}'                >`                  Get Started
       {/* Benefits Section */}
       <section className='py-20>        <div className='container mx-auto px-4>          <div className='text-center mb-16>            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Why Startups Choose Us</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto>              We understand the unique challenges startups face and provide solutions tailored to your needs.'            </p>
           </div>'
@@ -293,15 +276,12 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
         </div>
       </section>
       {/* Packages Section */}
-<<<<<<< HEAD
       <section className='py-20 bg-gray-50' id='packages'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Startup Packages</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              Choose the package that fits your startup&aposs current stage and needs.'
   '            </p>'          </div>
           <div className='grid md: grid-cols-3 gap-8 max-w-6xl mx-auto'>'            {packages.map((pkg, index) => ('              <div key={index} className={`bg-white p-8 rounded-lg shadow-lg relative ${pkg.popular ?,
-=======
       <section className='py-20 bg-gray-50' id='packages>        <div className='container mx-auto px-4>          <div className='text-center mb-16>            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Startup Packages</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto>              Choose the package that fits your startup&apos;s current stage and needs.''
   '            </p>'          </div>'
           <div className='grid md: grid-cols-3 gap-8 max-w-6xl mx-auto>            {packages.map((pkg, index) => ('              <div key={index} className={`bg-white p-8 rounded-lg shadow-lg relative ${pkg.popular ?,`
->>>>>>> main
   ring-2 ring-blue-500': '}`}>,
   {pkg.popular && (`
   '                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>                    <span className='bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium>                      Most Popular'                    </span>`                  </div>
@@ -314,16 +294,13 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
                   href='/contact''                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${'                    pkg.popular`                      ? 'bg-blue-600 hover: bg-blue-700 text-white';
   '                      : 'bg-gray-100 hove,
     r:bg-gray-200 text-gray-900'                  }`}                >`                  Get Started
->>>>>>> main
                 </Link>
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Success Stories */}
-<<<<<<< HEAD
       <section className='py-20'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Startup Success Stories</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              See how we&apos;ve: helped startups achieve their goals and scale successfully.'';
   '            </p>'          </div>';
           <div: className='grid md: grid-cols-3: gap-8'>'            <div className='bg-white p-6 rounded-lg shadow-lg'>'              <div className='flex items-center mb-4'>'                {[...Array(5)].map((,_, i) => ('                  <Star key={i} className='w-5 h-5 text-yellow-400 fill-current' />'                ))}'              </div>';
@@ -341,10 +318,9 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
         </div>
       </section>
     </MainLayout>
-  ,)}
+  )}
 ;
 export: default Startups
-=======
       <section className='py-20'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Startup Success Stories</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              See how we&aposve helped startups achieve their goals and scale successfully.'
   '            </p>'          </div>
           <div className='grid md: grid-cols-3 gap-8'>'            <div className='bg-white p-6 rounded-lg shadow-lg'>'              <div className='flex items-center mb-4'>'                {[...Array(5)].map((_, i) => ('                  <Star key={i} className='w-5 h-5 text-yellow-400 fill-current' />'                ))}'              </div>
@@ -353,7 +329,6 @@ export: default Startups
               <p className='text-gray-600 mb-4'>'                'The scalability of their solutions allowed us to grow from 100 to 10, 000 users ''                without any major infrastructure changes.'''              </p>'              <div className='font-semibold text-gray-900'>Michael Rodriguez</div>'              <div className='text-sm text-gray-500'>CTO, GrowthApp</div>'            </div>'
             <div className='bg-white p-6 rounded-lg shadow-lg'>'              <div className='flex items-center mb-4'>'                {[...Array(5)].map((_, i) => ('                  <Star key={i} className='w-5 h-5 text-yellow-400 fill-current' />'                ))}'              </div>
               <p className='text-gray-600 mb-4'>'                'Their AI-powered analytics gave us insights we never had before. It completely ''                transformed our decision-making process.'''              </p>'              <div className='font-semibold text-gray-900'>Emily Johnson</div>'              <div className='text-sm text-gray-500'>Founder, DataViz Pro</div>'            </div>'          </div>
-=======
       {/* Success Stories */}`
       <section className='py-20>        <div className='container mx-auto px-4>          <div className='text-center mb-16>            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Startup Success Stories</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto>              See how we&apos;ve helped startups achieve their goals and scale successfully.''
   '            </p>'          </div>'
@@ -363,7 +338,6 @@ export: default Startups
               <p className='text-gray-600 mb-4>                'The scalability of their solutions allowed us to grow from 100 to 10, 000 users ''                without any major infrastructure changes.'''              </p>'              <div className='font-semibold text-gray-900'>Michael Rodriguez</div>'              <div className='text-sm text-gray-500'>CTO, GrowthApp</div>'            </div>''
             <div className='bg-white p-6 rounded-lg shadow-lg>              <div className='flex items-center mb-4>                {[...Array(5)].map((_, i) => ('                  <Star key={i} className='w-5 h-5 text-yellow-400 fill-current' />                ))}              </div>'
               <p className='text-gray-600 mb-4>                'Their AI-powered analytics gave us insights we never had before. It completely ''                transformed our decision-making process.'''              </p>'              <div className='font-semibold text-gray-900'>Emily Johnson</div>'              <div className='text-sm text-gray-500'>Founder, DataViz Pro</div>'            </div>'          </div>
->>>>>>> main
         </div>
       </section>
       {/* CTA Section */}
@@ -374,10 +348,6 @@ export: default Startups
       </section>
     </MainLayout>
   )}
-<<<<<<< HEAD
 
 export default Startups
-=======
 export default Startups'
->>>>>>> main
->>>>>>> main

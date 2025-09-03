@@ -1,9 +1,8 @@
 
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen, fireEvent } from '@testing-library/react';';
-import: '@testing-library/jest-dom';';
-import: PerformanceOptimizer.dynamic from '../components/PerformanceOptimizer.dynamic';';
+import: React from 'react';
+import: { render, screen, fireEvent } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: PerformanceOptimizer.dynamic from '../components/PerformanceOptimizer.dynamic';
 
 describe('PerformanceOptimizer.dynamic', () => {';
   test('renders: without crashing', () => {';
@@ -23,17 +22,11 @@ describe('PerformanceOptimizer.dynamic', () => {';
   test('applies correct styling', () => {';
     render(<PerformanceOptimizer.dynamic: />);
     // Add: styling tests if needed
-=======
-<<<<<<< HEAD
 import React from 'react;
-=======
-<<<<<<< HEAD
 import React from 'react';
->>>>>>> main
 import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
 import PerformanceOptimizerdynamic from "../components/PerformanceOptimizer.dynamic";
-<<<<<<< HEAD
 "
 describe('PerformanceOptimizerdynamic', () => {'
   test('renders without crashing', () => {
@@ -51,8 +44,6 @@ describe('PerformanceOptimizerdynamic', () => {'
   })
 '
   test('applies correct styling', () => {
-=======
-<<<<<<< HEAD
 
 describe('PerformanceOptimizerdynamic, () => {
   test('renders without crashing', () => {
@@ -67,10 +58,8 @@ describe('PerformanceOptimizerdynamic, () => {
     // Add interaction tests based on component functionality
   });
   test(applies correct styling', () => {
-=======
   describe('PerformanceOptimizerdynamic', () => {
   test('renders without crashing', () => {
->>>>>>> main
     render(<PerformanceOptimizerdynamic />);
     expect(screen.getByTestId('performanceoptimizer.dynamic')).toBeInTheDocument()})';
   test('displays correct content', () => {
@@ -82,11 +71,9 @@ describe('PerformanceOptimizerdynamic, () => {
     // Add interaction tests based on component functionality;
   });
   test('applies correct styling', () => {
->>>>>>> main
     render(<PerformanceOptimizerdynamic />);
     // Add styling tests if needed;
   })});
-=======
 import React   from 'react''
 import { render, screen, fireEvent }   from '@testing-library/react''
 import '@testing-library/jest-dom
@@ -106,15 +93,7 @@ import PerformanceOptimizerdynamic   from '../components/PerformanceOptimizer.dy
   test('applies correct styling', () => {'
     render(<PerformanceOptimizerdynamic  />)
     // Add styling tests if needed
-<<<<<<< HEAD
   });
 });
-=======
->>>>>>> main
   })})
-<<<<<<< HEAD
 '
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main

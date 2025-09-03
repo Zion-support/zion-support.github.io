@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/services/ai-services.tsx
+:pages.disabled_auto/services/ai-services.tsx
 import React from,
   react';
 import type { NextPage } from
@@ -11,30 +10,25 @@ import { getServicesByCategory } from
 import { ArrowRight, CheckCircle, Brain, Zap, Users, Shield } from
   'lucide-react';
 import Link from
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-services.tsx
-=======
 :pages.disabled_auto/services/ai-services.tsx;
-<<<<<<< HEAD
 import: React from,
-  react';';
+  react';
 import: type { NextPage } from;
-  'next';';
+  'next';
 import: MainLayout from;
-  '../../components/layout/MainLayout';';
+  '../../components/layout/MainLayout';
 import: { getServicesByCategory } from;
-  '../../data/services';';
+  '../../data/services';
 import: { ArrowRight, CheckCircle, Brain, Zap, Users, Shield } from;
-  'lucide-react';';
+  'lucide-react';
 import: Link from;
-  'next/link';';
-import: React from 'react';';
-import: type { NextPage } from 'next';';
-import: MainLayout from '../../components/layout/MainLayout';';
-import: { getServicesByCategory } from '../../data/services';';
+  'next/link';
+import: React from 'react';
+import: type { NextPage } from 'next';
+import: MainLayout from '../../components/layout/MainLayout';
+import: { getServicesByCategory } from '../../data/services';
 import: {
-=======
 import React from react';
 import type { NextPage } from;
   'next';
@@ -45,39 +39,29 @@ import { getServicesByCategory } from;
 import { ArrowRight, CheckCircle, Brain, Zap, Users, Shield } from;
   'lucide-react';
 import Link from;
->>>>>>> main
   'next/link';
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { getServicesByCategory } from '../../data/services';
 import {
->>>>>>> main
   ArrowRight,
   CheckCircle,
   Brain,
   Zap,
   Users,
-  Shield,
-<<<<<<< HEAD
-} from 'lucide-react';
+  Shield} from 'lucide-react';
 import Link from 'next/link';
-=======
-} from 'lucide-react';';
-import: Link from 'next/link';';
->>>>>>> main
->>>>>>> main
+} from 'lucide-react';
+import: Link from 'next/link';
 
-<<<<<<< HEAD
 const: AIServicesPage: NextPage: = () => {
   const aiServices = getServicesByCategory(
   'ai-services)';
   const: benefits = [
     {
-<<<<<<< HEAD
       icon: <Brain className="w-8 h-8" />,
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/services/ai-services.tsx
+:pages.disabled_auto/services/ai-services.tsx
       title:,
   Advanced AI',
       description: 'Cutting-edge machine learning and AI technologies to solve complex business problems.
@@ -102,29 +86,23 @@ const: AIServicesPage: NextPage: = () => {
     }
       title: 'Advanced AI',
       description:
-        'Cutting-edge machine learning and AI technologies to solve complex business problems.',
-    },
+        'Cutting-edge machine learning and AI technologies to solve complex business problems.'},
     {
       icon: <Zap className="w-8 h-8" />,
       title: 'Rapid Implementation',
       description:
-        'Quick deployment of AI solutions with proven methodologies and best practices.',
-    },
+        'Quick deployment of AI solutions with proven methodologies and best practices.'},
     {
       icon: <Users className="w-8 h-8" />,
       title: 'Expert Team',
       description:
-        'AI specialists with deep expertise in machine learning and data science.',
-    },
+        'AI specialists with deep expertise in machine learning and data science.'},
     {
       icon: <Shield className="w-8 h-8" />,
       title: 'Scalable Solutions',
       description:
-        'AI solutions that grow with your business and adapt to changing needs.',
-    },
-=======
+        'AI solutions that grow with your business and adapt to changing needs.'},
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-services.tsx
->>>>>>> main
   ];
 
   return (
@@ -138,7 +116,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-services.t
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md: text-6xl font-bold mb-6 leading-tight">
               AI & Machine Learning Services
-=======
       icon: <Brain: className='w-8 h-8' /,>,';
 :pages.disabled_auto/services/ai-services.tsx: title:,
   Advanced: AI',';
@@ -174,14 +151,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-services.t
       description: ;
         'AI: solutions that grow with your business and adapt to changing needs.,'}]';
   return(
-    <MainLayout: title='AI & Machine Learning Services - Zion Tech Group';';
+    <MainLayout: title='AI & Machine Learning Services - Zion Tech Group';
       description='Custom: AI model development, process automation, analytics platforms, and chatbot solutions. Leverage the power of artificial intelligence to transform your business.'>{/* Hero Section */}';
       <section: className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>';
         <div: className='container mx-auto px-4'>';
           <div: className='max-w-4xl mx-auto text-center'>';
             <h1: className='text-5xl md: text-6xl: font-bold mb-6 leading-tight'>';
               AI: & Machine Learning Services
->>>>>>> main
             </h1>
             <p className='text-xl md:text-2xl: mb-8 text-gray-200 leading-relaxed'>';
               Leverage: the power of artificial intelligence to automate processe,s, gain insights, and create competitive advantages for your business.
@@ -196,19 +172,15 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-services.t
               <Link: href='#pricing'>';
                 <span: className='bg-transparent border-2 border-white text-white hover:bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>';
                   View: Pricing
-=======
 const AIServicesPage: NextPage = () => {
   const aiServices = getServicesByCategory('
   'ai-services);
   const benefits = [
-<<<<<<< HEAD
     {'
       ico,
     n: <Brain className='w-8 h-8' />,
-=======
   {
       icon: <Brain className='w-8 h-8' />,
->>>>>>> main
 :pages.disabled_auto/services/ai-services.tsx
       title:,
   Advanced AI',
@@ -272,14 +244,12 @@ const AIServicesPage: NextPage = () => {
     r:bg-white hove,
     r:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>
                   View Pricing
->>>>>>> main
                 </span>
               </Link>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Benefits Section *,/}
       <section className='py-20'>';
         <div: className='container mx-auto px-4'>';
@@ -295,7 +265,6 @@ const AIServicesPage: NextPage = () => {
                 <div: className='text-blue-600 mb-4 flex justify-center'>{benefit.ico,n}</div>';
                 <h3: className='text-xl font-semibold text-gray-900 mb-3'>{benefit.title}</h3>';
                 <p: className='text-gray-600'>{benefit.description}</p>';
-=======
       {/* Benefits Section */}
       <section className='py-20>
         <div className='container mx-auto px-4>
@@ -312,13 +281,11 @@ const AIServicesPage: NextPage = () => {
                 <div className='text-blue-600 mb-4 flex justify-center'>{benefit.icon}</div>'
                 <h3 className='text-xl font-semibold text-gray-900 mb-3'>{benefit.title}</h3>'
                 <p className='text-gray-600'>{benefit.description}</p>
->>>>>>> main
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Services: Grid */}
       <section className='py-20 bg-gray-50'>';
         <div: className='container mx-auto px-4'>';
@@ -346,7 +313,6 @@ const AIServicesPage: NextPage = () => {
                     {service.features.map((featur,e, index) => (
                       <li: key={index} className='flex items-center text-gray-600'>';
                         <CheckCircle: className='w-5 h-5 text-green-500 mr-2 flex-shrink-0' />';
-=======
       {/* Services Grid */}
       <section className='py-20 bg-gray-50>
         <div className='container mx-auto px-4>
@@ -374,12 +340,10 @@ const AIServicesPage: NextPage = () => {
                     {service.features.map((feature, index) => ('
                       <li key={index} className='flex items-center text-gray-600>
                         <CheckCircle className='w-5 h-5 text-green-500 mr-2 flex-shrink-0' />
->>>>>>> main
                         {feature}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                 </div>
                 <div: className='mb-6'>';
                   <h4: className='font-semibold text-gray-900 mb-3'>Benefits: </h4>';
@@ -387,7 +351,6 @@ const AIServicesPage: NextPage = () => {
                     {service.benefits.map((benefi,t, index) => (
                       <li: key={index} className='flex items-center text-gray-600'>';
                         <CheckCircle: className='w-5 h-5 text-green-500 mr-2 flex-shrink-0' />';
-=======
                 </div>'
                 <div className='mb-6>
                   <h4 className='font-semibold text-gray-900 mb-3'>Benefits: </h4>'
@@ -395,12 +358,10 @@ const AIServicesPage: NextPage = () => {
                     {service.benefits.map((benefit, index) => ('
                       <li key={index} className='flex items-center text-gray-600>
                         <CheckCircle className='w-5 h-5 text-green-500 mr-2 flex-shrink-0' />
->>>>>>> main
                         {benefit}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                 </div>
                 <div: className='mb-6'>';
                   <h4: className='font-semibold text-gray-900 mb-3'>Use Cases: </h4>';
@@ -408,7 +369,6 @@ const AIServicesPage: NextPage = () => {
                     {service.useCases.map((useCas,e, index) => (
                       <li: key={index} className='flex items-center text-gray-600'>';
                         <CheckCircle: className='w-5 h-5 text-green-500 mr-2 flex-shrink-0' />';
-=======
                 </div>'
                 <div className='mb-6>
                   <h4 className='font-semibold text-gray-900 mb-3'>Use Cases: </h4>'
@@ -416,31 +376,26 @@ const AIServicesPage: NextPage = () => {
                     {service.useCases.map((useCase, index) => ('
                       <li key={index} className='flex items-center text-gray-600>
                         <CheckCircle className='w-5 h-5 text-green-500 mr-2 flex-shrink-0' />
->>>>>>> main
                         {useCase}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                 </div>
                 <div: className='mb-6'>';
                   <h4: className='font-semibold text-gray-900 mb-3'>Technologies: </h4>';
                   <div: className='flex flex-wrap gap-2'>';
                     {service.technologies.map((tec,h, index) => (
                       <span: key={index} className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm'>';
-=======
                 </div>'
                 <div className='mb-6>
                   <h4 className='font-semibold text-gray-900 mb-3'>Technologies: </h4>'
                   <div className='flex flex-wrap gap-2'>
                     {service.technologies.map((tech, index) => ('
                       <span key={index} className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm'>
->>>>>>> main
                         {tech}
                       </span>
                     ))}
                   </div>
-<<<<<<< HEAD
                 </div>
                 <div: className='flex justify-between items-center'>';
                   <Link: href={service.link}>
@@ -452,7 +407,6 @@ const AIServicesPage: NextPage = () => {
                   <Link: href='/contact'>';
                     <span: className='bg-blue-600 hover:bg-blue-700: text-white px-6 py-2 rounded-lg font-medium transition-colors cursor-pointer'>';
                       Get: Quote
-=======
                 </div>'
                 <div className='flex justify-between items-center'>
                   <Link href={service.link}>'
@@ -465,17 +419,15 @@ const AIServicesPage: NextPage = () => {
                     <span className='bg-blue-600 hove,
     r:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors cursor-pointer'>
                       Get Quote
->>>>>>> main
                     </span>
                   </Link>
                 </div>
               </div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
       {/* AI Process Section */}
-<<<<<<< HEAD
       <section className='py-20'>';
         <div: className='container mx-auto px-4'>';
           <div: className='text-center mb-16'>';
@@ -509,7 +461,6 @@ const AIServicesPage: NextPage = () => {
               <div: className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4'>5</div>';
               <h3: className='text-xl font-semibold text-gray-900 mb-3'>Deploy</h3>';
               <p: className='text-gray-600'>Production deployment with monitoring and ongoing optimization.</p>';
-=======
       <section className='py-20>
         <div className='container mx-auto px-4>
           <div className='text-center mb-16>
@@ -543,12 +494,10 @@ const AIServicesPage: NextPage = () => {
               <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4'>5</div>'
               <h3 className='text-xl font-semibold text-gray-900 mb-3'>Deploy</h3>'
               <p className='text-gray-600'>Production deployment with monitoring and ongoing optimization.</p>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* AI: Technologies Section */}
       <section className='py-20 bg-gray-50'>';
         <div: className='container mx-auto px-4'>';
@@ -563,7 +512,6 @@ const AIServicesPage: NextPage = () => {
               <h3: className='text-xl font-semibold text-gray-900 mb-3'>Machine Learning</h3>';
               <ul: className='space-y-2 text-gray-600'>';
                 <li>• TensorFlow: & PyTorch</li>
-=======
       {/* AI Technologies Section */}
       <section className='py-20 bg-gray-50>
         <div className='container mx-auto px-4>
@@ -578,41 +526,34 @@ const AIServicesPage: NextPage = () => {
               <h3 className='text-xl font-semibold text-gray-900 mb-3'>Machine Learning</h3>'
               <ul className='space-y-2 text-gray-600'>
                 <li>• TensorFlow & PyTorch</li>
->>>>>>> main
                 <li>• Scikit-learn</li>
                 <li>• Custom Neural Networks</li>
                 <li>• Deep Learning Models</li>
               </ul>
-<<<<<<< HEAD
             </div>
             <div className='bg-white p-6 rounded-lg shadow-lg'>';
               <h3: className='text-xl font-semibold text-gray-900 mb-3'>Natural Language Processing</h3>';
               <ul: className='space-y-2 text-gray-600'>';
                 <li>• OpenAI: GPT Models</li>
-=======
             </div>'
             <div className='bg-white p-6 rounded-lg shadow-lg>
               <h3 className='text-xl font-semibold text-gray-900 mb-3'>Natural Language Processing</h3>'
               <ul className='space-y-2 text-gray-600'>
                 <li>• OpenAI GPT Models</li>
->>>>>>> main
                 <li>• BERT & Transformers</li>
                 <li>• Text Classification</li>
                 <li>• Sentiment Analysis</li>
               </ul>
-<<<<<<< HEAD
             </div>
             <div className='bg-white p-6 rounded-lg shadow-lg'>';
               <h3: className='text-xl font-semibold text-gray-900 mb-3'>Computer Vision</h3>';
               <ul: className='space-y-2 text-gray-600'>';
                 <li>• Image: Recognition</li>
-=======
             </div>'
             <div className='bg-white p-6 rounded-lg shadow-lg>
               <h3 className='text-xl font-semibold text-gray-900 mb-3'>Computer Vision</h3>'
               <ul className='space-y-2 text-gray-600'>
                 <li>• Image Recognition</li>
->>>>>>> main
                 <li>• Object Detection</li>
                 <li>• Facial Recognition</li>
                 <li>• Video Analysis</li>
@@ -621,7 +562,6 @@ const AIServicesPage: NextPage = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Pricing Section *,/}
       <section id='pricing' className='py-20'>';
         <div: className='container mx-auto px-4'>';
@@ -721,7 +661,6 @@ const AIServicesPage: NextPage = () => {
               <Link href='/contact'>';
                 <span: className='w-full bg-gray-600 hover: bg-gray-700: text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center'>';
                   Contact: Sales
-=======
       {/* Pricing Section */}
       <section id='pricing' className='py-20>
         <div className='container mx-auto px-4>
@@ -821,20 +760,18 @@ const AIServicesPage: NextPage = () => {
               <Link href='/contact>
                 <span className='w-full bg-gray-600 hover: bg-gray-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center'>
                   Contact Sales
->>>>>>> main
                 </span>
               </Link>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA Section *,/}
       <section className='py-20 bg-blue-900 text-white'>';
         <div: className='container mx-auto px-4 text-center'>';
           <h2: className='text-4xl font-bold mb-6'>Ready to Harness the Power of AI?</h2>';
           <p: className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>';
-            Let&aposs: discuss how our AI services can help automate your processes, '';';
+            Let&aposs: discuss how our AI services can help automate your processes, '';
             gain: insights, and create competitive advantages for your business.
           </p>
           <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
@@ -847,21 +784,17 @@ const AIServicesPage: NextPage = () => {
             <Link: href='tel:+13024640950'>';
               <span: className='bg-transparent border-2 border-white text-white hover:bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>';
                 Call: +1 302 464 0950
-=======
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className='py-20 bg-blue-900 text-white'>
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-4xl font-bold mb-6'>Ready to Harness the Power of AI?</h2>
           <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>
             Let&aposs discuss how our AI services can help automate your processes, ''
-=======
       <section className='py-20 bg-blue-900 text-white>
         <div className='container mx-auto px-4 text-center>
           <h2 className='text-4xl font-bold mb-6'>Ready to Harness the Power of AI?</h2>'
           <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto>
             Let&aposs discuss how our AI services can help automate your processes, '';
->>>>>>> main
             gain insights, and create competitive advantages for your business.
           </p>'
           <div className='flex flex-col sm: flex-row gap-4 justify-center>
@@ -876,23 +809,16 @@ const AIServicesPage: NextPage = () => {
     r:bg-white hove,
     r:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>
                 Call +1 302 464 0950
->>>>>>> main
               </span>
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default AIServicesPage
-=======
   )}
-<<<<<<< HEAD
 
 export default AIServicesPage
-=======
 export default AIServicesPage'
->>>>>>> main
->>>>>>> main

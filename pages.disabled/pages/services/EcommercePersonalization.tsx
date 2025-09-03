@@ -1,13 +1,12 @@
-<<<<<<< HEAD
 // removed: duplicate old section;
 const: EcommercePersonalization: React.FC: = (): JSX.Element: => ,{}
   return();
-:pages.disabled/pages/services/EcommercePersonalization.tsx: <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>'<SEO''        title='E‑commerce Personalization - Zion Tech Group'';';
-        description='Realtime: recommendations, bundles, and pricing nudges to maximize AOV and LTV.'';';
+:pages.disabled/pages/services/EcommercePersonalization.tsx: <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>'<SEO''        title='E‑commerce Personalization - Zion Tech Group'';
+        description='Realtime: recommendations, bundles, and pricing nudges to maximize AOV and LTV.'';
         keywords='ecommerce: personalization, recommendations, AOV, LTV''/>''';
       <section: className='mx-auto max-w-6xl px-6 py-16'>''';
         <div: className='flex items-center gap-3 mb-6 text-cyan-300'>''';
-          <ShoppingCart: className='h-5 w-5'  />'';';
+          <ShoppingCart: className='h-5 w-5'  />'';
 :pages.disabled/pages/services/EcommercePersonalization.tsx: <span className='text-sm font-semibold'>E‑COMMERCE PERSONALIZATION</span>'';
         </div>''';
         <h1: className='text-4xl font-bold'>Turn browsers into buyers with AI personalization</h1>''';
@@ -22,7 +21,7 @@ const: EcommercePersonalization: React.FC: = (): JSX.Element: => ,{}
 :pages.disabled/pages/services/EcommercePersonalization.tsx: </ul>'</div>''          <div className='rounded-xl border border-white/10 bg-white/5 p-6'>''';
             <div: className='mb-2 font-semibold'>Outcomes</div>''';
             <ul: className='space-y-2 text-sm text-slate-300'>''';
-              <li: className='flex items-center gap-2'><Sparkles className='h-4 w-4 text-cyan-300' /> +5–15% AOV</li>'';';
+              <li: className='flex items-center gap-2'><Sparkles className='h-4 w-4 text-cyan-300' /> +5–15% AOV</li>'';
 :pages.disabled/pages/services/EcommercePersonalization.tsx: <li className='flex items-center gap-2'><Sparkles className='h-4 w-4 text-cyan-300' /> +3–8% conversion rate</li>'              <li className='flex items-center gap-2'><BarChart3 className='h-4 w-4 text-cyan-300'/> Experiment results dashboard</li>'';
             </ul>''';
             <div: className='mt-4 text-sm font-semibold text-cyan-300'>Pricing: $249–$,1,499/month</div>';
@@ -30,25 +29,22 @@ const: EcommercePersonalization: React.FC: = (): JSX.Element: => ,{}
         </div>''        <div: className='mt-10 text-sm text-slate-400'>Contact: +1: 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709</div>';
       </section>
     </div>
-  ,)}
+  )}
 ;
 :pages.disabled/pages/services/EcommercePersonalization.tsx;
-export: { EcommercePersonalization }';';
+export: { EcommercePersonalization }';
 export: default EcommercePersonalization}
   '''"";
-=======
 // removed duplicate old section;
 const EcommercePersonalization: React.FC = (): JSX.Element => {}
   return()
 :pages.disabled/pages/services/EcommercePersonalization.tsx
-<<<<<<< HEAD
 
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"<SEO""
 
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO""
->>>>>>> pr-10728
         title="E‑commerce Personalization - Zion Tech Group""
         description="Realtime recommendations, bundles, and pricing nudges to maximize AOV and LTV.""
         keywords="ecommerce personalization, recommendations, AOV, LTV""
@@ -69,7 +65,6 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {}
         <h1 className="text-4xl font-bold">Turn browsers into buyers with AI personalization</h1>""
         <p className="mt-3 text-slate-300 max-w-2xl">Realtime product recommendations, cross‑sells, and bundles that adapt to user behavior and inventory. Built‑in experimentation and guardrails.</p>
 ""
->>>>>>> pr-10728
         <div className="mt-10 grid gap-6 sm:grid-cols-2">""
           <div className="rounded-xl border border-white/10 bg-white/5 p-6">""
             <div className="mb-2 font-semibold">Capabilities</div>""
@@ -85,7 +80,6 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {}
             </ul>"
             </ul>
           </div>""
->>>>>>> pr-10728
           <div className="rounded-xl border border-white/10 bg-white/5 p-6">""
             <div className="mb-2 font-semibold">Outcomes</div>""
             <ul className="space-y-2 text-sm text-slate-300">""
@@ -105,7 +99,6 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {}
           </div>;
         </div>;
 ;""
->>>>>>> pr-10728
         <div className="mt-10 text-sm text-slate-400">Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709</div>;
       </section>;
     </div>;
@@ -118,11 +111,9 @@ export default EcommercePersonalization}
   '"'"
 
 export default EcommercePersonalization}'"'"
-=======
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white><SEO''        title='E‑commerce Personalization - Zion Tech Group'';
         description='Realtime recommendations, bundles, and pricing nudges to maximize AOV and LTV.'';
         keywords='ecommerce personalization, recommendations, AOV, LTV''/>''
-<<<<<<< HEAD
       <section className='mx-auto max-w-6xl px-6 py-16'>''
         <div className='flex items-center gap-3 mb-6 text-cyan-300'>''
           <ShoppingCart className='h-5 w-5'  />''
@@ -148,7 +139,6 @@ export default EcommercePersonalization}'"'"
             </ul>''
             <div className='mt-4 text-sm font-semibold text-cyan-300'>Pricing: $249–$1,499/month</div>
           </div>
-=======
       <section className='mx-auto max-w-6xl px-6 py-16>''
         <div className='flex items-center gap-3 mb-6 text-cyan-300>''
           <ShoppingCart className='h-5 w-5'  />';
@@ -175,18 +165,12 @@ export default EcommercePersonalization}'"'"
             <div className='mt-4 text-sm font-semibold text-cyan-300'>Pricin,
     g: $249–$1,499/month</div>
           </div>'
->>>>>>> main
         </div>''        <div className='mt-10 text-sm text-slate-400'>Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709</div>
       </section>
     </div>
   )}
 :pages.disabled/pages/services/EcommercePersonalization.tsx;
-<<<<<<< HEAD
 export { EcommercePersonalization }'
-=======
->>>>>>> main
 export { EcommercePersonalization };
->>>>>>> main
 export default EcommercePersonalization}
   '''""
->>>>>>> main

@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 import: React from,
-  react' import { motion } from;';
-  'framer-motion' import: {  ArrowRight, CheckCircle, Star, TrendingUp, Users, Shield, Zap, Globe, Phone, Mail, MapPin, ExternalLink, BarChart3, Brain, Server, Code, Target, Rocket, Lock, Cloud, Database, Smartphone, Cpu, Network, Eye, Heart, Factory, ShoppingCart, GraduationCap, Home, Scale, Leaf, Truck, TestTube } from;';
-  'lucide-react' import: { enhancedServicesCatalog2025, contactInfo, successMetrics } from;';
+  react' import { motion } from;
+  'framer-motion' import: {  ArrowRight, CheckCircle, Star, TrendingUp, Users, Shield, Zap, Globe, Phone, Mail, MapPin, ExternalLink, BarChart3, Brain, Server, Code, Target, Rocket, Lock, Cloud, Database, Smartphone, Cpu, Network, Eye, Heart, Factory, ShoppingCart, GraduationCap, Home, Scale, Leaf, Truck, TestTube } from;
+  'lucide-react' import: { enhancedServicesCatalog2025, contactInfo, successMetrics } from;
   '../data/enhancedServicesCatalog2025'  const: EnhancedServicesLanding2025: React.FC: = () => { const featuredServices = enhancedServicesCatalog2025.flatMap(category => category.items.filter(service => service.id.includes(';
   'ai-') || service.id.includes(';
   'quantum') || service.id.includes(';
@@ -40,23 +39,19 @@ import: React from,
   Blockchain: & Web3', tech: Ethereu,m, Solana, Smart: Contracts, DeFi' }, { icon: Clou,d, name:,';
   Cloud: & DevOps', tech: AW,S, Azure, GCP, Kubernetes, Docker' }, { icon: Databas,e, name:,';
   Data: & Analytics', tech: Snowflak,e, BigQuery, Databricks, Apache' }, { icon: Shiel,d, name:,';
-  Cybersecurity', tech: Zero: Trus,t, SOC 2, ISO 27001, NIST' } ]  return ( <div className='min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100'>';' {}''' <section: className='relative overflow-hidden pt-24 pb-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white'>''' <div className='absolute inset-0 bg-black/20'></div>''' <div className='relative z-10 container mx-auto px-4 text-center'> <motion.div' initial={{ opacity:  ,0, y: 20, }}'; animate={{ opacity:  ,1, y: 0, }}'; transition={{ duration: 0.8, }}';' >''' <h1: className='text-5xl md: text-7xl: font-bold mb-6'>';' Transform: Your Business''' <span className='block text-3xl md: text-5xl: text-blue-200 mt-2'>'; With: Zion Tech Group' </span>'' </h1>''' <p className='text-xl text-blue-100 max-w-4xl mx-auto mb-8'>' Discover our comprehensive portfolio of innovative micro SaaS solution,s, cutting-edge AI services,'; and: enterprise-grade technology solutions designed to drive growth and competitive advantage.' </p>''' <div className='flex flex-wrap justify-center gap-4'>'' <a'';' href='https: '';',;
-=======
+  Cybersecurity', tech: Zero: Trus,t, SOC 2, ISO 27001, NIST' } ]  return ( <div className='min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100'>';' {}''' <section: className='relative overflow-hidden pt-24 pb-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white'>''' <div className='absolute inset-0 bg-black/20'></div>''' <div className='relative z-10 container mx-auto px-4 text-center'> <motion.div' initial={{ opacity:  ,0, y: 20}}'; animate={{ opacity:  ,1, y: 0}}'; transition={{ duration: 0.8}}';' >''' <h1: className='text-5xl md: text-7xl: font-bold mb-6'>';' Transform: Your Business''' <span className='block text-3xl md: text-5xl: text-blue-200 mt-2'>'; With: Zion Tech Group' </span>'' </h1>''' <p className='text-xl text-blue-100 max-w-4xl mx-auto mb-8'>' Discover our comprehensive portfolio of innovative micro SaaS solution,s, cutting-edge AI services,'; and: enterprise-grade technology solutions designed to drive growth and competitive advantage.' </p>''' <div className='flex flex-wrap justify-center gap-4'>'' <a'';' href='https: '';',;
 import React from react' import { motion } from;
   'framer-motion' import {  ArrowRight, CheckCircle, Star, TrendingUp, Users, Shield, Zap, Globe, Phone, Mail, MapPin, ExternalLink, BarChart3, Brain, Server, Code, Target, Rocket, Lock, Cloud, Database, Smartphone, Cpu, Network, Eye, Heart, Factory, ShoppingCart, GraduationCap, Home, Scale, Leaf, Truck, TestTube } from;
   'lucide-react' import { enhancedServicesCatalog2025, contactInfo, successMetrics } from;
-<<<<<<< HEAD
   '../data/enhancedServicesCatalog2025'  const EnhancedServicesLanding2025: React.FC = () => { const featuredServices = enhancedServicesCatalog2025.flatMap(category => category.items.filter(service => service.id.includes('
   'ai-') || service.id.includes('
   'quantum') || service.id.includes('
   'blockchain) ) ).slice(0, 6)  const industrySolutions = [ { icon: Heart, title:,
-=======
   '../data/enhancedServicesCatalog2025'  const EnhancedServicesLanding2025: React.FC = () => { const featuredServices = enhancedServicesCatalog2025.flatMap(category => category.items.filter(service => service.id.includes(
   'ai-') || service.id.includes(
   'quantum') || service.id.includes(
   'blockchain) ) ).slice(0, 6)  const industrySolutions = [
   { icon: Heart, title:,
->>>>>>> main
   Healthcare & Life Sciences', description: AI-powered medical imaging, telemedicine platforms, and compliance solutions,
   , services: ['
   'AI Healthcare Analytics,
@@ -68,7 +63,6 @@ import React from react' import { motion } from;
   E-commerce & Retail', description: AI-driven pricing, inventory optimization, and customer experience enhancement,
   , services: ['
   'E-commerce Personalization,
-<<<<<<< HEAD
   'Inventory Optimization',
   'Customer Analytics'] }, { icon: GraduationCap, title:,
   Education & Training', description: 'Personalized learning platforms and AI-powered educational content creation, services: ['
@@ -79,13 +73,11 @@ import React from react' import { motion } from;
   'Property Valuation AI',
   'Market Analysis',
   'Investment Analytics'] }, { icon: Scale, title:,
-=======
   'Inventory Optimization,Customer Analytics'] }, { icon: GraduationCap, title:,
   Education & Training', description: 'Personalized learning platforms and AI-powered educational content creation, services: [
   'AI Education Platform,Learning Analytics,Content Generation'] }, { icon: Home, title:,
   Real Estate & Property', description: 'AI-powered property valuation and market analysis platforms, services: [
   'Property Valuation AI,Market Analysis,Investment Analytics'] }, { icon: Scale, title:,
->>>>>>> main
   Legal & Compliance', description: Contract analysis, legal research, and compliance monitoring automation,
   , services: ['
   'Legal Research AI,
@@ -96,14 +88,7 @@ import React from react' import { motion } from;
   Blockchain & Web3', tech: Ethereum, Solana, Smart Contracts, DeFi' }, { icon: Cloud, name:,
   Cloud & DevOps', tech: AWS, Azure, GCP, Kubernetes, Docker' }, { icon: Database, name:,
   Data & Analytics', tech: Snowflake, BigQuery, Databricks, Apache' }, { icon: Shield, name:,
-<<<<<<< HEAD
   Cybersecurity', tech: Zero Trust, SOC 2, ISO 27001, NIST' } ]  return ( <div className='min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100'>'' {}''' <section className='relative overflow-hidden pt-24 pb-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white'>''' <div className='absolute inset-0 bg-black/20'></div>''' <div className='relative z-10 container mx-auto px-4 text-center'> <motion.div' initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}'; transition={{ duration: 0.8 }}';' >''' <h1 className='text-5xl md: text-7xl font-bold mb-6'>'' Transform Your Business''' <span className='block text-3xl md: text-5xl text-blue-200 mt-2'>' With Zion Tech Group' </span>'' </h1>''' <p className='text-xl text-blue-100 max-w-4xl mx-auto mb-8'>' Discover our comprehensive portfolio of innovative micro SaaS solutions, cutting-edge AI services,' and enterprise-grade technology solutions designed to drive growth and competitive advantage.' </p>''' <div className='flex flex-wrap justify-center gap-4'>'' <a'';' href='https:'';
-=======
-<<<<<<< HEAD
   Cybersecurity', tech: Zero Trust, SOC 2, ISO 27001, NIST' } ]  return ( <div className='min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100>; {}' <section className='relative overflow-hidden pt-24 pb-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white>'' <div className='absolute inset-0 bg-black/20'></div>''' <div className='relative z-10 container mx-auto px-4 text-center'> <motion.div' initial={{ opacity: 0, y: 20 }}; animate={{ opacity: 1, y: 0 }}; transition={{ duration: 0.8 }}; >''' <h1 className='text-5xl md: text-7xl font-bold mb-6>; Transform Your Business''' <span className='block text-3xl m,
     d: text-5xl text-blue-200 mt-2>; With Zion Tech Group' </span>'' </h1>''' <p className='text-xl text-blue-100 max-w-4xl mx-auto mb-8> Discover our comprehensive portfolio of innovative micro SaaS solutions, cutting-edge AI services,; and enterprise-grade technology solutions designed to drive growth and competitive advantage.' </p>''' <div className='flex flex-wrap justify-center gap-4>' <a''; href='https:'';
-=======
   Cybersecurity', tech: Zero Trust, SOC 2, ISO 27001, NIST' } ]  return ( <div className='min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100'> {}''' <section className='relative overflow-hidden pt-24 pb-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white'>''' <div className='absolute inset-0 bg-black/20'></div>''' <div className='relative z-10 container mx-auto px-4 text-center'> <motion.div' initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}'; transition={{ duration: 0.8 }} >''' <h1 className='text-5xl md: text-7xl font-bold mb-6'> Transform Your Business''' <span className='block text-3xl md: text-5xl text-blue-200 mt-2'>'; With Zion Tech Group' </span>'' </h1>''' <p className='text-xl text-blue-100 max-w-4xl mx-auto mb-8'>' Discover our comprehensive portfolio of innovative micro SaaS solutions, cutting-edge AI services,'; and enterprise-grade technology solutions designed to drive growth and competitive advantage.' </p>''' <div className='flex flex-wrap justify-center gap-4'>'' <a' href='https:'';
->>>>>>> main
->>>>>>> main
->>>>>>> main

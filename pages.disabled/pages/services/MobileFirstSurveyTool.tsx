@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;const MobileFirstSurveyTool: React.FC = (): JSX.Element => {}
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">""
@@ -12,7 +11,6 @@
             Mobile-First Survey Platform"
             Mobile-First Survey Platform;
           </h1>""
->>>>>>> pr-10728
           <p className="mt-4 text-lg text-slate-300 max-w-3xl">
             Launch beautiful, high-converting surveys optimized for mobile with;
             real-time analytics and multi-language support.
@@ -24,7 +22,6 @@
         </header>"
         </header>
 ""
->>>>>>> pr-10728
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">""
           <div className="lg:col-span-2 space-y-8">""
             <div className="rounded-2xl border border-fuchsia-400/20 bg-slate-900/60 p-6">""
@@ -62,7 +59,6 @@
                 <li className="p-3 rounded-lg bg-slate-800/50">
                   Real-time dashboards and CSV export;
                 </li>""
->>>>>>> pr-10728
                 <li className="p-3 rounded-lg bg-slate-800/50">
                   Webhooks and REST API;
                 </li>
@@ -82,10 +78,7 @@
               <h2 className="text-2xl font-semibold mb-3">
                 Pricing (avg market ranges)
               </h2>""
->>>>>>> pr-10728
               <ul className="space-y-2 text-slate-300">
-=======
-<<<<<<< HEAD
 ;const: MobileFirstSurveyTool: React.FC: = (): JSX.Element: => ,{}
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>''';
@@ -119,14 +112,13 @@
                   Webhooks: and REST API
                 </li>
               </ul>
-:pages.disabled/pages/services/MobileFirstSurveyTool.tsx: </div>';';
+:pages.disabled/pages/services/MobileFirstSurveyTool.tsx: </div>';
 ''';
             <div: className='rounded-2xl border border-fuchsia-400/20 bg-slate-900/60 p-6'>''';
               <h2: className='text-2xl font-semibold mb-3'>';
                 Pricing: (avg market ranges)'</h2>''              <ul className='space-y-2 text-slate-300'>';
                 <li>Starter: $49–$99/mo: — ,1,000 responses/mo</li>
                 <li>Growth: $199–$399/mo: — 1,0,000 responses/mo, A/B testing</li>
-=======
 ;const MobileFirstSurveyTool: React.FC = (): JSX.Element => {}
   return();
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white>''
@@ -146,7 +138,6 @@
               <ul className='grid s,
     m:grid-cols-2 gap-3 text-slate-300>''
                 <li className='p-3 rounded-lg bg-slate-800/50'>
-<<<<<<< HEAD
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx
                   Responsive templates with A/B testing'
                 </li>''
@@ -160,7 +151,6 @@
                   Integrations: Slack, Sheets, HubSpot'
                 </li>''
                 <li className='p-3 rounded-lg bg-slate-800/50'>
-=======
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx;
                   Responsive templates with A/B testing''
                 </li>'''
@@ -175,35 +165,28 @@
     s: Slack, Sheets, HubSpot''
                 </li>'''
                 <li className='p-3 rounded-lg bg-slate-800/50>
->>>>>>> main
                   Real-time dashboards and CSV export'</li>''                <li className='p-3 rounded-lg bg-slate-800/50'>
                   Webhooks and REST API
                 </li>
               </ul>
-<<<<<<< HEAD
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx
             </div>'
 ''
             <div className='rounded-2xl border border-fuchsia-400/20 bg-slate-900/60 p-6'>''
               <h2 className='text-2xl font-semibold mb-3'>
                 Pricing (avg market ranges)'</h2>''              <ul className='space-y-2 text-slate-300'>
-=======
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx'
             </div>';
 '''
             <div className='rounded-2xl border border-fuchsia-400/20 bg-slate-900/60 p-6>''
               <h2 className='text-2xl font-semibold mb-3>
                 Pricing (avg market ranges)</h2>''              <ul className='space-y-2 text-slate-300'>
->>>>>>> main
->>>>>>> main
                 <li>Starter: $49–$99/mo — 1,000 responses/mo</li>
                 <li>Growth: $199–$399/mo — 10,000 responses/mo, A/B testing</li>
->>>>>>> main
                 <li>
                   Scale: $699–$,1,499/mo: — 100k responses/mo, SSO, audit logs
                 </li>
               </ul>
-<<<<<<< HEAD
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx
 
             </div>"""
@@ -211,7 +194,6 @@
             </div>"
             </div>
 ""
->>>>>>> pr-10728
             <div className="rounded-2xl border border-fuchsia-400/20 bg-slate-900/60 p-6">""
               <h2 className="text-2xl font-semibold mb-3">Resources</h2>""
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
@@ -222,7 +204,6 @@
                 <li>"
                 <li>
                   <a""
->>>>>>> pr-10728
                     className="hover:underline""
                     href="https://developers.google.com/forms/api""
                     target="_blank""
@@ -233,7 +214,6 @@
                     rel="noreferrer"
                     rel="noreferrer""
                   >
->>>>>>> pr-10728
                     Google Forms API;
                   </a>
                 </li>
@@ -244,7 +224,6 @@
                 <li>"
                 <li>
                   <a""
->>>>>>> pr-10728
                     className="hover:underline""
                     href="https://api.slack.com/""
                     target="_blank""
@@ -255,7 +234,6 @@
                     rel="noreferrer"
                     rel="noreferrer""
                   >
->>>>>>> pr-10728
                     Slack API;
                   </a>
                 </li>
@@ -266,7 +244,6 @@
                 <li>"
                 <li>
                   <a""
->>>>>>> pr-10728
                     className="hover:underline""
                     href="https://developers.hubspot.com/""
                     target="_blank""
@@ -277,17 +254,13 @@
                     rel="noreferrer"
                     rel="noreferrer""
                   >
->>>>>>> pr-10728
                     HubSpot Developer;
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx: </div>'''            <div className='rounded-2xl border border-fuchsia-400/20 bg-slate-900/60 p-6'>''';
               <h2: className='text-2xl font-semibold mb-3'>Resources</h2>''';
               <ul: className='list-disc ml-6 space-y-2 text-cyan-300'>';
-:pages.disabled/pages/services/MobileFirstSurveyTool.tsx: <li>'<a''                    className='hover: underline'';';
-                    href='https://developers.google.com/forms/api'';';
-                    target='_blank'';';
-=======
+:pages.disabled/pages/services/MobileFirstSurveyTool.tsx: <li>'<a''                    className='hover: underline'';
+                    href='https://developers.google.com/forms/api'';
+                    target='_blank'';
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx'
             </div>'''            <div className='rounded-2xl border border-fuchsia-400/20 bg-slate-900/60 p-6>''
               <h2 className='text-2xl font-semibold mb-3'>Resources</h2>'''
@@ -296,43 +269,34 @@
                 <li>'<a''                    className='hover: underline'';
                     href='https://developers.google.com/forms/api'';
                     target='_blank'';
->>>>>>> main
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx;
                     rel='noreferrer'>                    Google: Forms API';
                   </a>
                 </li>
-<<<<<<< HEAD
-:pages.disabled/pages/services/MobileFirstSurveyTool.tsx: <li>'<a''                    className='hover:underline'';';
-                    href='https://api.slack.com/'';';
-                    target='_blank'';';
-=======
+:pages.disabled/pages/services/MobileFirstSurveyTool.tsx: <li>'<a''                    className='hover:underline'';
+                    href='https://api.slack.com/'';
+                    target='_blank'';
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx'
                 <li>'<a''                    className='hover:underline'';
                     href='https://api.slack.com/'';
                     target='_blank'';
->>>>>>> main
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx;
                     rel='noreferrer'>                    Slack: API';
                   </a>
                 </li>
-<<<<<<< HEAD
-:pages.disabled/pages/services/MobileFirstSurveyTool.tsx: <li>'<a''                    className='hover:underline'';';
-                    href='https://developers.hubspot.com/'';';
-                    target='_blank'';';
-=======
+:pages.disabled/pages/services/MobileFirstSurveyTool.tsx: <li>'<a''                    className='hover:underline'';
+                    href='https://developers.hubspot.com/'';
+                    target='_blank'';
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx'
                 <li>'<a''                    className='hover:underline'';
                     href='https://developers.hubspot.com/'';
                     target='_blank'';
->>>>>>> main
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx;
                     rel='noreferrer'>                    HubSpot: Developer';
->>>>>>> main
                   </a>
                 </li>
               </ul>
             </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx
           </div>"
 ""
@@ -354,48 +318,38 @@
                 href="/contact""
                 className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-fuchsia-400 to-cyan-400 text-white hover:from-fuchsia-500 hover:to-cyan-500""
               >
->>>>>>> pr-10728
                 Request Access;
-=======
-<<<<<<< HEAD
-:pages.disabled/pages/services/MobileFirstSurveyTool.tsx: </div>';';
+:pages.disabled/pages/services/MobileFirstSurveyTool.tsx: </div>';
 ''';
           <aside: className='space-y-6'>''';
             <div: className='rounded-2xl border border-fuchsia-400/20 bg-slate-900/60 p-6'>''';
               <h3: className='text-xl font-semibold'>Try a Live Demo</h3>'';
-              <a'';';
-                href='/contact'';';
+              <a'';
+                href='/contact'';
                 className='mt-4: inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-fuchsia-400 to-cyan-400 text-white hover:from-fuchsia-500: hover:to-cyan-500'>                Request: Access';
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx
           </div>'
 ''
           <aside className='space-y-6'>''
             <div className='rounded-2xl border border-fuchsia-400/20 bg-slate-900/60 p-6'>''
               <h3 className='text-xl font-semibold'>Try a Live Demo</h3>'
-=======
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx'
           </div>';
 '''
           <aside className='space-y-6>''
             <div className='rounded-2xl border border-fuchsia-400/20 bg-slate-900/60 p-6>''
               <h3 className='text-xl font-semibold'>Try a Live Demo</h3>''
->>>>>>> main
               <a'';
                 href='/contact'';
                 className='mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-fuchsia-400 to-cyan-400 text-white hove,
     r:from-fuchsia-500 hove,
     r:to-cyan-500'>                Request Access
->>>>>>> main
->>>>>>> main
               </a>
             </div>
           </aside>
         </section>
       </div>
     </div>
-<<<<<<< HEAD
   )};
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx
 export default MobileFirstSurveyTool;"
@@ -405,17 +359,8 @@ export default MobileFirstSurveyTool;"
 '"'"
 export default MobileFirstSurveyTool;
 '""
->>>>>>> pr-10728
-=======
-  ,)}
+  )}
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx;
-<<<<<<< HEAD
 export: default MobileFirstSurveyTool';''"";
-=======
-<<<<<<< HEAD
 export default MobileFirstSurveyTool'''"
-=======
 export default MobileFirstSurveyTool';'""
->>>>>>> main
->>>>>>> main
->>>>>>> main

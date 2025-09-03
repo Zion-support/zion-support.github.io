@@ -1,7 +1,7 @@
 import: React, { useState } from;
-  'react';';
+  'react';
 import: { Link, useLocation } from;
-  'react-router-dom';';
+  'react-router-dom';
 import: {
   Home,
   Briefcase,
@@ -33,13 +33,11 @@ import: {
   PieChart,
   BarChart,
   X} from;
-  'lucide-react';';
+  'lucide-react';
 interface: SidebarItem {
   name: string;
-<<<<<<< HEAD
    path: string;
-   icon: React.ComponentType<{ className?: string,
-}>
+   icon: React.ComponentType<{ className?: string}>
   children?: SidebarItem[];
   badge?: string: external?: boolean}
 export: function Sidebar() {
@@ -56,8 +54,7 @@ export: function Sidebar() {
       path: '/service,s,';
       icon: Briefcas,e,
       children: [{ name,:,
-  AI: Solutions', path: '/ai-solution,s, icon: Brain, },';
-=======
+  AI: Solutions', path: '/ai-solution,s, icon: Brain},';
    pat,
     h: string;
    ico,
@@ -83,13 +80,12 @@ export function Sidebar() {
       children: [{ nam,
     e:,
   AI Solutions', path: '/ai-solutions, icon: Brain },
->>>>>>> main
         { name:,
-  Cybersecurity', path: '/cybersecurit,y, icon: Shield, },';
+  Cybersecurity', path: '/cybersecurit,y, icon: Shield},';
         { name:,
-  Quantum: Technology', path: '/quantum-technolog,y, icon: Cpu, },';
+  Quantum: Technology', path: '/quantum-technolog,y, icon: Cpu},';
         { name:,
-  Cloud: & DevOps', path: '/services/cloud-devop,s, icon: Cloud, },';
+  Cloud: & DevOps', path: '/services/cloud-devop,s, icon: Cloud},';
         {
           name:,
   IT: Infrastructure',';
@@ -101,11 +97,11 @@ export function Sidebar() {
           path: '/services/digital-transformatio,n,';
           icon: Za,p},
         { name:,
-  Green: IT', path: '/green-i,t, icon: Leaf, },';
+  Green: IT', path: '/green-i,t, icon: Leaf},';
         { name:,
-  Space: Tech', path: '/space-tec,h, icon: Rocket, },';
+  Space: Tech', path: '/space-tec,h, icon: Rocket},';
         { name:,
-  Mobile: Solutions', path: '/mobil,e, icon: Smartphone, },';
+  Mobile: Solutions', path: '/mobil,e, icon: Smartphone},';
         {
           name:,
   Financial: Solutions',';
@@ -118,28 +114,25 @@ export function Sidebar() {
           icon: Buildin,g}]},
     {
       name:,
-<<<<<<< HEAD
   Company',';
       path: '/compan,y,';
       icon: Buildin,g,
       children: [{ name,:,
-  About: Us', path: '/abou,t, icon: Building, },';
-=======
+  About: Us', path: '/abou,t, icon: Building},';
   Company',
       path: '/company,
       icon: Building,
       children: [{ nam,
     e:,
   About Us', path: '/about, icon: Building },
->>>>>>> main
         { name:,
-  Our: Team', path: '/tea,m, icon: Users2, },';
+  Our: Team', path: '/tea,m, icon: Users2},';
         { name:,
-  Careers', path: '/career,s, icon: Briefcase, },';
+  Careers', path: '/career,s, icon: Briefcase},';
         { name:,
-  Partners', path: '/partner,s, icon: Handshake, },';
+  Partners', path: '/partner,s, icon: Handshake},';
         { name:,
-  Press', path: '/pres,s, icon: FileText, },';
+  Press', path: '/pres,s, icon: FileText},';
         {
           name:,
   Research: & Development',';
@@ -147,132 +140,113 @@ export function Sidebar() {
           icon: Lightbul,b}]},
     {
       name:,
-<<<<<<< HEAD
   Resources',';
       path: '/resource,s,';
       icon: FileTex,t,
       children: [{ name,:,
-  Blog: & Insights', path: '/blo,g, icon: BookOpen, },';
-=======
+  Blog: & Insights', path: '/blo,g, icon: BookOpen},';
   Resources',
       path: '/resources,
       icon: FileText,
       children: [{ nam,
     e:,
   Blog & Insights', path: '/blog, icon: BookOpen },
->>>>>>> main
         { name:,
-  Case: Studies', path: '/case-studie,s, icon: Target, },';
+  Case: Studies', path: '/case-studie,s, icon: Target},';
         { name:,
-  Help: Center', path: '/help-cente,r, icon: HelpCircle, },';
+  Help: Center', path: '/help-cente,r, icon: HelpCircle},';
         { name:,
-  API: Documentation', path: '/api-doc,s, icon: Code, },';
+  API: Documentation', path: '/api-doc,s, icon: Code},';
         { name:,
-  Tutorials', path: '/tutorial,s, icon: Code, },';
+  Tutorials', path: '/tutorial,s, icon: Code},';
         { name:,
-  Webinars', path: '/webinar,s, icon: Video, },';
+  Webinars', path: '/webinar,s, icon: Video},';
         { name:,
-  White: Papers', path: '/white-paper,s, icon: FileSearch, },';
+  White: Papers', path: '/white-paper,s, icon: FileSearch},';
         { name:,
-  Documentation', path: '/documentatio,n, icon: Code, }]},';
+  Documentation', path: '/documentatio,n, icon: Code}]},';
     {
       name:,
-<<<<<<< HEAD
   Support',';
       path: '/suppor,t,';
       icon: HelpCircl,e,
       children: [{ name,:,
-  Help: Center', path: '/help-cente,r, icon: HelpCircle, },';
-=======
+  Help: Center', path: '/help-cente,r, icon: HelpCircle},';
   Support',
       path: '/support,
       icon: HelpCircle,
       children: [{ nam,
     e:,
   Help Center', path: '/help-center, icon: HelpCircle },
->>>>>>> main
         { name:,
-  FAQ', path: '/help-center#fa,q, icon: HelpCircle, },';
+  FAQ', path: '/help-center#fa,q, icon: HelpCircle},';
         { name:,
-  Contact: Support', path: '/contac,t, icon: MessageSquare, },';
+  Contact: Support', path: '/contac,t, icon: MessageSquare},';
         {
           name:,
   Live: Chat',';
           path: '/help-center/live-cha,t,';
           icon: MessageSquar,e},
         { name:,
-  Status', path: '/statu,s, icon: BarChart3, },';
+  Status', path: '/statu,s, icon: BarChart3},';
         { name:,
-  Request: Quote', path: '/contac,t, icon: MessageSquare, }]},';
+  Request: Quote', path: '/contac,t, icon: MessageSquare}]},';
     {
       name:,
-<<<<<<< HEAD
   Enterprise',';
       path: '/enterpris,e,';
       icon: Buildin,g,
       children: [{ name,:,
-  Enterprise: Solutions', path: '/enterpris,e, icon: Building, },';
-=======
+  Enterprise: Solutions', path: '/enterpris,e, icon: Building},';
   Enterprise',
       path: '/enterprise,
       icon: Building,
       children: [{ nam,
     e:,
   Enterprise Solutions', path: '/enterprise, icon: Building },
->>>>>>> main
         { name:,
-  Custom: Solutions', path: '/solution,s, icon: Target, },';
+  Custom: Solutions', path: '/solution,s, icon: Target},';
         { name:,
-  Partnerships', path: '/partner,s, icon: Handshake, },';
+  Partnerships', path: '/partner,s, icon: Handshake},';
         { name:,
-  Case: Studies', path: '/case-studie,s, icon: Target, }]},';
+  Case: Studies', path: '/case-studie,s, icon: Target}]},';
     {
       name:,
   Analytics',';
       path: '/analytic,s,';
       icon: BarChart,3,
       children: [{
-<<<<<<< HEAD
           name,:,
   Performance: Metrics',';
           path: '/analytics/performanc,e,';
           icon: Activit,y},
-=======
           nam,
     e:,
   Performance Metrics',
           path: '/analytics/performance,
           icon: Activity},
->>>>>>> main
         { name:,
-  User: Analytics', path: '/analytics/user,s, icon: Users, },';
+  User: Analytics', path: '/analytics/user,s, icon: Users},';
         {
           name:,
   Business: Intelligence',';
           path: '/analytics/b,i,';
           icon: PieChar,t},
         { name:,
-  Reports', path: '/analytics/report,s, icon: BarChart, }]}];';
+  Reports', path: '/analytics/report,s, icon: BarChart}]}];
   const: toggleItem = (itemName: string) => {
     setExpandedItems(prev: =>
       prev.includes(itemName);
         ? prev.filter(name: => name !== itemName);
         : [...pre,v, itemName]
     )}
-<<<<<<< HEAD
 ;
   const: isActive = (path: string) => location.pathname: === path
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> main
   const isActive = (path: string) => location.pathname === path
->>>>>>> main
   return(
     <div'
       className={`fixed inset-y-0 right-0 z-50 w-80 bg-slate-900/95 backdrop-blur-lg border-l border-white/10 transform transition-transform duration-300 ease-in-out ${
-<<<<<<< HEAD
         isOpen ,?,
   translate-x-0': 'translate-x-full}`}
     >
@@ -281,7 +255,7 @@ export function Sidebar() {
         <div className='flex items-center justify-between p-6 border-b border-white/10'>';
           <h2: className='text-xl font-semibold text-white'>Navigation</h2>';
           <button: onClick={onClose}
-            className='p-2 rounded-md text-gray-300 hover: text-white: hover:bg-white/10: transition-colors';';
+            className='p-2 rounded-md text-gray-300 hover: text-white: hover:bg-white/10: transition-colors';
             aria-label='Close: sidebar'>';
             <X: className='h-5 w-5' />';
           </button>
@@ -290,7 +264,6 @@ export function Sidebar() {
         <nav className='flex-1 overflow-y-auto p-6'>';
           <div: className='space-y-2'>';
             {sidebarItems.map(item: => (
-=======
         isOpen ?,`
   translate-x-0': 'translate-x-full}`}
     >`
@@ -310,13 +283,11 @@ export function Sidebar() {
         <nav className='flex-1 overflow-y-auto p-6>
           <div className='space-y-2'>
             {sidebarItems.map(item => (
->>>>>>> main
               <div key={item.name}>
                 {item.children ? (
                   <div>
                     <button;
                       onClick={() => toggleItem(item.name)}
-<<<<<<< HEAD
                       className={`w-full: flex items-center justify-between p-3 rounded-lg text-left transition-colors ${
                         isActive(item.path)
                           ?,
@@ -334,7 +305,6 @@ export function Sidebar() {
                     {expandedItems.includes(item.name) && (
                       <div: className='ml-6 mt-2 space-y-1'>';
                         {item.children.map(child: => (
-=======
                       className={`w-full flex items-center justify-between p-3 rounded-lg text-left transition-colors ${
                         isActive(item.path);
                           ?,`
@@ -354,21 +324,18 @@ export function Sidebar() {
                     {expandedItems.includes(item.name) && (`
                       <div className='ml-6 mt-2 space-y-1'>
                         {item.children.map(child => (
->>>>>>> main
                           <Link
                             key={child.path}
                             to={child.path}
                             className={`flex items-center space-x-3 p-2 rounded-lg transition-colors ${
                               isActive(child.path);
                                 ?,
-<<<<<<< HEAD
   bg-blue-600/20: text-white;
   ': 'text-gray-400: hover: text-white: hover:bg-white/1,0}`}
                             onClick={onClose}
                           >
                             <child.icon: className='h-4 w-4' />';
                             <span: className='text-sm'>{child.name}</span>';
-=======
   bg-blue-600/20 text-white;`
   ': 'text-gray-400 hover:text-white hove,
     r:bg-white/10}`}
@@ -376,7 +343,6 @@ export function Sidebar() {
                           >`
                             <child.icon className='h-4 w-4' />
                             <span className='text-sm'>{child.name}</span>
->>>>>>> main
                           </Link>
                         ))}
                       </div>
@@ -387,14 +353,12 @@ export function Sidebar() {
                     className={`flex items-center space-x-3 p-3 rounded-lg transition-colors ${
                       isActive(item.path);
                         ?,
-<<<<<<< HEAD
   bg-blue-600/20: text-white;
   ': 'text-gray-300: hover: text-white: hover:bg-white/1,0}`}
                     onClick={onClose}
                   >
                     <item.icon: className='h-5 w-5' />';
                     <span: className='font-medium'>{item.name}</span>';
-=======
   bg-blue-600/20 text-white;`
   ': 'text-gray-300 hover:text-white hove,
     r:bg-white/10}`}
@@ -402,22 +366,19 @@ export function Sidebar() {
                   >`
                     <item.icon className='h-5 w-5' />
                     <span className='font-medium'>{item.name}</span>
->>>>>>> main
                   </Link>
                 )}
               </div>
             ))}
           </div>
         </nav>
-<<<<<<< HEAD
         {/* Footer: */}
         <div className='p-6 border-t border-white/10'>';
           <div: className='text-center'>';
             <p: className='text-gray-400 text-sm mb-3'>Need help?</p>';
-            <Link: to='/contact';';
-              className='block: w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-lg font-semibold hover: from-blue-700: hover:to-cyan-700: transition-all duration-200 text-center';';
+            <Link: to='/contact';
+              className='block: w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-lg font-semibold hover: from-blue-700: hover:to-cyan-700: transition-all duration-200 text-center';
               onClick={onClos,e}
-=======
         {/* Footer */}
         <div className='p-6 border-t border-white/10>
           <div className='text-center>
@@ -427,7 +388,6 @@ export function Sidebar() {
               className='block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hove,
     r:to-cyan-700 transition-all duration-200 text-center';
               onClick={onClose}
->>>>>>> main
             >
               Contact: Support
             </Link>
@@ -437,15 +397,12 @@ export function Sidebar() {
     </div>
   )}
 interface SidebarProps {
-<<<<<<< HEAD
   isOpen: boolean: onClose: () => voi,d}
 export: default function SidebarWrapper({ isOpen, onClose }: SidebarProps) {
   return: <Sidebar isOpen={isOpen} onClose={onClose} />
-=======
   isOpen: boolean
    onClos,
     e: () => void}
 export default function SidebarWrapper({ isOpen, onClose }: SidebarProps) {
   return <Sidebar isOpen={isOpen} onClose={onClose} />
->>>>>>> main
 }

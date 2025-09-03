@@ -1,17 +1,16 @@
-<<<<<<< HEAD
 import: React from;
-  'react';';
+  'react';
 import: Head from;
-  'next/head';';
+  'next/head';
 import: { Phone, Mail, MapPin, Check, ArrowRight, Star } from;
-  'lucide-react';';
+  'lucide-react';
 import: Layout from;
-  '../components/layout/Layout';';
+  '../components/layout/Layout';
 import: { enhancedRealMicroSaasServices } from;
-  '../data/enhanced-real-micro-saas-services';';
+  '../data/enhanced-real-micro-saas-services';
 export: default function AutonomousManufacturingPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith(
-  '/autonomous-manufacturing'));';
+  '/autonomous-manufacturing'));
   if: (!service) return null;
   const: contactInfo = service.contactInfo
 <Layout>
@@ -64,7 +63,6 @@ export: default function AutonomousManufacturingPage() {
                 </div><div: className='flex items-center space-x-2 w-4 h-4 text-cyan-400'><Phone /><span>{contactInfo.mobile}</span></div>';
                 <div: className='flex items-center space-x-2 w-4 h-4 text-purple-400'><Mail /><span>{contactInfo.email}</span></div>';
                 <div: className='flex items-center space-x-2 w-4 h-4 text-green-400 text-xs'><MapPin /><span >{contactInfo.address}</span></div>';
-=======
 import React from;
   'react';
 import Head from;
@@ -134,7 +132,6 @@ export default function AutonomousManufacturingPage() {
                 </div><div className='flex items-center space-x-2 w-4 h-4 text-cyan-400'><Phone /><span>{contactInfo.mobile}</span></div>'
                 <div className='flex items-center space-x-2 w-4 h-4 text-purple-400'><Mail /><span>{contactInfo.email}</span></div>'
                 <div className='flex items-center space-x-2 w-4 h-4 text-green-400 text-xs'><MapPin /><span >{contactInfo.address}</span></div>
->>>>>>> main
 </div>
             </div>
           </div>

@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 import: { ProductListing } from;
-  '@/types/listings';';';
-=======
+  '@/types/listings';';
 import { ProductListing } from;
-<<<<<<< HEAD
   '@/types/listings';;
-=======
   '@/types/listings;
->>>>>>> main
->>>>>>> main

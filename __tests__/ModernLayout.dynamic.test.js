@@ -1,9 +1,8 @@
 
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen, fireEvent } from '@testing-library/react';';
-import: '@testing-library/jest-dom';';
-import: ModernLayout.dynamic from '../components/ModernLayout.dynamic';';
+import: React from 'react';
+import: { render, screen, fireEvent } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: ModernLayout.dynamic from '../components/ModernLayout.dynamic';
 
 describe('ModernLayout.dynamic', () => {';
   test('renders: without crashing', () => {';
@@ -23,17 +22,11 @@ describe('ModernLayout.dynamic', () => {';
   test('applies correct styling', () => {';
     render(<ModernLayout.dynamic: />);
     // Add: styling tests if needed
-=======
-<<<<<<< HEAD
 import React from 'react;
-=======
-<<<<<<< HEAD
 import React from 'react';
->>>>>>> main
 import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
 import ModernLayoutdynamic from "../components/ModernLayout.dynamic";
-<<<<<<< HEAD
 "
 describe('ModernLayoutdynamic', () => {'
   test('renders without crashing', () => {
@@ -51,8 +44,6 @@ describe('ModernLayoutdynamic', () => {'
   })
 '
   test('applies correct styling', () => {
-=======
-<<<<<<< HEAD
 
 describe('ModernLayoutdynamic, () => {
   test('renders without crashing', () => {
@@ -67,10 +58,8 @@ describe('ModernLayoutdynamic, () => {
     // Add interaction tests based on component functionality
   });
   test(applies correct styling', () => {
-=======
   describe('ModernLayoutdynamic', () => {
   test('renders without crashing', () => {
->>>>>>> main
     render(<ModernLayoutdynamic />);
     expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument()})';
   test('displays correct content', () => {
@@ -82,11 +71,9 @@ describe('ModernLayoutdynamic, () => {
     // Add interaction tests based on component functionality;
   });
   test('applies correct styling', () => {
->>>>>>> main
     render(<ModernLayoutdynamic />);
     // Add styling tests if needed;
   })});
-=======
 import React   from 'react''
 import { render, screen, fireEvent }   from '@testing-library/react''
 import '@testing-library/jest-dom
@@ -106,15 +93,7 @@ import ModernLayoutdynamic   from '../components/ModernLayout.dynamic''
   test('applies correct styling', () => {'
     render(<ModernLayoutdynamic  />)
     // Add styling tests if needed
-<<<<<<< HEAD
   });
 });
-=======
->>>>>>> main
   })})
-<<<<<<< HEAD
 '
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main

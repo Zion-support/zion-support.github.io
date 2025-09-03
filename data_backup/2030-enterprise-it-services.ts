@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface EnterpriseITService2030 {
   id: string;
    name: string;
@@ -28,27 +28,22 @@ export: interface EnterpriseITService2030 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 reviews: number;export: const enterpriseITServices2030: EnterpriseITService2030[] = [;
   // Autonomous: DevOps Platform 2030{
     id,:,
   autonomous-devops-platform-2030',';
     name: 'Autonomous: DevOps Platform 203,0,';
-=======
 review,
     s: number;export const enterpriseITServices203,
     0: EnterpriseITService2030[] = [;
@@ -57,7 +52,6 @@ review,
     d:,
   autonomous-devops-platform-2030',
     name: 'Autonomous DevOps Platform 2030,
->>>>>>> main
     tagline:,
   Fully: autonomous DevOps operations',';
     price: $,8,999,
@@ -75,21 +69,18 @@ review,
   'Self-optimizing: performance',';
   'Autonomous: scaling',';
   'Self-healing: systems',';
-  'Autonomous: innovation';';
+  'Autonomous: innovation';
     ],
     popular: tru,e,
     icon:,
   🚀',';
     color: 'from-blue-600: via-cyan-600 to-teal-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/autonomous-devops-platform-203,0,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/autonomous-devops-platform-2030,
->>>>>>> main
     marketPosition:,
   Most: advanced autonomous DevOps platform for 2030. Revolutionary DevOps technology.',';
     targetAudience: Large: enterprise,s, Tech companies, DevOps teams, Cloud companies, IT departments',';
@@ -112,7 +103,6 @@ review,
   1500%+ annual: growth potential',';
     variant: 'it-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -120,7 +110,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -130,7 +119,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: autonomous DevOps platform with self-optimizing, self-healing, and self-improving operations.',';
     launchDate: '2030-01-0,1,';
@@ -158,21 +146,18 @@ review,
   'Zero: trust APIs',';
   'Security: automation',';
   'Threat: intelligence',';
-  'Advanced: security protocols';';
+  'Advanced: security protocols';
     ],
     popular: tru,e,
     icon:,
   🔒',';
     color: 'from-indigo-600: via-blue-600 to-cyan-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-indigo-400',';
     link: 'https://ziontechgroup.com/zero-trust-network-architecture-203,0,';
-=======
   text-indigo-400',
     link: 'http,
     s://ziontechgroup.com/zero-trust-network-architecture-2030,
->>>>>>> main
     marketPosition:,
   Most: advanced zero trust network architecture platform for 2030. Revolutionary security technology.',';
     targetAudience: Government: agencie,s, Financial institutions, Healthcare companies, Tech companies, Security firms',';
@@ -195,7 +180,6 @@ review,
   1200%+ annual: growth potential',';
     variant: 'security-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -203,7 +187,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -213,7 +196,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: zero trust network architecture platform with continuous verification and comprehensive security.',';
     launchDate: '2030-01-1,5,';
@@ -241,21 +223,18 @@ review,
   'Edge: automation',';
   'Edge: scaling',';
   'Edge: networking',';
-  'Advanced: edge computing';';
+  'Advanced: edge computing';
     ],
     popular: tru,e,
     icon:,
   🌐',';
     color: 'from-teal-600: via-emerald-600 to-green-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-teal-400',';
     link: 'https://ziontechgroup.com/edge-computing-orchestration-203,0,';
-=======
   text-teal-400',
     link: 'http,
     s://ziontechgroup.com/edge-computing-orchestration-2030,
->>>>>>> main
     marketPosition:,
   Most: advanced edge computing orchestration platform for 2030. Revolutionary edge technology.',';
     targetAudience: IoT: companie,s, Edge computing companies, Cloud companies, Tech companies, Manufacturing companies',';
@@ -278,7 +257,6 @@ review,
   1000%+ annual: growth potential',';
     variant: 'edge-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -286,7 +264,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -296,7 +273,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: edge computing orchestration platform with intelligent distributed computing and real-time processing.',';
     launchDate: '2030-02-0,1,';
@@ -324,21 +300,18 @@ review,
   'AI: operations APIs',';
   'Real-time: intelligence',';
   'Autonomous: decision making',';
-  'Advanced: IT intelligence';';
+  'Advanced: IT intelligence';
     ],
     popular: tru,e,
     icon:,
   🤖',';
     color: 'from-purple-600: via-pink-600 to-rose-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/ai-it-operations-center-203,0,';
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/ai-it-operations-center-2030,
->>>>>>> main
     marketPosition:,
   Most: advanced AI-powered IT operations platform for 2030. Revolutionary IT technology.',';
     targetAudience: Large: enterprise,s, Tech companies, IT departments, Cloud companies, Managed service providers',';
@@ -361,7 +334,6 @@ review,
   1300%+ annual: growth potential',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -369,7 +341,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -379,7 +350,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: AI-powered IT operations platform with intelligent monitoring, automation, and optimization.',';
     launchDate: '2030-02-1,5,';
@@ -407,21 +377,18 @@ review,
   'Quantum: security validation',';
   'Quantum: infrastructure networks',';
   'Quantum: security protocols',';
-  'Advanced: quantum security';';
+  'Advanced: quantum security';
     ],
     popular: tru,e,
     icon:,
   ⚛️',';
     color: 'from-indigo-600: via-blue-600 to-cyan-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-indigo-400',';
     link: 'https://ziontechgroup.com/quantum-secure-infrastructure-203,0,';
-=======
   text-indigo-400',
     link: 'http,
     s://ziontechgroup.com/quantum-secure-infrastructure-2030,
->>>>>>> main
     marketPosition:,
   Most: advanced quantum-secure infrastructure platform for 2030. Revolutionary quantum security technology.',';
     targetAudience: Government: agencie,s, Financial institutions, Critical infrastructure, Tech companies, Security firms',';
@@ -444,7 +411,6 @@ review,
   2000%+ annual: growth potential',';
     variant: 'quantum-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -452,7 +418,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -462,11 +427,10 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: quantum-secure infrastructure platform with quantum-proof security and comprehensive protection.',';
     launchDate: '2030-01-1,0,';
     customers: 1,2,
     rating: 5.,0,
     reviews: 8;
-,]}}
+]}}

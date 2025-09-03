@@ -1,32 +1,22 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD:pages/solutions/index.tsx
+:pages/solutions/index.tsx
 import SEO from '../../src/components/SEO';
 import { Card } from '../../src/components/ui/Card';
 import { Button } from '../../src/components/ui/Button';
 import { Badge } from '../../src/components/ui/Badge';
-=======
-<<<<<<< HEAD:solutions.disabled/index.tsx
+:solutions.disabled/index.tsx
 // import SEO from '../../components/SEO';
-=======
-<<<<<<< HEAD
 import SEOHead from '../../components/SEOHead';
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> main:pages/solutions/index.tsx
+:pages/solutions/index.tsx
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
->>>>>>> main
 import { Badge } from '../../components/ui/Badge';
-<<<<<<< HEAD
-=======
 import { Button } from '../../components/ui/Button';
 import { Card } from '../../components/ui/Card';
->>>>>>> main:solutions.disabled/index.tsx
+:solutions.disabled/index.tsx
 import {
   Brain,
   Mail,
@@ -42,10 +32,8 @@ import {
   Users,
   Target,
   Lightbulb,
-  TrendingUp,
-} from 'lucide-react';
+  TrendingUp} from 'lucide-react';
 
->>>>>>> main
 export default function Solutions() {
   const solutions = [
   {
@@ -54,185 +42,133 @@ export default function Solutions() {
       description:'
         'Automated content generation using advanced AI models for blogs, social media, and marketing materials.',
       href: '/solutions/ai-content-creation',
-<<<<<<< HEAD:pages/solutions/index.tsx
+:pages/solutions/index.tsx
       features: ['
-=======
       features: [
-<<<<<<< HEAD
->>>>>>> main:solutions.disabled/index.tsx
+:solutions.disabled/index.tsx
         'Blog Post Generation',
         'Social Media Content',
         'SEO Optimization',
         'Multi-language Support',
-=======
-        'Blog Post Generation,Social Media Content,Multi-language Support',
->>>>>>> main
-      ],
-      pricing: 'Starting at $299/month',
-    },
+        'Blog Post Generation,Social Media Content,Multi-language Support'],
+      pricing: 'Starting at $299/month'},
     {
       icon: Mail,
       title: 'Email Automation',
       description:'
         'Intelligent email marketing automation with personalized campaigns and advanced analytics.',
       href: '/solutions/email-automation',
-<<<<<<< HEAD:pages/solutions/index.tsx
+:pages/solutions/index.tsx
       features: ['
-=======
       features: [
-<<<<<<< HEAD
->>>>>>> main:solutions.disabled/index.tsx
+:solutions.disabled/index.tsx
         'Drip Campaigns',
         'Personalization',
         'A/B Testing',
         'Analytics Dashboard',
-=======
-        'Drip Campaigns,Personalization,A/B Testing,Analytics Dashboard',
->>>>>>> main
-      ],
-      pricing: 'Starting at $199/month',
-    },
+        'Drip Campaigns,Personalization,A/B Testing,Analytics Dashboard'],
+      pricing: 'Starting at $199/month'},
     {
       icon: Headphones,
       title: 'Customer Support Platform',
       description:'
         'AI-powered customer support system with chatbots, ticket management, and knowledge base.',
       href: '/solutions/customer-support',
-<<<<<<< HEAD:pages/solutions/index.tsx
+:pages/solutions/index.tsx
       features: ['
-=======
       features: [
-<<<<<<< HEAD
->>>>>>> main:solutions.disabled/index.tsx
+:solutions.disabled/index.tsx
         'AI Chatbots',
         'Ticket Management',
         'Knowledge Base',
         'Multi-channel Support',
-=======
-        'AI Chatbots,Ticket Management,Knowledge Base,Multi-channel Support',
->>>>>>> main
-      ],
-      pricing: 'Starting at $399/month',
-    },
+        'AI Chatbots,Ticket Management,Knowledge Base,Multi-channel Support'],
+      pricing: 'Starting at $399/month'},
     {
       icon: Calendar,
       title: 'Event Management',
       description:'
         'Comprehensive event management platform with registration, ticketing, and attendee management.',
       href: '/solutions/event-management',
-<<<<<<< HEAD:pages/solutions/index.tsx
+:pages/solutions/index.tsx
       features: ['
-=======
       features: [
-<<<<<<< HEAD
->>>>>>> main:solutions.disabled/index.tsx
+:solutions.disabled/index.tsx
         'Event Registration',
         'Ticketing System',
         'Attendee Management',
         'Analytics',
-=======
-        'Event Registration,Ticketing System,Attendee Management,Analytics',
->>>>>>> main
-      ],
-      pricing: 'Starting at $149/month',
-    },
+        'Event Registration,Ticketing System,Attendee Management,Analytics'],
+      pricing: 'Starting at $149/month'},
     {
       icon: FolderKanban,
       title: 'Project Management',
       description:'
         'Advanced project management tools with team collaboration, task tracking, and reporting.',
       href: '/solutions/project-management',
-<<<<<<< HEAD:pages/solutions/index.tsx
+:pages/solutions/index.tsx
       features: ['
-=======
       features: [
-<<<<<<< HEAD
->>>>>>> main:solutions.disabled/index.tsx
+:solutions.disabled/index.tsx
         'Task Management',
         'Team Collaboration',
         'Time Tracking',
         'Reporting',
-=======
-        'Task Management,Team Collaboration,Time Tracking,Reporting',
->>>>>>> main
-      ],
-      pricing: 'Starting at $99/month',
-    },
+        'Task Management,Team Collaboration,Time Tracking,Reporting'],
+      pricing: 'Starting at $99/month'},
     {
       icon: Workflow,
       title: 'Workflow Automation',
       description:'
         'Streamline business processes with custom workflow automation and integration capabilities.',
       href: '/solutions/workflow-automation',
-<<<<<<< HEAD:pages/solutions/index.tsx
+:pages/solutions/index.tsx
       features: ['
-=======
       features: [
-<<<<<<< HEAD
->>>>>>> main:solutions.disabled/index.tsx
+:solutions.disabled/index.tsx
         'Process Automation',
         'Integration APIs',
         'Custom Workflows',
         'Monitoring',
-=======
-        'Process Automation,Integration APIs,Custom Workflows,Monitoring',
->>>>>>> main
-      ],
-      pricing: 'Starting at $249/month',
-    },
-  ];
+        'Process Automation,Integration APIs,Custom Workflows,Monitoring'],
+      pricing: 'Starting at $249/month'}];
 
   const benefits = [
   {
       icon: Zap,
       title: 'Lightning Fast Setup',
-      description: 'Get your solution up and running in minutes, not months.',
-    },
+      description: 'Get your solution up and running in minutes, not months.'},
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with 99.9% uptime guarantee.',
-    },
+      description: 'Bank-level security with 99.9% uptime guarantee.'},
     {
       icon: Users,
       title: '24/7 Support',
-      description: 'Round-the-clock support from our expert team.',
-    },
+      description: 'Round-the-clock support from our expert team.'},
     {
       icon: TrendingUp,
       title: 'Scalable Solutions',
-      description: 'Grow with confidence as your business expands.',
-    },
-  ];
+      description: 'Grow with confidence as your business expands.'}];
 
   return (
     <>
-<<<<<<< HEAD:pages/solutions/index.tsx
+:pages/solutions/index.tsx
       <SEO'
         title="Solutions - Zion Tech Group""
         description="Comprehensive technology solutions for modern businesses. AI-powered tools, automation platforms, and custom software solutions.""
-=======
-<<<<<<< HEAD
       <SEOHead
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       <SEO
->>>>>>> main
         title="Solutions - Zion Tech Group"
         description="Comprehensive technology solutions for modern businesses. AI-powered tools, automation platforms, and custom software solutions."
->>>>>>> main:solutions.disabled/index.tsx
+:solutions.disabled/index.tsx
         keywords="solutions, AI tools, automation, software, business solutions, technology"
       />
-=======
->>>>>>> main
->>>>>>> main
       <Head>
         <title>Solutions - Zion Tech Group</title>
       </Head>
 
-<<<<<<< HEAD:pages/solutions/index.tsx
+:pages/solutions/index.tsx
       {/* Hero Section */}"
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -246,7 +182,6 @@ export default function Solutions() {
     d:text-6xl font-bold mb-6">
               Technology Solutions for"
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">"
-=======
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -258,7 +193,7 @@ export default function Solutions() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Technology Solutions for
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
->>>>>>> main:solutions.disabled/index.tsx
+:solutions.disabled/index.tsx
                 {' '}
                 Modern Business
               </span>

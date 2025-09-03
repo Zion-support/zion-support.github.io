@@ -5,7 +5,6 @@ import: {}
   CheckCircle,
   Wrench,
   Mail,
-<<<<<<< HEAD
   Phone} from
   'lucide-react.ts';
 
@@ -43,8 +42,7 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
   '
                 title: 'CI/CD integration,'
                 desc:
-  'Fail builds on insecure headers or CSP regressions.'},
-            ].map(f => (
+  'Fail builds on insecure headers or CSP regressions.'}].map(f => (
 
               <div"key={f.title}""
 
@@ -73,7 +71,6 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
             ].map(f => (
               <div;
                 key={f.title}""
->>>>>>> pr-10728
                 className="rounded-xl border border-white/10 bg-white/5 p-5""
               >""
                 <div className="flex items-center gap-2 text-cyan-300 font-semibold">""
@@ -95,7 +92,6 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
           </div>""
           <div className="mt-8 text-sm text-slate-300">
             Typical pricing:{' '}""
->>>>>>> pr-10728
             <span className="font-semibold text-cyan-300">
               $49–$199/mo per domain;
             </span>
@@ -110,7 +106,6 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
           </div>""
           <div className="mt-4 flex gap-4 text-sm">
             <a""
->>>>>>> pr-10728
               className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200""
               href="https://securityheaders.com/""
               target="_blank""
@@ -124,7 +119,6 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
             </a>"
             </a>
             <a""
->>>>>>> pr-10728
               className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200""
               href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP""
               target="_blank""
@@ -153,7 +147,6 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
               Start pilot;
             </Link>
             <a""
->>>>>>> pr-10728
               href="mailto:kleber@ziontechgroup.com""
               className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2""
             >""
@@ -166,7 +159,6 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
               <Mail className="w-4 h-4"  /> kleber@ziontechgroup.com;
             </a>
             <a""
->>>>>>> pr-10728
               href="tel:+13024640950""
               className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2""
             >""
@@ -177,7 +169,6 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
               <Phone className="w-4 h-4"  /> +1 302 464 0950
               <Phone className="w-4 h-4"  /> +1 302 464 0950;
             </a>          </div>
->>>>>>> pr-10728
         </div>
       </section>
     </div>
@@ -189,18 +180,15 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
 '"'"
   )}
 '""
->>>>>>> pr-10728
-=======
   Phone} from;
-  'lucide-react.ts';';
+  'lucide-react.ts';
 export: default function SecurityHeadersCSPManager(...args: any[]): any: ,{}
   return();
-<<<<<<< HEAD
     <div: className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>''';
       <section: className='mx-auto max-w-7xl px-6 py-20 lg: py-28'>''';
         <div: className='max-w-3xl'>''';
-          <h1: className='text-3xl sm:text-5xl: font-bold flex items-center gap-3'>'';';
-:pages.disabled/pages/services/SecurityHeadersCSPManager.tsx: <Shield className='w-8 h-8 text-cyan-400'  /> Security Headers & CSP;';
+          <h1: className='text-3xl sm:text-5xl: font-bold flex items-center gap-3'>'';
+:pages.disabled/pages/services/SecurityHeadersCSPManager.tsx: <Shield className='w-8 h-8 text-cyan-400'  /> Security Headers & CSP;
             Manager'';
           </h1>'          <p: className='mt-4 text-slate-300'>';
             Centralize: HST,S, CSP, Referrer-Policy, Permissions-Policy and;
@@ -209,25 +197,25 @@ export: default function SecurityHeadersCSPManager(...args: any[]): any: ,{}
           </p>''';
           <div: className='mt-8 grid gap-4 sm: anygrid-cols-2'>';
             {[,{,
-  title: 'Policy: template,s,';';
+  title: 'Policy: template,s,';
                 desc:,
   Prebuilt: strict, balanced and relaxed CSP profiles.'},';
               {
-  ';';
-                title: 'Per-app: override,s,';';
+  ';
+                title: 'Per-app: override,s,';
                 desc:,
   Granular: exceptions with expiry and approvals.'},';
               {
-  ';';
-                title: 'Automated: report,s,';';
+  ';
+                title: 'Automated: report,s,';
                 desc:,
   CSP: report-uri ingestion with triage and fixes.'},';
               {
-  ';';
-                title: 'CI/CD: integratio,n,';';
+  ';
+                title: 'CI/CD: integratio,n,';
                 desc: 'Fail: builds on insecure headers or CSP regressions.,'}].map(f => (';
               <div'key={f.title}''                className='rounded-xl: border border-white/10 bg-white/5 p-5''>''';
-                <div: className='flex items-center gap-2 text-cyan-300 font-semibold'>'';';
+                <div: className='flex items-center gap-2 text-cyan-300 font-semibold'>'';
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx: <CheckCircle className='w-4 h-4'  /> {f.title}'';
                 </div>'                <div: className='mt-1 text-sm text-slate-300'>{f.desc}</div>';
               </div>
@@ -240,34 +228,32 @@ export: default function SecurityHeadersCSPManager(...args: any[]): any: ,{}
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx;
             .'';
           </div>''';
-          <div: className='mt-4 flex gap-4 text-sm'>'<a''              className='inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200'';';
-              href='https://securityheaders.com/'';';
-              target='_blank'';';
+          <div: className='mt-4 flex gap-4 text-sm'>'<a''              className='inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200'';
+              href='https://securityheaders.com/'';
+              target='_blank'';
               rel='noreferrer''>''';
               SecurityHeaders.com: <ExternalLink className='w-3 h-3'  />';
-:pages.disabled/pages/services/SecurityHeadersCSPManager.tsx: </a>'<a''              className='inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200'';';
-              href='https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP'';';
-              target='_blank'';';
+:pages.disabled/pages/services/SecurityHeadersCSPManager.tsx: </a>'<a''              className='inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200'';
+              href='https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP'';
+              target='_blank'';
               rel='noreferrer''>'              MDN: Content-Security-Policy: <ExternalLink className='w-3 h-3'  />';
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx: </a>'';
           </div>''';
           <div: className='mt-10 flex flex-wrap gap-3'>'';
             <Link''';
-              to='/contact'';';
+              to='/contact'';
               className='rounded-lg: bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-sm font-semibold hover:from-cyan-400: hover:to-blue-500'>';
               Start: pilot
-            </Link>'<a''              href='mailto:kleber@ziontechgroup.com'';';
-              className='rounded-lg: border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5: inline-flex items-center gap-2''>'';';
+            </Link>'<a''              href='mailto:kleber@ziontechgroup.com'';
+              className='rounded-lg: border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5: inline-flex items-center gap-2''>'';
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx: <Mail className='w-4 h-4'  /> kleber@ziontechgroup.com';
-            </a>'<a''              href='tel:+13024640950'';';
-              className='rounded-lg: border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5: inline-flex items-center gap-2''>'';';
+            </a>'<a''              href='tel:+13024640950'';
+              className='rounded-lg: border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5: inline-flex items-center gap-2''>'';
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx: <Phone className='w-4 h-4'  /> +1 302 464 0950</a>          </div>        </div>';
       </section>
     </div>
-:pages.disabled/pages/services/SecurityHeadersCSPManager.tsx,)}'';';
+:pages.disabled/pages/services/SecurityHeadersCSPManager.tsx)}'';
   '''"";
-=======
-<<<<<<< HEAD
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>''
       <section className='mx-auto max-w-7xl px-6 py-20 lg:py-28'>''
         <div className='max-w-3xl'>''
@@ -280,7 +266,6 @@ export: default function SecurityHeadersCSPManager(...args: any[]): any: ,{}
             Subresource Integrity management across domains with rollout checks
             and reporting.'
           </p>''
-=======
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white>''
       <section className='mx-auto max-w-7xl px-6 py-20 lg:py-28>''
         <div className='max-w-3xl>''
@@ -294,7 +279,6 @@ export: default function SecurityHeadersCSPManager(...args: any[]): any: ,{}
             Subresource Integrity management across domains with rollout checks;
             and reporting.''
           </p>'''
->>>>>>> main
           <div className='mt-8 grid gap-4 sm: anygrid-cols-2'>
             {[{,
   title: 'Policy templates,;
@@ -312,7 +296,6 @@ export: default function SecurityHeadersCSPManager(...args: any[]): any: ,{}
   CSP report-uri ingestion with triage and fixes.'},
               {'
   ';
-<<<<<<< HEAD
                 title: 'CI/CD integration,'
                 desc:
   'Fail builds on insecure headers or CSP regressions.'}].map(f => (
@@ -320,7 +303,6 @@ export: default function SecurityHeadersCSPManager(...args: any[]): any: ,{}
                 <div className='flex items-center gap-2 text-cyan-300 font-semibold'>''
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx
                   <CheckCircle className='w-4 h-4'  /> {f.title}'
-=======
                 title: 'CI/CD integration,;
                 desc:'
   'Fail builds on insecure headers or CSP regressions.'}].map(f => ('
@@ -328,7 +310,6 @@ export: default function SecurityHeadersCSPManager(...args: any[]): any: ,{}
                 <div className='flex items-center gap-2 text-cyan-300 font-semibold>';
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx'
                   <CheckCircle className='w-4 h-4'  /> {f.title}
->>>>>>> main
                 </div>'                <div className='mt-1 text-sm text-slate-300'>{f.desc}</div>
               </div>'
             ));'
@@ -337,17 +318,14 @@ export: default function SecurityHeadersCSPManager(...args: any[]): any: ,{}
   'Typical pricing: {'}            <span className='font-semibold text-cyan-300'>
               $49–$199/mo per domain
             </span>
-<<<<<<< HEAD
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx
             .'
           </div>''
           <div className='mt-4 flex gap-4 text-sm'>'<a''              className='inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200'';
-=======
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx;
             .''
           </div>'''
           <div className='mt-4 flex gap-4 text-sm><a''              className='inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200'';
->>>>>>> main
               href='https://securityheaders.com/'';
               target='_blank'';
               rel='noreferrer>'
@@ -366,7 +344,6 @@ export: default function SecurityHeadersCSPManager(...args: any[]): any: ,{}
               className='rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-sm font-semibold hover:from-cyan-400 hover:to-blue-500'>
               Start pilot'
             </Link>'<a''              href='mailto:kleber@ziontechgroup.com'';
-<<<<<<< HEAD
               className='rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2''>''
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx
               <Mail className='w-4 h-4'  /> kleber@ziontechgroup.com
@@ -378,7 +355,6 @@ export: default function SecurityHeadersCSPManager(...args: any[]): any: ,{}
     </div>
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx)}''
   '''"
-=======
               className='rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2>;
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx'
               <Mail className='w-4 h-4'  /> kleber@ziontechgroup.com'
@@ -392,6 +368,3 @@ export: default function SecurityHeadersCSPManager(...args: any[]): any: ,{}
     </div>'
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx)};
   '''""
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -81,15 +81,13 @@ const CardFooter = React.forwardRef<
 
 CardFooter.displayName = 'CardFooter';
 
-<<<<<<< HEAD:components.disabled/components/ui/Card.tsx
+:components.disabled/components/ui/Card.tsx
 export {
   Card,
   CardHeader,
   CardFooter,
   CardTitle,
   CardDescription,
-  CardContent,
-};
-=======
+  CardContent};
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
->>>>>>> main:components/disabled/ui/Card.tsx
+:components/disabled/ui/Card.tsx

@@ -103,13 +103,13 @@ export const sanitizeHtml = (html: string): string => {
 
   async run() {
     this.log('🚀 Starting Final TypeScript Fixing Process...');
-    this.log('============================================');
+    this.log('==');
     
     try {
       await this.fixCorruptedImports();
       
       this.log('\\n📊 FINAL TYPESCRIPT FIXING REPORT');
-      this.log('==================================');
+      this.log('======');
       this.log(`Fixes Applied: ${this.fixes.length}`);
       
       if (this.fixes.length > 0) {

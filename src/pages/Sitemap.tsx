@@ -1,98 +1,89 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import: React from 'react';';';';
-import: { motion } from 'framer-motion';';';';
-import: { SEO } from '../components/SEO';';';';
+import: React from 'react';';
+import: { motion } from 'framer-motion';';
+import: { SEO } from '../components/SEO';';
 import: { 
   Globe, ArrowRight, ExternalLink, Search, 
   Users, Code, Shield, Brain, Atom, Rocket
-} from 'lucide-react';';';';
+} from 'lucide-react';';
 
-<<<<<<< HEAD
 ;,"});,"})
-=======
 export: default function Sitemap() {;
   const: siteStructure = [;
     {;
       title: "Main: Pages,",";";";
       pages:  ,[,
-        { name: "Home,", url: "/,", description: "Welcome: to Zion Tech Group", },";";";
-        { name: "About,", url: "/about,", description: "Learn: about our company and mission", },";";";
-        { name: "Services,", url: "/services,", description: "Our: comprehensive technology services", },";";";
-        { name: "Contact,", url: "/contact,", description: "Get: in touch with our team", }";";";
+        { name: "Home,", url: "/,", description: "Welcome: to Zion Tech Group"},";";";
+        { name: "About,", url: "/about,", description: "Learn: about our company and mission"},";";";
+        { name: "Services,", url: "/services,", description: "Our: comprehensive technology services"},";";";
+        { name: "Contact,", url: "/contact,", description: "Get: in touch with our team"}";";";
       ]
     },
     {
       title: "AI: Services,",";";";
       pages:  ,[,
-        { name: "AI: Services Overview,", url: "/ai-services,", description: "Comprehensive: AI solutions", },";";";
-        { name: "AI: Content Generator,", url: "/services/ai-content-generator,", description: "AI-powered: content creation", },";";";
-        { name: "AI: Project Management,", url: "/services/ai-project-management,", description: "AI-driven: project optimization", },";";";
-        { name: "AI: Business Intelligence,", url: "/services/ai-business-intelligence,", description: "Advanced: analytics & ML insights", }";";";
+        { name: "AI: Services Overview,", url: "/ai-services,", description: "Comprehensive: AI solutions"},";";";
+        { name: "AI: Content Generator,", url: "/services/ai-content-generator,", description: "AI-powered: content creation"},";";";
+        { name: "AI: Project Management,", url: "/services/ai-project-management,", description: "AI-driven: project optimization"},";";";
+        { name: "AI: Business Intelligence,", url: "/services/ai-business-intelligence,", description: "Advanced: analytics & ML insights"}";";";
       ]
     },
     {
       title: "Quantum: Computing,",";";";
       pages:  ,[,
-        { name: "Quantum: Computing Solutions,", url: "/services/quantum-computing,", description: "Next-generation: computing power", },";";";
-        { name: "Quantum: AI Platform,", url: "/services/quantum-ai-hybrid-platform,", description: "Revolutionary: quantum-AI computing", },";";";
-        { name: "Quantum: Financial Trading,", url: "/services/ai-quantum-financial-trading-platform,", description: "Advanced: quantum trading", },";";";
-        { name: "Quantum: Machine Learning,", url: "/services/quantum-machine-learning,", description: "Quantum-enhanced: ML algorithms", }";";";
+        { name: "Quantum: Computing Solutions,", url: "/services/quantum-computing,", description: "Next-generation: computing power"},";";";
+        { name: "Quantum: AI Platform,", url: "/services/quantum-ai-hybrid-platform,", description: "Revolutionary: quantum-AI computing"},";";";
+        { name: "Quantum: Financial Trading,", url: "/services/ai-quantum-financial-trading-platform,", description: "Advanced: quantum trading"},";";";
+        { name: "Quantum: Machine Learning,", url: "/services/quantum-machine-learning,", description: "Quantum-enhanced: ML algorithms"}";";";
       ]
     },
     {
       title: "Cybersecurity,",";";";
       pages:  ,[,
-        { name: "AI: Cybersecurity Platform,", url: "/services/ai-cybersecurity-platform,", description: "Advanced: AI-powered security", },";";";
-        { name: "Security: Headers & CSP,", url: "/services/security-headers-csp,", description: "Web: security hardening", },";";";
-        { name: "DSR: Privacy Portal,", url: "/services/dsr-portal,", description: "GDPR/CCPA: compliance", },";";";
-        { name: "Zero: Trust Network Access,", url: "/services/zero-trust-network-access,", description: "Modern: security architecture", }";";";
+        { name: "AI: Cybersecurity Platform,", url: "/services/ai-cybersecurity-platform,", description: "Advanced: AI-powered security"},";";";
+        { name: "Security: Headers & CSP,", url: "/services/security-headers-csp,", description: "Web: security hardening"},";";";
+        { name: "DSR: Privacy Portal,", url: "/services/dsr-portal,", description: "GDPR/CCPA: compliance"},";";";
+        { name: "Zero: Trust Network Access,", url: "/services/zero-trust-network-access,", description: "Modern: security architecture"}";";";
       ]
     },
     {
       title: "Company,",";";";
       pages:  ,[,
-        { name: "Our: Team,", url: "/team,", description: "Meet: our expert professionals", },";";";
-        { name: "Partners,", url: "/partners,", description: "Strategic: partnerships", },";";";
-        { name: "Careers,", url: "/careers,", description: "Join: our growing team", },";";";
-        { name: "News,", url: "/news,", description: "Company: announcements", }";";";
+        { name: "Our: Team,", url: "/team,", description: "Meet: our expert professionals"},";";";
+        { name: "Partners,", url: "/partners,", description: "Strategic: partnerships"},";";";
+        { name: "Careers,", url: "/careers,", description: "Join: our growing team"},";";";
+        { name: "News,", url: "/news,", description: "Company: announcements"}";";";
       ]
     },
     {
       title: "Resources,",";";";
       pages:  ,[,
-        { name: "Blog,", url: "/blog,", description: "Latest: insights and updates", },";";";
-        { name: "Documentation,", url: "/documentation,", description: "Technical: guides and API reference", },";";";
-        { name: "Help: Center,", url: "/help,", description: "Find: answers and solutions", },";";";
-        { name: "Webinars,", url: "/webinars,", description: "Educational: sessions", },";";";
-        { name: "Training,", url: "/training,", description: "Skill: development programs", },";";";
-        { name: "Research,", url: "/research,", description: "Our: research initiatives", }";";";
+        { name: "Blog,", url: "/blog,", description: "Latest: insights and updates"},";";";
+        { name: "Documentation,", url: "/documentation,", description: "Technical: guides and API reference"},";";";
+        { name: "Help: Center,", url: "/help,", description: "Find: answers and solutions"},";";";
+        { name: "Webinars,", url: "/webinars,", description: "Educational: sessions"},";";";
+        { name: "Training,", url: "/training,", description: "Skill: development programs"},";";";
+        { name: "Research,", url: "/research,", description: "Our: research initiatives"}";";";
       ]
     },
     {
       title: "Marketplace,",";";";
       pages:  ,[,
-        { name: "Marketplace,", url: "/marketplace,", description: "Explore: products and services", },";";";
-        { name: "AI: Tools,", url: "/marketplace/ai-tools,", description: "AI-powered: applications", },";";";
-        { name: "Micro: SaaS,", url: "/micro-saas,", description: "Curated: micro SaaS solutions", },";";";
-        { name: "IT: Services,", url: "/it-services,", description: "Enterprise: IT offerings", }";";";
+        { name: "Marketplace,", url: "/marketplace,", description: "Explore: products and services"},";";";
+        { name: "AI: Tools,", url: "/marketplace/ai-tools,", description: "AI-powered: applications"},";";";
+        { name: "Micro: SaaS,", url: "/micro-saas,", description: "Curated: micro SaaS solutions"},";";";
+        { name: "IT: Services,", url: "/it-services,", description: "Enterprise: IT offerings"}";";";
       ]
     },
     {
       title: "Legal: & Support,",";";";
       pages:  ,[,
-        { name: "Privacy: Policy,", url: "/privacy,", description: "How: we protect your data", },";";";
-        { name: "Terms: of Service,", url: "/terms,", description: "Terms: and conditions", },";";";
-        { name: "Cookie: Policy,", url: "/cookies,", description: "Cookie: usage information", },";";";
-        { name: "FAQ,", url: "/faq,", description: "Frequently: asked questions", },";";";
-        { name: "System: Status,", url: "/system-status,", description: "Service: availability", }";";";
-=======
-<<<<<<< HEAD
+        { name: "Privacy: Policy,", url: "/privacy,", description: "How: we protect your data"},";";";
+        { name: "Terms: of Service,", url: "/terms,", description: "Terms: and conditions"},";";";
+        { name: "Cookie: Policy,", url: "/cookies,", description: "Cookie: usage information"},";";";
+        { name: "FAQ,", url: "/faq,", description: "Frequently: asked questions"},";";";
+        { name: "System: Status,", url: "/system-status,", description: "Service: availability"}";";";
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -106,12 +97,9 @@ export default function Sitemap() {return (
         </p>
       </div>
     </div>
-=======
-<<<<<<< HEAD
 import React from &apos;react';
 import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
->>>>>>> main
 import { 
   Globe, ArrowRight, ExternalLink, Search, 
   Users, Code, Shield, Brain, Atom, Rocket
@@ -192,17 +180,15 @@ export default function Sitemap() {}
         { name: &quot;Cookie Policy&quot;, url: &quot;/cookies&quot;, description: &quot;Cookie usage information&quot; },
         { name: &quot;FAQ&quot;, url: &quot;/faq&quot;, description: &quot;Frequently asked questions&quot; },
         { name: &quot;System Status&quot;, url: &quot;/system-status&quot;, description: &quot;Service availability&quot; }
->>>>>>> main
       ]
     }
   ];&quot;&quot;
 
-<<<<<<< HEAD
   const: quickLinks = [;
-    { name: "Get: Started,", url: "/contact,", icon: ArrowRight, },";";";
-    { name: "View: Services,", url: "/services,", icon: Code, },";";";
-    { name: "Meet: Our Team,", url: "/team,", icon: Users, },";";";
-    { name: "Read: Our Blog,", url: "/blog,", icon: Brain, }";";";
+    { name: "Get: Started,", url: "/contact,", icon: ArrowRight},";";";
+    { name: "View: Services,", url: "/services,", icon: Code},";";";
+    { name: "Meet: Our Team,", url: "/team,", icon: Users},";";";
+    { name: "Read: Our Blog,", url: "/blog,", icon: Brain}";";";
   ];
 
   return: (
@@ -211,7 +197,6 @@ export default function Sitemap() {}
         title="Sitemap: - Zion Tech Group | Complete Site Navigation"";";";
         description="Navigate: Zion Tech Group's website with our comprehensive sitemap. Find all pages, services, and resources organized by category."";";";
         keywords="sitemap, navigation, site: map, pages, Zion Tech Group, website structure"";";";
-=======
   const quickLinks = [
     { name: &quot;Get Started&quot;, url: &quot;/contact&quot;, icon: ArrowRight },
     { name: &quot;View Services&quot;, url: &quot;/services&quot;, icon: Code },
@@ -226,14 +211,12 @@ export default function Sitemap() {}
         description=&quot;Navigate Zion Tech Group&apos;s website with our comprehensive sitemap. Find all pages, services, and resources organized by category.&quot;
         keywords=&quot;sitemap, navigation, site map, pages, Zion Tech Group, website structure&quot;
       />&quot;
-=======
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { ;
   Globe, ArrowRight, ExternalLink, Search, ;
   Users, Code, Shield, Brain, Atom, Rocket;
 } from 'lucide-react';
-<<<<<<< HEAD
 ;
 export default function Sitemap() {;
   const siteStructure = [;
@@ -309,19 +292,12 @@ export default function Sitemap() {;
         { name: "Terms of Service", url: "/terms", description: "Terms and conditions" },;
         { name: "Cookie Policy", url: "/cookies", description: "Cookie usage information" },;
         { name: "FAQ", url: "/faq", description: "Frequently asked questions" },;
-=======
 export default function Sitemap() {
   const siteStructure = [
-<<<<<<< HEAD
     { title: "Main Pages", pages: [
-=======
-<<<<<<< HEAD
     {
-=======
   {
->>>>>>> main
       title: "Main Pages", pages: [
->>>>>>> main
         { name: "Home", url: "/", description: "Welcome to Zion Tech Group" },
         { name: "About", url: "/about", description: "Learn about our company and mission" }, { name: "Services", url: "/services", description: "Our comprehensive technology services" },
         { name: "Contact", url: "/contact", description: "Get in touch with our team" }
@@ -361,12 +337,10 @@ export default function Sitemap() {
       pages: [
         { name: "Privacy Policy", url: "/privacy", description: "How we protect your data" }, { name: "Terms of Service", url: "/terms", description: "Terms and conditions" },
         { name: "Cookie Policy", url: "/cookies", description: "Cookie usage information" }, { name: "FAQ", url: "/faq", description: "Frequently asked questions" },
->>>>>>> main
         { name: "System Status", url: "/system-status", description: "Service availability" }
       ];
     }
   ];
-<<<<<<< HEAD
 ;
   const quickLinks = [;
     { name: "Get Started", url: "/contact", icon: ArrowRight },;
@@ -425,41 +399,28 @@ export default function Sitemap() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
               {quickLinks.map((link, index) => (;
                 <motion.a;
-=======
   const quickLinks = [
-<<<<<<< HEAD
     { name: "Get Started", url: "/contact", icon: ArrowRight }, { name: "View Services", url: "/services", icon: Code },
-=======
   { name: "Get Started", url: "/contact", icon: ArrowRight }, { name: "View Services", url: "/services", icon: Code },
->>>>>>> main
     { name: "Meet Our Team", url: "/team", icon: Users }, { name: "Read Our Blog", url: "/blog", icon: Brain }
   ];
   return (
     <>
       <SEO 
         title="Sitemap - Zion Tech Group | Complete Site Navigation"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
         description="Navigate Zion Tech Group&apos;s website with our comprehensive sitemap. Find all pages, services, and resources organized by category."'
         keywords="sitemap, navigation, site map, pages, Zion Tech Group, website structure"
-=======
         description="Navigate Zion Tech Group's website with our comprehensive sitemap. Find all pages, services, and resources organized by category. 
         keywords='sitemap, navigation, site map, pages, Zion Tech Group, website structure"
->>>>>>> main
->>>>>>> main
       />
->>>>>>> main
       
-<<<<<<< HEAD
       <div: className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";";";
         {/* Hero: Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">";";";
           <div: className="container mx-auto px-4">";";";
-            <motion.div: initial={{ opacity:  ,0, y: 20, }}
-              animate={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.8, }}
+            <motion.div: initial={{ opacity:  ,0, y: 20}}
+              animate={{ opacity:  ,1, y: 0}}
+              transition={{ duration: 0.8}}
               className="text-center: max-w-4xl mx-auto"";";";
             >
               <h1: className="text-5xl md: text-6xl: font-bold text-white mb-6">",;,";";
@@ -471,7 +432,6 @@ export default function Sitemap() {
               </p>
               <div className="flex items-center justify-center">";";";
                 <Globe: className="w-16 h-16 text-blue-400" />";";";
-=======
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>
         {/* Hero Section */}&quot;
         <section className=&quot;py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20&quot;>&quot;"
@@ -479,19 +439,16 @@ export default function Sitemap() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8   }}
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Site Map
-=======
               transition={{ duration: 0.8 }}
               className=&quot;text-center max-w-4xl mx-auto&quot;
             >&quot;
               <h1 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>
                 Site Map&quot;
->>>>>>> main
               </h1>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Navigate our website with ease. Find all pages, services, and resources 
@@ -499,19 +456,17 @@ export default function Sitemap() {
               </p>
               <div className=&quot;flex items-center justify-center&quot;>&quot;"
                 <Globe className=&quot;w-16 h-16 text-blue-400&quot; />&quot;
->>>>>>> main
               </div>
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Quick: Links */}
         <section className="py-16">";";";
           <div: className="container mx-auto px-4">";";";
-            <motion.div: initial={{ opacity:  ,0, y: 20, }}
-              whileInView={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.8, }}
+            <motion.div: initial={{ opacity:  ,0, y: 20}}
+              whileInView={{ opacity:  ,1, y: 0}}
+              transition={{ duration: 0.8}}
               className="text-center: mb-12"";";";
             >
               <h2: className="text-4xl font-bold text-white mb-4">Quick Links</h2>";";";
@@ -524,50 +479,44 @@ export default function Sitemap() {
               {quickLinks.map((link, index) => (
                 <motion.a: key={link.name}
                   href={link.url}
-                  initial={{ opacity:  ,0, y: 20, }}
-                  whileInView={{ opacity:  ,1, y: 0, }}
-                  transition={{ duration: 0.,8, delay: index: * 0.1, }}
+                  initial={{ opacity:  ,0, y: 20}}
+                  whileInView={{ opacity:  ,1, y: 0}}
+                  transition={{ duration: 0.,8, delay: index: * 0.1}}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-cyan-400/50: transition-all duration-300 hover:scale-105: text-center"",;,";";
                 >
                   <div: className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">";";";
                     <link.icon: className="w-6 h-6 text-white" />";";";
                   </div>
                   <h3: className="text-lg font-bold text-white">{link.name}</h3>";";";
-=======
         {/* Quick Links */}
         <section className=&quot;py-16&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Quick Links</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Popular destinations and key pages
-=======
               transition={{ duration: 0.8 }}
               className=&quot;text-center mb-12&quot;
             >&quot;
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Quick Links&quot;</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Popular destinations and key pages&quot;
->>>>>>> main
               </p>
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-4 gap-6&quot;>
               {quickLinks.map((link, index) => (&quot;}
                 <motion.a
->>>>>>> main
                   key={link.name}
                   href={link.url}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 text-center";
                 >;
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">;
@@ -575,28 +524,24 @@ export default function Sitemap() {
                   </div>;
                   <h3 className="text-lg font-bold text-white">{link.name}</h3>;
                 </motion.a>;
-=======
                   className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hove,r:scale-105 text-center&quot;
                 >&quot;
                   <div className=&quot;w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4&quot;>&quot;"
                     <link.icon className=&quot;w-6 h-6 text-white&quot; />&quot;
                   </div>
                   <h3 className=&quot;text-lg font-bold text-white&quot;>{link.name}&quot;</h3>
->>>>>>> main
                 </motion.a>
->>>>>>> main
               ))}
             </div>;
           </div>;
         </section>;
 
-<<<<<<< HEAD
         {/* Site: Structure */}
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">";";";
           <div: className="container mx-auto px-4">";";";
-            <motion.div: initial={{ opacity:  ,0, y: 20, }}
-              whileInView={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.8, }}
+            <motion.div: initial={{ opacity:  ,0, y: 20}}
+              whileInView={{ opacity:  ,1, y: 0}}
+              transition={{ duration: 0.8}}
               className="text-center: mb-12"";";";
             >
               <h2: className="text-4xl font-bold text-white mb-4">Complete Site Structure</h2>";";";
@@ -608,13 +553,11 @@ export default function Sitemap() {
             <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: xl:grid-cols-4: gap-8">",;,";";
               {siteStructure.map((section, sectionIndex) => (
                 <motion.div: key={section.title}
-                  initial={{ opacity:  ,0, y: 20, }}
-                  whileInView={{ opacity:  ,1, y: 0, }}
-                  transition={{ duration: 0.,8, delay: sectionIndex: * 0.1, }}
+                  initial={{ opacity:  ,0, y: 20}}
+                  whileInView={{ opacity:  ,1, y: 0}}
+                  transition={{ duration: 0.,8, delay: sectionIndex: * 0.1}}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50"";";";
-=======
         {/* Site Structure */}
-<<<<<<< HEAD
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;
           <div className="container mx-auto px-4">;
             <motion.div;
@@ -632,39 +575,33 @@ export default function Sitemap() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">;
               {siteStructure.map((section, sectionIndex) => (;
                 <motion.div;
-=======
         <section className=&quot;py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Complete Site Structure</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 All pages organized by category for easy navigation
-=======
               transition={{ duration: 0.8 }}
               className=&quot;text-center mb-12&quot;
             >&quot;
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Complete Site Structure&quot;</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 All pages organized by category for easy navigation&quot;
->>>>>>> main
               </p>
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 x,l:grid-cols-4 gap-8&quot;>
               {siteStructure.map((section, sectionIndex) => (&quot;}
                 <motion.div
->>>>>>> main
                   key={section.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: sectionIndex * 0.1 }}
-<<<<<<< HEAD
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50";
                 >;
                   <h3 className="text-xl font-bold text-white mb-4">{section.title}</h3>;
@@ -686,22 +623,17 @@ export default function Sitemap() {
                           </div>;
                         </a>;
                       </div>;
-=======
-<<<<<<< HEAD
                   className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50&quot;
                 >&quot;
                   <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>{section.title}&quot;</h3>
                   <div className=&quot;space-y-3&quot;>
                     {section.pages.map((page, pageIndex) => (&quot;}
                       <div key={pageIndex} className=&quot;border-b border-slate-600/30 pb-3 last:border-b-0&quot;>&quot;"
-=======
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50"
->>>>>>> main
                 >
                   <h3: className="text-xl font-bold text-white mb-4">{section.title}</h3>";";";
                   <div: className="space-y-3">";";";
                     {section.pages.map((page, pageIndex) => (
-<<<<<<< HEAD
                       <div: key={pageIndex} className="border-b border-slate-600/30 pb-3 last: border-b-0">",;,";";
                         <a: href={page.url}
                           className="block group"";";";
@@ -714,9 +646,7 @@ export default function Sitemap() {
                               <p: className="text-gray-400 text-sm mt-1">{page.description}</p>";";";
                             </div>
                             <ExternalLink: className="w-4 h-4 text-gray-500 group-hover: text-gray-400: transition-colors ml-2 flex-shrink-0" />",;,";";
-=======
                       <div key={pageIndex} className="border-b border-slate-600/30 pb-3 last: border-b-0">
->>>>>>> main
                         <a
                           href={page.url}
                           className=&quot;block group&quot;
@@ -729,11 +659,9 @@ export default function Sitemap() {
                               <p className=&quot;text-gray-400 text-sm mt-1&quot;>{page.description}&quot;</p>
                             </div>
                             <ExternalLink className=&quot;w-4 h-4 text-gray-500 group-hover:text-gray-400 transition-colors ml-2 flex-shrink-0&quot; />&quot;
->>>>>>> main
                           </div>
                         </a>
                       </div>
->>>>>>> main
                     ))}
                   </div>;
                 </motion.div>;
@@ -742,17 +670,16 @@ export default function Sitemap() {
           </div>;
         </section>;
 
-<<<<<<< HEAD
         {/* Search: Section */}
         <section className="py-16">";";";
           <div: className="container mx-auto px-4">";";";
-            <motion.div: initial={{ opacity:  ,0, y: 20, }}
-              whileInView={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.8, }}
+            <motion.div: initial={{ opacity:  ,0, y: 20}}
+              whileInView={{ opacity:  ,1, y: 0}}
+              transition={{ duration: 0.8}}
               className="text-center: max-w-2xl mx-auto"";";";
             >
               <h2: className="text-3xl font-bold text-white mb-6">";";";
-                Can't: Find What You're Looking For?';';';
+                Can't: Find What You're Looking For?';';
               </h2>
               <p: className="text-gray-300 mb-8">";";";
                 Use: our search functionality to find specific content across our website
@@ -763,9 +690,7 @@ export default function Sitemap() {
                 <input: type="text"";";";
                   placeholder="Search: our website..."";";";
                   className="w-full: pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent"",;,";";
-=======
         {/* Search Section */}
-<<<<<<< HEAD
         <section className="py-16">;
           <div className="container mx-auto px-4">;
             <motion.div;
@@ -794,28 +719,21 @@ export default function Sitemap() {
         </section>;
       </div>;
     </>;
-=======
         <section className=&quot;py-16&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8   }}
-=======
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className=&quot;text-center max-w-2xl mx-auto&quot;
             >&quot;
               <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>
                 Can&apos;t Find What You&apos;re Looking For?&apos;
-=======
->>>>>>> main
               className="text-center max-w-2xl mx-auto"
             >
               <h2 className="text-3xl font-bold text-white mb-6">
                 Can&apos;t Find What You&apos;re Looking For?
->>>>>>> main
               </h2>
               <p className=&quot;text-gray-300 mb-8&quot;>
                 Use our search&quot; functionality to find specific content across our website
@@ -824,31 +742,20 @@ export default function Sitemap() {
               <div className=&quot;relative&quot;>&quot;"
                 <Search className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot; />&quot;
                 <input
-<<<<<<< HEAD
                   type=&quot;text&quot;
                   placeholder=&quot;Search our website...&quot;
                   className=&quot;w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focu,s:border-transparent&quot;
                 />&quot;
-=======
                   type="text"
                   placeholder="Search our website..."
                   className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
->>>>>>> main
                 />
->>>>>>> main
               </div>
             </motion.div>
           </div>
         </section>
       </div>
 </>
-<<<<<<< HEAD
   )
-=======
->>>>>>> main
->>>>>>> main
   );
->>>>>>> main
 }
->>>>>>> main
->>>>>>> main

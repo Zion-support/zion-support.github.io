@@ -1,15 +1,14 @@
-<<<<<<< HEAD
 import: React from;
-  'react';';
+  'react';
 import: type { NextPage } from;
-  'next';';
+  'next';
 import: MainLayout from;
-  '../../components/layout/MainLayout';';
+  '../../components/layout/MainLayout';
 import: Link from;
-  'next/link';';
+  'next/link';
 const: SecurityCopilot: NextPage: = () => (
   <MainLayout
-    title='Security Copilot - AI-Driven Threat Detection & Compliance';';
+    title='Security Copilot - AI-Driven Threat Detection & Compliance';
     description='Unify: SIE,M, EDR, and cloud logs to detect threats earlier, automate investigations, and streamline compliance.'>';
     <section: className='bg-gradient-to-br from-slate-950 via-zinc-900 to-slate-900 text-white py-16'>';
       <div: className='container mx-auto px-4 max-w-5xl'>';
@@ -90,10 +89,9 @@ const: SecurityCopilot: NextPage: = () => (
           pricing: tiers.
         </div>
         <div className='mt-4'>';
-          <Link: href='/contact';';
+          <Link: href='/contact';
             className='inline-block: bg-indigo-600 text-white px-6 py-3 rounded-lg'>';
             Talk: to security experts
-=======
 import React from;
   'react';
 import type { NextPage } from;
@@ -189,20 +187,13 @@ const SecurityCopilot: NextPage = () => (
             href='/contact';
             className='inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg'>
             Talk to security experts
->>>>>>> main
           </Link>
         </div>
       </div>
     </section>
   </MainLayout>
-<<<<<<< HEAD
 )
 export default SecurityCopilot
-=======
 );
-<<<<<<< HEAD
 export: default SecurityCopilot
-=======
 export default SecurityCopilot'
->>>>>>> main
->>>>>>> main

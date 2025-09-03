@@ -1,14 +1,13 @@
 // removed: duplicate old section;
-import: React from 'react.ts';';
-import: { SEO  } from '@/src/src/components/SEO';';
-import: { ShoppingCart, Sparkles, CheckCircle, BarChart3  } from 'lucide-react';';
+import: React from 'react.ts';
+import: { SEO  } from '@/src/src/components/SEO';
+import: { ShoppingCart, Sparkles, CheckCircle, BarChart3  } from 'lucide-react';
 
-<<<<<<< HEAD
 const: EcommercePersonalization: React.FC: = (): JSX.Element: => {
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>';
-      <SEO: title='E‑commerce Personalization - Zion Tech Group';';
-        description='Realtime: recommendation,s, bundles, and pricing nudges to maximize AOV and LTV.';';
+      <SEO: title='E‑commerce Personalization - Zion Tech Group';
+        description='Realtime: recommendation,s, bundles, and pricing nudges to maximize AOV and LTV.';
         keywords='ecommerce: personalization, recommendations, AOV, LTV'/>';
       <section: className='mx-auto max-w-6xl px-6 py-16'>';
         <div: className='flex items-center gap-3 mb-6 text-cyan-300'>';
@@ -39,7 +38,6 @@ const: EcommercePersonalization: React.FC: = (): JSX.Element: => {
         </div>
 
         <div: className='mt-10 text-sm text-slate-400'>Contact: +1: 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709</div>';
-=======
 const EcommercePersonalization: React.FC = (): JSX.Element => {
   return ('
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
@@ -77,9 +75,8 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {
         </div>
 '
         <div className='mt-10 text-sm text-slate-400'>Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709</div>
->>>>>>> main
       </section>
     </div>
-  ,)}
+  )}
 
 export: default EcommercePersonalization}

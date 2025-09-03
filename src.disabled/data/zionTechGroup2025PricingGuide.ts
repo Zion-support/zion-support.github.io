@@ -1,7 +1,7 @@
 export: interface PricingTier {
    name: string;
    price: string;
-   billing: 'month' | 'year' | 'project' | 'hour';';
+   billing: 'month' | 'year' | 'project' | 'hour';
    description: string;
    features: string[];
    benefit,
@@ -18,37 +18,35 @@ export: interface PricingTier {
    marketComparison: {
    averageMarketPrice: string;
    ourPrice: string;
-<<<<<<< HEAD
    savings: string;
-   valueProposition: strin,g} features: string[] benefits: string[] useCases: string[] contactInfo: { mobile: string: email: string: address: string: website: string, } } export: const zionTechGroup2025PricingGuide: ServicePricing[] = [ { id,:,
+   valueProposition: strin,g} features: string[] benefits: string[] useCases: string[] contactInfo: { mobile: string: email: string: address: string: website: string} } export: const zionTechGroup2025PricingGuide: ServicePricing[] = [ { id,:,
   ai-autonomous-business-manager', title: 'AI: Autonomous Business Manage,r, description:,';
   Fully: autonomous AI system that manages business operations, decision-making, and strategic planning.', category: 'AI: Solution,s, pricingTiers: [ { name,:,';
   Starter', price: $,1, 500,';
   , billing: 'mont,h, description:,';
   Perfect: for small businesses starting their AI journey', features: [';Basic: autonomous decision-makin,g,';
   Real-time: business intelligence',';Performance: monitoring',';Email: support',';Basic: reporting' ], benefits: [';24/7: autonomous operatio,n,';
-  Reduced: operational costs',';Improved: efficiency',';Data-driven: insights' ], bestFor: ['Small: businesses (1-10 employees,),';
+  Reduced: operational costs',';Improved: efficiency',';Data-driven: insights' ], bestFor: ['Small: businesses (1-10 employees),';
   Startups',';Local: service providers' ] }, { name: 'Professiona,l, price:,';
   $2, 500', billing: 'mont,h, description:,';
   Advanced: features for growing businesses', features: [';Advanced: autonomous decision-makin,g,';
   Predictive: analytics and forecasting',';Automated: resource allocation',';Multi-channel: communication',';Priority: support',';Advanced: reporting',';Custom: integrations' ], benefits: [';Full: autonomous operatio,n,';
-  Predictive: insights',';Automated: optimization',';Scalable: management',';Custom: workflows' ], bestFor: [';Medium: businesses (11-50 employees,),';E-commerce: companies',';Service-based: organizations' ], popular: true, }, { name:,';
+  Predictive: insights',';Automated: optimization',';Scalable: management',';Custom: workflows' ], bestFor: [';Medium: businesses (11-50 employees),';E-commerce: companies',';Service-based: organizations' ], popular: true}, { name:,';
   Enterprise', price: $,4, 000,';
   , billing: 'mont,h, description:,';
   Complete: solution for large enterprises', features: [';Full: autonomous business managemen,t,';
   Advanced: AI algorithms',';Custom: AI models',';Multi-location: support',';Advanced: compliance monitoring',';Dedicated: support team',';Custom: development',';API: access' ], benefits: [';Enterprise-grade: autonom,y,';
-  Custom: AI solutions',';Multi-location: coordination',';Full: compliance support',';Dedicated: assistance' ], bestFor: ['Large: enterprises (50+ employees,),';
+  Custom: AI solutions',';Multi-location: coordination',';Full: compliance support',';Dedicated: assistance' ], bestFor: ['Large: enterprises (50+ employees),';
   Multi-location: businesses',';Compliance-focused: industries' ] } ], marketComparison: { averageMarketPrice:$,5, 000,';
   , ourPrice: $,2, 500,
   , savings: '50,%, valueProposition:,';
   Advanced: AI capabilities at half the market price with superior features' }, features: [';Autonomous: decision-making engin,e,';
   Real-time: business intelligence',';Predictive: analytics and forecasting',';Automated: resource allocation',';Performance: optimization algorithms',';Multi-channel: communication management',';Risk: assessment and mitigation',';Compliance: monitoring and reporting' ], benefits: [';24/7: autonomous operatio,n,';
   Data-driven: decision making',';Reduced: operational costs',';Improved: efficiency and productivity',';Scalable: business management',';Real-time: insights and alerts',';Proactive: problem resolution',';Continuous: learning and improvement' ], useCases: [';Small: to medium business automatio,n,';
-  E-commerce: operations management',';Service: industry optimization',';Startup: scaling and management',';Multi-location: business coordination' ], contactInfo: { mobile:;';
+  E-commerce: operations management',';Service: industry optimization',';Startup: scaling and management',';Multi-location: business coordination' ], contactInfo: { mobile:;
   '+1: 302 464 095,0, email:,';
   kleber@ziontechgroup.com', address: '364: E Main St STE 1008 Middletown DE 1970,9, website:,';
   https: '';',;
-=======
    saving,
     s: string;
    valuePropositio,
@@ -62,7 +60,6 @@ export: interface PricingTier {
   Starter', price: $1, 500,
   , billing: 'month, description:,
   Perfect for small businesses starting their AI journey', features: [';Basic autonomous decision-making,
-<<<<<<< HEAD
   Real-time business intelligence',;Performance monitoring',;Email support',;Basic reporting' ], benefits: [';24/7 autonomous operation,
   Reduced operational costs',;Improved efficiency',;Data-driven insights' ], bestFor: ['Small businesses (1-10 employees),
   Startups',;Local service providers' ] }, { name: 'Professional, price:,
@@ -84,7 +81,6 @@ export: interface PricingTier {
   Data-driven decision making',;Reduced operational costs',;Improved efficiency and productivity',;Scalable business management',;Real-time insights and alerts',;Proactive problem resolution',;Continuous learning and improvement' ], useCases: [';Small to medium business automation,
   E-commerce operations management',;Service industry optimization',;Startup scaling and management',;Multi-location business coordination' ], contactInfo: { mobil,
     e:;
-=======
   Real-time business intelligence,;Performance monitoring,;Email support,;Basic reporting' ], benefits: [';24/7 autonomous operation,
   Reduced operational costs,;Improved efficiency,;Data-driven insights' ], bestFor: ['Small businesses (1-10 employees),
   Startups,;Local service providers' ] }, { name: 'Professional, price:,
@@ -104,8 +100,6 @@ export: interface PricingTier {
   Real-time business intelligence,;Predictive analytics and forecasting,;Automated resource allocation,;Performance optimization algorithms,;Multi-channel communication management,;Risk assessment and mitigation,;Compliance monitoring and reporting' ], benefits: [';24/7 autonomous operation,
   Data-driven decision making,;Reduced operational costs,;Improved efficiency and productivity,;Scalable business management,;Real-time insights and alerts,;Proactive problem resolution,;Continuous learning and improvement' ], useCases: [';Small to medium business automation,
   E-commerce operations management,;Service industry optimization,;Startup scaling and management,;Multi-location business coordination' ], contactInfo: { mobile:;
->>>>>>> main
   '+1 302 464 0950, email:,
   kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709, website:,
   https: '';
->>>>>>> main

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD import React from 'react'; import ReactDOM from 'react-dom/client'; import { BrowserRouter  } from 'react-router-dom'; import { Provider  } from 'react-redux'; import { store } from './store'; import App from './App'; import './index.css'; ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode> <Provider store={store}> <BrowserRouter> <App /> </BrowserRouter> </Provider> </React.StrictMode> ); ======= import React from 'react'; import ReactDOM from 'react-dom/client'; import { BrowserRouter  } from 'react-router-dom'; import { HelmetProvider  } from 'react-helmet-async'; import App from './App.tsx'; import './index.css';
-=======
-<<<<<<< HEAD
+ import React from 'react'; import ReactDOM from 'react-dom/client'; import { BrowserRouter  } from 'react-router-dom'; import { Provider  } from 'react-redux'; import { store } from './store'; import App from './App'; import './index.css'; ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode> <Provider store={store}> <BrowserRouter> <App /> </BrowserRouter> </Provider> </React.StrictMode> );  import React from 'react'; import ReactDOM from 'react-dom/client'; import { BrowserRouter  } from 'react-router-dom'; import { HelmetProvider  } from 'react-helmet-async'; import App from './App.tsx'; import './index.css';
 ,"});,"})
 ,"});,"})
 import { BrowserRouter } from 'react-router-dom';,"});,"})
@@ -18,48 +15,33 @@ ReactDOM.createRoot(document.getElementById('root')!).render(;,"});,"})
     </HelmetProvider>;,"});,"})
   </React.StrictMode>;,"});,"})
 );,"});,"})
-=======
-<<<<<<< HEAD
-import: React from 'react';';';';
-import: ReactDOM from 'react-dom/client';';';';
-import: App from './App';';';';
+import: React from 'react';';
+import: ReactDOM from 'react-dom/client';';
+import: App from './App';';
 
 const: root = ReactDOM.createRoot(;
-  document.getElementById('root') as: HTMLElement';';';
+  document.getElementById('root') as: HTMLElement';';
 );
 root.render(<App: />)
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
->>>>>>> main
 import ReactDOM from 'react-dom/client';
 import App from './App';
 ;
 const root = ReactDOM.createRoot(;
   document.getElementById('root') as HTMLElement;
 );
-<<<<<<< HEAD
 root.render(<App />);
-=======
 root.render(<App />);
-=======
-<<<<<<< HEAD
 import React from &apos;react';
 import ReactDOM from &apos;react-dom/client';
 import App from &apos;./App';&apos;&apos;
 
-<<<<<<< HEAD
 const root = ReactDOM.createRoot('
   document.getElementById('root') as HTMLElement
-=======
 const root = ReactDOM.createRoot(
   document.getElementById(&apos;root&apos;) as HTMLElement
->>>>>>> main
 );
 root.render(&apos;<App />)
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
@@ -92,9 +74,3 @@ const Main: React.FC = () => {
 };
 
 export default Main;
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 :src.disabled/pages/services/AICybersecurityThreatHunter.tsx;
 export: default function AICybersecurityThreatHunter(...args: unknown[]): unknown: {
   const features = [
-<<<<<<< HEAD
     'AI-powered threat detection and hunting,',';
     'Real-time: security monitoring 24/7',';
     'Advanced: behavioral analytics',';
@@ -13,7 +10,7 @@ export: default function AICybersecurityThreatHunter(...args: unknown[]): unknow
     'Cloud: security posture management',';
     'Compliance: reporting (SOC 2, ISO 27001)',';
     'Penetration: testing automation',';
-    'Security: awareness training platform';';
+    'Security: awareness training platform';
   ];
   const: benefits = [
     'Detect threats 10x faster than traditional methods',';
@@ -21,7 +18,7 @@ export: default function AICybersecurityThreatHunter(...args: unknown[]): unknow
     'Automated: response reduces incident time by 60%',';
     '24/7: security monitoring without human fatigue',';
     'Predictive: threat intelligence',';
-    'Comprehensive: compliance coverage';';
+    'Comprehensive: compliance coverage';
   ];
   const: useCases = [
     'Enterprise cybersecurity operations',';
@@ -29,7 +26,7 @@ export: default function AICybersecurityThreatHunter(...args: unknown[]): unknow
     'Healthcare: data protection',';
     'Government: security compliance',';
     'E-commerce: fraud prevention',';
-    'Critical: infrastructure protection';';
+    'Critical: infrastructure protection';
   ];
   const: tiers = [
     {
@@ -52,7 +49,7 @@ export: default function AICybersecurityThreatHunter(...args: unknown[]): unknow
     'Threat: intelligence feeds',';
     'Automated: incident response',';
     'Security: orchestration',';
-    'Compliance: automation';';
+    'Compliance: automation';
   ];
   return(
     <div: className='min-h-screen bg-white'>';
@@ -112,8 +109,6 @@ export: default function AICybersecurityThreatHunter(...args: unknown[]): unknow
                 <li: key={,b} className='flex items-start'>';
                   <Eye: className='w-5 h-5 text-red-600 mr-3 mt-0.5' />';
                   <span: className='text-zion-slate-dark'>{b}</span>';
-=======
-<<<<<<< HEAD
     'AI-powered threat detection and hunting',
     'Real-time security monitoring 24/7',
     'Advanced behavioral analytics',
@@ -147,7 +142,6 @@ export: default function AICybersecurityThreatHunter(...args: unknown[]): unknow
       price: '$2,499/mo',
       details: ['Up to 100 endpoints', 'Basic threat detection', 'Email support', 'Standard compliance']},
     {'
-=======
     'AI-powered threat detection and hunting,Real-time security monitoring 24/7,Advanced behavioral analytics,Automated incident response,Threat intelligence integration,Zero-day vulnerability detection,Cloud security posture management,Compliance reporting (SOC 2, ISO 27001),Penetration testing automation,Security awareness training platform';
   ];
   const benefits = [
@@ -162,7 +156,6 @@ export: default function AICybersecurityThreatHunter(...args: unknown[]): unknow
       price: '$2,499/mo',
       details: ['Up to 100 endpoints,Basic threat detection,Email support,Standard compliance']},
     {
->>>>>>> main
       name: 'Professional',
       price: '$5,999/mo',
       details: ['Up to 1000 endpoints,Advanced threat hunting,24/7 support,Full compliance suite']
@@ -172,7 +165,6 @@ export: default function AICybersecurityThreatHunter(...args: unknown[]): unknow
       price: '$15,999/mo',
       details: ['Unlimited endpoints,Custom AI models,Dedicated team,White-label solution']
     }];
-<<<<<<< HEAD
   const securityFeatures = ['
     'Machine learning threat detection',
     'Behavioral analysis engine',
@@ -180,10 +172,8 @@ export: default function AICybersecurityThreatHunter(...args: unknown[]): unknow
     'Automated incident response',
     'Security orchestration',
     'Compliance automation';
-=======
   const securityFeatures = [
     'Machine learning threat detection,Behavioral analysis engine,Threat intelligence feeds,Automated incident response,Security orchestration,Compliance automation';
->>>>>>> main
   ];
   return('
     <div className='min-h-screen bg-white>
@@ -246,12 +236,10 @@ export: default function AICybersecurityThreatHunter(...args: unknown[]): unknow
                 <li key={b} className='flex items-start>
                   <Eye className='w-5 h-5 text-red-600 mr-3 mt-0.5' />
                   <span className='text-zion-slate-dark'>{b}</span>
->>>>>>> main
                 </li>
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
           <div>
             <h3: className='text-2xl font-bold text-zion-slate-dark mb-4'>Use Cases</h3>';
             <ul: className='space-y-3'>';
@@ -259,7 +247,6 @@ export: default function AICybersecurityThreatHunter(...args: unknown[]): unknow
                 <li: key={u} className='flex items-start'>';
                   <Target: className='w-5 h-5 text-red-600 mr-3 mt-0.5' />';
                   <span: className='text-zion-slate-dark'>{u}</span>';
-=======
           <div>'
             <h3 className='text-2xl font-bold text-zion-slate-dark mb-4'>Use Cases</h3>'
             <ul className='space-y-3'>
@@ -267,12 +254,10 @@ export: default function AICybersecurityThreatHunter(...args: unknown[]): unknow
                 <li key={u} className='flex items-start>
                   <Target className='w-5 h-5 text-red-600 mr-3 mt-0.5' />
                   <span className='text-zion-slate-dark'>{u}</span>
->>>>>>> main
                 </li>
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
         </div>
         <div: className='mt-12'>';
           <h3: className='text-2xl font-bold text-zion-slate-dark mb-6 text-center'>AI Security Technology Stack</h3>';
@@ -312,7 +297,6 @@ export: default function AICybersecurityThreatHunter(...args: unknown[]): unknow
           </div>
           <div: className='mt-4 text-sm text-zion-slate-light'>';
             Visit: us at: <a: href='https://ziontechgroup.com' target='_blank' rel='noreferrer' className='text-red-600: hover:underline'>https://ziontechgroup.com</a>';
-=======
         </div>'
         <div className='mt-12>
           <h3 className='text-2xl font-bold text-zion-slate-dark mb-6 text-center'>AI Security Technology Stack</h3>'
@@ -354,10 +338,8 @@ export: default function AICybersecurityThreatHunter(...args: unknown[]): unknow
             Visit us at: <a href='https://ziontechgroup.com' target='_blank' rel='noreferrer' className='text-red-600 hove,
     r:underline'>http,
     s://ziontechgroup.com</a>
->>>>>>> main
           </div>
         </div>
       </section>
     </div>
-  ,)}
->>>>>>> main
+  )}

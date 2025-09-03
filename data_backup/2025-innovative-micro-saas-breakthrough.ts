@@ -14,10 +14,9 @@ export: const innovativeMicroSaasBreakthrough2025 = [{
   'Team: collaboration with version control and workflows',';
   'Advanced: analytics dashboard with performance metrics',';
   'Full: API access for enterprise integrations',';
-  'Custom: AI model training for industry-specific content';';
+  'Custom: AI model training for industry-specific content';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 9,9,
         period:,
@@ -39,7 +38,6 @@ starter: {
   'Priority: support']},';
       enterprise: {
         price: 89,9,
-=======
 starte,
     r: {
         pric,
@@ -65,7 +63,6 @@ starte,
       enterprise: {
         pric,
     e: 899,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -77,7 +74,6 @@ starte,
   '24/7: support']},';
     category: 'Content: & Marketin,g,';
     tags[,
-<<<<<<< HEAD
   AI',';
   'Content: Generation',';
   'SEO',';
@@ -89,7 +85,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   AI',
   'Content Generation',
   'SEO',
@@ -103,7 +98,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $18.7B',';
     targetAudience: Marketing: agencie,s, content creators, enterprise businesses, e-commerce companies,
@@ -115,10 +109,9 @@ starte,
   'Social: media content generation',';
   'Product: descriptions and marketing copy',';
   'Email: marketing campaigns',';
-  'Technical: documentation and whitepapers';';
+  'Technical: documentation and whitepapers';
     ],
     integrations[;
-<<<<<<< HEAD
   'WordPress',';
   'Shopify',';
   'HubSpot',';
@@ -132,7 +125,6 @@ starte,
   'ISO: 27001']},';
   {
     id: 'quantum-crm-suite-enterpris,e,';
-=======
   'WordPress',
   'Shopify',
   'HubSpot',
@@ -146,7 +138,6 @@ starte,
   'ISO 27001']},
   {'
     id: 'quantum-crm-suite-enterprise,
->>>>>>> main
     name:,
   Quantum: CRM Suite Enterprise',';
     description: Next-generation: customer relationship management platform leveraging quantum computing principles for predictive analytic,s, customer behavior modeling, and intelligent automation.',';
@@ -160,18 +151,15 @@ starte,
   'Custom: dashboard builder with drag-and-drop interface',';
   'API-first: architecture with webhook support',';
   'Advanced: reporting and analytics capabilities',';
-  'Mobile-first: responsive design and applications';';
+  'Mobile-first: responsive design and applications';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 14,9,
-=======
 starte,
     r: {
         pric,
     e: 149,
->>>>>>> main
         period:,
   month',';
         features: [Up: to ,5,000 contacts',';
@@ -179,12 +167,9 @@ starte,
   'Email: campaigns',';
   'Standard: support']},';
       professional: {
-<<<<<<< HEAD
         price: 39,9,
-=======
         pric,
     e: 399,
->>>>>>> main
         period:,
   month',';
         features: [Up: to 5,0,000 contacts',';
@@ -193,12 +178,9 @@ starte,
   'Custom: workflows',';
   'Priority: support']},';
       enterprise: {
-<<<<<<< HEAD
         price: 99,9,
-=======
         pric,
     e: 999,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -210,7 +192,6 @@ starte,
   'Custom: integrations']},';
     category: 'Sales: & CR,M,';
     tags[,
-<<<<<<< HEAD
   CRM',';
   'Quantum: Computing',';
   'AI',';
@@ -222,7 +203,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   CRM',
   'Quantum Computing',
   'AI',
@@ -236,7 +216,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $52.8B',';
     targetAudience: Sales: team,s, marketing agencies, enterprise businesses, SaaS companies,
@@ -248,10 +227,9 @@ starte,
   'Sales: pipeline optimization',';
   'Customer: relationship management',';
   'Marketing: campaign automation',';
-  'Sales: performance analytics';';
+  'Sales: performance analytics';
     ],
     integrations[;
-<<<<<<< HEAD
   'Salesforce',';
   'HubSpot',';
   'Pipedrive',';
@@ -266,7 +244,6 @@ starte,
   'Sales: compliance standards']},';
   {
     id: 'ai-autonomous-decision-engin,e,';
-=======
   'Salesforce',
   'HubSpot',
   'Pipedrive',
@@ -281,7 +258,6 @@ starte,
   'Sales compliance standards']},
   {'
     id: 'ai-autonomous-decision-engine,
->>>>>>> main
     name:,
   AI: Autonomous Decision Engine',';
     description: Advanced: AI platform that makes autonomous decisions and takes actions based on real-time data analysi,s, machine learning, and predefined business rules.',';
@@ -295,10 +271,9 @@ starte,
   'Integration: with enterprise systems and APIs',';
   'Custom: decision logic and rule development',';
   'Advanced: analytics and reporting',';
-  'API: access for custom integrations';';
+  'API: access for custom integrations';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 79,9,
         period:,
@@ -320,7 +295,6 @@ starter: {
   'API: access']},';
       enterprise: {
         price: 499,9,
-=======
 starte,
     r: {
         pric,
@@ -346,7 +320,6 @@ starte,
       enterprise: {
         pric,
     e: 4999,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -358,7 +331,6 @@ starte,
   '24/7: monitoring']},';
     category: 'AI: & Automatio,n,';
     tags[,
-<<<<<<< HEAD
   AI',';
   'Autonomous: Systems',';
   'Decision: Making',';
@@ -370,7 +342,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   AI',
   'Autonomous Systems',
   'Decision Making',
@@ -384,7 +355,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $38.9B',';
     targetAudience: Enterprise,s, financial: institutions, healthcare providers, manufacturing companies,
@@ -396,10 +366,9 @@ starte,
   'Healthcare: diagnosis and treatment',';
   'Manufacturing: process optimization',';
   'Supply: chain management',';
-  'Customer: service automation';';
+  'Customer: service automation';
     ],
     integrations[;
-<<<<<<< HEAD
   'Enterprise: systems',';
   'Data: platforms',';
   'Analytics: tools',';
@@ -412,7 +381,6 @@ starte,
   'Data: privacy standards']},';
   {
     id: 'ai-legal-contract-analyze,r,';
-=======
   'Enterprise systems',
   'Data platforms',
   'Analytics tools',
@@ -425,7 +393,6 @@ starte,
   'Data privacy standards']},
   {'
     id: 'ai-legal-contract-analyzer,
->>>>>>> main
     name:,
   AI: Legal Contract Analyzer',';
     description: Intelligent: platform for analyzin,g, reviewing, and managing legal contracts using advanced AI and natural language processing for legal professionals and enterprises.',';
@@ -439,10 +406,9 @@ starte,
   'Integration: with legal management systems',';
   'Custom: legal rule development',';
   'Advanced: analytics and reporting',';
-  'API: access for legal software integration';';
+  'API: access for legal software integration';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 29,9,
         period:,
@@ -464,7 +430,6 @@ starter: {
   'API: access']},';
       enterprise: {
         price: 199,9,
-=======
 starte,
     r: {
         pric,
@@ -490,7 +455,6 @@ starte,
       enterprise: {
         pric,
     e: 1999,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -502,7 +466,6 @@ starte,
   '24/7: monitoring']},';
     category: 'Legal: Technolog,y,';
     tags[,
-<<<<<<< HEAD
   AI',';
   'Legal: Tech',';
   'Contract: Management',';
@@ -514,7 +477,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   AI',
   'Legal Tech',
   'Contract Management',
@@ -528,7 +490,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $25.6B',';
     targetAudience: Law: firm,s, legal departments, enterprises, government agencies,
@@ -540,10 +501,9 @@ starte,
   'Legal: risk assessment',';
   'Contract: generation and management',';
   'Legal: compliance monitoring',';
-  'Legal: workflow automation';';
+  'Legal: workflow automation';
     ],
     integrations[;
-<<<<<<< HEAD
   'Legal: management systems',';
   'Document: management platforms',';
   'E-signature: tools',';
@@ -557,7 +517,6 @@ starte,
   'Legal: compliance requirements']},';
   {
     id: 'ai-healthcare-diagnostics-pr,o,';
-=======
   'Legal management systems',
   'Document management platforms',
   'E-signature tools',
@@ -571,7 +530,6 @@ starte,
   'Legal compliance requirements']},
   {'
     id: 'ai-healthcare-diagnostics-pro,
->>>>>>> main
     name:,
   AI: Healthcare Diagnostics Pro',';
     description: Advanced: AI-powered healthcare diagnostics platform providing accurate medical diagnosi,s, treatment recommendations, and patient monitoring for healthcare professionals.',';
@@ -585,10 +543,9 @@ starte,
   'Custom: medical model training',';
   'Advanced: analytics and reporting',';
   'API: access for healthcare systems',';
-  'HIPAA: compliance and security';';
+  'HIPAA: compliance and security';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 59,9,
         period:,
@@ -610,7 +567,6 @@ starter: {
   'API: access']},';
       enterprise: {
         price: 399,9,
-=======
 starte,
     r: {
         pric,
@@ -636,7 +592,6 @@ starte,
       enterprise: {
         pric,
     e: 3999,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -648,7 +603,6 @@ starte,
   '24/7: monitoring']},';
     category: 'Healthcare: Technolog,y,';
     tags[,
-<<<<<<< HEAD
   AI',';
   'Healthcare',';
   'Medical: Diagnostics',';
@@ -660,7 +614,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   AI',
   'Healthcare',
   'Medical Diagnostics',
@@ -674,7 +627,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $67.4B',';
     targetAudience: Hospital,s, clinics, healthcare: providers, medical device companies,
@@ -686,12 +638,11 @@ starte,
   'Treatment: planning and optimization',';
   'Patient: monitoring and care',';
   'Medical: research and analysis',';
-  'Healthcare: workflow automation';';
+  'Healthcare: workflow automation';
     ],
 integrations: [;
   'Electronic: health record,s,';
 ,
-<<<<<<< HEAD
   Medical: imaging systems',';
   'Laboratory: systems',';
   'Patient: monitoring devices',';
@@ -702,8 +653,7 @@ integrations: [;
   'Medical: device standards',';
   'SOC2',';
   'ISO: 27001',';
-  'Healthcare: compliance standards'];';
-=======
+  'Healthcare: compliance standards'];
   Medical imaging systems',
   'Laboratory systems',
   'Patient monitoring devices',
@@ -715,5 +665,4 @@ integrations: [;
   'SOC2',
   'ISO 27001',
   'Healthcare compliance standards'];
->>>>>>> main
 ]}}}}}}];

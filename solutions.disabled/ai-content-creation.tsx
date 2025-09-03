@@ -1,34 +1,24 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD:pages/solutions/ai-content-creation.tsx
+:pages/solutions/ai-content-creation.tsx
 import SEO from '../../src/components/SEO';
 import { Card } from '../../src/components/ui/Card';
 import { Button } from '../../src/components/ui/Button';
 import { Badge } from '../../src/components/ui/Badge';
-=======
-<<<<<<< HEAD:solutions.disabled/ai-content-creation.tsx
+:solutions.disabled/ai-content-creation.tsx
 // import SEO from '../../components/SEO';
 // import { Card } from '../../components/ui/Card';
 // import { Button } from '../../components/ui/Button';
 // import { Badge } from '../../components/ui/Badge';
-=======
-<<<<<<< HEAD
 import SEOHead from '../../components/SEOHead';
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
->>>>>>> main
 import { Badge } from '../../components/ui/Badge';
-<<<<<<< HEAD
-=======
 import { Button } from '../../components/ui/Button';
 import { Card } from '../../components/ui/Card';
->>>>>>> main:pages/solutions/ai-content-creation.tsx
->>>>>>> main:solutions.disabled/ai-content-creation.tsx
+:pages/solutions/ai-content-creation.tsx
+:solutions.disabled/ai-content-creation.tsx
 import {
   Brain,
   ArrowRight,
@@ -44,123 +34,93 @@ import {
   Globe,
   Search,
   PenTool,
-  BarChart3,
-} from 'lucide-react';
+  BarChart3} from 'lucide-react';
 
->>>>>>> main
 export default function AIContentCreation() {
   const features = [
   {
       icon: FileText,
       title: 'Blog Post Generation',
-<<<<<<< HEAD:pages/solutions/ai-content-creation.tsx
+:pages/solutions/ai-content-creation.tsx
       description:'
-=======
-<<<<<<< HEAD
       description: 'Automatically generate high-quality blog posts with AI',
-=======
-<<<<<<< HEAD
       description:
->>>>>>> main:solutions.disabled/ai-content-creation.tsx
+:solutions.disabled/ai-content-creation.tsx
         'Create engaging, SEO-optimized blog posts automatically with AI-powered content generation.',
-=======
       description: 'Automatically generate high-quality blog posts with AI'
->>>>>>> main
->>>>>>> main
     },
     {
       icon: PenTool,
       title: 'Social Media Content',
       description:'
-        'Generate compelling social media posts, captions, and hashtags for all platforms.',
-    },
+        'Generate compelling social media posts, captions, and hashtags for all platforms.'},
     {
       icon: Search,
       title: 'SEO Optimization',
       description:'
-        'Automatically optimize content for search engines with keyword research and optimization.',
-    },
+        'Automatically optimize content for search engines with keyword research and optimization.'},
     {
       icon: Globe,
       title: 'Multi-language Support',
       description:'
-        'Create content in multiple languages with accurate translation and localization.',
-    },
+        'Create content in multiple languages with accurate translation and localization.'},
     {
       icon: BarChart3,
       title: 'Content Analytics',
       description:'
-        'Track performance metrics and optimize content strategy with detailed analytics.',
-    },
+        'Track performance metrics and optimize content strategy with detailed analytics.'},
     {
       icon: Zap,
       title: 'Real-time Generation',
       description:'
-        'Generate content instantly with our advanced AI models and processing capabilities.',
-    },
-  ];
+        'Generate content instantly with our advanced AI models and processing capabilities.'}];
 
   const pricingPlans = [
-<<<<<<< HEAD:pages/solutions/ai-content-creation.tsx
+:pages/solutions/ai-content-creation.tsx
     {'
-=======
   {
->>>>>>> main:solutions.disabled/ai-content-creation.tsx
+:solutions.disabled/ai-content-creation.tsx
       name: 'Starter',
       price: '$299',
       period: '/month',
       description: 'Perfect for small businesses and content creators',
-<<<<<<< HEAD:pages/solutions/ai-content-creation.tsx
+:pages/solutions/ai-content-creation.tsx
       features: ['
-=======
       features: [
-<<<<<<< HEAD
->>>>>>> main:solutions.disabled/ai-content-creation.tsx
+:solutions.disabled/ai-content-creation.tsx
         'Up to 50 blog posts/month',
         'Social media content generation',
         'Basic SEO optimization',
         '2 languages supported',
         'Email support',
-=======
-        'Up to 50 blog posts/month,Social media content generation,2 languages supported,Email support',
->>>>>>> main
-      ],
-      popular: false,
-    },
+        'Up to 50 blog posts/month,Social media content generation,2 languages supported,Email support'],
+      popular: false},
     {'
       name: 'Professional',
       price: '$599',
       period: '/month',
       description: 'Ideal for growing businesses and marketing teams',
-<<<<<<< HEAD:pages/solutions/ai-content-creation.tsx
+:pages/solutions/ai-content-creation.tsx
       features: ['
-=======
       features: [
-<<<<<<< HEAD
->>>>>>> main:solutions.disabled/ai-content-creation.tsx
+:solutions.disabled/ai-content-creation.tsx
         'Up to 200 blog posts/month',
         'Advanced social media campaigns',
         'Premium SEO optimization',
         '5 languages supported',
         'Content analytics dashboard',
         'Priority support',
-=======
-        'Up to 200 blog posts/month,Advanced social media campaigns,5 languages supported,Content analytics dashboard,Priority support',
->>>>>>> main
-      ],
-      popular: true,
-    },
+        'Up to 200 blog posts/month,Advanced social media campaigns,5 languages supported,Content analytics dashboard,Priority support'],
+      popular: true},
     {'
       name: 'Enterprise',
       price: '$1, 299',
       period: '/month',
       description: 'For large organizations with high content needs',
-<<<<<<< HEAD:pages/solutions/ai-content-creation.tsx
+:pages/solutions/ai-content-creation.tsx
       features: ['
-=======
       features: [
-<<<<<<< HEAD
->>>>>>> main:solutions.disabled/ai-content-creation.tsx
+:solutions.disabled/ai-content-creation.tsx
         'Unlimited blog posts',
         'Custom content templates',
         'Advanced AI models',
@@ -168,52 +128,36 @@ export default function AIContentCreation() {
         'Custom integrations',
         'Dedicated account manager',
         '24/7 phone support',
-=======
-        'Unlimited blog posts,Custom content templates,Advanced AI models,Unlimited languages,Custom integrations,Dedicated account manager,24/7 phone support',
->>>>>>> main
-      ],
-      popular: false,
-    },
-  ];
+        'Unlimited blog posts,Custom content templates,Advanced AI models,Unlimited languages,Custom integrations,Dedicated account manager,24/7 phone support'],
+      popular: false}];
 
   return (
     <>
-<<<<<<< HEAD:pages/solutions/ai-content-creation.tsx
+:pages/solutions/ai-content-creation.tsx
       <SEO'
         title="AI Content Creation - Zion Tech Group""
         description="Automated content generation using advanced AI models for blogs, social media, and marketing materials. Boost your content strategy with AI.""
-=======
-<<<<<<< HEAD:solutions.disabled/ai-content-creation.tsx
+:solutions.disabled/ai-content-creation.tsx
       <Head>
         <title>AI Content Creation - Zion Tech Group</title>
         <meta name="description" content="Automated content generation using advanced AI models for blogs, social media, and marketing materials. Boost your content strategy with AI." />
         <meta name="keywords" content="AI content creation, automated content, blog generation, social media content, SEO optimization" />
-=======
-<<<<<<< HEAD
       <SEOHead
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       <SEO
->>>>>>> main
         title="AI Content Creation - Zion Tech Group"
         description="Automated content generation using advanced AI models for blogs, social media, and marketing materials. Boost your content strategy with AI."
->>>>>>> main:solutions.disabled/ai-content-creation.tsx
+:solutions.disabled/ai-content-creation.tsx
         keywords="AI content creation, automated content, blog generation, social media content, SEO optimization"
       />
-=======
->>>>>>> main
->>>>>>> main
       <Head>
         <title>AI Content Creation - Zion Tech Group</title>
         <meta name="description" content="Automated content generation using advanced AI models for blogs, social media, and marketing materials. Boost your content strategy with AI." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://ziontechgroup.com/solutions/ai-content-creation" />
->>>>>>> main:pages/solutions/ai-content-creation.tsx
+:pages/solutions/ai-content-creation.tsx
       </Head>
 
-<<<<<<< HEAD:pages/solutions/ai-content-creation.tsx
+:pages/solutions/ai-content-creation.tsx
       {/* Hero Section */}"
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -227,7 +171,6 @@ export default function AIContentCreation() {
     d:text-6xl font-bold mb-6">
               AI Content Creation"
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">"
-=======
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -239,17 +182,14 @@ export default function AIContentCreation() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               AI Content Creation
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
->>>>>>> main:solutions.disabled/ai-content-creation.tsx
+:solutions.disabled/ai-content-creation.tsx
                 {' '}
                 Platform
               </span>
             </h1>'
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your content strategy with our advanced AI-powered
-<<<<<<< HEAD
               content creation platform. Generate high-quality, SEO-optimized
-=======
->>>>>>> main
               content for blogs, social media, and marketing materials in
               minutes.
             </p>"
@@ -330,15 +270,14 @@ export default function AIContentCreation() {
                 key={index}"
                 className={`p-8 relative ${plan.popular ? 'ring-2 ring-blue-500 shadow-xl' : ''}`}
               >
-<<<<<<< HEAD:pages/solutions/ai-content-creation.tsx
+:pages/solutions/ai-content-creation.tsx
                 {plan.popular && (`
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                     <Badge className="bg-blue-500 text-white px-4 py-1">
-=======
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium"
->>>>>>> main:solutions.disabled/ai-content-creation.tsx
+:solutions.disabled/ai-content-creation.tsx
                       Most Popular
                     </div>
                   </div>

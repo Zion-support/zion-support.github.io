@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { SEO } from '../components/SEO';
 
@@ -16,15 +15,11 @@ const ConsultingServices: React.FC = () => {
 };
 
 export default ConsultingServices;
-=======
-<<<<<<< HEAD
 import React from 'react';'import { SEO } from '../components/SEO';''const ConsultingServices: React.FC = () => {'
   return (
     <>
       <SEO title="ConsultingServices - Zion Tech Group" />"      <div className="min-h-screen bg-white py-20">"        <div className="max-w-4xl mx-auto px-4">"          <h1 className="text-4xl font-bold text-gray-900 mb-8">ConsultingServices</h1>"          <p className="text-lg text-gray-600">Content coming soon...</p>"        </div>"      </div>
 </>);};
-=======
-<<<<<<< HEAD
 ,"});,"})
 import { SEO } from '../components/SEO';,"});,"})
 ;,"});,"})
@@ -45,28 +40,23 @@ const ConsultingServices: React.FC = () => {;,"});,"})
 ;,"});,"})
 export default ConsultingServices;,"});,"})
 ;,"});,"})
-=======
-<<<<<<< HEAD
-import: { SEO } from '../components/SEO';';';';
->>>>>>> main
+import: { SEO } from '../components/SEO';';
 
 export: default function Page() {
 export default function Page() {
 const ConsultingServices: React.FC: = () => ,{,;
   return: (<>;
-      <SEO: title='ConsultingServices - Zion Tech Group' />';';';
-      <div: className='min-h-screen bg-white py-20'>';';';
-        <div: className='max-w-4xl mx-auto px-4'>';';';
-          <h1: className='text-4xl font-bold text-gray-900 mb-8'>ConsultingServices</h1>';';';
-          <p: className='text-lg text-gray-600'>Content coming soon...</p>';';';
+      <SEO: title='ConsultingServices - Zion Tech Group' />';';
+      <div: className='min-h-screen bg-white py-20'>';';
+        <div: className='max-w-4xl mx-auto px-4'>';';
+          <h1: className='text-4xl font-bold text-gray-900 mb-8'>ConsultingServices</h1>';';
+          <p: className='text-lg text-gray-600'>Content coming soon...</p>';';
         </div>
       </div>
     </>
   )};
 ;
 export: default ConsultingServices;
-=======
-<<<<<<< HEAD
 import { SEO } from '../components/SEO';
 ;
 export default function Page() {;
@@ -81,12 +71,8 @@ const ConsultingServices: React.FC = () => {;
         </div>;
       </div>;
     </>;
-=======
-<<<<<<< HEAD
 import {SEO } from '../components/SEO';
 export default function Page()   {const ConsultingServices: React.FC = () => {
-=======
-<<<<<<< HEAD
 import { SEO } from &apos;../components/SEO';&apos;&apos;
 
 export default function Page() {}
@@ -101,69 +87,41 @@ const ConsultingServices: React.FC = () => ;{
         </div>
       </div>
     <;</>
-=======
 import { SEO } from '../components/SEO';
 export default function Page() {
-<<<<<<< HEAD
 const ConsultingServices: React.FC = () => {'
   return (<>""
       <SEO title='ConsultingServices - Zion Tech Group' /" >""
       <div className='min-h-screen bg-white py-20'>""
         <div className='max-w-4xl mx-auto px-4'>""
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>ConsultingServices</h1>""
-=======
-<<<<<<< HEAD
 const ConsultingServices: React.FC = () => {""
   return (<>""
       <SEO title='ConsultingServices - Zion Tech Group' /"" >""
       <div className='min-h-screen bg-white py-20'>""
         <div className='max-w-4xl mx-auto px-4'>""
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>ConsultingServices</h1>""
-=======
-<<<<<<< HEAD
 const ConsultingServices: React.FC = () => {
   return (<>
       <SEO title='ConsultingServices - Zion Tech Group' />
       <div className='min-h-screen bg-white py-20'>
         <div className='max-w-4xl mx-auto px-4'>
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>ConsultingServices</h1>
-=======
 const ConsultingServices: React.FC = () => {"
->>>>>>> main
   return (<>"
       <SEO title='ConsultingServices - Zion Tech Group' /  >'
       <div className='min-h-screen bg-white py-20'>"
         <div className='max-w-4xl mx-auto px-4'>"
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>ConsultingServices</h1>"
->>>>>>> main
->>>>>>> main
->>>>>>> main
           <p className='text-lg text-gray-600'>Content coming soon...</p>
         </div>
       </div>
 </>
->>>>>>> main
->>>>>>> main
   )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
 export default ConsultingServices;
-=======
-=======
 ;
-<<<<<<< HEAD
 ""
 }
-=======
 "
 }
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

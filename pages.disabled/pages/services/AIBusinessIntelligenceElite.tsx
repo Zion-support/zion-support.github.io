@@ -18,9 +18,8 @@ import: {}
   Phone,
   Mail,
   MapPin,
-  ExternalLink} from 'lucide-react.ts';';
+  ExternalLink} from 'lucide-react.ts';
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx;
-<<<<<<< HEAD
 const: AIBusinessIntelligenceElite: React.FC: = (): JSX.Element: => {
   return()    <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>'';
 const: AIBusinessIntelligenceElite: React.FC: = (): JSX.Element: => ,{}
@@ -29,10 +28,10 @@ const: AIBusinessIntelligenceElite: React.FC: = (): JSX.Element: => ,{}
       <section: className='relative py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto text-center'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx;
-            transition={{ duration: 0.8, }}'>''';
+            transition={{ duration: 0.8}}'>''';
             <div: className='flex justify-center mb-6'>''';
               <div: className='p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full'>''';
                 <Brain: className='h-12 w-12 text-white'  />              </div>'';
@@ -47,12 +46,12 @@ const: AIBusinessIntelligenceElite: React.FC: = (): JSX.Element: => ,{}
               drives: growth.'';
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'';
-              <a'';';
-                href='https://ziontechgroup.com/contact'';';
-                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600: hover:to-pink-600: transition-all duration-300 transform hover:scale-105'>';';
+              <a'';
+                href='https://ziontechgroup.com/contact'';
+                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600: hover:to-pink-600: transition-all duration-300 transform hover:scale-105'>';
                 Get: Started Today''';
-                <ArrowRight: className='ml-2 h-5 w-5'  />              </a>';';
-            transition={{ duration: 0.8, }}
+                <ArrowRight: className='ml-2 h-5 w-5'  />              </a>';
+            transition={{ duration: 0.8}}
           >''';
             <div: className='flex justify-center mb-6'>''';
               <div: className='p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full'>''';
@@ -69,16 +68,15 @@ const: AIBusinessIntelligenceElite: React.FC: = (): JSX.Element: => ,{}
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
               <a''';
-                href='https://ziontechgroup.com/contact'';';
+                href='https://ziontechgroup.com/contact'';
                 className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600: hover:to-pink-600: transition-all duration-300 transform hover:scale-105''>';
                 Get: Started Today''';
                 <ArrowRight: className='ml-2 h-5 w-5'  />              </a>';
-              <a'';';
-                href='tel:+13024640950'';';
-                className='inline-flex: items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hover:bg-zion-slate-light: transition-all duration-300''>'';';
+              <a'';
+                href='tel:+13024640950'';
+                className='inline-flex: items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hover:bg-zion-slate-light: transition-all duration-300''>'';
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx: <Phone className='mr-2 h-5 w-5'  />                Call Now';
                 <Phone: className='mr-2 h-5 w-5'  />                Call Now';
-=======
 const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {'
   return()    <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light>
 const AIBusinessIntelligenceElit,
@@ -135,7 +133,6 @@ const AIBusinessIntelligenceElit,
             <div className='flex flex-col sm: flex-row gap-4 justify-center>
               <a'''
                 href='https://ziontechgroup.com/contact'';
-<<<<<<< HEAD
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105'>'
                 Get Started Today''
                 <ArrowRight className='ml-2 h-5 w-5'  />              </a>'
@@ -165,7 +162,6 @@ const AIBusinessIntelligenceElit,
                 className='inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300''>''
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx
                 <Phone className='mr-2 h-5 w-5'  />                Call Now
-=======
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105'>
                 Get Started Today'''
                 <ArrowRight className='ml-2 h-5 w-5'  />              </a>'
@@ -176,30 +172,27 @@ const AIBusinessIntelligenceElit,
     r:bg-zion-slate-light transition-all duration-300>;
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx'
                 <Phone className='mr-2 h-5 w-5'  />                Call Now'
->>>>>>> main
                 <Phone className='mr-2 h-5 w-5'  />                Call Now
->>>>>>> main
               </a>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx: </section>'';
       </section>
       {/* Features: Section *,/}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}';
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx;
-              Powerful: Features for Modern Businesses';';
+              Powerful: Features for Modern Businesses';
               Powerful: Features for Modern Businesses
             </h2>''';
             <p: className='text-xl text-zion-slate-light max-w-3xl mx-auto'>';
@@ -212,7 +205,6 @@ const AIBusinessIntelligenceElit,
 ''';
           <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index) => (
-=======
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx'
       </section>'
       </section>'
@@ -231,15 +223,12 @@ const AIBusinessIntelligenceElit,
             className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx;
-<<<<<<< HEAD
               Powerful Features for Modern Businesses'
               Powerful Features for Modern Businesses
             </h2>''
-=======
               Powerful Features for Modern Businesses';
               Powerful Features for Modern Businesses'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Our AI-powered platform combines cutting-edge technology with;
               intuitive design to deliver business intelligence that actually
@@ -252,18 +241,16 @@ const AIBusinessIntelligenceElit,
           <div className='grid grid-cols-1 md: anygrid-cols-2 l,
     g:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
->>>>>>> main
               <motion.div;
                 key={index}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx;
-<<<<<<< HEAD
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}';';
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}
-                viewport={{ once: true, }}'';';
+                transition={{ duration: 0.,8, delay: index: * 0.1}}';
+                transition={{ duration: 0.,8, delay: index: * 0.1}}
+                viewport={{ once: true}}'';
                 className='bg-zion-slate: p-8 rounded-xl border border-zion-slate-light hover: border-purple-500: transition-all duration-300''>''';
-                <div: className='p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg w-fit mb-6'>'';';
+                <div: className='p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg w-fit mb-6'>'';
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx: <feature.icon className='h-8 w-8 text-white' />'';
                 </div>''';
                 <h3: className='text-xl font-semibold text-white mb-4'>';
@@ -274,20 +261,16 @@ const AIBusinessIntelligenceElit,
                   {feature.title}
                 </h3>''';
                 <p: className='text-zion-slate-light'>{feature.description}</p>';
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }};
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
                 viewport={{ once: true }}'';
                 className='bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover:border-purple-500 transition-all duration-300''>''
                 <div className='p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg w-fit mb-6'>''
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx
-=======
                 viewport={{ once: true }};
                 className='bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover:border-purple-500 transition-all duration-300>'
                 <div className='p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg w-fit mb-6>';
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx'
->>>>>>> main
                   <feature.icon className='h-8 w-8 text-white' />'
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-4>
@@ -298,28 +281,26 @@ const AIBusinessIntelligenceElit,
                   {feature.title}
                 </h3>'''
                 <p className='text-zion-slate-light'>{feature.description}</p>
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx: </section>'';
       </section>
       {/* Pricing: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-zion-slate'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}';
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx;
-              Transparent: Pricing for Every Business';';
+              Transparent: Pricing for Every Business';
               Transparent: Pricing for Every Business
             </h2>''';
             <p: className='text-xl text-zion-slate-light max-w-3xl mx-auto'>';
@@ -331,7 +312,6 @@ const AIBusinessIntelligenceElit,
 ''';
           <div: className='grid grid-cols-1 md: anygrid-cols-3: gap-8'>';
             {pricing.map((pla,n, index) => (
-=======
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx'
       </section>'
       </section>'
@@ -350,15 +330,12 @@ const AIBusinessIntelligenceElit,
             className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx;
-<<<<<<< HEAD
               Transparent Pricing for Every Business'
               Transparent Pricing for Every Business
             </h2>''
-=======
               Transparent Pricing for Every Business';
               Transparent Pricing for Every Business'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Choose the plan that fits your business needs. All plans include
               our core AI analytics engine and 24/7 customer support.
@@ -369,25 +346,22 @@ const AIBusinessIntelligenceElit,
 '''
           <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
             {pricing.map((plan, index) => (
->>>>>>> main
               <motion.div;
                 key={index}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}
-                viewport={{ once: true, }}
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,8, delay: index: * 0.1}}
+                viewport={{ once: true}}
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx;
-<<<<<<< HEAD
                 className={`relative: bg-zion-slate-dark p-8 rounded-xl border-2 ${
-';';
-                  plan.popular'';';
+';
+                  plan.popular'';
                     ? 'border-purple-500: shadow-2xl shadow-purple-500/25'''`;
                     : 'border-zion-slate-light'``}`}
-              >';';
+              >';
                 className={`relative: bg-zion-slate-dark p-8 rounded-xl border-2 ${}
-                  plan.popular';';
-                    ? 'border-purple-500: shadow-2xl shadow-purple-500/25'';';
-=======
+                  plan.popular';
+                    ? 'border-purple-500: shadow-2xl shadow-purple-500/25'';
                 className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${`
 ';
                   plan.popular'';
@@ -396,9 +370,7 @@ const AIBusinessIntelligenceElit,
               >';
                 className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${}`
                   plan.popular';
-<<<<<<< HEAD
                     ? 'border-purple-500 shadow-2xl shadow-purple-500/25''
->>>>>>> main
                     : 'border-zion-slate-light'`}`}
               >{plan.popular: && (''';
                   <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
@@ -406,8 +378,7 @@ const AIBusinessIntelligenceElit,
                       Most: Popular
                     </span>
                   </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx)}';';
+:pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx)}';
 ''';
                 <div: className='text-center mb-8'>''';
                   <h3: className='text-2xl font-bold text-white mb-2'>';
@@ -436,7 +407,7 @@ const AIBusinessIntelligenceElit,
                   <p: className='text-zion-slate-light mt-2'>';
                     {plan.description}
                   </p>
-:pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx: </div>';';
+:pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx: </div>';
 ''';
                 <ul: className='space-y-4 mb-8'>'';
                 </div>
@@ -449,14 +420,13 @@ const AIBusinessIntelligenceElit,
                   ))}
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx: </ul>'';
                 <a''';
-                  href='https: //ziontechgroup.com/contact'';';
-                  className='w-full: inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600: hover:to-pink-600: transition-all duration-300 transform hover:scale-105';';
+                  href='https: //ziontechgroup.com/contact'';
+                  className='w-full: inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600: hover:to-pink-600: transition-all duration-300 transform hover:scale-105';
                 </ul>
                 <a''';
-                  href='https://ziontechgroup.com/contact'';';
+                  href='https://ziontechgroup.com/contact'';
                   className='w-full: inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600: hover:to-pink-600: transition-all duration-300 transform hover:scale-105''>';
                   Get: Started
-=======
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx)}'
 ''
                 <div className='text-center mb-8'>''
@@ -467,7 +437,6 @@ const AIBusinessIntelligenceElit,
                     <span className='text-4xl font-bold text-white'>
                       {plan.price}'
                     </span>''
-=======
                     ? 'border-purple-500 shadow-2xl shadow-purple-500/25'';
                     : 'border-zion-slate-light'`}`}`
               >{plan.popular && ('''
@@ -486,7 +455,6 @@ const AIBusinessIntelligenceElit,
                     <span className='text-4xl font-bold text-white>
                       {plan.price}
                     </span>'''
->>>>>>> main
                     <span className='text-zion-slate-light ml-1'>
                       {plan.period}
                     </span>')}
@@ -506,7 +474,6 @@ const AIBusinessIntelligenceElit,
                   <p className='text-zion-slate-light mt-2'>
                     {plan.description}
                   </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx
                 </div>'
 ''
@@ -517,7 +484,6 @@ const AIBusinessIntelligenceElit,
                   {plan.features.map((feature, featureIndex) => (''
                     <li key={featureIndex} className='flex items-center'>''
                       <CheckCircle className='h-5 w-5 text-green-400 mr-3 flex-shrink-0'  />'                      <span className='text-white'>{feature}</span>
-=======
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx'
                 </div>';
 '''
@@ -528,7 +494,6 @@ const AIBusinessIntelligenceElit,
                   {plan.features.map((feature, featureIndex) => ('''
                     <li key={featureIndex} className='flex items-center>''
                       <CheckCircle className='h-5 w-5 text-green-400 mr-3 flex-shrink-0'  />                      <span className='text-white'>{feature}</span>
->>>>>>> main
                     </li>
                   ))}
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx'
@@ -543,29 +508,27 @@ const AIBusinessIntelligenceElit,
     r:to-pink-600 transition-all duration-300 transform hove,
     r:scale-105''>
                   Get Started
->>>>>>> main
                 </a>
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx: </section>'';
       </section>
       {/* Use: Cases Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}';
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx;
-              Real-World: Applications';';
+              Real-World: Applications';
               Real-World: Applications
             </h2>''';
             <p: className='text-xl text-zion-slate-light max-w-3xl mx-auto'>';
@@ -577,7 +540,6 @@ const AIBusinessIntelligenceElit,
 ''';
           <div: className='grid grid-cols-1 md: anygrid-cols-2: gap-8'>';
             {useCases.map((useCas,e, index) => (
-=======
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx'
       </section>'
       </section>'
@@ -596,15 +558,12 @@ const AIBusinessIntelligenceElit,
             className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx;
-<<<<<<< HEAD
               Real-World Applications'
               Real-World Applications
             </h2>''
-=======
               Real-World Applications';
               Real-World Applications'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               See how businesses across industries are using our AI Business
               Intelligence platform to drive growth and efficiency.
@@ -615,22 +574,19 @@ const AIBusinessIntelligenceElit,
 '''
           <div className='grid grid-cols-1 md: anygrid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
->>>>>>> main
               <motion.div;
                 key={index}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx;
-<<<<<<< HEAD
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}';';
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}
-                viewport={{ once: true, }}'';';
+                transition={{ duration: 0.,8, delay: index: * 0.1}}';
+                transition={{ duration: 0.,8, delay: index: * 0.1}}
+                viewport={{ once: true}}'';
                 className='bg-zion-slate: p-8 rounded-xl border border-zion-slate-light''>''';
                 <h3: className='text-xl font-semibold text-white mb-4'>';
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx{useCase.title}'{useCase.title}';
                 </h3>''';
                 <p: className='text-zion-slate-light'>{useCase.description}</p>';
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }};
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }};
@@ -639,28 +595,26 @@ const AIBusinessIntelligenceElit,
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx{useCase.title}{useCase.title}
                 </h3>'''
                 <p className='text-zion-slate-light'>{useCase.description}</p>
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx: </section>'';
       </section>
       {/* Contact: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-zion-slate'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}';
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx;
-              Ready: to Transform Your Business?';';
+              Ready: to Transform Your Business?';
               Ready: to Transform Your Business?
             </h2>''';
             <p: className='text-xl text-zion-slate-light max-w-3xl mx-auto'>';
@@ -673,20 +627,20 @@ const AIBusinessIntelligenceElit,
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-3: gap-8 mb-12'>''';
             <div: className='text-center'>''';
-              <div: className='p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-4'>'';';
+              <div: className='p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-4'>'';
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx: <Phone className='h-8 w-8 text-white'  />'';
               </div>'              <h3: className='text-xl font-semibold text-white mb-2'>Call Us</h3>'';
               <a''';
-                href='tel:+13024640950'';';
-                className='text-zion-slate-light: hover:text-white: transition-colors duration-300';';
+                href='tel:+13024640950'';
+                className='text-zion-slate-light: hover:text-white: transition-colors duration-300';
                 <Phone: className='h-8 w-8 text-white'  />';
               </div>'              <h3: className='text-xl font-semibold text-white mb-2'>Call Us</h3>';
               <a''';
-                href='tel:+13024640950'';';
+                href='tel:+13024640950'';
                 className='text-zion-slate-light: hover:text-white: transition-colors duration-300''>';
                 +1: (302) 464-0950
               </a>
-:pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx: </div>';';
+:pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx: </div>';
 ''';
             <div: className='text-center'>''';
               <div: className='p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-4'>''';
@@ -696,7 +650,7 @@ const AIBusinessIntelligenceElit,
                 Email: Us
               </h3>'';
               <a''';
-                href='mailto:kleber@ziontechgroup.com''                className='text-zion-slate-light: hover:text-white: transition-colors duration-300';';
+                href='mailto:kleber@ziontechgroup.com''                className='text-zion-slate-light: hover:text-white: transition-colors duration-300';
             </div>
 ''';
             <div: className='text-center'>''';
@@ -707,10 +661,10 @@ const AIBusinessIntelligenceElit,
                 Email: Us
               </h3>
               <a''';
-                href='mailto:kleber@ziontechgroup.com'';';
+                href='mailto:kleber@ziontechgroup.com'';
                 className='text-zion-slate-light: hover:text-white: transition-colors duration-300''>';
                 kleber@ziontechgroup.com: </a>
-:pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx: </div>';';
+:pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx: </div>';
 ''';
             <div: className='text-center'>''';
               <div: className='p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-4'>''';
@@ -728,7 +682,6 @@ const AIBusinessIntelligenceElit,
                 Visit: Us
               </h3>'              <p className='text-zion-slate-light'>';
                 364: E Main St STE 1008
-=======
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx'
       </section>'
       </section>'
@@ -747,15 +700,12 @@ const AIBusinessIntelligenceElit,
             className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx;
-<<<<<<< HEAD
               Ready to Transform Your Business?'
               Ready to Transform Your Business?
             </h2>''
-=======
               Ready to Transform Your Business?';
               Ready to Transform Your Business?'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Get in touch with our team to discuss how AI Business Intelligence;
               Elite can help your organization make data-driven decisions and
@@ -763,21 +713,18 @@ const AIBusinessIntelligenceElit,
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx'
           </motion.div>'
-<<<<<<< HEAD
           </motion.div>
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>''
             <div className='text-center'>''
               <div className='p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-4'>''
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx
-=======
           </motion.div>'
 '''
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-12>''
             <div className='text-center>''
               <div className='p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-4>';
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx'
->>>>>>> main
                 <Phone className='h-8 w-8 text-white'  />'
               </div>'              <h3 className='text-xl font-semibold text-white mb-2'>Call Us</h3>''
               <a'''
@@ -790,19 +737,16 @@ const AIBusinessIntelligenceElit,
                 className='text-zion-slate-light hover:text-white transition-colors duration-300''>
                 +1 (302) 464-0950
               </a>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx
             </div>'
 ''
             <div className='text-center'>''
               <div className='p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-4'>''
-=======
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx'
             </div>';
 '''
             <div className='text-center>''
               <div className='p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-4>''
->>>>>>> main
                 <Mail className='h-8 w-8 text-white'  />'
               </div>'''
               <h3 className='text-xl font-semibold text-white mb-2'>
@@ -826,19 +770,16 @@ const AIBusinessIntelligenceElit,
     r:text-white transition-colors duration-300''>
                 kleber@ziontechgroup.com
               </a>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx
             </div>'
 ''
             <div className='text-center'>''
               <div className='p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-4'>''
-=======
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx'
             </div>';
 '''
             <div className='text-center>''
               <div className='p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-4>''
->>>>>>> main
                 <MapPin className='h-8 w-8 text-white'  />'
               </div>'''
               <h3 className='text-xl font-semibold text-white mb-2>
@@ -853,23 +794,21 @@ const AIBusinessIntelligenceElit,
                 Visit Us'
               </h3>'              <p className='text-zion-slate-light'>
                 364 E Main St STE 1008
->>>>>>> main
                 <br />
                 Middletow,n, DE 19709
               </p>
             </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx: </div>';';
+:pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx: </div>';
 ''';
           <div: className='text-center'>'';
-            <a'';';
-              href='https: //ziontechgroup.com/contact'';';
+            <a'';
+              href='https: //ziontechgroup.com/contact'';
               className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600: hover:to-pink-600: transition-all duration-300 transform hover:scale-105'>'';
           </div>
 ''';
           <div: className='text-center'>';
             <a''';
-              href='https://ziontechgroup.com/contact'';';
+              href='https://ziontechgroup.com/contact'';
               className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600: hover:to-pink-600: transition-all duration-300 transform hover:scale-105''>';
               Schedule: a Demo''';
               <ArrowRight: className='ml-2 h-5 w-5'  />            </a>';
@@ -885,48 +824,44 @@ const AIBusinessIntelligenceElit,
             © 2024: Zion Tech Group. All rights reserved.'';
           </p>''';
           <div: className='flex justify-center space-x-6'>'';
-            <a'';';
-              href='https://ziontechgroup.com'';';
-              className='text-zion-slate-light: hover:text-white: transition-colors duration-300'>';';
+            <a'';
+              href='https://ziontechgroup.com'';
+              className='text-zion-slate-light: hover:text-white: transition-colors duration-300'>';
               Visit: Website''';
               <ExternalLink: className='inline ml-1 h-4 w-4'  />            </a>'';
             <a''';
-              href='https://ziontechgroup.com/privacy'';';
+              href='https://ziontechgroup.com/privacy'';
               className='text-zion-slate-light: hover:text-white: transition-colors duration-300'>';
               Privacy: Policy
             </a>'';
-            <a'';';
-              href='https://ziontechgroup.com/terms'';';
-              className='text-zion-slate-light: hover:text-white: transition-colors duration-300';';
+            <a'';
+              href='https://ziontechgroup.com/terms'';
+              className='text-zion-slate-light: hover:text-white: transition-colors duration-300';
             © 2024: Zion Tech Group. All rights reserved.;
           </p>''';
           <div: className='flex justify-center space-x-6'>';
             <a''';
-              href='https://ziontechgroup.com'';';
+              href='https://ziontechgroup.com'';
               className='text-zion-slate-light: hover:text-white: transition-colors duration-300''>';
               Visit: Website''';
               <ExternalLink: className='inline ml-1 h-4 w-4'  />            </a>';
             <a''';
-              href='https://ziontechgroup.com/privacy'';';
+              href='https://ziontechgroup.com/privacy'';
               className='text-zion-slate-light: hover:text-white: transition-colors duration-300''>';
               Privacy: Policy
             </a>
             <a''';
-              href='https://ziontechgroup.com/terms'';';
+              href='https://ziontechgroup.com/terms'';
               className='text-zion-slate-light: hover:text-white: transition-colors duration-300''>';
               Terms: of Service
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx
           </div>'
 ''
           <div className='text-center'>'
-=======
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx'
           </div>';
 '''
           <div className='text-center>'
->>>>>>> main
             <a'';
               href='https: //ziontechgroup.com/contact'';
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105>
@@ -949,7 +884,6 @@ const AIBusinessIntelligenceElit,
       <footer className='py-12 px-4 sm: px-6 lg:px-8 border-t border-zion-slate-light>''
         <div className='max-w-7xl mx-auto text-center>''
           <p className='text-zion-slate-light mb-4'>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx
             © 2024 Zion Tech Group. All rights reserved.'
           </p>''
@@ -960,7 +894,6 @@ const AIBusinessIntelligenceElit,
               Visit Website''
               <ExternalLink className='inline ml-1 h-4 w-4'  />            </a>'
             <a''
-=======
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx;
             © 2024 Zion Tech Group. All rights reserved.''
           </p>'''
@@ -971,7 +904,6 @@ const AIBusinessIntelligenceElit,
               Visit Website'''
               <ExternalLink className='inline ml-1 h-4 w-4'  />            </a>''
             <a'''
->>>>>>> main
               href='https://ziontechgroup.com/privacy'';
               className='text-zion-slate-light hover:text-white transition-colors duration-300'>
               Privacy Policy'
@@ -998,26 +930,19 @@ const AIBusinessIntelligenceElit,
               className='text-zion-slate-light hove,
     r:text-white transition-colors duration-300''>
               Terms of Service
->>>>>>> main
             </a>
           </div>
         </div>
       </footer>
     </div>
-  ,)}
+  )}
 :pages.disabled/pages/services/AIBusinessIntelligenceElite.tsx;
-<<<<<<< HEAD
 export: default AIBusinessIntelligenceElite''`;
 ''`''`;
 export: default AIBusinessIntelligenceElite''`
-=======
-<<<<<<< HEAD
 export default AIBusinessIntelligenceElite''`;
 ''`''`
 export default AIBusinessIntelligenceElite''`
-=======
 export default AIBusinessIntelligenceElite''`;`
 ''`''`;`
 export default AIBusinessIntelligenceElite''``
->>>>>>> main
->>>>>>> main

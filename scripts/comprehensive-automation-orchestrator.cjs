@@ -1,20 +1,16 @@
 #!/usr/bin/env node
 
-<<<<<<< HEAD
 /**
  * Comprehensive Automation Orchestrator
  * Orchestrates all automation scripts for maximum efficiency
  */
 
-=======
->>>>>>> main
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
 
 class ComprehensiveAutomationOrchestrator {
   constructor() {
-<<<<<<< HEAD
     this.startTime = Date.now();
     this.results = {
       success: [],
@@ -259,7 +255,6 @@ ${report.nextSteps.map(item => `- ${item}`).join('\n')}
     ];
     
     return nextSteps;
-=======
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
     this.ensureDirectories();
@@ -430,19 +425,15 @@ ${report.nextSteps.map(item => `- ${item}`).join('\n')}
       this.log(`❌ Orchestrator failed: ${error.message}`);
       process.exit(1);
     }
->>>>>>> main
   }
 }
 
 // Run the orchestrator
-<<<<<<< HEAD
 if (require.main === module) {
   const orchestrator = new ComprehensiveAutomationOrchestrator();
   orchestrator.orchestrateAutomation().catch(console.error);
 }
 
 module.exports = ComprehensiveAutomationOrchestrator;
-=======
 const orchestrator = new ComprehensiveAutomationOrchestrator();
 orchestrator.run();
->>>>>>> main

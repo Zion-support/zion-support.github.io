@@ -1,32 +1,22 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD:pages/solutions/project-management.tsx
+:pages/solutions/project-management.tsx
 import SEO from '../../src/components/SEO';
 import { Card } from '../../src/components/ui/Card';
 import { Button } from '../../src/components/ui/Button';
 import { Badge } from '../../src/components/ui/Badge';
-=======
-<<<<<<< HEAD:solutions.disabled/project-management.tsx
+:solutions.disabled/project-management.tsx
 // import SEO from '../../components/SEO';
-=======
-<<<<<<< HEAD
 import SEOHead from '../../components/SEOHead';
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> main:pages/solutions/project-management.tsx
+:pages/solutions/project-management.tsx
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
->>>>>>> main
 import { Badge } from '../../components/ui/Badge';
-<<<<<<< HEAD
-=======
 import { Button } from '../../components/ui/Button';
 import { Card } from '../../components/ui/Card';
->>>>>>> main:solutions.disabled/project-management.tsx
+:solutions.disabled/project-management.tsx
 import {
   FolderKanban,
   ArrowRight,
@@ -36,78 +26,59 @@ import {
   BarChart3,
   Target,
   FileText,
-  MessageSquare,
-} from 'lucide-react';
+  MessageSquare} from 'lucide-react';
 
->>>>>>> main
 export default function ProjectManagement() {
   const features = [
   {
       icon: Target,
       title: 'Task Management',
       description:'
-        'Create, assign, and track tasks with priority levels and due dates.',
-    },
+        'Create, assign, and track tasks with priority levels and due dates.'},
     {
       icon: Users,
       title: 'Team Collaboration',
       description:'
-        'Real-time collaboration tools for seamless team communication.',
-    },
+        'Real-time collaboration tools for seamless team communication.'},
     {
       icon: Clock,
       title: 'Time Tracking',
       description:'
-        'Track time spent on projects and tasks with detailed reporting.',
-    },
+        'Track time spent on projects and tasks with detailed reporting.'},
     {
       icon: BarChart3,
       title: 'Reporting & Analytics',
       description:'
-        'Comprehensive reports on project progress and team productivity.',
-    },
+        'Comprehensive reports on project progress and team productivity.'},
     {
       icon: FileText,
       title: 'Document Management',
       description:'
-        'Centralized document storage and version control for all project files.',
-    },
+        'Centralized document storage and version control for all project files.'},
     {
       icon: MessageSquare,
       title: 'Communication Hub',
       description:'
-        'Integrated messaging and discussion threads for project communication.',
-    },
-  ];
+        'Integrated messaging and discussion threads for project communication.'}];
 
   return (
     <>
-<<<<<<< HEAD:pages/solutions/project-management.tsx
+:pages/solutions/project-management.tsx
       <SEO'
         title="Project Management Platform - Zion Tech Group""
         description="Advanced project management tools with team collaboration, task tracking, and reporting. Streamline your projects.""
-=======
-<<<<<<< HEAD
       <SEOHead
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       <SEO
->>>>>>> main
         title="Project Management Platform - Zion Tech Group"
         description="Advanced project management tools with team collaboration, task tracking, and reporting. Streamline your projects."
->>>>>>> main:solutions.disabled/project-management.tsx
+:solutions.disabled/project-management.tsx
         keywords="project management, task management, team collaboration, time tracking, project planning"
       />
-=======
->>>>>>> main
->>>>>>> main
       <Head>
         <title>Project Management Platform - Zion Tech Group</title>
       </Head>
 
-<<<<<<< HEAD:pages/solutions/project-management.tsx
+:pages/solutions/project-management.tsx
       {/* Hero Section */}"
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -121,7 +92,6 @@ export default function ProjectManagement() {
     d:text-6xl font-bold mb-6">
               Project Management"
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">"
-=======
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -133,7 +103,7 @@ export default function ProjectManagement() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Project Management
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
->>>>>>> main:solutions.disabled/project-management.tsx
+:solutions.disabled/project-management.tsx
                 {' '}
                 Platform
               </span>

@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next;';
-import Layout from '../components/Layout;';
-import Link from 'next/link;';
-import { Check, Star, ArrowRight, Zap, Users, Building, Crown } from 'lucide-react;';
+import type { NextPage } from 'next;
+import Layout from '../components/Layout;
+import Link from 'next/link;
+import { Check, Star, ArrowRight, Zap, Users, Building, Crown } from 'lucide-react;
 
 const: Pricing: NextPage: = () => ,{,
   const pricingPlans = [;
@@ -21,8 +20,7 @@ const: Pricing: NextPage: = () => ,{,
         "Email: support",";";";
         "3: months maintenance included"";";";
       ],
-      popular: fals,e,
-    },
+      popular: fals,e},
     {
       name: "Professional,",";";";
       description: "Ideal: for growing businesses,",";";";
@@ -40,8 +38,7 @@ const: Pricing: NextPage: = () => ,{,
         "Performance: optimization",";";";
         "Analytics: setup"";";";
       ],
-      popular: tru,e,
-    },
+      popular: tru,e},
     {
       name: "Enterprise,",";";";
       description: "For: large organizations and complex projects,",";";";
@@ -60,8 +57,7 @@ const: Pricing: NextPage: = () => ,{,
         "Custom: training and documentation",";";";
         "SLA: guarantees"";";";
       ],
-      popular: fals,e,
-    }
+      popular: fals,e}
   ];
 
   const: servicePricing = [;
@@ -101,10 +97,7 @@ const: Pricing: NextPage: = () => ,{,
         <div: className="container mx-auto px-4 text-center">";";";
           <h1: className="text-5xl md: text-6xl: font-bold mb-6">",;,";";
             Simple: <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Pricing</span>";";";
-=======
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { Button } from '../components/ui/Button';
@@ -179,10 +172,8 @@ const Pricing: React.FC = () => {
       service: "Digital Transformation",
       startingPrice: "$10, 000",
       description: "End-to-end digital transformation consulting", features: ["Strategy development", "Process optimization", "Technology implementation", "Change management"]
-=======
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { Check, Star, ArrowRight, Zap, Users, Building, Crown } from 'lucide-react';
 ;
 const Pricing: NextPage = () => {;
@@ -269,7 +260,6 @@ const Pricing: NextPage = () => {;
       description: "Blockchain development and smart contracts",;
       startingPrice: "$15,000",;
       features: ["Smart contract development", "Blockchain integration", "Security auditing", "Deployment support"];
->>>>>>> main
     }
   ];
 ;
@@ -279,7 +269,6 @@ const Pricing: NextPage = () => {;
       description="Transparent pricing for Zion Tech Group's technology services. Choose the plan that fits your business needs and budget.";
     >;
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
@@ -300,7 +289,6 @@ const Pricing: NextPage = () => {;
           </motion.div>
         </div>
       </section>
-=======
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;
         <div className="container mx-auto px-4 text-center">;
           <h1 className="text-5xl md:text-6xl font-bold mb-6">;
@@ -312,7 +300,6 @@ const Pricing: NextPage = () => {;
           </p>;
         </div>;
       </section>;
->>>>>>> main
 
       {/* Pricing Plans */}
       <section className="py-20 bg-white">;
@@ -353,18 +340,13 @@ const Pricing: NextPage = () => {;
                       <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />;
                       <span className="text-gray-600">{feature}</span>;
                     </li>;
-=======
-<<<<<<< HEAD
-=======
 import { Check, Star, ArrowRight, Zap, Shield, Users, Clock } from 'lucide-react';
 
->>>>>>> main
 export default function Pricing() {
   const plans = [
     {'
       name: 'Starter',
       price: '$2,999',
-<<<<<<< HEAD
       period: 'per month',
       description: 'Perfect for small businesses and startups',
       features: ['
@@ -374,7 +356,6 @@ export default function Pricing() {
         'Basic Security Features',
         'Email Support',
         'Standard SLA (99.5%)
-=======
       period: '/month',
       description: 'Perfect for small businesses getting started with technology',
       features: [
@@ -384,30 +365,24 @@ export default function Pricing() {
         'Basic security monitoring',
         'Monthly reporting',
         'Up to 5 users'
->>>>>>> main
       ],
       popular: false,
       cta: 'Get Started',
       href: '/contact?plan=starter'
-=======
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 const Layout = dynamic(() => import('../components/Layout'), { ssr: false });;
 const Link = dynamic(() => import('next/link'), { ssr: false });;
 import { Check, Star, ArrowRight, Zap, Users, Building, Crown } from 'lucide-react';
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, Phone, Mail } from 'lucide-react';
->>>>>>> main
 
 const Pricing = () => {
   const plans = [
     {
-<<<<<<< HEAD
       name: "Starter", description: "Perfect for small businesses and startups",
       price: "$2, 500",
       period: "per month", icon: Zap,
@@ -441,7 +416,6 @@ const Pricing = () => {
         "12 months maintenance included", "Custom training and documentation",
         "SLA guarantees"
       ], popular: false
-=======
       name: 'Starter',
       price: '$2,999',
       period: '/month',
@@ -456,12 +430,10 @@ const Pricing = () => {
       ],
       popular: false,
       color: 'from-blue-500 to-blue-600'
->>>>>>> main
     },
     {'
       name: 'Professional',
       price: '$7,999',
-<<<<<<< HEAD
       period: 'per month',
       description: 'Ideal for growing businesses',
       features: ['
@@ -473,9 +445,7 @@ const Pricing = () => {
         'Premium SLA (99.9%),
         'Dedicated Account Manager',
         'Custom Integrations'
-=======
       period: '/month',
-<<<<<<< HEAD
       description: 'Ideal for growing businesses with advanced technology needs',
       features: [
         'Advanced AI services',
@@ -486,12 +456,10 @@ const Pricing = () => {
         'Up to 25 users',
         'Custom integrations',
         'Training sessions'
->>>>>>> main
       ],
       popular: true,
       cta: 'Most Popular',
       href: '/contact?plan=professional'
-=======
       description: 'Ideal for growing businesses',
       features: [
         'Up to 25 team members',
@@ -505,12 +473,10 @@ const Pricing = () => {
       ],
       popular: true,
       color: 'from-purple-500 to-purple-600'
->>>>>>> main
     },
     {'
       name: 'Enterprise',
       price: 'Custom',
-<<<<<<< HEAD
       period: 'pricing',
       description: 'Tailored solutions for large organizations',
       features: ['
@@ -524,9 +490,7 @@ const Pricing = () => {
         'Custom Training & Documentation',
         'Multi-region Deployment',
         'Advanced Analytics & Reporting'
-=======
       period: '',
-<<<<<<< HEAD
       description: 'Tailored solutions for large organizations with complex requirements',
       features: [
         'Full AI implementation',
@@ -538,12 +502,10 @@ const Pricing = () => {
         'Custom development',
         'Dedicated account manager',
         'SLA guarantees'
->>>>>>> main
       ],
       popular: false,
       cta: 'Contact Sales',
       href: '/contact?plan=enterprise'
-=======
       description: 'For large organizations with complex needs',
       features: [
         'Unlimited team members',
@@ -559,13 +521,10 @@ const Pricing = () => {
       ],
       popular: false,
       color: 'from-green-500 to-green-600'
->>>>>>> main
->>>>>>> main
     }
   ];
 
   const addOns = [
-<<<<<<< HEAD
     {'
       name: 'Additional Support Hours',
       price: '$150',
@@ -574,9 +533,7 @@ const Pricing = () => {
     },
     {'
       name: 'Priority Support',
-=======
     {
-<<<<<<< HEAD
       name: 'Micro SaaS Development',
       price: '$15,000',
       description: 'Custom micro SaaS solution development and deployment',
@@ -593,8 +550,6 @@ const Pricing = () => {
       price: '$5,000',
       description: 'Comprehensive security assessment and recommendations',
       features: ['Vulnerability assessment', 'Compliance review', 'Action plan']
-=======
-<<<<<<< HEAD
       service: "AI Development", description: "Custom AI solutions and machine learning models",
       startingPrice: "$10, 000",
       features: ["Custom AI models", "Data analysis", "Integration support", "Training and documentation"]
@@ -607,7 +562,6 @@ const Pricing = () => {
     }, {
       service: "Blockchain Solutions",
       description: "Blockchain development and smart contracts", startingPrice: "$15,000", features: ["Smart contract development", "Blockchain integration", "Security auditing", "Deployment support"]
-=======
       name: 'Additional AI Credits',
       price: '$0.10',
       description: 'Per AI request beyond plan limits',
@@ -615,15 +569,10 @@ const Pricing = () => {
     },
     {
       name: 'Premium Support',
->>>>>>> main
       price: '$500',
       description: 'Per month for priority support',
       icon: Shield
-    },
-<<<<<<< HEAD
-  ]
-=======
-<<<<<<< HEAD
+    }]
     {'
       name: 'Custom Integrations',
       price: '$2,000',
@@ -654,7 +603,6 @@ const Pricing = () => {
     {'
       question: 'What payment methods do you accept?',
       answer: 'We accept all major credit cards, bank transfers, and can accommodate enterprise billing arrangements.'
-=======
     {
       name: 'Custom Development',
       price: '$150',
@@ -666,17 +614,10 @@ const Pricing = () => {
       price: '$200',
       description: 'Per hour for team training',
       icon: Globe
->>>>>>> main
->>>>>>> main
->>>>>>> main
     }
   ];
 
->>>>>>> main
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     <Layout
       title="Pricing - Zion Tech Group"
       description="Transparent pricing for Zion Tech Group's technology services. Choose the plan that fits your business needs and budget."
@@ -687,28 +628,21 @@ const Pricing = () => {
           <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Simple
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Pricing</span>
->>>>>>> main
           </h1>
           <p: className="text-xl md: text-2xl: mb-8 max-w-4xl mx-auto text-gray-200">",;,";";
             Choose: the perfect plan for your business needs. All plans include our commitment to quality and support.
           </p>
         </div>
       </section>
-=======
->>>>>>> main
     <>
       <Head>
-<<<<<<< HEAD
         <title>Pricing - Zion Tech Group</title>'
         <meta name="description" content="Transparent pricing for our technology services. Choose the plan that fits your business needs and budget." />"
-=======
         <title>Pricing - Zion Tech Group</title>
         <meta name="description" content="Transparent pricing for AI services, IT solutions, and micro SaaS development. Choose the plan that fits your business needs." />
->>>>>>> main
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://ziontechgroup.com/pricing" />
       </Head>
-<<<<<<< HEAD
       "
       <main className="min-h-screen bg-white">
         {/* Hero Section */}"
@@ -721,43 +655,30 @@ const Pricing = () => {
               </h1>"
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Choose the plan that fits your business needs. All plans include our core services with the option to add additional features.
-=======
       
-<<<<<<< HEAD
-=======
       <Navigation />
       
->>>>>>> main
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-<<<<<<< HEAD
               <h1 className="text-4xl font-bold text-gray-900 mb-6">
                 Simple, Transparent <span className="text-blue-600">Pricing</span>
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
                 Choose the plan that fits your business needs. All plans include our core services 
                 with the flexibility to scale as you grow.
-=======
               <h1 className="text-5xl font-bold text-gray-900 mb-6">
                 Simple, Transparent <span className="text-blue-600">Pricing</span>
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
                 Choose the plan that fits your business needs. All plans include our core services with no hidden fees.
->>>>>>> main
->>>>>>> main
               </p>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
 
-<<<<<<< HEAD
       {/* Pricing Plans */}
       <section className="py-20 bg-white">";";";
         <div: className="container mx-auto px-4">";";";
@@ -774,8 +695,6 @@ const Pricing = () => {
                     <div: className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center">";";";
                       <Star: className="w-4 h-4 mr-1" />";";";
                       Most: Popular
-=======
-<<<<<<< HEAD
         {/* Pricing Plans */}"
         <section className="py-20">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -793,13 +712,11 @@ const Pricing = () => {
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                       <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">"
                         <Star className="w-4 h-4 mr-1" />
-=======
         {/* Pricing Plans */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {plans.map((plan, index) => (
-<<<<<<< HEAD
                 <div key={index} className={`relative rounded-lg p-8 ${
                   plan.popular 
                     ? 'bg-blue-50 border-2 border-blue-600 shadow-lg' 
@@ -808,12 +725,10 @@ const Pricing = () => {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
->>>>>>> main
                         Most Popular
                       </span>
                     </div>
                   )}
-<<<<<<< HEAD
                   "
                   <div className="text-center mb-8">"
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
@@ -821,22 +736,17 @@ const Pricing = () => {
                     <div className="mb-4">"
                       <span className="text-4xl font-bold text-gray-900">{plan.price}</span>"
                       <span className="text-gray-600 ml-2">{plan.period}</span>
-=======
                   
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center mb-4">
                       <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
                       <span className="text-gray-600 ml-1">{plan.period}</span>
->>>>>>> main
                     </div>
                     <p className="text-gray-600">{plan.description}</p>
                   </div>
-<<<<<<< HEAD
                   "
-=======
 
->>>>>>> main
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-start">"
@@ -845,7 +755,6 @@ const Pricing = () => {
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                   
                   <Link 
                     href={plan.href}"
@@ -857,7 +766,6 @@ const Pricing = () => {
                     }`}
                   >
                     {plan.cta}
-=======
 
                   <Link href={plan.href} className="block">
                     <div className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
@@ -867,7 +775,6 @@ const Pricing = () => {
                     }`}>
                       {plan.cta}
                     </div>
->>>>>>> main
                   </Link>
                 </div>
               ))}
@@ -875,7 +782,6 @@ const Pricing = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Add-ons Section */}`
         <section className="py-20 bg-gray-50">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
@@ -897,15 +803,12 @@ const Pricing = () => {
                     <span className="text-gray-600 ml-1">{addOn.period}</span>
                   </div>"
                   <p className="text-gray-600 text-sm">{addOn.description}</p>
-=======
-=======
                 <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 ${
                   plan.popular ? 'border-purple-500 scale-105' : 'border-gray-200'
                 } overflow-hidden`}>
                   {plan.popular && (
                     <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-purple-500 to-purple-600 text-white text-center py-2 text-sm font-semibold">
                       Most Popular
->>>>>>> main
                     </div>
                   )}
                   
@@ -919,7 +822,6 @@ const Pricing = () => {
                       </div>
                     </div>
 
-<<<<<<< HEAD
                 <div className="text-center mb-8">";";";
                   <div: className={`w-16 h-16 mx-auto mb-4 rounded-full bg-${plan.color}-100 flex items-center justify-center`}>`;
                     <plan.icon: className={`w-8 h-8 text-${plan.color}-600`} />`;
@@ -929,7 +831,6 @@ const Pricing = () => {
                   <div: className="mb-4">";";";
                     <span: className="text-4xl font-bold text-gray-900">{plan.price}</span>";";";
                     <span: className="text-gray-600 ml-2">{plan.period}</span>";";";
-=======
                     <ul className="space-y-4 mb-8">
                       {plan.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center">
@@ -943,10 +844,8 @@ const Pricing = () => {
                       Get Started
                       <ArrowRight className="w-4 h-4 ml-2 inline" />
                     </Link>
->>>>>>> main
                   </div>
                 </div>
-<<<<<<< HEAD
 
                 <ul: className="space-y-4 mb-8">";";";
                   {plan.features.map((feature, featureIndex) => (
@@ -954,11 +853,9 @@ const Pricing = () => {
                       <Check: className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />";";";
                       <span: className="text-gray-600">{feature}</span>";";";
                     </li>
->>>>>>> main
                   ))}
                 </ul>;
 
-<<<<<<< HEAD
                 <Link: href="/contact"";";";
                   className={`w-full: block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`;
                     plan.popular: ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover: from-purple-700: hover:to-blue-700'',;,;
@@ -969,53 +866,39 @@ const Pricing = () => {
                   <ArrowRight className="w-4 h-4 ml-2 inline" />";";";
                 </Link>
               </div>
-=======
-<<<<<<< HEAD
                 <Link;
                   href="/contact";
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${;
                     plan.popular;
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700';
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200';
-=======
                 <Link
                   href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover: from-purple-700 hover:to-blue-700'
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
->>>>>>> main
                   }`}
                 >;
                   Get Started;
                   <ArrowRight className="w-4 h-4 ml-2 inline" />;
                 </Link>;
               </div>;
->>>>>>> main
             ))}
-<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
-=======
-=======
               ))}
             </div>
->>>>>>> main
           </div>
         </section>
->>>>>>> main
 
-<<<<<<< HEAD
       {/* Service: Pricing */}
       <section className="py-20 bg-gray-50">";";";
         <div: className="container mx-auto px-4">";";";
           <h2: className="text-3xl font-bold text-center text-gray-900 mb-12">Service-Specific Pricing</h2>";";";
           <div: className="grid grid-cols-1 md: grid-cols-2: gap-8 max-w-4xl mx-auto">",;,";";
-=======
-<<<<<<< HEAD
       {/* Service Pricing */}
-<<<<<<< HEAD
       <section className="py-20 bg-gray-50">;
         <div className="container mx-auto px-4">;
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Service-Specific Pricing</h2>;
@@ -1043,12 +926,10 @@ const Pricing = () => {
                   <ArrowRight className="w-4 h-4 ml-1" />;
                 </Link>;
               </div>;
-=======
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Service-Specific Pricing</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8 max-w-4xl mx-auto">
->>>>>>> main
             {servicePricing.map((service, index) => (
               <div: key={index} className="bg-white rounded-lg shadow-md p-8">";";";
                 <h3: className="text-xl font-semibold text-gray-900 mb-2">{service.service}</h3>";";";
@@ -1064,26 +945,21 @@ const Pricing = () => {
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
                 <Link: href="/contact"";";";
                   className="text-blue-600: hover: text-blue-700: font-semibold flex items-center"",;,";";
-=======
                 <Link
                   href="/contact"
                   className="text-blue-600 hover: text-blue-700 font-semibold flex items-center"
->>>>>>> main
                 >
                   Get: Custom Quote
                   <ArrowRight className="w-4 h-4 ml-1" />";";";
                 </Link>
               </div>
->>>>>>> main
             ))}
           </div>;
         </div>;
       </section>;
 
-<<<<<<< HEAD
       {/* Why: Choose Us */}
       <section className="py-20 bg-white">";";";
         <div: className="container mx-auto px-4">";";";
@@ -1092,9 +968,7 @@ const Pricing = () => {
             <div: className="text-center">";";";
               <div: className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center">";";";
                 <Crown: className="w-8 h-8 text-blue-600" />";";";
-=======
       {/* Why Choose Us */}
-<<<<<<< HEAD
       <section className="py-20 bg-white">;
         <div className="container mx-auto px-4">;
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Why Choose Zion Tech Group?</h2>;
@@ -1108,7 +982,6 @@ const Pricing = () => {
                 We deliver high-quality solutions using the latest technologies and best practices in the industry.;
               </p>;
             </div>;
-=======
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Why Choose Zion Tech Group?</h2>
@@ -1116,16 +989,13 @@ const Pricing = () => {
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center">
                 <Crown className="w-8 h-8 text-blue-600" />
->>>>>>> main
               </div>
               <h3: className="text-xl font-semibold text-gray-900 mb-3">Premium Quality</h3>";";";
               <p: className="text-gray-600">";";";
                 We: deliver high-quality solutions using the latest technologies and best practices in the industry.
               </p>
             </div>
->>>>>>> main
 
-<<<<<<< HEAD
             <div className="text-center">";";";
               <div: className="w-16 h-16 mx-auto mb-4 rounded-full bg-green-100 flex items-center justify-center">";";";
                 <Users: className="w-8 h-8 text-green-600" />";";";
@@ -1139,7 +1009,6 @@ const Pricing = () => {
             <div className="text-center">";";";
               <div: className="w-16 h-16 mx-auto mb-4 rounded-full bg-purple-100 flex items-center justify-center">";";";
                 <Zap: className="w-8 h-8 text-purple-600" />";";";
-=======
             <div className="text-center">;
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-green-100 flex items-center justify-center">;
                 <Users className="w-8 h-8 text-green-600" />;
@@ -1150,7 +1019,6 @@ const Pricing = () => {
               </p>;
             </div>;
 
-<<<<<<< HEAD
             <div className="text-center">;
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-purple-100 flex items-center justify-center">;
                 <Zap className="w-8 h-8 text-purple-600" />;
@@ -1199,24 +1067,19 @@ const Pricing = () => {
           </div>;
         </div>;
       </section>;
-=======
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-purple-100 flex items-center justify-center">
                 <Zap className="w-8 h-8 text-purple-600" />
->>>>>>> main
               </div>
               <h3: className="text-xl font-semibold text-gray-900 mb-3">Fast Delivery</h3>";";";
               <p: className="text-gray-600">";";";
                 We: understand the importance of time and deliver projects on schedule without compromising quality.
               </p>
-=======
->>>>>>> main
         {/* Add-ons Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Additional Services</h2>
-<<<<<<< HEAD
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Enhance your plan with these specialized services
               </p>
@@ -1236,7 +1099,6 @@ const Pricing = () => {
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
 
                   <Button 
                     variant={plan.buttonVariant}
@@ -1324,16 +1186,12 @@ const Pricing = () => {
                 <Mail className="w-5 h-5 mr-2" />
                 Contact Sales Team
               </Button>
-=======
->>>>>>> main
                 </div>
               ))}
->>>>>>> main
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
       {/* FAQ Section */}
       <section className="py-20 bg-gray-50">";";";
         <div: className="container mx-auto px-4">";";";
@@ -1357,21 +1215,17 @@ const Pricing = () => {
               <h3: className="text-lg font-semibold text-gray-900 mb-3">Can I change my plan later?</h3>";";";
               <p: className="text-gray-600">";";";
                 Absolutely! You: can upgrade or downgrade your plan at any time. We'll work with you to ensure a smooth transition.;
-=======
-<<<<<<< HEAD
         {/* Features Comparison */}"
         <section className="py-20">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
     g:px-8">"
             <div className="text-center mb-16">"
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Services?</h2>"
-=======
         {/* Features Comparison */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
->>>>>>> main
               <p className="text-lg text-gray-600">
                 We deliver exceptional value through our comprehensive approach
               </p>
@@ -1382,45 +1236,35 @@ const Pricing = () => {
               <div className="text-center">"
                 <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">"
                   <Zap className="w-8 h-8 text-blue-600" />
-<<<<<<< HEAD
                 </div>"
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Fast Delivery</h3>"
                 <p className="text-gray-600">Quick turnaround times without compromising on quality or security.</p>
-=======
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Fast Implementation</h3>
                 <p className="text-gray-600">Quick deployment and setup with minimal disruption to your business operations.</p>
->>>>>>> main
               </div>
               "
               <div className="text-center">"
                 <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">"
                   <Shield className="w-8 h-8 text-blue-600" />
-<<<<<<< HEAD
                 </div>"
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Enterprise Security</h3>"
                 <p className="text-gray-600">Bank-level security and compliance with industry standards.</p>
-=======
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Enterprise Security</h3>
                 <p className="text-gray-600">Bank-level security and compliance standards to protect your data and systems.</p>
->>>>>>> main
               </div>
               "
               <div className="text-center">"
                 <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">"
                   <Users className="w-8 h-8 text-blue-600" />
-<<<<<<< HEAD
                 </div>"
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Expert Support</h3>"
                 <p className="text-gray-600">Dedicated support from our team of technology experts.</p>
-=======
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Expert Support</h3>
                 <p className="text-gray-600">Dedicated support team with deep expertise in AI, IT, and software development.</p>
->>>>>>> main
               </div>
-=======
               <p className="text-lg text-gray-600">
                 Enhance your plan with these optional add-ons
               </p>
@@ -1441,13 +1285,10 @@ const Pricing = () => {
                   <p className="text-gray-600">{addon.description}</p>
                 </div>
               ))}
->>>>>>> main
->>>>>>> main
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* FAQ Section */}"
         <section className="py-20 bg-gray-50">"
           <div className="max-w-4xl mx-auto px-4 sm:px-6 l,
@@ -1457,25 +1298,20 @@ const Pricing = () => {
               <p className="text-lg text-gray-600">"
                 Have questions about our pricing? We've got answers.
               </p>
-=======
         {/* FAQ Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
->>>>>>> main
             </div>
             '
             <div className="space-y-8">
-<<<<<<< HEAD
               {faqs.map((faq, index) => ("
                 <div key={index} className="bg-white border border-gray-200 rounded-lg p-6">"
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>"
                   <p className="text-gray-600">{faq.answer}</p>
                 </div>
               ))}
-=======
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Can I change my plan later?</h3>
                 <p className="text-gray-600">Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the next billing cycle.</p>
@@ -1494,7 +1330,6 @@ const Pricing = () => {
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Is there a setup fee?</h3>
                 <p className="text-gray-600">No setup fees for any of our plans. You only pay the monthly subscription fee.</p>
-=======
         <section className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -1504,7 +1339,6 @@ const Pricing = () => {
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="bg-white rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">What&apos;s included in maintenance?</h3>'
               <p className="text-gray-600">
@@ -1516,28 +1350,23 @@ const Pricing = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Can I change my plan later?</h3>
               <p className="text-gray-600">
                 Absolutely! You can upgrade or downgrade your plan at any time. We&apos;ll work with you to ensure a smooth transition.'
->>>>>>> main
               </p>
             </div>
-=======
             <div className="space-y-8">
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Can I change my plan anytime?</h3>
                 <p className="text-gray-600">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing differences.</p>
               </div>
 
-<<<<<<< HEAD
             <div: className="bg-white rounded-lg p-6">";";";
               <h3: className="text-lg font-semibold text-gray-900 mb-3">Do you offer payment plans?</h3>";";";
               <p: className="text-gray-600">";";";
                 Yes, we: offer flexible payment options including monthly installments for larger projects. Contact us to discuss payment arrangements.
               </p>
-=======
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">What payment methods do you accept?</h3>
                 <p className="text-gray-600">We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients.</p>
               </div>
->>>>>>> main
 
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Is there a free trial available?</h3>
@@ -1547,25 +1376,15 @@ const Pricing = () => {
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">What happens if I exceed my plan limits?</h3>
                 <p className="text-gray-600">We'll notify you when you're approaching your limits. You can either upgrade your plan or purchase additional credits as needed.</p>
->>>>>>> main
               </div>
->>>>>>> main
->>>>>>> main
             </div>
           </div>
         </section>
->>>>>>> main
 
-<<<<<<< HEAD
         {/* CTA Section */}"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";";";
         <div: className="container mx-auto px-4 text-center">";";";
           <h2: className="text-4xl font-bold mb-6">Ready to Get Started?</h2>";";";
@@ -1575,8 +1394,6 @@ const Pricing = () => {
           <div className="flex flex-col sm: flex-row: justify-center gap-4">",;,";";
             <Link: href="/contact" className="bg-white text-blue-600 hover: bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
               Get: Free Quote
-=======
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
         <div className="container mx-auto px-4 text-center">;
           <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>;
@@ -1598,7 +1415,6 @@ const Pricing = () => {
 };
 ;
 export default Pricing;
-=======
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
@@ -1608,22 +1424,17 @@ export default Pricing;
           <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Get Free Quote
->>>>>>> main
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-blue-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
               View: Services
             </Link>
-=======
->>>>>>> main
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> main
             <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>"
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-<<<<<<< HEAD
               Contact us today for a free consultation and custom quote tailored to your specific needs.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -1633,8 +1444,6 @@ export default Pricing;
               <Link href="/services" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hove,
     r:bg-white hove,
     r:text-blue-600 transition-colors">
-=======
-<<<<<<< HEAD
               Contact us today to discuss your needs and find the perfect plan for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1642,7 +1451,6 @@ export default Pricing;
                 Get Free Consultation
               </Link>
               <Link href="/services" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
->>>>>>> main
                 View Our Services
               </Link>
             </div>
@@ -1651,11 +1459,8 @@ export default Pricing;
       </main>
     </>
   );
-<<<<<<< HEAD
 }"
-=======
 }
-=======
               Contact our team to discuss your specific needs and get a custom quote.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1666,7 +1471,6 @@ export default Pricing;
                 View Detailed Pricing Guide
               </Link>
             </div>
->>>>>>> main
           </div>
         </section>
       </main>
@@ -1675,12 +1479,6 @@ export default Pricing;
     </>
   );
 };
-<<<<<<< HEAD
 export default Pricing
-=======
 
 export default Pricing;
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

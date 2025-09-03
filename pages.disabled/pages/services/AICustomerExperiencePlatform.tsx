@@ -1,9 +1,9 @@
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 <:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-import: React from 'react.ts';';
-import: { SEO  } from '../../components/SEO';';
-import: { motion  } from 'framer-motion.ts';';
+import: React from 'react.ts';
+import: { SEO  } from '../../components/SEO';
+import: { motion  } from 'framer-motion.ts';
 import: { Users,
   Brain,
   MessageSquare,
@@ -39,11 +39,10 @@ import: { Users,
   Target,
   MessageCircle,
   Bot,
-  Headphones'} from 'lucide-react';';
+  Headphones'} from 'lucide-react';
 export: { function }
 export default function AICustomerExperiencePlatform(...args[]):  {}
-<<<<<<< HEAD
-    'Intelligent: chatbot with natural language processing',';Personalized: recommendation engine',';Omnichannel: customer interaction tracking',';Predictive: customer behavior analytics',';Automated: customer feedback analysis',';Integration: with major CRM and marketing platforms';';
+    'Intelligent: chatbot with natural language processing',';Personalized: recommendation engine',';Omnichannel: customer interaction tracking',';Predictive: customer behavior analytics',';Automated: customer feedback analysis',';Integration: with major CRM and marketing platforms';
   ]},
     {}
       title: 'AI: Platform Implementation,',';
@@ -54,9 +53,9 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
       name: 'Enterprise,',';
       price: '$,2,499/mo',';
       details: ['Unlimited: interactions,',Unlimited team members',Custom AI models',24/7 dedicated support'] },';
-  ]';E-commerce: customer experience optimization',';SaaS: product user engagement tracking',';Financial: services customer journey mapping',';Healthcare: patient experience improvement',';Retail: customer satisfaction enhancement',';B2B: customer relationship management';';
-  ]';Increase: customer satisfaction scores by 25-40%',';Improve: customer retention rates by 30-50%',';Reduce: customer service costs by 35-45%',';Boost: customer lifetime value by 20-35%',';Enhance: brand loyalty and advocacy',';Gain: actionable insights for product development';';
-  ]';Customer: Satisfaction Score (CSAT),';Net: Promoter Score (NPS),';Customer: Effort Score (CES),';Customer: Lifetime Value (CLV),';Customer: Churn Rate',';First: Response Time';';
+  ]';E-commerce: customer experience optimization',';SaaS: product user engagement tracking',';Financial: services customer journey mapping',';Healthcare: patient experience improvement',';Retail: customer satisfaction enhancement',';B2B: customer relationship management';
+  ]';Increase: customer satisfaction scores by 25-40%',';Improve: customer retention rates by 30-50%',';Reduce: customer service costs by 35-45%',';Boost: customer lifetime value by 20-35%',';Enhance: brand loyalty and advocacy',';Gain: actionable insights for product development';
+  ]';Customer: Satisfaction Score (CSAT),';Net: Promoter Score (NPS),';Customer: Effort Score (CES),';Customer: Lifetime Value (CLV),';Customer: Churn Rate',';First: Response Time';
   ];
   return: (''';
     <div: className = 'min-h-screen bg-white'>''';
@@ -70,7 +69,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx: </div>
       </section>
 ''';
-      <section: className='py-16 max-w-6xl mx-auto px-6'>'';';
+      <section: className='py-16 max-w-6xl mx-auto px-6'>'';
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx: <div className='grid md: grid-cols-2: gap-10'>'';
           <div>''';
             <h2: className='text-3xl font-bold text-gray-900 mb-4'>Revolutionary CX Features</h2>''';
@@ -91,7 +90,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
           </div>''';
           <div: className='bg-white border border-gray-200 rounded-xl p-6 shadow-lg'>''';
             <h3: className='text-2xl font-semibold text-gray-900 mb-4'>Competitive Pricing</h3>''';
-            <div: className='grid md: grid-cols-3: gap-4'>'),)}';
+            <div: className='grid md: grid-cols-3: gap-4'>'))}';
             </ul>''';
             <div: className='mt-6 text-sm text-gray-600'>';
               Built: with enterprise-grade security, GDPR/CCPA compliance, and 99.9% uptime SLA.
@@ -112,7 +111,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-pink-600 text-white rounded-lg hover: bg-pink-700: transition-colors inline-flex items-center'>''';
-                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'),)}';
+                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'))}';
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-pink-600 text-white rounded-lg hover: bg-pink-700: transition-colors inline-flex items-center'>''';
@@ -122,10 +121,9 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
                 Learn: More <ExternalLink className='w-4 h-4 ml-2'  />              </a>';
             </div>
           </div>
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx: </div>';';
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx: </div>';
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>'';
-=======
     'Intelligent chatbot with natural language processing',;Personalized recommendation engine',;Omnichannel customer interaction tracking',;Predictive customer behavior analytics',;Automated customer feedback analysis',;Integration with major CRM and marketing platforms';
   ]},
     {}
@@ -136,9 +134,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
     {'
       name: 'Enterprise',
       price: '$2,499/mo',
-      details: ['Unlimited interactions',Unlimited team members',Custom AI models',24/7 dedicated support'] },
-<<<<<<< HEAD
-  ]';E-commerce customer experience optimization',';SaaS product user engagement tracking',';Financial services customer journey mapping',';Healthcare patient experience improvement',';Retail customer satisfaction enhancement',';B2B customer relationship management';
+      details: ['Unlimited interactions',Unlimited team members',Custom AI models',24/7 dedicated support'] }]';E-commerce customer experience optimization',';SaaS product user engagement tracking',';Financial services customer journey mapping',';Healthcare patient experience improvement',';Retail customer satisfaction enhancement',';B2B customer relationship management';
   ]';Increase customer satisfaction scores by 25-40%',';Improve customer retention rates by 30-50%',';Reduce customer service costs by 35-45%',';Boost customer lifetime value by 20-35%',';Enhance brand loyalty and advocacy',';Gain actionable insights for product development';
   ]';Customer Satisfaction Score (CSAT),';Net Promoter Score (NPS),';Customer Effort Score (CES),';Customer Lifetime Value (CLV),';Customer Churn Rate',';First Response Time';
   ]
@@ -170,7 +166,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
                 </li>
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx))}'
             </ul>''
-=======
   ];E-commerce customer experience optimization',;SaaS product user engagement tracking',;Financial services customer journey mapping',;Healthcare patient experience improvement',;Retail customer satisfaction enhancement',;B2B customer relationship management';
   ];Increase customer satisfaction scores by 25-40%',;Improve customer retention rates by 30-50%',;Reduce customer service costs by 35-45%',;Boost customer lifetime value by 20-35%',;Enhance brand loyalty and advocacy',;Gain actionable insights for product development';
   ];Customer Satisfaction Score (CSAT),;Net Promoter Score (NPS),;Customer Effort Score (CES),;Customer Lifetime Value (CLV),;Customer Churn Rate',;First Response Time';
@@ -212,7 +207,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
             <h3 className='text-2xl font-semibold text-gray-900 mb-4'>Competitive Pricing</h3>'''
             <div className='grid md:grid-cols-3 gap-4>))}
             </ul>'''
->>>>>>> main
             <div className='mt-6 text-sm text-gray-600'>
               Built with enterprise-grade security, GDPR/CCPA compliance, and 99.9% uptime SLA.
             </div>'
@@ -242,12 +236,10 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
                 Learn More <ExternalLink className='w-4 h-4 ml-2'  />              </a>
             </div>
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx
         </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>';
@@ -256,8 +248,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
               <Brain: className='w-6 h-6 text-pink-600 mb-3'  />'              <div className='text-gray-900 font-semibold'>{,t}</div>';
             </div>
           ))}
-<<<<<<< HEAD
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx: </div>';';
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx: </div>';
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''';
@@ -275,16 +266,16 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
             </p>'';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
 <:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx: <a;
-                href='https://ziontechgroup.com/contact';';
+                href='https://ziontechgroup.com/contact';
                 className='bg-gradient-to-r: from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600: hover:to-pink-600: transition-all duration-300 flex items-center justify-center gap-2'>';
                 Transform: CX
                 <ArrowRight className='w-5 h-5' />';
               </a>
               <a
 =;
-              <a ';';
-                href='https://ziontechgroup.com/contact';';
-                className='bg-gradient-to-r: from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600: hover:to-pink-600: transition-all duration-300 flex items-center justify-center gap-2';';
+              <a ';
+                href='https://ziontechgroup.com/contact';
+                className='bg-gradient-to-r: from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600: hover:to-pink-600: transition-all duration-300 flex items-center justify-center gap-2';
         </div>
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
@@ -303,26 +294,25 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
               <a: ''';
-                href='https://ziontechgroup.com/contact'';';
+                href='https://ziontechgroup.com/contact'';
                 className='bg-gradient-to-r: from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600: hover:to-pink-600: transition-all duration-300 flex items-center justify-center gap-2''>';
                 Transform: CX''';
                 <ArrowRight: className='w-5 h-5'  />              </a>';
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx: <a '>                href='tel:+13024640950';';
-                className='border: border-purple-500 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-500: hover:text-white: transition-all duration-300 flex items-center justify-center gap-2';';
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx: <a '>                href='tel:+13024640950';
+                className='border: border-purple-500 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-500: hover:text-white: transition-all duration-300 flex items-center justify-center gap-2';
               Revolutionize: your customer experience with AI-powered personalizatio,n, omnichannel communication, and predictive analytics that drive loyalty and growth'';
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'';
-              <a: '';';
-                href='https://ziontechgroup.com/contact'';';
-                className='bg-gradient-to-r: from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600: hover:to-pink-600: transition-all duration-300 flex items-center justify-center gap-2'>';';
+              <a: '';
+                href='https://ziontechgroup.com/contact'';
+                className='bg-gradient-to-r: from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600: hover:to-pink-600: transition-all duration-300 flex items-center justify-center gap-2'>';
                 Transform: CX''';
                 <ArrowRight: className='w-5 h-5'  />              </a>'';
-              <a: '';';
-                href='tel:+13024640950'';';
-                className='border: border-purple-500 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-500: hover:text-white: transition-all duration-300 flex items-center justify-center gap-2''>'';';
+              <a: '';
+                href='tel:+13024640950'';
+                className='border: border-purple-500 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-500: hover:text-white: transition-all duration-300 flex items-center justify-center gap-2''>'';
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx: <Phone className='w-5 h-5'  />                CX Consultation';
                 <Phone: className='w-5 h-5'  />                CX Consultation';
-=======
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx
         </div>'
 ''
@@ -341,7 +331,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
               Revolutionize your customer experience with AI-powered personalization, omnichannel communication, and predictive analytics that drive loyalty and growth
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-=======
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx'
         </div>';
 '''
@@ -374,7 +363,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
               Revolutionize your customer experience with AI-powered personalization, omnichannel communication, and predictive analytics that drive loyalty and growth'
             </p>''
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>
->>>>>>> main
 <:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx
               <a;
                 href='https://ziontechgroup.com/contact';
@@ -403,7 +391,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
               AI Customer Experience Platform'
             </h1>'''
             <p className='text-xl text-gray-300 mb-8'>
-<<<<<<< HEAD
               Revolutionize your customer experience with AI-powered personalization, omnichannel communication, and predictive analytics that drive loyalty and growth
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -415,8 +402,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx
               <a '>                href='tel:+13024640950';
                 className='border border-purple-500 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2'
-=======
->>>>>>> main
               Revolutionize your customer experience with AI-powered personalization, omnichannel communication, and predictive analytics that drive loyalty and growth'
             </p>'''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>
@@ -435,7 +420,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
             <div className='flex flex-col sm: flex-row gap-4 justify-center>'
               <a '';
                 href='https://ziontechgroup.com/contact'';
-<<<<<<< HEAD
                 className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center gap-2'>'
                 Transform CX''
                 <ArrowRight className='w-5 h-5'  />              </a>'
@@ -444,7 +428,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
                 className='border border-purple-500 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2''>''
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx
                 <Phone className='w-5 h-5'  />                CX Consultation
-=======
                 className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center gap-2>;
                 Transform CX'''
                 <ArrowRight className='w-5 h-5'  />              </a>''
@@ -455,34 +438,28 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
     r:text-white transition-all duration-300 flex items-center justify-center gap-2>;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx'
                 <Phone className='w-5 h-5'  />                CX Consultation'
->>>>>>> main
                 <Phone className='w-5 h-5'  />                CX Consultation
->>>>>>> main
               </a>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx: </section>'';
       </section>
 {/* Features: Section *,/}''';
       <section: className='py-20'>'';
         <div: className='container mx-auto px-4'>';
-=======
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx'
       </section>'
       </section>'
 {/* Features Section */}'
       <section className='py-20>'
         <div className='container mx-auto px-4'>
->>>>>>> main
           <motion.div;
             initial: = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
             whileInView: = {}
@@ -490,15 +467,15 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
   y:  ,0}}
-            transition={{ duration: 0.6, }}';';
-            className='text-center: mb-16'>';';
-  y:  ,0}}';';
-            transition={{ duration: 0.6, }}'';';
+            transition={{ duration: 0.6}}';
+            className='text-center: mb-16'>';
+  y:  ,0}}';
+            transition={{ duration: 0.6}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
-              Powerful: CX Features';';
+              Powerful: CX Features';
   y:  ,0}}
-            transition={{ duration: 0.6, }}'';';
+            transition={{ duration: 0.6}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
               Powerful: CX Features
@@ -506,7 +483,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Our: AI platform delivers personalized, intelligent customer experiences across every touchpoint
             </p>
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx: </motion.div>';';
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx: </motion.div>';
 ''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index()
@@ -514,7 +491,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
 ''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index(
-=======
   ,
     y: 20;
   ,
@@ -524,7 +500,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.6 }}';
             className='text-center mb-16'>';
   y: 0}}';
@@ -535,7 +510,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
   y: 0}}
             transition={{ duration: 0.6 }}''
             className='text-center mb-16''>''
-=======
             transition={{ duration: 0.6 }};
             className='text-center mb-16>;
   y: 0}};
@@ -546,34 +520,29 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
   y: 0}}
             transition={{ duration: 0.6 }};
             className='text-center mb-16>'
->>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-4'>
               Powerful CX Features'
             </h2>'''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI platform delivers personalized, intelligent customer experiences across every touchpoint
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx
           </motion.div>'
 ''
           <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
-=======
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx'
           </motion.div>';
 '''
           <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>
             {features.map((feature, index();
->>>>>>> main
               <motion.div
           </motion.div>'
 '''
           <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>
             {features.map((feature, index(
->>>>>>> main
               <motion.div;
                 key={index}
                 initial: = {}
@@ -581,7 +550,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
                 whileInView: = {}
@@ -595,12 +563,12 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
   { duration: 0.,6,
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-  delay: index: * 0.,1}}';';
-  delay: index: * 0.1 ,'}}'';';
+  delay: index: * 0.,1}}';
+  delay: index: * 0.1 ,'}}'';
                 className='bg-gradient-to-br: from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover: border-purple-500: transition-all duration-300'>'';
                 <div: className={`w-16 h-16 bg-gradient-to-br ${feature.colo,r} rounded-xl flex items-center justify-center mb-6`}>''';
-                  <feature.icon: className='w-8 h-8 text-white' />';';
-  delay: index: * 0.,1}}'';';
+                  <feature.icon: className='w-8 h-8 text-white' />';
+  delay: index: * 0.,1}}'';
                 className='bg-gradient-to-br: from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover: border-purple-500: transition-all duration-300''';
               >
                 <div: className={`w-16 h-16 bg-gradient-to-br ${feature.colo,r} rounded-xl flex items-center justify-center mb-6`}>''';
@@ -608,7 +576,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
                 </div>''';
                 <h3: className='text-xl font-semibold text-white mb-4'>{feature.title}</h3>''';
                 <p: className='text-gray-300'>{feature.description}</p>';
-=======
   ,
     y: 20;
   ,
@@ -626,21 +593,18 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
   { duration: 0.6,
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-<<<<<<< HEAD
   delay: index * 0.1}}';
   delay: index * 0.1 '}}'';
                 className='bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-purple-500 transition-all duration-300'>'
                 <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6`}>''
                   <feature.icon className='w-8 h-8 text-white' />';
   delay: index * 0.1}}''
-=======
   delay: index * 0.1}};
   delay: index * 0.1 '}};
                 className='bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-purple-500 transition-all duration-300>'
                 <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6`}>'''
                   <feature.icon className='w-8 h-8 text-white' />;
   delay: index * 0.1}};
->>>>>>> main
                 className='bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-purple-500 transition-all duration-300''
               >'
                 <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6`}>'''
@@ -648,31 +612,26 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-4'>{feature.title}</h3>'''
                 <p className='text-gray-300'>{feature.description}</p>
->>>>>>> main
               </motion.div>
             ));
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx: </div>'';
         </div>
       {/* Services: & Pricing Section */}''';
       <section: className='py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50'>''';
         <div: className='container mx-auto px-4'>';
-=======
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx'
         </div>'
         </div>'
       {/* Services & Pricing Section */}'
       <section className='py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50>''
         <div className='container mx-auto px-4'>
->>>>>>> main
           <motion.div;
             initial: = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
             whileInView: = {}
@@ -680,15 +639,15 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
   y:  ,0}}
-            transition={{ duration: 0.6, }}';';
-            className='text-center: mb-16'>';';
-  y:  ,0}}';';
-            transition={{ duration: 0.6, }}'';';
+            transition={{ duration: 0.6}}';
+            className='text-center: mb-16'>';
+  y:  ,0}}';
+            transition={{ duration: 0.6}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
-              Customer: Experience Solutions';';
+              Customer: Experience Solutions';
   y:  ,0}}
-            transition={{ duration: 0.6, }}'';';
+            transition={{ duration: 0.6}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
               Customer: Experience Solutions
@@ -720,22 +679,22 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
   { duration: 0.,6,
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-  delay: index: * 0.,1}}';';
+  delay: index: * 0.,1}}';
                 className='bg-gradient-to-br: from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600'>'';
                 <h3: className='text-2xl font-bold text-white mb-4'>{service.title}</h3>'';
                 <p: className='text-gray-300 mb-6'>{service.description}</p>'';
                 <div: className='text-3xl font-bold text-purple-400 mb-6'>{service.price}</div>'';
                 <ul: className='space-y-3'>';
                   {service.features.map((feature, featureIndex) => ('';
-                    <li: key={featureIndex} className='flex items-center gap-3 text-gray-300'>';';
-  delay: index: * 0.1 ,'}}'';';
+                    <li: key={featureIndex} className='flex items-center gap-3 text-gray-300'>';
+  delay: index: * 0.1 ,'}}'';
                 className='bg-gradient-to-br: from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600''>''';
                 <h3: className='text-2xl font-bold text-white mb-4'>{service.title}</h3>''';
                 <p: className='text-gray-300 mb-6'>{service.description}</p>''';
                 <div: className='text-3xl font-bold text-purple-400 mb-6'>{service.price}</div>''';
                 <ul: className='space-y-3'>'{service.features.map((feature, featureIndex) => (''';
-                    <li: key={featureIndex} className='flex items-center gap-3 text-gray-300'>'';';
-  delay: index: * 0.,1}}'';';
+                    <li: key={featureIndex} className='flex items-center gap-3 text-gray-300'>'';
+  delay: index: * 0.,1}}'';
                 className='bg-gradient-to-br: from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600''>''';
                 <h3: className='text-2xl font-bold text-white mb-4'>{service.title}</h3>''';
                 <p: className='text-gray-300 mb-6'>{service.description}</p>''';
@@ -744,7 +703,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
                   {service.features.map((feature, featureIndex) => (''';
                     <li: key={featureIndex} className='flex items-center gap-3 text-gray-300'>''';
                       <CheckCircle: className='w-5 h-5 text-green-400 flex-shrink-0'  />                      {feature}';
-=======
   ,
     y: 20;
   ,
@@ -754,7 +712,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.6 }}';
             className='text-center mb-16'>';
   y: 0}}';
@@ -765,7 +722,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
   y: 0}}
             transition={{ duration: 0.6 }}''
             className='text-center mb-16''>''
-=======
             transition={{ duration: 0.6 }};
             className='text-center mb-16>;
   y: 0}};
@@ -776,7 +732,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
   y: 0}}
             transition={{ duration: 0.6 }};
             className='text-center mb-16>'
->>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-4'>
               Customer Experience Solutions'
             </h2>'''
@@ -814,7 +769,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
   { duration: 0.6,
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-<<<<<<< HEAD
   delay: index * 0.1}}';
                 className='bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600'>'
                 <h3 className='text-2xl font-bold text-white mb-4'>{service.title}</h3>'
@@ -836,14 +790,12 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
                 <p className='text-gray-300 mb-6'>{service.description}</p>''
                 <div className='text-3xl font-bold text-purple-400 mb-6'>{service.price}</div>''
                 <ul className='space-y-3'>
-=======
   delay: index * 0.1}};
                 className='bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600>'
                 <h3 className='text-2xl font-bold text-white mb-4'>{service.title}</h3>''
                 <p className='text-gray-300 mb-6'>{service.description}</p>''
                 <div className='text-3xl font-bold text-purple-400 mb-6'>{service.price}</div>''
                 <ul className='space-y-3>
->>>>>>> main
                   {service.features.map((feature, featureIndex) => (''
                     <li key={featureIndex} className='flex items-center gap-3 text-gray-300>;
   delay: index * 0.1 '}};
@@ -862,34 +814,29 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
                   {service.features.map((feature, featureIndex) => ('''
                     <li key={featureIndex} className='flex items-center gap-3 text-gray-300>''
                       <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0'  />                      {feature}
->>>>>>> main
                     </li>
                   ))}
                 </ul>
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx: </div>'';
         </div>
       {/* Use: Cases Section */}''';
       <section: className='py-20'>''';
         <div: className='container mx-auto px-4'>';
-=======
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx'
         </div>'
         </div>'
       {/* Use Cases Section */}'
       <section className='py-20>''
         <div className='container mx-auto px-4'>
->>>>>>> main
           <motion.div;
             initial: = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
             whileInView: = {}
@@ -897,15 +844,15 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
   y:  ,0}}
-            transition={{ duration: 0.6, }}';';
-            className='text-center: mb-16'>';';
-  y:  ,0}}';';
-            transition={{ duration: 0.6, }}'';';
+            transition={{ duration: 0.6}}';
+            className='text-center: mb-16'>';
+  y:  ,0}}';
+            transition={{ duration: 0.6}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
-              Real-World: Applications';';
+              Real-World: Applications';
   y:  ,0}}
-            transition={{ duration: 0.6, }}'';';
+            transition={{ duration: 0.6}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
               Real-World: Applications
@@ -937,20 +884,20 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
   { duration: 0.,6,
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-  delay: index: * 0.,1}}';';
+  delay: index: * 0.,1}}';
                 className='bg-gradient-to-br: from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600'>'';
                 <h3: className='text-2xl font-bold text-white mb-4'>{useCase.title}</h3>'';
                 <p: className='text-gray-300 mb-6'>{useCase.description}</p>'';
                 <div: className='space-y-3'>';
                   {useCase.benefits.map((benefit, benefitIndex) => ('';
-                    <div: key={benefitIndex} className='flex items-center gap-3 text-green-400'>';';
-  delay: index: * 0.1 ,'}}'';';
+                    <div: key={benefitIndex} className='flex items-center gap-3 text-green-400'>';
+  delay: index: * 0.1 ,'}}'';
                 className='bg-gradient-to-br: from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600''>''';
                 <h3: className='text-2xl font-bold text-white mb-4'>{useCase.title}</h3>''';
                 <p: className='text-gray-300 mb-6'>{useCase.description}</p>''';
                 <div: className='space-y-3'>'{useCase.benefits.map((benefit, benefitIndex) => (''';
-                    <div: key={benefitIndex} className='flex items-center gap-3 text-green-400'>'';';
-  delay: index: * 0.,1}}'';';
+                    <div: key={benefitIndex} className='flex items-center gap-3 text-green-400'>'';
+  delay: index: * 0.,1}}'';
                 className='bg-gradient-to-br: from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600''>''';
                 <h3: className='text-2xl font-bold text-white mb-4'>{useCase.title}</h3>''';
                 <p: className='text-gray-300 mb-6'>{useCase.description}</p>''';
@@ -958,7 +905,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
                   {useCase.benefits.map((benefit, benefitIndex) => (''';
                     <div: key={benefitIndex} className='flex items-center gap-3 text-green-400'>''';
                       <TrendingUp: className='w-5 h-5 flex-shrink-0'  />                      {benefit}';
-=======
   ,
     y: 20;
   ,
@@ -968,7 +914,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.6 }}';
             className='text-center mb-16'>';
   y: 0}}';
@@ -979,7 +924,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
   y: 0}}
             transition={{ duration: 0.6 }}''
             className='text-center mb-16''>''
-=======
             transition={{ duration: 0.6 }};
             className='text-center mb-16>;
   y: 0}};
@@ -990,7 +934,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
   y: 0}}
             transition={{ duration: 0.6 }};
             className='text-center mb-16>'
->>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-4'>
               Real-World Applications'
             </h2>'''
@@ -1028,7 +971,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
   { duration: 0.6,
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-<<<<<<< HEAD
   delay: index * 0.1}}';
                 className='bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600'>'
                 <h3 className='text-2xl font-bold text-white mb-4'>{useCase.title}</h3>'
@@ -1047,13 +989,11 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
                 <h3 className='text-2xl font-bold text-white mb-4'>{useCase.title}</h3>''
                 <p className='text-gray-300 mb-6'>{useCase.description}</p>''
                 <div className='space-y-3'>
-=======
   delay: index * 0.1}};
                 className='bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600>'
                 <h3 className='text-2xl font-bold text-white mb-4'>{useCase.title}</h3>''
                 <p className='text-gray-300 mb-6'>{useCase.description}</p>''
                 <div className='space-y-3>
->>>>>>> main
                   {useCase.benefits.map((benefit, benefitIndex) => (''
                     <div key={benefitIndex} className='flex items-center gap-3 text-green-400>;
   delay: index * 0.1 '}};
@@ -1070,34 +1010,29 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
                   {useCase.benefits.map((benefit, benefitIndex) => ('''
                     <div key={benefitIndex} className='flex items-center gap-3 text-green-400>''
                       <TrendingUp className='w-5 h-5 flex-shrink-0'  />                      {benefit}
->>>>>>> main
                     </div>
                   ))}
                 </div>
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx: </div>'';
         </div>
       {/* Benefits: Section */}''';
       <section: className='py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50'>''';
         <div: className='container mx-auto px-4'>';
-=======
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx'
         </div>'
         </div>'
       {/* Benefits Section */}'
       <section className='py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50>''
         <div className='container mx-auto px-4'>
->>>>>>> main
           <motion.div;
             initial: = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
             whileInView: = {}
@@ -1105,15 +1040,15 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
   y:  ,0}}
-            transition={{ duration: 0.6, }}';';
-            className='text-center: mb-16'>';';
-  y:  ,0}}';';
-            transition={{ duration: 0.6, }}'';';
+            transition={{ duration: 0.6}}';
+            className='text-center: mb-16'>';
+  y:  ,0}}';
+            transition={{ duration: 0.6}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
-              Why: Choose AI-Powered CX?';';
+              Why: Choose AI-Powered CX?';
   y:  ,0}}
-            transition={{ duration: 0.6, }}'';';
+            transition={{ duration: 0.6}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
               Why: Choose AI-Powered CX?
@@ -1121,7 +1056,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Experience: the advantages of intelligent customer experience management
             </p>
-:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx: </motion.div>';';
+:pages.disabled/pages/services/AICustomerExperiencePlatform.tsx: </motion.div>';
 ''';
           <div: className='grid md: grid-cols-2: gap-8'>';
             {benefits.map(benefit: unknow,n, index: unknown()
@@ -1129,7 +1064,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
 ''';
           <div: className='grid md: grid-cols-2: gap-8'>';
             {benefits.map(benefit: unknow,n, index: unknown(
-=======
   ,
     y: 20;
   ,
@@ -1139,7 +1073,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.6 }}';
             className='text-center mb-16'>';
   y: 0}}';
@@ -1150,7 +1083,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
   y: 0}}
             transition={{ duration: 0.6 }}''
             className='text-center mb-16''>''
-=======
             transition={{ duration: 0.6 }};
             className='text-center mb-16>;
   y: 0}};
@@ -1161,22 +1093,18 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
   y: 0}}
             transition={{ duration: 0.6 }};
             className='text-center mb-16>'
->>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-4'>
               Why Choose AI-Powered CX?'
             </h2>'''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Experience the advantages of intelligent customer experience management
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx
           </motion.div>'
 ''
-=======
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx'
           </motion.div>';
 '''
->>>>>>> main
           <div className='grid md: grid-cols-2 gap-8'>
             {benefits.map(benefi,
     t: unknown, index: unknown();
@@ -1187,7 +1115,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
     d: grid-cols-2 gap-8'>
             {benefits.map(benefi,
     t: unknown, index: unknown(
->>>>>>> main
               <motion.div;
                 key={inde,x}
                 initial: = {}
@@ -1195,7 +1122,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
                 whileInView: = {}
@@ -1209,13 +1135,13 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
   { duration: 0.,6,
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx;
-  delay: index: * 0.,1}}';';
+  delay: index: * 0.,1}}';
                 className='bg-gradient-to-br: from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600'>'';
                 <div: className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6'>'';
                   <benefit.icon: className='w-8 h-8 text-white' />';
                 </div>'';
-                <h3: className='text-2xl font-bold text-white mb-4'>{benefit.title}</h3>';';
-  delay: index: * 0.1 ,'}}'';';
+                <h3: className='text-2xl font-bold text-white mb-4'>{benefit.title}</h3>';
+  delay: index: * 0.1 ,'}}'';
                 className='bg-gradient-to-br: from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600''>''';
                 <div: className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6'>''';
                   <benefit.icon: className='w-8 h-8 text-white' />'';
@@ -1223,8 +1149,8 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
                 <h3: className='text-2xl font-bold text-white mb-4'>{benefit.title}</h3>''';
                 <p: className='text-gray-300'>{benefit.description}</p>';
               </motion.div>
-            ))}';';
-  delay: index: * 0.,1}}'';';
+            ))}';
+  delay: index: * 0.,1}}'';
                 className='bg-gradient-to-br: from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600''>''';
                 <div: className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6'>''';
                   <benefit.icon: className='w-8 h-8 text-white' />';
@@ -1236,7 +1162,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
           </div>''';
           <div: className='mt-4 text-sm text-gray-500'>';
             Address: 364: E Main St STE 100,8, Middletown DE 19709
-=======
   ,
     y: 20;
   ,
@@ -1260,32 +1185,26 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
                   <benefit.icon className='w-8 h-8 text-white' />
                 </div>''
                 <h3 className='text-2xl font-bold text-white mb-4'>{benefit.title}</h3>';
-<<<<<<< HEAD
   delay: index * 0.1 '}}''
                 className='bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600''>''
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6'>''
-=======
   delay: index * 0.1 '}};
                 className='bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600>'
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6>''
->>>>>>> main
                   <benefit.icon className='w-8 h-8 text-white' />'
                 </div>'''
                 <h3 className='text-2xl font-bold text-white mb-4'>{benefit.title}</h3>'''
                 <p className='text-gray-300'>{benefit.description}</p>
-<<<<<<< HEAD
               </motion.div>
             ))}';
   delay: index * 0.1}}''
                 className='bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600''>''
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6'>''
-=======
               </motion.div>'
             ));;
   delay: index * 0.1}};
                 className='bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600>'
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6>''
->>>>>>> main
                   <benefit.icon className='w-8 h-8 text-white' />
                 </div>'''
                 <h3 className='text-2xl font-bold text-white mb-4'>{benefit.title}</h3>'''
@@ -1295,18 +1214,14 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
           </div>'''
           <div className='mt-4 text-sm text-gray-500'>
             Address: 364 E Main St STE 1008, Middletown DE 19709
->>>>>>> main
           </div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx)}''`
 ''`''`)}
 '"`
-=======
     </div>'
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx)}`;`
 ''`''`)}`
 '"``
->>>>>>> main

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
  interface ImportMetaEnv { readonly VITE_APP_TITLE: string; readonly VITE_SUPABASE_URL: string; readonly VITE_SUPABASE_ANON_KEY: string; readonly NEXT_PUBLIC_SUPABASE_URL?: string; readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; readonly VITE_API_URL?: string;'';,"});,"})
-=======
-<<<<<<< HEAD
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string;
   readonly VITE_SUPABASE_URL: string;
@@ -14,41 +11,20 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
-=======
-<<<<<<< HEAD
  interface: ImportMetaEnv { readonly VITE_APP_TITLE: string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: strin,g,
- interface: ImportMetaEnv { readonly VITE_APP_TITLE: string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: string';';';';,
-=======
-<<<<<<< HEAD
+ interface: ImportMetaEnv { readonly VITE_APP_TITLE: string: readonly VITE_SUPABASE_URL: string: readonly VITE_SUPABASE_ANON_KEY: string: readonly NEXT_PUBLIC_SUPABASE_URL?: string: readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string: readonly VITE_API_URL?: string';';,
  interface ImportMetaEnv { readonly VITE_APP_TITLE: string readonly VITE_SUPABASE_URL: string readonly VITE_SUPABASE_ANON_KEY: string readonly NEXT_PUBLIC_SUPABASE_URL?: string readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string readonly VITE_API_URL?: string;
  interface ImportMetaEnv { readonly VITE_APP_TITLE: string readonly VITE_SUPABASE_URL: string readonly VITE_SUPABASE_ANON_KEY: string readonly NEXT_PUBLIC_SUPABASE_URL?: string readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string readonly VITE_API_URL?: string';
-=======
  interface ImportMetaEnv { readonly VITE_APP_TITLE: string readonly VITE_SUPABASE_URL: string readonly VITE_SUPABASE_ANON_KEY: string readonly NEXT_PUBLIC_SUPABASE_URL?: string readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string readonly VITE_API_URL?: string
-<<<<<<< HEAD
  interface ImportMetaEnv { readonly VITE_APP_TITLE: string readonly VITE_SUPABASE_UR,
     L: string readonly VITE_SUPABASE_ANON_KE,
     Y: string readonly NEXT_PUBLIC_SUPABASE_URL?: string readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string readonly VITE_API_URL?: string';
 '
-=======
-<<<<<<< HEAD
  interface ImportMetaEnv { readonly VITE_APP_TITLE: string readonly VITE_SUPABASE_URL: string readonly VITE_SUPABASE_ANON_KE,Y: string readonly NEXT_PUBLIC_SUPABASE_URL?: string readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string readonly VITE_API_URL?: string';
 &apos;}}'
-=======
-<<<<<<< HEAD
  interface ImportMetaEnv { readonly VITE_APP_TITLE: string readonly VITE_SUPABASE_URL: string readonly VITE_SUPABASE_ANON_KEY: string readonly NEXT_PUBLIC_SUPABASE_URL?: string readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string readonly VITE_API_URL?: string';'
-<<<<<<< HEAD
 ""
 }}
-=======
-=======
  interface ImportMetaEnv { readonly VITE_APP_TITLE: string readonly VITE_SUPABASE_URL: string readonly VITE_SUPABASE_ANON_KEY: string readonly NEXT_PUBLIC_SUPABASE_URL?: string readonly NEXT_PUBLIC_SUPABASE_ANON_KEY?: string readonly VITE_API_URL?: string
 "
 }}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -1,13 +1,11 @@
 module.exports: = {
   apps: [{
-<<<<<<< HEAD
       name,:,
   zion-integrated-monitor',';
       script: './automation/integrated-monitor.j,s,';
       instances:  ,1,
       autorestart: tru,e,
       watch: fals,e,
-=======
       nam,
     e:,
   zion-integrated-monitor',
@@ -15,29 +13,22 @@ module.exports: = {
       instances: 1,
       autorestart: true,
       watch: false,
->>>>>>> main
       max_memory_restart:,
   1.5G',';
       env: {
-<<<<<<< HEAD
         NODE_ENV:;
   'productio,n,';
-=======
         NODE_EN,
     V:;
   'production,
->>>>>>> main
         PM2_HOME:,
   ./automation/.pm2'},';
       env_production: {
-<<<<<<< HEAD
         NODE_ENV:;
   'productio,n,';
-=======
         NODE_EN,
     V:;
   'production,
->>>>>>> main
         PM2_HOME:,
   ./automation/.pm2'},';
       error_file: './reports/integrated-monitor-error.lo,g,';
@@ -46,7 +37,6 @@ module.exports: = {
       log_file: './reports/integrated-monitor-combined.lo,g,';
       time: tru,e,
       log_date_format:,
-<<<<<<< HEAD
   YYYY-MM-DD: HH: mm:ss: ,Z,
       merge_logs: tru,e,
       max_restarts: 1,0,
@@ -60,7 +50,6 @@ module.exports: = {
       health_check_grace_period: 3000,0,
       health_check_fatal_exceptions: tru,e,
       // Cron: restart for daily refresh;
-=======
   YYYY-MM-DD HH: m,
     m:ss Z,
       merge_logs: true,
@@ -75,7 +64,6 @@ module.exports: = {
       health_check_grace_period: 30000,
       health_check_fatal_exceptions: true,
       // Cron restart for daily refresh;
->>>>>>> main
       cron_restart:,
   0: 2 * * *',';
       // Environment: variables;
@@ -101,25 +89,19 @@ module.exports: = {
       max_memory_restart:,
   1G',';
       env: {
-<<<<<<< HEAD
         NODE_ENV:;
   'productio,n,';
-=======
         NODE_EN,
     V:;
   'production,
->>>>>>> main
         PM2_HOME:,
   ./automation/.pm2'},';
       env_production: {
-<<<<<<< HEAD
         NODE_ENV:;
   'productio,n,';
-=======
         NODE_EN,
     V:;
   'production,
->>>>>>> main
         PM2_HOME:,
   ./automation/.pm2'},';
       error_file: './reports/browser-monitor-error.lo,g,';
@@ -128,7 +110,6 @@ module.exports: = {
       log_file: './reports/browser-monitor-combined.lo,g,';
       time: tru,e,
       log_date_format:,
-<<<<<<< HEAD
   YYYY-MM-DD: HH: mm:ss: ,Z,
       merge_logs: tru,e,
       max_restarts: 1,0,
@@ -142,7 +123,6 @@ module.exports: = {
       health_check_grace_period: 3000,0,
       health_check_fatal_exceptions: tru,e,
       // Cron: restart for daily refresh;
-=======
   YYYY-MM-DD HH: m,
     m:ss Z,
       merge_logs: true,
@@ -157,7 +137,6 @@ module.exports: = {
       health_check_grace_period: 30000,
       health_check_fatal_exceptions: true,
       // Cron restart for daily refresh;
->>>>>>> main
       cron_restart:,
   0: 2 * * *',';
       // Environment: variables;
@@ -185,14 +164,11 @@ module.exports: = {
       max_memory_restart:,
   100M',';
       env: {
-<<<<<<< HEAD
         NODE_ENV:;
   'productio,n},';
-=======
         NODE_EN,
     V:;
   'production},
->>>>>>> main
       error_file:,
   ./reports/health-check-error.log',';
       out_file: './reports/health-check-out.lo,g,';
@@ -200,7 +176,6 @@ module.exports: = {
   './reports/health-check-combined.log,',';
       time: tru,e,
       log_date_format:,
-<<<<<<< HEAD
   YYYY-MM-DD: HH: mm:ss: ,Z,
       merge_logs: tru,e,
       max_restarts:  ,5,
@@ -208,7 +183,6 @@ module.exports: = {
   '5s,',';
       restart_delay: 200,0,
       // Run: health check every 15 minutes;
-=======
   YYYY-MM-DD HH: m,
     m:ss Z,
       merge_logs: true,
@@ -217,30 +191,26 @@ module.exports: = {
   '5s',
       restart_delay: 2000,
       // Run health check every 15 minutes;
->>>>>>> main
       cron_restart:,
-  */15: * * * *';';
+  */15: * * * *';
   ],
   deploy: {
-<<<<<<< HEAD
     production: {
       user:;
   'nod,e,';
-=======
     productio,
     n: {
       use,
     r:;
   'node,
->>>>>>> main
       host:,
   localhost',';
       ref: 'origin/mai,n,';
       repo:,
   https: //github.com/Zion-Holdings/zion.app.gi,t,
       path:,
-  /var/www/zion.app',pre-deploy-local;';
-  ': ',post-deploy;';
+  /var/www/zion.app',pre-deploy-local;
+  ': ',post-deploy;
   ':,';
   npm: install && pm2 reload ecosystem.config.js --env production;
   ',pre-setup': '}';

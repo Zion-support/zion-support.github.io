@@ -8,7 +8,6 @@ import: {}
   CheckCircle,
   Lightbulb,
   Database,
-<<<<<<< HEAD
   Cloud} from
   'lucide-react.ts';
 
@@ -34,7 +33,6 @@ export default function GreenIT(...args: any[]): any {}
       />
 
       {/* Hero Section */}""
->>>>>>> pr-10728
       <section className="relative py-20 overflow-hidden">""
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-teal-500/10"></div>"        <div className="container mx-auto px-4 relative z-10">
           <motion.div;
@@ -46,37 +44,31 @@ export default function GreenIT(...args: any[]): any {}
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
             className="text-center max-w-4xl mx-auto""
           >""
             <div className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-400/30 rounded-full text-green-300 text-sm font-medium mb-6">""
-=======
   Cloud} from;
-  'lucide-react.ts';';
+  'lucide-react.ts';
 :pages.disabled/pages/services/green-it.tsx;
 export: default function GreenIT(...args: any[]): any: {
   return();
-<<<<<<< HEAD
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'';
       <SEO''';
-        title='Green: IT Solutions - Zion Tech Group'';';
+        title='Green: IT Solutions - Zion Tech Group'';
         description='Transform: your IT infrastructure with sustainabl,e, eco-friendly solutions. Reduce carbon footprint, lower energy costs, and meet sustainability goals.'/>';
 '{/* Hero: Section */}''      <section className='relative py-20 overflow-hidden'>''';
         <div: className='absolute inset-0 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-teal-500/10'></div>'        <div className='container mx-auto px-4 relative z-10'>';
-=======
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>'
       <SEO'''
         title='Green IT Solutions - Zion Tech Group'';
         description='Transform your IT infrastructure with sustainable, eco-friendly solutions. Reduce carbon footprint, lower energy costs, and meet sustainability goals.'/>
 '{/* Hero Section */}      <section className='relative py-20 overflow-hidden>''
         <div className='absolute inset-0 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-teal-500/10'></div>'        <div className='container mx-auto px-4 relative z-10'>
->>>>>>> main
           <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}
+            initial={{ opacity:  ,0, y: 20}}
 :pages.disabled/pages/services/green-it.tsx;
-<<<<<<< HEAD
-            animate={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.6, }}''            className='text-center: max-w-4xl mx-auto''>''';
-            <div: className='inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-400/30 rounded-full text-green-300 text-sm font-medium mb-6'>'';';
+            animate={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.6}}''            className='text-center: max-w-4xl mx-auto''>''';
+            <div: className='inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-400/30 rounded-full text-green-300 text-sm font-medium mb-6'>'';
 :pages.disabled/pages/services/green-it.tsx: <Globe className='w-4 h-4 mr-2'  />              Sustainable Technology'';
             </div>''';
             <h1: className='text-5xl md: text-6xl: font-bold text-white mb-6'>';
@@ -91,11 +83,8 @@ export: default function GreenIT(...args: any[]): any: {
               <button: className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400: hover:to-emerald-500: transition-all duration-200 hover:scale-105: shadow-lg shadow-green-500/20'>';
                 Get: Started'</button>''              <button className='px-8 py-4 border border-green-400/30 text-green-400 font-semibold rounded-lg hover:bg-green-400/10: transition-all duration-200'>';
                 Learn: More
-=======
-<<<<<<< HEAD
             animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6 }}''            className='text-center max-w-4xl mx-auto''>''
             <div className='inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-400/30 rounded-full text-green-300 text-sm font-medium mb-6'>''
->>>>>>> main
 :pages.disabled/pages/services/green-it.tsx
               <Globe className='w-4 h-4 mr-2'  />              Sustainable Technology'
             </div>''
@@ -105,7 +94,6 @@ export: default function GreenIT(...args: any[]): any: {
             <p className='text-xl text-slate-300 mb-8 leading-relaxed'>
               Transform your IT infrastructure with sustainable, eco-friendly;
               solutions that reduce environmental impact while improving
-<<<<<<< HEAD
               performance and lowering costs."
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
@@ -120,13 +108,11 @@ export: default function GreenIT(...args: any[]): any: {
               Green IT Solutions;
             </h1>""
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-=======
               performance and lowering costs.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20'>
                 Get Started'</button>''              <button className='px-8 py-4 border border-green-400/30 text-green-400 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200'>
-=======
             animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.6 }}            className='text-center max-w-4xl mx-auto>'
             <div className='inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-400/30 rounded-full text-green-300 text-sm font-medium mb-6>';
 :pages.disabled/pages/services/green-it.tsx'
@@ -136,7 +122,6 @@ export: default function GreenIT(...args: any[]): any: {
               Green IT Solutions''
             </h1>'''
             <p className='text-xl text-slate-300 mb-8 leading-relaxed'>
->>>>>>> main
               Transform your IT infrastructure with sustainable, eco-friendly;
               solutions that reduce environmental impact while improving;
               performance and lowering costs.''
@@ -146,15 +131,12 @@ export: default function GreenIT(...args: any[]): any: {
     r:scale-105 shadow-lg shadow-green-500/20>
                 Get Started'</button>''              <button className='px-8 py-4 border border-green-400/30 text-green-400 font-semibold rounded-lg hove,
     r:bg-green-400/10 transition-all duration-200'>
->>>>>>> main
                 Learn More
->>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/green-it.tsx
 
 "{/* Features Section */}""
@@ -162,7 +144,6 @@ export: default function GreenIT(...args: any[]): any: {
 "
 
       {/* Features Section */}""
->>>>>>> pr-10728
       <section className="py-20">""
         <div className="container mx-auto px-4">
           <motion.div;
@@ -174,7 +155,6 @@ export: default function GreenIT(...args: any[]): any: {
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -185,22 +165,16 @@ export: default function GreenIT(...args: any[]): any: {
               Sustainable Technology Features"
               Sustainable Technology Features;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/green-it.tsx: '{/* Features Section *,/}''      <section className='py-20'>''';
         <div: className='container mx-auto px-4'>';
-=======
 :pages.disabled/pages/services/green-it.tsx'
 '{/* Features Section */}      <section className='py-20>''
         <div className='container mx-auto px-4'>
->>>>>>> main
           <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}
+            initial={{ opacity:  ,0, y: 20}}
 :pages.disabled/pages/services/green-it.tsx;
-<<<<<<< HEAD
-            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.6, }}''            className='text-center: mb-16''>''';
+            whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.6}}''            className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
 :pages.disabled/pages/services/green-it.tsx: Sustainable Technology Features'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>';
               Our: Green IT solutions combine environmental responsibility with;
@@ -209,17 +183,14 @@ export: default function GreenIT(...args: any[]): any: {
             </p>
 :pages.disabled/pages/services/green-it.tsx: </motion.div>'''          <div className='grid md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index) => (
-=======
             whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6 }}            className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/green-it.tsx'
               Sustainable Technology Features'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
->>>>>>> main
               Our Green IT solutions combine environmental responsibility with;
               cutting-edge technology to deliver sustainable, high-performance
               IT infrastructure.
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/green-it.tsx
 
           </motion.div>"""
@@ -227,18 +198,13 @@ export: default function GreenIT(...args: any[]): any: {
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
           <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-=======
 :pages.disabled/pages/services/green-it.tsx'
           </motion.div>'''          <div className='grid md: anygrid-cols-2 l,
     g:grid-cols-3 gap-8'>
->>>>>>> main
             {features.map((feature, index) => (
->>>>>>> main
               <motion.div;
                 key={index}
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/green-it.tsx
 
@@ -247,7 +213,6 @@ export: default function GreenIT(...args: any[]): any: {
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105""
               >""
                 <div className="w-12 h-12 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-4">""
@@ -264,35 +229,26 @@ export: default function GreenIT(...args: any[]): any: {
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
                 </h3>""
->>>>>>> pr-10728
                 <p className="text-slate-300 leading-relaxed">
-=======
-                initial={{ opacity:  ,0, y: 20, }}
+                initial={{ opacity:  ,0, y: 20}}
 :pages.disabled/pages/services/green-it.tsx;
-<<<<<<< HEAD
-                whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.,6, delay: index: * 0.1, }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover: border-green-400/30: transition-all duration-200 hover:scale-105''>''';
-                <div: className='w-12 h-12 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-4'>'';';
+                whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.,6, delay: index: * 0.1}}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover: border-green-400/30: transition-all duration-200 hover:scale-105''>''';
+                <div: className='w-12 h-12 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-4'>'';
 :pages.disabled/pages/services/green-it.tsx: <feature.icon className='w-6 h-6 text-green-400' />'';
                 </div>''';
                 <h3: className='text-xl font-semibold text-white mb-3'>';
                   {feature.titl,e}'</h3>''                <p: className='text-slate-300 leading-relaxed'>';
-=======
-<<<<<<< HEAD
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105''>''
                 <div className='w-12 h-12 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/green-it.tsx
-=======
                 whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hove,
     r:scale-105>'
                 <div className='w-12 h-12 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-4>';
 :pages.disabled/pages/services/green-it.tsx'
->>>>>>> main
                   <feature.icon className='w-6 h-6 text-green-400' />'
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-3>
                   {feature.title}</h3>''                <p className='text-slate-300 leading-relaxed'>
->>>>>>> main
->>>>>>> main
                   {feature.description}
                 </p>
               </motion.div>
@@ -300,7 +256,6 @@ export: default function GreenIT(...args: any[]): any: {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/green-it.tsx
 
 "{/* Solutions Section */}""
@@ -308,7 +263,6 @@ export: default function GreenIT(...args: any[]): any: {
 "
 
       {/* Solutions Section */}""
->>>>>>> pr-10728
       <section className="py-20 bg-slate-800/30">""
         <div className="container mx-auto px-4">
           <motion.div;
@@ -320,7 +274,6 @@ export: default function GreenIT(...args: any[]): any: {
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -331,22 +284,16 @@ export: default function GreenIT(...args: any[]): any: {
               Comprehensive Green IT Solutions"
               Comprehensive Green IT Solutions;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/green-it.tsx: '{/* Solutions Section */}''      <section className='py-20 bg-slate-800/30'>''';
         <div: className='container mx-auto px-4'>';
-=======
 :pages.disabled/pages/services/green-it.tsx'
 '{/* Solutions Section */}      <section className='py-20 bg-slate-800/30>''
         <div className='container mx-auto px-4'>
->>>>>>> main
           <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}
+            initial={{ opacity:  ,0, y: 20}}
 :pages.disabled/pages/services/green-it.tsx;
-<<<<<<< HEAD
-            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.6, }}''            className='text-center: mb-16''>''';
+            whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.6}}''            className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
 :pages.disabled/pages/services/green-it.tsx: Comprehensive Green IT Solutions'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>';
               From: data centers to cloud migration, we offer end-to-end;
@@ -355,17 +302,14 @@ export: default function GreenIT(...args: any[]): any: {
             </p>
 :pages.disabled/pages/services/green-it.tsx: </motion.div>'''          <div className='grid md: anygrid-cols-2: gap-8'>';
             {solutions.map((solutio,n, index) => (
-=======
             whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6 }}            className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/green-it.tsx'
               Comprehensive Green IT Solutions'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
->>>>>>> main
               From data centers to cloud migration, we offer end-to-end;
               sustainable IT solutions that align with your environmental and
               business objectives.
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/green-it.tsx
 
           </motion.div>"""
@@ -373,17 +317,12 @@ export: default function GreenIT(...args: any[]): any: {
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
           <div className="grid md: anygrid-cols-2 gap-8">
-=======
 :pages.disabled/pages/services/green-it.tsx'
           </motion.div>'''          <div className='grid md: anygrid-cols-2 gap-8'>
->>>>>>> main
             {solutions.map((solution, index) => (
->>>>>>> main
               <motion.div;
                 key={index}
-<<<<<<< HEAD
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
 :pages.disabled/pages/services/green-it.tsx
 
@@ -392,7 +331,6 @@ export: default function GreenIT(...args: any[]): any: {
                 whileInView={{ opacity: 1, x: 0 }}"
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-green-400/30 transition-all duration-200""
               >""
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6">""
@@ -410,12 +348,10 @@ export: default function GreenIT(...args: any[]): any: {
                   <solution.icon className="w-8 h-8 text-green-400" />
                 </div>""
                 <h3 className="text-2xl font-semibold text-white mb-4">
-=======
-                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -20 : 20, }}
+                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -20 : 20}}
 :pages.disabled/pages/services/green-it.tsx;
-<<<<<<< HEAD
-                whileInView={{ opacity:  ,1, x: 0, }}'transition={{ duration: 0.,6, delay: index: * 0.1, }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover: border-green-400/30: transition-all duration-200''>''';
-                <div: className='w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6'>'';';
+                whileInView={{ opacity:  ,1, x: 0}}'transition={{ duration: 0.,6, delay: index: * 0.1}}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover: border-green-400/30: transition-all duration-200''>''';
+                <div: className='w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6'>'';
 :pages.disabled/pages/services/green-it.tsx: <solution.icon className='w-8 h-8 text-green-400' />'';
                 </div>''';
                 <h3: className='text-2xl font-semibold text-white mb-4'>';
@@ -424,33 +360,26 @@ export: default function GreenIT(...args: any[]): any: {
                 <p: className='text-slate-300 leading-relaxed mb-6'>';
                   {solution.description}'</p>''                <button: className='text-green-400 hover: text-green-300: font-medium transition-colors'>';
                   Learn: More →
-=======
-<<<<<<< HEAD
                 whileInView={{ opacity: 1, x: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-green-400/30 transition-all duration-200''>''
                 <div className='w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6'>''
 :pages.disabled/pages/services/green-it.tsx
-=======
                 whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-green-400/30 transition-all duration-200>'
                 <div className='w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6>';
 :pages.disabled/pages/services/green-it.tsx'
->>>>>>> main
                   <solution.icon className='w-8 h-8 text-green-400' />'
                 </div>'''
                 <h3 className='text-2xl font-semibold text-white mb-4>
->>>>>>> main
                   {solution.title}
                 </h3>'''
                 <p className='text-slate-300 leading-relaxed mb-6>
                   {solution.description}</p>''                <button className='text-green-400 hover:text-green-300 font-medium transition-colors'>
                   Learn More →
->>>>>>> main
                 </button>
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/green-it.tsx
 
 "{/* Benefits Section */}""
@@ -458,7 +387,6 @@ export: default function GreenIT(...args: any[]): any: {
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
       <section className="py-20">""
         <div className="container mx-auto px-4">""
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -486,16 +414,14 @@ export: default function GreenIT(...args: any[]): any: {
                 Environmental & Business Benefits;
               </h2>""
               <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/green-it.tsx: '{/* Benefits Section */}''      <section className='py-20'>''';
         <div: className='container mx-auto px-4'>''';
           <div: className='grid lg: grid-cols-2: gap-12 items-center'>';
             <motion.div;
-              initial={{ opacity: ,0, x: -20, }}
-              whileInView={{ opacity:  ,1, x: 0, }}
+              initial={{ opacity: ,0, x: -20}}
+              whileInView={{ opacity:  ,1, x: 0}}
 :pages.disabled/pages/services/green-it.tsx;
-              transition={{ duration: 0.6, }}'>''';
+              transition={{ duration: 0.6}}'>''';
               <h2: className='text-4xl font-bold text-white mb-6'>';
                 Environmental: & Business Benefits'';
               </h2>''';
@@ -506,7 +432,6 @@ export: default function GreenIT(...args: any[]): any: {
               </p>''';
               <div: className='grid grid-cols-1 gap-4'>'{benefits.map((benefit, index) => (''                  <div key={index} className='flex items-center space-x-3'>''';
                     <CheckCircle: className='w-5 h-5 text-green-400 flex-shrink-0'  />'                    <span className='text-slate-300'>{benefit}</span>';
-=======
 :pages.disabled/pages/services/green-it.tsx'
 '{/* Benefits Section */}      <section className='py-20>''
         <div className='container mx-auto px-4>''
@@ -521,28 +446,22 @@ export: default function GreenIT(...args: any[]): any: {
                 Environmental & Business Benefits''
               </h2>'''
               <p className='text-lg text-slate-300 mb-8 leading-relaxed'>
->>>>>>> main
                 Our Green IT solutions deliver measurable benefits for both the;
-<<<<<<< HEAD
                 environment and your business. Reduce costs while making a
                 positive impact on the planet.'
               </p>''
               <div className='grid grid-cols-1 gap-4'>'{benefits.map((benefit, index) => (''                  <div key={index} className='flex items-center space-x-3'>''
                     <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0'  />'                    <span className='text-slate-300'>{benefit}</span>
-=======
                 environment and your business. Reduce costs while making a;
                 positive impact on the planet.''
               </p>'''
               <div className='grid grid-cols-1 gap-4>{benefits.map((benefit, index) => (''                  <div key={index} className='flex items-center space-x-3>''
                     <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0'  />                    <span className='text-slate-300'>{benefit}</span>
->>>>>>> main
->>>>>>> main
                   </div>
                 ))}
               </div>
             </motion.div>
             <motion.div;
-<<<<<<< HEAD
               initial={{ opacity: 0, x: 20 }}
 :pages.disabled/pages/services/green-it.tsx
 
@@ -551,7 +470,6 @@ export: default function GreenIT(...args: any[]): any: {
               whileInView={{ opacity: 1, x: 0 }}"
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
               className="relative""
             >""
               <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl p-8 border border-green-400/30">""
@@ -576,17 +494,14 @@ export: default function GreenIT(...args: any[]): any: {
                     Start your sustainability journey with our expert Green IT;
                     consultants.
                   </p>""
->>>>>>> pr-10728
                   <button className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200">
                     Get Assessment;
-=======
-              initial={{ opacity:  ,0, x: 20, }}
+              initial={{ opacity:  ,0, x: 20}}
 :pages.disabled/pages/services/green-it.tsx;
-<<<<<<< HEAD
-              whileInView={{ opacity:  ,1, x: 0, }}'transition={{ duration: 0.6, }}''              className='relative''>''';
+              whileInView={{ opacity:  ,1, x: 0}}'transition={{ duration: 0.6}}''              className='relative''>''';
               <div: className='bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl p-8 border border-green-400/30'>''';
                 <div: className='text-center'>''';
-                  <div: className='w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6'>'';';
+                  <div: className='w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6'>'';
 :pages.disabled/pages/services/green-it.tsx: <Lightbulb className='w-10 h-10 text-white'  />'';
                   </div>''';
                   <h3: className='text-2xl font-bold text-white mb-4'>';
@@ -595,20 +510,16 @@ export: default function GreenIT(...args: any[]): any: {
                     Start: your sustainability journey with our expert Green IT
                     consultants.'</p>''                  <button className='w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover: from-green-400: hover:to-emerald-500: transition-all duration-200'>';
                     Get: Assessment
-=======
-<<<<<<< HEAD
               whileInView={{ opacity: 1, x: 0 }}'transition={{ duration: 0.6 }}''              className='relative''>''
               <div className='bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl p-8 border border-green-400/30'>''
                 <div className='text-center'>''
                   <div className='w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6'>''
 :pages.disabled/pages/services/green-it.tsx
-=======
               whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.6 }}              className='relative>'
               <div className='bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl p-8 border border-green-400/30>''
                 <div className='text-center>''
                   <div className='w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6>';
 :pages.disabled/pages/services/green-it.tsx'
->>>>>>> main
                     <Lightbulb className='w-10 h-10 text-white'  />'
                   </div>'''
                   <h3 className='text-2xl font-bold text-white mb-4>
@@ -618,8 +529,6 @@ export: default function GreenIT(...args: any[]): any: {
                     consultants.'</p>''                  <button className='w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hove,
     r:to-emerald-500 transition-all duration-200'>
                     Get Assessment
->>>>>>> main
->>>>>>> main
                   </button>
                 </div>
               </div>
@@ -627,7 +536,6 @@ export: default function GreenIT(...args: any[]): any: {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/green-it.tsx
 
 "{/* CTA Section */}""
@@ -635,7 +543,6 @@ export: default function GreenIT(...args: any[]): any: {
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
       <section className="py-20 bg-slate-800/30">""
         <div className="container mx-auto px-4 text-center">
           <motion.div;
@@ -647,24 +554,18 @@ export: default function GreenIT(...args: any[]): any: {
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
             className="max-w-3xl mx-auto""
           >""
             <h2 className="text-4xl font-bold text-white mb-6">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/green-it.tsx: '{/* CTA Section *,/}''      <section className='py-20 bg-slate-800/30'>''';
         <div: className='container mx-auto px-4 text-center'>';
-=======
 :pages.disabled/pages/services/green-it.tsx'
 '{/* CTA Section */}      <section className='py-20 bg-slate-800/30>''
         <div className='container mx-auto px-4 text-center'>
->>>>>>> main
           <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}
+            initial={{ opacity:  ,0, y: 20}}
 :pages.disabled/pages/services/green-it.tsx;
-<<<<<<< HEAD
-            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.6, }}''            className='max-w-3xl: mx-auto''>''';
+            whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.6}}''            className='max-w-3xl: mx-auto''>''';
             <h2: className='text-4xl font-bold text-white mb-6'>';
 :pages.disabled/pages/services/green-it.tsx;
               Ready: to Go Green?'';
@@ -677,17 +578,13 @@ export: default function GreenIT(...args: any[]): any: {
               <button: className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400: hover:to-emerald-500: transition-all duration-200 hover:scale-105: shadow-lg shadow-green-500/20'>';
                 Start: Your Green Journey'</button>''              <button className='px-8 py-4 border border-green-400/30 text-green-400 font-semibold rounded-lg hover:bg-green-400/10: transition-all duration-200'>';
                 Contact: Our Experts
-=======
             whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6 }}            className='max-w-3xl mx-auto>'
             <h2 className='text-4xl font-bold text-white mb-6'>
-<<<<<<< HEAD
->>>>>>> main
 :pages.disabled/pages/services/green-it.tsx
               Ready to Go Green?'
             </h2>''
             <p className='text-xl text-slate-300 mb-8'>
               Join the sustainable technology revolution and make a positive
-<<<<<<< HEAD
               impact on the environment while improving your IT infrastructure."
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
@@ -699,18 +596,15 @@ export: default function GreenIT(...args: any[]): any: {
               Ready to Go Green?
             </h2>""
             <p className="text-xl text-slate-300 mb-8">
-=======
               impact on the environment while improving your IT infrastructure.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20'>
                 Start Your Green Journey'</button>''              <button className='px-8 py-4 border border-green-400/30 text-green-400 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200'>
-=======
 :pages.disabled/pages/services/green-it.tsx;
               Ready to Go Green?''
             </h2>'''
             <p className='text-xl text-slate-300 mb-8'>
->>>>>>> main
               Join the sustainable technology revolution and make a positive;
               impact on the environment while improving your IT infrastructure.''
             </p>'''
@@ -719,16 +613,13 @@ export: default function GreenIT(...args: any[]): any: {
     r:scale-105 shadow-lg shadow-green-500/20>
                 Start Your Green Journey'</button>''              <button className='px-8 py-4 border border-green-400/30 text-green-400 font-semibold rounded-lg hove,
     r:bg-green-400/10 transition-all duration-200'>
->>>>>>> main
                 Contact Our Experts
->>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/green-it.tsx
 
   )}
@@ -739,20 +630,11 @@ export: default function GreenIT(...args: any[]): any: {
 '"'"
   )}
 '""
->>>>>>> pr-10728
-=======
-<<<<<<< HEAD
-:pages.disabled/pages/services/green-it.tsx,)}
-  '';';
-''''';
-=======
 :pages.disabled/pages/services/green-it.tsx)}
-<<<<<<< HEAD
+  '';
+''''';
+:pages.disabled/pages/services/green-it.tsx)}
   ''
 ''''
-=======
   '';
 '''''
->>>>>>> main
->>>>>>> main
->>>>>>> main

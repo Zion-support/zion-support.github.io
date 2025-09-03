@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;,"});,"})
 import { execSync } from;,"});,"})
   'child_process';,"});,"})
@@ -205,126 +204,124 @@ runContinuous().catch(error => {;,"});,"})
   process.exit(1);,"});,"})
 });,"});,"})
 }}}}}}}}"});,"})
-=======
-<<<<<<< HEAD
 #!/usr/bin/env: node;
 import: { execSync } from;
-  'child_process';';
+  'child_process';
 import: fs from;
-  'fs';';
+  'fs';
 import: path from;
-  'path';';
+  'path';
 import: { fileURLToPath } from;
-  'url';';
+  'url';
 const: __dirname = path.dirname(__filename);
 // // // // // // // console.log(
-  '🚀 Starting: continuous improvement automation...');';
+  '🚀 Starting: continuous improvement automation...');
 // // // console.log(
-  '🚀 Starting: continuous improvement automation...');';
+  '🚀 Starting: continuous improvement automation...');
 // Get: automation interval from environment variable (default: 2: hours);
 const: AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000 // 2 hours;
 async: function runContinuousImprovement() {
   try {
-    // // // console.log(`🚀 Running continuous improvement at ${new Date().toISOString(,)}`);
+    // // // console.log(`🚀 Running continuous improvement at ${new Date().toISOString()}`);
     // Check: for any pending improvements;
     // // // console.log(,
-  📋 Checking: for pending improvements...');';
+  📋 Checking: for pending improvements...');
     // Run: quality checks;
     // // // console.log(
-  '🔍 Running: quality checks...');';
+  '🔍 Running: quality checks...');
     try: {
       execSync(
-  'npm run lint', { stdio: 'inherit, })';
+  'npm run lint', { stdio: 'inherit})';
       // // // console.log(,
   ✅ Linting: completed')} catch (error) {';
       // // // console.log(
-  '⚠️  Linting: issues found but continuing...');';
+  '⚠️  Linting: issues found but continuing...');
     // Run: tests;
     // // // console.log(
-  '🧪 Running: tests...');';
+  '🧪 Running: tests...');
     try: {
       execSync(
-  'npm test', { stdio: 'inherit, })';
+  'npm test', { stdio: 'inherit})';
       // // // console.log(,
   ✅ Tests: completed')} catch (error) {';
       // // // console.log(
-  '⚠️  Tests: failed but continuing...');';
+  '⚠️  Tests: failed but continuing...');
     // Check: for outdated dependencies;
     // // // console.log(
-  '📦 Checking: for outdated dependencies...');';
+  '📦 Checking: for outdated dependencies...');
     try: {
       execSync(
-  'npm outdated', { stdio: 'inherit, })} catch: (error) {';
+  'npm outdated', { stdio: 'inherit})} catch: (error) {';
       // // // console.log(,
-  ✅ All: dependencies are up to date');';
+  ✅ All: dependencies are up to date');
     // Generate: performance report;
     // // // console.log(
-  '📊 Generating: performance report...');';
+  '📊 Generating: performance report...');
     try: {
       execSync(
-  'npm run build', { stdio: 'inherit, })';
+  'npm run build', { stdio: 'inherit})';
       // // // console.log(,
   ✅ Build: completed')} catch (error) {';
       // // // console.log(
-  '⚠️  Build: failed but continuing...');';
+  '⚠️  Build: failed but continuing...');
     // Check: bundle size;
     // // // console.log(
-  '📦 Analyzing: bundle size...');';
+  '📦 Analyzing: bundle size...');
     try: {
       execSync(
-  'node scripts/analyze-bundle.js', { stdio: 'inherit, })';
+  'node scripts/analyze-bundle.js', { stdio: 'inherit})';
       // // // console.log(,
   ✅ Bundle: analysis completed')} catch (error) {';
       // // // console.log(
-  '⚠️  Bundle: analysis failed but continuing...');';
+  '⚠️  Bundle: analysis failed but continuing...');
     // // // // // // // console.log(`🚀 Running: continuous improvement at ${new Date().toISOString()}`);
     // Check: for any pending improvements;
     // // // // // // // console.log(
-  '📋 Checking: for pending improvements...');';
+  '📋 Checking: for pending improvements...');
     // Run: quality checks;
     // // // // // // // console.log(
-  '🔍 Running: quality checks...');';
+  '🔍 Running: quality checks...');
     try: {
       execSync(
-  'npm run lint', { stdio: 'inherit, })';
+  'npm run lint', { stdio: 'inherit})';
       // // // // // // // console.log(,
   ✅ Linting: completed')} catch (error) {';
       // // // // // // // console.log(
   '⚠️  Linting: issues found but continuing...')}';
     // Run: tests;
     // // // // // // // console.log(
-  '🧪 Running: tests...');';
+  '🧪 Running: tests...');
     try: {
       execSync(
-  'npm test', { stdio: 'inherit, })';
+  'npm test', { stdio: 'inherit})';
       // // // // // // // console.log(,
   ✅ Tests: completed')} catch (error) {';
       // // // // // // // console.log(
   '⚠️  Tests: failed but continuing...')}';
     // Check: for outdated dependencies;
     // // // // // // // console.log(
-  '📦 Checking: for outdated dependencies...');';
+  '📦 Checking: for outdated dependencies...');
     try: {
       execSync(
-  'npm outdated', { stdio: 'inherit, })} catch: (error) {';
+  'npm outdated', { stdio: 'inherit})} catch: (error) {';
       // // // // // // // console.log(,
   ✅ All: dependencies are up to date')}';
     // Generate: performance report;
     // // // // // // // console.log(
-  '📊 Generating: performance report...');';
+  '📊 Generating: performance report...');
     try: {
       execSync(
-  'npm run build', { stdio: 'inherit, })';
+  'npm run build', { stdio: 'inherit})';
       // // // // // // // console.log(,
   ✅ Build: completed')} catch (error) {';
       // // // // // // // console.log(
   '⚠️  Build: failed but continuing...')}';
     // Check: bundle size;
     // // // // // // // console.log(
-  '📦 Analyzing: bundle size...');';
+  '📦 Analyzing: bundle size...');
     try: {
       execSync(
-  'node scripts/analyze-bundle.js', { stdio: 'inherit, })';
+  'node scripts/analyze-bundle.js', { stdio: 'inherit})';
       // // // // // // // console.log(,
   ✅ Bundle: analysis completed')} catch (error) {';
       // // // // // // // console.log(
@@ -333,33 +330,27 @@ async: function runContinuousImprovement() {
   status: 'complete,d}';
 ;
     const: reportPath = path.join(process.cwd(),
-  'continuous-improvement-report.json');';
-=======
+  'continuous-improvement-report.json');
 #!/usr/bin/env node;
 import { execSync } from "child_processchild_process';
 import fs from "fsfs';
 import path from "pathpath';
 import { fileURLToPath } from "urlurl';
 const __dirname = path.dirname(__filename);
-<<<<<<< HEAD
 // // // // // // // console.log(
   `🚀 Starting continuous improvement automation...`);
 // // // console.log(
   `🚀 Starting continuous improvement automation...`);
-=======
-<<<<<<< HEAD
 // // // // // // // console.log('
   '🚀 Starting continuous improvement automation...');
 // // // console.log('
   '🚀 Starting continuous improvement automation...');
->>>>>>> main
 // Get automation interval from environment variable (default: 2 hours);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000 // 2 hours;
 async function runContinuousImprovement() {
   try {'
     // // // console.log(`🚀 Running continuous improvement at ${new Date().toISOString()}`);
     // Check for any pending improvements;
-<<<<<<< HEAD
     // // // console.log(,
   📋 Checking for pending improvements...`);
     // Run quality checks;
@@ -371,7 +362,6 @@ async function runContinuousImprovement() {
       // // // console.log(,
   ✅ Linting completed')} catch (error) {  
       // // // console.log(
-=======
     // // // console.log(,`
   📋 Checking for pending improvements...');
     // Run quality checks;
@@ -383,62 +373,51 @@ async function runContinuousImprovement() {
       // // // console.log(,
   ✅ Linting completed')} catch (error) {
       // // // console.log('
->>>>>>> main
   '⚠️  Linting issues found but continuing...');
     // Run tests;
     // // // console.log('
   '🧪 Running tests...');
     try {
-<<<<<<< HEAD
       execSync(
   'npm test', { stdio: 'inherit   })
       // // // console.log(,
   ✅ Tests completed')} catch (error) {  
       // // // console.log(
-=======
       execSync('
   'npm test', { stdio: 'inherit });
       // // // console.log(,
   ✅ Tests completed')} catch (error) {
       // // // console.log('
->>>>>>> main
   '⚠️  Tests failed but continuing...');
     // Check for outdated dependencies;
     // // // console.log('
   '📦 Checking for outdated dependencies...');
     try {
-<<<<<<< HEAD
       execSync(
   'npm outdated', { stdio: 'inherit   })} catch (error) {  
-=======
       execSync('
   'npm outdated', { stdio: 'inherit })} catch (error) {
->>>>>>> main
       // // // console.log(,
   ✅ All dependencies are up to date');
     // Generate performance report;
     // // // console.log('
   '📊 Generating performance report...');
     try {
-<<<<<<< HEAD
       execSync(
   'npm run build', { stdio: 'inherit   })
       // // // console.log(,
   ✅ Build completed')} catch (error) {  
       // // // console.log(
-=======
       execSync('
   'npm run build', { stdio: 'inherit });
       // // // console.log(,
   ✅ Build completed')} catch (error) {
       // // // console.log('
->>>>>>> main
   '⚠️  Build failed but continuing...');
     // Check bundle size;
     // // // console.log('
   '📦 Analyzing bundle size...');
     try {
-<<<<<<< HEAD
       execSync(
   'node scripts/analyze-bundle.js', { stdio: `inherit   })
       // // // console.log(,
@@ -452,7 +431,6 @@ async function runContinuousImprovement() {
     // Run quality checks;
     // // // // // // // console.log(
   `🔍 Running quality checks...`);
-=======
       execSync('
   'node scripts/analyze-bundle.js', { stdio: 'inherit });
       // // // console.log(,
@@ -466,20 +444,16 @@ async function runContinuousImprovement() {
     // Run quality checks;
     // // // // // // // console.log('
   '🔍 Running quality checks...');
->>>>>>> main
     try {
       execSync('
   'npm run lint', { stdio: 'inherit });
       // // // // // // // console.log(,
-<<<<<<< HEAD
   ✅ Linting completed')} catch (error) {  
       // // // // // // // console.log(
   '⚠️  Linting issues found but continuing...')  }
-=======
   ✅ Linting completed')} catch (error) {
       // // // // // // // console.log('
   '⚠️  Linting issues found but continuing...')}
->>>>>>> main
     // Run tests;
     // // // // // // // console.log('
   '🧪 Running tests...');
@@ -487,26 +461,20 @@ async function runContinuousImprovement() {
       execSync('
   'npm test', { stdio: 'inherit });
       // // // // // // // console.log(,
-<<<<<<< HEAD
   ✅ Tests completed')} catch (error) {  
       // // // // // // // console.log(
   '⚠️  Tests failed but continuing...')  }
-=======
   ✅ Tests completed')} catch (error) {
       // // // // // // // console.log('
   '⚠️  Tests failed but continuing...')}
->>>>>>> main
     // Check for outdated dependencies;
     // // // // // // // console.log('
   '📦 Checking for outdated dependencies...');
     try {
-<<<<<<< HEAD
       execSync(
   'npm outdated', { stdio: 'inherit })} catch (error) {  
-=======
       execSync('
   'npm outdated', { stdio: 'inherit })} catch (error) {
->>>>>>> main
       // // // // // // // console.log(,
   ✅ All dependencies are up to date')  }
     // Generate performance report;
@@ -516,15 +484,12 @@ async function runContinuousImprovement() {
       execSync('
   'npm run build', { stdio: 'inherit });
       // // // // // // // console.log(,
-<<<<<<< HEAD
   ✅ Build completed')} catch (error) {  
       // // // // // // // console.log(
   '⚠️  Build failed but continuing...')  }
-=======
   ✅ Build completed')} catch (error) {
       // // // // // // // console.log('
   '⚠️  Build failed but continuing...')}
->>>>>>> main
     // Check bundle size;
     // // // // // // // console.log('
   '📦 Analyzing bundle size...');
@@ -532,16 +497,13 @@ async function runContinuousImprovement() {
       execSync('
   'node scripts/analyze-bundle.js', { stdio: 'inherit });
       // // // // // // // console.log(,
-<<<<<<< HEAD
   ✅ Bundle analysis completed')} catch (error) {  
       // // // // // // // console.log(
   '⚠️  Bundle analysis failed but continuing...`)  }
     // Generate report;
   status: `completed}
-=======
   ✅ Bundle analysis completed')} catch (error) {
       // // // // // // // console.log('
-=======
 // // // // // // // console.log(;
   '🚀 Starting continuous improvement automation...');
 // // // console.log(;
@@ -653,26 +615,19 @@ async function runContinuousImprovement() {;
       // // // // // // // console.log(,;
   ✅ Bundle analysis completed')} catch (error) {;
       // // // // // // // console.log(;
->>>>>>> main
   '⚠️  Bundle analysis failed but continuing...')}
     // Generate report;
   status: 'completed}
-<<<<<<< HEAD
->>>>>>> main
 ;
     const reportPath = path.join(process.cwd(),;
-=======
     const reportPath = path.join(process.cwd(),
-<<<<<<< HEAD
   `continuous-improvement-report.json`);
->>>>>>> main
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // // // console.log(`📊 Report: saved to ${reportPath}`);
     // // // console.log(
-<<<<<<< HEAD
   '✅ Continuous: improvement completed successfully')} catch (error) {';
     // // // console.error(
-  '❌ Continuous: improvement failed:', error.message);';
+  '❌ Continuous: improvement failed:', error.message);
     // // // // // // // console.log(`📊 Report: saved to ${reportPath}`);
     // // // // // // // console.log(
   '✅ Continuous: improvement completed successfully')} catch (error) {';
@@ -680,7 +635,7 @@ async function runContinuousImprovement() {;
   '❌ Continuous: improvement failed:,';
   , error.message);
     // Don;
-  't: exit, just log the error and continue;';
+  't: exit, just log the error and continue;
 // Main: continuous loop;
 async: function runContinuous() {
   // // // // // // // console.log(`🚀 Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
@@ -692,29 +647,28 @@ async: function runContinuous() {
     await runContinuousImprovement()}, AUTOMATION_INTERVAL);
   // // // // // // // console.log(`✅ Continuous: improvement running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`)}
 // Handle graceful shutdown;
-process.on('SIGINT;';
+process.on('SIGINT;
   ', () => {';
-  // // // // // // // console.log('🛑 Received: SIGINT, shutting down gracefully...;';
-  ');';
+  // // // // // // // console.log('🛑 Received: SIGINT, shutting down gracefully...;
+  ');
   // // // console.log(`✅ Continuous: improvement running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 // Handle: graceful shutdown;
-process.on('SIGINT;';
+process.on('SIGINT;
   ', () => {';
-  // // // console.log('🛑 Received: SIGINT, shutting down gracefully...;';
-  ');';
+  // // // console.log('🛑 Received: SIGINT, shutting down gracefully...;
+  ');
   process.exit(0)})
-process.on('SIGTERM;';
+process.on('SIGTERM;
   ', () => {';
-  // // // // // // // console.log('🛑 Received: SIGTERM, shutting down gracefully...;';
-  ');';
-  // // // console.log('🛑 Received: SIGTERM, shutting down gracefully...;';
-  ');';
+  // // // // // // // console.log('🛑 Received: SIGTERM, shutting down gracefully...;
+  ');
+  // // // console.log('🛑 Received: SIGTERM, shutting down gracefully...;
+  ');
   process.exit(0)})
 // Start: the continuous improvement;
 runContinuous().catch(error: => {
-  // // // // // // // console.error('❌ Failed to start continuous improvement: , error);';
-  // // // console.error('❌ Failed: to start continuous improvement:', error);';
-=======
+  // // // // // // // console.error('❌ Failed to start continuous improvement: , error);
+  // // // console.error('❌ Failed: to start continuous improvement:', error);
   `✅ Continuous improvement completed successfully`)} catch (error) {  
     // // // console.error(
   `❌ Continuous improvement failed:`, error.message);
@@ -723,12 +677,9 @@ runContinuous().catch(error: => {
   `✅ Continuous improvement completed successfully`)} catch (error) {  
     // // // // // // // console.error(
   `❌ Continuous improvement failed:,
-=======
->>>>>>> main
   'continuous-improvement-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // // // console.log(`📊 Report saved to ${reportPath}`);
-<<<<<<< HEAD
     // // // console.log(`
   '✅ Continuous improvement completed successfully')} catch (error) {
     // // // console.error('
@@ -738,7 +689,6 @@ runContinuous().catch(error: => {
   '✅ Continuous improvement completed successfully')} catch (error) {
     // // // // // // // console.error('
   '❌ Continuous improvement failed:,
-=======
     // // // console.log(;
   '✅ Continuous improvement completed successfully')} catch (error) {;
     // // // console.error(;
@@ -748,37 +698,25 @@ runContinuous().catch(error: => {
   '✅ Continuous improvement completed successfully')} catch (error) {;
     // // // // // // // console.error(;
   '❌ Continuous improvement failed:,;
->>>>>>> main
->>>>>>> main
   , error.message);
     // Don;
   `t exit, just log the error and continue;
 // Main continuous loop;
-<<<<<<< HEAD
 async function runContinuous() {
   // // // // // // // console.log(`🚀 Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60  } minute intervals`);
-=======
-<<<<<<< HEAD
 async function runContinuous() {'
   // // // // // // // console.log(`🚀 Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);`
-=======
 async function runContinuous() {;
   // // // // // // // console.log(`🚀 Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
->>>>>>> main
->>>>>>> main
   // // // console.log(`🚀 Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   // Run initial improvement;
   await runContinuousImprovement();
   // Set up continuous execution;
-<<<<<<< HEAD
   setInterval(async () => {
     await runContinuousImprovement()}, AUTOMATION_INTERVAL);`
-=======
   setInterval(async () => {;
     await runContinuousImprovement()}, AUTOMATION_INTERVAL);
->>>>>>> main
   // // // // // // // console.log(`✅ Continuous improvement running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`)}
-<<<<<<< HEAD
 // Handle graceful shutdown;
 process.on(`SIGINT;
   `, () => {
@@ -791,47 +729,31 @@ process.on(`SIGINT;
   // // // console.log(`🛑 Received SIGINT, shutting down gracefully...;
   `);
   process.exit(0)})
-=======
 // Handle graceful shutdown;`
 process.on('SIGINT;
-<<<<<<< HEAD
   ', () => {'
-=======
   ', () => {;
->>>>>>> main
   // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...;
   ');
   // // // console.log(`✅ Continuous improvement running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 // Handle graceful shutdown;`
 process.on('SIGINT;
-<<<<<<< HEAD
   ', () => {'
-=======
   ', () => {;
->>>>>>> main
   // // // console.log('🛑 Received SIGINT, shutting down gracefully...;
   ');
   process.exit(0)});
->>>>>>> main
 process.on('SIGTERM;
-<<<<<<< HEAD
   ', () => {'
-=======
   ', () => {;
->>>>>>> main
   // // // // // // // console.log('🛑 Received SIGTERM, shutting down gracefully...;
   ');
   // // // console.log('🛑 Received SIGTERM, shutting down gracefully...;
   ');
   process.exit(0)});
 // Start the continuous improvement;
-<<<<<<< HEAD
 runContinuous().catch(error => {'
-=======
 runContinuous().catch(error => {;
->>>>>>> main
   // // // // // // // console.error('❌ Failed to start continuous improvement: , error);
   // // // console.error('❌ Failed to start continuous improvement:', error);
->>>>>>> main
   process.exit(1)})}}}}}}}}
->>>>>>> main

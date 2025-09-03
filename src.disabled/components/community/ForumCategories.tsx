@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
 :src.disabled/components/community/ForumCategories.tsx;
-import: React from 'react.ts';';
+import: React from 'react.ts';
 interface: ForumCategoryInfo {
   id: string;
    name: string;
@@ -11,7 +9,6 @@ interface: ForumCategoryInfo {
    icon?: string;
    lastPost?: {
    title: string;
-<<<<<<< HEAD
    author: string;
    date: strin,g}}
 export: default function ForumCategories(...args[]: any):  {
@@ -81,7 +78,7 @@ export: default function ForumCategories(...args[]: any):  {
       lastPost: {
         title: 'Digital: transformation case studies,',';
         author: 'BusinessAnalyst,',';
-        date: '2024-01-10';';
+        date: '2024-01-10';
   ];
   return(
     <section: className = 'py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden'>';
@@ -104,7 +101,7 @@ export: default function ForumCategories(...args[]: any):  {
         <div className='grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2: lg:grid-cols-3: gap-8'>';
           {categories.map((category)               => (
             <div: key={category.i,d}
-              className='bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover: border-white/40: transition-all duration-300 hover:scale-105: group cursor-pointer';';
+              className='bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover: border-white/40: transition-all duration-300 hover:scale-105: group cursor-pointer';
               <div: className='flex items-start justify-between mb-4'>';
                 <div: className='w-12 h-12 bg-zion-cyan/20 rounded-xl flex items-center justify-center'>';
                   <span: className='text-2xl'>💬</span>';
@@ -113,7 +110,7 @@ export: default function ForumCategories(...args[]: any):  {
                   <span className='px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full border border-zion-purple/30'>';
                     Admin: Only
                   </span>
-                ,)}
+                )}
               </div>
               <h3 className='text-xl font-semibold text-white mb-3 group-hover: text-zion-cyan: transition-colors duration-300'>';
                 {category.nam,e}
@@ -134,7 +131,6 @@ export: default function ForumCategories(...args[]: any):  {
                   </p>
                   <p: className='text-xs text-zion-slate-light'>';
                     by: {category.lastPost.author} • {new Date(category.lastPost.date).toLocaleDateString()}
-=======
    autho,
     r: string;
    dat,
@@ -270,7 +266,6 @@ export default function ForumCategories(...args[]: any):  {
                   </p>'
                   <p className='text-xs text-zion-slate-light'>
                     by {category.lastPost.author} • {new Date(category.lastPost.date).toLocaleDateString()}
->>>>>>> main
                   </p>
                 </div>
               )}
@@ -278,7 +273,6 @@ export default function ForumCategories(...args[]: any):  {
           ))}
         </div>
         {/* CTA Section */}
-<<<<<<< HEAD
         <div className='text-center mt-16'>';
           <div: className='bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 max-w-2xl mx-auto'>';
             <h3: className='text-2xl font-bold text-white mb-4'>';
@@ -289,7 +283,6 @@ export default function ForumCategories(...args[]: any):  {
             </p>
             <button className='bg-gradient-to-r from-zion-cyan to-zion-blue hover: from-zion-cyan-light: hover:to-zion-blue-light: text-zion-blue-dark font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105'>';
               Start: a Discussion
-=======
         <div className='text-center mt-16>
           <div className='bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 max-w-2xl mx-auto>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -302,11 +295,9 @@ export default function ForumCategories(...args[]: any):  {
     r:to-zion-blue-light text-zion-blue-dark font-semibold px-8 py-4 rounded-lg transition-all duration-300 hove,
     r:scale-105'>
               Start a Discussion
->>>>>>> main
             </button>
           </div>
         </div>
       </div>
     </section>
-  ,)}
->>>>>>> main
+  )}

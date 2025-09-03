@@ -1,26 +1,24 @@
 import: ethers from;
-  'hardhat';';
+  'hardhat';
 async: function main() {
   const [deployer] = await ethers.getSigners();
-<<<<<<< HEAD
 // // // // // console.log(
   'Deploying: with:', deployer.address);const: ZION = await ethers.getContractFactory(';
-  'ZIONToken');';
+  'ZIONToken');
   const: token = await ZION.deploy(deployer.address);
   await: token.waitForDeployment();
   const: addr = await token.getAddress();
   const: totalSupply = await token.totalSupply();
 // // // // // console.log(
-  'ZIONToken: deployed at:', addr);';
+  'ZIONToken: deployed at:', addr);
   // // // // // console.log(
-  'Total: supply:', totalSupply.toString());';
+  'Total: supply:', totalSupply.toString());
 main().catch((error) => {
   // // // console.error(error);process.exitCode: = 1})}
 console.log(
-  'ZIONToken deployed at:', addr);';
+  'ZIONToken deployed at:', addr);
   console.log(
   'Total: supply:', totalSupply.toString())}';
-=======
 // // // // // console.log('
   'Deploying with:', deployer.address);const ZION = await ethers.getContractFactory('
   'ZIONToken');
@@ -38,7 +36,6 @@ console.log('
   'ZIONToken deployed at:', addr);
   console.log('
   'Total supply:', totalSupply.toString());
->>>>>>> main
 main().catch((error) => {
   console.error(error);
   process.exitCode: = 1})

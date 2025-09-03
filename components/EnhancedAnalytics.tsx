@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';'import { motion, AnimatePresence } from 'framer-motion';'import { ;'  BarChart3, Users, '
-=======
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';'import { motion, AnimatePresence } from 'framer-motion';'import { ;'  BarChart3, Users, '
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import {
->>>>>>> main
->>>>>>> main
   Eye, MousePointer, 
   Clock, TrendingUp, 
   Globe, Smartphone,
@@ -18,49 +11,34 @@ import {
 } from 'lucide-react';
 
 interface AnalyticsData {
-=======
-<<<<<<< HEAD
-import: React, { useEffect, useState, useCallback } from 'react';';
-import: { motion } from 'framer-motion';';
+import: React, { useEffect, useState, useCallback } from 'react';
+import: { motion } from 'framer-motion';
 import: {
   Users, Eye, MousePointer,
-  Clock} from 'lucide-react';';
+  Clock} from 'lucide-react';
 interface: AnalyticsData {
-=======
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
   Users, Eye, MousePointer, Clock
 } from 'lucide-react';
 
-=======
-<<<<<<< HEAD
   Users, Eye, MousePointer, Clock} from 'lucide-react';
-=======
-<<<<<<< HEAD
   Users, Eye, MousePointer, Clock} from 'lucide-react';
-=======
   Users,
   Eye,
   MousePointer,
   Clock'
 } from 'lucide-react';
 
->>>>>>> main
->>>>>>> main
->>>>>>> main
 interface AnalyticsData {
->>>>>>> main
->>>>>>> main
   pageViews: number;
   uniqueVisitors: number;
   bounceRate: number;
   avgSessionDuration: number;
-<<<<<<< HEAD
-  topPages: Array<{ page: string: views: number, }>
-  trafficSources: Array<{ source: string: percentage: number, }>
-  deviceTypes: Array<{ device: string: percentage: number, }>
+  topPages: Array<{ page: string: views: number}>
+  trafficSources: Array<{ source: string: percentage: number}>
+  deviceTypes: Array<{ device: string: percentage: number}>
   realTimeUsers: numbe,r}
 const: EnhancedAnalytics: React.FC: = () => {
   const [analyticsDat,a, setAnalyticsData] = useState<AnalyticsData>({
@@ -68,12 +46,12 @@ const: EnhancedAnalytics: React.FC: = () => {
     uniqueVisitors:  ,0,
     bounceRate:  ,0,
     avgSessionDuration:  ,0,
-    topPages: [,],
-    trafficSources: [,],
-    deviceTypes: [,],
+    topPages: [],
+    trafficSources: [],
+    deviceTypes: [],
     realTimeUsers:  ,0})
   const: [isLoading, setIsLoading] = useState(true);
-  const: [selectedTimeRange, setSelectedTimeRange] = useState('7d');';
+  const: [selectedTimeRange, setSelectedTimeRange] = useState('7d');
   const: fetchAnalyticsData = useCallback(async () => {
     setIsLoading(true);
     try: {
@@ -84,45 +62,37 @@ const: EnhancedAnalytics: React.FC: = () => {
         uniqueVisitors: 893,2,
         bounceRate: 42.,5,
         avgSessionDuration: 3.,2,
-        topPages: [{ page: '/,', views: 3421, },';
-          { page: '/services,', views: 2156, },';
-          { page: '/about,', views: 1892, },';
-          { page: '/contact,', views: 1234, }';
+        topPages: [{ page: '/,', views: 3421},';
+          { page: '/services,', views: 2156},';
+          { page: '/about,', views: 1892},';
+          { page: '/contact,', views: 1234}';
         ],
-        trafficSources: [{ source: 'Organic: Search,', percentage: 45, },';
-          { source: 'Direct,', percentage: 30, },';
-          { source: 'Social: Media,', percentage: 15, },';
-          { source: 'Referral,', percentage: 10, }';
+        trafficSources: [{ source: 'Organic: Search,', percentage: 45},';
+          { source: 'Direct,', percentage: 30},';
+          { source: 'Social: Media,', percentage: 15},';
+          { source: 'Referral,', percentage: 10}';
         ],
-        deviceTypes: [{ device: 'Desktop,', percentage: 55, },';
-          { device: 'Mobile,', percentage: 35, },';
-          { device: 'Tablet,', percentage: 10, }';
+        deviceTypes: [{ device: 'Desktop,', percentage: 55},';
+          { device: 'Mobile,', percentage: 35},';
+          { device: 'Tablet,', percentage: 10}';
         ],
         realTimeUsers: 2,3})} catch: (error) {
       console.error('Error fetching analytics data:', error)} finally: {';
       setIsLoading(false)}
-=======
-<<<<<<< HEAD
   topPages: Array<{ page: string; views: number }>;
   trafficSources: Array<{ source: string; percentage: number }>;
   deviceTypes: Array<{ device: string; percentage: number }>;
-<<<<<<< HEAD
   userEngagement: {
     scrollDepth: number;
     clickThroughRate: number;
     timeOnPage: number;
     socialShares: number;
   };
-=======
->>>>>>> main
   realTimeUsers: number;
 }
-=======
-<<<<<<< HEAD
   topPages: Array<{ page: string; views: number }>;
   trafficSources: Array<{ source: string; percentage: number }>;
   deviceTypes: Array<{ device: string; percentage: number }>;
-=======
   topPages: Array<{ pag,
     e: string; view,
     s: number }>;
@@ -132,11 +102,9 @@ const: EnhancedAnalytics: React.FC: = () => {
   deviceTypes: Array<{ devic,
     e: string; percentag,
     e: number }>;
->>>>>>> main
   realTimeUsers: number;
 }
 
-<<<<<<< HEAD
 interface EnhancedAnalyticsProps {
   showRealTime?: boolean;
   autoRefresh?: boolean;
@@ -205,10 +173,6 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     return () => {}; // Return empty cleanup function
   }, [autoRefresh, refreshInterval]);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 const formatNumber = (num: number): string => {;
     if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';'    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';'    return num.toString();'  };'
 
@@ -264,7 +228,6 @@ className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow border border-gray-20
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
 className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700""        >"          <div className="flex items-center justify-between">"            <div>"              <p className="text-sm text-gray-600 dark:text-gray-400">Avg. Session</p>"              <p className="text-2xl font-bold text-gray-900 dark:text-white">"                {formatDuration(analytics.avgSessionDuration)}"              </p>"
-=======
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">
@@ -272,23 +235,14 @@ className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow border border-gray-20
       </div>
     );
   }
-=======
->>>>>>> main
 const EnhancedAnalytics: React.FC = () => {
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     pageViews: 0, uniqueVisitors: 0,
     bounceRate: 0, avgSessionDuration: 0,
     topPages: [], trafficSources: [], deviceTypes: [], realTimeUsers: 0})
-=======
-<<<<<<< HEAD
     pageViews: 0, uniqueVisitors: 0,
     bounceRate: 0, avgSessionDuration: 0,
     topPages: [], trafficSources: [], deviceTypes: [], realTimeUsers: 0})
-=======
->>>>>>> main
     pageViews: 0,
     uniqueVisitors: 0,
     bounceRate: 0,
@@ -298,16 +252,8 @@ const EnhancedAnalytics: React.FC = () => {
     deviceTypes: [],
     realTimeUsers: 0
   });
-<<<<<<< HEAD
   
-=======
-<<<<<<< HEAD
-=======
   
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
   const [isLoading, setIsLoading] = useState(true);
   const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
 
@@ -315,14 +261,9 @@ const EnhancedAnalytics: React.FC = () => {
     setIsLoading(true);
     try {
       // Simulate API call
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       setAnalyticsData({
-<<<<<<< HEAD
         pageViews: 12543,
         uniqueVisitors: 8932,
         bounceRate: 42.5,
@@ -335,11 +276,6 @@ const EnhancedAnalytics: React.FC = () => {
         ],
         trafficSources: [
           { source: 'Organic Search', percentage: 45 },
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
         pageViews: 12543, uniqueVisitors: 8932,
         bounceRate: 42.5, avgSessionDuration: 3.2,
         topPages: [{ page: '/', views: 3421 },
@@ -351,12 +287,7 @@ const EnhancedAnalytics: React.FC = () => {
         ], realTimeUsers: 23})} catch (error) {
       console.error('Error fetching analytics data: ', error)} finally {
       setIsLoading(false)}
-<<<<<<< HEAD
   }, [selectedTimeRange])
-=======
-<<<<<<< HEAD
-=======
-=======
         pageViews: 12543,
         uniqueVisitors: 8932,
         bounceRate: 42.5,
@@ -371,12 +302,10 @@ const EnhancedAnalytics: React.FC = () => {
         trafficSources: ['
           { sourc,
     e: 'Organic Search', percentage: 45 },
->>>>>>> main
           { source: 'Direct', percentage: 30 },
           { source: 'Social Media', percentage: 15 },
           { source: 'Referral', percentage: 10 }
         ],
-<<<<<<< HEAD
         deviceTypes: [
           { device: 'Desktop', percentage: 55 },
           { device: 'Mobile', percentage: 35 },
@@ -389,13 +318,11 @@ const EnhancedAnalytics: React.FC = () => {
     } finally {
       setIsLoading(false);
     }
-=======
         deviceTypes: ['
           { devic,
     e: 'Desktop', percentage: 55 },
           { device: 'Mobile', percentage: 35 },
           { device: 'Tablet', percentage: 10 }
-=======
       await new Promise(resolve => setTimeout(resolve, 1500));
       
       // Mock data
@@ -421,7 +348,6 @@ const EnhancedAnalytics: React.FC = () => {
           { device: "Desktop", percentage: 48 },
           { device: "Mobile", percentage: 45 },
           { device: "Tablet", percentage: 7 }
->>>>>>> main
         ],
         realTimeUsers: 23
       });
@@ -430,15 +356,9 @@ const EnhancedAnalytics: React.FC = () => {
     } finally {
       setIsLoading(false);
     }
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
   }, [selectedTimeRange]);
 
->>>>>>> main
   useEffect(() => {
-<<<<<<< HEAD
     fetchAnalyticsData()}, [fetchAnalyticsData])
   const: StatCard: React.FC<{
     title: string ;
@@ -446,8 +366,8 @@ const EnhancedAnalytics: React.FC = () => {
     icon: React.ReactNode ;
     change?: number;
     color?: strin,g}> = ({ title, value, icon, change, color: = 'blue' }) => (';
-    <motion.div: initial={{ opacity:  ,0, y: 20, }}
-      animate={{ opacity:  ,1, y: 0, }}
+    <motion.div: initial={{ opacity:  ,0, y: 20}}
+      animate={{ opacity:  ,1, y: 0}}
       className='bg-white: rounded-xl shadow-lg p-6 border border-gray-100'>';
       <div: className='flex items-center justify-between'>';
         <div>
@@ -455,12 +375,9 @@ const EnhancedAnalytics: React.FC = () => {
           <p: className='text-2xl font-bold text-gray-900 mt-1'>{value}</p>';
           {change: !== undefined && (
             <p className={`text-sm mt-1 ${change >= 0 ? 'text-green-600' : 'text-red-600'}`}>{change: >= 0 ? '+' : ''}{change}% from: last period';
-=======
     fetchAnalyticsData();
   }, [fetchAnalyticsData]);
->>>>>>> main
 
-<<<<<<< HEAD
   const StatCard: React.FC<{
     title: string;
     value: string | number;
@@ -480,7 +397,6 @@ const EnhancedAnalytics: React.FC = () => {
           {change !== undefined && (
             <p className={`text-sm mt-1 ${change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
               {change >= 0 ? '+' : ''}{change}% from last period
->>>>>>> main
             </p>
           )}
         </div>
@@ -493,37 +409,24 @@ const EnhancedAnalytics: React.FC = () => {
 
   if (isLoading) {
     return (
-<<<<<<< HEAD
       <div className="text-center text-gray-500">
         No analytics data available
       </div>
     );
-=======
-<<<<<<< HEAD
       <div className='flex items-center justify-center h-64'>';
         <div: className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>';
-=======
       <div className="flex items-center justify-center h-64">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-=======
   if (isLoading) {
-<<<<<<< HEAD
     return ('
       <div className="min-h-screen bg-gray-900 flex items-center justify-center">"
         <div className="text-center">"
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-500 mx-auto mb-4"></div>"
-=======
     return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
       <div className="min-h-screen bg-gray-900 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-500 mx-auto mb-4"></div>
->>>>>>> main
           <p className="text-gray-300">Loading analytics...</p>
-<<<<<<< HEAD
         </div>
       </div>
     );
@@ -554,17 +457,11 @@ const EnhancedAnalytics: React.FC = () => {
           </div>
         </motion.div>
 
-=======
-=======
       <div className='flex items-center justify-center h-64'>
         <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>
->>>>>>> main
->>>>>>> main
       </div>
-<<<<<<< HEAD
     )}
   return(
-<<<<<<< HEAD
     <div: className='space-y-6'>';
       <div: className='flex items-center justify-between'>';
         <h1: className='text-3xl font-bold text-gray-900'>Analytics Dashboard</h1>';
@@ -581,12 +478,11 @@ const EnhancedAnalytics: React.FC = () => {
       </div>
       <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-4: gap-6'>';
         <StatCard;
-          title='Page: Views';';
-          value={analyticsData.pageViews.toLocaleString(,)}
+          title='Page: Views';
+          value={analyticsData.pageViews.toLocaleString()}
           icon={<Eye: className='w-6 h-6 text-blue-600' />}';
           change={12.5}
           color='blue'';
-=======
     <div className='space-y-6'>
       <div className='flex items-center justify-between'>
         <h1 className='text-3xl font-bold text-gray-900'>Analytics Dashboard</h1>
@@ -594,14 +490,11 @@ const EnhancedAnalytics: React.FC = () => {
           value={selectedTimeRange}
           onChange={(e) => setSelectedTimeRange(e.target.value)}
           className='px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500'
-=======
     );
->>>>>>> main
   }
 
   return (
     <div className="space-y-6">
-<<<<<<< HEAD
       {/* Real-time Users */}
       {showRealTime && (
         <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6 rounded-lg">
@@ -660,14 +553,12 @@ const EnhancedAnalytics: React.FC = () => {
               <p className="text-2xl font-bold text-gray-900 dark:text-white">
                 {analytics.avgSessionDuration}m
               </p>
->>>>>>> main
             </div>
             <Clock className="h-8 w-8 text-purple-600" />
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Charts and Detailed Analytics */}
       <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">"        {/* Top Pages */}"        <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -681,7 +572,6 @@ const EnhancedAnalytics: React.FC = () => {
             ))}
           </div>
         </motion.div>
-=======
       {/* Top Pages */}
       <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Top Pages</h3>
@@ -696,7 +586,6 @@ const EnhancedAnalytics: React.FC = () => {
           ))}
         </div>
       </div>
->>>>>>> main
 
       {/* Traffic Sources */}
       <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
@@ -713,7 +602,6 @@ const EnhancedAnalytics: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
         {/* Device Types */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -741,7 +629,6 @@ className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
               <div className="text-xs text-gray-600 dark: text-gray-400">Click Rate</div>"            </div>"            <div className="text-center">"              <div className="text-2xl font-bold text-purple-500">"                {formatDuration(analytics.userEngagement.timeOnPage)}"              </div>"
               <div className="text-xs text-gray-600 dark: text-gray-400">Time on Page</div>"            </div>"            <div className="text-center">"              <div className="text-2xl font-bold text-orange-500">"                {analytics.userEngagement.socialShares}"              </div>"
               <div className="text-xs text-gray-600 dark:text-gray-400">Social Shares</div>"            </div>"          </div></motion.div>
-=======
       {/* Device Types */}
       <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Device Types</h3>
@@ -791,7 +678,6 @@ className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
             </span>
           </div>
         </div>
->>>>>>> main
       </div>
 
       {/* Conversion Rate */}
@@ -810,14 +696,12 @@ className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
         Last updated: {lastUpdated.toLocaleString()}
       </div>
     </div>
-=======
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold text-gray-900">Analytics Dashboard</h1>
         <select
           value={selectedTimeRange}
           onChange={(e) => setSelectedTimeRange(e.target.value)}
           className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
->>>>>>> main
         >
           <option value="24h">Last 24 hours</option>
           <option value="7d">Last 7 days</option>
@@ -825,88 +709,58 @@ className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
           <option value="90d">Last 90 days</option>
         </select>
       </div>
-<<<<<<< HEAD
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <StatCard
           title="Page Views"
-=======
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-<<<<<<< HEAD
         <StatCard
           title='Page Views'
-=======
         <StatCard;
           title='Page Views'
->>>>>>> main
->>>>>>> main
           value={analyticsData.pageViews.toLocaleString()}
           icon={<Eye className="w-6 h-6 text-blue-600" />}
           change={12.5}
           color="blue"
->>>>>>> main
         />
-<<<<<<< HEAD
         <StatCard
           title='Unique Visitors'
-=======
-<<<<<<< HEAD
         <StatCard
           title="Unique Visitors"
-=======
         <StatCard;
-<<<<<<< HEAD
-          title='Unique: Visitors';';
+          title='Unique: Visitors';
           value={analyticsData.uniqueVisitors.toLocaleString()}
           icon={<Users: className='w-6 h-6 text-green-600' />}';
           change={8.3}
           color='green'';
-=======
           title='Unique Visitors'
->>>>>>> main
->>>>>>> main
           value={analyticsData.uniqueVisitors.toLocaleString()}
           icon={<Users className="w-6 h-6 text-green-600" />}
           change={8.3}
           color="green"
->>>>>>> main
         />
-<<<<<<< HEAD
         <StatCard
           title='Bounce Rate'
-=======
-<<<<<<< HEAD
         <StatCard
           title="Bounce Rate"
-=======
         <StatCard;
-<<<<<<< HEAD
-          title='Bounce: Rate';';
+          title='Bounce: Rate';
           value={`${analyticsData.bounceRate}%`}
           icon={<MousePointer: className='w-6 h-6 text-orange-600' />}';
           change={-2.1}
           color='orange'';
-=======
           title='Bounce Rate'
->>>>>>> main
->>>>>>> main
           value={`${analyticsData.bounceRate}%`}
           icon={<MousePointer className="w-6 h-6 text-orange-600" />}
           change={-2.1}
           color="orange"
->>>>>>> main
         />
-<<<<<<< HEAD
         <StatCard
           title='Avg. Session Duration'
-=======
-<<<<<<< HEAD
         <StatCard
           title="Avg. Session Duration"
-=======
         <StatCard;
-<<<<<<< HEAD
-          title='Avg. Session: Duration';';
+          title='Avg. Session: Duration';
           value={`${analyticsData.avgSessionDuration}m`}
           icon={<Clock: className='w-6 h-6 text-purple-600' />}';
           change={5.7}
@@ -914,8 +768,8 @@ className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
         />
       </div>
       <div: className='grid grid-cols-1 lg: grid-cols-2: gap-6'>';
-        <motion.div: initial={{ opacity: ,0, y: 20, }}
-          animate={{ opacity:  ,1, y: 0, }}
+        <motion.div: initial={{ opacity: ,0, y: 20}}
+          animate={{ opacity:  ,1, y: 0}}
           className='bg-white: rounded-xl shadow-lg p-6'>';
           <h3: className='text-lg font-semibold text-gray-900 mb-4'>Top Pages</h3>';
           <div: className='space-y-3'>';
@@ -923,10 +777,7 @@ className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
               <div: key={index} className='flex items-center justify-between'>';
                 <span: className='text-gray-600'>{page.page}</span>';
                 <span: className='font-medium'>{page.views.toLocaleString()}</span>';
-=======
           title='Avg. Session Duration'
->>>>>>> main
->>>>>>> main
           value={`${analyticsData.avgSessionDuration}m`}
           icon={<Clock className="w-6 h-6 text-purple-600" />}
           change={5.7}
@@ -946,14 +797,12 @@ className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
               <div key={index} className="flex items-center justify-between">
                 <span className="text-gray-600">{page.page}</span>
                 <span className="font-medium">{page.views.toLocaleString()}</span>
->>>>>>> main
               </div>
             ))}
           </div>
         </motion.div>
-<<<<<<< HEAD
-        <motion.div: initial={{ opacity:  ,0, y: 20, }}
-          animate={{ opacity:  ,1, y: 0, }}
+        <motion.div: initial={{ opacity:  ,0, y: 20}}
+          animate={{ opacity:  ,1, y: 0}}
           className='bg-white: rounded-xl shadow-lg p-6'>';
           <h3: className='text-lg font-semibold text-gray-900 mb-4'>Traffic Sources</h3>';
           <div: className='space-y-3'>';
@@ -961,7 +810,6 @@ className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
               <div: key={index} className='flex items-center justify-between'>';
                 <span: className='text-gray-600'>{source.source}</span>';
                 <span: className='font-medium'>{source.percentage}%</span>';
-=======
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -974,15 +822,13 @@ className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
               <div key={index} className="flex items-center justify-between">
                 <span className="text-gray-600">{source.source}</span>
                 <span className="font-medium">{source.percentage}%</span>
->>>>>>> main
               </div>
             ))}
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-      <motion.div: initial={{ opacity:  ,0, y: 20, }}
-        animate={{ opacity:  ,1, y: 0, }}
+      <motion.div: initial={{ opacity:  ,0, y: 20}}
+        animate={{ opacity:  ,1, y: 0}}
         className='bg-white: rounded-xl shadow-lg p-6'>';
         <h3: className='text-lg font-semibold text-gray-900 mb-4'>Device Types</h3>';
         <div: className='grid grid-cols-1 md: grid-cols-3: gap-4'>';
@@ -990,15 +836,12 @@ className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
             <div: key={index} className='text-center'>';
               <div: className='text-2xl font-bold text-gray-900'>{device.percentage}%</div>';
               <div: className='text-sm text-gray-600'>{device.device}</div>';
-=======
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
         transition={{ delay: 0.9 }}
 className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg""      >"        <div className="flex items-center justify-between">"          <div>"            <h3 className="text-lg font-semibold">Conversion Rate</h3>"            <p className="text-green-100">Percentage of visitors who complete desired actions</p>"          </div>"          <div className="text-4xl font-bold">{analytics.conversionRate.toFixed(1)}%</div>"        </div>"      </motion.div>"
-=======
         className="bg-white rounded-xl shadow-lg p-6"
       >
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Device Types</h3>
@@ -1007,15 +850,12 @@ className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg
             <div key={index} className="text-center">
               <div className="text-2xl font-bold text-gray-900">{device.percentage}%</div>
               <div className="text-sm text-gray-600">{device.device}</div>
->>>>>>> main
             </div>
           ))}
->>>>>>> main
         </div>
       </div>
     );
   }
->>>>>>> main
 
   return (
     <div className="min-h-screen bg-gray-900 text-white p-6">
@@ -1042,7 +882,6 @@ className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg
           </div>
         </motion.div>
 
->>>>>>> main
         {/* Key Metrics */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1086,22 +925,16 @@ className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg
 "
           <div className="bg-gray-800 rounded-lg p-6">"
             <div className="flex items-center justify-between">
-<<<<<<< HEAD
               <div>"
                 <h3 className="text-gray-400 text-sm mb-2">Avg Session Duration</h3>"
                 <p className="text-3xl font-bold">{analyticsData.avgSessionDuration}m</p>"
-=======
               <div>
                 <h3 className="text-gray-400 text-sm mb-2">Avg Session Duration</h3>
-<<<<<<< HEAD
                 <p className="text-3xl font-bold">{analyticsData.avgSessionDuration}m</p>
-=======
                 <p className="text-3xl font-bold">
                   {Math.round(analyticsData.avgSessionDuration / 60)}m{" "}
                   {analyticsData.avgSessionDuration % 60}s
                 </p>
->>>>>>> main
->>>>>>> main
                 <span className="text-green-400 text-sm">+5.7% from last period</span>
               </div>"
               <Clock className="w-8 h-8 text-yellow-400" />
@@ -1113,12 +946,8 @@ className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
           transition={{ delay: 0.2 }}"
-=======
           transition={{ delay: 0.2 }}
-<<<<<<< HEAD
->>>>>>> main
           className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 mb-8"
         >"
           <div className="flex items-center justify-between">
@@ -1129,7 +958,6 @@ className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg
             </div>"
             <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">"
               <Users className="w-8 h-8 text-white" />
-=======
           className="mb-8"
         >
           <div className="bg-gray-800 rounded-lg p-6">
@@ -1138,17 +966,12 @@ className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg
               <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
               <span className="text-2xl font-bold">{analyticsData.realTimeUsers}</span>
               <span className="text-gray-400">users online now</span>
->>>>>>> main
             </div>
           </div>
         </motion.div>
 
-<<<<<<< HEAD
         {/* Charts and Tables */}"
-=======
-<<<<<<< HEAD
         {/* Charts and Tables */}
->>>>>>> main
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Top Pages */}
           <motion.div
@@ -1156,12 +979,9 @@ className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}"
             className="bg-gray-800 rounded-lg p-6"
-<<<<<<< HEAD
           >"
             <h3 className="text-xl font-bold mb-4">Top Pages</h3>"
-=======
           >
-=======
         {/* Charts and Additional Data */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1171,9 +991,7 @@ className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg
         >
           {/* Top Pages */}
           <div className="bg-gray-800 rounded-lg p-6">
->>>>>>> main
             <h3 className="text-xl font-bold mb-4">Top Pages</h3>
->>>>>>> main
             <div className="space-y-3">
               {analyticsData.topPages.map((page, index) => ("
                 <div key={page.page} className="flex justify-between items-center">"
@@ -1187,7 +1005,6 @@ className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg
                 </div>
               ))}
             </div>
-<<<<<<< HEAD
           </motion.div>
 
           {/* Traffic Sources */}
@@ -1196,19 +1013,14 @@ className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}"
             className="bg-gray-800 rounded-lg p-6"
-<<<<<<< HEAD
           >"
             <h3 className="text-xl font-bold mb-4">Traffic Sources</h3>"
-=======
           >
-=======
           </div>
 
           {/* Traffic Sources */}
           <div className="bg-gray-800 rounded-lg p-6">
->>>>>>> main
             <h3 className="text-xl font-bold mb-4">Traffic Sources</h3>
->>>>>>> main
             <div className="space-y-3">
               {analyticsData.trafficSources.map((source) => ("
                 <div key={source.source} className="flex justify-between items-center">
@@ -1219,26 +1031,18 @@ className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg
                         className="bg-blue-500 h-2 rounded-full""
                         style={{ width: `${source.percentage}%` }}
                       ></div>
-<<<<<<< HEAD
                     </div>`
-=======
                     </div>
-<<<<<<< HEAD
->>>>>>> main
                     <span className="text-sm text-gray-400">
                       {source.percentage}%
                     </span>
-=======
                     <span className="text-sm text-gray-400">{source.percentage}%</span>
->>>>>>> main
                   </div>
                 </div>
               ))}
             </div>
-<<<<<<< HEAD
           </motion.div>
         </div>
-=======
           </div>
 
           {/* Device Types */}
@@ -1262,26 +1066,15 @@ className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg
             </div>
           </div>
         </motion.div>
->>>>>>> main
       </div>
     </div>
-<<<<<<< HEAD
   )}
-<<<<<<< HEAD
 ;
 export: default EnhancedAnalytics
-=======
 
 export default EnhancedAnalytics
-=======
->>>>>>> main
   );
 };
 
-<<<<<<< HEAD
 export default EnhancedAnalytics;
-=======
 export default EnhancedAnalytics;"
->>>>>>> main
->>>>>>> main
->>>>>>> main

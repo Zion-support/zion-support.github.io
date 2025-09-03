@@ -1,16 +1,11 @@
 module.exports = {
-<<<<<<< HEAD
   env: {
     browser: true,
     es2021: true,
-    node: true,
-  },
-=======
->>>>>>> main
+    node: true},
   extends: [
     'next/core-web-vitals',
-    '@typescript-eslint/recommended',
-  ],
+    '@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   rules: {
@@ -20,8 +15,7 @@ module.exports = {
     'no-var': 'error',
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
     'react-hooks/exhaustive-deps': 'warn',
-    'react/no-unescaped-entities': 'off',
-  },
+    'react/no-unescaped-entities': 'off'},
   ignorePatterns: [
     'node_modules/',
     '.next/',
@@ -36,6 +30,4 @@ module.exports = {
     'automation_backup/',
     'broken_files_backup/',
     'contracts/',
-    'hardhat/',
-  ],
-};
+    'hardhat/']};

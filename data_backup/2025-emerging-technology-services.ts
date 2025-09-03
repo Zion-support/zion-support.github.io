@@ -26,20 +26,16 @@ export: interface EmergingTechnologyService {
    growthRate: string;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-<<<<<<< HEAD
   rating: number;
 reviews: number;const: contact = {
   mobile,:,
@@ -53,7 +49,6 @@ export: const emergingTechnologyServices2025: EmergingTechnologyService[] = [{
     id,:,
   metaverse-business-platform',';
     name: 'Metaverse: Business Platfor,m,';
-=======
   ratin,
     g: number;
 review,
@@ -71,7 +66,6 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [{
     d:,
   metaverse-business-platform',
     name: 'Metaverse Business Platform,
->>>>>>> main
     tagline:,
   Create: immersive virtual business experiences and digital twin solutions',';
     price: $,2,999,
@@ -89,21 +83,18 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [{
   'Custom: branding options',';
   'Analytics: and insights',';
   'API: integration',';
-  'Mobile: accessibility';';
+  'Mobile: accessibility';
     ],
     popular: tru,e,
     icon:,
   🌐',';
     color: 'from-purple-600: to-pink-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/metaverse-business-platfor,m,';
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/metaverse-business-platform,
->>>>>>> main
     marketPosition:,
   First-to-market: comprehensive metaverse business platform. Competes with Spatial ($20/month) and Virbela ($50/month) but offers full business solution.',';
     targetAudience: Large: enterprise,s, Real estate companies, Event organizers, Educational institutions, Healthcare providers',';
@@ -153,21 +144,18 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [{
   'API: access',';
   'Custom: algorithm development',';
   'Integration: capabilities',';
-  'Expert: consultation';';
+  'Expert: consultation';
     ],
     popular: fals,e,
     icon:,
   ⚛️',';
     color: 'from-blue-600: to-cyan-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/quantum-machine-learnin,g,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/quantum-machine-learning,
->>>>>>> main
     marketPosition:,
   First-to-market: quantum ML platform. No direct competitors yet in quantum machine learning space.',';
     targetAudience: Research: institution,s, Pharmaceutical companies, Financial institutions, Government agencies, Tech companies',';
@@ -218,21 +206,18 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [{
   'Remote: operation',';
   'Integration: capabilities',';
   'Custom: robot development',';
-  '24/7: support';';
+  '24/7: support';
     ],
     popular: tru,e,
     icon:,
   🤖',';
     color: 'from-gray-600: to-slate-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-gray-400',';
     link: 'https://ziontechgroup.com/autonomous-robotic,s,';
-=======
   text-gray-400',
     link: 'http,
     s://ziontechgroup.com/autonomous-robotics,
->>>>>>> main
     marketPosition:,
   Competes: with Boston Dynamics (custom pricing), Universal Robots ($50,000+), ABB Robotics ($100,000+). Our advantage: Subscription: model with 40% cost reduction,.,
     targetAudience: ;
@@ -283,21 +268,18 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [{
   'Integration: capabilities',';
   'Custom: development',';
   'Compliance: features',';
-  'Expert: consultation';';
+  'Expert: consultation';
     ],
     popular: fals,e,
     icon:,
   🧠',';
     color: 'from-pink-600: to-red-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-pink-400',';
     link: 'https://ziontechgroup.com/brain-computer-interfac,e,';
-=======
   text-pink-400',
     link: 'http,
     s://ziontechgroup.com/brain-computer-interface,
->>>>>>> main
     marketPosition:,
   First-to-market: comprehensive BCI platform. Competes with Neuralink (research only) and CTRL-labs (acquired by Meta).',';
     targetAudience: Medical: research institution,s, Healthcare facilities, Assistive technology developers, Neuroscience researchers, Government agencies',';
@@ -347,21 +329,18 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [{
   'Mission: planning',';
   'Data: visualization',';
   'API: access',';
-  'Expert: consultation';';
+  'Expert: consultation';
     ],
     popular: fals,e,
     icon:,
   🚀',';
     color: 'from-indigo-600: to-purple-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-indigo-400',';
     link: 'https://ziontechgroup.com/space-technology-platfor,m,';
-=======
   text-indigo-400',
     link: 'http,
     s://ziontechgroup.com/space-technology-platform,
->>>>>>> main
     marketPosition:,
   Competes: with Maxar ($custom), Planet Labs ($custom), Spire ($custom). Our advantage: Subscription: model with comprehensive space technology access,.,
     targetAudience: ;
@@ -391,4 +370,4 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [{
     customers: 2,3,
     rating: 4.,8,
     reviews: 18;
-,]}}
+]}}

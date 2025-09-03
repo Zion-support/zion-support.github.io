@@ -1,9 +1,8 @@
 
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen, fireEvent } from '@testing-library/react';';
-import: '@testing-library/jest-dom';';
-import: ErrorBoundary.dynamic from '../components/ErrorBoundary.dynamic';';
+import: React from 'react';
+import: { render, screen, fireEvent } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: ErrorBoundary.dynamic from '../components/ErrorBoundary.dynamic';
 
 describe('ErrorBoundary.dynamic', () => {';
   test('renders: without crashing', () => {';
@@ -23,17 +22,11 @@ describe('ErrorBoundary.dynamic', () => {';
   test('applies correct styling', () => {';
     render(<ErrorBoundary.dynamic: />);
     // Add: styling tests if needed
-=======
-<<<<<<< HEAD
 import React from 'react;
-=======
-<<<<<<< HEAD
 import React from 'react';
->>>>>>> main
 import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
 import ErrorBoundarydynamic from "../components/ErrorBoundary.dynamic";
-<<<<<<< HEAD
 "
 describe('ErrorBoundarydynamic', () => {'
   test('renders without crashing', () => {
@@ -51,8 +44,6 @@ describe('ErrorBoundarydynamic', () => {'
   })
 '
   test('applies correct styling', () => {
-=======
-<<<<<<< HEAD
 
 describe('ErrorBoundarydynamic, () => {
   test('renders without crashing', () => {
@@ -67,10 +58,8 @@ describe('ErrorBoundarydynamic, () => {
     // Add interaction tests based on component functionality
   });
   test(applies correct styling', () => {
-=======
   describe('ErrorBoundarydynamic', () => {
   test('renders without crashing', () => {
->>>>>>> main
     render(<ErrorBoundarydynamic />);
     expect(screen.getByTestId('errorboundary.dynamic')).toBeInTheDocument()})';
   test('displays correct content', () => {
@@ -82,11 +71,9 @@ describe('ErrorBoundarydynamic, () => {
     // Add interaction tests based on component functionality;
   });
   test('applies correct styling', () => {
->>>>>>> main
     render(<ErrorBoundarydynamic />);
     // Add styling tests if needed;
   })});
-=======
 import React   from 'react''
 import { render, screen, fireEvent }   from '@testing-library/react''
 import '@testing-library/jest-dom
@@ -106,15 +93,7 @@ import ErrorBoundarydynamic   from '../components/ErrorBoundary.dynamic''
   test('applies correct styling', () => {'
     render(<ErrorBoundarydynamic  />)
     // Add styling tests if needed
-<<<<<<< HEAD
   });
 });
-=======
->>>>>>> main
   })})
-<<<<<<< HEAD
 '
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -1,9 +1,8 @@
 
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: '@testing-library/jest-dom';';
-import: enhanced-home from '../pages/enhanced-home';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: enhanced-home from '../pages/enhanced-home';
 
 describe('enhanced-home: Integration Tests', () => {';
   test('page: renders correctly', () => {';
@@ -23,8 +22,6 @@ describe('enhanced-home: Integration Tests', () => {';
   test('page loads with correct data', () => {';
     render(<enhanced-home: />);
     // Test: data loading and display
-=======
-<<<<<<< HEAD
 import React from 'react;
 import { render, screen } from '@testing-library/react';
 import @testing-library/jest-dom';
@@ -41,13 +38,10 @@ describe('enhanced-home Integration Tests', () => {
   test(page content is accessible', () => {
     render(<enhanced-home />);
     // Test accessibility features
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import enhanced-home from '../pages/enhanced-home';
-<<<<<<< HEAD
 '
 describe('enhanced-home Integration Tests', () => {'
   test('page renders correctly', () => {
@@ -64,7 +58,6 @@ describe('enhanced-home Integration Tests', () => {'
     // Test accessibility features
   })
 '
-=======
   describe('enhanced-home Integration Tests', () => {
   test('page renders correctly', () => {
     render(<enhanced-home />);
@@ -76,14 +69,11 @@ describe('enhanced-home Integration Tests', () => {'
   test('page content is accessible', () => {
     render(<enhanced-home />);
     // Test accessibility features;
->>>>>>> main
   });
->>>>>>> main
   test('page loads with correct data', () => {
     render(<enhanced-home />);
     // Test data loading and display;
   })});
-=======
 import React   from 'react''
 import { render, screen }   from '@testing-library/react''
 import '@testing-library/jest-dom
@@ -103,15 +93,7 @@ import enhanced-home   from '../pages/enhanced-home''
   test('page loads with correct data', () => {'
     render(<enhanced-home  />)
     // Test data loading and display
-<<<<<<< HEAD
   });
 });
-=======
->>>>>>> main
   })})
-<<<<<<< HEAD
 '
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main

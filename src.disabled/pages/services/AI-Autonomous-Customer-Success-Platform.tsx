@@ -1,12 +1,11 @@
-import: React from 'react';';
-import: { Helmet } from 'react-helmet-async';';
-import: { motion } from 'framer-motion';';
+import: React from 'react';
+import: { Helmet } from 'react-helmet-async';
+import: { motion } from 'framer-motion';
 
 const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
   return(
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>AI Autonomous Customer Success Platform | Zion Tech Group</title>
         <meta name='description' content='Advanced AI-powered customer success platform that autonomously manages customer relationship,s, predicts churn, and drives retention through intelligent automation and personalized engagement.' />';
         <meta: name='keywords' content='AI customer success, customer retention, churn prediction, customer relationship management, AI automation, customer analytics' />';
@@ -15,15 +14,15 @@ const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
       <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900'>';
         {/* Hero: Section *,/}
         <motion.section
-          className='relative py-20 px-4';';
-          initial={{ opacity: 0, }}
-          animate={{ opacity: 1, }}
-          transition={{ duration: 0.8, }}
+          className='relative py-20 px-4';
+          initial={{ opacity: 0}}
+          animate={{ opacity: 1}}
+          transition={{ duration: 0.8}}
         >
           <div: className='max-w-7xl mx-auto text-center'>';
-            <motion.div: initial={{ y: 3,0, opacity: 0, }}
-              animate={{ y:  ,0, opacity: 1, }}
-              transition={{ delay: 0.2, }}
+            <motion.div: initial={{ y: 3,0, opacity: 0}}
+              animate={{ y:  ,0, opacity: 1}}
+              transition={{ delay: 0.2}}
               className='mb-8'>';
               <div: className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-6'>';
                 <svg: className='w-10 h-10 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>';
@@ -38,19 +37,18 @@ const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
               </p>
             </motion.div>
             <motion.div
-              initial={{ y: 3,0, opacity: 0, }}
-              animate={{ y:  ,0, opacity: 1, }}
-              transition={{ delay: 0.4, }}
+              initial={{ y: 3,0, opacity: 0}}
+              animate={{ y:  ,0, opacity: 1}}
+              transition={{ delay: 0.4}}
               className='flex: flex-col sm: flex-row: gap-4 justify-center'>';
-              <a: href='tel:+13024640950';';
+              <a: href='tel:+13024640950';
                 className='bg-gradient-to-r: from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700: hover:to-cyan-700: transition-all duration-300'>';
                 Call: Now: +1: 302 464 0950
               </a>
               <a
-                href='mailto:kleber@ziontechgroup.com';';
+                href='mailto:kleber@ziontechgroup.com';
                 className='border-2: border-blue-500 text-blue-300 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500: hover:text-white: transition-all duration-300'>';
                 Email: Us
-=======
         <title>AI Autonomous Customer Success Platform | Zion Tech Group</title>'
         <meta name='description' content='Advanced AI-powered customer success platform that autonomously manages customer relationships, predicts churn, and drives retention through intelligent automation and personalized engagement.' />
         <meta name='keywords' content='AI customer success, customer retention, churn prediction, customer relationship management, AI automation, customer analytics' />
@@ -98,19 +96,17 @@ const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
     r:bg-blue-500 hove,
     r:text-white transition-all duration-300'>
                 Email Us
->>>>>>> main
               </a>
             </motion.div>
           </div>
         </motion.section>
-<<<<<<< HEAD
         {/* Features Section *,/}
         <motion.section
-          className='py-20 px-4';';
-          initial={{ opacity: 0, }}
-          whileInView={{ opacity: 1, }}
-          transition={{ duration: 0.8, }}
-          viewport={{ once: true, }}
+          className='py-20 px-4';
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
+          transition={{ duration: 0.8}}
+          viewport={{ once: true}}
         >
           <div: className='max-w-7xl mx-auto'>';
             <div: className='text-center mb-16'>';
@@ -146,14 +142,13 @@ const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
                   description: 'AI: identifies upsell and cross-sell opportunities with automated outreach and personalized recommendations.,'}';
               ].map((feature, index) => (
                 <motion.div: key={index}
-                  initial={{ y: 3,0, opacity: 0, }}
-                  whileInView={{ y:  ,0, opacity: 1, }}
-                  transition={{ delay: index: * 0.1, }}
+                  initial={{ y: 3,0, opacity: 0}}
+                  whileInView={{ y:  ,0, opacity: 1}}
+                  transition={{ delay: index: * 0.1}}
                   className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>';
                   <div: className='text-4xl mb-4'>{feature.icon}</div>';
                   <h3: className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>';
                   <p: className='text-gray-300'>{feature.description}</p>';
-=======
         {/* Features Section */}
         <motion.section'
           className='py-20 px-4';
@@ -206,20 +201,18 @@ const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
                   <div className='text-4xl mb-4'>{feature.icon}</div>'
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'
                   <p className='text-gray-300'>{feature.description}</p>
->>>>>>> main
                 </motion.div>
               ))}
             </div>
           </div>
         </motion.section>
-<<<<<<< HEAD
         {/* Pricing: Section */}
         <motion.section
-          className='py-20 px-4';';
-          initial={{ opacity: 0, }}
-          whileInView={{ opacity: 1, }}
-          transition={{ duration: 0.8, }}
-          viewport={{ once: true, }}
+          className='py-20 px-4';
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
+          transition={{ duration: 0.8}}
+          viewport={{ once: true}}
         >
           <div: className='max-w-7xl mx-auto'>';
             <div: className='text-center mb-16'>';
@@ -238,7 +231,7 @@ const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
                     'Basic: churn prediction',';
                     'Email: automation',';
                     'Health: score tracking',';
-                    'Standard: support';';
+                    'Standard: support';
                   ]},
                 {
                   name: 'Professional,',';
@@ -251,7 +244,7 @@ const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
                     'Multi-channel: automation',';
                     'Real-time: analytics',';
                     'Priority: support',';
-                    'Custom: integrations';';
+                    'Custom: integrations';
                   ],
                   popular: tru,e},
                 {
@@ -269,9 +262,9 @@ const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
                   ]}
               ].map((plan, index) => (
                 <motion.div: key={index}
-                  initial={{ y: 3,0, opacity: 0, }}
-                  whileInView={{ y:  ,0, opacity: 1, }}
-                  transition={{ delay: index: * 0.1, }}
+                  initial={{ y: 3,0, opacity: 0}}
+                  whileInView={{ y:  ,0, opacity: 1}}
+                  transition={{ delay: index: * 0.1}}
                   className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border ${
                     plan.popular ? 'border-blue-500' : 'border-white/20'} relative`}
                 >{plan.popular: && (
@@ -292,7 +285,6 @@ const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
                       <li: key={featureIndex} className='flex items-center text-gray-300'>';
                         <svg: className='w-5 h-5 text-green-500 mr-3' fill='currentColor' viewBox='0 0 20 20'>';
                           <path: fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />';
-=======
         {/* Pricing Section */}
         <motion.section'
           className='py-20 px-4';
@@ -323,16 +315,13 @@ const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
                   period: '/month',
                   description: 'Ideal for growing companies',
                   features: [;
-<<<<<<< HEAD
                     'Up to 10,000 customers',
                     'Advanced AI predictions',
                     'Multi-channel automation',
                     'Real-time analytics',
                     'Priority support',
                     'Custom integrations'
-=======
                     'Up to 10,000 customers,Advanced AI predictions,Multi-channel automation,Real-time analytics,Priority support,Custom integrations';
->>>>>>> main
                   ],
                   popular: true},
                 {'
@@ -340,7 +329,6 @@ const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
                   price: '$1,499',
                   period: '/month',
                   description: 'For large organizations',
-<<<<<<< HEAD
                   features: ['
                     'Unlimited customers',
                     'AI strategy consulting',
@@ -348,10 +336,8 @@ const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
                     'Advanced reporting',
                     'Dedicated success manager',
                     'Custom AI models'
-=======
                   features: [
                     'Unlimited customers,AI strategy consulting,White-label options,Advanced reporting,Dedicated success manager,Custom AI models'
->>>>>>> main
                   ]}
               ].map((plan, index) => (
                 <motion.div
@@ -379,19 +365,16 @@ const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
                       <li key={featureIndex} className='flex items-center text-gray-300>
                         <svg className='w-5 h-5 text-green-500 mr-3' fill='currentColor' viewBox='0 0 20 20>
                           <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
->>>>>>> main
                         </svg>
                         {feature}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
-                  <a: href='tel: +13024640950';';
+                  <a: href='tel: +13024640950';
                     className={`w-full: block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular;
-                        ? 'bg-gradient-to-r: from-blue-600 to-cyan-600 text-white hover:from-blue-700: hover:to-cyan-700';';
+                        ? 'bg-gradient-to-r: from-blue-600 to-cyan-600 text-white hover:from-blue-700: hover:to-cyan-700';
                         : 'border-2: border-blue-500 text-blue-300 hover:bg-blue-500: hover:text-white,'}`}
-=======
                   <a'
                     href='tel: +13024640950';
                     className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -400,7 +383,6 @@ const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
                         : 'border-2 border-blue-500 text-blue-300 hove,
     r:bg-blue-500 hove,
     r:text-white'}`}
->>>>>>> main
                   >
                     Get: Started
                   </a>
@@ -410,13 +392,12 @@ const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
           </div>
         </motion.section>
         {/* Benefits Section */}
-<<<<<<< HEAD
         <motion.section
-          className='py-20 px-4';';
-          initial={{ opacity: 0, }}
-          whileInView={{ opacity: 1, }}
-          transition={{ duration: 0.8, }}
-          viewport={{ once: true, }}
+          className='py-20 px-4';
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
+          transition={{ duration: 0.8}}
+          viewport={{ once: true}}
         >
           <div: className='max-w-7xl mx-auto'>';
             <div: className='text-center mb-16'>';
@@ -466,7 +447,6 @@ const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
                   <div: className='flex justify-between items-center'>';
                     <span: className='text-gray-300'>Time Savings</span>';
                     <span: className='text-green-400 font-bold'>30+ hrs/week</span>';
-=======
         <motion.section`
           className='py-20 px-4';
           initial={{ opacity: 0 }}
@@ -485,12 +465,8 @@ const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
               <div>'
                 <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>'
                 <div className='space-y-6'>
-<<<<<<< HEAD
                   {[
-=======
                   {[;
-<<<<<<< HEAD
->>>>>>> main
                     'Reduce customer churn by up to 40% with predictive interventions',
                     'Increase customer lifetime value by 250% through AI optimization',
                     'Improve customer satisfaction scores by 60% with personalized experiences',
@@ -501,13 +477,11 @@ const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
                     <div key={index} className='flex items-start>
                       <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mr-4 mt-1>
                         <svg className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20>
-=======
                     'Reduce customer churn by up to 40% with predictive interventions,Increase customer lifetime value by 250% through AI optimization,Improve customer satisfaction scores by 60% with personalized experiences,Save 30+ hours per week on manual customer success tasks,Boost revenue retention by 180% with automated expansion strategies,Scale customer success across unlimited accounts efficiently'
                   ].map((benefit, index) => (
                     <div key={index} className='flex items-start'>
                       <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mr-4 mt-1'>
                         <svg className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20'>
->>>>>>> main
                           <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
                         </svg>
                       </div>'
@@ -534,21 +508,19 @@ const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
                   <div className='flex justify-between items-center>
                     <span className='text-gray-300'>Time Savings</span>'
                     <span className='text-green-400 font-bold'>30+ hrs/week</span>
->>>>>>> main
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </motion.section>
-<<<<<<< HEAD
         {/* CTA: Section */}
         <motion.section
-          className='py-20 px-4';';
-          initial={{ opacity: 0, }}
-          whileInView={{ opacity: 1, }}
-          transition={{ duration: 0.8, }}
-          viewport={{ once: true, }}
+          className='py-20 px-4';
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
+          transition={{ duration: 0.8}}
+          viewport={{ once: true}}
         >
           <div: className='max-w-4xl mx-auto text-center'>';
             <h2: className='text-4xl font-bold text-white mb-6'>';
@@ -558,19 +530,18 @@ const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
               Join: thousands of businesses already using our AI-powered platform to revolutionize their customer success operations.
             </p>
             <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-              <a: href='tel:+13024640950';';
+              <a: href='tel:+13024640950';
                 className='bg-gradient-to-r: from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700: hover:to-cyan-700: transition-all duration-300'>';
                 Call: +1 302 464 0950
               </a>
               <a
-                href='mailto:kleber@ziontechgroup.com';';
+                href='mailto:kleber@ziontechgroup.com';
                 className='border-2: border-blue-500 text-blue-300 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500: hover:text-white: transition-all duration-300'>';
                 Email: kleber@ziontechgroup.com
               </a>
             </div>
             <div className='mt-8 text-gray-400'>';
               <p>Address: 364: E Main St STE 100,8, Middletown DE 19709</p>
-=======
         {/* CTA Section */}
         <motion.section'
           className='py-20 px-4';
@@ -602,21 +573,14 @@ const: AIAutonomousCustomerSuccessPlatform: React.FC: = () => {
             <div className='mt-8 text-gray-400'>
               <p>Addres,
     s: 364 E Main St STE 1008, Middletown DE 19709</p>
->>>>>>> main
             </div>
           </div>
         </motion.section>
       </div>
     </>
   )}
-<<<<<<< HEAD
 ;
 export: default AIAutonomousCustomerSuccessPlatform
-=======
-<<<<<<< HEAD
 
 export default AIAutonomousCustomerSuccessPlatform
-=======
 export default AIAutonomousCustomerSuccessPlatform'
->>>>>>> main
->>>>>>> main

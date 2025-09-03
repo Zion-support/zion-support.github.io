@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Star, Users, Award, Globe, Brain, Cloud, Shield, Zap, Database, Cpu, Lock, Heart, TrendingUp, Target, BarChart3, PenTool, Eye, Server, Smartphone, Network, Clock, Sparkles, Phone, Mail, MapPin, FileText, Building2, Car, Share2 } from 'lucide-react';
 
-<<<<<<< HEAD
 const AIContentGenerator: NextPage = () => {
   const features = [
     {
@@ -81,7 +80,6 @@ const AIContentGenerator: NextPage = () => {
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
-=======
 export default function AIContentGenerator() {
   return (
     <>
@@ -94,12 +92,10 @@ export default function AIContentGenerator() {
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> main
             <div className="text-center">
               <div className="w-20 h-20 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-6">
                 <Brain className="w-10 h-10 text-blue-600" />
               </div>
-<<<<<<< HEAD
             ))}
           </div>
         </div>
@@ -153,7 +149,6 @@ export default function AIContentGenerator() {
                   }`}
                 >
                   Get Started
-=======
               <h1 className="text-5xl font-bold text-gray-900 mb-6">
                 AI Content Generator
               </h1>
@@ -166,14 +161,12 @@ export default function AIContentGenerator() {
                 </Link>
                 <Link href="#pricing" className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors inline-block text-lg">
                   View Pricing
->>>>>>> main
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 bg-blue-600">
         <div className="container mx-auto px-4 text-center">
@@ -189,7 +182,6 @@ export default function AIContentGenerator() {
         </div>
       </section>
     </MainLayout>
-=======
         {/* Features Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -419,6 +411,5 @@ export default function AIContentGenerator() {
         </section>
       </main>
     </>
->>>>>>> main
   );
 }

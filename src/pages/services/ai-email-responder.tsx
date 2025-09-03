@@ -329,7 +329,6 @@ const AIEmailResponder: React.FC = () => {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
       <div className="mt-6 text-blue-400">
         <a href="https: //www.zendesk.com" target="_blank" rel="noopener noreferrer">Zendesk</a>
         {" • "}
@@ -338,9 +337,7 @@ const AIEmailResponder: React.FC = () => {
         <a href="https://www.microsoft.com/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook" target="_blank" rel="noopener noreferrer">Outlook</a>
       </div>
     </div>
-=======
     </>
->>>>>>> main
   );
 };
 

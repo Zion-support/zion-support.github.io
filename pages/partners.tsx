@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
 import {
   Handshake,
   Award,
@@ -14,10 +13,7 @@ import {
   Target,
   Lightbulb,
   Shield,
-  Cloud,
-} from 'lucide-react';
-=======
-<<<<<<< HEAD
+  Cloud} from 'lucide-react';
 import SEO from '../components/SEO';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
@@ -25,7 +21,6 @@ import { Badge } from '../components/ui/Badge';
 export default function Partners() {
   const partnerBenefits = [
     {
-<<<<<<< HEAD
       icon: Handshake, title: 'Strategic Partners',
       description: 'Long-term partnerships that drive mutual growth and innovation.', benefits: ['Joint product development', 'Shared resources', 'Market expansion']
     }, {
@@ -40,59 +35,45 @@ export default function Partners() {
       icon: Globe,
       title: 'Global Partners', description: 'International partnerships for worldwide market presence.',
       benefits: ['Local expertise', 'Regional support', 'Cultural adaptation']
-=======
       icon: Users,
       title: 'Access to Our Network',
       description:'
-        'Connect with our extensive network of clients and partners worldwide.',
-    },
+        'Connect with our extensive network of clients and partners worldwide.'},
     {
       icon: Award,
       title: 'Certification Programs',
       description:'
-        'Get certified in our technologies and solutions with comprehensive training.',
-    },
+        'Get certified in our technologies and solutions with comprehensive training.'},
     {
       icon: Target,
       title: 'Joint Marketing',
       description:'
-        'Collaborate on marketing initiatives and co-branded campaigns.',
-    },
+        'Collaborate on marketing initiatives and co-branded campaigns.'},
     {
       icon: Zap,
       title: 'Technical Support',
       description:'
-        'Receive dedicated technical support and resources for your team.',
-    },
+        'Receive dedicated technical support and resources for your team.'},
     {
       icon: Shield,
       title: 'Revenue Sharing',
       description:'
-        'Earn competitive commissions and revenue sharing opportunities.',
-    },
+        'Earn competitive commissions and revenue sharing opportunities.'},
     {
       icon: Globe,
       title: 'Global Reach',
       description:'
-        'Expand your business reach with our global partner network.',
-    },
-  ];
+        'Expand your business reach with our global partner network.'}];
 
-=======
 import { Handshake, Award, Users, Globe, ArrowRight, CheckCircle, Star, Building, Target, Lightbulb, Shield, Cloud } from 'lucide-react';
->>>>>>> main
 
 export default function Partners() {
->>>>>>> main
   const partnerTypes = [
-<<<<<<< HEAD
     {'
       title: 'Technology Partners',
       description:'
-=======
   {
       title: 'Technology Partners',
-<<<<<<< HEAD
       description:
         'Leading technology companies that provide the tools and platforms we use to deliver exceptional solutions.',
       icon: Cloud,
@@ -100,20 +81,14 @@ export default function Partners() {
         'Access to cutting-edge technology',
         'Joint go-to-market opportunities',
         'Technical support and training',
-        'Co-marketing initiatives',
-      ],
-=======
-<<<<<<< HEAD
+        'Co-marketing initiatives'],
       description:
->>>>>>> main
         'Integrate your technology with our platform and create powerful solutions together.',
       features: ['
         'API Integration',
         'SDK Access',
         'Technical Documentation',
-        'Developer Support',
-      ],
-    },
+        'Developer Support']},
     {'
       title: 'Solution Partners',
       description:'
@@ -122,9 +97,7 @@ export default function Partners() {
         'Reseller Program',
         'Implementation Services',
         'Training & Certification',
-        'Marketing Support',
-      ],
-    },
+        'Marketing Support']},
     {'
       title: 'Channel Partners',
       description:'
@@ -133,16 +106,12 @@ export default function Partners() {
         'Channel Program',
         'Sales Training',
         'Lead Sharing',
-        'Co-marketing Opportunities',
-      ],
-    },
-=======
+        'Co-marketing Opportunities']},
       description: 'Leading technology companies that provide the tools and platforms we use to deliver exceptional solutions.',
       icon: Cloud,
       benefits: [
         'Access to cutting-edge technology,Joint go-to-market opportunities,Technical support and training,Co-marketing initiatives'
       ]
->>>>>>> main
     },
     {
       title: 'Solution Partners',
@@ -150,16 +119,12 @@ export default function Partners() {
         'Specialized service providers that complement our offerings and expand our capabilities.',
       icon: Target,
       benefits: [
-<<<<<<< HEAD
         'Expanded service portfolio',
         'Cross-referral opportunities',
         'Joint solution development',
-        'Shared expertise and resources',
-      ],
-=======
+        'Shared expertise and resources'],
         'Expanded service portfolio,Cross-referral opportunities,Joint solution development,Shared expertise and resources'
       ]
->>>>>>> main
     },
     {
       title: 'Channel Partners',
@@ -167,23 +132,16 @@ export default function Partners() {
         'Resellers and integrators who help us reach new markets and deliver solutions to clients worldwide.',
       icon: Globe,
       benefits: [
-<<<<<<< HEAD
         'Market expansion opportunities',
         'Local market expertise',
         'Sales and marketing support',
-        'Training and certification programs',
-      ],
-    },
-=======
+        'Training and certification programs']},
         'Market expansion opportunities,Local market expertise,Sales and marketing support,Training and certification programs'
       ]
->>>>>>> main
     }
->>>>>>> main
   ];
 
   const currentPartners = [
-<<<<<<< HEAD
     {
       name: 'Microsoft', logo: '/api/placeholder/200/100',
       description: 'Cloud infrastructure and AI services partnership', category: 'Technology Partner'
@@ -224,127 +182,99 @@ export default function Partners() {
     }, {
       icon: CheckCircle,
       title: 'Comprehensive Support', description: 'Access to expert support and resources from our partner ecosystem.'
-=======
   {
       name: 'Microsoft',
       category: 'Cloud Platform',
       description: 'Azure cloud services and enterprise solutions',
       logo: 'Microsoft',
-      tier: 'Platinum',
-    },
+      tier: 'Platinum'},
     {
       name: 'Amazon Web Services',
       category: 'Cloud Infrastructure',
       description: 'AWS cloud computing and AI services',
       logo: 'AWS',
-      tier: 'Platinum',
-    },
+      tier: 'Platinum'},
     {
       name: 'Google Cloud',
       category: 'AI & Analytics',
       description: 'Google Cloud Platform and AI tools',
       logo: 'Google',
-      tier: 'Gold',
-    },
+      tier: 'Gold'},
     {
       name: 'Salesforce',
       category: 'CRM Solutions',
       description: 'Customer relationship management platform',
       logo: 'Salesforce',
-      tier: 'Gold',
-    },
+      tier: 'Gold'},
     {
       name: 'ServiceNow',
       category: 'IT Service Management',
       description: 'Digital workflow and automation platform',
       logo: 'ServiceNow',
-      tier: 'Silver',
-    },
+      tier: 'Silver'},
     {
       name: 'Slack',
       category: 'Collaboration',
       description: 'Team communication and collaboration tools',
       logo: 'Slack',
-      tier: 'Silver',
-    },
-  ];
+      tier: 'Silver'}];
 
   const partnershipBenefits = [
   {
       title: 'Revenue Growth',
       description:
         'Access to new markets and revenue streams through partner channels',
-      icon: Target,
-    },
+      icon: Target},
     {
       title: 'Technical Excellence',
       description:
         'Leverage partner technologies to deliver superior solutions',
-      icon: Award,
-    },
+      icon: Award},
     {
       title: 'Market Expansion',
       description: 'Reach new geographic markets and customer segments',
-      icon: Globe,
-    },
+      icon: Globe},
     {
       title: 'Innovation',
       description:
         'Collaborate on cutting-edge solutions and emerging technologies',
-      icon: Lightbulb,
-    },
-  ];
+      icon: Lightbulb}];
 
   const partnershipProcess = [
   {
       step: '1',
       title: 'Initial Discussion',
       description:
-        'We discuss your business goals and how we can work together to achieve mutual success.',
-    },
+        'We discuss your business goals and how we can work together to achieve mutual success.'},
     {
       step: '2',
       title: 'Partnership Agreement',
       description:
-        'We formalize our partnership with clear terms, expectations, and mutual benefits.',
-    },
+        'We formalize our partnership with clear terms, expectations, and mutual benefits.'},
     {
       step: '3',
       title: 'Training & Certification',
       description:
-        'We provide comprehensive training and certification programs for your team.',
-    },
+        'We provide comprehensive training and certification programs for your team.'},
     {
       step: '4',
       title: 'Go-to-Market',
-<<<<<<< HEAD
       description:
-        'We launch joint marketing initiatives and begin delivering solutions together.',
-    },
-=======
+        'We launch joint marketing initiatives and begin delivering solutions together.'},
       description: 'We launch joint marketing initiatives and begin delivering solutions together.'
->>>>>>> main
     }
->>>>>>> main
->>>>>>> main
   ];
 
   return (
     <>
-<<<<<<< HEAD
       <SEO'
         title="Partners - Zion Tech Group""
         description="Join our partner network and grow your business with Zion Tech Group. Technology, solution, and channel partnerships available.""
-=======
-<<<<<<< HEAD
       <SEO
         title="Partners - Zion Tech Group"
         description="Join our partner network and grow your business with Zion Tech Group. Technology, solution, and channel partnerships available."
->>>>>>> main
         keywords="partners, partnership, reseller, technology partners, channel partners, business partnership"
       />
-=======
->>>>>>> main
       <Head>
         <title>Partners - Zion Tech Group</title>
         <meta
@@ -353,10 +283,7 @@ export default function Partners() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
       {/* Hero Section */}"
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
@@ -395,12 +322,9 @@ export default function Partners() {
               >
                 Learn More
               </Button>
-=======
       
->>>>>>> main
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md: text-5xl font-bold mb-6">Our Partners</h1>
@@ -408,7 +332,6 @@ export default function Partners() {
               Building the future of technology through strategic partnerships with industry leaders 
               and innovative companies worldwide.
             </p>
-=======
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">
             <div className="text-center">
@@ -432,24 +355,18 @@ export default function Partners() {
                   </button>
                 </Link>
               </div>
->>>>>>> main
             </div>
->>>>>>> main
           </div>
         </section>
 
-<<<<<<< HEAD
       {/* Partner Benefits */}"
       <section className="py-20 bg-gray-50">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="text-center mb-16">"
-=======
-<<<<<<< HEAD
       {/* Partner Benefits */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
->>>>>>> main
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Partner With Us?
             </h2>"
@@ -474,7 +391,6 @@ export default function Partners() {
                   <h3 className="text-xl font-semibold text-gray-900">
                     {benefit.title}
                   </h3>
-<<<<<<< HEAD
                 </div>"
                 <p className="text-gray-600">{benefit.description}</p>
               </Card>
@@ -489,8 +405,6 @@ export default function Partners() {
           <div className="text-center mb-16">"
             <h2 className="text-3xl m,
     d:text-4xl font-bold text-gray-900 mb-4">
-=======
-=======
         {/* Partnership Types */}
         <section className="py-20 sm:py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -505,7 +419,6 @@ export default function Partners() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {partnerTypes.map((type, index) => (
-<<<<<<< HEAD
                 <div key={index} className="text-center p-6 rounded-lg border border-gray-200 hover: shadow-lg transition-shadow">
                   <type.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{type.title}</h3>
@@ -515,7 +428,6 @@ export default function Partners() {
                       <li key={idx} className="flex items-center">
                         <CheckCircle className="w-3 h-3 text-green-500 mr-2" />
                         {benefit}
-=======
                 <div
                   key={index}
                   className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow"
@@ -534,32 +446,26 @@ export default function Partners() {
                       <li key={benefitIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                         <span className="text-gray-700">{benefit}</span>
->>>>>>> main
                       </li>
                     ))}
                   </ul>
->>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
       {/* Partner Types */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
->>>>>>> main
               Partnership Programs
             </h2>"
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Choose the partnership program that best fits your business model
               and goals.
-=======
         {/* Current Partners */}
-<<<<<<< HEAD
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
@@ -574,7 +480,6 @@ export default function Partners() {
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center hover: shadow-xl transition-shadow">
                   <div className="w-32 h-16 bg-gray-200 rounded mx-auto mb-4 flex items-center justify-center">
                     <span className="text-gray-500 text-sm">{partner.name}</span>
-=======
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -607,7 +512,6 @@ export default function Partners() {
                     >
                       {partner.tier}
                     </span>
->>>>>>> main
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {partner.name}
@@ -620,11 +524,9 @@ export default function Partners() {
               ))}
             </div>
           </div>
-<<<<<<< HEAD
 "
           <div className="grid grid-cols-1 m,
     d:grid-cols-3 gap-8">
-=======
         </section>
 
         {/* Partnership Benefits */}
@@ -638,13 +540,10 @@ export default function Partners() {
                 Why partner with Zion Tech Group?
               </p>
             </div>
-<<<<<<< HEAD
             
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-=======
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> main
               {partnershipBenefits.map((benefit, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -660,7 +559,6 @@ export default function Partners() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Become a Partner */}
         <section className="py-16 bg-blue-900 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -719,7 +617,6 @@ export default function Partners() {
                   Get Resources →
                 </Link>
               </div>
-=======
         {/* Partnership Process */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -746,7 +643,6 @@ export default function Partners() {
                   <p className="text-gray-600">{step.description}</p>
                 </div>
               ))}
->>>>>>> main
             </div>
           </div>
         </section>
@@ -758,13 +654,9 @@ export default function Partners() {
               Ready to Partner With Us?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-<<<<<<< HEAD
               Join our partner ecosystem and unlock new opportunities for growth
               and innovation.
-=======
               Join our partner ecosystem and unlock new opportunities for growth and innovation.
->>>>>>> main
->>>>>>> main
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/contact">
@@ -781,10 +673,8 @@ export default function Partners() {
               </a>
             </div>
           </div>
-<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
->>>>>>> main
             {partnerTypes.map((type, index) => (
               <Card
                 key={index}"
@@ -846,16 +736,11 @@ export default function Partners() {
           </div>
         </div>
       </section>
-=======
         </section>
       </main>
->>>>>>> main
     </>
-<<<<<<< HEAD
   )
 }
-=======
   );
 }
 "
->>>>>>> main

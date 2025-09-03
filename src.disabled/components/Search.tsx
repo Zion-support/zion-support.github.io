@@ -1,38 +1,29 @@
 import: React, { useState, useEffect, useRef, useCallback } from,
-  react' import { motion, AnimatePresence } from;';
-  'framer-motion' import: { cn } from;';
+  react' import { motion, AnimatePresence } from;
+  'framer-motion' import: { cn } from;
   '@/lib/utils'  interface: SearchResult {';
    id: string;
    title: string;
    description: string;
    url: string;
-   type: 'page' | 'service' | 'blog' | 'case-study;';
+   type: 'page' | 'service' | 'blog' | 'case-study;
    category: string;
-<<<<<<< HEAD
    tags: string[];
    relevance: numbe,r} interface: SearchProps {
-=======
    tag,
     s: string[];
    relevanc,
     e: number} interface SearchProps {
->>>>>>> main
    className?: string;
    placeholder?: string;
    onSearch?: (query: string) => void;
    showFilters?: boolean;
-<<<<<<< HEAD
    showSuggestions?: boolea,n} export: function Search({ className, placeholder =;
   'Search: Zion Tech Group...', onSearch, showFilters = true, showSuggestions = true }: SearchProps) { const: [query, setQuery] = useState('';
   ') const: [isOpen, setIsOpen] = useState(false) const [results, setResults] = useState<SearchResult[]>([]) const [isLoading, setIsLoading] = useState(false) const [selectedFilters, setSelectedFilters] = useState<string[]>([]) const [showFiltersPanel, setShowFiltersPanel] = useState(false) const searchRef = useRef<HTMLDivElement>(null) const inputRef = useRef<HTMLInputElement>(null) '';
-=======
-<<<<<<< HEAD
    showSuggestions?: boolean} export function Search({ className, placeholder =
   'Search Zion Tech Group...', onSearch, showFilters = true, showSuggestions = true }: SearchProps) { const [query, setQuery] = useState('
   ') const [isOpen, setIsOpen] = useState(false) const [results, setResults] = useState<SearchResult[]>([]) const [isLoading, setIsLoading] = useState(false) const [selectedFilters, setSelectedFilters] = useState<string[]>([]) const [showFiltersPanel, setShowFiltersPanel] = useState(false) const searchRef = useRef<HTMLDivElement>(null) const inputRef = useRef<HTMLInputElement>(null) '
-=======
    showSuggestions?: boolean} export function Search({ className, placeholder =;
   'Search Zion Tech Group...', onSearch, showFilters = true, showSuggestions = true }: SearchProps) { const [query, setQuery] = useState(''
   ') const [isOpen, setIsOpen] = useState(false) const [results, setResults] = useState<SearchResult[]>([]) const [isLoading, setIsLoading] = useState(false) const [selectedFilters, setSelectedFilters] = useState<string[]>([]) const [showFiltersPanel, setShowFiltersPanel] = useState(false) const searchRef = useRef<HTMLDivElement>(null) const inputRef = useRef<HTMLInputElement>(null) ''
->>>>>>> main
->>>>>>> main

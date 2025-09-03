@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-import: type { NextPage } from 'next';';';';
-import: Layout from '../../components/Layout';';';';
-import: Link from 'next/link';';';';
-import: { Brain, Zap, Target, CheckCircle, ArrowRight, Users, Award, Globe } from 'lucide-react';';';';
+import: type { NextPage } from 'next';';
+import: Layout from '../../components/Layout';';
+import: Link from 'next/link';';
+import: { Brain, Zap, Target, CheckCircle, ArrowRight, Users, Award, Globe } from 'lucide-react';';
 
 const: AIDevelopment: NextPage: = () => ,{,
   return (
@@ -30,8 +29,6 @@ const: AIDevelopment: NextPage: = () => ,{,
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
               View: All Services
-=======
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import { Award, Brain, Cloud, Globe, Image, Target, Today, Users, Zap } from 'lucide-react';
 '
@@ -49,11 +46,9 @@ const AIDevelopment: NextPage = () => {
           <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">"
             <Brain className="w-10 h-10 text-white" />
           </div>"
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { Brain, Zap, Target, CheckCircle, ArrowRight, Users, Award, Globe } from 'lucide-react';
 ;
 const AIDevelopment: NextPage = () => {;
@@ -265,8 +260,6 @@ const AIDevelopment: NextPage = () => {;
 };
 ;
 export default AIDevelopment;
-=======
-<<<<<<< HEAD
 import {
   Brain,
   Zap,
@@ -275,9 +268,7 @@ import {
   ArrowRight,
   Users,
   Award,
-  Globe,
-} from 'lucide-react';
-=======
+  Globe} from 'lucide-react';
 import Navigation from '../../src/components/Navigation';
 import Footer from '../../src/components/Footer';
 import {
@@ -300,8 +291,7 @@ import {
   MessageSquare,
   Image,
   FileText,
-  Search,
-} from 'lucide-react';
+  Search} from 'lucide-react';
 
 export default function AIDevelopment() {
   const features = [
@@ -309,38 +299,31 @@ export default function AIDevelopment() {
       icon: Brain,
       title: 'Machine Learning',
       description:
-        'Advanced ML algorithms and models for predictive analytics and automation',
-    },
+        'Advanced ML algorithms and models for predictive analytics and automation'},
     {
       icon: Bot,
       title: 'AI Chatbots',
       description:
-        'Intelligent conversational agents for customer service and support',
-    },
+        'Intelligent conversational agents for customer service and support'},
     {
       icon: Zap,
       title: 'Process Automation',
-      description: 'Streamline workflows with intelligent automation solutions',
-    },
+      description: 'Streamline workflows with intelligent automation solutions'},
     {
       icon: Shield,
       title: 'AI Security',
       description:
-        'Advanced threat detection and security solutions powered by AI',
-    },
+        'Advanced threat detection and security solutions powered by AI'},
     {
       icon: Database,
       title: 'Data Intelligence',
       description:
-        'Transform raw data into actionable insights with AI analytics',
-    },
+        'Transform raw data into actionable insights with AI analytics'},
     {
       icon: Globe,
       title: 'Natural Language Processing',
       description:
-        'Understand and process human language with advanced NLP models',
-    },
-  ];
+        'Understand and process human language with advanced NLP models'}];
 
   const services = [
   {
@@ -348,66 +331,49 @@ export default function AIDevelopment() {
       description:
         'Tailored AI applications built specifically for your business needs',
       icon: Cpu,
-<<<<<<< HEAD
       features: [
         'Machine Learning Models',
         'Deep Learning Networks',
         'Predictive Analytics',
-        'Custom Algorithms',
-      ],
-=======
+        'Custom Algorithms'],
       features: ['Machine Learning Models,Deep Learning Networks,Predictive Analytics,Custom Algorithms']
->>>>>>> main
     },
     {
       title: 'AI Integration',
       description:
         'Seamlessly integrate AI capabilities into your existing systems',
       icon: Network,
-<<<<<<< HEAD
       features: [
         'API Development',
         'System Integration',
         'Data Pipeline Setup',
-        'Performance Optimization',
-      ],
-=======
+        'Performance Optimization'],
       features: ['API Development,System Integration,Data Pipeline Setup,Performance Optimization']
->>>>>>> main
     },
     {
       title: 'AI Consulting',
       description:
         'Strategic guidance on AI implementation and digital transformation',
       icon: Settings,
-<<<<<<< HEAD
       features: [
         'AI Strategy Planning',
         'Technology Assessment',
         'ROI Analysis',
-        'Implementation Roadmap',
-      ],
-=======
+        'Implementation Roadmap'],
       features: ['AI Strategy Planning,Technology Assessment,ROI Analysis,Implementation Roadmap']
->>>>>>> main
     },
     {
       title: 'AI Training & Support',
       description:
         'Comprehensive training and ongoing support for your AI initiatives',
       icon: Users,
-<<<<<<< HEAD
       features: [
         'Team Training',
         'Documentation',
         'Technical Support',
-        'Model Maintenance',
-      ],
-    },
-=======
+        'Model Maintenance']},
       features: ['Team Training,Documentation,Technical Support,Model Maintenance']
     }
->>>>>>> main
   ];
 
   const applications = [
@@ -415,63 +381,46 @@ export default function AIDevelopment() {
       title: 'Chatbots & Virtual Assistants',
       description: 'Intelligent conversational agents for customer service',
       icon: MessageSquare,
-<<<<<<< HEAD
       useCases: [
         'Customer Support',
         'Lead Generation',
         'FAQ Automation',
-        'Appointment Scheduling',
-      ],
-=======
+        'Appointment Scheduling'],
       useCases: ['Customer Support,Lead Generation,FAQ Automation,Appointment Scheduling']
->>>>>>> main
     },
     {
       title: 'Computer Vision',
       description: 'Image and video analysis for various business applications',
       icon: Image,
-<<<<<<< HEAD
       useCases: [
         'Quality Control',
         'Object Detection',
         'Facial Recognition',
-        'Document Processing',
-      ],
-=======
+        'Document Processing'],
       useCases: ['Quality Control,Object Detection,Facial Recognition,Document Processing']
->>>>>>> main
     },
     {
       title: 'Natural Language Processing',
       description: 'Text analysis and language understanding solutions',
       icon: FileText,
-<<<<<<< HEAD
       useCases: [
         'Sentiment Analysis',
         'Text Classification',
         'Language Translation',
-        'Content Generation',
-      ],
-=======
+        'Content Generation'],
       useCases: ['Sentiment Analysis,Text Classification,Language Translation,Content Generation']
->>>>>>> main
     },
     {
       title: 'Predictive Analytics',
       description: 'Forecast trends and make data-driven decisions',
       icon: TrendingUp,
-<<<<<<< HEAD
       useCases: [
         'Sales Forecasting',
         'Risk Assessment',
         'Demand Planning',
-        'Customer Behavior Analysis',
-      ],
-    },
-=======
+        'Customer Behavior Analysis']},
       useCases: ['Sales Forecasting,Risk Assessment,Demand Planning,Customer Behavior Analysis']
     }
->>>>>>> main
   ];
 
   const technologies = [
@@ -484,36 +433,29 @@ export default function AIDevelopment() {
     { name: 'NumPy', category: 'Numerical Computing' },
     { name: 'Keras', category: 'Neural Networks' },
     { name: 'Apache Spark', category: 'Big Data' },
-    { name: 'Docker', category: 'Containerization' },
-  ];
+    { name: 'Docker', category: 'Containerization' }];
 
   const benefits = [
   {
       icon: TrendingUp,
       title: 'Increased Efficiency',
       description:
-        'Automate repetitive tasks and improve operational efficiency by up to 60%',
-    },
+        'Automate repetitive tasks and improve operational efficiency by up to 60%'},
     {
       icon: BarChart3,
       title: 'Better Insights',
       description:
-        'Gain deeper insights from your data with advanced analytics and predictions',
-    },
+        'Gain deeper insights from your data with advanced analytics and predictions'},
     {
       icon: Users,
       title: 'Enhanced Customer Experience',
       description:
-        'Provide personalized experiences and 24/7 intelligent customer support',
-    },
+        'Provide personalized experiences and 24/7 intelligent customer support'},
     {
       icon: Shield,
       title: 'Competitive Advantage',
       description:
-        'Stay ahead of the competition with cutting-edge AI capabilities',
-    },
-  ];
->>>>>>> main
+        'Stay ahead of the competition with cutting-edge AI capabilities'}];
 
   return (
     <>
@@ -561,8 +503,6 @@ export default function AIDevelopment() {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
->>>>>>> main
           <h1 className="text-5xl md: text-6xl font-bold mb-6">
             AI Development"
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">"
@@ -589,13 +529,11 @@ export default function AIDevelopment() {
     r:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
             >
               View All Services
->>>>>>> main
             </Link>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 bg-gray-50">";";";
         <div: className="container mx-auto px-4">";";";
@@ -617,7 +555,6 @@ export default function AIDevelopment() {
               </p>
               <ul className="text-sm text-gray-500 space-y-2">";";";
                 <li>• Predictive: Analytics</li>
-=======
       {/* Features Section */}"
       <section className="py-20 bg-gray-50">"
         <div className="container mx-auto px-4">"
@@ -647,13 +584,11 @@ export default function AIDevelopment() {
               </p>"
               <ul className="text-sm text-gray-500 space-y-2">
                 <li>• Predictive Analytics</li>
->>>>>>> main
                 <li>• Pattern Recognition</li>
                 <li>• Recommendation Systems</li>
                 <li>• Anomaly Detection</li>
               </ul>
             </div>
-<<<<<<< HEAD
 
             <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",;,";";
               <div: className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">";";";
@@ -665,7 +600,6 @@ export default function AIDevelopment() {
               </p>
               <ul className="text-sm text-gray-500 space-y-2">";";";
                 <li>• Text: Analysis</li>
-=======
 "
             <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow">"
               <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">"
@@ -680,13 +614,11 @@ export default function AIDevelopment() {
               </p>"
               <ul className="text-sm text-gray-500 space-y-2">
                 <li>• Text Analysis</li>
->>>>>>> main
                 <li>• Sentiment Analysis</li>
                 <li>• Language Translation</li>
                 <li>• Chatbots & Virtual Assistants</li>
               </ul>
             </div>
-<<<<<<< HEAD
 
             <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",;,";";
               <div: className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">";";";
@@ -698,7 +630,6 @@ export default function AIDevelopment() {
               </p>
               <ul className="text-sm text-gray-500 space-y-2">";";";
                 <li>• Image: Recognition</li>
-=======
 "
             <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow">"
               <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">"
@@ -711,13 +642,11 @@ export default function AIDevelopment() {
               </p>"
               <ul className="text-sm text-gray-500 space-y-2">
                 <li>• Image Recognition</li>
->>>>>>> main
                 <li>• Object Detection</li>
                 <li>• Facial Recognition</li>
                 <li>• Quality Control</li>
               </ul>
             </div>
-<<<<<<< HEAD
 
             <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",;,";";
               <div: className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">";";";
@@ -729,7 +658,6 @@ export default function AIDevelopment() {
               </p>
               <ul className="text-sm text-gray-500 space-y-2">";";";
                 <li>• API: Development</li>
-=======
 "
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">"
               <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">"
@@ -742,13 +670,11 @@ export default function AIDevelopment() {
               </p>"
               <ul className="text-sm text-gray-500 space-y-2">
                 <li>• API Development</li>
->>>>>>> main
                 <li>• System Integration</li>
                 <li>• Cloud Deployment</li>
                 <li>• Performance Optimization</li>
               </ul>
             </div>
-<<<<<<< HEAD
 
             <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",;,";";
               <div: className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">";";";
@@ -760,7 +686,6 @@ export default function AIDevelopment() {
               </p>
               <ul className="text-sm text-gray-500 space-y-2">";";";
                 <li>• AI: Strategy</li>
-=======
 "
             <div className="bg-white rounded-lg p-8 shadow-lg hove,
     r:shadow-xl transition-shadow">"
@@ -774,13 +699,11 @@ export default function AIDevelopment() {
               </p>"
               <ul className="text-sm text-gray-500 space-y-2">
                 <li>• AI Strategy</li>
->>>>>>> main
                 <li>• Technology Assessment</li>
                 <li>• Implementation Planning</li>
                 <li>• Training & Support</li>
               </ul>
             </div>
-<<<<<<< HEAD
 
             <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",;,";";
               <div: className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">";";";
@@ -792,7 +715,6 @@ export default function AIDevelopment() {
               </p>
               <ul className="text-sm text-gray-500 space-y-2">";";";
                 <li>• Process: Automation</li>
-=======
 "
             <div className="bg-white rounded-lg p-8 shadow-lg hove,
     r:shadow-xl transition-shadow">"
@@ -806,7 +728,6 @@ export default function AIDevelopment() {
               </p>"
               <ul className="text-sm text-gray-500 space-y-2">
                 <li>• Process Automation</li>
->>>>>>> main
                 <li>• Workflow Optimization</li>
                 <li>• Data Processing</li>
                 <li>• Smart Scheduling</li>
@@ -816,7 +737,6 @@ export default function AIDevelopment() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Process Section */}
       <section className="py-20 bg-white">";";";
         <div: className="container mx-auto px-4">";";";
@@ -858,7 +778,6 @@ export default function AIDevelopment() {
               </div>
               <h3: className="text-xl font-semibold mb-2">Deployment & Support</h3>";";";
               <p: className="text-gray-600">We deploy your AI solutions and provide ongoing support.</p>";";";
-=======
       {/* Process Section */}"
       <section className="py-20 bg-white">"
         <div className="container mx-auto px-4">"
@@ -920,19 +839,17 @@ export default function AIDevelopment() {
               <p className="text-gray-600">
                 We deploy your AI solutions and provide ongoing support.
               </p>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA: Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";";";
         <div: className="container mx-auto px-4 text-center">";";";
           <h2: className="text-4xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>";";";
           <p: className="text-xl mb-8 max-w-3xl mx-auto">";";";
-            Let's: discuss how AI can solve your specific business challenges and drive growth.';';';
+            Let's: discuss how AI can solve your specific business challenges and drive growth.';';
           </p>
           <div: className="flex flex-col sm: flex-row: justify-center gap-4">",;,";";
             <Link: href="/contact" className="bg-white text-blue-600 hover: bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
@@ -940,13 +857,11 @@ export default function AIDevelopment() {
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-blue-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
               View: All Services
-=======
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
         <div className="container mx-auto px-4 text-center">"
           <h2 className="text-4xl font-bold mb-6">
             Ready to Transform Your Business with AI?
-<<<<<<< HEAD
           </h2>"
           <p className="text-xl mb-8 max-w-3xl mx-auto">"
             Let's discuss how AI can solve your specific business challenges and
@@ -955,7 +870,6 @@ export default function AIDevelopment() {
           <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link"
               href="/contact""
-=======
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Let&apos;s discuss how AI can solve your specific business
@@ -964,7 +878,6 @@ export default function AIDevelopment() {
           <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link
               href="/contact"
->>>>>>> main
               className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
             >
               Schedule a Consultation
@@ -976,7 +889,6 @@ export default function AIDevelopment() {
     r:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
             >
               View All Services
->>>>>>> main
             </Link>
           </div>
         </div>
@@ -984,18 +896,11 @@ export default function AIDevelopment() {
     </Layout>
   );
 };
-<<<<<<< HEAD
 export default AIDevelopment
-=======
 
-<<<<<<< HEAD
 export: default AIDevelopment;
-=======
 export default AIDevelopment;
-<<<<<<< HEAD
 "
-=======
-=======
         </section>
 
         {/* Features Section */}
@@ -1191,27 +1096,22 @@ export default AIDevelopment;
                   step: '01',
                   title: 'Discovery & Analysis',
                   description:
-                    'Understand your business needs and identify AI opportunities',
-                },
+                    'Understand your business needs and identify AI opportunities'},
                 {
                   step: '02',
                   title: 'Data Preparation',
                   description:
-                    'Collect, clean, and prepare data for AI model training',
-                },
+                    'Collect, clean, and prepare data for AI model training'},
                 {
                   step: '03',
                   title: 'Model Development',
                   description:
-                    'Build, train, and optimize AI models for your specific use case',
-                },
+                    'Build, train, and optimize AI models for your specific use case'},
                 {
                   step: '04',
                   title: 'Deployment & Monitoring',
                   description:
-                    'Deploy AI solutions and continuously monitor performance',
-                },
-              ].map((phase, index) => (
+                    'Deploy AI solutions and continuously monitor performance'}].map((phase, index) => (
                 <div key={index} className="text-center">
                   <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mx-auto mb-4">
                     {phase.step}
@@ -1258,11 +1158,3 @@ export default AIDevelopment;
     </>
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

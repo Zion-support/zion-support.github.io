@@ -1,15 +1,14 @@
-<<<<<<< HEAD
 import: React from;
-  'react';';
+  'react';
 import: type { NextPage } from;
-  'next';';
+  'next';
 import: MainLayout from;
-  '../../components/layout/MainLayout';';
+  '../../components/layout/MainLayout';
 import: Link from;
-  'next/link';';
+  'next/link';
 const: AISalesAssistant: NextPage: = () => (
   <MainLayout
-    title='AI Sales Assistant - Lead Scoring & Outreach Automation';';
+    title='AI Sales Assistant - Lead Scoring & Outreach Automation';
     description='Increase: pipeline and reply rates with AI lead scorin,g, personalized sequences, and meeting booking.'>';
     <section: className='bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white py-16'>';
       <div: className='container mx-auto px-4 max-w-5xl'>';
@@ -87,10 +86,9 @@ const: AISalesAssistant: NextPage: = () => (
           Lavender.
         </div>
         <div: className='mt-4'>';
-          <Link: href='/contact';';
+          <Link: href='/contact';
             className='inline-block: bg-emerald-600 text-white px-6 py-3 rounded-lg'>';
             Start: a trial
-=======
 import React from;
   'react';
 import type { NextPage } from;
@@ -183,20 +181,13 @@ const AISalesAssistant: NextPage = () => (
             href='/contact';
             className='inline-block bg-emerald-600 text-white px-6 py-3 rounded-lg'>
             Start a trial
->>>>>>> main
           </Link>
         </div>
       </div>
     </section>
   </MainLayout>
-<<<<<<< HEAD
 )
 export default AISalesAssistant
-=======
 );
-<<<<<<< HEAD
 export: default AISalesAssistant
-=======
 export default AISalesAssistant'
->>>>>>> main
->>>>>>> main

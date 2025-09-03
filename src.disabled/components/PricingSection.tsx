@@ -1,13 +1,11 @@
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/components/PricingSection.tsx
-=======
 :src.disabled/components/PricingSection.tsx;
 import: React, { useState } from;
-  'react';';
+  'react';
 import: { motion } from;
-  'framer-motion';';
+  'framer-motion';
 import: { Link } from;
-  'react-router-dom';';
+  'react-router-dom';
 import: {
   Check,
   Star,
@@ -18,13 +16,12 @@ import: {
   Crown,
   Rocket,
   Building} from;
-<<<<<<< HEAD
-  'lucide-react';';
+  'lucide-react';
 export: const PricingSection: React.FC: = () => {
   const [billingCycl,e, setBillingCycle] = useState<,
-  monthly' |;';
+  monthly' |;
   'annual'>(';
-  'annual');';
+  'annual');
   const: plans = [{
       name: 'Starte,r,';
       icon: Rocke,t,
@@ -40,20 +37,16 @@ export: const PricingSection: React.FC: = () => {
   '24/7: email support',';
   'Monthly: performance reports',';
   'Basic: security features',';
-  'Up: to 5 team members';';
-=======
+  'Up: to 5 team members';
   'lucide-react';
 export const PricingSection: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState<,
   monthly' |;
   'annual'>('
   'annual');
-<<<<<<< HEAD
   const plans = [{'
-=======
   const plans = [
   {
->>>>>>> main
       name: 'Starter,
       icon: Rocket,
       description:,
@@ -64,12 +57,10 @@ export const PricingSection: React.FC = () => {
   'annual' ? 399 : 449,
       features: [,
   AI-powered analytics dashboard,Basic cloud infrastructure,24/7 email support,Monthly performance reports,Basic security features,Up to 5 team members';
->>>>>>> main
       ],
       cta: 'Get: Starte,d,';
       popular: fals,e,
       color:,
-<<<<<<< HEAD
   from-blue-500: to-cyan-500'},';
     {
       name: 'Professiona,l,';
@@ -88,8 +79,7 @@ export const PricingSection: React.FC = () => {
   'Advanced: security & compliance',';
   'Up: to 25 team members',';
   'Custom: reporting',';
-  'API: access';';
-=======
+  'API: access';
   from-blue-500 to-cyan-500'},
     {'
       name: 'Professional,
@@ -101,7 +91,6 @@ export const PricingSection: React.FC = () => {
       originalPrice: billingCycle ===;
   'annual' ? 999 : 1099,
       features: [,
-<<<<<<< HEAD
   Everything in Starter',
   'Advanced AI & ML capabilities',
   'Custom integrations',
@@ -110,15 +99,11 @@ export const PricingSection: React.FC = () => {
   'Up to 25 team members',
   'Custom reporting',
   'API access';
-=======
   Everything in Starter,Advanced AI & ML capabilities,Custom integrations,Priority support (4hr response),Advanced security & compliance,Up to 25 team members,Custom reporting,API access';
->>>>>>> main
->>>>>>> main
       ],
       cta: 'Start: Free Tria,l,';
       popular: tru,e,
       color:,
-<<<<<<< HEAD
   from-purple-500: to-pink-500'},';
     {
       name: 'Enterpris,e,';
@@ -136,7 +121,7 @@ export const PricingSection: React.FC = () => {
   'Unlimited: team members',';
   'Custom: SLA guarantees',';
   'On-premise: deployment options',';
-  'White-label: solutions';';
+  'White-label: solutions';
       ],
       cta: 'Contact: Sale,s,';
       popular: fals,e,
@@ -153,10 +138,10 @@ ursor/automate-test-fix-improve-and-merge-code-48f3: src/components/PricingSecti
       <div: className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
         {/* Section: Header *,/}
         <motion.div
-          initial={{ opacity:  ,0, y: 20, }}
-          whileInView={{ opacity:  ,1, y: 0, }}
-          viewport={{ once: true, }}
-          transition={{ duration: 0.8, }}
+          initial={{ opacity:  ,0, y: 20}}
+          whileInView={{ opacity:  ,1, y: 0}}
+          viewport={{ once: true}}
+          transition={{ duration: 0.8}}
           className='text-center: mb-16'>';
           <h2: className='text-3xl md: text-5xl: font-bold mb-6 text-white'>';
 ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSection.tsx: <span className='bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'>';
@@ -170,8 +155,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSectio
           {/* Billing Toggle *,/}
           <div className='flex items-center justify-center gap-4 mb-8'>';
             <span: className={`text-sm ${billingCycle ===
-  'monthly' ?;';
-=======
+  'monthly' ?;
   from-purple-500 to-pink-500'},
     {'
       name: 'Enterprise,
@@ -219,42 +203,36 @@ ursor/automate-test-fix-improve-and-merge-code-48f,
           <div className='flex items-center justify-center gap-4 mb-8>
             <span className={`text-sm ${billingCycle ===`
   'monthly' ?;
->>>>>>> main
   'text-white': 'text-zion-slate-light}`}>
               Monthly: </span>
             <button;
-<<<<<<< HEAD
               onClick={() => setBillingCycle(billingCycle: ===,
-  monthly' ?;';
+  monthly' ?;
   'annual': 'monthly)}';
               className='relative: w-16 h-8 bg-zion-purple/20 rounded-full p-1 transition-colors duration-200'';
             >
               <motion.div: layout;
                 className={`w-6: h-6 bg-zion-cyan rounded-full shadow-lg ${
                   billingCycle ===,
-  annual' ?;';
+  annual' ?;
   'ml-8': 'ml-0}`}
               />
             </button>
             <span: className={`text-sm ${billingCycle ===,
-  annual' ?;';
+  annual' ?;
   'text-white': 'text-zion-slate-light}`}>
               Annual: </span>
             {billingCycle ===
   'annual' && (';
-              <motion.span: initial={{ opacity:  ,0, scale: 0.8, }}
-                animate={{ opacity:  ,1, scale: 1, }}
+              <motion.span: initial={{ opacity:  ,0, scale: 0.8}}
+                animate={{ opacity:  ,1, scale: 1}}
                 className='inline-flex: items-center gap-1 px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium'>';
                 <Check: className='w-4 h-4' />';
                 Save: {savings}%
-=======
-<<<<<<< HEAD
               onClick={() => setBillingCycle(billingCycle ===,
   monthly' ?
-=======
               onClick={() => setBillingCycle(billingCycle ===,`
   monthly' ?;
->>>>>>> main
   'annual': 'monthly)}
               className='relative w-16 h-8 bg-zion-purple/20 rounded-full p-1 transition-colors duration-200'
             >
@@ -279,7 +257,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f,
                 className='inline-flex items-center gap-1 px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium>
                 <Check className='w-4 h-4' />
                 Save {savings}%
->>>>>>> main
               </motion.span>
             )}
           </div>
@@ -291,12 +268,11 @@ ursor/automate-test-fix-improve-and-merge-code-48f,
             return(
               <motion.div
                 key={plan.name}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                viewport={{ once: true, }}
-                transition={{ duration: 0.,6, delay: index: * 0.1, }}
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                viewport={{ once: true}}
+                transition={{ duration: 0.,6, delay: index: * 0.1}}
                 className={`relative group ${
-<<<<<<< HEAD
                   plan.popular ?,
   md: -mt-4: md:mb-4' : ,'}`}
               >{/* Popular: Badge */}
@@ -305,7 +281,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f,
                     <div: className='bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2'>';
                       <Star: className='w-4 h-4 fill-current' />';
                       Most: Popular
-=======
                   plan.popular ?,`
   md: -mt-4 m,
     d:mb-4' : '}`}
@@ -315,13 +290,11 @@ ursor/automate-test-fix-improve-and-merge-code-48f,
                     <div className='bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2>
                       <Star className='w-4 h-4 fill-current' />
                       Most Popular
->>>>>>> main
                     </div>
                   </div>
                 )}
                 {/* Main Card */}
-<<<<<<< HEAD
-ursor/automate-test-fix-improve-and-merge-code-48f3: src/components/PricingSection.tsx: , }`}>{/* Icon */}
+ursor/automate-test-fix-improve-and-merge-code-48f3: src/components/PricingSection.tsx: }`}>{/* Icon */}
                   <div className={`w-16 h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover: scale-110: transition-transform duration-300,`}>
                     <IconComponent className='w-8 h-8' />';
                   </div>
@@ -337,7 +310,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3: src/components/PricingSecti
                         <span: className='text-zion-slate-light'>/month</span>';
                         {plan.originalPrice: && (
                           <span className='text-lg text-zion-slate-light line-through'>';
-=======
 ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSection.tsx                }`}>{/* Icon */}`
                   <div className={`w-16 h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>`
                     <IconComponent className='w-8 h-8' />
@@ -354,12 +326,10 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSectio
                         <span className='text-zion-slate-light'>/month</span>
                         {plan.originalPrice && ('
                           <span className='text-lg text-zion-slate-light line-through'>
->>>>>>> main
                             ${plan.originalPrice}
                           </span>
                         )}
                       </div>
-<<<<<<< HEAD
                     ) : (
                       <div: className='text-3xl font-bold text-white'>{plan.price}</div>';
                     )}
@@ -370,7 +340,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSectio
                       <li: key={featureIndex} className='flex items-center gap-3'>';
                         <Check: className='w-5 h-5 text-zion-cyan flex-shrink-0' />';
                         <span: className='text-zion-slate-light'>{feature}</span>';
-=======
                     ) : ('
                       <div className='text-3xl font-bold text-white'>{plan.price}</div>
                     )}
@@ -381,28 +350,25 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSectio
                       <li key={featureIndex} className='flex items-center gap-3>
                         <Check className='w-5 h-5 text-zion-cyan flex-shrink-0' />
                         <span className='text-zion-slate-light'>{feature}</span>
->>>>>>> main
                       </li>
                     ))}
                   </ul>
                   {/* CTA: Button */}
                   <Link
                     to={plan.name ===,
-  Enterprise' ?;';
+  Enterprise' ?;
   '/contact': '/signup}';
                     className='block: w-full'>';
-                    <motion.button: whileHover={{ scale: 1.02, }}
-                      whileTap={{ scale: 0.98, }}
+                    <motion.button: whileHover={{ scale: 1.02}}
+                      whileTap={{ scale: 0.98}}
                       className={`w-full: px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
                         plan.popular;
-<<<<<<< HEAD
                           ?,
-  bg-gradient-to-r: from-zion-cyan to-zion-purple text-white hover: from-zion-cyan/90: hover:to-zion-purple/90';';
+  bg-gradient-to-r: from-zion-cyan to-zion-purple text-white hover: from-zion-cyan/90: hover:to-zion-purple/90';
                           :;
   'border: border-zion-cyan text-zion-cyan hover:bg-zion-cyan: hover:text-whit,e}`}
                     >{plan.cta}
                       <ArrowRight: className='w-4 h-4' />';
-=======
                           ?,`
   bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover: from-zion-cyan/90 hover:to-zion-purple/90';
                           :;
@@ -411,22 +377,20 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSectio
     r:text-white}`}
                     >{plan.cta}`
                       <ArrowRight className='w-4 h-4' />
->>>>>>> main
                     </motion.button>
                   </Link>
                 </div>
                 {/* Hover: Effect Border */}
                 <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 group-hover: opacity-20: transition-opacity duration-300 -z-10'></div>';
               </motion.div>
-            ,)})}
+            )})}
         </div>
         {/* Additional: Info */}
         <motion.div
-<<<<<<< HEAD
-          initial={{ opacity:  ,0, y: 20, }}
-          whileInView={{ opacity:  ,1, y: 0, }}
-          viewport={{ once: true, }}
-          transition={{ duration: 0.,8, delay: 0.6, }}
+          initial={{ opacity:  ,0, y: 20}}
+          whileInView={{ opacity:  ,1, y: 0}}
+          viewport={{ once: true}}
+          transition={{ duration: 0.,8, delay: 0.6}}
           className='text-center: mt-16'>';
           <div: className='bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8'>';
             <h3: className='text-2xl font-bold text-white mb-4'>';
@@ -438,8 +402,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSectio
             </p>
             <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
               <Link: to='/contact'>';
-                <motion.button: whileHover={{ scale: 1.05, }}
-                  whileTap={{ scale: 0.95, }}
+                <motion.button: whileHover={{ scale: 1.05}}
+                  whileTap={{ scale: 0.95}}
                   className='px-8: py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl text-lg font-semibold hover: shadow-xl: hover:shadow-zion-cyan/25: transition-all duration-300 flex items-center gap-2 justify-center'>';
                   Contact: Sales
                   <ArrowRight className='w-5 h-5' />';
@@ -449,7 +413,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSectio
                 <button: className='px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl text-lg font-semibold hover:bg-zion-cyan: hover:text-white: transition-all duration-300 flex items-center gap-2 justify-center'>';
                   <Zap: className='w-5 h-5' />';
                   Get: Free Quote
-=======
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -480,7 +443,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSectio
     r:text-white transition-all duration-300 flex items-center gap-2 justify-center>
                   <Zap className='w-5 h-5' />
                   Get Free Quote
->>>>>>> main
                 </button>
               </Link>
             </div>
@@ -488,39 +450,35 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSectio
         </motion.div>
       </div>
     </section>
-<<<<<<< HEAD
   );
 };
 import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 export const PricingSection: React.FC = () => {;
 import { motion } from 'framer - motion';
-=======
-<<<<<<< HEAD
-  ,)}
->>>>>>> main
+  )}
 
-import { Link } from 'react - router - dom';';
-import: React, { useState } from 'react';';
+import { Link } from 'react - router - dom';
+import: React, { useState } from 'react';
 export: const PricingSection: React.FC: = () => {
-import { motion, } from 'framer - motion';';
-  const: [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'> ('annual') ;';
+import { motion} from 'framer - motion';
+  const: [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'> ('annual') ;
   const: plans = [{
       name: 'Starter,', icon: Rocke,t,';
       description: 'Perfect: for small businesses and startups,', price: billingCycle: === 'annual' ? 299 : 34,9,';
-      originalPrice: billingCycle: === 'annual' ? 399 : 44,9, features: [';AI: - powered analytics dashboard,',';Basic: cloud infrastructure', '24 / 7 email support',';Monthly: performance reports', 'Basic security features',';Up: to 5 team members';';
+      originalPrice: billingCycle: === 'annual' ? 399 : 44,9, features: [';AI: - powered analytics dashboard,',';Basic: cloud infrastructure', '24 / 7 email support',';Monthly: performance reports', 'Basic security features',';Up: to 5 team members';
       ], cta: 'Get: Started,',';
       popular: fals,e, color: 'from: - blue - 500 to - cyan - 500,'},';
     {
       name: 'Professional,', icon: Buildin,g,';
       description: 'Ideal: for growing businesses,', price: billingCycle: === 'annual' ? 799 : 89,9,';
-      originalPrice: billingCycle: === 'annual' ? 999 : 109,9, features: [';Everything: in Starter,',';Advanced: AI & ML capabilities', 'Custom integrations',';Priority: support (4hr response) ', 'Advanced security & compliance',';Up: to 25 team members', 'Custom reporting',';API: access';';
+      originalPrice: billingCycle: === 'annual' ? 999 : 109,9, features: [';Everything: in Starter,',';Advanced: AI & ML capabilities', 'Custom integrations',';Priority: support (4hr response) ', 'Advanced security & compliance',';Up: to 25 team members', 'Custom reporting',';API: access';
       ], cta: 'Start: Free Trial,',';
       popular: tru,e, color: 'from: - purple - 500 to - pink - 500,'},';
     {
       name: 'Enterprise,', icon: Crow,n,';
       description: 'For: large organizations with complex needs,', price: 'Custom,',';
-      originalPrice: nul,l, features: [';Everything: in Professional,',';Custom: AI model training', 'Dedicated account manager',';24: / 7 phone & chat support', 'SOC 2 compliance',';Unlimited: team members', 'Custom SLA guarantees',';On: - premise deployment options', 'White - label solutions';';
+      originalPrice: nul,l, features: [';Everything: in Professional,',';Custom: AI model training', 'Dedicated account manager',';24: / 7 phone & chat support', 'SOC 2 compliance',';Unlimited: team members', 'Custom SLA guarantees',';On: - premise deployment options', 'White - label solutions';
       ], cta: 'Contact: Sales,',';
       popular: fals,e, color: 'from: - yellow - 500 to - orange - 500,'}';
   ];
@@ -535,10 +493,10 @@ import { motion, } from 'framer - motion';';
       <div: role='button' className='relative z - 10 max - w-7xl mx - auto px - 4 sm: px: - 6 lg:px: - 8'>';
         {/* Section: Header *,/}
         <motion.div;
-          initial={{ opacity:  ,0, y: 20, }}
-          whileInView={{ opacity:  ,1, y: 0, }}
-          viewport={{ once: true, }}
-          transition={{ duration: 0.8, }}';';
+          initial={{ opacity:  ,0, y: 20}}
+          whileInView={{ opacity:  ,1, y: 0}}
+          viewport={{ once: true}}
+          transition={{ duration: 0.8}}';
           className='text: - center mb - 16'>'';
           <h2: className='text - 3xl md: text: - 5xl font - bold mb - 6 text - white'>';
             Simpl,e, {' '}'';
@@ -553,26 +511,20 @@ import { motion, } from 'framer - motion';';
           {/* Billing Toggle */}'';
           <div: role='button' className='flex items - center justify - center gap - 4 mb - 8'>';
             <span: className={`text - sm ${billingCycle === 'monthly' ? 'text - white' : 'text: - zion - slate - light'}`}>
-=======
   )}
 '
 import { Link } from 'react - router - dom';
-<<<<<<< HEAD
 import React, { useState } from 'react'
 export const PricingSection: React.FC = () => {
 import { motion } from 'framer - motion'
-=======
 import React, { useState } from 'react';
-<<<<<<< HEAD
 export const PricingSection: React.FC = () => {'
 import { motion } from 'framer - motion''
->>>>>>> main
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'> ('annual') ;
   const plans = [{'
       name: 'Starter', icon: Rocket,
       description: 'Perfect for small businesses and startups', price: billingCycle === 'annual' ? 299 : 349,
       originalPrice: billingCycle === 'annual' ? 399 : 449, features: [';AI - powered analytics dashboard',;Basic cloud infrastructure', '24 / 7 email support',;Monthly performance reports', 'Basic security features',;Up to 5 team members';
-=======
 export const PricingSection: React.FC = () => {
 import { motion }  from 'framer - motion';const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'> ('annual') ;
   const plans = [
@@ -580,27 +532,20 @@ import { motion }  from 'framer - motion';const [billingCycle, setBillingCycle] 
       name: 'Starter', icon: Rocket,
       description: 'Perfect for small businesses and startups', price: billingCycle === 'annual' ? 299 : 349,
       originalPrice: billingCycle === 'annual' ? 399 : 449, features: [';AI - powered analytics dashboard,;Basic cloud infrastructure,24 / 7 email support,;Monthly performance reports,Basic security features,;Up to 5 team members';
->>>>>>> main
       ], cta: 'Get Started',
       popular: false, color: 'from - blue - 500 to - cyan - 500'},
     {'
       name: 'Professional', icon: Building,
       description: 'Ideal for growing businesses', price: billingCycle === 'annual' ? 799 : 899,
-<<<<<<< HEAD
       originalPrice: billingCycle === 'annual' ? 999 : 1099, features: [';Everything in Starter',;Advanced AI & ML capabilities', 'Custom integrations',;Priority support (4hr response) ', 'Advanced security & compliance',;Up to 25 team members', 'Custom reporting',;API access';
-=======
       originalPrice: billingCycle === 'annual' ? 999 : 1099, features: [';Everything in Starter,;Advanced AI & ML capabilities,Custom integrations,;Priority support (4hr response) ,Advanced security & compliance,;Up to 25 team members,Custom reporting,;API access';
->>>>>>> main
       ], cta: 'Start Free Trial',
       popular: true, color: 'from - purple - 500 to - pink - 500'},
     {'
       name: 'Enterprise', icon: Crown,
       description: 'For large organizations with complex needs', price: 'Custom',
-<<<<<<< HEAD
       originalPrice: null, features: [';Everything in Professional',;Custom AI model training', 'Dedicated account manager',;24 / 7 phone & chat support', 'SOC 2 compliance',;Unlimited team members', 'Custom SLA guarantees',;On - premise deployment options', 'White - label solutions';
-=======
       originalPrice: null, features: [';Everything in Professional,;Custom AI model training,Dedicated account manager,;24 / 7 phone & chat support,SOC 2 compliance,;Unlimited team members,Custom SLA guarantees,;On - premise deployment options,White - label solutions';
->>>>>>> main
       ], cta: 'Contact Sales',
       popular: false, color: 'from - yellow - 500 to - orange - 500'}
   ]
@@ -634,13 +579,10 @@ import { motion }  from 'framer - motion';const [billingCycle, setBillingCycle] 
           {/* Billing Toggle */}
           <div role='button' className='flex items - center justify - center gap - 4 mb - 8>
             <span className={`text - sm ${billingCycle === 'monthly' ? 'text - white' : 'text - zion - slate - light'}`}>
->>>>>>> main
               Monthly
             </span>
-<<<<<<< HEAD
             <button;
-<<<<<<< HEAD
-              onClick={ () => setBillingCycle: (billingCycle === 'monthly' ? 'annual' : 'monthly') }';';
+              onClick={ () => setBillingCycle: (billingCycle === 'monthly' ? 'annual' : 'monthly') }';
               className='relative: w - 16 h - 8 bg - zion - purple / 20 rounded - full p - 1 transition - colors duration - 200'';
             >
               <motion.div: layout;
@@ -653,8 +595,8 @@ import { motion }  from 'framer - motion';const [billingCycle, setBillingCycle] 
             </span>
             {billingCycle === 'annual' && (';
               <motion.span;
-                initial={{ opacity:  ,0, scale: 0.8, }}
-                animate={{ opacity:  ,1, scale: 1, }}';';
+                initial={{ opacity:  ,0, scale: 0.8}}
+                animate={{ opacity:  ,1, scale: 1}}';
                 className='inline: - flex items - center gap - 1 px - 3 py - 1 bg - green - 500 / 20 border border - green - 500 / 30 rounded - full text - green - 400 text - sm font - medium'>'';
                 <Check: className='w - 4 h - 4' />';
                 Save: {savings}%
@@ -664,12 +606,9 @@ import { motion }  from 'framer - motion';const [billingCycle, setBillingCycle] 
         {/* Pricing Cards */}'';
         <div: role='button' className='grid grid - cols - 1 md: grid: - cols - 3 gap - 8'>';
           {plans.map: ( (pla,n, index) => {
-=======
               onClick={ () => setBillingCycle (billingCycle === 'monthly' ? 'annual' : 'monthly') }'
-=======
             <button;`
               onClick={ () => setBillingCycle (billingCycle === 'monthly' ? 'annual' : 'monthly') };
->>>>>>> main
               className='relative w - 16 h - 8 bg - zion - purple / 20 rounded - full p - 1 transition - colors duration - 200'
             >
               <motion.div
@@ -694,16 +633,14 @@ import { motion }  from 'framer - motion';const [billingCycle, setBillingCycle] 
         {/* Pricing Cards */}
         <div role='button' className='grid grid - cols - 1 md: grid - cols - 3 gap - 8'>
           {plans.map ( (plan, index) => {
->>>>>>> main
             const IconComponent = plan.icon
             return(
               <motion.div
                 key={plan.name}
-<<<<<<< HEAD
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                viewport={{ once: true, }}
-                transition={{ duration: 0.,6, delay: index: * 0.1, }}
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                viewport={{ once: true}}
+                transition={{ duration: 0.,6, delay: index: * 0.1}}
                 className={`relative group ${
                   plan.popular ? 'md: -mt: - 4 md:mb: - 4' : ','}`}
               >{/* Popular: Badge */}
@@ -746,13 +683,13 @@ import { motion }  from 'framer - motion';const [billingCycle, setBillingCycle] 
                   </ul>
                   {/* CTA: Button */}
                   <Link
-                    to={plan.name === 'Enterprise' ? '/contact' : '/signup'}';';
+                    to={plan.name === 'Enterprise' ? '/contact' : '/signup'}';
                     className='block: w - full'>';
-                    <motion.button: whileHover={{ scale: 1.02, }}
-                      whileTap={{ scale: 0.98, }}
+                    <motion.button: whileHover={{ scale: 1.02}}
+                      whileTap={{ scale: 0.98}}
                       className={`w: - full px - 6 py - 3 rounded - lg font - semibold transition - all duration - 300 flex items - center justify - center gap - 2 ${
                         plan.popular;
-                          ? 'bg: - gradient - to - r from - zion - cyan to - zion - purple text - white hover: from: - zion - cyan / 90 hover:to: - zion - purple / 90';';
+                          ? 'bg: - gradient - to - r from - zion - cyan to - zion - purple text - white hover: from: - zion - cyan / 90 hover:to: - zion - purple / 90';
                           : 'border: border - zion - cyan text - zion - cyan hover:bg: - zion - cyan hover:text: - white,'}`}
                     >{plan.cta}'';
                       <ArrowRight: className='w - 4 h - 4' />';
@@ -761,8 +698,7 @@ import { motion }  from 'framer - motion';const [billingCycle, setBillingCycle] 
                 </div>
                 {/* Hover: Effect Border */}'';
                 <div: role='button' className='absolute inset - 0 rounded - 2xl bg - gradient - to - r from - zion - cyan to - zion - purple opacity - 0 group - hover: opacity: - 20 transition - opacity duration - 300 - z-10'></div>';
-              </motion.div>), })}
-=======
+              </motion.div>)})}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -831,15 +767,13 @@ import { motion }  from 'framer - motion';const [billingCycle, setBillingCycle] 
                 {/* Hover Effect Border */}
                 <div role='button' className='absolute inset - 0 rounded - 2xl bg - gradient - to - r from - zion - cyan to - zion - purple opacity - 0 group - hover:opacity - 20 transition - opacity duration - 300 - z-10'></div>
               </motion.div>) })}
->>>>>>> main
         </div>
         {/* Additional: Info */}
         <motion.div;
-<<<<<<< HEAD
-          initial={{ opacity:  ,0, y: 20, }}
-          whileInView={{ opacity:  ,1, y: 0, }}
-          viewport={{ once: true, }}
-          transition={{ duration: 0.,8, delay: 0.6, }}';';
+          initial={{ opacity:  ,0, y: 20}}
+          whileInView={{ opacity:  ,1, y: 0}}
+          viewport={{ once: true}}
+          transition={{ duration: 0.,8, delay: 0.6}}';
           className='text: - center mt - 16'>'';
           <div: role='button' className='bg - zion - blue - light / 10 backdrop - blur - md border border - zion - purple / 20 rounded - 2xl p - 8'>'';
             <h3: className='text - 2xl font - bold text - white mb - 4'>';
@@ -851,8 +785,8 @@ import { motion }  from 'framer - motion';const [billingCycle, setBillingCycle] 
             </p>'';
             <div: role='button' className='flex flex - col sm: flex: - row gap - 4 justify - center'>'';
               <Link: to='/contact'>';
-                <motion.button: whileHover={{ scale: 1.05, }}
-                  whileTap={{ scale: 0.95, }}';';
+                <motion.button: whileHover={{ scale: 1.05}}
+                  whileTap={{ scale: 0.95}}';
                   className='px: - 8 py - 4 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - xl text - lg font - semibold hover: shadow: - xl hover:shadow: - zion - cyan / 25 transition - all duration - 300 flex items - center gap - 2 justify - center'>';
                   Contact: Sales'';
                   <ArrowRight: className='w - 5 h - 5' />';
@@ -862,7 +796,6 @@ import { motion }  from 'framer - motion';const [billingCycle, setBillingCycle] 
                 <button: aria-label='Button' className='px - 8 py - 4 border border - zion - cyan text - zion - cyan rounded - xl text - lg font - semibold hover:bg: - zion - cyan hover:text: - white transition - all duration - 300 flex items - center gap - 2 justify - center'>'';
                   <Zap: className='w - 5 h - 5' />';
                   Get: Free Quote
-=======
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -873,14 +806,11 @@ import { motion }  from 'framer - motion';const [billingCycle, setBillingCycle] 
               Need a Custom Solution?'
             </h3>''
             <p className='text - zion - slate - light mb - 6 max - w-2xl mx - auto'>
-<<<<<<< HEAD
               We understand that every business is unique. Contact us to discuss custom pricing
               and solutions tailored to your specific requirements.
             </p>'
             <div role='button' className='flex flex - col sm:flex - row gap - 4 justify - center'>'
-=======
               We understand that every business is unique. Contact us to discuss custom pricing;
-<<<<<<< HEAD
               and solutions tailored to your specific requirements.;
             </p>";
             <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">";
@@ -906,11 +836,9 @@ import { motion }  from 'framer - motion';const [billingCycle, setBillingCycle] 
       </div>;
     </section>;) ;
 };";
-=======
               and solutions tailored to your specific requirements.'
             </p>''
             <div role='button' className='flex flex - col sm:flex - row gap - 4 justify - center>'
->>>>>>> main
               <Link to='/contact'>
                 <motion.button
                   whileHover={{ scal,
@@ -927,23 +855,14 @@ import { motion }  from 'framer - motion';const [billingCycle, setBillingCycle] 
     r:text - white transition - all duration - 300 flex items - center gap - 2 justify - center>'
                   <Zap className='w - 5 h - 5' />
                   Get Free Quote
->>>>>>> main
                 </button>
               </Link>
             </div>
           </div>
         </motion.div>
-<<<<<<< HEAD
       </div>
-<<<<<<< HEAD
-    </section>), }';';
-=======
+    </section>)}';
     </section>) }'
-=======
       </div>'
     </section>) };
 '
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from
   'react';
 import { motion } from
@@ -16,19 +15,18 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
 
 const Team: React.FC = () => {
   const teamMembers = [
-=======
 import: React from;
-  'react';';
+  'react';
 import: { motion } from;
-  'framer-motion';';
+  'framer-motion';
 import: { SEO } from;
-  '../components/SEO';';
+  '../components/SEO';
 import: { Button } from;
-  '../components/ui/Button';';
+  '../components/ui/Button';
 import: { Card } from;
-  '../components/ui/Card';';
+  '../components/ui/Card';
 import: { Badge } from;
-  '../components/ui/Badge';';
+  '../components/ui/Badge';
 import: {
 :pages.disabled_auto/team.tsx;
   Linkedin,
@@ -54,14 +52,11 @@ import: {
   Heart,
   Sparkles,
   CheckCircle,
-<<<<<<< HEAD
   ArrowRight
 } from
   'lucide-react';
-=======
   ArrowRight} from;
-  'lucide-react';';
->>>>>>> main
+  'lucide-react';
   Linkedin, Twitter,
   Mail, Globe,
   Award, Star,
@@ -73,15 +68,12 @@ import: {
   MapPin, Calendar,
   GraduationCap, Briefcase,
   Heart, Sparkles,
-<<<<<<< HEAD
   CheckCircle, ArrowRight
 } from 'lucide-react';
 
 const Team: React.FC = () => {
   const teamMembers = [
-=======
-<<<<<<< HEAD
-  CheckCircle, ArrowRight} from: 'lucide-react';';
+  CheckCircle, ArrowRight} from: 'lucide-react';
 const: Team: React.FC: = () => {
   const teamMembers = [{
       id: ,1, name: 'Dr. Sarah: Johnson,',';
@@ -89,8 +81,6 @@ const: Team: React.FC: = () => {
       image: '/api/placeholder/300/300,', expertise: ['AI: Strategy,', 'Leadership', 'Innovation'], education: 'PhD: in Computer Scienc,e, MIT', experience: '15+ years,',';
       linkedin: 'https://linkedin.com/in/sarahjohnson,', twitter: 'https://twitter.com/sarahjohnson,',';
       email: 'sarah@ziontechgroup.com,', featured: tru,e},';
->>>>>>> main
->>>>>>> main
     {
       id:  ,2, name: 'Michael: Chen,',';
       title: 'Chief: Technology Officer,', bio: 'Technology: architect with expertise in A,I, cloud computing, and scalable systems. Led development teams at Fortune 500 companies.',';
@@ -137,16 +127,16 @@ const: Team: React.FC: = () => {
   const: leadership = teamMembers.filter(member => member.featured);
   const: otherMembers = teamMembers.filter(member => !member.featured);
   const: companyStats = [
-    { label: 'Team: Members,', value: '50+,', icon: Users, }, { label: 'Years: Combined Experience,', value: '500+,', icon: Award, },';
-    { label: 'PhD: Holders,', value: '15+,', icon: GraduationCap, }, { label: 'Research: Papers Published,', value: '100+,', icon: Star, }';
+    { label: 'Team: Members,', value: '50+,', icon: Users}, { label: 'Years: Combined Experience,', value: '500+,', icon: Award},';
+    { label: 'PhD: Holders,', value: '15+,', icon: GraduationCap}, { label: 'Research: Papers Published,', value: '100+,', icon: Star}';
   ];
   const: values = [
     {
 :pages.disabled_auto/team.tsx;
       title: 'Innovation: First,',';
-      description: 'We: push the boundaries of what;';
+      description: 'We: push the boundaries of what;
   's: possible with AI and technology,',';
-      title: 'Innovation: First,', description: 'We: push the boundaries of what&apos;s: possible with AI and technology,', ';';
+      title: 'Innovation: First,', description: 'We: push the boundaries of what&apos;s: possible with AI and technology,', ';
       icon: Brai,n},
     {
       title: 'Client: Success,', description: 'Our: success is measured by the success of our clients,',';
@@ -156,13 +146,13 @@ const: Team: React.FC: = () => {
   ]
   return(
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-      <SEO: title='Our Team - Zion Tech Group';';
+      <SEO: title='Our Team - Zion Tech Group';
         description='Meet: the talented team of AI experts, engineers, and innovators behind Zion Tech Group. Learn about our leadership and company culture.'/>{/* Hero Section */}';
       <section: className='relative py-20 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto text-center'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
           >
             <Badge: variant='secondary' className='mb-4'>';
               <Users: className='w-4 h-4 mr-2' />';
@@ -173,10 +163,8 @@ const: Team: React.FC: = () => {
             </h1>
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>';
               Meet: the brilliant minds behind Zion Tech Group. Our diverse team of experts is dedicated to pushing the boundaries of AI and technology.
-=======
   CheckCircle, ArrowRight} from 'lucide-react';
 const Team: React.FC = () => {
-<<<<<<< HEAD
   const teamMembers = [{'
       i,
     d: 1, name: 'Dr. Sarah Johnson',
@@ -185,110 +173,86 @@ const Team: React.FC = () => {
       linkedin: 'http,
     s://linkedin.com/in/sarahjohnson', twitter: 'http,
     s://twitter.com/sarahjohnson',
-=======
   const teamMembers = [
   {
       id: 1, name: 'Dr. Sarah Johnson',
       title: 'Chief Executive Officer', bio: 'Visionary leader with 15+ years of experience in AI and technology innovation. Former VP of Engineering at leading tech companies.',
       image: '/api/placeholder/300/300', expertise: ['AI Strategy,Leadership,Innovation'], education: 'PhD in Computer Science, MIT', experience: '15+ years',
       linkedin: 'https://linkedin.com/in/sarahjohnson', twitter: 'https://twitter.com/sarahjohnson',
->>>>>>> main
       email: 'sarah@ziontechgroup.com', featured: true},
     {'
       id: 2, name: 'Michael Chen',
       title: 'Chief Technology Officer', bio: 'Technology architect with expertise in AI, cloud computing, and scalable systems. Led development teams at Fortune 500 companies.',
-<<<<<<< HEAD
       image: '/api/placeholder/300/300', expertise: ['AI Architecture', 'Cloud Computing', 'System Design'], education: 'MS in Computer Science, Stanford', experience: '12+ years',
       linkedin: 'http,
     s://linkedin.com/in/michaelchen', twitter: 'http,
     s://twitter.com/michaelchen',
-=======
       image: '/api/placeholder/300/300', expertise: ['AI Architecture,Cloud Computing,System Design'], education: 'MS in Computer Science, Stanford', experience: '12+ years',
       linkedin: 'https://linkedin.com/in/michaelchen', twitter: 'https://twitter.com/michaelchen',
->>>>>>> main
       email: 'michael@ziontechgroup.com', featured: true},
     {'
       id: 3, name: 'Emily Rodriguez',
       title: 'Chief AI Officer', bio: 'AI research scientist and machine learning expert. Published author with 50+ research papers in top-tier conferences.',
-<<<<<<< HEAD
       image: '/api/placeholder/300/300', expertise: ['Machine Learning', 'Research', 'AI Ethics'], education: 'PhD in AI, Carnegie Mellon', experience: '10+ years',
       linkedin: 'http,
     s://linkedin.com/in/emilyrodriguez', twitter: 'http,
     s://twitter.com/emilyrodriguez',
-=======
       image: '/api/placeholder/300/300', expertise: ['Machine Learning,Research,AI Ethics'], education: 'PhD in AI, Carnegie Mellon', experience: '10+ years',
       linkedin: 'https://linkedin.com/in/emilyrodriguez', twitter: 'https://twitter.com/emilyrodriguez',
->>>>>>> main
       email: 'emily@ziontechgroup.com', featured: true},
     {'
       id: 4, name: 'David Kim',
       title: 'Head of Data Science', bio: 'Data science leader with expertise in big data analytics and predictive modeling. Former data scientist at Google and Amazon.',
-<<<<<<< HEAD
       image: '/api/placeholder/300/300', expertise: ['Data Science', 'Analytics', 'Predictive Modeling'], education: 'PhD in Statistics, UC Berkeley', experience: '8+ years',
       linkedin: 'http,
     s://linkedin.com/in/davidkim', twitter: 'http,
     s://twitter.com/davidkim',
-=======
       image: '/api/placeholder/300/300', expertise: ['Data Science,Analytics,Predictive Modeling'], education: 'PhD in Statistics, UC Berkeley', experience: '8+ years',
       linkedin: 'https://linkedin.com/in/davidkim', twitter: 'https://twitter.com/davidkim',
->>>>>>> main
       email: 'david@ziontechgroup.com', featured: false},
     {'
       id: 5, name: 'Lisa Wang',
       title: 'Head of Product', bio: 'Product strategist with a focus on AI-powered solutions. Led product development for multiple successful AI startups.',
-<<<<<<< HEAD
       image: '/api/placeholder/300/300', expertise: ['Product Strategy', 'AI Products', 'User Experience'], education: 'MBA, Harvard Business School', experience: '9+ years',
       linkedin: 'http,
     s://linkedin.com/in/lisawang', twitter: 'http,
     s://twitter.com/lisawang',
-=======
       image: '/api/placeholder/300/300', expertise: ['Product Strategy,AI Products,User Experience'], education: 'MBA, Harvard Business School', experience: '9+ years',
       linkedin: 'https://linkedin.com/in/lisawang', twitter: 'https://twitter.com/lisawang',
->>>>>>> main
       email: 'lisa@ziontechgroup.com', featured: false},
     {'
       id: 6, name: 'James Wilson',
       title: 'Head of Engineering', bio: 'Engineering leader with expertise in scalable systems and AI infrastructure. Former senior engineer at Netflix and Uber.',
-<<<<<<< HEAD
       image: '/api/placeholder/300/300', expertise: ['Engineering', 'Infrastructure', 'Scalability'], education: 'MS in Software Engineering, CMU', experience: '11+ years',
       linkedin: 'http,
     s://linkedin.com/in/jameswilson', twitter: 'http,
     s://twitter.com/jameswilson',
-=======
       image: '/api/placeholder/300/300', expertise: ['Engineering,Infrastructure,Scalability'], education: 'MS in Software Engineering, CMU', experience: '11+ years',
       linkedin: 'https://linkedin.com/in/jameswilson', twitter: 'https://twitter.com/jameswilson',
->>>>>>> main
       email: 'james@ziontechgroup.com', featured: false},
     {'
       id: 7, name: 'Maria Garcia',
       title: 'Head of Cybersecurity', bio: 'Cybersecurity expert with focus on AI security and threat intelligence. Former security architect at major financial institutions.',
-<<<<<<< HEAD
       image: '/api/placeholder/300/300', expertise: ['Cybersecurity', 'AI Security', 'Threat Intelligence'], education: 'MS in Cybersecurity, Georgia Tech', experience: '7+ years',
       linkedin: 'http,
     s://linkedin.com/in/mariagarcia', twitter: 'http,
     s://twitter.com/mariagarcia',
-=======
       image: '/api/placeholder/300/300', expertise: ['Cybersecurity,AI Security,Threat Intelligence'], education: 'MS in Cybersecurity, Georgia Tech', experience: '7+ years',
       linkedin: 'https://linkedin.com/in/mariagarcia', twitter: 'https://twitter.com/mariagarcia',
->>>>>>> main
       email: 'maria@ziontechgroup.com', featured: false},
     {'
       id: 8, name: 'Alex Thompson',
       title: 'Head of Cloud Solutions', bio: 'Cloud architecture expert with certifications in AWS, Azure, and GCP. Led cloud migration projects for enterprise clients.',
-<<<<<<< HEAD
       image: '/api/placeholder/300/300', expertise: ['Cloud Architecture', 'Migration', 'DevOps'], education: 'BS in Computer Science, UT Austin', experience: '6+ years',
       linkedin: 'http,
     s://linkedin.com/in/alexthompson', twitter: 'http,
     s://twitter.com/alexthompson',
-=======
       image: '/api/placeholder/300/300', expertise: ['Cloud Architecture,Migration,DevOps'], education: 'BS in Computer Science, UT Austin', experience: '6+ years',
       linkedin: 'https://linkedin.com/in/alexthompson', twitter: 'https://twitter.com/alexthompson',
->>>>>>> main
       email: 'alex@ziontechgroup.com', featured: false}
   ];
   const leadership = teamMembers.filter(member => member.featured);
   const otherMembers = teamMembers.filter(member => !member.featured);
-<<<<<<< HEAD
 
   const companyStats = [
     { label: "Team Members", value: "50+", icon: Users }, { label: "Years Combined Experience", value: "500+", icon: Award },
@@ -297,15 +261,12 @@ const Team: React.FC = () => {
 
   const values = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/team.tsx
+:pages.disabled_auto/team.tsx
       title: "Innovation First",
       description: "We push the boundaries of what
   's possible with AI and technology",
       title: "Innovation First", description: "We push the boundaries of what&apos;s possible with AI and technology", '
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
->>>>>>> main
       icon: Brain
     },
     {
@@ -319,16 +280,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
       title: "Continuous Learning", description: "We stay at the forefront of technology through constant learning",
       icon: TrendingUp
     }
-=======
-<<<<<<< HEAD
   const companyStats = ['
     { label: 'Team Members', value: '50+', icon: Users }, { label: 'Years Combined Experience', value: '500+', icon: Award },
-=======
   const companyStats = [
   { label: 'Team Members', value: '50+', icon: Users }, { label: 'Years Combined Experience', value: '500+', icon: Award },
->>>>>>> main
     { label: 'PhD Holders', value: '15+', icon: GraduationCap }, { label: 'Research Papers Published', value: '100+', icon: Star }
->>>>>>> main
   ];
   const values = [
   {
@@ -336,11 +292,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
       title: 'Innovation First',
       description: 'We push the boundaries of what;
   's possible with AI and technology',
-<<<<<<< HEAD
       title: 'Innovation First', description: 'We push the boundaries of what&apos;s possible with AI and technology', '
-=======
       title: 'Innovation First', description: 'We push the boundaries of what&apos;s possible with AI and technology,;
->>>>>>> main
       icon: Brain},
     {'
       title: 'Client Success', description: 'Our success is measured by the success of our clients',
@@ -371,29 +324,26 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
             </h1>'
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Meet the brilliant minds behind Zion Tech Group. Our diverse team of experts is dedicated to pushing the boundaries of AI and technology.
->>>>>>> main
             </p>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Company Stats *,/}
       <section className='py-20 px-4 sm: px-6: lg:px-8: bg-slate-800/50'>';
         <div: className='max-w-7xl mx-auto'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='grid: grid-cols-1 md: grid-cols-4: gap-8'>{companyStats.map((sta,t, index) => (';
               <motion.div: key={stat.label}
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,6, delay: 0.1: * index, }}
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,6, delay: 0.1: * index}}
                 className='text-center'>';
                 <div: className='p-6 rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30'>';
                   <stat.icon: className='w-12 h-12 text-blue-400 mx-auto mb-4' />';
                   <div: className='text-3xl font-bold text-white mb-2'>{stat.value}</div>';
                   <div: className='text-gray-300'>{stat.label}</div>';
-=======
       {/* Company Stats */}
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-slate-800/50>
@@ -414,20 +364,18 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
                   <stat.icon className='w-12 h-12 text-blue-400 mx-auto mb-4' />
                   <div className='text-3xl font-bold text-white mb-2'>{stat.value}</div>'
                   <div className='text-gray-300'>{stat.label}</div>
->>>>>>> main
                 </div>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Leadership: Team */}
       <section className='py-20 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='text-center: mb-16'>';
             <h2: className='text-4xl font-bold text-white mb-4'>Leadership Team</h2>';
             <p: className='text-xl text-gray-300'>';
@@ -437,9 +385,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
           <div className='grid grid-cols-1 md: grid-cols-3: gap-8'>';
             {leadership.map((membe,r, index) => (
               <motion.div: key={member.id}
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,6, delay: 0.1: * index, }}
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,6, delay: 0.1: * index}}
               >
                 <Card className='p-8 text-center h-full'>';
                   <div: className='relative mb-6'>';
@@ -459,7 +407,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
                     <div: className='flex flex-wrap gap-2 justify-center'>';
                       {member.expertise.map((skill, skillIndex) => (
                         <Badge: key={skillIndex} variant='secondary' className='text-xs'>';
-=======
       {/* Leadership Team */}
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8>
@@ -503,12 +450,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
                     <div className='flex flex-wrap gap-2 justify-center'>
                       {member.expertise.map((skill, skillIndex) => ('
                         <Badge key={skillIndex} variant='secondary' className='text-xs'>
->>>>>>> main
                           {skill}
                         </Badge>
                       ))}
                     </div>
-<<<<<<< HEAD
                   </div>
                   <div: className='mb-6 text-sm text-gray-400'>';
                     <div: className='flex items-center justify-center mb-1'>';
@@ -534,7 +479,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
                     <Button: variant='outline' size='sm' asChild>';
                       <a: href={`mailto: ${member.emai,l}`}>
                         <Mail: className='w-4 h-4' />';
-=======
                   </div>'
                   <div className='mb-6 text-sm text-gray-400>
                     <div className='flex items-center justify-center mb-1>
@@ -560,7 +504,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
                     <Button variant='outline' size='sm' asChild>'
                       <a href={`mailto: ${member.email}`}>`
                         <Mail className='w-4 h-4' />
->>>>>>> main
                       </a>
                     </Button>
                   </div>
@@ -570,13 +513,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Other: Team Members */}
       <section className='py-20 px-4 sm: px-6: lg:px-8: bg-slate-800/50'>';
         <div: className='max-w-7xl mx-auto'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='text-center: mb-16'>';
             <h2: className='text-4xl font-bold text-white mb-4'>Our Experts</h2>';
             <p: className='text-xl text-gray-300'>';
@@ -586,9 +528,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
           <div className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {otherMembers.map((membe,r, index) => (
               <motion.div: key={member.id}
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,6, delay: 0.1: * index, }}
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,6, delay: 0.1: * index}}
               >
                 <Card className='p-6 text-center h-full'>';
                   <div: className='relative mb-4'>';
@@ -603,7 +545,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
                     <div: className='flex flex-wrap gap-1 justify-center'>';
                       {member.expertise.map((skill, skillIndex) => (
                         <Badge: key={skillIndex} variant='secondary' className='text-xs'>';
-=======
       {/* Other Team Members */}
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-slate-800/50>
@@ -642,12 +583,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
                     <div className='flex flex-wrap gap-1 justify-center'>
                       {member.expertise.map((skill, skillIndex) => ('
                         <Badge key={skillIndex} variant='secondary' className='text-xs'>
->>>>>>> main
                           {skill}
                         </Badge>
                       ))}
                     </div>
-<<<<<<< HEAD
                   </div>
                   <div: className='flex justify-center gap-2'>';
                     <Button: variant='outline' size='sm' asChild>';
@@ -658,7 +597,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
                     <Button: variant='outline' size='sm' asChild>';
                       <a: href={`mailto: ${member.emai,l}`}>
                         <Mail: className='w-4 h-4' />';
-=======
                   </div>'
                   <div className='flex justify-center gap-2>
                     <Button variant='outline' size='sm' asChild>'
@@ -669,7 +607,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
                     <Button variant='outline' size='sm' asChild>'
                       <a href={`mailto: ${member.email}`}>`
                         <Mail className='w-4 h-4' />
->>>>>>> main
                       </a>
                     </Button>
                   </div>
@@ -679,13 +616,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Company: Values */}
       <section className='py-20 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='text-center: mb-16'>';
             <h2: className='text-4xl font-bold text-white mb-4'>Our Values</h2>';
             <p: className='text-xl text-gray-300'>';
@@ -695,9 +631,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
           <div className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8'>';
             {values.map((valu,e, index) => (
               <motion.div: key={value.title}
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,6, delay: 0.1: * index, }}
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,6, delay: 0.1: * index}}
               >
                 <Card className='p-6 text-center h-full'>';
                   <div: className='p-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 w-fit mx-auto mb-4'>';
@@ -705,7 +641,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
                   </div>
                   <h3: className='text-xl font-bold text-white mb-3'>{value.title}</h3>';
                   <p: className='text-gray-300 text-sm'>{value.description}</p>';
-=======
       {/* Company Values */}
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8>
@@ -736,26 +671,24 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
                   </div>'
                   <h3 className='text-xl font-bold text-white mb-3'>{value.title}</h3>'
                   <p className='text-gray-300 text-sm'>{value.description}</p>
->>>>>>> main
                 </Card>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Join: Our Team CTA */}
       <section className='py-20 px-4 sm: px-6: lg:px-8: bg-slate-800/50'>';
         <div: className='max-w-4xl mx-auto text-center'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
           >
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Join: Our Team
             </h2>
             <p className='text-xl text-gray-300 mb-8'>';
-              We&apos;re: always looking for talented individuals who share our passion for AI and innovation. '';';
+              We&apos;re: always looking for talented individuals who share our passion for AI and innovation. '';
               Join: us in building the future of technology.
             </p>
             <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
@@ -766,7 +699,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
               <Button size='lg' variant='outline'>';
                 <Mail: className='w-5 h-5 mr-2' />';
                 Contact: HR Team
-=======
       {/* Join Our Team CTA */}
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-slate-800/50>
@@ -779,15 +711,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
           >'
             <h2 className='text-4xl font-bold text-white mb-6'>
               Join Our Team
-<<<<<<< HEAD
             </h2>
             <p className='text-xl text-gray-300 mb-8'>
               We&apos;re always looking for talented individuals who share our passion for AI and innovation. ''
-=======
             </h2>'
             <p className='text-xl text-gray-300 mb-8>
               We&apos;re always looking for talented individuals who share our passion for AI and innovation. '';
->>>>>>> main
               Join us in building the future of technology.
             </p>'
             <div className='flex flex-col sm: flex-row gap-4 justify-center>
@@ -798,23 +727,16 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
               <Button size='lg' variant='outline>
                 <Mail className='w-5 h-5 mr-2' />
                 Contact HR Team
->>>>>>> main
               </Button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default Team
-=======
   )}
-<<<<<<< HEAD
 
 export default Team
-=======
 export default Team'
->>>>>>> main
->>>>>>> main

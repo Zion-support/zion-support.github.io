@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export const EnhancedHeader: React.FC = () => {
   return(<header className="bg-white shadow-lg">
-=======
-<<<<<<< HEAD
 import React from 'react';
 
 export const EnhancedHeader: React.FC = () => {
   return (<header className="bg-white shadow-lg">
->>>>>>> main
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-6">
           <div className="flex items-center">
@@ -17,22 +13,17 @@ export const EnhancedHeader: React.FC = () => {
               Zion Tech Group
             </a>
           </div>
-<<<<<<< HEAD
           <nav className="hidden md:flex space-x-8">
-=======
           <nav className="hidden md:flex space-x-6">
->>>>>>> main
             <a href="/" className="text-gray-700 hover:text-blue-600">Home</a>
             <a href="/about" className="text-gray-700 hover:text-blue-600">About</a>
             <a href="/services" className="text-gray-700 hover:text-blue-600">Services</a>
             <a href="/solutions" className="text-gray-700 hover:text-blue-600">Solutions</a>
-<<<<<<< HEAD
             <a href="/contact" className="text-gray-700 hover:text-blue-600">Contact</a>
           </nav>
         </div>
       </div>
     </header>
-=======
             <a href="/micro-saas" className="text-gray-700 hover:text-blue-600">Micro SAAS</a>
             <a href="/it-services" className="text-gray-700 hover:text-blue-600">IT Services</a>
             <a href="/marketplace" className="text-gray-700 hover:text-blue-600">Marketplace</a>
@@ -46,8 +37,6 @@ export const EnhancedHeader: React.FC = () => {
     </header>
   );
 import React, { useState } from 'react';
-=======
-<<<<<<< HEAD
 ,"});,"})
 ;,"});,"})
 export const EnhancedHeader: React.FC = () => {;,"});,"})
@@ -72,14 +61,10 @@ export const EnhancedHeader: React.FC = () => {;,"});,"})
   );,"});,"})
 };,"});,"})
 ;,"});,"})
-=======
-<<<<<<< HEAD
-import: React, { useState, useEffect } from 'react';';';';
-import: { Link } from 'react-router-dom';';';';
-import: { motion, AnimatePresence } from 'framer-motion';';';';
+import: React, { useState, useEffect } from 'react';';
+import: { Link } from 'react-router-dom';';
+import: { motion, AnimatePresence } from 'framer-motion';';
 import: {
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -101,70 +86,52 @@ export function EnhancedHeader() {;
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
   useEffect(() => {;
-=======
-<<<<<<< HEAD
 import Link from 'next/link';
-<<<<<<< HEAD
 import {useRouter } from 'next/router';
 import {motion, AnimatePresence } from 'framer-motion';
 import {Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud,;
   Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen,;
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,;
   PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from 'lucide-react';
-=======
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect } from &apos;react';
 import { Link } from &apos;react-router-dom';
 import { motion, AnimatePresence } from &apos;framer-motion';
 import {
->>>>>>> main
   Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud,
   Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen,
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star,
   Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool,
   Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,
-<<<<<<< HEAD
-  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from 'lucide-react';';';';
+  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from 'lucide-react';';
 export: function EnhancedHeader() {;
   const: [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const: [searchQuery, setSearchQuery] = useState('');';';';
+  const: [searchQuery, setSearchQuery] = useState('');';
   const: [scrolled, setScrolled] = useState(false);
   const: [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   useEffect(() => {
     const: handleScroll = () => {;
       setScrolled(window.scrollY: > 50)};
-    window.addEventListener('scroll', handleScroll);';';';
-    return: () => window.removeEventListener('scroll', handleScroll)}, []);';';';
+    window.addEventListener('scroll', handleScroll);';
+    return: () => window.removeEventListener('scroll', handleScroll)}, []);';
   useEffect(() => {
     // Close: mobile menu when route changes;
-=======
   PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from &apos;lucide-react';&apos;&apos;
 export function EnhancedHeader() {}
-=======
-<<<<<<< HEAD
 import Link from 'next/link';""
 import { useRouter } from 'next/router';""
-=======
 import Link from 'next/link
 import { useRouter } from 'next/router
->>>>>>> main
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> main
 import {
   Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud,
   Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen,
-<<<<<<< HEAD
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,;""
   PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from 'lucide-react';
 ""
-=======
-<<<<<<< HEAD
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,
   PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from 'lucide-react';
 export function EnhancedHeader() {
   const router = useRouter();
->>>>>>> main
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState(&apos;&apos;);&apos;&apos;
   const [scrolled, setScrolled] = useState(false);
@@ -175,14 +142,9 @@ export function EnhancedHeader() {
     window.addEventListener(&apos;scroll&apos;, handleScroll);
     return () => window.removeEventListener(&apos;scroll&apos;, handleScroll)}, []);
   useEffect(() => {
->>>>>>> main
     // Close mobile menu when route changes;
-<<<<<<< HEAD
->>>>>>> main
     setIsMenuOpen(false);
-<<<<<<< HEAD
     setActiveDropdown(null)}, [location.pathname]);
-<<<<<<< HEAD
   const: handleSearch = async (e: React.FormEvent) => ,{,;
     e.preventDefault();
     if: (searchQuery.trim()) {
@@ -190,242 +152,241 @@ export function EnhancedHeader() {
   }
 ;
   const: navigation = [;
-    { name: 'Home,', href: '/,', current: true, },';';';
-    { name: 'About,', href: '/about,', current: false, },';';';
-    { name: 'Services,', href: '/services,', current: false, },';';';
-    { name: 'Innovative: Services 2028,', href: '/innovative-services-showcase-2028,', current: false, },';';';
-    { name: 'Pricing: Guide,', href: '/comprehensive-pricing-guide-2028,', current: false, },';';';
-    { name: 'Solutions,', href: '/solutions,', current: false, },';';';
-    { name: 'Contact,', href: '/contact,', current: false, }];';';';
+    { name: 'Home,', href: '/,', current: true},';';
+    { name: 'About,', href: '/about,', current: false},';';
+    { name: 'Services,', href: '/services,', current: false},';';
+    { name: 'Innovative: Services 2028,', href: '/innovative-services-showcase-2028,', current: false},';';
+    { name: 'Pricing: Guide,', href: '/comprehensive-pricing-guide-2028,', current: false},';';
+    { name: 'Solutions,', href: '/solutions,', current: false},';';
+    { name: 'Contact,', href: '/contact,', current: false}];';
   // Organized: services by category;
   const: servicesCategories = [;
     {;
-      title: 'AI: & Machine Learning,',';';';
+      title: 'AI: & Machine Learning,',';';
       icon: Brai,n,
-      color: 'from-blue-500: to-indigo-500,',';';';
-      services: [{ name: 'AI: Autonomous Business Manager,', href: '/services/ai-autonomous-business-manager,', description: 'Fully: autonomous business operations', },';';';
-        { name: 'AI: Business Intelligence,', href: '/services/ai-business-intelligence,', description: 'Advanced: analytics & ML insights', },';';';
-        { name: 'AI: Compliance Assistant,', href: '/services/ai-compliance-assistant,', description: 'Automated: regulatory compliance', },';';';
-        { name: 'AI: Sales Copilot,', href: '/services/ai-sales-copilot,', description: 'Intelligent: sales optimization', },';';';
-        { name: 'AI-Powered: SEO,', href: '/services/ai-powered-seo,', description: 'Machine: learning SEO optimization', },';';';
-        { name: 'AI: Content Marketing Suite,', href: '/services/ai-content-marketing-suite,', description: 'AI-powered: content creation & optimization', },';';';
-        { name: 'AI: Customer Support,', href: '/services/ai-customer-support-automation,', description: 'Intelligent: support automation', },';';';
-        { name: 'AI: Project Management,', href: '/services/ai-project-management,', description: 'AI-driven: project optimization', },';';';
-        { name: 'AI: Financial Analytics,', href: '/services/ai-financial-analytics,', description: 'Intelligent: financial insights', }]},';';';
+      color: 'from-blue-500: to-indigo-500,',';';
+      services: [{ name: 'AI: Autonomous Business Manager,', href: '/services/ai-autonomous-business-manager,', description: 'Fully: autonomous business operations'},';';
+        { name: 'AI: Business Intelligence,', href: '/services/ai-business-intelligence,', description: 'Advanced: analytics & ML insights'},';';
+        { name: 'AI: Compliance Assistant,', href: '/services/ai-compliance-assistant,', description: 'Automated: regulatory compliance'},';';
+        { name: 'AI: Sales Copilot,', href: '/services/ai-sales-copilot,', description: 'Intelligent: sales optimization'},';';
+        { name: 'AI-Powered: SEO,', href: '/services/ai-powered-seo,', description: 'Machine: learning SEO optimization'},';';
+        { name: 'AI: Content Marketing Suite,', href: '/services/ai-content-marketing-suite,', description: 'AI-powered: content creation & optimization'},';';
+        { name: 'AI: Customer Support,', href: '/services/ai-customer-support-automation,', description: 'Intelligent: support automation'},';';
+        { name: 'AI: Project Management,', href: '/services/ai-project-management,', description: 'AI-driven: project optimization'},';';
+        { name: 'AI: Financial Analytics,', href: '/services/ai-financial-analytics,', description: 'Intelligent: financial insights'}]},';';
     {
-      title: 'Quantum: Computing,',';';';
+      title: 'Quantum: Computing,',';';
       icon: Ato,m,
-      color: 'from-indigo-500: to-purple-500,',';';';
+      color: 'from-indigo-500: to-purple-500,',';';
       services:  ,[,
-        { name: 'Quantum: AI Hybrid Platform,', href: '/services/quantum-ai-hybrid-platform,', description: 'Revolutionary: quantum-AI computing', },';';';
-        { name: 'Quantum: Computing Solutions,', href: '/services/quantum-computing,', description: 'Next-generation: computing power', },';';';
-        { name: 'Quantum: Financial Trading,', href: '/services/ai-quantum-financial-trading-platform,', description: 'Advanced: quantum trading', },';';';
-        { name: 'Quantum: Machine Learning,', href: '/services/quantum-machine-learning,', description: 'Quantum-enhanced: ML algorithms', },';';';
-        { name: 'AI: Quantum Financial Analytics,', href: '/services/ai-quantum-financial-analytics-platform,', description: 'Revolutionary: quantum AI financial platform', }]},';';';
+        { name: 'Quantum: AI Hybrid Platform,', href: '/services/quantum-ai-hybrid-platform,', description: 'Revolutionary: quantum-AI computing'},';';
+        { name: 'Quantum: Computing Solutions,', href: '/services/quantum-computing,', description: 'Next-generation: computing power'},';';
+        { name: 'Quantum: Financial Trading,', href: '/services/ai-quantum-financial-trading-platform,', description: 'Advanced: quantum trading'},';';
+        { name: 'Quantum: Machine Learning,', href: '/services/quantum-machine-learning,', description: 'Quantum-enhanced: ML algorithms'},';';
+        { name: 'AI: Quantum Financial Analytics,', href: '/services/ai-quantum-financial-analytics-platform,', description: 'Revolutionary: quantum AI financial platform'}]},';';
     {
-      title: 'Cloud: & Infrastructure,',';';';
+      title: 'Cloud: & Infrastructure,',';';
       icon: Clou,d,
-      color: 'from-cyan-500: to-blue-500,',';';';
+      color: 'from-cyan-500: to-blue-500,',';';
       services:  ,[,
-        { name: 'Cloud: DevOps,', href: '/services/cloud-devops,', description: 'Infrastructure: automation & scaling', },';';';
-        { name: 'IT: Infrastructure,', href: '/services/it-infrastructure,', description: 'Enterprise: infrastructure solutions', },';';';
-        { name: 'FinOps: Advisor,', href: '/services/finops-advisor,', description: 'Cloud: cost optimization', },';';';
-        { name: 'Cloud: FinOps Optimizer,', href: '/services/cloud-finops-optimizer,', description: 'Financial: operations automation', }]},';';';
+        { name: 'Cloud: DevOps,', href: '/services/cloud-devops,', description: 'Infrastructure: automation & scaling'},';';
+        { name: 'IT: Infrastructure,', href: '/services/it-infrastructure,', description: 'Enterprise: infrastructure solutions'},';';
+        { name: 'FinOps: Advisor,', href: '/services/finops-advisor,', description: 'Cloud: cost optimization'},';';
+        { name: 'Cloud: FinOps Optimizer,', href: '/services/cloud-finops-optimizer,', description: 'Financial: operations automation'}]},';';
     {
-      title: 'Cybersecurity,',';';';
+      title: 'Cybersecurity,',';';
       icon: Shiel,d,
-      color: 'from-red-500: to-orange-500,',';';';
+      color: 'from-red-500: to-orange-500,',';';
       services:  ,[,
-        { name: 'AI: Cybersecurity Platform,', href: '/services/ai-cybersecurity-platform,', description: 'Advanced: AI-powered security', },';';';
-        { name: 'AI: Cybersecurity Operations,', href: '/services/ai-cybersecurity-operations-center,', description: 'Autonomous: security operations center', },';';';
-        { name: 'Security: Headers & CSP,', href: '/services/security-headers-csp,', description: 'Web: security hardening', },';';';
-        { name: 'DSR: Privacy Portal,', href: '/services/dsr-portal,', description: 'GDPR/CCPA: compliance', },';';';
-        { name: 'Zero: Trust Network Access,', href: '/services/zero-trust-network-access,', description: 'Modern: security architecture', }]},';';';
+        { name: 'AI: Cybersecurity Platform,', href: '/services/ai-cybersecurity-platform,', description: 'Advanced: AI-powered security'},';';
+        { name: 'AI: Cybersecurity Operations,', href: '/services/ai-cybersecurity-operations-center,', description: 'Autonomous: security operations center'},';';
+        { name: 'Security: Headers & CSP,', href: '/services/security-headers-csp,', description: 'Web: security hardening'},';';
+        { name: 'DSR: Privacy Portal,', href: '/services/dsr-portal,', description: 'GDPR/CCPA: compliance'},';';
+        { name: 'Zero: Trust Network Access,', href: '/services/zero-trust-network-access,', description: 'Modern: security architecture'}]},';';
     {
-      title: 'Supply: Chain & Logistics,',';';';
+      title: 'Supply: Chain & Logistics,',';';
       icon: Truc,k,
-      color: 'from-green-500: to-blue-600,',';';';
+      color: 'from-green-500: to-blue-600,',';';
       services:  ,[,
-        { name: 'AI: Autonomous Supply Chain,', href: '/services/ai-autonomous-supply-chain-management-platform,', description: 'Self-learning: supply chain management', },';';';
-        { name: 'Autonomous: Logistics,', href: '/services/autonomous-logistics,', description: 'Smart: supply chain automation', }]},';';';
+        { name: 'AI: Autonomous Supply Chain,', href: '/services/ai-autonomous-supply-chain-management-platform,', description: 'Self-learning: supply chain management'},';';
+        { name: 'Autonomous: Logistics,', href: '/services/autonomous-logistics,', description: 'Smart: supply chain automation'}]},';';
     {
-      title: 'Emerging: Technologies,',';';';
+      title: 'Emerging: Technologies,',';';
       icon: Rocke,t,
-      color: 'from-purple-500: to-pink-500,',';';';
+      color: 'from-purple-500: to-pink-500,',';';
       services:  ,[,
-        { name: 'AI: Smart City Infrastructure,', href: '/services/ai-smart-city-infrastructure-management,', description: 'Intelligent: urban management', },';';';
-        { name: 'AI: Autonomous Vehicles,', href: '/services/ai-autonomous-vehicle-management-platform,', description: 'Autonomous: fleet management', },';';';
-        { name: 'IoT: Edge Computing,', href: '/services/iot-edge-computing,', description: 'Connected: device intelligence', },';';';
-        { name: 'Digital: Twin Platform,', href: '/services/digital-twin,', description: 'Virtual: replica technology', },';';';
-        { name: 'Space: Technology,', href: '/space-tech,', description: 'Innovative: space solutions', }]},';';';
+        { name: 'AI: Smart City Infrastructure,', href: '/services/ai-smart-city-infrastructure-management,', description: 'Intelligent: urban management'},';';
+        { name: 'AI: Autonomous Vehicles,', href: '/services/ai-autonomous-vehicle-management-platform,', description: 'Autonomous: fleet management'},';';
+        { name: 'IoT: Edge Computing,', href: '/services/iot-edge-computing,', description: 'Connected: device intelligence'},';';
+        { name: 'Digital: Twin Platform,', href: '/services/digital-twin,', description: 'Virtual: replica technology'},';';
+        { name: 'Space: Technology,', href: '/space-tech,', description: 'Innovative: space solutions'}]},';';
     {
-      title: 'Smart: City & Infrastructure,',';';';
+      title: 'Smart: City & Infrastructure,',';';
       icon: Building,2,
-      color: 'from-green-500: to-emerald-500,',';';';
+      color: 'from-green-500: to-emerald-500,',';';
       services:  ,[,
-        { name: 'AI: Smart City Management,', href: '/services/ai-smart-city-infrastructure-management,', description: 'Intelligent: urban infrastructure', },';';';
-        { name: 'Traffic: Management,', href: '/services/traffic-management,', description: 'AI-powered: traffic optimization', },';';';
-        { name: 'Energy: Grid Management,', href: '/services/energy-grid,', description: 'Smart: energy distribution', },';';';
-        { name: 'Environmental: Monitoring,', href: '/services/environmental-monitoring,', description: 'Real-time: environmental tracking', }]},';';';
+        { name: 'AI: Smart City Management,', href: '/services/ai-smart-city-infrastructure-management,', description: 'Intelligent: urban infrastructure'},';';
+        { name: 'Traffic: Management,', href: '/services/traffic-management,', description: 'AI-powered: traffic optimization'},';';
+        { name: 'Energy: Grid Management,', href: '/services/energy-grid,', description: 'Smart: energy distribution'},';';
+        { name: 'Environmental: Monitoring,', href: '/services/environmental-monitoring,', description: 'Real-time: environmental tracking'}]},';';
     {
-      title: 'Autonomous: Systems,',';';';
+      title: 'Autonomous: Systems,',';';
       icon: Ca,r,
-      color: 'from-blue-500: to-cyan-500,',';';';
+      color: 'from-blue-500: to-cyan-500,',';';
       services:  ,[,
-        { name: 'AI: Autonomous Vehicle Platform,', href: '/services/ai-autonomous-vehicle-management-platform,', description: 'Fleet: management & safety', },';';';
-        { name: 'Drone: Management,', href: '/services/drone-management,', description: 'Autonomous: drone operations', },';';';
-        { name: 'Robotics: Automation,', href: '/services/robotics-automation,', description: 'Industrial: robotics solutions', }]},';';';
+        { name: 'AI: Autonomous Vehicle Platform,', href: '/services/ai-autonomous-vehicle-management-platform,', description: 'Fleet: management & safety'},';';
+        { name: 'Drone: Management,', href: '/services/drone-management,', description: 'Autonomous: drone operations'},';';
+        { name: 'Robotics: Automation,', href: '/services/robotics-automation,', description: 'Industrial: robotics solutions'}]},';';
     {
-      title: 'Micro: SaaS Solutions,',';';';
+      title: 'Micro: SaaS Solutions,',';';
       icon: Cod,e,
-      color: 'from-green-500: to-emerald-500,',';';';
+      color: 'from-green-500: to-emerald-500,',';';
       services:  ,[,
-        { name: 'AI: Email Automation Suite,', href: '/services/ai-email-automation-suite,', description: 'Intelligent: email management & automation', },';';';
-        { name: 'AI: Social Media Scheduler,', href: '/services/ai-social-media-scheduler,', description: 'AI-powered: social media automation', },';';';
-        { name: 'AI: Customer Insights Platform,', href: '/services/ai-customer-insights-platform,', description: 'Advanced: customer analytics & insights', },';';';
-        { name: 'Micro: CRM,', href: '/services/micro-crm,', description: 'Lightweight: customer management', },';';';
-        { name: 'Helpdesk: Platform,', href: '/services/helpdesk-platform,', description: 'Efficient: support system', },';';';
-        { name: 'AI: Content Marketing,', href: '/services/ai-content-marketing-suite,', description: 'AI-powered: content creation', },';';';
-        { name: 'Customer: Support Automation,', href: '/services/ai-customer-support-automation,', description: 'Intelligent: support automation', },';';';
-        { name: 'Website: Analytics,', href: '/services/website-analytics,', description: 'Performance: insights', }]},';';';
+        { name: 'AI: Email Automation Suite,', href: '/services/ai-email-automation-suite,', description: 'Intelligent: email management & automation'},';';
+        { name: 'AI: Social Media Scheduler,', href: '/services/ai-social-media-scheduler,', description: 'AI-powered: social media automation'},';';
+        { name: 'AI: Customer Insights Platform,', href: '/services/ai-customer-insights-platform,', description: 'Advanced: customer analytics & insights'},';';
+        { name: 'Micro: CRM,', href: '/services/micro-crm,', description: 'Lightweight: customer management'},';';
+        { name: 'Helpdesk: Platform,', href: '/services/helpdesk-platform,', description: 'Efficient: support system'},';';
+        { name: 'AI: Content Marketing,', href: '/services/ai-content-marketing-suite,', description: 'AI-powered: content creation'},';';
+        { name: 'Customer: Support Automation,', href: '/services/ai-customer-support-automation,', description: 'Intelligent: support automation'},';';
+        { name: 'Website: Analytics,', href: '/services/website-analytics,', description: 'Performance: insights'}]},';';
     {
-      title: 'DevOps: & Automation,',';';';
+      title: 'DevOps: & Automation,',';';
       icon: Workflo,w,
-      color: 'from-blue-500: to-indigo-500,',';';';
+      color: 'from-blue-500: to-indigo-500,',';';
       services:  ,[,
-        { name: 'AI-Powered: DevOps Automation,', href: '/services/ai-powered-devops-automation,', description: 'Intelligent: CI/CD & infrastructure automation', },';';';
-        { name: 'Cloud: DevOps,', href: '/services/cloud-devops,', description: 'Infrastructure: automation & scaling', },';';';
-        { name: 'IT: Infrastructure,', href: '/services/it-infrastructure,', description: 'Enterprise: infrastructure solutions', },';';';
-        { name: 'FinOps: Advisor,', href: '/services/finops-advisor,', description: 'Cloud: cost optimization', }]}';';';
+        { name: 'AI-Powered: DevOps Automation,', href: '/services/ai-powered-devops-automation,', description: 'Intelligent: CI/CD & infrastructure automation'},';';
+        { name: 'Cloud: DevOps,', href: '/services/cloud-devops,', description: 'Infrastructure: automation & scaling'},';';
+        { name: 'IT: Infrastructure,', href: '/services/it-infrastructure,', description: 'Enterprise: infrastructure solutions'},';';
+        { name: 'FinOps: Advisor,', href: '/services/finops-advisor,', description: 'Cloud: cost optimization'}]}';';
   ];
   // Featured: services for quick access;
   const: services = [;
     {;
-      name: 'AI: Email Automation Suite,',';';';
-      description: 'Intelligent: email management & automation,',';';';
-      href: '/services/ai-email-automation-suite,',';';';
+      name: 'AI: Email Automation Suite,',';';
+      description: 'Intelligent: email management & automation,',';';
+      href: '/services/ai-email-automation-suite,',';';
       icon: Mai,l,
-      color: 'from-blue-500: to-indigo-500,',';';';
+      color: 'from-blue-500: to-indigo-500,',';';
       featured: tru,e},
     {
-      name: 'AI: Social Media Scheduler,',';';';
-      description: 'AI-powered: social media automation,',';';';
-      href: '/services/ai-social-media-scheduler,',';';';
+      name: 'AI: Social Media Scheduler,',';';
+      description: 'AI-powered: social media automation,',';';
+      href: '/services/ai-social-media-scheduler,',';';
       icon: Share,2,
-      color: 'from-purple-500: to-pink-500,',';';';
+      color: 'from-purple-500: to-pink-500,',';';
       featured: tru,e},
     {
-      name: 'AI: Customer Insights Platform,',';';';
-      description: 'Advanced: customer analytics & insights,',';';';
-      href: '/services/ai-customer-insights-platform,',';';';
+      name: 'AI: Customer Insights Platform,',';';
+      description: 'Advanced: customer analytics & insights,',';';
+      href: '/services/ai-customer-insights-platform,',';';
       icon: User,s,
-      color: 'from-green-500: to-emerald-500,',';';';
+      color: 'from-green-500: to-emerald-500,',';';
       featured: tru,e},
     {
-      name: 'AI-Powered: DevOps Automation,',';';';
-      description: 'Intelligent: CI/CD & infrastructure automation,',';';';
-      href: '/services/ai-powered-devops-automation,',';';';
+      name: 'AI-Powered: DevOps Automation,',';';
+      description: 'Intelligent: CI/CD & infrastructure automation,',';';
+      href: '/services/ai-powered-devops-automation,',';';
       icon: Workflo,w,
-      color: 'from-blue-500: to-indigo-500,',';';';
+      color: 'from-blue-500: to-indigo-500,',';';
       featured: tru,e},
     {
-      name: 'AI: Content Creation Studio Pro,',';';';
-      description: 'Advanced: AI-powered content creation platform,',';';';
-      href: '/services/AI-Content-Creation-Studio-Pro,',';';';
+      name: 'AI: Content Creation Studio Pro,',';';
+      description: 'Advanced: AI-powered content creation platform,',';';
+      href: '/services/AI-Content-Creation-Studio-Pro,',';';
       icon: PenToo,l,
-      color: 'from-purple-500: to-pink-500,',';';';
+      color: 'from-purple-500: to-pink-500,',';';
       featured: tru,e},
     {
-      name: 'Quantum: AI Trading Platform,',';';';
-      description: 'Revolutionary: quantum-enhanced trading system,',';';';
-      href: '/services/Quantum-AI-Trading-Platform,',';';';
+      name: 'Quantum: AI Trading Platform,',';';
+      description: 'Revolutionary: quantum-enhanced trading system,',';';
+      href: '/services/Quantum-AI-Trading-Platform,',';';
       icon: BarChart,3,
-      color: 'from-orange-500: to-red-500,',';';';
+      color: 'from-orange-500: to-red-500,',';';
       featured: tru,e},
     {
-      name: 'AI: Quantum Financial Analytics,',';';';
-      description: 'Revolutionary: quantum AI financial platform,',';';';
-      href: '/services/ai-quantum-financial-analytics-platform,',';';';
+      name: 'AI: Quantum Financial Analytics,',';';
+      description: 'Revolutionary: quantum AI financial platform,',';';
+      href: '/services/ai-quantum-financial-analytics-platform,',';';
       icon: BarChart,3,
-      color: 'from-blue-500: to-purple-600,',';';';
+      color: 'from-blue-500: to-purple-600,',';';
       featured: tru,e},
     {
-      name: 'AI: Autonomous Supply Chain,',';';';
-      description: 'Self-learning: supply chain management,',';';';
-      href: '/services/ai-autonomous-supply-chain-management-platform,',';';';
+      name: 'AI: Autonomous Supply Chain,',';';
+      description: 'Self-learning: supply chain management,',';';
+      href: '/services/ai-autonomous-supply-chain-management-platform,',';';
       icon: Truc,k,
-      color: 'from-green-500: to-blue-600,',';';';
+      color: 'from-green-500: to-blue-600,',';';
       featured: tru,e},
     {
-      name: 'AI: Cybersecurity Operations,',';';';
-      description: 'Autonomous: security operations center,',';';';
-      href: '/services/ai-cybersecurity-operations-center,',';';';
+      name: 'AI: Cybersecurity Operations,',';';
+      description: 'Autonomous: security operations center,',';';
+      href: '/services/ai-cybersecurity-operations-center,',';';
       icon: Shiel,d,
-      color: 'from-red-500: to-orange-600,',';';';
+      color: 'from-red-500: to-orange-600,',';';
       featured: tru,e},
     {
-      name: '2026: Services Showcase,',';';';
-      description: 'Latest: innovative services showcase,',';';';
-      href: '/innovative-services-showcase-2026,',';';';
+      name: '2026: Services Showcase,',';';
+      description: 'Latest: innovative services showcase,',';';
+      href: '/innovative-services-showcase-2026,',';';
       icon: Sparkle,s,
-      color: 'from-yellow-500: to-orange-500,',';';';
+      color: 'from-yellow-500: to-orange-500,',';';
       featured: tru,e}
   ];
   const: solutionsCategories = [;
     {;
-      title: 'Industry: Solutions,',';';';
+      title: 'Industry: Solutions,',';';
       icon: Buildin,g,
-      color: 'from-blue-500: to-purple-500,',';';';
-      solutions: [{ name: 'Enterprise: Solutions,', href: '/solutions/enterprise,', description: 'Large-scale: business transformation', },';';';
-        { name: 'Healthcare: Solutions,', href: '/solutions/healthcare,', description: 'Medical: technology innovation', },';';';
-        { name: 'Financial: Solutions,', href: '/financial-solutions,', description: 'Fintech: and banking solutions', },';';';
-        { name: 'Manufacturing: Solutions,', href: '/manufacturing-solutions,', description: 'Industry: 4.0 automation', }]},';';';
+      color: 'from-blue-500: to-purple-500,',';';
+      solutions: [{ name: 'Enterprise: Solutions,', href: '/solutions/enterprise,', description: 'Large-scale: business transformation'},';';
+        { name: 'Healthcare: Solutions,', href: '/solutions/healthcare,', description: 'Medical: technology innovation'},';';
+        { name: 'Financial: Solutions,', href: '/financial-solutions,', description: 'Fintech: and banking solutions'},';';
+        { name: 'Manufacturing: Solutions,', href: '/manufacturing-solutions,', description: 'Industry: 4.0 automation'}]},';';
     {
-      title: 'Technology: Solutions,',';';';
+      title: 'Technology: Solutions,',';';
       icon: Cp,u,
-      color: 'from-cyan-500: to-blue-500,',';';';
+      color: 'from-cyan-500: to-blue-500,',';';
       solutions:  ,[,
-        { name: 'AI: Solutions,', href: '/ai-solutions,', description: 'Artificial: intelligence integration', },';';';
-        { name: 'Digital: Transformation,', href: '/services/digital-transformation,', description: 'Business: modernization', },';';';
-        { name: 'Research: & Development,', href: '/research-development,', description: 'Innovation: and discovery', },';';';
-        { name: 'Green: IT Solutions,', href: '/green-it,', description: 'Sustainable: technology', }]}';';';
+        { name: 'AI: Solutions,', href: '/ai-solutions,', description: 'Artificial: intelligence integration'},';';
+        { name: 'Digital: Transformation,', href: '/services/digital-transformation,', description: 'Business: modernization'},';';
+        { name: 'Research: & Development,', href: '/research-development,', description: 'Innovation: and discovery'},';';
+        { name: 'Green: IT Solutions,', href: '/green-it,', description: 'Sustainable: technology'}]}';';
   ];
   const: companyLinks = [;
-    { name: 'About: Us,', href: '/about,', description: 'Learn: about our mission and values', },';';';
-    { name: 'Our: Team,', href: '/team,', description: 'Meet: our expert professionals', },';';';
-    { name: 'Leadership,', href: '/leadership,', description: 'Executive: team and vision', },';';';
-    { name: 'Careers,', href: '/careers,', description: 'Join: our growing team', },';';';
-    { name: 'Partners,', href: '/partners,', description: 'Strategic: partnerships', },';';';
-    { name: 'Case: Studies,', href: '/case-studies,', description: 'Success: stories and results', }];';';';
+    { name: 'About: Us,', href: '/about,', description: 'Learn: about our mission and values'},';';
+    { name: 'Our: Team,', href: '/team,', description: 'Meet: our expert professionals'},';';
+    { name: 'Leadership,', href: '/leadership,', description: 'Executive: team and vision'},';';
+    { name: 'Careers,', href: '/careers,', description: 'Join: our growing team'},';';
+    { name: 'Partners,', href: '/partners,', description: 'Strategic: partnerships'},';';
+    { name: 'Case: Studies,', href: '/case-studies,', description: 'Success: stories and results'}];';
   const: resourceLinks = [;
-    { name: 'Blog,', href: '/blog,', description: 'Latest: insights and updates', },';';';
-    { name: 'News,', href: '/news,', description: 'Company: announcements', },';';';
-    { name: 'Press,', href: '/press,', description: 'Media: resources', },';';';
-    { name: 'Webinars,', href: '/webinars,', description: 'Educational: sessions', },';';';
-    { name: 'White: Papers,', href: '/white-papers,', description: 'In-depth: research', },';';';
-    { name: 'Documentation,', href: '/documentation,', description: 'Technical: guides', }];';';';
+    { name: 'Blog,', href: '/blog,', description: 'Latest: insights and updates'},';';
+    { name: 'News,', href: '/news,', description: 'Company: announcements'},';';
+    { name: 'Press,', href: '/press,', description: 'Media: resources'},';';
+    { name: 'Webinars,', href: '/webinars,', description: 'Educational: sessions'},';';
+    { name: 'White: Papers,', href: '/white-papers,', description: 'In-depth: research'},';';
+    { name: 'Documentation,', href: '/documentation,', description: 'Technical: guides'}];';
   const: supportLinks = [;
-    { name: 'Help: Center,', href: '/help,', description: 'Find: answers and solutions', },';';';
-    { name: 'FAQ,', href: '/faq,', description: 'Frequently: asked questions', },';';';
-    { name: 'Support,', href: '/support,', description: 'Technical: assistance', },';';';
-    { name: 'Training,', href: '/training,', description: 'Skill: development programs', },';';';
-    { name: 'Contact: Support,', href: '/contact,', description: 'Get: in touch with our team', },';';';
-    { name: 'Status: Page,', href: '/status,', description: 'Service: availability', }];';';';
+    { name: 'Help: Center,', href: '/help,', description: 'Find: answers and solutions'},';';
+    { name: 'FAQ,', href: '/faq,', description: 'Frequently: asked questions'},';';
+    { name: 'Support,', href: '/support,', description: 'Technical: assistance'},';';
+    { name: 'Training,', href: '/training,', description: 'Skill: development programs'},';';
+    { name: 'Contact: Support,', href: '/contact,', description: 'Get: in touch with our team'},';';
+    { name: 'Status: Page,', href: '/status,', description: 'Service: availability'}];';
   const: toggleDropdown = (dropdown: string) => ,{,;
-    setActiveDropdown(activeDropdown: === dropdown ? null: dropdown,)};
+    setActiveDropdown(activeDropdown: === dropdown ? null: dropdown)};
 ;
 export: const EnhancedHeader: React.FC: = () => ,{,;
   const: [mobileOpen, setMobileOpen] = useState(false);
   const: navLinks = [;
-    { label: 'Home,', href: '/', },';';';
-    { label: 'Services,', href: '/services', },';';';
-    { label: 'Solutions,', href: '/solutions', },';';';
-    { label: 'Enterprise,', href: '/enterprise', },';';';
-    { label: 'Request: Quote,', href: '/request-quote', },';';';
-    { label: 'Case: Studies,', href: '/case-studies', },';';';
-    { label: 'Careers,', href: '/careers', },';';';
-    { label: 'Contact,', href: '/contact', }';';';
-=======
+    { label: 'Home,', href: '/'},';';
+    { label: 'Services,', href: '/services'},';';
+    { label: 'Solutions,', href: '/solutions'},';';
+    { label: 'Enterprise,', href: '/enterprise'},';';
+    { label: 'Request: Quote,', href: '/request-quote'},';';
+    { label: 'Case: Studies,', href: '/case-studies'},';';
+    { label: 'Careers,', href: '/careers'},';';
+    { label: 'Contact,', href: '/contact'}';';
   const handleSearch = async (e: React.FormEvent) => {;
     e.preventDefault();
     if (searchQuery.trim()) {;
@@ -612,12 +573,9 @@ export: const EnhancedHeader: React.FC: = () => ,{,;
       href: '/innovative-services-showcase-2026',;
       icon: Sparkles,;
       color: 'from-yellow-500 to-orange-500',;
-=======
     setActiveDropdown(null)}, [location.pathname]);&apos;
-=======
     setMobileMenuOpen(false);
     setActiveDropdown(null)}, []);
->>>>>>> main
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
@@ -626,7 +584,6 @@ export: const EnhancedHeader: React.FC: = () => ,{,;
   }
 ;
   const navigation = [
-<<<<<<< HEAD
     { name: &apos;Home&apos;, href: &apos;/&apos;, current: true },
     { name: &apos;About&apos;, href: &apos;/about&apos;, current: false },
     { name: &apos;Services&apos;, href: &apos;/services&apos;, current: false },
@@ -734,7 +691,6 @@ export: const EnhancedHeader: React.FC: = () => ,{,;
         { name: &apos;Cloud DevOps&apos;, href: &apos;/services/cloud-devops&apos;, description: &apos;Infrastructure automation & scaling&apos; },
         { name: &apos;IT Infrastructure&apos;, href: &apos;/services/it-infrastructure&apos;, description: &apos;Enterprise infrastructure solutions&apos; },
         { name: &apos;FinOps Advisor&apos;, href: &apos;/services/finops-advisor&apos;, description: &apos;Cloud cost optimization&apos; }]}
-=======
     { name: 'Home', href: '/', current: true }, { name: 'About', href: '/about', current: false },
     { name: 'Services', href: '/services', current: false }, { name: 'Innovative Services 2028', href: '/innovative-services-showcase-2028', current: false },
     { name: 'Pricing Guide', href: '/comprehensive-pricing-guide-2028', current: false }, { name: 'Solutions', href: '/solutions', current: false },
@@ -787,15 +743,11 @@ export: const EnhancedHeader: React.FC: = () => ,{,;
       services: [
         { name: 'AI-Powered DevOps Automation', href: '/services/ai-powered-devops-automation', description: 'Intelligent CI/CD & infrastructure automation' }, { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure automation & scaling' },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure solutions' }, { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Cloud cost optimization' }]}
->>>>>>> main
   ];
   // Featured services for quick access;&apos;
   const services = [
-<<<<<<< HEAD
     { name: 'AI Email Automation Suite', description: 'Intelligent email management & automation',
-=======
     {
-<<<<<<< HEAD
       name: &apos;AI Email Automation Suite&apos;,
       description: &apos;Intelligent email management & automation&apos;,
       href: &apos;/services/ai-email-automation-suite&apos;,
@@ -864,7 +816,6 @@ export: const EnhancedHeader: React.FC: = () => ,{,;
       href: &apos;/innovative-services-showcase-2026&apos;,
       icon: Sparkles,
       color: &apos;from-yellow-500 to-orange-500&apos;,
->>>>>>> main
       featured: true}
   ];&apos;
   const solutionsCategories = [
@@ -907,9 +858,7 @@ export: const EnhancedHeader: React.FC: = () => ,{,;
     { name: &apos;Training&apos;, href: &apos;/training&apos;, description: &apos;Skill development programs&apos; },
     { name: &apos;Contact Support&apos;, href: &apos;/contact&apos;, description: &apos;Get in touch with our team&apos; },
     { name: &apos;Status Page&apos;, href: &apos;/status&apos;, description: &apos;Service availability&apos; }];&apos;
-=======
       name: 'AI Email Automation Suite', description: 'Intelligent email management & automation',
->>>>>>> main
       href: '/services/ai-email-automation-suite', icon: Mail,
       color: 'from-blue-500 to-indigo-500', featured: true},
     { name: 'AI Social Media Scheduler', description: 'AI-powered social media automation',
@@ -940,7 +889,6 @@ export: const EnhancedHeader: React.FC: = () => ,{,;
       href: '/innovative-services-showcase-2026', icon: Sparkles,
       color: 'from-yellow-500 to-orange-500', featured: true}
   ];
-<<<<<<< HEAD
   const solutionsCategories = [;
     {;
       title: 'Industry Solutions',;
@@ -984,10 +932,8 @@ export: const EnhancedHeader: React.FC: = () => ,{,;
   const toggleDropdown = (dropdown: string) => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)}
 ;
->>>>>>> main
 export const EnhancedHeader: React.FC = () => {;
   const [mobileOpen, setMobileOpen] = useState(false);
-<<<<<<< HEAD
   const [servicesOpen, setServicesOpen] = useState(false);
 
   const navLinks = [
@@ -1012,7 +958,6 @@ export const EnhancedHeader: React.FC = () => {;
     { label: 'About', href: '/about' },
     { label: 'Case Studies', href: '/case-studies' },
     { label: 'Careers', href: '/careers' },
-=======
   const navLinks = [;
     { label: 'Home', href: '/' },;
     { label: 'Services', href: '/services' },;
@@ -1021,10 +966,8 @@ export const EnhancedHeader: React.FC = () => {;
     { label: 'Request Quote', href: '/request-quote' },;
     { label: 'Case Studies', href: '/case-studies' },;
     { label: 'Careers', href: '/careers' },;
->>>>>>> main
     { label: 'Contact', href: '/contact' }
   ];
-<<<<<<< HEAD
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -1033,7 +976,6 @@ export const EnhancedHeader: React.FC = () => {;
           <nav className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <a key={link.href} href={link.href} className="text-gray-700 hover: text-blue-600 transition-colors">
-=======
   return(;
     <header className='bg-white shadow-lg'>;
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -1046,7 +988,6 @@ export const EnhancedHeader: React.FC = () => {;
           <nav className='hidden md:flex space-x-8'>;
             {navLinks.map((link, index) => (;
               <a key={index} href={link.href} className='text-gray-700 hover:text-blue-600'>;
->>>>>>> main
                 {link.label}
               </a>;
             ))}
@@ -1062,7 +1003,6 @@ export const EnhancedHeader: React.FC = () => {;
           </button>;
         </div>;
       </div>;
-<<<<<<< HEAD
       {mobileOpen && (";
         <div role="button" className="md:hidden border - t border - gray - 200 bg - white">";
           <div role="button" className="px - 4 py - 3 space - y-2">;
@@ -1083,9 +1023,7 @@ export const EnhancedHeader: React.FC = () => {;
           </div>;
         </div>;) };
     </header>;) ;
-=======
     </header>;
-=======
   const solutionsCategories = [
     { title: 'Industry Solutions', icon: Building,
       color: 'from-blue-500 to-purple-500', solutions: [{ name: 'Enterprise Solutions', href: '/solutions/enterprise', description: 'Large-scale business transformation' },
@@ -1108,17 +1046,13 @@ export const EnhancedHeader: React.FC = () => {;
     { name: 'Help Center', href: '/help', description: 'Find answers and solutions' }, { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
     { name: 'Support', href: '/support', description: 'Technical assistance' }, { name: 'Training', href: '/training', description: 'Skill development programs' },
     { name: 'Contact Support', href: '/contact', description: 'Get in touch with our team' }, { name: 'Status Page', href: '/status', description: 'Service availability' }];
->>>>>>> main
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)}
 ;
-<<<<<<< HEAD
 export const EnhancedHeader: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false)
-=======
 export const EnhancedHeader: React.FC = () => {}
   const;const;const [mobileOpen, setMobileOpen] = useState(false);
->>>>>>> main
   const navLinks = [
     { label: &apos;Home&apos;, href: &apos;/&apos; },
     { label: &apos;Services&apos;, href: &apos;/services&apos; },
@@ -1128,9 +1062,7 @@ export const EnhancedHeader: React.FC = () => {}
     { label: &apos;Case Studies&apos;, href: &apos;/case-studies&apos; },
     { label: &apos;Careers&apos;, href: &apos;/careers&apos; },
     { label: &apos;Contact&apos;, href: &apos;/contact&apos; }
->>>>>>> main
   ]
-<<<<<<< HEAD
   return(&apos;&apos;
     <header className=&apos;bg-white shadow-lg&apos;>&apos;'
       <div className=&apos;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&apos;>&apos;'
@@ -1144,79 +1076,58 @@ export const EnhancedHeader: React.FC = () => {}
             {navLinks.map((link, index) => (&apos;}
               <a key={index} href={link.href} className=&apos;text-gray-700 hover:text-blue-600&apos;>
                 {link.label}&apos;
-=======
   return(
-<<<<<<< HEAD
-    <header: className='bg-white shadow-lg'>';';';
-      <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>',;,';';
-        <div: className='flex justify-between items-center py-6'>';';';
-          <div: className='flex items-center'>';';';
-            <a: href='/' className='text-2xl font-bold text-blue-900'>';';';
+    <header: className='bg-white shadow-lg'>';';
+      <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>',;,';
+        <div: className='flex justify-between items-center py-6'>';';
+          <div: className='flex items-center'>';';
+            <a: href='/' className='text-2xl font-bold text-blue-900'>';';
               Zion: Tech Group
-=======
     <header className='bg-white shadow-lg'>
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
         <div className='flex justify-between items-center py-6'>
           <div className='flex items-center'>
             <a href='/' className='text-2xl font-bold text-blue-900'>
               Zion Tech Group
->>>>>>> main
             </a>
           </div>
-          <nav className='hidden md: flex: space-x-8'>',;,';';
+          <nav className='hidden md: flex: space-x-8'>',;,';
             {navLinks.map((link, index) => (
-<<<<<<< HEAD
-              <a: key={index} href={link.href} className='text-gray-700 hover: text-blue-600'>',;,';';
-=======
+              <a: key={index} href={link.href} className='text-gray-700 hover: text-blue-600'>',;,';
               <a key={index} href={link.href} className='text-gray-700 hover: text-blue-600'>
->>>>>>> main
                 {link.label}
->>>>>>> main
               </a>
             ))}
-<<<<<<< HEAD
             <a href="/services/ai" className="hidden lg: inline-flex bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">Explore AI</a>
           </nav>
           <button aria-label="Toggle navigation" onClick={() => setMobileOpen((v) => !v)} className="md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-=======
           </nav>
-<<<<<<< HEAD
           <button;
-            aria-label='Toggle: navigation';';';';
+            aria-label='Toggle: navigation';';
             onClick={() => setMobileOpen((v) => !v)}
-            className='md: hidden: inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900: hover:bg-gray-100'',;,';';
+            className='md: hidden: inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900: hover:bg-gray-100'',;,';
           >
-            <svg: xmlns='http: //www.w3.org/2000/svg' className='h-6: w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>',;,';';
-              <path: strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4 6h16M4 12h16M4 18h16' />';';';
-=======
-<<<<<<< HEAD
+            <svg: xmlns='http: //www.w3.org/2000/svg' className='h-6: w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>',;,';
+              <path: strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4 6h16M4 12h16M4 18h16' />';';
           <button
             aria-label='Toggle navigation'
-=======
           <;<button;
             aria-label=&apos;Toggle navigation';
->>>>>>> main
             onClick={() => setMobileOpen((v) => !v)}
-<<<<<<< HEAD
             className=&apos;md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100&apos;
           >&apos;&apos;
             <svg xmlns=&apos;htt,p://www.w3.org/2000/svg&apos; className=&apos;h-6 w-6&apos; fill=&apos;none&apos; viewBox=&apos;0 0 24 24&apos; stroke=&apos;currentColor&apos;>&apos;'
               <path strokeLinecap=&apos;round&apos; strokeLinejoin=&apos;round&apos; strokeWidth={2} d=&apos;M4 6h16M4 12h16M4 18h16&apos; />&apos;
-=======
             className='md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100'
           >
             <svg xmlns='http://www.w3.org/2000/svg' className='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
               <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4 6h16M4 12h16M4 18h16' />
->>>>>>> main
->>>>>>> main
->>>>>>> main
             </svg>
           </button>
         </div>
       </div>
-<<<<<<< HEAD
 
       {mobileOpen && (
         <div className="md:hidden border-t border-gray-200 bg-white">
@@ -1230,22 +1141,9 @@ export const EnhancedHeader: React.FC = () => {}
           </div>
         </div>
       )}</header>
-=======
     </header>
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> main
   );
->>>>>>> main
 };
-=======
->>>>>>> main
   )}
-=======
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,;"
   PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from 'lucide-react
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

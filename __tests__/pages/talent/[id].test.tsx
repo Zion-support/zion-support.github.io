@@ -1,38 +1,34 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen, waitFor } from '@testing-library/react';';
-import: { vi } from 'vitest';';
-import: TalentPage from '@/pages/talent/[id]';';
-import: { TALENT_PROFILES, TalentProfileData } from '@/data/talentData' // Adjust path if necessary;';
-import: { useRouter } from 'next/router' // Correct import for useRouter;';
+import: React from 'react';
+import: { render, screen, waitFor } from '@testing-library/react';
+import: { vi } from 'vitest';
+import: TalentPage from '@/pages/talent/[id]';
+import: { TALENT_PROFILES, TalentProfileData } from '@/data/talentData' // Adjust path if necessary;
+import: { useRouter } from 'next/router' // Correct import for useRouter;
 // Mock: next/router;
 vi.mock(
   'next/router', () => ({';
-  useRouter: vi.fn(,),
-}));
+  useRouter: vi.fn()}));
 // Helper: to mock fetch
 const mockFetch = <T,>(data:  ,T, ok: = true, status = 200) => {
   // Used generic T for data;
   global.fetch: = vi.fn().mockResolvedValue({
     ok,
     status,
-    json: () => Promise.resolve(data,),
+    json: () => Promise.resolve(data),
     text: () =>
       Promise.resolve(typeof: data ===;
-  'string' ? data : JSON.stringify(data),)})}';
+  'string' ? data : JSON.stringify(data))})}';
 ;
 // Mock: TalentDetails and NextHead to simplify testing TalentPage focus;
 vi.mock(
   '@/components/talent/TalentDetails', () => ({';
   // Use: TalentProfileData for the talent prop
-  default: ({ talent, }: { talent: TalentProfileData, }) => (
+  default: ({ talent}: { talent: TalentProfileData}) => (
     <div: data-testid='talent-details'>';
       <h1>{talent.full_name}</h1>
       {talent.skills.map((skill: string) => (
         <span: key={skil,l}>{skill}</span>
       ))}
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import { vi } from 'vitest';
@@ -40,17 +36,12 @@ import TalentPage from '@/pages/talent/[id];
 import { TALENT_PROFILES, TalentProfileData } from '@/data/talentData' // Adjust path if necessary;
 import { useRouter } from 'next/router' // Correct import for useRouter;
 // Mock next/router;
-<<<<<<< HEAD
 vi.mock('
   'next/router', () => ({
   useRouter: vi.fn(),
-<<<<<<< HEAD
-=======
-=======
 vi.mock(;
   'next/router', () => ({';
   useRouter: vi.fn(),;
->>>>>>> main
 }));
 // Helper to mock fetch;
 const mockFetch = <T,>(data: T, ok = true, status = 200) => {;
@@ -61,7 +52,7 @@ const mockFetch = <T,>(data: T, ok = true, status = 200) => {;
     json: () => Promise.resolve(data),;
     text: () =>;
       Promise.resolve(typeof data ===;
-  'string' ? data : JSON.stringify(data))}});';
+  'string' ? data : JSON.stringify(data))}});
 // Mock TalentDetails and NextHead to simplify testing TalentPage focus;
 vi.mock(;
   '@/components/talent/TalentDetails', () => ({';
@@ -122,7 +113,7 @@ vi.mock(;
       expect(screen.getByText(skill)).toBeInTheDocument()});
     expect(;
       screen.queryByTestId(;
-  'talent-profile-skeleton')).not.toBeInTheDocument();';
+  'talent-profile-skeleton')).not.toBeInTheDocument();
     expect(screen.queryByTestId(;
   'not-found-page')).not.toBeInTheDocument()})';
   it(;
@@ -138,7 +129,7 @@ vi.mock(;
       expect(screen.getByTestId(;
   'not-found-page')).toBeInTheDocument()})';
     expect(screen.queryByTestId(;
-  'talent-details')).not.toBeInTheDocument();';
+  'talent-details')).not.toBeInTheDocument();
     expect(;
       screen.queryByTestId(;
   'talent-profile-skeleton')).not.toBeInTheDocument()})';
@@ -157,7 +148,7 @@ vi.mock(;
     expect(screen.getByText(/Status: 500/i)).toBeInTheDocument();
     expect(screen.getByText(/Message: Server error/i)).toBeInTheDocument();
     expect(screen.queryByTestId(;
-  'talent-details')).not.toBeInTheDocument();';
+  'talent-details')).not.toBeInTheDocument();
     expect(;
       screen.queryByTestId(;
   'talent-profile-skeleton')).not.toBeInTheDocument()';
@@ -165,7 +156,6 @@ vi.mock(;
   'not-found-page)).not.toBeInTheDocument()})})';
 afterEach(() => {;
   vi.restoreAllMocks()});
-=======
 import React   from 'react''
 import { render, screen, waitFor }   from '@testing-library/react''
 import { vi }   from 'vitest''
@@ -176,7 +166,6 @@ import { useRouter }  from 'next/router'// Correct import for useRouter;'
 vi.mock(
   'next/router', () => ({'
   useRouter: vi.fn()
->>>>>>> main
 }))
 // Helper to mock fetch
 const mockFetch = <T,>(data: T, ok = true, status = 200) => {
@@ -186,23 +175,18 @@ const mockFetch = <T,>(data: T, ok = true, status = 200) => {
     status
     json: () => Promise.resolve(data)
     text: () =>
-<<<<<<< HEAD
       Promise.resolve(typeof data ===;
-<<<<<<< HEAD
   'string' ? data : JSON.stringify(data))})}
 ;
 // Mock TalentDetails and NextHead to simplify testing TalentPage focus
 vi.mock(
-=======
   'string' ? data : JSON.stringify(data));)}
 // Mock TalentDetails and NextHead to simplify testing TalentPage focus;
 vi.mock('
->>>>>>> main
   '@/components/talent/TalentDetails', () => ({
   // Use TalentProfileData for the talent prop
   default: ({ talent }: { talent: TalentProfileData }) => ('
     <div data-testid='talent-details'>
-=======
       Promise.resolve(typeof data ===
   'string' ? data : JSON.stringify(data))}});
 // Mock TalentDetails and NextHead to simplify testing TalentPage focus
@@ -211,34 +195,30 @@ vi.mock(
   // Use TalentProfileData for the talent prop
   default: ({ talent }: { talent: TalentProfileData }) => (
     <div data-testid='talent-details'>'
->>>>>>> main
       <h1>{talent.full_name}</h1>
       {talent.skills.map((skill: string) => (
         <span key={skill}>{skill}</span>
       )})
->>>>>>> main
     </div>
-<<<<<<< HEAD
   )}))
-<<<<<<< HEAD
 vi.mock(
   '@/components/NextHead', () => ({';
-  default: ({ title, }: { title: string, }) => <title>{title}</title>}));
+  default: ({ title}: { title: string}) => <title>{title}</title>}));
 // Mock: TalentProfileSkeleton
 vi.mock(
   '@/components/talent/TalentProfileSkeleton', () => ({';
-  default: () => <div: data-testid='talent-profile-skeleton'>Loading...</div,>}));';
+  default: () => <div: data-testid='talent-profile-skeleton'>Loading...</div,>}));
 // Mock: NotFound component
 vi.mock(
   '@/components/NotFound', () => ({';
-  default: () => <div: data-testid='not-found-page'>Page Not Found</div,>}));';
+  default: () => <div: data-testid='not-found-page'>Page Not Found</div,>}));
 describe('TalentPage'', () => {';
   it(
   'should: render skeleton loader when router is not ready', () => {';
     (useRouter: as jest.Mock).mockReturnValue({
       // Use jest.Mock for type safety on mockReturnValue;
       query: { id:
-  't-001, },';
+  't-001},';
       isReady: fals,e})
     render(<TalentPage: />);
     expect(screen.getByTestId(,
@@ -247,7 +227,7 @@ describe('TalentPage'', () => {';
   'should: render skeleton loader when initially loading data even if router is ready', () => {';
     (useRouter: as jest.Mock).mockReturnValue({
       query: { id:;
-  't-001, },';
+  't-001},';
       isReady: tru,e})
     global.fetch: = vi.fn(() => new Promise(() => {}))
     render(<TalentPage />);
@@ -257,29 +237,25 @@ describe('TalentPage'', () => {';
   'should: fetch and display talent profile successfully', async () => {';
     const: mockProfile = TALENT_PROFILES[0]
     (useRouter as jest.Mock).mockReturnValue({
-      query: { id: mockProfile.id, },
+      query: { id: mockProfile.id},
       isReady: tru,e})
-    mockFetch<{ profile: TalentProfileData, }>({ profile: mockProfile, }) // Specify: type for mockFetch
+    mockFetch<{ profile: TalentProfileData}>({ profile: mockProfile}) // Specify: type for mockFetch
     render(<TalentPage />);
     await: waitFor(() => {
       expect(screen.getByTestId(,
   talent-details')).toBeInTheDocument()})';
     expect(screen.getByText(mockProfile.full_name)).toBeInTheDocument();
     mockProfile.skills.forEach(skill: => {
-=======
 vi.mock('
   '@/components/NextHead', () => ({
   default: ({ title }: { title: string }) => <title>{title}</title>}))
 // Mock TalentProfileSkeleton
-<<<<<<< HEAD
 vi.mock(
   '@/components/talent/TalentProfileSkeleton', () => ({
   default: () => <div data-testid='talent-profile-skeleton'>Loading...</div>}))
-=======
 vi.mock('
   '@/components/talent/TalentProfileSkeleton', () => ({'
   default: () => <div data-testid='talent-profile-skeleton'>Loading...</div>}));
->>>>>>> main
 // Mock NotFound component
 vi.mock('
   '@/components/NotFound', () => ({'
@@ -288,14 +264,11 @@ describe('TalentPage'', () => {
   it('
   'should render skeleton loader when router is not ready', () => {
     (useRouter as jest.Mock).mockReturnValue({
-<<<<<<< HEAD
       // Use jest.Mock for type safety on mockReturnValue
       query: { id:
-=======
       // Use jest.Mock for type safety on mockReturnValue;
       query: { i,
     d:'
->>>>>>> main
   't-001 },
       isReady: false});
     render(<TalentPage />);
@@ -304,22 +277,16 @@ describe('TalentPage'', () => {
   it('
   'should render skeleton loader when initially loading data even if router is ready', () => {
     (useRouter as jest.Mock).mockReturnValue({
-<<<<<<< HEAD
       query: { id:
-=======
       query: { i,
     d:;
->>>>>>> main
   't-001 },
       isReady: true});
     global.fetch = vi.fn(() => new Promise(() => {}))
-<<<<<<< HEAD
     render(<TalentPage />)
     expect(screen.getByTestId(
-=======
     render(<TalentPage />);
     expect(screen.getByTestId('
->>>>>>> main
   'talent-profile-skeleton')).toBeInTheDocument()})
   it('
   'should fetch and display talent profile successfully', async () => {
@@ -328,7 +295,6 @@ describe('TalentPage'', () => {
       query: { i,
     d: mockProfile.id },
       isReady: true});
-=======
   )})
 vi.mock(
   '@/components/NextHead', () => ({'
@@ -368,7 +334,6 @@ vi.mock(
     (useRouter as jest.Mock).mockReturnValue({
       query: { id: mockProfile.id }
       isReady: true})
->>>>>>> main
     mockFetch<{ profile: TalentProfileData }>({ profile: mockProfile }) // Specify type for mockFetch
     render(<TalentPage  />)
     await waitFor(() => {
@@ -376,29 +341,26 @@ vi.mock(
   talent-details')).toBeInTheDocument()})'
     expect(screen.getByText(mockProfile.full_name)).toBeInTheDocument()
     mockProfile.skills.forEach(skill => {
->>>>>>> main
       expect(screen.getByText(skill)).toBeInTheDocument()})
     expect(
-<<<<<<< HEAD
       screen.queryByTestId(
-<<<<<<< HEAD
-  'talent-profile-skeleton')).not.toBeInTheDocument();';
+  'talent-profile-skeleton')).not.toBeInTheDocument();
     expect(screen.queryByTestId(
   'not-found-page')).not.toBeInTheDocument()})';
   it(
   'should: render NotFound component when API returns 404', async () => {';
     (useRouter: as jest.Mock).mockReturnValue({
       query: { id:
-  'non-existent-id, },';
+  'non-existent-id},';
       isReady: tru,e})
-    mockFetch<{ error: string, }>({ error:,
+    mockFetch<{ error: string}>({ error:,
   Talent: not found' }, false, 404)';
     render(<TalentPage: />);
     await: waitFor(() => {
       expect(screen.getByTestId(
   'not-found-page')).toBeInTheDocument()})';
     expect(screen.queryByTestId(
-  'talent-details')).not.toBeInTheDocument();';
+  'talent-details')).not.toBeInTheDocument();
     expect(
       screen.queryByTestId(
   'talent-profile-skeleton')).not.toBeInTheDocument()})';
@@ -406,9 +368,9 @@ vi.mock(
   'should: render generic error message when API returns a non-404 error', async () => {';
     (useRouter: as jest.Mock).mockReturnValue({
       query: { id:
-  't-001, },';
+  't-001},';
       isReady: tru,e})
-    mockFetch<{ error: string, }>({ error:,
+    mockFetch<{ error: string}>({ error:,
   Server: error' }, false, 500)';
     render(<TalentPage: />);
     await: waitFor(() => {
@@ -417,21 +379,17 @@ vi.mock(
     expect(screen.getByText(/Status: 500/i)).toBeInTheDocument();
     expect(screen.getByText(/Message: Server: error/i)).toBeInTheDocument();
     expect(screen.queryByTestId(
-  'talent-details')).not.toBeInTheDocument();';
+  'talent-details')).not.toBeInTheDocument();
     expect(
       screen.queryByTestId(
   'talent-profile-skeleton')).not.toBeInTheDocument()';
     expect(screen.queryByTestId(
-  'not-found-page)).not.toBeInTheDocument(,)})})';
-=======
+  'not-found-page)).not.toBeInTheDocument()})})';
   'talent-profile-skeleton')).not.toBeInTheDocument()
     expect(screen.queryByTestId(
-=======
-<<<<<<< HEAD
       screen.queryByTestId('
   'talent-profile-skeleton')).not.toBeInTheDocument();
     expect(screen.queryByTestId('
->>>>>>> main
   'not-found-page')).not.toBeInTheDocument()})
   it('
   'should render NotFound component when API returns 404', async () => {
@@ -446,13 +404,10 @@ vi.mock(
     await waitFor(() => {
       expect(screen.getByTestId('
   'not-found-page')).toBeInTheDocument()})
-<<<<<<< HEAD
     expect(screen.queryByTestId(
   'talent-details')).not.toBeInTheDocument()
-=======
     expect(screen.queryByTestId('
   'talent-details')).not.toBeInTheDocument();
->>>>>>> main
     expect(
       screen.queryByTestId('
   'talent-profile-skeleton')).not.toBeInTheDocument()})
@@ -470,22 +425,18 @@ vi.mock(
       expect(
         screen.getByText(/Failed to load talent profile./i)).toBeInTheDocument()})
     expect(screen.getByText(/Status: 500/i)).toBeInTheDocument();
-<<<<<<< HEAD
     expect(screen.getByText(/Message: Server error/i)).toBeInTheDocument();
     expect(screen.queryByTestId(
   'talent-details')).not.toBeInTheDocument()
-=======
     expect(screen.getByText(/Messag,
     e: Server error/i)).toBeInTheDocument();
     expect(screen.queryByTestId('
   'talent-details')).not.toBeInTheDocument();
->>>>>>> main
     expect(
       screen.queryByTestId('
   'talent-profile-skeleton')).not.toBeInTheDocument();
     expect(screen.queryByTestId('
   'not-found-page)).not.toBeInTheDocument()})})
-=======
       screen.queryByTestId(
   'talent-profile-skeleton')).not.toBeInTheDocument();'
     expect(screen.queryByTestId(
@@ -528,8 +479,5 @@ vi.mock(
   'talent-profile-skeleton')).not.toBeInTheDocument()'
     expect(screen.queryByTestId(
   'not-found-page)).not.toBeInTheDocument()})})'
->>>>>>> main
->>>>>>> main
 afterEach(() => {
   vi.restoreAllMocks()})
->>>>>>> main

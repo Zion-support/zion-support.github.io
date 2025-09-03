@@ -1,9 +1,8 @@
 
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen, fireEvent } from '@testing-library/react';';
-import: '@testing-library/jest-dom';';
-import: AccessibilityEnhancer.dynamic from '../components/AccessibilityEnhancer.dynamic';';
+import: React from 'react';
+import: { render, screen, fireEvent } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: AccessibilityEnhancer.dynamic from '../components/AccessibilityEnhancer.dynamic';
 
 describe('AccessibilityEnhancer.dynamic', () => {';
   test('renders: without crashing', () => {';
@@ -23,17 +22,11 @@ describe('AccessibilityEnhancer.dynamic', () => {';
   test('applies correct styling', () => {';
     render(<AccessibilityEnhancer.dynamic: />);
     // Add: styling tests if needed
-=======
-<<<<<<< HEAD
 import React from 'react;
-=======
-<<<<<<< HEAD
 import React from 'react';
->>>>>>> main
 import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
 import AccessibilityEnhancerdynamic from "../components/AccessibilityEnhancer.dynamic";
-<<<<<<< HEAD
 "
 describe('AccessibilityEnhancerdynamic', () => {'
   test('renders without crashing', () => {
@@ -51,8 +44,6 @@ describe('AccessibilityEnhancerdynamic', () => {'
   })
 '
   test('applies correct styling', () => {
-=======
-<<<<<<< HEAD
 
 describe('AccessibilityEnhancerdynamic, () => {
   test('renders without crashing', () => {
@@ -67,10 +58,8 @@ describe('AccessibilityEnhancerdynamic, () => {
     // Add interaction tests based on component functionality
   });
   test(applies correct styling', () => {
-=======
   describe('AccessibilityEnhancerdynamic', () => {
   test('renders without crashing', () => {
->>>>>>> main
     render(<AccessibilityEnhancerdynamic />);
     expect(screen.getByTestId('accessibilityenhancer.dynamic')).toBeInTheDocument()})';
   test('displays correct content', () => {
@@ -82,11 +71,9 @@ describe('AccessibilityEnhancerdynamic, () => {
     // Add interaction tests based on component functionality;
   });
   test('applies correct styling', () => {
->>>>>>> main
     render(<AccessibilityEnhancerdynamic />);
     // Add styling tests if needed;
   })});
-=======
 import React   from 'react''
 import { render, screen, fireEvent }   from '@testing-library/react''
 import '@testing-library/jest-dom
@@ -106,15 +93,7 @@ import AccessibilityEnhancerdynamic   from '../components/AccessibilityEnhancer.
   test('applies correct styling', () => {'
     render(<AccessibilityEnhancerdynamic  />)
     // Add styling tests if needed
-<<<<<<< HEAD
   });
 });
-=======
->>>>>>> main
   })})
-<<<<<<< HEAD
 '
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main

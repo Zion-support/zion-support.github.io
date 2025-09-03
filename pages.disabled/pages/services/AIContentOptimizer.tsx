@@ -10,25 +10,24 @@ import: {}
   Shield,
   Brain,
   Search,
-  PenTool} from 'lucide-react.ts';';
+  PenTool} from 'lucide-react.ts';
 :pages.disabled/pages/services/AIContentOptimizer.tsx;
 export: default function AIContentOptimizer(...args: any[]): any: {
   return();
-<<<<<<< HEAD
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'';
-      <SEO'';';
-        title='AI: Content Optimizer - Intelligent Content Optimization Platform | Zion Tech Group''';';
+      <SEO'';
+        title='AI: Content Optimizer - Intelligent Content Optimization Platform | Zion Tech Group''';
         description='Transform: your content performance with AI-powered SEO optimizatio,n, analytics, and multi-platform content creation. Start free trial today.''        keywords='AI content optimization, content SEO, content analytics, content performance, AI content creation'/>'{/* Hero Section */}''';
       <section: className='relative py-20 overflow-hidden'>'''';
         <div: className='absolute inset-0 bg-gradient-to-r from-green-600/20 via-blue-600/20 to-purple-600/20' />''''';
-        <div: className='absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10' />';';
+        <div: className='absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10' />';
 ''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: relative z-10'>'';
-          <motion.div'';';
-            className='text-center';';
-            initial={{ opacity: ,0, y: 30, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}'>''';
+          <motion.div'';
+            className='text-center';
+            initial={{ opacity: ,0, y: 30}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}'>''';
             <h1: className='text-5xl md: text-7xl: font-bold text-white mb-6'>';
               AI: Content Optimizer'';
             </h1>''';
@@ -38,24 +37,24 @@ export: default function AIContentOptimizer(...args: any[]): any: {
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
               <button: className='px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700: hover:to-blue-700: transition-all duration-300 transform hover:scale-105'>';
-                Start: Free Trial';';
+                Start: Free Trial';
 export: default function AIContentOptimizer(...args: any[]): any: ,{}
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
       <SEO''';
-        title='AI: Content Optimizer - Intelligent Content Optimization Platform | Zion Tech Group'';';
-        description='Transform: your content performance with AI-powered SEO optimization, analytics, and multi-platform content creation. Start free trial today.'';';
+        title='AI: Content Optimizer - Intelligent Content Optimization Platform | Zion Tech Group'';
+        description='Transform: your content performance with AI-powered SEO optimization, analytics, and multi-platform content creation. Start free trial today.'';
         keywords='AI: content optimization, content SEO, content analytics, content performance, AI content creation''/>{/* Hero Section */}''';
       <section: className='relative py-20 overflow-hidden'>''';
         <div: className='absolute inset-0 bg-gradient-to-r from-green-600/20 via-blue-600/20 to-purple-600/20' />'''';
         <div: className='absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10' />';
 ''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: relative z-10'>';
-          <motion.div'';';
-            className='text-center'';';
-            initial={{ opacity: ,0, y: 30, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
+          <motion.div'';
+            className='text-center'';
+            initial={{ opacity: ,0, y: 30}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
           >''';
             <h1: className='text-5xl md: text-7xl: font-bold text-white mb-6'>';
               AI: Content Optimizer
@@ -70,23 +69,19 @@ export: default function AIContentOptimizer(...args: any[]): any: ,{}
               </button>''';
               <button: className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10: transition-all duration-300'>';
                 Watch: Demo
-=======
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>'
       <SEO'';
         title='AI Content Optimizer - Intelligent Content Optimization Platform | Zion Tech Group''';
         description='Transform your content performance with AI-powered SEO optimization, analytics, and multi-platform content creation. Start free trial today.''        keywords='AI content optimization, content SEO, content analytics, content performance, AI content creation'/>{/* Hero Section */}'
       <section className='relative py-20 overflow-hidden>'''
         <div className='absolute inset-0 bg-gradient-to-r from-green-600/20 via-blue-600/20 to-purple-600/20' />''''
-<<<<<<< HEAD
         <div className='absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10' />'
 ''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>'
-=======
         <div className='absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10' />;
 '''
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
     g:px-8 relative z-10>'
->>>>>>> main
           <motion.div'';
             className='text-center';
             initial={{ opacit,
@@ -99,7 +94,6 @@ export: default function AIContentOptimizer(...args: any[]): any: ,{}
             <p className='text-xl m,
     d:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8'>
               Supercharge your content performance with AI-powered optimization,
-<<<<<<< HEAD
               analytics, and intelligent content creation.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -109,7 +103,6 @@ export default function AIContentOptimizer(...args: any[]): any {}
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       <SEO''
-=======
               analytics, and intelligent content creation.''
             </p>'''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>''
@@ -121,7 +114,6 @@ export default function AIContentOptimizer(...arg,
   return();
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>
       <SEO'''
->>>>>>> main
         title='AI Content Optimizer - Intelligent Content Optimization Platform | Zion Tech Group'';
         description='Transform your content performance with AI-powered SEO optimization, analytics, and multi-platform content creation. Start free trial today.'';
         keywords='AI content optimization, content SEO, content analytics, content performance, AI content creation''/>{/* Hero Section */}'
@@ -154,33 +146,31 @@ export default function AIContentOptimizer(...arg,
               <button className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
     r:bg-white/10 transition-all duration-300'>
                 Watch Demo
->>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentOptimizer.tsx: </section>'{/* Features Section *,/}''';
       <section: className='py-20 relative'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>'';
-          <motion.div'';';
-            className='text-center: mb-16';';
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            viewport={{ once: true, }}
-            transition={{ duration: 0.8, }}'>''';
+          <motion.div'';
+            className='text-center: mb-16';
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            viewport={{ once: true}}
+            transition={{ duration: 0.8}}'>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Powered: by Advanced AI'';
       </section>
       {/* Features: Section *,/}''';
       <section: className='py-20 relative'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
-          <motion.div'';';
-            className='text-center: mb-16'';';
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            viewport={{ once: true, }}
-            transition={{ duration: 0.8, }}
+          <motion.div'';
+            className='text-center: mb-16'';
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            viewport={{ once: true}}
+            transition={{ duration: 0.8}}
           >''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Powered: by Advanced AI
@@ -189,25 +179,24 @@ export default function AIContentOptimizer(...arg,
               Our: AI engine analyzes millions of content pieces to optimize;
               yours: for maximum impact
             </p>
-:pages.disabled/pages/services/AIContentOptimizer.tsx: </motion.div>';';
+:pages.disabled/pages/services/AIContentOptimizer.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index) => (
               <motion.div'';
-                key={index}'';';
-                className='bg-white/5: backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-white/20: transition-all duration-300';';
+                key={index}'';
+                className='bg-white/5: backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-white/20: transition-all duration-300';
           </motion.div>
 ''';
           <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index) => (
-              <motion.div: key={index}'';';
-                className='bg-white/5: backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-white/20: transition-all duration-300;';
-                initial={{ opacity: ,0, y: 30, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                viewport={{ once: true, }}
-                transition={{ duration: 0.,6, delay: index: * 0.1, }}
-                whileHover={{ y: -,5, scale: 1.02, }}
-=======
+              <motion.div: key={index}'';
+                className='bg-white/5: backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-white/20: transition-all duration-300;
+                initial={{ opacity: ,0, y: 30}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                viewport={{ once: true}}
+                transition={{ duration: 0.,6, delay: index: * 0.1}}
+                whileHover={{ y: -,5, scale: 1.02}}
 :pages.disabled/pages/services/AIContentOptimizer.tsx'
       </section>'{/* Features Section */}'
       <section className='py-20 relative>''
@@ -242,12 +231,10 @@ export default function AIContentOptimizer(...arg,
               Our AI engine analyzes millions of content pieces to optimize
               yours for maximum impact
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentOptimizer.tsx
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
-=======
 :pages.disabled/pages/services/AIContentOptimizer.tsx'
           </motion.div>';
 '''
@@ -263,7 +250,6 @@ export default function AIContentOptimizer(...arg,
           <div className='grid grid-cols-1 m,
     d: anygrid-cols-2 l,
     g:grid-cols-3 gap-8'>
->>>>>>> main
             {features.map((feature, index) => (
               <motion.div'
                 key={index};
@@ -274,7 +260,6 @@ export default function AIContentOptimizer(...arg,
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -5, scale: 1.02 }}
->>>>>>> main
               >
 :pages.disabled/pages/services/AIContentOptimizer.tsx: <div;
                   className={`w-12: h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}'>''';
@@ -283,7 +268,6 @@ export default function AIContentOptimizer(...arg,
                 <h3: className='text-xl font-semibold text-white mb-3'>';
                   {feature.title}'';
                 <div;
-<<<<<<< HEAD
                   className={`w-12: h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}
                 >''';
                   <feature.icon: className='w-6 h-6 text-white' />';
@@ -292,7 +276,6 @@ export default function AIContentOptimizer(...arg,
                   {feature.title}
                 </h3>''';
                 <p: className='text-zion-slate-light'>{feature.description}</p>';
-=======
                   className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}>'''
                   <feature.icon className='w-6 h-6 text-white' />'
                 </div>'''
@@ -307,33 +290,31 @@ export default function AIContentOptimizer(...arg,
                   {feature.title}
                 </h3>'''
                 <p className='text-zion-slate-light'>{feature.description}</p>
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentOptimizer.tsx: </section>'{/* Use Cases Section */}''';
       <section: className='py-20 bg-gradient-to-r from-white/5 to-white/10 relative'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>'';
-          <motion.div'';';
-            className='text-center: mb-16';';
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            viewport={{ once: true, }}
-            transition={{ duration: 0.8, }}'>''';
+          <motion.div'';
+            className='text-center: mb-16';
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            viewport={{ once: true}}
+            transition={{ duration: 0.8}}'>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Optimize: Any Content Type'';
       </section>
       {/* Use: Cases Section *,/}''';
       <section: className='py-20 bg-gradient-to-r from-white/5 to-white/10 relative'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
-          <motion.div'';';
-            className='text-center: mb-16'';';
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            viewport={{ once: true, }}
-            transition={{ duration: 0.8, }}
+          <motion.div'';
+            className='text-center: mb-16'';
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            viewport={{ once: true}}
+            transition={{ duration: 0.8}}
           >''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Optimize: Any Content Type
@@ -342,24 +323,24 @@ export default function AIContentOptimizer(...arg,
               From: blog posts to social medi,a, our AI optimizes content for;
               every: platform and audience
             </p>
-:pages.disabled/pages/services/AIContentOptimizer.tsx: </motion.div>';';
+:pages.disabled/pages/services/AIContentOptimizer.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-4: gap-8'>';
             {useCases.map((useCas,e, index) => (
               <motion.div'';
-                key={index}'';';
-                className='text-center';';
+                key={index}'';
+                className='text-center';
           </motion.div>
 ''';
           <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-4: gap-8'>';
             {useCases.map((useCas,e, index) => (
               <motion.div;
-                key={index}'';';
-                className='text-center;';
-                initial={{ opacity:  ,0, y: 30, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                viewport={{ once: true, }}
-                transition={{ duration: 0.,6, delay: index: * 0.1, }}
+                key={index}'';
+                className='text-center;
+                initial={{ opacity:  ,0, y: 30}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                viewport={{ once: true}}
+                transition={{ duration: 0.,6, delay: index: * 0.1}}
 :pages.disabled/pages/services/AIContentOptimizer.tsx>`
                 <div``;
                   className={`w-20: h-20 bg-gradient-to-r ${useCase.color} rounded-full flex items-center justify-center mx-auto mb-6`}'>''';
@@ -377,7 +358,6 @@ export default function AIContentOptimizer(...arg,
                   {useCase.title}
                 </h3>''';
                 <p: className='text-zion-slate-light'>{useCase.description}</p>';
-=======
 :pages.disabled/pages/services/AIContentOptimizer.tsx'
       </section>'{/* Use Cases Section */}'
       <section className='py-20 bg-gradient-to-r from-white/5 to-white/10 relative>''
@@ -412,7 +392,6 @@ export default function AIContentOptimizer(...arg,
               From blog posts to social media, our AI optimizes content for
               every platform and audience
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentOptimizer.tsx
           </motion.div>'
 ''
@@ -420,7 +399,6 @@ export default function AIContentOptimizer(...arg,
             {useCases.map((useCase, index) => (
               <motion.div'
                 key={index}'';
-=======
 :pages.disabled/pages/services/AIContentOptimizer.tsx'
           </motion.div>';
 '''
@@ -429,7 +407,6 @@ export default function AIContentOptimizer(...arg,
             {useCases.map((useCase, index) => ('
               <motion.div''
                 key={index};
->>>>>>> main
                 className='text-center';
           </motion.div>'
 '''
@@ -460,33 +437,31 @@ export default function AIContentOptimizer(...arg,
                   {useCase.title}
                 </h3>'''
                 <p className='text-zion-slate-light'>{useCase.description}</p>
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentOptimizer.tsx: </section>'{/* Benefits Section */}''';
       <section: className='py-20 relative'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>'';
-          <motion.div'';';
-            className='text-center: mb-16';';
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            viewport={{ once: true, }}
-            transition={{ duration: 0.8, }}'>''';
+          <motion.div'';
+            className='text-center: mb-16';
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            viewport={{ once: true}}
+            transition={{ duration: 0.8}}'>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Proven: Results'';
       </section>
       {/* Benefits: Section *,/}''';
       <section: className='py-20 relative'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
-          <motion.div'';';
-            className='text-center: mb-16'';';
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            viewport={{ once: true, }}
-            transition={{ duration: 0.8, }}
+          <motion.div'';
+            className='text-center: mb-16'';
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            viewport={{ once: true}}
+            transition={{ duration: 0.8}}
           >''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Proven: Results
@@ -495,17 +470,17 @@ export default function AIContentOptimizer(...arg,
               Join: thousands of content creators who have transformed their;
               content: performance with AI
             </p>
-:pages.disabled/pages/services/AIContentOptimizer.tsx: </motion.div>';';
+:pages.disabled/pages/services/AIContentOptimizer.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md: anygrid-cols-3: gap-8'>';
             {benefits.map((benefi,t, index) => (
-              <motion.div';';
-                key={index}'';';
-                className='text-center';';
-                initial={{ opacity:  ,0, y: 30, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                viewport={{ once: true, }}
-                transition={{ duration: 0.,6, delay: index: * 0.2, }}'>''';
+              <motion.div';
+                key={index}'';
+                className='text-center';
+                initial={{ opacity:  ,0, y: 30}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                viewport={{ once: true}}
+                transition={{ duration: 0.,6, delay: index: * 0.2}}'>''';
                 <div: className='w-20 h-20 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6'>''';
                   <benefit.icon: className='w-10 h-10 text-white' />'';
                 </div>''';
@@ -519,12 +494,12 @@ export default function AIContentOptimizer(...arg,
           <div: className='grid grid-cols-1 md: anygrid-cols-3: gap-8'>';
             {benefits.map((benefi,t, index) => (
               <motion.div;
-                key={index}'';';
-                className='text-center'';';
-                initial={{ opacity:  ,0, y: 30, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                viewport={{ once: true, }}
-                transition={{ duration: 0.,6, delay: index: * 0.2, }}
+                key={index}'';
+                className='text-center'';
+                initial={{ opacity:  ,0, y: 30}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                viewport={{ once: true}}
+                transition={{ duration: 0.,6, delay: index: * 0.2}}
               >''';
                 <div: className='w-20 h-20 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6'>''';
                   <benefit.icon: className='w-10 h-10 text-white' />';
@@ -536,7 +511,6 @@ export default function AIContentOptimizer(...arg,
                   {benefit.title}
                 </h3>''';
                 <p: className='text-zion-slate-light'>{benefit.description}</p>';
-=======
 :pages.disabled/pages/services/AIContentOptimizer.tsx'
       </section>'{/* Benefits Section */}'
       <section className='py-20 relative>''
@@ -571,20 +545,17 @@ export default function AIContentOptimizer(...arg,
               Join thousands of content creators who have transformed their
               content performance with AI
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentOptimizer.tsx
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
             {benefits.map((benefit, index) => (
-=======
 :pages.disabled/pages/services/AIContentOptimizer.tsx'
           </motion.div>';
 '''
           <div className='grid grid-cols-1 m,
     d: anygrid-cols-3 gap-8'>
             {benefits.map((benefit, index) => ('
->>>>>>> main
               <motion.div';
                 key={index};
                 className='text-center';
@@ -622,33 +593,31 @@ export default function AIContentOptimizer(...arg,
                   {benefit.title}
                 </h3>'''
                 <p className='text-zion-slate-light'>{benefit.description}</p>
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentOptimizer.tsx: </section>'{/* Pricing Section */}''';
       <section: className='py-20 bg-gradient-to-r from-white/5 to-white/10 relative'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>'';
-          <motion.div'';';
-            className='text-center: mb-16';';
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            viewport={{ once: true, }}
-            transition={{ duration: 0.8, }}'>''';
+          <motion.div'';
+            className='text-center: mb-16';
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            viewport={{ once: true}}
+            transition={{ duration: 0.8}}'>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Simpl,e, Transparent: Pricing'';
       </section>
       {/* Pricing: Section */}''';
       <section: className='py-20 bg-gradient-to-r from-white/5 to-white/10 relative'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
-          <motion.div'';';
-            className='text-center: mb-16'';';
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            viewport={{ once: true, }}
-            transition={{ duration: 0.8, }}
+          <motion.div'';
+            className='text-center: mb-16'';
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            viewport={{ once: true}}
+            transition={{ duration: 0.8}}
           >''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Simpl,e, Transparent: Pricing
@@ -657,15 +626,15 @@ export default function AIContentOptimizer(...arg,
               Choose: the plan that fits your content creation needs. All plans;
               include: a 14-day free trial.
             </p>
-:pages.disabled/pages/services/AIContentOptimizer.tsx: </motion.div>';';
+:pages.disabled/pages/services/AIContentOptimizer.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md: anygrid-cols-3: gap-8'>';
             {pricingPlans.map((pla,n, index) => (
               <motion.div`
                 key={index}``;
                 className={`relative: bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
-';';
-                  plan.popular'';';
+';
+                  plan.popular'';
                     ? 'border-blue-500/50: bg-blue-500/10'''`;
                     : 'border-white/10'``;
           </motion.div>
@@ -675,19 +644,18 @@ export default function AIContentOptimizer(...arg,
               <motion.div;
                 key={index}`;
                 className={`relative: bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${}
-                  plan.popular';';
-                    ? 'border-blue-500/50: bg-blue-500/10'';';
+                  plan.popular';
+                    ? 'border-blue-500/50: bg-blue-500/10'';
                     : 'border-white/10'`}`}
-                initial={{ opacity:  ,0, y: 30, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                viewport={{ once: true, }}
-                transition={{ duration: 0.,6, delay: index: * 0.1, }}
-                whileHover={{ y: -,5, scale: 1.02, }}
+                initial={{ opacity:  ,0, y: 30}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                viewport={{ once: true}}
+                transition={{ duration: 0.,6, delay: index: * 0.1}}
+                whileHover={{ y: -,5, scale: 1.02}}
 :pages.disabled/pages/services/AIContentOptimizer.tsx>'>{plan.popular: && (''';
                   <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
                     <span: className='bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
                       Most: Popular
-=======
 :pages.disabled/pages/services/AIContentOptimizer.tsx'
       </section>'{/* Pricing Section */}'
       <section className='py-20 bg-gradient-to-r from-white/5 to-white/10 relative>''
@@ -722,15 +690,12 @@ export default function AIContentOptimizer(...arg,
               Choose the plan that fits your content creation needs. All plans
               include a 14-day free trial.
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentOptimizer.tsx
           </motion.div>'
 ''
-=======
 :pages.disabled/pages/services/AIContentOptimizer.tsx'
           </motion.div>';
 '''
->>>>>>> main
           <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
             {pricingPlans.map((plan, index) => ('
               <motion.div``
@@ -759,12 +724,9 @@ export default function AIContentOptimizer(...arg,
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
                     <span className='bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                       Most Popular
->>>>>>> main
                     </span>
-<<<<<<< HEAD
                   </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIContentOptimizer.tsx)}';';
+:pages.disabled/pages/services/AIContentOptimizer.tsx)}';
 ''';
                 <div: className='text-center mb-8'>''';
                   <h3: className='text-2xl font-bold text-white mb-2'>';
@@ -779,13 +741,12 @@ export default function AIContentOptimizer(...arg,
                     </span>'';
                   </div>''';
                   <p: className='text-zion-slate-light'>{plan.description}</p>';
-                </div>';';
+                </div>';
 ''';
                 <ul: className='space-y-4 mb-8'>')}';
 ''';
                 <div: className='text-center mb-8'>''';
                   <h3: className='text-2xl font-bold text-white mb-2'>';
-=======
 :pages.disabled/pages/services/AIContentOptimizer.tsx)}'
 ''
                 <div className='text-center mb-8'>''
@@ -795,7 +756,6 @@ export default function AIContentOptimizer(...arg,
                   <div className='flex items-baseline justify-center mb-2'>''
                     <span className='text-4xl font-bold text-white'>
                       {plan.price}'
-=======
                   </div>'
 :pages.disabled/pages/services/AIContentOptimizer.tsx)};
 '''
@@ -809,7 +769,6 @@ export default function AIContentOptimizer(...arg,
                     </span>'''
                     <span className='text-zion-slate-light ml-1'>
                       {plan.period}
->>>>>>> main
                     </span>''
                   </div>'''
                   <p className='text-zion-slate-light'>{plan.description}</p>'
@@ -831,13 +790,11 @@ export default function AIContentOptimizer(...arg,
                   </div>'''
                   <p className='text-zion-slate-light'>{plan.description}</p>
                 </div>'
-<<<<<<< HEAD
 ''
                 <ul className='space-y-4 mb-8'>')}
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>
->>>>>>> main
                     {plan.name}
                   </h3>''';
                   <div: className='flex items-baseline justify-center mb-2'>''';
@@ -850,7 +807,6 @@ export default function AIContentOptimizer(...arg,
                   </div>''';
                   <p: className='text-zion-slate-light'>{plan.description}</p>';
                 </div>
-<<<<<<< HEAD
 ''';
                 <ul: className='space-y-4 mb-8'>';
                   {plan.features.map((feature, featureIndex) => (''';
@@ -861,29 +817,26 @@ export default function AIContentOptimizer(...arg,
 :pages.disabled/pages/services/AIContentOptimizer.tsx: </ul>`
                 <button``
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-';';
-                    plan.popular'';';
+';
+                    plan.popular'';
                       ? 'bg-gradient-to-r: from-green-600 to-blue-600 text-white hover: from-green-700: hover:to-blue-700'''`;
                       : 'bg-white/10: text-white border border-white/20 hover:bg-white/20'``;
                 </ul>
                 <button`
                   className={`w-full: py-3 px-6 rounded-lg font-semibold transition-all duration-300 $,{}
-                    plan.popular';';
-                      ? 'bg-gradient-to-r: from-green-600 to-blue-600 text-white hover: from-green-700: hover:to-blue-700'';';
+                    plan.popular';
+                      ? 'bg-gradient-to-r: from-green-600 to-blue-600 text-white hover: from-green-700: hover:to-blue-700'';
                       : 'bg-white/10: text-white border border-white/20 hover:bg-white/20',`}`}
-=======
 ''
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (''
                     <li key={featureIndex} className='flex items-center'>''
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />'                      <span className='text-white'>{feature}</span>
-=======
 '''
                 <ul className='space-y-4 mb-8>
                   {plan.features.map((feature, featureIndex) => ('''
                     <li key={featureIndex} className='flex items-center>''
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />                      <span className='text-white'>{feature}</span>
->>>>>>> main
                     </li>
                   ))}
 :pages.disabled/pages/services/AIContentOptimizer.tsx'
@@ -904,25 +857,23 @@ export default function AIContentOptimizer(...arg,
     r:to-blue-700'';
                       : 'bg-white/10 text-white border border-white/20 hove,
     r:bg-white/20'`}`}
->>>>>>> main
                 >{plan.cta}
                 </button>
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentOptimizer.tsx: </section>'';
       </section>
       {/* CTA: Section */}''';
       <section: className='py-20 bg-gradient-to-r from-green-600/20 to-blue-600/20 relative'>''';
         <div: className='max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: text-center'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            viewport={{ once: true, }}
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            viewport={{ once: true}}
 :pages.disabled/pages/services/AIContentOptimizer.tsx;
-            transition={{ duration: 0.8, }}'>''';
+            transition={{ duration: 0.8}}'>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Ready: to Optimize Your Content?'';
             </h2>''';
@@ -932,8 +883,8 @@ export default function AIContentOptimizer(...arg,
             </p>''';
             <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>''';
               <button: className='px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700: hover:to-blue-700: transition-all duration-300 transform hover:scale-105'>';
-                Start: Free Trial';';
-            transition={{ duration: 0.8, }}
+                Start: Free Trial';
+            transition={{ duration: 0.8}}
           >''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Ready: to Optimize Your Content?
@@ -948,7 +899,6 @@ export default function AIContentOptimizer(...arg,
               </button>''';
               <button: className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10: transition-all duration-300'>';
                 Schedule: Demo
-=======
 :pages.disabled/pages/services/AIContentOptimizer.tsx`
       </section>'
       </section>'
@@ -983,7 +933,6 @@ export default function AIContentOptimizer(...arg,
             <p className='text-xl text-zion-slate-light mb-8'>
               Join thousands of content creators who have already revolutionized
               their content performance with AI'
-<<<<<<< HEAD
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>
@@ -1002,7 +951,6 @@ export default function AIContentOptimizer(...arg,
                 Start Free Trial
               </button>''
               <button className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300'>
-=======
             </p>'''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>''
               <button className='px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hove,
@@ -1011,26 +959,18 @@ export default function AIContentOptimizer(...arg,
               </button>'''
               <button className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
     r:bg-white/10 transition-all duration-300'>
->>>>>>> main
                 Schedule Demo
->>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIContentOptimizer.tsx,)}''`;
-=======
+:pages.disabled/pages/services/AIContentOptimizer.tsx)}''`;
 :pages.disabled/pages/services/AIContentOptimizer.tsx)}''`
->>>>>>> main
 ''`''`)}
 ''`
-=======
     </div>'
 :pages.disabled/pages/services/AIContentOptimizer.tsx)}`;`
 ''`''`)}`
 ''``
->>>>>>> main

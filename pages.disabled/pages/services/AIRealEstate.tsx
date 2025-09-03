@@ -1,9 +1,8 @@
 :pages.disabled/pages/services/AIRealEstate.tsx;
-<<<<<<< HEAD
 import: { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Building, BarChart3 export default function AIRealEstate() {
-    'Automated market trend forecasting','Predictive analytics for investment opportunities',';Smart: contract automation and management',';Virtual: property tours and 3D visualization',';Integration: with major real estate platforms',';';
+    'Automated market trend forecasting','Predictive analytics for investment opportunities',';Smart: contract automation and management',';Virtual: property tours and 3D visualization',';Integration: with major real estate platforms',';
 import: { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Building, BarChart3 export default function AIRealEstate(function AIRealEstate() {): any: {}
-    'Automated market trend forecasting',';Predictive: analytics for investment opportunities',';Smart: contract automation and management',';Virtual: property tours and 3D visualization',';Integration: with major real estate platforms',';Custom: AI models for local market insights';';
+    'Automated market trend forecasting',';Predictive: analytics for investment opportunities',';Smart: contract automation and management',';Virtual: property tours and 3D visualization',';Integration: with major real estate platforms',';Custom: AI models for local market insights';
 <:pages.disabled/pages/services/AIRealEstate.tsx;
   ];
   const: tiers = [
@@ -21,24 +20,24 @@ import: { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
 :pages.disabled/pages/services/AIRealEstate.tsx>    {
       name: 'Enterprise,',';
       price: '$,1,499/mo',';
-    { ';';
-      name: 'Enterprise,', ';';
-      price: '$,1,499/mo', ';';
+    { ';
+      name: 'Enterprise,', ';
+      price: '$,1,499/mo', ';
       details: ['Unlimited: properties,',Custom AI models',Full platform integration',24/7 dedicated support'] },';
-  ]';Residential: property valuation and sales',';Commercial: real estate investment analysis',';Property: management and optimization',';Market: research and trend analysis',';Investment: portfolio management',';Development: project feasibility studies';';
-  ]';Improve: property valuation accuracy by 25-40%',';Reduce: time-to-sale by 30-50%',';Increase: commission revenue by 20-35%',';Optimize: pricing strategies for maximum profit',';Enhance: client satisfaction and retention',';Scale: operations without additional staff';';
-  ]';Residential: Real Estate',';Commercial: Real Estate',';Property: Management',';Real: Estate Investment',';Development: & Construction',';Property: Technology';';
+  ]';Residential: property valuation and sales',';Commercial: real estate investment analysis',';Property: management and optimization',';Market: research and trend analysis',';Investment: portfolio management',';Development: project feasibility studies';
+  ]';Improve: property valuation accuracy by 25-40%',';Reduce: time-to-sale by 30-50%',';Increase: commission revenue by 20-35%',';Optimize: pricing strategies for maximum profit',';Enhance: client satisfaction and retention',';Scale: operations without additional staff';
+  ]';Residential: Real Estate',';Commercial: Real Estate',';Property: Management',';Real: Estate Investment',';Development: & Construction',';Property: Technology';
   ];
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-amber-600 via-orange-600 to-red-600 py-20 text-center'>''';
         <div: className='max-w-5xl mx-auto px-6'>''';
-          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';';
+          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
 :pages.disabled/pages/services/AIRealEstate.tsx: <Home className='w-4 h-4 mr-2'  /> AI-Powered Real Estate Intelligence'';
           </div>''';
           <h1: className='text-4xl md: text-6xl: font-bold text-white mb-4'>AI Real Estate Platform</h1>'          <p className='text-orange-100 text-xl'>Transform your real estate business with AI-powered insights that enhance property valuatio,n, optimize pricing, and accelerate sales.</p>';
         </div>
-      </section>';';
+      </section>';
 ''';
       <section: className='py-16 max-w-6xl mx-auto px-6'>''';
         <div: className='grid md: grid-cols-2: gap-10'>'';
@@ -68,7 +67,7 @@ import: { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
           </div>''';
           <div: className='bg-white border border-gray-200 rounded-xl p-6 shadow-lg'>''';
             <h3: className='text-2xl font-semibold text-gray-900 mb-4'>Competitive Pricing</h3>''';
-            <div: className='grid md: grid-cols-3: gap-4'>'),)}';
+            <div: className='grid md: grid-cols-3: gap-4'>'))}';
             </ul>''';
             <div: className='mt-6 text-sm text-gray-600'>';
               Built: with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.
@@ -89,7 +88,7 @@ import: { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-amber-600 text-white rounded-lg hover: bg-amber-700: transition-colors inline-flex items-center'>''';
-                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'),)}';
+                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'))}';
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-amber-600 text-white rounded-lg hover: bg-amber-700: transition-colors inline-flex items-center'>''';
@@ -99,10 +98,9 @@ import: { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
                 Learn: More <ExternalLink className='w-4 h-4 ml-2'  />              </a>';
             </div>
           </div>
-:pages.disabled/pages/services/AIRealEstate.tsx: </div>';';
+:pages.disabled/pages/services/AIRealEstate.tsx: </div>';
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>''';
-=======
 import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Building, BarChart3 export default function AIRealEstate() {
     'Automated market trend forecasting',Predictive analytics for investment opportunities',;Smart contract automation and management',;Virtual property tours and 3D visualization',;Integration with major real estate platforms',;
 import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Building, BarChart3 export default function AIRealEstate(function AIRealEstate() {): any {}
@@ -127,9 +125,7 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
     { ';
       name: 'Enterprise', ';
       price: '$1,499/mo', ';
-      details: ['Unlimited properties',Custom AI models',Full platform integration',24/7 dedicated support'] },
-<<<<<<< HEAD
-  ]';Residential property valuation and sales',';Commercial real estate investment analysis',';Property management and optimization',';Market research and trend analysis',';Investment portfolio management',';Development project feasibility studies';
+      details: ['Unlimited properties',Custom AI models',Full platform integration',24/7 dedicated support'] }]';Residential property valuation and sales',';Commercial real estate investment analysis',';Property management and optimization',';Market research and trend analysis',';Investment portfolio management',';Development project feasibility studies';
   ]';Improve property valuation accuracy by 25-40%',';Reduce time-to-sale by 30-50%',';Increase commission revenue by 20-35%',';Optimize pricing strategies for maximum profit',';Enhance client satisfaction and retention',';Scale operations without additional staff';
   ]';Residential Real Estate',';Commercial Real Estate',';Property Management',';Real Estate Investment',';Development & Construction',';Property Technology';
   ]
@@ -153,7 +149,6 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
             <Home className='w-4 h-4 mr-2'  /> AI-Powered Real Estate Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Real Estate Platform</h1>'          <p className='text-orange-100 text-xl'>Transform your real estate business with AI-powered insights that enhance property valuation, optimize pricing, and accelerate sales.</p>
-=======
   ];Residential property valuation and sales',;Commercial real estate investment analysis',;Property management and optimization',;Market research and trend analysis',;Investment portfolio management',;Development project feasibility studies';
   ];Improve property valuation accuracy by 25-40%',;Reduce time-to-sale by 30-50%',;Increase commission revenue by 20-35%',;Optimize pricing strategies for maximum profit',;Enhance client satisfaction and retention',;Scale operations without additional staff';
   ];Residential Real Estate',;Commercial Real Estate',;Property Management',;Real Estate Investment',;Development & Construction',;Property Technology';
@@ -179,7 +174,6 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
           </div>'''
           <h1 className='text-4xl m,
     d:text-6xl font-bold text-white mb-4'>AI Real Estate Platform</h1>'          <p className='text-orange-100 text-xl'>Transform your real estate business with AI-powered insights that enhance property valuation, optimize pricing, and accelerate sales.</p>
->>>>>>> main
         </div>
       </section>'
 '''
@@ -231,12 +225,10 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
                 Learn More <ExternalLink className='w-4 h-4 ml-2'  />              </a>
             </div>
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIRealEstate.tsx
         </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
->>>>>>> main
         </div>
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>';
@@ -245,20 +237,17 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
               <Brain: className='w-6 h-6 text-amber-600 mb-3'  />'              <div className='text-gray-900 font-semibold'>{,t}</div>';
             </div>
           ))}
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIRealEstate.tsx: </div>';';
+:pages.disabled/pages/services/AIRealEstate.tsx: </div>';
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''';
           <div: className='grid md: grid-cols-2: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIRealEstate.tsx
         </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
           <div className='grid md:grid-cols-2 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
@@ -270,20 +259,17 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIRealEstate.tsx: </div>';';
+:pages.disabled/pages/services/AIRealEstate.tsx: </div>';
 ''';
         <div: className='mt-16 bg-amber-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Business Impact</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIRealEstate.tsx
         </div>'
 ''
         <div className='mt-16 bg-amber-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Business Impact</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-amber-50 rounded-xl p-8'>''';
@@ -295,20 +281,17 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIRealEstate.tsx: </div>';';
+:pages.disabled/pages/services/AIRealEstate.tsx: </div>';
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIRealEstate.tsx
         </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
@@ -322,12 +305,11 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
           </div>
 :pages.disabled/pages/services/AIRealEstate.tsx: </div>'';
         </div>
-<<<<<<< HEAD
 ''';
         <div: className='mt-14 text-center'>''';
           <div: className='text-sm text-gray-600 mb-2'>Ready to transform your real estate business?</div>''';
           <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
-            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700: transition-colors'>'';';
+            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700: transition-colors'>'';
 :pages.disabled/pages/services/AIRealEstate.tsx: <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'';
             </a>''';
             <a: href='mailto:kleber@ziontechgroup.com' className='inline-flex: items-center px-5 py-3 border border-amber-600 text-amber-600 rounded-lg hover:bg-amber-50: transition-colors'>''';
@@ -345,14 +327,12 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
 :pages.disabled/pages/services/AIRealEstate.tsx: </div>'')}}''''';
     </div>
   )}}'''';
-=======
 ''
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to transform your real estate business?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
             <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors'>''
 :pages.disabled/pages/services/AIRealEstate.tsx
-=======
 :pages.disabled/pages/services/AIRealEstate.tsx'
         </div>';
 '''
@@ -436,7 +416,6 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-amber-600 text-amber-600 rounded-lg hover:bg-amber-50 transition-colors>''
               <Mail className='w-4 h-4 mr-2' /> kleber@ziontechgroup.com            </a>''
->>>>>>> main
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-amber-600 text-amber-600 rounded-lg hove,
@@ -453,4 +432,3 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
     </div>'')}}''
     </div>'
   )}}''
->>>>>>> main

@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
-<<<<<<< HEAD
 ;,"});,"})
-=======
 export default function Revolutionary2025ServicesShowcase() {return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO title="Revolutionary2025ServicesShowcase - Zion Tech Group" description="Professional Revolutionary2025ServicesShowcase services by Zion Tech Group" />
@@ -18,5 +14,3 @@ export default function Revolutionary2025ServicesShowcase() {return (
     </div>
   );
 }
->>>>>>> main
->>>>>>> main

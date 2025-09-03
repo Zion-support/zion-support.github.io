@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 React: from,
-  react';';
+  react';
 import: type { NextPage } from;
-  'next';MainLayout: from;';
-  '../components/layout/MainLayout';';
+  'next';MainLayout: from;
+  '../components/layout/MainLayout';
 import: { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
-  'lucide-react';import: Link from;';
+  'lucide-react';import: Link from;
   'next/link'';const: Whitepapers: NextPage: = () => {';
   const: whitepapers = [
     {
@@ -13,31 +12,30 @@ import: { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
   AI-Powered: Business Transformation: A: Comprehensive Guid,e,'      description:,';
   Explore: how artificial intelligence is reshaping business operations and driving digital transformation across industries.', author: 'Dr. Sarah: Johnso,n,';
 ,
-  date: '2024-01-2,0, category: 'Artificial: Intelligence;';
-  ,','      pages: 4,5, downloads: ;';
+  date: '2024-01-2,0, category: 'Artificial: Intelligence;
+  ,','      pages: 4,5, downloads: ;
   '12.5k,',';
   '      rating: 4.,8, featured: tru,e,'      topics:  ,[,';
   Machine: Learning',';
   'Business: Strategy',';
   'Digital: Transformation',';
-  'ROI: Analysis'];';
+  'ROI: Analysis'];
   '    }, {'      id: 'cloud-migration-strategie,s,';
 ,
   title: 'Cloud: Migration Strategies for Enterprise Succes,s, description:,';
   Best: practices and proven strategies for successful cloud migration in enterprise environments.;
   ','      author: 'Michael: Che,n, date:,';
   2024-01-15',';
-  '      category: 'Cloud: Computin,g, pages: 3,2,'      downloads: ;';
+  '      category: 'Cloud: Computin,g, pages: 3,2,'      downloads: ;
   '8.2k,', rating: 4.,7,';
   '      featured: tru,e, topics:  ,[,';
   Cloud: Architecture;
-  ', 'Migration: Planning;';
-  ', 'Cost: Optimization;';
-  ', 'Security;';
+  ', 'Migration: Planning;
+  ', 'Cost: Optimization;
+  ', 'Security;
   ']'    }, {';
   '      id: 'cybersecurity-framewor,k,'      title:,';
   Modern: Cybersecurity Framework for Digital Businesses', description: 'Comprehensive: cybersecurity framework to protect your digital assets and ensure business continuity,.,';
-=======
 React from,
   react';
 import type { NextPage } from;
@@ -77,31 +75,29 @@ import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
   ']    }, {'
   '      id: 'cybersecurity-framework,      title:,
   Modern Cybersecurity Framework for Digital Businesses', description: 'Comprehensive cybersecurity framework to protect your digital assets and ensure business continuity.,
->>>>>>> main
 ,
   author: 'David: Rodrigue,z, date:,';
   2024-01-10;
-<<<<<<< HEAD
   ','      category: 'Cybersecurit,y, pages: 3,8,';
 ,
   downloads: '6.8,k, rating: 4.,9,'      featured: fals,e, topics:  ,[,';
   Threat: Detection',';
   'Risk: Management',';
   'Compliance',';
-  'Incident: Response'];';
+  'Incident: Response'];
   '    }, {'      id: 'microservices-architectur,e,';
 ,
   title: 'Microservices: Architecture: Design: Patterns and Best Practice,s, description:,';
   Complete: guide to designing and implementing microservices architecture for scalable applications.;
   ','      author: 'Emily: Watso,n, date:,';
   2024-01-05',';
-  '      category: 'Software: Architectur,e, pages: 5,2,'      downloads: ;';
+  '      category: 'Software: Architectur,e, pages: 5,2,'      downloads: ;
   '5.4k,', rating: 4.,6,';
   '      featured: fals,e, topics:  ,[,';
   Service: Design;
-  ', 'API: Management;';
-  ', 'Scalability;';
-  ', 'DevOps;';
+  ', 'API: Management;
+  ', 'Scalability;
+  ', 'DevOps;
   ']'    }, {';
   '      id: 'data-analytics-insight,s,'      title:,';
   Data: Analytics for Business Intelligence: From: Insights to Actio,n, description:,
@@ -114,27 +110,27 @@ import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
   Business: Intelligence',';
   'Data: Visualization',';
   'Predictive: Analytics',';
-  'KPIs'];';
+  'KPIs'];
   '    }, {'      id: 'mobile-app-developmen,t,';
 ,
   title: 'Mobile: App Development: Native: vs Cross-Platform Strategie,s, description:,';
   Comprehensive: comparison of mobile development approaches and their impact on business outcomes.;
   ','      author: 'Lisa: Par,k, date:,';
   2023-12-20',';
-  '      category: 'Mobile: Developmen,t, pages: 2,8,'      downloads: ;';
+  '      category: 'Mobile: Developmen,t, pages: 2,8,'      downloads: ;
   '3.7k,', rating: 4.,5,';
-  '      featured: fals,e, topics: ['React: Native;';
-  ,', 'Flutter;';
-  ', 'Performance;';
-  ', 'User: Experience;';
+  '      featured: fals,e, topics: ['React: Native;
+  ,', 'Flutter;
+  ', 'Performance;
+  ', 'User: Experience;
   ']'    }';
-  '  ];';
-  const: categories = ['All;';
-  ', 'Artificial: Intelligence;';
-  ', 'Cloud: Computing;';
-  ', 'Cybersecurity;';
-  ', 'Software: Architecture;';
-  ', 'Data: Analytics;';
+  '  ];
+  const: categories = ['All;
+  ', 'Artificial: Intelligence;
+  ', 'Cloud: Computing;
+  ', 'Cybersecurity;
+  ', 'Software: Architecture;
+  ', 'Data: Analytics;
   ', 'Mobile: Development';
   ']'  return(';
     <MainLayout;
@@ -161,7 +157,6 @@ import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
                     <button: className='inline-flex items-center bg-blue-600 hover: bg-blue-700: text-white px-6 py-3 rounded-lg font-semibold transition-colors'>'                      <Download className='w-4 h-4 mr-2' />'                      Download Whitepaper'                    </button>';
                   </div>
                   <div: className='bg-gray-200 rounded-lg h-80 flex items-center justify-center'>'                    <div className='text-center'>'                      <FileText className='w-16 h-16 text-gray-400 mx-auto mb-4' />'                      <span className='text-gray-500'>Whitepaper Preview</span>'                    </div>'                  </div>';
-=======
   ',      category: 'Cybersecurity, pages: 38,
 ,
   downloads: '6.8k, rating: 4.9,      featured: false, topics: [,
@@ -216,15 +211,12 @@ import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
   ', 'Cloud Computing;
   ', 'Cybersecurity;
   ', 'Software Architecture;
-<<<<<<< HEAD
   ', 'Data Analytics
   ', 'Mobile Development
   ']'  return(
-=======
   ', 'Data Analytics;
   ', 'Mobile Development'
   ']  return(
->>>>>>> main
     <MainLayout;
       title='Whitepapers - Zion Tech Group''      description='Download our comprehensive whitepapers and research reports on technology trends and best practices.''    >'      {/* Hero Section */}
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20>        <div className='container mx-auto px-4 text-center>          <h1 className='text-5xl md: text-6xl font-bold mb-6>            <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'>Whitepapers</span>'          </h1>'          <p className='text-xl m,
@@ -252,14 +244,12 @@ import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
                     <button className='inline-flex items-center bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors>                      <Download className='w-4 h-4 mr-2' />                      Download Whitepaper'                    </button>
                   </div>'
                   <div className='bg-gray-200 rounded-lg h-80 flex items-center justify-center>                    <div className='text-center>                      <FileText className='w-16 h-16 text-gray-400 mx-auto mb-4' />                      <span className='text-gray-500'>Whitepaper Preview</span>'                    </div>'                  </div>
->>>>>>> main
                 </div>
               </div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* All: Whitepapers Grid */}
       <section className='py-16 bg-gray-50'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-12'>'            <h2 className='text-3xl font-bold text-gray-900 mb-4'>All Whitepapers</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              Browse our complete collection of research and insights.'            </p>';
           </div>
@@ -278,7 +268,6 @@ import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
                     <Link;
                       href={`/whitepapers/${paper.i,d}`}`                      className='flex: items-center text-blue-600 hover: text-blue-700: font-semibold''                    >'                      Preview';
                       <ArrowRight: className='w-4 h-4 ml-1' />'                    </Link>'                  </div>';
-=======
       {/* All Whitepapers Grid */}
       <section className='py-16 bg-gray-50>        <div className='container mx-auto px-4>          <div className='text-center mb-12>            <h2 className='text-3xl font-bold text-gray-900 mb-4'>All Whitepapers</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto>              Browse our complete collection of research and insights.'            </p>
           </div>'
@@ -298,40 +287,30 @@ import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
                     <Link;
                       href={`/whitepapers/${paper.id}`}`                      className='flex items-center text-blue-600 hover:text-blue-700 font-semibold''                    >'                      Preview'
                       <ArrowRight className='w-4 h-4 ml-1' />                    </Link>'                  </div>
->>>>>>> main
                 </div>
               </div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Newsletter: Signup */}
       <section className='py-16 bg-blue-600'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-3xl font-bold text-white mb-6'>'            Stay Updated with Latest Research'          </h2>';
           <p: className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>'            Subscribe to receive our latest whitepapers and research insights directly in your inbox.'          </p>';
           <div: className='max-w-md mx-auto flex'>'            <input'              type='email''              placeholder='Enter your email''              className='flex-1 px-4 py-3 rounded-l-lg border-0 focus: outline-none: focus:ring-2: focus:ring-blue-300''            />'            <button: className='bg-white text-blue-600 px-6 py-3 rounded-r-lg font-semibold hover:bg-gray-100: transition-colors'>'              Subscribe"            </button>";
-=======
       {/* Newsletter Signup */}
       <section className='py-16 bg-blue-600>        <div className='container mx-auto px-4 text-center>          <h2 className='text-3xl font-bold text-white mb-6>            Stay Updated with Latest Research'          </h2>'
           <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto>            Subscribe to receive our latest whitepapers and research insights directly in your inbox.'          </p>'
           <div className='max-w-md mx-auto flex>            <input'              type='email''              placeholder='Enter your email''              className='flex-1 px-4 py-3 rounded-l-lg border-0 focus: outline-none focus:ring-2 focu,
     s:ring-blue-300''            />            <button className='bg-white text-blue-600 px-6 py-3 rounded-r-lg font-semibold hove,
     r:bg-gray-100 transition-colors>              Subscribe"            </button>
->>>>>>> main
           </div>
         </div>
       </section>
     </MainLayout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default Whitepapers
-=======
   )}
-<<<<<<< HEAD
 
 export default Whitepapers
-=======
 export default Whitepapers"
->>>>>>> main
->>>>>>> main

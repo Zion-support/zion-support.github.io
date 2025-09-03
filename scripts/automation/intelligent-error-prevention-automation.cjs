@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
-=======
 #!/'usr/bin/env' node;
 
->>>>>>> main
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
@@ -31,22 +28,18 @@ class IntelligentErrorPreventionAutomation {;
     this.fileWatchers = new Map();
     this.errorHistory = new Map();
     this.fixHistory = new Map();
-<<<<<<< HEAD
     
     // Ensure reports directory exists;
     if (!fs.existsSync(this.reportsDir)) {
-=======
     ;
     // Ensure reports directory exists;
     if (!fs.existsSync(this.reportsDir)) {;
->>>>>>> main
       fs.mkdirSync(this.reportsDir, { recursive: true });
     }
   }
 ;
   log(message, level = 'info') {;
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     const levelEmoji = {
       info: 'ℹ️',
       success: '✅',
@@ -129,7 +122,6 @@ class IntelligentErrorPreventionAutomation {;
         }
         
       } catch (error) {  this.log(`Error processing ${file  }: ${error.message}`, `warning`);
-=======
     const levelEmoji = {;
       info: 'ℹ️',;
       success: '✅',;
@@ -212,12 +204,10 @@ class IntelligentErrorPreventionAutomation {;
         }
         ;
       } catch (error) {this.log(`Error processing ${file}: ${error.message}`, 'warning');
->>>>>>> main
       }
     }
     this.log(`Fixed ${errorsFixed} TypeScript errors`, `success`);
   }
-<<<<<<< HEAD
 
   async scanAndFixJSXErrors() {
     this.log(`Scanning for JSX errors...`, 'info');
@@ -246,7 +236,6 @@ class IntelligentErrorPreventionAutomation {;
         }
         
       } catch (error) {  this.log(`Error processing ${file  }: ${error.message}`, `warning`);
-=======
 ;
   async scanAndFixJSXErrors() {;
     this.log('Scanning for JSX errors...', 'info');
@@ -275,22 +264,18 @@ class IntelligentErrorPreventionAutomation {;
         }
         ;
       } catch (error) {this.log(`Error processing ${file}: ${error.message}`, 'warning');
->>>>>>> main
       }
     }
     this.log(`Fixed ${errorsFixed} JSX errors`, `success`);
   }
-<<<<<<< HEAD
 
   async scanAndFixBuildConfig() {
     this.log(`Scanning for build configuration issues...`, 'info');
     
-=======
 ;
   async scanAndFixBuildConfig() {;
     this.log('Scanning for build configuration issues...', 'info');
     ;
->>>>>>> main
     const configFiles = ['tsconfig.json', 'vite.config.ts', 'package.json'];
     let configsFixed = 0;
     ;
@@ -300,19 +285,15 @@ class IntelligentErrorPreventionAutomation {;
           const content = fs.readFileSync(configFile, 'utf8');
           const originalContent = content;
           let fixedContent = content;
-<<<<<<< HEAD
           
           // Fix common config issues;
           if (configFile === 'tsconfig.json') {
-=======
           ;
           // Fix common config issues;
           if (configFile === 'tsconfig.json') {;
->>>>>>> main
             fixedContent = this.fixTypeScriptConfig(fixedContent);
           } else if (configFile === 'vite.config.ts') {;
             fixedContent = this.fixViteConfig(fixedContent);
-<<<<<<< HEAD
           } else if (configFile === `package.json`) {
             fixedContent = this.fixPackageJson(fixedContent);
           }
@@ -323,7 +304,6 @@ class IntelligentErrorPreventionAutomation {;
           }
           
         } catch (error) {  this.log(`Error processing ${configFile  }: ${error.message}`, `warning`);
-=======
           } else if (configFile === 'package.json') {;
             fixedContent = this.fixPackageJson(fixedContent);
           }
@@ -334,13 +314,11 @@ class IntelligentErrorPreventionAutomation {;
           }
           ;
         } catch (error) {this.log(`Error processing ${configFile}: ${error.message}`, 'warning');
->>>>>>> main
         }
       }
     }
     this.log(`Fixed ${configsFixed} configuration files`, `success`);
   }
-<<<<<<< HEAD
 
   async attemptBuildAndFix() {
     this.log(`Attempting build to check for remaining errors...`, 'info');
@@ -360,7 +338,6 @@ class IntelligentErrorPreventionAutomation {;
       // Try building again;
       try {
         execSync('npm run build', { stdio: 'pipe'   });
-=======
 ;
   async attemptBuildAndFix() {;
     this.log('Attempting build to check for remaining errors...', 'info');
@@ -380,7 +357,6 @@ class IntelligentErrorPreventionAutomation {;
       // Try building again;
       try {;
         execSync('npm run build', { stdio: 'pipe' });
->>>>>>> main
         this.log('Build errors fixed successfully!', 'success');
         return true;
       } catch (retryError) {;
@@ -389,7 +365,6 @@ class IntelligentErrorPreventionAutomation {;
       }
     }
   }
-<<<<<<< HEAD
 
   async fixBuildErrorsFromOutput(errorOutput) {
     // Parse common build error patterns;
@@ -400,7 +375,6 @@ class IntelligentErrorPreventionAutomation {;
       }, `{
         pattern: /Unexpected "export"/g', 'fix: () => {
           this.log('Fixing export syntax issues'', 'fix');
-=======
 ;
   async fixBuildErrorsFromOutput(errorOutput) {;
     // Parse common build error patterns;
@@ -411,7 +385,6 @@ class IntelligentErrorPreventionAutomation {;
       }, '{;
         pattern: /Unexpected "export"/g', 'fix: () => {;
           this.log('Fixing export syntax issues', 'fix');
->>>>>>> main
           // This would need file-specific context to fix properly;
         }
       }];
@@ -435,7 +408,6 @@ class IntelligentErrorPreventionAutomation {;
       }
     }
   }
-<<<<<<< HEAD
 
   watchDirectory(dirPath) {
     const watcher = fs.watch(dirPath', { recursive: true }, (eventType, filename) => {
@@ -447,7 +419,6 @@ class IntelligentErrorPreventionAutomation {;
           this.fixFileErrors(path.join(dirPath, `filename));
         }`, 1000);
         
-=======
 ;
   watchDirectory(dirPath) {;
     const watcher = fs.watch(dirPath', { recursive: true }, (eventType, filename) => {;
@@ -459,13 +430,11 @@ class IntelligentErrorPreventionAutomation {;
           this.fixFileErrors(path.join(dirPath, 'filename));
         }', 1000);
         ;
->>>>>>> main
         this.fileWatchers.set(filename, timeout);
       }
     });
     this.log(`Watching directory: ${dirPath}`, `info`);
   }
-<<<<<<< HEAD
 
   async fixFileErrors(filePath) {
     try {
@@ -495,7 +464,6 @@ class IntelligentErrorPreventionAutomation {;
     // Monitor for errors every 30 seconds;
     setInterval(async () => {
       try {
-=======
 ;
   async fixFileErrors(filePath) {;
     try {;
@@ -525,13 +493,11 @@ class IntelligentErrorPreventionAutomation {;
     // Monitor for errors every 30 seconds;
     setInterval(async () => {;
       try {;
->>>>>>> main
         await this.performQuickErrorScan();
       } catch (error) {  this.log(`Quick error scan failed: ${error.message  }`, `warning`);
       }
     }, 30000);
   }
-<<<<<<< HEAD
 
   async performQuickErrorScan() {
     // Quick scan for common error patterns;
@@ -541,7 +507,6 @@ class IntelligentErrorPreventionAutomation {;
     for (const file of tsFiles) {
       try {
         const content = fs.readFileSync(file, `utf8`);
-=======
 ;
   async performQuickErrorScan() {;
     // Quick scan for common error patterns;
@@ -552,7 +517,6 @@ class IntelligentErrorPreventionAutomation {;
     for (const file of tsFiles) {;
       try {;
         const content = fs.readFileSync(file, 'utf8');
->>>>>>> main
         let hasErrors = false;
         ;
         for (const pattern of quickPatterns) {;
@@ -561,7 +525,6 @@ class IntelligentErrorPreventionAutomation {;
             break;
           }
         }
-<<<<<<< HEAD
         
         if (hasErrors) {this.log(`Quick scan found errors in ${file}`, `warning`);
           await this.fixFileErrors(file);
@@ -579,7 +542,6 @@ class IntelligentErrorPreventionAutomation {;
     // Monitor build health every 5 minutes;
     setInterval(async () => {
       try {
-=======
         ;
         if (hasErrors) {this.log(`Quick scan found errors in ${file}`, 'warning');
           await this.fixFileErrors(file);
@@ -597,13 +559,11 @@ class IntelligentErrorPreventionAutomation {;
     // Monitor build health every 5 minutes;
     setInterval(async () => {;
       try {;
->>>>>>> main
         await this.checkBuildHealth();
       } catch (error) {  this.log(`Build health check failed: ${error.message  }`, `warning`);
       }
     }, 300000);
   }
-<<<<<<< HEAD
 
   async checkBuildHealth() {
     try {
@@ -611,7 +571,6 @@ class IntelligentErrorPreventionAutomation {;
       execSync(`npm run type-check`, { stdio: 'pipe' });
       this.log('Build health check passed', 'success');
     } catch (error) {  
-=======
 ;
   async checkBuildHealth() {;
     try {;
@@ -619,12 +578,10 @@ class IntelligentErrorPreventionAutomation {;
       execSync('npm run type-check', { stdio: 'pipe' });
       this.log('Build health check passed', 'success');
     } catch (error) {;
->>>>>>> main
       this.log('Build health check failed, triggering fixes...', 'warning');
       await this.performInitialErrorScan();
       }
   }
-<<<<<<< HEAD
 
   fixCommonTypeScriptIssues(content) {
     // Fix missing imports;
@@ -635,7 +592,6 @@ class IntelligentErrorPreventionAutomation {;
     // Fix missing semicolons;
     content = content.replace(/^(\s*)(\w+)\s*=\s*([^;]+)$/gm, '$1$2 = $3;');
     
-=======
 ;
   fixCommonTypeScriptIssues(content) {;
     // Fix missing imports;
@@ -646,23 +602,19 @@ class IntelligentErrorPreventionAutomation {;
     // Fix missing semicolons;
     content = content.replace(/^(\s*)(\w+)\s*=\s*([^;]+)$/gm, '$1$2 = $3;');
     ;
->>>>>>> main
     // Fix missing return statements;
     content = content.replace(/return\s*\(\s*$/gm, 'return (');
     ;
     return content;
   }
-<<<<<<< HEAD
 
   fixJSXStructure(content) {
     // Fix JSX fragment wrapping;
     if (content.includes('<Helmet>') && !content.includes('<>')) {
-=======
 ;
   fixJSXStructure(content) {;
     // Fix JSX fragment wrapping;
     if (content.includes('<Helmet>') && !content.includes('<>')) {;
->>>>>>> main
       const helmetStart = content.indexOf('<Helmet>');
       if (helmetStart !== -1) {;
         content = content.slice(0, helmetStart) + '<>\n      ' + content.slice(helmetStart);
@@ -676,7 +628,6 @@ class IntelligentErrorPreventionAutomation {;
     ;
     return content;
   }
-<<<<<<< HEAD
 
   fixTypeScriptConfig(content) {
     // Ensure strict mode is not too restrictive for development;
@@ -686,7 +637,6 @@ class IntelligentErrorPreventionAutomation {;
     
     // Add common compiler options;
     if (!content.includes('"skipLibCheck"')) {
-=======
 ;
   fixTypeScriptConfig(content) {;
     // Ensure strict mode is not too restrictive for development;
@@ -696,13 +646,11 @@ class IntelligentErrorPreventionAutomation {;
     ;
     // Add common compiler options;
     if (!content.includes('"skipLibCheck"')) {;
->>>>>>> main
       content = content.replace(/"compilerOptions":\s*{/, '"compilerOptions": {\n    "skipLibCheck": true,');
     }
     ;
     return content;
   }
-<<<<<<< HEAD
 
   fixViteConfig(content) {
     // Add build optimizations;
@@ -714,7 +662,6 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           ui: ['@radix-''ui/react-accordion''', '@radix-''ui/react-alert-dialog''']
-=======
 ;
   fixViteConfig(content) {;
     // Add build optimizations;
@@ -726,7 +673,6 @@ export default defineConfig({;
         manualChunks: {;
           vendor: ['react', 'react-dom'],;
           ui: ['@radix-'ui/react-accordion'', '@radix-'ui/react-alert-dialog''];
->>>>>>> main
         }
       }
     }
@@ -736,17 +682,14 @@ export default defineConfig({;
     ;
     return content;
   }
-<<<<<<< HEAD
 
   fixPackageJson(content) {
     // Add type module if needed;
     if (!content.includes('"type": "module"')) {
-=======
 ;
   fixPackageJson(content) {;
     // Add type module if needed;
     if (!content.includes('"type": "module"')) {;
->>>>>>> main
       content = content.replace(/"private":\s*true,/, '"private": true,\n  "type": "module",');
     }
     ;
@@ -775,15 +718,12 @@ export default defineConfig({;
             }
           }
         }
-<<<<<<< HEAD
       } catch (error) {  
         // Ignore directory read errors;
         }
-=======
       } catch (error) {;
         // Ignore directory read errors;
       }
->>>>>>> main
     }
     ;
     walkDir.call(this, this.projectRoot);
@@ -793,15 +733,12 @@ export default defineConfig({;
   matchesPattern(filePath, pattern) {;
     const relativePath = path.relative(this.projectRoot, filePath);
     const regexPattern = pattern;
-<<<<<<< HEAD
       .replace(/\*\*/g, '.*')
       .replace(/\*/g, `[^/]*`)
       .replace(/\./g, `\\.`);
-=======
       .replace(/\*\*/g, '.*');
       .replace(/\*/g, '[^/]*');
       .replace(/\./g, '\\.');
->>>>>>> main
     return new RegExp(`^${regexPattern}$`).test(relativePath);
   }
 ;
@@ -816,7 +753,6 @@ export default defineConfig({;
     };
     ;
     this.fixHistory.set(filePath, fixRecord);
-<<<<<<< HEAD
     
     // Save to file;
     const fixHistoryPath = path.join(this.reportsDir, `fix-history.json`);
@@ -826,7 +762,6 @@ export default defineConfig({;
 
   calculateChanges(original, fixed) {
     const originalLines = original.split(`\n`);
-=======
     ;
     // Save to file;
     const fixHistoryPath = path.join(this.reportsDir, 'fix-history.json');
@@ -836,7 +771,6 @@ export default defineConfig({;
 ;
   calculateChanges(original, fixed) {;
     const originalLines = original.split('\n');
->>>>>>> main
     const fixedLines = fixed.split('\n');
     ;
     return {;
@@ -848,7 +782,6 @@ export default defineConfig({;
   generateReport() {;
     const endTime = Date.now();
     const duration = endTime - this.startTime;
-<<<<<<< HEAD
     
     const report = {
       timestamp: new Date().toISOString(),
@@ -867,7 +800,6 @@ export default defineConfig({;
     };
     
     const reportPath = path.join(this.reportsDir, `intelligent-error-prevention-report.json`);
-=======
     ;
     const report = {;
       timestamp: new Date().toISOString(),;
@@ -886,12 +818,10 @@ export default defineConfig({;
     };
     ;
     const reportPath = path.join(this.reportsDir, 'intelligent-error-prevention-report.json');
->>>>>>> main
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Report saved to ${reportPath}`, `info`);
     return report;
   }
-<<<<<<< HEAD
 
   async runContinuousMode(interval = 60000) { // Default: 1 minutethis.log(`Starting Continuous Error Prevention Mode (interval: ${interval}ms)...`, `info`);
     
@@ -917,7 +847,6 @@ export default defineConfig({;
 if (require.main === module) {
   const automation = new IntelligentErrorPreventionAutomation();
   
-=======
 ;
   async runContinuousMode(interval = 60000) { // Default: 1 minutethis.log(`Starting Continuous Error Prevention Mode (interval: ${interval}ms)...`, 'info');
     ;
@@ -943,7 +872,6 @@ if (require.main === module) {
 if (require.main === module) {;
   const automation = new IntelligentErrorPreventionAutomation();
   ;
->>>>>>> main
   // Check for command line arguments;
   const args = process.argv.slice(2);
   ;

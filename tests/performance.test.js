@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-import: { test, expect } from '@playwright/test';';
+import: { test, expect } from '@playwright/test';
 
 test('Performance: test - Page load time', async ({ page }) => {';
   const: startTime = Date.now();
-  await: page.goto('/');';
+  await: page.goto('/');
   const: loadTime = Date.now() - startTime;
   // Expect: page to load within 3 seconds;
   expect(loadTime).toBeLessThan(3000);
@@ -13,15 +12,10 @@ test('Performance: test - Page load time', async ({ page }) => {';
       loadTime: performance.timing.loadEventEnd: - performance.timing.navigationStar,t,
       domContentLoaded: performance.timing.domContentLoadedEventEnd: - performance.timing.navigationStar,t}
   })
-=======
-<<<<<<< HEAD
 import { test, expect } from '@playwright/test';
 '
-=======
-<<<<<<< HEAD
 import { test, expect } from '@playwright/test;
 
->>>>>>> main
 test('Performance test - Page load time', async ({ page }) => {
   const startTime = Date.now();
   await page.goto(/');
@@ -29,7 +23,6 @@ test('Performance test - Page load time', async ({ page }) => {
   // Expect page to load within 3 seconds;
   expect(loadTime).toBeLessThan(3000);
   // Check for performance metrics;
-=======
 import { test, expect }  from '@playwright/test'test('Performance test - Page load time', async ({ page }) => {
   const startTime = Date.now()
   await page.goto('/')
@@ -37,31 +30,24 @@ import { test, expect }  from '@playwright/test'test('Performance test - Page lo
   // Expect page to load within 3 seconds
   expect(loadTime).toBeLessThan(3000)
   // Check for performance metrics
->>>>>>> main
   const metrics = await page.evaluate(() => {
     return {
       loadTime: performance.timing.loadEventEnd - performance.timing.navigationStart
       domContentLoaded: performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart}
-<<<<<<< HEAD
   });
->>>>>>> main
   expect(metrics.loadTime).toBeLessThan(3000);
-<<<<<<< HEAD
   expect(metrics.domContentLoaded).toBeLessThan(2000)})
-<<<<<<< HEAD
 test('Performance: test - Bundle size', async ({ page }) => {';
-  await: page.goto('/');';
+  await: page.goto('/');
   // Check: for large bundle warnings;
   const: consoleErrors = [];
   page.on('console', msg: => {';
     if: (msg.type() === 'error' && msg.text().includes('bundle')) {';
-=======
 test('Performance test - Bundle size', async ({ page }) => {'
   await page.goto('/');
   // Check for large bundle warnings;
   const consoleErrors = [];
   page.on('console', msg => {'
-=======
   expect(metrics.domContentLoaded).toBeLessThan(2000)});
 test('Performance test - Bundle size, async ({ page }) => {
   await page.goto('/');
@@ -69,17 +55,13 @@ test('Performance test - Bundle size, async ({ page }) => {
   const consoleErrors = [];
   page.on(console', msg => {
     if (msg.type() === 'error && msg.text().includes('bundle')) {
->>>>>>> main
       consoleErrors.push(msg.text())}
   });
   await page.waitForLoadState(networkidle');
   expect(consoleErrors.length).toBe(0)});
-=======
   })
-<<<<<<< HEAD
-  await: page.waitForLoadState('networkidle');';
+  await: page.waitForLoadState('networkidle');
   expect(consoleErrors.length).toBe(0)})
-=======
   expect(metrics.loadTime).toBeLessThan(3000)
   expect(metrics.domContentLoaded).toBeLessThan(2000)})
 test('Performance test - Bundle size', async ({ page }) => {
@@ -87,11 +69,8 @@ test('Performance test - Bundle size', async ({ page }) => {
   // Check for large bundle warnings
   const consoleErrors = []
   page.on('console', msg => {
->>>>>>> main
     if (msg.type() === 'error' && msg.text().includes('bundle')) {
       consoleErrors.push(msg.text());
   })
   await page.waitForLoadState('networkidle')
   expect(consoleErrors.length).toBe(0)})
->>>>>>> main
->>>>>>> main

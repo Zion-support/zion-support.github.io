@@ -12,14 +12,11 @@ const SecurityHeaders: React.FC = () => {
         {
           name: 'permissions-policy',
           content:
-            'camera=(), microphone=(), geolocation=(), interest-cohort=()',
-        },
+            'camera=(), microphone=(), geolocation=(), interest-cohort=()'},
         {
           name: 'content-security-policy',
           content:
-            "default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://www.google-analytics.com style-src 'self' 'unsafe-inline' https://fonts.googleapis.com font-src 'self' https://fonts.gstatic.com img-src 'self' data: https: connect-src 'self' https://api.ziontechgroup.com frame-ancestors 'none'",
-        },
-      ];
+            "default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://www.google-analytics.com style-src 'self' 'unsafe-inline' https://fonts.googleapis.com font-src 'self' https://fonts.gstatic.com img-src 'self' data: https: connect-src 'self' https://api.ziontechgroup.com frame-ancestors 'none'"}];
 
       securityMetaTags.forEach(tag => {
         const meta = document.createElement('meta');
@@ -32,14 +29,11 @@ const SecurityHeaders: React.FC = () => {
     // Add Content Security Policy for inline styles
     const addCSPForInlineStyles = () => {
       const style = document.createElement('style');
-<<<<<<< HEAD
       style.setAttribute(
         'nonce',
         'csp-nonce-' + Math.random().toString(36).substr(2, 9)
       );
-=======
       style.setAttribute('nonce,csp-nonce-' + Math.random().toString(36).substr(2, 9));
->>>>>>> main
       document.head.appendChild(style);
     };
 

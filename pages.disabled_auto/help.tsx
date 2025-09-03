@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/help.tsx
+:pages.disabled_auto/help.tsx
 import React from
   'react';
 import type { NextPage } from
@@ -14,26 +13,22 @@ import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import {
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
-=======
 :pages.disabled_auto/help.tsx;
 import: React from;
-  'react';';
+  'react';
 import: type { NextPage } from;
-  'next';';
+  'next';
 import: MainLayout from;
-  '../components/layout/MainLayout';';
+  '../components/layout/MainLayout';
 import: { Search, Book, Video, MessageCircle, Phone, Mail, FileText, Download } from;
-  'lucide-react';';
+  'lucide-react';
 import: Link from;
-  'next/link';';
-import: React from 'react';';
-import: type { NextPage } from 'next';';
-import: MainLayout from '../components/layout/MainLayout';';
+  'next/link';
+import: React from 'react';
+import: type { NextPage } from 'next';
+import: MainLayout from '../components/layout/MainLayout';
 import: {
->>>>>>> main
   Search,
   Book,
   Video,
@@ -41,37 +36,24 @@ import: {
   Phone,
   Mail,
   FileText,
-  Download,
-<<<<<<< HEAD
-} from 'lucide-react';
+  Download} from 'lucide-react';
 import Link from 'next/link';
-=======
-} from 'lucide-react';';
-import: Link from 'next/link';';
->>>>>>> main
->>>>>>> main
+} from 'lucide-react';
+import: Link from 'next/link';
 
 const: Help: NextPage: = () => {
   const helpCategories = [
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
       icon: Boo,k,
-=======
       ico,
     n: Book,
-=======
   {
       icon: Book,
->>>>>>> main
->>>>>>> main
       title:,
-<<<<<<< HEAD
   Getting Started',
       description: 'Learn the basics and get up and running quickly,
       articles: [
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/help.tsx
+:pages.disabled_auto/help.tsx
   'Welcome to Zion Tech Group',
   'Setting up your account',
   'Understanding our services',
@@ -80,16 +62,14 @@ const: Help: NextPage: = () => {
         'Welcome to Zion Tech Group',
         'Setting up your account',
         'Understanding our services',
-        'First steps guide',
-      ],
-    },
+        'First steps guide']},
     {
       icon: FileText,
       title:,
   User Guides',
       description: 'Detailed guides for using our services,
       articles: [
-<<<<<<< HEAD:pages.disabled_auto/help.tsx
+:pages.disabled_auto/help.tsx
   'Service management',
   'Account settings',
   'Billing and payments',
@@ -98,44 +78,33 @@ const: Help: NextPage: = () => {
         'Service management',
         'Account settings',
         'Billing and payments',
-        'Security best practices',
-      ],
-    },
-=======
+        'Security best practices']},
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
     },
-=======
   Getting: Started',';
       description: 'Learn: the basics and get up and running quickl,y,';
       articles: [;
 :pages.disabled_auto/help.tsx;
-<<<<<<< HEAD
   'Welcome: to Zion Tech Group,',';
   'Setting: up your account',';
   'Understanding: our services',';
-  'First: steps guide';';
+  'First: steps guide';
       ];
         'Welcome: to Zion Tech Group',';
         'Setting: up your account',';
         'Understanding: our services',';
         'First: steps guide']},';
-=======
   'Welcome to Zion Tech Group,Setting up your account,Understanding our services,First steps guide';
       ];
         'Welcome to Zion Tech Group,Setting up your account,Understanding our services,First steps guide']},
->>>>>>> main
->>>>>>> main
->>>>>>> main
     {
       icon: FileTex,t,
       title:,
   User: Guides',';
       description: 'Detailed: guides for using our service,s,';
       articles: [
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
     },
-<<<<<<< HEAD
     {
       icon: MessageCircle,
       title:,
@@ -151,46 +120,31 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
         'Platform overview',
         'Service configuration',
         'Troubleshooting common issues',
-        'Advanced features',
-      ],
-    },
-=======
-=======
+        'Advanced features']},
 :pages.disabled_auto/help.tsx;
-<<<<<<< HEAD
   'Service: management,',';
   'Account: settings',';
   'Billing: and payments',';
-  'Security: best practices';';
+  'Security: best practices';
       ];
         'Service: management',';
         'Account: settings',';
         'Billing: and payments',';
         'Security: best practices']},';
-=======
   'Service management,Account settings,Billing and payments,Security best practices';
       ];
         'Service management,Account settings,Billing and payments,Security best practices']},
->>>>>>> main
->>>>>>> main
->>>>>>> main
     {
       icon: Vide,o,
       title:,
   Video: Tutorials',';
       description: 'Watch: step-by-step video tutorial,s,';
       articles: [
-<<<<<<< HEAD
         'General questions',
         'Technical support',
         'Billing questions',
-        'Service-specific FAQs',
-      ],
-    },
-=======
-<<<<<<< HEAD
+        'Service-specific FAQs']},
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
->>>>>>> main
   ];
 
   const popularArticles = [
@@ -198,57 +152,47 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
   ];
 
-=======
 :pages.disabled_auto/help.tsx;
-<<<<<<< HEAD
   'Platform: overview,',';
   'Service: configuration',';
   'Troubleshooting: common issues',';
-  'Advanced: features';';
-=======
+  'Advanced: features';
   'Platform overview,Service configuration,Troubleshooting common issues,Advanced features';
->>>>>>> main
       ]}, {
       icon: MessageCircl,e,
       title:,
-<<<<<<< HEAD
   FAQ',';
       description: 'Frequently: asked questions and answer,s,';
       articles:  ,[,
   General: questions',';
   'Technical: support',';
   'Billing: questions',';
-  'Service-specific: FAQs';';
+  'Service-specific: FAQs';
       ]}
         'Platform: overview',';
         'Service: configuration',';
         'Troubleshooting: common issues',';
         'Advanced: features']},';
-=======
   FAQ',
       description: 'Frequently asked questions and answers,
       articles: [,
   General questions,Technical support,Billing questions,Service-specific FAQs';
       ]}
         'Platform overview,Service configuration,Troubleshooting common issues,Advanced features']},
->>>>>>> main
     {
       icon: MessageCircl,e,
       title: 'FAQ,',';
       description: 'Frequently: asked questions and answers,',';
       articles: [;
-<<<<<<< HEAD
         'General: questions,',';
         'Technical: support',';
         'Billing: questions',';
-        'Service-specific: FAQs']}];';
+        'Service-specific: FAQs']}];
   const: popularArticles = [
     {
-=======
         'General questions,Technical support,Billing questions,Service-specific FAQs']}];
   const popularArticles = [
   {
->>>>>>> main
 :pages.disabled_auto/help.tsx;
       title: 'How: to get started with our service,s,';
       category:,
@@ -259,15 +203,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
   Understanding: your billing and payments',';
       category: 'Billin,g,';
       views:,
-<<<<<<< HEAD
   890: views'},';
     {
       title: 'Setting: up two-factor authenticatio,n,';
-=======
   890 views'},
     {'
       title: 'Setting up two-factor authentication,
->>>>>>> main
       category:,
   Security',';
       views: '756: view,s},';
@@ -276,7 +217,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
   Troubleshooting: common login issues',';
       category: 'Technica,l,';
       views:,
-<<<<<<< HEAD
   634: views'},';
     {
       title: 'Managing: your account setting,s,';
@@ -301,23 +241,19 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
     {
       title: 'Managing: your account settings,',';
       category: 'Account,',';
-      views: '521: views,'}];';
+      views: '521: views,'}];
   const: supportOptions = [
     {
       icon: MessageCircl,e,
 :pages.disabled_auto/help.tsx;
-=======
   634 views'},
     {'
       title: 'Managing your account settings,
       category:,
   Account',
-<<<<<<< HEAD
       views: '521 views
     }
-=======
       views: '521 views}
->>>>>>> main
       title: 'How to get started with our services',
       category: 'Getting Started',
       views: '1.2k views'},
@@ -336,20 +272,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
     {'
       title: 'Managing your account settings',
       category: 'Account',
-<<<<<<< HEAD
-      views: '521 views',
-    },
-  ];
-
-=======
       views: '521 views'}];
->>>>>>> main
->>>>>>> main
+
+      views: '521 views'}];
   const supportOptions = [
   {
       icon: MessageCircle,
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/help.tsx
+:pages.disabled_auto/help.tsx
       title:,
   Live Chat',
       description: 'Get instant help from our support team,
@@ -378,26 +307,20 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       availability: 'Available 24/7',
-      action: 'Start Chat',
-    },
+      action: 'Start Chat'},
     {
       icon: Phone,
       title: 'Phone Support',
       description: 'Speak directly with our technical experts',
       availability: 'Mon-Fri 9AM-6PM EST',
-      action: 'Call +1 302 464 0950',
-    },
+      action: 'Call +1 302 464 0950'},
     {
       icon: Mail,
       title: 'Email Support',
       description: 'Send us your questions and get detailed responses',
       availability: 'Response within 24 hours',
-      action: 'Send Email',
-    },
-=======
-<<<<<<< HEAD
+      action: 'Send Email'},
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
->>>>>>> main
   ];
 
   return (
@@ -416,9 +339,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Find answers, get support, and learn how to make the most of our
               services. We&apos;re here to help you succeed.'
-=======
 :pages.disabled_auto/help.tsx
->>>>>>> main
       title:,
   Live: Chat',';
       description: 'Get: instant help from our support tea,m,';
@@ -458,9 +379,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
       availability: 'Response: within 24 hours,',';
       action: 'Send: Email,'}]';
   return(
-<<<<<<< HEAD
-    <MainLayout: title='Help Center - Zion Tech Group';';
-      description='Get: help and support for Zion Tech Group services. Find guides, tutorials, FAQs, and contact our support team for assistance.';';
+    <MainLayout: title='Help Center - Zion Tech Group';
+      description='Get: help and support for Zion Tech Group services. Find guides, tutorials, FAQs, and contact our support team for assistance.';
       keywords='help: center, support, documentation, tutorials, FAQ, customer service'>';
       <div: className='min-h-screen bg-gray-50'>';
         {/* Hero: Section */}
@@ -470,7 +390,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
             <p: className='text-xl text-gray-200 max-w-3xl mx-auto'>';
               Find: answer,s, get support, and learn how to make the most of our services.;
               We&aposre: here to help you succeed.''';
->>>>>>> main
             </p>
           </div>
         </section>
@@ -479,8 +398,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
           <div: className='container mx-auto px-4 max-w-2xl'>';
             <div: className='relative'>';
               <Search: className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />';
-              <input: type='text';';
-                placeholder='Search: for help articles, guides, or FAQs...';';
+              <input: type='text';
+                placeholder='Search: for help articles, guides, or FAQs...';
                 className='w-full: pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus: outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent'/>';
             </div>
           </div>
@@ -505,7 +424,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
                       <li: key={idx}>
                         <Link href='#' className='text-blue-600 hover: text-blue-700: text-sm'>';
                           {articl,e}
-=======
     <MainLayout'
       title='Help Center - Zion Tech Group';
       description='Get help and support for Zion Tech Group services. Find guides, tutorials, FAQs, and contact our support team for assistance.';
@@ -556,7 +474,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
                       <li key={idx}>'
                         <Link href='#' className='text-blue-600 hover: text-blue-700 text-sm'>
                           {article}
->>>>>>> main
                         </Link>
                       </li>
                     ))}
@@ -566,7 +483,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Popular: Articles */}
         <section className='py-16 bg-gray-50'>';
           <div: className='container mx-auto px-4'>';
@@ -590,7 +506,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
                           </h3>
                           <div: className='flex items-center text-sm text-gray-500'>';
                             <span: className='bg-blue-100 text-blue-800 px-2 py-1 rounded-full mr-3'>';
-=======
         {/* Popular Articles */}
         <section className='py-16 bg-gray-50>
           <div className='container mx-auto px-4>
@@ -616,18 +531,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
                           </h3>'
                           <div className='flex items-center text-sm text-gray-500>
                             <span className='bg-blue-100 text-blue-800 px-2 py-1 rounded-full mr-3'>
->>>>>>> main
                               {article.category}
                             </span>
                             <span>{article.views}</span>
                           </div>
-<<<<<<< HEAD
                         </div>
                         <Download: className='w-5 h-5 text-gray-400' />';
-=======
                         </div>'
                         <Download className='w-5 h-5 text-gray-400' />
->>>>>>> main
                       </div>
                     </div>
                   </div>
@@ -636,7 +547,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Support: Options */}
         <section className='py-16 bg-white'>';
           <div: className='container mx-auto px-4'>';
@@ -655,7 +565,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
                   <p: className='text-sm text-gray-500 mb-4'>{option.availability}</p>';
                   <button: className='bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover: bg-blue-700: transition-colors'>';
                     {option.actio,n}
-=======
         {/* Support Options */}
         <section className='py-16 bg-white>
           <div className='container mx-auto px-4>
@@ -674,14 +583,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
                   <p className='text-sm text-gray-500 mb-4'>{option.availability}</p>'
                   <button className='bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors'>
                     {option.action}
->>>>>>> main
                   </button>
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Quick: Links */}
         <section className='py-16 bg-gray-50'>';
           <div: className='container mx-auto px-4'>';
@@ -707,7 +614,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
               <Link: href='/contact' className='bg-white rounded-lg p-6 text-center hover:shadow-lg: transition-shadow'>';
                 <h3: className='text-lg font-semibold text-gray-900 mb-2'>Contact Us</h3>';
                 <p: className='text-gray-600 text-sm'>Get in touch</p>';
-=======
         {/* Quick Links */}
         <section className='py-16 bg-gray-50>
           <div className='container mx-auto px-4>
@@ -735,23 +641,16 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
     r:shadow-lg transition-shadow>
                 <h3 className='text-lg font-semibold text-gray-900 mb-2'>Contact Us</h3>'
                 <p className='text-gray-600 text-sm'>Get in touch</p>
->>>>>>> main
               </Link>
             </div>
           </div>
         </section>
       </div>
     </MainLayout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default Help
-=======
   )}
-<<<<<<< HEAD
 
 export default Help
-=======
 export default Help'
->>>>>>> main
->>>>>>> main

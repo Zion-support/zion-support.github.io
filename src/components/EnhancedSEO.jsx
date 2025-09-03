@@ -1,18 +1,12 @@
-<<<<<<< HEAD
 import React from 'react'; "export default function EnhancedSEO({" title = "Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions.Transform your business with cutting-edge technology services."," keywords = "AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation", canonical," ogImage = "https:
-=======
-<<<<<<< HEAD
 import React from 'react'; "export default function EnhancedSEO({" title = "Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions.Transform your business with cutting-edge technology services."," keywords = "AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation", canonical," ogImage = "https:
 }
-=======
-<<<<<<< HEAD
 
 ;,"});,"})
  "export default function EnhancedSEO ({" title = "Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services."," keywords = "AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation", canonical," ogImage = "https:""";,"});,"})
 ;,"});,"})
  "export default function EnhancedSEO({" title = "Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions.Transform your business with cutting-edge technology services."," keywords = "AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation", canonical," ogImage = "https:;,"});,"})
 }"});,"})
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff;,"});,"})
 ''';,"});,"})
 import { Helmet } from 'react-helmet-async';,"});,"})
 export default function EnhancedSEO({}"});,"})
@@ -160,10 +154,7 @@ export { EnhancedSEO };,"});,"})
 export { EnhancedSEO };,"});,"})
 ;,"});,"})
 export { EnhancedSEO };,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
-<<<<<<< HEAD
-';export default function EnhancedSEO ({' title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions',' description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.',' keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical,' ogImage = 'https:''';';import { Helmet } from 'react-helmet-async';
+';export default function EnhancedSEO ({' title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions',' description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.',' keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical,' ogImage = 'https:''';import { Helmet } from 'react-helmet-async';
 export default function EnhancedSEO({}
 ';
 '';
@@ -225,33 +216,17 @@ export default function EnhancedSEO({}
       description: 'Enterprise AI and Technology Solutions'}};
   // Merge with provided structured data;
   const finalStructuredData = structuredData;
-=======
-<<<<<<< HEAD
- export: default function EnhancedSEO ({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https: '''';import: { Helmet, } from 'react-helmet-async';';';';
-=======
-<<<<<<< HEAD
+ export: default function EnhancedSEO ({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https: '''';import: { Helmet} from 'react-helmet-async';';
  export default function EnhancedSEO ({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https:'';import { Helmet } from 'react-helmet-async';
-=======
-<<<<<<< HEAD
  export default function EnhancedSEO (  {title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https: '''';import { Helmet } from 'react-helmet-async';'
-=======
-<<<<<<< HEAD
  export default function EnhancedSEO (;{ title = &apos;Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions&apos;, description = &apos;Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.&apos;, keywords = &apos;AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation&apos;, canonical, ogImage = &apos;https:&apos;&apos;'';import { Helmet } from &apos;react-helmet-async';
 &apos;'
-=======
-<<<<<<< HEAD
  export default function EnhancedSEO ({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https: '''';import { Helmet } from 'react-helmet-async';'
-<<<<<<< HEAD
 ';export default function EnhancedSEO ({' title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions',' description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.',' keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical,' ogImage = 'https: ''';'
-=======
-=======
  export default function EnhancedSEO ({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https: '''';import { Helmet } from 'react-helmet-async
 ';export default function EnhancedSEO ({' title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions, description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services., keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical,' ogImage = 'https:''
->>>>>>> main
 import { Helmet } from 'react-helmet-async';
 ''
-<<<<<<< HEAD
-=======
 '''
   title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions,''
   description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting-edge technology services.,''
@@ -261,7 +236,6 @@ import { Helmet } from 'react-helmet-async';
   ogType = 'website,''
   twitterCard = 'summary_large_image', structuredData, noindex = false, nofollow = false}) {}"
 '
->>>>>>> main
 ''
 ''''
   title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions',''''
@@ -281,7 +255,6 @@ import { Helmet } from 'react-helmet-async';
   // Default structured data for organization
   const defaultStructuredData = {}""
 ''
-<<<<<<< HEAD
 ''
 ''''
     '@context': 'https://schema.org', @type': 'Organization','''
@@ -302,7 +275,6 @@ import { Helmet } from 'react-helmet-async';
       telephone: '+1-302-464-0950',''
       contactType: 'customer service', ''
       email: 'kleber@ziontechgroup.com'},''
-=======
 '''
     '@context': 'https://schema.org',@type': 'Organization,''
     name: 'Zion Tech Group,''
@@ -322,29 +294,23 @@ import { Helmet } from 'react-helmet-async';
       telephone: '+1-302-464-0950,
       contactType: 'customer service,
       email: 'kleber@ziontechgroup.com'},'
->>>>>>> main
     sameAs: [''
-      'https://linkedin.com/company/ziontechgroup', https: //twitter.com/ziontechgroup',https: //github.com/Zion-Holdings', 
-], offers: {}""
+      'https://linkedin.com/company/ziontechgroup', https: //twitter.com/ziontechgroup',https: //github.com/Zion-Holdings'], offers: {}""
 ''
-<<<<<<< HEAD
 ''
 ''''
       '@type': 'AggregateOffer',''''
       priceCurrency: 'USD', ''''
       lowPrice: '599',''''
       highPrice: '25000', ''''
-=======
 '''
       '@type': 'AggregateOffer,''
       priceCurrency: 'USD,''
       lowPrice: '599,''
       highPrice: '25000,''
->>>>>>> main
       description: 'Enterprise AI and Technology Solutions'}}
   // Merge with provided structured data
   const finalStructuredData = structuredData
->>>>>>> main
     ? { ...defaultStructuredData, ...structuredData }
     : defaultStructuredData
   return ()
@@ -417,7 +383,6 @@ import { Helmet } from 'react-helmet-async';
         content='strict-origin-when-cross-origin'''
       /" >"
     </Helmet>
-<<<<<<< HEAD
   );
 }
 ;
@@ -430,8 +395,7 @@ export { EnhancedSEO };
 export { EnhancedSEO };
 ;
 export { EnhancedSEO };
-=======
-  ), }
+  )}
 
 export { EnhancedSEO }
 
@@ -442,17 +406,5 @@ export { EnhancedSEO }
 export { EnhancedSEO }
 
 export { EnhancedSEO }
-<<<<<<< HEAD
 ;"`"
-=======
 ;"`
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

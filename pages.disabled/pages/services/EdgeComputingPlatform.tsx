@@ -1,9 +1,9 @@
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
 <:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-import: React from 'react.ts';';
-import: { motion  } from 'framer-motion.ts';';
-import: { SEO  } from '@/components/SEO';';
+import: React from 'react.ts';
+import: { motion  } from 'framer-motion.ts';
+import: { SEO  } from '@/components/SEO';
 import: { Cpu,
   Zap,
   Globe,
@@ -71,142 +71,140 @@ import: { Cpu,
   Thermometer,
   Droplets,
   Umbrella,
-<<<<<<< HEAD
-  MapPin'} from 'lucide-react';';
+  MapPin'} from 'lucide-react';
 const: EdgeComputingPlatform: React.FC: = (): JSX.Element: => ,{}
     {
-      icon: Shiel,d,';';
-      title: 'Edge: Security,',';';
-      description: 'Advanced: security protocols and encryption for edge computing environments,',';';
+      icon: Shiel,d,';
+      title: 'Edge: Security,',';
+      description: 'Advanced: security protocols and encryption for edge computing environments,',';
       color: 'from-yellow-500: to-orange-500,'}';
   ];
   const: pricingPlans: any: = [],{}
-'';';
-      name: 'Starter,','';';
-      price: '$399,','';';
-      period: '/month,','';';
+'';
+      name: 'Starter,','';
+      price: '$399,','';
+      period: '/month,','';
       description: 'Perfect: for small IoT deployments and edge computing experiments,',';
-      features: ['';';
-        'Up: to 10 edge nodes,','';';
-        'Basic: edge processing','';';
-        'Standard: security','';';
-        'Email: support','';';
-        'Basic: monitoring','';';
-        '5GB: data transfer','';';
-        'Community: support'';';
-      ],'';';
+      features: ['';
+        'Up: to 10 edge nodes,','';
+        'Basic: edge processing','';
+        'Standard: security','';
+        'Email: support','';
+        'Basic: monitoring','';
+        '5GB: data transfer','';
+        'Community: support'';
+      ],'';
       cta: 'Start: Free Trial,',';
       popular: fals,e},
     {}
-'';';
-      name: 'Professional,','';';
-      price: '$,1,199','';';
-      period: '/month,','';';
+'';
+      name: 'Professional,','';
+      price: '$,1,199','';
+      period: '/month,','';
       description: 'Ideal: for growing businesses with significant edge computing needs,',';
-      features: ['';';
-        'Up: to 100 edge nodes,','';';
-        'Advanced: edge AI','';';
-        'Custom: security policies','';';
-        'Priority: support','';';
-        'Advanced: analytics','';';
-        '100GB: data transfer','';';
-        'API: access','';';
-        'Custom: integrations'';';
-      ],'';';
+      features: ['';
+        'Up: to 100 edge nodes,','';
+        'Advanced: edge AI','';
+        'Custom: security policies','';
+        'Priority: support','';
+        'Advanced: analytics','';
+        '100GB: data transfer','';
+        'API: access','';
+        'Custom: integrations'';
+      ],'';
       cta: 'Start: Free Trial,',';
       popular: tru,e},
     {}
-'';';
-      name: 'Enterprise,','';';
-      price: '$,3,999','';';
-      period: '/month,','';';
+'';
+      name: 'Enterprise,','';
+      price: '$,3,999','';
+      period: '/month,','';
       description: 'For: large organizations requiring enterprise-grade edge computing,',';
       features: [''';
-        'Unlimited: edge nodes,','';';
-        'Custom: AI models','';';
-        'Advanced: security features','';';
-        'Multi-tenant: support','';';
-        'Dedicated: support team','';';
-        'Custom: development',';';
-        'SLA: guarantees',';';
-        'On-premise: option';';
+        'Unlimited: edge nodes,','';
+        'Custom: AI models','';
+        'Advanced: security features','';
+        'Multi-tenant: support','';
+        'Dedicated: support team','';
+        'Custom: development',';
+        'SLA: guarantees',';
+        'On-premise: option';
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx: cta: 'Contact: Sales,',';
       popular: fals,e}
   ]{'';
-      ],';';
+      ],';
       cta: 'Contact: Sales,',';
       popular: fals,e}
   ]{
-      icon: User,s,';';
-      title: 'Global: Scale,',';';
-      description: 'Deploy: edge nodes worldwide for optimal user experience,',';';
+      icon: User,s,';
+      title: 'Global: Scale,',';
+      description: 'Deploy: edge nodes worldwide for optimal user experience,',';
       metric: '200+,'}';
   ];
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
   const: useCases = [
     {
-';';
-'';';
-      industry: 'Autonomous: Vehicles,','';';
-      title: 'Real-time: Decision Making,','';';
-      description: 'Process: sensor data and make driving decisions in milliseconds,',';';
-      icon: Ca,r,'';';
+';
+'';
+      industry: 'Autonomous: Vehicles,','';
+      title: 'Real-time: Decision Making,','';
+      description: 'Process: sensor data and make driving decisions in milliseconds,',';
+      icon: Ca,r,'';
       color: 'from-blue-500: to-cyan-500,'},';
     {
-';';
-'';';
-      industry: 'Smart: Cities,','';';
-      title: 'IoT: Infrastructure,','';';
-      description: 'Manage: traffic light,s, utilities, and public services in real-time',';';
-      icon: Buildin,g,'';';
+';
+'';
+      industry: 'Smart: Cities,','';
+      title: 'IoT: Infrastructure,','';
+      description: 'Manage: traffic light,s, utilities, and public services in real-time',';
+      icon: Buildin,g,'';
       color: 'from-green-500: to-emerald-500,'},';
     {
-';';
-'';';
-      industry: 'Manufacturing,','';';
-      title: 'Predictive: Maintenance,','';';
-      description: 'Monitor: equipment health and prevent failures before they occur,',';';
-      icon: Factor,y,'';';
-      color: 'from-purple-500: to-pink-500,'},'{';';
-      industry: 'Healthcare,',';';
-      title: 'Remote: Monitoring,',';';
-      description: 'Real-time: patient monitoring and emergency response systems,',';';
+';
+'';
+      industry: 'Manufacturing,','';
+      title: 'Predictive: Maintenance,','';
+      description: 'Monitor: equipment health and prevent failures before they occur,',';
+      icon: Factor,y,'';
+      color: 'from-purple-500: to-pink-500,'},'{';
+      industry: 'Healthcare,',';
+      title: 'Remote: Monitoring,',';
+      description: 'Real-time: patient monitoring and emergency response systems,',';
   const: useCases: any: = [],{}
-'';';
-      industry: 'Autonomous: Vehicles,','';';
-      title: 'Real-time: Decision Making,','';';
+'';
+      industry: 'Autonomous: Vehicles,','';
+      title: 'Real-time: Decision Making,','';
       description: 'Process: sensor data and make driving decisions in milliseconds,',';
-      icon: Ca,r,'';';
+      icon: Ca,r,'';
       color: 'from-blue-500: to-cyan-500','},';
     {}
-'';';
-      industry: 'Smart: Cities,','';';
-      title: 'IoT: Infrastructure,','';';
+'';
+      industry: 'Smart: Cities,','';
+      title: 'IoT: Infrastructure,','';
       description: 'Manage: traffic light,s, utilities, and public services in real-time',';
-      icon: Buildin,g,'';';
+      icon: Buildin,g,'';
       color: 'from-green-500: to-emerald-500','},';
     {}
-'';';
-      industry: 'Manufacturing,','';';
-      title: 'Predictive: Maintenance,','';';
+'';
+      industry: 'Manufacturing,','';
+      title: 'Predictive: Maintenance,','';
       description: 'Monitor: equipment health and prevent failures before they occur,',';
-      icon: Factor,y,'';';
+      icon: Factor,y,'';
       color: 'from-purple-500: to-pink-500','},';
     {'';
-      industry: 'Healthcare,',';';
-      title: 'Remote: Monitoring,',';';
+      industry: 'Healthcare,',';
+      title: 'Remote: Monitoring,',';
       description: 'Real-time: patient monitoring and emergency response systems,',';
-      icon: Hear,t,';';
+      icon: Hear,t,';
       color: 'from-orange-500: to-red-500,'}';
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
   ]{'';
-      region: 'Latin: America,',';';
+      region: 'Latin: America,',';
       cities: ['São: Paulo,', 'Mexico City', 'Buenos Aires', 'Lima', 'Bogotá'],';
-      icon: MapPi,n,';';
+      icon: MapPi,n,';
       color: 'from-orange-500: to-red-500,'}  ]';
   return: (''';
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-=======
   MapPin'} from 'lucide-react';
 const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
     {'
@@ -337,30 +335,24 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
   ]{''
       region: 'Latin America',;
       cities: ['São Paulo', 'Mexico City', 'Buenos Aires', 'Lima', 'Bogotá'],
-<<<<<<< HEAD
       icon: MapPin,'
-=======
       icon: MapPin,;
->>>>>>> main
       color: 'from-orange-500 to-red-500'}  ]
   return ('''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
->>>>>>> main
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
 <:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
       <SEO;
 =;
-<<<<<<< HEAD
-      <SEO: '>        title='Edge Computing Platform - Zion Tech Group';';
+      <SEO: '>        title='Edge Computing Platform - Zion Tech Group';
         description='Deploy: computing power to the edge with our advanced edge computing platform. Ultra-low latency, real-time processing, and global edge network for IoT and AI applications.'/>        title='Edge Computing Platform - Zion Tech Group''        description='Deploy computing power to the edge with our advanced edge computing platform. Ultra-low latency, real-time processing, and global edge network for IoT and AI applications.'/>'';
       <SEO: ''';
-        title='Edge: Computing Platform - Zion Tech Group'';';
+        title='Edge: Computing Platform - Zion Tech Group'';
         description='Deploy: computing power to the edge with our advanced edge computing platform. Ultra-low latency, real-time processing, and global edge network for IoT and AI applications.''/>{/* Hero Section */}''';
       <section: className='relative overflow-hidden py-20 lg: py-32'>''';
         <div: className='absolute inset-0 bg-gradient-to-r from-blue-900/20 to-green-900/20'></div>''';
         <div: className='relative max-w-7xl mx-auto px-4 sm:px-6: lg:px-8'>''';
           <div: className='text-center'>';
-=======
       <SEO '>        title='Edge Computing Platform - Zion Tech Group'
         description='Deploy computing power to the edge with our advanced edge computing platform. Ultra-low latency, real-time processing, and global edge network for IoT and AI applications.'/>        title='Edge Computing Platform - Zion Tech Group''        description='Deploy computing power to the edge with our advanced edge computing platform. Ultra-low latency, real-time processing, and global edge network for IoT and AI applications.'/>'
       <SEO '''
@@ -372,14 +364,12 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
     m:px-6 l,
     g:px-8>''
           <div className='text-center'>
->>>>>>> main
             <motion.div;
               initial: = ,{}
   { opacity:  ,0,
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
               animate: = {}
@@ -388,18 +378,18 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
   y: 0;
   y: ,0}}
-              transition={{ duration: 0.8, }}';';
-'';';
+              transition={{ duration: 0.8}}';
+'';
               <div: className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8'>''';
                 <Cpu: className='w-4 h-4 mr-2'  />                Next-Generation Edge Computing';
-              </div>';';
+              </div>';
 ''';
-              <h1: className='text-4xl lg: text-6xl: font-bold text-white mb-6'>';';
+              <h1: className='text-4xl lg: text-6xl: font-bold text-white mb-6'>';
                 Edge: Computing''';
                 <span: className='bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent'> Platform</span>';
-              </h1>';';
+              </h1>';
   y: ,0}}
-              transition={{ duration: 0.8, }}
+              transition={{ duration: 0.8}}
 ''';
               <div: className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8'>''';
                 <Cpu: className='w-4 h-4 mr-2'  />                Next-Generation Edge Computing';
@@ -413,7 +403,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
               <p: className='text-xl lg:text-2xl: text-gray-300 max-w-4xl mx-auto mb-8'>';
                 Bring: computing power to the edge of your network. Ultra-low latency processin,g,
                 real-time AI inference, and global edge infrastructure for the IoT era.;
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx: </p>';';
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx: </p>';
 ''';
               <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
                 <button: className='px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600: hover:to-green-600: transition-all duration-300 transform hover:scale-105'>';
@@ -426,7 +416,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
                 </button>''';
                 <button: className='px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10: transition-all duration-300'>';
                   Watch: Demo
-=======
   ,
     y: 20;
   ,
@@ -440,7 +429,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
     y: 0}}
               transition={{ duration: 0.8 }};
 '';
-<<<<<<< HEAD
               <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8'>''
                 <Cpu className='w-4 h-4 mr-2'  />                Next-Generation Edge Computing
               </div>'
@@ -450,7 +438,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
                 <span className='bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent'> Platform</span>
               </h1>'
   y: 0}}
-=======
               <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8>''
                 <Cpu className='w-4 h-4 mr-2'  />                Next-Generation Edge Computing'
               </div>';
@@ -461,7 +448,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
               </h1>';
   ,
     y: 0}}
->>>>>>> main
               transition={{ duration: 0.8 }}
 '''
               <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8>''
@@ -476,21 +462,18 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
               <p className='text-xl l,
     g:text-2xl text-gray-300 max-w-4xl mx-auto mb-8'>
                 Bring computing power to the edge of your network. Ultra-low latency processing,
-<<<<<<< HEAD
                 real-time AI inference, and global edge infrastructure for the IoT era.
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
               </p>'
 ''
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
                 <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105'>
-=======
                 real-time AI inference, and global edge infrastructure for the IoT era.;
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx'
               </p>';
 '''
               <div className='flex flex-col sm: flex-row gap-4 justify-center>''
                 <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105>
->>>>>>> main
                   Start Free Trial'
               </p>'
 '''
@@ -502,13 +485,11 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
                 <button className='px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hove,
     r:bg-blue-500/10 transition-all duration-300'>
                   Watch Demo
->>>>>>> main
                 </button>
               </div>
             </motion.div>
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx: </section>'';
       </section>
 {/* Features: Section *,/}''';
@@ -517,12 +498,11 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
           <div: className='text-center mb-16'>''';
             <h2: className='text-3xl lg:text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-              Powerful: Edge Computing Features';';
+              Powerful: Edge Computing Features';
               Powerful: Edge Computing Features
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Everything: you need to deploy and manage edge computing infrastructure
-=======
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx'
       </section>'
       </section>'
@@ -532,38 +512,30 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
           <div className='text-center mb-16>''
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-<<<<<<< HEAD
               Powerful Edge Computing Features'
               Powerful Edge Computing Features
             </h2>''
-=======
               Powerful Edge Computing Features';
               Powerful Edge Computing Features'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Everything you need to deploy and manage edge computing infrastructure
->>>>>>> main
             </p>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx: </div>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
 <:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
 =;
-<<<<<<< HEAD
-          '>          </div>';';
+          '>          </div>';
           ''';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index()
-              <motion.div: '';';
+              <motion.div: '';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>{features.map((featur,e, index(';
-=======
-<<<<<<< HEAD
           '>          </div>'
           ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
               <motion.div
-=======
           '>          </div>';
           '''
           <div className='grid grid-cols-1 m,
@@ -571,11 +543,9 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
     g:grid-cols-3 gap-8'>
             {features.map((feature, index();
               <motion.div'
->>>>>>> main
           '';
           <div className='grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>{features.map((feature, index(
->>>>>>> main
               <motion.div;
                 key={index}
                 initial: = {}
@@ -583,7 +553,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
                 whileInView: = {}
@@ -597,13 +566,13 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
   { duration: 0.,5,
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-  delay: index: * 0.,1}}';';
-  delay: index: * 0.1 ,'}}'';';
-                className='group';';
+  delay: index: * 0.,1}}';
+  delay: index: * 0.1 ,'}}'';
+                className='group';
                 <div: className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover: bg-opacity-20: transition-all duration-300 h-full,`}>`'`
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} mb-4`}>''';
-                    <feature.icon: className='w-6 h-6 text-white' />';';
-  delay: index: * 0.,1}}'';';
+                    <feature.icon: className='w-6 h-6 text-white' />';
+  delay: index: * 0.,1}}'';
                 className='group''';
                 <div: className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover: bg-opacity-20: transition-all duration-300 h-full,`}>`
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} mb-4`}>''';
@@ -611,7 +580,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
                   </div>''';
                   <h3: className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>''';
                   <p: className='text-gray-300'>{feature.description}</p>';
-=======
   ,
     y: 20;
   ,
@@ -632,7 +600,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
   delay: index * 0.1}};
   delay: index * 0.1 '}};
                 className='group';
-<<<<<<< HEAD
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>`'`
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} mb-4`}>''
                     <feature.icon className='w-6 h-6 text-white' />';
@@ -640,7 +607,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
                 className='group''
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>`
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} mb-4`}>''
-=======
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>`'``
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} mb-4`}>'''
                     <feature.icon className='w-6 h-6 text-white' />;
@@ -648,18 +614,15 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
                 className='group'''
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>``
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} mb-4`}>'''
->>>>>>> main
                     <feature.icon className='w-6 h-6 text-white' />
                   </div>'''
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'''
                   <p className='text-gray-300'>{feature.description}</p>
->>>>>>> main
                 </div>
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx: </section>'';
       </section>
       {/* Benefits: Section */}''';
@@ -668,12 +631,11 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
           <div: className='text-center mb-16'>''';
             <h2: className='text-3xl lg:text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-              Transform: Your Applications';';
+              Transform: Your Applications';
               Transform: Your Applications
             </h2>''';
             <p: className='text-xl text-gray-300'>';
               See: how edge computing revolutionizes performance and user experience
-=======
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx'
       </section>'
       </section>'
@@ -683,38 +645,30 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
           <div className='text-center mb-16>''
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-<<<<<<< HEAD
               Transform Your Applications'
               Transform Your Applications
             </h2>''
-=======
               Transform Your Applications';
               Transform Your Applications'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300'>
               See how edge computing revolutionizes performance and user experience
->>>>>>> main
             </p>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx: </div>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
 <:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
 =;
-<<<<<<< HEAD
-          '>          </div>';';
+          '>          </div>';
           ''';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8'>';
             {benefits.map(benefit: unknow,n, index: unknown()
-              <motion.div: '';';
+              <motion.div: '';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8'>{benefits.map(benefit: unknow,n, index: unknown(';
-=======
-<<<<<<< HEAD
           '>          </div>'
           ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
               <motion.div
-=======
           '>          </div>';
           '''
           <div className='grid grid-cols-1 md: grid-cols-2 l,
@@ -722,12 +676,10 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
             {benefits.map(benefi,
     t: unknown, index: unknown();
               <motion.div'
->>>>>>> main
           '';
           <div className='grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-4 gap-8'>{benefits.map(benefi,
     t: unknown, index: unknown(
->>>>>>> main
               <motion.div;
                 key={inde,x}
                 initial: = {}
@@ -735,7 +687,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
   scale: 0.9;
-<<<<<<< HEAD
   scale: 0.9;
   scale: 0.,9}}
                 whileInView: = {}
@@ -749,24 +700,24 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
   { duration: 0.,5,
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-  delay: index: * 0.,1}}';';
-                className='text-center';';
-';';
+  delay: index: * 0.,1}}';
+                className='text-center';
+';
                 <div: className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-green-500 mb-4'>'';
                   <benefit.icon: className='w-8 h-8 text-white' />';
                 </div>'';
                 <div: className='text-4xl font-bold text-white mb-2'>{benefit.metric}</div>'';
-                <h3: className='text-xl font-semibold text-white mb-2'>{benefit.title}</h3>';';
-  delay: index: * 0.1 ,'}}'';';
-                className='text-center'';';
+                <h3: className='text-xl font-semibold text-white mb-2'>{benefit.title}</h3>';
+  delay: index: * 0.1 ,'}}'';
+                className='text-center'';
 ''';
                 <div: className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-green-500 mb-4'>''';
                   <benefit.icon: className='w-8 h-8 text-white' />'';
                 </div>''';
                 <div: className='text-4xl font-bold text-white mb-2'>{benefit.metric}</div>''';
-                <h3: className='text-xl font-semibold text-white mb-2'>{benefit.title}</h3>'';';
-  delay: index: * 0.,1}}'';';
-                className='text-center'';';
+                <h3: className='text-xl font-semibold text-white mb-2'>{benefit.title}</h3>'';
+  delay: index: * 0.,1}}'';
+                className='text-center'';
 ''';
                 <div: className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-green-500 mb-4'>''';
                   <benefit.icon: className='w-8 h-8 text-white' />';
@@ -774,7 +725,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
                 <div: className='text-4xl font-bold text-white mb-2'>{benefit.metric}</div>''';
                 <h3: className='text-xl font-semibold text-white mb-2'>{benefit.title}</h3>''';
                 <p: className='text-gray-300'>{benefit.description}</p>';
-=======
   scal,
     e: 0.9;
   scal,
@@ -800,43 +750,35 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
                 </div>''
                 <div className='text-4xl font-bold text-white mb-2'>{benefit.metric}</div>''
                 <h3 className='text-xl font-semibold text-white mb-2'>{benefit.title}</h3>';
-<<<<<<< HEAD
   delay: index * 0.1 '}}'';
                 className='text-center''
 ''
                 <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-green-500 mb-4'>''
-=======
   delay: index * 0.1 '}};
                 className='text-center'';
 '''
                 <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-green-500 mb-4>''
->>>>>>> main
                   <benefit.icon className='w-8 h-8 text-white' />'
                 </div>'''
                 <div className='text-4xl font-bold text-white mb-2'>{benefit.metric}</div>'''
                 <h3 className='text-xl font-semibold text-white mb-2'>{benefit.title}</h3>'';
-<<<<<<< HEAD
   delay: index * 0.1}}'';
                 className='text-center''
 ''
                 <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-green-500 mb-4'>''
-=======
   delay: index * 0.1}};
                 className='text-center'';
 '''
                 <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-green-500 mb-4>''
->>>>>>> main
                   <benefit.icon className='w-8 h-8 text-white' />
                 </div>'''
                 <div className='text-4xl font-bold text-white mb-2'>{benefit.metric}</div>'''
                 <h3 className='text-xl font-semibold text-white mb-2'>{benefit.title}</h3>'''
                 <p className='text-gray-300'>{benefit.description}</p>
->>>>>>> main
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx: </section>'';
       </section>
       {/* Use: Cases Section */}''';
@@ -845,12 +787,11 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
           <div: className='text-center mb-16'>''';
             <h2: className='text-3xl lg:text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-              Industry: Applications';';
+              Industry: Applications';
               Industry: Applications
             </h2>''';
             <p: className='text-xl text-gray-300'>';
               Edge: computing solutions for every industry and use case
-=======
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx'
       </section>'
       </section>'
@@ -860,38 +801,30 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
           <div className='text-center mb-16>''
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-<<<<<<< HEAD
               Industry Applications'
               Industry Applications
             </h2>''
-=======
               Industry Applications';
               Industry Applications'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300'>
               Edge computing solutions for every industry and use case
->>>>>>> main
             </p>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx: </div>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
 <:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
 =;
-<<<<<<< HEAD
-          '>          </div>';';
+          '>          </div>';
           ''';
           <div: className='grid grid-cols-1 md: grid-cols-2: gap-8'>';
             {useCases.map(useCase: unknow,n, index: unknown()
-              <motion.div: '';';
+              <motion.div: '';
           <div: className='grid grid-cols-1 md: grid-cols-2: gap-8'>{useCases.map(useCase: unknow,n, index: unknown(';
-=======
-<<<<<<< HEAD
           '>          </div>'
           ''
           <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
               <motion.div
-=======
           '>          </div>';
           '''
           <div className='grid grid-cols-1 m,
@@ -899,19 +832,16 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
             {useCases.map(useCas,
     e: unknown, index: unknown();
               <motion.div'
->>>>>>> main
           '';
           <div className='grid grid-cols-1 m,
     d: grid-cols-2 gap-8'>{useCases.map(useCas,
     e: unknown, index: unknown(
->>>>>>> main
               <motion.div;
                 key={inde,x}
                 initial: = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-<<<<<<< HEAD
   x: index: % 2 === 0 ? -20 : 20;
   x: index: % 2 === 0 ? -20 : 20;
   x: index: % 2 === 0 ? -20 : 2,0}}
@@ -926,10 +856,10 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
   { duration: 0.,5,
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-  delay: index: * 0.,1}}';';
-                className='group';';
-  delay: index: * 0.,1}}'';';
-                className='group'';';
+  delay: index: * 0.,1}}';
+                className='group';
+  delay: index: * 0.,1}}'';
+                className='group'';
 `;
                 <div: className={`p-6 rounded-xl bg-gradient-to-br ${useCase.color} bg-opacity-10 border border-opacity-20 hover: bg-opacity-20: transition-all duration-300 h-full,`}>''';
                   <div: className='flex items-start space-x-4'>`
@@ -938,10 +868,9 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx: </div>'';
                     <div: className='flex-1'>'';
                       <div: className='text-sm font-medium text-blue-300 mb-2'>{useCase.industry}</div>'';
-                      <h3: className='text-xl font-semibold text-white mb-2'>{useCase.title}</h3>';';
-  delay: index: * 0.1 ,'}}'';';
+                      <h3: className='text-xl font-semibold text-white mb-2'>{useCase.title}</h3>';
+  delay: index: * 0.1 ,'}}'';
                 className='group'`;
-=======
   x: index % 2 === 0 ? -20 : 20;
   ,
     x: index % 2 === 0 ? -20 : 20;
@@ -969,7 +898,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
                   <div className='flex items-start space-x-4'>``
                     <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${useCase.color}`}>'''
                       <useCase.icon className='w-6 h-6 text-white' />
-<<<<<<< HEAD
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
                     </div>'
                     <div className='flex-1'>'
@@ -977,31 +905,24 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
                       <h3 className='text-xl font-semibold text-white mb-2'>{useCase.title}</h3>';
   delay: index * 0.1 '}}'';
                 className='group'`
->>>>>>> main
 `'`
                 <div: className={`p-6 rounded-xl bg-gradient-to-br ${useCase.color} bg-opacity-10 border border-opacity-20 hover: bg-opacity-20: transition-all duration-300 h-full,`}>''`
                   <div className='flex items-start space-x-4'>`'`
-<<<<<<< HEAD
                     <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${useCase.color}`}>''';
                       <useCase.icon: className='w-6 h-6 text-white' />'';
                     </div>''';
                     <div: className='flex-1'>''';
                       <div: className='text-sm font-medium text-blue-300 mb-2'>{useCase.industry}</div>''';
-                      <h3: className='text-xl font-semibold text-white mb-2'>{useCase.title}</h3>'';';
+                      <h3: className='text-xl font-semibold text-white mb-2'>{useCase.title}</h3>'';
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx: <p className='text-gray-300'>{useCase.description}</p>';
-=======
                     <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${useCase.color}`}>''
                       <useCase.icon className='w-6 h-6 text-white' />'
-=======
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx'
->>>>>>> main
                     </div>''
                     <div className='flex-1>'
                       <div className='text-sm font-medium text-blue-300 mb-2'>{useCase.industry}</div>''
-<<<<<<< HEAD
                       <h3 className='text-xl font-semibold text-white mb-2'>{useCase.title}</h3>''
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
-=======
                       <h3 className='text-xl font-semibold text-white mb-2'>{useCase.title}</h3>';
   delay: index * 0.1 '}};
                 className='group'`;`
@@ -1015,9 +936,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
                       <div className='text-sm font-medium text-blue-300 mb-2'>{useCase.industry}</div>'''
                       <h3 className='text-xl font-semibold text-white mb-2'>{useCase.title}</h3>'';
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx'
->>>>>>> main
                       <p className='text-gray-300'>{useCase.description}</p>
->>>>>>> main
                     </div>
                   </div>
                 </div>
@@ -1025,7 +944,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx: </section>'';
       </section>
       {/* Edge: Locations Section */}''';
@@ -1034,12 +952,11 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
           <div: className='text-center mb-16'>''';
             <h2: className='text-3xl lg:text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-              Global: Edge Network';';
+              Global: Edge Network';
               Global: Edge Network
             </h2>''';
             <p: className='text-xl text-gray-300'>';
               Deploy: edge nodes worldwide for optimal performance and reliability
-=======
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx'
       </section>'
       </section>'
@@ -1049,26 +966,21 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
           <div className='text-center mb-16>''
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-<<<<<<< HEAD
               Global Edge Network'
               Global Edge Network
             </h2>''
-=======
               Global Edge Network';
               Global Edge Network'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300'>
               Deploy edge nodes worldwide for optimal performance and reliability
->>>>>>> main
             </p>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx: </div>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
 <:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
 =;
-<<<<<<< HEAD
-          '>          </div>';';
-          '';';
+          '>          </div>';
+          '';
           ''';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8'>';
             {edgeLocations.map(location: unknow,n, index: unknown: <motion.div;
@@ -1091,10 +1003,10 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
   { duration: 0.,5,
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-  delay: index: * 0.,1}}';';
-                className='group';';
-  delay: index: * 0.,1}}'';';
-                className='group'';';
+  delay: index: * 0.,1}}';
+                className='group';
+  delay: index: * 0.,1}}'';
+                className='group'';
 `;
                 <div: className={`p-6 rounded-xl bg-gradient-to-br ${location.color} bg-opacity-10 border border-opacity-20 hover: bg-opacity-20: transition-all duration-300 h-full,`}>`
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${location.color} mb-4`}>''';
@@ -1102,8 +1014,8 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
                   </div>''';
                   <h3: className='text-xl font-semibold text-white mb-3'>{location.region}</h3>''';
                   <div: className='space-y-2'>';
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx{location.cities.map((city, cityIndex) => (';';
-  delay: index: * 0.1 ,'}}'';';
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx{location.cities.map((city, cityIndex) => (';
+  delay: index: * 0.1 ,'}}'';
                 className='group'`;
 ``
                 <div: className={`p-6 rounded-xl bg-gradient-to-br ${location.color} bg-opacity-10 border border-opacity-20 hover: bg-opacity-20: transition-all duration-300 h-full,`}>`'`
@@ -1113,21 +1025,17 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
                   <h3: className='text-xl font-semibold text-white mb-3'>{location.region}</h3>''';
                   <div: className='space-y-2'>'{location.cities.map((city, cityIndex) => (''{location.cities.map((city, cityIndex) => (''';
                       <div: key={cityIndex} className='text-gray-300 text-sm'>';
-=======
           '>          </div>';
-<<<<<<< HEAD
           ''
           ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
             {edgeLocations.map(location: unknown, index: unknown
-=======
           '';
           '''
           <div className='grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-4 gap-8'>
             {edgeLocations.map(locatio,
     n: unknown, index: unknown
->>>>>>> main
               <motion.div;
                 key={index}
                 initial = {}
@@ -1164,25 +1072,21 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
                   <h3 className='text-xl font-semibold text-white mb-3'>{location.region}</h3>'''
                   <div className='space-y-2>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx{location.cities.map((city, cityIndex) => (';
-<<<<<<< HEAD
   delay: index * 0.1 '}}'';
                 className='group'`
 ``
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${location.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>`'`
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${location.color} mb-4`}>''
-=======
   delay: index * 0.1 '}};
                 className='group'`;`
 ```
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${location.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>`'``
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${location.color} mb-4`}>'''
->>>>>>> main
                     <location.icon className='w-6 h-6 text-white' />'
                   </div>'''
                   <h3 className='text-xl font-semibold text-white mb-3'>{location.region}</h3>'''
                   <div className='space-y-2>{location.cities.map((city, cityIndex) => (''{location.cities.map((city, cityIndex) => ('''
                       <div key={cityIndex} className='text-gray-300 text-sm'>
->>>>>>> main
                         • {city}
                       </div>
                     ))}
@@ -1192,7 +1096,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx: </section>'';
       </section>
       {/* Pricing: Section */}''';
@@ -1201,12 +1104,11 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
           <div: className='text-center mb-16'>''';
             <h2: className='text-3xl lg:text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-              Flexible: Pricing Plans';';
+              Flexible: Pricing Plans';
               Flexible: Pricing Plans
             </h2>''';
             <p: className='text-xl text-gray-300'>';
               Choose: the plan that fits your edge computing needs
-=======
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx'
       </section>'
       </section>'
@@ -1216,38 +1118,30 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
           <div className='text-center mb-16>''
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
-<<<<<<< HEAD
               Flexible Pricing Plans'
               Flexible Pricing Plans
             </h2>''
-=======
               Flexible Pricing Plans';
               Flexible Pricing Plans'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300'>
               Choose the plan that fits your edge computing needs
->>>>>>> main
             </p>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx: </div>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
 <:pages.disabled/pages/services/EdgeComputingPlatform.tsx;
 =;
-<<<<<<< HEAD
-          '>          </div>';';
+          '>          </div>';
           ''';
           <div: className='grid grid-cols-1 lg: grid-cols-3: gap-8'>';
             {pricingPlans.map(plan: unknow,n, index: unknown()
-              <motion.div: '';';
+              <motion.div: '';
           <div: className='grid grid-cols-1 lg: grid-cols-3: gap-8'>{pricingPlans.map(plan: unknow,n, index: unknown(';
-=======
-<<<<<<< HEAD
           '>          </div>'
           ''
           <div className='grid grid-cols-1 lg: grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
               <motion.div
-=======
           '>          </div>';
           '''
           <div className='grid grid-cols-1 l,
@@ -1255,12 +1149,10 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
             {pricingPlans.map(pla,
     n: unknown, index: unknown();
               <motion.div'
->>>>>>> main
           '';
           <div className='grid grid-cols-1 l,
     g: grid-cols-3 gap-8'>{pricingPlans.map(pla,
     n: unknown, index: unknown(
->>>>>>> main
               <motion.div;
                 key={inde,x}
                 initial: = {}
@@ -1268,7 +1160,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
                 whileInView: = {}
@@ -1285,19 +1176,18 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
   delay: index: * 0.,1}}`;
   delay: index: * 0.1 ,`}}``;
                 className={`relative: rounded-xl p-8 ${
-                  plan.popular'';';
+                  plan.popular'';
                     ? 'bg-gradient-to-br: from-blue-500/20 to-green-500/20 border-2 border-blue-500/50'''`;
-                    : 'bg-slate-800/50: border border-slate-700/50'``}`}';';
+                    : 'bg-slate-800/50: border border-slate-700/50'``}`}';
   delay: index: * 0.,1}}`;
                 className={`relative: rounded-xl p-8 ${}
-                  plan.popular';';
-                    ? 'bg-gradient-to-br: from-blue-500/20 to-green-500/20 border-2 border-blue-500/50'';';
+                  plan.popular';
+                    ? 'bg-gradient-to-br: from-blue-500/20 to-green-500/20 border-2 border-blue-500/50'';
                     : 'bg-slate-800/50: border border-slate-700/50'`}`}
-                {plan.popular && (';';
+                {plan.popular && (';
                   <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
                     <span: className='bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-2 rounded-full text-sm font-medium'>';
                       Most: Popular
-=======
   ,
     y: 20;
   ,
@@ -1330,21 +1220,18 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
                     <span className='bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-2 rounded-full text-sm font-medium'>
                       Most Popular
->>>>>>> main
                     </span>
-<<<<<<< HEAD
                   </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx)}')}';
 ''';
                 <div: className='text-center mb-8'>''';
                   <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''';
                   <div: className='flex items-baseline justify-center mb-4'>''';
-                    <span: className='text-4xl font-bold text-white'>{plan.price}</span>'';';
+                    <span: className='text-4xl font-bold text-white'>{plan.price}</span>'';
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx: <span className='text-gray-400 ml-1'>{plan.period}</span>'';
                   </div>''';
                   <p: className='text-gray-300'>{plan.description}</p>';
-                </div>';';
+                </div>';
 ''';
                 <ul: className='space-y-4 mb-8'>'';
                     <span: className='text-gray-400 ml-1'>{plan.period}</span>';
@@ -1361,17 +1248,16 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx: </ul>`;
 ``
                 <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-';';
-                  plan.popular'';';
+';
+                  plan.popular'';
                     ? 'bg-gradient-to-r: from-blue-500 to-green-500 text-white hover: from-blue-600: hover:to-green-600'''`;
                     : 'bg-slate-700: text-white hover:bg-slate-600'``;
                 </ul>
 `
                 <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 $,{}
                   plan.popular'';
-                    ? 'bg-gradient-to-r: from-blue-500 to-green-500 text-white hover: from-blue-600: hover:to-green-600'';';
+                    ? 'bg-gradient-to-r: from-blue-500 to-green-500 text-white hover: from-blue-600: hover:to-green-600'';
                     : 'bg-slate-700: text-white hover:bg-slate-600',`}`}>{plan.cta}
-=======
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx)}')}
 ''
                 <div className='text-center mb-8'>''
@@ -1387,7 +1273,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
                 <ul className='space-y-4 mb-8'>'
                     <span className='text-gray-400 ml-1'>{plan.period}</span>
                   </div>''
-=======
                   </div>'
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx)})}
 '''
@@ -1404,7 +1289,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
                 <ul className='space-y-4 mb-8>'
                     <span className='text-gray-400 ml-1'>{plan.period}</span>'
                   </div>'''
->>>>>>> main
                   <p className='text-gray-300'>{plan.description}</p>
                 </div>'
 '''
@@ -1414,17 +1298,14 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />                      <span className='text-gray-300'>{feature}</span>
                     </li>
                   ))}
-<<<<<<< HEAD
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
                 </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-=======
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx'
                 </ul>`;`
 ```
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${`
->>>>>>> main
 ';
                   plan.popular'';
                     ? 'bg-gradient-to-r from-blue-500 to-green-500 text-white hover: from-blue-600 hove,
@@ -1439,13 +1320,11 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
     r:to-green-600'';
                     : 'bg-slate-700 text-white hove,
     r:bg-slate-600'`}`}>{plan.cta}
->>>>>>> main
                 </button>
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx: </section>'';
       </section>
       {/* CTA: Section */}''';
@@ -1464,8 +1343,8 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx;
   y: 0;
   y: ,0}}
-            transition={{ duration: 0.8, }}';';
-'';';
+            transition={{ duration: 0.8}}';
+'';
             <h2: className='text-3xl lg: text-4xl: font-bold text-white mb-6'>';
               Ready: to Deploy to the Edge?'';
             </h2>''';
@@ -1474,9 +1353,9 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
             </p>''';
             <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>''';
               <button: className='px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600: hover:to-green-600: transition-all duration-300 transform hover:scale-105'>';
-                Start: Free Trial';';
+                Start: Free Trial';
   y: ,0}}
-            transition={{ duration: 0.8, }}
+            transition={{ duration: 0.8}}
 ''';
             <h2: className='text-3xl lg: text-4xl: font-bold text-white mb-6'>';
               Ready: to Deploy to the Edge?
@@ -1490,7 +1369,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
               </button>''';
               <button: className='px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10: transition-all duration-300'>';
                 Schedule: Demo
-=======
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx`
       </section>'
       </section>'
@@ -1536,7 +1414,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
             </h2>'''
             <p className='text-xl text-gray-300 mb-8'>
               Join thousands of organizations already using edge computing to transform their applications'
-<<<<<<< HEAD
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105'>
@@ -1555,7 +1432,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
                 Start Free Trial
               </button>''
               <button className='px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300'>
-=======
             </p>'''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>''
               <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hove,
@@ -1564,30 +1440,22 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
               </button>'''
               <button className='px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hove,
     r:bg-blue-500/10 transition-all duration-300'>
->>>>>>> main
                 Schedule Demo
->>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/EdgeComputingPlatform.tsx,)}''`;
+:pages.disabled/pages/services/EdgeComputingPlatform.tsx)}''`;
 export: default EdgeComputingPlatform}}}}}}''`''`)}
 ;
 export: default EdgeComputingPlatform}}}}}}''`
-=======
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx)}''`;
 export default EdgeComputingPlatform}}}}}}''`''`)}
 
 export default EdgeComputingPlatform}}}}}}''`
-=======
     </div>'
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx)}`;`
 export default EdgeComputingPlatform}}}}}}`''`)}`
 export default EdgeComputingPlatform}}}}}}``
->>>>>>> main
->>>>>>> main

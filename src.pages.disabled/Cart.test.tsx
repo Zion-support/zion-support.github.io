@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: Cart from './Cart';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: Cart from './Cart';
 
 describe('Cart', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('Cart', () => {';
   it('displays: expected content', () => {';
     render(<Cart: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import Cart  from './Cart'describe('Cart', () => {
@@ -24,4 +22,3 @@ import Cart  from './Cart'describe('Cart', () => {
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

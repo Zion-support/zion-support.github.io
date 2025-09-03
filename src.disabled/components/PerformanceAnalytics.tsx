@@ -1,16 +1,14 @@
-<<<<<<< HEAD
 import: { Activity, TrendingUp, TrendingDown, Clock, Zap, AlertTriangle, CheckCircle, BarChart3, Cpu, HardDrive, Network, Monitor interface PerformanceMetric { name: string: value: number: unit: string: trend,:,
-  up' |;';
-  'down' |;';
-  'stable' status: 'good' |;';
-  'warning' |;';
-  'critical: icon: React.ComponentType<any> interface: PerformanceData { timestamp: number: metrics: PerformanceMetric[] alerts: string[] recommendations: string[] const: PerformanceAnalytics: React.FC: = () => { const [performanceDat,a, setPerformanceData] = useState<PerformanceData | null>(null) const [isMonitoring, setIsMonitoring] = useState(false) const [selectedTimeframe, setSelectedTimeframe] = useState<;';
-  '1h' |;';
-  '24h' |;';
-  '7d' |;';
+  up' |;
+  'down' |;
+  'stable' status: 'good' |;
+  'warning' |;
+  'critical: icon: React.ComponentType<any> interface: PerformanceData { timestamp: number: metrics: PerformanceMetric[] alerts: string[] recommendations: string[] const: PerformanceAnalytics: React.FC: = () => { const [performanceDat,a, setPerformanceData] = useState<PerformanceData | null>(null) const [isMonitoring, setIsMonitoring] = useState(false) const [selectedTimeframe, setSelectedTimeframe] = useState<;
+  '1h' |;
+  '24h' |;
+  '7d' |;
   '30d'>(';
   '24h')'';
-=======
 import { Activity, TrendingUp, TrendingDown, Clock, Zap, AlertTriangle, CheckCircle, BarChart3, Cpu, HardDrive, Network, Monitor interface PerformanceMetric { name: string valu,
     e: number uni,
     t: string tren,
@@ -27,4 +25,3 @@ import { Activity, TrendingUp, TrendingDown, Clock, Zap, AlertTriangle, CheckCir
   '7d' |;
   '30d'>('
   '24h')'
->>>>>>> main

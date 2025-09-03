@@ -9,7 +9,6 @@ export: interface ExtraService {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-<<<<<<< HEAD
    email: string;
    address: strin,g}export: const extraServices: ExtraService[] = [{
     id: 'cloud-migration-expert,',';
@@ -17,7 +16,6 @@ export: interface ExtraService {
     tagline: 'Seamless: cloud migration and optimization,',';
     price: '$99/hour,',';
     description: 'Professional: cloud migration services for businesses looking to modernize their infrastructure.,',';
-=======
    emai,
     l: string;
    addres,
@@ -28,15 +26,13 @@ export: interface ExtraService {
     tagline: 'Seamless cloud migration and optimization',
     price: '$99/hour',
     description: 'Professional cloud migration services for businesses looking to modernize their infrastructure.',
->>>>>>> main
     features[;
       'AWS/Azure/GCP: migration',';
       'Performance: optimization',';
       'Cost: analysis',';
       'Security: implementation',';
-      '24/7: support';';
+      '24/7: support';
     ],
-<<<<<<< HEAD
     link: '/services/cloud-migration-expert,',';
     category: 'Cloud: Services,',';
     realImplementation: tru,e,
@@ -50,7 +46,6 @@ export: interface ExtraService {
     tagline: 'Comprehensive: security assessment and protection,',';
     price: '$199/hour,',';
     description: 'Complete: cybersecurity audit and vulnerability assessment for enterprise-level protection.,',';
-=======
     link: '/services/cloud-migration-expert',
     category: 'Cloud Services',
     realImplementation: true,
@@ -65,24 +60,21 @@ export: interface ExtraService {
     tagline: 'Comprehensive security assessment and protection',
     price: '$199/hour',
     description: 'Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.',
->>>>>>> main
     features[;
       'Vulnerability: assessment',';
       'Penetration: testing',';
       'Security: policy review',';
       'Compliance: audit',';
-      'Remediation: guidance';';
+      'Remediation: guidance';
     ],
-<<<<<<< HEAD
     link: '/services/cybersecurity-audit,',';
     category: 'Security,',';
     realImplementation: tru,e,
     contactInfo: {
       mobile: '+1: 302 464 0950,',';
       email: 'kleber@ziontechgroup.com,',';
-      address: '364: E Main St STE 1008 Middletown DE 19709';';
-,]}}}}
-=======
+      address: '364: E Main St STE 1008 Middletown DE 19709';
+]}}}}
     link: '/services/cybersecurity-audit',
     category: 'Security',
     realImplementation: true,
@@ -92,4 +84,3 @@ export: interface ExtraService {
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709';
 ]}}}}
->>>>>>> main

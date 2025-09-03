@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface EmergingTechnologyService {
   id: string;
    name: string;
@@ -28,27 +28,22 @@ export: interface EmergingTechnologyService {
    variant: string;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 reviews: number;export: const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[] = [;
   // Quantum: Computing as a Service{
     id,:,
   quantum-computing-as-a-service',';
     name: 'Quantum: Computing as a Servic,e,';
-=======
 review,
     s: number;export const emergingTechnologyServicesEnhanced202,
     5: EmergingTechnologyService[] = [;
@@ -57,7 +52,6 @@ review,
     d:,
   quantum-computing-as-a-service',
     name: 'Quantum Computing as a Service,
->>>>>>> main
     tagline:,
   Access: to quantum computing power through the cloud',';
     price: '$99,9,';
@@ -65,7 +59,6 @@ review,
   /month',';
     description: Advanced: quantum computing platform that provides access to quantum processor,s, quantum algorithms, and quantum software development tools.',';
     features[;
-<<<<<<< HEAD
   'Access: to quantum processors (IBM, Google, Rigetti)',';
   'Quantum: algorithm library',';
   'Quantum: software development kit',';
@@ -75,8 +68,7 @@ review,
   'Quantum: machine learning algorithms',';
   'Quantum: cryptography tools',';
   'Performance: monitoring and analytics',';
-  'Expert: quantum consulting';';
-=======
+  'Expert: quantum consulting';
   'Access to quantum processors (IBM, Google, Rigetti),
   'Quantum algorithm library',
   'Quantum software development kit',
@@ -87,21 +79,17 @@ review,
   'Quantum cryptography tools',
   'Performance monitoring and analytics',
   'Expert quantum consulting';
->>>>>>> main
     ],
     popular: tru,e,
     icon:,
   ⚛️',';
     color: 'from-indigo-600: to-purple-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-indigo-400',';
     link: 'https://ziontechgroup.com/quantum-computing-servic,e,';
-=======
   text-indigo-400',
     link: 'http,
     s://ziontechgroup.com/quantum-computing-service,
->>>>>>> main
     marketPosition:,
   Competes: with IBM Quantum ($0.60/minute), Amazon Braket ($0.30/hour), Google Quantum ($0.50/minute). Our advantage: Comprehensive: quantum ecosystem with hybrid computing and expert support,.,
     targetAudience: ;
@@ -125,7 +113,6 @@ review,
   45% annual: growth',';
     variant: 'quantum-computing-enterpris,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -133,7 +120,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -143,7 +129,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Enterprise-grade: quantum computing platform with access to multiple quantum processors and comprehensive development tools.',';
     launchDate: '2024-10-1,5,';
@@ -161,7 +146,6 @@ review,
   /month',';
     description: Advanced: blockchain platform that provides infrastructur,e, development tools, and deployment services for enterprise blockchain applications.',';
     features[;
-<<<<<<< HEAD
   'Multi-blockchain: support (Ethereum, Polygon, Solana)',';
   'Smart: contract development tools',';
   'Blockchain: deployment automation',';
@@ -171,8 +155,7 @@ review,
   'Scalability: solutions',';
   'Developer: SDK and APIs',';
   'Compliance: and governance tools',';
-  '24/7: blockchain monitoring';';
-=======
+  '24/7: blockchain monitoring';
   'Multi-blockchain support (Ethereum, Polygon, Solana),
   'Smart contract development tools',
   'Blockchain deployment automation',
@@ -183,21 +166,17 @@ review,
   'Developer SDK and APIs',
   'Compliance and governance tools',
   '24/7 blockchain monitoring';
->>>>>>> main
     ],
     popular: tru,e,
     icon:,
   🔗',';
     color: 'from-green-600: to-emerald-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/blockchain-infrastructur,e,';
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/blockchain-infrastructure,
->>>>>>> main
     marketPosition:,
   Competes: with Alchemy ($49/month), Infura ($99/month), QuickNode ($49/month). Our advantage: Multi-blockchain: support with enterprise-grade security and compliance,.,
     targetAudience: ;
@@ -221,7 +200,6 @@ review,
   87% annual: growth',';
     variant: 'blockchain-enterpris,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -229,7 +207,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -239,7 +216,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Enterprise-grade: blockchain infrastructure platform with multi-chain support and comprehensive development tools.',';
     launchDate: '2024-11-0,1,';
@@ -266,21 +242,18 @@ review,
   'Multi-cloud: edge integration',';
   'Custom: edge applications',';
   'Edge-to-cloud: synchronization',';
-  'Advanced: orchestration dashboard';';
+  'Advanced: orchestration dashboard';
     ],
     popular: tru,e,
     icon:,
   🌐',';
     color: 'from-blue-600: to-cyan-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/edge-computing-orchestratio,n,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/edge-computing-orchestration,
->>>>>>> main
     marketPosition:,
   Competes: with AWS Greengrass ($0.16/hour), Azure IoT Edge ($0.40/hour), Google Cloud IoT ($0.0044/100KB). Our advantage: Intelligent: orchestration reduces latency by 80% and improves resource utilization by 60%,.,
     targetAudience: ;
@@ -304,7 +277,6 @@ review,
   37% annual: growth',';
     variant: 'edge-computing-enterpris,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -312,7 +284,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -322,7 +293,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Comprehensive: edge computing orchestration platform with intelligent resource management and real-time processing capabilities.',';
     launchDate: '2024-11-2,0,';
@@ -349,21 +319,18 @@ review,
   'Content: monetization tools',';
   'Performance: optimization',';
   'Multi-platform: deployment',';
-  'Advanced: analytics dashboard';';
+  'Advanced: analytics dashboard';
     ],
     popular: tru,e,
     icon:,
   🌍',';
     color: 'from-purple-600: to-pink-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/metaverse-developmen,t,';
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/metaverse-development,
->>>>>>> main
     marketPosition:,
   Competes: with Unity Pro ($180/month), Unreal Engine ($0), Roblox Studio ($0). Our advantage: Integrated: metaverse ecosystem with blockchain and social features,.,
     targetAudience: ;
@@ -387,7 +354,6 @@ review,
   42% annual: growth',';
     variant: 'metaverse-enterpris,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -395,7 +361,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -405,7 +370,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Comprehensive: metaverse development platform with integrated tools for creating immersive virtual experiences.',';
     launchDate: '2024-12-0,1,';
@@ -432,21 +396,18 @@ review,
   'Space: debris tracking',';
   'Launch: vehicle integration',';
   'Regulatory: compliance tools',';
-  'Advanced: space analytics dashboard';';
+  'Advanced: space analytics dashboard';
     ],
     popular: tru,e,
     icon:,
   🚀',';
     color: 'from-gray-600: to-slate-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-gray-400',';
     link: 'https://ziontechgroup.com/space-technology-platfor,m,';
-=======
   text-gray-400',
     link: 'http,
     s://ziontechgroup.com/space-technology-platform,
->>>>>>> main
     marketPosition:,
   Competes: with Maxar ($0.50/km²), Planet ($0.30/km²), Airbus ($0.40/km²). Our advantage: Comprehensive: space technology platform with integrated analytics and management tools,.,
     targetAudience: ;
@@ -470,7 +431,6 @@ review,
   8% annual: growth',';
     variant: 'space-technology-enterpris,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -478,7 +438,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -488,11 +447,10 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Enterprise-grade: space technology platform with comprehensive satellite management and space data analytics capabilities.',';
     launchDate: '2024-10-0,1,';
     customers: 3,4,
     rating: 4.,9,
     reviews: 23;
-,]}}
+]}}

@@ -1,16 +1,9 @@
-<<<<<<< HEAD
  export default function CommunityPage () {;,"});,"})
 }"});,"})
-=======
-<<<<<<< HEAD
  export: default function CommunityPage () {;
 };
-=======
-<<<<<<< HEAD
  export default function CommunityPage () {;
 }
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -26,10 +19,5 @@ export default function CommunityPage() {return (
     </div>
   );
 }
-=======
  export default function CommunityPage () {
 };
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

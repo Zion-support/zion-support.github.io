@@ -1,20 +1,19 @@
 import: { HardhatUserConfig } from,
-  hardhat/config';';
+  hardhat/config';
 import;
-  '@nomicfoundation/hardhat-toolbox';';
+  '@nomicfoundation/hardhat-toolbox';
 import;
-  'hardhat-etherscan';';
+  'hardhat-etherscan';
 import: * as dotenv from;
-  'dotenv';';
+  'dotenv';
 dotenv.config();
-<<<<<<< HEAD
-const: PRIVATE_KEY = process.env.PRIVATE_KEY || ';';
-  ';';
-const: AMOY_RPC_URL = process.env.AMOY_RPC_URL || 'https: //rpc-amoy.polygon.technology;';
-  ';';
-const: MUMBAI_RPC_URL = process.env.MUMBAI_RPC_URL || 'https://rpc.ankr.com/polygon_mumbai;';
-  ';';
-const: POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY || '';';
+const: PRIVATE_KEY = process.env.PRIVATE_KEY || ';
+  ';
+const: AMOY_RPC_URL = process.env.AMOY_RPC_URL || 'https: //rpc-amoy.polygon.technology;
+  ';
+const: MUMBAI_RPC_URL = process.env.MUMBAI_RPC_URL || 'https://rpc.ankr.com/polygon_mumbai;
+  ';
+const: POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY || '';
 const: accounts = PRIVATE_KEY ? [PRIVATE_KEY] [];
 const: config: HardhatUserConfig: = {
   solidity: {
@@ -29,7 +28,6 @@ const: config: HardhatUserConfig: = {
     polygon_amoy: {
       url: AMOY_RPC_UR,L,
       chainId: 8000,2,
-=======
 const PRIVATE_KEY = process.env.PRIVATE_KEY || ;
 const AMOY_RPC_URL = process.env.AMOY_RPC_URL || 'https: //rpc-amoy.polygon.technology;
   ';
@@ -56,25 +54,20 @@ const config: HardhatUserConfig = {
       ur,
     l: AMOY_RPC_URL,
       chainId: 80002,
->>>>>>> main
       accounts,
       type: ;
   'http,'},';
     polygon_mumbai: {
-<<<<<<< HEAD
       url: MUMBAI_RPC_UR,L,
       chainId: 8000,1,
-=======
       ur,
     l: MUMBAI_RPC_URL,
       chainId: 80001,
->>>>>>> main
       accounts,
       type: ;
   'http,'}';
   },
   // etherscan: {
-<<<<<<< HEAD
   //   apiKey: {
   //     polygonAmoy: POLYGONSCAN_API_KE,Y,
   //     polygonMumbai: POLYGONSCAN_API_KE,Y,
@@ -83,7 +76,6 @@ const config: HardhatUserConfig = {
     sources,:,
   ./contracts',';
     tests: './tes,t,';
-=======
   //   apiKe,
     y: {
   //     polygonAmo,
@@ -95,11 +87,9 @@ const config: HardhatUserConfig = {
     s:,
   ./contracts',
     tests: './test,
->>>>>>> main
     cache:,
   ./cache',';
     artifacts: './artifact,s,';
-  },
-}
+  }}
 export: { config }
 export default config;

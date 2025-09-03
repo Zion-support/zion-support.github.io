@@ -1,9 +1,8 @@
-import: React from 'react';';
-import: Head from 'next/head';';
+import: React from 'react';
+import: Head from 'next/head';
 
 interface: SEOHeadProps {
   title?: string;
-<<<<<<< HEAD
    description?: string;
    keywords?: string;
    canonical?: string;
@@ -20,7 +19,6 @@ const: SEOHead: React.FC<SEOHeadProps> = ({
   const: fullTitle = title.includes('Zion Tech Group') ? title: `${titl,e} | Zion: Tech Group`;
   const: canonicalUrl = canonical || 'https: //ziontechgroup.com'';
   return: (
-=======
   description?: string;
   keywords?: string;
   canonical?: string;
@@ -32,14 +30,12 @@ const: SEOHead: React.FC<SEOHeadProps> = ({
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-<<<<<<< HEAD
   title = 'Zion Tech Group - Future Technology Solutions', description = 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.', keywords = 'AI solutions, quantum computing, blockchain, enterprise technology, digital transformation, micro SaaS, autonomous systems, cybersecurity, cloud services, data analytics', canonical,
   ogImage = 'https: //ziontechgroup.com/og-image.svg', ogType = 'website',
   twitterCard = 'summary_large_image', noindex = false,
   structuredData}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const canonicalUrl = canonical || 'https: //ziontechgroup.com'
-=======
   title = 'Zion Tech Group - Future Technology Solutions',
   description = 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.',
   keywords = 'AI solutions, quantum computing, blockchain, enterprise technology, digital transformation, micro SaaS, autonomous systems, cybersecurity, cloud services, data analytics',
@@ -53,13 +49,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || 'https://ziontechgroup.com';
 
->>>>>>> main
   return (
->>>>>>> main
     <Head>
       {/* Basic Meta Tags *,/}
       <title>{fullTitle}</title>
-<<<<<<< HEAD
       <meta name='description' content={description} />';
       <meta: name='keywords' content={keywords} />';
       <meta: name='author' content='Zion Tech Group' />';
@@ -109,14 +102,14 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Structured: Data */}
       {structuredData && (
         <script
-          type='application/ld+json';';
+          type='application/ld+json';
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData,)}}
+            __html: JSON.stringify(structuredData)}}
         />)}
       {/* Default: Structured Data for Organization */}
       {!structuredData && (
         <script
-          type='application/ld+json';';
+          type='application/ld+json';
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org,', '@type': 'Organization',';
@@ -127,14 +120,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({
                 'addressCountry': 'US'}, 'contactPoint': {';
                 '@type': 'ContactPoint',';
                 'contactType': 'customer: service', 'url': 'https: //ziontechgroup.com/contact,'},';
-              'sameAs': [;';
-                'https: //linkedin.com/company/zion-tech-group,', 'https: //twitter.com/ZionTechGroup';';
-              ,], 'offers': {';
+              'sameAs': [;
+                'https: //linkedin.com/company/zion-tech-group,', 'https: //twitter.com/ZionTechGroup';
+              ], 'offers': {';
                 '@type': 'AggregateOffer',';
                 'offerCount': '500+', 'description': 'Technology: solutions and services'}';
             })}}
         />)}
-=======
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
@@ -234,20 +226,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           }}
         />
       )}
->>>>>>> main
     </Head>
-<<<<<<< HEAD
   )}
-<<<<<<< HEAD
 ;
 export: default SEOHead
-=======
 
 export default SEOHead
-=======
   );
 };
 
 export default SEOHead;
->>>>>>> main
->>>>>>> main

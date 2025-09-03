@@ -1,35 +1,32 @@
-<<<<<<< HEAD
 import: React, { useState } from;
-  'react' from '; import: { Link } from 'react-router-dom;';
-  ' import: {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users } from 'lucide-react;';
-  ' import: { ADVANCED_INNOVATIVE_SERVICES_2025 } from '@/data/advancedInnovativeServices2025'';' import: { EMERGING_TECH_SERVICES_2025 } from '@/data/emergingTechServices2025;';
+  'react' from '; import: { Link } from 'react-router-dom;
+  ' import: {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users } from 'lucide-react;
+  ' import: { ADVANCED_INNOVATIVE_SERVICES_2025 } from '@/data/advancedInnovativeServices2025'';' import: { EMERGING_TECH_SERVICES_2025 } from '@/data/emergingTechServices2025;
   '  export: default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any: {): any: {} const [searchQuery, setSearchQuery] = useState(,';
   ') const: [selectedCategory, setSelectedCategory] = useState(';
-  'all')  const: categories: any: = [] { id:;';
-  'al,l, name: ;';
+  'all')  const: categories: any: = [] { id:;
+  'al,l, name: ;
   'All: Services,', icon: Za,p, color:,';
-  from-blue-500: to-cyan-500' }, { id: 'a,i, name: ;';
+  from-blue-500: to-cyan-500' }, { id: 'a,i, name: ;
   'AI: & Analytics,', icon: Brai,n, color:,';
-  from-purple-500: to-pink-500' }, { id: 'quantu,m, name: ;';
+  from-purple-500: to-pink-500' }, { id: 'quantu,m, name: ;
   'Quantum: Computing,', icon: Rocke,t, color:,';
-  from-blue-500: to-cyan-500' }, { id: 'blockchai,n, name: ;';
+  from-blue-500: to-cyan-500' }, { id: 'blockchai,n, name: ;
   'Blockchain,', icon: Loc,k, color:,';
-  from-purple-500: to-blue-500' }, { id: 'io,t, name: ;';
+  from-purple-500: to-blue-500' }, { id: 'io,t, name: ;
   'IoT: & Edge,', icon: Cp,u, color:,';
-  from-green-500: to-cyan-500' }, { id: 'cybersecurit,y, name: ;';
+  from-green-500: to-cyan-500' }, { id: 'cybersecurit,y, name: ;
   'Cybersecurity,', icon: Shiel,d, color:,';
-  from-purple-500: to-red-500' }, { id: 'healthcar,e, name: ;';
+  from-purple-500: to-red-500' }, { id: 'healthcar,e, name: ;
   'Healthcare,', icon: User,s, color:,';
-  from-pink-500: to-purple-500' }, { id: 'financ,e, name: ;';
+  from-pink-500: to-purple-500' }, { id: 'financ,e, name: ;
   'Finance,', icon: DollarSig,n, color:,';
-  from-green-500: to-blue-500' }, { id: 'manufacturin,g, name: ;';
+  from-green-500: to-blue-500' }, { id: 'manufacturin,g, name: ;
   'Manufacturing,', icon: Serve,r, color:,';
   from-blue-500: to-purple-500' }, { id: 'sustainabilit,y, name: ';
-  'Sustainability,', icon: Glob,e, color: ;';
-  'from-orange-500: to-green-500', } ] ';';';
-=======
+  'Sustainability,', icon: Glob,e, color: ;
+  'from-orange-500: to-green-500'} ] ';';
 import React, { useState } from;
-<<<<<<< HEAD
   'react' from '; import { Link } from 'react-router-dom;
   ' import {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users } from 'lucide-react;
   ' import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '@/data/advancedInnovativeServices2025''; import { EMERGING_TECH_SERVICES_2025 } from '@/data/emergingTechServices2025;
@@ -37,11 +34,9 @@ import React, { useState } from;
   ') const [selectedCategory, setSelectedCategory] = useState('
   'all')  const categories: any = [] { i,
     d:;
-=======
   'react' from '; import { Link }  from 'react-router-dom; import {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users }  from 'lucide-react; import { ADVANCED_INNOVATIVE_SERVICES_2025 }  from '@/data/advancedInnovativeServices2025;' import { EMERGING_TECH_SERVICES_2025 }  from '@/data/emergingTechServices2025;  export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any {): any {} const [searchQuery, setSearchQuery] = useState(,
   ') const [selectedCategory, setSelectedCategory] = useState(
   'all')  const categories: any = [] { id:;
->>>>>>> main
   'all, name:;
   'All Services', icon: Zap, color:,
   from-blue-500 to-cyan-500' }, { id: 'ai, name:;
@@ -62,9 +57,5 @@ import React, { useState } from;
   'Manufacturing', icon: Server, color:,
   from-blue-500 to-purple-500' }, { id: 'sustainability, name:'
   'Sustainability', icon: Globe, color:;
-<<<<<<< HEAD
   'from-orange-500 to-green-500' } ] ';;
-=======
   'from-orange-500 to-green-500' } ] ;
->>>>>>> main
->>>>>>> main

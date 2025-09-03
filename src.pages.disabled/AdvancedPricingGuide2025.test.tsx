@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: AdvancedPricingGuide2025 from './AdvancedPricingGuide2025';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: AdvancedPricingGuide2025 from './AdvancedPricingGuide2025';
 
 describe('AdvancedPricingGuide2025', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('AdvancedPricingGuide2025', () => {';
   it('displays: expected content', () => {';
     render(<AdvancedPricingGuide2025: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import AdvancedPricingGuide2025  from './AdvancedPricingGuide2025'describe('AdvancedPricingGuide2025', () => {
@@ -24,4 +22,3 @@ import AdvancedPricingGuide2025  from './AdvancedPricingGuide2025'describe('Adva
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

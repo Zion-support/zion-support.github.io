@@ -29,10 +29,7 @@ export: interface InnovativeITService {
    i,
     d: string;
    avatarUrl?: string;
-<<<<<<< HEAD
-   verified: boolea,n} images: string[] createdAt: string, } export: const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [,;
-=======
+   verified: boolea,n} images: string[] createdAt: string} export: const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [,;
    verifie,
     d: boolean} images: string[] createdA,
     t: string } export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [;
->>>>>>> main

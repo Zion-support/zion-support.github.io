@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
 /**
  * Comprehensive Error Fixer Automation;
  * Fixes multiple types of errors comprehensively;
@@ -13,7 +12,6 @@ const glob = require(`glob`);
 
 class ComprehensiveErrorFixer {
   constructor() {
-=======
 
 /**;
  * Comprehensive Error Fixer Automation;
@@ -28,12 +26,10 @@ const glob = require('glob');
 ;
 class ComprehensiveErrorFixer {;
   constructor() {;
->>>>>>> main
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, `automation/logs/comprehensive-error-fixer.log`);
     this.ensureLogDirectory();
     this.fixCount = 0;
-<<<<<<< HEAD
     this.errorTypes = {
       syntax: 0,
       import: 0,
@@ -43,7 +39,6 @@ class ComprehensiveErrorFixer {;
     };
     this.startTime = Date.now();
     // Get automation interval from environment variable (default: 30 minutes)
-=======
     this.errorTypes = {;
       syntax: 0,;
       import: 0,;
@@ -53,7 +48,6 @@ class ComprehensiveErrorFixer {;
     };
     this.startTime = Date.now();
     // Get automation interval from environment variable (default: 30 minutes);
->>>>>>> main
     this.AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes;
   }
 ;
@@ -63,20 +57,16 @@ class ComprehensiveErrorFixer {;
       fs.mkdirSync(logDir, { recursive: true });
     }
   }
-<<<<<<< HEAD
 
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`);;
-=======
 ;
   log(message) {;
     console.log(`[${new Date().toISOString()}] ${message}`);
->>>>>>> main
   }
 ;
   async fixTypeScriptErrors() {;
     let fixes = 0;
-<<<<<<< HEAD
 
     // Fix common TypeScript syntax errors;
     const filesToFix = [
@@ -86,7 +76,6 @@ class ComprehensiveErrorFixer {;
       'src/context/auth/AuthContext.tsx',
       'src/context/auth/profileMapper.ts',
       'src/context/auth/useAuthEventHandlers.ts',
-=======
 ;
     // Fix common TypeScript syntax errors;
     const filesToFix = [;
@@ -96,7 +85,6 @@ class ComprehensiveErrorFixer {;
       'src/context/auth/AuthContext.tsx',;
       'src/context/auth/profileMapper.ts',;
       'src/context/auth/useAuthEventHandlers.ts',;
->>>>>>> main
     ];
 ;
     for (const filePath of filesToFix) {;
@@ -104,7 +92,6 @@ class ComprehensiveErrorFixer {;
         try {;
           let content = fs.readFileSync(filePath, 'utf8');
           let originalContent = content;
-<<<<<<< HEAD
 
           // Fix 'any' type annotations;
           content = content.replace(/:\s*any'/g, ': string');
@@ -119,7 +106,6 @@ class ComprehensiveErrorFixer {;
           content = content.replace(
             /logout:\s*any\(\)\s*=>\s*Promise<any>;/g,
             `logout: () => Promise<any>;`
-=======
 ;
           // Fix 'any' type annotations;
           content = content.replace(/:\s*any'/g, ': string');
@@ -133,8 +119,7 @@ class ComprehensiveErrorFixer {;
           content = content.replace(/action\?\s*:\s*{\s*;/g, 'action?: {');
           content = content.replace(;
             /logout:\s*any\(\)\s*=>\s*Promise<any>;/g,;
-            'logout: () => Promise<any>;';
->>>>>>> main
+            'logout: () => Promise<any>;
           );
 ;
           if (content !== originalContent) {;
@@ -142,13 +127,10 @@ class ComprehensiveErrorFixer {;
             fixes++;
             this.log(`  ✅ Fixed TypeScript errors in ${filePath}`);;
           }
-<<<<<<< HEAD
         } catch (error) {  
           this.log(`Error fixing TypeScript errors in ${filePath  }: ${error.message}`);;
-=======
         } catch (error) {;
           this.log(`Error fixing TypeScript errors in ${filePath}: ${error.message}`);
->>>>>>> main
         }
       }
     }
@@ -158,7 +140,6 @@ class ComprehensiveErrorFixer {;
 ;
   async fixJSXErrors() {;
     let fixes = 0;
-<<<<<<< HEAD
 
     // Fix common JSX syntax errors;
     const filesToFix = [
@@ -166,7 +147,6 @@ class ComprehensiveErrorFixer {;
       `src/components/home/ServicesShowcase.jsx`,
       `src/layout/PrimaryNav.jsx',
       'src/legal/TermsOfService.tsx',
-=======
 ;
     // Fix common JSX syntax errors;
     const filesToFix = [;
@@ -174,7 +154,6 @@ class ComprehensiveErrorFixer {;
       'src/components/home/ServicesShowcase.jsx',;
       'src/layout/PrimaryNav.jsx',;
       'src/legal/TermsOfService.tsx',;
->>>>>>> main
     ];
 ;
     for (const filePath of filesToFix) {;
@@ -182,7 +161,6 @@ class ComprehensiveErrorFixer {;
         try {;
           let content = fs.readFileSync(filePath, 'utf8');
           let originalContent = content;
-<<<<<<< HEAD
 
           // Fix JSX closing tags;
           content = content.replace(/<\/>div>/g, '</div>');
@@ -193,7 +171,6 @@ class ComprehensiveErrorFixer {;
           content = content.replace(
             /<div\s+className="max-w-4xl mx-auto space-y-8">\s*<div/g,
             `<div className="max-w-4xl mx-auto space-y-8"><div`
-=======
 ;
           // Fix JSX closing tags;
           content = content.replace(/<\/>div>/g, '</div>');
@@ -204,7 +181,6 @@ class ComprehensiveErrorFixer {;
           content = content.replace(;
             /<div\s+className="max-w-4xl mx-auto space-y-8">\s*<div/g,;
             '<div className="max-w-4xl mx-auto space-y-8"><div';
->>>>>>> main
           );
 ;
           if (content !== originalContent) {;
@@ -212,13 +188,10 @@ class ComprehensiveErrorFixer {;
             fixes++;
             this.log(`  ✅ Fixed JSX errors in ${filePath}`);;
           }
-<<<<<<< HEAD
         } catch (error) {  
           this.log(`Error fixing JSX errors in ${filePath  }: ${error.message}`);;
-=======
         } catch (error) {;
           this.log(`Error fixing JSX errors in ${filePath}: ${error.message}`);
->>>>>>> main
         }
       }
     }
@@ -228,7 +201,6 @@ class ComprehensiveErrorFixer {;
 ;
   async fixLintingErrors() {;
     let fixes = 0;
-<<<<<<< HEAD
 
     try {
       // Run ESLint auto-fix;
@@ -237,7 +209,6 @@ class ComprehensiveErrorFixer {;
       });
       
       if (result.includes(`Fixed`)) {
-=======
 ;
     try {;
       // Run ESLint auto-fix;
@@ -246,17 +217,13 @@ class ComprehensiveErrorFixer {;
       });
       ;
       if (result.includes('Fixed')) {;
->>>>>>> main
         fixes++;
         this.log(`  ✅ Fixed linting errors with ESLint auto-fix`);
       }
-<<<<<<< HEAD
     } catch (error) {  
       this.log(`Error running ESLint auto-fix: ${error.message  }`);;
-=======
     } catch (error) {;
       this.log(`Error running ESLint auto-fix: ${error.message}`);
->>>>>>> main
     }
 ;
     return fixes;
@@ -264,7 +231,6 @@ class ComprehensiveErrorFixer {;
 ;
   async fixUnusedImports() {;
     let fixes = 0;
-<<<<<<< HEAD
 
     // Find and remove unused imports;
     const filesToCheck = glob.sync(`src/**/*.{js,jsx,ts,tsx}`);
@@ -280,7 +246,6 @@ class ComprehensiveErrorFixer {;
         // Remove unused React imports if no JSX;
         if (!content.includes('jsx') && !content.includes('JSX`)) {
           content = content.replace(/import\s+React\s+from\s+[`"]react[`"];?\n?/g, ``);
-=======
 ;
     // Find and remove unused imports;
     const filesToCheck = glob.sync('src/**/*.{js,jsx,ts,tsx}');
@@ -296,7 +261,6 @@ class ComprehensiveErrorFixer {;
         // Remove unused React imports if no JSX;
         if (!content.includes('jsx') && !content.includes('JSX')) {;
           content = content.replace(/import\s+React\s+from\s+['"]react['"];?\n?/g, ');
->>>>>>> main
         }
 ;
         if (content !== originalContent) {;
@@ -304,13 +268,10 @@ class ComprehensiveErrorFixer {;
           fixes++;
           this.log(`  ✅ Fixed unused imports in ${filePath}`);;
         }
-<<<<<<< HEAD
       } catch (error) {  
         this.log(`Error fixing unused imports in ${filePath  }: ${error.message}`);;
-=======
       } catch (error) {;
         this.log(`Error fixing unused imports in ${filePath}: ${error.message}`);
->>>>>>> main
       }
     }
 ;
@@ -319,7 +280,6 @@ class ComprehensiveErrorFixer {;
 ;
   async fixConsoleStatements() {;
     let fixes = 0;
-<<<<<<< HEAD
 
     // Replace console statements with proper logging;
     const filesToFix = [
@@ -327,7 +287,6 @@ class ComprehensiveErrorFixer {;
       `src/hooks/usePerformance.jsx`,
       `src/utils/productionLogger.js',
       'src/utils/safeStorage.js',
-=======
 ;
     // Replace console statements with proper logging;
     const filesToFix = [;
@@ -335,7 +294,6 @@ class ComprehensiveErrorFixer {;
       'src/hooks/usePerformance.jsx',;
       'src/utils/productionLogger.js',;
       'src/utils/safeStorage.js',;
->>>>>>> main
     ];
 ;
     for (const filePath of filesToFix) {;
@@ -343,7 +301,6 @@ class ComprehensiveErrorFixer {;
         try {;
           let content = fs.readFileSync(filePath, 'utf8');
           let originalContent = content;
-<<<<<<< HEAD
 
           // Replace console statements with proper logging;
           content = content.replace(/console\.log\(/g, '// console.log(');
@@ -352,7 +309,6 @@ class ComprehensiveErrorFixer {;
           content = content.replace(/console\.info\(/g, `// console.info(`);
 
           if (content !== originalContent) {
-=======
 ;
           // Replace console statements with proper logging;
           content = content.replace(/console\.log\(/g, '// console.log(');
@@ -361,25 +317,20 @@ class ComprehensiveErrorFixer {;
           content = content.replace(/console\.info\(/g, '// console.info(');
 ;
           if (content !== originalContent) {;
->>>>>>> main
             fs.writeFileSync(filePath, content);
             fixes++;
             this.log(`  ✅ Fixed console statements in ${filePath}`);;
           }
-<<<<<<< HEAD
         } catch (error) {  
           this.log(`Error fixing console statements in ${filePath  }: ${error.message}`);;
-=======
         } catch (error) {;
           this.log(`Error fixing console statements in ${filePath}: ${error.message}`);
->>>>>>> main
         }
       }
     }
 ;
     return fixes;
   }
-<<<<<<< HEAD
 
   async fixMergeConflicts() {
     // Implementation for fixing merge conflicts;
@@ -477,7 +428,6 @@ class ComprehensiveErrorFixer {;
         this.errorReport.errorsFound.push({
           type: `automation_error`,
           message: error.message,
-=======
 ;
   async fixMergeConflicts() {;
     // Implementation for fixing merge conflicts;
@@ -575,14 +525,12 @@ class ComprehensiveErrorFixer {;
         this.errorReport.errorsFound.push({;
           type: 'automation_error',;
           message: error.message,;
->>>>>>> main
           stack: error.stack;
         });
       } finally {;
         this.errorReport.duration = Date.now() - this.startTime;
         await this.saveErrorReport();
       }
-<<<<<<< HEAD
 
       // Generate comprehensive error fixer report;
       this.log(`📊 Generating comprehensive error fixer report...`);
@@ -590,8 +538,7 @@ class ComprehensiveErrorFixer {;
         timestamp: new Date().toISOString(),
         fixesApplied: fixesApplied,
         summary: `Comprehensive error fixer completed`,
-        status: `completed`,
-      };
+        status: `completed`};
 
       const reportPath = path.join(
         process.cwd(),
@@ -650,7 +597,6 @@ class ComprehensiveErrorFixer {;
 
   async fixImportIssues() {
     this.log(`🔧 Fixing import issues...`);
-=======
 ;
       // Generate comprehensive error fixer report;
       this.log('📊 Generating comprehensive error fixer report...');
@@ -718,33 +664,26 @@ class ComprehensiveErrorFixer {;
 ;
   async fixImportIssues() {;
     this.log('🔧 Fixing import issues...');
->>>>>>> main
     // Implementation for fixing import issues;
     this.errorTypes.import++;
     this.fixCount++;
   }
-<<<<<<< HEAD
 
   async fixComponentIssues() {
     this.log(`🔧 Fixing component issues...`);
-=======
 ;
   async fixComponentIssues() {;
     this.log('🔧 Fixing component issues...');
->>>>>>> main
     // Implementation for fixing component issues;
     this.errorTypes.component++;
     this.fixCount++;
   }
-<<<<<<< HEAD
 
   async fixDependencyIssues() {
     this.log(`🔧 Fixing dependency issues...');
-=======
 ;
   async fixDependencyIssues() {;
     this.log('🔧 Fixing dependency issues...');
->>>>>>> main
     // Implementation for fixing dependency issues;
     this.errorTypes.dependency++;
     this.fixCount++;
@@ -762,11 +701,8 @@ class ComprehensiveErrorFixer {;
     try {;
       execSync('npx tsc --noEmit', { stdio: 'pipe' });
       return true;
-<<<<<<< HEAD
     } catch (error) {  
-=======
     } catch (error) {;
->>>>>>> main
       this.log('Type check failed');
       return false;
       }
@@ -777,16 +713,12 @@ class ComprehensiveErrorFixer {;
     try {;
       execSync('npx eslint . --fix', { stdio: 'pipe' });
       return true;
-<<<<<<< HEAD
     } catch (error) {  
-=======
     } catch (error) {;
->>>>>>> main
       this.log('Lint failed');
       return false;
       }
   }
-<<<<<<< HEAD
 
   async generateReport() {
     this.log('🔧 Generating error report...`);
@@ -798,7 +730,6 @@ class ComprehensiveErrorFixer {;
     };
     
     const reportPath = path.join(this.projectRoot, `automation/logs`, `comprehensive-error-fixer-report.json`);
-=======
 ;
   async generateReport() {;
     this.log('🔧 Generating error report...');
@@ -810,7 +741,6 @@ class ComprehensiveErrorFixer {;
     };
     ;
     const reportPath = path.join(this.projectRoot, 'automation/logs', 'comprehensive-error-fixer-report.json');
->>>>>>> main
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Report saved to: ${reportPath}`);;
     return report;
@@ -818,13 +748,10 @@ class ComprehensiveErrorFixer {;
 ;
   async saveErrorReport() {;
     const timestamp = Date.now();
-<<<<<<< HEAD
     const reportPath = path.join(this.projectRoot, `error-reports`, `error-fixer-report-${timestamp}.json`);;
     
-=======
     const reportPath = path.join(this.projectRoot, 'error-reports', `error-fixer-report-${timestamp}.json`);
     ;
->>>>>>> main
     // Ensure directory exists;
     const dir = path.dirname(reportPath);
     if (!fs.existsSync(dir)) {;
@@ -834,7 +761,6 @@ class ComprehensiveErrorFixer {;
     fs.writeFileSync(reportPath, JSON.stringify(this.errorReport, null, 2));
     this.log(`Error report saved to: ${reportPath}`);;
   }
-<<<<<<< HEAD
 
   // Main continuous loop;
   async runContinuous() {
@@ -867,7 +793,6 @@ process.on(`SIGTERM`, () => {
 // Run the fixer;
 fixer.runContinuous().catch(error => {
   fixer.log(`Unhandled error: ${error.message}`);;
-=======
 ;
   // Main continuous loop;
   async runContinuous() {;
@@ -900,6 +825,5 @@ process.on('SIGTERM', () => {;
 // Run the fixer;
 fixer.runContinuous().catch(error => {;
   fixer.log(`Unhandled error: ${error.message}`);
->>>>>>> main
   process.exit(1);
 });

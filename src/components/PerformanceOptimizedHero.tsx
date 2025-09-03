@@ -1,24 +1,11 @@
-<<<<<<< HEAD
 useEffect(() => { setIsVisible(true) ; setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ; ;
-=======
-<<<<<<< HEAD
 
 useEffect(() => { setIsVisible(true) ; setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ; ;,"});,"})
 ;,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
-<<<<<<< HEAD
 useEffect(() => { setIsVisible(true)  setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000)  ;
-=======
-<<<<<<< HEAD
 useEffect(() => { setIsVisible(true)  setCurrentFeature((prev) => (prev: + 1) % features.length) }, 3000)  
-=======
-<<<<<<< HEAD
 useEffect(() => { setIsVisible(true)  setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000)
-=======
-<<<<<<< HEAD
 useEffect(() => {setIsVisible(true)  setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000)  
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
@@ -51,9 +38,3 @@ const PerformanceOptimizedHero: React.FC = () => {
 };
 
 export default PerformanceOptimizedHero;
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

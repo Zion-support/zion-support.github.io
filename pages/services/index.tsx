@@ -14,11 +14,9 @@ import {
   ArrowRight 
 } from 'lucide-react';
 
-<<<<<<< HEAD
   const stats = [
     { number: '80+', label: 'Micro SaaS Solutions', icon: Zap }, { number: '35+', label: 'IT Services', icon: Shield },
-    { number: '30+', label: 'AI Services', icon: Globe }, { number: '500+', label: 'Projects Completed', icon: TrendingUp },
-  ];
+    { number: '30+', label: 'AI Services', icon: Globe }, { number: '500+', label: 'Projects Completed', icon: TrendingUp }];
 
   const benefits = [
     {
@@ -34,7 +32,6 @@ import {
     }, {
       icon: <Award className="w-8 h-8" />,
       title: 'Expert Support', description: '24/7 expert support from our experienced team of developers, engineers, and AI specialists.'
-=======
 const ServicesIndex: NextPage = () => {
   const services = [
     {
@@ -100,7 +97,6 @@ const ServicesIndex: NextPage = () => {
       features: ['Automated Testing', 'Performance Testing', 'Security Testing', 'User Acceptance Testing'],
       href: '/services/quality-assurance-testing-chat',
       color: 'teal'
->>>>>>> main
     }
   ];
 
@@ -126,7 +122,6 @@ const ServicesIndex: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4">
-<<<<<<< HEAD
           <div className="max-w-4xl mx-auto text-center">
             <motion.h1 
               className="text-5xl md: text-6xl font-bold mb-6 leading-tight"
@@ -310,13 +305,11 @@ const ServicesIndex: NextPage = () => {
                 View All AI Services <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
-=======
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto">
               Comprehensive technology solutions designed to transform your business and drive growth in the digital age.
             </p>
->>>>>>> main
           </div>
         </div>
       </section>
@@ -324,7 +317,6 @@ const ServicesIndex: NextPage = () => {
       {/* Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-<<<<<<< HEAD
           <motion.div 
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
@@ -438,7 +430,6 @@ const ServicesIndex: NextPage = () => {
                 <div className="flex justify-between items-center">
                   <div className="text-lg font-semibold text-green-600">
                     From ${service.pricing.starter}/mo
-=======
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => {
               const IconComponent = service.icon;
@@ -446,7 +437,6 @@ const ServicesIndex: NextPage = () => {
                 <div key={index} className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
                   <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-6 ${getColorClasses(service.color)}`}>
                     <IconComponent className="h-6 w-6" />
->>>>>>> main
                   </div>
                   
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">{service.title}</h3>
@@ -522,7 +512,6 @@ const ServicesIndex: NextPage = () => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-10"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
@@ -547,7 +536,6 @@ const ServicesIndex: NextPage = () => {
               </Link>
             </div>
           </motion.div>
-=======
       <section className="py-20 bg-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>
@@ -558,7 +546,6 @@ const ServicesIndex: NextPage = () => {
             Start Your Project
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
->>>>>>> main
         </div>
       </section>
     </MainLayout>

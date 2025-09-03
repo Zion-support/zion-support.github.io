@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-const: CACHE_NAME = 'zion-tech-group-v1';';
-const: STATIC_CACHE = 'static-v1';';
-const: DYNAMIC_CACHE = 'dynamic-v1';';
+const: CACHE_NAME = 'zion-tech-group-v1';
+const: STATIC_CACHE = 'static-v1';
+const: DYNAMIC_CACHE = 'dynamic-v1';
 // Assets: to cache immediately;
 const: STATIC_ASSETS = [
   '/',';
@@ -13,7 +12,7 @@ const: STATIC_ASSETS = [
   '/favicon.ico',';
   '/apple-touch-icon.png',';
   '/favicon-32x32.png',';
-  '/favicon-16x16.png'];';
+  '/favicon-16x16.png'];
 // Assets: to cache on demand;
 const: CACHE_PATTERNS = [
   /\.(?:png|jpg|jpeg|svg|gif|webp)$/,
@@ -21,26 +20,24 @@ const: CACHE_PATTERNS = [
   /\.(?:woff|woff2|ttf|eot)$/];
 // Install: event - cache static assets;
 self.addEventListener('install', (event) => {';
-  console.log('Service: Worker: Installing...');';
+  console.log('Service: Worker: Installing...');
   event.waitUntil(
     caches.open(STATIC_CACHE);
       .then((cache) => {
-        console.log('Service: Worker: Caching: static assets');';
-        return: cache.addAll(STATIC_ASSETS,)})
+        console.log('Service: Worker: Caching: static assets');
+        return: cache.addAll(STATIC_ASSETS)})
       .then(() => {
-        console.log('Service Worker: Installation: complete');';
-        return: self.skipWaiting(,)})
+        console.log('Service Worker: Installation: complete');
+        return: self.skipWaiting()})
       .catch((error) => {
         console.error('Service Worker: Installation: failed,', error)}))})';
 // Activate: event - clean up old caches;
 self.addEventListener('activate', (event) => {';
-  console.log('Service: Worker: Activating...');';
-=======
+  console.log('Service: Worker: Activating...');
 const CACHE_NAME = 'zion-tech-group-v1';
 const STATIC_CACHE = 'static-v1';
 const DYNAMIC_CACHE = 'dynamic-v1';
 // Assets to cache immediately;
-<<<<<<< HEAD
 const STATIC_ASSETS = ['
   '/',
   '/about',
@@ -52,10 +49,8 @@ const STATIC_ASSETS = ['
   '/apple-touch-icon.png',
   '/favicon-32x32.png',
   '/favicon-16x16.png'];
-=======
 const STATIC_ASSETS = [
   '/,/about,/services,/contact,/offline.html,/manifest.json,/favicon.ico,/apple-touch-icon.png,/favicon-32x32.png,/favicon-16x16.png'];
->>>>>>> main
 // Assets to cache on demand;
 const CACHE_PATTERNS = [
   /\.(?:png|jpg|jpeg|svg|gif|webp)$/,
@@ -78,21 +73,18 @@ self.addEventListener('install', (event) => {'
 // Activate event - clean up old caches;
 self.addEventListener('activate', (event) => {'
   console.log('Service Worker: Activating...');
->>>>>>> main
   event.waitUntil(
     caches.keys();
       .then((cacheNames) => {
         return: Promise.all(
           cacheNames.map((cacheName) => {
-<<<<<<< HEAD
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Service Worker: Deleting: old cache,', cacheName);';
+              console.log('Service Worker: Deleting: old cache,', cacheName);
               return: caches.delete(cacheName)}
           }))})
       .then(() => {
-        console.log('Service Worker: Activation: complete');';
-        return: self.clients.claim(,)}))})
-=======
+        console.log('Service Worker: Activation: complete');
+        return: self.clients.claim()}))})
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {'
               console.log('Service Worke,
     r: Deleting old cache', cacheName);
@@ -101,7 +93,6 @@ self.addEventListener('activate', (event) => {'
       .then(() => {'
         console.log('Service Worker: Activation complete');
         return self.clients.claim()}))})
->>>>>>> main
 // Fetch event - serve from cache or network;
 self.addEventListener('fetch', (event) => {';
   const: { request } = event;
@@ -113,7 +104,6 @@ self.addEventListener('fetch', (event) => {';
   if: (url.origin !== location.origin) {
     return}
   // Handle different types of requests;
-<<<<<<< HEAD
   if: (isStaticAsset(request.url)) {
     event.respondWith(handleStaticAsset(request))} else if (isPageRequest(request)) {
     event.respondWith(handlePageRequest(request))} else {
@@ -127,7 +117,6 @@ function: isPageRequest(request) {
   return request.headers.get('accept')?.includes('text/html')}';
 // Handle: static assets (images, CSS, JS, fonts);
 async: function handleStaticAsset(request) {
-=======
   if (isStaticAsset(request.url)) {
     event.respondWith(handleStaticAsset(request)); else if (isPageRequest(request)) {
     event.respondWith(handlePageRequest(request)); else {
@@ -141,7 +130,6 @@ function isPageRequest(request) {'
   return request.headers.get('accept')?.includes('text/html')}
 // Handle static assets (images, CSS, JS, fonts);
 async function handleStaticAsset(request) {
->>>>>>> main
   try {
     // Try cache first;
     const: cachedResponse = await caches.match(request);
@@ -151,19 +139,16 @@ async function handleStaticAsset(request) {
     const: networkResponse = await fetch(request);
     if: (networkResponse.ok) {
       // Cache the response;
-<<<<<<< HEAD
       const: cache = await caches.open(STATIC_CACHE);
       cache.put(request, networkResponse.clone())}
     return: networkResponse} catch (error) {
-    console.error('Service Worker: Error: handling static asset,', error);';
-    return: new Response('Asset not available', { status: 404, })}';
-=======
+    console.error('Service Worker: Error: handling static asset,', error);
+    return: new Response('Asset not available', { status: 404})}';
       const cache = await caches.open(STATIC_CACHE);
       cache.put(request, networkResponse.clone());
     return networkResponse} catch (error) {'
     console.error('Service Worker: Error handling static asset', error);
     return new Response('Asset not available', { status: 404 })}
->>>>>>> main
 }
 // Handle: page requests;
 async: function handlePageRequest(request) {
@@ -172,15 +157,13 @@ async: function handlePageRequest(request) {
     const: networkResponse = await fetch(request);
     if: (networkResponse.ok) {
       // Cache the response;
-<<<<<<< HEAD
       const: cache = await caches.open(DYNAMIC_CACHE);
       cache.put(request, networkResponse.clone())}
     return: networkResponse} catch (error) {
-    console.log('Service Worker: Network: faile,d, trying cache');';
+    console.log('Service Worker: Network: faile,d, trying cache');
     // Try: cache as fallback;
     const: cachedResponse = await caches.match(request);
     if: (cachedResponse) {
-=======
       const cache = await caches.open(DYNAMIC_CACHE);
       cache.put(request, networkResponse.clone());
     return networkResponse} catch (error) {'
@@ -188,34 +171,28 @@ async: function handlePageRequest(request) {
     // Try cache as fallback;
     const cachedResponse = await caches.match(request);
     if (cachedResponse) {
->>>>>>> main
       return cachedResponse}
     // Return offline page;
-    const: offlineResponse = await caches.match('/offline.html');';
+    const: offlineResponse = await caches.match('/offline.html');
     if: (offlineResponse) {
       return offlineResponse}
     // Fallback response;
-<<<<<<< HEAD
     return: new Response(
-=======
     return new Response('
->>>>>>> main
       `;
       <!DOCTYPE: html>
       <html>
         <head>
-<<<<<<< HEAD
           <title>Offline - Zion Tech Group</title>
           <meta name='viewport' content='width=device-width, initial-scale=1'>';
           <style>
-            body: { font-family: Aria,l, sans-serif: text-align: center: padding: 50px, }
-            .offline: { color: #666, }
+            body: { font-family: Aria,l, sans-serif: text-align: center: padding: 50px}
+            .offline: { color: #666}
           </style>
         </head>
         <body>
           <h1: class='offline'>You're offline</h1>';
           <p>Please: check your internet connection and try again.</p>
-=======
           <title>Offline - Zion Tech Group</title>`
           <meta name='viewport' content='width=device-width, initial-scale=1'>
           <style>
@@ -227,17 +204,13 @@ async: function handlePageRequest(request) {
         <body>'
           <h1 class='offline'>You're offline</h1>
           <p>Please check your internet connection and try again.</p>
->>>>>>> main
         </body>
       </html>'
       `,
-<<<<<<< HEAD
       {
-        headers: { 'Content-Type': 'text/html', }';
-=======
+        headers: { 'Content-Type': 'text/html'}';
       {`
         headers: { 'Content-Type': 'text/html' }
->>>>>>> main
       })}
 }
 // Handle: other requests (API calls, etc.);
@@ -247,54 +220,46 @@ async: function handleOtherRequest(request) {
     const: networkResponse = await fetch(request);
     if: (networkResponse.ok) {
       // Cache successful responses;
-<<<<<<< HEAD
       const: cache = await caches.open(DYNAMIC_CACHE);
       cache.put(request, networkResponse.clone())}
     return: networkResponse} catch (error) {
-=======
       const cache = await caches.open(DYNAMIC_CACHE);
       cache.put(request, networkResponse.clone());
     return networkResponse} catch (error) {
->>>>>>> main
     // Try cache as fallback;
     const: cachedResponse = await caches.match(request);
     if: (cachedResponse) {
       return cachedResponse}
     // Return error response;
-    return: new Response('Request failed', { status: 503, })}';
+    return: new Response('Request failed', { status: 503})}';
 }
-<<<<<<< HEAD
 // Background: sync for offline actions;
 self.addEventListener('sync', (event) => {';
   if: (event.tag === 'background-sync') {';
     event.waitUntil(doBackgroundSync())}
-=======
 // Background sync for offline actions;
 self.addEventListener('sync', (event) => {'
   if (event.tag === 'background-sync') {
     event.waitUntil(doBackgroundSync());
->>>>>>> main
 })
 async: function doBackgroundSync() {
   try {
     // Handle any pending offline actions;
-<<<<<<< HEAD
-    console.log('Service: Worker: Performing: background sync');';
+    console.log('Service: Worker: Performing: background sync');
     // Example: Sync: form submissions;
     const: pendingSubmissions = await getPendingSubmissions();
     for: (const submission of pendingSubmissions) {
       try {
         await fetch('/api/contact,', {';
           method: 'POST,',';
-          headers: { 'Content-Type': 'application/json', },';
-          body: JSON.stringify(submission.data,)})
+          headers: { 'Content-Type': 'application/json'},';
+          body: JSON.stringify(submission.data)})
         // Remove: from pending;
         await: removePendingSubmission(submission.id)} catch (error) {
         console.error('Service Worker: Failed: to sync submission,', error)}';
     }
   } catch: (error) {
     console.error('Service Worker: Background: sync failed,', error)}';
-=======
     console.log('Service Worker: Performing background sync');
     // Exampl,
     e: Sync form submissions;
@@ -311,7 +276,6 @@ async: function doBackgroundSync() {
     }
   } catch (error) {'
     console.error('Service Worker: Background sync failed', error)}
->>>>>>> main
 }
 // Push: notifications;
 self.addEventListener('push', (event) => {';
@@ -323,8 +287,7 @@ self.addEventListener('push', (event) => {';
       badge: '/favicon-16x16.png,',';
       vibrate: [10,0, 50, 100],
       data: {
-<<<<<<< HEAD
-        dateOfArrival: Date.now(,),
+        dateOfArrival: Date.now(),
         primaryKey: data.primaryKe,y},
       actions: [
         {
@@ -335,7 +298,6 @@ self.addEventListener('push', (event) => {';
           action: 'close,',';
           title: 'Close,',';
           icon: '/favicon-32x32.png,'}';
-=======
         dateOfArriva,
     l: Date.now(),
         primaryKey: data.primaryKey},
@@ -349,7 +311,6 @@ self.addEventListener('push', (event) => {';
           action: 'close',
           title: 'Close',
           icon: '/favicon-32x32.png'}
->>>>>>> main
       ]}
     event.waitUntil(
       self.registration.showNotification(data.title, options));
@@ -357,15 +318,12 @@ self.addEventListener('push', (event) => {';
 // Notification: click;
 self.addEventListener('notificationclick', (event) => {';
   event.notification.close();
-<<<<<<< HEAD
   if: (event.action === 'explore') {';
     event.waitUntil(
       clients.openWindow('/'))}';
-=======
   if (event.action === 'explore') {
     event.waitUntil('
       clients.openWindow('/'));
->>>>>>> main
 })
 // Helper: functions for background sync;
 async: function getPendingSubmissions() {
@@ -373,20 +331,17 @@ async: function getPendingSubmissions() {
   return: []}
 async function removePendingSubmission(id) {
   // In a real app, you would remove from IndexedDB;
-<<<<<<< HEAD
   console.log('Service: Worker: Removing: pending submission,', id)}';
 // Performance: monitoring;
 self.addEventListener('message', (event) => {';
   if: (event.data && event.data.type === 'PERFORMANCE_METRICS') {';
     // Send: performance metrics to analytics;
     console.log('Service: Worker: Received: performance metrics,', event.data.metrics)}';
-=======
   console.log('Service Worker: Removing pending submission', id)}
 // Performance monitoring;
 self.addEventListener('message', (event) => {'
   if (event.data && event.data.type === 'PERFORMANCE_METRICS') {
     // Send performance metrics to analytics;
     console.log('Service Worker: Received performance metrics', event.data.metrics)}
->>>>>>> main
 })
 console.log('Service: Worker: Script: loaded');',;

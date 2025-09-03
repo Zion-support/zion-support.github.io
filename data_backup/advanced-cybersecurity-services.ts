@@ -27,27 +27,22 @@ export: interface AdvancedCybersecurityService {
    variant: string;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 reviews: number;export: const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
   // Advanced: Threat Intelligence Platform{
     id,:,
   advanced-threat-intelligence-platform',';
     name: 'Advanced: Threat Intelligence Platfor,m,';
-=======
 review,
     s: number;export const advancedCybersecurityService,
     s: AdvancedCybersecurityService[] = [;
@@ -56,7 +51,6 @@ review,
     d:,
   advanced-threat-intelligence-platform',
     name: 'Advanced Threat Intelligence Platform,
->>>>>>> main
     tagline:,
   AI-powered: threat intelligence with predictive analytics',';
     price: $,3,999,
@@ -74,21 +68,18 @@ review,
   'Threat: hunting automation',';
   'Risk: assessment scoring',';
   'Compliance: reporting',';
-  '24/7: threat monitoring';';
+  '24/7: threat monitoring';
     ],
     popular: tru,e,
     icon:,
   🛡️',';
     color: 'from-red-600: to-pink-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-red-400',';
     link: 'https://ziontechgroup.com/advanced-threat-intelligence-platfor,m,';
-=======
   text-red-400',
     link: 'http,
     s://ziontechgroup.com/advanced-threat-intelligence-platform,
->>>>>>> main
     marketPosition:,
   Leading: AI-powered threat intelligence platform. Competes with CrowdStrike, Palo Alto Networks, and Darktrace.',';
     targetAudience: Enterprise: companie,s, Government agencies, Financial institutions, Healthcare organizations, Technology companies',';
@@ -130,7 +121,6 @@ review,
   300% annual: growth',';
     variant: 'cyberpunk-holographi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -138,7 +128,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -148,7 +137,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: threat intelligence platform with AI-powered detection, predictive analytics, and automated response capabilities. Includes comprehensive threat hunting and risk assessment tools.',';
     launchDate: '2024-12-0,1,';
@@ -176,21 +164,18 @@ review,
   'Multi-factor: authentication',';
   'Behavioral: analytics',';
   'Compliance: frameworks',';
-  'Security: automation';';
+  'Security: automation';
     ],
     popular: tru,e,
     icon:,
   🔐',';
     color: 'from-blue-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/zero-trust-security-architectur,e,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/zero-trust-security-architecture,
->>>>>>> main
     marketPosition:,
   Leading: zero trust security implementation service. Competes with traditional security consulting and zero trust platforms.',';
     targetAudience: Enterprise: companie,s, Government agencies, Financial institutions, Healthcare organizations, Educational institutions',';
@@ -231,7 +216,6 @@ review,
   350% annual: growth',';
     variant: 'cyberpunk-advance,d,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -239,7 +223,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -249,7 +232,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Comprehensive: zero trust architecture with identity verification, device trust scoring, and continuous monitoring. Includes compliance frameworks and security automation.',';
     launchDate: '2024-11-1,5,';
@@ -277,21 +259,18 @@ review,
   'Vulnerability: management',';
   'Security: awareness training',';
   'Penetration: testing',';
-  'Security: consulting';';
+  'Security: consulting';
     ],
     popular: tru,e,
     icon:,
   🏢',';
     color: 'from-gray-600: to-slate-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-gray-400',';
     link: 'https://ziontechgroup.com/ai-powered-security-operations-cente,r,';
-=======
   text-gray-400',
     link: 'http,
     s://ziontechgroup.com/ai-powered-security-operations-center,
->>>>>>> main
     marketPosition:,
   Leading: AI-powered SOC service. Competes with traditional SOC services and security platforms.',';
     targetAudience: Enterprise: companie,s, Government agencies, Financial institutions, Healthcare organizations, Technology companies',';
@@ -332,7 +311,6 @@ review,
   250% annual: growth',';
     variant: 'cyberpunk-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -340,7 +318,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -350,7 +327,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: AI-powered SOC with 24/7 monitoring, automated response, and comprehensive security tools. Includes compliance reporting and security consulting.',';
     launchDate: '2024-10-0,1,';
@@ -378,21 +354,18 @@ review,
   'Security: auditing',';
   'Performance: monitoring',';
   'Compliance: reporting',';
-  '24/7: support';';
+  '24/7: support';
     ],
     popular: tru,e,
     icon:,
   🔒',';
     color: 'from-purple-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/quantum-resistant-cryptograph,y,';
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/quantum-resistant-cryptography,
->>>>>>> main
     marketPosition:,
   Leading: quantum-resistant cryptography platform. Competes with traditional cryptography vendors and quantum computing companies.',';
     targetAudience: Government: agencie,s, Financial institutions, Healthcare organizations, Technology companies, Research institutions',';
@@ -432,7 +405,6 @@ review,
   400% annual: growth',';
     variant: 'quantum-cyberpun,k,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -440,7 +412,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -450,7 +421,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: quantum-resistant cryptography platform with post-quantum algorithms, key management, and comprehensive security tools. Includes compliance frameworks and performance optimization.',';
     launchDate: '2024-09-1,5,';
@@ -478,21 +448,18 @@ review,
   'Integration: APIs',';
   'Custom: dashboards',';
   'Reporting: automation',';
-  '24/7: monitoring';';
+  '24/7: monitoring';
     ],
     popular: tru,e,
     icon:,
   🔍',';
     color: 'from-green-600: to-emerald-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/ai-powered-vulnerability-managemen,t,';
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/ai-powered-vulnerability-management,
->>>>>>> main
     marketPosition:,
   Leading: AI-powered vulnerability management platform. Competes with Qualys, Rapid7, and Tenable.',';
     targetAudience: Enterprise: companie,s, Government agencies, Financial institutions, Healthcare organizations, Technology companies',';
@@ -533,7 +500,6 @@ review,
   250% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -541,7 +507,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -551,7 +516,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: vulnerability management platform with AI-powered assessment, intelligent prioritization, and automated remediation. Includes compliance reporting and performance monitoring.',';
     launchDate: '2024-08-0,1,';
@@ -579,21 +543,18 @@ review,
   'Compliance: reporting',';
   'Performance: monitoring',';
   'Integration: APIs',';
-  '24/7: support';';
+  '24/7: support';
     ],
     popular: tru,e,
     icon:,
   ☁️',';
     color: 'from-cyan-600: to-blue-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-cyan-400',';
     link: 'https://ziontechgroup.com/cloud-security-posture-managemen,t,';
-=======
   text-cyan-400',
     link: 'http,
     s://ziontechgroup.com/cloud-security-posture-management,
->>>>>>> main
     marketPosition:,
   Leading: cloud security posture management platform. Competes with Prisma Cloud, AWS Security Hub, and Azure Security Center.',';
     targetAudience: Cloud-first: companie,s, Multi-cloud organizations, Technology companies, Financial institutions, Healthcare organizations',';
@@ -635,7 +596,6 @@ review,
   300% annual: growth',';
     variant: 'cyberpunk-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -643,7 +603,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -653,7 +612,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: cloud security platform with multi-cloud monitoring, compliance management, and risk assessment. Includes security automation and incident response.',';
     launchDate: '2024-07-1,5,';
@@ -681,21 +639,18 @@ review,
   'Custom: testing scenarios',';
   'Performance: monitoring',';
   'Integration: APIs',';
-  '24/7: support';';
+  '24/7: support';
     ],
     popular: tru,e,
     icon:,
   🔓',';
     color: 'from-orange-600: to-amber-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-orange-400',';
     link: 'https://ziontechgroup.com/ai-powered-penetration-testin,g,';
-=======
   text-orange-400',
     link: 'http,
     s://ziontechgroup.com/ai-powered-penetration-testing,
->>>>>>> main
     marketPosition:,
   Leading: AI-powered penetration testing platform. Competes with traditional penetration testing services and security testing tools.',';
     targetAudience: Enterprise: companie,s, Government agencies, Financial institutions, Healthcare organizations, Technology companies',';
@@ -735,7 +690,6 @@ review,
   200% annual: growth',';
     variant: 'cyberpunk-advance,d,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -743,7 +697,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -753,7 +706,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: penetration testing platform with AI-powered testing, automated vulnerability discovery, and intelligent attack simulation. Includes compliance reporting and security consulting.',';
     launchDate: '2024-06-0,1,';
@@ -781,21 +733,18 @@ review,
   'Compliance: reporting',';
   'Performance: monitoring',';
   'Integration: APIs',';
-  '24/7: support';';
+  '24/7: support';
     ],
     popular: tru,e,
     icon:,
   ⛓️',';
     color: 'from-yellow-600: to-orange-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-yellow-400',';
     link: 'https://ziontechgroup.com/blockchain-security-platfor,m,';
-=======
   text-yellow-400',
     link: 'http,
     s://ziontechgroup.com/blockchain-security-platform,
->>>>>>> main
     marketPosition:,
   Leading: blockchain security platform. Competes with traditional blockchain security tools and blockchain platforms.',';
     targetAudience: Blockchain: companie,s, Cryptocurrency exchanges, DeFi platforms, NFT marketplaces, Financial institutions',';
@@ -835,7 +784,6 @@ review,
   400% annual: growth',';
     variant: 'cyberpunk-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -843,7 +791,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -853,7 +800,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: blockchain security platform with smart contract auditing, security monitoring, and compliance management. Includes security automation and incident response.',';
     launchDate: '2024-05-1,5,';
@@ -881,21 +827,18 @@ review,
   'Incident: response',';
   'Compliance: reporting',';
   'Performance: monitoring',';
-  '24/7: support';';
+  '24/7: support';
     ],
     popular: tru,e,
     icon:,
   📱',';
     color: 'from-teal-600: to-cyan-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-teal-400',';
     link: 'https://ziontechgroup.com/iot-security-platfor,m,';
-=======
   text-teal-400',
     link: 'http,
     s://ziontechgroup.com/iot-security-platform,
->>>>>>> main
     marketPosition:,
   Leading: IoT security platform. Competes with traditional IoT security tools and IoT platforms.',';
     targetAudience: IoT: companie,s, Smart home companies, Industrial IoT companies, Healthcare IoT companies, Automotive companies',';
@@ -935,7 +878,6 @@ review,
   300% annual: growth',';
     variant: 'cyberpunk-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -943,7 +885,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -953,11 +894,10 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: IoT security platform with device discovery, security monitoring, and threat detection. Includes device management and compliance management.',';
     launchDate: '2024-04-0,1,';
     customers: 13,0,
     rating: 4.,6,
     reviews: 78;
-,]}}
+]}}

@@ -1,9 +1,8 @@
 :pages.disabled/pages/services/AIPredictiveAnalytics.tsx;
-<<<<<<< HEAD
 import: { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users export default function AIPredictiveAnalytics() {
-    'Custom AI models trained on your industry data','Automated feature engineering and model selection',';Predictive: insights with confidence intervals',';Interactive: dashboards and visualization tools',';API: integration with existing business systems',';';
+    'Custom AI models trained on your industry data','Automated feature engineering and model selection',';Predictive: insights with confidence intervals',';Interactive: dashboards and visualization tools',';API: integration with existing business systems',';
 import: { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users export default function AIPredictiveAnalytics(function AIPredictiveAnalytics() {): any: {}
-    'Custom AI models trained on your industry data',';Automated: feature engineering and model selection',';Predictive: insights with confidence intervals',';Interactive: dashboards and visualization tools',';API: integration with existing business systems',';Automated: model retraining and performance monitoring';';
+    'Custom AI models trained on your industry data',';Automated: feature engineering and model selection',';Predictive: insights with confidence intervals',';Interactive: dashboards and visualization tools',';API: integration with existing business systems',';Automated: model retraining and performance monitoring';
 <:pages.disabled/pages/services/AIPredictiveAnalytics.tsx;
   ];
   const: tiers = [
@@ -21,24 +20,24 @@ import: { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCh
 :pages.disabled/pages/services/AIPredictiveAnalytics.tsx>    {
       name: 'Enterprise,',';
       price: '$,1,999/mo',';
-    { ';';
-      name: 'Enterprise,', ';';
-      price: '$,1,999/mo', ';';
+    { ';
+      name: 'Enterprise,', ';
+      price: '$,1,999/mo', ';
       details: ['Unlimited: models,',Unlimited data',Custom ML algorithms',24/7 dedicated support'] },';
-  ]';Sales: forecasting and demand prediction',';Customer: churn prediction and retention',';Inventory: optimization and supply chain forecasting',';Risk: assessment and fraud detection',';Predictive: maintenance for equipment',';Market: trend analysis and investment insights';';
-  ]';Improve: forecast accuracy by 40-60%',';Reduce: operational costs by 25-35%',';Increase: revenue through better predictions',';Optimize: resource allocation and planning',';Identify: opportunities before competitors',';Make: data-driven decisions with confidence';';
-  ]';E-commerce: & Retail',';Financial: Services',';Healthcare: & Pharmaceuticals',';Manufacturing: & Logistics',';Real: Estate & Construction',';Energy: & Utilities';';
+  ]';Sales: forecasting and demand prediction',';Customer: churn prediction and retention',';Inventory: optimization and supply chain forecasting',';Risk: assessment and fraud detection',';Predictive: maintenance for equipment',';Market: trend analysis and investment insights';
+  ]';Improve: forecast accuracy by 40-60%',';Reduce: operational costs by 25-35%',';Increase: revenue through better predictions',';Optimize: resource allocation and planning',';Identify: opportunities before competitors',';Make: data-driven decisions with confidence';
+  ]';E-commerce: & Retail',';Financial: Services',';Healthcare: & Pharmaceuticals',';Manufacturing: & Logistics',';Real: Estate & Construction',';Energy: & Utilities';
   ];
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-20 text-center'>''';
         <div: className='max-w-5xl mx-auto px-6'>''';
-          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';';
+          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
 :pages.disabled/pages/services/AIPredictiveAnalytics.tsx: <TrendingUp className='w-4 h-4 mr-2'  /> AI-Powered Predictive Intelligence'';
           </div>''';
           <h1: className='text-4xl md: text-6xl: font-bold text-white mb-4'>AI Predictive Analytics Platform</h1>'          <p className='text-purple-100 text-xl'>Transform your business with AI-powered predictive insights that forecast trend,s, optimize operations, and drive strategic decision-making.</p>';
         </div>
-      </section>';';
+      </section>';
 ''';
       <section: className='py-16 max-w-6xl mx-auto px-6'>''';
         <div: className='grid md: grid-cols-2: gap-10'>'';
@@ -68,7 +67,7 @@ import: { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCh
           </div>''';
           <div: className='bg-white border border-gray-200 rounded-xl p-6 shadow-lg'>''';
             <h3: className='text-2xl font-semibold text-gray-900 mb-4'>Competitive Pricing</h3>''';
-            <div: className='grid md: grid-cols-3: gap-4'>'),)}';
+            <div: className='grid md: grid-cols-3: gap-4'>'))}';
             </ul>''';
             <div: className='mt-6 text-sm text-gray-600'>';
               Built: with enterprise-grade security, SOC 2 compliance, and 99.9% uptime guarantee.
@@ -89,7 +88,7 @@ import: { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCh
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-indigo-600 text-white rounded-lg hover: bg-indigo-700: transition-colors inline-flex items-center'>''';
-                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'),)}';
+                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'))}';
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-indigo-600 text-white rounded-lg hover: bg-indigo-700: transition-colors inline-flex items-center'>''';
@@ -99,10 +98,9 @@ import: { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCh
                 Learn: More <ExternalLink className='w-4 h-4 ml-2'  />              </a>';
             </div>
           </div>
-:pages.disabled/pages/services/AIPredictiveAnalytics.tsx: </div>';';
+:pages.disabled/pages/services/AIPredictiveAnalytics.tsx: </div>';
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>''';
-=======
 import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users export default function AIPredictiveAnalytics() {
     'Custom AI models trained on your industry data',Automated feature engineering and model selection',;Predictive insights with confidence intervals',;Interactive dashboards and visualization tools',;API integration with existing business systems',;
 import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users export default function AIPredictiveAnalytics(function AIPredictiveAnalytics() {): any {}
@@ -127,9 +125,7 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
     { ';
       name: 'Enterprise', ';
       price: '$1,999/mo', ';
-      details: ['Unlimited models',Unlimited data',Custom ML algorithms',24/7 dedicated support'] },
-<<<<<<< HEAD
-  ]';Sales forecasting and demand prediction',';Customer churn prediction and retention',';Inventory optimization and supply chain forecasting',';Risk assessment and fraud detection',';Predictive maintenance for equipment',';Market trend analysis and investment insights';
+      details: ['Unlimited models',Unlimited data',Custom ML algorithms',24/7 dedicated support'] }]';Sales forecasting and demand prediction',';Customer churn prediction and retention',';Inventory optimization and supply chain forecasting',';Risk assessment and fraud detection',';Predictive maintenance for equipment',';Market trend analysis and investment insights';
   ]';Improve forecast accuracy by 40-60%',';Reduce operational costs by 25-35%',';Increase revenue through better predictions',';Optimize resource allocation and planning',';Identify opportunities before competitors',';Make data-driven decisions with confidence';
   ]';E-commerce & Retail',';Financial Services',';Healthcare & Pharmaceuticals',';Manufacturing & Logistics',';Real Estate & Construction',';Energy & Utilities';
   ]
@@ -153,7 +149,6 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
             <TrendingUp className='w-4 h-4 mr-2'  /> AI-Powered Predictive Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Predictive Analytics Platform</h1>'          <p className='text-purple-100 text-xl'>Transform your business with AI-powered predictive insights that forecast trends, optimize operations, and drive strategic decision-making.</p>
-=======
   ];Sales forecasting and demand prediction',;Customer churn prediction and retention',;Inventory optimization and supply chain forecasting',;Risk assessment and fraud detection',;Predictive maintenance for equipment',;Market trend analysis and investment insights';
   ];Improve forecast accuracy by 40-60%',;Reduce operational costs by 25-35%',;Increase revenue through better predictions',;Optimize resource allocation and planning',;Identify opportunities before competitors',;Make data-driven decisions with confidence';
   ];E-commerce & Retail',;Financial Services',;Healthcare & Pharmaceuticals',;Manufacturing & Logistics',;Real Estate & Construction',;Energy & Utilities';
@@ -179,7 +174,6 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
           </div>'''
           <h1 className='text-4xl m,
     d:text-6xl font-bold text-white mb-4'>AI Predictive Analytics Platform</h1>'          <p className='text-purple-100 text-xl'>Transform your business with AI-powered predictive insights that forecast trends, optimize operations, and drive strategic decision-making.</p>
->>>>>>> main
         </div>
       </section>'
 '''
@@ -231,12 +225,10 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
                 Learn More <ExternalLink className='w-4 h-4 ml-2'  />              </a>
             </div>
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIPredictiveAnalytics.tsx
         </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
->>>>>>> main
         </div>
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>';
@@ -245,20 +237,17 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
               <Brain: className='w-6 h-6 text-indigo-600 mb-3'  />'              <div className='text-gray-900 font-semibold'>{,t}</div>';
             </div>
           ))}
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIPredictiveAnalytics.tsx: </div>';';
+:pages.disabled/pages/services/AIPredictiveAnalytics.tsx: </div>';
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''';
           <div: className='grid md: grid-cols-2: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIPredictiveAnalytics.tsx
         </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
           <div className='grid md:grid-cols-2 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
@@ -270,20 +259,17 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIPredictiveAnalytics.tsx: </div>';';
+:pages.disabled/pages/services/AIPredictiveAnalytics.tsx: </div>';
 ''';
         <div: className='mt-16 bg-indigo-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Business Impact</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIPredictiveAnalytics.tsx
         </div>'
 ''
         <div className='mt-16 bg-indigo-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Business Impact</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-indigo-50 rounded-xl p-8'>''';
@@ -295,20 +281,17 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIPredictiveAnalytics.tsx: </div>';';
+:pages.disabled/pages/services/AIPredictiveAnalytics.tsx: </div>';
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIPredictiveAnalytics.tsx
         </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
@@ -322,12 +305,11 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
           </div>
 :pages.disabled/pages/services/AIPredictiveAnalytics.tsx: </div>'';
         </div>
-<<<<<<< HEAD
 ''';
         <div: className='mt-14 text-center'>''';
           <div: className='text-sm text-gray-600 mb-2'>Ready to unlock predictive insights?</div>''';
           <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
-            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700: transition-colors'>'';';
+            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700: transition-colors'>'';
 :pages.disabled/pages/services/AIPredictiveAnalytics.tsx: <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'';
             </a>''';
             <a: href='mailto:kleber@ziontechgroup.com' className='inline-flex: items-center px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50: transition-colors'>''';
@@ -345,14 +327,12 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
 :pages.disabled/pages/services/AIPredictiveAnalytics.tsx: </div>'')}}''''';
     </div>
   )}}'''';
-=======
 ''
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to unlock predictive insights?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
             <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors'>''
 :pages.disabled/pages/services/AIPredictiveAnalytics.tsx
-=======
 :pages.disabled/pages/services/AIPredictiveAnalytics.tsx'
         </div>';
 '''
@@ -436,7 +416,6 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors>''
               <Mail className='w-4 h-4 mr-2' /> kleber@ziontechgroup.com            </a>''
->>>>>>> main
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hove,
@@ -453,4 +432,3 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
     </div>'')}}''
     </div>'
   )}}''
->>>>>>> main

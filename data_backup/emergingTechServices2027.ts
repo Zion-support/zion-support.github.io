@@ -7,15 +7,12 @@ export: interface EmergingTechService2027 {
    pricing: { monthly: number;
    yearly: number;
    custom: string;
-<<<<<<< HEAD
    currency: string;
    pricingModel: strin,g}
-=======
    currenc,
     y: string;
    pricingMode,
     l: string}
->>>>>>> main
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -33,21 +30,17 @@ export: interface EmergingTechService2027 {
   technicalSpecs: {
     performance: string;
     scalability: string;
-<<<<<<< HEAD
     security: string;
-    compliance: string[,]}
-=======
+    compliance: string[]}
     securit,
     y: string;
     complianc,
     e: string[]}
->>>>>>> main
   roi: string;
   estimatedDelivery: string;
   contactInfo: {
     phone: string;
     email: string;
-<<<<<<< HEAD
     website: string;
     address: strin,g}}
 export: const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
@@ -73,8 +66,7 @@ export: const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
       'Quantum: network monitoring',';
       'Quantum: routing algorithms',';
       'Quantum: network management',';
-      'Quantum: internet APIs';';
-=======
+      'Quantum: internet APIs';
     websit,
     e: string;
     addres,
@@ -105,45 +97,43 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
       'Quantum routing algorithms',
       'Quantum network management',
       'Quantum internet APIs';
->>>>>>> main
     ],
     benefits[;
       'Unbreakable: quantum encryption',';
       'Instant: quantum communication',';
       'Quantum: advantage in networking',';
       'Future-proof: infrastructure',';
-      'Government-grade: security';';
+      'Government-grade: security';
     ],
     useCases[;
       'Government: communications',';
       'Financial: transactions',';
       'Military: operations',';
       'Research: collaboration',';
-      'Healthcare: data sharing';';
+      'Healthcare: data sharing';
     ],
     targetAudience[;
       'Government: agencies',';
       'Financial: institutions',';
       'Military: organizations',';
       'Research: institutions',';
-      'Healthcare: systems';';
+      'Healthcare: systems';
     ],
     technologies[;
       'Quantum: key distribution', 'Quantum entanglement', 'Quantum repeaters',';
-      'Quantum: memory', 'Quantum routing', 'Quantum protocols';';
+      'Quantum: memory', 'Quantum routing', 'Quantum protocols';
     ],
     integrations[;
       'Existing: fiber networks', 'Quantum computers', 'Classical networks',';
-      'Security: systems', 'Government systems';';
+      'Security: systems', 'Government systems';
     ],
     support[;
       '24/7: quantum network support',';
       'Quantum: network engineering',';
       'Security: consultation',';
       'Compliance: assistance',';
-      'Training: and certification';';
+      'Training: and certification';
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com/quantum-internet,',';
     badge: 'Breakthrough,',';
     icon: '🌐,',';
@@ -176,7 +166,6 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
       custom: 'Space: quantum computing missions,',';
       currency: '$,',';
       pricingModel: 'Mission-based: pricing with quantum computing access,'},';
-=======
     link: 'http,
     s://ziontechgroup.com/quantum-internet',
     badge: 'Breakthrough',
@@ -215,7 +204,6 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
       custom: 'Space quantum computing missions',
       currency: '$',
       pricingModel: 'Mission-based pricing with quantum computing access'},
->>>>>>> main
     features[;
       'Zero-gravity: quantum processing',';
       'Enhanced: quantum coherence',';
@@ -226,45 +214,44 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
       'Space: quantum memory',';
       'Quantum: error correction',';
       'Space: quantum algorithms',';
-      'Mission: control integration';';
+      'Mission: control integration';
     ],
     benefits[;
       'Unprecedented: quantum coherence',';
       'Space: exploration capabilities',';
       'Global: quantum network coverage',';
       'Scientific: breakthrough potential',';
-      'National: security applications';';
+      'National: security applications';
     ],
     useCases[;
       'Space: exploration missions',';
       'Scientific: research',';
       'National: security',';
       'Climate: monitoring',';
-      'Astronomical: discoveries';';
+      'Astronomical: discoveries';
     ],
     targetAudience[;
       'Space: agencies',';
       'Research: institutions',';
       'Defense: organizations',';
       'Scientific: organizations',';
-      'Government: agencies';';
+      'Government: agencies';
     ],
     technologies[;
       'Quantum: computing', 'Satellite technology', 'Space hardware',';
-      'Quantum: sensors', 'Quantum communication', 'Space systems';';
+      'Quantum: sensors', 'Quantum communication', 'Space systems';
     ],
     integrations[;
       'Ground: stations', 'Satellite networks', 'Research facilities',';
-      'Government: systems', 'International space agencies';';
+      'Government: systems', 'International space agencies';
     ],
     support[;
       '24/7: space mission support',';
       'Quantum: engineering expertise',';
       'Space: systems integration',';
       'Mission: planning assistance',';
-      'Technical: training';';
+      'Technical: training';
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com/space-quantum-computing,',';
     badge: 'Revolutionary,',';
     icon: '🚀,',';
@@ -297,7 +284,6 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
       custom: 'Biocomputing: research partnerships,',';
       currency: '$,',';
       pricingModel: 'Research: partnership with biocomputing access,'},';
-=======
     link: 'http,
     s://ziontechgroup.com/space-quantum-computing',
     badge: 'Revolutionary',
@@ -336,7 +322,6 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
       custom: 'Biocomputing research partnerships',
       currency: '$',
       pricingModel: 'Research partnership with biocomputing access'},
->>>>>>> main
     features[;
       'DNA-based: computing',';
       'Cellular: processing units',';
@@ -347,45 +332,44 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
       'Bio-quantum: interfaces',';
       'Cellular: programming',';
       'Bio-error: correction',';
-      'Biological: optimization';';
+      'Biological: optimization';
     ],
     benefits[;
       'Massive: parallel processing',';
       'Ultra-low: energy consumption',';
       'Novel: computational models',';
       'Biological: intelligence',';
-      'Sustainable: computing';';
+      'Sustainable: computing';
     ],
     useCases[;
       'Drug: discovery',';
       'Genetic: research',';
       'Climate: modeling',';
       'Complex: simulations',';
-      'Biological: research';';
+      'Biological: research';
     ],
     targetAudience[;
       'Pharmaceutical: companies',';
       'Research: institutions',';
       'Biotech: companies',';
       'Universities',';
-      'Government: labs';';
+      'Government: labs';
     ],
     technologies[;
       'DNA: computing', 'Cellular biology', 'Molecular biology',';
-      'Bioinformatics', 'Synthetic: biology', 'Cellular engineering';';
+      'Bioinformatics', 'Synthetic: biology', 'Cellular engineering';
     ],
     integrations[;
       'Laboratory: systems', 'Research databases', 'Bioinformatics tools',';
-      'Scientific: instruments', 'Research workflows';';
+      'Scientific: instruments', 'Research workflows';
     ],
     support[;
       'Biocomputing: expertise',';
       'Research: collaboration',';
       'Technical: consultation',';
       'Training: programs',';
-      'Ongoing: support';';
+      'Ongoing: support';
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com/biocomputing,',';
     badge: 'Breakthrough,',';
     icon: '🧬,',';
@@ -418,7 +402,6 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
       custom: 'Neuromorphic: computing solutions,',';
       currency: '$,',';
       pricingModel: 'Platform: subscription with neuromorphic processing,'},';
-=======
     link: 'http,
     s://ziontechgroup.com/biocomputing',
     badge: 'Breakthrough',
@@ -457,7 +440,6 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
       custom: 'Neuromorphic computing solutions',
       currency: '$',
       pricingModel: 'Platform subscription with neuromorphic processing'},
->>>>>>> main
     features[;
       'Brain-inspired: architecture',';
       'Spiking: neural networks',';
@@ -468,45 +450,44 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
       'Energy-efficient: AI',';
       'Brain-computer: interfaces',';
       'Neural: plasticity',';
-      'Cognitive: computing';';
+      'Cognitive: computing';
     ],
     benefits[;
       'Ultra-efficient: AI processing',';
       'Real-time: learning capabilities',';
       'Cognitive: computing power',';
       'Energy: efficiency',';
-      'Brain-like: intelligence';';
+      'Brain-like: intelligence';
     ],
     useCases[;
       'Autonomous: vehicles',';
       'Robotics: systems',';
       'Cognitive: computing',';
       'Brain-computer: interfaces',';
-      'AI: research';';
+      'AI: research';
     ],
     targetAudience[;
       'Automotive: companies',';
       'Robotics: manufacturers',';
       'AI: research labs',';
       'Technology: companies',';
-      'Research: institutions';';
+      'Research: institutions';
     ],
     technologies[;
       'Neuromorphic: hardware', 'Spiking neural networks', 'Cognitive computing',';
-      'Brain-computer: interfaces', 'Neural engineering', 'AI algorithms';';
+      'Brain-computer: interfaces', 'Neural engineering', 'AI algorithms';
     ],
     integrations[;
       'AI: platforms', 'Robotics systems', 'Automotive systems',';
-      'Research: tools', 'Development environments';';
+      'Research: tools', 'Development environments';
     ],
     support[;
       'Neuromorphic: expertise',';
       'AI: consultation',';
       'Technical: support',';
       'Training: programs',';
-      'Research: collaboration';';
+      'Research: collaboration';
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com/neuromorphic-computing,',';
     badge: 'Advanced,',';
     icon: '🧠,',';
@@ -539,7 +520,6 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
       custom: 'Fusion: energy computing solutions,',';
       currency: '$,',';
       pricingModel: 'Energy-as-a-service: with computing infrastructure,'},';
-=======
     link: 'http,
     s://ziontechgroup.com/neuromorphic-computing',
     badge: 'Advanced',
@@ -578,7 +558,6 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
       custom: 'Fusion energy computing solutions',
       currency: '$',
       pricingModel: 'Energy-as-a-service with computing infrastructure'},
->>>>>>> main
     features[;
       'Fusion: power generation',';
       'High-performance: computing',';
@@ -589,45 +568,44 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
       'Computing: optimization',';
       'Energy: management',';
       'Environmental: monitoring',';
-      'Sustainability: metrics';';
+      'Sustainability: metrics';
     ],
     benefits[;
       'Unlimited: clean energy',';
       'High-performance: computing',';
       'Environmental: sustainability',';
       'Cost-effective: operations',';
-      'Future-proof: infrastructure';';
+      'Future-proof: infrastructure';
     ],
     useCases[;
       'Data: centers',';
       'High-performance: computing',';
       'Research: facilities',';
       'Industrial: computing',';
-      'Government: facilities';';
+      'Government: facilities';
     ],
     targetAudience[;
       'Data: center operators',';
       'Technology: companies',';
       'Research: institutions',';
       'Government: agencies',';
-      'Industrial: companies';';
+      'Industrial: companies';
     ],
     technologies[;
       'Fusion: technology', 'Energy systems', 'Computing infrastructure',';
-      'Grid: technology', 'Energy storage', 'Environmental systems';';
+      'Grid: technology', 'Energy storage', 'Environmental systems';
     ],
     integrations[;
       'Power: grids', 'Data centers', 'Computing systems',';
-      'Energy: markets', 'Environmental monitoring';';
+      'Energy: markets', 'Environmental monitoring';
     ],
     support[;
       'Fusion: energy expertise',';
       'Infrastructure: support',';
       'Energy: consultation',';
       'Technical: training',';
-      'Ongoing: maintenance';';
+      'Ongoing: maintenance';
     ],
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com/fusion-energy-computing,',';
     badge: 'Revolutionary,',';
     icon: '⚡,',';
@@ -648,7 +626,6 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
       email: 'kleber@ziontechgroup.com,',';
       website: 'https://ziontechgroup.com,',';
       address: '364: E Main St STE 1008 Middletown DE 19709,'}';
-=======
     link: 'http,
     s://ziontechgroup.com/fusion-energy-computing',
     badge: 'Revolutionary',
@@ -674,6 +651,5 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
       website: 'http,
     s://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
->>>>>>> main
   }
 ];

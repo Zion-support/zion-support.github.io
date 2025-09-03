@@ -1,14 +1,13 @@
 import: React, { useState } from,
-  react';';
+  react';
 import: Head from;
-  'next/head';';
+  'next/head';
 import: { motion } from;
-  'framer-motion';';
+  'framer-motion';
 import: { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from;
-  'lucide-react';';
+  'lucide-react';
 export: default function Revolutionary2025ServicesShowcasePage() {
   // Placeholder data for services;
-<<<<<<< HEAD
   const: services = [{
       id: 'ai-solution,s,';
       name:,
@@ -23,13 +22,9 @@ export: default function Revolutionary2025ServicesShowcasePage() {
       price: 'Custo,m,';
       rating:  ,5,
       customers: 5,0},
-=======
-<<<<<<< HEAD
   const services = [{'
-=======
   const services = [
   {
->>>>>>> main
       id: 'ai-solutions,
       name:,
   AI Solutions',
@@ -39,7 +34,6 @@ export: default function Revolutionary2025ServicesShowcasePage() {
       price: 'Custom,
       rating: 5,
       customers: 50},
->>>>>>> main
     {
       id:,
   cybersecurity',';
@@ -49,7 +43,6 @@ export: default function Revolutionary2025ServicesShowcasePage() {
       features: [;
   'Threat: Detectio,n,';
 ,
-<<<<<<< HEAD
   Zero: Trust Architecture',';
   'Security: Audits',';
   'Incident: Response',';
@@ -57,12 +50,10 @@ export: default function Revolutionary2025ServicesShowcasePage() {
       price: 'Custo,m,';
       rating:  ,5,
       customers: 7,5},
-=======
   Zero Trust Architecture,Security Audits,Incident Response,Compliance'],
       price: 'Custom,
       rating: 5,
       customers: 75},
->>>>>>> main
     {
       id:,
   cloud-devops',';
@@ -72,7 +63,6 @@ export: default function Revolutionary2025ServicesShowcasePage() {
       features: [;
   'Cloud: Migratio,n,';
 ,
-<<<<<<< HEAD
   DevOps: Automation',';
   'Infrastructure: as Code',';
   'Monitoring',';
@@ -88,9 +78,9 @@ export: default function Revolutionary2025ServicesShowcasePage() {
     averageRating: (allRevolutionaryServices.reduce((su,m, service) => sum: + service.rating, 0) / allRevolutionaryServices.length).toFixed(1),
     totalRevenue: allRevolutionaryServices.reduce((su,m, service) => {
       const: price = parseInt(service.price.replace(
-  '$', ';';
+  '$', ';
   ').replace(',';
-  ', ''));';
+  ', ''));
       return: sum + (price * service.customers)}, 0)}
 
   return(
@@ -113,9 +103,9 @@ export: default function Revolutionary2025ServicesShowcasePage() {
         {/* Hero Section *,/}
         <section className='relative py-20 px-4 sm: px-6: lg:px-8'>';
           <div: className='max-w-7xl mx-auto text-center'>';
-            <motion.div: initial={{ opacity: ,0, y: 30, }}
-              animate={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.8, }}
+            <motion.div: initial={{ opacity: ,0, y: 30}}
+              animate={{ opacity:  ,1, y: 0}}
+              transition={{ duration: 0.8}}
             >
               <h1: className='text-5xl md: text-7xl: font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>';
                 Revolutionary: 2025 Services
@@ -126,27 +116,27 @@ export: default function Revolutionary2025ServicesShowcasePage() {
               </p>
               {/* Stats Grid */}
               <div className='grid grid-cols-2 md: grid-cols-4: gap-6 mb-12'>';
-                <motion.div: initial={{ opacity: ,0, scale: 0.8, }}
-                  animate={{ opacity:  ,1, scale: 1, }}
-                  transition={{ duration: 0.,6, delay: 0.1, }} className='bg-gradient-to-br: from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30'>';
+                <motion.div: initial={{ opacity: ,0, scale: 0.8}}
+                  animate={{ opacity:  ,1, scale: 1}}
+                  transition={{ duration: 0.,6, delay: 0.1}} className='bg-gradient-to-br: from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30'>';
                   <div: className='text-3xl font-bold text-blue-400'>{stats.totalServices}</div>';
                   <div: className='text-sm text-gray-400'>Revolutionary Services</div>';
                 </motion.div>
-                <motion.div: initial={{ opacity:  ,0, scale: 0.8, }}
-                  animate={{ opacity:  ,1, scale: 1, }}
-                  transition={{ duration: 0.,6, delay: 0.2, }} className='bg-gradient-to-br: from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-6 border border-green-500/30'>';
+                <motion.div: initial={{ opacity:  ,0, scale: 0.8}}
+                  animate={{ opacity:  ,1, scale: 1}}
+                  transition={{ duration: 0.,6, delay: 0.2}} className='bg-gradient-to-br: from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-6 border border-green-500/30'>';
                   <div: className='text-3xl font-bold text-green-400'>{stats.totalCustomers.toLocaleString()}+</div>';
                   <div: className='text-sm text-gray-400'>Active Customers</div>';
                 </motion.div>
-                <motion.div: initial={{ opacity:  ,0, scale: 0.8, }}
-                  animate={{ opacity:  ,1, scale: 1, }}
-                  transition={{ duration: 0.,6, delay: 0.3, }} className='bg-gradient-to-br: from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30'>';
+                <motion.div: initial={{ opacity:  ,0, scale: 0.8}}
+                  animate={{ opacity:  ,1, scale: 1}}
+                  transition={{ duration: 0.,6, delay: 0.3}} className='bg-gradient-to-br: from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30'>';
                   <div: className='text-3xl font-bold text-purple-400'>{stats.averageRating}</div>';
                   <div: className='text-sm text-gray-400'>Average Rating</div>';
                 </motion.div>
-                <motion.div: initial={{ opacity:  ,0, scale: 0.8, }}
-                  animate={{ opacity:  ,1, scale: 1, }}
-                  transition={{ duration: 0.,6, delay: 0.4, }} className='bg-gradient-to-br: from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-6 border border-orange-500/30'>';
+                <motion.div: initial={{ opacity:  ,0, scale: 0.8}}
+                  animate={{ opacity:  ,1, scale: 1}}
+                  transition={{ duration: 0.,6, delay: 0.4}} className='bg-gradient-to-br: from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-6 border border-orange-500/30'>';
                   <div: className='text-3xl font-bold text-orange-400'>${(stats.totalRevenue / 1000000).toFixed(1)}M+</div>';
                   <div: className='text-sm text-gray-400'>Revenue Generated</div>';
                 </motion.div>
@@ -159,7 +149,6 @@ export: default function Revolutionary2025ServicesShowcasePage() {
                 <button: className='border-blue-500 text-blue-400 hover: bg-blue-500/20'>';
                   <Mail: className='w-5 h-5 mr-2' />';
                   {contactInfo.emai,l}
-=======
   DevOps Automation,Infrastructure as Code,Monitoring,Scalability'],
       price: 'Custom,
       rating: 5,
@@ -171,19 +160,13 @@ export: default function Revolutionary2025ServicesShowcasePage() {
     totalCustomers: allRevolutionaryServices.reduce((sum, service) => sum + service.customers, 0),
     averageRating: (allRevolutionaryServices.reduce((sum, service) => sum + service.rating, 0) / allRevolutionaryServices.length).toFixed(1),
     totalRevenue: allRevolutionaryServices.reduce((sum, service) => {
-<<<<<<< HEAD
       const price = parseInt(service.price.replace('
   '$', ';
   ').replace(',
-<<<<<<< HEAD
   ', ''))
-=======
   ', ''));
-=======
       const price = parseInt(service.price.replace(
-  '$', ).replace(,, ''));
->>>>>>> main
->>>>>>> main
+  '$').replace(,, ''));
       return sum + (price * service.customers)}, 0)}
 
   return(
@@ -218,16 +201,13 @@ export: default function Revolutionary2025ServicesShowcasePage() {
             >'
               <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>
                 Revolutionary 2025 Services
-<<<<<<< HEAD
               </h1>
               <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
                 Experience the future of technology with our cutting-edge AI, quantum computing, and IT infrastructure services.
-=======
               </h1>'
               <p className='text-xl m,
     d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
                 Experience the future of technology with our cutting-edge AI, quantum computing, and IT infrastructure services.;
->>>>>>> main
                 Transform your business with solutions that were once only science fiction.
               </p>
               {/* Stats Grid */}
@@ -272,20 +252,17 @@ export: default function Revolutionary2025ServicesShowcasePage() {
                 <button className='border-blue-500 text-blue-400 hover:bg-blue-500/20>
                   <Mail className='w-5 h-5 mr-2' />
                   {contactInfo.email}
->>>>>>> main
                 </button>
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Category: Filter and Controls */}
         <section className='py-12 px-4 sm: px-6: lg:px-8'>';
           <div: className='max-w-7xl mx-auto'>';
             <div: className='flex flex-col lg:flex-row: justify-between items-start lg:items-center: gap-6 mb-8'>';
               {/* Category: Filter *,/}
               <div className='flex flex-wrap gap-3'>';
-=======
         {/* Category Filter and Controls */}
         <section className='py-12 px-4 sm: px-6 lg:px-8>
           <div className='max-w-7xl mx-auto>
@@ -294,22 +271,19 @@ export: default function Revolutionary2025ServicesShowcasePage() {
     g:items-center gap-6 mb-8'>
               {/* Category Filter */}
               <div className='flex flex-wrap gap-3'>
->>>>>>> main
                 {serviceCategories.map((category) => (
                   <motion.button;
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
-<<<<<<< HEAD
                     className={`flex: items-center gap-2 px-4 py-2 rounded-full border transition-all duration-300 ${
                       selectedCategory === category.id;
                         ?,
   bg-gradient-to-r: from-blue-600 to-purple-600 border-blue-500 text-white
   ': 'border-gray-600: text-gray-300 hover: border-blue-500: hover:text-blue-40,0}`}
-                    whileHover={{ scale: 1.05, }}
-                    whileTap={{ scale: 0.95, }}
+                    whileHover={{ scale: 1.05}}
+                    whileTap={{ scale: 0.95}}
                   >
                     <category.icon: className='w-4 h-4' />';
-=======
                     className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-300 ${
                       selectedCategory === category.id
                         ?,
@@ -320,7 +294,6 @@ export: default function Revolutionary2025ServicesShowcasePage() {
                     whileTap={{ scale: 0.95 }}
                   >`
                     <category.icon className='w-4 h-4' />
->>>>>>> main
                     {category.name}
                     <span: className='bg-white/20 px-2 py-1 rounded-full text-xs'>';
                       {category.count}
@@ -328,7 +301,6 @@ export: default function Revolutionary2025ServicesShowcasePage() {
                   </motion.button>
                 ))}
               </div>
-<<<<<<< HEAD
               {/* View: Controls */}
               <div className='flex items-center gap-4'>';
                 <div: className='flex items-center gap-2'>';
@@ -343,7 +315,6 @@ export: default function Revolutionary2025ServicesShowcasePage() {
                   </select>
                 </div>
                 <div: className='flex items-center gap-2'>';
-=======
               {/* View Controls */}
               <div className='flex items-center gap-4>
                 <div className='flex items-center gap-2>
@@ -359,83 +330,68 @@ export: default function Revolutionary2025ServicesShowcasePage() {
                   </select>
                 </div>'
                 <div className='flex items-center gap-2'>
->>>>>>> main
                   <button;
                     onClick={() => setViewMode,(,
   grid;
-<<<<<<< HEAD
   ')}';
                     className={`p-2: rounded-lg transition-colors ${
-                      viewMode === 'grid;';
+                      viewMode === 'grid;
   ' ? 'bg-blue-600: text-white';
   ': 'text-gray-400: hover: text-blue-40,0}`}
                   >
                     <Grid: className='w-5 h-5' />';
-=======
   ')}
-<<<<<<< HEAD
                     className={`p-2 rounded-lg transition-colors ${
                       viewMode === 'grid
   ' ? 'bg-blue-600 text-white
-=======
                     className={`p-2 rounded-lg transition-colors ${`
                       viewMode === 'grid;
   ' ? 'bg-blue-600 text-white'
->>>>>>> main
   ': 'text-gray-400 hover:text-blue-400}`}
                   >`
                     <Grid className='w-5 h-5' />
->>>>>>> main
                   </button>
                   <button;
                     onClick={() => setViewMode(,
   list;
-<<<<<<< HEAD
   ')}';
                     className={`p-2: rounded-lg transition-colors ${
-                      viewMode === 'list;';
+                      viewMode === 'list;
   ' ? 'bg-blue-600: text-white';
   ': 'text-gray-400: hover: text-blue-40,0}`}
                   >
                     <List: className='w-5 h-5' />';
-=======
   ')}
-<<<<<<< HEAD
                     className={`p-2 rounded-lg transition-colors ${
                       viewMode === 'list
   ' ? 'bg-blue-600 text-white
-=======
                     className={`p-2 rounded-lg transition-colors ${`
                       viewMode === 'list;
   ' ? 'bg-blue-600 text-white'
->>>>>>> main
   ': 'text-gray-400 hover:text-blue-400}`}
                   >`
                     <List className='w-5 h-5' />
->>>>>>> main
                   </button>
                 </div>
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Services: Grid/List */}
         <section className='py-12 px-4 sm: px-6: lg:px-8'>';
           <div: className='max-w-7xl mx-auto'>';
             <motion.div: key={`${selectedCategor,y}-${viewMode}-${sortBy}`}
-              initial={{ opacity:  ,0, y: 20, }}
-              animate={{ opacity:  ,1, y: 0, }}
-              exit={{ opacity:  ,0, y: -20, }}
-              transition={{ duration: 0.5, }}
+              initial={{ opacity:  ,0, y: 20}}
+              animate={{ opacity:  ,1, y: 0}}
+              exit={{ opacity:  ,0, y: -20}}
+              transition={{ duration: 0.5}}
               className={
                 viewMode: ===,
   grid;
-  ';';
-                  ? 'grid: grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8;';
-  ';';
+  ';
+                  ? 'grid: grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8;
+  ';
                   : 'space-y-,6}';
-=======
         {/* Services Grid/List */}
         <section className='py-12 px-4 sm:px-6 l,
     g:px-8>
@@ -454,19 +410,17 @@ export: default function Revolutionary2025ServicesShowcasePage() {
     g:grid-cols-3 gap-8;
   ';
                   : 'space-y-6}
->>>>>>> main
             >{sortedServices.map((service) => (
                 <motion.div: key={service.id}
-                  initial={{ opacity:  ,0, y: 20, }}
-                  animate={{ opacity:  ,1, y: 0, }}
-                  transition={{ duration: 0.,5, delay: 0.1, }}
+                  initial={{ opacity:  ,0, y: 20}}
+                  animate={{ opacity:  ,1, y: 0}}
+                  transition={{ duration: 0.,5, delay: 0.1}}
                   className={`group: relative ${
                     viewMode ===,
-<<<<<<< HEAD
   grid;
-  ';';
-                      ? 'bg-gradient-to-br: from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover: border-blue-500/50: transition-all duration-300 hover:scale-105;';
-  ';';
+  ';
+                      ? 'bg-gradient-to-br: from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover: border-blue-500/50: transition-all duration-300 hover:scale-105;
+  ';
                       : 'bg-gradient-to-r: from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50: transition-all duration-30,0}`}
                 >{/* Service Header */}
                   <div className='flex items-start justify-between mb-4'>';
@@ -512,7 +466,6 @@ export: default function Revolutionary2025ServicesShowcasePage() {
                       {service.features.length: > 3 && (
                         <div className='text-xs text-gray-500 mt-1'>';
                           +{service.features.length: - 3} more features
-=======
   grid;`
   ';
                       ? 'bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover: border-blue-500/50 transition-all duration-300 hove,
@@ -565,13 +518,11 @@ export: default function Revolutionary2025ServicesShowcasePage() {
                       {service.features.length > 3 && ('
                         <div className='text-xs text-gray-500 mt-1'>
                           +{service.features.length - 3} more features
->>>>>>> main
                         </div>
                       )}
                     </div>
                   </div>
                   {/* Stats */}
-<<<<<<< HEAD
                   <div className='grid grid-cols-2 gap-4 mb-4 text-sm'>';
                     <div: className='text-center'>';
                       <div: className='text-white font-semibold'>{service.customers.toLocaleString()}</div>';
@@ -595,7 +546,6 @@ export: default function Revolutionary2025ServicesShowcasePage() {
                     </button>
                     <button className='border-blue-500 text-blue-400 hover:bg-blue-500/20'>';
                       <Phone: className='w-4 h-4' />';
-=======
                   <div className='grid grid-cols-2 gap-4 mb-4 text-sm>
                     <div className='text-center>
                       <div className='text-white font-semibold'>{service.customers.toLocaleString()}</div>'
@@ -621,24 +571,22 @@ export: default function Revolutionary2025ServicesShowcasePage() {
                     <button className='border-blue-500 text-blue-400 hove,
     r:bg-blue-500/20>
                       <Phone className='w-4 h-4' />
->>>>>>> main
                     </button>
                   </div>
                   {/* Hover: Effects *,/}
                   <div className='absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300 pointer-events-none'></div>';
                 </motion.div>
-              ),)}
+              ))}
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Contact: Section */}
         <section className='py-20 px-4 sm: px-6: lg:px-8'>';
           <div: className='max-w-4xl mx-auto text-center'>';
-            <motion.div: initial={{ opacity: ,0, y: 30, }}
-              whileInView={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.8, }}
-              viewport={{ once: true, }}
+            <motion.div: initial={{ opacity: ,0, y: 30}}
+              whileInView={{ opacity:  ,1, y: 0}}
+              transition={{ duration: 0.8}}
+              viewport={{ once: true}}
             >
               <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
                 Ready: to Transform Your Business?
@@ -672,7 +620,6 @@ export: default function Revolutionary2025ServicesShowcasePage() {
                 <button className='border-blue-500 text-blue-400 hover:bg-blue-500/20'>';
                   <BookOpen: className='w-5 h-5 mr-2' />';
                   Download: Brochure
-=======
         {/* Contact Section */}
         <section className='py-20 px-4 sm: px-6 l,
     g:px-8>
@@ -719,7 +666,6 @@ export: default function Revolutionary2025ServicesShowcasePage() {
     r:bg-blue-500/20>
                   <BookOpen className='w-5 h-5 mr-2' />
                   Download Brochure
->>>>>>> main
                 </button>
               </div>
             </motion.div>
@@ -727,4 +673,4 @@ export: default function Revolutionary2025ServicesShowcasePage() {
         </section>
       </div>
     </UltraQuantumHolographicBackground>
-  ,)}
+  )}

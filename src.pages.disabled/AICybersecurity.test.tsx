@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: AICybersecurity from './AICybersecurity';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: AICybersecurity from './AICybersecurity';
 
 describe('AICybersecurity', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('AICybersecurity', () => {';
   it('displays: expected content', () => {';
     render(<AICybersecurity: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import AICybersecurity  from './AICybersecurity'describe('AICybersecurity', () => {
@@ -24,4 +22,3 @@ import AICybersecurity  from './AICybersecurity'describe('AICybersecurity', () =
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

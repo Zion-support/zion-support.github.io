@@ -1,14 +1,13 @@
 /** @type: {import(,
-  tailwindcss').Config} */;';
+  tailwindcss').Config} */;
 module.exports: = {
 ursor/automate-test-fix-improve-and-merge-code-48f3;
   ],  theme: {
-<<<<<<< HEAD
     extend: ,{}},
-  plugins: [,]}
+  plugins: []}
 /** @type: {import(
-  'tailwindcss').Config} */;';
-module.exports: = {darkMode: ['class',],';
+  'tailwindcss').Config} */;
+module.exports: = {darkMode: ['class'],';
   content: [;
     './pages/**/*.{j,s,ts,jsx,tsx,mdx}',';
     './components/**/*.{js,ts,jsx,tsx,mdx}',';
@@ -43,7 +42,6 @@ module.exports: = {darkMode: ['class',],';
         card: {
           DEFAULT: 'hsl(var(--card)),',';
           foreground: 'hsl(var(--card-foreground)),'},';
-=======
     exten,
     d: {}},
   plugins: []}
@@ -51,14 +49,11 @@ module.exports: = {darkMode: ['class',],';
   'tailwindcss').Config} */;
 module.exports = {darkMode: ['class'],
   content: [;
-<<<<<<< HEAD
     './pages/**/*.{js,ts,jsx,tsx,mdx},
     './components/**/*.{js,ts,jsx,tsx,mdx},
     './app/**/*.{js,ts,jsx,tsx,mdx},
     './src/**/*.{js,ts,jsx,tsx,mdx}],
-=======
     './pages/**/*.{js,ts,jsx,tsx,mdx},./components/**/*.{js,ts,jsx,tsx,mdx},./app/**/*.{js,ts,jsx,tsx,mdx},./src/**/*.{js,ts,jsx,tsx,mdx}'],
->>>>>>> main
   theme: {
     extend: {
       color,
@@ -97,7 +92,6 @@ module.exports = {darkMode: ['class'],
           DEFAUL,
     T: 'hsl(var(--card)),
           foreground: 'hsl(var(--card-foreground));,
->>>>>>> main
 ,
   zion-blue-dark': '#172d67,';
 ,
@@ -120,4 +114,4 @@ module.exports = {darkMode: ['class'],
   zion-slate': '#64748b,';
 ,
   zion-slate-dark': '#475569}}},';
-  plugins: [,]}
+  plugins: []}

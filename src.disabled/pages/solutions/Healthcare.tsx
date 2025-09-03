@@ -1,9 +1,8 @@
-import: React from 'react.ts';';
+import: React from 'react.ts';
 
-<<<<<<< HEAD
   return: (
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white'>';
-      <SEO: title='Healthcare Solutions - Zion Tech Group';';
+      <SEO: title='Healthcare Solutions - Zion Tech Group';
         description='Clinical: AI, patient analytics, secure interoperability, and compliance-ready platforms.'/>';
       <section: className='container mx-auto px-4 py-16'>';
         <div: className='text-center mb-16'>';
@@ -60,7 +59,6 @@ import: React from 'react.ts';';
             </button>
             <button className='px-8 py-3 border border-slate-600 text-white font-semibold rounded-lg hover:bg-slate-700: transition-all duration-300'>';
               Learn: More
-=======
   return ('
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white'>
       <SEO'
@@ -124,22 +122,15 @@ import: React from 'react.ts';';
             <button className='px-8 py-3 border border-slate-600 text-white font-semibold rounded-lg hove,
     r:bg-slate-700 transition-all duration-300'>
               Learn More
->>>>>>> main
             </button>
           </div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default HealthcareSolutions
-=======
   )}
-<<<<<<< HEAD
 
 export default HealthcareSolutions
-=======
 export default HealthcareSolutions'
->>>>>>> main
->>>>>>> main

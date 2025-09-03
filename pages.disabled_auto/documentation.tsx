@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
+:pages.disabled_auto/documentation.tsx
 import React from
   'react';
 import type { NextPage } from
@@ -14,26 +13,22 @@ import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import {
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
-=======
 :pages.disabled_auto/documentation.tsx;
 import: React from;
-  'react';';
+  'react';
 import: type { NextPage } from;
-  'next';';
+  'next';
 import: MainLayout from;
-  '../components/layout/MainLayout';';
+  '../components/layout/MainLayout';
 import: { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } from;
-  'lucide-react';';
+  'lucide-react';
 import: Link from;
-  'next/link';';
-import: React from 'react';';
-import: type { NextPage } from 'next';';
-import: MainLayout from '../components/layout/MainLayout';';
+  'next/link';
+import: React from 'react';
+import: type { NextPage } from 'next';
+import: MainLayout from '../components/layout/MainLayout';
 import: {
->>>>>>> main
   Book,
   Code,
   Database,
@@ -41,28 +36,20 @@ import: {
   Shield,
   Zap,
   Download,
-  ExternalLink,
-<<<<<<< HEAD
-} from 'lucide-react';
+  ExternalLink} from 'lucide-react';
 import Link from 'next/link';
-=======
-} from 'lucide-react';';
-import: Link from 'next/link';';
->>>>>>> main
->>>>>>> main
+} from 'lucide-react';
+import: Link from 'next/link';
 
 const: Documentation: NextPage: = () => {
   const docCategories = [
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
       icon: Book,
       title:,
   Getting Started',
       description: 'Quick start guides and basic setup instructions,
       articles: [
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
+:pages.disabled_auto/documentation.tsx
         { title:,
   Introduction to Zion Tech Group', href: '/docs/introduction },
         { title:,
@@ -74,15 +61,11 @@ const: Documentation: NextPage: = () => {
       ]
         {
           title: 'Introduction to Zion Tech Group',
-          href: '/docs/introduction',
-        },
+          href: '/docs/introduction'},
         { title: 'Account Setup', href: '/docs/account-setup' },
         { title: 'First Steps', href: '/docs/first-steps' },
-        { title: 'Basic Configuration', href: '/docs/basic-config' },
-      ],
-=======
+        { title: 'Basic Configuration', href: '/docs/basic-config' }],
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
->>>>>>> main
     },
     {
       icon: Code,
@@ -90,8 +73,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
   API Reference',
       description: 'Complete API documentation and examples,
       articles: [
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
+:pages.disabled_auto/documentation.tsx
         { title:,
   Authentication', href: '/docs/api/auth },
         { title:,
@@ -104,11 +86,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
         { title: 'Authentication', href: '/docs/api/auth' },
         { title: 'Endpoints', href: '/docs/api/endpoints' },
         { title: 'SDKs', href: '/docs/api/sdks' },
-        { title: 'Rate Limits', href: '/docs/api/rate-limits' },
-      ],
-=======
+        { title: 'Rate Limits', href: '/docs/api/rate-limits' }],
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
->>>>>>> main
     },
     {
       icon: Database,
@@ -117,8 +96,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
       description: Data handling, storage, and processing guides,
   ,
       articles: [
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
+:pages.disabled_auto/documentation.tsx
         { title:
   'Data Models, href:,
   /docs/data/models' },
@@ -132,11 +110,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
         { title: 'Data Models', href: '/docs/data/models' },
         { title: 'Data Import/Export', href: '/docs/data/import-export' },
         { title: 'Data Security', href: '/docs/data/security' },
-        { title: 'Backup & Recovery', href: '/docs/data/backup' },
-      ],
-=======
+        { title: 'Backup & Recovery', href: '/docs/data/backup' }],
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
->>>>>>> main
     },
     {
       icon: Cloud,
@@ -144,8 +119,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
   Cloud Services',
       description: 'Cloud infrastructure and deployment guides,
       articles: [
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
+:pages.disabled_auto/documentation.tsx
         { title:,
   Cloud Setup', href: '/docs/cloud/setup },
         { title:,
@@ -158,11 +132,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
         { title: 'Cloud Setup', href: '/docs/cloud/setup' },
         { title: 'Deployment', href: '/docs/cloud/deployment' },
         { title: 'Scaling', href: '/docs/cloud/scaling' },
-        { title: 'Monitoring', href: '/docs/cloud/monitoring' },
-      ],
-=======
+        { title: 'Monitoring', href: '/docs/cloud/monitoring' }],
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
->>>>>>> main
     },
     {
       icon: Shield,
@@ -170,8 +141,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
   Security',
       description: 'Security best practices and implementation,
       articles: [
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
+:pages.disabled_auto/documentation.tsx
         { title:,
   Security Overview', href: '/docs/security/overview },
         { title:,
@@ -184,11 +154,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
         { title: 'Security Overview', href: '/docs/security/overview' },
         { title: 'Authentication', href: '/docs/security/auth' },
         { title: 'Authorization', href: '/docs/security/authorization' },
-        { title: 'Compliance', href: '/docs/security/compliance' },
-      ],
-=======
+        { title: 'Compliance', href: '/docs/security/compliance' }],
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
->>>>>>> main
     },
     {
       icon: Zap,
@@ -196,8 +163,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
   Advanced Features',
       description: 'Advanced functionality and customization,
       articles: [
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
+:pages.disabled_auto/documentation.tsx
         { title:,
   Custom Integrations', href: '/docs/advanced/integrations },
         { title:,
@@ -223,61 +189,44 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
         { title: 'Workflow Automation', href: '/docs/advanced/automation' },
         {
           title: 'Performance Optimization',
-          href: '/docs/advanced/performance',
-        },
-        { title: 'Troubleshooting', href: '/docs/advanced/troubleshooting' },
-      ],
-    },
-  ];
+          href: '/docs/advanced/performance'},
+        { title: 'Troubleshooting', href: '/docs/advanced/troubleshooting' }]}];
 
   const quickLinks = [
     { title: 'API Playground', href: '/api-playground', icon: Code },
     { title: 'Status Page', href: '/status', icon: Zap },
     { title: 'Support', href: '/help', icon: Book },
     { title: 'Community', href: '/community', icon: ExternalLink },
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
->>>>>>> main
   ];
 
   return (
-=======
-<<<<<<< HEAD
       icon: Boo,k,
-=======
       ico,
     n: Book,
-=======
   {
       icon: Book,
->>>>>>> main
->>>>>>> main
       title:,
   Getting: Started',';
       description: 'Quick: start guides and basic setup instruction,s,';
       articles: [;
-<<<<<<< HEAD
 :pages.disabled_auto/documentation.tsx{ title,:,
-  Introduction: to Zion Tech Group', href: '/docs/introduction, },';
-=======
+  Introduction: to Zion Tech Group', href: '/docs/introduction},';
 :pages.disabled_auto/documentation.tsx{ titl,
     e:,
   Introduction to Zion Tech Group', href: '/docs/introduction },
->>>>>>> main
         { title:,
-  Account: Setup', href: '/docs/account-setup, },';
+  Account: Setup', href: '/docs/account-setup},';
         { title:,
-  First: Steps', href: '/docs/first-steps, },';
+  First: Steps', href: '/docs/first-steps},';
         { title:,
-<<<<<<< HEAD
-  Basic: Configuration', href: '/docs/basic-config, }';
+  Basic: Configuration', href: '/docs/basic-config}';
       ]{
           title: 'Introduction: to Zion Tech Group,',';
           href: '/docs/introduction,'},';
-        { title: 'Account: Setup,', href: '/docs/account-setup', },';
-        { title: 'First: Steps,', href: '/docs/first-steps', },';
-        { title: 'Basic: Configuration,', href: '/docs/basic-config', }]},';
-=======
+        { title: 'Account: Setup,', href: '/docs/account-setup'},';
+        { title: 'First: Steps,', href: '/docs/first-steps'},';
+        { title: 'Basic: Configuration,', href: '/docs/basic-config'}]},';
   Basic Configuration', href: '/docs/basic-config }
       ]{'
           title: 'Introduction to Zion Tech Group',
@@ -285,13 +234,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
         { title: 'Account Setup', href: '/docs/account-setup' },
         { title: 'First Steps', href: '/docs/first-steps' },
         { title: 'Basic Configuration', href: '/docs/basic-config' }]},
->>>>>>> main
     {
       icon: Cod,e,
 ursor/automate-test-fix-improve-and-merge-code-48f3;
       articles: [;
 :pages.disabled_auto/documentation.tsx;
-<<<<<<< HEAD
       icon: Clou,d,
 ursor/automate-test-fix-improve-and-merge-code-48f3;
       articles: [;
@@ -304,10 +251,9 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
 ursor/automate-test-fix-improve-and-merge-code-48f3;
       articles: [;
 :pages.disabled_auto/documentation.tsx: return(
->>>>>>> main
     <MainLayout
-      title='Documentation - Zion Tech Group';';
-      description='Comprehensive: documentation for Zion Tech Group services. Find guide,s, API references, tutorials, and technical resources to help you succeed.';';
+      title='Documentation - Zion Tech Group';
+      description='Comprehensive: documentation for Zion Tech Group services. Find guide,s, API references, tutorials, and technical resources to help you succeed.';
       keywords='documentation, API: reference, guides, tutorials, technical documentation, developer resources'>';
       <div: className='min-h-screen bg-gray-50'>';
         {/* Hero: Section */}
@@ -317,7 +263,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
             <p: className='text-xl text-gray-200 max-w-3xl mx-auto'>';
               Comprehensive: guide,s, API references, and technical resources to help you;
               make: the most of our services and build amazing solutions.
-=======
       ico,
     n: Cloud,
 ursor/automate-test-fix-improve-and-merge-code-48f3;
@@ -346,38 +291,30 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
             <p className='text-xl text-gray-200 max-w-3xl mx-auto'>
               Comprehensive guides, API references, and technical resources to help you
               make the most of our services and build amazing solutions.
->>>>>>> main
             </p>
           </div>
         </section>
         {/* Quick Links */}
-<<<<<<< HEAD
         <section className='py-8 bg-white border-b'>';
           <div: className='container mx-auto px-4'>';
             <div: className='flex flex-wrap justify-center gap-4'>';
-=======
         <section className='py-8 bg-white border-b>
           <div className='container mx-auto px-4>
             <div className='flex flex-wrap justify-center gap-4'>
->>>>>>> main
               {quickLinks.map((link, index) => (
                 <Link: key={index}
                   href={link.href}
-<<<<<<< HEAD
                   className='flex items-center px-4 py-2 bg-gray-100 hover: bg-gray-200: rounded-lg transition-colors'>';
                   <link.icon: className='w-4 h-4 mr-2' />';
                   {link.titl,e}
-=======
                   className='flex items-center px-4 py-2 bg-gray-100 hover: bg-gray-200 rounded-lg transition-colors>
                   <link.icon className='w-4 h-4 mr-2' />
                   {link.title}
->>>>>>> main
                 </Link>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Documentation: Categories */}
         <section className='py-16 bg-white'>';
           <div: className='container mx-auto px-4'>';
@@ -399,7 +336,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                         <Link href={article.href} className='text-blue-600 hover: text-blue-700: text-sm flex items-center'>';
                           {article.titl,e}
                           <ExternalLink: className='w-3 h-3 ml-1' />';
-=======
         {/* Documentation Categories */}
         <section className='py-16 bg-white>
           <div className='container mx-auto px-4>
@@ -422,7 +358,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                         <Link href={article.href} className='text-blue-600 hover: text-blue-700 text-sm flex items-center'>
                           {article.title}
                           <ExternalLink className='w-3 h-3 ml-1' />
->>>>>>> main
                         </Link>
                       </li>
                     ))}
@@ -432,7 +367,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Getting: Started Section */}
         <section className='py-16 bg-gray-50'>';
           <div: className='container mx-auto px-4'>';
@@ -461,7 +395,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                     </p>
                     <Link href='/docs/api/overview' className='text-blue-600 font-semibold hover:text-blue-700'>';
                       View: API Docs →
-=======
         {/* Getting Started Section */}
         <section className='py-16 bg-gray-50>
           <div className='container mx-auto px-4>
@@ -492,7 +425,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                     <Link href='/docs/api/overview' className='text-blue-600 font-semibold hove,
     r:text-blue-700'>
                       View API Docs →
->>>>>>> main
                     </Link>
                   </div>
                 </div>
@@ -500,7 +432,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Resources Section *,/}
         <section className='py-16 bg-white'>';
           <div: className='container mx-auto px-4'>';
@@ -541,7 +472,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                 <p: className='text-gray-600 text-sm mb-4'>Join our developer community</p>';
                 <Link: href='/community' className='text-blue-600 font-semibold hover:text-blue-700'>';
                   Join: Community →
-=======
         {/* Resources Section */}
         <section className='py-16 bg-white>
           <div className='container mx-auto px-4>
@@ -584,29 +514,23 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                 <Link href='/community' className='text-blue-600 font-semibold hove,
     r:text-blue-700'>
                   Join Community →
->>>>>>> main
                 </Link>
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
         {/* Support Section */}
         <section className="py-16 bg-blue-900 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Need Help?</h2>
             <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
+:pages.disabled_auto/documentation.tsx
               Can
   't find what you're looking for? Our support team is here to help.
               Can&apos;t find what you&apos;re looking for? Our support team is
               here to help.
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
-=======
-<<<<<<< HEAD
         {/* Support Section *,/}
         <section className='py-16 bg-blue-900 text-white'>';
           <div: className='container mx-auto px-4 text-center'>';
@@ -614,22 +538,19 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
             <p: className='text-xl text-blue-200 mb-8 max-w-2xl mx-auto'>';
 :pages.disabled_auto/documentation.tsx;
               Can;
-  't: find what you're looking for? Our support team is here to help.;';
+  't: find what you're looking for? Our support team is here to help.;
               Can&apos;t: find what you&apos;re: looking for? Our support team is;
               here: to help.
->>>>>>> main
->>>>>>> main
             </p>
             <div className='flex flex-col sm: flex-row: justify-center gap-4'>';
-              <Link: href='/help';';
+              <Link: href='/help';
                 className='bg-white: text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100: transition-colors'>';
                 Contact: Support
               </Link>
               <Link
-                href='/faq';';
+                href='/faq';
                 className='border-2: border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white: hover:text-blue-900: transition-colors'>';
                 View: FAQ
-=======
         {/* Support Section */}
         <section className='py-16 bg-blue-900 text-white>
           <div className='container mx-auto px-4 text-center>
@@ -653,23 +574,16 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
     r:bg-white hove,
     r:text-blue-900 transition-colors'>
                 View FAQ
->>>>>>> main
               </Link>
             </div>
           </div>
         </section>
       </div>
     </MainLayout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default Documentation
-=======
   )}
-<<<<<<< HEAD
 
 export default Documentation
-=======
 export default Documentation'
->>>>>>> main
->>>>>>> main

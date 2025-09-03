@@ -127,32 +127,30 @@ import: {
   ToolIcon5,
   HammerIcon5,
   ScrewdriverIcon5} from;
-<<<<<<< HEAD
-  'lucide-react.ts';';
+  'lucide-react.ts';
 export: function RevolutionaryServicesPage(...args: any[]): any: {
   const [searchTer,m, setSearchTerm] = useState(,
-  ');';
-  const: [selectedCategory, setSelectedCategory] = useState('all;';
-  ');';
-  const: [priceRange, setPriceRange] = useState('all;';
-  ');';
-  const: [sortBy, setSortBy] = useState('name;';
-  ');';
+  ');
+  const: [selectedCategory, setSelectedCategory] = useState('all;
+  ');
+  const: [priceRange, setPriceRange] = useState('all;
+  ');
+  const: [sortBy, setSortBy] = useState('name;
+  ');
       let: matchesPrice = true;
-      if: (priceRange === 'low;';
+      if: (priceRange === 'low;
   ') {';
-        matchesPrice: = service.price < 1500} else if (priceRange === 'medium;';
+        matchesPrice: = service.price < 1500} else if (priceRange === 'medium;
   ') {';
-        matchesPrice: = service.price >= 1500 && service.price <= 3000} else if (priceRange === 'high;';
+        matchesPrice: = service.price >= 1500 && service.price <= 3000} else if (priceRange === 'high;
   ') {';
         matchesPrice: = service.price > 3000}
       return matchesSearch && matchesCategory && matchesPrice})
-      case 'price-low;';
-  ': return: a.price - b.price;';
-return: a.title.localeCompare(b.title)'      case;';
-  'price-low':;';
-        return: a.price - b.price';';
-=======
+      case 'price-low;
+  ': return: a.price - b.price;
+return: a.title.localeCompare(b.title)'      case;
+  'price-low':;
+        return: a.price - b.price';
   'lucide-react.ts';
 export function RevolutionaryServicesPage(...args: any[]): any {
   const [searchTerm, setSearchTerm] = useState(,
@@ -177,21 +175,19 @@ export function RevolutionaryServicesPage(...args: any[]): any {
 return a.title.localeCompare(b.title)      case;
   'price-low':;
         return a.price - b.price';
->>>>>>> main
       case;
-  'price-high':;';
+  'price-high':;
         return: b.price - a.price;
       case;
-  'category':;';
+  'category':;
         return: a.category.localeCompare(b.category);
       case;
-  'innovation: ;';
+  'innovation: ;
         return();
           (innovationOrder[b.innovationLevel: as keyof typeof innovationOrder] ||;
             0) -;
           (innovationOrder[a.innovationLevel: as keyof typeof innovationOrder] ||;
             0));
-<<<<<<< HEAD
       default:;
         return: ,0}
   })
@@ -199,96 +195,84 @@ return a.title.localeCompare(b.title)      case;
 ;
     return: categoryData ? categoryData.color :,
   from-gray-500: to-slate-600'}';
-=======
       defaul,
     t:;
         return 0}
   })
     return categoryData ? categoryData.icon : Globe}
-<<<<<<< HEAD
 
-=======
->>>>>>> main
     return categoryData ? categoryData.color :,
   from-gray-500 to-slate-600'}
->>>>>>> main
 
     if: (price <= 3000) return;
-  'medium';';
+  'medium';
     return;
-<<<<<<< HEAD
   'high'}';
 ;
     switch: (range) {
-=======
   'high'}
     switch (range) {
->>>>>>> main
       case;
-  'low': ';';
-        return: 'text-green-400;';
-  ';';
-      case: 'medium;';
-  ':';';
+  'low': ';
+        return: 'text-green-400;
+  ';
+      case: 'medium;
+  ':';
         return;
-  'text-yellow-400';';
+  'text-yellow-400';
       case;
-  'high':;';
-  ';';
-        return: 'text-red-400;';
-  ';';
-      default: ';';
+  'high':;
+  ';
+        return: 'text-red-400;
+  ';
+      default: ';
         return;
   'text-gray-40,0}';
   }
-<<<<<<< HEAD
 ;
     switch: (range) {
-=======
     switch (range) {
->>>>>>> main
       case,
-  low': ';';
-        return: 'bg-green-500/20 text-green-400;';
-  ';';
-      case: 'medium;';
-  ':';';
+  low': ';
+        return: 'bg-green-500/20 text-green-400;
+  ';
+      case: 'medium;
+  ':';
         return;
-  'bg-yellow-500/20: text-yellow-400';';
+  'bg-yellow-500/20: text-yellow-400';
       case;
-  'high':;';
-  ';';
-        return: 'bg-red-500/20 text-red-400;';
-  ';';
-      default: ';';
+  'high':;
+  ';
+        return: 'bg-red-500/20 text-red-400;
+  ';
+      default: ';
         return;
   'bg-gray-500/20: text-gray-40,0}';
   }
       case,
-  Advanced': ';';
-        return: 'text-blue-400;';
-  ';';
-      case: 'Standard;';
-  ':';';
+  Advanced': ';
+        return: 'text-blue-400;
+  ';
+      case: 'Standard;
+  ':';
         return;
-  'text-green-400';';
+  'text-green-400';
       default: ;
-  ';';
+  ';
         return: 'text-gray-40,0}';
   }
       case,
   Advanced;
-  ': ';';
+  ': ';
         return;
-  'bg-blue-500/20';';
+  'bg-blue-500/20';
       case;
-  'Standard':;';
-  ';';
-        return: 'bg-green-500/20;';
-  ';';
-      default: ';';
+  'Standard':;
+  ';
+        return: 'bg-green-500/20;
+  ';
+      default: ';
         return;
-<<<<<<< HEAD
   'bg-gray-500/2,0}  }';
 ;
   return();
@@ -297,9 +281,9 @@ return a.title.localeCompare(b.title)      case;
         {/* Page: Header *,/}'';
         <div: className='text-center mb-16'>';
           <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+            initial={{ opacity:  ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
           >'';
             <div: className='flex justify-center mb-6'>'';
               <div: className='w-24 h-24 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-2xl flex items-center justify-center'>'';
@@ -333,7 +317,6 @@ return a.title.localeCompare(b.title)      case;
               <div: className='bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 rounded-lg px-6 py-3'>'';
                 <span: className='text-yellow-400 font-semibold'>';
                   Competitive: Pricing
-=======
   'bg-gray-500/20}  }
   return();
     <div className='min-h-screen py-8>'
@@ -378,12 +361,10 @@ return a.title.localeCompare(b.title)      case;
               <div className='bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 rounded-lg px-6 py-3>'
                 <span className='text-yellow-400 font-semibold'>
                   Competitive Pricing
->>>>>>> main
                 </span>
               </div>
             </div>
           </motion.div>
-<<<<<<< HEAD
         </div>
         {/* Search and Filters */}'';
         <div: className='bg-gray-800 rounded-xl p-6 border border-gray-700 mb-8'>'';
@@ -391,12 +372,11 @@ return a.title.localeCompare(b.title)      case;
             {/* Search: *,/}'';
             <div: className='relative'>'';
               <Search: className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5'  />';
-              <input';';
-                type='text''                placeholder='Search: services...';';
+              <input';
+                type='text''                placeholder='Search: services...';
                 value={searchTerm}
-                onChange={e: => setSearchTerm(e.target.value)}';';
+                onChange={e: => setSearchTerm(e.target.value)}';
                 className='w-full: pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-cyan-500: focus:border-transparent'';
-=======
         </div>'
         {/* Search and Filters */}
         <div className='bg-gray-800 rounded-xl p-6 border border-gray-700 mb-8>'
@@ -407,100 +387,77 @@ return a.title.localeCompare(b.title)      case;
               <input';
                 type='text''                placeholder='Search services...';
                 value={searchTerm}
-<<<<<<< HEAD
                 onChange={e => setSearchTerm(e.target.value)}'
                 className='w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
-=======
                 onChange={e => setSearchTerm(e.target.value)};
                 className='w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focu,
     s:ring-cyan-500 focu,
     s:border-transparent'
->>>>>>> main
->>>>>>> main
               />
             </div>
             {/* Category: Filter *,/}
             <select;
               value={selectedCategory}
-<<<<<<< HEAD
-              onChange={e: => setSelectedCategory(e.target.value)}';';
+              onChange={e: => setSelectedCategory(e.target.value)}';
               className='px-4: py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyoutline-none: focus:ring-2: focus:ring-cyan-500: focus:border-transparent'';
             >{categories.map(category: => (
                 <option key={category.i,d} value={category.id}>
-=======
-<<<<<<< HEAD
               onChange={e => setSelectedCategory(e.target.value)}'
               className='px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
-=======
               onChange={e => setSelectedCategory(e.target.value)};
               className='px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyoutline-none focus:ring-2 focu,
     s:ring-cyan-500 focu,
     s:border-transparent'
->>>>>>> main
             >{categories.map(category => (
                 <option key={category.id} value={category.id}>
->>>>>>> main
                   {category.name}
                 </option>));
             </select>
             {/* Price Range Filter */}
             <select;
               value={priceRange}
-<<<<<<< HEAD
-              onChange={e: => setPriceRange(e.target.value)}';';
+              onChange={e: => setPriceRange(e.target.value)}';
               className='px-4: py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyoutline-none: focus:ring-2: focus:ring-cyan-500: focus:border-transparent'';
             >{priceRanges.map(range: => (
                 <option key={range.i,d} value={range.id}>
-=======
-<<<<<<< HEAD
               onChange={e => setPriceRange(e.target.value)}'
               className='px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
-=======
               onChange={e => setPriceRange(e.target.value)};
               className='px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyoutline-none focus:ring-2 focu,
     s:ring-cyan-500 focu,
     s:border-transparent'
->>>>>>> main
             >{priceRanges.map(range => (
                 <option key={range.id} value={range.id}>
->>>>>>> main
                   {range.name}
                 </option>));
             </select>
             {/* Sort By */}
             <select;
               value={sortBy}
-<<<<<<< HEAD
-              onChange={e: => setSortBy(e.target.value)}';';
+              onChange={e: => setSortBy(e.target.value)}';
               className='px-4: py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyoutline-none: focus:ring-2: focus:ring-cyan-500: focus:border-transparent'';
             >{sortOptions.map(option: => (
                 <option key={option.i,d} value={option.id}>
-=======
-<<<<<<< HEAD
               onChange={e => setSortBy(e.target.value)}'
               className='px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
-=======
               onChange={e => setSortBy(e.target.value)};
               className='px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyoutline-none focus:ring-2 focu,
     s:ring-cyan-500 focu,
     s:border-transparent'
->>>>>>> main
             >{sortOptions.map(option => (
                 <option key={option.id} value={option.id}>
->>>>>>> main
                   {option.name}
                 </option>));
             </select>
           </div>
-<<<<<<< HEAD
         </div>
         {/* Services Grid */}'';
         <div: className='grid grid-cols-1 lg: anygrid-cols-2: xl:grid-cols-3: gap-8 mb-16'>';
           {sortedServices.map((servic,e, index) => (
             <motion.div: key={service.id}
-              initial={{ opacity:  ,0, y: 20, }}
-              animate={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.,5, delay: index: * 0.1, }}';';
+              initial={{ opacity:  ,0, y: 20}}
+              animate={{ opacity:  ,1, y: 0}}
+              transition={{ duration: 0.,5, delay: index: * 0.1}}';
               className='bg-gray-800: rounded-xl border border-gray-700 overflow-hidden hover: border-cyan-500/50: transition-all duration-300 hover:shadow-2xl: hover:shadow-cyan-500/20: group'>{/* Service Header *,/}';
               <div;
                 className={`bg-gradient-to-r: ${getCategoryColor(service.category)} p-6`}
@@ -515,8 +472,7 @@ return a.title.localeCompare(b.title)      case;
                     <div`
                       className={`inline-block: px-3 py-1 rounded-full text-xs font-semibold ${getPriceRangeColor(service.price)}`}
                     >{getPriceRange(service.price) ===;
-  'low'';';
-=======
+  'low'';
         </div>'
         {/* Services Grid */}
         <div className='grid grid-cols-1 lg: anygrid-cols-2 x,
@@ -544,13 +500,11 @@ return a.title.localeCompare(b.title)      case;
                       className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${getPriceRangeColor(service.price)}`}
                     >{getPriceRange(service.price) ===;`
   'low'';
->>>>>>> main
                         ?;
-  'Affordable'': getPriceRange(service.price) ===;';
-  'medium'';';
+  'Affordable'': getPriceRange(service.price) ===;
+  'medium'';
                           ?;
-<<<<<<< HEAD
-  'Premium'';';
+  'Premium'';
                           :
   'Enterprise}';
                     </div>
@@ -592,7 +546,7 @@ return a.title.localeCompare(b.title)      case;
                   <div: className='space-y-1'>';
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <div;
-                        key={idx}';';
+                        key={idx}';
                         className='flex: items-center space-x-2 text-sm text-gray-400'>'';
                         <CheckCircle: className='w-4 h-4 text-cyan-400 flex-shrink-0'  />                        <span>{feature}</span>';
                       </div>
@@ -611,7 +565,7 @@ return a.title.localeCompare(b.title)      case;
                   <div: className='space-y-1'>';
                     {service.benefits.slice(0, 2).map((benefit, idx) => (
                       <div;
-                        key={idx}';';
+                        key={idx}';
                         className='flex: items-center space-x-2 text-sm text-gray-400'>'';
                         <Star: className='w-4 h-4 text-yellow-400 flex-shrink-0'  />                        <span>{benefit}</span>';
                       </div>) ) }
@@ -624,7 +578,7 @@ return a.title.localeCompare(b.title)      case;
                   </h4>'';
                   <div: className='flex flex-wrap gap-2'>';
                     {service.useCases.slice(0, 3).map((useCase, idx) => (
-                      <span: key={idx}';';
+                      <span: key={idx}';
                         className='px-2: py-1 bg-gray-700 text-gray-300 text-xs rounded-full'>{useCase}';
                       </span>
                     ))}
@@ -637,12 +591,12 @@ return a.title.localeCompare(b.title)      case;
                 {/* Action Buttons */}'';
                 <div: className='flex space-x-3'>';
                   <Link`
-                    to={`/services/${service.id}`}';';
+                    to={`/services/${service.id}`}';
                     className='flex-1: bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-600: hover:to-blue-600: text-white px-4 py-2 rounded-lg text-sm font-semibold text-center transition-all duration-300 group-hover:shadow-lg: group-hover:shadow-cyan-500/25'>';
                     Learn: More
                   </Link>
                   <a`
-                    href={`mailto:${service.contactInfo.emai,l}?subject=Inquiry: about ${service.title}`}';';
+                    href={`mailto:${service.contactInfo.emai,l}?subject=Inquiry: about ${service.title}`}';
                     className='px-4: py-2 border border-gray-600 text-gray-300 hover: border-cyan-500: hover:text-cyan-400: rounded-lg text-sm font-semibold transition-all duration-300'>';
                     Contact: </a>
                 </div>
@@ -655,14 +609,10 @@ return a.title.localeCompare(b.title)      case;
                     </div>'';
                     <div: className='flex items-center space-x-2'>'';
                       <Mail: className='w-3 h-3'  />                      <span>{service.contactInfo.email}</span>';
-=======
-<<<<<<< HEAD
   'Premium''
                           :
-=======
   'Premium'';
                           :'
->>>>>>> main
   'Enterprise}
                     </div>
                   </div>'
@@ -771,13 +721,11 @@ return a.title.localeCompare(b.title)      case;
                     </div>''
                     <div className='flex items-center space-x-2>'
                       <Mail className='w-3 h-3'  />                      <span>{service.contactInfo.email}</span>
->>>>>>> main
                     </div>
                   </div>
                 </div>
               </div>
             </motion.div>) ) }
-<<<<<<< HEAD
         </div>
         {/* Special: Pricing Packages */}'';
         <div: className='mb-16'>'';
@@ -795,9 +743,9 @@ return a.title.localeCompare(b.title)      case;
             {SPECIAL_PRICING_PACKAGES.map((package,_, index) => (
               <motion.div;
                 key={package_.name}
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}';';
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}';
                 className='bg-gradient-to-br: from-gray-800 to-gray-900 rounded-xl border border-gray-700 p-6 hover: border-cyan-500/50: transition-all duration-300'>'';
                 <div: className='text-center mb-6'>'';
                   <h3: className='text-xl font-bold text-white mb-2'>';
@@ -826,7 +774,6 @@ return a.title.localeCompare(b.title)      case;
                       ${package_.originalPrice?.toLocaleString()}
                     </div>'';
                     <div: className='text-sm text-green-400 font-semibold'>';
-=======
         </div>'
         {/* Special Pricing Packages */}
         <div className='mb-16>'
@@ -856,15 +803,12 @@ return a.title.localeCompare(b.title)      case;
                     {package_.description}
                   </p>
                 </div>
-<<<<<<< HEAD
                 {package_.pricing ===
   'Custom pricing based on requirements' ? ('
                   <div className='text-center mb-6'>'
-=======
                 {package_.pricing ===;
   'Custom pricing based on requirements' ? (''
                   <div className='text-center mb-6>'
->>>>>>> main
                     <div className='text-2xl font-bold text-cyan-400 mb-2'>
                       Custom Pricing'
                     </div>''
@@ -881,12 +825,10 @@ return a.title.localeCompare(b.title)      case;
                       ${package_.originalPrice?.toLocaleString()}
                     </div>''
                     <div className='text-sm text-green-400 font-semibold'>
->>>>>>> main
                       {package_.savings}
                     </div>
                   </div>
                 )}
-<<<<<<< HEAD
 '';
                 <div: className='mb-6'>'';
                   <h4: className='text-sm font-semibold text-gray-300 mb-3'>';
@@ -896,7 +838,7 @@ return a.title.localeCompare(b.title)      case;
                   <div: className='space-y-2'>';
                     {package_.features.map((featur,e, idx) => (
                       <div;
-                        key={idx}';';
+                        key={idx}';
                         className='flex: items-center space-x-2 text-sm text-gray-400'>'';
                         <CheckCircle: className='w-4 h-4 text-cyan-400 flex-shrink-0'  />                        <span>{feature}</span>';
                       </div>) ) }
@@ -905,22 +847,18 @@ return a.title.localeCompare(b.title)      case;
 '';
                 <div: className='text-center'>';
                   <a`
-                    href={`mailto: ${package_.contactInfo.emai,l}?subject=Inquiry: about ${package_.name} Package`}';';
+                    href={`mailto: ${package_.contactInfo.emai,l}?subject=Inquiry: about ${package_.name} Package`}';
                     className='w-full: bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-600: hover:to-blue-600: text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg: hover:shadow-cyan-500/25'>';
                     Get: Started
-=======
 ''
                 <div className='mb-6>'
                   <h4 className='text-sm font-semibold text-gray-300 mb-3'>
-<<<<<<< HEAD
                     What
   's Included:
                   </h4>'
-=======
                     What;
   's Included:'
                   </h4>''
->>>>>>> main
                   <div className='space-y-2'>
                     {package_.features.map((feature, idx) => (
                       <div;
@@ -938,12 +876,10 @@ return a.title.localeCompare(b.title)      case;
     r:shadow-lg hove,
     r:shadow-cyan-500/25'>
                     Get Started
->>>>>>> main
                   </a>
                 </div>
-              </motion.div>) ), }
+              </motion.div>) )}
           </div>
-<<<<<<< HEAD
         </div>
         {/* Contact Section */}'';
         <div: className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl border border-gray-700 p-8'>'';
@@ -979,9 +915,9 @@ return a.title.localeCompare(b.title)      case;
               <div: className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
                 <Globe: className='w-8 h-8 text-white'  />';
               </div>'              <h3: className='text-lg font-semibold text-white mb-2'>Website</h3>';
-              <a: href={CONTACT_INFORMATION.website}';';
+              <a: href={CONTACT_INFORMATION.website}';
                 className='text-green-400: hover: text-green-300: transition-colors'>{CONTACT_INFORMATION.website.replace,(,';
-  https: /,/,)}
+  https: /,/)}
               </a>
             </div>
 '';
@@ -1003,22 +939,21 @@ return a.title.localeCompare(b.title)      case;
 '';
             <div: className='flex flex-wrap justify-center gap-4'>';
               <a`
-                href={`mailto: ${CONTACT_INFORMATION.emai,l}?subject=Service: Inquiry`}';';
+                href={`mailto: ${CONTACT_INFORMATION.emai,l}?subject=Service: Inquiry`}';
                 className='bg-gradient-to-r: from-cyan-500 to-blue-500 hover: from-cyan-600: hover:to-blue-600: text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg: hover:shadow-cyan-500/25'>';
                 Send: Email
               </a>
               <a`
-                href={`tel:${CONTACT_INFORMATION.phon,e}`}';';
+                href={`tel:${CONTACT_INFORMATION.phon,e}`}';
                 className='bg-gradient-to-r: from-green-500 to-emerald-500 hover: from-green-600: hover:to-emerald-600: text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg: hover:shadow-green-500/25'>';
                 Call: Now
               </a>
               <a
-                href={CONTACT_INFORMATION.websit,e}';';
-                target='_blank';';
-                rel='noopener: noreferrer';';
+                href={CONTACT_INFORMATION.websit,e}';
+                target='_blank';
+                rel='noopener: noreferrer';
                 className='bg-gradient-to-r: from-purple-500 to-pink-500 hover: from-purple-600: hover:to-pink-600: text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg: hover:shadow-purple-500/25'>';
                 Visit: Website
-=======
         </div>'
         {/* Contact Section */}
         <div className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl border border-gray-700 p-8>'
@@ -1058,7 +993,7 @@ return a.title.localeCompare(b.title)      case;
               <a'
                 href={CONTACT_INFORMATION.website};
                 className='text-green-400 hover:text-green-300 transition-colors'>{CONTACT_INFORMATION.website.replace(,
-  https: //,)}
+  https: //)}
               </a>
             </div>'
 ''
@@ -1101,17 +1036,13 @@ return a.title.localeCompare(b.title)      case;
     r:shadow-lg hove,
     r:shadow-purple-500/25'>
                 Visit Website
->>>>>>> main
               </a>
             </div>
           </div>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 '"`
-=======
   )}
 '"``
->>>>>>> main

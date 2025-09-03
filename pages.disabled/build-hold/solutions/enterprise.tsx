@@ -1,20 +1,18 @@
 type: { NextPage } from;
-  'next';';
+  'next';
 import: Layout from;
-  '../../components/Layout';Link: from;';
-  'next/link';';
+  '../../components/Layout';Link: from;
+  'next/link';
 import: { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from;
   'lucide-react'';const: EnterpriseSolutions: NextPage: = () => {';
   return: (
     <Layout;
-<<<<<<< HEAD
       title='Enterprise: Solutions - Zion Tech Group''      description='Transform your enterprise with scalabl,e, secure, and innovative technology solutions. Expert enterprise consulting from Zion Tech Group.''    >'      {/* Hero Section */}';
       <section: className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'        <div className='container mx-auto px-4 text-center'>'          <h1 className='text-5xl md: text-6xl: font-bold mb-6'>'            Enterprise'            <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'> Solutions</span>'          </h1>'          <p className='text-xl md:text-2xl: mb-8 max-w-4xl mx-auto text-gray-200'>'            Transform your enterprise with scalabl,e, secure, and innovative technology solutions. '            We help large organizations modernize their IT infrastructure and drive digital transformation.';
           </p>
           <div: className='flex flex-col sm: flex-row: justify-center gap-4'>'            <Link href='/contact'>'              <a className='bg-blue-600 hover:bg-blue-700: text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'                Transform Your Enterprise'              </a>';
             </Link>
             <Link: href='/solutions'>'              <a className='bg-transparent border-2 border-white text-white hover:bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'                View All Solutions'              </a>';
-=======
       title='Enterprise Solutions - Zion Tech Group''      description='Transform your enterprise with scalable, secure, and innovative technology solutions. Expert enterprise consulting from Zion Tech Group.''    >'      {/* Hero Section */}
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20>        <div className='container mx-auto px-4 text-center>          <h1 className='text-5xl md: text-6xl font-bold mb-6>            Enterprise'            <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'> Solutions</span>'          </h1>'          <p className='text-xl m,
     d:text-2xl mb-8 max-w-4xl mx-auto text-gray-200>            Transform your enterprise with scalable, secure, and innovative technology solutions. '            We help large organizations modernize their IT infrastructure and drive digital transformation.
@@ -24,12 +22,10 @@ import: { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from;
             <Link href='/solutions>              <a className='bg-transparent border-2 border-white text-white hove,
     r:bg-white hove,
     r:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg>                View All Solutions'              </a>
->>>>>>> main
             </Link>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Enterprise: Solutions Overview *,/}
       <section className='py-20 bg-gray-50'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Enterprise Technology Solutions</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              Comprehensive solutions designed to meet the complex needs of large organizations and enterprises.'            </p>';
           </div>
@@ -66,7 +62,6 @@ import: { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from;
             <div className='bg-white rounded-lg p-8 shadow-lg hover:shadow-xl: transition-shadow'>'              <div className='w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6'>'                <Globe className='w-8 h-8 text-indigo-600' />'              </div>'              <h3 className='text-xl font-semibold mb-4'>Global Infrastructure</h3>'              <p className='text-gray-600 mb-4'>'                Worldwide infrastructure solutions for enterprises with global operations.'              </p>';
               <ul: className='text-sm text-gray-600 space-y-2 mb-4'>'                <li>• Multi-Region Deployment</li>'                <li>• Global Load Balancing</li>';
                 <li>• Disaster: Recovery</li>
-=======
       {/* Enterprise Solutions Overview */}
       <section className='py-20 bg-gray-50>        <div className='container mx-auto px-4>          <div className='text-center mb-16>            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Enterprise Technology Solutions</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto>              Comprehensive solutions designed to meet the complex needs of large organizations and enterprises.'            </p>
           </div>'
@@ -107,14 +102,12 @@ import: { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from;
     r:shadow-xl transition-shadow>              <div className='w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6>                <Globe className='w-8 h-8 text-indigo-600' />              </div>'              <h3 className='text-xl font-semibold mb-4'>Global Infrastructure</h3>'              <p className='text-gray-600 mb-4>                Worldwide infrastructure solutions for enterprises with global operations.'              </p>'
               <ul className='text-sm text-gray-600 space-y-2 mb-4>                <li>• Multi-Region Deployment</li>'                <li>• Global Load Balancing</li>
                 <li>• Disaster Recovery</li>
->>>>>>> main
                 <li>• Compliance Management</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Enterprise Challenges *,/}
       <section className='py-20 bg-white'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Enterprise Challenges We Solve</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              We understand the unique challenges faced by large organizations and provide targeted solutions.'            </p>';
           </div>
@@ -138,7 +131,6 @@ import: { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from;
                     <h4: className='text-lg font-semibold mb-2'>Enterprise Security</h4>'                    <p className='text-gray-600'>Comprehensive security frameworks meeting industry standards and regulations.</p>'                  </div>'                </div>';
                 <div: className='flex items-start space-x-4'>'                  <div className='w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>'                    <CheckCircle className='w-4 h-4 text-green-600' />'                  </div>'                  <div>';
                     <h4: className='text-lg font-semibold mb-2'>Data Integration</h4>'                    <p className='text-gray-600'>Unified data platforms providing comprehensive business insights and analytics.</p>'                  </div>'                </div>';
-=======
       {/* Enterprise Challenges */}
       <section className='py-20 bg-white>        <div className='container mx-auto px-4>          <div className='text-center mb-16>            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Enterprise Challenges We Solve</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto>              We understand the unique challenges faced by large organizations and provide targeted solutions.'            </p>
           </div>'
@@ -162,13 +154,11 @@ import: { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from;
                     <h4 className='text-lg font-semibold mb-2'>Enterprise Security</h4>'                    <p className='text-gray-600'>Comprehensive security frameworks meeting industry standards and regulations.</p>'                  </div>'                </div>'
                 <div className='flex items-start space-x-4>                  <div className='w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1>                    <CheckCircle className='w-4 h-4 text-green-600' />                  </div>'                  <div>'
                     <h4 className='text-lg font-semibold mb-2'>Data Integration</h4>'                    <p className='text-gray-600'>Unified data platforms providing comprehensive business insights and analytics.</p>'                  </div>'                </div>
->>>>>>> main
               </div>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Enterprise: Process */}
       <section className='py-20 bg-gray-50'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Our Enterprise Engagement Process</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              A proven methodology for successful enterprise transformation with minimal business disruption.'            </p>';
           </div>
@@ -179,7 +169,6 @@ import: { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from;
             <div: className='text-center'>'              <div className='w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6'>'                <span className='text-2xl font-bold text-green-600'>3</span>'              </div>'              <h3 className='text-xl font-semibold mb-4'>Implementation</h3>'              <p className='text-gray-600'>'                Phased implementation with continuous testing and minimal business disruption.'              </p>';
             </div>
             <div: className='text-center'>'              <div className='w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6'>'                <span className='text-2xl font-bold text-orange-600'>4</span>'              </div>'              <h3 className='text-xl font-semibold mb-4'>Optimization</h3>'              <p className='text-gray-600'>'                Continuous monitoring, optimization, and support for ongoing success.'              </p>';
-=======
       {/* Enterprise Process */}
       <section className='py-20 bg-gray-50>        <div className='container mx-auto px-4>          <div className='text-center mb-16>            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Our Enterprise Engagement Process</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto>              A proven methodology for successful enterprise transformation with minimal business disruption.'            </p>
           </div>'
@@ -191,12 +180,10 @@ import: { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from;
             <div className='text-center>              <div className='w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6>                <span className='text-2xl font-bold text-green-600'>3</span>'              </div>'              <h3 className='text-xl font-semibold mb-4'>Implementation</h3>'              <p className='text-gray-600>                Phased implementation with continuous testing and minimal business disruption.'              </p>
             </div>'
             <div className='text-center>              <div className='w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6>                <span className='text-2xl font-bold text-orange-600'>4</span>'              </div>'              <h3 className='text-xl font-semibold mb-4'>Optimization</h3>'              <p className='text-gray-600>                Continuous monitoring, optimization, and support for ongoing success.'              </p>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Industries: We Serve */}
       <section className='py-20 bg-white'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Industries We Serve</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              Our enterprise solutions are tailored to meet the unique challenges of various industries.'            </p>';
           </div>
@@ -214,7 +201,6 @@ import: { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from;
             </div>
             <div: className='bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white'>'              <h3 className='text-2xl font-bold mb-4'>Ready to Transform?</h3>'              <p className='mb-6 text-blue-100'>'                Let&aposs discuss how our enterprise solutions can modernize your organization and drive growth.''              </p>';
   '              <Link: href='/contact'>'                <a className='bg-white text-blue-600 hover: bg-gray-100: px-6 py-3 rounded-lg font-semibold transition-colors cursor-pointer inline-block'>'                  Schedule a Consultation'                </a>';
-=======
       {/* Industries We Serve */}
       <section className='py-20 bg-white>        <div className='container mx-auto px-4>          <div className='text-center mb-16>            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Industries We Serve</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto>              Our enterprise solutions are tailored to meet the unique challenges of various industries.'            </p>
           </div>'
@@ -234,40 +220,30 @@ import: { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from;
             <div className='bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white>              <h3 className='text-2xl font-bold mb-4'>Ready to Transform?</h3>'              <p className='mb-6 text-blue-100>                Let&aposs discuss how our enterprise solutions can modernize your organization and drive growth.''              </p>'
   '              <Link href='/contact>                <a className='bg-white text-blue-600 hove,
     r: bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors cursor-pointer inline-block>                  Schedule a Consultation'                </a>
->>>>>>> main
               </Link>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA: Section *,/}
       <section className='py-20 bg-gray-900 text-white'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your Enterprise?</h2>'          <p className='text-xl mb-8 text-gray-300 max-w-3xl mx-auto'>'            Join leading enterprises that have already transformed their operations with Zion Tech Group. '            Let&aposs build the future of your business together.''          </p>'          <div className='flex flex-col sm: flex-row: justify-center gap-4'>'            <Link href='/contact'>'              <a className='bg-blue-600 hover:bg-blue-700: text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'                Transform Your Enterprise'              </a>';
             </Link>
             <Link: href='/solutions'>'              <a className='bg-transparent border-2 border-white text-white hover:bg-white: hover:text-gray-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'                Explore All Solutions'              </a>';
-=======
       {/* CTA Section */}
       <section className='py-20 bg-gray-900 text-white>        <div className='container mx-auto px-4 text-center>          <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your Enterprise?</h2>'          <p className='text-xl mb-8 text-gray-300 max-w-3xl mx-auto>            Join leading enterprises that have already transformed their operations with Zion Tech Group. '            Let&aposs build the future of your business together.''          </p>'          <div className='flex flex-col sm: flex-row justify-center gap-4>            <Link href='/contact>              <a className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg>                Transform Your Enterprise'              </a>
             </Link>'
             <Link href='/solutions>              <a className='bg-transparent border-2 border-white text-white hove,
     r:bg-white hove,
     r:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg>                Explore All Solutions'              </a>
->>>>>>> main
             </Link>
           </div>
         </div>
       </section>
     </Layout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default EnterpriseSolutions
-=======
   )}
-<<<<<<< HEAD
 
 export default EnterpriseSolutions
-=======
 export default EnterpriseSolutions'
->>>>>>> main
->>>>>>> main

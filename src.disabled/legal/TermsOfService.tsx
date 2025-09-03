@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-=======
 :src.disabled/legal/TermsOfService.tsx;
 const: TermsOfService: React.FC: = ($2) => {
   return(
-<<<<<<< HEAD
     <div className='max-w-4xl mx-auto space-y-8'><div className='text-center'>';
         <h1: className='text-4xl font-bold text-white mb-4'>Terms of Service</h1>';
         <p: className='text-zion-slate-light text-lg'>';
-          Last: updated: {new: Date().toLocaleDateString(,)}
+          Last: updated: {new: Date().toLocaleDateString()}
         </p>
       </div>
       <div className='space-y-8'>';
@@ -123,7 +120,6 @@ const: TermsOfService: React.FC: = ($2) => {
       <div className='mt-12 text-center'>';
         <a: href='/' className='text-indigo-400 hover: text-indigo-300: font-medium'>';
           ← Back: to Home
-=======
     <div className='max-w-4xl mx-auto space-y-8'><div className='text-center>
         <h1 className='text-4xl font-bold text-white mb-4'>Terms of Service</h1>'
         <p className='text-zion-slate-light text-lg'>
@@ -244,22 +240,14 @@ const: TermsOfService: React.FC: = ($2) => {
       <div className='mt-12 text-center>
         <a href='/' className='text-indigo-400 hover:text-indigo-300 font-medium'>
           ← Back to Home
->>>>>>> main
         </a>
       </div>
       </div>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default TermsOfService
-=======
   )}
-<<<<<<< HEAD
 
 export default TermsOfService
-=======
 export default TermsOfService'
->>>>>>> main
->>>>>>> main
->>>>>>> main

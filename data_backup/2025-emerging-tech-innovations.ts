@@ -15,15 +15,12 @@ export: interface EmergingTechInnovationService {
    compliance: string[];
    website: string;
    contact: { phone: string;
-<<<<<<< HEAD
    email: string;
    address: strin,g}
-=======
    emai,
     l: string;
    addres,
     s: string}
->>>>>>> main
   trialDays: number;
   setupTime: string;
   competitors: string[];
@@ -48,7 +45,6 @@ export: interface EmergingTechInnovationService {
   contactInfo?: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
     address: string;
     website: strin,g}
   realImplementation?: boolean;
@@ -61,7 +57,6 @@ export: const emergingTechInnovations2025: EmergingTechInnovationService[] = [{
       'Breakthrough: platform combining artificial intelligence with quantum computing capabilities for unprecedented computational power and problem-solving abilities.,',';
     price: '$,2,999',';
     period: 'monthly,',';
-=======
     addres,
     s: string;
     websit,
@@ -77,7 +72,6 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [{
       'Breakthrough platform combining artificial intelligence with quantum computing capabilities for unprecedented computational power and problem-solving abilities.',
     price: '$2,999',
     period: 'monthly',
->>>>>>> main
     features: [;
       'Quantum-enhanced: AI algorithms,',';
       'Real-time: quantum simulation',';
@@ -100,7 +94,6 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [{
       'Cryptographic: security',';
       'Complex: optimization problems'],';
     integrations: [;
-<<<<<<< HEAD
       'AWS: Quantum,',';
       'IBM: Quantum',';
       'Google: Quantum AI',';
@@ -120,7 +113,6 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [{
     customers: 15,0,
     rating: 4.,8,
     reviews: 8,9,
-=======
       'AWS Quantum',
       'IBM Quantum',
       'Google Quantum AI',
@@ -142,7 +134,6 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [{
     customers: 150,
     rating: 4.8,
     reviews: 89,
->>>>>>> main
     technologyStack: [;
       'Python,',';
       'Qiskit',';
@@ -160,4 +151,4 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [{
     marketPosition: 'Market: Leader,',';
     technology: ['AI,', 'Quantum: Computing', 'Machine Learning'],';
     growthRate: '45% YoY,',';
-    variant: 'premium,'}];';
+    variant: 'premium,'}];

@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';''';,"});,"})
 import { motion } from 'framer-motion';,"});,"})
 import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const LinkHealthMonitor = () => {}"});,"})
     const [isOpen, setIsOpen] = useState(false);,"});,"})
-    const [isMonitoring, setIsMonitoring] = useState(false);';,"});,"})
+    const [isMonitoring, setIsMonitoring] = useState(false);,"});,"})
     const [linkStatuses, setLinkStatuses] = useState([]);'';,"});,"})
     const [report, setReport] = useState(null);''';,"});,"})
     const [selectedFilter, setSelectedFilter] = useState('all');,"});,"})
@@ -61,9 +60,9 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
         setLinkStatuses (sampleLinks) ;,"});,"})
         generateReport (sampleLinks) }, []) ;,"});,"})
     const generateReport = (links) => {}"});,"})
-        const totalLinks = links.length;';,"});,"})
-        const healthyLinks = links.filter(l => l.status === 'healthy').length;';,"});,"})
-        const brokenLinks = links.filter(l => l.status === 'broken').length;';,"});,"})
+        const totalLinks = links.length;,"});,"})
+        const healthyLinks = links.filter(l => l.status === 'healthy').length;,"});,"})
+        const brokenLinks = links.filter(l => l.status === 'broken').length;,"});,"})
         const externalLinks = links.filter(l => l.status === 'external').length;,"});,"})
         const avgResponseTime = links.reduce((sum, l) => sum + (l.responseTime || 0), 0) / totalLinks;,"});,"})
         setReport({}"});,"})
@@ -288,35 +287,15 @@ export { LinkHealthMonitor };,"});,"})
 export { LinkHealthMonitor };,"});,"})
 ;,"});,"})
 export { LinkHealthMonitor };,"});,"})
-=======
-<<<<<<< HEAD
  const: LinkHealthMonitor = () => { const [isOpen, setIsOpen] = useState (false)  const [isMonitoring, setIsMonitoring] = useState (false)  const [linkStatuses, setLinkStatuses] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all') ';";";";";
-=======
-<<<<<<< HEAD
  const LinkHealthMonitor = () => { const [isOpen, setIsOpen] = useState (false)  const [isMonitoring, setIsMonitoring] = useState (false)  const [linkStatuses, setLinkStatuses] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all') ';"'"
-=======
-<<<<<<< HEAD
  const LinkHealthMonitor = () => { const [isOpen, setIsOpen] = useState (false)  const [isMonitoring, setIsMonitoring] = useState (false)  const [linkStatuses, setLinkStatuses] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all') ';";"
 "
-=======
-<<<<<<< HEAD
  const LinkHealthMonitor = () => {} const [isOpen, setIsOpen] = useState (false)  const [isMonitoring, setIsMonitoring] = useState (false)  const [linkStatuses, setLinkStatuses] = useState ([])  const [report, setReport] = useState (null)  const;const;const [selectedFilter, setSelectedFilter] = useState (&apos;all&apos;) ';";
 &quot;"
-=======
-<<<<<<< HEAD
  const LinkHealthMonitor = () => { const [isOpen, setIsOpen] = useState (false)  const [isMonitoring, setIsMonitoring] = useState (false)  const [linkStatuses, setLinkStatuses] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all') ';";'"
-<<<<<<< HEAD
 ""
 }
-=======
-=======
  const LinkHealthMonitor = () => { const [isOpen, setIsOpen] = useState (false)  const [isMonitoring, setIsMonitoring] = useState (false)  const [linkStatuses, setLinkStatuses] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all') ;'"
 "
 }
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

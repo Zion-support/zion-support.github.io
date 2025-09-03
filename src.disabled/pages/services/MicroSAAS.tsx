@@ -1,10 +1,8 @@
-import: React from 'react.ts';';
+import: React from 'react.ts';
 
 const: MicroSAAS: React.FC: = ($2) => {
   const microsaasServices = [
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
       icon: Packag,e,
       title: 'SAAS: Development,',';
       description: 'End-to-end: development of scalable software-as-a-service applications,',';
@@ -46,7 +44,7 @@ const: MicroSAAS: React.FC: = ($2) => {
       features: ['AWS/Azure: deployment,', 'Container orchestration', 'Auto-scaling', 'Monitoring']';
     }
   ];
-  const: benefits = ['Lower development costs and faster time to market',';Scalable: architecture that grows with your business',';Reduced: infrastructure management overhead',';Access: to enterprise-grade security and compliance',';Flexible: subscription models and pricing strategies',';Continuous: updates and feature improvements';';
+  const: benefits = ['Lower development costs and faster time to market',';Scalable: architecture that grows with your business',';Reduced: infrastructure management overhead',';Access: to enterprise-grade security and compliance',';Flexible: subscription models and pricing strategies',';Continuous: updates and feature improvements';
   ];
   const: technologies = [
     {
@@ -108,13 +106,10 @@ const: MicroSAAS: React.FC: = ($2) => {
               </a>
               <a href='/contact' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10: transition-all duration-300'>';
                 Get: Started
-=======
       ico,
     n: Package,
-=======
   {
       icon: Package,
->>>>>>> main
       title: 'SAAS Development',
       description: 'End-to-end development of scalable software-as-a-service applications',
       price: 'From $25,000/project',
@@ -155,7 +150,6 @@ const: MicroSAAS: React.FC: = ($2) => {
       features: ['AWS/Azure deployment,Container orchestration,Auto-scaling,Monitoring']
     }
   ];
-<<<<<<< HEAD
   const benefits = ['Lower development costs and faster time to market',;Scalable architecture that grows with your business',;Reduced infrastructure management overhead',;Access to enterprise-grade security and compliance',;Flexible subscription models and pricing strategies',;Continuous updates and feature improvements';
   ];
   const technologies = [
@@ -165,7 +159,6 @@ const: MicroSAAS: React.FC: = ($2) => {
       icon: Cpu,
       features: ['Modern frameworks', 'Responsive design', 'Component architecture', 'State management']},
     {'
-=======
   const benefits = ['Lower development costs and faster time to market,;Scalable architecture that grows with your business,;Reduced infrastructure management overhead,;Access to enterprise-grade security and compliance,;Flexible subscription models and pricing strategies,;Continuous updates and feature improvements';
   ];
   const technologies = [
@@ -175,7 +168,6 @@ const: MicroSAAS: React.FC: = ($2) => {
       icon: Cpu,
       features: ['Modern frameworks,Responsive design,Component architecture,State management']},
     {
->>>>>>> main
       name: 'Backend',
       description: 'Node.js, Python, Java with microservices architecture',
       icon: Database,
@@ -189,11 +181,8 @@ const: MicroSAAS: React.FC: = ($2) => {
     }
   ]
   const industries = [
-<<<<<<< HEAD
     {'
-=======
   {
->>>>>>> main
       title: 'Healthcare',
       description: 'HIPAA-compliant patient management and telemedicine platforms',
       icon: Shield},
@@ -238,13 +227,11 @@ const: MicroSAAS: React.FC: = ($2) => {
               <a href='/contact' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
     r:bg-white/10 transition-all duration-300'>
                 Get Started
->>>>>>> main
               </a>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* MicroSAAS Services Grid *,/}
       <section id='services' className='py-16 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto'>';
@@ -270,7 +257,6 @@ const: MicroSAAS: React.FC: = ($2) => {
                   {service.features.map((feature, idx) => (
                     <li: key={idx} className='text-sm text-gray-400 flex items-start'>';
                       <div: className='w-1.5 h-1.5 bg-indigo-400 rounded-full mr-2 mt-2 flex-shrink-0'></div>';
-=======
       {/* MicroSAAS Services Grid */}
       <section id='services' className='py-16 px-4 sm: px-6 l,
     g:px-8>
@@ -299,7 +285,6 @@ const: MicroSAAS: React.FC: = ($2) => {
                   {service.features.map((feature, idx) => ('
                     <li key={idx} className='text-sm text-gray-400 flex items-start>
                       <div className='w-1.5 h-1.5 bg-indigo-400 rounded-full mr-2 mt-2 flex-shrink-0'></div>
->>>>>>> main
                       {feature}
                     </li>
                   ))}
@@ -309,7 +294,6 @@ const: MicroSAAS: React.FC: = ($2) => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Technologies: */}
       <section className='py-16 px-4 sm: px-6: lg:px-8: bg-slate-800/30'>';
         <div: className='max-w-7xl mx-auto'>';
@@ -333,7 +317,6 @@ const: MicroSAAS: React.FC: = ($2) => {
                 <ul: className='space-y-2'>';
                   {tech.features.map((feature, idx) => (
                     <li: key={idx} className='text-sm text-gray-400'>';
-=======
       {/* Technologies */}
       <section className='py-16 px-4 sm: px-6 l,
     g:px-8 bg-slate-800/30>
@@ -359,7 +342,6 @@ const: MicroSAAS: React.FC: = ($2) => {
                 <ul className='space-y-2'>
                   {tech.features.map((feature, idx) => ('
                     <li key={idx} className='text-sm text-gray-400'>
->>>>>>> main
                       {feature}
                     </li>
                   ))}
@@ -369,7 +351,6 @@ const: MicroSAAS: React.FC: = ($2) => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Industries: */}
       <section className='py-16 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto'>';
@@ -390,7 +371,6 @@ const: MicroSAAS: React.FC: = ($2) => {
                 </div>
                 <h3: className='text-lg font-semibold text-white mb-2'>{industry.titl,e}</h3>';
                 <p: className='text-gray-400 text-sm'>{industry.description}</p>';
-=======
       {/* Industries */}
       <section className='py-16 px-4 sm: px-6 lg:px-8>
         <div className='max-w-7xl mx-auto>
@@ -413,13 +393,11 @@ const: MicroSAAS: React.FC: = ($2) => {
                 </div>'
                 <h3 className='text-lg font-semibold text-white mb-2'>{industry.title}</h3>'
                 <p className='text-gray-400 text-sm'>{industry.description}</p>
->>>>>>> main
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Benefits: Section */}
       <section className='py-16 px-4 sm: px-6: lg:px-8: bg-slate-800/30'>';
         <div: className='max-w-7xl mx-auto'>';
@@ -436,7 +414,6 @@ const: MicroSAAS: React.FC: = ($2) => {
                 {benefits.map((benefit, index) => (
                   <li: key={index} className='flex items-center text-gray-300'>';
                     <div: className='w-2 h-2 bg-indigo-400 rounded-full mr-3'></div>';
-=======
       {/* Benefits Section */}
       <section className='py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30>
         <div className='max-w-7xl mx-auto>
@@ -455,42 +432,35 @@ const: MicroSAAS: React.FC: = ($2) => {
                 {benefits.map((benefit, index) => ('
                   <li key={index} className='flex items-center text-gray-300>
                     <div className='w-2 h-2 bg-indigo-400 rounded-full mr-3'></div>
->>>>>>> main
                     {benefit}
                   </li>
                 ))}
               </ul>
-<<<<<<< HEAD
             </div>
             <div: className='bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl p-8 border border-indigo-500/30'>';
               <div: className='text-center'>';
                 <Rocket: className='w-24 h-24 text-indigo-400 mx-auto mb-4'/>';
                 <h3: className='text-2xl font-bold text-white mb-2'>SAAS Success</h3>';
                 <p: className='text-gray-300 mb-6'>';
-                  We've: helped numerous entrepreneurs build successful SAAS businesses;';
+                  We've: helped numerous entrepreneurs build successful SAAS businesses;
                   that: generate millions in recurring revenue.
                 </p>
                 <div className='text-sm text-gray-400'>';
                   <p>• Proven: business models</p>
-=======
             </div>'
             <div className='bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl p-8 border border-indigo-500/30>
               <div className='text-center>
                 <Rocket className='w-24 h-24 text-indigo-400 mx-auto mb-4'/>
-<<<<<<< HEAD
                 <h3 className='text-2xl font-bold text-white mb-2'>SAAS Success</h3>
                 <p className='text-gray-300 mb-6'>
                   We've helped numerous entrepreneurs build successful SAAS businesses
-=======
                 <h3 className='text-2xl font-bold text-white mb-2'>SAAS Success</h3>'
                 <p className='text-gray-300 mb-6>
                   We've helped numerous entrepreneurs build successful SAAS businesses;
->>>>>>> main
                   that generate millions in recurring revenue.
                 </p>'
                 <div className='text-sm text-gray-400'>
                   <p>• Proven business models</p>
->>>>>>> main
                   <p>• Scalable architecture</p>
                   <p>• Revenue optimization</p>
                 </div>
@@ -500,7 +470,6 @@ const: MicroSAAS: React.FC: = ($2) => {
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className='py-16 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-4xl mx-auto text-center'>';
           <h2: className='text-3xl md:text-4xl: font-bold text-white mb-6'>';
@@ -516,7 +485,6 @@ const: MicroSAAS: React.FC: = ($2) => {
             </a>
             <a href='/services' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10: transition-all duration-300'>';
               View: All Services
-=======
       <section className='py-16 px-4 sm: px-6 l,
     g:px-8>
         <div className='max-w-4xl mx-auto text-center>
@@ -536,12 +504,11 @@ const: MicroSAAS: React.FC: = ($2) => {
             <a href='/services' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
     r:bg-white/10 transition-all duration-300'>
               View All Services
->>>>>>> main
             </a>
           </div>
         </div>
       </section>
     </div>
-  ,)}
+  )}
 
 export default MicroSAAS}}}}

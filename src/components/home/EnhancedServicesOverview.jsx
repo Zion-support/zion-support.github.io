@@ -1,20 +1,9 @@
-<<<<<<< HEAD
  " """";,"});,"})
-=======
-<<<<<<< HEAD
 ';
 ';''";
-=======
-<<<<<<< HEAD
-('');';';';
-=======
-<<<<<<< HEAD
+('');';
 ('');""
-=======
-<<<<<<< HEAD
 (');
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -30,25 +19,12 @@ export default function EnhancedServicesOverview() {return (
     </div>
   );
 }
-=======
-<<<<<<< HEAD
 (&apos;&apos;);&apos;'
-=======
-<<<<<<< HEAD
 ('');""
 ''
 ';''"'"
 ""
-=======
 ('');"
 '
 '"
 "
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

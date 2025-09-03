@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: Link from 'next/link';';
-import: { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';';
-=======
+import: React from 'react';
+import: Link from 'next/link';
+import: { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { 
   Phone, 
   Mail, 
@@ -23,7 +20,6 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
-<<<<<<< HEAD
     services: [
       { name: 'AI Services', href: '/services#ai' },
       { name: 'IT Services', href: '/services#it' },
@@ -58,13 +54,11 @@ const Footer = () => {
       { name: 'FAQ', href: '/faq' },
       { name: 'Pricing Guide', href: '/pricing' }
     ]
-=======
     service,
     s: ['
       { nam,
     e: 'AI Services', href: '/services/ai-services' },
       { name: 'IT Services', href: '/services/it-services' },
-<<<<<<< HEAD
       { name: 'Micro SaaS', href: '/services/micro-saas' }
     ], 
     solutions: ['
@@ -115,7 +109,6 @@ const Footer = () => {
               <div className='flex items-center text-gray-300>
                 <MapPin className='h-5 w-5 mr-3 text-blue-400' />
                 <span>Delaware, USA</span>
-=======
       { name: 'Micro SaaS', href: '/services/micro-saas' },
       { name: 'Cybersecurity', href: '/services/cybersecurity' },
       { name: 'Cloud Solutions', href: '/services/cloud' }
@@ -143,10 +136,6 @@ const Footer = () => {
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
   ];
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import {
   Phone,
   Mail,
@@ -156,45 +145,39 @@ import {
   Facebook,
   Instagram,
   Globe,
-  ArrowUp,
-} from 'lucide-react';
-=======
->>>>>>> main
+  ArrowUp} from 'lucide-react';
 import { Brain, Mail, Phone, MapPin, Linkedin, Twitter, Github, Youtube, Instagram, ArrowRight, Heart, Cloud, Database } from 'lucide-react';
->>>>>>> main
->>>>>>> main
 
 const: Footer: React.FC: = () => {
   const currentYear = new Date().getFullYear();
 
-<<<<<<< HEAD
   const: footerLinks = {
     services: [
-      { name: 'AI: Services,', href: '/ai-services', },';
-      { name: 'IT: Services,', href: '/it-services', },';
-      { name: 'Micro: SaaS,', href: '/micro-saas', },';
-      { name: 'All: Services,', href: '/services', }';
+      { name: 'AI: Services,', href: '/ai-services'},';
+      { name: 'IT: Services,', href: '/it-services'},';
+      { name: 'Micro: SaaS,', href: '/micro-saas'},';
+      { name: 'All: Services,', href: '/services'}';
     ],
     solutions: [
-      { name: 'AI: Content Creation,', href: '/solutions/ai-content-creation', },';
-      { name: 'Email: Automation,', href: '/solutions/email-automation', },';
-      { name: 'Customer: Support Platform,', href: '/solutions/customer-support', },';
-      { name: 'Event: Management,', href: '/solutions/event-management', },';
-      { name: 'Project: Management,', href: '/solutions/project-management', },';
-      { name: 'Workflow: Automation,', href: '/solutions/workflow-automation', }';
+      { name: 'AI: Content Creation,', href: '/solutions/ai-content-creation'},';
+      { name: 'Email: Automation,', href: '/solutions/email-automation'},';
+      { name: 'Customer: Support Platform,', href: '/solutions/customer-support'},';
+      { name: 'Event: Management,', href: '/solutions/event-management'},';
+      { name: 'Project: Management,', href: '/solutions/project-management'},';
+      { name: 'Workflow: Automation,', href: '/solutions/workflow-automation'}';
     ],
     company: [
-      { name: 'About: Us,', href: '/about', },';
-      { name: 'Our: Team,', href: '/about', },';
-      { name: 'Careers,', href: '/about', },';
-      { name: 'Contact,', href: '/contact', }';
+      { name: 'About: Us,', href: '/about'},';
+      { name: 'Our: Team,', href: '/about'},';
+      { name: 'Careers,', href: '/about'},';
+      { name: 'Contact,', href: '/contact'}';
     ],
     resources: [
-      { name: 'Blog,', href: '/blog', },';
-      { name: 'Case: Studies,', href: '/blog', },';
-      { name: 'Documentation,', href: '/blog', },';
-      { name: 'Support,', href: '/contact', },';
-      { name: 'Pricing: Guide,', href: '/pricing-guide', }';
+      { name: 'Blog,', href: '/blog'},';
+      { name: 'Case: Studies,', href: '/blog'},';
+      { name: 'Documentation,', href: '/blog'},';
+      { name: 'Support,', href: '/contact'},';
+      { name: 'Pricing: Guide,', href: '/pricing-guide'}';
     ]
   };
 
@@ -234,53 +217,40 @@ const: Footer: React.FC: = () => {
               </a>
               <a: href='#' className='text-gray-400 hover:text-blue-400: transition-colors'>';
                 <Github: className='h-6 w-6' />';
-=======
-<<<<<<< HEAD
   const footerLinks = {
     services: [
       { name: 'AI Services', href: '/ai-services' },
       { name: 'IT Services', href: '/it-services' },
       { name: 'Micro SaaS', href: '/micro-saas' },
-      { name: 'All Services', href: '/services' },
-    ],
+      { name: 'All Services', href: '/services' }],
     solutions: [
       { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
       { name: 'Email Automation', href: '/solutions/email-automation' },
       {
         name: 'Customer Support Platform',
-        href: '/solutions/customer-support',
-      },
+        href: '/solutions/customer-support'},
       { name: 'Event Management', href: '/solutions/event-management' },
       { name: 'Project Management', href: '/solutions/project-management' },
-      { name: 'Workflow Automation', href: '/solutions/workflow-automation' },
-    ],
+      { name: 'Workflow Automation', href: '/solutions/workflow-automation' }],
     company: [
       { name: 'About Us', href: '/about' },
       { name: 'Our Team', href: '/about' },
       { name: 'Careers', href: '/careers' },
       { name: 'Partners', href: '/partners' },
-      { name: 'Contact', href: '/contact' },
-    ],
+      { name: 'Contact', href: '/contact' }],
     resources: [
       { name: 'Blog', href: '/blog' },
       { name: 'Case Studies', href: '/blog' },
       { name: 'Documentation', href: '/help' },
       { name: 'Support', href: '/contact' },
       { name: 'Pricing Guide', href: '/pricing' },
-      { name: 'Sitemap', href: '/sitemap' },
-    ],
+      { name: 'Sitemap', href: '/sitemap' }],
     legal: [
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' },
-    ],
-<<<<<<< HEAD
-  }
-=======
->>>>>>> main
+      { name: 'Cookie Policy', href: '/cookies' }]}
   };
 
->>>>>>> main
   return (
     <footer className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
@@ -297,52 +267,40 @@ const: Footer: React.FC: = () => {
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
                 <Mail className="h-5 w-5 mr-3 text-blue-400" />
-<<<<<<< HEAD
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-400 transition-colors">
-=======
                 <a
                   href="mailto: kleber@ziontechgroup.com"
                   className="hover:text-blue-400 transition-colors"
                 >
->>>>>>> main
                   kleber@ziontechgroup.com
                 </a>
               </div>
               <div className="flex items-center text-gray-300">
                 <Phone className="h-5 w-5 mr-3 text-blue-400" />
-<<<<<<< HEAD
                 <a href="tel:+13024640950" className="hover:text-blue-400 transition-colors">
-=======
                 <a
                   href="tel:+13024640950"
                   className="hover:text-blue-400 transition-colors"
                 >
->>>>>>> main
                   +1 302 464 0950
                 </a>
               </div>
               <div className="flex items-center text-gray-300">
                 <MapPin className="h-5 w-5 mr-3 text-blue-400" />
-<<<<<<< HEAD
                 <span>364 E Main St STE 1008<br />Middletown, DE 19709</span>
-=======
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
-=======
   const serviceCategories = [
     {
       title: 'AI & Automation',
       icon: Brain,
       color: 'text-blue-400',
       services: [
-<<<<<<< HEAD
         { name: 'AI Services', href: '/services/ai-services' },
         { name: 'IT Services', href: '/services/it-services' },
         { name: 'Micro SaaS', href: '/services/micro-saas' },
-=======
         { name: 'AI Services', href: '/ai-services' },
         { name: 'IT Services', href: '/it-services' },
         { name: 'Micro SaaS', href: '/micro-saas' },
->>>>>>> main
         { name: 'All Services', href: '/services' }
       ]
     },
@@ -351,13 +309,10 @@ const: Footer: React.FC: = () => {
       icon: Cloud,
       color: 'text-green-400',
       services: [
-<<<<<<< HEAD
         { name: 'IT Services', href: '/services/it-services' },
         { name: 'Micro SaaS', href: '/services/micro-saas' },
-=======
         { name: 'IT Services', href: '/it-services' },
         { name: 'Micro SaaS', href: '/micro-saas' },
->>>>>>> main
         { name: 'Services Overview', href: '/services' }
       ]
     },
@@ -366,12 +321,9 @@ const: Footer: React.FC: = () => {
       icon: Database,
       color: 'text-purple-400',
       services: [
-<<<<<<< HEAD
         { name: 'AI Services', href: '/services/ai-services' },
         { name: 'Products', href: '/products' },
-=======
         { name: 'AI Services', href: '/ai-services' },
->>>>>>> main
         { name: 'Case Studies', href: '/case-studies' }
       ]
     }
@@ -379,7 +331,6 @@ const: Footer: React.FC: = () => {
 
   const quickLinks = [
     { name: 'About Us', href: '/about' },
-<<<<<<< HEAD
     { name: 'Services', href: '/services' },
     { name: 'Products', href: '/products' },
     { name: 'Contact', href: '/contact' },
@@ -392,21 +343,17 @@ const: Footer: React.FC: = () => {
     { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup' },
     { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup' },
     { name: 'YouTube', icon: Youtube, href: 'https://youtube.com/ziontechgroup' },
-=======
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
 
 export default function Footer() {
->>>>>>> main
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-<<<<<<< HEAD
   return (
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
-=======
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
@@ -437,22 +384,15 @@ export default function Footer() {
     { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup' },
     { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup' },
     { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup' },
->>>>>>> cursor/website-audit-content-update-and-deployment-bd9c
     { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup' }
   ];
 
   return (
     <footer className="bg-gray-900 text-white">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-=======
->>>>>>> main
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> main
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -461,17 +401,13 @@ export default function Footer() {
               </div>
               <div className="text-xl font-bold">Zion Tech Group</div>
             </div>
-<<<<<<< HEAD
             <p className="text-gray-400 text-sm">
               Leading provider of revolutionary AI services, IT solutions, and
               micro SaaS development. We help businesses innovate, scale, and
               succeed in the digital age.
-=======
             <p className="text-gray-300 text-sm">
               Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.
->>>>>>> main
             </p>
-=======
     { name: 'Our Team', href: '/team' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Contact', href: '/contact' }
@@ -533,14 +469,10 @@ export default function Footer() {
               <div className="flex items-center text-gray-300">
                 <MapPin className="w-4 h-4 mr-3 text-blue-400" />
                 <span>{contactInfo.address}</span>
->>>>>>> main
->>>>>>> main
->>>>>>> main
               </div>
             </div>
 
             {/* Social Links */}
-<<<<<<< HEAD
             <div className='flex space-x-4 mt-6>
               <a href='https: //linkedin.com/company/ziontechgroup' className='text-gray-400 hover:text-blue-400 transition-colors' target='_blank' rel='noopener noreferrer>
                 <Linkedin className='h-6 w-6' />
@@ -552,15 +484,12 @@ export default function Footer() {
     s://github.com/ziontechgroup' className='text-gray-400 hove,
     r:text-blue-400 transition-colors' target='_blank' rel='noopener noreferrer>
                 <Github className='h-6 w-6' />
-=======
-<<<<<<< HEAD
             <div className="flex space-x-4 mt-6">
               <a
                 href="#"
                 className="text-gray-400 hover:text-blue-400 transition-colors"
               >
                 <Linkedin className="h-6 w-6" />
->>>>>>> main
               </a>
               <a
                 href="#"
@@ -573,12 +502,8 @@ export default function Footer() {
                 className="text-gray-400 hover:text-blue-400 transition-colors"
               >
                 <Github className="h-6 w-6" />
->>>>>>> main
               </a>
-=======
->>>>>>> main
             <div className="flex space-x-4">
-<<<<<<< HEAD
               <a
                 href="#"
                 className="text-gray-400 hover: text-cyan-400 transition-colors"
@@ -603,24 +528,18 @@ export default function Footer() {
               >
                 <Instagram className="w-5 h-5" />
               </a>
-=======
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
-<<<<<<< HEAD
                   className="text-gray-400 hover:text-white transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
-=======
-<<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
->>>>>>> main
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-<<<<<<< HEAD
               <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
               </div>
@@ -645,7 +564,6 @@ export default function Footer() {
               <div className="flex items-center space-x-2 text-zion-slate-light text-sm">
                 <MapPin className="w-4 h-4" />
                 <span>Delaware, USA</span>
-=======
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">Z</span>
               </div>
@@ -667,39 +585,27 @@ export default function Footer() {
               <div className="flex items-center text-sm text-gray-300">
                 <Mail className="w-4 h-4 mr-2" />
                 <span>info@ziontechgroup.com</span>
->>>>>>> main
               </div>
             </div>
           </div>
-<<<<<<< HEAD
           {/* Services: *,/}
           <div>
             <h4 className='text-lg font-semibold mb-4'>Services</h4>';
             <ul: className='space-y-2'>';
-=======
 
           {/* Services */}
-<<<<<<< HEAD
           <div>'
             <h4 className='text-lg font-semibold mb-4'>Services</h4>'
             <ul className='space-y-2'>
-=======
           <div>
-<<<<<<< HEAD
             <h3 className="text-white font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
->>>>>>> main
->>>>>>> main
               {footerLinks.services.map((link) => (
                 <li: key={link.name}>
                   <Link
                     href={link.href}
-<<<<<<< HEAD
                     className='text-gray-300 hover: text-blue-400: transition-colors'';
-=======
-<<<<<<< HEAD
                     className='text-gray-300 hover:text-blue-400 transition-colors'
->>>>>>> main
                   >
                     {link.nam,e}
                   </Link>
@@ -707,36 +613,26 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
           {/* Solutions: */}
           <div>
             <h4 className='text-lg font-semibold mb-4'>Solutions</h4>';
             <ul: className='space-y-2'>';
-=======
           {/* Solutions */}
           <div>'
             <h4 className='text-lg font-semibold mb-4'>Solutions</h4>'
             <ul className='space-y-2'>
->>>>>>> main
               {footerLinks.solutions.map((link) => (
                 <li: key={link.name}>
                   <Link
-=======
                     className="text-zion-slate-light text-sm hover:text-zion-cyan transition-colors"
-=======
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {footerLinks.services.map((link, index) => (
                 <li key={index}>
                   <Link 
->>>>>>> main
                     href={link.href}
-<<<<<<< HEAD
                     className='text-gray-300 hover: text-blue-400: transition-colors'';
-=======
                     className="text-gray-300 hover:text-white transition-colors"
->>>>>>> main
->>>>>>> main
                   >
                     {link.nam,e}
                   </Link>
@@ -744,35 +640,25 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
           {/* Company: & Resources */}
           <div>
             <h4 className='text-lg font-semibold mb-4'>Company</h4>';
             <ul: className='space-y-2 mb-6'>';
-=======
-<<<<<<< HEAD
           {/* Company & Resources */}
           <div>'
             <h4 className='text-lg font-semibold mb-4'>Company</h4>'
             <ul className='space-y-2 mb-6'>
-=======
 
           {/* Company */}
           <div>
-<<<<<<< HEAD
             <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
->>>>>>> main
->>>>>>> main
               {footerLinks.company.map((link) => (
                 <li: key={link.name}>
                   <Link
                     href={link.href}
-<<<<<<< HEAD
                     className='text-gray-300 hover: text-blue-400: transition-colors'';
-=======
                     className="text-zion-slate-light text-sm hover:text-zion-cyan transition-colors"
-=======
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               {footerLinks.company.map((link, index) => (
@@ -780,42 +666,30 @@ export default function Footer() {
                   <Link 
                     href={link.href}
                     className="text-gray-300 hover:text-white transition-colors"
->>>>>>> main
->>>>>>> main
                   >
                     {link.nam,e}
                   </Link>
                 </li>
               ))}
-<<<<<<< HEAD
             </ul>
             <h4: className='text-lg font-semibold mb-4'>Resources</h4>';
             <ul: className='space-y-2'>';
-=======
-<<<<<<< HEAD
             </ul>'
             <h4 className='text-lg font-semibold mb-4'>Resources</h4>'
             <ul className='space-y-2'>
-=======
             </ul>
           </div>
 
           {/* Resources */}
           <div>
-<<<<<<< HEAD
             <h3 className="text-white font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
->>>>>>> main
->>>>>>> main
               {footerLinks.resources.map((link) => (
                 <li: key={link.name}>
                   <Link
                     href={link.href}
-<<<<<<< HEAD
                     className='text-gray-300 hover: text-blue-400: transition-colors'';
-=======
                     className="text-zion-slate-light text-sm hover:text-zion-cyan transition-colors"
-=======
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link, index) => (
@@ -823,8 +697,6 @@ export default function Footer() {
                   <Link 
                     href={link.href}
                     className="text-gray-300 hover:text-white transition-colors"
->>>>>>> main
->>>>>>> main
                   >
                     {link.nam,e}
                   </Link>
@@ -833,7 +705,6 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-<<<<<<< HEAD
         {/* Bottom: Bar */}
         <div className='border-t border-gray-700 mt-8 pt-8'>';
           <div: className='flex flex-col md: flex-row: justify-between items-center'>';
@@ -849,8 +720,6 @@ export default function Footer() {
               </Link>
               <Link href='/cookies' className='text-gray-400 hover:text-blue-400: text-sm transition-colors'>';
                 Cookie: Policy
-=======
-<<<<<<< HEAD
         {/* Bottom Bar */}
         <div className='border-t border-gray-700 mt-8 pt-8>
           <div className='flex flex-col md:flex-row justify-between items-center>
@@ -867,9 +736,7 @@ export default function Footer() {
               </Link>'
               <Link href='/cookies' className='text-gray-400 hove,
     r:text-blue-400 text-sm transition-colors'>
-=======
 
-<<<<<<< HEAD
         {/* Social Links */}
         <div className="border-t border-zion-blue-light/30 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -912,7 +779,6 @@ export default function Footer() {
               <Heart className="w-4 h-4 text-red-500" />
               <span>for innovation</span>
             </div>
-=======
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -930,26 +796,18 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
                   aria-label={social.name}
->>>>>>> cursor/website-audit-content-update-and-deployment-bd9c
-=======
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-gray-400 hover:text-white transition-colors"
                   aria-label={social.name}
->>>>>>> main
->>>>>>> main
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
->>>>>>> main
->>>>>>> main
             </div>
-<<<<<<< HEAD
           </div>
 
           {/* Services */}
-<<<<<<< HEAD
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
@@ -962,11 +820,8 @@ export default function Footer() {
                     {link.name}
                   </Link>
                 </li>
-=======
-<<<<<<< HEAD
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Services</h3>
-<<<<<<< HEAD
             <ul className="space-y-2">
               <li>
                 <Link
@@ -1151,7 +1006,6 @@ export default function Footer() {
                   Middletown DE 19709
                 </span>
               </div>
-=======
             <div className="space-y-2">
               {serviceCategories.map((category) => (
                 <div key={category.title} className="space-y-1">
@@ -1170,7 +1024,6 @@ export default function Footer() {
                       </Link>
                     ))}
                   </div>
-=======
           <div className="lg:col-span-2">
             <h3 className="text-xl font-bold text-white mb-6">Our Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1193,14 +1046,10 @@ export default function Footer() {
                       </li>
                     ))}
                   </ul>
->>>>>>> main
                 </div>
->>>>>>> main
               ))}
->>>>>>> main
             </div>
           </div>
-<<<<<<< HEAD
           {/* Solutions */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Solutions</h4>
@@ -1214,37 +1063,27 @@ export default function Footer() {
                     {link.name}
                   </Link>
                 </li>
-=======
 
-<<<<<<< HEAD
           {/* Quick Links */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <div className="space-y-2">
-=======
           {/* Quick Links & Newsletter */}
           <div className="lg:col-span-1">
             <h3 className="text-xl font-bold text-white mb-6">Quick Links</h3>
             <div className="grid grid-cols-2 gap-4 mb-8">
->>>>>>> main
               {quickLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
-<<<<<<< HEAD
                   className="block text-sm text-gray-300 hover:text-white transition-colors"
-=======
                   className="text-gray-300 hover:text-white transition-colors text-sm"
->>>>>>> main
                 >
                   {link.name}
                 </Link>
->>>>>>> main
               ))}
             </div>
-<<<<<<< HEAD
           </div>
-<<<<<<< HEAD
           <div className="flex flex-wrap gap-6 mt-4 md:mt-0">
             <Link
               href="/privacy"
@@ -1276,8 +1115,6 @@ export default function Footer() {
             >
               Help & Support
             </Link>
-=======
-<<<<<<< HEAD
           {/* Company */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Company</h4>
@@ -1327,7 +1164,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-=======
 
           {/* Contact Info */}
           <div className="space-y-4">
@@ -1344,7 +1180,6 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-blue-400" />
                 <span className="text-sm text-gray-300">San Francisco, CA</span>
-=======
 
             {/* Newsletter Signup */}
             <div className="bg-slate-800 rounded-lg p-6">
@@ -1361,16 +1196,12 @@ export default function Footer() {
                 <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all">
                   Subscribe
                 </button>
->>>>>>> main
               </div>
             </div>
->>>>>>> main
           </div>
         </div>
-<<<<<<< HEAD
 
         {/* Bottom Bar */}
-<<<<<<< HEAD
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md: flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
@@ -1393,7 +1224,6 @@ export default function Footer() {
                 href="/cookies"
                 className="text-gray-400 hover:text-blue-400 text-sm transition-colors"
               >
-=======
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-2 text-sm text-gray-400">
@@ -1408,12 +1238,8 @@ export default function Footer() {
                 Terms of Service
               </Link>
               <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors">
->>>>>>> main
->>>>>>> main
                 Cookie Policy
->>>>>>> main
               </Link>
-=======
       </div>
 
       {/* Stats Section */}
@@ -1436,7 +1262,6 @@ export default function Footer() {
               <div className="text-3xl font-bold text-white mb-2">24/7</div>
               <div className="text-gray-400 text-sm">Support Available</div>
             </div>
->>>>>>> main
           </div>
         </div>
       </div>
@@ -1465,9 +1290,7 @@ export default function Footer() {
               <span>Made with</span>
               <Heart className="w-4 h-4 text-red-500" />
               <span>by Zion Tech Group</span>
->>>>>>> main
             </div>
-=======
 
             {/* Back to Top */}
             <button
@@ -1477,37 +1300,19 @@ export default function Footer() {
               <ArrowUp className="w-4 h-4 mr-1" />
               Back to Top
             </button>
->>>>>>> cursor/website-audit-content-update-and-deployment-bd9c
->>>>>>> main
           </div>
         </div>
       </div>
     </footer>
-<<<<<<< HEAD
-  );,
-};
+  );};
 
 export: default Footer;
-=======
   );
-<<<<<<< HEAD
 };
-<<<<<<< HEAD
 export default Footer
-=======
 
 export default Footer;
-=======
-<<<<<<< HEAD
 };
 
 export default Footer;
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/website-audit-content-update-and-deployment-bd9c
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

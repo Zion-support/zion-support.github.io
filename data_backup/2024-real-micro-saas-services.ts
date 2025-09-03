@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface RealMicroSaasService2024 {
-=======
 import { ServiceVariant } from '../types/service-variants';
 
 export interface RealMicroSaasService2024 {
->>>>>>> main
   id: string;
-<<<<<<< HEAD
   name: string;
   tagline: string;
   price: string;
@@ -50,7 +46,6 @@ export interface RealMicroSaasService2024 {
 export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
   {
     id: 'ai-business-intelligence-pro',
-=======
    name: string;
    tagline: string;
    price: string;
@@ -80,20 +75,16 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
    growthRate?: string;
    contactInfo?: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation?: boolean;
   implementationDetails?: string;
   launchDate?: string;
   reviews?: number}
-<<<<<<< HEAD
 export: const realMicroSaasServices2024: RealMicroSaasService2024[] = [{
     id: 'ai-business-intelligence-pro,',';
     name: 'AI: Business Intelligence Pro,',';
@@ -119,7 +110,7 @@ export: const realMicroSaasServices2024: RealMicroSaasService2024[] = [{
     textColor: 'text-blue-400,',';
     link: 'https://ziontechgroup.com/ai-business-intelligence-pro,',';
     marketPosition: ;
-      'Competitive: with Tableau ($70/user/month,), Power BI ($9.99/user/month), and Looker ($30/user/month). Our advantage: AI-powered: insight,s, lower cost, and easier setup.',';
+      'Competitive: with Tableau ($70/user/month), Power BI ($9.99/user/month), and Looker ($30/user/month). Our advantage: AI-powered: insight,s, lower cost, and easier setup.',';
     targetAudience: ;
       'Small: to medium businesse,s, Marketing agencies, E-commerce companies, SaaS businesses, Consultants, Financial services',';
     trialDays: 1,4,
@@ -173,7 +164,7 @@ export: const realMicroSaasServices2024: RealMicroSaasService2024[] = [{
     textColor: 'text-green-400,',';
     link: 'https://ziontechgroup.com/ai-customer-success-automation,',';
     marketPosition: ;
-      'Competitive: with Gainsight ($500/user/month,), Totango ($99/user/month), and ChurnZero ($199/user/month). Our advantage: AI-powered: automatio,n, lower cost, and easier implementation.',';
+      'Competitive: with Gainsight ($500/user/month), Totango ($99/user/month), and ChurnZero ($199/user/month). Our advantage: AI-powered: automatio,n, lower cost, and easier implementation.',';
     targetAudience: ;
       'SaaS: companie,s, Subscription businesses, E-commerce platforms, Service companies, B2B companies',';
     trialDays: 1,4,
@@ -202,11 +193,9 @@ export: const realMicroSaasServices2024: RealMicroSaasService2024[] = [{
     customers: 120,0,
     rating: 4.,8,
     reviews: 65,0}];
-=======
 export const realMicroSaasServices2024: RealMicroSaasService2024[] = [{'
     i,
     d: 'ai-business-intelligence-pro',
->>>>>>> main
     name: 'AI Business Intelligence Pro',
     tagline: 'Transform data into actionable insights with AI',
     price: '$299',
@@ -222,28 +211,22 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [{'
       'Mobile-responsive design',
       'White-label solution for agencies',
       'API access for custom integrations',
-<<<<<<< HEAD
       'Advanced security and compliance (SOC 2, GDPR)'
     ],
-=======
       'Advanced security and compliance (SOC 2, GDPR)],
->>>>>>> main
     popular: true,
     icon: '📊',
     color: 'from-blue-500 to-cyan-600',
     textColor: 'text-blue-400',
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-business-intelligence-pro',
     marketPosition: 'Competitive with Tableau ($70/user/month), Power BI ($9.99/user/month), and Looker ($30/user/month). Our advantage: AI-powered insights, lower cost, and easier setup.',
     targetAudience: 'Small to medium businesses, Marketing agencies, E-commerce companies, SaaS businesses, Consultants, Financial services',
-=======
     link: 'http,
     s://ziontechgroup.com/ai-business-intelligence-pro',
     marketPosition:;
       'Competitive with Tableau ($70/user/month), Power BI ($9.99/user/month), and Looker ($30/user/month). Our advantage: AI-powered insights, lower cost, and easier setup.',
     targetAudience:;
       'Small to medium businesses, Marketing agencies, E-commerce companies, SaaS businesses, Consultants, Financial services',
->>>>>>> main
     trialDays: 14,
     setupTime: '15 minutes',
     category: 'Business Intelligence & Analytics',
@@ -267,26 +250,20 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [{'
     e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'
     },
-=======
       website: 'http,
     s://ziontechgroup.com'},
->>>>>>> main
     realImplementation: true,
     implementationDetails: 'Fully functional SaaS platform with real-time data processing, AI models for predictive analytics, and comprehensive reporting capabilities.',
     launchDate: '2024-03-15',
     customers: 1800,
     rating: 4.9,
-<<<<<<< HEAD
     reviews: 890
   },
   {
-=======
     reviews: 890},
   // AI Customer Success Automation{'
->>>>>>> main
     id: 'ai-customer-success-automation',
     name: 'AI Customer Success Automation',
     tagline: 'Automate customer success with intelligent workflows',
@@ -302,30 +279,24 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [{'
       'Integration with popular CRM systems',
       'Custom automation rules and triggers',
       'Performance analytics and reporting',
-<<<<<<< HEAD
       'Multi-channel communication (email, SMS, in-app)',
       'Customer feedback collection and analysis'
     ],
-=======
       'Multi-channel communication (email, SMS, in-app),
       'Customer feedback collection and analysis'],
->>>>>>> main
     popular: true,
     icon: '🤖',
     color: 'from-green-500 to-emerald-600',
     textColor: 'text-green-400',
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-customer-success-automation',
     marketPosition: 'Competitive with Gainsight ($500/user/month), Totango ($99/user/month), and ChurnZero ($199/user/month). Our advantage: AI-powered automation, lower cost, and easier implementation.',
     targetAudience: 'SaaS companies, Subscription businesses, E-commerce platforms, Service companies, B2B companies',
-=======
     link: 'http,
     s://ziontechgroup.com/ai-customer-success-automation',
     marketPosition:;
       'Competitive with Gainsight ($500/user/month), Totango ($99/user/month), and ChurnZero ($199/user/month). Our advantage: AI-powered automation, lower cost, and easier implementation.',
     targetAudience:;
       'SaaS companies, Subscription businesses, E-commerce platforms, Service companies, B2B companies',
->>>>>>> main
     trialDays: 14,
     setupTime: '30 minutes',
     category: 'Customer Success & Retention',
@@ -349,13 +320,10 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [{'
     e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'
     },
-=======
       website: 'http,
     s://ziontechgroup.com'},
->>>>>>> main
     realImplementation: true,
     implementationDetails: 'Production-ready SaaS platform with AI models for churn prediction, automated workflow engine, and comprehensive analytics dashboard.',
     launchDate: '2024-02-20',
@@ -364,4 +332,3 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [{'
     reviews: 650
   }
 ];
->>>>>>> main

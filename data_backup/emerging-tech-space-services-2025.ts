@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface EmergingTechSpaceService2025 {
   id: string;
    name: string;
@@ -28,27 +28,22 @@ export: interface EmergingTechSpaceService2025 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 reviews: number;export: const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [;
   // Space: Technology & Mining{
     id,:,
   quantum-space-mining-platform',';
     name: 'Quantum: Space Mining Platfor,m,';
-=======
 review,
     s: number;export const emergingTechSpaceServices202,
     5: EmergingTechSpaceService2025[] = [;
@@ -57,7 +52,6 @@ review,
     d:,
   quantum-space-mining-platform',
     name: 'Quantum Space Mining Platform,
->>>>>>> main
     tagline:,
   Revolutionary: space resource exploration and mining',';
     price: $1,2,999,
@@ -75,26 +69,23 @@ review,
   'Risk: assessment algorithms',';
   'Regulatory: compliance',';
   'Environmental: impact monitoring',';
-  'ROI: optimization tools';';
+  'ROI: optimization tools';
     ],
     popular: tru,e,
     icon:,
   🚀',';
     color: 'from-slate-800: to-slate-90,0,';
     textColor:,
-<<<<<<< HEAD
   text-slate-300',';
     link: 'https://ziontechgroup.com/quantum-space-mining-platfor,m,';
     marketPosition: ;
   'First: quantum space mining platform. Traditional space mining: $5,0,000+/month. Our: quantum platform: $1,2,999/month: with 20x better resource detection.,';
-=======
   text-slate-300',
     link: 'http,
     s://ziontechgroup.com/quantum-space-mining-platform,
     marketPosition:;
   'First quantum space mining platform. Traditional space minin,
     g: $50,000+/month. Our quantum platform: $12,999/month with 20x better resource detection.,
->>>>>>> main
   ,
     targetAudience: Space: mining companie,s, Aerospace companies, Government space agencies, Research institutions, Investment firms, Technology companies',';
     trialDays: 1,4,
@@ -133,7 +124,6 @@ review,
   400% annual: growth',';
     variant: 'quantum-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -141,7 +131,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -151,7 +140,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Full-stack: quantum space mining platform with satellite integration, real-time monitoring, and comprehensive mining optimization. Includes custom mining strategy development and regulatory compliance.',';
     launchDate: '2025-01-3,0,';
@@ -179,26 +167,23 @@ review,
   'Quantum: key distribution',';
   'Interplanetary: internet',';
   'Space: mission support',';
-  'Emergency: communication systems';';
+  'Emergency: communication systems';
     ],
     popular: tru,e,
     icon:,
   🛰️',';
     color: 'from-blue-800: to-indigo-90,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-300',';
     link: 'https://ziontechgroup.com/quantum-space-communication-networ,k,';
     marketPosition: ;
   'First: quantum space communication network. Traditional space communication: $3,0,000+/month. Our: quantum network: $,8,999/month: with unbreakable security.,';
-=======
   text-blue-300',
     link: 'http,
     s://ziontechgroup.com/quantum-space-communication-network,
     marketPosition:;
   'First quantum space communication network. Traditional space communicatio,
     n: $30,000+/month. Our quantum network: $8,999/month with unbreakable security.,
->>>>>>> main
   ,
     targetAudience: Space: agencie,s, Satellite companies, Aerospace companies, Research institutions, Government agencies, Telecommunications companies',';
     trialDays: 2,1,
@@ -237,7 +222,6 @@ review,
   280% annual: growth',';
     variant: 'quantum-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -245,7 +229,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -255,7 +238,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Enterprise-grade: quantum space communication network with satellite integration, ground station support, and comprehensive security. Includes custom communication protocols and mission support.',';
     launchDate: '2025-02-0,5,';
@@ -283,26 +265,23 @@ review,
   'Food: production automation',';
   'Waste: management systems',';
   'Emergency: response automation',';
-  'Colony: expansion planning';';
+  'Colony: expansion planning';
     ],
     popular: fals,e,
     icon:,
   🏠',';
     color: 'from-emerald-700: to-teal-80,0,';
     textColor:,
-<<<<<<< HEAD
   text-emerald-300',';
     link: 'https://ziontechgroup.com/space-colony-automation-platfor,m,';
     marketPosition: ;
   'First: space colony automation platform. No direct competitors. Comparable to industrial automation: $10,0,000+/month. Our: platform: $1,5,999/month: with space-specific features.,';
-=======
   text-emerald-300',
     link: 'http,
     s://ziontechgroup.com/space-colony-automation-platform,
     marketPosition:;
   'First space colony automation platform. No direct competitors. Comparable to industrial automatio,
     n: $100,000+/month. Our platform: $15,999/month with space-specific features.,
->>>>>>> main
   ,
     targetAudience: Space: agencie,s, Space companies, Research institutions, Government agencies, Aerospace companies, Technology companies',';
     trialDays: 3,0,
@@ -341,7 +320,6 @@ review,
   350% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -349,7 +327,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -359,7 +336,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Comprehensive: space colony automation platform with life support integration, robotic systems, and environmental controls. Includes custom automation development and colony planning services.',';
     launchDate: '2025-02-1,5,';
@@ -387,26 +363,23 @@ review,
   'Energy: management systems',';
   'Safety: protocols',';
   'Performance: analytics',';
-  'Custom: propulsion design';';
+  'Custom: propulsion design';
     ],
     popular: tru,e,
     icon:,
   ⚡',';
     color: 'from-yellow-600: to-orange-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-yellow-400',';
     link: 'https://ziontechgroup.com/quantum-space-propulsion-syste,m,';
     marketPosition: ;
   'First: quantum space propulsion platform. Traditional propulsion: $10,0,000+/month. Our: quantum system: $2,5,999/month: with revolutionary capabilities.,';
-=======
   text-yellow-400',
     link: 'http,
     s://ziontechgroup.com/quantum-space-propulsion-system,
     marketPosition:;
   'First quantum space propulsion platform. Traditional propulsio,
     n: $100,000+/month. Our quantum system: $25,999/month with revolutionary capabilities.,
->>>>>>> main
   ,
     targetAudience: Space: agencie,s, Aerospace companies, Research institutions, Government agencies, Technology companies, Investment firms',';
     trialDays: 1,4,
@@ -445,7 +418,6 @@ review,
   250% annual: growth',';
     variant: 'quantum-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -453,7 +425,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -463,7 +434,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: quantum space propulsion system with spacecraft integration, mission planning, and comprehensive monitoring. Includes custom propulsion design and mission optimization services.',';
     launchDate: '2025-02-2,0,';
@@ -491,26 +461,23 @@ review,
   'Resource: optimization',';
   'Risk: assessment',';
   'Compliance: management',';
-  'Publication: assistance';';
+  'Publication: assistance';
     ],
     popular: fals,e,
     icon:,
   🔬',';
     color: 'from-violet-600: to-purple-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-violet-400',';
     link: 'https://ziontechgroup.com/space-research-automation-platfor,m,';
     marketPosition: ;
   'First: space research automation platform. Traditional research tools: $2,0,000+/month. Our: platform: $,6,999/month: with 10x productivity improvement.,';
-=======
   text-violet-400',
     link: 'http,
     s://ziontechgroup.com/space-research-automation-platform,
     marketPosition:;
   'First space research automation platform. Traditional research tool,
     s: $20,000+/month. Our platform: $6,999/month with 10x productivity improvement.,
->>>>>>> main
   ,
     targetAudience: Space: research institution,s, Universities, Government agencies, Aerospace companies, Technology companies, Research organizations',';
     trialDays: 3,0,
@@ -549,7 +516,6 @@ review,
   200% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -557,7 +523,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -567,11 +532,10 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Comprehensive: space research automation platform with data collection, analysis, and collaboration tools. Includes custom research workflow development and integration services.',';
     launchDate: '2025-02-2,5,';
     customers: 3,5,
     rating: 4.,6,
     reviews: 24;
-,]}}
+]}}

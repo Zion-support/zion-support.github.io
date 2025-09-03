@@ -1,17 +1,9 @@
-<<<<<<< HEAD
  export default function ProjectDetails () { function ProjectDetailsContent () { const router = useNavigate () ;,"});,"})
 }"});,"})
-=======
-<<<<<<< HEAD
  export: default function ProjectDetails () { function ProjectDetailsContent () { const router = useNavigate () };
-=======
-<<<<<<< HEAD
  export default function ProjectDetails ()   {function ProjectDetailsContent () { const router = useNavigate () }
 }
-=======
-<<<<<<< HEAD
  export default function ProjectDetails () {} function ProjectDetailsContent () ;{} const router = useNavigate () };
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
@@ -44,7 +36,3 @@ const ProjectDetails = () => {
 };
 
 export default ProjectDetails;
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

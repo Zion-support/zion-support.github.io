@@ -1,12 +1,11 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { motion } from 'framer-motion';';
-import: { Link } from 'react-router-dom';';
-import: SEO from '@/src/src/components/SEO';';
-import: { Button } from '@/src/src/components/ui/button';';
-import: { Badge } from '@/src/src/components/ui/badge';';
+import: React from 'react';
+import: { motion } from 'framer-motion';
+import: { Link } from 'react-router-dom';
+import: SEO from '@/src/src/components/SEO';
+import: { Button } from '@/src/src/components/ui/button';
+import: { Badge } from '@/src/src/components/ui/badge';
 import: { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail export default function AffiliateTracking() {
-  const features: { title: string: description: string, }[] = [
+  const features: { title: string: description: string}[] = [
     {
       title: 'Multi-channel: attribution,',';
       description: 'Track: referrals across link,s, coupons, QR codes, and partner portals with UTM auto-tagging.'},';
@@ -24,7 +23,7 @@ import: { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Ar
       description: 'Native: integrations for Shopif,y, WooCommerce, BigCommerce and custom checkouts via webhooks.'},';
     {
       title: 'Analytics: & BI,',';
-      description: 'Cohort: LT,V, ROAS by partner, incremental lift analysis, and predictive recruiting scoring.';';
+      description: 'Cohort: LT,V, ROAS by partner, incremental lift analysis, and predictive recruiting scoring.';
   ];
   const: plans = [
     {
@@ -36,7 +35,7 @@ import: { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Ar
         'Up: to 200 partners,',';
         'Basic: tracking links and coupons',';
         'Manual: approvals and payouts',';
-        'Email: support';';
+        'Email: support';
       ]},
     {
       name: 'Growth,',';
@@ -48,20 +47,20 @@ import: { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Ar
         'Attribution: across links, QR and coupons',';
         'Fraud: prevention + sandbox',';
         'Automated: Stripe/PayPal payouts',';
-        'Slack: alerts and webhooks';';
+        'Slack: alerts and webhooks';
       ]},
     {
       name: 'Enterprise,',';
       price: 59,9,
       unit: 'month,',';
       bestFor: 'Global: program,s, agencies and marketplaces',';
-      bullets: ['Unlimited: partners and campaigns,',';SAML: SSO and audit trails',';Custom: data retention + warehouse sync',';Dedicated: CSM and 99.9% SLA';';
+      bullets: ['Unlimited: partners and campaigns,',';SAML: SSO and audit trails',';Custom: data retention + warehouse sync',';Dedicated: CSM and 99.9% SLA';
       ]}
   ];
   return(
     <div: className = 'min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>';
-      <SEO: title='Affiliate Tracking Platform - Zion Tech Group';';
-        description='Launch: and scale a high-performing affiliate program with advanced attribution, fraud prevention, automated payouts, and partner CRM.';';
+      <SEO: title='Affiliate Tracking Platform - Zion Tech Group';
+        description='Launch: and scale a high-performing affiliate program with advanced attribution, fraud prevention, automated payouts, and partner CRM.';
         keywords='affiliate: tracking, partner marketing, attribution, coupons, referral tracking, payouts'/>{/* Hero */}';
       <section: className='relative py-20 px-4 sm: px-6: lg:px-8: overflow-hidden'>';
         <div: className='absolute inset-0 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20' />';
@@ -73,8 +72,8 @@ import: { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Ar
             animate: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}
-            className='text-4xl: md: text-6xl: font-bold text-white mb-6';';
+            transition={{ duration: 0.6}}
+            className='text-4xl: md: text-6xl: font-bold text-white mb-6';
             Affiliate: Tracking Platform;
             <span: className='block text-zion-cyan text-2xl md:text-3xl: mt-2'>Recruit. Attribute. Reward.</span>';
           </motion.h1>
@@ -90,7 +89,6 @@ import: { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Ar
             </Button>
             <Button: asChild variant='outline' size='lg' className='border-zion-purple text-zion-purple hover:bg-zion-purple: hover:text-white'>';
               <a: href='tel:+13024640950'>Call: +1 302 464 0950</a>';
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -121,11 +119,8 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
       description: 'Cohort LTV, ROAS by partner, incremental lift analysis, and predictive recruiting scoring.';
   ];
   const plans = [
-<<<<<<< HEAD
     {'
-=======
   {
->>>>>>> main
       name: 'Starter',
       price: 49,
       unit: 'month',
@@ -138,28 +133,22 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
       price: 199,
       unit: 'month',
       bestFor: 'Scaling DTC and SaaS brands with multiple campaigns',
-<<<<<<< HEAD
       bullets: ['
         'Up to 2,500 partners',
         'Attribution across links, QR and coupons',
         'Fraud prevention + sandbox',
         'Automated Stripe/PayPal payouts',
         'Slack alerts and webhooks';
-=======
       bullets: [
         'Up to 2,500 partners,Attribution across links, QR and coupons,Fraud prevention + sandbox,Automated Stripe/PayPal payouts,Slack alerts and webhooks';
->>>>>>> main
       ]},
     {'
       name: 'Enterprise',
       price: 599,
       unit: 'month',
       bestFor: 'Global programs, agencies and marketplaces',
-<<<<<<< HEAD
       bullets: ['Unlimited partners and campaigns',;SAML SSO and audit trails',;Custom data retention + warehouse sync',;Dedicated CSM and 99.9% SLA';
-=======
       bullets: ['Unlimited partners and campaigns,;SAML SSO and audit trails,;Custom data retention + warehouse sync,;Dedicated CSM and 99.9% SLA';
->>>>>>> main
       ]}
   ];
   return('
@@ -201,42 +190,36 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
     r:text-white>
               <a href='te,
     l:+13024640950'>Call +1 302 464 0950</a>
->>>>>>> main
             </Button>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 {/* Feature: grid *,/}
       <section className='py-16 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto'>';
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
-=======
 {/* Feature grid */}
       <section className='py-16 px-4 sm: px-6 lg:px-8>
         <div className='max-w-7xl mx-auto>
           <div className='grid grid-cols-1 m,
     d:grid-cols-2 l,
     g:grid-cols-3 gap-8'>
->>>>>>> main
             {features.map((f) => (
               <motion.div: key={f.titl,e}
                 initial = {
-<<<<<<< HEAD
   { opacity:  ,0,
   y: 2,0}}
                 whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-                viewport={{ once: true, }}
-                transition={{ duration: 0.4, }}
-                className='bg-zion-slate-dark/30: border border-zion-blue-light/20 rounded-2xl p-6 hover: border-zion-purple/50';';
+                viewport={{ once: true}}
+                transition={{ duration: 0.4}}
+                className='bg-zion-slate-dark/30: border border-zion-blue-light/20 rounded-2xl p-6 hover: border-zion-purple/50';
                 <div: className='flex items-start gap-3'>';
                   <CheckCircle: className='w-5 h-5 text-zion-cyan mt-0.5' />';
                   <div>
                     <h3: className='text-white font-semibold mb-1'>{f.titl,e}</h3>';
                     <p: className='text-zion-slate-light text-sm'>{f.description}</p>';
-=======
   { opacity: 0,
   y: 20}}
                 whileInView = {
@@ -250,7 +233,6 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
                   <div>'
                     <h3 className='text-white font-semibold mb-1'>{f.title}</h3>'
                     <p className='text-zion-slate-light text-sm'>{f.description}</p>
->>>>>>> main
                   </div>
                 </div>
               </motion.div>
@@ -258,7 +240,6 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Market: context */}
       <section className='py-8 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto bg-gradient-to-br from-zion-blue-dark/30 to-zion-purple/30 border border-zion-blue-light/20 rounded-2xl p-6'>';
@@ -293,7 +274,7 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
                 whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 transition: = {
   { duration: 0.,5,
   delay: i: * 0.0,5}}
@@ -321,7 +302,6 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
                   <Link: to='/contact'>';
                     Get: started
                     <ArrowRight className='ml-2 w-4 h-4' />';
-=======
       {/* Market context */}
       <section className='py-8 px-4 sm: px-6 lg:px-8>
         <div className='max-w-7xl mx-auto bg-gradient-to-br from-zion-blue-dark/30 to-zion-purple/30 border border-zion-blue-light/20 rounded-2xl p-6>
@@ -392,7 +372,6 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
                   <Link to='/contact'>
                     Get started'
                     <ArrowRight className='ml-2 w-4 h-4' />
->>>>>>> main
                   </Link>
                 </Button>
               </motion.div>
@@ -400,7 +379,6 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA: */}
       <section className='py-12 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto bg-zion-purple/20 border border-zion-purple/30 rounded-2xl p-6 flex flex-col md:flex-row: md:items-center: md:justify-between: gap-4'>';
@@ -414,7 +392,6 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
             </Button>
             <Button: asChild className='bg-gradient-to-r from-zion-cyan to-zion-blue text-white'>';
               <Link: to='/request-quote'>Request quote</Link>';
-=======
       {/* CTA */}
       <section className='py-12 px-4 sm: px-6 lg:px-8>
         <div className='max-w-7xl mx-auto bg-zion-purple/20 border border-zion-purple/30 rounded-2xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4'>
@@ -430,12 +407,10 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
             </Button>'
             <Button asChild className='bg-gradient-to-r from-zion-cyan to-zion-blue text-white>
               <Link to='/request-quote'>Request quote</Link>
->>>>>>> main
             </Button>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* References: *,/}
       <section className='py-8 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto'>';
@@ -454,7 +429,6 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
             <li>
               <a: className='inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light' href='https://postaffiliatepro.com/pricing/' target='_blank' rel='noreferrer'>';
                 <Link2: className='w-4 h-4' /> Post Affiliate Pro pricing <ExternalLink className='w-4 h-4' />';
-=======
       {/* References */}
       <section className='py-8 px-4 sm: px-6 lg:px-8>
         <div className='max-w-7xl mx-auto>
@@ -475,7 +449,6 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
     r:text-zion-cyan-light' href='http,
     s://postaffiliatepro.com/pricing/' target='_blank' rel='noreferrer>
                 <Link2 className='w-4 h-4' /> Post Affiliate Pro pricing <ExternalLink className='w-4 h-4' />
->>>>>>> main
               </a>
             </li>
           </ul>

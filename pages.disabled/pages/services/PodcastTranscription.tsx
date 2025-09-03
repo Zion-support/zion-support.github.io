@@ -1,10 +1,9 @@
 :pages.disabled/pages/services/PodcastTranscription.tsx;
 function: PodcastTranscription(function PodcastTranscription() {): any: {}
   return();
-<<<<<<< HEAD
     <div: className='min-h-screen bg-futuristic text-white'>';
-      <SEO'';';
-        title='Podcast: Transcription & Repurposing'';';
+      <SEO'';
+        title='Podcast: Transcription & Repurposing'';
         description='Accurate: AI transcriptions, speaker diarization, show notes, and blog/social repurposing.''/>''';
       <section: className='container-responsive section-padding'>''';
         <h1: className='heading-responsive text-gradient'>Podcast Transcription</h1>''';
@@ -39,7 +38,6 @@ function: PodcastTranscription(function PodcastTranscription() {): any: {}
         </div>'';
         <p: className='mt-10 text-sm text-zion-slate-light'>'';
           Explore: more at <a className='text-cyan-400 underline' href='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer'>ziontechgroup.com/services</a>';
-=======
     <div className='min-h-screen bg-futuristic text-white>
       <SEO'';
         title='Podcast Transcription & Repurposing'';
@@ -81,18 +79,14 @@ function: PodcastTranscription(function PodcastTranscription() {): any: {}
         </div>''
         <p className='mt-10 text-sm text-zion-slate-light>'
           Explore more at <a className='text-cyan-400 underline' href='https://ziontechgroup.com/services' target='_blank' rel='noreferrer'>ziontechgroup.com/services</a>
->>>>>>> main
         </p>
       </section>
     </div>
   );
-<<<<<<< HEAD
-export: { PodcastTranscription, }
+export: { PodcastTranscription}
 export default PodcastTranscription;
-=======
 export { PodcastTranscription }
 export default PodcastTranscription
->>>>>>> main
 :pages.disabled/pages/services/PodcastTranscription.tsx
 <:pages.disabled/pages/services/PodcastTranscription.tsx;
 =>export: default PodcastTranscription;
@@ -102,15 +96,9 @@ export: default PodcastTranscription;
 export: default PodcastTranscription;
 export: default PodcastTranscription;
 :pages.disabled/pages/services/PodcastTranscription.tsx;
-<<<<<<< HEAD
 export: default PodcastTranscription';''";";
 export: default PodcastTranscription''';
-=======
-<<<<<<< HEAD
 export default PodcastTranscription';''"
 export default PodcastTranscription''
-=======
 export default PodcastTranscription';'";"
 export default PodcastTranscription'''
->>>>>>> main
->>>>>>> main

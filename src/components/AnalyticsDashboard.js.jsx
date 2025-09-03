@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';,"});,"})
 import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';,"});,"})
 ;,"});,"})
@@ -96,7 +95,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             <select;,"});,"})
               value={selectedTimeRange}"});,"})
               onChange={e => {}"});,"})
-                setSelectedTimeRange(e.target.value);';,"});,"})
+                setSelectedTimeRange(e.target.value);,"});,"})
                 handleDashboardInteraction('time_range_changed', {}"});,"})
                   timeRange: e.target.value});""";,"});,"})
               }}"""";,"});,"})
@@ -295,7 +294,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                   className="flex items-center justify-between"""";,"});,"})
                 >"""";,"});,"})
                   <span className="text-green-700 dark:text-green-300 text-sm capitalize">';,"});,"})
-                    {item.category.replace('_',)}""";,"});,"})
+                    {item.category.replace('_')}""";,"});,"})
                   </span>"""";,"});,"})
                   <div className="flex items-center gap-2">"""";,"});,"})
                     <div className="w-16 bg-green-200 dark:bg-green-700 rounded-full h-2">""";,"});,"})
@@ -377,7 +376,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           </button>;,"});,"})
           <button;,"});,"})
             onClick={() => {}"});,"})
-              handleTrackConversion();';,"});,"})
+              handleTrackConversion();,"});,"})
               handleDashboardInteraction('conversion_tracked');""";,"});,"})
             }}"""";,"});,"})
             className="px-3 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2"""";,"});,"})
@@ -391,17 +390,12 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
   );,"});,"})
 };'"`;,"});,"})
 '"`'"`;,"});,"})
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'
 import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';""
-=======
 import React, { useState, useEffect }  from 'react';import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react
->>>>>>> main
 export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({
-        enableTracking: true, enablePerformanceTracking: true, enableUserBehaviorTracking: true, enableHeatmapTracking: false,
-})
+        enableTracking: true, enablePerformanceTracking: true, enableUserBehaviorTracking: true, enableHeatmapTracking: false})
     const [isExpanded, setIsExpanded] = useState(false)""
     const [selectedTimeRange, setSelectedTimeRange] = useState('24h')
     const [analyticsSummary, setAnalyticsSummary] = useState(null)
@@ -432,8 +426,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         if (!analyticsSummary?.eventsByCategory)
             return []
         return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({
-            category, count: count,
-}))}
+            category, count: count}))}
     // Get performance score
     const getPerformanceScore = () => {
         if (!performanceMetrics)
@@ -485,37 +478,30 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             {/* Time Range Selector */}
             <select value={selectedTimeRange}
               onChange={e =" > {}"
-<<<<<<< HEAD
                 setSelectedTimeRange(e.target.value)''
                 handleDashboardInteraction('time_range_changed', {};""
-                  timeRange: e.target.value})';', }}''''
+                  timeRange: e.target.value})';'}}''''
               className='px-2 py-1 bg-white/20 rounded text-xs focus: outline-none focus:ring-2 focus:ring-white/50'''''
-=======
                 setSelectedTimeRange(e.target.value)'
                 handleDashboardInteraction('time_range_changed', {};"
-                  timeRange: e.target.value}),
-}}''''
+                  timeRange: e.target.value})}}''''
               className='px-2 py-1 bg-white/20 rounded text-xs focus:outline-none focus:ring-2 focus:ring-white/50''
->>>>>>> main
             >''''
               <option value='1h'>1 Hour</option>''''
               <option value='24h'>24 Hours</option>''''
               <option value='7d'>7 Days</option>''''
               <option value='30d'>30 Days</option>
-<<<<<<< HEAD
             </select>""
             <button ''''
               onClick={() =" > setIsExpanded(!isExpanded)}''''"
               className='p-1 hover: bg-white/20 rounded transition-colors'''
               aria-label={}""
-=======
             </select>"
             <button '''
               onClick={() =" > setIsExpanded(!isExpanded)}''''
               className='p-1 hover:bg-white/20 rounded transition-colors'
               aria-label={}"
 '
->>>>>>> main
 ''
 ''
 ''''
@@ -604,11 +590,8 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             .map(event => (""
               <div ''''
                 key={event.id}''''
-<<<<<<< HEAD
                 className='flex items-center justify-between text-sm p-2 bg-gray-50 dark: bg-gray-700 rounded''''" >''''`'"
-=======
                 className='flex items-center justify-between text-sm p-2 bg-gray-50 dark:bg-gray-700 rounded''" >''''`
->>>>>>> main
                 <div className='flex items-center gap-2'>`
                   <span ``
                     className={`w-2 h-2 rounded-full ${}""
@@ -699,15 +682,12 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
               {getEventsByCategory().map(item => (""
                 <div ''''
                   key={item.category}''''
-<<<<<<< HEAD
                   className='flex items-center justify-between''''" >'''''"
                   <span className='text-green-700 dark: text-green-300 text-sm capitalize'>''
-                    {item.category.replace('_',)}''''
-=======
+                    {item.category.replace('_')}''''
                   className='flex items-center justify-between''" >''''
                   <span className='text-green-700 dark:text-green-300 text-sm capitalize'>'
-                    {item.category.replace('_',)}'''
->>>>>>> main
+                    {item.category.replace('_')}'''
                   </span>''''
                   <div className='flex items-center gap-2'>''''
                     <div className='w-16 bg-green-200 dark: bg-green-700 rounded-full h-2'>''''
@@ -777,33 +757,25 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
       <div className='p-4 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-800'>''''
         <div className='flex gap-2'>
           <button onClick={() =" > {}"
-<<<<<<< HEAD
 ''
               handleDashboardInteraction('refresh_clicked')""
-              updateAnalyticsSummary()';', }}''''
+              updateAnalyticsSummary()';'}}''''
             className='flex-1 px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2'''''
-=======
 '
               handleDashboardInteraction('refresh_clicked')"
-              updateAnalyticsSummary(),
-}}''''
+              updateAnalyticsSummary()}}''''
             className='flex-1 px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2''
->>>>>>> main
           >''''
             <RefreshCw className='w-4 h-4' /" >"
             Refresh Data
           </button>
           <button onClick={() =" > {}"
-<<<<<<< HEAD
               handleTrackConversion()''
-              handleDashboardInteraction('conversion_tracked')';', }}''''
+              handleDashboardInteraction('conversion_tracked')';'}}''''
             className='px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2'''''
-=======
               handleTrackConversion()'
-              handleDashboardInteraction('conversion_tracked'),
-}}''''
+              handleDashboardInteraction('conversion_tracked')}}''''
             className='px-3 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2''
->>>>>>> main
           >''''
             <Target className='w-4 h-4' /" >"
             Track Goal
@@ -814,4 +786,3 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
   )",`"
 }''`"`"
 ''`''`"`"
->>>>>>> main

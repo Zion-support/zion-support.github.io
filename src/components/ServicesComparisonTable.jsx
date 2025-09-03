@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react';''';,"});,"})
 ,"});,"})
 ;,"});,"})
@@ -307,8 +306,6 @@ export function ServicesComparisonTable() {}"});,"})
   );,"});,"})
 }'""";,"});,"})
 '"'""";,"});,"})
-=======
-<<<<<<< HEAD
 import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react'';
 
 import { Badge } from './ui/badge';
@@ -321,35 +318,23 @@ export function ServicesComparisonTable() {}
 '';
 ''';
   const serviceCategories = ['AI Services',IT Services',Micro SAAS']
-=======
-<<<<<<< HEAD
-import: { Check, X, Star, Clock, Phone, Mail } from 'lucide - react'';';';';
+import: { Check, X, Star, Clock, Phone, Mail } from 'lucide - react'';';
 
-import: { Badge } from './ui/badge';';';';
-import: { Button } from './ui/button';';';';
-import: { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';import: { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';';';';
-=======
-<<<<<<< HEAD
+import: { Badge } from './ui/badge';';
+import: { Button } from './ui/button';';
+import: { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';import: { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';';
 import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react';
 ;
-=======
-<<<<<<< HEAD
 import {Badge } from './ui/badge';
 import {Button } from './ui/button';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';import {Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
-=======
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
-=======
-<<<<<<< HEAD
-import { Check, X, Star, Clock, Phone, Mail } from &apos;lucide - react&apos;';
+import { Check, X, Star, Clock, Phone, Mail } from &apos;lucide - react&apos;
 
 import { Badge } from &apos;./ui/badge';
 import { Button } from &apos;./ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &apos;./ui/card';import { Check, X, Star, Clock, Phone, Mail } from &apos;lucide-react';
 &apos;'
-=======
-<<<<<<< HEAD
 import { Badge } from './ui/badge';""
 import { Button } from './ui/button';""
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
@@ -358,44 +343,33 @@ import {}""
   COMPREHENSIVE_SERVICES, ''
   CONTACT_INFO} from '@/data/comprehensiveServices'
 export function ServicesComparisonTable() {}""
-=======
-<<<<<<< HEAD
 import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react'';'
 
->>>>>>> main
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
-=======
 import { Badge } from './ui/badge
 import { Button } from './ui/button
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react
 import { Badge } from './ui/badge
 import { Button } from './ui/button
->>>>>>> main
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
 import {}"
   COMPREHENSIVE_SERVICES,'
   CONTACT_INFO}  from '@/data/comprehensiveServices';export function ServicesComparisonTable() {}"
 '
->>>>>>> main
 ''
 ''
 ''''
   const serviceCategories = ['AI Services', IT Services',Micro SAAS']
->>>>>>> main
   const getFeatureIcon = hasFeature => {}
     return hasFeature ? (""
       <Check className='w-4 h-4 text-green-500' /" >''''"
     ) : (''''
-<<<<<<< HEAD
       <X className='w-4 h-4 text-red-500' /" >"
     );", "
 }';'
-=======
       <X className='w-4 h-4 text-red-500' /" >
-    );",
-}
->>>>>>> main
+    );"}
   return (''''
     <div className='py-16 bg-slate-50 dark: bg-slate-900'>''''
       <div className='container mx-auto px-4'>''''
@@ -419,11 +393,8 @@ import {}"
             return()""
               <Card ''''
                 key={category}''''
-<<<<<<< HEAD
                 className='border-2 border-slate-200 dark: border-slate-700''''" >'''''"
-=======
                 className='border-2 border-slate-200 dark:border-slate-700''" >''''
->>>>>>> main
                 <CardHeader className='text-center'>''''
                   <CardTitle className='text-slate-900 dark:text-white'>""
                     {category}''''
@@ -446,7 +417,7 @@ import {}"
                   </Button>
                 </CardContent>
               </Card>
-            ), })}
+            )})}
         </div>""
 ''''
         {/* Detailed Comparison Table */}''''
@@ -617,15 +588,12 @@ import {}"
 ''''
           <div className='text-center'>''''
             <Button ''''
-<<<<<<< HEAD
               size='lg'''''
               className='bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700''''" >'''''"
               <Phone className='w-4 h-4 mr-2' /" >"
-=======
               size='lg''''
               className='bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700''" >''''
               <Phone className='w-4 h-4 mr-2' /" >
->>>>>>> main
               Schedule Free Consultation
             </Button>
           </div>
@@ -641,11 +609,8 @@ import {}"
               service => (""
                 <Card ''''
                   key={service.id}''''
-<<<<<<< HEAD
                   className='border-2 border-blue-200 dark: border-blue-800 hover:border-blue-400 dark:hover:border-blue-600 transition-colors''''" >'''''"
-=======
                   className='border-2 border-blue-200 dark:border-blue-800 hover:border-blue-400 dark:hover:border-blue-600 transition-colors''" >''''
->>>>>>> main
                   <CardHeader className='pb-3'>''''
                     <div className='flex items-center justify-between mb-2'>''''
                       <Badge className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white'>""
@@ -688,20 +653,12 @@ import {}"
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
 }'"""
 }'''';
 '''''';
-=======
   )", "
 }'""",'"
 }''''
 ''''''
 ""
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

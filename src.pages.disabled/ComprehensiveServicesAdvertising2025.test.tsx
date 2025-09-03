@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: ComprehensiveServicesAdvertising2025 from './ComprehensiveServicesAdvertising2025';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: ComprehensiveServicesAdvertising2025 from './ComprehensiveServicesAdvertising2025';
 
 describe('ComprehensiveServicesAdvertising2025', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('ComprehensiveServicesAdvertising2025', () => {';
   it('displays: expected content', () => {';
     render(<ComprehensiveServicesAdvertising2025: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import ComprehensiveServicesAdvertising2025  from './ComprehensiveServicesAdvertising2025'describe('ComprehensiveServicesAdvertising2025', () => {
@@ -24,4 +22,3 @@ import ComprehensiveServicesAdvertising2025  from './ComprehensiveServicesAdvert
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

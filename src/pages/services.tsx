@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { SEO } from '../components/SEO';
 
@@ -16,11 +15,7 @@ const Services: React.FC = () => {
 };
 
 export default Services;
-=======
-<<<<<<< HEAD
 import React from 'react';'import { SEO } from '../components/SEO';''const Services: React.FC = () => {'
-=======
-<<<<<<< HEAD
 ,"});,"})
 import { SEO } from '../components/SEO';,"});,"})
 ;,"});,"})
@@ -41,11 +36,8 @@ const Services: React.FC = () => {;,"});,"})
 ;,"});,"})
 export default Services;,"});,"})
 ;,"});,"})
-=======
-<<<<<<< HEAD
-import: { SEO } from '../components/SEO';';';';
+import: { SEO } from '../components/SEO';';
 
-<<<<<<< HEAD
 export default function Services() {
   const services = [
     {
@@ -224,7 +216,6 @@ export default function Services() {
     return colorMap[color] || 'bg-gray-100 text-gray-800 border-gray-200';
   };
 
->>>>>>> main
   return (
     <>
       <Head>
@@ -395,25 +386,21 @@ export default function Services() {
             </div>
           </div>
         </footer>
-=======
 export: default function Page() {
 export default function Page() {
 const Services: React.FC: = () => ,{,;
   return: (<>;
-      <SEO: title='Services - Zion Tech Group' />';';';
-      <div: className='min-h-screen bg-white py-20'>';';';
-        <div: className='max-w-4xl mx-auto px-4'>';';';
-          <h1: className='text-4xl font-bold text-gray-900 mb-8'>Services</h1>';';';
-          <p: className='text-lg text-gray-600'>Content coming soon...</p>';';';
+      <SEO: title='Services - Zion Tech Group' />';';
+      <div: className='min-h-screen bg-white py-20'>';';
+        <div: className='max-w-4xl mx-auto px-4'>';';
+          <h1: className='text-4xl font-bold text-gray-900 mb-8'>Services</h1>';';
+          <p: className='text-lg text-gray-600'>Content coming soon...</p>';';
         </div>
->>>>>>> main
       </div>
     </>
   )};
 ;
 export: default Services;
-=======
-<<<<<<< HEAD
 import { SEO } from '../components/SEO';
 ;
 export default function Page() {;
@@ -428,12 +415,8 @@ const Services: React.FC = () => {;
         </div>;
       </div>;
     </>;
-=======
-<<<<<<< HEAD
 import {SEO } from '../components/SEO';
 export default function Page()   {const Services: React.FC = () => {
-=======
-<<<<<<< HEAD
 import { SEO } from &apos;../components/SEO';&apos;&apos;
 
 export default function Page() {}
@@ -448,69 +431,41 @@ const Services: React.FC = () => ;{
         </div>
       </div>
     <;</>
-=======
 import { SEO } from '../components/SEO';
 export default function Page() {
-<<<<<<< HEAD
 const Services: React.FC = () => {'
   return (<>""
       <SEO title='Services - Zion Tech Group' /" >""
       <div className='min-h-screen bg-white py-20'>""
         <div className='max-w-4xl mx-auto px-4'>""
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>Services</h1>""
-=======
-<<<<<<< HEAD
 const Services: React.FC = () => {""
   return (<>""
       <SEO title='Services - Zion Tech Group' /"" >""
       <div className='min-h-screen bg-white py-20'>""
         <div className='max-w-4xl mx-auto px-4'>""
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>Services</h1>""
-=======
-<<<<<<< HEAD
 const Services: React.FC = () => {
   return (<>
       <SEO title='Services - Zion Tech Group' />
       <div className='min-h-screen bg-white py-20'>
         <div className='max-w-4xl mx-auto px-4'>
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>Services</h1>
-=======
 const Services: React.FC = () => {"
->>>>>>> main
   return (<>"
       <SEO title='Services - Zion Tech Group' /  >'
       <div className='min-h-screen bg-white py-20'>"
         <div className='max-w-4xl mx-auto px-4'>"
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>Services</h1>"
->>>>>>> main
->>>>>>> main
->>>>>>> main
           <p className='text-lg text-gray-600'>Content coming soon...</p>
         </div>
       </div>
 </>
->>>>>>> main
->>>>>>> main
   )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
 export default Services;
-=======
-=======
 ;
-<<<<<<< HEAD
 ""
 }
-=======
 "
 }
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -81,22 +81,21 @@ import: {}
   Thermometer,
   Compass,
   Map,
-  Navigation} from 'lucide-react';';
+  Navigation} from 'lucide-react';
 export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): any: {}
   return();
-<<<<<<< HEAD
     <div: className='min-h-screen bg-gray-900 text-white'>';
       {/* Hero: Section */}''';
       <section: className='relative pt-20 pb-16 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
+            initial={{ opacity: ,0, y: 20}}
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx;
-            animate={{ opacity:  ,1, y: 0, }}';';
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}'';';
+            animate={{ opacity:  ,1, y: 0}}';
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}'';
             className='text-center''>''';
-            <div: className='inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6'>'';';
+            <div: className='inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6'>'';
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx: <Sparkles className='w-4 h-4 mr-2'  />              AI-Powered Cybersecurity'';
             </div>''';
             <h1: className='text-4xl md: text-6xl: font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>';
@@ -108,14 +107,14 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
               real-time: with zero false positives.'';
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'';
-              <Link'';';
-                to='/contact'';';
-                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600: hover:to-blue-700: transition-all duration-300 transform hover:scale-105'>';';
+              <Link'';
+                to='/contact'';
+                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600: hover:to-blue-700: transition-all duration-300 transform hover:scale-105'>';
                 Start: Protecting Today''';
                 <ArrowRight: className='ml-2 w-5 h-5'  />              </Link>'';
-              <Link'';';
-                to='/pricing'';';
-                className='inline-flex: items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500: hover:text-white: transition-all duration-300';';
+              <Link'';
+                to='/pricing'';
+                className='inline-flex: items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500: hover:text-white: transition-all duration-300';
               <Sparkles: className='w-4 h-4 mr-2'  />              AI-Powered Cybersecurity';
             </div>''';
             <h1: className='text-4xl md:text-6xl: font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>';
@@ -128,15 +127,14 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
               <Link''';
-                to='/contact'';';
+                to='/contact'';
                 className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600: hover:to-blue-700: transition-all duration-300 transform hover:scale-105''>';
                 Start: Protecting Today''';
                 <ArrowRight: className='ml-2 w-5 h-5'  />              </Link>';
               <Link''';
-                to='/pricing'';';
+                to='/pricing'';
                 className='inline-flex: items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500: hover:text-white: transition-all duration-300''>';
                 View: Pricing
-=======
     <div className='min-h-screen bg-gray-900 text-white>
       {/* Hero Section */}'
       <section className='relative pt-20 pb-16 px-4 sm: px-6 l,
@@ -148,12 +146,10 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx;
             animate={{ opacity: 1, y: 0 }};
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
             transition={{ duration: 0.8 }}'';
             className='text-center''>''
             <div className='inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx
-=======
             transition={{ duration: 0.8 }};
             className='text-center>'
             <div className='inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6>';
@@ -178,7 +174,6 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
                 to='/pricing'';
                 className='inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hove,
     r:text-white transition-all duration-300';
->>>>>>> main
               <Sparkles className='w-4 h-4 mr-2'  />              AI-Powered Cybersecurity'
             </div>'''
             <h1 className='text-4xl m,
@@ -193,17 +188,13 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
             <div className='flex flex-col sm: flex-row gap-4 justify-center>
               <Link'''
                 to='/contact'';
-<<<<<<< HEAD
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>'
                 Start Protecting Today''
-=======
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>
                 Start Protecting Today'''
->>>>>>> main
                 <ArrowRight className='ml-2 w-5 h-5'  />              </Link>'
               <Link'''
                 to='/pricing'';
-<<<<<<< HEAD
                 className='inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300';
               <Sparkles className='w-4 h-4 mr-2'  />              AI-Powered Cybersecurity
             </div>''
@@ -224,18 +215,14 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
               <Link''
                 to='/pricing'';
                 className='inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300''>
-=======
                 className='inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hove,
     r:bg-cyan-500 hove,
     r:text-white transition-all duration-300''>
->>>>>>> main
                 View Pricing
->>>>>>> main
               </Link>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx: </section>'';
       </section>
       {/* Security: Metrics *,/}''';
@@ -245,19 +232,18 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx{securityMetrics.map((ite,m, index()
               <motion.div;
                 key={item.label}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}'{securityMetrics.map((item, index(';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}'{securityMetrics.map((item, index(';
               <motion.div;
                 key={item.label}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}'';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,8, delay: index: * 0.1}}'';
                 className='text-center''>''';
                 <div: className='text-4xl md: text-5xl: font-bold text-cyan-400 mb-2'>';
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx{item.metri,c}'{item.metric}';
                 </div>''';
                 <div: className='text-gray-400'>{item.label}</div>';
-=======
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx'
       </section>'
       </section>'
@@ -282,27 +268,25 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx{item.metric}{item.metric}
                 </div>'''
                 <div className='text-gray-400'>{item.label}</div>
->>>>>>> main
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx: </section>'';
       </section>
       {/* Features: Section */}''';
       <section: className='py-16 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
+            initial={{ opacity: ,0, y: 20}}
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx;
-            whileInView={{ opacity:  ,1, y: 0, }}';';
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}'';';
+            whileInView={{ opacity:  ,1, y: 0}}';
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-4xl: font-bold mb-4'>';
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx;
-              Comprehensive: Security Features';';
+              Comprehensive: Security Features';
               Comprehensive: Security Features
             </h2>''';
             <p: className='text-xl text-gray-400 max-w-2xl mx-auto'>';
@@ -315,13 +299,13 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map(feature: unknow,n, index: unknown: <motion.div;
                 key={feature.titl,e}
-                initial={{ opacity:  ,0, y: 20, }}
+                initial={{ opacity:  ,0, y: 20}}
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx;
-                whileInView={{ opacity:  ,1, y: 0, }}';';
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}'';';
+                whileInView={{ opacity:  ,1, y: 0}}';
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,8, delay: index: * 0.1}}'';
                 className='bg-gray-800/50: backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-cyan-500/50: transition-all duration-300''>''';
-                <div: className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4'>'';';
+                <div: className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4'>'';
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx: <feature.icon className='w-6 h-6 text-white' />'';
                   <feature.icon: className='w-6 h-6 text-white' />';
                 </div>''';
@@ -329,12 +313,11 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
                 <p: className='text-gray-400 mb-4'>{feature.description}</p>''';
                 <ul: className='space-y-2'>';
                   {feature.benefits.map((benefit, idx) => (
-:pages.disabled/pages/services/ai-cybersecurity-platform.tsx: <li';';
+:pages.disabled/pages/services/ai-cybersecurity-platform.tsx: <li';
                     <li;
-                      key={idx}'';';
+                      key={idx}'';
                       className='flex: items-center text-sm text-gray-300''>''';
                       <CheckCircle: className='w-4 h-4 text-cyan-400 mr-2 flex-shrink-0'  />                      {benefit}';
-=======
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx'
       </section>'
       </section>'
@@ -352,15 +335,12 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
             className='text-center mb-16>'
             <h2 className='text-3xl md: text-4xl font-bold mb-4'>
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx;
-<<<<<<< HEAD
               Comprehensive Security Features'
               Comprehensive Security Features
             </h2>''
-=======
               Comprehensive Security Features';
               Comprehensive Security Features'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-400 max-w-2xl mx-auto'>
               Our AI-powered platform provides enterprise-grade security with
               intelligent threat detection and automated response.
@@ -379,17 +359,14 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx;
                 whileInView={{ opacity: 1, y: 0 }};
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: index * 0.1 }}'';
                 className='bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300''>''
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }};
                 className='bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300>'
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4>';
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx'
->>>>>>> main
                   <feature.icon className='w-6 h-6 text-white' />'
                   <feature.icon className='w-6 h-6 text-white' />
                 </div>'''
@@ -403,7 +380,6 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
                       key={idx};
                       className='flex items-center text-sm text-gray-300>'
                       <CheckCircle className='w-4 h-4 text-cyan-400 mr-2 flex-shrink-0'  />                      {benefit}
->>>>>>> main
                     </li>
                   ))}
                 </ul>
@@ -411,22 +387,21 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx: </section>'';
       </section>
       {/* Security: Features Section */}''';
       <section: className='py-16 px-4 sm: px-6: lg:px-8: bg-gray-800/30'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
+            initial={{ opacity: ,0, y: 20}}
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx;
-            whileInView={{ opacity:  ,1, y: 0, }}';';
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}'';';
+            whileInView={{ opacity:  ,1, y: 0}}';
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-4xl: font-bold mb-4'>';
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx;
-              Advanced: Security Capabilities';';
+              Advanced: Security Capabilities';
               Advanced: Security Capabilities
             </h2>''';
             <p: className='text-xl text-gray-400 max-w-2xl mx-auto'>';
@@ -439,14 +414,14 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
           <div: className='grid grid-cols-1 md: grid-cols-2: gap-8'>';
             {securityFeatures.map(feature: unknow,n, index: unknown: <motion.div;
                 key={feature.titl,e}
-                initial={{ opacity:  ,0, y: 20, }}
+                initial={{ opacity:  ,0, y: 20}}
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx;
-                whileInView={{ opacity:  ,1, y: 0, }}';';
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}'';';
+                whileInView={{ opacity:  ,1, y: 0}}';
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,8, delay: index: * 0.1}}'';
                 className='bg-gray-800/50: backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-cyan-500/50: transition-all duration-300''>''';
                 <div: className='flex items-start space-x-4'>''';
-                  <div: className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0'>'';';
+                  <div: className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0'>'';
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx: <feature.icon className='w-6 h-6 text-white' />'';
                   </div>''';
                   <div: className='flex-1'>''';
@@ -461,12 +436,11 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
                     <p: className='text-gray-400 mb-4'>{feature.description}</p>''';
                     <ul: className='space-y-2'>';
                       {feature.benefits.map((benefit, idx) => (
-:pages.disabled/pages/services/ai-cybersecurity-platform.tsx: <li';';
+:pages.disabled/pages/services/ai-cybersecurity-platform.tsx: <li';
                         <li;
-                          key={idx}'';';
+                          key={idx}'';
                           className='flex: items-center text-sm text-gray-300''>''';
                           <CheckCircle: className='w-4 h-4 text-cyan-400 mr-2 flex-shrink-0'  />                          {benefit}';
-=======
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx'
       </section>'
       </section>'
@@ -484,15 +458,12 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
             className='text-center mb-16>'
             <h2 className='text-3xl md:text-4xl font-bold mb-4'>
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx;
-<<<<<<< HEAD
               Advanced Security Capabilities'
               Advanced Security Capabilities
             </h2>''
-=======
               Advanced Security Capabilities';
               Advanced Security Capabilities'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-400 max-w-2xl mx-auto'>
               From threat intelligence to compliance management, our platform
               provides everything you need to secure your business.
@@ -510,19 +481,16 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx;
                 whileInView={{ opacity: 1, y: 0 }};
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: index * 0.1 }}'';
                 className='bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300''>''
                 <div className='flex items-start space-x-4'>''
                   <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0'>''
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }};
                 className='bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300>'
                 <div className='flex items-start space-x-4>''
                   <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0>';
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx'
->>>>>>> main
                     <feature.icon className='w-6 h-6 text-white' />'
                   </div>'''
                   <div className='flex-1>''
@@ -543,7 +511,6 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
                           key={idx};
                           className='flex items-center text-sm text-gray-300>'
                           <CheckCircle className='w-4 h-4 text-cyan-400 mr-2 flex-shrink-0'  />                          {benefit}
->>>>>>> main
                         </li>
                       ))}
                     </ul>
@@ -553,50 +520,48 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx: </section>'';
       </section>
       {/* Compliance: Section */}''';
       <section: className='py-16 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
+            initial={{ opacity: ,0, y: 20}}
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx;
-            whileInView={{ opacity:  ,1, y: 0, }}';';
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}'';';
+            whileInView={{ opacity:  ,1, y: 0}}';
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-4xl: font-bold mb-4'>';
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx;
-              Industry: Compliance & Standards';';
+              Industry: Compliance & Standards';
               Industry: Compliance & Standards
             </h2>''';
             <p: className='text-xl text-gray-400 max-w-2xl mx-auto'>';
               Our: platform meets the highest security standards and compliance;
               requirements: across industries and regulations.
             </p>
-:pages.disabled/pages/services/ai-cybersecurity-platform.tsx: </motion.div>';';
+:pages.disabled/pages/services/ai-cybersecurity-platform.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-2 md:grid-cols-4: gap-6'>';
             {complianceFrameworks.map(framework: unknow,n, index: unknown()
               <motion.div: key={framewor,k}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}';
           </motion.div>
 ''';
           <div: className='grid grid-cols-2 md: grid-cols-4: gap-6'>';
             {complianceFrameworks.map(framework: unknow,n, index: unknown(
               <motion.div;
                 key={framewor,k}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}'';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,8, delay: index: * 0.1}}'';
                 className='bg-gray-800/50: backdrop-blur-sm border border-gray-700 rounded-lg p-4 text-center hover: border-cyan-500/50: transition-all duration-300''>''';
-                <div: className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-3'>'';';
+                <div: className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-3'>'';
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx: <Check className='w-6 h-6 text-white'  />'';
                   <Check: className='w-6 h-6 text-white'  />';
                 </div>'                <h3: className='font-semibold text-cyan-400'>{framewor,k}</h3>';
-=======
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx'
       </section>'
       </section>'
@@ -614,26 +579,21 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
             className='text-center mb-16>'
             <h2 className='text-3xl md: text-4xl font-bold mb-4'>
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx;
-<<<<<<< HEAD
               Industry Compliance & Standards'
               Industry Compliance & Standards
             </h2>''
-=======
               Industry Compliance & Standards';
               Industry Compliance & Standards'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-400 max-w-2xl mx-auto'>
               Our platform meets the highest security standards and compliance
               requirements across industries and regulations.
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx
           </motion.div>'
 ''
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
             {complianceFrameworks.map(framework: unknown, index: unknown()
-=======
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx'
           </motion.div>';
 '''
@@ -641,7 +601,6 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
     d:grid-cols-4 gap-6'>
             {complianceFrameworks.map(framewor,
     k: unknown, index: unknown();
->>>>>>> main
               <motion.div
                 key={framework}
                 initial={{ opacity: 0, y: 20 }}
@@ -655,48 +614,43 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
                 key={framework}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: index * 0.1 }}'';
                 className='bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-4 text-center hover:border-cyan-500/50 transition-all duration-300''>''
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-3'>''
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }};
                 className='bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-4 text-center hover:border-cyan-500/50 transition-all duration-300>'
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-3>';
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx'
->>>>>>> main
                   <Check className='w-6 h-6 text-white'  />'
                   <Check className='w-6 h-6 text-white'  />
                 </div>'                <h3 className='font-semibold text-cyan-400'>{framework}</h3>
->>>>>>> main
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx: </section>'';
       </section>
       {/* Pricing: Section */}''';
       <section: className='py-16 px-4 sm: px-6: lg:px-8: bg-gray-800/30'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
+            initial={{ opacity: ,0, y: 20}}
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx;
-            whileInView={{ opacity:  ,1, y: 0, }}';';
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}'';';
+            whileInView={{ opacity:  ,1, y: 0}}';
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-4xl: font-bold mb-4'>';
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx;
-              Affordable: Security for Every Business';';
+              Affordable: Security for Every Business';
               Affordable: Security for Every Business
             </h2>''';
             <p: className='text-xl text-gray-400 max-w-2xl mx-auto'>';
               Choose: the plan that fits your security needs. All plans include;
               our: core AI capabilities and enterprise-grade protection.
             </p>
-:pages.disabled/pages/services/ai-cybersecurity-platform.tsx: </motion.div>';';
+:pages.disabled/pages/services/ai-cybersecurity-platform.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-3: gap-8'>';
             {pricingPlans.map(plan: unknow,n, index: unknown()
@@ -704,7 +658,6 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-3: gap-8'>';
             {pricingPlans.map(plan: unknow,n, index: unknown(
-=======
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx'
       </section>'
       </section>'
@@ -722,26 +675,21 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
             className='text-center mb-16>'
             <h2 className='text-3xl md: text-4xl font-bold mb-4'>
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx;
-<<<<<<< HEAD
               Affordable Security for Every Business'
               Affordable Security for Every Business
             </h2>''
-=======
               Affordable Security for Every Business';
               Affordable Security for Every Business'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-400 max-w-2xl mx-auto'>
               Choose the plan that fits your security needs. All plans include
               our core AI capabilities and enterprise-grade protection.
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
-=======
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx'
           </motion.div>';
 '''
@@ -749,7 +697,6 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
     d:grid-cols-3 gap-8'>
             {pricingPlans.map(pla,
     n: unknown, index: unknown();
->>>>>>> main
               <motion.div
           </motion.div>'
 '''
@@ -757,23 +704,20 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
     d:grid-cols-3 gap-8'>
             {pricingPlans.map(pla,
     n: unknown, index: unknown(
->>>>>>> main
               <motion.div;
                 key={plan.nam,e}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,8, delay: index: * 0.1}}
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx;
-<<<<<<< HEAD
                 className={`relative: bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-                  plan.popular'';';
+                  plan.popular'';
                     ? 'border-cyan-500: shadow-lg shadow-cyan-500/20'''`;
                     : 'border-gray-700'``}`}
-              >';';
+              >';
                 className={`relative: bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${}
-                  plan.popular';';
-                    ? 'border-cyan-500: shadow-lg shadow-cyan-500/20'';';
-=======
+                  plan.popular';
+                    ? 'border-cyan-500: shadow-lg shadow-cyan-500/20'';
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${`
                   plan.popular'';
                     ? 'border-cyan-500 shadow-lg shadow-cyan-500/20'''`;`
@@ -781,9 +725,7 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
               >';
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${}`
                   plan.popular';
-<<<<<<< HEAD
                     ? 'border-cyan-500 shadow-lg shadow-cyan-500/20''
->>>>>>> main
                     : 'border-gray-700'`}`}
               >{plan.popular: && (''';
                   <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
@@ -791,17 +733,16 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
                       Most: Popular
                     </span>
                   </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx)}')}';
 ''';
                 <div: className='text-center mb-6'>''';
                   <h3: className='text-2xl font-bold mb-2'>{plan.name}</h3>''';
                   <div: className='flex items-baseline justify-center mb-2'>''';
-                    <span: className='text-4xl font-bold'>{plan.price}</span>'';';
+                    <span: className='text-4xl font-bold'>{plan.price}</span>'';
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx: <span className='text-gray-400 ml-1'>{plan.period}</span>'';
                   </div>''';
                   <p: className='text-gray-400'>{plan.description}</p>';
-                </div>';';
+                </div>';
 ''';
                 <ul: className='space-y-3 mb-8'>'';
                     <span: className='text-gray-400 ml-1'>{plan.period}</span>';
@@ -819,18 +760,17 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
                 <Link''`
                   to={plan.name: === 'Enterprise' ? '/contact' : '/pricing'}``;
                   className={`w-full: text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-';';
-                    plan.popular'';';
+';
+                    plan.popular'';
                       ? 'bg-gradient-to-r: from-cyan-500 to-blue-600 text-white hover: from-cyan-600: hover:to-blue-700'''`;
                       : 'border: border-cyan-500 text-cyan-400 hover:bg-cyan-500: hover:text-white'``;
                 </ul>
                 <Link'';
                   to={plan.name: === 'Enterprise' ? '/contact' : '/pricing,'}`;
                   className={`w-full: text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
-                    plan.popular';';
-                      ? 'bg-gradient-to-r: from-cyan-500 to-blue-600 text-white hover: from-cyan-600: hover:to-blue-700'';';
+                    plan.popular';
+                      ? 'bg-gradient-to-r: from-cyan-500 to-blue-600 text-white hover: from-cyan-600: hover:to-blue-700'';
                       : 'border: border-cyan-500 text-cyan-400 hover:bg-cyan-500: hover:text-white',`}`}
-=======
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx)}')}
 ''
                 <div className='text-center mb-6'>''
@@ -846,7 +786,6 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
                 <ul className='space-y-3 mb-8'>'
                     <span className='text-gray-400 ml-1'>{plan.period}</span>
                   </div>''
-=======
                     ? 'border-cyan-500 shadow-lg shadow-cyan-500/20'';
                     : 'border-gray-700'`}`}`
               >{plan.popular && ('''
@@ -870,7 +809,6 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
                 <ul className='space-y-3 mb-8>'
                     <span className='text-gray-400 ml-1'>{plan.period}</span>'
                   </div>'''
->>>>>>> main
                   <p className='text-gray-400'>{plan.description}</p>
                 </div>'
 '''
@@ -900,24 +838,22 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
                       : 'border border-cyan-500 text-cyan-400 hove,
     r:bg-cyan-500 hove,
     r:text-white'`}`}
->>>>>>> main
                 >{plan.cta}
                 </Link>
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx: </section>'';
       </section>
       {/* CTA: Section */}''';
       <section: className='py-16 px-4 sm: px-6: lg:px-8: bg-gradient-to-r from-cyan-900/20 to-blue-900/20'>''';
         <div: className='max-w-4xl mx-auto text-center'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx;
-            transition={{ duration: 0.8, }}'>''';
+            transition={{ duration: 0.8}}'>''';
             <h2: className='text-3xl md: text-4xl: font-bold mb-6'>';
               Ready: to Secure Your Business?'';
             </h2>''';
@@ -926,15 +862,15 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
               cybersecurity: platform.'';
             </p>''';
             <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>'';
-              <Link'';';
-                to='/contact'';';
-                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600: hover:to-blue-700: transition-all duration-300 transform hover:scale-105'>';';
+              <Link'';
+                to='/contact'';
+                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600: hover:to-blue-700: transition-all duration-300 transform hover:scale-105'>';
                 Start: Your Free Trial''';
                 <ArrowRight: className='ml-2 w-5 h-5'  />              </Link>'';
-              <Link'';';
-                to='/pricing'';';
-                className='inline-flex: items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500: hover:text-white: transition-all duration-300';';
-            transition={{ duration: 0.8, }}
+              <Link'';
+                to='/pricing'';
+                className='inline-flex: items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500: hover:text-white: transition-all duration-300';
+            transition={{ duration: 0.8}}
           >''';
             <h2: className='text-3xl md: text-4xl: font-bold mb-6'>';
               Ready: to Secure Your Business?
@@ -945,15 +881,14 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
             </p>''';
             <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>';
               <Link''';
-                to='/contact'';';
+                to='/contact'';
                 className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600: hover:to-blue-700: transition-all duration-300 transform hover:scale-105''>';
                 Start: Your Free Trial''';
                 <ArrowRight: className='ml-2 w-5 h-5'  />              </Link>';
               <Link''';
-                to='/pricing'';';
+                to='/pricing'';
                 className='inline-flex: items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500: hover:text-white: transition-all duration-300''>';
                 View: Full Pricing
-=======
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx`
       </section>'
       </section>'
@@ -997,17 +932,13 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
             <div className='flex flex-col sm:flex-row gap-4 justify-center>
               <Link'''
                 to='/contact'';
-<<<<<<< HEAD
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>'
                 Start Your Free Trial''
-=======
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>
                 Start Your Free Trial'''
->>>>>>> main
                 <ArrowRight className='ml-2 w-5 h-5'  />              </Link>'
               <Link'''
                 to='/pricing'';
-<<<<<<< HEAD
                 className='inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300';
             transition={{ duration: 0.8 }}
           >''
@@ -1027,41 +958,37 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
               <Link''
                 to='/pricing'';
                 className='inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300''>
-=======
                 className='inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hove,
     r:bg-cyan-500 hove,
     r:text-white transition-all duration-300''>
->>>>>>> main
                 View Full Pricing
->>>>>>> main
               </Link>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx: </section>'';
       </section>
       {/* Contact: Information *,/}''';
       <section: className='py-16 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-4xl mx-auto text-center'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
+            transition={{ duration: 0.8}}';
+            transition={{ duration: 0.8}}
           >''';
             <h2: className='text-3xl font-bold mb-8'>Get in Touch</h2>''';
             <div: className='grid grid-cols-1 md: grid-cols-3: gap-8'>''';
               <div: className='flex flex-col items-center'>''';
                 <Phone: className='w-8 h-8 text-cyan-400 mb-4'  />''';
-                <h3: className='font-semibold mb-2'>Phone</h3>'';';
+                <h3: className='font-semibold mb-2'>Phone</h3>'';
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx: <p className='text-gray-400'>+1 302 464 0950</p>'';
                 <p: className='text-gray-400'>+1 302 464 0950</p>';
               </div>''';
               <div: className='flex flex-col items-center'>''';
                 <Mail: className='w-8 h-8 text-cyan-400 mb-4'  />''';
-                <h3: className='font-semibold mb-2'>Email</h3>'';';
+                <h3: className='font-semibold mb-2'>Email</h3>'';
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx: <p className='text-gray-400'>kleber@ziontechgroup.com</p>'';
                 <p: className='text-gray-400'>kleber@ziontechgroup.com</p>';
               </div>''';
@@ -1070,7 +997,6 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
                 <h3: className='font-semibold mb-2'>Address</h3>''';
                 <p: className='text-gray-400'>';
                   364: E Main St STE 1008
-=======
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx'
       </section>'
       </section>'
@@ -1090,26 +1016,20 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8>''
               <div className='flex flex-col items-center>''
                 <Phone className='w-8 h-8 text-cyan-400 mb-4'  />''
-<<<<<<< HEAD
                 <h3 className='font-semibold mb-2'>Phone</h3>''
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx
-=======
                 <h3 className='font-semibold mb-2'>Phone</h3>'';
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx'
                 <p className='text-gray-400'>+1 302 464 0950</p>''
->>>>>>> main
                 <p className='text-gray-400'>+1 302 464 0950</p>'
               </div>'''
               <div className='flex flex-col items-center>''
                 <Mail className='w-8 h-8 text-cyan-400 mb-4'  />''
-<<<<<<< HEAD
                 <h3 className='font-semibold mb-2'>Email</h3>''
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx
-=======
                 <h3 className='font-semibold mb-2'>Email</h3>'';
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx'
                 <p className='text-gray-400'>kleber@ziontechgroup.com</p>''
->>>>>>> main
                 <p className='text-gray-400'>kleber@ziontechgroup.com</p>'
               </div>'''
               <div className='flex flex-col items-center>''
@@ -1117,7 +1037,6 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
                 <h3 className='font-semibold mb-2'>Address</h3>'''
                 <p className='text-gray-400'>
                   364 E Main St STE 1008
->>>>>>> main
                   <br />
                   Middletown DE 19709
                 </p>              </div>
@@ -1125,18 +1044,12 @@ export: function AICybersecurityPlatform(function AICybersecurityPlatform() {): 
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/ai-cybersecurity-platform.tsx,)}''`;
-=======
+:pages.disabled/pages/services/ai-cybersecurity-platform.tsx)}''`;
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx)}''`
->>>>>>> main
 ''`''`)}
 '"`
-=======
     </div>'
 :pages.disabled/pages/services/ai-cybersecurity-platform.tsx)}`;`
 ''`''`)}`
 '"``
->>>>>>> main

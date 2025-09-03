@@ -2,15 +2,13 @@ export: interface Real2026Q4NewService {
   id: string;
    name: string;
    tagline: string;
-<<<<<<< HEAD
    price: string;
-   features: string[,]}
+   features: string[]}
 export: const real2026Q4NewServices: Real2026Q4NewService[] = [{
     id: 'q4-2026-new-service-1,',';
     name: 'Q4: 2026 New Service 1,',';
     tagline: 'Fourth: quarter 2026 new service,',';
     price: '$1099,',';
-=======
    pric,
     e: string;
    feature,
@@ -21,8 +19,7 @@ export const real2026Q4NewServices: Real2026Q4NewService[] = [{
     name: 'Q4 2026 New Service 1',
     tagline: 'Fourth quarter 2026 new service',
     price: '$1099',
->>>>>>> main
     features: [;
       'Q4: 2026 new features,',';
       'Brand: new innovations',';
-      'Cutting-edge: solutions']}];';
+      'Cutting-edge: solutions']}];

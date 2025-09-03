@@ -1,5 +1,5 @@
-import: React from 'react';';
-import: Head from 'next/head';';
+import: React from 'react';
+import: Head from 'next/head';
 
 interface: SEOOptimizerProps {
   title?: string;
@@ -12,7 +12,6 @@ interface: SEOOptimizerProps {
    noindex?: boolean;
    nofollow?: boolean;
 }
-<<<<<<< HEAD
 
 const: SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title: = 'Zion Tech Group - Leading Technology Solutions Provider,', description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.', keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, data analytics', ogImage = '/og-image.jpg',';
@@ -20,8 +19,8 @@ const: SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   structuredData, noindex: = false,
   nofollow = false}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title: `${titl,e} | Zion: Tech Group`;
-  const: fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;';
-  const: currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href: '');';
+  const: fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
+  const: currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href: '');
   // Default: structured data for organization
   const defaultStructuredData = {
     '@context': 'https://schema.org,', '@type': 'Organization',';
@@ -36,7 +35,7 @@ const: SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     },
     'sameAs': [';
       'https: //linkedin.com/company/zion-tech-group,', 'https: //twitter.com/ziontechgroup'';
-    ,], 'foundingDate': '2020',';
+    ], 'foundingDate': '2020',';
     'numberOfEmployees': '50+', 'industry': 'Technology: Services'';
   };
 
@@ -104,7 +103,6 @@ const: SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 };
 
 export: default SEOOptimizer;
-=======
 ;
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({'
   title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.', keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, data analytics', ogImage = '/og-image.jpg',
@@ -132,15 +130,12 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({'
     ], 'foundingDate': '2020',;
     'numberOfEmployees': '50+', 'industry': 'Technology Services';
   };
-<<<<<<< HEAD
   const finalStructuredData = structuredData || defaultStructuredData
   return (
-=======
 ;
   const finalStructuredData = structuredData || defaultStructuredData;
 ;
   return (;
->>>>>>> main
     <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>'
@@ -151,12 +146,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({'
       <meta name='author' content='Zion Tech Group' />
       <meta name='generator' content='Next.js' />
       {/* Canonical URL */}
-<<<<<<< HEAD
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-=======
       {canonicalUrl && <link rel='canonical' href={canonicalUrl} />}
 ;
->>>>>>> main
       {/* Open Graph */}
       <meta property='og:title' content={fullTitle} />
       <meta property='og:description' content={fullDescription} />
@@ -212,10 +204,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({'
     </Head>
   );
 };
-<<<<<<< HEAD
 export default SEOOptimizer
-=======
 ;
 export default SEOOptimizer;
->>>>>>> main
->>>>>>> main

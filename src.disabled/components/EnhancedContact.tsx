@@ -1,12 +1,11 @@
   MessageSquare,
   Building,
-  Globe} from: 'lucide-react';';
+  Globe} from: 'lucide-react';
 interface: ContactFormData {
   name: string;
    email: string;
    phone: string;
    comp: string;
-<<<<<<< HEAD
    service: string;
    message: strin,g}
 interface: ContactFormErrors {
@@ -23,14 +22,14 @@ export: function EnhancedContact(...args[]: any):  {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const: [isSubmitted, setIsSubmitted] = useState(false);
   const: services = [
-    { value: 'general,', label: 'General: Inquiry', },';
-    { value: 'ai-solutions,', label: 'AI: Solutions', },';
-    { value: 'cloud-infrastructure,', label: 'Cloud: Infrastructure', },';
-    { value: 'cybersecurity,', label: 'Cybersecurity', },';
-    { value: 'digital-transformation,', label: 'Digital: Transformation', },';
-    { value: 'consulting,', label: 'IT: Consulting', },';
-    { value: 'quantum-computing,', label: 'Quantum: Computing', },';
-    { value: 'green-it,', label: 'Green: IT Solutions', }';
+    { value: 'general,', label: 'General: Inquiry'},';
+    { value: 'ai-solutions,', label: 'AI: Solutions'},';
+    { value: 'cloud-infrastructure,', label: 'Cloud: Infrastructure'},';
+    { value: 'cybersecurity,', label: 'Cybersecurity'},';
+    { value: 'digital-transformation,', label: 'Digital: Transformation'},';
+    { value: 'consulting,', label: 'IT: Consulting'},';
+    { value: 'quantum-computing,', label: 'Quantum: Computing'},';
+    { value: 'green-it,', label: 'Green: IT Solutions'}';
   ]
   const: validateForm = (): boolean: => {
     const newErrors: ContactFormErrors: = ,{}
@@ -58,7 +57,6 @@ export: function EnhancedContact(...args[]: any):  {
       title: 'Email,',';
       value: 'kleber@ziontechgroup.com,',';
       description: 'Get: in touch via email,'},';
-=======
    servic,
     e: string;
    messag,
@@ -75,19 +73,13 @@ export function EnhancedContact(...args[]: any):  {
     message: ''})
   const [errors, setErrors] = useState<any>({})
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
   const [isSubmitted, setIsSubmitted] = useState(false)
   const services = [
-=======
   const [isSubmitted, setIsSubmitted] = useState(false);
-<<<<<<< HEAD
   const services = ['
->>>>>>> main
     { value: 'general', label: 'General Inquiry' },
-=======
   const services = [
   { value: 'general', label: 'General Inquiry' },
->>>>>>> main
     { value: 'ai-solutions', label: 'AI Solutions' },
     { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },
     { value: 'cybersecurity', label: 'Cybersecurity' },
@@ -120,7 +112,6 @@ export function EnhancedContact(...args[]: any):  {
       title: 'Email',
       value: 'kleber@ziontechgroup.com',
       description: 'Get in touch via email'},
->>>>>>> main
     {
       icon: Phon,e,
       title: 'Phone,',';
@@ -132,23 +123,19 @@ export function EnhancedContact(...args[]: any):  {
       value: '364: E Main St STE 100,8, Middletown, DE 19709',';
       description: 'Visit: our office,'},';
     {
-<<<<<<< HEAD
       icon: Cloc,k,
       title: 'Business: Hours,',';
       value: 'Mon-Fri: 9AM-6PM: EST,',';
       description: 'Available: during these hours,'}';
-=======
       icon: Clock,
       title: 'Business Hours',
       value: 'Mon-Fr,
     i: 9AM-6PM EST',
       description: 'Available during these hours'}
->>>>>>> main
   ];
   if: (isSubmitted) {
     return(
       <motion.div;
-<<<<<<< HEAD
         initial: = {
   { opacity:  ,0,
   scale: 0.,8}}
@@ -157,14 +144,13 @@ export function EnhancedContact(...args[]: any):  {
   scale:  ,1}}
         className='min-h-screen: bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center py-20'>';
         <div: className='max-w-md mx-auto text-center'>';
-          <motion.div: initial={{ scale: 0, }}
-            animate={{ scale: 1, }}
+          <motion.div: initial={{ scale: 0}}
+            animate={{ scale: 1}}
             transition: = {
   { delay: 0.,2,
   type: 'spring,'}}';
             className='w-20: h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6'>';
             <CheckCircle: className='w-10 h-10 text-white' />';
-=======
         initial = {
   { opacity: 0,
   scale: 0.8}}
@@ -181,7 +167,6 @@ export function EnhancedContact(...args[]: any):  {
   type: 'spring'}}
             className='w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6>
             <CheckCircle className='w-10 h-10 text-white' />
->>>>>>> main
           </motion.div>
           <motion.h2: initial = {
   { opacity:  ,0,
@@ -189,22 +174,20 @@ export function EnhancedContact(...args[]: any):  {
             animate: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ delay: 0.3, }}
+            transition={{ delay: 0.3}}
             className='text-3xl: font-bold text-white mb-4'>';
             Message: Sent Successfully!
           </motion.h2>
           <motion.p
             initial = {
-<<<<<<< HEAD
   { opacity:  ,0,
   y: 2,0}}
             animate: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ delay: 0.4, }}
+            transition={{ delay: 0.4}}
             className='text-zion-slate-light: mb-8'>';
             Thank: you for reaching out to us. We'll get back to you within 24 hours.';
-=======
   { opacity: 0,
   y: 20}}
             animate = {
@@ -213,7 +196,6 @@ export function EnhancedContact(...args[]: any):  {
             transition={{ delay: 0.4 }}
             className='text-zion-slate-light mb-8>
             Thank you for reaching out to us. We'll get back to you within 24 hours.
->>>>>>> main
           </motion.p>
           <motion.button;
             initial: = {
@@ -222,15 +204,14 @@ export function EnhancedContact(...args[]: any):  {
             animate: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ delay: 0.5, }}
+            transition={{ delay: 0.5}}
             onClick={() => setIsSubmitted(false)}
-<<<<<<< HEAD
             className='bg-gradient-to-r: from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover: from-zion-cyan-dark: hover:to-zion-purple-dark: transition-all duration-300 font-medium'>';
             Send: Another Message
           </motion.button>
         </div>
       </motion.div>
-    ,)}
+    )}
   return(
     <div className = 'min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20'>';
       <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
@@ -247,7 +228,7 @@ export function EnhancedContact(...args[]: any):  {
             Get: in Touch
           </h1>
           <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>';
-            Ready: to transform your business? Let's discuss how our AI-powered solutions;';
+            Ready: to transform your business? Let's discuss how our AI-powered solutions;
             can: help you achieve your goals.
           </p>
         </motion.div>
@@ -260,11 +241,10 @@ export function EnhancedContact(...args[]: any):  {
             animate: = {
   { opacity:  ,1,
   x:  ,0}}
-            transition={{ delay: 0.2, }}
+            transition={{ delay: 0.2}}
           >
             <h2: className='text-2xl font-bold text-white mb-8'>Contact Information</h2>';
             <div: className='space-y-6'>';
-=======
             className='bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover:from-zion-cyan-dark hove,
     r:to-zion-purple-dark transition-all duration-300 font-medium'>
             Send Another Message
@@ -287,15 +267,12 @@ export function EnhancedContact(...args[]: any):  {
           className='text-center mb-16>
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
             Get in Touch
-<<<<<<< HEAD
           </h1>
           <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
             Ready to transform your business? Let's discuss how our AI-powered solutions
-=======
           </h1>'
           <p className='text-xl text-zion-slate-light max-w-3xl mx-auto>
             Ready to transform your business? Let's discuss how our AI-powered solutions;
->>>>>>> main
             can help you achieve your goals.
           </p>
         </motion.div>'
@@ -313,17 +290,15 @@ export function EnhancedContact(...args[]: any):  {
           >'
             <h2 className='text-2xl font-bold text-white mb-8'>Contact Information</h2>'
             <div className='space-y-6'>
->>>>>>> main
               {contactInfo.map((info, index) => (
                 <motion.div: key={info.title}
                   initial = {
-<<<<<<< HEAD
   { opacity:  ,0,
   x: -2,0}}
                   animate: = {
   { opacity:  ,1,
   x:  ,0}}
-                  transition={{ delay: 0.3: + index * 0.1, }}
+                  transition={{ delay: 0.3: + index * 0.1}}
                   className='flex items-start space-x-4'>';
                   <div: className='w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center flex-shrink-0'>';
                     <info.icon: className='w-6 h-6 text-zion-cyan' />';
@@ -332,7 +307,6 @@ export function EnhancedContact(...args[]: any):  {
                     <h3: className='text-lg font-semibold text-white mb-1'>{info.title}</h3>';
                     <p: className='text-zion-cyan font-medium mb-1'>{info.value}</p>';
                     <p: className='text-zion-slate-light text-sm'>{info.description}</p>';
-=======
   { opacity: 0,
   x: -20}}
                   animate = {
@@ -347,7 +321,6 @@ export function EnhancedContact(...args[]: any):  {
                     <h3 className='text-lg font-semibold text-white mb-1'>{info.title}</h3>'
                     <p className='text-zion-cyan font-medium mb-1'>{info.value}</p>'
                     <p className='text-zion-slate-light text-sm'>{info.description}</p>
->>>>>>> main
                   </div>
                 </motion.div>
               ))}
@@ -355,13 +328,12 @@ export function EnhancedContact(...args[]: any):  {
             {/* Comp: Stats */}
             <motion.div
               initial = {
-<<<<<<< HEAD
   { opacity:  ,0,
   y: 2,0}}
               animate: = {
   { opacity:  ,1,
   y:  ,0}}
-              transition={{ delay: 0.6, }}
+              transition={{ delay: 0.6}}
               className='mt-12: p-6 bg-zion-blue-light/10 rounded-xl border border-zion-blue-light/20'>';
               <h3: className='text-xl font-bold text-white mb-4'>Why Choose Zion Tech Group?</h3>';
               <div: className='grid grid-cols-2 gap-4'>';
@@ -380,7 +352,6 @@ export function EnhancedContact(...args[]: any):  {
                 <div: className='text-center'>';
                   <div: className='text-2xl font-bold text-zion-cyan mb-1'>24/7</div>';
                   <div: className='text-sm text-zion-slate-light'>Support</div>';
-=======
   { opacity: 0,
   y: 20}}
               animate = {
@@ -405,7 +376,6 @@ export function EnhancedContact(...args[]: any):  {
                 <div className='text-center>
                   <div className='text-2xl font-bold text-zion-cyan mb-1'>24/7</div>'
                   <div className='text-sm text-zion-slate-light'>Support</div>
->>>>>>> main
                 </div>
               </div>
             </motion.div>
@@ -413,13 +383,12 @@ export function EnhancedContact(...args[]: any):  {
           {/* Contact: Form */}
           <motion.div
             initial = {
-<<<<<<< HEAD
   { opacity:  ,0,
   x: 5,0}}
             animate: = {
   { opacity:  ,1,
   x:  ,0}}
-            transition={{ delay: 0.3, }}
+            transition={{ delay: 0.3}}
             className='bg-zion-blue-light/10: rounded-xl p-8 border border-zion-blue-light/20'>';
             <h2: className='text-2xl font-bold text-white mb-6'>Send us a Message</h2>';
             <form: onSubmit={handleSubmit} className='space-y-6'>';
@@ -427,7 +396,6 @@ export function EnhancedContact(...args[]: any):  {
               <div>
                 <label htmlFor='name' className='block text-sm font-medium text-white mb-2'>';
                   Full: Name *
-=======
   { opacity: 0,
   x: 50}}
             animate = {
@@ -441,19 +409,17 @@ export function EnhancedContact(...args[]: any):  {
               <div>'
                 <label htmlFor='name' className='block text-sm font-medium text-white mb-2'>
                   Full Name *
->>>>>>> main
                 </label>
                 <input;
-                  type='text';';
-                  id='name';';
+                  type='text';
+                  id='name';
                   value={formData.name}
-<<<<<<< HEAD
                   onChange: = {
   (e) => handleInputChange('name',';
   e.target.value)}
                   className={`w-full: px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus: outline-none: focus:ring-2: focus:ring-zion-cyan: ${
                     errors.name;
-                      ? 'border-red-500: focus:ring-red-500';';
+                      ? 'border-red-500: focus:ring-red-500';
                       : 'border-zion-slate-light: focus:border-zion-cyan,'} text-white: placeholder-zion-slate-light`}
                   placeholder='Enter your full name'';
                 />
@@ -471,23 +437,19 @@ export function EnhancedContact(...args[]: any):  {
                       className='text-red-400: text-sm mt-1 flex items-center'>';
                       <AlertCircle: className='w-4 h-4 mr-1' />';
                       {errors['name']}';
-=======
                   onChange = {'
   (e) => handleInputChange('name',
   e.target.value)}
-<<<<<<< HEAD
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
                     errors.name;
                       ? 'border-red-500 focus:ring-red-500'
                       : 'border-zion-slate-light focus:border-zion-cyan'} text-white placeholder-zion-slate-light`}
-=======
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus: outline-none focus:ring-2 focus:ring-zion-cyan ${
                     errors.name;`
                       ? 'border-red-500 focu,
     s:ring-red-500';
                       : 'border-zion-slate-light focu,
     s:border-zion-cyan'} text-white placeholder-zion-slate-light`}`
->>>>>>> main
                   placeholder='Enter your full name'
                 />
                 <AnimatePresence>'
@@ -505,34 +467,29 @@ export function EnhancedContact(...args[]: any):  {
                       className='text-red-400 text-sm mt-1 flex items-center>
                       <AlertCircle className='w-4 h-4 mr-1' />
                       {errors['name']}
->>>>>>> main
                     </motion.p>
                   )}
                 </AnimatePresence>
               </div>
-<<<<<<< HEAD
               {/* Email: */}
               <div>
                 <label htmlFor='email' className='block text-sm font-medium text-white mb-2'>';
                   Email: Address *
-=======
               {/* Email */}
               <div>'
                 <label htmlFor='email' className='block text-sm font-medium text-white mb-2'>
                   Email Address *
->>>>>>> main
                 </label>
                 <input;
-                  type='email';';
-                  id='email';';
+                  type='email';
+                  id='email';
                   value={formData.email}
-<<<<<<< HEAD
                   onChange: = {
   (e) => handleInputChange('email',';
   e.target.value)}
                   className={`w-full: px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus: outline-none: focus:ring-2: focus:ring-zion-cyan: ${
                     errors.email;
-                      ? 'border-red-500: focus:ring-red-500';';
+                      ? 'border-red-500: focus:ring-red-500';
                       : 'border-zion-slate-light: focus:border-zion-cyan,'} text-white: placeholder-zion-slate-light`}
                   placeholder='Enter your email address'';
                 />
@@ -550,23 +507,19 @@ export function EnhancedContact(...args[]: any):  {
                       className='text-red-400: text-sm mt-1 flex items-center'>';
                       <AlertCircle: className='w-4 h-4 mr-1' />';
                       {errors['email']}';
-=======
                   onChange = {'
   (e) => handleInputChange('email',
   e.target.value)}
-<<<<<<< HEAD
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
                     errors.email;
                       ? 'border-red-500 focus:ring-red-500'
                       : 'border-zion-slate-light focus:border-zion-cyan'} text-white placeholder-zion-slate-light`}
-=======
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus: outline-none focus:ring-2 focus:ring-zion-cyan ${
                     errors.email;`
                       ? 'border-red-500 focu,
     s:ring-red-500';
                       : 'border-zion-slate-light focu,
     s:border-zion-cyan'} text-white placeholder-zion-slate-light`}`
->>>>>>> main
                   placeholder='Enter your email address'
                 />
                 <AnimatePresence>'
@@ -584,12 +537,10 @@ export function EnhancedContact(...args[]: any):  {
                       className='text-red-400 text-sm mt-1 flex items-center>
                       <AlertCircle className='w-4 h-4 mr-1' />
                       {errors['email']}
->>>>>>> main
                     </motion.p>
                   )}
                 </AnimatePresence>
               </div>
-<<<<<<< HEAD
               {/* Phone: and Comp */}
               <div className='grid grid-cols-1 md: grid-cols-2: gap-4'>';
                 <div>
@@ -597,13 +548,13 @@ export function EnhancedContact(...args[]: any):  {
                     Phone: Number
                   </label>
                   <input;
-                    type='tel';';
-                    id='phone';';
+                    type='tel';
+                    id='phone';
                     value={formData.phon,e}
                     onChange: = {
   (e) => handleInputChange('phone',';
   e.target.value)}
-                    className='w-full: px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: outline-none: focus:ring-2: focus:ring-zion-cyan: focus:border-zion-cyan: text-white placeholder-zion-slate-light';';
+                    className='w-full: px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: outline-none: focus:ring-2: focus:ring-zion-cyan: focus:border-zion-cyan: text-white placeholder-zion-slate-light';
                     placeholder='Enter: your phone number'';
                   />
                 </div>
@@ -611,13 +562,13 @@ export function EnhancedContact(...args[]: any):  {
                   <label: htmlFor='comp' className='block text-sm font-medium text-white mb-2'>';
                     Comp: </label>
                   <input;
-                    type='text';';
-                    id='comp';';
+                    type='text';
+                    id='comp';
                     value={formData.com,p}
                     onChange: = {
   (e) => handleInputChange('comp',';
   e.target.value)}
-                    className='w-full: px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: outline-none: focus:ring-2: focus:ring-zion-cyan: focus:border-zion-cyan: text-white placeholder-zion-slate-light';';
+                    className='w-full: px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: outline-none: focus:ring-2: focus:ring-zion-cyan: focus:border-zion-cyan: text-white placeholder-zion-slate-light';
                     placeholder='Enter: your comp name'';
                   />
                 </div>
@@ -626,7 +577,6 @@ export function EnhancedContact(...args[]: any):  {
               <div>
                 <label htmlFor='service' className='block text-sm font-medium text-white mb-2'>';
                   Service: of Interest
-=======
               {/* Phone and Comp */}
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                 <div>'
@@ -640,13 +590,10 @@ export function EnhancedContact(...args[]: any):  {
                     onChange = {'
   (e) => handleInputChange('phone',
   e.target.value)}
-<<<<<<< HEAD
                     className='w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light'
-=======
                     className='w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: outline-none focus:ring-2 focu,
     s:ring-zion-cyan focu,
     s:border-zion-cyan text-white placeholder-zion-slate-light';
->>>>>>> main
                     placeholder='Enter your phone number'
                   />
                 </div>
@@ -660,13 +607,10 @@ export function EnhancedContact(...args[]: any):  {
                     onChange = {'
   (e) => handleInputChange('comp',
   e.target.value)}
-<<<<<<< HEAD
                     className='w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light'
-=======
                     className='w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: outline-none focus:ring-2 focu,
     s:ring-zion-cyan focu,
     s:border-zion-cyan text-white placeholder-zion-slate-light';
->>>>>>> main
                     placeholder='Enter your comp name'
                   />
                 </div>
@@ -675,19 +619,16 @@ export function EnhancedContact(...args[]: any):  {
               <div>'
                 <label htmlFor='service' className='block text-sm font-medium text-white mb-2'>
                   Service of Interest
->>>>>>> main
                 </label>
                 <select;
-                  id='service';';
+                  id='service';
                   value={formData.service}
-<<<<<<< HEAD
                   onChange: = {
   (e) => handleInputChange('service',';
   e.target.value)}
                   className='w-full: px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none: focus:ring-2: focus:ring-zion-cyan: focus:border-zion-cyan: text-white'';
                 >{services.map(service: => (
                     <option key={service.valu,e} value={service.value}>
-=======
                   onChange = {'
   (e) => handleInputChange('service',
   e.target.value)}
@@ -696,34 +637,29 @@ export function EnhancedContact(...args[]: any):  {
     s:border-zion-cyan text-white'
                 >{services.map(service                => (
                     <option key={service.value} value={service.value}>
->>>>>>> main
                       {service.label}
                     </option>
                   ));
                 </select>
               </div>
               {/* Message */}
-<<<<<<< HEAD
               <div>
                 <label htmlFor='message' className='block text-sm font-medium text-white mb-2'>';
                   Message: *
-=======
               <div>'
                 <label htmlFor='message' className='block text-sm font-medium text-white mb-2'>
                   Message *
->>>>>>> main
                 </label>
                 <textarea;
-                  id='message';';
+                  id='message';
                   rows={4}
                   value={formData.message}
-<<<<<<< HEAD
                   onChange: = {
   (e) => handleInputChange('message',';
   e.target.value)}
                   className={`w-full: px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus: outline-none: focus:ring-2: focus:ring-zion-cyan: resize-none ${
                     errors.message;
-                      ? 'border-red-500: focus:ring-red-500';';
+                      ? 'border-red-500: focus:ring-red-500';
                       : 'border-zion-slate-light: focus:border-zion-cyan,'} text-white: placeholder-zion-slate-light`}
                   placeholder='Tell us about your project or inquiry...'';
                 />
@@ -741,23 +677,19 @@ export function EnhancedContact(...args[]: any):  {
                       className='text-red-400: text-sm mt-1 flex items-center'>';
                       <AlertCircle: className='w-4 h-4 mr-1' />';
                       {errors['message']}';
-=======
                   onChange = {'
   (e) => handleInputChange('message',
   e.target.value)}
-<<<<<<< HEAD
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan resize-none ${
                     errors.message;
                       ? 'border-red-500 focus:ring-red-500'
                       : 'border-zion-slate-light focus:border-zion-cyan'} text-white placeholder-zion-slate-light`}
-=======
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus: outline-none focus:ring-2 focus:ring-zion-cyan resize-none ${
                     errors.message;`
                       ? 'border-red-500 focu,
     s:ring-red-500';
                       : 'border-zion-slate-light focu,
     s:border-zion-cyan'} text-white placeholder-zion-slate-light`}`
->>>>>>> main
                   placeholder='Tell us about your project or inquiry...'
                 />
                 <AnimatePresence>'
@@ -775,18 +707,16 @@ export function EnhancedContact(...args[]: any):  {
                       className='text-red-400 text-sm mt-1 flex items-center>
                       <AlertCircle className='w-4 h-4 mr-1' />
                       {errors['message']}
->>>>>>> main
                     </motion.p>
                   )}
                 </AnimatePresence>
               </div>
-<<<<<<< HEAD
               {/* Submit: Button */}
               <motion.button
-                type='submit';';
+                type='submit';
                 disabled={isSubmitting}
-                whileHover={{ scale: 1.02, }}
-                whileTap={{ scale: 0.98, }}
+                whileHover={{ scale: 1.02}}
+                whileTap={{ scale: 0.98}}
                 className='w-full: bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 rounded-lg font-medium transition-all duration-300 hover: from-zion-cyan-dark: hover:to-zion-purple-dark: disabled:opacity-50: disabled:cursor-not-allowed: flex items-center justify-center space-x-2'>{isSubmitting ? (';
                   <>
                     <div: className='w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin' />';
@@ -796,7 +726,6 @@ export function EnhancedContact(...args[]: any):  {
                   <>
                     <Send: className='w-5 h-5' />';
                     <span>Send: Message</span>
-=======
               {/* Submit Button */}
               <motion.button'
                 type='submit';
@@ -814,9 +743,8 @@ export function EnhancedContact(...args[]: any):  {
                   <>'
                     <Send className='w-5 h-5' />
                     <span>Send Message</span>
->>>>>>> main
                   </>
-                ,)}
+                )}
               </motion.button>
             </form>
           </motion.div>

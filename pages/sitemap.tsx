@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import { 
-=======
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -63,8 +60,6 @@ export default function Sitemap() {
         { name: 'GDPR Compliance', url: '/gdpr', description: 'Data protection compliance' }
       ]
     }
-=======
-<<<<<<< HEAD
 ,"});,"})
 import { motion } from 'framer-motion';,"});,"})
 import { SEO } from '../components/SEO';,"});,"})
@@ -135,20 +130,16 @@ const Sitemap: React.FC = () => {;,"});,"})
         ))}"});,"})
       </ul>;,"});,"})
     </div>;,"});,"})
->>>>>>> main;,"});,"})
+;,"});,"})
   );,"});,"})
 };,"});,"})
 ;,"});,"})
 export default SitemapPage;,"});,"})
-=======
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Card, CardHeader, CardContent, CardTitle } from '../components/ui/Card';
-=======
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '../components/Navigation';
@@ -162,8 +153,7 @@ import {
   Briefcase,
   Phone,
   Mail,
-  MapPin,
-} from 'lucide-react';
+  MapPin} from 'lucide-react';
 
 export default function Sitemap() {
   const currentYear = new Date().getFullYear();
@@ -177,137 +167,106 @@ export default function Sitemap() {
     {
       name: 'Partners',
       href: '/partners',
-      description: 'Partnership information',
-    },
-  ];
+      description: 'Partnership information'}];
 
   const services = [
     {
       name: 'AI Services',
       href: '/ai-services',
-      description: 'Artificial Intelligence solutions',
-    },
+      description: 'Artificial Intelligence solutions'},
     {
       name: 'IT Services',
       href: '/it-services',
-      description: 'Information Technology services',
-    },
+      description: 'Information Technology services'},
     {
       name: 'Micro SaaS',
       href: '/micro-saas',
-      description: 'Micro Software as a Service',
-    },
+      description: 'Micro Software as a Service'},
     {
       name: 'Web Development',
       href: '/services/web-development',
-      description: 'Custom web applications',
-    },
+      description: 'Custom web applications'},
     {
       name: 'Cloud Services',
       href: '/services/cloud-services',
-      description: 'Cloud infrastructure solutions',
-    },
+      description: 'Cloud infrastructure solutions'},
     {
       name: 'AI Development',
       href: '/services/ai-development',
-      description: 'AI development services',
-    },
-  ];
+      description: 'AI development services'}];
 
   const solutions = [
     {
       name: 'AI Content Creation',
       href: '/solutions/ai-content-creation',
-      description: 'AI-powered content generation',
-    },
+      description: 'AI-powered content generation'},
     {
       name: 'Customer Support',
       href: '/solutions/customer-support',
-      description: 'Automated customer support',
-    },
+      description: 'Automated customer support'},
     {
       name: 'Email Automation',
       href: '/solutions/email-automation',
-      description: 'Email marketing automation',
-    },
+      description: 'Email marketing automation'},
     {
       name: 'Event Management',
       href: '/solutions/event-management',
-      description: 'Event planning and management',
-    },
+      description: 'Event planning and management'},
     {
       name: 'Project Management',
       href: '/solutions/project-management',
-      description: 'Project management solutions',
-    },
+      description: 'Project management solutions'},
     {
       name: 'Workflow Automation',
       href: '/solutions/workflow-automation',
-      description: 'Business process automation',
-    },
-  ];
+      description: 'Business process automation'}];
 
   const resources = [
     {
       name: 'Documentation',
       href: '/docs',
-      description: 'Technical documentation',
-    },
+      description: 'Technical documentation'},
     { name: 'API Reference', href: '/api', description: 'API documentation' },
     { name: 'Help & Support', href: '/help', description: 'Support center' },
     { name: 'Training', href: '/training', description: 'Training programs' },
     {
       name: 'Case Studies',
       href: '/case-studies',
-      description: 'Success stories',
-    },
+      description: 'Success stories'},
     {
       name: 'Pricing Guide',
       href: '/pricing-guide',
-      description: 'Pricing information',
-    },
-  ];
+      description: 'Pricing information'}];
 
   const legal = [
     {
       name: 'Privacy Policy',
       href: '/privacy',
-      description: 'Privacy policy and data protection',
-    },
+      description: 'Privacy policy and data protection'},
     {
       name: 'Terms of Service',
       href: '/terms',
-      description: 'Terms and conditions',
-    },
+      description: 'Terms and conditions'},
     {
       name: 'Cookie Policy',
       href: '/cookies',
-      description: 'Cookie usage policy',
-    },
-  ];
+      description: 'Cookie usage policy'}];
 
   const contactInfo = [
     { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
     {
       icon: Mail,
       text: 'kleber@ziontechgroup.com',
-      href: 'mailto:kleber@ziontechgroup.com',
-    },
+      href: 'mailto:kleber@ziontechgroup.com'},
     {
       icon: MapPin,
       text: '364 E Main St STE 1008, Middletown DE 19709',
-      href: '#',
-    },
-=======
+      href: '#'},
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import { Card, CardHeader, CardContent, CardTitle } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
-<<<<<<< HEAD
-=======
->>>>>>> main
 import {
->>>>>>> main
   Map, ArrowRight,
   ExternalLink, Home,
   Users, Briefcase,
@@ -318,7 +277,6 @@ import {
   Filter, Calendar,
   Star, TrendingUp,
   Brain, Cloud,
-<<<<<<< HEAD
   Database, Code,
   Building, Zap
 } from 'lucide-react';
@@ -453,11 +411,6 @@ const SitemapPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
   Database, Network,
   Zap, Target,
   CheckCircle
@@ -474,19 +427,16 @@ const SitemapPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"      <SEO "        title="Sitemap - Zion Tech Group" "        description="Navigate through all pages and content on the Zion Tech Group website. Find what you&apos;re looking for quickly and easily."''      />'      '"
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">"        <div className="max-w-7xl mx-auto text-center">"          <motion.div"            initial={{ opacity: 0, y: 20 }}"
->>>>>>> main
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-<<<<<<< HEAD
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               Site Navigation
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Explore all our pages and services. Find exactly what you're looking for with our comprehensive site map.
             </p>
-=======
             <Badge variant="secondary" className="mb-4">"              <Map className="w-4 h-4 mr-2" />"              Site Navigation"            </Badge>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">"              Sitemap"            </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"              Find all pages and content on our website. Navigate through our services, resources, and information easily."            </p>
@@ -502,10 +452,8 @@ const SitemapPage = () => {
             <div className="flex gap-2">"              <Badge variant="outline" className="cursor-pointer hover:bg-blue-500 hover:text-white transition-colors">"                All Pages"              </Badge>"
               <Badge variant="outline" className="cursor-pointer hover:bg-blue-500 hover:text-white transition-colors">"                Services"              </Badge>
               <Badge variant="outline" className="cursor-pointer hover:bg-blue-500 hover:text-white transition-colors">"                Resources"              </Badge></div>
->>>>>>> main
           </motion.div>
 
-<<<<<<< HEAD
           <div className="grid gap-8">
             {categories.map((category, categoryIndex) => {
               const categoryPages = pages.filter(page => page.category === category);
@@ -581,28 +529,20 @@ const SitemapPage = () => {
               <div className="flex flex-col items-center">
                 <div className="p-3 bg-blue-100 rounded-full mb-3">
                   <Phone className="w-6 h-6 text-blue-600" />
-=======
       {/* Sitemap Content */}
 <section className="py-20 px-4 sm:px-6 lg:px-8">"        <div className="max-w-7xl mx-auto">"          <motion.div"            initial={{ opacity: 0, y: 20 }}"
-=======
   Database, Zap,
   Lock, Code,
   Smartphone, Monitor,
   Server, Network'
 } from 'lucide-react';
 
->>>>>>> main
 const SitemapPage: React.FC = () => {
   const siteStructure = [
-<<<<<<< HEAD
     {'
       categor,
     y: 'Main Pages',
-=======
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       title: 'Main Pages',
       links: [
         { name: 'Home', href: '/', description: 'Main landing page' },
@@ -610,144 +550,108 @@ const SitemapPage: React.FC = () => {
         {
           name: 'Contact',
           href: '/contact',
-          description: 'Contact information and form',
-        },
+          description: 'Contact information and form'},
         {
           name: 'Blog',
           href: '/blog',
-          description: 'Latest news and insights',
-        },
+          description: 'Latest news and insights'},
         {
           name: 'Help',
           href: '/help',
-          description: 'Support and documentation',
-        },
-      ],
-    },
+          description: 'Support and documentation'}]},
     {
       title: 'Services',
       links: [
         {
           name: 'All Services',
           href: '/services',
-          description: 'Overview of all services',
-        },
+          description: 'Overview of all services'},
         {
           name: 'AI Services',
           href: '/ai-services',
-          description: 'Artificial Intelligence solutions',
-        },
+          description: 'Artificial Intelligence solutions'},
         {
           name: 'IT Services',
           href: '/it-services',
-          description: 'Information Technology services',
-        },
+          description: 'Information Technology services'},
         {
           name: 'Micro SaaS',
           href: '/micro-saas',
-          description: 'Micro Software as a Service',
-        },
+          description: 'Micro Software as a Service'},
         {
           name: 'AI Development',
           href: '/services/ai-development',
-          description: 'Custom AI development',
-        },
+          description: 'Custom AI development'},
         {
           name: 'Cloud Services',
           href: '/services/cloud-services',
-          description: 'Cloud computing solutions',
-        },
+          description: 'Cloud computing solutions'},
         {
           name: 'Web Development',
           href: '/services/web-development',
-          description: 'Web application development',
-        },
-      ],
-    },
+          description: 'Web application development'}]},
     {
       title: 'Solutions',
       links: [
         {
           name: 'All Solutions',
           href: '/solutions',
-          description: 'Overview of all solutions',
-        },
+          description: 'Overview of all solutions'},
         {
           name: 'AI Content Creation',
           href: '/solutions/ai-content-creation',
-          description: 'Automated content generation',
-        },
+          description: 'Automated content generation'},
         {
           name: 'Email Automation',
           href: '/solutions/email-automation',
-          description: 'Email marketing automation',
-        },
+          description: 'Email marketing automation'},
         {
           name: 'Customer Support',
           href: '/solutions/customer-support',
-          description: 'AI-powered support platform',
-        },
+          description: 'AI-powered support platform'},
         {
           name: 'Event Management',
           href: '/solutions/event-management',
-          description: 'Event planning and management',
-        },
+          description: 'Event planning and management'},
         {
           name: 'Project Management',
           href: '/solutions/project-management',
-          description: 'Project collaboration tools',
-        },
+          description: 'Project collaboration tools'},
         {
           name: 'Workflow Automation',
           href: '/solutions/workflow-automation',
-          description: 'Business process automation',
-        },
-      ],
-    },
+          description: 'Business process automation'}]},
     {
       title: 'Business',
       links: [
         {
           name: 'Pricing',
           href: '/pricing',
-          description: 'Service pricing and plans',
-        },
+          description: 'Service pricing and plans'},
         {
           name: 'Partners',
           href: '/partners',
-          description: 'Partnership opportunities',
-        },
+          description: 'Partnership opportunities'},
         {
           name: 'Careers',
           href: '/careers',
-          description: 'Job opportunities and culture',
-        },
-      ],
-    },
+          description: 'Job opportunities and culture'}]},
     {
       title: 'Legal & Policies',
       links: [
         {
           name: 'Privacy Policy',
           href: '/privacy',
-          description: 'Privacy and data protection',
-        },
+          description: 'Privacy and data protection'},
         {
           name: 'Terms of Service',
           href: '/terms',
-          description: 'Terms and conditions',
-        },
+          description: 'Terms and conditions'},
         {
           name: 'Cookie Policy',
           href: '/cookies',
-          description: 'Cookie usage and preferences',
-        },
-      ],
-    },
-=======
->>>>>>> main
+          description: 'Cookie usage and preferences'}]},
       category: 'Main Pages',
->>>>>>> main
       icon: Home,
       pages: ['
         { nam,
@@ -804,17 +708,10 @@ const SitemapPage: React.FC = () => {
         { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage policy' }
       ]
     }
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
   ];
 
   return (
     <>
-<<<<<<< HEAD
       <Head>
         <title>Sitemap - Zion Tech Group</title>
         <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />
@@ -867,8 +764,6 @@ const SitemapPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-=======
-<<<<<<< HEAD
       <SEO'
         title='Sitemap''
         description='Complete sitemap of Zion Tech Group website. Find all pages, services, and resources in one place.''
@@ -877,18 +772,13 @@ const SitemapPage: React.FC = () => {
       <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
     g:px-8 py-12'>
-=======
-<<<<<<< HEAD
-=======
       <SEO
-<<<<<<< HEAD
         title="Sitemap - Zion Tech Group"
         description="Complete sitemap of Zion Tech Group website. Find all pages, services, and resources in one place."
         keywords="sitemap, navigation, website structure, pages, links"
       />
       <Head>
         <title>Sitemap - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta
           name="description"
           content="Complete sitemap of Zion Tech Group website. Find all pages, services, and resources."
@@ -904,12 +794,10 @@ const SitemapPage: React.FC = () => {
 
       <main className="pt-20 min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-=======
       </Head>
 
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
->>>>>>> main
           {/* Header */}
           <div className="mb-8">
             <Link
@@ -923,39 +811,31 @@ const SitemapPage: React.FC = () => {
               <Sitemap className="h-8 w-8 text-blue-600 mr-3" />
               <h1 className="text-3xl font-bold text-gray-900">Sitemap</h1>
             </div>
-<<<<<<< HEAD
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Site Map
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Navigate through all pages and resources available on the Zion
               Tech Group website
-=======
             <p className="text-gray-600">
               Complete overview of all pages and sections on the Zion Tech Group
               website.
-=======
         title='Sitemap'
         description='Complete sitemap of Zion Tech Group website. Find all pages, services, and resources in one place.'
         keywords='sitemap, website navigation, pages, services, resources'
       />
->>>>>>> main
       <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
->>>>>>> main
           <motion.div
             initial={{ opacit,
     y: 0, y: 20 }}
->>>>>>> main
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
             className="space-y-16""          >"            {categories.map((category, categoryIndex) => (<motion.div
                 key={category.name}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-=======
             className='text-center mb-12'
           >'
             <div className='flex items-center justify-center mb-6>
@@ -963,25 +843,14 @@ const SitemapPage: React.FC = () => {
               <h1 className='text-4xl font-bold text-gray-900'>Website Sitemap</h1>
             </div>'
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-<<<<<<< HEAD
               Navigate through all pages and sections of the Zion Tech Group website.'
               Find exactly what you're looking for with our comprehensive site structure.
-=======
               Navigate through all pages and sections of the Zion Tech Group website.
               Find exactly what you are looking for with our comprehensive site structure.
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
             </p>
           </motion.div>'
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {siteStructure.map((section, index) => (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               <Card key={index} className="p-6">
                 <h2 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                   <Sitemap className="h-5 w-5 mr-2 text-blue-600" />
@@ -1016,7 +885,6 @@ const SitemapPage: React.FC = () => {
             <h2 className="text-xl font-semibold text-gray-900 mb-4">
               About This Sitemap
             </h2>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {contactInfo.map((contact, index) => (
                 <div key={index} className="flex items-center space-x-3">
@@ -1024,7 +892,6 @@ const SitemapPage: React.FC = () => {
                   <a
                     href={contact.href}
                     className="text-gray-300 hover: text-cyan-400 transition-colors"
-=======
             <div className="prose text-gray-600">
               <p>
                 This sitemap provides a comprehensive overview of all pages and
@@ -1066,15 +933,11 @@ const SitemapPage: React.FC = () => {
               </p>
             </div>
           </Card>
-=======
->>>>>>> main
               <motion.div
                 key={section.category}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.6, delay: 0.1 * categoryIndex }}
->>>>>>> main
               >
 <div className="text-center mb-8">"                  <h2 className="text-3xl font-bold text-white mb-4">{category.name}</h2>"                  <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>"                </div>"
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"                  {category.pages.map((page, pageIndex) => ("                    <motion.divkey={page.url}
@@ -1089,7 +952,6 @@ const SitemapPage: React.FC = () => {
                       </Card>
                     </motion.div>
                   ))}
->>>>>>> main
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-1">Call Us</h3>
                 <p className="text-gray-600">+1 302 464 0950</p>
@@ -1114,14 +976,12 @@ const SitemapPage: React.FC = () => {
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
       </div>
     </>
   );
 };
 
 export default SitemapPage;
-=======
       </section>
 
       {/* Quick Stats */}
@@ -1158,9 +1018,6 @@ className="text-center""            >"              <div className="p-6 rounded-
             <div className="flex flex-col sm: flex-row gap-4 justify-center">"              <a"                href="/contact""                className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity""              >"                <Phone className="w-5 h-5 mr-2" />"                Contact Support"              </a>"
               <a
                 href="/services""                className="inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors""              >"                <Briefcase className="w-5 h-5 mr-2" />"                Browse Services"              </a></div>"
-<<<<<<< HEAD
-=======
-=======
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >'
                 <Card className='h-full'>
@@ -1203,7 +1060,6 @@ className="text-center""            >"              <div className="p-6 rounded-
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
             className='mt-12 text-center'
-<<<<<<< HEAD
           >'
             <Card className='max-w-2xl mx-auto>
               <CardContent className='p-8>
@@ -1219,7 +1075,6 @@ className="text-center""            >"              <div className="p-6 rounded-
                     className='bg-blue-600 text-white px-6 py-3 rounded-lg hove,
     r:bg-blue-700 transition-colors flex items-center justify-center'
                   >'
-=======
           >
             <Card className='max-w-2xl mx-auto'>
               <CardContent className='p-8'>
@@ -1233,12 +1088,7 @@ className="text-center""            >"              <div className="p-6 rounded-
                   <a
                     href='/contact'
                     className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center'
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
                   >
->>>>>>> main
                     <Phone className='h-4 w-4 mr-2' />
                     Contact Us
                   </a>
@@ -1251,14 +1101,9 @@ className="text-center""            >"              <div className="p-6 rounded-
                     Get Help
                   </a>
                 </div>
-<<<<<<< HEAD
               </CardContent>
             </Card>
->>>>>>> main
->>>>>>> main
           </motion.div>
-=======
-<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -1402,12 +1247,10 @@ className="text-center""            >"              <div className="p-6 rounded-
                     </div>
                     <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
                   </Link>
->>>>>>> main
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 
         {/* Quick Links */}
@@ -1463,7 +1306,6 @@ className="text-center""            >"              <div className="p-6 rounded-
     </>
   );
 }
-=======
 
           {/* Last Updated */}
           <div className="text-center mt-12">
@@ -1472,21 +1314,15 @@ className="text-center""            >"              <div className="p-6 rounded-
               {new Date().toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
-                day: 'numeric',
-              })}
+                day: 'numeric'})}
             </p>
           </div>
-=======
               </CardContent>
             </Card>
           </motion.div>
->>>>>>> main
->>>>>>> main
->>>>>>> main
         </div>
       </div>
     </>
-<<<<<<< HEAD
 
 const Sitemap: React.FC = () => {
   const links = [
@@ -1504,8 +1340,7 @@ const Sitemap: React.FC = () => {
     { name: 'Contact', url: '/contact' },
     { name: 'Careers', url: '/careers' },
     { name: 'Privacy', url: '/privacy' },
-    { name: 'Terms', url: '/terms' },
-  ];
+    { name: 'Terms', url: '/terms' }];
 
   return (
     <div className="min-h-screen px-6 py-16 max-w-4xl mx-auto">
@@ -1521,29 +1356,12 @@ const Sitemap: React.FC = () => {
         ))}
       </ul>
     </div>
-=======
-<<<<<<< HEAD
   )
 }
-=======
->>>>>>> main
   );
-<<<<<<< HEAD
 };
 export default SitemapPage;
-=======
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
 }
-=======
 };
 export default SitemapPage;
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

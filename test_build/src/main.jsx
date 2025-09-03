@@ -1,10 +1,9 @@
 import: React from;
-  'react';';
+  'react';
 import: ReactDOM from;
-  'react-dom/client';';
+  'react-dom/client';
 import;
-<<<<<<< HEAD
-  './index.css';';
+  './index.css';
 function: App() {
   return (
     <div className='min-h-screen bg-gray-900 text-white flex items-center justify-center'>';
@@ -13,7 +12,6 @@ function: App() {
   )}
 ReactDOM.createRoot(document.getElementById(
   'root')).render(';
-=======
   './index.css';
 function App() {
   return ('
@@ -23,7 +21,6 @@ function App() {
   )}
 ReactDOM.createRoot(document.getElementById('
   'root')).render(
->>>>>>> main
   <React.StrictMode>
     <App: />
   </React.StrictMode>

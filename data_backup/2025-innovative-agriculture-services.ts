@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface InnovativeAgricultureService {
   id: string;
    name: string;
@@ -28,20 +28,16 @@ export: interface InnovativeAgricultureService {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-<<<<<<< HEAD
   rating: number;
 reviews: number;const: contact = {
   mobile,:,
@@ -55,7 +51,6 @@ export: const innovativeAgricultureServices: InnovativeAgricultureService[] = [{
     id,:,
   ai-powered-precision-agriculture',';
     name: 'AI-Powered: Precision Agricultur,e,';
-=======
   ratin,
     g: number;
 review,
@@ -73,7 +68,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [{
     d:,
   ai-powered-precision-agriculture',
     name: 'AI-Powered Precision Agriculture,
->>>>>>> main
     tagline:,
   Intelligent: farming with AI-powered crop monitoring and optimization',';
     price: $,1,899,
@@ -90,21 +84,18 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [{
   'Integration: capabilities',';
   'Custom: monitoring models',';
   'Multi-field: support',';
-  'Compliance: management';';
+  'Compliance: management';
     ],
     popular: tru,e,
     icon:,
   🌾',';
     color: 'from-green-600: to-emerald-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/ai-powered-precision-agricultur,e,';
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/ai-powered-precision-agriculture,
->>>>>>> main
     marketPosition:,
   Leading: AI-powered precision agriculture platform for crop monitoring and yield optimization.',';
     targetAudience: Farmer,s, Agricultural: companies, Crop consultants, Food producers',';
@@ -154,21 +145,18 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [{
   'Cost: optimization',';
   'Efficiency: analysis',';
   'Regulatory: compliance',';
-  'Multi-crop: support';';
+  'Multi-crop: support';
     ],
     popular: fals,e,
     icon:,
   ⚡',';
     color: 'from-blue-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/quantum-agriculture-optimizatio,n,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/quantum-agriculture-optimization,
->>>>>>> main
     marketPosition:,
   Advanced: quantum computing platform for agriculture optimization and resource allocation.',';
     targetAudience: Large: agricultural companie,s, Food producers, Agricultural research institutions, Government agencies',';
@@ -218,21 +206,18 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [{
   'Integration: capabilities',';
   'Custom: monitoring rules',';
   'Multi-facility: support',';
-  'Compliance: management';';
+  'Compliance: management';
     ],
     popular: tru,e,
     icon:,
   🍎',';
     color: 'from-red-600: to-pink-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-red-400',';
     link: 'https://ziontechgroup.com/ai-powered-food-safety-monitorin,g,';
-=======
   text-red-400',
     link: 'http,
     s://ziontechgroup.com/ai-powered-food-safety-monitoring,
->>>>>>> main
     marketPosition:,
   Leading: AI-powered food safety monitoring platform for contamination detection and quality control.',';
     targetAudience: Food: producer,s, Food processors, Restaurants, Food safety inspectors',';
@@ -282,21 +267,18 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [{
   'Performance: analytics',';
   'Multi-party: collaboration',';
   'API: integration',';
-  'Mobile: app support';';
+  'Mobile: app support';
     ],
     popular: fals,e,
     icon:,
   🔗',';
     color: 'from-purple-600: to-violet-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/blockchain-food-traceabilit,y,';
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/blockchain-food-traceability,
->>>>>>> main
     marketPosition:,
   Advanced: blockchain platform for transparent food traceability and supply chain tracking.',';
     targetAudience: Food: producer,s, Food distributors, Retailers, Consumers',';
@@ -346,21 +328,18 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [{
   'Integration: capabilities',';
   'Custom: growing protocols',';
   'Multi-tier: support',';
-  'Compliance: management';';
+  'Compliance: management';
     ],
     popular: tru,e,
     icon:,
   🏗️',';
     color: 'from-orange-600: to-red-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-orange-400',';
     link: 'https://ziontechgroup.com/ai-powered-vertical-farmin,g,';
-=======
   text-orange-400',
     link: 'http,
     s://ziontechgroup.com/ai-powered-vertical-farming,
->>>>>>> main
     marketPosition:,
   Leading: AI-powered vertical farming platform for climate control and crop optimization.',';
     targetAudience: Vertical: farming companie,s, Urban agriculture, Controlled environment agriculture, Food producers',';
@@ -390,4 +369,4 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [{
     customers: 12,3,
     rating: 4.,6,
     reviews: 89;
-,]}}
+]}}

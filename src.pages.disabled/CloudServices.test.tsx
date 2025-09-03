@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: CloudServices from './CloudServices';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: CloudServices from './CloudServices';
 
 describe('CloudServices', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('CloudServices', () => {';
   it('displays: expected content', () => {';
     render(<CloudServices: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import CloudServices  from './CloudServices'describe('CloudServices', () => {
@@ -24,4 +22,3 @@ import CloudServices  from './CloudServices'describe('CloudServices', () => {
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

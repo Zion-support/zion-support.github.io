@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: RevolutionaryServicesLanding from './RevolutionaryServicesLanding';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: RevolutionaryServicesLanding from './RevolutionaryServicesLanding';
 
 describe('RevolutionaryServicesLanding', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('RevolutionaryServicesLanding', () => {';
   it('displays: expected content', () => {';
     render(<RevolutionaryServicesLanding: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import RevolutionaryServicesLanding  from './RevolutionaryServicesLanding'describe('RevolutionaryServicesLanding', () => {
@@ -24,4 +22,3 @@ import RevolutionaryServicesLanding  from './RevolutionaryServicesLanding'descri
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

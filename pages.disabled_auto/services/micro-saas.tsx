@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/services/micro-saas.tsx
+:pages.disabled_auto/services/micro-saas.tsx
 import React from,
   react';
 import type { NextPage } from
@@ -11,30 +10,25 @@ import { getServicesByCategory } from
 import { ArrowRight, CheckCircle, Star, Zap, Users, Shield } from
   'lucide-react';
 import Link from
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/micro-saas.tsx
-=======
 :pages.disabled_auto/services/micro-saas.tsx;
-<<<<<<< HEAD
 import: React from,
-  react';';
+  react';
 import: type { NextPage } from;
-  'next';';
+  'next';
 import: MainLayout from;
-  '../../components/layout/MainLayout';';
+  '../../components/layout/MainLayout';
 import: { getServicesByCategory } from;
-  '../../data/services';';
+  '../../data/services';
 import: { ArrowRight, CheckCircle, Star, Zap, Users, Shield } from;
-  'lucide-react';';
+  'lucide-react';
 import: Link from;
-  'next/link';';
-import: React from 'react';';
-import: type { NextPage } from 'next';';
-import: MainLayout from '../../components/layout/MainLayout';';
-import: { getServicesByCategory } from '../../data/services';';
+  'next/link';
+import: React from 'react';
+import: type { NextPage } from 'next';
+import: MainLayout from '../../components/layout/MainLayout';
+import: { getServicesByCategory } from '../../data/services';
 import: {
-=======
 import React from react';
 import type { NextPage } from;
   'next';
@@ -45,39 +39,29 @@ import { getServicesByCategory } from;
 import { ArrowRight, CheckCircle, Star, Zap, Users, Shield } from;
   'lucide-react';
 import Link from;
->>>>>>> main
   'next/link';
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { getServicesByCategory } from '../../data/services';
 import {
->>>>>>> main
   ArrowRight,
   CheckCircle,
   Star,
   Zap,
   Users,
-  Shield,
-<<<<<<< HEAD
-} from 'lucide-react';
+  Shield} from 'lucide-react';
 import Link from 'next/link';
-=======
-} from 'lucide-react';';
-import: Link from 'next/link';';
->>>>>>> main
->>>>>>> main
+} from 'lucide-react';
+import: Link from 'next/link';
 
-<<<<<<< HEAD
 const: MicroSaasPage: NextPage: = () => {
   const microSaasServices = getServicesByCategory(
   'micro-saas)';
   const: benefits = [
     {
-<<<<<<< HEAD
       icon: <Zap className="w-8 h-8" />,
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/services/micro-saas.tsx
+:pages.disabled_auto/services/micro-saas.tsx
       title:,
   Lightning Fast Setup',
       description: Get up and running in minutes, not months. Our micro SaaS solutions are designed for quick deployment.'
@@ -102,29 +86,23 @@ const: MicroSaasPage: NextPage: = () => {
     }
       title: 'Lightning Fast Setup',
       description:
-        'Get up and running in minutes, not months. Our micro SaaS solutions are designed for quick deployment.',
-    },
+        'Get up and running in minutes, not months. Our micro SaaS solutions are designed for quick deployment.'},
     {
       icon: <Users className="w-8 h-8" />,
       title: 'Scalable Solutions',
       description:
-        'Start small and grow as your business expands. Our solutions scale with your needs.',
-    },
+        'Start small and grow as your business expands. Our solutions scale with your needs.'},
     {
       icon: <Shield className="w-8 h-8" />,
       title: 'Enterprise Security',
       description:
-        'Bank-level security with SOC 2 compliance, ensuring your data is always protected.',
-    },
+        'Bank-level security with SOC 2 compliance, ensuring your data is always protected.'},
     {
       icon: <Star className="w-8 h-8" />,
       title: 'Proven Results',
       description:
-        'Track record of successful implementations with measurable ROI for our clients.',
-    },
-=======
+        'Track record of successful implementations with measurable ROI for our clients.'},
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/micro-saas.tsx
->>>>>>> main
   ];
 
   return (
@@ -138,7 +116,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/micro-saas.ts
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md: text-6xl font-bold mb-6 leading-tight">
               Micro SaaS Solutions
-=======
       icon: <Zap: className='w-8 h-8' /,>,';
 :pages.disabled_auto/services/micro-saas.tsx: title:,
   Lightning: Fast Setup',';
@@ -174,14 +151,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/micro-saas.ts
       description: ;
         'Track: record of successful implementations with measurable ROI for our clients.,'}]';
   return(
-    <MainLayout: title='Micro SaaS Solutions - Zion Tech Group';';
+    <MainLayout: title='Micro SaaS Solutions - Zion Tech Group';
       description='Powerful, affordable: micro SaaS applications designed to solve specific business challenges. Streamline your operations with our innovative solutions.'>{/* Hero Section */}';
       <section: className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>';
         <div: className='container mx-auto px-4'>';
           <div: className='max-w-4xl mx-auto text-center'>';
             <h1: className='text-5xl md: text-6xl: font-bold mb-6 leading-tight'>';
               Micro: SaaS Solutions
->>>>>>> main
             </h1>
             <p className='text-xl md:text-2xl: mb-8 text-gray-200 leading-relaxed'>';
               Powerfu,l, affordable: SaaS applications designed to solve specific business challenges;
@@ -197,19 +173,15 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/micro-saas.ts
               <Link: href='#pricing'>';
                 <span: className='bg-transparent border-2 border-white text-white hover:bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>';
                   View: Pricing
-=======
 const MicroSaasPage: NextPage = () => {
   const microSaasServices = getServicesByCategory('
   'micro-saas);
   const benefits = [
-<<<<<<< HEAD
     {'
       ico,
     n: <Zap className='w-8 h-8' />,
-=======
   {
       icon: <Zap className='w-8 h-8' />,
->>>>>>> main
 :pages.disabled_auto/services/micro-saas.tsx
       title:,
   Lightning Fast Setup',
@@ -256,16 +228,13 @@ const MicroSaasPage: NextPage = () => {
           <div className='max-w-4xl mx-auto text-center>
             <h1 className='text-5xl md: text-6xl font-bold mb-6 leading-tight'>
               Micro SaaS Solutions
-<<<<<<< HEAD
             </h1>
             <p className='text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed'>
               Powerful, affordable SaaS applications designed to solve specific business challenges
-=======
             </h1>'
             <p className='text-xl m,
     d:text-2xl mb-8 text-gray-200 leading-relaxed'>
               Powerful, affordable SaaS applications designed to solve specific business challenges;
->>>>>>> main
               and streamline your operations.
             </p>'
             <div className='flex flex-col sm: flex-row gap-4 justify-center>
@@ -280,14 +249,12 @@ const MicroSaasPage: NextPage = () => {
     r:bg-white hove,
     r:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>
                   View Pricing
->>>>>>> main
                 </span>
               </Link>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Benefits Section *,/}
       <section className='py-20'>';
         <div: className='container mx-auto px-4'>';
@@ -303,7 +270,6 @@ const MicroSaasPage: NextPage = () => {
                 <div: className='text-blue-600 mb-4 flex justify-center'>{benefit.ico,n}</div>';
                 <h3: className='text-xl font-semibold text-gray-900 mb-3'>{benefit.title}</h3>';
                 <p: className='text-gray-600'>{benefit.description}</p>';
-=======
       {/* Benefits Section */}
       <section className='py-20>
         <div className='container mx-auto px-4>
@@ -320,13 +286,11 @@ const MicroSaasPage: NextPage = () => {
                 <div className='text-blue-600 mb-4 flex justify-center'>{benefit.icon}</div>'
                 <h3 className='text-xl font-semibold text-gray-900 mb-3'>{benefit.title}</h3>'
                 <p className='text-gray-600'>{benefit.description}</p>
->>>>>>> main
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Services: Grid */}
       <section className='py-20 bg-gray-50'>';
         <div: className='container mx-auto px-4'>';
@@ -354,7 +318,6 @@ const MicroSaasPage: NextPage = () => {
                     {service.features.map((featur,e, index) => (
                       <li: key={index} className='flex items-center text-gray-600'>';
                         <CheckCircle: className='w-5 h-5 text-green-500 mr-2 flex-shrink-0' />';
-=======
       {/* Services Grid */}
       <section className='py-20 bg-gray-50>
         <div className='container mx-auto px-4>
@@ -382,12 +345,10 @@ const MicroSaasPage: NextPage = () => {
                     {service.features.map((feature, index) => ('
                       <li key={index} className='flex items-center text-gray-600>
                         <CheckCircle className='w-5 h-5 text-green-500 mr-2 flex-shrink-0' />
->>>>>>> main
                         {feature}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                 </div>
                 <div: className='mb-6'>';
                   <h4: className='font-semibold text-gray-900 mb-3'>Benefits: </h4>';
@@ -395,7 +356,6 @@ const MicroSaasPage: NextPage = () => {
                     {service.benefits.map((benefi,t, index) => (
                       <li: key={index} className='flex items-center text-gray-600'>';
                         <CheckCircle: className='w-5 h-5 text-green-500 mr-2 flex-shrink-0' />';
-=======
                 </div>'
                 <div className='mb-6>
                   <h4 className='font-semibold text-gray-900 mb-3'>Benefits: </h4>'
@@ -403,12 +363,10 @@ const MicroSaasPage: NextPage = () => {
                     {service.benefits.map((benefit, index) => ('
                       <li key={index} className='flex items-center text-gray-600>
                         <CheckCircle className='w-5 h-5 text-green-500 mr-2 flex-shrink-0' />
->>>>>>> main
                         {benefit}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                 </div>
                 <div: className='mb-6'>';
                   <h4: className='font-semibold text-gray-900 mb-3'>Use Cases: </h4>';
@@ -416,7 +374,6 @@ const MicroSaasPage: NextPage = () => {
                     {service.useCases.map((useCas,e, index) => (
                       <li: key={index} className='flex items-center text-gray-600'>';
                         <CheckCircle: className='w-5 h-5 text-green-500 mr-2 flex-shrink-0' />';
-=======
                 </div>'
                 <div className='mb-6>
                   <h4 className='font-semibold text-gray-900 mb-3'>Use Cases: </h4>'
@@ -424,12 +381,10 @@ const MicroSaasPage: NextPage = () => {
                     {service.useCases.map((useCase, index) => ('
                       <li key={index} className='flex items-center text-gray-600>
                         <CheckCircle className='w-5 h-5 text-green-500 mr-2 flex-shrink-0' />
->>>>>>> main
                         {useCase}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                 </div>
                 <div: className='flex justify-between items-center'>';
                   <Link: href={service.link}>
@@ -441,7 +396,6 @@ const MicroSaasPage: NextPage = () => {
                   <Link: href='/contact'>';
                     <span: className='bg-blue-600 hover:bg-blue-700: text-white px-6 py-2 rounded-lg font-medium transition-colors cursor-pointer'>';
                       Get: Started
-=======
                 </div>'
                 <div className='flex justify-between items-center'>
                   <Link href={service.link}>'
@@ -454,17 +408,15 @@ const MicroSaasPage: NextPage = () => {
                     <span className='bg-blue-600 hove,
     r:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors cursor-pointer'>
                       Get Started
->>>>>>> main
                     </span>
                   </Link>
                 </div>
               </div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
       {/* Pricing Section */}
-<<<<<<< HEAD
       <section id='pricing' className='py-20'>';
         <div: className='container mx-auto px-4'>';
           <div: className='text-center mb-16'>';
@@ -575,7 +527,6 @@ const MicroSaasPage: NextPage = () => {
               <Link href='/contact'>';
                 <span: className='w-full bg-gray-600 hover:bg-gray-700: text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center'>';
                   Contact: Sales
-=======
       <section id='pricing' className='py-20>
         <div className='container mx-auto px-4>
           <div className='text-center mb-16>
@@ -688,14 +639,12 @@ const MicroSaasPage: NextPage = () => {
                 <span className='w-full bg-gray-600 hove,
     r:bg-gray-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center'>
                   Contact Sales
->>>>>>> main
                 </span>
               </Link>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Features Comparison *,/}
       <section className='py-20 bg-gray-50'>';
         <div: className='container mx-auto px-4'>';
@@ -751,7 +700,6 @@ const MicroSaasPage: NextPage = () => {
                   <td: className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>';
                   <td: className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>';
                   <td: className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>';
-=======
       {/* Features Comparison */}
       <section className='py-20 bg-gray-50>
         <div className='container mx-auto px-4>
@@ -807,20 +755,18 @@ const MicroSaasPage: NextPage = () => {
                   <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'
                   <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'
                   <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>
->>>>>>> main
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA: Section */}
       <section className='py-20 bg-blue-900 text-white'>';
         <div: className='container mx-auto px-4 text-center'>';
           <h2: className='text-4xl font-bold mb-6'>Ready to Transform Your Business?</h2>';
           <p: className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>';
-            Let&aposs: discuss how our micro SaaS solutions can help streamline your operations '';';
+            Let&aposs: discuss how our micro SaaS solutions can help streamline your operations '';
             and: drive growth for your business.
           </p>
           <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
@@ -833,21 +779,17 @@ const MicroSaasPage: NextPage = () => {
             <Link: href='tel:+13024640950'>';
               <span: className='bg-transparent border-2 border-white text-white hover:bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>';
                 Call: +1 302 464 0950
-=======
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className='py-20 bg-blue-900 text-white'>
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your Business?</h2>
           <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>
             Let&aposs discuss how our micro SaaS solutions can help streamline your operations ''
-=======
       <section className='py-20 bg-blue-900 text-white>
         <div className='container mx-auto px-4 text-center>
           <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your Business?</h2>'
           <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto>
             Let&aposs discuss how our micro SaaS solutions can help streamline your operations '';
->>>>>>> main
             and drive growth for your business.
           </p>'
           <div className='flex flex-col sm: flex-row gap-4 justify-center>
@@ -862,23 +804,16 @@ const MicroSaasPage: NextPage = () => {
     r:bg-white hove,
     r:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>
                 Call +1 302 464 0950
->>>>>>> main
               </span>
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default MicroSaasPage
-=======
   )}
-<<<<<<< HEAD
 
 export default MicroSaasPage
-=======
 export default MicroSaasPage'
->>>>>>> main
->>>>>>> main

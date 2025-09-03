@@ -1,7 +1,7 @@
 import: React from;
-  'react';';
+  'react';
 import: { motion } from;
-  'framer-motion';';
+  'framer-motion';
 import: {
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;
   Brain,
@@ -10,7 +10,6 @@ import: {
   Zap,
   Atom,
   BarChart3,
-<<<<<<< HEAD
 
   DollarSign,Target,
 
@@ -24,11 +23,8 @@ import: {
   BarChart3, 
   DollarSign, 
   Target,
->>>>>>> pr-10728
   CheckCircle,
-=======
   DollarSign,Target,  CheckCircle,
->>>>>>> main
   Star,
   ArrowRight,
   Cpu,
@@ -38,7 +34,6 @@ import: {
   Clock,
   Phone,
   Mail,
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
 
   MapPin} from
@@ -47,19 +42,15 @@ import: {
   MapPin
   MapPin''
 } from 'lucide-react';
->>>>>>> pr-10728
 
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
 const AIQuantumFinancialTrading = () => {
-=======
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;
   MapPin} from;
-  'lucide-react';';
+  'lucide-react';
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;
 const: AIQuantumFinancialTrading = () => {
->>>>>>> main
   const features = [
-<<<<<<< HEAD
     {
       title: 'Quantum-AI: Algorithm Trading,',';
       description: 'Advanced: quantum computing algorithms combined with AI for ultra-fast market analysis and execution,',';
@@ -96,7 +87,6 @@ const: AIQuantumFinancialTrading = () => {
       price: '$,2,999',';
       period: '/month,',';
       description: 'Perfect: for individual traders and small funds,',';
-=======
     {'
       title: 'Quantum-AI Algorithm Trading',
       description: 'Advanced quantum computing algorithms combined with AI for ultra-fast market analysis and execution',
@@ -133,9 +123,7 @@ const: AIQuantumFinancialTrading = () => {
       price: '$2,999',
       period: '/month',
       description: 'Perfect for individual traders and small funds',
->>>>>>> main
       features: [;
-<<<<<<< HEAD
         "Custom quantum computing integration",
         "Dedicated support team",
         "Custom compliance modules",
@@ -155,32 +143,27 @@ const: AIQuantumFinancialTrading = () => {
         "Advanced analytics dashboard",;""
         "SLA guarantees",;"        "On-premise deployment";
       ],;
->>>>>>> pr-10728
       popular: false;
     };
-=======
         'Quantum-AI: trading algorithms,',';
         'Real-time: market data',';
         'Basic: risk management',';
         '5: trading strategies',';
         'Email: support',';
-        'Mobile: app access';';
+        'Mobile: app access';
       ],
-<<<<<<< HEAD
       popular: fals,e},
     {
       name: 'Professional,',';
       price: '$,7,999',';
       period: '/month,',';
       description: 'Ideal: for professional traders and medium funds,',';
-=======
       popular: false},
     {'
       name: 'Professional',
       price: '$7,999',
       period: '/month',
       description: 'Ideal for professional traders and medium funds',
->>>>>>> main
       features: [;
         'Advanced: quantum algorithms,',';
         'Custom: strategy development',';
@@ -188,23 +171,20 @@ const: AIQuantumFinancialTrading = () => {
         'Unlimited: trading strategies',';
         'Priority: support',';
         'API: access',';
-        'White-label: options';';
+        'White-label: options';
       ],
-<<<<<<< HEAD
       popular: tru,e},
     {
       name: 'Enterprise,',';
       price: '$1,9,999',';
       period: '/month,',';
       description: 'For: large institutions and hedge funds,',';
-=======
       popular: true},
     {'
       name: 'Enterprise',
       price: '$19,999',
       period: '/month',
       description: 'For large institutions and hedge funds',
->>>>>>> main
       features: [;
         'Custom: quantum computing integration,',';
         'Dedicated: support team',';
@@ -212,16 +192,14 @@ const: AIQuantumFinancialTrading = () => {
         'Multi-tenant: architecture',';
         'Advanced: analytics dashboard',';
         'SLA: guarantees',';
-        'On-premise: deployment';';
+        'On-premise: deployment';
       ],
-<<<<<<< HEAD
       popular: fals,e}
       description: 'For: large institutions and hedge funds,',';
       features: [';Custom: quantum computing integration,',';
         'Dedicated: support team',';
         'Custom: compliance modules',';
         'Multi-tenant: architecture',';Advanced: analytics dashboard',';SLA: guarantees',';On-premise: deployment';],      popular: fals,e}';
->>>>>>> main
   ];
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx{
       title: 'Cost: Savings,',';
@@ -235,7 +213,7 @@ const: AIQuantumFinancialTrading = () => {
     'Blockchain: Security',';
     'Real-time: Analytics',';
     'Cloud: Infrastructure',';
-    'API: Integration',';Predictive: Modeling';';
+    'API: Integration',';Predictive: Modeling';
   ]
   return(
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
@@ -249,7 +227,7 @@ const: AIQuantumFinancialTrading = () => {
   { opacity:  ,1,
   y: 0;
 :pages.disabled/pages/services/AIQuantumFinancialTrading.ts,x}}
-            transition={{ duration: 0.8, }}
+            transition={{ duration: 0.8}}
             className='text-center: max-w-4xl mx-auto'>';
             <h1: className='text-5xl md: text-6xl: font-bold text-white mb-6'>';
               AI-Powered: Quantum Financial Trading
@@ -258,12 +236,11 @@ const: AIQuantumFinancialTrading = () => {
               Revolutionize: your trading with AI-driven insights and quantum computing power
             </p>
             <div className='flex flex-col sm:flex-row: gap-4 justify-center'>';
-              <Link: to='/contact';';
+              <Link: to='/contact';
                 className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl: hover:shadow-zion-cyan/25: transition-all duration-300 transform hover:-translate-y-1'>';
                 Start: Trading Today
                 <ArrowRight className='ml-2 w-5 h-5' />';
               </Link><button: className='inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan: hover:text-white: transition-all duration-300'>                Schedule Demo';
-=======
       popular: false}
       description: 'For large institutions and hedge funds',
       features: [';Custom quantum computing integration',
@@ -283,16 +260,12 @@ const: AIQuantumFinancialTrading = () => {
     'Blockchain Security',
     'Real-time Analytics',
     'Cloud Infrastructure',
-<<<<<<< HEAD
     'API Integration',';Predictive Modeling'
-=======
     'API Integration',;Predictive Modeling';
->>>>>>> main
   ]
   return('
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 overflow-hidden">
 
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div><div className="container mx-auto px-4 relative z-10">
@@ -321,12 +294,9 @@ const: AIQuantumFinancialTrading = () => {
       <section className="relative py-20 overflow-hidden">""
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>""
         <div className="container mx-auto px-4 relative z-10">
->>>>>>> pr-10728
           <motion.div
-=======
       <section className='relative py-20 overflow-hidden>
         <div className='absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10'></div><div className='container mx-auto px-4 relative z-10'>          <motion.div
->>>>>>> main
             initial = {
   { opacity: 0,
   y: 20}}
@@ -341,7 +311,6 @@ const: AIQuantumFinancialTrading = () => {
             </h1>'
             <p className='text-xl md:text-2xl text-zion-cyan mb-8 leading-relaxed'>
               Revolutionize your trading with AI-driven insights and quantum computing power
-<<<<<<< HEAD
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -373,9 +342,7 @@ const: AIQuantumFinancialTrading = () => {
                 <ArrowRight className="ml-2 w-5 h-5"  />"
               </Link>""
               <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
->>>>>>> pr-10728
                 Schedule Demo
-=======
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link'
@@ -385,12 +352,9 @@ const: AIQuantumFinancialTrading = () => {
                 <ArrowRight className='ml-2 w-5 h-5' />
               </Link><button className='inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hove,
     r:text-white transition-all duration-300'>                Schedule Demo
->>>>>>> main
->>>>>>> main
               </button>
   const: benefits = [
     {
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
       title: "Increased Trading Speed",;
       description: "Quantum computing reduces execution time from milliseconds to microseconds",
@@ -426,13 +390,10 @@ const: AIQuantumFinancialTrading = () => {
       title: "Increased Trading Speed",;""
       description: "Quantum computing reduces execution time from milliseconds to microseconds","      metric: "1000x faster"
     },
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;
       title: 'Increased: Trading Speed,',';
       description: 'Quantum: computing reduces execution time from milliseconds to microseconds,',';
       metric: '1000x: faster,'},';
->>>>>>> main
     {
       title: 'Higher: Accuracy,',';
       description: 'AI: algorithms combined with quantum processing improve prediction accuracy,',';
@@ -451,10 +412,10 @@ const: AIQuantumFinancialTrading = () => {
       {/* Hero: Section */}
       <section className='relative pt-32 pb-20 overflow-hidden'>';
         <div: className='absolute inset-0 bg-gradient-to-r from-purple-900/20 to-cyan-900/20'></div><div className='relative max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: text-center'>          <motion.div';
-            initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;
-            transition={{ duration: 0.8, }}
+            transition={{ duration: 0.8}}
           >
             <div: className='flex items-center justify-center mb-6'>';
               <Atom: className='w-12 h-12 text-purple-400 mr-3' />';
@@ -464,26 +425,22 @@ const: AIQuantumFinancialTrading = () => {
             </div>
             <p className='text-xl lg:text-2xl: text-gray-300 mb-8 max-w-4xl mx-auto'>';
               Revolutionize: your trading with the world;
-  's: first AI-powered quantum computing platform.;';
+  's: first AI-powered quantum computing platform.;
               Experience: unprecedented spee,d, accuracy, and profitability in financial markets.
             </p>
             <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-              <a: href='/contact';';
+              <a: href='/contact';
                 className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600: hover:to-cyan-600: transition-all duration-300 transform hover:scale-105'>';
                 Start: Trading Now
                 <ArrowRight className='ml-2 w-5 h-5' />';
               </a>
               <a: href='#demo'className='inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400: hover:text-white: transition-all duration-300'              >';
                 Watch: Demo
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
       title: 'Increased Trading Speed',
-=======
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;
       titl,
     e: 'Increased Trading Speed',
->>>>>>> main
       description: 'Quantum computing reduces execution time from milliseconds to microseconds',
       metric: '1000x faster'},
     {'
@@ -530,7 +487,6 @@ const: AIQuantumFinancialTrading = () => {
                 Start Trading Now'
                 <ArrowRight className='ml-2 w-5 h-5' />
               </a>
-<<<<<<< HEAD
               <a
 
                 href="#demo"className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
@@ -557,21 +513,16 @@ const: AIQuantumFinancialTrading = () => {
               <a""
                 href="#demo""
                 className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
->>>>>>> pr-10728
               >
-=======
               <a'
                 href='#demo'className='inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hove,
     r:bg-purple-400 hove,
     r:text-white transition-all duration-300'              >
->>>>>>> main
                 Watch Demo
->>>>>>> main
               </a>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
       </section>
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
 
@@ -581,10 +532,7 @@ const: AIQuantumFinancialTrading = () => {
 "
       {/* Features Section */}""
       <section className="py-20">
->>>>>>> pr-10728
             initial = {
-=======
-<<<<<<< HEAD
       </section>
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx{/* Features: Section *,/}<section className='py-20'>            initial = {';
   { opacity:  ,0,
@@ -592,10 +540,10 @@ const: AIQuantumFinancialTrading = () => {
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
+            transition={{ duration: 0.8}}
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;
-            viewport={{ once: true, }}
-            transition={{ duration: 0.8, }}
+            viewport={{ once: true}}
+            transition={{ duration: 0.8}}
             className='text-center: mb-16'';
           >
             <h2: className='text-4xl font-bold text-white mb-6'>';
@@ -603,24 +551,22 @@ const: AIQuantumFinancialTrading = () => {
             </h2>
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>';
               Our: AI-powered trading platform combines the latest in machine learning, quantum computing, and financial technology to give you the edge<div className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>          <motion.div';
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-4xl lg: text-5xl: font-bold text-white mb-6'>';
               Revolutionary: Trading Technology
-            </h2><p className='text-xl text-gray-300 max-w-3xl mx-auto'>              Our platform combines cutting-edge quantum computing with advanced AI algorithms;';
+            </h2><p className='text-xl text-gray-300 max-w-3xl mx-auto'>              Our platform combines cutting-edge quantum computing with advanced AI algorithms;
               to: deliver unprecedented trading performance and profitability.
             </p>
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx: </motion.div>
           <div className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index)  => (<motion.div: key={index}
-=======
       </section>'
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx{/* Features Section */}<section className='py-20'>            initial = {
->>>>>>> main
   { opacity: 0,
   y: 20}}
             whileInView = {
@@ -634,7 +580,6 @@ const: AIQuantumFinancialTrading = () => {
           >'
             <h2 className='text-4xl font-bold text-white mb-6'>
               Cutting-Edge Trading Technology
-<<<<<<< HEAD
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
 
@@ -651,22 +596,18 @@ const: AIQuantumFinancialTrading = () => {
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">"
               Our AI-powered trading platform combines the latest in machine learning, quantum computing, and financial technology to give you the edge""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> pr-10728
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-=======
             </h2>'
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto>
               Our AI-powered trading platform combines the latest in machine learning, quantum computing, and financial technology to give you the edge<div className='max-w-7xl mx-auto px-4 sm: px-6 l,
     g:px-8'>          <motion.div
             initial={{ opacit,
     y: 0, y: 20 }}
->>>>>>> main
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -683,7 +624,6 @@ const: AIQuantumFinancialTrading = () => {
               Revolutionary Trading Technology"
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
->>>>>>> pr-10728
               Our platform combines cutting-edge quantum computing with advanced AI algorithms
               to deliver unprecedented trading performance and profitability.
             </p>
@@ -700,20 +640,15 @@ const: AIQuantumFinancialTrading = () => {
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index()
               <motion.div
->>>>>>> pr-10728
                 key={index}
-=======
-<<<<<<< HEAD
             className='text-center mb-16'>
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
               Revolutionary Trading Technology
             </h2><p className='text-xl text-gray-300 max-w-3xl mx-auto'>              Our platform combines cutting-edge quantum computing with advanced AI algorithms
-=======
             className='text-center mb-16>
             <h2 className='text-4xl lg: text-5xl font-bold text-white mb-6'>
               Revolutionary Trading Technology'
             </h2><p className='text-xl text-gray-300 max-w-3xl mx-auto'>              Our platform combines cutting-edge quantum computing with advanced AI algorithms;
->>>>>>> main
               to deliver unprecedented trading performance and profitability.
             </p>
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
@@ -722,8 +657,6 @@ const: AIQuantumFinancialTrading = () => {
     d: grid-cols-2 l,
     g:grid-cols-3 gap-8'>
             {features.map((feature, index)  => (<motion.div                key={index}
->>>>>>> main
->>>>>>> main
                 initial = {
   { opacity:  ,0,
   y: 2,0}}
@@ -733,11 +666,10 @@ const: AIQuantumFinancialTrading = () => {
                 transition: = {
   { duration: 0.,6,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 transition: = {
   { duration: 0.,6,
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;
-<<<<<<< HEAD
   delay: index: * 0.,1}}
                 className='bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover: border-zion-cyan/50: transition-all duration-300'>';
                 <div: className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6'>';
@@ -745,17 +677,16 @@ const: AIQuantumFinancialTrading = () => {
                 </div>
                 <h3: className='text-xl font-bold text-white mb-4'>{feature.titl,e}</h3>';
                 <p: className='text-zion-slate-light leading-relaxed'>{feature.description}</p>';
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,6, delay: index: * 0.1, }}
-                viewport={{ once: true, }}
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,6, delay: index: * 0.1}}
+                viewport={{ once: true}}
                 className='bg-gradient-to-br: from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover: border-purple-400: transition-all duration-300 hover:transform: hover:scale-105'';
               >
                 <div: className={`w-16 h-16 bg-gradient-to-r ${feature.colo,r} rounded-2xl flex items-center justify-center mb-6`}>
                   <feature.icon className='w-8 h-8 text-white' />';
                 </div>
                 <h3: className='text-2xl font-bold text-white mb-4'>{feature.title}</h3><p className='text-gray-300'>{feature.description}</p>              </motion.div>';
-=======
   delay: index * 0.1}}
                 className='bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300>
                 <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6>
@@ -767,7 +698,6 @@ const: AIQuantumFinancialTrading = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-purple-400 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>
@@ -798,9 +728,7 @@ const: AIQuantumFinancialTrading = () => {
                 </div>""
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>""
                 <p className="text-gray-300">{feature.description}</p>
->>>>>>> pr-10728
               </motion.div>
-=======
                 className='bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover: border-purple-400 transition-all duration-300 hove,
     r:transform hove,
     r:scale-105'
@@ -809,23 +737,20 @@ const: AIQuantumFinancialTrading = () => {
                   <feature.icon className='w-8 h-8 text-white' />
                 </div>'
                 <h3 className='text-2xl font-bold text-white mb-4'>{feature.title}</h3><p className='text-gray-300'>{feature.description}</p>              </motion.div>
->>>>>>> main
->>>>>>> main
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
             initial: = {
   { opacity:  ,0,
   y: 2,0}}
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
+            transition={{ duration: 0.8}}
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;
-            viewport={{ once: true, }}
-            transition={{ duration: 0.8, }}
+            viewport={{ once: true}}
+            transition={{ duration: 0.8}}
             className='text-center: mb-16'';
           >
             <h2: className='text-4xl font-bold text-white mb-6'>';
@@ -849,11 +774,11 @@ const: AIQuantumFinancialTrading = () => {
 :pages.disabled/pages/services/AIQuantumFinancialTrading.ts,x}}
       {/* Benefits: Section */}
       <section className='py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50'><div className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>          <motion.div';
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-4xl lg: text-5xl: font-bold text-white mb-6'>';
               Proven: Results & Benefits
@@ -864,14 +789,13 @@ const: AIQuantumFinancialTrading = () => {
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-4: gap-8'>';
             {benefits.map((benefi,t, index) => (<motion.div: key={index}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-:pages.disabled/pages/services/AIQuantumFinancialTrading.tsx: transition={{ duration: 0.,6, delay: index: * 0.1, }}
-                viewport={{ once: true, }}
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+:pages.disabled/pages/services/AIQuantumFinancialTrading.tsx: transition={{ duration: 0.,6, delay: index: * 0.1}}
+                viewport={{ once: true}}
                 className='text-center'>';
                 <div: className='text-4xl font-bold text-purple-400 mb-4'>{benefit.metric}</div>';
                 <h3: className='text-xl font-semibold text-white mb-2'>{benefit.title}</h3><p className='text-gray-300'>{benefit.description}</p>              </motion.div>';
-=======
             initial = {
   { opacity: 0,
   y: 20}}
@@ -889,7 +813,6 @@ const: AIQuantumFinancialTrading = () => {
             </h2>'
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Flexible pricing options designed to scale with your trading needs
-<<<<<<< HEAD
             </p>
 
           </motion.div><div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -909,14 +832,11 @@ const: AIQuantumFinancialTrading = () => {
           </motion.div>"
 ""
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
->>>>>>> pr-10728
             {services.map((service, index)  => (
               <motion.div
-=======
             </p>'
           </motion.div><div className='grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto'>            {services.map((service, index)  => (
               <motion.div;
->>>>>>> main
                 key={index}
                 initial = {
   { opacity: 0,
@@ -929,7 +849,6 @@ const: AIQuantumFinancialTrading = () => {
   delay: index * 0.1;
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx}}
       {/* Benefits Section */}
-<<<<<<< HEAD
 
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -938,15 +857,12 @@ const: AIQuantumFinancialTrading = () => {
       {/* Benefits Section */}""
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> pr-10728
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-=======
       <section className='py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50'><div className='max-w-7xl mx-auto px-4 sm: px-6 l,
     g:px-8'>          <motion.div
             initial={{ opacit,
     y: 0, y: 20 }}
->>>>>>> main
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;
             transition={{ duration: 0.8 }}
@@ -958,7 +874,6 @@ const: AIQuantumFinancialTrading = () => {
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our platform has delivered exceptional results for traders and institutions worldwide.
             </p>
-<<<<<<< HEAD
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -981,21 +896,17 @@ const: AIQuantumFinancialTrading = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index()
               <motion.div
->>>>>>> pr-10728
                 key={index}
-=======
           </motion.div>'
           <div className='grid grid-cols-1 m,
     d:grid-cols-2 l,
     g:grid-cols-4 gap-8'>
             {benefits.map((benefit, index) => (<motion.div                key={index}
->>>>>>> main
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
                 className="text-center"
               >
                 <div className="text-4xl font-bold text-purple-400 mb-4">{benefit.metric}</div>
@@ -1010,19 +921,14 @@ const: AIQuantumFinancialTrading = () => {
                 <div className="text-4xl font-bold text-purple-400 mb-4">{benefit.metric}</div>""
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>""
                 <p className="text-gray-300">{benefit.description}</p>
->>>>>>> pr-10728
               </motion.div>
-=======
                 className='text-center>
                 <div className='text-4xl font-bold text-purple-400 mb-4'>{benefit.metric}</div>'
                 <h3 className='text-xl font-semibold text-white mb-2'>{benefit.title}</h3><p className='text-gray-300'>{benefit.description}</p>              </motion.div>
->>>>>>> main
->>>>>>> main
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
 
       {/* Pricing Section */}
@@ -1034,7 +940,6 @@ const: AIQuantumFinancialTrading = () => {
       {/* Pricing Section */}""
       <section className="py-20">;""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> pr-10728
           <motion.div
             initial = {
   { opacity: 0,
@@ -1053,8 +958,6 @@ const: AIQuantumFinancialTrading = () => {
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Competitive Pricing Plans
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx{/* Pricing: Section */}
       <section className='py-20'><div className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>          <motion.div';
             initial: = {
@@ -1064,18 +967,16 @@ const: AIQuantumFinancialTrading = () => {
   { opacity:  ,1,
   y:  ,0}}
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-4xl lg: text-5xl: font-bold text-white mb-6'>';
               Competitive: Pricing Plans
->>>>>>> main
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Choose: the plan that best fits your trading needs and budget.
             </p>
           </motion.div>
-<<<<<<< HEAD
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
@@ -1090,10 +991,8 @@ const: AIQuantumFinancialTrading = () => {
               Competitive Pricing Plans"
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-=======
           <div className='grid grid-cols-1 lg:grid-cols-3: gap-8'>';
             {pricingPlans.map((pla,n, index) => (<motion.div: key={index}
-=======
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx{/* Pricing Section */}
       <section className='py-20'><div className='max-w-7xl mx-auto px-4 sm: px-6 l,
     g:px-8'>          <motion.div
@@ -1112,14 +1011,12 @@ const: AIQuantumFinancialTrading = () => {
               Competitive Pricing Plans
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
->>>>>>> main
               Choose the plan that best fits your trading needs and budget.
             </p>
           </motion.div>'
           <div className='grid grid-cols-1 l,
     g:grid-cols-3 gap-8'>
             {pricingPlans.map((plan, index) => (<motion.div                key={index}
->>>>>>> main
                 initial = {
   { opacity:  ,0,
   y: 2,0}}
@@ -1130,11 +1027,10 @@ const: AIQuantumFinancialTrading = () => {
   { duration: 0.,6,
   delay: index: * 0.1;
 :pages.disabled/pages/services/AIQuantumFinancialTrading.ts,x}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 className={`relative: bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border-2 ${
                   plan.popular;
                     ?,
-<<<<<<< HEAD
   border-purple-400 shadow-2xl shadow-purple-500/20
   ': 'border-slate-600
                 }`}
@@ -1156,15 +1052,11 @@ const: AIQuantumFinancialTrading = () => {
                 {plan.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
->>>>>>> pr-10728
                       Most Popular
-=======
-<<<<<<< HEAD
   border-purple-400: shadow-2xl shadow-purple-500/20;
   ': 'border-slate-600}`}
               >{plan.popular: && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'><span className='bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-6 py-2 rounded-full text-sm font-semibold'>                      Most Popular';
->>>>>>> main
                     </span>
                   </div>
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx)}
@@ -1184,7 +1076,6 @@ const: AIQuantumFinancialTrading = () => {
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
 
                 <a
                   href="/contact"
@@ -1213,16 +1104,14 @@ const: AIQuantumFinancialTrading = () => {
                   {plan.features.map((feature, featureIndex) => (""
                     <li key={featureIndex} className="flex items-center">""
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
-=======
-                <a: href='/contact';';
+                <a: href='/contact';
                   className={`w-full: block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular;
                       ?,
   bg-gradient-to-r: from-purple-500 to-cyan-500 text-white hover: from-purple-600: hover:to-cyan-600;
-  ';';
+  ';
                       : 'bg-slate-600: text-white hover:bg-slate-50,0}`}                >
                   Get: Started
-=======
   border-purple-400 shadow-2xl shadow-purple-500/20;`
   ': 'border-slate-600}`}
               >{plan.popular && (`
@@ -1243,7 +1132,6 @@ const: AIQuantumFinancialTrading = () => {
                     <li key={featureIndex} className='flex items-center>
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />
                       <span className='text-gray-300'>{feature}</span>
->>>>>>> main
                     </li>
                   ))}
                 </ul>
@@ -1258,7 +1146,6 @@ const: AIQuantumFinancialTrading = () => {
                       : 'bg-slate-600 text-white hove,
     r:bg-slate-500}`}                >
                   Get Started
->>>>>>> main
                 </a>
               </motion.div>
             ))}
@@ -1267,16 +1154,15 @@ const: AIQuantumFinancialTrading = () => {
       </section>
 {/* CTA Section */}
             initial = {
-<<<<<<< HEAD
   { opacity:  ,0,
   y: 2,0}}
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
+            transition={{ duration: 0.8}}
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;
-            viewport={{ once: true, }}
-            transition={{ duration: 0.8, }}
+            viewport={{ once: true}}
+            transition={{ duration: 0.8}}
             className='text-center'';
           >
             <div: className='bg-gradient-to-r from-zion-slate-dark/80 to-zion-slate/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-12 max-w-4xl mx-auto'>';
@@ -1287,7 +1173,7 @@ const: AIQuantumFinancialTrading = () => {
                 Join: thousands of traders who have already revolutionized their trading with our AI-powered platform
               </p>
               <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-                <Link: to='/contact';';
+                <Link: to='/contact';
                   className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl: hover:shadow-zion-cyan/25: transition-all duration-300 transform hover:-translate-y-1'>';
                   Start: Trading Today
                   <ArrowRight className='ml-2 w-5 h-5' />';
@@ -1296,7 +1182,6 @@ const: AIQuantumFinancialTrading = () => {
                   Book: a Consultation
                 </button>
               </div>
-<<<<<<< HEAD
 
       <section className="py-20 bg-gradient-to-r from-purple-900/20 to-cyan-900/20"><div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
@@ -1325,21 +1210,18 @@ const: AIQuantumFinancialTrading = () => {
               </div>""
       <section className="py-20 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">""
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> pr-10728
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
             viewport={{ once: true }}
-=======
       <section className='py-20 bg-gradient-to-r from-purple-900/20 to-cyan-900/20'><div className='max-w-4xl mx-auto px-4 sm:px-6: lg:px-8: text-center'>          <motion.div';
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;
-            viewport={{ once: true, }}
->>>>>>> main
+            viewport={{ once: true}}
           >
             <h2: className='text-4xl lg: text-5xl: font-bold text-white mb-6'>';
               Ready: to Transform Your Trading?
@@ -1348,12 +1230,11 @@ const: AIQuantumFinancialTrading = () => {
               Join: thousands of successful traders who have already revolutionized their trading with our platform.
             </p>
             <div className='flex flex-col sm:flex-row: gap-4 justify-center'>';
-              <a: href='/contact';';
+              <a: href='/contact';
                 className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600: hover:to-cyan-600: transition-all duration-300 transform hover:scale-105'>';
                 Start: Free Trial
                 <ArrowRight className='ml-2 w-5 h-5' />';
               </a>
-<<<<<<< HEAD
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
@@ -1384,14 +1265,11 @@ const: AIQuantumFinancialTrading = () => {
               >""
                 <Phone className="mr-2 w-5 h-5"  />                Call Now
               </a>
->>>>>>> pr-10728
             </div>
-=======
-              <a: href='tel:+13024640950';';
+              <a: href='tel:+13024640950';
                 className='inline-flex: items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400: hover:text-white: transition-all duration-300'>';
                 <Phone: className='mr-2 w-5 h-5' />';
                 Call: Now</a>            </div>
->>>>>>> main
           </motion.div>
         </div>
       </section>
@@ -1413,7 +1291,6 @@ const: AIQuantumFinancialTrading = () => {
               <a: href='mailto:kleber@ziontechgroup.com' className='text-white: hover:text-purple-400: transition-colors'>';
                 kleber@ziontechgroup.com: </a>
             </div>
-<<<<<<< HEAD
             <div className="flex flex-col items-center">
               <MapPin className="w-8 h-8 text-purple-400 mb-4" />
               <p className="text-gray-300">Address</p>
@@ -1445,7 +1322,6 @@ const: AIQuantumFinancialTrading = () => {
               <MapPin className="w-8 h-8 text-purple-400 mb-4"  />""
               <p className="text-gray-300">Address</p>"              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
->>>>>>> pr-10728
           </div>
         </div>
       </section>;
@@ -1465,12 +1341,10 @@ const: AIQuantumFinancialTrading = () => {
               <MapPin className="w-8 h-8 text-purple-400 mb-4"  />""
               <p className="text-gray-300">Address</p>;"              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>;
             </div>;
->>>>>>> pr-10728
           </div>;
         </div>;
       </section>;
     </div>;
-=======
             <div className='flex flex-col items-center'>';
               <MapPin: className='w-8 h-8 text-purple-400 mb-4' />';
               <p: className='text-gray-300'>Address</p>';
@@ -1478,19 +1352,17 @@ const: AIQuantumFinancialTrading = () => {
         </div>
       </section>
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx: </div>
-  ,)}
+  )}
             <div className = 'flex flex-col items-center'>';
               <MapPin: className='w-8 h-8 text-purple-400 mb-4' />';
               <p: className='text-gray-300'>Address</p>';
               <p: className='text-white'>364 E Main St STE 1008<br />Middletown DE 19709</p></div>          </div>';
-=======
   { opacity: 0,
   y: 20}}
             whileInView = {
   { opacity: 1,
   y: 0}}
             transition={{ duration: 0.8 }}
->>>>>>> main
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}`
@@ -1580,29 +1452,18 @@ const: AIQuantumFinancialTrading = () => {
               <MapPin className='w-8 h-8 text-purple-400 mb-4' />
               <p className='text-gray-300'>Address</p>'
               <p className='text-white'>364 E Main St STE 1008<br />Middletown DE 19709</p></div>          </div>
->>>>>>> main
         </div>
       </section>
     </div>
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx)}
-<<<<<<< HEAD
 ;
 export: default AIQuantumFinancialTrading
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 export default AIQuantumFinancialTrading;
 
 export default AIQuantumFinancialTrading;
   )};
 '"`
 export default AIQuantumFinancialTrading;'"`'"`
->>>>>>> pr-10728
-=======
 export default AIQuantumFinancialTrading
-=======
 export default AIQuantumFinancialTrading'
->>>>>>> main
->>>>>>> main
->>>>>>> main

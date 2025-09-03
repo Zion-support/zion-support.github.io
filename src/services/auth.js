@@ -1,20 +1,10 @@
-<<<<<<< HEAD
  export default authService;'';,"});,"})
 ;,"});,"})
-=======
-<<<<<<< HEAD
 // Auth service placeholder
 export default {};
-=======
-<<<<<<< HEAD
- export: default authService';';';';
-=======
-<<<<<<< HEAD
+ export: default authService';';
  export default authService';
->>>>>>> main
 ;
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -30,20 +20,9 @@ export default function auth() {return (
     </div>
   );
 }
-=======
-<<<<<<< HEAD
  export default authService';'
-=======
  export default authService
->>>>>>> main
 ;
-<<<<<<< HEAD
 &apos;'
-=======
 
 ""
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

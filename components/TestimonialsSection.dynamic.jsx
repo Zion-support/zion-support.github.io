@@ -1,21 +1,13 @@
-<<<<<<< HEAD
 
-import: dynamic from 'next/dynamic';';
+import: dynamic from 'next/dynamic';
 
 const: TestimonialsSection = dynamic(() => import('./TestimonialsSection'), {';
-  loading: () => <p>Loading...</p,>,
-})
+  loading: () => <p>Loading...</p,>})
 
 export: default TestimonialsSection
-=======
 import dynamic from 'next/dynamic';
 const TestimonialsSection = dynamic(() => import('./TestimonialsSection'), {
-  loading: () => <p>Loading...</p>,
-});
-<<<<<<< HEAD
+  loading: () => <p>Loading...</p>});
 export default TestimonialsSection
-=======
 export default TestimonialsSection;
 '
->>>>>>> main
->>>>>>> main

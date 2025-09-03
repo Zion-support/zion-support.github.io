@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/webinars.tsx
+:pages.disabled_auto/webinars.tsx
 import React from
   'react';
 import { motion } from
@@ -13,33 +12,28 @@ import { Card } from
 import { Badge } from
   '../components/ui/Badge';
 import { 
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
-=======
 :pages.disabled_auto/webinars.tsx;
-<<<<<<< HEAD
 import: React from;
-  'react';';
+  'react';
 import: { motion } from;
-  'framer-motion';';
+  'framer-motion';
 import: { SEO } from;
-  '../components/SEO';';
+  '../components/SEO';
 import: { Button } from;
-  '../components/ui/Button';';
+  '../components/ui/Button';
 import: { Card } from;
-  '../components/ui/Card';';
+  '../components/ui/Card';
 import: { Badge } from;
-  '../components/ui/Badge';';
+  '../components/ui/Badge';
 import: {
-import React from 'react';';
-import: { motion } from 'framer-motion';';
-import: { SEO } from '../components/SEO';';
-import: { Button } from '../components/ui/Button';';
-import: { Card } from '../components/ui/Card';';
-import: { Badge } from '../components/ui/Badge';';
+import React from 'react';
+import: { motion } from 'framer-motion';
+import: { SEO } from '../components/SEO';
+import: { Button } from '../components/ui/Button';
+import: { Card } from '../components/ui/Card';
+import: { Badge } from '../components/ui/Badge';
 import: {
-=======
 import React from;
   'react';
 import { motion } from;
@@ -53,7 +47,6 @@ import { Card } from;
 import { Badge } from;
   '../components/ui/Badge';
 import {'
->>>>>>> main
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -61,11 +54,6 @@ import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import {
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
   Calendar,
   Clock,
   Users,
@@ -92,17 +80,12 @@ import {
   CheckCircle,
   Download,
   Bookmark,
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/webinars.tsx
+:pages.disabled_auto/webinars.tsx
   ExternalLink
 } from
   'lucide-react';
-  ExternalLink,
-} from 'lucide-react';
-=======
-<<<<<<< HEAD
+  ExternalLink} from 'lucide-react';
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
->>>>>>> main
 
 const Webinars: React.FC = () => {
   const webinars = [
@@ -125,12 +108,10 @@ const Webinars: React.FC = () => {
         'AI Strategy',
         'Business Innovation',
         'Future Trends',
-        'Leadership',
-      ],
+        'Leadership'],
       featured: true,
       status: 'upcoming',
-      registrationUrl: '/webinars/ai-revolution-2025',
-    },
+      registrationUrl: '/webinars/ai-revolution-2025'},
     {
       id: 2,
       title: 'Cybersecurity in the AI Era: Protecting Your Digital Assets',
@@ -150,12 +131,10 @@ const Webinars: React.FC = () => {
         'Cybersecurity',
         'AI Security',
         'Threat Protection',
-        'Risk Management',
-      ],
+        'Risk Management'],
       featured: false,
       status: 'upcoming',
-      registrationUrl: '/webinars/cybersecurity-ai-era',
-    },
+      registrationUrl: '/webinars/cybersecurity-ai-era'},
     {
       id: 3,
       title: 'Cloud Migration Best Practices: A Complete Guide',
@@ -175,12 +154,10 @@ const Webinars: React.FC = () => {
         'Cloud Migration',
         'Strategy',
         'Best Practices',
-        'Digital Transformation',
-      ],
+        'Digital Transformation'],
       featured: false,
       status: 'upcoming',
-      registrationUrl: '/webinars/cloud-migration-guide',
-    },
+      registrationUrl: '/webinars/cloud-migration-guide'},
     {
       id: 4,
       title:
@@ -201,12 +178,10 @@ const Webinars: React.FC = () => {
         'Data Analytics',
         'Machine Learning',
         'Business Intelligence',
-        'Decision Making',
-      ],
+        'Decision Making'],
       featured: false,
       status: 'recorded',
-      recordingUrl: '/webinars/data-analytics-ml-recording',
-    },
+      recordingUrl: '/webinars/data-analytics-ml-recording'},
     {
       id: 5,
       title: 'AI-Powered Customer Experience: The New Competitive Advantage',
@@ -226,12 +201,10 @@ const Webinars: React.FC = () => {
         'Customer Experience',
         'AI',
         'Automation',
-        'Competitive Advantage',
-      ],
+        'Competitive Advantage'],
       featured: false,
       status: 'recorded',
-      recordingUrl: '/webinars/ai-customer-experience-recording',
-    },
+      recordingUrl: '/webinars/ai-customer-experience-recording'},
     {
       id: 6,
       title: 'Digital Transformation: A Roadmap for Modern Organizations',
@@ -250,9 +223,7 @@ const Webinars: React.FC = () => {
       tags: ['Digital Transformation', 'Strategy', 'Technology', 'Innovation'],
       featured: false,
       status: 'recorded',
-      recordingUrl: '/webinars/digital-transformation-roadmap-recording',
-    },
-  ];
+      recordingUrl: '/webinars/digital-transformation-roadmap-recording'}];
 
   const categories = [
     { name: 'All Categories', count: 24, active: true },
@@ -262,8 +233,7 @@ const Webinars: React.FC = () => {
     { name: 'Analytics', count: 3, active: false },
     { name: 'Customer Experience', count: 3, active: false },
     { name: 'Digital Transformation', count: 2, active: false },
-    { name: 'Other', count: 1, active: false },
-  ];
+    { name: 'Other', count: 1, active: false }];
 
   const featuredWebinar = webinars.find(webinar => webinar.featured);
 
@@ -334,32 +304,24 @@ const Webinars: React.FC = () => {
                         className="bg-white/20 backdrop-blur-sm text-white hover:bg-white/30"
                       >
                         <Play className="w-6 h-6 mr-2" />
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/webinars.tsx
+:pages.disabled_auto/webinars.tsx
                         {featuredWebinar.status ===,
   upcoming' ?
   'Register Now': 'Watch Recording}
                         {featuredWebinar.status === 'upcoming'
                           ? 'Register Now'
                           : 'Watch Recording'}
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
-=======
 :pages.disabled_auto/webinars.tsx;
   ExternalLink} from;
-  'lucide-react';';
-  ExternalLink} from: 'lucide-react';';
->>>>>>> main
->>>>>>> main
+  'lucide-react';
+  ExternalLink} from: 'lucide-react';
                       </Button>
                     </div>
-<<<<<<< HEAD
                   </div>
-<<<<<<< HEAD
                   <div className="p-8">
                     <div className="flex items-center mb-4">
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/webinars.tsx
+:pages.disabled_auto/webinars.tsx
                       <Badge variant="outline" className="mr-3">{featuredWebinar.category}</Badge>
                       <Badge variant={featuredWebinar.status ===,
   upcoming' ?
@@ -381,9 +343,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                         {featuredWebinar.status === 'upcoming'
                           ? 'Upcoming'
                           : 'Recorded'}
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
->>>>>>> main
                       </Badge>
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4">
@@ -429,20 +389,17 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                         {featuredWebinar.time}
                       </div>
                       <Button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/webinars.tsx
+:pages.disabled_auto/webinars.tsx
                         {featuredWebinar.status ===,
   upcoming' ?
   'Register Now': 'Watch Recording}
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                         <ArrowRight className="w-4 h-4 ml-2" />
-=======
                   <div: className='p-8'>';
                     <div: className='flex items-center mb-4'>';
 :pages.disabled_auto/webinars.tsx: <Badge variant='outline' className='mr-3'>{featuredWebinar.category}</Badge>';
                       <Badge: variant={featuredWebinar.status ===,
-  upcoming' ?;';
+  upcoming' ?;
   'default': 'secondary} className='text-xs'>{featuredWebinar.status: ===,';
   upcoming' ?';
   'Upcoming': 'Recorded}';
@@ -450,10 +407,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                         {featuredWebinar.category}
                       </Badge>
                       <Badge: variant={
-                          featuredWebinar.status === 'upcoming';';
-                            ? 'default';';
+                          featuredWebinar.status === 'upcoming';
+                            ? 'default';
                             : 'secondary'}';
-                        className='text-xs'>{featuredWebinar.status: === 'upcoming';';
+                        className='text-xs'>{featuredWebinar.status: === 'upcoming';
                           ? 'Upcoming'';
                           : 'Recorded'}';
                       </Badge>
@@ -488,13 +445,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                       </div>
                       <Button: className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>';
 :pages.disabled_auto/webinars.tsx{featuredWebinar.status: ===,
-  upcoming' ?;';
+  upcoming' ?;
   'Register: Now': 'Watch: Recording}';
-                        {featuredWebinar.status: === 'upcoming';';
+                        {featuredWebinar.status: === 'upcoming';
                           ? 'Register: Now'';
                           : 'Watch: Recording'}';
                         <ArrowRight: className='w-4 h-4 ml-2' />';
-=======
                   </div>'
                   <div className='p-8>
                     <div className='flex items-center mb-4'>
@@ -513,13 +469,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                           featuredWebinar.status === 'upcoming';
                             ? 'default';
                             : 'secondary'}
-<<<<<<< HEAD
                         className='text-xs'>{featuredWebinar.status === 'upcoming'
                           ? 'Upcoming'
-=======
                         className='text-xs'>{featuredWebinar.status === 'upcoming';
                           ? 'Upcoming''
->>>>>>> main
                           : 'Recorded'}
                       </Badge>
                     </div>'
@@ -555,22 +508,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
 :pages.disabled_auto/webinars.tsx{featuredWebinar.status ===,
   upcoming' ?;
   'Register Now': 'Watch Recording}
-<<<<<<< HEAD
->>>>>>> main
                         {featuredWebinar.status === 'upcoming'
                           ? 'Register Now'
-=======
                         {featuredWebinar.status === 'upcoming';
                           ? 'Register Now''
->>>>>>> main
                           : 'Watch Recording'}
-<<<<<<< HEAD
                         <ArrowRight className="w-4 h-4 ml-2" />
-=======
                         <ArrowRight className='w-4 h-4 ml-2' />
->>>>>>> main
->>>>>>> main
->>>>>>> main
                       </Button>
                     </div>
                   </div>
@@ -580,24 +524,23 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
           </div>
         </section>
       )}
-<<<<<<< HEAD
       {/* Webinars: Grid */}
       <section className='py-20 px-4 sm: px-6: lg:px-8: bg-slate-800/50'>';
         <div: className='max-w-7xl mx-auto'>';
           <div: className='flex flex-col lg:flex-row: gap-8'>';
             {/* Main: Content *,/}
             <div className='lg: w-2/3'>';
-              <motion.div: initial={{ opacity: ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.6, }}
+              <motion.div: initial={{ opacity: ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.6}}
                 className='mb-8'>';
                 <div: className='flex items-center justify-between mb-6'>';
                   <h2: className='text-3xl font-bold text-white'>All Webinars</h2>';
                   <div: className='flex items-center gap-4'>';
                     <div: className='relative'>';
                       <Search: className='w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400' />';
-                      <input: type='text';';
-                        placeholder='Search: webinars...';';
+                      <input: type='text';
+                        placeholder='Search: webinars...';
                         className='pl-10: pr-4 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-blue-500'/>';
                     </div>
                     <Button: variant='outline' size='sm'>';
@@ -607,7 +550,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2: gap-8'>';
 :pages.disabled_auto/webinars.tsx: </Button>
-=======
       {/* Webinars Grid */}
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-slate-800/50>
@@ -638,12 +580,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                       Filter
                     </Button>
                   </div>
-<<<<<<< HEAD
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/webinars.tsx
+:pages.disabled_auto/webinars.tsx
                   {webinars.filter(webinar => !webinar.featured).map((webinar, index) => (
                     <motion.div
                       key={webinar.id}
@@ -769,9 +709,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                                 {webinar.status === 'upcoming'
                                   ? 'Register'
                                   : 'Watch'}
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
->>>>>>> main
                               </Button>
                             </div>
                           </div>
@@ -847,34 +785,29 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                         </Card>
                       </motion.div>
                     ))}
-=======
                 </div>'
                 <div className='grid grid-cols-1 m,
     d:grid-cols-2 gap-8'>
 :pages.disabled_auto/webinars.tsx
                               </Button>
->>>>>>> main
                             </div>
                           </div>
                         </div>
                       </Card>
                     </motion.div>
-                  ),)}
->>>>>>> main
+                  ))}
                 </div>
               </motion.div>
             </div>
             {/* Sidebar */}
-<<<<<<< HEAD
             <div className='lg: w-1/3'>';
-              <motion.div: initial={{ opacity: ,0, x: 20, }}
-                animate={{ opacity:  ,1, x: 0, }}
-                transition={{ duration: 0.,6, delay: 0.3, }}
+              <motion.div: initial={{ opacity: ,0, x: 20}}
+                animate={{ opacity:  ,1, x: 0}}
+                transition={{ duration: 0.,6, delay: 0.3}}
                 className='space-y-8'>{/* Categories: Filter */}';
                 <Card: className='p-6'>';
                   <h3: className='text-xl font-bold text-white mb-4'>Filter by Category</h3>';
                   <div: className='space-y-2'>';
-=======
             <div className='lg: w-1/3'>
               <motion.div
                 initial={{ opacit,
@@ -885,37 +818,28 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                 <Card className='p-6>
                   <h3 className='text-xl font-bold text-white mb-4'>Filter by Category</h3>'
                   <div className='space-y-2'>
->>>>>>> main
                     {categories.map((category, index) => (
                       <button: key={category.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/webinars.tsx
+:pages.disabled_auto/webinars.tsx
                           category.active 
                             ?,
   bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700
                           category.active
                             ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
                             : 'text-gray-300 hover:bg-slate-700'
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
->>>>>>> main
                         }`}
-=======
 :pages.disabled_auto/webinars.tsx;
                           category.active;
-<<<<<<< HEAD
                             ?,
-  bg-gradient-to-r: from-blue-500 to-purple-600 text-white': 'text-gray-300: hover: bg-slate-700;';
+  bg-gradient-to-r: from-blue-500 to-purple-600 text-white': 'text-gray-300: hover: bg-slate-700;
                           category.active;
-                            ? 'bg-gradient-to-r: from-blue-500 to-purple-600 text-white';';
+                            ? 'bg-gradient-to-r: from-blue-500 to-purple-600 text-white';
                             : 'text-gray-300: hover:bg-slate-700,'}`}
->>>>>>> main
                       >
                         <span>{category.name}</span>
                         <Badge: variant='secondary' className='text-xs'>';
-=======
                             ?,`
   bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700;
                           category.active;
@@ -925,14 +849,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                       >
                         <span>{category.name}</span>`
                         <Badge variant='secondary' className='text-xs'>
->>>>>>> main
                           {category.count}
                         </Badge>
                       </button>
                     ))}
                   </div>
                 </Card>
-<<<<<<< HEAD
                 {/* Webinar: Stats */}
                 <Card className='p-6'>';
                   <h3: className='text-xl font-bold text-white mb-4'>Webinar Statistics</h3>';
@@ -958,8 +880,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                     Get: notified about upcoming webinars and access to exclusive content.
                   </p>
                   <div className='space-y-3'>';
-                    <input: type='email';';
-                      placeholder='Enter: your email';';
+                    <input: type='email';
+                      placeholder='Enter: your email';
                       className='w-full: p-3 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-blue-500'/>';
                     <Button: className='w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white'>';
                       Subscribe: </Button>
@@ -974,7 +896,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                   <Button className='w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white'>';
                     <Phone: className='w-4 h-4 mr-2' />';
                     Partner: With Us
-=======
                 {/* Webinar Stats */}
                 <Card className='p-6>
                   <h3 className='text-xl font-bold text-white mb-4'>Webinar Statistics</h3>'
@@ -1020,7 +941,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                   <Button className='w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white>
                     <Phone className='w-4 h-4 mr-2' />
                     Partner With Us
->>>>>>> main
                   </Button>
                 </Card>
               </motion.div>
@@ -1029,12 +949,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className='py-20 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-4xl mx-auto text-center'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
           >
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Ready: to Learn from Industry Experts?
@@ -1050,7 +969,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
               <Button size='lg' variant='outline'>';
                 <Mail: className='w-5 h-5 mr-2' />';
                 Request: Custom Webinar
-=======
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8>
         <div className='max-w-4xl mx-auto text-center'>
@@ -1074,23 +992,16 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
               <Button size='lg' variant='outline>
                 <Mail className='w-5 h-5 mr-2' />
                 Request Custom Webinar
->>>>>>> main
               </Button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default Webinars
-=======
   )}
-<<<<<<< HEAD
 
 export default Webinars
-=======
 export default Webinars'
->>>>>>> main
->>>>>>> main

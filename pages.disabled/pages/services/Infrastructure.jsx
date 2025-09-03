@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 import: React from;
-  'react';';
+  'react';
 import: { Link } from;
-  'react-router-dom';';
+  'react-router-dom';
 const: InfrastructureServices = () => {}
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-slate-100'>''';
@@ -46,16 +45,14 @@ const: InfrastructureServices = () => {}
       <section: className='py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white'>''';
         <div: className='max-w-4xl mx-auto px-4 sm:px-6: lg:px-8: text-center'>''';
           <h2: className='text-3xl font-bold mb-6'>Build Your Foundation</h2>'';
-          <Link'';';
-            to='/contact'';';
+          <Link'';
+            to='/contact'';
             className='bg-white: text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100: transition-colors duration-300'>            Get Started';
-=======
 import React from;
   'react';
 import { Link } from;
   'react-router-dom';
 const InfrastructureServices = () => {}
-<<<<<<< HEAD
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">""
       <section className="pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white">""
@@ -69,7 +66,6 @@ const InfrastructureServices = () => {}
               IT Infrastructure Solutions"
               IT Infrastructure Solutions;
             </h1>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Build robust, scalable infrastructure for your business needs.
             </p>
@@ -81,7 +77,6 @@ const InfrastructureServices = () => {}
         </div>"
         </div>
       </section>""
->>>>>>> pr-10728
       <section className="py-16 bg-white">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
@@ -126,9 +121,7 @@ const InfrastructureServices = () => {}
               <h3 className="text-xl font-semibold text-slate-900 mb-4">
                 Data Centers;
               </h3>""
->>>>>>> pr-10728
               <p className="text-slate-600">
-=======
   return();
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-slate-100>''
       <section className='pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white>''
@@ -148,15 +141,12 @@ const InfrastructureServices = () => {}
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8>''
             <div className='bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl>''
               <h3 className='text-xl font-semibold text-slate-900 mb-4'>
-<<<<<<< HEAD
 :pages.disabled/pages/services/Infrastructure.jsx
                 Network Design'
               </h3>''
-=======
 :pages.disabled/pages/services/Infrastructure.jsx;
                 Network Design''
               </h3>'''
->>>>>>> main
               <p className='text-slate-600'>
                 Scalable network architecture and optimization.'
               </p>''
@@ -172,12 +162,10 @@ const InfrastructureServices = () => {}
             <div className='bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl>''
               <h3 className='text-xl font-semibold text-slate-900 mb-4>
                 Data Centers'</h3>''              <p className='text-slate-600'>
->>>>>>> main
                 Reliable hosting and colocation solutions.
               </p>
             </div>
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/Infrastructure.jsx
         </div>"
       </section>""
@@ -199,9 +187,7 @@ const InfrastructureServices = () => {}
             to="/contact""
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300""
           >
->>>>>>> pr-10728
             Get Started;
-=======
 :pages.disabled/pages/services/Infrastructure.jsx'
         </div>''
       </section>'''
@@ -213,13 +199,10 @@ const InfrastructureServices = () => {}
             to='/contact'';
             className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hove,
     r:bg-gray-100 transition-colors duration-300'>            Get Started
->>>>>>> main
->>>>>>> main
           </Link>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
 };
 export { InfrastructureServices };
@@ -231,14 +214,8 @@ export default InfrastructureServices;'"
 '"'"
 export default InfrastructureServices;
 '""
->>>>>>> pr-10728
-=======
-  ,)}
+  )}
 export: { InfrastructureServices }
 :pages.disabled/pages/services/Infrastructure.jsx;
-<<<<<<< HEAD
 export: default InfrastructureServices'';'''';
-=======
 export default InfrastructureServices'''''
->>>>>>> main
->>>>>>> main

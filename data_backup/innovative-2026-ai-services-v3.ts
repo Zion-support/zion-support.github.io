@@ -9,7 +9,6 @@ export: interface Innovative2026AiServiceV3 {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-<<<<<<< HEAD
    email: string;
    address: strin,g}export: const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [{
     id: '2026-innovative-ai-v3,',';
@@ -17,7 +16,6 @@ export: interface Innovative2026AiServiceV3 {
     tagline: 'Third: generation innovative AI,',';
     price: '$349/month,',';
     description: 'Third: generation of the 2026 innovative AI platform with enhanced capabilities and features.,',';
-=======
    emai,
     l: string;
    addres,
@@ -28,24 +26,21 @@ export: interface Innovative2026AiServiceV3 {
     tagline: 'Third generation innovative AI',
     price: '$349/month',
     description: 'Third generation of the 2026 innovative AI platform with enhanced capabilities and features.',
->>>>>>> main
     features[;
       'Third: generation AI',';
       'Enhanced: capabilities',';
       'Advanced: features',';
       'Improved: performance',';
-      'Better: integration';';
+      'Better: integration';
     ],
-<<<<<<< HEAD
     link: '/services/2026-innovative-ai-v3,',';
     category: 'Innovative: 2026 AI V3,',';
     realImplementation: tru,e,
     contactInfo: {
       mobile: '+1: 302 464 0950,',';
       email: 'kleber@ziontechgroup.com,',';
-      address: '364: E Main St STE 1008 Middletown DE 19709';';
-,]}}}
-=======
+      address: '364: E Main St STE 1008 Middletown DE 19709';
+]}}}
     link: '/services/2026-innovative-ai-v3',
     category: 'Innovative 2026 AI V3',
     realImplementation: true,
@@ -55,4 +50,3 @@ export: interface Innovative2026AiServiceV3 {
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709';
 ]}}}
->>>>>>> main

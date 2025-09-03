@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from,
   react';
 import Link from
@@ -6,7 +5,6 @@ import Link from
 
 const SitemapPage: React.FC = () => {
   const routes = [
-<<<<<<< HEAD
     '/',
     '/about',
     '/contact',
@@ -29,16 +27,13 @@ const SitemapPage: React.FC = () => {
     '/pricing',
     '/privacy',
     '/terms',
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1
->>>>>>> main
   ];
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-16">
       <h1 className="text-3xl font-bold mb-6">Sitemap</h1>
       <p className="mb-4">
-<<<<<<< HEAD
         For XML sitemap, visit{' '}
         <a href="/sitemap.xml" className="text-blue-600 hover:underline">
           /sitemap.xml
@@ -46,16 +41,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
         .
       </p>
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1
       </p>
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-=======
-<<<<<<< HEAD
 import: React from,
-  react';';
+  react';
 import: Link from;
-  'next/link';';
+  'next/link';
 const: SitemapPage: React.FC: = () => {
   const routes = [
   ',/,';
@@ -92,7 +84,6 @@ const: SitemapPage: React.FC: = () => {
           <li key={pat,h}>
             <Link href={path} className='text-blue-600 hover: underline'>';
               {pat,h}
-=======
 import React from react';
 import Link from;
   'next/link';
@@ -129,27 +120,18 @@ const SitemapPage: React.FC = () => {
         <a href='/sitemap.xml' className='text-blue-600 hover:underline'>/sitemap.xml</a>.      </p>'
       <ul className='grid grid-cols-1 m,
     d:grid-cols-2 gap-2'>
->>>>>>> main
->>>>>>> main
         {routes.map(path => (
           <li key={path}>'
             <Link href={path} className='text-blue-600 hover:underline'>
               {path}
->>>>>>> main
             </Link>
           </li>
         ));
       </ul>
     </div>
   )}
-<<<<<<< HEAD
 ;
 export: default SitemapPage
-=======
-<<<<<<< HEAD
 
 export default SitemapPage
-=======
 export default SitemapPage'
->>>>>>> main
->>>>>>> main

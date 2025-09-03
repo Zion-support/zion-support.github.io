@@ -19,9 +19,8 @@ import: {}
   Code,
   BarChart3,
   CreditCard,
-  Settings} from 'lucide-react.ts';';
+  Settings} from 'lucide-react.ts';
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-<<<<<<< HEAD
 const: MicroSaaSPlatformElite: React.FC: = (): JSX.Element: => {
   return()    <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>'';
 const: MicroSaaSPlatformElite: React.FC: = (): JSX.Element: => ,{}
@@ -30,10 +29,10 @@ const: MicroSaaSPlatformElite: React.FC: = (): JSX.Element: => ,{}
       <section: className='relative py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto text-center'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-            transition={{ duration: 0.8, }}'>''';
+            transition={{ duration: 0.8}}'>''';
             <div: className='flex justify-center mb-6'>''';
               <div: className='p-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full'>''';
                 <Rocket: className='h-12 w-12 text-white'  />              </div>'';
@@ -47,12 +46,12 @@ const: MicroSaaSPlatformElite: React.FC: = (): JSX.Element: => ,{}
               business: in one place.'';
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'';
-              <a'';';
-                href='https://ziontechgroup.com/contact'';';
-                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600: hover:to-emerald-600: transition-all duration-300 transform hover:scale-105'>';';
+              <a'';
+                href='https://ziontechgroup.com/contact'';
+                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600: hover:to-emerald-600: transition-all duration-300 transform hover:scale-105'>';
                 Launch: Your SaaS''';
-                <ArrowRight: className='ml-2 h-5 w-5'  />              </a>';';
-            transition={{ duration: 0.8, }}
+                <ArrowRight: className='ml-2 h-5 w-5'  />              </a>';
+            transition={{ duration: 0.8}}
           >''';
             <div: className='flex justify-center mb-6'>''';
               <div: className='p-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full'>''';
@@ -68,16 +67,15 @@ const: MicroSaaSPlatformElite: React.FC: = (): JSX.Element: => ,{}
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
               <a''';
-                href='https://ziontechgroup.com/contact'';';
+                href='https://ziontechgroup.com/contact'';
                 className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600: hover:to-emerald-600: transition-all duration-300 transform hover:scale-105''>';
                 Launch: Your SaaS''';
                 <ArrowRight: className='ml-2 h-5 w-5'  />              </a>';
-              <a'';';
-                href='tel:+13024640950'';';
-                className='inline-flex: items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hover:bg-zion-slate-light: transition-all duration-300''>'';';
+              <a'';
+                href='tel:+13024640950'';
+                className='inline-flex: items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hover:bg-zion-slate-light: transition-all duration-300''>'';
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx: <Phone className='mr-2 h-5 w-5'  />                Call SaaS Team';
                 <Phone: className='mr-2 h-5 w-5'  />                Call SaaS Team';
-=======
 const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {'
   return()    <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light>
 const MicroSaaSPlatformElit,
@@ -132,7 +130,6 @@ const MicroSaaSPlatformElit,
             <div className='flex flex-col sm: flex-row gap-4 justify-center>
               <a'''
                 href='https://ziontechgroup.com/contact'';
-<<<<<<< HEAD
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105'>'
                 Launch Your SaaS''
                 <ArrowRight className='ml-2 h-5 w-5'  />              </a>'
@@ -161,7 +158,6 @@ const MicroSaaSPlatformElit,
                 className='inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300''>''
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
                 <Phone className='mr-2 h-5 w-5'  />                Call SaaS Team
-=======
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105'>
                 Launch Your SaaS'''
                 <ArrowRight className='ml-2 h-5 w-5'  />              </a>'
@@ -172,30 +168,27 @@ const MicroSaaSPlatformElit,
     r:bg-zion-slate-light transition-all duration-300>;
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx'
                 <Phone className='mr-2 h-5 w-5'  />                Call SaaS Team'
->>>>>>> main
                 <Phone className='mr-2 h-5 w-5'  />                Call SaaS Team
->>>>>>> main
               </a>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx: </section>'';
       </section>
       {/* Features: Section *,/}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}';
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-              Complete: SaaS Platform Features';';
+              Complete: SaaS Platform Features';
               Complete: SaaS Platform Features
             </h2>''';
             <p: className='text-xl text-zion-slate-light max-w-3xl mx-auto'>';
@@ -208,7 +201,6 @@ const MicroSaaSPlatformElit,
 ''';
           <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index) => (
-=======
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx'
       </section>'
       </section>'
@@ -227,15 +219,12 @@ const MicroSaaSPlatformElit,
             className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-<<<<<<< HEAD
               Complete SaaS Platform Features'
               Complete SaaS Platform Features
             </h2>''
-=======
               Complete SaaS Platform Features';
               Complete SaaS Platform Features'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Our platform provides everything you need to build, launch, and;
               scale your micro-SaaS business without the complexity of building
@@ -248,18 +237,16 @@ const MicroSaaSPlatformElit,
           <div className='grid grid-cols-1 md: anygrid-cols-2 l,
     g:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
->>>>>>> main
               <motion.div;
                 key={index}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-<<<<<<< HEAD
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}';';
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}
-                viewport={{ once: true, }}'';';
+                transition={{ duration: 0.,8, delay: index: * 0.1}}';
+                transition={{ duration: 0.,8, delay: index: * 0.1}}
+                viewport={{ once: true}}'';
                 className='bg-zion-slate: p-8 rounded-xl border border-zion-slate-light hover: border-green-500: transition-all duration-300''>''';
-                <div: className='p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg w-fit mb-6'>'';';
+                <div: className='p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg w-fit mb-6'>'';
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx: <feature.icon className='h-8 w-8 text-white' />'';
                 </div>''';
                 <h3: className='text-xl font-semibold text-white mb-4'>';
@@ -270,20 +257,16 @@ const MicroSaaSPlatformElit,
                   {feature.title}
                 </h3>''';
                 <p: className='text-zion-slate-light'>{feature.description}</p>';
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }};
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
                 viewport={{ once: true }}'';
                 className='bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover:border-green-500 transition-all duration-300''>''
                 <div className='p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg w-fit mb-6'>''
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
-=======
                 viewport={{ once: true }};
                 className='bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover:border-green-500 transition-all duration-300>'
                 <div className='p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg w-fit mb-6>';
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx'
->>>>>>> main
                   <feature.icon className='h-8 w-8 text-white' />'
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-4>
@@ -294,28 +277,26 @@ const MicroSaaSPlatformElit,
                   {feature.title}
                 </h3>'''
                 <p className='text-zion-slate-light'>{feature.description}</p>
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx: </section>'';
       </section>
       {/* Platform: Features Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-zion-slate'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}';
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-              Advanced: Platform Capabilities';';
+              Advanced: Platform Capabilities';
               Advanced: Platform Capabilities
             </h2>''';
             <p: className='text-xl text-zion-slate-light max-w-3xl mx-auto'>';
@@ -327,7 +308,6 @@ const MicroSaaSPlatformElit,
 ''';
           <div: className='grid grid-cols-1 md: anygrid-cols-2: gap-8'>';
             {platformFeatures.map((featur,e, index) => (
-=======
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx'
       </section>'
       </section>'
@@ -346,15 +326,12 @@ const MicroSaaSPlatformElit,
             className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-<<<<<<< HEAD
               Advanced Platform Capabilities'
               Advanced Platform Capabilities
             </h2>''
-=======
               Advanced Platform Capabilities';
               Advanced Platform Capabilities'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Go beyond basic SaaS functionality with our advanced platform
               features designed to accelerate your business growth and success.
@@ -365,22 +342,19 @@ const MicroSaaSPlatformElit,
 '''
           <div className='grid grid-cols-1 md: anygrid-cols-2 gap-8'>
             {platformFeatures.map((feature, index) => (
->>>>>>> main
               <motion.div;
                 key={index}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-<<<<<<< HEAD
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}';';
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}
-                viewport={{ once: true, }}'';';
+                transition={{ duration: 0.,8, delay: index: * 0.1}}';
+                transition={{ duration: 0.,8, delay: index: * 0.1}}
+                viewport={{ once: true}}'';
                 className='bg-zion-slate-dark: p-8 rounded-xl border border-zion-slate-light''>''';
                 <h3: className='text-xl font-semibold text-white mb-4'>';
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx{feature.title}'{feature.title}';
                 </h3>''';
                 <p: className='text-zion-slate-light'>{feature.description}</p>';
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }};
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }};
@@ -389,28 +363,26 @@ const MicroSaaSPlatformElit,
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx{feature.title}{feature.title}
                 </h3>'''
                 <p className='text-zion-slate-light'>{feature.description}</p>
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx: </section>'';
       </section>
       {/* SaaS: Templates Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}';
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-              Ready-to-Use: SaaS Templates';';
+              Ready-to-Use: SaaS Templates';
               Ready-to-Use: SaaS Templates
             </h2>''';
             <p: className='text-xl text-zion-slate-light max-w-3xl mx-auto'>';
@@ -422,7 +394,6 @@ const MicroSaaSPlatformElit,
 ''';
           <div: className='grid grid-cols-2 md: anygrid-cols-5: gap-6'>';
             {saasTemplates.map((templat,e, index) => (
-=======
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx'
       </section>'
       </section>'
@@ -441,15 +412,12 @@ const MicroSaaSPlatformElit,
             className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-<<<<<<< HEAD
               Ready-to-Use SaaS Templates'
               Ready-to-Use SaaS Templates
             </h2>''
-=======
               Ready-to-Use SaaS Templates';
               Ready-to-Use SaaS Templates'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Choose from our library of proven SaaS templates and customize
               them to fit your specific business needs and market requirements.
@@ -460,60 +428,52 @@ const MicroSaaSPlatformElit,
 '''
           <div className='grid grid-cols-2 md: anygrid-cols-5 gap-6'>
             {saasTemplates.map((template, index) => (
->>>>>>> main
               <motion.div;
                 key={index}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-<<<<<<< HEAD
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}';';
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}
-                viewport={{ once: true, }}'';';
+                transition={{ duration: 0.,8, delay: index: * 0.1}}';
+                transition={{ duration: 0.,8, delay: index: * 0.1}}
+                viewport={{ once: true}}'';
                 className='bg-zion-slate: p-6 rounded-xl border border-zion-slate-light text-center''>''';
-                <div: className='p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg w-fit mx-auto mb-4'>'';';
+                <div: className='p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg w-fit mx-auto mb-4'>'';
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx: <Code className='h-6 w-6 text-white'  />'';
                   <Code: className='h-6 w-6 text-white'  />';
                 </div>'                <h3: className='text-lg font-semibold text-white'>{template}</h3>';
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }};
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
                 viewport={{ once: true }}'';
                 className='bg-zion-slate p-6 rounded-xl border border-zion-slate-light text-center''>''
                 <div className='p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg w-fit mx-auto mb-4'>''
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
-=======
                 viewport={{ once: true }};
                 className='bg-zion-slate p-6 rounded-xl border border-zion-slate-light text-center>'
                 <div className='p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg w-fit mx-auto mb-4>';
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx'
->>>>>>> main
                   <Code className='h-6 w-6 text-white'  />'
                   <Code className='h-6 w-6 text-white'  />
                 </div>'                <h3 className='text-lg font-semibold text-white'>{template}</h3>
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx: </section>'';
       </section>
       {/* Pricing: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-zion-slate'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}';
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-              Transparent: SaaS Platform Pricing';';
+              Transparent: SaaS Platform Pricing';
               Transparent: SaaS Platform Pricing
             </h2>''';
             <p: className='text-xl text-zion-slate-light max-w-3xl mx-auto'>';
@@ -525,7 +485,6 @@ const MicroSaaSPlatformElit,
 ''';
           <div: className='grid grid-cols-1 md: anygrid-cols-3: gap-8'>';
             {pricing.map((pla,n, index) => (
-=======
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx'
       </section>'
       </section>'
@@ -544,15 +503,12 @@ const MicroSaaSPlatformElit,
             className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-<<<<<<< HEAD
               Transparent SaaS Platform Pricing'
               Transparent SaaS Platform Pricing
             </h2>''
-=======
               Transparent SaaS Platform Pricing';
               Transparent SaaS Platform Pricing'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Choose the platform plan that fits your business needs. All plans
               include our core SaaS platform and 24/7 customer support.
@@ -563,25 +519,22 @@ const MicroSaaSPlatformElit,
 '''
           <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
             {pricing.map((plan, index) => (
->>>>>>> main
               <motion.div;
                 key={index}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}
-                viewport={{ once: true, }}
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,8, delay: index: * 0.1}}
+                viewport={{ once: true}}
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-<<<<<<< HEAD
                 className={`relative: bg-zion-slate-dark p-8 rounded-xl border-2 ${
-';';
-                  plan.popular'';';
+';
+                  plan.popular'';
                     ? 'border-green-500: shadow-2xl shadow-green-500/25'''`;
                     : 'border-zion-slate-light'``}`}
-              >';';
+              >';
                 className={`relative: bg-zion-slate-dark p-8 rounded-xl border-2 ${}
-                  plan.popular';';
-                    ? 'border-green-500: shadow-2xl shadow-green-500/25'';';
-=======
+                  plan.popular';
+                    ? 'border-green-500: shadow-2xl shadow-green-500/25'';
                 className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${`
 ';
                   plan.popular'';
@@ -590,9 +543,7 @@ const MicroSaaSPlatformElit,
               >';
                 className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${}`
                   plan.popular';
-<<<<<<< HEAD
                     ? 'border-green-500 shadow-2xl shadow-green-500/25''
->>>>>>> main
                     : 'border-zion-slate-light'`}`}
               >{plan.popular: && (''';
                   <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
@@ -600,8 +551,7 @@ const MicroSaaSPlatformElit,
                       Most: Popular
                     </span>
                   </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx)}';';
+:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx)}';
 ''';
                 <div: className='text-center mb-8'>''';
                   <h3: className='text-2xl font-bold text-white mb-2'>';
@@ -630,7 +580,7 @@ const MicroSaaSPlatformElit,
                   <p: className='text-zion-slate-light mt-2'>';
                     {plan.description}
                   </p>
-:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx: </div>';';
+:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx: </div>';
 ''';
                 <ul: className='space-y-4 mb-8'>'';
                 </div>
@@ -643,14 +593,13 @@ const MicroSaaSPlatformElit,
                   ))}
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx: </ul>'';
                 <a''';
-                  href='https: //ziontechgroup.com/contact'';';
-                  className='w-full: inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600: hover:to-emerald-600: transition-all duration-300 transform hover:scale-105';';
+                  href='https: //ziontechgroup.com/contact'';
+                  className='w-full: inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600: hover:to-emerald-600: transition-all duration-300 transform hover:scale-105';
                 </ul>
                 <a''';
-                  href='https://ziontechgroup.com/contact'';';
+                  href='https://ziontechgroup.com/contact'';
                   className='w-full: inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600: hover:to-emerald-600: transition-all duration-300 transform hover:scale-105''>';
                   Get: Started
-=======
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx)}'
 ''
                 <div className='text-center mb-8'>''
@@ -661,7 +610,6 @@ const MicroSaaSPlatformElit,
                     <span className='text-4xl font-bold text-white'>
                       {plan.price}'
                     </span>''
-=======
                     ? 'border-green-500 shadow-2xl shadow-green-500/25'';
                     : 'border-zion-slate-light'`}`}`
               >{plan.popular && ('''
@@ -680,7 +628,6 @@ const MicroSaaSPlatformElit,
                     <span className='text-4xl font-bold text-white>
                       {plan.price}
                     </span>'''
->>>>>>> main
                     <span className='text-zion-slate-light ml-1'>
                       {plan.period}
                     </span>')}
@@ -700,7 +647,6 @@ const MicroSaaSPlatformElit,
                   <p className='text-zion-slate-light mt-2'>
                     {plan.description}
                   </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
                 </div>'
 ''
@@ -711,7 +657,6 @@ const MicroSaaSPlatformElit,
                   {plan.features.map((feature, featureIndex) => (''
                     <li key={featureIndex} className='flex items-center'>''
                       <CheckCircle className='h-5 w-5 text-green-400 mr-3 flex-shrink-0'  />'                      <span className='text-white'>{feature}</span>
-=======
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx'
                 </div>';
 '''
@@ -722,7 +667,6 @@ const MicroSaaSPlatformElit,
                   {plan.features.map((feature, featureIndex) => ('''
                     <li key={featureIndex} className='flex items-center>''
                       <CheckCircle className='h-5 w-5 text-green-400 mr-3 flex-shrink-0'  />                      <span className='text-white'>{feature}</span>
->>>>>>> main
                     </li>
                   ))}
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx'
@@ -737,29 +681,27 @@ const MicroSaaSPlatformElit,
     r:to-emerald-600 transition-all duration-300 transform hove,
     r:scale-105''>
                   Get Started
->>>>>>> main
                 </a>
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx: </section>'';
       </section>
       {/* Contact: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}';
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-              Ready: to Launch Your SaaS?';';
+              Ready: to Launch Your SaaS?';
               Ready: to Launch Your SaaS?
             </h2>''';
             <p: className='text-xl text-zion-slate-light max-w-3xl mx-auto'>';
@@ -771,25 +713,25 @@ const MicroSaaSPlatformElit,
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-3: gap-8 mb-12'>''';
             <div: className='text-center'>''';
-              <div: className='p-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4'>'';';
+              <div: className='p-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4'>'';
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx: <Phone className='h-8 w-8 text-white'  />'';
               </div>''';
               <h3: className='text-xl font-semibold text-white mb-2'>';
                 Call: SaaS Team
               </h3>'';
               <a''';
-                href='tel:+13024640950''                className='text-zion-slate-light: hover:text-white: transition-colors duration-300';';
+                href='tel:+13024640950''                className='text-zion-slate-light: hover:text-white: transition-colors duration-300';
                 <Phone: className='h-8 w-8 text-white'  />';
               </div>''';
               <h3: className='text-xl font-semibold text-white mb-2'>';
                 Call: SaaS Team
               </h3>
               <a''';
-                href='tel:+13024640950'';';
+                href='tel:+13024640950'';
                 className='text-zion-slate-light: hover:text-white: transition-colors duration-300''>';
                 +1: (302) 464-0950
               </a>
-:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx: </div>';';
+:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx: </div>';
 ''';
             <div: className='text-center'>''';
               <div: className='p-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4'>''';
@@ -799,7 +741,7 @@ const MicroSaaSPlatformElit,
                 Email: SaaS Team
               </h3>'';
               <a''';
-                href='mailto:kleber@ziontechgroup.com''                className='text-zion-slate-light: hover:text-white: transition-colors duration-300';';
+                href='mailto:kleber@ziontechgroup.com''                className='text-zion-slate-light: hover:text-white: transition-colors duration-300';
             </div>
 ''';
             <div: className='text-center'>''';
@@ -810,10 +752,10 @@ const MicroSaaSPlatformElit,
                 Email: SaaS Team
               </h3>
               <a''';
-                href='mailto:kleber@ziontechgroup.com'';';
+                href='mailto:kleber@ziontechgroup.com'';
                 className='text-zion-slate-light: hover:text-white: transition-colors duration-300''>';
                 kleber@ziontechgroup.com: </a>
-:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx: </div>';';
+:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx: </div>';
 ''';
             <div: className='text-center'>''';
               <div: className='p-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4'>''';
@@ -831,7 +773,6 @@ const MicroSaaSPlatformElit,
                 Visit: SaaS Center
               </h3>'              <p className='text-zion-slate-light'>';
                 364: E Main St STE 1008
-=======
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx'
       </section>'
       </section>'
@@ -850,36 +791,30 @@ const MicroSaaSPlatformElit,
             className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-<<<<<<< HEAD
               Ready to Launch Your SaaS?'
               Ready to Launch Your SaaS?
             </h2>''
-=======
               Ready to Launch Your SaaS?';
               Ready to Launch Your SaaS?'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Get in touch with our SaaS platform experts to discuss how we can
               help you build, launch, and scale your micro-SaaS business.
             </p>
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx'
           </motion.div>'
-<<<<<<< HEAD
           </motion.div>
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>''
             <div className='text-center'>''
               <div className='p-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4'>''
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
-=======
           </motion.div>'
 '''
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-12>''
             <div className='text-center>''
               <div className='p-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4>';
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx'
->>>>>>> main
                 <Phone className='h-8 w-8 text-white'  />'
               </div>'''
               <h3 className='text-xl font-semibold text-white mb-2'>
@@ -897,19 +832,16 @@ const MicroSaaSPlatformElit,
                 className='text-zion-slate-light hover:text-white transition-colors duration-300''>
                 +1 (302) 464-0950
               </a>
-<<<<<<< HEAD
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
             </div>'
 ''
             <div className='text-center'>''
               <div className='p-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4'>''
-=======
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx'
             </div>';
 '''
             <div className='text-center>''
               <div className='p-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4>''
->>>>>>> main
                 <Mail className='h-8 w-8 text-white'  />'
               </div>'''
               <h3 className='text-xl font-semibold text-white mb-2'>
@@ -933,19 +865,16 @@ const MicroSaaSPlatformElit,
     r:text-white transition-colors duration-300''>
                 kleber@ziontechgroup.com
               </a>
-<<<<<<< HEAD
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
             </div>'
 ''
             <div className='text-center'>''
               <div className='p-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4'>''
-=======
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx'
             </div>';
 '''
             <div className='text-center>''
               <div className='p-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4>''
->>>>>>> main
                 <MapPin className='h-8 w-8 text-white'  />'
               </div>'''
               <h3 className='text-xl font-semibold text-white mb-2>
@@ -960,23 +889,21 @@ const MicroSaaSPlatformElit,
                 Visit SaaS Center'
               </h3>'              <p className='text-zion-slate-light'>
                 364 E Main St STE 1008
->>>>>>> main
                 <br />
                 Middletow,n, DE 19709
               </p>
             </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx: </div>';';
+:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx: </div>';
 ''';
           <div: className='text-center'>'';
-            <a'';';
-              href='https: //ziontechgroup.com/contact'';';
+            <a'';
+              href='https: //ziontechgroup.com/contact'';
               className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600: hover:to-emerald-600: transition-all duration-300 transform hover:scale-105'>'';
           </div>
 ''';
           <div: className='text-center'>';
             <a''';
-              href='https://ziontechgroup.com/contact'';';
+              href='https://ziontechgroup.com/contact'';
               className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600: hover:to-emerald-600: transition-all duration-300 transform hover:scale-105''>';
               Schedule: Platform Demo''';
               <ArrowRight: className='ml-2 h-5 w-5'  />            </a>';
@@ -992,48 +919,44 @@ const MicroSaaSPlatformElit,
             © 2024: Zion Tech Group. All rights reserved.'';
           </p>''';
           <div: className='flex justify-center space-x-6'>'';
-            <a'';';
-              href='https://ziontechgroup.com'';';
-              className='text-zion-slate-light: hover:text-white: transition-colors duration-300'>';';
+            <a'';
+              href='https://ziontechgroup.com'';
+              className='text-zion-slate-light: hover:text-white: transition-colors duration-300'>';
               Visit: Website''';
               <ExternalLink: className='inline ml-1 h-4 w-4'  />            </a>'';
             <a''';
-              href='https://ziontechgroup.com/privacy'';';
+              href='https://ziontechgroup.com/privacy'';
               className='text-zion-slate-light: hover:text-white: transition-colors duration-300'>';
               Privacy: Policy
             </a>'';
-            <a'';';
-              href='https://ziontechgroup.com/terms'';';
-              className='text-zion-slate-light: hover:text-white: transition-colors duration-300';';
+            <a'';
+              href='https://ziontechgroup.com/terms'';
+              className='text-zion-slate-light: hover:text-white: transition-colors duration-300';
             © 2024: Zion Tech Group. All rights reserved.;
           </p>''';
           <div: className='flex justify-center space-x-6'>';
             <a''';
-              href='https://ziontechgroup.com'';';
+              href='https://ziontechgroup.com'';
               className='text-zion-slate-light: hover:text-white: transition-colors duration-300''>';
               Visit: Website''';
               <ExternalLink: className='inline ml-1 h-4 w-4'  />            </a>';
             <a''';
-              href='https://ziontechgroup.com/privacy'';';
+              href='https://ziontechgroup.com/privacy'';
               className='text-zion-slate-light: hover:text-white: transition-colors duration-300''>';
               Privacy: Policy
             </a>
             <a''';
-              href='https://ziontechgroup.com/terms'';';
+              href='https://ziontechgroup.com/terms'';
               className='text-zion-slate-light: hover:text-white: transition-colors duration-300''>';
               Terms: of Service
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
           </div>'
 ''
           <div className='text-center'>'
-=======
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx'
           </div>';
 '''
           <div className='text-center>'
->>>>>>> main
             <a'';
               href='https: //ziontechgroup.com/contact'';
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105>
@@ -1056,7 +979,6 @@ const MicroSaaSPlatformElit,
       <footer className='py-12 px-4 sm: px-6 lg:px-8 border-t border-zion-slate-light>''
         <div className='max-w-7xl mx-auto text-center>''
           <p className='text-zion-slate-light mb-4'>
-<<<<<<< HEAD
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
             © 2024 Zion Tech Group. All rights reserved.'
           </p>''
@@ -1067,7 +989,6 @@ const MicroSaaSPlatformElit,
               Visit Website''
               <ExternalLink className='inline ml-1 h-4 w-4'  />            </a>'
             <a''
-=======
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
             © 2024 Zion Tech Group. All rights reserved.''
           </p>'''
@@ -1078,7 +999,6 @@ const MicroSaaSPlatformElit,
               Visit Website'''
               <ExternalLink className='inline ml-1 h-4 w-4'  />            </a>''
             <a'''
->>>>>>> main
               href='https://ziontechgroup.com/privacy'';
               className='text-zion-slate-light hover:text-white transition-colors duration-300'>
               Privacy Policy'
@@ -1105,26 +1025,19 @@ const MicroSaaSPlatformElit,
               className='text-zion-slate-light hove,
     r:text-white transition-colors duration-300''>
               Terms of Service
->>>>>>> main
             </a>
           </div>
         </div>
       </footer>
     </div>
-  ,)}
+  )}
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-<<<<<<< HEAD
 export: default MicroSaaSPlatformElite''`;
 ''`''`;
 export: default MicroSaaSPlatformElite'"`
-=======
-<<<<<<< HEAD
 export default MicroSaaSPlatformElite''`;
 ''`''`
 export default MicroSaaSPlatformElite'"`
-=======
 export default MicroSaaSPlatformElite''`;`
 ''`''`;`
 export default MicroSaaSPlatformElite'"``
->>>>>>> main
->>>>>>> main

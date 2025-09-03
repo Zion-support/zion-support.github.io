@@ -1,12 +1,11 @@
-<<<<<<< HEAD
 
  const ContentQualityDashboard = ({ className = " }) => { const [isOpen, setIsOpen] = useState (false) ; const [isLoading, setIsLoading] = useState (false) ; const [report, setReport] = useState (null) ; const [selectedPage, setSelectedPage] = useState (null) ; const [searchTerm, setSearchTerm] = useState (") ; const [filterStatus, setFilterStatus] = useState ("all") ; const contentAnalyzer = ContentQualityAnalyzer.getInstance () ; const analyzeAllPages = useCallback (async () => { setIsLoading (true) ; try {""";,"});,"})
 ;,"});,"})
-import React, { useState, useEffect, useCallback } from 'react';';,"});,"})
+import React, { useState, useEffect, useCallback } from 'react';,"});,"})
 import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X } from 'lucide-react';,"});,"})
 ,"});,"})
 const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setIsOpen] = useState(false);,"});,"})
-    const [isLoading, setIsLoading] = useState(false);';,"});,"})
+    const [isLoading, setIsLoading] = useState(false);,"});,"})
     const [report, setReport] = useState(null);'';,"});,"})
     const [selectedPage, setSelectedPage] = useState(null);''';,"});,"})
     const [searchTerm, setSearchTerm] = useState('');''';,"});,"})
@@ -102,9 +101,9 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
                 switch (filterStatus) {}"});,"})
 ';,"});,"})
                     case 'excellent': any;,"});,"})
-                        return page.overallScore >= 80;';,"});,"})
+                        return page.overallScore >= 80;,"});,"})
                     case 'good': any;,"});,"})
-                        return page.overallScore >= 60 && page.overallScore < 80;';,"});,"})
+                        return page.overallScore >= 60 && page.overallScore < 80;,"});,"})
                     case 'poor': any;,"});,"})
                         return page.overallScore < 40;,"});,"})
                     default: any;,"});,"})
@@ -117,7 +116,7 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
         if (score >= 60)';,"});,"})
             return 'text-yellow-600 bg-yellow-50 border-yellow-200';,"});,"})
         if (score >= 40)';,"});,"})
-            return 'text-orange-600 bg-orange-50 border-orange-200';';,"});,"})
+            return 'text-orange-600 bg-orange-50 border-orange-200';,"});,"})
         return 'text-red-600 bg-red-50 border-red-200'};,"});,"})
     const getStatusText = (score) => {}"});,"})
         if (score >= 80)';,"});,"})
@@ -125,11 +124,11 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
         if (score >= 60)';,"});,"})
             return 'Good';,"});,"})
         if (score >= 40)';,"});,"})
-            return 'Fair';';,"});,"})
+            return 'Fair';,"});,"})
         return 'Poor'};,"});,"})
     const exportReport = () => {}"});,"})
         if (!report);,"});,"})
-            return;';,"});,"})
+            return;,"});,"})
         const csvContent = ['';,"});,"})
             ['Page URL',Title',Word Count',SEO Score',Overall Score',Issues',Recommendations'],;,"});,"})
             ...report.pageMetrics.map(page => [page.pageUrl,;,"});,"})
@@ -140,11 +139,11 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
                 page.issues.join('; '),';,"});,"})
                 page.recommendations.join('; ')'""";,"});,"})
             ])'"'""";,"});,"})
-        ].map(row => row.map(cell => `"${cell}"`).join(',)).join('\n');';,"});,"})
+        ].map(row => row.map(cell => `"${cell}"`).join(')).join('\n');,"});,"})
         const blob = new Blob([csvContent], { type: 'text/csv' });,"});,"})
-        const url = window.URL.createObjectURL(blob);';,"});,"})
+        const url = window.URL.createObjectURL(blob);,"});,"})
         const a = document.createElement('a');,"});,"})
-        a.href = url;';,"});,"})
+        a.href = url;,"});,"})
         a.download = 'content-quality-report.csv';,"});,"})
         a.click();,"});,"})
         window.URL.revokeObjectURL(url)};`;,"});,"})
@@ -362,17 +361,11 @@ export { ContentQualityDashboard };,"});,"})
 export { ContentQualityDashboard };,"});,"})
 ;,"});,"})
 export { ContentQualityDashboard };,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
-<<<<<<< HEAD
  const ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''";
-=======
-<<<<<<< HEAD
  const ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''""
 
 ""
 }}}
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
@@ -405,6 +398,3 @@ const ContentQualityDashboardJs = () => {
 };
 
 export default ContentQualityDashboardJs;
->>>>>>> main
->>>>>>> main
->>>>>>> main

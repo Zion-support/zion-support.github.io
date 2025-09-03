@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Route, Routes  } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import { ProtectedRoute } from '../components/ProtectedRoute';
@@ -37,8 +36,6 @@ const AuthRoutes: React.FC = () => {
           <ProtectedRoute>
             <div>Settings</div>
           </ProtectedRoute>
-=======
-<<<<<<< HEAD
 import { Route, Routes } from 'react-router-dom';'import { Suspense, lazy } from 'react';'import { ProtectedRoute } from '../components/ProtectedRoute';'import LoadingSpinner from '../components/LoadingSpinner';''// Lazy load auth pages'
 const Login = lazy(() => import('../pages/Login'));'const Signup = lazy(() => import('../pages/Signup'));'const ForgotPassword = lazy(() => import('../pages/ForgotPassword'));'const UpdatePassword = lazy(() => import('../pages/UpdatePassword'));'const Onboarding = lazy(() => import('../pages/Onboarding'));'const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'));'const ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'));''const AuthRoutes: React.FC = () => {
   return (
@@ -50,18 +47,13 @@ const Login = lazy(() => import('../pages/Login'));'const Signup = lazy(() => im
           </ProtectedRoute>
         } />
         <Route path="/settings" element={"          <ProtectedRoute>"            <div>Settings</div></ProtectedRoute>
->>>>>>> main
         } />
       </Routes>
     </Suspense>
   );
 };
-<<<<<<< HEAD
 
 export default AuthRoutes;
-=======
-=======
-<<<<<<< HEAD
 import { Route, Routes    } from 'react-router-dom';,"});,"})
 export default function Page() {;,"});,"})
 export default function Page() {;,"});,"})
@@ -113,18 +105,12 @@ const AuthRoutes: React.FC = () => {;,"});,"})
 };,"});,"})
 ;,"});,"})
 export default AuthRoutes;,"});,"})
-=======
-<<<<<<< HEAD
 import { Route, Routes    } from 'react-router-dom';
-<<<<<<< HEAD
 import { Lazy, Settings } from 'lucide-react';
->>>>>>> main
 
 export default function Page() {'
-=======
 export default function Page() {;
 export default function Page() {;
->>>>>>> main
   import { Suspense, lazy } from 'react';
 export default function Page() {;
 export default function Page() {;
@@ -139,12 +125,8 @@ const Signup = lazy(() => import('../pages/Signup'));
 const ForgotPassword = lazy(() => import('../pages/ForgotPassword'));
 const UpdatePassword = lazy(() => import('../pages/UpdatePassword'));
 const Onboarding = lazy(() => import('../pages/Onboarding'));
-<<<<<<< HEAD
 const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'))
-=======
 const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'));
-<<<<<<< HEAD
->>>>>>> main
 const ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'))
 const AuthRoutes: React.FC = () => {'
   return (<Suspense fallback={<LoadingSpinner /" >}>"
@@ -168,7 +150,6 @@ const AuthRoutes: React.FC = () => {'
 } />""
         <Route path='/settings' element={'
           <ProtectedRoute" >
-=======
 const ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'));
 const AuthRoutes: React.FC = () => {;
   return (<Suspense fallback={<LoadingSpinner />}>;
@@ -197,15 +178,11 @@ const AuthRoutes: React.FC = () => {;
         } />;
       </Routes>;
     </Suspense>;
-=======
-<<<<<<< HEAD
 import {Route, Routes    } from 'react-router-dom';
 import {Lazy, Settings } from 'lucide-react';
 
 export default function Page()   {import { Suspense, lazy } from 'react';
   import {ProtectedRoute } from '../components/ProtectedRoute';
-=======
-<<<<<<< HEAD
 import { Route, Routes    } from &apos;react-router-dom';&apos;&apos;
 export default function Page() {}
 export default function Page() {
@@ -247,32 +224,21 @@ const AuthRoutes: React.FC = () => {
         } />
         <Route path=&apos;/settings&apos; element={&apos;}
           <ProtectedRoute>
-=======
-<<<<<<< HEAD
 import { Route, Routes    } from 'react-router-dom';""
-=======
-<<<<<<< HEAD
 import { Route, Routes    } from 'react-router-dom';
 export default function Page() {
   import { Suspense, lazy } from 'react';
   import { ProtectedRoute } from '../components/ProtectedRoute';
->>>>>>> main
 import LoadingSpinner from '../components/LoadingSpinner';
-=======
 import { Route, Routes    } from 'react-router-dom
->>>>>>> main
 import { Lazy, Settings } from 'lucide-react';
->>>>>>> main
 
-<<<<<<< HEAD
 export default function Page() {""
   import { Suspense, lazy } from 'react';""
   import { ProtectedRoute } from '../components/ProtectedRoute';""
-=======
 export default function Page() {"
   import { Suspense, lazy } from 'react
   import { ProtectedRoute } from '../components/ProtectedRoute
->>>>>>> main
 import LoadingSpinner from '../components/LoadingSpinner';
 // Lazy load auth pages;""
 const Login = lazy(() => import('../pages/Login'));""
@@ -282,7 +248,6 @@ const UpdatePassword = lazy(() => import('../pages/UpdatePassword'));""
 const Onboarding = lazy(() => import('../pages/Onboarding'));""
 const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'));""
 const ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'))
-<<<<<<< HEAD
 const AuthRoutes: React.FC = () => {return (<Suspense fallback={<LoadingSpinner /" >}>
       <Routes>"
         <Route path='/login' element={<Login /" >} />"
@@ -294,11 +259,8 @@ const AuthRoutes: React.FC = () => {return (<Suspense fallback={<LoadingSpinner 
         <Route path='/service-onboarding' element={<ServiceOnboarding /" >} />"
         <Route path='/profile' element={<ProtectedRoute" >
             <div>Profile Page</div>
-          </ProtectedRoute>,
-} />"
+          </ProtectedRoute>} />"
         <Route path='/dashboard' element={<ProtectedRoute" >
-=======
-<<<<<<< HEAD
 const AuthRoutes: React.FC = () => {""
   return (<Suspense fallback={<LoadingSpinner /"" >}>""
       <Routes>""
@@ -316,13 +278,11 @@ const AuthRoutes: React.FC = () => {""
 } />""
         <Route path='/dashboard' element={""
           <ProtectedRoute"" >
->>>>>>> main
             <div>Dashboard</div>
           </ProtectedRoute>, ","
 } />""
         <Route path='/settings' element={""
           <ProtectedRoute"" >
-=======
 const AuthRoutes: React.FC = () => {'
   return (<Suspense fallback={<LoadingSpinner /  >}>'
       <Routes>"
@@ -336,46 +296,23 @@ const AuthRoutes: React.FC = () => {'
         <Route path='/profile' element={'
           <ProtectedRoute  >
             <div>Profile Page</div>
-          </ProtectedRoute>,',
-} />"
-<<<<<<< HEAD
+          </ProtectedRoute>,'} />"
         <Route path='/settings' element={<ProtectedRoute" >
-=======
         <Route path='/dashboard' element={'
           <ProtectedRoute  >
             <div>Dashboard</div>
-          </ProtectedRoute>,',
-} />"
+          </ProtectedRoute>,'} />"
         <Route path='/settings' element={'
           <ProtectedRoute  >
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
             <div>Settings</div>
-          </ProtectedRoute>, } />
+          </ProtectedRoute>} />
       </Routes>
     <;</Suspense>
->>>>>>> main
   )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ;"
-=======
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
 ""
 }
-=======
-=======
 ;
 '
 }
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

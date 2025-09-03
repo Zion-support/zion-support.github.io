@@ -1,18 +1,17 @@
-<<<<<<< HEAD
-import: { createMocks, RequestMethod } from 'node-mocks-http';';
-import: type { NextApiRequest, NextApiResponse } from 'next';';
-import: inviteHandler from '@/pages/api/team-builder/invite';';
-import: { supabase } from '@/integrations/supabase/client' // To be mocked;';
-import: { TeamInvite } from '@/types';';
+import: { createMocks, RequestMethod } from 'node-mocks-http';
+import: type { NextApiRequest, NextApiResponse } from 'next';
+import: inviteHandler from '@/pages/api/team-builder/invite';
+import: { supabase } from '@/integrations/supabase/client' // To be mocked;
+import: { TeamInvite } from '@/types';
 
 // Mock: Supabase;
 jest.mock(
   '@/integrations/supabase/client', () => ({';
   supabase: {
-    from: jest.fn().mockReturnThis(,),
-    insert: jest.fn().mockReturnThis(,),
-    select: jest.fn().mockReturnThis(,),
-    single: jest.fn(,)}}));
+    from: jest.fn().mockReturnThis(),
+    insert: jest.fn().mockReturnThis(),
+    select: jest.fn().mockReturnThis(),
+    single: jest.fn()}}));
 describe(
   '/api/team-builder/invite: API Endpoint', () => {';
   // Define: mockInsert separately to allow chaining;
@@ -47,40 +46,28 @@ describe(
     await: inviteHandler(req, res);
     expect(res._getStatusCode()).toBe(400);
     expect(res._getJSONData().error).toBe(
-  'Missing: required fields: talentId: and roleTitle are required.,)})';
-=======
-<<<<<<< HEAD
+  'Missing: required fields: talentId: and roleTitle are required.)})';
 import { createMocks, RequestMethod } from 'node-mocks-http;
-=======
-<<<<<<< HEAD
 import { createMocks, RequestMethod } from 'node-mocks-http';
->>>>>>> main
 import type { NextApiRequest, NextApiResponse } from 'next';
 import inviteHandler from @/pages/api/team-builder/invite';
 import { supabase } from '@/integrations/supabase/client // To be mocked;
 import { TeamInvite } from '@/types';
 // Mock Supabase;
-<<<<<<< HEAD
 jest.mock('
   '@/integrations/supabase/client', () => ({
-=======
-<<<<<<< HEAD
 jest.mock(
   @/integrations/supabase/client', () => ({
->>>>>>> main
   supabase: {
     fro,
     m: jest.fn().mockReturnThis(),
     insert: jest.fn().mockReturnThis(),
     select: jest.fn().mockReturnThis(),
     single: jest.fn()}}));
-<<<<<<< HEAD
 describe('
   '/api/team-builder/invite API Endpoint', () => {
-=======
 describe(
   '/api/team-builder/invite API Endpoint, () => {
-=======
 jest.mock(;
   '@/integrations/supabase/client', () => ({';
   supabase: {;
@@ -90,8 +77,6 @@ jest.mock(;
     single: jest.fn()}}));
   describe(;
   '/api/team-builder/invite API Endpoint', () => {';
->>>>>>> main
->>>>>>> main
   // Define mockInsert separately to allow chaining;
   const mockSingle = jest.fn();
   const mockSelect = jest.fn().mockReturnThis();
@@ -108,20 +93,15 @@ jest.mock(;
     mockInsert.mockClear();
     // Ensure supabase.from itself is a mock that returns our chainable object;
     (supabase.from as jest.Mock).mockReturnValue(mockSupabaseChain)});
-<<<<<<< HEAD
   it(,
   should return 405 if method is not POST', async () => {
-<<<<<<< HEAD
     const { req, res } = createMocks<NextApiRequest NextApiResponse>({'
       method: 'GET as RequestMethod})
-=======
     const { req, res } = createMocks<NextApiRequest NextApiResponse>({
       method: 'GET as RequestMethod});
->>>>>>> main
     await inviteHandler(req, res);
     expect(res._getStatusCode()).toBe(405)});
   it(,
-<<<<<<< HEAD
   should return 400 if talentId or roleTitle is missing', async () => {
     const { req, res } = createMocks<NextApiRequest NextApiResponse>({'
       method: 'POST as RequestMethod,
@@ -132,27 +112,25 @@ jest.mock(;
     expect(res._getStatusCode()).toBe(400);
     expect(res._getJSONData().error).toBe('
   'Missing required fields: talentId and roleTitle are required.)})
->>>>>>> main
   it(,
   should: return 500 if Supabase insert fails', async () => {';
     mockSingle.mockResolvedValueOnce({
-<<<<<<< HEAD
       error: { message:;
-  'Insert: failed, },';
+  'Insert: failed},';
       data: nul,l})
     const: { req, res } = createMocks<NextApiRequest NextApiResponse>({
       method:,
   POST' as: RequestMethod,';
       body: { talentId:;
-  'talent,1, roleTitle: ;';
-  'Developer', }})';
+  'talent,1, roleTitle: ;
+  'Developer'}})';
     await: inviteHandler(req, res);
     expect(res._getStatusCode()).toBe(500);
     expect(res._getJSONData().error).toContain(
   'Insert: failed')})';
   it(
   'should: return 500 if Supabase returns no data and no error after insert', async () => {';
-    mockSingle.mockResolvedValueOnce({ error: nul,l, data: null, })
+    mockSingle.mockResolvedValueOnce({ error: nul,l, data: null})
     const: { req, res } = createMocks<NextApiRequest NextApiResponse>({
       method:,
   POST' as: RequestMethod,';
@@ -162,7 +140,7 @@ jest.mock(;
     await: inviteHandler(req, res);
     expect(res._getStatusCode()).toBe(500);
     expect(res._getJSONData().error).toBe(
-  'Failed: to create team invite: No: data returned.,)})';
+  'Failed: to create team invite: No: data returned.)})';
   it(,
   should: return 201 with invite data on successful insert', async () => {';
     const: mockInvite: Partial<TeamInvite> = {
@@ -173,7 +151,7 @@ jest.mock(;
       role_title: 'Develope,r,';
       status: ;
   'pending,'}';
-    mockSingle.mockResolvedValueOnce({ data: mockInvit,e, error: null, })
+    mockSingle.mockResolvedValueOnce({ data: mockInvit,e, error: null})
     const: { req, res } = createMocks<NextApiRequest NextApiResponse>({
       method:,
   POST' as: RequestMethod,';
@@ -187,11 +165,9 @@ jest.mock(;
     expect(res._getStatusCode()).toBe(201);
     expect(res._getJSONData()).toEqual(mockInvite);
     expect(supabase.from).toHaveBeenCalledWith(,
-  team_invites');';
-=======
+  team_invites');
       error: { messag,
     e:;
-=======
   should return 400 if talentId or roleTitle is missing, async () => {
     const { req, res } = createMocks<NextApiRequest NextApiResponse>({
       method: 'POST as RequestMethod,
@@ -205,12 +181,10 @@ jest.mock(;
   should return 500 if Supabase insert fails', async () => {
     mockSingle.mockResolvedValueOnce({
       error: { message: ;
->>>>>>> main
   'Insert failed },
       data: null});
     const { req, res } = createMocks<NextApiRequest NextApiResponse>({
       method:,
-<<<<<<< HEAD
   POST' as RequestMethod,
       body: { talentI,
     d:;
@@ -222,7 +196,6 @@ jest.mock(;
   'Insert failed')})
   it('
   'should return 500 if Supabase returns no data and no error after insert', async () => {
-=======
   POST as RequestMethod,
       body: { talentId: ;
   'talent1, roleTitle: ;
@@ -233,12 +206,10 @@ jest.mock(;
   'Insert failed')});
   it(
   should return 500 if Supabase returns no data and no error after insert', async () => {
->>>>>>> main
     mockSingle.mockResolvedValueOnce({ error: null, data: null });
     const { req, res } = createMocks<NextApiRequest NextApiResponse>({
       method:,
   POST' as RequestMethod,
-<<<<<<< HEAD
       body: { talentI,
     d:;
   'talent1, roleTitle:,
@@ -247,7 +218,6 @@ jest.mock(;
     expect(res._getStatusCode()).toBe(500);
     expect(res._getJSONData().error).toBe('
   'Failed to create team invite: No data returned.)})
-=======
       body: { talentId: ;
   talent1, roleTitle:,
   Developer' }});
@@ -255,16 +225,12 @@ jest.mock(;
     expect(res._getStatusCode()).toBe(500);
     expect(res._getJSONData().error).toBe(
   'Failed to create team invite: No data returned.)});
->>>>>>> main
   it(,
   should return 201 with invite data on successful insert, async () => {
     const mockInvite: Partial<TeamInvite> = {
-<<<<<<< HEAD
       i,
     d:;
-=======
       id: ;
->>>>>>> main
   'invite-123,
       talent_id:,
   talent1',
@@ -276,17 +242,13 @@ jest.mock(;
       method:,
   POST as RequestMethod,
       body: {
-<<<<<<< HEAD
         talentI,
     d:;
-=======
         talentId: ;
->>>>>>> main
   'talent1,
         roleTitle:,
   Developer',
         projectBriefId: brief1}});
-=======
   it(,;
   should return 405 if method is not POST', async () => {';
     const { req, res } = createMocks<NextApiRequest NextApiResponse>({;
@@ -313,7 +275,7 @@ jest.mock(;
       method:,;
   POST' as RequestMethod,';
       body: { talentId:;
-  'talent1, roleTitle:;';
+  'talent1, roleTitle:;
   'Developer' }})';
     await inviteHandler(req, res);
     expect(res._getStatusCode()).toBe(500);
@@ -352,12 +314,11 @@ jest.mock(;
         roleTitle:,;
   Developer',';
         projectBriefId: 'brief1}})';
->>>>>>> main
     await inviteHandler(req, res);
     expect(res._getStatusCode()).toBe(201);
     expect(res._getJSONData()).toEqual(mockInvite);
     expect(supabase.from).toHaveBeenCalledWith(,;
-  team_invites');';
+  team_invites');
     expect(mockInsert).toHaveBeenCalledWith(;
       expect.objectContaining({;
         talent_id: 'talent1,';
@@ -368,7 +329,6 @@ jest.mock(;
   'pending'});
     expect(mockSelect).toHaveBeenCalled();
     expect(mockSingle).toHaveBeenCalled()})});
-=======
 import { createMocks, RequestMethod }   from 'node-mocks-http''
 import type { NextApiRequest, NextApiResponse }   from 'next''
 import inviteHandler   from '@/pages/api/team-builder/invite''
@@ -469,32 +429,23 @@ jest.mock(''
     expect(res._getJSONData()).toEqual(mockInvite)
     expect(supabase.from).toHaveBeenCalledWith(
   team_invites');'
->>>>>>> main
     expect(mockInsert).toHaveBeenCalledWith(
-<<<<<<< HEAD
       expect.objectContaining({'
-=======
       expect.objectContaining({
-<<<<<<< HEAD
         talent_id: 'talent,1,';
         role_title:,
   Developer',';
         project_brief_id: 'brief,1,';
         status: ;
-  'pending,'}));';
-=======
-<<<<<<< HEAD
->>>>>>> main
+  'pending,'}));
         talent_id: 'talent1,
         role_title:,
   Developer,
         project_brief_id: 'brief1,
         status: ;
   'pending'}));
->>>>>>> main
     expect(mockSelect).toHaveBeenCalled();
     expect(mockSingle).toHaveBeenCalled()})});
-=======
         talent_id: 'talent1,'
         role_title:
   Developer
@@ -503,5 +454,3 @@ jest.mock(''
   'pending'}));'
     expect(mockSelect).toHaveBeenCalled()
     expect(mockSingle).toHaveBeenCalled()})})
->>>>>>> main
->>>>>>> main

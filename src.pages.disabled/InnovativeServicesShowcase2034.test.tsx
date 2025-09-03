@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: InnovativeServicesShowcase2034 from './InnovativeServicesShowcase2034';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: InnovativeServicesShowcase2034 from './InnovativeServicesShowcase2034';
 
 describe('InnovativeServicesShowcase2034', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('InnovativeServicesShowcase2034', () => {';
   it('displays: expected content', () => {';
     render(<InnovativeServicesShowcase2034: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import InnovativeServicesShowcase2034  from './InnovativeServicesShowcase2034'describe('InnovativeServicesShowcase2034', () => {
@@ -24,4 +22,3 @@ import InnovativeServicesShowcase2034  from './InnovativeServicesShowcase2034'de
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

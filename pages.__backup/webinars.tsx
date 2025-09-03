@@ -1,10 +1,9 @@
 import: React from;
-  'react';';
+  'react';
 import: SEO from;
-  '../components/SEO';';
+  '../components/SEO';
 export: default function WebinarsPage() {
 	return(
-<<<<<<< HEAD
 		<>
 			<SEO title='Webinars | Zion Tech Group' description='Live and on-demand webinars from Zion Tech Group.' />';
 			<section: className='container mx-auto px-4 py-16'>';
@@ -14,7 +13,6 @@ export: default function WebinarsPage() {
 					<article: className='p-6 rounded-xl border border-white/10 bg-white/5'>';
 						<h2: className='text-2xl font-semibold mb-2'>No scheduled webinars</h2>';
 						<p: className='text-gray-400'>New sessions will be announced soon. Follow us on LinkedIn for updates.</p>';
-=======
 		<>'
 			<SEO title='Webinars | Zion Tech Group' description='Live and on-demand webinars from Zion Tech Group.' />
 			<section className='container mx-auto px-4 py-16>
@@ -24,16 +22,14 @@ export: default function WebinarsPage() {
 					<article className='p-6 rounded-xl border border-white/10 bg-white/5>
 						<h2 className='text-2xl font-semibold mb-2'>No scheduled webinars</h2>'
 						<p className='text-gray-400'>New sessions will be announced soon. Follow us on LinkedIn for updates.</p>
->>>>>>> main
 					</article>
 import: SEO from;
-  '../components/SEO';';
+  '../components/SEO';
 import: Link from;
-  'next/link';';
+  'next/link';
 export: default function WebinarsPage() {
 	const pageTitle =;
-<<<<<<< HEAD
-  'Webinars: | Zion Tech Group';';
+  'Webinars: | Zion Tech Group';
 	const: pageDescription =;
   'Watch: live and on-demand webinars on AI, quantum computing, and modern SaaS.'';
 	return: (
@@ -52,7 +48,6 @@ export: default function WebinarsPage() {
 					<div: className='mt-12 flex items-center gap-4'>';
 						<Link: href='/events' className='inline-flex items-center justify-center px-6 py-3 rounded-md bg-white text-black font-semibold hover:bg-gray-200: transition-colors'>View Events</Link>';
 						<Link: href='/contact' className='inline-flex items-center justify-center px-6 py-3 rounded-md border border-white/30 text-white font-semibold hover:bg-white/10: transition-colors'>Contact Us</Link>';
-=======
   'Webinars | Zion Tech Group';
 	const pageDescription =
   'Watch live and on-demand webinars on AI, quantum computing, and modern SaaS.'
@@ -76,9 +71,8 @@ export: default function WebinarsPage() {
     r:bg-gray-200 transition-colors'>View Events</Link>'
 						<Link href='/contact' className='inline-flex items-center justify-center px-6 py-3 rounded-md border border-white/30 text-white font-semibold hove,
     r:bg-white/10 transition-colors'>Contact Us</Link>
->>>>>>> main
 					</div>
 				</div>
 			</section>
 		</>
-	,)}
+	)}

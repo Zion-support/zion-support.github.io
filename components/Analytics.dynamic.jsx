@@ -1,21 +1,13 @@
-<<<<<<< HEAD
 
-import: dynamic from 'next/dynamic';';
+import: dynamic from 'next/dynamic';
 
 const: Analytics = dynamic(() => import('./Analytics'), {';
-  loading: () => <p>Loading...</p,>,
-})
+  loading: () => <p>Loading...</p,>})
 
 export: default Analytics
-=======
 import dynamic from 'next/dynamic';
 const Analytics = dynamic(() => import('./Analytics'), {
-  loading: () => <p>Loading...</p>,
-});
-<<<<<<< HEAD
+  loading: () => <p>Loading...</p>});
 export default Analytics
-=======
 export default Analytics;
 '
->>>>>>> main
->>>>>>> main

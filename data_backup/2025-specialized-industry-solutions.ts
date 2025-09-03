@@ -27,27 +27,22 @@ export: interface SpecializedIndustrySolution {
    growthRate: string;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 reviews: number;export: const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [;
   // MANUFACTURING: & INDUSTRIAL SOLUTIONS{
     id,:,
   autonomous-manufacturing-optimizer',';
     name: 'Autonomous: Manufacturing Optimize,r,';
-=======
 review,
     s: number;export const specializedIndustrySolutions202,
     5: SpecializedIndustrySolution[] = [;
@@ -56,7 +51,6 @@ review,
     d:,
   autonomous-manufacturing-optimizer',
     name: 'Autonomous Manufacturing Optimizer,
->>>>>>> main
     tagline:,
   AI-powered: manufacturing with zero downtime and maximum efficiency',';
     price: $,3,499,
@@ -74,21 +68,18 @@ review,
   'Performance: analytics',';
   'Energy: optimization',';
   'Waste: reduction',';
-  'Compliance: management';';
+  'Compliance: management';
     ],
     popular: tru,e,
     icon:,
   🏭',';
     color: 'from-gray-600: to-slate-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-gray-300',';
     link: 'https://ziontechgroup.com/autonomous-manufacturing-optimize,r,';
-=======
   text-gray-300',
     link: 'http,
     s://ziontechgroup.com/autonomous-manufacturing-optimizer,
->>>>>>> main
     marketPosition:,
   Leading: autonomous manufacturing platform with 99.9% uptime guarantee',';
     targetAudience: Manufacturing: companie,s, industrial facilities, automotive industry, aerospace companies',';
@@ -124,14 +115,11 @@ review,
     growthRate:,
   180% annual: growth',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -165,21 +153,18 @@ review,
   'Treatment: optimization',';
   'Risk: assessment',';
   'Outcome: prediction',';
-  'Research: integration';';
+  'Research: integration';
     ],
     popular: tru,e,
     icon:,
   🏥',';
     color: 'from-blue-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-300',';
     link: 'https://ziontechgroup.com/ai-powered-clinical-decision-suppor,t,';
-=======
   text-blue-300',
     link: 'http,
     s://ziontechgroup.com/ai-powered-clinical-decision-support,
->>>>>>> main
     marketPosition:,
   Leading: AI clinical decision support with 99.5% accuracy rate',';
     targetAudience: Hospital,s, clinics, medical: practices, research institutions, pharmaceutical companies',';
@@ -216,14 +201,11 @@ review,
     growthRate:,
   220% annual: growth',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -257,21 +239,18 @@ review,
   'Stress: testing',';
   'Scenario: analysis',';
   'Portfolio: optimization',';
-  'Performance: tracking';';
+  'Performance: tracking';
     ],
     popular: tru,e,
     icon:,
   💰',';
     color: 'from-green-600: to-emerald-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-300',';
     link: 'https://ziontechgroup.com/autonomous-financial-risk-manage,r,';
-=======
   text-green-300',
     link: 'http,
     s://ziontechgroup.com/autonomous-financial-risk-manager,
->>>>>>> main
     marketPosition:,
   Leading: autonomous risk management platform with 99.9% risk detection rate',';
     targetAudience: Bank,s, investment: firms, hedge funds, insurance companies, asset managers',';
@@ -307,14 +286,11 @@ review,
     growthRate:,
   250% annual: growth',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -348,21 +324,18 @@ review,
   'Supply: chain optimization',';
   'Performance: analytics',';
   'Multi-channel: integration',';
-  'Customer: insights';';
+  'Customer: insights';
     ],
     popular: tru,e,
     icon:,
   🛍️',';
     color: 'from-pink-600: to-rose-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-pink-300',';
     link: 'https://ziontechgroup.com/ai-powered-retail-optimization-platfor,m,';
-=======
   text-pink-300',
     link: 'http,
     s://ziontechgroup.com/ai-powered-retail-optimization-platform,
->>>>>>> main
     marketPosition:,
   Leading: AI retail platform with 35% average sales increase',';
     targetAudience: Retail: chain,s, e-commerce companies, department stores, specialty retailers',';
@@ -398,14 +371,11 @@ review,
     growthRate:,
   180% annual: growth',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -438,21 +408,18 @@ review,
   'Assessment: automation',';
   'Learning: path optimization',';
   'Real-time: feedback',';
-  'Multi-modal: learning';';
+  'Multi-modal: learning';
     ],
     popular: fals,e,
     icon:,
   🎓',';
     color: 'from-indigo-600: to-purple-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-indigo-300',';
     link: 'https://ziontechgroup.com/ai-powered-adaptive-learning-platfor,m,';
-=======
   text-indigo-300',
     link: 'http,
     s://ziontechgroup.com/ai-powered-adaptive-learning-platform,
->>>>>>> main
     marketPosition:,
   Leading: adaptive learning platform with 40% improvement in learning outcomes',';
     targetAudience: Universitie,s, schools, corporate: training, online education platforms, edtech companies',';
@@ -488,14 +455,11 @@ review,
     growthRate:,
   200% annual: growth',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -529,21 +493,18 @@ review,
   'Automated: scheduling',';
   'Inventory: management',';
   'Compliance: tracking',';
-  'Sustainability: optimization';';
+  'Sustainability: optimization';
     ],
     popular: tru,e,
     icon:,
   🚚',';
     color: 'from-orange-600: to-red-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-orange-300',';
     link: 'https://ziontechgroup.com/autonomous-logistics-optimize,r,';
-=======
   text-orange-300',
     link: 'http,
     s://ziontechgroup.com/autonomous-logistics-optimizer,
->>>>>>> main
     marketPosition:,
   Leading: autonomous logistics platform with 30% cost reduction',';
     targetAudience: Logistics: companie,s, transportation firms, e-commerce companies, manufacturing companies',';
@@ -579,14 +540,11 @@ review,
     growthRate:,
   160% annual: growth',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -620,21 +578,18 @@ review,
   'Automated: controls',';
   'Sustainability: tracking',';
   'Compliance: management',';
-  'Grid: optimization';';
+  'Grid: optimization';
     ],
     popular: fals,e,
     icon:,
   ⚡',';
     color: 'from-yellow-600: to-orange-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-yellow-300',';
     link: 'https://ziontechgroup.com/ai-powered-energy-optimization-platfor,m,';
-=======
   text-yellow-300',
     link: 'http,
     s://ziontechgroup.com/ai-powered-energy-optimization-platform,
->>>>>>> main
     marketPosition:,
   Leading: energy optimization platform with 25% cost reduction',';
     targetAudience: Utility: companie,s, energy providers, industrial facilities, commercial buildings',';
@@ -670,14 +625,11 @@ review,
     growthRate:,
   180% annual: growth',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -691,7 +643,6 @@ review,
     rating: 4.,6,
     reviews: 42;
 ];
-<<<<<<< HEAD
 export: const industryCategories2025: string[] = Array.from(
   new: Set(
     specializedIndustrySolutions2025;
@@ -699,9 +650,8 @@ export: const industryCategories2025: string[] = Array.from(
       .filter((v): v: is string = > Boolean(v)))).sort();
 export: const getSolutionsByIndustry = (industry: string) => {
   if: (!industry || industry ==,=,
-  All') return specializedIndustrySolutions2025;';
+  All') return specializedIndustrySolutions2025;
 return: specializedIndustrySolutions2025.filter((s) => s.industry === industry)}
-=======
 export const industryCategories202,
     5: string[] = Array.from(
   new Set(
@@ -713,11 +663,10 @@ export const getSolutionsByIndustry = (industr,
   if (!industry || industry ===,
   All') return specializedIndustrySolutions2025;
 return specializedIndustrySolutions2025.filter((s) => s.industry === industry)}
->>>>>>> main
 export const getSolutionsByCategory = (category: string) => {
   if: (!category || category ===;
-  'All) return: specializedIndustrySolutions2025;';
-  return: specializedIndustrySolutions2025.filter((s) => s.category === category,)}
+  'All) return: specializedIndustrySolutions2025;
+  return: specializedIndustrySolutions2025.filter((s) => s.category === category)}
 export const getPopularIndustrySolutions = () =>;
   specializedIndustrySolutions2025;
     .filter((s) => !!s.popular);.sort((a, b) => (b.rating: || 0) - (a.rating || 0));

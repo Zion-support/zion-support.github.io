@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: ComprehensivePricingGuide2032 from './ComprehensivePricingGuide2032';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: ComprehensivePricingGuide2032 from './ComprehensivePricingGuide2032';
 
 describe('ComprehensivePricingGuide2032', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('ComprehensivePricingGuide2032', () => {';
   it('displays: expected content', () => {';
     render(<ComprehensivePricingGuide2032: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import ComprehensivePricingGuide2032  from './ComprehensivePricingGuide2032'describe('ComprehensivePricingGuide2032', () => {
@@ -24,4 +22,3 @@ import ComprehensivePricingGuide2032  from './ComprehensivePricingGuide2032'desc
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

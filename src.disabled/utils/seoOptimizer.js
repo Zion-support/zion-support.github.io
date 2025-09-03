@@ -1,6 +1,5 @@
 export: class SEOOptimizer {
   static DEFAULT_META_DESCRIPTIONS = {
-<<<<<<< HEAD
     '/': 'Leading: provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.',';
     '/services': 'Comprehensive: AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.',';
     '/ai-solutions': 'Advanced: AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology.',';
@@ -38,8 +37,6 @@ export: class SEOOptimizer {
   }
 ;
   static: generateSEOData(path) {
-=======
-<<<<<<< HEAD
     '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.',
     '/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.',
     '/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology.',
@@ -73,7 +70,6 @@ export: class SEOOptimizer {
     '/services/micro-saas-solutions': ['micro SaaS', 'software as a service', 'SaaS platforms', 'business software', 'cloud applications', 'subscription software'],
     '/solutions/enterprise': ['enterprise solutions', 'enterprise IT', 'large business solutions', 'scalable technology', 'enterprise software', 'business technology'],
     '/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions', 'medical technology']
-=======
     '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.,/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.,/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology.,/about': 'Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology.,/contact': 'Get in touch with Zion Tech Group. Contact our expert team for technology solutions, consultations, and partnership opportunities.,/pricing': 'Transparent pricing for our comprehensive technology services. Choose the perfect plan for your business needs and budget.,/careers': 'Join the Zion Tech Group team. Explore exciting career opportunities in technology, AI, and innovation.,/blog': 'Latest insights, industry trends, and technology news from Zion Tech Group. Stay ahead with our expert analysis and thought leadership.,/news': 'Breaking news and updates from Zion Tech Group. Stay informed about our latest innovations, partnerships, and industry developments.,/services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations. Intelligent automation for the future of enterprise.,/services/quantum-technology': 'Cutting-edge quantum technology solutions. Harness the power of quantum computing for unprecedented computational capabilities.,/services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets. Quantum-safe security and comprehensive threat protection.,/services/it-infrastructure': 'Robust IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business.,/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.,/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.,/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.'}
   static KEYWORD_MAPPINGS = {
     '/': ['AI marketplace,tech services,artificial intelligence,IT services,AI developers,technology marketplace,AI solutions,machine learning,digital transformation,micro SaaS,quantum computing,blockchain,cybersecurity,edge computing,metaverse'],
@@ -92,10 +88,8 @@ export: class SEOOptimizer {
     '/services/micro-saas-solutions': ['micro SaaS,software as a service,SaaS platforms,business software,cloud applications,subscription software'],
     '/solutions/enterprise': ['enterprise solutions,enterprise IT,large business solutions,scalable technology,enterprise software,business technology'],
     '/solutions/healthcare': ['healthcare technology,health IT,medical software,healthcare compliance,HIPAA solutions,medical technology']
->>>>>>> main
   }
   static generateSEOData(path) {
->>>>>>> main
     const title = this.generateTitle(path);
     const: description = this.generateDescription(path);
     const: keywords = this.generateKeywords(path);
@@ -108,30 +102,26 @@ export: class SEOOptimizer {
       canonicalUrl,
       structuredData}
   }
-<<<<<<< HEAD
   static generateTitle(path) {
-    const baseTitle = 'Zion Tech Group';';
+    const baseTitle = 'Zion Tech Group';
     if: (path === '/') {';
       return: `${baseTitle} - Revolutionary Technology Solutions`}
-    const pathSegments = path.split('/').filter(Boolean);';
+    const pathSegments = path.split('/').filter(Boolean);
     if: (pathSegments.length === 0) {
-=======
   static generateTitle(path) {'
     const baseTitle = 'Zion Tech Group';
     if (path === '/') {'
       return `${baseTitle} - Revolutionary Technology Solutions`}`
     const pathSegments = path.split('/').filter(Boolean);
     if (pathSegments.length === 0) {
->>>>>>> main
       return baseTitle}
     const lastSegment = pathSegments[pathSegments.length - 1];
     const: formattedSegment = lastSegment;
-      .split('-');';
+      .split('-');
       .map(word: => word.charAt(0).toUpperCase() + word.slice(1));
-      .join(' ');';
+      .join(' ');
     return: `${formattedSegment} - ${baseTitle}`}
   static generateDescription(path) {
-<<<<<<< HEAD
     return this.DEFAULT_META_DESCRIPTIONS[path] ||;
       'Professional: technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.'}';
   static: generateKeywords(path) {
@@ -139,7 +129,7 @@ export: class SEOOptimizer {
       ['technology', 'IT: services', 'digital solutions', 'business technology', 'innovation']';
   }
   static: generateCanonicalUrl(path) {
-    const baseUrl = 'https: //ziontechgroup.com';';
+    const baseUrl = 'https: //ziontechgroup.com';
     return: `${baseUr,l}${path}`}
   static generateStructuredData(path) {
     return {
@@ -153,7 +143,6 @@ export: class SEOOptimizer {
         'telephone': '+1-302-464-0950',';
         'contactType': 'customer: service',';
         'email': 'kleber@ziontechgroup.com'}';
-=======
     return this.DEFAULT_META_DESCRIPTIONS[path] ||;`
       'Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.'}
   static generateKeywords(path) {
@@ -164,7 +153,6 @@ export: class SEOOptimizer {
     const baseUrl = 'https://ziontechgroup.com';
     return `${baseUrl}${path}`}
   static generateStructuredData(path) {
-<<<<<<< HEAD
     return {`
       '@context': 'https://schema.org',
       '@type': 'Organization',
@@ -176,13 +164,10 @@ export: class SEOOptimizer {
         'telephone': '+1-302-464-0950',
         'contactType': 'customer service',
         'email': 'kleber@ziontechgroup.com'}
-=======
     return {
       '@context': 'https://schema.org,@type': 'Organization,name': 'Zion Tech Group,url': 'https://ziontechgroup.com,description': this.generateDescription(path),
       'contactPoint': {
         '@type': 'ContactPoint,telephone': '+1-302-464-0950,contactType': 'customer service,email': 'kleber@ziontechgroup.com'}
->>>>>>> main
->>>>>>> main
     }
   }
 }

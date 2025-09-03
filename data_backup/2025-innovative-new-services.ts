@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface InnovativeNewService2025 {
   id: string;
    name: string;
@@ -28,27 +28,22 @@ export: interface InnovativeNewService2025 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 reviews: number;export: const innovativeNewServices2025: InnovativeNewService2025[] = [;
   // AI-Powered: Content Intelligence Platform{
     id,:,
   ai-content-intelligence-platform',';
     name: 'AI: Content Intelligence Platfor,m,';
-=======
 review,
     s: number;export const innovativeNewServices202,
     5: InnovativeNewService2025[] = [;
@@ -57,7 +52,6 @@ review,
     d:,
   ai-content-intelligence-platform',
     name: 'AI Content Intelligence Platform,
->>>>>>> main
     tagline:,
   Transform: content creation with AI-powered intelligence and analytics',';
     price: $,2,500,
@@ -75,21 +69,18 @@ review,
   'Content: ROI tracking and reporting',';
   'Automated: content scheduling',';
   'A/B: testing for content optimization',';
-  'Content: personalization engine';';
+  'Content: personalization engine';
     ],
     popular: tru,e,
     icon:,
   🧠',';
     color: 'from-purple-500: to-pink-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/ai-content-intelligence-platfor,m,';
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/ai-content-intelligence-platform,
->>>>>>> main
     marketPosition:,
   Leading: AI content intelligence platform with advanced analytics and predictive modeling capabilities.',';
     targetAudience: Marketing: agencie,s, Content creators, E-commerce businesses, SaaS companies, Digital publishers',';
@@ -112,7 +103,6 @@ review,
   150%+ annual: growth',';
     variant: 'ai-creativ,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -120,7 +110,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -130,7 +119,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Full-stack: AI content intelligence platform with real-time analytics, predictive modeling, and automated optimization.',';
     launchDate: '2025-01-1,5,';
@@ -149,7 +137,6 @@ review,
     description: ;
   'Next-generation: quantum-secure communication network that provides unbreakable encryption for governmen,t, financial, and enterprise communications using quantum key distribution.',';
     features[;
-<<<<<<< HEAD
   'Quantum: key distribution (QKD)',';
   'Unbreakable: encryption protocols',';
   'Real-time: quantum state monitoring',';
@@ -159,8 +146,7 @@ review,
   'Quantum: entanglement distribution',';
   'Post-quantum: cryptography',';
   'Quantum: network management',';
-  'Compliance: and audit trails';';
-=======
+  'Compliance: and audit trails';
   'Quantum key distribution (QKD),
   'Unbreakable encryption protocols',
   'Real-time quantum state monitoring',
@@ -171,21 +157,17 @@ review,
   'Post-quantum cryptography',
   'Quantum network management',
   'Compliance and audit trails';
->>>>>>> main
     ],
     popular: tru,e,
     icon:,
   🔐',';
     color: 'from-indigo-500: to-blue-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-indigo-400',';
     link: 'https://ziontechgroup.com/quantum-secure-communication-networ,k,';
-=======
   text-indigo-400',
     link: 'http,
     s://ziontechgroup.com/quantum-secure-communication-network,
->>>>>>> main
     marketPosition:,
   First-to-market: quantum-secure communication network with proven quantum cryptography implementation.',';
     targetAudience: Government: agencie,s, Financial institutions, Healthcare organizations, Defense contractors, Enterprise corporations',';
@@ -208,7 +190,6 @@ review,
   400%+ annual: growth',';
     variant: 'quantum-securit,y,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -216,7 +197,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -226,7 +206,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: quantum-secure communication infrastructure with QKD, quantum networks, and post-quantum cryptography.',';
     launchDate: '2025-02-0,1,';
@@ -254,21 +233,18 @@ review,
   'Intelligent: scaling decisions',';
   'Automated: security responses',';
   'Business: process automation',';
-  'Real-time: optimization';';
+  'Real-time: optimization';
     ],
     popular: tru,e,
     icon:,
   🤖',';
     color: 'from-green-500: to-emerald-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/autonomous-ai-operations-cente,r,';
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/autonomous-ai-operations-center,
->>>>>>> main
     marketPosition:,
   Leading: autonomous AI operations platform with proven self-management capabilities.',';
     targetAudience: Enterprise: companie,s, Data centers, Cloud providers, Manufacturing, Healthcare systems',';
@@ -291,7 +267,6 @@ review,
   200%+ annual: growth',';
     variant: 'ai-autonomou,s,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -299,7 +274,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -309,7 +283,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: autonomous AI operations center with self-managing infrastructure, predictive analytics, and automated optimization.',';
     launchDate: '2025-01-2,0,';
@@ -337,21 +310,18 @@ review,
   'Sustainability: tracking',';
   'Risk: assessment and mitigation',';
   'Supplier: performance analytics',';
-  'Compliance: automation';';
+  'Compliance: automation';
     ],
     popular: tru,e,
     icon:,
   ⛓️',';
     color: 'from-orange-500: to-red-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-orange-400',';
     link: 'https://ziontechgroup.com/blockchain-supply-chain-intelligenc,e,';
-=======
   text-orange-400',
     link: 'http,
     s://ziontechgroup.com/blockchain-supply-chain-intelligence,
->>>>>>> main
     marketPosition:,
   Leading: blockchain supply chain platform with AI intelligence and comprehensive tracking capabilities.',';
     targetAudience: Manufacturing: companie,s, Retail chains, Logistics providers, Food industry, Pharmaceutical companies',';
@@ -375,7 +345,6 @@ review,
   250%+ annual: growth',';
     variant: 'supply-chain-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -383,7 +352,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -393,7 +361,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: blockchain supply chain platform with AI intelligence, IoT integration, and comprehensive tracking capabilities.',';
     launchDate: '2025-02-1,5,';
@@ -421,21 +388,18 @@ review,
   'Real-time: rendering',';
   'Asset: marketplace',';
   'Analytics: and insights',';
-  'Cross-platform: deployment';';
+  'Cross-platform: deployment';
     ],
     popular: tru,e,
     icon:,
   🌐',';
     color: 'from-cyan-500: to-blue-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-cyan-400',';
     link: 'https://ziontechgroup.com/metaverse-development-platfor,m,';
-=======
   text-cyan-400',
     link: 'http,
     s://ziontechgroup.com/metaverse-development-platform,
->>>>>>> main
     marketPosition:,
   Leading: metaverse development platform with AI-powered tools and comprehensive 3D capabilities.',';
     targetAudience: Gaming: companie,s, Real estate, Education, Healthcare, Retail, Event organizers',';
@@ -458,7 +422,6 @@ review,
   300%+ annual: growth',';
     variant: 'metaverse-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -466,7 +429,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -476,7 +438,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: metaverse development platform with 3D tools, AI content generation, and VR/AR integration.',';
     launchDate: '2025-01-3,0,';
@@ -504,21 +465,18 @@ review,
   'Risk: management tools',';
   'Compliance: automation',';
   'Performance: analytics',';
-  'Multi-exchange: integration';';
+  'Multi-exchange: integration';
     ],
     popular: tru,e,
     icon:,
   📈',';
     color: 'from-yellow-500: to-orange-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-yellow-400',';
     link: 'https://ziontechgroup.com/quantum-financial-trading-platfor,m,';
-=======
   text-yellow-400',
     link: 'http,
     s://ziontechgroup.com/quantum-financial-trading-platform,
->>>>>>> main
     marketPosition:,
   First-to-market: quantum financial trading platform with proven quantum advantage in market analysis.',';
     targetAudience: Hedge: fund,s, Investment banks, Trading firms, Asset managers, Financial institutions',';
@@ -541,7 +499,6 @@ review,
   500%+ annual: growth',';
     variant: 'quantum-ai-financ,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -549,7 +506,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -559,7 +515,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: quantum financial trading platform with quantum computing integration, AI algorithms, and comprehensive trading tools.',';
     launchDate: '2025-02-1,0,';
@@ -587,21 +542,18 @@ review,
   'Symptom: assessment tools',';
   'Telemedicine: integration',';
   'Compliance: and security',';
-  'Clinical: decision support';';
+  'Clinical: decision support';
     ],
     popular: tru,e,
     icon:,
   🏥',';
     color: 'from-red-500: to-pink-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-red-400',';
     link: 'https://ziontechgroup.com/ai-healthcare-diagnostics-platfor,m,';
-=======
   text-red-400',
     link: 'http,
     s://ziontechgroup.com/ai-healthcare-diagnostics-platform,
->>>>>>> main
     marketPosition:,
   Leading: AI healthcare diagnostics platform with FDA approval and proven accuracy rates.',';
     targetAudience: Hospital,s, Clinics, Medical: practices, Telemedicine providers, Healthcare startups',';
@@ -624,7 +576,6 @@ review,
   350%+ annual: growth',';
     variant: 'ai-healthcar,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -632,7 +583,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -642,7 +592,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: AI healthcare diagnostics platform with medical imaging analysis, diagnosis generation, and treatment recommendations.',';
     launchDate: '2025-01-2,5,';
@@ -670,21 +619,18 @@ review,
   'Monitoring: and analytics',';
   'Automated: failover',';
   'Resource: optimization',';
-  'Multi-cloud: edge integration';';
+  'Multi-cloud: edge integration';
     ],
     popular: tru,e,
     icon:,
   ⚡',';
     color: 'from-blue-500: to-indigo-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/edge-computing-orchestration-platfor,m,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/edge-computing-orchestration-platform,
->>>>>>> main
     marketPosition:,
   Leading: edge computing orchestration platform with intelligent resource management and optimization.',';
     targetAudience: IoT: companie,s, Edge computing providers, Manufacturing, Smart cities, Telecommunications',';
@@ -707,7 +653,6 @@ review,
   280%+ annual: growth',';
     variant: 'edge-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -715,7 +660,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -725,11 +669,10 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: edge computing orchestration platform with distributed management, IoT integration, and AI-powered optimization.',';
     launchDate: '2025-02-0,5,';
     customers: 3,8,
     rating: 4.,8,
     reviews: 20;
-,]}}
+]}}

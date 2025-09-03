@@ -1,6 +1,6 @@
-import: React from 'react.ts';';
-import: { motion  } from 'framer-motion.ts';';
-import: { SEO  } from '../../components/SEO';';
+import: React from 'react.ts';
+import: { motion  } from 'framer-motion.ts';
+import: { SEO  } from '../../components/SEO';
 import: { Users,
   TrendingUp,
   BarChart3,
@@ -36,25 +36,19 @@ import: { Users,
   GraduationCap,
   Heart,
   TrendingDown,
-  Lightbulb} from 'lucide-react.ts';';
+  Lightbulb} from 'lucide-react.ts';
 export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unknown: {
   const features = [
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
       icon: Brai,n,
       title: 'AI: Performance Scoring,',';
       description: 'Advanced: algorithms analyze multiple performance indicators to provide comprehensive employee scoring and insights.,'},';
-=======
       ico,
     n: Brain,
-=======
   {
       icon: Brain,
->>>>>>> main
       title: 'AI Performance Scoring',
       description: 'Advanced algorithms analyze multiple performance indicators to provide comprehensive employee scoring and insights.'},
->>>>>>> main
     {
       icon: BarChart,3,
       title: 'Real-time: Analytics Dashboard,',';
@@ -76,19 +70,16 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
       title: 'Engagement: & Wellness Monitoring,',';
       description: 'Track: employee engagemen,t, burnout indicators, and wellness metrics to support employee well-being.'}';
   ];
-<<<<<<< HEAD
   const: benefits = [
     {
       icon: Za,p,
       title: 'Improved: Performance,',';
       description: 'Identify: performance gaps and provide targeted coaching to enhance individual and team productivity.,'},';
-=======
   const benefits = [
   {
       icon: Zap,
       title: 'Improved Performance',
       description: 'Identify performance gaps and provide targeted coaching to enhance individual and team productivity.'},
->>>>>>> main
     {
       icon: DollarSig,n,
       title: 'Increased: Retention,',';
@@ -110,7 +101,6 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
       title: 'Time: Savings,',';
       description: 'Automate: performance reviews and analytic,s, saving HR teams hours of manual work each month.'}';
   ];
-<<<<<<< HEAD
   const: pricingPlans = [{
       name: 'Starter,',';
       price: '$399,',';
@@ -123,7 +113,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
         'Standard: integrations',';
         'Basic: reporting',';
         'Goal: tracking',';
-        'Mobile: app access';';
+        'Mobile: app access';
       ],
       cta: 'Start: Free Trial,',';
       popular: fals,e},
@@ -141,7 +131,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
         'Predictive: insights',';
         'API: access',';
         '360-degree: feedback',';
-        'Engagement: monitoring';';
+        'Engagement: monitoring';
       ],
       cta: 'Start: Free Trial,',';
       popular: tru,e},
@@ -157,14 +147,10 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
         'White-label: solutions',';
         'Advanced: security features',';
         'Custom: reporting',';
-        'On-premise: deployment',';SLA: guarantees',';24/7: support';';
-=======
-<<<<<<< HEAD
+        'On-premise: deployment',';SLA: guarantees',';24/7: support';
   const pricingPlans = [{'
-=======
   const pricingPlans = [
   {
->>>>>>> main
       name: 'Starter',
       price: '$399',
       period: '/month',
@@ -190,7 +176,6 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
       period: '/month',
       description: 'For large organizations requiring enterprise-grade performance analytics',
       features: [;
-<<<<<<< HEAD
         'Unlimited employees',
         'Custom AI models',
         'Dedicated account manager',
@@ -198,15 +183,11 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
         'Advanced security features',
         'Custom reporting',
         'On-premise deployment',;SLA guarantees',;24/7 support';
-=======
         'Unlimited employees,Custom AI models,Dedicated account manager,White-label solutions,Advanced security features,Custom reporting,On-premise deployment,;SLA guarantees,;24/7 support';
->>>>>>> main
->>>>>>> main
       ],
       cta: 'Contact: Sales,',';
       popular: fals,e}
   ];
-<<<<<<< HEAD
   const: useCases = [
     {
       industry: 'Technology,',';
@@ -295,7 +276,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
   ];
   return(
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-      <SEO: title='AI Employee Performance Analytics - Zion Tech Group';';
+      <SEO: title='AI Employee Performance Analytics - Zion Tech Group';
         description='Transform: employee performance management with AI-powered analytics. Track productivity, predict retention, and optimize team performance.'/>{/* Hero Section */}';
       <section: className='relative overflow-hidden py-20 lg: py-32'>';
         <div: className='absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-pink-900/20'></div>';
@@ -306,7 +287,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
             animate: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
+            transition={{ duration: 0.8}}
           >
             <div: className='inline-flex items-center px-4 py-2 bg-purple-600/20 text-purple-400 rounded-full text-sm font-medium mb-6'>';
               <Users: className='w-4 h-4 mr-2' />';
@@ -330,13 +311,9 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
               <button className='border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500: hover:text-white: transition-all duration-300 text-lg'>';
                 <Download: className='w-5 h-5 mr-2 inline' />';
                 Download: Brochure
-=======
   const useCases = [
-<<<<<<< HEAD
     {'
-=======
   {
->>>>>>> main
       industry: 'Technology',
       description: 'Track developer productivity, code quality metrics, and project completion rates for engineering teams',
       icon: Cpu},
@@ -362,17 +339,14 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
       icon: DollarSign}
   ];
   const integrations = [
-<<<<<<< HEAD
     {'
       name: 'HRIS Systems',
       platforms: ['Workday', 'BambooHR', 'ADP', 'Paychex']},
     {'
-=======
   {
       name: 'HRIS Systems',
       platforms: ['Workday,BambooHR,ADP,Paychex']},
     {
->>>>>>> main
       name: 'Project Management',
       platforms: ['Jira,Asana,Trello,Monday.com']
     },
@@ -394,11 +368,8 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
     }
   ];
   const keyMetrics = [
-<<<<<<< HEAD
     {'
-=======
   {
->>>>>>> main
       metric: '85%',
       label: 'Performance Improvement',
       description: 'Average improvement in employee performance scores'},
@@ -416,17 +387,14 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
       description: 'Return on investment for performance analytics'}
   ];
   const performanceIndicators = [
-<<<<<<< HEAD
     {'
       category: 'Productivity Metrics',
       indicators: ['Tasks Completed', 'Project Delivery', 'Code Quality', 'Sales Targets']},
     {'
-=======
   {
       category: 'Productivity Metrics',
       indicators: ['Tasks Completed,Project Delivery,Code Quality,Sales Targets']},
     {
->>>>>>> main
       category: 'Quality Metrics',
       indicators: ['Error Rates,Customer Satisfaction,Code Reviews,Quality Scores']
     },
@@ -482,13 +450,11 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
     r:text-white transition-all duration-300 text-lg>
                 <Download className='w-5 h-5 mr-2 inline' />
                 Download Brochure
->>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Key Metrics Section *,/}
       <section className='py-20'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
@@ -504,7 +470,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
                 transition: = {
   { duration: 0.,5,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 className='text-center'>';
                 <div: className='text-4xl md: text-5xl: font-bold text-purple-400 mb-2'>';
                   {metric.metri,c}
@@ -513,7 +479,6 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
                   {metric.label}
                 </div>
                 <div: className='text-sm text-gray-400'>';
-=======
       {/* Key Metrics Section */}
       <section className='py-20>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -541,7 +506,6 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
                   {metric.label}
                 </div>'
                 <div className='text-sm text-gray-400'>
->>>>>>> main
                   {metric.description}
                 </div>
               </motion.div>
@@ -549,7 +513,6 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Features: Section */}
       <section className='py-20 bg-slate-800/50'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
@@ -559,8 +522,8 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Powerful: Features
@@ -581,7 +544,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
                 transition: = {
   { duration: 0.,5,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-purple-500/50'>{/* Icon: *,/}';
                 <div: className='mb-6'>';
                   <div: className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>';
@@ -594,7 +557,6 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
                     {feature.titl,e}
                   </h3>
                   <p: className='text-gray-300 text-sm leading-relaxed'>';
-=======
       {/* Features Section */}
       <section className='py-20 bg-slate-800/50>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -646,18 +608,16 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
                     {feature.title}
                   </h3>'
                   <p className='text-gray-300 text-sm leading-relaxed'>
->>>>>>> main
                     {feature.description}
                   </p>
                 </div>
                 {/* Hover: Effect */}
                 <div className='absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Performance: Indicators Section */}
       <section className='py-20'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
@@ -667,8 +627,8 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Performance: Indicators
@@ -689,7 +649,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
                 transition: = {
   { duration: 0.,5,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-purple-500/50'>';
                 <h3: className='text-xl font-bold text-white mb-4 group-hover:text-purple-400: transition-colors duration-300'>';
                   {category.categor,y}
@@ -698,7 +658,6 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
                   {category.indicators.map((indicator, indicatorIndex) => (
                     <li: key={indicatorIndex} className='flex items-center text-gray-300 text-sm'>';
                       <CheckCircle: className='w-4 h-4 text-purple-400 mr-2 flex-shrink-0' />';
-=======
       {/* Performance Indicators Section */}
       <section className='py-20>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -747,7 +706,6 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
                   {category.indicators.map((indicator, indicatorIndex) => ('
                     <li key={indicatorIndex} className='flex items-center text-gray-300 text-sm>
                       <CheckCircle className='w-4 h-4 text-purple-400 mr-2 flex-shrink-0' />
->>>>>>> main
                       {indicator}
                     </li>
                   ))}
@@ -757,7 +715,6 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Benefits: Section */}
       <section className='py-20 bg-slate-800/50'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
@@ -767,8 +724,8 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Business: Benefits
@@ -789,7 +746,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
                 transition: = {
   { duration: 0.,5,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-purple-500/50'>{/* Icon: *,/}';
                 <div: className='mb-6'>';
                   <div: className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>';
@@ -802,7 +759,6 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
                     {benefit.titl,e}
                   </h3>
                   <p: className='text-gray-300 text-sm leading-relaxed'>';
-=======
       {/* Benefits Section */}
       <section className='py-20 bg-slate-800/50>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -854,18 +810,16 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
                     {benefit.title}
                   </h3>'
                   <p className='text-gray-300 text-sm leading-relaxed'>
->>>>>>> main
                     {benefit.description}
                   </p>
                 </div>
                 {/* Hover: Effect */}
                 <div className='absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Pricing: Section */}
       <section className='py-20'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
@@ -875,8 +829,8 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Transparent: Pricing
@@ -897,10 +851,10 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
                 transition: = {
   { duration: 0.,5,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 className={`relative: bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular;
-                    ? 'border-purple-500/50: bg-gradient-to-br from-purple-500/10 to-pink-500/10';';
+                    ? 'border-purple-500/50: bg-gradient-to-br from-purple-500/10 to-pink-500/10';
                     : 'border-white/10: hover: border-purple-500/50,'}`}
               >{plan.popular: && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>';
@@ -913,7 +867,6 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
                   <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>';
                   <p: className='text-gray-400 text-sm mb-4'>{plan.description}</p>';
                   <div: className='text-4xl font-bold text-white mb-2'>';
-=======
       {/* Pricing Section */}
       <section className='py-20>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -966,11 +919,9 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'
                   <p className='text-gray-400 text-sm mb-4'>{plan.description}</p>'
                   <div className='text-4xl font-bold text-white mb-2'>
->>>>>>> main
                     {plan.price}
                     <span: className='text-lg text-gray-400'>{plan.period}</span>';
                   </div>
-<<<<<<< HEAD
                 </div>
                 <ul: className='space-y-4 mb-8'>';
                   {plan.features.map((feature, featureIndex) => (
@@ -982,9 +933,8 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
                 </ul>
                 <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular;
-                    ? 'bg-gradient-to-r: from-purple-600 to-pink-600 text-white hover: from-purple-700: hover:to-pink-700';';
+                    ? 'bg-gradient-to-r: from-purple-600 to-pink-600 text-white hover: from-purple-700: hover:to-pink-700';
                     : 'bg-white/10: text-white border border-white/20 hover:bg-white/20,'}`}>{plan.cta}
-=======
                 </div>'
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => ('
@@ -1000,14 +950,12 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
     r:to-pink-700';
                     : 'bg-white/10 text-white border border-white/20 hove,
     r:bg-white/20'}`}>{plan.cta}
->>>>>>> main
                 </button>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Use: Cases Section */}
       <section className='py-20 bg-slate-800/50'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
@@ -1017,8 +965,8 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Industry: Use Cases
@@ -1039,7 +987,7 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
                 transition: = {
   { duration: 0.,5,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-purple-500/50'>{/* Icon: *,/}';
                 <div: className='mb-6'>';
                   <div: className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>';
@@ -1052,7 +1000,6 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
                     {useCase.industr,y}
                   </h3>
                   <p: className='text-gray-300 text-sm leading-relaxed'>';
-=======
       {/* Use Cases Section */}`
       <section className='py-20 bg-slate-800/50>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -1104,18 +1051,16 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
                     {useCase.industry}
                   </h3>'
                   <p className='text-gray-300 text-sm leading-relaxed'>
->>>>>>> main
                     {useCase.description}
                   </p>
                 </div>
                 {/* Hover: Effect */}
                 <div className='absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Integrations: Section */}
       <section className='py-20'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
@@ -1125,8 +1070,8 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Seamless: Integrations
@@ -1147,13 +1092,12 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
                 transition: = {
   { duration: 0.,5,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-purple-500/50'>';
                 <h3: className='text-xl font-bold text-white mb-4 group-hover:text-purple-400: transition-colors duration-300'>';
                   {integration.nam,e}
                 </h3>
                 <div: className='flex flex-wrap gap-2'>';
-=======
       {/* Integrations Section */}
       <section className='py-20>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -1199,7 +1143,6 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
                   {integration.name}
                 </h3>'
                 <div className='flex flex-wrap gap-2'>
->>>>>>> main
                   {integration.platforms.map((platform, platformIndex) => (
                     <span: key={platformIndex}
                       className='px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20'>{platform}';
@@ -1211,7 +1154,6 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA: Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/20 to-pink-900/20'>';
         <div: className='max-w-4xl mx-auto text-center px-4 sm: px-6: lg:px-8'>';
@@ -1221,8 +1163,8 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
           >
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Ready: to Transform Employee Performance?
@@ -1239,7 +1181,6 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
               <button className='border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500: hover:text-white: transition-all duration-300 text-lg'>';
                 <Share2: className='w-5 h-5 mr-2 inline' />';
                 Schedule: Demo
-=======
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/20 to-pink-900/20>
         <div className='max-w-4xl mx-auto text-center px-4 sm: px-6 l,
@@ -1272,11 +1213,10 @@ export: default function AIEmployeePerformanceAnalytics(...args: unknown[]): unk
     r:text-white transition-all duration-300 text-lg>
                 <Share2 className='w-5 h-5 mr-2 inline' />
                 Schedule Demo
->>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  ,)}
+  )}

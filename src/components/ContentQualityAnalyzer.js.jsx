@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
  const ContentQualityAnalyzer = () => { const [isOpen, setIsOpen] = useState (false) ; const [isAnalyzing, setIsAnalyzing] = useState (false) ; const [contentIssues, setContentIssues] = useState ([]) ; const [report, setReport] = useState (null) ; const [selectedFilter, setSelectedFilter] = useState ("all") ; const [searchTerm, setSearchTerm] = useState (") ;"""";,"});,"})
 ;,"});,"})
@@ -17,7 +16,7 @@ import {}"});,"})
   Zap} from 'lucide-react';,"});,"})
 const ContentQualityAnalyzer = () => {}"});,"})
   const [isOpen, setIsOpen] = useState(false);,"});,"})
-  const [isAnalyzing, setIsAnalyzing] = useState(false);';,"});,"})
+  const [isAnalyzing, setIsAnalyzing] = useState(false);,"});,"})
   const [contentIssues, setContentIssues] = useState([]);'';,"});,"})
   const [report, setReport] = useState(null);''';,"});,"})
   const [selectedFilter, setSelectedFilter] = useState('all');''';,"});,"})
@@ -85,9 +84,9 @@ const ContentQualityAnalyzer = () => {}"});,"})
   }, []);,"});,"})
   const generateReport = issues => {}"});,"})
     const totalPages = 79; // From analysis report;,"});,"})
-    const pagesWithIssues = issues.length;';,"});,"})
-    const criticalIssues = issues.filter(i => i.severity === 'high').length;';,"});,"})
-    const mediumIssues = issues.filter(i => i.severity === 'medium').length;';,"});,"})
+    const pagesWithIssues = issues.length;,"});,"})
+    const criticalIssues = issues.filter(i => i.severity === 'high').length;,"});,"})
+    const mediumIssues = issues.filter(i => i.severity === 'medium').length;,"});,"})
     const lowIssues = issues.filter(i => i.severity === 'low').length;,"});,"})
     setReport({}"});,"})
       totalPages,;,"});,"})
@@ -419,10 +418,10 @@ const ContentQualityAnalyzer = () => {}"});,"})
                               className={`text-sm font-medium ${getStatusColor(issue.status)}`}"});,"})
                             >';,"});,"})
                               {issue.status'';,"});,"})
-                                .replace('_',);,"});,"})
+                                .replace('_');,"});,"})
                                 .charAt(0)';,"});,"})
                                 .toUpperCase() +'';,"});,"})
-                                issue.status.replace('_',).slice(1)}"});,"})
+                                issue.status.replace('_').slice(1)}"});,"})
                             </span>""";,"});,"})
                           </td>"""";,"});,"})
                           <td className="px-6 py-4 whitespace-nowrap">"""";,"});,"})
@@ -507,18 +506,9 @@ export { ContentQualityAnalyzer };,"});,"})
 export { ContentQualityAnalyzer };,"});,"})
 ;,"});,"})
 export { ContentQualityAnalyzer };,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
-<<<<<<< HEAD
  const ContentQualityAnalyzer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [contentIssues, setContentIssues] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all')  const [searchTerm, setSearchTerm] = useState (') ';'";
-=======
-<<<<<<< HEAD
  const ContentQualityAnalyzer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [contentIssues, setContentIssues] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all')  const [searchTerm, setSearchTerm] = useState (') ';'"'"
-=======
  const ContentQualityAnalyzer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [contentIssues, setContentIssues] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all')  const [searchTerm, setSearchTerm] = useState (') "
->>>>>>> main
 
 ""
 }
->>>>>>> main
->>>>>>> main

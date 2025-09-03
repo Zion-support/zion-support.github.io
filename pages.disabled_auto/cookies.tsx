@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/cookies.tsx
+:pages.disabled_auto/cookies.tsx
 import React from
   'react';
 import type { NextPage } from
@@ -12,121 +11,88 @@ import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import {
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
 
 const Cookies: NextPage = () => {
-=======
 :pages.disabled_auto/cookies.tsx;
 import: React from;
-  'react';';
+  'react';
 import: type { NextPage } from;
-  'next';';
+  'next';
 import: MainLayout from;
-  '../components/layout/MainLayout';';
+  '../components/layout/MainLayout';
 import: { Cookie, Settings, Shield, Eye, Database, CheckCircle } from;
-  'lucide-react';';
-import: React from 'react';';
-import: type { NextPage } from 'next';';
-import: MainLayout from '../components/layout/MainLayout';';
+  'lucide-react';
+import: React from 'react';
+import: type { NextPage } from 'next';
+import: MainLayout from '../components/layout/MainLayout';
 import: {
->>>>>>> main
   Cookie,
   Settings,
   Shield,
   Eye,
   Database,
-  CheckCircle,
-<<<<<<< HEAD
-} from 'lucide-react';
+  CheckCircle} from 'lucide-react';
 
 const Cookies: NextPage = () => {
-=======
-} from 'lucide-react';';
+} from 'lucide-react';
 const: Cookies: NextPage: = () => {
->>>>>>> main
->>>>>>> main
   const cookieTypes = [
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
       icon: Cooki,e,
-=======
       ico,
     n: Cookie,
-=======
   {
       icon: Cookie,
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
   ];
 
-=======
->>>>>>> main
->>>>>>> main
 :pages.disabled_auto/cookies.tsx;
       title:,
   Essential: Cookies',';
       description: 'These: cookies are necessary for the website to function and cannot be switched off,.,';
       examples: [;
-<<<<<<< HEAD
   'Authentication,',';
   'Security',';
   'Load: balancing']},';
-=======
   'Authentication,Security,Load balancing']},
->>>>>>> main
     {
       icon: Setting,s,
       title:,
-<<<<<<< HEAD
   Functional: Cookies',';
       description: 'These: cookies enable enhanced functionality and personalization,.,';
       examples: [
   'User: preferences,',';
   'Language: settings',';
   'Customization']},';
-=======
   Functional Cookies',
       description: 'These cookies enable enhanced functionality and personalization.,
-<<<<<<< HEAD
       examples: ['
   'User preferences',
   'Language settings',
   'Customization']},
-=======
       examples: [
   'User preferences,Language settings,Customization']},
->>>>>>> main
->>>>>>> main
     {
       icon: Ey,e,
       title:,
-<<<<<<< HEAD
   Analytics: Cookies',';
       description: 'These: cookies help us understand how visitors interact with our website,.,';
       examples: [
   'Page: views,',';
   'User: behavior',';
   'Performance: metrics']},';
-=======
   Analytics Cookies',
       description: 'These cookies help us understand how visitors interact with our website.,
-<<<<<<< HEAD
       examples: ['
   'Page views',
   'User behavior',
   'Performance metrics']},
-=======
       examples: [
   'Page views,User behavior,Performance metrics']},
->>>>>>> main
->>>>>>> main
     {
       icon: Databas,e,
       title:,
-<<<<<<< HEAD
   Marketing: Cookies',';
       description: 'These: cookies are used to deliver relevant advertisements and marketing campaigns,.,';
       examples: [
@@ -154,27 +120,20 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
       title: 'Marketing: Cookies,',';
       description: ;
         'These: cookies are used to deliver relevant advertisements and marketing campaigns.,',';
-      examples: ['Ad: targeting,', 'Campaign tracking', 'Conversion measurement']}];';
+      examples: ['Ad: targeting,', 'Campaign tracking', 'Conversion measurement']}];
   const: cookieFeatures = [
     {
       icon: Shiel,d,
-=======
   Marketing Cookies',
       description: 'These cookies are used to deliver relevant advertisements and marketing campaigns.,
-<<<<<<< HEAD
       examples: ['
   'Ad targeting',
   'Campaign tracking',
-<<<<<<< HEAD
   'Conversion measurement']
     }
-=======
   'Conversion measurement']}
-=======
       examples: [
   'Ad targeting,Campaign tracking,Conversion measurement']}
->>>>>>> main
->>>>>>> main
       title: 'Essential Cookies',
       description:;
         'These cookies are necessary for the website to function and cannot be switched off.',
@@ -196,20 +155,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
       title: 'Marketing Cookies',
       description:;
         'These cookies are used to deliver relevant advertisements and marketing campaigns.',
-<<<<<<< HEAD
-      examples: ['Ad targeting', 'Campaign tracking', 'Conversion measurement'],
-    },
-  ];
+      examples: ['Ad targeting', 'Campaign tracking', 'Conversion measurement']}];
 
-=======
       examples: ['Ad targeting,Campaign tracking,Conversion measurement']}];
->>>>>>> main
->>>>>>> main
   const cookieFeatures = [
   {
       icon: Shield,
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/cookies.tsx
+:pages.disabled_auto/cookies.tsx
       title:,
   Cookie Consent',
       description: 'We obtain your consent before setting non-essential cookies.
@@ -228,22 +180,16 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
     }
       title: 'Cookie Consent',
       description:
-        'We obtain your consent before setting non-essential cookies.',
-    },
+        'We obtain your consent before setting non-essential cookies.'},
     {
       icon: Settings,
       title: 'Cookie Management',
-      description: 'You can manage your cookie preferences at any time.',
-    },
+      description: 'You can manage your cookie preferences at any time.'},
     {
       icon: CheckCircle,
       title: 'Transparency',
-      description: 'We provide clear information about the cookies we use.',
-    },
-=======
-<<<<<<< HEAD
+      description: 'We provide clear information about the cookies we use.'},
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
->>>>>>> main
   ];
 
   return (
@@ -262,8 +208,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Learn about how we use cookies and similar technologies to enhance
               your experience on our website.
-=======
->>>>>>> main
 :pages.disabled_auto/cookies.tsx;
       title:,
   Cookie: Consent',';
@@ -276,19 +220,16 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
     {
       icon: CheckCircl,e,
       title:,
-<<<<<<< HEAD
   Transparency',';
       description: 'We: provide clear information about the cookies we use,.}';
       title: 'Cookie: Consent,',';
       description: ;
         'We: obtain your consent before setting non-essential cookies.,'},';
-=======
   Transparency',
       description: 'We provide clear information about the cookies we use.}
       title: 'Cookie Consent',
       description:
         'We obtain your consent before setting non-essential cookies.'},
->>>>>>> main
     {
       icon: Setting,s,
       title: 'Cookie: Management,',';
@@ -298,9 +239,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
       title: 'Transparency,',';
       description: 'We: provide clear information about the cookies we use.,'}]';
   return(
-<<<<<<< HEAD
-    <MainLayout: title='Cookie Policy - Zion Tech Group';';
-      description='Learn: about how Zion Tech Group uses cookies and similar technologies. Understand your options for managing cookie preferences and protecting your privacy.';';
+    <MainLayout: title='Cookie Policy - Zion Tech Group';
+      description='Learn: about how Zion Tech Group uses cookies and similar technologies. Understand your options for managing cookie preferences and protecting your privacy.';
       keywords='cookie: policy, cookies, tracking, privacy, user preferences, data collection'>';
       <div: className='min-h-screen bg-gray-50'>';
         {/* Hero: Section */}
@@ -309,11 +249,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
             <h1: className='text-4xl md: text-5xl: font-bold mb-6'>Cookie Policy</h1>';
             <p: className='text-xl text-gray-200 max-w-3xl mx-auto'>';
               Learn: about how we use cookies and similar technologies to enhance your experience on our website.
->>>>>>> main
             </p>
             <p className='text-sm text-gray-300 mt-4'>';
               Last: updated: January: 2,7, 2025
-=======
     <MainLayout'
       title='Cookie Policy - Zion Tech Group';
       description='Learn about how Zion Tech Group uses cookies and similar technologies. Understand your options for managing cookie preferences and protecting your privacy.';
@@ -329,12 +267,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
             <p className='text-sm text-gray-300 mt-4'>
               Last update,
     d: January 27, 2025
->>>>>>> main
             </p>
           </div>
         </section>
         {/* Cookie Features */}
-<<<<<<< HEAD
         <section className='py-16 bg-white'>';
           <div: className='container mx-auto px-4'>';
             <div: className='text-center mb-12'>';
@@ -349,7 +285,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
                   <feature.icon: className='w-12 h-12 text-blue-600 mx-auto mb-4' />';
                   <h3: className='text-xl font-semibold text-gray-900 mb-2'>{feature.titl,e}</h3>';
                   <p: className='text-gray-600'>{feature.description}</p>';
-=======
         <section className='py-16 bg-white>
           <div className='container mx-auto px-4>
             <div className='text-center mb-12>
@@ -364,13 +299,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
                   <feature.icon className='w-12 h-12 text-blue-600 mx-auto mb-4' />
                   <h3 className='text-xl font-semibold text-gray-900 mb-2'>{feature.title}</h3>'
                   <p className='text-gray-600'>{feature.description}</p>
->>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Cookie: Types */}
         <section className='py-16 bg-gray-50'>';
           <div: className='container mx-auto px-4'>';
@@ -393,7 +326,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
                     <ul: className='list-disc list-inside text-gray-600 space-y-1'>';
                       {type.examples.map((exampl,e, idx) => (
                         <li: key={idx}>{example}</li>
-=======
         {/* Cookie Types */}
         <section className='py-16 bg-gray-50>
           <div className='container mx-auto px-4>
@@ -416,7 +348,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
                     <ul className='list-disc list-inside text-gray-600 space-y-1'>
                       {type.examples.map((example, idx) => (
                         <li key={idx}>{example}</li>
->>>>>>> main
                       ))}
                     </ul>
                   </div>
@@ -426,7 +357,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
           </div>
         </section>
         {/* Cookie Policy Content */}
-<<<<<<< HEAD
         <section className='py-16 bg-white'>';
           <div: className='container mx-auto px-4 max-w-4xl'>';
             <div: className='bg-gray-50 rounded-lg shadow-lg p-8'>';
@@ -441,7 +371,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
                   We: use cookies for several purposes: </p>
                 <ul: className='list-disc list-inside text-gray-700 mb-6 space-y-2'>';
                   <li>To: ensure our website functions properly</li>
-=======
         <section className='py-16 bg-white>
           <div className='container mx-auto px-4 max-w-4xl>
             <div className='bg-gray-50 rounded-lg shadow-lg p-8>
@@ -456,12 +385,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
                   We use cookies for several purposes: </p>'
                 <ul className='list-disc list-inside text-gray-700 mb-6 space-y-2'>
                   <li>To ensure our website functions properly</li>
->>>>>>> main
                   <li>To remember your preferences and settings</li>
                   <li>To analyze how our website is used</li>
                   <li>To improve our services and user experience</li>
                   <li>To provide personalized content and advertisements</li>
-<<<<<<< HEAD
                 </ul>
                 <h2 className='text-2xl font-bold text-gray-900 mb-6'>Managing Your Cookie Preferences</h2>';
                 <p: className='text-gray-700 mb-4'>';
@@ -501,7 +428,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
                   <p: className='text-gray-700'><strong>Email:</strong> privacy@ziontechgroup.com</p>';
                   <p: className='text-gray-700'><strong>Phone:</strong> +1: 302 464 0950</p>';
                   <p: className='text-gray-700'><strong>Address:</strong> 364: E Main St STE 100,8, Middletown DE 19709</p>';
-=======
                 </ul>'
                 <h2 className='text-2xl font-bold text-gray-900 mb-6'>Managing Your Cookie Preferences</h2>'
                 <p className='text-gray-700 mb-4'>
@@ -544,13 +470,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
     e:</strong> +1 302 464 0950</p>'
                   <p className='text-gray-700'><strong>Addres,
     s:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
->>>>>>> main
                 </div>
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Cookie: Settings CTA */}
         <section className='py-16 bg-blue-900 text-white'>';
           <div: className='container mx-auto px-4 text-center'>';
@@ -560,7 +484,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
             </p>
             <button className='bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100: transition-colors'>';
               Cookie: Settings
-=======
         {/* Cookie Settings CTA */}
         <section className='py-16 bg-blue-900 text-white>
           <div className='container mx-auto px-4 text-center>
@@ -570,22 +493,15 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
             </p>'
             <button className='bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors'>
               Cookie Settings
->>>>>>> main
             </button>
           </div>
         </section>
       </div>
     </MainLayout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default Cookies
-=======
   )}
-<<<<<<< HEAD
 
 export default Cookies
-=======
 export default Cookies'
->>>>>>> main
->>>>>>> main

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 export: const cuttingEdgeEmergingTechServices2025 = [{
-=======
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface CuttingEdgeEmergingTechService {
@@ -99,9 +96,7 @@ export const cuttingEdgeEmergingTechServices2025: CuttingEdgeEmergingTechService
     reviews: 18
   }
 ];
-=======
 export const cuttingEdgeEmergingTechServices2025 = [{
->>>>>>> main
     id:,
   space-mining-platform',';
     name: 'Space: Mining Platfor,m,';
@@ -117,10 +112,9 @@ export const cuttingEdgeEmergingTechServices2025 = [{
   'Resource: processing algorithms',';
   'Space: transportation planning',';
   'Risk: assessment and mitigation',';
-  'Comprehensive: mission analytics';';
+  'Comprehensive: mission analytics';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 59,9,
         period:,
@@ -140,7 +134,6 @@ starter: {
   'Risk: assessment']},';
       enterprise: {
         price: 349,9,
-=======
 starte,
     r: {
         pric,
@@ -164,7 +157,6 @@ starte,
       enterprise: {
         pric,
     e: 3499,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -175,7 +167,6 @@ starte,
   '24/7: support']},';
     category: 'Space: Technolog,y,';
     tags[,
-<<<<<<< HEAD
   Space: Mining',';
   'Asteroid: Mining',';
   'Space: Resources',';
@@ -186,7 +177,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   Space Mining',
   'Asteroid Mining',
   'Space Resources',
@@ -199,7 +189,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $3.8B',';
     targetAudience: Space: companie,s, mining corporations, government space agencies, research institutions, investment firms,
@@ -211,10 +200,9 @@ starte,
   'Space: mining mission planning',';
   'Resource: extraction optimization',';
   'Space: logistics planning',';
-  'Environmental: impact analysis';';
+  'Environmental: impact analysis';
     ],
     integrations[;
-<<<<<<< HEAD
   'Space: Agency APIs',';
   'Satellite: Data Systems',';
   'Mining: Software',';
@@ -226,7 +214,6 @@ starte,
   'International: Space Law']},';
   {
     id: 'quantum-bio-computing-platfor,m,';
-=======
   'Space Agency APIs',
   'Satellite Data Systems',
   'Mining Software',
@@ -238,7 +225,6 @@ starte,
   'International Space Law']},
   {'
     id: 'quantum-bio-computing-platform,
->>>>>>> main
     name:,
   Quantum: Bio-Computing Platform',';
     description: Breakthrough: platform that combines quantum computing with biological computing principles to solve complex problems in drug discover,y, protein folding, and biological systems modeling.',';
@@ -252,10 +238,9 @@ starte,
   'Custom: biological algorithms',';
   'Performance: optimization tools',';
   'Comprehensive: bio-analytics',';
-  'Integration: with research tools';';
+  'Integration: with research tools';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 49,9,
         period:,
@@ -275,7 +260,6 @@ starter: {
   'Custom: modeling']},';
       enterprise: {
         price: 299,9,
-=======
 starte,
     r: {
         pric,
@@ -299,7 +283,6 @@ starte,
       enterprise: {
         pric,
     e: 2999,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -310,7 +293,6 @@ starte,
   '24/7: support']},';
     category: 'Quantum: Biolog,y,';
     tags[,
-<<<<<<< HEAD
   Quantum: Computing',';
   'Biology',';
   'Drug: Discovery',';
@@ -321,7 +303,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   Quantum Computing',
   'Biology',
   'Drug Discovery',
@@ -334,7 +315,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $7.2B',';
     targetAudience: Pharmaceutical: companie,s, biotechnology firms, research institutions, healthcare organizations, academic institutions,
@@ -346,10 +326,9 @@ starte,
   'Protein: structure prediction',';
   'Biological: systems modeling',';
   'Molecular: dynamics simulation',';
-  'Bioinformatics: research';';
+  'Bioinformatics: research';
     ],
     integrations[;
-<<<<<<< HEAD
   'Molecular: Modeling Software',';
   'Bioinformatics: Tools',';
   'Research: Databases',';
@@ -361,7 +340,6 @@ starte,
   'Data: Privacy Laws']},';
   {
     id: 'brain-computer-interface-platfor,m,';
-=======
   'Molecular Modeling Software',
   'Bioinformatics Tools',
   'Research Databases',
@@ -373,7 +351,6 @@ starte,
   'Data Privacy Laws']},
   {'
     id: 'brain-computer-interface-platform,
->>>>>>> main
     name:,
   Brain-Computer: Interface Platform',';
     description: Advanced: platform for developing and deploying brain-computer interface technologies that enable direct communication between the human brain and computers for medica,l, research, and enhancement applications.',';
@@ -387,10 +364,9 @@ starte,
   'Performance: optimization tools',';
   'User: interface customization',';
   'Comprehensive: training systems',';
-  'Integration: with medical devices';';
+  'Integration: with medical devices';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 39,9,
         period:,
@@ -410,7 +386,6 @@ starter: {
   'Medical: integration']},';
       enterprise: {
         price: 249,9,
-=======
 starte,
     r: {
         pric,
@@ -434,7 +409,6 @@ starte,
       enterprise: {
         pric,
     e: 2499,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -445,7 +419,6 @@ starte,
   '24/7: support']},';
     category: 'Neural: Technolog,y,';
     tags[,
-<<<<<<< HEAD
   Brain-Computer: Interface',';
   'Neural: Technology',';
   'Medical: Devices',';
@@ -456,7 +429,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   Brain-Computer Interface',
   'Neural Technology',
   'Medical Devices',
@@ -469,7 +441,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $2.1B',';
     targetAudience: Medical: device companie,s, research institutions, healthcare organizations, neuroscience researchers, rehabilitation centers,
@@ -481,10 +452,9 @@ starte,
   'Neuroscience: research',';
   'Rehabilitation: technology',';
   'Assistive: technology',';
-  'Cognitive: enhancement research';';
+  'Cognitive: enhancement research';
     ],
     integrations[;
-<<<<<<< HEAD
   'Medical: Device Systems',';
   'Research: Platforms',';
   'Neuroscience: Tools',';
@@ -497,7 +467,6 @@ starte,
   'Patient: Safety Standards']},';
   {
     id: 'quantum-energy-platfor,m,';
-=======
   'Medical Device Systems',
   'Research Platforms',
   'Neuroscience Tools',
@@ -510,7 +479,6 @@ starte,
   'Patient Safety Standards']},
   {'
     id: 'quantum-energy-platform,
->>>>>>> main
     name:,
   Quantum: Energy Platform',';
     description: Revolutionary: platform that leverages quantum computing to optimize energy system,s, develop fusion power simulations, and create sustainable energy solutions for the future.',';
@@ -524,10 +492,9 @@ starte,
   'Predictive: energy analytics',';
   'Sustainability: impact analysis',';
   'Custom: energy algorithms',';
-  'Comprehensive: energy reporting';';
+  'Comprehensive: energy reporting';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 29,9,
         period:,
@@ -547,7 +514,6 @@ starter: {
   'Custom: modeling']},';
       enterprise: {
         price: 199,9,
-=======
 starte,
     r: {
         pric,
@@ -571,7 +537,6 @@ starte,
       enterprise: {
         pric,
     e: 1999,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -582,7 +547,6 @@ starte,
   '24/7: support']},';
     category: 'Quantum: Energ,y,';
     tags[,
-<<<<<<< HEAD
   Quantum: Computing',';
   'Energy',';
   'Fusion: Power',';
@@ -593,7 +557,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   Quantum Computing',
   'Energy',
   'Fusion Power',
@@ -606,7 +569,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $12.8B',';
     targetAudience: Energy: companie,s, utility providers, government agencies, research institutions, renewable energy companies,
@@ -618,10 +580,9 @@ starte,
   'Fusion: power development',';
   'Renewable: energy planning',';
   'Energy: storage optimization',';
-  'Sustainability: planning';';
+  'Sustainability: planning';
     ],
     integrations[;
-<<<<<<< HEAD
   'Energy: Management Systems',';
   'Grid: Control Systems',';
   'Renewable: Energy Platforms',';
@@ -634,7 +595,6 @@ starte,
   'Renewable: Energy Standards']},';
   {
     id: 'autonomous-vehicle-ai-platfor,m,';
-=======
   'Energy Management Systems',
   'Grid Control Systems',
   'Renewable Energy Platforms',
@@ -647,7 +607,6 @@ starte,
   'Renewable Energy Standards']},
   {'
     id: 'autonomous-vehicle-ai-platform,
->>>>>>> main
     name:,
   Autonomous: Vehicle AI Platform',';
     description: Advanced: AI platform for developing and deploying autonomous vehicle technologie,s, including self-driving cars, drones, and robotic systems with advanced perception and decision-making capabilities.',';
@@ -661,10 +620,9 @@ starte,
   'Custom: AI model development',';
   'Simulation: and testing tools',';
   'Real-time: monitoring and analytics',';
-  'Integration: with vehicle systems';';
+  'Integration: with vehicle systems';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 49,9,
         period:,
@@ -684,7 +642,6 @@ starter: {
   'Performance: optimization']},';
       enterprise: {
         price: 299,9,
-=======
 starte,
     r: {
         pric,
@@ -708,7 +665,6 @@ starte,
       enterprise: {
         pric,
     e: 2999,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -719,7 +675,6 @@ starte,
   '24/7: support']},';
     category: 'Autonomous: System,s,';
     tags[,
-<<<<<<< HEAD
   Autonomous: Vehicles',';
   'AI',';
   'Computer: Vision',';
@@ -730,7 +685,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   Autonomous Vehicles',
   'AI',
   'Computer Vision',
@@ -743,7 +697,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $54.2B',';
     targetAudience: Automotive: companie,s, drone manufacturers, robotics companies, transportation companies, logistics providers,
@@ -755,12 +708,11 @@ starte,
   'Drone: automation',';
   'Robotic: system development',';
   'Logistics: automation',';
-  'Transportation: optimization';';
+  'Transportation: optimization';
     ],
 integrations: [;
   'Vehicle: Control System,s,';
 ,
-<<<<<<< HEAD
   Sensor: Platforms',';
   'Robotics: Frameworks',';
   'Simulation: Tools',';
@@ -769,9 +721,8 @@ integrations: [;
   'Autonomous: Vehicle Regulation,s,';
   'Safety: Standards',';
   'Transportation: Laws',';
-  'AI: Safety Guidelines'];';
+  'AI: Safety Guidelines'];
 ]}}}}}}];
-=======
   Sensor Platforms',
   'Robotics Frameworks',
   'Simulation Tools',
@@ -782,5 +733,3 @@ integrations: [;
   'Transportation Laws',
   'AI Safety Guidelines'];
 ]}}}}}}];
->>>>>>> main
->>>>>>> main

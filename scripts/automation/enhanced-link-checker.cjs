@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
-=======
 #!/'usr/bin/env' node;
 
->>>>>>> main
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
 const http = require('http');
 const { URL } = require('url');
-<<<<<<< HEAD
 ;
 console.log(`'🔗 Starting Enhanced Link Checker Automation...');
 ;
@@ -20,7 +16,6 @@ class EnhancedLinkChecker {;
       internal: { total: 0, working: 0, broken: 0, results: [] },;
       external: { total: 0, working: 0, broken: 0, results: [] },;
       summary: { total: 0, working: 0, broken: 0, rate: 0 },;
-=======
 
 console.log(`🔗 Starting Enhanced Link Checker Automation...`);
 
@@ -29,9 +24,7 @@ class EnhancedLinkChecker {
     this.linkResults = {
       internal: { total: 0, working: 0, broken: 0, results: [] },
       external: { total: 0, working: 0, broken: 0, results: [] },
-      summary: { total: 0, working: 0, broken: 0, rate: 0 },
->>>>>>> main
-    };
+      summary: { total: 0, working: 0, broken: 0, rate: 0 }};
     this.reportDir = path.join(process.cwd(), 'link-reports');
     this.ensureReportDirectory();
     this.checkedUrls = new Map(); // Use Map instead of Set for storing results;
@@ -42,7 +35,6 @@ class EnhancedLinkChecker {
       fs.mkdirSync(this.reportDir, { recursive: true });
     }
   }
-<<<<<<< HEAD
 ;
   async buildProject() {;
     console.log(`'🏗️ Building project for link extraction...');
@@ -53,7 +45,6 @@ class EnhancedLinkChecker {
         execSync('npm run build', {;
           stdio: 'inherit',;
           cwd: process.cwd(),;
-=======
 
   async buildProject() {
     console.log(`🏗️ Building project for link extraction...`);
@@ -63,9 +54,7 @@ class EnhancedLinkChecker {
         console.log(`📦 Vite project detected, running build...`);
         execSync('npm run build', {
           stdio: 'inherit',
-          cwd: process.cwd(),
->>>>>>> main
-        });
+          cwd: process.cwd()});
         console.log('✅ Build completed successfully');
         return true;
       } else if (fs.existsSync('next.config.js')) {;
@@ -80,11 +69,8 @@ class EnhancedLinkChecker {
         console.log('⚠️ No recognized build system found, skipping build...');
         return false;
       }
-<<<<<<< HEAD
     } catch (error) {  
-=======
     } catch (error) {;
->>>>>>> main
       console.log('❌ Build failed, but continuing with link checking...');
       console.log('💡 This is normal if the project has build issues');
       return false;
@@ -93,11 +79,8 @@ class EnhancedLinkChecker {
 ;
   extractLinksFromHTML(content, baseUrl = ') {;
     const links = [];
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
     // Extract href attributes;
     const hrefMatches = content.match(/href=["']([^"']+)["']/g) || [];
     hrefMatches.forEach(match => {;
@@ -106,11 +89,8 @@ class EnhancedLinkChecker {
         links.push(this.normalizeUrl(url, baseUrl));
       }
     });
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
     // Extract src attributes;
     const srcMatches = content.match(/src=["']([^"']+)["']/g) || [];
     srcMatches.forEach(match => {;
@@ -119,15 +99,12 @@ class EnhancedLinkChecker {
         links.push(this.normalizeUrl(url, baseUrl));
       }
     });
-<<<<<<< HEAD
 
     // Extract other common link patterns;
     const otherMatches =
-=======
 ;
     // Extract other common link patterns;
     const otherMatches =;
->>>>>>> main
       content.match(/(?:url|link)\s*\(["']?([^"']+)["']?\)/g) || [];
     otherMatches.forEach(match => {;
       const url = match.match(/(?:url|link)\s*\(["']?([^"']+)["']?\)/)[1];
@@ -135,7 +112,6 @@ class EnhancedLinkChecker {
         links.push(this.normalizeUrl(url, baseUrl));
       }
     });
-<<<<<<< HEAD
 
     return [...new Set(links)]; // Remove duplicates;
   }
@@ -153,7 +129,6 @@ class EnhancedLinkChecker {
     }
 
     if (baseUrl && !url.startsWith(`http``)) {
-=======
 ;
     return [...new Set(links)]; // Remove duplicates;
   }
@@ -171,13 +146,11 @@ class EnhancedLinkChecker {
     }
 ;
     if (baseUrl && !url.startsWith('http'`)) {;
->>>>>>> main
       return new URL(url, baseUrl).href;
     }
 ;
     return url;
   }
-<<<<<<< HEAD
 ;
   async extractAllLinks() {;
     console.log(`'🔍 Extracting links from build output...');
@@ -185,19 +158,14 @@ class EnhancedLinkChecker {
     const distDir = path.join(process.cwd(), 'dist');
     if (!fs.existsSync(distDir)) {;
       console.log(`'❌ Build output directory not found');
-=======
 
   async extractAllLinks() {
-<<<<<<< HEAD
     console.log(``🔍 Extracting links from build output...`);
-=======
     console.log(`🔍 Extracting links from build output...`);
->>>>>>> main
 
     const distDir = path.join(process.cwd(), 'dist');
     if (!fs.existsSync(distDir)) {
       console.log(`❌ Build output directory not found`);
->>>>>>> main
       return [];
     }
 ;
@@ -211,36 +179,29 @@ class EnhancedLinkChecker {
 ;
         if (stat.isDirectory()) {;
           walkDir(filePath', baseUrl);
-<<<<<<< HEAD
         } else if (file.endsWith(`.html`)) {
           try {
             const content = fs.readFileSync(filePath, `utf8`);
-=======
         } else if (file.endsWith('.html')) {;
           try {;
             const content = fs.readFileSync(filePath, 'utf8');
->>>>>>> main
             const relativePath = path.relative(distDir, filePath);const fileBaseUrl = https://ziontechgroup.com/${relativePath.replace(/\\/g, '/')};
 ;
             const links = this.extractLinksFromHTML(content, fileBaseUrl);
-<<<<<<< HEAD
             links.forEach(link => {
               allLinks.push({
                 url: link,
                 source: relativePath,
                 type: `html`,
-=======
             links.forEach(link => {;
               allLinks.push({;
                 url: link,;
                 source: relativePath,;
                 type: 'html',;
->>>>>>> main
               });
             });
           } catch (error) {  console.log(⚠️ Could not read file: ${filePath  }``);
           }
-<<<<<<< HEAD
         } else if (file.endsWith(`.css`)) {
           try {
             const content = fs.readFileSync(filePath, `utf8`);
@@ -257,13 +218,11 @@ class EnhancedLinkChecker {
                 allLinks.push({
                   url: normalizedUrl,
                   source: relativePath,
-                  type: `css`,
-                });
+                  type: `css`});
               }
             });
           } catch (error) {  
             console.log(`⚠️ Could not read CSS file: ${filePath  }`);
-=======
         } else if (file.endsWith('.css')) {;
           try {;
             const content = fs.readFileSync(filePath, 'utf8');
@@ -286,18 +245,14 @@ class EnhancedLinkChecker {
             });
           } catch (error) {;
             console.log(`⚠️ Could not read CSS file: ${filePath}`);
->>>>>>> main
           }
         }
       });
     };
 ;
     walkDir(distDir);
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
     // Remove duplicates and filter out invalid URLs;
     const uniqueLinks = [];
     const seen = new Set();
@@ -325,17 +280,14 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
     if (this.checkedUrls.has(url)) {;
       return this.checkedUrls.get(url);
     }
-<<<<<<< HEAD
 
     return new Promise(resolve => {
       const timer = setTimeout(() => {
         resolve({ url, status: `timeout`, error: `Request timeout` });
-=======
 ;
     return new Promise(resolve => {;
       const timer = setTimeout(() => {;
         resolve({ url, status: 'timeout', error: 'Request timeout' });
->>>>>>> main
       }, timeout);
 ;
       try {;
@@ -390,16 +342,13 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
         });
 ;
         req.end();
-<<<<<<< HEAD
       } catch (error) {  
         clearTimeout(timer);
         const result = {
           url,
           status: 'error',
           working: false,
-          error: error.message,
-          };
-=======
+          error: error.message};
       } catch (error) {;
         clearTimeout(timer);
         const result = {;
@@ -408,42 +357,34 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
           working: false,;
           error: error.message,;
         };
->>>>>>> main
         this.checkedUrls.set(url, result);
         resolve(result);
       }
     });
   }
-<<<<<<< HEAD
 ;
   async checkAllLinks(links) {;
     console.log(`'🔍 Checking all extracted links...');
 ;
-=======
 
   async checkAllLinks(links) {
     console.log(`🔍 Checking all extracted links...`);
 
->>>>>>> main
     const internalLinks = [];
     const externalLinks = [];
-<<<<<<< HEAD
 
     // Separate internal and external links;
     links.forEach(link => {
       if (link.url.includes(`ziontechgroup.com`) || link.url.startsWith(`/`)) {
-=======
 ;
     // Separate internal and external links;
     links.forEach(link => {;
       if (link.url.includes('ziontechgroup.com') || link.url.startsWith('/')) {;
->>>>>>> main
         internalLinks.push(link);
       } else {;
         externalLinks.push(link);
       }
     });
-<<<<<<< HEAD
 ;
     console.log(`📊 Found ${internalLinks.length} internal links and ${externalLinks.length} external links';
     );
@@ -451,9 +392,7 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
     // Check internal links;
     if (internalLinks.length > 0) {;
       console.log(`'🔍 Checking internal links...');
-=======
 
-<<<<<<< HEAD
     console.log(`📊 Found ${internalLinks.length} internal links and ${externalLinks.length} external links`
     );
 
@@ -474,14 +413,12 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
   }
 
   async checkLinkBatch(links, type) {
-=======
     console.log(`📊 Found ${internalLinks.length} internal links and ${externalLinks.length} external links`);
     );
 
     // Check internal links`);
     if (internalLinks.length > 0) {`);
       console.log(`🔍 Checking internal links...`);
->>>>>>> main
       await this.checkLinkBatch(internalLinks, 'internal');
     }
 ;
@@ -496,7 +433,6 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
   }
 ;
   async checkLinkBatch(links, type) {;
->>>>>>> main
     const batchSize = 10; // Check 10 links concurrently;
     const results = [];
 ;
@@ -512,7 +448,6 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
 ;
       const batchResults = await Promise.all(batchPromises);
       results.push(...batchResults);
-<<<<<<< HEAD
 
       // Progress update;
       const progress = Math.min(i + batchSize, links.length);
@@ -523,7 +458,6 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
       await new Promise(resolve => setTimeout(resolve, 100));
     }
 
-=======
 ;
       // Progress update;
       const progress = Math.min(i + batchSize, links.length);
@@ -534,7 +468,6 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
       await new Promise(resolve => setTimeout(resolve, 100));
     }
 ;
->>>>>>> main
     // Update results;
     this.linkResults[type].results = results;
     this.linkResults[type].total = results.length;
@@ -549,7 +482,6 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
       this.linkResults.internal.working + this.linkResults.external.working;
     this.linkResults.summary.broken =;
       this.linkResults.internal.broken + this.linkResults.external.broken;
-<<<<<<< HEAD
     this.linkResults.summary.rate =
       this.linkResults.summary.total > 0;
         ? (
@@ -570,9 +502,7 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
       external: this.linkResults.external,
       brokenLinks: {
         internal: this.linkResults.internal.results.filter(r => !r.working),
-        external: this.linkResults.external.results.filter(r => !r.working),
-      },
-    };
+        external: this.linkResults.external.results.filter(r => !r.working)}};
 
     // Save JSON report;
     fs.writeFileSync(
@@ -595,7 +525,6 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
     );
 
     console.log(`📋 Link report generated successfully`);
-=======
     this.linkResults.summary.rate =;
       this.linkResults.summary.total > 0;
         ? (;
@@ -641,22 +570,18 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
     );
 ;
     console.log('📋 Link report generated successfully');
->>>>>>> main
     return report;
   }
 ;
   generateMarkdownReport(report) {;
     const brokenInternal = report.brokenLinks.internal;
     const brokenExternal = report.brokenLinks.external;
-<<<<<<< HEAD
 
     return `# Link Check Report - ${new Date().toLocaleDateString()}
 
-=======
 ;
     return '# Link Check Report - ${new Date().toLocaleDateString()}
 ;
->>>>>>> main
 ## 📊 Summary;
 - **Total Links**: ${report.summary.total}
 - **Working Links**: ${report.summary.working} ✅;
@@ -674,7 +599,6 @@ console.log(`✅ Extracted ${uniqueLinks.length} unique links`);
 - **Broken**: ${report.external.broken} ❌;
 
 ## ❌ Broken Links;
-<<<<<<< HEAD
 ### Internal Broken Links (${brokenInternal.length})
 ${
   brokenInternal.length > 0;
@@ -693,7 +617,6 @@ ${
         `)
         .join(`\n`)
     : `✅ No broken external links found!`
-=======
 
 ### Internal Broken Links (${brokenInternal.length});
 ${;
@@ -713,12 +636,10 @@ ${;
         `);
         .join('\n');
     : '✅ No broken external links found!';
->>>>>>> main
 }
 ;
 ## 🚨 Immediate Actions Required;
 
-<<<<<<< HEAD
 ## 🚨 Immediate Actions Required;
 ${
   brokenInternal.length > 0? `1. **Fix Internal Links**: ${brokenInternal.length} broken internal links need immediate attention;
@@ -732,7 +653,6 @@ ${
 5. **Contact External Sites**: Reach out to external site owners if links are permanently broken;
 6. **Update References**: Replace broken external links with working alternatives`
     : `2. ✅ All external links are working correctly`
-=======
 ${;
   brokenInternal.length > 0? `1. **Fix Internal Links**: ${brokenInternal.length} broken internal links need immediate attention;
 2. **Update Routes**: Ensure all internal routes are properly configured;
@@ -745,12 +665,10 @@ ${;
 5. **Contact External Sites**: Reach out to external site owners if links are permanently broken;
 6. **Update References**: Replace broken external links with working alternatives`;
     : '2. ✅ All external links are working correctly';
->>>>>>> main
 }
 ;
 ## 📚 Recommendations;
 
-<<<<<<< HEAD
 ## 📚 Recommendations;
 1. **Regular Monitoring**: Run link checks daily;
 2. **Automated Fixes**: Implement automated link validation in `'CI/CD''
@@ -758,7 +676,6 @@ ${;
 4. **404 Handling**: Implement proper 404 pages for broken internal routes;
 5. **Link Tracking**: Monitor link health over time;
 ---
-=======
 1. **Regular Monitoring**: Run link checks daily;
 2. **Automated Fixes**: Implement automated link validation in 'CI/CD';
 3. **Link Maintenance**: Regularly review and update external link references;
@@ -766,7 +683,6 @@ ${;
 5. **Link Tracking**: Monitor link health over time;
 
 ---;
->>>>>>> main
 *Report generated by Enhanced Link Checker Automation*;
   }
 ;
@@ -774,19 +690,15 @@ ${;
     const allLinks = ['...report.internal.results.map(link => ({ ...link', 'type: 'internal' }))', '...report.external.results.map(link => ({ ...link', 'type: 'external' }))', '];
 ;
     const csvHeaders = ['Type', 'Source', 'URL', 'Status', 'Working', 'Error'];
-<<<<<<< HEAD
     const csvRows = allLinks.map(link => ['link.type', 'link.source || 'unknown'', 'link.url', 'link.status || 'unknown'', 'link.working ? 'Yes' : 'No'', 'link.error || ''', '']);
 
     return [`csvHeaders`, `...csvRows`].map(row => row.map(field => `"${field}"`).join(`,`))
       .join(`\n`);
-=======
     const csvRows = allLinks.map(link => ['link.type', 'link.source || 'unknown', 'link.url', 'link.status || 'unknown', 'link.working ? 'Yes' : 'No', 'link.error || '', ']);
 ;
     return ['csvHeaders', '...csvRows'].map(row => row.map(field => `"${field}"`).join(','));
       .join('\n');
->>>>>>> main
   }
-<<<<<<< HEAD
 ;
   async runLinkCheck() {;
     console.log(`'🔗 Starting Enhanced Link Checker Automation...');
@@ -796,7 +708,6 @@ ${;
 ;
       if (!buildSuccess) {;
         console.log(`'⚠️ Build failed, but continuing with link checking...');
-=======
 
   async runLinkCheck() {
     console.log(`🔗 Starting Enhanced Link Checker Automation...`);
@@ -806,25 +717,20 @@ ${;
 
       if (!buildSuccess) {
         console.log(`⚠️ Build failed, but continuing with link checking...`);
->>>>>>> main
       }
 ;
       const links = await this.extractAllLinks();
-<<<<<<< HEAD
 
       if (links.length === 0) {
         console.log(`⚠️ No links found to check`);
-=======
 ;
       if (links.length === 0) {;
         console.log('⚠️ No links found to check');
->>>>>>> main
         return;
       }
 ;
       await this.checkAllLinks(links);
       const report = await this.generateLinkReport();
-<<<<<<< HEAD
 
       console.log(`\n🔗 Link Check Summary:`);console.log(Total Links: ${report.summary.total});console.log(Working: ${report.summary.working} ✅``);console.log(`Broken: ${report.summary.broken} ❌`);console.log(`Success Rate: ${report.summary.rate}%`);
 
@@ -832,62 +738,45 @@ ${;
         console.log(``\n🚨 Broken Links Found:`);console.log(`Internal: ${report.internal.broken});console.log(External: ${report.external.broken}``);
       } else {
         console.log(`\n✅ All links are working correctly!`);
-=======
 ;
       console.log('\n🔗 Link Check Summary:');console.log(Total Links: ${report.summary.total});console.log(Working: ${report.summary.working} ✅``);console.log(`Broken: ${report.summary.broken} ❌`);console.log(`Success Rate: ${report.summary.rate}%`);
-<<<<<<< HEAD
 ;
       if (report.summary.broken > 0) {;
         console.log(`'\n🚨 Broken Links Found:');console.log(`Internal: ${report.internal.broken});console.log(External: ${report.external.broken}``);
       } else {;
-=======
 
       if (report.summary.broken > 0) {
         console.log(`\n🚨 Broken Links Found:`);console.log(`Internal: ${report.internal.broken});console.log(External: ${report.external.broken}``);
       } else {
->>>>>>> main
         console.log('\n✅ All links are working correctly!');
->>>>>>> main
       }
 ;
       return report;
-<<<<<<< HEAD
     } catch (error) {  
       console.error(`❌ Link check failed:`, error);
-=======
     } catch (error) {;
       console.error('❌ Link check failed:', error);
->>>>>>> main
       throw error;
       }
   }
 }
-<<<<<<< HEAD
 
 // Main execution;
 async function main() {
-=======
 ;
 // Main execution;
 async function main() {;
->>>>>>> main
   const linkChecker = new EnhancedLinkChecker();
 ;
   try {;
     await linkChecker.runLinkCheck();
-<<<<<<< HEAD
   } catch (error) {  
-=======
   } catch (error) {;
->>>>>>> main
     console.error('❌ Link checker automation failed:', error);
     process.exit(1);
     }
 }
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
 // Start the link checker;
 main().catch(console.error);

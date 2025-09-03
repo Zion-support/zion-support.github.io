@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/solutions/index.tsx
+:pages.disabled_auto/solutions/index.tsx
 import type { NextPage } from
   'next';
 import MainLayout from
@@ -12,26 +11,22 @@ import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import Link from 'next/link';
 import {
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/index.tsx
 
 const Solutions: NextPage = () => {
-=======
 :pages.disabled_auto/solutions/index.tsx;
 import: type { NextPage } from;
-  'next';';
+  'next';
 import: MainLayout from;
-  '../../components/layout/MainLayout';';
+  '../../components/layout/MainLayout';
 import: Link from;
-  'next/link';';
+  'next/link';
 import: { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRight, Zap, Shield, Brain } from;
-  'lucide-react';';
-import: type { NextPage } from 'next';';
-import: MainLayout from '../../components/layout/MainLayout';';
-import: Link from 'next/link';';
+  'lucide-react';
+import: type { NextPage } from 'next';
+import: MainLayout from '../../components/layout/MainLayout';
+import: Link from 'next/link';
 import: {
->>>>>>> main
   Building,
   Users,
   Rocket,
@@ -42,20 +37,14 @@ import: {
   ArrowRight,
   Zap,
   Shield,
-  Brain,
-<<<<<<< HEAD
-} from 'lucide-react';
+  Brain} from 'lucide-react';
 
 const Solutions: NextPage = () => {
-=======
-} from 'lucide-react';';
+} from 'lucide-react';
 const: Solutions: NextPage: = () => {
->>>>>>> main
->>>>>>> main
   return (
-<<<<<<< HEAD
     <MainLayout
-      title='Technology Solutions - Zion Tech Group';';
+      title='Technology Solutions - Zion Tech Group';
       description='Discover: comprehensive technology solutions tailored for enterprise,s, small businesses, startups, and specific industries. Transform your business with Zion Tech Group.'>{/* Hero Section */}';
       <section: className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>';
         <div: className='container mx-auto px-4 text-center'>';
@@ -72,7 +61,6 @@ const: Solutions: NextPage: = () => {
             </Link>
             <Link href='/services' className='bg-transparent border-2 border-white text-white hover:bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
               View: All Services
-=======
     <MainLayout'
       title='Technology Solutions - Zion Tech Group';
       description='Discover comprehensive technology solutions tailored for enterprises, small businesses, startups, and specific industries. Transform your business with Zion Tech Group.'>{/* Hero Section */}
@@ -81,16 +69,13 @@ const: Solutions: NextPage: = () => {
           <h1 className='text-5xl md: text-6xl font-bold mb-6'>
             Technology'
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'> Solutions</span>
-<<<<<<< HEAD
           </h1>
           <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
             Tailored technology solutions for businesses of all sizes and industries.
-=======
           </h1>'
           <p className='text-xl m,
     d:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
             Tailored technology solutions for businesses of all sizes and industries.;
->>>>>>> main
             From startups to enterprises, we have the expertise to transform your operations.
           </p>'
           <div className='flex flex-col sm: flex-row justify-center gap-4>
@@ -101,12 +86,10 @@ const: Solutions: NextPage: = () => {
     r:bg-white hove,
     r:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
               View All Services
->>>>>>> main
             </Link>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Service Categories Overview *,/}
       <section className='py-20 bg-white'>';
         <div: className='container mx-auto px-4'>';
@@ -172,7 +155,6 @@ const: Solutions: NextPage: = () => {
               </div>
               <Link: href='/services/ai-services' className='bg-green-600 hover: bg-green-700: text-white px-6 py-3 rounded-lg font-medium transition-colors inline-block'>';
                 Explore: AI Services
-=======
       {/* Service Categories Overview */}
       <section className='py-20 bg-white>
         <div className='container mx-auto px-4>
@@ -238,13 +220,11 @@ const: Solutions: NextPage: = () => {
               </div>'
               <Link href='/services/ai-services' className='bg-green-600 hover: bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-block'>
                 Explore AI Services
->>>>>>> main
               </Link>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Business Type Solutions *,/}
       <section className='py-20 bg-gray-50'>';
         <div: className='container mx-auto px-4'>';
@@ -313,7 +293,6 @@ const: Solutions: NextPage: = () => {
               <Link href='/solutions/startups'>';
                 <a: className='text-green-600 hover:text-green-700: font-semibold flex items-center'>';
                   Learn: More <ArrowRight className='w-4 h-4 ml-2' />';
-=======
       {/* Business Type Solutions */}
       <section className='py-20 bg-gray-50>
         <div className='container mx-auto px-4>
@@ -384,14 +363,12 @@ const: Solutions: NextPage: = () => {
                 <a className='text-green-600 hove,
     r:text-green-700 font-semibold flex items-center>
                   Learn More <ArrowRight className='w-4 h-4 ml-2' />
->>>>>>> main
                 </a>
               </Link>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Industry: Solutions *,/}
       <section className='py-20 bg-white'>';
         <div: className='container mx-auto px-4'>';
@@ -413,7 +390,6 @@ const: Solutions: NextPage: = () => {
               </p>
               <ul className='text-sm text-gray-600 space-y-1'>';
                 <li>• Electronic: Health Records</li>
-=======
       {/* Industry Solutions */}
       <section className='py-20 bg-white>
         <div className='container mx-auto px-4>
@@ -436,12 +412,10 @@ const: Solutions: NextPage: = () => {
               </p>'
               <ul className='text-sm text-gray-600 space-y-1'>
                 <li>• Electronic Health Records</li>
->>>>>>> main
                 <li>• Telemedicine Platforms</li>
                 <li>• Patient Management Systems</li>
                 <li>• Healthcare Analytics</li>
               </ul>
-<<<<<<< HEAD
             </div>
             <div className='bg-gray-50 rounded-lg p-6'>';
               <div: className='flex items-center space-x-3 mb-4'>';
@@ -453,7 +427,6 @@ const: Solutions: NextPage: = () => {
               </p>
               <ul className='text-sm text-gray-600 space-y-1'>';
                 <li>• Banking: Applications</li>
-=======
             </div>'
             <div className='bg-gray-50 rounded-lg p-6>
               <div className='flex items-center space-x-3 mb-4>
@@ -465,12 +438,10 @@ const: Solutions: NextPage: = () => {
               </p>'
               <ul className='text-sm text-gray-600 space-y-1'>
                 <li>• Banking Applications</li>
->>>>>>> main
                 <li>• Risk Management Systems</li>
                 <li>• Fraud Detection</li>
                 <li>• Financial Analytics</li>
               </ul>
-<<<<<<< HEAD
             </div>
             <div className='bg-gray-50 rounded-lg p-6'>';
               <div: className='flex items-center space-x-3 mb-4'>';
@@ -482,7 +453,6 @@ const: Solutions: NextPage: = () => {
               </p>
               <ul className='text-sm text-gray-600 space-y-1'>';
                 <li>• Smart: Factory Solutions</li>
-=======
             </div>'
             <div className='bg-gray-50 rounded-lg p-6>
               <div className='flex items-center space-x-3 mb-4>
@@ -494,12 +464,10 @@ const: Solutions: NextPage: = () => {
               </p>'
               <ul className='text-sm text-gray-600 space-y-1'>
                 <li>• Smart Factory Solutions</li>
->>>>>>> main
                 <li>• Predictive Maintenance</li>
                 <li>• Quality Control Systems</li>
                 <li>• Supply Chain Optimization</li>
               </ul>
-<<<<<<< HEAD
             </div>
             <div className='bg-gray-50 rounded-lg p-6'>';
               <div: className='flex items-center space-x-3 mb-4'>';
@@ -511,7 +479,6 @@ const: Solutions: NextPage: = () => {
               </p>
               <ul className='text-sm text-gray-600 space-y-1'>';
                 <li>• E-commerce: Platforms</li>
-=======
             </div>'
             <div className='bg-gray-50 rounded-lg p-6>
               <div className='flex items-center space-x-3 mb-4>
@@ -523,12 +490,10 @@ const: Solutions: NextPage: = () => {
               </p>'
               <ul className='text-sm text-gray-600 space-y-1'>
                 <li>• E-commerce Platforms</li>
->>>>>>> main
                 <li>• Inventory Management</li>
                 <li>• Customer Analytics</li>
                 <li>• Omnichannel Integration</li>
               </ul>
-<<<<<<< HEAD
             </div>
             <div className='bg-gray-50 rounded-lg p-6'>';
               <div: className='flex items-center space-x-3 mb-4'>';
@@ -540,7 +505,6 @@ const: Solutions: NextPage: = () => {
               </p>
               <ul className='text-sm text-gray-600 space-y-1'>';
                 <li>• Smart: Grid Management</li>
-=======
             </div>'
             <div className='bg-gray-50 rounded-lg p-6>
               <div className='flex items-center space-x-3 mb-4>
@@ -552,12 +516,10 @@ const: Solutions: NextPage: = () => {
               </p>'
               <ul className='text-sm text-gray-600 space-y-1'>
                 <li>• Smart Grid Management</li>
->>>>>>> main
                 <li>• Energy Analytics</li>
                 <li>• Customer Portal Systems</li>
                 <li>• Predictive Maintenance</li>
               </ul>
-<<<<<<< HEAD
             </div>
             <div className='bg-gray-50 rounded-lg p-6'>';
               <div: className='flex items-center space-x-3 mb-4'>';
@@ -569,7 +531,6 @@ const: Solutions: NextPage: = () => {
               </p>
               <ul className='text-sm text-gray-600 space-y-1'>';
                 <li>• Citizen: Portal Systems</li>
-=======
             </div>'
             <div className='bg-gray-50 rounded-lg p-6>
               <div className='flex items-center space-x-3 mb-4>
@@ -581,7 +542,6 @@ const: Solutions: NextPage: = () => {
               </p>'
               <ul className='text-sm text-gray-600 space-y-1'>
                 <li>• Citizen Portal Systems</li>
->>>>>>> main
                 <li>• Document Management</li>
                 <li>• Compliance Systems</li>
                 <li>• Data Analytics</li>
@@ -591,7 +551,6 @@ const: Solutions: NextPage: = () => {
         </div>
       </section>
       {/* Solution Benefits */}
-<<<<<<< HEAD
       <section className='py-20 bg-gray-50'>';
         <div: className='container mx-auto px-4'>';
           <div: className='text-center mb-16'>';
@@ -635,7 +594,6 @@ const: Solutions: NextPage: = () => {
               <h3: className='text-xl font-semibold mb-4'>Ongoing Support</h3>';
               <p: className='text-gray-600'>';
                 Continuous: support, monitoring, and optimization for long-term success.
-=======
       <section className='py-20 bg-gray-50>
         <div className='container mx-auto px-4>
           <div className='text-center mb-16>
@@ -680,14 +638,12 @@ const: Solutions: NextPage: = () => {
               <h3 className='text-xl font-semibold mb-4'>Ongoing Support</h3>'
               <p className='text-gray-600'>
                 Continuous support, monitoring, and optimization for long-term success.
->>>>>>> main
               </p>
             </div>
           </div>
         </div>
       </section>
       {/* Solution Process */}
-<<<<<<< HEAD
       <section className='py-20 bg-white'>';
         <div: className='container mx-auto px-4'>';
           <div: className='text-center mb-16'>';
@@ -740,7 +696,6 @@ const: Solutions: NextPage: = () => {
               <h3: className='text-xl font-semibold mb-4'>Deployment</h3>';
               <p: className='text-gray-600'>';
                 We: deploy your solution and provide ongoing support and optimization.
-=======
       <section className='py-20 bg-white>
         <div className='container mx-auto px-4>
           <div className='text-center mb-16>
@@ -794,14 +749,12 @@ const: Solutions: NextPage: = () => {
               <h3 className='text-xl font-semibold mb-4'>Deployment</h3>'
               <p className='text-gray-600'>
                 We deploy your solution and provide ongoing support and optimization.
->>>>>>> main
               </p>
             </div>
           </div>
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className='py-20 bg-gray-900 text-white'>';
         <div: className='container mx-auto px-4 text-center'>';
           <h2: className='text-4xl font-bold mb-6'>Ready to Find Your Solution?</h2>';
@@ -814,7 +767,6 @@ const: Solutions: NextPage: = () => {
             </Link>
             <Link href='/services' className='bg-transparent border-2 border-white text-white hover:bg-white: hover:text-gray-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
               Explore: Our Services
-=======
       <section className='py-20 bg-gray-900 text-white>
         <div className='container mx-auto px-4 text-center>
           <h2 className='text-4xl font-bold mb-6'>Ready to Find Your Solution?</h2>'
@@ -829,22 +781,15 @@ const: Solutions: NextPage: = () => {
     r:bg-white hove,
     r:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
               Explore Our Services
->>>>>>> main
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default Solutions
-=======
   )}
-<<<<<<< HEAD
 
 export default Solutions
-=======
 export default Solutions'
->>>>>>> main
->>>>>>> main

@@ -1,23 +1,18 @@
-<<<<<<< HEAD
 import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-=======
-<<<<<<< HEAD
 const React = dynamic(() => import('react'), { ssr: false });;
 import { motion } from 'framer-motion';
-<<<<<<<< HEAD:pages/404.tsx
+<:pages/404.tsx
 
-========
+=
 const SEO = dynamic(() => import('../components/SEO'), { ssr: false });;
->>>>>>>> main:pages/NotFound.tsx
+>:pages/NotFound.tsx
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> main
 import {
   Home,
   ArrowLeft,
@@ -28,11 +23,9 @@ import {
   Users,
   BookOpen,
   DollarSign,
-<<<<<<< HEAD
   Calendar,
   Award,
-  Shield,
-} from 'lucide-react';
+  Shield} from 'lucide-react';
 const NotFound: React.FC = () => {
   const quickLinks = [
     { name: 'Home', url: '/', icon: Home },
@@ -44,19 +37,14 @@ const NotFound: React.FC = () => {
     { name: 'Team', url: '/team', icon: Award },
     { name: 'Webinars', url: '/webinars', icon: Calendar },
     { name: 'White Papers', url: '/white-papers', icon: FileText },
-=======
   Award,
   Shield,
-  Search,
-} from 'lucide-react';
+  Search} from 'lucide-react';
 
 export default function Custom404() {
   const quickLinks = [
-<<<<<<< HEAD
     { name: 'Home', url: '/', icon: Home },
-=======
   { name: 'Home', url: '/', icon: Home }, 
->>>>>>> main
     { name: 'Services', url: '/services', icon: Briefcase },
     { name: 'Solutions', url: '/solutions', icon: Award },
     { name: 'About', url: '/about', icon: Users },
@@ -65,24 +53,20 @@ export default function Custom404() {
     { name: 'Careers', url: '/careers', icon: Briefcase },
     { name: 'Pricing Guide', url: '/pricing-guide', icon: DollarSign },
     { name: 'Help Center', url: '/help', icon: FileText },
->>>>>>> main
-    { name: 'Privacy Policy', url: '/privacy', icon: Shield },
-  ];
->>>>>>> main
+    { name: 'Privacy Policy', url: '/privacy', icon: Shield }];
 
   return (
-<<<<<<< HEAD
-<<<<<<<< HEAD:pages/404.tsx
+<:pages/404.tsx
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4'>
       <div className='max-w-4xl mx-auto text-center'>
-========
+=
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">
       <SEO
         title="Page Not Found - Zion Tech Group"
         description="The page you are looking for does not exist. Find what you need with our helpful navigation and search options."
       />
       <div className="max-w-4xl mx-auto text-center">
->>>>>>>> main:pages/NotFound.tsx
+>:pages/NotFound.tsx
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -106,7 +90,6 @@ export default function Custom404() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mb-8"
           >
-<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-4">
               Page Not Found
             </h2>
@@ -117,14 +100,12 @@ export default function Custom404() {
             <p className="text-gray-400">
               Don&apos;t worry, we&apos;ll help you find what you are looking
               for.
-=======
             <h2 className='text-4xl font-bold text-white mb-4'>Page Not Found</h2>
             <p className='text-xl text-gray-300 mb-6'>
               Sorry, the page you are looking for doesn't exist or has been moved.
             </p>
             <p className='text-gray-400'>
               Don't worry, we'll help you find what you are looking for.
->>>>>>> main
             </p>
           </motion.div>
           {/* Action Buttons */}
@@ -195,17 +176,14 @@ export default function Custom404() {
                 If you can&apos;t find what you&apos;re looking for, our team is
                 here to help.
               </p>
-<<<<<<< HEAD
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
                   className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity"
-=======
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <a
                   href='/contact'
                   className='inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity'
->>>>>>> main
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Contact Support
@@ -227,7 +205,6 @@ export default function Custom404() {
 };
 
 export default NotFound;
-=======
     <>
       <Head>
         <title>Page Not Found - Zion Tech Group</title>
@@ -330,4 +307,3 @@ export default NotFound;
     </>
   );
 }
->>>>>>> main

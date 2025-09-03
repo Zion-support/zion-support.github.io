@@ -18,8 +18,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
   keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services',
-  ogImage = '/og-image.jpg',
-}) => {
+  ogImage = '/og-image.jpg'}) => {
   return (
     <>
       <SEOEnhancer
@@ -29,22 +28,17 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         ogImage={ogImage}
       />
       <PerformanceOptimizer
-<<<<<<< HEAD
         preloadImages={['/hero-bg.jpg', '/services-bg.jpg', '/team-bg.jpg']}
-=======
         preloadImages={[
-<<<<<<< HEAD:components/layout/MainLayout.tsx
+:components/layout/MainLayout.tsx
           '/hero-bg.jpg',
           '/services-bg.jpg',
           '/team-bg.jpg'
-=======
           '/hero-bg.jpg,/services-bg.jpg,/team-bg.jpg'
->>>>>>> main:components.disabled/components/layout/MainLayout.tsx
+:components.disabled/components/layout/MainLayout.tsx
         ]}
->>>>>>> main
         preloadFonts={[
-          'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap',
-        ]}
+          'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap']}
       />
       <AccessibilityEnhancer>
         <div className="min-h-screen flex flex-col">

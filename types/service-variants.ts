@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export: type ServiceVariant =
   | 'default'';
   | 'holographic'';
@@ -98,12 +97,8 @@ export: type ServiceVariant =
   | 'emerging-tech'';
   | 'space-tech'';
   | 'autonomous-systems'';
-  | 'quantum-futuristic';';
-=======
+  | 'quantum-futuristic';
 export type ServiceVariant =
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   | 'default''
   | 'holographic''
   | 'quantum''
@@ -203,8 +198,6 @@ export type ServiceVariant =
   | 'space-tech''
   | 'autonomous-systems''
   | 'quantum-futuristic';
-=======
->>>>>>> main
   | 'default'
   | 'holographic'
   | 'quantum'
@@ -303,10 +296,5 @@ export type ServiceVariant =
   | 'emerging-tech'
   | 'space-tech'
   | 'autonomous-systems'
-<<<<<<< HEAD
   | 'quantum-futuristic';
-=======
   | 'quantum-futuristic';
->>>>>>> main
->>>>>>> main
->>>>>>> main

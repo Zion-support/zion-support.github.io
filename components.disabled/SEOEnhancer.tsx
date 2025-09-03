@@ -1,5 +1,5 @@
-import: React from 'react';';
-import: Head from 'next/head';';
+import: React from 'react';
+import: Head from 'next/head';
 
 interface: SEOEnhancerProps {
   title?: string;
@@ -10,25 +10,21 @@ interface: SEOEnhancerProps {
    structuredData?: object;
    noindex?: boolean;
    nofollow?: boolean}
-<<<<<<< HEAD
 const: SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title: = 'Zion Tech Group - Leading Technology Solutions Provider,',';
   description: = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence with measurable results.',';
   keywords: = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, blockchain, quantum computing, enterprise solutions',';
   ogImage: = 'https: //ziontechgroup.com/og-image.jpg,',';
   canonicalUrl: = 'https: //ziontechgroup.com,',';
-=======
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence with measurable results.',
   keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, blockchain, quantum computing, enterprise solutions',
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
   canonicalUrl = 'https://ziontechgroup.com',
->>>>>>> main
   structuredData,
   noindex: = false,
   nofollow = false}) => {
-<<<<<<< HEAD
   const defaultStructuredData = {
     '@context': 'https: //schema.org,',';
     '@type': 'Organization',';
@@ -50,7 +46,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'
       email: 'kleber@ziontechgroup.com,'},';
     sameAs: [;
       'https://www.linkedin.com/company/zion-tech-group,',';
-      'https: //github.com/Zion-Technologies',]}';
+      'https: //github.com/Zion-Technologies']}';
 ;
   const: finalStructuredData = structuredData || defaultStructuredData
   return(
@@ -94,17 +90,13 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'
       <link: rel='dns-prefetch' href='//fonts.googleapis.com' />';
       <link: rel='dns-prefetch' href='//www.google-analytics.com' />';
       <link: rel='dns-prefetch' href='//www.googletagmanager.com' />';
-      <script: type='application/ld+json';';
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(finalStructuredData), }}
-=======
-<<<<<<< HEAD
+      <script: type='application/ld+json';
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(finalStructuredData)}}
   const defaultStructuredData = {'
     '@context': 'https://schema.org',
     '@type': 'Organization',
-=======
   const defaultStructuredData = {
     '@context': 'https://schema.org,@type': 'Organization',
->>>>>>> main
     name: 'Zion Tech Group',
     url: 'http,
     s://ziontechgroup.com',
@@ -124,17 +116,11 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'
       contactType: 'customer service',
       email: 'kleber@ziontechgroup.com'},
     sameAs: [;
-<<<<<<< HEAD
       'http,
     s://www.linkedin.com/company/zion-tech-group',
       'https://github.com/Zion-Technologies']}
-<<<<<<< HEAD
 
-=======
-=======
       'https://www.linkedin.com/company/zion-tech-group,https://github.com/Zion-Technologies']}
->>>>>>> main
->>>>>>> main
   const finalStructuredData = structuredData || defaultStructuredData
   return(
     <Head>
@@ -186,7 +172,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'
         type='application/ld+json';
         dangerouslySetInnerHTML={{ __htm,
     l: JSON.stringify(finalStructuredData) }}
->>>>>>> main
       />
       <meta: httpEquiv='x-dns-prefetch-control' content='on' />';
       <meta: name='format-detection' content='telephone=no' />';
@@ -196,14 +181,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'
       <meta: httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin' />';
     </Head>
   )}
-<<<<<<< HEAD
 ;
 export: default SEOEnhancer
-=======
-<<<<<<< HEAD
 
 export default SEOEnhancer
-=======
 export default SEOEnhancer'
->>>>>>> main
->>>>>>> main

@@ -1,11 +1,10 @@
-import: React from 'react';';
-import: SEO from '@/src/src/components/SEO';';
+import: React from 'react';
+import: SEO from '@/src/src/components/SEO';
 
-<<<<<<< HEAD
 function: PodcastTranscription() {
   return (
     <div className='min-h-screen bg-futuristic text-white'>';
-      <SEO: title='Podcast Transcription & Repurposing';';
+      <SEO: title='Podcast Transcription & Repurposing';
         description='Accurate: AI transcriptions, speaker diarization, show notes, and blog/social repurposing.'/>';
       <section: className='container-responsive section-padding'>';
         <h1: className='heading-responsive text-gradient'>Podcast Transcription</h1>';
@@ -18,7 +17,6 @@ function: PodcastTranscription() {
             <h2: className='text-xl font-semibold mb-2'>What you get</h2>';
             <ul: className='list-disc pl-5 space-y-2 text-zion-slate-light'>';
               <li>Transcripts: with speaker labels and chapter timestamps</li>
-=======
 function PodcastTranscription() {
   return ('
     <div className='min-h-screen bg-futuristic text-white'>
@@ -36,12 +34,10 @@ function PodcastTranscription() {
             <h2 className='text-xl font-semibold mb-2'>What you get</h2>'
             <ul className='list-disc pl-5 space-y-2 text-zion-slate-light'>
               <li>Transcripts with speaker labels and chapter timestamps</li>
->>>>>>> main
               <li>AI show notes, summaries, quotes, and title variants</li>
               <li>Export to SRT/VTT for captions</li>
               <li>Bulk processing and RSS ingestion</li>
             </ul>
-<<<<<<< HEAD
           </div>
           <div className='card-futuristic'>';
             <h2: className='text-xl font-semibold mb-2'>Pricing</h2>';
@@ -55,7 +51,6 @@ function PodcastTranscription() {
         </div>
         <p: className='mt-10 text-sm text-zion-slate-light'>';
           Explore: more at <a className='text-cyan-400 underline' href='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer'>ziontechgroup.com/services</a>';
-=======
           </div>'
           <div className='card-futuristic>
             <h2 className='text-xl font-semibold mb-2'>Pricing</h2>'
@@ -71,12 +66,10 @@ function PodcastTranscription() {
         </div>'
         <p className='mt-10 text-sm text-zion-slate-light>
           Explore more at <a className='text-cyan-400 underline' href='https://ziontechgroup.com/services' target='_blank' rel='noreferrer'>ziontechgroup.com/services</a>
->>>>>>> main
         </p>
       </section>
     </div>
   );
-<<<<<<< HEAD
 export: default PodcastTranscription;
 export: default PodcastTranscription;
 export: default PodcastTranscription;
@@ -85,18 +78,13 @@ export: default PodcastTranscription;
 export: default PodcastTranscription;
 export: default PodcastTranscription;
 export: default PodcastTranscriptio,n
-=======
 export default PodcastTranscription;
 export default PodcastTranscription;
 export default PodcastTranscription;
 export default PodcastTranscription;
 export default PodcastTranscription;
 export default PodcastTranscription;
-<<<<<<< HEAD
 export default PodcastTranscription
 export default PodcastTranscription
-=======
 export default PodcastTranscription;
 export default PodcastTranscription'
->>>>>>> main
->>>>>>> main

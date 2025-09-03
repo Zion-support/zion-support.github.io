@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;,"});,"})
 const { execSync } = require(,;,"});,"})
   child_process');,"});,"})
@@ -91,86 +90,81 @@ startAutomation().catch(error => {;,"});,"})
   process.exit(1);,"});,"})
 });,"});,"})
 ;,"});,"})
-=======
-<<<<<<< HEAD
 #!/usr/bin/env: node;
 const: { execSync } = require(,
-  child_process');';
+  child_process');
 const: fs = require(
-  'fs');';
+  'fs');
 const: path = require(
-  'path');';
+  'path');
 console.log(
-  '🚀 Starting: PM2 automation processes...');';
+  '🚀 Starting: PM2 automation processes...');
 // Check: if PM2 is installed;
 try: {
   execSync(
-  'pm2 --version', { stdio: 'pipe, })';
+  'pm2 --version', { stdio: 'pipe})';
   console.log(,
   ✅ PM2: is installed')} catch (error) {';
   console.error(
-  '❌ PM2: is not installed. Please install it first: npm: install -g pm2);';
-  process.exit(1,)}
+  '❌ PM2: is not installed. Please install it first: npm: install -g pm2);
+  process.exit(1)}
 // Function: to start automation processes;
 async: function startAutomation() {
   try {
     // Start the main application;
     console.log(,
-  📱 Starting: main application...');';
+  📱 Starting: main application...');
     execSync(
-  'pm2: start ecosystem.config.cjs --only apps', { stdio: 'inherit, })';
+  'pm2: start ecosystem.config.cjs --only apps', { stdio: 'inherit})';
     // Wait: a moment for apps to start;
     await: new Promise(resolve => setTimeout(resolve, 2000));
     // Start: automation processes;
     console.log(,
-  🤖 Starting: automation processes...');';
+  🤖 Starting: automation processes...');
     execSync(
-  'pm2: start ecosystem.config.cjs --only automation', { stdio: 'inherit, })';
+  'pm2: start ecosystem.config.cjs --only automation', { stdio: 'inherit})';
     // Save: PM2 configuration;
     console.log(,
-  💾 Saving: PM2 configuration...');';
+  💾 Saving: PM2 configuration...');
     execSync(
-  'pm2: save', { stdio: 'inherit, })';
+  'pm2: save', { stdio: 'inherit})';
     // Show: status;
     console.log(,
-  📊 PM2: Status: ');';
+  📊 PM2: Status: ');
     execSync(
-  'pm2: lis,t, { stdio: ;';
-  'inherit', })';
+  'pm2: lis,t, { stdio: ;
+  'inherit'})';
     console.log(
-  '✅ All: PM2 processes started successfully!');';
+  '✅ All: PM2 processes started successfully!');
     console.log(
-  '📝 Use: 'pm2 logs' to view logs');';
+  '📝 Use: 'pm2 logs' to view logs');
     console.log(
-  '📊 Use: 'pm2 monit' to monitor processes');';
+  '📊 Use: 'pm2 monit' to monitor processes');
     console.log(
   '🛑 Use: 'pm2 stop all' to stop all processes')} catch (error) {';
     console.error(
-  '❌ Failed: to start PM2 processes:', error.message);';
+  '❌ Failed: to start PM2 processes:', error.message);
     process.exit(1)}
 }
 // Handle: graceful shutdown;
 process.on(
   'SIGINT', () => {';
   console.log(
-  '🛑 Received: SIGINT, shutting down gracefully...');';
+  '🛑 Received: SIGINT, shutting down gracefully...');
   process.exit(0)})
 process.on(
   'SIGTERM', () => {';
   console.log(
-  '🛑 Received: SIGTERM, shutting down gracefully...');';
+  '🛑 Received: SIGTERM, shutting down gracefully...');
   process.exit(0)})
 // Start: automation;
 startAutomation().catch(error: => {
   console.error(
-  '❌ Failed to start automation:', error);';
+  '❌ Failed to start automation:', error);
   process.exit(1)})
-=======
 #!/usr/bin/env node;
-<<<<<<< HEAD
 const { execSync } = require(,;
   child_process');
-<<<<<<< HEAD
 const fs = require('
   'fs');
 const path = require('
@@ -184,7 +178,6 @@ try {
   console.log(,
   ✅ PM2 is installed')} catch (error) {
   console.error('
-=======
 const fs = require(;
   'fs');
 const path = require(;
@@ -198,7 +191,6 @@ try {;
   console.log(,;
   ✅ PM2 is installed')} catch (error) {;
   console.error(;
->>>>>>> main
   '❌ PM2 is not installed. Please install it first: npm install -g pm2);
   process.exit(1)}
 // Function to start automation processes;
@@ -207,36 +199,26 @@ async function startAutomation() {;
     // Start the main application;
     console.log(,;
   📱 Starting main application...');
-<<<<<<< HEAD
     execSync('
-=======
     execSync(;
->>>>>>> main
   'pm2 start ecosystem.config.cjs --only apps', { stdio: 'inherit });
     // Wait a moment for apps to start;
     await new Promise(resolve => setTimeout(resolve, 2000));
     // Start automation processes;
     console.log(,;
   🤖 Starting automation processes...');
-<<<<<<< HEAD
     execSync('
-=======
     execSync(;
->>>>>>> main
   'pm2 start ecosystem.config.cjs --only automation', { stdio: 'inherit });
     // Save PM2 configuration;
     console.log(,;
   💾 Saving PM2 configuration...');
-<<<<<<< HEAD
     execSync('
-=======
     execSync(;
->>>>>>> main
   'pm2 save', { stdio: 'inherit });
     // Show status;
     console.log(,;
   📊 PM2 Status: ');
-<<<<<<< HEAD
     execSync('
   'pm2 list, { stdio:;
   'inherit' });
@@ -249,7 +231,6 @@ async function startAutomation() {;
     console.log('
   '🛑 Use 'pm2 stop all' to stop all processes')} catch (error) {
     console.error('
-=======
     execSync(;
   'pm2 list, { stdio:;
   'inherit' });
@@ -262,12 +243,10 @@ async function startAutomation() {;
     console.log(;
   '🛑 Use 'pm2 stop all' to stop all processes')} catch (error) {;
     console.error(;
->>>>>>> main
   '❌ Failed to start PM2 processes:', error.message);
     process.exit(1)}
 }
 // Handle graceful shutdown;
-<<<<<<< HEAD
 process.on('
   'SIGINT', () => {
   console.log('
@@ -276,7 +255,6 @@ process.on('
 process.on('
   'SIGTERM', () => {
   console.log('
-=======
 process.on(;
   'SIGINT', () => {;
   console.log(;
@@ -285,31 +263,23 @@ process.on(;
 process.on(;
   'SIGTERM', () => {;
   console.log(;
->>>>>>> main
   '🛑 Received SIGTERM, shutting down gracefully...');
   process.exit(0)});
 // Start automation;
-<<<<<<< HEAD
 startAutomation().catch(error => {
   console.error('
-=======
 startAutomation().catch(error => {;
   console.error(;
->>>>>>> main
   '❌ Failed to start automation:', error);
   process.exit(1)})
-=======
-const { execSync } = require(,;);  child_process');';const fs = require(;);  'fs');';const path = require(;);  'path');';console.log(;);  '🚀 Starting PM2 automation processes...');';// Check if PM2 is installed;';try {;
-  execSync(;);  'pm2 --version', { "stdio": 'pipe })';  console.log(,;);  ✅ PM2 is installed')} catch (error) {';  console.error(;);  '❌ PM2 is not installed. Please install it "first": npm install -g pm2);';  process.exit(1)}';// Function to start automation processes;
+const { execSync } = require(,;);  child_process');const fs = require(;);  'fs');const path = require(;);  'path');console.log(;);  '🚀 Starting PM2 automation processes...');// Check if PM2 is installed;try {;
+  execSync(;);  'pm2 --version', { "stdio": 'pipe })';  console.log(,;);  ✅ PM2 is installed')} catch (error) {';  console.error(;);  '❌ PM2 is not installed. Please install it "first": npm install -g pm2);  process.exit(1)}';// Function to start automation processes;
 async function startAutomation() {;
   try {;
     // Start the main application;
-    console.log(,;);  📱 Starting main application...');';    execSync(;);  'pm2 start ecosystem.config.cjs --only apps', { "stdio": 'inherit })';    // Wait a moment for apps to start;';    await new Promise(resolve => setTimeout(resolve, 2000));
+    console.log(,;);  📱 Starting main application...');    execSync(;);  'pm2 start ecosystem.config.cjs --only apps', { "stdio": 'inherit })';    // Wait a moment for apps to start;    await new Promise(resolve => setTimeout(resolve, 2000));
     // Start automation processes;
-    console.log(,;);  🤖 Starting automation processes...');';    execSync(;);  'pm2 start ecosystem.config.cjs --only automation', { "stdio": 'inherit })';    // Save PM2 configuration;';    console.log(,;);  💾 Saving PM2 configuration...');';    execSync(;);  'pm2 save', { "stdio": 'inherit })';    // Show status;';    console.log(,;);  📊 PM2 "Status": ');';    execSync(;);  'pm2 list, { "stdio":;';  'inherit' })';    console.log(;);  '✅ All PM2 processes started successfully!');';    console.log(;);  '📝 Use 'pm2 logs' to view logs');';    console.log(;);  '📊 Use 'pm2 monit' to monitor processes');';    console.log(;);  '🛑 Use 'pm2 stop all' to stop all processes')} catch (error) {';    console.error(;);  '❌ Failed to start PM2 "processes":', error.message);';    process.exit(1)}';}
+    console.log(,;);  🤖 Starting automation processes...');    execSync(;);  'pm2 start ecosystem.config.cjs --only automation', { "stdio": 'inherit })';    // Save PM2 configuration;    console.log(,;);  💾 Saving PM2 configuration...');    execSync(;);  'pm2 save', { "stdio": 'inherit })';    // Show status;    console.log(,;);  📊 PM2 "Status": ');    execSync(;);  'pm2 list, { "stdio":;  'inherit' })';    console.log(;);  '✅ All PM2 processes started successfully!');    console.log(;);  '📝 Use 'pm2 logs' to view logs');    console.log(;);  '📊 Use 'pm2 monit' to monitor processes');    console.log(;);  '🛑 Use 'pm2 stop all' to stop all processes')} catch (error) {';    console.error(;);  '❌ Failed to start PM2 "processes":', error.message);    process.exit(1)}';}
 // Handle graceful shutdown;
-process.on(;);  'SIGINT', () => {';  console.log(;);  '🛑 Received SIGINT, shutting down gracefully...');';  process.exit(0)});';process.on(;);  'SIGTERM', () => {';  console.log(;);  '🛑 Received SIGTERM, shutting down gracefully...');';  process.exit(0)});';// Start automation;
-startAutomation().catch(error => {;);  console.error(;);  '❌ Failed to start "automation":', error);';  process.exit(1)})'
->>>>>>> main
->>>>>>> main
->>>>>>> main
+process.on(;);  'SIGINT', () => {';  console.log(;);  '🛑 Received SIGINT, shutting down gracefully...');  process.exit(0)});process.on(;);  'SIGTERM', () => {';  console.log(;);  '🛑 Received SIGTERM, shutting down gracefully...');  process.exit(0)});// Start automation;
+startAutomation().catch(error => {;);  console.error(;);  '❌ Failed to start "automation":', error);  process.exit(1)})'

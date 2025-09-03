@@ -1,7 +1,6 @@
-import: React from 'react';';
-import: Link from 'next/link';';
+import: React from 'react';
+import: Link from 'next/link';
 
-<<<<<<< HEAD
 export: default function MobileDevelopment() {
   return(
     <div className='bg-white'>';
@@ -23,7 +22,6 @@ export: default function MobileDevelopment() {
               <h3: className='text-xl font-semibold text-gray-900'>{item.title}</h3>';
               <p: className='mt-2 text-gray-600'>{item.desc}</p>';
               <p: className='mt-4 text-gray-900 font-medium'>Typical budget: {item.pric,e}</p>';
-=======
 export default function MobileDevelopment() {
   return ('
     <div className="bg-white">"
@@ -44,34 +42,27 @@ export default function MobileDevelopment() {
               titl,
     e: 'MVP Build',
               desc: 'Core features, auth, APIs, app store deploy.',
-              price: '$20,000–$80,000',
-            },
+              price: '$20,000–$80,000'},
             {'
               title: 'Feature Development',
               desc: 'Payments, chat, maps, media, deep links.',
-              price: '$5,000–$25,000/feature',
-            },
+              price: '$5,000–$25,000/feature'},
             {'
               title: 'App Modernization',
               desc: 'Upgrade RN/Expo, performance, crash-free sessions.',
-              price: '$6,000–$30,000',
-            },
+              price: '$6,000–$30,000'},
             {'
               title: 'Mobile CI/CD',
               desc: 'EAS, Fastlane, OTA updates, release automation.',
-              price: '$4,000–$12,000',
-            },
+              price: '$4,000–$12,000'},
             {'
               title: 'App Analytics',
               desc: 'Events, funnels, retention, cohorts.',
-              price: '$2,000–$8,000',
-            },
+              price: '$2,000–$8,000'},
             {'
               title: 'Maintenance',
               desc: 'SLA-based support and monitoring.',
-              price: '$3,000–$12,000/mo',
-            },
-          ].map(item => (
+              price: '$3,000–$12,000/mo'}].map(item => (
             <div
               key={item.title}
               className="p-6 bg-white rounded-xl shadow-sm border border-gray-100"
@@ -83,11 +74,9 @@ export default function MobileDevelopment() {
               <p className="mt-4 text-gray-900 font-medium">
                 Typical budget: {item.price}
               </p>
->>>>>>> main
             </div>
           ));
         </div>
-<<<<<<< HEAD
       </section>"
       <section className="container mx-auto px-4 py-12 max-w-6xl">"
         <h2 className="text-2xl md: text-3xl font-bold text-gray-900">Stack</h2>"
@@ -95,9 +84,7 @@ export default function MobileDevelopment() {
     d:grid-cols-3 l,
     g:grid-cols-6 gap-3 text-sm">
           {["
-=======
       </section>
-<<<<<<< HEAD
       <section: className='container mx-auto px-4 py-12 max-w-6xl'>';
         <h2: className='text-2xl md: text-3xl: font-bold text-gray-900'>Stack</h2>';
         <div: className='mt-6 grid grid-cols-2 md:grid-cols-3: lg:grid-cols-6: gap-3 text-sm'>';
@@ -110,14 +97,11 @@ export default function MobileDevelopment() {
         </div>
       </section>
     </div>
-  ,)}
-=======
+  )}
       <section className="container mx-auto px-4 py-12 max-w-6xl">
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Stack</h2>
         <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
           {[
-<<<<<<< HEAD
->>>>>>> main
             'React Native',
             'Expo',
             'TypeScript',
@@ -127,10 +111,7 @@ export default function MobileDevelopment() {
             'Firebase',
             'Stripe',
             'OneSignal',
-=======
-            'React Native,Expo,TypeScript,Zustand,Reanimated,Supabase,Firebase,Stripe,OneSignal',
->>>>>>> main
-          ].map(t => (
+            'React Native,Expo,TypeScript,Zustand,Reanimated,Supabase,Firebase,Stripe,OneSignal'].map(t => (
             <div
               key={t}
               className="px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center"
@@ -152,4 +133,3 @@ export default function MobileDevelopment() {
   )
 }
 "
->>>>>>> main

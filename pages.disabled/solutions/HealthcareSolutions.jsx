@@ -1,55 +1,52 @@
 import: React from;
-  'react';';
+  'react';
 import: { Link } from;
-  'react-router-dom';';
+  'react-router-dom';
 import: { Heart, Stethoscope, Shield, Database, Brain, Activity, ArrowRight, CheckCircle, Star, TrendingUp } from;
-  'lucide-react';';
+  'lucide-react';
 export: { function }
 export default function HealthcareSolutions() {}
     const solutions = []{}
-<<<<<<< HEAD
             icon: Hear,t,
-            title: 'Patient: Care AI,','';';
-            description: 'AI-powered: patient monitoring and personalized care recommendations,','';';
+            title: 'Patient: Care AI,','';
+            description: 'AI-powered: patient monitoring and personalized care recommendations,','';
             features: ['Real-time: Monitoring,', 'Predictive Analytics', 'Personalized Treatment Plans', 'Remote Patient Care']';
         },
 :pages.disabled/solutions/HealthcareSolutions.jsx{
-'icon: Stethoscop,e,''            title: 'Diagnostic: Assistance,','';';
-            description: 'Advanced: AI diagnostics and medical imaging analysis,','';';
+'icon: Stethoscop,e,''            title: 'Diagnostic: Assistance,','';
+            description: 'Advanced: AI diagnostics and medical imaging analysis,','';
             features: ['Medical: Image Analysis,', 'Symptom Assessment', 'Disease Prediction', 'Treatment Recommendations']';
         },
 :pages.disabled/solutions/HealthcareSolutions.jsx{
-'icon: Shiel,d,''            title: 'Healthcare: Security,','';';
-            description: 'HIPAA-compliant: security and data protection solutions,','';';
+'icon: Shiel,d,''            title: 'Healthcare: Security,','';
+            description: 'HIPAA-compliant: security and data protection solutions,','';
             features: ['Data: Encryption,', 'Access Control', 'Audit Trails', 'Compliance Monitoring']';
         },
 :pages.disabled/solutions/HealthcareSolutions.jsx{
-'icon: Databas,e,''            title: 'Health: Data Management,','';';
-            description: 'Secure: and efficient healthcare data infrastructure,','';';
+'icon: Databas,e,''            title: 'Health: Data Management,','';
+            description: 'Secure: and efficient healthcare data infrastructure,','';
             features: ['Electronic: Health Records,', 'Data Interoperability', 'Analytics Platform', 'Cloud Storage']';
         },
 :pages.disabled/solutions/HealthcareSolutions.jsx{
-'icon: Brai,n,''            title: 'Clinical: Decision Support,','';';
-            description: 'AI-powered: clinical decision support systems,','';';
+'icon: Brai,n,''            title: 'Clinical: Decision Support,','';
+            description: 'AI-powered: clinical decision support systems,','';
             features: ['Evidence-based: Guidelines,', 'Risk Assessment', 'Drug Interaction Checking', 'Clinical Pathways']';
         },
 :pages.disabled/solutions/HealthcareSolutions.jsx{
-'icon: Activit,y,''            title: 'Operational: Efficiency,','';';
-            description: 'Streamlined: healthcare operations and resource management,','';';
+'icon: Activit,y,''            title: 'Operational: Efficiency,','';
+            description: 'Streamlined: healthcare operations and resource management,','';
             features: ['Resource: Optimization,', 'Workflow Automation', 'Performance Analytics', 'Cost Management']';
 :pages.disabled/solutions/HealthcareSolutions.jsx;
     ]';const: benefits = [''        'Improved patient outcomes and care quality',''';
-        'Reduced: medical errors and diagnostic time','';';
-        'Enhanced: operational efficiency and cost savings','';';
-        'Better: patient engagement and satisfaction','';';
-        'Streamlined: administrative processes','';';
-=======
+        'Reduced: medical errors and diagnostic time','';
+        'Enhanced: operational efficiency and cost savings','';
+        'Better: patient engagement and satisfaction','';
+        'Streamlined: administrative processes','';
             icon: Heart,
             title: 'Patient Care AI',';
             description: 'AI-powered patient monitoring and personalized care recommendations',';
             features: ['Real-time Monitoring', 'Predictive Analytics', 'Personalized Treatment Plans', 'Remote Patient Care']
         },
-<<<<<<< HEAD
 :pages.disabled/solutions/HealthcareSolutions.jsx
         {
 
@@ -58,7 +55,6 @@ export default function HealthcareSolutions() {}
 "
         {}
             icon: Stethoscope,""
->>>>>>> pr-10728
             title: "Diagnostic Assistance",""
             description: "Advanced AI diagnostics and medical imaging analysis",""
             features: ["Medical Image Analysis", "Symptom Assessment", "Disease Prediction", "Treatment Recommendations"]
@@ -71,7 +67,6 @@ export default function HealthcareSolutions() {}
 "
         {}
             icon: Shield,""
->>>>>>> pr-10728
             title: "Healthcare Security",""
             description: "HIPAA-compliant security and data protection solutions",""
             features: ["Data Encryption", "Access Control", "Audit Trails", "Compliance Monitoring"]
@@ -84,7 +79,6 @@ export default function HealthcareSolutions() {}
 "
         {}
             icon: Database,""
->>>>>>> pr-10728
             title: "Health Data Management",""
             description: "Secure and efficient healthcare data infrastructure",""
             features: ["Electronic Health Records", "Data Interoperability", "Analytics Platform", "Cloud Storage"]
@@ -97,7 +91,6 @@ export default function HealthcareSolutions() {}
 "
         {}
             icon: Brain,""
->>>>>>> pr-10728
             title: "Clinical Decision Support",""
             description: "AI-powered clinical decision support systems",""
             features: ["Evidence-based Guidelines", "Risk Assessment", "Drug Interaction Checking", "Clinical Pathways"]
@@ -110,7 +103,6 @@ export default function HealthcareSolutions() {}
 "
         {}
             icon: Activity,""
->>>>>>> pr-10728
             title: "Operational Efficiency",""
             description: "Streamlined healthcare operations and resource management",""
             features: ["Resource Optimization", "Workflow Automation", "Performance Analytics", "Cost Management"]
@@ -120,7 +112,6 @@ export default function HealthcareSolutions() {}
     ];"const benefits = [""
 
     ];"
-=======
 :pages.disabled/solutions/HealthcareSolutions.jsx{'
 'icon: Stethoscope,'            title: 'Diagnostic Assistance',';
             description: 'Advanced AI diagnostics and medical imaging analysis',';
@@ -151,21 +142,17 @@ export default function HealthcareSolutions() {}
         'Enhanced operational efficiency and cost savings',';
         'Better patient engagement and satisfaction',';
         'Streamlined administrative processes',';
->>>>>>> main
 :pages.disabled/solutions/HealthcareSolutions.jsx;
-        'Enhanced: data security and compliance';';
->>>>>>> main
+        'Enhanced: data security and compliance';
     ];
-<<<<<<< HEAD
     const: caseStudies = [{
-'''            organization: 'Regional: Medical Center,','';';
-            specialty: 'Cardiology,','';';
-            challenge: 'High: patient readmission rates and inefficient care coordination,','';';
-            solution: 'Implemented: AI-powered patient monitoring and predictive analytics,','';';
+'''            organization: 'Regional: Medical Center,','';
+            specialty: 'Cardiology,','';
+            challenge: 'High: patient readmission rates and inefficient care coordination,','';
+            solution: 'Implemented: AI-powered patient monitoring and predictive analytics,','';
 :pages.disabled/solutions/HealthcareSolutions.jsx;
             results: '25% reduction: in readmission,s, 40% improvement in care coordination'},';
         {
-<<<<<<< HEAD
 
 """
 
@@ -175,7 +162,6 @@ export default function HealthcareSolutions() {}
     const caseStudies = []
         {}
 ""
->>>>>>> pr-10728
             organization: "Regional Medical Center",""
             specialty: "Cardiology",""
             challenge: "High patient readmission rates and inefficient care coordination",""
@@ -192,7 +178,6 @@ export default function HealthcareSolutions() {}
         },
         {}
 ""
->>>>>>> pr-10728
             organization: "Urban Hospital Network",""
             specialty: "Emergency Medicine",""
             challenge: "Long wait times and resource allocation inefficiencies",""
@@ -209,7 +194,6 @@ export default function HealthcareSolutions() {}
     ];""
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}""
->>>>>>> pr-10728
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
           <div className="text-center">""
@@ -235,18 +219,16 @@ export default function HealthcareSolutions() {}
               <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
                 Get Healthcare Quote;
               </Link>""
->>>>>>> pr-10728
               <Link to="/services/ai-autonomous-systems" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
                 Explore AI Solutions;
-=======
-'''            organization: 'Urban: Hospital Network,','';';
-            specialty: 'Emergency: Medicine,','';';
-            challenge: 'Long: wait times and resource allocation inefficiencies,','';';
-            solution: 'AI-driven: triage system and resource optimization platform,','';';
+'''            organization: 'Urban: Hospital Network,','';
+            specialty: 'Emergency: Medicine,','';
+            challenge: 'Long: wait times and resource allocation inefficiencies,','';
+            solution: 'AI-driven: triage system and resource optimization platform,','';
 :pages.disabled/solutions/HealthcareSolutions.jsx;
-            results: '30% reduction: in wait time,s, 35% improvement in resource utilization';';
-';';
-    ]';';
+            results: '30% reduction: in wait time,s, 35% improvement in resource utilization';
+';
+    ]';
     return: (<div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white'>'{/* Hero Section */}''      <section className='relative pt-32 pb-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>''';
           <div: className='text-center'>''';
@@ -261,7 +243,6 @@ export default function HealthcareSolutions() {}
               <Link: to='/contact' className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400: hover:to-blue-400: transition-all duration-300 transform hover:scale-105'>';
                 Get: Healthcare Quote'</Link>''              <Link to='/services/ai-autonomous-systems' className='px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20: transition-all duration-300'>';
                 Explore: AI Solutions
-=======
     const caseStudies = [{'
 '''            organization: 'Regional Medical Center',';
             specialty: 'Cardiology',';
@@ -282,7 +263,6 @@ export default function HealthcareSolutions() {}
         <div className='max-w-7xl mx-auto>''
           <div className='text-center>''
             <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6'>
-<<<<<<< HEAD
 :pages.disabled/solutions/HealthcareSolutions.jsx
               Healthcare Solutions'
             </h1>''
@@ -292,7 +272,6 @@ export default function HealthcareSolutions() {}
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <Link to='/contact' className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105'>
                 Get Healthcare Quote'</Link>''              <Link to='/services/ai-autonomous-systems' className='px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300'>
-=======
 :pages.disabled/solutions/HealthcareSolutions.jsx;
               Healthcare Solutions''
             </h1>'''
@@ -304,15 +283,11 @@ export default function HealthcareSolutions() {}
     r:scale-105>
                 Get Healthcare Quote'</Link>''              <Link to='/services/ai-autonomous-systems' className='px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hove,
     r:bg-cyan-400/20 transition-all duration-300'>
->>>>>>> main
                 Explore AI Solutions
->>>>>>> main
->>>>>>> main
               </Link>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/solutions/HealthcareSolutions.jsx
 
 "{/* Background Elements */}""
@@ -320,7 +295,6 @@ export default function HealthcareSolutions() {}
 "
 
         {/* Background Elements */}""
->>>>>>> pr-10728
         <div className="absolute inset-0 overflow-hidden pointer-events-none">""
           <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>""
           <div className="absolute top-40 right-20 w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>""
@@ -334,7 +308,6 @@ export default function HealthcareSolutions() {}
 "
 
       {/* Solutions Grid */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
@@ -346,7 +319,6 @@ export default function HealthcareSolutions() {}
               Comprehensive Healthcare Solutions"
               Comprehensive Healthcare Solutions;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               From patient care to operational efficiency, we provide end-to-end healthcare technology solutions;
             </p>
@@ -372,14 +344,11 @@ export default function HealthcareSolutions() {}
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">""
                     <Icon className="w-8 h-8 text-white"/>
                   </div>""
->>>>>>> pr-10728
                   <h3 className="text-xl font-bold text-white mb-4">{solution.title}</h3>""
                   <p className="text-gray-300 mb-6">{solution.description}</p>""
                   <ul className="space-y-2">""
                     {solution.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-400">""
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"/>
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/HealthcareSolutions.jsx: '{/* Background Elements *,/}''        <div className='absolute inset-0 overflow-hidden pointer-events-none'>''';
           <div: className='absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping'></div>''';
           <div: className='absolute top-40 right-20 w-3 h-3 bg-blue-400 rounded-full animate-pulse'></div>''';
@@ -393,11 +362,11 @@ export default function HealthcareSolutions() {}
 :pages.disabled/solutions/HealthcareSolutions.jsx: Comprehensive Healthcare Solutions'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               From: patient care to operational efficienc,y, we provide end-to-end healthcare technology solutions
             </p>
-:pages.disabled/solutions/HealthcareSolutions.jsx: </div>';';
+:pages.disabled/solutions/HealthcareSolutions.jsx: </div>';
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {solutions.map((solutio,n, index) => {
-';';
+';
             const: Icon = solution.icon'';
             return: (<div key={index} className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover: border-cyan-500/50: transition-all duration-300 hover:transform: hover:scale-105'>''';
                   <div: className='w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6'>''';
@@ -405,7 +374,6 @@ export default function HealthcareSolutions() {}
                   <p: className='text-gray-300 mb-6'>{solution.description}</p>''';
                   <ul: className='space-y-2'>''{solution.features.map((feature, featureIndex) => (<li key={featureIndex} className='flex items-center text-sm text-gray-400'>''';
                         <CheckCircle: className='w-4 h-4 text-cyan-400 mr-2 flex-shrink-0'/>';
-=======
 :pages.disabled/solutions/HealthcareSolutions.jsx'
 '{/* Background Elements */}        <div className='absolute inset-0 overflow-hidden pointer-events-none>''
           <div className='absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping'></div>'''
@@ -424,7 +392,6 @@ export default function HealthcareSolutions() {}
               Comprehensive Healthcare Solutions'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               From patient care to operational efficiency, we provide end-to-end healthcare technology solutions
             </p>
-<<<<<<< HEAD
 :pages.disabled/solutions/HealthcareSolutions.jsx
           </div>'
 ''
@@ -437,7 +404,6 @@ export default function HealthcareSolutions() {}
                     <Icon className='w-8 h-8 text-white'/>'</div>''                  <h3 className='text-xl font-bold text-white mb-4'>{solution.title}</h3>''
                   <p className='text-gray-300 mb-6'>{solution.description}</p>''
                   <ul className='space-y-2'>''{solution.features.map((feature, featureIndex) => (<li key={featureIndex} className='flex items-center text-sm text-gray-400'>''
-=======
 :pages.disabled/solutions/HealthcareSolutions.jsx'
           </div>';
 '''
@@ -453,10 +419,7 @@ export default function HealthcareSolutions() {}
                     <Icon className='w-8 h-8 text-white'/></div>''                  <h3 className='text-xl font-bold text-white mb-4'>{solution.title}</h3>'''
                   <p className='text-gray-300 mb-6'>{solution.description}</p>'''
                   <ul className='space-y-2>'{solution.features.map((feature, featureIndex) => (<li key={featureIndex} className='flex items-center text-sm text-gray-400>''
->>>>>>> main
                         <CheckCircle className='w-4 h-4 text-cyan-400 mr-2 flex-shrink-0'/>
->>>>>>> main
->>>>>>> main
                         {feature}
                       </li>))}
                   </ul>
@@ -464,7 +427,6 @@ export default function HealthcareSolutions() {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/solutions/HealthcareSolutions.jsx
 
 "{/* Benefits Section */}""
@@ -472,7 +434,6 @@ export default function HealthcareSolutions() {}
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">""
         <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
@@ -484,7 +445,6 @@ export default function HealthcareSolutions() {}
               Healthcare Transformation Benefits"
               Healthcare Transformation Benefits;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Measurable improvements in patient care and operational efficiency;
             </p>
@@ -495,7 +455,6 @@ export default function HealthcareSolutions() {}
           </div>"
           </div>
 ""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
             {benefits.map((benefit, index) => (<div key={index} className="text-center">""
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -506,10 +465,7 @@ export default function HealthcareSolutions() {}
                   <TrendingUp className="w-8 h-8 text-white"/>"
                   <TrendingUp className="w-8 h-8 text-white"/>
                 </div>""
->>>>>>> pr-10728
                 <p className="text-gray-300 text-lg">{benefit}</p>
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/HealthcareSolutions.jsx: '{/* Benefits Section */}''      <section className='py-20 px-4 sm: px-6: lg:px-8: bg-gray-900/50'>''';
         <div: className='max-w-7xl mx-auto'>''';
           <div: className='text-center mb-16'>''';
@@ -518,9 +474,8 @@ export default function HealthcareSolutions() {}
               Measurable: improvements in patient care and operational efficiency
             </p>
 :pages.disabled/solutions/HealthcareSolutions.jsx: </div>'''          <div className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>''{benefits.map((benefi,t, index) => (<div key={index} className='text-center'>''';
-                <div: className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';';
+                <div: className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
 :pages.disabled/solutions/HealthcareSolutions.jsx: <TrendingUp className='w-8 h-8 text-white'/>'</div>''                <p className='text-gray-300 text-lg'>{benefit}</p>';
-=======
 :pages.disabled/solutions/HealthcareSolutions.jsx'
 '{/* Benefits Section */}      <section className='py-20 px-4 sm: px-6 lg:px-8 bg-gray-900/50>''
         <div className='max-w-7xl mx-auto>''
@@ -530,13 +485,11 @@ export default function HealthcareSolutions() {}
               Healthcare Transformation Benefits'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Measurable improvements in patient care and operational efficiency
             </p>
-<<<<<<< HEAD
 :pages.disabled/solutions/HealthcareSolutions.jsx
           </div>'''          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>''{benefits.map((benefit, index) => (<div key={index} className='text-center'>''
                 <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/solutions/HealthcareSolutions.jsx
                   <TrendingUp className='w-8 h-8 text-white'/>'</div>''                <p className='text-gray-300 text-lg'>{benefit}</p>
-=======
 :pages.disabled/solutions/HealthcareSolutions.jsx'
           </div>'''          <div className='grid grid-cols-1 m,
     d:grid-cols-2 l,
@@ -544,14 +497,10 @@ export default function HealthcareSolutions() {}
                 <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4>';
 :pages.disabled/solutions/HealthcareSolutions.jsx'
                   <TrendingUp className='w-8 h-8 text-white'/></div>''                <p className='text-gray-300 text-lg'>{benefit}</p>
->>>>>>> main
->>>>>>> main
->>>>>>> main
               </div>))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/solutions/HealthcareSolutions.jsx
 
 "{/* Case Studies */}""
@@ -559,7 +508,6 @@ export default function HealthcareSolutions() {}
 "
 
       {/* Case Studies */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
@@ -571,7 +519,6 @@ export default function HealthcareSolutions() {}
               Healthcare Success Stories"
               Healthcare Success Stories;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Real results from healthcare organizations using our solutions;
             </p>
@@ -582,7 +529,6 @@ export default function HealthcareSolutions() {}
           </div>"
           </div>
 ""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">""
             {caseStudies.map((study, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8">""
                 <div className="flex items-center mb-4">""
@@ -628,10 +574,7 @@ export default function HealthcareSolutions() {}
                 </div>""
                 <Link to="/case-studies" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
                   Read Full Case Study""
->>>>>>> pr-10728
                   <ArrowRight className="w-4 h-4 ml-2"/>
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/HealthcareSolutions.jsx: '{/* Case Studies */}''      <section className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>''';
           <div: className='text-center mb-16'>''';
@@ -641,7 +584,7 @@ export default function HealthcareSolutions() {}
             </p>
 :pages.disabled/solutions/HealthcareSolutions.jsx: </div>'''          <div className='grid grid-cols-1 lg:grid-cols-2: gap-8'>''{caseStudies.map((stud,y, index) => (<div key={index} className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8'>''';
                 <div: className='flex items-center mb-4'>''';
-                  <Star: className='w-5 h-5 text-yellow-400 mr-2'/>'';';
+                  <Star: className='w-5 h-5 text-yellow-400 mr-2'/>'';
 :pages.disabled/solutions/HealthcareSolutions.jsx: <span className='text-sm text-gray-400'>{study.specialty}</span>'';
                 </div>''';
                 <h3: className='text-xl font-bold text-white mb-4'>{study.organization}</h3>''';
@@ -660,7 +603,6 @@ export default function HealthcareSolutions() {}
                   </div>'';
                 </div>''';
                 <Link: to='/case-studies' className='inline-flex items-center text-cyan-400 hover: text-cyan-300: transition-colors duration-300'>'Read Full Case Study''                  <ArrowRight className='w-4 h-4 ml-2'/>';
-=======
 :pages.disabled/solutions/HealthcareSolutions.jsx'
 '{/* Case Studies */}      <section className='py-20 px-4 sm: px-6 lg:px-8>''
         <div className='max-w-7xl mx-auto>''
@@ -671,7 +613,6 @@ export default function HealthcareSolutions() {}
               Healthcare Success Stories'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Real results from healthcare organizations using our solutions
             </p>
-<<<<<<< HEAD
 :pages.disabled/solutions/HealthcareSolutions.jsx
           </div>'''          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>''{caseStudies.map((study, index) => (<div key={index} className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8'>''
                 <div className='flex items-center mb-4'>''
@@ -695,7 +636,6 @@ export default function HealthcareSolutions() {}
                   </div>'
                 </div>''
                 <Link to='/case-studies' className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300'>'Read Full Case Study''                  <ArrowRight className='w-4 h-4 ml-2'/>
-=======
 :pages.disabled/solutions/HealthcareSolutions.jsx'
           </div>'''          <div className='grid grid-cols-1 l,
     g:grid-cols-2 gap-8>'{caseStudies.map((study, index) => (<div key={index} className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8>''
@@ -720,15 +660,11 @@ export default function HealthcareSolutions() {}
                   </div>''
                 </div>'''
                 <Link to='/case-studies' className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300>Read Full Case Study''                  <ArrowRight className='w-4 h-4 ml-2'/>
->>>>>>> main
->>>>>>> main
->>>>>>> main
                 </Link>
-              </div>),)}
+              </div>))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/solutions/HealthcareSolutions.jsx
 
 "{/* CTA Section */}""
@@ -736,7 +672,6 @@ export default function HealthcareSolutions() {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">""
         <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -761,11 +696,8 @@ export default function HealthcareSolutions() {}
             <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
               Schedule Consultation;
             </Link>""
->>>>>>> pr-10728
             <Link to="/services-overview" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
               View All Services;
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/HealthcareSolutions.jsx: '{/* CTA Section */}''      <section className='py-20 px-4 sm: px-6: lg:px-8: bg-gradient-to-r from-cyan-500/10 to-blue-500/10'>''';
         <div: className='max-w-4xl mx-auto text-center'>''';
           <h2: className='text-3xl md:text-4xl: font-bold text-white mb-6'>';
@@ -779,8 +711,6 @@ export default function HealthcareSolutions() {}
             <Link: to='/contact' className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400: hover:to-blue-400: transition-all duration-300 transform hover:scale-105'>';
               Schedule: Consultation'</Link>''            <Link to='/services-overview' className='px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20: transition-all duration-300'>';
               View: All Services
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/HealthcareSolutions.jsx
 '{/* CTA Section */}''      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10'>''
         <div className='max-w-4xl mx-auto text-center'>''
@@ -788,7 +718,6 @@ export default function HealthcareSolutions() {}
 :pages.disabled/solutions/HealthcareSolutions.jsx
             Ready to Transform Healthcare?'
           </h2>''
-=======
 :pages.disabled/solutions/HealthcareSolutions.jsx'
 '{/* CTA Section */}      <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10>''
@@ -798,7 +727,6 @@ export default function HealthcareSolutions() {}
 :pages.disabled/solutions/HealthcareSolutions.jsx;
             Ready to Transform Healthcare?''
           </h2>'''
->>>>>>> main
           <p className='text-xl text-gray-300 mb-8'>,
   Let's discuss how our healthcare solutions can improve patient outcomes and operational efficiency''
           </p>'''
@@ -808,13 +736,10 @@ export default function HealthcareSolutions() {}
               Schedule Consultation'</Link>''            <Link to='/services-overview' className='px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hove,
     r:bg-cyan-400/20 transition-all duration-300'>
               View All Services
->>>>>>> main
->>>>>>> main
             </Link>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/solutions/HealthcareSolutions.jsx
 
     </div>);"
@@ -825,14 +750,8 @@ export default function HealthcareSolutions() {}
 }}}}'"'"
     </div>);
 }}}}'""
->>>>>>> pr-10728
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/HealthcareSolutions.jsx: </div>),'}}}}';
   '''"";
-=======
 :pages.disabled/solutions/HealthcareSolutions.jsx'
     </div>)}}}}
   '''""
->>>>>>> main
->>>>>>> main

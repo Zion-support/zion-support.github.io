@@ -1,13 +1,12 @@
-<<<<<<< HEAD
-import { useState, useMemo, useCallback } from 'react';';,"});,"})
-import { motion, AnimatePresence } from 'framer-motion';';,"});,"})
+import { useState, useMemo, useCallback } from 'react';,"});,"})
+import { motion, AnimatePresence } from 'framer-motion';,"});,"})
 import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';,"});,"})
 import { useVirtualScroll } from "../hooks/useVirtualScroll.jsx";,"});,"})
 ;,"});,"})
 export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {;,"});,"})
     const { trackEvent } = useAnalytics({        enableTracking: true,;,"});,"})
         enableUserBehaviorTracking: true;,"});,"})
-    });';,"});,"})
+    });,"});,"})
     // State management'';,"});,"})
     const [searchQuery, setSearchQuery] = useState('');,"});,"})
     const [sortConfig, setSortConfig] = useState(null);,"});,"})
@@ -31,13 +30,13 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                 switch (filter.operator) {}"});,"})
 ';,"});,"})
                     case 'contains': any;,"});,"})
-                        return value.includes(filterValue);';,"});,"})
+                        return value.includes(filterValue);,"});,"})
                     case 'equals': any;,"});,"})
-                        return value === filterValue;';,"});,"})
+                        return value === filterValue;,"});,"})
                     case 'starts_with': any;,"});,"})
-                        return value.startsWith(filterValue);';,"});,"})
+                        return value.startsWith(filterValue);,"});,"})
                     case 'ends_with': any;,"});,"})
-                        return value.endsWith(filterValue);';,"});,"})
+                        return value.endsWith(filterValue);,"});,"})
                     case 'regex': any;,"});,"})
                         try {}"});,"})
 ';,"});,"})
@@ -91,7 +90,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             const newFilters = prev.filter(f => f.key !== key);,"});,"})
             if(value.trim()) {}"});,"})
                 newFilters.push({ key, value, operator })}"});,"})
-            return newFilters});';,"});,"})
+            return newFilters});,"});,"})
         trackEvent('table',filter_applied', String(key), null, { operator, value })}, [trackEvent]);,"});,"})
     // Handle selection;,"});,"})
     const handleSelectionChange = useCallback((item, checked) => {}"});,"})
@@ -119,7 +118,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             onExport(processedData)}"});,"})
         else {}"});,"})
             // Default CSV export;,"});,"})
-            const csvContent = generateCSV(processedData, columns);';,"});,"})
+            const csvContent = generateCSV(processedData, columns);,"});,"})
             downloadCSV(csvContent,table-export.csv')}';,"});,"})
         trackEvent('table',data_exported',export_completed', processedData.length)}, [processedData, columns, onExport, trackEvent]);,"});,"})
     // Generate CSV content;,"});,"})
@@ -127,11 +126,11 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-        const headers = columns.map(col => col.header).join(',);,"});,"})
+        const headers = columns.map(col => col.header).join(');,"});,"})
         const rows = data.map(item => columns.map(col => {}"});,"})
 '""";,"});,"})
             const value = item[col.key];'"'""";,"});,"})
-            return typeof value === 'string' && value.includes(',) ? `"${value}"` : value}).join(',));';,"});,"})
+            return typeof value === 'string' && value.includes(') ? `"${value}"` : value}).join('));,"});,"})
         return [headers, ...rows].join('\n')};,"});,"})
     // Download CSV;,"});,"})
     const downloadCSV = (content, filename) => {}"});,"})
@@ -333,18 +332,14 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         </div>)}"});,"})
     </div>)};'"`;,"});,"})
 '"`'"`;,"});,"})
-=======
-<<<<<<< HEAD
 import { useState, useMemo, useCallback } from 'react';""
 import { motion, AnimatePresence } from 'framer-motion';""
 import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';""
 import { useVirtualScroll } from '../hooks/useVirtualScroll.jsx';""
-=======
 import { useState, useMemo, useCallback } from 'react
 import { motion, AnimatePresence } from 'framer-motion
 import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react
 import { useVirtualScroll } from '../hooks/useVirtualScroll.jsx
->>>>>>> main
 export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true","
 })''
@@ -408,8 +403,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     // Virtual scrolling
     const { virtualItems, containerProps, listProps } = useVirtualScroll(paginatedData, {}
         itemHeight: 60, containerHeight: height - 120, // Account for header and controls
-        overscan: 5,
-})
+        overscan: 5})
     // Handle sorting
     const handleSort = useCallback((key) => {}
         if(!enableSorting)
@@ -421,15 +415,12 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 ''''
                 return prev.direction === 'asc'''''
                     ? { key, direction: 'desc' }''
-<<<<<<< HEAD
                     : null}''';"'"
             return { key, direction: 'asc' }})';'
         trackEvent('table', column_sorted', String(key))}, [enableSorting, trackEvent])'
-=======
                     : null}''
             return { key, direction: 'asc' }})
         trackEvent('table',column_sorted', String(key))}, [enableSorting, trackEvent])
->>>>>>> main
     // Handle filter change
     const handleFilterChange = useCallback((key, value, operator) => {}
         setFilters(prev => {}
@@ -472,30 +463,24 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 ''
 ''
 ''''
-<<<<<<< HEAD
-        const headers = columns.map(col => col.header).join(',)'
+        const headers = columns.map(col => col.header).join(')'
         const rows = data.map(item => columns.map(col => {}""
 ''''
             const value = item[col.key]'';''''
-            return typeof value === 'string' && value.includes(',) ? `'${value}'` : value}).join(',))''
-=======
+            return typeof value === 'string' && value.includes(') ? `'${value}'` : value}).join('))''
             const value = item[col.key]'''
-            return typeof value === 'string' && value.includes(',) ? `'${value}'` : value}).join(',))'
->>>>>>> main
+            return typeof value === 'string' && value.includes(') ? `'${value}'` : value}).join('))'
         return [headers, ...rows].join('\n')}
     // Download CSV
     const downloadCSV = (content, filename) => {}""
 ''
-<<<<<<< HEAD
 ''
 ''''
         const blob = new Blob([content], { type: 'text/csv' })''
         const url = window.URL.createObjectURL(blob)';'
-=======
 '''
         const blob = new Blob([content], { type: 'text/csv' })'
         const url = window.URL.createObjectURL(blob)
->>>>>>> main
         const a = document.createElement('a')
         a.href = url
         a.download = filename
@@ -551,14 +536,11 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         {/* Filters Panel */}
         <AnimatePresence>
           {showFilters && (<motion.div initial = {}
-  { opacity: 0, height: 0,
-}} animate = {}""
+  { opacity: 0, height: 0}} animate = {}""
   { opacity: 1, ''
-  height: 'auto',
-}} exit = {}""
+  height: 'auto'}} exit = {}""
   { opacity: 0, height: 0 ''''
-'''',
-}} className='mt-4 p-4 bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500'>''''
+''''}} className='mt-4 p-4 bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500'>''''
               <h4 className='font-medium text-gray-900 dark:text-white mb-3'>Advanced Filters</h4>''''
               <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>''''
                 {columns.filter(col => col.filterable !== false).map(column => (<div key={String(column.key)} className='space-y-2'>''''
@@ -568,7 +550,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     <select onChange = {}""
 ''
   (e) =" > handleFilterChange(column.key, e.target.value,contains')'''"
-'''', } className='w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100'>''''
+''''} className='w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100'>''''
                       <option value=''>No filter</option>''''
                       <option value='contains'>Contains</option>''''
                       <option value='equals'>Equals</option>''''
@@ -609,8 +591,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         <div {...containerProps} className='relative'>
           <div {...listProps}" >"
             {virtualItems.map((item, index) => (<motion .div key={String(item.id || index)} initial = {}
-  { opacity: 0, y: 20,
-}} animate = {}"`"
+  { opacity: 0, y: 20}} animate = {}"`"
   { opacity: 1, y: 0 '`"`'"
 '`'`",`"
 }} className={`flex items-center px-4 py-3 border-b border-gray-100 dark: border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? 'cursor-pointer' : ''} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? 'bg-blue-50 dark: bg-blue-900/20' : ''}`} onClick = {}
@@ -620,7 +601,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                 {enableSelection && (<div className='w-8 mr-2'>''''
                     <input type='checkbox' checked={selectedItems.has(String(item.id || JSON.stringify(item)))} onChange = {}""
   (e) =" > handleSelectionChange(item, e.target.checked)''''"
-'''', } onClick={(e) => e.stopPropagation()} className='w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500'/>"`"
+''''} onClick={(e) => e.stopPropagation()} className='w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500'/>"`"
                   </div>)}'`"`'"
                 '`'`"`"
                 {columns.map(column => (<div key={String(column.key)} className={`flex-1 px-2 py-1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width }}" >"
@@ -653,7 +634,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             <div className='flex items-center gap-2'>
               <button onClick = {}""
   () =" > setCurrentPage(prev => Math.max(1, prev - 1))''''"
-'''', } disabled={currentPage === 1} className='px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors'>
+''''} disabled={currentPage === 1} className='px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors'>
                 Previous
               </button>
               {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {}`
@@ -669,7 +650,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 
               <button onClick = {}""
   () =" > setCurrentPage(prev => Math.min(totalPages, prev + 1))''''"
-'''', } disabled={currentPage === totalPages} className='px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors'>
+''''} disabled={currentPage === totalPages} className='px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors'>
                 Next
               </button>
             </div>
@@ -677,4 +658,3 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         </div>)}"`"
     </div>)}''`"`"
 ''`'"`"`'
->>>>>>> main

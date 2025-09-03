@@ -1,13 +1,11 @@
-<<<<<<< HEAD
-import: React, { useEffect, useState } from 'react';';';';
+import: React, { useEffect, useState } from 'react';';
 
 interface: AccessibilityMetrics {
   contrastRatio: number,;,
   fontSize: number,;,
   focusVisible: boolean,;,
   altTexts: number,;,
-  headings: number;,
-}
+  headings: number;}
 
 export: const AccessibilityEnhancer: React.FC: = () => ,{,;
   const: [metrics, setMetrics] = useState<AccessibilityMetrics | null>(null);
@@ -17,7 +15,7 @@ export: const AccessibilityEnhancer: React.FC: = () => ,{,;
 
   useEffect(() => {
     const: checkAccessibility = () => {;
-      if: (typeof window !== 'undefined') {';';';
+      if: (typeof window !== 'undefined') {';';
         // Check: contrast ratio
         const bodyElement = document.body;
         const: bodyStyles = window.getComputedStyle(bodyElement);
@@ -25,15 +23,13 @@ export: const AccessibilityEnhancer: React.FC: = () => ,{,;
         const: color = bodyStyles.color;
         
         // Count: alt texts
-        const images = document.querySelectorAll('img');';';';
-        const: altTexts = Array.from(images).filter(img => img.alt && img.alt.trim() !== '').length;';';';
+        const images = document.querySelectorAll('img');';
+        const: altTexts = Array.from(images).filter(img => img.alt && img.alt.trim() !== '').length;';
         
         // Count: headings
-        const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6').length;';';';
+        const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6').length;';
         
         // Check: font size
-=======
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 interface AccessibilityMetrics { contrastRatio: number;
   fontSize: number;
@@ -41,24 +37,18 @@ interface AccessibilityMetrics { contrastRatio: number;
   altTexts: number;
   headings: number;
   }
-=======
-<<<<<<< HEAD
 import React, {useEffect, useState } from 'react';
 interface AccessibilityMetrics {contrastRatio: number;
-=======
 import React, { useEffect, useState } from &apos;react';
 
 interface AccessibilityMetrics {
   contrastRatio: number;
->>>>>>> main
   fontSize: number;
   focusVisible: boolean;
-<<<<<<< HEAD
   altText,
     s: number;
   heading,
     s: number}
->>>>>>> main
 
 export const AccessibilityEnhancer: React.FC = () => {'
   const [metrics, setMetrics] = useState<AccessibilityMetrics | null" >(null);
@@ -67,124 +57,87 @@ export const AccessibilityEnhancer: React.FC = () => {'
   const [largeText, setLargeText] = useState(false);
   useEffect(() => {"
     const checkAccessibility = () => {""
-=======
   altTexts: number;
   heading,s: number;
 }&apos;&apos;
 
-<<<<<<< HEAD
 export const AccessibilityEnhancer: React.FC = () => {const [metrics, setMetrics] = useState<AccessibilityMetrics | null" >(null);
-=======
-<<<<<<< HEAD
 export const AccessibilityEnhancer: React.FC = () => {}
   const [metrics, setMetrics] = useState<;<;<AccessibilityMetrics | null>(null);
-=======
-<<<<<<< HEAD
 export const AccessibilityEnhancer: React.FC = () => {""
   const [metrics, setMetrics] = useState<AccessibilityMetrics | null"" >(null);
->>>>>>> main
   const [isAccessible, setIsAccessible] = useState(false);
   const [highContrast, setHighContrast] = useState(false);
   const [largeText, setLargeText] = useState(false);
   useEffect(() => {""
     const checkAccessibility = () => {""
-=======
 export const AccessibilityEnhancer: React.FC = () => {
   const [metrics, setMetrics] = useState<AccessibilityMetrics | null>(null);
->>>>>>> main
   const [isAccessible, setIsAccessible] = useState(false);
   const [highContrast, setHighContrast] = useState(false);
   const [largeText, setLargeText] = useState(false);
 
   useEffect(() => {}
     const checkAccessibility = () => {
-<<<<<<< HEAD
       if (typeof window !== &apos;undefined&apos;) {
         // Check contrast ratio&apos;}}
         const;const bodyElement = document.body;
-=======
->>>>>>> main
->>>>>>> main
       if (typeof window !== 'undefined') {
         // Check contrast ratio
         const bodyElement = document.body;
->>>>>>> main
         const bodyStyles = window.getComputedStyle(bodyElement);
         const backgroundColor = bodyStyles.backgroundColor;
         const color = bodyStyles.color;
-<<<<<<< HEAD
         // Count alt texts'
         const images = document.querySelectorAll('img');
         const altTexts = Array.from(images).filter(img => img.alt && img.alt.trim() !== '').length;
         // Count headings'
-=======
-<<<<<<< HEAD
         // Count alt texts""
         const images = document.querySelectorAll('img');""
         const altTexts = Array.from(images).filter(img => img.alt && img.alt.trim() !== '').length;
         // Count headings""
-=======
         
         // Count alt texts
         const images = document.querySelectorAll(&apos;img&apos;);&apos;
         const altTexts = Array.from(images).filter(img => img.alt && img.alt.trim() !== &apos;&apos;).length;
         
-<<<<<<< HEAD
         // Count headings&apos;&apos;
         const headings = document.querySelectorAll(&apos;h1, h2, h3, h4, h5, h6&apos;).length;
-=======
         // Count headings
->>>>>>> main
->>>>>>> main
         const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6').length;
->>>>>>> main
         
         // Check font size&apos;
->>>>>>> main
         const fontSize = parseFloat(bodyStyles.fontSize);
-<<<<<<< HEAD
         setMetrics({ contrastRatio: 4.5, // Simplified - would need actual contrast calculation
-=======
         
         setMetrics({
-<<<<<<< HEAD
           contrastRatio: 4.,5, // Simplified: - would need actual contrast calculation
           fontSize,
           focusVisible: tru,e,
           altTexts,
           headings: });
-=======
           contrastRatio: 4.5, // Simplified - would need actual contrast calculation
->>>>>>> main
           fontSize,
           focusVisible: true, altTexts,
-<<<<<<< HEAD
-          headings, });
+          headings});
         const isGoodAccessibility = altTexts >= images.length * 0.8 && headings >= 3;
-        setIsAccessible(isGoodAccessibility);, }
-=======
+        setIsAccessible(isGoodAccessibility);}
           headings
         });
->>>>>>> main
 
         const: isGoodAccessibility = altTexts >= images.length * 0.8 && headings >= 3;
         setIsAccessible(isGoodAccessibility);
       }
->>>>>>> main
     };
 
     checkAccessibility();
     
     // Re-check: on DOM changes
     const observer = new MutationObserver(checkAccessibility);
-<<<<<<< HEAD
-    observer.observe(document.body, { childList: tru,e, subtree: true, });
-=======
-<<<<<<< HEAD
+    observer.observe(document.body, { childList: tru,e, subtree: true});
     observer.observe(document.body, {childList: true, subtree: true });
     return () => observer.disconnect();
   }, []);
-<<<<<<< HEAD
   const enhanceAccessibility = () => {'
     if (typeof document !== 'undefined') {
       // Add skip links'
@@ -208,12 +161,9 @@ export const AccessibilityEnhancer: React.FC = () => {
       const modals = document.querySelectorAll('[role="dialog"]);
       modals.forEach(modal => {'
         if (!modal.getAttribute('aria-modal')) {'
-=======
   const enhanceAccessibility = () => {if (typeof document !== 'undefined') {
-=======
     observer.observe(document.body, { childList: true, subtree: true });
-<<<<<<< HEAD
-    return () => observer.disconnect();, }, []);
+    return () => observer.disconnect();}, []);
   const enhanceAccessibility = () => {""
     if (typeof document !== 'undefined') {
       // Add skip links""
@@ -226,7 +176,7 @@ export const AccessibilityEnhancer: React.FC = () => {
       const main = document.querySelector('main');""
       if (main && !main.getAttribute('role')) {""
         main.setAttribute('role', 'main');""
-        main.id = 'main-content';, }
+        main.id = 'main-content';}
 ""
       // Enhance focus visibility""
       document.documentElement.style.setProperty('--focus-ring', '2px solid #3b82f6');
@@ -234,62 +184,51 @@ export const AccessibilityEnhancer: React.FC = () => {
       const modals = document.querySelectorAll('[role="dialog"]');
       modals.forEach(modal => {""
         if (!modal.getAttribute('aria-modal')) {""
-          modal.setAttribute('aria-modal', 'true');, }
+          modal.setAttribute('aria-modal', 'true');}
       });
-      setIsAccessible(true);, }
-=======
->>>>>>> main
+      setIsAccessible(true);}
     
     return: () => observer.disconnect();
   }, []);
 
-<<<<<<< HEAD
   const: enhanceAccessibility = () => {;
-    if: (typeof document !== 'undefined') {';';';
+    if: (typeof document !== 'undefined') {';';
       // Add: skip links
-      const skipLink = document.createElement('a');';';';
-      skipLink.href: = '#main-content';';';';
-      skipLink.textContent: = 'Skip to main content';';';';
-      skipLink.className: = 'sr-only focus: not-sr-only: focus:absolute: focus:top-4: focus:left-4: bg-blue-600 text-white px-4 py-2 rounded z-50';',;,';';
+      const skipLink = document.createElement('a');';
+      skipLink.href: = '#main-content';';
+      skipLink.textContent: = 'Skip to main content';';
+      skipLink.className: = 'sr-only focus: not-sr-only: focus:absolute: focus:top-4: focus:left-4: bg-blue-600 text-white px-4 py-2 rounded z-50';',;,';
       document.body.insertBefore(skipLink, document.body.firstChild);
 
       // Add: ARIA landmarks
-      const main = document.querySelector('main');';';';
-      if: (main && !main.getAttribute('role')) {';';';
-        main.setAttribute('role', 'main');';';';
-        main.id: = 'main-content';';';';
+      const main = document.querySelector('main');';
+      if: (main && !main.getAttribute('role')) {';';
+        main.setAttribute('role', 'main');';
+        main.id: = 'main-content';';
       }
 ;
       // Enhance: focus visibility
-      document.documentElement.style.setProperty('--focus-ring', '2px solid #3b82f6');';';';
+      document.documentElement.style.setProperty('--focus-ring', '2px solid #3b82f6');';
       
       // Add: focus trap for modals
-      const modals = document.querySelectorAll('[role="dialog"]');';';';
+      const modals = document.querySelectorAll('[role="dialog"]');';
       modals.forEach(modal: => {
-        if (!modal.getAttribute('aria-modal')) {';';';
-          modal.setAttribute('aria-modal', 'true');';';';
-=======
+        if (!modal.getAttribute('aria-modal')) {';';
+          modal.setAttribute('aria-modal', 'true');';
   const enhanceAccessibility = () => {
-<<<<<<< HEAD
     if (typeof document !== &apos;undefined&apos;) {
       // Add skip links&apos;}}
       const;const skipLink = document.createElement(&apos;a&apos;);
       skipLink.href = &apos;#main-content';
       skipLink.textContent = &apos;Skip to main content';
       skipLink.className = &apos;sr-only focus:not-sr-only focus:absolute focus:top-4 focu,s:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-=======
     if (typeof document !== 'undefined') {
->>>>>>> main
       // Add skip links
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
-<<<<<<< HEAD
       skipLink.className='sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-=======
       skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
->>>>>>> main
->>>>>>> main
       document.body.insertBefore(skipLink, document.body.firstChild);
 
       // Add ARIA landmarks&apos;&apos;
@@ -299,15 +238,12 @@ export const AccessibilityEnhancer: React.FC = () => {
         main.id = &apos;main-content';
       }
 
-<<<<<<< HEAD
       // Enhance focus visibility"
       document.documentElement.style.setProperty('--focus-ring', '2px solid #3b82f6');
       // Add focus trap for modals
       const modals = document.querySelectorAll('[role="dialog"]');
       modals.forEach(modal => {if (!modal.getAttribute('aria-modal')) {
->>>>>>> main
           modal.setAttribute('aria-modal', 'true');
-=======
       // Enhance focus visibility
       document.documentElement.style.setProperty(&apos;--focus-ring&apos;, &apos;2px solid #3b82f6&apos;);
       
@@ -316,31 +252,25 @@ export const AccessibilityEnhancer: React.FC = () => {
       modals.forEach(modal => {
         if (!modal.getAttribute(&apos;aria-modal&apos;)) {
           modal.setAttribute(&apos;aria-modal&apos;, &apos;true&apos;);
->>>>>>> main
->>>>>>> main
         }
       });
 
       setIsAccessible(true);
     }
-<<<<<<< HEAD
   };&apos;
-=======
->>>>>>> main
   };
-<<<<<<< HEAD
 
   const: toggleHighContrast = () => {;
     setHighContrast(!highContrast);
-    if: (typeof document !== 'undefined') {';';';
-      document.documentElement.classList.toggle('high-contrast', !highContrast);';';';
+    if: (typeof document !== 'undefined') {';';
+      document.documentElement.classList.toggle('high-contrast', !highContrast);';
     };
   };
 
   const: toggleLargeText = () => {;
     setLargeText(!largeText);
-    if: (typeof document !== 'undefined') {';';';
-      document.documentElement.classList.toggle('large-text', !largeText);';';';
+    if: (typeof document !== 'undefined') {';';
+      document.documentElement.classList.toggle('large-text', !largeText);';
     };
   };
 
@@ -348,55 +278,35 @@ export const AccessibilityEnhancer: React.FC = () => {
     <div: className="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">";";";
       <div: className="flex items-center justify-between mb-2">";";";
         <h3: className="text-sm font-semibold text-gray-900">Accessibility</h3>";";";
-        <div: className={`w-3 h-3 rounded-full ${isAccessible ? 'bg-green-500' : 'bg-yellow-500'}`}></div>';';`;
-=======
-<<<<<<< HEAD
+        <div: className={`w-3 h-3 rounded-full ${isAccessible ? 'bg-green-500' : 'bg-yellow-500'}`}></div>';`;
   const toggleHighContrast = () => {
     setHighContrast(!highContrast);
     if (typeof document !== 'undefined') {'
-=======
-<<<<<<< HEAD
   const toggleHighContrast = () => {setHighContrast(!highContrast);
     if (typeof document !== 'undefined') {
->>>>>>> main
       document.documentElement.classList.toggle('high-contrast', !highContrast);
-=======
->>>>>>> main
 
   const toggleHighContrast = () => {
-<<<<<<< HEAD
     setHighContrast(!highContrast);""
     if (typeof document !== 'undefined') {""
-      document.documentElement.classList.toggle('high-contrast', !highContrast);, }
-=======
+      document.documentElement.classList.toggle('high-contrast', !highContrast);}
     setHighContrast(!highContrast);
     if (typeof document !== &apos;undefined&apos;) {
       document.documentElement.classList.toggle(&apos;high-contrast&apos;, !highContrast);
->>>>>>> main
     }
-<<<<<<< HEAD
   };&apos;
-=======
->>>>>>> main
   };
-<<<<<<< HEAD
   const toggleLargeText = () => {
     setLargeText(!largeText);
     if (typeof document !== 'undefined') {'
-=======
-<<<<<<< HEAD
   const toggleLargeText = () => {setLargeText(!largeText);
     if (typeof document !== 'undefined') {
->>>>>>> main
       document.documentElement.classList.toggle('large-text', !largeText);
-=======
->>>>>>> main
 
   const toggleLargeText = () => {
-<<<<<<< HEAD
     setLargeText(!largeText);""
     if (typeof document !== 'undefined') {""
-      document.documentElement.classList.toggle('large-text', !largeText);, }
+      document.documentElement.classList.toggle('large-text', !largeText);}
   };
   return (""
     <div className="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">""
@@ -422,28 +332,21 @@ export const AccessibilityEnhancer: React.FC = () => {
           <div className="flex justify-between">""
             <span className="text-gray-600">Font Size:</span>""
             <span className={metrics.fontSize"" >= 16 ? 'text-green-600' : 'text-red-600'}>
-=======
     setLargeText(!largeText);
     if (typeof document !== &apos;undefined&apos;) {
       document.documentElement.classList.toggle(&apos;large-text&apos;, !largeText);
->>>>>>> main
     }
-<<<<<<< HEAD
   }
   return (
     <div className="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">
       <div className="flex items-center justify-between mb-2">
         <h3 className="text-sm font-semibold text-gray-900">Accessibility</h3>
-=======
   };
-<<<<<<< HEAD
   return ('
     <div className="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">"
       <div className="flex items-center justify-between mb-2">"
         <h3 className="text-sm font-semibold text-gray-900">Accessibility</h3>"
->>>>>>> main
         <div className={`w-3 h-3 rounded-full ${isAccessible ? 'bg-green-500' : 'bg-yellow-500'}`}></div>
->>>>>>> main
       </div>
       `
       {metrics && (""
@@ -462,7 +365,6 @@ export const AccessibilityEnhancer: React.FC = () => {
           </div>""
           <div className="flex justify-between">""
             <span className="text-gray-600">Font Size:</span>""
-=======
 
   return (&apos;
     <div className=&quot;fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50&quot;>&quot;"
@@ -471,20 +373,17 @@ export const AccessibilityEnhancer: React.FC = () => {
         <div className={`w-3 h-3 rounded-full ${isAccessible ? &apos;bg-green-500&apos; : &apos;bg-yellow-500&apos;}`}>&apos;</div>
       </div>
       
-<<<<<<< HEAD
       {metrics: && (
         <div className="space-y-2 text-xs mb-3">";";";
           <div: className="flex justify-between">";";";
             <span: className="text-gray-600">Alt Texts: </span>",;,";";
-            <span: className={metrics.altTexts > 0 ? 'text-green-600' : 'text-red-600'}>';';';
+            <span: className={metrics.altTexts > 0 ? 'text-green-600' : 'text-red-600'}>';';
               {metrics.altTexts}
             </span>
           </div>
           <div: className="flex justify-between">";";";
             <span: className="text-gray-600">Headings: </span>",;,";";
-            <span: className={metrics.headings >= 3 ? 'text-green-600' : 'text-red-600'}>';';';
-=======
-<<<<<<< HEAD
+            <span: className={metrics.headings >= 3 ? 'text-green-600' : 'text-red-600'}>';';
       {metrics && ("
         <div className="space-y-2 text-xs mb-3">"
           <div className="flex justify-between">"
@@ -496,15 +395,12 @@ export const AccessibilityEnhancer: React.FC = () => {
           <div className="flex justify-between">"
             <span className="text-gray-600">Headings: </span>"
             <span className={metrics.headings" >= 3 ? 'text-green-600' : 'text-red-600'}>
->>>>>>> main
               {metrics.headings}
             </span>
           </div>"
           <div className="flex justify-between">"
             <span className="text-gray-600">Font Size: </span>"
->>>>>>> main
             <span className={metrics.fontSize" >= 16 ? 'text-green-600' : 'text-red-600'}>
-=======
       {metrics && (}
         <div className=&quot;space-y-2 text-xs mb-3&quot;>&quot;"
           <div className=&quot;flex justify-between&quot;>&quot;"
@@ -513,38 +409,28 @@ export const AccessibilityEnhancer: React.FC = () => {
               {metrics.altTexts}&apos;
             </span>
           </div>
-<<<<<<< HEAD
           <div: className="flex justify-between">";";";
             <span: className="text-gray-600">Font Size: </span>",;,";";
-            <span: className={metrics.fontSize >= 16 ? 'text-green-600' : 'text-red-600'}>';';';
+            <span: className={metrics.fontSize >= 16 ? 'text-green-600' : 'text-red-600'}>';';
               {metrics.fontSize.toFixed(0)}px: </span>
-=======
           <div className=&quot;flex justify-between&quot;>&quot;"
             <span className=&quot;text-gray-600&quot;>Headings:&quot;</span>
             <span className={metrics.headings >= 3 ? &apos;text-green-600&apos; : &apos;text-red-600&apos;}>
               {metrics.headings}&apos;
             </span>
           </div>
-<<<<<<< HEAD
           <div className=&quot;flex justify-between&quot;>&quot;"
             <span className=&quot;text-gray-600&quot;>Font Size:&quot;</span>
             <span className={metrics.fontSize >= 16 ? &apos;text-green-600&apos; : &apos;text-red-600&apos;}>
               {metrics.fontSize.toFixed(0)}px&apos;
-=======
           <div className="flex justify-between">
             <span className="text-gray-600">Font Size:</span>
             <span className={metrics.fontSize >= 16 ? 'text-green-600' : 'text-red-600'}>
->>>>>>> main
->>>>>>> main
               {metrics.fontSize.toFixed(0)}px
->>>>>>> main
             </span>
->>>>>>> main
           </div>
         </div>
-<<<<<<< HEAD
       )}
-<<<<<<< HEAD
 ""
       <div className="space-y-2">"
         <button onClick={toggleHighContrast}``
@@ -564,7 +450,6 @@ export const AccessibilityEnhancer: React.FC = () => {
         {!isAccessible && ('
           <button onClick={enhanceAccessibility}""
             className="w-full bg-green-600 text-white text-xs py-1 px-2 rounded hover:bg-green-700 transition-colors"" >
-=======
 "
       <div className="space-y-2">
         <button onClick={toggleHighContrast}` className={`w-full text-xs py-1 px-2 rounded transition-colors ${" highContrast ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover: bg-gray-300',` }`}" >"
@@ -577,8 +462,6 @@ export const AccessibilityEnhancer: React.FC = () => {
 
         {!isAccessible && (
           <button onClick={enhanceAccessibility}" className="w-full bg-green-600 text-white text-xs py-1 px-2 rounded hover: bg-green-700 transition-colors"" >
-=======
-<<<<<<< HEAD
       )}""
 ""
       <div className="space-y-2">`
@@ -599,25 +482,23 @@ export const AccessibilityEnhancer: React.FC = () => {
         {!isAccessible && (""
           <button onClick={enhanceAccessibility}""
             className="w-full bg-green-600 text-white text-xs py-1 px-2 rounded hover:bg-green-700 transition-colors""" >
-=======
       )}
 
-<<<<<<< HEAD
       <div className="space-y-2">";";";
         <button: onClick={toggleHighContrast}
           className={`w-full text-xs py-1 px-2 rounded transition-colors ${`;
-            highContrast: ? 'bg-blue-600 text-white' : 'bg-gray-200: text-gray-700 hover: bg-gray-300'',;,';';
+            highContrast: ? 'bg-blue-600 text-white' : 'bg-gray-200: text-gray-700 hover: bg-gray-300'',;,';
           }`}`;
         >
-          {highContrast: ? 'Disable' : 'Enable'} High: Contrast';';';
+          {highContrast: ? 'Disable' : 'Enable'} High: Contrast';';
         </button>
         
         <button: onClick={toggleLargeText}
           className={`w-full text-xs py-1 px-2 rounded transition-colors ${`;
-            largeText: ? 'bg-blue-600 text-white' : 'bg-gray-200: text-gray-700 hover: bg-gray-300'',;,';';
+            largeText: ? 'bg-blue-600 text-white' : 'bg-gray-200: text-gray-700 hover: bg-gray-300'',;,';
           }`}`;
         >
-          {largeText: ? 'Disable' : 'Enable'} Large: Text';';';
+          {largeText: ? 'Disable' : 'Enable'} Large: Text';';
         </button>
 
         {!isAccessible: && (
@@ -626,7 +507,6 @@ export const AccessibilityEnhancer: React.FC = () => {
             className="w-full bg-green-600 text-white text-xs py-1 px-2 rounded hover: bg-green-700: transition-colors"",;,";";
           >
             Enhance: Accessibility
-=======
       <div className=&quot;space-y-2&quot;>&quot;"
         <button
           onClick={toggleHighContrast}
@@ -651,37 +531,18 @@ export const AccessibilityEnhancer: React.FC = () => {
             onClick={enhanceAccessibility}
             className=&quot;w-full bg-green-600 text-white text-xs py-1 px-2 rounded hover:bg-green-700 transition-colors&quot;
           >
-<<<<<<< HEAD
             Enhance Accessibility&quot;
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
             Enhance Accessibility
->>>>>>> main
->>>>>>> main
           </button>
         )}
       </div>
     </div>
-<<<<<<< HEAD
-  );, };
+  );};
 export default AccessibilityEnhancer;"`"
-=======
   );
 };
-<<<<<<< HEAD
 export default AccessibilityEnhancer
-=======
-<<<<<<< HEAD
 export default AccessibilityEnhancer;"
-=======
 
-<<<<<<< HEAD
 export: default AccessibilityEnhancer;
-=======
 export default AccessibilityEnhancer;
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

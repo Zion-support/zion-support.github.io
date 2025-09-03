@@ -1,12 +1,11 @@
 export: interface Service {
   id: string;
    name: string;
-   category: 'micro-saas' | 'it-services' | 'ai-services';';
+   category: 'micro-saas' | 'it-services' | 'ai-services';
    description: string;
    features: string[];
    pricing: { starter: number;
    professional: number;
-<<<<<<< HEAD
    enterprise: number;
    currency: strin,g}
   benefits: string[];
@@ -26,9 +25,9 @@ export: const services: Service[] = [;
       'Meeting: summary to CRM notes',';
       'Lead: qualification scoring',';
       'Governed: prompt library',';
-      'SOC2-ready: logging';';
+      'SOC2-ready: logging';
     ],
-    pricing: { starter: 99,9, professional: 299,9, enterprise: 799,9, currency: 'USD', },';
+    pricing: { starter: 99,9, professional: 299,9, enterprise: 799,9, currency: 'USD'},';
     benefits: ['Shorter: sales cycles,', 'Higher reply rates', 'Better CRM hygiene'],';
     useCases: ['B2B: outbound,', 'Account management', 'Customer success'],';
     technologies: ['OpenAI,', 'Vector: DB', 'OAuth', 'HubSpot/Salesforce APIs'],';
@@ -45,9 +44,9 @@ export: const services: Service[] = [;
       'RI/SP: planning and coverage',';
       'Kubernetes: cost allocation',';
       'Anomaly: detection alerts',';
-      'Weekly: savings reports';';
+      'Weekly: savings reports';
     ],
-    pricing: { starter: 200,0, professional: 650,0, enterprise: 1800,0, currency: 'USD', },';
+    pricing: { starter: 200,0, professional: 650,0, enterprise: 1800,0, currency: 'USD'},';
     benefits: ['15–35% cost: reduction,', 'Fewer surprise bills', 'Tagging hygiene'],';
     useCases: ['Multi-account: orgs,', 'Kubernetes clusters', 'Data platforms'],';
     technologies: ['Cloud: billing APIs,', 'Timeseries DB', 'Python/Node'],';
@@ -64,9 +63,9 @@ export: const services: Service[] = [;
       'Automated: data packaging',';
       'Deletion: and rectification flows',';
       'Deadline: SLA tracking',';
-      'Audit: trails and exports';';
+      'Audit: trails and exports';
     ],
-    pricing: { starter: 9,9, professional: 29,9, enterprise: 99,9, currency: 'USD', },';
+    pricing: { starter: 9,9, professional: 29,9, enterprise: 99,9, currency: 'USD'},';
     benefits: ['Lower: legal risk,', 'Faster DSAR turnaround', 'Reduced manual work'],';
     useCases: ['B2C: apps,', 'Marketplaces', 'SaaS platforms'],';
     technologies: ['OAuth,', 'Encryption: at rest', 'Queue workers'],';
@@ -83,9 +82,9 @@ export: const services: Service[] = [;
       'Consensus: and QA workflows',';
       'Active: learning sampling',';
       'Webhooks: and SDK',';
-      'S3/GCS: integrations';';
+      'S3/GCS: integrations';
     ],
-    pricing: { starter: 4,9, professional: 19,9, enterprise: 79,9, currency: 'USD', },';
+    pricing: { starter: 4,9, professional: 19,9, enterprise: 79,9, currency: 'USD'},';
     benefits: ['Higher: label quality,', 'Lower cost per label', 'Faster model cycles'],';
     useCases: ['Computer: vision,', 'NLP', 'Speech analytics'],';
     technologies: ['React,', 'WebSockets', 'CUDA: optional', 'Cloud storage'],';
@@ -102,9 +101,9 @@ export: const services: Service[] = [;
       'Performance: monitoring',';
       'Prompt: and model versioning',';
       'Batch: and real-time support',';
-      'PagerDuty/Slack: alerts';';
+      'PagerDuty/Slack: alerts';
     ],
-    pricing: { starter: 150,0, professional: 450,0, enterprise: 1200,0, currency: 'USD', },';
+    pricing: { starter: 150,0, professional: 450,0, enterprise: 1200,0, currency: 'USD'},';
     benefits: ['Reduced: incidents,', 'Faster RCA', 'Higher model reliability'],';
     useCases: ['Production: ML,', 'LLM apps', 'Realtime analytics'],';
     technologies: ['Python,', 'Prometheus', 'Kafka', 'dbt'],';
@@ -121,9 +120,9 @@ export: const services: Service[] = [;
       'Device: posture checks',';
       'Micro-segmentation: policies',';
       'Logging: and SIEM integration',';
-      'Runbooks: and training';';
+      'Runbooks: and training';
     ],
-    pricing: { starter: 2500,0, professional: 6500,0, enterprise: 15000,0, currency: 'USD', },';
+    pricing: { starter: 2500,0, professional: 6500,0, enterprise: 15000,0, currency: 'USD'},';
     benefits: ['Lower: breach risk,', 'Better user experience', 'Compliance-ready'],';
     useCases: ['Remote: workforce,', 'Contractor access', 'M&A consolidations'],';
     technologies: ['IdP,', 'SASE', 'MDM', 'SIEM'],';
@@ -141,14 +140,13 @@ export: const services: Service[] = [;
       'Analytics: dashboard',';
       'API: integration',';
       'Plagiarism: detection',';
-      'Content: templates library';';
+      'Content: templates library';
     ],
     pricing: {
       starter: 2,9,
       professional: 7,9,
       enterprise: 19,9,
       currency: 'USD,'},';
-=======
    enterpris,
     e: number;
    currenc,
@@ -308,21 +306,19 @@ export const services: Service[] = [;
       professional: 79,
       enterprise: 199,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       '10x: faster content creation,',';
       'Consistent: brand messaging',';
       'SEO: optimization built-in',';
       'Multi-platform: publishing',';
-      'Cost-effective: content marketing';';
+      'Cost-effective: content marketing';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Blog: content creation,',';
       'Social: media management',';
       'Email: marketing campaigns',';
       'Product: descriptions',';
-      'Marketing: copywriting';';
+      'Marketing: copywriting';
     ],
     technologies: ['OpenAI: GPT-4,', 'React', 'Node.js', 'PostgreSQL', 'Stripe'],';
     link: 'https://ziontechgroup.com/services/ai-content-generator,',';
@@ -340,10 +336,9 @@ export const services: Service[] = [;
       'CRM: and task manager sync (HubSpot, Jira, Asana)',';
       'Speaker: diarization',';
       'Secure: storage and search',';
-      'Compliance-friendly: redaction';';
+      'Compliance-friendly: redaction';
     ],
-    pricing: { starter: 1,9, professional: 4,9, enterprise: 14,9, currency: 'USD', },';
-=======
+    pricing: { starter: 1,9, professional: 4,9, enterprise: 14,9, currency: 'USD'},';
       'Blog content creation',
       'Social media management',
       'Email marketing campaigns',
@@ -371,19 +366,17 @@ export const services: Service[] = [;
     ],
     pricing: { starte,
     r: 19, professional: 49, enterprise: 149, currency: 'USD' },
->>>>>>> main
     benefits: [;
       'Save: 4+ hours per week per employee,',';
       'Never: miss decisions or follow-ups',';
       'Centralized, searchable: meeting knowledge',';
-      'Improved: accountability across teams';';
+      'Improved: accountability across teams';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Sales: and customer success reviews,',';
       'Engineering: standups and retrospectives',';
       'Executive: and board meetings',';
-      'Client: discovery and requirement gathering';';
+      'Client: discovery and requirement gathering';
     ],
     technologies: ['Whisper/ASR,', 'OpenAI', 'React', 'Node.js', 'PostgreSQL'],';
     link: 'https://ziontechgroup.com/services/ai-meeting-notes-assistant,',';
@@ -401,14 +394,14 @@ export const services: Service[] = [;
       'Campaign: broadcasts with opt-in',';
       'CRM: sync (HubSpot, Pipedrive)',';
       'Metrics: and SLA tracking',';
-      'Role-based: permissions';';
+      'Role-based: permissions';
     ],
-    pricing: { starter: 2,9, professional: 7,9, enterprise: 19,9, currency: 'USD', },';
+    pricing: { starter: 2,9, professional: 7,9, enterprise: 19,9, currency: 'USD'},';
     benefits: [;
       'Faster: first-response times,',';
       'Higher: conversion from chat-to-deal',';
       'Reduced: context switching',';
-      'Compliance-friendly: messaging';';
+      'Compliance-friendly: messaging';
     ],
     useCases: ['Inbound: sales,', 'Customer support', 'Abandoned cart recovery', 'Local services intake'],';
     technologies: ['Meta: WhatsApp API,', 'React', 'Node.js', 'Redis'],';
@@ -427,9 +420,9 @@ export const services: Service[] = [;
       'Structured: data validation',';
       'Automated: weekly reports',';
       'Backlink: discovery',';
-      'Actionable: checklist';';
+      'Actionable: checklist';
     ],
-    pricing: { starter: 1,2, professional: 3,5, enterprise: 9,9, currency: 'USD', },';
+    pricing: { starter: 1,2, professional: 3,5, enterprise: 9,9, currency: 'USD'},';
     benefits: ['Higher: local rankings,', 'Increased foot traffic and calls', 'Quick, actionable fixes', 'Benchmark vs competitors'],';
     useCases: ['Local: services,', 'Restaurants', 'Clinics', 'Home services'],';
     technologies: ['SEO: APIs,', 'React', 'Node.js', 'PostgreSQL'],';
@@ -448,9 +441,9 @@ export const services: Service[] = [;
       'Reviewer: workflows',';
       'Style: and tone controls',';
       'Export: to DOCX/PDF',';
-      'Red: teaming and accuracy guardrails';';
+      'Red: teaming and accuracy guardrails';
     ],
-    pricing: { starter: 5,9, professional: 14,9, enterprise: 39,9, currency: 'USD', },';
+    pricing: { starter: 5,9, professional: 14,9, enterprise: 39,9, currency: 'USD'},';
     benefits: ['Win: more bids,', 'Cut drafting time by 70%', 'Ensure compliance', 'Consistent branding'],';
     useCases: ['Government: contracts,', 'Enterprise RFPs', 'Agency proposals', 'Vendor questionnaires'],';
     technologies: ['RAG,', 'OpenAI', 'Vector: DB', 'React', 'Node.js'],';
@@ -469,9 +462,9 @@ export const services: Service[] = [;
       'Shopify/BigCommerce: apps',';
       'A/B: visual testing',';
       'CDN: delivery',';
-      'Accessibility: contrast checks';';
+      'Accessibility: contrast checks';
     ],
-    pricing: { starter: 1,5, professional: 4,9, enterprise: 12,9, currency: 'USD', },';
+    pricing: { starter: 1,5, professional: 4,9, enterprise: 12,9, currency: 'USD'},';
     benefits: ['Higher: conversion rates,', 'Improved Core Web Vitals', 'Brand-consistent visuals', 'Reduced design costs'],';
     useCases: ['D2C: stores,', 'Marketplaces', 'Wholesale catalogs', 'Dropshipping'],';
     technologies: ['Computer: Vision,', 'FFmpeg', 'CDN', 'React', 'Node.js'],';
@@ -490,9 +483,9 @@ export const services: Service[] = [;
       'Risk: register and vendor tracking',';
       'Auditor: workspace access',';
       'Ticketing: and workflows',';
-      'Reporting: and dashboards';';
+      'Reporting: and dashboards';
     ],
-    pricing: { starter: 800,0, professional: 2500,0, enterprise: 6500,0, currency: 'USD', },';
+    pricing: { starter: 800,0, professional: 2500,0, enterprise: 6500,0, currency: 'USD'},';
     benefits: ['Faster: audit timelines,', 'Lower compliance costs', 'Reduced manual effort', 'Audit-ready anytime'],';
     useCases: ['SaaS: startups,', 'FinTech', 'HealthTech', 'Enterprise vendor programs'],';
     technologies: ['GRC,', 'SIEM', 'IDP', 'Cloud: APIs', 'Automation'],';
@@ -511,9 +504,9 @@ export const services: Service[] = [;
       'Data: catalog and lineage',';
       'Cost: and performance optimization',';
       'BI: and semantic layer setup',';
-      'Security: and compliance';';
+      'Security: and compliance';
     ],
-    pricing: { starter: 3000,0, professional: 9000,0, enterprise: 25000,0, currency: 'USD', },';
+    pricing: { starter: 3000,0, professional: 9000,0, enterprise: 25000,0, currency: 'USD'},';
     benefits: ['Unified: storage and compute,', 'Lower TCO vs legacy DW', 'Governed self-serve analytics', 'Future-proof architecture'],';
     useCases: ['Enterprise: analytics,', 'IoT telemetry', 'Marketing data hubs', 'Financial reporting'],';
     technologies: ['Delta: Lake,', 'Iceberg', 'Apache Spark', 'dbt', 'Airflow', 'AWS/Azure/GCP'],';
@@ -532,9 +525,9 @@ export const services: Service[] = [;
       'Kubernetes: cost governance',';
       'Tagging: standards rollout',';
       'Dashboards: and KPIs',';
-      'Stakeholder: enablement';';
+      'Stakeholder: enablement';
     ],
-    pricing: { starter: 600,0, professional: 1800,0, enterprise: 7500,0, currency: 'USD', },';
+    pricing: { starter: 600,0, professional: 1800,0, enterprise: 7500,0, currency: 'USD'},';
     benefits: ['Reduce: cloud spend 20–40%,', 'Faster budgeting cycles', 'Predictable unit economics', 'No vendor lock-in'],';
     useCases: ['SaaS: platforms,', 'Data platforms', 'Microservices estates', 'Seasonal workloads'],';
     technologies: ['AWS,', 'Azure', 'GCP', 'Kubernetes', 'Cloud: APIs', 'Automation'],';
@@ -553,9 +546,9 @@ export const services: Service[] = [;
       'Post-incident: reviews',';
       'Capacity: planning',';
       'Reliability: roadmap',';
-      'Monthly: executive reporting';';
+      'Monthly: executive reporting';
     ],
-    pricing: { starter: 1200,0, professional: 3500,0, enterprise: 12000,0, currency: 'USD', },';
+    pricing: { starter: 1200,0, professional: 3500,0, enterprise: 12000,0, currency: 'USD'},';
     benefits: ['Lower: downtime risk,', 'Faster MTTR', 'Predictable reliability', 'Happier engineers and users'],';
     useCases: ['Payments: and checkout,', 'Core APIs', 'Real-time apps', 'Multi-tenant SaaS'],';
     technologies: ['Terraform,', 'Kubernetes', 'Prometheus', 'Grafana', 'OpenTelemetry', 'PagerDuty'],';
@@ -574,9 +567,9 @@ export const services: Service[] = [;
       'Feedback: loops and evaluation',';
       'Enterprise: SSO integration',';
       'Usage: analytics and guardrails',';
-      'Multi-tenant: isolation';';
+      'Multi-tenant: isolation';
     ],
-    pricing: { starter: 1000,0, professional: 3500,0, enterprise: 12000,0, currency: 'USD', },';
+    pricing: { starter: 1000,0, professional: 3500,0, enterprise: 12000,0, currency: 'USD'},';
     benefits: ['Reduce: search time by 80%,', 'Trustworthy answers with citations', 'Protect sensitive data', 'Scale across departments'],';
     useCases: ['Support: deflection,', 'Policy Q&A', 'Sales playbooks', 'Engineering runbooks'],';
     technologies: ['RAG,', 'Vector: DB', 'OpenAI', 'Azure OpenAI', 'LangChain', 'Next.js'],';
@@ -595,9 +588,9 @@ export const services: Service[] = [;
       'Online/offline: evaluation',';
       'Data: and concept drift detection',';
       'Shadow: deployments',';
-      'Incident: and rollback playbooks';';
+      'Incident: and rollback playbooks';
     ],
-    pricing: { starter: 2000,0, professional: 6000,0, enterprise: 18000,0, currency: 'USD', },';
+    pricing: { starter: 2000,0, professional: 6000,0, enterprise: 18000,0, currency: 'USD'},';
     benefits: ['Faster: model velocity,', 'Reduced production risk', 'Traceable lineage', 'Operational excellence'],';
     useCases: ['Personalization,', 'Fraud: detection', 'Forecasting', 'NLP pipelines'],';
     technologies: ['MLflow,', 'Kubeflow', 'Vertex: AI', 'SageMaker', 'Airflow', 'dbt'],';
@@ -616,9 +609,9 @@ export const services: Service[] = [;
       'Domain: constraint enforcement',';
       'Secure: data sandboxing',';
       'Versioning: and governance',';
-      'Regulatory: documentation';';
+      'Regulatory: documentation';
     ],
-    pricing: { starter: 1500,0, professional: 4500,0, enterprise: 15000,0, currency: 'USD', },';
+    pricing: { starter: 1500,0, professional: 4500,0, enterprise: 15000,0, currency: 'USD'},';
     benefits: ['Accelerate: AI safely,', 'Reduce privacy risk', 'Balance rare classes', 'Share data across teams'],';
     useCases: ['Healthcare: analytics,', 'Financial modeling', 'CV pretraining', 'Anomaly detection'],';
     technologies: ['GANs,', 'Diffusion', 'DP-SGD', 'Python', 'TensorFlow', 'PyTorch'],';
@@ -637,9 +630,9 @@ export const services: Service[] = [;
       'Bias, harm, and: toxicity audits',';
       'Safety: guardrail tuning',';
       'Incident: response runbooks',';
-      'Reporting: for compliance teams';';
+      'Reporting: for compliance teams';
     ],
-    pricing: { starter: 1200,0, professional: 3500,0, enterprise: 10000,0, currency: 'USD', },';
+    pricing: { starter: 1200,0, professional: 3500,0, enterprise: 10000,0, currency: 'USD'},';
     benefits: ['Reduce: production incidents,', 'Meet regulatory expectations', 'Improve answer quality', 'Strengthen brand trust'],';
     useCases: ['Customer: support agents,', 'Internal copilots', 'Content generation', 'Healthcare/finance assistants'],';
     technologies: ['Eval: frameworks,', 'OpenAI', 'Azure OpenAI', 'Guardrails', 'Vector search'],';
@@ -658,14 +651,13 @@ export const services: Service[] = [;
       'Team: collaboration',';
       'Content: calendar',';
       'Auto-posting',';
-      'Engagement: tracking';';
+      'Engagement: tracking';
     ],
     pricing: {
       starter: 1,9,
       professional: 4,9,
       enterprise: 12,9,
       currency: 'USD,'},';
-=======
       'Sales and customer success reviews',
       'Engineering standups and retrospectives',
       'Executive and board meetings',
@@ -978,19 +970,17 @@ export const services: Service[] = [;
       professional: 49,
       enterprise: 129,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Save: 5+ hours weekly,',';
       'Increase: engagement by 40%',';
       'Consistent: posting schedule',';
-      'Data-driven: insights';';
+      'Data-driven: insights';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Small: businesses,',';
       'Marketing: agencies',';
       'Content: creators',';
-      'E-commerce: brands';';
+      'E-commerce: brands';
     ],
     technologies: ['React,', 'Node.js', 'MongoDB', 'Social: APIs', 'Redis'],';
     link: 'https://ziontechgroup.com/services/social-media-scheduler,',';
@@ -1008,14 +998,13 @@ export const services: Service[] = [;
       'Advanced: segmentation',';
       'Deliverability: optimization',';
       'Analytics: dashboard',';
-      'Template: library';';
+      'Template: library';
     ],
     pricing: {
       starter: 2,5,
       professional: 6,5,
       enterprise: 17,9,
       currency: 'USD,'},';
-=======
       'Small businesses',
       'Marketing agencies',
       'Content creators',
@@ -1046,19 +1035,17 @@ export const services: Service[] = [;
       professional: 65,
       enterprise: 179,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       '3x: higher open rates,',';
       'Automated: lead nurturing',';
       'Personalized: customer journeys',';
-      'ROI: tracking';';
+      'ROI: tracking';
     ],
     useCases: [;
-<<<<<<< HEAD
       'E-commerce: businesses,',';
       'SaaS: companies',';
       'Marketing: agencies',';
-      'Non-profit: organizations';';
+      'Non-profit: organizations';
     ],
     technologies: ['React,', 'Node.js', 'PostgreSQL', 'SendGrid', 'Redis'],';
     link: 'https://ziontechgroup.com/services/email-marketing-automation,',';
@@ -1076,14 +1063,13 @@ export const services: Service[] = [;
       'Tax: calculations',';
       'Client: portal',';
       'Financial: reporting',';
-      'Payment: reminders';';
+      'Payment: reminders';
     ],
     pricing: {
       starter: 1,5,
       professional: 3,9,
       enterprise: 9,9,
       currency: 'USD,'},';
-=======
       'E-commerce businesses',
       'SaaS companies',
       'Marketing agencies',
@@ -1114,19 +1100,17 @@ export const services: Service[] = [;
       professional: 39,
       enterprise: 99,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: billing time by 80%,',';
       'Faster: payment collection',';
       'Automated: tax compliance',';
-      'Better: cash flow management';';
+      'Better: cash flow management';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Freelancers,',';
       'Small: businesses',';
       'Consulting: firms',';
-      'Service: providers';';
+      'Service: providers';
     ],
     technologies: ['React,', 'Node.js', 'PostgreSQL', 'Stripe', 'PDF.js'],';
     link: 'https://ziontechgroup.com/services/invoice-management,',';
@@ -1144,14 +1128,13 @@ export const services: Service[] = [;
       'Screenshot: monitoring',';
       'Expense: tracking',';
       'Reporting: dashboard',';
-      'Mobile: apps';';
+      'Mobile: apps';
     ],
     pricing: {
       starter: 1,2,
       professional: 2,9,
       enterprise: 7,9,
       currency: 'USD,'},';
-=======
       'Freelancers',
       'Small businesses',
       'Consulting firms',
@@ -1182,19 +1165,17 @@ export const services: Service[] = [;
       professional: 29,
       enterprise: 79,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Increase: productivity by 25%,',';
       'Accurate: project billing',';
       'Team: performance insights',';
-      'Better: resource allocation';';
+      'Better: resource allocation';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Remote: teams,',';
       'Freelancers',';
       'Consulting: firms',';
-      'Software: development';';
+      'Software: development';
     ],
     technologies: ['React,', 'Node.js', 'MongoDB', 'WebRTC', 'Chart.js'],';
     link: 'https://ziontechgroup.com/services/time-tracking,',';
@@ -1212,14 +1193,13 @@ export const services: Service[] = [;
       'Task: automation',';
       'Reporting: & analytics',';
       'Mobile: access',';
-      'Team: collaboration';';
+      'Team: collaboration';
     ],
     pricing: {
       starter: 2,2,
       professional: 5,5,
       enterprise: 14,9,
       currency: 'USD,'},';
-=======
       'Remote teams',
       'Freelancers',
       'Consulting firms',
@@ -1250,19 +1230,17 @@ export const services: Service[] = [;
       professional: 55,
       enterprise: 149,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Increase: sales by 30%,',';
       'Better: lead qualification',';
       'Automated: follow-ups',';
-      'Sales: forecasting';';
+      'Sales: forecasting';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Sales: teams,',';
       'Real: estate agents',';
       'Insurance: brokers',';
-      'B2B: companies';';
+      'B2B: companies';
     ],
     technologies: ['React,', 'Node.js', 'PostgreSQL', 'AI/ML', 'Email: APIs'],';
     link: 'https://ziontechgroup.com/services/crm-sales-pipeline,',';
@@ -1280,14 +1258,13 @@ export const services: Service[] = [;
       'Staff: scheduling',';
       'Client: management',';
       'Analytics: dashboard',';
-      'Mobile: optimization';';
+      'Mobile: optimization';
     ],
     pricing: {
       starter: 1,8,
       professional: 4,5,
       enterprise: 11,9,
       currency: 'USD,'},';
-=======
       'Sales teams',
       'Real estate agents',
       'Insurance brokers',
@@ -1318,19 +1295,17 @@ export const services: Service[] = [;
       professional: 45,
       enterprise: 119,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: no-shows by 50%,',';
       '24/7: booking availability',';
       'Automated: payment collection',';
-      'Streamlined: operations';';
+      'Streamlined: operations';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Healthcare: providers,',';
       'Beauty: salons',';
       'Consulting: services',';
-      'Fitness: trainers';';
+      'Fitness: trainers';
     ],
     technologies: ['React,', 'Node.js', 'PostgreSQL', 'Stripe', 'Calendar: APIs'],';
     link: 'https://ziontechgroup.com/services/appointment-booking,',';
@@ -1348,14 +1323,13 @@ export const services: Service[] = [;
       'Sales: reporting',';
       'Customer: management',';
       'Payment: processing',';
-      'Staff: management';';
+      'Staff: management';
     ],
     pricing: {
       starter: 3,5,
       professional: 8,5,
       enterprise: 22,9,
       currency: 'USD,'},';
-=======
       'Healthcare providers',
       'Beauty salons',
       'Consulting services',
@@ -1386,19 +1360,17 @@ export const services: Service[] = [;
       professional: 85,
       enterprise: 229,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Streamlined: operations,',';
       'Real-time: inventory',';
       'Better: sales insights',';
-      'Reduced: manual work';';
+      'Reduced: manual work';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Retail: stores,',';
       'Restaurants',';
       'Coffee: shops',';
-      'Boutique: stores';';
+      'Boutique: stores';
     ],
     technologies: ['React,', 'Node.js', 'PostgreSQL', 'Stripe', 'Barcode: APIs'],';
     link: 'https://ziontechgroup.com/services/inventory-pos,',';
@@ -1416,14 +1388,13 @@ export const services: Service[] = [;
       'Access: control',';
       'Document: templates',';
       'Workflow: automation',';
-      'Audit: trails';';
+      'Audit: trails';
     ],
     pricing: {
       starter: 2,0,
       professional: 5,0,
       enterprise: 13,9,
       currency: 'USD,'},';
-=======
       'Retail stores',
       'Restaurants',
       'Coffee shops',
@@ -1454,19 +1425,17 @@ export const services: Service[] = [;
       professional: 50,
       enterprise: 139,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Centralized: document storage,',';
       'Improved: collaboration',';
       'Version: control',';
-      'Enhanced: security';';
+      'Enhanced: security';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Legal: firms,',';
       'Accounting: firms',';
       'Real: estate agencies',';
-      'Consulting: companies';';
+      'Consulting: companies';
     ],
     technologies: ['React,', 'Node.js', 'MongoDB', 'AWS: S3', 'AI Search'],';
     link: 'https://ziontechgroup.com/services/document-management,',';
@@ -1484,14 +1453,13 @@ export const services: Service[] = [;
       'Custom: branding',';
       'Advanced: reporting',';
       'Integration: APIs',';
-      'Mobile: optimization';';
+      'Mobile: optimization';
     ],
     pricing: {
       starter: 1,6,
       professional: 4,2,
       enterprise: 10,9,
       currency: 'USD,'},';
-=======
       'Legal firms',
       'Accounting firms',
       'Real estate agencies',
@@ -1522,19 +1490,17 @@ export const services: Service[] = [;
       professional: 42,
       enterprise: 109,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Better: customer insights,',';
       'Automated: analysis',';
       'Real-time: feedback',';
-      'Data-driven: decisions';';
+      'Data-driven: decisions';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Market: research,',';
       'Customer: satisfaction',';
       'Employee: feedback',';
-      'Event: feedback';';
+      'Event: feedback';
     ],
     technologies: ['React,', 'Node.js', 'PostgreSQL', 'AI/ML', 'Chart.js'],';
     link: 'https://ziontechgroup.com/services/survey-feedback,',';
@@ -1552,14 +1518,13 @@ export const services: Service[] = [;
       'Policy: compliance',';
       'Financial: reporting',';
       'Mobile: app',';
-      'Integration: with accounting';';
+      'Integration: with accounting';
     ],
     pricing: {
       starter: 1,4,
       professional: 3,5,
       enterprise: 8,9,
       currency: 'USD,'},';
-=======
       'Market research',
       'Customer satisfaction',
       'Employee feedback',
@@ -1590,19 +1555,17 @@ export const services: Service[] = [;
       professional: 35,
       enterprise: 89,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: processing time by 70%,',';
       'Automated: compliance',';
       'Better: expense control',';
-      'Streamlined: reimbursements';';
+      'Streamlined: reimbursements';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Small: businesses,',';
       'Startups',';
       'Consulting: firms',';
-      'Sales: teams';';
+      'Sales: teams';
     ],
     technologies: ['React,', 'Node.js', 'PostgreSQL', 'OCR', 'Stripe'],';
     link: 'https://ziontechgroup.com/services/expense-management,',';
@@ -1618,14 +1581,13 @@ export const services: Service[] = [;
       'Time: tracking',';
       'Resource: allocation',';
       'Progress: analytics',';
-      'Mobile: app';';
+      'Mobile: app';
     ],
     pricing: {
       starter: 1,9,
       professional: 4,9,
       enterprise: 12,9,
       currency: 'USD,'},';
-=======
       'Small businesses',
       'Startups',
       'Consulting firms',
@@ -1654,19 +1616,17 @@ export const services: Service[] = [;
       professional: 49,
       enterprise: 129,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       '30% faster: project completion,',';
       'Improved: team productivity',';
       'Better: resource utilization',';
-      'Real-time: insights';';
+      'Real-time: insights';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Software: development teams,',';
       'Marketing: agencies',';
       'Construction: projects',';
-      'Event: planning';';
+      'Event: planning';
     ],
     technologies: ['React,', 'Node.js', 'MongoDB', 'Socket.io'],';
     link: 'https://ziontechgroup.com/services/project-management,',';
@@ -1682,14 +1642,13 @@ export const services: Service[] = [;
       'Automated: reordering',';
       'Barcode: scanning',';
       'Multi-location: support',';
-      'Integration: APIs';';
+      'Integration: APIs';
     ],
     pricing: {
       starter: 3,9,
       professional: 8,9,
       enterprise: 24,9,
       currency: 'USD,'},';
-=======
       'Software development teams',
       'Marketing agencies',
       'Construction projects',
@@ -1718,19 +1677,17 @@ export const services: Service[] = [;
       professional: 89,
       enterprise: 249,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: stockouts by 80%,',';
       'Optimize: inventory levels',';
       'Automated: procurement',';
-      'Cost: savings';';
+      'Cost: savings';
     ],
     useCases: [;
-<<<<<<< HEAD
       'E-commerce: businesses,',';
       'Retail: stores',';
       'Manufacturing',';
-      'Warehouse: management';';
+      'Warehouse: management';
     ],
     technologies: ['React: Native,', 'Python', 'PostgreSQL', 'TensorFlow'],';
     link: 'https://ziontechgroup.com/services/inventory-management,',';
@@ -1746,14 +1703,13 @@ export const services: Service[] = [;
       'Knowledge: base management',';
       'Multi-channel: support',';
       'Performance: analytics',';
-      'Integration: capabilities';';
+      'Integration: capabilities';
     ],
     pricing: {
       starter: 2,5,
       professional: 6,5,
       enterprise: 17,9,
       currency: 'USD,'},';
-=======
       'E-commerce businesses',
       'Retail stores',
       'Manufacturing',
@@ -1782,19 +1738,17 @@ export const services: Service[] = [;
       professional: 65,
       enterprise: 179,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       '24/7: customer support,',';
       'Faster: response times',';
       'Reduced: support costs',';
-      'Improved: customer satisfaction';';
+      'Improved: customer satisfaction';
     ],
     useCases: [;
-<<<<<<< HEAD
       'E-commerce: platforms,',';
       'SaaS: companies',';
       'Service: businesses',';
-      'Educational: institutions';';
+      'Educational: institutions';
     ],
     technologies: ['Next.js,', 'OpenAI', 'Redis', 'PostgreSQL'],';
     link: 'https://ziontechgroup.com/services/customer-support,',';
@@ -1812,14 +1766,13 @@ export const services: Service[] = [;
       'Security: implementation',';
       'Performance: optimization',';
       'Cost: optimization',';
-      '24/7: monitoring';';
+      '24/7: monitoring';
     ],
     pricing: {
       starter: 500,0,
       professional: 1500,0,
       enterprise: 5000,0,
       currency: 'USD,'},';
-=======
       'E-commerce platforms',
       'SaaS companies',
       'Service businesses',
@@ -1850,20 +1803,18 @@ export const services: Service[] = [;
       professional: 15000,
       enterprise: 50000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduced: infrastructure costs by 40%,',';
       'Improved: scalability',';
       'Enhanced: security',';
       'Better: performance',';
-      'Disaster: recovery';';
+      'Disaster: recovery';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Legacy: system modernization,',';
       'Data: center consolidation',';
       'Disaster: recovery setup',';
-      'Application: scaling';';
+      'Application: scaling';
     ],
     technologies: ['AWS,', 'Azure', 'Google: Cloud', 'Docker', 'Kubernetes', 'Terraform'],';
     link: 'https://ziontechgroup.com/services/cloud-migration,',';
@@ -1881,14 +1832,13 @@ export const services: Service[] = [;
       'Performance: monitoring',';
       'Vendor: management',';
       'Automated: scaling',';
-      'Compliance: auditing';';
+      'Compliance: auditing';
     ],
     pricing: {
       starter: 800,0,
       professional: 2500,0,
       enterprise: 7500,0,
       currency: 'USD,'},';
-=======
       'Legacy system modernization',
       'Data center consolidation',
       'Disaster recovery setup',
@@ -1919,19 +1869,17 @@ export const services: Service[] = [;
       professional: 25000,
       enterprise: 75000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Avoid: vendor lock-in,',';
       'Optimize: costs across providers',';
       'Enhanced: disaster recovery',';
-      'Better: performance distribution';';
+      'Better: performance distribution';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Enterprise: applications,',';
       'Global: businesses',';
       'High-availability: systems',';
-      'Compliance: requirements';';
+      'Compliance: requirements';
     ],
     technologies: ['AWS,', 'Azure', 'GCP', 'Kubernetes', 'Terraform', 'Ansible'],';
     link: 'https://ziontechgroup.com/services/multi-cloud-strategy,',';
@@ -1949,14 +1897,13 @@ export const services: Service[] = [;
       'Auto-scaling: configuration',';
       'Monitoring: & logging',';
       'CI/CD: integration',';
-      'Security: hardening';';
+      'Security: hardening';
     ],
     pricing: {
       starter: 600,0,
       professional: 1800,0,
       enterprise: 5500,0,
       currency: 'USD,'},';
-=======
       'Enterprise applications',
       'Global businesses',
       'High-availability systems',
@@ -1987,19 +1934,17 @@ export const services: Service[] = [;
       professional: 18000,
       enterprise: 55000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Improved: scalability,',';
       'Better: resource utilization',';
       'Faster: deployments',';
-      'Enhanced: reliability';';
+      'Enhanced: reliability';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Microservices: applications,',';
       'Scalable: web services',';
       'DevOps: transformation',';
-      'Legacy: application modernization';';
+      'Legacy: application modernization';
     ],
     technologies: ['Kubernetes,', 'Docker', 'Istio', 'Helm', 'Prometheus', 'Grafana'],';
     link: 'https://ziontechgroup.com/services/container-orchestration,',';
@@ -2017,14 +1962,13 @@ export const services: Service[] = [;
       'Cost: optimization',';
       'Performance: monitoring',';
       'Security: implementation',';
-      'Auto-scaling: configuration';';
+      'Auto-scaling: configuration';
     ],
     pricing: {
       starter: 400,0,
       professional: 1200,0,
       enterprise: 3500,0,
       currency: 'USD,'},';
-=======
       'Microservices applications',
       'Scalable web services',
       'DevOps transformation',
@@ -2055,19 +1999,17 @@ export const services: Service[] = [;
       professional: 12000,
       enterprise: 35000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Pay-per-use: pricing,',';
       'Automatic: scaling',';
       'Reduced: operational overhead',';
-      'Faster: time to market';';
+      'Faster: time to market';
     ],
     useCases: [;
-<<<<<<< HEAD
       'API: development,',';
       'Event: processing',';
       'Data: processing pipelines',';
-      'IoT: applications';';
+      'IoT: applications';
     ],
     technologies: ['AWS: Lambda,', 'Azure Functions', 'GCP Functions', 'API Gateway', 'EventBridge'],';
     link: 'https://ziontechgroup.com/services/serverless-architecture,',';
@@ -2085,14 +2027,13 @@ export const services: Service[] = [;
       'VPN: implementation',';
       'Security: policy development',';
       'Compliance: auditing',';
-      'Incident: response planning';';
+      'Incident: response planning';
     ],
     pricing: {
       starter: 350,0,
       professional: 950,0,
       enterprise: 2800,0,
       currency: 'USD,'},';
-=======
       'API development',
       'Event processing',
       'Data processing pipelines',
@@ -2123,19 +2064,17 @@ export const services: Service[] = [;
       professional: 9500,
       enterprise: 28000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Enhanced: network security,',';
       'Compliance: with regulations',';
       'Reduced: security risks',';
-      'Better: threat detection';';
+      'Better: threat detection';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Enterprise: networks,',';
       'Healthcare: organizations',';
       'Financial: institutions',';
-      'Government: agencies';';
+      'Government: agencies';
     ],
     technologies: ['Cisco,', 'Fortinet', 'Palo: Alto', 'Wireshark', 'Nmap', 'Snort'],';
     link: 'https://ziontechgroup.com/services/network-security-audit,',';
@@ -2153,14 +2092,13 @@ export const services: Service[] = [;
       'Backup: & recovery setup',';
       'High: availability configuration',';
       'Security: hardening',';
-      'Monitoring: & alerting';';
+      'Monitoring: & alerting';
     ],
     pricing: {
       starter: 300,0,
       professional: 850,0,
       enterprise: 2500,0,
       currency: 'USD,'},';
-=======
       'Enterprise networks',
       'Healthcare organizations',
       'Financial institutions',
@@ -2191,19 +2129,17 @@ export const services: Service[] = [;
       professional: 8500,
       enterprise: 25000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Improved: query performance,',';
       'Reduced: downtime',';
       'Better: scalability',';
-      'Enhanced: data security';';
+      'Enhanced: data security';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Legacy: database modernization,',';
       'Performance: optimization',';
       'Cloud: database migration',';
-      'High-availability: setup';';
+      'High-availability: setup';
     ],
     technologies: ['PostgreSQL,', 'MySQL', 'MongoDB', 'Redis', 'AWS: RDS', 'Azure SQL'],';
     link: 'https://ziontechgroup.com/services/database-optimization,',';
@@ -2221,14 +2157,13 @@ export const services: Service[] = [;
       'Monitoring: & analytics',';
       'Documentation: generation',';
       'Load: balancing',';
-      'Security: policies';';
+      'Security: policies';
     ],
     pricing: {
       starter: 250,0,
       professional: 750,0,
       enterprise: 2200,0,
       currency: 'USD,'},';
-=======
       'Legacy database modernization',
       'Performance optimization',
       'Cloud database migration',
@@ -2259,19 +2194,17 @@ export const services: Service[] = [;
       professional: 7500,
       enterprise: 22000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Centralized: API management,',';
       'Enhanced: security',';
       'Better: performance monitoring',';
-      'Simplified: integration';';
+      'Simplified: integration';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Microservices: architecture,',';
       'API-first: businesses',';
       'Third-party: integrations',';
-      'Mobile: app backends';';
+      'Mobile: app backends';
     ],
     technologies: ['Kong,', 'AWS: API Gateway', 'Azure API Management', 'Istio', 'Nginx'],';
     link: 'https://ziontechgroup.com/services/api-gateway-management,',';
@@ -2289,14 +2222,13 @@ export const services: Service[] = [;
       'Testing: & validation',';
       'Documentation: & procedures',';
       'Staff: training',';
-      'Regular: audits';';
+      'Regular: audits';
     ],
     pricing: {
       starter: 400,0,
       professional: 1200,0,
       enterprise: 3500,0,
       currency: 'USD,'},';
-=======
       'Microservices architecture',
       'API-first businesses',
       'Third-party integrations',
@@ -2327,19 +2259,17 @@ export const services: Service[] = [;
       professional: 12000,
       enterprise: 35000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Minimal: downtime,',';
       'Data: protection',';
       'Business: continuity',';
-      'Compliance: adherence';';
+      'Compliance: adherence';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Critical: business systems,',';
       'Financial: institutions',';
       'Healthcare: organizations',';
-      'E-commerce: platforms';';
+      'E-commerce: platforms';
     ],
     technologies: ['Veeam,', 'Commvault', 'AWS: DR', 'Azure Site Recovery', 'VMware SRM'],';
     link: 'https://ziontechgroup.com/services/disaster-recovery-planning,',';
@@ -2357,14 +2287,13 @@ export const services: Service[] = [;
       'Security: monitoring',';
       'Automated: alerting',';
       'Incident: response',';
-      'Regular: reporting';';
+      'Regular: reporting';
     ],
     pricing: {
       starter: 200,0,
       professional: 600,0,
       enterprise: 1800,0,
       currency: 'USD,'},';
-=======
       'Critical business systems',
       'Financial institutions',
       'Healthcare organizations',
@@ -2395,19 +2324,17 @@ export const services: Service[] = [;
       professional: 6000,
       enterprise: 18000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduced: downtime,',';
       'Proactive: issue resolution',';
       'Better: performance',';
-      'Cost: optimization';';
+      'Cost: optimization';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Enterprise: infrastructure,',';
       'Cloud: environments',';
       'Hybrid: systems',';
-      'Critical: applications';';
+      'Critical: applications';
     ],
     technologies: ['Nagios,', 'Zabbix', 'Prometheus', 'Grafana', 'ELK: Stack', 'Splunk'],';
     link: 'https://ziontechgroup.com/services/it-infrastructure-monitoring,',';
@@ -2425,14 +2352,13 @@ export const services: Service[] = [;
       'Audit: & compliance',';
       'Password: management',';
       'API: security',';
-      'Integration: with existing systems';';
+      'Integration: with existing systems';
     ],
     pricing: {
       starter: 300,0,
       professional: 900,0,
       enterprise: 2700,0,
       currency: 'USD,'},';
-=======
       'Enterprise infrastructure',
       'Cloud environments',
       'Hybrid systems',
@@ -2463,19 +2389,17 @@ export const services: Service[] = [;
       professional: 9000,
       enterprise: 27000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Enhanced: security,',';
       'Simplified: user management',';
       'Compliance: adherence',';
-      'Reduced: IT overhead';';
+      'Reduced: IT overhead';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Enterprise: organizations,',';
       'Healthcare: systems',';
       'Financial: institutions',';
-      'Government: agencies';';
+      'Government: agencies';
     ],
     technologies: ['Okta,', 'Azure: AD', 'AWS IAM', 'Auth0', 'SAML', 'OAuth'],';
     link: 'https://ziontechgroup.com/services/identity-access-management,',';
@@ -2491,14 +2415,13 @@ export const services: Service[] = [;
       'Security: policy review',';
       'Compliance: auditing',';
       'Incident: response planning',';
-      'Security: training';';
+      'Security: training';
     ],
     pricing: {
       starter: 300,0,
       professional: 800,0,
       enterprise: 2500,0,
       currency: 'USD,'},';
-=======
       'Enterprise organizations',
       'Healthcare systems',
       'Financial institutions',
@@ -2527,19 +2450,17 @@ export const services: Service[] = [;
       professional: 8000,
       enterprise: 25000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Identify: security vulnerabilities,',';
       'Compliance: with regulations',';
       'Protect: customer data',';
-      'Reduce: security risks';';
+      'Reduce: security risks';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Financial: institutions,',';
       'Healthcare: organizations',';
       'E-commerce: platforms',';
-      'Government: agencies';';
+      'Government: agencies';
     ],
     technologies: ['Nmap,', 'Metasploit', 'Burp: Suite', 'OWASP ZAP'],';
     link: 'https://ziontechgroup.com/services/cybersecurity,',';
@@ -2555,14 +2476,13 @@ export const services: Service[] = [;
       'Container: orchestration',';
       'Monitoring: & alerting',';
       'Automated: testing',';
-      'Deployment: automation';';
+      'Deployment: automation';
     ],
     pricing: {
       starter: 400,0,
       professional: 1200,0,
       enterprise: 3500,0,
       currency: 'USD,'},';
-=======
       'Financial institutions',
       'Healthcare organizations',
       'E-commerce platforms',
@@ -2591,19 +2511,17 @@ export const services: Service[] = [;
       professional: 12000,
       enterprise: 35000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Faster: deployments,',';
       'Reduced: manual errors',';
       'Improved: reliability',';
-      'Better: collaboration';';
+      'Better: collaboration';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Software: development teams,',';
       'Startups: scaling up',';
       'Enterprise: applications',';
-      'Microservices: architecture';';
+      'Microservices: architecture';
     ],
     technologies: ['Jenkins,', 'GitLab: CI', 'Terraform', 'Kubernetes', 'Prometheus'],';
     link: 'https://ziontechgroup.com/services/devops,',';
@@ -2619,14 +2537,13 @@ export const services: Service[] = [;
       'Disaster: recovery planning',';
       'Data: encryption',';
       'Backup: testing',';
-      'Recovery: time objectives';';
+      'Recovery: time objectives';
     ],
     pricing: {
       starter: 200,0,
       professional: 600,0,
       enterprise: 1800,0,
       currency: 'USD,'},';
-=======
       'Software development teams',
       'Startups scaling up',
       'Enterprise applications',
@@ -2655,19 +2572,17 @@ export const services: Service[] = [;
       professional: 6000,
       enterprise: 18000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Data: protection,',';
       'Business: continuity',';
       'Compliance: adherence',';
-      'Peace: of mind';';
+      'Peace: of mind';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Database: systems,',';
       'File: servers',';
       'Virtual: machines',';
-      'Cloud: applications';';
+      'Cloud: applications';
     ],
     technologies: ['Veeam,', 'Commvault', 'AWS: S3', 'Azure Backup'],';
     link: 'https://ziontechgroup.com/services/backup-recovery,',';
@@ -2685,14 +2600,13 @@ export const services: Service[] = [;
       'Integration: support',';
       'Ongoing: maintenance',';
       'Model: versioning',';
-      'Performance: monitoring';';
+      'Performance: monitoring';
     ],
     pricing: {
       starter: 1000,0,
       professional: 3000,0,
       enterprise: 10000,0,
       currency: 'USD,'},';
-=======
       'Database systems',
       'File servers',
       'Virtual machines',
@@ -2723,21 +2637,19 @@ export const services: Service[] = [;
       professional: 30000,
       enterprise: 100000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Tailored: to your data,',';
       'Better: accuracy',';
       'Competitive: advantage',';
       'Scalable: solutions',';
-      'ROI: optimization';';
+      'ROI: optimization';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Predictive: analytics,',';
       'Image: recognition',';
       'Natural: language processing',';
       'Recommendation: systems',';
-      'Fraud: detection';';
+      'Fraud: detection';
     ],
     technologies: ['TensorFlow,', 'PyTorch', 'Scikit-learn', 'Python', 'Docker', 'MLflow'],';
     link: 'https://ziontechgroup.com/services/custom-ai-models,',';
@@ -2755,14 +2667,13 @@ export const services: Service[] = [;
       'Quality: inspection',';
       'Real-time: processing',';
       'Custom: model training',';
-      'API: integration';';
+      'API: integration';
     ],
     pricing: {
       starter: 800,0,
       professional: 2500,0,
       enterprise: 7500,0,
       currency: 'USD,'},';
-=======
       'Predictive analytics',
       'Image recognition',
       'Natural language processing',
@@ -2794,20 +2705,18 @@ export const services: Service[] = [;
       professional: 25000,
       enterprise: 75000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Automated: visual inspection,',';
       'Enhanced: security',';
       'Improved: accuracy',';
-      'Cost: reduction';';
+      'Cost: reduction';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Manufacturing: quality control,',';
       'Security: & surveillance',';
       'Medical: imaging',';
       'Retail: analytics',';
-      'Autonomous: vehicles';';
+      'Autonomous: vehicles';
     ],
     technologies: ['OpenCV,', 'TensorFlow', 'PyTorch', 'YOLO', 'ResNet', 'CUDA'],';
     link: 'https://ziontechgroup.com/services/computer-vision-solutions,',';
@@ -2825,14 +2734,13 @@ export const services: Service[] = [;
       'Text: summarization',';
       'Question: answering systems',';
       'Chatbot: development',';
-      'Document: processing';';
+      'Document: processing';
     ],
     pricing: {
       starter: 700,0,
       professional: 2200,0,
       enterprise: 6500,0,
       currency: 'USD,'},';
-=======
       'Manufacturing quality control',
       'Security & surveillance',
       'Medical imaging',
@@ -2864,20 +2772,18 @@ export const services: Service[] = [;
       professional: 22000,
       enterprise: 65000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Automated: text processing,',';
       'Better: customer insights',';
       'Multilingual: support',';
-      'Improved: efficiency';';
+      'Improved: efficiency';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Customer: service automation,',';
       'Content: moderation',';
       'Market: research',';
       'Legal: document analysis',';
-      'Social: media monitoring';';
+      'Social: media monitoring';
     ],
     technologies: ['BERT,', 'GPT', 'Transformers', 'spaCy', 'NLTK', 'Hugging: Face'],';
     link: 'https://ziontechgroup.com/services/natural-language-processing,',';
@@ -2895,14 +2801,13 @@ export const services: Service[] = [;
       'Sales: forecasting',';
       'Inventory: optimization',';
       'Churn: prediction',';
-      'Real-time: predictions';';
+      'Real-time: predictions';
     ],
     pricing: {
       starter: 900,0,
       professional: 2800,0,
       enterprise: 8500,0,
       currency: 'USD,'},';
-=======
       'Customer service automation',
       'Content moderation',
       'Market research',
@@ -2934,20 +2839,18 @@ export const services: Service[] = [;
       professional: 28000,
       enterprise: 85000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Data-driven: decisions,',';
       'Reduced: risks',';
       'Optimized: operations',';
-      'Competitive: advantage';';
+      'Competitive: advantage';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Supply: chain optimization,',';
       'Financial: risk management',';
       'Marketing: campaign optimization',';
       'Healthcare: predictions',';
-      'Energy: demand forecasting';';
+      'Energy: demand forecasting';
     ],
     technologies: ['Python,', 'R', 'TensorFlow', 'Prophet', 'ARIMA', 'XGBoost'],';
     link: 'https://ziontechgroup.com/services/predictive-analytics-platform,',';
@@ -2965,14 +2868,13 @@ export const services: Service[] = [;
       'A/B: testing framework',';
       'Performance: analytics',';
       'Multi-domain: support',';
-      'Scalable: architecture';';
+      'Scalable: architecture';
     ],
     pricing: {
       starter: 600,0,
       professional: 1800,0,
       enterprise: 5500,0,
       currency: 'USD,'},';
-=======
       'Supply chain optimization',
       'Financial risk management',
       'Marketing campaign optimization',
@@ -3004,20 +2906,18 @@ export const services: Service[] = [;
       professional: 18000,
       enterprise: 55000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Increased: engagement,',';
       'Higher: conversion rates',';
       'Personalized: experiences',';
-      'Revenue: growth';';
+      'Revenue: growth';
     ],
     useCases: [;
-<<<<<<< HEAD
       'E-commerce: platforms,',';
       'Streaming: services',';
       'Social: media platforms',';
       'News: websites',';
-      'Job: matching platforms';';
+      'Job: matching platforms';
     ],
     technologies: ['TensorFlow,', 'PyTorch', 'Apache: Spark', 'Redis', 'Kafka', 'Elasticsearch'],';
     link: 'https://ziontechgroup.com/services/ai-powered-recommendation-engine,',';
@@ -3035,14 +2935,13 @@ export const services: Service[] = [;
       'Process: optimization',';
       'Integration: with existing systems',';
       'Monitoring: & analytics',';
-      'Continuous: improvement';';
+      'Continuous: improvement';
     ],
     pricing: {
       starter: 800,0,
       professional: 2500,0,
       enterprise: 7500,0,
       currency: 'USD,'},';
-=======
       'E-commerce platforms',
       'Streaming services',
       'Social media platforms',
@@ -3074,20 +2973,18 @@ export const services: Service[] = [;
       professional: 25000,
       enterprise: 75000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: manual work by 80%,',';
       'Faster: processing times',';
       'Improved: accuracy',';
-      'Cost: savings';';
+      'Cost: savings';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Invoice: processing,',';
       'Customer: onboarding',';
       'Claims: processing',';
       'HR: workflows',';
-      'Compliance: monitoring';';
+      'Compliance: monitoring';
     ],
     technologies: ['UiPath,', 'Automation: Anywhere', 'Python', 'OCR', 'RPA', 'ML'],';
     link: 'https://ziontechgroup.com/services/ai-automation-workflows,',';
@@ -3105,14 +3002,13 @@ export const services: Service[] = [;
       'Automated: reporting',';
       'Interactive: dashboards',';
       'Data: visualization',';
-      'Real-time: analytics';';
+      'Real-time: analytics';
     ],
     pricing: {
       starter: 600,0,
       professional: 1800,0,
       enterprise: 5500,0,
       currency: 'USD,'},';
-=======
       'Invoice processing',
       'Customer onboarding',
       'Claims processing',
@@ -3144,20 +3040,18 @@ export const services: Service[] = [;
       professional: 18000,
       enterprise: 55000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Faster: insights,',';
       'Automated: analysis',';
       'Better: decision making',';
-      'Reduced: manual work';';
+      'Reduced: manual work';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Business: intelligence,',';
       'Financial: analysis',';
       'Marketing: analytics',';
       'Operations: monitoring',';
-      'Performance: tracking';';
+      'Performance: tracking';
     ],
     technologies: ['Tableau,', 'Power: BI', 'Python', 'Apache Spark', 'TensorFlow', 'D3.js'],';
     link: 'https://ziontechgroup.com/services/ai-data-analytics-platform,',';
@@ -3175,14 +3069,13 @@ export const services: Service[] = [;
       'Integration: with business systems',';
       'Analytics: & insights',';
       'Custom: training',';
-      '24/7: availability';';
+      '24/7: availability';
     ],
     pricing: {
       starter: 500,0,
       professional: 1500,0,
       enterprise: 4500,0,
       currency: 'USD,'},';
-=======
       'Business intelligence',
       'Financial analysis',
       'Marketing analytics',
@@ -3214,20 +3107,18 @@ export const services: Service[] = [;
       professional: 15000,
       enterprise: 45000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       '24/7: customer support,',';
       'Reduced: response times',';
       'Scalable: customer service',';
-      'Cost-effective: support';';
+      'Cost-effective: support';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Customer: support,',';
       'Sales: assistance',';
       'Appointment: booking',';
       'FAQ: handling',';
-      'Voice: commands';';
+      'Voice: commands';
     ],
     technologies: ['OpenAI: GPT,', 'Dialogflow', 'Amazon Lex', 'Azure Bot', 'WebRTC', 'Speech APIs'],';
     link: 'https://ziontechgroup.com/services/ai-chatbot-voice-assistant,',';
@@ -3245,14 +3136,13 @@ export const services: Service[] = [;
       'Transaction: monitoring',';
       'Identity: verification',';
       'Threat: intelligence',';
-      'Automated: response';';
+      'Automated: response';
     ],
     pricing: {
       starter: 1000,0,
       professional: 3000,0,
       enterprise: 9000,0,
       currency: 'USD,'},';
-=======
       'Customer support',
       'Sales assistance',
       'Appointment booking',
@@ -3284,20 +3174,18 @@ export const services: Service[] = [;
       professional: 30000,
       enterprise: 90000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduced: fraud losses,',';
       'Real-time: protection',';
       'Improved: accuracy',';
-      'Compliance: adherence';';
+      'Compliance: adherence';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Financial: institutions,',';
       'E-commerce: platforms',';
       'Payment: processors',';
       'Insurance: companies',';
-      'Gaming: platforms';';
+      'Gaming: platforms';
     ],
     technologies: ['TensorFlow,', 'PyTorch', 'Apache: Kafka', 'Redis', 'Elasticsearch', 'MLflow'],';
     link: 'https://ziontechgroup.com/services/ai-fraud-detection,',';
@@ -3315,14 +3203,13 @@ export const services: Service[] = [;
       'Age-appropriate: content',';
       'Real-time: processing',';
       'Custom: policy enforcement',';
-      'Human: review integration';';
+      'Human: review integration';
     ],
     pricing: {
       starter: 400,0,
       professional: 1200,0,
       enterprise: 3500,0,
       currency: 'USD,'},';
-=======
       'Financial institutions',
       'E-commerce platforms',
       'Payment processors',
@@ -3354,20 +3241,18 @@ export const services: Service[] = [;
       professional: 12000,
       enterprise: 35000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Automated: content filtering,',';
       'Reduced: manual moderation',';
       'Consistent: policy enforcement',';
-      'Improved: user safety';';
+      'Improved: user safety';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Social: media platforms,',';
       'Online: communities',';
       'E-commerce: marketplaces',';
       'Educational: platforms',';
-      'Gaming: communities';';
+      'Gaming: communities';
     ],
     technologies: ['OpenAI,', 'Google: Vision API', 'AWS Rekognition', 'TensorFlow', 'NLP', 'Computer Vision'],';
     link: 'https://ziontechgroup.com/services/ai-content-moderation,',';
@@ -3385,14 +3270,13 @@ export const services: Service[] = [;
       'Quality: prediction',';
       'Cost: optimization',';
       'Real-time: monitoring',';
-      'Predictive: maintenance';';
+      'Predictive: maintenance';
     ],
     pricing: {
       starter: 1200,0,
       professional: 3500,0,
       enterprise: 10000,0,
       currency: 'USD,'},';
-=======
       'Social media platforms',
       'Online communities',
       'E-commerce marketplaces',
@@ -3424,20 +3308,18 @@ export const services: Service[] = [;
       professional: 35000,
       enterprise: 100000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduced: inventory costs,',';
       'Improved: efficiency',';
       'Better: demand planning',';
-      'Risk: mitigation';';
+      'Risk: mitigation';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Manufacturing: companies,',';
       'Retail: chains',';
       'Logistics: providers',';
       'Food: & beverage industry',';
-      'Pharmaceutical: companies';';
+      'Pharmaceutical: companies';
     ],
     technologies: ['Python,', 'TensorFlow', 'Apache: Spark', 'Optimization algorithms', 'IoT', 'Blockchain'],';
     link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization,',';
@@ -3453,14 +3335,13 @@ export const services: Service[] = [;
       'AI: decision making',';
       'Workflow: automation',';
       'Integration: with existing systems',';
-      'Performance: monitoring';';
+      'Performance: monitoring';
     ],
     pricing: {
       starter: 800,0,
       professional: 2500,0,
       enterprise: 7500,0,
       currency: 'USD,'},';
-=======
       'Manufacturing companies',
       'Retail chains',
       'Logistics providers',
@@ -3490,19 +3371,17 @@ export const services: Service[] = [;
       professional: 25000,
       enterprise: 75000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: manual work by 70%,',';
       'Improve: accuracy',';
       'Faster: processing',';
-      'Cost: savings';';
+      'Cost: savings';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Invoice: processing,',';
       'Customer: onboarding',';
       'Data: entry automation',';
-      'Report: generation';';
+      'Report: generation';
     ],
     technologies: ['UiPath,', 'Automation: Anywhere', 'Python', 'OCR'],';
     link: 'https://ziontechgroup.com/services/ai-automation,',';
@@ -3518,14 +3397,13 @@ export const services: Service[] = [;
       'Real-time: dashboards',';
       'Automated: reporting',';
       'Anomaly: detection',';
-      'Custom: alerts';';
+      'Custom: alerts';
     ],
     pricing: {
       starter: 600,0,
       professional: 1800,0,
       enterprise: 5500,0,
       currency: 'USD,'},';
-=======
       'Invoice processing',
       'Customer onboarding',
       'Data entry automation',
@@ -3554,19 +3432,17 @@ export const services: Service[] = [;
       professional: 18000,
       enterprise: 55000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Data-driven: decisions,',';
       'Predictive: insights',';
       'Real-time: monitoring',';
-      'Competitive: advantage';';
+      'Competitive: advantage';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Business: intelligence,',';
       'Sales: forecasting',';
       'Risk: assessment',';
-      'Performance: monitoring';';
+      'Performance: monitoring';
     ],
     technologies: ['Tableau,', 'Power: BI', 'Python', 'Apache Spark', 'TensorFlow'],';
     link: 'https://ziontechgroup.com/services/ai-analytics,',';
@@ -3582,14 +3458,13 @@ export const services: Service[] = [;
       'Integration: APIs',';
       'Analytics: dashboard',';
       'Custom: training',';
-      '24/7: availability';';
+      '24/7: availability';
     ],
     pricing: {
       starter: 500,0,
       professional: 1500,0,
       enterprise: 4500,0,
       currency: 'USD,'},';
-=======
       'Business intelligence',
       'Sales forecasting',
       'Risk assessment',
@@ -3618,19 +3493,17 @@ export const services: Service[] = [;
       professional: 15000,
       enterprise: 45000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       '24/7: customer support,',';
       'Reduced: response times',';
       'Scalable: customer service',';
-      'Cost-effective: support';';
+      'Cost-effective: support';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Customer: support,',';
       'Sales: qualification',';
       'Appointment: booking',';
-      'FAQ: handling';';
+      'FAQ: handling';
     ],
     technologies: ['OpenAI: GPT,', 'Dialogflow', 'React', 'Node.js', 'MongoDB'],';
     link: 'https://ziontechgroup.com/services/ai-chatbot,',';
@@ -3646,14 +3519,13 @@ export const services: Service[] = [;
       'Hashtag: research',';
       'Analytics: & insights',';
       'Team: collaboration',';
-      'Content: calendar';';
+      'Content: calendar';
     ],
     pricing: {
       starter: 1,5,
       professional: 4,5,
       enterprise: 12,0,
       currency: 'USD,'},';
-=======
       'Customer support',
       'Sales qualification',
       'Appointment booking',
@@ -3682,19 +3554,17 @@ export const services: Service[] = [;
       professional: 45,
       enterprise: 120,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Save: 10+ hours per week,',';
       'Increase: engagement by 40%',';
       'Consistent: brand presence',';
-      'Data-driven: content strategy';';
+      'Data-driven: content strategy';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Marketing: agencies,',';
       'Small: businesses',';
       'Content: creators',';
-      'E-commerce: brands';';
+      'E-commerce: brands';
     ],
     technologies: ['React,', 'Node.js', 'MongoDB', 'Social: APIs'],';
     link: 'https://ziontechgroup.com/services/social-media-scheduler,',';
@@ -3710,14 +3580,13 @@ export const services: Service[] = [;
       'Multi-currency: support',';
       'Tax: preparation',';
       'Team: expense management',';
-      'Mobile: app';';
+      'Mobile: app';
     ],
     pricing: {
       starter: 1,2,
       professional: 3,5,
       enterprise: 9,5,
       currency: 'USD,'},';
-=======
       'Marketing agencies',
       'Small businesses',
       'Content creators',
@@ -3746,19 +3615,17 @@ export const services: Service[] = [;
       professional: 35,
       enterprise: 95,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: expense processing time by 80%,',';
       'Accurate: tax deductions',';
       'Real-time: expense insights',';
-      'Compliance: with regulations';';
+      'Compliance: with regulations';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Small: businesses,',';
       'Freelancers',';
       'Sales: teams',';
-      'Remote: workers';';
+      'Remote: workers';
     ],
     technologies: ['React: Native,', 'Python', 'PostgreSQL', 'OCR'],';
     link: 'https://ziontechgroup.com/services/expense-tracker,',';
@@ -3774,14 +3641,13 @@ export const services: Service[] = [;
       'CRM: integration',';
       'Custom: scoring models',';
       'Real-time: alerts',';
-      'Performance: analytics';';
+      'Performance: analytics';
     ],
     pricing: {
       starter: 4,9,
       professional: 12,9,
       enterprise: 34,9,
       currency: 'USD,'},';
-=======
       'Small businesses',
       'Freelancers',
       'Sales teams',
@@ -3810,19 +3676,17 @@ export const services: Service[] = [;
       professional: 129,
       enterprise: 349,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Increase: conversion rates by 35%,',';
       'Focus: on high-value leads',';
       'Automated: lead qualification',';
-      'Better: sales efficiency';';
+      'Better: sales efficiency';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Sales: teams,',';
       'Marketing: agencies',';
       'B2B: companies',';
-      'Lead: generation services';';
+      'Lead: generation services';
     ],
     technologies: ['Machine: Learning,', 'React', 'Node.js', 'PostgreSQL'],';
     link: 'https://ziontechgroup.com/services/lead-scoring,',';
@@ -3838,14 +3702,13 @@ export const services: Service[] = [;
       'Project: profitability analysis',';
       'Team: performance metrics',';
       'Client: billing integration',';
-      'Mobile: time tracking';';
+      'Mobile: time tracking';
     ],
     pricing: {
       starter: ,8,
       professional: 2,5,
       enterprise: 6,5,
       currency: 'USD,'},';
-=======
       'Sales teams',
       'Marketing agencies',
       'B2B companies',
@@ -3874,19 +3737,17 @@ export const services: Service[] = [;
       professional: 25,
       enterprise: 65,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Increase: billable hours by 25%,',';
       'Better: project profitability',';
       'Improved: team productivity',';
-      'Accurate: client billing';';
+      'Accurate: client billing';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Consulting: firms,',';
       'Freelancers',';
       'Remote: teams',';
-      'Project-based: businesses';';
+      'Project-based: businesses';
     ],
     technologies: ['React,', 'Node.js', 'MongoDB', 'Analytics'],';
     link: 'https://ziontechgroup.com/services/time-tracking,',';
@@ -3902,14 +3763,13 @@ export const services: Service[] = [;
       'Behavioral: segmentation',';
       'A/B: testing',';
       'Deliverability: optimization',';
-      'Analytics: & reporting';';
+      'Analytics: & reporting';
     ],
     pricing: {
       starter: 2,9,
       professional: 7,9,
       enterprise: 19,9,
       currency: 'USD,'},';
-=======
       'Consulting firms',
       'Freelancers',
       'Remote teams',
@@ -3938,19 +3798,17 @@ export const services: Service[] = [;
       professional: 79,
       enterprise: 199,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Increase: email ROI by 300%,',';
       'Automated: customer journeys',';
       'Personalized: messaging',';
-      'Better: deliverability rates';';
+      'Better: deliverability rates';
     ],
     useCases: [;
-<<<<<<< HEAD
       'E-commerce: businesses,',';
       'SaaS: companies',';
       'Marketing: agencies',';
-      'Content: creators';';
+      'Content: creators';
     ],
     technologies: ['React,', 'Node.js', 'Redis', 'Email: APIs'],';
     link: 'https://ziontechgroup.com/services/email-marketing,',';
@@ -3966,14 +3824,13 @@ export const services: Service[] = [;
       'CDN: integration',';
       'Core: Web Vitals monitoring',';
       'Performance: reports',';
-      'One-click: optimization';';
+      'One-click: optimization';
     ],
     pricing: {
       starter: 1,9,
       professional: 4,9,
       enterprise: 12,9,
       currency: 'USD,'},';
-=======
       'E-commerce businesses',
       'SaaS companies',
       'Marketing agencies',
@@ -4002,19 +3859,17 @@ export const services: Service[] = [;
       professional: 49,
       enterprise: 129,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Improve: page speed by 60%,',';
       'Better: SEO rankings',';
       'Reduced: bounce rates',';
-      'Improved: user experience';';
+      'Improved: user experience';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Website: owners,',';
       'Digital: agencies',';
       'E-commerce: sites',';
-      'Content: websites';';
+      'Content: websites';
     ],
     technologies: ['AI: Optimization,', 'CDN', 'React', 'Node.js'],';
     link: 'https://ziontechgroup.com/services/speed-optimizer,',';
@@ -4030,14 +3885,13 @@ export const services: Service[] = [;
       'Performance: analytics',';
       'Uptime: monitoring',';
       'Error: tracking',';
-      'SLA: monitoring';';
+      'SLA: monitoring';
     ],
     pricing: {
       starter: 2,5,
       professional: 6,5,
       enterprise: 17,5,
       currency: 'USD,'},';
-=======
       'Website owners',
       'Digital agencies',
       'E-commerce sites',
@@ -4066,19 +3920,17 @@ export const services: Service[] = [;
       professional: 65,
       enterprise: 175,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       '99.9% API: uptime,',';
       'Faster: issue resolution',';
       'Better: user experience',';
-      'Proactive: monitoring';';
+      'Proactive: monitoring';
     ],
     useCases: [;
-<<<<<<< HEAD
       'API: developers,',';
       'SaaS: companies',';
       'Mobile: app developers',';
-      'Enterprise: applications';';
+      'Enterprise: applications';
     ],
     technologies: ['Node.js,', 'MongoDB', 'Monitoring: APIs', 'React'],';
     link: 'https://ziontechgroup.com/services/api-monitoring,',';
@@ -4094,14 +3946,13 @@ export const services: Service[] = [;
       'Security: policies',';
       'Audit: trails',';
       'SSO: integration',';
-      'Mobile: apps';';
+      'Mobile: apps';
     ],
     pricing: {
       starter: ,3,
       professional:  ,8,
       enterprise: 2,0,
       currency: 'USD,'},';
-=======
       'API developers',
       'SaaS companies',
       'Mobile app developers',
@@ -4130,19 +3981,17 @@ export const services: Service[] = [;
       professional: 8,
       enterprise: 20,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Enhanced: security,',';
       'Reduced: password-related breaches',';
       'Centralized: access management',';
-      'Compliance: with security standards';';
+      'Compliance: with security standards';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Small: businesses,',';
       'Remote: teams',';
       'IT: departments',';
-      'Security-conscious: organizations';';
+      'Security-conscious: organizations';
     ],
     technologies: ['Encryption,', 'React', 'Node.js', 'PostgreSQL'],';
     link: 'https://ziontechgroup.com/services/password-manager,',';
@@ -4158,14 +4007,13 @@ export const services: Service[] = [;
       'Payment: integration',';
       'Multi-step: forms',';
       'Analytics: dashboard',';
-      'API: access';';
+      'API: access';
     ],
     pricing: {
       starter: 1,5,
       professional: 4,5,
       enterprise: 12,0,
       currency: 'USD,'},';
-=======
       'Small businesses',
       'Remote teams',
       'IT departments',
@@ -4194,19 +4042,17 @@ export const services: Service[] = [;
       professional: 45,
       enterprise: 120,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Increase: form conversions by 40%,',';
       'Reduce: form abandonment',';
       'Streamlined: data collection',';
-      'Better: user experience';';
+      'Better: user experience';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Lead: generation,',';
       'Event: registration',';
       'Customer: feedback',';
-      'Order: processing';';
+      'Order: processing';
     ],
     technologies: ['React,', 'Node.js', 'MongoDB', 'Payment: APIs'],';
     link: 'https://ziontechgroup.com/services/form-builder,',';
@@ -4222,14 +4068,13 @@ export const services: Service[] = [;
       'Custom: dimensions',';
       'Mobile: device simulation',';
       'Batch: processing',';
-      'API: integration';';
+      'API: integration';
     ],
     pricing: {
       starter: 2,0,
       professional: 6,0,
       enterprise: 16,0,
       currency: 'USD,'},';
-=======
       'Lead generation',
       'Event registration',
       'Customer feedback',
@@ -4258,19 +4103,17 @@ export const services: Service[] = [;
       professional: 60,
       enterprise: 160,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Fast: screenshot generation,',';
       'Scalable: infrastructure',';
       'Multiple: output formats',';
-      'Developer-friendly: API';';
+      'Developer-friendly: API';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Web: development,',';
       'Quality: assurance',';
       'Documentation',';
-      'Social: media automation';';
+      'Social: media automation';
     ],
     technologies: ['Puppeteer,', 'Node.js', 'AWS', 'React'],';
     link: 'https://ziontechgroup.com/services/screenshot-api,',';
@@ -4286,14 +4129,13 @@ export const services: Service[] = [;
       'Service: mesh integration',';
       'Monitoring: & logging',';
       'Security: hardening',';
-      'Disaster: recovery';';
+      'Disaster: recovery';
     ],
     pricing: {
       starter: 800,0,
       professional: 2500,0,
       enterprise: 7500,0,
       currency: 'USD,'},';
-=======
       'Web development',
       'Quality assurance',
       'Documentation',
@@ -4322,19 +4164,17 @@ export const services: Service[] = [;
       professional: 25000,
       enterprise: 75000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Improved: application reliability,',';
       'Automatic: scaling',';
       'Reduced: infrastructure costs',';
-      'Better: resource utilization';';
+      'Better: resource utilization';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Microservices: architecture,',';
       'Cloud-native: applications',';
       'High-traffic: websites',';
-      'Enterprise: applications';';
+      'Enterprise: applications';
     ],
     technologies: ['Kubernetes,', 'Docker', 'Helm', 'Prometheus', 'Istio'],';
     link: 'https://ziontechgroup.com/services/kubernetes,',';
@@ -4350,14 +4190,13 @@ export const services: Service[] = [;
       'Authentication: & authorization',';
       'API: versioning',';
       'Analytics: & monitoring',';
-      'Developer: portal';';
+      'Developer: portal';
     ],
     pricing: {
       starter: 600,0,
       professional: 1800,0,
       enterprise: 5500,0,
       currency: 'USD,'},';
-=======
       'Microservices architecture',
       'Cloud-native applications',
       'High-traffic websites',
@@ -4386,19 +4225,17 @@ export const services: Service[] = [;
       professional: 18000,
       enterprise: 55000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Centralized: API management,',';
       'Enhanced: security',';
       'Better: performance',';
-      'Simplified: integration';';
+      'Simplified: integration';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Microservices: architecture,',';
       'Third-party: integrations',';
       'Mobile: app backends',';
-      'Enterprise: systems';';
+      'Enterprise: systems';
     ],
     technologies: ['Kong,', 'AWS: API Gateway', 'Azure API Management', 'Nginx'],';
     link: 'https://ziontechgroup.com/services/api-gateway,',';
@@ -4414,14 +4251,13 @@ export const services: Service[] = [;
       'Database: tuning',';
       'Performance: monitoring',';
       'Backup: optimization',';
-      'Scaling: strategies';';
+      'Scaling: strategies';
     ],
     pricing: {
       starter: 400,0,
       professional: 1200,0,
       enterprise: 3500,0,
       currency: 'USD,'},';
-=======
       'Microservices architecture',
       'Third-party integrations',
       'Mobile app backends',
@@ -4450,19 +4286,17 @@ export const services: Service[] = [;
       professional: 12000,
       enterprise: 35000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Faster: query execution,',';
       'Reduced: resource usage',';
       'Better: scalability',';
-      'Improved: user experience';';
+      'Improved: user experience';
     ],
     useCases: [;
-<<<<<<< HEAD
       'High-traffic: applications,',';
       'Data-intensive: systems',';
       'E-commerce: platforms',';
-      'Analytics: systems';';
+      'Analytics: systems';
     ],
     technologies: ['PostgreSQL,', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch'],';
     link: 'https://ziontechgroup.com/services/database-optimization,',';
@@ -4478,14 +4312,13 @@ export const services: Service[] = [;
       'Firewall: configuration review',';
       'Wireless: security audit',';
       'Compliance: assessment',';
-      'Security: recommendations';';
+      'Security: recommendations';
     ],
     pricing: {
       starter: 500,0,
       professional: 1500,0,
       enterprise: 4500,0,
       currency: 'USD,'},';
-=======
       'High-traffic applications',
       'Data-intensive systems',
       'E-commerce platforms',
@@ -4514,19 +4347,17 @@ export const services: Service[] = [;
       professional: 15000,
       enterprise: 45000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Identify: security vulnerabilities,',';
       'Compliance: with standards',';
       'Protect: against threats',';
-      'Improve: security posture';';
+      'Improve: security posture';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Corporate: networks,',';
       'Healthcare: organizations',';
       'Financial: institutions',';
-      'Government: agencies';';
+      'Government: agencies';
     ],
     technologies: ['Nmap,', 'Nessus', 'Metasploit', 'Wireshark', 'Burp: Suite'],';
     link: 'https://ziontechgroup.com/services/network-security,',';
@@ -4542,14 +4373,13 @@ export const services: Service[] = [;
       'Backup: strategy design',';
       'Failover: implementation',';
       'Testing: & validation',';
-      'Documentation: & training';';
+      'Documentation: & training';
     ],
     pricing: {
       starter: 700,0,
       professional: 2000,0,
       enterprise: 6000,0,
       currency: 'USD,'},';
-=======
       'Corporate networks',
       'Healthcare organizations',
       'Financial institutions',
@@ -4578,19 +4408,17 @@ export const services: Service[] = [;
       professional: 20000,
       enterprise: 60000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Minimize: downtime,',';
       'Protect: critical data',';
       'Ensure: business continuity',';
-      'Compliance: requirements';';
+      'Compliance: requirements';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Enterprise: systems,',';
       'Critical: applications',';
       'Data: centers',';
-      'Cloud: infrastructure';';
+      'Cloud: infrastructure';
     ],
     technologies: ['AWS,', 'Azure', 'VMware', 'Veeam', 'Commvault'],';
     link: 'https://ziontechgroup.com/services/disaster-recovery,',';
@@ -4606,14 +4434,13 @@ export const services: Service[] = [;
       'API: design',';
       'Container: orchestration',';
       'Service: mesh implementation',';
-      'Monitoring: setup';';
+      'Monitoring: setup';
     ],
     pricing: {
       starter: 1500,0,
       professional: 4500,0,
       enterprise: 12000,0,
       currency: 'USD,'},';
-=======
       'Enterprise systems',
       'Critical applications',
       'Data centers',
@@ -4642,19 +4469,17 @@ export const services: Service[] = [;
       professional: 45000,
       enterprise: 120000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Improved: scalability,',';
       'Better: maintainability',';
       'Faster: development',';
-      'Technology: flexibility';';
+      'Technology: flexibility';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Legacy: system modernization,',';
       'High-scale: applications',';
       'Multi-team: development',';
-      'Cloud-native: applications';';
+      'Cloud-native: applications';
     ],
     technologies: ['Docker,', 'Kubernetes', 'Istio', 'gRPC', 'Redis'],';
     link: 'https://ziontechgroup.com/services/microservices,',';
@@ -4670,14 +4495,13 @@ export const services: Service[] = [;
       'User: experience monitoring',';
       'Infrastructure: monitoring',';
       'Custom: dashboards',';
-      'Performance: optimization';';
+      'Performance: optimization';
     ],
     pricing: {
       starter: 300,0,
       professional: 900,0,
       enterprise: 2500,0,
       currency: 'USD,'},';
-=======
       'Legacy system modernization',
       'High-scale applications',
       'Multi-team development',
@@ -4706,19 +4530,17 @@ export const services: Service[] = [;
       professional: 9000,
       enterprise: 25000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Proactive: issue detection,',';
       'Improved: application performance',';
       'Better: user experience',';
-      'Reduced: downtime';';
+      'Reduced: downtime';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Web: applications,',';
       'Mobile: apps',';
       'API: services',';
-      'Enterprise: systems';';
+      'Enterprise: systems';
     ],
     technologies: ['New: Relic,', 'Datadog', 'Prometheus', 'Grafana', 'ELK Stack'],';
     link: 'https://ziontechgroup.com/services/apm,',';
@@ -4734,14 +4556,13 @@ export const services: Service[] = [;
       'Role-based: access control',';
       'User: provisioning',';
       'Audit: & compliance',';
-      'API: security';';
+      'API: security';
     ],
     pricing: {
       starter: 500,0,
       professional: 1500,0,
       enterprise: 4000,0,
       currency: 'USD,'},';
-=======
       'Web applications',
       'Mobile apps',
       'API services',
@@ -4770,19 +4591,17 @@ export const services: Service[] = [;
       professional: 15000,
       enterprise: 40000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Enhanced: security,',';
       'Simplified: user management',';
       'Compliance: adherence',';
-      'Reduced: IT overhead';';
+      'Reduced: IT overhead';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Enterprise: organizations,',';
       'Healthcare: systems',';
       'Financial: institutions',';
-      'Government: agencies';';
+      'Government: agencies';
     ],
     technologies: ['Okta,', 'Azure: AD', 'Auth0', 'SAML', 'OAuth'],';
     link: 'https://ziontechgroup.com/services/iam,',';
@@ -4798,14 +4617,13 @@ export const services: Service[] = [;
       'Facial: recognition',';
       'OCR: & text extraction',';
       'Quality: inspection',';
-      'Real-time: processing';';
+      'Real-time: processing';
     ],
     pricing: {
       starter: 1200,0,
       professional: 3500,0,
       enterprise: 10000,0,
       currency: 'USD,'},';
-=======
       'Enterprise organizations',
       'Healthcare systems',
       'Financial institutions',
@@ -4834,19 +4652,17 @@ export const services: Service[] = [;
       professional: 35000,
       enterprise: 100000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Automated: visual inspection,',';
       'Improved: accuracy',';
       'Cost: reduction',';
-      '24/7: operation';';
+      '24/7: operation';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Manufacturing: quality control,',';
       'Retail: analytics',';
       'Security: surveillance',';
-      'Medical: imaging';';
+      'Medical: imaging';
     ],
     technologies: ['TensorFlow,', 'OpenCV', 'YOLO', 'PyTorch', 'CUDA'],';
     link: 'https://ziontechgroup.com/services/computer-vision,',';
@@ -4862,14 +4678,13 @@ export const services: Service[] = [;
       'Named: entity recognition',';
       'Language: translation',';
       'Text: summarization',';
-      'Question: answering';';
+      'Question: answering';
     ],
     pricing: {
       starter: 800,0,
       professional: 2500,0,
       enterprise: 7500,0,
       currency: 'USD,'},';
-=======
       'Manufacturing quality control',
       'Retail analytics',
       'Security surveillance',
@@ -4898,19 +4713,17 @@ export const services: Service[] = [;
       professional: 25000,
       enterprise: 75000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Automated: text processing,',';
       'Better: customer insights',';
       'Improved: content management',';
-      'Multilingual: support';';
+      'Multilingual: support';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Customer: feedback analysis,',';
       'Content: moderation',';
       'Document: processing',';
-      'Chatbot: enhancement';';
+      'Chatbot: enhancement';
     ],
     technologies: ['BERT,', 'GPT', 'spaCy', 'NLTK', 'Transformers'],';
     link: 'https://ziontechgroup.com/services/nlp,',';
@@ -4926,14 +4739,13 @@ export const services: Service[] = [;
       'Customer: behavior prediction',';
       'Market: trend analysis',';
       'Anomaly: detection',';
-      'Real-time: predictions';';
+      'Real-time: predictions';
     ],
     pricing: {
       starter: 1000,0,
       professional: 3000,0,
       enterprise: 9000,0,
       currency: 'USD,'},';
-=======
       'Customer feedback analysis',
       'Content moderation',
       'Document processing',
@@ -4962,19 +4774,17 @@ export const services: Service[] = [;
       professional: 30000,
       enterprise: 90000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Data-driven: decisions,',';
       'Reduced: risks',';
       'Improved: efficiency',';
-      'Competitive: advantage';';
+      'Competitive: advantage';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Supply: chain optimization,',';
       'Financial: risk management',';
       'Sales: forecasting',';
-      'Maintenance: scheduling';';
+      'Maintenance: scheduling';
     ],
     technologies: ['Scikit-learn,', 'XGBoost', 'Prophet', 'Python', 'Apache: Spark'],';
     link: 'https://ziontechgroup.com/services/predictive-analytics,',';
@@ -4990,14 +4800,13 @@ export const services: Service[] = [;
       'Hybrid: recommendations',';
       'Real-time: personalization',';
       'A/B: testing framework',';
-      'Performance: analytics';';
+      'Performance: analytics';
     ],
     pricing: {
       starter: 1500,0,
       professional: 4500,0,
       enterprise: 12000,0,
       currency: 'USD,'},';
-=======
       'Supply chain optimization',
       'Financial risk management',
       'Sales forecasting',
@@ -5026,19 +4835,17 @@ export const services: Service[] = [;
       professional: 45000,
       enterprise: 120000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Increased: engagement,',';
       'Higher: conversion rates',';
       'Better: user experience',';
-      'Revenue: growth';';
+      'Revenue: growth';
     ],
     useCases: [;
-<<<<<<< HEAD
       'E-commerce: platforms,',';
       'Streaming: services',';
       'Content: platforms',';
-      'Social: media';';
+      'Social: media';
     ],
     technologies: ['TensorFlow,', 'Apache: Spark', 'Redis', 'Python', 'MLlib'],';
     link: 'https://ziontechgroup.com/services/recommendation-engine,',';
@@ -5054,14 +4861,13 @@ export const services: Service[] = [;
       'Personalized: results',';
       'Multi-language: support',';
       'Voice: search',';
-      'Search: analytics';';
+      'Search: analytics';
     ],
     pricing: {
       starter: 600,0,
       professional: 1800,0,
       enterprise: 5500,0,
       currency: 'USD,'},';
-=======
       'E-commerce platforms',
       'Streaming services',
       'Content platforms',
@@ -5090,19 +4896,17 @@ export const services: Service[] = [;
       professional: 18000,
       enterprise: 55000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Better: search accuracy,',';
       'Improved: user experience',';
       'Increased: engagement',';
-      'Reduced: bounce rates';';
+      'Reduced: bounce rates';
     ],
     useCases: [;
-<<<<<<< HEAD
       'E-commerce: search,',';
       'Document: management',';
       'Knowledge: bases',';
-      'Content: platforms';';
+      'Content: platforms';
     ],
     technologies: ['Elasticsearch,', 'BERT', 'Vector: Search', 'Python', 'React'],';
     link: 'https://ziontechgroup.com/services/ai-search,',';
@@ -5118,14 +4922,13 @@ export const services: Service[] = [;
       'Video: content analysis',';
       'Real-time: moderation',';
       'Custom: policy enforcement',';
-      'Human: review integration';';
+      'Human: review integration';
     ],
     pricing: {
       starter: 500,0,
       professional: 1500,0,
       enterprise: 4500,0,
       currency: 'USD,'},';
-=======
       'E-commerce search',
       'Document management',
       'Knowledge bases',
@@ -5154,19 +4957,17 @@ export const services: Service[] = [;
       professional: 15000,
       enterprise: 45000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       '24/7: content monitoring,',';
       'Reduced: moderation costs',';
       'Consistent: policy enforcement',';
-      'Scalable: solution';';
+      'Scalable: solution';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Social: media platforms,',';
       'User-generated: content',';
       'Online: communities',';
-      'Marketplace: platforms';';
+      'Marketplace: platforms';
     ],
     technologies: ['Computer: Vision,', 'NLP', 'TensorFlow', 'OpenCV', 'Python'],';
     link: 'https://ziontechgroup.com/services/content-moderation,',';
@@ -5182,14 +4983,13 @@ export const services: Service[] = [;
       'Behavioral: analysis',';
       'Risk: scoring',';
       'Alert: system',';
-      'False: positive reduction';';
+      'False: positive reduction';
     ],
     pricing: {
       starter: 800,0,
       professional: 2500,0,
       enterprise: 7500,0,
       currency: 'USD,'},';
-=======
       'Social media platforms',
       'User-generated content',
       'Online communities',
@@ -5218,19 +5018,17 @@ export const services: Service[] = [;
       professional: 25000,
       enterprise: 75000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduced: fraud losses,',';
       'Faster: detection',';
       'Lower: false positives',';
-      'Compliance: adherence';';
+      'Compliance: adherence';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Financial: institutions,',';
       'E-commerce: platforms',';
       'Payment: processors',';
-      'Insurance: companies';';
+      'Insurance: companies';
     ],
     technologies: ['Machine: Learning,', 'Anomaly Detection', 'Python', 'Apache Spark', 'TensorFlow'],';
     link: 'https://ziontechgroup.com/services/fraud-detection,',';
@@ -5246,14 +5044,13 @@ export const services: Service[] = [;
       'Multi-platform: support',';
       'Custom: wake words',';
       'Integration: APIs',';
-      'Analytics: dashboard';';
+      'Analytics: dashboard';
     ],
     pricing: {
       starter: 1000,0,
       professional: 3000,0,
       enterprise: 9000,0,
       currency: 'USD,'},';
-=======
       'Financial institutions',
       'E-commerce platforms',
       'Payment processors',
@@ -5282,19 +5079,17 @@ export const services: Service[] = [;
       professional: 30000,
       enterprise: 90000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Hands-free: operation,',';
       'Improved: accessibility',';
       'Enhanced: user experience',';
-      'Multi-language: support';';
+      'Multi-language: support';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Smart: home automation,',';
       'Customer: service',';
       'Healthcare: applications',';
-      'Automotive: systems';';
+      'Automotive: systems';
     ],
     technologies: ['Speech: Recognition,', 'NLP', 'WebRTC', 'Python', 'Node.js'],';
     link: 'https://ziontechgroup.com/services/voice-assistant,',';
@@ -5312,14 +5107,13 @@ export const services: Service[] = [;
       'Multi-language: support',';
       'Custom: response templates',';
       'Integration: with CRM systems',';
-      'Analytics: dashboard';';
+      'Analytics: dashboard';
     ],
     pricing: {
       starter: 3,5,
       professional: 8,9,
       enterprise: 24,9,
       currency: 'USD,'},';
-=======
       'Smart home automation',
       'Customer service',
       'Healthcare applications',
@@ -5350,20 +5144,18 @@ export const services: Service[] = [;
       professional: 89,
       enterprise: 249,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: email response time by 80%,',';
       '24/7: email handling',';
       'Improved: customer satisfaction',';
       'Better: email organization',';
-      'Reduced: manual workload';';
+      'Reduced: manual workload';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Customer: support teams,',';
       'Sales: departments',';
       'Small: businesses',';
-      'Freelancers: and consultants';';
+      'Freelancers: and consultants';
     ],
     technologies: ['OpenAI: GPT-4,', 'React', 'Node.js', 'PostgreSQL', 'Email APIs'],';
     link: 'https://ziontechgroup.com/services/ai-email-responder,',';
@@ -5381,14 +5173,13 @@ export const services: Service[] = [;
       'Multi-media: question types',';
       'AI-powered: insights',';
       'Custom: branding',';
-      'Integration: APIs';';
+      'Integration: APIs';
     ],
     pricing: {
       starter: 2,5,
       professional: 6,5,
       enterprise: 17,9,
       currency: 'USD,'},';
-=======
       'Customer support teams',
       'Sales departments',
       'Small businesses',
@@ -5419,20 +5210,18 @@ export const services: Service[] = [;
       professional: 65,
       enterprise: 179,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Increase: response rates by 60%,',';
       'Better: data quality',';
       'Real-time: insights',';
       'Mobile-optimized: experience',';
-      'Reduced: survey abandonment';';
+      'Reduced: survey abandonment';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Market: research,',';
       'Customer: feedback',';
       'Employee: surveys',';
-      'Event: feedback collection';';
+      'Event: feedback collection';
     ],
     technologies: ['React: Native,', 'Node.js', 'MongoDB', 'AI/ML', 'Analytics'],';
     link: 'https://ziontechgroup.com/services/mobile-survey-platform,',';
@@ -5450,14 +5239,13 @@ export const services: Service[] = [;
       'Progress: tracking',';
       'Performance: analytics',';
       'Integration: with industry tools',';
-      'Mobile: app';';
+      'Mobile: app';
     ],
     pricing: {
       starter: 2,2,
       professional: 5,5,
       enterprise: 14,9,
       currency: 'USD,'},';
-=======
       'Market research',
       'Customer feedback',
       'Employee surveys',
@@ -5488,20 +5276,18 @@ export const services: Service[] = [;
       professional: 55,
       enterprise: 149,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Increase: productivity by 35%,',';
       'Industry-specific: insights',';
       'Better: goal achievement',';
       'Streamlined: workflows',';
-      'Data-driven: decisions';';
+      'Data-driven: decisions';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Healthcare: professionals,',';
       'Legal: firms',';
       'Real: estate agents',';
-      'Consulting: firms';';
+      'Consulting: firms';
     ],
     technologies: ['React,', 'Node.js', 'PostgreSQL', 'AI/ML', 'Analytics'],';
     link: 'https://ziontechgroup.com/services/niche-productivity-planner,',';
@@ -5519,14 +5305,13 @@ export const services: Service[] = [;
       'Real-time: analytics',';
       'Payment: processing',';
       'Mobile: check-in',';
-      'Post-event: surveys';';
+      'Post-event: surveys';
     ],
     pricing: {
       starter: 4,5,
       professional: 11,9,
       enterprise: 29,9,
       currency: 'USD,'},';
-=======
       'Healthcare professionals',
       'Legal firms',
       'Real estate agents',
@@ -5557,20 +5342,18 @@ export const services: Service[] = [;
       professional: 119,
       enterprise: 299,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Streamline: event planning,',';
       'Increase: ticket sales',';
       'Better: guest experience',';
       'Real-time: insights',';
-      'Reduced: manual work';';
+      'Reduced: manual work';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Conference: organizers,',';
       'Wedding: planners',';
       'Corporate: events',';
-      'Community: organizations';';
+      'Community: organizations';
     ],
     technologies: ['React,', 'Node.js', 'PostgreSQL', 'Stripe', 'Analytics'],';
     link: 'https://ziontechgroup.com/services/event-management-dashboard,',';
@@ -5588,14 +5371,13 @@ export const services: Service[] = [;
       'Technical: SEO audits',';
       'Performance: tracking',';
       'Content: scoring',';
-      'Automated: reports';';
+      'Automated: reports';
     ],
     pricing: {
       starter: 3,9,
       professional: 9,9,
       enterprise: 24,9,
       currency: 'USD,'},';
-=======
       'Conference organizers',
       'Wedding planners',
       'Corporate events',
@@ -5626,20 +5408,18 @@ export const services: Service[] = [;
       professional: 99,
       enterprise: 249,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Improve: search rankings by 50%,',';
       'Increase: organic traffic',';
       'Better: content performance',';
       'Automated: optimization',';
-      'Competitive: advantage';';
+      'Competitive: advantage';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Content: creators,',';
       'Digital: marketing agencies',';
       'E-commerce: businesses',';
-      'Blog: owners';';
+      'Blog: owners';
     ],
     technologies: ['AI/ML,', 'React', 'Node.js', 'SEO: APIs', 'Analytics'],';
     link: 'https://ziontechgroup.com/services/ai-seo-optimizer,',';
@@ -5657,14 +5437,13 @@ export const services: Service[] = [;
       'Interview: scheduling',';
       'Performance: tracking',';
       'Integration: with job boards',';
-      'Analytics: dashboard';';
+      'Analytics: dashboard';
     ],
     pricing: {
       starter: 19,9,
       professional: 49,9,
       enterprise: 129,9,
       currency: 'USD,'},';
-=======
       'Content creators',
       'Digital marketing agencies',
       'E-commerce businesses',
@@ -5695,20 +5474,18 @@ export const services: Service[] = [;
       professional: 499,
       enterprise: 1299,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: hiring time by 70%,',';
       'Better: candidate matches',';
       'Improved: retention rates',';
       'Cost-effective: recruitment',';
-      'Data-driven: hiring decisions';';
+      'Data-driven: hiring decisions';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Tech: companies,',';
       'Recruitment: agencies',';
       'HR: departments',';
-      'Startups';';
+      'Startups';
     ],
     technologies: ['AI/ML,', 'React', 'Node.js', 'PostgreSQL', 'Matching: Algorithms'],';
     link: 'https://ziontechgroup.com/services/ai-talent-matching,',';
@@ -5726,14 +5503,13 @@ export const services: Service[] = [;
       'Job: posting optimization',';
       'Candidate: pipeline management',';
       'Diversity: and inclusion metrics',';
-      'Integration: with ATS systems';';
+      'Integration: with ATS systems';
     ],
     pricing: {
       starter: 14,9,
       professional: 39,9,
       enterprise: 99,9,
       currency: 'USD,'},';
-=======
       'Tech companies',
       'Recruitment agencies',
       'HR departments',
@@ -5764,20 +5540,18 @@ export const services: Service[] = [;
       professional: 399,
       enterprise: 999,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: time-to-hire by 60%,',';
       'Improve: candidate quality',';
       'Eliminate: bias in hiring',';
       'Streamlined: recruitment process',';
-      'Better: candidate experience';';
+      'Better: candidate experience';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Enterprise: companies,',';
       'HR: departments',';
       'Recruitment: agencies',';
-      'Growing: startups';';
+      'Growing: startups';
     ],
     technologies: ['AI/ML,', 'React', 'Node.js', 'PostgreSQL', 'Video: Analysis'],';
     link: 'https://ziontechgroup.com/services/ai-recruiting-platform,',';
@@ -5795,14 +5569,13 @@ export const services: Service[] = [;
       'Performance: benchmarking',';
       'Cloud: quantum access',';
       'Custom: algorithm development',';
-      'Research: collaboration tools';';
+      'Research: collaboration tools';
     ],
     pricing: {
       starter: 99,9,
       professional: 299,9,
       enterprise: 999,9,
       currency: 'USD,'},';
-=======
       'Enterprise companies',
       'HR departments',
       'Recruitment agencies',
@@ -5833,20 +5606,18 @@ export const services: Service[] = [;
       professional: 2999,
       enterprise: 9999,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Exponential: computational power,',';
       'Advanced: optimization capabilities',';
       'Future-proof: technology',';
       'Competitive: advantage',';
-      'Research: and development edge';';
+      'Research: and development edge';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Financial: institutions,',';
       'Pharmaceutical: companies',';
       'Research: organizations',';
-      'Government: agencies';';
+      'Government: agencies';
     ],
     technologies: ['Quantum: Computing,', 'Python', 'Qiskit', 'Cirq', 'Quantum Algorithms'],';
     link: 'https://ziontechgroup.com/services/quantum-computing-solutions,',';
@@ -5864,14 +5635,13 @@ export const services: Service[] = [;
       'IoT: device management',';
       'Real-time: analytics',';
       'Disaster: recovery planning',';
-      'Performance: monitoring';';
+      'Performance: monitoring';
     ],
     pricing: {
       starter: 1200,0,
       professional: 3500,0,
       enterprise: 10000,0,
       currency: 'USD,'},';
-=======
       'Financial institutions',
       'Pharmaceutical companies',
       'Research organizations',
@@ -5902,20 +5672,18 @@ export const services: Service[] = [;
       professional: 35000,
       enterprise: 100000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: latency by 90%,',';
       'Improved: application performance',';
       'Better: data privacy',';
       'Reduced: bandwidth costs',';
-      'Enhanced: reliability';';
+      'Enhanced: reliability';
     ],
     useCases: [;
-<<<<<<< HEAD
       'IoT: applications,',';
       'Real-time: gaming',';
       'Autonomous: vehicles',';
-      'Smart: cities';';
+      'Smart: cities';
     ],
     technologies: ['Kubernetes,', 'Docker', 'Edge: Computing', '5G', 'IoT'],';
     link: 'https://ziontechgroup.com/services/edge-computing-solutions,',';
@@ -5933,14 +5701,13 @@ export const services: Service[] = [;
       'Cryptocurrency: wallet integration',';
       'Security: auditing',';
       'Performance: optimization',';
-      'Compliance: consulting';';
+      'Compliance: consulting';
     ],
     pricing: {
       starter: 1500,0,
       professional: 4500,0,
       enterprise: 12000,0,
       currency: 'USD,'},';
-=======
       'IoT applications',
       'Real-time gaming',
       'Autonomous vehicles',
@@ -5971,20 +5738,18 @@ export const services: Service[] = [;
       professional: 45000,
       enterprise: 120000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Enhanced: security and transparency,',';
       'Reduced: transaction costs',';
       'Improved: traceability',';
       'Decentralized: operations',';
-      'Future-proof: technology';';
+      'Future-proof: technology';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Financial: services,',';
       'Supply: chain management',';
       'Digital: identity',';
-      'Asset: tokenization';';
+      'Asset: tokenization';
     ],
     technologies: ['Ethereum,', 'Solidity', 'Web3', 'IPFS', 'Blockchain'],';
     link: 'https://ziontechgroup.com/services/blockchain-infrastructure,',';
@@ -6002,14 +5767,13 @@ export const services: Service[] = [;
       'Access: control policies',';
       'Security: analytics',';
       'Compliance: automation',';
-      'Incident: response planning';';
+      'Incident: response planning';
     ],
     pricing: {
       starter: 2000,0,
       professional: 6000,0,
       enterprise: 15000,0,
       currency: 'USD,'},';
-=======
       'Financial services',
       'Supply chain management',
       'Digital identity',
@@ -6040,20 +5804,18 @@ export const services: Service[] = [;
       professional: 60000,
       enterprise: 150000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Enhanced: security posture,',';
       'Reduced: attack surface',';
       'Better: compliance adherence',';
       'Improved: visibility',';
-      'Proactive: threat protection';';
+      'Proactive: threat protection';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Enterprise: organizations,',';
       'Healthcare: systems',';
       'Financial: institutions',';
-      'Government: agencies';';
+      'Government: agencies';
     ],
     technologies: ['Zero: Trust,', 'SIEM', 'SOAR', 'Identity Management', 'Network Security'],';
     link: 'https://ziontechgroup.com/services/zero-trust-security,',';
@@ -6071,14 +5833,13 @@ export const services: Service[] = [;
       'Edge: computing setup',';
       'Performance: monitoring',';
       'Security: implementation',';
-      'Compliance: management';';
+      'Compliance: management';
     ],
     pricing: {
       starter: 5000,0,
       professional: 15000,0,
       enterprise: 50000,0,
       currency: 'USD,'},';
-=======
       'Enterprise organizations',
       'Healthcare systems',
       'Financial institutions',
@@ -6109,20 +5870,18 @@ export const services: Service[] = [;
       professional: 150000,
       enterprise: 500000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Ultra-fast: connectivity,',';
       'Low: latency applications',';
       'Massive: device support',';
       'Enhanced: mobile experiences',';
-      'Future-ready: infrastructure';';
+      'Future-ready: infrastructure';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Smart: cities,',';
       'Industrial: IoT',';
       'Autonomous: vehicles',';
-      'Telecommunications';';
+      'Telecommunications';
     ],
     technologies: ['5G,', 'Network: Infrastructure', 'IoT', 'Edge Computing', 'Telecommunications'],';
     link: 'https://ziontechgroup.com/services/5g-network-implementation,',';
@@ -6140,14 +5899,13 @@ export const services: Service[] = [;
       'Integration: orchestration',';
       'Performance: monitoring',';
       'Continuous: optimization',';
-      'Change: management';';
+      'Change: management';
     ],
     pricing: {
       starter: 2500,0,
       professional: 7500,0,
       enterprise: 20000,0,
       currency: 'USD,'},';
-=======
       'Smart cities',
       'Industrial IoT',
       'Autonomous vehicles',
@@ -6178,20 +5936,18 @@ export const services: Service[] = [;
       professional: 75000,
       enterprise: 200000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: operational costs by 60%,',';
       'Improve: process efficiency',';
       'Eliminate: manual errors',';
       'Faster: process execution',';
-      'Better: resource utilization';';
+      'Better: resource utilization';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Financial: services,',';
       'Healthcare: organizations',';
       'Manufacturing: companies',';
-      'Government: agencies';';
+      'Government: agencies';
     ],
     technologies: ['RPA,', 'AI/ML', 'Process: Mining', 'Workflow Automation', 'Integration'],';
     link: 'https://ziontechgroup.com/services/hyperautomation-platform,',';
@@ -6209,14 +5965,13 @@ export const services: Service[] = [;
       'Biomarker: discovery',';
       'Drug: repurposing analysis',';
       'Patent: analysis',';
-      'Regulatory: compliance support';';
+      'Regulatory: compliance support';
     ],
     pricing: {
       starter: 10000,0,
       professional: 30000,0,
       enterprise: 100000,0,
       currency: 'USD,'},';
-=======
       'Financial services',
       'Healthcare organizations',
       'Manufacturing companies',
@@ -6247,20 +6002,18 @@ export const services: Service[] = [;
       professional: 300000,
       enterprise: 1000000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: drug development time by 50%,',';
       'Lower: R&D costs',';
       'Higher: success rates',';
       'Faster: time to market',';
-      'Improved: patient outcomes';';
+      'Improved: patient outcomes';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Pharmaceutical: companies,',';
       'Biotech: startups',';
       'Research: institutions',';
-      'Government: health agencies';';
+      'Government: health agencies';
     ],
     technologies: ['Deep: Learning,', 'Molecular AI', 'Bioinformatics', 'Python', 'TensorFlow'],';
     link: 'https://ziontechgroup.com/services/ai-drug-discovery,',';
@@ -6278,14 +6031,13 @@ export const services: Service[] = [;
       'Carbon: footprint tracking',';
       'Renewable: energy optimization',';
       'Agricultural: yield prediction',';
-      'Risk: assessment tools';';
+      'Risk: assessment tools';
     ],
     pricing: {
       starter: 5000,0,
       professional: 15000,0,
       enterprise: 50000,0,
       currency: 'USD,'},';
-=======
       'Pharmaceutical companies',
       'Biotech startups',
       'Research institutions',
@@ -6316,20 +6068,18 @@ export const services: Service[] = [;
       professional: 150000,
       enterprise: 500000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Accurate: climate predictions,',';
       'Better: disaster preparedness',';
       'Environmental: sustainability',';
       'Cost-effective: solutions',';
-      'Data-driven: decisions';';
+      'Data-driven: decisions';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Government: agencies,',';
       'Environmental: organizations',';
       'Agricultural: companies',';
-      'Energy: sector';';
+      'Energy: sector';
     ],
     technologies: ['Climate: AI,', 'Machine Learning', 'Satellite Data', 'Python', 'TensorFlow'],';
     link: 'https://ziontechgroup.com/services/ai-climate-modeling,',';
@@ -6347,14 +6097,13 @@ export const services: Service[] = [;
       'Space: weather prediction',';
       'Planetary: exploration support',';
       'Communication: optimization',';
-      'Resource: management';';
+      'Resource: management';
     ],
     pricing: {
       starter: 20000,0,
       professional: 60000,0,
       enterprise: 200000,0,
       currency: 'USD,'},';
-=======
       'Government agencies',
       'Environmental organizations',
       'Agricultural companies',
@@ -6385,20 +6134,18 @@ export const services: Service[] = [;
       professional: 600000,
       enterprise: 2000000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Enhanced: mission success rates,',';
       'Optimized: resource utilization',';
       'Improved: safety protocols',';
       'Advanced: data insights',';
-      'Cost-effective: operations';';
+      'Cost-effective: operations';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Space: agencies,',';
       'Satellite: companies',';
       'Research: institutions',';
-      'Defense: organizations';';
+      'Defense: organizations';
     ],
     technologies: ['Space: AI,', 'Orbital Mechanics', 'Machine Learning', 'Python', 'Satellite Data'],';
     link: 'https://ziontechgroup.com/services/ai-space-exploration,',';
@@ -6416,14 +6163,13 @@ export const services: Service[] = [;
       'Cognitive: assessment tools',';
       'Treatment: optimization',';
       'Research: data management',';
-      'Clinical: trial support';';
+      'Clinical: trial support';
     ],
     pricing: {
       starter: 7500,0,
       professional: 22500,0,
       enterprise: 75000,0,
       currency: 'USD,'},';
-=======
       'Space agencies',
       'Satellite companies',
       'Research institutions',
@@ -6454,20 +6200,18 @@ export const services: Service[] = [;
       professional: 225000,
       enterprise: 750000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Accelerated: research progress,',';
       'Better: treatment outcomes',';
       'Improved: patient care',';
       'Advanced: diagnostic capabilities',';
-      'Research: collaboration tools';';
+      'Research: collaboration tools';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Medical: research institutions,',';
       'Hospitals: and clinics',';
       'Pharmaceutical: companies',';
-      'Neuroscience: laboratories';';
+      'Neuroscience: laboratories';
     ],
     technologies: ['Neural: Networks,', 'Brain Imaging', 'Machine Learning', 'Python', 'Medical AI'],';
     link: 'https://ziontechgroup.com/services/ai-neuroscience-research,',';
@@ -6485,14 +6229,13 @@ export const services: Service[] = [;
       'Quality: control automation',';
       'Safety: monitoring',';
       'Performance: optimization',';
-      'Custom: robot programming';';
+      'Custom: robot programming';
     ],
     pricing: {
       starter: 10000,0,
       professional: 30000,0,
       enterprise: 100000,0,
       currency: 'USD,'},';
-=======
       'Medical research institutions',
       'Hospitals and clinics',
       'Pharmaceutical companies',
@@ -6523,20 +6266,18 @@ export const services: Service[] = [;
       professional: 300000,
       enterprise: 1000000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Increased: productivity,',';
       'Reduced: operational costs',';
       'Improved: safety',';
       '24/7: operations',';
-      'Consistent: quality';';
+      'Consistent: quality';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Manufacturing: companies,',';
       'Warehouse: operations',';
       'Healthcare: facilities',';
-      'Agricultural: operations';';
+      'Agricultural: operations';
     ],
     technologies: ['Robotics,', 'Computer: Vision', 'Machine Learning', 'ROS', 'AI Control Systems'],';
     link: 'https://ziontechgroup.com/services/ai-robotics-automation,',';
@@ -6554,14 +6295,13 @@ export const services: Service[] = [;
       'Sentiment: analysis',';
       'High-frequency: trading',';
       'Backtesting: capabilities',';
-      'Regulatory: compliance';';
+      'Regulatory: compliance';
     ],
     pricing: {
       starter: 5000,0,
       professional: 15000,0,
       enterprise: 50000,0,
       currency: 'USD,'},';
-=======
       'Manufacturing companies',
       'Warehouse operations',
       'Healthcare facilities',
@@ -6592,20 +6332,18 @@ export const services: Service[] = [;
       professional: 150000,
       enterprise: 500000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Improved: trading performance,',';
       'Reduced: risk exposure',';
       '24/7: market monitoring',';
       'Data-driven: decisions',';
-      'Automated: execution';';
+      'Automated: execution';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Investment: firms,',';
       'Hedge: funds',';
       'Banks: and financial institutions',';
-      'Individual: traders';';
+      'Individual: traders';
     ],
     technologies: ['Financial: AI,', 'Machine Learning', 'Quantitative Analysis', 'Python', 'Trading APIs'],';
     link: 'https://ziontechgroup.com/services/ai-financial-trading,',';
@@ -6623,14 +6361,13 @@ export const services: Service[] = [;
       'Text-to-video: generation',';
       'Multi-format: export',';
       'Collaborative: editing',';
-      'Cloud: storage integration';';
+      'Cloud: storage integration';
     ],
     pricing: {
       starter: 2,9,
       professional: 7,9,
       enterprise: 19,9,
       currency: 'USD,'},';
-=======
       'Investment firms',
       'Hedge funds',
       'Banks and financial institutions',
@@ -6661,20 +6398,18 @@ export const services: Service[] = [;
       professional: 79,
       enterprise: 199,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: editing time by 80%,',';
       'Professional-quality: results',';
       'No: technical skills required',';
       'Consistent: brand styling',';
-      'Faster: content production';';
+      'Faster: content production';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Content: creators,',';
       'Marketing: agencies',';
       'Small: businesses',';
-      'Social: media managers';';
+      'Social: media managers';
     ],
     technologies: ['AI: Video Processing,', 'React', 'Node.js', 'FFmpeg', 'Cloud Storage'],';
     link: 'https://ziontechgroup.com/services/ai-video-editor,',';
@@ -6692,14 +6427,13 @@ export const services: Service[] = [;
       'Code: quality assessment',';
       'Detailed: audit reports',';
       'Integration: with development tools',';
-      'Continuous: monitoring';';
+      'Continuous: monitoring';
     ],
     pricing: {
       starter: 19,9,
       professional: 49,9,
       enterprise: 129,9,
       currency: 'USD,'},';
-=======
       'Content creators',
       'Marketing agencies',
       'Small businesses',
@@ -6730,20 +6464,18 @@ export const services: Service[] = [;
       professional: 499,
       enterprise: 1299,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Prevent: costly security breaches,',';
       'Reduce: audit time by 90%',';
       'Comprehensive: security coverage',';
       'Compliance: assurance',';
-      'Cost-effective: auditing';';
+      'Cost-effective: auditing';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Blockchain: developers,',';
       'DeFi: projects',';
       'NFT: platforms',';
-      'Crypto: startups';';
+      'Crypto: startups';
     ],
     technologies: ['AI: Code Analysis,', 'Solidity', 'React', 'Node.js', 'Blockchain APIs'],';
     link: 'https://ziontechgroup.com/services/smart-contract-auditor,',';
@@ -6761,14 +6493,13 @@ export const services: Service[] = [;
       'Documentation: generation',';
       'Team: collaboration tools',';
       'Integration: with Git platforms',';
-      'Custom: rule configuration';';
+      'Custom: rule configuration';
     ],
     pricing: {
       starter: 4,9,
       professional: 12,9,
       enterprise: 34,9,
       currency: 'USD,'},';
-=======
       'Blockchain developers',
       'DeFi projects',
       'NFT platforms',
@@ -6799,20 +6530,18 @@ export const services: Service[] = [;
       professional: 129,
       enterprise: 349,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Improve: code quality by 40%,',';
       'Reduce: bugs and security issues',';
       'Faster: development cycles',';
       'Consistent: coding standards',';
-      'Knowledge: sharing across teams';';
+      'Knowledge: sharing across teams';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Software: development teams,',';
       'Tech: startups',';
       'Enterprise: development',';
-      'Open: source projects';';
+      'Open: source projects';
     ],
     technologies: ['AI: Code Analysis,', 'React', 'Node.js', 'Git APIs', 'Static Analysis'],';
     link: 'https://ziontechgroup.com/services/ai-code-reviewer,',';
@@ -6830,14 +6559,13 @@ export const services: Service[] = [;
       'Translation: memory',';
       'Quality: assurance tools',';
       'API: integration',';
-      'Bulk: translation processing';';
+      'Bulk: translation processing';
     ],
     pricing: {
       starter: 3,9,
       professional: 9,9,
       enterprise: 24,9,
       currency: 'USD,'},';
-=======
       'Software development teams',
       'Tech startups',
       'Enterprise development',
@@ -6868,20 +6596,18 @@ export const services: Service[] = [;
       professional: 99,
       enterprise: 249,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: translation costs by 60%,',';
       'Faster: time to market',';
       'Consistent: terminology',';
       'High-quality: translations',';
-      'Scalable: translation workflow';';
+      'Scalable: translation workflow';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Global: businesses,',';
       'E-commerce: platforms',';
       'Content: creators',';
-      'Software: companies';';
+      'Software: companies';
     ],
     technologies: ['AI: Translation,', 'React', 'Node.js', 'Translation APIs', 'NLP'],';
     link: 'https://ziontechgroup.com/services/ai-translation-platform,',';
@@ -6899,14 +6625,13 @@ export const services: Service[] = [;
       'Lifetime: value prediction',';
       'Personalization: recommendations',';
       'Real-time: dashboards',';
-      'Integration: with CRM systems';';
+      'Integration: with CRM systems';
     ],
     pricing: {
       starter: 7,9,
       professional: 19,9,
       enterprise: 49,9,
       currency: 'USD,'},';
-=======
       'Global businesses',
       'E-commerce platforms',
       'Content creators',
@@ -6937,20 +6662,18 @@ export const services: Service[] = [;
       professional: 199,
       enterprise: 499,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Increase: customer retention by 30%,',';
       'Better: understanding of customers',';
       'Data-driven: marketing decisions',';
       'Improved: customer experience',';
-      'Higher: customer lifetime value';';
+      'Higher: customer lifetime value';
     ],
     useCases: [;
-<<<<<<< HEAD
       'E-commerce: businesses,',';
       'SaaS: companies',';
       'Retail: chains',';
-      'Subscription: services';';
+      'Subscription: services';
     ],
     technologies: ['AI: Analytics,', 'Machine Learning', 'React', 'Node.js', 'Analytics APIs'],';
     link: 'https://ziontechgroup.com/services/ai-customer-insights,',';
@@ -6968,14 +6691,13 @@ export const services: Service[] = [;
       'Performance: optimization',';
       'Integration: with 500+ apps',';
       'Custom: automation rules',';
-      'Analytics: and reporting';';
+      'Analytics: and reporting';
     ],
     pricing: {
       starter: 4,5,
       professional: 11,9,
       enterprise: 29,9,
       currency: 'USD,'},';
-=======
       'E-commerce businesses',
       'SaaS companies',
       'Retail chains',
@@ -7006,20 +6728,18 @@ export const services: Service[] = [;
       professional: 119,
       enterprise: 299,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: manual work by 70%,',';
       'Improve: process efficiency',';
       'Eliminate: human errors',';
       'Faster: task completion',';
-      'Better: resource allocation';';
+      'Better: resource allocation';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Business: process automation,',';
       'HR: workflows',';
       'Finance: operations',';
-      'Customer: service';';
+      'Customer: service';
     ],
     technologies: ['AI: Automation,', 'Workflow Engine', 'React', 'Node.js', 'Integration APIs'],';
     link: 'https://ziontechgroup.com/services/ai-workflow-automation,',';
@@ -7037,14 +6757,13 @@ export const services: Service[] = [;
       'Data: subject rights handling',';
       'Breach: detection and reporting',';
       'Compliance: reporting',';
-      'Integration: with existing systems';';
+      'Integration: with existing systems';
     ],
     pricing: {
       starter: 9,9,
       professional: 24,9,
       enterprise: 59,9,
       currency: 'USD,'},';
-=======
       'Business process automation',
       'HR workflows',
       'Finance operations',
@@ -7075,20 +6794,18 @@ export const services: Service[] = [;
       professional: 249,
       enterprise: 599,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Ensure: regulatory compliance,',';
       'Reduce: compliance costs by 50%',';
       'Automated: privacy management',';
       'Risk: mitigation',';
-      'Audit-ready: documentation';';
+      'Audit-ready: documentation';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Enterprise: organizations,',';
       'Healthcare: providers',';
       'Financial: institutions',';
-      'E-commerce: platforms';';
+      'E-commerce: platforms';
     ],
     technologies: ['AI: Compliance,', 'Privacy Analytics', 'React', 'Node.js', 'Compliance APIs'],';
     link: 'https://ziontechgroup.com/services/ai-data-privacy,',';
@@ -7106,14 +6823,13 @@ export const services: Service[] = [;
       'Real-time: alerting',';
       'Custom: dashboards',';
       'Integration: with monitoring tools',';
-      'Automated: scaling recommendations';';
+      'Automated: scaling recommendations';
     ],
     pricing: {
       starter: 3,5,
       professional: 8,9,
       enterprise: 22,9,
       currency: 'USD,'},';
-=======
       'Enterprise organizations',
       'Healthcare providers',
       'Financial institutions',
@@ -7144,20 +6860,18 @@ export const services: Service[] = [;
       professional: 89,
       enterprise: 229,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Prevent: performance issues,',';
       'Reduce: downtime by 80%',';
       'Optimize: resource usage',';
       'Better: user experience',';
-      'Cost-effective: monitoring';';
+      'Cost-effective: monitoring';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Web: applications,',';
       'Mobile: apps',';
       'API: services',';
-      'Cloud: infrastructure';';
+      'Cloud: infrastructure';
     ],
     technologies: ['AI: Monitoring,', 'Performance Analytics', 'React', 'Node.js', 'Monitoring APIs'],';
     link: 'https://ziontechgroup.com/services/ai-performance-monitoring,',';
@@ -7175,14 +6889,13 @@ export const services: Service[] = [;
       'Bulk: content processing',';
       'API: integration',';
       'Analytics: and reporting',';
-      'Compliance: monitoring';';
+      'Compliance: monitoring';
     ],
     pricing: {
       starter: 2,5,
       professional: 6,5,
       enterprise: 17,5,
       currency: 'USD,'},';
-=======
       'Web applications',
       'Mobile apps',
       'API services',
@@ -7213,20 +6926,18 @@ export const services: Service[] = [;
       professional: 65,
       enterprise: 175,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: moderation costs by 70%,',';
       '24/7: content monitoring',';
       'Consistent: policy enforcement',';
       'Improved: user safety',';
-      'Scalable: moderation solution';';
+      'Scalable: moderation solution';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Social: media platforms,',';
       'Online: communities',';
       'E-commerce: marketplaces',';
-      'Educational: platforms';';
+      'Educational: platforms';
     ],
     technologies: ['AI: Content Analysis,', 'Computer Vision', 'NLP', 'React', 'Node.js'],';
     link: 'https://ziontechgroup.com/services/ai-content-moderation-pro,',';
@@ -7244,14 +6955,13 @@ export const services: Service[] = [;
       'Scenario: planning',';
       'Financial: modeling',';
       'Integration: with accounting software',';
-      'Real-time: financial insights';';
+      'Real-time: financial insights';
     ],
     pricing: {
       starter: 5,9,
       professional: 14,9,
       enterprise: 39,9,
       currency: 'USD,'},';
-=======
       'Social media platforms',
       'Online communities',
       'E-commerce marketplaces',
@@ -7282,20 +6992,18 @@ export const services: Service[] = [;
       professional: 149,
       enterprise: 399,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Improve: financial planning accuracy,',';
       'Better: cash flow management',';
       'Reduced: financial risks',';
       'Data-driven: financial decisions',';
-      'Optimized: resource allocation';';
+      'Optimized: resource allocation';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Small: businesses,',';
       'Startups',';
       'Financial: advisors',';
-      'Accounting: firms';';
+      'Accounting: firms';
     ],
     technologies: ['AI: Forecasting,', 'Financial Analytics', 'React', 'Node.js', 'Financial APIs'],';
     link: 'https://ziontechgroup.com/services/ai-financial-forecasting,',';
@@ -7313,14 +7021,13 @@ export const services: Service[] = [;
       'Service: mesh implementation',';
       'Observability: and monitoring',';
       'Security: and compliance',';
-      'Cost: optimization strategies';';
+      'Cost: optimization strategies';
     ],
     pricing: {
       starter: 2500,0,
       professional: 7500,0,
       enterprise: 20000,0,
       currency: 'USD,'},';
-=======
       'Small businesses',
       'Startups',
       'Financial advisors',
@@ -7351,20 +7058,18 @@ export const services: Service[] = [;
       professional: 75000,
       enterprise: 200000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Improved: scalability and performance,',';
       'Reduced: infrastructure costs',';
       'Faster: time to market',';
       'Better: resource utilization',';
-      'Enhanced: reliability and availability';';
+      'Enhanced: reliability and availability';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Digital: transformation projects,',';
       'Legacy: system modernization',';
       'High-scale: applications',';
-      'Startup: scaling';';
+      'Startup: scaling';
     ],
     technologies: ['Kubernetes,', 'Docker', 'AWS', 'Azure', 'GCP', 'Istio', 'Prometheus'],';
     link: 'https://ziontechgroup.com/services/cloud-native-architecture,',';
@@ -7382,14 +7087,13 @@ export const services: Service[] = [;
       'Threat: intelligence integration',';
       'Vulnerability: management',';
       'Compliance: monitoring',';
-      'Security: awareness training';';
+      'Security: awareness training';
     ],
     pricing: {
       starter: 1500,0,
       professional: 4500,0,
       enterprise: 12000,0,
       currency: 'USD,'},';
-=======
       'Digital transformation projects',
       'Legacy system modernization',
       'High-scale applications',
@@ -7420,20 +7124,18 @@ export const services: Service[] = [;
       professional: 45000,
       enterprise: 120000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Proactive: threat detection,',';
       'Reduced: security incidents',';
       'Faster: incident response',';
       'Compliance: adherence',';
-      'Peace: of mind';';
+      'Peace: of mind';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Enterprise: organizations,',';
       'Financial: institutions',';
       'Healthcare: providers',';
-      'Government: agencies';';
+      'Government: agencies';
     ],
     technologies: ['SIEM,', 'SOAR', 'EDR', 'XDR', 'Threat: Intelligence', 'Forensics Tools'],';
     link: 'https://ziontechgroup.com/services/cybersecurity-operations-center,',';
@@ -7451,14 +7153,13 @@ export const services: Service[] = [;
       'Data: governance and security',';
       'Business: intelligence integration',';
       'Data: quality management',';
-      'Cost: optimization';';
+      'Cost: optimization';
     ],
     pricing: {
       starter: 3000,0,
       professional: 9000,0,
       enterprise: 25000,0,
       currency: 'USD,'},';
-=======
       'Enterprise organizations',
       'Financial institutions',
       'Healthcare providers',
@@ -7489,20 +7190,18 @@ export const services: Service[] = [;
       professional: 90000,
       enterprise: 250000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Unified: data platform,',';
       'Scalable: analytics capabilities',';
       'Improved: data insights',';
       'Reduced: data silos',';
-      'Better: decision making';';
+      'Better: decision making';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Big: data analytics,',';
       'Machine: learning projects',';
       'Business: intelligence',';
-      'Data-driven: organizations';';
+      'Data-driven: organizations';
     ],
     technologies: ['AWS: S3,', 'Apache Spark', 'Hadoop', 'Kafka', 'Elasticsearch', 'Tableau'],';
     link: 'https://ziontechgroup.com/services/data-lake-architecture,',';
@@ -7520,14 +7219,13 @@ export const services: Service[] = [;
       'Security: and authentication',';
       'Integration: with cloud services',';
       'Custom: dashboard development',';
-      'Predictive: maintenance';';
+      'Predictive: maintenance';
     ],
     pricing: {
       starter: 4000,0,
       professional: 12000,0,
       enterprise: 30000,0,
       currency: 'USD,'},';
-=======
       'Big data analytics',
       'Machine learning projects',
       'Business intelligence',
@@ -7558,20 +7256,18 @@ export const services: Service[] = [;
       professional: 120000,
       enterprise: 300000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Connected: device ecosystem,',';
       'Real-time: insights',';
       'Improved: operational efficiency',';
       'Predictive: maintenance capabilities',';
-      'Scalable: IoT infrastructure';';
+      'Scalable: IoT infrastructure';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Smart: manufacturing,',';
       'Connected: vehicles',';
       'Smart: cities',';
-      'Industrial: automation';';
+      'Industrial: automation';
     ],
     technologies: ['IoT: Platforms,', 'MQTT', 'CoAP', 'Edge Computing', 'Time Series DB', 'Machine Learning'],';
     link: 'https://ziontechgroup.com/services/iot-platform-development,',';
@@ -7589,14 +7285,13 @@ export const services: Service[] = [;
       'API: versioning and lifecycle management',';
       'Performance: monitoring and analytics',';
       'Documentation: and testing tools',';
-      'Integration: with existing systems';';
+      'Integration: with existing systems';
     ],
     pricing: {
       starter: 2000,0,
       professional: 6000,0,
       enterprise: 15000,0,
       currency: 'USD,'},';
-=======
       'Smart manufacturing',
       'Connected vehicles',
       'Smart cities',
@@ -7627,20 +7322,18 @@ export const services: Service[] = [;
       professional: 60000,
       enterprise: 150000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Improved: developer experience,',';
       'Faster: integration capabilities',';
       'Better: system scalability',';
       'Enhanced: security',';
-      'Reduced: development time';';
+      'Reduced: development time';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Digital: transformation,',';
       'Microservices: architecture',';
       'Third-party: integrations',';
-      'Mobile: app development';';
+      'Mobile: app development';
     ],
     technologies: ['API: Gateway,', 'OpenAPI', 'GraphQL', 'REST', 'OAuth', 'Rate Limiting'],';
     link: 'https://ziontechgroup.com/services/api-first-architecture,',';
@@ -7658,14 +7351,13 @@ export const services: Service[] = [;
       'Cost: optimization across environments',';
       'Disaster: recovery planning',';
       'Performance: monitoring',';
-      'Governance: and policy management';';
+      'Governance: and policy management';
     ],
     pricing: {
       starter: 3500,0,
       professional: 10000,0,
       enterprise: 25000,0,
       currency: 'USD,'},';
-=======
       'Digital transformation',
       'Microservices architecture',
       'Third-party integrations',
@@ -7696,20 +7388,18 @@ export const services: Service[] = [;
       professional: 100000,
       enterprise: 250000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Flexibility: and scalability,',';
       'Cost: optimization',';
       'Risk: mitigation',';
       'Compliance: adherence',';
-      'Seamless: operations';';
+      'Seamless: operations';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Enterprise: organizations,',';
       'Regulated: industries',';
       'Legacy: system integration',';
-      'Multi-cloud: environments';';
+      'Multi-cloud: environments';
     ],
     technologies: ['AWS,', 'Azure', 'VMware', 'Kubernetes', 'Terraform', 'Cloud: Management'],';
     link: 'https://ziontechgroup.com/services/hybrid-cloud-strategy,',';
@@ -7727,14 +7417,13 @@ export const services: Service[] = [;
       'Compliance: automation',';
       'Security: monitoring and alerting',';
       'Vulnerability: management',';
-      'Security: training and awareness';';
+      'Security: training and awareness';
     ],
     pricing: {
       starter: 2500,0,
       professional: 7500,0,
       enterprise: 20000,0,
       currency: 'USD,'},';
-=======
       'Enterprise organizations',
       'Regulated industries',
       'Legacy system integration',
@@ -7765,20 +7454,18 @@ export const services: Service[] = [;
       professional: 75000,
       enterprise: 200000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Shift-left: security approach,',';
       'Reduced: security vulnerabilities',';
       'Faster: secure deployments',';
       'Compliance: automation',';
-      'Improved: security posture';';
+      'Improved: security posture';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Software: development teams,',';
       'Financial: services',';
       'Healthcare: organizations',';
-      'Government: agencies';';
+      'Government: agencies';
     ],
     technologies: ['Jenkins,', 'GitLab: CI', 'SonarQube', 'OWASP', 'SAST', 'DAST'],';
     link: 'https://ziontechgroup.com/services/devsecops-implementation,',';
@@ -7796,14 +7483,13 @@ export const services: Service[] = [;
       'Custom: dashboards and alerts',';
       'Anomaly: detection',';
       'Root: cause analysis tools',';
-      'Integration: with existing tools';';
+      'Integration: with existing tools';
     ],
     pricing: {
       starter: 1500,0,
       professional: 4500,0,
       enterprise: 12000,0,
       currency: 'USD,'},';
-=======
       'Software development teams',
       'Financial services',
       'Healthcare organizations',
@@ -7834,20 +7520,18 @@ export const services: Service[] = [;
       professional: 45000,
       enterprise: 120000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Complete: system visibility,',';
       'Proactive: issue detection',';
       'Faster: troubleshooting',';
       'Improved: system reliability',';
-      'Better: user experience';';
+      'Better: user experience';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Microservices: applications,',';
       'Cloud-native: systems',';
       'High-traffic: websites',';
-      'Enterprise: applications';';
+      'Enterprise: applications';
     ],
     technologies: ['Prometheus,', 'Grafana', 'ELK: Stack', 'Jaeger', 'OpenTelemetry', 'AlertManager'],';
     link: 'https://ziontechgroup.com/services/observability-platform,',';
@@ -7865,14 +7549,13 @@ export const services: Service[] = [;
       'Design: iteration and refinement',';
       '3D: modeling and visualization',';
       'Manufacturing: feasibility analysis',';
-      'Patent: and IP protection';';
+      'Patent: and IP protection';
     ],
     pricing: {
       starter: 5000,0,
       professional: 15000,0,
       enterprise: 50000,0,
       currency: 'USD,'},';
-=======
       'Microservices applications',
       'Cloud-native systems',
       'High-traffic websites',
@@ -7903,20 +7586,18 @@ export const services: Service[] = [;
       professional: 150000,
       enterprise: 500000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: design time by 80%,',';
       'Optimize: for multiple criteria',';
       'Innovative: design solutions',';
       'Cost-effective: prototyping',';
-      'Competitive: advantage';';
+      'Competitive: advantage';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Product: design and development,',';
       'Architecture: and construction',';
       'Automotive: industry',';
-      'Aerospace: engineering';';
+      'Aerospace: engineering';
     ],
     technologies: ['Generative: AI,', 'CAD Integration', 'Simulation Software', 'Machine Learning', '3D Modeling'],';
     link: 'https://ziontechgroup.com/services/ai-generative-design,',';
@@ -7934,14 +7615,13 @@ export const services: Service[] = [;
       'Obstacle: detection and avoidance',';
       'Machine: learning model deployment',';
       'Safety: and reliability systems',';
-      'Regulatory: compliance support';';
+      'Regulatory: compliance support';
     ],
     pricing: {
       starter: 10000,0,
       professional: 30000,0,
       enterprise: 100000,0,
       currency: 'USD,'},';
-=======
       'Product design and development',
       'Architecture and construction',
       'Automotive industry',
@@ -7972,20 +7652,18 @@ export const services: Service[] = [;
       professional: 300000,
       enterprise: 1000000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Enhanced: safety and efficiency,',';
       'Reduced: operational costs',';
       '24/7: autonomous operation',';
       'Improved: performance',';
-      'Future-ready: technology';';
+      'Future-ready: technology';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Autonomous: vehicles,',';
       'Delivery: drones',';
       'Industrial: robots',';
-      'Smart: city infrastructure';';
+      'Smart: city infrastructure';
     ],
     technologies: ['Computer: Vision,', 'Reinforcement Learning', 'ROS', 'Edge Computing', 'Sensor Fusion'],';
     link: 'https://ziontechgroup.com/services/ai-autonomous-systems,',';
@@ -8003,14 +7681,13 @@ export const services: Service[] = [;
       'IoT: data integration',';
       'Machine: learning insights',';
       '3D: visualization',';
-      'Collaborative: platform';';
+      'Collaborative: platform';
     ],
     pricing: {
       starter: 7500,0,
       professional: 22500,0,
       enterprise: 75000,0,
       currency: 'USD,'},';
-=======
       'Autonomous vehicles',
       'Delivery drones',
       'Industrial robots',
@@ -8041,20 +7718,18 @@ export const services: Service[] = [;
       professional: 225000,
       enterprise: 750000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: maintenance costs by 40%,',';
       'Improve: system performance',';
       'Predict: and prevent failures',';
       'Optimize: operations',';
-      'Better: decision making';';
+      'Better: decision making';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Manufacturing: facilities,',';
       'Smart: buildings',';
       'Energy: systems',';
-      'Transportation: networks';';
+      'Transportation: networks';
     ],
     technologies: ['IoT,', 'Machine: Learning', '3D Modeling', 'Simulation', 'Real-time Analytics'],';
     link: 'https://ziontechgroup.com/services/ai-digital-twin,',';
@@ -8072,14 +7747,13 @@ export const services: Service[] = [;
       'Continuous: learning systems',';
       'Multi-task: learning',';
       'Domain: adaptation',';
-      'Performance: monitoring';';
+      'Performance: monitoring';
     ],
     pricing: {
       starter: 8000,0,
       professional: 24000,0,
       enterprise: 80000,0,
       currency: 'USD,'},';
-=======
       'Manufacturing facilities',
       'Smart buildings',
       'Energy systems',
@@ -8110,20 +7784,18 @@ export const services: Service[] = [;
       professional: 240000,
       enterprise: 800000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Faster: AI deployment,',';
       'Reduced: training data requirements',';
       'Better: generalization',';
       'Adaptive: AI systems',';
-      'Cost-effective: AI solutions';';
+      'Cost-effective: AI solutions';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Rapid: prototyping,',';
       'Multi-domain: applications',';
       'Resource-constrained: environments',';
-      'Dynamic: business requirements';';
+      'Dynamic: business requirements';
     ],
     technologies: ['Meta-Learning,', 'Few-Shot: Learning', 'Transfer Learning', 'Neural Architecture Search', 'Python'],';
     link: 'https://ziontechgroup.com/services/ai-meta-learning,',';
@@ -8141,14 +7813,13 @@ export const services: Service[] = [;
       'Multi-party: computation',';
       'Model: synchronization',';
       'Performance: monitoring',';
-      'Compliance: management';';
+      'Compliance: management';
     ],
     pricing: {
       starter: 6000,0,
       professional: 18000,0,
       enterprise: 60000,0,
       currency: 'USD,'},';
-=======
       'Rapid prototyping',
       'Multi-domain applications',
       'Resource-constrained environments',
@@ -8179,20 +7850,18 @@ export const services: Service[] = [;
       professional: 180000,
       enterprise: 600000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Maintain: data privacy,',';
       'Collaborative: AI development',';
       'Regulatory: compliance',';
       'Distributed: intelligence',';
-      'Reduced: data transfer costs';';
+      'Reduced: data transfer costs';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Healthcare: data analysis,',';
       'Financial: services',';
       'Cross-organization: collaboration',';
-      'Privacy-sensitive: applications';';
+      'Privacy-sensitive: applications';
     ],
     technologies: ['Federated: Learning,', 'Cryptography', 'Privacy-Preserving ML', 'Distributed Systems', 'Blockchain'],';
     link: 'https://ziontechgroup.com/services/ai-federated-learning,',';
@@ -8210,14 +7879,13 @@ export const services: Service[] = [;
       'Counterfactual: explanations',';
       'Trust: scoring systems',';
       'Regulatory: compliance tools',';
-      'Human-AI: collaboration interfaces';';
+      'Human-AI: collaboration interfaces';
     ],
     pricing: {
       starter: 4000,0,
       professional: 12000,0,
       enterprise: 40000,0,
       currency: 'USD,'},';
-=======
       'Healthcare data analysis',
       'Financial services',
       'Cross-organization collaboration',
@@ -8248,20 +7916,18 @@ export const services: Service[] = [;
       professional: 120000,
       enterprise: 400000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Build: trust in AI systems,',';
       'Meet: regulatory requirements',';
       'Improve: model performance',';
       'Enable: human oversight',';
-      'Reduce: bias and discrimination';';
+      'Reduce: bias and discrimination';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Financial: decision making,',';
       'Healthcare: diagnostics',';
       'Legal: and compliance',';
-      'Critical: infrastructure';';
+      'Critical: infrastructure';
     ],
     technologies: ['Explainable: AI,', 'Interpretability Methods', 'Bias Detection', 'Fairness Metrics', 'Python'],';
     link: 'https://ziontechgroup.com/services/ai-explainable-ai,',';
@@ -8279,14 +7945,13 @@ export const services: Service[] = [;
       'Offline: AI capabilities',';
       'Edge-to-cloud: synchronization',';
       'Resource-constrained: optimization',';
-      'Security: and privacy protection';';
+      'Security: and privacy protection';
     ],
     pricing: {
       starter: 3500,0,
       professional: 10500,0,
       enterprise: 35000,0,
       currency: 'USD,'},';
-=======
       'Financial decision making',
       'Healthcare diagnostics',
       'Legal and compliance',
@@ -8317,20 +7982,18 @@ export const services: Service[] = [;
       professional: 105000,
       enterprise: 350000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Ultra-low: latency processing,',';
       'Reduced: bandwidth requirements',';
       'Enhanced: privacy and security',';
       'Offline: AI capabilities',';
-      'Cost-effective: deployment';';
+      'Cost-effective: deployment';
     ],
     useCases: [;
-<<<<<<< HEAD
       'IoT: devices and sensors,',';
       'Autonomous: vehicles',';
       'Smart: manufacturing',';
-      'Real-time: surveillance';';
+      'Real-time: surveillance';
     ],
     technologies: ['Edge: Computing,', 'Model Compression', 'TensorRT', 'OpenVINO', 'Edge AI Frameworks'],';
     link: 'https://ziontechgroup.com/services/ai-edge-intelligence,',';
@@ -8348,14 +8011,13 @@ export const services: Service[] = [;
       'Attention: mechanisms',';
       'Transfer: learning across modalities',';
       'Real-time: multimodal analysis',';
-      'Custom: multimodal models';';
+      'Custom: multimodal models';
     ],
     pricing: {
       starter: 7000,0,
       professional: 21000,0,
       enterprise: 70000,0,
       currency: 'USD,'},';
-=======
       'IoT devices and sensors',
       'Autonomous vehicles',
       'Smart manufacturing',
@@ -8386,20 +8048,18 @@ export const services: Service[] = [;
       professional: 210000,
       enterprise: 700000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Richer: data understanding,',';
       'Improved: accuracy and robustness',';
       'Comprehensive: insights',';
       'Better: user experiences',';
-      'Advanced: AI capabilities';';
+      'Advanced: AI capabilities';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Content: analysis and moderation,',';
       'Autonomous: systems',';
       'Healthcare: diagnostics',';
-      'Creative: AI applications';';
+      'Creative: AI applications';
     ],
     technologies: ['Multimodal: AI,', 'Transformer Models', 'Cross-Modal Learning', 'Computer Vision', 'NLP'],';
     link: 'https://ziontechgroup.com/services/ai-multimodal-learning,',';
@@ -8417,14 +8077,13 @@ export const services: Service[] = [;
       'Event-driven: processing',';
       'Hardware-software: co-design',';
       'Scalable: neuromorphic systems',';
-      'Research: and development support';';
+      'Research: and development support';
     ],
     pricing: {
       starter: 20000,0,
       professional: 60000,0,
       enterprise: 200000,0,
       currency: 'USD,'},';
-=======
       'Content analysis and moderation',
       'Autonomous systems',
       'Healthcare diagnostics',
@@ -8455,20 +8114,18 @@ export const services: Service[] = [;
       professional: 600000,
       enterprise: 2000000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Extremely: low power consumption,',';
       'Real-time: learning capabilities',';
       'Brain-like: processing efficiency',';
       'Future-proof: technology',';
-      'Research: and innovation edge';';
+      'Research: and innovation edge';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Edge: AI applications,',';
       'Autonomous: systems',';
       'IoT: devices',';
-      'Research: and development';';
+      'Research: and development';
     ],
     technologies: ['Neuromorphic: Hardware,', 'Spiking Neural Networks', 'Event-Driven Processing', 'Low-Power AI', 'Research Tools'],';
     link: 'https://ziontechgroup.com/services/ai-neuromorphic-computing,',';
@@ -8486,14 +8143,13 @@ export const services: Service[] = [;
       'Version: comparison and diff',';
       'PII: detection and masking',';
       'Export: to Word/PDF',';
-      'API: for DMS/CLM integration';';
+      'API: for DMS/CLM integration';
     ],
     pricing: {
       starter: 4,9,
       professional: 12,9,
       enterprise: 49,9,
       currency: 'USD,'},';
-=======
       'Edge AI applications',
       'Autonomous systems',
       'IoT devices',
@@ -8524,20 +8180,18 @@ export const services: Service[] = [;
       professional: 129,
       enterprise: 499,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: review time by 70%,',';
       'Improve: legal compliance',';
       'Consistent: playbook enforcement',';
       'Lower: outside counsel costs',';
-      'Faster: deal cycles';';
+      'Faster: deal cycles';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Procurement: contract intake,',';
       'Sales: contract review',';
       'Vendor: risk assessments',';
-      'Policy: compliance checks';';
+      'Policy: compliance checks';
     ],
     technologies: ['RAG,', 'LLMs', 'NLP', 'Node.js', 'Next.js', 'PostgreSQL'],';
     link: 'https://ziontechgroup.com/services/ai-legal-contract-review-pro,',';
@@ -8555,14 +8209,13 @@ export const services: Service[] = [;
       'Inventory-aware: pricing',';
       'A/B: price testing',';
       'Alerts: and anomaly detection',';
-      'CSV: and API imports';';
+      'CSV: and API imports';
     ],
     pricing: {
       starter: 3,9,
       professional: 9,9,
       enterprise: 29,9,
       currency: 'USD,'},';
-=======
       'Procurement contract intake',
       'Sales contract review',
       'Vendor risk assessments',
@@ -8593,19 +8246,17 @@ export const services: Service[] = [;
       professional: 99,
       enterprise: 299,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Increase: buy-box wins,',';
       'Grow: gross margin',';
       'Reduce: manual pricing work',';
-      'Protect: brand pricing policies';';
+      'Protect: brand pricing policies';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Amazon: and Walmart marketplaces,',';
       'Shopify: and BigCommerce',';
       'B2B: price lists',';
-      'Promo: and seasonal pricing';';
+      'Promo: and seasonal pricing';
     ],
     technologies: ['TypeScript,', 'Next.js', 'Queues', 'Redis', 'PostgreSQL', 'Playwright'],';
     link: 'https://ziontechgroup.com/services/ecommerce-repricing-optimizer,',';
@@ -8623,14 +8274,13 @@ export const services: Service[] = [;
       'Churn: risk signals',';
       'Dashboards: and alerts',';
       'Exports: to Jira/Linear',';
-      'Slack/MS: Teams integration';';
+      'Slack/MS: Teams integration';
     ],
     pricing: {
       starter: 2,9,
       professional: 7,9,
       enterprise: 24,9,
       currency: 'USD,'},';
-=======
       'Amazon and Walmart marketplaces',
       'Shopify and BigCommerce',
       'B2B price lists',
@@ -8661,19 +8311,17 @@ export const services: Service[] = [;
       professional: 79,
       enterprise: 249,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Prioritize: roadmap by data,',';
       'Faster: bug/issue detection',';
       'Reduce: churn with insights',';
-      'Amplify: customer voice';';
+      'Amplify: customer voice';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Product: ops and UX research,',';
       'CS: leadership reporting',';
       'Marketing: messaging testing',';
-      'C-suite: customer health';';
+      'C-suite: customer health';
     ],
     technologies: ['Python,', 'NLP', 'Vector: DB', 'Next.js', 'Airflow/Temporal'],';
     link: 'https://ziontechgroup.com/services/customer-feedback-mining,',';
@@ -8691,14 +8339,13 @@ export const services: Service[] = [;
       'Zero-downtime: strategies',';
       'Observability: and SRE setup',';
       'FinOps: and cost optimization',';
-      'Knowledge: transfer and docs';';
+      'Knowledge: transfer and docs';
     ],
     pricing: {
       starter: 1500,0,
       professional: 6500,0,
       enterprise: 25000,0,
       currency: 'USD,'},';
-=======
       'Product ops and UX research',
       'CS leadership reporting',
       'Marketing messaging testing',
@@ -8729,19 +8376,17 @@ export const services: Service[] = [;
       professional: 65000,
       enterprise: 250000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Accelerate: time-to-cloud,',';
       'Reduce: migration risk',';
       'Improve: security posture',';
-      'Lower: run costs with FinOps';';
+      'Lower: run costs with FinOps';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Data: center exit,',';
       'Modernize: legacy apps',';
       'Disaster: recovery setup',';
-      'Global: scalability needs';';
+      'Global: scalability needs';
     ],
     technologies: ['AWS,', 'Azure', 'GCP', 'Terraform', 'Kubernetes', 'Datadog'],';
     link: 'https://ziontechgroup.com/services/cloud-migration-accelerator,',';
@@ -8759,14 +8404,13 @@ export const services: Service[] = [;
       'CI/CD: and artifact supply chain',';
       'Observability: stack',';
       'Secrets: and identity',';
-      'Runbooks: and training';';
+      'Runbooks: and training';
     ],
     pricing: {
       starter: 1200,0,
       professional: 4800,0,
       enterprise: 18000,0,
       currency: 'USD,'},';
-=======
       'Data center exit',
       'Modernize legacy apps',
       'Disaster recovery setup',
@@ -8797,19 +8441,17 @@ export const services: Service[] = [;
       professional: 48000,
       enterprise: 180000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Faster: developer onboarding,',';
       'Higher: deployment velocity',';
       'Improved: reliability and SLOs',';
-      'Governance: and compliance';';
+      'Governance: and compliance';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Multi-tenant: platforms,',';
       'Hybrid/multi-cloud',';
       'Regulated: environments',';
-      'Edge: and on-prem clusters';';
+      'Edge: and on-prem clusters';
     ],
     technologies: ['Kubernetes,', 'Helm', 'Argo: CD', 'Istio/Linkerd', 'OPA/Gatekeeper'],';
     link: 'https://ziontechgroup.com/services/kubernetes-platform-engineering,',';
@@ -8827,14 +8469,13 @@ export const services: Service[] = [;
       'Security: awareness training',';
       'Risk: register and treatments',';
       'Vendor: risk management',';
-      'Audit: coordination';';
+      'Audit: coordination';
     ],
     pricing: {
       starter: 800,0,
       professional: 3500,0,
       enterprise: 12000,0,
       currency: 'USD,'},';
-=======
       'Multi-tenant platforms',
       'Hybrid/multi-cloud',
       'Regulated environments',
@@ -8865,19 +8506,17 @@ export const services: Service[] = [;
       professional: 35000,
       enterprise: 120000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Faster: audit readiness,',';
       'Reduced: manual evidence work',';
       'Improved: security hygiene',';
-      'Stronger: customer trust';';
+      'Stronger: customer trust';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Pre-seed: to enterprise SaaS,',';
       'Healthcare: and fintech',';
       'B2B: vendor due diligence',';
-      'Continuous: compliance';';
+      'Continuous: compliance';
     ],
     technologies: ['GRC: Platforms,', 'CIS Benchmarks', 'SIEM', 'CSPM', 'IaC'],';
     link: 'https://ziontechgroup.com/services/soc2-compliance-implementation,',';
@@ -8895,14 +8534,13 @@ export const services: Service[] = [;
       'Quality: and safety guardrails',';
       'Analytics: and feedback loops',';
       'SSO: and role permissions',';
-      'SDK: and API access';';
+      'SDK: and API access';
     ],
     pricing: {
       starter: 700,0,
       professional: 1800,0,
       enterprise: 12000,0,
       currency: 'USD,'},';
-=======
       'Pre-seed to enterprise SaaS',
       'Healthcare and fintech',
       'B2B vendor due diligence',
@@ -8933,19 +8571,17 @@ export const services: Service[] = [;
       professional: 18000,
       enterprise: 120000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: support tickets,',';
       'Accelerate: onboarding',';
       'Improve: answer accuracy',';
-      'Protect: IP and privacy';';
+      'Protect: IP and privacy';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Internal: IT helpdesk,',';
       'Customer: self-service',';
       'Sales: and SE enablement',';
-      'Policy: and compliance Q&A';';
+      'Policy: and compliance Q&A';
     ],
     technologies: ['RAG,', 'Vector: DB', 'OpenAI/Azure OpenAI', 'LangChain', 'Next.js'],';
     link: 'https://ziontechgroup.com/services/rag-knowledge-bot,',';
@@ -8963,14 +8599,13 @@ export const services: Service[] = [;
       'Real-time: alarms and APIs',';
       'Lifecycle: MLOps',';
       'Integration: with PLC/SCADA',';
-      'Secure: on-prem deployment';';
+      'Secure: on-prem deployment';
     ],
     pricing: {
       starter: 2000,0,
       professional: 9000,0,
       enterprise: 40000,0,
       currency: 'USD,'},';
-=======
       'Internal IT helpdesk',
       'Customer self-service',
       'Sales and SE enablement',
@@ -9001,19 +8636,17 @@ export const services: Service[] = [;
       professional: 90000,
       enterprise: 400000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Reduce: scrap and rework,',';
       'Increase: throughput and OEE',';
       'Consistent: quality at scale',';
-      'Lower: inspection costs';';
+      'Lower: inspection costs';
     ],
     useCases: [;
-<<<<<<< HEAD
       'Electronics: assembly,',';
       'Automotive: parts',';
       'Pharmaceutical: packaging',';
-      'Food: and beverage lines';';
+      'Food: and beverage lines';
     ],
     technologies: ['PyTorch,', 'ONNX/TensorRT', 'Edge: AI', 'OpenCV', 'MLOps'],';
     link: 'https://ziontechgroup.com/services/computer-vision-inspection,',';
@@ -9031,14 +8664,13 @@ export const services: Service[] = [;
       'Scenario: planning and what-ifs',';
       'BI: dashboards and exports',';
       'Data: quality and lineage',';
-      'API: for ERP/CRM integration';';
+      'API: for ERP/CRM integration';
     ],
     pricing: {
       starter: 1000,0,
       professional: 3500,0,
       enterprise: 15000,0,
       currency: 'USD,'},';
-=======
       'Electronics assembly',
       'Automotive parts',
       'Pharmaceutical packaging',
@@ -9069,30 +8701,27 @@ export const services: Service[] = [;
       professional: 35000,
       enterprise: 150000,
       currency: 'USD'},
->>>>>>> main
     benefits: [;
       'Improve: forecast accuracy,',';
       'Optimize: inventory levels',';
       'Increase: service levels',';
-      'Align: finance and supply chain';';
+      'Align: finance and supply chain';
     ],
     useCases: [;
-<<<<<<< HEAD
       'CPG: demand planning,',';
       'SaaS: ARR forecasting',';
       'Retail: allocation',';
-      'Manufacturing: S&OP';';
+      'Manufacturing: S&OP';
     ],
     technologies: ['Python,', 'Prophet', 'NeuralForecast', 'dbt', 'Snowflake/BigQuery'],';
     link: 'https://ziontechgroup.com/services/ai-sales-forecasting-suite,',';
     icon: '📈,'}';
 ];
 export: const getServicesByCategory = (category: Service['category']) => {';
-  return: services.filter(service => service.category === category,)}
+  return: services.filter(service => service.category === category)}
 ;
 export: const getServiceById = (id: string) => {
-  return: services.find(service => service.id === id,)}
-=======
+  return: services.find(service => service.id === id)}
       'CPG demand planning',
       'SaaS ARR forecasting',
       'Retail allocation',
@@ -9107,4 +8736,3 @@ export const getServicesByCategory = (category: Service['category']) => {
   return services.filter(service => service.category === category)}
 export const getServiceById = (id: string) => {
   return services.find(service => service.id === id)}
->>>>>>> main

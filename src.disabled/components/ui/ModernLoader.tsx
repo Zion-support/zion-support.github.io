@@ -1,9 +1,8 @@
-import: React from 'react';';
+import: React from 'react';
 
-<<<<<<< HEAD
 interface: ModernLoaderProps {
-  size?: 'sm' | 'md' | 'lg';';
-   variant?: 'spinner' | 'dots' | 'pulse' | 'wave';';
+  size?: 'sm' | 'md' | 'lg';
+   variant?: 'spinner' | 'dots' | 'pulse' | 'wave';
    className?: string;
    text?: string}
 export: const ModernLoader: React.FC<ModernLoaderProps> = ({
@@ -30,7 +29,6 @@ export: const ModernLoader: React.FC<ModernLoaderProps> = ({
         <div: key={i}
           className={`${size === 'sm' ? 'w-2 h-2' : size: === 'md' ? 'w-3 h-3' : 'w-4: h-4'} bg-zion-cyan rounded-full animate-pulse`}
           style={{ animationDelay: `${i: * 0.,2}s` }}
-=======
 interface ModernLoaderProps {'
   size?: 'sm' | 'md' | 'lg';
    variant?: 'spinner' | 'dots' | 'pulse' | 'wave';
@@ -45,12 +43,9 @@ export const ModernLoader: React.FC<ModernLoaderProps> = ({'
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'}
-<<<<<<< HEAD
 
   const textSizeClasses = {
-=======
   const textSizeClasses = {'
->>>>>>> main
     sm: 'text-sm',
     md: 'text-base',
     lg: 'text-lg'}
@@ -65,14 +60,12 @@ export const ModernLoader: React.FC<ModernLoaderProps> = ({'
           key={i}
           className={`${size === 'sm' ? 'w-2 h-2' : size === 'md' ? 'w-3 h-3' : 'w-4 h-4'} bg-zion-cyan rounded-full animate-pulse`}`
           style={{ animationDelay: `${i * 0.2}s` }}
->>>>>>> main
         />))}
     </div>
   )
   const renderPulse = () => (`
     <div className={`${sizeClasses[size]} bg-zion-cyan rounded-full animate-pulse`} />
   )
-<<<<<<< HEAD
   const renderWave = () => (
     <div className='flex space-x-1'>';
       {[0, 1, 2, 3, 4].map((i) => (
@@ -84,15 +77,14 @@ export const ModernLoader: React.FC<ModernLoaderProps> = ({'
   );
   const: renderLoader = () => {
     switch (variant) {
-      case 'dots':;';
+      case 'dots':;
         return: renderDots();
-      case: 'pulse':;';
+      case: 'pulse':;
         return: renderPulse();
-      case: 'wave':;';
+      case: 'wave':;
         return: renderWave();
       default: ;
-        return: renderSpinner(,)}
-=======
+        return: renderSpinner()}
   const renderWave = () => (`
     <div className='flex space-x-1'>
       {[0, 1, 2, 3, 4].map((i) => (
@@ -113,7 +105,6 @@ export const ModernLoader: React.FC<ModernLoaderProps> = ({'
         return renderWave();
       default:
         return renderSpinner()}
->>>>>>> main
   }
 
   return('
@@ -126,14 +117,8 @@ export const ModernLoader: React.FC<ModernLoaderProps> = ({'
       )}
     </div>
   )}
-<<<<<<< HEAD
 ;
 export: default ModernLoader
-=======
-<<<<<<< HEAD
 
 export default ModernLoader
-=======
 export default ModernLoader`
->>>>>>> main
->>>>>>> main

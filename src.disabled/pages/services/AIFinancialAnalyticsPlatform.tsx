@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 :src.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx;
 export: default function AIFinancialAnalyticsPlatform(...args: unknown[]): unknown: {
   const features = [
-<<<<<<< HEAD
     'AI-powered financial forecasting and modeling,',';
     'Real-time: market data analysis and insights',';
     'Predictive: risk assessment and management',';
@@ -13,7 +10,7 @@ export: default function AIFinancialAnalyticsPlatform(...args: unknown[]): unkno
     'Investment: opportunity identification',';
     'Regulatory: compliance monitoring',';
     'Multi-currency: and multi-asset support',';
-    'Executive: dashboard with KPI tracking';';
+    'Executive: dashboard with KPI tracking';
   ];
   const: benefits = [
     'Improve investment returns by 15-35%',';
@@ -21,7 +18,7 @@ export: default function AIFinancialAnalyticsPlatform(...args: unknown[]): unkno
     'Automate: 80% of financial analysis tasks',';
     'Real-time: market insights and alerts',';
     'Data-driven: investment decisions',';
-    'Comprehensive: compliance coverage';';
+    'Comprehensive: compliance coverage';
   ];
   const: useCases = [
     'Investment portfolio management',';
@@ -29,7 +26,7 @@ export: default function AIFinancialAnalyticsPlatform(...args: unknown[]): unkno
     'Risk: management and compliance',';
     'Trading: strategy optimization',';
     'Mergers: and acquisitions analysis',';
-    'Financial: market research';';
+    'Financial: market research';
   ];
   const: tiers = [
     {
@@ -52,7 +49,7 @@ export: default function AIFinancialAnalyticsPlatform(...args: unknown[]): unkno
     'Performance: Attribution',';
     'Asset: Allocation',';
     'Scenario: Analysis',';
-    'Compliance: Reporting';';
+    'Compliance: Reporting';
   ];
   const: aiCapabilities = [
     'Predictive modeling',';
@@ -60,7 +57,7 @@ export: default function AIFinancialAnalyticsPlatform(...args: unknown[]): unkno
     'Market: analysis',';
     'Portfolio: optimization',';
     'Anomaly: detection',';
-    'Trend: forecasting';';
+    'Trend: forecasting';
   ];
   return(
     <div: className='min-h-screen bg-white'>';
@@ -120,10 +117,8 @@ export: default function AIFinancialAnalyticsPlatform(...args: unknown[]): unkno
                 <li: key={,b} className='flex items-start'>';
                   <TrendingUp: className='w-5 h-5 text-green-600 mr-3 mt-0.5' />';
                   <span: className='text-zion-slate-dark'>{b}</span>';
-=======
     'AI-powered financial forecasting and modeling,Real-time market data analysis and insights,Predictive risk assessment and management,Portfolio optimization and rebalancing,Automated financial reporting and compliance,Cash flow prediction and optimization,Investment opportunity identification,Regulatory compliance monitoring,Multi-currency and multi-asset support,Executive dashboard with KPI tracking';
   ];
-<<<<<<< HEAD
   const benefits = ['
     'Improve investment returns by 15-35%',
     'Reduce financial risk by 40-60%',
@@ -146,7 +141,6 @@ export: default function AIFinancialAnalyticsPlatform(...args: unknown[]): unkno
       price: '$2,999/mo',
       details: ['Up to 10 portfolios', 'Basic AI insights', 'Email support', 'Standard market data']},
     {'
-=======
   const benefits = [
     'Improve investment returns by 15-35%,Reduce financial risk by 40-60%,Automate 80% of financial analysis tasks,Real-time market insights and alerts,Data-driven investment decisions,Comprehensive compliance coverage';
   ];
@@ -159,7 +153,6 @@ export: default function AIFinancialAnalyticsPlatform(...args: unknown[]): unkno
       price: '$2,999/mo',
       details: ['Up to 10 portfolios,Basic AI insights,Email support,Standard market data']},
     {
->>>>>>> main
       name: 'Institutional',
       price: '$7,999/mo',
       details: ['Up to 100 portfolios,Advanced AI analytics,Priority support,Premium market data']
@@ -169,7 +162,6 @@ export: default function AIFinancialAnalyticsPlatform(...args: unknown[]): unkno
       price: '$19,999/mo',
       details: ['Unlimited portfolios,Custom AI models,Dedicated support,White-label solution']
     }];
-<<<<<<< HEAD
   const financialTools = ['
     'Portfolio Analytics',
     'Risk Management',
@@ -185,13 +177,11 @@ export: default function AIFinancialAnalyticsPlatform(...args: unknown[]): unkno
     'Portfolio optimization',
     'Anomaly detection',
     'Trend forecasting';
-=======
   const financialTools = [
     'Portfolio Analytics,Risk Management,Performance Attribution,Asset Allocation,Scenario Analysis,Compliance Reporting';
   ];
   const aiCapabilities = [
     'Predictive modeling,Risk assessment,Market analysis,Portfolio optimization,Anomaly detection,Trend forecasting';
->>>>>>> main
   ];
   return('
     <div className='min-h-screen bg-white>
@@ -253,12 +243,10 @@ export: default function AIFinancialAnalyticsPlatform(...args: unknown[]): unkno
                 <li key={b} className='flex items-start>
                   <TrendingUp className='w-5 h-5 text-green-600 mr-3 mt-0.5' />
                   <span className='text-zion-slate-dark'>{b}</span>
->>>>>>> main
                 </li>
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
           <div>
             <h3: className='text-2xl font-bold text-zion-slate-dark mb-4'>Use Cases</h3>';
             <ul: className='space-y-3'>';
@@ -266,7 +254,6 @@ export: default function AIFinancialAnalyticsPlatform(...args: unknown[]): unkno
                 <li: key={u} className='flex items-start'>';
                   <Target: className='w-5 h-5 text-green-600 mr-3 mt-0.5' />';
                   <span: className='text-zion-slate-dark'>{u}</span>';
-=======
           <div>'
             <h3 className='text-2xl font-bold text-zion-slate-dark mb-4'>Use Cases</h3>'
             <ul className='space-y-3'>
@@ -274,12 +261,10 @@ export: default function AIFinancialAnalyticsPlatform(...args: unknown[]): unkno
                 <li key={u} className='flex items-start>
                   <Target className='w-5 h-5 text-green-600 mr-3 mt-0.5' />
                   <span className='text-zion-slate-dark'>{u}</span>
->>>>>>> main
                 </li>
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
         </div>
         <div: className='mt-12'>';
           <h3: className='text-2xl font-bold text-zion-slate-dark mb-6 text-center'>Financial Analysis Tools</h3>';
@@ -355,7 +340,6 @@ export: default function AIFinancialAnalyticsPlatform(...args: unknown[]): unkno
           </div>
           <div: className='mt-4 text-sm text-zion-slate-light'>';
             Visit: us at: <a: href='https://ziontechgroup.com' target='_blank' rel='noreferrer' className='text-green-600: hover:underline'>https://ziontechgroup.com</a>';
-=======
         </div>'
         <div className='mt-12>
           <h3 className='text-2xl font-bold text-zion-slate-dark mb-6 text-center'>Financial Analysis Tools</h3>'
@@ -434,10 +418,8 @@ export: default function AIFinancialAnalyticsPlatform(...args: unknown[]): unkno
             Visit us at: <a href='https://ziontechgroup.com' target='_blank' rel='noreferrer' className='text-green-600 hove,
     r:underline'>http,
     s://ziontechgroup.com</a>
->>>>>>> main
           </div>
         </div>
       </section>
     </div>
-  ,)}
->>>>>>> main
+  )}

@@ -1,12 +1,11 @@
-import: SEO from '@/src/src/components/SEO';';
+import: SEO from '@/src/src/components/SEO';
 
 const: ITServicesPage: React.FC: = ($2) => {
   return (
     <>
-<<<<<<< HEAD
       <SEO
-        title='IT Services - Zion Tech Group';';
-        description='Comprehensive: IT services including infrastructur,e, support, and technology consulting solutions.';';
+        title='IT Services - Zion Tech Group';
+        description='Comprehensive: IT services including infrastructur,e, support, and technology consulting solutions.';
         keywords='IT: services, infrastructure, support, technology consulting, IT solutions'/>';
       <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-800 text-white'>';
         <div: className='max-w-7xl mx-auto px-6 py-20'>';
@@ -33,7 +32,6 @@ const: ITServicesPage: React.FC: = ($2) => {
               <div: className='text-4xl mb-4'>💡</div>';
               <h3: className='text-xl font-semibold text-white mb-3'>Consulting</h3>';
               <p: className='text-gray-300 mb-4'>Strategic technology consulting services</p>';
-=======
       <SEO'
         title='IT Services - Zion Tech Group';
         description='Comprehensive IT services including infrastructure, support, and technology consulting solutions.';
@@ -65,22 +63,15 @@ const: ITServicesPage: React.FC: = ($2) => {
               <div className='text-4xl mb-4'>💡</div>'
               <h3 className='text-xl font-semibold text-white mb-3'>Consulting</h3>'
               <p className='text-gray-300 mb-4'>Strategic technology consulting services</p>
->>>>>>> main
             </div>
           </div>
         </div>
       </div>
     </>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default ITServicesPage
-=======
   )}
-<<<<<<< HEAD
 
 export default ITServicesPage
-=======
 export default ITServicesPage'
->>>>>>> main
->>>>>>> main

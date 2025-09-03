@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface UltimateRealMicroSaasService {
   id: string;
    name: string;
@@ -28,27 +28,22 @@ export: interface UltimateRealMicroSaasService {
    variant: string;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 reviews: number;export: const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] = [;
   // AI-Powered: Customer Success Platform{
     id,:,
   ai-customer-success-platform',';
     name: 'AI: Customer Success Platfor,m,';
-=======
 review,
     s: number;export const ultimateRealMicroSaasServices202,
     5: UltimateRealMicroSaasService[] = [;
@@ -57,7 +52,6 @@ review,
     d:,
   ai-customer-success-platform',
     name: 'AI Customer Success Platform,
->>>>>>> main
     tagline:,
   Predict: and prevent churn with AI-powered customer insights',';
     price: '$49,9,';
@@ -74,21 +68,18 @@ review,
   'Predictive: upselling opportunities',';
   'Integration: with CRM and support systems',';
   'Custom: success playbooks and automation',';
-  'Advanced: reporting and ROI tracking';';
+  'Advanced: reporting and ROI tracking';
     ],
     popular: tru,e,
     icon:,
   🎯',';
     color: 'from-emerald-600: to-teal-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-emerald-400',';
     link: 'https://ziontechgroup.com/ai-customer-success-platfor,m,';
-=======
   text-emerald-400',
     link: 'http,
     s://ziontechgroup.com/ai-customer-success-platform,
->>>>>>> main
     marketPosition:,
   Competes: with Gainsight ($500/month), Totango ($500/month). Our advantage: AI: automation reduces manual work by 70% and provides predictive insights,.,
     targetAudience: ;
@@ -112,7 +103,6 @@ review,
   25% annual: growth',';
     variant: 'ai-customer-success-enterpris,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -120,7 +110,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -130,7 +119,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Cloud-native: SaaS platform with AI algorithms for customer behavior analysis, churn prediction, and automated success workflows.',';
     launchDate: '2024-12-0,1,';
@@ -157,21 +145,18 @@ review,
   'Cost: optimization and savings tracking',';
   'Integration: with ERP and WMS systems',';
   'Custom: dashboards and reporting',';
-  'Mobile: app for field operations';';
+  'Mobile: app for field operations';
     ],
     popular: tru,e,
     icon:,
   🚚',';
     color: 'from-blue-600: to-indigo-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/intelligent-supply-chain-optimizatio,n,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/intelligent-supply-chain-optimization,
->>>>>>> main
     marketPosition:,
   Competes: with SAP Supply Chain ($1000/month), Oracle SCM ($1200/month). Our advantage: AI: optimization reduces costs by 25% and improves efficiency,.,
     targetAudience: ;
@@ -195,7 +180,6 @@ review,
   18% annual: growth',';
     variant: 'supply-chain-enterpris,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -203,7 +187,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -213,7 +196,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Enterprise-grade: SaaS platform with AI algorithms for supply chain optimization, real-time monitoring, and predictive analytics.',';
     launchDate: '2024-11-1,5,';
@@ -240,21 +222,18 @@ review,
   'Integration: with accounting systems',';
   'Custom: financial models and templates',';
   'Collaborative: planning workflows',';
-  'Advanced: reporting and analytics';';
+  'Advanced: reporting and analytics';
     ],
     popular: tru,e,
     icon:,
   💰',';
     color: 'from-green-600: to-emerald-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/ai-financial-planning-platfor,m,';
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/ai-financial-planning-platform,
->>>>>>> main
     marketPosition:,
   Competes: with Adaptive Insights ($500/month), Anaplan ($1000/month). Our advantage: AI: automation reduces planning time by 80%,.,
     targetAudience: ;
@@ -278,7 +257,6 @@ review,
   22% annual: growth',';
     variant: 'financial-planning-enterpris,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -286,7 +264,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -296,7 +273,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Cloud-native: SaaS platform with AI algorithms for financial forecasting, automated planning, and intelligent financial insights.',';
     launchDate: '2024-10-1,5,';
@@ -323,21 +299,18 @@ review,
   'Integration: with HRIS and ATS systems',';
   'Custom: HR dashboards and reports',';
   'Predictive: hiring recommendations',';
-  'Employee: development tracking';';
+  'Employee: development tracking';
     ],
     popular: tru,e,
     icon:,
   👥',';
     color: 'from-purple-600: to-violet-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/intelligent-hr-analytics-platfor,m,';
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/intelligent-hr-analytics-platform,
->>>>>>> main
     marketPosition:,
   Competes: with Visier ($500/month), Tableau ($70/month). Our advantage: AI: insights reduce HR decision time by 60%,.,
     targetAudience: ;
@@ -361,7 +334,6 @@ review,
   20% annual: growth',';
     variant: 'hr-analytics-enterpris,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -369,7 +341,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -379,7 +350,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Enterprise: SaaS platform with AI algorithms for HR analytics, predictive modeling, and intelligent workforce insights.',';
     launchDate: '2024-09-0,1,';
@@ -406,21 +376,18 @@ review,
   'Integration: with CRM systems',';
   'Custom: sales dashboards and reports',';
   'Mobile: sales app for field teams',';
-  'Advanced: sales analytics and insights';';
+  'Advanced: sales analytics and insights';
     ],
     popular: tru,e,
     icon:,
   📈',';
     color: 'from-orange-600: to-red-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-orange-400',';
     link: 'https://ziontechgroup.com/ai-sales-intelligence-platfor,m,';
-=======
   text-orange-400',
     link: 'http,
     s://ziontechgroup.com/ai-sales-intelligence-platform,
->>>>>>> main
     marketPosition:,
   Competes: with ZoomInfo ($1000/month), LinkedIn Sales Navigator ($800/month). Our advantage: AI: automation increases sales productivity by 40%,.,
     targetAudience: ;
@@ -444,7 +411,6 @@ review,
   24% annual: growth',';
     variant: 'sales-intelligence-enterpris,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -452,7 +418,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -462,7 +427,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Cloud-native: SaaS platform with AI algorithms for sales intelligence, lead scoring, and automated sales workflows.',';
     launchDate: '2024-08-1,5,';
@@ -489,21 +453,18 @@ review,
   'Integration: with business systems',';
   'Advanced: reporting and analytics',';
   'Collaborative: decision-making tools',';
-  'Mobile: decision support app';';
+  'Mobile: decision support app';
     ],
     popular: tru,e,
     icon:,
   🧠',';
     color: 'from-indigo-600: to-purple-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-indigo-400',';
     link: 'https://ziontechgroup.com/ai-powered-decision-engin,e,';
-=======
   text-indigo-400',
     link: 'http,
     s://ziontechgroup.com/ai-powered-decision-engine,
->>>>>>> main
     marketPosition:,
   Competes: with Palantir ($10000/month), SAS ($2000/month). Our advantage: Affordable: pricing with enterprise-grade AI capabilities,.,
     targetAudience: ;
@@ -527,7 +488,6 @@ review,
   28% annual: growth',';
     variant: 'decision-engine-enterpris,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -535,7 +495,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -545,7 +504,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Enterprise-grade: SaaS platform with advanced AI algorithms for decision modeling, predictive analytics, and business intelligence.',';
     launchDate: '2024-07-0,1,';
@@ -572,21 +530,18 @@ review,
   'Integration: with CMS and marketing tools',';
   'Custom: content templates and workflows',';
   'Collaborative: content creation tools',';
-  'Advanced: content analytics and insights';';
+  'Advanced: content analytics and insights';
     ],
     popular: tru,e,
     icon:,
   ✍️',';
     color: 'from-teal-600: to-cyan-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-teal-400',';
     link: 'https://ziontechgroup.com/intelligent-content-automation-platfor,m,';
-=======
   text-teal-400',
     link: 'http,
     s://ziontechgroup.com/intelligent-content-automation-platform,
->>>>>>> main
     marketPosition:,
   Competes: with HubSpot ($800/month), Marketo ($1000/month). Our advantage: AI: automation reduces content creation time by 70%,.,
     targetAudience: ;
@@ -610,7 +565,6 @@ review,
   26% annual: growth',';
     variant: 'content-automation-enterpris,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -618,7 +572,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -628,7 +581,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Cloud-native: SaaS platform with AI algorithms for content generation, optimization, and multi-channel automation.',';
     launchDate: '2024-06-1,5,';
@@ -655,21 +607,18 @@ review,
   'Integration: with existing CRM systems',';
   'Custom: dashboards and reporting',';
   'Mobile: CRM app for field teams',';
-  'Advanced: analytics and insights';';
+  'Advanced: analytics and insights';
     ],
     popular: tru,e,
     icon:,
   📊',';
     color: 'from-blue-600: to-cyan-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/smart-crm-intelligence-suit,e,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/smart-crm-intelligence-suite,
->>>>>>> main
     marketPosition:,
   Competes: with Salesforce ($150/month), HubSpot ($800/month). Our advantage: AI: intelligence enhances  CRM with predictive capabilities,.,
     targetAudience: ;
@@ -693,7 +642,6 @@ review,
   15% annual: growth',';
     variant: 'crm-intelligence-enterpris,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -701,7 +649,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -711,7 +658,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Intelligent: SaaS platform that enhances existing CRM systems with AI-powered analytics, automation, and predictive insights.',';
     launchDate: '2024-05-0,1,';
@@ -729,7 +675,6 @@ review,
   /month',';
     description: Turn-key: API observability stack with distributed tracin,g, golden signals dashboards, and alerting. Opinionated templates for Node.js, Python, and Go services.',';
     features[;
-<<<<<<< HEAD
   'One-line: SDK install for tracing',';
   'Golden: signals dashboards (latency, errors, traffic, saturation)',';
   'Out-of-the-box: SLOs and alerting',';
@@ -739,8 +684,7 @@ review,
   'Export: to OpenTelemetry collectors',';
   'Dashboards: for executives and engineers',';
   'Weekly: performance reports',';
-  'Go-live: in under 60 minutes';';
-=======
+  'Go-live: in under 60 minutes';
   'One-line SDK install for tracing',
   'Golden signals dashboards (latency, errors, traffic, saturation),
   'Out-of-the-box SLOs and alerting',
@@ -751,21 +695,17 @@ review,
   'Dashboards for executives and engineers',
   'Weekly performance reports',
   'Go-live in under 60 minutes';
->>>>>>> main
     ],
     popular: tru,e,
     icon:,
   📈',';
     color: 'from-indigo-600: to-purple-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-indigo-400',';
     link: 'https://ziontechgroup.com/api-observability-starte,r,';
-=======
   text-indigo-400',
     link: 'http,
     s://ziontechgroup.com/api-observability-starter,
->>>>>>> main
     marketPosition:,
   Comparable: to Honeycomb Starter ($130+), Datadog APM (from $31/host) and New Relic. Advantage: opinionated: starter with SLOs and fixed pricing for small teams,.,
     targetAudience: ;
@@ -791,7 +731,6 @@ review,
   18% annual: growth',';
     variant: 'observability-starte,r,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -799,7 +738,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -809,7 +747,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   SDKs, OTel: collectors, prebuilt dashboards and alert policies with guided onboarding.',';
     launchDate: '2024-09-0,1,';
@@ -836,21 +773,18 @@ review,
   'Jira: ticket automation',';
   'Evidence: reports for auditors',';
   'Slack: and email alerts',';
-  'API: inventory and risk heatmaps';';
+  'API: inventory and risk heatmaps';
     ],
     popular: tru,e,
     icon:,
   🛡️',';
     color: 'from-rose-600: to-red-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-rose-400',';
     link: 'https://ziontechgroup.com/api-security-scanne,r,';
-=======
   text-rose-400',
     link: 'http,
     s://ziontechgroup.com/api-security-scanner,
->>>>>>> main
     marketPosition:,
   Comparable: to StackHawk and Snyk API. Advantage: simpler: onboarding and combined evidence reporting,.,
     targetAudience: ;
@@ -876,7 +810,6 @@ review,
   28% annual: growth',';
     variant: 'api-securit,y,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -884,7 +817,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -894,7 +826,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Scanner: engine with OpenAPI import, CI integration and dashboards.',';
     launchDate: '2024-08-1,0,';
@@ -921,21 +852,18 @@ review,
   'Role: address detection',';
   'Link: blacklist checks',';
   'SPF: flattening helper',';
-  'Multi-domain: support';';
+  'Multi-domain: support';
     ],
     popular: fals,e,
     icon:,
   ✉️',';
     color: 'from-cyan-600: to-teal-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-cyan-400',';
     link: 'https://ziontechgroup.com/email-deliverability-monito,r,';
-=======
   text-cyan-400',
     link: 'http,
     s://ziontechgroup.com/email-deliverability-monitor,
->>>>>>> main
     marketPosition:,
   Comparable: to Postmark and SendGrid deliverability tools. Advantage: multi-provider: view and proactive DNS alerting,.,
     targetAudience: ;
@@ -961,7 +889,6 @@ review,
   12% annual: growth',';
     variant: 'email-deliverabilit,y,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -969,7 +896,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -979,7 +905,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   DNS: checks, webhook ingestion and scoring dashboards.',';
     launchDate: '2024-07-2,0,';
@@ -994,14 +919,11 @@ review,
   Expiry, NS/DS: changes and DNSSEC integrity alerts',';
     price: '$1,9,';
     period:,
-<<<<<<< HEAD
   /month',';
     description: Proactive: domain and DNS change detection: expiratio,n, nameserver: flips, DS record breaks and DNSSEC validation.',';
-=======
   /month',
     description: Proactive domain and DNS change detectio,
     n: expiration, nameserver flips, DS record breaks and DNSSEC validation.',
->>>>>>> main
     features[;
   'Expiry: reminders and grace-period tracking',';
   'NS/DS/A/AAAA/CNAME: changes',';
@@ -1012,21 +934,18 @@ review,
   'Simple: uptime checks',';
   'JSON: export and audit logs',';
   'Role-based: access',';
-  'API: access';';
+  'API: access';
     ],
     popular: fals,e,
     icon:,
   🌐',';
     color: 'from-emerald-600: to-green-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-emerald-400',';
     link: 'https://ziontechgroup.com/domain-dns-monito,r,';
-=======
   text-emerald-400',
     link: 'http,
     s://ziontechgroup.com/domain-dns-monitor,
->>>>>>> main
     marketPosition:,
   Comparable: to basic DNS monitoring tools advantage: portfolio: and DNSSEC focus,.,
     targetAudience: ;
@@ -1051,7 +970,6 @@ review,
   10% annual: growth',';
     variant: 'dns-monito,r,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -1059,7 +977,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -1069,7 +986,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   DNS: polling and event rules with alerting and audits.',';
     launchDate: '2024-06-1,0,';
@@ -1096,21 +1012,18 @@ review,
   'Slack/Jira: integrations',';
   'Multi-cluster: support',';
   'Audit: logs and approval workflow',';
-  'Executive: risk summaries';';
+  'Executive: risk summaries';
     ],
     popular: tru,e,
     icon:,
   ☸️',';
     color: 'from-blue-700: to-sky-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-sky-400',';
     link: 'https://ziontechgroup.com/kubernetes-rbac-audito,r,';
-=======
   text-sky-400',
     link: 'http,
     s://ziontechgroup.com/kubernetes-rbac-auditor,
->>>>>>> main
     marketPosition:,
   Comparable: to ARMO/Kubescape and Polaris. Advantage: remediation: diffs and exec summaries,.,
     targetAudience: ;
@@ -1136,7 +1049,6 @@ review,
   24% annual: growth',';
     variant: 'k8s-rba,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -1144,7 +1056,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -1154,7 +1065,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Cluster: scanner, rules engine and policy generator with CI.',';
     launchDate: '2024-04-0,5,';
@@ -1181,21 +1091,18 @@ review,
   'Dashboards: for finance and eng',';
   'Slack: alerts and weekly recaps',';
   'CSV/BI: exports',';
-  'Guardrail: policies';';
+  'Guardrail: policies';
     ],
     popular: tru,e,
     icon:,
   💸',';
     color: 'from-emerald-600: to-lime-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-emerald-400',';
     link: 'https://ziontechgroup.com/cloud-cost-optimize,r,';
-=======
   text-emerald-400',
     link: 'http,
     s://ziontechgroup.com/cloud-cost-optimizer,
->>>>>>> main
     marketPosition:,
   Comparable: to CloudZero and Kubecost. Advantage: multi-cloud: coverage with opinionated guardrails,.,
     targetAudience: ;
@@ -1221,7 +1128,6 @@ review,
   30% annual: growth',';
     variant: 'finops-optimize,r,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -1229,7 +1135,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -1239,7 +1144,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Ingest: cloud billing, generate recs and automate remediation via tags and policies.',';
     launchDate: '2024-03-0,1,';
@@ -1266,21 +1170,18 @@ review,
   'Service: catalog and ownership',';
   'Comms: templates',';
   'Root: cause tagging',';
-  'Executive: summaries';';
+  'Executive: summaries';
     ],
     popular: tru,e,
     icon:,
   🚨',';
     color: 'from-rose-600: to-pink-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-rose-400',';
     link: 'https://ziontechgroup.com/incident-automation-suit,e,';
-=======
   text-rose-400',
     link: 'http,
     s://ziontechgroup.com/incident-automation-suite,
->>>>>>> main
     marketPosition:,
   Comparable: to PagerDuty/FireHydrant/Rootly. Advantage: tighter: SLO integration and automated summaries,.,
     targetAudience: ;
@@ -1306,7 +1207,6 @@ review,
   16% annual: growth',';
     variant: 'incident-automatio,n,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -1314,7 +1214,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -1324,7 +1223,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Runbook: engine with chatops integrations, ownership model and templates.',';
     launchDate: '2024-02-1,0,';
@@ -1351,21 +1249,18 @@ review,
   'Storage: and signed URLs',';
   'API: keys and usage limits',';
   'Team: access controls',';
-  'Usage: analytics';';
+  'Usage: analytics';
     ],
     popular: fals,e,
     icon:,
   📄',';
     color: 'from-slate-700: to-gray-80,0,';
     textColor:,
-<<<<<<< HEAD
   text-slate-300',';
     link: 'https://ziontechgroup.com/pdf-render-ap,i,';
-=======
   text-slate-300',
     link: 'http,
     s://ziontechgroup.com/pdf-render-api,
->>>>>>> main
     marketPosition:,
   Comparable: to DocRaptor and PDFMonkey. Advantage: simpler: pricing and modern DX,.,
     targetAudience: ;
@@ -1391,7 +1286,6 @@ review,
   14% annual: growth',';
     variant: 'pdf-rende,r,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -1399,7 +1293,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -1409,7 +1302,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Headless: Chromium rendering service with queue and storage.',';
     launchDate: '2024-01-3,0,';
@@ -1436,21 +1328,18 @@ review,
   'Slack: and email notifications',';
   'CSV: export and API access',';
   'Dashboards: and widgets',';
-  'Postmortem: integrations';';
+  'Postmortem: integrations';
     ],
     popular: fals,e,
     icon:,
   ⏱️',';
     color: 'from-violet-600: to-fuchsia-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-violet-400',';
     link: 'https://ziontechgroup.com/api-latency-slo-tracke,r,';
-=======
   text-violet-400',
     link: 'http,
     s://ziontechgroup.com/api-latency-slo-tracker,
->>>>>>> main
     marketPosition:,
   Comparable: to Nobl9 SLOs and Datadog SLO. Advantage: focused: product with API-first workflows,.,
     targetAudience: ;
@@ -1476,7 +1365,6 @@ review,
   20% annual: growth',';
     variant: 'slo-tracke,r,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -1484,7 +1372,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -1494,7 +1381,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   SLO: engine with burn rate policies and dashboards.',';
     launchDate: '2024-05-2,0,';
@@ -1521,21 +1407,18 @@ review,
   'Heatmaps: and rage-clicks',';
   'Session: sampling',';
   'Segment: by cohort',';
-  'Export: to BI tools';';
+  'Export: to BI tools';
     ],
     popular: fals,e,
     icon:,
   🧪',';
     color: 'from-cyan-700: to-blue-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-cyan-400',';
     link: 'https://ziontechgroup.com/browser-performance-monito,r,';
-=======
   text-cyan-400',
     link: 'http,
     s://ziontechgroup.com/browser-performance-monitor,
->>>>>>> main
     marketPosition:,
   Comparable: to SpeedCurve and Calibre. Advantage: modern: UX and clear developer guidance,.,
     targetAudience: ;
@@ -1561,7 +1444,6 @@ review,
   19% annual: growth',';
     variant: 'rum-monito,r,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -1569,7 +1451,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -1579,11 +1460,10 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   JS: SDK for RUM with ingestion and analytics UI.',';
     launchDate: '2024-06-0,1,';
     customers: 17,0,
     rating: 4.,6,
     reviews: 66;
-,]}}
+]}}

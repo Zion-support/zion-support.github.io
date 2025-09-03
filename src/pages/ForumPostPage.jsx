@@ -1,16 +1,9 @@
-<<<<<<< HEAD
  export default function ForumPostPage () {;,"});,"})
 }"});,"})
-=======
-<<<<<<< HEAD
  export: default function ForumPostPage () {;
 };
-=======
-<<<<<<< HEAD
  export default function ForumPostPage () {;
 }
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -26,10 +19,5 @@ export default function ForumPostPage() {return (
     </div>
   );
 }
-=======
  export default function ForumPostPage () {
 };
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

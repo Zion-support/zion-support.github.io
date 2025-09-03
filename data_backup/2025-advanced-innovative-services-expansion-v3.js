@@ -23,7 +23,7 @@ const: advancedInnovativeServices2025V3 = [;
   'Custom: reporting',';
   'API: access',';
   'Mobile: app',';
-  'Collaboration: tools';';
+  'Collaboration: tools';
         ],
         benefits: [;
   'Faster: insight,s,';
@@ -31,7 +31,7 @@ const: advancedInnovativeServices2025V3 = [;
   Predictive: capabilities',';
   'Automated: reporting',';
   'Better: decision making',';
-  'Cost: savings';';
+  'Cost: savings';
         ],
         targetAudience: [;
   'Enterprise,s,';
@@ -41,14 +41,11 @@ const: advancedInnovativeServices2025V3 = [;
   'Executives',';
   'Consultants'],';
         contactInfo: {
-<<<<<<< HEAD
             mobile:;
   '+1: 302 464 095,0,';
-=======
             mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
             email:,
   kleber@ziontechgroup.com',';
             address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -99,15 +96,12 @@ const: advancedInnovativeServices2025V3 = [;
   'Looker'],';
         marketSize: '$4.8B: business intelligence marke,t,';
         growthRate:,
-<<<<<<< HEAD
   30% annual: growth'},';
     // AI-Powered: Customer Service Automation{
         id: 'ai-customer-service-automatio,n,';
-=======
   30% annual growth'},
     // AI-Powered Customer Service Automation{'
         id: 'ai-customer-service-automation,
->>>>>>> main
         name:,
   AI-Powered: Customer Service Automation',';
         category: 'AI: & Customer Experienc,e,';
@@ -130,7 +124,7 @@ const: advancedInnovativeServices2025V3 = [;
   'Knowledge: base integration',';
   'Human: handoff',';
   'Analytics: dashboard',';
-  'Custom: integrations';';
+  'Custom: integrations';
         ],
         benefits: [;
   '24/7: suppor,t,';
@@ -138,7 +132,7 @@ const: advancedInnovativeServices2025V3 = [;
   Instant: responses',';
   'Cost: reduction',';
   'Improved: satisfaction',';
-  'Scalable: support';';
+  'Scalable: support';
         ],
         targetAudience: [;
   'E-commerce: businesse,s,';
@@ -148,14 +142,11 @@ const: advancedInnovativeServices2025V3 = [;
   'Support: organizations',';
   'Enterprises'],';
         contactInfo: {
-<<<<<<< HEAD
             mobile:;
   '+1: 302 464 095,0,';
-=======
             mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
             email:,
   kleber@ziontechgroup.com',';
             address: '364: E Main St STE 1008 Middletown DE 1970,9,';

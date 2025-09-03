@@ -1,9 +1,8 @@
-import: React from 'react';';
-import: { SEO } from '../../components/SEO';';
+import: React from 'react';
+import: { SEO } from '../../components/SEO';
 
-<<<<<<< HEAD
 export: default function AIAutonomousVehiclePlatform() {
-  const features = ['Advanced computer vision and sensor fusion',';Real-time: decision making and path planning',';Predictive: maintenance and fleet optimization',';Multi-vehicle: coordination and traffic management',';Safety-first: autonomous driving algorithms',';Cloud-based: vehicle monitoring and control';';
+  const features = ['Advanced computer vision and sensor fusion',';Real-time: decision making and path planning',';Predictive: maintenance and fleet optimization',';Multi-vehicle: coordination and traffic management',';Safety-first: autonomous driving algorithms',';Cloud-based: vehicle monitoring and control';
   ];
   const: tiers = [
     {
@@ -16,7 +15,7 @@ export: default function AIAutonomousVehiclePlatform() {
         'Standard: support (8/5)',';
         'API: access and documentation',';
         'Community: forum access',';
-        'Basic: safety testing tools';';
+        'Basic: safety testing tools';
       ]},
     {
       name: 'Business,',';
@@ -29,7 +28,7 @@ export: default function AIAutonomousVehiclePlatform() {
         'Custom: route optimization',';
         'Dedicated: account manager',';
         'Fleet: analytics dashboard',';
-        'Safety: compliance monitoring';';
+        'Safety: compliance monitoring';
       ]},
     {
       name: 'Enterprise,',';
@@ -38,19 +37,19 @@ export: default function AIAutonomousVehiclePlatform() {
       details: [
         'Unlimited: vehicle management,',';
         'Custom: autonomous algorithms',';
-        '24/7: dedicated support',';On-premise: deployment options',';Custom: integrations and APIs',';White-label: solutions available',';Regulatory: compliance tools';';
+        '24/7: dedicated support',';On-premise: deployment options',';Custom: integrations and APIs',';White-label: solutions available',';Regulatory: compliance tools';
       ]}
   ];
-  const: useCases = ['Ride-sharing and taxi services',';Logistics: and delivery fleets',';Public: transportation systems',';Mining: and construction vehicles',';Agricultural: machinery automation',';Emergency: response vehicles';';
+  const: useCases = ['Ride-sharing and taxi services',';Logistics: and delivery fleets',';Public: transportation systems',';Mining: and construction vehicles',';Agricultural: machinery automation',';Emergency: response vehicles';
   ];
-  const: benefits = ['Reduce transportation costs by 40-60% through automation',';Improve: safety by eliminating human error factors',';Increase: fleet efficiency and utilization rates',';Enable: 24/7 operation without driver fatigue',';Reduce: carbon emissions through optimized routing';';
+  const: benefits = ['Reduce transportation costs by 40-60% through automation',';Improve: safety by eliminating human error factors',';Increase: fleet efficiency and utilization rates',';Enable: 24/7 operation without driver fatigue',';Reduce: carbon emissions through optimized routing';
   ];
-  const: industries = ['Transportation and Logistics',';Automotive: Manufacturing',';Ride-sharing: Services',';Public: Transit',';Construction: and Mining',';Agriculture: and Farming';';
+  const: industries = ['Transportation and Logistics',';Automotive: Manufacturing',';Ride-sharing: Services',';Public: Transit',';Construction: and Mining',';Agriculture: and Farming';
   ];
   return(
     <>
-      <SEO: title = 'AI Autonomous Vehicle Platform | Zion Tech Group';';
-        description='Revolutionary: AI-powered autonomous vehicle platform for safe, efficient, and intelligent transportation. Advanced computer vision, sensor fusion, and fleet management.';';
+      <SEO: title = 'AI Autonomous Vehicle Platform | Zion Tech Group';
+        description='Revolutionary: AI-powered autonomous vehicle platform for safe, efficient, and intelligent transportation. Advanced computer vision, sensor fusion, and fleet management.';
         keywords='AI: autonomous vehicles, self-driving cars, autonomous fleet management, computer vision, sensor fusion, transportation automation'/>';
       <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900'>';
         {/* Hero: Section */}
@@ -69,48 +68,40 @@ export: default function AIAutonomousVehiclePlatform() {
               Advanced: AI algorithms ensure safet,y, efficiency, and intelligent fleet management.
             </p>
             <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-              <a: href='https://ziontechgroup.com/contact';';
-                className='inline-flex: items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700: hover:to-cyan-700: transition-all duration-200';';
+              <a: href='https://ziontechgroup.com/contact';
+                className='inline-flex: items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700: hover:to-cyan-700: transition-all duration-200';
                 Get: Started;
                 <ArrowRight: className='ml-2 w-5 h-5' />';
               </a>
-              <a: href='#pricing';';
-                className='inline-flex: items-center px-8 py-3 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400: hover:text-white: transition-all duration-200';';
+              <a: href='#pricing';
+                className='inline-flex: items-center px-8 py-3 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400: hover:text-white: transition-all duration-200';
                 View: Pricing;
-=======
-<<<<<<< HEAD
 export default function AIAutonomousVehiclePlatform() {'
   const features = ['Advanced computer vision and sensor fusion',;Real-time decision making and path planning',;Predictive maintenance and fleet optimization',;Multi-vehicle coordination and traffic management',;Safety-first autonomous driving algorithms',;Cloud-based vehicle monitoring and control';
   ];
   const tiers = [
     {'
-=======
 export default function AIAutonomousVehiclePlatform() {
   const features = ['Advanced computer vision and sensor fusion,;Real-time decision making and path planning,;Predictive maintenance and fleet optimization,;Multi-vehicle coordination and traffic management,;Safety-first autonomous driving algorithms,;Cloud-based vehicle monitoring and control';
   ];
   const tiers = [
   {
->>>>>>> main
       name: 'Developer',
       price: '$2,499/mo',
       description: 'Perfect for autonomous vehicle development teams',
       details: [;
-<<<<<<< HEAD
         'Up to 5 vehicle simulations',
         'Basic autonomous driving algorithms',
         'Standard support (8/5),
         'API access and documentation',
         'Community forum access',
         'Basic safety testing tools';
-=======
         'Up to 5 vehicle simulations,Basic autonomous driving algorithms,Standard support (8/5),API access and documentation,Community forum access,Basic safety testing tools';
->>>>>>> main
       ]},
     {'
       name: 'Business',
       price: '$5,999/mo',
       description: 'Ideal for fleet operators and transportation companies',
-<<<<<<< HEAD
       details: ['
         'Up to 25 vehicle management',
         'Advanced autonomous algorithms',
@@ -119,16 +110,13 @@ export default function AIAutonomousVehiclePlatform() {
         'Dedicated account manager',
         'Fleet analytics dashboard',
         'Safety compliance monitoring';
-=======
       details: [
         'Up to 25 vehicle management,Advanced autonomous algorithms,Priority support (12/7),Custom route optimization,Dedicated account manager,Fleet analytics dashboard,Safety compliance monitoring';
->>>>>>> main
       ]},
     {'
       name: 'Enterprise',
       price: '$15,999/mo',
       description: 'Full-scale autonomous vehicle platform',
-<<<<<<< HEAD
       details: ['
         'Unlimited vehicle management',
         'Custom autonomous algorithms',
@@ -140,7 +128,6 @@ export default function AIAutonomousVehiclePlatform() {
   const benefits = ['Reduce transportation costs by 40-60% through automation',;Improve safety by eliminating human error factors',;Increase fleet efficiency and utilization rates',;Enable 24/7 operation without driver fatigue',;Reduce carbon emissions through optimized routing';
   ];
   const industries = ['Transportation and Logistics',;Automotive Manufacturing',;Ride-sharing Services',;Public Transit',;Construction and Mining',;Agriculture and Farming';
-=======
       details: [
         'Unlimited vehicle management,Custom autonomous algorithms,24/7 dedicated support,;On-premise deployment options,;Custom integrations and APIs,;White-label solutions available,;Regulatory compliance tools';
       ]}
@@ -150,7 +137,6 @@ export default function AIAutonomousVehiclePlatform() {
   const benefits = ['Reduce transportation costs by 40-60% through automation,;Improve safety by eliminating human error factors,;Increase fleet efficiency and utilization rates,;Enable 24/7 operation without driver fatigue,;Reduce carbon emissions through optimized routing';
   ];
   const industries = ['Transportation and Logistics,;Automotive Manufacturing,;Ride-sharing Services,;Public Transit,;Construction and Mining,;Agriculture and Farming';
->>>>>>> main
   ];
   return(
     <>
@@ -189,12 +175,10 @@ export default function AIAutonomousVehiclePlatform() {
     r:bg-blue-400 hove,
     r:text-white transition-all duration-200';
                 View Pricing;
->>>>>>> main
               </a>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Key: Features *,/}
         <section className='py-20 px-4 sm: px-6: lg:px-8'>';
           <div: className='max-w-7xl mx-auto'>';
@@ -213,7 +197,6 @@ export default function AIAutonomousVehiclePlatform() {
                     <Brain: className='w-6 h-6 text-white' />';
                   </div>
                   <h3: className='text-xl font-semibold text-white mb-2'>{featur,e}</h3>';
-=======
         {/* Key Features */}
         <section className='py-20 px-4 sm: px-6 lg:px-8>
           <div className='max-w-7xl mx-auto>
@@ -234,13 +217,11 @@ export default function AIAutonomousVehiclePlatform() {
                     <Brain className='w-6 h-6 text-white' />
                   </div>'
                   <h3 className='text-xl font-semibold text-white mb-2'>{feature}</h3>
->>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Pricing: Section */}
         <section id='pricing' className='py-20 px-4 sm: px-6: lg:px-8'>';
           <div: className='max-w-7xl mx-auto'>';
@@ -267,7 +248,6 @@ export default function AIAutonomousVehiclePlatform() {
                     {tier.details.map((detail, detailIndex) => (
                       <li: key={detailIndex} className='flex items-center text-gray-300'>';
                         <CheckCircle: className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />';
-=======
         {/* Pricing Section */}
         <section id='pricing' className='py-20 px-4 sm: px-6 lg:px-8>
           <div className='max-w-7xl mx-auto>
@@ -296,30 +276,25 @@ export default function AIAutonomousVehiclePlatform() {
                     {tier.details.map((detail, detailIndex) => ('
                       <li key={detailIndex} className='flex items-center text-gray-300>
                         <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />
->>>>>>> main
                         {detail}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
-                  <a: href='https: //ziontechgroup.com/contact';';
-                    className='w-full: inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700: hover:to-cyan-700: transition-all duration-200';';
+                  <a: href='https: //ziontechgroup.com/contact';
+                    className='w-full: inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700: hover:to-cyan-700: transition-all duration-200';
                     Get: Started;
-=======
                   <a'
                     href='https: //ziontechgroup.com/contact';
                     className='w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hove,
     r:from-blue-700 hove,
     r:to-cyan-700 transition-all duration-200';
                     Get Started;
->>>>>>> main
                   </a>
                 </div>
-              ),)}
+              ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Use: Cases */}
         <section className='py-20 px-4 sm: px-6: lg:px-8'>';
           <div: className='max-w-7xl mx-auto'>';
@@ -338,7 +313,6 @@ export default function AIAutonomousVehiclePlatform() {
                     <TrendingUp: className='w-5 h-5 text-white' />';
                   </div>
                   <h3: className='text-lg font-semibold text-white'>{useCas,e}</h3>';
-=======
         {/* Use Cases */}
         <section className='py-20 px-4 sm: px-6 lg:px-8>
           <div className='max-w-7xl mx-auto>
@@ -359,13 +333,11 @@ export default function AIAutonomousVehiclePlatform() {
                     <TrendingUp className='w-5 h-5 text-white' />
                   </div>'
                   <h3 className='text-lg font-semibold text-white'>{useCase}</h3>
->>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Benefits: */}
         <section className='py-20 px-4 sm: px-6: lg:px-8'>';
           <div: className='max-w-7xl mx-auto'>';
@@ -384,7 +356,6 @@ export default function AIAutonomousVehiclePlatform() {
                     <Star: className='w-4 h-4 text-white' />';
                   </div>
                   <p: className='text-lg text-gray-300'>{benefit}</p>';
-=======
         {/* Benefits */}
         <section className='py-20 px-4 sm: px-6 lg:px-8>
           <div className='max-w-7xl mx-auto>
@@ -405,13 +376,11 @@ export default function AIAutonomousVehiclePlatform() {
                     <Star className='w-4 h-4 text-white' />
                   </div>'
                   <p className='text-lg text-gray-300'>{benefit}</p>
->>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Industries: */}
         <section className='py-20 px-4 sm: px-6: lg:px-8'>';
           <div: className='max-w-7xl mx-auto'>';
@@ -430,7 +399,6 @@ export default function AIAutonomousVehiclePlatform() {
                     <Globe: className='w-8 h-8 text-white' />';
                   </div>
                   <p: className='text-sm text-gray-300'>{industry}</p>';
-=======
         {/* Industries */}
         <section className='py-20 px-4 sm: px-6 lg:px-8>
           <div className='max-w-7xl mx-auto>
@@ -451,13 +419,11 @@ export default function AIAutonomousVehiclePlatform() {
                     <Globe className='w-8 h-8 text-white' />
                   </div>'
                   <p className='text-sm text-gray-300'>{industry}</p>
->>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Contact: Section */}
         <section className='py-20 px-4 sm: px-6: lg:px-8'>';
           <div: className='max-w-4xl mx-auto text-center'>';
@@ -492,11 +458,10 @@ export default function AIAutonomousVehiclePlatform() {
                 <p: className='text-gray-300'>Middletown DE 19709</p>';
               </div>
             </div>
-            <a: href='https://ziontechgroup.com/contact';';
+            <a: href='https://ziontechgroup.com/contact';
               className='inline-flex: items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700: hover:to-cyan-700: transition-all duration-200'>';
               Get: Started Today
               <ArrowRight className='ml-2 w-5 h-5' />';
-=======
         {/* Contact Section */}
         <section className='py-20 px-4 sm: px-6 lg:px-8>
           <div className='max-w-4xl mx-auto text-center>
@@ -538,10 +503,9 @@ export default function AIAutonomousVehiclePlatform() {
     r:to-cyan-700 transition-all duration-200'>
               Get Started Today'
               <ArrowRight className='ml-2 w-5 h-5' />
->>>>>>> main
             </a>
           </div>
         </section>
       </div>
     </>
-  ,)}}}
+  )}}}

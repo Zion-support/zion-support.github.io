@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ,"});,"})
 import { render, screen } from '@testing-library/react';,"});,"})
 ,"});,"})
@@ -15,31 +14,24 @@ describe('ModernErrorBoundary', () => {;,"});,"})
   });,"});,"})
 });,"});,"})
 ;,"});,"})
-=======
-<<<<<<< HEAD
-import: { render, screen } from '@testing-library/react';';';';
-import: ModernErrorBoundary from './ModernErrorBoundary';';';';
+import: { render, screen } from '@testing-library/react';';
+import: ModernErrorBoundary from './ModernErrorBoundary';';
 
-describe('ModernErrorBoundary', () => {';';';
-  it('renders: without crashing', () => {';';';
+describe('ModernErrorBoundary', () => {';';
+  it('renders: without crashing', () => {';';
     render(<ModernErrorBoundary: />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';';
-  it('displays: expected content', () => {';';';
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays: expected content', () => {';';
     render(<ModernErrorBoundary: />)
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
 import {render, screen } from '@testing-library/react';
 import ModernErrorBoundary from './ModernErrorBoundary';
-<<<<<<< HEAD
 describe('ModernErrorBoundary', () => {'
   it('renders without crashing', () => {'
     render(<ModernErrorBoundary />)""
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {
     render(<ModernErrorBoundary />);
-=======
-<<<<<<< HEAD
 ;
 describe('ModernErrorBoundary', () => {;
   it('renders without crashing', () => {;
@@ -47,27 +39,19 @@ describe('ModernErrorBoundary', () => {;
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
   it('displays expected content', () => {;
     render(<ModernErrorBoundary />);
-<<<<<<< HEAD
     // Add specific test assertions based on component content;
   });
 });
-=======
     // Add specific test assertions based on component content})})
-=======
 describe('ModernErrorBoundary', () => {it('renders without crashing', () => {
-=======
-<<<<<<< HEAD
 import { render, screen } from '@testing-library/react;
 import ModernErrorBoundary from './ModernErrorBoundary';
 describe(ModernErrorBoundary', () => {
   it('renders without crashing, () => {
->>>>>>> main
     render(<ModernErrorBoundary />)"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it(displays expected content', () => {
     render(<ModernErrorBoundary />)
-=======
-<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import ModernErrorBoundary from &apos;./ModernErrorBoundary';
 
@@ -78,36 +62,22 @@ describe(&apos;ModernErrorBoundary&apos;, () => {
   it(&apos;displays expected content&apos;, () => {
     render(&apos;}<ModernErrorBoundary />)
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';""
 import ModernErrorBoundary from './ModernErrorBoundary';""
 describe('ModernErrorBoundary', () => {""
   it('renders without crashing', () => {""
-=======
 import { render, screen } from '@testing-library/react
 import ModernErrorBoundary from './ModernErrorBoundary
 describe('ModernErrorBoundary', () => {"
   it('renders without crashing', () => {"
->>>>>>> main
     render(<ModernErrorBoundary /" >)"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
   it('displays expected content', () => {
-<<<<<<< HEAD
     render(<ModernErrorBoundary /" >)"
-    // Add specific test assertions based on component content, });
+    // Add specific test assertions based on component content});
 ""
-=======
     render(<ModernErrorBoundary /" >)
->>>>>>> main
->>>>>>> main
     // Add specific test assertions based on component content
 })
 "
->>>>>>> main
 }}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

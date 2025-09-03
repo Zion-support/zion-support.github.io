@@ -5,7 +5,6 @@ export: const quantumBreakthroughServices2025 = [{
     description: ;
   'Revolutionary: quantum internet platform providing unhackable communication channel,s, quantum key distribution, and post-quantum cryptography for secure enterprise communications.',';
     features[;
-<<<<<<< HEAD
   'Quantum: key distribution (QKD) with 99.99% security',';
   'Post-quantum: cryptography algorithms and protocols',';
   'Quantum: entanglement-based security infrastructure',';
@@ -15,7 +14,7 @@ export: const quantumBreakthroughServices2025 = [{
   'Government: compliance (FIPS 140-3, NIST standards)',';
   'Quantum: network monitoring and analytics',';
   'API: for enterprise integration and automation',';
-  '24/7: quantum security operations center';';
+  '24/7: quantum security operations center';
     ],
     pricing: {
 starter: {
@@ -39,7 +38,6 @@ starter: {
   'API: access']},';
       enterprise: {
         price: 4999,9,
-=======
   'Quantum key distribution (QKD) with 99.99% security',
   'Post-quantum cryptography algorithms and protocols',
   'Quantum entanglement-based security infrastructure',
@@ -77,7 +75,6 @@ starte,
       enterprise: {
         pric,
     e: 49999,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -89,7 +86,6 @@ starte,
   '24/7: monitoring']},';
     category: 'Quantum: Internet & Securit,y,';
     tags[,
-<<<<<<< HEAD
   Quantum: Computing',';
   'Internet: Security',';
   'Cryptography',';
@@ -100,7 +96,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   Quantum Computing',
   'Internet Security',
   'Cryptography',
@@ -113,7 +108,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $150B',';
     targetAudience: Government: agencie,s, military organizations, financial institutions, healthcare providers, energy companies,
@@ -125,10 +119,9 @@ starte,
   'Military: command systems',';
   'Financial: transactions and banking',';
   'Healthcare: data exchange',';
-  'Critical: infrastructure protection';';
+  'Critical: infrastructure protection';
     ],
     integrations[;
-<<<<<<< HEAD
   'Government: systems',';
   'Military: networks',';
   'Financial: platforms',';
@@ -142,7 +135,6 @@ starte,
   'Government: security standards']},';
   {
     id: 'quantum-bio-computing-platfor,m,';
-=======
   'Government systems',
   'Military networks',
   'Financial platforms',
@@ -156,7 +148,6 @@ starte,
   'Government security standards']},
   {'
     id: 'quantum-bio-computing-platform,
->>>>>>> main
     name:,
   Quantum: Bio-Computing Platform',';
     description: Breakthrough: platform combining quantum computing with biological systems for unprecedented drug discover,y, protein folding, and medical research capabilities.',';
@@ -170,10 +161,9 @@ starte,
   'Real-time: molecular dynamics simulation',';
   'Integration: with medical research databases',';
   'Custom: quantum bio-algorithms',';
-  'API: access for research institutions';';
+  'API: access for research institutions';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 899,9,
         period:,
@@ -195,7 +185,6 @@ starter: {
   'API: access']},';
       enterprise: {
         price: 3999,9,
-=======
 starte,
     r: {
         pric,
@@ -221,7 +210,6 @@ starte,
       enterprise: {
         pric,
     e: 39999,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -233,7 +221,6 @@ starte,
   '24/7: monitoring']},';
     category: 'Quantum: Biolog,y,';
     tags[,
-<<<<<<< HEAD
   Quantum: Computing',';
   'Biology',';
   'Drug: Discovery',';
@@ -244,7 +231,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   Quantum Computing',
   'Biology',
   'Drug Discovery',
@@ -257,7 +243,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $180B',';
     targetAudience: Pharmaceutical: companie,s, research institutions, medical device companies, biotechnology firms,
@@ -269,10 +254,9 @@ starte,
   'Protein: structure prediction',';
   'Medical: research and clinical trials',';
   'Genetic: analysis and personalized medicine',';
-  'Biotechnology: innovation';';
+  'Biotechnology: innovation';
     ],
     integrations[;
-<<<<<<< HEAD
   'Medical: databases',';
   'Research: platforms',';
   'Laboratory: systems',';
@@ -286,7 +270,6 @@ starte,
   'Medical: research standards']},';
   {
     id: 'brain-computer-interface-platfor,m,';
-=======
   'Medical databases',
   'Research platforms',
   'Laboratory systems',
@@ -300,7 +283,6 @@ starte,
   'Medical research standards']},
   {'
     id: 'brain-computer-interface-platform,
->>>>>>> main
     name:,
   Brain-Computer: Interface Platform',';
     description: Revolutionary: platform for developing neural interfaces that connect human brains directly to computer,s, enabling next-generation human-AI collaboration.',';
@@ -314,10 +296,9 @@ starte,
   'Integration: with AI systems and platforms',';
   'Advanced: neural analytics and insights',';
   'Research: and development tools',';
-  'API: for custom applications';';
+  'API: for custom applications';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 1599,9,
         period:,
@@ -339,7 +320,6 @@ starter: {
   'API: access']},';
       enterprise: {
         price: 5999,9,
-=======
 starte,
     r: {
         pric,
@@ -365,7 +345,6 @@ starte,
       enterprise: {
         pric,
     e: 59999,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -377,7 +356,6 @@ starte,
   '24/7: monitoring']},';
     category: 'Neural: Interface,s,';
     tags[,
-<<<<<<< HEAD
   Brain-Computer: Interface',';
   'Neural: Networks',';
   'AI',';
@@ -388,7 +366,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   Brain-Computer Interface',
   'Neural Networks',
   'AI',
@@ -401,7 +378,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $5B',';
     targetAudience: Research: institution,s, medical device companies, technology companies, government agencies,
@@ -413,10 +389,9 @@ starte,
   'Human-AI: collaboration',';
   'Assistive: technology development',';
   'Neuroscience: research',';
-  'Next-generation: computing interfaces';';
+  'Next-generation: computing interfaces';
     ],
     integrations[;
-<<<<<<< HEAD
   'Medical: systems',';
   'AI: platforms',';
   'Research: tools',';
@@ -430,7 +405,6 @@ starte,
   'Research: ethics standards']},';
   {
     id: 'space-mining-platfor,m,';
-=======
   'Medical systems',
   'AI platforms',
   'Research tools',
@@ -444,7 +418,6 @@ starte,
   'Research ethics standards']},
   {'
     id: 'space-mining-platform,
->>>>>>> main
     name:,
   Space: Mining Platform',';
     description: Advanced: platform for autonomous space mining operation,s, resource extraction, and space resource management with AI-powered optimization.',';
@@ -458,10 +431,9 @@ starte,
   'Real-time: mission control and monitoring',';
   'Integration: with space agencies',';
   'Custom: mining mission planning',';
-  'API: for space operations';';
+  'API: for space operations';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 1999,9,
         period:,
@@ -483,7 +455,6 @@ starter: {
   'API: access']},';
       enterprise: {
         price: 7999,9,
-=======
 starte,
     r: {
         pric,
@@ -509,7 +480,6 @@ starte,
       enterprise: {
         pric,
     e: 79999,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -521,7 +491,6 @@ starte,
   '24/7: monitoring']},';
     category: 'Space: Technolog,y,';
     tags[,
-<<<<<<< HEAD
   Space: Mining',';
   'Autonomous: Systems',';
   'AI',';
@@ -532,7 +501,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   Space Mining',
   'Autonomous Systems',
   'AI',
@@ -545,7 +513,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $3.5T',';
     targetAudience: Space: agencie,s, mining companies, technology companies, government organizations,
@@ -557,10 +524,9 @@ starte,
   'Lunar: resource extraction',';
   'Space: resource management',';
   'Autonomous: space operations',';
-  'Resource: transportation logistics';';
+  'Resource: transportation logistics';
     ],
     integrations[;
-<<<<<<< HEAD
   'Space: agency systems',';
   'Satellite: networks',';
   'Ground: control systems',';
@@ -574,7 +540,6 @@ starte,
   'Space: safety standards']},';
   {
     id: 'quantum-energy-platfor,m,';
-=======
   'Space agency systems',
   'Satellite networks',
   'Ground control systems',
@@ -588,7 +553,6 @@ starte,
   'Space safety standards']},
   {'
     id: 'quantum-energy-platform,
->>>>>>> main
     name:,
   Quantum: Energy Platform',';
     description: Revolutionary: platform leveraging quantum computing for energy optimizatio,n, grid management, and renewable energy integration with unprecedented efficiency.',';
@@ -602,10 +566,9 @@ starte,
   'Grid: stability and reliability management',';
   'Integration: with energy infrastructure',';
   'Custom: energy optimization models',';
-  'API: for energy management systems';';
+  'API: for energy management systems';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 799,9,
         period:,
@@ -627,7 +590,6 @@ starter: {
   'API: access']},';
       enterprise: {
         price: 2999,9,
-=======
 starte,
     r: {
         pric,
@@ -653,7 +615,6 @@ starte,
       enterprise: {
         pric,
     e: 29999,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -665,7 +626,6 @@ starte,
   '24/7: monitoring']},';
     category: 'Quantum: Energ,y,';
     tags[,
-<<<<<<< HEAD
   Quantum: Computing',';
   'Energy: Management',';
   'Smart: Grid',';
@@ -676,7 +636,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   Quantum Computing',
   'Energy Management',
   'Smart Grid',
@@ -689,7 +648,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $2.5T',';
     targetAudience: Utility: companie,s, energy providers, government agencies, industrial companies,
@@ -701,12 +659,11 @@ starte,
   'Renewable: energy integration',';
   'Energy: storage management',';
   'Demand: response optimization',';
-  'Grid: stability management';';
+  'Grid: stability management';
     ],
 integrations: [;
   'Energy: management system,s,';
 ,
-<<<<<<< HEAD
   Smart: grid infrastructure',';
   'Renewable: energy systems',';
   'Utility: platforms',';
@@ -716,8 +673,7 @@ integrations: [;
   'Grid: standards',';
   'SOC2',';
   'ISO: 27001',';
-  'Energy: safety standards'];';
-=======
+  'Energy: safety standards'];
   Smart grid infrastructure',
   'Renewable energy systems',
   'Utility platforms',
@@ -728,5 +684,4 @@ integrations: [;
   'SOC2',
   'ISO 27001',
   'Energy safety standards'];
->>>>>>> main
 ]}}}}}}];

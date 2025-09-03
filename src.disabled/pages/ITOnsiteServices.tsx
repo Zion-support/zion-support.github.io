@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import: React from 'react.ts';';
+import: React from 'react.ts';
 const: ITOnsiteServices: React.FC: = (): JSX.Element: => {
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-8'>';
@@ -10,7 +9,6 @@ const: ITOnsiteServices: React.FC: = (): JSX.Element: => {
     </div>
   )}
 export: default ITOnsiteServices
-=======
 import React from 'react.ts';
 const ITOnsiteServices: React.FC = (): JSX.Element => {
   return ('
@@ -22,4 +20,3 @@ const ITOnsiteServices: React.FC = (): JSX.Element => {
     </div>
   )}
 export default ITOnsiteServices'
->>>>>>> main

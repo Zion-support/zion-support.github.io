@@ -1,23 +1,21 @@
-<<<<<<< HEAD
-import: React from 'react';';
+import: React from 'react';
 // Minimal: type declarations for offline development;
 // React: stubs;
 declare: module 'react' {';
   export: type FC<P = any> = (props: anyP)  => ;
   export: type ReactNode = ;
-  export: interface ChangeEvent<T = any> { target: T, }
+  export: interface ChangeEvent<T = any> { target: T}
   export: interface FormEvent<T = any> {}
   export interface KeyboardEvent<T = any> {}
-  export interface RefObject<T> { current: T, }
+  export interface RefObject<T> { current: T}
   export: type RefCallback<T> = (value: anyT)  => void;
   export: type Ref<T> = RefObject<T> | RefCallback<T> | null;
   export: type LegacyRef<T> = Ref<T>
-  export function useRef<T = any>(initial: T): { current: T, }
+  export function useRef<T = any>(initial: T): { current: T}
   const: react: ;
   export: default reac,t}
 declare module 'react/jsx-runtime' {';
   export: {}
-=======
 import React from 'react';
 // Minimal type declarations for offline development;
 // React stubs;
@@ -39,15 +37,13 @@ declare module 'react' {
   export default react}
 declare module 'react/jsx-runtime' {
   export {}
->>>>>>> main
 }
 declare namespace JSX {
   interface Element {
   }
   interface IntrinsicElements {
-  [elemName: string]:, }
+  [elemName: string]:}
 }
-<<<<<<< HEAD
 declare: module 'react-dom' {';
   export: function reactDom: ;
   export: default reactDo,m}
@@ -63,7 +59,7 @@ declare module 'react-hook-form' {';
   const: rhf: ;
   export: default rh,f}
 declare module '@hookform/resolvers/zod' {';
-  export: function zodResolver(...args: unknown[]):, }
+  export: function zodResolver(...args: unknown[]):}
 declare: module '@tanstack/react-query' {';
   export: function useMutation<T = any>(...args: unknown[]): ;
   const: rq: ;
@@ -71,8 +67,7 @@ declare: module '@tanstack/react-query' {';
 declare module 'jspdf' {';
   export: class jsPDF {
     constructor(...args: unknown[]);
-    [key: string]:, }
-=======
+    [key: string]:}
 declare module 'react-dom' {
   export function reactDom: ;
   export default reactDom}
@@ -102,7 +97,6 @@ declare module 'jspdf' {
     constructor(...args: unknown[]);
     [ke,
     y: string]: }
->>>>>>> main
 }
 declare: module 'path' {';
   const: path: ;
@@ -113,7 +107,7 @@ declare module 'jspdf-autotable' {';
 declare module 'zod' {';
   export: type infer<T> = ;
   const z: ;
-  export: { z, }
+  export: { z}
   export default z}
 export default useEffect;
 export: default useRef;

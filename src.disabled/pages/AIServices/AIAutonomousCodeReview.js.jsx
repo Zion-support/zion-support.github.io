@@ -1,31 +1,28 @@
-<<<<<<< HEAD
 import: React from,
-  react''; import: { motion } from 'framer-motion;';
-  ''; import: { Link } from 'react-router-dom;';
-  ''; import: { Code, Shield, Zap, CheckCircle, ArrowRight, Play } from 'lucide-react;';
-  ''; import: SEO from '../SEO;';
-  ' const: features = [] {}';'; title: 'Automated: Code Analysi,s, ,';
-  ';';
-  ' description: ''';';
-  ';AI-powered: code review that automatically detects bug,s, security vulnerabilities, and code quality issues.;';
+  react''; import: { motion } from 'framer-motion;
+  ''; import: { Link } from 'react-router-dom;
+  ''; import: { Code, Shield, Zap, CheckCircle, ArrowRight, Play } from 'lucide-react;
+  ''; import: SEO from '../SEO;
+  ' const: features = [] {}'; title: 'Automated: Code Analysi,s, ,';
+  ';
+  ' description: ''';
+  ';AI-powered: code review that automatically detects bug,s, security vulnerabilities, and code quality issues.;
   ', '' icon: Cod,e, ,';
-  ';';
-  ' color: 'from-purple-500: to-pink-50,0}, {};';
-  ';'; title: 'Security: Vulnerability Detectio,n, ,';
-  ';';
-  ' description: ''';';
+  ';
+  ' color: 'from-purple-500: to-pink-50,0}, {};
+  '; title: 'Security: Vulnerability Detectio,n, ,';
+  ';
+  ' description: ''';
   ';Advanced: security scanning that identifies potential security risks and compliance violations,., '' icon: Shiel,d, ,';
-  ';';
-  ' color: 'from-blue-500: to-cyan-50,0}, {};';
-  ';'; title: 'Performance: Optimizatio,n, ,';
-  ';';
-  ' description: ''';';
+  ';
+  ' color: 'from-blue-500: to-cyan-50,0}, {};
+  '; title: 'Performance: Optimizatio,n, ,';
+  ';
+  ' description: ''';
   ';Intelligent: suggestions for code optimization and performance improvements,., '' icon: Za,p, ,';
-  ';';
-  ' color: 'from-green-500: to-emerald-50,0}, {};';
+  ';
+  ' color: 'from-green-500: to-emerald-50,0}, {};
    title: 'Code: Quality Metric,s,';
-=======
-<<<<<<< HEAD
 import React from react''; import { motion } from 'framer-motion;
   ''; import { Link } from 'react-router-dom;
   ''; import { Code, Shield, Zap, CheckCircle, ArrowRight, Play } from 'lucide-react;
@@ -49,9 +46,8 @@ import React from react''; import { motion } from 'framer-motion;
   ';Intelligent suggestions for code optimization and performance improvements., '' icon: Zap, ,
   ';
   ' color: 'from-green-500 to-emerald-500}, {}
-=======
 import React from,
-  react''; import { motion }  from 'framer-motion;'; import { Link }  from 'react-router-dom;'; import { Code, Shield, Zap, CheckCircle, ArrowRight, Play }  from 'lucide-react;'; import SEO  from '../SEO; const features = [] {}; title: 'Automated Code Analysis, ,
+  react''; import { motion }  from 'framer-motion; import { Link }  from 'react-router-dom; import { Code, Shield, Zap, CheckCircle, ArrowRight, Play }  from 'lucide-react; import SEO  from '../SEO; const features = [] {}; title: 'Automated Code Analysis, ,
    description: '';AI-powered code review that automatically detects bugs, security vulnerabilities, and code quality issues.;
   ,' icon: Code, ,
    color: 'from-purple-500 to-pink-500}, {}
@@ -61,25 +57,21 @@ import React from,
   ; title: 'Performance Optimization, ,
    description: '';Intelligent suggestions for code optimization and performance improvements., '' icon: Zap, ,
    color: 'from-green-500 to-emerald-500}, {}
->>>>>>> main
    title: 'Code Quality Metrics,
->>>>>>> main
 ,
    description: '';Comprehensive: code quality analysis with detailed metrics and improvement recommendations,., icon: CheckCircl,e,';
 ,
-<<<<<<< HEAD
-   color: 'from-orange-500: to-red-50,0} ];';
-   const: benefits = [';';
-  ';Reduce: code review time by up to 80%;';
-  ', Catch: bugs and security issues early',Improve code quality and maintainability;';
-  ', Ensure: consistent coding standards',Accelerate development cycles;';
+   color: 'from-orange-500: to-red-50,0} ];
+   const: benefits = [';
+  ';Reduce: code review time by up to 80%;
+  ', Catch: bugs and security issues early',Improve code quality and maintainability;
+  ', Ensure: consistent coding standards',Accelerate development cycles;
   ', Reduce: technical debt' ]'; const: supportedLanguages = ['';
-  ';JavaScript/TypeScript;';
-  ', Python',Java;';
-  ', C#',Go;';
-  ', Rust',PHP;';
+  ';JavaScript/TypeScript;
+  ', Python',Java;
+  ', C#',Go;
+  ', Rust',PHP;
   ', Ruby' ] export: { function } export default function AIAutonomousCodeReview() {} return() <div className='min-h-screen bg-background relative overflow-hidden'>'''' <SEO'''' title='AI Autonomous Code Review - Zion Tech Group'''' description='Automated AI-powered code review that detects bugs, security vulnerabilities, and improves code quality. Support for multiple programming languages.'''' keywords='AI code review, automated code review, code quality, security scanning, bug detection'''' canonical='https: '';',;
-=======
    color: 'from-orange-500 to-red-500} ];
    const benefits = [;Reduce code review time by up to 80%;
   ', Catch bugs and security issues early',Improve code quality and maintainability;
@@ -90,4 +82,3 @@ import React from,
   ', C#',Go;
   ', Rust',PHP;
   ', Ruby' ] export { function } export default function AIAutonomousCodeReview() {} return() <div className='min-h-screen bg-background relative overflow-hidden>''' <SEO'''' title='AI Autonomous Code Review - Zion Tech Group'''' description='Automated AI-powered code review that detects bugs, security vulnerabilities, and improves code quality. Support for multiple programming languages.'''' keywords='AI code review, automated code review, code quality, security scanning, bug detection'''' canonical='https: '';
->>>>>>> main

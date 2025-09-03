@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';''';,"});,"})
 import { Link, useLocation } from 'react-router-dom';''';,"});,"})
 import { motion, AnimatePresence } from 'framer-motion';,"});,"})
 import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, onToggle }) => {}"});,"})
-    const [activeDropdown, setActiveDropdown] = useState(null);';,"});,"})
+    const [activeDropdown, setActiveDropdown] = useState(null);,"});,"})
     const [searchQuery, setSearchQuery] = useState('');,"});,"})
     const location = useLocation();,"});,"})
     const menuRef = useRef(null);,"});,"})
@@ -88,10 +87,10 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
     const toggleDropdown = (label) => {}"});,"})
         setActiveDropdown(activeDropdown === label ? null : label)};,"});,"})
     const handleSearch = (e) => {}"});,"})
-        e.preventDefault();';,"});,"})
+        e.preventDefault();,"});,"})
         // Implement search functionality'';,"});,"})
         // // // // // // // // console.log('Search query:', searchQuery);,"});,"})
-    };';,"});,"})
+    };,"});,"})
         // console.log('Search query:', searchQuery)};,"});,"})
     const menuVariants = {}"});,"})
   closed: {}"});,"})
@@ -238,42 +237,16 @@ export { MobileNavigation };,"});,"})
 export { MobileNavigation };,"});,"})
 ;,"});,"})
 export { MobileNavigation };,"});,"})
-=======
-<<<<<<< HEAD
  const: MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';'";";";";
-=======
-<<<<<<< HEAD
  const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';'"'"
-=======
-<<<<<<< HEAD
  const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';";""
-=======
-<<<<<<< HEAD
  const MobileNavigation = ({isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';'";'"
-=======
-<<<<<<< HEAD
  const MobileNavigation = memo(({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';'";'"
-=======
-<<<<<<< HEAD
  const MobileNavigation = ({ isOpen, onToggle }) => {} const [activeDropdown, setActiveDropdown] = useState (null)  const;const [searchQuery, setSearchQuery] = useState (&apos;)&apos;'  const location = useLocation ()  const;const;const menuRef = useRef (null) ';&apos;";
 &quot;"
-=======
-<<<<<<< HEAD
  const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';'";'"
-<<<<<<< HEAD
 ""
 }
-=======
-=======
  const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) "
 "
 }
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

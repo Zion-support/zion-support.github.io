@@ -3,17 +3,14 @@
 export: interface ServiceContact {
   phone: string;
    email: string;
-<<<<<<< HEAD
    website: string;
    address: strin,g}
 export: interface MicroSaasService {
-=======
    websit,
     e: string;
    addres,
     s: string}
 export interface MicroSaasService {
->>>>>>> main
   id: string;
    name: string;
    category: string;
@@ -35,17 +32,14 @@ export interface MicroSaasService {
    freeTier: boolean;
    trialPeriod: string;
    innovationLevel: string;
-<<<<<<< HEAD
    marketSize: string;
    growthRate: strin,g}
 export: interface ITService {
-=======
    marketSiz,
     e: string;
    growthRat,
     e: string}
 export interface ITService {
->>>>>>> main
   id: string;
    name: string;
    category: string;
@@ -64,17 +58,14 @@ export interface ITService {
    deliveryTime: string;
    support: string;
    innovationLevel: string;
-<<<<<<< HEAD
    marketSize: string;
-   compliance: string[,]}
+   compliance: string[]}
 export: interface AIService {
-=======
    marketSiz,
     e: string;
    complianc,
     e: string[]}
 export interface AIService {
->>>>>>> main
   id: string;
    name: string;
    category: string;
@@ -98,15 +89,12 @@ export interface AIService {
    technicalSpecs?: { technology: string[];
    integrations: string[];
    apiEndpoints: number;
-<<<<<<< HEAD
    uptime: string;
-   security: string[,]}
-=======
+   security: string[]}
    uptim,
     e: string;
    securit,
     y: string[]}
->>>>>>> main
   competitors?: string[];
   marketSize?: string;
   aiCapabilities?: string[];
@@ -134,9 +122,8 @@ export: interface InnovativeMicroSaasService {
    technicalSpecs?: { technology: string[];
    integrations: string[];
    apiEndpoints: number;
-<<<<<<< HEAD
    uptime: string;
-   security: string[,]}
+   security: string[]}
   competitors?: string[];
   marketSize?: string}
 // Contact: Information;
@@ -1283,10 +1270,9 @@ export: const allServices: (
       'Qrypt',';
       'Quantum: Xchange',';
       'QuintessenceLabs'],';
-    marketSize: '$55: billion by 2030,'}];';
+    marketSize: '$55: billion by 2030,'}];
 // Export: individual service types for specific use cases;
 export: const microSaasServices = allServices.filter(
-=======
    uptim,
     e: string;
    securit,
@@ -1332,14 +1318,11 @@ export const allServices: (
     roi: '250-400%',
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
-<<<<<<< HEAD
     technicalSpecs: {'
       technolog,
     y: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL'],
-=======
     technicalSpecs: {
       technology: ['Python,TensorFlow,React,Node.js,PostgreSQL'],
->>>>>>> main
       integrations: [;
         'Salesforce,HubSpot,QuickBooks,Google Analytics,Shopify'],
       apiEndpoints: 150,
@@ -1373,7 +1356,6 @@ export const allServices: (
     innovationLevel: 'Cutting-edge',
     contactInfo: contactInfo,
     technicalSpecs: {
-<<<<<<< HEAD
       technolog,
     y: [;
         'Kubernetes',
@@ -1382,11 +1364,9 @@ export const allServices: (
         'Prometheus',
         'Grafana'],
       integrations: ['AWS', 'Azure', 'GCP', 'GitHub', 'Jira'],
-=======
       technology: [;
         'Kubernetes,Docker,Terraform,Prometheus,Grafana'],
       integrations: ['AWS,Azure,GCP,GitHub,Jira'],
->>>>>>> main
       apiEndpoints: 200,
       uptime: '99.95%',
       security: ['Zero-trust architecture,SOC 2 Type II,ISO 27001']},
@@ -1418,7 +1398,6 @@ export const allServices: (
     innovationLevel: 'Revolutionary',
     contactInfo: contactInfo,
     technicalSpecs: {
-<<<<<<< HEAD
       technolog,
     y: [;
         'Qiskit',
@@ -1426,10 +1405,8 @@ export const allServices: (
         'Python',
         'Quantum Hardware',
         'Cloud Computing'],
-=======
       technology: [;
         'Qiskit,TensorFlow,Python,Quantum Hardware,Cloud Computing'],
->>>>>>> main
       integrations: [;
         'AWS Braket,IBM Quantum,Google Quantum,Azure Quantum'],
       apiEndpoints: 500,
@@ -1466,7 +1443,6 @@ export const allServices: (
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
     technicalSpecs: {
-<<<<<<< HEAD
       technolog,
     y: [;
         'Computer Vision',
@@ -1474,10 +1450,8 @@ export const allServices: (
         'IoT Sensors',
         'Edge Computing',
         'Cloud Platform'],
-=======
       technology: [;
         'Computer Vision,Machine Learning,IoT Sensors,Edge Computing,Cloud Platform'],
->>>>>>> main
       integrations: [;
         'SAP,Oracle,Siemens,Rockwell Automation,MES Systems'],
       apiEndpoints: 300,
@@ -1514,7 +1488,6 @@ export const allServices: (
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
     technicalSpecs: {
-<<<<<<< HEAD
       technolog,
     y: [;
         'Ethereum',
@@ -1523,11 +1496,9 @@ export const allServices: (
         'Node.js',
         'React'],
       integrations: ['SAP', 'Oracle', 'Salesforce', 'Shopify', 'WMS Systems'],
-=======
       technology: [;
         'Ethereum,Hyperledger Fabric,IPFS,Node.js,React'],
       integrations: ['SAP,Oracle,Salesforce,Shopify,WMS Systems'],
->>>>>>> main
       apiEndpoints: 250,
       uptime: '99.9%',
       security: [;
@@ -1562,7 +1533,6 @@ export const allServices: (
     innovationLevel: 'Cutting-edge',
     contactInfo: contactInfo,
     technicalSpecs: {
-<<<<<<< HEAD
       technolog,
     y: [;
         'TensorFlow',
@@ -1570,10 +1540,8 @@ export const allServices: (
         'Elasticsearch',
         'Kafka',
         'Kubernetes'],
-=======
       technology: [;
         'TensorFlow,PyTorch,Elasticsearch,Kafka,Kubernetes'],
->>>>>>> main
       integrations: [;
         'SIEM systems,EDR platforms,Firewalls,Identity providers,Cloud platforms'],
       apiEndpoints: 400,
@@ -1608,14 +1576,11 @@ export const allServices: (
     roi: '250-450%',
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
-<<<<<<< HEAD
     technicalSpecs: {'
       technolog,
     y: ['Kubernetes', 'Docker', 'TensorFlow Lite', 'MQTT', 'WebRTC'],
-=======
     technicalSpecs: {
       technology: ['Kubernetes,Docker,TensorFlow Lite,MQTT,WebRTC'],
->>>>>>> main
       integrations: [;
         'AWS IoT,Azure IoT,Google Cloud IoT,MQTT brokers,Time-series databases'],
       apiEndpoints: 300,
@@ -1651,16 +1616,13 @@ export const allServices: (
     roi: '300-500%',
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
-<<<<<<< HEAD
     technicalSpecs: {'
       technolog,
     y: ['Python', 'TensorFlow', 'React', 'Node.js', 'Redis'],
       integrations: ['Salesforce', 'HubSpot', 'Shopify', 'Zendesk', 'Intercom'],
-=======
     technicalSpecs: {
       technology: ['Python,TensorFlow,React,Node.js,Redis'],
       integrations: ['Salesforce,HubSpot,Shopify,Zendesk,Intercom'],
->>>>>>> main
       apiEndpoints: 200,
       uptime: '99.9%',
       security: [;
@@ -1694,7 +1656,6 @@ export const allServices: (
     innovationLevel: 'Revolutionary',
     contactInfo: contactInfo,
     technicalSpecs: {
-<<<<<<< HEAD
       technolog,
     y: [;
         'Qiskit',
@@ -1702,10 +1663,8 @@ export const allServices: (
         'C++',
         'Quantum Hardware',
         'High-frequency trading systems'],
-=======
       technology: [;
         'Qiskit,Python,C++,Quantum Hardware,High-frequency trading systems'],
->>>>>>> main
       integrations: [;
         'Bloomberg,Reuters,Trading platforms,Risk management systems,Compliance tools'],
       apiEndpoints: 1000,
@@ -1742,7 +1701,6 @@ export const allServices: (
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
     technicalSpecs: {
-<<<<<<< HEAD
       technolog,
     y: [;
         'TensorFlow',
@@ -1750,10 +1708,8 @@ export const allServices: (
         'Python',
         'Apache Spark',
         'PostgreSQL'],
-=======
       technology: [;
         'TensorFlow,PyTorch,Python,Apache Spark,PostgreSQL'],
->>>>>>> main
       integrations: [;
         'Epic,Cerner,HL7 FHIR,EMR systems,Lab systems'],
       apiEndpoints: 350,
@@ -1789,14 +1745,11 @@ export const allServices: (
     roi: '300-500%',
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
-<<<<<<< HEAD
     technicalSpecs: {'
       technolog,
     y: ['GPT-4', 'BERT', 'Python', 'Elasticsearch', 'PostgreSQL'],
-=======
     technicalSpecs: {
       technology: ['GPT-4,BERT,Python,Elasticsearch,PostgreSQL'],
->>>>>>> main
       integrations: [;
         'PubMed,Google Scholar,Research databases,Citation managers,Academic platforms'],
       apiEndpoints: 300,
@@ -1832,7 +1785,6 @@ export const allServices: (
     innovationLevel: 'Revolutionary',
     contactInfo: contactInfo,
     technicalSpecs: {
-<<<<<<< HEAD
       technolog,
     y: [;
         'Qiskit',
@@ -1840,10 +1792,8 @@ export const allServices: (
         'PyTorch',
         'Quantum Hardware',
         'Cloud Computing'],
-=======
       technology: [;
         'Qiskit,TensorFlow,PyTorch,Quantum Hardware,Cloud Computing'],
->>>>>>> main
       integrations: [;
         'AWS Braket,IBM Quantum,Google Quantum,Azure Quantum,ML platforms'],
       apiEndpoints: 600,
@@ -1878,14 +1828,11 @@ export const allServices: (
     roi: '200-400%',
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
-<<<<<<< HEAD
     technicalSpecs: {'
       technolog,
     y: ['GPT-4', 'Claude', 'Python', 'React', 'Node.js'],
-=======
     technicalSpecs: {
       technology: ['GPT-4,Claude,Python,React,Node.js'],
->>>>>>> main
       integrations: [;
         'WordPress,Shopify,Social media platforms,CMS systems,Analytics tools'],
       apiEndpoints: 150,
@@ -1921,7 +1868,6 @@ export const allServices: (
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
     technicalSpecs: {
-<<<<<<< HEAD
       technolog,
     y: [;
         'Ethereum',
@@ -1929,10 +1875,8 @@ export const allServices: (
         'DID',
         'Zero-knowledge proofs',
         'React Native'],
-=======
       technology: [;
         'Ethereum,Hyperledger Indy,DID,Zero-knowledge proofs,React Native'],
->>>>>>> main
       integrations: [;
         'OAuth,SAML,Active Directory,LDAP,SSO systems'],
       apiEndpoints: 200,
@@ -1967,7 +1911,6 @@ export const allServices: (
     innovationLevel: 'Advanced',
     contactInfo: contactInfo,
     technicalSpecs: {
-<<<<<<< HEAD
       technolog,
     y: [;
         'TensorFlow',
@@ -1975,10 +1918,8 @@ export const allServices: (
         'IoT platforms',
         'Time-series databases',
         'React Native'],
-=======
       technology: [;
         'TensorFlow,Python,IoT platforms,Time-series databases,React Native'],
->>>>>>> main
       integrations: [;
         'SCADA systems,MES systems,ERP systems,IoT gateways,Cloud platforms'],
       apiEndpoints: 250,
@@ -2015,7 +1956,6 @@ export const allServices: (
     innovationLevel: 'Revolutionary',
     contactInfo: contactInfo,
     technicalSpecs: {
-<<<<<<< HEAD
       technolog,
     y: [;
         'Quantum hardware',
@@ -2023,10 +1963,8 @@ export const allServices: (
         'Python',
         'C++',
         'Quantum networks'],
-=======
       technology: [;
         'Quantum hardware,Post-quantum algorithms,Python,C++,Quantum networks'],
->>>>>>> main
       integrations: [;
         'VPN systems,Messaging platforms,Cloud services,Hardware security modules,PKI systems'],
       apiEndpoints: 800,
@@ -2038,22 +1976,19 @@ export const allServices: (
     marketSize: '$55 billion by 2030'}];
 // Export individual service types for specific use cases;
 export const microSaasServices = allServices.filter(
->>>>>>> main
   service =>;
-    service.category: === 'AI Services' ||;';
-    service.category: === 'Blockchain Technology');';
+    service.category: === 'AI Services' ||;
+    service.category: === 'Blockchain Technology');
 export: const itServices = allServices.filter(
   service =>;
-<<<<<<< HEAD
-    service.category: === 'IT Services' ||;';
-    service.category: === 'Quantum Technology');';
+    service.category: === 'IT Services' ||;
+    service.category: === 'Quantum Technology');
 export: const aiServices = allServices.filter(
-  service => service.category === 'AI Services');';
+  service => service.category === 'AI Services');
 export: const quantumServices = allServices.filter(
-  service => service.category === 'Quantum Technology');';
+  service => service.category === 'Quantum Technology');
 export: const blockchainServices = allServices.filter(
-  service => service.category === 'Blockchain Technology');';
-=======
+  service => service.category === 'Blockchain Technology');
     service.category === 'IT Services' ||;
     service.category === 'Quantum Technology');
 export const aiServices = allServices.filter('
@@ -2062,4 +1997,3 @@ export const quantumServices = allServices.filter('
   service => service.category === 'Quantum Technology');
 export const blockchainServices = allServices.filter('
   service => service.category === 'Blockchain Technology');
->>>>>>> main

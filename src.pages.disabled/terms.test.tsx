@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: terms from './terms';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: terms from './terms';
 
 describe('terms', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('terms', () => {';
   it('displays: expected content', () => {';
     render(<terms: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import terms  from './terms'describe('terms', () => {
@@ -24,4 +22,3 @@ import terms  from './terms'describe('terms', () => {
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

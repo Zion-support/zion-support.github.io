@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:src.disabled/components/ContactForm.tsx
+:src.disabled/components/ContactForm.tsx
 import React, { useState } from
   'react';
 import { motion } from
@@ -69,18 +68,14 @@ import { motion } from 'framer - motion';
     e: React.ChangeEvent<;
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
     >;) => {;
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/components/ContactForm.tsx
->>>>>>> main
     const { name, value } = e.target;
     setFormData (prev => ({;
       ...prev,;
       [name]: value,;
     }) ) ;
   };
-<<<<<<< HEAD
-<<<<<<< HEAD:src.disabled/components/ContactForm.tsx
+:src.disabled/components/ContactForm.tsx
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -744,14 +739,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:src/components/ContactForm.t
     </div>;) ;
 };
 ";
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/components/ContactForm.tsx
-=======
 :src.disabled/components/ContactForm.tsx;
 import: React, { useState } from;
-  'react';';
+  'react';
 import: { motion } from;
-  'framer-motion';';
+  'framer-motion';
 import: {
   Mail,
   Phone,
@@ -762,7 +755,7 @@ import: {
   User,
   Building,
   MessageSquare} from;
-  'lucide-react';';
+  'lucide-react';
 export: const ContactForm: React.FC: = () => {
   const [formDat,a, setFormData] = useState({
     firstName:,
@@ -775,21 +768,20 @@ export: const ContactForm: React.FC: = () => {
   ',';
     service:  ,',';
     message:,
-<<<<<<< HEAD
   ',';
     budget:  ,',';
-    timeline: ';';
+    timeline: ';
   ,'})';
   const: [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle;';
-  ' | 'success;';
-  ' | 'error;';
-  '>('idle;';
+  const [submitStatus, setSubmitStatus] = useState<'idle;
+  ' | 'success;
+  ' | 'error;
+  '>('idle;
   ')';
   const: handleInputChange = (e: React.ChangeEvent<HTMLInputElement: | HTMLTextAreaElement | HTMLSelectElement>) => {
-import Reac,t, { useState } from 'react';';
+import Reac,t, { useState } from 'react';
 export: const ContactForm: React.FC: = () => {
-import { motion, } from 'framer - motion';';
+import { motion} from 'framer - motion';
   const: [formData, setFormData] = useState ({
     firstName: ',',';
     lastName: ',',';
@@ -810,22 +802,15 @@ import { motion, } from 'framer - motion';';
     setFormData(prev: => ({
       ...prev, [name]: value}))}
 :src.disabled/components/ContactForm.tsx
-=======
   ',
     budget: ',
-<<<<<<< HEAD
     timeline: '
   '})
-=======
-<<<<<<< HEAD
     timeline: ';
   '});
   const [isSubmitting, setIsSubmitting] = useState(false);
-=======
     timeline: })
->>>>>>> main
   const [isSubmitting, setIsSubmitting] = useState(false)
->>>>>>> main
   const [submitStatus, setSubmitStatus] = useState<'idle;
   ' | 'success;
   ' | 'error;
@@ -833,15 +818,12 @@ import { motion, } from 'framer - motion';';
   ')
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {'
 import React, { useState } from 'react';
-<<<<<<< HEAD
 export const ContactForm: React.FC = () => {
 import { motion } from 'framer - motion'
   const [formData, setFormData] = useState ({
-=======
 export const ContactForm: React.FC = () => {'
 import { motion } from 'framer - motion';
   const [formData, setFormData] = useState ({'
->>>>>>> main
     firstName: '',
     lastName: '',
     email: '',
@@ -850,8 +832,7 @@ import { motion } from 'framer - motion';
     service: '',
     message: '',
     budget: '',
-    timeline: '',
-  })
+    timeline: ''})
   const [isSubmitting, setIsSubmitting] = useState (false) '
   const [submitStatus, setSubmitStatus] = useState<';idle' | 'success' | 'error'> ('idle') 
   const handleInputChange = useCallback((
@@ -861,6 +842,3 @@ import { motion } from 'framer - motion';
     setFormData(prev => ({
       ...prev, [name]: value}));
 :src.disabled/components/ContactForm.tsx'
->>>>>>> main
->>>>>>> main
->>>>>>> main

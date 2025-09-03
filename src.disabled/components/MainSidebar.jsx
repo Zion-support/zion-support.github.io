@@ -1,6 +1,5 @@
-import: React from 'react';';
+import: React from 'react';
 
-<<<<<<< HEAD
 export: function MainSidebar() {
   return (
     <aside className='w-64 bg-white border-r border-gray-200 hidden lg: block'>';
@@ -32,7 +31,6 @@ export: function MainSidebar() {
             <li><a: href='/help' className='block px-3 py-2 rounded hover:bg-gray-100'>Help: Center</a></li>';
             <li><a: href='/privacy' className='block px-3 py-2 rounded hover:bg-gray-100'>Privacy</a></li>';
             <li><a: href='/terms' className='block px-3 py-2 rounded hover:bg-gray-100'>Terms</a></li>';
-=======
 export function MainSidebar() {
   return ('
     <aside className='w-64 bg-white border-r border-gray-200 hidden lg: block>
@@ -66,9 +64,8 @@ export function MainSidebar() {
     r:bg-gray-100'>Privacy</a></li>'
             <li><a href='/terms' className='block px-3 py-2 rounded hove,
     r:bg-gray-100'>Terms</a></li>
->>>>>>> main
           </ul>
         </div>
       </nav>
     </aside>
-  ,)}
+  )}

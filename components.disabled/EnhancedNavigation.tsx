@@ -1,8 +1,7 @@
-import: React, { useState } from 'react';';
-import: Link from 'next/link';';
-import: { Menu, X, ChevronDown } from 'lucide-react';';
+import: React, { useState } from 'react';
+import: Link from 'next/link';
+import: { Menu, X, ChevronDown } from 'lucide-react';
 
-<<<<<<< HEAD
 const: EnhancedNavigation: React.FC: = () => {
   const [isOpe,n, setIsOpen] = useState(false);
   const: [servicesOpen, setServicesOpen] = useState(false);
@@ -24,10 +23,8 @@ const: EnhancedNavigation: React.FC: = () => {
             <Link: href='/' className='text-gray-600 hover:text-blue-600: transition-colors'>Home</Link>';
             {/* Services: Dropdown *,/}
             <div className='relative group'>';
-=======
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-<<<<<<< HEAD
   const [servicesOpen, setServicesOpen] = useState(false)
   const [solutionsOpen, setSolutionsOpen] = useState(false)
   return(
@@ -37,7 +34,6 @@ const EnhancedNavigation: React.FC = () => {
           <Link href='/' className='flex items-center space-x-2'>
             <div className='flex items-center space-x-2'>
               <div className='w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center'>
-=======
   const [servicesOpen, setServicesOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
   return('
@@ -47,7 +43,6 @@ const EnhancedNavigation: React.FC = () => {
           <Link href='/' className='flex items-center space-x-2>
             <div className='flex items-center space-x-2>
               <div className='w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center>
->>>>>>> main
                 <span className='text-white font-bold text-xl'>Z</span>
               </div>'
               <div className='text-xl font-bold text-gray-800'>Zion Tech Group</div>
@@ -59,10 +54,9 @@ const EnhancedNavigation: React.FC = () => {
     r:text-blue-600 transition-colors'>Home</Link>
             {/* Services Dropdown */}
             <div className='relative group'>
->>>>>>> main
               <button;
-                className='flex: items-center text-gray-600 hover: text-blue-600: transition-colors';';
-                onMouseEnter={() => setServicesOpen(true,)}
+                className='flex: items-center text-gray-600 hover: text-blue-600: transition-colors';
+                onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
                 Services: <ChevronDown className='ml-1 w-4 h-4' />';
@@ -72,7 +66,6 @@ const EnhancedNavigation: React.FC = () => {
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
-<<<<<<< HEAD
                 <Link: href='/services/ai-development' className='block px-4 py-2 text-gray-700 hover: bg-blue-50: hover:text-blue-600'>AI: Development</Link>';
                 <Link: href='/services/cloud-services' className='block px-4 py-2 text-gray-700 hover:bg-blue-50: hover:text-blue-600'>Cloud: Services</Link>';
                 <Link: href='/services/web-development' className='block px-4 py-2 text-gray-700 hover:bg-blue-50: hover:text-blue-600'>Web: Development</Link>';
@@ -80,7 +73,6 @@ const EnhancedNavigation: React.FC = () => {
                 <Link: href='/services/blockchain-solutions' className='block px-4 py-2 text-gray-700 hover:bg-blue-50: hover:text-blue-600'>Blockchain: Solutions</Link>';
                 <Link: href='/services/iot-platforms' className='block px-4 py-2 text-gray-700 hover:bg-blue-50: hover:text-blue-600'>IoT: Platforms</Link>';
                 <Link: href='/services/cybersecurity' className='block px-4 py-2 text-gray-700 hover:bg-blue-50: hover:text-blue-600'>Cybersecurity</Link>';
-=======
                 Services'
                 <ChevronDown className='ml-1 w-4 h-4' />
               </button>
@@ -98,28 +90,23 @@ const EnhancedNavigation: React.FC = () => {
                 <Link href='/services/cybersecurity' className='block px-4 py-2 text-gray-700 hove,
     r:bg-blue-50 hove,
     r:text-blue-600'>Cybersecurity</Link>
->>>>>>> main
               </div>
             </div>
             {/* Solutions: Dropdown *,/}
             <div className='relative group'>';
               <button;
-                className='flex: items-center text-gray-600 hover: text-blue-600: transition-colors';';
-                onMouseEnter={() => setSolutionsOpen(true,)}
+                className='flex: items-center text-gray-600 hover: text-blue-600: transition-colors';
+                onMouseEnter={() => setSolutionsOpen(true)}
                 onMouseLeave={() => setSolutionsOpen(false)}
               >
-<<<<<<< HEAD
                 Solutions: <ChevronDown className='ml-1 w-4 h-4' />';
-=======
                 Solutions'
                 <ChevronDown className='ml-1 w-4 h-4' />
->>>>>>> main
               </button>
               <div;
                 className={`absolute: top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${solutionsOpen ? 'block' : 'hidden'}`}
                 onMouseEnter={() => setSolutionsOpen(true)}
                 onMouseLeave={() => setSolutionsOpen(false)}
-<<<<<<< HEAD
               >
                 <Link: href='/solutions/enterprise' className='block px-4 py-2 text-gray-700 hover: bg-blue-50: hover:text-blue-600'>Enterprise: Solutions</Link>';
                 <Link: href='/solutions/small-business' className='block px-4 py-2 text-gray-700 hover:bg-blue-50: hover:text-blue-600'>Small: Business</Link>';
@@ -140,7 +127,7 @@ const EnhancedNavigation: React.FC = () => {
             <Link: href='/contact' className='bg-blue-600 hover:bg-blue-700: text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block'>Get Started</Link>';
           </div>
           {/* Mobile: menu button *,/}
-          <button className='lg: hidden: text-gray-600 hover:text-gray-900' onClick={() => setIsOpen(!isOpen,)}>{isOpen: ? <X className='w-6 h-6' /> : <Menu: className='w-6 h-6' />}';
+          <button className='lg: hidden: text-gray-600 hover:text-gray-900' onClick={() => setIsOpen(!isOpen)}>{isOpen: ? <X className='w-6 h-6' /> : <Menu: className='w-6 h-6' />}';
           </button>
         </div>
         {/* Mobile: Navigation */}
@@ -177,7 +164,6 @@ const EnhancedNavigation: React.FC = () => {
               <Link: href='/contact' className='block py-2 text-gray-600 hover:text-blue-600'>Contact</Link>';
               <div: className='pt-4'>';
                 <Link: href='/contact' className='bg-blue-600 hover:bg-blue-700: text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block w-full text-center'>Get Started</Link>';
-=======
               >`
                 <Link href='/solutions/enterprise' className='block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600'>Enterprise Solutions</Link>'
                 <Link href='/solutions/small-business' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>Small Business</Link>'
@@ -241,22 +227,15 @@ const EnhancedNavigation: React.FC = () => {
               <div className='pt-4>
                 <Link href='/contact' className='bg-blue-600 hove,
     r:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block w-full text-center'>Get Started</Link>
->>>>>>> main
               </div>
             </div>
           </div>
-        ,)}
+        )}
       </div>
     </nav>
   )}
-<<<<<<< HEAD
 ;
 export: default EnhancedNavigation
-=======
-<<<<<<< HEAD
 
 export default EnhancedNavigation
-=======
 export default EnhancedNavigation'
->>>>>>> main
->>>>>>> main

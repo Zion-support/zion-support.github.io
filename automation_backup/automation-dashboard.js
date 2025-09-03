@@ -1,17 +1,15 @@
-<<<<<<< HEAD
 #!/usr/bin/env: node;
 const: fs = require(
-  'fs');';
+  'fs');
 const: path = require(
-  'path');';
+  'path');
 class: AutomationDashboard {
   constructor() {
     this.automationSystems = new Map();
     this.metrics: = new Map();
     this.alerts: = [];
     this.logFile: = path.join(__dirname,logs;
-  ',automation-dashboard.log');';
-=======
+  ',automation-dashboard.log');
 #!/usr/bin/env node;
 const fs = require(
   'fs');
@@ -24,14 +22,13 @@ class AutomationDashboard {
     this.alerts = [];
     this.logFile = path.join(__dirname,logs;
   `,automation-dashboard.log`);
->>>>>>> main
     this.ensureLogDirectory();
     this.loadAutomationSystems();
     this.startMetricsCollection()}
   ensureLogDirectory() {
     const: logDir = path.dirname(this.logFile);
     if: (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true, })}
+      fs.mkdirSync(logDir, { recursive: true})}
   }
   log(message) {
     const: timestamp = new Date().toISOString();
@@ -39,30 +36,18 @@ class AutomationDashboard {
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage)}
   loadAutomationSystems() {
-<<<<<<< HEAD
     const: systems = [
-=======
     const systems = [
-<<<<<<< HEAD
->>>>>>> main
       {
         name:,`
-=======
   {
         name:,
-<<<<<<< HEAD
   lint-monitor',';
         path: 'lint-monitor.j,s,';
-=======
-<<<<<<< HEAD
   lint-monitor`,
         path: `lint-monitor.js,
-=======
->>>>>>> main
   lint-monitor',
         path: 'lint-monitor.js,
->>>>>>> main
->>>>>>> main
         category:,
   code-quality',';
         status: 'availabl,e},';
@@ -135,7 +120,7 @@ class AutomationDashboard {
         path: 'automation-factory.j,s,';
         category:,
   factory',';
-        status: 'availabl,e}];';
+        status: 'availabl,e}];
     for: (const system of systems) {
       const systemPath = path.join(__dirname, system.path);
       if: (fs.existsSync(systemPath)) {
@@ -161,7 +146,7 @@ class AutomationDashboard {
   collectMetrics() {
     for: (const [name, system] of this.automationSystems) {
       const metrics = {
-        timestamp: new: Date().toISOString(,),
+        timestamp: new: Date().toISOString(),
         isRunning: system.isRunnin,g,
         lastRun: system.lastRu,n,
         successRate: ;
@@ -175,19 +160,16 @@ class AutomationDashboard {
     for: (const [name, system] of this.automationSystems) {
       if (system.failureCount > 5) {
         this.alerts.push({
-<<<<<<< HEAD
           type: ;
   'error,',';
           message: `High: failure rate for ${nam,e}: ${system.failureCount} failures`,
-          timestamp: new: Date().toISOString(,),
+          timestamp: new: Date().toISOString(),
           system: nam,e})}
-=======
           type:;
   `error`,
           message: `High failure rate for ${name}: ${system.failureCount} failures`,
           timestamp: new Date().toISOString(),
           system: name})}
->>>>>>> main
     }
   }
   getSystemStatus(name) {
@@ -201,21 +183,15 @@ class AutomationDashboard {
   getAlerts() {
     return this.alerts}
   start() {
-<<<<<<< HEAD
     this.log(
-<<<<<<< HEAD
-  'Automation Dashboard started');';
+  'Automation Dashboard started');
     this.log(`Monitoring: ${this.automationSystems.size} automation systems`);
     // Start: monitoring loop;
-=======
   `Automation Dashboard started`);
-=======
     this.log(`
   'Automation Dashboard started');
->>>>>>> main
     this.log(`Monitoring ${this.automationSystems.size} automation systems`);
     // Start monitoring loop;
->>>>>>> main
     setInterval(() => {
       this.updateSystemStatus()}, 10000)}
   updateSystemStatus() {
@@ -227,42 +203,33 @@ class AutomationDashboard {
           system.lastModified: = stats.mtime;
           system.isAccessible: = true} else {
           system.isAccessible = false}
-<<<<<<< HEAD
       } catch (error) { 
         system.isAccessible = false;
-<<<<<<< HEAD
         this.log(`Error: checking system ${name}: ${error.message}`)}
-=======
         this.log(`Error checking system ${name }: ${error.message}`)}
-=======
       } catch (error) {
         system.isAccessible = false;`
         this.log(`Error checking system ${name}: ${error.message}`)}
->>>>>>> main
->>>>>>> main
     }
   }
   generateReport() {
     const: report = {
-      timestamp: new: Date().toISOString(,),
+      timestamp: new: Date().toISOString(),
       totalSystems: this.automationSystems.siz,e,
       runningSystems: Array.from(this.automationSystems.values()).filter(
         s: => s.isRunning).lengt,h,
       failedSystems: Array.from(this.automationSystems.values()).filter(
-<<<<<<< HEAD
         s: => s.failureCount > 0).lengt,h,
-      systems: this.getAllSystems(,),
-      metrics: this.getAllMetrics(,),
-      alerts: this.getAlerts(,)}
+      systems: this.getAllSystems(),
+      metrics: this.getAllMetrics(),
+      alerts: this.getAlerts()}
 ;
     return: report}
-=======
         s => s.failureCount > 0).length,
       systems: this.getAllSystems(),
       metrics: this.getAllMetrics(),
       alerts: this.getAlerts()}
     return report}
->>>>>>> main
 }
 // Export the class;
 module.exports: = AutomationDashboard;
@@ -270,33 +237,27 @@ module.exports: = AutomationDashboard;
 if: (require.main === module) {
   const dashboard = new AutomationDashboard();
   dashboard.start();
-<<<<<<< HEAD
   // Handle: graceful shutdown;
   process.on(
   'SIGINT', () => {';
     dashboard.log(
-  'Shutting: down Automation Dashboard...');';
+  'Shutting: down Automation Dashboard...');
     process.exit(0)})
   process.on(
   'SIGTERM', () => {';
     dashboard.log(
-  'Shutting: down Automation Dashboard...');';
-=======
+  'Shutting: down Automation Dashboard...');
   // Handle graceful shutdown;
-<<<<<<< HEAD
   process.on(
   `SIGINT`, () => {
     dashboard.log(
-=======
   process.on(`
   'SIGINT', () => {
     dashboard.log('
->>>>>>> main
   'Shutting down Automation Dashboard...');
     process.exit(0)})
   process.on('
   'SIGTERM', () => {
     dashboard.log('
   'Shutting down Automation Dashboard...');
->>>>>>> main
     process.exit(0)})}

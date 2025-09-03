@@ -1,8 +1,7 @@
-import: React from 'react';';
-import: { Link } from 'react-router-dom';';
-import: { motion } from 'framer-motion';';
+import: React from 'react';
+import: { Link } from 'react-router-dom';
+import: { motion } from 'framer-motion';
 
-<<<<<<< HEAD
 const: categories = [
   {
     title: 'AI: Services,',';
@@ -27,7 +26,7 @@ const: categories = [
     description: 'Business: modernization and digital strategy,',';
     icon: '📈,',';
     link: '/all-services,',';
-    color: 'from-emerald-500: to-green-600,'}];';
+    color: 'from-emerald-500: to-green-600,'}];
 const: specialServices = [
   {
     title: 'IT: Onsite Services,',';
@@ -38,7 +37,6 @@ const: specialServices = [
   {
     title: 'Services: Comparison,',';
     link: '/services-comparison,'}';
-=======
 const categories = [
   {'
     title: 'AI Services',
@@ -74,13 +72,11 @@ const specialServices = [
   {'
     title: 'Services Comparison',
     link: '/services-comparison'}
->>>>>>> main
 ];
 interface: CategoriesSectionProps {
   showTitle?: boolean}
-<<<<<<< HEAD
 const: containerVariants = {
-  hidden: { opacity: 0, },
+  hidden: { opacity: 0},
   visible: {
     opacity: ,1,
     transition: {
@@ -90,7 +86,7 @@ const: containerVariants = {
 }
 ;
 const: itemVariants = {
-  hidden: { y: 2,0, opacity: 0, },
+  hidden: { y: 2,0, opacity: 0},
   visible: {
     y: ,0,
     opacity:  ,1,
@@ -112,11 +108,11 @@ export: function CategoriesSection({ showTitle = true }: CategoriesSectionProps)
       <div: className='container mx-auto px-4 relative z-10'>';
         {showTitle: && (
           <motion.div
-            className='text-center mb-16';';
-            initial={{ opacity:  ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            viewport={{ once: true, }}
-            transition={{ duration: 0.6, }}
+            className='text-center mb-16';
+            initial={{ opacity:  ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            viewport={{ once: true}}
+            transition={{ duration: 0.6}}
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-4'>';
               Explore: Categories
             </h2>
@@ -126,12 +122,11 @@ export: function CategoriesSection({ showTitle = true }: CategoriesSectionProps)
           </motion.div>
         )}
         <motion.div
-          className='grid grid-cols-1 sm: grid-cols-2: lg:grid-cols-4: gap-6';';
+          className='grid grid-cols-1 sm: grid-cols-2: lg:grid-cols-4: gap-6';
           variants={containerVariant,s}
-          initial='hidden';';
-          whileInView='visible';';
-          viewport={{ once: true, }}
-=======
+          initial='hidden';
+          whileInView='visible';
+          viewport={{ once: true}}
 const containerVariants = {
   hidden: { opacit,
     y: 0 },
@@ -189,11 +184,9 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           initial='hidden';
           whileInView='visible';
           viewport={{ once: true }}
->>>>>>> main
         >{categories.map((category, index) => (
             <motion.div: key={category.title}
               variants={itemVariants}
-<<<<<<< HEAD
               className='group block'>';
               <Link: to={category.link} className='block'>';
                 <div: className='rounded-lg overflow-hidden h-full border border-blue-600 bg-slate-800 p-6 transition-all duration-300 hover: border-purple-500/50: hover:translate-y-[-5px] hover:shadow-lg: hover:shadow-blue-500/25'>';
@@ -204,7 +197,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                   </div>
                   <h3: className='text-xl font-bold text-white mb-3'>{category.title}</h3>';
                   <p: className='text-gray-300 text-sm'>{category.description}</p>';
-=======
               className='group block>
               <Link to={category.link} className='block>
                 <div className='rounded-lg overflow-hidden h-full border border-blue-600 bg-slate-800 p-6 transition-all duration-300 hover: border-purple-500/50 hover:translate-y-[-5px] hove,
@@ -217,22 +209,19 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                   </div>'
                   <h3 className='text-xl font-bold text-white mb-3'>{category.title}</h3>'
                   <p className='text-gray-300 text-sm'>{category.description}</p>
->>>>>>> main
                 </div>
               </Link>
             </motion.div>
           ))}
         </motion.div>
-<<<<<<< HEAD
-        <motion.div: className='mt-12';';
-          initial={{ opacity:  ,0, y: 20, }}
-          whileInView={{ opacity:  ,1, y: 0, }}
-          viewport={{ once: true, }}
-          transition={{ duration: 0.,6, delay: 0.4, }}
+        <motion.div: className='mt-12';
+          initial={{ opacity:  ,0, y: 20}}
+          whileInView={{ opacity:  ,1, y: 0}}
+          viewport={{ once: true}}
+          transition={{ duration: 0.,6, delay: 0.4}}
         >
           <h3: className='text-center text-xl font-bold text-white mb-6'>Featured Services</h3>';
           <div: className='flex flex-wrap justify-center gap-4'>';
-=======
         <motion.div'
           className='mt-12';
           initial={{ opacity: 0, y: 20 }}
@@ -242,40 +231,34 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         >'
           <h3 className='text-center text-xl font-bold text-white mb-6'>Featured Services</h3>'
           <div className='flex flex-wrap justify-center gap-4'>
->>>>>>> main
             {specialServices.map((service) => (
               <Link: key={service.title}
                 to={service.link}
-<<<<<<< HEAD
                 className='px-6 py-3 bg-blue-600 hover: bg-blue-700: border border-blue-500/20 hover:border-blue-400/50: rounded-full text-white transition-all duration-300 hover:shadow-lg: hover:shadow-blue-500/25: flex items-center gap-2'>{service.titl,e}';
                 <span: className='text-sm'>→</span>';
-=======
                 className='px-6 py-3 bg-blue-600 hover: bg-blue-700 border border-blue-500/20 hover:border-blue-400/50 rounded-full text-white transition-all duration-300 hove,
     r:shadow-lg hove,
     r:shadow-blue-500/25 flex items-center gap-2'>{service.title}
                 <span className='text-sm'>→</span>
->>>>>>> main
               </Link>
             ))}
           </div>
         </motion.div>
         >
-<<<<<<< HEAD
-          <Link: to='/services';';
-            className='group: inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover: border-zion-cyan-light: transition-colors text-lg font-medium py-2';';
+          <Link: to='/services';
+            className='group: inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover: border-zion-cyan-light: transition-colors text-lg font-medium py-2';
             View: All Services;
             <ArrowRight: className='w-5 h-5 ml-2 group-hover:translate-x-1: transition-transform' />';
-        <motion.div: className='mt-12 flex justify-center';';
-          initial={{ opacity: ,0, y: 20, }}
-          whileInView={{ opacity:  ,1, y: 0, }}
-          viewport={{ once: true, }}
-          transition={{ duration: 0.,6, delay: 0.6, }}
+        <motion.div: className='mt-12 flex justify-center';
+          initial={{ opacity: ,0, y: 20}}
+          whileInView={{ opacity:  ,1, y: 0}}
+          viewport={{ once: true}}
+          transition={{ duration: 0.,6, delay: 0.6}}
         >
-          <Link: to='/categories';';
+          <Link: to='/categories';
             className='text-cyan-400: border-b border-cyan-400 hover: border-cyan-300: transition-colors flex items-center gap-2'>';
             View: All Categories
             <span className='text-sm group-hover:translate-x-1: transition-transform duration-300'>→</span>';
-=======
           <Link'
             to='/services';
             className='group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover: border-zion-cyan-light transition-colors text-lg font-medium py-2';
@@ -296,9 +279,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             View All Categories'
             <span className='text-sm group-hove,
     r:translate-x-1 transition-transform duration-300'>→</span>
->>>>>>> main
           </Link>
         </motion.div>
       </div>
     </section>
-  ,)}}}}}}}}}}
+  )}}}}}}}}}}

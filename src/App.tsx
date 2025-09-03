@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 import React, { Suspense, lazy, useState } from 'react'; import { Routes, Route  } from 'react-router-dom'; import { ErrorBoundary  } from 'react-error-boundary';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>;,"});,"})
         <PerformanceOptimizer>;,"});,"})
@@ -135,30 +130,18 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         </div>;,"});,"})
       </div>;,"});,"})
     </ErrorBoundary>;,"});,"})
->>>>>>> pr-10705;,"});,"})
   );,"});,"})
 }"});,"})
 ;,"});,"})
 export default App;,"});,"})
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff;,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
-<<<<<<< HEAD
 import React, {Suspense, lazy } from 'react';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-=======
-<<<<<<< HEAD
->>>>>>> main
 import React, { Suspense, lazy } from 'react';
-<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-<<<<<<< HEAD
 
 // Layout Components
-=======
 ;
 // Layout Components;
->>>>>>> main
 import { EnhancedHeader } from './components/EnhancedHeader';
 import { EnhancedFooter } from './components/EnhancedFooter';
 import { Sidebar } from './components/Sidebar';
@@ -172,7 +155,6 @@ const LoadingSpinner = () => (;
 // Optimized lazy loading with preloading hints;
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {;
   const LazyComponent = lazy(importFn);
-<<<<<<< HEAD
   return (props: any) => (
     <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} />
@@ -206,7 +188,6 @@ const AISustainableTechnology = createLazyComponent(() => import('./pages/servic
 const AIQuantumMachineLearning = createLazyComponent(() => import('./pages/services/AIQuantumMachineLearning'));
 const AICybersecurity = createLazyComponent(() => import('./pages/services/AICybersecurity'));
 const AIHRPlatform = createLazyComponent(() => import('./pages/services/AIHRPlatform'));
-=======
   return (props: any) => (;
     <Suspense fallback={fallback || <LoadingSpinner />}>;
       <LazyComponent {...props} />;
@@ -319,7 +300,6 @@ const MicroSAASSolutions = createLazyComponent(() => import('./pages/services/mi
 const SmartInventoryManagement = createLazyComponent(() => import('./pages/services/smart-inventory-management'));
 const SpaceTech = createLazyComponent(() => import('./pages/services/space-tech'));
 const Sustainability = createLazyComponent(() => import('./pages/services/sustainability'));
->>>>>>> main
 const SustainableTechnology = createLazyComponent(() => import('./pages/services/sustainable-technology'));
 const QuantumMachineLearning = createLazyComponent(() => import('./pages/services/quantum-machine-learning'));
 const AIContentCreation = createLazyComponent(() => import('./pages/services/ai-content-creation'));
@@ -328,7 +308,6 @@ const QuantumComputing = createLazyComponent(() => import('./pages/services/quan
 const DigitalTwin = createLazyComponent(() => import('./pages/services/DigitalTwin'));
 const DataAnalytics = createLazyComponent(() => import('./pages/services/DataAnalytics'));
 const API = createLazyComponent(() => import('./pages/API'));
-<<<<<<< HEAD
 const DeveloperPortal = createLazyComponent(() => import('./pages/DeveloperPortal'));
 
 // AI Business Intelligence and Digital Transformation
@@ -385,61 +364,42 @@ const News = createLazyComponent(() => import('./pages/News'));
 const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
 const Privacy = createLazyComponent(() => import('./pages/Privacy'));
 const Terms = createLazyComponent(() => import('./pages/Terms'));
-=======
-=======
-=======
-<<<<<<< HEAD
 import React, { Suspense, lazy } from &apos;react';
 import { BrowserRouter as Router, Routes, Route } from &apos;react-router-dom';
->>>>>>> main
->>>>>>> main
 
->>>>>>> main
 // Layout Components;
-<<<<<<< HEAD
 import {EnhancedHeader } from './components/EnhancedHeader';
 import {EnhancedFooter } from './components/EnhancedFooter';
 import {Sidebar } from './components/Sidebar';
-=======
 import { EnhancedHeader } from &apos;./components/EnhancedHeader';
 import { EnhancedFooter } from &apos;./components/EnhancedFooter';
 import { Sidebar } from &apos;./components/Sidebar';
->>>>>>> main
 
 // Loading component&apos;&apos;
 const LoadingSpinner = () => (
   <;<div className=&apos;flex items-center justify-center min-h-screen&apos;>&apos;'
     <div className=&apos;animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600&apos;>&apos;'</div>
-=======
-<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Layout Components""
 import { EnhancedHeader } from './components/EnhancedHeader';""
 import { EnhancedFooter } from './components/EnhancedFooter';""
-=======
 import React, { Suspense, lazy }  from 'react';import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Layout Components"
 import { EnhancedHeader } from './components/EnhancedHeader
 import { EnhancedFooter } from './components/EnhancedFooter
->>>>>>> main
 import { Sidebar } from './components/Sidebar';
 // Loading component
 const LoadingSpinner = () => (""
   <div className='flex items-center justify-center min-h-screen'>""
     <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600'></div>
->>>>>>> main
   </div>
 )
 // Optimized lazy loading with preloading hints
-<<<<<<< HEAD
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {const LazyComponent = lazy(importFn);
-=======
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {}
   const LazyComponent = lazy(importFn)
->>>>>>> main
   return (props: any) => (
-<<<<<<< HEAD
     <Suspense fallback={fallback ||} <LoadingSpinner />}>
       <LazyComponent {...props} />
     </Suspense>
@@ -609,11 +569,10 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
           onClick={() => window.location.href = &apos;/&apos;}
           className=&apos;w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors&apos;>
           Go home&apos;&apos;
-=======
     <Suspense fallback={fallback || <LoadingSpinner /" >}>"
       <LazyComponent {...props} /" >"
     </Suspense>;
-  );, };
+  );};
 // Core pages with optimized imports;""
 const Home = createLazyComponent(() => import('./pages/Home'));""
 const About = createLazyComponent(() => import('./pages/About'));""
@@ -727,7 +686,6 @@ const QuantumComputing = createLazyComponent(() => import('./pages/services/quan
 const DigitalTwin = createLazyComponent(() => import('./pages/services/DigitalTwin'));""
 const DataAnalytics = createLazyComponent(() => import('./pages/services/DataAnalytics'));""
 const API = createLazyComponent(() => import('./pages/API'));""
->>>>>>> main
 const DeveloperPortal = createLazyComponent(() => import('./pages/DeveloperPortal'));
 ;
 // AI Business Intelligence and Digital Transformation;""
@@ -769,7 +727,6 @@ const ComprehensivePricingGuide2025 = createLazyComponent(() => import('./pages/
 ;
 // 2025 Comprehensive Services Showcase - New;""
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
-<<<<<<< HEAD
 // Error Fallback Component;
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorBoundary: () => void }) => (;
   <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
@@ -959,34 +916,23 @@ import { ErrorBoundary } from 'react-error-boundary';
               <main className='flex-1'>;
                 <Routes>;
                 {/* Core Pages */}
-=======
 ;
-<<<<<<< HEAD
 // Error Fallback Component
-<<<<<<< HEAD
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorBoundary: () => void   }) => (
-=======
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
-<<<<<<< HEAD
   <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4">
     <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20">
       <div className="text-red-400 text-6xl mb-4">⚠️</div>
       <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
       <p className="text-gray-300 mb-6">
         {error.message || 'An unexpected error occurred. Please try again.'}
-=======
-=======
 // Error Fallback Component;
-<<<<<<< HEAD
 const ErrorFallback = ({error, resetErrorBoundary }: {error: Error; resetErrorBoundary: () => void }) => (;
->>>>>>> main
->>>>>>> main
   <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
     <div className='text-center text-white max-w-md mx-auto p-8'>
       <h1 className='text-4xl font-bold mb-4 text-red-400'>Something went wrong</h1>
       <p className='text-gray-300 mb-6'>
         {error.message || 'An unexpected error occurred'}
->>>>>>> main
       </p>
       <div className='space-y-3'>
         <button onClick={resetErrorBoundary} className='w-full bg-cyan-500 hover: bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors' >;
@@ -996,7 +942,6 @@ const ErrorFallback = ({error, resetErrorBoundary }: {error: Error; resetErrorBo
           className='w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors';
         >;
           Go home;
-=======
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (;""
   <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>""
     <div className='text-center text-white max-w-md mx-auto p-8'>""
@@ -1004,55 +949,36 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
       <p className='text-gray-300 mb-6'>""
         {error.message || 'An unexpected error occurred'}      </p>""
       <div className='space-y-3'>
-<<<<<<< HEAD
         <button onClick={resetErrorBoundary}""
           className='w-full bg-cyan-500 hover: bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors'" >"
-=======
-<<<<<<< HEAD
         <button
           onClick={resetErrorBoundary}
-<<<<<<< HEAD
           className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
-=======
-<<<<<<< HEAD
           className='w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors'
->>>>>>> main
         >
-=======
           className='w-full bg-cyan-500 hover: bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors'        >
->>>>>>> main
           Try again
         </button>
         <button
           onClick={() => window.location.href = '/'}
-<<<<<<< HEAD
           className='w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors'
         >
           Go home
-=======
           className='w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors'>
-=======
         <button onClick={resetErrorBoundary}"
           className='w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors'" >
->>>>>>> main
           Try again
         </button>
         <button ""
           onClick={() =" > window.location.href = '/'}"
           className='w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors'
         >
->>>>>>> main
           Go home
->>>>>>> main
->>>>>>> main
->>>>>>> main
         </button>
       </div>
     </div>
   </div>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
 
 function App() {
   return (
@@ -1168,7 +1094,6 @@ function App() {
                     <Route path="/accessibility" element={<Accessibility />} />
                     <Route path="/sitemap" element={<Sitemap />} />
 
-=======
                     <Route path='/contact' element={<Contact />} />;
                     <Route path='/blog' element={<Blog />} />;
                     <Route path='/careers' element={<Careers />} />;
@@ -1181,7 +1106,6 @@ function App() {
                     <Route path='/data-protection' element={<DataProtection />} />;
                     <Route path='/accessibility' element={<Accessibility />} />;
                     <Route path='/sitemap' element={<Sitemap />} />;
->>>>>>> main
                     {/* Service Routes */}
                     <Route path='/services-pricing' element={<ServicesPricingPage />} />;
                     <Route path='/system-status' element={<SystemStatus />} />;
@@ -1286,16 +1210,12 @@ function App() {
                     {/* 2025 Comprehensive Services Showcase - New */}
                     <Route path='/comprehensive-services-showcase-2025' element={<ComprehensiveServicesShowcase2025 />} />;
                     {/* 2029 Cutting-Edge Services */}
-<<<<<<< HEAD
                     <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
                     <Route path="/cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
 
-=======
                     <Route path='/zion-cutting-edge-services-2029' element={<ZionCuttingEdgeServices2029 />} />;
                     <Route path='/cutting-edge-services-2029' element={<ZionCuttingEdgeServices2029 />} />;
->>>>>>> main
                     {/* 404 Page */}
-<<<<<<< HEAD
                     <Route'
                       path='*';
                       element={;
@@ -1305,14 +1225,9 @@ function App() {
                             <h2 className='text-2xl font-semibold mb-4'>Page Not Found</h2>'
                             <p className='text-gray-300 mb-8>
                               The page you're looking for doesn't exist or has been moved.;
-=======
                     <Route path='*'; element={; <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
-=======
-<<<<<<< HEAD
-), }
+)}
                     />""
-=======
-<<<<<<< HEAD
 )}
                     />
                     <Route path=&apos;/about&apos; element={&apos;}<About />} />
@@ -1421,7 +1336,6 @@ function App() {
                     <Route path=&apos;/zion-cutting-edge-services-2029&apos; element={&apos;}<ZionCuttingEdgeServices2029 />} />
                     <Route path=&apos;/cutting-edge-services-2029&apos; element={&apos;}<ZionCuttingEdgeServices2029 />} />{/* 404 Page */}
                     <Route
-<<<<<<< HEAD
                       path=&apos;*';
                       element={&apos;}&apos;
                         <div className=&apos;min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&apos;>&apos;'
@@ -1440,19 +1354,15 @@ function App() {
                               onClick={() => window.location.href = &apos;/&apos;}
                               className=&apos;px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors&apos;>
                               Go Home&apos;&apos;
-=======
                       path='*';
                       element={
                         <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
->>>>>>> main
                           <div className='text-center text-white'>
                             <h1 className='text-6xl font-bold mb-4'>404</h1>
                             <h2 className='text-2xl font-semibold mb-4'>Page Not Found</h2>
                             <p className='text-gray-300 mb-8'>
                               The page you&apos;re looking for doesn&apos;t exist or has been moved.
->>>>>>> main
                             </p>
-<<<<<<< HEAD
                             <button; onClick={() => window.history.back()}
                               className='px-6 py-3 bg-blue-500 text-white rounded-lg hover: bg-blue-600 transition-colors mr-4';
                             >;
@@ -1462,7 +1372,6 @@ function App() {
                               className='px-6 py-3 bg-gray-500 text-white rounded-lg hover: bg-gray-600 transition-colors';
                             >;
                               Go Home;
-=======
                             <button;
                               onClick={() => window.history.back()}
                               className='px-6 py-3 bg-blue-500 text-white rounded-lg hover: bg-blue-600 transition-colors mr-4'>
@@ -1471,11 +1380,8 @@ function App() {
                             <button;
                               onClick={() => window.location.href = '/'}
                               className='px-6 py-3 bg-gray-500 text-white rounded-lg hover: bg-gray-600 transition-colors'>
-=======
-),
-}
+)}
                     />"
->>>>>>> main
                     <Route path='/about' element={<About /" >} />"
                     <Route path='/contact' element={<Contact /" >} />"
                     <Route path='/blog' element={<Blog /" >} />"
@@ -1615,13 +1521,10 @@ function App() {
                               onClick={() =" > window.location.href = '/'}"
                               className='px-6 py-3 bg-gray-500 text-white rounded-lg hover: bg-gray-600 transition-colors'
                             >
->>>>>>> main
                               Go Home
->>>>>>> main
->>>>>>> main
                             </button>
                           </div>
-                        </div>, }
+                        </div>}
                     />
                   </Routes>
                 </AnimatePresence>
@@ -1634,59 +1537,43 @@ function App() {
             {/* Smart Notification System */}
             <SmartNotificationSystem enabled={true} /" >"
             {/* Chat Assistant */}
-<<<<<<< HEAD
             <ChatAssistant enabled={true} position='bottom-right'; theme='auto'; language='en'; />;
-=======
-<<<<<<< HEAD
             <ChatAssistant
               enabled={true}
               position=&apos;bottom-right';
               theme=&apos;auto';
               language=&apos;en&apos;/>&apos;&apos;
-=======
             <ChatAssistant enabled={true}""
               position='bottom-right'
               theme='auto'
               language='en'
             /" >"
->>>>>>> main
->>>>>>> main
           </div>
         </Router>
       </ErrorBoundary>
     </HelmetProvider>
-<<<<<<< HEAD
   )}
 ;
 export default App;
-<<<<<<< HEAD
 import React, { Suspense, lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 ('');
-=======
-<<<<<<< HEAD
 import React, { Suspense, lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary'
 ('')
->>>>>>> main
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>
-=======
-<<<<<<< HEAD
 import React, {Suspense, lazy, useState } from 'react';
 import {Routes, Route } from 'react-router-dom';
 import {ErrorBoundary } from 'react-error-boundary';
 ('');
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>;
-=======
 import React, { Suspense, lazy, useState } from &apos;react';
 import { Routes, Route } from &apos;react-router-dom';
 import { ErrorBoundary } from &apos;react-error-boundary';
 (&apos;&apos;)&apos;&apos;
       <ErrorBoundary fallback={}<ErrorFallback error={new Error(&apos;App failed to load&apos;)} resetErrorBoundary={() => window.location.reload()} />}>&apos;
->>>>>>> main
->>>>>>> main
         <PerformanceOptimizer>
           <SEO />
           <div className=&apos;min-h-screen bg-gray-50&apos;>&apos;'
@@ -1694,23 +1581,19 @@ import { ErrorBoundary } from &apos;react-error-boundary';
             <div className=&apos;flex&apos;>&apos;'
               <Sidebar />
               <main className=&apos;flex-1&apos;>&apos;'
-=======
-  ), }
+  )}
 
-<<<<<<< HEAD
 export default App""
 import React, { Suspense, lazy, useState } from 'react'
 import { Routes, Route } from 'react-router-dom';""
 import { ErrorBoundary } from 'react-error-boundary';""
 ('')""
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() =" > window.location.reload()} />}>"
-=======
 export default App"
 import React, { Suspense, lazy, useState }  from 'react';import { Routes, Route } from 'react-router-dom
 import { ErrorBoundary } from 'react-error-boundary
 ('')"
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() =" > window.location.reload()} />}>
->>>>>>> main
         <PerformanceOptimizer>
           <SEO /" >"
           <div className='min-h-screen bg-gray-50'>
@@ -1718,15 +1601,9 @@ import { ErrorBoundary } from 'react-error-boundary
             <div className='flex'>
               <Sidebar /" >"
               <main className='flex-1'>
->>>>>>> main
                 <Routes>
-<<<<<<< HEAD
                 {/* Core Pages */}""
-=======
-<<<<<<< HEAD
                 {/* Core Pages */}
-<<<<<<< HEAD
->>>>>>> main
                 <Route path='/' element={<Home />} />;
                 <Route path='/about' element={<About />} />;
                 <Route path='/contact' element={<Contact />} />;
@@ -1753,8 +1630,6 @@ import { ErrorBoundary } from 'react-error-boundary
                 <Route path='/marketplace/talent' element={<div className='p-8'><h1 className='text-2xl font-semibold'>Talent</h1></div>} />;
                 <Route path='/marketplace/equipment' element={<div className='p-8'><h1 className='text-2xl font-semibold'>Equipment</h1></div>} />;
                 <Route path='/micro-saas' element={<div className='p-8'><h1 className='text-3xl font-bold'>Micro SAAS</h1><p className='text-gray-600 mt-2'>Curated micro SaaS solutions.</p></div>} />;
-<<<<<<< HEAD
-=======
                 <Route path='/it-services' element={<div className='p-8'><h1 className='text-3xl font-bold'>IT Services</h1><p className='text-gray-600 mt-2'>Enterprise IT offerings.</p></div>} />;
                 {/* Services */}
                 <Route path='/services' element={<Services />} />;
@@ -1769,17 +1644,13 @@ import { ErrorBoundary } from 'react-error-boundary
                 <Route path='/terms' element={<Terms />} />;
                 <Route path='/cookies' element={<div className='p-8'><h1 className='text-3xl font-bold'>Cookies</h1></div>} />;
                 {/* 404 Fallback */}
-<<<<<<< HEAD
                 <Route path='*' element={'
                   <div className='min-h-screen flex items-center justify-center'>;
                     <div className='text-center>
                       <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>'
                       <p className='text-gray-600 mb-8'>Page not found</p>'
                       <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
-=======
                 <Route path='*' element={<div className='min-h-screen flex items-center justify-center'>;
-=======
-<<<<<<< HEAD
                 <Route path=&apos;/&apos; element={&apos;}&apos;<Home />} />
                 <Route path=&apos;/about&apos; element={&apos;}<About />} />
                 <Route path=&apos;/contact&apos; element={&apos;}<Contact />} />
@@ -1824,7 +1695,6 @@ import { ErrorBoundary } from 'react-error-boundary
                       <p className=&apos;text-gray-600 mb-8&apos;>Page not found&apos;</p>
                       <a href=&apos;/&apos; className=&apos;bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors&apos;>
                         Go Home&apos;&apos;
-=======
                 <Route path='/' element={<Home />} />
                 <Route path='/about' element={<About />} />
                 <Route path='/contact' element={<Contact />} />
@@ -1851,7 +1721,6 @@ import { ErrorBoundary } from 'react-error-boundary
                 <Route path='/marketplace/talent' element={<div className='p-8'><h1 className='text-2xl font-semibold'>Talent</h1></div>} />
                 <Route path='/marketplace/equipment' element={<div className='p-8'><h1 className='text-2xl font-semibold'>Equipment</h1></div>} />
                 <Route path='/micro-saas' element={<div className='p-8'><h1 className='text-3xl font-bold'>Micro SAAS</h1><p className='text-gray-600 mt-2'>Curated micro SaaS solutions.</p></div>} />
->>>>>>> main
                 <Route path='/it-services' element={<div className='p-8'><h1 className='text-3xl font-bold'>IT Services</h1><p className='text-gray-600 mt-2'>Enterprise IT offerings.</p></div>} />{/* Services */}
                 <Route path='/services' element={<Services />} />;
                 <Route path='/services/ai' element={<AIServices />} />;
@@ -1863,14 +1732,12 @@ import { ErrorBoundary } from 'react-error-boundary
                 <Route path='/privacy' element={<Privacy />} />;
                 <Route path='/terms' element={<Terms />} />;
                 <Route path='/cookies' element={<div className='p-8'><h1 className='text-3xl font-bold'>Cookies</h1></div>} />{/* 404 Fallback */}
-<<<<<<< HEAD
                 <Route path='*' element={;
                   <div className='min-h-screen flex items-center justify-center'>;
                     <div className='text-center'>;
                       <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>;
                       <p className='text-gray-600 mb-8'>Page not found</p>;
                       <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'>;
->>>>>>> main
                         Go Home;
                       </a>;
                     </div>;
@@ -1885,13 +1752,10 @@ import { ErrorBoundary } from 'react-error-boundary
       </ErrorBoundary>;
     </HelmetProvider>;
     <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>;
-<<<<<<< HEAD
       <div className='App>
         <div className='min-h-screen'>
-=======
       <div className='App'>;
         <div className='min-h-screen'>;
->>>>>>> main
           <Suspense fallback={<PageLoader />}>;
             <Routes>;
               {/* Main Pages */}
@@ -1943,20 +1807,14 @@ import { ErrorBoundary } from 'react-error-boundary
         </div>;
       </div>;
     </ErrorBoundary>;
-=======
                 <Route path='*' element={
                   <div className='min-h-screen flex items-center justify-center'>
->>>>>>> main
                     <div className='text-center'>
                       <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>
                       <p className='text-gray-600 mb-8'>Page not found</p>
                       <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>
-<<<<<<< HEAD
                         Go Home;
-=======
-=======
                 {/* Core Pages */}"
->>>>>>> main
                 <Route path='/' element={<Home /" >} />"
                 <Route path='/about' element={<About /" >} />"
                 <Route path='/contact' element={<Contact /" >} />"
@@ -1996,7 +1854,6 @@ import { ErrorBoundary } from 'react-error-boundary
                 <Route path='/privacy' element={<Privacy /" >} />"
                 <Route path='/terms' element={<Terms /" >} />"
                 <Route path='/cookies' element={<div className='p-8'><h1 className='text-3xl font-bold'>Cookies</h1></div>} />
-<<<<<<< HEAD
                 {/* 404 Fallback */}""
                 <Route path='*' element={""
                   <div className='min-h-screen flex items-center justify-center'>""
@@ -2004,7 +1861,6 @@ import { ErrorBoundary } from 'react-error-boundary
                       <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>""
                       <p className='text-gray-600 mb-8'>Page not found</p>""
                       <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>
-=======
                 {/* 404 Fallback */}"
                 <Route path='*' element={"
                   <div className='min-h-screen flex items-center justify-center'>"
@@ -2012,14 +1868,10 @@ import { ErrorBoundary } from 'react-error-boundary
                       <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>"
                       <p className='text-gray-600 mb-8'>Page not found</p>"
                       <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
->>>>>>> main
->>>>>>> main
                         Go Home
->>>>>>> main
->>>>>>> main
                       </a>
                     </div>
-                  </div>, } />
+                  </div>} />
               </Routes>
               </main>
             </div>
@@ -2028,7 +1880,6 @@ import { ErrorBoundary } from 'react-error-boundary
         </PerformanceOptimizer>
       </ErrorBoundary>
     </HelmetProvider>
-<<<<<<< HEAD
     <ErrorBoundary fallback={}<div>Something went wrong. Please refresh the page.</div>}>
       <div className=&apos;App&apos;>&apos;'
         <div className=&apos;min-h-screen&apos;>&apos;'
@@ -2078,7 +1929,6 @@ import { ErrorBoundary } from 'react-error-boundary
               <Route path=&apos;/cookie-policy&apos; element={&apos;}<AboutPage />} />
               <Route path=&apos;/accessibility&apos; element={&apos;}<AboutPage />} />{/* Catch-all route */}
               <Route path=&apos;*&apos; element={&apos;}&apos;<HomePage />} />
-=======
     <ErrorBoundary fallback={<div" >Something went wrong. Please refresh the page.</div>}>"
       <div className='App'>""
         <div className='min-h-screen'>
@@ -2135,35 +1985,18 @@ import { ErrorBoundary } from 'react-error-boundary
               <Route path='/accessibility' element={<AboutPage /" >} />"
               {/* Catch-all route */}""
               <Route path='*' element={<HomePage /" >} />"
->>>>>>> main
             </Routes>
           </Suspense>
         </div>
       </div>
     </ErrorBoundary>
-<<<<<<< HEAD
-  ), }
+  )}
 
 ;""
-=======
-<<<<<<< HEAD
->>>>>>> main
   )}
-=======
-  ),
-}
-<<<<<<< HEAD
+  )}
 ;
 export default App;
-<<<<<<< HEAD
-=======
-=======
 
 export default App
 ;"
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

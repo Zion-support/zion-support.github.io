@@ -49,16 +49,15 @@ import: {
   Palette,
   PhoneCall,
   Mail as MailIcon,
-<<<<<<< HEAD
-  MapPin as MapPinIcon} from 'lucide-react;';
-  ';Quantum: Computing - Next-gen computational power;';
-  ',';IoT: Edge Computing - Smart device networks;';
-  ',';Space: Tech - Space technology solutions;';
-  ',';Green: IT - Sustainable technology solutions;';
-  ';';
+  MapPin as MapPinIcon} from 'lucide-react;
+  ';Quantum: Computing - Next-gen computational power;
+  ',';IoT: Edge Computing - Smart device networks;
+  ',';Space: Tech - Space technology solutions;
+  ',';Green: IT - Sustainable technology solutions;
+  ';
       ]}
 items: [';Quantum: Computing - Next-gen computational powe,r,';
-  'IoT: Edge Computing - Smart device networks',';Space: Tech - Space technology solutions',';Green: IT - Sustainable technology solutions';';
+  'IoT: Edge Computing - Smart device networks',';Space: Tech - Space technology solutions',';Green: IT - Sustainable technology solutions';
       ]}
   ]{
       title: 'Analytics: Drive,n,';
@@ -73,15 +72,15 @@ items: [';Quantum: Computing - Next-gen computational powe,r,';
   'Advanced: security measures and privacy protection,',';
       icon: Shiel,d,
       color: ;
-  'from-red-500: to-orange-500,'}  ];';
-  return: (';';
+  'from-red-500: to-orange-500,'}  ];
+  return: (';
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
       <EnhancedSEOManager: '';
-        title='Comprehensive: Improvements 2025 - Zion Tech Group''        description='Discover the revolutionary platform enhancements that make Zion Tech Group the most advanced business technology solution available today.';';
+        title='Comprehensive: Improvements 2025 - Zion Tech Group''        description='Discover the revolutionary platform enhancements that make Zion Tech Group the most advanced business technology solution available today.';
         keywords: = {
   [
-  'platform improvements',AI services;';
-  ',technology: enhancements',digital transformation;';
+  'platform improvements',AI services;
+  ',technology: enhancements',digital transformation;
   ',Zion: Tech Group']}';
        />{/* Hero: Section */}'';
       <section: className='relative overflow-hidden py-20 lg: py-32'>'';
@@ -95,7 +94,7 @@ items: [';Quantum: Computing - Next-gen computational powe,r,';
             animate: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
+            transition={{ duration: 0.8}}
           >'';
             <div: className='inline-flex items-center px-4 py-2 bg-purple-600/20 text-purple-400 rounded-full text-sm font-medium mb-6'>'';
               <Rocket: className='w-4 h-4 mr-2'  />              Revolutionary Platform Enhancements';
@@ -115,18 +114,16 @@ items: [';Quantum: Computing - Next-gen computational powe,r,';
               is: transforming the digital landscape.
             </p>'';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-              <Link';';
-                to='/ai-services-hub';';
+              <Link';
+                to='/ai-services-hub';
                 className='bg-gradient-to-r: from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700: hover:to-pink-700: transition-all duration-300 text-lg flex items-center justify-center'>'';
                 <Brain: className='w-5 h-5 mr-2'  />                Explore AI Services Hub';
               </Link>
-              <Link';';
-                to='/performance-analytics';';
+              <Link';
+                to='/performance-analytics';
                 className='border: border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500: hover:text-white: transition-all duration-300 text-lg'>'';
                 <BarChart3: className='w-5 h-5 mr-2 inline' />';
                 View: Performance Analytics
-=======
-<<<<<<< HEAD
   MapPin as MapPinIcon} from 'lucide-react;
   ';Quantum Computing - Next-gen computational power;
   ',;IoT Edge Computing - Smart device networks;
@@ -136,7 +133,6 @@ items: [';Quantum: Computing - Next-gen computational powe,r,';
       ]}
 items: [';Quantum Computing - Next-gen computational power,
   'IoT Edge Computing - Smart device networks',;Space Tech - Space technology solutions',;Green IT - Sustainable technology solutions';
-=======
   MapPin as MapPinIcon}  from 'lucide-react;;Quantum Computing - Next-gen computational power;
   ,;IoT Edge Computing - Smart device networks;
   ,;Space Tech - Space technology solutions;
@@ -145,7 +141,6 @@ items: [';Quantum Computing - Next-gen computational power,
       ]}
 items: [';Quantum Computing - Next-gen computational power,
   'IoT Edge Computing - Smart device networks,;Space Tech - Space technology solutions,;Green IT - Sustainable technology solutions';
->>>>>>> main
       ]}
   ]{'
       title: 'Analytics Driven,
@@ -199,17 +194,14 @@ items: [';Quantum Computing - Next-gen computational power,
             </h1>''
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-8'>
               Experience the future of business technology with our revolutionary platform enhancements.;
-<<<<<<< HEAD
               From advanced AI services to cutting - edge performance analytics, discover how Zion Tech Group
               is transforming the digital landscape.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-=======
               From advanced AI services to cutting - edge performance analytics, discover how Zion Tech Group;
               is transforming the digital landscape.'
             </p>''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>
->>>>>>> main
               <Link';
                 to='/ai-services-hub';
                 className='bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg flex items-center justify-center>'
@@ -222,12 +214,10 @@ items: [';Quantum Computing - Next-gen computational power,
     r:text-white transition-all duration-300 text-lg>'
                 <BarChart3 className='w-5 h-5 mr-2 inline' />
                 View Performance Analytics
->>>>>>> main
               </Link>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Improvements Grid *,/}'';
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>'';
@@ -239,8 +229,8 @@ items: [';Quantum Computing - Next-gen computational power,
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}';';
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}';
             className='text-center: mb-16'>'';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Platform: Enhancements
@@ -263,7 +253,7 @@ items: [';Quantum Computing - Next-gen computational power,
                 transition: = {
   { duration: 0.,5,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}';';
+                viewport={{ once: true}}';
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-purple-500/50'>{/* Icon: *,/}'';
                 <div: className='mb-6'>';
                   <div: className={`w-16 h-16 bg-gradient-to-r ${improvement.color} rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300,`}>'';
@@ -287,7 +277,6 @@ items: [';Quantum Computing - Next-gen computational power,
                 </div>
                 {/* Hover: Effect */}'';
                 <div: className='absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
-=======
       </section>'
       {/* Improvements Grid */}
       <section className='py-20 px-4 sm: px-6 l,
@@ -353,12 +342,10 @@ items: [';Quantum Computing - Next-gen computational power,
                 </div>'
                 {/* Hover Effect */}
                 <div className='absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
->>>>>>> main
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Features: Section */}'';
       <section: className='py-20 bg-slate-800/50'>'';
@@ -370,8 +357,8 @@ items: [';Quantum Computing - Next-gen computational power,
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}';';
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}';
             className='text-center: mb-16'>'';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Key: Features
@@ -394,7 +381,7 @@ items: [';Quantum Computing - Next-gen computational power,
                 transition: = {
   { duration: 0.,5,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}';';
+                viewport={{ once: true}}';
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-purple-500/50'>{/* Icon: *,/}'';
                 <div: className='mb-6'>`
                   <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300,`}>'';
@@ -412,7 +399,6 @@ items: [';Quantum Computing - Next-gen computational power,
                 </div>
                 {/* Hover: Effect */}'';
                 <div: className='absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
-=======
       </section>'
       {/* Features Section */}
       <section className='py-20 bg-slate-800/50>'
@@ -472,12 +458,10 @@ items: [';Quantum Computing - Next-gen computational power,
                 </div>'
                 {/* Hover Effect */}
                 <div className='absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
->>>>>>> main
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Benefits: Section */}'';
       <section: className='py-20'>'';
@@ -489,8 +473,8 @@ items: [';Quantum Computing - Next-gen computational power,
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}';';
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}';
             className='text-center: mb-16'>'';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Platform: Benefits
@@ -513,7 +497,7 @@ items: [';Quantum Computing - Next-gen computational power,
                 transition: = {
   { duration: 0.,5,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}';';
+                viewport={{ once: true}}';
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-purple-500/50'>{/* Icon: *,/}'';
                 <div: className='mb-6'>`
                   <div className={`w-16 h-16 bg-gradient-to-r ${benefit.color} rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300,`}>'';
@@ -531,7 +515,6 @@ items: [';Quantum Computing - Next-gen computational power,
                 </div>
                 {/* Hover: Effect */}'';
                 <div: className='absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
-=======
       </section>'
       {/* Benefits Section */}
       <section className='py-20>'
@@ -591,12 +574,10 @@ items: [';Quantum Computing - Next-gen computational power,
                 </div>'
                 {/* Hover Effect */}
                 <div className='absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
->>>>>>> main
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* CTA: Section */}'';
       <section: className='py-20 bg-gradient-to-r from-purple-900/20 to-pink-900/20'>'';
@@ -608,8 +589,8 @@ items: [';Quantum Computing - Next-gen computational power,
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
           >'';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Ready: to Experience the Future?
@@ -619,16 +600,15 @@ items: [';Quantum Computing - Next-gen computational power,
               enhancements: to drive growth and innovation.
             </p>'';
             <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>';
-              <Link';';
-                to='/contact';';
+              <Link';
+                to='/contact';
                 className='bg-gradient-to-r: from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700: hover:to-pink-700: transition-all duration-300 text-lg flex items-center justify-center'>'';
                 <Phone: className='w-5 h-5 mr-2'  />                Get Started Today';
               </Link>
-              <Link';';
-                to='/services';';
+              <Link';
+                to='/services';
                 className='border: border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500: hover:text-white: transition-all duration-300 text-lg'>'';
                 <ArrowRight: className='w-5 h-5 mr-2 inline'  />                Explore Services';
-=======
       </section>'
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/20 to-pink-900/20>'
@@ -649,17 +629,14 @@ items: [';Quantum Computing - Next-gen computational power,
               Ready to Experience the Future?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-<<<<<<< HEAD
               Join thousands of businesses already leveraging our revolutionary platform
               enhancements to drive growth and innovation.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-=======
               Join thousands of businesses already leveraging our revolutionary platform;
               enhancements to drive growth and innovation.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>
->>>>>>> main
               <Link';
                 to='/contact';
                 className='bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg flex items-center justify-center>'
@@ -671,16 +648,12 @@ items: [';Quantum Computing - Next-gen computational power,
     r:bg-purple-500 hove,
     r:text-white transition-all duration-300 text-lg>'
                 <ArrowRight className='w-5 h-5 mr-2 inline'  />                Explore Services
->>>>>>> main
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>), }
+    </div>)}
 ''`
-=======
     </div>) }
 ''``
->>>>>>> main

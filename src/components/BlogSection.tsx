@@ -1,19 +1,9 @@
-<<<<<<< HEAD
 
 export function BlogSection(...args[]): {;,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
-<<<<<<< HEAD
 export function BlogSection(...args[]): {
-=======
-<<<<<<< HEAD
 export: function BlogSection(...args[]): {
 ;
-=======
-<<<<<<< HEAD
 export function BlogSection(...args[]): {;
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -29,11 +19,8 @@ export default function BlogSection() {return (
     </div>
   );
 }
-=======
-<<<<<<< HEAD
 export function BlogSection(...args[]): {
 }
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
@@ -66,9 +53,3 @@ const BlogSection: React.FC = () => {
 };
 
 export default BlogSection;
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

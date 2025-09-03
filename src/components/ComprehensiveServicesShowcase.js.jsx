@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';''';,"});,"})
 import { motion, AnimatePresence } from 'framer-motion';,"});,"})
 import {}"});,"})
@@ -431,67 +430,54 @@ export function ComprehensiveServicesShowcase() {}"});,"})
     </section>;,"});,"})
   )}'"`;,"});,"})
 '"`'"`;,"});,"})
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react'''
-=======
 import React, { useState }  from 'react
->>>>>>> main
 import { motion, AnimatePresence } from 'framer-motion';
 import {}""
   Brain, Shield, Rocket, Globe, Zap, ArrowRight, Star, Users, TrendingUp, CheckCircle, DollarSign, ''
   Clock,''
-<<<<<<< HEAD
   Target, ''''
   Award'''' } from 'lucide-react'''
-=======
   Target,'''
   Award'''' }  from 'lucide-react
->>>>>>> main
 import { Link } from 'react-router-dom';
 // Import the new service data
 
 
 
 const serviceCategories = []
-<<<<<<< HEAD
   {}""
 ''
     id: 'micro-saas', ''''
     name: 'Micro SAAS Solutions',''''
     icon: <Rocket className='w-6 h-6' /" >, ''"
-    color: 'from-purple-600 to-pink-600', services: revolutionary2027AdvancedMicroSaasServices, }, {}""
+    color: 'from-purple-600 to-pink-600', services: revolutionary2027AdvancedMicroSaasServices}, {}""
 ''
     id: 'it-infrastructure', ''''
     name: 'IT Infrastructure & Cybersecurity',''''
     icon: <Shield className='w-6 h-6' /" >, ''"
-    color: 'from-red-600 to-orange-600', services: revolutionary2027ITInfrastructureCybersecurityServices, }, {}""
+    color: 'from-red-600 to-orange-600', services: revolutionary2027ITInfrastructureCybersecurityServices}, {}""
 ''
     id: 'ai-innovation', ''''
     name: 'AI Innovation Services',''''
     icon: <Brain className='w-6 h-6' /" >, ''"
-    color: 'from-blue-600 to-cyan-600', services: revolutionary2027AIInnovationServices, }
-=======
+    color: 'from-blue-600 to-cyan-600', services: revolutionary2027AIInnovationServices}
   {}"
 '
     id: 'micro-saas,'''
     name: 'Micro SAAS Solutions,'''
     icon: <Rocket className='w-6 h-6' /" >,'
-    color: 'from-purple-600 to-pink-600', services: revolutionary2027AdvancedMicroSaasServices,
-}, {}"
+    color: 'from-purple-600 to-pink-600', services: revolutionary2027AdvancedMicroSaasServices}, {}"
 '
     id: 'it-infrastructure,'''
     name: 'IT Infrastructure & Cybersecurity,'''
     icon: <Shield className='w-6 h-6' /" >,'
-    color: 'from-red-600 to-orange-600', services: revolutionary2027ITInfrastructureCybersecurityServices,
-}, {}"
+    color: 'from-red-600 to-orange-600', services: revolutionary2027ITInfrastructureCybersecurityServices}, {}"
 '
     id: 'ai-innovation,'''
     name: 'AI Innovation Services,'''
     icon: <Brain className='w-6 h-6' /" >,'
-    color: 'from-blue-600 to-cyan-600', services: revolutionary2027AIInnovationServices,
-}
->>>>>>> main
+    color: 'from-blue-600 to-cyan-600', services: revolutionary2027AIInnovationServices}
 ]
 
 export function ComprehensiveServicesShowcase() {}""
@@ -504,35 +490,28 @@ export function ComprehensiveServicesShowcase() {}""
   const containerVariants = {}
     hidden: { opacity: 0 }, visible: {}
       opacity: 1, transition: {}
-        staggerChildren: 0.1, delayChildren: 0.2,
-}
+        staggerChildren: 0.1, delayChildren: 0.2}
     }
   }
 
   const itemVariants = {}
-  hidden: { y: 20, opacity: 0,
-}, visible: {}
+  hidden: { y: 20, opacity: 0}, visible: {}
       y: 0, opacity: 1, transition: {}""
 ''''
         duration: 0.5,''''
-        ease: 'easeOut''', }
+        ease: 'easeOut'''}
     }
   }
 
   const cardVariants = {}
-  hidden: { scale: 0.95, opacity: 0, }, visible: {}
+  hidden: { scale: 0.95, opacity: 0}, visible: {}
       scale: 1, opacity: 1, transition: {}""
 ''''
         duration: 0.4, ''''
-        ease: 'easeOut''',
-}
-<<<<<<< HEAD
+        ease: 'easeOut'''}
     };", "
 }';'
-=======
-    };",
-}
->>>>>>> main
+    };"}
   return (''''
     <section className='py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>''''
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>""
@@ -540,11 +519,9 @@ export function ComprehensiveServicesShowcase() {}""
         <motion .div ''''
           className='text-center mb-16'
           initial = {}
-  { opacity: 0, y: 30,
-}}
+  { opacity: 0, y: 30}}
           animate = {}
-  { opacity: 1, y: 0,
-}}""
+  { opacity: 1, y: 0}}""
           transition={{ duration: 0.6 }}'''" >'''''"
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>""
             Revolutionary 2027 Services''''
@@ -585,14 +562,11 @@ export function ComprehensiveServicesShowcase() {}""
         <motion .div ''''
           className='flex flex-wrap justify-center gap-4 mb-12'
           initial = {}
-  { opacity: 0, y: 20,
-}}
+  { opacity: 0, y: 20}}
           animate = {}
-  { opacity: 1, y: 0,
-}}
+  { opacity: 1, y: 0}}
           transition = {}
-  { duration: 0.6, delay: 0.2,
-}}" >"
+  { duration: 0.6, delay: 0.2}}" >"
           {serviceCategories.map ( (category) => (<button key={category.id}
               onClick={() =" > setSelectedCategory(category.id)}"
               className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${}`
@@ -610,11 +584,8 @@ export function ComprehensiveServicesShowcase() {}""
         </motion.div>""
         {/* Services Grid */}''''
         <motion .div''''
-<<<<<<< HEAD
           className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'''''
-=======
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8''
->>>>>>> main
           variants={containerVariants}''''
           initial='hidden'''''
           animate='visible'''" >"
@@ -626,11 +597,8 @@ export function ComprehensiveServicesShowcase() {}""
               onClick={ () =" > setSelectedService (service) }"
             >''''
               <motion .div''''
-<<<<<<< HEAD
                 className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/40 transition-all duration-300 h-full'''
-=======
                 className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 h-full'
->>>>>>> main
                 variants={cardVariants}
                 whileHover = {}
   {}""
@@ -718,11 +686,9 @@ export function ComprehensiveServicesShowcase() {}""
         <motion .div ''''
           className='text-center mt-16'
           initial = {}
-  { opacity: 0, y: 30,
-}}
+  { opacity: 0, y: 30}}
           animate = {}
-  { opacity: 1, y: 0,
-}}
+  { opacity: 1, y: 0}}
           transition = {}
   { duration: 0.6, delay: 0.4","
 }}'''" >'''''"
@@ -762,14 +728,11 @@ export function ComprehensiveServicesShowcase() {}""
             <motion .div''''
               className='bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
               initial = {}
-  { scale: 0.9, opacity: 0,
-}}
+  { scale: 0.9, opacity: 0}}
               animate = {}
-  { scale: 1, opacity: 1,
-}}
+  { scale: 1, opacity: 1}}
               exit = {}
-  { scale: 0.9, opacity: 0,
-}}""
+  { scale: 0.9, opacity: 0}}""
               onClick={(e) =" > e.stopPropagation()}''''"
             >''''
               <div className='flex items-start justify-between mb-6'>''''
@@ -849,4 +812,3 @@ export function ComprehensiveServicesShowcase() {}""
     </section>"`"
   )}''`"`"
 ''`'"`"`'
->>>>>>> main

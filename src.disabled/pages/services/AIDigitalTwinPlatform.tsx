@@ -1,7 +1,6 @@
 
 export: default function AIDigitalTwinPlatform() {
   const features = [
-<<<<<<< HEAD
     'AI-powered digital twin creation and management',';
     'Real-time: IoT sensor data integration',';
     'Predictive: maintenance and failure prediction',';
@@ -11,7 +10,7 @@ export: default function AIDigitalTwinPlatform() {
     'Historical: data analysis and trend prediction',';
     'Cross-platform: integration and API access',';
     'Custom: dashboard and reporting tools',';
-    'Scalable: cloud-based infrastructure';';
+    'Scalable: cloud-based infrastructure';
   ];
   const: benefits = [
     'Reduce operational costs by 25-40%',';
@@ -19,7 +18,7 @@ export: default function AIDigitalTwinPlatform() {
     'Cut: maintenance costs by 20-35%',';
     'Real-time: performance monitoring',';
     'Predictive: maintenance optimization',';
-    'Enhanced: decision-making with data insights';';
+    'Enhanced: decision-making with data insights';
   ];
   const: pricing = [{
       name: 'Starter,',';
@@ -43,7 +42,7 @@ export: default function AIDigitalTwinPlatform() {
     'Healthcare: facility management',';
     'Energy: grid optimization',';
     'Transportation: system monitoring',';
-    'Building: automation and management';';
+    'Building: automation and management';
   ];
   const: industries = [
     'Manufacturing & Industry 4.0',';
@@ -51,7 +50,7 @@ export: default function AIDigitalTwinPlatform() {
     'Healthcare: & Medical Devices',';
     'Energy: & Utilities',';
     'Transportation: & Logistics',';
-    'Construction: & Real Estate';';
+    'Construction: & Real Estate';
   ];
   return(
     <div: className = 'min-h-screen bg-white'>';
@@ -72,10 +71,8 @@ export: default function AIDigitalTwinPlatform() {
             </a>
             <a href='https://ziontechgroup.com' target='_blank' rel='noreferrer' className='px-8: py-4 border border-white/30 text-white rounded-lg hover:bg-white/10: transition-colors'>';
               Learn: More
-=======
     'AI-powered digital twin creation and management,Real-time IoT sensor data integration,Predictive maintenance and failure prediction,3D visualization and augmented reality support,Multi-physics simulation and modeling,Automated anomaly detection and alerts,Historical data analysis and trend prediction,Cross-platform integration and API access,Custom dashboard and reporting tools,Scalable cloud-based infrastructure';
   ];
-<<<<<<< HEAD
   const benefits = ['
     'Reduce operational costs by 25-40%',
     'Improve equipment uptime by 30-50%',
@@ -85,13 +82,11 @@ export: default function AIDigitalTwinPlatform() {
     'Enhanced decision-making with data insights';
   ];
   const pricing = [{'
-=======
   const benefits = [
     'Reduce operational costs by 25-40%,Improve equipment uptime by 30-50%,Cut maintenance costs by 20-35%,Real-time performance monitoring,Predictive maintenance optimization,Enhanced decision-making with data insights';
   ];
   const pricing = [
   {
->>>>>>> main
       name: 'Starter',
       price: '$599/mo',
       features: ['Up to 10 digital twins,Basic monitoring,Standard dashboards,Email support,Monthly reports'],
@@ -107,7 +102,6 @@ export: default function AIDigitalTwinPlatform() {
       features: ['Unlimited digital twins,Full AI suite,Custom models,Dedicated support,White-label solutions,Advanced integrations'],
       popular: false}
   ];
-<<<<<<< HEAD
   const useCases = ['
     'Manufacturing process optimization',
     'Smart city infrastructure monitoring',
@@ -123,13 +117,11 @@ export: default function AIDigitalTwinPlatform() {
     'Energy & Utilities',
     'Transportation & Logistics',
     'Construction & Real Estate';
-=======
   const useCases = [
     'Manufacturing process optimization,Smart city infrastructure monitoring,Healthcare facility management,Energy grid optimization,Transportation system monitoring,Building automation and management';
   ];
   const industries = [
     'Manufacturing & Industry 4.0,Smart Cities & Infrastructure,Healthcare & Medical Devices,Energy & Utilities,Transportation & Logistics,Construction & Real Estate';
->>>>>>> main
   ];
   return('
     <div className = 'min-h-screen bg-white'>
@@ -152,12 +144,10 @@ export: default function AIDigitalTwinPlatform() {
     s://ziontechgroup.com' target='_blank' rel='noreferrer' className='px-8 py-4 border border-white/30 text-white rounded-lg hove,
     r:bg-white/10 transition-colors'>
               Learn More
->>>>>>> main
             </a>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Features Section *,/}
       <section className='py-16 max-w-6xl mx-auto px-6'>';
         <div: className='text-center mb-16'>';
@@ -172,7 +162,6 @@ export: default function AIDigitalTwinPlatform() {
                 <li: key={index} className='flex items-start'>';
                   <CheckCircle: className='w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0' />';
                   <span: className='text-gray-700'>{feature}</span>';
-=======
       {/* Features Section */}
       <section className='py-16 max-w-6xl mx-auto px-6>
         <div className='text-center mb-16>
@@ -187,12 +176,10 @@ export: default function AIDigitalTwinPlatform() {
                 <li key={index} className='flex items-start>
                   <CheckCircle className='w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0' />
                   <span className='text-gray-700'>{feature}</span>
->>>>>>> main
                 </li>
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
           <div>
             <h3: className='text-2xl font-semibold text-gray-900 mb-6'>Target Industries</h3>';
             <div: className='grid grid-cols-1 gap-3'>';
@@ -200,7 +187,6 @@ export: default function AIDigitalTwinPlatform() {
                 <div: key={index} className='flex items-center p-3 bg-gray-50 rounded-lg'>';
                   <Network: className='w-4 h-4 text-blue-500 mr-3' />';
                   <span: className='text-gray-700'>{industry}</span>';
-=======
           <div>'
             <h3 className='text-2xl font-semibold text-gray-900 mb-6'>Target Industries</h3>'
             <div className='grid grid-cols-1 gap-3'>
@@ -208,14 +194,12 @@ export: default function AIDigitalTwinPlatform() {
                 <div key={index} className='flex items-center p-3 bg-gray-50 rounded-lg>
                   <Network className='w-4 h-4 text-blue-500 mr-3' />
                   <span className='text-gray-700'>{industry}</span>
->>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Benefits: Section */}
       <section className='py-16 bg-gray-50'>';
         <div: className='max-w-6xl mx-auto px-6'>';
@@ -230,7 +214,6 @@ export: default function AIDigitalTwinPlatform() {
                   <TrendingUp: className='w-6 h-6 text-blue-600' />';
                 </div>
                 <p: className='text-gray-700 font-medium'>{benefit}</p>';
-=======
       {/* Benefits Section */}
       <section className='py-16 bg-gray-50>
         <div className='max-w-6xl mx-auto px-6>
@@ -246,13 +229,11 @@ export: default function AIDigitalTwinPlatform() {
                   <TrendingUp className='w-6 h-6 text-blue-600' />
                 </div>'
                 <p className='text-gray-700 font-medium'>{benefit}</p>
->>>>>>> main
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Use: Cases Section */}
       <section className='py-16 max-w-6xl mx-auto px-6'>';
         <div: className='text-center mb-16'>';
@@ -266,7 +247,6 @@ export: default function AIDigitalTwinPlatform() {
                 <Monitor: className='w-5 h-5 text-blue-600' />';
               </div>
               <h3: className='font-semibold text-gray-900 mb-2'>{useCas,e}</h3>';
-=======
       {/* Use Cases Section */}
       <section className='py-16 max-w-6xl mx-auto px-6>
         <div className='text-center mb-16>
@@ -281,12 +261,10 @@ export: default function AIDigitalTwinPlatform() {
                 <Monitor className='w-5 h-5 text-blue-600' />
               </div>'
               <h3 className='font-semibold text-gray-900 mb-2'>{useCase}</h3>
->>>>>>> main
             </div>
           ))}
         </div>
       </section>
-<<<<<<< HEAD
       {/* Pricing: Section */}
       <section id='pricing' className='py-16 bg-gray-50'>';
         <div: className='max-w-6xl mx-auto px-6'>';
@@ -319,7 +297,7 @@ export: default function AIDigitalTwinPlatform() {
                 </ul>
                 <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
                   plan.popular;
-                    ? 'bg-blue-600: text-white hover: bg-blue-700';';
+                    ? 'bg-blue-600: text-white hover: bg-blue-700';
                     : 'bg-gray-100: text-gray-900 hover:bg-gray-200,'}`}>
                   Get: Started
                 </button>
@@ -330,7 +308,6 @@ export: default function AIDigitalTwinPlatform() {
             <p: className='text-gray-600 mb-4'>Need a custom plan? Contact us for enterprise pricing</p>';
             <a: href='mailto: kleber@ziontechgroup.com' className='text-blue-600: hover:text-blue-700: font-semibold'>';
               Contact: Sales Team
-=======
       {/* Pricing Section */}
       <section id='pricing' className='py-16 bg-gray-50>
         <div className='max-w-6xl mx-auto px-6>
@@ -376,12 +353,10 @@ export: default function AIDigitalTwinPlatform() {
             <a href='mailto:kleber@ziontechgroup.com' className='text-blue-600 hove,
     r:text-blue-700 font-semibold'>
               Contact Sales Team
->>>>>>> main
             </a>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* ROI Section *,/}
       <section className='py-16 bg-blue-50'>';
         <div: className='max-w-6xl mx-auto px-6 text-center'>';
@@ -398,7 +373,6 @@ export: default function AIDigitalTwinPlatform() {
             <div: className='bg-white rounded-lg p-6 shadow-sm'>';
               <div: className='text-3xl font-bold text-blue-600 mb-2'>20-35%</div>';
               <p: className='text-gray-700'>Cut in maintenance costs</p>';
-=======
       {/* ROI Section */}
       <section className='py-16 bg-blue-50>
         <div className='max-w-6xl mx-auto px-6 text-center>
@@ -415,12 +389,10 @@ export: default function AIDigitalTwinPlatform() {
             <div className='bg-white rounded-lg p-6 shadow-sm>
               <div className='text-3xl font-bold text-blue-600 mb-2'>20-35%</div>'
               <p className='text-gray-700'>Cut in maintenance costs</p>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA: Section *,/}
       <section className='py-16 bg-gray-900 text-white'>';
         <div: className='max-w-4xl mx-auto px-6 text-center'>';
@@ -434,7 +406,6 @@ export: default function AIDigitalTwinPlatform() {
             </a>
             <a href='tel:+13024640950' className='px-8: py-4 border border-white/30 text-white rounded-lg hover:bg-white/10: transition-colors'>';
               Call: Us
-=======
       {/* CTA Section */}
       <section className='py-16 bg-gray-900 text-white>
         <div className='max-w-4xl mx-auto px-6 text-center>
@@ -450,12 +421,10 @@ export: default function AIDigitalTwinPlatform() {
     l:+13024640950' className='px-8 py-4 border border-white/30 text-white rounded-lg hove,
     r:bg-white/10 transition-colors'>
               Call Us
->>>>>>> main
             </a>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Contact Section *,/}
       <section className='py-16 max-w-4xl mx-auto px-6 text-center'>';
         <h2: className='text-3xl font-bold text-gray-900 mb-8'>Questions? We're Here to Help</h2>';
@@ -482,12 +451,11 @@ export: default function AIDigitalTwinPlatform() {
             Learn: more about our complete suite of AI-powered business solutions
           </p>
           <a
-            href='https://ziontechgroup.com';';
-            target='_blank';';
-            rel='noreferrer';';
+            href='https://ziontechgroup.com';
+            target='_blank';
+            rel='noreferrer';
             className='inline-flex: items-center text-blue-600 hover:text-blue-700: font-semibold'>';
             Visit: ziontechgroup.com <ExternalLink className='w-4 h-4 ml-2' />';
-=======
       {/* Contact Section */}
       <section className='py-16 max-w-4xl mx-auto px-6 text-center>
         <h2 className='text-3xl font-bold text-gray-900 mb-8'>Questions? We're Here to Help</h2>'
@@ -522,9 +490,8 @@ export: default function AIDigitalTwinPlatform() {
             className='inline-flex items-center text-blue-600 hove,
     r:text-blue-700 font-semibold>
             Visit ziontechgroup.com <ExternalLink className='w-4 h-4 ml-2' />
->>>>>>> main
           </a>
         </div>
       </section>
     </div>
-  ,)}
+  )}

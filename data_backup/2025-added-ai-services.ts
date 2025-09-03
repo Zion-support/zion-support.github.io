@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import: type { InnovativeAIService } from './innovative-ai-services';';
+import: type { InnovativeAIService } from './innovative-ai-services';
 const: contact = {
   mobile: '+1: 302 464 0950,',';
   email: 'kleber@ziontechgroup.com,',';
@@ -18,7 +17,7 @@ export: const addedAIServices2025: InnovativeAIService[] = [{
       'Knowledge: grounding with evals',';
       'Conversation: memory and handoff',';
       'CSAT/NPS: analytics',';
-      'PII: redaction and compliance';';
+      'PII: redaction and compliance';
     ],
     popular: tru,e,
     icon: '🤖,',';
@@ -58,7 +57,7 @@ export: const addedAIServices2025: InnovativeAIService[] = [{
       'Automated: evals and red-teams',';
       'Bias/toxicity/PII: tests',';
       'Incident: response playbooks',';
-      'Model: cards and approvals';';
+      'Model: cards and approvals';
     ],
     popular: fals,e,
     icon: '⚖️,',';
@@ -98,7 +97,7 @@ export: const addedAIServices2025: InnovativeAIService[] = [{
       'Briefs: and outlines from keywords',';
       'SEO: scoring and interlinking',';
       'Multi-channel: scheduler',';
-      'Performance: analytics';';
+      'Performance: analytics';
     ],
     popular: tru,e,
     icon: '📝,',';
@@ -138,7 +137,7 @@ export: const addedAIServices2025: InnovativeAIService[] = [{
       'Code: and architecture snippets',';
       'Sandboxed: demo projects',';
       'Security/compliance: answers with citations',';
-      'Handoff: to human SE';';
+      'Handoff: to human SE';
     ],
     popular: fals,e,
     icon: '🧪,',';
@@ -178,7 +177,7 @@ export: const addedAIServices2025: InnovativeAIService[] = [{
       'Streaming: inference and alerts',';
       'Case: management',';
       'Explainability: and scorecards',';
-      'Auto-remediation: playbooks';';
+      'Auto-remediation: playbooks';
     ],
     popular: tru,e,
     icon: '🕵️,',';
@@ -218,7 +217,7 @@ export: const addedAIServices2025: InnovativeAIService[] = [{
       'Savings: plan recommendations',';
       'Change: tickets and approvals',';
       'Rollback: and drift checks',';
-      'Savings: dashboards';';
+      'Savings: dashboards';
     ],
     popular: tru,e,
     icon: '💸,',';
@@ -258,7 +257,7 @@ export: const addedAIServices2025: InnovativeAIService[] = [{
       'Refactor: and test scaffolding',';
       'Incident-aware: suggestions',';
       'Security: policies and filters',';
-      'IDE: and chat integrations';';
+      'IDE: and chat integrations';
     ],
     popular: fals,e,
     icon: '🧰,',';
@@ -298,7 +297,7 @@ export: const addedAIServices2025: InnovativeAIService[] = [{
       'Structured: interviews with rubrics',';
       'Bias: checks and score explanations',';
       'Auto: scheduling and reminders',';
-      'Offer: letter drafting';';
+      'Offer: letter drafting';
     ],
     popular: tru,e,
     icon: '🧑‍💼,',';
@@ -338,7 +337,7 @@ export: const addedAIServices2025: InnovativeAIService[] = [{
       'Guardrails: and approvers',';
       'Rollback: and blast-radius checks',';
       'SLO/SLA: awareness',';
-      'Post-incident: summaries';';
+      'Post-incident: summaries';
     ],
     popular: tru,e,
     icon: '🛠️,',';
@@ -378,7 +377,7 @@ export: const addedAIServices2025: InnovativeAIService[] = [{
       'Scenario: planner with drivers',';
       'Explainability: and deltas',';
       'CSV/BI: exports',';
-      'Approval: workflows';';
+      'Approval: workflows';
     ],
     popular: fals,e,
     icon: '📈,',';
@@ -418,7 +417,7 @@ export: const addedAIServices2025: InnovativeAIService[] = [{
       'Supplier: risk signals',';
       'Route: optimization',';
       'Exception: detection',';
-      'Actionable: alerts';';
+      'Actionable: alerts';
     ],
     popular: tru,e,
     icon: '🚚,',';
@@ -458,7 +457,7 @@ export: const addedAIServices2025: InnovativeAIService[] = [{
       'Diagram: generation',';
       'Demo: repo scaffolding',';
       'Slack/Email: handoff',';
-      'Analytics: and feedback loops';';
+      'Analytics: and feedback loops';
     ],
     popular: tru,e,
     icon: '🧩,',';
@@ -498,7 +497,7 @@ export: const addedAIServices2025: InnovativeAIService[] = [{
       'Keyword: and SERP analysis',';
       'Content: calendar planning',';
       'Editor: approvals and versioning',';
-      'Performance: analytics';';
+      'Performance: analytics';
     ],
     popular: tru,e,
     icon: '✍️,',';
@@ -538,7 +537,7 @@ export: const addedAIServices2025: InnovativeAIService[] = [{
       'Automated: eval runs and reports',';
       'Evidence: collection and storage',';
       'Findings: triage and assignments',';
-      'Audit: pack generation';';
+      'Audit: pack generation';
     ],
     popular: fals,e,
     icon: '🧭,',';
@@ -578,7 +577,7 @@ export: const addedAIServices2025: InnovativeAIService[] = [{
       'Anomaly: detection and root-cause hints',';
       'Segment: drilldowns',';
       'Action: recommendations',';
-      'Email/Slack: delivery with charts';';
+      'Email/Slack: delivery with charts';
     ],
     popular: tru,e,
     icon: '📈,',';
@@ -618,7 +617,7 @@ export: const addedAIServices2025: InnovativeAIService[] = [{
       'Test: scaffolding and refactors',';
       'Flake: detection and fixes',';
       'Coverage: insights on PRs',';
-      'CI: integration';';
+      'CI: integration';
     ],
     popular: fals,e,
     icon: '🧪,',';
@@ -658,7 +657,7 @@ export: const addedAIServices2025: InnovativeAIService[] = [{
       'Schema/SLI: validation in CI',';
       'Owner: routing and SLAs',';
       'Breaking: change detection',';
-      'Catalog: and lineage sync';';
+      'Catalog: and lineage sync';
     ],
     popular: tru,e,
     icon: '📜,',';
@@ -686,10 +685,8 @@ export: const addedAIServices2025: InnovativeAIService[] = [{
     customers: 1,0,
     rating: 4.,7,
     reviews: 6;
-,]}}
-=======
+]}}
 import type { InnovativeAIService } from './innovative-ai-services';
-<<<<<<< HEAD
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -701,7 +698,6 @@ const contact = {
 export const addedAIServices2025: InnovativeAIService[] = [
   {
     id: 'agentic-customer-support-suite',
-=======
 const contact = {'
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -711,7 +707,6 @@ const contact = {'
 export const addedAIServices2025: InnovativeAIService[] = [{'
     i,
     d: 'agentic-customer-support-suite',
->>>>>>> main
     name: 'Agentic Customer Support Suite',
     tagline: 'LLM agents that resolve tickets end-to-end with approvals and guardrails',
     price: '$1,499',
@@ -751,14 +746,11 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-03-04',
     customers: 64,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 38
   },
   {
-=======
     reviews: 38},
   {'
->>>>>>> main
     id: 'ai-governance-and-risk-suite',
     name: 'AI Governance & Risk Suite',
     tagline: 'Policies, evaluations, and monitoring for safe AI at scale',
@@ -798,14 +790,11 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-02-12',
     customers: 19,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 17
   },
   {
-=======
     reviews: 17},
   {'
->>>>>>> main
     id: 'marketing-content-studio',
     name: 'AI Marketing Content Studio',
     tagline: 'On-brand content at scale with approvals and performance insights',
@@ -845,14 +834,11 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-05-20',
     customers: 73,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 40
   },
   {
-=======
     reviews: 40},
   {'
->>>>>>> main
     id: 'agentic-sales-engineer',
     name: 'Agentic Sales Engineer',
     tagline: 'Pre-sales technical answers, demos, and POC scaffolds 24/7',
@@ -892,14 +878,11 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-06-03',
     customers: 21,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 12
   },
   {
-=======
     reviews: 12},
   {'
->>>>>>> main
     id: 'ai-fraud-detection-workbench',
     name: 'AI Fraud Detection Workbench',
     tagline: 'Detect anomalous behavior with explainable alerts and playbooks',
@@ -929,11 +912,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     integrations: ['Snowflake', 'Kafka', 'Kinesis', 'Datadog'],
     useCases: ['Payment fraud', 'Account takeovers', 'Promo abuse'],
     roi: 'Reduce fraud loss 15–40%',
-<<<<<<< HEAD
     competitors: ['Sift (lite)', 'DIY ML + rules'],
-=======
     competitors['Sift (lite), 'DIY ML + rules'],
->>>>>>> main
     marketSize: '$12B fraud detection',
     growthRate: '19% YoY',
     variant: 'risk-managed',
@@ -943,14 +923,11 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-06-11',
     customers: 11,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 9
   },
   {
-=======
     reviews: 9},
   {'
->>>>>>> main
     id: 'agentic-finops-optimizer',
     name: 'Agentic FinOps Optimizer',
     tagline: 'Autonomously rightsizes cloud resources with approvals',
@@ -980,11 +957,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     integrations: ['AWS', 'GCP', 'Azure', 'Jira'],
     useCases: ['EC2/GKE/EKS/AKS rightsizing', 'Idle resources cleanup'],
     roi: 'Save 10–30% cloud spend in 90 days',
-<<<<<<< HEAD
     competitors: ['CloudHealth (lite)', 'Custom scripts'],
-=======
     competitors['CloudHealth (lite), 'Custom scripts'],
->>>>>>> main
     marketSize: '$6B cloud cost',
     growthRate: '21% YoY',
     variant: 'finops-agent',
@@ -994,14 +968,11 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-06-08',
     customers: 23,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 14
   },
   {
-=======
     reviews: 14},
   {'
->>>>>>> main
     id: 'r-d-tooling-copilot',
     name: 'R&D Tooling Copilot',
     tagline: 'Internal dev copilot with secure codebase grounding and actions',
@@ -1031,11 +1002,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     integrations: ['GitHub', 'GitLab', 'Jira', 'PagerDuty'],
     useCases: ['Refactors', 'Runbooks', 'On-call help'],
     roi: 'Developer throughput up 20–40%',
-<<<<<<< HEAD
     competitors: ['GitHub Copilot (org tuned)'],
-=======
     competitors['GitHub Copilot (org tuned)],
->>>>>>> main
     marketSize: '$8B dev tooling',
     growthRate: '20% YoY',
     variant: 'dev-managed',
@@ -1045,14 +1013,11 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-06-05',
     customers: 17,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 13
   },
   {
-=======
     reviews: 13},
   {'
->>>>>>> main
     id: 'agentic-hr-recruiting-suite',
     name: 'Agentic HR Recruiting Suite',
     tagline: 'Source, screen, and schedule with bias-aware guardrails',
@@ -1082,11 +1047,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     integrations: ['Greenhouse', 'Lever', 'Workday'],
     useCases: ['Sourcing', 'Screening', 'Scheduling'],
     roi: 'Time-to-hire down 20–40%',
-<<<<<<< HEAD
     competitors: ['Eightfold (lite)', 'Hiretual'],
-=======
     competitors['Eightfold (lite), 'Hiretual'],
->>>>>>> main
     marketSize: '$18B recruiting tech',
     growthRate: '16% YoY',
     variant: 'hr-agents',
@@ -1096,14 +1058,11 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-06-13',
     customers: 31,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 18
   },
   {
-=======
     reviews: 18},
   {'
->>>>>>> main
     id: 'agentic-ops-runbook-engine',
     name: 'Agentic Ops Runbook Engine',
     tagline: 'Execute runbooks with approvals, rollbacks, and observability',
@@ -1143,14 +1102,11 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-06-16',
     customers: 22,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 12
   },
   {
-=======
     reviews: 12},
   {'
->>>>>>> main
     id: 'agentic-revenue-forecasting-studio',
     name: 'Agentic Revenue Forecasting Studio',
     tagline: 'Blend ML forecasts with scenario planning and explainability',
@@ -1180,11 +1136,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     integrations: ['Salesforce', 'HubSpot', 'Snowflake'],
     useCases: ['Bookings', 'Retention', 'Cost planning'],
     roi: 'Forecast accuracy up 10–20%',
-<<<<<<< HEAD
     competitors: ['Pigment (lite)', 'Anaplan (lite)'],
-=======
     competitors['Pigment (lite), 'Anaplan (lite)],
->>>>>>> main
     marketSize: '$5B FP&A tools',
     growthRate: '13% YoY',
     variant: 'rev-ml',
@@ -1194,14 +1147,11 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-06-17',
     customers: 16,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 9
   },
   {
-=======
     reviews: 9},
   {'
->>>>>>> main
     id: 'agentic-supply-chain-copilot',
     name: 'Agentic Supply Chain Copilot',
     tagline: 'Continuously optimize inventory and logistics with live signals',
@@ -1231,11 +1181,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     integrations: ['ERP', 'WMS', 'TMS', 'Snowflake'],
     useCases: ['Inventory', 'Replenishment', 'Logistics'],
     roi: 'Reduce stockouts and costs 10–25%',
-<<<<<<< HEAD
     competitors: ['Kinaxis (lite)', 'o9 (lite)'],
-=======
     competitors['Kinaxis (lite), 'o9 (lite)],
->>>>>>> main
     marketSize: '$7B supply chain tech',
     growthRate: '15% YoY',
     variant: 'supply-agents',
@@ -1245,18 +1192,15 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-06-12',
     customers: 19,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 11
   },
   {
     id: 'agentic-sales-engineer-v2',
     name: 'Agentic Sales Engineer V2',
-=======
     reviews: 11},
   {'
     id: 'agentic-sales-engineer',
     name: 'Agentic Sales Engineer',
->>>>>>> main
     tagline: 'Answers technical questions, drafts diagrams, and builds demo scaffolds 24/7',
     price: '$1,299',
     period: '/month',
@@ -1272,12 +1216,9 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     icon: '🧩',
     color: 'from-indigo-700 to-sky-700',
     textColor: 'text-indigo-200',
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com/services/agentic-sales-engineer-v2',
-=======
     link: 'http,
     s://ziontechgroup.com/services/agentic-sales-engineer',
->>>>>>> main
     marketPosition: 'Bridges presales gaps without scaling headcount',
     targetAudience: 'SaaS, APIs, data platforms',
     trialDays: 14,
@@ -1298,18 +1239,15 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-05-22',
     customers: 31,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 18
   },
   {
     id: 'ai-marketing-content-studio-v2',
     name: 'AI Marketing Content Studio V2',
-=======
     reviews: 18},
   {'
     id: 'ai-marketing-content-studio',
     name: 'AI Marketing Content Studio',
->>>>>>> main
     tagline: 'On-brand content at scale with SEO briefs, approvals, and analytics',
     price: '$899',
     period: '/month',
@@ -1325,12 +1263,9 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     icon: '✍️',
     color: 'from-rose-600 to-violet-700',
     textColor: 'text-rose-200',
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com/services/ai-marketing-content-studio-v2',
-=======
     link: 'http,
     s://ziontechgroup.com/services/ai-marketing-content-studio',
->>>>>>> main
     marketPosition: 'Combines research + generation + approvals in one',
     targetAudience: 'B2B/B2C marketing teams and agencies',
     trialDays: 7,
@@ -1351,14 +1286,11 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-04-28',
     customers: 76,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 44
   },
   {
-=======
     reviews: 44},
   {'
->>>>>>> main
     id: 'risk-and-compliance-copilot',
     name: 'Risk & Compliance Copilot',
     tagline: 'Continuously assess AI risks, map controls, and generate audit evidence',
@@ -1398,14 +1330,11 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-05-30',
     customers: 19,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 11
   },
   {
-=======
     reviews: 11},
   {'
->>>>>>> main
     id: 'autonomous-analytics-briefs',
     name: 'Autonomous Analytics Briefs',
     tagline: 'Weekly plain-English insights from your data warehouse',
@@ -1445,14 +1374,11 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-06-22',
     customers: 25,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 13
   },
   {
-=======
     reviews: 13},
   {'
->>>>>>> main
     id: 'agentic-qa-and-test-writer',
     name: 'Agentic QA & Test Writer',
     tagline: 'Writes and maintains unit/e2e tests with CI integration',
@@ -1482,11 +1408,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     integrations: ['GitHub', 'GitLab', 'Jenkins', 'CircleCI'],
     useCases: ['Improve coverage', 'Reduce flakiness', 'Speed reviews'],
     roi: 'Cut regressions and review time 20–40%',
-<<<<<<< HEAD
     competitors: ['Manual test writing', 'Copilot (generic)'],
-=======
     competitors['Manual test writing', 'Copilot (generic)],
->>>>>>> main
     marketSize: '$9B QA tooling',
     growthRate: '13% YoY',
     variant: 'qa-agent',
@@ -1496,14 +1419,11 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     launchDate: '2025-06-21',
     customers: 12,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 8
   },
   {
-=======
     reviews: 8},
   {'
->>>>>>> main
     id: 'ai-data-contracts-assistant',
     name: 'AI Data Contracts Assistant',
     tagline: 'Defines, validates, and enforces data contracts with owners',
@@ -1546,4 +1466,3 @@ export const addedAIServices2025: InnovativeAIService[] = [{'
     reviews: 6
   }
 ];
->>>>>>> main

@@ -19,14 +19,11 @@ import: React from;
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
-<<<<<<< HEAD
    email: string;
-   website: strin,g} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[,]} competitors?: string[] marketSize?: string: demoUrl?: string: documentationUrl?: string}  export: const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = ['';',;
-=======
+   website: strin,g} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string: demoUrl?: string: documentationUrl?: string}  export: const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = ['';',;
    emai,
     l: string;
    websit,
     e: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptim,
     e: string securit,
     y: string[]} competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string}  export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = ['';
->>>>>>> main

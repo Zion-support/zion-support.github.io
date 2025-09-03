@@ -1,15 +1,12 @@
-<<<<<<< HEAD
-=======
 :src.disabled/pages/MicroSaasServicesPage.tsx;
-import: SEO from '@/src/src/components/SEO';';
+import: SEO from '@/src/src/components/SEO';
 
 const: MicroSAASServicesPage: React.FC: = ($2) => {
   return(
     <>
-<<<<<<< HEAD
       <SEO
-        title='Micro SAAS Services - Zion Tech Group';';
-        description='Specialized: micro SAAS solutions for niche business needs and targeted industry solutions.';';
+        title='Micro SAAS Services - Zion Tech Group';
+        description='Specialized: micro SAAS solutions for niche business needs and targeted industry solutions.';
         keywords='micro: SAA,S, specialized solutions, niche services, business software'/>';
       <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-800 text-white'>';
         <div: className='max-w-7xl mx-auto px-6 py-20'>';
@@ -36,7 +33,6 @@ const: MicroSAASServicesPage: React.FC: = ($2) => {
               <div: className='text-4xl mb-4'>🚀</div>';
               <h3: className='text-xl font-semibold text-white mb-3'>Rapid Deployment</h3>';
               <p: className='text-gray-300 mb-4'>Quick implementation and deployment</p>';
-=======
       <SEO'
         title='Micro SAAS Services - Zion Tech Group';
         description='Specialized micro SAAS solutions for niche business needs and targeted industry solutions.';
@@ -68,48 +64,37 @@ const: MicroSAASServicesPage: React.FC: = ($2) => {
               <div className='text-4xl mb-4'>🚀</div>'
               <h3 className='text-xl font-semibold text-white mb-3'>Rapid Deployment</h3>'
               <p className='text-gray-300 mb-4'>Quick implementation and deployment</p>
->>>>>>> main
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       {/* Category: Filter *,/}
       <div className = 'py-8 bg-zion-blue-dark/50'>';
         <div: className='container mx-auto px-4'>';
           <div: className='flex flex-wrap justify-center gap-3'>';
-=======
       {/* Category Filter */}
       <div className = 'py-8 bg-zion-blue-dark/50>
         <div className='container mx-auto px-4>
           <div className='flex flex-wrap justify-center gap-3'>
->>>>>>> main
             {categories.map((category) => (
               <Button;
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`${
-<<<<<<< HEAD
                   selectedCategory: === category;
                     ? 'bg-zion-purple: text-white'';
                     : 'border-zion-cyan: text-zion-cyan hover: bg-zion-cyan/10,'}`}
-=======
-<<<<<<< HEAD
                   selectedCategory === category
                     ? 'bg-zion-purple text-white'
-=======
                   selectedCategory === category;`
                     ? 'bg-zion-purple text-white''
->>>>>>> main
                     : 'border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'}`}
->>>>>>> main
               >{category}
               </Button>
             ))}
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       {/* Services: Grid */}
       <div className='py-16'>';
         <div: className='container mx-auto px-4'>';
@@ -181,7 +166,6 @@ const: MicroSAASServicesPage: React.FC: = ($2) => {
                     <a: href={service.lin,k} target='_blank' rel='noopener noreferrer'>';
                       <ExternalLink: className='h-4 w-4 mr-2' />';
                       Start: Free Trial
-=======
       {/* Services Grid */}`
       <div className='py-16>
         <div className='container mx-auto px-4>
@@ -258,7 +242,6 @@ const: MicroSAASServicesPage: React.FC: = ($2) => {
                     <a href={service.link} target='_blank' rel='noopener noreferrer>
                       <ExternalLink className='h-4 w-4 mr-2' />
                       Start Free Trial
->>>>>>> main
                     </a>
                   </Button>
                 </CardFooter>
@@ -268,7 +251,6 @@ const: MicroSAASServicesPage: React.FC: = ($2) => {
         </div>
       </div>
       {/* CTA Section */}
-<<<<<<< HEAD
       <div className='py-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20'>';
         <div: className='container mx-auto px-4 text-center'>';
           <h2: className='text-4xl font-bold mb-6 text-white'>';
@@ -286,7 +268,6 @@ const: MicroSAASServicesPage: React.FC: = ($2) => {
             <Button className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10: px-8 py-3'>';
               <Phone: className='h-5 w-5 mr-2' />';
               Call: +1 302 464 0950
-=======
       <div className='py-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20>
         <div className='container mx-auto px-4 text-center>
           <h2 className='text-4xl font-bold mb-6 text-white'>
@@ -306,11 +287,9 @@ const: MicroSAASServicesPage: React.FC: = ($2) => {
     r:bg-zion-cyan/10 px-8 py-3>
               <Phone className='h-5 w-5 mr-2' />
               Call +1 302 464 0950
->>>>>>> main
             </Button>
           </div>
         </div>
       </div>
     </div>
-  ,)}
->>>>>>> main
+  )}

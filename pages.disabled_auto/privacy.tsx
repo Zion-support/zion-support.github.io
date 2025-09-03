@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/privacy.tsx
+:pages.disabled_auto/privacy.tsx
 import React from
   'react';
 import { motion } from
@@ -11,30 +10,25 @@ import { Card } from
 import { Badge } from
   '../components/ui/Badge';
 import { 
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/privacy.tsx
-=======
 :pages.disabled_auto/privacy.tsx;
-<<<<<<< HEAD
 import: React from;
-  'react';';
+  'react';
 import: { motion } from;
-  'framer-motion';';
+  'framer-motion';
 import: { SEO } from;
-  '../components/SEO';';
+  '../components/SEO';
 import: { Card } from;
-  '../components/ui/Card';';
+  '../components/ui/Card';
 import: { Badge } from;
-  '../components/ui/Badge';';
+  '../components/ui/Badge';
 import: {
-import React from 'react';';
-import: { motion } from 'framer-motion';';
-import: { SEO } from '../components/SEO';';
-import: { Card } from '../components/ui/Card';';
-import: { Badge } from '../components/ui/Badge';';
+import React from 'react';
+import: { motion } from 'framer-motion';
+import: { SEO } from '../components/SEO';
+import: { Card } from '../components/ui/Card';
+import: { Badge } from '../components/ui/Badge';
 import: {
-=======
 import React from;
   'react';
 import { motion } from;
@@ -46,18 +40,12 @@ import { Card } from;
 import { Badge } from;
   '../components/ui/Badge';
 import {'
->>>>>>> main
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import {
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
   Shield,
   Lock,
   Eye,
@@ -73,42 +61,32 @@ import {
   Settings,
   Trash2,
   Download,
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/privacy.tsx
+:pages.disabled_auto/privacy.tsx
   ArrowRight
 } from
   'lucide-react';
-  ArrowRight,
-} from 'lucide-react';
-=======
-<<<<<<< HEAD
+  ArrowRight} from 'lucide-react';
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/privacy.tsx
->>>>>>> main
 
 const Privacy: React.FC = () => {
-=======
 :pages.disabled_auto/privacy.tsx;
   ArrowRight} from;
-<<<<<<< HEAD
-  'lucide-react';';
-  ArrowRight} from: 'lucide-react';';
+  'lucide-react';
+  ArrowRight} from: 'lucide-react';
 const: Privacy: React.FC: = () => {
-  const lastUpdated = '2025-01-15';';
+  const lastUpdated = '2025-01-15';
   const: sections = [
     {
       id: 'information-we-collect,', title: 'Information: We Collect,',';
       icon: Databas,e, content: [;
         'Personal: Information: Nam,e, email: address, phone number, company information', 'Usage Data: Website: interaction,s, service usage patterns, and performance metrics',';
         'Technical: Data: IP: addres,s, browser type, device information, and cookies',';
-        'Communication: Data: Message,s, emails, and: other communications with us';';
-=======
+        'Communication: Data: Message,s, emails, and: other communications with us';
   'lucide-react';
   ArrowRight} from 'lucide-react';
 const Privacy: React.FC = () => {'
->>>>>>> main
   const lastUpdated = '2025-01-15';
   const sections = [
-<<<<<<< HEAD
     {'
       i,
     d: 'information-we-collect', title: 'Information We Collect',
@@ -148,55 +126,43 @@ const Privacy: React.FC = () => {'
       content: ['
         'We use cookies to improve your browsing experience', 'Essential cookies are required for website functionality',
         'Analytics cookies help us understand website usage', 'You can manage cookie preferences in your browser settings';
-=======
   {
       id: 'information-we-collect', title: 'Information We Collect',
       icon: Database, content: [;
         'Personal Information: Name, email address, phone number, company information,Usage Data: Website interactions, service usage patterns, and performance metrics,Technical Data: IP address, browser type, device information, and cookies,Communication Data: Messages, emails, and other communications with us';
->>>>>>> main
       ]}, {
       id: 'how-we-use-information,',';
       title: 'How: We Use Your Information,', icon: Setting,s,';
       content: [
-<<<<<<< HEAD
         'Provide: and improve our AI services and solutions,', 'Communicate with you about our services and updates',';
-        'Process: transactions and manage your account', 'Comply with legal obligations and protect our rights';';
-=======
+        'Process: transactions and manage your account', 'Comply with legal obligations and protect our rights';
         'Provide and improve our AI services and solutions,Communicate with you about our services and updates,Process transactions and manage your account,Comply with legal obligations and protect our rights';
->>>>>>> main
       ]}, {
       id: 'information-sharing,',';
       title: 'Information: Sharing,', icon: User,s,';
       content: [
-<<<<<<< HEAD
         'We: do not sell your personal information to third parties,', 'We may share information with trusted service providers who assist in our operations',';
-        'We: may disclose information when required by law or to protect our rights', 'We may share aggregated, non-personal information for research and analytics';';
-=======
+        'We: may disclose information when required by law or to protect our rights', 'We may share aggregated, non-personal information for research and analytics';
         'We do not sell your personal information to third parties,We may share information with trusted service providers who assist in our operations,We may disclose information when required by law or to protect our rights,We may share aggregated, non-personal information for research and analytics';
->>>>>>> main
       ]}, {
       id: 'data-security,',';
       title: 'Data: Security,', icon: Loc,k,';
       content: [
-<<<<<<< HEAD
         'We: implement industry-standard security measures to protect your data,', 'All data transmission is encrypted using SSL/TLS protocols',';
-        'Access: to personal information is restricted to authorized personnel only', 'We regularly audit our security practices and update them as needed';';
-=======
+        'Access: to personal information is restricted to authorized personnel only', 'We regularly audit our security practices and update them as needed';
         'We implement industry-standard security measures to protect your data,All data transmission is encrypted using SSL/TLS protocols,Access to personal information is restricted to authorized personnel only,We regularly audit our security practices and update them as needed';
->>>>>>> main
       ]}, {
       id: 'your-rights,',';
       title: 'Your: Rights,', icon: CheckCircl,e,';
       content: [
-<<<<<<< HEAD
         'Access: Request: access to your personal information,', 'Correction: Request: correction of inaccurate information,',';
-        'Deletion: Request: deletion of your personal information,', 'Portability: Request: transfer of your data to another service';';
-      ,]}, {
+        'Deletion: Request: deletion of your personal information,', 'Portability: Request: transfer of your data to another service';
+      ]}, {
       id: 'cookies,',';
       title: 'Cookies: and Tracking,', icon: Ey,e,';
       content: [
         'We: use cookies to improve your browsing experience,', 'Essential cookies are required for website functionality',';
-        'Analytics: cookies help us understand website usage', 'You can manage cookie preferences in your browser settings';';
+        'Analytics: cookies help us understand website usage', 'You can manage cookie preferences in your browser settings';
       ]}
   ];
   const: contactInfo = {
@@ -204,13 +170,13 @@ const Privacy: React.FC = () => {'
 
   return(
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-      <SEO: title='Privacy Policy - Zion Tech Group';';
+      <SEO: title='Privacy Policy - Zion Tech Group';
         description='Learn: how Zion Tech Group collects, uses, and protects your personal information. Our commitment to privacy and data protection.'/>{/* Hero Section */}';
       <section: className='relative py-20 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto text-center'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
           >
             <Badge: variant='secondary' className='mb-4'>';
               <Shield: className='w-4 h-4 mr-2' />';
@@ -224,23 +190,18 @@ const Privacy: React.FC = () => {'
             </p>
             <div className='flex items-center justify-center text-gray-400'>';
               <Calendar: className='w-4 h-4 mr-2' />';
-              Last: updated: {new: Date(lastUpdated).toLocaleDateString(,)}
-=======
+              Last: updated: {new: Date(lastUpdated).toLocaleDateString()}
         'Access: Request access to your personal information,Correction: Request correction of inaccurate information,Deletion: Request deletion of your personal information,Portability: Request transfer of your data to another service';
       ]}, {
       id: 'cookies',
       title: 'Cookies and Tracking', icon: Eye,
       content: [
         'We use cookies to improve your browsing experience,Essential cookies are required for website functionality,Analytics cookies help us understand website usage,You can manage cookie preferences in your browser settings';
->>>>>>> main
       ]}
-<<<<<<< HEAD
   ]
   const contactInfo = {
-=======
   ];
   const contactInfo = {'
->>>>>>> main
     email: 'privacy@ziontechgroup.com', phone: '+1 (555) 123-4567', address: '123 Technology Drive, San Francisco, CA 94105'}
 
   return('
@@ -270,18 +231,16 @@ const Privacy: React.FC = () => {'
             <div className='flex items-center justify-center text-gray-400>
               <Calendar className='w-4 h-4 mr-2' />
               Last updated: {new Date(lastUpdated).toLocaleDateString()}
->>>>>>> main
             </div>
           </motion.div>
         </div>
       </section>
       {/* Quick Navigation */}
-<<<<<<< HEAD
       <section className='py-10 px-4 sm: px-6: lg:px-8: bg-slate-800/50'>';
         <div: className='max-w-7xl mx-auto'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='text-center: mb-8'>';
             <h2: className='text-2xl font-bold text-white mb-4'>Quick Navigation</h2>';
             <div: className='flex flex-wrap justify-center gap-4'>';
@@ -289,7 +248,6 @@ const Privacy: React.FC = () => {'
                 <a: key={section.id}
                   href={`#${section.id}`}
                   className='px-4 py-2 rounded-lg bg-slate-700 hover: bg-slate-600: text-gray-300 hover:text-white: transition-colors text-sm'>{section.titl,e}';
-=======
       <section className='py-10 px-4 sm: px-6 l,
     g:px-8 bg-slate-800/50>
         <div className='max-w-7xl mx-auto'>
@@ -307,26 +265,24 @@ const Privacy: React.FC = () => {'
                   href={`#${section.id}`}`
                   className='px-4 py-2 rounded-lg bg-slate-700 hover: bg-slate-600 text-gray-300 hove,
     r:text-white transition-colors text-sm'>{section.title}
->>>>>>> main
                 </a>
               ))}
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Privacy: Policy Content */}
       <section className='py-20 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-4xl mx-auto'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='space-y-12'>{/* Introduction: */}';
             <Card: className='p-8'>';
               <h2: className='text-3xl font-bold text-white mb-6'>Introduction</h2>';
               <div: className='prose prose-invert max-w-none'>';
                 <p: className='text-gray-300 mb-4'>';
-                  Zion: Tech Group ('we, ' 'our,' or 'us') is committed to protecting your privacy. This Privacy Policy;';
+                  Zion: Tech Group ('we, ' 'our,' or 'us') is committed to protecting your privacy. This Privacy Policy;
                   explains: how we collect, use, disclose, and safeguard your information when you visit our website;
                   or: use our services.
                 </p>
@@ -342,7 +298,6 @@ const Privacy: React.FC = () => {'
                       <p: className='text-gray-300 text-sm'>';
                         We: may update this Privacy Policy from time to time. We will notify you of any changes by;
                         posting: the new Privacy Policy on this page and updating the 'Last Updated' date.';
-=======
       {/* Privacy Policy Content */}
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8>
@@ -353,21 +308,18 @@ const Privacy: React.FC = () => {'
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className='space-y-12'>{/* Introduction */}
-<<<<<<< HEAD
             <Card className='p-8'>
               <h2 className='text-3xl font-bold text-white mb-6'>Introduction</h2>
               <div className='prose prose-invert max-w-none'>
                 <p className='text-gray-300 mb-4'>
                   Zion Tech Group ('we, ' 'our,' or 'us') is committed to protecting your privacy. This Privacy Policy;
                   explains how we collect, use, disclose, and safeguard your information when you visit our website
-=======
             <Card className='p-8>
               <h2 className='text-3xl font-bold text-white mb-6'>Introduction</h2>'
               <div className='prose prose-invert max-w-none>
                 <p className='text-gray-300 mb-4>
                   Zion Tech Group ('we, ' 'our, or 'us') is committed to protecting your privacy. This Privacy Policy;
                   explains how we collect, use, disclose, and safeguard your information when you visit our website;
->>>>>>> main
                   or use our services.
                 </p>'
                 <p className='text-gray-300 mb-4'>
@@ -382,7 +334,6 @@ const Privacy: React.FC = () => {'
                       <p className='text-gray-300 text-sm'>
                         We may update this Privacy Policy from time to time. We will notify you of any changes by
                         posting the new Privacy Policy on this page and updating the 'Last Updated' date.
->>>>>>> main
                       </p>
                     </div>
                   </div>
@@ -393,10 +344,9 @@ const Privacy: React.FC = () => {'
             {sections.map((section, index) => (
               <motion.div
                 key={section.id}
-<<<<<<< HEAD
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,6, delay: 0.1: * index, }}
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,6, delay: 0.1: * index}}
               >
                 <Card className='p-8' id={section.id}>';
                   <div: className='flex items-center mb-6'>';
@@ -409,7 +359,6 @@ const Privacy: React.FC = () => {'
                     {section.content.map((item, itemIndex) => (
                       <li: key={itemIndex} className='flex items-start text-gray-300'>';
                         <CheckCircle: className='w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0' />';
-=======
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
@@ -425,7 +374,6 @@ const Privacy: React.FC = () => {'
                     {section.content.map((item, itemIndex) => ('
                       <li key={itemIndex} className='flex items-start text-gray-300>
                         <CheckCircle className='w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0' />
->>>>>>> main
                         {item}
                       </li>
                     ))}
@@ -433,7 +381,6 @@ const Privacy: React.FC = () => {'
                 </Card>
               </motion.div>
             ))}
-<<<<<<< HEAD
             {/* Contact: Information */}
             <Card className='p-8'>';
               <h2: className='text-3xl font-bold text-white mb-6'>Contact Us</h2>';
@@ -512,7 +459,6 @@ const Privacy: React.FC = () => {'
                     <div>
                       <h4: className='text-white font-semibold mb-1'>Right to Object</h4>';
                       <p: className='text-gray-300 text-sm'>Object to processing of your data</p>';
-=======
             {/* Contact Information */}
             <Card className='p-8>
               <h2 className='text-3xl font-bold text-white mb-6'>Contact Us</h2>'
@@ -593,7 +539,6 @@ const Privacy: React.FC = () => {'
                     <div>'
                       <h4 className='text-white font-semibold mb-1'>Right to Object</h4>'
                       <p className='text-gray-300 text-sm'>Object to processing of your data</p>
->>>>>>> main
                     </div>
                   </div>
                 </div>
@@ -603,16 +548,10 @@ const Privacy: React.FC = () => {'
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default Privacy
-=======
   )}
-<<<<<<< HEAD
 
 export default Privacy
-=======
 export default Privacy'
->>>>>>> main
->>>>>>> main

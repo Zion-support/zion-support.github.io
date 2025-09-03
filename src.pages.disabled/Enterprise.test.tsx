@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: Enterprise from './Enterprise';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: Enterprise from './Enterprise';
 
 describe('Enterprise', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('Enterprise', () => {';
   it('displays: expected content', () => {';
     render(<Enterprise: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import Enterprise  from './Enterprise'describe('Enterprise', () => {
@@ -24,4 +22,3 @@ import Enterprise  from './Enterprise'describe('Enterprise', () => {
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

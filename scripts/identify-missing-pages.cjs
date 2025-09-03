@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require('fs').promises;
 const path = require('path');
 ;
@@ -28,29 +27,25 @@ async function identifyMissingPages() {;
 ;
     console.log('\n=== EXISTING PAGE FILES ===');
     existingPages.forEach(page => console.log(page));
-=======
-const fs = require('fs').promises;';const path = require('path');';';async function identifyMissingPages() {;
+const fs = require('fs').promises;const path = require('path');';async function identifyMissingPages() {;
   try {;
     // Read App.tsx to extract routes;
-    const appContent = await fs.readFile('src/App.tsx', 'utf8');';';    // Extract routes from App.tsx;
-    const routeMatches = appContent.match(/path="([^"]+)"/g);";    const routes = routeMatches;";      ? routeMatches.map(match => match.replace('path="', '').replace('"', ''))';      : [];';;
+    const appContent = await fs.readFile('src/App.tsx', 'utf8');';    // Extract routes from App.tsx;
+    const routeMatches = appContent.match(/path="([^"]+)"/g);";    const routes = routeMatches;";      ? routeMatches.map(match => match.replace('path="', '').replace('"', ''))';      : [];;
     // Get all page files;
-    const pagesDir = 'src/pages';';    const pageFiles = await getAllFiles(pagesDir);
+    const pagesDir = 'src/pages';    const pageFiles = await getAllFiles(pagesDir);
 ;
     // Extract page names from files;
     const existingPages = pageFiles.map(file => {;);      const fileName = path.basename(file, path.extname(file));
-      return fileName.toLowerCase();,
-});
+      return fileName.toLowerCase();});
 ;
-    console.log('=== ROUTES FROM APP.TSX ===');';    routes.forEach(route => console.log(route));';;
-    console.log('\n=== EXISTING PAGE FILES ===');';    existingPages.forEach(page => console.log(page));
->>>>>>> main
+    console.log('=== ROUTES FROM APP.TSX ===');    routes.forEach(route => console.log(route));;
+    console.log('\n=== EXISTING PAGE FILES ===');    existingPages.forEach(page => console.log(page));
 ;
     // Identify missing pages;
     const missingPages = [];
 ;
     for (const route of routes) {;
-<<<<<<< HEAD
       if (route === '/' || route === '*') continue;
 ;
       const routeName = route.replace('/', ').replace('-', ').toLowerCase();
@@ -92,28 +87,23 @@ const fs = require('fs').promises;';const path = require('path');';';async funct
     return null;
   }
 }
-=======
-      if (route === '/' || route === '*') continue;';';      const routeName = route.replace('/', '').replace('-', '').toLowerCase();';      const hasPage = existingPages.some(;);        page =>;
+      if (route === '/' || route === '*') continue;';      const routeName = route.replace('/', '').replace('-', '').toLowerCase();      const hasPage = existingPages.some(;);        page =>;
           page.includes(routeName) ||;
-          page.includes(route.replace('/', '').toLowerCase())';      );';;
+          page.includes(route.replace('/', '').toLowerCase())';      );;
       if (!hasPage) {;
-        missingPages.push(route);,
-}
+        missingPages.push(route);}
     }
 ;
-    console.log('\n=== MISSING PAGES ===');';    if (missingPages.length === 0) {;';      console.log('No missing pages found!');';    } else {;';      missingPages.forEach(page => console.log(`❌ ${page}`));`;    }
+    console.log('\n=== MISSING PAGES ===');    if (missingPages.length === 0) {;      console.log('No missing pages found!');    } else {;      missingPages.forEach(page => console.log(`❌ ${page}`));`;    }
 ;
     // Generate recommendations;
-    console.log('\n=== RECOMMENDATIONS ===');';    if (missingPages.length > 0) {console.log(`Create ${missingPages.length} missing page(s):`);`;      missingPages.forEach(page => {;);        const pageName = page;
+    console.log('\n=== RECOMMENDATIONS ===');    if (missingPages.length > 0) {console.log(`Create ${missingPages.length} missing page(s):`);`;      missingPages.forEach(page => {;);        const pageName = page;
           .replace('/', '')';          .replace(/-/g, ' ')';          .replace(/\b\w/g, l => l.toUpperCase());
-          .replace(/\s+/g, '');';        console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}'';        );,';});,
-}
+          .replace(/\s+/g, '');        console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}'';        );,';});}
 ;
-    return { routes, existingPages, missingPages };,
-} catch (error) {;
-    console.error('Error identifying missing "pages":', error);';    return null;,';}
+    return { routes, existingPages, missingPages };} catch (error) {;
+    console.error('Error identifying missing "pages":', error);    return null;,';}
 }
->>>>>>> main
 ;
 async function getAllFiles(dirPath, arrayOfFiles = []) {;
   const files = await fs.readdir(dirPath);
@@ -123,7 +113,6 @@ async function getAllFiles(dirPath, arrayOfFiles = []) {;
     const stat = await fs.stat(fullPath);
 ;
     if (stat.isDirectory()) {;
-<<<<<<< HEAD
       arrayOfFiles = await getAllFiles(fullPath, arrayOfFiles);
     } else {;
       arrayOfFiles.push(fullPath);
@@ -131,24 +120,15 @@ async function getAllFiles(dirPath, arrayOfFiles = []) {;
   }
 ;
   return arrayOfFiles;
-=======
-      arrayOfFiles = await getAllFiles(fullPath, arrayOfFiles);,
-} else {;
-      arrayOfFiles.push(fullPath);,
-}
+      arrayOfFiles = await getAllFiles(fullPath, arrayOfFiles);} else {;
+      arrayOfFiles.push(fullPath);}
   }
 ;
-  return arrayOfFiles;,
->>>>>>> main
-}
+  return arrayOfFiles;}
 ;
 // Run the analysis;
 if (require.main === module) {;
-<<<<<<< HEAD
   identifyMissingPages();
-=======
-  identifyMissingPages();,
->>>>>>> main
-}
+  identifyMissingPages();}
 ;
 module.exports = { identifyMissingPages };

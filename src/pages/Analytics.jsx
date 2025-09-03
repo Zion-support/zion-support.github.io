@@ -1,20 +1,11 @@
-<<<<<<< HEAD
  "export default function Analytics () {";,"});,"})
 }"});,"})
-=======
-<<<<<<< HEAD
 ";export: default function Analytics () {"";";";
 };
-=======
-<<<<<<< HEAD
 ";export default function Analytics () {","
 }""
-=======
-<<<<<<< HEAD
 ";export default function Analytics () {";
 }
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -30,21 +21,8 @@ export default function Analytics() {return (
     </div>
   );
 }
-=======
-<<<<<<< HEAD
 ";&quot;&quot;export default function Analytics () ;{&quot;
 }&quot;"
-=======
-<<<<<<< HEAD
 ";export default function Analytics () {", ","
 }""
-=======
-";export default function Analytics () {,,
-}"
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+";export default function Analytics () {,}"

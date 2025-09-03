@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: Wishlist from './Wishlist';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: Wishlist from './Wishlist';
 
 describe('Wishlist', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('Wishlist', () => {';
   it('displays: expected content', () => {';
     render(<Wishlist: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import Wishlist  from './Wishlist'describe('Wishlist', () => {
@@ -24,4 +22,3 @@ import Wishlist  from './Wishlist'describe('Wishlist', () => {
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

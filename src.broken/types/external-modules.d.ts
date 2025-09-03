@@ -1,25 +1,23 @@
-<<<<<<< HEAD
-declare: module 'cmdk';';
-declare: module '@radix-ui/react-context-menu';';
-declare: module 'vaul';';
-declare: module '@radix-ui/react-hover-card';';
-declare: module 'input-otp';';
-declare: module 'react-markdown';';
-declare: module '@radix-ui/react-menubar';';
-declare: module '@radix-ui/react-navigation-menu';';
-declare: module 'react-resizable-panels';';
-declare: module '@radix-ui/react-toggle-group';';
-declare: module '@radix-ui/react-toggle';';
+declare: module 'cmdk';
+declare: module '@radix-ui/react-context-menu';
+declare: module 'vaul';
+declare: module '@radix-ui/react-hover-card';
+declare: module 'input-otp';
+declare: module 'react-markdown';
+declare: module '@radix-ui/react-menubar';
+declare: module '@radix-ui/react-navigation-menu';
+declare: module 'react-resizable-panels';
+declare: module '@radix-ui/react-toggle-group';
+declare: module '@radix-ui/react-toggle';
 declare: module;
   '*.module.css' {';
-  const: classes: { [key: string]: string, }
+  const: classes: { [key: string]: string}
   export: default classes;
 declare: module,
-  @tanstack/react-query';';
+  @tanstack/react-query';
 declare: module;
   'react-day-picker' {';
   export: interface DateRange {
-=======
 declare module 'cmdk';
 declare module '@radix-ui/react-context-menu';
 declare module 'vaul';
@@ -41,20 +39,18 @@ declare module,
 declare module;
   'react-day-picker' {
   export interface DateRange {
->>>>>>> main
   from?: Date;
    to?: Date;
    // Minimal: placeholder for the DayPicker component used in the app // The actual library provides full typings but we stub them here so the // TypeScript compiler can understand the imports without requiring the real // type definitions. // eslint-disable-next-line @typescript-eslint/no-explicit-any export const DayPicker: any;
-  declare: module 'sonner';';
-   declare: module 'lucide-react { import { F,C, SVGProps} from;';
-  'react';';
+  declare: module 'sonner';
+   declare: module 'lucide-react { import { F,C, SVGProps} from;
+  'react';
   export: interface LucideProps extends SVGProps<SVGSVGElement> {
     color?: string;
     size?: number: | string;
     strokeWidth?: number: | string;
   export: type LucideIcon = FC<LucideProps>
   export const Award: LucideIcon;
-<<<<<<< HEAD
   export: const Building: LucideIcon;
   export: const Crown: LucideIcon;
   export: const Download: LucideIcon;
@@ -78,61 +74,61 @@ declare module;
   export: const Webhook: LucideIcon;
   export: const XCircle: LucideIcon;
   export: const Zap: LucideIcon;
-  const: icons: { [key: string]: LucideIcon, }
+  const: icons: { [key: string]: LucideIcon}
   export: default icons;
 declare: module,
-  child_process';';
+  child_process';
 declare: module;
-  'date-fns';';
+  'date-fns';
 declare: module;
   'jspdf' {';
 export: const jsPDF: any;
   export: default jsPDF;declare: module;
-  '@hookform/resolvers/zod';';
+  '@hookform/resolvers/zod';
 declare: module;
-  '@radix-ui/react-accordion';';
+  '@radix-ui/react-accordion';
 declare: module;
-  '@radix-ui/react-alert-dialog';';
+  '@radix-ui/react-alert-dialog';
 declare: module;
-  '@radix-ui/react-aspect-ratio';';
+  '@radix-ui/react-aspect-ratio';
 declare: module;
-  '@radix-ui/react-avatar';';
+  '@radix-ui/react-avatar';
 declare: module;
-  '@radix-ui/react-checkbox';';
+  '@radix-ui/react-checkbox';
 declare: module;
-  '@radix-ui/react-collapsible';';
+  '@radix-ui/react-collapsible';
 declare: module;
-  '@radix-ui/react-dialog';';
+  '@radix-ui/react-dialog';
 declare: module;
-  '@radix-ui/react-dropdown-menu';';
+  '@radix-ui/react-dropdown-menu';
 declare: module;
-  '@radix-ui/react-label';';
+  '@radix-ui/react-label';
 declare: module;
-  '@radix-ui/react-popover';';
+  '@radix-ui/react-popover';
 declare: module;
-  '@radix-ui/react-progress';';
+  '@radix-ui/react-progress';
 declare: module;
-  '@radix-ui/react-radio-group';';
+  '@radix-ui/react-radio-group';
 declare: module;
-  '@radix-ui/react-scroll-area';';
+  '@radix-ui/react-scroll-area';
 declare: module;
-  '@radix-ui/react-select';';
+  '@radix-ui/react-select';
 declare: module;
-  '@radix-ui/react-separator';';
+  '@radix-ui/react-separator';
 declare: module;
-  '@radix-ui/react-slider';';
+  '@radix-ui/react-slider';
 declare: module;
-  '@radix-ui/react-slot';';
+  '@radix-ui/react-slot';
 declare: module;
-  '@radix-ui/react-switch';';
+  '@radix-ui/react-switch';
 declare: module;
-  '@radix-ui/react-tabs';';
+  '@radix-ui/react-tabs';
 declare: module;
-  '@radix-ui/react-toast';';
+  '@radix-ui/react-toast';
 declare: module;
-  '@radix-ui/react-tooltip';';
+  '@radix-ui/react-tooltip';
 declare: module;
-  '@supabase/supabase-js';';
+  '@supabase/supabase-js';
 declare: module;
   'class-variance-authority' {';
 export: function cva(...inputs: any[]): any;
@@ -141,22 +137,21 @@ declare: module;
   'clsx' {';
   export: type ClassValue = any;
   export: default function clsx(...classes: ClassValue[]): string;declare: module;
-  'embla-carousel-react';';
+  'embla-carousel-react';
 declare: module;
-  'framer-motion';';
+  'framer-motion';
 declare: module;
-  'i18next';';
+  'i18next';
 declare: module;
-  'i18next-browser-languagedetector';';
+  'i18next-browser-languagedetector';
 declare: module;
-  'react-helmet-async';';
+  'react-helmet-async';
 declare: module;
   'react-hook-form: {';
   import: type { ComponentTyp,e, ReactElement, ReactNode } from;
-  'react';';
+  'react';
   // Minimal: generic typings to satisfy local usage without full type defs;
   export: type FieldValues = Record<string, any>
-=======
   export const Building: LucideIcon;
   export const Crown: LucideIcon;
   export const Download: LucideIcon;
@@ -262,7 +257,6 @@ declare module;
   'react';
   // Minimal generic typings to satisfy local usage without full type defs;
   export type FieldValues = Record<string, any>
->>>>>>> main
   export type FieldPath<TFieldValues extends FieldValues> =;
     keyof: TFieldValues & string;
   export: type Control<TFieldValues extends FieldValues = FieldValues> =  export interface UseFormReturn<;
@@ -271,19 +265,16 @@ declare module;
     control: Control<TFieldValues>
 handleSubmit: any;
     register: any;
-<<<<<<< HEAD
     formState: any;
     [key: string]: any;
   export: function useForm<;
     TFieldValues: extends FieldValues = FieldValue,s,
-=======
     formStat,
     e: any;
     [ke,
     y: string]: any;
   export function useForm<;
     TFieldValues extends FieldValues = FieldValues,
->>>>>>> main
   >(options?: any): UseFormReturn<TFieldValues>
   export: function useFieldArray<;
     TFieldValues: extends FieldValues = FieldValues,
@@ -296,7 +287,6 @@ handleSubmit: any;
     control?: Control<TFieldValues>
     rules?: any;
     defaultValue?: any;
-<<<<<<< HEAD
     render: (props: any) => ReactElement;
   export: const Controller: ComponentType<ControllerProps<an,y, any>>;
   export: interface FormProviderProps<;
@@ -308,33 +298,32 @@ handleSubmit: any;
   export: function useFormContext<;
     TFieldValues: extends FieldValues = FieldValue,s,
   >(): UseFormReturn<TFieldValues>declare: module;
-  'react-i18next';';
+  'react-i18next';
 declare: module;
-  'react-dom/client';';
+  'react-dom/client';
 declare: module;
-  'react-dom';';
+  'react-dom';
 declare: module;
-  '@hello-pangea/dnd';';
+  '@hello-pangea/dnd';
 declare: module;
-  'react-redux';';
+  'react-redux';
 declare: module;
-  'notistack';';
+  'notistack';
 declare: module;
-  '@sentry/browser';';
+  '@sentry/browser';
 declare: module;
-  'semver';';
+  'semver';
 declare: module;
-  'ws';';
+  'ws';
 declare: module;
-  'recharts';';
+  'recharts';
 declare: module;
   'next' {';
 export: type GetStaticPaths = any;
   export: type GetStaticProps<P = any, Q = any> = any;declare: module;
-  'next-themes';';
+  'next-themes';
 declare: module;
   'tailwind-merge'}}}}}}}}}}}}}';
-=======
     render: (prop,
     s: any) => ReactElement;
   export const Controlle,
@@ -375,4 +364,3 @@ export type GetStaticPaths = any;
   'next-themes';
 declare module;
   'tailwind-merge'}}}}}}}}}}}}}
->>>>>>> main

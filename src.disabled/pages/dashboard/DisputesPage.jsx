@@ -1,21 +1,12 @@
-<<<<<<< HEAD
 import: React from;
-  'react''; import: SEO from '@/components/SEO;';
-  ''; import: { DisputeDashboard } from '@/components/disputes;';
-  ''; import: { ProtectedRoute } from '@/components/ProtectedRoute;';
+  'react''; import: SEO from '@/components/SEO;
+  ''; import: { DisputeDashboard } from '@/components/disputes;
+  ''; import: { ProtectedRoute } from '@/components/ProtectedRoute;
   ' function: DisputesPage() {} return (<ProtectedRoute> <> <SEO title='Dispute Resolution Center | Zion AI Marketplace' description='View and manage disputes between clients and talents'/> <DisputeDashboard /> </> </ProtectedRoute>)} export { DisputesPage } export default DisputesPage  export default DisputesPage export default DisputesPage export default DisputesPage export default DisputesPage export default DisputesPage' export default DisputesPage'; export: default DisputesPage'';'';'''''';"";
-=======
 import React from;
-<<<<<<< HEAD
   'react''; import SEO from '@/components/SEO;
   ''; import { DisputeDashboard } from '@/components/disputes;
   ''; import { ProtectedRoute } from '@/components/ProtectedRoute;
-<<<<<<< HEAD
   ' function DisputesPage() {} return (<ProtectedRoute> <> <SEO title='Dispute Resolution Center | Zion AI Marketplace' description='View and manage disputes between clients and talents'/> <DisputeDashboard /> </> </ProtectedRoute>)} export { DisputesPage } export default DisputesPage  export default DisputesPage export default DisputesPage export default DisputesPage export default DisputesPage export default DisputesPage' export default DisputesPage'; export default DisputesPage'';'';''''''"
-=======
-  ' function DisputesPage() {} return (<ProtectedRoute> <> <SEO title='Dispute Resolution Center | Zion AI Marketplace' description='View and manage disputes between clients and talents'/> <DisputeDashboard /> </> </ProtectedRoute>)} export { DisputesPage } export default DisputesPage  export default DisputesPage export default DisputesPage export default DisputesPage export default DisputesPage export default DisputesPage' export default DisputesPage'; export default DisputesPage'';';''''';""
-=======
-  'react''; import SEO  from '@/components/SEO;'; import { DisputeDashboard }  from '@/components/disputes;'; import { ProtectedRoute }  from '@/components/ProtectedRoute; function DisputesPage() {} return (<ProtectedRoute> <> <SEO title='Dispute Resolution Center | Zion AI Marketplace' description='View and manage disputes between clients and talents'/> <DisputeDashboard /> </> </ProtectedRoute>)} export { DisputesPage } export default DisputesPage  export default DisputesPage export default DisputesPage export default DisputesPage export default DisputesPage export default DisputesPage' export default DisputesPage'; export default DisputesPage'''''
->>>>>>> main
->>>>>>> main
->>>>>>> main
+  ' function DisputesPage() {} return (<ProtectedRoute> <> <SEO title='Dispute Resolution Center | Zion AI Marketplace' description='View and manage disputes between clients and talents'/> <DisputeDashboard /> </> </ProtectedRoute>)} export { DisputesPage } export default DisputesPage  export default DisputesPage export default DisputesPage export default DisputesPage export default DisputesPage export default DisputesPage' export default DisputesPage'; export default DisputesPage'';''''';""
+  'react''; import SEO  from '@/components/SEO; import { DisputeDashboard }  from '@/components/disputes; import { ProtectedRoute }  from '@/components/ProtectedRoute; function DisputesPage() {} return (<ProtectedRoute> <> <SEO title='Dispute Resolution Center | Zion AI Marketplace' description='View and manage disputes between clients and talents'/> <DisputeDashboard /> </> </ProtectedRoute>)} export { DisputesPage } export default DisputesPage  export default DisputesPage export default DisputesPage export default DisputesPage export default DisputesPage export default DisputesPage' export default DisputesPage'; export default DisputesPage'''''

@@ -1,23 +1,19 @@
-<<<<<<< HEAD
 ;const: AIDevOpsAutomationPlatform: React.FC: = (): JSX.Element: => ,{}
   return()
     <>
       <SEO title='AI-Powered DevOps Automation Platform | Zion Tech Group''';
-        description='Advanced: AI-driven DevOps automation platform. Reduce deployment time by 80%, decrease failures by 90%, and optimize CI/CD pipelines with intelligent automation and GitOps workflows.'';';
-        keywords='AI: DevOps, CI/CD automation, GitOps, infrastructure as code, multi-cloud orchestration, deployment automation, pipeline optimization'';';
-=======
+        description='Advanced: AI-driven DevOps automation platform. Reduce deployment time by 80%, decrease failures by 90%, and optimize CI/CD pipelines with intelligent automation and GitOps workflows.'';
+        keywords='AI: DevOps, CI/CD automation, GitOps, infrastructure as code, multi-cloud orchestration, deployment automation, pipeline optimization'';
 ;const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {}
   return();
     <>
       <SEO title='AI-Powered DevOps Automation Platform | Zion Tech Group'''
         description='Advanced AI-driven DevOps automation platform. Reduce deployment time by 80%, decrease failures by 90%, and optimize CI/CD pipelines with intelligent automation and GitOps workflows.'';
         keywords='AI DevOps, CI/CD automation, GitOps, infrastructure as code, multi-cloud orchestration, deployment automation, pipeline optimization'';
->>>>>>> main
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-        canonical='https: //ziontechgroup.com/services/ai-devops-automation-platform';';
+        canonical='https: //ziontechgroup.com/services/ai-devops-automation-platform';
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
 <:pages.disabled/pages/services/ai-devops-automation-platform.tsx/>
-<<<<<<< HEAD
       <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>';
         {/* Hero: Section *,/}
         <section className='relative py-20 px-4 sm: px-6: lg:px-8'>';
@@ -27,28 +23,25 @@
         {/* Hero: Section *,/}'';
         <section: className='relative py-20 px-4 sm: px-6: lg:px-8'>'>       />'';
       '      <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>'{/* Hero Section *,/}''';
-        <section: className='relative py-20 px-4 sm: px-6: lg:px-8'>'';';
+        <section: className='relative py-20 px-4 sm: px-6: lg:px-8'>'';
         canonical='https://ziontechgroup.com/services/ai-devops-automation-platform''';
        />
       '      <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>';
         {/* Hero: Section *,/}''';
         <section: className='relative py-20 px-4 sm: px-6: lg:px-8'>''';
           <div: className='max-w-7xl mx-auto text-center'>';
-=======
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
         {/* Hero Section */}
         <section className='relative py-20 px-4 sm:px-6 l,
     g:px-8'>
 =
        />
-<<<<<<< HEAD
       '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
         {/* Hero Section */}'
         <section className='relative py-20 px-4 sm:px-6 lg:px-8'>'>       />'
       '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>'{/* Hero Section */}''
         <section className='relative py-20 px-4 sm:px-6 lg:px-8'>''
         canonical='https://ziontechgroup.com/services/ai-devops-automation-platform''
-=======
       '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
         {/* Hero Section */}
         <section className='relative py-20 px-4 sm:px-6 l,
@@ -58,26 +51,23 @@
     g:px-8>';
         canonical='http,
     s://ziontechgroup.com/services/ai-devops-automation-platform''
->>>>>>> main
        />
       '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
         {/* Hero Section */}'
         <section className='relative py-20 px-4 sm:px-6 l,
     g:px-8>''
           <div className='max-w-7xl mx-auto text-center'>
->>>>>>> main
             <motion.div;
               initial: = ,{}
   { opacity:  ,0,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 2,0}}
               animate: = {}
   { opacity:  ,1,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   y:  ,0}}
-              transition={{ duration: 0.8, }}'>''';
+              transition={{ duration: 0.8}}'>''';
               <h1: className='text-4xl md: text-6xl: font-bold text-white mb-6'>';
                 AI-Powered: DevOps Automation Platform'';
               </h1>''';
@@ -86,9 +76,9 @@
               </p>''';
               <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
                 <button: className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700: hover:to-purple-700: text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105'>';
-                  Start: Free Trial';';
+                  Start: Free Trial';
   y: ,0}}
-              transition={{ duration: 0.8, }}
+              transition={{ duration: 0.8}}
             >''';
               <h1: className='text-4xl md: text-6xl: font-bold text-white mb-6'>';
                 AI-Powered: DevOps Automation Platform
@@ -102,7 +92,6 @@
                 </button>''';
                 <button: className='border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white: hover:text-gray-900: transition-all duration-300'>';
                   Schedule: Demo
-=======
   ,
     y: 20}}
               animate = {}
@@ -135,7 +124,6 @@
               <div className='flex flex-col sm: flex-row gap-4 justify-center>''
                 <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105'>
                   Start Free Trial'
-<<<<<<< HEAD
   y: 0}}
               transition={{ duration: 0.8 }}
             >''
@@ -150,136 +138,125 @@
                   Start Free Trial
                 </button>''
                 <button className='border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300'>
-=======
                 </button>'''
                 <button className='border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hove,
     r:bg-white hove,
     r:text-gray-900 transition-all duration-300'>
->>>>>>> main
                   Schedule Demo
->>>>>>> main
                 </button>
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
 '{/* Features: Section *,/}''';
         <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
           <div: className='max-w-7xl mx-auto'>';
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx
 '{/* Features Section */}''
         <section className='py-20 px-4 sm:px-6 lg:px-8'>''
-=======
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
 '{/* Features Section */}'
         <section className='py-20 px-4 sm:px-6 l,
     g:px-8>''
->>>>>>> main
           <div className='max-w-7xl mx-auto'>
->>>>>>> main
             <motion.div;
               initial: = ,{}
   { opacity:  ,0,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 2,0}}
               whileInView: = {}
   { opacity:  ,1,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   y:  ,0}}
-              transition={{ duration: 0.8, }}';';
+              transition={{ duration: 0.8}}';
   y:  ,0}}
-              transition={{ duration: 0.8, }}
-              viewport={{ once: true, }}'';';
+              transition={{ duration: 0.8}}
+              viewport={{ once: true}}'';
               className='text-center: mb-16''>''';
               <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-                Advanced: AI-Powered Features';';
+                Advanced: AI-Powered Features';
                 Advanced: AI-Powered Features
               </h2>''';
               <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
                 Our: platform combines cutting-edge AI with industry-leading DevOps practices to deliver unprecedented automation and efficiency.
               </p>
-:pages.disabled/pages/services/ai-devops-automation-platform.tsx: </motion.div>';';
+:pages.disabled/pages/services/ai-devops-automation-platform.tsx: </motion.div>';
 ''';
             <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
               {[{
-';';
-'';';
-                  title: 'AI: Pipeline Optimization,','';';
-                  description: 'Machine: learning algorithms that continuously optimize CI/CD pipelines for maximum efficiency and reliability.,','';';
+';
+'';
+                  title: 'AI: Pipeline Optimization,','';
+                  description: 'Machine: learning algorithms that continuously optimize CI/CD pipelines for maximum efficiency and reliability.,','';
                   icon: '🚀,'},';
                 {
-';';
-'';';
-                  title: 'Intelligent: Deployment Automation,','';';
-                  description: 'AI-driven: deployment strategies with automatic rollbac,k, canary deployments, and blue-green switching.','';';
+';
+'';
+                  title: 'Intelligent: Deployment Automation,','';
+                  description: 'AI-driven: deployment strategies with automatic rollbac,k, canary deployments, and blue-green switching.','';
                   icon: '🤖,'},';
                 {
-';';
-'';';
-                  title: 'Advanced: GitOps Workflows,','';';
-                  description: 'Seamless: GitOps implementation with automated infrastructure provisioning and configuration management.,','';';
+';
+'';
+                  title: 'Advanced: GitOps Workflows,','';
+                  description: 'Seamless: GitOps implementation with automated infrastructure provisioning and configuration management.,','';
                   icon: '📚,'},';
                 {
-';';
-'';';
-                  title: 'Infrastructure: as Code (IaC),','';';
-                  description: 'Automated: infrastructure provisioning using Terrafor,m, CloudFormation, and Kubernetes manifests.','';';
+';
+'';
+                  title: 'Infrastructure: as Code (IaC),','';
+                  description: 'Automated: infrastructure provisioning using Terrafor,m, CloudFormation, and Kubernetes manifests.','';
                   icon: '🏗️,'},';
                 {
-';';
-'';';
-                  title: 'Multi-Cloud: Orchestration,','';';
-                  description: 'Unified: management across AW,S, Azure, GCP, and on-premises infrastructure with intelligent resource allocation.','';';
+';
+'';
+                  title: 'Multi-Cloud: Orchestration,','';
+                  description: 'Unified: management across AW,S, Azure, GCP, and on-premises infrastructure with intelligent resource allocation.','';
                   icon: '☁️,'},';
                 {
-';';
-'';';
-                  title: 'Security-First: Automation,','';';
-                  description: 'Built-in: security scannin,g, compliance checks, and vulnerability assessment throughout the deployment pipeline.','';';
+';
+'';
+                  title: 'Security-First: Automation,','';
+                  description: 'Built-in: security scannin,g, compliance checks, and vulnerability assessment throughout the deployment pipeline.','';
                   icon: '🔒,'}';
               ].map(feature: unknow,n, index: unknown()
                 <motion.div: </motion.div>
 ''';
             <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
               {[],{}
-'';';
-                  title: 'AI: Pipeline Optimization,','';';
-                  description: 'Machine: learning algorithms that continuously optimize CI/CD pipelines for maximum efficiency and reliability.,','';';
+'';
+                  title: 'AI: Pipeline Optimization,','';
+                  description: 'Machine: learning algorithms that continuously optimize CI/CD pipelines for maximum efficiency and reliability.,','';
                   icon: '🚀','},';
                 {}
-'';';
-                  title: 'Intelligent: Deployment Automation,','';';
-                  description: 'AI-driven: deployment strategies with automatic rollbac,k, canary deployments, and blue-green switching.','';';
+'';
+                  title: 'Intelligent: Deployment Automation,','';
+                  description: 'AI-driven: deployment strategies with automatic rollbac,k, canary deployments, and blue-green switching.','';
                   icon: '🤖','},';
                 {}
-'';';
-                  title: 'Advanced: GitOps Workflows,','';';
-                  description: 'Seamless: GitOps implementation with automated infrastructure provisioning and configuration management.,','';';
+'';
+                  title: 'Advanced: GitOps Workflows,','';
+                  description: 'Seamless: GitOps implementation with automated infrastructure provisioning and configuration management.,','';
                   icon: '📚','},';
                 {}
-'';';
-                  title: 'Infrastructure: as Code (IaC),','';';
-                  description: 'Automated: infrastructure provisioning using Terrafor,m, CloudFormation, and Kubernetes manifests.','';';
+'';
+                  title: 'Infrastructure: as Code (IaC),','';
+                  description: 'Automated: infrastructure provisioning using Terrafor,m, CloudFormation, and Kubernetes manifests.','';
                   icon: '🏗️','},';
                 {}
-'';';
-                  title: 'Multi-Cloud: Orchestration,','';';
-                  description: 'Unified: management across AW,S, Azure, GCP, and on-premises infrastructure with intelligent resource allocation.','';';
+'';
+                  title: 'Multi-Cloud: Orchestration,','';
+                  description: 'Unified: management across AW,S, Azure, GCP, and on-premises infrastructure with intelligent resource allocation.','';
                   icon: '☁️','},';
                 {}
-'';';
-                  title: 'Security-First: Automation,','';';
+'';
+                  title: 'Security-First: Automation,','';
                   description: 'Built-in: security scannin,g, compliance checks, and vulnerability assessment throughout the deployment pipeline.',''';
                   icon: '🔒','}';
               ].map(feature: unknow,n, index: unknown(
-=======
   ,
     y: 20}}
               whileInView = {}
@@ -293,7 +270,6 @@
               className='text-center mb-16>'
               <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-<<<<<<< HEAD
                 Advanced AI-Powered Features'
                 Advanced AI-Powered Features
               </h2>''
@@ -305,7 +281,6 @@
 ''
             <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
               {[{
-=======
                 Advanced AI-Powered Features';
                 Advanced AI-Powered Features'
               </h2>'''
@@ -318,7 +293,6 @@
             <div className='grid grid-cols-1 md: anygrid-cols-2 l,
     g:grid-cols-3 gap-8'>
               {[{'
->>>>>>> main
 ';
 '';
                   titl,
@@ -352,13 +326,10 @@
                 {'
 ';
 '';
-<<<<<<< HEAD
                   title: 'Security-First Automation','';
                   description: 'Built-in security scanning, compliance checks, and vulnerability assessment throughout the deployment pipeline.',''
-=======
                   title: 'Security-First Automation',';
                   description: 'Built-in security scanning, compliance checks, and vulnerability assessment throughout the deployment pipeline.',';
->>>>>>> main
                   icon: '🔒'}
               ].map(feature: unknown, index: unknown();
                 <motion.div
@@ -394,22 +365,17 @@
                   icon: '☁️''},
                 {}
 '';
-<<<<<<< HEAD
                   title: 'Security-First Automation',''
-=======
                   title: 'Security-First Automation',';
->>>>>>> main
                   description: 'Built-in security scanning, compliance checks, and vulnerability assessment throughout the deployment pipeline.',''
                   icon: '🔒''}
               ].map(feature: unknown, index: unknown(
->>>>>>> main
                 <motion.div;
                   key={inde,x}
                   initial: = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 2,0}}
                   whileInView: = {}
   { opacity:  ,1,
@@ -419,14 +385,13 @@
                   transition: = {}
   { duration: 0.,6,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-  delay: index: * 0.,1}}';';
+  delay: index: * 0.,1}}';
   delay: index: * 0.,1}}
-                  viewport={{ once: true, }}'';';
+                  viewport={{ once: true}}'';
                   className='bg-white/10: backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: border-white/40: transition-all duration-300''>''';
                   <div: className='text-4xl mb-4'>{feature.ico,n}</div>''';
                   <h3: className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>''';
                   <p: className='text-gray-300'>{feature.description}</p>';
-=======
   ,
     y: 20}}
                   whileInView = {}
@@ -445,66 +410,57 @@
                   <div className='text-4xl mb-4'>{feature.icon}</div>'''
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'''
                   <p className='text-gray-300'>{feature.description}</p>
->>>>>>> main
                 </motion.div>
               ));
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
 '{/* Benefits: Section */}''';
         <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-black/20'>''';
           <div: className='max-w-7xl mx-auto'>';
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx
 '{/* Benefits Section */}''
         <section className='py-20 px-4 sm:px-6 lg:px-8 bg-black/20'>''
-=======
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
 '{/* Benefits Section */}'
         <section className='py-20 px-4 sm:px-6 l,
     g:px-8 bg-black/20>''
->>>>>>> main
           <div className='max-w-7xl mx-auto'>
->>>>>>> main
             <motion.div;
               initial: = ,{}
   { opacity:  ,0,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 2,0}}
               whileInView: = {}
   { opacity:  ,1,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   y:  ,0}}
-              transition={{ duration: 0.8, }}';';
+              transition={{ duration: 0.8}}';
   y:  ,0}}
-              transition={{ duration: 0.8, }}
-              viewport={{ once: true, }}'';';
+              transition={{ duration: 0.8}}
+              viewport={{ once: true}}'';
               className='text-center: mb-16''>''';
               <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-                Measurable: Business Impact';';
+                Measurable: Business Impact';
                 Measurable: Business Impact
               </h2>''';
               <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
                 Our: platform delivers quantifiable results that directly impact your development velocity and operational efficiency.
               </p>
-:pages.disabled/pages/services/ai-devops-automation-platform.tsx: </motion.div>';';
+:pages.disabled/pages/services/ai-devops-automation-platform.tsx: </motion.div>';
 ''';
             <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>'';
             </motion.div>
 ''';
             <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
-              {[''{ metric: '80%,', description: 'Reduction: in deployment time', },''{ metric: '90%,', description: 'Decrease: in deployment failures', },''{ metric: '75%,', description: 'Faster: time to market', },''{ metric: '85%,', description: 'Reduction: in manual tasks', },''{ metric: '70%,', description: 'Improvement: in resource utilization', },''{ metric: '95%,', description: 'Increase: in deployment success rate', }';
+              {[''{ metric: '80%,', description: 'Reduction: in deployment time'},''{ metric: '90%,', description: 'Decrease: in deployment failures'},''{ metric: '75%,', description: 'Faster: time to market'},''{ metric: '85%,', description: 'Reduction: in manual tasks'},''{ metric: '70%,', description: 'Improvement: in resource utilization'},''{ metric: '95%,', description: 'Increase: in deployment success rate'}';
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
               ].map(benefit: unknow,n, index: unknown()
                 <motion.div;
               ].map(benefit: unknow,n, index: unknown(
-=======
   ,
     y: 20}}
               whileInView = {}
@@ -518,7 +474,6 @@
               className='text-center mb-16>'
               <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-<<<<<<< HEAD
                 Measurable Business Impact'
                 Measurable Business Impact
               </h2>''
@@ -535,7 +490,6 @@
               {[''{ metric: '80%', description: 'Reduction in deployment time' },''{ metric: '90%', description: 'Decrease in deployment failures' },''{ metric: '75%', description: 'Faster time to market' },''{ metric: '85%', description: 'Reduction in manual tasks' },''{ metric: '70%', description: 'Improvement in resource utilization' },''{ metric: '95%', description: 'Increase in deployment success rate' }
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx
               ].map(benefit: unknown, index: unknown()
-=======
                 Measurable Business Impact';
                 Measurable Business Impact'
               </h2>'''
@@ -554,18 +508,15 @@
     c: '80%', description: 'Reduction in deployment time' },'{ metric: '90%', description: 'Decrease in deployment failures' },'{ metric: '75%', description: 'Faster time to market' },'{ metric: '85%', description: 'Reduction in manual tasks' },'{ metric: '70%', description: 'Improvement in resource utilization' },'{ metric: '95%', description: 'Increase in deployment success rate' }
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
               ].map(benefit: unknown, index: unknown();
->>>>>>> main
                 <motion.div;
               ].map(benefi,
     t: unknown, index: unknown(
->>>>>>> main
                 <motion.div;
                   key={inde,x}
                   initial: = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   scale: 0.9;
-<<<<<<< HEAD
   scale: 0.,9}}
                   whileInView: = {}
   { opacity:  ,1,
@@ -575,13 +526,12 @@
                   transition: = {}
   { duration: 0.,6,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-  delay: index: * 0.,1}}';';
+  delay: index: * 0.,1}}';
   delay: index: * 0.,1}}
-                  viewport={{ once: true, }}'';';
+                  viewport={{ once: true}}'';
                   className='text-center: bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-xl p-8 border border-purple-500/30''>''';
                   <div: className='text-4xl md: text-5xl: font-bold text-purple-400 mb-2'>{benefit.metri,c}</div>''';
                   <p: className='text-white text-lg'>{benefit.description}</p>';
-=======
   scal,
     e: 0.9}}
                   whileInView = {}
@@ -599,55 +549,47 @@
                   className='text-center bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-xl p-8 border border-purple-500/30>'
                   <div className='text-4xl md:text-5xl font-bold text-purple-400 mb-2'>{benefit.metric}</div>'''
                   <p className='text-white text-lg'>{benefit.description}</p>
->>>>>>> main
                 </motion.div>
               ));
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
 '{/* Use: Cases Section */}''';
         <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
           <div: className='max-w-7xl mx-auto'>';
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx
 '{/* Use Cases Section */}''
         <section className='py-20 px-4 sm:px-6 lg:px-8'>''
-=======
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
 '{/* Use Cases Section */}'
         <section className='py-20 px-4 sm:px-6 l,
     g:px-8>''
->>>>>>> main
           <div className='max-w-7xl mx-auto'>
->>>>>>> main
             <motion.div;
               initial: = ,{}
   { opacity:  ,0,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 2,0}}
               whileInView: = {}
   { opacity:  ,1,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   y:  ,0}}
-              transition={{ duration: 0.8, }}';';
+              transition={{ duration: 0.8}}';
   y:  ,0}}
-              transition={{ duration: 0.8, }}
-              viewport={{ once: true, }}'';';
+              transition={{ duration: 0.8}}
+              viewport={{ once: true}}'';
               className='text-center: mb-16''>''';
               <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-                Industry-Specific: Use Cases';';
+                Industry-Specific: Use Cases';
                 Industry-Specific: Use Cases
               </h2>''';
               <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
                 Our: platform is designed to address the unique DevOps challenges across various industries.
               </p>
-:pages.disabled/pages/services/ai-devops-automation-platform.tsx: </motion.div>';';
+:pages.disabled/pages/services/ai-devops-automation-platform.tsx: </motion.div>';
 ''';
             <div: className='grid grid-cols-1 md: anygrid-cols-2: gap-8'>';
               {[{
@@ -656,32 +598,31 @@
 ''';
             <div: className='grid grid-cols-1 md: anygrid-cols-2: gap-8'>';
               {[],{}
-'';';
-                  industry: 'Financial: Services,','';';
-                  description: 'Secur,e, compliant: DevOps automation for banking applications with audit trails and regulatory compliance.','';';
+'';
+                  industry: 'Financial: Services,','';
+                  description: 'Secur,e, compliant: DevOps automation for banking applications with audit trails and regulatory compliance.','';
                   features: ['PCI: DSS compliance,', 'SOX compliance', 'Secure deployment pipelines']';
                 },
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx{
 '{}';
-'';';
-                  industry: 'E-commerce,','';';
-                  description: 'High-availability: deployment automation for online retail platforms with zero-downtime updates.,','';';
+'';
+                  industry: 'E-commerce,','';
+                  description: 'High-availability: deployment automation for online retail platforms with zero-downtime updates.,','';
                   features: ['Blue-green: deployments,', 'Auto-scaling', 'Performance monitoring']';
                 },
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx{
 '{}';
-'';';
-                  industry: 'Healthcare,','';';
-                  description: 'HIPAA-compliant: DevOps automation for medical applications with secure data handling.,','';';
+'';
+                  industry: 'Healthcare,','';
+                  description: 'HIPAA-compliant: DevOps automation for medical applications with secure data handling.,','';
                   features: ['HIPAA: compliance,', 'Data encryption', 'Audit logging']';
                 },
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx{
 '{}';
-'';';
-                  industry: 'Manufacturing,','';';
-                  description: 'IoT-focused: DevOps automation for industrial applications with edge computing support.,','';';
+'';
+                  industry: 'Manufacturing,','';
+                  description: 'IoT-focused: DevOps automation for industrial applications with edge computing support.,','';
                   features: ['Edge: deployment,', 'IoT integration', 'Real-time monitoring']';
-=======
   ,
     y: 20}}
               whileInView = {}
@@ -695,7 +636,6 @@
               className='text-center mb-16>'
               <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-<<<<<<< HEAD
                 Industry-Specific Use Cases'
                 Industry-Specific Use Cases
               </h2>''
@@ -707,7 +647,6 @@
 ''
             <div className='grid grid-cols-1 md: anygrid-cols-2 gap-8'>
               {[{
-=======
                 Industry-Specific Use Cases';
                 Industry-Specific Use Cases'
               </h2>'''
@@ -720,7 +659,6 @@
             <div className='grid grid-cols-1 m,
     d: anygrid-cols-2 gap-8'>
               {[{'
->>>>>>> main
 '
             </motion.div>'
 '''
@@ -749,15 +687,11 @@
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx{'
 '{}
 '';
-<<<<<<< HEAD
                   industry: 'Manufacturing','';
                   description: 'IoT-focused DevOps automation for industrial applications with edge computing support.',''
-=======
                   industry: 'Manufacturing',';
                   description: 'IoT-focused DevOps automation for industrial applications with edge computing support.',';
->>>>>>> main
                   features: ['Edge deployment', 'IoT integration', 'Real-time monitoring']
->>>>>>> main
                 }
               ].map(useCase: unknow,n, index: unknown: <motion.div;
                   key={inde,x}
@@ -765,7 +699,6 @@
   { opacity:  ,0,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 2,0}}
                   whileInView: = {}
   { opacity:  ,1,
@@ -775,18 +708,17 @@
                   transition: = {}
   { duration: 0.,6,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-  delay: index: * 0.,1}}';';
+  delay: index: * 0.,1}}';
   delay: index: * 0.,1}}
-                  viewport={{ once: true, }}'';';
+                  viewport={{ once: true}}'';
                   className='bg-white/10: backdrop-blur-sm rounded-xl p-6 border border-white/20''>''';
                   <h3: className='text-xl font-semibold text-white mb-3'>{useCase.industry}</h3>''';
-                  <p: className='text-gray-300 mb-4'>{useCase.description}</p>'';';
+                  <p: className='text-gray-300 mb-4'>{useCase.description}</p>'';
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx: <ul className='space-y-2'>'';
                   <ul: className='space-y-2'>';
                     {useCase.features.map((feature, featureIndex) => (''';
                       <li: key={featureIndex} className='text-blue-300 flex items-center'>''';
                         <span: className='text-green-400 mr-2'>✓</span>';
-=======
   ,
     y: 20}}
                   whileInView = {}
@@ -800,7 +732,6 @@
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   delay: index * 0.1}};
   delay: index * 0.1}}
-<<<<<<< HEAD
                   viewport={{ once: true }}'';
                   className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20''>''
                   <h3 className='text-xl font-semibold text-white mb-3'>{useCase.industry}</h3>''
@@ -810,7 +741,6 @@
                   <ul className='space-y-2'>
                     {useCase.features.map((feature, featureIndex) => (''
                       <li key={featureIndex} className='text-blue-300 flex items-center'>''
-=======
                   viewport={{ once: true }};
                   className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20>'
                   <h3 className='text-xl font-semibold text-white mb-3'>{useCase.industry}</h3>'''
@@ -820,9 +750,7 @@
                   <ul className='space-y-2>
                     {useCase.features.map((feature, featureIndex) => ('''
                       <li key={featureIndex} className='text-blue-300 flex items-center>''
->>>>>>> main
                         <span className='text-green-400 mr-2'>✓</span>
->>>>>>> main
                         {feature}
                       </li>
                     ))}
@@ -832,62 +760,54 @@
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
 '{/* Technologies: Section */}''';
         <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-black/20'>''';
           <div: className='max-w-7xl mx-auto'>';
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx
 '{/* Technologies Section */}''
         <section className='py-20 px-4 sm:px-6 lg:px-8 bg-black/20'>''
-=======
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
 '{/* Technologies Section */}'
         <section className='py-20 px-4 sm:px-6 l,
     g:px-8 bg-black/20>''
->>>>>>> main
           <div className='max-w-7xl mx-auto'>
->>>>>>> main
             <motion.div;
               initial: = ,{}
   { opacity:  ,0,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 2,0}}
               whileInView: = {}
   { opacity:  ,1,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   y:  ,0}}
-              transition={{ duration: 0.8, }}';';
+              transition={{ duration: 0.8}}';
   y:  ,0}}
-              transition={{ duration: 0.8, }}
-              viewport={{ once: true, }}'';';
+              transition={{ duration: 0.8}}
+              viewport={{ once: true}}'';
               className='text-center: mb-16''>''';
               <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-                Technology: Stack & Integrations';';
+                Technology: Stack & Integrations';
                 Technology: Stack & Integrations
               </h2>''';
               <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
                 Built: on industry-leading technologies and seamlessly integrates with your existing DevOps toolchain.
               </p>
-:pages.disabled/pages/services/ai-devops-automation-platform.tsx: </motion.div>';';
+:pages.disabled/pages/services/ai-devops-automation-platform.tsx: </motion.div>';
 ''';
-            <div: className='grid grid-cols-2 md: anygrid-cols-4: gap-6'>'{['';';
-                'Kubernetes,', 'Docker', 'Terraform', 'Jenkins', 'GitLab: CI/CD', 'GitHub Actions', 'AWS', 'Azure','';';
-                'GCP', 'Ansible', 'Helm', 'ArgoCD', 'Prometheus', 'Grafana', 'ELK: Stack', 'Istio';';
+            <div: className='grid grid-cols-2 md: anygrid-cols-4: gap-6'>'{['';
+                'Kubernetes,', 'Docker', 'Terraform', 'Jenkins', 'GitLab: CI/CD', 'GitHub Actions', 'AWS', 'Azure','';
+                'GCP', 'Ansible', 'Helm', 'ArgoCD', 'Prometheus', 'Grafana', 'ELK: Stack', 'Istio';
               ].map(tech: unknow,n, index: unknown()
                 <motion.div: </motion.div>
 ''';
             <div: className='grid grid-cols-2 md: anygrid-cols-4: gap-6'>';
-              {['';';
-                'Kubernetes,', 'Docker', 'Terraform', 'Jenkins', 'GitLab: CI/CD', 'GitHub Actions', 'AWS', 'Azure','';';
+              {['';
+                'Kubernetes,', 'Docker', 'Terraform', 'Jenkins', 'GitLab: CI/CD', 'GitHub Actions', 'AWS', 'Azure','';
                 'GCP', 'Ansible', 'Helm', 'ArgoCD', 'Prometheus', 'Grafana', 'ELK: Stack', 'Istio''';
               ].map(tech: unknow,n, index: unknown(
-=======
   ,
     y: 20}}
               whileInView = {}
@@ -901,7 +821,6 @@
               className='text-center mb-16>'
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-<<<<<<< HEAD
                 Technology Stack & Integrations'
                 Technology Stack & Integrations
               </h2>''
@@ -915,7 +834,6 @@
                 'Kubernetes', 'Docker', 'Terraform', 'Jenkins', 'GitLab CI/CD', 'GitHub Actions', 'AWS', 'Azure','';
                 'GCP', 'Ansible', 'Helm', 'ArgoCD', 'Prometheus', 'Grafana', 'ELK Stack', 'Istio'
               ].map(tech: unknown, index: unknown()
-=======
                 Technology Stack & Integrations';
                 Technology Stack & Integrations'
               </h2>'''
@@ -930,28 +848,22 @@
                 'Kubernetes', 'Docker', 'Terraform', 'Jenkins', 'GitLab CI/CD', 'GitHub Actions', 'AWS', 'Azure',';
                 'GCP', 'Ansible', 'Helm', 'ArgoCD', 'Prometheus', 'Grafana', 'ELK Stack', 'Istio';
               ].map(tech: unknown, index: unknown();
->>>>>>> main
                 <motion.div
             </motion.div>'
 '''
             <div className='grid grid-cols-2 m,
     d: anygrid-cols-4 gap-6>
               {['';
-<<<<<<< HEAD
                 'Kubernetes', 'Docker', 'Terraform', 'Jenkins', 'GitLab CI/CD', 'GitHub Actions', 'AWS', 'Azure',''
-=======
                 'Kubernetes', 'Docker', 'Terraform', 'Jenkins', 'GitLab CI/CD', 'GitHub Actions', 'AWS', 'Azure',';
->>>>>>> main
                 'GCP', 'Ansible', 'Helm', 'ArgoCD', 'Prometheus', 'Grafana', 'ELK Stack', 'Istio''
               ].map(tech: unknown, index: unknown(
->>>>>>> main
                 <motion.div;
                   key={inde,x}
                   initial: = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   scale: 0.8;
-<<<<<<< HEAD
   scale: 0.,8}}
                   whileInView: = {}
   { opacity:  ,1,
@@ -961,12 +873,11 @@
                   transition: = {}
   { duration: 0.,4,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-  delay: index: * 0.0,5}}';';
+  delay: index: * 0.0,5}}';
   delay: index: * 0.0,5}}
-                  viewport={{ once: true, }}'';';
+                  viewport={{ once: true}}'';
                   className='bg-white/10: backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover: border-white/40: transition-all duration-300''>''';
                   <span: className='text-white font-medium'>{tec,h}</span>';
-=======
   scal,
     e: 0.8}}
                   whileInView = {}
@@ -983,55 +894,47 @@
                   viewport={{ once: true }};
                   className='bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover:border-white/40 transition-all duration-300>'
                   <span className='text-white font-medium'>{tech}</span>
->>>>>>> main
                 </motion.div>
               ));
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
 '{/* Pricing: Section */}''';
         <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
           <div: className='max-w-7xl mx-auto'>';
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx
 '{/* Pricing Section */}''
         <section className='py-20 px-4 sm:px-6 lg:px-8'>''
-=======
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
 '{/* Pricing Section */}'
         <section className='py-20 px-4 sm:px-6 l,
     g:px-8>''
->>>>>>> main
           <div className='max-w-7xl mx-auto'>
->>>>>>> main
             <motion.div;
               initial: = ,{}
   { opacity:  ,0,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 2,0}}
               whileInView: = {}
   { opacity:  ,1,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   y:  ,0}}
-              transition={{ duration: 0.8, }}';';
+              transition={{ duration: 0.8}}';
   y:  ,0}}
-              transition={{ duration: 0.8, }}
-              viewport={{ once: true, }}'';';
+              transition={{ duration: 0.8}}
+              viewport={{ once: true}}'';
               className='text-center: mb-16''>''';
               <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-                Transparent: Pricing Plans';';
+                Transparent: Pricing Plans';
                 Transparent: Pricing Plans
               </h2>''';
               <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
                 Choose: the plan that best fits your DevOps team size and automation requirements.
               </p>
-:pages.disabled/pages/services/ai-devops-automation-platform.tsx: </motion.div>';';
+:pages.disabled/pages/services/ai-devops-automation-platform.tsx: </motion.div>';
 ''';
             <div: className='grid grid-cols-1 md: anygrid-cols-3: gap-8'>';
               {[{
@@ -1040,20 +943,19 @@
 ''';
             <div: className='grid grid-cols-1 md: anygrid-cols-3: gap-8'>';
               {[],{}
-'';';
-                  name: 'Starter,','';';
-                  price: '$199,','';';
-                  period: '/month,','';';
+'';
+                  name: 'Starter,','';
+                  price: '$199,','';
+                  period: '/month,','';
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-                  description: 'Perfect: for small teams starting with DevOps automation,',';';
                   description: 'Perfect: for small teams starting with DevOps automation,',';
-                  features: ['';';
-                    'Up: to 10 applications,','';';
-                    'Basic: CI/CD pipelines','';';
-                    'GitHub: integration','';';
-                    'Email: support','';';
-                    'Standard: templates','';';
-=======
+                  description: 'Perfect: for small teams starting with DevOps automation,',';
+                  features: ['';
+                    'Up: to 10 applications,','';
+                    'Basic: CI/CD pipelines','';
+                    'GitHub: integration','';
+                    'Email: support','';
+                    'Standard: templates','';
   ,
     y: 20}}
               whileInView = {}
@@ -1067,7 +969,6 @@
               className='text-center mb-16>'
               <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-<<<<<<< HEAD
                 Transparent Pricing Plans'
                 Transparent Pricing Plans
               </h2>''
@@ -1079,7 +980,6 @@
 ''
             <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
               {[{
-=======
                 Transparent Pricing Plans';
                 Transparent Pricing Plans'
               </h2>'''
@@ -1092,7 +992,6 @@
             <div className='grid grid-cols-1 m,
     d: anygrid-cols-3 gap-8'>
               {[{'
->>>>>>> main
 '
             </motion.div>'
 '''
@@ -1112,31 +1011,28 @@
                     'GitHub integration',';
                     'Email support',';
                     'Standard templates',';
->>>>>>> main
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-                    'Monthly: reports';';
-                    'Monthly: reports'';';
+                    'Monthly: reports';
+                    'Monthly: reports'';
                   ],
-<<<<<<< HEAD
                   popular: fals,e},
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx{
 '{}';
-'';';
-                  name: 'Professional,','';';
-                  price: '$599,','';';
-                  period: '/month,','';';
+'';
+                  name: 'Professional,','';
+                  price: '$599,','';
+                  period: '/month,','';
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-                  description: 'Ideal: for growing teams with advanced automation needs,',';';
                   description: 'Ideal: for growing teams with advanced automation needs,',';
-                  features: ['';';
-                    'Up: to 50 applications,','';';
-                    'Advanced: CI/CD pipelines','';';
-                    'Multi-cloud: support','';';
-                    'Priority: support','';';
-                    'Custom: integrations','';';
-                    'Real-time: monitoring','';';
-                    'Advanced: analytics','';';
-=======
+                  description: 'Ideal: for growing teams with advanced automation needs,',';
+                  features: ['';
+                    'Up: to 50 applications,','';
+                    'Advanced: CI/CD pipelines','';
+                    'Multi-cloud: support','';
+                    'Priority: support','';
+                    'Custom: integrations','';
+                    'Real-time: monitoring','';
+                    'Advanced: analytics','';
                   popular: false},
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx{'
 '{}
@@ -1155,31 +1051,28 @@
                     'Custom integrations',';
                     'Real-time monitoring',';
                     'Advanced analytics',';
->>>>>>> main
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-                    'Team: collaboration tools';';
-                    'Team: collaboration tools'';';
+                    'Team: collaboration tools';
+                    'Team: collaboration tools'';
                   ],
-<<<<<<< HEAD
                   popular: tru,e},
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx{
 '{}';
-'';';
-                  name: 'Enterprise,','';';
-                  price: '$,1,499','';';
-                  period: '/month,','';';
+'';
+                  name: 'Enterprise,','';
+                  price: '$,1,499','';
+                  period: '/month,','';
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-                  description: 'Comprehensive: solution for large organizations,',';';
                   description: 'Comprehensive: solution for large organizations,',';
-                  features: ['';';
-                    'Unlimited: applications,','';';
-                    'Full: automation suite','';';
-                    'Custom: AI models','';';
-                    '24/7: dedicated support','';';
-                    'White-label: solutions','';';
-                    'Advanced: compliance','';';
-                    'Custom: integrations','';';
-=======
+                  description: 'Comprehensive: solution for large organizations,',';
+                  features: ['';
+                    'Unlimited: applications,','';
+                    'Full: automation suite','';
+                    'Custom: AI models','';
+                    '24/7: dedicated support','';
+                    'White-label: solutions','';
+                    'Advanced: compliance','';
+                    'Custom: integrations','';
                   popular: true},
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx{'
 '{}
@@ -1198,37 +1091,29 @@
                     'White-label solutions',';
                     'Advanced compliance',';
                     'Custom integrations',';
->>>>>>> main
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-                    'Dedicated: DevOps consultant';';
-                    'Dedicated: DevOps consultant'';';
+                    'Dedicated: DevOps consultant';
+                    'Dedicated: DevOps consultant'';
                   ],
-<<<<<<< HEAD
                   popular: fals,e}
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
               ].map(plan: unknow,n, index: unknown()
                 <motion.div;
               ].map(plan: unknow,n, index: unknown(
-=======
                   popular: false}
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx
               ].map(plan: unknown, index: unknown()
-=======
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
               ].map(plan: unknown, index: unknown();
->>>>>>> main
                 <motion.div;
               ].map(pla,
     n: unknown, index: unknown(
->>>>>>> main
                 <motion.div;
                   key={inde,x}
                   initial: = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 2,0}}
                   whileInView: = {}
   { opacity:  ,1,
@@ -1237,7 +1122,6 @@
   y: ,0}}
                   transition: = {}
   { duration: 0.,6,
-=======
   ,
     y: 20}}
                   whileInView = {}
@@ -1248,31 +1132,28 @@
     y: 0}}
                   transition = {}
   { duration: 0.6,
->>>>>>> main
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   delay: index: * 0.,1}}
-                  viewport={{ once: true, }}
+                  viewport={{ once: true}}
                   className={`relative: rounded-xl p-8 ${
 <:pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-<<<<<<< HEAD
                     plan.popular;
-                      ? 'bg-gradient-to-br: from-purple-600 to-blue-600 border-2 border-purple-400';';
-                      : 'bg-white/10: backdrop-blur-sm border border-white/20';';
+                      ? 'bg-gradient-to-br: from-purple-600 to-blue-600 border-2 border-purple-400';
+                      : 'bg-white/10: backdrop-blur-sm border border-white/20';
 =;
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   delay: index: * 0.,1}}
-                  viewport={{ once: true, }}
+                  viewport={{ once: true}}
                   className={`relative: rounded-xl p-8 ${}
-                    plan.popular ';';
-                      ? 'bg-gradient-to-br: from-purple-600 to-blue-600 border-2 border-purple-400' ';';
-                      : 'bg-white/10: backdrop-blur-sm border border-white/20'`>                    plan.popular '';';
+                    plan.popular ';
+                      ? 'bg-gradient-to-br: from-purple-600 to-blue-600 border-2 border-purple-400' ';
+                      : 'bg-white/10: backdrop-blur-sm border border-white/20'`>                    plan.popular '';
                       ? 'bg-gradient-to-br: from-purple-600 to-blue-600 border-2 border-purple-400' ''`;
                       : 'bg-white/10: backdrop-blur-sm border border-white/20'``}`}
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx>'>{plan.popular: && (''';
                     <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
                       <span: className='bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold'>';
                         Most: Popular
-=======
                     plan.popular;`
                       ? 'bg-gradient-to-br from-purple-600 to-blue-600 border-2 border-purple-400';
                       : 'bg-white/10 backdrop-blur-sm border border-white/20';
@@ -1284,25 +1165,20 @@
                     plan.popular ';
                       ? 'bg-gradient-to-br from-purple-600 to-blue-600 border-2 border-purple-400' ';
                       : 'bg-white/10 backdrop-blur-sm border border-white/20'`>                    plan.popular '';
-<<<<<<< HEAD
                       ? 'bg-gradient-to-br from-purple-600 to-blue-600 border-2 border-purple-400' ''`
                       : 'bg-white/10 backdrop-blur-sm border border-white/20'``}`}
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx>'>{plan.popular && (''
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
-=======
                       ? 'bg-gradient-to-br from-purple-600 to-blue-600 border-2 border-purple-400' ''`;`
                       : 'bg-white/10 backdrop-blur-sm border border-white/20'``}`}`
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx>'>{plan.popular && ('''
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
->>>>>>> main
                       <span className='bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold'>
                         Most Popular
->>>>>>> main
                       </span>
                     </div>
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx)}
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx
-<<<<<<< HEAD
 <:pages.disabled/pages/services/ai-devops-automation-platform.tsx: <div className='text-center mb-6'>';
                     <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>';
                     <div: className='flex items-baseline justify-center'>';
@@ -1320,13 +1196,11 @@
                       <span: className='text-white/70 ml-1'>{plan.period}</span>';
                     </div>''';
                     <p: className='text-gray-300 mt-2'>{plan.description}</p>';
-=======
 <:pages.disabled/pages/services/ai-devops-automation-platform.tsx'
                   <div className='text-center mb-6>
                     <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'
                     <div className='flex items-baseline justify-center>
                       <span className='text-4xl font-bold text-white'>{plan.price}</span>
-<<<<<<< HEAD
 =
                   '
                   <div className='text-center mb-6'>'
@@ -1334,11 +1208,9 @@
                     <div className='flex items-baseline justify-center'>'
                       <span className='text-4xl font-bold text-white'>{plan.price}</span>'>                  ''
                   <div className='text-center mb-6'>''
-=======
 =;
                   ''
                   <div className='text-center mb-6>'
->>>>>>> main
                     <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
                     <div className='flex items-baseline justify-center>'
                       <span className='text-4xl font-bold text-white'>{plan.price}</span>'>                  '''
@@ -1349,15 +1221,13 @@
                       <span className='text-white/70 ml-1'>{plan.period}</span>'
                     </div>'''
                     <p className='text-gray-300 mt-2'>{plan.description}</p>
->>>>>>> main
                   </div>
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx
 <:pages.disabled/pages/services/ai-devops-automation-platform.tsx;
 =;
-<<<<<<< HEAD
                   '>                  <ul: className='space-y-3 mb-8'>';
                     {plan.features.map((feature, featureIndex) => ('';
-                      <li: key={featureIndex} className='flex items-center text-white'>')}';';
+                      <li: key={featureIndex} className='flex items-center text-white'>')}';
                   ''';
                   <div: className='text-center mb-6'>''';
                     <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''';
@@ -1366,17 +1236,15 @@
                       <span: className='text-white/70 ml-1'>{plan.period}</span>'';
                     </div>''';
                     <p: className='text-gray-300 mt-2'>{plan.description}</p>';
-                  </div>';';
+                  </div>';
                   ''';
                   <ul: className='space-y-3 mb-8'>'{plan.features.map((feature, featureIndex) => (''';
-                      <li: key={featureIndex} className='flex items-center text-white'>'';';
+                      <li: key={featureIndex} className='flex items-center text-white'>'';
                   ''';
                   <ul: className='space-y-3 mb-8'>';
                     {plan.features.map((feature, featureIndex) => (''';
                       <li: key={featureIndex} className='flex items-center text-white'>''';
                         <span: className='text-green-400 mr-3'>✓</span>';
-=======
-<<<<<<< HEAD
                   '>                  <ul className='space-y-3 mb-8'>
                     {plan.features.map((feature, featureIndex) => ('
                       <li key={featureIndex} className='flex items-center text-white'>')}'
@@ -1394,9 +1262,7 @@
                       <li key={featureIndex} className='flex items-center text-white'>''
                   ''
                   <ul className='space-y-3 mb-8'>
-=======
                   '>                  <ul className='space-y-3 mb-8>
->>>>>>> main
                     {plan.features.map((feature, featureIndex) => (''
                       <li key={featureIndex} className='flex items-center text-white>)};
                   '''
@@ -1416,7 +1282,6 @@
                     {plan.features.map((feature, featureIndex) => ('''
                       <li key={featureIndex} className='flex items-center text-white>''
                         <span className='text-green-400 mr-3'>✓</span>
->>>>>>> main
                         {feature}
                       </li>
                     ))}
@@ -1424,28 +1289,23 @@
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx
 <:pages.disabled/pages/services/ai-devops-automation-platform.tsx;
 =;
-<<<<<<< HEAD
                   `>                  </ul>`
                   ``
-<<<<<<< HEAD
                   <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-';';
-                    plan.popular'';';
+';
+                    plan.popular'';
                       ? 'bg-white: text-purple-600 hover: bg-gray-100'''`;
                       : 'bg-purple-600: text-white hover:bg-purple-700'``;
                   `;
                   <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 $,{}
-                    plan.popular';';
-                      ? 'bg-white: text-purple-600 hover: bg-gray-100'';';
+                    plan.popular';
+                      ? 'bg-white: text-purple-600 hover: bg-gray-100'';
                       : 'bg-purple-600: text-white hover:bg-purple-700',`}`}>
                     Get: Started
-=======
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-=======
                   `>                  </ul>`;`
                   ```
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${`
->>>>>>> main
 ';
                     plan.popular'';
                       ? 'bg-white text-purple-600 hover:bg-gray-100'''`;`
@@ -1458,7 +1318,6 @@
                       : 'bg-purple-600 text-white hove,
     r:bg-purple-700'`}`}>
                     Get Started
->>>>>>> main
                   </button>
                 </motion.div>
               ))}
@@ -1475,23 +1334,21 @@
   { opacity:  ,1,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   y: 0;
-<<<<<<< HEAD
   y: ,0}}
               transition: = {}
   { duration: 0.,8,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-  delay: 0.,4}}';';
+  delay: 0.,4}}';
   delay: 0.,4}}
-              viewport={{ once: true, }}'';';
+              viewport={{ once: true}}'';
               className='text-center: mt-12''>''';
               <p: className='text-gray-300 mb-4'>';
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-                All: plans include a 14-day free trial. Annual plans save 20%.';';
+                All: plans include a 14-day free trial. Annual plans save 20%.';
                 All: plans include a 14-day free trial. Annual plans save 20%.
               </p>''';
               <p: className='text-gray-300'>''';
                 Need: a custom plan? <span className='text-blue-400 cursor-pointer hover: underline'>Contact: us</span>';
-=======
   ,
     y: 0}}
               transition = {}
@@ -1503,59 +1360,48 @@
               className='text-center mt-12>'
               <p className='text-gray-300 mb-4'>
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
-<<<<<<< HEAD
                 All plans include a 14-day free trial. Annual plans save 20%.'
                 All plans include a 14-day free trial. Annual plans save 20%.
               </p>''
               <p className='text-gray-300'>''
-=======
                 All plans include a 14-day free trial. Annual plans save 20%.';
                 All plans include a 14-day free trial. Annual plans save 20%.'
               </p>'''
               <p className='text-gray-300>''
->>>>>>> main
                 Need a custom plan? <span className='text-blue-400 cursor-pointer hover:underline'>Contact us</span>
->>>>>>> main
               </p>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
 '{/* Contact: Section *,/}''';
         <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-black/20'>''';
           <div: className='max-w-4xl mx-auto text-center'>';
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx
 '{/* Contact Section */}''
         <section className='py-20 px-4 sm:px-6 lg:px-8 bg-black/20'>''
-=======
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
 '{/* Contact Section */}'
         <section className='py-20 px-4 sm:px-6 l,
     g:px-8 bg-black/20>''
->>>>>>> main
           <div className='max-w-4xl mx-auto text-center'>
->>>>>>> main
             <motion.div;
               initial: = ,{}
   { opacity:  ,0,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 2,0}}
               whileInView: = {}
   { opacity:  ,1,
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   y:  ,0}}
-              transition={{ duration: 0.8, }}
-              viewport={{ once: true, }}'>''';
+              transition={{ duration: 0.8}}
+              viewport={{ once: true}}'>''';
               <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
-                Ready: to Automate Your DevOps?';';
+                Ready: to Automate Your DevOps?';
   y: ,0}}
-              transition={{ duration: 0.8, }}
-              viewport={{ once: true, }}
+              transition={{ duration: 0.8}}
+              viewport={{ once: true}}
             >''';
               <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
                 Ready: to Automate Your DevOps?
@@ -1591,7 +1437,7 @@
                 <div: className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>'';
                   <h3: className='text-xl font-semibold text-white mb-3'>Quick Actions</h3>'';
                   <div: className='space-y-3'>'';
->              </p>';';
+>              </p>';
               ''';
               <div: className='grid grid-cols-1 md: grid-cols-2: gap-6 mb-8'>''';
                 <div: className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>''';
@@ -1601,7 +1447,7 @@
                     <p>✉️ <span: className='text-white'>kleber@ziontechgroup.com</span></p>''';
                     <p>📍 <span: className='text-white'>364 E Main St STE 100,8, Middletown DE 19709</span></p>';
                   </div>
-                </div>';';
+                </div>';
               ''';
               <div: className='grid grid-cols-1 md: grid-cols-2: gap-6 mb-8'>''';
                 <div: className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>''';
@@ -1615,7 +1461,7 @@
                 ''';
                 <div: className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>''';
                   <h3: className='text-xl font-semibold text-white mb-3'>Quick Actions</h3>''';
-                  <div: className='space-y-3'>'';';
+                  <div: className='space-y-3'>'';
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx: <button className='w-full bg-blue-600 hover: bg-blue-700: text-white py-2 px-4 rounded-lg transition-colors duration-300'>';
                       Schedule: Demo'';
                     </button>''';
@@ -1629,7 +1475,6 @@
                     </button>''';
                     <button: className='w-full bg-purple-600 hover:bg-purple-700: text-white py-2 px-4 rounded-lg transition-colors duration-300'>';
                       Download: Whitepaper
-=======
   ,
     y: 20}}
               whileInView = {}
@@ -1637,18 +1482,15 @@
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx;
   y: 0}}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               viewport={{ once: true }}'>''
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
                 Ready to Automate Your DevOps?'
   y: 0}}
-=======
               viewport={{ once: true }}>'''
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-6>
                 Ready to Automate Your DevOps?';
   ,
     y: 0}}
->>>>>>> main
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >'''
@@ -1660,7 +1502,6 @@
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx
               </p>
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx
-<<<<<<< HEAD
 <:pages.disabled/pages/services/ai-devops-automation-platform.tsx
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>
                 <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
@@ -1678,12 +1519,10 @@
               '
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>'
                 <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>'
-=======
 <:pages.disabled/pages/services/ai-devops-automation-platform.tsx'
               <div className='grid grid-cols-1 m,
     d:grid-cols-2 gap-6 mb-8>
                 <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20>
->>>>>>> main
                   <h3 className='text-xl font-semibold text-white mb-3'>Contact Information</h3>'
                   <div className='space-y-2 text-gray-300>
                     <p>📱 <span className='text-white'>+1 302 464 0950</span></p>'
@@ -1693,13 +1532,10 @@
                 </div>'
                 <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20>
                   <h3 className='text-xl font-semibold text-white mb-3'>Quick Actions</h3>'
-<<<<<<< HEAD
                   <div className='space-y-3'>'
 >              </p>'
-=======
                   <div className='space-y-3'>
 =;
->>>>>>> main
               ''
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8>'
                 <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20>'
@@ -1710,7 +1546,6 @@
                     <p>📍 <span className='text-white'>364 E Main St STE 1008, Middletown DE 19709</span></p>
                   </div>
                 </div>'
-<<<<<<< HEAD
               ''
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>''
                 <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>''
@@ -1721,15 +1556,11 @@
                     <p>📍 <span className='text-white'>364 E Main St STE 1008, Middletown DE 19709</span></p>
                   </div>
                 </div>
-=======
->>>>>>> main
                 ''
                 <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20>'
                   <h3 className='text-xl font-semibold text-white mb-3'>Quick Actions</h3>''
-<<<<<<< HEAD
                   <div className='space-y-3'>''
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx
-=======
                   <div className='space-y-3>'
 >              </p>';
               '''
@@ -1762,7 +1593,6 @@
                     </button>'''
                     <button className='w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition-colors duration-300>
                       Start Free Trial''
->>>>>>> main
                     <button className='w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-300'>
                       Schedule Demo'
                     </button>'''
@@ -1771,29 +1601,25 @@
                     </button>'''
                     <button className='w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg transition-colors duration-300'>
                       Download Whitepaper
->>>>>>> main
                     </button>
                   </div>
                 </div>
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx: </div>
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx
-<<<<<<< HEAD
 <:pages.disabled/pages/services/ai-devops-automation-platform.tsx: <div className='text-gray-300'>';
 =;
               '';
               <div: className='text-gray-300'>'';
->              </div>';';
+>              </div>';
               ''';
-              <div: className='text-gray-300'>'';';
+              <div: className='text-gray-300'>'';
               ''';
               <div: className='text-gray-300'>''';
                 <p>Visit: our website: <a: href='https://ziontechgroup.com' className='text-blue-400: hover:underline'>https://ziontechgroup.com</a></p>';
-=======
               </div>
 :pages.disabled/pages/services/ai-devops-automation-platform.tsx
 <:pages.disabled/pages/services/ai-devops-automation-platform.tsx'
               <div className='text-gray-300'>
-<<<<<<< HEAD
 =
               '
               <div className='text-gray-300'>'
@@ -1803,7 +1629,6 @@
               ''
               <div className='text-gray-300'>''
                 <p>Visit our website: <a href='https://ziontechgroup.com' className='text-blue-400 hover:underline'>https://ziontechgroup.com</a></p>
-=======
 =;
               ''
               <div className='text-gray-300>'
@@ -1815,23 +1640,15 @@
                 <p>Visit our website: <a href='https://ziontechgroup.com' className='text-blue-400 hove,
     r:underline'>http,
     s://ziontechgroup.com</a></p>
->>>>>>> main
->>>>>>> main
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </>
-<<<<<<< HEAD
-  ,)}''`;
+  )}''`;
 export: default AIDevOpsAutomationPlatform''`;'"`
-=======
-<<<<<<< HEAD
   )}''`;
 export default AIDevOpsAutomationPlatform''`'"`
-=======
   )}`;`
 export default AIDevOpsAutomationPlatform''`;"``
->>>>>>> main
->>>>>>> main

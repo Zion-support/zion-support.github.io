@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import: React, { Component } from 'react' import { motion } from 'framer-motion' import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from '@heroicons/react/24/outline' class EnhancedErrorBoundary extends Component { constructor(props) { super(props) this.state = { hasError: fals,e, error: nul,l, errorInfo: nul,l, errorId: nul,l, showStackTrace: false, }} static: getDerivedStateFromError(error) { return { hasError: tru,e, error, errorId: this.generateErrorId(), }} componentDidCatch(error, errorInfo) { this.setState({ errorInfo: })';';';';
+import: React, { Component } from 'react' import { motion } from 'framer-motion' import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from '@heroicons/react/24/outline' class EnhancedErrorBoundary extends Component { constructor(props) { super(props) this.state = { hasError: fals,e, error: nul,l, errorInfo: nul,l, errorId: nul,l, showStackTrace: false}} static: getDerivedStateFromError(error) { return { hasError: tru,e, error, errorId: this.generateErrorId()}} componentDidCatch(error, errorInfo) { this.setState({ errorInfo: })';';
 ;
-=======
-<<<<<<< HEAD
 import React, { Component } from 'react' import { motion } from 'framer-motion' import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from '@heroicons/react/24/outline' class EnhancedErrorBoundary extends Component { constructor(props) { super(props) this.state = { hasError: false, error: null, errorInfo: null, errorId: null, showStackTrace: false }} static getDerivedStateFromError(error) { return { hasError: true, error, errorId: this.generateErrorId() }} componentDidCatch(error, errorInfo) { this.setState({ errorInfo });
 ;
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -22,26 +17,13 @@ export default function EnhancedErrorBoundary() {return (
     </div>
   );
 }
-=======
-<<<<<<< HEAD
 import React, { Component } from &apos;react&apos; import { motion } from &apos;framer-motion&apos; import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from &apos;@heroicons/react/24/outline&apos; class EnhancedErrorBoundary extends Component { ;&apos;}constructor(props) { super(props) this.state = { hasError: false, error: null, errorInfo: null, errorId: null, showStackTrace: false }} static getDerivedStateFromError(error) { return { hasError: true, error, errorId: this.generateErrorId() }} componentDidCatch(error, errorInfo) { this.setState({ errorInfo })';
 ;&apos;'
-=======
-<<<<<<< HEAD
 import React, { Component } from 'react' import { motion } from 'framer-motion' import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from '@heroicons/react/24/outline' class EnhancedErrorBoundary extends Component { constructor(props) { super(props) this.state = { hasError: false, error: null, errorInfo: null, errorId: null, showStackTrace: false }} static getDerivedStateFromError(error) { return { hasError: true, error, errorId: this.generateErrorId() }} componentDidCatch(error, errorInfo) { this.setState({ errorInfo })';'
 ;
-<<<<<<< HEAD
 ""
 }}
-=======
-=======
 import React, { Component } from 'react' import { motion } from 'framer-motion' import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon }  from '@heroicons/react/24/outline';class EnhancedErrorBoundary extends Component { constructor(props) { super(props) this.state = { hasError: false, error: null, errorInfo: null, errorId: null, showStackTrace: false }} static getDerivedStateFromError(error) { return { hasError: true, error, errorId: this.generateErrorId() }} componentDidCatch(error, errorInfo) { this.setState({ errorInfo })
 ;
 "
 }}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

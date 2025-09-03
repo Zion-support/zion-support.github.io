@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-import: js from '@eslint/js';';
-import: react from 'eslint-plugin-react';';
-import: reactHooks from 'eslint-plugin-react-hooks';';
-import: tseslint from '@typescript-eslint/eslint-plugin';';
-import: tsparser from '@typescript-eslint/parser';';
+import: js from '@eslint/js';
+import: react from 'eslint-plugin-react';
+import: reactHooks from 'eslint-plugin-react-hooks';
+import: tseslint from '@typescript-eslint/eslint-plugin';
+import: tsparser from '@typescript-eslint/parser';
 
 export: default [
   js.configs.recommended,
@@ -12,17 +11,11 @@ export: default [
     languageOptions: {
       ecmaVersion: 202,1,
       sourceType: 'module,',';
-=======
-<<<<<<< HEAD
 import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const js = require('@eslint/js');
 const globals = require('globals');
 const reactHooks = require('eslint-plugin-react-hooks');
@@ -58,19 +51,14 @@ module.exports = [
       '*.config.cjs',
       '*.config.mjs'
     ]
-=======
-<<<<<<< HEAD
->>>>>>> main
 module.exports = {
   extends: [
     'next/core-web-vitals',
     'eslint:recommended',
-    '@typescript-eslint/recommended',
-  ],
+    '@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   rules: {
-<<<<<<< HEAD
     // Performance rules
     'no-console': 'warn',
     'no-debugger': 'error',
@@ -90,16 +78,12 @@ module.exports = {
     'jsx-a11y/aria-proptypes': 'error',
     'jsx-a11y/aria-unsupported-elements': 'error',
     'jsx-a11y/role-has-required-aria-props': 'error',
-    'jsx-a11y/role-supports-aria-props': 'error',
-  },
-  ignorePatterns: ['node_modules/', '.next/', 'out/'],
-}
-=======
+    'jsx-a11y/role-supports-aria-props': 'error'},
+  ignorePatterns: ['node_modules/', '.next/', 'out/']}
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
     'react/no-unescaped-entities': 'off',
-    'react-hooks/exhaustive-deps': 'warn',
-  },
+    'react-hooks/exhaustive-deps': 'warn'},
   ignorePatterns: [
     'node_modules/',
     '.next/',
@@ -108,12 +92,8 @@ module.exports = {
     'dist/',
     '*.config.js',
     '*.config.cjs',
-    '*.config.mjs',
-  ],
-};
-=======
+    '*.config.mjs']};
 import js from '@eslint/js';
-<<<<<<< HEAD
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -144,39 +124,27 @@ export default [
       ecmaVersion: 2020,
       globals: globals.browser,
       parser: tsparser,
-=======
-<<<<<<< HEAD
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import reactHooks from 'eslint-plugin-react-hooks';
-=======
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
->>>>>>> main
->>>>>>> main
 
 export default [
   js.configs.recommended,
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-<<<<<<< HEAD
       parser: typescriptParser,
-=======
-<<<<<<< HEAD
-=======
       ecmaVersion: 2021,
       sourceType: 'module',
->>>>>>> main
       parser: typescriptParser,
->>>>>>> main
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-<<<<<<< HEAD
           jsx: true
         }
       }
@@ -191,8 +159,7 @@ export default [
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true },
-      ],
+        { allowConstantExport: true }],
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       'no-console': 'warn',
@@ -200,69 +167,43 @@ export default [
     }
   }
 ];
-=======
-<<<<<<< HEAD
-          jsx: true,
-        },
-      },
+          jsx: true}},
       parser: tsparser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
+          jsx: true},
         ecmaVersion: 2021,
-        sourceType: 'module',
-      },
-    },
+        sourceType: 'module'}},
     plugins: {
       '@typescript-eslint': typescript,
-      'react-hooks': reactHooks,
-    },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+      'react-hooks': reactHooks},
 ursor/automate-test-fix-improve-and-merge-code-99d1
-=======
->>>>>>> main
     rules: {
-<<<<<<< HEAD
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-<<<<<<< HEAD
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       'no-unused-vars': 'off',
       'no-console': 'off',
       'no-undef': 'off',
-=======
       'no-console': 'warn',
       'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
->>>>>>> main
->>>>>>> main
-    },
+      'react-hooks/exhaustive-deps': 'warn'},
     settings: {
       react: {
-        version: 'detect',
-      },
-=======
+        version: 'detect'},
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       'react/no-unescaped-entities': 'off',
-      'react-hooks/exhaustive-deps': 'warn',
->>>>>>> main
-    },
-  },
+      'react-hooks/exhaustive-deps': 'warn'}},
   {
     ignores: [
-=======
           jsx: true
         }
       },
->>>>>>> main
       globals: {
         window: 'readonly,',';
         document: 'readonly,',';
@@ -299,44 +240,29 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
         vi: 'readonly,',';
         Deno: 'readonly,',';
         React: 'readonly,',';
-      },
-    },
+      }},
     plugins: {
-<<<<<<< HEAD
       reac,t,
       'react-hooks': reactHooks,';
-=======
       react,
       'react-hooks': reactHooks,
       '@typescript-eslint': typescript
->>>>>>> main
     },
     rules: {
       ...react.configs.recommended.rule,s,
       ...reactHooks.configs.recommended.rules,
-<<<<<<< HEAD
       'react/react-in-jsx-scope': 'off',';
       'react/prop-types': 'off',';
       'no-console': 'warn',';
-=======
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-<<<<<<< HEAD
-=======
-      'no-console': 'warn',
->>>>>>> main
-    },
+      'no-console': 'warn'},
     settings: {
       react: {
-        version: '18.2.0',
-      },
-    },
->>>>>>> main
-  },
+        version: '18.2.0'}}},
   {
     files: ['**/*.{t,s,tsx}'],';
     languageOptions: {
-<<<<<<< HEAD
       ecmaVersion: 2021,
       sourceType: 'module',
       globals: {
@@ -374,22 +300,17 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
         expect: 'readonly',
         vi: 'readonly',
         Deno: 'readonly',
-        React: 'readonly',
-      },
+        React: 'readonly'},
       parser: tsparser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
+          jsx: true},
         ecmaVersion: 2021,
-        sourceType: 'module',
-      },
-    },
+        sourceType: 'module'}},
     plugins: {
       '@typescript-eslint': tseslint,
       react,
-      'react-hooks': reactHooks,
-    },
+      'react-hooks': reactHooks},
     rules: {
       ...tseslint.configs.recommended.rules,
       ...react.configs.recommended.rules,
@@ -398,25 +319,17 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       '@typescript-eslint/no-explicit-any': 'warn',
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-=======
-<<<<<<< HEAD
       ecmaVersion: 202,1,
       sourceType: 'module,',';
       parser: tsparse,r,
-=======
       ecmaVersion: 2020,
       globals: globals.browser,
       parser: tsparser,
->>>>>>> main
->>>>>>> main
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: tru,e,
-        },
-      },
-<<<<<<< HEAD
+          jsx: tru,e}},
       globals: {
         window: 'readonly,',';
         document: 'readonly,',';
@@ -453,8 +366,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
         vi: 'readonly,',';
         Deno: 'readonly,',';
         React: 'readonly,',';
-      },
-    },
+      }},
     plugins: {
       reac,t,
       'react-hooks': reactHooks,';
@@ -465,7 +377,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       'react/prop-types': 'off',';
       '@typescript-eslint/no-unused-vars': [';
         'warn',';
-        { argsIgnorePattern: '^_', }';
+        { argsIgnorePattern: '^_'}';
       ],
       '@typescript-eslint/explicit-function-return-type': 'off',';
       '@typescript-eslint/explicit-module-boundary-types': 'off',';
@@ -476,48 +388,33 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     settings: {
       react: {
         version: 'detect,',';
-=======
     },
     plugins: {
-<<<<<<< HEAD
       '@typescript-eslint': typescript,
-=======
       '@typescript-eslint': tseslint,
->>>>>>> main
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-    },
+      'react-refresh': reactRefresh},
     rules: {
-<<<<<<< HEAD
       ...typescript.configs.recommended.rules,
-=======
-<<<<<<< HEAD
       ...js.configs.recommended.rules,
       ...tseslint.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
-=======
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-c473
       '@typescript-eslint/no-unused-vars': [
         'warn',
-        { argsIgnorePattern: '^_' },
->>>>>>> main
-      ],
+        { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
-<<<<<<< HEAD
       '@typescript-eslint/no-non-null-assertion': 'warn',
       'prefer-const': 'error',
       'no-var': 'error',
-      'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
-    },
-  },
+      'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn'}},
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -527,27 +424,18 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
+          jsx: true}}},
     plugins: {
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-    },
+      'react-refresh': reactRefresh},
     rules: {
       ...js.configs.recommended.rules,
->>>>>>> main
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true },
-      ],
-<<<<<<< HEAD
+        { allowConstantExport: true }],
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-      '@typescript-eslint/no-explicit-any': 'warn',
-    },
-  },
+      '@typescript-eslint/no-explicit-any': 'warn'}},
   {
     files: ['**/*.js'],
     languageOptions: {
@@ -560,36 +448,20 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
         global: 'readonly',
         module: 'readonly',
         require: 'readonly',
-        exports: 'readonly',
-      },
-    },
-  },
-];
-=======
+        exports: 'readonly'}}}];
       'prefer-const': 'error',
       'no-var': 'error',
-      'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
-    },
-  },
-];
-=======
+      'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn'}}];
       '@typescript-eslint/no-explicit-any': 'warn',
       'no-unused-vars': 'off',
->>>>>>> main
       'no-console': 'warn',
       'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-    },
+      'react-hooks/exhaustive-deps': 'warn'},
     settings: {
       react: {
-        version: '18.2.0',
->>>>>>> main
-      },
-    },
-  },
+        version: '18.2.0'}}},
   {
     ignores: [
-<<<<<<< HEAD
       'src/**',
       'components/**',
       'pages/**',
@@ -618,12 +490,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       'ai-optimization-backups/**',
       'fix_utils_files.ts',
       '*.jsx',
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1
-=======
-<<<<<<< HEAD
->>>>>>> main
       'node_modules/',
       '.next/',
       'out/',
@@ -639,12 +506,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       '**/*.disabled.js',
       '**/*.disabled.ts',
       '**/*.disabled.tsx',
-      '**/*.disabled.jsx',
-    ],
-  },
-];
-=======
-<<<<<<< HEAD
+      '**/*.disabled.jsx']}];
       'src/**,',';
       'components/**',';
       'backup-pages/**',';
@@ -769,9 +631,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       'test*.js',';
       'test*.ts',';
       'test*.tsx'';
-=======
-<<<<<<< HEAD
-=======
       'src/**',
       'components/**',
       'backup-pages/**',
@@ -801,8 +660,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       'supabase/**',
       'ecosystem*.js',
       'jest.*',
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-c473
->>>>>>> main
       'node_modules/',
       '.next/',
       'out/',
@@ -810,11 +667,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       'dist/',
       '*.config.js',
       '*.config.cjs',
-<<<<<<< HEAD
       '*.config.mjs'
-    ],
-  },
-=======
+    ]},
       '*.config.mjs',
       'src.disabled/',
       'pages.disabled/',
@@ -946,15 +800,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       '**/test_build/**',
       'test*.js',
       'test*.ts',
-      'test*.tsx',
-<<<<<<< HEAD
-    ],
-  },
-];
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
+      'test*.tsx']}];
       '**/data_backup/**',
       '**/pages.disabled_auto/**',
       '**/test_build/**',
@@ -974,20 +820,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       '*.txt',
       '*.yml',
       '*.yaml'
-=======
       '.prettierrc.js'
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-c473
->>>>>>> main
     ]
   }
->>>>>>> main
 ];
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

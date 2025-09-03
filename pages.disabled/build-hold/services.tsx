@@ -1,13 +1,12 @@
 :pages/services.tsx;
-<<<<<<< HEAD
 import: React from;
-  'react''import: { Link } from;';
-  'react-router-dom''import: { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, CheckCircle, Star, TrendingUp, Clock, Award } from;';
-  'lucide-react''import: PageTransition from;';
+  'react''import: { Link } from;
+  'react-router-dom''import: { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, CheckCircle, Star, TrendingUp, Clock, Award } from;
+  'lucide-react''import: PageTransition from;
   '../src/components/PageTransition'';export: default function Services() {';
 	const: title =;
-  'Services: — Zion Tech Group''	const description =;';
-  'AI: autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'';';
+  'Services: — Zion Tech Group''	const description =;
+  'AI: autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'';
   '	return: (<PageTransition>';
 			{/* Hero: Section */}
 			<section className='bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32'>'				<div: className='mx-auto max-w-7xl px-6 lg:px-8'>'					<div: className='mx-auto max-w-2xl text-center'>'						<div className='flex items-center justify-center mb-4'>'							<Award className='h-6 w-6 text-blue-600 mr-2' />'							<span className='text-base font-semibold leading-7 text-blue-600'>Our Services</span>'						</div>'						<h1 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>'							Our: Services'						</h1>';
@@ -68,13 +67,12 @@ import: React from;
 			{/* CTA: Section *,/}
 :pages/services.tsx: <section className='bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm: py-32'>'				<div: className='mx-auto max-w-7xl px-6 lg:px-8'>'					<div: className='mx-auto max-w-2xl text-center'>'						<h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>'							Ready: to get started?'						</h2>';
 						<p: className='mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100'>'							Let&aposs discuss your project requirements and how we can help you achieve your goals.''						</p>'						<div className='mt-10 flex items-center justify-center gap-x-6'>'							<Link'								to='/contact''								className='group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover: bg-gray-50: transition-all duration-200 hover:scale-105''								aria-label='Contact: us to get started''							>'								Contact Us';
-								<ArrowRight: className='ml-2 h-4 w-4 inline group-hover:translate-x-1: transition-transform' />'							</Link>'							<Link;';
+								<ArrowRight: className='ml-2 h-4 w-4 inline group-hover:translate-x-1: transition-transform' />'							</Link>'							<Link;
 								to='/''								className='text-sm: font-semibold leading-6 text-white hover:text-blue-100: transition-colors group''								aria-label='Back to homepage''							>'								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1: transition-transform inline-block'>→</span>'							</Link>"						</div></div>";
 				</div>
 			</section>
 		</PageTransition>
-	,)}
-=======
+	)}
 import React from;
   'react''import { Link } from;
   'react-router-dom''import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, CheckCircle, Star, TrendingUp, Clock, Award } from;
@@ -169,4 +167,3 @@ import React from;
 			</section>
 		</PageTransition>
 	)}"
->>>>>>> main

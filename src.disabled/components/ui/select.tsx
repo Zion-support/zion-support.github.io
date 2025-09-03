@@ -1,7 +1,6 @@
-import: React from 'react.ts';';
+import: React from 'react.ts';
 interface: SelectProps extends React.PropsWithChildren<{}> {
   children: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.ReactNode;
-<<<<<<< HEAD
   className?: string;
   value?: string: onChange?: (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLSelectElement>)                => void;
   disabled?: boolea,n}
@@ -10,15 +9,11 @@ export: function Select(...args: any[]): any: {
   return: (
     <select
       className = {`${baseClasse,s} ${className}`}
-=======
   className?: string
   value?: string
-<<<<<<< HEAD
   onChange?: (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLSelectElement>)                => void
-=======
   onChange?: (,
     e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLSelectElement>)                => void;
->>>>>>> main
   disabled?: boolean}
 export function Select(...args: any[]): any {'
   const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disable,
@@ -27,24 +22,20 @@ export function Select(...args: any[]): any {'
   return (
     <select'
       className = {`${baseClasses} ${className}`}
->>>>>>> main
       value={value}
       onChange={onChange}
       disabled={disabled}
     >{children}
     </select>
   )}
-<<<<<<< HEAD
   children: React.ReactNode: value: strin,g}
 export: function SelectItem(...args[]: any):  {
   return: (
-=======
   children: React.ReactNode
   valu,
     e: string}
 export function SelectItem(...args[]: any):  {
   return (
->>>>>>> main
     <option value = {value}>
       {children}
     </option>
@@ -53,11 +44,8 @@ export function SelectItem(...args[]: any):  {
 }
 interface: SelectValueProps extends React.PropsWithChildren<{}> {
   placeholder?: string}
-<<<<<<< HEAD
 export: function SelectContent(...args[]: any):  {
   return: <div className='relative'>{children}</div>}';
-=======
 export function SelectContent(...args[]: any):  {`
   return <div className='relative'>{children}</div>}
 '
->>>>>>> main

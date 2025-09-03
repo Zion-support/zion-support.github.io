@@ -34,8 +34,7 @@ import {
   ArrowRight,
   Calendar,
   DollarSign,
-  X,
-} from 'lucide-react';
+  X} from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -59,8 +58,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     { name: 'About', href: '/about', icon: Users },
     { name: 'Contact', href: '/contact', icon: Phone },
     { name: 'Blog', href: '/blog', icon: FileText },
-    { name: 'Careers', href: '/careers', icon: Briefcase },
-  ];
+    { name: 'Careers', href: '/careers', icon: Briefcase }];
 
   const services = [
   { name: 'AI Services', href: '/ai-services', icon: Brain },
@@ -68,49 +66,39 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
     { name: 'Web Development', href: '/services/web-development', icon: Code },
     { name: 'Cloud Services', href: '/services/cloud-services', icon: Server },
-    { name: 'AI Development', href: '/services/ai-development', icon: Cpu },
-  ];
+    { name: 'AI Development', href: '/services/ai-development', icon: Cpu }];
 
   const solutions = [
-<<<<<<< HEAD
     {
       name: 'AI Content Creation',
       href: '/solutions/ai-content-creation',
-      icon: Brain,
-    },
+      icon: Brain},
     {
       name: 'Customer Support',
       href: '/solutions/customer-support',
-      icon: Users,
-    },
+      icon: Users},
     {
       name: 'Email Automation',
       href: '/solutions/email-automation',
-      icon: Mail,
-    },
+      icon: Mail},
     {
       name: 'Event Management',
       href: '/solutions/event-management',
-      icon: Calendar,
-    },
+      icon: Calendar},
     {
       name: 'Project Management',
       href: '/solutions/project-management',
-      icon: BarChart3,
-    },
+      icon: BarChart3},
     {
       name: 'Workflow Automation',
       href: '/solutions/workflow-automation',
-      icon: Zap,
-    },
-=======
+      icon: Zap},
   { name: 'AI Content Creation', href: '/solutions/ai-content-creation', icon: Brain },
     { name: 'Customer Support', href: '/solutions/customer-support', icon: Users },
     { name: 'Email Automation', href: '/solutions/email-automation', icon: Mail },
     { name: 'Event Management', href: '/solutions/event-management', icon: Calendar },
     { name: 'Project Management', href: '/solutions/project-management', icon: BarChart3 },
     { name: 'Workflow Automation', href: '/solutions/workflow-automation', icon: Zap }
->>>>>>> main
   ];
 
   const resources = [
@@ -121,41 +109,33 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
     { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign },
     { name: 'Search', href: '/search', icon: Search },
-    { name: 'Sitemap', href: '/sitemap', icon: Globe },
-  ];
+    { name: 'Sitemap', href: '/sitemap', icon: Globe }];
 
   const legal = [
   { name: 'Privacy Policy', href: '/privacy', icon: Lock },
     { name: 'Terms of Service', href: '/terms', icon: FileText },
-    { name: 'Cookie Policy', href: '/cookies', icon: Settings },
-  ];
+    { name: 'Cookie Policy', href: '/cookies', icon: Settings }];
 
   const contactInfo = [
-<<<<<<< HEAD
     { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
     {
       icon: Mail,
       text: 'kleber@ziontechgroup.com',
-      href: 'mailto:kleber@ziontechgroup.com',
-    },
+      href: 'mailto:kleber@ziontechgroup.com'},
     {
       icon: MapPin,
       text: '364 E Main St STE 1008, Middletown DE 19709',
-      href: '#',
-    },
-=======
+      href: '#'},
   { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
     { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
     { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
->>>>>>> main
   ];
 
   const socialLinks = [
   { icon: Linkedin, href: '#', label: 'LinkedIn' },
     { icon: Twitter, href: '#', label: 'Twitter' },
     { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-  ];
+    { icon: Instagram, href: '#', label: 'Instagram' }];
 
   const renderNavSection = (
     title: string,

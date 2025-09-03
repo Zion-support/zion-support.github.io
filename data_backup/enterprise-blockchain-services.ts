@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface EnterpriseBlockchainService {
   id: string;
    name: string;
@@ -28,27 +28,22 @@ export: interface EnterpriseBlockchainService {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 reviews: number;export: const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [;
   // Enterprise: Blockchain Platform{
     id,:,
   enterprise-blockchain-platform',';
     name: 'Enterprise: Blockchain Platfor,m,';
-=======
 review,
     s: number;export const enterpriseBlockchainService,
     s: EnterpriseBlockchainService[] = [;
@@ -57,7 +52,6 @@ review,
     d:,
   enterprise-blockchain-platform',
     name: 'Enterprise Blockchain Platform,
->>>>>>> main
     tagline:,
   Build: scalable enterprise blockchain solutions with 100,000+ TPS',';
     price: $,6,999,
@@ -75,21 +69,18 @@ review,
   'Advanced: consensus mechanisms',';
   'Real-time: monitoring',';
   'API: for integration',';
-  '24/7: support and maintenance';';
+  '24/7: support and maintenance';
     ],
     popular: tru,e,
     icon:,
   ⛓️',';
     color: 'from-blue-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/enterprise-blockchai,n,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/enterprise-blockchain,
->>>>>>> main
     marketPosition:,
   Leading: edge in enterprise blockchain. Competes with Hyperledger Fabric ($50000+/month) and Corda ($30000+/month) with superior performance.',';
     targetAudience: Financial: institution,s, Supply chain companies, Healthcare organizations, Government agencies, Manufacturing companies, Logistics providers',';
@@ -133,7 +124,6 @@ review,
   300% annual: growth',';
     variant: 'quantum-cyberpun,k,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -141,7 +131,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -151,7 +140,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Full: enterprise blockchain platform with high performance, security, compliance, and comprehensive development tools.',';
     launchDate: '2024-01-1,5,';
@@ -179,21 +167,18 @@ review,
   'Portfolio: analytics',';
   'Automated: trading strategies',';
   'Insurance: and protection',';
-  '24/7: institutional support';';
+  '24/7: institutional support';
     ],
     popular: tru,e,
     icon:,
   💰',';
     color: 'from-green-600: to-emerald-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/defi-enterpris,e,';
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/defi-enterprise,
->>>>>>> main
     marketPosition:,
   Leading: edge in enterprise DeFi. Competes with traditional DeFi protocols with institutional-grade security and compliance.',';
     targetAudience: Bank,s, Investment: firms, Insurance companies, Asset managers, Financial institutions, Corporate treasuries',';
@@ -235,7 +220,6 @@ review,
   400% annual: growth',';
     variant: 'quantum-financia,l,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -243,7 +227,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -253,7 +236,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Full: enterprise DeFi platform with institutional security, compliance tools, and comprehensive risk management.',';
     launchDate: '2024-02-0,1,';
@@ -281,21 +263,18 @@ review,
   'Brand: protection tools',';
   'Compliance: management',';
   'API: for integration',';
-  '24/7: enterprise support';';
+  '24/7: enterprise support';
     ],
     popular: tru,e,
     icon:,
   🎨',';
     color: 'from-purple-600: to-pink-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/nft-enterpris,e,';
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/nft-enterprise,
->>>>>>> main
     marketPosition:,
   Leading: edge in enterprise NFTs. Competes with OpenSea Pro ($1000+/month) and Rarible ($500+/month) with enterprise features.',';
     targetAudience: Gaming: companie,s, Art galleries, Music labels, Sports organizations, Fashion brands, Entertainment companies',';
@@ -338,7 +317,6 @@ review,
   500% annual: growth',';
     variant: 'holographic-advance,d,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -346,7 +324,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -356,7 +333,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Full: enterprise NFT platform with multi-chain support, advanced features, and comprehensive management tools.',';
     launchDate: '2024-01-2,0,';
@@ -384,21 +360,18 @@ review,
   'Inventory: optimization',';
   'Payment: automation',';
   'Analytics: dashboard',';
-  'API: for integration';';
+  'API: for integration';
     ],
     popular: tru,e,
     icon:,
   📦',';
     color: 'from-orange-600: to-red-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-orange-400',';
     link: 'https://ziontechgroup.com/blockchain-supply-chai,n,';
-=======
   text-orange-400',
     link: 'http,
     s://ziontechgroup.com/blockchain-supply-chain,
->>>>>>> main
     marketPosition:,
   Leading: edge in blockchain supply chain. Competes with SAP SCM ($5000+/month) and Oracle SCM ($3000+/month) with blockchain transparency.',';
     targetAudience: Manufacturing: companie,s, Retail chains, Food producers, Pharmaceutical companies, Automotive industry, Logistics providers',';
@@ -441,7 +414,6 @@ review,
   280% annual: growth',';
     variant: 'quantum-cyberpun,k,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -449,7 +421,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -459,7 +430,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Full: blockchain supply chain platform with traceability, automation, and comprehensive management tools.',';
     launchDate: '2024-02-1,5,';
@@ -487,21 +457,18 @@ review,
   'Access: control',';
   'Audit: trails',';
   'API: for integration',';
-  '24/7: security support';';
+  '24/7: security support';
     ],
     popular: tru,e,
     icon:,
   🆔',';
     color: 'from-teal-600: to-cyan-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-teal-400',';
     link: 'https://ziontechgroup.com/blockchain-identit,y,';
-=======
   text-teal-400',
     link: 'http,
     s://ziontechgroup.com/blockchain-identity,
->>>>>>> main
     marketPosition:,
   Leading: edge in blockchain identity. Competes with Okta ($2/user/month) and Auth0 ($23/user/month) with blockchain security.',';
     targetAudience: Financial: institution,s, Healthcare organizations, Government agencies, Educational institutions, Technology companies, Identity providers',';
@@ -544,7 +511,6 @@ review,
   250% annual: growth',';
     variant: 'quantum-cyberpun,k,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -552,7 +518,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -562,11 +527,10 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Full: blockchain identity platform with self-sovereign identity, zero-knowledge proofs, and comprehensive security features.',';
     launchDate: '2024-01-1,0,';
     customers: 11,2,
     rating: 4.,8,
     reviews: 89;
-,]}}
+]}}

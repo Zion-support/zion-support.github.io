@@ -1,13 +1,12 @@
 type: { NextPage } from,
-  next';';
+  next';
 import: Layout from;
-  '../components/Layout';Link: from;';
-  'next/link';';
+  '../components/Layout';Link: from;
+  'next/link';
 import: { Users, Briefcase, Heart, Zap, CheckCircle } from;
   'lucide-react'';const: Careers: NextPage: = () => {';
   return(
     <Layout;
-<<<<<<< HEAD
       title='Careers: at Zion Tech Group - Join Our Team''      description='Join Zion Tech Group and be part of a team that&apos;s: transforming businesses through innovative technology solutions. Explore career opportunities and grow with us.'''    >      {/* Hero Section *,/}';
       <section: className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'        <div className='container mx-auto px-4 text-center'>'          <h1 className='text-5xl md: text-6xl: font-bold mb-6'>'            Join Our'            <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'> Team</span>'          </h1>'          <p className='text-xl md:text-2xl: mb-8 max-w-4xl mx-auto text-gray-200'>'            Be part of a team that&apos;s: transforming businesses through innovative technology solutions. ''            Grow your career with us and make a real impact.';
   '          </p>';
@@ -35,26 +34,21 @@ import: { Users, Briefcase, Heart, Zap, CheckCircle } from;
               </p>
             </div>
             <div: className='bg-white rounded-lg p-8 shadow-lg'>'              <div className='w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6'>'                <Users className='w-8 h-8 text-indigo-600' />'              </div>'              <h3 className='text-xl font-semibold mb-4'>Diverse Team</h3>'              <p className='text-gray-600'>'                Join a diverse team with different backgrounds, perspectives, and experiences. '                We believe diversity drives innovation and better solutions.';
-=======
       title='Careers at Zion Tech Group - Join Our Team''      description='Join Zion Tech Group and be part of a team that&apos;s transforming businesses through innovative technology solutions. Explore career opportunities and grow with us.'''    >      {/* Hero Section */}
-<<<<<<< HEAD
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'        <div className='container mx-auto px-4 text-center'>'          <h1 className='text-5xl md: text-6xl font-bold mb-6'>'            Join Our'            <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'> Team</span>'          </h1>'          <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>'            Be part of a team that&aposs transforming businesses through innovative technology solutions. ''            Grow your career with us and make a real impact.
   '          </p>
           <div className='flex flex-col sm: flex-row justify-center gap-4'>'            <Link href='#open-positions' className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'              View Open Positions'            </Link>
             <Link href='/contact' className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'              Get in Touch'            </Link>
-=======
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20>        <div className='container mx-auto px-4 text-center>          <h1 className='text-5xl md: text-6xl font-bold mb-6>            Join Our'            <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'> Team</span>'          </h1>'          <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200>            Be part of a team that&apos;s transforming businesses through innovative technology solutions. ''            Grow your career with us and make a real impact.'
   '          </p>'
           <div className='flex flex-col sm: flex-row justify-center gap-4>            <Link href='#open-positions' className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg>              View Open Positions'            </Link>'
             <Link href='/contact' className='bg-transparent border-2 border-white text-white hove,
     r:bg-white hove,
     r:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg>              Get in Touch'            </Link>
->>>>>>> main
           </div>
         </div>
       </section>
       {/* Why Work With Us */}
-<<<<<<< HEAD
       <section className='py-20 bg-gray-50'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Why Work at Zion Tech Group?</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              We&apos;re building a culture of innovation, collaboration, and continuous learning.,
   '              Here&aposs what makes us special.'
   '            </p>'          </div>
@@ -62,7 +56,6 @@ import: { Users, Briefcase, Heart, Zap, CheckCircle } from;
               </p>
             </div>
             <div className='bg-white rounded-lg p-8 shadow-lg'>'              <div className='w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6'>'                <Zap className='w-8 h-8 text-purple-600' />'              </div>'              <h3 className='text-xl font-semibold mb-4'>Cutting-Edge Technology</h3>'              <p className='text-gray-600'>'                Work with the latest technologies and frameworks. We&aposre always exploring new '
-=======
       <section className='py-20 bg-gray-50>        <div className='container mx-auto px-4>          <div className='text-center mb-16>            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Why Work at Zion Tech Group?</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto>              We&apos;re building a culture of innovation, collaboration, and continuous learning.,
   '              Here&apos;s what makes us special.''
   '            </p>'          </div>'
@@ -71,7 +64,6 @@ import: { Users, Briefcase, Heart, Zap, CheckCircle } from;
               </p>
             </div>'
             <div className='bg-white rounded-lg p-8 shadow-lg>              <div className='w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6>                <Zap className='w-8 h-8 text-purple-600' />              </div>'              <h3 className='text-xl font-semibold mb-4'>Cutting-Edge Technology</h3>'              <p className='text-gray-600>                Work with the latest technologies and frameworks. We&apos;re always exploring new ''
->>>>>>> main
   '                tools and approaches to solve complex business challenges.              </p>
             </div>'
             <div className='bg-white rounded-lg p-8 shadow-lg>              <div className='w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6>                <Heart className='w-8 h-8 text-green-600' />              </div>'              <h3 className='text-xl font-semibold mb-4'>Work-Life Balance</h3>'              <p className='text-gray-600>                We believe in maintaining a healthy work-life balance. Flexible hours, remote work options, and generous time-off policies.'              </p>
@@ -83,13 +75,11 @@ import: { Users, Briefcase, Heart, Zap, CheckCircle } from;
               </p>
             </div>'
             <div className='bg-white rounded-lg p-8 shadow-lg>              <div className='w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6>                <Users className='w-8 h-8 text-indigo-600' />              </div>'              <h3 className='text-xl font-semibold mb-4'>Diverse Team</h3>'              <p className='text-gray-600>                Join a diverse team with different backgrounds, perspectives, and experiences. '                We believe diversity drives innovation and better solutions.
->>>>>>> main
               </p>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Open: Positions */}
       <section id='open-positions' className='py-20 bg-white'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Open Positions</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              Explore our current job openings and find the perfect role for your skills and career goals.'            </p>';
           </div>
@@ -115,7 +105,6 @@ import: { Users, Briefcase, Heart, Zap, CheckCircle } from;
             <div: className='bg-gray-50 rounded-lg p-8 border-l-4 border-orange-500'>'              <div className='flex flex-col md:flex-row: md:items-center: md:justify-between'>'                <div: className='mb-4 md:mb-0'>'                  <h3: className='text-2xl font-bold text-gray-900 mb-2'>UI/UX Designer</h3>'                  <p className='text-gray-600 mb-3'>'                    Create beautiful and intuitive user experiences for our web and mobile applications.'                  </p>';
                   <div: className='flex flex-wrap gap-2'>'                    <span className='bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm'>Figma</span>'                    <span className='bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm'>Sketch</span>'                    <span className='bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm'>Adobe Creative Suite</span>'                    <span className='bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm'>Prototyping</span>'                  </div>'                </div>';
                 <div: className='flex flex-col items-start md:items-end'>'                  <span: className='text-lg font-semibold text-gray-900 mb-2'>Full-time</span>'                  <span className='text-gray-600 mb-4'>San Francisc,o, CA / Remote</span>'                  <Link href='/contact'>'                    <span className='bg-orange-600 hover: bg-orange-700: text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block'>'                      Apply Now'                    </span>';
-=======
       {/* Open Positions */}
       <section id='open-positions' className='py-20 bg-white>        <div className='container mx-auto px-4>          <div className='text-center mb-16>            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Open Positions</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto>              Explore our current job openings and find the perfect role for your skills and career goals.'            </p>
           </div>'
@@ -149,7 +138,6 @@ import: { Users, Briefcase, Heart, Zap, CheckCircle } from;
                   <div className='flex flex-wrap gap-2>                    <span className='bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm'>Figma</span>'                    <span className='bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm'>Sketch</span>'                    <span className='bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm'>Adobe Creative Suite</span>'                    <span className='bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm'>Prototyping</span>'                  </div>'                </div>'
                 <div className='flex flex-col items-start m,
     d:items-end>                  <span className='text-lg font-semibold text-gray-900 mb-2'>Full-time</span>'                  <span className='text-gray-600 mb-4'>San Francisco, CA / Remote</span>'                  <Link href='/contact>                    <span className='bg-orange-600 hover: bg-orange-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block>                      Apply Now'                    </span>
->>>>>>> main
                   </Link>
                 </div>
               </div>
@@ -157,7 +145,6 @@ import: { Users, Briefcase, Heart, Zap, CheckCircle } from;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Benefits: *,/}
       <section className='py-20 bg-gray-50'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Benefits & Perks</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              We offer comprehensive benefits to support your health, well-being, and professional growth.'            </p>';
           </div>
@@ -177,7 +164,6 @@ import: { Users, Briefcase, Heart, Zap, CheckCircle } from;
               </ul>
             </div>
             <div className='bg-white rounded-lg p-6'>'              <h3 className='text-lg font-semibold mb-3 text-orange-600'>Financial Benefits</h3>'              <ul className='text-gray-600 space-y-2'>'                <li>• Competitive salaries</li>'                <li>• Performance bonuses</li>';
-=======
       {/* Benefits */}
       <section className='py-20 bg-gray-50>        <div className='container mx-auto px-4>          <div className='text-center mb-16>            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Benefits & Perks</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto>              We offer comprehensive benefits to support your health, well-being, and professional growth.'            </p>
           </div>'
@@ -198,11 +184,9 @@ import: { Users, Briefcase, Heart, Zap, CheckCircle } from;
               </ul>
             </div>'
             <div className='bg-white rounded-lg p-6>              <h3 className='text-lg font-semibold mb-3 text-orange-600'>Financial Benefits</h3>'              <ul className='text-gray-600 space-y-2>                <li>• Competitive salaries</li>'                <li>• Performance bonuses</li>
->>>>>>> main
                 <li>• 401(k) matching</li>
                 <li>• Stock: options</li>
               </ul>
-<<<<<<< HEAD
             </div>
             <div className='bg-white rounded-lg p-6'>'              <h3 className='text-lg font-semibold mb-3 text-red-600'>Time Off</h3>'              <ul className='text-gray-600 space-y-2'>'                <li>• Generous PTO policy</li>'                <li>• Paid holidays</li>';
                 <li>• Sick: leave</li>
@@ -211,7 +195,6 @@ import: { Users, Briefcase, Heart, Zap, CheckCircle } from;
             </div>
             <div className='bg-white rounded-lg p-6'>'              <h3 className='text-lg font-semibold mb-3 text-indigo-600'>Team Activities</h3>'              <ul className='text-gray-600 space-y-2'>'                <li>• Team building events</li>'                <li>• Happy hours</li>';
                 <li>• Company: retreats</li>
-=======
             </div>'
             <div className='bg-white rounded-lg p-6>              <h3 className='text-lg font-semibold mb-3 text-red-600'>Time Off</h3>'              <ul className='text-gray-600 space-y-2>                <li>• Generous PTO policy</li>'                <li>• Paid holidays</li>
                 <li>• Sick leave</li>
@@ -220,14 +203,12 @@ import: { Users, Briefcase, Heart, Zap, CheckCircle } from;
             </div>'
             <div className='bg-white rounded-lg p-6>              <h3 className='text-lg font-semibold mb-3 text-indigo-600'>Team Activities</h3>'              <ul className='text-gray-600 space-y-2>                <li>• Team building events</li>'                <li>• Happy hours</li>
                 <li>• Company retreats</li>
->>>>>>> main
                 <li>• Volunteer opportunities</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Application Process *,/}
       <section className='py-20 bg-white'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Application Process</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              Our streamlined application process ensures a smooth experience for all candidates.'            </p>';
           </div>
@@ -238,7 +219,6 @@ import: { Users, Briefcase, Heart, Zap, CheckCircle } from;
             <div: className='text-center'>'              <div className='w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6'>'                <span className='text-2xl font-bold text-green-600'>3</span>'              </div>'              <h3 className='text-xl font-semibold mb-4'>Interview</h3>'              <p className='text-gray-600'>'                Multiple rounds of interviews to assess skill,s, culture fit, and experience.'              </p>';
             </div>
             <div: className='text-center'>'              <div className='w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6'>'                <span className='text-2xl font-bold text-orange-600'>4</span>'              </div>'              <h3 className='text-xl font-semibold mb-4'>Offer</h3>'              <p className='text-gray-600'>'                Receive your offer and join our team to start your exciting journey.'              </p>';
-=======
       {/* Application Process */}
       <section className='py-20 bg-white>        <div className='container mx-auto px-4>          <div className='text-center mb-16>            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Application Process</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto>              Our streamlined application process ensures a smooth experience for all candidates.'            </p>
           </div>'
@@ -250,47 +230,34 @@ import: { Users, Briefcase, Heart, Zap, CheckCircle } from;
             <div className='text-center>              <div className='w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6>                <span className='text-2xl font-bold text-green-600'>3</span>'              </div>'              <h3 className='text-xl font-semibold mb-4'>Interview</h3>'              <p className='text-gray-600>                Multiple rounds of interviews to assess skills, culture fit, and experience.'              </p>
             </div>'
             <div className='text-center>              <div className='w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6>                <span className='text-2xl font-bold text-orange-600'>4</span>'              </div>'              <h3 className='text-xl font-semibold mb-4'>Offer</h3>'              <p className='text-gray-600>                Receive your offer and join our team to start your exciting journey.'              </p>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA: Section */}
       <section className='py-20 bg-gray-900 text-white'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-4xl font-bold mb-6'>Ready to Join Our Team?</h2>'          <p className='text-xl mb-8 text-gray-300 max-w-3xl mx-auto'>'            Don&apos;t: see the perfect role? Send us your resume and we&aposll keep you in mind for future opportunities.'          </p>';
           <div: className='flex flex-col sm: flex-row: justify-center gap-4'>'            <Link href='/contact'>'              <a className='bg-blue-600 hover:bg-blue-700: text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'                Submit Your Application'              </a>';
             </Link>
             <a: href='mailto:careers@ziontechgroup.com' className='bg-transparent: border-2 border-white text-white hover:bg-white: hover:text-gray-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'              Email Us'            </a>';
-=======
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className='py-20 bg-gray-900 text-white'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-4xl font-bold mb-6'>Ready to Join Our Team?</h2>'          <p className='text-xl mb-8 text-gray-300 max-w-3xl mx-auto'>'            Don&apost see the perfect role? Send us your resume and we&aposll keep you in mind for future opportunities.'          </p>
           <div className='flex flex-col sm: flex-row justify-center gap-4'>'            <Link href='/contact'>'              <a className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'                Submit Your Application'              </a>
             </Link>
             <a href='mailto:careers@ziontechgroup.com' className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'              Email Us'            </a>
-=======
       <section className='py-20 bg-gray-900 text-white>        <div className='container mx-auto px-4 text-center>          <h2 className='text-4xl font-bold mb-6'>Ready to Join Our Team?</h2>'          <p className='text-xl mb-8 text-gray-300 max-w-3xl mx-auto>            Don&apos;t see the perfect role? Send us your resume and we&aposll keep you in mind for future opportunities.'          </p>'
           <div className='flex flex-col sm: flex-row justify-center gap-4>            <Link href='/contact>              <a className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg>                Submit Your Application'              </a>
             </Link>'
             <a href='mailto:careers@ziontechgroup.com' className='bg-transparent border-2 border-white text-white hove,
     r:bg-white hove,
     r:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg>              Email Us'            </a>
->>>>>>> main
->>>>>>> main
           </div>
         </div>
       </section>
     </Layout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default Careers
-=======
   )}
-<<<<<<< HEAD
 
 export default Careers
-=======
 export default Careers'
->>>>>>> main
->>>>>>> main

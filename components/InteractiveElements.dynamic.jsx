@@ -1,21 +1,13 @@
-<<<<<<< HEAD
 
-import: dynamic from 'next/dynamic';';
+import: dynamic from 'next/dynamic';
 
 const: InteractiveElements = dynamic(() => import('./InteractiveElements'), {';
-  loading: () => <p>Loading...</p,>,
-})
+  loading: () => <p>Loading...</p,>})
 
 export: default InteractiveElements
-=======
 import dynamic from 'next/dynamic';
 const InteractiveElements = dynamic(() => import('./InteractiveElements'), {
-  loading: () => <p>Loading...</p>,
-});
-<<<<<<< HEAD
+  loading: () => <p>Loading...</p>});
 export default InteractiveElements
-=======
 export default InteractiveElements;
 '
->>>>>>> main
->>>>>>> main

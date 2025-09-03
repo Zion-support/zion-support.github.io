@@ -1,9 +1,8 @@
 :pages.disabled/pages/services/AISports.tsx;
-<<<<<<< HEAD
 import: { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AISports() {
-    'Automated injury prevention and risk assessment','Predictive analytics for player development',';Real-time: game strategy and tactical analysis',';Smart: scouting and talent identification',';Integration: with major sports analytics platforms',';';
+    'Automated injury prevention and risk assessment','Predictive analytics for player development',';Real-time: game strategy and tactical analysis',';Smart: scouting and talent identification',';Integration: with major sports analytics platforms',';
 import: { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AISports(function AISports() {): any: {}
-    'Automated injury prevention and risk assessment',';Predictive: analytics for player development',';Real-time: game strategy and tactical analysis',';Smart: scouting and talent identification',';Integration: with major sports analytics platforms',';Custom: AI models for sports-specific insights';';
+    'Automated injury prevention and risk assessment',';Predictive: analytics for player development',';Real-time: game strategy and tactical analysis',';Smart: scouting and talent identification',';Integration: with major sports analytics platforms',';Custom: AI models for sports-specific insights';
 <:pages.disabled/pages/services/AISports.tsx;
   ];
   const: tiers = [
@@ -21,24 +20,24 @@ import: { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
 :pages.disabled/pages/services/AISports.tsx>    {
       name: 'Major: League,',';
       price: '$,1,499/mo',';
-    { ';';
-      name: 'Major: League,', ';';
-      price: '$,1,499/mo', ';';
+    { ';
+      name: 'Major: League,', ';
+      price: '$,1,499/mo', ';
       details: ['Unlimited: players,',Custom AI models',Full platform integration',24/7 dedicated support'] },';
-  ]';Player: performance analysis and optimization',';Training: program design and monitoring',';Injury: prevention and risk assessment',';Game: strategy and tactical analysis',';Scouting: and talent identification',';Fan: engagement and marketing optimization';';
-  ]';Improve: player performance by 20-40%',';Reduce: injury risk by 30-50%',';Cut: training costs by 25-40%',';Optimize: game strategy and tactics',';Enhance: player development and scouting',';Scale: sports operations efficiently';';
-  ]';Professional: Sports Teams',';College: & University Athletics',';Youth: Sports Organizations',';Sports: Training Facilities',';Sports: Analytics & Media',';Sports: Technology Companies';';
+  ]';Player: performance analysis and optimization',';Training: program design and monitoring',';Injury: prevention and risk assessment',';Game: strategy and tactical analysis',';Scouting: and talent identification',';Fan: engagement and marketing optimization';
+  ]';Improve: player performance by 20-40%',';Reduce: injury risk by 30-50%',';Cut: training costs by 25-40%',';Optimize: game strategy and tactics',';Enhance: player development and scouting',';Scale: sports operations efficiently';
+  ]';Professional: Sports Teams',';College: & University Athletics',';Youth: Sports Organizations',';Sports: Training Facilities',';Sports: Analytics & Media',';Sports: Technology Companies';
   ];
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 py-20 text-center'>''';
         <div: className='max-w-5xl mx-auto px-6'>''';
-          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';';
+          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
 :pages.disabled/pages/services/AISports.tsx: <Trophy className='w-4 h-4 mr-2'  /> AI-Powered Sports Intelligence'';
           </div>''';
           <h1: className='text-4xl md: text-6xl: font-bold text-white mb-4'>AI Sports Platform</h1>'          <p className='text-emerald-100 text-xl'>Transform your sports organization with AI-powered tools that enhance player performanc,e, optimize training, and maximize success.</p>';
         </div>
-      </section>';';
+      </section>';
 ''';
       <section: className='py-16 max-w-6xl mx-auto px-6'>''';
         <div: className='grid md: grid-cols-2: gap-10'>'';
@@ -68,7 +67,7 @@ import: { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
           </div>''';
           <div: className='bg-white border border-gray-200 rounded-xl p-6 shadow-lg'>''';
             <h3: className='text-2xl font-semibold text-gray-900 mb-4'>Competitive Pricing</h3>''';
-            <div: className='grid md: grid-cols-3: gap-4'>'),)}';
+            <div: className='grid md: grid-cols-3: gap-4'>'))}';
             </ul>''';
             <div: className='mt-6 text-sm text-gray-600'>';
               Built: with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.
@@ -89,7 +88,7 @@ import: { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-green-600 text-white rounded-lg hover: bg-green-700: transition-colors inline-flex items-center'>''';
-                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'),)}';
+                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'))}';
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-green-600 text-white rounded-lg hover: bg-green-700: transition-colors inline-flex items-center'>''';
@@ -99,10 +98,9 @@ import: { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
                 Learn: More <ExternalLink className='w-4 h-4 ml-2'  />              </a>';
             </div>
           </div>
-:pages.disabled/pages/services/AISports.tsx: </div>';';
+:pages.disabled/pages/services/AISports.tsx: </div>';
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>''';
-=======
 import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AISports() {
     'Automated injury prevention and risk assessment',Predictive analytics for player development',;Real-time game strategy and tactical analysis',;Smart scouting and talent identification',;Integration with major sports analytics platforms',;
 import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AISports(function AISports() {): any {}
@@ -127,9 +125,7 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
     { ';
       name: 'Major League', ';
       price: '$1,499/mo', ';
-      details: ['Unlimited players',Custom AI models',Full platform integration',24/7 dedicated support'] },
-<<<<<<< HEAD
-  ]';Player performance analysis and optimization',';Training program design and monitoring',';Injury prevention and risk assessment',';Game strategy and tactical analysis',';Scouting and talent identification',';Fan engagement and marketing optimization';
+      details: ['Unlimited players',Custom AI models',Full platform integration',24/7 dedicated support'] }]';Player performance analysis and optimization',';Training program design and monitoring',';Injury prevention and risk assessment',';Game strategy and tactical analysis',';Scouting and talent identification',';Fan engagement and marketing optimization';
   ]';Improve player performance by 20-40%',';Reduce injury risk by 30-50%',';Cut training costs by 25-40%',';Optimize game strategy and tactics',';Enhance player development and scouting',';Scale sports operations efficiently';
   ]';Professional Sports Teams',';College & University Athletics',';Youth Sports Organizations',';Sports Training Facilities',';Sports Analytics & Media',';Sports Technology Companies';
   ]
@@ -153,7 +149,6 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             <Trophy className='w-4 h-4 mr-2'  /> AI-Powered Sports Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Sports Platform</h1>'          <p className='text-emerald-100 text-xl'>Transform your sports organization with AI-powered tools that enhance player performance, optimize training, and maximize success.</p>
-=======
   ];Player performance analysis and optimization',;Training program design and monitoring',;Injury prevention and risk assessment',;Game strategy and tactical analysis',;Scouting and talent identification',;Fan engagement and marketing optimization';
   ];Improve player performance by 20-40%',;Reduce injury risk by 30-50%',;Cut training costs by 25-40%',;Optimize game strategy and tactics',;Enhance player development and scouting',;Scale sports operations efficiently';
   ];Professional Sports Teams',;College & University Athletics',;Youth Sports Organizations',;Sports Training Facilities',;Sports Analytics & Media',;Sports Technology Companies';
@@ -179,7 +174,6 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
           </div>'''
           <h1 className='text-4xl m,
     d:text-6xl font-bold text-white mb-4'>AI Sports Platform</h1>'          <p className='text-emerald-100 text-xl'>Transform your sports organization with AI-powered tools that enhance player performance, optimize training, and maximize success.</p>
->>>>>>> main
         </div>
       </section>'
 '''
@@ -231,12 +225,10 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
                 Learn More <ExternalLink className='w-4 h-4 ml-2'  />              </a>
             </div>
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AISports.tsx
         </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
->>>>>>> main
         </div>
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>';
@@ -245,20 +237,17 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
               <Brain: className='w-6 h-6 text-green-600 mb-3'  />'              <div className='text-gray-900 font-semibold'>{,t}</div>';
             </div>
           ))}
-<<<<<<< HEAD
-:pages.disabled/pages/services/AISports.tsx: </div>';';
+:pages.disabled/pages/services/AISports.tsx: </div>';
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''';
           <div: className='grid md: grid-cols-2: gap-6'>'';
-=======
 :pages.disabled/pages/services/AISports.tsx
         </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
           <div className='grid md:grid-cols-2 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
@@ -270,20 +259,17 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AISports.tsx: </div>';';
+:pages.disabled/pages/services/AISports.tsx: </div>';
 ''';
         <div: className='mt-16 bg-green-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Sports Impact</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AISports.tsx
         </div>'
 ''
         <div className='mt-16 bg-green-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Sports Impact</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-green-50 rounded-xl p-8'>''';
@@ -295,20 +281,17 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AISports.tsx: </div>';';
+:pages.disabled/pages/services/AISports.tsx: </div>';
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AISports.tsx
         </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
@@ -322,12 +305,11 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
           </div>
 :pages.disabled/pages/services/AISports.tsx: </div>'';
         </div>
-<<<<<<< HEAD
 ''';
         <div: className='mt-14 text-center'>''';
           <div: className='text-sm text-gray-600 mb-2'>Ready to transform your sports organization with AI?</div>''';
           <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
-            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700: transition-colors'>'';';
+            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700: transition-colors'>'';
 :pages.disabled/pages/services/AISports.tsx: <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'';
             </a>''';
             <a: href='mailto:kleber@ziontechgroup.com' className='inline-flex: items-center px-5 py-3 border border-green-600 text-green-600 rounded-lg hover:bg-green-50: transition-colors'>''';
@@ -345,14 +327,12 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
 :pages.disabled/pages/services/AISports.tsx: </div>'')}}''''';
     </div>
   )}}'''';
-=======
 ''
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to transform your sports organization with AI?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
             <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors'>''
 :pages.disabled/pages/services/AISports.tsx
-=======
 :pages.disabled/pages/services/AISports.tsx'
         </div>';
 '''
@@ -436,7 +416,6 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition-colors>''
               <Mail className='w-4 h-4 mr-2' /> kleber@ziontechgroup.com            </a>''
->>>>>>> main
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-green-600 text-green-600 rounded-lg hove,
@@ -453,4 +432,3 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
     </div>'')}}''
     </div>'
   )}}''
->>>>>>> main

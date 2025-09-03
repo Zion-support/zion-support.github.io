@@ -1,17 +1,14 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
 /**
  * AI Code Reviewer - PM2 Automation;
  * Intelligently analyzes code quality and suggests improvements;
  */
-=======
 #!/'usr/bin/env' node;
 
 /**;
  * AI Code Reviewer - PM2 Automation;
  * Intelligently analyzes code quality and suggests improvements;
  */;
->>>>>>> main
 
 const fs = require('fs');
 const path = require('path');
@@ -23,15 +20,12 @@ class AICodeReviewer {;
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, 'logs', 'ai-code-reviewer.log');
     this.reviewsLog = path.join(this.projectRoot, 'logs', 'ai-reviews.json');
-<<<<<<< HEAD
     this.learningData = path.join(;
       this.projectRoot,logs',;
       'ai-learning-data.json';
-=======
     this.learningData = path.join(
       this.projectRoot, 'logs',
       'ai-learning-data.json'
->>>>>>> main
     );
     this.ensureLogsDirectory();
     this.loadLearningData();
@@ -43,7 +37,6 @@ class AICodeReviewer {;
       fs.mkdirSync(logsDir, { recursive: true });
     }
   }
-<<<<<<< HEAD
 
   loadLearningData() {
     if (fs.existsSync(this.learningData)) {
@@ -56,7 +49,6 @@ class AICodeReviewer {;
           patterns: {  },
           suggestions: {},
           performance: {},
-=======
 ;
   loadLearningData() {;
     if (fs.existsSync(this.learningData)) {;
@@ -69,7 +61,6 @@ class AICodeReviewer {;
           patterns: {},;
           suggestions: {},;
           performance: {},;
->>>>>>> main
         };
       }
     } else {;
@@ -83,19 +74,15 @@ class AICodeReviewer {;
       JSON.stringify(this.learningDataObj, null, 2);
     );
   }
-<<<<<<< HEAD
 
   log(message, level = `INFO`) {
-=======
 ;
   log(message, level = 'INFO') {;
->>>>>>> main
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 ;
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
   }
-<<<<<<< HEAD
 
   async analyzeCodeQuality() {
     this.log(`🤖 Starting AI-powered code quality analysis...`);
@@ -105,7 +92,6 @@ class AICodeReviewer {;
     const performance = {};
 
     try {
-=======
 ;
   async analyzeCodeQuality() {;
     this.log('🤖 Starting AI-powered code quality analysis...');
@@ -115,38 +101,30 @@ class AICodeReviewer {;
     const performance = {};
 ;
     try {;
->>>>>>> main
       // 1. Analyze TypeScript files for patterns;
       const tsAnalysis = await this.analyzeTypeScriptFiles();
       reviews.push(...tsAnalysis.reviews);
       suggestions.push(...tsAnalysis.suggestions);
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
       // 2. Analyze React components for best practices;
       const reactAnalysis = await this.analyzeReactComponents();
       reviews.push(...reactAnalysis.reviews);
       suggestions.push(...reactAnalysis.suggestions);
-<<<<<<< HEAD
 
       // 3. Analyze performance patterns;
       const perfAnalysis = await this.analyzePerformancePatterns();
       Object.assign(performance, perfAnalysis);
 
-=======
 ;
       // 3. Analyze performance patterns;
       const perfAnalysis = await this.analyzePerformancePatterns();
       Object.assign(performance, perfAnalysis);
 ;
->>>>>>> main
       // 4. Analyze security patterns;
       const securityAnalysis = await this.analyzeSecurityPatterns();
       reviews.push(...securityAnalysis.reviews);
       suggestions.push(...securityAnalysis.suggestions);
-<<<<<<< HEAD
 
       // 5. Generate intelligent suggestions;
       const aiSuggestions = await this.generateAISuggestions(
@@ -165,7 +143,6 @@ class AICodeReviewer {;
       const appliedFixes = await this.autoApplySafeFixes(suggestions);
 
       this.log(✅ AI Code Review completed: ${reviews.length} issues found, ${suggestions.length} suggestions generated, ${appliedFixes.length} fixes applied`
-=======
 ;
       // 5. Generate intelligent suggestions;
       const aiSuggestions = await this.generateAISuggestions(;
@@ -184,7 +161,6 @@ class AICodeReviewer {;
       const appliedFixes = await this.autoApplySafeFixes(suggestions);
 ;
       this.log(✅ AI Code Review completed: ${reviews.length} issues found, ${suggestions.length} suggestions generated, ${appliedFixes.length} fixes applied';
->>>>>>> main
       );
     } catch (error) {  this.log(`AI Code Review failed: ${error.message  }`, `ERROR`);
     }
@@ -195,7 +171,6 @@ class AICodeReviewer {;
   async analyzeTypeScriptFiles() {;
     const reviews = [];
     const suggestions = [];
-<<<<<<< HEAD
 
     try {
       // Find all TypeScript files;
@@ -204,7 +179,6 @@ class AICodeReviewer {;
       for (const file of tsFiles.slice(0, 50)) {
         // Limit to prevent overwhelming;
         const content = fs.readFileSync(file, `utf8`);
-=======
 ;
     try {;
       // Find all TypeScript files;
@@ -213,7 +187,6 @@ class AICodeReviewer {;
       for (const file of tsFiles.slice(0, 50)) {;
         // Limit to prevent overwhelming;
         const content = fs.readFileSync(file, 'utf8');
->>>>>>> main
         const analysis = this.analyzeTypeScriptFile(content, file);
 ;
         if (analysis.issues.length > 0) {;
@@ -233,7 +206,6 @@ class AICodeReviewer {;
   analyzeTypeScriptFile(content, filePath) {;
     const issues = [];
     const suggestions = [];
-<<<<<<< HEAD
 
     // Analyze for common TypeScript anti-patterns;
     const lines = content.split(`\n`);
@@ -250,8 +222,7 @@ class AICodeReviewer {;
           file: filePath,
           line: lineNum,
           code: line.trim(),
-          suggestion: 'Replace "any" with proper TypeScript types',
-        });
+          suggestion: 'Replace "any" with proper TypeScript types'});
       }
 
       // Check for unused imports;
@@ -260,7 +231,6 @@ class AICodeReviewer {;
         line.includes('from') &&
         !line.includes('//')
       ) {
-=======
 ;
     // Analyze for common TypeScript anti-patterns;
     const lines = content.split('\n');
@@ -287,22 +257,18 @@ class AICodeReviewer {;
         line.includes('from') &&;
         !line.includes('//');
       ) {;
->>>>>>> main
         const importMatch = line.match(/import\s+{([^}]+)}\s+from/);
         if (importMatch) {;
           const imports = importMatch[1].split(',').map(i => i.trim());
           // This is a simplified check - in practice you'd need more sophisticated analysis;
         }
       }
-<<<<<<< HEAD
 
       // Check for long functions;
       if (line.includes('function') || line.includes('=>')) {
-=======
 ;
       // Check for long functions;
       if (line.includes('function') || line.includes('=>')) {;
->>>>>>> main
         const functionStart = index;
         let functionLength = 0;
 ;
@@ -331,21 +297,18 @@ class AICodeReviewer {;
   async analyzeReactComponents() {;
     const reviews = [];
     const suggestions = [];
-<<<<<<< HEAD
 
     try {
       const reactFiles = this.findFilesByExtension('.tsx', `.jsx`);
 
       for (const file of reactFiles.slice(0, 30)) {
         const content = fs.readFileSync(file, `utf8`);
-=======
 ;
     try {;
       const reactFiles = this.findFilesByExtension('.tsx', '.jsx');
 ;
       for (const file of reactFiles.slice(0, 30)) {;
         const content = fs.readFileSync(file, 'utf8');
->>>>>>> main
         const analysis = this.analyzeReactComponent(content, file);
 ;
         reviews.push(...analysis.reviews);
@@ -360,19 +323,16 @@ class AICodeReviewer {;
   analyzeReactComponent(content, filePath) {;
     const reviews = [];
     const suggestions = [];
-<<<<<<< HEAD
 
     // Check for React best practices;
     if (content.includes(`useState`) && content.includes('useEffect')) {
       // Check for missing dependency arrays;
       const useEffectRegex =
-=======
 ;
     // Check for React best practices;
     if (content.includes('useState') && content.includes('useEffect')) {;
       // Check for missing dependency arrays;
       const useEffectRegex =;
->>>>>>> main
         /useEffect\s*\(\s*\(\)\s*=>\s*{[^}]*}\s*,\s*\[\s*\]/g;
       if (useEffectRegex.test(content)) {;
         suggestions.push({;
@@ -384,7 +344,6 @@ class AICodeReviewer {;
         });
       }
     }
-<<<<<<< HEAD
 
     // Check for prop drilling;
     if (content.includes('props.') && content.split('props.').length > 5) {
@@ -395,7 +354,6 @@ class AICodeReviewer {;
         file: filePath,
         suggestion:
           `Implement React Context or Redux for better state management`,
-=======
 ;
     // Check for prop drilling;
     if (content.includes('props.') && content.split('props.').length > 5) {;
@@ -406,7 +364,6 @@ class AICodeReviewer {;
         file: filePath,;
         suggestion:;
           'Implement React Context or Redux for better state management',;
->>>>>>> main
       });
     }
 ;
@@ -419,7 +376,6 @@ class AICodeReviewer {;
       renderOptimization: {},;
       memoryUsage: {},;
     };
-<<<<<<< HEAD
 
     try {
       // Analyze bundle size;
@@ -428,7 +384,6 @@ class AICodeReviewer {;
         performance.bundleSize = bundleStats;
       }
 
-=======
 ;
     try {;
       // Analyze bundle size;
@@ -437,7 +392,6 @@ class AICodeReviewer {;
         performance.bundleSize = bundleStats;
       }
 ;
->>>>>>> main
       // Check for performance anti-patterns in code;
       const perfIssues = this.findPerformanceIssues();
       performance.renderOptimization = perfIssues;
@@ -449,17 +403,14 @@ class AICodeReviewer {;
 ;
   analyzeBundleSize() {;
     const stats = {};
-<<<<<<< HEAD
 
     try {
       const distPath = path.join(this.projectRoot, `dist`);
       if (fs.existsSync(distPath)) {
-=======
 ;
     try {;
       const distPath = path.join(this.projectRoot, 'dist');
       if (fs.existsSync(distPath)) {;
->>>>>>> main
         const files = this.getAllFiles(distPath);
         let totalSize = 0;
 ;
@@ -470,17 +421,14 @@ class AICodeReviewer {;
 ;
         stats.totalSize = totalSize;
         stats.totalSizeMB = (totalSize / (1024 * 1024)).toFixed(2);
-<<<<<<< HEAD
 
         if (totalSize > 5 * 1024 * 1024) {
           // 5MB;
           stats.warning =Bundle size is large - consider code splitting and optimization`;
-=======
 ;
         if (totalSize > 5 * 1024 * 1024) {;
           // 5MB;
           stats.warning =Bundle size is large - consider code splitting and optimization';
->>>>>>> main
         }
       }
     } catch (error) {  this.log(`Bundle size analysis failed: ${error.message  }`, `ERROR`);
@@ -491,7 +439,6 @@ class AICodeReviewer {;
 ;
   findPerformanceIssues() {;
     const issues = [];
-<<<<<<< HEAD
 
     try {
       const tsFiles = this.findFilesByExtension(`.ts', '.tsx');
@@ -507,7 +454,6 @@ class AICodeReviewer {;
             file: file,
             suggestion:
               `Use useMemo or useCallback to optimize expensive calculations`,
-=======
 ;
     try {;
       const tsFiles = this.findFilesByExtension('.ts', '.tsx');
@@ -523,7 +469,6 @@ class AICodeReviewer {;
             file: file,;
             suggestion:;
               'Use useMemo or useCallback to optimize expensive calculations',;
->>>>>>> main
           });
         }
       }
@@ -536,7 +481,6 @@ class AICodeReviewer {;
   async analyzeSecurityPatterns() {;
     const reviews = [];
     const suggestions = [];
-<<<<<<< HEAD
 
     try {
       const tsFiles = this.findFilesByExtension(`.ts`, '.tsx');
@@ -551,8 +495,7 @@ class AICodeReviewer {;
             severity: 'HIGH',
             message: 'dangerouslySetInnerHTML usage detected',
             file: file,
-            suggestion: 'Sanitize HTML content and consider safer alternatives',
-          });
+            suggestion: 'Sanitize HTML content and consider safer alternatives'});
         }
 
         // Check for hardcoded secrets;
@@ -567,7 +510,6 @@ class AICodeReviewer {;
             message: `Consider using environment variables for sensitive data`,
             file: file,
             suggestion: `Move sensitive data to environment variables`,
-=======
 ;
     try {;
       const tsFiles = this.findFilesByExtension('.ts', '.tsx');
@@ -598,7 +540,6 @@ class AICodeReviewer {;
             message: 'Consider using environment variables for sensitive data',;
             file: file,;
             suggestion: 'Move sensitive data to environment variables',;
->>>>>>> main
           });
         }
       }
@@ -610,7 +551,6 @@ class AICodeReviewer {;
 ;
   async generateAISuggestions(reviews, performance) {;
     const suggestions = [];
-<<<<<<< HEAD
 
     // Generate intelligent suggestions based on patterns;
     const issueTypes = reviews.reduce((acc, review) => {
@@ -625,7 +565,6 @@ class AICodeReviewer {;
         severity: 'MEDIUM',
         message: 'High number of TypeScript anti-patterns detected',
         suggestion:Consider running a TypeScript refactoring session to improve code quality',
-=======
 ;
     // Generate intelligent suggestions based on patterns;
     const issueTypes = reviews.reduce((acc, review) => {;
@@ -640,7 +579,6 @@ class AICodeReviewer {;
         severity: 'MEDIUM',;
         message: 'High number of TypeScript anti-patterns detected',;
         suggestion:Consider running a TypeScript refactoring session to improve code quality',;
->>>>>>> main
       });
     }
 ;
@@ -652,7 +590,6 @@ class AICodeReviewer {;
         suggestion:Review React component architecture and consider implementing a component library',;
       });
     }
-<<<<<<< HEAD
 
     // Performance suggestions;
     if (performance.bundleSize && performance.bundleSize.warning) {
@@ -661,7 +598,6 @@ class AICodeReviewer {;
         severity: 'MEDIUM',
         message: 'Bundle size optimization needed',
         suggestion:Implement code splitting, lazy loading, and tree shaking to reduce bundle size',
-=======
 ;
     // Performance suggestions;
     if (performance.bundleSize && performance.bundleSize.warning) {;
@@ -670,19 +606,15 @@ class AICodeReviewer {;
         severity: 'MEDIUM',;
         message: 'Bundle size optimization needed',;
         suggestion:Implement code splitting, lazy loading, and tree shaking to reduce bundle size',;
->>>>>>> main
       });
     }
 ;
     return suggestions;
   }
-<<<<<<< HEAD
 
   async updateLearningData(reviews, suggestions, performance) {
-=======
 ;
   async updateLearningData(reviews, suggestions, performance) {;
->>>>>>> main
     // Update learning data with new patterns;
     const timestamp = new Date().toISOString();
 ;
@@ -693,11 +625,8 @@ class AICodeReviewer {;
         performance: performance,;
       };
     }
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
     // Keep only last 30 days of data;
     const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
     Object.keys(this.learningDataObj.patterns).forEach(date => {;
@@ -708,7 +637,6 @@ class AICodeReviewer {;
 ;
     this.saveLearningData();
   }
-<<<<<<< HEAD
 
   async generateReviewReport(reviews, suggestions, performance) {
     const report = {
@@ -719,8 +647,7 @@ class AICodeReviewer {;
         criticalIssues: reviews.filter(r => r.severity === 'CRITICAL').length,
         highIssues: reviews.filter(r => r.severity === 'HIGH').length,
         mediumIssues: reviews.filter(r => r.severity === 'MEDIUM`).length,
-        lowIssues: reviews.filter(r => r.severity === `LOW`).length,
-      },
+        lowIssues: reviews.filter(r => r.severity === `LOW`).length},
       reviews: reviews.slice(0, 20), // Limit for readability;
       suggestions: suggestions.slice(0, 20),
       performance: performance,
@@ -729,7 +656,6 @@ class AICodeReviewer {;
         suggestions,
         performance;
       ),
-=======
 ;
   async generateReviewReport(reviews, suggestions, performance) {;
     const report = {;
@@ -750,21 +676,14 @@ class AICodeReviewer {;
         suggestions,;
         performance;
       ),;
->>>>>>> main
     };
-<<<<<<< HEAD
 ;
     const reportPath = path.join(;
       this.projectRoot,logs', `ai-review-report-${Date.now()}.json`;
-=======
 
     const reportPath = path.join(
-<<<<<<< HEAD
       this.projectRoot,logs`, `ai-review-report-${Date.now()}.json`
-=======
       this.projectRoot, 'logs', `ai-review-report-${Date.now()}.json`
->>>>>>> main
->>>>>>> main
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 this.log(`📊 AI Review Report generated: ${reportPath}`);
@@ -773,7 +692,6 @@ this.log(`📊 AI Review Report generated: ${reportPath}`);
 ;
   generateRecommendations(reviews, suggestions, performance) {;
     const recommendations = [];
-<<<<<<< HEAD
 
     if (reviews.filter(r => r.severity === `CRITICAL`).length > 0) {
       recommendations.push(🔴 Critical issues detected - immediate attention required`
@@ -782,7 +700,6 @@ this.log(`📊 AI Review Report generated: ${reportPath}`);
 
     if (reviews.filter(r => r.severity === `HIGH').length > 5) {
       recommendations.push(🟠 High priority issues detected - schedule refactoring session'
-=======
 ;
     if (reviews.filter(r => r.severity === 'CRITICAL').length > 0) {;
       recommendations.push(🔴 Critical issues detected - immediate attention required';
@@ -791,7 +708,6 @@ this.log(`📊 AI Review Report generated: ${reportPath}`);
 ;
     if (reviews.filter(r => r.severity === 'HIGH').length > 5) {;
       recommendations.push(🟠 High priority issues detected - schedule refactoring session';
->>>>>>> main
       );
     }
 ;
@@ -808,7 +724,6 @@ this.log(`📊 AI Review Report generated: ${reportPath}`);
 ;
   async autoApplySafeFixes(suggestions) {;
     const appliedFixes = [];
-<<<<<<< HEAD
 
     try {
       // Only apply safe, low-risk fixes;
@@ -822,7 +737,6 @@ this.log(`📊 AI Review Report generated: ${reportPath}`);
       for (const suggestion of safeSuggestions.slice(0, 5)) {
         // Limit to prevent overwhelming;
         try {
-=======
 ;
     try {;
       // Only apply safe, low-risk fixes;
@@ -836,7 +750,6 @@ this.log(`📊 AI Review Report generated: ${reportPath}`);
       for (const suggestion of safeSuggestions.slice(0, 5)) {;
         // Limit to prevent overwhelming;
         try {;
->>>>>>> main
           const fixResult = await this.applySuggestion(suggestion);
           if (fixResult.success) {;
             appliedFixes.push({;
@@ -852,19 +765,16 @@ this.log(`📊 AI Review Report generated: ${reportPath}`);
 ;
     return appliedFixes;
   }
-<<<<<<< HEAD
 
   async applySuggestion(suggestion) {
     // This is a simplified implementation;
     // In practice, you`d want more sophisticated fix application logic;
     return { success: true, message: `Suggestion applied successfully' };
-=======
 ;
   async applySuggestion(suggestion) {;
     // This is a simplified implementation;
     // In practice, you'd want more sophisticated fix application logic;
     return { success: true, message: 'Suggestion applied successfully' };
->>>>>>> main
   }
 ;
   findFilesByExtension(...extensions) {;
@@ -917,7 +827,6 @@ this.log(`📊 AI Review Report generated: ${reportPath}`);
     findFiles(dir);
     return files;
   }
-<<<<<<< HEAD
 
   async run() {
     this.log(`🚀 AI Code Reviewer starting...`);
@@ -926,7 +835,6 @@ this.log(`📊 AI Review Report generated: ${reportPath}`);
       const result = await this.analyzeCodeQuality();
 this.log(`✅ AI Code Review completed successfully`);
       this.log(📊 Found ${result.reviews.length} issues and ${result.suggestions.length} suggestions`
-=======
 ;
   async run() {;
     this.log('🚀 AI Code Reviewer starting...');
@@ -935,30 +843,23 @@ this.log(`✅ AI Code Review completed successfully`);
       const result = await this.analyzeCodeQuality();
 this.log(`✅ AI Code Review completed successfully');
       this.log(📊 Found ${result.reviews.length} issues and ${result.suggestions.length} suggestions';
->>>>>>> main
       );
 ;
       return result;
-<<<<<<< HEAD
     } catch (error) {  
       this.log(`❌ AI Code Review failed: ${error.message  }`, `ERROR`);
-=======
     } catch (error) {;
       this.log(`❌ AI Code Review failed: ${error.message}`, 'ERROR');
->>>>>>> main
       throw error;
     }
   }
 }
-<<<<<<< HEAD
 
 // Run if called directly;
 if (require.main === module) {
-=======
 ;
 // Run if called directly;
 if (require.main === module) {;
->>>>>>> main
   const reviewer = new AICodeReviewer();
   reviewer.run().catch(console.error);
 }

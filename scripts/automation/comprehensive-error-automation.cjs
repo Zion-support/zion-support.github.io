@@ -1,17 +1,14 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
 /**
  * Comprehensive Error Automation;
  * Orchestrates all error fixing and monitoring processes;
  */
-=======
 #!/'usr/bin/env' node;
 
 /**;
  * Comprehensive Error Automation;
  * Orchestrates all error fixing and monitoring processes;
  */;
->>>>>>> main
 
 const fs = require('fs');
 const path = require('path');
@@ -32,22 +29,18 @@ class ComprehensiveErrorAutomation {;
       totalErrors: 0,;
     };
   }
-<<<<<<< HEAD
 ;
   async run() {;
     console.log(`'🚀 Starting Comprehensive Error Automation...');
 ;
     try {;
-=======
 
   async run() {
     console.log(`🚀 Starting Comprehensive Error Automation...`);
 
     try {
->>>>>>> main
       this.ensureDirectories();
       await this.loadStats();
-<<<<<<< HEAD
 
       // Run comprehensive error fixing;
       await this.runErrorFixing();
@@ -64,7 +57,6 @@ class ComprehensiveErrorAutomation {;
       // Run dependency updates;
       await this.runDependencyUpdates();
 
-=======
 ;
       // Run comprehensive error fixing;
       await this.runErrorFixing();
@@ -81,7 +73,6 @@ class ComprehensiveErrorAutomation {;
       // Run dependency updates;
       await this.runDependencyUpdates();
 ;
->>>>>>> main
       // Generate comprehensive report;
       await this.generateComprehensiveReport();
 ;
@@ -90,11 +81,8 @@ class ComprehensiveErrorAutomation {;
       await this.saveStats();
 ;
       console.log('✅ Comprehensive Error Automation completed successfully!');
-<<<<<<< HEAD
     } catch (error) {  
-=======
     } catch (error) {;
->>>>>>> main
       console.error('❌ Comprehensive Error Automation failed:', error);
       this.stats.totalRuns++;
       this.stats.failedRuns++;
@@ -116,11 +104,8 @@ class ComprehensiveErrorAutomation {;
     if (fs.existsSync(statsFile)) {;
       try {;
         this.stats = JSON.parse(fs.readFileSync(statsFile, 'utf8'));
-<<<<<<< HEAD
       } catch (error) {  
-=======
       } catch (error) {;
->>>>>>> main
         console.warn('Could not load existing stats:', error.message);
         }
     }
@@ -137,149 +122,118 @@ class ComprehensiveErrorAutomation {;
     try {;
       const errorFixer = new ErrorFixerAutomation();
       await errorFixer.run();
-<<<<<<< HEAD
 
       // Update stats;
       this.stats.totalFixes += errorFixer.fixesApplied.length;
       this.stats.totalErrors += errorFixer.errorsFound.length;
     } catch (error) {  
-=======
 ;
       // Update stats;
       this.stats.totalFixes += errorFixer.fixesApplied.length;
       this.stats.totalErrors += errorFixer.errorsFound.length;
     } catch (error) {;
->>>>>>> main
       await this.logError('Error fixing failed', error);
       }
   }
 ;
   async runCodeQualityChecks() {;
     console.log('🔍 Running Code Quality Checks...');
-<<<<<<< HEAD
 
     try {
-=======
 ;
     try {;
->>>>>>> main
       // Run ESLint;
       console.log('  Running ESLint...');
       execSync('npm run lint', {;
         cwd: this.projectRoot,;
         stdio: 'pipe',;
       });
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
       // Run TypeScript check;
       console.log('  Running TypeScript check...');
       execSync('npm run type-check', {;
         cwd: this.projectRoot,;
         stdio: 'pipe',;
       });
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
       // Run Prettier format check;
       console.log('  Running Prettier format check...');
       execSync('npx prettier --check "src/**/*.{js,jsx,ts,tsx}"', {;
         cwd: this.projectRoot,;
         stdio: 'pipe',;
       });
-<<<<<<< HEAD
     } catch (error) {  
-=======
     } catch (error) {;
->>>>>>> main
       await this.logError('Code quality checks failed', error);
       }
   }
 ;
   async runPerformanceOptimizations() {;
     console.log('⚡ Running Performance Optimizations...');
-<<<<<<< HEAD
 
     try {
-=======
 ;
     try {;
->>>>>>> main
       // Bundle analysis;
       console.log('  Analyzing bundle...');
       execSync('npm run build', {;
         cwd: this.projectRoot,;
         stdio: 'pipe',;
       });
-<<<<<<< HEAD
 
       // Run performance monitoring;
       console.log('  Running performance monitoring...');
       // Add performance monitoring logic here;
     } catch (error) {  
-=======
 ;
       // Run performance monitoring;
       console.log('  Running performance monitoring...');
       // Add performance monitoring logic here;
     } catch (error) {;
->>>>>>> main
       await this.logError('Performance optimizations failed', error);
       }
   }
 ;
   async runSecurityChecks() {;
     console.log('🔒 Running Security Checks...');
-<<<<<<< HEAD
 
     try {
-=======
 ;
     try {;
->>>>>>> main
       // Run npm audit;
       console.log('  Running npm audit...');
       execSync('npm audit', {;
         cwd: this.projectRoot,;
         stdio: 'pipe',;
       });
-<<<<<<< HEAD
 
       // Run security scanning;
       console.log('  Running security scanning...');
       // Add security scanning logic here;
     } catch (error) {  
-=======
 ;
       // Run security scanning;
       console.log('  Running security scanning...');
       // Add security scanning logic here;
     } catch (error) {;
->>>>>>> main
       await this.logError('Security checks failed', error);
       }
   }
 ;
   async runDependencyUpdates() {;
     console.log('📦 Running Dependency Updates...');
-<<<<<<< HEAD
 
     try {
-=======
 ;
     try {;
->>>>>>> main
       // Check for outdated packages;
       console.log('  Checking for outdated packages...');
       execSync('npm outdated', {;
         cwd: this.projectRoot,;
         stdio: 'pipe',;
       });
-<<<<<<< HEAD
 
       // Update dependencies if needed;
       console.log('  Updating dependencies...');
@@ -310,14 +264,11 @@ class ComprehensiveErrorAutomation {;
           this.stats.totalRuns > 0;
             ? Math.round(this.stats.totalFixes / this.stats.totalRuns)
             : 0,
-        totalErrorsRemaining: this.stats.totalErrors,
-      },
-      recommendations: this.generateRecommendations(),
-    };
+        totalErrorsRemaining: this.stats.totalErrors},
+      recommendations: this.generateRecommendations()};
 
     const reportFile = path.join(
       this.reportsDir,comprehensive-report-${Date.now()}.json`
-=======
 ;
       // Update dependencies if needed;
       console.log('  Updating dependencies...');
@@ -355,7 +306,6 @@ class ComprehensiveErrorAutomation {;
 ;
     const reportFile = path.join(;
       this.reportsDir,comprehensive-report-${Date.now()}.json';
->>>>>>> main
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 console.log(📄 Comprehensive report saved to: ${reportFile}``);
@@ -363,7 +313,6 @@ console.log(📄 Comprehensive report saved to: ${reportFile}``);
 ;
   generateRecommendations() {;
     const recommendations = [];
-<<<<<<< HEAD
 
     if (this.stats.totalErrors > 100) {
       recommendations.push({
@@ -371,7 +320,6 @@ console.log(📄 Comprehensive report saved to: ${reportFile}``);
         category: `code_quality`,
         message:High number of errors detected. Consider code review and refactoring.',
         action: 'Review and fix critical errors first, then address warnings.',
-=======
 ;
     if (this.stats.totalErrors > 100) {;
       recommendations.push({;
@@ -379,7 +327,6 @@ console.log(📄 Comprehensive report saved to: ${reportFile}``);
         category: 'code_quality',;
         message:High number of errors detected. Consider code review and refactoring.',;
         action: 'Review and fix critical errors first, then address warnings.',;
->>>>>>> main
       });
     }
 ;
@@ -416,15 +363,12 @@ const logFile = path.join(this.logsDir, ``error-log-${Date.now()}.json`);
 console.error(`❌ ${message}:`, error.message);
   }
 }
-<<<<<<< HEAD
 
 // Run the automation;
 if (require.main === module) {
-=======
 ;
 // Run the automation;
 if (require.main === module) {;
->>>>>>> main
   const automation = new ComprehensiveErrorAutomation();
   automation.run().catch(console.error);
 }

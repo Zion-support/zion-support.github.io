@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
-<<<<<<< HEAD
 ;,"});,"})
-=======
 export default function Help() {return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO title="Help - Zion Tech Group" description="Professional Help services by Zion Tech Group" />
@@ -21,31 +14,21 @@ export default function Help() {return (
     </div>
   );
 }
-=======
-<<<<<<< HEAD
 import React, { useState } from &apos;react';
 import { motion } from &apos;framer-motion';
 import { SEO } from &apos;../components/SEO';
-=======
-<<<<<<< HEAD
->>>>>>> main
 import React, { useState } from 'react';""
 import { motion } from 'framer-motion';""
 import { SEO } from '../components/SEO';
->>>>>>> main
 import { 
   Search, MessageCircle, Phone, Mail, Clock, BookOpen, Video, FileText, Users, ChevronDown,
-<<<<<<< HEAD
   ChevronUp, HelpCircle, CheckCircle, ArrowRight'
 } from 'lucide-react';
-=======
   ChevronUp, HelpCircle, CheckCircle, ArrowRight;", "
 } from 'lucide-react';""
-=======
 import React, { useState } from 'react
 import { motion } from 'framer-motion
 import { SEO } from '../components/SEO';
-<<<<<<< HEAD
 import { ;
   Search, MessageCircle, Phone, Mail, Clock, ;
   BookOpen, Video, FileText, Users, ChevronDown,;
@@ -202,10 +185,8 @@ export default function Help() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {helpCategories.map((category, index) => (;
                 <motion.div;
-=======
 import { 
   Search, MessageCircle, Phone, Mail, Clock, BookOpen, Video, FileText, Users, ChevronDown,
-<<<<<<< HEAD
   ChevronUp, HelpCircle, CheckCircle, ArrowRight
 } from &apos;lucide-react';&apos;&apos;
 
@@ -214,12 +195,9 @@ export default function Help() ;{}
   const [expandedFAQ, setExpandedFAQ] = useState<;<;<number | null>(null);
 
   const faqs = [
-<<<<<<< HEAD
     { id: 1, question: "How do I get started with Zion Tech Group services?",
       answer: "Getting started is easy! Contact our team through our contact form or call us directly. We'll schedule a consultation to understand your needs and recommend the best solutions for your business.", '
-=======
     {
-<<<<<<< HEAD
       id: 1,
       question: &quot;How do I get started with Zion Tech Group services?&quot;,
       answer: &quot;Getting started is easy! Contact our team through our contact form or call us directly. We&apos;ll schedule a consultation to understand your needs and recommend the best solutions for your business.&quot;,
@@ -242,10 +220,8 @@ export default function Help() ;{}
       question: &quot;What is your pricing structure?&quot;,
       answer: &quot;Our pricing varies based on project scope, complexity, and requirements. We offer flexible pricing models including project-based, retainer, and subscription options. Contact us for a customized quote.&quot;,
       category: &quot;Pricing&quot;
-=======
       id: 1, question: "How do I get started with Zion Tech Group services?",
       answer: "Getting started is easy! Contact our team through our contact form or call us directly. We&apos;ll schedule a consultation to understand your needs and recommend the best solutions for your business.", '
->>>>>>> main
       category: "Getting Started"
     },
     { id: 2, question: "What AI services do you offer?",
@@ -256,16 +232,12 @@ export default function Help() ;{}
     },
     { id: 4, question: "What is your pricing structure?",
       answer: "Our pricing varies based on project scope, complexity, and requirements. We offer flexible pricing models including project-based, retainer, and subscription options. Contact us for a customized quote.", category: "Pricing"
->>>>>>> main
     }
   ];&quot;
 
   const helpCategories = [
-<<<<<<< HEAD
     { title: "Getting Started", description: "New to Zion Tech Group? Start here",
-=======
     {
-<<<<<<< HEAD
       title: &quot;Getting Started&quot;,
       description: &quot;New to Zion Tech Group? Start here&quot;,
       icon: BookOpen,
@@ -292,9 +264,7 @@ export default function Help() ;{}
       icon: HelpCircle,
       articles: 30,
       color: &quot;from-green-500 to-emerald-500&quot;
-=======
       title: "Getting Started", description: "New to Zion Tech Group? Start here",
->>>>>>> main
       icon: BookOpen, articles: 12,
       color: "from-blue-500 to-cyan-500"
     }, { title: "AI Services",
@@ -307,16 +277,12 @@ export default function Help() ;{}
     }, { title: "Technical Support",
       description: "Get help with technical issues", icon: HelpCircle,
       articles: 30, color: "from-green-500 to-emerald-500"
->>>>>>> main
     }
   ];&quot;
 
   const contactMethods = [
-<<<<<<< HEAD
     { title: "Live Chat", description: "Get instant help from our support team",
-=======
     {
-<<<<<<< HEAD
       title: &quot;Live Chat&quot;,
       description: &quot;Get instant help from our support team&quot;,
       icon: MessageCircle,
@@ -336,35 +302,26 @@ export default function Help() ;{}
       icon: Mail,
       availability: &quot;24/7 Available&quot;,
       responseTime: &quot;Within 4 hours&quot;
-=======
       title: "Live Chat", description: "Get instant help from our support team",
->>>>>>> main
       icon: MessageCircle, availability: "24/7 Available",
       responseTime: "Immediate"
     }, { title: "Phone Support",
       description: "Speak directly with our technical experts", icon: Phone,
       availability: "Mon-Fri 9AM-6PM EST", responseTime: "Immediate"
     },
-<<<<<<< HEAD
     { title: "Email Support", description: "Send us your questions and we'll respond quickly", '
-=======
     {
       title: "Email Support", description: "Send us your questions and we&apos;ll respond quickly", '
->>>>>>> main
       icon: Mail,
       availability: "24/7 Available", responseTime: "Within 4 hours"
->>>>>>> main
     }
   ];&quot;
 
   const toggleFAQ = (id: number) => {
     setExpandedFAQ(expandedFAQ === id ? null : id);
-<<<<<<< HEAD
   }
-=======
   };
 
->>>>>>> main
   return (
     <>
       <SEO 
@@ -380,19 +337,16 @@ export default function Help() ;{}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8   }}
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Help Center
-=======
               transition={{ duration: 0.8 }}
               className=&quot;text-center max-w-4xl mx-auto&quot;
             >&quot;
               <h1 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>
                 Help Center&quot;
->>>>>>> main
               </h1>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Find answers to your questions, access documentation, and get support from our expert team&quot;
@@ -407,13 +361,10 @@ export default function Help() ;{}
                     placeholder=&quot;Search for help articles, guides, or FAQs...&quot;
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-<<<<<<< HEAD
                     className=&quot;w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focu,s:border-transparent&quot;
                   />&quot;
-=======
                     className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
->>>>>>> main
                 </div>
               </div>
             </motion.div>
@@ -426,33 +377,28 @@ export default function Help() ;{}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Browse by Category</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Find the help you need organized by topic and service area
-=======
               transition={{ duration: 0.8 }}
               className=&quot;text-center mb-12&quot;
             >&quot;
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Browse by Category&quot;</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Find the help you need organized by topic and service area&quot;
->>>>>>> main
               </p>
             </motion.div>
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-4 gap-8&quot;>
               {helpCategories.map((category, index) => (&quot;}
                 <motion.div
->>>>>>> main
                   key={category.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 cursor-pointer";
                 >;
                   <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-4`}>;
@@ -465,7 +411,6 @@ export default function Help() ;{}
                     <ArrowRight className="w-5 h-5 text-gray-400" />;
                   </div>;
                 </motion.div>;
-=======
                   className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hove,r:scale-105 cursor-pointer&quot;
                 >&quot;
                   <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-4`}>
@@ -478,14 +423,12 @@ export default function Help() ;{}
                     <ArrowRight className=&quot;w-5 h-5 text-gray-400&quot; />&quot;
                   </div>
                 </motion.div>
->>>>>>> main
               ))}
             </div>;
           </div>;
         </section>;
 
         {/* FAQ Section */}
-<<<<<<< HEAD
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;
           <div className="container mx-auto px-4">;
             <motion.div;
@@ -503,39 +446,33 @@ export default function Help() ;{}
             <div className="max-w-4xl mx-auto space-y-4">;
               {faqs.map((faq, index) => (;
                 <motion.div;
-=======
         <section className=&quot;py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Quick answers to the most common questions about our services
-=======
               transition={{ duration: 0.8 }}
               className=&quot;text-center mb-12&quot;
             >&quot;
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Frequently Asked Questions&quot;</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Quick answers to the most common questions about our services&quot;
->>>>>>> main
               </p>
             </motion.div>
 
             <div className=&quot;max-w-4xl mx-auto space-y-4&quot;>
               {faqs.map((faq, index) => (&quot;}
                 <motion.div
->>>>>>> main
                   key={faq.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 overflow-hidden";
                 >;
                   <button;
@@ -558,26 +495,22 @@ export default function Help() ;{}
                   </button>;
                   {expandedFAQ === faq.id && (;
                     <motion.div;
-=======
                   className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 overflow-hidden&quot;
                 >&quot;
                   <button
                     onClick={() => toggleFAQ(faq.id)}
-<<<<<<< HEAD
                     className=&quot;w-full p-6 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors&quot;
                   >&quot;
                     <div className=&quot;flex-1&quot;>&quot;"
                       <div className=&quot;flex items-center mb-2&quot;>&quot;"
                         <span className=&quot;px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs mr-3&quot;>
                           {faq.category}&quot;
-=======
                     className="w-full p-6 text-left flex items-center justify-between hover: bg-slate-700/30 transition-colors"
                   >
                     <div className="flex-1">
                       <div className="flex items-center mb-2">
                         <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs mr-3">
                           {faq.category}
->>>>>>> main
                         </span>
                       </div>
                       <h3 className=&quot;text-lg font-semibold text-white&quot;>{faq.question}&quot;</h3>
@@ -590,29 +523,22 @@ export default function Help() ;{}
                   </button>
                   {expandedFAQ === faq.id && (}
                     <motion.div
->>>>>>> main
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: &quot;auto&quot; }}
                       exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
                       transition={{ duration: 0.3   }}
                       className="px-6 pb-6"
                     >
                       <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-=======
                       transition={{ duration: 0.3 }}
-<<<<<<< HEAD
                       className="px-6 pb-6";
                     >;
                       <p className="text-gray-300 leading-relaxed">{faq.answer}</p>;
                     </motion.div>;
-=======
                       className=&quot;px-6 pb-6&quot;
                     >&quot;
                       <p className=&quot;text-gray-300 leading-relaxed&quot;>{faq.answer}&quot;</p>
->>>>>>> main
                     </motion.div>
->>>>>>> main
                   )}
                 </motion.div>;
               ))}
@@ -621,7 +547,6 @@ export default function Help() ;{}
         </section>;
 
         {/* Contact Support */}
-<<<<<<< HEAD
         <section className="py-16">;
           <div className="container mx-auto px-4">;
             <motion.div;
@@ -639,17 +564,13 @@ export default function Help() ;{}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
               {contactMethods.map((method, index) => (;
                 <motion.div;
-=======
         <section className=&quot;py-16&quot;>&quot;"
           <div className=&quot;container mx-auto px-4&quot;>&quot;"
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8   }}
-=======
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className=&quot;text-center mb-12&quot;
             >&quot;
               <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Contact Support&quot;</h2>
@@ -660,8 +581,6 @@ export default function Help() ;{}
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
               {contactMethods.map((method, index) => (&quot;}
-=======
->>>>>>> main
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Contact Support</h2>
@@ -672,14 +591,11 @@ export default function Help() ;{}
 
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
               {contactMethods.map((method, index) => (
->>>>>>> main
                 <motion.div
->>>>>>> main
                   key={method.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
                   className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300";
                 >;
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4">;
@@ -707,7 +623,6 @@ export default function Help() ;{}
         </section>;
       </div>;
     </>;
-=======
                   className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300&quot;
                 >&quot;
                   <div className=&quot;w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4&quot;>&quot;"
@@ -735,20 +650,8 @@ export default function Help() ;{}
         </section>
       </div>
 </>
-<<<<<<< HEAD
   )
 }
-=======
->>>>>>> main
   );
 }
-=======
-  ChevronUp, HelpCircle, CheckCircle, ArrowRight;",
-} from 'lucide-react
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+  ChevronUp, HelpCircle, CheckCircle, ArrowRight;"} from 'lucide-react

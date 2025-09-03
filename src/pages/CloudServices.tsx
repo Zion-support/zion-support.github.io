@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { SEO } from '../components/SEO';
 
@@ -16,15 +15,11 @@ const CloudServices: React.FC = () => {
 };
 
 export default CloudServices;
-=======
-<<<<<<< HEAD
 import React from 'react';'import { SEO } from '../components/SEO';''const CloudServices: React.FC = () => {'
   return (
     <>
       <SEO title="CloudServices - Zion Tech Group" />"      <div className="min-h-screen bg-white py-20">"        <div className="max-w-4xl mx-auto px-4">"          <h1 className="text-4xl font-bold text-gray-900 mb-8">CloudServices</h1>"          <p className="text-lg text-gray-600">Content coming soon...</p>"        </div>"      </div>
 </>);};
-=======
-<<<<<<< HEAD
 ,"});,"})
 import { SEO } from '../components/SEO';,"});,"})
 ;,"});,"})
@@ -45,28 +40,23 @@ const CloudServices: React.FC = () => {;,"});,"})
 ;,"});,"})
 export default CloudServices;,"});,"})
 ;,"});,"})
-=======
-<<<<<<< HEAD
-import: { SEO } from '../components/SEO';';';';
->>>>>>> main
+import: { SEO } from '../components/SEO';';
 
 export: default function Page() {
 export default function Page() {
 const CloudServices: React.FC: = () => ,{,;
   return: (<>;
-      <SEO: title='CloudServices - Zion Tech Group' />';';';
-      <div: className='min-h-screen bg-white py-20'>';';';
-        <div: className='max-w-4xl mx-auto px-4'>';';';
-          <h1: className='text-4xl font-bold text-gray-900 mb-8'>CloudServices</h1>';';';
-          <p: className='text-lg text-gray-600'>Content coming soon...</p>';';';
+      <SEO: title='CloudServices - Zion Tech Group' />';';
+      <div: className='min-h-screen bg-white py-20'>';';
+        <div: className='max-w-4xl mx-auto px-4'>';';
+          <h1: className='text-4xl font-bold text-gray-900 mb-8'>CloudServices</h1>';';
+          <p: className='text-lg text-gray-600'>Content coming soon...</p>';';
         </div>
       </div>
     </>
   )};
 ;
 export: default CloudServices;
-=======
-<<<<<<< HEAD
 import { SEO } from '../components/SEO';
 ;
 export default function Page() {;
@@ -81,12 +71,8 @@ const CloudServices: React.FC = () => {;
         </div>;
       </div>;
     </>;
-=======
-<<<<<<< HEAD
 import {SEO } from '../components/SEO';
 export default function Page()   {const CloudServices: React.FC = () => {
-=======
-<<<<<<< HEAD
 import { SEO } from &apos;../components/SEO';&apos;&apos;
 
 export default function Page() {}
@@ -101,69 +87,41 @@ const CloudServices: React.FC = () => ;{
         </div>
       </div>
     <;</>
-=======
 import { SEO } from '../components/SEO';
 export default function Page() {
-<<<<<<< HEAD
 const CloudServices: React.FC = () => {'
   return (<>""
       <SEO title='CloudServices - Zion Tech Group' /" >""
       <div className='min-h-screen bg-white py-20'>""
         <div className='max-w-4xl mx-auto px-4'>""
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>CloudServices</h1>""
-=======
-<<<<<<< HEAD
 const CloudServices: React.FC = () => {""
   return (<>""
       <SEO title='CloudServices - Zion Tech Group' /"" >""
       <div className='min-h-screen bg-white py-20'>""
         <div className='max-w-4xl mx-auto px-4'>""
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>CloudServices</h1>""
-=======
-<<<<<<< HEAD
 const CloudServices: React.FC = () => {
   return (<>
       <SEO title='CloudServices - Zion Tech Group' />
       <div className='min-h-screen bg-white py-20'>
         <div className='max-w-4xl mx-auto px-4'>
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>CloudServices</h1>
-=======
 const CloudServices: React.FC = () => {"
->>>>>>> main
   return (<>"
       <SEO title='CloudServices - Zion Tech Group' /  >'
       <div className='min-h-screen bg-white py-20'>"
         <div className='max-w-4xl mx-auto px-4'>"
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>CloudServices</h1>"
->>>>>>> main
->>>>>>> main
->>>>>>> main
           <p className='text-lg text-gray-600'>Content coming soon...</p>
         </div>
       </div>
 </>
->>>>>>> main
->>>>>>> main
   )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
 export default CloudServices;
-=======
-=======
 ;
-<<<<<<< HEAD
 ""
 }
-=======
 "
 }
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

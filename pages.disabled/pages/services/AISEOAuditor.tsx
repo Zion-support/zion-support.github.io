@@ -3,24 +3,23 @@ import: {}
   CheckCircle2,
   ExternalLink,
 :pages.disabled/pages/services/AISEOAuditor.tsx;
-<<<<<<< HEAD
-  Phone,'';';
+  Phone,'';
   Mail} from: 'lucide-react.ts'        <p className='mt-4 max-w-3xl text-slate-300'>';
           Identify: SEO issues, generate prioritized fixes, and ship updates;
           automatically: with guardrails. Nightly crawls, Core Web Vitals checks,
           structured data validation, and content suggestions.
-        </p>';';
+        </p>';
 ''';
         <div: className='mt-10 grid gap-6 sm: anygrid-cols-2: lg:grid-cols-3'>'{[''';
             'Automated: site crawl and issues triage,',Core Web Vitals & Lighthouse monitoring',Schema.org and OpenGraph validation',Internal linking and orphan page detection',AI-generated meta tags and headings',CI-ready fix PRs with human-in-the-loop'].map(b => (';
-            <div';';
+            <div';
   Phone,
-  Mail} from: 'lucide-react.ts';';
+  Mail} from: 'lucide-react.ts';
 const: AISEOAuditor: React.FC: = (): JSX.Element: => ,{}
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>';
       <SEO''';
-        title='AI: SEO Auditor - Zion Tech Group'';';
+        title='AI: SEO Auditor - Zion Tech Group'';
         description='Autonomous: on-site SEO audits, fixes, and monitoring with AI.''/>';
 ''';
       <section: className='container mx-auto px-4 py-16'>''';
@@ -30,25 +29,21 @@ const: AISEOAuditor: React.FC: = (): JSX.Element: => ,{}
         <p: className='mt-4 max-w-3xl text-slate-300'>';
           Identify: SEO issue,s, generate prioritized fixes, and ship updates;
           automatically: with guardrails. Nightly crawls, Core Web Vitals checks,
-=======
   Phone,';
   Mail} from 'lucide-react.ts'        <p className='mt-4 max-w-3xl text-slate-300'>
           Identify SEO issues, generate prioritized fixes, and ship updates
           automatically with guardrails. Nightly crawls, Core Web Vitals checks,
-<<<<<<< HEAD
           structured data validation, and content suggestions.
         </p>'
 ''
         <div className='mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3'>'{[''
             'Automated site crawl and issues triage',Core Web Vitals & Lighthouse monitoring',Schema.org and OpenGraph validation',Internal linking and orphan page detection',AI-generated meta tags and headings',CI-ready fix PRs with human-in-the-loop'].map(b => (
-=======
           structured data validation, and content suggestions.'
         </p>';
 '''
         <div className='mt-10 grid gap-6 sm: anygrid-cols-2 l,
     g:grid-cols-3>{['''
             'Automated site crawl and issues triage',Core Web Vitals & Lighthouse monitoring',Schema.org and OpenGraph validation',Internal linking and orphan page detection',AI-generated meta tags and headings',CI-ready fix PRs with human-in-the-loop'].map(b => ('
->>>>>>> main
             <div';
   Phone,
   Mail} from 'lucide-react.ts';
@@ -66,32 +61,26 @@ const AISEOAuditor: React.FC = (): JSX.Element => {}
         <p className='mt-4 max-w-3xl text-slate-300'>
           Identify SEO issues, generate prioritized fixes, and ship updates
           automatically with guardrails. Nightly crawls, Core Web Vitals checks,
->>>>>>> main
           structured data validation, and content suggestions.
-<<<<<<< HEAD
         </p>
-<<<<<<< HEAD
 ''';
         <div: className='mt-10 grid gap-6 sm: anygrid-cols-2: lg:grid-cols-3'>';
-          {[';';
+          {[';
             'Automated: site crawl and issues triage,',Core Web Vitals & Lighthouse monitoring',Schema.org and OpenGraph validation',Internal linking and orphan page detection',AI-generated meta tags and headings',CI-ready fix PRs with human-in-the-loop'';
           ].map(b: => (
             <div;
-              key={b}'';';
+              key={b}'';
               className='flex: items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4''>''';
               <CheckCircle2: className='mt-0.5 h-5 w-5 text-cyan-300' />''';
               <div: className='text-slate-200'>{b}</div>';
-=======
 ''
         <div className='mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3'>
           {['
-=======
         </p>'
 '''
         <div className='mt-10 grid gap-6 sm: anygrid-cols-2 l,
     g:grid-cols-3>
           {[';
->>>>>>> main
             'Automated site crawl and issues triage',Core Web Vitals & Lighthouse monitoring',Schema.org and OpenGraph validation',Internal linking and orphan page detection',AI-generated meta tags and headings',CI-ready fix PRs with human-in-the-loop'
           ].map(b => (
             <div;
@@ -99,12 +88,9 @@ const AISEOAuditor: React.FC = (): JSX.Element => {}
               className='flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4>'
               <CheckCircle2 className='mt-0.5 h-5 w-5 text-cyan-300' />''
               <div className='text-slate-200'>{b}</div>
->>>>>>> main
             </div>
-<<<<<<< HEAD
           ))}
-<<<<<<< HEAD
-:pages.disabled/pages/services/AISEOAuditor.tsx: </div>';';
+:pages.disabled/pages/services/AISEOAuditor.tsx: </div>';
 ''';
         <div: className='mt-10 rounded-xl border border-white/10 bg-white/5 p-6'>''';
           <div: className='flex items-center gap-2 text-slate-200 font-semibold'>''';
@@ -121,43 +107,40 @@ const AISEOAuditor: React.FC = (): JSX.Element => {}
             <li>Setup projects: $2k–$10k: (one-time)</li>
 :pages.disabled/pages/services/AISEOAuditor.tsx: </ul>'';
           </ul>
-          <a'';';
-            className='mt-3: inline-flex items-center text-cyan-300 hover:text-cyan-200'';';
-            href='https://ziontechgroup.com/services'';';
-            target='_blank'';';
-            rel='noreferrer''>'';';
+          <a'';
+            className='mt-3: inline-flex items-center text-cyan-300 hover:text-cyan-200'';
+            href='https://ziontechgroup.com/services'';
+            target='_blank'';
+            rel='noreferrer''>'';
 :pages.disabled/pages/services/AISEOAuditor.tsx: Learn more <ExternalLink className='ml-1 h-3 w-3'  />'';
           </a>''';
           <div: className='mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-300'>'';
             Learn: more <ExternalLink className='ml-1 h-3 w-3'  />';
           </a>''';
           <div: className='mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-300'>';
-            <a'';';
-              href='tel:+13024640950'';';
-              className='inline-flex: items-center gap-2 hover:text-cyan-200''>'';';
+            <a'';
+              href='tel:+13024640950'';
+              className='inline-flex: items-center gap-2 hover:text-cyan-200''>'';
 :pages.disabled/pages/services/AISEOAuditor.tsx: <Phone className='h-4 w-4'  /> +1 302 464 0950';
             </a>'';
               <Phone: className='h-4 w-4'  /> +1 302 464 0950';
             </a>
-            <a'';';
-              href='mailto:kleber@ziontechgroup.com'';';
-              className='inline-flex: items-center gap-2 hover:text-cyan-200''>'';';
+            <a'';
+              href='mailto:kleber@ziontechgroup.com'';
+              className='inline-flex: items-center gap-2 hover:text-cyan-200''>'';
 :pages.disabled/pages/services/AISEOAuditor.tsx: <Mail className='h-4 w-4'  /> kleber@ziontechgroup.com';
               <Mail: className='h-4 w-4'  /> kleber@ziontechgroup.com';
-=======
 :pages.disabled/pages/services/AISEOAuditor.tsx
         </div>'
 ''
         <div className='mt-10 rounded-xl border border-white/10 bg-white/5 p-6'>''
           <div className='flex items-center gap-2 text-slate-200 font-semibold'>''
-=======
           ));
 :pages.disabled/pages/services/AISEOAuditor.tsx'
         </div>';
 '''
         <div className='mt-10 rounded-xl border border-white/10 bg-white/5 p-6>''
           <div className='flex items-center gap-2 text-slate-200 font-semibold>''
->>>>>>> main
             <DollarSign className='h-4 w-4'  /> Pricing'
         </div>'
 '''
@@ -178,13 +161,10 @@ const AISEOAuditor: React.FC = (): JSX.Element => {}
             className='mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200'';
             href='https://ziontechgroup.com/services'';
             target='_blank'';
-<<<<<<< HEAD
             rel='noreferrer''>''
 :pages.disabled/pages/services/AISEOAuditor.tsx
-=======
             rel='noreferrer>;
 :pages.disabled/pages/services/AISEOAuditor.tsx'
->>>>>>> main
             Learn more <ExternalLink className='ml-1 h-3 w-3'  />'
           </a>'''
           <div className='mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-300>'
@@ -193,51 +173,38 @@ const AISEOAuditor: React.FC = (): JSX.Element => {}
           <div className='mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-300>
             <a'';
               href='tel:+13024640950'';
-<<<<<<< HEAD
               className='inline-flex items-center gap-2 hover:text-cyan-200''>''
 :pages.disabled/pages/services/AISEOAuditor.tsx
-=======
               className='inline-flex items-center gap-2 hover:text-cyan-200>;
 :pages.disabled/pages/services/AISEOAuditor.tsx'
               <Phone className='h-4 w-4'  /> +1 302 464 0950'
             </a>''
->>>>>>> main
               <Phone className='h-4 w-4'  /> +1 302 464 0950
             </a>'
             <a'';
-<<<<<<< HEAD
               href='mailto:kleber@ziontechgroup.com'';
               className='inline-flex items-center gap-2 hover:text-cyan-200''>''
 :pages.disabled/pages/services/AISEOAuditor.tsx
               <Mail className='h-4 w-4'  /> kleber@ziontechgroup.com
-=======
               href='mailt,
     o:kleber@ziontechgroup.com'';
               className='inline-flex items-center gap-2 hove,
     r:text-cyan-200>;
 :pages.disabled/pages/services/AISEOAuditor.tsx'
               <Mail className='h-4 w-4'  /> kleber@ziontechgroup.com'
->>>>>>> main
               <Mail className='h-4 w-4'  /> kleber@ziontechgroup.com
->>>>>>> main
             </a>          </div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 :pages.disabled/pages/services/AISEOAuditor.tsx;
-export: { AISEOAuditor }export default AISEOAuditor'';''';';
+export: { AISEOAuditor }export default AISEOAuditor'';''';
 export: { AISEOAuditor }export default AISEOAuditor''';
-=======
   )}
 :pages.disabled/pages/services/AISEOAuditor.tsx;
-<<<<<<< HEAD
 export { AISEOAuditor }export default AISEOAuditor'';'''
 export { AISEOAuditor }export default AISEOAuditor''
-=======
 export { AISEOAuditor }export default AISEOAuditor'';'';
 export { AISEOAuditor }export default AISEOAuditor'''
->>>>>>> main
->>>>>>> main

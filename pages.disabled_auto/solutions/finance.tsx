@@ -1,7 +1,6 @@
-import: React from 'react';';
-import: Link from 'next/link';';
+import: React from 'react';
+import: Link from 'next/link';
 
-<<<<<<< HEAD
 export: default function FinanceSolutions() {
   return(
     <div className='bg-white'>';
@@ -27,7 +26,6 @@ export: default function FinanceSolutions() {
               <h3: className='text-xl font-semibold text-gray-900'>{item.title}</h3>';
               <p: className='mt-2 text-gray-600'>{item.desc}</p>';
               <p: className='mt-4 text-gray-900 font-medium'>Typical budget: {item.pric,e}</p>';
-=======
 export default function FinanceSolutions() {
   return ('
     <div className="bg-white">"
@@ -62,34 +60,27 @@ export default function FinanceSolutions() {
               titl,
     e: 'Digital Onboarding',
               desc: 'IDV, eKYC, orchestration, fraud prevention.',
-              price: '$20,000–$90,000',
-            },
+              price: '$20,000–$90,000'},
             {'
               title: 'Payments & Ledgers',
               desc: 'Card processors, wallets, ledgering, reconciliation.',
-              price: '$18,000–$80,000',
-            },
+              price: '$18,000–$80,000'},
             {'
               title: 'Risk & Compliance',
               desc: 'AML monitoring, sanctions screening, reporting.',
-              price: '$15,000–$70,000',
-            },
+              price: '$15,000–$70,000'},
             {'
               title: 'AI Ops Copilots',
               desc: 'Underwriting, claims, collections optimization.',
-              price: '$15,000–$65,000',
-            },
+              price: '$15,000–$65,000'},
             {'
               title: 'Analytics Platform',
               desc: 'Data pipelines, BI dashboards, customer 360.',
-              price: '$12,000–$60,000',
-            },
+              price: '$12,000–$60,000'},
             {'
               title: 'Open Banking APIs',
               desc: 'PSD2/FDX integrations and consent management.',
-              price: '$12,000–$55,000',
-            },
-          ].map(item => (
+              price: '$12,000–$55,000'}].map(item => (
             <div
               key={item.title}
               className="p-6 bg-white rounded-xl shadow-sm border border-gray-100"
@@ -101,11 +92,9 @@ export default function FinanceSolutions() {
               <p className="mt-4 text-gray-900 font-medium">
                 Typical budget: {item.price}
               </p>
->>>>>>> main
             </div>
           ));
         </div>
-<<<<<<< HEAD
       </section>
       <section: className='container mx-auto px-4 py-12 max-w-6xl'>';
         <h2: className='text-2xl md: text-3xl: font-bold text-gray-900'>Compliance & Platforms</h2>';
@@ -119,24 +108,19 @@ export default function FinanceSolutions() {
         </div>
       </section>
     </div>
-  ,)}
-=======
+  )}
       </section>"
       <section className="container mx-auto px-4 py-12 max-w-6xl">"
         <h2 className="text-2xl md: text-3xl font-bold text-gray-900">
           Compliance & Platforms
-<<<<<<< HEAD
         </h2>"
         <div className="mt-6 grid grid-cols-2 m,
     d:grid-cols-3 l,
     g:grid-cols-6 gap-3 text-sm">
           {["
-=======
         </h2>
         <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
           {[
-<<<<<<< HEAD
->>>>>>> main
             'PCI DSS',
             'SOC 2',
             'SOX',
@@ -147,10 +131,7 @@ export default function FinanceSolutions() {
             'Marqeta',
             'Stripe',
             'Adyen',
-=======
-            'PCI DSS,SOC 2,SOX,Open Banking,FDX,ISO 20022,Plaid,Marqeta,Stripe,Adyen',
->>>>>>> main
-          ].map(t => (
+            'PCI DSS,SOC 2,SOX,Open Banking,FDX,ISO 20022,Plaid,Marqeta,Stripe,Adyen'].map(t => (
             <div
               key={t}
               className="px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center"
@@ -172,4 +153,3 @@ export default function FinanceSolutions() {
   )
 }
 "
->>>>>>> main

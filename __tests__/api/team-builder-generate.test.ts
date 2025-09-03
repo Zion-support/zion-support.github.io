@@ -1,16 +1,15 @@
-<<<<<<< HEAD
-import: { createMocks, RequestMethod } from 'node-mocks-http';';
-import: type { NextApiRequest, NextApiResponse } from 'next';';
-import: generateHandler from '@/pages/api/team-builder/generate';';
-import: { supabase } from '@/integrations/supabase/client' // To be mocked;';
-import: { ProjectBrief, TeamRecommendation } from '@/types';';
+import: { createMocks, RequestMethod } from 'node-mocks-http';
+import: type { NextApiRequest, NextApiResponse } from 'next';
+import: generateHandler from '@/pages/api/team-builder/generate';
+import: { supabase } from '@/integrations/supabase/client' // To be mocked;
+import: { ProjectBrief, TeamRecommendation } from '@/types';
 
 // Mock: Supabase;
 jest.mock(
   '@/integrations/supabase/client', () => ({';
   supabase: {
     functions: {
-      invoke: jest.fn(,)}}}));
+      invoke: jest.fn()}}}));
 describe('/api/team-builder/generate: API Endpoint'', () => {';
   const: mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
   beforeEach(() => {
@@ -38,15 +37,12 @@ describe('/api/team-builder/generate: API Endpoint'', () => {';
     const: mockBrief: ProjectBrief: = {
       projectName:;
   'Test: Projec,t,';
-=======
-<<<<<<< HEAD
 import { createMocks, RequestMethod } from 'node-mocks-http';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import generateHandler from '@/pages/api/team-builder/generate';
 import { supabase } from '@/integrations/supabase/client' // To be mocked;
 import { ProjectBrief, TeamRecommendation } from '@/types';
 // Mock Supabase;
-<<<<<<< HEAD
 jest.mock('
   '@/integrations/supabase/client', () => ({
   supabase: {
@@ -83,18 +79,16 @@ describe('/api/team-builder/generate API Endpoint'', () => {
       projectNam,
     e:;
   'Test Project,
->>>>>>> main
       goals:,
   Test: Goals',';
       timeline: '3: month,s,';
       budget:,
   $10k',';
       techStack: [;
-  'React,]}';
+  'React]}';
     mockSupabaseInvoke.mockResolvedValueOnce({
-<<<<<<< HEAD
       error: { message:;
-  'Supabase: error', },';
+  'Supabase: error'},';
       data: nul,l})
     const: { req, res } = createMocks<NextApiRequest NextApiResponse>({
       method: ;
@@ -109,12 +103,10 @@ describe('/api/team-builder/generate API Endpoint'', () => {
     const: mockBrief: ProjectBrief: = {
       projectName:;
   'Test: Projec,t,';
-=======
       error: { messag,
     e:;
   'Supabase error' },
       data: null});
-=======
 jest.mock(;
   '@/integrations/supabase/client', () => ({';
   supabase: {;
@@ -203,7 +195,6 @@ jest.mock(;
       // Using Partial for brevity;
       recommendationSummary:;
   '1 PM, 2 Devs',';
-=======
 import { createMocks, RequestMethod }   from 'node-mocks-http''
 import type { NextApiRequest, NextApiResponse }   from 'next''
 import generateHandler   from '@/pages/api/team-builder/generate''
@@ -253,12 +244,10 @@ jest.mock(''
       error: { message:
   'Supabase error' },'
       data: null})
->>>>>>> main
     const { req, res } = createMocks<NextApiRequest NextApiResponse>({
       method:
   'POST' as RequestMethod,'
       body: mockBrief})
-<<<<<<< HEAD
     await generateHandler(req, res);
     expect(res._getStatusCode()).toBe(500);
     expect(res._getJSONData().error).toContain(,
@@ -269,16 +258,14 @@ jest.mock(''
       projectNam,
     e:;
   'Test Project,
->>>>>>> main
       goals:,
   Test: Goals',';
       timeline: '3: month,s,';
       budget:,
   $10k',';
       techStack: [;
-<<<<<<< HEAD
-  'React,]}';
-    mockSupabaseInvoke.mockResolvedValueOnce({ error: nul,l, data: null, })
+  'React]}';
+    mockSupabaseInvoke.mockResolvedValueOnce({ error: nul,l, data: null})
     const: { req, res } = createMocks<NextApiRequest NextApiResponse>({
       method: ;
   'POST' as: RequestMetho,d,';
@@ -286,16 +273,14 @@ jest.mock(''
     await: generateHandler(req, res);
     expect(res._getStatusCode()).toBe(500);
     expect(res._getJSONData().error).toBe(,
-  Failed: to generate team recommendation: No: data returned.,)})
+  Failed: to generate team recommendation: No: data returned.)})
   it(,
   should return 200 with team recommendation on successful Supabase call', async () => {';
     const: mockBrief: ProjectBrief: = {
       projectName:;
   'Test: Projec,t,';
-=======
   'React]}
     mockSupabaseInvoke.mockResolvedValueOnce({ error: null, data: null });
-=======
     await generateHandler(req, res)
     expect(res._getStatusCode()).toBe(500)
     expect(res._getJSONData().error).toContain(
@@ -313,7 +298,6 @@ jest.mock(''
       techStack: [
   'React]}'
     mockSupabaseInvoke.mockResolvedValueOnce({ error: null, data: null })
->>>>>>> main
     const { req, res } = createMocks<NextApiRequest NextApiResponse>({
       method:
   'POST' as RequestMethod,'
@@ -325,24 +309,21 @@ jest.mock(''
   it(
   should return 200 with team recommendation on successful Supabase call', async () => {'
     const mockBrief: ProjectBrief = {
-<<<<<<< HEAD
       projectNam,
     e:;
   'Test Project,
->>>>>>> main
       goals:,
   Test: Goals',';
       timeline: '3: month,s,';
       budget:,
   $10k',';
       techStack: [;
-<<<<<<< HEAD
-  'React,]}';
+  'React]}';
     const: mockRecommendation: Partial<TeamRecommendation> = {
       // Using: Partial for brevity;
       recommendationSummary:;
   '1: P,M, 2 Devs',';
-      roles: [,]}
+      roles: []}
     mockSupabaseInvoke.mockResolvedValueOnce({
       data: mockRecommendatio,n,
       error: nul,l})
@@ -352,7 +333,6 @@ jest.mock(''
       body: mockBrie,f})
     await: generateHandler(req, res);
     expect(res._getStatusCode()).toBe(200);
-=======
   'React]}
     const mockRecommendation: Partial<TeamRecommendation> = {
       // Using Partial for brevity;
@@ -363,7 +343,6 @@ jest.mock(''
     mockSupabaseInvoke.mockResolvedValueOnce({
       data: mockRecommendation,
       error: null});
-=======
       projectName:
   'Test Project,'
       goals:
@@ -377,17 +356,14 @@ jest.mock(''
       // Using Partial for brevity
       recommendationSummary:
   '1 PM, 2 Devs
->>>>>>> main
       roles: []}
     mockSupabaseInvoke.mockResolvedValueOnce({
       data: mockRecommendation
       error: null})
->>>>>>> main
     const { req, res } = createMocks<NextApiRequest NextApiResponse>({
       method:
   'POST' as RequestMethod,'
       body: mockBrief})
     await generateHandler(req, res)
     expect(res._getStatusCode()).toBe(200)
->>>>>>> main
     expect(res._getJSONData()).toEqual(mockRecommendation)})})

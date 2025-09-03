@@ -1,17 +1,14 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require(`path`);
 
 console.log(``📦 Starting continuous dependency updates automation...`);
-=======
 #!/'usr/bin/env' node;
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 ;
 console.log(`'📦 Starting continuous dependency updates automation...');
 ;
@@ -26,17 +23,14 @@ async function runDependencyUpdates() {;
     // Check for outdated dependencies;
     console.log(`'🔍 Checking for outdated dependencies...');
     try {;
-=======
 
 console.log(`📦 Starting continuous dependency updates automation...`);
->>>>>>> main
 
 // Get automation interval from environment variable (default: 6 hours)
 const AUTOMATION_INTERVAL =
   parseInt(process.env.AUTOMATION_INTERVAL) || 21600000; // 6 hours;
 async function runDependencyUpdates() {
   try {
-<<<<<<< HEAD
     console.log(`📦 Running dependency updates at ${new Date().toISOString()});
 
     // Check for outdated dependencies;
@@ -50,69 +44,54 @@ async function runDependencyUpdates() {
 
     // Check for security vulnerabilities;
     console.log(`'🔒 Checking for security vulnerabilities...');
-=======
     console.log(`📦 Running dependency updates at ${new Date().toISOString()});`);
 `);
     // Check for outdated dependencies`);
     console.log(`🔍 Checking for outdated dependencies...`);
     try {
->>>>>>> main
       execSync('npm outdated', { stdio: 'inherit' });
     } catch (error) {;
       console.log('✅ All dependencies are up to date'`);
       return;
     }
-<<<<<<< HEAD
 ;
     // Check for security vulnerabilities;
     console.log(`'🔒 Checking for security vulnerabilities...');
     try {;
-=======
 
     // Check for security vulnerabilities
     console.log(`🔒 Checking for security vulnerabilities...`);
->>>>>>> main
     try {
->>>>>>> main
       execSync('npm audit --audit-level=moderate', { stdio: 'inherit' });
       console.log('✅ No security vulnerabilities found');
-<<<<<<< HEAD
     } catch (error) {  
       console.log('⚠️  Security vulnerabilities found, attempting to fix...');
       try {
         execSync('npm audit fix --audit-level=moderate', { stdio: 'inherit'   });
-=======
     } catch (error) {;
       console.log('⚠️  Security vulnerabilities found, attempting to fix...');
       try {;
         execSync('npm audit fix --audit-level=moderate', { stdio: 'inherit' });
->>>>>>> main
         console.log('✅ Security vulnerabilities fixed');
       } catch (fixError) {;
         console.log('❌ Could not fix security vulnerabilities');
       }
     }
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
     // Update minor and patch versions;
     console.log('🔄 Updating minor and patch versions...');
     try {;
       execSync('npm update', { stdio: 'inherit' });
       console.log('✅ Minor and patch updates completed');
-<<<<<<< HEAD
     } catch (error) {  
       console.log('⚠️  Some updates failed');
       }
 
-=======
     } catch (error) {;
       console.log('⚠️  Some updates failed');
     }
 ;
->>>>>>> main
     // Check for major version updates;
     console.log('🔍 Checking for major version updates...');
     try {;
@@ -131,7 +110,6 @@ async function runDependencyUpdates() {
         console.log('⚠️  Major version updates available:');
         majorUpdates.forEach(([`pkg`, `info`]) => {console.log(  - ${pkg}: ${info.current} → ${info.latest});
         });
-<<<<<<< HEAD
 
         console.log(`ℹ️  Major updates require manual review`);
       } else {
@@ -145,32 +123,26 @@ async function runDependencyUpdates() {
     console.log('📦 Installing updated dependencies...');
     execSync('npm install', { stdio: 'inherit' });
 
-=======
 ;
         console.log('ℹ️  Major updates require manual review');
       } else {;
         console.log('✅ No major version updates available'`);
       }
-<<<<<<< HEAD
     } catch (error) {;
       console.log(`'ℹ️  Could not check for major updates');
-=======
     } catch (error) {
       console.log(`ℹ️  Could not check for major updates`);
->>>>>>> main
     }
 ;
     // Install dependencies;
     console.log('📦 Installing updated dependencies...');
     execSync('npm install', { stdio: 'inherit' });
 ;
->>>>>>> main
     // Run tests to ensure nothing broke;
     console.log('🧪 Running tests after updates...');
     try {;
       execSync('npm test', { stdio: 'inherit' });
       console.log('✅ Tests passed after updates');
-<<<<<<< HEAD
     } catch (error) {  
       console.log('❌ Tests failed after updates - rolling back...');
       execSync('npm install', { stdio: 'inherit'   });
@@ -181,8 +153,7 @@ async function runDependencyUpdates() {
     const report = {
       timestamp: new Date().toISOString(),
       summary: 'Dependency updates completed`,
-      status: `completed`,
-    };
+      status: `completed`};
 
     const reportPath = path.join(
       process.cwd(),dependency-updates-report.json`
@@ -215,7 +186,6 @@ async function runContinuous() {
 
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
-=======
     } catch (error) {;
       console.log('❌ Tests failed after updates - rolling back...');
       execSync('npm install', { stdio: 'inherit' });
@@ -260,7 +230,6 @@ async function runContinuous() {;
 ;
 // Handle graceful shutdown;
 process.on('SIGINT', () => {;
->>>>>>> main
   console.log('🛑 Received SIGINT, shutting down gracefully...');
   process.exit(0);
 });
@@ -269,15 +238,12 @@ process.on('SIGTERM', () => {;
   console.log('🛑 Received SIGTERM, shutting down gracefully...');
   process.exit(0);
 });
-<<<<<<< HEAD
 
 // Start the continuous dependency updates;
 runContinuous().catch(error => {
-=======
 ;
 // Start the continuous dependency updates;
 runContinuous().catch(error => {;
->>>>>>> main
   console.error('❌ Failed to start continuous dependency updates:', error);
   process.exit(1);
 });

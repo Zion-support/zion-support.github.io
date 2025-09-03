@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react'; import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom'; import { AppHeader } from './layout/AppHeader.jsx'; import { Footer } from './components/Footer.jsx'; import { ChatAssistant } from './components/ChatAssistant.tsx';
-=======
-<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react'; import { BrowserRouter as Router, Routes, Route    } from 'react-router-dom'; import { AppHeader } from './layout/AppHeader.jsx'; import { Footer } from './components/Footer.jsx'; import { ChatAssistant } from './components/ChatAssistant.tsx';
-=======
-<<<<<<< HEAD
 
 import React, { Suspense, lazy } from 'react';,"});,"})
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';,"});,"})
@@ -15,7 +10,6 @@ import { ChatAssistant } from './components/ChatAssistant.tsx';,"});,"})
 ('');,"});,"})
 ;,"});,"})
 import React, { Suspense, lazy } from 'react'; import { BrowserRouter as Router, Routes, Route    } from 'react-router-dom'; import { AppHeader } from './layout/AppHeader.jsx'; import { Footer } from './components/Footer.jsx'; import { ChatAssistant } from './components/ChatAssistant.tsx';,"});,"})
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff;,"});,"})
 // Home and main pages';,"});,"})
 const Home = lazy(() => import('./pages/Home.tsx'));,"});,"})
 const About = lazy(() => import('./pages/About.tsx'));,"});,"})
@@ -146,26 +140,17 @@ export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Site
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App };,"});,"})
 ;,"});,"})
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App };,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
-<<<<<<< HEAD
 import React, {Suspense, lazy } from 'react';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {AppHeader } from './layout/AppHeader.jsx';
 import {Footer } from './components/Footer.jsx';
 import {ChatAssistant } from './components/ChatAssistant.tsx';
 
-<<<<<<< HEAD
 // Home and main pages'
-=======
 // Home and main pages
-=======
-<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 import { AppHeader } from './layout/AppHeader.jsx';
 import { Footer } from './components/Footer.jsx';
-=======
-<<<<<<< HEAD
 import React, { Suspense, lazy } from &apos;react';
 import { BrowserRouter as Router, Routes, Route } from &apos;react-router-dom';
 import { AppHeader } from &apos;./layout/AppHeader.jsx';
@@ -190,30 +175,19 @@ const LoadingSpinner = () => (
   <;<div className=&apos;flex items-center justify-center min-h-screen&apos;>&apos;'
     <div className=&apos;animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan&apos;>&apos;'</div>
   <;</div>
-=======
-<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';""
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';""
 import { AppHeader } from './layout/AppHeader.jsx';""
 import { Footer } from './components/Footer.jsx';""
-=======
 import React, { Suspense, lazy } from 'react
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom
 import { AppHeader } from './layout/AppHeader.jsx
 import { Footer } from './components/Footer.jsx
->>>>>>> main
->>>>>>> main
 import { ChatAssistant } from './components/ChatAssistant.tsx';
-<<<<<<< HEAD
 (');
 // Home and main pages';
-=======
-<<<<<<< HEAD
 ('');
 // Home and main pages';'
->>>>>>> main
->>>>>>> main
->>>>>>> main
 const Home = lazy(() => import('./pages/Home.tsx'));
 const About = lazy(() => import('./pages/About.tsx'));
 const Contact = lazy(() => import('./pages/Contact.tsx'));
@@ -222,9 +196,7 @@ const PartnersPage = lazy(() => import('./pages/Partners.tsx'));
 const Login = lazy(() => import('./pages/Login.tsx'));
 const FAQ = lazy(() => import('./pages/FAQ.tsx'));
 const Careers = lazy(() => import('./pages/Careers.tsx'));
-=======
 
-<<<<<<< HEAD
 // Home and main pages""
 const Home = lazy(() => import('./pages/Home.tsx'));""
 const About = lazy(() => import('./pages/About.tsx'));""
@@ -234,7 +206,6 @@ const PartnersPage = lazy(() => import('./pages/Partners.tsx'));""
 const Login = lazy(() => import('./pages/Login.tsx'));""
 const FAQ = lazy(() => import('./pages/FAQ.tsx'));""
 const Careers = lazy(() => import('./pages/Careers.tsx'));""
-=======
 // Home and main pages"
 const Home = lazy(() => import('./pages/Home.tsx'));"
 const About = lazy(() => import('./pages/About.tsx'));"
@@ -244,15 +215,10 @@ const PartnersPage = lazy(() => import('./pages/Partners.tsx'));"
 const Login = lazy(() => import('./pages/Login.tsx'));"
 const FAQ = lazy(() => import('./pages/FAQ.tsx'));"
 const Careers = lazy(() => import('./pages/Careers.tsx'));"
->>>>>>> main
->>>>>>> main
 const Sitemap = lazy(() => import('./pages/Sitemap.jsx'));
-<<<<<<< HEAD
 // Services pages;
-<<<<<<< HEAD
 const ComprehensivePricing = lazy(() =>
   import('./pages/ComprehensivePricing2025.tsx'))
-=======
 const ComprehensivePricing = lazy(() =>;
   import('./pages/ComprehensivePricing2025.tsx'));
 // Loading component;
@@ -351,51 +317,36 @@ function App() {}
       </div>;
     </Router>;
   )}
-=======
 // Services pages
-<<<<<<< HEAD
 const ComprehensivePricing = lazy(() =>'
   import('./pages/ComprehensivePricing2025.tsx');
 );
->>>>>>> main
 // Loading component
 const LoadingSpinner = () => ('
   <div className='flex items-center justify-center min-h-screen>
-=======
 const ComprehensivePricing = lazy(() =>""
   import('./pages/ComprehensivePricing2025.tsx')
 );
 // Loading component
 const LoadingSpinner = () => (""
   <div className='flex items-center justify-center min-h-screen'>""
->>>>>>> main
     <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan'></div>
   </div>
-<<<<<<< HEAD
 )
-=======
->>>>>>> main
 );
->>>>>>> main
 // Simple Services page component
-<<<<<<< HEAD
 const ServicesPage = () => ('
   <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24>
     <div className='container mx-auto px-4 py-16>
       <div className='text-center mb-16>
         <h1 className='text-4xl md:text-6xl font-bold mb-6>
-=======
-<<<<<<< HEAD
 const ServicesPage = () => (""
   <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24'>""
     <div className='container mx-auto px-4 py-16'>""
       <div className='text-center mb-16'>""
         <h1 className='text-4xl md: text-6xl font-bold mb-6'>""
           Our{' '}""
-=======
-<<<<<<< HEAD
 const ServicesPage = () => (
-<<<<<<< HEAD
   <;<div className=&apos;min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24&apos;>&apos;'
     <div className=&apos;container mx-auto px-4 py-16&apos;>&apos;'
       <div className=&apos;text-center mb-16&apos;>&apos;'
@@ -431,30 +382,21 @@ const ServicesPage = () => (
           <h3 className=&apos;text-xl font-bold text-white mb-4&apos;>Cloud & DevOps&apos;</h3>
           <p className=&apos;text-gray-300&apos;>
             Scalable cloud infrastructure and automated deployment solutions.&apos;
-=======
   <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24'>
     <div className='container mx-auto px-4 py-16'>
       <div className='text-center mb-16'>
         <h1 className='text-4xl md: text-6xl font-bold mb-6'>
-<<<<<<< HEAD
->>>>>>> main
           Our{' '}
-=======
           Our
-=======
 const ServicesPage = () => ("
   <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24'>"
     <div className='container mx-auto px-4 py-16'>"
       <div className='text-center mb-16'>"
         <h1 className='text-4xl md:text-6xl font-bold mb-6'>'
           Our{ }'
->>>>>>> main
->>>>>>> main
->>>>>>> main
           <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400'>
             Services
           </span>
-<<<<<<< HEAD
         </h1>'
         <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
           Comprehensive technology solutions to drive your business forward
@@ -466,53 +408,41 @@ const ServicesPage = () => ("
           <h3 className='text-xl font-bold text-white mb-4'>
             AI & Machine Learning
           </h3>'
-=======
         </h1>""
         <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
           Comprehensive technology solutions to drive your business forward
         </p>
-<<<<<<< HEAD
       </div>
       <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
         <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>
-=======
       </div>""
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>""
         <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>""
->>>>>>> main
           <h3 className='text-xl font-bold text-white mb-4'>
             AI & Machine Learning
           </h3>""
->>>>>>> main
           <p className='text-gray-300'>
             Cutting-edge artificial intelligence solutions for business
             automation and insights.
           </p>
-<<<<<<< HEAD
         </div>'
         <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20>
           <h3 className='text-xl font-bold text-white mb-4'>Cybersecurity</h3>'
-=======
         </div>""
         <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>""
           <h3 className='text-xl font-bold text-white mb-4'>Cybersecurity</h3>""
->>>>>>> main
           <p className='text-gray-300'>
             Advanced security solutions with zero-trust architecture and threat
             detection.
           </p>
-<<<<<<< HEAD
         </div>'
         <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20>
           <h3 className='text-xl font-bold text-white mb-4'>Cloud & DevOps</h3>'
-=======
         </div>""
         <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>""
           <h3 className='text-xl font-bold text-white mb-4'>Cloud & DevOps</h3>""
->>>>>>> main
           <p className='text-gray-300'>
             Scalable cloud infrastructure and automated deployment solutions.
->>>>>>> main
           </p>
         </div>
       </div>
@@ -520,41 +450,25 @@ const ServicesPage = () => ("
   </div>
 );
 
-<<<<<<< HEAD
 function App() {return (
-=======
 function App() {
   return (
-<<<<<<< HEAD
     <Router>'
       <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>
-=======
-<<<<<<< HEAD
->>>>>>> main
     <Router>
       <div className=&apos;min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light&apos;>&apos;'
->>>>>>> main
         <AppHeader />
         <main className=&apos;flex-1&apos;>&apos;'
           <Suspense fallback={}<LoadingSpinner />}>
-=======
     <Router>""
       <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>
         <AppHeader /" >"
         <main className='flex-1'>
-<<<<<<< HEAD
           <Suspense fallback={<LoadingSpinner /" >}>"
             <Routes>""
-=======
-<<<<<<< HEAD
           <Suspense fallback={<LoadingSpinner />}>
-<<<<<<< HEAD
             <Routes>'
-=======
->>>>>>> main
             <Routes>
-<<<<<<< HEAD
->>>>>>> main
               <Route path='/' element={<Home />} />
               <Route path='/about' element={<About />} />
               <Route path='/contact' element={<Contact />} />
@@ -568,7 +482,6 @@ function App() {
               {/* Services routes */}
               <Route path='/services' element={<ServicesPage />} />
               {/* Catch-all route for 404 */}
-<<<<<<< HEAD
               <Route'
                 path='*'
                 element={'
@@ -584,9 +497,7 @@ function App() {
                         href='/''
                         className='bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors'
                       >
-=======
               <Route path='*' element={<div className='flex items-center justify-center min-h-screen'>
-=======
               <Route path=&apos;/&apos; element={&apos;}&apos;<Home />} />
               <Route path=&apos;/about&apos; element={&apos;}<About />} />
               <Route path=&apos;/contact&apos; element={&apos;}<Contact />} />
@@ -599,8 +510,7 @@ function App() {
               <Route path=&apos;/pricing&apos; element={&apos;}<ComprehensivePricing />} />{/* Services routes */}
               <Route path=&apos;/services&apos; element={&apos;}<ServicesPage />} />{/* Catch-all route for 404 */}
               <Route
-<<<<<<< HEAD
-                path=&apos;*'&apos;&apos;';
+                path=&apos;*'&apos;&apos;
                 element={}&apos;&apos;
                   <div className=&apos;flex items-center justify-center min-h-screen&apos;>&apos;'
                     <div className=&apos;text-center&apos;>&apos;'
@@ -611,14 +521,12 @@ function App() {
                         The page you&apos;re looking for doesn&apos;t exist.&apos;
                       </p>
                       <a
-                        href=&apos;/'&apos;&apos;';
+                        href=&apos;/'&apos;&apos;
                         className=&apos;bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors&apos;&apos;'&quot;>
                         Go Home&quot;&apos;
-=======
                 path='*'''';'
                 element={}
                   <div className='flex items-center justify-center min-h-screen'>
->>>>>>> main
                     <div className='text-center'>
                       <h1 className='text-4xl font-bold text-zion-cyan mb-4'>
                         404 - Page Not Found
@@ -626,16 +534,12 @@ function App() {
                       <p className='text-zion-slate-light mb-6'>
                         The page you&apos;re looking for doesn&apos;t exist.
                       </p>
-<<<<<<< HEAD
                       <a href='/' className='bg-zion-purple text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors' >
-=======
                       <a
                         href='/'''';'
                         className='bg-zion-purple text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors'''">"
-=======
           <Suspense fallback={<LoadingSpinner /" >}>
             <Routes>"
->>>>>>> main
               <Route path='/' element={<Home /" >} />"
               <Route path='/about' element={<About /" >} />"
               <Route path='/contact' element={<Contact /" >} />"
@@ -662,57 +566,37 @@ function App() {
                       </p>
                       <a ""
                         href='/'
-<<<<<<< HEAD
                         className='bg-zion-purple text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors'" >"
-=======
                         className='bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors  >
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
                         Go Home
->>>>>>> main
                       </a>
                     </div>
-                  </div>, }
+                  </div>}
               />
             </Routes>
           </Suspense>
         </main>
-<<<<<<< HEAD
         <Footer /" >"
         <ChatAssistant /" >"
-=======
         <Footer /' >
         <ChatAssistant /" >
->>>>>>> main
       </div>
     </Router>
-  ), }
+  )}
 
->>>>>>> main
 export default App;
-<<<<<<< HEAD
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
 ;
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
 ;
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
 ;
-<<<<<<< HEAD
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App };
 ;
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App };
 ;
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App };
-=======
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
 
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
-=======
 ""
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

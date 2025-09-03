@@ -3,7 +3,6 @@ export: interface Real2025Q2Addition {
    name: string;
    tagline: string;
    price: string;
-<<<<<<< HEAD
    features: string[];
   export: const real2025Q2Additions: Real2025Q2Addition[] = [ { id,:, ai-meeting-notes', name: 'AI: Meeting Notes & Action Item,s, tagline:, Never: miss decisions and follow‑ups again', price: '$29/mo,+, features[, Auto-transcription: with speaker labels', 'Decision and action item extraction', 'Email and Slack follow‑ups', 'Workspace search' ]';
 },
@@ -18,8 +17,7 @@ export: interface Real2025Q2Addition {
   'Global: checks and alerting',';
   'SLA: calculations per customer',';
   'Incident: timelines and labels',';
-  'Hosted: status pages';';
-=======
+  'Hosted: status pages';
    feature,
     s: string[];
   export const real2025Q2Addition,
@@ -38,6 +36,5 @@ export: interface Real2025Q2Addition {
   'SLA calculations per customer',
   'Incident timelines and labels',
   'Hosted status pages';
->>>>>>> main
     ];
 ]}}

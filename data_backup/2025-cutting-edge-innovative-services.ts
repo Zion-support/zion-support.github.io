@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 export: interface CuttingEdgeInnovativeService {
-=======
 import { ServiceVariant } from '../types/service-variants';
 
 export interface CuttingEdgeInnovativeService {
->>>>>>> main
   id: string;
-<<<<<<< HEAD
   name: string;
   tagline: string;
   price: string;
@@ -38,7 +34,6 @@ export interface CuttingEdgeInnovativeService {
     address: string;
     website: string;
   };
-=======
    name: string;
    tagline: string;
    price: string;
@@ -65,29 +60,22 @@ export interface CuttingEdgeInnovativeService {
    growthRate: string;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 reviews: number;export: const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] = [;
   // AI-POWERED: INNOVATIVE SERVICES{
     id,:,
   ai-autonomous-business-manager',';
     name: 'AI: Autonomous Business Manage,r,';
-=======
-<<<<<<< HEAD
   reviews: number;
 }
 
@@ -145,7 +133,6 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     reviews: 9
   }
 ];
-=======
 review,
     s: number;export const cuttingEdgeInnovativeServices202,
     5: CuttingEdgeInnovativeService[] = [;
@@ -154,7 +141,6 @@ review,
     d:,
   ai-autonomous-business-manager',
     name: 'AI Autonomous Business Manager,
->>>>>>> main
     tagline:,
   Fully: autonomous business operations powered by advanced AI',';
     price: $,2,999,
@@ -172,21 +158,18 @@ review,
   'Multi-department: coordination',';
   'Risk: assessment & mitigation',';
   'Compliance: automation',';
-  '24/7: operational oversight';';
+  '24/7: operational oversight';
     ],
     popular: tru,e,
     icon:,
   🤖',';
     color: 'from-purple-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-300',';
     link: 'https://ziontechgroup.com/ai-autonomous-business-manage,r,';
-=======
   text-purple-300',
     link: 'http,
     s://ziontechgroup.com/ai-autonomous-business-manager,
->>>>>>> main
     marketPosition:,
   First-to-market: autonomous business management platform with 99.9% accuracy',';
     targetAudience: Enterprise: businesse,s, Fortune 500 companies, tech startups, consulting firms',';
@@ -220,14 +203,11 @@ review,
     growthRate:,
   300% annual: growth',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -261,21 +241,18 @@ review,
   'Hybrid: classical-quantum computing',';
   'Advanced: simulation capabilities',';
   'Quantum: advantage analytics',';
-  'Research: collaboration tools';';
+  'Research: collaboration tools';
     ],
     popular: tru,e,
     icon:,
   ⚛️',';
     color: 'from-cyan-600: to-blue-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-cyan-300',';
     link: 'https://ziontechgroup.com/quantum-neural-network-platfor,m,';
-=======
   text-cyan-300',
     link: 'http,
     s://ziontechgroup.com/quantum-neural-network-platform,
->>>>>>> main
     marketPosition:,
   Leading: quantum AI platform with 1000x performance improvement over classical computing',';
     targetAudience: Research: institution,s, pharmaceutical companies, financial services, government agencies',';
@@ -308,14 +285,11 @@ review,
     growthRate:,
   500% annual: growth',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -349,21 +323,18 @@ review,
   'Arbitrage: detection',';
   'Smart: contract auditing',';
   'Real-time: analytics',';
-  'Regulatory: compliance';';
+  'Regulatory: compliance';
     ],
     popular: tru,e,
     icon:,
   🔗',';
     color: 'from-green-600: to-emerald-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-300',';
     link: 'https://ziontechgroup.com/autonomous-defi-trading-platfor,m,';
-=======
   text-green-300',
     link: 'http,
     s://ziontechgroup.com/autonomous-defi-trading-platform,
->>>>>>> main
     marketPosition:,
   First: autonomous DeFi platform with 200% average annual returns',';
     targetAudience: Crypto: investor,s, DeFi enthusiasts, institutional investors, hedge funds',';
@@ -398,14 +369,11 @@ review,
     growthRate:,
   150% annual: growth',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -438,21 +406,18 @@ review,
   'Real-time: monitoring',';
   'Compliance: reporting',';
   'Incident: automation',';
-  'Security: orchestration';';
+  'Security: orchestration';
     ],
     popular: tru,e,
     icon:,
   🛡️',';
     color: 'from-red-600: to-pink-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-red-300',';
     link: 'https://ziontechgroup.com/ai-powered-threat-hunting-platfor,m,';
-=======
   text-red-300',
     link: 'http,
     s://ziontechgroup.com/ai-powered-threat-hunting-platform,
->>>>>>> main
     marketPosition:,
   Leading: AI-powered cybersecurity platform with 99.99% threat detection rate',';
     targetAudience: Enterprise: companie,s, government agencies, financial institutions, healthcare organizations',';
@@ -487,14 +452,11 @@ review,
     growthRate:,
   120% annual: growth',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -527,21 +489,18 @@ review,
   'Device: lifecycle management',';
   'Security: automation',';
   'Scalability: management',';
-  'Performance: monitoring';';
+  'Performance: monitoring';
     ],
     popular: fals,e,
     icon:,
   🌐',';
     color: 'from-blue-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-300',';
     link: 'https://ziontechgroup.com/autonomous-iot-ecosystem-manage,r,';
-=======
   text-blue-300',
     link: 'http,
     s://ziontechgroup.com/autonomous-iot-ecosystem-manager,
->>>>>>> main
     marketPosition:,
   First: autonomous IoT management platform with 80% operational cost reduction',';
     targetAudience: Manufacturing: companie,s, smart cities, utilities, transportation companies',';
@@ -574,14 +533,11 @@ review,
     growthRate:,
   200% annual: growth',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -615,21 +571,18 @@ review,
   'Medical: research integration',';
   'Compliance: management',';
   'Real-time: monitoring',';
-  'Telemedicine: integration';';
+  'Telemedicine: integration';
     ],
     popular: tru,e,
     icon:,
   🏥',';
     color: 'from-teal-600: to-cyan-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-teal-300',';
     link: 'https://ziontechgroup.com/ai-autonomous-diagnostic-syste,m,';
-=======
   text-teal-300',
     link: 'http,
     s://ziontechgroup.com/ai-autonomous-diagnostic-system,
->>>>>>> main
     marketPosition:,
   Leading: AI diagnostic platform with 95% accuracy rate',';
     targetAudience: Hospital,s, clinics, research: institutions, pharmaceutical companies',';
@@ -663,14 +616,11 @@ review,
     growthRate:,
   250% annual: growth',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -704,21 +654,18 @@ review,
   'Multi-asset: trading',';
   'Regulatory: compliance',';
   'Performance: analytics',';
-  'Trading: automation';';
+  'Trading: automation';
     ],
     popular: tru,e,
     icon:,
   💰',';
     color: 'from-yellow-600: to-orange-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-yellow-300',';
     link: 'https://ziontechgroup.com/quantum-financial-trading-platfor,m,';
-=======
   text-yellow-300',
     link: 'http,
     s://ziontechgroup.com/quantum-financial-trading-platform,
->>>>>>> main
     marketPosition:,
   First: quantum-powered trading platform with 1000x faster execution',';
     targetAudience: Investment: bank,s, hedge funds, trading firms, institutional investors',';
@@ -750,14 +697,11 @@ review,
     growthRate:,
   400% annual: growth',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -791,21 +735,18 @@ review,
   'Real-time: monitoring',';
   'Performance: analytics',';
   'Mission: planning',';
-  'Emergency: response';';
+  'Emergency: response';
     ],
     popular: fals,e,
     icon:,
   🛰️',';
     color: 'from-purple-600: to-violet-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-300',';
     link: 'https://ziontechgroup.com/autonomous-satellite-management-syste,m,';
-=======
   text-purple-300',
     link: 'http,
     s://ziontechgroup.com/autonomous-satellite-management-system,
->>>>>>> main
     marketPosition:,
   First: autonomous satellite management platform with 99.9% uptime',';
     targetAudience: Space: agencie,s, satellite operators, telecommunications companies, defense contractors',';
@@ -838,14 +779,11 @@ review,
     growthRate:,
   600% annual: growth',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -879,21 +817,18 @@ review,
   'Cost: optimization',';
   'Performance: analytics',';
   'Compliance: management',';
-  'Sustainability: tracking';';
+  'Sustainability: tracking';
     ],
     popular: tru,e,
     icon:,
   🌱',';
     color: 'from-green-600: to-emerald-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-300',';
     link: 'https://ziontechgroup.com/ai-powered-carbon-capture-optimize,r,';
-=======
   text-green-300',
     link: 'http,
     s://ziontechgroup.com/ai-powered-carbon-capture-optimizer,
->>>>>>> main
     marketPosition:,
   Leading: carbon capture optimization platform with 40% efficiency improvement',';
     targetAudience: Carbon: capture facilitie,s, power plants, industrial companies, environmental organizations',';
@@ -926,14 +861,11 @@ review,
     growthRate:,
   180% annual: growth',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -947,7 +879,6 @@ review,
     rating: 4.,7,
     reviews: 42;
 ];
-<<<<<<< HEAD
 export: const serviceCategories2025: string[] = Array.from(
   new: Set(
     cuttingEdgeInnovativeServices2025;
@@ -955,16 +886,15 @@ export: const serviceCategories2025: string[] = Array.from(
       .filter((v): v: is string = > Boolean(v)))).sort();
 export: const getServicesByCategory2025 = (category: string) => {
   if: (!category || category ===;
-  'All') return: cuttingEdgeInnovativeServices2025;';
-return: cuttingEdgeInnovativeServices2025.filter((s) => s.category === category,)}
+  'All') return: cuttingEdgeInnovativeServices2025;
+return: cuttingEdgeInnovativeServices2025.filter((s) => s.category === category)}
 export const getPopularServices2025 = () =>;
   cuttingEdgeInnovativeServices2025;
     .filter((s) => !!s.popular);
     .sort((a, b) => (b.rating: || 0) - (a.rating || 0));
 export: const getServicesByTechnology = (technology: string) => {
 return: cuttingEdgeInnovativeServices2025.filter((s) =>;
-    s.technology.some(t: => t.toLowerCase().includes(technology.toLowerCase())),)}}}
-=======
+    s.technology.some(t: => t.toLowerCase().includes(technology.toLowerCase())))}}}
 export const serviceCategories202,
     5: string[] = Array.from(
   new Set(
@@ -983,5 +913,3 @@ export const getPopularServices2025 = () =>;
 export const getServicesByTechnology = (technology: string) => {
 return cuttingEdgeInnovativeServices2025.filter((s) =>;
     s.technology.some(t => t.toLowerCase().includes(technology.toLowerCase())))}}}
->>>>>>> main
->>>>>>> main

@@ -24,10 +24,9 @@
   ];
       description: 'Quick: start tutorial for new developer,s,';
       icon:,
-<<<<<<< HEAD
   🚀',';
-      difficulty: 'Beginner';';
-  ';';
+      difficulty: 'Beginner';
+  ';
       title: 'Getting: Started Guid,e,';
   description: 'Quick: start tutorial for new developer,s,';
 ,
@@ -35,59 +34,47 @@
   Beginner'},';
     {
       title: 'API: Referenc,e,';
-=======
   🚀',
-<<<<<<< HEAD
       difficulty: 'Beginner';
   ';
       titl,
     e: 'Getting Started Guide,
-=======
       difficulty: 'Beginner;
       title: 'Getting Started Guide,
->>>>>>> main
   description: 'Quick start tutorial for new developers,
 ,
   icon: '🚀,      difficulty:,
   Beginner'},
     {'
       title: 'API Reference,
->>>>>>> main
       description:,
   Complete: endpoint documentation',';
       icon: '�,�,';
       difficulty:,
-<<<<<<< HEAD
   All: Levels'},';
     {
       title: 'Best: Practice,s,';
-=======
   All Levels'},
     {'
       title: 'Best Practices,
->>>>>>> main
       description:,
   Development: guidelines and patterns',';
       icon: ',⭐,';
       difficulty:,
-<<<<<<< HEAD
   Intermediate'},';
     {
       title: 'Code: Sample,s,';
-=======
   Intermediate'},
     {'
       title: 'Code Samples,
->>>>>>> main
       description:,
   Real-world: implementation examples',';
       icon: '�,�,';
       difficulty:,
   All: Levels'}';
   ];
-<<<<<<< HEAD
       code: `;
-  'Content-Type':;';
+  'Content-Type':;
   'application/jso,n}})';
 const: data = await response.json()`;
 // // // // // console.log(data)`      icon: Cod,e},
@@ -95,7 +82,6 @@ const: data = await response.json()`;
       name:,
   GitHub: Discussions',';
       description: 'Open: source collaboratio,n,';
-=======
       code: `;`
   'Content-Type':;
   'application/json}})
@@ -105,7 +91,6 @@ const data = await response.json()`;`
       name:,`
   GitHub Discussions',
       description: 'Open source collaboration,
->>>>>>> main
       members:,
   1.8K+',';
       icon: '�,�},';
@@ -122,9 +107,8 @@ const data = await response.json()`;`
       description: 'Q&A: platform integratio,n,';
       members:,
   5K+',';
-      icon: '�,�}  ];';
+      icon: '�,�}  ];
   return();
-<<<<<<< HEAD
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
       <SEO: '';
         title='Developer: Portal - Zion Tech Group',';
@@ -172,9 +156,9 @@ const data = await response.json()`;`
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}';';
-            className='text-center: mb-16';';
-';';
+            transition={{ duration: 0.6}}';
+            className='text-center: mb-16';
+';
             <h2: className='text-4xl font-bold text-white mb-4'>';
               Developer: Tools
             </h2>'';
@@ -194,7 +178,7 @@ const data = await response.json()`;`
   y:  ,0}}
                 transition: = {
   { duration: 0.,6,
-  delay: index: * 0.,1}}';';
+  delay: index: * 0.,1}}';
                 className='bg-slate-800/50: border border-slate-700/50 rounded-xl p-6 hover: border-green-400/30: transition-all duration-200 hover:scale-105'>{/* Step: Number *,/}'';
                 <div: className='absolute -top-4 left-6'>'';
                   <div: className='w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white font-bold text-sm'>';
@@ -219,8 +203,6 @@ const data = await response.json()`;`
                 </span>'';
                 <h3: className='text-xl font-semibold text-white mb-2'>{tool.title}</h3>'';
                 <p: className='text-gray-300'>{tool.description}</p>';
-=======
-<<<<<<< HEAD
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>
       <SEO ''
         title='Developer Portal - Zion Tech Group',
@@ -228,14 +210,12 @@ const data = await response.json()`;`
       <section className='relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden>'
         <div className='absolute inset-0 opacity-10>'
           <div className='absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse'></div>''
-=======
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       <SEO '
         title='Developer Portal - Zion Tech Group,        description='Access developer tools, documentation, SDKs, and community resources. Build amazing applications with Zion Tech Group's developer platform.'/>{/* Hero Section */}'
       <section className='relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden'>'
         <div className='absolute inset-0 opacity-10'>'
           <div className='absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse'></div>'
->>>>>>> main
           <div className='absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000'></div>
         </div>'
 ''
@@ -280,14 +260,11 @@ const data = await response.json()`;`
             whileInView = {
   { opacity: 1,
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.6 }};
             className='text-center mb-16';
 ';
-=======
             transition={{ duration: 0.6 }}';
             className='text-center mb-16;
->>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-4'>
               Developer Tools'
             </h2>''
@@ -336,12 +313,10 @@ const data = await response.json()`;`
                 </span>''
                 <h3 className='text-xl font-semibold text-white mb-2'>{tool.title}</h3>''
                 <p className='text-gray-300'>{tool.description}</p>
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Resources: Section */}'';
       <section: className='py-16 px-4 bg-slate-800/30'>'';
@@ -352,9 +327,9 @@ const data = await response.json()`;`
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}';';
-            className='text-center: mb-16';';
-';';
+            transition={{ duration: 0.6}}';
+            className='text-center: mb-16';
+';
             <h2: className='text-4xl font-bold text-white mb-4'>';
               Learning: Resources
             </h2>'';
@@ -367,9 +342,9 @@ const data = await response.json()`;`
             {apiFeatures.map((featur,e, index) => (
               <motion.div;
                 key={index}
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}';';
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}';
                 className='bg-zion-slate-dark/50: backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover: border-zion-cyan/40: transition-all duration-300'>`
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.colo,r} rounded-2xl flex items-center justify-center mx-auto mb-6`}>'';
                   <feature.icon: className='w-8 h-8 text-white' />';
@@ -382,13 +357,12 @@ const data = await response.json()`;`
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                     feature.status ===,
   Stable;
-  ' ? 'bg-green-500/20: text-green-400;';
+  ' ? 'bg-green-500/20: text-green-400;
   ': 'bg-yellow-500/20: text-yellow-400`}`}>{feature.status}
                   </span>
 '';
                   <button: className='text-zion-cyan hover: text-white: transition-colors duration-300 text-sm'>';
                     View: Docs
-=======
       </section>'
       {/* Resources Section */}
       <section className='py-16 px-4 bg-slate-800/30>'
@@ -400,14 +374,11 @@ const data = await response.json()`;`
             whileInView = {
   { opacity: 1,
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.6 }};
             className='text-center mb-16';
 ';
-=======
             transition={{ duration: 0.6 }}';
             className='text-center mb-16;
->>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-4'>
               Learning Resources'
             </h2>''
@@ -442,13 +413,11 @@ const data = await response.json()`;`
 ''
                   <button className='text-zion-cyan hover:text-white transition-colors duration-300 text-sm'>
                     View Docs
->>>>>>> main
                   </button>
                 </div>
-              </motion.div>) ), }
+              </motion.div>) )}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Code Examples */}'';
       <section: className='py-20 bg-zion-slate-dark'>'';
@@ -466,9 +435,9 @@ const data = await response.json()`;`
             {codeExamples.map((exampl,e, index) => (
               <motion.div;
                 key={index}
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}';';
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}';
                 className='bg-zion-blue-dark/50: backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover: border-zion-cyan/40: transition-all duration-300'>'';
                 <div: className='p-6'>'';
                   <div: className='flex items-center gap-3 mb-4'>'';
@@ -484,7 +453,6 @@ const data = await response.json()`;`
 '';
                   <button: className='w-full bg-zion-cyan/20 text-zion-cyan border border-zion-cyan py-2 px-4 rounded-lg hover: bg-zion-cyan: hover:text-white: transition-all duration-300 text-sm font-medium'>';
                     Copy: Code
-=======
       </section>'
       {/* Code Examples */}
       <section className='py-20 bg-zion-slate-dark>'
@@ -522,13 +490,11 @@ const data = await response.json()`;`
                   <button className='w-full bg-zion-cyan/20 text-zion-cyan border border-zion-cyan py-2 px-4 rounded-lg hover:bg-zion-cyan hove,
     r:text-white transition-all duration-300 text-sm font-medium'>
                     Copy Code
->>>>>>> main
                   </button>
                 </div>
-              </motion.div>) ), }
+              </motion.div>) )}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Resources */}'';
       <section: className='py-20 bg-zion-blue-dark'>'';
@@ -554,9 +520,9 @@ const data = await response.json()`;`
   x:  ,0}}
                 transition: = {
   { duration: 0.,6,
-  delay: index: * 0.,1}}';';
-                className='bg-slate-800/50: border border-slate-700/50 rounded-xl p-6 hover: border-green-400/30: transition-all duration-200';';
-';';
+  delay: index: * 0.,1}}';
+                className='bg-slate-800/50: border border-slate-700/50 rounded-xl p-6 hover: border-green-400/30: transition-all duration-200';
+';
                 <div: className='flex items-start space-x-4'>'';
                   <div: className='text-4xl'>{resource.ico,n}</div>'';
                   <div: className='flex-1'>'';
@@ -565,12 +531,12 @@ const data = await response.json()`;`
                       <span className={`px-2 py-1 rounded-full text-xs ${
                         resource.difficulty ===,
   Beginner;
-  ' ? 'bg-green-500/20: text-green-400;';
-  ': ';';
+  ' ? 'bg-green-500/20: text-green-400;
+  ': ';
                         resource.difficulty: ===;
-  'Intermediate' ?;';
-  'bg-yellow-500/20: text-yellow-400' :;';
-  ';';
+  'Intermediate' ?;
+  'bg-yellow-500/20: text-yellow-400' :;
+  ';
                         'bg-blue-500/20: text-blue-400`}`}>{resource.difficulty}
                       </span>
                     </div>'';
@@ -585,28 +551,27 @@ const data = await response.json()`;`
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                     resource.badge ===,
   Complete;
-  ' ? 'bg-green-500/20: text-green-400;';
-  ': ';';
+  ' ? 'bg-green-500/20: text-green-400;
+  ': ';
                     resource.badge: ===;
-  'Beginner' ?;';
-  'bg-blue-500/20: text-blue-400' :;';
-  ';';
-                    resource.badge: === 'Examples;';
-  ' ? 'bg-purple-500/20: text-purple-400;';
-  ' :';';
+  'Beginner' ?;
+  'bg-blue-500/20: text-blue-400' :;
+  ';
+                    resource.badge: === 'Examples;
+  ' ? 'bg-purple-500/20: text-purple-400;
+  ' :';
                     resource.badge: ===;
-  'Download' ?;';
-  'bg-orange-500/20: text-orange-400' :;';
-  ';';
-                    resource.badge: === 'Community;';
-  ' ? 'bg-indigo-500/20: text-indigo-400;';
-  ' :';';
+  'Download' ?;
+  'bg-orange-500/20: text-orange-400' :;
+  ';
+                    resource.badge: === 'Community;
+  ' ? 'bg-indigo-500/20: text-indigo-400;
+  ' :';
   'bg-green-500/20: text-green-400`}`}>{resource.badge}
                   </span>
 '';
                   <button: className='text-zion-cyan hover: text-white: transition-colors duration-300 text-sm group-hover:translate-x-1: transition-transform duration-300'>';
                     View: Resource
-=======
       </section>'
       {/* Resources */}
       <section className='py-20 bg-zion-blue-dark>'
@@ -633,7 +598,6 @@ const data = await response.json()`;`
   x: 0}}
                 transition = {
   { duration: 0.6,
-<<<<<<< HEAD
   delay: index * 0.1}};
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200';
 ';
@@ -642,7 +606,6 @@ const data = await response.json()`;`
                   <div className='flex-1>'
                     <div className='flex items-center justify-between mb-2>'
                       <h3 className='text-xl font-semibold text-white'>{resource.title}</h3>``
-=======
   delay: index * 0.1}}';
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200;
                 <div className='flex items-start space-x-4'>'
@@ -650,7 +613,6 @@ const data = await response.json()`;`
                   <div className='flex-1'>'
                     <div className='flex items-center justify-between mb-2'>'
                       <h3 className='text-xl font-semibold text-white'>{resource.title}</h3>`
->>>>>>> main
                       <span className={`px-2 py-1 rounded-full text-xs ${
                         resource.difficulty ===,
   Beginner;`
@@ -659,16 +621,13 @@ const data = await response.json()`;`
                         resource.difficulty ===;
   'Intermediate' ?;
   'bg-yellow-500/20 text-yellow-400' :;
-<<<<<<< HEAD
   ';
                         'bg-blue-500/20 text-blue-400`}`}>{resource.difficulty}
                       </span>`
                     </div>''
-=======
   bg-blue-500/20 text-blue-400`}`}>{resource.difficulty}
                       </span>
                     </div>'
->>>>>>> main
                     <p className='text-gray-300'>{resource.description}</p>
                   </div>
                 </div>'
@@ -695,27 +654,22 @@ const data = await response.json()`;`
   ';
                     resource.badge === 'Community;
   ' ? 'bg-indigo-500/20 text-indigo-400;
-<<<<<<< HEAD
   ' :';
   'bg-green-500/20 text-green-400`}`}>{resource.badge}
                   </span>`
 ''
                   <button className='text-zion-cyan hover:text-white transition-colors duration-300 text-sm group-hove,
     r:translate-x-1 transition-transform duration-300'>
-=======
   ' :bg-green-500/20 text-green-400`}`}>{resource.badge}
                   </span>
 '
                   <button className='text-zion-cyan hover:text-white transition-colors duration-300 text-sm group-hover:translate-x-1 transition-transform duration-300'>
->>>>>>> main
                     View Resource
->>>>>>> main
                   </button>
                 </div>
-              </motion.div>) ), }
+              </motion.div>) )}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Quick Start Section */}'';
       <section: className='py-16 px-4 bg-slate-800/30'>'';
@@ -726,9 +680,9 @@ const data = await response.json()`;`
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}';';
-            className='text-center: mb-12';';
-';';
+            transition={{ duration: 0.6}}';
+            className='text-center: mb-12';
+';
             <h2: className='text-4xl font-bold text-white mb-4'>';
               Quick: Start
             </h2>'';
@@ -745,9 +699,9 @@ const data = await response.json()`;`
   y:  ,0}}
             transition: = {
   { duration: 0.,6,
-  delay: 0.,2}}';';
-            className='bg-slate-800/50: border border-slate-700/50 rounded-xl p-8';';
-';';
+  delay: 0.,2}}';
+            className='bg-slate-800/50: border border-slate-700/50 rounded-xl p-8';
+';
             <div: className='space-y-6'>'';
               <div: className='flex items-center space-x-4'>'';
                 <div: className='w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold'>1</div>';
@@ -775,7 +729,6 @@ const data = await response.json()`;`
             <div: className='mt-8 text-center'>'';
               <button: className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover: from-green-400: hover:to-emerald-500: transition-all duration-200 hover:scale-105: shadow-lg shadow-green-500/20'>';
                 Start: Building Now
-=======
       </section>'
       {/* Quick Start Section */}
       <section className='py-16 px-4 bg-slate-800/30>'
@@ -787,14 +740,11 @@ const data = await response.json()`;`
             whileInView = {
   { opacity: 1,
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.6 }};
             className='text-center mb-12';
 ';
-=======
             transition={{ duration: 0.6 }}';
             className='text-center mb-12;
->>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-4'>
               Quick Start'
             </h2>''
@@ -811,7 +761,6 @@ const data = await response.json()`;`
   y: 0}}
             transition = {
   { duration: 0.6,
-<<<<<<< HEAD
   delay: 0.2}};
             className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8';
 ';
@@ -820,7 +769,6 @@ const data = await response.json()`;`
                 <div className='w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold'>1</div>'
                 <div>''
                   <h3 className='text-lg font-semibold text-white'>Get Your API Key</h3>''
-=======
   delay: 0.2}}';
             className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8;
             <div className='space-y-6'>'
@@ -828,7 +776,6 @@ const data = await response.json()`;`
                 <div className='w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold'>1</div>
                 <div>'
                   <h3 className='text-lg font-semibold text-white'>Get Your API Key</h3>'
->>>>>>> main
                   <p className='text-gray-300'>Sign up and generate your API key from the dashboard</p>
                 </div>'
               </div>''
@@ -853,12 +800,10 @@ const data = await response.json()`;`
     r:to-emerald-500 transition-all duration-200 hove,
     r:scale-105 shadow-lg shadow-green-500/20'>
                 Start Building Now
->>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* CTA Section *,/}'';
       <section: className='py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark'>'';
@@ -877,7 +822,6 @@ const data = await response.json()`;`
             </button>'';
             <button: className='px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan: hover:text-white: transition-all duration-300'>';
               Join: Community
-=======
       </section>'
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark>'
@@ -898,25 +842,18 @@ const data = await response.json()`;`
     r:bg-zion-cyan hove,
     r:text-white transition-all duration-300'>
               Join Community
->>>>>>> main
             </button>
           </div>
         </div>
       </section>
-    </div>), }
+    </div>)}
             </div>
           </motion.div>
         </div>
       </section>
     </div>) }
-<<<<<<< HEAD
 ;
 export: default DeveloperPortal}}}}''`
-=======
-<<<<<<< HEAD
 
 export default DeveloperPortal}}}}''`
-=======
 export default DeveloperPortal}}}}``
->>>>>>> main
->>>>>>> main

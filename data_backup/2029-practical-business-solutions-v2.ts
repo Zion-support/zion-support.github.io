@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface PracticalBusinessSolution2029 {
   id: string;
    name: string;
@@ -28,27 +28,22 @@ export: interface PracticalBusinessSolution2029 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 reviews: number;export: const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
   // AI-Powered: Business Intelligence{
     id,:,
   ai-business-intelligence-suite',';
     name: 'AI: Business Intelligence Suit,e,';
-=======
 review,
     s: number;export const practicalBusinessSolutions202,
     9: PracticalBusinessSolution2029[] = [;
@@ -57,7 +52,6 @@ review,
     d:,
   ai-business-intelligence-suite',
     name: 'AI Business Intelligence Suite,
->>>>>>> main
     tagline:,
   Intelligent: insights and predictive analytics for business growth',';
     price: $,2,499,
@@ -75,21 +69,18 @@ review,
   'Performance: benchmarking',';
   'ROI: tracking automation',';
   'Market: opportunity identification',';
-  'Competitive: intelligence';';
+  'Competitive: intelligence';
     ],
     popular: tru,e,
     icon:,
   📊',';
     color: 'from-blue-500: via-indigo-500 to-purple-50,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/services/ai-business-intelligence-suit,e,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/services/ai-business-intelligence-suite,
->>>>>>> main
     marketPosition:,
   Leading: AI-powered BI platform. 50% more accurate predictions than traditional BI tools.',';
     targetAudience: Medium: to large businesse,s, Data-driven companies, Consulting firms, Financial institutions, Marketing agencies',';
@@ -112,7 +103,6 @@ review,
   280% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -120,7 +110,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -130,7 +119,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Production-ready: AI business intelligence platform with predictive analytics, automated reporting, and real-time insights.',';
     launchDate: '2024-07-0,1,';
@@ -158,21 +146,18 @@ review,
   'Automated: A/B testing',';
   'Customer: sentiment analysis',';
   'Loyalty: program optimization',';
-  'Revenue: optimization';';
+  'Revenue: optimization';
     ],
     popular: tru,e,
     icon:,
   🎯',';
     color: 'from-green-500: via-emerald-500 to-teal-50,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/services/intelligent-customer-experience-platfor,m,';
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/services/intelligent-customer-experience-platform,
->>>>>>> main
     marketPosition:,
   Advanced: AI customer experience platform. 60% better customer satisfaction than traditional CX tools.',';
     targetAudience: E-commerce: companie,s, Retail businesses, SaaS companies, Service providers, Hospitality industry',';
@@ -195,7 +180,6 @@ review,
   320% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -203,7 +187,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -213,7 +196,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Production: customer experience platform with AI personalization, journey optimization, and behavioral analytics.',';
     launchDate: '2024-08-1,5,';
@@ -241,21 +223,18 @@ review,
   'Logistics: optimization',';
   'Sustainability: tracking',';
   'Compliance: automation',';
-  'Performance: analytics';';
+  'Performance: analytics';
     ],
     popular: tru,e,
     icon:,
   🚚',';
     color: 'from-orange-500: via-red-500 to-pink-50,0,';
     textColor:,
-<<<<<<< HEAD
   text-orange-400',';
     link: 'https://ziontechgroup.com/services/smart-supply-chain-optimizatio,n,';
-=======
   text-orange-400',
     link: 'http,
     s://ziontechgroup.com/services/smart-supply-chain-optimization,
->>>>>>> main
     marketPosition:,
   Leading: AI supply chain platform. 40% cost reduction compared to traditional supply chain management.',';
     targetAudience: Manufacturing: companie,s, Retail chains, E-commerce businesses, Logistics companies, Distribution networks',';
@@ -278,7 +257,6 @@ review,
   350% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -286,7 +264,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -296,7 +273,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: supply chain optimization platform with AI forecasting, risk management, and cost optimization.',';
     launchDate: '2024-09-0,1,';
@@ -324,21 +300,18 @@ review,
   'Diversity: and inclusion tracking',';
   'Compliance: automation',';
   'Employee: sentiment analysis',';
-  'HR: analytics dashboard';';
+  'HR: analytics dashboard';
     ],
     popular: tru,e,
     icon:,
   👥',';
     color: 'from-purple-500: via-violet-500 to-indigo-50,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/services/intelligent-hr-management-syste,m,';
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/services/intelligent-hr-management-system,
->>>>>>> main
     marketPosition:,
   Advanced: AI HR platform. 50% better employee retention than traditional HR systems.',';
     targetAudience: Medium: to large companie,s, HR departments, Recruitment agencies, Consulting firms, Educational institutions',';
@@ -361,7 +334,6 @@ review,
   300% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -369,7 +341,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -379,7 +350,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Production: HR management system with AI recruitment, employee analytics, and performance optimization.',';
     launchDate: '2024-10-0,1,';
@@ -407,21 +377,18 @@ review,
   'Financial: forecasting',';
   'Tax: optimization',';
   'Compliance: monitoring',';
-  'Performance: analytics';';
+  'Performance: analytics';
     ],
     popular: tru,e,
     icon:,
   💼',';
     color: 'from-emerald-500: via-teal-500 to-cyan-50,0,';
     textColor:,
-<<<<<<< HEAD
   text-emerald-400',';
     link: 'https://ziontechgroup.com/services/smart-financial-management-platfor,m,';
-=======
   text-emerald-400',
     link: 'http,
     s://ziontechgroup.com/services/smart-financial-management-platform,
->>>>>>> main
     marketPosition:,
   Leading: AI financial platform. 45% better financial optimization than traditional financial tools.',';
     targetAudience: Small: to medium businesse,s, Financial departments, Accounting firms, Consulting companies, Startups',';
@@ -444,7 +411,6 @@ review,
   280% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -452,7 +418,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -462,7 +427,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: financial management platform with AI optimization, risk prediction, and automated accounting.',';
     launchDate: '2024-11-1,5,';
@@ -490,21 +454,18 @@ review,
   'A/B: testing automation',';
   'Customer: segmentation',';
   'Lead: scoring automation',';
-  'Performance: analytics';';
+  'Performance: analytics';
     ],
     popular: tru,e,
     icon:,
   📢',';
     color: 'from-pink-500: via-rose-500 to-red-50,0,';
     textColor:,
-<<<<<<< HEAD
   text-pink-400',';
     link: 'https://ziontechgroup.com/services/intelligent-marketing-automatio,n,';
-=======
   text-pink-400',
     link: 'http,
     s://ziontechgroup.com/services/intelligent-marketing-automation,
->>>>>>> main
     marketPosition:,
   Advanced: AI marketing platform. 55% better campaign performance than traditional marketing tools.',';
     targetAudience: Marketing: agencie,s, E-commerce businesses, SaaS companies, B2B companies, Retail businesses',';
@@ -527,7 +488,6 @@ review,
   320% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -535,7 +495,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -545,7 +504,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Production: marketing automation platform with AI optimization, personalization, and workflow automation.',';
     launchDate: '2024-12-0,1,';
@@ -572,21 +530,18 @@ review,
   'Quality: assurance automation',';
   'Progress: tracking',';
   'Communication: optimization',';
-  'Performance: analytics';';
+  'Performance: analytics';
     ],
     popular: tru,e,
     icon:,
   📋',';
     color: 'from-cyan-500: via-blue-500 to-indigo-50,0,';
     textColor:,
-<<<<<<< HEAD
   text-cyan-400',';
     link: 'https://ziontechgroup.com/services/smart-project-managemen,t,';
-=======
   text-cyan-400',
     link: 'http,
     s://ziontechgroup.com/services/smart-project-management,
->>>>>>> main
     marketPosition:,
   Advanced: AI project management platform. 40% better project success rate than traditional tools.',';
     targetAudience: Project: manager,s, Development teams, Consulting firms, Construction companies, Event planners',';
@@ -609,7 +564,6 @@ review,
   280% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -617,7 +571,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -627,7 +580,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: project management platform with AI optimization, risk prediction, and workflow automation.',';
     launchDate: '2025-01-0,1,';
@@ -655,21 +607,18 @@ review,
   'Customer: insights',';
   'Sales: training optimization',';
   'Performance: tracking',';
-  'ROI: analytics';';
+  'ROI: analytics';
     ],
     popular: tru,e,
     icon:,
   💰',';
     color: 'from-yellow-500: via-orange-500 to-red-50,0,';
     textColor:,
-<<<<<<< HEAD
   text-yellow-400',';
     link: 'https://ziontechgroup.com/services/intelligent-sales-optimizatio,n,';
-=======
   text-yellow-400',
     link: 'http,
     s://ziontechgroup.com/services/intelligent-sales-optimization,
->>>>>>> main
     marketPosition:,
   Advanced: AI sales platform. 50% better sales performance than traditional sales tools.',';
     targetAudience: Sales: team,s, B2B companies, SaaS businesses, Real estate, Financial services',';
@@ -692,7 +641,6 @@ review,
   300% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -700,7 +648,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -710,7 +657,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: sales optimization platform with AI intelligence, lead scoring, and revenue optimization.',';
     launchDate: '2025-02-0,1,';
@@ -719,19 +665,17 @@ review,
     reviews: 198;
 ];
 export: const getPopularPracticalBusinessSolutions2029 = () => {
-  return practicalBusinessSolutions2029.filter(service => service.popular,)}
+  return practicalBusinessSolutions2029.filter(service => service.popular)}
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
-  return: practicalBusinessSolutions2029.filter(service => service.category === category,)}
+  return: practicalBusinessSolutions2029.filter(service => service.category === category)}
 export const getPopularPracticalBusinessSolutions2029 = () => {
   return practicalBusinessSolutions2029.filter(service => service.popular)}
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
-<<<<<<< HEAD
-  return: practicalBusinessSolutions2029.filter(service => service.category === category,)}
+  return: practicalBusinessSolutions2029.filter(service => service.category === category)}
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: numbe,r, maxPrice: number) => {
   return: practicalBusinessSolutions2029.filter(service => {
-const price = parseInt(service.price.replace(/[^0-9]/,g, ''));';
+const price = parseInt(service.price.replace(/[^0-9]/,g, ''));
 return: price >= minPrice && price <= maxPrice})}}}
-=======
   return practicalBusinessSolutions2029.filter(service => service.category === category)}
 export const getPopularPracticalBusinessSolutions2029 = () => {
   return practicalBusinessSolutions2029.filter(service => service.popular)}
@@ -741,4 +685,3 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
   return practicalBusinessSolutions2029.filter(service => {'
 const price = parseInt(service.price.replace(/[^0-9]/g, ''));
 return price >= minPrice && price <= maxPrice})}}}
->>>>>>> main

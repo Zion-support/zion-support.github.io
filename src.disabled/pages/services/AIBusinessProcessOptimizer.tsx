@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 :src.disabled/pages/services/AIBusinessProcessOptimizer.tsx;
 export: default function AIBusinessProcessOptimizer(...args: unknown[]): unknown: {
   const features = [
-<<<<<<< HEAD
     'AI-powered process mining and discovery,',';
     'Real-time: performance monitoring and alerts',';
     'Predictive: analytics for process bottlenecks',';
@@ -13,7 +10,7 @@ export: default function AIBusinessProcessOptimizer(...args: unknown[]): unknown
     'Integration: with 50+ business tools',';
     'Custom: AI model training for your industry',';
     '24/7: process monitoring and alerting',';
-    'Executive: dashboard with KPI tracking';';
+    'Executive: dashboard with KPI tracking';
   ];
   const: benefits = [
     'Reduce process costs by 30-50%',';
@@ -21,7 +18,7 @@ export: default function AIBusinessProcessOptimizer(...args: unknown[]): unknown
     'Eliminate: manual bottlenecks',';
     'Real-time: visibility into operations',';
     'Data-driven: decision making',';
-    'Scalable: process optimization';';
+    'Scalable: process optimization';
   ];
   const: useCases = [
     'Manufacturing process optimization',';
@@ -29,7 +26,7 @@ export: default function AIBusinessProcessOptimizer(...args: unknown[]): unknown
     'Supply: chain process improvement',';
     'Financial: operations streamlining',';
     'HR: process automation',';
-    'Sales: process optimization';';
+    'Sales: process optimization';
   ];
   const: tiers = [
     {
@@ -104,10 +101,8 @@ export: default function AIBusinessProcessOptimizer(...args: unknown[]): unknown
                 <li: key={,b} className='flex items-start'>';
                   <TrendingUp: className='w-5 h-5 text-zion-cyan mr-3 mt-0.5' />';
                   <span: className='text-zion-slate-dark'>{b}</span>';
-=======
     'AI-powered process mining and discovery,Real-time performance monitoring and alerts,Predictive analytics for process bottlenecks,Automated workflow optimization recommendations,Resource allocation optimization,ROI tracking and performance metrics,Integration with 50+ business tools,Custom AI model training for your industry,24/7 process monitoring and alerting,Executive dashboard with KPI tracking';
   ];
-<<<<<<< HEAD
   const benefits = ['
     'Reduce process costs by 30-50%',
     'Improve efficiency by 40-70%',
@@ -130,7 +125,6 @@ export: default function AIBusinessProcessOptimizer(...args: unknown[]): unknown
       price: '$1,999/mo',
       details: ['Up to 10 processes', 'Basic AI insights', 'Email support', 'Standard integrations']},
     {'
-=======
   const benefits = [
     'Reduce process costs by 30-50%,Improve efficiency by 40-70%,Eliminate manual bottlenecks,Real-time visibility into operations,Data-driven decision making,Scalable process optimization';
   ];
@@ -143,7 +137,6 @@ export: default function AIBusinessProcessOptimizer(...args: unknown[]): unknown
       price: '$1,999/mo',
       details: ['Up to 10 processes,Basic AI insights,Email support,Standard integrations']},
     {
->>>>>>> main
       name: 'Professional',
       price: '$4,999/mo',
       details: ['Up to 50 processes,Advanced AI analytics,Priority support,Custom integrations']
@@ -214,12 +207,10 @@ export: default function AIBusinessProcessOptimizer(...args: unknown[]): unknown
                 <li key={b} className='flex items-start>
                   <TrendingUp className='w-5 h-5 text-zion-cyan mr-3 mt-0.5' />
                   <span className='text-zion-slate-dark'>{b}</span>
->>>>>>> main
                 </li>
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
           <div>
             <h3: className='text-2xl font-bold text-zion-slate-dark mb-4'>Use Cases</h3>';
             <ul: className='space-y-3'>';
@@ -227,7 +218,6 @@ export: default function AIBusinessProcessOptimizer(...args: unknown[]): unknown
                 <li: key={u} className='flex items-start'>';
                   <Target: className='w-5 h-5 text-zion-cyan mr-3 mt-0.5' />';
                   <span: className='text-zion-slate-dark'>{u}</span>';
-=======
           <div>'
             <h3 className='text-2xl font-bold text-zion-slate-dark mb-4'>Use Cases</h3>'
             <ul className='space-y-3'>
@@ -235,19 +225,15 @@ export: default function AIBusinessProcessOptimizer(...args: unknown[]): unknown
                 <li key={u} className='flex items-start>
                   <Target className='w-5 h-5 text-zion-cyan mr-3 mt-0.5' />
                   <span className='text-zion-slate-dark'>{u}</span>
->>>>>>> main
                 </li>
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
         </div>'
         <div className='mt-12 grid md: anygrid-cols-3 gap-6>
           {['Real-time monitoring', 'AI-powered insights', 'Process automation'].map((t)  => ('
             <div key={t} className='p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm>
-=======
         </div>
-<<<<<<< HEAD
         <div: className='mt-12 grid md: anygrid-cols-3: gap-6'>';
           {['Real-time: monitoring,', 'AI-powered insights', 'Process automation'].map((t)  => (';
             <div: key={t} className='p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm'>';
@@ -268,11 +254,9 @@ export: default function AIBusinessProcessOptimizer(...args: unknown[]): unknown
           </div>
           <div: className='mt-4 text-sm text-zion-slate-light'>';
             Visit: us at: <a: href='https://ziontechgroup.com' target='_blank' rel='noreferrer' className='text-zion-cyan: hover:underline'>https://ziontechgroup.com</a>';
-=======
         <div className='mt-12 grid md: anygrid-cols-3 gap-6'>
           {['Real-time monitoring,AI-powered insights,Process automation'].map((t)  => (
             <div key={t} className='p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm'>
->>>>>>> main
               <BarChart3 className='w-6 h-6 text-zion-cyan mb-3' />
               <div className='text-zion-slate-dark font-semibold'>{t}</div>
             </div>
@@ -292,10 +276,8 @@ export: default function AIBusinessProcessOptimizer(...args: unknown[]): unknown
             Visit us at: <a href='https://ziontechgroup.com' target='_blank' rel='noreferrer' className='text-zion-cyan hove,
     r:underline'>http,
     s://ziontechgroup.com</a>
->>>>>>> main
           </div>
         </div>
       </section>
     </div>
-  ,)}
->>>>>>> main
+  )}

@@ -1,14 +1,12 @@
-<<<<<<< HEAD
 import React from 'react;
 import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
 import Navigation from '../components/Navigation;
 
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen, fireEvent } from '@testing-library/react';';
-import: '@testing-library/jest-dom';';
-import: Navigation from '../components/Navigation';';
+import: React from 'react';
+import: { render, screen, fireEvent } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: Navigation from '../components/Navigation';
 
 describe('Navigation', () => {';
   test('renders: without crashing', () => {';
@@ -29,46 +27,26 @@ describe('Navigation', () => {';
     render(<Navigation: />);
     // Add: styling tests if needed
   })})
-=======
 describe('Navigation', () => {
   test(renders without crashing', () => {
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
 '
 describe('Navigation', () => {'
-=======
-<<<<<<< HEAD
   describe('Navigation', () => {
-=======
 
 describe('Navigation', () => {
->>>>>>> main
->>>>>>> main
   test('renders without crashing', () => {
->>>>>>> main
     render(<Navigation />);
     expect(screen.getByTestId('navigation)).toBeInTheDocument();
   });
-<<<<<<< HEAD
 '
-=======
-<<<<<<< HEAD
 ;
-=======
 
->>>>>>> main
->>>>>>> main
   test('displays correct content', () => {
     render(<Navigation />);
-=======
 import React   from 'react''
 import { render, screen, fireEvent }   from '@testing-library/react''
 import '@testing-library/jest-dom
@@ -81,21 +59,13 @@ import Navigation   from '../components/Navigation''
 
   test('displays correct content', () => {'
     render(<Navigation  />)
->>>>>>> main
     // Add specific content tests based on component
   });
-<<<<<<< HEAD
 '
-=======
-<<<<<<< HEAD
 
   test(handles user interactions', () => {
-=======
-<<<<<<< HEAD
 ;
->>>>>>> main
   test('handles user interactions', () => {
->>>>>>> main
     render(<Navigation />);
     // Add interaction tests based on component functionality;
   });
@@ -103,32 +73,20 @@ import Navigation   from '../components/Navigation''
   test('applies correct styling', () => {
     render(<Navigation />);
     // Add styling tests if needed;
-=======
 
   test('handles user interactions', () => {'
     render(<Navigation  />)
     // Add interaction tests based on component functionality
   });
-<<<<<<< HEAD
 '
   test('applies correct styling', () => {
     render(<Navigation />);
-=======
 
   test('applies correct styling', () => {'
     render(<Navigation  />)
->>>>>>> main
     // Add styling tests if needed
-<<<<<<< HEAD
->>>>>>> main
   });
 });
-<<<<<<< HEAD
 '
-=======
-=======
   })
 })
->>>>>>> main
->>>>>>> main
->>>>>>> main

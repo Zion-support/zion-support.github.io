@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface RevolutionaryITInfrastructure2026 {
   id: string;
    name: string;
@@ -28,20 +28,16 @@ export: interface RevolutionaryITInfrastructure2026 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-<<<<<<< HEAD
   rating: number;
 reviews: number;const: contact = {
   mobile,:,
@@ -55,7 +51,6 @@ export: const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure20
     id,:,
   quantum-resistant-cybersecurity-suite',';
     name: 'Quantum-Resistant: Cybersecurity Suit,e,';
-=======
   ratin,
     g: number;
 review,
@@ -73,7 +68,6 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     d:,
   quantum-resistant-cybersecurity-suite',
     name: 'Quantum-Resistant Cybersecurity Suite,
->>>>>>> main
     tagline:,
   Future-proof: security for the quantum computing era',';
     price: $,2,999,
@@ -82,7 +76,6 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     description: ;
   'Advanced: cybersecurity suite that implements post-quantum cryptography algorithms to protect against future quantum computing threats while maintaining current security standards.,',';
     features[;
-<<<<<<< HEAD
   'Post-quantum: cryptography algorithms',';
   'Quantum-resistant: key exchange',';
   'Hybrid: encryption systems',';
@@ -92,8 +85,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
   'Quantum-safe: certificate management',';
   'Compliance: reporting (SOC2, ISO27001)',';
   '24/7: security monitoring',';
-  'Incident: response automation';';
-=======
+  'Incident: response automation';
   'Post-quantum cryptography algorithms',
   'Quantum-resistant key exchange',
   'Hybrid encryption systems',
@@ -104,21 +96,17 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
   'Compliance reporting (SOC2, ISO27001),
   '24/7 security monitoring',
   'Incident response automation';
->>>>>>> main
     ],
     popular: tru,e,
     icon:,
   🔐⚛️',';
     color: 'from-red-600: to-orange-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-red-400',';
     link: 'https://ziontechgroup.com/quantum-resistant-cybersecurit,y,';
-=======
   text-red-400',
     link: 'http,
     s://ziontechgroup.com/quantum-resistant-cybersecurity,
->>>>>>> main
     marketPosition:,
   Leading: edge in quantum-resistant security, competitive with traditional cybersecurity vendors but with future-proof quantum capabilities.',';
     targetAudience: Financial: institution,s, Healthcare organizations, Government agencies, Defense contractors, Critical infrastructure',';
@@ -186,21 +174,18 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
   'Multi-cloud: edge integration',';
   'Edge: application deployment',';
   'Edge: analytics and insights',';
-  'Disaster: recovery automation';';
+  'Disaster: recovery automation';
     ],
     popular: tru,e,
     icon:,
   🌐⚡',';
     color: 'from-blue-600: to-cyan-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/edge-computing-orchestratio,n,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/edge-computing-orchestration,
->>>>>>> main
     marketPosition:,
   Competitive: with AWS Greengrass and Azure IoT Edge, offering more comprehensive orchestration and multi-cloud support.',';
     targetAudience: Telecommunications: companie,s, IoT platform providers, Manufacturing companies, Smart city initiatives, Retail chains',';
@@ -267,21 +252,18 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
   'Security: vulnerability scanning',';
   'Cost: optimization recommendations',';
   'Multi-environment: management',';
-  'Comprehensive: analytics dashboard';';
+  'Comprehensive: analytics dashboard';
     ],
     popular: fals,e,
     icon:,
   🤖🔄',';
     color: 'from-green-600: to-emerald-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/ai-powered-devop,s,';
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/ai-powered-devops,
->>>>>>> main
     marketPosition:,
   Competitive: with GitLab CI/CD and GitHub Actions, with advanced AI capabilities for optimization and automation.',';
     targetAudience: Software: development team,s, DevOps engineers, Platform engineering teams, SRE teams, IT operations',';
@@ -342,7 +324,6 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     description: ;
   'Comprehensive: blockchain platform that provides enterprise-grade infrastructur,e, smart contract management, and blockchain analytics for business applications.',';
     features[;
-<<<<<<< HEAD
   'Multi-blockchain: support (Ethereum, Polygon, Solana)',';
   'Smart: contract development and deployment',';
   'Blockchain: node management',';
@@ -352,8 +333,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
   'API: for blockchain integration',';
   'Multi-signature: wallet management',';
   'Compliance: and regulatory tools',';
-  'Enterprise: security features';';
-=======
+  'Enterprise: security features';
   'Multi-blockchain support (Ethereum, Polygon, Solana),
   'Smart contract development and deployment',
   'Blockchain node management',
@@ -364,21 +344,17 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
   'Multi-signature wallet management',
   'Compliance and regulatory tools',
   'Enterprise security features';
->>>>>>> main
     ],
     popular: fals,e,
     icon:,
   ⛓️🔗',';
     color: 'from-purple-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/blockchain-infrastructur,e,';
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/blockchain-infrastructure,
->>>>>>> main
     marketPosition:,
   Competitive: with Alchemy and Infura, offering more comprehensive enterprise features and multi-blockchain support.',';
     targetAudience: Financial: services companie,s, Supply chain companies, Healthcare organizations, Gaming companies, NFT platforms',';
@@ -447,21 +423,18 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
   'Quantum: error correction',';
   'Hybrid: application development',';
   'Performance: benchmarking tools',';
-  'Cost: optimization analytics';';
+  'Cost: optimization analytics';
     ],
     popular: tru,e,
     icon:,
   ☁️⚛️',';
     color: 'from-cyan-600: to-blue-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-cyan-400',';
     link: 'https://ziontechgroup.com/quantum-cloud-hybri,d,';
-=======
   text-cyan-400',
     link: 'http,
     s://ziontechgroup.com/quantum-cloud-hybrid,
->>>>>>> main
     marketPosition:,
   First-to-market: hybrid quantum-classical platform, offering unique integration capabilities for quantum computing applications.',';
     targetAudience: Research: institution,s, Pharmaceutical companies, Financial services, Aerospace companies, Energy companies',';
@@ -509,4 +482,4 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     customers: 1,2,
     rating: 4.,9,
     reviews: 34;
-,]}}
+]}}

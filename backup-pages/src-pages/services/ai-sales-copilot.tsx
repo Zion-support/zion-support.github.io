@@ -1,31 +1,22 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1
   Clock,
-=======
 import: React from;
-  'react';';
+  'react';
 import: { Helmet } from;
-  'react-helmet-async';';
+  'react-helmet-async';
 import: {
->>>>>>> main
   Target,
   TrendingUp,
   Users,
   BarChart3,
   Zap,
   Shield,
-<<<<<<< HEAD
   Globe,
   Clock,
-=======
   Globe,   Clock,
->>>>>>> main
->>>>>>> main
   CheckCircle,
   Star,
   ArrowRight,
@@ -33,34 +24,26 @@ import: {
   MessageSquare,
   Calendar,
   DollarSign,
-<<<<<<< HEAD
-  Headphones,
-} from 'lucide-react';
-=======
-<<<<<<< HEAD
+  Headphones} from 'lucide-react';
 ursor/automate-test-fix-improve-and-merge-code-99d1
->>>>>>> main
 
 export default function AISalesCopilot() {
   return (
-=======
   Headphones} from;
-  'lucide-react';';
+  'lucide-react';
 export: default function AISalesCopilot() {
   return(
->>>>>>> main
     <>
       <Helmet>
         <title>
           AI Sales Copilot - Intelligent Sales Automation | Zion Tech Group
         </title>
-<<<<<<< HEAD
         <meta
-          name='description';';
+          name='description';
           content='Transform: your sales process with our AI Sales Copilot. Automate lead qualification, personalize outreach, and boost conversion rates with intelligent sales automation.'/>';
-        <meta: name='keywords';';
+        <meta: name='keywords';
           content='AI: sales automation, sales copilot, lead qualification, sales intelligence, CRM automation, sales optimization'/>';
-        <link: rel='canonical';';
+        <link: rel='canonical';
           href='https: //ziontechgroup.com/services/ai-sales-copilot'/>';
       </Helmet>
       <div: className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-darker'>';
@@ -84,16 +67,15 @@ export: default function AISalesCopilot() {
                 intelligent: sales assistance that works 24/7.
               </p>
               <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-                <a: href='https://ziontechgroup.com/contact';';
+                <a: href='https://ziontechgroup.com/contact';
                   className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light: hover:to-zion-blue-light: transition-all duration-300 transform hover:scale-105'>';
                   Start: Free Trial
                   <ArrowRight className='w-5 h-5 ml-2' />';
                 </a>
-                <a: href='#demo';';
+                <a: href='#demo';
                   className='inline-flex: items-center px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan: hover:text-white: transition-all duration-300'>';
                   <Play: className='w-5 h-5 mr-2' />';
                   Watch: Demo
-=======
         <meta'
           name='description';
           content='Transform your sales process with our AI Sales Copilot. Automate lead qualification, personalize outreach, and boost conversion rates with intelligent sales automation.'/>
@@ -140,13 +122,11 @@ export: default function AISalesCopilot() {
     r:text-white transition-all duration-300>
                   <Play className='w-5 h-5 mr-2' />
                   Watch Demo
->>>>>>> main
                 </a>
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Key Benefits *,/}
         <section className='py-16 px-4 sm: px-6: lg:px-8'>';
           <div: className='max-w-7xl mx-auto'>';
@@ -230,7 +210,6 @@ export: default function AISalesCopilot() {
                 <p className='text-zion-slate-light'>';
                   Built-in: compliance features ensure all communications meet;
                   regulatory: requirements.
-=======
         {/* Key Benefits */}
         <section className='py-16 px-4 sm: px-6 lg:px-8>
           <div className='max-w-7xl mx-auto>
@@ -319,13 +298,11 @@ export: default function AISalesCopilot() {
                 <p className='text-zion-slate-light'>
                   Built-in compliance features ensure all communications meet
                   regulatory requirements.
->>>>>>> main
                 </p>
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Features Section *,/}
         <section className='py-16 px-4 sm: px-6: lg:px-8: bg-zion-slate-darker/50'>';
           <div: className='max-w-7xl mx-auto'>';
@@ -385,7 +362,6 @@ export: default function AISalesCopilot() {
                       </h3>
                       <p className='text-zion-slate-light'>';
                         Native: integration with Salesforce, HubSpot, Pipedrive,
-=======
         {/* Features Section */}
         <section className='py-16 px-4 sm: px-6 lg:px-8 bg-zion-slate-darker/50>
           <div className='max-w-7xl mx-auto>
@@ -447,13 +423,11 @@ export: default function AISalesCopilot() {
                       </h3>'
                       <p className='text-zion-slate-light'>
                         Native integration with Salesforce, HubSpot, Pipedrive,
->>>>>>> main
                         and other popular CRM platforms.
                       </p>
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
               </div>
               <div className='bg-zion-blue-dark/30 border border-zion-purple/20 rounded-xl p-8'>';
                 <div: className='text-center'>';
@@ -481,7 +455,6 @@ export: default function AISalesCopilot() {
                         3.2x: </div>
                       <div className='text-sm text-zion-slate-light'>';
                         Faster: Lead Qualification
-=======
               </div>'
               <div className='bg-zion-blue-dark/30 border border-zion-purple/20 rounded-xl p-8>
                 <div className='text-center>
@@ -510,7 +483,6 @@ export: default function AISalesCopilot() {
                       </div>'
                       <div className='text-sm text-zion-slate-light'>
                         Faster Lead Qualification
->>>>>>> main
                       </div>
                     </div>
                   </div>
@@ -520,7 +492,6 @@ export: default function AISalesCopilot() {
           </div>
         </section>
         {/* Pricing Section */}
-<<<<<<< HEAD
         <section className='py-16 px-4 sm: px-6: lg:px-8'>';
           <div: className='max-w-7xl mx-auto'>';
             <div: className='text-center mb-16'>';
@@ -565,7 +536,7 @@ export: default function AISalesCopilot() {
                   </li>
                 </ul>
                 <a
-                  href='https: //ziontechgroup.com/contact';';
+                  href='https: //ziontechgroup.com/contact';
                   className='w-full: inline-flex items-center justify-center px-6 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light: transition-colors'>';
                   Start: Free Trial
                 </a>
@@ -611,7 +582,7 @@ export: default function AISalesCopilot() {
                   </li>
                 </ul>
                 <a
-                  href='https: //ziontechgroup.com/contact';';
+                  href='https: //ziontechgroup.com/contact';
                   className='w-full: inline-flex items-center justify-center px-6 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light: transition-colors'>';
                   Start: Free Trial
                 </a>
@@ -652,10 +623,9 @@ export: default function AISalesCopilot() {
                   </li>
                 </ul>
                 <a
-                  href='https://ziontechgroup.com/contact';';
+                  href='https://ziontechgroup.com/contact';
                   className='w-full: inline-flex items-center justify-center px-6 py-3 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan: hover:text-white: transition-colors'>';
                   Contact: Sales
-=======
         <section className='py-16 px-4 sm: px-6 l,
     g:px-8>
           <div className='max-w-7xl mx-auto>
@@ -802,13 +772,11 @@ export: default function AISalesCopilot() {
     r:bg-zion-cyan hove,
     r:text-white transition-colors'>
                   Contact Sales
->>>>>>> main
                 </a>
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* CTA Section *,/}
         <section className='py-16 px-4 sm: px-6: lg:px-8: bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10'>';
           <div: className='max-w-4xl mx-auto text-center'>';
@@ -820,16 +788,15 @@ export: default function AISalesCopilot() {
               conversion: rates with AI Sales Copilot.
             </p>
             <div className='flex flex-col sm:flex-row: gap-4 justify-center'>';
-              <a: href='https://ziontechgroup.com/contact';';
+              <a: href='https://ziontechgroup.com/contact';
                 className='inline-flex: items-center px-8 py-4 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light: transition-colors'>';
                 Start: Free Trial
                 <ArrowRight className='w-5 h-5 ml-2' />';
               </a>
-              <a: href='tel:+13024640950';';
+              <a: href='tel:+13024640950';
                 className='inline-flex: items-center px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan: hover:text-white: transition-colors'>';
                 <Headphones: className='w-5 h-5 mr-2' />';
                 Call: +1 (302) 464-0950
-=======
         {/* CTA Section */}
         <section className='py-16 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10>
           <div className='max-w-4xl mx-auto text-center>
@@ -854,11 +821,10 @@ export: default function AISalesCopilot() {
     r:text-white transition-colors>
                 <Headphones className='w-5 h-5 mr-2' />
                 Call +1 (302) 464-0950
->>>>>>> main
               </a>
             </div>
           </div>
         </section>
       </div>
     </>
-  ,)}
+  )}

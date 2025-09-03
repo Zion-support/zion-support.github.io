@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';''';,"});,"})
 import { motion } from 'framer-motion';''';,"});,"})
 import { BarChart3, PieChart, TrendingUp, DollarSign, Users, Target, Rocket, Brain, Zap, Star, Filter, Download, Eye, Award, ArrowUpRight, ArrowDownRight } from 'lucide-react';,"});,"})
@@ -185,12 +184,12 @@ const AdvancedServicePortfolioDashboard = () => {}"});,"})
     const getTechnologyMaturityColor = (maturity) => {}"});,"})
         switch (maturity) {}"});,"})
 ';,"});,"})
-            case 'Emerging': return 'bg-blue-100 text-blue-800';';,"});,"})
-            case 'Growing': return 'bg-green-100 text-green-800';';,"});,"})
-            case 'Mature': return 'bg-orange-100 text-orange-800';';,"});,"})
-            case 'Leading': return 'bg-purple-100 text-purple-800';';,"});,"})
+            case 'Emerging': return 'bg-blue-100 text-blue-800';,"});,"})
+            case 'Growing': return 'bg-green-100 text-green-800';,"});,"})
+            case 'Mature': return 'bg-orange-100 text-orange-800';,"});,"})
+            case 'Leading': return 'bg-purple-100 text-purple-800';,"});,"})
             default: return 'bg-gray-100 text-gray-800'}"});,"})
-    };';,"});,"})
+    };,"});,"})
     const categories = ['';,"});,"})
         { id: 'all', name: 'All Categories', count: portfolioData.length },';,"});,"})
         { id: 'ai', name: 'AI & Machine Learning', count: portfolioData.filter(s => s.category === 'ai').length },';,"});,"})
@@ -386,8 +385,8 @@ const AdvancedServicePortfolioDashboard = () => {}"});,"})
           <div className="flex items-end">"""";,"});,"})
             <Button variant="outline" className="w-full" onClick={() => {}"});,"})
 ';,"});,"})
-            setSelectedCategory('all');';,"});,"})
-            setSelectedStatus('all');';,"});,"})
+            setSelectedCategory('all');,"});,"})
+            setSelectedStatus('all');,"});,"})
             setSelectedComplexity('all');'""";,"});,"})
             setSearchTerm('')}}>"""";,"});,"})
               <Filter className="w-4 h-4 mr-2"/>;,"});,"})
@@ -639,35 +638,15 @@ export { AdvancedServicePortfolioDashboard };,"});,"})
 export { AdvancedServicePortfolioDashboard };,"});,"})
 ;,"});,"})
 export { AdvancedServicePortfolioDashboard };,"});,"})
-=======
-<<<<<<< HEAD
  const: AdvancedServicePortfolioDashboard = () => { const [selectedCategory, setSelectedCategory] = useState ('all')  const [selectedStatus, setSelectedStatus] = useState ('all')  const [selectedComplexity, setSelectedComplexity] = useState ('all')  const [searchTerm, setSearchTerm] = useState (')  const [viewMode, setViewMode] = useState ('overview') ';'";";";";
-=======
-<<<<<<< HEAD
  const AdvancedServicePortfolioDashboard = () => { const [selectedCategory, setSelectedCategory] = useState ('all')  const [selectedStatus, setSelectedStatus] = useState ('all')  const [selectedComplexity, setSelectedComplexity] = useState ('all')  const [searchTerm, setSearchTerm] = useState (')  const [viewMode, setViewMode] = useState ('overview') ';'"'"
-=======
-<<<<<<< HEAD
  const AdvancedServicePortfolioDashboard = () => { const [selectedCategory, setSelectedCategory] = useState ('all')  const [selectedStatus, setSelectedStatus] = useState ('all')  const [selectedComplexity, setSelectedComplexity] = useState ('all')  const [searchTerm, setSearchTerm] = useState (')  const [viewMode, setViewMode] = useState ('overview') ';";"
 "
-=======
-<<<<<<< HEAD
  const AdvancedServicePortfolioDashboard = () => {} const;const [selectedCategory, setSelectedCategory] = useState (&apos;all&apos;)&apos;'  const [selectedStatus, setSelectedStatus] = useState (&apos;all&apos;)&apos;'  const [selectedComplexity, setSelectedComplexity] = useState (&apos;all&apos;)&apos;'  const [searchTerm, setSearchTerm] = useState (&apos;)&apos;'  const;const [viewMode, setViewMode] = useState (&apos;overview&apos;) ';&apos;";
 &quot;"
-=======
-<<<<<<< HEAD
  const AdvancedServicePortfolioDashboard = () => { const [selectedCategory, setSelectedCategory] = useState ('all')  const [selectedStatus, setSelectedStatus] = useState ('all')  const [selectedComplexity, setSelectedComplexity] = useState ('all')  const [searchTerm, setSearchTerm] = useState (')  const [viewMode, setViewMode] = useState ('overview') ';'";'"
-<<<<<<< HEAD
 ""
 }
-=======
-=======
  const AdvancedServicePortfolioDashboard = () => { const [selectedCategory, setSelectedCategory] = useState ('all')  const [selectedStatus, setSelectedStatus] = useState ('all')  const [selectedComplexity, setSelectedComplexity] = useState ('all')  const [searchTerm, setSearchTerm] = useState (')  const [viewMode, setViewMode] = useState ('overview') "
 "
 }
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

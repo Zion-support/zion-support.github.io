@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';''';,"});,"})
 import { motion } from 'framer-motion';,"});,"})
 import {}"});,"})
@@ -113,7 +112,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
       clients: 67,;,"});,"})
       revenue: 340000,';,"});,"})
       status: 'stable'}"});,"})
-  ];';,"});,"})
+  ];,"});,"})
   const categoryDistribution = ['';,"});,"})
     { label: 'AI & ML', value: 35, color: 'from-purple-500 to-pink-600' },';,"});,"})
     { label: 'Quantum', value: 20, color: 'from-blue-500 to-cyan-600' },';,"});,"})
@@ -138,11 +137,11 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})
     switch (status) {}"});,"})
 ';,"});,"})
       case 'trending':'';,"});,"})
-        return 'bg-green-100 text-green-800';';,"});,"})
+        return 'bg-green-100 text-green-800';,"});,"})
       case 'stable':'';,"});,"})
-        return 'bg-blue-100 text-blue-800';';,"});,"})
+        return 'bg-blue-100 text-blue-800';,"});,"})
       case 'declining':'';,"});,"})
-        return 'bg-red-100 text-red-800';';,"});,"})
+        return 'bg-red-100 text-red-800';,"});,"})
       default:'';,"});,"})
         return 'bg-gray-100 text-gray-800';,"});,"})
     }"});,"})
@@ -472,43 +471,32 @@ export { AdvancedAnalyticsDashboard };,"});,"})
 export { AdvancedAnalyticsDashboard };,"});,"})
 ;,"});,"})
 export { AdvancedAnalyticsDashboard };,"});,"})
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react'''
-=======
 import React, { useState }  from 'react
->>>>>>> main
 import { motion } from 'framer-motion';
 import {}""
   TrendingUp, TrendingDown, Users, DollarSign, Target, BarChart3, PieChart, Activity, Star, ArrowUpRight, ArrowDownRight, ''
   Shield,''
-<<<<<<< HEAD
   Brain, ''''
   Rocket} from 'lucide-react'''
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'''
 import { Button } from './ui/button'''
-=======
   Brain,'''
   Rocket} from 'lucide-react''
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card''
 import { Button }  from './ui/button
->>>>>>> main
 import { Badge } from './ui/badge';
 const AdvancedAnalyticsDashboard = () => {}""
 ''
 ''
-<<<<<<< HEAD
 ''';"'"
   const [timeRange, setTimeRange] = useState('30d')';'
-=======
   const [timeRange, setTimeRange] = useState('30d')
->>>>>>> main
   const [selectedMetric, setSelectedMetric] = useState('overview')
   // Mock data - in real app this would come from API
   const metrics = []
     {}""
 ''
-<<<<<<< HEAD
 ''
 ''''
       title: 'Total Revenue', ''''
@@ -534,7 +522,6 @@ const AdvancedAnalyticsDashboard = () => {}""
       value: '4.8/5', change: 0.3,''''
       changeType: 'increase', ''''
       icon: <Star className='w-6 h-6' /" >,''"
-=======
 '''
       title: 'Total Revenue,''
       value: '$2.4M,'
@@ -559,7 +546,6 @@ const AdvancedAnalyticsDashboard = () => {}""
       value: '4.8/5', change: 0.3,''''
       changeType: 'increase,'''
       icon: <Star className='w-6 h-6' /" >,'
->>>>>>> main
       color: 'from-yellow-500 to-orange-600'}
   ]
   const servicePerformance = []
@@ -608,7 +594,6 @@ const AdvancedAnalyticsDashboard = () => {}""
   const getStatusIcon = status => {}
     switch (status) {}""
 ''''
-<<<<<<< HEAD
       case 'trending': ''''
         return <TrendingUp className='w-4 h-4 text-green-500' /" >'';''"
       case 'stable': ''''
@@ -617,7 +602,6 @@ const AdvancedAnalyticsDashboard = () => {}""
         return <TrendingDown className='w-4 h-4 text-red-500' /" >';'"
       default: ''''
         return <Activity className='w-4 h-4 text-gray-500' /" >, "
-=======
       case 'trending':''''
         return <TrendingUp className='w-4 h-4 text-green-500' /" >'
       case 'stable':''''
@@ -625,9 +609,7 @@ const AdvancedAnalyticsDashboard = () => {}""
       case 'declining':''''
         return <TrendingDown className='w-4 h-4 text-red-500' /" >
       default:''''
-        return <Activity className='w-4 h-4 text-gray-500' /" >,
->>>>>>> main
-}
+        return <Activity className='w-4 h-4 text-gray-500' /" >}
   }
   const getStatusColor = status => {}
     switch (status) {}""
@@ -639,27 +621,19 @@ const AdvancedAnalyticsDashboard = () => {}""
       case 'declining':''
         return 'bg-red-100 text-red-800'
       default:''
-<<<<<<< HEAD
-        return 'bg-gray-100 text-gray-800', }","
+        return 'bg-gray-100 text-gray-800'}","
 }';'
-=======
-        return 'bg-gray-100 text-gray-800',
-}",
-}
->>>>>>> main
+        return 'bg-gray-100 text-gray-800'}"}
   return (''''
     <div className='max-w-7xl mx-auto p-6'>
       {/* Header */}
       <motion .div""
         initial={{ opacity: 0, y: 20 }}''''
         animate={{ opacity: 1, y: 0 }}''''
-<<<<<<< HEAD
         className='mb-8''''" >'''''"
         <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4'>''''
-=======
         className='mb-8''" >''''
         <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4'>'''
->>>>>>> main
           <div>''''
             <h1 className='text-3xl font-bold text-zion-blue-dark mb-2'>""
               Advanced Analytics Dashboard''''
@@ -770,11 +744,8 @@ const AdvancedAnalyticsDashboard = () => {}""
                       initial={{ opacity: 0, x: -20 }}""
                       animate={{ opacity: 1, x: 0 }}''''
                       transition={{ delay: 0.1 * index }}''''
-<<<<<<< HEAD
                       className='border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5''''" >'''''"
-=======
                       className='border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5''" >''''
->>>>>>> main
                       <td className='py-3 px-4'>''''
                         <div className='font-medium text-zion-blue-dark'>
                           {service.name}""
@@ -846,11 +817,8 @@ const AdvancedAnalyticsDashboard = () => {}""
                   initial={{ opacity: 0, x: -20 }}""
                   animate={{ opacity: 1, x: 0 }}''''
                   transition={{ delay: 0.1 * index }}''''
-<<<<<<< HEAD
                   className='flex items-center justify-between''''" >''''`'"
-=======
                   className='flex items-center justify-between''" >''''`
->>>>>>> main
                   <div className='flex items-center gap-3'>`
                     <div ``"`"
                       className={`w-4 h-4 bg-gradient-to-r ${category.color} rounded-full`}'''" ></div>'''''"
@@ -928,11 +896,8 @@ const AdvancedAnalyticsDashboard = () => {}""
         initial={{ opacity: 0, y: 20 }}""
         animate={{ opacity: 1, y: 0 }}''''
         transition={{ delay: 0.4 }}''''
-<<<<<<< HEAD
         className='text-center''''" >'''''"
-=======
         className='text-center''" >''''
->>>>>>> main
         <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>''''
           <h3 className='text-3xl font-bold mb-4'>Get Detailed Analytics</h3>''''
           <p className='text-xl mb-6 max-w-2xl mx-auto'>
@@ -942,13 +907,10 @@ const AdvancedAnalyticsDashboard = () => {}""
           </p>''''
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>''''
             <Button ''''
-<<<<<<< HEAD
               className='bg-white text-zion-purple hover:bg-zion-slate-light'''
               onClick={() =" >''"
-=======
               className='bg-white text-zion-purple hover:bg-zion-slate-light'
               onClick={() =" >'
->>>>>>> main
                 window.open(''
                   'mailto: kleber@ziontechgroup.com?subject=Analytics Dashboard Access', _blank''
                 )", "
@@ -959,13 +921,10 @@ const AdvancedAnalyticsDashboard = () => {}""
             </Button>''''
             <Button ''''
               variant='outline'''''
-<<<<<<< HEAD
               className='border-white text-white hover: bg-white hover:text-zion-purple'''
               onClick={() =" > window.open('tel: +13024640950', _blank')}'''"
-=======
               className='border-white text-white hover:bg-white hover:text-zion-purple'
               onClick={() =" > window.open('tel:+13024640950',_blank')}'''
->>>>>>> main
             >''''
               <Shield className='w-5 h-5 mr-2' /" >"
               Schedule Demo
@@ -985,4 +944,3 @@ export { AdvancedAnalyticsDashboard }
 export { AdvancedAnalyticsDashboard }
 
 export { AdvancedAnalyticsDashboard }"`"
->>>>>>> main

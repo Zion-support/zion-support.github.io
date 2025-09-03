@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { Card } from '../components/ui/Card';
@@ -27,14 +26,12 @@ const SitemapPage: React.FC = () => {
     { name: 'About', path: '/about', icon: Users, description: 'About Zion Tech Group' },
     { name: 'Services', path: '/services', icon: Briefcase, description: 'Our comprehensive services' },
     { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' },
-    { name: 'Pricing', path: '/pricing', icon: DollarSign, description: 'Service pricing information' },
-  ];
+    { name: 'Pricing', path: '/pricing', icon: DollarSign, description: 'Service pricing information' }];
 
   const servicePages = [
     { name: 'Micro SaaS Solutions', path: '/services/micro-saas', icon: Zap, description: 'Innovative micro SaaS applications' },
     { name: 'IT Services', path: '/services/it-services', icon: Shield, description: 'Comprehensive IT solutions' },
-    { name: 'AI Services', path: '/services/ai-services', icon: Globe, description: 'Cutting-edge AI solutions' },
-  ];
+    { name: 'AI Services', path: '/services/ai-services', icon: Globe, description: 'Cutting-edge AI solutions' }];
 
   const contentPages = [
     { name: 'Blog', path: '/blog', icon: BookOpen, description: 'Latest insights and updates' },
@@ -42,13 +39,11 @@ const SitemapPage: React.FC = () => {
     { name: 'White Papers', path: '/white-papers', icon: FileText, description: 'Technical white papers' },
     { name: 'Webinars', path: '/webinars', icon: MessageSquare, description: 'Educational webinars' },
     { name: 'Careers', path: '/careers', icon: Users, description: 'Join our team' },
-    { name: 'Team', path: '/team', icon: Users, description: 'Meet our team' },
-  ];
+    { name: 'Team', path: '/team', icon: Users, description: 'Meet our team' }];
 
   const legalPages = [
     { name: 'Privacy Policy', path: '/privacy', icon: Shield, description: 'Privacy policy and data protection' },
-    { name: 'Terms of Service', path: '/terms', icon: FileText, description: 'Terms and conditions' },
-  ];
+    { name: 'Terms of Service', path: '/terms', icon: FileText, description: 'Terms and conditions' }];
 
   return (
     <>
@@ -287,7 +282,6 @@ const SitemapPage: React.FC = () => {
         </div>
       </div>
     </>
-=======
 
 const Sitemap: React.FC = () => {
   const links = [
@@ -305,8 +299,7 @@ const Sitemap: React.FC = () => {
     { name: 'Contact', url: '/contact' },
     { name: 'Careers', url: '/careers' },
     { name: 'Privacy', url: '/privacy' },
-    { name: 'Terms', url: '/terms' },
-  ];
+    { name: 'Terms', url: '/terms' }];
 
   return (
     <div className="min-h-screen px-6 py-16 max-w-4xl mx-auto">
@@ -322,7 +315,6 @@ const Sitemap: React.FC = () => {
         ))}
       </ul>
     </div>
->>>>>>> origin/main
   );
 };
 

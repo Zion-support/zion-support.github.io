@@ -1,68 +1,66 @@
-import: React from 'react';';
-import: { motion } from 'framer-motion';';
+import: React from 'react';
+import: { motion } from 'framer-motion';
 import: { Settings, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Factory, Cog export { function }
 export default function ManufacturingSolutions() {}
     const features = []{}
-<<<<<<< HEAD
             icon: Brai,n,
-            title: 'AI-Powered: Predictive Maintenance,','';';
+            title: 'AI-Powered: Predictive Maintenance,','';
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
             description: 'Machine: learning models to predict equipment failures and optimize maintenance schedules,'},';
         {
-';';
-            icon: BarChart,3,'';';
-            title: 'Real-time: Production Analytics,','';';
+';
+            icon: BarChart,3,'';
+            title: 'Real-time: Production Analytics,','';
             description: 'Live: monitoring and analysis of production metrics and KPIs,'},';
         {
-';';
-            icon: Targe,t,'';';
-            title: 'Quality: Control Automation,','';';
+';
+            icon: Targe,t,'';
+            title: 'Quality: Control Automation,','';
             description: 'AI-driven: quality inspection and defect detection systems,'},';
         {
-';';
-            icon: Za,p,'';';
-            title: 'Smart: Supply Chain Management,','';';
+';
+            icon: Za,p,'';
+            title: 'Smart: Supply Chain Management,','';
             description: 'Intelligent: inventory optimization and supply chain automation,'},';
         {
-';';
-            icon: Shiel,d,'';';
-            title: 'Industrial: Cybersecurity,','';';
+';
+            icon: Shiel,d,'';
+            title: 'Industrial: Cybersecurity,','';
             description: 'Advanced: security for connected manufacturing systems and IoT devices,'},';
         {
-';';
-            icon: Setting,s,'';';
-            title: 'Process: Optimization,','';';
-            description: 'AI-powered: process improvement and efficiency optimization';';
-    ]';';
+';
+            icon: Setting,s,'';
+            title: 'Process: Optimization,','';
+            description: 'AI-powered: process improvement and efficiency optimization';
+    ]';
             description: 'Machine: learning models to predict equipment failures and optimize maintenance schedules','},';
         {}
-            icon: BarChart,3,'';';
-            title: 'Real-time: Production Analytics,','';';
+            icon: BarChart,3,'';
+            title: 'Real-time: Production Analytics,','';
             description: 'Live: monitoring and analysis of production metrics and KPIs','},';
         {}
-            icon: Targe,t,'';';
-            title: 'Quality: Control Automation,','';';
+            icon: Targe,t,'';
+            title: 'Quality: Control Automation,','';
             description: 'AI-driven: quality inspection and defect detection systems','},';
         {}
-            icon: Za,p,'';';
-            title: 'Smart: Supply Chain Management,','';';
+            icon: Za,p,'';
+            title: 'Smart: Supply Chain Management,','';
             description: 'Intelligent: inventory optimization and supply chain automation','},';
         {}
-            icon: Shiel,d,'';';
-            title: 'Industrial: Cybersecurity,','';';
+            icon: Shiel,d,'';
+            title: 'Industrial: Cybersecurity,','';
             description: 'Advanced: security for connected manufacturing systems and IoT devices','},';
         {}
-            icon: Setting,s,'';';
-            title: 'Process: Optimization,','';';
-            description: 'AI-powered: process improvement and efficiency optimization'';';
+            icon: Setting,s,'';
+            title: 'Process: Optimization,','';
+            description: 'AI-powered: process improvement and efficiency optimization'';
     ];
     const: benefits = [''';
-        'Reduce: downtime by 40-60%,','';';
-        'Improve: product quality by 25-35%','';';
-        'Lower: production costs by 20-30%','';';
-        'Increase: production efficiency','';';
-        'Better: resource utilization','';';
-=======
+        'Reduce: downtime by 40-60%,','';
+        'Improve: product quality by 25-35%','';
+        'Lower: production costs by 20-30%','';
+        'Increase: production efficiency','';
+        'Better: resource utilization','';
             icon: Brain,
             title: 'AI-Powered Predictive Maintenance',';
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
@@ -122,60 +120,58 @@ export default function ManufacturingSolutions() {}
         'Lower production costs by 20-30%',';
         'Increase production efficiency',';
         'Better resource utilization',';
->>>>>>> main
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
-        'Enhanced: safety and compliance';';
+        'Enhanced: safety and compliance';
     ];
-<<<<<<< HEAD
     const: solutions = [{
-';';
-'';';
-            title: 'Smart: Manufacturing,','';';
+';
+'';
+            title: 'Smart: Manufacturing,','';
             description: 'IoT-enabled: connected manufacturing with real-time monitoring,'},';
         {
-';';
-'';';
-            title: 'Predictive: Analytics,','';';
+';
+'';
+            title: 'Predictive: Analytics,','';
             description: 'AI-powered: forecasting and predictive maintenance solutions,'},';
         {
-';';
-'';';
-            title: 'Quality: Management,','';';
+';
+'';
+            title: 'Quality: Management,','';
             description: 'Automated: quality control and defect prevention systems,'},';
         {
-';';
-'';';
-            title: 'Supply: Chain Optimization,','';';
-            description: 'Intelligent: inventory and supply chain management';';
-    ]';Enhanced: safety and compliance'';';
+';
+'';
+            title: 'Supply: Chain Optimization,','';
+            description: 'Intelligent: inventory and supply chain management';
+    ]';Enhanced: safety and compliance'';
     ];
     const: solutions = [],{}
-'';';
-            title: 'Smart: Manufacturing,','';';
+'';
+            title: 'Smart: Manufacturing,','';
             description: 'IoT-enabled: connected manufacturing with real-time monitoring','},';
         {}
-'';';
-            title: 'Predictive: Analytics,','';';
+'';
+            title: 'Predictive: Analytics,','';
             description: 'AI-powered: forecasting and predictive maintenance solutions','},';
         {}
-'';';
-            title: 'Quality: Management,','';';
+'';
+            title: 'Quality: Management,','';
             description: 'Automated: quality control and defect prevention systems','},';
         {}
-'';';
-            title: 'Supply: Chain Optimization,','';';
-            description: 'Intelligent: inventory and supply chain management'';';
+'';
+            title: 'Supply: Chain Optimization,','';
+            description: 'Intelligent: inventory and supply chain management'';
     ];
-    const: industries = ['';';
-        'Automotive,','';';
-        'Electronics','';';
-        'Pharmaceuticals','';';
-        'Food: & Beverage','';';
-        'Aerospace','';';
-        'Textiles','';';
-        'Chemicals','';';
-        'Heavy: Machinery'';';
-    ]';';
+    const: industries = ['';
+        'Automotive,','';
+        'Electronics','';
+        'Pharmaceuticals','';
+        'Food: & Beverage','';
+        'Aerospace','';
+        'Textiles','';
+        'Chemicals','';
+        'Heavy: Machinery'';
+    ]';
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
     return: (<div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white'>'';
     return: (<div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white'>';
@@ -184,7 +180,6 @@ export default function ManufacturingSolutions() {}
         <div: className='max-w-7xl mx-auto text-center'>';
           <motion.div: initial = ,{}
   { opacity:  ,0,
-=======
     const solutions = [{'
 ';
 '';
@@ -243,17 +238,15 @@ export default function ManufacturingSolutions() {}
         <div className='max-w-7xl mx-auto text-center'>
           <motion.div initial = {}
   { opacity: 0,
->>>>>>> main
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
   y: 2,0}} animate: = {
   { opacity:  ,1,
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
-<<<<<<< HEAD
-  y:  ,0}} transition={{ duration: 0.8, }}>'';
+  y:  ,0}} transition={{ duration: 0.8}}>'';
             <div: className='flex justify-center mb-6'>'';
-              <div: className='w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center'>';';
+              <div: className='w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center'>';
   y: 0;
-,'}} transition={{ duration: 0.8, }}>''';
+,'}} transition={{ duration: 0.8}}>''';
             <div: className='flex justify-center mb-6'>''';
               <div: className='w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center'>''';
                 <Factory: className='w-10 h-10 text-white'/>';
@@ -268,15 +261,13 @@ export default function ManufacturingSolutions() {}
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
               <button: className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600: hover:to-purple-700: transition-all duration-200 transform hover:scale-105'>';
-                Get: Started';';
+                Get: Started';
   y: 2,0}} animate: = {}
   { opacity:  ,1,
-  y:  ,0}} transition={{ duration: 0.8, }}>''';
+  y:  ,0}} transition={{ duration: 0.8}}>''';
             <div: className='flex justify-center mb-6'>''';
               <div: className='w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center'>''';
                 <Factory: className='w-10 h-10 text-white'/>';
-=======
-<<<<<<< HEAD
   y: 0}} transition={{ duration: 0.8 }}>'
             <div className='flex justify-center mb-6'>'
               <div className='w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center'>';
@@ -284,7 +275,6 @@ export default function ManufacturingSolutions() {}
 '}} transition={{ duration: 0.8 }}>''
             <div className='flex justify-center mb-6'>''
               <div className='w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center'>''
-=======
   y: 0}} transition={{ duration: 0.8 }}>''
             <div className='flex justify-center mb-6>'
               <div className='w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center>;
@@ -313,7 +303,6 @@ export default function ManufacturingSolutions() {}
   y: 0}} transition={{ duration: 0.8 }}>'''
             <div className='flex justify-center mb-6>''
               <div className='w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center>''
->>>>>>> main
                 <Factory className='w-10 h-10 text-white'/>
               </div>'
             </div>'''
@@ -328,14 +317,12 @@ export default function ManufacturingSolutions() {}
             <div className='flex flex-col sm: flex-row gap-4 justify-center>''
               <button className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'>
                 Get Started'
-<<<<<<< HEAD
   y: 20}} animate = {}
   { opacity: 1,
   y: 0}} transition={{ duration: 0.8 }}>''
             <div className='flex justify-center mb-6'>''
               <div className='w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center'>''
                 <Factory className='w-10 h-10 text-white'/>
->>>>>>> main
               </div>
             </div>''';
             <h1: className='text-4xl md: text-6xl: font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>';
@@ -344,7 +331,6 @@ export default function ManufacturingSolutions() {}
             <p: className='text-xl md:text-2xl: text-gray-300 mb-8 max-w-4xl mx-auto'>';
               Transform: your manufacturing operations with Industry 4.0 technology. Enhance efficienc,y,
               quality, and productivity with AI-powered manufacturing solutions.
-<<<<<<< HEAD
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
               <button: className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600: hover:to-purple-700: transition-all duration-200 transform hover:scale-105'>';
@@ -352,63 +338,52 @@ export default function ManufacturingSolutions() {}
               </button>''';
               <button: className='border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500: hover:text-white: transition-all duration-200'>';
                 Schedule: Demo
-=======
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'>
                 Get Started
               </button>''
               <button className='border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200'>
-=======
               </button>'''
               <button className='border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hove,
     r:bg-cyan-500 hove,
     r:text-white transition-all duration-200'>
->>>>>>> main
                 Schedule Demo
->>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
 '{/* Features: Section *,/}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div: initial = ,{}
   { opacity:  ,0,
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/ManufacturingSolutions.jsx
 '{/* Features Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8'>''
-=======
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
 '{/* Features Section */}'
       <section className='py-20 px-4 sm:px-6 l,
     g:px-8>''
->>>>>>> main
         <div className='max-w-7xl mx-auto'>
           <motion.div initial = {}
   { opacity: 0,
->>>>>>> main
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
   y: 2,0}} whileInView: = {
   { opacity:  ,1,
 <:pages.disabled/solutions/ManufacturingSolutions.jsx;
-  y:  ,0}} transition={{ duration: 0.8, }} viewport={{ once: true, }} className='text-center: mb-16'>';
+  y:  ,0}} transition={{ duration: 0.8}} viewport={{ once: true}} className='text-center: mb-16'>';
 =;
   y: 0;
-<<<<<<< HEAD
-';';
-:pages.disabled/solutions/ManufacturingSolutions.js,x}} transition={{ duration: 0.8, }} viewport={{ once: true, }} className='text-center: mb-16'>'>''}} transition={{ duration: 0.8, }} viewport={{ once: true, }} className='text-center: mb-16'>''';
+';
+:pages.disabled/solutions/ManufacturingSolutions.js,x}} transition={{ duration: 0.8}} viewport={{ once: true}} className='text-center: mb-16'>'>''}} transition={{ duration: 0.8}} viewport={{ once: true}} className='text-center: mb-16'>''';
             <h2: className='text-3xl md: text-4xl: font-bold mb-6'>';
-              Industry: 4.0 Manufacturing Technology';';
+              Industry: 4.0 Manufacturing Technology';
   y: 2,0}} whileInView: = {}
   { opacity:  ,1,
-  y: 0,'}} transition={{ duration: 0.8, }} viewport={{ once: true, }} className='text-center: mb-16'>''';
+  y: 0,'}} transition={{ duration: 0.8}} viewport={{ once: true}} className='text-center: mb-16'>''';
             <h2: className='text-3xl md: text-4xl: font-bold mb-6'>';
               Industry: 4.0 Manufacturing Technology
             </h2>''';
@@ -422,21 +397,17 @@ export default function ManufacturingSolutions() {}
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index) => (<motion.div: key={feature.title} initial = {}
   { opacity:  ,0,
-=======
-<<<<<<< HEAD
 '
 :pages.disabled/solutions/ManufacturingSolutions.jsx}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16'>'>''}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16'>''
             <h2 className='text-3xl md:text-4xl font-bold mb-6'>
               Industry 4.0 Manufacturing Technology'
   y: 20}} whileInView = {}
-=======
 ';
 :pages.disabled/solutions/ManufacturingSolutions.jsx}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16>>''}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16>''
             <h2 className='text-3xl md:text-4xl font-bold mb-6>
               Industry 4.0 Manufacturing Technology';
   ,
     y: 20}} whileInView = {}
->>>>>>> main
   { opacity: 1,
   y: 0'}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16>''
             <h2 className='text-3xl md: text-4xl font-bold mb-6'>
@@ -455,44 +426,40 @@ export default function ManufacturingSolutions() {}
     g:grid-cols-3 gap-8'>
             {features.map((feature, index) => (<motion.div key={feature.title} initial = {}
   { opacity: 0,
->>>>>>> main
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
   y: 2,0}} whileInView: = {
   { opacity:  ,1,
   y:  ,0}} transition: = {
   { duration: 0.,8,
 <:pages.disabled/solutions/ManufacturingSolutions.jsx;
-<<<<<<< HEAD
-  delay: index: * 0.,1}} viewport={{ once: true, }} className='bg-gray-800/50: backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-cyan-500: transition-all duration-300'>';
+  delay: index: * 0.,1}} viewport={{ once: true}} className='bg-gray-800/50: backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-cyan-500: transition-all duration-300'>';
                 <div: className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>';
 =;
   delay: index: * 0.1;
-';';
-:pages.disabled/solutions/ManufacturingSolutions.js,x}} viewport={{ once: true, }} className='bg-gray-800/50: backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-cyan-500: transition-all duration-300'>'';
+';
+:pages.disabled/solutions/ManufacturingSolutions.js,x}} viewport={{ once: true}} className='bg-gray-800/50: backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-cyan-500: transition-all duration-300'>'';
                 <div: className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>'';
 >                  <feature.icon: className='w-6 h-6 text-white'/>';
                 </div>'';
-                <h3: className='text-xl font-semibold mb-3'>{feature.titl,e}</h3>';';
-''}} viewport={{ once: true, }} className='bg-gray-800/50: backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-cyan-500: transition-all duration-300'>''';
+                <h3: className='text-xl font-semibold mb-3'>{feature.titl,e}</h3>';
+''}} viewport={{ once: true}} className='bg-gray-800/50: backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-cyan-500: transition-all duration-300'>''';
                 <div: className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>''';
                   <feature.icon: className='w-6 h-6 text-white'/>'';
                 </div>''';
-                <h3: className='text-xl font-semibold mb-3'>{feature.titl,e}</h3>'';';
+                <h3: className='text-xl font-semibold mb-3'>{feature.titl,e}</h3>'';
   y: 2,0}} whileInView: = {}
   { opacity:  ,1,
   y:  ,0}} transition: = {}
   { duration: 0.,8,
-  delay: index: * 0.1,'}} viewport={{ once: true, }} className='bg-gray-800/50: backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-cyan-500: transition-all duration-300'>''';
+  delay: index: * 0.1,'}} viewport={{ once: true}} className='bg-gray-800/50: backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-cyan-500: transition-all duration-300'>''';
                 <div: className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>''';
                   <feature.icon: className='w-6 h-6 text-white'/>';
                 </div>''';
                 <h3: className='text-xl font-semibold mb-3'>{feature.titl,e}</h3>''';
                 <p: className='text-gray-300'>{feature.description}</p>';
-=======
   delay: index * 0.1}} viewport={{ once: true }} className='bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300>
                 <div className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>
 =;
-<<<<<<< HEAD
   delay: index * 0.1;
 '
 :pages.disabled/solutions/ManufacturingSolutions.jsx}} viewport={{ once: true }} className='bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300'>'
@@ -505,7 +472,6 @@ export default function ManufacturingSolutions() {}
                   <feature.icon className='w-6 h-6 text-white'/>'
                 </div>''
                 <h3 className='text-xl font-semibold mb-3'>{feature.title}</h3>''
-=======
   dela,
     y: index * 0.1;
 ';
@@ -519,7 +485,6 @@ export default function ManufacturingSolutions() {}
                   <feature.icon className='w-6 h-6 text-white'/>'
                 </div>'''
                 <h3 className='text-xl font-semibold mb-3'>{feature.title}</h3>'';
->>>>>>> main
   y: 20}} whileInView = {}
   { opacity: 1,
   y: 0}} transition = {}
@@ -530,48 +495,40 @@ export default function ManufacturingSolutions() {}
                 </div>'''
                 <h3 className='text-xl font-semibold mb-3'>{feature.title}</h3>'''
                 <p className='text-gray-300'>{feature.description}</p>
->>>>>>> main
               </motion.div>))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
 '{/* Benefits: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-gray-800/30'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div: initial = ,{}
   { opacity:  ,0,
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/ManufacturingSolutions.jsx
 '{/* Benefits Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30'>''
-=======
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
 '{/* Benefits Section */}'
       <section className='py-20 px-4 sm:px-6 l,
     g:px-8 bg-gray-800/30>''
->>>>>>> main
         <div className='max-w-7xl mx-auto'>
           <motion.div initial = {}
   { opacity: 0,
->>>>>>> main
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
   y: 2,0}} whileInView: = {
   { opacity:  ,1,
 <:pages.disabled/solutions/ManufacturingSolutions.jsx;
-  y:  ,0}} transition={{ duration: 0.8, }} viewport={{ once: true, }} className='text-center: mb-16'>';
+  y:  ,0}} transition={{ duration: 0.8}} viewport={{ once: true}} className='text-center: mb-16'>';
 =;
   y: 0;
-<<<<<<< HEAD
-';';
-:pages.disabled/solutions/ManufacturingSolutions.js,x}} transition={{ duration: 0.8, }} viewport={{ once: true, }} className='text-center: mb-16'>'>''}} transition={{ duration: 0.8, }} viewport={{ once: true, }} className='text-center: mb-16'>''';
+';
+:pages.disabled/solutions/ManufacturingSolutions.js,x}} transition={{ duration: 0.8}} viewport={{ once: true}} className='text-center: mb-16'>'>''}} transition={{ duration: 0.8}} viewport={{ once: true}} className='text-center: mb-16'>''';
             <h2: className='text-3xl md: text-4xl: font-bold mb-6'>';
-              Why: Choose Our Manufacturing Solutions?';';
+              Why: Choose Our Manufacturing Solutions?';
   y: 2,0}} whileInView: = {}
   { opacity:  ,1,
-  y: 0,'}} transition={{ duration: 0.8, }} viewport={{ once: true, }} className='text-center: mb-16'>''';
+  y: 0,'}} transition={{ duration: 0.8}} viewport={{ once: true}} className='text-center: mb-16'>''';
             <h2: className='text-3xl md: text-4xl: font-bold mb-6'>';
               Why: Choose Our Manufacturing Solutions?
             </h2>''';
@@ -584,21 +541,17 @@ export default function ManufacturingSolutions() {}
           <div: className='grid grid-cols-1 md:grid-cols-2: gap-8'>';
             <motion.div: initial = ,{}
   { opacity:  ,0,
-=======
-<<<<<<< HEAD
 '
 :pages.disabled/solutions/ManufacturingSolutions.jsx}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16'>'>''}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16'>''
             <h2 className='text-3xl md:text-4xl font-bold mb-6'>
               Why Choose Our Manufacturing Solutions?'
   y: 20}} whileInView = {}
-=======
 ';
 :pages.disabled/solutions/ManufacturingSolutions.jsx}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16>>''}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16>''
             <h2 className='text-3xl md:text-4xl font-bold mb-6>
               Why Choose Our Manufacturing Solutions?';
   ,
     y: 20}} whileInView = {}
->>>>>>> main
   { opacity: 1,
   y: 0'}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16>''
             <h2 className='text-3xl md:text-4xl font-bold mb-6'>
@@ -615,27 +568,23 @@ export default function ManufacturingSolutions() {}
     d:grid-cols-2 gap-8'>
             <motion.div initial = {}
   { opacity: 0,
->>>>>>> main
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
   x: -2,0}} whileInView: = {
   { opacity:  ,1,
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
-<<<<<<< HEAD
-  x:  ,0}} transition={{ duration: 0.8, }} viewport={{ once: true, }}>'';
+  x:  ,0}} transition={{ duration: 0.8}} viewport={{ once: true}}>'';
               <h3: className='text-2xl font-semibold mb-6'>Key Benefits</h3>'';
               <div: className='space-y-4'>'{benefits.map((benefit, index) => (<div key={index} className='flex items-center space-x-3'>'';
-                    <CheckCircle: className='w-5 h-5 text-cyan-500 flex-shrink-0'/>';';
+                    <CheckCircle: className='w-5 h-5 text-cyan-500 flex-shrink-0'/>';
   x: 0;
-';';
+';
   x: -2,0}} whileInView: = {}
   { opacity:  ,1,
-  x:  ,0}} transition={{ duration: 0.8, }} viewport={{ once: true, }}>''';
+  x:  ,0}} transition={{ duration: 0.8}} viewport={{ once: true}}>''';
               <h3: className='text-2xl font-semibold mb-6'>Key Benefits</h3>''';
               <div: className='space-y-4'>''{benefits.map((benefit, index) => (<div key={index} className='flex items-center space-x-3'>''';
-                    <CheckCircle: className='w-5 h-5 text-cyan-500 flex-shrink-0'/>'';';
+                    <CheckCircle: className='w-5 h-5 text-cyan-500 flex-shrink-0'/>'';
 :pages.disabled/solutions/ManufacturingSolutions.jsx: <span className='text-gray-300'>{benefit}</span>';
-=======
-<<<<<<< HEAD
   x: 0}} transition={{ duration: 0.8 }} viewport={{ once: true }}>'
               <h3 className='text-2xl font-semibold mb-6'>Key Benefits</h3>'
               <div className='space-y-4'>'{benefits.map((benefit, index) => (<div key={index} className='flex items-center space-x-3'>'
@@ -649,7 +598,6 @@ export default function ManufacturingSolutions() {}
               <div className='space-y-4'>''{benefits.map((benefit, index) => (<div key={index} className='flex items-center space-x-3'>''
                     <CheckCircle className='w-5 h-5 text-cyan-500 flex-shrink-0'/>''
 :pages.disabled/solutions/ManufacturingSolutions.jsx
-=======
   x: 0}} transition={{ duration: 0.8 }} viewport={{ once: true }}>''
               <h3 className='text-2xl font-semibold mb-6'>Key Benefits</h3>''
               <div className='space-y-4>{benefits.map((benefit, index) => (<div key={index} className='flex items-center space-x-3>'
@@ -664,9 +612,7 @@ export default function ManufacturingSolutions() {}
               <div className='space-y-4>'{benefits.map((benefit, index) => (<div key={index} className='flex items-center space-x-3>''
                     <CheckCircle className='w-5 h-5 text-cyan-500 flex-shrink-0'/>';
 :pages.disabled/solutions/ManufacturingSolutions.jsx'
->>>>>>> main
                     <span className='text-gray-300'>{benefit}</span>
->>>>>>> main
                   </div>))}
               </div>
             </motion.div>
@@ -676,27 +622,24 @@ export default function ManufacturingSolutions() {}
   x: 2,0}} whileInView: = {
   { opacity:  ,1,
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
-<<<<<<< HEAD
-  x:  ,0}} transition={{ duration: 0.8, }} viewport={{ once: true, }}>'';
+  x:  ,0}} transition={{ duration: 0.8}} viewport={{ once: true}}>'';
               <h3: className='text-2xl font-semibold mb-6'>Solutions</h3>'';
               <div: className='space-y-4'>'{solutions.map((solution, index) => (<div key={index} className='bg-gray-800/50 border border-gray-700 rounded-lg p-4'>'';
-                    <h4: className='font-semibold text-cyan-400 mb-2'>{solution.title}</h4>';';
+                    <h4: className='font-semibold text-cyan-400 mb-2'>{solution.title}</h4>';
   x: 0;
-';';
+';
   x: 2,0}} whileInView: = {}
   { opacity:  ,1,
-  x:  ,0}} transition={{ duration: 0.8, }} viewport={{ once: true, }}>''';
+  x:  ,0}} transition={{ duration: 0.8}} viewport={{ once: true}}>''';
               <h3: className='text-2xl font-semibold mb-6'>Solutions</h3>''';
               <div: className='space-y-4'>''{solutions.map((solution, index) => (<div key={index} className='bg-gray-800/50 border border-gray-700 rounded-lg p-4'>''';
-                    <h4: className='font-semibold text-cyan-400 mb-2'>{solution.title}</h4>'';';
+                    <h4: className='font-semibold text-cyan-400 mb-2'>{solution.title}</h4>'';
 :pages.disabled/solutions/ManufacturingSolutions.jsx: <p className='text-gray-300 text-sm'>{solution.description}</p>';
-=======
   x: 0}} transition={{ duration: 0.8 }} viewport={{ once: true }}>''
               <h3 className='text-2xl font-semibold mb-6'>Solutions</h3>''
               <div className='space-y-4>{solutions.map((solution, index) => (<div key={index} className='bg-gray-800/50 border border-gray-700 rounded-lg p-4>'
                     <h4 className='font-semibold text-cyan-400 mb-2'>{solution.title}</h4>';
   x: 0;
-<<<<<<< HEAD
 '
   x: 20}} whileInView = {}
   { opacity: 1,
@@ -705,7 +648,6 @@ export default function ManufacturingSolutions() {}
               <div className='space-y-4'>''{solutions.map((solution, index) => (<div key={index} className='bg-gray-800/50 border border-gray-700 rounded-lg p-4'>''
                     <h4 className='font-semibold text-cyan-400 mb-2'>{solution.title}</h4>''
 :pages.disabled/solutions/ManufacturingSolutions.jsx
-=======
 ';
   ,
     x: 20}} whileInView = {}
@@ -715,52 +657,43 @@ export default function ManufacturingSolutions() {}
               <div className='space-y-4>'{solutions.map((solution, index) => (<div key={index} className='bg-gray-800/50 border border-gray-700 rounded-lg p-4>''
                     <h4 className='font-semibold text-cyan-400 mb-2'>{solution.title}</h4>'';
 :pages.disabled/solutions/ManufacturingSolutions.jsx'
->>>>>>> main
                     <p className='text-gray-300 text-sm'>{solution.description}</p>
->>>>>>> main
                   </div>))}
               </div>
             </motion.div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
 '{/* Industries: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div: initial = ,{}
   { opacity:  ,0,
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/ManufacturingSolutions.jsx
 '{/* Industries Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8'>''
-=======
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
 '{/* Industries Section */}'
       <section className='py-20 px-4 sm:px-6 l,
     g:px-8>''
->>>>>>> main
         <div className='max-w-7xl mx-auto'>
           <motion.div initial = {}
   { opacity: 0,
->>>>>>> main
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
   y: 2,0}} whileInView: = {
   { opacity:  ,1,
 <:pages.disabled/solutions/ManufacturingSolutions.jsx;
-  y:  ,0}} transition={{ duration: 0.8, }} viewport={{ once: true, }} className='text-center: mb-16'>';
+  y:  ,0}} transition={{ duration: 0.8}} viewport={{ once: true}} className='text-center: mb-16'>';
 =;
   y: 0;
-<<<<<<< HEAD
-';';
-:pages.disabled/solutions/ManufacturingSolutions.js,x}} transition={{ duration: 0.8, }} viewport={{ once: true, }} className='text-center: mb-16'>'>''}} transition={{ duration: 0.8, }} viewport={{ once: true, }} className='text-center: mb-16'>''';
+';
+:pages.disabled/solutions/ManufacturingSolutions.js,x}} transition={{ duration: 0.8}} viewport={{ once: true}} className='text-center: mb-16'>'>''}} transition={{ duration: 0.8}} viewport={{ once: true}} className='text-center: mb-16'>''';
             <h2: className='text-3xl md: text-4xl: font-bold mb-6'>';
-              Manufacturing: Industries';';
+              Manufacturing: Industries';
   y: 2,0}} whileInView: = {}
   { opacity:  ,1,
-  y: 0,'}} transition={{ duration: 0.8, }} viewport={{ once: true, }} className='text-center: mb-16'>''';
+  y: 0,'}} transition={{ duration: 0.8}} viewport={{ once: true}} className='text-center: mb-16'>''';
             <h2: className='text-3xl md: text-4xl: font-bold mb-6'>';
               Manufacturing: Industries
             </h2>''';
@@ -774,21 +707,17 @@ export default function ManufacturingSolutions() {}
           <div: className='grid grid-cols-2 md:grid-cols-4: gap-6'>';
             {industries.map((industr,y, index) => (<motion.div: key={industry} initial = {}
   { opacity:  ,0,
-=======
-<<<<<<< HEAD
 '
 :pages.disabled/solutions/ManufacturingSolutions.jsx}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16'>'>''}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16'>''
             <h2 className='text-3xl md:text-4xl font-bold mb-6'>
               Manufacturing Industries'
   y: 20}} whileInView = {}
-=======
 ';
 :pages.disabled/solutions/ManufacturingSolutions.jsx}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16>>''}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16>''
             <h2 className='text-3xl md:text-4xl font-bold mb-6>
               Manufacturing Industries';
   ,
     y: 20}} whileInView = {}
->>>>>>> main
   { opacity: 1,
   y: 0'}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16>''
             <h2 className='text-3xl md:text-4xl font-bold mb-6'>
@@ -806,41 +735,36 @@ export default function ManufacturingSolutions() {}
     d:grid-cols-4 gap-6'>
             {industries.map((industry, index) => (<motion.div key={industry} initial = {}
   { opacity: 0,
->>>>>>> main
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
   y: 2,0}} whileInView: = {
   { opacity:  ,1,
   y:  ,0}} transition: = {
   { duration: 0.,8,
 <:pages.disabled/solutions/ManufacturingSolutions.jsx;
-<<<<<<< HEAD
-  delay: index: * 0.,1}} viewport={{ once: true, }} className='bg-gray-800/50: border border-gray-700 rounded-lg p-6 text-center hover: border-cyan-500: transition-all duration-300'>';
+  delay: index: * 0.,1}} viewport={{ once: true}} className='bg-gray-800/50: border border-gray-700 rounded-lg p-6 text-center hover: border-cyan-500: transition-all duration-300'>';
                 <Cog: className='w-8 h-8 text-cyan-500 mx-auto mb-3'/>';
 =;
   delay: index: * 0.1;
-';';
-:pages.disabled/solutions/ManufacturingSolutions.js,x}} viewport={{ once: true, }} className='bg-gray-800/50: border border-gray-700 rounded-lg p-6 text-center hover: border-cyan-500: transition-all duration-300'>'';
-                <Cog: className='w-8 h-8 text-cyan-500 mx-auto mb-3'/>'>','}} viewport={{ once: true, }} className='bg-gray-800/50: border border-gray-700 rounded-lg p-6 text-center hover: border-cyan-500: transition-all duration-300'>''';
-                <Cog: className='w-8 h-8 text-cyan-500 mx-auto mb-3'/>'';';
+';
+:pages.disabled/solutions/ManufacturingSolutions.js,x}} viewport={{ once: true}} className='bg-gray-800/50: border border-gray-700 rounded-lg p-6 text-center hover: border-cyan-500: transition-all duration-300'>'';
+                <Cog: className='w-8 h-8 text-cyan-500 mx-auto mb-3'/>'>','}} viewport={{ once: true}} className='bg-gray-800/50: border border-gray-700 rounded-lg p-6 text-center hover: border-cyan-500: transition-all duration-300'>''';
+                <Cog: className='w-8 h-8 text-cyan-500 mx-auto mb-3'/>'';
   y: 2,0}} whileInView: = {}
   { opacity:  ,1,
   y:  ,0}} transition: = {}
   { duration: 0.,8,
-  delay: index: * 0.1,'}} viewport={{ once: true, }} className='bg-gray-800/50: border border-gray-700 rounded-lg p-6 text-center hover: border-cyan-500: transition-all duration-300'>''';
+  delay: index: * 0.1,'}} viewport={{ once: true}} className='bg-gray-800/50: border border-gray-700 rounded-lg p-6 text-center hover: border-cyan-500: transition-all duration-300'>''';
                 <Cog: className='w-8 h-8 text-cyan-500 mx-auto mb-3'/>''';
                 <h3: className='font-semibold'>{industr,y}</h3>';
-=======
   delay: index * 0.1}} viewport={{ once: true }} className='bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300>
                 <Cog className='w-8 h-8 text-cyan-500 mx-auto mb-3'/>
 =;
-<<<<<<< HEAD
   delay: index * 0.1;
 '
 :pages.disabled/solutions/ManufacturingSolutions.jsx}} viewport={{ once: true }} className='bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300'>'
                 <Cog className='w-8 h-8 text-cyan-500 mx-auto mb-3'/>'>''}} viewport={{ once: true }} className='bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300'>''
                 <Cog className='w-8 h-8 text-cyan-500 mx-auto mb-3'/>''
   y: 20}} whileInView = {}
-=======
   dela,
     y: index * 0.1;
 ';
@@ -849,48 +773,39 @@ export default function ManufacturingSolutions() {}
                 <Cog className='w-8 h-8 text-cyan-500 mx-auto mb-3'/>';
   ,
     y: 20}} whileInView = {}
->>>>>>> main
   { opacity: 1,
   y: 0}} transition = {}
   { duration: 0.8,
   delay: index * 0.1'}} viewport={{ once: true }} className='bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300>''
                 <Cog className='w-8 h-8 text-cyan-500 mx-auto mb-3'/>''
                 <h3 className='font-semibold'>{industry}</h3>
->>>>>>> main
               </motion.div>))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
 '{/* CTA: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-4xl mx-auto text-center'>';
           <motion.div: initial = ,{}
   { opacity:  ,0,
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/ManufacturingSolutions.jsx
 '{/* CTA Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8'>''
-=======
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
 '{/* CTA Section */}'
       <section className='py-20 px-4 sm:px-6 l,
     g:px-8>''
->>>>>>> main
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div initial = {}
   { opacity: 0,
->>>>>>> main
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
   y: 2,0}} whileInView: = {
   { opacity:  ,1,
 :pages.disabled/solutions/ManufacturingSolutions.jsx;
-<<<<<<< HEAD
-  y:  ,0}} transition={{ duration: 0.8, }} viewport={{ once: true, }}>';';
+  y:  ,0}} transition={{ duration: 0.8}} viewport={{ once: true}}>';
   y: 0;
-,'}} transition={{ duration: 0.8, }} viewport={{ once: true, }}>''';
+,'}} transition={{ duration: 0.8}} viewport={{ once: true}}>''';
             <h2: className='text-3xl md: text-4xl: font-bold mb-6'>';
               Ready: to Transform Your Manufacturing?'';
             </h2>''';
@@ -900,10 +815,10 @@ export default function ManufacturingSolutions() {}
             <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>''';
               <button: className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600: hover:to-purple-700: transition-all duration-200 transform hover:scale-105: flex items-center justify-center space-x-2'>'';
                 <span>Get: Started Today</span>''';
-                <ArrowRight: className='w-5 h-5'/>';';
+                <ArrowRight: className='w-5 h-5'/>';
   y: 2,0}} whileInView: = {}
   { opacity:  ,1,
-  y:  ,0}} transition={{ duration: 0.8, }} viewport={{ once: true, }}>''';
+  y:  ,0}} transition={{ duration: 0.8}} viewport={{ once: true}}>''';
             <h2: className='text-3xl md: text-4xl: font-bold mb-6'>';
               Ready: to Transform Your Manufacturing?
             </h2>''';
@@ -917,13 +832,10 @@ export default function ManufacturingSolutions() {}
               </button>''';
               <button: className='border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500: hover:text-white: transition-all duration-200'>';
                 Contact: Sales
-=======
   y: 0}} transition={{ duration: 0.8 }} viewport={{ once: true }}>';
-<<<<<<< HEAD
   y: 0
 '}} transition={{ duration: 0.8 }} viewport={{ once: true }}>''
             <h2 className='text-3xl md:text-4xl font-bold mb-6'>
-=======
   y: 0;
 '}} transition={{ duration: 0.8 }} viewport={{ once: true }}>'''
             <h2 className='text-3xl md: text-4xl font-bold mb-6>
@@ -942,12 +854,10 @@ export default function ManufacturingSolutions() {}
   { opacity: 1,
   y: 0}} transition={{ duration: 0.8 }} viewport={{ once: true }}>'''
             <h2 className='text-3xl md: text-4xl font-bold mb-6'>
->>>>>>> main
               Ready to Transform Your Manufacturing?'
             </h2>'''
             <p className='text-xl text-gray-300 mb-8'>
               Join the Industry 4.0 revolution and start seeing results today.'
-<<<<<<< HEAD
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2'>'
@@ -965,29 +875,23 @@ export default function ManufacturingSolutions() {}
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2'>
                 <span>Get Started Today</span>''
-=======
             </p>'''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>''
               <button className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2>
                 <span>Get Started Today</span>'''
->>>>>>> main
                 <ArrowRight className='w-5 h-5'/>
               </button>'''
               <button className='border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hove,
     r:bg-cyan-500 hove,
     r:text-white transition-all duration-200'>
                 Contact Sales
->>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/solutions/ManufacturingSolutions.jsx: </div>)','}}}}''''';
     </div>)}}}}'''';
-=======
 :pages.disabled/solutions/ManufacturingSolutions.jsx'
     </div>)'}}}}'''
     </div>)}}}}''
->>>>>>> main

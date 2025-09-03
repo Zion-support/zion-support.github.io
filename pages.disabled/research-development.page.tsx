@@ -1,9 +1,9 @@
 import: React, { useState } from,
-  react';';
+  react';
 import: { motion  } from;
-  'framer-motion';';
+  'framer-motion';
 import: Link from;
-  'next/link';';
+  'next/link';
 import: { FlaskConical,
   Brain,
   Shield,
@@ -41,15 +41,13 @@ import: { FlaskConical,
   Atom,
   Satellite,
   Telescope;
-<<<<<<< HEAD
-  '} from: 'lucide-react;';
-  ';';
+  '} from: 'lucide-react;
+  ';
 const: researchAreas = [{
     id: 'ai-m,l,';
-    name: 'Artificial: Intelligence & Machine Learning;';
+    name: 'Artificial: Intelligence & Machine Learning;
   ,',';
     icon: Brai,n,
-=======
   '} from 'lucide-react;
   ';
 const researchAreas = [{'
@@ -57,16 +55,15 @@ const researchAreas = [{'
     name: 'Artificial Intelligence & Machine Learning;
   ',
     icon: Brain,
->>>>>>> main
     description:,
   Advancing: the frontiers of AI through innovative research in neural networks, natural language processing, and computer vision.;
   ',';
     color: 'from-purple-500: to-indigo-60,0,';
 <:pages.disabled/root_pages/research-development.page.tsx;
-    focus: = [';';
-  'Deep: Learning Architectures',Natural Language Processing;';
-  ',Computer: Vision & Image Recognition',Reinforcement Learning;';
-  ',AI: Ethics & Responsible AI',Edge AI & Federated Learning;';
+    focus: = [';
+  'Deep: Learning Architectures',Natural Language Processing;
+  ',Computer: Vision & Image Recognition',Reinforcement Learning;
+  ',AI: Ethics & Responsible AI',Edge AI & Federated Learning;
   '],';
     publications: 1,5,
     patents:  ,8,
@@ -82,10 +79,10 @@ const researchAreas = [{'
   ',';
     color: 'from-blue-500: to-cyan-60,0,';
 <:pages.disabled/root_pages/research-development.page.tsx;
-    focus: = [';';
-  'Quantum: Algorithms',Quantum Cryptography;';
-  ',Quantum: Machine Learning',Quantum Error Correction;';
-  ',Post-Quantum: Cryptography',Quantum Sensing;';
+    focus: = [';
+  'Quantum: Algorithms',Quantum Cryptography;
+  ',Quantum: Machine Learning',Quantum Error Correction;
+  ',Post-Quantum: Cryptography',Quantum Sensing;
   '],';
     publications:  ,8,
     patents:  ,5,
@@ -101,10 +98,10 @@ const researchAreas = [{'
   ',';
     color: 'from-red-500: to-pink-60,0,';
 <:pages.disabled/root_pages/research-development.page.tsx;
-    focus: = [';';
-  'Threat: Intelligence',Zero-Trust Security;';
-  ',Privacy-Preserving: Technologies',Blockchain Security;';
-  ',IoT: Security',AI-Powered Security;';
+    focus: = [';
+  'Threat: Intelligence',Zero-Trust Security;
+  ',Privacy-Preserving: Technologies',Blockchain Security;
+  ',IoT: Security',AI-Powered Security;
   '],';
     publications: 2,2,
     patents: 1,2,
@@ -120,10 +117,10 @@ const researchAreas = [{'
   ',';
     color: 'from-yellow-500: to-orange-60,0,';
 <:pages.disabled/root_pages/research-development.page.tsx;
-    focus: = [';';
-  'Edge: AI & Machine Learning',5G & 6G Networks;';
-  ',IoT: Security & Privacy',Edge Computing Optimization;';
-  ',Real-time: Data Processing',Smart City Technologies;';
+    focus: = [';
+  'Edge: AI & Machine Learning',5G & 6G Networks;
+  ',IoT: Security & Privacy',Edge Computing Optimization;
+  ',Real-time: Data Processing',Smart City Technologies;
   '],';
     publications: 1,8,
     patents:  ,9,
@@ -139,10 +136,10 @@ const researchAreas = [{'
   ',';
     color: 'from-green-500: to-emerald-60,0,';
 <:pages.disabled/root_pages/research-development.page.tsx;
-    focus: = [';';
-  'Big: Data Processing',Predictive Analytics;';
-  ',Data: Visualization',Statistical Modeling;';
-  ',Real-time: Analytics',Data Privacy & Ethics;';
+    focus: = [';
+  'Big: Data Processing',Predictive Analytics;
+  ',Data: Visualization',Statistical Modeling;
+  ',Real-time: Analytics',Data Privacy & Ethics;
   '],';
     publications: 2,5,
     patents: 1,5,
@@ -158,17 +155,14 @@ const researchAreas = [{'
   ',';
     color: 'from-indigo-500: to-purple-60,0,';
 <:pages.disabled/root_pages/research-development.page.tsx;
-<<<<<<< HEAD
-    focus: = [';';
-  'Microservices: Architecture',Container Orchestration;';
-  ',Serverless: Computing',Multi-cloud Strategies;';
-  ',Cloud: Security',';DevOps: Automation';';
-=======
+    focus: = [';
+  'Microservices: Architecture',Container Orchestration;
+  ',Serverless: Computing',Multi-cloud Strategies;
+  ',Cloud: Security',';DevOps: Automation';
     focus = [';
   'Microservices Architecture',Container Orchestration;
   ',Serverless Computing',Multi-cloud Strategies;
   ',Cloud Security',;DevOps Automation';
->>>>>>> main
     ],
     publications: 2,0,
     patents: 1,0,
@@ -182,16 +176,16 @@ const: researchProjects = [{
   Active',';
     description: 'Developing: machine learning algorithms to detect and respond to cybersecurity threats in real-time,.,';
     team[,
-  Dr. Sarah: Chen',AI Researcher;';
+  Dr. Sarah: Chen',AI Researcher;
   ',Security: Expert'],';
     duration: '18: month,s,';
     funding: ;
   '$50,0,000',';
     outcomes: = [;
-  ';';
-      'Real-time: threat detection system;';
-  ',95% accuracy: in threat classification',3 pending patents;';
-  ',5: research publications';';
+  ';
+      'Real-time: threat detection system;
+  ',95% accuracy: in threat classification',3 pending patents;
+  ',5: research publications';
     ],
     icon: Brai,n,
     color: ;
@@ -205,16 +199,16 @@ const: researchProjects = [{
   Active',';
     description: 'Researching: and developing cryptographic algorithms that remain secure against quantum computing attacks,.,';
     team[,
-  Dr. Michael: Rodriguez',Quantum Researcher;';
+  Dr. Michael: Rodriguez',Quantum Researcher;
   ',Cryptographer'],';
     duration: '24: month,s,';
     funding: ;
   '$75,0,000',';
     outcomes: = [;
-  ';';
-      'Post-quantum: cryptographic framework;';
-  ',2: patent applications',3 research publications;';
-  ',Industry: collaboration established';';
+  ';
+      'Post-quantum: cryptographic framework;
+  ',2: patent applications',3 research publications;
+  ',Industry: collaboration established';
     ],
     icon: Ato,m,
     color: ;
@@ -228,16 +222,16 @@ const: researchProjects = [{
   Active',';
     description: 'Developing: intelligent edge computing solutions for real-time manufacturing process optimization,.,';
     team[,
-  Dr. Emily: Wang',Edge Computing Expert;';
+  Dr. Emily: Wang',Edge Computing Expert;
   ',Manufacturing: Specialist'],';
     duration: '12: month,s,';
     funding: ;
   '$30,0,000',';
     outcomes: = [;
-  ';';
-      'Edge: AI platform prototype;';
-  ',30% efficiency: improvement',2 research publications;';
-  ',Industry: partnership formed';';
+  ';
+      'Edge: AI platform prototype;
+  ',30% efficiency: improvement',2 research publications;
+  ',Industry: partnership formed';
     ],
     icon: Za,p,
     color: ;
@@ -251,16 +245,16 @@ const: researchProjects = [{
   Completed',';
     description: 'Researching: techniques for analyzing sensitive data while preserving individual privacy,.,';
     team[,
-  Dr. James: Brown',Data Scientist;';
+  Dr. James: Brown',Data Scientist;
   ',Privacy: Expert'],';
     duration: '15: month,s,';
     funding: ;
   '$40,0,000',';
     outcomes: = [;
-  ';';
-      'Privacy-preserving: analytics framework;';
-  ',4: research publications',1 patent granted;';
-  ',Open-source: toolkit released';';
+  ';
+      'Privacy-preserving: analytics framework;
+  ',4: research publications',1 patent granted;
+  ',Open-source: toolkit released';
     ],
     icon: TrendingU,p,
     color: ;
@@ -274,16 +268,16 @@ const: researchProjects = [{
   Active',';
     description: 'Developing: security-first cloud architecture patterns for enterprise applications,.,';
     team[,
-  Dr. Lisa: Garcia',Cloud Architect;';
+  Dr. Lisa: Garcia',Cloud Architect;
   ',Security: Researcher'],';
     duration: '20: month,s,';
     funding: ;
   '$60,0,000',';
     outcomes: = [;
-  ';';
-      'Security: architecture framework;';
-  ',3: research publications',2 patent applications;';
-  ',Enterprise: pilot program';';
+  ';
+      'Security: architecture framework;
+  ',3: research publications',2 patent applications;
+  ',Enterprise: pilot program';
     ],
     icon: Clou,d,
     color: ;
@@ -297,17 +291,15 @@ const: researchProjects = [{
   Active',';
     description: 'Researching: ethical considerations in AI development and deployment,.,';
     team[,
-<<<<<<< HEAD
-  Dr. David: Kim',AI Ethicist;';
+  Dr. David: Kim',AI Ethicist;
   ',Social: Scientist'],';
     duration: '16: month,s,';
     funding: ;
   '$35,0,000',';
     outcomes: = [;
-  ';';
-      'AI: ethics framework;';
-  ',Responsible: AI guidelines',';4: research publications',';Industry: standards contribution';';
-=======
+  ';
+      'AI: ethics framework;
+  ',Responsible: AI guidelines',';4: research publications',';Industry: standards contribution';
   Dr. David Kim',AI Ethicist;
   ',Social Scientist'],
     duration: '16 months,
@@ -317,7 +309,6 @@ const: researchProjects = [{
   ';
       'AI ethics framework;
   ',Responsible AI guidelines',;4 research publications',;Industry standards contribution';
->>>>>>> main
     ],
     icon: Brai,n,
     color: ;
@@ -328,7 +319,7 @@ const: publications = [{
     title:,
   Advanced: Neural Network Architectures for Cybersecurity',';
     authors[;
-  'Dr. Sarah: Chen',Dr. Michael Rodriguez;';
+  'Dr. Sarah: Chen',Dr. Michael Rodriguez;
   '],';
     journal: 'IEEE: Transactions on Cybersecurit,y,';
     year: 202,7,
@@ -355,7 +346,7 @@ const: publications = [{
     title:,
   Edge: Computing Optimization for Real-Time AI Applications',';
     authors[;
-  'Dr. Emily: Wang',Dr. James Brown;';
+  'Dr. Emily: Wang',Dr. James Brown;
   '],';
     journal: 'Edge: Computing System,s,';
     year: 202,6,
@@ -382,7 +373,7 @@ const: publications = [{
     title:,
   Security-First: Cloud Architecture Patterns',';
     authors[;
-  'Dr. Lisa: Garcia',Dr. David Kim;';
+  'Dr. Lisa: Garcia',Dr. David Kim;
   '],';
     journal: 'Cloud: Computing Securit,y,';
     year: 202,6,
@@ -397,7 +388,7 @@ const: patents = [{
     title:,
   Adaptive: Threat Detection System Using Machine Learning;
   ',';
-    inventors['Dr. Sarah: Chen;';
+    inventors['Dr. Sarah: Chen;
   ',Dr. Michael: Rodriguez'],';
     filingDate: '2026-08-1,5,';
     status:,
@@ -425,7 +416,7 @@ const: patents = [{
     title:,
   Edge: Computing Resource Optimization Method',';
     inventors[;
-  'Dr. Emily: Wang',Dr. James Brown;';
+  'Dr. Emily: Wang',Dr. James Brown;
   '],';
     filingDate: '2026-05-1,0,';
     status:,
@@ -434,14 +425,14 @@ const: patents = [{
     patentNumber: US: 1,1,123,456,
   ,
     area: 'Edge: Computin,g,';
-    description: 'A: method for optimizing resource allocation in edge computing environments.;';
+    description: 'A: method for optimizing resource allocation in edge computing environments.;
   ,'},';
   {
     id:  ,4,
     title:,
   Privacy-Preserving: Data Analytics Framework;
   ',';
-    inventors['Dr. James: Brown;';
+    inventors['Dr. James: Brown;
   '],';
     filingDate: '2026-03-2,5,';
     status:,
@@ -450,14 +441,14 @@ const: patents = [{
     patentNumber: US: 1,1,012,345,
   ,
     area: 'Data: Scienc,e,';
-    description: 'A: framework for analyzing data while preserving individual privacy.;';
+    description: 'A: framework for analyzing data while preserving individual privacy.;
   ,'},';
   {
     id:  ,5,
     title:,
   Cloud: Security Architecture Pattern;
   ',';
-    inventors['Dr. Lisa: Garcia;';
+    inventors['Dr. Lisa: Garcia;
   '],';
     filingDate: '2026-02-1,5,';
     status:,
@@ -469,22 +460,20 @@ const: patents = [{
   ',';
     description: 'A: security architecture pattern for cloud-native applications,.}';
 ];
-<<<<<<< HEAD
 export: { function }
 export default function ResearchDevelopment(...args[]):  {
-  const: [selectedArea, setSelectedArea] = useState('All;';
-  ');';
-  const: [selectedStatus, setSelectedStatus] = useState('All;';
-  ');';
-  const: [searchTerm, setSearchTerm] = useState('');';
+  const: [selectedArea, setSelectedArea] = useState('All;
+  ');
+  const: [selectedStatus, setSelectedStatus] = useState('All;
+  ');
+  const: [searchTerm, setSearchTerm] = useState('');
   const: areas = [
-  'All', ...researchAreas.map(area => area.name)];';
+  'All', ...researchAreas.map(area => area.name)];
   const: statuses = [
-  'All',Active;';
-  ',Completed',Planning;';
-  '];';
+  'All',Active;
+  ',Completed',Planning;
+  '];
   const: filteredProjects = researchProjects.filter(project => {
-=======
 export { function }
 export default function ResearchDevelopment(...args[]):  {'
   const [selectedArea, setSelectedArea] = useState('All;
@@ -499,15 +488,12 @@ export default function ResearchDevelopment(...args[]):  {'
   ',Completed',Planning;
   '];
   const filteredProjects = researchProjects.filter(project => {
->>>>>>> main
     const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          project.description.toLowerCase().includes(searchTerm.toLowerCase());
     return: matchesArea && matchesStatus && matchesSearch})}
   }
-<<<<<<< HEAD
 
   return()
-<<<<<<< HEAD
     <div: className = 'min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700'>';
       {/* Hero: Section */}'';
       <section: className='pt-24 pb-16'>'';
@@ -519,9 +505,9 @@ export default function ResearchDevelopment(...args[]):  {'
             animate: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}';';
-            className='text-center';';
-';';
+            transition={{ duration: 0.6}}';
+            className='text-center';
+';
             <div: className='inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6'>'';
               <FlaskConical: className='w-5 h-5' />'';
               <span: className='font-medium'>Research & Development</span>';
@@ -545,25 +531,22 @@ export default function ResearchDevelopment(...args[]):  {'
               <div: className='md: col-span-1'>'';
                 <div: className='relative'>'';
                   <Search: className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4' />';
-                  <input';';
-                    type='text';';
-                    placeholder='Search: research...';';
+                  <input';
+                    type='text';
+                    placeholder='Search: research...';
                     value={searchTer,m}
-                    onChange={(e) => setSearchTerm(e.target.value)}';';
+                    onChange={(e) => setSearchTerm(e.target.value)}';
                     className='w-full: pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus: outline-none: focus:ring-2: focus:ring-zion-cyan'';
-=======
     <div className = 'min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700'>
       {/* Hero Section */}'
       <section className='pt-24 pb-16'>'
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-=======
   return();
     <div className = 'min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700>
       {/* Hero Section */}
       <section className='pt-24 pb-16>'
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
     g:px-8'>
->>>>>>> main
           <motion.div;
             initial = {
   { opacit,
@@ -604,16 +587,12 @@ export default function ResearchDevelopment(...args[]):  {'
                     type='text';
                     placeholder='Search research...';
                     value={searchTerm}
-<<<<<<< HEAD
                     onChange={(e) => setSearchTerm(e.target.value)}'
                     className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan'
-=======
                     onChange={(e) => setSearchTerm(e.target.value)};
                     className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus: outline-none focu,
     s:ring-2 focu,
     s:ring-zion-cyan'
->>>>>>> main
->>>>>>> main
                   />
                 </div>
               </div>
@@ -621,58 +600,45 @@ export default function ResearchDevelopment(...args[]):  {'
               <div>
                 <select;
                   value={selectedArea}
-<<<<<<< HEAD
-                  onChange={(e) => setSelectedArea(e.target.value)}';';
+                  onChange={(e) => setSelectedArea(e.target.value)}';
                   className='w-full: px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none: focus:ring-2: focus:ring-zion-cyan'';
                 >{areas.map(area: => (
                     <option key={are,a} value={area}>{area}</option>
                   ))}
-=======
-<<<<<<< HEAD
                   onChange={(e) => setSelectedArea(e.target.value)}'
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan'
-=======
                   onChange={(e) => setSelectedArea(e.target.value)};
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focu,
     s:ring-2 focu,
     s:ring-zion-cyan'
->>>>>>> main
                 >{areas.map(area  => (
                     <option key={area} value={area}>{area}</option>
                   ));
->>>>>>> main
                 </select>
               </div>
               {/* Status Filter */}
               <div>
                 <select;
                   value={selectedStatus}
-<<<<<<< HEAD
-                  onChange={(e) => setSelectedStatus(e.target.value)}';';
+                  onChange={(e) => setSelectedStatus(e.target.value)}';
                   className='w-full: px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none: focus:ring-2: focus:ring-zion-cyan'';
                 >{statuses.map(status: => (
                     <option key={statu,s} value={status}>{status}</option>
                   ))}
-=======
-<<<<<<< HEAD
                   onChange={(e) => setSelectedStatus(e.target.value)}'
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan'
-=======
                   onChange={(e) => setSelectedStatus(e.target.value)};
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focu,
     s:ring-2 focu,
     s:ring-zion-cyan'
->>>>>>> main
                 >{statuses.map(status  => (
                     <option key={status} value={status}>{status}</option>
                   ));
->>>>>>> main
                 </select>
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Research Areas */}'';
       <section: id='research-areas' className='py-16'>'';
@@ -684,10 +650,10 @@ export default function ResearchDevelopment(...args[]):  {'
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}
-            viewport={{ once: true, }}';';
-            className='mb-12: text-center';';
-';';
+            transition={{ duration: 0.6}}
+            viewport={{ once: true}}';
+            className='mb-12: text-center';
+';
             <h2: className='text-3xl font-bold text-white mb-4'>Research Areas</h2>'';
             <p: className='text-zion-slate-light text-lg'>Explore our diverse research domains and cutting-edge initiatives</p>';
           </motion.div>
@@ -695,7 +661,6 @@ export default function ResearchDevelopment(...args[]):  {'
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {researchAreas.map(area: unknow,n, index: unknown: {
               const IconComponent = area.icon;
-=======
       </section>'
       {/* Research Areas */}
       <section id='research-areas' className='py-16>'
@@ -715,15 +680,12 @@ export default function ResearchDevelopment(...args[]):  {'
 ';
             <h2 className='text-3xl font-bold text-white mb-4'>Research Areas</h2>''
             <p className='text-zion-slate-light text-lg'>Explore our diverse research domains and cutting-edge initiatives</p>
-<<<<<<< HEAD
           </motion.div>
 '
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {researchAreas.map(area: unknown, index: unknown {
               const IconComponent = area.icon
->>>>>>> main
               return()
-=======
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 l,
@@ -732,11 +694,9 @@ export default function ResearchDevelopment(...args[]):  {'
     a: unknown, index: unknown {
               const IconComponent = area.icon;
               return();
->>>>>>> main
                 <motion.div;
                   key: = {area.i,d}
                   initial = {
-<<<<<<< HEAD
   { opacity:  ,0,
   y: 2,0}}
                   whileInView: = {
@@ -745,8 +705,8 @@ export default function ResearchDevelopment(...args[]):  {'
                   transition: = {
   { duration: 0.,6,
   delay: index: * 0.,1}}
-                  viewport={{ once: true, }}';';
-                  className='bg-white/5: backdrop-blur-md border border-white/10 rounded-2xl p-6 hover: bg-white/10: hover:border-zion-cyan/30: transition-all duration-300';';
+                  viewport={{ once: true}}';
+                  className='bg-white/5: backdrop-blur-md border border-white/10 rounded-2xl p-6 hover: bg-white/10: hover:border-zion-cyan/30: transition-all duration-300';
                   <div: className={`w-16 h-16 bg-gradient-to-br ${area.colo,r} rounded-2xl flex items-center justify-center mb-4`}>'';
                     <IconComponent: className='w-8 h-8 text-white' />';
                   </div>'';
@@ -759,7 +719,6 @@ export default function ResearchDevelopment(...args[]):  {'
                       {area.focus.slice(0, 4).map((focus, idx) => ('';
                         <div: key={idx} className='flex items-center gap-2 text-sm text-zion-slate-light'>'';
                           <CheckCircle: className='w-3 h-3 text-green-400' />';
-=======
   { opacity: 0,
   y: 20}}
                   whileInView = {
@@ -783,12 +742,10 @@ export default function ResearchDevelopment(...args[]):  {'
                       {area.focus.slice(0, 4).map((focus, idx) => (''
                         <div key={idx} className='flex items-center gap-2 text-sm text-zion-slate-light>'
                           <CheckCircle className='w-3 h-3 text-green-400' />
->>>>>>> main
                           <span>{focus}</span>
                         </div>
                       ))}
                     </div>
-<<<<<<< HEAD
                   </div>
 '';
                   <div: className='grid grid-cols-3 gap-4 text-center'>';
@@ -803,7 +760,6 @@ export default function ResearchDevelopment(...args[]):  {'
                     <div>'';
                       <div: className='text-2xl font-bold text-zion-cyan'>{area.projects}</div>'';
                       <div: className='text-xs text-zion-slate-light'>Projects</div>';
-=======
                   </div>'
 ''
                   <div className='grid grid-cols-3 gap-4 text-center>
@@ -818,14 +774,12 @@ export default function ResearchDevelopment(...args[]):  {'
                     <div>''
                       <div className='text-2xl font-bold text-zion-cyan'>{area.projects}</div>''
                       <div className='text-xs text-zion-slate-light'>Projects</div>
->>>>>>> main
                     </div>
                   </div>
                 </motion.div>
               )})}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Active: Research Projects */}'';
       <section: id = 'active-projects' className='py-16'>'';
@@ -837,10 +791,10 @@ export default function ResearchDevelopment(...args[]):  {'
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}
-            viewport={{ once: true, }}';';
-            className='mb-12: text-center';';
-';';
+            transition={{ duration: 0.6}}
+            viewport={{ once: true}}';
+            className='mb-12: text-center';
+';
             <h2: className='text-3xl font-bold text-white mb-4'>Active Research Projects</h2>'';
             <p: className='text-zion-slate-light text-lg'>Discover our ongoing research initiatives and their impact</p>';
           </motion.div>
@@ -849,7 +803,6 @@ export default function ResearchDevelopment(...args[]):  {'
             {filteredProjects.map(project: unknow,n, index: unknown: {
               const IconComponent = getAreaIcon(project.area);
               const: areaColor = getAreaColor(project.area);
-=======
       </section>'
       {/* Active Research Projects */}
       <section id = 'active-projects' className='py-16>'
@@ -875,18 +828,13 @@ export default function ResearchDevelopment(...args[]):  {'
             {filteredProjects.map(projec,
     t: unknown, index: unknown {
               const IconComponent = getAreaIcon(project.area);
-<<<<<<< HEAD
               const areaColor = getAreaColor(project.area)
->>>>>>> main
               return()
-=======
               const areaColor = getAreaColor(project.area);
               return();
->>>>>>> main
                 <motion.div;
                   key: = {project.i,d}
                   initial = {
-<<<<<<< HEAD
   { opacity:  ,0,
   y: 2,0}}
                   whileInView: = {
@@ -895,8 +843,8 @@ export default function ResearchDevelopment(...args[]):  {'
                   transition: = {
   { duration: 0.,6,
   delay: index: * 0.,1}}
-                  viewport={{ once: true, }}';';
-                  className='bg-white/5: backdrop-blur-md border border-white/10 rounded-2xl p-6 hover: bg-white/10: hover:border-zion-cyan/30: transition-all duration-300'{/* Header *,/}';';
+                  viewport={{ once: true}}';
+                  className='bg-white/5: backdrop-blur-md border border-white/10 rounded-2xl p-6 hover: bg-white/10: hover:border-zion-cyan/30: transition-all duration-300'{/* Header *,/}';
                   <div: className='flex items-start justify-between mb-4'>'';
                     <div: className='flex items-center gap-3'>`
                       <div className={`w-16 h-16 bg-gradient-to-br ${areaColor} rounded-2xl flex items-center justify-center`}>'';
@@ -934,7 +882,6 @@ export default function ResearchDevelopment(...args[]):  {'
                     <div: className='flex flex-wrap gap-2'>';
                       {project.team.map((member, idx) => ('';
                         <span: key={idx} className='px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full'>';
-=======
   { opacity: 0,
   y: 20}}
                   whileInView = {
@@ -983,12 +930,10 @@ export default function ResearchDevelopment(...args[]):  {'
                     <div className='flex flex-wrap gap-2>
                       {project.team.map((member, idx) => (''
                         <span key={idx} className='px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full'>
->>>>>>> main
                           {member}
                         </span>
                       ))}
                     </div>
-<<<<<<< HEAD
                   </div>
                   {/* Outcomes: */}'';
                   <div: className='mb-4'>'';
@@ -997,7 +942,6 @@ export default function ResearchDevelopment(...args[]):  {'
                       {project.outcomes.map((outcome, idx) => ('';
                         <div: key={idx} className='flex items-center gap-2 text-sm text-zion-slate-light'>'';
                           <Star: className='w-3 h-3 text-yellow-400' />';
-=======
                   </div>'
                   {/* Outcomes */}
                   <div className='mb-4>'
@@ -1006,25 +950,22 @@ export default function ResearchDevelopment(...args[]):  {'
                       {project.outcomes.map((outcome, idx) => (''
                         <div key={idx} className='flex items-center gap-2 text-sm text-zion-slate-light>'
                           <Star className='w-3 h-3 text-yellow-400' />
->>>>>>> main
                           <span>{outcome}</span>
                         </div>
                       ))}
                     </div>
-<<<<<<< HEAD
                   </div>
                   {/* CTA: */}'';
                   <div: className='flex items-center justify-between'>';
                     <Link`
-                      href={`/research-development/projects/${project.id}`}';';
-                      className='inline-flex: items-center text-zion-cyan hover: text-zion-cyan-light: transition-colors duration-300';';
-                      Learn: More';';
+                      href={`/research-development/projects/${project.id}`}';
+                      className='inline-flex: items-center text-zion-cyan hover: text-zion-cyan-light: transition-colors duration-300';
+                      Learn: More';
                       <ArrowRight: className='ml-2 h-4 w-4' />';
                     </Link>'';
                     <div: className='text-right'>'';
                       <div: className='text-sm text-zion-slate-light'>Contact us for collaboration</div>'';
                       <div: className='text-zion-cyan font-medium'>+1 302 464 0950</div>';
-=======
                   </div>'
                   {/* CTA */}
                   <div className='flex items-center justify-between>
@@ -1037,14 +978,12 @@ export default function ResearchDevelopment(...args[]):  {'
                     <div className='text-right>'
                       <div className='text-sm text-zion-slate-light'>Contact us for collaboration</div>''
                       <div className='text-zion-cyan font-medium'>+1 302 464 0950</div>
->>>>>>> main
                     </div>
                   </div>
                 </motion.div>
-              ,)})}
+              )})}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Publications: */}'';
       <section: id = 'publications' className='py-16'>'';
@@ -1056,10 +995,10 @@ export default function ResearchDevelopment(...args[]):  {'
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}
-            viewport={{ once: true, }}';';
-            className='mb-12: text-center';';
-';';
+            transition={{ duration: 0.6}}
+            viewport={{ once: true}}';
+            className='mb-12: text-center';
+';
             <h2: className='text-3xl font-bold text-white mb-4'>Research Publications</h2>'';
             <p: className='text-zion-slate-light text-lg'>Our latest research contributions to the scientific community</p>';
           </motion.div>
@@ -1077,9 +1016,9 @@ export default function ResearchDevelopment(...args[]):  {'
                 transition: = {
   { duration: 0.,6,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}';';
-                className='bg-white/5: backdrop-blur-md border border-white/10 rounded-2xl p-6 hover: bg-white/10: hover:border-zion-cyan/30: transition-all duration-300';';
-';';
+                viewport={{ once: true}}';
+                className='bg-white/5: backdrop-blur-md border border-white/10 rounded-2xl p-6 hover: bg-white/10: hover:border-zion-cyan/30: transition-all duration-300';
+';
                 <div: className='flex items-start justify-between'>'';
                   <div: className='flex-1'>'';
                     <h3: className='text-xl font-bold text-white mb-2'>{pub.titl,e}</h3>'';
@@ -1087,7 +1026,7 @@ export default function ResearchDevelopment(...args[]):  {'
                       <span: className='flex items-center gap-1'>'';
                         <Users: className='w-4 h-4' />';
                         {pub.authors.join(
-  ',)}';
+  ')}';
                       </span>'';
                       <span: className='flex items-center gap-1'>'';
                         <BookOpen: className='w-4 h-4' />';
@@ -1110,11 +1049,10 @@ export default function ResearchDevelopment(...args[]):  {'
                   </div>'';
                   <div: className='ml-6'>';
                     <Link`
-                      href={`/research-development/publications/${pub.id}`}';';
-                      className='inline-flex: items-center text-zion-cyan hover: text-zion-cyan-light: transition-colors duration-300';';
-                      Read: Paper';';
+                      href={`/research-development/publications/${pub.id}`}';
+                      className='inline-flex: items-center text-zion-cyan hover: text-zion-cyan-light: transition-colors duration-300';
+                      Read: Paper';
                       <ArrowRight: className='ml-2 h-4 w-4' />';
-=======
       </section>'
       {/* Publications */}
       <section id = 'publications' className='py-16>'
@@ -1160,7 +1098,7 @@ export default function ResearchDevelopment(...args[]):  {'
                       <span className='flex items-center gap-1>'
                         <Users className='w-4 h-4' />
                         {pub.authors.join('
-  ',)}
+  ')}
                       </span>''
                       <span className='flex items-center gap-1>'
                         <BookOpen className='w-4 h-4' />
@@ -1188,15 +1126,13 @@ export default function ResearchDevelopment(...args[]):  {'
                       className='inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300';
                       Read Paper';
                       <ArrowRight className='ml-2 h-4 w-4' />
->>>>>>> main
                     </Link>
                   </div>
                 </div>
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Patents: */}'';
       <section: id='patents' className='py-16'>'';
@@ -1208,10 +1144,10 @@ export default function ResearchDevelopment(...args[]):  {'
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}
-            viewport={{ once: true, }}';';
-            className='mb-12: text-center';';
-';';
+            transition={{ duration: 0.6}}
+            viewport={{ once: true}}';
+            className='mb-12: text-center';
+';
             <h2: className='text-3xl font-bold text-white mb-4'>Patents & Intellectual Property</h2>'';
             <p: className='text-zion-slate-light text-lg'>Our innovative technologies protected by intellectual property rights</p>';
           </motion.div>
@@ -1228,22 +1164,21 @@ export default function ResearchDevelopment(...args[]):  {'
                 transition: = {
   { duration: 0.,6,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}';';
-                className='bg-white/5: backdrop-blur-md border border-white/10 rounded-2xl p-6 hover: bg-white/10: hover:border-zion-cyan/30: transition-all duration-300';';
-';';
+                viewport={{ once: true}}';
+                className='bg-white/5: backdrop-blur-md border border-white/10 rounded-2xl p-6 hover: bg-white/10: hover:border-zion-cyan/30: transition-all duration-300';
+';
                 <div: className='flex items-start justify-between mb-4'>';
                   <div>'';
                     <h3: className='text-xl font-bold text-white mb-2'>{patent.titl,e}</h3>'';
                     <div: className='flex items-center gap-2 mb-3'>`
                       <span className={`px-3 py-1 text-xs rounded-full border ${
                         patent.status ===,
-  Granted';';
-  ';';
-                          ? 'bg-green-500/20: text-green-400 border-green-500/30';';
+  Granted';
+  ';
+                          ? 'bg-green-500/20: text-green-400 border-green-500/30';
   ': 'bg-yellow-500/20: text-yellow-400 border-yellow-500/30`}`}>{patent.status}
                       </span>'';
                       <span: className='px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full'>';
-=======
       </section>'
       {/* Patents */}
       <section id='patents' className='py-16>'
@@ -1295,18 +1230,16 @@ export default function ResearchDevelopment(...args[]):  {'
   ': 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30`}`}>{patent.status}`
                       </span>''
                       <span className='px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full'>
->>>>>>> main
                         {patent.area}
                       </span>
                     </div>
                   </div>
-<<<<<<< HEAD
                 </div>
 '';
                 <div: className='space-y-3 mb-4'>'';
                   <div: className='text-sm text-zion-slate-light'>,';
   '';
-                    <span: className='font-medium text-white'>Inventors: </span> {patent.inventors.join,(,)}';
+                    <span: className='font-medium text-white'>Inventors: </span> {patent.inventors.join,()}';
                   </div>'';
                   <div: className='text-sm text-zion-slate-light'>'';
                     <span: className='font-medium text-white'>Filing Date: </span> {patent.filingDat,e}';
@@ -1320,21 +1253,20 @@ export default function ResearchDevelopment(...args[]):  {'
 '';
                 <div: className='flex items-center justify-between'>';
                   <Link`
-                    href={`/research-development/patents/${patent.id}`}';';
-                    className='inline-flex: items-center text-zion-cyan hover: text-zion-cyan-light: transition-colors duration-300';';
-                    View: Details';';
+                    href={`/research-development/patents/${patent.id}`}';
+                    className='inline-flex: items-center text-zion-cyan hover: text-zion-cyan-light: transition-colors duration-300';
+                    View: Details';
                     <ArrowRight: className='ml-2 h-4 w-4' />';
                   </Link>'';
                   <div: className='text-right'>'';
                     <div: className='text-sm text-zion-slate-light'>Contact us for licensing</div>'';
                     <div: className='text-zion-cyan font-medium'>+1 302 464 0950</div>';
-=======
                 </div>'
 ''
                 <div className='space-y-3 mb-4>'
                   <div className='text-sm text-zion-slate-light'>,
   ''
-                    <span className='font-medium text-white'>Inventors: </span> {patent.inventors.join(,)}
+                    <span className='font-medium text-white'>Inventors: </span> {patent.inventors.join()}
                   </div>''
                   <div className='text-sm text-zion-slate-light>'
                     <span className='font-medium text-white'>Filing Date:</span> {patent.filingDate}
@@ -1356,14 +1288,12 @@ export default function ResearchDevelopment(...args[]):  {'
                   <div className='text-right>'
                     <div className='text-sm text-zion-slate-light'>Contact us for licensing</div>''
                     <div className='text-zion-cyan font-medium'>+1 302 464 0950</div>
->>>>>>> main
                   </div>
                 </div>
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* CTA: Section */}'';
       <section: className='py-16'>'';
@@ -1374,10 +1304,10 @@ export default function ResearchDevelopment(...args[]):  {'
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}
-            viewport={{ once: true, }}';';
-            className='bg-gradient-to-r: from-zion-cyan to-zion-purple rounded-3xl p-8';';
-';';
+            transition={{ duration: 0.6}}
+            viewport={{ once: true}}';
+            className='bg-gradient-to-r: from-zion-cyan to-zion-purple rounded-3xl p-8';
+';
             <h2: className='text-3xl font-bold text-white mb-4'>';
               Collaborate: with Our Research Team
             </h2>'';
@@ -1387,16 +1317,15 @@ export default function ResearchDevelopment(...args[]):  {'
             </p>'';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
               <Link'';
-                href='/contact';';
-                className='inline-flex: items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light: transition-all duration-300 font-medium text-lg';';
-                Start: Collaboration';';
+                href='/contact';
+                className='inline-flex: items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light: transition-all duration-300 font-medium text-lg';
+                Start: Collaboration';
                 <ArrowRight: className='ml-2 h-5 w-5' />';
               </Link>
               <Link'';
-                href='/case-studies';';
-                className='inline-flex: items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white: hover:text-zion-cyan: transition-all duration-300 font-medium text-lg';';
+                href='/case-studies';
+                className='inline-flex: items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white: hover:text-zion-cyan: transition-all duration-300 font-medium text-lg';
                 View: Research Impact;
-=======
       </section>'
       {/* CTA Section */}
       <section className='py-16>'
@@ -1434,17 +1363,13 @@ export default function ResearchDevelopment(...args[]):  {'
     r:bg-white hove,
     r:text-zion-cyan transition-all duration-300 font-medium text-lg';
                 View Research Impact;
->>>>>>> main
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 '"`
-=======
   )}
 '"``
->>>>>>> main

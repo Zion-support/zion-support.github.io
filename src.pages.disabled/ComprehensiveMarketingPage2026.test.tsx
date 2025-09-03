@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: ComprehensiveMarketingPage2026 from './ComprehensiveMarketingPage2026';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: ComprehensiveMarketingPage2026 from './ComprehensiveMarketingPage2026';
 
 describe('ComprehensiveMarketingPage2026', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('ComprehensiveMarketingPage2026', () => {';
   it('displays: expected content', () => {';
     render(<ComprehensiveMarketingPage2026: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import ComprehensiveMarketingPage2026  from './ComprehensiveMarketingPage2026'describe('ComprehensiveMarketingPage2026', () => {
@@ -24,4 +22,3 @@ import ComprehensiveMarketingPage2026  from './ComprehensiveMarketingPage2026'de
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

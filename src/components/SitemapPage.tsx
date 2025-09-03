@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 
 ;,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
-<<<<<<< HEAD
-=======
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
-<<<<<<< HEAD
 ;
-=======
 export default function SitemapPage() {return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO title="SitemapPage - Zion Tech Group" description="Professional SitemapPage services by Zion Tech Group" />
@@ -23,6 +16,3 @@ export default function SitemapPage() {return (
     </div>
   );
 }
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -1,15 +1,14 @@
-<<<<<<< HEAD
 import { useState } from 'react';,"});,"})
 export default function Page() {}"});,"})
 );,"});,"})
-import { useState } from 'react';';,"});,"})
-import { useForm } from 'react-hook-form';';,"});,"})
-import { useNavigate } from 'react-router-dom';';,"});,"})
-import { zodResolver } from '@hookform/resolvers/zod';';,"});,"})
-import { z } from 'zod';';,"});,"})
-import { LogIn, User, Eye, EyeOff } from 'lucide-react';';,"});,"})
-import { useAuth } from '@/hooks/useAuth';';,"});,"})
-import { Button } from '@/components/ui/button';';,"});,"})
+import { useState } from 'react';,"});,"})
+import { useForm } from 'react-hook-form';,"});,"})
+import { useNavigate } from 'react-router-dom';,"});,"})
+import { zodResolver } from '@hookform/resolvers/zod';,"});,"})
+import { z } from 'zod';,"});,"})
+import { LogIn, User, Eye, EyeOff } from 'lucide-react';,"});,"})
+import { useAuth } from '@/hooks/useAuth';,"});,"})
+import { Button } from '@/components/ui/button';,"});,"})
 import { Input } from '@/components/ui/input';,"});,"})
 import {}"});,"})
   Form,;,"});,"})
@@ -196,18 +195,10 @@ export { LoginForm };,"});,"})
 export { LoginForm };,"});,"})
 ;,"});,"})
 export { Page, LoginForm };,"});,"})
-=======
-<<<<<<< HEAD
 ' ' ' ' ' ' '''";";";";
-=======
-<<<<<<< HEAD
 ' ' ' ' ' ' '''";"
 "
-=======
-<<<<<<< HEAD
 ' ' ' ' ' ' ''";
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -223,24 +214,9 @@ export default function LoginForm() {return (
     </div>
   );
 }
-=======
-<<<<<<< HEAD
 ' &apos; &apos; &apos; &apos; &apos; '&apos;&apos;";
 &quot;"
-=======
-<<<<<<< HEAD
 ' ' ' ' ' ' '''";'"
-<<<<<<< HEAD
 ""
-=======
-=======
 ' ' ' ' ' ' '''"
 "
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

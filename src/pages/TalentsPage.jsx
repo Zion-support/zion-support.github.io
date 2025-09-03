@@ -1,20 +1,11 @@
-<<<<<<< HEAD
  "export default function TalentsPage () {";,"});,"})
 }"});,"})
-=======
-<<<<<<< HEAD
 ";export: default function TalentsPage () {"";";";
 };
-=======
-<<<<<<< HEAD
 ";export default function TalentsPage () {","
 }""
-=======
-<<<<<<< HEAD
 ";export default function TalentsPage () {";
 }
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -30,21 +21,8 @@ export default function TalentsPage() {return (
     </div>
   );
 }
-=======
-<<<<<<< HEAD
 ";&quot;&quot;export default function TalentsPage () ;{&quot;
 }&quot;"
-=======
-<<<<<<< HEAD
 ";export default function TalentsPage () {", ","
 }""
-=======
-";export default function TalentsPage () {,,
-}"
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+";export default function TalentsPage () {,}"

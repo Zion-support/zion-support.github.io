@@ -1,35 +1,25 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD:pages/solutions/customer-support.tsx
+:pages/solutions/customer-support.tsx
 import SEO from '../../src/components/SEO';
 import { Card } from '../../src/components/ui/Card';
 import { Button } from '../../src/components/ui/Button';
 import { Badge } from '../../src/components/ui/Badge';
-=======
-<<<<<<< HEAD:solutions.disabled/customer-support.tsx
+:solutions.disabled/customer-support.tsx
 // import SEO from '../../components/SEO';
 // import { Card } from '../../components/ui/Card';
 // import { Button } from '../../components/ui/Button';
 // import { Badge } from '../../components/ui/Badge';
-=======
-<<<<<<< HEAD
 import SEOHead from '../../components/SEOHead';
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
->>>>>>> main
 import { Badge } from '../../components/ui/Badge';
-<<<<<<< HEAD
-=======
 import { Button } from '../../components/ui/Button';
 import { Card } from '../../components/ui/Card';
->>>>>>> main:pages/solutions/customer-support.tsx
->>>>>>> main:solutions.disabled/customer-support.tsx
+:pages/solutions/customer-support.tsx
+:solutions.disabled/customer-support.tsx
 import {
   Headphones,
   ArrowRight,
@@ -40,83 +30,63 @@ import {
   Globe,
   BarChart3,
   Clock,
-  Users,
-} from 'lucide-react';
+  Users} from 'lucide-react';
 
->>>>>>> main
 export default function CustomerSupport() {
   const features = [
   {
       icon: Bot,
       title: 'AI Chatbots',
       description:'
-        'Intelligent chatbots that provide instant responses and escalate complex issues to human agents.',
-    },
+        'Intelligent chatbots that provide instant responses and escalate complex issues to human agents.'},
     {
       icon: MessageSquare,
       title: 'Ticket Management',
       description:'
-        'Comprehensive ticket system with priority levels, categorization, and automated routing.',
-    },
+        'Comprehensive ticket system with priority levels, categorization, and automated routing.'},
     {
       icon: FileText,
       title: 'Knowledge Base',
       description:'
-        'Self-service knowledge base with searchable articles, FAQs, and video tutorials.',
-    },
+        'Self-service knowledge base with searchable articles, FAQs, and video tutorials.'},
     {
       icon: Globe,
       title: 'Multi-channel Support',
       description:'
-        'Support customers across email, chat, phone, social media, and other channels.',
-    },
+        'Support customers across email, chat, phone, social media, and other channels.'},
     {
       icon: BarChart3,
       title: 'Analytics & Reporting',
       description:'
-        'Track performance metrics, customer satisfaction, and team productivity.',
-    },
+        'Track performance metrics, customer satisfaction, and team productivity.'},
     {
       icon: Clock,
       title: '24/7 Availability',
       description:'
-        'Round-the-clock customer support with automated responses and escalation.',
-    },
-  ];
+        'Round-the-clock customer support with automated responses and escalation.'}];
 
   return (
     <>
-<<<<<<< HEAD:pages/solutions/customer-support.tsx
+:pages/solutions/customer-support.tsx
       <SEO'
         title="Customer Support Platform - Zion Tech Group""
         description="AI-powered customer support system with chatbots, ticket management, and knowledge base. Improve customer satisfaction.""
-=======
-<<<<<<< HEAD:solutions.disabled/customer-support.tsx
-=======
-<<<<<<< HEAD
+:solutions.disabled/customer-support.tsx
       <SEOHead
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       <SEO
->>>>>>> main
         title="Customer Support Platform - Zion Tech Group"
         description="AI-powered customer support system with chatbots, ticket management, and knowledge base. Improve customer satisfaction."
->>>>>>> main:solutions.disabled/customer-support.tsx
+:solutions.disabled/customer-support.tsx
         keywords="customer support, AI chatbots, ticket management, knowledge base, helpdesk"
       />
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main:pages/solutions/customer-support.tsx
+:pages/solutions/customer-support.tsx
       <Head>
         <title>Customer Support Platform - Zion Tech Group</title>
         <meta name="description" content="AI-powered customer support system with chatbots, ticket management, and knowledge base. Improve customer satisfaction." />
         <meta name="keywords" content="customer support, AI chatbots, ticket management, knowledge base, helpdesk" />
       </Head>
 
-<<<<<<< HEAD:pages/solutions/customer-support.tsx
+:pages/solutions/customer-support.tsx
       {/* Hero Section */}"
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -130,7 +100,6 @@ export default function CustomerSupport() {
     d:text-6xl font-bold mb-6">
               Customer Support"
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">"
-=======
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -142,7 +111,7 @@ export default function CustomerSupport() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Customer Support
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
->>>>>>> main:solutions.disabled/customer-support.tsx
+:solutions.disabled/customer-support.tsx
                 {' '}
                 Platform
               </span>

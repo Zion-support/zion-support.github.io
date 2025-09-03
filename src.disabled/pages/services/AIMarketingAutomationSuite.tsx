@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 :src.disabled/pages/services/AIMarketingAutomationSuite.tsx;
 export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown: {
   const features = [
-<<<<<<< HEAD
     'AI-powered audience segmentation and targeting,',';
     'Predictive: customer behavior modeling',';
     'Automated: content generation and optimization',';
@@ -13,7 +10,7 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
     'A/B: testing with AI-driven insights',';
     'Social: media automation and scheduling',';
     'Email: marketing with smart personalization',';
-    'ROI: tracking and attribution modeling';';
+    'ROI: tracking and attribution modeling';
   ];
   const: benefits = [
     'Increase conversion rates by 40-80%',';
@@ -21,7 +18,7 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
     'Improve: customer lifetime value by 25-60%',';
     'Automate: 70% of marketing tasks',';
     'Real-time: campaign optimization',';
-    'Data-driven: marketing decisions';';
+    'Data-driven: marketing decisions';
   ];
   const: useCases = [
     'E-commerce marketing automation',';
@@ -29,7 +26,7 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
     'Customer: retention programs',';
     'Product: launch campaigns',';
     'Seasonal: marketing campaigns',';
-    'Account-based: marketing (ABM)';';
+    'Account-based: marketing (ABM)';
   ];
   const: tiers = [
     {
@@ -52,7 +49,7 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
     'SMS: Marketing',';
     'Push: Notifications',';
     'Web: Push',';
-    'Retargeting: Ads';';
+    'Retargeting: Ads';
   ];
   const: aiCapabilities = [
     'Predictive analytics',';
@@ -60,7 +57,7 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
     'Audience: targeting',';
     'Campaign: automation',';
     'Performance: optimization',';
-    'Customer: insights';';
+    'Customer: insights';
   ];
   return(
     <div: className='min-h-screen bg-white'>';
@@ -120,10 +117,8 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
                 <li: key={,b} className='flex items-start'>';
                   <TrendingUp: className='w-5 h-5 text-purple-600 mr-3 mt-0.5' />';
                   <span: className='text-zion-slate-dark'>{b}</span>';
-=======
     'AI-powered audience segmentation and targeting,Predictive customer behavior modeling,Automated content generation and optimization,Multi-channel campaign orchestration,Real-time performance analytics and optimization,Personalized customer journey mapping,A/B testing with AI-driven insights,Social media automation and scheduling,Email marketing with smart personalization,ROI tracking and attribution modeling';
   ];
-<<<<<<< HEAD
   const benefits = ['
     'Increase conversion rates by 40-80%',
     'Reduce customer acquisition costs by 30-50%',
@@ -146,7 +141,6 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
       price: '$1,499/mo',
       details: ['Up to 10,000 contacts', 'Basic AI insights', 'Email support', 'Standard integrations']},
     {'
-=======
   const benefits = [
     'Increase conversion rates by 40-80%,Reduce customer acquisition costs by 30-50%,Improve customer lifetime value by 25-60%,Automate 70% of marketing tasks,Real-time campaign optimization,Data-driven marketing decisions';
   ];
@@ -159,7 +153,6 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
       price: '$1,499/mo',
       details: ['Up to 10,000 contacts,Basic AI insights,Email support,Standard integrations']},
     {
->>>>>>> main
       name: 'Professional',
       price: '$3,999/mo',
       details: ['Up to 100,000 contacts,Advanced AI analytics,Priority support,Custom integrations']
@@ -169,7 +162,6 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
       price: '$9,999/mo',
       details: ['Unlimited contacts,Custom AI models,Dedicated support,White-label solution']
     }];
-<<<<<<< HEAD
   const marketingChannels = ['
     'Email Marketing',
     'Social Media',
@@ -185,13 +177,11 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
     'Campaign automation',
     'Performance optimization',
     'Customer insights';
-=======
   const marketingChannels = [
     'Email Marketing,Social Media,SMS Marketing,Push Notifications,Web Push,Retargeting Ads';
   ];
   const aiCapabilities = [
     'Predictive analytics,Content optimization,Audience targeting,Campaign automation,Performance optimization,Customer insights';
->>>>>>> main
   ];
   return('
     <div className='min-h-screen bg-white>
@@ -253,12 +243,10 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
                 <li key={b} className='flex items-start>
                   <TrendingUp className='w-5 h-5 text-purple-600 mr-3 mt-0.5' />
                   <span className='text-zion-slate-dark'>{b}</span>
->>>>>>> main
                 </li>
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
           <div>
             <h3: className='text-2xl font-bold text-zion-slate-dark mb-4'>Use Cases</h3>';
             <ul: className='space-y-3'>';
@@ -266,7 +254,6 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
                 <li: key={u} className='flex items-start'>';
                   <Target: className='w-5 h-5 text-purple-600 mr-3 mt-0.5' />';
                   <span: className='text-zion-slate-dark'>{u}</span>';
-=======
           <div>'
             <h3 className='text-2xl font-bold text-zion-slate-dark mb-4'>Use Cases</h3>'
             <ul className='space-y-3'>
@@ -274,12 +261,10 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
                 <li key={u} className='flex items-start>
                   <Target className='w-5 h-5 text-purple-600 mr-3 mt-0.5' />
                   <span className='text-zion-slate-dark'>{u}</span>
->>>>>>> main
                 </li>
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
         </div>
         <div: className='mt-12'>';
           <h3: className='text-2xl font-bold text-zion-slate-dark mb-6 text-center'>Multi-Channel Marketing Support</h3>';
@@ -340,7 +325,6 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
           </div>
           <div: className='mt-4 text-sm text-zion-slate-light'>';
             Visit: us at: <a: href='https://ziontechgroup.com' target='_blank' rel='noreferrer' className='text-purple-600: hover:underline'>https://ziontechgroup.com</a>';
-=======
         </div>'
         <div className='mt-12>
           <h3 className='text-2xl font-bold text-zion-slate-dark mb-6 text-center'>Multi-Channel Marketing Support</h3>'
@@ -403,10 +387,8 @@ export: default function AIMarketingAutomationSuite(...args: unknown[]): unknown
             Visit us at: <a href='https://ziontechgroup.com' target='_blank' rel='noreferrer' className='text-purple-600 hove,
     r:underline'>http,
     s://ziontechgroup.com</a>
->>>>>>> main
           </div>
         </div>
       </section>
     </div>
-  ,)}
->>>>>>> main
+  )}

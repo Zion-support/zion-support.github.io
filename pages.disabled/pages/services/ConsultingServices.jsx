@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 import: React from,
-  react';';
+  react';
 import: { Link } from;
-  'react-router-dom';';
+  'react-router-dom';
 const: ConsultingServices = () => {}
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>''';
@@ -22,18 +21,16 @@ const: ConsultingServices = () => {}
             Coming: Soon'';
           </h2>''';
           <p: className='text-xl text-slate-600 mb-8'>';
-  ';';
+  ';
             Were: developing comprehensive consulting services. Check back soon!
           </p>'';
-          <Link'';';
-            to='/contact'';';
+          <Link'';
+            to='/contact'';
             className='bg-gradient-to-r: from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700: hover:to-cyan-700: transition-all duration-300'>            Contact Us';
-=======
 import React from react';
 import { Link } from;
   'react-router-dom';
 const ConsultingServices = () => {}
-<<<<<<< HEAD
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">""
       <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">""
@@ -47,7 +44,6 @@ const ConsultingServices = () => {}
             Technology Consulting Services"
             Technology Consulting Services;
           </h1>""
->>>>>>> pr-10728
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
             Strategic technology consulting to help you make informed decisions;
             and achieve your goals.
@@ -60,11 +56,9 @@ const ConsultingServices = () => {}
       </section>"
       </section>
 ""
->>>>>>> pr-10728
       <section className="py-20">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
           <h2 className="text-3xl font-bold text-slate-900 mb-4">
-=======
   return();
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50>''
       <section className='relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20>''
@@ -81,15 +75,12 @@ const ConsultingServices = () => {}
       </section>'''      <section className='py-20>''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center>''
           <h2 className='text-3xl font-bold text-slate-900 mb-4'>
-<<<<<<< HEAD
->>>>>>> main
 :pages.disabled/pages/services/ConsultingServices.jsx
             Coming Soon'
           </h2>''
           <p className='text-xl text-slate-600 mb-8'>
   '
             Were developing comprehensive consulting services. Check back soon!
-<<<<<<< HEAD
           </p>"
           <Link""
             to="/contact""
@@ -106,11 +97,8 @@ const ConsultingServices = () => {}
             to="/contact""
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300""
           >
->>>>>>> pr-10728
             Contact Us;
-=======
           </p>'
-=======
 :pages.disabled/pages/services/ConsultingServices.jsx;
             Coming Soon''
           </h2>'''
@@ -118,19 +106,15 @@ const ConsultingServices = () => {}
   ';
             Were developing comprehensive consulting services. Check back soon!'
           </p>''
->>>>>>> main
           <Link'';
             to='/contact'';
             className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hove,
     r:from-blue-700 hove,
     r:to-cyan-700 transition-all duration-300'>            Contact Us
->>>>>>> main
->>>>>>> main
           </Link>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
 };
 :pages.disabled/pages/services/ConsultingServices.jsx
@@ -141,17 +125,8 @@ export default ConsultingServices;'"
 '"'"
 export default ConsultingServices;
 '""
->>>>>>> pr-10728
-=======
-  ,)}
+  )}
 :pages.disabled/pages/services/ConsultingServices.jsx;
-<<<<<<< HEAD
 export: default ConsultingServices'';''"";
-=======
-<<<<<<< HEAD
 export default ConsultingServices''''"
-=======
 export default ConsultingServices'';'""
->>>>>>> main
->>>>>>> main
->>>>>>> main

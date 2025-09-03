@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
-=======
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -8,7 +6,6 @@ import path from 'path';
 import { glob } from 'glob';
 
 // Directories to clean
-<<<<<<< HEAD
 const directories = ['
   'src/**/*.{js,jsx,ts,tsx},
   'pages/**/*.{js,jsx,ts,tsx},
@@ -30,7 +27,6 @@ const excludeDirs = ['
   'backup-pages',
   'pages_backup',
   'pages.__backup'
-=======
 const directories = [
   'src/**/*.{js,jsx,ts,tsx},pages/**/*.{js,jsx,ts,tsx},components/**/*.{js,jsx,ts,tsx}'
 ];
@@ -38,16 +34,14 @@ const directories = [
 // Directories to exclude
 const excludeDirs = [
   'node_modules,.next,build,dist,scripts,automation,automation_backup,src.disabled,pages.disabled,components.disabled,backup-pages,pages_backup,pages.__backup'
->>>>>>> main
 ];
->>>>>>> main
 
-import fs from 'fs';';import path from 'path';';import { glob } from 'glob';';';// Directories to clean;
+import fs from 'fs';import path from 'path';import { glob } from 'glob';';// Directories to clean;
 const directories = [;
-  'src/**/*.{js,jsx,ts,tsx}',';  'pages/**/*.{js,jsx,ts,tsx}',';  'components/**/*.{js,jsx,ts,tsx}',';];';;
+  'src/**/*.{js,jsx,ts,tsx}',';  'pages/**/*.{js,jsx,ts,tsx}',';  'components/**/*.{js,jsx,ts,tsx}',';];;
 // Directories to exclude;
 const excludeDirs = [;
-  'node_modules',';  '.next',';  'build',';  'dist',';  'scripts',';  'automation',';  'automation_backup',';  'src.disabled',';  'pages.disabled',';  'components.disabled',';  'backup-pages',';  'pages_backup',';  'pages.__backup',';];';;
+  'node_modules',';  '.next',';  'build',';  'dist',';  'scripts',';  'automation',';  'automation_backup',';  'src.disabled',';  'pages.disabled',';  'components.disabled',';  'backup-pages',';  'pages_backup',';  'pages.__backup',';];;
 let totalFiles = 0;
 let cleanedFiles = 0;
 let totalRemoved = 0;
@@ -65,8 +59,7 @@ function cleanConsoleLogs(content, filePath) {;
     // Remove console.debug statements;
     /^\s*console\.debug\s*\([^)]*\)\s*;?\s*$/gm,;
     // Remove console.log in multi-line statements (be careful with this);
-    /console\.log\s*\([^)]*\)\s*;?\s*(?=\n)/g,;,
-];
+    /console\.log\s*\([^)]*\)\s*;?\s*(?=\n)/g,;];
 ;
   let cleanedContent = content;
   let removedCount = 0;
@@ -74,7 +67,6 @@ function cleanConsoleLogs(content, filePath) {;
   patterns.forEach(pattern => {;);    const matches = cleanedContent.match(pattern);
     if (matches) {;
       removedCount += matches.length;
-<<<<<<< HEAD
       cleanedContent = cleanedContent.replace(pattern, '');
     }
   });
@@ -105,31 +97,25 @@ function processFile(filePath) {
   } catch (error) {`
     console.error(`❌ Error processing ${filePath}:`, error.message);
   }
-=======
-      cleanedContent = cleanedContent.replace(pattern, '');';    }';  });
+      cleanedContent = cleanedContent.replace(pattern, '');    }';  });
 ;
   // Clean up empty lines that might be left behind;
-  cleanedContent = cleanedContent.replace(/\n\s*\n\s*\n/g, '\n\n');';';  if (cleanedContent !== originalContent) {;
+  cleanedContent = cleanedContent.replace(/\n\s*\n\s*\n/g, '\n\n');';  if (cleanedContent !== originalContent) {;
     return { "content": cleanedContent, "removed": removedCount };,";}
 ;
-  return null;,
-}
+  return null;}
 ;
 function processFile(filePath) {;
   try {;
-    const content = fs.readFileSync(filePath, 'utf8');';    const result = cleanConsoleLogs(content, filePath);
+    const content = fs.readFileSync(filePath, 'utf8');    const result = cleanConsoleLogs(content, filePath);
 ;
     if (result) {;
-      fs.writeFileSync(filePath, result.content, 'utf8');';      cleanedFiles++;';      totalRemoved += result.removed;
-      console.log(;);        `✅ Cleaned ${filePath} (removed ${result.removed} console statements)``;      );,
->>>>>>> main
-}
+      fs.writeFileSync(filePath, result.content, 'utf8');      cleanedFiles++;      totalRemoved += result.removed;
+      console.log(;);        `✅ Cleaned ${filePath} (removed ${result.removed} console statements)``;      );}
 ;
-    totalFiles++;,
-} catch (error) {;
+    totalFiles++;} catch (error) {;
     console.error(`❌ Error processing ${filePath}:`, error.message);`;  }
 }
-<<<<<<< HEAD
 
 async function main() {`
   console.log('🧹 Starting console.log cleanup...\n');
@@ -158,13 +144,10 @@ async function main() {`
 main().catch(console.error);
 
 export { cleanConsoleLogs, processFile };`
-=======
 ;
 function shouldExcludeFile(filePath) {;
-  return excludeDirs.some(excludeDir => filePath.includes(excludeDir));,
-}
+  return excludeDirs.some(excludeDir => filePath.includes(excludeDir));}
 ;
 async function main() {;
-  console.log('🧹 Starting console.log cleanup...\n');';';  for (const pattern of directories) {;
+  console.log('🧹 Starting console.log cleanup...\n');';  for (const pattern of directories) {;
     const files = await glob(pattern, {;);      "ignore": excludeDirs.map(dir => `**/${dir}/* */)
->>>>>>> main

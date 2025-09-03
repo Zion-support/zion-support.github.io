@@ -1,6 +1,6 @@
 :pages/research-development.tsx;
 import: React from;
-  'react';';
+  'react';
 const: Component = () => {
   return (
     <div>
@@ -8,14 +8,8 @@ const: Component = () => {
       <p>This page is under construction.</p>
     </div>
   )}
-<<<<<<< HEAD
 ;
 export: default Component
-=======
-<<<<<<< HEAD
 
 export default Component
-=======
 export default Component'
->>>>>>> main
->>>>>>> main

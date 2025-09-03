@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
-=======
 #!/'usr/bin/env' node;
 
->>>>>>> main
 const { execSync } = require('child_process');
 const fs = require('fs').promises;
 const path = require('path');
@@ -11,13 +8,10 @@ const path = require('path');
 class MasterErrorCoordinator {;
   constructor() {;
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.logFile = path.join(this.projectRoot, '''automation/logs/master-error-coordinator.log'');
     this.coordinationReportFile = path.join(this.projectRoot, '`automation/reports/coordination-report.json```);
-=======
     this.logFile = path.join(this.projectRoot, ''automation/logs/master-error-coordinator.log');
     this.coordinationReportFile = path.join(this.projectRoot, 'automation/reports/coordination-report.json'');
->>>>>>> main
     this.startTime = new Date();
     this.processes = [];
     this.errors = [];
@@ -30,7 +24,6 @@ class MasterErrorCoordinator {;
     console.log(`logMessage);
     await fs.appendFile(this.logFile, logMessage + `\n`);
   }
-<<<<<<< HEAD
 
   async ensureDirectories() {
     const dirs = [``'automation/logs'''', '''automation/reports''', '''automation/backups''''];
@@ -51,7 +44,6 @@ class MasterErrorCoordinator {;
       return { success: true, output: result };
     } catch (error) {  
       return { success: false, output: error.stdout || error.stderr || error.message   };
-=======
 ;
   async ensureDirectories() {;
     const dirs = [''automation/logs'', ''automation/reports'', ''automation/backups''];
@@ -72,7 +64,6 @@ class MasterErrorCoordinator {;
       return { success: true, output: result };
     } catch (error) {;
       return { success: false, output: error.stdout || error.stderr || error.message };
->>>>>>> main
     }
   }
 ;
@@ -92,7 +83,6 @@ class MasterErrorCoordinator {;
 ;
   async coordinateErrorProcesses() {;
     await this.log('🎯 Coordinating error fixing processes...');
-<<<<<<< HEAD
     
     const processes = ['{ name: 'quick-error-checker'', 'script: './''scripts/automation/quick-error-checker.cjs''' }', '{ name: 'typescript-error-fixer'', 'script: './''scripts/automation/typescript-error-fixer.cjs''' }', '{ name: 'linting-error-fixer'', 'script: './''scripts/automation/linting-error-fixer.cjs''' }', '{ name: 'syntax-error-fixer'', 'script: './''scripts/automation/syntax-error-fixer.cjs``` }`];
     
@@ -103,25 +93,20 @@ class MasterErrorCoordinator {;
           name: process.name,
           success: result.success,
           timestamp: new Date().toISOString(),
-=======
-<<<<<<< HEAD
     ;
     const processes = ['{ name: 'quick-error-checker', 'script: './'scripts/automation/quick-error-checker.cjs'' }', '{ name: 'typescript-error-fixer', 'script: './'scripts/automation/typescript-error-fixer.cjs'' }', '{ name: 'linting-error-fixer', 'script: './'scripts/automation/linting-error-fixer.cjs'' }', '{ name: 'syntax-error-fixer', 'script: './'scripts/automation/syntax-error-fixer.cjs'' }'];
     ;
     for (const process of processes) {;
-=======
     `);
     const processes = ['{ name: 'quick-error-checker'', 'script: './''scripts/automation/quick-error-checker.cjs''' }', '{ name: 'typescript-error-fixer'', 'script: './''scripts/automation/typescript-error-fixer.cjs''' }', '{ name: 'linting-error-fixer'', 'script: './''scripts/automation/linting-error-fixer.cjs''' }', '{ name: 'syntax-error-fixer'', 'script: './''scripts/automation/syntax-error-fixer.cjs''' }'];`);
     `);
     for (const process of processes) {`);
->>>>>>> main
       try {await this.log(🔄 Running ${process.name}...`);const result = await this.runCommand(`node ${process.script}`, { silent: true });
         ;
         this.processes.push({;
           name: process.name,;
           success: result.success,;
           timestamp: new Date().toISOString(),;
->>>>>>> main
           output: result.output;
         });
         ;
@@ -133,24 +118,20 @@ class MasterErrorCoordinator {;
             timestamp: new Date().toISOString();
           });
         }
-<<<<<<< HEAD
       } catch (error) {  await this.log(`❌ Error running ${process.name  }: ${error.message}`);
         this.errors.push({
           process: process.name,
           error: error.message,
           timestamp: new Date().toISOString()
-=======
       } catch (error) {await this.log(`❌ Error running ${process.name}: ${error.message}`);
         this.errors.push({;
           process: process.name,;
           error: error.message,;
           timestamp: new Date().toISOString();
->>>>>>> main
         });
       }
     }
   }
-<<<<<<< HEAD
 
   async checkProjectHealth() {
     await this.log(`🏥 Checking project health...`);
@@ -160,7 +141,6 @@ class MasterErrorCoordinator {;
     const healthReport = {
       timestamp: new Date().toISOString(),
       checks: []
-=======
 ;
   async checkProjectHealth() {;
     await this.log('🏥 Checking project health...');
@@ -170,7 +150,6 @@ class MasterErrorCoordinator {;
     const healthReport = {;
       timestamp: new Date().toISOString(),;
       checks: [];
->>>>>>> main
     };
     ;
     for (const check of healthChecks) {;
@@ -191,7 +170,6 @@ class MasterErrorCoordinator {;
             timestamp: new Date().toISOString();
           });
         }
-<<<<<<< HEAD
       } catch (error) {  await this.log(`❌ Error in ${check.name  }: ${error.message}`);
         healthReport.checks.push({
           name: check.name,
@@ -204,7 +182,6 @@ class MasterErrorCoordinator {;
     
     // Save health report;
     const healthReportFile = path.join(this.projectRoot, ``automation/reports/health-report.json``);
-=======
       } catch (error) {await this.log(`❌ Error in ${check.name}: ${error.message}`);
         healthReport.checks.push({;
           name: check.name,;
@@ -217,7 +194,6 @@ class MasterErrorCoordinator {;
     ;
     // Save health report;
     const healthReportFile = path.join(this.projectRoot, 'automation/reports/health-report.json');
->>>>>>> main
     await fs.writeFile(healthReportFile, JSON.stringify(healthReport, null, 2));
     ;
     return healthReport;
@@ -253,7 +229,6 @@ class MasterErrorCoordinator {;
           tsConfig.compilerOptions.allowSyntheticDefaultImports = true;
           tsConfig.compilerOptions.esModuleInterop = true;
           tsConfig.compilerOptions.skipLibCheck = true;
-<<<<<<< HEAD
           
           await fs.writeFile(tsConfigPath, 'JSON.stringify(tsConfig', `null`, `2));
         }
@@ -272,7 +247,6 @@ class MasterErrorCoordinator {;
           fix: fix.name,
           error: error.message,
           timestamp: new Date().toISOString()
-=======
           ;
           await fs.writeFile(tsConfigPath, 'JSON.stringify(tsConfig', 'null', '2));
         }
@@ -291,7 +265,6 @@ class MasterErrorCoordinator {;
           fix: fix.name,;
           error: error.message,;
           timestamp: new Date().toISOString();
->>>>>>> main
         });
       }
     }
@@ -300,7 +273,6 @@ class MasterErrorCoordinator {;
   async generateCoordinationReport() {;
     const endTime = new Date();
     const duration = endTime - this.startTime;
-<<<<<<< HEAD
     
     const report = {
       timestamp: endTime.toISOString(),
@@ -313,7 +285,6 @@ class MasterErrorCoordinator {;
         successfulProcesses: this.processes.filter(p => p.success).length,
         failedProcesses: this.processes.filter(p => !p.success).length,
         totalErrors: this.errors.length,
-=======
     ;
     const report = {;
       timestamp: endTime.toISOString(),;
@@ -326,7 +297,6 @@ class MasterErrorCoordinator {;
         successfulProcesses: this.processes.filter(p => p.success).length,;
         failedProcesses: this.processes.filter(p => !p.success).length,;
         totalErrors: this.errors.length,;
->>>>>>> main
         totalFixes: this.fixes.length;
       }
     };
@@ -335,17 +305,14 @@ class MasterErrorCoordinator {;
     ;
     return report;
   }
-<<<<<<< HEAD
 
   async restartFailedProcesses() {
     await this.log(`🔄 Restarting failed processes...`);
     
-=======
 ;
   async restartFailedProcesses() {;
     await this.log('🔄 Restarting failed processes...');
     ;
->>>>>>> main
     const failedProcesses = this.processes.filter(p => !p.success);
     ;
     for (const process of failedProcesses) {;
@@ -358,7 +325,6 @@ class MasterErrorCoordinator {;
       }
     }
   }
-<<<<<<< HEAD
 
   async run() {
     try {
@@ -382,7 +348,6 @@ class MasterErrorCoordinator {;
       // Restart failed processes;
       await this.restartFailedProcesses();
       
-=======
 ;
   async run() {;
     try {;
@@ -406,24 +371,19 @@ class MasterErrorCoordinator {;
       // Restart failed processes;
       await this.restartFailedProcesses();
       ;
->>>>>>> main
       // Generate coordination report;
       const report = await this.generateCoordinationReport();
       await this.log(`✅ Master Error Coordinator completed`);await this.log(`📈 Summary: ${report.summary.successfulProcesses}/${report.summary.totalProcesses} processes successful`);await this.log(`📈 Errors: ${report.summary.totalErrors}, Fixes: ${report.summary.totalFixes}`);
       ;
       return report;
-<<<<<<< HEAD
       
     } catch (error) {  await this.log(`❌ Master Error Coordinator failed: ${error.message  }`);
-=======
       ;
     } catch (error) {await this.log(`❌ Master Error Coordinator failed: ${error.message}`);
->>>>>>> main
       throw error;
     }
   }
 }
-<<<<<<< HEAD
 
 // Run the coordinator if called directly;
 if (require.main === module) {
@@ -435,7 +395,6 @@ if (require.main === module) {
     })
     .catch(error => {
       console.error(`Master error coordinator failed:`, error);
-=======
 ;
 // Run the coordinator if called directly;
 if (require.main === module) {;
@@ -447,7 +406,6 @@ if (require.main === module) {;
     });
     .catch(error => {;
       console.error('Master error coordinator failed:', error);
->>>>>>> main
       process.exit(1);
     });
 }

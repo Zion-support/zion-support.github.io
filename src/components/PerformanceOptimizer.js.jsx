@@ -1,16 +1,9 @@
-<<<<<<< HEAD
  export const PerformanceOptimizer = ({ children }) => { const location = useLocation () ;'';,"});,"})
 ;,"});,"})
-=======
-<<<<<<< HEAD
  export const PerformanceOptimizer = ({ children }) => { const location = useLocation () ''
 
 ""
 }
-=======
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
@@ -43,6 +36,3 @@ const PerformanceOptimizer.Js: React.FC = () => {
 };
 
 export default PerformanceOptimizer.Js;
->>>>>>> main
->>>>>>> main
->>>>>>> main

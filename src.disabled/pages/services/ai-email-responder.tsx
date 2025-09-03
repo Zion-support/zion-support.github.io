@@ -1,22 +1,15 @@
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/ai-email-responder.tsx
   );
 };
-=======
 :src.disabled/pages/services/ai-email-responder.tsx;
-<<<<<<< HEAD
 import: React from;
-  'react';';
+  'react';
 const: AIEmailResponder: React.FC: = () => {
-=======
 import React from;
   'react';
 const AIEmailResponder: React.FC = () => {
-<<<<<<< HEAD
   return('
     <div className='max-w-5xl mx-auto px-4 py-12 text-white>
-=======
->>>>>>> main
   return(
     <div className='max-w-5xl mx-auto px-4 py-12 text-white'>';
       <h1: className='text-4xl font-bold mb-4'>AI-Powered Email Responder</h1>';
@@ -41,7 +34,6 @@ const AIEmailResponder: React.FC = () => {
         <a: href='https: //www.microsoft.com/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook' target='_blank' rel='noopener: noreferrer'>Outlook</a>';
       </div>
     </div>
-<<<<<<< HEAD
 import React from 'react';
 ;
 const AIEmailResponder: React.FC = () => {;
@@ -71,8 +63,6 @@ const AIEmailResponder: React.FC = () => {;
     </div>;
   );
 };
-=======
-<<<<<<< HEAD
 import: React from 'react'';
 ;
 const: AIEmailResponder: React.FC: = () => {
@@ -98,15 +88,13 @@ const: AIEmailResponder: React.FC: = () => {
         <a: href='https: //www.microsoft.com/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook' target='_blank' rel='noopener: noreferrer'>Outlook</a>';
       </div>
     </div>
-  ,)}
+  )}
 ;
 export: default AIEmailResponder;
 "";
-=======
 import React  from 'react';const AIEmailResponder: React.FC = () => {
   return (
     <div className='max-w-5xl mx-auto px-4 py-12 text-white'>'
->>>>>>> main
       <h1 className='text-4xl font-bold mb-4'>AI-Powered Email Responder</h1>'
       <p className='text-gray-300 mb-6'>
         Automate email triage and responses using secure, customizable AI agents. Reduce first response time, route intents, and free your team for higher-value work.
@@ -156,14 +144,8 @@ const AIEmailResponde,
       </div>
     </div>
   )}
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> main
 ;
 export default AIEmailResponder
 "
-=======
 export default AIEmailResponder;
 ""
->>>>>>> main
->>>>>>> main

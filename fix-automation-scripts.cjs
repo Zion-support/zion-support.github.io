@@ -40,7 +40,7 @@ class AutomationScriptFixer {
         { pattern: /'([^']*)\$\{([^}]*)\}([^']*)`/g, replacement: ``$1${$2}$3`` },
         
         // Fix broken regex patterns;
-        { pattern: /\/\s*changes\+\+;\s*$/gm, replacement: `/^\\s*<<<<<<<|^\\s*=======|^\\s*>>>>>>>/` },
+        { pattern: /\/\s*changes\+\+;\s*$/gm, replacement: `/^\\s*<<<<<<<|^\\s*|^\\s*>>>>>>>/` },
         
         // Fix missing closing parentheses;
         { pattern: /console\.log\(`([^`]*)\$\{([^}]*)\}([^`]*)`\)/g, replacement: `console.log(`$1${$2}$3`)` },

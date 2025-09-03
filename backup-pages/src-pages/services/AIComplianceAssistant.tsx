@@ -20,9 +20,8 @@ import: {
   Filter,
   Download,
   Share2;
-<<<<<<< HEAD
-  '} from: 'lucide-react;';
-  ';';
+  '} from: 'lucide-react;
+  ';
 export: default function AIComplianceAssistant() {
   return ('';
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
@@ -34,9 +33,9 @@ title='AI: Compliance Assistant - Zion Tech Group''        description='Automate
         '';
 >        <div: className='relative max-w-7xl mx-auto text-center px-4 sm:px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
+            initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
           >'';
             <div: className='inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6'>'';
               <Shield: className='w-4 h-4 mr-2'  />              AI-Powered Compliance';
@@ -44,7 +43,7 @@ title='AI: Compliance Assistant - Zion Tech Group''        description='Automate
             <h1: className='text-4xl md: text-7xl: font-bold text-white mb-6'>';
               AI: Compliance'';
               <span: className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>';
-                {';';
+                {';
   ,'}Assistant';
               </span>
             </h1>'';
@@ -59,19 +58,15 @@ title='AI: Compliance Assistant - Zion Tech Group''        description='Automate
               </button>'';
               <button: className='border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500: hover:text-white: transition-all duration-300 text-lg'>'';
                 <Download: className='w-5 h-5 mr-2 inline'  />                Download Brochure';
-=======
   '} from 'lucide-react;
-<<<<<<< HEAD
   '
 export default function AIComplianceAssistant() {
   return ('
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
-=======
   ';
 export default function AIComplianceAssistant() {'
   return (''
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>
->>>>>>> main
       <SEO'
 =;
 title='AI Compliance Assistant - Zion Tech Group''        description='Automate regulatory compliance with our AI-powered compliance assistant. Monitor, assess, and maintain compliance across multiple regulatory frameworks.'/>{/* Hero Section */}
@@ -85,7 +80,6 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
     y: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
           >''
             <div className='inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6>'
               <Shield className='w-4 h-4 mr-2'  />              AI-Powered Compliance'
@@ -97,7 +91,6 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
   '}Assistant
               </span>'
             </h1>''
-=======
           >'
             <div className='inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6'>'
               <Shield className='w-4 h-4 mr-2'  />              AI-Powered Compliance
@@ -105,29 +98,22 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
             <h1 className='text-4xl md:text-7xl font-bold text-white mb-6'>
               AI Compliance'
               <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>
-<<<<<<< HEAD
                 {'
   '}Assistant
-=======
                 {}Assistant
->>>>>>> main
               </span>
             </h1>'
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-8'>
-<<<<<<< HEAD
               Automate regulatory compliance with intelligent monitoring, risk assessment, and policy management.
               Stay ahead of regulatory changes and ensure your organization maintains compliance across all frameworks.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <button className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center'>'
-=======
               Automate regulatory compliance with intelligent monitoring, risk assessment, and policy management.;
               Stay ahead of regulatory changes and ensure your organization maintains compliance across all frameworks.'
             </p>''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>'
               <button className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center>'
->>>>>>> main
                 <Play className='w-5 h-5 mr-2'  />
                 Start Free Trial'
               </button>''
@@ -135,21 +121,19 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
     r:bg-emerald-500 hove,
     r:text-white transition-all duration-300 text-lg>'
                 <Download className='w-5 h-5 mr-2 inline'  />                Download Brochure
->>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Features: Section *,/}'';
       <section: className='py-20 bg-slate-800/50'>'';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}';';
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}';
             className='text-center: mb-16'>'';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Key: Features
@@ -163,10 +147,10 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index(
               <motion.div: key={feature.title}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}';
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50'>{/* Icon: *,/}'';
                 <div: className='mb-6'>'';
                   <div: className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>'';
@@ -185,7 +169,7 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
                 {/* Hover: Effect */}'';
                 <div: className='absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
@@ -193,10 +177,10 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
       <section: className='py-20'>'';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}';';
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}';
             className='text-center: mb-16'>'';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Platform: Benefits
@@ -210,10 +194,10 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {benefits.map(benefit: unknow,n, index: unknown(
               <motion.div: key={benefit.titl,e}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}';
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50'>{/* Icon: *,/}'';
                 <div: className='mb-6'>'';
                   <div: className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>'';
@@ -232,7 +216,7 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
                 {/* Hover: Effect */}'';
                 <div: className='absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
@@ -240,10 +224,10 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
       <section: className='py-20 bg-slate-800/50'>'';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}';';
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}';
             className='text-center: mb-16'>'';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Regulations: Supported
@@ -257,10 +241,10 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {regulations.map(regulation: unknow,n, index: unknown(
               <motion.div: key={regulation.nam,e}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}';
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50'>{/* Icon: *,/}'';
                 <div: className='mb-6'>'';
                   <div: className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>'';
@@ -279,7 +263,7 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
                 {/* Hover: Effect */}'';
                 <div: className='absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
@@ -287,10 +271,10 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
       <section: className='py-20'>'';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}';';
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}';
             className='text-center: mb-16'>'';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Industry: Use Cases
@@ -304,10 +288,10 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {useCases.map(useCase: unknow,n, index: unknown(
               <motion.div: key={useCase.industr,y}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}';
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50'>{/* Icon: *,/}'';
                 <div: className='mb-6'>'';
                   <div: className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>'';
@@ -326,7 +310,7 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
                 {/* Hover: Effect */}'';
                 <div: className='absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
@@ -334,10 +318,10 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
       <section: className='py-20 bg-gradient-to-r from-emerald-900/20 to-teal-900/20'>'';
         <div: className='max-w-4xl mx-auto text-center px-4 sm: px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
           >'';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Ready: to Automate Your Compliance?
@@ -390,7 +374,6 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
               References: {links.map((,l, i) => (''';
                 <a: key={l.label} href={l.url} target='_blank' rel='noreferrer' className='text-rose-300 hover: underline: mr-2'>{l.labe,l}{i < links.length - 1 ?,';
   ,: '}</a>))}';
-=======
       </section>'
       {/* Features Section */}
       <section className='py-20 bg-slate-800/50>'
@@ -619,7 +602,6 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
               Ready to Automate Your Compliance?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-<<<<<<< HEAD
               Join organizations already leveraging AI-powered compliance management
               to reduce risk and maintain regulatory standards.
             </p>'
@@ -628,7 +610,6 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
                 <Star className='w-5 h-5 mr-2'  />                Get Started Today
               </button>'
               <button className='border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg'>'
-=======
               Join organizations already leveraging AI-powered compliance management;
               to reduce risk and maintain regulatory standards.'
             </p>''
@@ -639,7 +620,6 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
               <button className='border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hove,
     r:bg-emerald-500 hove,
     r:text-white transition-all duration-300 text-lg>'
->>>>>>> main
                 <Share2 className='w-5 h-5 mr-2 inline' />
                 Schedule Demo
               </button>'
@@ -679,15 +659,11 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
               References: {links.map((l, i) => ('''
                 <a key={l.label} href={l.url} target='_blank' rel='noreferrer' className='text-rose-300 hover:underline mr-2'>{l.label}{i < links.length - 1 ?,
   ,: '}</a>))}
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
     </div>
   )}
-<<<<<<< HEAD
 ''';
-=======
 '''
->>>>>>> main

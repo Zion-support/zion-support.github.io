@@ -43,17 +43,15 @@ interface ComponentProps {
 
 declare global {
   interface Window {
-<<<<<<< HEAD:components/AnalyticsManager.tsx
+:components/AnalyticsManager.tsx
     gtag: (...arg,
     s: unknown[]) => void}
-=======
-<<<<<<< HEAD:components/AnalyticsManager.tsx
+:components/AnalyticsManager.tsx
     gtag: (...args: any[]) => void;
   }
-=======
     gtag: (...args: unknown[]) => void}
->>>>>>> main:components.disabled/components/AnalyticsManager.tsx
->>>>>>> main:components.disabled/components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx
 }
 
 declare const gtag: (...args: unknown[]) => void;
@@ -65,19 +63,17 @@ interface AnalyticsEvent {
     y: string;
   action?: string;
   label?: string;
-<<<<<<< HEAD:components/AnalyticsManager.tsx
+:components/AnalyticsManager.tsx
   value?: number
   custom_parameters?: Record<string, any>
-=======
-<<<<<<< HEAD:components/AnalyticsManager.tsx
+:components/AnalyticsManager.tsx
   value?: number;
   custom_parameters?: Record<string, any>;
->>>>>>> main:components.disabled/components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx
 }
-=======
   value?: number
   custom_parameters?: Record<string, unknown>}
->>>>>>> main:components.disabled/components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx
 
 interface PerformanceMetrics {
   fcp: number;
@@ -105,8 +101,7 @@ const AnalyticsManager: React.FC = () => {
     pageViews: 0,
     sessionDuration: 0,
     bounceRate: 0,
-    conversionRate: 0,
-  });
+    conversionRate: 0});
   // Initialize analytics
   useEffect(() => {
     initializeAnalytics();
@@ -117,23 +112,20 @@ const AnalyticsManager: React.FC = () => {
     };
   }, []);
   const initializeAnalytics = useCallback(() => {
-<<<<<<< HEAD:components/AnalyticsManager.tsx
+:components/AnalyticsManager.tsx
     // Initialize Google Analytics'
     if (typeof gtag !== 'undefined') {'
       gtag('config', 'GA_MEASUREMENT_ID', {
-=======
     // Initialize Google Analytics
     if (typeof gtag !== 'undefined') {
       gtag('config,GA_MEASUREMENT_ID', {
->>>>>>> main:components.disabled/components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx
         page_title: document.title,
         page_location: window.location.href,
         custom_map: {'
           custom_parameter_,
     1: 'user_type',
-          custom_parameter_2: 'session_id',
-        },
-      });
+          custom_parameter_2: 'session_id'}});
     }
 
     // Initialize other analytics services
@@ -159,8 +151,7 @@ const AnalyticsManager: React.FC = () => {
       viewport_size: `${window.innerWidth}x${window.innerHeight}`,
       color_depth: screen.colorDepth,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      language: navigator.language,
-    });
+      language: navigator.language});
   }, []);
 
   const generateSessionId = useCallback(() => {
@@ -184,21 +175,18 @@ const AnalyticsManager: React.FC = () => {
       page_location: window.location.href,
       page_path: window.location.pathname,
       referrer: document.referrer,
-      timestamp: new Date().toISOString(),
-    };
+      timestamp: new Date().toISOString()};
 
-<<<<<<< HEAD:components/AnalyticsManager.tsx
+:components/AnalyticsManager.tsx
     // Google Analytics'
     if (typeof gtag !== 'undefined') {'
-=======
     // Google Analytics
     if (typeof gtag !== 'undefined') {
-<<<<<<< HEAD:components/AnalyticsManager.tsx
->>>>>>> main:components.disabled/components/AnalyticsManager.tsx
+:components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx
       gtag('event', 'page_view', pageData);
-=======
       gtag('event,page_view', pageData);
->>>>>>> main:components.disabled/components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx
     }
 
     // Custom analytics
@@ -207,8 +195,7 @@ const AnalyticsManager: React.FC = () => {
       category: 'Navigation',
       action: 'view',
       label: window.location.pathname,
-      custom_parameters: pageData,
-    });
+      custom_parameters: pageData});
   }, []);
 
   const trackEvent = useCallback(
@@ -221,8 +208,7 @@ const AnalyticsManager: React.FC = () => {
           event_category: event.category,
           event_label: event.label,
           value: event.value,
-          ...event.custom_parameters,
-        });
+          ...event.custom_parameters});
       }
 
       // Custom analytics
@@ -244,16 +230,14 @@ const AnalyticsManager: React.FC = () => {
         session_id: sessionStorage.getItem('analytics_session_id'),
         user_id: sessionStorage.getItem('analytics_user_id'),
         page_url: window.location.href,
-        user_agent: navigator.userAgent,
-      };
+        user_agent: navigator.userAgent};
 
       // Send to custom analytics endpoint'
       await fetch('/api/analytics', {'
         method: 'POST',
         headers: {'
-          'Content-Type': 'application/json',
-        },
-<<<<<<< HEAD:components/AnalyticsManager.tsx
+          'Content-Type': 'application/json'},
+:components/AnalyticsManager.tsx
         body: JSON.stringify(eventData);
       })} catch (error) {'
       console.error('Analytics: Failed to send event', error)}
@@ -261,23 +245,19 @@ const AnalyticsManager: React.FC = () => {
   const trackUserProperties = useCallback((properties: Record<string, unknown>) => {'
     if (typeof gtag !== 'undefined') {'
       gtag('config', 'GA_MEASUREMENT_ID', {
-=======
-<<<<<<< HEAD:components/AnalyticsManager.tsx
-        body: JSON.stringify(eventData),
-      });
-<<<<<<< HEAD:components/AnalyticsManager.tsx
+:components/AnalyticsManager.tsx
+        body: JSON.stringify(eventData)});
+:components/AnalyticsManager.tsx
     } catch (error) {}
   }, [])
-=======
     } catch (error) {
       console.error('Analytics: Failed to send event', error);
     }
   }, []);
->>>>>>> main:components.disabled/components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx
   const trackUserProperties = useCallback((properties: Record<string, any>) => {
     if (typeof gtag !== 'undefined') {
       gtag('config', 'GA_MEASUREMENT_ID', {
-=======
         body: JSON.stringify(eventData)
       })} catch (error) {
       console.error('Analytics: Failed to send event', error)}
@@ -285,10 +265,9 @@ const AnalyticsManager: React.FC = () => {
   const trackUserProperties = useCallback((properties: Record<string, unknown>) => {
     if (typeof gtag !== 'undefined') {
       gtag('config,GA_MEASUREMENT_ID', {
->>>>>>> main:components.disabled/components/AnalyticsManager.tsx
->>>>>>> main:components.disabled/components/AnalyticsManager.tsx
-        custom_map: properties,
-      });
+:components.disabled/components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx
+        custom_map: properties});
     }
 
     // Store in custom analytics
@@ -296,63 +275,51 @@ const AnalyticsManager: React.FC = () => {
       name: 'user_properties',
       category: 'User',
       action: 'identify',
-      custom_parameters: properties,
-    });
+      custom_parameters: properties});
   }, []);
 
   const trackPerformance = useCallback((metrics: PerformanceMetrics) => {
-<<<<<<< HEAD:components/AnalyticsManager.tsx
+:components/AnalyticsManager.tsx
     // Google Analytics'
     if (typeof gtag !== 'undefined') {'
       gtag('event', 'web_vitals', {'
-=======
     // Google Analytics
     if (typeof gtag !== 'undefined') {
       gtag('event,web_vitals', {
->>>>>>> main:components.disabled/components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx
         name: 'FCP',
         value: Math.round(metrics.fcp),
-        event_category: 'Performance',
-      });
-<<<<<<< HEAD:components/AnalyticsManager.tsx
+        event_category: 'Performance'});
+:components/AnalyticsManager.tsx
       gtag('event', 'web_vitals', {'
-=======
-<<<<<<< HEAD:components/AnalyticsManager.tsx
+:components/AnalyticsManager.tsx
       gtag('event', 'web_vitals', {
-=======
       gtag('event,web_vitals', {
->>>>>>> main:components.disabled/components/AnalyticsManager.tsx
->>>>>>> main:components.disabled/components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx
         name: 'LCP',
         value: Math.round(metrics.lcp),
-        event_category: 'Performance',
-      });
-<<<<<<< HEAD:components/AnalyticsManager.tsx
+        event_category: 'Performance'});
+:components/AnalyticsManager.tsx
       gtag('event', 'web_vitals', {'
-=======
-<<<<<<< HEAD:components/AnalyticsManager.tsx
+:components/AnalyticsManager.tsx
       gtag('event', 'web_vitals', {
-=======
       gtag('event,web_vitals', {
->>>>>>> main:components.disabled/components/AnalyticsManager.tsx
->>>>>>> main:components.disabled/components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx
         name: 'FID',
         value: Math.round(metrics.fid),
-        event_category: 'Performance',
-      });
-<<<<<<< HEAD:components/AnalyticsManager.tsx
+        event_category: 'Performance'});
+:components/AnalyticsManager.tsx
       gtag('event', 'web_vitals', {'
-=======
-<<<<<<< HEAD:components/AnalyticsManager.tsx
+:components/AnalyticsManager.tsx
       gtag('event', 'web_vitals', {
-=======
       gtag('event,web_vitals', {
->>>>>>> main:components.disabled/components/AnalyticsManager.tsx
->>>>>>> main:components.disabled/components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx
         name: 'CLS',
         value: Math.round(metrics.cls * 1000),
-        event_category: 'Performance',
-      });
+        event_category: 'Performance'});
     }
 
     // Custom analytics
@@ -360,8 +327,7 @@ const AnalyticsManager: React.FC = () => {
       name: 'performance_metrics',
       category: 'Performance',
       action: 'measure',
-      custom_parameters: metrics,
-    });
+      custom_parameters: metrics});
   }, []);
 
   const trackConversion = useCallback(
@@ -370,8 +336,7 @@ const AnalyticsManager: React.FC = () => {
         name: 'conversion',
         category: 'Conversion',
         action: conversionType,
-        ...(value !== undefined && { value }),
-      });
+        ...(value !== undefined && { value })});
     },
     [trackEvent]
   );
@@ -383,12 +348,11 @@ const AnalyticsManager: React.FC = () => {
 
     const interval = setInterval(updateSessionDuration, 1000);
     // Store interval ID for cleanup
-<<<<<<< HEAD:components/AnalyticsManager.tsx
+:components/AnalyticsManager.tsx
     (window as any).analyticsSessionInterval = interval;
   }, []);
-=======
     (window as unknown).analyticsSessionInterval = interval}, []);
->>>>>>> main:components.disabled/components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx
 
   const endSession = useCallback(() => {
     const interval = (window as unknown).analyticsSessionInterval;
@@ -407,8 +371,7 @@ const AnalyticsManager: React.FC = () => {
       name: 'session_end',
       category: 'Session',
       action: 'end',
-      value: sessionDuration,
-    });
+      value: sessionDuration});
   }, [trackEvent]);
   // Track user interactions
   useEffect(() => {
@@ -422,15 +385,13 @@ const AnalyticsManager: React.FC = () => {
     e: 'link_click',
           category: 'Interaction',
           action: 'click',
-          label: link.href,
-        });
+          label: link.href});
       } else if (button) {
         trackEvent({'
           name: 'button_click',
           category: 'Interaction',
           action: 'click',
-          label: button.textContent || button.className,
-        });
+          label: button.textContent || button.className});
       }
     };
 
@@ -445,8 +406,7 @@ const AnalyticsManager: React.FC = () => {
           name: 'scroll_depth',
           category: 'Engagement',
           action: 'scroll',
-          value: scrollPercent,
-        });
+          value: scrollPercent});
       }
     };
 
@@ -457,8 +417,7 @@ const AnalyticsManager: React.FC = () => {
     e: 'form_submit',
         category: 'Conversion',
         action: 'submit',
-        label: form.action || form.className,
-      });
+        label: form.action || form.className});
     };
 '
     document.addEventListener('click', handleClick);
@@ -476,25 +435,21 @@ const AnalyticsManager: React.FC = () => {
       track: trackEvent,
       trackConversion,
       trackPerformance,
-      trackUserProperties,
-    };
+      trackUserProperties};
   }, [trackEvent, trackConversion, trackPerformance, trackUserProperties]);
-<<<<<<< HEAD:components/AnalyticsManager.tsx
+:components/AnalyticsManager.tsx
 '
-=======
 
-<<<<<<< HEAD:components/AnalyticsManager.tsx
+:components/AnalyticsManager.tsx
   return null; // This component doesn&apos;t render anything'
 };
-<<<<<<< HEAD:components/AnalyticsManager.tsx
+:components/AnalyticsManager.tsx
 export default AnalyticsManager
-=======
-=======
->>>>>>> main:components.disabled/components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx
   return null; // This component doesn't render unknownthing
 }
->>>>>>> main:components.disabled/components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx
 
 export default AnalyticsManager;
 '
->>>>>>> main:components.disabled/components/AnalyticsManager.tsx
+:components.disabled/components/AnalyticsManager.tsx

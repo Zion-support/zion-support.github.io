@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';''';,"});,"})
 import { motion } from 'framer-motion';''';,"});,"})
 import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react';,"});,"})
@@ -18,7 +17,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})
         primaryGoals[],;,"});,"})
         challenges[];,"});,"})
     });,"});,"})
-    const [recommendations, setRecommendations] = useState([]);';,"});,"})
+    const [recommendations, setRecommendations] = useState([]);,"});,"})
     const [isAnalyzing, setIsAnalyzing] = useState(false);'';,"});,"})
     const [showResults, setShowResults] = useState(false);''';,"});,"})
     const industries = ['''';,"});,"})
@@ -107,36 +106,36 @@ const AdvancedServiceRecommendation = () => {}"});,"})
         if(service.targetAudience?.some((audience) => audience.toLowerCase().includes(profile.industry.toLowerCase()))) {}"});,"})
             score += 25}';,"});,"})
         // Budget compatibility';,"});,"})
-        const servicePrice = parseInt(service.price.replace(/[^0-9]/g,));';,"});,"})
+        const servicePrice = parseInt(service.price.replace(/[^0-9]/g));,"});,"})
         if (profile.budget === 'Under $50K' && servicePrice < 50);,"});,"})
-            score += 20;';,"});,"})
+            score += 20;,"});,"})
         else if (profile.budget === '$50K-$200K' && servicePrice >= 50 && servicePrice < 200);,"});,"})
-            score += 20;';,"});,"})
+            score += 20;,"});,"})
         else if (profile.budget === '$200K-$500K' && servicePrice >= 200 && servicePrice < 500);,"});,"})
-            score += 20;';,"});,"})
+            score += 20;,"});,"})
         else if (profile.budget === '$500K-$1M' && servicePrice >= 500 && servicePrice < 1000);,"});,"})
-            score += 20;';,"});,"})
+            score += 20;,"});,"})
         else if (profile.budget === '$1M+' && servicePrice >= 1000);,"});,"})
-            score += 20;';,"});,"})
+            score += 20;,"});,"})
         // Timeline compatibility'';,"});,"})
-        const serviceDuration = parseInt(service.duration.split('-')[0]);';,"});,"})
+        const serviceDuration = parseInt(service.duration.split('-')[0]);,"});,"})
         if (profile.timeline === 'Immediate (0-3 months)' && serviceDuration <= 3);,"});,"})
-            score += 15;';,"});,"})
+            score += 15;,"});,"})
         else if (profile.timeline === 'Short-term (3-6 months)' && serviceDuration <= 6);,"});,"})
-            score += 15;';,"});,"})
+            score += 15;,"});,"})
         else if (profile.timeline === 'Medium-term (6-12 months)' && serviceDuration <= 12);,"});,"})
-            score += 15;';,"});,"})
+            score += 15;,"});,"})
         else if (profile.timeline === 'Long-term (12+ months)' && serviceDuration > 12);,"});,"})
-            score += 15;';,"});,"})
+            score += 15;,"});,"})
         // Technology maturity alignment'';,"});,"})
         if (profile.technologyMaturity === 'Innovation Leader' && service.category === 'quantum');,"});,"})
-            score += 20;';,"});,"})
+            score += 20;,"});,"})
         else if (profile.technologyMaturity === 'Advanced' && ['ai',blockchain'].includes(service.category));,"});,"})
-            score += 20;';,"});,"})
+            score += 20;,"});,"})
         else if (profile.technologyMaturity === 'Mature' && ['iot',edge-computing'].includes(service.category));,"});,"})
-            score += 20;';,"});,"})
+            score += 20;,"});,"})
         else if (profile.technologyMaturity === 'Growing' && ['cloud-services',web-development'].includes(service.category));,"});,"})
-            score += 20;';,"});,"})
+            score += 20;,"});,"})
         else if (profile.technologyMaturity === 'Early Adopter' && ['basic-services',consulting'].includes(service.category));,"});,"})
             score += 20;,"});,"})
         // Goal alignment;,"});,"})
@@ -153,14 +152,14 @@ const AdvancedServiceRecommendation = () => {}"});,"})
                 if (matchScore >= 80)';,"});,"})
                     priority = 'High';,"});,"})
                 else if (matchScore >= 60)';,"});,"})
-                    priority = 'Medium';';,"});,"})
+                    priority = 'Medium';,"});,"})
                 else'';,"});,"})
                     priority = 'Low';,"});,"})
-                let complexity;';,"});,"})
+                let complexity;,"});,"})
                 if (service.category === 'quantum' || service.category === 'ai')';,"});,"})
-                    complexity = 'Complex';';,"});,"})
+                    complexity = 'Complex';,"});,"})
                 else if (service.category === 'blockchain' || service.category === 'iot')';,"});,"})
-                    complexity = 'Moderate';';,"});,"})
+                    complexity = 'Moderate';,"});,"})
                 else'';,"});,"})
                     complexity = 'Simple';,"});,"})
                 const reasoning = [];,"});,"})
@@ -168,9 +167,9 @@ const AdvancedServiceRecommendation = () => {}"});,"})
                     `Budget alignment with ${clientProfile.budget} range`,``;,"});,"})
                     `Timeline compatibility with ${clientProfile.timeline} expectations`,``;,"});,"})
                     `Technology maturity level appropriate for ${clientProfile.technologyMaturity}`;,"});,"})
-                ];';,"});,"})
+                ];,"});,"})
                 const expectedROI = matchScore >= 80 ? 'High ROI expected' :'';,"});,"})
-                    matchScore >= 60 ? 'Moderate ROI expected' : 'ROI to be evaluated';';,"});,"})
+                    matchScore >= 60 ? 'Moderate ROI expected' : 'ROI to be evaluated';,"});,"})
                 const timeToValue = complexity === 'Simple' ? '2-4 months' :'';,"});,"})
                     complexity === 'Moderate' ? '4-8 months' : '8-12 months';,"});,"})
                 return {}"});,"})
@@ -510,32 +509,27 @@ export { AdvancedServiceRecommendation };,"});,"})
 export { AdvancedServiceRecommendation };,"});,"})
 ;,"});,"})
 export { AdvancedServiceRecommendation };,"});,"})
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react'''
 import { motion } from 'framer-motion'''
 import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react';""
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'';'''
 import { Button } from './ui/button'';'''
-=======
 import React, { useState } from 'react''
 import { motion }  from 'framer-motion
 import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react
 import { Card, CardContent, CardHeader, CardTitle }  from './ui/card;''
 import { Button }  from './ui/button;''
->>>>>>> main
 import { Badge } from './ui/badge';
 const AdvancedServiceRecommendation = () => {}
     const [clientProfile, setClientProfile] = useState({}""
 ''
-<<<<<<< HEAD
 ''
 ''''
         industry: '', ''''
         compSize: '',''''
         budget: '', ''''
         timeline: '',''''
-        technologyMaturity: '', primaryGoals[], challenges[], })""
+        technologyMaturity: '', primaryGoals[], challenges[]})""
     const [recommendations, setRecommendations] = useState([])''
     const [isAnalyzing, setIsAnalyzing] = useState(false)';"'"
     const [showResults, setShowResults] = useState(false)';'
@@ -554,14 +548,12 @@ const AdvancedServiceRecommendation = () => {}
     const primaryGoals = [''''
         'Cost Reduction', Revenue Growth',Operational Efficiency', Digital Transformation',Innovation', Competitive Advantage',Customer Experience', Risk Management',Sustainability''',;
 ]';'
-=======
 '''
         industry: ',''
         compSize: ',''
         budget: ',''
         timeline: ',''
-        technologyMaturity: '', primaryGoals[], challenges[],
-})"
+        technologyMaturity: '', primaryGoals[], challenges[]})"
     const [recommendations, setRecommendations] = useState([])'
     const [isAnalyzing, setIsAnalyzing] = useState(false)
     const [showResults, setShowResults] = useState(false)
@@ -569,8 +561,7 @@ const AdvancedServiceRecommendation = () => {}
         'Technology',Healthcare',Financial Services',Manufacturing',Retail',Education',Government',Energy',Transportation',Media''',;
 ]
     const compSizes = [''''
-        'Startup (1-50 employees),Small Business (51-200 employees),Medium Business (201-1000 employees),Enterprise (1000+ employees)'',
-]
+        'Startup (1-50 employees),Small Business (51-200 employees),Medium Business (201-1000 employees),Enterprise (1000+ employees)'']
     const budgets = [''''
         'Under $50K',$50K-$200K',$200K-$500K',$500K-$1M',$1M+''',;
 ]
@@ -580,14 +571,11 @@ const AdvancedServiceRecommendation = () => {}
     const primaryGoals = [''''
         'Cost Reduction',Revenue Growth',Operational Efficiency',Digital Transformation',Innovation',Competitive Advantage',Customer Experience',Risk Management',Sustainability''',;
 ]
->>>>>>> main
     const challenges = [''''
-        'Legacy Systems', Data Security',Scalability Issues', Talent Shortage',Regulatory Compliance', Integration Complexity',Performance Issues', Cost Management',Technology Debt', 
-]
+        'Legacy Systems', Data Security',Scalability Issues', Talent Shortage',Regulatory Compliance', Integration Complexity',Performance Issues', Cost Management',Technology Debt']
     const mockServices = []
         {}""
 ''
-<<<<<<< HEAD
 ''
 ''''
             id: 'ai-crm-platform', ''''
@@ -604,7 +592,6 @@ const AdvancedServiceRecommendation = () => {}
             image: '/images/services/ai-crm.jpg', ''''
             link: 'https://ziontechgroup.com/services/ai-crm-platform',''''
             contactInfo: '+1 302 464 0950', ''''
-=======
 '''
             id: 'ai-crm-platform,''
             title: 'AI-Powered CRM Platform,''
@@ -620,11 +607,8 @@ const AdvancedServiceRecommendation = () => {}
             image: '/images/services/ai-crm.jpg,''
             link: 'https://ziontechgroup.com/services/ai-crm-platform,''
             contactInfo: '+1 302 464 0950,''
->>>>>>> main
-            email: 'kleber@ziontechgroup.com',
-}, {}""
+            email: 'kleber@ziontechgroup.com'}, {}""
 ''
-<<<<<<< HEAD
 ''
 ''''
             id: 'quantum-computing-service',''''
@@ -641,7 +625,6 @@ const AdvancedServiceRecommendation = () => {}
             image: '/images/services/quantum-computing.jpg', ''''
             link: 'https://ziontechgroup.com/services/quantum-computing-service',''''
             contactInfo: '+1 302 464 0950', ''''
-=======
 '''
             id: 'quantum-computing-service,''
             title: 'Quantum Computing as a Service,''
@@ -657,11 +640,8 @@ const AdvancedServiceRecommendation = () => {}
             image: '/images/services/quantum-computing.jpg,''
             link: 'https://ziontechgroup.com/services/quantum-computing-service,''
             contactInfo: '+1 302 464 0950,''
->>>>>>> main
-            email: 'kleber@ziontechgroup.com',
-}, {}""
+            email: 'kleber@ziontechgroup.com'}, {}""
 ''
-<<<<<<< HEAD
 ''
 ''''
             id: 'blockchain-supply-chain',''''
@@ -678,7 +658,6 @@ const AdvancedServiceRecommendation = () => {}
             image: '/images/services/blockchain-supply-chain.jpg', ''''
             link: 'https://ziontechgroup.com/services/blockchain-supply-chain',''''
             contactInfo: '+1 302 464 0950', ''''
-=======
 '''
             id: 'blockchain-supply-chain,''
             title: 'Blockchain Supply Chain Solution,''
@@ -694,9 +673,7 @@ const AdvancedServiceRecommendation = () => {}
             image: '/images/services/blockchain-supply-chain.jpg,''
             link: 'https://ziontechgroup.com/services/blockchain-supply-chain,''
             contactInfo: '+1 302 464 0950,''
->>>>>>> main
-            email: 'kleber@ziontechgroup.com',
-}
+            email: 'kleber@ziontechgroup.com'}
     ]
     const calculateMatchScore = (service, profile) => {}
         let score = 0
@@ -704,7 +681,7 @@ const AdvancedServiceRecommendation = () => {}
         if(service.targetAudience?.some((audience) => audience.toLowerCase().includes(profile.industry.toLowerCase()))) {}""
             score += 25}''
         // Budget compatibility''
-        const servicePrice = parseInt(service.price.replace(/[^0-9]/g,))''
+        const servicePrice = parseInt(service.price.replace(/[^0-9]/g))''
         if (profile.budget === 'Under $50K' && servicePrice < 50)""
             score += 20''
         else if (profile.budget === '$50K-$200K' && servicePrice >= 50 && servicePrice < 200)""
@@ -771,7 +748,7 @@ const AdvancedServiceRecommendation = () => {}
                 const timeToValue = complexity === 'Simple' ? '2-4 months' :''
                     complexity === 'Moderate' ? '4-8 months' : '8-12 months'
                 return {}
-                    service, matchScore, reasoning, priority, implementationComplexity: complexity, expectedROI, timeToValue, }}) .sort((a, b) => b.matchScore - a.matchScore) 
+                    service, matchScore, reasoning, priority, implementationComplexity: complexity, expectedROI, timeToValue}}) .sort((a, b) => b.matchScore - a.matchScore) 
             setRecommendations(recs) 
             setIsAnalyzing(false) 
             setShowResults(true) }, 2000) }
@@ -796,23 +773,18 @@ const AdvancedServiceRecommendation = () => {}
             default: return 'bg-gray-100 text-gray-800'}
     }
     const isFormComplete = () => {}
-<<<<<<< HEAD
         return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&""
             clientProfile.timeline && clientProfile.technologyMaturity &&''''
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0}';'''
-=======
         return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&"
             clientProfile.timeline && clientProfile.technologyMaturity &&'''
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0}'
->>>>>>> main
     return (<div className='max-w-7xl mx-auto p-6'>
       {/* Header */}
       <motion.div initial = {}
-  { opacity: 0, y: 20,
-}} animate = {}""
+  { opacity: 0, y: 20}} animate = {}""
   { opacity: 1, y: 0 ''''
-'''',
-}} className='text-center mb-8'>''''
+''''}} className='text-center mb-8'>''''
         <h1 className='text-4xl font-bold text-zion-blue-dark mb-4'>""
           AI-Powered Service Recommendation Engine''''
         </h1>''''
@@ -821,11 +793,9 @@ const AdvancedServiceRecommendation = () => {}
       </motion.div>
       {/* Client Profile Form */}
       <motion.div initial = {}
-  { opacity: 0, y: 20,
-}} animate = {}""
+  { opacity: 0, y: 20}} animate = {}""
   { opacity: 1, y: 0 ''''
-'''',
-}} transition={{ delay: 0.1 }} className='bg-white rounded-lg shadow-lg p-6 mb-8'>''''
+''''}} transition={{ delay: 0.1 }} className='bg-white rounded-lg shadow-lg p-6 mb-8'>''''
         <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2'>''''
           <Brain className='w-6 h-6 text-zion-cyan'/" >"
           Tell Us About Your Business""
@@ -836,8 +806,7 @@ const AdvancedServiceRecommendation = () => {}
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Industry</label>
             <select value={clientProfile.industry} onChange = {}""
   (e) =" > setClientProfile(prev => ({ ...prev, industry: e.target.value ''''"
-'''',
-}))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
+''''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
               <option value=''>Select Industry</option>
               {industries.map(industry => (<option key={industry} value={industry}" >{industry}</option>) ) }"
             </select>
@@ -847,8 +816,7 @@ const AdvancedServiceRecommendation = () => {}
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Comp Size</label>
             <select value={clientProfile.compSize} onChange = {}""
   (e) =" > setClientProfile(prev => ({ ...prev, compSize: e.target.value ''''"
-'''',
-}))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
+''''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
               <option value=''>Select Comp Size</option>
               {compSizes.map(size => (<option key={size} value={size}" >{size}</option>) ) }"
             </select>
@@ -858,8 +826,7 @@ const AdvancedServiceRecommendation = () => {}
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Budget Range</label>
             <select value={clientProfile.budget} onChange = {}""
   (e) =" > setClientProfile(prev => ({ ...prev, budget: e.target.value ''''"
-'''',
-}))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
+''''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
               <option value=''>Select Budget Range</option>
               {budgets.map(budget => (<option key={budget} value={budget}" >{budget}</option>) ) }"
             </select>
@@ -869,8 +836,7 @@ const AdvancedServiceRecommendation = () => {}
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Implementation Timeline</label>
             <select value={clientProfile.timeline} onChange = {}""
   (e) =" > setClientProfile(prev => ({ ...prev, timeline: e.target.value ''''"
-'''',
-}))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
+''''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
               <option value=''>Select Timeline</option>
               {timelines.map(timeline => (<option key={timeline} value={timeline}" >{timeline}</option>) ) }"
             </select>
@@ -880,8 +846,7 @@ const AdvancedServiceRecommendation = () => {}
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Technology Maturity Level</label>
             <select value={clientProfile.technologyMaturity} onChange = {}""
   (e) =" > setClientProfile(prev => ({ ...prev, technologyMaturity: e.target.value ''''"
-'''',
-}))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
+''''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
               <option value=''>Select Technology Maturity</option>
               {technologyMaturityLevels.map(level => (<option key={level} value={level}" >{level}</option>) ) }"
             </select>
@@ -896,10 +861,10 @@ const AdvancedServiceRecommendation = () => {}
   (e) =" > {}"
                 if(e.target.checked) {}
                     setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,
-  goal], }) ) }
+  goal]}) ) }
                 else {}""
 ''''
-                    setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}'''', }} className='rounded text-zion-cyan'/>''''
+                    setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}''''}} className='rounded text-zion-cyan'/>''''
                 <span className='text-sm text-zion-slate-light'>{goal}</span>
               </label>))}
           </div>""
@@ -913,10 +878,10 @@ const AdvancedServiceRecommendation = () => {}
   (e) =" > {}"
                 if(e.target.checked) {}
                     setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,
-  challenge], }) ) }
+  challenge]}) ) }
                 else {}""
 ''''
-                    setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}'''', }} className='rounded text-zion-cyan'/>''''
+                    setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}''''}} className='rounded text-zion-cyan'/>''''
                 <span className='text-sm text-zion-slate-light'>{challenge}</span>
               </label>))}
           </div>""
@@ -936,32 +901,22 @@ const AdvancedServiceRecommendation = () => {}
       </motion.div>
       {/* Recommendations Results */}
       {showResults && (<motion .div initial = {}
-  { opacity: 0, y: 20,
-<<<<<<< HEAD
-}} animate = {}""
-  { opacity: 1, y: 0';', }} transition={{ delay: 0.2 }}" >''''"
-=======
+  { opacity: 0, y: 20}} animate = {}""
+  { opacity: 1, y: 0';'}} transition={{ delay: 0.2 }}" >''''"
 }} animate = {}"
-  { opacity: 1, y: 0,
-}} transition={{ delay: 0.2 }}" >''''
->>>>>>> main
+  { opacity: 1, y: 0}} transition={{ delay: 0.2 }}" >''''
           <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 text-center'>
             Your Personalized Service Recommendations""
           </h2>''''
           ''''
           <div className='space-y-6'>
             {recommendations.map((rec, index) => (<motion .div key={rec.service.id} initial = {}
-  { opacity: 0, x: -20,
-<<<<<<< HEAD
-}} animate = {}""
-  { opacity: 1, x: 0';', }} transition={{ delay: 0.1 * index }}" >''''"
+  { opacity: 0, x: -20}} animate = {}""
+  { opacity: 1, x: 0';'}} transition={{ delay: 0.1 * index }}" >''''"
                 <Card className='hover:shadow-lg transition-shadow'>''''
-=======
 }} animate = {}"
-  { opacity: 1, x: 0,
-}} transition={{ delay: 0.1 * index }}" >''''
+  { opacity: 1, x: 0}} transition={{ delay: 0.1 * index }}" >''''
                 <Card className='hover:shadow-lg transition-shadow'>'''
->>>>>>> main
                   <CardHeader>''''
                     <div className='flex items-start justify-between'>''''
                       <div className='flex-1'>''''
@@ -1050,11 +1005,9 @@ const AdvancedServiceRecommendation = () => {}
           </div>
           {/* CTA Section */}
           <motion.div initial = {}
-  { opacity: 0, y: 20,
-}} animate = {}""
+  { opacity: 0, y: 20}} animate = {}""
   { opacity: 1, y: 0 ''''
-'''',
-}} transition={{ delay: 0.4 }} className='mt-12 text-center'>''''
+''''}} transition={{ delay: 0.4 }} className='mt-12 text-center'>''''
             <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>''''
               <h3 className='text-3xl font-bold mb-4'>Ready to Get Started?</h3>''''
               <p className='text-xl mb-6 max-w-2xl mx-auto'>
@@ -1094,4 +1047,3 @@ export { AdvancedServiceRecommendation }
 export { AdvancedServiceRecommendation }
 
 export { AdvancedServiceRecommendation }"`"
->>>>>>> main

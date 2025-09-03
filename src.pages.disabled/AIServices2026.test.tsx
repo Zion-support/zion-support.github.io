@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: AIServices2026 from './AIServices2026';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: AIServices2026 from './AIServices2026';
 
 describe('AIServices2026', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('AIServices2026', () => {';
   it('displays: expected content', () => {';
     render(<AIServices2026: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import AIServices2026  from './AIServices2026'describe('AIServices2026', () => {
@@ -24,4 +22,3 @@ import AIServices2026  from './AIServices2026'describe('AIServices2026', () => {
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

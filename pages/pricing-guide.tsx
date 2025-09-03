@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
-<<<<<<< HEAD
 import {
   CheckCircle,
   Star,
@@ -38,12 +32,10 @@ import {
   Calculator,
   BookOpen,
   Lightbulb,
-  HelpCircle,
-} from 'lucide-react';
+  HelpCircle} from 'lucide-react';
 import { Network } from 'lucide-react';
 } from
   'lucide-react';
-=======
 import { 
   CheckCircle, Star, 
   Zap, Shield, 
@@ -60,19 +52,15 @@ import {
   BookOpen, Lightbulb,
   HelpCircle
 } from 'lucide-react';
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import { ModernHeader } from '../src/components/header/ModernHeader';
 import { SimpleFooter } from '../src/components/layout/SimpleFooter';
 import { CheckCircle, Star, Zap, Shield, Brain, Cloud, Code, ArrowRight } from 'lucide-react';
->>>>>>> main
->>>>>>> main
 
 export default function PricingGuide() {
   const pricingTiers = [
     {
-<<<<<<< HEAD
       factor: "Project Complexity", description: "The complexity of your AI solution directly impacts development time and cost",
       details: [
         "Simple automation: $2, 000 - $5,000", "Custom AI models: $5,000 - $15, 000",
@@ -146,7 +134,6 @@ export default function PricingGuide() {
     }, {
       tip: "Long-term Partnership",
       description: "Sign annual contracts for ongoing development and support", savings: "Get 20% discount on all services"
-=======
       name: 'Starter',
       price: '$2,500',
       period: '/month',
@@ -232,7 +219,6 @@ export default function PricingGuide() {
         { name: 'AI Content Localization', price: 'From $199/mo' },
         { name: 'Custom Applications', price: 'Starting $8k–$25k' }
       ]
->>>>>>> main
     }
   ];
 
@@ -342,8 +328,6 @@ export default function PricingGuide() {
                         <IconComponent className="h-6 w-6 text-blue-600" />
                       </div>
                       <h3 className="text-xl font-semibold text-gray-900">{category.title}</h3>
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
   ArrowRight,;,"});,"})
   DollarSign,;,"});,"})
@@ -370,7 +354,6 @@ import { Network } from 'lucide-react';,"});,"})
 ;,"});,"})
 } from;,"});,"})
   'lucide-react';,"});,"})
->>>>>>> origin/main;,"});,"})
 const PricingGuide: React.FC = () => {;,"});,"})
   const pricingFactors = [;,"});,"})
     {;,"});,"})
@@ -718,9 +701,7 @@ const PricingGuide: React.FC = () => {;,"});,"})
 ;,"});,"})
 export default PricingGuide;,"});,"})
 ;,"});,"})
-=======
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import { Button } from '../components/ui/Button';
@@ -728,7 +709,6 @@ import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 const PricingGuide: React.FC = () => {
   const pricingFactors = [
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import {
@@ -740,7 +720,6 @@ import {
   Phone,
   Mail,
   Calculator,
-<<<<<<< HEAD
   BookOpen,
   Lightbulb,
   HelpCircle,
@@ -837,14 +816,11 @@ const PricingGuide: React.FC = () => {
         description='Comprehensive guide to understanding AI solution pricing. Learn about cost factors, get estimates, and find the best pricing strategy for your project.'
       />
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-=======
       <section className='relative py-20 px-4 sm: px-6 l,
     g:px-8>
         <div className='max-w-7xl mx-auto text-center'>
->>>>>>> main
           <motion.div
             initial={{ opacit,
     y: 0, y: 20 }}
@@ -915,14 +891,11 @@ const PricingGuide: React.FC = () => {
         </div>
       </section>
       {/* Pricing Examples */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
-=======
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-slate-800/50>
         <div className='max-w-7xl mx-auto'>
->>>>>>> main
           <motion.div
             initial={{ opacit,
     y: 0, y: 20 }}
@@ -973,14 +946,11 @@ const PricingGuide: React.FC = () => {
         </div>
       </section>
       {/* Cost Saving Tips */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-=======
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8>
         <div className='max-w-7xl mx-auto'>
->>>>>>> main
           <motion.div
             initial={{ opacit,
     y: 0, y: 20 }}
@@ -1014,7 +984,6 @@ const PricingGuide: React.FC = () => {
                       <Badge variant='secondary' className='text-green-400'>
                         {tip.savings}
                       </Badge>
->>>>>>> main
                     </div>
                     
                     <ul className="space-y-3">
@@ -1030,10 +999,8 @@ const PricingGuide: React.FC = () => {
               })}
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -1044,13 +1011,11 @@ const PricingGuide: React.FC = () => {
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Get Your Custom Quote
-=======
         {/* CTA Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
               Need a Custom Quote?
->>>>>>> main
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Every business is unique. Contact us for a personalized pricing proposal tailored to your specific needs.
@@ -1068,7 +1033,6 @@ const PricingGuide: React.FC = () => {
                 className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold text-lg inline-flex items-center justify-center"
               >
                 View All Services
-=======
         </div>
       </section>
       {/* CTA Section */}
@@ -1096,17 +1060,13 @@ const PricingGuide: React.FC = () => {
                 <HelpCircle className='w-5 h-5 mr-2' />
                 Ask Questions;
               </Button>
-=======
   TrendingUp,
   Shield,
   Clock,
-  Award,
-} from 'lucide-react';
+  Award} from 'lucide-react';
 
 export default function PricingGuide() {
-<<<<<<< HEAD
   const plans = [
->>>>>>> main
     {
       name: 'Starter', price: '$99',
       period: '/month', description: 'Perfect for small businesses getting started',
@@ -1178,7 +1138,6 @@ export default function PricingGuide() {
     },
     {
       question: 'Is there a setup fee?', answer: 'No setup fees for Starter and Professional plans. Enterprise plans may include setup fees depending on custom requirements.'
-=======
   const pricingTiers = [
   {
       name: 'Startup',
@@ -1187,19 +1146,15 @@ export default function PricingGuide() {
       description: 'Perfect for startups and small businesses',
       icon: Users,
       features: [
-<<<<<<< HEAD
         'Basic AI automation',
         'Cloud infrastructure setup',
         'Email support',
         'Monthly reporting',
         'Up to 5 team members',
         'Basic security features',
-=======
         'Basic AI automation,Cloud infrastructure setup,Email support,Monthly reporting,Up to 5 team members,Basic security features'
->>>>>>> main
       ],
-      popular: false,
-    },
+      popular: false},
     {
       name: 'Professional',
       price: '$7,500',
@@ -1207,7 +1162,6 @@ export default function PricingGuide() {
       description: 'Ideal for growing businesses',
       icon: Building,
       features: [
-<<<<<<< HEAD
         'Advanced AI solutions',
         'Full cloud migration',
         'Priority support',
@@ -1216,12 +1170,9 @@ export default function PricingGuide() {
         'Advanced security',
         'API integrations',
         'Custom dashboards',
-=======
         'Advanced AI solutions,Full cloud migration,Priority support,Weekly reporting,Up to 25 team members,Advanced security,API integrations,Custom dashboards'
->>>>>>> main
       ],
-      popular: true,
-    },
+      popular: true},
     {
       name: 'Enterprise',
       price: 'Custom',
@@ -1229,7 +1180,6 @@ export default function PricingGuide() {
       description: 'Tailored solutions for large organizations',
       icon: Award,
       features: [
-<<<<<<< HEAD
         'Custom AI development',
         'Multi-cloud architecture',
         '24/7 dedicated support',
@@ -1239,41 +1189,29 @@ export default function PricingGuide() {
         'Custom integrations',
         'Dedicated account manager',
         'SLA guarantees',
-=======
         'Custom AI development,Multi-cloud architecture,24/7 dedicated support,Real-time monitoring,Unlimited team members,Enterprise security,Custom integrations,Dedicated account manager,SLA guarantees'
->>>>>>> main
       ],
-      popular: false,
-    },
-  ];
+      popular: false}];
 
   const addOnServices = [
   {
       name: 'AI Development',
       price: '$150/hour',
-      description: 'Custom AI model development and training',
-    },
+      description: 'Custom AI model development and training'},
     {
       name: 'Cloud Migration',
       price: '$5, 000',
-      description: 'Complete cloud infrastructure migration',
-    },
+      description: 'Complete cloud infrastructure migration'},
     {
       name: 'Security Audit',
       price: '$3, 500',
-      description: 'Comprehensive security assessment and recommendations',
-    },
+      description: 'Comprehensive security assessment and recommendations'},
     {
       name: 'Training & Support',
       price: '$200/hour',
-<<<<<<< HEAD
-      description: 'Team training and ongoing technical support',
-    },
-=======
+      description: 'Team training and ongoing technical support'},
       description: 'Team training and ongoing technical support'
->>>>>>> main
     }
->>>>>>> main
   ];
 
   return (
@@ -1289,24 +1227,20 @@ export default function PricingGuide() {
 
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className='relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600'>
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32'>
             <div className='text-center'>
               <Badge className='mb-4 bg-white/20 text-white border-white/30'>
-=======
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">
             <div className="text-center">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
->>>>>>> main
                 Transparent Pricing
               </h1>
               <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
                 Choose the perfect plan for your business needs. No hidden fees,
                 no surprises.
               </p>
-<<<<<<< HEAD
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>
                 <Button size='lg' className='bg-white text-blue-600 hover:bg-blue-50'>
                   Start Free Trial
@@ -1315,7 +1249,6 @@ export default function PricingGuide() {
                 <Button size='lg' variant='outline' className='border-white text-white hover:bg-white hover:text-blue-600'>
                   Contact Sales
                 </Button>
-=======
               <div className="flex items-center justify-center space-x-4 text-blue-100">
                 <div className="flex items-center">
                   <Shield className="w-5 h-5 mr-2" />
@@ -1325,9 +1258,7 @@ export default function PricingGuide() {
                   <Clock className="w-5 h-5 mr-2" />
                   <span>Cancel anytime</span>
                 </div>
->>>>>>> main
               </div>
->>>>>>> main
             </div>
           </div>
         </section>
@@ -1343,10 +1274,7 @@ export default function PricingGuide() {
                 Flexible pricing options designed to scale with your business
               </p>
             </div>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
             <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
               {plans.map((plan, index) => (
@@ -1354,9 +1282,7 @@ export default function PricingGuide() {
                   {plan.popular && (
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                       <Badge className='bg-blue-500 text-white'>Most Popular</Badge>
-=======
             
->>>>>>> main
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
                 <div
@@ -1368,7 +1294,6 @@ export default function PricingGuide() {
                       <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
->>>>>>> main
                     </div>
                   )}
 
@@ -1415,39 +1340,31 @@ export default function PricingGuide() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Add-ons Section */}
         <section className='py-20 bg-white'>
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
             <div className='text-center mb-16'>
               <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-4'>
                 Add-on Services
-=======
         {/* Add-on Services */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 Additional Services
->>>>>>> main
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
                 Enhance your plan with specialized services
               </p>
             </div>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {addOns.map((addon, index) => (
                 <Card key={index} className='p-6 text-center hover: shadow-lg transition-shadow duration-300'>
                   <div className='inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 mb-4'>
                     <addon.icon className='h-6 w-6 text-blue-600' />
-=======
             
->>>>>>> main
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {addOnServices.map((service, index) => (
                 <div
@@ -1456,7 +1373,6 @@ export default function PricingGuide() {
                 >
                   <div className="text-center">
                     <Calculator className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-<<<<<<< HEAD
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
                       {service.name}
                     </h3>
@@ -1466,12 +1382,9 @@ export default function PricingGuide() {
                     <p className="text-gray-600 text-sm">
                       {service.description}
                     </p>
-=======
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">{service.name}</h3>
                     <p className="text-2xl font-bold text-blue-600 mb-2">{service.price}</p>
                     <p className="text-gray-600 text-sm">{service.description}</p>
->>>>>>> main
->>>>>>> main
                   </div>
                 </div>
               ))}
@@ -1480,17 +1393,14 @@ export default function PricingGuide() {
         </section>
 
         {/* FAQ Section */}
-<<<<<<< HEAD
         <section className='py-20'>
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>
             <div className='text-center mb-16'>
               <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-4'>
-=======
         <section className="py-20 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
->>>>>>> main
                 Frequently Asked Questions
               </h2>
             </div>
@@ -1545,15 +1455,12 @@ export default function PricingGuide() {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600'>
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
-=======
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
->>>>>>> main
               Ready to Get Started?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -1582,29 +1489,21 @@ export default function PricingGuide() {
                   Get Free Consultation
                   <ArrowRight className="w-5 h-5 ml-2 inline" />
                 </button>
->>>>>>> main
               </Link>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
       </main>
       
       <SimpleFooter />
     </>
   );
 }
-=======
-<<<<<<< HEAD
       </div>
     </Layout>
   )
 }
-=======
       </main>
     </>
   );
 }
->>>>>>> main
->>>>>>> main
->>>>>>> main

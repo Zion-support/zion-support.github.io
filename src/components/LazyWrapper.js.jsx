@@ -1,16 +1,10 @@
-<<<<<<< HEAD
 import React from 'react'; const LazyWrapper = ({ children, threshold = 0.1, className = ", loadingVariant = "default", loadingText = "Loading...", loadingSize = "md"}) => { const [isLoaded, setIsLoaded] = useState(false); const [isInView, setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref, { amount: threshold }); useEffect(() => { if(inView && !isInView) { setIsInView(true);
-=======
-<<<<<<< HEAD
 import React from 'react'; const LazyWrapper = ({ children, threshold = 0.1, className = ", loadingVariant = "default", loadingText = "Loading...", loadingSize = "md"}) => { const [isLoaded, setIsLoaded] = useState(false); const [isInView, setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref, { amount: threshold }); useEffect(() => { if(inView && !isInView) { setIsInView(true);
-=======
-<<<<<<< HEAD
 
 ;,"});,"})
  const LazyWrapper = ({ children, threshold = 0.1, className = ", loadingVariant = "default", loadingText = "Loading...", loadingSize = "md"}) => { const [isLoaded, setIsLoaded] = useState (false) ; const [isInView, setIsInView] = useState (false) ; const ref = useRef (null) ; const inView = useInView (ref, { amount: threshold }) ; useEffect ( () => { if (inView && !isInView) { setIsInView (true) ;"""";,"});,"})
 ;,"});,"})
  const LazyWrapper = ({ children, threshold = 0.1, className = ", loadingVariant = "default", loadingText = "Loading...", loadingSize = "md"}) => { const [isLoaded, setIsLoaded] = useState(false); const [isInView, setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref, { amount: threshold }); useEffect(() => { if(inView && !isInView) { setIsInView(true);,"});,"})
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff;,"});,"})
 import React, { useState, useEffect, useRef } from 'react';''';,"});,"})
 import { motion, useInView } from 'framer-motion';''';,"});,"})
 import { EnhancedLoading } from './EnhancedLoading';,"});,"})
@@ -80,22 +74,15 @@ export { LazyWrapper };,"});,"})
 export { LazyWrapper };,"});,"})
 ;,"});,"})
 export { LazyWrapper };,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
-<<<<<<< HEAD
  const LazyWrapper = ({ children, threshold = 0.1, className = ', loadingVariant = 'default', loadingText = 'Loading...', loadingSize = 'md'}) => { const [isLoaded, setIsLoaded] = useState (false)  const [isInView, setIsInView] = useState (false)  const ref = useRef (null)  const inView = useInView (ref, { amount: threshold })  useEffect ( () => { if (inView && !isInView) { setIsInView (true) ';'";import React, { useState, useEffect, useRef } from 'react'';import { motion, useInView } from 'framer-motion'';
-=======
-<<<<<<< HEAD
  const LazyWrapper = ({ children, threshold = 0.1, className = ', loadingVariant = 'default', loadingText = 'Loading...', loadingSize = 'md'}) => { const [isLoaded, setIsLoaded] = useState (false)  const [isInView, setIsInView] = useState (false)  const ref = useRef (null)  const inView = useInView (ref, { amount: threshold })  useEffect ( () => { if (inView && !isInView) { setIsInView (true) ';'";import React, { useState, useEffect, useRef } from 'react''"
 import { motion, useInView } from 'framer-motion'''
->>>>>>> main
 import { EnhancedLoading } from './EnhancedLoading';
 const LazyWrapper = ({}""
   children, threshold = 0.1,''
   className = '', ''
   loadingVariant = 'default',''
   loadingText = 'Loading...', ''
-=======
  const LazyWrapper = ({ children, threshold = 0.1, className = ', loadingVariant = 'default', loadingText = 'Loading...', loadingSize = 'md'}) => { const [isLoaded, setIsLoaded] = useState (false)  const [isInView, setIsInView] = useState (false)  const ref = useRef (null)  const inView = useInView (ref, { amount: threshold })  useEffect ( () => { if (inView && !isInView) { setIsInView (true) ";import React, { useState, useEffect, useRef } from 'react''
 import { motion, useInView }  from 'framer-motion
 import { EnhancedLoading } from './EnhancedLoading';
@@ -104,7 +91,6 @@ const LazyWrapper = ({}"
   className = ',
   loadingVariant = 'default,
   loadingText = 'Loading...,
->>>>>>> main
   loadingSize = 'md'}) => {}
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(false)
@@ -115,8 +101,8 @@ const LazyWrapper = ({}"
       setIsInView(true)
       // Simulate loading delay for better UX
       const timer = setTimeout(() => {}
-        setIsLoaded(true), }, 300)
-      return () => clearTimeout(timer), }
+        setIsLoaded(true)}, 300)
+      return () => clearTimeout(timer)}
   }, [inView, isInView])
   if(!isInView) {}
     return ()
@@ -126,7 +112,7 @@ const LazyWrapper = ({}"
           size={loadingSize}
         /" >"
       </div>
-    ), }
+    )}
   if (!isLoaded) {}`
 `
 ``
@@ -138,7 +124,7 @@ const LazyWrapper = ({}"
           size={loadingSize}
         /" >"
       </div>
-    ), }
+    )}
   return ()
     <motion .div
       initial={{ opacity: 0, y: 20 }}
@@ -146,7 +132,6 @@ const LazyWrapper = ({}"
       transition={{ duration: 0.6 }}
       className={className}" >"
       {children}
-<<<<<<< HEAD
     </motion.div>)};
 export default LazyWrapper;
 ;
@@ -159,7 +144,6 @@ export { LazyWrapper };
 export { LazyWrapper };
 ;
 export { LazyWrapper };
-=======
     </motion.div>)}
 export default LazyWrapper
 
@@ -173,7 +157,3 @@ export { LazyWrapper }
 
 export { LazyWrapper }
 ;"`"
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

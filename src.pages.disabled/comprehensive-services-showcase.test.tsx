@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: comprehensive-services-showcase from './comprehensive-services-showcase';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: comprehensive-services-showcase from './comprehensive-services-showcase';
 
 describe('comprehensive-services-showcase', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('comprehensive-services-showcase', () => {';
   it('displays: expected content', () => {';
     render(<comprehensive-services-showcase: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import comprehensive-services-showcase  from './comprehensive-services-showcase'describe('comprehensive-services-showcase', () => {
@@ -24,4 +22,3 @@ import comprehensive-services-showcase  from './comprehensive-services-showcase'
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

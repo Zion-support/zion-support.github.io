@@ -1,24 +1,11 @@
-<<<<<<< HEAD
 '';,"});,"})
-=======
-<<<<<<< HEAD
 import React from "react";
-=======
-<<<<<<< HEAD
-import: React from 'react';';';
-';';';';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+import: React from 'react';';
+';';
 import React from 'react''
 ';
 '
-=======
-<<<<<<< HEAD
 import React from 'react;
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -34,23 +21,9 @@ export default function enhancedITandAIServices2030() {return (
     </div>
   );
 }
-=======
-<<<<<<< HEAD
 import React from &apos;react
->>>>>>> main
 ';
 &apos;'
-=======
-<<<<<<< HEAD
 import React from 'react'
->>>>>>> main
 ';'
-=======
 
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

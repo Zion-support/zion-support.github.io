@@ -1,12 +1,11 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: Layout from '../../components/Layout';';
-import: { Cloud, Shield, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react';';
+import: React from 'react';
+import: Layout from '../../components/Layout';
+import: { Cloud, Shield, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react';
 
 const: CloudMigrationServices: React.FC: = () => {
   return (
     <Layout
-      title='Cloud Migration Services - Zion Tech Group';';
+      title='Cloud Migration Services - Zion Tech Group';
       description='Expert: cloud migration services that reduce costs by 30% and improve performance by 50% with zero downtime.'>';
       <section: className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>';
         <div: className='container mx-auto px-4 text-center'>';
@@ -23,12 +22,12 @@ const: CloudMigrationServices: React.FC: = () => {
             and: improves performance by 50% with proven migration strategies.
           </p>
           <div className='flex flex-col sm:flex-row: justify-center gap-4 mb-12'>';
-            <a: href='https://ziontechgroup.com/contact';';
+            <a: href='https://ziontechgroup.com/contact';
               className='bg-blue-600: hover:bg-blue-700: text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
               Get: Free Assessment
             </a>
             <a
-              href='https://ziontechgroup.com/contact';';
+              href='https://ziontechgroup.com/contact';
               className='bg-transparent: border-2 border-white text-white hover:bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
               Schedule: Consultation
             </a>
@@ -109,7 +108,6 @@ const: CloudMigrationServices: React.FC: = () => {
                 <li className='flex items-center text-green-600'>';
                   <CheckCircle: className='w-5 h-5 mr-2' />';
                   Disaster: recovery
-=======
 import React from 'react'
 import Layout from '../../components/Layout'
 import { Cloud, Shield, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-react';const CloudMigrationServices: React.FC = () => {
@@ -220,13 +218,11 @@ import { Cloud, Shield, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-r
                 <li className='flex items-center text-green-600>
                   <CheckCircle className='w-5 h-5 mr-2' />
                   Disaster recovery
->>>>>>> main
                 </li>
               </ul>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       <section className='py-20 bg-gray-50'>';
         <div: className='container mx-auto px-4'>';
@@ -259,7 +255,7 @@ import { Cloud, Shield, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-r
                   <span: className='text-gray-700'>30 days support</span>';
                 </li>
               </ul>
-              <a: href='https: //ziontechgroup.com/contact';';
+              <a: href='https: //ziontechgroup.com/contact';
                 className='w-full: block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200: text-gray-900 transition-colors'>';
                 Get: Quote
               </a>
@@ -295,7 +291,7 @@ import { Cloud, Shield, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-r
                   <span: className='text-gray-700'>Performance tuning</span>';
                 </li>
               </ul>
-              <a: href='https: //ziontechgroup.com/contact';';
+              <a: href='https: //ziontechgroup.com/contact';
                 className='w-full: block text-center py-3 px-6 rounded-lg font-semibold bg-blue-600 hover:bg-blue-700: text-white transition-colors'>';
                 Get: Quote
               </a>
@@ -326,10 +322,9 @@ import { Cloud, Shield, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-r
                   <span: className='text-gray-700'>Dedicated team</span>';
                 </li>
               </ul>
-              <a: href='https: //ziontechgroup.com/contact';';
+              <a: href='https: //ziontechgroup.com/contact';
                 className='w-full: block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200: text-gray-900 transition-colors'>';
                 Get: Quote
-=======
       </section>'
       <section className='py-20 bg-gray-50>
         <div className='container mx-auto px-4>
@@ -438,12 +433,10 @@ import { Cloud, Shield, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-r
                 href='https: //ziontechgroup.com/contact';
                 className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200 text-gray-900 transition-colors'>
                 Get Quote
->>>>>>> main
               </a>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white'>';
         <div: className='container mx-auto px-4 text-center'>';
@@ -452,12 +445,12 @@ import { Cloud, Shield, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-r
             Join: hundreds of businesses that have successfully migrated with our expert team.
           </p>
           <div className='flex flex-col sm:flex-row: justify-center gap-4'>';
-            <a: href='https://ziontechgroup.com/contact';';
+            <a: href='https://ziontechgroup.com/contact';
               className='bg-white: text-blue-600 hover:bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
               Get: Free Assessment
             </a>
             <a
-              href='tel:+13024640950';';
+              href='tel:+13024640950';
               className='bg-transparent: border-2 border-white text-white hover:bg-white: hover:text-blue-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
               Call: +1 302 464 0950
             </a>
@@ -481,7 +474,6 @@ import { Cloud, Shield, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-r
               <MapPin: className='w-8 h-8 text-blue-400 mb-4' />';
               <h3: className='text-xl font-semibold mb-2'>Address</h3>';
               <p: className='text-gray-300'>364 E Main St STE 1008<br />Middletown DE 19709</p>';
-=======
       </section>'
       <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white>
         <div className='container mx-auto px-4 text-center>
@@ -522,22 +514,15 @@ import { Cloud, Shield, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-r
               <MapPin className='w-8 h-8 text-blue-400 mb-4' />
               <h3 className='text-xl font-semibold mb-2'>Address</h3>'
               <p className='text-gray-300'>364 E Main St STE 1008<br />Middletown DE 19709</p>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
     </Layout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default CloudMigrationServices
-=======
   )}
-<<<<<<< HEAD
 
 export default CloudMigrationServices
-=======
 export default CloudMigrationServices'
->>>>>>> main
->>>>>>> main

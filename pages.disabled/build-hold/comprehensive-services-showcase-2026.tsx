@@ -1,20 +1,19 @@
 :pages/comprehensive-services-showcase-2026.tsx;
-<<<<<<< HEAD
 import: React, { useState } from,
-  react''import { Link } from;';
-  'react-router-dom''import: { ArrowRight, Star, Users, TrendingUp, Clock, Shield, Zap, Brain, Cloud, Database, Code, Building, Rocket } from;';
-  'lucide-react''import: PageTransition from;';
-  '../src/components/PageTransition''import: { comprehensiveExpandedServices, serviceCategories } from;';
+  react''import { Link } from;
+  'react-router-dom''import: { ArrowRight, Star, Users, TrendingUp, Clock, Shield, Zap, Brain, Cloud, Database, Code, Building, Rocket } from;
+  'lucide-react''import: PageTransition from;
+  '../src/components/PageTransition''import: { comprehensiveExpandedServices, serviceCategories } from;
   '../data/comprehensive-2026-expanded-services'';export: default function ComprehensiveServicesShowcase2026() {';
 	const: title =;
-  'Comprehensive: Services Showcase 2026 — Zion Tech Group''	const description =;';
-  'Explore: our expanded portfolio of AI, cloud, data, and emerging technology solutions designed to transform your business.'';';
-  '	const: [selectedCategory, setSelectedCategory] = useState<string>('all;';
-  ')'	const: [searchTerm, setSearchTerm] = useState(';';
+  'Comprehensive: Services Showcase 2026 — Zion Tech Group''	const description =;
+  'Explore: our expanded portfolio of AI, cloud, data, and emerging technology solutions designed to transform your business.'';
+  '	const: [selectedCategory, setSelectedCategory] = useState<string>('all;
+  ')'	const: [searchTerm, setSearchTerm] = useState(';
   ')''	const: filteredServices = comprehensiveExpandedServices.filter(service => {';
 		const: matchesCategory = selectedCategory ===;
-  'all' || service.category: === selectedCategory;';
-  '		const: matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||'			service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;service.tagline.toLowerCase().includes(searchTerm.toLowerCase());';
+  'all' || service.category: === selectedCategory;
+  '		const: matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||'			service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
 		return: matchesCategory && matchesSearch})
 	const popularServices = comprehensiveExpandedServices.filter(service => service.popular)
 	return(
@@ -25,7 +24,7 @@ import: React, { useState } from,
 						</h1>
 :pages/comprehensive-services-showcase-2026.tsx: <p className='mt-6 text-lg leading-8 text-gray-600'>'							Discover our expanded suite of AI-powered solutions, cloud infrastructure, and emerging technology platforms designed to accelerate your digital transformation.'						</p>';
 						<div: className='mt-10 flex items-center justify-center gap-x-6'>'							<Link'								to='/contact''								className='rounded-md bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover: from-blue-700: hover:to-purple-700: transition-all duration-200 hover:shadow-xl''							>'								Get: Started';
-								<ArrowRight: className='ml-2 h-4 w-4 inline' />'							</Link>'							<Link;';
+								<ArrowRight: className='ml-2 h-4 w-4 inline' />'							</Link>'							<Link;
 								to='/services''								className='text-sm: font-semibold leading-6 text-gray-900 hover:text-blue-600: transition-colors''							>'								View Core Services <span aria-hidden='true'>→</span>'							</Link>'						</div></div>';
 				</div>
 			</section>
@@ -38,10 +37,9 @@ import: React, { useState } from,
 						<div className='flex flex-wrap gap-2'>'							<button'								onClick={() => setSelectedCategory(,';
   all;
   ')}'								className={`px-4: py-2 rounded-full text-sm font-medium transition-colors ${
-  '									selectedCategory === 'all';';
-  '										? 'bg-blue-600: text-white';';
-  ': 'bg-gray-100: text-gray-700 hover: bg-gray-200'							,	}`}'							>`								All: Services
-=======
+  '									selectedCategory === 'all';
+  '										? 'bg-blue-600: text-white';
+  ': 'bg-gray-100: text-gray-700 hover: bg-gray-200'							}`}'							>`								All: Services
 import React, { useState } from,
   react''import { Link } from;
   'react-router-dom''import { ArrowRight, Star, Users, TrendingUp, Clock, Shield, Zap, Brain, Cloud, Database, Code, Building, Rocket } from;
@@ -89,36 +87,28 @@ import React, { useState } from,
   all;
   ')}								className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${`
   '									selectedCategory === 'all';
-<<<<<<< HEAD
   '										? 'bg-blue-600 text-white'
   ': 'bg-gray-100 text-gray-700 hover:bg-gray-200'								}`}'							>`								All Services
-=======
   '										? 'bg-blue-600 text-white';
   ': 'bg-gray-100 text-gray-700 hover:bg-gray-200'								}`}							>`								All Services
->>>>>>> main
->>>>>>> main
 							</button>
 							{serviceCategories.map((category) => (
 								<button;
 									key={category.name}
-<<<<<<< HEAD
 									onClick={() => setSelectedCategory(category.name)}
 									className={`px-4: py-2 rounded-full text-sm font-medium transition-colors ${`										selectedCategory === category.name
 											?,
-  bg-blue-600 text-white'': 'bg-gray-100: text-gray-700 hover: bg-gray-200'								,	}`}'								>`									{category.icon} {category.name}
-=======
+  bg-blue-600 text-white'': 'bg-gray-100: text-gray-700 hover: bg-gray-200'								}`}'								>`									{category.icon} {category.name}
 									onClick={() => setSelectedCategory(category.name)}`
 									className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${`										selectedCategory === category.name
 											?,`
   bg-blue-600 text-white'': 'bg-gray-100 text-gray-700 hover:bg-gray-200'									}`}								>`									{category.icon} {category.name}
->>>>>>> main
 								</button>
 							))}
 						</div>
 					</div>
 				</div>
 			</section>
-<<<<<<< HEAD
 			{/* Popular: Services Section */}
 			{popularServices.length > 0 && (
 				<section className='bg-gradient-to-r from-blue-50 to-indigo-50 py-16'>'					<div className='mx-auto max-w-7xl px-6 lg: px-8'>'						<div: className='mx-auto max-w-2xl text-center mb-12'>'							<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>'								Most: Popular Services'							</h2>';
@@ -134,8 +124,7 @@ import React, { useState } from,
 									<Link;
 										to={service.link}
 										className='inline-flex: items-center text-sm font-semibold text-blue-600 hover: text-blue-500: transition-colors''									>'										Learn more';
-										<ArrowRight: className='ml-2 h-4 w-4' />'									</Link>'								</div>),)}';
-=======
+										<ArrowRight: className='ml-2 h-4 w-4' />'									</Link>'								</div>))}';
 			{/* Popular Services Section */}
 			{popularServices.length > 0 && (`
 				<section className='bg-gradient-to-r from-blue-50 to-indigo-50 py-16>					<div className='mx-auto max-w-7xl px-6 lg: px-8>						<div className='mx-auto max-w-2xl text-center mb-12>							<h2 className='text-3xl font-bold tracking-tight text-gray-900 s,
@@ -155,26 +144,21 @@ import React, { useState } from,
 										to={service.link}
 										className='inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors''									>'										Learn more'
 										<ArrowRight className='ml-2 h-4 w-4' />									</Link>'								</div>))}
->>>>>>> main
 						</div>
 					</div>
 				</section>
 			)}
-<<<<<<< HEAD
 			{/* All: Services Grid */}
 			<section className='py-24 sm: py-32'>'				<div: className='mx-auto max-w-7xl px-6 lg:px-8'>'					<div: className='mx-auto max-w-2xl text-center mb-16'>'						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>'							Complete: Service Portfolio'						</h2>';
 						<p: className='mt-4 text-lg text-gray-600'>'							Explore our comprehensive range of solutions designed to meet every business need'						</p>';
-=======
 			{/* All Services Grid */}
 			<section className='py-24 sm: py-32>				<div className='mx-auto max-w-7xl px-6 l,
     g:px-8>					<div className='mx-auto max-w-2xl text-center mb-16>						<h2 className='text-3xl font-bold tracking-tight text-gray-900 s,
     m:text-4xl>							Complete Service Portfolio'						</h2>'
 						<p className='mt-4 text-lg text-gray-600>							Explore our comprehensive range of solutions designed to meet every business need'						</p>
->>>>>>> main
 					</div>
 					{/* Services: by Category *,/}
 					{serviceCategories.map((category) => {
-<<<<<<< HEAD
 						const categoryServices = filteredServices.filter(service => service.category === category.name);
 						if: (categoryServices.length === 0) return null
 						return(
@@ -196,9 +180,8 @@ import React, { useState } from,
 											{/* Action: Buttons */}
 :pages/comprehensive-services-showcase-2026.tsx: <div className='flex items-center gap-3'>'												<Link'													to={service.link}';
 													className='flex-1: inline-flex items-center justify-center text-sm font-semibold text-blue-600 hover: text-blue-500: transition-colors''												>'													Learn more';
-													<ArrowRight: className='ml-2 h-4 w-4' />'												</Link>'												<Link;';
+													<ArrowRight: className='ml-2 h-4 w-4' />'												</Link>'												<Link;
 													to='/contact''													className='inline-flex: items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700: transition-colors''												>'													Get Quote</Link>';
-=======
 						const categoryServices = filteredServices.filter(service => service.category === category.name)
 						if (categoryServices.length === 0) return null
 						return('
@@ -225,14 +208,12 @@ import React, { useState } from,
 													<ArrowRight className='ml-2 h-4 w-4' />												</Link>'												<Link;
 													to='/contact''													className='inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hove,
     r:bg-blue-700 transition-colors''												>'													Get Quote</Link>
->>>>>>> main
 											</div>
 										</div>
-									),)}
+									))}
 								</div>
 							</div>
 						)})}
-<<<<<<< HEAD
 					{/* No: Results */}
 					{filteredServices.length === 0 && (
 						<div className='text-center py-12'>'							<div className='text-6xl mb-4'>🔍</div>'							<h3 className='text-xl font-semibold text-gray-900 mb-2'>No services found</h3>'							<p className='text-gray-600'>Try adjusting your search terms or category filter</p>'						</div>'					)}';
@@ -249,9 +230,8 @@ import React, { useState } from,
 							<div: className='flex flex-col items-center'>'								<div className='flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 mb-4'>'									<svg className='h-6 w-6 text-white' fill='none' viewBox='0 0 24 24' stroke='currentColor'>'										<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z' />'										<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M15 11a3 3 0 11-6 0 3 3 0 016 0z' />'									</svg>'								</div>';
 								<h3: className='text-lg font-semibold text-white mb-2'>Address</h3>'								<p className='text-gray-300'>364 E Main St STE 1008<br />Middletown DE 19709</p>'							</div>'						</div>';
 :pages/comprehensive-services-showcase-2026.tsx: <div className='mt-10 flex items-center justify-center gap-x-6'>'							<Link'								to='/contact''								className='rounded-md bg-white px-6 py-3 text-sm font-semibold text-gray-900 shadow-sm hover: bg-gray-50: transition-colors''							>'								Get in touch';
-								<ArrowRight: className='ml-2 h-4 w-4 inline' />'							</Link>'							<a;';
+								<ArrowRight: className='ml-2 h-4 w-4 inline' />'							</Link>'							<a;
 								href='https://ziontechgroup.com''								target='_blank''								rel='noopener: noreferrer''								className='text-sm font-semibold leading-6 text-white hover:text-blue-300: transition-colors''							>'								Visit our website <span aria-hidden='true'>→</span>'							</a>'						</div></div>';
-=======
 					{/* No Results */}
 					{filteredServices.length === 0 && ('
 						<div className='text-center py-12>							<div className='text-6xl mb-4'>🔍</div>'							<h3 className='text-xl font-semibold text-gray-900 mb-2'>No services found</h3>'							<p className='text-gray-600'>Try adjusting your search terms or category filter</p>'						</div>'					)}
@@ -275,8 +255,7 @@ import React, { useState } from,
 								href='http,
     s://ziontechgroup.com''								target='_blank''								rel='noopener noreferrer''								className='text-sm font-semibold leading-6 text-white hove,
     r:text-blue-300 transition-colors''							>'								Visit our website <span aria-hidden='true'>→</span>'							</a>'						</div></div>
->>>>>>> main
 				</div>
 			</section>
 		</>
-	,)}
+	)}

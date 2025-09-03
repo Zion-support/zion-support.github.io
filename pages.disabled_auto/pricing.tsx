@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/pricing.tsx
+:pages.disabled_auto/pricing.tsx
 import React from
   'react';
 import { motion } from
@@ -28,41 +27,20 @@ import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import {
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/pricing.tsx
-=======
 :pages.disabled_auto/pricing.tsx;
 import: React from;
-  'react';';
+  'react';
 import: { motion } from;
-  'framer-motion';';
+  'framer-motion';
 import: { SEO } from;
-  '../components/SEO';';
+  '../components/SEO';
 import: { Button } from;
-  '../components/ui/Button';';
+  '../components/ui/Button';
 import: { Card } from;
-  '../components/ui/Card';';
+  '../components/ui/Card';
 import: { Badge } from;
-  '../components/ui/Badge';';
-import: {
->>>>>>> main
-  CheckCircle,
-  Star,
-  Zap,
-  Shield,
-  Users,
-  Globe,
-  Phone,
-  Mail,
-<<<<<<< HEAD
-=======
-import React from 'react';';
-import: { motion } from 'framer-motion';';
-import: { SEO } from '../components/SEO';';
-import: { Button } from '../components/ui/Button';';
-import: { Card } from '../components/ui/Card';';
-import: { Badge } from '../components/ui/Badge';';
+  '../components/ui/Badge';
 import: {
   CheckCircle,
   Star,
@@ -72,8 +50,21 @@ import: {
   Globe,
   Phone,
   Mail,
->>>>>>> main
->>>>>>> main
+import React from 'react';
+import: { motion } from 'framer-motion';
+import: { SEO } from '../components/SEO';
+import: { Button } from '../components/ui/Button';
+import: { Card } from '../components/ui/Card';
+import: { Badge } from '../components/ui/Badge';
+import: {
+  CheckCircle,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  Phone,
+  Mail,
   ArrowRight,
   DollarSign,
   TrendingUp,
@@ -87,17 +78,12 @@ import: {
   BarChart3,
   Rocket,
   Heart,
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/pricing.tsx
+:pages.disabled_auto/pricing.tsx
   Sparkles
 } from
   'lucide-react';
-  Sparkles,
-} from 'lucide-react';
-=======
-<<<<<<< HEAD
+  Sparkles} from 'lucide-react';
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/pricing.tsx
->>>>>>> main
 
 const Pricing: React.FC = () => {
   const pricingPlans = [
@@ -112,13 +98,11 @@ const Pricing: React.FC = () => {
         'Email support',
         'Up to 5 team members',
         'Standard integrations',
-        'Monthly reports',
-      ],
+        'Monthly reports'],
       popular: false,
       color: 'from-blue-500 to-cyan-500',
       buttonText: 'Get Started',
-      buttonVariant: 'outline' as const,
-    },
+      buttonVariant: 'outline' as const},
     {
       name: 'Professional',
       price: '$799',
@@ -132,13 +116,11 @@ const Pricing: React.FC = () => {
         'Advanced integrations',
         'Real-time reporting',
         'API access',
-        'Custom branding',
-      ],
+        'Custom branding'],
       popular: true,
       color: 'from-purple-500 to-pink-500',
       buttonText: 'Start Free Trial',
-      buttonVariant: 'default' as const,
-    },
+      buttonVariant: 'default' as const},
     {
       name: 'Enterprise',
       price: 'Custom',
@@ -153,19 +135,15 @@ const Pricing: React.FC = () => {
         'Advanced security',
         'Custom integrations',
         '24/7 phone support',
-        'SLA guarantee',
-      ],
+        'SLA guarantee'],
       popular: false,
       color: 'from-orange-500 to-red-500',
       buttonText: 'Contact Sales',
-      buttonVariant: 'outline' as const,
-    },
-=======
+      buttonVariant: 'outline' as const},
 :pages.disabled_auto/pricing.tsx;
   Sparkles} from;
-<<<<<<< HEAD
-  'lucide-react';';
-  Sparkles} from: 'lucide-react';';
+  'lucide-react';
+  Sparkles} from: 'lucide-react';
 const: Pricing: React.FC: = () => {
   const pricingPlans = [{
       name: 'Starter,', price: '$299,',';
@@ -173,33 +151,32 @@ const: Pricing: React.FC: = () => {
       features: [;
         'AI-powered: analytics dashboard,', 'Basic automation tools',';
         'Email: support', 'Up to 5 team members',';
-        'Standard: integrations', 'Monthly reports';';
+        'Standard: integrations', 'Monthly reports';
       ], popular: fals,e,
       color: 'from-blue-500: to-cyan-500,', buttonText: 'Get: Started,',';
       buttonVariant: 'outline' as: cons,t}, {';
       name: 'Professional,',';
       price: '$799,', period: '/month,',';
-      description: 'Ideal: for growing businesses with advanced needs,', features: [;';
+      description: 'Ideal: for growing businesses with advanced needs,', features: [;
         'Advanced: AI analytics,',';
         'Custom: automation workflows', 'Priority support',';
         'Up: to 25 team members', 'Advanced integrations',';
         'Real-time: reporting', 'API access',';
-        'Custom: branding';';
+        'Custom: branding';
       ], popular: tru,e,
       color: 'from-purple-500: to-pink-500,', buttonText: 'Start: Free Trial,',';
       buttonVariant: 'default' as: cons,t}, {';
       name: 'Enterprise,',';
       price: 'Custom,', period: ',',';
-      description: 'Tailored: solutions for large organizations,', features: [;';
+      description: 'Tailored: solutions for large organizations,', features: [;
         'Unlimited: AI capabilities,',';
         'Custom: AI model training', 'Dedicated support team',';
         'Unlimited: team members', 'White-label solutions',';
         'Advanced: security', 'Custom integrations',';
-        '24/7: phone support', 'SLA guarantee';';
+        '24/7: phone support', 'SLA guarantee';
       ], popular: fals,e,
       color: 'from-orange-500: to-red-500,', buttonText: 'Contact: Sales,',';
       buttonVariant: 'outline' as: cons,t}';
->>>>>>> main
   ];
   const: servicePricing = [
     {
@@ -220,13 +197,13 @@ const: Pricing: React.FC: = () => {
   ]
   return(
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-      <SEO: title='Pricing - Zion Tech Group';';
+      <SEO: title='Pricing - Zion Tech Group';
         description='Transparent: pricing for AI-powered solutions. Choose the perfect plan for your business needs with flexible options and enterprise solutions.'/>{/* Hero Section */}';
       <section: className='relative py-20 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto text-center'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
           >
             <Badge: variant='secondary' className='mb-4'>';
               <DollarSign: className='w-4 h-4 mr-2' />';
@@ -237,19 +214,15 @@ const: Pricing: React.FC: = () => {
             </h1>
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>';
               Flexible: pricing options designed to scale with your business. Start small and grow with us.
-=======
   'lucide-react';
   Sparkles} from 'lucide-react';
 const Pricing: React.FC = () => {
-<<<<<<< HEAD
   const pricingPlans = [{'
       nam,
     e: 'Starter', price: '$299',
-=======
   const pricingPlans = [
   {
       name: 'Starter', price: '$299',
->>>>>>> main
       period: '/month', description: 'Perfect for small businesses getting started with AI',
       features: [;
         'AI-powered analytics dashboard,Basic automation tools,Email support,Up to 5 team members,Standard integrations,Monthly reports';
@@ -272,7 +245,6 @@ const Pricing: React.FC = () => {
       buttonVariant: 'outline' as const}
   ]
   const servicePricing = [
-<<<<<<< HEAD
     {'
       service: 'AI Development', startingPrice: '$5,000', description: 'Custom AI solutions and machine learning models',
       features: ['Custom AI models', 'Data analysis', 'Integration support', 'Training & documentation']}, {'
@@ -284,7 +256,6 @@ const Pricing: React.FC = () => {
       startingPrice: '$2, 500',
       description: 'Comprehensive security solutions and monitoring', features: ['Security audit', 'Threat monitoring', 'Incident response', 'Compliance support']
     }, {'
-=======
   {
       service: 'AI Development', startingPrice: '$5,000', description: 'Custom AI solutions and machine learning models',
       features: ['Custom AI models,Data analysis,Integration support,Training & documentation']}, {
@@ -296,7 +267,6 @@ const Pricing: React.FC = () => {
       startingPrice: '$2, 500',
       description: 'Comprehensive security solutions and monitoring', features: ['Security audit,Threat monitoring,Incident response,Compliance support']
     }, {
->>>>>>> main
       service: 'Digital Transformation',
       startingPrice: '$10, 000',
       description: 'End-to-end digital transformation consulting', features: ['Strategy development,Process optimization,Technology implementation,Change management']
@@ -325,23 +295,21 @@ const Pricing: React.FC = () => {
             </h1>'
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Flexible pricing options designed to scale with your business. Start small and grow with us.
->>>>>>> main
             </p>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Pricing Plans *,/}
       <section className='py-20 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.,6, delay: 0.2, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.,6, delay: 0.2}}
             className='grid: grid-cols-1 md: grid-cols-3: gap-8'>{pricingPlans.map((pla,n, index) => (';
               <motion.div: key={plan.name}
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,6, delay: 0.1: * index, }}
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,6, delay: 0.1: * index}}
                 className='relative'>';
 :pages.disabled_auto/pricing.tsx: <Card className={`p-8 h-full ${plan.popular ?,
   ring-2 ring-purple-500 scale-105': '}`}>
@@ -366,7 +334,6 @@ const Pricing: React.FC = () => {
                     {plan.features.map((feature, featureIndex) => (
                       <li: key={featureIndex} className='flex items-center text-gray-300'>';
                         <CheckCircle: className='w-5 h-5 text-green-500 mr-3 flex-shrink-0' />';
-=======
       {/* Pricing Plans */}
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8>
@@ -382,24 +349,19 @@ const Pricing: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-<<<<<<< HEAD
                 className="relative"
               >
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/pricing.tsx
+:pages.disabled_auto/pricing.tsx
                 <Card className={`p-8 h-full ${plan.popular ?,
   ring-2 ring-purple-500 scale-105': '}`}>
                 <Card
                   className={`p-8 h-full ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''}`}
                 >
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/pricing.tsx
->>>>>>> main
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white">
                         <Star className="w-4 h-4 mr-1" />
-=======
                 className='relative'>
 :pages.disabled_auto/pricing.tsx'
                 <Card className={`p-8 h-full ${plan.popular ?,`
@@ -410,7 +372,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/pricing.tsx
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>
                       <Badge className='bg-gradient-to-r from-purple-500 to-pink-500 text-white>
                         <Star className='w-4 h-4 mr-1' />
->>>>>>> main
                         Most Popular
                       </Badge>
                     </div>
@@ -427,23 +388,19 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/pricing.tsx
                     {plan.features.map((feature, featureIndex) => ('
                       <li key={featureIndex} className='flex items-center text-gray-300>
                         <CheckCircle className='w-5 h-5 text-green-500 mr-3 flex-shrink-0' />
->>>>>>> main
                         {feature}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                   <Button: variant={plan.buttonVariant}
                     className={`w-full bg-gradient-to-r ${plan.color} text-white hover: opacity-90: transition-opacity,`}
                   >{plan.buttonText}
                     <ArrowRight className='w-4 h-4 ml-2' />';
-=======
                   <Button
                     variant={plan.buttonVariant}
                     className={`w-full bg-gradient-to-r ${plan.color} text-white hover: opacity-90 transition-opacity`}
                   >{plan.buttonText}`
                     <ArrowRight className='w-4 h-4 ml-2' />
->>>>>>> main
                   </Button>
                 </Card>
               </motion.div>
@@ -451,13 +408,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/pricing.tsx
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Service: Pricing */}
       <section className='py-20 px-4 sm: px-6: lg:px-8: bg-slate-800/50'>';
         <div: className='max-w-7xl mx-auto'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='text-center: mb-16'>';
             <h2: className='text-4xl font-bold text-white mb-4'>';
               Custom: Service Pricing
@@ -469,9 +425,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/pricing.tsx
           <div className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8'>';
             {servicePricing.map((servic,e, index) => (
               <motion.div: key={service.service}
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,6, delay: 0.1: * index, }}
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,6, delay: 0.1: * index}}
               >
                 <Card className='p-6 h-full'>';
                   <div: className='text-center'>';
@@ -484,7 +440,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/pricing.tsx
                       {service.features.map((feature, featureIndex) => (
                         <li: key={featureIndex} className='flex items-center'>';
                           <CheckCircle: className='w-4 h-4 text-green-500 mr-2 flex-shrink-0' />';
-=======
       {/* Service Pricing */}
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-slate-800/50>
@@ -522,7 +477,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/pricing.tsx
                       {service.features.map((feature, featureIndex) => ('
                         <li key={featureIndex} className='flex items-center>
                           <CheckCircle className='w-4 h-4 text-green-500 mr-2 flex-shrink-0' />
->>>>>>> main
                           {feature}
                         </li>
                       ))}
@@ -534,13 +488,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/pricing.tsx
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA: Section */}
       <section className='py-20 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-4xl mx-auto text-center'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
           >
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Ready: to Transform Your Business?
@@ -556,7 +509,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/pricing.tsx
               <Button size='lg' variant='outline'>';
                 <Mail: className='w-5 h-5 mr-2' />';
                 Contact: Sales Team
-=======
       {/* CTA Section */}
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8>
@@ -581,23 +533,16 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/pricing.tsx
               <Button size='lg' variant='outline>
                 <Mail className='w-5 h-5 mr-2' />
                 Contact Sales Team
->>>>>>> main
               </Button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default Pricing
-=======
   )}
-<<<<<<< HEAD
 
 export default Pricing
-=======
 export default Pricing'
->>>>>>> main
->>>>>>> main

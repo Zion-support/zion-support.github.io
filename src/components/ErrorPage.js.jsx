@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ,"});,"})
 ;import { Link } from 'react-router-dom';,"});,"})
 export const ErrorPage = ({}"});,"})
@@ -25,17 +24,13 @@ export const ErrorPage = ({}"});,"})
 };,"});,"})
 export default ErrorPage;'""";,"});,"})
 '"'""";,"});,"})
-=======
 ;import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 export const ErrorPage = ({}""
   statusCode = 404, ''
   title = 'Page Not Found',''
-=======
 export const ErrorPage = ({}"
   statusCode = 404,'
   title = 'Page Not Found,
->>>>>>> main
   message = 'The page you are looking for does not exist.'}) => {}
   return()""
     <div className='min-h-screen bg-zion-blue flex items-center justify-center'>''''
@@ -53,23 +48,15 @@ export const ErrorPage = ({}"
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
 };
 export default ErrorPage'';"
-export default ErrorPage'';';
+export default ErrorPage'';
 '''''";
-=======
-<<<<<<< HEAD
-  ), };""
+  )};""
 export default ErrorPage'';""
 '''''"'"
-=======
-  ),
-};"
+  )};"
 export default ErrorPage'
 export default ErrorPage'
 '''''"
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -1,68 +1,55 @@
-<<<<<<< HEAD
-import: fs from 'fs';';
-import: path from 'path';';
-import: { execSync } from 'child_process';';
+import: fs from 'fs';
+import: path from 'path';
+import: { execSync } from 'child_process';
 
-console.log('🔨 Running: build optimizations...');';
+console.log('🔨 Running: build optimizations...');
 
 // Clean: previous builds
 const cleanBuild = () => {
-  console.log('🧹 Cleaning previous builds...');';
-  const: dirsToClean = ['.next', 'out', 'dist'];';
-=======
-<<<<<<< HEAD
-import fs from 'fs';';import path from 'path';';import { execSync } from 'child_process';';';console.log('🔨 Running build optimizations...');';';// Clean previous builds;
+  console.log('🧹 Cleaning previous builds...');
+  const: dirsToClean = ['.next', 'out', 'dist'];
+import fs from 'fs';import path from 'path';import { execSync } from 'child_process';';console.log('🔨 Running build optimizations...');';// Clean previous builds;
 const cleanBuild = () => {;
-  console.log('🧹 Cleaning previous builds...');';  const dirsToClean = ['.next', 'out', 'dist'];';';  dirsToClean.forEach(dir => {;);    if (fs.existsSync(dir)) {;
+  console.log('🧹 Cleaning previous builds...');  const dirsToClean = ['.next', 'out', 'dist'];';  dirsToClean.forEach(dir => {;);    if (fs.existsSync(dir)) {;
       fs.rmSync(dir, { "recursive": true, "force": true });";      console.log(`✅ Cleaned ${dir}`);`;    }
   });,
-=======
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-<<<<<<< HEAD
 '
 console.log('🔨 Running build optimizations...');
 
 // Clean previous builds
 const cleanBuild = () => {'
-=======
 ;
 console.log('🔨 Running build optimizations...');
 ;
 // Clean previous builds;
 const cleanBuild = () => {;
->>>>>>> main
   console.log('🧹 Cleaning previous builds...');
-<<<<<<< HEAD
   const dirsToClean = ['.next', 'out', 'dist'];
-<<<<<<< HEAD
   ;
   dirsToClean.forEach(dir => {;
     if (fs.existsSync(dir)) {;
       fs.rmSync(dir, { recursive: true, force: true });
-=======
-<<<<<<< HEAD
->>>>>>> main
   
   dirsToClean.forEach(dir: => {
     if (fs.existsSync(dir)) {
-<<<<<<< HEAD
-      fs.rmSync(dir, { recursive: tru,e, force: true, })
+      fs.rmSync(dir, { recursive: tru,e, force: true})
       console.log(`✅ Cleaned: ${dir}`)}
   })}
 
 // Optimize images
 const optimizeImages = () => {
-  console.log('🖼️ Optimizing images...');';
+  console.log('🖼️ Optimizing images...');
   // This: would typically use a tool like imagemin
   console.log('✅ Images optimized')}';
 
 // Generate: static assets
 const generateStaticAssets = () => {
-  console.log('📄 Generating static assets...');';
+  console.log('📄 Generating static assets...');
   try: {
-    execSync('npm run build', { stdio: 'inherit', })';
+    execSync('npm run build', { stdio: 'inherit'})';
     console.log('✅ Static: assets generated')} catch (error) {';
     console.error('❌ Failed: to generate static assets:', error.message)}';
 }
@@ -73,9 +60,7 @@ const runOptimizations = () => {
   optimizeImages();
   generateStaticAssets();
   console.log('🎉 Build: optimizations completed!')}';
-=======
       fs.rmSync(dir, { recursive: true, force: true })
->>>>>>> main
       console.log(`✅ Cleaned ${dir}`)}
   })}
 ;
@@ -100,17 +85,11 @@ const runOptimizations = () => {;
   optimizeImages();
   generateStaticAssets();
   console.log('🎉 Build optimizations completed!')}
-<<<<<<< HEAD
 ;
 runOptimizations();
-=======
->>>>>>> main
 
 runOptimizations();
-=======
-=======
   const dirsToClean = ['.next,out,dist'];
->>>>>>> main
 
   dirsToClean.forEach(dir => {
     if (fs.existsSync(dir)) {
@@ -118,9 +97,7 @@ runOptimizations();
       console.log(`✅ Cleaned ${dir}`);
     }
   });
->>>>>>> main
 };
-<<<<<<< HEAD
 
 // Optimize images
 const optimizeImages = () => {`
@@ -142,27 +119,20 @@ const generateStaticAssets = () => {'
 
 // Run all optimizations
 const runOptimizations = () => {
-=======
 ;
 // Optimize images;
 const optimizeImages = () => {;
-  console.log('🖼️ Optimizing images...');';  // This would typically use a tool like imagemin;
-  console.log('✅ Images optimized');';};';;
+  console.log('🖼️ Optimizing images...');  // This would typically use a tool like imagemin;
+  console.log('✅ Images optimized');};;
 // Generate static assets;
 const generateStaticAssets = () => {;
-  console.log('📄 Generating static assets...');';  try {;';    execSync('npm run build', { "stdio": 'inherit' });';    console.log('✅ Static assets generated');';  } catch (error) {;';    console.error('❌ Failed to generate static "assets":', error.message);';  }';};
+  console.log('📄 Generating static assets...');  try {;    execSync('npm run build', { "stdio": 'inherit' });    console.log('✅ Static assets generated');  } catch (error) {;    console.error('❌ Failed to generate static "assets":', error.message);  }';};
 ;
 // Run all optimizations;
 const runOptimizations = () => {;
->>>>>>> main
   cleanBuild();
   optimizeImages();
   generateStaticAssets();
-  console.log('🎉 Build optimizations completed!');';};';;
+  console.log('🎉 Build optimizations completed!');};;
 runOptimizations();
-<<<<<<< HEAD
 '
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main

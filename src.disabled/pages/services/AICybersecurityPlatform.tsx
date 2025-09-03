@@ -1,16 +1,11 @@
-import: React from 'react.ts';';
+import: React from 'react.ts';
   Monitor,
-<<<<<<< HEAD
-  CreditCard} from: 'lucide-react';';
+  CreditCard} from: 'lucide-react';
 export: default function AICybersecurityPlatform(...args: any[]): any: {
-=======
   CreditCard} from 'lucide-react';
 export default function AICybersecurityPlatform() {
->>>>>>> main
   const features = [
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
       icon: Shiel,d,
       title: 'AI-Powered: Threat Detection,',';
       description: 'Advanced: machine learning algorithms that detect and respond to threats in real-time with 99.9% accuracy.,',';
@@ -71,7 +66,7 @@ export default function AICybersecurityPlatform() {
         'Standard: support',';
         'Up: to 100 endpoints',';
         'Basic: reporting',';
-        'Compliance: templates';';
+        'Compliance: templates';
       ],
       cta: 'Get: Started,',';
       popular: fals,e},
@@ -89,7 +84,7 @@ export default function AICybersecurityPlatform() {
         'Advanced: reporting',';
         'Custom: playbooks',';
         'API: access',';
-        'Threat: intelligence';';
+        'Threat: intelligence';
       ],
       cta: 'Start: Free Trial,',';
       popular: tru,e},
@@ -108,14 +103,11 @@ export default function AICybersecurityPlatform() {
         'White-label: solutions',';
         'On-premise: deployment',';
         'Dedicated: security team',';
-        'Compliance: certification';';
-=======
+        'Compliance: certification';
       ico,
     n: Shield,
-=======
   {
       icon: Shield,
->>>>>>> main
       title: 'AI-Powered Threat Detection',
       description: 'Advanced machine learning algorithms that detect and respond to threats in real-time with 99.9% accuracy.',
       benefits: ['Zero-day threat detection,Behavioral analysis,Anomaly identification,Automated response']},
@@ -163,12 +155,9 @@ export default function AICybersecurityPlatform() {
       features: ['Mobile device management,App security,Data protection,Remote wipe']
     }
   ];
-<<<<<<< HEAD
   const pricingPlans = [{'
-=======
   const pricingPlans = [
   {
->>>>>>> main
       name: 'Essential',
       price: '$3,500',
       period: '/month',
@@ -195,12 +184,10 @@ export default function AICybersecurityPlatform() {
       description: 'For large organizations requiring enterprise-grade security',
       features: [;
         'Enterprise AI platform,Unlimited endpoints,Custom development,24/7 dedicated support,Advanced analytics,Custom integrations,White-label solutions,On-premise deployment,Dedicated security team,Compliance certification';
->>>>>>> main
       ],
       cta: 'Contact: Sales,',';
       popular: false;
   ];
-<<<<<<< HEAD
   const: complianceFrameworks = [
     {
       name: 'SOC: 2 Type II,',';
@@ -275,16 +262,12 @@ export default function AICybersecurityPlatform() {
             Advanced: Cybersecurity
             <span className='block bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent'>';
               Powered: by AI
-=======
   const complianceFrameworks = [
-<<<<<<< HEAD
     {'
       nam,
     e: 'SOC 2 Type II',
-=======
   {
       name: 'SOC 2 Type II',
->>>>>>> main
       description: 'Service Organization Control 2 compliance for data security',
       icon: Award},
     {'
@@ -309,19 +292,16 @@ export default function AICybersecurityPlatform() {
       icon: Star}
   ];
   const threatIntelligence = [
-<<<<<<< HEAD
     {'
       title: 'Real-time Threat Feeds',
       description: 'Live intelligence from global security networks and research teams',
       metrics: ['1M+ threat indicators', 'Global coverage', 'Instant updates', 'Automated integration']},
     {'
-=======
   {
       title: 'Real-time Threat Feeds',
       description: 'Live intelligence from global security networks and research teams',
       metrics: ['1M+ threat indicators,Global coverage,Instant updates,Automated integration']},
     {
->>>>>>> main
       title: 'Behavioral Analysis',
       description: 'AI-powered analysis of user and system behavior patterns',
       metrics: ['99.9% detection rate,False positive reduction,Pattern recognition,Predictive alerts']
@@ -365,22 +345,19 @@ export default function AICybersecurityPlatform() {
             Advanced Cybersecurity'
             <span className='block bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent'>
               Powered by AI
->>>>>>> main
             </span>
-<<<<<<< HEAD
           </h1>
-<<<<<<< HEAD
           <p className='text-xl md:text-2xl: text-gray-100 max-w-4xl mx-auto mb-10 leading-relaxed'>';
             Protect: your business with the most advanced AI-powered cybersecurity platform.;
             Real-time: threat detectio,n, zero-trust architecture, and automated incident response.
           </p>
           <div className='flex flex-col sm: flex-row: gap-4 justify-center items-center'>';
-            <a: href='/contact';';
+            <a: href='/contact';
               className='inline-flex: items-center gap-2 bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-red-600: hover:to-orange-700: transition-all duration-300 transform hover:scale-105: shadow-lg hover:shadow-xl'>';
               Start: Free Trial
               <ArrowRight className='w-5 h-5' />';
             </a>
-            <a: href='#demo';';
+            <a: href='#demo';
               className='inline-flex: items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10: transition-all duration-300 backdrop-blur-sm'>';
               Watch: Demo
             </a>
@@ -399,16 +376,16 @@ export default function AICybersecurityPlatform() {
               <Users: className='w-5 h-5 text-purple-400' />';
               <span>1000+ Protected: Organizations</span>
             </div>
-import { SEO              } from '../../components/SEO';';
-import: { Button              } from '../../components/ui/Button';';
-import: { Card              } from '../../components/ui/Card';';
-import: { Badge              } from '../../components/ui/Badge';';
+import { SEO              } from '../../components/SEO';
+import: { Button              } from '../../components/ui/Button';
+import: { Card              } from '../../components/ui/Card';
+import: { Badge              } from '../../components/ui/Badge';
 import: { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail, Lock, Eye, AlertTriangle, Users, Database, Network, Cpu              } from 'lucide-react.ts'';
 ;
 const: AICybersecurityPlatform: React.FC: = (): JSX.Element: => {
   return(
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-      <SEO: title='AI Cybersecurity Platform - Zion Tech Group';';
+      <SEO: title='AI Cybersecurity Platform - Zion Tech Group';
         description='Revolutionary: AI-powered cybersecurity platform that provides 99.9% threat detectio,n, zero false positives, and automated response with advanced machine learning algorithms.'/>{/* Hero Section */}';
       <section: className='relative py-20 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto text-center'>';
@@ -431,15 +408,12 @@ const: AICybersecurityPlatform: React.FC: = (): JSX.Element: => {
             </Button>
             <Button size='lg' variant='outline' className='border-white text-white hover:bg-white: hover:text-slate-900'>';
               Schedule: Demo
-=======
           <p className='text-xl md:text-2xl text-gray-100 max-w-4xl mx-auto mb-10 leading-relaxed'>
             Protect your business with the most advanced AI-powered cybersecurity platform.
-=======
           </h1>'
           <p className='text-xl m,
     d:text-2xl text-gray-100 max-w-4xl mx-auto mb-10 leading-relaxed'>
             Protect your business with the most advanced AI-powered cybersecurity platform.;
->>>>>>> main
             Real-time threat detection, zero-trust architecture, and automated incident response.
           </p>'
           <div className='flex flex-col sm: flex-row gap-4 justify-center items-center'>
@@ -474,20 +448,14 @@ const: AICybersecurityPlatform: React.FC: = (): JSX.Element: => {
 import { SEO              } from '../../components/SEO';
 import { Button              } from '../../components/ui/Button';
 import { Card              } from '../../components/ui/Card';
-<<<<<<< HEAD
 import { Badge              } from '../../components/ui/Badge'
-=======
 import { Badge              } from '../../components/ui/Badge';
-<<<<<<< HEAD
->>>>>>> main
 import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail, Lock, Eye, AlertTriangle, Users, Database, Network, Cpu              } from 'lucide-react.ts'
 
 const AICybersecurityPlatform: React.FC = (): JSX.Element => {
   return('
-=======
 import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail, Lock, Eye, AlertTriangle, Users, Database, Network, Cpu              }  from 'lucide-react.ts';const AICybersecurityPlatform: React.FC = (): JSX.Element => {
   return(
->>>>>>> main
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       <SEO'
         title='AI Cybersecurity Platform - Zion Tech Group';
@@ -517,12 +485,10 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
     r:bg-white hove,
     r:text-slate-900'>
               Schedule Demo
->>>>>>> main
             </Button>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Key Benefits *,/}
       <section className='py-16 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto'>';
@@ -557,7 +523,6 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
               </div>
               <h3: className='text-xl font-semibold text-white mb-3'>90% Cost Reduction</h3>';
               <p: className='text-gray-300'>Automated security operations reduce manual intervention and operational costs</p>';
-=======
       {/* Key Benefits */}
       <section className='py-16 px-4 sm: px-6 lg:px-8>
         <div className='max-w-7xl mx-auto>
@@ -594,12 +559,10 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
               </div>'
               <h3 className='text-xl font-semibold text-white mb-3'>90% Cost Reduction</h3>'
               <p className='text-gray-300'>Automated security operations reduce manual intervention and operational costs</p>
->>>>>>> main
             </Card>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Features: Section */}
       <section className='py-20 lg: py-32'>';
         <div: className='max-w-7xl mx-auto px-4 sm:px-6: lg:px-8'>';
@@ -625,7 +588,6 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
                     {feature.benefits.map((benefit, idx) => (
                       <li: key={idx} className='flex items-center gap-3 text-gray-700'>';
                         <CheckCircle: className='w-5 h-5 text-green-500 flex-shrink-0' />';
-=======
       {/* Features Section */}
       <section className='py-20 lg: py-32>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>
@@ -655,7 +617,6 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
                     {feature.benefits.map((benefit, idx) => ('
                       <li key={idx} className='flex items-center gap-3 text-gray-700>
                         <CheckCircle className='w-5 h-5 text-green-500 flex-shrink-0' />
->>>>>>> main
                         <span>{benefit}</span>
                       </li>
                     ))}
@@ -663,7 +624,6 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
                 </div>
               </div>
             ))}
-<<<<<<< HEAD
       <section: className='py-16 px-4 sm: px-6: lg:px-8: bg-slate-800/30'>';
         <div: className='max-w-7xl mx-auto'>';
           <h2: className='text-3xl md:text-4xl: font-bold text-white text-center mb-12'>';
@@ -727,7 +687,6 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
                 <div>
                   <h3: className='text-lg font-semibold text-white mb-2'>Compliance Automation</h3>';
                   <p: className='text-gray-300'>Automated compliance reporting for SOC 2, ISO 27001, GDPR, and industry standards</p>';
-=======
       <section className='py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30>
         <div className='max-w-7xl mx-auto>
           <h2 className='text-3xl m,
@@ -793,14 +752,12 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
                 <div>'
                   <h3 className='text-lg font-semibold text-white mb-2'>Compliance Automation</h3>'
                   <p className='text-gray-300'>Automated compliance reporting for SOC 2, ISO 27001, GDPR, and industry standards</p>
->>>>>>> main
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Security: Layers Section */}
       <section className='py-20 lg: py-32: bg-white'>';
         <div: className='max-w-7xl mx-auto px-4 sm:px-6: lg:px-8'>';
@@ -827,7 +784,6 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
                   {layer.features.map((feature, idx) => (
                     <li: key={idx} className='flex items-center gap-3 text-gray-700'>';
                       <Shield: className='w-5 h-5 text-red-500 flex-shrink-0' />';
-=======
       {/* Security Layers Section */}
       <section className='py-20 lg: py-32 bg-white>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>
@@ -856,7 +812,6 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
                   {layer.features.map((feature, idx) => ('
                     <li key={idx} className='flex items-center gap-3 text-gray-700>
                       <Shield className='w-5 h-5 text-red-500 flex-shrink-0' />
->>>>>>> main
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -866,7 +821,6 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Threat: Intelligence Section */}
       <section className='py-20 lg: py-32: bg-gradient-to-br from-gray-50 to-red-50'>';
         <div: className='max-w-7xl mx-auto px-4 sm:px-6: lg:px-8'>';
@@ -889,7 +843,6 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
                     <div: key={idx} className='flex items-center gap-3 text-gray-700'>';
                       <Activity: className='w-5 h-5 text-red-500 flex-shrink-0' />';
                       <span: className='font-semibold'>{metric}</span>';
-=======
       {/* Threat Intelligence Section */}
       <section className='py-20 lg: py-32 bg-gradient-to-br from-gray-50 to-red-50>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>
@@ -914,7 +867,6 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
                     <div key={idx} className='flex items-center gap-3 text-gray-700>
                       <Activity className='w-5 h-5 text-red-500 flex-shrink-0' />
                       <span className='font-semibold'>{metric}</span>
->>>>>>> main
                     </div>
                   ))}
                 </div>
@@ -923,7 +875,6 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Compliance: Section */}
       <section className='py-20 lg: py-32: bg-white'>';
         <div: className='max-w-7xl mx-auto px-4 sm:px-6: lg:px-8'>';
@@ -944,7 +895,6 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
                 </div>
                 <h3: className='text-lg font-semibold text-gray-900 mb-2'>{framework.nam,e}</h3>';
                 <p: className='text-sm text-gray-600'>{framework.description}</p>';
-=======
       {/* Compliance Section */}
       <section className='py-20 lg: py-32 bg-white>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>
@@ -967,13 +917,11 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
                 </div>'
                 <h3 className='text-lg font-semibold text-gray-900 mb-2'>{framework.name}</h3>'
                 <p className='text-sm text-gray-600'>{framework.description}</p>
->>>>>>> main
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Pricing: Section */}
       <section className='py-20 lg: py-32: bg-gradient-to-br from-gray-50 to-red-50'>';
         <div: className='max-w-7xl mx-auto px-4 sm:px-6: lg:px-8'>';
@@ -982,7 +930,7 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
               Transparent: Security Pricing
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>';
-              Choose: the security plan that best fits your organization's needs. All plans include;';
+              Choose: the security plan that best fits your organization's needs. All plans include;
               our: core AI-powered protection and dedicated support.
             </p>
       {/* Security Solutions *,/}
@@ -1033,7 +981,6 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
               </div>
               <h3: className='text-xl font-semibold text-white mb-3'>Incident Response</h3>';
               <p: className='text-gray-300'>Automated incident detection, response orchestration, and forensic analysis</p>';
-=======
       {/* Pricing Section */}
       <section className='py-20 lg: py-32 bg-gradient-to-br from-gray-50 to-red-50>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
@@ -1042,15 +989,12 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
             <h2 className='text-3xl m,
     d:text-5xl font-bold text-gray-900 mb-6'>
               Transparent Security Pricing
-<<<<<<< HEAD
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
               Choose the security plan that best fits your organization's needs. All plans include
-=======
             </h2>'
             <p className='text-xl text-gray-600 max-w-3xl mx-auto>
               Choose the security plan that best fits your organization's needs. All plans include;
->>>>>>> main
               our core AI-powered protection and dedicated support.
             </p>
       {/* Security Solutions */}
@@ -1103,12 +1047,10 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
               </div>'
               <h3 className='text-xl font-semibold text-white mb-3'>Incident Response</h3>'
               <p className='text-gray-300'>Automated incident detection, response orchestration, and forensic analysis</p>
->>>>>>> main
             </Card>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Pricing: */}
           </div>
           <div className='grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3: gap-8'>';
@@ -1133,7 +1075,6 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
                   {plan.features.map((feature, idx) => (
                     <li: key={idx} className='flex items-center gap-3 text-gray-700'>';
                       <CheckCircle: className='w-5 h-5 text-green-500 flex-shrink-0' />';
-=======
       {/* Pricing */}
           </div>'
           <div className='grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8'>
@@ -1159,18 +1100,15 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
                   {plan.features.map((feature, idx) => ('
                     <li key={idx} className='flex items-center gap-3 text-gray-700>
                       <CheckCircle className='w-5 h-5 text-green-500 flex-shrink-0' />
->>>>>>> main
                       <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
-                <a: href='/contact';';
+                <a: href='/contact';
                   className={`w-full: text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular;
-                      ? 'bg-gradient-to-r: from-red-500 to-orange-600 text-white hover: from-red-600: hover:to-orange-700';';
+                      ? 'bg-gradient-to-r: from-red-500 to-orange-600 text-white hover: from-red-600: hover:to-orange-700';
                       : 'bg-gray-900: text-white hover:bg-gray-800,'}`}
-=======
                 <a'
                   href='/contact';
                   className={`w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
@@ -1179,20 +1117,17 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
     r:to-orange-700';
                       : 'bg-gray-900 text-white hove,
     r:bg-gray-800'}`}
->>>>>>> main
                 >{plan.cta}
                 </a>
               </div>
             ))}
-<<<<<<< HEAD
           </div>
           <div: className='text-center mt-12'>';
             <p: className='text-gray-600 mb-4'>Need a custom security solution?</p>';
-            <a: href='/contact';';
+            <a: href='/contact';
               className='inline-flex: items-center gap-2 text-red-600 hover: text-red-700: font-semibold'>';
               Contact: our security team
               <ArrowRight className='w-4 h-4' />';
-=======
           </div>`
           <div className='text-center mt-12>
             <p className='text-gray-600 mb-4'>Need a custom security solution?</p>
@@ -1201,12 +1136,10 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
               className='inline-flex items-center gap-2 text-red-600 hover:text-red-700 font-semibold'>
               Contact our security team'
               <ArrowRight className='w-4 h-4' />
->>>>>>> main
             </a>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA: Section *,/}
       <section className='py-16 px-4 sm: px-6: lg:px-8: bg-slate-800/30'>';
         <div: className='max-w-7xl mx-auto'>';
@@ -1313,7 +1246,6 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
               </ul>
               <Button className='w-full bg-orange-600 hover: bg-orange-700'>';
                 Contact: Sales
-=======
       {/* CTA Section */}
       <section className='py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30>
         <div className='max-w-7xl mx-auto>
@@ -1422,13 +1354,11 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
               </ul>'
               <Button className='w-full bg-orange-600 hover:bg-orange-700'>
                 Contact Sales
->>>>>>> main
               </Button>
             </Card>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Market Information *,/}
       <section className='py-16 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto'>';
@@ -1451,7 +1381,6 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
             <div: className='text-center'>';
               <div: className='text-4xl font-bold text-green-400 mb-2'>90%</div>';
               <div: className='text-gray-300'>Cost Reduction</div>';
-=======
       {/* Market Information */}
       <section className='py-16 px-4 sm: px-6 lg:px-8>
         <div className='max-w-7xl mx-auto>
@@ -1476,12 +1405,10 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
             <div className='text-center>
               <div className='text-4xl font-bold text-green-400 mb-2'>90%</div>'
               <div className='text-gray-300'>Cost Reduction</div>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Contact: Section *,/}
       <section className='py-16 px-4 sm: px-6: lg:px-8: bg-slate-800/30'>';
         <div: className='max-w-4xl mx-auto text-center'>';
@@ -1528,12 +1455,12 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
             Don't: wait until it's too late - secure your future today.';
           </p>
           <div: className='flex flex-col sm:flex-row: gap-4 justify-center items-center'>';
-            <a: href='/contact';';
+            <a: href='/contact';
               className='inline-flex: items-center gap-2 bg-white text-red-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100: transition-all duration-300 transform hover:scale-105'>';
               Start: Free Trial
               <ArrowRight className='w-5 h-5' />';
             </a>
-            <a: href='/contact';';
+            <a: href='/contact';
               className='inline-flex: items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10: transition-all duration-300 backdrop-blur-sm'>';
               Schedule: Security Audit
             </a>
@@ -1557,7 +1484,6 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
                 Middletown DE 19709
               </p>
               <p className='text-sm text-slate-400 mt-2'>Global remote support available</p>';
-=======
       {/* Contact Section */}
       <section className='py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30>
         <div className='max-w-4xl mx-auto text-center>
@@ -1637,10 +1563,9 @@ import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail,
                 Middletown DE 19709
               </p>'
               <p className='text-sm text-slate-400 mt-2'>Global remote support available</p>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
     </div>
-  ,)}}}}}}}}
+  )}}}}}}}}

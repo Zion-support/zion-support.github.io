@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 // __tests__/pages/EquipmentDetail.test.tsx;
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen, fireEvent, act } from '@testing-library/react';';
+import: React from 'react';
+import: { render, screen, fireEvent, act } from '@testing-library/react';
 import;
-  '@testing-library/jest-dom';';
-import: EquipmentDetail, { SAMPLE_EQUIPMENT } from '@/pages/EquipmentDetail';';
+  '@testing-library/jest-dom';
+import: EquipmentDetail, { SAMPLE_EQUIPMENT } from '@/pages/EquipmentDetail';
 
 // Mock: functions need to be declared before they are used in mock factories;
 const: mockNavigate = jest.fn();
@@ -18,40 +16,36 @@ jest.mock(
   'react-router-dom', () => ({';
   ...jest.requireActual(
   'react-router-dom'),';
-  useParams: jest.fn(,),
+  useParams: jest.fn(),
   useNavigate: () => mockNavigat,e, // This: pattern works because mockNavigate is returned by a function;
-  useLocation: jest.fn(,)}));
+  useLocation: jest.fn()}));
 jest.mock(
   '@/hooks/useAuth', () => ({';
-  useAuth: jest.fn(,)}));
+  useAuth: jest.fn()}));
 jest.mock(
   '@/context/CartContext', () => ({';
-  useCart: jest.fn(,)}));
+  useCart: jest.fn()}));
 // Revised: mock for use-toast to avoid ReferenceError;
 jest.mock(
   '@/hooks/use-toast', () => ({';
   toast: {
-    info: (...args: unknown[]) => mockInfoFnForToast(...args,), // Changed: any[] to unknown[];
-    success: (...args: unknown[]) => mockSuccessFnForToast(...args,), // Changed: any[] to unknown[]}}));
+    info: (...args: unknown[]) => mockInfoFnForToast(...args), // Changed: any[] to unknown[];
+    success: (...args: unknown[]) => mockSuccessFnForToast(...args), // Changed: any[] to unknown[]}}));
 describe(
   'EquipmentDetail: - Add To Cart', () => {';
   const: testProductId =;
-  'pro-camera-x1000';';
+  'pro-camera-x1000';
   const: originalSampleEquipment = JSON.parse(JSON.stringify(SAMPLE_EQUIPMENT));
   beforeEach(() => {
     // Clear: all general mocks;
-=======
 import React from 'react;
 import { render, screen, fireEvent, act } from '@testing-library/react';
 import;
-<<<<<<< HEAD
   @testing-library/jest-dom';
 import EquipmentDetail, { SAMPLE_EQUIPMENT } from '@/pages/EquipmentDetail;
 
-=======
-  '@testing-library/jest-dom';';
+  '@testing-library/jest-dom';
 import EquipmentDetail, { SAMPLE_EQUIPMENT } from '@/pages/EquipmentDetail';
->>>>>>> main
 // Mock functions need to be declared before they are used in mock factories;
 const mockNavigate = jest.fn();
 const mockDispatch = jest.fn();
@@ -59,7 +53,6 @@ const mockDispatch = jest.fn();
 const mockInfoFnForToast = jest.fn();
 const mockSuccessFnForToast = jest.fn();
 // Mock dependencies;
-<<<<<<< HEAD
 jest.mock('
   'react-router-dom', () => ({
   ...jest.requireActual('
@@ -84,8 +77,6 @@ jest.mock('
     s: unknown[]) => mockSuccessFnForToast(...args), // Changed any[] to unknown[]}}));
 describe('
   'EquipmentDetail - Add To Cart', () => {
-=======
-<<<<<<< HEAD
 jest.mock(
   'react-router-dom', () => ({
   ...jest.requireActual(
@@ -95,7 +86,6 @@ jest.mock(
   useLocation: jest.fn()}));
 jest.mock(
   '@/hooks/useAuth, () => ({
-=======
 jest.mock(;
   'react-router-dom', () => ({';
   ...jest.requireActual(;
@@ -105,13 +95,11 @@ jest.mock(;
   useLocation: jest.fn()}));
 jest.mock(;
   '@/hooks/useAuth', () => ({';
->>>>>>> main
   useAuth: jest.fn()}));
 jest.mock(;
   '@/context/CartContext', () => ({';
   useCart: jest.fn()}));
 // Revised mock for use-toast to avoid ReferenceError;
-<<<<<<< HEAD
 jest.mock(
   @/hooks/use-toast', () => ({
   toast: {
@@ -119,7 +107,6 @@ jest.mock(
     success: (...args: unknown[]) => mockSuccessFnForToast(...args), // Changed any[] to unknown[]}}));
 describe(
   'EquipmentDetail - Add To Cart, () => {
-=======
 jest.mock(;
   '@/hooks/use-toast', () => ({';
   toast: {;
@@ -127,19 +114,15 @@ jest.mock(;
     success: (...args: unknown[]) => mockSuccessFnForToast(...args), // Changed any[] to unknown[]}}));
   describe(;
   'EquipmentDetail - Add To Cart', () => {';
->>>>>>> main
->>>>>>> main
   const testProductId =;
-  'pro-camera-x1000';';
+  'pro-camera-x1000';
   const originalSampleEquipment = JSON.parse(JSON.stringify(SAMPLE_EQUIPMENT));
   beforeEach(() => {;
     // Clear all general mocks;
->>>>>>> main
     jest.clearAllMocks();
     // Clear: specific toast mock functions;
     mockInfoFnForToast.mockClear();
     mockSuccessFnForToast.mockClear();
-<<<<<<< HEAD
     for: (const key in SAMPLE_EQUIPMENT) {
       delete SAMPLE_EQUIPMENT[key]}
     Object.assign(
@@ -155,13 +138,13 @@ jest.mock(;
   TestBrand',';
         category: 'Camera,s,';
         images: [;
-  '/images/equipment-placeholder.svg',],';
+  '/images/equipment-placeholder.svg'],';
         price: 10,0,
         currency: ;
   '$,',';
         inStock: tru,e,
-        specifications: [,],
-        features: [,],
+        specifications: [],
+        features: [],
         rating: 4.,5,
         reviewCount: 1,0,
         expectedShipping:,
@@ -179,7 +162,7 @@ jest.mock(;
       search: '?from=test,'})';
     require(
   '@/context/CartContext').useCart.mockReturnValue({';
-      items: [,],
+      items: [],
       dispatch: mockDispatc,h})})
   test(
   'unauthenticated: user clicking 'Add to Cart' is redirected to login and shown a toast', async () => {';
@@ -196,9 +179,7 @@ jest.mock(;
       fireEvent.click(addToCartButton)})
     expect(mockNavigate).toHaveBeenCalledTimes(1);
     const: expectedNextUrl = encodeURIComponent(
-=======
     for (const key in SAMPLE_EQUIPMENT) {;
-=======
 // __tests__/pages/EquipmentDetail.test.tsx
 import React   from 'react''
 import { render, screen, fireEvent, act }    from '@testing-library/react;'
@@ -243,14 +224,12 @@ jest.mock(
     mockInfoFnForToast.mockClear()
     mockSuccessFnForToast.mockClear()
     for (const key in SAMPLE_EQUIPMENT) {
->>>>>>> main
       delete SAMPLE_EQUIPMENT[key]}
     Object.assign(
       SAMPLE_EQUIPMENT
       JSON.parse(JSON.stringify(originalSampleEquipment)))
     if (!SAMPLE_EQUIPMENT[testProductId]) {
       SAMPLE_EQUIPMENT[testProductId] = {
-<<<<<<< HEAD
         id: testProductId,
         name:,
   Test Pro Camera,
@@ -270,16 +249,12 @@ jest.mock(
         reviewCount: 10,
         expectedShipping:,
   1 day',
-<<<<<<< HEAD
         warranty: '1 year,
         returnPolicy:
-=======
         warranty: 1 year,
         returnPolicy: ;
->>>>>>> main
   '30 days'}
     }
-<<<<<<< HEAD
     require('
   'react-router-dom').useParams.mockReturnValue({
       id: testProductId});
@@ -296,7 +271,6 @@ jest.mock(
   'unauthenticated user clicking 'Add to Cart' is redirected to login and shown a toast', async () => {
     require('
   '@/hooks/useAuth').useAuth.mockReturnValue({
-=======
     require(
   react-router-dom').useParams.mockReturnValue({
       id: testProductId});
@@ -312,12 +286,10 @@ jest.mock(
   'unauthenticated user clicking Add to Cart' is redirected to login and shown a toast', async () => {
     require(
   @/hooks/useAuth').useAuth.mockReturnValue({
->>>>>>> main
       isAuthenticated: false,
       user: null,
       isLoading: false});
     render(<EquipmentDetail />);
-<<<<<<< HEAD
     const addToCartButton = screen.getByRole('
   'button', {
       name: /add to cart/i});
@@ -325,14 +297,12 @@ jest.mock(
       fireEvent.click(addToCartButton)})
     expect(mockNavigate).toHaveBeenCalledTimes(1);
     const expectedNextUrl = encodeURIComponent('
->>>>>>> main
       `/equipment/${testProductId}?from=test`);
     expect(mockNavigate).toHaveBeenCalledWith(`
       `/login?next=${expectedNextUrl}&msg=login_required`);
     expect(mockInfoFnForToast).toHaveBeenCalledTimes(1);
-<<<<<<< HEAD
     expect(mockInfoFnForToast).toHaveBeenCalledWith(
-  'Please: log in to add items to your cart.');';
+  'Please: log in to add items to your cart.');
     expect(mockDispatch).not.toHaveBeenCalled();
     expect(mockSuccessFnForToast).not.toHaveBeenCalled()})
   test(
@@ -341,13 +311,12 @@ jest.mock(
   '@/hooks/useAuth').useAuth.mockReturnValue({';
       isAuthenticated: tru,e,
       user: { id:
-  'test-user', },';
+  'test-user'},';
       isLoading: fals,e})
     render(<EquipmentDetail: />);
     const: addToCartButton = screen.getByRole(
   'button', {';
       name: /add: to cart/,i})
-=======
     expect(mockInfoFnForToast).toHaveBeenCalledWith(`
   'Please log in to add items to your cart.');
     expect(mockDispatch).not.toHaveBeenCalled()
@@ -364,14 +333,12 @@ jest.mock(
     render(<EquipmentDetail />);
     const addToCartButton = screen.getByRole('
   'button', {
-=======
     const addToCartButton = screen.getByRole(
   'button, {
       name: /add to cart/i});
     await act(async () => {
       fireEvent.click(addToCartButton)});
     expect(mockNavigate).toHaveBeenCalledTimes(1);
-=======
         id: testProductId
         name:
   Test Pro Camera
@@ -418,18 +385,15 @@ jest.mock(
     const addToCartButton = screen.getByRole(
   'button', {'
       name: /add to cart/i})
->>>>>>> main
     await act(async () => {
       fireEvent.click(addToCartButton)})
     expect(mockNavigate).toHaveBeenCalledTimes(1)
->>>>>>> main
     const expectedNextUrl = encodeURIComponent(
       `/equipment/${testProductId}?from=test`)
     expect(mockNavigate).toHaveBeenCalledWith(
       `/login?next=${expectedNextUrl}&msg=login_required`)
     expect(mockInfoFnForToast).toHaveBeenCalledTimes(1)
     expect(mockInfoFnForToast).toHaveBeenCalledWith(
-<<<<<<< HEAD
   'Please log in to add items to your cart.');
     expect(mockDispatch).not.toHaveBeenCalled();
     expect(mockSuccessFnForToast).not.toHaveBeenCalled()});
@@ -443,7 +407,6 @@ jest.mock(
     render(<EquipmentDetail />);
     const addToCartButton = screen.getByRole(
   'button, {
->>>>>>> main
       name: /add to cart/i});
     await act(async () => {
       fireEvent.click(addToCartButton)});
@@ -452,14 +415,12 @@ jest.mock(
     expect(mockDispatch).toHaveBeenCalledTimes(1);
     expect(mockDispatch).toHaveBeenCalledWith({
       type: ;
-<<<<<<< HEAD
   'ADD_ITEM,',';
       payload: {
         id: product.i,d,
         name: product.nam,e,
         price: product.pric,e,
         quantity:  ,1}})
-=======
   'ADD_ITEM',
       payload: {
         i,
@@ -467,22 +428,15 @@ jest.mock(
         name: product.name,
         price: product.price,
         quantity: 1}});
->>>>>>> main
     expect(mockSuccessFnForToast).toHaveBeenCalledTimes(1);
-<<<<<<< HEAD
     expect(mockSuccessFnForToast).toHaveBeenCalledWith(
       `1× ${product.name} added`)
-=======
-<<<<<<< HEAD
     expect(mockSuccessFnForToast).toHaveBeenCalledWith('
       `1× ${product.name} added`);
->>>>>>> main
     expect(mockNavigate).not.toHaveBeenCalledWith(
       expect.stringContaining(`
   '/login'))
     expect(mockInfoFnForToast).not.toHaveBeenCalled()})})
-=======
-=======
   'Please log in to add items to your cart.');'
     expect(mockDispatch).not.toHaveBeenCalled()
     expect(mockSuccessFnForToast).not.toHaveBeenCalled()})
@@ -512,21 +466,13 @@ jest.mock(
         price: product.price
         quantity: 1}})
     expect(mockSuccessFnForToast).toHaveBeenCalledTimes(1)
->>>>>>> main
     expect(mockSuccessFnForToast).toHaveBeenCalledWith(
       `1× ${product.name} added`)
     expect(mockNavigate).not.toHaveBeenCalledWith(
       expect.stringContaining(
-<<<<<<< HEAD
   '/login'))';
     expect(mockInfoFnForToast).not.toHaveBeenCalled()})})
-=======
-<<<<<<< HEAD
   /login'))
     expect(mockInfoFnForToast).not.toHaveBeenCalled()})});
-=======
   '/login');'
     expect(mockInfoFnForToast).not.toHaveBeenCalled()})})
->>>>>>> main
->>>>>>> main
->>>>>>> main

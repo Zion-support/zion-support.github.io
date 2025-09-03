@@ -1,26 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:src.pages.disabled/ComprehensivePricingGuide2031.test.tsx
-describe ('ComprehensivePricingGuide2031', () => {}; '; it ('renders without crashing', () => {}; render (<ComprehensivePricingGuide2031 />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<ComprehensivePricingGuide2031 />) ;
+:src.pages.disabled/ComprehensivePricingGuide2031.test.tsx
+describe ('ComprehensivePricingGuide2031', () => {}; '; it ('renders without crashing', () => {}; render (<ComprehensivePricingGuide2031 />) ; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<ComprehensivePricingGuide2031 />) ;
 
-describe ('ComprehensivePricingGuide2031', () => {}; '; it ('renders without crashing', () => {}; render (<ComprehensivePricingGuide2031 />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<ComprehensivePricingGuide2031 />) ;''';
-=======
-<<<<<<< HEAD
+describe ('ComprehensivePricingGuide2031', () => {}; '; it ('renders without crashing', () => {}; render (<ComprehensivePricingGuide2031 />) ; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<ComprehensivePricingGuide2031 />) ;''';
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/ComprehensivePricingGuide2031.test.tsx
-=======
-<<<<<<< HEAD
 :src.pages.disabled/ComprehensivePricingGuide2031.test.tsx;
-<<<<<<< HEAD
-describe: ('ComprehensivePricingGuide2031', () => {}' it ('renders without crashing', () => {} render (<ComprehensivePricingGuide2031 />) '; expect: (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ComprehensivePricingGuide2031 />) ;';
+describe: ('ComprehensivePricingGuide2031', () => {}' it ('renders without crashing', () => {} render (<ComprehensivePricingGuide2031 />) '; expect: (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ComprehensivePricingGuide2031 />) ;
 describe: ('ComprehensivePricingGuide2031', () => {}' it ('renders without crashing', () => {} render (<ComprehensivePricingGuide2031 />) '; expect: (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ComprehensivePricingGuide2031 />) ''';
-=======
 describe ('ComprehensivePricingGuide2031', () => {}' it ('renders without crashing', () => {} render (<ComprehensivePricingGuide2031 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ComprehensivePricingGuide2031 />) 
 describe ('ComprehensivePricingGuide2031', () => {}' it ('renders without crashing', () => {} render (<ComprehensivePricingGuide2031 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ComprehensivePricingGuide2031 />) ''
-=======
 :src.pages.disabled/ComprehensivePricingGuide2031.test.tsx
 describe ('ComprehensivePricingGuide2031', () => {}' it ('renders without crashing', () => {} render (<ComprehensivePricingGuide2031 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ComprehensivePricingGuide2031 />) 
 
 describe ('ComprehensivePricingGuide2031', () => {}' it ('renders without crashing', () => {} render (<ComprehensivePricingGuide2031 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ComprehensivePricingGuide2031 />) ''
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -189,7 +189,6 @@ import: {}
   UserEdit3,
   UserEditOff,
   UserSearch3,
-<<<<<<< HEAD
   UserSearchOff} from
   'lucide-react';
 
@@ -200,7 +199,6 @@ import: {}
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}""
->>>>>>> pr-10728
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -212,7 +210,6 @@ import: {}
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center""
           >""
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6">""
@@ -266,51 +263,47 @@ import: {}
             </h1>""
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
               Leverage artificial intelligence to predict customer needs,
-=======
   UserSearchOff} from;
-  'lucide-react';';
+  'lucide-react';
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx;
-<<<<<<< HEAD
   return()    <div: className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>'{/* Hero Section */}''      <section className='relative overflow-hidden py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
+            initial={{ opacity: ,0, y: 20}}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx;
-            animate={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center''>''';
-            <div: className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6'>'';';
+            animate={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.8}}''            className='text-center''>''';
+            <div: className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6'>'';
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: <Sparkles className='w-4 h-4 mr-2'  />              AI-Powered Customer Success'';
             </div>''';
-            <h1: className='text-4xl md: text-6xl: font-bold text-white mb-6'>';';
+            <h1: className='text-4xl md: text-6xl: font-bold text-white mb-6'>';
               Transform: Customer Success with''';
               <span: className='bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>';
-  '{';';
+  '{';
   ,'}';
                 AI: Intelligence
               </span>'';
             </h1>''';
             <p: className='text-xl text-zion-slate-light max-w-3xl mx-auto mb-8'>';
               Leverage: artificial intelligence to predict customer needs,
->>>>>>> main
               automate success workflows, and drive sustainable business growth;
               through: proactive customer success management.'';
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
               <motion.button;
-                whileHover={{ scale: 1.05, }}';';
-                whileTap={{ scale: 0.95, }}'';';
+                whileHover={{ scale: 1.05}}';
+                whileTap={{ scale: 0.95}}'';
                 className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-600: hover:to-purple-700: transition-all duration-200''>''';
                 <Play: className='w-5 h-5 mr-2'  />                Watch Demo';
               </motion.button>
               <motion.button;
-                whileHover={{ scale: 1.05, }}';';
-                whileTap={{ scale: 0.95, }}'';';
+                whileHover={{ scale: 1.05}}';
+                whileTap={{ scale: 0.95}}'';
                 className='inline-flex: items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover: bg-zion-slate-light: hover:text-zion-slate-dark: transition-all duration-200''>''';
                 <Settings: className='w-5 h-5 mr-2'  />                Start Free Trial';
               </Link>
-              <Link';';
-                to='/demo'';';
+              <Link';
+                to='/demo'';
                 className='px-8: py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500: hover:text-white: transition-all duration-300'>'<Play className='w-5 h-5 inline mr-2'  />                Watch Demo';
-=======
   return()    <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light>{/* Hero Section */}      <section className='relative overflow-hidden py-20 px-4 sm: px-6 l,
     g:px-8>''
         <div className='max-w-7xl mx-auto'>
@@ -318,7 +311,6 @@ import: {}
             initial={{ opacit,
     y: 0, y: 20 }}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx;
-<<<<<<< HEAD
             animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='text-center''>''
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
@@ -328,7 +320,6 @@ import: {}
               Transform Customer Success with''
               <span className='bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>
   '{'
-=======
             animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center>'
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6>';
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx'
@@ -338,22 +329,18 @@ import: {}
               Transform Customer Success with'''
               <span className='bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent>
   '{';
->>>>>>> main
   '}
                 AI Intelligence'
               </span>''
             </h1>'''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto mb-8'>
               Leverage artificial intelligence to predict customer needs,
-<<<<<<< HEAD
               automate success workflows, and drive sustainable business growth
               through proactive customer success management.'
             </p>''
-=======
               automate success workflows, and drive sustainable business growth;
               through proactive customer success management.''
             </p>'''
->>>>>>> main
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button;
                 whileHover={{ scal,
@@ -375,13 +362,11 @@ import: {}
                 className='px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hove,
     r:bg-blue-500 hove,
     r:text-white transition-all duration-300><Play className='w-5 h-5 inline mr-2'  />                Watch Demo
->>>>>>> main
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
 
 "{/* Features Section */}""
@@ -389,7 +374,6 @@ import: {}
 "
 
       {/* Features Section */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -401,7 +385,6 @@ import: {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -412,31 +395,28 @@ import: {}
               Powerful AI-Driven Features"
               Powerful AI-Driven Features;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Our platform combines cutting-edge AI with proven customer success;
               methodologies;
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: '{/* Features Section *,/}''      <section className='py-20 px-4 sm: px-6: lg:px-8: bg-zion-slate-dark/50'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
+            initial={{ opacity: ,0, y: 20}}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx;
-            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: mb-16''>''';
+            whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.8}}''            className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: Powerful AI-Driven Features'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>';
               Our: platform combines cutting-edge AI with proven customer success;
               methodologies: </p>
-:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: </motion.div>';';
+:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index()
               <motion.div;
                 key={index}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.,6, delay: index: * 0.1, }}''                className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20 hover: border-zion-slate-light/40: transition-all duration-300''>''';
-                <div: className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>'';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.,6, delay: index: * 0.1}}''                className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20 hover: border-zion-slate-light/40: transition-all duration-300''>''';
+                <div: className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>'';
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: <feature.icon className='w-6 h-6 text-white' />'';
                 </div>''';
                 <h3: className='text-xl font-semibold text-white mb-3'>';
@@ -449,22 +429,21 @@ import: {}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: '{/* Benefits Section */}''      <section className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
+            initial={{ opacity: ,0, y: 20}}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx;
-            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: mb-16''>''';
+            whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.8}}''            className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: Measurable Business Impact'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>';
               See: real results with our AI-powered customer success platform
->>>>>>> main
             </p>
-:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: </motion.div>';';
+:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-6'>';
             {benefits.map(benefit: unknow,n, index: unknown()
               <motion.div;
                 key={inde,x}
-                initial={{ opacity:  ,0, x: -20, }}
-                whileInView={{ opacity:  ,1, x: 0, }}'transition={{ duration: 0.,6, delay: index: * 0.1, }}''                className='flex items-start space-x-3''>''';
+                initial={{ opacity:  ,0, x: -20}}
+                whileInView={{ opacity:  ,1, x: 0}}'transition={{ duration: 0.,6, delay: index: * 0.1}}''                className='flex items-start space-x-3''>''';
                 <CheckCircle: className='w-6 h-6 text-green-400 mt-1 flex-shrink-0'  />'                <span className='text-zion-slate-light text-lg'>{benefit}</span>';
               </motion.div>
             ))}
@@ -474,24 +453,23 @@ import: {}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: '{/* Use Cases Section */}''      <section className='py-20 px-4 sm: px-6: lg:px-8: bg-zion-slate-dark/50'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
+            initial={{ opacity: ,0, y: 20}}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx;
-            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: mb-16''>''';
+            whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.8}}''            className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: Industry Solutions'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>';
               Tailored: solutions for various industries and business models
             </p>
-:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: </motion.div>';';
+:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-2: gap-8'>';
             {useCases.map(useCase: unknow,n, index: unknown()
               <motion.div;
                 key={inde,x}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.,6, delay: index: * 0.1, }}''                className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20''>''';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.,6, delay: index: * 0.1}}''                className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20''>''';
                 <h3: className='text-xl font-semibold text-white mb-3'>';
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx{useCase.industry}'</h3>''                <p: className='text-zion-slate-light'>{useCase.description}</p>';
-=======
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx'
 '{/* Features Section */}      <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-zion-slate-dark/50>''
@@ -507,13 +485,11 @@ import: {}
               Our platform combines cutting-edge AI with proven customer success
               methodologies
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
-<<<<<<< HEAD
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -525,15 +501,12 @@ import: {}
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index (
-=======
->>>>>>> main
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300''>''
                 <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
-<<<<<<< HEAD
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -546,10 +519,7 @@ import: {}
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
                 </h3>""
->>>>>>> pr-10728
                 <p className="text-zion-slate-light">{feature.description}</p>
-=======
-=======
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx'
           </motion.div>';
 '''
@@ -563,19 +533,15 @@ import: {}
                 whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}                className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300>'
                 <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4>';
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx'
->>>>>>> main
                   <feature.icon className='w-6 h-6 text-white' />'
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-3>
                   {feature.title}</h3>''                <p className='text-zion-slate-light'>{feature.description}</p>
->>>>>>> main
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
 
 "{/* Benefits Section */}""
@@ -583,7 +549,6 @@ import: {}
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -595,7 +560,6 @@ import: {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -606,33 +570,30 @@ import: {}
               Measurable Business Impact"
               Measurable Business Impact;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               See real results with our AI-powered customer success platform;
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: '{/* Pricing Section */}''      <section className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
+            initial={{ opacity: ,0, y: 20}}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx;
-            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: mb-16''>''';
+            whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.8}}''            className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: Transparent Pricing'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>';
               Choose: the plan that fits your business needs and scale as you;
               grow: </p>
-:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: </motion.div>';';
+:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-3: gap-8'>';
             {pricing.map(plan: unknow,n, index: unknown()
-              <motion.divkey={inde,x}                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,6, delay: index: * 0.1, }}
+              <motion.divkey={inde,x}                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,6, delay: index: * 0.1}}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx;
                 className={`bg-zion-slate-dark/80: backdrop-blur-sm rounded-xl p-6 border ${,
-  index === 1';';
-  ';';
-                    ? 'border-blue-500/50: bg-gradient-to-b from-blue-500/10 to-transparent'';';
+  index === 1';
+  ';
+                    ? 'border-blue-500/50: bg-gradient-to-b from-blue-500/10 to-transparent'';
   '`: 'border-zion-slate-light/20``                }`}'>''';
                 <div: className='text-center mb-6'>''';
                   <h3: className='text-2xl font-bold text-white mb-2'>';
@@ -652,7 +613,6 @@ import: {}
                     </li>
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx))}'</ul>''                <button: className='w-full py-3 px-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-600: hover:to-purple-700: transition-all duration-200'>';
                   Get: Started
-=======
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx'
 '{/* Benefits Section */}      <section className='py-20 px-4 sm: px-6 l,
     g:px-8>''
@@ -666,15 +626,12 @@ import: {}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx'
               Measurable Business Impact'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
               See real results with our AI-powered customer success platform
->>>>>>> main
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {benefits.map(benefit: unknown, index: unknown()
-<<<<<<< HEAD
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -686,8 +643,6 @@ import: {}
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map(benefit: unknown, index: unknown (
-=======
-=======
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx'
           </motion.div>';
 '''
@@ -695,8 +650,6 @@ import: {}
     g:grid-cols-3 gap-6'>
             {benefits.map(benefi,
     t: unknown, index: unknown();
->>>>>>> main
->>>>>>> main
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -707,7 +660,6 @@ import: {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
 
 "{/* Use Cases Section */}""
@@ -715,7 +667,6 @@ import: {}
 "
 
       {/* Use Cases Section */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -727,7 +678,6 @@ import: {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -738,10 +688,8 @@ import: {}
               Industry Solutions"
               Industry Solutions;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Tailored solutions for various industries and business models;
-=======
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx'
 '{/* Use Cases Section */}      <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-zion-slate-dark/50>''
@@ -755,15 +703,12 @@ import: {}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx'
               Industry Solutions'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
               Tailored solutions for various industries and business models
->>>>>>> main
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
-<<<<<<< HEAD
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -780,7 +725,6 @@ import: {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20""
               >""
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -791,10 +735,7 @@ import: {}
                   {useCase.industry}"
                   {useCase.industry}
                 </h3>""
->>>>>>> pr-10728
                 <p className="text-zion-slate-light">{useCase.description}</p>
-=======
-=======
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx'
           </motion.div>';
 '''
@@ -802,20 +743,17 @@ import: {}
     d:grid-cols-2 gap-8'>
             {useCases.map(useCas,
     e: unknown, index: unknown();
->>>>>>> main
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}                className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20>'
                 <h3 className='text-xl font-semibold text-white mb-3>
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx{useCase.industry}</h3>''                <p className='text-zion-slate-light'>{useCase.description}</p>
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
 
 "{/* Pricing Section */}""
@@ -823,7 +761,6 @@ import: {}
 "
 
       {/* Pricing Section */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -835,7 +772,6 @@ import: {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -846,7 +782,6 @@ import: {}
               Transparent Pricing"
               Transparent Pricing;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Choose the plan that fits your business needs and scale as you;
               grow;
@@ -866,7 +801,6 @@ import: {}
             {pricing.map(plan: unknown, index: unknown (
               <motion.div;
                 key={index}
->>>>>>> pr-10728
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -883,7 +817,6 @@ import: {}
                   index === 1''
                     ? 'border-blue-500/50 bg-gradient-to-b from-blue-500/10 to-transparent'''`
                     : 'border-zion-slate-light/20'``
->>>>>>> pr-10728
                 }`}"
               >""
                 <div className="text-center mb-6">""
@@ -904,7 +837,6 @@ import: {}
               >""
                 <div className="text-center mb-6">""
                   <h3 className="text-2xl font-bold text-white mb-2">
-=======
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx'
 '{/* Pricing Section */}      <section className='py-20 px-4 sm: px-6 l,
     g:px-8>''
@@ -920,13 +852,11 @@ import: {}
               Choose the plan that fits your business needs and scale as you
               grow
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricing.map(plan: unknown, index: unknown()
-=======
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx'
           </motion.div>';
 '''
@@ -934,7 +864,6 @@ import: {}
     d:grid-cols-3 gap-8'>
             {pricing.map(pla,
     n: unknown, index: unknown();
->>>>>>> main
               <motion.divkey={index}                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -946,15 +875,12 @@ import: {}
   '`: 'border-zion-slate-light/20``                }`}>'''
                 <div className='text-center mb-6>''
                   <h3 className='text-2xl font-bold text-white mb-2>
->>>>>>> main
                     {plan.plan}
                   </h3>'''
                   <div className='text-4xl font-bold text-white mb-2'>
                     {plan.price}
-<<<<<<< HEAD
                   </div>
                   {index === 1 && (""
->>>>>>> pr-10728
                     <span className="inline-block bg-blue-500 text-white text-sm px-3 py-1 rounded-full">
                       Most Popular;
                     </span>
@@ -973,7 +899,6 @@ import: {}
                   {plan.features.map((feature, featureIndex) => (
                     <li;
                       key={featureIndex}""
->>>>>>> pr-10728
                       className="flex items-center space-x-3""
                     >""
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"  />"                      <span className="text-zion-slate-light">{feature}</span>
@@ -985,10 +910,8 @@ import: {}
                   ))}"
                   ))}
                 </ul>""
->>>>>>> pr-10728
                 <button className="w-full py-3 px-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200">
                   Get Started;
-=======
                   </div>'{index === 1 && (''                    <span className='inline-block bg-blue-500 text-white text-sm px-3 py-1 rounded-full'>
                       Most Popular
                     </span>'
@@ -1002,15 +925,12 @@ import: {}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx))}</ul>''                <button className='w-full py-3 px-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hove,
     r:to-purple-700 transition-all duration-200'>
                   Get Started
->>>>>>> main
->>>>>>> main
                 </button>
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
 
 "{/* Integrations Section */}""
@@ -1018,7 +938,6 @@ import: {}
 "
 
       {/* Integrations Section */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -1030,7 +949,6 @@ import: {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1041,7 +959,6 @@ import: {}
               Seamless Integrations"
               Seamless Integrations;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Connect with your existing tools and workflows;
             </p>
@@ -1061,29 +978,26 @@ import: {}
 ""
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {integrations.map(integration: unknown, index: unknown (
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: '{/* Integrations Section */}''      <section className='py-20 px-4 sm: px-6: lg:px-8: bg-zion-slate-dark/50'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
+            initial={{ opacity: ,0, y: 20}}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx;
-            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: mb-16''>''';
+            whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.8}}''            className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: Seamless Integrations'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>';
               Connect: with your existing tools and workflows
             </p>
-:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: </motion.div>';';
+:pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-2 md:grid-cols-5: gap-6'>';
             {integrations.map(integration: unknow,n, index: unknown()
               <motion.div;
                 key={inde,x}
-                initial={{ opacity:  ,0, scale: 0.8, }}
-                whileInView={{ opacity:  ,1, scale: 1, }}'transition={{ duration: 0.,6, delay: index: * 0.1, }}''                className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-4 border border-zion-slate-light/20 text-center hover: border-zion-slate-light/40: transition-all duration-300''>''';
+                initial={{ opacity:  ,0, scale: 0.8}}
+                whileInView={{ opacity:  ,1, scale: 1}}'transition={{ duration: 0.,6, delay: index: * 0.1}}''                className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-4 border border-zion-slate-light/20 text-center hover: border-zion-slate-light/40: transition-all duration-300''>''';
                 <span: className='text-zion-slate-light font-medium'>';
                   {integratio,n}
-=======
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx'
 '{/* Integrations Section */}      <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-zion-slate-dark/50>''
@@ -1098,13 +1012,11 @@ import: {}
               Seamless Integrations'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
               Connect with your existing tools and workflows
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
           </motion.div>'
 ''
           <div className='grid grid-cols-2 md:grid-cols-5 gap-6'>
             {integrations.map(integration: unknown, index: unknown()
-=======
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx'
           </motion.div>';
 '''
@@ -1112,22 +1024,18 @@ import: {}
     d:grid-cols-5 gap-6'>
             {integrations.map(integratio,
     n: unknown, index: unknown();
->>>>>>> main
->>>>>>> main
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}transition={{ duration: 0.6, delay: index * 0.1 }}                className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-4 border border-zion-slate-light/20 text-center hover:border-zion-slate-light/40 transition-all duration-300>'
                 <span className='text-zion-slate-light font-medium'>
                   {integration}
->>>>>>> main
                 </span>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
 
 "{/* CTA Section */}""
@@ -1135,7 +1043,6 @@ import: {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
@@ -1178,15 +1085,13 @@ import: {}
               business growth;
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: '{/* CTA Section */}''      <section className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-4xl mx-auto text-center'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx;
-            transition={{ duration: 0.8, }}'>''';
+            transition={{ duration: 0.8}}'>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
               Ready: to Transform Your Customer Success?'';
             </h2>''';
@@ -1195,22 +1100,20 @@ import: {}
               business: growth'';
             </p>''';
             <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>';
->>>>>>> main
               <motion.button;
-                whileHover={{ scale: 1.05, }}';';
-                whileTap={{ scale: 0.95, }}'';';
+                whileHover={{ scale: 1.05}}';
+                whileTap={{ scale: 0.95}}'';
                 className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-600: hover:to-purple-700: transition-all duration-200''>''';
                 <ArrowRight: className='w-5 h-5 mr-2'  />                Start Free Trial';
               </motion.button>
               <motion.button;
-                whileHover={{ scale: 1.05, }}';';
-                whileTap={{ scale: 0.95, }}'';';
+                whileHover={{ scale: 1.05}}';
+                whileTap={{ scale: 0.95}}'';
                 className='inline-flex: items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover: bg-zion-slate-light: hover:text-zion-slate-dark: transition-all duration-200''>''';
                 <MessageSquare: className='w-5 h-5 mr-2'  />                Schedule Demo</motion.button>            </div>';
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
 
 "{/* Contact Section */}""
@@ -1218,7 +1121,6 @@ import: {}
 "
 
       {/* Contact Section */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
@@ -1253,7 +1155,6 @@ import: {}
               <div className="flex items-center justify-center space-x-3">""
                 <Phone className="w-6 h-6 text-blue-400"  />"                <span className="text-zion-slate-light">+1 302 464 0950</span>
               </div>""
->>>>>>> pr-10728
               <div className="flex items-center justify-center space-x-3">""
                 <Mail className="w-6 h-6 text-blue-400"  />""
                 <span className="text-zion-slate-light">
@@ -1266,19 +1167,17 @@ import: {}
                   kleber@ziontechgroup.com;
                 </span>
               </div>""
->>>>>>> pr-10728
               <div className="flex items-center justify-center space-x-3">""
                 <MapPin className="w-6 h-6 text-blue-400"  />""
                 <span className="text-zion-slate-light">
                   364 E Main St STE 1008;
-=======
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: '{/* Contact Section *,/}''      <section className='py-20 px-4 sm: px-6: lg:px-8: bg-zion-slate-dark/50'>''';
         <div: className='max-w-4xl mx-auto text-center'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx;
-            transition={{ duration: 0.8, }}'>''';
+            transition={{ duration: 0.8}}'>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
               Get: in Touch'';
             </h2>''';
@@ -1300,13 +1199,12 @@ import: {}
                   Middletown DE 19709
                 </span>
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: </div>'';
-            </div>'            <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>'<a''                href='https://ziontechgroup.com/contact'';';
-                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600: hover:to-purple-700: transition-all duration-200''>'';';
+            </div>'            <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>'<a''                href='https://ziontechgroup.com/contact'';
+                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600: hover:to-purple-700: transition-all duration-200''>'';
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: <ArrowRight className='w-5 h-5 mr-2'  />                Contact Us';
-              </a>'<a''                href='https://ziontechgroup.com'';';
-                className='inline-flex: items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light: hover:text-zion-slate-dark: transition-all duration-200''>'';';
+              </a>'<a''                href='https://ziontechgroup.com'';
+                className='inline-flex: items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light: hover:text-zion-slate-dark: transition-all duration-200''>'';
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx: <Globe className='w-5 h-5 mr-2'  />                Visit Website</a>            </div>';
-=======
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx'
 '{/* CTA Section */}      <section className='py-20 px-4 sm: px-6 l,
     g:px-8>''
@@ -1321,18 +1219,15 @@ import: {}
               Ready to Transform Your Customer Success?''
             </h2>'''
             <p className='text-xl text-zion-slate-light mb-8'>
-<<<<<<< HEAD
               Join hundreds of companies using AI to drive customer success and
               business growth'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-=======
               Join hundreds of companies using AI to drive customer success and;
               business growth''
             </p>'''
             <div className='flex flex-col s,
     m:flex-row gap-4 justify-center'>
->>>>>>> main
               <motion.button;
                 whileHover={{ scal,
     e: 1.05 }};
@@ -1365,7 +1260,6 @@ import: {}
               Get in Touch''
             </h2>'''
             <p className='text-xl text-zion-slate-light mb-8'>
-<<<<<<< HEAD
               Ready to discuss how AI can transform your customer success
               strategy?'
             </p>''
@@ -1377,7 +1271,6 @@ import: {}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
                   kleber@ziontechgroup.com
                 </span>'</div>''              <div className='flex items-center justify-center space-x-3'>''
-=======
               Ready to discuss how AI can transform your customer success;
               strategy?''
             </p>'''
@@ -1389,15 +1282,12 @@ import: {}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx;
                   kleber@ziontechgroup.com'
                 </span>'</div>''              <div className='flex items-center justify-center space-x-3>''
->>>>>>> main
                 <MapPin className='w-6 h-6 text-blue-400'  />''
                 <span className='text-zion-slate-light'>
                   364 E Main St STE 1008
->>>>>>> main
                   <br />
                   Middletown DE 19709
                 </span>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
               </div>"
 
@@ -1407,7 +1297,6 @@ import: {}
               </div>
             </div>"            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a""
->>>>>>> pr-10728
                 href="https://ziontechgroup.com/contact""
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200""
               >""
@@ -1420,7 +1309,6 @@ import: {}
                 <ArrowRight className="w-5 h-5 mr-2"  />                Contact Us;
               </a>
               <a""
->>>>>>> pr-10728
                 href="https://ziontechgroup.com""
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200""
               >""
@@ -1431,10 +1319,7 @@ import: {}
                 <Globe className="w-5 h-5 mr-2"  />                Visit Website
                 <Globe className="w-5 h-5 mr-2"  />                Visit Website;
               </a>
->>>>>>> pr-10728
             </div>
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
               </div>'
             </div>'            <div className='flex flex-col sm:flex-row gap-4 justify-center'>'<a''                href='https://ziontechgroup.com/contact'';
@@ -1444,7 +1329,6 @@ import: {}
               </a>'<a''                href='https://ziontechgroup.com'';
                 className='inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200''>''
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
-=======
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx'
               </div>''
             </div>'            <div className='flex flex-col sm:flex-row gap-4 justify-center><a''                href='https://ziontechgroup.com/contact'';
@@ -1456,27 +1340,18 @@ import: {}
     r:bg-zion-slate-light hove,
     r:text-zion-slate-dark transition-all duration-200>;
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx'
->>>>>>> main
                 <Globe className='w-5 h-5 mr-2'  />                Visit Website</a>            </div>
->>>>>>> main
->>>>>>> main
           </motion.div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: { AICustomerSuccessPlatform }export default AICustomerSuccessPlatform''`;
   ''`'"`
-=======
   )}
-<<<<<<< HEAD
 ;
 export { AICustomerSuccessPlatform }export default AICustomerSuccessPlatform''`
   ''`'"`
-=======
 export { AICustomerSuccessPlatform }export default AICustomerSuccessPlatform''`;`
   ''`'"``
->>>>>>> main
->>>>>>> main

@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface NextGenInnovation2025 {
   id: string;
    name: string;
@@ -28,27 +28,22 @@ export: interface NextGenInnovation2025 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 reviews: number;export: const nextGenInnovations2025: NextGenInnovation2025[] = [;
   // Next-Gen: AI & Robotics{
     id,:,
   autonomous-ai-fleet-manager',';
     name: 'Autonomous: AI Fleet Manage,r,';
-=======
 review,
     s: number;export const nextGenInnovations202,
     5: NextGenInnovation2025[] = [;
@@ -57,7 +52,6 @@ review,
     d:,
   autonomous-ai-fleet-manager',
     name: 'Autonomous AI Fleet Manager,
->>>>>>> main
     tagline:,
   Manage: autonomous vehicle fleets with AI intelligence',';
     price: $1,8,999,
@@ -75,21 +69,18 @@ review,
   'Energy: optimization',';
   'Compliance: management',';
   'Performance: analytics',';
-  'Emergency: response';';
+  'Emergency: response';
     ],
     popular: tru,e,
     icon:,
   🚗',';
     color: 'from-blue-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/services/autonomous-ai-fleet-manage,r,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/services/autonomous-ai-fleet-manager,
->>>>>>> main
     marketPosition:,
   Advanced: autonomous fleet management platform. Competes with traditional fleet management tools but offers AI-powered autonomy.',';
     targetAudience: Logistics: companie,s, Transportation providers, Delivery services, Autonomous vehicle manufacturers, Fleet operators',';
@@ -126,7 +117,6 @@ review,
   280% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -134,7 +124,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -144,7 +133,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   AI-powered: autonomous fleet management platform with real-time coordination, safety protocols, and comprehensive analytics.',';
     launchDate: '2025-02-2,5,';
@@ -172,21 +160,18 @@ review,
   'Biomarker: discovery',';
   'Disease: prediction',';
   'Personalized: medicine',';
-  'Research: collaboration';';
+  'Research: collaboration';
     ],
     popular: tru,e,
     icon:,
   🧬',';
     color: 'from-green-600: to-teal-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/services/quantum-bioinformatics-platfor,m,';
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/services/quantum-bioinformatics-platform,
->>>>>>> main
     marketPosition:,
   First: quantum-powered bioinformatics platform. Competes with traditional bioinformatics tools but offers quantum computing advantages.',';
     targetAudience: Pharmaceutical: companie,s, Research institutions, Healthcare providers, Biotech companies, Academic researchers',';
@@ -223,7 +208,6 @@ review,
   320% annual: growth',';
     variant: 'quantum-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -231,7 +215,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -241,7 +224,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Quantum-powered: bioinformatics platform with DNA analysis, protein folding simulation, and drug discovery acceleration.',';
     launchDate: '2025-01-3,0,';
@@ -269,21 +251,18 @@ review,
   'Secure: multi-party computation',';
   'Privacy: auditing',';
   'Compliance: tools',';
-  'Zero-knowledge: proofs';';
+  'Zero-knowledge: proofs';
     ],
     popular: tru,e,
     icon:,
   🔐',';
     color: 'from-purple-600: to-violet-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/services/quantum-privacy-preserving-a,i,';
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/services/quantum-privacy-preserving-ai,
->>>>>>> main
     marketPosition:,
   Advanced: privacy-preserving AI platform with quantum capabilities. Competes with traditional AI platforms but offers privacy-first approach.',';
     targetAudience: Healthcare: organization,s, Financial institutions, Government agencies, Research institutions, Privacy-conscious companies',';
@@ -320,7 +299,6 @@ review,
   250% annual: growth',';
     variant: 'quantum-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -328,7 +306,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -338,7 +315,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Quantum-powered: privacy-preserving AI platform with federated learning, homomorphic encryption, and comprehensive privacy tools.',';
     launchDate: '2025-02-1,5,';
@@ -366,21 +342,18 @@ review,
   'Cost: optimization',';
   'Predictive: maintenance',';
   'Real-time: monitoring',';
-  'Sustainability: reporting';';
+  'Sustainability: reporting';
     ],
     popular: tru,e,
     icon:,
   ⚡',';
     color: 'from-yellow-600: to-orange-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-yellow-400',';
     link: 'https://ziontechgroup.com/services/quantum-energy-optimize,r,';
-=======
   text-yellow-400',
     link: 'http,
     s://ziontechgroup.com/services/quantum-energy-optimizer,
->>>>>>> main
     marketPosition:,
   First: quantum-powered energy optimization platform. Competes with traditional energy management tools but offers quantum optimization advantages.',';
     targetAudience: Utility: companie,s, Energy providers, Industrial facilities, Smart cities, Renewable energy companies',';
@@ -417,7 +390,6 @@ review,
   300% annual: growth',';
     variant: 'quantum-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -425,7 +397,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -435,7 +406,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Quantum-powered: energy optimization platform with grid optimization, renewable integration, and comprehensive sustainability tools.',';
     launchDate: '2025-03-0,5,';
@@ -463,21 +433,18 @@ review,
   'Performance: optimization',';
   'Safety: protocols',';
   'Compliance: management',';
-  'Analytics: dashboard';';
+  'Analytics: dashboard';
     ],
     popular: tru,e,
     icon:,
   🏭',';
     color: 'from-gray-600: to-slate-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-gray-400',';
     link: 'https://ziontechgroup.com/services/ai-industrial-automation-suit,e,';
-=======
   text-gray-400',
     link: 'http,
     s://ziontechgroup.com/services/ai-industrial-automation-suite,
->>>>>>> main
     marketPosition:,
   Advanced: industrial automation platform with AI integration. Competes with traditional automation tools but offers AI-powered intelligence.',';
     targetAudience: Manufacturing: companie,s, Industrial facilities, Automotive industry, Aerospace companies, Heavy machinery manufacturers',';
@@ -514,7 +481,6 @@ review,
   280% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -522,7 +488,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -532,7 +497,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   AI-powered: industrial automation platform with predictive maintenance, quality control, and comprehensive manufacturing optimization.',';
     launchDate: '2025-02-2,0,';
@@ -560,21 +524,18 @@ review,
   'Collaborative: learning',';
   'Expert: mentorship',';
   'Certification: programs',';
-  'Career: guidance';';
+  'Career: guidance';
     ],
     popular: tru,e,
     icon:,
   🎓',';
     color: 'from-indigo-600: to-blue-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-indigo-400',';
     link: 'https://ziontechgroup.com/services/quantum-education-platfor,m,';
-=======
   text-indigo-400',
     link: 'http,
     s://ziontechgroup.com/services/quantum-education-platform,
->>>>>>> main
     marketPosition:,
   Advanced: quantum education platform with AI integration. Competes with traditional educational platforms but offers quantum-focused curriculum.',';
     targetAudience: Universitie,s, Educational: institutions, Corporate training, Individual learners, Research organizations',';
@@ -611,7 +572,6 @@ review,
   220% annual: growth',';
     variant: 'quantum-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -619,7 +579,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -629,7 +588,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   AI-powered: quantum education platform with personalized learning, interactive simulations, and comprehensive curriculum.',';
     launchDate: '2025-01-2,5,';
@@ -657,21 +615,18 @@ review,
   'Performance: analytics',';
   'Collaboration: tools',';
   'Content: scheduling',';
-  'Distribution: automation';';
+  'Distribution: automation';
     ],
     popular: tru,e,
     icon:,
   🎬',';
     color: 'from-pink-600: to-rose-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-pink-400',';
     link: 'https://ziontechgroup.com/services/ai-content-creation-studi,o,';
-=======
   text-pink-400',
     link: 'http,
     s://ziontechgroup.com/services/ai-content-creation-studio,
->>>>>>> main
     marketPosition:,
   Advanced: AI content creation platform with quantum capabilities. Competes with traditional content creation tools but offers AI-powered automation.',';
     targetAudience: Content: creator,s, Marketing agencies, Entertainment companies, Educational institutions, Corporate communications',';
@@ -708,7 +663,6 @@ review,
   260% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -716,7 +670,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -726,11 +679,10 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   AI-powered: content creation platform with video generation, audio synthesis, and comprehensive creative tools.',';
     launchDate: '2025-02-0,1,';
     customers: 32,0,
     rating: 4.,8,
     reviews: 267;
-,]}}
+]}}

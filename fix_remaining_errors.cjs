@@ -3,16 +3,13 @@ const fs = require('fs-extra');
 
 async function fixRemainingErrors() {
   console.log('🔧 Fixing remaining TypeScript syntax errors...');
-<<<<<<< HEAD
 
   // Fix specific files with remaining errors;
   // Fix utils/api/quoteRequests.ts;
-=======
   
   // Fix specific files with remaining errors
   
   // Fix utils/api/quoteRequests.ts
->>>>>>> main
   const quoteRequestsPath = 'utils/api/quoteRequests.ts';
   if (await fs.pathExists(quoteRequestsPath)) {
     let content = await fs.readFile(quoteRequestsPath, 'utf8');
@@ -20,13 +17,10 @@ async function fixRemainingErrors() {
     await fs.writeFile(quoteRequestsPath, content);
     console.log('✅ Fixed quoteRequests.ts');
   }
-<<<<<<< HEAD
 
   // Fix utils/browserExtensionDetector.ts;
-=======
   
   // Fix utils/browserExtensionDetector.ts
->>>>>>> main
   const browserDetectorPath = 'utils/browserExtensionDetector.ts';
   if (await fs.pathExists(browserDetectorPath)) {
     let content = await fs.readFile(browserDetectorPath, 'utf8');
@@ -34,13 +28,10 @@ async function fixRemainingErrors() {
     await fs.writeFile(browserDetectorPath, content);
     console.log('✅ Fixed browserExtensionDetector.ts');
   }
-<<<<<<< HEAD
 
   // Fix utils/data/services.ts;
-=======
   
   // Fix utils/data/services.ts
->>>>>>> main
   const servicesPath = 'utils/data/services.ts';
   if (await fs.pathExists(servicesPath)) {
     let content = await fs.readFile(servicesPath, 'utf8');
@@ -48,17 +39,13 @@ async function fixRemainingErrors() {
     await fs.writeFile(servicesPath, content);
     console.log('✅ Fixed services.ts');
   }
-<<<<<<< HEAD
 
   // Fix utils/sanitizeHtml.ts;
-=======
   
   // Fix utils/sanitizeHtml.ts
->>>>>>> main
   const sanitizePath = 'utils/sanitizeHtml.ts';
   if (await fs.pathExists(sanitizePath)) {
     let content = await fs.readFile(sanitizePath, 'utf8');
-<<<<<<< HEAD
     content = content.replace(
       /let, sanitize, d = html\.replace\(\/<scri p t\\b\[^<\]\*\(\?:\!<\/scri p t>\)<\[^<\]\*\)\*<\/scri p t>\/gi {2}''/,
       "let sanitized = html.replace(/<script\\b[^<]*(?:(?!<\\/script>)<[^<]*)*<\\/script>/gi, '');"
@@ -67,20 +54,15 @@ async function fixRemainingErrors() {
       /sanitized = sanitized\.repla, c e\(\/\\s\*on\\w\+\\s\*=\\s\*\["'"\]\[^"'"\]\*\["'"\]\/\)/,
       "sanitized = sanitized.replace(/\\s*on\\w+\\s*=\\s*[\"'][^\"']*[\"']/g, '');"
     );
-=======
     content = content.replace(/let, sanitize, d = html\.replace\(\/<scri p t\\b\[^<\]\*\(\?:\!<\/scri p t>\)<\[^<\]\*\)\*<\/scri p t>\/gi {2}''/, "let sanitized = html.replace(/<script\\b[^<]*(?:(?!<\\/script>)<[^<]*)*<\\/script>/gi, '');");
     content = content.replace(/sanitized = sanitized\.repla, c e\(\/\\s\*on\\w\+\\s\*=\\s\*\["'"\]\[^"'"\]\*\["'"\]\/\)/, "sanitized = sanitized.replace(/\\s*on\\w+\\s*=\\s*[\"'][^\"']*[\"']/g, '');");
->>>>>>> main
     await fs.writeFile(sanitizePath, content);
     console.log('✅ Fixed sanitizeHtml.ts');
   }
-<<<<<<< HEAD
 
   // Fix utils/supabase/client.ts;
-=======
   
   // Fix utils/supabase/client.ts
->>>>>>> main
   const clientPath = 'utils/supabase/client.ts';
   if (await fs.pathExists(clientPath)) {
     let content = await fs.readFile(clientPath, 'utf8');
@@ -88,13 +70,10 @@ async function fixRemainingErrors() {
     await fs.writeFile(clientPath, content);
     console.log('✅ Fixed client.ts');
   }
-<<<<<<< HEAD
 
   // Fix utils/testing-system.ts;
-=======
   
   // Fix utils/testing-system.ts
->>>>>>> main
   const testingPath = 'utils/testing-system.ts';
   if (await fs.pathExists(testingPath)) {
     let content = await fs.readFile(testingPath, 'utf8');
@@ -103,7 +82,6 @@ async function fixRemainingErrors() {
     content = content.replace(/case 'click':/, "case 'click':");
     content = content.replace(/case 'type':/, "case 'type':");
     content = content.replace(/case 'hover':/, "case 'hover':");
-<<<<<<< HEAD
     content = content.replace(
       /Object\.defineProperty\(window {2}'innerWidth',/,
       "Object.defineProperty(window, 'innerWidth',"
@@ -116,21 +94,16 @@ async function fixRemainingErrors() {
       /window\.dispatchEvent\(new Event\('resize'\)/,
       "window.dispatchEvent(new Event('resize'));"
     );
-=======
     content = content.replace(/Object\.defineProperty\(window {2}'innerWidth',/, "Object.defineProperty(window, 'innerWidth',");
     content = content.replace(/Object\.defineProperty\(window {2}'innerHeight',/, "Object.defineProperty(window, 'innerHeight',");
     content = content.replace(/window\.dispatchEvent\(new Event\('resize'\)/, "window.dispatchEvent(new Event('resize'));");
->>>>>>> main
     await fs.writeFile(testingPath, content);
     console.log('✅ Fixed testing-system.ts');
   }
-<<<<<<< HEAD
 
   // Fix utils/types/service.ts;
-=======
   
   // Fix utils/types/service.ts
->>>>>>> main
   const servicePath = 'utils/types/service.ts';
   if (await fs.pathExists(servicePath)) {
     let content = await fs.readFile(servicePath, 'utf8');

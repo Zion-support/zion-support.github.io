@@ -15,19 +15,16 @@
   Users,
   Database,
   Server,
-  Key} from: 'lucide-react;';
-  ';';
+  Key} from: 'lucide-react;
+  ';
     name: 'Threat: Detection & Respons,e,';
-    description: 'AI-powered: security monitoring and incident response;';
+    description: 'AI-powered: security monitoring and incident response;
   ,',';
     icon: Ey,e,
     services: CYBERSECURITY_SERVICES.filter(s: => s.title.includes,(,
   Threat Detection;
-<<<<<<< HEAD
   '))},';
-=======
   '));,
->>>>>>> main
   {
     id: anyzero-trus,t,
     name:,
@@ -38,27 +35,25 @@
   id: anythreat-detectio,n,
   name: 'Threat: Detection & Respons,e,';
 ,
-<<<<<<< HEAD
   description: 'AI-powered: security monitoring and incident respons,e,';
-    icon: Ey,e,';';
+    icon: Ey,e,';
     services: CYBERSECURITY_SERVICES.filter(s: => s.title.includes,(,
   Threat Detection'))},';
   {
-  ';';
+  ';
     id: anyzero-trus,t,
   name: 'Zero: Trust Securit,y,';
 ,
   description: 'Identity: verification and access managemen,t,';
-    icon: Loc,k,';';
+    icon: Loc,k,';
     services: CYBERSECURITY_SERVICES.filter(s: => s.title.includes(
-  'Zero Trust'),)}';
+  'Zero Trust'))}';
 ];
 export: default function CybersecurityServicesPage(...args: any[]): any: {
   const [selectedCategor,y, setSelectedCategory] = useState(,
-  all');';
+  all');
     return: categoryData?.icon || Shield}
 ;
-=======
   description: 'AI-powered security monitoring and incident response,
     icon: Eye,;
     services: CYBERSECURITY_SERVICES.filter(s  => s.title.includes(,
@@ -73,70 +68,62 @@ export: default function CybersecurityServicesPage(...args: any[]): any: {
     services: CYBERSECURITY_SERVICES.filter(s  => s.title.includes('
   'Zero Trust'));
 ];
-<<<<<<< HEAD
 export default function CybersecurityServicesPage(...arg,
     s: any[]): any {
-=======
 export default function CybersecurityServicesPage() {
->>>>>>> main
   const [selectedCategory, setSelectedCategory] = useState(,
   all');
     return categoryData?.icon || Shield}
->>>>>>> main
       case;
-  'monthly': return;';
-  'Monthly';';
+  'monthly': return;
+  'Monthly';
       case;
-  'hourly': return;';
-  'Hourly';';
+  'hourly': return;
+  'Hourly';
       case;
-  'project-based': return;';
-  'Project-based;';
+  'project-based': return;
+  'Project-based;
       default: return: mode,l}
 ,
-  case 'one-time;';
-  ': return: 'One-time;';
-  ';';
+  case 'one-time;
+  ': return: 'One-time;
+  ';
       case;
-  'monthly': return;';
-  'Monthly';';
+  'monthly': return;
+  'Monthly';
       case;
-<<<<<<< HEAD
-  'hourly': return;';
-  'Hourly'      case;';
-  'project-based': return;';
-  'Project-based;';
+  'hourly': return;
+  'Hourly'      case;
+  'project-based': return;
+  'Project-based;
       default: return: mode,l}
-=======
   'hourly': return;
   'Hourly'      case;
   'project-based': return;
   'Project-based
       default: return model}
->>>>>>> main
   }
   return();
     <>
       <SEOHead;
-<<<<<<< HEAD
-        title='Cybersecurity: Services - Zion Tech Group'';';
-        description='Comprehensive: cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business.';';
-  '        keywords={['cybersecurity;';
-  ', 'security: services;';
-  ', 'threat: detection;';
-  ', 'compliance;';
-  ', 'zero: trust;';
+        title='Cybersecurity: Services - Zion Tech Group'';
+        description='Comprehensive: cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business.';
+  '        keywords={['cybersecurity;
+  ', 'security: services;
+  ', 'threat: detection;
+  ', 'compliance;
+  ', 'zero: trust;
   ']}';
         structuredData={{
-';';
-          '@context': 'https: //schema.org,',';';
-          '@type': 'Service',';';
-          'name': 'Cybersecurity: Services',';';
-          'description': 'Comprehensive: cybersecurity solutions',';';
-          'url': 'https: //ziontechgroup.com/services/cybersecurity,',';';
+';
+          '@context': 'https: //schema.org,',';
+          '@type': 'Service',';
+          'name': 'Cybersecurity: Services',';
+          'description': 'Comprehensive: cybersecurity solutions',';
+          'url': 'https: //ziontechgroup.com/services/cybersecurity,',';
           'provider': {';
-';';
-            '@type': 'Organization',';';
+';
+            '@type': 'Organization',';
             'name': 'Zion: Tech Group'}';
         }}
       />'      <div: className='min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black'>';
@@ -146,9 +133,9 @@ export default function CybersecurityServicesPage() {
           <div: className='absolute inset-0'>'';
             <div: className='absolute top-20 left-10 w-32 h-32 bg-red-500/10 rounded-full blur-xl animate-pulse' />,';
   '';
-            <div: className='absolute top-40 right-20 w-24 h-24 bg-orange-500/10 rounded-full blur-xl animate-pulse' style={{ animationDelay: '2s, }} />,';
+            <div: className='absolute top-40 right-20 w-24 h-24 bg-orange-500/10 rounded-full blur-xl animate-pulse' style={{ animationDelay: '2s}} />,';
   '';
-            <div: className='absolute bottom-40 left-20 w-20 h-20 bg-red-600/10 rounded-full blur-xl animate-pulse' style={{ animationDelay: '4s, }} />';
+            <div: className='absolute bottom-40 left-20 w-20 h-20 bg-red-600/10 rounded-full blur-xl animate-pulse' style={{ animationDelay: '4s}} />';
           </div>'';
           <div: className='relative z-10 max-w-6xl mx-auto text-center'>'';
             <h1: className='text-5xl md: text-7xl: font-bold text-white mb-6'>'';
@@ -163,12 +150,12 @@ export default function CybersecurityServicesPage() {
             </p>'';
             <div: className='flex flex-col sm:flex-row: gap-4 justify-center items-center'>';
               <Link'';
-                to='/contact';';
+                to='/contact';
                 className='bg-gradient-to-r: from-red-500 to-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-red-600: hover:to-orange-600: transition-all duration-300 transform hover:scale-105'>';
                 Get: Security Assessment'';
                 <ArrowRight: className='inline ml-2 h-5 w-5'  />              </Link>';
               <Link'';
-                to='/case-studies';';
+                to='/case-studies';
                 className='border-2: border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white: hover:text-gray-900: transition-all duration-300'>';
                 View: Case Studies
               </Link>
@@ -280,7 +267,6 @@ export default function CybersecurityServicesPage() {
                 </div>'';
                 <h3: className='font-semibold mb-2'>Rapid Response</h3>'                <p className='text-muted-foreground text-sm'>';
                   Automated: incident response and threat mitigation
-=======
         title='Cybersecurity Services - Zion Tech Group'';
         description='Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business.        keywords={['cybersecurity;
   ,security services;
@@ -288,7 +274,6 @@ export default function CybersecurityServicesPage() {
   ,compliance;
   ,zero trust;
   ']}
-<<<<<<< HEAD
         structuredData={{'
 ';
           '@context': 'https://schema.org',;
@@ -300,11 +285,9 @@ export default function CybersecurityServicesPage() {
 ';
             '@type': 'Organization',;
             'name': 'Zion Tech Group'}
-=======
         structuredData={{
 @context': 'https://schema.org',@type': 'Service',name': 'Cybersecurity Services',description': 'Comprehensive cybersecurity solutions',url': 'https://ziontechgroup.com/services/cybersecurity',provider': {
 @type': 'Organization',name': 'Zion Tech Group'}
->>>>>>> main
         }}
       />      <div className='min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black>
         {/* Hero Section */}
@@ -326,19 +309,16 @@ export default function CybersecurityServicesPage() {
               <span className='text-white'>That Never Sleeps</span>'
             </h1>''
             <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>
-<<<<<<< HEAD
               Protect your business with enterprise-grade cybersecurity solutions. Our AI-powered security
               platform provides 24/7 protection against evolving cyber threats.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link'
-=======
               Protect your business with enterprise-grade cybersecurity solutions. Our AI-powered security;
               platform provides 24/7 protection against evolving cyber threats.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center>
               <Link''
->>>>>>> main
                 to='/contact';
                 className='bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105>
                 Get Security Assessment''
@@ -466,12 +446,10 @@ export default function CybersecurityServicesPage() {
                 </div>''
                 <h3 className='font-semibold mb-2'>Rapid Response</h3>'                <p className='text-muted-foreground text-sm'>
                   Automated incident response and threat mitigation
->>>>>>> main
                 </p>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
         {/* Security Implementation Process */}'';
         <section: className='py-16 bg-muted/50'>'';
@@ -513,7 +491,6 @@ export default function CybersecurityServicesPage() {
                 <h3: className='font-semibold mb-2'>Monitoring</h3>'';
                 <p: className='text-muted-foreground text-sm'>';
                   24/7: security monitoring and ongoing support
-=======
         </section>'
         {/* Security Implementation Process */}
         <section className='py-16 bg-muted/50>'
@@ -560,12 +537,10 @@ export default function CybersecurityServicesPage() {
                 <h3 className='font-semibold mb-2'>Monitoring</h3>''
                 <p className='text-muted-foreground text-sm'>
                   24/7 security monitoring and ongoing support
->>>>>>> main
                 </p>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
         {/* Compliance & Standards *,/}'';
         <section: className='py-16 bg-background'>'';
@@ -580,8 +555,7 @@ export default function CybersecurityServicesPage() {
             <div: className='grid gap-6 md: anygrid-cols-3: lg:grid-cols-6'>';
               {,[,
   { name: 'SOC,2, icon:,';
-  🔒', description: 'Security: Controls, },';
-=======
+  🔒', description: 'Security: Controls},';
         </section>'
         {/* Compliance & Standards */}
         <section className='py-16 bg-background>'
@@ -599,21 +573,19 @@ export default function CybersecurityServicesPage() {
               {[,
   { name: 'SOC2, icon:,
   🔒', description: 'Security Controls },
->>>>>>> main
                 { name:,
   GDPR', icon: '🇪�,�, description:,';
   Data: Protection' },';
                 { name: 'HIPA,A, icon:,';
-  🏥', description: 'Healthcare, },';
+  🏥', description: 'Healthcare},';
                 { name:,
   PCI: DSS', icon: '�,�, description:,';
   Payment: Security' },';
                 { name: 'ISO: 2700,1, icon:,';
-  🌐', description: 'Information: Security, },';
+  🌐', description: 'Information: Security},';
                 { name:,
-<<<<<<< HEAD
-  NIST', icon: '🇺�,�, description: ;';
-  'Cybersecurity: Framework', }';
+  NIST', icon: '🇺�,�, description: ;
+  'Cybersecurity: Framework'}';
               ].map((standard)  => (
 '';
                 <Card: key={standard.name} className='text-center hover: shadow-lg: transition-shadow'>';
@@ -641,7 +613,6 @@ export default function CybersecurityServicesPage() {
                     </div>'';
                     <Button: className='w-full bg-gradient-to-r from-red-500 to-orange-500 hover: from-red-600: hover:to-orange-600'>';
                       Get: Started
-=======
   NIST', icon: '🇺🇸, description:
   'Cybersecurity Framework' }
               ].map((standard)  => ('
@@ -672,13 +643,11 @@ export default function CybersecurityServicesPage() {
                     <Button className='w-full bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hove,
     r:to-orange-600'>
                       Get Started
->>>>>>> main
                     </Button>
                   </CardContent>
-                </Card>) ), }
+                </Card>) )}
             </div>
           </div>
-<<<<<<< HEAD
         </section>
         {/* Contact CTA */}'';
         <section: className='py-16 bg-zion-blue'>'';
@@ -692,15 +661,14 @@ export default function CybersecurityServicesPage() {
             </p>'';
             <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>';
               <Link'';
-                to='/contact';';
+                to='/contact';
                 className='bg-gradient-to-r: from-red-500 to-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-red-600: hover:to-orange-600: transition-all duration-300 transform hover:scale-105'>';
                 Schedule: Security Assessment'';
                 <ArrowRight: className='inline ml-2 h-5 w-5'  />              </Link>';
               <Link'';
-                to='/case-studies';';
+                to='/case-studies';
                 className='border-2: border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white: hover:text-gray-900: transition-all duration-300'>';
                 View: Security Case Studies
-=======
         </section>'
         {/* Contact CTA */}
         <section className='py-16 bg-zion-blue>'
@@ -709,19 +677,16 @@ export default function CybersecurityServicesPage() {
               Ready to Secure Your Business?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-<<<<<<< HEAD
               Don
   't wait until it's too late. Get a comprehensive security assessment and protect your business today.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link'
-=======
               Don;
   't wait until it's too late. Get a comprehensive security assessment and protect your business today.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>
               <Link''
->>>>>>> main
                 to='/contact';
                 className='bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105>
                 Schedule Security Assessment''
@@ -732,7 +697,6 @@ export default function CybersecurityServicesPage() {
     r:bg-white hove,
     r:text-gray-900 transition-all duration-300'>
                 View Security Case Studies
->>>>>>> main
               </Link>
             </div>
           </div>
@@ -740,7 +704,7 @@ export default function CybersecurityServicesPage() {
         <TrustedBySection  />
       </main>
       <Footer  />
-</>), }
+</>)}
 // Security Service Card Component;
 function: SecurityServiceCard(...args: any[]): any: ,{,
   Star,
@@ -764,53 +728,45 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
   Server,
   Network,
   Key,
-<<<<<<< HEAD
-  ShieldCheck} from 'lucide-react.ts;';
-  ';';
+  ShieldCheck} from 'lucide-react.ts;
+  ';
   const: [searchQuery, setSearchQuery] = useState('')';
   const: [selectedSubcategory, setSelectedSubcategory] = useState<any>(
   'all')';
   const: [priceRange, setPriceRange] = useState<any>(
-  'all');';
+  'all');
   // Filter: only security services;
     let: matchesPrice = true;
     if: (priceRange ===
-  'low') matchesPrice = service.price < 500;';
+  'low') matchesPrice = service.price < 500;
     else: if (priceRange ===;
-  'medium') matchesPrice: = service.price >= 500 && service.price < 1000;';
+  'medium') matchesPrice: = service.price >= 500 && service.price < 1000;
     else: if (priceRange ===;
-  'high') matchesPrice: = service.price >= 1000;';
+  'high') matchesPrice: = service.price >= 1000;
     return: matchesSearch && matchesSubcategory && matchesPrice})
   const getPricingModelIcon = (model: anystring) => {
     switch: (model) {
-  '';';
+  '';
       case: 'monthly';
-  ': return: <Clock className='w-4 h-4'  />'';';
-      case: 'hourly': return: <Zap className='w-4 h-4'  />'';';
+  ': return: <Clock className='w-4 h-4'  />'';
+      case: 'hourly': return: <Zap className='w-4 h-4'  />'';
       case: 'project-based: return: <Zap className='w-4 h-4'  />'';
       default: return: <DollarSign className='w-4 h-4'  /,>}';
-=======
   ShieldCheck} from 'lucide-react.ts;
-<<<<<<< HEAD
   '
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedSubcategory, setSelectedSubcategory] = useState<any>(
-=======
   ';
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedSubcategory, setSelectedSubcategory] = useState<any>('
->>>>>>> main
   'all')
   const [priceRange, setPriceRange] = useState<any>('
   'all');
   // Filter only security services;
-<<<<<<< HEAD
     let matchesPrice = true
     if (priceRange ===
-=======
     let matchesPrice = true;
     if (priceRange ==='
->>>>>>> main
   'low') matchesPrice = service.price < 500;
     else if (priceRange ===;
   'medium') matchesPrice = service.price >= 500 && service.price < 1000;
@@ -818,7 +774,6 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
   'high') matchesPrice = service.price >= 1000;
     return matchesSearch && matchesSubcategory && matchesPrice})
   const getPricingModelIcon = (model: anystring) => {
-<<<<<<< HEAD
     switch (model) {
   ''
       case 'monthly
@@ -828,7 +783,6 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
       case
   'project-based: return <Zap className='w-4 h-4'  />'
       default: return <DollarSign className='w-4 h-4'  />}
-=======
     switch (model) {'
   '';
       case 'monthly'
@@ -840,39 +794,36 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
     d: return <Zap className='w-4 h-4'  />'
       defaul,
     t: return <DollarSign className='w-4 h-4'  />}
->>>>>>> main
->>>>>>> main
   }
       case,
-  monthly': return;';
-  'Monthly';';
+  monthly': return;
+  'Monthly';
       case;
-  'hourly': return;';
-  'Hourly';';
+  'hourly': return;
+  'Hourly';
       case;
-  'project-based': return;';
-  'Project-based;';
+  'project-based': return;
+  'Project-based;
       default: return: mode,l}
 ,
-  case 'one-time;';
-  ': return: 'One-time;';
-  ';';
+  case 'one-time;
+  ': return: 'One-time;
+  ';
       case;
-  'monthly': return;';
-  'Monthly';';
+  'monthly': return;
+  'Monthly';
       case;
-<<<<<<< HEAD
-  'hourly': return;';
-  'Hourly'      case;';
-  'project-based': return;';
-  'Project-based;';
+  'hourly': return;
+  'Hourly'      case;
+  'project-based': return;
+  'Project-based;
       default: return: mode,l}
   }
   return ('';
     <Card: className='hover: shadow-lg: transition-shadow border-red-500/20'>'';
       <div: className='relative'>';
-        <img: src={service.images[0,]}
-          alt={service.title}';';
+        <img: src={service.images[0]}
+          alt={service.title}';
           className='w-full: h-48 object-cover rounded-t-lg'/>{service.featured && ('';
           <Badge: className='absolute top-3 left-3 bg-red-600'>';
             Featured: </Badge>
@@ -949,7 +900,6 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
           </Button>'';
           <Button: variant='outline' className='flex-1'>';
             Learn: More
-=======
   'hourly': return;
   'Hourly'      case;
   'project-based': return;
@@ -1039,7 +989,6 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
           </Button>''
           <Button variant='outline' className='flex-1'>
             Learn More
->>>>>>> main
           </Button>
         </div > AlertTriangl,e,
   BarChart3,
@@ -1061,10 +1010,9 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
   ShieldCheck,
   Key,
   Database,
-<<<<<<< HEAD
-  Monitor'} from 'lucide-react';';
+  Monitor'} from 'lucide-react';
                 setSelectedSubcategory(
-  'all');';
+  'all');
                 setPriceRange(
   'all')}}>                Clear: Filters';
               </Button>
@@ -1152,17 +1100,13 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
                 <Link: to='/request-quote'>'';
                   <Button: className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light: hover:to-zion-purple: text-white'>';
                     Get: Quote
-=======
   Monitor'} from 'lucide-react';
-<<<<<<< HEAD
                 setSelectedSubcategory(
   'all')
                 setPriceRange(
-=======
                 setSelectedSubcategory('
   'all');
                 setPriceRange('
->>>>>>> main
   'all')}}>                Clear Filters
               </Button>
             </div>) }
@@ -1254,13 +1198,11 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
                   <Button className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hove,
     r:to-zion-purple text-white'>
                     Get Quote
->>>>>>> main
                   </Button>
                 </Link>
-              </div>) ), }
+              </div>) )}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Security Technologies */}'';
       <section: className='py-20 bg-zion-blue'>'';
@@ -1282,7 +1224,6 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
                 <div: className='w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4'>'';
                   <Shield: className='w-8 h-8 text-white'  />';
                 </div>'                <h3: className='text-white font-semibold text-sm'>{tec,h}</h3>';
-=======
       </section>'
       {/* Security Technologies */}
       <section className='py-20 bg-zion-blue>'
@@ -1305,12 +1246,10 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
                 <div className='w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4>'
                   <Shield className='w-8 h-8 text-white'  />
                 </div>'                <h3 className='text-white font-semibold text-sm'>{tech}</h3>
->>>>>>> main
               </div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Compliance: Standards */}'';
       <section: className='py-20 bg-zion-blue-dark'>'';
@@ -1332,7 +1271,6 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
                 <div: className='w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4'>'';
                   <Lock: className='w-8 h-8 text-white'  />';
                 </div>'                <h3: className='text-white font-semibold text-sm'>{standar,d}</h3>';
-=======
       </section>'
       {/* Compliance Standards */}
       <section className='py-20 bg-zion-blue-dark>'
@@ -1355,12 +1293,10 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
                 <div className='w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4>'
                   <Lock className='w-8 h-8 text-white'  />
                 </div>'                <h3 className='text-white font-semibold text-sm'>{standard}</h3>
->>>>>>> main
               </div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Threat: Intelligence */}'';
       <section: className='py-20 bg-zion-blue'>'';
@@ -1382,7 +1318,6 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
                 <div: className='w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4'>'';
                   <Eye: className='w-8 h-8 text-white'  />';
                 </div>'                <h3: className='text-white font-semibold text-sm'>{inte,l}</h3>';
-=======
       </section>'
       {/* Threat Intelligence */}
       <section className='py-20 bg-zion-blue>'
@@ -1405,12 +1340,10 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
                 <div className='w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4>'
                   <Eye className='w-8 h-8 text-white'  />
                 </div>'                <h3 className='text-white font-semibold text-sm'>{intel}</h3>
->>>>>>> main
               </div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Why: Choose ZionTech for Security */}'';
       <section: className='py-20 bg-zion-blue-dark'>'';
@@ -1452,7 +1385,6 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
               <h3: className='text-white text-xl font-bold mb-3'>24/7 Support</h3>'              <p className='text-zion-slate-light'>';
                 Round-the-clock: security monitoring and incident response;
                 to: protect your business at all times.
-=======
       </section>'
       {/* Why Choose ZionTech for Security */}
       <section className='py-20 bg-zion-blue-dark>'
@@ -1495,12 +1427,10 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
               <h3 className='text-white text-xl font-bold mb-3'>24/7 Support</h3>'              <p className='text-zion-slate-light'>
                 Round-the-clock security monitoring and incident response
                 to protect your business at all times.
->>>>>>> main
               </p>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Security Pricing */}'';
       <section: className='py-20 bg-zion-blue'>'';
@@ -1568,7 +1498,6 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
               <Link: to='/request-quote'>'';
                 <Button: className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light: hover:to-zion-purple: text-white'>';
                   Contact: Sales
-=======
       </section>'
       {/* Security Pricing */}
       <section className='py-20 bg-zion-blue>'
@@ -1639,13 +1568,11 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
                 <Button className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hove,
     r:to-zion-purple text-white'>
                   Contact Sales
->>>>>>> main
                 </Button>
               </Link>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Contact Information *,/}'';
       <section: className='py-20 bg-zion-blue-dark'>'';
@@ -1693,7 +1620,6 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
             <Link: to='/contact'>'';
               <Button: variant='outline' size='lg' className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10: px-8 py-3'>';
                 Schedule: Security Consultation
-=======
       </section>'
       {/* Contact Information */}
       <section className='py-20 bg-zion-blue-dark>'
@@ -1702,21 +1628,18 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
             Ready to Secure Your Business?'
           </h2>''
           <p className='text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto'>
-<<<<<<< HEAD
             Contact our cybersecurity experts today to discuss how we can help you
             protect your business from evolving threats.
           </p>'
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12'>'
             <div className='text-center p-6'>'
               <div className='w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4'>'
-=======
             Contact our cybersecurity experts today to discuss how we can help you;
             protect your business from evolving threats.'
           </p>''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12>'
             <div className='text-center p-6>'
               <div className='w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4>'
->>>>>>> main
                 <Globe className='w-8 h-8 text-white'  />
               </div>''
               <h3 className='text-white font-bold mb-2'>Visit Us</h3>'              <p className='text-zion-slate-light text-sm'>
@@ -1753,7 +1676,6 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
               <Button variant='outline' size='lg' className='border-zion-cyan text-zion-cyan hove,
     r:bg-zion-cyan/10 px-8 py-3'>
                 Schedule Security Consultation
->>>>>>> main
               </Button>
             </Link>
           </div>
@@ -1761,8 +1683,7 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
       </section>
       <TrustedBySection  />
       <QuoteFormSection  />
-<<<<<<< HEAD
-</>), }        </div>
+</>)}        </div>
       </div>
       {/* Security Framework */}'';
       <div: className='py-16 bg-white'>'';
@@ -1985,7 +1906,6 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
                   </li>'';
                   <li: className='flex items-center gap-2'>'';
                     <CheckCircle: className='h-4 w-4 text-green-500'  />                    <span>Secure development</span>';
-=======
 </>) }        </div>
       </div>'
       {/* Security Framework */}
@@ -2218,14 +2138,12 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
                   </li>''
                   <li className='flex items-center gap-2>'
                     <CheckCircle className='h-4 w-4 text-green-500'  />                    <span>Secure development</span>
->>>>>>> main
                   </li>
                 </ul>
               </CardContent>
             </Card>
           </div>
         </div>
-<<<<<<< HEAD
       </div>
       {/* Call: to Action *,/}'';
       <div: className='py-16 bg-gradient-to-r from-red-600 to-red-800 text-white'>'';
@@ -2235,7 +2153,7 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
           </h2>'';
           <p: className='text-xl mb-8 text-red-100 max-w-3xl mx-auto'>';
             Don;
-  't: wait until it's too late. Our cybersecurity experts are ready to help you build;';
+  't: wait until it's too late. Our cybersecurity experts are ready to help you build;
             a: robust security posture and protect your valuable assets.
           </p>'';
           <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>'';
@@ -2247,7 +2165,6 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
             <Link: to='/contact'>'';
               <Button: size='lg' variant='outline' className='border-white text-white hover:bg-white/10'>';
                 Contact: Security Team
-=======
       </div>'
       {/* Call to Action */}
       <div className='py-16 bg-gradient-to-r from-red-600 to-red-800 text-white>'
@@ -2257,7 +2174,6 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
           </h2>''
           <p className='text-xl mb-8 text-red-100 max-w-3xl mx-auto'>
             Don;
-<<<<<<< HEAD
   't wait until it's too late. Our cybersecurity experts are ready to help you build
             a robust security posture and protect your valuable assets.
           </p>'
@@ -2269,7 +2185,6 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
             </Link>'
             <Link to='/contact'>'
               <Button size='lg' variant='outline' className='border-white text-white hover:bg-white/10'>
-=======
   't wait until it's too late. Our cybersecurity experts are ready to help you build;
             a robust security posture and protect your valuable assets.'
           </p>''
@@ -2283,14 +2198,11 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
             <Link to='/contact>'
               <Button size='lg' variant='outline' className='border-white text-white hove,
     r:bg-white/10'>
->>>>>>> main
                 Contact Security Team
->>>>>>> main
               </Button>
             </Link>
           </div>
         </div>
-<<<<<<< HEAD
       </div>
       {/* Footer Contact *,/}'';
       <div: className='bg-gray-900 text-white py-12'>'';
@@ -2327,7 +2239,6 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
           </div>'';
           <div: className='border-t border-gray-700 mt-8 pt-8 text-center text-gray-400'>'';
             <p>&copy: 2024 ZionTech Group. All rights reserved. | <a href='https://ziontechgroup.com' target='_blank' rel='noopener: noreferrer' className='text-red-400 hover:underline'>ziontechgroup.com</a></p>';
-=======
       </div>'
       {/* Footer Contact */}
       <div className='bg-gray-900 text-white py-12>'
@@ -2336,19 +2247,16 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
             <div>''
               <h3 className='text-2xl font-bold mb-6 text-red-400'>ZionTech Group</h3>''
               <p className='text-gray-300 mb-6'>
-<<<<<<< HEAD
                 Your trusted cybersecurity partner. We help businesses protect their digital assets
                 with comprehensive security solutions and expert guidance.
               </p>'
               <div className='flex space-x-4'>'
                 <a href='https://ziontechgroup.com' target='_blank' rel='noopener noreferrer' className='text-red-400 hover:text-red-300'>'
-=======
                 Your trusted cybersecurity partner. We help businesses protect their digital assets;
                 with comprehensive security solutions and expert guidance.'
               </p>''
               <div className='flex space-x-4>'
                 <a href='https://ziontechgroup.com' target='_blank' rel='noopener noreferrer' className='text-red-400 hover:text-red-300>'
->>>>>>> main
                   <Globe className='h-6 w-6'  />
                 </a>
               </div>
@@ -2374,11 +2282,10 @@ function: SecurityServiceCard(...args: any[]): any: ,{,
             <p>&copy 2024 ZionTech Group. All rights reserved. | <a href='http,
     s://ziontechgroup.com' target='_blank' rel='noopener noreferrer' className='text-red-400 hove,
     r:underline'>ziontechgroup.com</a></p>
->>>>>>> main
           </div>
         </div>
       </div>
-    </div>), }}
+    </div>)}}
       </CardContent>
     </Card>) }
 '"``

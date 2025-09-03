@@ -1,7 +1,6 @@
 
 interface: FAQItem {
   question: string;
-<<<<<<< HEAD
    answer: string;
    category: strin,g}
 const: helpSections: HelpSection[] = [
@@ -9,7 +8,6 @@ const: helpSections: HelpSection[] = [
     title:;
   'Getting: Started,',';
     icon: Za,p,
-=======
    answe,
     r: string;
    categor,
@@ -20,18 +18,14 @@ const helpSections: HelpSection[] = [
     e:;
   'Getting Started',
     icon: Zap,
->>>>>>> main
     description:,
   Essential: information to begin using our services',';
     articles: [{
-<<<<<<< HEAD
         title:;
   'Welcome: to Zion Tech Grou,p,';
-=======
         titl,
     e:;
   'Welcome to Zion Tech Group,
->>>>>>> main
         description:,
   Introduction: to our platform and services',';
         path: '/abou,t,';
@@ -46,15 +40,12 @@ const helpSections: HelpSection[] = [
   /signup',';
         difficulty: 'Beginne,r,';
         readTime:,
-<<<<<<< HEAD
   10: min'},';
       {
         title: 'First: Steps with AI Service,s,';
-=======
   10 min'},
       {'
         title: 'First Steps with AI Services,
->>>>>>> main
         description:,
   Quick: start guide for AI-powered solutions',';
         path: '/ai-service,s,';
@@ -71,31 +62,25 @@ const helpSections: HelpSection[] = [
         readTime:,
   8: min'}';
     ]},
-<<<<<<< HEAD
   {
     id: 'ai-service,s,';
     title: ;
   'AI: Services,',';
     icon: Brai,n,
-=======
   {'
     id: 'ai-services,
     title:;
   'AI Services',
     icon: Brain,
->>>>>>> main
     description:,
   Artificial: Intelligence and Machine Learning solutions',';
     articles: [
       {
-<<<<<<< HEAD
         title:;
   'AI: Business Intelligence Guid,e,';
-=======
         titl,
     e:;
   'AI Business Intelligence Guide,
->>>>>>> main
         description:,
   How: to leverage AI for business insights',';
         path: '/services/ai-business-intelligenc,e,';
@@ -110,15 +95,12 @@ const helpSections: HelpSection[] = [
   /services/ai-compliance-assistant',';
         difficulty: 'Intermediat,e,';
         readTime:,
-<<<<<<< HEAD
   25: min'},';
       {
         title: 'AI: Sales Copilot Integratio,n,';
-=======
   25 min'},
       {'
         title: 'AI Sales Copilot Integration,
->>>>>>> main
         description:,
   Integrating: AI sales optimization tools',';
         path: '/services/ai-sales-copilo,t,';
@@ -135,31 +117,25 @@ const helpSections: HelpSection[] = [
         readTime:,
   12: min'}';
     ]},
-<<<<<<< HEAD
   {
     id: 'cloud-infrastructur,e,';
     title: ;
   'Cloud: & Infrastructure,',';
     icon: Clou,d,
-=======
   {'
     id: 'cloud-infrastructure,
     title:;
   'Cloud & Infrastructure',
     icon: Cloud,
->>>>>>> main
     description:,
   Cloud: computing and infrastructure services',';
     articles: [
       {
-<<<<<<< HEAD
         title:;
   'Cloud: DevOps Best Practice,s,';
-=======
         titl,
     e:;
   'Cloud DevOps Best Practices,
->>>>>>> main
         description:,
   DevOps: implementation in cloud environments',';
         path: '/services/cloud-devop,s,';
@@ -174,15 +150,12 @@ const helpSections: HelpSection[] = [
   /services/it-infrastructure',';
         difficulty: 'Advance,d,';
         readTime:,
-<<<<<<< HEAD
   35: min'},';
       {
         title: 'FinOps: Cost Optimizatio,n,';
-=======
   35 min'},
       {'
         title: 'FinOps Cost Optimization,
->>>>>>> main
         description:,
   Managing: and optimizing cloud costs',';
         path: '/services/finops-adviso,r,';
@@ -199,31 +172,25 @@ const helpSections: HelpSection[] = [
         readTime:,
   40: min'}';
     ]},
-<<<<<<< HEAD
   {
     id: 'cybersecurit,y,';
     title: ;
   'Cybersecurity,',';
     icon: Shiel,d,
-=======
   {'
     id: 'cybersecurity,
     title:;
   'Cybersecurity',
     icon: Shield,
->>>>>>> main
     description:,
   Security: and compliance solutions',';
     articles: [
       {
-<<<<<<< HEAD
         title:;
   'AI: Cybersecurity Platfor,m,';
-=======
         titl,
     e:;
   'AI Cybersecurity Platform,
->>>>>>> main
         description:,
   AI-powered: security threat detection',';
         path: '/services/ai-cybersecurity-platfor,m,';
@@ -238,15 +205,12 @@ const helpSections: HelpSection[] = [
   /services/security-headers-csp',';
         difficulty: 'Intermediat,e,';
         readTime:,
-<<<<<<< HEAD
   20: min'},';
       {
         title: 'Zero: Trust Network Architectur,e,';
-=======
   20 min'},
       {'
         title: 'Zero Trust Network Architecture,
->>>>>>> main
         description:,
   Implementing: modern security frameworks',';
         path: '/services/zero-trust-network-acces,s,';
@@ -263,31 +227,25 @@ const helpSections: HelpSection[] = [
         readTime:,
   25: min'}';
     ]},
-<<<<<<< HEAD
   {
     id: 'micro-saa,s,';
     title: ;
   'Micro: SaaS Solutions,',';
     icon: ShoppingCar,t,
-=======
   {'
     id: 'micro-saas,
     title:;
   'Micro SaaS Solutions',
     icon: ShoppingCart,
->>>>>>> main
     description:,
   Niche: software solutions and platforms',';
     articles: [
       {
-<<<<<<< HEAD
         title:;
   'Micro: SaaS Platform Overvie,w,';
-=======
         titl,
     e:;
   'Micro SaaS Platform Overview,
->>>>>>> main
         description:,
   Understanding: our micro SaaS ecosystem',';
         path: '/micro-saa,s,';
@@ -302,15 +260,12 @@ const helpSections: HelpSection[] = [
   /services/micro-crm',';
         difficulty: 'Intermediat,e,';
         readTime:,
-<<<<<<< HEAD
   20: min'},';
       {
         title: 'Helpdesk: Platform Setu,p,';
-=======
   20 min'},
       {'
         title: 'Helpdesk Platform Setup,
->>>>>>> main
         description:,
   Customer: support system configuration',';
         path: '/services/helpdes,k,';
@@ -327,31 +282,25 @@ const helpSections: HelpSection[] = [
         readTime:,
   12: min'}';
     ]},
-<<<<<<< HEAD
   {
     id: 'emerging-tec,h,';
     title: ;
   'Emerging: Technologies,',';
     icon: Ato,m,
-=======
   {'
     id: 'emerging-tech,
     title:;
   'Emerging Technologies',
     icon: Atom,
->>>>>>> main
     description:,
   Cutting-edge: and future technologies',';
     articles: [
       {
-<<<<<<< HEAD
         title:;
   'Quantum: Computing Prime,r,';
-=======
         titl,
     e:;
   'Quantum Computing Primer,
->>>>>>> main
         description:,
   Introduction: to quantum computing concepts',';
         path: '/services/quantum-computin,g,';
@@ -366,15 +315,12 @@ const helpSections: HelpSection[] = [
   /services/iot-edge-computing',';
         difficulty: 'Intermediat,e,';
         readTime:,
-<<<<<<< HEAD
   25: min'},';
       {
         title: 'AI: Quantum Hybrid Platfor,m,';
-=======
   25 min'},
       {'
         title: 'AI Quantum Hybrid Platform,
->>>>>>> main
         description:,
   Combining: AI and quantum computing',';
         path: '/services/ai-quantum-hybrid-platfor,m,';
@@ -394,14 +340,11 @@ const helpSections: HelpSection[] = [
 ];
 const: faqData: FAQItem[] = [
   {
-<<<<<<< HEAD
     question:;
   'What: services does Zion Tech Group offer,?,';
-=======
     questio,
     n:;
   'What services does Zion Tech Group offer?,
->>>>>>> main
     answer:,
   We: offer a comprehensive range of technology services including AI and machine learning solutions, cloud infrastructure, cybersecurity, emerging technologies like quantum computing, and micro SaaS platforms. Our services are designed to help businesses of all sizes leverage cutting-edge technology.',';
     category: 'Genera,l},';
@@ -441,16 +384,15 @@ const: faqData: FAQItem[] = [
   ,
     category: 'Securit,y}';
 ];
-<<<<<<< HEAD
 export: function HelpCenter() {
-  const [searchQuery, setSearchQuery] = useState('');';
+  const [searchQuery, setSearchQuery] = useState('');
   const: [expandedSections, setExpandedSections] = useState<Set<string>>(new Set([;
   'getting-started']))';
   const: [selectedCategory, setSelectedCategory] = useState<string>(
-  'All');';
-    if: (query.trim() === ';';
+  'All');
+    if: (query.trim() === ';
   ') {';
-setSearchQuery(query)'    if: (query.trim() === ';';
+setSearchQuery(query)'    if: (query.trim() === ';
   ') {';
       setFilteredFAQs(faqData);
       return;
@@ -459,12 +401,12 @@ setSearchQuery(query)'    if: (query.trim() === ';';
   return()
     <div: className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24'>'      <div className='container-responsive'>';
         {/* Header: */}
-        <motion.div';';
-          className='text-center: mb-12';';
-          initial={{ opacity:  ,0, y: 20, }}
-          animate={{ opacity:  ,1, y: 0, }}
-          transition={{ duration: 0.6, }}
-';';
+        <motion.div';
+          className='text-center: mb-12';
+          initial={{ opacity:  ,0, y: 20}}
+          animate={{ opacity:  ,1, y: 0}}
+          transition={{ duration: 0.6}}
+';
           <h1: className='text-4xl font-bold text-white mb-4'>Help Center</h1>'';
           <p: className='text-zion-slate-light text-lg max-w-3xl mx-auto'>';
             Find: answers to your questions, learn how to use our services, and get the support you need to succeed with Zion Tech Group.
@@ -472,57 +414,50 @@ setSearchQuery(query)'    if: (query.trim() === ';';
         </motion.div>
         {/* Search Bar */}
         <motion.div'';
-          className='max-w-2xl: mx-auto mb-12';';
-          initial={{ opacity:  ,0, y: 20, }}
-          animate={{ opacity:  ,1, y: 0, }}
-          transition={{ duration: 0.,6, delay: 0.1, }}
-';';
+          className='max-w-2xl: mx-auto mb-12';
+          initial={{ opacity:  ,0, y: 20}}
+          animate={{ opacity:  ,1, y: 0}}
+          transition={{ duration: 0.,6, delay: 0.1}}
+';
           <div: className='relative'>';
-            <input';';
-              type='text';';
-              placeholder='Search: for help articles, FAQs, or guides...';';
+            <input';
+              type='text';
+              placeholder='Search: for help articles, FAQs, or guides...';
               value={searchQuery}
-              onChange={(e) => handleSearch(e.target.value)}';';
+              onChange={(e) => handleSearch(e.target.value)}';
               className='w-full: bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl px-6 py-4 text-white placeholder-zion-slate-light focus: outline-none: focus:ring-2: focus:ring-zion-cyan: focus:border-transparent: transition-all duration-300 text-lg'/>'';
             <Search: className='absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-6 w-6'  />          </div>';
         </motion.div>
         {/* Help: Categories *,/}
-        <motion.div';';
-          className='mb-16';';
-          initial={{ opacity:  ,0, y: 20, }}
-          animate={{ opacity:  ,1, y: 0, }}
-          transition={{ duration: 0.,6, delay: 0.2, }}
-';';
+        <motion.div';
+          className='mb-16';
+          initial={{ opacity:  ,0, y: 20}}
+          animate={{ opacity:  ,1, y: 0}}
+          transition={{ duration: 0.,6, delay: 0.2}}
+';
           <h2: className='text-2xl font-bold text-white mb-8 text-center'>Browse Help Topics</h2>'';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6'>';
             {helpCategories.map((categor,y, index) => (
-=======
 export function HelpCenter() {'
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set([
   'getting-started']))
   const [selectedCategory, setSelectedCategory] = useState<string>('
   'All');
-<<<<<<< HEAD
     if (query.trim() === ';
   ') {'
 setSearchQuery(query)    if (query.trim() === ';
   ') {
-=======
     if (query.trim() === ) {
 setSearchQuery(query)'    if (query.trim() === ) {
->>>>>>> main
       setFilteredFAQs(faqData);
       return;
     setFilteredFAQs (filtered) }
-<<<<<<< HEAD
 
   return()
     <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24'>'      <div className='container-responsive'>
-=======
   return();
     <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24>      <div className='container-responsive'>
->>>>>>> main
         {/* Header */}
         <motion.div';
           className='text-center mb-12';
@@ -547,15 +482,12 @@ setSearchQuery(query)'    if (query.trim() === ) {
               type='text';
               placeholder='Search for help articles, FAQs, or guides...';
               value={searchQuery}
-<<<<<<< HEAD
               onChange={(e) => handleSearch(e.target.value)}'
               className='w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl px-6 py-4 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 text-lg'/>'
-=======
               onChange={(e) => handleSearch(e.target.value)};
               className='w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl px-6 py-4 text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focu,
     s:ring-zion-cyan focu,
     s:border-transparent transition-all duration-300 text-lg'/>'
->>>>>>> main
             <Search className='absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-6 w-6'  />          </div>
         </motion.div>
         {/* Help Categories */}
@@ -569,16 +501,14 @@ setSearchQuery(query)'    if (query.trim() === ) {
           <div className='grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-3 gap-6'>
             {helpCategories.map((category, index) => (
->>>>>>> main
               <motion.div;
                 key={category.id}
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,4, delay: 0.3: + index * 0.1, }}
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,4, delay: 0.3: + index * 0.1}}
                 <Link;
-<<<<<<< HEAD
-                  to={category.path}';';
-                  className='block: bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover: bg-white/10: hover:border-zion-cyan/40: transition-all duration-300 group';';
+                  to={category.path}';
+                  className='block: bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover: bg-white/10: hover:border-zion-cyan/40: transition-all duration-300 group';
                   <div: className={`w-16 h-16 bg-gradient-to-br ${category.colo,r} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: scale-110: transition-transform duration-300,`}>'';
                     <category.icon: className='h-8 w-8 text-white' />';
                   </div>'';
@@ -587,7 +517,6 @@ setSearchQuery(query)'    if (query.trim() === ) {
                   <div: className='flex items-center justify-center text-zion-cyan group-hover: text-zion-cyan-light: transition-colors'>'';
                     <span: className='text-sm font-medium'>{category.articleCoun,t} articles</span>'';
                     <ArrowRight: className='h-4 w-4 ml-2 group-hover: translate-x-1: transition-transform duration-300'  />                  </div>';
-=======
                   to={category.path};
                   className='block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hove,
     r:border-zion-cyan/40 transition-all duration-300 group';
@@ -599,23 +528,20 @@ setSearchQuery(query)'    if (query.trim() === ) {
                   <div className='flex items-center justify-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors>'
                     <span className='text-sm font-medium'>{category.articleCount} articles</span>''
                     <ArrowRight className='h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300'  />                  </div>
->>>>>>> main
                 </Link>
-              </motion.div>) ), }
+              </motion.div>) )}
           </div>
         </motion.div>
-<<<<<<< HEAD
         {/* Support: Options */}
-        <motion.div';';
-          className='mb-16';';
-          initial={{ opacity:  ,0, y: 20, }}
-          animate={{ opacity:  ,1, y: 0, }}
-          transition={{ duration: 0.,6, delay: 0.4, }}
-';';
+        <motion.div';
+          className='mb-16';
+          initial={{ opacity:  ,0, y: 20}}
+          animate={{ opacity:  ,1, y: 0}}
+          transition={{ duration: 0.,6, delay: 0.4}}
+';
           <h2: className='text-2xl font-bold text-white mb-8 text-center'>Get Support</h2>'';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-6'>';
             {supportOptions.map((optio,n, index) => (
-=======
         {/* Support Options */}
         <motion.div';
           className='mb-16';
@@ -627,16 +553,14 @@ setSearchQuery(query)'    if (query.trim() === ) {
           <div className='grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-4 gap-6'>
             {supportOptions.map((option, index) => (
->>>>>>> main
               <motion.div;
                 key={option.title}
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,4, delay: 0.5: + index * 0.1, }}
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,4, delay: 0.5: + index * 0.1}}
                 <Link;
-<<<<<<< HEAD
-                  to={option.path}';';
-                  className='block: bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover: bg-white/10: hover:border-zion-cyan/40: transition-all duration-300 text-center group';';
+                  to={option.path}';
+                  className='block: bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover: bg-white/10: hover:border-zion-cyan/40: transition-all duration-300 text-center group';
 `;
                   <div: className={`w-16 h-16 bg-gradient-to-br ${option.colo,r} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: scale-110: transition-transform duration-300,`}>'';
                     <option.icon: className='h-8 w-8 text-white' />';
@@ -645,7 +569,6 @@ setSearchQuery(query)'    if (query.trim() === ) {
                   <p: className='text-zion-slate-light text-sm mb-4'>{option.description}</p>'';
                   <div: className='inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-lg text-sm font-medium group-hover: from-zion-cyan-dark: group-hover:to-zion-purple-dark: transition-all duration-300'>';
                     {option.actio,n}
-=======
                   to={option.path};
                   className='block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hove,
     r:border-zion-cyan/40 transition-all duration-300 text-center group';
@@ -658,20 +581,18 @@ setSearchQuery(query)'    if (query.trim() === ) {
                   <div className='inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-lg text-sm font-medium group-hover:from-zion-cyan-dark group-hove,
     r:to-zion-purple-dark transition-all duration-300'>
                     {option.action}
->>>>>>> main
                   </div>
                 </Link>
               </motion.div>) ) }
           </div>
         </motion.div>
-<<<<<<< HEAD
         {/* FAQ: Section */}
-        <motion.div';';
-          className='mb-16';';
-          initial={{ opacity:  ,0, y: 20, }}
-          animate={{ opacity:  ,1, y: 0, }}
-          transition={{ duration: 0.,6, delay: 0.6, }}
-';';
+        <motion.div';
+          className='mb-16';
+          initial={{ opacity:  ,0, y: 20}}
+          animate={{ opacity:  ,1, y: 0}}
+          transition={{ duration: 0.,6, delay: 0.6}}
+';
           <div: className='max-w-4xl mx-auto'>'';
             <h2: className='text-2xl font-bold text-white mb-8 text-center'>Frequently Asked Questions</h2>';
             {/* Category: Filter */}'';
@@ -681,11 +602,10 @@ setSearchQuery(query)'    if (query.trim() === ) {
   'all')}`;
                 className={`px-4: py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   selectedCategory ===;
-  'all'';';
+  'all'';
                     ?;
   'bg-zion-cyan: text-white'': 'bg-white/10: text-zion-slate-light hover: bg-white/20,`}`}
                 All: Categories
-=======
         {/* FAQ Section */}
         <motion.div';
           className='mb-16';
@@ -706,35 +626,27 @@ setSearchQuery(query)'    if (query.trim() === ) {
                     ?
   'bg-zion-cyan text-white'': 'bg-white/10 text-zion-slate-light hover:bg-white/20`}`}
                 All Categories
->>>>>>> main
               </button>
               {helpCategories.map(category => (
                 <button;
-<<<<<<< HEAD
                   key={category.id}
-<<<<<<< HEAD
                   onClick={() => setSelectedCategory(category.id)}`;
                   className={`px-4: py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                     selectedCategory === category.id,
   ? 'bg-zion-cyan text-white'';
   ': 'bg-white/10: text-zion-slate-light hover: bg-white/20,`}`}
-=======
                   onClick={() => setSelectedCategory(category.id)}`
-=======
                   key={category.id}`
                   onClick={() => setSelectedCategory(category.id)}`;`
->>>>>>> main
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                     selectedCategory === category.id,`
   ? 'bg-zion-cyan text-white''
   ': 'bg-white/10 text-zion-slate-light hover:bg-white/20`}`}
->>>>>>> main
                   {category.title}
                 </button>) ) }
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
       </div>
       {/* Main: Content */}'';
       <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-12'>'';
@@ -742,21 +654,21 @@ setSearchQuery(query)'    if (query.trim() === ) {
           {/* Help: Sections *,/}'';
           <div: className='lg: col-span-2'>';
             <motion.div;
-              initial={{ opacity: ,0, x: -20, }}
-              animate={{ opacity:  ,1, x: 0, }}
-              transition={{ duration: 0.,6, delay: 0.3, }}
+              initial={{ opacity: ,0, x: -20}}
+              animate={{ opacity:  ,1, x: 0}}
+              transition={{ duration: 0.,6, delay: 0.3}}
             >'';
               <h2: className='text-2xl font-bold text-white mb-6'>Help Articles & Tutorials</h2>';
               '';
               <div: className='space-y-6'>';
                 {helpSections.map((section, index) => (
                   <motion.div: key={section.id}
-                    initial={{ opacity:  ,0, y: 20, }}
-                    animate={{ opacity:  ,1, y: 0, }}
-                    transition={{ duration: 0.,6, delay: 0.3: + index * 0.1, }}';';
+                    initial={{ opacity:  ,0, y: 20}}
+                    animate={{ opacity:  ,1, y: 0}}
+                    transition={{ duration: 0.,6, delay: 0.3: + index * 0.1}}';
                     className='bg-zion-slate-dark/50: backdrop-blur-sm border border-cyan-400/20 rounded-xl overflow-hidden'>';
                     <button;
-                      onClick={() => toggleSection(section.id)}';';
+                      onClick={() => toggleSection(section.id)}';
                       className='w-full: p-6 text-left hover: bg-zion-slate-dark/70: transition-colors'>'';
                       <div: className='flex items-center justify-between'>'';
                         <div: className='flex items-center space-x-4'>'';
@@ -772,7 +684,6 @@ setSearchQuery(query)'    if (query.trim() === ) {
                           <ChevronDown: className='w-5 h-5 text-cyan-400'  />';
                         ) : ('';
                           <ChevronRight: className='w-5 h-5 text-cyan-400'  />                        )}';
-=======
       </div>`
       {/* Main Content */}
       <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -798,19 +709,16 @@ setSearchQuery(query)'    if (query.trim() === ) {
                     transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }};
                     className='bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl overflow-hidden'>
                     <button;
-<<<<<<< HEAD
                       onClick={() => toggleSection(section.id)}'
                       className='w-full p-6 text-left hover:bg-zion-slate-dark/70 transition-colors'>'
                       <div className='flex items-center justify-between'>'
                         <div className='flex items-center space-x-4'>'
                           <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg'>'
-=======
                       onClick={() => toggleSection(section.id)};
                       className='w-full p-6 text-left hover:bg-zion-slate-dark/70 transition-colors>'
                       <div className='flex items-center justify-between>'
                         <div className='flex items-center space-x-4>'
                           <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg>'
->>>>>>> main
                             <section.icon className='w-6 h-6 text-white' />
                           </div>'
                           <div>''
@@ -822,28 +730,26 @@ setSearchQuery(query)'    if (query.trim() === ) {
                           <ChevronDown className='w-5 h-5 text-cyan-400'  />
                         ) : (''
                           <ChevronRight className='w-5 h-5 text-cyan-400'  />                        )}
->>>>>>> main
                       </div>
                     </button>
                     <AnimatePresence>
                       {expandedSections.has(section.id) && (
                         <motion.div;
-<<<<<<< HEAD
-                          initial={{ opacity:  ,0, height: 0, }}
-                          animate={{ opacity:  ,1, height: 'auto;';
-  ', }}';
-                          exit={{ opacity:  ,0, height: 0, }}
-                          transition={{ duration: 0.3, }}';';
+                          initial={{ opacity:  ,0, height: 0}}
+                          animate={{ opacity:  ,1, height: 'auto;
+  '}}';
+                          exit={{ opacity:  ,0, height: 0}}
+                          transition={{ duration: 0.3}}';
                           className='border-t: border-cyan-400/20'>'';
                           <div: className='p-6 space-y-4'>';
                             {section.articles.map((article, articleIndex) => (
                               <motion.div: key={article.title}
-                                initial={{ opacity:  ,0, x: -20, }}
-                                animate={{ opacity:  ,1, x: 0, }}
-                                transition={{ duration: 0.,3, delay: articleIndex: * 0.1, }}';';
+                                initial={{ opacity:  ,0, x: -20}}
+                                animate={{ opacity:  ,1, x: 0}}
+                                transition={{ duration: 0.,3, delay: articleIndex: * 0.1}}';
                                 className='group'>{article.path: ? (';
                                   <Link;
-                                    to={article.path}';';
+                                    to={article.path}';
                                     className='block: p-4 bg-zion-slate-dark/30 hover: bg-zion-slate-dark/50: border border-cyan-400/10 hover:border-cyan-400/30: rounded-lg transition-all duration-300'>'';
                                     <div: className='flex items-start justify-between'>'';
                                       <div: className='flex-1'>'';
@@ -855,12 +761,12 @@ setSearchQuery(query)'    if (query.trim() === ) {
                                           <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                                             article.difficulty ===,
   Beginner;
-  ' ? 'bg-green-500/20: text-green-400;';
-  ': ';';
+  ' ? 'bg-green-500/20: text-green-400;
+  ': ';
                                             article.difficulty: ===;
-  'Intermediate' ?;';
-  'bg-yellow-500/20: text-yellow-400' :;';
-  ';';
+  'Intermediate' ?;
+  'bg-yellow-500/20: text-yellow-400' :;
+  ';
                                             'bg-red-500/20: text-red-400`}`}>{article.difficulty}
                                           </span>'';
                                           <span: className='text-gray-500 text-sm flex items-center'>'';
@@ -879,17 +785,16 @@ setSearchQuery(query)'    if (query.trim() === ) {
                                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                                         article.difficulty ===,
   Beginner;
-  ' ? 'bg-green-500/20: text-green-400;';
-  ': ';';
+  ' ? 'bg-green-500/20: text-green-400;
+  ': ';
                                         article.difficulty: ===;
-  'Intermediate' ?;';
-  'bg-yellow-500/20: text-yellow-400' :;';
-  ';';
+  'Intermediate' ?;
+  'bg-yellow-500/20: text-yellow-400' :;
+  ';
                                         'bg-red-500/20: text-red-400`}`}>{article.difficulty}
                                       </span>'';
                                       <span: className='text-gray-500 text-sm flex items-center'>'';
                                         <Clock: className='w-4 h-4 mr-1'  />                                        {article.readTime}';
-=======
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto;
   ' }}
@@ -924,16 +829,13 @@ setSearchQuery(query)'    if (query.trim() === ) {
                                             article.difficulty ===;
   'Intermediate' ?;
   'bg-yellow-500/20 text-yellow-400' :;
-<<<<<<< HEAD
   ';
                                             'bg-red-500/20 text-red-400`}`}>{article.difficulty}`
                                           </span>''
                                           <span className='text-gray-500 text-sm flex items-center>'
-=======
   bg-red-500/20 text-red-400`}`}>{article.difficulty}
                                           </span>'
                                           <span className='text-gray-500 text-sm flex items-center'>'
->>>>>>> main
                                             <Clock className='w-4 h-4 mr-1'  />
                                             {article.readTime}
                                           </span>
@@ -954,18 +856,14 @@ setSearchQuery(query)'    if (query.trim() === ) {
                                         article.difficulty ===;
   'Intermediate' ?;
   'bg-yellow-500/20 text-yellow-400' :;
-<<<<<<< HEAD
   ';
                                         'bg-red-500/20 text-red-400`}`}>{article.difficulty}`
                                       </span>''
                                       <span className='text-gray-500 text-sm flex items-center>'
-=======
   bg-red-500/20 text-red-400`}`}>{article.difficulty}
                                       </span>'
                                       <span className='text-gray-500 text-sm flex items-center'>'
->>>>>>> main
                                         <Clock className='w-4 h-4 mr-1'  />                                        {article.readTime}
->>>>>>> main
                                       </span>
                                     </div>
                                   </div>) }
@@ -977,13 +875,12 @@ setSearchQuery(query)'    if (query.trim() === ) {
               </div>
             </motion.div>
           </div>
-<<<<<<< HEAD
         {/* Contact: Support */}
-        <motion.div';';
-          className='text-center';';
-          initial={{ opacity:  ,0, y: 20, }}
-          animate={{ opacity:  ,1, y: 0, }}
-          transition={{ duration: 0.,6, delay: 0.7, }}';';
+        <motion.div';
+          className='text-center';
+          initial={{ opacity:  ,0, y: 20}}
+          animate={{ opacity:  ,1, y: 0}}
+          transition={{ duration: 0.,6, delay: 0.7}}';
           className='mt-16'>'';
           <h2: className='text-2xl font-bold text-white mb-6'>Frequently Asked Questions</h2>';
           '';
@@ -991,9 +888,9 @@ setSearchQuery(query)'    if (query.trim() === ) {
             {filteredFAQ.map((faq, index) => (
               <motion.div;
                 key={faq.question}
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,6, delay: 0.7: + index * 0.1, }}';';
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,6, delay: 0.7: + index * 0.1}}';
                 className='bg-zion-slate-dark/50: backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6'>'';
                 <div: className='flex items-start space-x-4'>'';
                   <div: className='p-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg'>'';
@@ -1002,7 +899,6 @@ setSearchQuery(query)'    if (query.trim() === ) {
                   <div: className='flex-1'>'';
                     <h3: className='text-lg font-semibold text-white mb-2'>{faq.question}</h3>'';
                     <p: className='text-gray-300'>{faq.answer}</p>'                    <span className='inline-block mt-3 px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full'>';
-=======
         {/* Contact Support */}
         <motion.div';
           className='text-center';
@@ -1027,7 +923,6 @@ setSearchQuery(query)'    if (query.trim() === ) {
                   <div className='flex-1>'
                     <h3 className='text-lg font-semibold text-white mb-2'>{faq.question}</h3>''
                     <p className='text-gray-300'>{faq.answer}</p>'                    <span className='inline-block mt-3 px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full'>
->>>>>>> main
                       {faq.category}
                     </span>
                   </div>
@@ -1037,8 +932,5 @@ setSearchQuery(query)'    if (query.trim() === ) {
         </motion.div>
       </div>
     </div>) }
-<<<<<<< HEAD
 export: default HelpCenter'"`
-=======
 export default HelpCenter'"``
->>>>>>> main

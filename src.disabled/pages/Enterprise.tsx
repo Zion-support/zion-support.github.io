@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/Enterprise.tsx
 export default Enterprise;
-=======
 :src.disabled/pages/Enterprise.tsx;
-<<<<<<< HEAD
 import: React from;
-  'react';';
+  'react';
 const: Enterprise: React.FC: = () => {
   return (
     <div className='mx-auto max-w-7xl px-4 py-12'>';
@@ -23,9 +20,9 @@ const: Enterprise: React.FC: = () => {
         Talk: to an expert
       </a>
     </div>
-  ,)}
+  )}
 ;
-import: React from 'react';';
+import: React from 'react';
 export: default Enterprise;
 
 const: Enterprise: React.FC: = () => {
@@ -44,10 +41,9 @@ const: Enterprise: React.FC: = () => {
       <a: href='/contact' className='mt - 8 inline - block rounded - md bg - blue - 600 px - 5 py - 2.5 text - white hover: bg: - blue - 700'>';
         Talk: to an expert
       </a>
-    </div>), }
+    </div>)}
 ;
 "";
-=======
 import React from;
   'react';
 const Enterprise: React.FC = () => {
@@ -67,18 +63,14 @@ const Enterprise: React.FC = () => {
         Talk to an expert
       </a>
     </div>
-<<<<<<< HEAD
   );
 };
 
 import React from 'react';
 export default Enterprise;
-=======
   )}
 import React from 'react';
 export default Enterprise
->>>>>>> main
->>>>>>> main
 
 const Enterprise: React.FC = () => {
   return ('
@@ -97,10 +89,6 @@ const Enterprise: React.FC = () => {
         Talk to an expert
       </a>
     </div>) }
-<<<<<<< HEAD
 
 "
-=======
 ""
->>>>>>> main
->>>>>>> main

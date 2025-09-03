@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
  const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null) ; const [searchQuery, setSearchQuery] = useState (") ; const location = useLocation () ; const menuRef = useRef (null) ;"""";,"});,"})
 ;,"});,"})
@@ -7,7 +6,7 @@ import { Link, useLocation } from 'react-router-dom';''';,"});,"})
 import { motion, AnimatePresence } from 'framer-motion';''';,"});,"})
 import { X, ChevronDown, Search, User, Bell } from 'lucide-react';,"});,"})
 const MobileNavigation = ({ isOpen, onToggle }) => {}"});,"})
-    const [activeDropdown, setActiveDropdown] = useState(null);';,"});,"})
+    const [activeDropdown, setActiveDropdown] = useState(null);,"});,"})
     const [searchQuery, setSearchQuery] = useState('');,"});,"})
     const location = useLocation();,"});,"})
     const menuRef = useRef(null);,"});,"})
@@ -93,7 +92,7 @@ const MobileNavigation = ({ isOpen, onToggle }) => {}"});,"})
     const toggleDropdown = (label) => {}"});,"})
         setActiveDropdown(activeDropdown === label ? null : label)};,"});,"})
     const handleSearch = (e) => {}"});,"})
-        e.preventDefault();';,"});,"})
+        e.preventDefault();,"});,"})
         // Implement search functionality'';,"});,"})
         // console.log('Search query:', searchQuery)};,"});,"})
     const menuVariants = {}"});,"})
@@ -244,18 +243,9 @@ export { MobileNavigation };,"});,"})
 export { MobileNavigation };,"});,"})
 ;,"});,"})
 export { MobileNavigation };,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
-<<<<<<< HEAD
  const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';'";
-=======
-<<<<<<< HEAD
  const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';'"'"
-=======
  const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) "
->>>>>>> main
 
 ""
 }
->>>>>>> main
->>>>>>> main

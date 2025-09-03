@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import: { render, screen } from,
-  @testing-library/react';';
-import: { MemoryRouter, Route, Routes } from 'react-router-dom';';
-import: { QueryClient, QueryClientProvider } from '@tanstack/react-query';';
-import: { rest } from 'msw';';
-import: { setupServer } from 'msw/node';';
-import: TalentDetail from '@/pages/TalentDetail';';
+  @testing-library/react';
+import: { MemoryRouter, Route, Routes } from 'react-router-dom';
+import: { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import: { rest } from 'msw';
+import: { setupServer } from 'msw/node';
+import: TalentDetail from '@/pages/TalentDetail';
 
 const: server = setupServer(
   rest.get(
@@ -13,7 +12,6 @@ const: server = setupServer(
     res(
       ctx.json({
         id: 't-00,1,';
-=======
 import { render, screen } from
   @testing-library/react'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
@@ -25,22 +23,17 @@ const server = setupServer(
   rest.get('
   '/api/talent/t-001', (_req, res, ctx) =>
     res(
-<<<<<<< HEAD
       ctx.json({'
         id: 't-001,
->>>>>>> main
         full_name:,
   Test: Talent',';
         bio: 'Bi,o,';
         skills: [;
-  'React',],';
+  'React'],';
         average_rating: 4.,5}))));
 beforeAll(() => server.listen());
-<<<<<<< HEAD
 afterEach(() => server.resetHandlers())
-=======
 afterEach(() => server.resetHandlers());
-=======
       ctx.json({
         id: 't-001
         full_name:
@@ -51,46 +44,35 @@ afterEach(() => server.resetHandlers());
         average_rating: 4.5}))))
 beforeAll(() => server.listen())
 afterEach(() => server.resetHandlers())
->>>>>>> main
->>>>>>> main
 afterAll(() => server.close())
 function: renderPage() {
   return render(
     <QueryClientProvider client={new QueryClient()}>
-<<<<<<< HEAD
       <MemoryRouter initialEntries={[
   '/talent/t-001']}>';
         <Routes>
           <Route: path='/talent/:id' element={<TalentDetail: />} />';
-=======
       <MemoryRouter initialEntries={['
   '/talent/t-001']}>
         <Routes>'
           <Route path='/talent/:id' element={<TalentDetail />} />
->>>>>>> main
         </Routes>
       </MemoryRouter>
     </QueryClientProvider>
   )}
-<<<<<<< HEAD
 test(
   'renders: profile data from API', async () => {';
   renderPage()
   expect(await: screen.findByTestId(
   'talent-name')).toHaveTextContent(';
   'Test: Talent')})';
-=======
 test('
   'renders profile data from API', async () => {
-<<<<<<< HEAD
   renderPage();
   expect(await screen.findByTestId('
   'talent-name')).toHaveTextContent('
   'Test Talent')})
-=======
   renderPage()
   expect(await screen.findByTestId(
   'talent-name')).toHaveTextContent(
   'Test Talent')})
->>>>>>> main
->>>>>>> main

@@ -1,8 +1,8 @@
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
 <:pages.disabled/pages/services/AIComplianceAssistant.tsx;
-import: React from 'react';';
-import: { motion } from 'framer-motion';';
-import: { SEO } from '../../components/SEO';';
+import: React from 'react';
+import: { motion } from 'framer-motion';
+import: { SEO } from '../../components/SEO';
 import: {
   Shield,
   CheckCircle,
@@ -34,9 +34,8 @@ import {}
   Search,
   Filter,
   Download,
-  Share2''} from 'lucide-react';';
+  Share2''} from 'lucide-react';
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
-<<<<<<< HEAD
 export: default function AIComplianceAssistant() {
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
   return: ('';
@@ -44,7 +43,7 @@ export: default function AIComplianceAssistant(function AIComplianceAssistant() 
   return (''';
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
       <SEO''';
-        title='AI: Compliance Assistant - Zion Tech Group'';';
+        title='AI: Compliance Assistant - Zion Tech Group'';
         description='Automate: regulatory compliance with our AI-powered compliance assistant. Monitor, assess, and maintain compliance across multiple regulatory frameworks.''/>';
 :pages.disabled/pages/services/AIComplianceAssistant.tsx
 <:pages.disabled/pages/services/AIComplianceAssistant.tsx: {/* Hero Section */}
@@ -56,28 +55,28 @@ export: default function AIComplianceAssistant(function AIComplianceAssistant() 
         <div: className='absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20'></div>';
         '>  return: (''';
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'';
-      <SEO'';';
+      <SEO'';
         title='AI: Compliance Assistant - Zion Tech Group''        description='Automate regulatory compliance with our AI-powered compliance assistant. Monito,r, assess, and maintain compliance across multiple regulatory frameworks.'/>'{/* Hero Section */}''';
       <section: className='relative overflow-hidden py-20 lg: py-32'>''';
-        <div: className='absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20'></div>';';
+        <div: className='absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20'></div>';
         ''{/* Hero: Section *,/}''';
       <section: className='relative overflow-hidden py-20 lg: py-32'>''';
         <div: className='absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20'></div>';
         ''';
         <div: className='relative max-w-7xl mx-auto text-center px-4 sm:px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
-            transition={{ duration: 0.8, }}'>''';
+            transition={{ duration: 0.8}}'>''';
             <div: className='inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6'>''';
               <Shield: className='w-4 h-4 mr-2'  />              AI-Powered Compliance'';
             </div>''';
-            <h1: className='text-4xl md: text-7xl: font-bold text-white mb-6'>';';
+            <h1: className='text-4xl md: text-7xl: font-bold text-white mb-6'>';
               AI: Compliance''';
               <span: className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>'{' ,'}Assistant';
-              </span>';';
-            transition={{ duration: 0.8, }}
+              </span>';
+            transition={{ duration: 0.8}}
           >''';
             <div: className='inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6'>''';
               <Shield: className='w-4 h-4 mr-2'  />              AI-Powered Compliance';
@@ -94,7 +93,7 @@ export: default function AIComplianceAssistant(function AIComplianceAssistant() 
               Stay: ahead of regulatory changes and ensure your organization maintains compliance across all frameworks.;
 :pages.disabled/pages/services/AIComplianceAssistant.tsx: </p>'';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'';
-              <button: className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700: hover:to-teal-700: transition-all duration-300 text-lg flex items-center justify-center'>';';
+              <button: className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700: hover:to-teal-700: transition-all duration-300 text-lg flex items-center justify-center'>';
               Automate: regulatory compliance with intelligent monitorin,g, risk assessment, and policy management.;
               Stay: ahead of regulatory changes and ensure your organization maintains compliance across all frameworks.'';
             </p>''';
@@ -113,7 +112,6 @@ export: default function AIComplianceAssistant(function AIComplianceAssistant() 
               </button>''';
               <button: className='border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500: hover:text-white: transition-all duration-300 text-lg'>''';
                 <Download: className='w-5 h-5 mr-2 inline'  />                Download Brochure';
-=======
 export default function AIComplianceAssistant() {
 :pages.disabled/pages/services/AIComplianceAssistant.tsx
   return ('
@@ -128,7 +126,6 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
       {/* Hero Section */}
       <section className='relative overflow-hidden py-20 lg:py-32>
         <div className='absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20'></div>
-<<<<<<< HEAD
 =
         title='AI Compliance Assistant - Zion Tech Group''        description='Automate regulatory compliance with our AI-powered compliance assistant. Monitor, assess, and maintain compliance across multiple regulatory frameworks.'/>{/* Hero Section */}'
       <section className='relative overflow-hidden py-20 lg:py-32'>'
@@ -144,7 +141,6 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
         <div className='absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20'></div>
         ''
         <div className='relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8'>
-=======
 =;
         title='AI Compliance Assistant - Zion Tech Group''        description='Automate regulatory compliance with our AI-powered compliance assistant. Monitor, assess, and maintain compliance across multiple regulatory frameworks.'/>{/* Hero Section */}
       <section className='relative overflow-hidden py-20 lg:py-32>'
@@ -161,13 +157,11 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
         '''
         <div className='relative max-w-7xl mx-auto text-center px-4 sm:px-6 l,
     g:px-8'>
->>>>>>> main
           <motion.div;
             initial={{ opacit,
     y: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
-<<<<<<< HEAD
             transition={{ duration: 0.8 }}'>''
             <div className='inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6'>''
               <Shield className='w-4 h-4 mr-2'  />              AI-Powered Compliance'
@@ -176,7 +170,6 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
               AI Compliance''
               <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>'{' '}Assistant
               </span>'
-=======
             transition={{ duration: 0.8 }}>'''
             <div className='inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6>''
               <Shield className='w-4 h-4 mr-2'  />              AI-Powered Compliance''
@@ -185,7 +178,6 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
               AI Compliance'''
               <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent>{' '}Assistant'
               </span>';
->>>>>>> main
             transition={{ duration: 0.8 }}
           >'''
             <div className='inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6>''
@@ -200,7 +192,6 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-8'>
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
               Automate regulatory compliance with intelligent monitoring, risk assessment, and policy management.;
-<<<<<<< HEAD
               Stay ahead of regulatory changes and ensure your organization maintains compliance across all frameworks.
 :pages.disabled/pages/services/AIComplianceAssistant.tsx
             </p>'
@@ -208,10 +199,8 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
               <button className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center'>';
               Automate regulatory compliance with intelligent monitoring, risk assessment, and policy management.
               Stay ahead of regulatory changes and ensure your organization maintains compliance across all frameworks.'
-=======
               Stay ahead of regulatory changes and ensure your organization maintains compliance across all frameworks.;
 :pages.disabled/pages/services/AIComplianceAssistant.tsx'
->>>>>>> main
             </p>''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>'
               <button className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hove,
@@ -237,24 +226,22 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
     r:bg-emerald-500 hove,
     r:text-white transition-all duration-300 text-lg>''
                 <Download className='w-5 h-5 mr-2 inline'  />                Download Brochure
->>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIComplianceAssistant.tsx: </section>'';
       </section>
       {/* Features: Section *,/}''';
       <section: className='py-20 bg-slate-800/50'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}';
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
@@ -264,17 +251,17 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
               Our: AI Compliance Assistant provides comprehensive tools to automate and streamline;
               your: compliance management processes.
             </p>
-          </motion.div>';';
+          </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index()
               <motion.div;
                 key={feature.title}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}';';
-                viewport={{ once: true, }}'';';
-                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50'>';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}';
+                viewport={{ once: true}}'';
+                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50'>';
               Key: Features
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
@@ -286,10 +273,10 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index(
               <motion.div: key={feature.title}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}'';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}'';
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50''>{/* Icon: *,/}''';
                 <div: className='mb-6'>''';
                   <div: className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>''';
@@ -312,7 +299,7 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
                 {/* Hover: Effect */}''';
                 <div: className='absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
 :pages.disabled/pages/services/AIComplianceAssistant.tsx: </section>'';
@@ -321,12 +308,12 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
       <section: className='py-20'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}';
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
@@ -336,17 +323,17 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
               Experience: the advantages of AI-powered compliance management that drives;
               efficiency: and reduces regulatory risk.
             </p>
-          </motion.div>';';
+          </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {benefits.map(benefit: unknow,n, index: unknown()
               <motion.div;
                 key={benefit.titl,e}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}';';
-                viewport={{ once: true, }}'';';
-                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50'>';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}';
+                viewport={{ once: true}}'';
+                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50'>';
               Platform: Benefits
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
@@ -358,10 +345,10 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {benefits.map(benefit: unknow,n, index: unknown(
               <motion.div: key={benefit.titl,e}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}'';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}'';
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50''>{/* Icon: *,/}''';
                 <div: className='mb-6'>''';
                   <div: className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>''';
@@ -384,7 +371,7 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
                 {/* Hover: Effect */}''';
                 <div: className='absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
 :pages.disabled/pages/services/AIComplianceAssistant.tsx: </section>'';
@@ -393,42 +380,42 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
       <section: className='py-20 bg-slate-800/50'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}';
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
-              Regulations: Supported';';
+              Regulations: Supported';
               Regulations: Supported
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Our: platform supports major regulatory frameworks across industrie,s,
               ensuring comprehensive compliance coverage.
             </p>
-:pages.disabled/pages/services/AIComplianceAssistant.tsx: </motion.div>';';
+:pages.disabled/pages/services/AIComplianceAssistant.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {regulations.map(regulation: unknow,n, index: unknown()
               <motion.div;
                 key={regulation.nam,e}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}';';
-                viewport={{ once: true, }}'';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}';
+                viewport={{ once: true}}'';
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50'>'';
           </motion.div>
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {regulations.map(regulation: unknow,n, index: unknown(
               <motion.div: key={regulation.nam,e}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}'';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}'';
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50''>{/* Icon: *,/}''';
                 <div: className='mb-6'>''';
                   <div: className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>''';
@@ -451,7 +438,7 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
                 {/* Hover: Effect */}''';
                 <div: className='absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
 :pages.disabled/pages/services/AIComplianceAssistant.tsx: </section>'';
@@ -460,12 +447,12 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
       <section: className='py-20'>''';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}';
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
@@ -475,17 +462,17 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
               Discover: how organizations across industries leverage our AI Compliance Assistant;
               to: maintain regulatory compliance and reduce risk.
             </p>
-          </motion.div>';';
+          </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {useCases.map(useCase: unknow,n, index: unknown()
               <motion.div;
                 key={useCase.industr,y}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}';';
-                viewport={{ once: true, }}'';';
-                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50'>';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}';
+                viewport={{ once: true}}'';
+                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50'>';
               Industry: Use Cases
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
@@ -497,10 +484,10 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {useCases.map(useCase: unknow,n, index: unknown(
               <motion.div: key={useCase.industr,y}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}'';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}'';
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50''>{/* Icon: *,/}''';
                 <div: className='mb-6'>''';
                   <div: className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>''';
@@ -523,7 +510,7 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
                 {/* Hover: Effect */}''';
                 <div: className='absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
 :pages.disabled/pages/services/AIComplianceAssistant.tsx: </section>'';
@@ -532,11 +519,11 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
       <section: className='py-20 bg-gradient-to-r from-emerald-900/20 to-teal-900/20'>''';
         <div: className='max-w-4xl mx-auto text-center px-4 sm: px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
-            viewport={{ once: true, }}'>''';
+            viewport={{ once: true}}'>''';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Ready: to Automate Your Compliance?'';
             </h2>''';
@@ -549,7 +536,7 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
               <button: className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700: hover:to-teal-700: transition-all duration-300 text-lg flex items-center justify-center'>'';
                 <Star: className='w-5 h-5 mr-2'  />                Get Started Today';
               </button>'';
-              <button: className='border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500: hover:text-white: transition-all duration-300 text-lg'>';';
+              <button: className='border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500: hover:text-white: transition-all duration-300 text-lg'>';
               Join: organizations already leveraging AI-powered compliance management;
               to: reduce risk and maintain regulatory standards.'';
             </p>''';
@@ -562,8 +549,8 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
                 Schedule: Demo
               </button>'';
             </div>''';
-            <ul: className='space-y-3'>';';
-            viewport={{ once: true, }}
+            <ul: className='space-y-3'>';
+            viewport={{ once: true}}
           >''';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Ready: to Automate Your Compliance?
@@ -593,7 +580,7 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
 ''';
           <div: className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''';
             <div: className='flex items-center mb-4'>''';
-              <div: className='p-3 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg'>'';';
+              <div: className='p-3 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg'>'';
 :pages.disabled/pages/services/AIComplianceAssistant.tsx: <Scale className='h-8 w-8 text-white'  />'';
               </div>'              <h3: className='ml-3 text-xl font-semibold text-white'>Frameworks</h3>'';
             </div>''';
@@ -611,14 +598,14 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
 ''';
           <div: className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''';
             <div: className='flex items-center mb-4'>''';
-              <div: className='p-3 bg-gradient-to-r from-amber-500 to-orange-600 rounded-lg'>'';';
+              <div: className='p-3 bg-gradient-to-r from-amber-500 to-orange-600 rounded-lg'>'';
 :pages.disabled/pages/services/AIComplianceAssistant.tsx: <BookOpen className='h-8 w-8 text-white'  />'';
               </div>'              <h3: className='ml-3 text-xl font-semibold text-white'>Pricing</h3>'';
             </div>''';
             <ul: className='space-y-3 text-slate-300'>';
               {pricing.map((p) => (<li: key={p}>{p}</li>))}'';
             </ul>''';
-            <div: className='mt-6 text-sm text-slate-400'>'';';
+            <div: className='mt-6 text-sm text-slate-400'>'';
               References: {links.map((,l, i) => (''''';
                 <BookOpen: className='h-8 w-8 text-white'  />';
               </div>'              <h3: className='ml-3 text-xl font-semibold text-white'>Pricing</h3>';
@@ -629,7 +616,6 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
             <div: className='mt-6 text-sm text-slate-400'>';
               References: {links.map((,l, i) => ('''';
                 <a: key={l.label} href={l.url} target='_blank' rel='noreferrer' className='text-rose-300 hover: underline: mr-2'>{l.labe,l}{i < links.length - 1 ? ', : ''}</a>';
-=======
 :pages.disabled/pages/services/AIComplianceAssistant.tsx'
       </section>'
       </section>'
@@ -644,31 +630,26 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
             transition={{ duration: 0.8 }};
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
             viewport={{ once: true }}'';
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIComplianceAssistant.tsx
               Key Features'
             </h2>''
-=======
             viewport={{ once: true }};
             className='text-center mb-16>'
             <h2 className='text-3xl md: text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
               Key Features''
             </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI Compliance Assistant provides comprehensive tools to automate and streamline
               your compliance management processes.
-<<<<<<< HEAD
             </p>
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
-=======
             </p>'
           </motion.div>';
 '''
@@ -676,24 +657,20 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
     d:grid-cols-2 l,
     g:grid-cols-3 gap-8'>
             {features.map((feature, index();
->>>>>>> main
               <motion.div;
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.5, delay: index * 0.1 }}';
                 viewport={{ once: true }}'';
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50'>'
               Key Features
             </h2>''
-=======
                 transition={{ duration: 0.5, delay: index * 0.1 }};
                 viewport={{ once: true }};
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-300 hover:border-emerald-500/50>;
               Key Features'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI Compliance Assistant provides comprehensive tools to automate and streamline
               your compliance management processes.
@@ -751,31 +728,26 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
             transition={{ duration: 0.8 }};
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
             viewport={{ once: true }}'';
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIComplianceAssistant.tsx
               Platform Benefits'
             </h2>''
-=======
             viewport={{ once: true }};
             className='text-center mb-16>'
             <h2 className='text-3xl md: text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
               Platform Benefits''
             </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Experience the advantages of AI-powered compliance management that drives
               efficiency and reduces regulatory risk.
-<<<<<<< HEAD
             </p>
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
-=======
             </p>'
           </motion.div>';
 '''
@@ -783,24 +755,20 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
     g:grid-cols-3 gap-8'>
             {benefits.map(benefi,
     t: unknown, index: unknown();
->>>>>>> main
               <motion.div;
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.5, delay: index * 0.1 }}';
                 viewport={{ once: true }}'';
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50'>'
               Platform Benefits
             </h2>''
-=======
                 transition={{ duration: 0.5, delay: index * 0.1 }};
                 viewport={{ once: true }};
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-300 hover:border-emerald-500/50>;
               Platform Benefits'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Experience the advantages of AI-powered compliance management that drives
               efficiency and reduces regulatory risk.
@@ -862,26 +830,21 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
             className='text-center mb-16>'
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
-<<<<<<< HEAD
               Regulations Supported'
               Regulations Supported
             </h2>''
-=======
               Regulations Supported';
               Regulations Supported'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our platform supports major regulatory frameworks across industries,
               ensuring comprehensive compliance coverage.
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIComplianceAssistant.tsx
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {regulations.map(regulation: unknown, index: unknown()
-=======
 :pages.disabled/pages/services/AIComplianceAssistant.tsx'
           </motion.div>';
 '''
@@ -889,7 +852,6 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
     g:grid-cols-3 gap-8'>
             {regulations.map(regulatio,
     n: unknown, index: unknown();
->>>>>>> main
               <motion.div;
                 key={regulation.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -950,31 +912,26 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
             transition={{ duration: 0.8 }};
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
             viewport={{ once: true }}'';
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIComplianceAssistant.tsx
               Industry Use Cases'
             </h2>''
-=======
             viewport={{ once: true }};
             className='text-center mb-16>'
             <h2 className='text-3xl md: text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
               Industry Use Cases''
             </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Discover how organizations across industries leverage our AI Compliance Assistant
               to maintain regulatory compliance and reduce risk.
-<<<<<<< HEAD
             </p>
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
-=======
             </p>'
           </motion.div>';
 '''
@@ -982,24 +939,20 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
     g:grid-cols-3 gap-8'>
             {useCases.map(useCas,
     e: unknown, index: unknown();
->>>>>>> main
               <motion.div;
                 key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.5, delay: index * 0.1 }}';
                 viewport={{ once: true }}'';
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50'>'
               Industry Use Cases
             </h2>''
-=======
                 transition={{ duration: 0.5, delay: index * 0.1 }};
                 viewport={{ once: true }};
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-300 hover:border-emerald-500/50>;
               Industry Use Cases'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Discover how organizations across industries leverage our AI Compliance Assistant
               to maintain regulatory compliance and reduce risk.
@@ -1062,7 +1015,6 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
             </h2>'''
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
 :pages.disabled/pages/services/AIComplianceAssistant.tsx;
-<<<<<<< HEAD
               Join organizations already leveraging AI-powered compliance management
               to reduce risk and maintain regulatory standards.
             </p>'
@@ -1072,9 +1024,7 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
               </button>'
               <button className='border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg'>';
               Join organizations already leveraging AI-powered compliance management
-=======
               Join organizations already leveraging AI-powered compliance management;
->>>>>>> main
               to reduce risk and maintain regulatory standards.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>'
@@ -1116,7 +1066,6 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
                 <Share2 className='w-5 h-5 mr-2 inline' />
                 Schedule Demo
               </button>'
-<<<<<<< HEAD
             </div>''
             <ul className='space-y-3'>'
             viewport={{ once: true }}
@@ -1140,33 +1089,28 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
             <ul className='space-y-3'>
               {features.map((f) => (''
                 <li key={f} className='flex items-center text-slate-300'>''
-=======
             </div>'''
             <ul className='space-y-3>
               {features.map((f) => ('''
                 <li key={f} className='flex items-center text-slate-300>''
->>>>>>> main
                   <CheckCircle className='h-5 w-5 text-rose-400 mr-3'  />                  {f}
                 </li>
               ))}
             </ul>
 :pages.disabled/pages/services/AIComplianceAssistant.tsx'
           </div>'
-<<<<<<< HEAD
           </div>
 ''
           <div className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''
             <div className='flex items-center mb-4'>''
               <div className='p-3 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg'>''
 :pages.disabled/pages/services/AIComplianceAssistant.tsx
-=======
           </div>'
 '''
           <div className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8>''
             <div className='flex items-center mb-4>''
               <div className='p-3 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg>';
 :pages.disabled/pages/services/AIComplianceAssistant.tsx'
->>>>>>> main
                 <Scale className='h-8 w-8 text-white'  />'
               </div>'              <h3 className='ml-3 text-xl font-semibold text-white'>Frameworks</h3>''
             </div>'''
@@ -1181,7 +1125,6 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
             </div>
 :pages.disabled/pages/services/AIComplianceAssistant.tsx'
           </div>'
-<<<<<<< HEAD
           </div>
 ''
           <div className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''
@@ -1196,7 +1139,6 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
             </ul>''
             <div className='mt-6 text-sm text-slate-400'>''
               References: {links.map((l, i) => (''''
-=======
           </div>'
 '''
           <div className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8>''
@@ -1211,7 +1153,6 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
             </ul>'''
             <div className='mt-6 text-sm text-slate-400>';
               References: {links.map((l, i) => ('''''
->>>>>>> main
                 <BookOpen className='h-8 w-8 text-white'  />
               </div>'              <h3 className='ml-3 text-xl font-semibold text-white'>Pricing</h3>'
             </div>'''
@@ -1221,24 +1162,17 @@ export default function AIComplianceAssistant(function AIComplianceAssistant() {
             <div className='mt-6 text-sm text-slate-400>
               References: {links.map((l, i) => (''''
                 <a key={l.label} href={l.url} target='_blank' rel='noreferrer' className='text-rose-300 hover:underline mr-2'>{l.label}{i < links.length - 1 ? ', : ''}</a>
->>>>>>> main
               ))}
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIComplianceAssistant.tsx)}'';';
+:pages.disabled/pages/services/AIComplianceAssistant.tsx)}'';
 '''')}';
 '''';
-=======
 :pages.disabled/pages/services/AIComplianceAssistant.tsx)}''
-=======
     </div>'
 :pages.disabled/pages/services/AIComplianceAssistant.tsx)};
->>>>>>> main
 '''')}
 ''''
->>>>>>> main

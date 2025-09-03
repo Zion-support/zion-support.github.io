@@ -1,21 +1,9 @@
-<<<<<<< HEAD
 
 '';,"});,"})
 ;,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
-<<<<<<< HEAD
-';';';';
-=======
-<<<<<<< HEAD
+';';
 ';
->>>>>>> main
 ;
-=======
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -31,20 +19,9 @@ export default function ProductReviews() {return (
     </div>
   );
 }
-=======
-<<<<<<< HEAD
 ';'
-=======
 
->>>>>>> main
 ;
-<<<<<<< HEAD
 &apos;'
-=======
 
 ""
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

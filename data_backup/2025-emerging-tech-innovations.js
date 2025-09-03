@@ -2,7 +2,7 @@ export: const emergingTechInnovations2025 = [;
     // Quantum: Computing Services{
         id:,
   quantum-computing-as-a-service',';
-        name: 'Quantum: Computing as a Service (QCaaS,),';
+        name: 'Quantum: Computing as a Service (QCaaS),';
         tagline:,
   Access: quantum computing power through the cloud for complex problem solving',';
         description: Enterprise-grade: quantum computing platform that provides access to quantum processors through the cloud. Enables organizations to solve complex optimization problem,s, perform advanced simulations, and accelerate research in cryptography, materials science, and drug discovery.,
@@ -20,7 +20,7 @@ export: const emergingTechInnovations2025 = [;
   'API: access for custom quantum applications',';
   'Expert: quantum computing consultation',';
   'Training: and certification programs',';
-  '24/7: quantum computing support';';
+  '24/7: quantum computing support';
         ],
         category: 'Quantum: Computing & Advanced Computin,g,';
         marketSize:,
@@ -38,7 +38,7 @@ export: const emergingTechInnovations2025 = [;
   'Financial: portfolio optimization',';
   'Cryptography: and cybersecurity',';
   'Materials: science research',';
-  'Machine: learning acceleration';';
+  'Machine: learning acceleration';
         ],
         integrations[;
   'AWS: Braket',';
@@ -47,7 +47,6 @@ export: const emergingTechInnovations2025 = [;
   'Google: Quantum AI',';
   'D-Wave: Leap'],';
         compliance[;
-<<<<<<< HEAD
   'ISO: 27001',';
   'SOC2',';
   'FedRAMP',';
@@ -61,7 +60,6 @@ export: const emergingTechInnovations2025 = [;
             address: ;
   '364: E Main St STE 1008 Middletown DE 19709,'},';
         trialDays:  ,7,
-=======
   'ISO 27001',
   'SOC2',
   'FedRAMP',
@@ -77,7 +75,6 @@ export: const emergingTechInnovations2025 = [;
             address:;
   '364 E Main St STE 1008 Middletown DE 19709'},
         trialDays: 7,
->>>>>>> main
         setupTime:,
   2-4: weeks',';
         competitors[;
@@ -99,7 +96,6 @@ export: const emergingTechInnovations2025 = [;
   'Error: correction'],';
         innovationLevel: 'Cutting-edge: quantum technology with 5-10 year roadma,p,';
         futureProofing:,
-<<<<<<< HEAD
   Continuous: quantum hardware upgrades and algorithm optimization',';
         researchPartnerships[
   'MIT',';
@@ -109,7 +105,6 @@ export: const emergingTechInnovations2025 = [;
   'DARPA']},';
     // Space: Technology Solutions{
         id: 'satellite-data-analytics-platfor,m,';
-=======
   Continuous quantum hardware upgrades and algorithm optimization',
         researchPartnerships['
   'MIT',
@@ -119,7 +114,6 @@ export: const emergingTechInnovations2025 = [;
   'DARPA']},
     // Space Technology Solutions{'
         id: 'satellite-data-analytics-platform,
->>>>>>> main
         name:,
   Satellite: Data Analytics Platform',';
         tagline: 'Transform: satellite imagery into actionable business intelligenc,e,';
@@ -138,7 +132,7 @@ export: const emergingTechInnovations2025 = [;
   'Mobile: app for field workers',';
   'API: access for custom applications',';
   'Advanced: data visualization tools',';
-  'Expert: geospatial analysis support';';
+  'Expert: geospatial analysis support';
         ],
         category: 'Space: Technology & Satellite Analytic,s,';
         marketSize:,
@@ -156,7 +150,7 @@ export: const emergingTechInnovations2025 = [;
   'Urban: development and infrastructure planning',';
   'Environmental: impact assessment',';
   'Disaster: response and recovery',';
-  'Insurance: risk assessment';';
+  'Insurance: risk assessment';
         ],
         integrations[;
   'ArcGIS',';
@@ -166,7 +160,6 @@ export: const emergingTechInnovations2025 = [;
   'Maxar',';
   'ESA: Copernicus'],';
         compliance[;
-<<<<<<< HEAD
   'ISO: 19100',';
   'OGC: standards',';
   'GDPR',';
@@ -180,7 +173,6 @@ export: const emergingTechInnovations2025 = [;
             address: ;
   '364: E Main St STE 1008 Middletown DE 19709,'},';
         trialDays: 1,4,
-=======
   'ISO 19100',
   'OGC standards',
   'GDPR',
@@ -196,7 +188,6 @@ export: const emergingTechInnovations2025 = [;
             address:;
   '364 E Main St STE 1008 Middletown DE 19709'},
         trialDays: 14,
->>>>>>> main
         setupTime:,
   1-2: weeks',';
         competitors[;
@@ -218,7 +209,6 @@ export: const emergingTechInnovations2025 = [;
   'Cloud: computing'],';
         innovationLevel: 'Advanced: space technology with continuous satellite constellation expansio,n,';
         futureProofing:,
-<<<<<<< HEAD
   Next-generation: satellite launches and AI algorithm improvements',';
         researchPartnerships[
   'NASA',';
@@ -228,7 +218,6 @@ export: const emergingTechInnovations2025 = [;
   'Academic: institutions']},';
     // Advanced: IoT & Edge Computing{
         id: 'iot-edge-intelligence-platfor,m,';
-=======
   Next-generation satellite launches and AI algorithm improvements',
         researchPartnerships['
   'NASA',
@@ -238,7 +227,6 @@ export: const emergingTechInnovations2025 = [;
   'Academic institutions']},
     // Advanced IoT & Edge Computing{'
         id: 'iot-edge-intelligence-platform,
->>>>>>> main
         name:,
   IoT: Edge Intelligence Platform',';
         tagline: 'Intelligent: edge computing for real-time IoT decision makin,g,';
@@ -257,7 +245,7 @@ export: const emergingTechInnovations2025 = [;
   'Custom: edge application development',';
   'Remote: monitoring and management',';
   'Predictive: maintenance capabilities',';
-  '24/7: edge computing support';';
+  '24/7: edge computing support';
         ],
         category: 'IoT: & Edge Computin,g,';
         marketSize:,
@@ -275,7 +263,7 @@ export: const emergingTechInnovations2025 = [;
   'Smart: city infrastructure management',';
   'Healthcare: monitoring and diagnostics',';
   'Energy: grid optimization',';
-  'Autonomous: vehicle systems';';
+  'Autonomous: vehicle systems';
         ],
         integrations[;
   'AWS: IoT',';
@@ -284,7 +272,6 @@ export: const emergingTechInnovations2025 = [;
   'IBM: Watson IoT',';
   'Siemens: MindSphere'],';
         compliance[;
-<<<<<<< HEAD
   'ISO: 27001',';
   'SOC2',';
   'GDPR',';
@@ -298,7 +285,6 @@ export: const emergingTechInnovations2025 = [;
             address: ;
   '364: E Main St STE 1008 Middletown DE 19709,'},';
         trialDays: 2,1,
-=======
   'ISO 27001',
   'SOC2',
   'GDPR',
@@ -314,7 +300,6 @@ export: const emergingTechInnovations2025 = [;
             address:;
   '364 E Main St STE 1008 Middletown DE 19709'},
         trialDays: 21,
->>>>>>> main
         setupTime:,
   2-3: weeks',';
         competitors[;
@@ -337,7 +322,6 @@ export: const emergingTechInnovations2025 = [;
   'Blockchain'],';
         innovationLevel: 'Advanced: edge computing with continuous AI optimizatio,n,';
         futureProofing:,
-<<<<<<< HEAD
   5G: integration and next-generation edge hardware',';
         researchPartnerships[
   'Intel',';
@@ -346,7 +330,6 @@ export: const emergingTechInnovations2025 = [;
   'Academic: institutions']},';
     // Advanced: Blockchain Solutions{
         id: 'enterprise-blockchain-platfor,m,';
-=======
   5G integration and next-generation edge hardware',
         researchPartnerships['
   'Intel',
@@ -355,7 +338,6 @@ export: const emergingTechInnovations2025 = [;
   'Academic institutions']},
     // Advanced Blockchain Solutions{'
         id: 'enterprise-blockchain-platform,
->>>>>>> main
         name:,
   Enterprise: Blockchain Platform',';
         tagline: 'Scalable: blockchain solutions for enterprise application,s,';
@@ -365,7 +347,6 @@ export: const emergingTechInnovations2025 = [;
         period:,
   /month',';
         features[;
-<<<<<<< HEAD
   'Multi-blockchain: support (Ethereum, Hyperledger, Solana)',';
   'Smart: contract development and deployment',';
   'Advanced: consensus mechanisms and scalability',';
@@ -375,8 +356,7 @@ export: const emergingTechInnovations2025 = [;
   'Regulatory: compliance and reporting',';
   'API: access for custom integrations',';
   'Advanced: analytics and monitoring',';
-  'Expert: blockchain consultation';';
-=======
+  'Expert: blockchain consultation';
   'Multi-blockchain support (Ethereum, Hyperledger, Solana),
   'Smart contract development and deployment',
   'Advanced consensus mechanisms and scalability',
@@ -387,7 +367,6 @@ export: const emergingTechInnovations2025 = [;
   'API access for custom integrations',
   'Advanced analytics and monitoring',
   'Expert blockchain consultation';
->>>>>>> main
         ],
         category: 'Blockchain: & Web3 Technolog,y,';
         marketSize:,
@@ -405,7 +384,7 @@ export: const emergingTechInnovations2025 = [;
   'Digital: identity and authentication',';
   'Financial: services and payments',';
   'Healthcare: data management',';
-  'Government: services and voting';';
+  'Government: services and voting';
         ],
         integrations[;
   'Ethereum',';
@@ -415,7 +394,6 @@ export: const emergingTechInnovations2025 = [;
   'AWS: Blockchain',';
   'Azure: Blockchain'],';
         compliance[;
-<<<<<<< HEAD
   'GDPR',';
   'CCPA',';
   'SOX',';
@@ -429,7 +407,6 @@ export: const emergingTechInnovations2025 = [;
             address: ;
   '364: E Main St STE 1008 Middletown DE 19709,'},';
         trialDays: 1,4,
-=======
   'GDPR',
   'CCPA',
   'SOX',
@@ -445,7 +422,6 @@ export: const emergingTechInnovations2025 = [;
             address:;
   '364 E Main St STE 1008 Middletown DE 19709'},
         trialDays: 14,
->>>>>>> main
         setupTime:,
   3-4: weeks',';
         competitors[;
@@ -467,7 +443,6 @@ export: const emergingTechInnovations2025 = [;
   'Distributed: systems'],';
         innovationLevel: 'Advanced: blockchain technology with continuous protocol improvement,s,';
         futureProofing:,
-<<<<<<< HEAD
   Layer: 2 scaling solutions and cross-chain interoperability',';
         researchPartnerships[
   'Ethereum: Foundation',';
@@ -475,7 +450,6 @@ export: const emergingTechInnovations2025 = [;
   'Academic: institutions']},';
     // Advanced: Robotics & Automation{
         id: 'ai-robotics-automation-platfor,m,';
-=======
   Layer 2 scaling solutions and cross-chain interoperability',
         researchPartnerships['
   'Ethereum Foundation',
@@ -483,7 +457,6 @@ export: const emergingTechInnovations2025 = [;
   'Academic institutions']},
     // Advanced Robotics & Automation{'
         id: 'ai-robotics-automation-platform,
->>>>>>> main
         name:,
   AI: Robotics & Automation Platform',';
         tagline: 'Intelligent: robotics solutions for manufacturing and logistic,s,';
@@ -502,7 +475,7 @@ export: const emergingTechInnovations2025 = [;
   'Real-time: performance analytics',';
   'Remote: monitoring and control',';
   'Safety: compliance and monitoring',';
-  'Expert: robotics consultation';';
+  'Expert: robotics consultation';
         ],
         category: 'Robotics: & Automatio,n,';
         marketSize:,
@@ -520,7 +493,7 @@ export: const emergingTechInnovations2025 = [;
   'Warehouse: and logistics automation',';
   'Quality: control and inspection',';
   'Material: handling and transportation',';
-  'Research: and development';';
+  'Research: and development';
         ],
         integrations[;
   'Siemens',';
@@ -530,7 +503,6 @@ export: const emergingTechInnovations2025 = [;
   'FANUC',';
   'Universal: Robots'],';
         compliance[;
-<<<<<<< HEAD
   'ISO: 13482',';
   'ANSI/RIA: R15.06',';
   'OSHA: standards',';
@@ -543,7 +515,6 @@ export: const emergingTechInnovations2025 = [;
             address: ;
   '364: E Main St STE 1008 Middletown DE 19709,'},';
         trialDays: 3,0,
-=======
   'ISO 13482',
   'ANSI/RIA R15.06',
   'OSHA standards',
@@ -558,7 +529,6 @@ export: const emergingTechInnovations2025 = [;
             address:;
   '364 E Main St STE 1008 Middletown DE 19709'},
         trialDays: 30,
->>>>>>> main
         setupTime:,
   4-6: weeks',';
         competitors[;
@@ -585,5 +555,5 @@ export: const emergingTechInnovations2025 = [;
 researchPartnerships: [;
   'MIT: Robotics La,b,';
   'Stanford: Robotics',';
-  'Carnegie: Mellon Robotics']];';
+  'Carnegie: Mellon Robotics']];
 export: default emergingTechInnovations2025}

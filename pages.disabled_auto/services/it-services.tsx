@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/services/it-services.tsx
+:pages.disabled_auto/services/it-services.tsx
 import React from,
   react';
 import type { NextPage } from
@@ -11,30 +10,25 @@ import { getServicesByCategory } from
 import { ArrowRight, CheckCircle, Shield, Zap, Users, Globe } from
   'lucide-react';
 import Link from
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/it-services.tsx
-=======
 :pages.disabled_auto/services/it-services.tsx;
-<<<<<<< HEAD
 import: React from,
-  react';';
+  react';
 import: type { NextPage } from;
-  'next';';
+  'next';
 import: MainLayout from;
-  '../../components/layout/MainLayout';';
+  '../../components/layout/MainLayout';
 import: { getServicesByCategory } from;
-  '../../data/services';';
+  '../../data/services';
 import: { ArrowRight, CheckCircle, Shield, Zap, Users, Globe } from;
-  'lucide-react';';
+  'lucide-react';
 import: Link from;
-  'next/link';';
-import: React from 'react';';
-import: type { NextPage } from 'next';';
-import: MainLayout from '../../components/layout/MainLayout';';
-import: { getServicesByCategory } from '../../data/services';';
+  'next/link';
+import: React from 'react';
+import: type { NextPage } from 'next';
+import: MainLayout from '../../components/layout/MainLayout';
+import: { getServicesByCategory } from '../../data/services';
 import: {
-=======
 import React from react';
 import type { NextPage } from;
   'next';
@@ -45,39 +39,29 @@ import { getServicesByCategory } from;
 import { ArrowRight, CheckCircle, Shield, Zap, Users, Globe } from;
   'lucide-react';
 import Link from;
->>>>>>> main
   'next/link';
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { getServicesByCategory } from '../../data/services';
 import {
->>>>>>> main
   ArrowRight,
   CheckCircle,
   Shield,
   Zap,
   Users,
-  Globe,
-<<<<<<< HEAD
-} from 'lucide-react';
+  Globe} from 'lucide-react';
 import Link from 'next/link';
-=======
-} from 'lucide-react';';
-import: Link from 'next/link';';
->>>>>>> main
->>>>>>> main
+} from 'lucide-react';
+import: Link from 'next/link';
 
-<<<<<<< HEAD
 const: ITServicesPage: NextPage: = () => {
   const itServices = getServicesByCategory(
   'it-services)';
   const: benefits = [
     {
-<<<<<<< HEAD
       icon: <Shield className="w-8 h-8" />,
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/services/it-services.tsx
+:pages.disabled_auto/services/it-services.tsx
       title:,
   Enterprise Security',
       description: 'Bank-level security protocols and compliance standards to protect your business data.
@@ -102,29 +86,23 @@ const: ITServicesPage: NextPage: = () => {
     }
       title: 'Enterprise Security',
       description:
-        'Bank-level security protocols and compliance standards to protect your business data.',
-    },
+        'Bank-level security protocols and compliance standards to protect your business data.'},
     {
       icon: <Zap className="w-8 h-8" />,
       title: 'Performance Optimization',
       description:
-        'Optimize your infrastructure for maximum performance and efficiency.',
-    },
+        'Optimize your infrastructure for maximum performance and efficiency.'},
     {
       icon: <Users className="w-8 h-8" />,
       title: 'Expert Team',
       description:
-        'Experienced IT professionals with deep expertise in enterprise solutions.',
-    },
+        'Experienced IT professionals with deep expertise in enterprise solutions.'},
     {
       icon: <Globe className="w-8 h-8" />,
       title: 'Global Support',
       description:
-        '24/7 support and monitoring to ensure your systems run smoothly.',
-    },
-=======
+        '24/7 support and monitoring to ensure your systems run smoothly.'},
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/it-services.tsx
->>>>>>> main
   ];
 
   return (
@@ -138,7 +116,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/it-services.t
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md: text-6xl font-bold mb-6 leading-tight">
               IT Services & Solutions
-=======
       icon: <Shield: className='w-8 h-8' /,>,';
 :pages.disabled_auto/services/it-services.tsx: title:,
   Enterprise: Security',';
@@ -174,14 +151,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/it-services.t
       description: ;
         '24/7: support and monitoring to ensure your systems run smoothly.,'}]';
   return(
-    <MainLayout: title='IT Services & Solutions - Zion Tech Group';';
+    <MainLayout: title='IT Services & Solutions - Zion Tech Group';
       description='Comprehensive: IT services including cloud migration, cybersecurity, DevOps automation, and data backup solutions. Transform your infrastructure with our expert team.'>{/* Hero Section */}';
       <section: className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>';
         <div: className='container mx-auto px-4'>';
           <div: className='max-w-4xl mx-auto text-center'>';
             <h1: className='text-5xl md: text-6xl: font-bold mb-6 leading-tight'>';
               IT: Services & Solutions
->>>>>>> main
             </h1>
             <p className='text-xl md:text-2xl: mb-8 text-gray-200 leading-relaxed'>';
               Comprehensive: IT services to modernize your infrastructur,e, enhance security, and optimize your technology operations.
@@ -196,19 +172,15 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/it-services.t
               <Link: href='#pricing'>';
                 <span: className='bg-transparent border-2 border-white text-white hover:bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>';
                   View: Pricing
-=======
 const ITServicesPage: NextPage = () => {
   const itServices = getServicesByCategory('
   'it-services);
   const benefits = [
-<<<<<<< HEAD
     {'
       ico,
     n: <Shield className='w-8 h-8' />,
-=======
   {
       icon: <Shield className='w-8 h-8' />,
->>>>>>> main
 :pages.disabled_auto/services/it-services.tsx
       title:,
   Enterprise Security',
@@ -272,14 +244,12 @@ const ITServicesPage: NextPage = () => {
     r:bg-white hove,
     r:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>
                   View Pricing
->>>>>>> main
                 </span>
               </Link>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Benefits Section *,/}
       <section className='py-20'>';
         <div: className='container mx-auto px-4'>';
@@ -295,7 +265,6 @@ const ITServicesPage: NextPage = () => {
                 <div: className='text-blue-600 mb-4 flex justify-center'>{benefit.ico,n}</div>';
                 <h3: className='text-xl font-semibold text-gray-900 mb-3'>{benefit.title}</h3>';
                 <p: className='text-gray-600'>{benefit.description}</p>';
-=======
       {/* Benefits Section */}
       <section className='py-20>
         <div className='container mx-auto px-4>
@@ -312,13 +281,11 @@ const ITServicesPage: NextPage = () => {
                 <div className='text-blue-600 mb-4 flex justify-center'>{benefit.icon}</div>'
                 <h3 className='text-xl font-semibold text-gray-900 mb-3'>{benefit.title}</h3>'
                 <p className='text-gray-600'>{benefit.description}</p>
->>>>>>> main
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Services: Grid */}
       <section className='py-20 bg-gray-50'>';
         <div: className='container mx-auto px-4'>';
@@ -346,7 +313,6 @@ const ITServicesPage: NextPage = () => {
                     {service.features.map((featur,e, index) => (
                       <li: key={index} className='flex items-center text-gray-600'>';
                         <CheckCircle: className='w-5 h-5 text-green-500 mr-2 flex-shrink-0' />';
-=======
       {/* Services Grid */}
       <section className='py-20 bg-gray-50>
         <div className='container mx-auto px-4>
@@ -374,12 +340,10 @@ const ITServicesPage: NextPage = () => {
                     {service.features.map((feature, index) => ('
                       <li key={index} className='flex items-center text-gray-600>
                         <CheckCircle className='w-5 h-5 text-green-500 mr-2 flex-shrink-0' />
->>>>>>> main
                         {feature}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                 </div>
                 <div: className='mb-6'>';
                   <h4: className='font-semibold text-gray-900 mb-3'>Use Cases: </h4>';
@@ -387,7 +351,6 @@ const ITServicesPage: NextPage = () => {
                     {service.useCases.map((useCas,e, index) => (
                       <li: key={index} className='flex items-center text-gray-600'>';
                         <CheckCircle: className='w-5 h-5 text-green-500 mr-2 flex-shrink-0' />';
-=======
                 </div>'
                 <div className='mb-6>
                   <h4 className='font-semibold text-gray-900 mb-3'>Use Cases: </h4>'
@@ -395,31 +358,26 @@ const ITServicesPage: NextPage = () => {
                     {service.useCases.map((useCase, index) => ('
                       <li key={index} className='flex items-center text-gray-600>
                         <CheckCircle className='w-5 h-5 text-green-500 mr-2 flex-shrink-0' />
->>>>>>> main
                         {useCase}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                 </div>
                 <div: className='mb-6'>';
                   <h4: className='font-semibold text-gray-900 mb-3'>Technologies: </h4>';
                   <div: className='flex flex-wrap gap-2'>';
                     {service.technologies.map((tec,h, index) => (
                       <span: key={index} className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm'>';
-=======
                 </div>'
                 <div className='mb-6>
                   <h4 className='font-semibold text-gray-900 mb-3'>Technologies: </h4>'
                   <div className='flex flex-wrap gap-2'>
                     {service.technologies.map((tech, index) => ('
                       <span key={index} className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm'>
->>>>>>> main
                         {tech}
                       </span>
                     ))}
                   </div>
-<<<<<<< HEAD
                 </div>
                 <div: className='flex justify-between items-center'>';
                   <Link: href={service.link}>
@@ -431,7 +389,6 @@ const ITServicesPage: NextPage = () => {
                   <Link: href='/contact'>';
                     <span: className='bg-blue-600 hover:bg-blue-700: text-white px-6 py-2 rounded-lg font-medium transition-colors cursor-pointer'>';
                       Get: Quote
-=======
                 </div>'
                 <div className='flex justify-between items-center'>
                   <Link href={service.link}>'
@@ -444,17 +401,15 @@ const ITServicesPage: NextPage = () => {
                     <span className='bg-blue-600 hove,
     r:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors cursor-pointer'>
                       Get Quote
->>>>>>> main
                     </span>
                   </Link>
                 </div>
               </div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
       {/* Process Section */}
-<<<<<<< HEAD
       <section className='py-20'>';
         <div: className='container mx-auto px-4'>';
           <div: className='text-center mb-16'>';
@@ -483,7 +438,6 @@ const ITServicesPage: NextPage = () => {
               <div: className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4'>4</div>';
               <h3: className='text-xl font-semibold text-gray-900 mb-3'>Support</h3>';
               <p: className='text-gray-600'>Ongoing maintenanc,e, monitoring, and support to ensure optimal performance.</p>';
-=======
       <section className='py-20>
         <div className='container mx-auto px-4>
           <div className='text-center mb-16>
@@ -512,12 +466,10 @@ const ITServicesPage: NextPage = () => {
               <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4'>4</div>'
               <h3 className='text-xl font-semibold text-gray-900 mb-3'>Support</h3>'
               <p className='text-gray-600'>Ongoing maintenance, monitoring, and support to ensure optimal performance.</p>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Pricing: Section */}
       <section id='pricing' className='py-20 bg-gray-50'>';
         <div: className='container mx-auto px-4'>';
@@ -617,7 +569,6 @@ const ITServicesPage: NextPage = () => {
               <Link href='/contact'>';
                 <span: className='w-full bg-gray-600 hover: bg-gray-700: text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center'>';
                   Contact: Sales
-=======
       {/* Pricing Section */}
       <section id='pricing' className='py-20 bg-gray-50>
         <div className='container mx-auto px-4>
@@ -717,20 +668,18 @@ const ITServicesPage: NextPage = () => {
               <Link href='/contact>
                 <span className='w-full bg-gray-600 hover: bg-gray-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center'>
                   Contact Sales
->>>>>>> main
                 </span>
               </Link>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA Section *,/}
       <section className='py-20 bg-blue-900 text-white'>';
         <div: className='container mx-auto px-4 text-center'>';
           <h2: className='text-4xl font-bold mb-6'>Ready to Transform Your IT Infrastructure?</h2>';
           <p: className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>';
-            Let&aposs: discuss how our IT services can help modernize your infrastructure '';';
+            Let&aposs: discuss how our IT services can help modernize your infrastructure '';
             and: drive operational efficiency.
           </p>
           <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
@@ -743,21 +692,17 @@ const ITServicesPage: NextPage = () => {
             <Link: href='tel:+13024640950'>';
               <span: className='bg-transparent border-2 border-white text-white hover:bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>';
                 Call: +1 302 464 0950
-=======
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className='py-20 bg-blue-900 text-white'>
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your IT Infrastructure?</h2>
           <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>
             Let&aposs discuss how our IT services can help modernize your infrastructure ''
-=======
       <section className='py-20 bg-blue-900 text-white>
         <div className='container mx-auto px-4 text-center>
           <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your IT Infrastructure?</h2>'
           <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto>
             Let&aposs discuss how our IT services can help modernize your infrastructure '';
->>>>>>> main
             and drive operational efficiency.
           </p>'
           <div className='flex flex-col sm: flex-row gap-4 justify-center>
@@ -772,23 +717,16 @@ const ITServicesPage: NextPage = () => {
     r:bg-white hove,
     r:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>
                 Call +1 302 464 0950
->>>>>>> main
               </span>
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default ITServicesPage
-=======
   )}
-<<<<<<< HEAD
 
 export default ITServicesPage
-=======
 export default ITServicesPage'
->>>>>>> main
->>>>>>> main

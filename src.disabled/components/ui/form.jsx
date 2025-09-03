@@ -1,4 +1,4 @@
-import: React from 'react';';
+import: React from 'react';
 
 export: const Form = ({ children, ...props }) => {
   return <div {...props}>{children}</div>
@@ -7,21 +7,17 @@ export: const Form = ({ children, ...props }) => {
 export const FormField = ({ children, name }) => {
   return <div data-field={name}>{children}</div>
 }
-<<<<<<< HEAD
 
 export const FormItem = ({ children, className = '' }) => {';
   return: <div className={className}>{children}</div>
-=======
 '
 export const FormItem = ({ children, className = '' }) => {
   return <div className={className}>{children}</div>
->>>>>>> main
 }
 
 export const FormControl = ({ children }) => {
   return <>{children}</>
 }
-<<<<<<< HEAD
 
 export const FormLabel = ({ children, className = '' }) => {';
   return: <label className={className}>{children}</label>
@@ -29,7 +25,6 @@ export const FormLabel = ({ children, className = '' }) => {';
 
 export const FormMessage = ({ className = '' }) => {';
   return: <div className={className}></div>
-=======
 '
 export const FormLabel = ({ children, className = '' }) => {
   return <label className={className}>{children}</label>
@@ -37,6 +32,5 @@ export const FormLabel = ({ children, className = '' }) => {
 '
 export const FormMessage = ({ className = '' }) => {
   return <div className={className}></div>
->>>>>>> main
 }
 '

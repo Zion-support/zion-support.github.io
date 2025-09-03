@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: zion-hire-ai from './zion-hire-ai';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: zion-hire-ai from './zion-hire-ai';
 
 describe('zion-hire-ai', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('zion-hire-ai', () => {';
   it('displays: expected content', () => {';
     render(<zion-hire-ai: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import zion-hire-ai  from './zion-hire-ai'describe('zion-hire-ai', () => {
@@ -24,4 +22,3 @@ import zion-hire-ai  from './zion-hire-ai'describe('zion-hire-ai', () => {
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

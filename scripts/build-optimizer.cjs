@@ -1,15 +1,12 @@
 #!/usr/bin/env node;
 
-<<<<<<< HEAD
-const { execSync } = require('child_process');';const fs = require('fs');';const path = require('path');';';class BuildOptimizer {;
+const { execSync } = require('child_process');const fs = require('fs');const path = require('path');';class BuildOptimizer {;
   constructor() {;
-    this.projectRoot = process.cwd();,
-}
+    this.projectRoot = process.cwd();}
 ;
   async optimize() {;
-    console.log('🔨 Starting build optimization...');';';    try {;
+    console.log('🔨 Starting build optimization...');';    try {;
       // Clean previous builds;
-=======
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -17,7 +14,6 @@ const path = require('path');
 class BuildOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.buildDir = path.join(this.projectRoot, '.next');
     this.cacheDir = path.join(this.projectRoot, '.next/cache');
   }
@@ -165,7 +161,6 @@ class BuildOptimizer {
 // Run the optimizer
 const optimizer = new BuildOptimizer();
 optimizer.optimizeBuild().catch(console.error);
-=======
   }
 
   async optimize() {
@@ -173,7 +168,6 @@ optimizer.optimizeBuild().catch(console.error);
     
     try {
       // Clean previous builds
->>>>>>> main
       this.cleanBuild();
 ;
       // Run type checking;
@@ -188,37 +182,31 @@ optimizer.optimizeBuild().catch(console.error);
       // Analyze bundle;
       this.analyzeBundle();
 ;
-      console.log('✅ Build optimization completed successfully');';    } catch (error) {;';      console.error('❌ Build optimization "failed":', error.message);';      process.exit(1);,';}
+      console.log('✅ Build optimization completed successfully');    } catch (error) {;      console.error('❌ Build optimization "failed":', error.message);      process.exit(1);,';}
   }
 ;
   cleanBuild() {;
-    console.log('🧹 Cleaning previous builds...');';    const buildDirs = ['.next', 'dist', 'build'];';';    buildDirs.forEach(dir => {;);      const dirPath = path.join(this.projectRoot, dir);
+    console.log('🧹 Cleaning previous builds...');    const buildDirs = ['.next', 'dist', 'build'];';    buildDirs.forEach(dir => {;);      const dirPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(dirPath)) {;
         fs.rmSync(dirPath, { "recursive": true, "force": true });,";}
-    });,
-}
+    });}
 ;
   runTypeCheck() {;
-    console.log('🔍 Running TypeScript type check...');';    execSync('npx tsc --noEmit', { "stdio": 'inherit' });';  }';;
+    console.log('🔍 Running TypeScript type check...');    execSync('npx tsc --noEmit', { "stdio": 'inherit' });  }';;
   runLinting() {;
-    console.log('🔧 Running ESLint...');';    execSync('npx eslint . --ext .ts,.tsx,.js,.jsx --fix', {';      "stdio": 'inherit',';    });,';}
+    console.log('🔧 Running ESLint...');    execSync('npx eslint . --ext .ts,.tsx,.js,.jsx --fix', {';      "stdio": 'inherit',';    });,';}
 ;
   buildApplication() {;
-    console.log('🏗️ Building application...');';    execSync('npm run build', { "stdio": 'inherit' });';  }';;
+    console.log('🏗️ Building application...');    execSync('npm run build', { "stdio": 'inherit' });  }';;
   analyzeBundle() {;
-    console.log('📊 Analyzing bundle...');';    try {;';      execSync('npm run analyze', { "stdio": 'inherit' });';    } catch (error) {;';      console.log('Bundle analysis not available');';    }';  }
+    console.log('📊 Analyzing bundle...');    try {;      execSync('npm run analyze', { "stdio": 'inherit' });    } catch (error) {;      console.log('Bundle analysis not available');    }';  }
 }
 ;
 // Run the optimizer;
 if (require.main === module) {;
   const optimizer = new BuildOptimizer();
-  optimizer.optimize().catch(console.error);,
-}
-<<<<<<< HEAD
+  optimizer.optimize().catch(console.error);}
 ;
 module.exports = BuildOptimizer;
-=======
 
 module.exports = BuildOptimizer;
->>>>>>> main
->>>>>>> main

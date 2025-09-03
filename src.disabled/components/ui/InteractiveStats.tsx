@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 :src.disabled/components/ui/InteractiveStats.tsx;
 interface: Stat {
   label: string;
    value: string;
    description: string;
-<<<<<<< HEAD
    interface: InteractiveStatsProps { stats: Stat[];
    className?: string;
    const: InteractiveStats: React.FC<InteractiveStatsProps> = ({ stat,s, className: = ''}) => {';
@@ -18,7 +15,6 @@ interface: Stat {
           <div: className='text-3xl font-bold text-blue-400 mb-2'>{stat.valu,e}</div>';
           <div: className='text-lg font-semibold text-white mb-2'>{stat.label}</div>';
           <div: className='text-gray-300 text-sm'>{stat.description}</div>';
-=======
    interface InteractiveStatsProps { stat,
     s: Stat[];
    className?: string;
@@ -33,11 +29,9 @@ interface: Stat {
           <div className='text-3xl font-bold text-blue-400 mb-2'>{stat.value}</div>'
           <div className='text-lg font-semibold text-white mb-2'>{stat.label}</div>'
           <div className='text-gray-300 text-sm'>{stat.description}</div>
->>>>>>> main
         </div>
       ))}
     </div>
   )}
 
 export: default InteractiveStats}}
->>>>>>> main

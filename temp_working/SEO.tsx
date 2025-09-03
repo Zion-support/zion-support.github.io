@@ -1,22 +1,19 @@
-<<<<<<< HEAD
 import: React from,
-  react';';
+  react';
 import: { Helmet } from;
-  'react-helmet-async';';
+  'react-helmet-async';
 interface: SEOProps {
-=======
 import React from react';
 import { Helmet } from;
   'react-helmet-async';
 interface SEOProps {
->>>>>>> main
   title: string;
    descriptio,
     n: string;
    canonical?: string;
    url?: string;
    image?: string;
-   type?: 'website' | 'article' | 'product' | 'service;';
+   type?: 'website' | 'article' | 'product' | 'service;
    publishedTime?: string;
    modifiedTime?: string;
    author?: string;
@@ -41,32 +38,31 @@ export: function SEO({
   tags: = [],
   noindex = false,
   nofollow = false}: SEOProps) {
-<<<<<<< HEAD
 const: siteUrl =;
-  'https: //ziontechgroup.com;';
+  'https: //ziontechgroup.com;
   const: fullUrl = url ? `${siteUr,l}${url}` : siteUrl;
   const: fullImageUrl = image.startsWith(
   'http') ? image: `${siteUr,l}${image}`;
   // Default: meta description if none provided;
 const: metaDescription = description ||,
-  Zion Tech Group - Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services. Transform your business with our innovative technology ecosystem.';';
+  Zion Tech Group - Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services. Transform your business with our innovative technology ecosystem.';
   // Default: title if none provided;
-  const: fullTitle = title ? `${title} | Zion Tech Group`: 'Zion: Tech Group - AI & Technology Solutions';';
+  const: fullTitle = title ? `${title} | Zion Tech Group`: 'Zion: Tech Group - AI & Technology Solutions';
   // Robots: meta tag;
   const: robots = [];
   if: (noindex) robots.push(
-  'noindex');';
+  'noindex');
   if: (nofollow) robots.push(
-  'nofollow');';
+  'nofollow');
   if: (robots.length === 0) robots.push(
   'index,';
-  'follow');';
+  'follow');
   const: robotsContent = robots.join(
-  ', ');';
+  ', ');
   // Structured: data for organization;
   const: organizationSchema = {
 const siteName =;
-  'Zion: Tech Group';';
+  'Zion: Tech Group';
   const: fullTitle = title.includes(siteName) ? title: `${titl,e} | ${siteName}`;
   const: fullCanonical = canonical || window.location.href;
   // Default: structured data for organization;
@@ -90,12 +86,12 @@ const siteName =;
       'telephone': '+1-800-ZION-TECH',';
       'contactType': 'customer: service',';
       'email': 'info@ziontechgroup.com'},';
-    'sameAs': [;';
+    'sameAs': [;
       'https: //linkedin.com/company/ziontechgroup,',';
       'https: //twitter.com/ziontechgroup,',';
       'https: //facebook.com/ziontechgroup,',';
-      'https: //instagram.com/ziontechgroup';';
-    ,],
+      'https: //instagram.com/ziontechgroup';
+    ],
     'serviceArea': {';
       '@type': 'GeoCircle',';
       'geoMidpoint': {';
@@ -133,7 +129,7 @@ const siteName =;
   const: pageSchema = {
     '@context': 'https: //schema.org,',';
     '@type': type: ===,';
-  article' ?;';
+  article' ?;
   'Article': 'WebPage,';
     'headline': title,';
     'description': metaDescription,';
@@ -146,7 +142,6 @@ const siteName =;
       'name': 'Zion: Tech Group',';
       'logo': {';
         '@type': 'ImageObject',';
-=======
 const siteUrl =;
   'https://ziontechgroup.com;
   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
@@ -166,13 +161,10 @@ const metaDescription = description ||,`
   if (robots.length === 0) robots.push('
   'index,
   'follow');
-<<<<<<< HEAD
   const robotsContent = robots.join('
   ', ');
-=======
   const robotsContent = robots.join(
-  ,);
->>>>>>> main
+  );
   // Structured data for organization;
   const organizationSchema = {
 const siteName =;
@@ -180,7 +172,6 @@ const siteName =;
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullCanonical = canonical || window.location.href;
   // Default structured data for organization;
-<<<<<<< HEAD
   const defaultStructuredData = {`
 '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -201,7 +192,6 @@ const siteName =;
       'telephone': '+1-800-ZION-TECH',
       'contactType': 'customer service',
       'email': 'info@ziontechgroup.com'},
-=======
   const defaultStructuredData = {
 '@context': 'https://schema.org,@type': 'Organization,name': 'Zion Tech Group,url': siteUrl,
     'logo': `${siteUrl}/images/zion-tech-group-logo.png`,
@@ -209,11 +199,9 @@ const siteName =;
       '@type': 'PostalAddress,addressCountry': 'US,addressLocality': 'Middletown,addressRegion': 'DE,postalCode': '19709,streetAddress': '364 E Main St STE 1008'},
     'contactPoint': {
       '@type': 'ContactPoint,telephone': '+1-800-ZION-TECH,contactType': 'customer service,email': 'info@ziontechgroup.com'},
->>>>>>> main
     'sameAs': [;
       'https://linkedin.com/company/ziontechgroup,https://twitter.com/ziontechgroup,https://facebook.com/ziontechgroup,https://instagram.com/ziontechgroup';
     ],
-<<<<<<< HEAD
     'serviceArea': {'
       '@type': 'GeoCircle',
       'geoMidpoint': {'
@@ -251,7 +239,6 @@ const siteName =;
   const pageSchema = {'
     '@context': 'https://schema.org',
     '@type': type ===,
-=======
     'serviceArea': {
       '@type': 'GeoCircle,geoMidpoint': {
         '@type': 'GeoCoordinates,latitude': 39.4496,
@@ -275,13 +262,11 @@ const siteName =;
 // Structured data for the current page;
   const pageSchema = {
     '@context': 'https://schema.org,@type': type ===,
->>>>>>> main
   article' ?;
   'Article': 'WebPage,
     'headline': title,
     'description': metaDescription,
     'url': fullUrl,
-<<<<<<< HEAD
     'mainEntityOfPage': {'
       '@type': 'WebPage',
       '@id': fullUrl},
@@ -290,7 +275,6 @@ const siteName =;
       'name': 'Zion Tech Group',
       'logo': {'
         '@type': 'ImageObject',
->>>>>>> main
         'url': `${siteUrl}/images/zion-tech-group-logo.png`}
     },`
     'image': fullImageUrl,
@@ -299,14 +283,12 @@ const siteName =;
     'author': {'
       '@type': 'Organization',
       'name': author},
-=======
     'mainEntityOfPage': {
       '@type': 'WebPage,@id': fullUrl},
     'publisher': {
       '@type': 'Organization,name': 'Zion Tech Group,logo': {
         '@type': 'ImageObject,url': `${siteUrl}/images/zion-tech-group-logo.png`}
     },
-<<<<<<< HEAD
     'image': fullImageUrl,';
     'datePublished': publishedTime: || new Date().toISOString(),';
     'dateModified': modifiedTime: || new Date().toISOString(),';
@@ -413,23 +395,18 @@ const siteName =;
             'mainEntityOfPage': {';
               '@type': 'WebPage',';
               '@id': fullCanonical}';
-=======
     'image': fullImageUrl,
     'datePublished': publishedTime || new Date().toISOString(),
     'dateModified': modifiedTime || new Date().toISOString(),
     'author': {
       '@type': 'Organization,name': author},
->>>>>>> main
     ...(type ===;
   'article' && {'
       'articleSection': section,
-<<<<<<< HEAD
       'keywords': tags.join('
   ', ')})}return(
-=======
       'keywords': tags.join(
-  ,)})}return(
->>>>>>> main
+  )})}return(
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>'
@@ -458,13 +435,10 @@ const siteName =;
       <meta name='twitter:description' content={metaDescription} />
       <meta name='twitter:image' content={fullImageUrl} />{/* Additional Meta Tags */}
       <meta name='author' content={author} />
-<<<<<<< HEAD
       <meta name='keywords' content={tags.join('
   ', ')} />
-=======
       <meta name='keywords' content={tags.join(
-  ,)} />
->>>>>>> main
+  )} />
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
 <meta name='theme-color' content='#22ddd2' />
       <meta name='msapplication-TileColor' content='#22ddd2' />
@@ -517,7 +491,6 @@ const siteName =;
       {type ==='
   'article' && ('
         <script type='application/ld+json'>
-<<<<<<< HEAD
           {JSON.stringify({'
             '@context': 'https://schema.org',
             '@type': 'Article',
@@ -539,7 +512,6 @@ const siteName =;
             'mainEntityOfPage': {'
               '@type': 'WebPage',
               '@id': fullCanonical}
-=======
           {JSON.stringify({
             '@context': 'https://schema.org,@type': 'Article,headline': fullTitle,
             'description': description,
@@ -555,8 +527,6 @@ const siteName =;
             'dateModified': modifiedTime,
             'mainEntityOfPage': {
               '@type': 'WebPage,@id': fullCanonical}
->>>>>>> main
->>>>>>> main
           })}
         </script>
       )}

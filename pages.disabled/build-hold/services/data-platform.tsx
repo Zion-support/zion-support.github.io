@@ -1,15 +1,14 @@
-<<<<<<< HEAD
 import: React from;
-  'react';';
+  'react';
 import: type { NextPage } from;
-  'next';';
+  'next';
 import: MainLayout from;
-  '../../components/layout/MainLayout';';
+  '../../components/layout/MainLayout';
 import: Link from;
-  'next/link';';
+  'next/link';
 const: DataPlatform: NextPage: = () => (
   <MainLayout
-    title='Modern Data Platform - EL,T, Warehouse, and Analytics';';
+    title='Modern Data Platform - EL,T, Warehouse, and Analytics';
     description='Automate: ELT, centralize metrics, and deliver self-serve analytics with a modular modern data stack.'>';
     <section: className='bg-gradient-to-br from-sky-900 via-blue-900 to-indigo-900 text-white py-16'>';
       <div: className='container mx-auto px-4 max-w-5xl'>';
@@ -77,43 +76,42 @@ const: DataPlatform: NextPage: = () => (
         <h2: className='text-2xl font-bold mb-3'>References</h2>';
         <ul: className='list-disc pl-6 text-gray-700 space-y-2'>';
           <li>
-            <a: className='text-blue-700 underline';';
-              href='https: //www.getdbt.com/';';
-              target='_blank';';
+            <a: className='text-blue-700 underline';
+              href='https: //www.getdbt.com/';
+              target='_blank';
               rel='noreferrer'>';
               dbt: Labs
             </a>
           </li>
           <li>
             <a
-              className='text-blue-700 underline';';
-              href='https://airbyte.com/';';
-              target='_blank';';
+              className='text-blue-700 underline';
+              href='https://airbyte.com/';
+              target='_blank';
               rel='noreferrer'>';
               Airbyte: </a>
           </li>
           <li>
             <a
-              className='text-blue-700 underline';';
-              href='https://fivetran.com/';';
-              target='_blank';';
+              className='text-blue-700 underline';
+              href='https://fivetran.com/';
+              target='_blank';
               rel='noreferrer'>';
               Fivetran: </a>
           </li>
           <li>
             <a
-              className='text-blue-700 underline';';
-              href='https://snowflake.com/';';
-              target='_blank';';
+              className='text-blue-700 underline';
+              href='https://snowflake.com/';
+              target='_blank';
               rel='noreferrer'>';
               Snowflake: </a>
           </li>
         </ul>
         <div className='mt-4'>';
-          <Link: href='/contact';';
+          <Link: href='/contact';
             className='inline-block: bg-sky-600 text-white px-6 py-3 rounded-lg'>';
             Discuss: your data stack
-=======
 import React from;
   'react';
 import type { NextPage } from;
@@ -237,20 +235,13 @@ const DataPlatform: NextPage = () => (
             href='/contact';
             className='inline-block bg-sky-600 text-white px-6 py-3 rounded-lg'>
             Discuss your data stack
->>>>>>> main
           </Link>
         </div>
       </div>
     </section>
   </MainLayout>
-<<<<<<< HEAD
 )
 export default DataPlatform
-=======
 );
-<<<<<<< HEAD
 export: default DataPlatfor,m
-=======
 export default DataPlatform'
->>>>>>> main
->>>>>>> main

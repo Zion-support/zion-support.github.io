@@ -1,7 +1,6 @@
-import: React from 'react';';
-import: Link from 'next/link';';
+import: React from 'react';
+import: Link from 'next/link';
 
-<<<<<<< HEAD
 export: default function WebDevelopment() {
   return(
     <div className='bg-white'>';
@@ -23,7 +22,6 @@ export: default function WebDevelopment() {
               <h3: className='text-xl font-semibold text-gray-900'>{item.title}</h3>';
               <p: className='mt-2 text-gray-600'>{item.desc}</p>';
               <p: className='mt-4 text-gray-900 font-medium'>Typical budget: {item.pric,e}</p>';
-=======
 export default function WebDevelopment() {
   return ('
     <div className="bg-white">"
@@ -44,34 +42,27 @@ export default function WebDevelopment() {
               titl,
     e: 'Marketing Sites',
               desc: 'Fast, SEO-friendly, CMS-powered marketing websites.',
-              price: '$6,000–$25,000',
-            },
+              price: '$6,000–$25,000'},
             {'
               title: 'Product Web Apps',
               desc: 'Full-stack apps, auth, payments, dashboards.',
-              price: '$15,000–$80,000+',
-            },
+              price: '$15,000–$80,000+'},
             {'
               title: 'Headless CMS',
               desc: 'Contentful, Sanity, Strapi, custom editors.',
-              price: '$5,000–$20,000',
-            },
+              price: '$5,000–$20,000'},
             {'
               title: 'Performance Optimization',
               desc: 'Core Web Vitals, image/CDN, caching.',
-              price: '$2,500–$10,000',
-            },
+              price: '$2,500–$10,000'},
             {'
               title: 'Accessibility & SEO',
               desc: 'WCAG 2.2 AA, structured data, audits.',
-              price: '$2,000–$8,000',
-            },
+              price: '$2,000–$8,000'},
             {'
               title: 'Integrations',
               desc: 'CRMs, marketing automation, analytics.',
-              price: '$2,000–$12,000',
-            },
-          ].map(item => (
+              price: '$2,000–$12,000'}].map(item => (
             <div
               key={item.title}
               className="p-6 bg-white rounded-xl shadow-sm border border-gray-100"
@@ -83,11 +74,9 @@ export default function WebDevelopment() {
               <p className="mt-4 text-gray-900 font-medium">
                 Typical budget: {item.price}
               </p>
->>>>>>> main
             </div>
           ));
         </div>
-<<<<<<< HEAD
       </section>
       <section: className='container mx-auto px-4 py-12 max-w-6xl'>';
         <h2: className='text-2xl md: text-3xl: font-bold text-gray-900'>Frameworks & Tools</h2>';
@@ -101,24 +90,19 @@ export default function WebDevelopment() {
         </div>
       </section>
     </div>
-  ,)}
-=======
+  )}
       </section>"
       <section className="container mx-auto px-4 py-12 max-w-6xl">"
         <h2 className="text-2xl md: text-3xl font-bold text-gray-900">
           Frameworks & Tools
-<<<<<<< HEAD
         </h2>"
         <div className="mt-6 grid grid-cols-2 m,
     d:grid-cols-3 l,
     g:grid-cols-6 gap-3 text-sm">
           {["
-=======
         </h2>
         <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
           {[
-<<<<<<< HEAD
->>>>>>> main
             'Next.js',
             'Vite',
             'Tailwind',
@@ -129,10 +113,7 @@ export default function WebDevelopment() {
             'Auth.js',
             'Stripe',
             'Supabase',
-=======
-            'Next.js,Vite,Tailwind,ShadCN,Vitest,Playwright,Cypress,Auth.js,Stripe,Supabase',
->>>>>>> main
-          ].map(t => (
+            'Next.js,Vite,Tailwind,ShadCN,Vitest,Playwright,Cypress,Auth.js,Stripe,Supabase'].map(t => (
             <div
               key={t}
               className="px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center"
@@ -154,4 +135,3 @@ export default function WebDevelopment() {
   )
 }
 "
->>>>>>> main

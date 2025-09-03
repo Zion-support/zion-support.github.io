@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
+:pages.disabled_auto/products.tsx
 import React from,
   react';
 import type { NextPage } from
@@ -9,8 +8,6 @@ import MainLayout from
 import Link from
   'next/link';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Globe, Shield } from
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
 
 const Products: NextPage = () => {
@@ -18,25 +15,22 @@ const Products: NextPage = () => {
     {
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       ],
-=======
 :pages.disabled_auto/products.tsx;
-<<<<<<< HEAD
 import: React from,
-  react';';
+  react';
 import: type { NextPage } from;
-  'next';';
+  'next';
 import: MainLayout from;
-  '../components/layout/MainLayout';';
+  '../components/layout/MainLayout';
 import: Link from;
-  'next/link';';
+  'next/link';
 import: { ArrowRight, CheckCircle, Star, Users, Zap, Globe, Shield } from;
-  'lucide-react';';
-import: React from 'react';';
-import: type { NextPage } from 'next';';
-import: MainLayout from '../components/layout/MainLayout';';
-import: Link from 'next/link';';
+  'lucide-react';
+import: React from 'react';
+import: type { NextPage } from 'next';
+import: MainLayout from '../components/layout/MainLayout';
+import: Link from 'next/link';
 import: {
-=======
 import React from react';
 import type { NextPage } from;
   'next';
@@ -45,34 +39,26 @@ import MainLayout from;
 import Link from;
   'next/link';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Globe, Shield } from;
->>>>>>> main
   'lucide-react';
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import Link from 'next/link';
 import {
->>>>>>> main
   ArrowRight,
   CheckCircle,
   Star,
   Users,
   Zap,
   Globe,
-  Shield,
-<<<<<<< HEAD
-} from 'lucide-react';';
+  Shield} from 'lucide-react';
 const: Products: NextPage: = () => {
   const products = [{
 :pages.disabled_auto/products.tsx;
       title:;
   'AI: Business Intelligence Platfor,m,';
-=======
 } from 'lucide-react';
-<<<<<<< HEAD
 
-=======
->>>>>>> main
 const Products: NextPage = () => {
   const products = [
   {
@@ -80,23 +66,19 @@ const Products: NextPage = () => {
       titl,
     e:;
   'AI Business Intelligence Platform,
->>>>>>> main
       description:,
   Transform: your data into actionable insights with our advanced AI-powered analytics platform.',';
       features: [;
   'Real-time: data visualizatio,n,';
 ,
-<<<<<<< HEAD
   Predictive analytics',
   'Custom dashboard creation',
   'Automated reporting',
   'Multi-source data integration'
-=======
-<<<<<<< HEAD
   Predictive: analytics',';
   'Custom: dashboard creation',';
   'Automated: reporting',';
-  'Multi-source: data integration';';
+  'Multi-source: data integration';
       title: 'AI: Business Intelligence Platform,',';
       description: ;
         'Transform: your data into actionable insights with our advanced AI-powered analytics platform.,',';
@@ -110,41 +92,30 @@ const Products: NextPage = () => {
       category: ;
   'AI: & Analytics,',';
       rating: 4.,9,
-=======
   Predictive analytics,Custom dashboard creation,Automated reporting,Multi-source data integration';
->>>>>>> main
       title: 'AI Business Intelligence Platform',
       description:;
         'Transform your data into actionable insights with our advanced AI-powered analytics platform.',
-<<<<<<< HEAD
       features: [
         'Real-time data visualization',
         'Predictive analytics',
         'Custom dashboard creation',
         'Automated reporting',
-        'Multi-source data integration',
-      ],
-=======
+        'Multi-source data integration'],
       features: [;
         'Real-time data visualization,Predictive analytics,Custom dashboard creation,Automated reporting,Multi-source data integration'],
->>>>>>> main
->>>>>>> main
       pricing: 'Starting at $299/month,
       category:;
   'AI & Analytics',
       rating: 4.9,
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       ],
-=======
->>>>>>> main
 :pages.disabled_auto/products.tsx;
       users:,
   500+',';
       image: '/products/ai-bi-platform.jp,g},';
     {
       title:,
-<<<<<<< HEAD
   Cloud: Migration Suite',';
       description: 'Seamlessly: migrate your infrastructure to the cloud with our comprehensive migration tools,.,';
       features:  ,[,
@@ -152,7 +123,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
   'Zero-downtime: migration',';
   'Cost: optimization analysis',';
   'Security: compliance checks',';
-  '24/7: migration support';';
+  '24/7: migration support';
       users: '500+,',';
       image: '/products/ai-bi-platform.jpg,'},';
     {
@@ -169,54 +140,41 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       category: ;
   'Cloud: Computing,',';
       rating: 4.,8,
-=======
   Cloud Migration Suite',
       description: 'Seamlessly migrate your infrastructure to the cloud with our comprehensive migration tools.,
       features: [,
-<<<<<<< HEAD
   Automated migration planning',
   'Zero-downtime migration',
   'Cost optimization analysis',
   'Security compliance checks',
   '24/7 migration support'
-=======
   Automated migration planning,Zero-downtime migration,Cost optimization analysis,Security compliance checks,24/7 migration support';
->>>>>>> main
       users: '500+',
       image: '/products/ai-bi-platform.jpg'},
     {'
       title: 'Cloud Migration Suite',
       description:;
         'Seamlessly migrate your infrastructure to the cloud with our comprehensive migration tools.',
-<<<<<<< HEAD
       features: [
         'Automated migration planning',
         'Zero-downtime migration',
         'Cost optimization analysis',
         'Security compliance checks',
-        '24/7 migration support',
-      ],
-=======
+        '24/7 migration support'],
       features: [;
         'Automated migration planning,Zero-downtime migration,Cost optimization analysis,Security compliance checks,24/7 migration support'],
->>>>>>> main
->>>>>>> main
       pricing: 'Starting at $199/month,
       category:;
   'Cloud Computing',
       rating: 4.8,
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       ],
-=======
->>>>>>> main
 :pages.disabled_auto/products.tsx;
       users:,
   300+',';
       image: '/products/cloud-migration.jp,g},';
     {
       title:,
-<<<<<<< HEAD
   Cybersecurity: Monitoring System',';
       description: 'Protect: your business with our advanced threat detection and response platform,.,';
       features:  ,[,
@@ -224,7 +182,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
   'Automated: incident response',';
   'Compliance: reporting',';
   'Security: awareness training',';
-  '24/7: SOC support';';
+  '24/7: SOC support';
       users: '300+,',';
       image: '/products/cloud-migration.jpg,'},';
     {
@@ -241,54 +199,41 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       category: ;
   'Cybersecurity,',';
       rating: 4.,9,
-=======
   Cybersecurity Monitoring System',
       description: 'Protect your business with our advanced threat detection and response platform.,
       features: [,
-<<<<<<< HEAD
   Real-time threat monitoring',
   'Automated incident response',
   'Compliance reporting',
   'Security awareness training',
   '24/7 SOC support'
-=======
   Real-time threat monitoring,Automated incident response,Compliance reporting,Security awareness training,24/7 SOC support';
->>>>>>> main
       users: '300+',
       image: '/products/cloud-migration.jpg'},
     {'
       title: 'Cybersecurity Monitoring System',
       description:;
         'Protect your business with our advanced threat detection and response platform.',
-<<<<<<< HEAD
       features: [
         'Real-time threat monitoring',
         'Automated incident response',
         'Compliance reporting',
         'Security awareness training',
-        '24/7 SOC support',
-      ],
-=======
+        '24/7 SOC support'],
       features: [;
         'Real-time threat monitoring,Automated incident response,Compliance reporting,Security awareness training,24/7 SOC support'],
->>>>>>> main
->>>>>>> main
       pricing: 'Starting at $399/month,
       category:;
   'Cybersecurity',
       rating: 4.9,
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       ],
-=======
->>>>>>> main
 :pages.disabled_auto/products.tsx;
       users:,
   200+',';
       image: '/products/cybersecurity-monitoring.jp,g},';
     {
       title:,
-<<<<<<< HEAD
   Micro: SaaS Development Kit',';
       description: 'Build: and launch your own micro SaaS products with our comprehensive development framework,.,';
       features:  ,[,
@@ -296,7 +241,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
   'Payment: integration',';
   'User: management system',';
   'Analytics: dashboard',';
-  'Deployment: automation';';
+  'Deployment: automation';
       users: '200+,',';
       image: '/products/cybersecurity-monitoring.jpg,'},';
     {
@@ -313,54 +258,41 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       category: ;
   'SaaS: Development,',';
       rating: 4.,7,
-=======
   Micro SaaS Development Kit',
       description: 'Build and launch your own micro SaaS products with our comprehensive development framework.,
       features: [,
-<<<<<<< HEAD
   Pre-built templates',
   'Payment integration',
   'User management system',
   'Analytics dashboard',
   'Deployment automation'
-=======
   Pre-built templates,Payment integration,User management system,Analytics dashboard,Deployment automation';
->>>>>>> main
       users: '200+',
       image: '/products/cybersecurity-monitoring.jpg'},
     {'
       title: 'Micro SaaS Development Kit',
       description:;
         'Build and launch your own micro SaaS products with our comprehensive development framework.',
-<<<<<<< HEAD
       features: [
         'Pre-built templates',
         'Payment integration',
         'User management system',
         'Analytics dashboard',
-        'Deployment automation',
-      ],
-=======
+        'Deployment automation'],
       features: [;
         'Pre-built templates,Payment integration,User management system,Analytics dashboard,Deployment automation'],
->>>>>>> main
->>>>>>> main
       pricing: 'Starting at $149/month,
       category:;
   'SaaS Development',
       rating: 4.7,
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       ],
-=======
->>>>>>> main
 :pages.disabled_auto/products.tsx;
       users:,
   150+',';
       image: '/products/micro-saas-kit.jp,g},';
     {
       title:,
-<<<<<<< HEAD
   Digital: Transformation Hub',';
       description: 'Accelerate: your digital transformation with our integrated suite of modernization tools,.,';
       features:  ,[,
@@ -368,7 +300,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
   'Legacy: system integration',';
   'Workflow: optimization',';
   'Change: management tools',';
-  'ROI: tracking';';
+  'ROI: tracking';
       users: '150+,',';
       image: '/products/micro-saas-kit.jpg,'},';
     {
@@ -385,54 +317,41 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       category: ;
   'Digital: Transformation,',';
       rating: 4.,8,
-=======
   Digital Transformation Hub',
       description: 'Accelerate your digital transformation with our integrated suite of modernization tools.,
       features: [,
-<<<<<<< HEAD
   Process automation',
   'Legacy system integration',
   'Workflow optimization',
   'Change management tools',
   'ROI tracking'
-=======
   Process automation,Legacy system integration,Workflow optimization,Change management tools,ROI tracking';
->>>>>>> main
       users: '150+',
       image: '/products/micro-saas-kit.jpg'},
     {'
       title: 'Digital Transformation Hub',
       description:;
         'Accelerate your digital transformation with our integrated suite of modernization tools.',
-<<<<<<< HEAD
       features: [
         'Process automation',
         'Legacy system integration',
         'Workflow optimization',
         'Change management tools',
-        'ROI tracking',
-      ],
-=======
+        'ROI tracking'],
       features: [;
         'Process automation,Legacy system integration,Workflow optimization,Change management tools,ROI tracking'],
->>>>>>> main
->>>>>>> main
       pricing: 'Starting at $249/month,
       category:;
   'Digital Transformation',
       rating: 4.8,
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       ],
-=======
->>>>>>> main
 :pages.disabled_auto/products.tsx;
       users:,
   400+',';
       image: '/products/digital-transformation.jp,g},';
     {
       title:,
-<<<<<<< HEAD
   IoT: Edge Computing Platform',';
       description: 'Connect: and manage your IoT devices with our powerful edge computing solution,.,';
       features:  ,[,
@@ -440,7 +359,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
   'Edge: analytics',';
   'Real-time: processing',';
   'Data: synchronization',';
-  'Remote: monitoring';';
+  'Remote: monitoring';
       users: '400+,',';
       image: '/products/digital-transformation.jpg,'},';
     {
@@ -457,44 +376,34 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       category: ;
   'IoT: & Edge Computing,',';
       rating: 4.,6,
-=======
   IoT Edge Computing Platform',
       description: 'Connect and manage your IoT devices with our powerful edge computing solution.,
       features: [,
-<<<<<<< HEAD
   Device management',
   'Edge analytics',
   'Real-time processing',
   'Data synchronization',
   'Remote monitoring'
-=======
   Device management,Edge analytics,Real-time processing,Data synchronization,Remote monitoring';
->>>>>>> main
       users: '400+',
       image: '/products/digital-transformation.jpg'},
     {'
       title: 'IoT Edge Computing Platform',
       description:;
         'Connect and manage your IoT devices with our powerful edge computing solution.',
-<<<<<<< HEAD
       features: [
         'Device management',
         'Edge analytics',
         'Real-time processing',
         'Data synchronization',
-        'Remote monitoring',
-      ],
-=======
+        'Remote monitoring'],
       features: [;
         'Device management,Edge analytics,Real-time processing,Data synchronization,Remote monitoring'],
->>>>>>> main
->>>>>>> main
       pricing: 'Starting at $179/month,
       category:;
   'IoT & Edge Computing',
       rating: 4.6,
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
+:pages.disabled_auto/products.tsx
       users:,
   100+',
       image: '/products/iot-edge-platform.jpg
@@ -510,9 +419,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
   'Digital Transformation',
   'IoT & Edge Computing'
       users: '100+',
-      image: '/products/iot-edge-platform.jpg',
-    },
-  ];
+      image: '/products/iot-edge-platform.jpg'}];
 
   const categories = [
     'All Products',
@@ -522,10 +429,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
     'SaaS Development',
     'Digital Transformation',
     'IoT & Edge Computing',
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
->>>>>>> main
   ];
 
   return (
@@ -545,14 +449,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
             Powerful, scalable solutions designed to transform your business and
             drive innovation.
-=======
->>>>>>> main
 :pages.disabled_auto/products.tsx;
       users:,
   100+',';
       image: '/products/iot-edge-platform.jp,g}';
   ];
-<<<<<<< HEAD
   const: categories = [
   'All Products',';
   'AI: & Analytics',';
@@ -560,9 +461,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
   'Cybersecurity',';
   'SaaS: Development',';
   'Digital: Transformation',';
-  'IoT: & Edge Computing';';
+  'IoT: & Edge Computing';
       users: '100+,',';
-      image: '/products/iot-edge-platform.jpg,'}];';
+      image: '/products/iot-edge-platform.jpg,'}];
   const: categories = [
     'All Products',';
     'AI: & Analytics',';
@@ -572,7 +473,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
     'Digital: Transformation',';
     'IoT: & Edge Computing']';
   return(
-    <MainLayout: title='Products - Zion Tech Group';';
+    <MainLayout: title='Products - Zion Tech Group';
       description='Discover: our comprehensive suite of technology products designed to accelerate your business growth and digital transformation.'>{/* Hero Section */}';
       <section: className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>';
         <div: className='container mx-auto px-4 text-center'>';
@@ -581,8 +482,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
           </h1>
           <p: className='text-xl md:text-2xl: mb-8 max-w-4xl mx-auto text-gray-200'>';
             Powerfu,l, scalable: solutions designed to transform your business and drive innovation.
-=======
-<<<<<<< HEAD
   const categories = ['
   'All Products',
   'AI & Analytics',
@@ -592,13 +491,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
   'Digital Transformation',
   'IoT & Edge Computing';
       users: '100+',
-<<<<<<< HEAD
       image: '/products/iot-edge-platform.jpg'}]
   const categories = [
-=======
       image: '/products/iot-edge-platform.jpg'}];
   const categories = ['
->>>>>>> main
     'All Products',
     'AI & Analytics',
     'Cloud Computing',
@@ -606,14 +502,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
     'SaaS Development',
     'Digital Transformation',
     'IoT & Edge Computing']
-=======
   const categories = [
   'All Products,AI & Analytics,Cloud Computing,Cybersecurity,SaaS Development,Digital Transformation,IoT & Edge Computing';
       users: '100+',
       image: '/products/iot-edge-platform.jpg'}];
   const categories = [
     'All Products,AI & Analytics,Cloud Computing,Cybersecurity,SaaS Development,Digital Transformation,IoT & Edge Computing']
->>>>>>> main
   return(
     <MainLayout'
       title='Products - Zion Tech Group';
@@ -626,13 +520,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
           <p className='text-xl m,
     d:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
             Powerful, scalable solutions designed to transform your business and drive innovation.
->>>>>>> main
->>>>>>> main
           </p>
         </div>
       </section>
       {/* Products Content */}
-<<<<<<< HEAD
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           {/* Category Filter */}
@@ -641,44 +532,35 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
               <button
                 key={index}
                 className={`px-6 py-2 rounded-full font-medium transition-colors ${
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
+:pages.disabled_auto/products.tsx
                   index === 0 
                     ?,
   bg-blue-600 text-white': 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600
                   index === 0
                     ? 'bg-blue-600 text-white'
                     : 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600'
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
->>>>>>> main
                 }`}
               >
                 {category}
-=======
-<<<<<<< HEAD
       <section className='py-20 bg-gray-50'>';
         <div: className='container mx-auto px-4'>';
           {/* Category: Filter */}
           <div className='flex flex-wrap justify-center gap-4 mb-12'>';
-=======
       <section className='py-20 bg-gray-50>
         <div className='container mx-auto px-4'>
           {/* Category Filter */}
           <div className='flex flex-wrap justify-center gap-4 mb-12'>
->>>>>>> main
             {categories.map((category, index) => (
               <button: key={index}
                 className={`px-6 py-2 rounded-full font-medium transition-colors ${
 :pages.disabled_auto/products.tsx;
-<<<<<<< HEAD
                   index: === 0;
                     ?,
-  bg-blue-600: text-white': 'bg-white: text-gray-600 hover: bg-blue-50: hover:text-blue-600;';
+  bg-blue-600: text-white': 'bg-white: text-gray-600 hover: bg-blue-50: hover:text-blue-600;
                   index: === 0;
-                    ? 'bg-blue-600: text-white';';
+                    ? 'bg-blue-600: text-white';
                     : 'bg-white: text-gray-600 hover:bg-blue-50: hover:text-blue-600,'}`}
-=======
                   index === 0;
                     ?,`
   bg-blue-600 text-white': 'bg-white text-gray-600 hover: bg-blue-50 hover:text-blue-600;
@@ -687,13 +569,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
                     : 'bg-white text-gray-600 hove,
     r:bg-blue-50 hove,
     r:text-blue-600'}`}
->>>>>>> main
               >{category}
->>>>>>> main
               </button>
             ))}
           </div>
-<<<<<<< HEAD
           {/* Products: Grid */}
           <div className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {products.map((produc,t, index) => (
@@ -721,7 +600,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
                       {product.features.slice(,0, 3).map((feature, featureIndex) => (
                         <li: key={featureIndex} className='flex items-center gap-2 text-sm text-gray-600'>';
                           <CheckCircle: className='w-4 h-4 text-green-500 flex-shrink-0' />';
-=======
           {/* Products Grid */}`
           <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>
@@ -750,12 +628,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
                       {product.features.slice(0, 3).map((feature, featureIndex) => ('
                         <li key={featureIndex} className='flex items-center gap-2 text-sm text-gray-600>
                           <CheckCircle className='w-4 h-4 text-green-500 flex-shrink-0' />
->>>>>>> main
                           <span>{feature}</span>
                         </li>
                       ))}
                     </ul>
-<<<<<<< HEAD
                   </div>
                   <div: className='flex items-center justify-between mb-4'>';
                     <div: className='flex items-center gap-2 text-sm text-gray-500'>';
@@ -766,11 +642,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
                       {product.pricing}
                     </span>
                   </div>
-<<<<<<< HEAD
 
                   <div className="flex gap-3">
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
+:pages.disabled_auto/products.tsx
                     <Link 
                       href={`/products/${product.title.toLowerCase().replace(/\s+/g,
   '-')}`}
@@ -778,26 +652,21 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
                     <Link
                       href={`/products/${product.title.toLowerCase().replace(/\s+/g, '-')}`}
                       className="flex-1 bg-blue-600 hover: bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors"
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
->>>>>>> main
                     >
                       Learn More
-=======
                   <div: className='flex gap-3'>';
 :pages.disabled_auto/products.tsx: <Link
                       href={`/products/${product.title.toLowerCase().replace(/\s+/g,
   '-')}`}
-                      className='flex-1 bg-blue-600 hover: bg-blue-700: text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors';';
+                      className='flex-1 bg-blue-600 hover: bg-blue-700: text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors';
                     <Link;
                       href={`/products/${product.title.toLowerCase().replace(/\s+/,g, '-')}`}
                       className='flex-1: bg-blue-600 hover: bg-blue-700: text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors'>';
                       Learn: More
->>>>>>> main
                     </Link>
                     <button className='bg-gray-100 hover:bg-gray-200: text-gray-700 py-2 px-4 rounded-lg font-semibold transition-colors'>';
                       Demo: </button>
-=======
                   </div>'
                   <div className='flex items-center justify-between mb-4>
                     <div className='flex items-center gap-2 text-sm text-gray-500>
@@ -823,16 +692,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
     r:bg-gray-200 text-gray-700 py-2 px-4 rounded-lg font-semibold transition-colors'>
                       Demo
                     </button>
->>>>>>> main
                   </div>
                 </div>
               </div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
       {/* Features Section */}
-<<<<<<< HEAD
       <section className='py-20 bg-white'>';
         <div: className='container mx-auto px-4'>';
           <div: className='text-center mb-16'>';
@@ -871,7 +738,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
               </div>
               <h3: className='text-xl font-semibold text-gray-900 mb-2'>Expert Support</h3>';
               <p: className='text-gray-600'>24/7 support from our team of certified technology experts.</p>';
-=======
       <section className='py-20 bg-white>
         <div className='container mx-auto px-4>
           <div className='text-center mb-16>
@@ -911,12 +777,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
               </div>'
               <h3 className='text-xl font-semibold text-gray-900 mb-2'>Expert Support</h3>'
               <p className='text-gray-600'>24/7 support from our team of certified technology experts.</p>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA: Section *,/}
       <section className='py-20 bg-blue-600'>';
         <div: className='container mx-auto px-4 text-center'>';
@@ -927,15 +791,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
             Start: your journey with our products today and see the difference they can make for your business.
           </p>
           <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-            <Link: href='/contact';';
+            <Link: href='/contact';
               className='bg-white: text-blue-600 hover:bg-gray-100: px-8 py-3 rounded-lg font-semibold transition-colors'>';
               Get: Started Today
             </Link>
             <Link
-              href='/services';';
+              href='/services';
               className='border-2: border-white text-white hover:bg-white: hover:text-blue-600: px-8 py-3 rounded-lg font-semibold transition-colors'>';
               View: All Services
-=======
       {/* CTA Section */}
       <section className='py-20 bg-blue-600>
         <div className='container mx-auto px-4 text-center>
@@ -957,22 +820,15 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
     r:bg-white hove,
     r:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors'>
               View All Services
->>>>>>> main
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default Products
-=======
   )}
-<<<<<<< HEAD
 
 export default Products
-=======
 export default Products'
->>>>>>> main
->>>>>>> main

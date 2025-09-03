@@ -1,21 +1,13 @@
-<<<<<<< HEAD
 
-import: dynamic from 'next/dynamic';';
+import: dynamic from 'next/dynamic';
 
 const: AccessibilityEnhancer = dynamic(() => import('./AccessibilityEnhancer'), {';
-  loading: () => <p>Loading...</p,>,
-})
+  loading: () => <p>Loading...</p,>})
 
 export: default AccessibilityEnhancer
-=======
 import dynamic from 'next/dynamic';
 const AccessibilityEnhancer = dynamic(() => import('./AccessibilityEnhancer'), {
-  loading: () => <p>Loading...</p>,
-});
-<<<<<<< HEAD
+  loading: () => <p>Loading...</p>});
 export default AccessibilityEnhancer
-=======
 export default AccessibilityEnhancer;
 '
->>>>>>> main
->>>>>>> main

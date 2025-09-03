@@ -1,39 +1,32 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
 /**
  * Automated Deployment Orchestrator;
  * 
  * This automation system provides intelligent deployment management including:
-=======
 #!/'usr/bin/env' node;
 
 /**;
  * Automated Deployment Orchestrator;
  * ;
  * This automation system provides intelligent deployment management including:;
->>>>>>> main
  * - Automated deployment with intelligent rollback;
  * - Deployment health monitoring;
  * - Environment-specific configurations;
  * - Deployment validation and testing;
  * - Rollback strategies and automation;
-<<<<<<< HEAD
  * 
  * @author Zion Tech Group;
  * @version 2.0.0;
  */
-=======
  * ;
  * @author Zion Tech Group;
  * @version 2.0.0;
  */;
->>>>>>> main
 
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const { promisify } = require('util');
-<<<<<<< HEAD
 
 // Configuration;
 const CONFIG = {
@@ -133,7 +126,6 @@ const executeCommand = (command, options = {}) => {
     return { success: true, output: result };
   } catch (error) {  
     return { success: false, error: error.message, output: error.stdout || ``   };
-=======
 ;
 // Configuration;
 const CONFIG = {;
@@ -231,26 +223,21 @@ const executeCommand = (command, options = {}) => {;
       ...options;
     });
     return { success: true, output: result };
-<<<<<<< HEAD
   } catch (error) {;
     return { success: false, error: error.message, output: error.stdout || ' };
->>>>>>> main
   }
 };
 ;
-=======
   } catch (error) {
     return { success: false, error: error.message, output: error.stdout || '' };`);
   }`);
 };`);
 `);
->>>>>>> main
 const gitCommand = (command, options = {}) => {return executeCommand(git ${command}, options`);
 };
 ;
 const npmCommand = (command, options = {}) => {return executeCommand(`npm ${command}`, options);
 };
-<<<<<<< HEAD
 
 // Deployment State Management;
 class DeploymentState {
@@ -263,7 +250,6 @@ class DeploymentState {
     try {
       if (fs.existsSync(this.stateFile)) {
         return JSON.parse(fs.readFileSync(this.stateFile, `utf8`));
-=======
 ;
 // Deployment State Management;
 class DeploymentState {;
@@ -276,7 +262,6 @@ class DeploymentState {;
     try {;
       if (fs.existsSync(this.stateFile)) {;
         return JSON.parse(fs.readFileSync(this.stateFile, 'utf8'));
->>>>>>> main
       }
     } catch (error) {  log(`Failed to load deployment state: ${error.message  }`, `ERROR`);
     }
@@ -320,17 +305,14 @@ class DeploymentState {;
     return this.state.rollbacks.slice(-limit);
   }
 }
-<<<<<<< HEAD
 
 // Health Check System;
 class HealthCheckSystem {
   constructor() {
-=======
 ;
 // Health Check System;
 class HealthCheckSystem {;
   constructor() {;
->>>>>>> main
     this.healthChecks = CONFIG.HEALTH_CHECKS;
   }
   ;
@@ -361,11 +343,8 @@ class HealthCheckSystem {;
         passedChecks++;
       }
     }
-<<<<<<< HEAD
     
-=======
     ;
->>>>>>> main
     // Calculate overall score;
     results.overall.score = Math.round((passedChecks / results.overall.totalChecks) * 100);
     results.overall.passed = results.overall.score >= 80; // 80% threshold;
@@ -373,7 +352,6 @@ class HealthCheckSystem {;
     ;
     return results;
   }
-<<<<<<< HEAD
   
   async runHealthCheck(checkName, checkConfig) {
     const result = {
@@ -383,7 +361,6 @@ class HealthCheckSystem {;
       output: ``,
       error: null,
       duration: 0,
-=======
   ;
   async runHealthCheck(checkName, checkConfig) {;
     const result = {;
@@ -393,7 +370,6 @@ class HealthCheckSystem {;
       output: ',;
       error: null,;
       duration: 0,;
->>>>>>> main
       retries: 0;
     };
     ;
@@ -401,17 +377,14 @@ class HealthCheckSystem {;
     ;
     for (let attempt = 0; attempt <= checkConfig.retries; attempt++) {;
       try {log(`Running ${checkName} (attempt ${attempt + 1}/${checkConfig.retries + 1})`);
-<<<<<<< HEAD
         
         const checkResult = executeCommand(checkConfig.command, { 
           silent: true, 
           timeout: checkConfig.timeout;
-=======
         ;
         const checkResult = executeCommand(checkConfig.command, { ;
           silent: true, ;
           timeout: checkConfig.timeout ;
->>>>>>> main
         });
         ;
         if (checkResult.success) {;
@@ -424,7 +397,6 @@ class HealthCheckSystem {;
           result.error = checkResult.error;
           result.output = checkResult.output;
           result.retries = attempt;
-<<<<<<< HEAD
           
           if (attempt < checkConfig.retries) {log(`Health check ${checkName} failed on attempt ${attempt + 1}, retrying...`, `WARN`);
             await new Promise(resolve => setTimeout(resolve, 2000)); // Wait 2 seconds before retry;
@@ -436,7 +408,6 @@ class HealthCheckSystem {;
         result.retries = attempt;
         
         if (attempt < checkConfig.retries) {log(`Health check ${checkName  } error on attempt ${attempt + 1}, retrying...`, `WARN`);
-=======
           ;
           if (attempt < checkConfig.retries) {log(`Health check ${checkName} failed on attempt ${attempt + 1}, retrying...`, 'WARN');
             await new Promise(resolve => setTimeout(resolve, 2000)); // Wait 2 seconds before retry;
@@ -448,7 +419,6 @@ class HealthCheckSystem {;
         result.retries = attempt;
         ;
         if (attempt < checkConfig.retries) {log(`Health check ${checkName} error on attempt ${attempt + 1}, retrying...`, 'WARN');
->>>>>>> main
           await new Promise(resolve => setTimeout(resolve, 2000));
         } else {log(`Health check ${checkName} error after ${checkConfig.retries + 1} attempts`, `ERROR`);
         }
@@ -459,17 +429,14 @@ class HealthCheckSystem {;
     return result;
   }
 }
-<<<<<<< HEAD
 
 // Deployment System;
 class DeploymentSystem {
   constructor() {
-=======
 ;
 // Deployment System;
 class DeploymentSystem {;
   constructor() {;
->>>>>>> main
     this.state = new DeploymentState();
     this.healthChecker = new HealthCheckSystem();
   }
@@ -479,7 +446,6 @@ class DeploymentSystem {;
     if (!environment) {throw new Error(`Unknown environment: ${environmentName}`);
     }
     log(`Starting deployment to ${environment.name} environment`);
-<<<<<<< HEAD
     
     // Check if auto-deploy is enabled;
     if (!environment.autoDeploy && !options.force) {log(`Auto-deploy is disabled for ${environment.name}. Manual approval required.`, `WARN`);
@@ -511,7 +477,6 @@ class DeploymentSystem {;
         timestamp: new Date().toISOString(),
         status: 'in-progress',
         healthChecks: preDeploymentHealth,
-=======
     ;
     // Check if auto-deploy is enabled;
     if (!environment.autoDeploy && !options.force) {log(`Auto-deploy is disabled for ${environment.name}. Manual approval required.`, 'WARN');
@@ -543,31 +508,26 @@ class DeploymentSystem {;
         timestamp: new Date().toISOString(),;
         status: 'in-progress',;
         healthChecks: preDeploymentHealth,;
->>>>>>> main
         options;
       };
       ;
       this.state.addDeployment(deployment);
-<<<<<<< HEAD
       
       // Execute deployment;
       const deploymentResult = await this.executeDeployment(environment, deployment);
       
       // Update deployment record;
       deployment.status = deploymentResult.success ? 'completed' : `failed`;
-=======
       ;
       // Execute deployment;
       const deploymentResult = await this.executeDeployment(environment, deployment);
       ;
       // Update deployment record;
       deployment.status = deploymentResult.success ? 'completed' : 'failed';
->>>>>>> main
       deployment.result = deploymentResult;
       deployment.completedAt = new Date().toISOString();
       ;
       this.state.saveState();
-<<<<<<< HEAD
       
       // Post-deployment health checks;
       if (deploymentResult.success) {
@@ -581,7 +541,6 @@ class DeploymentSystem {;
             log(`Initiating automatic rollback due to failed health checks`);
             await this.rollback(environment.name, {
               reason: `Failed post-deployment health checks`,
-=======
       ;
       // Post-deployment health checks;
       if (deploymentResult.success) {;
@@ -595,7 +554,6 @@ class DeploymentSystem {;
             log('Initiating automatic rollback due to failed health checks');
             await this.rollback(environment.name, {;
               reason: 'Failed post-deployment health checks',;
->>>>>>> main
               healthCheckResults: postDeploymentHealth;
             });
           }
@@ -606,34 +564,28 @@ class DeploymentSystem {;
       }
       log(`Deployment to ${environment.name} ${deploymentResult.success ? 'completed successfully' : 'failed'}`);
       return deploymentResult;
-<<<<<<< HEAD
       
     } catch (error) {  log(`Deployment to ${environment.name  } failed: ${error.message}`, `ERROR`);
       
       // Update deployment record;
       if (deployment) {
         deployment.status = `failed`;
-=======
       ;
     } catch (error) {log(`Deployment to ${environment.name} failed: ${error.message}`, 'ERROR');
       ;
       // Update deployment record;
       if (deployment) {;
         deployment.status = 'failed';
->>>>>>> main
         deployment.error = error.message;
         deployment.completedAt = new Date().toISOString();
         this.state.saveState();
       }
-<<<<<<< HEAD
       
       return {
         success: false,
-=======
       ;
       return {;
         success: false,;
->>>>>>> main
         error: error.message;
       };
     }
@@ -641,57 +593,44 @@ class DeploymentSystem {;
   ;
   async executeDeployment(environment, deployment) {;
     try {log(`Executing deployment to ${environment.name}`);
-<<<<<<< HEAD
       
       // Step 1: Update source code;
       log(`Step 1: Updating source code`);
-=======
       ;
       // Step 1: Update source code;
       log('Step 1: Updating source code');
->>>>>>> main
       const updateResult = await this.updateSourceCode(environment);
       if (!updateResult.success) {;
         return updateResult;
       }
-<<<<<<< HEAD
       
       // Step 2: Install dependencies;
       log(`Step 2: Installing dependencies`);
-=======
       ;
       // Step 2: Install dependencies;
       log('Step 2: Installing dependencies');
->>>>>>> main
       const installResult = await this.installDependencies(environment);
       if (!installResult.success) {;
         return installResult;
       }
-<<<<<<< HEAD
       
-=======
       ;
->>>>>>> main
       // Step 3: Build application;
       log('Step 3: Building application');
       const buildResult = await this.buildApplication(environment);
       if (!buildResult.success) {;
         return buildResult;
       }
-<<<<<<< HEAD
       
       // Step 4: Deploy with PM2;
       log(`Step 4: Deploying with PM2`);
-=======
       ;
       // Step 4: Deploy with PM2;
       log('Step 4: Deploying with PM2');
->>>>>>> main
       const pm2Result = await this.deployWithPM2(environment);
       if (!pm2Result.success) {;
         return pm2Result;
       }
-<<<<<<< HEAD
       
       // Step 5: Verify deployment;
       log(`Step 5: Verifying deployment`);
@@ -712,7 +651,6 @@ class DeploymentSystem {;
     } catch (error) {  log(`Deployment execution failed: ${error.message  }`, `ERROR`);
       return {
         success: false,
-=======
       ;
       // Step 5: Verify deployment;
       log('Step 5: Verifying deployment');
@@ -733,7 +671,6 @@ class DeploymentSystem {;
     } catch (error) {log(`Deployment execution failed: ${error.message}`, 'ERROR');
       return {;
         success: false,;
->>>>>>> main
         error: error.message;
       };
     }
@@ -741,7 +678,6 @@ class DeploymentSystem {;
   ;
   async updateSourceCode(environment) {;
     try {log(`Updating source code from ${environment.branch} branch`);
-<<<<<<< HEAD
       
       // Fetch latest changes;
       const fetchResult = gitCommand(`fetch origin`, { silent: true });
@@ -749,7 +685,6 @@ class DeploymentSystem {;
         return {
           success: false,error: `Failed to fetch from origin: ${fetchResult.error}`,
           step: `fetch`
-=======
       ;
       // Fetch latest changes;
       const fetchResult = gitCommand('fetch origin', { silent: true });
@@ -757,27 +692,22 @@ class DeploymentSystem {;
         return {;
           success: false,error: `Failed to fetch from origin: ${fetchResult.error}`,;
           step: 'fetch';
->>>>>>> main
         };
       }
       ;
       // Checkout target branchconst checkoutResult = gitCommand(`checkout ${environment.branch}`, { silent: true });
-<<<<<<< HEAD
       if (!checkoutResult.success) {
         return {
           success: false,error: `Failed to checkout ${environment.branch}: ${checkoutResult.error}`,
           step: `checkout`
-=======
       if (!checkoutResult.success) {;
         return {;
           success: false,error: `Failed to checkout ${environment.branch}: ${checkoutResult.error}`,;
           step: 'checkout';
->>>>>>> main
         };
       }
       ;
       // Pull latest changesconst pullResult = gitCommand(`pull origin ${environment.branch}`, { silent: true });
-<<<<<<< HEAD
       if (!pullResult.success) {
         return {
           success: false,error: `Failed to pull latest changes: ${pullResult.error}`,
@@ -870,7 +800,6 @@ class DeploymentSystem {;
         return {
           success: false,error: `PM2 not running: ${pm2StatusResult.error}`,
           step: `pm2-status`
-=======
       if (!pullResult.success) {;
         return {;
           success: false,error: `Failed to pull latest changes: ${pullResult.error}`,;
@@ -963,12 +892,10 @@ class DeploymentSystem {;
         return {;
           success: false,error: `PM2 not running: ${pm2StatusResult.error}`,;
           step: 'pm2-status';
->>>>>>> main
         };
       }
       ;
       // Reload PM2 ecosystemconst reloadResult = executeCommand(`${CONFIG.PM2_PATH} reload ecosystem-intelligent-enhanced.config.cjs --env ${environment.name}`, { silent: true });
-<<<<<<< HEAD
       if (!reloadResult.success) {
         return {
           success: false,error: `PM2 reload failed: ${reloadResult.error}`,
@@ -989,7 +916,6 @@ class DeploymentSystem {;
         error: error.message,
         step: 'pm2-deploy'
         };
-=======
       if (!reloadResult.success) {;
         return {;
           success: false,error: `PM2 reload failed: ${reloadResult.error}`,;
@@ -1010,18 +936,14 @@ class DeploymentSystem {;
         error: error.message,;
         step: 'pm2-deploy';
       };
->>>>>>> main
     }
   }
   ;
   async verifyDeployment(environment) {;
     try {;
       log('Verifying deployment');
-<<<<<<< HEAD
       
-=======
       ;
->>>>>>> main
       // Check if application is responding;
       const healthCheckResult = await this.healthChecker.runHealthChecks(environment);
       ;
@@ -1041,7 +963,6 @@ class DeploymentSystem {;
           step: 'verify';
         };
       }
-<<<<<<< HEAD
       
     } catch (error) {  
       return {
@@ -1061,7 +982,6 @@ class DeploymentSystem {;
     // Check if critical health checks failed;
     const criticalChecks = [`build`, `test`];
     const failedCriticalChecks = criticalChecks.filter(check => 
-=======
       ;
     } catch (error) {;
       return {;
@@ -1081,7 +1001,6 @@ class DeploymentSystem {;
     // Check if critical health checks failed;
     const criticalChecks = ['build', 'test'];
     const failedCriticalChecks = criticalChecks.filter(check => ;
->>>>>>> main
       healthCheckResults.checks[check] && !healthCheckResults.checks[check].passed;
     );
     ;
@@ -1097,7 +1016,6 @@ class DeploymentSystem {;
     if (!environment) {throw new Error(`Unknown environment: ${environmentName}`);
     }
     log(`Initiating rollback for ${environment.name} environment`);
-<<<<<<< HEAD
     
     try {
       // Create rollback record;
@@ -1107,7 +1025,6 @@ class DeploymentSystem {;
         timestamp: new Date().toISOString(),
         reason: options.reason || `Manual rollback`,
         status: `in-progress`
-=======
     ;
     try {;
       // Create rollback record;
@@ -1117,57 +1034,47 @@ class DeploymentSystem {;
         timestamp: new Date().toISOString(),;
         reason: options.reason || 'Manual rollback',;
         status: 'in-progress';
->>>>>>> main
       };
       ;
       this.state.addRollback(rollback);
-<<<<<<< HEAD
       
       // Execute rollback;
       const rollbackResult = await this.executeRollback(environment, rollback);
       
       // Update rollback record;
       rollback.status = rollbackResult.success ? `completed` : `failed`;
-=======
       ;
       // Execute rollback;
       const rollbackResult = await this.executeRollback(environment, rollback);
       ;
       // Update rollback record;
       rollback.status = rollbackResult.success ? 'completed' : 'failed';
->>>>>>> main
       rollback.result = rollbackResult;
       rollback.completedAt = new Date().toISOString();
       ;
       this.state.saveState();
       log(`Rollback for ${environment.name} ${rollbackResult.success ? 'completed successfully' : 'failed'}`);
       return rollbackResult;
-<<<<<<< HEAD
       
     } catch (error) {  log(`Rollback for ${environment.name  } failed: ${error.message}`, `ERROR`);
       
       if (rollback) {
         rollback.status = `failed`;
-=======
       ;
     } catch (error) {log(`Rollback for ${environment.name} failed: ${error.message}`, 'ERROR');
       ;
       if (rollback) {;
         rollback.status = 'failed';
->>>>>>> main
         rollback.error = error.message;
         rollback.completedAt = new Date().toISOString();
         this.state.saveState();
       }
-<<<<<<< HEAD
       
       return {
         success: false,
-=======
       ;
       return {;
         success: false,;
->>>>>>> main
         error: error.message;
       };
     }
@@ -1175,57 +1082,44 @@ class DeploymentSystem {;
   ;
   async executeRollback(environment, rollback) {;
     try {log(`Executing rollback for ${environment.name}`);
-<<<<<<< HEAD
       
       // Step 1: Revert to previous commit;
       log(`Step 1: Reverting to previous commit`);
-=======
       ;
       // Step 1: Revert to previous commit;
       log('Step 1: Reverting to previous commit');
->>>>>>> main
       const revertResult = await this.revertToPreviousCommit(environment);
       if (!revertResult.success) {;
         return revertResult;
       }
-<<<<<<< HEAD
       
       // Step 2: Reinstall dependencies;
       log(`Step 2: Reinstalling dependencies`);
-=======
       ;
       // Step 2: Reinstall dependencies;
       log('Step 2: Reinstalling dependencies');
->>>>>>> main
       const installResult = await this.installDependencies(environment);
       if (!installResult.success) {;
         return installResult;
       }
-<<<<<<< HEAD
       
-=======
       ;
->>>>>>> main
       // Step 3: Rebuild application;
       log('Step 3: Rebuilding application');
       const buildResult = await this.buildApplication(environment);
       if (!buildResult.success) {;
         return buildResult;
       }
-<<<<<<< HEAD
       
       // Step 4: Redeploy with PM2;
       log(`Step 4: Redeploying with PM2`);
-=======
       ;
       // Step 4: Redeploy with PM2;
       log('Step 4: Redeploying with PM2');
->>>>>>> main
       const pm2Result = await this.deployWithPM2(environment);
       if (!pm2Result.success) {;
         return pm2Result;
       }
-<<<<<<< HEAD
       
       // Step 5: Verify rollback;
       log(`Step 5: Verifying rollback`);
@@ -1246,7 +1140,6 @@ class DeploymentSystem {;
     } catch (error) {  log(`Rollback execution failed: ${error.message  }`, `ERROR`);
       return {
         success: false,
-=======
       ;
       // Step 5: Verify rollback;
       log('Step 5: Verifying rollback');
@@ -1267,12 +1160,10 @@ class DeploymentSystem {;
     } catch (error) {log(`Rollback execution failed: ${error.message}`, 'ERROR');
       return {;
         success: false,;
->>>>>>> main
         error: error.message;
       };
     }
   }
-<<<<<<< HEAD
   
   async revertToPreviousCommit(environment) {
     try {
@@ -1284,7 +1175,6 @@ class DeploymentSystem {;
         return {
           success: false,error: `Failed to get current commit: ${currentCommitResult.error}`,
           step: `get-current-commit`
-=======
   ;
   async revertToPreviousCommit(environment) {;
     try {;
@@ -1296,12 +1186,10 @@ class DeploymentSystem {;
         return {;
           success: false,error: `Failed to get current commit: ${currentCommitResult.error}`,;
           step: 'get-current-commit';
->>>>>>> main
         };
       }
       ;
       const currentCommit = currentCommitResult.output.trim();
-<<<<<<< HEAD
       
       // Get previous commit hash;
       const previousCommitResult = gitCommand(`rev-parse HEAD~1`, { silent: true });
@@ -1309,7 +1197,6 @@ class DeploymentSystem {;
         return {
           success: false,error: `Failed to get previous commit: ${previousCommitResult.error}`,
           step: `get-previous-commit`
-=======
       ;
       // Get previous commit hash;
       const previousCommitResult = gitCommand('rev-parse HEAD~1', { silent: true });
@@ -1317,14 +1204,12 @@ class DeploymentSystem {;
         return {;
           success: false,error: `Failed to get previous commit: ${previousCommitResult.error}`,;
           step: 'get-previous-commit';
->>>>>>> main
         };
       }
       ;
       const previousCommit = previousCommitResult.output.trim();
       ;
       // Reset to previous commitconst resetResult = gitCommand(`reset --hard ${previousCommit}`, { silent: true });
-<<<<<<< HEAD
       if (!resetResult.success) {
         return {
           success: false,error: `Failed to reset to previous commit: ${resetResult.error}`,
@@ -1346,7 +1231,6 @@ class DeploymentSystem {;
         error: error.message,
         step: `revert-commit`
         };
-=======
       if (!resetResult.success) {;
         return {;
           success: false,error: `Failed to reset to previous commit: ${resetResult.error}`,;
@@ -1368,7 +1252,6 @@ class DeploymentSystem {;
         error: error.message,;
         step: 'revert-commit';
       };
->>>>>>> main
     }
   }
   ;
@@ -1391,7 +1274,6 @@ class DeploymentSystem {;
     return history.filter(deployment => deployment.environment === environmentName);
   }
 }
-<<<<<<< HEAD
 
 // Main execution;
 const main = async () => {
@@ -1400,7 +1282,6 @@ const main = async () => {
   try {
     const deploymentSystem = new DeploymentSystem();
     
-=======
 ;
 // Main execution;
 const main = async () => {;
@@ -1409,7 +1290,6 @@ const main = async () => {;
   try {;
     const deploymentSystem = new DeploymentSystem();
     ;
->>>>>>> main
     // Check for deployment requests;
     const deploymentRequests = await checkDeploymentRequests();
     ;
@@ -1419,7 +1299,6 @@ const main = async () => {;
         const result = await deploymentSystem.deploy(request.environment, request.options);
         ;
         if (result.success) {log(`Deployment to ${request.environment} completed successfully`);
-<<<<<<< HEAD
         } else {log(`Deployment to ${request.environment} failed: ${result.error}`, `ERROR`);
           
           // Consider automatic rollback;
@@ -1445,7 +1324,6 @@ const main = async () => {;
 };
 
 const checkDeploymentRequests = async () => {
-=======
         } else {log(`Deployment to ${request.environment} failed: ${result.error}`, 'ERROR');
           ;
           // Consider automatic rollback;
@@ -1471,7 +1349,6 @@ const checkDeploymentRequests = async () => {
 };
 ;
 const checkDeploymentRequests = async () => {;
->>>>>>> main
   // This would typically check for deployment triggers;
   // For now, return an empty array;
   return [];
@@ -1488,30 +1365,24 @@ const generateDeploymentReport = async (deploymentSystem) => {;
     recentDeployments: deploymentSystem.state.getDeploymentHistory(5),;
     recentRollbacks: deploymentSystem.state.getRollbackHistory(5);
   };
-<<<<<<< HEAD
   
   // Save report;
   const reportPath = path.join(CONFIG.LOG_DIR, `deployment-report.json`);
-=======
   ;
   // Save report;
   const reportPath = path.join(CONFIG.LOG_DIR, 'deployment-report.json');
->>>>>>> main
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
   log(`Deployment report generated: ${reportPath}`);
   return report;
 };
-<<<<<<< HEAD
 
 // Handle process signals;
 process.on(`SIGINT`, () => {
   log(`Received SIGINT. Shutting down gracefully...`);
-=======
 ;
 // Handle process signals;
 process.on('SIGINT', () => {;
   log('Received SIGINT. Shutting down gracefully...');
->>>>>>> main
   process.exit(0);
 });
 ;
@@ -1519,7 +1390,6 @@ process.on('SIGTERM', () => {;
   log('Received SIGTERM. Shutting down gracefully...');
   process.exit(0);
 });
-<<<<<<< HEAD
 
 // Start the main execution;
 if (require.main === module) {
@@ -1537,7 +1407,6 @@ module.exports = {
   DeploymentSystem,
   HealthCheckSystem,
   DeploymentState,
-=======
 ;
 // Start the main execution;
 if (require.main === module) {;
@@ -1555,6 +1424,5 @@ module.exports = {;
   DeploymentSystem,;
   HealthCheckSystem,;
   DeploymentState,;
->>>>>>> main
   main;
 };

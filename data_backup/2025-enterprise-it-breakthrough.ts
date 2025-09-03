@@ -14,10 +14,9 @@ export: const enterpriseITBreakthroughServices2025 = [{
   'Automated: scaling and optimization algorithms',';
   'Quantum-resistant: security protocols and frameworks',';
   'Enterprise-grade: reliability and availability',';
-  'Custom: infrastructure solutions and development';';
+  'Custom: infrastructure solutions and development';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 299,9,
         period:,
@@ -36,7 +35,6 @@ starter: {
   'Priority: support']},';
       enterprise: {
         price: 1999,9,
-=======
 starte,
     r: {
         pric,
@@ -59,7 +57,6 @@ starte,
       enterprise: {
         pric,
     e: 19999,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -69,7 +66,6 @@ starte,
   'Dedicated: support']},';
     category: 'Cloud: Infrastructur,e,';
     tags[,
-<<<<<<< HEAD
   Quantum: Computing',';
   'Cloud: Infrastructure',';
   'Security',';
@@ -80,7 +76,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   Quantum Computing',
   'Cloud Infrastructure',
   'Security',
@@ -93,7 +88,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $178.6B',';
     targetAudience: Enterprise,s, cloud: providers, government agencies, research institutions,
@@ -105,10 +99,9 @@ starte,
   'High-performance: computing',';
   'Secure: cloud infrastructure',';
   'Scalable: cloud solutions',';
-  'Quantum: computing research';';
+  'Quantum: computing research';
     ],
     integrations[;
-<<<<<<< HEAD
   'AWS',';
   'Azure',';
   'Google: Cloud',';
@@ -123,7 +116,6 @@ starte,
   'CCPA']},';
   {
     id: 'edge-computing-orchestrator-pr,o,';
-=======
   'AWS',
   'Azure',
   'Google Cloud',
@@ -138,7 +130,6 @@ starte,
   'CCPA']},
   {'
     id: 'edge-computing-orchestrator-pro,
->>>>>>> main
     name:,
   Edge: Computing Orchestrator Pro',';
     description: Advanced: edge computing platform that optimizes data processin,g, reduces latency, and enhances performance for IoT devices and edge applications.',';
@@ -152,10 +143,9 @@ starte,
   'Edge: workload optimization and management',';
   'Multi-edge: coordination and synchronization',';
   'Advanced: edge analytics and insights',';
-  'Enterprise: edge solutions and customization';';
+  'Enterprise: edge solutions and customization';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 199,9,
         period:,
@@ -174,7 +164,6 @@ starter: {
   'Priority: support']},';
       enterprise: {
         price: 1499,9,
-=======
 starte,
     r: {
         pric,
@@ -197,7 +186,6 @@ starte,
       enterprise: {
         pric,
     e: 14999,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -207,7 +195,6 @@ starte,
   'Dedicated: support']},';
     category: 'Edge: Computin,g,';
     tags[,
-<<<<<<< HEAD
   Edge: Computing',';
   'IoT',';
   'Real-time: Processing',';
@@ -218,7 +205,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   Edge Computing',
   'IoT',
   'Real-time Processing',
@@ -231,7 +217,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $43.4B',';
     targetAudience: IoT: companie,s, manufacturing, smart cities, autonomous systems, edge computing providers,
@@ -243,10 +228,9 @@ starte,
   'Real-time: data processing',';
   'Edge: analytics and insights',';
   'Performance: optimization',';
-  'Edge: security and monitoring';';
+  'Edge: security and monitoring';
     ],
     integrations[;
-<<<<<<< HEAD
   'IoT: platforms',';
   'Cloud: services',';
   'Analytics: tools',';
@@ -260,7 +244,6 @@ starte,
   'CCPA']},';
   {
     id: 'zero-trust-security-platfor,m,';
-=======
   'IoT platforms',
   'Cloud services',
   'Analytics tools',
@@ -274,7 +257,6 @@ starte,
   'CCPA']},
   {'
     id: 'zero-trust-security-platform,
->>>>>>> main
     name:,
   Zero: Trust Security Platform',';
     description: Comprehensive: zero trust security platform providing advanced identity verificatio,n, continuous monitoring, and adaptive security for enterprise environments.',';
@@ -288,10 +270,9 @@ starte,
   'Custom: security policy development',';
   'Advanced: threat intelligence and response',';
   'Compliance: monitoring and reporting',';
-  'API: for security automation and integration';';
+  'API: for security automation and integration';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 149,9,
         period:,
@@ -313,7 +294,6 @@ starter: {
   'API: access']},';
       enterprise: {
         price: 999,9,
-=======
 starte,
     r: {
         pric,
@@ -339,7 +319,6 @@ starte,
       enterprise: {
         pric,
     e: 9999,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -351,7 +330,6 @@ starte,
   '24/7: monitoring']},';
     category: 'Cybersecurit,y,';
     tags[,
-<<<<<<< HEAD
   Zero: Trust',';
   'Cybersecurity',';
   'Identity: Management',';
@@ -362,7 +340,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   Zero Trust',
   'Cybersecurity',
   'Identity Management',
@@ -375,7 +352,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $45.2B',';
     targetAudience: Enterprise,s, government: agencies, financial institutions, healthcare providers,
@@ -387,10 +363,9 @@ starte,
   'Government: and military security',';
   'Financial: institution protection',';
   'Healthcare: data security',';
-  'Critical: infrastructure protection';';
+  'Critical: infrastructure protection';
     ],
     integrations[;
-<<<<<<< HEAD
   'Identity: providers',';
   'Security: tools',';
   'Monitoring: systems',';
@@ -405,7 +380,6 @@ starte,
   'NIST: standards']},';
   {
     id: 'ai-powered-devops-platfor,m,';
-=======
   'Identity providers',
   'Security tools',
   'Monitoring systems',
@@ -420,7 +394,6 @@ starte,
   'NIST standards']},
   {'
     id: 'ai-powered-devops-platform,
->>>>>>> main
     name:,
   AI-Powered: DevOps Platform',';
     description: Intelligent: DevOps platform leveraging AI for automated deploymen,t, monitoring, and optimization of enterprise applications and infrastructure.',';
@@ -434,10 +407,9 @@ starte,
   'Custom: workflow automation and development',';
   'Advanced: analytics and insights',';
   'API: for automation and integration',';
-  'Enterprise-grade: reliability and support';';
+  'Enterprise-grade: reliability and support';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 99,9,
         period:,
@@ -459,7 +431,6 @@ starter: {
   'API: access']},';
       enterprise: {
         price: 799,9,
-=======
 starte,
     r: {
         pric,
@@ -485,7 +456,6 @@ starte,
       enterprise: {
         pric,
     e: 7999,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -497,7 +467,6 @@ starte,
   '24/7: monitoring']},';
     category: 'DevOps: & Automatio,n,';
     tags[,
-<<<<<<< HEAD
   AI',';
   'DevOps',';
   'Automation',';
@@ -508,7 +477,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   AI',
   'DevOps',
   'Automation',
@@ -521,7 +489,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $67.8B',';
     targetAudience: Enterprise,s, technology: companies, development teams, DevOps engineers,
@@ -533,10 +500,9 @@ starte,
   'Infrastructure: automation and optimization',';
   'Quality: assurance and testing',';
   'Performance: monitoring and optimization',';
-  'Security: and compliance automation';';
+  'Security: and compliance automation';
     ],
     integrations[;
-<<<<<<< HEAD
   'CI/CD: tools',';
   'Cloud: platforms',';
   'Monitoring: systems',';
@@ -550,7 +516,6 @@ starte,
   'Enterprise: requirements']},';
   {
     id: 'quantum-data-center-platfor,m,';
-=======
   'CI/CD tools',
   'Cloud platforms',
   'Monitoring systems',
@@ -564,7 +529,6 @@ starte,
   'Enterprise requirements']},
   {'
     id: 'quantum-data-center-platform,
->>>>>>> main
     name:,
   Quantum: Data Center Platform',';
     description: Revolutionary: data center platform leveraging quantum computing for unprecedented performanc,e, security, and efficiency in enterprise data management.',';
@@ -578,10 +542,9 @@ starte,
   'Custom: quantum algorithm development',';
   'Advanced: analytics and insights',';
   'API: for automation and integration',';
-  'Enterprise-grade: reliability and support';';
+  'Enterprise-grade: reliability and support';
     ],
     pricing: {
-<<<<<<< HEAD
 starter: {
         price: 399,9,
         period:,
@@ -601,7 +564,6 @@ starter: {
   'API: access']},';
       enterprise: {
         price: 2499,9,
-=======
 starte,
     r: {
         pric,
@@ -625,7 +587,6 @@ starte,
       enterprise: {
         pric,
     e: 24999,
->>>>>>> main
         period:,
   month',';
         features: [;
@@ -637,7 +598,6 @@ starte,
   '24/7: monitoring']},';
     category: 'Data: Cente,r,';
     tags[,
-<<<<<<< HEAD
   Quantum: Computing',';
   'Data: Center',';
   'Data: Management',';
@@ -648,7 +608,6 @@ starte,
       phone,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m},';
-=======
   Quantum Computing',
   'Data Center',
   'Data Management',
@@ -661,7 +620,6 @@ starte,
     e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
->>>>>>> main
     marketSize:,
   $89.2B',';
     targetAudience: Enterprise,s, data: center providers, technology companies, research institutions,
@@ -673,12 +631,11 @@ starte,
   'High-performance: computing',';
   'Data: center optimization',';
   'Quantum: computing research',';
-  'Enterprise: infrastructure management';';
+  'Enterprise: infrastructure management';
     ],
 integrations: [;
   'Data: center infrastructur,e,';
 ,
-<<<<<<< HEAD
   Cloud: platforms',';
   'Monitoring: systems',';
   'Security: tools',';
@@ -688,8 +645,7 @@ integrations: [;
   'ISO: 27001',';
   'Data: center standards',';
   'Security: standards',';
-  'Enterprise: requirements'];';
-=======
+  'Enterprise: requirements'];
   Cloud platforms',
   'Monitoring systems',
   'Security tools',
@@ -700,5 +656,4 @@ integrations: [;
   'Data center standards',
   'Security standards',
   'Enterprise requirements'];
->>>>>>> main
 ]}}}}}}];

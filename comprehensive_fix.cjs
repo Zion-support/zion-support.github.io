@@ -109,17 +109,14 @@ function fixFile(filePath) {
   try {
     const fileName = path.basename(filePath, path.extname(filePath));
     const dirName = path.dirname(filePath);
-<<<<<<< HEAD
 
     let content = ``;
 
     // Determine the type of file and create appropriate content;
-=======
     
     let content = '';
     
     // Determine the type of file and create appropriate content
->>>>>>> main
     if (filePath.includes('/api/')) {
       content = createProperPageTemplate(fileName, true);
     } else if (filePath.includes('/blog/') || filePath.includes('/category/')) {
@@ -157,13 +154,10 @@ function fixCorruptedFiles(directory) {
   }
 }
 
-<<<<<<< HEAD
 // Start fixing from the pages and components directories;
 console.log('Fixing corrupted TypeScript files with proper templates...');
-=======
 // Start fixing from the pages and components directories
 // Fixing corrupted TypeScript files with proper templates...
->>>>>>> main
 fixCorruptedFiles('./pages');
 fixCorruptedFiles('./components');
 // Finished fixing corrupted files with proper templates.

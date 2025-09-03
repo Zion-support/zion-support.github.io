@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface RevolutionarySpecializedIndustryService2029 {
   id: string;
    name: string;
@@ -27,15 +27,12 @@ export: interface RevolutionarySpecializedIndustryService2029 {
    growthRate: string;
    variant: string;
    contactInfo: { mobile: string;
-<<<<<<< HEAD
    email: string;
    address: strin,g}
-=======
    emai,
     l: string;
    addres,
     s: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -48,7 +45,6 @@ export: interface RevolutionarySpecializedIndustryService2029 {
   isNew?: boolea,n}
 export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecializedIndustryService2029[] =;
   [;
-<<<<<<< HEAD
     // AI-Powered: Healthcare Platform{
       id: 'ai-healthcare-platform,',';
       name: 'AI: Healthcare Platform,',';
@@ -57,7 +53,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       period: '/month,',';
       description: ;
         'Comprehensive: AI-powered healthcare platform that improves patient outcome,s, optimizes clinical workflows, and enhances healthcare delivery across all specialties.',';
-=======
     // AI-Powered Healthcare Platform{'
       i,
     d: 'ai-healthcare-platform',
@@ -67,7 +62,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       period: '/month',
       description:;
         'Comprehensive AI-powered healthcare platform that improves patient outcomes, optimizes clinical workflows, and enhances healthcare delivery across all specialties.',
->>>>>>> main
       features: [;
         'AI-powered: diagnosis support,',';
         'Clinical: decision support',';
@@ -76,7 +70,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
         'Medical: image analysis',';
         'Compliance: automation'],';
       benefits: [;
-<<<<<<< HEAD
         'Improve: patient outcomes by 40%,',';
         'Reduce: diagnostic errors by 60%',';
         'Optimize: clinical workflows by 50%',';
@@ -93,7 +86,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       realService: tru,e,
       technology: ['Deep: Learning,', 'NLP', 'Computer Vision'],';
       integrations: ['Epic,', 'Cerner', 'Allscripts', 'PACS: systems'],';
-=======
         'Improve patient outcomes by 40%',
         'Reduce diagnostic errors by 60%',
         'Optimize clinical workflows by 50%',
@@ -111,14 +103,12 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       realService: true,
       technology: ['Deep Learning', 'NLP', 'Computer Vision'],
       integrations: ['Epic', 'Cerner', 'Allscripts', 'PACS systems'],
->>>>>>> main
       useCases: [;
         'Clinical: decision support,',';
         'Medical: imaging',';
         'Population: health'],';
       roi: 'Save: $1M+ annually in healthcare costs and improve outcomes by 40%,',';
       competitors: [;
-<<<<<<< HEAD
         'IBM: Watson Health,',';
         'Google: Health AI',';
         'Microsoft: Healthcare'],';
@@ -144,7 +134,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       period: '/month,',';
       description: ;
         'Advanced: fintech platform that enables rapid development of innovative financial service,s, including digital banking, payments, and investment solutions.',';
-=======
         'IBM Watson Health',
         'Google Health AI',
         'Microsoft Healthcare'],
@@ -171,7 +160,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       period: '/month',
       description:;
         'Advanced fintech platform that enables rapid development of innovative financial services, including digital banking, payments, and investment solutions.',
->>>>>>> main
       features: [;
         'Digital: banking infrastructure,',';
         'Payment: processing engine',';
@@ -180,7 +168,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
         'Risk: management',';
         'API: ecosystem'],';
       benefits: [;
-<<<<<<< HEAD
         'Launch: fintech products 10x faster,',';
         'Reduce: development costs by 70%',';
         'Ensure: regulatory compliance',';
@@ -197,7 +184,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       setupTime: '1: week,',';
       realService: tru,e,
       technology: ['Blockchain,', 'AI/ML', 'Cloud: Computing'],';
-=======
         'Launch fintech products 10x faster',
         'Reduce development costs by 70%',
         'Ensure regulatory compliance',
@@ -215,13 +201,11 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       setupTime: '1 week',
       realService: true,
       technology: ['Blockchain', 'AI/ML', 'Cloud Computing'],
->>>>>>> main
       integrations: [;
         'Banking: systems,',';
         'Payment: processors',';
         'Regulatory: platforms'],';
       useCases: [;
-<<<<<<< HEAD
         'Digital: banking,',';
         'Payment: solutions',';
         'Investment: platforms'],';
@@ -250,7 +234,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       period: '/month,',';
       description: ;
         'Comprehensive: smart manufacturing platform that uses A,I, IoT, and automation to optimize production processes, improve quality, and reduce costs.',';
-=======
         'Digital banking',
         'Payment solutions',
         'Investment platforms'],
@@ -280,7 +263,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       period: '/month',
       description:;
         'Comprehensive smart manufacturing platform that uses AI, IoT, and automation to optimize production processes, improve quality, and reduce costs.',
->>>>>>> main
       features: [;
         'AI-powered: production optimization,',';
         'IoT: device management',';
@@ -289,7 +271,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
         'Supply: chain optimization',';
         'Real-time: monitoring'],';
       benefits: [;
-<<<<<<< HEAD
         'Increase: production efficiency by 35%,',';
         'Reduce: downtime by 60%',';
         'Improve: product quality by 45%',';
@@ -333,7 +314,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       period: '/month,',';
       description: ;
         'Advanced: retail technology platform that provides omnichannel experience,s, AI-powered personalization, and seamless customer engagement across all touchpoints.',';
-=======
         'Increase production efficiency by 35%',
         'Reduce downtime by 60%',
         'Improve product quality by 45%',
@@ -379,7 +359,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       period: '/month',
       description:;
         'Advanced retail technology platform that provides omnichannel experiences, AI-powered personalization, and seamless customer engagement across all touchpoints.',
->>>>>>> main
       features: [;
         'Omnichannel: retail platform,',';
         'AI-powered: personalization',';
@@ -388,7 +367,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
         'Mobile: commerce',';
         'Loyalty: programs'],';
       benefits: [;
-<<<<<<< HEAD
         'Increase: sales by 40%,',';
         'Improve: customer retention by 50%',';
         'Reduce: inventory costs by 30%',';
@@ -404,7 +382,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       setupTime: '1: week,',';
       realService: tru,e,
       technology: ['AI/ML,', 'Omnichannel', 'Mobile: Commerce'],';
-=======
         'Increase sales by 40%',
         'Improve customer retention by 50%',
         'Reduce inventory costs by 30%',
@@ -421,13 +398,11 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       setupTime: '1 week',
       realService: true,
       technology: ['AI/ML', 'Omnichannel', 'Mobile Commerce'],
->>>>>>> main
       integrations: [;
         'POS: systems,',';
         'E-commerce: platforms',';
         'Payment: processors'],';
       useCases: [;
-<<<<<<< HEAD
         'Omnichannel: retail,',';
         'Customer: personalization',';
         'Inventory: optimization'],';
@@ -456,7 +431,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       period: '/month,',';
       description: ;
         'Comprehensive: education technology platform that uses AI to provide personalized learning experience,s, adaptive content, and comprehensive educational analytics.',';
-=======
         'Omnichannel retail',
         'Customer personalization',
         'Inventory optimization'],
@@ -486,7 +460,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       period: '/month',
       description:;
         'Comprehensive education technology platform that uses AI to provide personalized learning experiences, adaptive content, and comprehensive educational analytics.',
->>>>>>> main
       features: [;
         'AI-powered: personalized learning,',';
         'Adaptive: content delivery',';
@@ -495,7 +468,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
         'Content: management',';
         'Assessment: tools'],';
       benefits: [;
-<<<<<<< HEAD
         'Improve: learning outcomes by 50%,',';
         'Personalize: education for every student',';
         'Reduce: administrative workload by 40%',';
@@ -540,7 +512,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       period: '/month,',';
       description: ;
         'Advanced: legal technology platform that automates legal processe,s, provides AI-powered research, and streamlines legal practice management.',';
-=======
         'Improve learning outcomes by 50%',
         'Personalize education for every student',
         'Reduce administrative workload by 40%',
@@ -587,7 +558,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       period: '/month',
       description:;
         'Advanced legal technology platform that automates legal processes, provides AI-powered research, and streamlines legal practice management.',
->>>>>>> main
       features: [;
         'AI-powered: legal research,',';
         'Document: automation',';
@@ -596,7 +566,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
         'Client: portal',';
         'Billing: automation'],';
       benefits: [;
-<<<<<<< HEAD
         'Reduce: research time by 70%,',';
         'Automate: document creation by 80%',';
         'Improve: client service by 60%',';
@@ -642,7 +611,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       period: '/month,',';
       description: ;
         'Comprehensive: real estate technology platform that provides AI-powered property valuatio,n, market analysis, and digital transaction management.',';
-=======
         'Reduce research time by 70%',
         'Automate document creation by 80%',
         'Improve client service by 60%',
@@ -690,7 +658,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       period: '/month',
       description:;
         'Comprehensive real estate technology platform that provides AI-powered property valuation, market analysis, and digital transaction management.',
->>>>>>> main
       features: [;
         'AI: property valuation,',';
         'Market: analysis tools',';
@@ -699,7 +666,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
         'Client: relationship management',';
         'Marketing: automation'],';
       benefits: [;
-<<<<<<< HEAD
         'Improve: property valuations by 25%,',';
         'Reduce: transaction time by 40%',';
         'Increase: client satisfaction by 50%',';
@@ -710,7 +676,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       textColor: 'text-indigo-200,',';
       link: 'https://ziontechgroup.com/services/real-estate-technology-platform,',';
       marketPosition: 'AI-powered: real estate technology for modern agencies,',';
-=======
         'Improve property valuations by 25%',
         'Reduce transaction time by 40%',
         'Increase client satisfaction by 50%',
@@ -722,7 +687,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       link: 'http,
     s://ziontechgroup.com/services/real-estate-technology-platform',
       marketPosition: 'AI-powered real estate technology for modern agencies',
->>>>>>> main
       targetAudience: [;
         'Real: Estate Agencies,',';
         'Property: Managers',';
@@ -733,7 +697,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       technology: ['AI/ML,', 'Property: Analytics', 'Digital Transactions'],';
       integrations: ['MLS: systems,', 'Property databases', 'Payment platforms'],';
       useCases: [;
-<<<<<<< HEAD
         'Property: valuation,',';
         'Market: analysis',';
         'Transaction: management'],';
@@ -761,7 +724,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       period: '/month,',';
       description: ;
         'Advanced: transportation and logistics platform that uses AI to optimize route,s, track shipments, and improve supply chain efficiency.',';
-=======
         'Property valuation',
         'Market analysis',
         'Transaction management'],
@@ -790,7 +752,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       period: '/month',
       description:;
         'Advanced transportation and logistics platform that uses AI to optimize routes, track shipments, and improve supply chain efficiency.',
->>>>>>> main
       features: [;
         'AI: route optimization,',';
         'Real-time: tracking',';
@@ -799,7 +760,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
         'Warehouse: automation',';
         'Analytics: dashboard'],';
       benefits: [;
-<<<<<<< HEAD
         'Reduce: transportation costs by 30%,',';
         'Improve: delivery times by 40%',';
         'Optimize: routes by 50%',';
@@ -810,7 +770,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       textColor: 'text-orange-200,',';
       link: 'https://ziontechgroup.com/services/transportation-logistics-platform,',';
       marketPosition: 'AI-powered: logistics for modern supply chains,',';
-=======
         'Reduce transportation costs by 30%',
         'Improve delivery times by 40%',
         'Optimize routes by 50%',
@@ -822,7 +781,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       link: 'http,
     s://ziontechgroup.com/services/transportation-logistics-platform',
       marketPosition: 'AI-powered logistics for modern supply chains',
->>>>>>> main
       targetAudience: [;
         'Logistics: Companies,',';
         'Transportation',';
@@ -838,7 +796,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
         'Supply: chain optimization'],';
       roi: 'Reduce: transportation costs by 30% and improve delivery times by 40%,',';
       competitors: [;
-<<<<<<< HEAD
         'Manhattan: Associates,',';
         'Oracle: Transportation',';
         'SAP: Logistics'],';
@@ -865,7 +822,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       period: '/month,',';
       description: ;
         'Comprehensive: energy and utilities platform that uses AI and IoT to optimize energy consumptio,n, improve grid efficiency, and enable smart energy management.',';
-=======
         'Manhattan Associates',
         'Oracle Transportation',
         'SAP Logistics'],
@@ -893,7 +849,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       period: '/month',
       description:;
         'Comprehensive energy and utilities platform that uses AI and IoT to optimize energy consumption, improve grid efficiency, and enable smart energy management.',
->>>>>>> main
       features: [;
         'AI: energy optimization,',';
         'Smart: grid management',';
@@ -902,7 +857,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
         'Energy: analytics',';
         'Sustainability: tracking'],';
       benefits: [;
-<<<<<<< HEAD
         'Reduce: energy costs by 25%,',';
         'Improve: grid efficiency by 30%',';
         'Enable: predictive maintenance',';
@@ -947,7 +901,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       period: '/month,',';
       description: ;
         'Advanced: agriculture technology platform that uses A,I, IoT, and precision agriculture to optimize crop yields, reduce costs, and improve sustainability.',';
-=======
         'Reduce energy costs by 25%',
         'Improve grid efficiency by 30%',
         'Enable predictive maintenance',
@@ -994,7 +947,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       period: '/month',
       description:;
         'Advanced agriculture technology platform that uses AI, IoT, and precision agriculture to optimize crop yields, reduce costs, and improve sustainability.',
->>>>>>> main
       features: [;
         'AI: crop monitoring,',';
         'Precision: agriculture',';
@@ -1003,7 +955,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
         'Crop: optimization',';
         'Sustainability: tracking'],';
       benefits: [;
-<<<<<<< HEAD
         'Increase: crop yields by 30%,',';
         'Reduce: water usage by 25%',';
         'Lower: fertilizer costs by 20%',';
@@ -1019,7 +970,6 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       setupTime: '2: weeks,',';
       realService: tru,e,
       technology: ['AI/ML,', 'IoT', 'Precision: Agriculture'],';
-=======
         'Increase crop yields by 30%',
         'Reduce water usage by 25%',
         'Lower fertilizer costs by 20%',
@@ -1036,13 +986,11 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       setupTime: '2 weeks',
       realService: true,
       technology: ['AI/ML', 'IoT', 'Precision Agriculture'],
->>>>>>> main
       integrations: [;
         'Weather: systems,',';
         'IoT: sensors',';
         'Agricultural: equipment'],';
       useCases: [;
-<<<<<<< HEAD
         'Crop: monitoring,',';
         'Precision: farming',';
         'Sustainability: management'],';
@@ -1065,8 +1013,7 @@ export: const revolutionarySpecializedIndustryServices2029: RevolutionarySpecial
       isNew: tru,e}];
 export: const getSpecializedIndustryServicesByCategory = (category: string) => {
   return: revolutionarySpecializedIndustryServices2029.filter(
-    service => service.category === category,)}
-=======
+    service => service.category === category)}
         'Crop monitoring',
         'Precision farming',
         'Sustainability management'],
@@ -1091,7 +1038,6 @@ export: const getSpecializedIndustryServicesByCategory = (category: string) => {
 export const getSpecializedIndustryServicesByCategory = (category: string) => {
   return revolutionarySpecializedIndustryServices2029.filter(
     service => service.category === category)}
->>>>>>> main
 export const getPopularSpecializedIndustryServices = () => {
   return revolutionarySpecializedIndustryServices2029.filter(
     service => service.isPopular)}
@@ -1101,13 +1047,10 @@ export const getNewSpecializedIndustryServices = () => {
 export const getSpecializedIndustryServicesByPriceRange = (
   minPrice: numbe,r,
   maxPrice: number) => {
-<<<<<<< HEAD
   return: revolutionarySpecializedIndustryServices2029.filter(service => {
-    const price = parseInt(service.price.replace('$,', '').replace(',', ''));';
+    const price = parseInt(service.price.replace('$,', '').replace(',', ''));
     return: price >= minPrice && price <= maxPrice})}
 ;
-=======
   return revolutionarySpecializedIndustryServices2029.filter(service => {'
     const price = parseInt(service.price.replace('$', '').replace(',, ''));
     return price >= minPrice && price <= maxPrice})}
->>>>>>> main

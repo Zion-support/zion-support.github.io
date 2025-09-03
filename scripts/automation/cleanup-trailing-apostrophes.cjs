@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
-=======
 #!/'usr/bin/env' node;
 
->>>>>>> main
 const fs = require('fs');
 const path = require('path');
 ;
 const exts = new Set(['.js', '.jsx', '.ts', '.tsx']);
-<<<<<<< HEAD
 
 /**
  * Returns true if the file should be processed;
@@ -29,7 +25,6 @@ function cleanContent(content) {
       .replace(/([;)}\]>])\s*'\s*$/u, '$1')
       .replace(/>\s*'\s*$/u, '>')
       .replace(/^'\s*$/u, '')
-=======
 ;
 /**;
  * Returns true if the file should be processed;
@@ -50,11 +45,9 @@ function cleanContent(content) {;
       .replace(/([;)}\]>])\s*'\s*$/u, '$1');
       .replace(/>\s*'\s*$/u, '>');
       .replace(/^'\s*$/u, ');
->>>>>>> main
   );
 ;
   let out = lines.join('\n');
-<<<<<<< HEAD
 
   // In-line fixes across the whole file;
   out = out;
@@ -63,7 +56,6 @@ function cleanContent(content) {;
     // Remove apostrophe after closing tokens if followed by punctuation or end;
     .replace(/([)}>])\s*'\s*(?=\s*['', ';)}\]']|\s*$)/g, '$1')
     // JSX: >'< to ><
-=======
 ;
   // In-line fixes across the whole file;
   out = out;
@@ -72,7 +64,6 @@ function cleanContent(content) {;
     // Remove apostrophe after closing tokens if followed by punctuation or end;
     .replace(/([)}>])\s*'\s*(?=\s*[', ';)}\]']|\s*$)/g, '$1');
     // JSX: >'< to ><;
->>>>>>> main
     .replace(/>\s*'\s*</g, '><');
 ;
   return out;
@@ -104,11 +95,8 @@ function main() {;
         fs.writeFileSync(f, updated, 'utf8');
         changed += 1;
       }
-<<<<<<< HEAD
     } catch (e) {
-=======
     } catch (e) {;
->>>>>>> main
       // ignore file-level errors;
     }
   }

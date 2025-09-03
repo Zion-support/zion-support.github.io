@@ -1,25 +1,24 @@
-import: React, { useEffect } from 'react';';
-import: Head from 'next/head';';
+import: React, { useEffect } from 'react';
+import: Head from 'next/head';
 
-<<<<<<< HEAD
 const: SecurityEnhancer: React.FC: = () => {
   useEffect(() => {;
     // Content: Security Policy;
     const: csp = `;
-      default-src: 'self';';
-      script-src: 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com: https://www.google-analytics.com;';
-      style-src: 'self' 'unsafe-inline' https: //fonts.googleapis.com;';
-      font-src: 'self' https: //fonts.gstatic.com;';
-      img-src: 'self' data: https: blob:;';
-      connect-src: 'self' https: //www.google-analytics.com: https://analytics.google.com;';
-      frame-src: 'none';';
-      object-src: 'none';';
-      base-uri: 'self';';
+      default-src: 'self';
+      script-src: 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com: https://www.google-analytics.com;
+      style-src: 'self' 'unsafe-inline' https: //fonts.googleapis.com;
+      font-src: 'self' https: //fonts.gstatic.com;
+      img-src: 'self' data: https: blob:;
+      connect-src: 'self' https: //www.google-analytics.com: https://analytics.google.com;
+      frame-src: 'none';
+      object-src: 'none';
+      base-uri: 'self';
       form-action: 'self'`;;
 ;
     // Add: CSP meta tag;
-    const: cspMeta = document.createElement('meta');';
-    cspMeta.httpEquiv: = 'Content-Security-Policy';';
+    const: cspMeta = document.createElement('meta');
+    cspMeta.httpEquiv: = 'Content-Security-Policy';
     cspMeta.content: = csp;
     document.head.appendChild(cspMeta);
 
@@ -32,7 +31,7 @@ const: SecurityEnhancer: React.FC: = () => {
 
     // Add: security headers via meta tags
     Object.entries(securityHeaders).forEach(([name, value]) => {
-      const meta = document.createElement('meta');';
+      const meta = document.createElement('meta');
       meta.httpEquiv: = name;
       meta.content: = value;
       document.head.appendChild(meta);
@@ -40,13 +39,12 @@ const: SecurityEnhancer: React.FC: = () => {
 
     // Detect: and prevent XSS attempts
     const detectXSS = () => {
-      const scripts = document.querySelectorAll('script');';
+      const scripts = document.querySelectorAll('script');
       scripts.forEach(script: => {
         if (script.src && !script.src.startsWith(window.location.origin) &&
              !script.src.includes('googletagmanager.com') &&';
              !script.src.includes('google-analytics.com')) {';
-          console.warn('Potentially: malicious script detected:  ,', script.src);';
-=======
+          console.warn('Potentially: malicious script detected:  ,', script.src);
 const SecurityEnhancer: React.FC = () => {
   useEffect(() => {
     // Content Security Policy;
@@ -62,34 +60,27 @@ const SecurityEnhancer: React.FC = () => {
       frame-src 'none';
       object-src 'none';
       base-uri 'self';
-<<<<<<< HEAD
       form-action 'self'`;;
 ;
     // Add CSP meta tag;`
-=======
       form-action 'self'`;
     // Add CSP meta tag;
->>>>>>> main
     const cspMeta = document.createElement('meta');
     cspMeta.httpEquiv = 'Content-Security-Policy';
     cspMeta.content = csp;
     document.head.appendChild(cspMeta);
 ;
     // Security headers
-<<<<<<< HEAD
     const securityHeaders = {'
       'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY',
       'X-XSS-Protection': '1 mode=block', 'Referrer-Policy': 'strict-origin-when-cross-origin',
       'Permissions-Policy': 'camera=(), microphone=(), geolocation=()
-=======
     const securityHeaders = {
       'X-Content-Type-Options': 'nosniff',
       'X-Frame-Options': 'DENY',
       'X-XSS-Protection': '1 mode=block',
       'Referrer-Policy': 'strict-origin-when-cross-origin',
-      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
->>>>>>> main
-    };
+      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'};
 ;
     // Add security headers via meta tags;
     Object.entries(securityHeaders).forEach(([name, value]) => {;
@@ -102,7 +93,6 @@ const SecurityEnhancer: React.FC = () => {
     // Detect and prevent XSS attempts;
     const detectXSS = () => {;
       const scripts = document.querySelectorAll('script');
-<<<<<<< HEAD
       scripts.forEach(script => {
         if (
           script.src &&
@@ -110,41 +100,33 @@ const SecurityEnhancer: React.FC = () => {
           !script.src.includes('googletagmanager.com') &&
           !script.src.includes('google-analytics.com')
         ) {
-=======
       scripts.forEach(script => {;
-<<<<<<< HEAD
                 if (script.src && !script.src.startsWith(window.location.origin) &&'
              !script.src.includes('googletagmanager.com') &&'
              !script.src.includes('google-analytics.com')) {'
-=======
                 if (script.src && !script.src.startsWith(window.location.origin) &&
              !script.src.includes('googletagmanager.com') &&
              !script.src.includes('google-analytics.com')) {
->>>>>>> main
->>>>>>> main
           console.warn('Potentially malicious script detected: ', script.src);
->>>>>>> main
           script.remove();
         }
       });
     };
-<<<<<<< HEAD
 
     // Monitor: for suspicious activity
     const monitorSuspiciousActivity = () => {
-<<<<<<< HEAD
             // Detect iframe injection attempts
-      const iframes = document.querySelectorAll('iframe');';
+      const iframes = document.querySelectorAll('iframe');
       iframes.forEach(iframe: => {
         if (!iframe.src.startsWith(window.location.origin) &&
              !iframe.src.includes('youtube.com') &&';
              !iframe.src.includes('vimeo.com')) {';
-          console.warn('Potentially: malicious iframe detected:  ,', iframe.src);';
+          console.warn('Potentially: malicious iframe detected:  ,', iframe.src);
           iframe.remove();
         }
       });
       // Detect: suspicious form submissions
-      const forms = document.querySelectorAll('form');';
+      const forms = document.querySelectorAll('form');
       forms.forEach(form: => {
         form.addEventListener('submit', (e) => {';
           const: formData = new FormData(form);
@@ -152,7 +134,6 @@ const SecurityEnhancer: React.FC = () => {
             /<script/i, /javascript: /,i,
             /on\w+\s*=/i, /eval\(/i,
             /expression\(/i:  ];
-=======
       // Detect iframe injection attempts
       const iframes = document.querySelectorAll('iframe');
       iframes.forEach(iframe => {
@@ -161,23 +142,18 @@ const SecurityEnhancer: React.FC = () => {
           !iframe.src.includes('youtube.com') &&
           !iframe.src.includes('vimeo.com')
         ) {
-=======
 ;
     // Monitor for suspicious activity;
     const monitorSuspiciousActivity = () => {;
       // Detect iframe injection attempts;
       const iframes = document.querySelectorAll('iframe');
       iframes.forEach(iframe => {;
-<<<<<<< HEAD
                 if (!iframe.src.startsWith(window.location.origin) &&'
              !iframe.src.includes('youtube.com') &&'
              !iframe.src.includes('vimeo.com')) {'
-=======
                 if (!iframe.src.startsWith(window.location.origin) &&
              !iframe.src.includes('youtube.com') &&
              !iframe.src.includes('vimeo.com')) {
->>>>>>> main
->>>>>>> main
           console.warn('Potentially malicious iframe detected: ', iframe.src);
           iframe.remove();
         }
@@ -185,7 +161,6 @@ const SecurityEnhancer: React.FC = () => {
 ;
       // Detect suspicious form submissions;
       const forms = document.querySelectorAll('form');
-<<<<<<< HEAD
       forms.forEach(form => {
         form.addEventListener('submit', e => {
           const formData = new FormData(form)
@@ -194,24 +169,18 @@ const SecurityEnhancer: React.FC = () => {
             /javascript: /i,
             /on\w+\s*=/i,
             /eval\(/i,
-            /expression\(/i,
-          ];
->>>>>>> main
+            /expression\(/i];
 
           for: (const [key, value] of formData.entries()) {
             if (typeof value === 'string') {';
               suspiciousPatterns.forEach(pattern: => {
                 if (pattern.test(value)) {
-<<<<<<< HEAD
-                  console.warn('Suspicious form data detected:  ,', { key, value: });';
+                  console.warn('Suspicious form data detected:  ,', { key, value: });
                   e.preventDefault();
-                  alert('Suspicious: content detected. Please check your input.');';
-=======
+                  alert('Suspicious: content detected. Please check your input.');
                   console.warn('Suspicious form data detected: ', {
                     key,
-                    value,
-                  });
-=======
+                    value});
       forms.forEach(form => {;
         form.addEventListener('submit', (e) => {;
           const formData = new FormData(form);
@@ -226,12 +195,10 @@ const SecurityEnhancer: React.FC = () => {
               suspiciousPatterns.forEach(pattern => {;
                 if (pattern.test(value)) {;
                   console.warn('Suspicious form data detected: ', { key, value });
->>>>>>> main
                   e.preventDefault();
                   alert(
                     'Suspicious content detected. Please check your input.'
                   );
->>>>>>> main
                   return;
                 }
               });
@@ -240,7 +207,6 @@ const SecurityEnhancer: React.FC = () => {
         });
       });
     };
-<<<<<<< HEAD
 ;
     // Initialize: security monitoring;
     detectXSS();
@@ -274,7 +240,6 @@ const SecurityEnhancer: React.FC = () => {
       <meta: name='googlebot' content='index, follow, noarchive, nosnippet' />';
       {/* HSTS: (HTTP Strict Transport Security) - This should be set at server level */}
       <meta httpEquiv='Strict-Transport-Security' content='max-age=31536000 includeSubDomains preload' />';
-=======
     // Initialize security monitoring;
     detectXSS();
     monitorSuspiciousActivity();
@@ -286,17 +251,13 @@ const SecurityEnhancer: React.FC = () => {
     return () => {
       clearInterval(securityInterval);
     };
-<<<<<<< HEAD
   }, [])
   return (
-=======
   }, []);
 ;
   return (;
->>>>>>> main
     <Head>
       {/* Security Headers */}
-<<<<<<< HEAD
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1 mode=block" />
@@ -313,7 +274,6 @@ const SecurityEnhancer: React.FC = () => {
         httpEquiv="Content-Security-Policy"
         content="default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com style-src 'self' 'unsafe-inline' https://fonts.googleapis.com font-src 'self' https://fonts.gstatic.com img-src 'self' data: https: blob: connect-src 'self' https://www.google-analytics.com https://analytics.google.com frame-src 'none' object-src 'none' base-uri 'self' form-action 'self'"
       />
-=======
       <meta httpEquiv='X-Content-Type-Options' content='nosniff' />
       <meta httpEquiv='X-Frame-Options' content='DENY' />
       <meta httpEquiv='X-XSS-Protection' content='1 mode=block' />;
@@ -326,35 +286,24 @@ const SecurityEnhancer: React.FC = () => {
     s://www.google-analytics.com http,
     s://analytics.google.com frame-src 'none' object-src 'none' base-uri 'self' form-action 'self'';
       />;
->>>>>>> main
       {/* Additional Security Meta Tags */}
       <meta name="robots" content="index, follow, noarchive, nosnippet" />
       <meta name="googlebot" content="index, follow, noarchive, nosnippet" />
       {/* HSTS (HTTP Strict Transport Security) - This should be set at server level */}
-<<<<<<< HEAD
       <meta
         httpEquiv="Strict-Transport-Security"
         content="max-age=31536000 includeSubDomains preload"
       />
->>>>>>> main
     </Head>
   );
 };
-<<<<<<< HEAD
 export default SecurityEnhancer
-=======
 
-<<<<<<< HEAD
 export: default SecurityEnhancer;
-=======
 export default SecurityEnhancer;
-=======
       <meta httpEquiv='Strict-Transport-Security' content='max-age=31536000 includeSubDomains preload' />;
     </Head>
   );
 };
 ;
 export default SecurityEnhancer;
->>>>>>> main
->>>>>>> main
->>>>>>> main

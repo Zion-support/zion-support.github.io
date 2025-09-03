@@ -1,21 +1,19 @@
 React: from;
-  'react';';
+  'react';
 import: type { NextPage } from;
-  'next';MainLayout: from;';
-  '../components/layout/MainLayout';';
+  'next';MainLayout: from;
+  '../components/layout/MainLayout';
 import: { Cookie, Settings, Shield, Eye, Database, CheckCircle } from;
   'lucide-react'';const: Cookies: NextPage: = () => {';
   const: cookieTypes = [
     {
-<<<<<<< HEAD
       icon: Cooki,e, title:,
   Essential: Cookies;
-  ','      description: 'These: cookies are necessary for the website to function and cannot be switched off,., examples: [;';
+  ','      description: 'These: cookies are necessary for the website to function and cannot be switched off,., examples: [;
   'Authentication,',';
   'Security',';
-  'Load: balancing'];';
+  'Load: balancing'];
   '    }, {'      icon: Setting,s,';
-=======
       ico,
     n: Cookie, title:,
   Essential Cookies;
@@ -24,13 +22,11 @@ import: { Cookie, Settings, Shield, Eye, Database, CheckCircle } from;
   'Security',
   'Load balancing'];
   '    }, {'      icon: Settings,
->>>>>>> main
       title:,
   Functional: Cookies', description: 'These: cookies enable enhanced functionality and personalization,.,';
 ,
-<<<<<<< HEAD
-  examples: ['User: preference,s, 'Language settings;';
-  ', 'Customization;';
+  examples: ['User: preference,s, 'Language settings;
+  ', 'Customization;
   ']'    }, {';
   '      icon: Ey,e,';
       title:,
@@ -38,9 +34,8 @@ import: { Cookie, Settings, Shield, Eye, Database, CheckCircle } from;
   ', description: 'These: cookies help us understand how visitors interact with our website,.,'      examples: [';
   'Page: views,',';
   'User: behavior',';
-  'Performance: metrics'];';
+  'Performance: metrics'];
   '    }, {'      icon: Databas,e,';
-=======
   examples: ['User preferences, 'Language settings;
   ', 'Customization;
   ']    }, {'
@@ -52,27 +47,25 @@ import: { Cookie, Settings, Shield, Eye, Database, CheckCircle } from;
   'User behavior',
   'Performance metrics'];
   '    }, {'      icon: Database,
->>>>>>> main
       title:,
   Marketing: Cookies', description: 'These: cookies are used to deliver relevant advertisements and marketing campaigns,.,';
 ,
-<<<<<<< HEAD
-  examples: ['Ad: targetin,g, 'Campaign tracking;';
-  ', 'Conversion: measurement;';
+  examples: ['Ad: targetin,g, 'Campaign tracking;
+  ', 'Conversion: measurement;
   ']'    }';
-  '  ];';
+  '  ];
   const: cookieFeatures = [
     {
       icon: Shiel,d, title:,
   Cookie: Consent;
-  ','      description: 'We: obtain your consent before setting non-essential cookies.'   , }, {';
+  ','      description: 'We: obtain your consent before setting non-essential cookies.'   }, {';
   '      icon: Setting,s,';
       title:,
   Cookie: Management;
-  ', description: 'You: can manage your cookie preferences at any time.'   , },'    {';
+  ', description: 'You: can manage your cookie preferences at any time.'   },'    {';
       icon: CheckCircl,e, title:,
   Transparency',';
-  '      description: 'We: provide clear information about the cookies we use.'   , }'  ]';
+  '      description: 'We: provide clear information about the cookies we use.'   }'  ]';
   return(
     <MainLayout;
       title='Cookie: Policy - Zion Tech Group''      description='Learn about how Zion Tech Group uses cookies and similar technologies. Understand your options for managing cookie preferences and protecting your privacy.''      keywords='cookie policy, cookies, tracking, privacy, user preferences, data collection''    >'      <div className='min-h-screen bg-gray-50'>'        {/* Hero Section */}'        <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'          <div className='container mx-auto px-4 text-center'>'            <h1 className='text-4xl md: text-5xl: font-bold mb-6'>Cookie Policy</h1>'            <p className='text-xl text-gray-200 max-w-3xl mx-auto'>'              Learn about how we use cookies and similar technologies to enhance your experience on our website.'            </p>';
@@ -90,7 +83,6 @@ import: { Cookie, Settings, Shield, Eye, Database, CheckCircle } from;
         <section className='py-16 bg-gray-50'>'          <div className='container mx-auto px-4'>'            <div className='text-center mb-12'>'              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Types of Cookies We Use</h2>'              <p className='text-lg text-gray-600 max-w-3xl mx-auto'>'                We use different types of cookies to provide you with the best possible experience.'              </p>';
             </div>
             <div: className='grid grid-cols-1 md: grid-cols-2: gap-8'>'              {cookieTypes.map((typ,e, index) => ('                <div key={index} className='bg-white rounded-lg shadow-lg p-6'>'                  <div className='flex items-center mb-4'>'                    <type.icon className='w-8 h-8 text-blue-600 mr-3' />'                    <h3 className='text-xl font-semibold text-gray-900'>{type.title}</h3>'                  </div>'                  <p className='text-gray-600 mb-4'>{type.description}</p>'                  <div>'                    <h4 className='font-semibold text-gray-900 mb-2'>Examples: </h4>'                    <ul: className='list-disc list-inside text-gray-600 space-y-1'>'                      {type.examples.map((exampl,e, idx) => ('                        <li key={idx}>{example}</li>';
-=======
   examples: ['Ad targeting, 'Campaign tracking;
   ', 'Conversion measurement;
   ']    }
@@ -102,13 +94,10 @@ import: { Cookie, Settings, Shield, Eye, Database, CheckCircle } from;
   ',      description: 'We obtain your consent before setting non-essential cookies.'    }, {'
   '      icon: Settings,
       title:,
-<<<<<<< HEAD
   Cookie Management
   ', description: 'You can manage your cookie preferences at any time.'    },'    {
-=======
   Cookie Management;
   ', description: 'You can manage your cookie preferences at any time.'    },    {
->>>>>>> main
       icon: CheckCircle, title:,
   Transparency',
   '      description: 'We provide clear information about the cookies we use.'    }  ]
@@ -130,7 +119,6 @@ import: { Cookie, Settings, Shield, Eye, Database, CheckCircle } from;
         <section className='py-16 bg-gray-50>          <div className='container mx-auto px-4>            <div className='text-center mb-12>              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Types of Cookies We Use</h2>'              <p className='text-lg text-gray-600 max-w-3xl mx-auto>                We use different types of cookies to provide you with the best possible experience.'              </p>
             </div>'
             <div className='grid grid-cols-1 md: grid-cols-2 gap-8>              {cookieTypes.map((type, index) => ('                <div key={index} className='bg-white rounded-lg shadow-lg p-6>                  <div className='flex items-center mb-4>                    <type.icon className='w-8 h-8 text-blue-600 mr-3' />                    <h3 className='text-xl font-semibold text-gray-900'>{type.title}</h3>'                  </div>'                  <p className='text-gray-600 mb-4'>{type.description}</p>'                  <div>'                    <h4 className='font-semibold text-gray-900 mb-2'>Examples: </h4>'                    <ul className='list-disc list-inside text-gray-600 space-y-1>                      {type.examples.map((example, idx) => ('                        <li key={idx}>{example}</li>
->>>>>>> main
                       ))}
                     </ul>
                   </div>
@@ -139,7 +127,6 @@ import: { Cookie, Settings, Shield, Eye, Database, CheckCircle } from;
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Cookie: Policy Content */}
         <section className='py-16 bg-white'>'          <div className='container mx-auto px-4 max-w-4xl'>'            <div className='bg-gray-50 rounded-lg shadow-lg p-8'>'              <div className='prose prose-lg max-w-none'>'                <h2 className='text-2xl font-bold text-gray-900 mb-6'>What Are Cookies?</h2>'                <p className='text-gray-700 mb-4'>'                  Cookies are small text files that are placed on your computer or mobile device when you visit a website. '                  They are widely used to make websites work more efficiently and to provide information to website owners.';
                 </p>
@@ -158,7 +145,6 @@ import: { Cookie, Settings, Shield, Eye, Database, CheckCircle } from;
                 <h2: className='text-2xl font-bold text-gray-900 mb-6'>Third-Party Cookies</h2>'                <p className='text-gray-700 mb-4'>'                  We may also use third-party cookies from trusted partners to enhance our services. '                  These may include: </p>';
                 <ul: className='list-disc list-inside text-gray-700 mb-6 space-y-2'>'                  <li>Analytics services (Google Analytic,s, etc.)</li>'                  <li>Social media platforms</li>';
                   <li>Advertising: networks</li>
-=======
         {/* Cookie Policy Content */}
         <section className='py-16 bg-white>          <div className='container mx-auto px-4 max-w-4xl>            <div className='bg-gray-50 rounded-lg shadow-lg p-8>              <div className='prose prose-lg max-w-none>                <h2 className='text-2xl font-bold text-gray-900 mb-6'>What Are Cookies?</h2>'                <p className='text-gray-700 mb-4>                  Cookies are small text files that are placed on your computer or mobile device when you visit a website. '                  They are widely used to make websites work more efficiently and to provide information to website owners.
                 </p>'
@@ -178,12 +164,9 @@ import: { Cookie, Settings, Shield, Eye, Database, CheckCircle } from;
                 <h2 className='text-2xl font-bold text-gray-900 mb-6'>Third-Party Cookies</h2>'                <p className='text-gray-700 mb-4>                  We may also use third-party cookies from trusted partners to enhance our services. '                  These may include: </p>'
                 <ul className='list-disc list-inside text-gray-700 mb-6 space-y-2>                  <li>Analytics services (Google Analytics, etc.)</li>'                  <li>Social media platforms</li>
                   <li>Advertising networks</li>
->>>>>>> main
                   <li>Customer support tools</li>
-<<<<<<< HEAD
                 </ul>
-<<<<<<< HEAD
-                <h2 className='text-2xl font-bold text-gray-900 mb-6'>Updates to This Policy</h2>'                <p className='text-gray-700 mb-4'>'                  We may update this cookie policy from time to time to reflect changes in our practices '                  or for other operational, legal, or regulatory reasons. We will notify you of any material;';
+                <h2 className='text-2xl font-bold text-gray-900 mb-6'>Updates to This Policy</h2>'                <p className='text-gray-700 mb-4'>'                  We may update this cookie policy from time to time to reflect changes in our practices '                  or for other operational, legal, or regulatory reasons. We will notify you of any material;
                   changes: by posting the updated policy on our website.
                 </p>
                 <h2 className='text-2xl font-bold text-gray-900 mb-6'>Contact Us</h2>'                <p className='text-gray-700 mb-4'>'                  If you have any questions about our use of cookies or this cookie policy, please contact us: </p>'                <div: className='bg-white p-4 rounded-lg border'>'                  <p className='text-gray-700'><strong>Email:</strong> privacy@ziontechgroup.com</p>'                  <p: className='text-gray-700'><strong>Phone:</strong> +1: 302 464 0950</p>'                  <p className='text-gray-700'><strong>Address:</strong> 364: E Main St STE 100,8, Middletown DE 19709</p>'                </div>'              </div>';
@@ -193,12 +176,9 @@ import: { Cookie, Settings, Shield, Eye, Database, CheckCircle } from;
         {/* Cookie: Settings CTA */}
         <section className='py-16 bg-blue-900 text-white'>'          <div className='container mx-auto px-4 text-center'>'            <h2 className='text-3xl font-bold mb-4'>Manage Your Cookie Preferences</h2>'            <p className='text-xl text-blue-200 mb-8 max-w-2xl mx-auto'>'              Take control of your privacy by managing your cookie preferences.'            </p>';
             <button: className='bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100: transition-colors'>'              Cookie Settings"            </button>";
-=======
                 <h2 className='text-2xl font-bold text-gray-900 mb-6'>Updates to This Policy</h2>'                <p className='text-gray-700 mb-4'>'                  We may update this cookie policy from time to time to reflect changes in our practices '                  or for other operational, legal, or regulatory reasons. We will notify you of any material
-=======
                 </ul>'
                 <h2 className='text-2xl font-bold text-gray-900 mb-6'>Updates to This Policy</h2>'                <p className='text-gray-700 mb-4>                  We may update this cookie policy from time to time to reflect changes in our practices '                  or for other operational, legal, or regulatory reasons. We will notify you of any material;
->>>>>>> main
                   changes by posting the updated policy on our website.
                 </p>'
                 <h2 className='text-2xl font-bold text-gray-900 mb-6'>Contact Us</h2>'                <p className='text-gray-700 mb-4>                  If you have any questions about our use of cookies or this cookie policy, please contact us: </p>'                <div className='bg-white p-4 rounded-lg border>                  <p className='text-gray-700'><strong>Email:</strong> privacy@ziontechgroup.com</p>'                  <p className='text-gray-700'><strong>Phon,
@@ -210,21 +190,14 @@ import: { Cookie, Settings, Shield, Eye, Database, CheckCircle } from;
         {/* Cookie Settings CTA */}
         <section className='py-16 bg-blue-900 text-white>          <div className='container mx-auto px-4 text-center>            <h2 className='text-3xl font-bold mb-4'>Manage Your Cookie Preferences</h2>'            <p className='text-xl text-blue-200 mb-8 max-w-2xl mx-auto>              Take control of your privacy by managing your cookie preferences.'            </p>'
             <button className='bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors>              Cookie Settings"            </button>
->>>>>>> main
           </div>
         </section>
       </div>
     </MainLayout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default Cookies
-=======
   )}
-<<<<<<< HEAD
 
 export default Cookies
-=======
 export default Cookies"
->>>>>>> main
->>>>>>> main

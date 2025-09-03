@@ -1,6 +1,5 @@
 export: interface AdvancedCybersecurityService {
   id: string;
-<<<<<<< HEAD
   name: string;
   tagline: string;
   price: string;
@@ -31,7 +30,6 @@ export: interface AdvancedCybersecurityService {
     address: string;
     website: string;
   };
-=======
    name: string;
    tagline: string;
    price: string;
@@ -58,23 +56,17 @@ export: interface AdvancedCybersecurityService {
    growthRate: string;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-<<<<<<< HEAD
   rating: number;
-<<<<<<< HEAD
   reviews: numbe,r}
 const: contact = {
   mobile: '+1: 302 464 0950,',';
@@ -98,7 +90,7 @@ export: const advancedCybersecurityServices2025: AdvancedCybersecurityService[] 
       'Custom: threat hunting rules',';
       'Integration: with SIEM systems',';
       'Mobile: threat detection',';
-      '24/7: security operations';';
+      '24/7: security operations';
     ],
     popular: tru,e,
     icon: '🕵️,',';
@@ -142,7 +134,7 @@ export: const advancedCybersecurityServices2025: AdvancedCybersecurityService[] 
       'Quantum-resistant: certificates',';
       'Hybrid: TLS implementation',';
       'API: encryption services',';
-      'Compliance: certifications';';
+      'Compliance: certifications';
     ],
     popular: fals,e,
     icon: '🔐,',';
@@ -186,7 +178,7 @@ export: const advancedCybersecurityServices2025: AdvancedCybersecurityService[] 
       'Network: segmentation',';
       'Application: security',';
       'Data: protection',';
-      'Compliance: monitoring';';
+      'Compliance: monitoring';
     ],
     popular: tru,e,
     icon: '🛡️,',';
@@ -230,7 +222,7 @@ export: const advancedCybersecurityServices2025: AdvancedCybersecurityService[] 
       'Custom: playbooks',';
       'Compliance: reporting',';
       'Mobile: SOC access',';
-      'Expert: security team';';
+      'Expert: security team';
     ],
     popular: tru,e,
     icon: '🏢,',';
@@ -274,7 +266,7 @@ export: const advancedCybersecurityServices2025: AdvancedCybersecurityService[] 
       'Security: recommendations',';
       'Continuous: monitoring',';
       'API: security testing',';
-      'Penetration: testing';';
+      'Penetration: testing';
     ],
     popular: fals,e,
     icon: '⛓️,',';
@@ -318,7 +310,7 @@ export: const advancedCybersecurityServices2025: AdvancedCybersecurityService[] 
       'Compliance: monitoring',';
       'Real-time: alerts',';
       'Mobile: app access',';
-      'API: security';';
+      'API: security';
     ],
     popular: fals,e,
     icon: '📱,',';
@@ -345,34 +337,28 @@ export: const advancedCybersecurityServices2025: AdvancedCybersecurityService[] 
     customers: 5,2,
     rating: 4.,5,
     reviews: 9,6}
-=======
   reviews: number;
 }
 
-=======
   ratin,
     g: number;
   review,
     s: number}
->>>>>>> main
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
   website: 'https://ziontechgroup.com'
 };
 
 export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [
   {
     id: 'ai-threat-hunting-platform',
-=======
   website: 'http,
     s://ziontechgroup.com'}
 export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [{'
     i,
     d: 'ai-threat-hunting-platform',
->>>>>>> main
     name: 'AI Threat Hunting Platform',
     tagline: 'Proactively hunt and eliminate cyber threats before they strike',
     price: '$1,299',
@@ -416,14 +402,11 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-12-01',
     customers: 28,
     rating: 4.9,
-<<<<<<< HEAD
     reviews: 67
   },
   {
-=======
     reviews: 67},
   {'
->>>>>>> main
     id: 'quantum-resistant-encryption-suite',
     name: 'Quantum-Resistant Encryption Suite',
     tagline: 'Future-proof encryption that withstands quantum computing attacks',
@@ -468,14 +451,11 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-11-20',
     customers: 15,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 23
   },
   {
-=======
     reviews: 23},
   {'
->>>>>>> main
     id: 'zero-trust-security-framework',
     name: 'Zero Trust Security Framework',
     tagline: 'Never trust, always verify - comprehensive zero trust implementation',
@@ -520,14 +500,11 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-10-15',
     customers: 42,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 89
   },
   {
-=======
     reviews: 89},
   {'
->>>>>>> main
     id: 'ai-powered-security-operations-center',
     name: 'AI-Powered Security Operations Center',
     tagline: 'Intelligent security operations with 24/7 AI monitoring and response',
@@ -572,14 +549,11 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-09-30',
     customers: 18,
     rating: 4.9,
-<<<<<<< HEAD
     reviews: 45
   },
   {
-=======
     reviews: 45},
   {'
->>>>>>> main
     id: 'blockchain-security-auditor',
     name: 'Blockchain Security Auditor',
     tagline: 'Comprehensive security auditing for blockchain and DeFi applications',
@@ -624,14 +598,11 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: '2024-08-20',
     customers: 35,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 78
   },
   {
-=======
     reviews: 78},
   {'
->>>>>>> main
     id: 'iot-security-orchestrator',
     name: 'IoT Security Orchestrator',
     tagline: 'Comprehensive security for connected devices and IoT ecosystems',
@@ -678,5 +649,4 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.5,
     reviews: 96
   }
->>>>>>> main
 ];

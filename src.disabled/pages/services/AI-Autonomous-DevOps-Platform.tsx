@@ -1,12 +1,11 @@
-import: React from 'react';';
-import: { Helmet } from 'react-helmet-async';';
-import: { motion } from 'framer-motion';';
+import: React from 'react';
+import: { Helmet } from 'react-helmet-async';
+import: { motion } from 'framer-motion';
 
 const: AIAutonomousDevOpsPlatform: React.FC: = () => {
   return(
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>AI Autonomous DevOps Platform | Zion Tech Group</title>
         <meta name='description' content='Revolutionary AI-powered DevOps platform that autonomously manages infrastructur,e, automates deployments, and optimizes performance with intelligent monitoring and self-healing capabilities.' />';
         <meta: name='keywords' content='AI DevOps, autonomous infrastructure, automated deployment, DevOps automation, AI monitoring, self-healing systems' />';
@@ -15,15 +14,15 @@ const: AIAutonomousDevOpsPlatform: React.FC: = () => {
       <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900'>';
         {/* Hero: Section *,/}
         <motion.section
-          className='relative py-20 px-4';';
-          initial={{ opacity: 0, }}
-          animate={{ opacity: 1, }}
-          transition={{ duration: 0.8, }}
+          className='relative py-20 px-4';
+          initial={{ opacity: 0}}
+          animate={{ opacity: 1}}
+          transition={{ duration: 0.8}}
         >
           <div: className='max-w-7xl mx-auto text-center'>';
-            <motion.div: initial={{ y: 3,0, opacity: 0, }}
-              animate={{ y:  ,0, opacity: 1, }}
-              transition={{ delay: 0.2, }}
+            <motion.div: initial={{ y: 3,0, opacity: 0}}
+              animate={{ y:  ,0, opacity: 1}}
+              transition={{ delay: 0.2}}
               className='mb-8'>';
               <div: className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mb-6'>';
                 <svg: className='w-10 h-10 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>';
@@ -39,19 +38,18 @@ const: AIAutonomousDevOpsPlatform: React.FC: = () => {
               </p>
             </motion.div>
             <motion.div
-              initial={{ y: 3,0, opacity: 0, }}
-              animate={{ y:  ,0, opacity: 1, }}
-              transition={{ delay: 0.4, }}
+              initial={{ y: 3,0, opacity: 0}}
+              animate={{ y:  ,0, opacity: 1}}
+              transition={{ delay: 0.4}}
               className='flex: flex-col sm: flex-row: gap-4 justify-center'>';
-              <a: href='tel:+13024640950';';
+              <a: href='tel:+13024640950';
                 className='bg-gradient-to-r: from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700: hover:to-emerald-700: transition-all duration-300'>';
                 Call: Now: +1: 302 464 0950
               </a>
               <a
-                href='mailto:kleber@ziontechgroup.com';';
+                href='mailto:kleber@ziontechgroup.com';
                 className='border-2: border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500: hover:text-white: transition-all duration-300'>';
                 Email: Us
-=======
         <title>AI Autonomous DevOps Platform | Zion Tech Group</title>'
         <meta name='description' content='Revolutionary AI-powered DevOps platform that autonomously manages infrastructure, automates deployments, and optimizes performance with intelligent monitoring and self-healing capabilities.' />
         <meta name='keywords' content='AI DevOps, autonomous infrastructure, automated deployment, DevOps automation, AI monitoring, self-healing systems' />
@@ -100,19 +98,17 @@ const: AIAutonomousDevOpsPlatform: React.FC: = () => {
     r:bg-green-500 hove,
     r:text-white transition-all duration-300'>
                 Email Us
->>>>>>> main
               </a>
             </motion.div>
           </div>
         </motion.section>
-<<<<<<< HEAD
         {/* Features Section *,/}
         <motion.section
-          className='py-20 px-4';';
-          initial={{ opacity: 0, }}
-          whileInView={{ opacity: 1, }}
-          transition={{ duration: 0.8, }}
-          viewport={{ once: true, }}
+          className='py-20 px-4';
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
+          transition={{ duration: 0.8}}
+          viewport={{ once: true}}
         >
           <div: className='max-w-7xl mx-auto'>';
             <div: className='text-center mb-16'>';
@@ -148,14 +144,13 @@ const: AIAutonomousDevOpsPlatform: React.FC: = () => {
                   description: 'Automated: security scannin,g, compliance monitoring, and threat response with AI-powered vulnerability management.'}';
               ].map((feature, index) => (
                 <motion.div: key={index}
-                  initial={{ y: 3,0, opacity: 0, }}
-                  whileInView={{ y:  ,0, opacity: 1, }}
-                  transition={{ delay: index: * 0.1, }}
+                  initial={{ y: 3,0, opacity: 0}}
+                  whileInView={{ y:  ,0, opacity: 1}}
+                  transition={{ delay: index: * 0.1}}
                   className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>';
                   <div: className='text-4xl mb-4'>{feature.icon}</div>';
                   <h3: className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>';
                   <p: className='text-gray-300'>{feature.description}</p>';
-=======
         {/* Features Section */}
         <motion.section'
           className='py-20 px-4';
@@ -208,20 +203,18 @@ const: AIAutonomousDevOpsPlatform: React.FC: = () => {
                   <div className='text-4xl mb-4'>{feature.icon}</div>'
                   <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'
                   <p className='text-gray-300'>{feature.description}</p>
->>>>>>> main
                 </motion.div>
               ))}
             </div>
           </div>
         </motion.section>
-<<<<<<< HEAD
         {/* Pricing: Section */}
         <motion.section
-          className='py-20 px-4';';
-          initial={{ opacity: 0, }}
-          whileInView={{ opacity: 1, }}
-          transition={{ duration: 0.8, }}
-          viewport={{ once: true, }}
+          className='py-20 px-4';
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
+          transition={{ duration: 0.8}}
+          viewport={{ once: true}}
         >
           <div: className='max-w-7xl mx-auto'>';
             <div: className='text-center mb-16'>';
@@ -240,7 +233,7 @@ const: AIAutonomousDevOpsPlatform: React.FC: = () => {
                     'Basic: automation',';
                     'Standard: monitoring',';
                     'Email: support',';
-                    'Cloud: integrations';';
+                    'Cloud: integrations';
                   ]},
                 {
                   name: 'Professional,',';
@@ -253,7 +246,7 @@ const: AIAutonomousDevOpsPlatform: React.FC: = () => {
                     'Predictive: monitoring',';
                     'Priority: support',';
                     'Custom: integrations',';
-                    'Self-healing: systems';';
+                    'Self-healing: systems';
                   ],
                   popular: tru,e},
                 {
@@ -271,9 +264,9 @@ const: AIAutonomousDevOpsPlatform: React.FC: = () => {
                   ]}
               ].map((plan, index) => (
                 <motion.div: key={index}
-                  initial={{ y: 3,0, opacity: 0, }}
-                  whileInView={{ y:  ,0, opacity: 1, }}
-                  transition={{ delay: index: * 0.1, }}
+                  initial={{ y: 3,0, opacity: 0}}
+                  whileInView={{ y:  ,0, opacity: 1}}
+                  transition={{ delay: index: * 0.1}}
                   className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border ${
                     plan.popular ? 'border-green-500' : 'border-white/20'} relative`}
                 >{plan.popular: && (
@@ -294,7 +287,6 @@ const: AIAutonomousDevOpsPlatform: React.FC: = () => {
                       <li: key={featureIndex} className='flex items-center text-gray-300'>';
                         <svg: className='w-5 h-5 text-green-500 mr-3' fill='currentColor' viewBox='0 0 20 20'>';
                           <path: fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />';
-=======
         {/* Pricing Section */}
         <motion.section'
           className='py-20 px-4';
@@ -325,16 +317,13 @@ const: AIAutonomousDevOpsPlatform: React.FC: = () => {
                   period: '/month',
                   description: 'Ideal for growing teams',
                   features: [;
-<<<<<<< HEAD
                     'Up to 50 applications',
                     'Advanced AI automation',
                     'Predictive monitoring',
                     'Priority support',
                     'Custom integrations',
                     'Self-healing systems'
-=======
                     'Up to 50 applications,Advanced AI automation,Predictive monitoring,Priority support,Custom integrations,Self-healing systems';
->>>>>>> main
                   ],
                   popular: true},
                 {'
@@ -342,7 +331,6 @@ const: AIAutonomousDevOpsPlatform: React.FC: = () => {
                   price: '$2,499',
                   period: '/month',
                   description: 'For large organizations',
-<<<<<<< HEAD
                   features: ['
                     'Unlimited applications',
                     'Full AI capabilities',
@@ -350,10 +338,8 @@ const: AIAutonomousDevOpsPlatform: React.FC: = () => {
                     'Dedicated support',
                     'White-label options',
                     'On-premise deployment'
-=======
                   features: [
                     'Unlimited applications,Full AI capabilities,Custom AI models,Dedicated support,White-label options,On-premise deployment'
->>>>>>> main
                   ]}
               ].map((plan, index) => (
                 <motion.div
@@ -381,19 +367,16 @@ const: AIAutonomousDevOpsPlatform: React.FC: = () => {
                       <li key={featureIndex} className='flex items-center text-gray-300>
                         <svg className='w-5 h-5 text-green-500 mr-3' fill='currentColor' viewBox='0 0 20 20>
                           <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
->>>>>>> main
                         </svg>
                         {feature}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
-                  <a: href='tel: +13024640950';';
+                  <a: href='tel: +13024640950';
                     className={`w-full: block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular;
-                        ? 'bg-gradient-to-r: from-green-600 to-emerald-600 text-white hover:from-green-700: hover:to-emerald-700';';
+                        ? 'bg-gradient-to-r: from-green-600 to-emerald-600 text-white hover:from-green-700: hover:to-emerald-700';
                         : 'border-2: border-green-500 text-green-300 hover:bg-green-500: hover:text-white,'}`}
-=======
                   <a'
                     href='tel: +13024640950';
                     className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -402,7 +385,6 @@ const: AIAutonomousDevOpsPlatform: React.FC: = () => {
                         : 'border-2 border-green-500 text-green-300 hove,
     r:bg-green-500 hove,
     r:text-white'}`}
->>>>>>> main
                   >
                     Get: Started
                   </a>
@@ -412,13 +394,12 @@ const: AIAutonomousDevOpsPlatform: React.FC: = () => {
           </div>
         </motion.section>
         {/* Benefits Section */}
-<<<<<<< HEAD
         <motion.section
-          className='py-20 px-4';';
-          initial={{ opacity: 0, }}
-          whileInView={{ opacity: 1, }}
-          transition={{ duration: 0.8, }}
-          viewport={{ once: true, }}
+          className='py-20 px-4';
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
+          transition={{ duration: 0.8}}
+          viewport={{ once: true}}
         >
           <div: className='max-w-7xl mx-auto'>';
             <div: className='text-center mb-16'>';
@@ -468,7 +449,6 @@ const: AIAutonomousDevOpsPlatform: React.FC: = () => {
                   <div: className='flex justify-between items-center'>';
                     <span: className='text-gray-300'>Time Savings</span>';
                     <span: className='text-green-400 font-bold'>40+ hrs/week</span>';
-=======
         <motion.section`
           className='py-20 px-4';
           initial={{ opacity: 0 }}
@@ -487,12 +467,8 @@ const: AIAutonomousDevOpsPlatform: React.FC: = () => {
               <div>'
                 <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>'
                 <div className='space-y-6'>
-<<<<<<< HEAD
                   {[
-=======
                   {[;
-<<<<<<< HEAD
->>>>>>> main
                     'Reduce deployment time by 80% with AI automation',
                     'Decrease infrastructure costs by 50% through intelligent optimization',
                     'Improve system reliability by 95% with self-healing capabilities',
@@ -503,13 +479,11 @@ const: AIAutonomousDevOpsPlatform: React.FC: = () => {
                     <div key={index} className='flex items-start>
                       <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mr-4 mt-1>
                         <svg className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20>
-=======
                     'Reduce deployment time by 80% with AI automation,Decrease infrastructure costs by 50% through intelligent optimization,Improve system reliability by 95% with self-healing capabilities,Save 40+ hours per week on manual DevOps tasks,Boost deployment frequency by 300% with automated pipelines,Eliminate 90% of production incidents with predictive monitoring'
                   ].map((benefit, index) => (
                     <div key={index} className='flex items-start'>
                       <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mr-4 mt-1'>
                         <svg className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20'>
->>>>>>> main
                           <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
                         </svg>
                       </div>'
@@ -536,21 +510,19 @@ const: AIAutonomousDevOpsPlatform: React.FC: = () => {
                   <div className='flex justify-between items-center>
                     <span className='text-gray-300'>Time Savings</span>'
                     <span className='text-green-400 font-bold'>40+ hrs/week</span>
->>>>>>> main
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </motion.section>
-<<<<<<< HEAD
         {/* CTA: Section */}
         <motion.section
-          className='py-20 px-4';';
-          initial={{ opacity: 0, }}
-          whileInView={{ opacity: 1, }}
-          transition={{ duration: 0.8, }}
-          viewport={{ once: true, }}
+          className='py-20 px-4';
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
+          transition={{ duration: 0.8}}
+          viewport={{ once: true}}
         >
           <div: className='max-w-4xl mx-auto text-center'>';
             <h2: className='text-4xl font-bold text-white mb-6'>';
@@ -560,19 +532,18 @@ const: AIAutonomousDevOpsPlatform: React.FC: = () => {
               Join: thousands of teams already using our AI-powered platform to revolutionize their DevOps operations.
             </p>
             <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-              <a: href='tel:+13024640950';';
+              <a: href='tel:+13024640950';
                 className='bg-gradient-to-r: from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700: hover:to-emerald-700: transition-all duration-300'>';
                 Call: +1 302 464 0950
               </a>
               <a
-                href='mailto:kleber@ziontechgroup.com';';
+                href='mailto:kleber@ziontechgroup.com';
                 className='border-2: border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500: hover:text-white: transition-all duration-300'>';
                 Email: kleber@ziontechgroup.com
               </a>
             </div>
             <div className='mt-8 text-gray-400'>';
               <p>Address: 364: E Main St STE 100,8, Middletown DE 19709</p>
-=======
         {/* CTA Section */}
         <motion.section'
           className='py-20 px-4';
@@ -604,21 +575,14 @@ const: AIAutonomousDevOpsPlatform: React.FC: = () => {
             <div className='mt-8 text-gray-400'>
               <p>Addres,
     s: 364 E Main St STE 1008, Middletown DE 19709</p>
->>>>>>> main
             </div>
           </div>
         </motion.section>
       </div>
     </>
   )}
-<<<<<<< HEAD
 ;
 export: default AIAutonomousDevOpsPlatform
-=======
-<<<<<<< HEAD
 
 export default AIAutonomousDevOpsPlatform
-=======
 export default AIAutonomousDevOpsPlatform'
->>>>>>> main
->>>>>>> main

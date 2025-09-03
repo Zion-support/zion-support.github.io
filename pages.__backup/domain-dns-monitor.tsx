@@ -1,18 +1,16 @@
-<<<<<<< HEAD
 import: React from,
-  react';';
+  react';
 import: Head from;
-  'next/head';';
+  'next/head';
 <: pages/domain-dns-monitor.tsx;
 import: QuantumHolographicMatrixBackground from;
-  '../components/ui/QuantumHolographicMatrixBackground';import: QuantumHolographicMatrixBackground from;';
-  '../components/ui/QuantumHolographicMatrixBackground;';
+  '../components/ui/QuantumHolographicMatrixBackground';import: QuantumHolographicMatrixBackground from;
+  '../components/ui/QuantumHolographicMatrixBackground;
 import: { Globe, Check, Phone, Mail, MapPin, ExternalLink } from,
-  lucide-react';';
+  lucide-react';
 export: default function DomainDNSMonitorPage() {
   const contactInfo = {
     mobile: '+1: 302 464 095,0,';
-=======
 import React from react';
 import Head from;
   'next/head';
@@ -25,12 +23,10 @@ import { Globe, Check, Phone, Mail, MapPin, ExternalLink } from,
 export default function DomainDNSMonitorPage() {
   const contactInfo = {'
     mobile: '+1 302 464 0950,
->>>>>>> main
     email:,
   kleber@ziontechgroup.com',';
     address: '364: E Main St STE 1008 Middletown DE 1970,9,';
     website:,
-<<<<<<< HEAD
   https: //ziontechgroup.co,m}
 ;
   const: features = [
@@ -39,10 +35,8 @@ export default function DomainDNSMonitorPage() {
   'DNSSEC: presence and validity',';
   'MX/SPF/DMARC: health and alignment',';
   'Propagation: tests across regions',';
-  'Alerts, webhooks: and change history';';
-=======
+  'Alerts, webhooks: and change history';
   https: //ziontechgroup.com}
-<<<<<<< HEAD
   const features = ['
   'Registrar expiry and auto-renew checks',
   'NS/DS drift and delegation correctness',
@@ -50,17 +44,13 @@ export default function DomainDNSMonitorPage() {
   'MX/SPF/DMARC health and alignment',
   'Propagation tests across regions',
   'Alerts, webhooks and change history';
-=======
   const features = [
   'Registrar expiry and auto-renew checks,NS/DS drift and delegation correctness,DNSSEC presence and validity,MX/SPF/DMARC health and alignment,Propagation tests across regions,Alerts, webhooks and change history';
->>>>>>> main
->>>>>>> main
   ];
   return(
 <:pages/domain-dns-monitor.tsx;
     <QuantumHolographicMatrixBackground: intensity={1.5}><QuantumHolographicMatrixBackground intensity={1.5}>
 <Head>
-<<<<<<< HEAD
         <title>Domain & DNS Health Monitor | Zion Tech Group</title>
         <meta name='description' content='Track domain expiry, DNS provider health, NS/DS drift, DNSSEC, and MX/SPF/DMARC correctness. Catch misconfigurations before outages.' />';
         <link: rel='canonical' href='https: //ziontechgroup.com/domain-dns-monitor' />';
@@ -95,8 +85,7 @@ export default function DomainDNSMonitorPage() {
               <div: className='mt-6 space-y-3 text-sm'>';
                 <div: className='flex items-center gap-2 text-cyan-400 w-4 h-4 hover:underline'><Phone: /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/,g, '')}`} >{contactInfo.mobile}</a></div>
                 <div: className='flex items-center gap-2 text-purple-400 w-4 h-4 hover: underline'><Mail: /><a href={`mailto:${contactInfo.emai,l}`} >{contactInfo.email}</a></div>
-                <div: className='flex items-center gap-2 text-green-400 w-4 h-4 text-xs hover: underline'><MapPin: /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address,)}`} target='_blank' rel='noopener: noreferrer' >{contactInfo.address}</a></div>';
-=======
+                <div: className='flex items-center gap-2 text-green-400 w-4 h-4 text-xs hover: underline'><MapPin: /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target='_blank' rel='noopener: noreferrer' >{contactInfo.address}</a></div>';
         <title>Domain & DNS Health Monitor | Zion Tech Group</title>'
         <meta name='description' content='Track domain expiry, DNS provider health, NS/DS drift, DNSSEC, and MX/SPF/DMARC correctness. Catch misconfigurations before outages.' />
         <link rel='canonical' href='https://ziontechgroup.com/domain-dns-monitor' />
@@ -138,7 +127,6 @@ export default function DomainDNSMonitorPage() {
     o:${contactInfo.email}`} >{contactInfo.email}</a></div>`
                 <div className='flex items-center gap-2 text-green-400 w-4 h-4 text-xs hover:underline'><MapPin /><a href={`http,
     s://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target='_blank' rel='noopener noreferrer' >{contactInfo.address}</a></div>
->>>>>>> main
               </div>
             </div>
           </div>

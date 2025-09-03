@@ -1,17 +1,14 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
 /**
  * Dependency Manager - PM2 Automation;
  * Automatically manages and fixes dependency issues;
  */
-=======
 #!/'usr/bin/env' node;
 
 /**;
  * Dependency Manager - PM2 Automation;
  * Automatically manages and fixes dependency issues;
  */;
->>>>>>> main
 
 const fs = require('fs');
 const path = require('path');
@@ -20,15 +17,12 @@ const { execSync, spawn } = require('child_process');
 class DependencyManager {;
   constructor() {;
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'dependency-manager.log';
-=======
     this.logFile = path.join(
       this.projectRoot, 'logs',
       'dependency-manager.log'
->>>>>>> main
     );
     this.reportsDir = path.join(this.projectRoot, 'logs', `dependency-reports`);
     this.ensureLogsDirectory();
@@ -44,18 +38,14 @@ class DependencyManager {;
       fs.mkdirSync(this.reportsDir, { recursive: true });
     }
   }
-<<<<<<< HEAD
 
   log(message, level = `INFO`) {
-=======
 ;
   log(message, level = 'INFO') {;
->>>>>>> main
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
   }
-<<<<<<< HEAD
 
   async runDependencyManagement() {
     this.log(`Starting dependency management automation...`);
@@ -70,7 +60,6 @@ class DependencyManager {;
       // 2. Fix package.json issues;
       if (status.packageJsonIssues.length > 0) {
         const packageFixes = await this.fixPackageJsonIssues(
-=======
 ;
   async runDependencyManagement() {;
     this.log('Starting dependency management automation...');
@@ -85,12 +74,10 @@ class DependencyManager {;
       // 2. Fix package.json issues;
       if (status.packageJsonIssues.length > 0) {;
         const packageFixes = await this.fixPackageJsonIssues(;
->>>>>>> main
           status.packageJsonIssues;
         );
         actions.push(...packageFixes);
       }
-<<<<<<< HEAD
 
       // 3. Clean corrupted dependencies;
       if (status.corruptedDeps.length > 0) {
@@ -124,7 +111,6 @@ class DependencyManager {;
         type: `SYSTEM_ERROR`,
         message: error.message,
         timestamp: new Date().toISOString(),
-=======
 ;
       // 3. Clean corrupted dependencies;
       if (status.corruptedDeps.length > 0) {;
@@ -158,7 +144,6 @@ class DependencyManager {;
         type: 'SYSTEM_ERROR',;
         message: error.message,;
         timestamp: new Date().toISOString(),;
->>>>>>> main
       });
     }
 ;
@@ -172,20 +157,16 @@ class DependencyManager {;
       needsReinstall: false,;
       outdatedDeps: [],;
     };
-<<<<<<< HEAD
 
     try {
-=======
 ;
     try {;
->>>>>>> main
       // Check package.json;
       const packagePath = path.join(this.projectRoot, 'package.json');
       if (fs.existsSync(packagePath)) {;
         try {;
           const packageContent = fs.readFileSync(packagePath, 'utf8');
           const packageJson = JSON.parse(packageContent);
-<<<<<<< HEAD
 
           // Check for invalid versions;
           if (packageJson.dependencies) {
@@ -197,7 +178,6 @@ class DependencyManager {;
                   type: 'INVALID_VERSION',
                   dependency: dep,
                   current: version,
-=======
 ;
           // Check for invalid versions;
           if (packageJson.dependencies) {;
@@ -209,12 +189,10 @@ class DependencyManager {;
                   type: 'INVALID_VERSION',;
                   dependency: dep,;
                   current: version,;
->>>>>>> main
                 });
               }
             }
           }
-<<<<<<< HEAD
 
           if (packageJson.devDependencies) {
             for (const ['dep', 'version'] of Object.entries(
@@ -225,7 +203,6 @@ class DependencyManager {;
                   type: 'INVALID_DEV_VERSION',
                   dependency: dep,
                   current: version,
-=======
 ;
           if (packageJson.devDependencies) {;
             for (const ['dep', 'version'] of Object.entries(;
@@ -236,24 +213,20 @@ class DependencyManager {;
                   type: 'INVALID_DEV_VERSION',;
                   dependency: dep,;
                   current: version,;
->>>>>>> main
                 });
               }
             }
           }
-<<<<<<< HEAD
         } catch (error) {  
           status.packageJsonIssues.push({
             type: `PARSE_ERROR`,
-            error: error.message,
-            });
+            error: error.message});
         }
       }
 
       // Check node_modules;
       const nodeModulesPath = path.join(this.projectRoot, `node_modules`);
       if (fs.existsSync(nodeModulesPath)) {
-=======
         } catch (error) {;
           status.packageJsonIssues.push({;
             type: 'PARSE_ERROR',;
@@ -265,7 +238,6 @@ class DependencyManager {;
       // Check node_modules;
       const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
       if (fs.existsSync(nodeModulesPath)) {;
->>>>>>> main
         const corrupted = await this.findCorruptedPackages(nodeModulesPath);
         status.corruptedDeps = corrupted;
 ;
@@ -275,7 +247,6 @@ class DependencyManager {;
       } else {;
         status.needsReinstall = true;
       }
-<<<<<<< HEAD
 
       // Check for outdated dependencies;
       try {
@@ -284,7 +255,6 @@ class DependencyManager {;
       } catch (error) {  
         this.log(Failed to check outdated dependencies: ${error.message  }`,
           `WARN`
-=======
 ;
       // Check for outdated dependencies;
       try {;
@@ -293,7 +263,6 @@ class DependencyManager {;
       } catch (error) {;
         this.log(Failed to check outdated dependencies: ${error.message}',;
           'WARN';
->>>>>>> main
         );
       }
     } catch (error) {  this.log(`Dependency status check failed: ${error.message  }`, `ERROR`);
@@ -307,17 +276,14 @@ class DependencyManager {;
 ;
     try {;
       const packages = fs.readdirSync(nodeModulesPath);
-<<<<<<< HEAD
 
       for (const pkg of packages) {
         if (pkg.startsWith(`.')) continue;
 
-=======
 ;
       for (const pkg of packages) {;
         if (pkg.startsWith('.')) continue;
 ;
->>>>>>> main
         const pkgPath = path.join(nodeModulesPath, 'pkg);
         const pkgJsonPath = path.join(pkgPath', 'package.json');
 ;
@@ -331,21 +297,17 @@ class DependencyManager {;
                 path: pkgPath,;
               });
             }
-<<<<<<< HEAD
           } catch {
             corrupted.push({
               name: pkg,
               issue: `Invalid package.json`,
-              path: pkgPath,
-            });
+              path: pkgPath});
           }
         } else {
           corrupted.push({
             name: pkg,
             issue: `Missing package.json`,
-            path: pkgPath,
-=======
-          } catch {;
+            path: pkgPath} catch {;
             corrupted.push({;
               name: pkg,;
               issue: 'Invalid package.json',;
@@ -357,7 +319,6 @@ class DependencyManager {;
             name: pkg,;
             issue: 'Missing package.json',;
             path: pkgPath,;
->>>>>>> main
           });
         }
       }
@@ -366,7 +327,6 @@ class DependencyManager {;
 ;
     return corrupted;
   }
-<<<<<<< HEAD
 
   async checkOutdatedDependencies() {
     try {
@@ -374,7 +334,6 @@ class DependencyManager {;
         cwd: this.projectRoot,
         stdio: 'pipe',
         encoding: 'utf8',
-=======
 ;
   async checkOutdatedDependencies() {;
     try {;
@@ -382,7 +341,6 @@ class DependencyManager {;
         cwd: this.projectRoot,;
         stdio: 'pipe',;
         encoding: 'utf8',;
->>>>>>> main
       });
 ;
       const outdated = JSON.parse(result);
@@ -392,7 +350,6 @@ class DependencyManager {;
         wanted: info.wanted,;
         latest: info.latest,;
       }));
-<<<<<<< HEAD
     } catch (error) {  
       // npm outdated returns non-zero exit code when there are outdated deps;
       if (error.stdout) {
@@ -402,10 +359,8 @@ class DependencyManager {;
             name,
             current: info.current,
             wanted: info.wanted,
-            latest: info.latest,
-            }));
+            latest: info.latest}));
         } catch {
-=======
     } catch (error) {;
       // npm outdated returns non-zero exit code when there are outdated deps;
       if (error.stdout) {;
@@ -418,7 +373,6 @@ class DependencyManager {;
             latest: info.latest,;
           }));
         } catch {;
->>>>>>> main
           return [];
         }
       }
@@ -434,7 +388,6 @@ class DependencyManager {;
       const packageContent = fs.readFileSync(packagePath, 'utf8');
       const packageJson = JSON.parse(packageContent);
       let modified = false;
-<<<<<<< HEAD
 
       for (const issue of issues) {
         if (
@@ -455,7 +408,6 @@ class DependencyManager {;
               type: `PACKAGE_JSON_FIX`,
               dependency: issue.dependency,action: `Fixed invalid version for ${issue.dependency}`,
               timestamp: new Date().toISOString(),
-=======
 ;
       for (const issue of issues) {;
         if (;
@@ -476,7 +428,6 @@ class DependencyManager {;
               type: 'PACKAGE_JSON_FIX',;
               dependency: issue.dependency,action: `Fixed invalid version for ${issue.dependency}`,;
               timestamp: new Date().toISOString(),;
->>>>>>> main
             });
           }
         }
@@ -494,17 +445,14 @@ class DependencyManager {;
 ;
   async cleanCorruptedDependencies() {;
     const actions = [];
-<<<<<<< HEAD
 
     try {
       this.log(`Cleaning corrupted dependencies...`);
 
-=======
 ;
     try {;
       this.log('Cleaning corrupted dependencies...');
 ;
->>>>>>> main
       const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
       const packageLockPath = path.join(this.projectRoot, 'package-lock.json');
 ;
@@ -522,19 +470,16 @@ class DependencyManager {;
       if (fs.existsSync(packageLockPath)) {;
         fs.unlinkSync(packageLockPath);
         this.log('Removed package-lock.json');
-<<<<<<< HEAD
 
         actions.push({
           type: `CLEANUP`,
           action: `Removed package-lock.json`,
           timestamp: new Date().toISOString(),
-=======
 ;
         actions.push({;
           type: 'CLEANUP',;
           action: 'Removed package-lock.json',;
           timestamp: new Date().toISOString(),;
->>>>>>> main
         });
       }
     } catch (error) {  this.log(`Failed to clean dependencies: ${error.message  }`, `ERROR`);
@@ -545,7 +490,6 @@ class DependencyManager {;
 ;
   async reinstallDependencies() {;
     const actions = [];
-<<<<<<< HEAD
 
     try {
       this.log(`Reinstalling dependencies...`);
@@ -554,7 +498,6 @@ class DependencyManager {;
       execSync('npm install', {
         cwd: this.projectRoot,
         stdio: 'pipe',
-=======
 ;
     try {;
       this.log('Reinstalling dependencies...');
@@ -563,23 +506,19 @@ class DependencyManager {;
       execSync('npm install', {;
         cwd: this.projectRoot,;
         stdio: 'pipe',;
->>>>>>> main
       });
 ;
       this.log('Dependencies reinstalled successfully');
-<<<<<<< HEAD
 
       actions.push({
         type: `REINSTALL`,
         action: `Successfully reinstalled all dependencies`,
         timestamp: new Date().toISOString(),
-=======
 ;
       actions.push({;
         type: 'REINSTALL',;
         action: 'Successfully reinstalled all dependencies',;
         timestamp: new Date().toISOString(),;
->>>>>>> main
       });
     } catch (error) {  this.log(`Failed to reinstall dependencies: ${error.message  }`, `ERROR`);
       throw error;
@@ -590,32 +529,26 @@ class DependencyManager {;
 ;
   async updateDependencies() {;
     const actions = [];
-<<<<<<< HEAD
 
     try {
-=======
 ;
     try {;
->>>>>>> main
       // Check for outdated dependencies;
       const outdated = await this.checkOutdatedDependencies();
 ;
       if (outdated.length > 0) {this.log(`Found ${outdated.length} outdated dependencies`);
-<<<<<<< HEAD
 
         // Update minor and patch versions only (safe updates)
         for (const dep of outdated) {
           try {
             if (this.isSafeUpdate(dep.current, dep.wanted)) {execSync(`npm update ${dep.name}`, {
                 cwd: this.projectRoot,
-                stdio: `pipe`,
-              });
+                stdio: `pipe`});
 
               actions.push({
                 type: `UPDATE`,
                 dependency: dep.name,action: `Updated ${dep.name} from ${dep.current} to ${dep.wanted}`,
                 timestamp: new Date().toISOString(),
-=======
 ;
         // Update minor and patch versions only (safe updates);
         for (const dep of outdated) {;
@@ -629,7 +562,6 @@ class DependencyManager {;
                 type: 'UPDATE',;
                 dependency: dep.name,action: `Updated ${dep.name} from ${dep.current} to ${dep.wanted}`,;
                 timestamp: new Date().toISOString(),;
->>>>>>> main
               });
             }
           } catch (error) {  this.log(`Failed to update ${dep.name  }: ${error.message}`, `WARN`);
@@ -641,7 +573,6 @@ class DependencyManager {;
 ;
     return actions;
   }
-<<<<<<< HEAD
 
   isSafeUpdate(current, wanted) {
     // Only allow minor and patch updates (semver)
@@ -650,7 +581,6 @@ class DependencyManager {;
 
     // Major version should be the same;
     if (currentParts[0] !== wantedParts[0]) {
-=======
 ;
   isSafeUpdate(current, wanted) {;
     // Only allow minor and patch updates (semver);
@@ -659,7 +589,6 @@ class DependencyManager {;
 ;
     // Major version should be the same;
     if (currentParts[0] !== wantedParts[0]) {;
->>>>>>> main
       return false;
     }
 ;
@@ -680,22 +609,18 @@ class DependencyManager {;
       actions: actions,;
       errors: errors,;
     };
-<<<<<<< HEAD
 
     const reportFile = path.join(
       this.reportsDir,dependency-report-${Date.now()}.json`
-=======
 ;
     const reportFile = path.join(;
       this.reportsDir,dependency-report-${Date.now()}.json';
->>>>>>> main
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log(`Dependency report generated: ${reportFile}`);
 ;
     return report;
   }
-<<<<<<< HEAD
 
   async commitDependencyChanges(actions) {
     try {
@@ -704,13 +629,11 @@ this.log(`Dependency report generated: ${reportFile}`);
       // Add package.json and package-lock.json;
       execSync(`git add package.json package-lock.json', {
         cwd: this.projectRoot,
-        stdio: `pipe`,
-      });
+        stdio: `pipe`});
 
       // Commitconst commitMessage = `chore: Auto-manage dependencies (${actions.length} actions)`;execSync(`git commit -m "${commitMessage}"`, {
         cwd: this.projectRoot,
-        stdio: `pipe`,
-      });
+        stdio: `pipe`});
 
       this.log(`Dependency changes committed successfully`);
     } catch (error) {  this.log(`Failed to commit dependency changes: ${error.message  }`, `WARN`);
@@ -720,7 +643,6 @@ this.log(`Dependency report generated: ${reportFile}`);
 
 // Main execution;
 async function main() {
-=======
 ;
   async commitDependencyChanges(actions) {;
     try {;
@@ -745,26 +667,22 @@ async function main() {
 ;
 // Main execution;
 async function main() {;
->>>>>>> main
   const manager = new DependencyManager();
 ;
   try {;
     const result = await manager.runDependencyManagement();
-<<<<<<< HEAD
 
     if (result.errors.length === 0 && result.actions.length > 0) {
       process.exit(0); // Success;
     } else if (result.errors.length > 0) {
       process.exit(1); // Errors occurred;
     } else {
-=======
 ;
     if (result.errors.length === 0 && result.actions.length > 0) {;
       process.exit(0); // Success;
     } else if (result.errors.length > 0) {;
       process.exit(1); // Errors occurred;
     } else {;
->>>>>>> main
       process.exit(2); // No actions needed;
     }
   } catch (error) {  manager.log(`Fatal error: ${error.message  }`, `ERROR`);

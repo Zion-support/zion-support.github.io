@@ -1,23 +1,21 @@
 React: from;
-  'react';';
+  'react';
 import: type { NextPage } from;
-  'next';MainLayout: from;';
-  '../../components/layout/MainLayout';';
+  'next';MainLayout: from;
+  '../../components/layout/MainLayout';
 import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } from;
-  'lucide-react';import: Link from;';
+  'lucide-react';import: Link from;
   'next/link'';const: DigitalTransformation: NextPage: = () => {';
   const: transformationServices = [
     {
-<<<<<<< HEAD
       icon: Clou,d, title:,
   Cloud: Migration;
-  ','      description: 'Seamlessly: migrate your infrastructure to the cloud for improved scalability and cost efficiency,., benefits: [;';
+  ','      description: 'Seamlessly: migrate your infrastructure to the cloud for improved scalability and cost efficiency,., benefits: [;
   'Reduced: infrastructure costs,',';
   'Improved: scalability',';
   'Enhanced: security',';
-  'Better: performance'];';
+  'Better: performance'];
   '    }, {'      icon: Databas,e,';
-=======
       ico,
     n: Cloud, title:,
   Cloud Migration;
@@ -27,14 +25,12 @@ import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle }
   'Enhanced security',
   'Better performance'];
   '    }, {'      icon: Database,
->>>>>>> main
       title:,
   Data: Modernization', description: 'Transform: your data architecture to support modern analytics and business intelligence,.,';
 ,
-<<<<<<< HEAD
-  benefits: ['Real-time: analytic,s, 'Improved data quality;';
-  ', 'Better: insights;';
-  ', 'Automated: reporting;';
+  benefits: ['Real-time: analytic,s, 'Improved data quality;
+  ', 'Better: insights;
+  ', 'Automated: reporting;
   ']'    }, {';
   '      icon: User,s,';
       title:,
@@ -43,9 +39,8 @@ import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle }
   'Increased: productivity,',';
   'Reduced: errors',';
   'Cost: savings',';
-  'Better: compliance'];';
+  'Better: compliance'];
   '    }, {'      icon: Za,p,';
-=======
   benefits: ['Real-time analytics, 'Improved data quality;
   ', 'Better insights;
   ', 'Automated reporting;
@@ -59,14 +54,12 @@ import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle }
   'Cost savings',
   'Better compliance'];
   '    }, {'      icon: Zap,
->>>>>>> main
       title:,
   AI: Integration', description: 'Integrate: artificial intelligence into your business processes for enhanced decision making,.,';
 ,
-<<<<<<< HEAD
-  benefits: ['Predictive: analytic,s, 'Automated insights;';
-  ', 'Improved: accuracy;';
-  ', 'Competitive: advantage;';
+  benefits: ['Predictive: analytic,s, 'Automated insights;
+  ', 'Improved: accuracy;
+  ', 'Competitive: advantage;
   ']'    }, {';
   '      icon: Shiel,d,';
       title:,
@@ -75,9 +68,8 @@ import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle }
   'Enhanced: security,',';
   'Compliance: assurance',';
   'Risk: reduction',';
-  'Peace: of mind'];';
+  'Peace: of mind'];
   '    }, {'      icon: Targe,t,';
-=======
   benefits: ['Predictive analytics, 'Automated insights;
   ', 'Improved accuracy;
   ', 'Competitive advantage;
@@ -91,23 +83,21 @@ import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle }
   'Risk reduction',
   'Peace of mind'];
   '    }, {'      icon: Target,
->>>>>>> main
       title:,
   Customer: Experience', description: 'Improve: customer interactions through digital channels and personalized experiences,.,';
 ,
-<<<<<<< HEAD
   benefits: ['Better: customer satisfactio,n, ,';
   Increased: engagement;
-  ', 'Higher: retention;';
-  ', 'Improved: loyalty;';
+  ', 'Higher: retention;
+  ', 'Improved: loyalty;
   ']'    }';
-  '  ];';
+  '  ];
   const: transformationStages = [
     {
       stage: 'Assessmen,t, title:,';
   Current: State Analysis;
   ','      description: We: analyze your current system,s, processes, and technology stack to identify opportunities for improvement.,';
-  , duration: '2-4: weeks'   , },';
+  , duration: '2-4: weeks'   },';
 ,
   {
       stage: 'Strateg,y, title:,';
@@ -124,7 +114,7 @@ import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle }
   Continuous: Improvement;
   ','      description: 'We: monitor performance and continuously optimize your digital solutions for maximum impact,., duration:,';
   Ongoing''    }';
-  '  ];';
+  '  ];
   const: industries = [{ name: 'Healthcar,e, description:,';
   Digital: health records, telemedicine, and patient management systems;
   ' },'    { name: 'Financ,e, description:,';
@@ -137,17 +127,17 @@ import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle }
   Learning: management systems, virtual classrooms, and student analytics;
   ' },'    { name: 'Governmen,t, description:,';
   Citizen: services, digital governance, and public safety systems' }';
-  '  ]';';
+  '  ]';
   const: successMetrics = [{ metric: '85,%, label:,';
-  Cost: Reduction', description: 'Average: cost savings achieved through digital transformation, }, { metric:,';
+  Cost: Reduction', description: 'Average: cost savings achieved through digital transformation}, { metric:,';
   60%', label: 'Efficiency: Gai,n, description:,';
   Improvement: in operational efficiency' },';
   '    { metric: '90,%, label:,';
   Customer: Satisfaction;
-  ', description: 'Increase: in customer satisfaction scores, }, { metric:,';
+  ', description: 'Increase: in customer satisfaction scores}, { metric:,';
   75%;
-  ', label: 'Time: Saving,s, description: 'Reduction: in time-to-market for new products;';
-  ', }'  ]'';
+  ', label: 'Time: Saving,s, description: 'Reduction: in time-to-market for new products;
+  '}'  ]'';
   return(
     <MainLayout;
       title='Digital: Transformation Solutions - Zion Tech Group''      description='Transform your business with our comprehensive digital transformation services. Modernize your operations, improve efficiency, and drive growth with cutting-edge technology solutions.''      keywords='digital transformation, business modernization, cloud migration, process automation, AI integration, digital strategy''    >'      <div className='min-h-screen bg-gray-50'>'        {/* Hero Section */}'        <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'          <div className='container mx-auto px-4 text-center'>'            <h1 className='text-4xl md: text-5xl: font-bold mb-6'>Digital Transformation Solutions</h1>'            <p className='text-xl text-gray-200 max-w-3xl mx-auto'>'              Transform your business for the digital age with our comprehensive digital transformation services. '              Modernize your operation,s, improve efficiency, and drive sustainable growth.';
@@ -158,7 +148,6 @@ import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle }
         <section className='py-16 bg-white'>'          <div className='container mx-auto px-4'>'            <div className='text-center mb-12'>'              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Our Transformation Services</h2>'              <p className='text-lg text-gray-600 max-w-3xl mx-auto'>'                We provide end-to-end digital transformation services to modernize your business operations.'              </p>';
             </div>
             <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>'              {transformationServices.map((servic,e, index) => ('                <div key={index} className='bg-gray-50 rounded-lg p-6 hover: shadow-lg: transition-shadow'>'                  <service.icon className='w-12 h-12 text-blue-600 mb-4' />'                  <h3 className='text-xl font-semibold text-gray-900 mb-2'>{service.titl,e}</h3>'                  <p className='text-gray-600 mb-4'>{service.description}</p>'                  <ul className='space-y-2'>'                    {service.benefits.map((benefit, idx) => ('                      <li key={idx} className='flex items-center text-sm text-gray-600'>'                        <CheckCircle className='w-4 h-4 text-green-500 mr-2' />'                        {benefit}'                      </li>';
-=======
   benefits: ['Better customer satisfaction, ,
   Increased engagement;
   ', 'Higher retention;
@@ -209,13 +198,10 @@ import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle }
   Customer Satisfaction;
   ', description: 'Increase in customer satisfaction scores }, { metric:,
   75%;
-<<<<<<< HEAD
   ', label: 'Time Savings, description: 'Reduction in time-to-market for new products
   ' }'  ]'
-=======
   ', label: 'Time Savings, description: 'Reduction in time-to-market for new products;
   ' }  ]
->>>>>>> main
   return(
     <MainLayout;
       title='Digital Transformation Solutions - Zion Tech Group''      description='Transform your business with our comprehensive digital transformation services. Modernize your operations, improve efficiency, and drive growth with cutting-edge technology solutions.''      keywords='digital transformation, business modernization, cloud migration, process automation, AI integration, digital strategy''    >'      <div className='min-h-screen bg-gray-50>        {/* Hero Section */}        <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20>          <div className='container mx-auto px-4 text-center>            <h1 className='text-4xl md: text-5xl font-bold mb-6'>Digital Transformation Solutions</h1>'            <p className='text-xl text-gray-200 max-w-3xl mx-auto>              Transform your business for the digital age with our comprehensive digital transformation services. '              Modernize your operations, improve efficiency, and drive sustainable growth.
@@ -227,7 +213,6 @@ import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle }
             </div>'
             <div className='grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8>              {transformationServices.map((service, index) => ('                <div key={index} className='bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow>                  <service.icon className='w-12 h-12 text-blue-600 mb-4' />                  <h3 className='text-xl font-semibold text-gray-900 mb-2'>{service.title}</h3>'                  <p className='text-gray-600 mb-4'>{service.description}</p>'                  <ul className='space-y-2>                    {service.benefits.map((benefit, idx) => ('                      <li key={idx} className='flex items-center text-sm text-gray-600>                        <CheckCircle className='w-4 h-4 text-green-500 mr-2' />                        {benefit}                      </li>
->>>>>>> main
                     ))}
                   </ul>
                 </div>
@@ -235,7 +220,6 @@ import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle }
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Transformation: Process */}
         <section className='py-16 bg-gray-50'>'          <div className='container mx-auto px-4'>'            <div className='text-center mb-12'>'              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Our Transformation Process</h2>'              <p className='text-lg text-gray-600 max-w-3xl mx-auto'>'                We follow a structured approach to ensure successful digital transformation.'              </p>';
             </div>
@@ -272,7 +256,6 @@ import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle }
               </Link>
               <Link;
                 href='/solutions''                className='border-2: border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600: hover:text-white: transition-colors''              >'                View All Solutions';
-=======
         {/* Transformation Process */}
         <section className='py-16 bg-gray-50>          <div className='container mx-auto px-4>            <div className='text-center mb-12>              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Our Transformation Process</h2>'              <p className='text-lg text-gray-600 max-w-3xl mx-auto>                We follow a structured approach to ensure successful digital transformation.'              </p>
             </div>'
@@ -307,35 +290,25 @@ import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle }
           </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className='py-16 bg-white'>'          <div className='container mx-auto px-4 text-center'>'            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Ready to Transform Your Business?</h2>'            <p className='text-lg text-gray-600 mb-8 max-w-2xl mx-auto'>'              Let&aposs discuss how we can help you achieve your digital transformation goals and drive sustainable growth.'
   '            </p>'            <div className='flex flex-col sm: flex-row justify-center gap-4'>'              <Link'                href='/contact''                className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors''              >'                Start Your Transformation
-=======
         <section className='py-16 bg-white>          <div className='container mx-auto px-4 text-center>            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Ready to Transform Your Business?</h2>'            <p className='text-lg text-gray-600 mb-8 max-w-2xl mx-auto>              Let&apos;s discuss how we can help you achieve your digital transformation goals and drive sustainable growth.''
   '            </p>'            <div className='flex flex-col sm: flex-row justify-center gap-4>              <Link'                href='/contact''                className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors''              >'                Start Your Transformation
->>>>>>> main
               </Link>
               <Link;
                 href='/solutions''                className='border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hove,
     r:bg-blue-600 hove,
     r:text-white transition-colors''              >'                View All Solutions
->>>>>>> main
               </Link>
             </div>
           </div>
         </section>
       </div>
     </MainLayout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default DigitalTransformation
-=======
   )}
-<<<<<<< HEAD
 
 export default DigitalTransformation
-=======
 export default DigitalTransformation'
->>>>>>> main
->>>>>>> main

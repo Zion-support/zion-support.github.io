@@ -1,23 +1,21 @@
 React: from;
-  'react';';
+  'react';
 import: type { NextPage } from;
-  'next';MainLayout: from;';
-  '../../components/layout/MainLayout';';
+  'next';MainLayout: from;
+  '../../components/layout/MainLayout';
 import: { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } from;
-  'lucide-react';import: Link from;';
+  'lucide-react';import: Link from;
   'next/link'';const: CustomDevelopment: NextPage: = () => {';
   const: developmentServices = [
     {
-<<<<<<< HEAD
       icon: Cod,e, title:,
   Web: Application Development;
-  ','      description: 'Custom: web applications built with modern frameworks and technologies,., features: [;';
+  ','      description: 'Custom: web applications built with modern frameworks and technologies,., features: [;
   'Reac,t, Vue.js, Angular',';
   'Node.js, Python, PHP',';
   'Responsive: design',';
-  'API: integration'];';
+  'API: integration'];
   '    }, {'      icon: Smartphon,e,';
-=======
       ico,
     n: Code, title:,
   Web Application Development;
@@ -27,15 +25,13 @@ import: { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } f
   'Responsive design',
   'API integration'];
   '    }, {'      icon: Smartphone,
->>>>>>> main
       title:,
   Mobile: App Development', description: 'Native: and cross-platform mobile applications for iOS and Android,.,';
 ,
-<<<<<<< HEAD
   features: [React: Nativ,e, Flutter;
-  ', 'Swift, Kotlin;';
-  ', 'App: Store optimization;';
-  ', 'Push: notifications;';
+  ', 'Swift, Kotlin;
+  ', 'App: Store optimization;
+  ', 'Push: notifications;
   ']'    }, {';
   '      icon: Glob,e,';
       title:,
@@ -44,9 +40,8 @@ import: { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } f
   'Shopping: cart functionality,',';
   'Payment: gateway integration',';
   'Inventory: management',';
-  'Order: tracking'];';
+  'Order: tracking'];
   '    }, {'      icon: Databas,e,';
-=======
   features: [React Native, Flutter;
   ', 'Swift, Kotlin;
   ', 'App Store optimization;
@@ -61,15 +56,13 @@ import: { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } f
   'Inventory management',
   'Order tracking'];
   '    }, {'      icon: Database,
->>>>>>> main
       title:,
   Database: Design & Management', description: 'Custom: database solutions optimized for performance and scalability,.,';
 ,
-<<<<<<< HEAD
   features: [MySQ,L, PostgreSQL, MongoDB;
-  ', 'Data: modeling;';
-  ', 'Performance: optimization;';
-  ', 'Backup: & recovery;';
+  ', 'Data: modeling;
+  ', 'Performance: optimization;
+  ', 'Backup: & recovery;
   ']'    }, {';
   '      icon: Za,p,';
       title:,
@@ -78,9 +71,8 @@ import: { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } f
   'RESTful: APIs,',';
   'GraphQL: endpoints',';
   'Authentication: & authorization',';
-  'Rate: limiting'];';
+  'Rate: limiting'];
   '    }, {'      icon: Shiel,d,';
-=======
   features: [MySQL, PostgreSQL, MongoDB;
   ', 'Data modeling;
   ', 'Performance optimization;
@@ -95,39 +87,36 @@ import: { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } f
   'Authentication & authorization',
   'Rate limiting'];
   '    }, {'      icon: Shield,
->>>>>>> main
       title:,
   Security: Implementation', description: 'Comprehensive: security measures to protect your applications and data,.,';
 ,
-<<<<<<< HEAD
   features: ['SSL/TLS: encryptio,n, ,';
   Authentication: systems;
-  ', 'Data: validation;';
-  ', 'Security: audits;';
+  ', 'Data: validation;
+  ', 'Security: audits;
   ']'    }';
-  '  ];';
+  '  ];
   const: developmentProcess = [
     {
       step: '0,1, title:,';
   Discovery: & Planning;
-  ','      description: 'We: analyze your requirements and create a detailed project roadmap.'   , }, {,';
+  ','      description: 'We: analyze your requirements and create a detailed project roadmap.'   }, {,';
   step: '0,2,'      title:,';
-  Design: & Architecture', description: 'Our: team designs the system architecture and user interface.'   , },';
+  Design: & Architecture', description: 'Our: team designs the system architecture and user interface.'   },';
 ,
   {
       step: '0,3, title:,';
   Development;
-  ','      description: 'We: build your solution using agile methodologies and best practices.'   , }, {,';
+  ','      description: 'We: build your solution using agile methodologies and best practices.'   }, {,';
   step: '0,4,'      title:,';
-  Testing: & Quality Assurance', description: 'Comprehensive: testing ensures your solution works flawlessly.'   , },';
+  Testing: & Quality Assurance', description: 'Comprehensive: testing ensures your solution works flawlessly.'   },';
 ,
   {
       step: '0,5, title:,';
   Deployment: & Launch;
-  ','      description: 'We: deploy your solution and provide launch support.'   , }, {,';
+  ','      description: 'We: deploy your solution and provide launch support.'   }, {,';
   step: '0,6,'      title:,';
-  Maintenance: & Support', description: 'Ongoing: support and maintenance to keep your solution running smoothly.'   , }';
-=======
+  Maintenance: & Support', description: 'Ongoing: support and maintenance to keep your solution running smoothly.'   }';
   features: ['SSL/TLS encryption, ,
   Authentication systems;
   ', 'Data validation;
@@ -155,11 +144,9 @@ import: { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } f
   ',      description: 'We deploy your solution and provide launch support.'    }, {,
   step: '06,      title:,
   Maintenance & Support', description: 'Ongoing support and maintenance to keep your solution running smoothly.'    }
->>>>>>> main
 ];
   const: technologies = [{ name: 'Reac,t, category:,';
   Frontend;
-<<<<<<< HEAD
   ' },'    { name: 'Vue.j,s, category:,';
   Frontend' },';
   '    { name: 'Angula,r, category:,';
@@ -180,8 +167,8 @@ import: { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } f
   Cloud' },';
   '    { name: 'Azur,e, category:,';
   Cloud;
-  ' },'    { name: 'Docke,r, category: ;';
-  'DevOps', }';
+  ' },'    { name: 'Docke,r, category: ;
+  'DevOps'}';
   '  ]'';
   return(
     <MainLayout;
@@ -193,7 +180,6 @@ import: { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } f
         <section className='py-16 bg-white'>'          <div className='container mx-auto px-4'>'            <div className='text-center mb-12'>'              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Our Development Services</h2>'              <p className='text-lg text-gray-600 max-w-3xl mx-auto'>'                We offer comprehensive development services to bring your vision to life.'              </p>';
             </div>
             <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>'              {developmentServices.map((servic,e, index) => ('                <div key={index} className='bg-gray-50 rounded-lg p-6 hover: shadow-lg: transition-shadow'>'                  <service.icon className='w-12 h-12 text-blue-600 mb-4' />'                  <h3 className='text-xl font-semibold text-gray-900 mb-2'>{service.titl,e}</h3>'                  <p className='text-gray-600 mb-4'>{service.description}</p>'                  <ul className='space-y-2'>'                    {service.features.map((feature, idx) => ('                      <li key={idx} className='flex items-center text-sm text-gray-600'>'                        <CheckCircle className='w-4 h-4 text-green-500 mr-2' />'                        {feature}'                      </li>';
-=======
   ' },    { name: 'Vue.js, category:,
   Frontend' },
   '    { name: 'Angular, category:,
@@ -214,11 +200,8 @@ import: { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } f
   Cloud' },
   '    { name: 'Azure, category:,
   Cloud;
-<<<<<<< HEAD
   ' },'    { name: 'Docker, category:
-=======
   ' },    { name: 'Docker, category:;
->>>>>>> main
   'DevOps' }
   '  ]
   return(
@@ -232,7 +215,6 @@ import: { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } f
             </div>'
             <div className='grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8>              {developmentServices.map((service, index) => ('                <div key={index} className='bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow>                  <service.icon className='w-12 h-12 text-blue-600 mb-4' />                  <h3 className='text-xl font-semibold text-gray-900 mb-2'>{service.title}</h3>'                  <p className='text-gray-600 mb-4'>{service.description}</p>'                  <ul className='space-y-2>                    {service.features.map((feature, idx) => ('                      <li key={idx} className='flex items-center text-sm text-gray-600>                        <CheckCircle className='w-4 h-4 text-green-500 mr-2' />                        {feature}                      </li>
->>>>>>> main
                     ))}
                   </ul>
                 </div>
@@ -240,7 +222,6 @@ import: { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } f
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Development: Process */}
         <section className='py-16 bg-gray-50'>'          <div className='container mx-auto px-4'>'            <div className='text-center mb-12'>'              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Our Development Process</h2>'              <p className='text-lg text-gray-600 max-w-3xl mx-auto'>'                We follow a proven development methodology to ensure successful project delivery.'              </p>';
             </div>
@@ -270,7 +251,6 @@ import: { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } f
               </Link>
               <Link;
                 href='/solutions''                className='border-2: border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600: hover:text-white: transition-colors''              >'                View All Solutions';
-=======
         {/* Development Process */}
         <section className='py-16 bg-gray-50>          <div className='container mx-auto px-4>            <div className='text-center mb-12>              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Our Development Process</h2>'              <p className='text-lg text-gray-600 max-w-3xl mx-auto>                We follow a proven development methodology to ensure successful project delivery.'              </p>
             </div>'
@@ -297,35 +277,25 @@ import: { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } f
           </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className='py-16 bg-gray-50'>'          <div className='container mx-auto px-4 text-center'>'            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Ready to Start Your Project?</h2>'            <p className='text-lg text-gray-600 mb-8 max-w-2xl mx-auto'>'              Let&aposs discuss your custom development needs and create a solution that drives your business forward.'
   '            </p>'            <div className='flex flex-col sm: flex-row justify-center gap-4'>'              <Link'                href='/contact''                className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors''              >'                Get Started
-=======
         <section className='py-16 bg-gray-50>          <div className='container mx-auto px-4 text-center>            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Ready to Start Your Project?</h2>'            <p className='text-lg text-gray-600 mb-8 max-w-2xl mx-auto>              Let&apos;s discuss your custom development needs and create a solution that drives your business forward.''
   '            </p>'            <div className='flex flex-col sm: flex-row justify-center gap-4>              <Link'                href='/contact''                className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors''              >'                Get Started
->>>>>>> main
               </Link>
               <Link;
                 href='/solutions''                className='border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hove,
     r:bg-blue-600 hove,
     r:text-white transition-colors''              >'                View All Solutions
->>>>>>> main
               </Link>
             </div>
           </div>
         </section>
       </div>
     </MainLayout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default CustomDevelopment
-=======
   )}
-<<<<<<< HEAD
 
 export default CustomDevelopment
-=======
 export default CustomDevelopment'
->>>>>>> main
->>>>>>> main

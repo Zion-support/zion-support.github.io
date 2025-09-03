@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
 const fs = require('fs');
 const path = require('path');
@@ -14,7 +13,6 @@ class ErrorFixer {
 
     // Ensure reports directory exists;
     if (!fs.existsSync(this.reportsDir)) {
-=======
 #!/usr/bin/env node;
 
 const fs = require('fs');
@@ -30,7 +28,6 @@ class ErrorFixer {;
 ;
   ensureDirectories() {;
     if (!fs.existsSync(this.reportsDir)) {;
->>>>>>> main
       fs.mkdirSync(this.reportsDir, { recursive: true });
     }
   }
@@ -40,7 +37,6 @@ class ErrorFixer {;
     const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
   }
-<<<<<<< HEAD
 
   async runTypeCheck() {
     try {
@@ -69,7 +65,6 @@ class ErrorFixer {;
         if (match) {
           if (currentError) {
             errors.push(currentError);
-=======
 ;
   async fixSyntaxErrors() {;
     this.log('🔧 Starting syntax error fixes...');
@@ -95,7 +90,6 @@ class ErrorFixer {;
             fs.writeFileSync(file, fixedContent);
             fixedFiles++;
             this.log(`✅ Fixed syntax errors in: ${path.relative(this.projectRoot, file)}`);
->>>>>>> main
           }
         } catch (error) {;
           this.log(`❌ Error processing ${file}: ${error.message}`);
@@ -107,7 +101,6 @@ class ErrorFixer {;
     this.log(`🎉 Fixed ${fixedFiles} files with syntax errors`);
     return { fixedFiles, totalErrors };
   }
-<<<<<<< HEAD
 
   async runLintCheck() {
     try {
@@ -129,8 +122,7 @@ class ErrorFixer {;
 
     return errorLines.map(line => ({
       message: line.trim(),
-      type: 'eslint',
-    }));
+      type: 'eslint'}));
   }
 
   async fixCommonErrors() {
@@ -320,7 +312,6 @@ class ErrorFixer {;
               files.push(fullPath);
               break;
             }
-=======
 ;
   fixFileContent(content) {;
     let fixed = content;
@@ -361,7 +352,6 @@ class ErrorFixer {;
           const ext = path.extname(item);
           if (extensions.includes(ext)) {;
             files.push(itemPath);
->>>>>>> main
           }
         }
       }
@@ -370,7 +360,6 @@ class ErrorFixer {;
     scanDirectory(dir);
     return files;
   }
-<<<<<<< HEAD
 
   matchesPattern(filePath, pattern) {
     const relativePath = path.relative(this.projectRoot, filePath);
@@ -395,9 +384,7 @@ return new RegExp(`^${regexPattern}$`).test(relativePath);
         filesPerSecond:
           Math.round((this.filesProcessed / duration) * 1000 * 100) / 100,
         errorsPerSecond:
-          Math.round((this.errorsFixed / duration) * 1000 * 100) / 100,
-      },
-    };
+          Math.round((this.errorsFixed / duration) * 1000 * 100) / 100}};
 
     const reportPath = path.join(this.reportsDir, `error-fixer-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -440,7 +427,6 @@ this.log(`Report saved to ${reportPath}`);
 
       return report;
     } catch (error) {  this.log(`Error Fixer failed: ${error.message  }`);
-=======
 ;
   async generateReport(results) {;
     const timestamp = new Date().toISOString();
@@ -472,24 +458,20 @@ this.log(`Report saved to ${reportPath}`);
       return report;
     } catch (error) {;
       this.log(`❌ Error Fixer failed: ${error.message}`);
->>>>>>> main
       throw error;
     }
   }
 }
-<<<<<<< HEAD
 
 // Run the automation if called directly;
 if (require.main === module) {
   const errorFixer = new ErrorFixer();
   errorFixer.run().catch(console.error);
-=======
 ;
 // Run if called directly;
 if (require.main === module) {;
   const fixer = new ErrorFixer();
   fixer.run().catch(console.error);
->>>>>>> main
 }
 ;
 module.exports = ErrorFixer;

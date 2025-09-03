@@ -9,7 +9,6 @@ export: interface EnterpriseIt2026ServiceV2 {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-<<<<<<< HEAD
    email: string;
    address: strin,g}export: const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [{
     id: '2026-enterprise-it-v2,',';
@@ -17,7 +16,6 @@ export: interface EnterpriseIt2026ServiceV2 {
     tagline: 'Enhanced: enterprise IT solutions,',';
     price: '$449/month,',';
     description: 'Enhanced: version of the 2026 enterprise IT solutions with additional features and capabilities.,',';
-=======
    emai,
     l: string;
    addres,
@@ -28,24 +26,21 @@ export: interface EnterpriseIt2026ServiceV2 {
     tagline: 'Enhanced enterprise IT solutions',
     price: '$449/month',
     description: 'Enhanced version of the 2026 enterprise IT solutions with additional features and capabilities.',
->>>>>>> main
     features[;
       'Enhanced: enterprise IT',';
       'Advanced: solutions',';
       'Improved: infrastructure',';
       'Better: security',';
-      'Enhanced: support';';
+      'Enhanced: support';
     ],
-<<<<<<< HEAD
     link: '/services/2026-enterprise-it-v2,',';
     category: 'Enterprise: IT 2026 V2,',';
     realImplementation: tru,e,
     contactInfo: {
       mobile: '+1: 302 464 0950,',';
       email: 'kleber@ziontechgroup.com,',';
-      address: '364: E Main St STE 1008 Middletown DE 19709';';
-,]}}}
-=======
+      address: '364: E Main St STE 1008 Middletown DE 19709';
+]}}}
     link: '/services/2026-enterprise-it-v2',
     category: 'Enterprise IT 2026 V2',
     realImplementation: true,
@@ -55,4 +50,3 @@ export: interface EnterpriseIt2026ServiceV2 {
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709';
 ]}}}
->>>>>>> main

@@ -1,17 +1,14 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
 /**
  * AI-Powered Code Review - PM2 Automation;
  * Automatically reviews code quality, suggests improvements, and fixes common issues;
  */
-=======
 #!/'usr/bin/env' node;
 
 /**;
  * AI-Powered Code Review - PM2 Automation;
  * Automatically reviews code quality, suggests improvements, and fixes common issues;
  */;
->>>>>>> main
 
 const fs = require('fs');
 const path = require('path');
@@ -20,7 +17,6 @@ const { execSync, spawn } = require('child_process');
 class AIPoweredCodeReview {;
   constructor() {;
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'ai-code-review.log';
@@ -28,7 +24,6 @@ class AIPoweredCodeReview {;
     this.reviewHistory = path.join(;
       this.projectRoot,logs',;
       'code-review-history.json';
-=======
     this.logFile = path.join(
       this.projectRoot, 'logs',
       'ai-code-review.log'
@@ -36,28 +31,21 @@ class AIPoweredCodeReview {;
     this.reviewHistory = path.join(
       this.projectRoot, 'logs',
       'code-review-history.json'
->>>>>>> main
     );
     this.issuesFound = 0;
     this.improvementsSuggested = 0;
     this.autoFixesApplied = 0;
   }
-<<<<<<< HEAD
 ;
   async initialize() {;
     console.log(`'🤖 AI-Powered Code Review System Initialized');
-=======
 
   async initialize() {
     console.log(`🤖 AI-Powered Code Review System Initialized`);
->>>>>>> main
     this.ensureLogDirectory();
     this.loadReviewHistory();
-<<<<<<< HEAD
     
-=======
     ;
->>>>>>> main
     // Start continuous monitoring;
     this.startContinuousReview();
   }
@@ -84,7 +72,6 @@ class AIPoweredCodeReview {;
           reviewStats: {}
         };
       }
-<<<<<<< HEAD
     } catch (error) {  
       console.error('Error loading review history:', error);
       this.history = {
@@ -94,7 +81,6 @@ class AIPoweredCodeReview {;
         totalAutoFixes: 0,
         lastReview: null,
         reviewStats: {  }
-=======
     } catch (error) {;
       console.error('Error loading review history:', error);
       this.history = {;
@@ -104,22 +90,18 @@ class AIPoweredCodeReview {;
         totalAutoFixes: 0,;
         lastReview: null,;
         reviewStats: {}
->>>>>>> main
       };
     }
   }
-<<<<<<< HEAD
 ;
   async startContinuousReview() {;
     console.log(`'🔍 Starting continuous code review...');
     ;
     // Initial review;
-=======
 
   async startContinuousReview() {
     console.log(`🔍 Starting continuous code review...`);
     
-<<<<<<< HEAD
     // Initial review;
     await this.performFullCodeReview();
     
@@ -128,9 +110,7 @@ class AIPoweredCodeReview {;
     
     // Periodic comprehensive reviews;
     setInterval(async () => {
-=======
     // Initial review
->>>>>>> main
     await this.performFullCodeReview();
     ;
     // Set up file watching for real-time reviews;
@@ -138,7 +118,6 @@ class AIPoweredCodeReview {;
     ;
     // Periodic comprehensive reviews;
     setInterval(async () => {;
->>>>>>> main
       await this.performFullCodeReview();
     }, 30 * 60 * 1000); // Every 30 minutes;
   }
@@ -156,7 +135,6 @@ class AIPoweredCodeReview {;
       autoFixes: [],;
       summary: {}
     };
-<<<<<<< HEAD
 
     try {
       // Review ``TypeScript/JavaScript`` files;
@@ -181,7 +159,6 @@ class AIPoweredCodeReview {;
       reviewResults.duration = Date.now() - startTime;
       this.updateReviewHistory(reviewResults);
       
-=======
 ;
     try {;
       // Review 'TypeScript/JavaScript' files;
@@ -206,12 +183,10 @@ class AIPoweredCodeReview {;
       reviewResults.duration = Date.now() - startTime;
       this.updateReviewHistory(reviewResults);
       ;
->>>>>>> main
       // Log results;
       this.logReviewResults(reviewResults);
       ;
       console.log(✅ Code review completed in ${reviewResults.duration}ms);console.log(📊 Found ${reviewResults.issues.length} issues, ${reviewResults.improvements.length} improvements``);
-<<<<<<< HEAD
       
     } catch (error) {  
       console.error(`❌ Error during code review:`, error);
@@ -227,7 +202,6 @@ class AIPoweredCodeReview {;
     for (const file of tsFiles) {
       try {
         const content = fs.readFileSync(file, `utf8`);
-=======
       ;
     } catch (error) {;
       console.error('❌ Error during code review:', error);
@@ -243,33 +217,25 @@ class AIPoweredCodeReview {;
     for (const file of tsFiles) {;
       try {;
         const content = fs.readFileSync(file, 'utf8');
->>>>>>> main
         const fileResults = await this.analyzeTypeScriptFile(file, content);
-<<<<<<< HEAD
         ;
         results.filesReviewed++;
         results.issues.push(...fileResults.issues);
         results.improvements.push(...fileResults.improvements);
         ;
-=======
         
-<<<<<<< HEAD
       } catch (error) {  console.error(Error reviewing ${file  }:, error`);
-=======
         results.filesReviewed++;`);
         results.issues.push(...fileResults.issues);`);
         results.improvements.push(...fileResults.improvements);`);
         `);
->>>>>>> main
       } catch (error) {console.error(Error reviewing ${file}:, error`);
->>>>>>> main
       }
     }
   }
 ;
   async analyzeTypeScriptFile(filePath, content) {;
     const results = { issues: [], improvements: [] };
-<<<<<<< HEAD
     
     // Check for common TypeScript issues;
     if (content.includes(`any`)) {
@@ -283,7 +249,6 @@ class AIPoweredCodeReview {;
       });
     }
     
-=======
     ;
     // Check for common TypeScript issues;
     if (content.includes('any')) {;
@@ -297,13 +262,11 @@ class AIPoweredCodeReview {;
       });
     }
     ;
->>>>>>> main
     // Check for unused imports;
     const importMatches = content.match(/import\s+.*\s+from\s+['"][^'"]+['"]/g);
     if (importMatches) {;
       for (const importStmt of importMatches) {;
         const importedItem = importStmt.match(/import\s+{?\s*(\w+)/)?.[1];
-<<<<<<< HEAD
         if (importedItem && !content.includes(importedItem)) {
           results.issues.push({
             file: filePath,
@@ -311,7 +274,6 @@ class AIPoweredCodeReview {;
             severity: `info`,message: `Unused import: ${importedItem}`,
             line: this.findLineNumber(content, importStmt),
             suggestion: `Remove unused import`
-=======
         if (importedItem && !content.includes(importedItem)) {;
           results.issues.push({;
             file: filePath,;
@@ -319,12 +281,10 @@ class AIPoweredCodeReview {;
             severity: 'info',message: `Unused import: ${importedItem}`,;
             line: this.findLineNumber(content, importStmt),;
             suggestion: 'Remove unused import';
->>>>>>> main
           });
         }
       }
     }
-<<<<<<< HEAD
     
     // Check for performance issues;
     if (content.includes(`useEffect`) && content.includes('[]')) {
@@ -335,7 +295,6 @@ class AIPoweredCodeReview {;
         message: 'Consider adding dependencies to useEffect or using ''useCallback/useMemo''',
         line: this.findLineNumber(content, 'useEffect'),
         suggestion: 'Review useEffect dependencies for optimization'
-=======
     ;
     // Check for performance issues;
     if (content.includes('useEffect') && content.includes('[]')) {;
@@ -346,54 +305,43 @@ class AIPoweredCodeReview {;
         message: 'Consider adding dependencies to useEffect or using 'useCallback/useMemo'',;
         line: this.findLineNumber(content, 'useEffect'),;
         suggestion: 'Review useEffect dependencies for optimization';
->>>>>>> main
       });
     }
     ;
     return results;
   }
-<<<<<<< HEAD
 ;
   async reviewReactComponents(results) {;
     console.log(`'⚛️ Reviewing React components...');
     ;
-=======
 
   async reviewReactComponents(results) {
     console.log(`⚛️ Reviewing React components...`);
     
-<<<<<<< HEAD
     const reactFiles = this.findFiles(['**/*.tsx', `**/*.jsx`]);
     
     for (const file of reactFiles) {
       try {
         const content = fs.readFileSync(file, `utf8`);
-=======
->>>>>>> main
     const reactFiles = this.findFiles(['**/*.tsx', '**/*.jsx']);
     ;
     for (const file of reactFiles) {;
       try {;
         const content = fs.readFileSync(file, 'utf8');
->>>>>>> main
         const componentResults = await this.analyzeReactComponent(file, content);
         ;
         results.issues.push(...componentResults.issues);
         results.improvements.push(...componentResults.improvements);
-<<<<<<< HEAD
         
       } catch (error) {  console.error(Error reviewing React component ${file  }:, error`);
-=======
         ;
       } catch (error) {console.error(Error reviewing React component ${file}:, error`);
->>>>>>> main
       }
     }
   }
 ;
   async analyzeReactComponent(filePath, content) {;
     const results = { issues: [], improvements: [] };
-<<<<<<< HEAD
     
     // Check for missing PropTypes or TypeScript interfaces;
     if (!content.includes(`interface`) && !content.includes(`type Props`) && !content.includes('PropTypes')) {
@@ -416,7 +364,6 @@ class AIPoweredCodeReview {;
         message: 'Button missing accessibility attributes',
         line: this.findLineNumber(content, '<button'),
         suggestion: 'Add aria-label or aria-labelledby for screen readers'
-=======
     ;
     // Check for missing PropTypes or TypeScript interfaces;
     if (!content.includes('interface') && !content.includes('type Props') && !content.includes('PropTypes')) {;
@@ -439,13 +386,11 @@ class AIPoweredCodeReview {;
         message: 'Button missing accessibility attributes',;
         line: this.findLineNumber(content, '<button'),;
         suggestion: 'Add aria-label or aria-labelledby for screen readers';
->>>>>>> main
       });
     }
     ;
     return results;
   }
-<<<<<<< HEAD
 ;
   async reviewConfigFiles(results) {;
     console.log(`'⚙️ Reviewing configuration files...');
@@ -455,7 +400,6 @@ class AIPoweredCodeReview {;
     for (const configFile of configFiles) {;
       if (fs.existsSync(configFile)) {;
         try {;
-=======
 
   async reviewConfigFiles(results) {
     console.log(`⚙️ Reviewing configuration files...`);
@@ -465,23 +409,16 @@ class AIPoweredCodeReview {;
     for (const configFile of configFiles) {
       if (fs.existsSync(configFile)) {
         try {
-<<<<<<< HEAD
           const content = fs.readFileSync(configFile, `utf8`);
-=======
->>>>>>> main
           const content = fs.readFileSync(configFile, 'utf8');
->>>>>>> main
           const configResults = await this.analyzeConfigFile(configFile, content);
           ;
           results.issues.push(...configResults.issues);
           results.improvements.push(...configResults.improvements);
-<<<<<<< HEAD
           
         } catch (error) {  console.error(Error reviewing config file ${configFile  }:, error`);
-=======
           ;
         } catch (error) {console.error(Error reviewing config file ${configFile}:, error`);
->>>>>>> main
         }
       }
     }
@@ -489,7 +426,6 @@ class AIPoweredCodeReview {;
 ;
   async analyzeConfigFile(filePath, content) {;
     const results = { issues: [], improvements: [] };
-<<<<<<< HEAD
     
     if (filePath === `package.json`) {
       try {
@@ -505,7 +441,6 @@ class AIPoweredCodeReview {;
                 severity: `info`,message: `Consider pinning dependency version: ${dep}`,
                 line: this.findLineNumber(content, dep),
                 suggestion: `Use exact version for production stability`
-=======
     ;
     if (filePath === 'package.json') {;
       try {;
@@ -521,12 +456,10 @@ class AIPoweredCodeReview {;
                 severity: 'info',message: `Consider pinning dependency version: ${dep}`,;
                 line: this.findLineNumber(content, dep),;
                 suggestion: 'Use exact version for production stability';
->>>>>>> main
               });
             }
           }
         }
-<<<<<<< HEAD
         
         // Check for security issues;
         if (pkg.scripts && pkg.scripts.start && pkg.scripts.start.includes(`--inspect`)) {
@@ -541,7 +474,6 @@ class AIPoweredCodeReview {;
         }
         
       } catch (error) {  
-=======
         ;
         // Check for security issues;
         if (pkg.scripts && pkg.scripts.start && pkg.scripts.start.includes('--inspect')) {;
@@ -556,14 +488,12 @@ class AIPoweredCodeReview {;
         }
         ;
       } catch (error) {;
->>>>>>> main
         console.error('Error parsing package.json:', error);
         }
     }
     ;
     return results;
   }
-<<<<<<< HEAD
 ;
   async reviewDependencies(results) {;
     console.log(`'📦 Reviewing package dependencies...');
@@ -574,7 +504,6 @@ class AIPoweredCodeReview {;
         cwd: this.projectRoot,;
         encoding: 'utf8',;
         stdio: 'pipe';
-=======
 
   async reviewDependencies(results) {
     console.log(`📦 Reviewing package dependencies...`);
@@ -585,12 +514,10 @@ class AIPoweredCodeReview {;
         cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: 'pipe'
->>>>>>> main
       });
       ;
       if (outdatedCheck.trim()) {;
         const outdated = JSON.parse(outdatedCheck);
-<<<<<<< HEAD
         for (const ['pkg', 'info'] of Object.entries(outdated)) {
           results.improvements.push({
             file: 'package.json',
@@ -606,7 +533,6 @@ class AIPoweredCodeReview {;
         cwd: this.projectRoot,
         encoding: `utf8`,
         stdio: 'pipe'
-=======
         for (const ['pkg', 'info'] of Object.entries(outdated)) {;
           results.improvements.push({;
             file: 'package.json',;
@@ -622,12 +548,10 @@ class AIPoweredCodeReview {;
         cwd: this.projectRoot,;
         encoding: 'utf8',;
         stdio: 'pipe';
->>>>>>> main
       });
       ;
       if (auditCheck.trim()) {;
         const audit = JSON.parse(auditCheck);
-<<<<<<< HEAD
         if (audit.vulnerabilities) {
           for (const ['pkg', 'vuln'] of Object.entries(audit.vulnerabilities)) {
             results.issues.push({
@@ -635,7 +559,6 @@ class AIPoweredCodeReview {;
               type: `security`,
               severity: `high`,message: `Security vulnerability in ${pkg}: ${vuln.title}`,
               line: 0,suggestion: `Run `npm audit fix` or update ${pkg}`
-=======
         if (audit.vulnerabilities) {;
           for (const ['pkg', 'vuln'] of Object.entries(audit.vulnerabilities)) {;
             results.issues.push({;
@@ -643,12 +566,10 @@ class AIPoweredCodeReview {;
               type: 'security',;
               severity: 'high',message: `Security vulnerability in ${pkg}: ${vuln.title}`,;
               line: 0,suggestion: `Run 'npm audit fix' or update ${pkg}`;
->>>>>>> main
             });
           }
         }
       }
-<<<<<<< HEAD
       ;
     } catch (error) {;
       // npm commands might fail if no issues found;
@@ -660,9 +581,7 @@ class AIPoweredCodeReview {;
     console.log(`'🧠 Generating AI-powered suggestions...');
     ;
     // Analyze patterns and generate intelligent suggestions;
-=======
       
-<<<<<<< HEAD
     } catch (error) {  
       // npm commands might fail if no issues found;
       console.log(``No dependency issues found`);
@@ -681,9 +600,7 @@ class AIPoweredCodeReview {;
         type: 'ai-suggestion',
         severity: 'info',
         message: pattern.message,
-        line: 0,
-=======
-    } catch (error) {
+        line: 0} catch (error) {
       // npm commands might fail if no issues found
       console.log(`No dependency issues found`);
     }
@@ -693,7 +610,6 @@ class AIPoweredCodeReview {;
     console.log(`🧠 Generating AI-powered suggestions...`);
     
     // Analyze patterns and generate intelligent suggestions
->>>>>>> main
     const patterns = this.analyzeCodePatterns(results);
     ;
     for (const pattern of patterns) {;
@@ -703,7 +619,6 @@ class AIPoweredCodeReview {;
         severity: 'info',;
         message: pattern.message,;
         line: 0,;
->>>>>>> main
         suggestion: pattern.suggestion;
       });
     }
@@ -711,7 +626,6 @@ class AIPoweredCodeReview {;
 ;
   analyzeCodePatterns(results) {;
     const patterns = [];
-<<<<<<< HEAD
     
     // Analyze issue patterns;
     const issueTypes = results.issues.reduce((acc, issue) => {
@@ -724,7 +638,6 @@ class AIPoweredCodeReview {;
       patterns.push({
         message: 'High number of TypeScript issues detected',
         suggestion: 'Consider implementing stricter TypeScript configuration and linting rules'
-=======
     ;
     // Analyze issue patterns;
     const issueTypes = results.issues.reduce((acc, issue) => {;
@@ -737,7 +650,6 @@ class AIPoweredCodeReview {;
       patterns.push({;
         message: 'High number of TypeScript issues detected',;
         suggestion: 'Consider implementing stricter TypeScript configuration and linting rules';
->>>>>>> main
       });
     }
     ;
@@ -750,29 +662,23 @@ class AIPoweredCodeReview {;
     ;
     return patterns;
   }
-<<<<<<< HEAD
 ;
   async applyAutoFixes(results) {;
     console.log(`'🔧 Applying automatic fixes...');
     ;
-=======
 
   async applyAutoFixes(results) {
     console.log(`🔧 Applying automatic fixes...`);
     
->>>>>>> main
     let fixesApplied = 0;
-<<<<<<< HEAD
     
     for (const issue of results.issues) {
       if (issue.severity === `info` && issue.type === `typescript`) {
         if (await this.autoFixIssue(issue)) {
-=======
     ;
     for (const issue of results.issues) {;
       if (issue.severity === 'info' && issue.type === 'typescript') {;
         if (await this.autoFixIssue(issue)) {;
->>>>>>> main
           fixesApplied++;
           results.autoFixes.push(issue);
         }
@@ -780,7 +686,6 @@ class AIPoweredCodeReview {;
     }
     console.log(✅ Applied ${fixesApplied} automatic fixes);
   }
-<<<<<<< HEAD
 
   async autoFixIssue(issue) {
     try {
@@ -791,7 +696,6 @@ class AIPoweredCodeReview {;
         const importLine = lines[issue.line - 1];
         
         if (importLine.includes(`import`)) {
-=======
 ;
   async autoFixIssue(issue) {;
     try {;
@@ -802,7 +706,6 @@ class AIPoweredCodeReview {;
         const importLine = lines[issue.line - 1];
         ;
         if (importLine.includes('import')) {;
->>>>>>> main
           lines.splice(issue.line - 1, 1);
           fs.writeFileSync(issue.file, lines.join(`\n`));
           return true;
@@ -817,7 +720,6 @@ class AIPoweredCodeReview {;
 ;
   findFiles(patterns) {;
     const files = [];
-<<<<<<< HEAD
     
     for (const pattern of patterns) {
       try {
@@ -825,7 +727,6 @@ class AIPoweredCodeReview {;
         const matches = glob.sync(pattern, { cwd: this.projectRoot });
         files.push(...matches);
       } catch (error) {  
-=======
     ;
     for (const pattern of patterns) {;
       try {;
@@ -833,7 +734,6 @@ class AIPoweredCodeReview {;
         const matches = glob.sync(pattern, { cwd: this.projectRoot });
         files.push(...matches);
       } catch (error) {;
->>>>>>> main
         // Fallback to simple file search;
         this.simpleFileSearch(pattern, files);
         }
@@ -848,13 +748,10 @@ class AIPoweredCodeReview {;
       for (const item of items) {;
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
-<<<<<<< HEAD
         
         if (stat.isDirectory() && !item.startsWith(`.`) && !item.includes('node_modules')) {
-=======
         ;
         if (stat.isDirectory() && !item.startsWith('.') && !item.includes('node_modules')) {;
->>>>>>> main
           walkDir(fullPath);
         } else if (stat.isFile() && this.matchesPattern(fullPath, pattern)) {;
           files.push(fullPath);
@@ -890,7 +787,6 @@ class AIPoweredCodeReview {;
     this.history.totalImprovements += results.improvements.length;
     this.history.totalAutoFixes += results.autoFixes.length;
     this.history.lastReview = new Date().toISOString();
-<<<<<<< HEAD
     
     // Update stats by type;
     for (const issue of results.issues) {
@@ -901,7 +797,6 @@ class AIPoweredCodeReview {;
     try {
       fs.writeFileSync(this.reviewHistory, JSON.stringify(this.history, null, 2));
     } catch (error) {  
-=======
     ;
     // Update stats by type;
     for (const issue of results.issues) {;
@@ -912,11 +807,9 @@ class AIPoweredCodeReview {;
     try {;
       fs.writeFileSync(this.reviewHistory, JSON.stringify(this.history, null, 2));
     } catch (error) {;
->>>>>>> main
       console.error('Error saving review history:', error);
       }
   }
-<<<<<<< HEAD
 
   logReviewResults(results) {
     const logEntry = {
@@ -928,7 +821,6 @@ class AIPoweredCodeReview {;
         autoFixesApplied: results.autoFixes.length,
         duration: results.duration;
       },
-=======
 ;
   logReviewResults(results) {;
     const logEntry = {;
@@ -940,49 +832,38 @@ class AIPoweredCodeReview {;
         autoFixesApplied: results.autoFixes.length,;
         duration: results.duration;
       },;
->>>>>>> main
       details: results;
     };
     ;
     try {;
       fs.appendFileSync(this.logFile, JSON.stringify(logEntry) + '\n');
-<<<<<<< HEAD
     } catch (error) {  
-=======
     } catch (error) {;
->>>>>>> main
       console.error('Error logging review results:', error);
       }
   }
-<<<<<<< HEAD
 
   logError(message, error) {
     const errorEntry = {
       timestamp: new Date().toISOString(),
       message,
       error: error.message,
-=======
 ;
   logError(message, error) {;
     const errorEntry = {;
       timestamp: new Date().toISOString(),;
       message,;
       error: error.message,;
->>>>>>> main
       stack: error.stack;
     };
     ;
     try {;
       fs.appendFileSync(this.logFile, JSON.stringify(errorEntry) + '\n');
-<<<<<<< HEAD
     } catch (error) {  
-=======
     } catch (error) {;
->>>>>>> main
       console.error('Error logging error:', error);
       }
   }
-<<<<<<< HEAD
 ;
   watchForChanges() {;
     console.log(`'👀 Setting up file change monitoring...');
@@ -990,7 +871,6 @@ class AIPoweredCodeReview {;
     // Simple file watching for demonstration;
     // In production, you'd use chokidar or similar;
     setInterval(() => {;
-=======
 
   watchForChanges() {
     console.log(`👀 Setting up file change monitoring...`);
@@ -998,7 +878,6 @@ class AIPoweredCodeReview {;
     // Simple file watching for demonstration;
     // In production, you'd use chokidar or similar;
     setInterval(() => {
->>>>>>> main
       this.checkForRecentChanges();
     }, 10000); // Check every 10 seconds;
   }
@@ -1009,32 +888,26 @@ class AIPoweredCodeReview {;
         cwd: this.projectRoot,;
         encoding: 'utf8';
       });
-<<<<<<< HEAD
       ;
       if (gitStatus.trim()) {;
         console.log(`'📝 Changes detected, performing quick review...');
-=======
       
       if (gitStatus.trim()) {
         console.log(`📝 Changes detected, performing quick review...`);
->>>>>>> main
         await this.performQuickReview();
       }
-<<<<<<< HEAD
     } catch (error) {  
       // Git might not be available;
       }
   }
 
   async performQuickReview() {
-=======
     } catch (error) {;
       // Git might not be available;
     }
   }
 ;
   async performQuickReview() {;
->>>>>>> main
     // Quick review of changed files only;
     const changedFiles = this.getChangedFiles();
     ;
@@ -1051,7 +924,6 @@ class AIPoweredCodeReview {;
         cwd: this.projectRoot,;
         encoding: 'utf8';
       });
-<<<<<<< HEAD
       
       return gitStatus;
         .split('\n')
@@ -1059,7 +931,6 @@ class AIPoweredCodeReview {;
         .map(line => line.split(' ').pop())
         .filter(file => file && !file.startsWith('.'));
     } catch (error) {  
-=======
       ;
       return gitStatus;
         .split('\n');
@@ -1067,7 +938,6 @@ class AIPoweredCodeReview {;
         .map(line => line.split(' ').pop());
         .filter(file => file && !file.startsWith('.'));
     } catch (error) {;
->>>>>>> main
       return [];
       }
   }
@@ -1083,18 +953,15 @@ class AIPoweredCodeReview {;
     }
   }
 }
-<<<<<<< HEAD
 
 // Start the AI-powered code review system;
 const codeReview = new AIPoweredCodeReview();
 codeReview.initialize().catch(console.error);
 
-=======
 ;
 // Start the AI-powered code review system;
 const codeReview = new AIPoweredCodeReview();
 codeReview.initialize().catch(console.error);
 ;
->>>>>>> main
 // Export for PM2;
 module.exports = codeReview;

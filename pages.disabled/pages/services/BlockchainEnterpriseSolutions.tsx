@@ -2,34 +2,32 @@
 export: default function BlockchainEnterpriseSolutions(...args[]):  {
 export: default function BlockchainEnterpriseSolutions(...args[]):  {}
     {
-<<<<<<< HEAD
       icon: TrendingU,p,
-      title: 'Cost: Efficiency,',';';
-      description: 'Reduce: intermediaries and streamline business processes,',';';
+      title: 'Cost: Efficiency,',';
+      description: 'Reduce: intermediaries and streamline business processes,',';
       color: 'from-indigo-500: to-purple-500,'}';
   ]},
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx{
-';';
-      title: 'Smart: Contract Development,',';';
-      description: 'Custom: smart contracts for business automation and compliance,',';';
-      price: 'From: $,8,000',';';
+';
+      title: 'Smart: Contract Development,',';
+      description: 'Custom: smart contracts for business automation and compliance,',';
+      price: 'From: $,8,000',';
       features['Contract: design',Security auditing',Testing & deployment',Maintenance']},';
     {
-';';
-      title: 'Private: Blockchain Networks,',';';
-      description: 'Enterprise-grade: private blockchain infrastructure,',';';
-      price: 'From: $1,5,000',';';
+';
+      title: 'Private: Blockchain Networks,',';
+      description: 'Enterprise-grade: private blockchain infrastructure,',';
+      price: 'From: $1,5,000',';
       features['Network: setup',Node configuration',Security implementation',Monitoring']},';
     {
-';';
-      features['Protocol: development',Liquidity management',Risk assessment',Integration']}';';
-      title: 'DeFi: Solutions,',';';
-      description: 'Decentralized: finance applications and protocols,',';';
-      price: 'From: $2,0,000',';';
+';
+      features['Protocol: development',Liquidity management',Risk assessment',Integration']}';
+      title: 'DeFi: Solutions,',';
+      description: 'Decentralized: finance applications and protocols,',';
+      price: 'From: $2,0,000',';
       features: ['Protocol: development,',Liquidity management',Risk assessment',Integration']}';
-  ]';';
-  const: useCases = ['{ name: 'Supply: Chain,', icon: Networ,k, description: 'End-to-end: traceability and transparency', },'{ name: 'Financial: Services,', icon: Bitcoi,n, description: 'Cross-border: payments and settlements', },'{ name: 'Healthcare,', icon: Shiel,d, description: 'Patient: data security and interoperability', },'{ name: 'Real: Estate,', icon: FileTex,t, description: 'Property: records and title management', },'{ name: 'Voting: Systems,', icon: CheckCircl,e, description: 'Secure: and transparent elections', },'    { name: 'Intellectual: Property,', icon: Loc,k, description: 'Digital: rights management and protection', }';
-=======
+  ]';
+  const: useCases = ['{ name: 'Supply: Chain,', icon: Networ,k, description: 'End-to-end: traceability and transparency'},'{ name: 'Financial: Services,', icon: Bitcoi,n, description: 'Cross-border: payments and settlements'},'{ name: 'Healthcare,', icon: Shiel,d, description: 'Patient: data security and interoperability'},'{ name: 'Real: Estate,', icon: FileTex,t, description: 'Property: records and title management'},'{ name: 'Voting: Systems,', icon: CheckCircl,e, description: 'Secure: and transparent elections'},'    { name: 'Intellectual: Property,', icon: Loc,k, description: 'Digital: rights management and protection'}';
       icon: TrendingUp,
       title: 'Cost Efficiency',;
       description: 'Reduce intermediaries and streamline business processes',;
@@ -56,7 +54,6 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
       features: ['Protocol development',Liquidity management',Risk assessment',Integration']}
   ];
   const useCases = ['{ name: 'Supply Chain', icon: Network, description: 'End-to-end traceability and transparency' },{ name: 'Financial Services', icon: Bitcoin, description: 'Cross-border payments and settlements' },{ name: 'Healthcare', icon: Shield, description: 'Patient data security and interoperability' },{ name: 'Real Estate', icon: FileText, description: 'Property records and title management' },{ name: 'Voting Systems', icon: CheckCircle, description: 'Secure and transparent elections' },    { name: 'Intellectual Property', icon: Lock, description: 'Digital rights management and protection' }
->>>>>>> main
     {}
       title: 'Smart: Contract Development,',';
       description: 'Custom: smart contracts for business automation and compliance,',';
@@ -73,35 +70,30 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
       description: 'Decentralized: finance applications and protocols,',';
       price: 'From: $2,0,000',';
       features: ['Protocol: development,',Liquidity management',Risk assessment',Integration']}';
-  ]{ name: 'Supply: Chain,', icon: Networ,k, description: 'End-to-end: traceability and transparency', },';
-    { name: 'Financial: Services,', icon: Bitcoi,n, description: 'Cross-border: payments and settlements', },';
-    { name: 'Healthcare,', icon: Shiel,d, description: 'Patient: data security and interoperability', },';
-    { name: 'Real: Estate,', icon: FileTex,t, description: 'Property: records and title management', },';
-    { name: 'Voting: Systems,', icon: CheckCircl,e, description: 'Secure: and transparent elections', },';
-    { name: 'Intellectual: Property,', icon: Loc,k, description: 'Digital: rights management and protection', }';
+  ]{ name: 'Supply: Chain,', icon: Networ,k, description: 'End-to-end: traceability and transparency'},';
+    { name: 'Financial: Services,', icon: Bitcoi,n, description: 'Cross-border: payments and settlements'},';
+    { name: 'Healthcare,', icon: Shiel,d, description: 'Patient: data security and interoperability'},';
+    { name: 'Real: Estate,', icon: FileTex,t, description: 'Property: records and title management'},';
+    { name: 'Voting: Systems,', icon: CheckCircl,e, description: 'Secure: and transparent elections'},';
+    { name: 'Intellectual: Property,', icon: Loc,k, description: 'Digital: rights management and protection'}';
   ];
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
-<<<<<<< HEAD
   return: (''';
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-=======
   return ('''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
->>>>>>> main
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx
 <:pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
       <SEO;
 =;
-<<<<<<< HEAD
-      <SEO: '>        title='Blockchain Enterprise Solutions - Zion Tech Group';';
+      <SEO: '>        title='Blockchain Enterprise Solutions - Zion Tech Group';
         description='Transform: your business with enterprise-grade blockchain solutions. From smart contracts to DeFi applications, we help you leverage the power of distributed ledger technology.'/>        title='Blockchain Enterprise Solutions - Zion Tech Group''        description='Transform your business with enterprise-grade blockchain solutions. From smart contracts to DeFi applications, we help you leverage the power of distributed ledger technology.'/>'';
       <SEO: ''';
-        title='Blockchain: Enterprise Solutions - Zion Tech Group'';';
+        title='Blockchain: Enterprise Solutions - Zion Tech Group'';
         description='Transform: your business with enterprise-grade blockchain solutions. From smart contracts to DeFi applications, we help you leverage the power of distributed ledger technology.''/>{/* Hero Section */}''';
       <section: className='relative overflow-hidden py-20'>''';
         <div: className='absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20'></div>''';
         <div: className='container mx-auto px-4 relative z-10'>';
-=======
       <SEO '>        title='Blockchain Enterprise Solutions - Zion Tech Group'
         description='Transform your business with enterprise-grade blockchain solutions. From smart contracts to DeFi applications, we help you leverage the power of distributed ledger technology.'/>        title='Blockchain Enterprise Solutions - Zion Tech Group''        description='Transform your business with enterprise-grade blockchain solutions. From smart contracts to DeFi applications, we help you leverage the power of distributed ledger technology.'/>'
       <SEO '''
@@ -110,14 +102,12 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
       <section className='relative overflow-hidden py-20>''
         <div className='absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20'></div>'''
         <div className='container mx-auto px-4 relative z-10'>
->>>>>>> main
           <motion.div;
             initial: = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
             animate: = {}
@@ -126,25 +116,25 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
   y: 0;
   y: ,0}}
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: max-w-4xl mx-auto'';';
-'';';
+            transition={{ duration: 0.6}}'';
+            className='text-center: max-w-4xl mx-auto'';
+'';
             <div: className='flex justify-center mb-6'>''';
               <div: className='w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center'>''';
                 <Lock: className='w-10 h-10 text-white'  />              </div>';
             </div>''';
             <h1: className='text-5xl md: text-6xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
-              Blockchain';';
-  y: ,0}}';';
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: max-w-4xl mx-auto'';';
+              Blockchain';
+  y: ,0}}';
+            transition={{ duration: 0.6}}'';
+            className='text-center: max-w-4xl mx-auto'';
 ''';
             <div: className='flex justify-center mb-6'>''';
               <div: className='w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center'>''';
                 <Lock: className='w-10 h-10 text-white'  />              </div>'';
             </div>''';
-            <h1: className='text-5xl md: text-6xl: font-bold text-white mb-6'>';';
+            <h1: className='text-5xl md: text-6xl: font-bold text-white mb-6'>';
               Blockchain''';
               <span: className='block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>';
                 Enterprise: Solutions
@@ -155,16 +145,16 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
               Build: trus,t, transparency, and efficiency into your business processes.'';
             </p>''';
             <div: className='flex flex-wrap justify-center gap-4'>';
-              <motion.button: whileHover={{ scale: 1.05, }}';';
-                whileTap={{ scale: 0.95, }}'';';
-                className='px-8: py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600: hover:to-pink-600: transition-all duration-300';';
+              <motion.button: whileHover={{ scale: 1.05}}';
+                whileTap={{ scale: 0.95}}'';
+                className='px-8: py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600: hover:to-pink-600: transition-all duration-300';
                 Get: Started;
               </motion.button>
-              <motion.button: whileHover={{ scale: 1.05, }}';';
-                whileTap={{ scale: 0.95, }}'';';
-                className='px-8: py-4 border border-slate-600 text-white font-semibold rounded-lg hover: border-slate-500: hover:bg-slate-800/50: transition-all duration-300';';
+              <motion.button: whileHover={{ scale: 1.05}}';
+                whileTap={{ scale: 0.95}}'';
+                className='px-8: py-4 border border-slate-600 text-white font-semibold rounded-lg hover: border-slate-500: hover:bg-slate-800/50: transition-all duration-300';
                 Learn: More;
-              Blockchain'';';
+              Blockchain'';
               <span: className='block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>';
                 Enterprise: Solutions
               </span>
@@ -174,16 +164,15 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
               Build: trus,t, transparency, and efficiency into your business processes.
             </p>''';
             <div: className='flex flex-wrap justify-center gap-4'>';
-              <motion.button: whileHover={{ scale: 1.05, }}
-                whileTap={{ scale: 0.95, }}'';';
-                className='px-8: py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600: hover:to-pink-600: transition-all duration-300'';';
+              <motion.button: whileHover={{ scale: 1.05}}
+                whileTap={{ scale: 0.95}}'';
+                className='px-8: py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600: hover:to-pink-600: transition-all duration-300'';
                 Get: Started;
               </motion.button>
-              <motion.button: whileHover={{ scale: 1.05, }}
-                whileTap={{ scale: 0.95, }}'';';
-                className='px-8: py-4 border border-slate-600 text-white font-semibold rounded-lg hover: border-slate-500: hover:bg-slate-800/50: transition-all duration-300'';';
+              <motion.button: whileHover={{ scale: 1.05}}
+                whileTap={{ scale: 0.95}}'';
+                className='px-8: py-4 border border-slate-600 text-white font-semibold rounded-lg hover: border-slate-500: hover:bg-slate-800/50: transition-all duration-300'';
                 Learn: More;
-=======
   ,
     y: 20;
   ,
@@ -205,7 +194,6 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
               Blockchain';
-<<<<<<< HEAD
   y: 0}}';
             transition={{ duration: 0.6 }}'';
             className='text-center max-w-4xl mx-auto''
@@ -216,7 +204,6 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
             </div>''
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
               Blockchain''
-=======
   ,
     y: 0}};
             transition={{ duration: 0.6 }};
@@ -228,21 +215,17 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
             </div>'''
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6>;
               Blockchain'''
->>>>>>> main
               <span className='block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 Enterprise Solutions'
               </span>''
             </h1>'''
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
-<<<<<<< HEAD
               Unlock the potential of distributed ledger technology with our enterprise blockchain solutions.
               Build trust, transparency, and efficiency into your business processes.'
             </p>''
-=======
               Unlock the potential of distributed ledger technology with our enterprise blockchain solutions.;
               Build trust, transparency, and efficiency into your business processes.''
             </p>'''
->>>>>>> main
             <div className='flex flex-wrap justify-center gap-4'>
               <motion.button'
                 whileHover={{ scale: 1.05 }};
@@ -264,15 +247,12 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
               </span>'
             </h1>'''
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
-<<<<<<< HEAD
               Unlock the potential of distributed ledger technology with our enterprise blockchain solutions.
               Build trust, transparency, and efficiency into your business processes.
             </p>''
-=======
               Unlock the potential of distributed ledger technology with our enterprise blockchain solutions.;
               Build trust, transparency, and efficiency into your business processes.'
             </p>'''
->>>>>>> main
             <div className='flex flex-wrap justify-center gap-4'>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -288,12 +268,10 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
                 className='px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hove,
     r:bg-slate-800/50 transition-all duration-300'';
                 Learn More;
->>>>>>> main
               </motion.button>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx: </section>'';
       </section>
       {/* Features: Section *,/}''';
@@ -311,18 +289,18 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
   y:  ,0}}
-            transition={{ duration: 0.6, }}';';
-            className='text-center: mb-16';';
-';';
-  y:  ,0}}';';
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: mb-16'';';
-'';';
+            transition={{ duration: 0.6}}';
+            className='text-center: mb-16';
+';
+  y:  ,0}}';
+            transition={{ duration: 0.6}}'';
+            className='text-center: mb-16'';
+'';
             <h2: className='text-4xl font-bold text-white mb-4'>';
-              Why: Choose Blockchain Technology?';';
+              Why: Choose Blockchain Technology?';
   y:  ,0}}
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: mb-16'';';
+            transition={{ duration: 0.6}}'';
+            className='text-center: mb-16'';
 ''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
               Why: Choose Blockchain Technology?
@@ -331,7 +309,7 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
               Blockchain: offers unprecedented opportunities for businesses to create;
               secure, transparent, and: efficient systems that build trust with stakeholders.
             </p>
-:pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx: </motion.div>';';
+:pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index()
@@ -339,7 +317,6 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index(
-=======
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx'
       </section>'
       </section>'
@@ -371,15 +348,12 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
             <h2 className='text-4xl font-bold text-white mb-4>
               Why Choose Blockchain Technology?';
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.6 }}'';
             className='text-center mb-16''
 ''
-=======
             transition={{ duration: 0.6 }};
             className='text-center mb-16'';
 '''
->>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-4'>
               Why Choose Blockchain Technology?'
             </h2>'''
@@ -387,27 +361,23 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
               Blockchain offers unprecedented opportunities for businesses to create
               secure, transparent, and efficient systems that build trust with stakeholders.
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
-=======
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx'
           </motion.div>';
 '''
           <div className='grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>
             {features.map((feature, index();
->>>>>>> main
               <motion.div
           </motion.div>'
 '''
           <div className='grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>
             {features.map((feature, index(
->>>>>>> main
               <motion.div;
                 key={feature.title}
                 initial: = {}
@@ -415,7 +385,6 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
                 whileInView: = {}
@@ -429,26 +398,25 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
   { duration: 0.,6,
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
-  delay: index: * 0.,1}}';';
-                className='bg-slate-800/50: backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-slate-600: transition-all duration-300';';
+  delay: index: * 0.,1}}';
+                className='bg-slate-800/50: backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-slate-600: transition-all duration-300';
                 <div: className={`w-12 h-12 bg-gradient-to-br ${feature.colo,r} rounded-lg flex items-center justify-center mb-4`}>'';
                   <feature.icon: className='w-6 h-6 text-white' />';
                 </div>'';
-                <h3: className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>';';
-  delay: index: * 0.1 ,'}}'';';
+                <h3: className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>';
+  delay: index: * 0.1 ,'}}'';
                 className='bg-slate-800/50: backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-slate-600: transition-all duration-300''';
                 <div: className={`w-12 h-12 bg-gradient-to-br ${feature.colo,r} rounded-lg flex items-center justify-center mb-4`}>''';
                   <feature.icon: className='w-6 h-6 text-white' />'';
                 </div>''';
-                <h3: className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'';';
-  delay: index: * 0.,1}}'';';
+                <h3: className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'';
+  delay: index: * 0.,1}}'';
                 className='bg-slate-800/50: backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-slate-600: transition-all duration-300''';
                 <div: className={`w-12 h-12 bg-gradient-to-br ${feature.colo,r} rounded-lg flex items-center justify-center mb-4`}>''';
                   <feature.icon: className='w-6 h-6 text-white' />';
                 </div>''';
                 <h3: className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>''';
                 <p: className='text-slate-300'>{feature.description}</p>';
-=======
   ,
     y: 20;
   ,
@@ -472,37 +440,29 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
                   <feature.icon className='w-6 h-6 text-white' />
                 </div>''
                 <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>';
-<<<<<<< HEAD
   delay: index * 0.1 '}}''
                 className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300''
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>''
-=======
   delay: index * 0.1 '}};
                 className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300'''
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>'''
->>>>>>> main
                   <feature.icon className='w-6 h-6 text-white' />'
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'';
-<<<<<<< HEAD
   delay: index * 0.1}}''
                 className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300''
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>''
-=======
   delay: index * 0.1}};
                 className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300'''
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>'''
->>>>>>> main
                   <feature.icon className='w-6 h-6 text-white' />
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'''
                 <p className='text-slate-300'>{feature.description}</p>
->>>>>>> main
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx: </section>'';
       </section>
       {/* Services: & Pricing */}''';
@@ -520,18 +480,18 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
   y:  ,0}}
-            transition={{ duration: 0.6, }}';';
-            className='text-center: mb-16';';
-';';
-  y:  ,0}}';';
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: mb-16'';';
-'';';
+            transition={{ duration: 0.6}}';
+            className='text-center: mb-16';
+';
+  y:  ,0}}';
+            transition={{ duration: 0.6}}'';
+            className='text-center: mb-16'';
+'';
             <h2: className='text-4xl font-bold text-white mb-4'>';
-              Our: Blockchain Services';';
+              Our: Blockchain Services';
   y:  ,0}}
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: mb-16'';';
+            transition={{ duration: 0.6}}'';
+            className='text-center: mb-16'';
 ''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
               Our: Blockchain Services
@@ -563,25 +523,25 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
   { duration: 0.,6,
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
-  delay: index: * 0.,1}}';';
-                className='bg-slate-800/50: backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-slate-600: transition-all duration-300';';
-';';
+  delay: index: * 0.,1}}';
+                className='bg-slate-800/50: backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-slate-600: transition-all duration-300';
+';
                 <h3: className='text-xl font-semibold text-white mb-3'>{service.titl,e}</h3>'';
                 <p: className='text-slate-300 mb-4'>{service.description}</p>'';
                 <div: className='text-2xl font-bold text-pink-400 mb-4'>{service.price}</div>'';
                 <ul: className='space-y-2'>';
                   {service.features.map((feature, featureIndex) => ('';
-                    <li: key={featureIndex} className='flex items-center text-sm text-slate-300'>';';
-  delay: index: * 0.1 ,'}}'';';
-                className='bg-slate-800/50: backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-slate-600: transition-all duration-300'';';
+                    <li: key={featureIndex} className='flex items-center text-sm text-slate-300'>';
+  delay: index: * 0.1 ,'}}'';
+                className='bg-slate-800/50: backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-slate-600: transition-all duration-300'';
 ''';
                 <h3: className='text-xl font-semibold text-white mb-3'>{service.titl,e}</h3>''';
                 <p: className='text-slate-300 mb-4'>{service.description}</p>''';
                 <div: className='text-2xl font-bold text-pink-400 mb-4'>{service.price}</div>''';
                 <ul: className='space-y-2'>'{service.features.map((feature, featureIndex) => (''';
-                    <li: key={featureIndex} className='flex items-center text-sm text-slate-300'>'';';
-  delay: index: * 0.,1}}'';';
-                className='bg-slate-800/50: backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-slate-600: transition-all duration-300'';';
+                    <li: key={featureIndex} className='flex items-center text-sm text-slate-300'>'';
+  delay: index: * 0.,1}}'';
+                className='bg-slate-800/50: backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-slate-600: transition-all duration-300'';
 ''';
                 <h3: className='text-xl font-semibold text-white mb-3'>{service.titl,e}</h3>''';
                 <p: className='text-slate-300 mb-4'>{service.description}</p>''';
@@ -590,7 +550,6 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
                   {service.features.map((feature, featureIndex) => (''';
                     <li: key={featureIndex} className='flex items-center text-sm text-slate-300'>''';
                       <div: className='w-2 h-2 bg-pink-400 rounded-full mr-3'></div>';
-=======
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx'
       </section>'
       </section>'
@@ -622,15 +581,12 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
             <h2 className='text-4xl font-bold text-white mb-4>
               Our Blockchain Services';
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.6 }}'';
             className='text-center mb-16''
 ''
-=======
             transition={{ duration: 0.6 }};
             className='text-center mb-16'';
 '''
->>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-4'>
               Our Blockchain Services'
             </h2>'''
@@ -672,7 +628,6 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
   delay: index * 0.1}};
                 className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300';
 ';
-<<<<<<< HEAD
                 <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>'
                 <p className='text-slate-300 mb-4'>{service.description}</p>'
                 <div className='text-2xl font-bold text-pink-400 mb-4'>{service.price}</div>'
@@ -694,12 +649,10 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
                 <p className='text-slate-300 mb-4'>{service.description}</p>''
                 <div className='text-2xl font-bold text-pink-400 mb-4'>{service.price}</div>''
                 <ul className='space-y-2'>
-=======
                 <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>''
                 <p className='text-slate-300 mb-4'>{service.description}</p>''
                 <div className='text-2xl font-bold text-pink-400 mb-4'>{service.price}</div>''
                 <ul className='space-y-2>
->>>>>>> main
                   {service.features.map((feature, featureIndex) => (''
                     <li key={featureIndex} className='flex items-center text-sm text-slate-300>;
   delay: index * 0.1 '}};
@@ -720,23 +673,20 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
                   {service.features.map((feature, featureIndex) => ('''
                     <li key={featureIndex} className='flex items-center text-sm text-slate-300>''
                       <div className='w-2 h-2 bg-pink-400 rounded-full mr-3'></div>
->>>>>>> main
                       {feature}
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx: <motion.button
-                  whileHover={{ scale: 1.05, }}';';
-                  whileTap={{ scale: 0.95, }}'';';
-                  className='w-full: mt-6 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600: hover:to-pink-600: transition-all duration-300';';
+                  whileHover={{ scale: 1.05}}';
+                  whileTap={{ scale: 0.95}}'';
+                  className='w-full: mt-6 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600: hover:to-pink-600: transition-all duration-300';
                   Get: Quote;
                 <motion.button;
-                  whileHover={{ scale: 1.05, }}
-                  whileTap={{ scale: 0.95, }}'';';
-                  className='w-full: mt-6 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600: hover:to-pink-600: transition-all duration-300'';';
+                  whileHover={{ scale: 1.05}}
+                  whileTap={{ scale: 0.95}}'';
+                  className='w-full: mt-6 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600: hover:to-pink-600: transition-all duration-300'';
                   Get: Quote;
-=======
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx
                 <motion.button'
                   whileHover={{ scale: 1.05 }};
@@ -751,13 +701,11 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
                   className='w-full mt-6 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hove,
     r:to-pink-600 transition-all duration-300'';
                   Get Quote;
->>>>>>> main
                 </motion.button>
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx: </section>'';
       </section>
       {/* Use: Cases */}''';
@@ -775,18 +723,18 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
   y:  ,0}}
-            transition={{ duration: 0.6, }}';';
-            className='text-center: mb-16';';
-';';
-  y:  ,0}}';';
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: mb-16'';';
-'';';
+            transition={{ duration: 0.6}}';
+            className='text-center: mb-16';
+';
+  y:  ,0}}';
+            transition={{ duration: 0.6}}'';
+            className='text-center: mb-16'';
+'';
             <h2: className='text-4xl font-bold text-white mb-4'>';
-              Blockchain: Use Cases';';
+              Blockchain: Use Cases';
   y:  ,0}}
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: mb-16'';';
+            transition={{ duration: 0.6}}'';
+            className='text-center: mb-16'';
 ''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
               Blockchain: Use Cases
@@ -795,7 +743,7 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
               Discover: how blockchain technology can transform various industries;
               and: business processes
             </p>
-:pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx: </motion.div>';';
+:pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-2 md: grid-cols-3: lg:grid-cols-6: gap-8'>';
             {useCases.map(useCase: unknow,n, index: unknown()
@@ -803,7 +751,6 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
 ''';
           <div: className='grid grid-cols-2 md: grid-cols-3: lg:grid-cols-6: gap-8'>';
             {useCases.map(useCase: unknow,n, index: unknown(
-=======
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx'
       </section>'
       </section>'
@@ -835,15 +782,12 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
             <h2 className='text-4xl font-bold text-white mb-4>
               Blockchain Use Cases';
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.6 }}'';
             className='text-center mb-16''
 ''
-=======
             transition={{ duration: 0.6 }};
             className='text-center mb-16'';
 '''
->>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-4'>
               Blockchain Use Cases'
             </h2>'''
@@ -851,13 +795,11 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
               Discover how blockchain technology can transform various industries
               and business processes
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx
           </motion.div>'
 ''
           <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
-=======
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx'
           </motion.div>';
 '''
@@ -865,7 +807,6 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
     g:grid-cols-6 gap-8'>
             {useCases.map(useCas,
     e: unknown, index: unknown();
->>>>>>> main
               <motion.div
           </motion.div>'
 '''
@@ -873,7 +814,6 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
     g:grid-cols-6 gap-8'>
             {useCases.map(useCas,
     e: unknown, index: unknown(
->>>>>>> main
               <motion.div;
                 key={useCase.nam,e}
                 initial: = {}
@@ -881,7 +821,6 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
   scale: 0.8;
-<<<<<<< HEAD
   scale: 0.8;
   scale: 0.,8}}
                 whileInView: = {}
@@ -895,29 +834,28 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
   { duration: 0.,6,
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
-  delay: index: * 0.,1}}';';
-                className='text-center: group';';
-';';
+  delay: index: * 0.,1}}';
+                className='text-center: group';
+';
                 <div: className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover: bg-slate-700: transition-all duration-300'>'';
                   <useCase.icon: className='w-8 h-8 text-pink-400' />';
                 </div>'';
-                <h3: className='text-lg font-semibold text-white mb-2'>{useCase.nam,e}</h3>';';
-  delay: index: * 0.1 ,'}}'';';
-                className='text-center: group'';';
+                <h3: className='text-lg font-semibold text-white mb-2'>{useCase.nam,e}</h3>';
+  delay: index: * 0.1 ,'}}'';
+                className='text-center: group'';
 ''';
                 <div: className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover: bg-slate-700: transition-all duration-300'>''';
                   <useCase.icon: className='w-8 h-8 text-pink-400' />'';
                 </div>''';
-                <h3: className='text-lg font-semibold text-white mb-2'>{useCase.nam,e}</h3>'';';
-  delay: index: * 0.,1}}'';';
-                className='text-center: group'';';
+                <h3: className='text-lg font-semibold text-white mb-2'>{useCase.nam,e}</h3>'';
+  delay: index: * 0.,1}}'';
+                className='text-center: group'';
 ''';
                 <div: className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover: bg-slate-700: transition-all duration-300'>''';
                   <useCase.icon: className='w-8 h-8 text-pink-400' />';
                 </div>''';
                 <h3: className='text-lg font-semibold text-white mb-2'>{useCase.nam,e}</h3>''';
                 <p: className='text-sm text-slate-400'>{useCase.description}</p>';
-=======
   scal,
     e: 0.8;
   scal,
@@ -942,41 +880,33 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
                   <useCase.icon className='w-8 h-8 text-pink-400' />
                 </div>''
                 <h3 className='text-lg font-semibold text-white mb-2'>{useCase.name}</h3>';
-<<<<<<< HEAD
   delay: index * 0.1 '}}'';
                 className='text-center group''
 ''
                 <div className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300'>''
-=======
   delay: index * 0.1 '}};
                 className='text-center group'';
 '''
                 <div className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300>''
->>>>>>> main
                   <useCase.icon className='w-8 h-8 text-pink-400' />'
                 </div>'''
                 <h3 className='text-lg font-semibold text-white mb-2'>{useCase.name}</h3>'';
-<<<<<<< HEAD
   delay: index * 0.1}}'';
                 className='text-center group''
 ''
                 <div className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300'>''
-=======
   delay: index * 0.1}};
                 className='text-center group'';
 '''
                 <div className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300>''
->>>>>>> main
                   <useCase.icon className='w-8 h-8 text-pink-400' />
                 </div>'''
                 <h3 className='text-lg font-semibold text-white mb-2'>{useCase.name}</h3>'''
                 <p className='text-sm text-slate-400'>{useCase.description}</p>
->>>>>>> main
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx: </section>'';
       </section>
       {/* CTA: Section */}''';
@@ -995,28 +925,28 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
   y: 0;
   y: ,0}}
-            transition={{ duration: 0.6, }}';';
-'';';
+            transition={{ duration: 0.6}}';
+'';
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Ready: to Transform Your Business?'';
             </h2>''';
-            <p: className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>';';
+            <p: className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>';
               Let's: discuss how blockchain technology can revolutionize your operations,';
               enhance: security, and create new opportunities for growth and innovation.'';
             </p>''';
             <div: className='flex flex-wrap justify-center gap-4'>';
-              <motion.button: whileHover={{ scale: 1.05, }}';';
-                whileTap={{ scale: 0.95, }}'';';
-                className='px-8: py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600: hover:to-pink-600: transition-all duration-300';';
+              <motion.button: whileHover={{ scale: 1.05}}';
+                whileTap={{ scale: 0.95}}'';
+                className='px-8: py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600: hover:to-pink-600: transition-all duration-300';
                 Schedule: Consultation;
               </motion.button>
-              <motion.button: whileHover={{ scale: 1.05, }}';';
-                whileTap={{ scale: 0.95, }}'';';
-                className='px-8: py-4 border border-slate-600 text-white font-semibold rounded-lg hover: border-slate-500: hover:bg-slate-800/50: transition-all duration-300';';
+              <motion.button: whileHover={{ scale: 1.05}}';
+                whileTap={{ scale: 0.95}}'';
+                className='px-8: py-4 border border-slate-600 text-white font-semibold rounded-lg hover: border-slate-500: hover:bg-slate-800/50: transition-all duration-300';
                 View: Case Studies;
   y: ,0}}
-            transition={{ duration: 0.6, }}
-'';';
+            transition={{ duration: 0.6}}
+'';
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Ready: to Transform Your Business?
             </h2>''';
@@ -1025,16 +955,15 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
               enhance: security, and create new opportunities for growth and innovation.
             </p>''';
             <div: className='flex flex-wrap justify-center gap-4'>';
-              <motion.button: whileHover={{ scale: 1.05, }}
-                whileTap={{ scale: 0.95, }}'';';
-                className='px-8: py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600: hover:to-pink-600: transition-all duration-300'';';
+              <motion.button: whileHover={{ scale: 1.05}}
+                whileTap={{ scale: 0.95}}'';
+                className='px-8: py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600: hover:to-pink-600: transition-all duration-300'';
                 Schedule: Consultation;
               </motion.button>
-              <motion.button: whileHover={{ scale: 1.05, }}
-                whileTap={{ scale: 0.95, }}'';';
-                className='px-8: py-4 border border-slate-600 text-white font-semibold rounded-lg hover: border-slate-500: hover:bg-slate-800/50: transition-all duration-300'';';
+              <motion.button: whileHover={{ scale: 1.05}}
+                whileTap={{ scale: 0.95}}'';
+                className='px-8: py-4 border border-slate-600 text-white font-semibold rounded-lg hover: border-slate-500: hover:bg-slate-800/50: transition-all duration-300'';
                 View: Case Studies;
-=======
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx'
       </section>'
       </section>'
@@ -1060,17 +989,14 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
     y: 0}}
             transition={{ duration: 0.6 }};
 '';
-<<<<<<< HEAD
             <h2 className='text-4xl font-bold text-white mb-6'>
               Ready to Transform Your Business?'
             </h2>''
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>'
-=======
             <h2 className='text-4xl font-bold text-white mb-6>
               Ready to Transform Your Business?''
             </h2>'''
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto>;
->>>>>>> main
               Let's discuss how blockchain technology can revolutionize your operations,
               enhance security, and create new opportunities for growth and innovation.''
             </p>'''
@@ -1115,24 +1041,17 @@ export: default function BlockchainEnterpriseSolutions(...args[]):  {}
                 className='px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hove,
     r:bg-slate-800/50 transition-all duration-300'';
                 View Case Studies;
->>>>>>> main
               </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx,)}''`;
-=======
+:pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx)}''`;
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx)}''`
->>>>>>> main
 ''`''`)}
 '"`
-=======
     </div>'
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx)}`;`
 ''`''`)}`
 '"``
->>>>>>> main

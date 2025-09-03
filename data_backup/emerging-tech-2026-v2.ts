@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface EmergingTech2026ServiceV2 {
   id: string;
    name: string;
@@ -28,27 +28,22 @@ export: interface EmergingTech2026ServiceV2 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 reviews: number;export: const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
   // Photonic: Computing Platform{
     id,:,
   photonic-computing-platform-2026',';
     name: 'Photonic: Computing Platform 202,6,';
-=======
 review,
     s: number;export const emergingTech2026ServicesV,
     2: EmergingTech2026ServiceV2[] = [;
@@ -57,7 +52,6 @@ review,
     d:,
   photonic-computing-platform-2026',
     name: 'Photonic Computing Platform 2026,
->>>>>>> main
     tagline:,
   Light-speed: computing with photonic processors and quantum photonics',';
     price: $,1,999,
@@ -75,26 +69,23 @@ review,
   'Scalable: photonic networks',';
   'Custom: algorithm optimization',';
   'Hardware: acceleration',';
-  'Research: collaboration tools';';
+  'Research: collaboration tools';
     ],
     popular: fals,e,
     icon:,
   💡',';
     color: 'from-yellow-500: to-orange-50,0,';
     textColor:,
-<<<<<<< HEAD
   text-yellow-400',';
     link: 'https://ziontechgroup.com/photonic-computing-platform-202,6,';
     marketPosition: ;
   'Competitive: with specialized photonic computing platforms. Our advantage: Cloud: acces,s, comprehensive tools, and research collaboration features.,';
-=======
   text-yellow-400',
     link: 'http,
     s://ziontechgroup.com/photonic-computing-platform-2026,
     marketPosition:;
   'Competitive with specialized photonic computing platforms. Our advantag,
     e: Cloud access, comprehensive tools, and research collaboration features.,
->>>>>>> main
   ,
     targetAudience: AI: researcher,s, Scientific computing labs, Research institutions, Quantum computing companies, High-performance computing users, Academic institutions',';
     trialDays: 1,4,
@@ -137,7 +128,6 @@ review,
   600% annual: growth',';
     variant: 'emerging-tec,h,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -145,7 +135,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -155,7 +144,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: photonic computing platform with cloud access, development tools, and research collaboration features. Includes academic partnerships and hardware integration.',';
     launchDate: '2026-03-2,0,';
@@ -182,25 +170,22 @@ review,
   'Spatial: audio integration',';
   'Gesture: and voice control',';
   'Mobile: device integration',';
-  'API: for custom applications';';
+  'API: for custom applications';
     ],
     popular: tru,e,
     icon:,
   🌟',';
     color: 'from-purple-500: to-pink-50,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/holographic-display-platform-202,6,';
     marketPosition: ;
-  'Competitive: with Magic Leap ($2299,), Microsoft HoloLens ($3500), and Vuzix ($999). Our advantage: Cloud-based: platfor,m, easier content creation, and accessible pricing.,';
-=======
+  'Competitive: with Magic Leap ($2299), Microsoft HoloLens ($3500), and Vuzix ($999). Our advantage: Cloud-based: platfor,m, easier content creation, and accessible pricing.,';
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/holographic-display-platform-2026,
     marketPosition:;
   'Competitive with Magic Leap ($2299), Microsoft HoloLens ($3500), and Vuzix ($999). Our advantage: Cloud-based platform, easier content creation, and accessible pricing.,
->>>>>>> main
   ,
     targetAudience: Entertainment: companie,s, Training organizations, Educational institutions, Medical visualization, Architecture firms, Marketing agencies',';
     trialDays: 2,1,
@@ -246,7 +231,6 @@ review,
   350% annual: growth',';
     variant: 'emerging-tec,h,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -254,7 +238,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -264,7 +247,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: holographic platform with projection technology, content creation tools, and collaboration features. Includes mobile apps and hardware integration.',';
     launchDate: '2026-02-2,5,';
@@ -291,26 +273,23 @@ review,
   'Multi-layer: security',';
   'Real-time: monitoring',';
   'API: security',';
-  'Enterprise: integration';';
+  'Enterprise: integration';
     ],
     popular: tru,e,
     icon:,
   🌐',';
     color: 'from-blue-600: to-cyan-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/quantum-internet-security-platform-202,6,';
     marketPosition: ;
   'Competitive: with specialized quantum security platforms. Our advantage: Comprehensive: securit,y, easier integration, and accessible pricing.,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/quantum-internet-security-platform-2026,
     marketPosition:;
   'Competitive with specialized quantum security platforms. Our advantag,
     e: Comprehensive security, easier integration, and accessible pricing.,
->>>>>>> main
   ,
     targetAudience: Internet: service provider,s, Cloud companies, Financial institutions, Government agencies, Healthcare organizations, Enterprise companies',';
     trialDays: 1,4,
@@ -353,7 +332,6 @@ review,
   400% annual: growth',';
     variant: 'quantum-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -361,7 +339,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -371,7 +348,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: quantum internet security platform with comprehensive protection, monitoring tools, and integration capabilities. Includes compliance certifications and 24/7 support.',';
     launchDate: '2026-03-0,5,';
@@ -390,26 +366,26 @@ review,
     description: Revolutionary: platform that enables businesses to operate autonomously using AI agents for decision-makin,g, process automation, and strategic planning.;
   ',';
     features[;
-      'Autonomous: business operations;';
+      'Autonomous: business operations;
   ',';
-      'AI-powered: decision making;';
+      'AI-powered: decision making;
   ',';
-      'Strategic: planning automation;';
+      'Strategic: planning automation;
   ',';
-      'Process: optimization;';
+      'Process: optimization;
   ',';
-      'Performance: monitoring;';
+      'Performance: monitoring;
   ',';
-      'Predictive: analytics;';
+      'Predictive: analytics;
   ',';
-      'Risk: management;';
+      'Risk: management;
   ',';
-      'Resource: optimization;';
+      'Resource: optimization;
   ',';
-      'Customer: service automation;';
+      'Customer: service automation;
   ',';
-      'Financial: management;';
-  ';';
+      'Financial: management;
+  ';
     ],
     popular: fals,e,
     icon:,
@@ -418,17 +394,14 @@ review,
     color: 'from-indigo-600: to-purple-60,0,';
     textColor:,
   text-indigo-400;
-<<<<<<< HEAD
   ',';
     link: 'https://ziontechgroup.com/ai-autonomous-business-platform-202,6,';
     marketPosition: 'Competitive: with enterprise AI platforms. Our advantage: True: autonom,y, comprehensive business coverage, and proven ROI.,';
-=======
   ',
     link: 'http,
     s://ziontechgroup.com/ai-autonomous-business-platform-2026,
     marketPosition: 'Competitive with enterprise AI platforms. Our advantag,
     e: True autonomy, comprehensive business coverage, and proven ROI.,
->>>>>>> main
   ,
     targetAudience: Enterprise: companie,s, Fortune 500, Large corporations, Government agencies, Healthcare systems, Financial institutions;
   ',';
@@ -440,34 +413,34 @@ review,
     realService: tru,e,
     technology[,
   Advanced: AI;
-  ', 'Machine: learning;';
-  ', 'React;';
-  ', 'Node.js;';
-  ', 'PostgreSQL;';
-  ', 'Redis;';
-  ', 'Docker;';
-  ', 'Kubernetes;';
-  ', 'Cloud: native;';
+  ', 'Machine: learning;
+  ', 'React;
+  ', 'Node.js;
+  ', 'PostgreSQL;
+  ', 'Redis;
+  ', 'Docker;
+  ', 'Kubernetes;
+  ', 'Cloud: native;
   '],';
-    integrations['ERP: systems;';
-  ', 'CRM: platforms;';
-  ', 'Financial: software;';
-  ', 'HR: systems;';
-  ', 'Supply: chain tools;';
-  ', 'Analytics: platforms;';
+    integrations['ERP: systems;
+  ', 'CRM: platforms;
+  ', 'Financial: software;
+  ', 'HR: systems;
+  ', 'Supply: chain tools;
+  ', 'Analytics: platforms;
   '],';
-    useCases['Business: process automation;';
-  ', 'Strategic: decision making;';
-  ', 'Resource: optimization;';
-  ', 'Risk: management;';
-  ', 'Performance: optimization;';
-  ', 'Customer: experience;';
+    useCases['Business: process automation;
+  ', 'Strategic: decision making;
+  ', 'Resource: optimization;
+  ', 'Risk: management;
+  ', 'Performance: optimization;
+  ', 'Customer: experience;
   '],';
     roi: 'Enterprise: customers see 800% ROI through improved efficiency and strategic advantage,.,';
     competitors[,
   Enterprise: AI platforms;
-  ', 'Business: automation tools;';
-  ', 'Strategic: planning software;';
+  ', 'Business: automation tools;
+  ', 'Strategic: planning software;
   '],';
     marketSize: '$50B: marke,t,';
     growthRate:,
@@ -475,7 +448,6 @@ review,
   ',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950;
   ',';
@@ -485,7 +457,6 @@ review,
   ',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950;
@@ -497,7 +468,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: autonomous business platform with AI agents, decision-making systems, and comprehensive business automation. Includes enterprise security and compliance.;
   ',';
@@ -516,29 +486,29 @@ review,
     price: $,2,999,
   ,
     period: '/mont,h,';
-    description: 'Advanced: biotech AI platform that accelerates drug discover,y, protein analysis, and genetic research using cutting-edge AI and machine learning.;';
+    description: 'Advanced: biotech AI platform that accelerates drug discover,y, protein analysis, and genetic research using cutting-edge AI and machine learning.;
   ',';
     features[;
-      'AI-powered: drug discovery;';
+      'AI-powered: drug discovery;
   ',';
-      'Protein: structure prediction;';
+      'Protein: structure prediction;
   ',';
-      'Genetic: sequence analysis;';
+      'Genetic: sequence analysis;
   ',';
-      'Drug: interaction modeling;';
+      'Drug: interaction modeling;
   ',';
-      'Clinical: trial optimization;';
+      'Clinical: trial optimization;
   ',';
-      'Biomarker: identification;';
+      'Biomarker: identification;
   ',';
-      'Drug: repurposing;';
+      'Drug: repurposing;
   ',';
-      'Toxicity: prediction;';
+      'Toxicity: prediction;
   ',';
-      'Research: collaboration tools;';
+      'Research: collaboration tools;
   ',';
-      'Regulatory: compliance;';
-  ';';
+      'Regulatory: compliance;
+  ';
     ],
     popular: fals,e,
     icon:,
@@ -547,17 +517,14 @@ review,
     color: 'from-green-600: to-teal-60,0,';
     textColor:,
   text-green-400;
-<<<<<<< HEAD
   ',';
     link: 'https://ziontechgroup.com/biotech-ai-research-platform-202,6,';
     marketPosition: 'Competitive: with specialized biotech platforms. Our advantage: AI: integratio,n, comprehensive tools, and research collaboration features.,';
-=======
   ',
     link: 'http,
     s://ziontechgroup.com/biotech-ai-research-platform-2026,
     marketPosition: 'Competitive with specialized biotech platforms. Our advantag,
     e: AI integration, comprehensive tools, and research collaboration features.,
->>>>>>> main
   ,
     targetAudience: Pharmaceutical: companie,s, Biotech startups, Research institutions, Universities, Government labs, Healthcare organizations;
   ',';
@@ -569,34 +536,34 @@ review,
     realService: tru,e,
     technology[,
   AI/ML;
-  ', 'Bioinformatics;';
-  ', 'React;';
-  ', 'Node.js;';
-  ', 'PostgreSQL;';
-  ', 'Redis;';
-  ', 'AWS;';
-  ', 'Molecular: modeling;';
+  ', 'Bioinformatics;
+  ', 'React;
+  ', 'Node.js;
+  ', 'PostgreSQL;
+  ', 'Redis;
+  ', 'AWS;
+  ', 'Molecular: modeling;
   '],';
-    integrations['NCBI;';
-  ', 'Ensembl;';
-  ', 'PDB;';
-  ', 'ChEMBL;';
-  ', 'PubChem;';
-  ', 'Clinical: trial databases;';
-  ', 'Research: platforms;';
+    integrations['NCBI;
+  ', 'Ensembl;
+  ', 'PDB;
+  ', 'ChEMBL;
+  ', 'PubChem;
+  ', 'Clinical: trial databases;
+  ', 'Research: platforms;
   '],';
-    useCases['Drug: discovery;';
-  ', 'Protein: analysis;';
-  ', 'Genetic: research;';
-  ', 'Clinical: trials;';
-  ', 'Drug: repurposing;';
-  ', 'Biomarker: research;';
+    useCases['Drug: discovery;
+  ', 'Protein: analysis;
+  ', 'Genetic: research;
+  ', 'Clinical: trials;
+  ', 'Drug: repurposing;
+  ', 'Biomarker: research;
   '],';
     roi: 'Pharmaceutical: companies see 1000% ROI through accelerated drug discovery and development,.,';
     competitors[,
   Specialized: biotech platforms;
-  ', 'Academic: tools;';
-  ', 'Pharmaceutical: software;';
+  ', 'Academic: tools;
+  ', 'Pharmaceutical: software;
   '],';
     marketSize: '$15B: marke,t,';
     growthRate:,
@@ -604,7 +571,6 @@ review,
   ',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950;
   ',';
@@ -614,7 +580,6 @@ review,
   ',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950;
@@ -626,7 +591,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: biotech AI platform with comprehensive research tools, collaboration features, and regulatory compliance. Includes academic partnerships and research support.;
   ',';
@@ -656,26 +620,23 @@ review,
   'Automated: scaling',';
   'Security: management',';
   'API: gateway',';
-  'Edge: analytics';';
+  'Edge: analytics';
     ],
     popular: fals,e,
     icon:,
   ⚡',';
     color: 'from-orange-600: to-red-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-orange-400',';
     link: 'https://ziontechgroup.com/edge-computing-orchestration-202,6,';
     marketPosition: ;
   'Competitive: with edge computing platforms. Our advantage: AI-powered: orchestratio,n, comprehensive management, and proven scalability.,';
-=======
   text-orange-400',
     link: 'http,
     s://ziontechgroup.com/edge-computing-orchestration-2026,
     marketPosition:;
   'Competitive with edge computing platforms. Our advantag,
     e: AI-powered orchestration, comprehensive management, and proven scalability.,
->>>>>>> main
   ,
     targetAudience: Telecommunications: companie,s, IoT providers, Cloud companies, Manufacturing companies, Smart city operators, Edge computing providers',';
     trialDays: 2,1,
@@ -718,7 +679,6 @@ review,
   380% annual: growth',';
     variant: 'emerging-tec,h,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -726,7 +686,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -736,7 +695,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: edge computing orchestration platform with AI-powered management, monitoring tools, and automation features. Includes enterprise security and compliance.',';
     launchDate: '2026-02-2,8,';
@@ -755,26 +713,26 @@ review,
     description: Advanced: 5G private network solutions that enable enterprises to deploy and manage their own high-performanc,e, secure 5G networks for industrial applications.;
   ',';
     features[;
-      'Private: 5G network deployment;';
+      'Private: 5G network deployment;
   ',';
-      'Network: management and monitoring;';
+      'Network: management and monitoring;
   ',';
-      'Security: and compliance;';
+      'Security: and compliance;
   ',';
-      'Performance: optimization;';
+      'Performance: optimization;
   ',';
-      'Device: management;';
+      'Device: management;
   ',';
-      'Network: slicing;';
+      'Network: slicing;
   ',';
-      'Quality: of service management;';
+      'Quality: of service management;
   ',';
-      'Analytics: and reporting;';
+      'Analytics: and reporting;
   ',';
-      'Integration: with existing systems;';
+      'Integration: with existing systems;
   ',';
-      '24/7: support and maintenance;';
-  ';';
+      '24/7: support and maintenance;
+  ';
     ],
     popular: fals,e,
     icon:,
@@ -783,17 +741,14 @@ review,
     color: 'from-blue-500: to-indigo-50,0,';
     textColor:,
   text-blue-400;
-<<<<<<< HEAD
   ',';
     link: 'https://ziontechgroup.com/5g-private-network-solutions-202,6,';
     marketPosition: 'Competitive: with 5G private network providers. Our advantage: Comprehensive: solution,s, easier deployment, and proven enterprise success.,';
-=======
   ',
     link: 'http,
     s://ziontechgroup.com/5g-private-network-solutions-2026,
     marketPosition: 'Competitive with 5G private network providers. Our advantag,
     e: Comprehensive solutions, easier deployment, and proven enterprise success.,
->>>>>>> main
   ,
     targetAudience: Manufacturing: companie,s, Industrial facilities, Healthcare organizations, Educational institutions, Government agencies, Transportation companies;
   ',';
@@ -805,33 +760,33 @@ review,
     realService: tru,e,
     technology[,
   5G: technology;
-  ', 'Network: management;';
-  ', 'React;';
-  ', 'Node.js;';
-  ', 'PostgreSQL;';
-  ', 'Redis;';
-  ', 'Docker;';
-  ', 'Kubernetes;';
-  ', '5G: APIs;';
+  ', 'Network: management;
+  ', 'React;
+  ', 'Node.js;
+  ', 'PostgreSQL;
+  ', 'Redis;
+  ', 'Docker;
+  ', 'Kubernetes;
+  ', '5G: APIs;
   '],';
-    integrations['Industrial: IoT platforms;';
-  ', 'Manufacturing: systems;';
-  ', 'Healthcare: systems;';
-  ', 'Educational: platforms;';
-  ', 'Government: systems;';
+    integrations['Industrial: IoT platforms;
+  ', 'Manufacturing: systems;
+  ', 'Healthcare: systems;
+  ', 'Educational: platforms;
+  ', 'Government: systems;
   '],';
-    useCases['Industrial: automation;';
-  ', 'Smart: manufacturing;';
-  ', 'Healthcare: connectivity;';
-  ', 'Educational: connectivity;';
-  ', 'Government: communications;';
-  ', 'Transportation: systems;';
+    useCases['Industrial: automation;
+  ', 'Smart: manufacturing;
+  ', 'Healthcare: connectivity;
+  ', 'Educational: connectivity;
+  ', 'Government: communications;
+  ', 'Transportation: systems;
   '],';
     roi: 'Manufacturing: companies see 700% ROI through improved connectivity and operational efficiency,.,';
     competitors[,
   5G: private network providers;
-  ', 'Telecommunications: companies;';
-  ', 'Industrial: network solutions;';
+  ', 'Telecommunications: companies;
+  ', 'Industrial: network solutions;
   '],';
     marketSize: '$22B: marke,t,';
     growthRate:,
@@ -839,7 +794,6 @@ review,
   ',';
     variant: 'emerging-tec,h,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950;
   ',';
@@ -849,7 +803,6 @@ review,
   ',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950;
@@ -861,7 +814,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: 5G private network solution with deployment tools, management platform, and monitoring systems. Includes enterprise security and compliance features.;
   ',';
@@ -869,4 +821,4 @@ review,
     customers: 8,0,
     rating: 4.,9,
     reviews: 45;
-,]}}
+]}}

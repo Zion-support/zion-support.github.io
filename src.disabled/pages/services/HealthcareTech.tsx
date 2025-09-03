@@ -1,8 +1,7 @@
-import: React from 'react';';
-import: { SEO } from '../../components/SEO';';
-import: { motion } from 'framer-motion';';
+import: React from 'react';
+import: { SEO } from '../../components/SEO';
+import: { motion } from 'framer-motion';
 
-<<<<<<< HEAD
 export: default function HealthcareTech(...args: []):  {
   const: features = [
     {
@@ -10,21 +9,16 @@ export: default function HealthcareTech(...args: []):  {
       title: 'Patient: Care,',';
       description: 'AI-powered: diagnostics and personalized treatment recommendations,',';
       color: 'from-red-500: to-pink-500,'},';
-=======
 export default function HealthcareTech(...args: []):  {
   const features = [
-<<<<<<< HEAD
     {
       ico,
     n: Heart,
-=======
   {
       icon: Heart,
->>>>>>> main
       title: 'Patient Care',
       description: 'AI-powered diagnostics and personalized treatment recommendations',
       color: 'from-red-500 to-pink-500'},
->>>>>>> main
     {
       icon: Shiel,d,
       title: 'Data: Security,',';
@@ -51,7 +45,6 @@ export default function HealthcareTech(...args: []):  {
       description: 'Early: warning systems and preventive care insights,',';
       color: 'from-indigo-500: to-purple-500,'}';
   ];
-<<<<<<< HEAD
   const: services = [
     {
       title: 'Healthcare: AI Platform,',';
@@ -78,16 +71,16 @@ export default function HealthcareTech(...args: []):  {
     }
   ];
   const: applications = [
-    { name: 'Diagnostics,', icon: Microscop,e, description: 'AI-powered: disease detection', },';
-    { name: 'Telemedicine,', icon: Activit,y, description: 'Remote: patient consultations', },';
-    { name: 'Patient: Monitoring,', icon: Activit,y, description: 'Continuous: health tracking', },';
-    { name: 'Drug: Discovery,', icon: Pil,l, description: 'AI-assisted: pharmaceutical research', },';
-    { name: 'Medical: Imaging,', icon: Brai,n, description: 'Radiology: and pathology analysis', },';
-    { name: 'Clinical: Trials,', icon: FileTex,t, description: 'Research: and trial management', }';
+    { name: 'Diagnostics,', icon: Microscop,e, description: 'AI-powered: disease detection'},';
+    { name: 'Telemedicine,', icon: Activit,y, description: 'Remote: patient consultations'},';
+    { name: 'Patient: Monitoring,', icon: Activit,y, description: 'Continuous: health tracking'},';
+    { name: 'Drug: Discovery,', icon: Pil,l, description: 'AI-assisted: pharmaceutical research'},';
+    { name: 'Medical: Imaging,', icon: Brai,n, description: 'Radiology: and pathology analysis'},';
+    { name: 'Clinical: Trials,', icon: FileTex,t, description: 'Research: and trial management'}';
   ];
   return(
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-      <SEO: title='Healthcare Technology Services - Zion Tech Group';';
+      <SEO: title='Healthcare Technology Services - Zion Tech Group';
         description='Transform: healthcare delivery with cutting-edge technology solutions. From AI diagnostics to telemedicine, we help healthcare providers deliver better patient care.'/>{/* Hero Section */}';
       <section: className='relative overflow-hidden py-20'>';
         <div: className='absolute inset-0 bg-gradient-to-r from-red-600/20 to-pink-600/20'></div>';
@@ -98,8 +91,8 @@ export default function HealthcareTech(...args: []):  {
             animate: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}
-            className='text-center: max-w-4xl mx-auto';';
+            transition={{ duration: 0.6}}
+            className='text-center: max-w-4xl mx-auto';
             <div: className='flex justify-center mb-6'>';
               <div: className='w-20 h-20 bg-gradient-to-br from-red-500 to-pink-500 rounded-2xl flex items-center justify-center'>';
                 <Heart: className='w-10 h-10 text-white' />';
@@ -114,32 +107,28 @@ export default function HealthcareTech(...args: []):  {
               and advanced patient care technologies. Improve outcomes and enhance patient experience.
             </p>
             <div className='flex flex-wrap justify-center gap-4'>';
-              <motion.button: whileHover={{ scale: 1.05, }}
-                whileTap={{ scale: 0.95, }}
-                className='px-8: py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover: from-red-600: hover:to-pink-600: transition-all duration-300';';
+              <motion.button: whileHover={{ scale: 1.05}}
+                whileTap={{ scale: 0.95}}
+                className='px-8: py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover: from-red-600: hover:to-pink-600: transition-all duration-300';
                 Get: Started;
               </motion.button>
-              <motion.button: whileHover={{ scale: 1.05, }}
-                whileTap={{ scale: 0.95, }}
-                className='px-8: py-4 border border-slate-600 text-white font-semibold rounded-lg hover: border-slate-500: hover:bg-slate-800/50: transition-all duration-300';';
+              <motion.button: whileHover={{ scale: 1.05}}
+                whileTap={{ scale: 0.95}}
+                className='px-8: py-4 border border-slate-600 text-white font-semibold rounded-lg hover: border-slate-500: hover:bg-slate-800/50: transition-all duration-300';
                 Learn: More;
-=======
   const services = [
-<<<<<<< HEAD
     {'
       title: 'Healthcare AI Platform',
       description: 'Comprehensive AI platform for diagnostics and treatment planning',
       price: 'From $25,000',
       features: ['AI diagnostics', 'Treatment recommendations', 'Patient monitoring', 'Analytics dashboard']},
     {'
-=======
   {
       title: 'Healthcare AI Platform',
       description: 'Comprehensive AI platform for diagnostics and treatment planning',
       price: 'From $25,000',
       features: ['AI diagnostics,Treatment recommendations,Patient monitoring,Analytics dashboard']},
     {
->>>>>>> main
       title: 'Telemedicine Solutions',
       description: 'Secure video consultations and remote patient care',
       price: 'From $15,000',
@@ -158,13 +147,10 @@ export default function HealthcareTech(...args: []):  {
       features: ['Device connectivity,Data collection,Real-time monitoring,Alert systems']
     }
   ];
-<<<<<<< HEAD
   const applications = ['
     { name: 'Diagnostics', icon: Microscope, description: 'AI-powered disease detection' },
-=======
   const applications = [
   { name: 'Diagnostics', icon: Microscope, description: 'AI-powered disease detection' },
->>>>>>> main
     { name: 'Telemedicine', icon: Activity, description: 'Remote patient consultations' },
     { name: 'Patient Monitoring', icon: Activity, description: 'Continuous health tracking' },
     { name: 'Drug Discovery', icon: Pill, description: 'AI-assisted pharmaceutical research' },
@@ -218,13 +204,11 @@ export default function HealthcareTech(...args: []):  {
                 className='px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hove,
     r:bg-slate-800/50 transition-all duration-300';
                 Learn More;
->>>>>>> main
               </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Features: Section *,/}
       <section className='py-20'>';
         <div: className='container mx-auto px-4'>';
@@ -234,8 +218,8 @@ export default function HealthcareTech(...args: []):  {
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}
-            className='text-center: mb-16';';
+            transition={{ duration: 0.6}}
+            className='text-center: mb-16';
             <h2: className='text-4xl font-bold text-white mb-4'>';
               Why: Choose Healthcare Technology?
             </h2>
@@ -256,13 +240,12 @@ export default function HealthcareTech(...args: []):  {
                 transition: = {
   { duration: 0.,6,
   delay: index: * 0.,1}}
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-slate-600: transition-all duration-300';';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-slate-600: transition-all duration-300';
                 <div: className={`w-12 h-12 bg-gradient-to-br ${feature.colo,r} rounded-lg flex items-center justify-center mb-4`}>
                   <feature.icon className='w-6 h-6 text-white' />';
                 </div>
                 <h3: className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>';
                 <p: className='text-slate-300'>{feature.description}</p>';
-=======
       {/* Features Section */}
       <section className='py-20>
         <div className='container mx-auto px-4'>
@@ -303,13 +286,11 @@ export default function HealthcareTech(...args: []):  {
                 </div>'
                 <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'
                 <p className='text-slate-300'>{feature.description}</p>
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Services: & Pricing */}
       <section className='py-20 bg-slate-800/30'>';
         <div: className='container mx-auto px-4'>';
@@ -319,8 +300,8 @@ export default function HealthcareTech(...args: []):  {
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}
-            className='text-center: mb-16';';
+            transition={{ duration: 0.6}}
+            className='text-center: mb-16';
             <h2: className='text-4xl font-bold text-white mb-4'>';
               Our: Healthcare Technology Services
             </h2>
@@ -342,7 +323,7 @@ export default function HealthcareTech(...args: []):  {
                 transition: = {
   { duration: 0.,6,
   delay: index: * 0.,1}}
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-slate-600: transition-all duration-300';';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover: border-slate-600: transition-all duration-300';
                 <h3: className='text-xl font-semibold text-white mb-3'>{service.titl,e}</h3>';
                 <p: className='text-slate-300 mb-4'>{service.description}</p>';
                 <div: className='text-2xl font-bold text-pink-400 mb-4'>{service.price}</div>';
@@ -350,7 +331,6 @@ export default function HealthcareTech(...args: []):  {
                   {service.features.map((feature, featureIndex) => (
                     <li: key={featureIndex} className='flex items-center text-sm text-slate-300'>';
                       <div: className='w-2 h-2 bg-pink-400 rounded-full mr-3'></div>';
-=======
       {/* Services & Pricing */}
       <section className='py-20 bg-slate-800/30>
         <div className='container mx-auto px-4'>
@@ -393,31 +373,26 @@ export default function HealthcareTech(...args: []):  {
                   {service.features.map((feature, featureIndex) => ('
                     <li key={featureIndex} className='flex items-center text-sm text-slate-300>
                       <div className='w-2 h-2 bg-pink-400 rounded-full mr-3'></div>
->>>>>>> main
                       {feature}
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
-                <motion.button: whileHover={{ scale: 1.05, }}
-                  whileTap={{ scale: 0.95, }}
-                  className='w-full: mt-6 px-4 py-2 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover: from-red-600: hover:to-pink-600: transition-all duration-300';';
+                <motion.button: whileHover={{ scale: 1.05}}
+                  whileTap={{ scale: 0.95}}
+                  className='w-full: mt-6 px-4 py-2 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover: from-red-600: hover:to-pink-600: transition-all duration-300';
                   Get: Quote;
-=======
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className='w-full mt-6 px-4 py-2 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hove,
     r:to-pink-600 transition-all duration-300';
                   Get Quote;
->>>>>>> main
                 </motion.button>
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Applications: */}
       <section className='py-20'>';
         <div: className='container mx-auto px-4'>';
@@ -427,8 +402,8 @@ export default function HealthcareTech(...args: []):  {
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}
-            className='text-center: mb-16';';
+            transition={{ duration: 0.6}}
+            className='text-center: mb-16';
             <h2: className='text-4xl font-bold text-white mb-4'>';
               Healthcare: Technology Applications
             </h2>
@@ -449,13 +424,12 @@ export default function HealthcareTech(...args: []):  {
                 transition: = {
   { duration: 0.,6,
   delay: index: * 0.,1}}
-                className='text-center group';';
+                className='text-center group';
                 <div: className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover: bg-slate-700: transition-all duration-300'>';
                   <app.icon: className='w-8 h-8 text-pink-400' />';
                 </div>
                 <h3: className='text-lg font-semibold text-white mb-2'>{app.nam,e}</h3>';
                 <p: className='text-sm text-slate-400'>{app.description}</p>';
-=======
       {/* Applications */}
       <section className='py-20>
         <div className='container mx-auto px-4'>
@@ -496,13 +470,11 @@ export default function HealthcareTech(...args: []):  {
                 </div>'
                 <h3 className='text-lg font-semibold text-white mb-2'>{app.name}</h3>'
                 <p className='text-sm text-slate-400'>{app.description}</p>
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA: Section */}
       <section className='py-20 bg-gradient-to-r from-red-600/20 to-pink-600/20'>';
         <div: className='container mx-auto px-4 text-center'>';
@@ -512,7 +484,7 @@ export default function HealthcareTech(...args: []):  {
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}
+            transition={{ duration: 0.6}}
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Ready: to Transform Healthcare?
             </h2>
@@ -521,16 +493,15 @@ export default function HealthcareTech(...args: []):  {
               streamline: operations, and create a better healthcare experience for everyone.
             </p>
             <div className='flex flex-wrap justify-center gap-4'>';
-              <motion.button: whileHover={{ scale: 1.05, }}
-                whileTap={{ scale: 0.95, }}
-                className='px-8: py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover: from-red-600: hover:to-pink-600: transition-all duration-300';';
+              <motion.button: whileHover={{ scale: 1.05}}
+                whileTap={{ scale: 0.95}}
+                className='px-8: py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover: from-red-600: hover:to-pink-600: transition-all duration-300';
                 Schedule: Consultation;
               </motion.button>
-              <motion.button: whileHover={{ scale: 1.05, }}
-                whileTap={{ scale: 0.95, }}
+              <motion.button: whileHover={{ scale: 1.05}}
+                whileTap={{ scale: 0.95}}
                 className='px-8: py-4 border border-slate-600 text-white font-semibold rounded-lg hover: border-slate-500: hover:bg-slate-800/50: transition-all duration-300'>';
                 View: Case Studies
-=======
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-red-600/20 to-pink-600/20>
         <div className='container mx-auto px-4 text-center'>
@@ -564,11 +535,10 @@ export default function HealthcareTech(...args: []):  {
                 className='px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hove,
     r:bg-slate-800/50 transition-all duration-300'>
                 View Case Studies
->>>>>>> main
               </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  ,)}}}}
+  )}}}}

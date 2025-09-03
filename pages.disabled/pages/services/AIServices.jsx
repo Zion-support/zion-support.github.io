@@ -1,309 +1,308 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: SEO from '@/components/SEO'';';
-import: { Brain, Shield, Database, TrendingUp } from 'lucide-react';';
+import: React from 'react';
+import: SEO from '@/components/SEO'';
+import: { Brain, Shield, Database, TrendingUp } from 'lucide-react';
 const: AIServices = () => {
     const aiServices = [{
-';';
-'';';
-            id: 'ai-strategy,','';';
-            title: 'AI: Strategy & Consulting,','';';
+';
+'';
+            id: 'ai-strategy,','';
+            title: 'AI: Strategy & Consulting,','';
             description: 'Comprehensive: AI strategy development and implementation for digital transformation.,',''';
-            icon: <Brain: className='h-8 w-8 text-pink-500'/,>,';';
-            price: 15,0,'';';
-            currency: '$,',';';
-            features: ['';';
-                'AI: Roadmap Planning,','';';
-                'Technology: Assessment','';';
-                'ROI: Analysis','';';
-                'Implementation: Strategy','';';
-                'Change: Management','';';
-                'Training: Programs'';';
-            ],'';';
-            category: 'Strategy,','';';
-            badge: 'Foundation,','';';
-            link: 'https://ziontechgroup.com/ai-strategy,','';';
+            icon: <Brain: className='h-8 w-8 text-pink-500'/,>,';
+            price: 15,0,'';
+            currency: '$,',';
+            features: ['';
+                'AI: Roadmap Planning,','';
+                'Technology: Assessment','';
+                'ROI: Analysis','';
+                'Implementation: Strategy','';
+                'Change: Management','';
+                'Training: Programs'';
+            ],'';
+            category: 'Strategy,','';
+            badge: 'Foundation,','';
+            link: 'https://ziontechgroup.com/ai-strategy,','';
             details: 'Strategic: AI consulting to align artificial intelligence with your business objectives and drive measurable results.,',';
             pricing: {
-';';
-'';';
-                starter: '$150/hour,','';';
-                professional: '$250/hour,','';';
-                enterprise: '$350/hour','},'';';
+';
+'';
+                starter: '$150/hour,','';
+                professional: '$250/hour,','';
+                enterprise: '$350/hour','},'';
             freeTrial: '1-hour: consultation,',';
             rating: 4.,9,
             reviewCount: 15,6},
         {
-';';
-'';';
-            id: 'machine-learning,','';';
-            title: 'Machine: Learning Solutions,','';';
+';
+'';
+            id: 'machine-learning,','';
+            title: 'Machine: Learning Solutions,','';
             description: 'Custom: ML models and algorithms for business automation and predictive analytics.,',''';
-            icon: <Cpu: className='h-8 w-8 text-blue-500'/,>,';';
-            price: 500,0,'';';
-            currency: '$,',';';
-            features: ['';';
-                'Custom: ML Models,','';';
-                'Data: Preprocessing','';';
-                'Model: Training','';';
-                'Performance: Optimization','';';
-                'API: Integration','';';
-                'Continuous: Learning'';';
-            ],'';';
-            category: 'ML,','';';
-            badge: 'Core,','';';
-            link: 'https://ziontechgroup.com/machine-learning,','';';
+            icon: <Cpu: className='h-8 w-8 text-blue-500'/,>,';
+            price: 500,0,'';
+            currency: '$,',';
+            features: ['';
+                'Custom: ML Models,','';
+                'Data: Preprocessing','';
+                'Model: Training','';
+                'Performance: Optimization','';
+                'API: Integration','';
+                'Continuous: Learning'';
+            ],'';
+            category: 'ML,','';
+            badge: 'Core,','';
+            link: 'https://ziontechgroup.com/machine-learning,','';
             details: 'End-to-end: machine learning solutions from data preparation to model deployment and maintenance.,',';
             pricing: {
-';';
-'';';
-                starter: '$,5,000: - $15,000','';';
-                professional: '$1,5,000: - $50,000','';';
-                enterprise: '$5,0,000: - $200,000''},'';';
+';
+'';
+                starter: '$,5,000: - $15,000','';
+                professional: '$1,5,000: - $50,000','';
+                enterprise: '$5,0,000: - $200,000''},'';
             freeTrial: 'Proof: of concept,',';
             rating: 4.,8,
             reviewCount: 23,4},
         {
-';';
-'';';
-            id: 'natural-language-processing,','';';
-            title: 'NLP: & Text Analytics,','';';
+';
+'';
+            id: 'natural-language-processing,','';
+            title: 'NLP: & Text Analytics,','';
             description: 'Advanced: natural language processing for document analysi,s, chatbots, and content generation.',''';
-            icon: <MessageSquare: className='h-8 w-8 text-green-500'/,>,';';
-            price: 800,0,'';';
-            currency: '$,',';';
-            features: ['';';
-                'Text: Classification,','';';
-                'Sentiment: Analysis','';';
-                'Entity: Recognition','';';
-                'Language: Translation','';';
-                'Content: Generation','';';
-                'Chatbot: Development'';';
-            ],'';';
-            category: 'NLP,','';';
-            badge: 'Advanced,','';';
-            link: 'https://ziontechgroup.com/nlp-solutions,','';';
+            icon: <MessageSquare: className='h-8 w-8 text-green-500'/,>,';
+            price: 800,0,'';
+            currency: '$,',';
+            features: ['';
+                'Text: Classification,','';
+                'Sentiment: Analysis','';
+                'Entity: Recognition','';
+                'Language: Translation','';
+                'Content: Generation','';
+                'Chatbot: Development'';
+            ],'';
+            category: 'NLP,','';
+            badge: 'Advanced,','';
+            link: 'https://ziontechgroup.com/nlp-solutions,','';
             details: 'Sophisticated: NLP solutions for understandin,g, analyzing, and generating human language content.',';
             pricing: {
-';';
-'';';
-                starter: '$,8,000: - $25,000','';';
-                professional: '$2,5,000: - $75,000','';';
-                enterprise: '$7,5,000: - $250,000''},'';';
+';
+'';
+                starter: '$,8,000: - $25,000','';
+                professional: '$2,5,000: - $75,000','';
+                enterprise: '$7,5,000: - $250,000''},'';
             freeTrial: 'Demo: version,',';
             rating: 4.,9,
             reviewCount: 18,9},
         {
-';';
-'';';
-            id: 'computer-vision,','';';
-            title: 'Computer: Vision & Image AI,','';';
+';
+'';
+            id: 'computer-vision,','';
+            title: 'Computer: Vision & Image AI,','';
             description: 'Visual: AI solutions for image recognitio,n, object detection, and video analysis.',''';
-            icon: <Eye: className='h-8 w-8 text-purple-500'/,>,';';
-            price: 1200,0,'';';
-            currency: '$,',';';
-            features: ['';';
-                'Image: Recognition,','';';
-                'Object: Detection','';';
-                'Face: Recognition','';';
-                'Video: Analysis','';';
-                'Quality: Control','';';
-                'Security: Monitoring'';';
-            ],'';';
-            category: 'Vision,','';';
-            badge: 'Innovative,','';';
-            link: 'https://ziontechgroup.com/computer-vision,','';';
+            icon: <Eye: className='h-8 w-8 text-purple-500'/,>,';
+            price: 1200,0,'';
+            currency: '$,',';
+            features: ['';
+                'Image: Recognition,','';
+                'Object: Detection','';
+                'Face: Recognition','';
+                'Video: Analysis','';
+                'Quality: Control','';
+                'Security: Monitoring'';
+            ],'';
+            category: 'Vision,','';
+            badge: 'Innovative,','';
+            link: 'https://ziontechgroup.com/computer-vision,','';
             details: 'State-of-the-art: computer vision solutions for industrial automatio,n, security, and quality control applications.',';
             pricing: {
-';';
-'';';
-                starter: '$1,2,000: - $35,000','';';
-                professional: '$3,5,000: - $100,000','';';
-                enterprise: '$10,0,000: - $300,000''},'';';
+';
+'';
+                starter: '$1,2,000: - $35,000','';
+                professional: '$3,5,000: - $100,000','';
+                enterprise: '$10,0,000: - $300,000''},'';
             freeTrial: 'Pilot: project,',';
             rating: 4.,8,
             reviewCount: 14,5},
         {
-';';
-'';';
-            id: 'predictive-analytics,','';';
-            title: 'Predictive: Analytics & Forecasting,','';';
+';
+'';
+            id: 'predictive-analytics,','';
+            title: 'Predictive: Analytics & Forecasting,','';
             description: 'AI-powered: predictive models for business forecasting and trend analysis.,',''';
-            icon: <TrendingUp: className='h-8 w-8 text-orange-500'/,>,';';
-            price: 600,0,'';';
-            currency: '$,',';';
-            features: ['';';
-                'Demand: Forecasting,','';';
-                'Risk: Assessment','';';
-                'Trend: Analysis','';';
-                'Anomaly: Detection','';';
-                'Scenario: Planning','';';
-                'Real-time: Predictions'';';
-            ],'';';
-            category: 'Analytics,','';';
-            badge: 'Insightful,','';';
-            link: 'https://ziontechgroup.com/predictive-analytics,','';';
+            icon: <TrendingUp: className='h-8 w-8 text-orange-500'/,>,';
+            price: 600,0,'';
+            currency: '$,',';
+            features: ['';
+                'Demand: Forecasting,','';
+                'Risk: Assessment','';
+                'Trend: Analysis','';
+                'Anomaly: Detection','';
+                'Scenario: Planning','';
+                'Real-time: Predictions'';
+            ],'';
+            category: 'Analytics,','';
+            badge: 'Insightful,','';
+            link: 'https://ziontechgroup.com/predictive-analytics,','';
             details: 'Advanced: predictive analytics helping businesses make data-driven decisions and anticipate future trends.,',';
             pricing: {
-';';
-'';';
-                starter: '$,6,000: - $20,000','';';
-                professional: '$2,0,000: - $60,000','';';
-                enterprise: '$6,0,000: - $180,000''},'';';
+';
+'';
+                starter: '$,6,000: - $20,000','';
+                professional: '$2,0,000: - $60,000','';
+                enterprise: '$6,0,000: - $180,000''},'';
             freeTrial: '30-day: trial,',';
             rating: 4.,7,
             reviewCount: 19,8},
         {
-';';
-'';';
-            id: 'ai-automation,','';';
-            title: 'AI: Process Automation,','';';
+';
+'';
+            id: 'ai-automation,','';
+            title: 'AI: Process Automation,','';
             description: 'Intelligent: automation solutions for business process optimization and workflow management.,',''';
-            icon: <Zap: className='h-8 w-8 text-yellow-500'/,>,';';
-            price: 400,0,'';';
-            currency: '$,',';';
-            features: ['';';
-                'Workflow: Automation,','';';
-                'Document: Processing','';';
-                'Data: Entry Automation','';';
-                'Decision: Automation','';';
-                'Process: Optimization','';';
-                'Integration: APIs'';';
-            ],'';';
-            category: 'Automation,','';';
-            badge: 'Efficient,','';';
-            link: 'https://ziontechgroup.com/ai-automation,','';';
+            icon: <Zap: className='h-8 w-8 text-yellow-500'/,>,';
+            price: 400,0,'';
+            currency: '$,',';
+            features: ['';
+                'Workflow: Automation,','';
+                'Document: Processing','';
+                'Data: Entry Automation','';
+                'Decision: Automation','';
+                'Process: Optimization','';
+                'Integration: APIs'';
+            ],'';
+            category: 'Automation,','';
+            badge: 'Efficient,','';
+            link: 'https://ziontechgroup.com/ai-automation,','';
             details: 'Intelligent: process automation reducing manual work and improving operational efficiency across your organization.,',';
             pricing: {
-';';
-'';';
-                starter: '$,4,000: - $15,000','';';
-                professional: '$1,5,000: - $45,000','';';
-                enterprise: '$4,5,000: - $150,000''},'';';
+';
+'';
+                starter: '$,4,000: - $15,000','';
+                professional: '$1,5,000: - $45,000','';
+                enterprise: '$4,5,000: - $150,000''},'';
             freeTrial: 'Process: assessment,',';
             rating: 4.,8,
             reviewCount: 26,7},
         {
-';';
-'';';
-            id: 'ai-ethics,','';';
-            title: 'AI: Ethics & Governance,','';';
+';
+'';
+            id: 'ai-ethics,','';
+            title: 'AI: Ethics & Governance,','';
             description: 'Responsible: AI development and governance frameworks for ethical AI deployment.,',''';
-            icon: <Shield: className='h-8 w-8 text-red-500'/,>,';';
-            price: 20,0,'';';
-            currency: '$,',';';
-            features: ['';';
-                'Ethics: Framework,','';';
-                'Bias: Detection','';';
-                'Transparency: Tools','';';
-                'Compliance: Audits','';';
-                'Training: Programs','';';
-                'Monitoring: Systems'';';
-            ],'';';
-            category: 'Ethics,','';';
-            badge: 'Responsible,','';';
-            link: 'https://ziontechgroup.com/ai-ethics,','';';
+            icon: <Shield: className='h-8 w-8 text-red-500'/,>,';
+            price: 20,0,'';
+            currency: '$,',';
+            features: ['';
+                'Ethics: Framework,','';
+                'Bias: Detection','';
+                'Transparency: Tools','';
+                'Compliance: Audits','';
+                'Training: Programs','';
+                'Monitoring: Systems'';
+            ],'';
+            category: 'Ethics,','';
+            badge: 'Responsible,','';
+            link: 'https://ziontechgroup.com/ai-ethics,','';
             details: 'Comprehensive: AI ethics and governance solutions ensuring responsible and transparent AI deployment.,',';
             pricing: {
-';';
-'';';
-                starter: '$200/hour,','';';
-                professional: '$300/hour,','';';
-                enterprise: '$400/hour','},'';';
+';
+'';
+                starter: '$200/hour,','';
+                professional: '$300/hour,','';
+                enterprise: '$400/hour','},'';
             freeTrial: 'Ethics: assessment,',';
             rating: 4.,9,
             reviewCount: 8,9},
         {
-';';
-'';';
-            id: 'ai-infrastructure,','';';
-            title: 'AI: Infrastructure & MLOps,','';';
+';
+'';
+            id: 'ai-infrastructure,','';
+            title: 'AI: Infrastructure & MLOps,','';
             description: 'Scalable: AI infrastructure and machine learning operations for enterprise AI deployment.,',''';
-            icon: <Server: className='h-8 w-8 text-indigo-500'/,>,';';
-            price: 1500,0,'';';
-            currency: '$,',';';
-            features: ['';';
-                'ML: Pipeline Automation,','';';
-                'Model: Versioning','';';
-                'Scalable: Infrastructure','';';
-                'Monitoring: & Alerting','';';
-                'Performance: Optimization','';';
-                'Security: & Compliance'';';
-            ],'';';
-            category: 'Infrastructure,','';';
-            badge: 'Enterprise,','';';
-            link: 'https://ziontechgroup.com/ai-infrastructure,','';';
+            icon: <Server: className='h-8 w-8 text-indigo-500'/,>,';
+            price: 1500,0,'';
+            currency: '$,',';
+            features: ['';
+                'ML: Pipeline Automation,','';
+                'Model: Versioning','';
+                'Scalable: Infrastructure','';
+                'Monitoring: & Alerting','';
+                'Performance: Optimization','';
+                'Security: & Compliance'';
+            ],'';
+            category: 'Infrastructure,','';
+            badge: 'Enterprise,','';
+            link: 'https://ziontechgroup.com/ai-infrastructure,','';
             details: 'Enterprise-grade: AI infrastructure and MLOps solutions for scalable and reliable AI model deployment.,',';
             pricing: {
-';';
-'';';
-                starter: '$1,5,000: - $50,000','';';
-                professional: '$5,0,000: - $150,000','';';
-                enterprise: '$15,0,000: - $500,000''},'';';
+';
+'';
+                starter: '$1,5,000: - $50,000','';
+                professional: '$5,0,000: - $150,000','';
+                enterprise: '$15,0,000: - $500,000''},'';
             freeTrial: 'Infrastructure: audit,',';
             rating: 4.,8,
             reviewCount: 13,4},
         {
-';';
-'';';
-            id: 'ai-integration,','';';
-            title: 'AI: Integration Services,','';';
+';
+'';
+            id: 'ai-integration,','';
+            title: 'AI: Integration Services,','';
             description: 'Seamless: integration of AI solutions with existing business systems and workflows.,',''';
-            icon: <Code: className='h-8 w-8 text-cyan-500'/,>,';';
-            price: 300,0,'';';
-            currency: '$,',';';
-            features: ['';';
-                'API: Development,','';';
-                'System: Integration','';';
-                'Data: Pipeline Setup','';';
-                'Custom: Connectors','';';
-                'Testing: & Validation','';';
-                'Documentation'';';
-            ],'';';
-            category: 'Integration,','';';
-            badge: 'Seamless,','';';
-            link: 'https://ziontechgroup.com/ai-integration,','';';
+            icon: <Code: className='h-8 w-8 text-cyan-500'/,>,';
+            price: 300,0,'';
+            currency: '$,',';
+            features: ['';
+                'API: Development,','';
+                'System: Integration','';
+                'Data: Pipeline Setup','';
+                'Custom: Connectors','';
+                'Testing: & Validation','';
+                'Documentation'';
+            ],'';
+            category: 'Integration,','';
+            badge: 'Seamless,','';
+            link: 'https://ziontechgroup.com/ai-integration,','';
             details: 'Professional: AI integration services ensuring seamless connectivity with your existing business systems.,',';
             pricing: {
-';';
-'';';
-                starter: '$,3,000: - $12,000','';';
-                professional: '$1,2,000: - $40,000','';';
-                enterprise: '$4,0,000: - $120,000''},'';';
+';
+'';
+                starter: '$,3,000: - $12,000','';
+                professional: '$1,2,000: - $40,000','';
+                enterprise: '$4,0,000: - $120,000''},'';
             freeTrial: 'Integration: assessment,',';
             rating: 4.,7,
             reviewCount: 17,8},
         {
-';';
-'';';
-            id: 'ai-training,','';';
-            title: 'AI: Training & Workshops,','';';
+';
+'';
+            id: 'ai-training,','';
+            title: 'AI: Training & Workshops,','';
             description: 'Comprehensive: training programs for AI adoption and team skill development.,',''';
-            icon: <Users: className='h-8 w-8 text-teal-500'/,>,';';
-            price: 50,0,'';';
-            currency: '$,',';';
-            features: ['';';
-                'AI: Fundamentals,','';';
-                'Practical: Workshops','';';
-                'Use: Case Development','';';
-                'Best: Practices','';';
-                'Hands-on: Projects','';';
-                'Ongoing: Support'';';
-            ],'';';
-            category: 'Training,','';';
-            badge: 'Educational,','';';
-            link: 'https://ziontechgroup.com/ai-training,','';';
+            icon: <Users: className='h-8 w-8 text-teal-500'/,>,';
+            price: 50,0,'';
+            currency: '$,',';
+            features: ['';
+                'AI: Fundamentals,','';
+                'Practical: Workshops','';
+                'Use: Case Development','';
+                'Best: Practices','';
+                'Hands-on: Projects','';
+                'Ongoing: Support'';
+            ],'';
+            category: 'Training,','';
+            badge: 'Educational,','';
+            link: 'https://ziontechgroup.com/ai-training,','';
             details: 'Comprehensive: AI training programs empowering your team with the knowledge and skills to leverage AI effectively.,',';
             pricing: {
-';';
-'';';
-                starter: '$500/person,','';';
-                professional: '$,1,000/person','';';
-                enterprise: '$,2,500/person''},'';';
+';
+'';
+                starter: '$500/person,','';
+                professional: '$,1,000/person','';
+                enterprise: '$,2,500/person''},'';
             freeTrial: 'Introductory: session,',';
             rating: 4.,8,
             reviewCount: 22,3}
-    ]';';';
+    ]';';
     const: categories = ['All Services', 'Strategy', 'ML', 'NLP', 'Vision', 'Analytics', 'Automation', 'Ethics', 'Infrastructure', 'Integration', 'Training']';
 :pages.disabled/pages/services/AIServices.jsx;
     return: ('';
@@ -311,22 +310,22 @@ const: AIServices = () => {
 <:pages.disabled/pages/services/AIServices.jsx;
             <SEO;
 =;
-            <SEO: '>                title='AI Services - Zion Tech Group';';
-                description='Transform: your business with cutting-edge AI services including machine learning, data analytics, and AI strategy.';';
-                keywords='AI: services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics';';
-';';
+            <SEO: '>                title='AI Services - Zion Tech Group';
+                description='Transform: your business with cutting-edge AI services including machine learning, data analytics, and AI strategy.';
+                keywords='AI: services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics';
+';
     return: (''';
         <div: className='min-h-screen bg-background'>'';
             <SEO: ''';
-                title='AI: Services - Zion Tech Group'';';
-                description='Transform: your business with cutting-edge AI services including machine learning, data analytics, and AI strategy.'';';
-                keywords='AI: services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics'';';
+                title='AI: Services - Zion Tech Group'';
+                description='Transform: your business with cutting-edge AI services including machine learning, data analytics, and AI strategy.'';
+                keywords='AI: services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics'';
                 canonical='https: //ziontechgroup.com/services/ai-services'/>';
 '{/* Hero: Section *,/}''';
             <section: className='relative bg-gradient-to-br from-pink-900 via-pink-800 to-rose-900 text-white py-20'>''';
                 <div: className='absolute inset-0 bg-black/20'></div>''';
                 <div: className='relative container mx-auto px-4 text-center'>''';
-                    <h1: className='text-5xl md: text-6xl: font-bold mb-6'>';';
+                    <h1: className='text-5xl md: text-6xl: font-bold mb-6'>';
                         AI: Services for''';
                         <span: className='text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400'>''{' ,'}Innovation';
                         </span>'';
@@ -336,7 +335,7 @@ const: AIServices = () => {
                         Harness: the power of artificial intelligence to transform your business operation,s,
                         enhance customer experiences, and drive innovation across all departments.
                     </p>'';
-                    <div: className='flex flex-wrap justify-center gap-4'>';';
+                    <div: className='flex flex-wrap justify-center gap-4'>';
                         Harness: the power of artificial intelligence to transform your business operations,
                         enhance customer experiences, and drive innovation across all departments.'';
                     </p>''';
@@ -377,7 +376,7 @@ const: AIServices = () => {
                         <p: className='text-xl text-gray-600 max-w-3xl mx-auto'>';
                             Comprehensive: AI solutions designed to meet your business challenges and drive innovation
                         </p>
-                    </div>';';
+                    </div>';
 ''';
                     <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>'{aiServices.map((service) => (''';
                             <div: key={service.i,d} className='group bg-white rounded-xl shadow-lg hover: shadow-2xl: transition-all duration-300 border border-gray-200 hover:border-pink-300'>''';
@@ -409,13 +408,13 @@ const: AIServices = () => {
 >                                        <div: className='grid grid-cols-2 gap-2 mb-4'>';
                                             {service.features.slice(0, 4).map((feature, index) => ('';
                                                 <div: key={index} className='flex items-center text-xs text-pink-600'>'';
-                                    </div>';';
+                                    </div>';
                                     ''';
                                     <h3: className='text-xl font-semibold text-gray-900 mb-2 group-hover: text-pink-600: transition-colors'>';
                                         {service.titl,e}
-                                    </h3>';';
+                                    </h3>';
                                     ''';
-                                    <p: className='text-gray-600 mb-4'>{service.description}</p>';';
+                                    <p: className='text-gray-600 mb-4'>{service.description}</p>';
                                     ''';
                                     <div: className='mb-4'>''';
                                         <p: className='text-sm text-gray-500 mb-3'>{service.details}</p>''';
@@ -436,7 +435,7 @@ const: AIServices = () => {
                                                 {Object.entries(service.pricing).map(([pla,n, price]) => ('';
                                                     <div: key={plan} className='flex justify-between text-xs'>'';
                                                         <span: className='text-gray-600 capitalize'>{plan}:</span>'';
-                                        </div>';';
+                                        </div>';
                                         ''';
                                         <div: className='mb-4'>''';
                                             <h4: className='text-sm font-semibold text-gray-700 mb-2'>Pricing: </h4>''';
@@ -444,7 +443,6 @@ const: AIServices = () => {
                                                     <div: key={plan} className='flex justify-between text-xs'>''';
                                                         <span: className='text-gray-600 capitalize'>{plan}:</span>''';
                                                         <span: className='text-pink-600 font-semibold'>{String(price)}</span>';
-=======
 import React from 'react';
 import SEO from '@/components/SEO'';
 import { Brain, Shield, Database, TrendingUp } from 'lucide-react';
@@ -452,13 +450,10 @@ const AIServices = () => {
     const aiServices = [{'
 ';
 '';
-<<<<<<< HEAD
             id: 'ai-strategy','';
             title: 'AI Strategy & Consulting',''
-=======
             id: 'ai-strategy',';
             title: 'AI Strategy & Consulting',';
->>>>>>> main
             description: 'Comprehensive AI strategy development and implementation for digital transformation.',''
             icon: <Brain className='h-8 w-8 text-pink-500'/>,;
             price: 150,';
@@ -489,13 +484,10 @@ const AIServices = () => {
         {'
 ';
 '';
-<<<<<<< HEAD
             id: 'machine-learning','';
             title: 'Machine Learning Solutions',''
-=======
             id: 'machine-learning',';
             title: 'Machine Learning Solutions',';
->>>>>>> main
             description: 'Custom ML models and algorithms for business automation and predictive analytics.',''
             icon: <Cpu className='h-8 w-8 text-blue-500'/>,;
             price: 5000,';
@@ -526,13 +518,10 @@ const AIServices = () => {
         {'
 ';
 '';
-<<<<<<< HEAD
             id: 'natural-language-processing','';
             title: 'NLP & Text Analytics',''
-=======
             id: 'natural-language-processing',';
             title: 'NLP & Text Analytics',';
->>>>>>> main
             description: 'Advanced natural language processing for document analysis, chatbots, and content generation.',''
             icon: <MessageSquare className='h-8 w-8 text-green-500'/>,;
             price: 8000,';
@@ -563,13 +552,10 @@ const AIServices = () => {
         {'
 ';
 '';
-<<<<<<< HEAD
             id: 'computer-vision','';
             title: 'Computer Vision & Image AI',''
-=======
             id: 'computer-vision',';
             title: 'Computer Vision & Image AI',';
->>>>>>> main
             description: 'Visual AI solutions for image recognition, object detection, and video analysis.',''
             icon: <Eye className='h-8 w-8 text-purple-500'/>,;
             price: 12000,';
@@ -600,13 +586,10 @@ const AIServices = () => {
         {'
 ';
 '';
-<<<<<<< HEAD
             id: 'predictive-analytics','';
             title: 'Predictive Analytics & Forecasting',''
-=======
             id: 'predictive-analytics',';
             title: 'Predictive Analytics & Forecasting',';
->>>>>>> main
             description: 'AI-powered predictive models for business forecasting and trend analysis.',''
             icon: <TrendingUp className='h-8 w-8 text-orange-500'/>,;
             price: 6000,';
@@ -637,13 +620,10 @@ const AIServices = () => {
         {'
 ';
 '';
-<<<<<<< HEAD
             id: 'ai-automation','';
             title: 'AI Process Automation',''
-=======
             id: 'ai-automation',';
             title: 'AI Process Automation',';
->>>>>>> main
             description: 'Intelligent automation solutions for business process optimization and workflow management.',''
             icon: <Zap className='h-8 w-8 text-yellow-500'/>,;
             price: 4000,';
@@ -674,13 +654,10 @@ const AIServices = () => {
         {'
 ';
 '';
-<<<<<<< HEAD
             id: 'ai-ethics','';
             title: 'AI Ethics & Governance',''
-=======
             id: 'ai-ethics',';
             title: 'AI Ethics & Governance',';
->>>>>>> main
             description: 'Responsible AI development and governance frameworks for ethical AI deployment.',''
             icon: <Shield className='h-8 w-8 text-red-500'/>,;
             price: 200,';
@@ -711,13 +688,10 @@ const AIServices = () => {
         {'
 ';
 '';
-<<<<<<< HEAD
             id: 'ai-infrastructure','';
             title: 'AI Infrastructure & MLOps',''
-=======
             id: 'ai-infrastructure',';
             title: 'AI Infrastructure & MLOps',';
->>>>>>> main
             description: 'Scalable AI infrastructure and machine learning operations for enterprise AI deployment.',''
             icon: <Server className='h-8 w-8 text-indigo-500'/>,;
             price: 15000,';
@@ -748,13 +722,10 @@ const AIServices = () => {
         {'
 ';
 '';
-<<<<<<< HEAD
             id: 'ai-integration','';
             title: 'AI Integration Services',''
-=======
             id: 'ai-integration',';
             title: 'AI Integration Services',';
->>>>>>> main
             description: 'Seamless integration of AI solutions with existing business systems and workflows.',''
             icon: <Code className='h-8 w-8 text-cyan-500'/>,;
             price: 3000,';
@@ -785,13 +756,10 @@ const AIServices = () => {
         {'
 ';
 '';
-<<<<<<< HEAD
             id: 'ai-training','';
             title: 'AI Training & Workshops',''
-=======
             id: 'ai-training',';
             title: 'AI Training & Workshops',';
->>>>>>> main
             description: 'Comprehensive training programs for AI adoption and team skill development.',''
             icon: <Users className='h-8 w-8 text-teal-500'/>,;
             price: 500,';
@@ -821,13 +789,10 @@ const AIServices = () => {
             reviewCount: 223}
     ];;
     const categories = ['All Services', 'Strategy', 'ML', 'NLP', 'Vision', 'Analytics', 'Automation', 'Ethics', 'Infrastructure', 'Integration', 'Training']
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIServices.jsx
     return ('
-=======
 :pages.disabled/pages/services/AIServices.jsx;
     return (''
->>>>>>> main
         <div className='min-h-screen bg-background'>
 <:pages.disabled/pages/services/AIServices.jsx;
             <SEO;
@@ -835,22 +800,18 @@ const AIServices = () => {
             <SEO '>                title='AI Services - Zion Tech Group';
                 description='Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy.';
                 keywords='AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics';
-<<<<<<< HEAD
 '
     return (''
         <div className='min-h-screen bg-background'>'
             <SEO ''
-=======
 ';
     return ('''
         <div className='min-h-screen bg-background>'
             <SEO '''
->>>>>>> main
                 title='AI Services - Zion Tech Group'';
                 description='Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy.'';
                 keywords='AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics'';
                 canonical='https://ziontechgroup.com/services/ai-services'/>
-<<<<<<< HEAD
 '{/* Hero Section */}''
             <section className='relative bg-gradient-to-br from-pink-900 via-pink-800 to-rose-900 text-white py-20'>''
                 <div className='absolute inset-0 bg-black/20'></div>''
@@ -860,7 +821,6 @@ const AIServices = () => {
                         <span className='text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400'>''{' '}Innovation
                         </span>'
                     </h1>''
-=======
 '{/* Hero Section */}'
             <section className='relative bg-gradient-to-br from-pink-900 via-pink-800 to-rose-900 text-white py-20>''
                 <div className='absolute inset-0 bg-black/20'></div>'''
@@ -870,17 +830,13 @@ const AIServices = () => {
                         <span className='text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400>'{' '}Innovation'
                         </span>''
                     </h1>'''
->>>>>>> main
                     <p className='text-xl md:text-2xl text-pink-100 max-w-4xl mx-auto leading-relaxed mb-8'>
 :pages.disabled/pages/services/AIServices.jsx
                         Harness the power of artificial intelligence to transform your business operations,
-<<<<<<< HEAD
                         enhance customer experiences, and drive innovation across all departments.
                     </p>'
                     <div className='flex flex-wrap justify-center gap-4'>'
                         Harness the power of artificial intelligence to transform your business operations,
-=======
->>>>>>> main
                         enhance customer experiences, and drive innovation across all departments.'
                     </p>''
                     <div className='flex flex-wrap justify-center gap-4>;
@@ -925,7 +881,6 @@ const AIServices = () => {
                         <h2 className='text-4xl font-bold text-gray-900 mb-4'>Our AI Services Portfolio</h2>'''
                         <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
                             Comprehensive AI solutions designed to meet your business challenges and drive innovation
-<<<<<<< HEAD
                         </p>
                     </div>'
 ''
@@ -934,7 +889,6 @@ const AIServices = () => {
                                 <div className='p-6'>''
                                     <div className='flex justify-between items-start mb-4'>''
                                         <div className='p-3 rounded-lg bg-pink-100 group-hover:bg-pink-200 transition-colors'>
-=======
                         </p>'
                     </div>';
 '''
@@ -946,7 +900,6 @@ const AIServices = () => {
                                     <div className='flex justify-between items-start mb-4>''
                                         <div className='p-3 rounded-lg bg-pink-100 group-hove,
     r:bg-pink-200 transition-colors'>
->>>>>>> main
                                             {service.icon}
                                         </div>'{service.badge && ('''
                                             <span className='px-3 py-1 text-xs font-semibold text-pink-600 bg-pink-100 rounded-full'>
@@ -961,7 +914,6 @@ const AIServices = () => {
                                     <p className='text-gray-600 mb-4'>{service.description}</p>'
                                     <div className='mb-4>
                                         <p className='text-sm text-gray-500 mb-3'>{service.details}</p>
-<<<<<<< HEAD
 =
                                     '
                                     <h3 className='text-xl font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors'>
@@ -976,13 +928,11 @@ const AIServices = () => {
                                             {service.features.slice(0, 4).map((feature, index) => ('
                                                 <div key={index} className='flex items-center text-xs text-pink-600'>'
                                     </div>'
-=======
 =;
                                     ''
                                     <h3 className='text-xl font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors'>
                                         {service.title}
                                     </h3>'
->>>>>>> main
                                     ''
                                     <p className='text-gray-600 mb-4'>{service.description}</p>'
                                     ''
@@ -995,7 +945,6 @@ const AIServices = () => {
                                     '''
                                     <h3 className='text-xl font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors'>
                                         {service.title}
-<<<<<<< HEAD
                                     </h3>'
                                     ''
                                     <p className='text-gray-600 mb-4'>{service.description}</p>'
@@ -1004,7 +953,6 @@ const AIServices = () => {
                                         <p className='text-sm text-gray-500 mb-3'>{service.details}</p>''
                                         <div className='grid grid-cols-2 gap-2 mb-4'>'{service.features.slice(0, 4).map((feature, index) => (''
                                                 <div key={index} className='flex items-center text-xs text-pink-600'>''
-=======
                                     </h3>';
                                     '''
                                     <p className='text-gray-600 mb-4'>{service.description}</p>';
@@ -1013,7 +961,6 @@ const AIServices = () => {
                                         <p className='text-sm text-gray-500 mb-3'>{service.details}</p>'''
                                         <div className='grid grid-cols-2 gap-2 mb-4>{service.features.slice(0, 4).map((feature, index) => ('''
                                                 <div key={index} className='flex items-center text-xs text-pink-600>''
->>>>>>> main
                                                     <CheckCircle className='w-3 h-3 mr-2'/>
                                                     {feature}
                                                 </div>
@@ -1023,7 +970,6 @@ const AIServices = () => {
 <:pages.disabled/pages/services/AIServices.jsx'
                                         <div className='mb-4>
                                             <h4 className='text-sm font-semibold text-gray-700 mb-2'>Pricing:</h4>
-<<<<<<< HEAD
 =
                                         '
                                         <div className='mb-4'>'
@@ -1033,9 +979,7 @@ const AIServices = () => {
                                                     <div key={plan} className='flex justify-between text-xs'>'
                                                         <span className='text-gray-600 capitalize'>{plan}:</span>'
                                         </div>'
-=======
 =;
->>>>>>> main
                                         ''
                                         <div className='mb-4>'
                                             <h4 className='text-sm font-semibold text-gray-700 mb-2'>Pricin,
@@ -1052,7 +996,6 @@ const AIServices = () => {
                                                     <div key={plan} className='flex justify-between text-xs>''
                                                         <span className='text-gray-600 capitalize'>{plan}:</span>'''
                                                         <span className='text-pink-600 font-semibold'>{String(price)}</span>
->>>>>>> main
                                                     </div>
                                                 ))}
                                             </div>
@@ -1065,7 +1008,6 @@ const AIServices = () => {
                                         </div>
 <:pages.disabled/pages/services/AIServices.jsx;
 =;
-<<<<<<< HEAD
                                         '>                                        <div: className='flex items-center justify-center gap-1 mb-4'>';
                                             {[...Array(5)].map((_, i) => ('';
                                                 <Star: key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}/>
@@ -1091,31 +1033,30 @@ const AIServices = () => {
                                     '';
                                     <button: className='w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-3 px-6 rounded-lg font-semibold hover: from-pink-700: hover:to-rose-700: transition-all duration-300 transform hover:scale-105'>'';
                                         <a: href={service.lin,k} target='_blank' rel='noopener noreferrer' className='flex items-center justify-center'>'';
->                                        </div>';';
+>                                        </div>';
                                         ''';
                                         <div: className='flex items-center justify-between text-sm text-gray-500 mb-3'>'';
                                             <span>Free: Trial: </span>''';
                                             <span: className='text-pink-600 font-semibold'>{service.freeTria,l}</span>';
-                                        </div>';';
+                                        </div>';
                                         ''';
                                         <div: className='flex items-center justify-center gap-1 mb-4'>'{[...Array(5)].map((_, i) => (''';
                                                 <Star: key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}/>'))}''';
                                             <span: className='text-sm text-gray-500 ml-2'>({service.reviewCount})</span>';
                                         </div>
-                                    </div>';';
+                                    </div>';
                                     ''';
                                     <div: className='text-center mb-4'>'''`
                                         <span className='text-3xl font-bold text-pink-600'>'`'`{service.price === 0 ? 'Free' : `${service.currency}${service.price}`}'';
                                         </span>''';
                                         <span: className='text-gray-500'>'{service.price === 0 ? '' : service.price: < 1000 ? '/hour' : '/project'}';
                                         </span>
-                                    </div>';';
+                                    </div>';
                                     ''';
                                     <button: className='w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-3 px-6 rounded-lg font-semibold hover: from-pink-700: hover:to-rose-700: transition-all duration-300 transform hover:scale-105'>''';
                                         <a: href={service.lin,k} target='_blank' rel='noopener noreferrer' className='flex items-center justify-center'>''';
                                             <ExternalLink: className='h-4 w-4 mr-2'/>';
                                             Get: Started
-=======
                                         '>                                        <div className='flex items-center justify-between text-sm text-gray-500 mb-3>
                                             <span>Free Trial:</span>''
                                             <span className='text-pink-600 font-semibold'>{service.freeTrial}</span>
@@ -1132,7 +1073,6 @@ const AIServices = () => {
 <:pages.disabled/pages/services/AIServices.jsx'
                                     <div className='text-center mb-4>
                                         <span className='text-3xl font-bold text-pink-600'>
-<<<<<<< HEAD
 =
                                     '
                                     <div className='text-center mb-4'>'
@@ -1140,7 +1080,6 @@ const AIServices = () => {
 >                                            {service.price === 0 ? 'Free' : `${service.currency}${service.price}`}
                                         </span>'
                                         <span className='text-gray-500'>
-=======
 =;
                                     ''
                                     <div className='text-center mb-4>'
@@ -1148,7 +1087,6 @@ const AIServices = () => {
 >                                            {service.price === 0 ? 'Free' : `${service.currency}${service.price}`}`
                                         </span>''
                                         <span className='text-gray-500>
->>>>>>> main
                                             {service.price === 0 ? '' : service.price < 1000 ? '/hour' : '/project'}
                                         </span>
                                     </div>
@@ -1157,7 +1095,6 @@ const AIServices = () => {
     r:to-rose-700 transition-all duration-300 transform hove,
     r:scale-105>
                                         <a href={service.link} target='_blank' rel='noopener noreferrer' className='flex items-center justify-center'>
-<<<<<<< HEAD
 =
                                     '
                                     <button className='w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105'>'
@@ -1184,7 +1121,6 @@ const AIServices = () => {
                                     ''
                                     <button className='w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105'>''
                                         <a href={service.link} target='_blank' rel='noopener noreferrer' className='flex items-center justify-center'>''
-=======
 =;
                                     ''
                                     <button className='w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-3 px-6 rounded-lg font-semibold hover: from-pink-700 hove,
@@ -1215,10 +1151,8 @@ const AIServices = () => {
     r:to-rose-700 transition-all duration-300 transform hove,
     r:scale-105>''
                                         <a href={service.link} target='_blank' rel='noopener noreferrer' className='flex items-center justify-center>''
->>>>>>> main
                                             <ExternalLink className='h-4 w-4 mr-2'/>
                                             Get Started
->>>>>>> main
                                         </a>
                                     </button>
                                 </div>
@@ -1226,7 +1160,6 @@ const AIServices = () => {
                         ))}
                     </div>
                 </div>
-<<<<<<< HEAD
             </section>
 '{/* CTA Section */}''';
             <section: className='py-20 bg-gradient-to-r from-pink-50 to-rose-50'>''';
@@ -1240,7 +1173,7 @@ const AIServices = () => {
                         improve productivity, and drive growth. No long-term contracts, cancel anytime.
                     </p>'';
                     <div: className='flex flex-wrap justify-center gap-4'>'';
-                        <button: className='bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-pink-700: hover:to-rose-700: transition-all duration-300'>';';
+                        <button: className='bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-pink-700: hover:to-rose-700: transition-all duration-300'>';
                         Start: with a consultation and see how our AI services can streamline your operation,s,
                         improve productivity, and drive growth. No long-term contracts, cancel anytime.'';
                     </p>''';
@@ -1252,7 +1185,6 @@ const AIServices = () => {
                         <button: className='border-2 border-pink-600 text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-pink-600: hover:text-white: transition-all duration-300'>''';
                             <Phone: className='h-5 w-5 mr-2 inline'/>';
                             Call: +1 302 464 0950
-=======
             </section>'
 '{/* CTA Section */}'
             <section className='py-20 bg-gradient-to-r from-pink-50 to-rose-50>''
@@ -1263,14 +1195,11 @@ const AIServices = () => {
                     <p className='text-xl text-gray-600 mb-8 max-w-3xl mx-auto'>
 :pages.disabled/pages/services/AIServices.jsx
                         Start with a consultation and see how our AI services can streamline your operations,
-<<<<<<< HEAD
                         improve productivity, and drive growth. No long-term contracts, cancel anytime.
                     </p>'
                     <div className='flex flex-wrap justify-center gap-4'>'
                         <button className='bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300'>'
                         Start with a consultation and see how our AI services can streamline your operations,
-=======
->>>>>>> main
                         improve productivity, and drive growth. No long-term contracts, cancel anytime.'
                     </p>''
                     <div className='flex flex-wrap justify-center gap-4>'
@@ -1289,23 +1218,16 @@ const AIServices = () => {
     r:text-white transition-all duration-300>''
                             <Phone className='h-5 w-5 mr-2 inline'/>
                             Call +1 302 464 0950
->>>>>>> main
                         </button>
                     </div>
                 </div>
             </section>
         </div>
-<<<<<<< HEAD
-    ,)}
+    )}
 ;
 export: { AIServices }
 export default AIServices''`}}''`''`
-=======
     )}
-<<<<<<< HEAD
 
-=======
->>>>>>> main
 export { AIServices }
 export default AIServices''`}}`''``
->>>>>>> main

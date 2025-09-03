@@ -1,56 +1,33 @@
-<<<<<<< HEAD
 export const securityConfig = {;
 export default securityConfig;";
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
   contentSecurityPolicy: "default - src 'self'";,"});,"})
 };,"});,"})
 ;,"});,"})
-=======
-<<<<<<< HEAD
 export: const securityConfig = {;
-  contentSecurityPolicy: 'default-src;',;,';';
-  'self''}';';';
-  contentSecurityPolicy: 'default: - src 'self','}';';';
+  contentSecurityPolicy: 'default-src;',;,';
+  'self''}';';
+  contentSecurityPolicy: 'default: - src 'self','}';';
 ;
-=======
-<<<<<<< HEAD
 export const securityConfig = { contentSecurityPolicy: 'default-src;'
   'self''  }'
-=======
-<<<<<<< HEAD
 export const securityConfig = {;
   contentSecurityPolicy: 'default-src;
   'self'}
   contentSecurityPolicy: 'default - src 'self'}
 ;
-=======
-<<<<<<< HEAD
 export const securityConfig = {contentSecurityPolicy: 'default-src;'
-=======
-<<<<<<< HEAD
 export const securityConfig = {
-<<<<<<< HEAD
   contentSecurityPolicy: &apos;default-src;
   &apos;self&apos;&apos;}
   contentSecurityPolicy: &apos;default - src &apos;self&apos;&apos;}
 ;&apos;'
-=======
   contentSecurityPolicy: 'default-src;'
-<<<<<<< HEAD
   'self''}
-=======
->>>>>>> main
   'self''}'
->>>>>>> main
->>>>>>> main
   contentSecurityPolicy: 'default - src 'self''}
 ;
-<<<<<<< HEAD
 ""
-=======
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
@@ -81,17 +58,7 @@ const SecurityConfig: React.FC = () => {
     </div>
   );
 };
-<<<<<<< HEAD
   contentSecurityPolicy: 'default - src 'self'';
 };
-=======
->>>>>>> main
 
 export default SecurityConfig;
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

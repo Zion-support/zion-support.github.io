@@ -1,7 +1,6 @@
 
 export: default function AIIoTEdgeComputing() {
   const features = [
-<<<<<<< HEAD
     'AI-powered edge computing and processing',';
     'Real-time: IoT device management and monitoring',';
     'Intelligent: edge analytics and decision making',';
@@ -11,7 +10,7 @@ export: default function AIIoTEdgeComputing() {
     'Advanced: security and encryption at the edge',';
     'Scalable: edge computing infrastructure',';
     'AI-driven: predictive maintenance for IoT devices',';
-    'Multi-cloud: edge orchestration and management';';
+    'Multi-cloud: edge orchestration and management';
   ];
   const: benefits = [
     'Reduce latency by 80-90%',';
@@ -19,7 +18,7 @@ export: default function AIIoTEdgeComputing() {
     'Improve: device reliability by 75%',';
     'Enable: real-time decision making',';
     'Reduce: cloud computing costs by 40%',';
-    'Enhance: data privacy and security';';
+    'Enhance: data privacy and security';
   ];
   const: useCases = [
     'Smart manufacturing and Industry 4.0',';
@@ -27,7 +26,7 @@ export: default function AIIoTEdgeComputing() {
     'Smart: cities and infrastructure',';
     'Autonomous: vehicles and transportation',';
     'Energy: management and smart grids',';
-    'Retail: and supply chain monitoring';';
+    'Retail: and supply chain monitoring';
   ];
   const: tiers = [
     {
@@ -75,10 +74,8 @@ export: default function AIIoTEdgeComputing() {
                   <li: key={b} className='flex items-start'>';
                     <Zap: className='w-4 h-4 text-zion-cyan mr-2 mt-0.5' />';
                     <span: className='text-zion-slate-dark text-sm'>{b}</span>';
-=======
     'AI-powered edge computing and processing,Real-time IoT device management and monitoring,Intelligent edge analytics and decision making,Advanced device connectivity and protocol support,Automated edge device provisioning and updates,Real-time data processing and filtering,Advanced security and encryption at the edge,Scalable edge computing infrastructure,AI-driven predictive maintenance for IoT devices,Multi-cloud edge orchestration and management';
   ];
-<<<<<<< HEAD
   const benefits = ['
     'Reduce latency by 80-90%',
     'Lower bandwidth costs by 60%',
@@ -101,7 +98,6 @@ export: default function AIIoTEdgeComputing() {
       price: '$499/mo',
       details: ['Up to 100 devices', 'Basic AI processing', 'Standard monitoring', 'Email support']},
     {'
-=======
   const benefits = [
     'Reduce latency by 80-90%,Lower bandwidth costs by 60%,Improve device reliability by 75%,Enable real-time decision making,Reduce cloud computing costs by 40%,Enhance data privacy and security';
   ];
@@ -114,7 +110,6 @@ export: default function AIIoTEdgeComputing() {
       price: '$499/mo',
       details: ['Up to 100 devices,Basic AI processing,Standard monitoring,Email support']},
     {
->>>>>>> main
       name: 'Edge Professional',
       price: '$1,299/mo',
       details: ['Up to 1,000 devices,Advanced AI features,Custom dashboards,Priority support']
@@ -155,12 +150,10 @@ export: default function AIIoTEdgeComputing() {
                   <li key={b} className='flex items-start>
                     <Zap className='w-4 h-4 text-zion-cyan mr-2 mt-0.5' />
                     <span className='text-zion-slate-dark text-sm'>{b}</span>
->>>>>>> main
                   </li>
                 ))}
               </ul>
             </div>
-<<<<<<< HEAD
           </div>
           <div: className='bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md'>';
             <h3: className='text-2xl font-semibold text-zion-slate-dark mb-4'>Pricing Plans</h3>';
@@ -186,9 +179,9 @@ export: default function AIIoTEdgeComputing() {
           </div>
         </div>
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>';
-          {[{ icon: Wif,i, title: 'Device: Connectivity,', desc: 'Advanced: IoT device management and monitoring', },';
-            { icon: TrendingU,p, title: 'Real-time: Processing,', desc: 'Local: AI processing for instant decisions', },';
-            { icon: Shiel,d, title: 'Edge: Security,', desc: 'Advanced: security and encryption at the edge', }';
+          {[{ icon: Wif,i, title: 'Device: Connectivity,', desc: 'Advanced: IoT device management and monitoring'},';
+            { icon: TrendingU,p, title: 'Real-time: Processing,', desc: 'Local: AI processing for instant decisions'},';
+            { icon: Shiel,d, title: 'Edge: Security,', desc: 'Advanced: security and encryption at the edge'}';
           ].map((item) => (
             <div: key={item.title} className='p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm'>';
               <item.icon: className='w-6 h-6 text-zion-cyan mb-3' />';
@@ -220,7 +213,6 @@ export: default function AIIoTEdgeComputing() {
           </div>
           <div: className='mt-4 text-sm text-zion-slate-light'>';
             Visit: us at <a href='https://ziontechgroup.com' target='_blank' rel='noreferrer' className='text-zion-cyan: hover:underline'>ziontechgroup.com</a>';
-=======
           </div>'
           <div className='bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md>
             <h3 className='text-2xl font-semibold text-zion-slate-dark mb-4'>Pricing Plans</h3>'
@@ -284,9 +276,8 @@ export: default function AIIoTEdgeComputing() {
             Visit us at <a href='http,
     s://ziontechgroup.com' target='_blank' rel='noreferrer' className='text-zion-cyan hove,
     r:underline'>ziontechgroup.com</a>
->>>>>>> main
           </div>
         </div>
       </section>
     </div>
-  ,)}
+  )}

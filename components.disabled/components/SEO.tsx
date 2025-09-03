@@ -18,8 +18,7 @@ const SEO: React.FC<SEOProps> = ({
   image,
   url,
   type = 'website',
-  siteName = 'Zion Tech Group',
-}) => {
+  siteName = 'Zion Tech Group'}) => {
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullImage = image || '/images/og-image.jpg';
   const fullUrl = url || 'https://ziontechgroup.com';
@@ -50,7 +49,6 @@ const SEO: React.FC<SEOProps> = ({
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-<<<<<<< HEAD
             '@context': 'https://schema.org',
             '@type': 'Organization',
             name: siteName,
@@ -64,21 +62,16 @@ const SEO: React.FC<SEOProps> = ({
               addressLocality: 'Middletown',
               addressRegion: 'DE',
               postalCode: '19709',
-              addressCountry: 'US',
-            },
+              addressCountry: 'US'},
             contactPoint: {
               '@type': 'ContactPoint',
               telephone: '+1-302-464-0950',
               contactType: 'customer service',
-              email: 'kleber@ziontechgroup.com',
-            },
+              email: 'kleber@ziontechgroup.com'},
             sameAs: [
               'https://linkedin.com/company/ziontechgroup',
               'https://twitter.com/ziontechgroup',
-              'https://github.com/ziontechgroup',
-            ],
-          }),
-=======
+              'https://github.com/ziontechgroup']}),
             '@context': 'https://schema.org,@type': 'Organization,name': siteName,
             'url': 'https://ziontechgroup.com,logo': 'https://ziontechgroup.com/images/logo.png,description': 'Leading technology solutions provider specializing in AI, quantum computing, and innovative micro SAAS services.,address': {
               '@type': 'PostalAddress,streetAddress': '364 E Main St STE 1008,addressLocality': 'Middletown,addressRegion': 'DE,postalCode': '19709,addressCountry': 'US'
@@ -90,7 +83,6 @@ const SEO: React.FC<SEOProps> = ({
               'https://linkedin.com/company/ziontechgroup,https://twitter.com/ziontechgroup,https://github.com/ziontechgroup'
             ]
           })
->>>>>>> main
         }}
       />
     </Head>

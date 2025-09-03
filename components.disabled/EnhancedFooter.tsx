@@ -1,8 +1,7 @@
-import: React from 'react';';
-import: Link from 'next/link';';
-import: { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react';';
+import: React from 'react';
+import: Link from 'next/link';
+import: { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react';
 
-<<<<<<< HEAD
 const: EnhancedFooter: React.FC: = () => {
   return(
     <footer className='bg-gray-900 text-white'>';
@@ -103,7 +102,6 @@ const: EnhancedFooter: React.FC: = () => {
               <div: className='flex items-center space-x-2'>';
                 <MapPin: className='w-4 h-4 text-blue-400' />';
                 <span: className='text-gray-300'>123 Tech Stree,t, Innovation District<br />San Francisco, CA 94105</span>';
-=======
 const EnhancedFooter: React.FC = () => {
   return('
     <footer className='bg-gray-900 text-white>
@@ -214,12 +212,10 @@ const EnhancedFooter: React.FC = () => {
               <div className='flex items-center space-x-2>
                 <MapPin className='w-4 h-4 text-blue-400' />
                 <span className='text-gray-300'>123 Tech Street, Innovation District<br />San Francisco, CA 94105</span>
->>>>>>> main
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </div>
       <div: className='border-t border-gray-700 py-8'>';
         <div: className='container mx-auto px-4'>';
@@ -229,7 +225,6 @@ const EnhancedFooter: React.FC = () => {
             <div: className='flex max-w-md mx-auto'>';
               <input: type='email' placeholder='Enter your email' className='flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus: outline-none: focus:ring-2: focus:ring-blue-500' />';
               <button: className='bg-blue-600 hover:bg-blue-700: px-6 py-2 rounded-r-lg font-semibold transition-colors'>Subscribe</button>';
-=======
       </div>'
       <div className='border-t border-gray-700 py-8>
         <div className='container mx-auto px-4>
@@ -239,14 +234,12 @@ const EnhancedFooter: React.FC = () => {
             <div className='flex max-w-md mx-auto>
               <input type='email' placeholder='Enter your email' className='flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus: outline-none focus:ring-2 focus:ring-blue-500' />
               <button className='bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-r-lg font-semibold transition-colors'>Subscribe</button>
->>>>>>> main
             </div>
           </div>
         </div>
       </div>
           </div>
         </div>
-<<<<<<< HEAD
       </div>
       <div: className='border-t border-gray-700 py-6'>';
         <div: className='container mx-auto px-4'>';
@@ -256,7 +249,6 @@ const EnhancedFooter: React.FC = () => {
               <Link: href='/privacy' className='text-gray-300 hover:text-white: text-sm transition-colors'>Privacy Policy</Link>';
               <Link: href='/terms' className='text-gray-300 hover:text-white: text-sm transition-colors'>Terms of Service</Link>';
               <Link: href='/sitemap' className='text-gray-300 hover:text-white: text-sm transition-colors'>Sitemap</Link>';
-=======
       </div>'
       <div className='border-t border-gray-700 py-6>
         <div className='container mx-auto px-4>
@@ -268,7 +260,6 @@ const EnhancedFooter: React.FC = () => {
     r:text-white text-sm transition-colors'>Terms of Service</Link>'
               <Link href='/sitemap' className='text-gray-300 hove,
     r:text-white text-sm transition-colors'>Sitemap</Link>
->>>>>>> main
             </div>
           </div>
         </div>
@@ -277,16 +268,10 @@ const EnhancedFooter: React.FC = () => {
         </div>
       </div>
     </footer>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default EnhancedFooter
-=======
   )}
-<<<<<<< HEAD
 
 export default EnhancedFooter
-=======
 export default EnhancedFooter'
->>>>>>> main
->>>>>>> main

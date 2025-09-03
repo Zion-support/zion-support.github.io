@@ -14,40 +14,27 @@ const Navigation: React.FC = () => {
       dropdown: [
         { name: 'AI Services', href: '/services/ai-services' },
         { name: 'IT Services', href: '/services/it-services' },
-<<<<<<< HEAD
         { name: 'Micro SaaS', href: '/services/micro-saas' }
-=======
         { name: 'Micro SaaS', href: '/services/micro-saas' },
         { name: 'Web Development', href: '/services/web-development' },
         { name: 'Cloud Services', href: '/services/cloud-services' },
-<<<<<<< HEAD
-        { name: 'AI Development', href: '/services/ai-development' },
-      ],
-    },
-=======
+        { name: 'AI Development', href: '/services/ai-development' }]},
         { name: 'AI Development', href: '/services/ai-development' }
->>>>>>> main
       ]
     }, 
->>>>>>> main
     {
       name: 'Solutions',
       href: '/solutions',
       dropdown: [
-<<<<<<< HEAD
         { name: 'Custom Development', href: '/solutions/custom-development' },
         { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
         { name: 'Enterprise Solutions', href: '/solutions/enterprise' }
-=======
         { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
         { name: 'Customer Support', href: '/solutions/customer-support' },
         { name: 'Email Automation', href: '/solutions/email-automation' },
         { name: 'Event Management', href: '/solutions/event-management' },
         { name: 'Project Management', href: '/solutions/project-management' },
-<<<<<<< HEAD
-        { name: 'Workflow Automation', href: '/solutions/workflow-automation' },
-      ],
-    },
+        { name: 'Workflow Automation', href: '/solutions/workflow-automation' }]},
     {
       name: 'Company',
       href: '/about',
@@ -55,22 +42,17 @@ const Navigation: React.FC = () => {
         { name: 'About Us', href: '/about' },
         { name: 'Our Team', href: '/team' },
         { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-      ],
-    },
+        { name: 'Partners', href: '/partners' }]},
     { name: 'Blog', href: '/blog' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Contact', href: '/contact' },
-=======
         { name: 'Workflow Automation', href: '/solutions/workflow-automation' }
->>>>>>> main
       ]
     }, 
     { name: 'About', href: '/about' }, 
     { name: 'Blog', href: '/blog' }, 
     { name: 'Careers', href: '/careers' }, 
     { name: 'Contact', href: '/contact' }
->>>>>>> main
   ];
 
   const toggleDropdown = (itemName: string) => {

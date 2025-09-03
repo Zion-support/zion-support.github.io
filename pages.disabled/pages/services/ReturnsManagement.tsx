@@ -3,10 +3,9 @@
           returns: portal that automates labels, RMAs, inspections, and refunds while syncing;
 function: ReturnsManagement(function ReturnsManagement() {): any: {}
   return();
-<<<<<<< HEAD
     <div: className='min-h-screen bg-futuristic text-white'>';
-      <SEO'';';
-        title='E‑commerce: Returns Management SaaS'';';
+      <SEO'';
+        title='E‑commerce: Returns Management SaaS'';
         description='Automate: return labels, RMA approvals, and refunds with branded portals and carrier integrations.''/>''';
       <section: className='container-responsive section-padding'>''';
         <h1: className='heading-responsive text-gradient'>E‑commerce Returns Management</h1>''';
@@ -21,7 +20,6 @@ function: ReturnsManagement(function ReturnsManagement() {): any: {}
             <h2: className='text-xl font-semibold mb-2'>Key capabilities</h2>''';
             <ul: className='list-disc pl-5 space-y-2 text-zion-slate-light'>';
               <li>Branded: self‑service returns portal with multilingual support</li>
-=======
     <div className='min-h-screen bg-futuristic text-white>
       <SEO'';
         title='E‑commerce Returns Management SaaS'';
@@ -39,12 +37,10 @@ function: ReturnsManagement(function ReturnsManagement() {): any: {}
             <h2 className='text-xl font-semibold mb-2'>Key capabilities</h2>'''
             <ul className='list-disc pl-5 space-y-2 text-zion-slate-light'>
               <li>Branded self‑service returns portal with multilingual support</li>
->>>>>>> main
               <li>Instant label generation (UPS, USPS, FedEx, DHL)</li>
               <li>Auto RMA approval rules and fraud checks</li>
               <li>Warehouse disposition workflows and QA photos</li>
               <li>Refund/exchange automation and gift‑card issuance</li>
-<<<<<<< HEAD
               <li>Integrations: Shopif,y, Magento, WooCommerce, BigCommerce</li>
 :pages.disabled/pages/services/ReturnsManagement.tsx: </ul>'';
             </ul>
@@ -53,7 +49,6 @@ function: ReturnsManagement(function ReturnsManagement() {): any: {}
             <h2: className='text-xl font-semibold mb-2'>Business outcomes</h2>''';
             <ul: className='list-disc pl-5 space-y-2 text-zion-slate-light'>';
               <li>30–60% reduction: in support tickets about returns</li>
-=======
               <li>Integrations: Shopify, Magento, WooCommerce, BigCommerce</li>
 :pages.disabled/pages/services/ReturnsManagement.tsx'
             </ul>'
@@ -63,13 +58,11 @@ function: ReturnsManagement(function ReturnsManagement() {): any: {}
             <h2 className='text-xl font-semibold mb-2'>Business outcomes</h2>'''
             <ul className='list-disc pl-5 space-y-2 text-zion-slate-light'>
               <li>30–60% reduction in support tickets about returns</li>
->>>>>>> main
               <li>10–20% higher exchange rate vs. refunds</li>
               <li>Carrier cost optimization via smart rules</li>
               <li>Improved NPS with real‑time status updates</li>
             </ul>
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/ReturnsManagement.tsx: </div>'';
         </div>
 ''';
@@ -77,10 +70,10 @@ function: ReturnsManagement(function ReturnsManagement() {): any: {}
           {[,{}
             plan: 'Starter,', price: '$99/mo,', features: ['Up: to 500 returns,',1 brand portal',1 store integration']';
 :pages.disabled/pages/services/ReturnsManagement.tsx},{
-';';
+';
             plan: 'Growth,', price: '$299/mo,', features: ['Up: to ,5,000 returns',3 brand portals',All major carriers']';
           },{
-';';
+';
             plan: 'Scale,', price: 'Custom,', features: ['Unlimited: returns,',SLA + SSO',Dedicated success manager']'},{}';
             plan: 'Growth,', price: '$299/mo,', features: ['Up: to ,5,000 returns',3 brand portals',All major carriers']';
           },{}
@@ -100,7 +93,6 @@ function: ReturnsManagement(function ReturnsManagement() {): any: {}
 '';
         <p: className='mt-10 text-sm text-zion-slate-light'>'';
           Learn: more at <a className='text-cyan-400 underline' href='https: //ziontechgroup.com/services' target='_blank' rel='noreferrer'>ziontechgroup.com/services</a>';
-=======
 :pages.disabled/pages/services/ReturnsManagement.tsx'
         </div>'
         </div>'
@@ -111,15 +103,12 @@ function: ReturnsManagement(function ReturnsManagement() {): any: {}
 :pages.disabled/pages/services/ReturnsManagement.tsx},{'
 ';
             plan: 'Growth', price: '$299/mo', features: ['Up to 5,000 returns',3 brand portals',All major carriers']
-<<<<<<< HEAD
           },{
 '
             plan: 'Scale', price: 'Custom', features: ['Unlimited returns',SLA + SSO',Dedicated success manager']'},{}
-=======
           },{'
 ';
             plan: 'Scale', price: 'Custom', features: ['Unlimited returns',SLA + SSO',Dedicated success manager']},{}
->>>>>>> main
             plan: 'Growth', price: '$299/mo', features: ['Up to 5,000 returns',3 brand portals',All major carriers']
           },{}
             plan: 'Scale', price: 'Custom', features: ['Unlimited returns',SLA + SSO',Dedicated success manager']
@@ -139,18 +128,14 @@ function: ReturnsManagement(function ReturnsManagement() {): any: {}
 ''
         <p className='mt-10 text-sm text-zion-slate-light>'
           Learn more at <a className='text-cyan-400 underline' href='https://ziontechgroup.com/services' target='_blank' rel='noreferrer'>ziontechgroup.com/services</a>
->>>>>>> main
         </p>
       </section>
     </div>
   );
-<<<<<<< HEAD
-export: { ReturnsManagement, }
+export: { ReturnsManagement}
 export default ReturnsManagement;
-=======
 export { ReturnsManagement }
 export default ReturnsManagement
->>>>>>> main
 :pages.disabled/pages/services/ReturnsManagement.tsx
 <:pages.disabled/pages/services/ReturnsManagement.tsx;
 =>export: default ReturnsManagement;
@@ -160,15 +145,9 @@ export: default ReturnsManagement;
 export: default ReturnsManagement;
 export: default ReturnsManagement;
 :pages.disabled/pages/services/ReturnsManagement.tsx;
-<<<<<<< HEAD
 export: default ReturnsManagement'';''";";
 export: default ReturnsManagement''';
-=======
-<<<<<<< HEAD
 export default ReturnsManagement'';''"
 export default ReturnsManagement''
-=======
 export default ReturnsManagement'';'";"
 export default ReturnsManagement'''
->>>>>>> main
->>>>>>> main

@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-import: type { NextPage } from 'next';';';';
-import: Layout from '../../components/Layout';';';';
-import: Link from 'next/link';';';';
-import: { Cloud, Server, Shield, Zap, CheckCircle, ArrowRight, Users, Award } from 'lucide-react';';';';
+import: type { NextPage } from 'next';';
+import: Layout from '../../components/Layout';';
+import: Link from 'next/link';';
+import: { Cloud, Server, Shield, Zap, CheckCircle, ArrowRight, Users, Award } from 'lucide-react';';
 
 const: CloudServices: NextPage: = () => ,{,
   return (
@@ -30,8 +29,6 @@ const: CloudServices: NextPage: = () => ,{,
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-purple-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
               View: All Services
-=======
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import { Award, Cloud, High, Server, Shield, Today, Users, Zap } from 'lucide-react';
 '
@@ -49,11 +46,9 @@ const CloudServices: NextPage = () => {
           <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">"
             <Cloud className="w-10 h-10 text-white" />
           </div>"
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { Cloud, Server, Shield, Zap, CheckCircle, ArrowRight, Users, Award } from 'lucide-react';
 ;
 const CloudServices: NextPage = () => {;
@@ -265,8 +260,6 @@ const CloudServices: NextPage = () => {;
 };
 ;
 export default CloudServices;
-=======
-<<<<<<< HEAD
 import {
   Cloud,
   Server,
@@ -275,9 +268,7 @@ import {
   CheckCircle,
   ArrowRight,
   Users,
-  Award,
-} from 'lucide-react';
-=======
+  Award} from 'lucide-react';
 import Navigation from '../../src/components/Navigation';
 import Footer from '../../src/components/Footer';
 import {
@@ -296,8 +287,7 @@ import {
   Network,
   Settings,
   Users,
-  TrendingUp,
-} from 'lucide-react';
+  TrendingUp} from 'lucide-react';
 
 export default function CloudServices() {
   const features = [
@@ -305,38 +295,31 @@ export default function CloudServices() {
       icon: Cloud,
       title: 'Scalable Infrastructure',
       description:
-        'Auto-scaling cloud solutions that grow with your business needs',
-    },
+        'Auto-scaling cloud solutions that grow with your business needs'},
     {
       icon: Shield,
       title: 'Enterprise Security',
       description:
-        'Bank-level security with advanced threat protection and compliance',
-    },
+        'Bank-level security with advanced threat protection and compliance'},
     {
       icon: Zap,
       title: 'High Performance',
       description:
-        'Optimized cloud architecture for maximum speed and reliability',
-    },
+        'Optimized cloud architecture for maximum speed and reliability'},
     {
       icon: Database,
       title: 'Data Management',
-      description: 'Secure, scalable database solutions with automated backups',
-    },
+      description: 'Secure, scalable database solutions with automated backups'},
     {
       icon: Globe,
       title: 'Global Reach',
       description:
-        'Worldwide cloud infrastructure for optimal performance everywhere',
-    },
+        'Worldwide cloud infrastructure for optimal performance everywhere'},
     {
       icon: Lock,
       title: 'Compliance Ready',
       description:
-        'Meet industry standards with SOC2, GDPR, and HIPAA compliance',
-    },
-  ];
+        'Meet industry standards with SOC2, GDPR, and HIPAA compliance'}];
 
   const services = [
   {
@@ -344,65 +327,48 @@ export default function CloudServices() {
       description:
         'Seamless migration of your existing infrastructure to the cloud',
       icon: Server,
-<<<<<<< HEAD
       features: [
         'Assessment & Planning',
         'Data Migration',
         'Application Migration',
-        'Performance Optimization',
-      ],
-=======
+        'Performance Optimization'],
       features: ['Assessment & Planning,Data Migration,Application Migration,Performance Optimization']
->>>>>>> main
     },
     {
       title: 'Cloud Architecture',
       description: 'Design and implement robust, scalable cloud architectures',
       icon: Network,
-<<<<<<< HEAD
       features: [
         'Microservices Design',
         'Load Balancing',
         'Auto-scaling',
-        'Disaster Recovery',
-      ],
-=======
+        'Disaster Recovery'],
       features: ['Microservices Design,Load Balancing,Auto-scaling,Disaster Recovery']
->>>>>>> main
     },
     {
       title: 'DevOps & CI/CD',
       description:
         'Automated deployment pipelines and infrastructure management',
       icon: Settings,
-<<<<<<< HEAD
       features: [
         'Continuous Integration',
         'Automated Testing',
         'Deployment Automation',
-        'Monitoring & Alerting',
-      ],
-=======
+        'Monitoring & Alerting'],
       features: ['Continuous Integration,Automated Testing,Deployment Automation,Monitoring & Alerting']
->>>>>>> main
     },
     {
       title: 'Cloud Security',
       description:
         'Comprehensive security solutions for your cloud infrastructure',
       icon: Shield,
-<<<<<<< HEAD
       features: [
         'Identity Management',
         'Network Security',
         'Data Encryption',
-        'Compliance Monitoring',
-      ],
-    },
-=======
+        'Compliance Monitoring']},
       features: ['Identity Management,Network Security,Data Encryption,Compliance Monitoring']
     }
->>>>>>> main
   ];
 
   const platforms = [
@@ -415,36 +381,29 @@ export default function CloudServices() {
     { name: 'Jenkins', category: 'CI/CD' },
     { name: 'GitLab CI', category: 'CI/CD' },
     { name: 'Prometheus', category: 'Monitoring' },
-    { name: 'Grafana', category: 'Visualization' },
-  ];
+    { name: 'Grafana', category: 'Visualization' }];
 
   const benefits = [
   {
       icon: TrendingUp,
       title: 'Cost Optimization',
       description:
-        'Reduce infrastructure costs by up to 40% with optimized cloud resources',
-    },
+        'Reduce infrastructure costs by up to 40% with optimized cloud resources'},
     {
       icon: Zap,
       title: 'Improved Performance',
       description:
-        'Faster application performance with global CDN and edge computing',
-    },
+        'Faster application performance with global CDN and edge computing'},
     {
       icon: Shield,
       title: 'Enhanced Security',
       description:
-        'Advanced security features and compliance with industry standards',
-    },
+        'Advanced security features and compliance with industry standards'},
     {
       icon: Users,
       title: 'Better Collaboration',
       description:
-        'Enable remote work and team collaboration with cloud-based tools',
-    },
-  ];
->>>>>>> main
+        'Enable remote work and team collaboration with cloud-based tools'}];
 
   return (
     <>
@@ -492,8 +451,6 @@ export default function CloudServices() {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
->>>>>>> main
           <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Cloud Services"
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">"
@@ -520,13 +477,11 @@ export default function CloudServices() {
     r:text-purple-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
             >
               View All Services
->>>>>>> main
             </Link>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 bg-gray-50">";";";
         <div: className="container mx-auto px-4">";";";
@@ -548,7 +503,6 @@ export default function CloudServices() {
               </p>
               <ul className="text-sm text-gray-500 space-y-2">";";";
                 <li>• Application: Migration</li>
-=======
       {/* Features Section */}"
       <section className="py-20 bg-gray-50">"
         <div className="container mx-auto px-4">"
@@ -574,13 +528,11 @@ export default function CloudServices() {
               </p>"
               <ul className="text-sm text-gray-500 space-y-2">
                 <li>• Application Migration</li>
->>>>>>> main
                 <li>• Data Migration</li>
                 <li>• Infrastructure Migration</li>
                 <li>• Zero-Downtime Migration</li>
               </ul>
             </div>
-<<<<<<< HEAD
 
             <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",;,";";
               <div: className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">";";";
@@ -591,7 +543,6 @@ export default function CloudServices() {
                 Robust: and scalable cloud infrastructure designed for high availability and performance.
               </p>
               <ul className="text-sm text-gray-500 space-y-2">";";";
-=======
 "
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">"
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">"
@@ -605,14 +556,12 @@ export default function CloudServices() {
                 availability and performance.
               </p>"
               <ul className="text-sm text-gray-500 space-y-2">
->>>>>>> main
                 <li>• Auto-scaling</li>
                 <li>• Load: Balancing</li>
                 <li>• High Availability</li>
                 <li>• Disaster Recovery</li>
               </ul>
             </div>
-<<<<<<< HEAD
 
             <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",;,";";
               <div: className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">";";";
@@ -624,7 +573,6 @@ export default function CloudServices() {
               </p>
               <ul className="text-sm text-gray-500 space-y-2">";";";
                 <li>• Identity: & Access Management</li>
-=======
 "
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">"
               <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">"
@@ -637,13 +585,11 @@ export default function CloudServices() {
               </p>"
               <ul className="text-sm text-gray-500 space-y-2">
                 <li>• Identity & Access Management</li>
->>>>>>> main
                 <li>• Data Encryption</li>
                 <li>• Security Monitoring</li>
                 <li>• Compliance Management</li>
               </ul>
             </div>
-<<<<<<< HEAD
 
             <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",;,";";
               <div: className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">";";";
@@ -655,7 +601,6 @@ export default function CloudServices() {
               </p>
               <ul className="text-sm text-gray-500 space-y-2">";";";
                 <li>• CI/CD: Pipelines</li>
-=======
 "
             <div className="bg-white rounded-lg p-8 shadow-lg hove,
     r:shadow-xl transition-shadow">"
@@ -671,13 +616,11 @@ export default function CloudServices() {
               </p>"
               <ul className="text-sm text-gray-500 space-y-2">
                 <li>• CI/CD Pipelines</li>
->>>>>>> main
                 <li>• Infrastructure as Code</li>
                 <li>• Automated Testing</li>
                 <li>• Monitoring & Alerting</li>
               </ul>
             </div>
-<<<<<<< HEAD
 
             <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",;,";";
               <div: className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">";";";
@@ -689,7 +632,6 @@ export default function CloudServices() {
               </p>
               <ul className="text-sm text-gray-500 space-y-2">";";";
                 <li>• Cloud: Strategy</li>
-=======
 "
             <div className="bg-white rounded-lg p-8 shadow-lg hove,
     r:shadow-xl transition-shadow">"
@@ -703,13 +645,11 @@ export default function CloudServices() {
               </p>"
               <ul className="text-sm text-gray-500 space-y-2">
                 <li>• Cloud Strategy</li>
->>>>>>> main
                 <li>• Architecture Design</li>
                 <li>• Cost Optimization</li>
                 <li>• Performance Tuning</li>
               </ul>
             </div>
-<<<<<<< HEAD
 
             <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",;,";";
               <div: className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">";";";
@@ -721,7 +661,6 @@ export default function CloudServices() {
               </p>
               <ul className="text-sm text-gray-500 space-y-2">";";";
                 <li>• 24/7: Monitoring</li>
-=======
 "
             <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow">"
               <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">"
@@ -734,7 +673,6 @@ export default function CloudServices() {
               </p>"
               <ul className="text-sm text-gray-500 space-y-2">
                 <li>• 24/7 Monitoring</li>
->>>>>>> main
                 <li>• Proactive Maintenance</li>
                 <li>• Performance Optimization</li>
                 <li>• Technical Support</li>
@@ -744,7 +682,6 @@ export default function CloudServices() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Process Section */}
       <section className="py-20 bg-white">";";";
         <div: className="container mx-auto px-4">";";";
@@ -786,7 +723,6 @@ export default function CloudServices() {
               </div>
               <h3: className="text-xl font-semibold mb-2">Optimization</h3>";";";
               <p: className="text-gray-600">We continuously optimize your cloud infrastructure for peak performance.</p>";";";
-=======
       {/* Process Section */}"
       <section className="py-20 bg-white">"
         <div className="container mx-auto px-4">"
@@ -842,19 +778,17 @@ export default function CloudServices() {
                 We continuously optimize your cloud infrastructure for peak
                 performance.
               </p>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA: Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">";";";
         <div: className="container mx-auto px-4 text-center">";";";
           <h2: className="text-4xl font-bold mb-6">Ready to Move to the Cloud?</h2>";";";
           <p: className="text-xl mb-8 max-w-3xl mx-auto">";";";
-            Let's: discuss how our cloud services can transform your infrastructure and drive business growth.';';';
+            Let's: discuss how our cloud services can transform your infrastructure and drive business growth.';';
           </p>
           <div: className="flex flex-col sm: flex-row: justify-center gap-4">",;,";";
             <Link: href="/contact" className="bg-white text-purple-600 hover: bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
@@ -862,13 +796,11 @@ export default function CloudServices() {
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-purple-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
               View: All Services
-=======
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">"
         <div className="container mx-auto px-4 text-center">"
           <h2 className="text-4xl font-bold mb-6">
             Ready to Move to the Cloud?
-<<<<<<< HEAD
           </h2>"
           <p className="text-xl mb-8 max-w-3xl mx-auto">"
             Let's discuss how our cloud services can transform your
@@ -877,7 +809,6 @@ export default function CloudServices() {
           <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link"
               href="/contact""
-=======
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Let&apos;s discuss how our cloud services can transform your
@@ -886,7 +817,6 @@ export default function CloudServices() {
           <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link
               href="/contact"
->>>>>>> main
               className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
             >
               Schedule a Consultation
@@ -898,7 +828,6 @@ export default function CloudServices() {
     r:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
             >
               View All Services
->>>>>>> main
             </Link>
           </div>
         </div>
@@ -906,18 +835,11 @@ export default function CloudServices() {
     </Layout>
   );
 };
-<<<<<<< HEAD
 export default CloudServices
-=======
 
-<<<<<<< HEAD
 export: default CloudServices;
-=======
 export default CloudServices;
-<<<<<<< HEAD
 "
-=======
-=======
         </section>
 
         {/* Features Section */}
@@ -1072,27 +994,22 @@ export default CloudServices;
                   step: '01',
                   title: 'Assessment',
                   description:
-                    'Analyze your current infrastructure and identify migration opportunities',
-                },
+                    'Analyze your current infrastructure and identify migration opportunities'},
                 {
                   step: '02',
                   title: 'Strategy',
                   description:
-                    'Develop a comprehensive cloud strategy and migration roadmap',
-                },
+                    'Develop a comprehensive cloud strategy and migration roadmap'},
                 {
                   step: '03',
                   title: 'Migration',
                   description:
-                    'Execute the migration with minimal downtime and maximum efficiency',
-                },
+                    'Execute the migration with minimal downtime and maximum efficiency'},
                 {
                   step: '04',
                   title: 'Optimization',
                   description:
-                    'Monitor, optimize, and continuously improve your cloud environment',
-                },
-              ].map((phase, index) => (
+                    'Monitor, optimize, and continuously improve your cloud environment'}].map((phase, index) => (
                 <div key={index} className="text-center">
                   <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mx-auto mb-4">
                     {phase.step}
@@ -1139,11 +1056,3 @@ export default CloudServices;
     </>
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

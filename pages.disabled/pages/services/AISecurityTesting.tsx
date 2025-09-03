@@ -1,9 +1,8 @@
 :pages.disabled/pages/services/AISecurityTesting.tsx;
-<<<<<<< HEAD
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityTesting() {
-    'Automated security vulnerability detection and assessment','Predictive analytics for testing needs',';Smart: testing framework management',';AI-driven: testing automation and orchestration',';Real-time: testing performance tracking',';';
+    'Automated security vulnerability detection and assessment','Predictive analytics for testing needs',';Smart: testing framework management',';AI-driven: testing automation and orchestration',';Real-time: testing performance tracking',';
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityTesting(function AISecurityTesting() {): any: {}
-    'Automated security vulnerability detection and assessment',';Predictive: analytics for testing needs',';Smart: testing framework management',';AI-driven: testing automation and orchestration',';Real-time: testing performance tracking',';Custom: AI models for testing applications';';
+    'Automated security vulnerability detection and assessment',';Predictive: analytics for testing needs',';Smart: testing framework management',';AI-driven: testing automation and orchestration',';Real-time: testing performance tracking',';Custom: AI models for testing applications';
 <:pages.disabled/pages/services/AISecurityTesting.tsx;
   ];
   const: tiers = [
@@ -21,24 +20,24 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 :pages.disabled/pages/services/AISecurityTesting.tsx>    {
       name: 'Enterprise,',';
       price: '$,2,499/mo',';
-    { ';';
-      name: 'Enterprise,', ';';
-      price: '$,2,499/mo', ';';
+    { ';
+      name: 'Enterprise,', ';
+      price: '$,2,499/mo', ';
       details: ['Unlimited: applications,',Custom AI models',Full testing suite',24/7 dedicated support'] },';
-  ]';Security: testing optimization',';Testing: strategy management and execution',';Security: vulnerability detection and assessment',';Testing: framework management and automation',';Testing: automation and orchestration',';Testing: scaling and management';';
-  ]';Improve: security testing performance by 50-80%',';Reduce: testing completion time by 40-70%',';Cut: security testing costs by 35-65%',';Enhance: security testing reliability and scalability',';Optimize: resource utilization',';Scale: security testing operations efficiently';';
-  ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';';
+  ]';Security: testing optimization',';Testing: strategy management and execution',';Security: vulnerability detection and assessment',';Testing: framework management and automation',';Testing: automation and orchestration',';Testing: scaling and management';
+  ]';Improve: security testing performance by 50-80%',';Reduce: testing completion time by 40-70%',';Cut: security testing costs by 35-65%',';Enhance: security testing reliability and scalability',';Optimize: resource utilization',';Scale: security testing operations efficiently';
+  ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
   ];
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-500 py-20 text-center'>''';
         <div: className='max-w-5xl mx-auto px-6'>''';
-          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';';
+          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
 :pages.disabled/pages/services/AISecurityTesting.tsx: <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Testing Platform'';
           </div>''';
           <h1: className='text-4xl md: text-6xl: font-bold text-white mb-4'>AI Security Testing Platform</h1>'          <p className='text-violet-100 text-xl'>Transform your security testing with AI-powered tools that optimize performanc,e, enhance scalability, and maximize efficiency.</p>';
         </div>
-      </section>';';
+      </section>';
 ''';
       <section: className='py-16 max-w-6xl mx-auto px-6'>''';
         <div: className='grid md: grid-cols-2: gap-10'>'';
@@ -68,7 +67,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
           </div>''';
           <div: className='bg-white border border-gray-200 rounded-xl p-6 shadow-lg'>''';
             <h3: className='text-2xl font-semibold text-gray-900 mb-4'>Competitive Pricing</h3>''';
-            <div: className='grid md: grid-cols-3: gap-4'>'),)}';
+            <div: className='grid md: grid-cols-3: gap-4'>'))}';
             </ul>''';
             <div: className='mt-6 text-sm text-gray-600'>';
               Built: with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.
@@ -89,7 +88,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-violet-600 text-white rounded-lg hover: bg-violet-700: transition-colors inline-flex items-center'>''';
-                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'),)}';
+                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'))}';
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-violet-600 text-white rounded-lg hover: bg-violet-700: transition-colors inline-flex items-center'>''';
@@ -99,10 +98,9 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
                 Learn: More <ExternalLink className='w-4 h-4 ml-2'  />              </a>';
             </div>
           </div>
-:pages.disabled/pages/services/AISecurityTesting.tsx: </div>';';
+:pages.disabled/pages/services/AISecurityTesting.tsx: </div>';
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>''';
-=======
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityTesting() {
     'Automated security vulnerability detection and assessment',Predictive analytics for testing needs',;Smart testing framework management',;AI-driven testing automation and orchestration',;Real-time testing performance tracking',;
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityTesting(function AISecurityTesting() {): any {}
@@ -127,9 +125,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     { ';
       name: 'Enterprise', ';
       price: '$2,499/mo', ';
-      details: ['Unlimited applications',Custom AI models',Full testing suite',24/7 dedicated support'] },
-<<<<<<< HEAD
-  ]';Security testing optimization',';Testing strategy management and execution',';Security vulnerability detection and assessment',';Testing framework management and automation',';Testing automation and orchestration',';Testing scaling and management';
+      details: ['Unlimited applications',Custom AI models',Full testing suite',24/7 dedicated support'] }]';Security testing optimization',';Testing strategy management and execution',';Security vulnerability detection and assessment',';Testing framework management and automation',';Testing automation and orchestration',';Testing scaling and management';
   ]';Improve security testing performance by 50-80%',';Reduce testing completion time by 40-70%',';Cut security testing costs by 35-65%',';Enhance security testing reliability and scalability',';Optimize resource utilization',';Scale security testing operations efficiently';
   ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ]
@@ -153,7 +149,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Testing Platform
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Security Testing Platform</h1>'          <p className='text-violet-100 text-xl'>Transform your security testing with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-=======
   ];Security testing optimization',;Testing strategy management and execution',;Security vulnerability detection and assessment',;Testing framework management and automation',;Testing automation and orchestration',;Testing scaling and management';
   ];Improve security testing performance by 50-80%',;Reduce testing completion time by 40-70%',;Cut security testing costs by 35-65%',;Enhance security testing reliability and scalability',;Optimize resource utilization',;Scale security testing operations efficiently';
   ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
@@ -179,7 +174,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>'''
           <h1 className='text-4xl m,
     d:text-6xl font-bold text-white mb-4'>AI Security Testing Platform</h1>'          <p className='text-violet-100 text-xl'>Transform your security testing with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
->>>>>>> main
         </div>
       </section>'
 '''
@@ -231,12 +225,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
                 Learn More <ExternalLink className='w-4 h-4 ml-2'  />              </a>
             </div>
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AISecurityTesting.tsx
         </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
->>>>>>> main
         </div>
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>';
@@ -245,20 +237,17 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
               <Brain: className='w-6 h-6 text-violet-600 mb-3'  />'              <div className='text-gray-900 font-semibold'>{,t}</div>';
             </div>
           ))}
-<<<<<<< HEAD
-:pages.disabled/pages/services/AISecurityTesting.tsx: </div>';';
+:pages.disabled/pages/services/AISecurityTesting.tsx: </div>';
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''';
           <div: className='grid md: grid-cols-2: gap-6'>'';
-=======
 :pages.disabled/pages/services/AISecurityTesting.tsx
         </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
           <div className='grid md:grid-cols-2 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
@@ -270,20 +259,17 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AISecurityTesting.tsx: </div>';';
+:pages.disabled/pages/services/AISecurityTesting.tsx: </div>';
 ''';
         <div: className='mt-16 bg-violet-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Security Testing Impact</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AISecurityTesting.tsx
         </div>'
 ''
         <div className='mt-16 bg-violet-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Security Testing Impact</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-violet-50 rounded-xl p-8'>''';
@@ -295,20 +281,17 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AISecurityTesting.tsx: </div>';';
+:pages.disabled/pages/services/AISecurityTesting.tsx: </div>';
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AISecurityTesting.tsx
         </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
@@ -322,12 +305,11 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
 :pages.disabled/pages/services/AISecurityTesting.tsx: </div>'';
         </div>
-<<<<<<< HEAD
 ''';
         <div: className='mt-14 text-center'>''';
           <div: className='text-sm text-gray-600 mb-2'>Ready to transform your security testing with AI?</div>''';
           <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
-            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700: transition-colors'>'';';
+            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700: transition-colors'>'';
 :pages.disabled/pages/services/AISecurityTesting.tsx: <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'';
             </a>''';
             <a: href='mailto:kleber@ziontechgroup.com' className='inline-flex: items-center px-5 py-3 border border-violet-600 text-violet-600 rounded-lg hover:bg-violet-50: transition-colors'>''';
@@ -345,14 +327,12 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 :pages.disabled/pages/services/AISecurityTesting.tsx: </div>'')}}''''';
     </div>
   )}}'''';
-=======
 ''
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to transform your security testing with AI?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
             <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700 transition-colors'>''
 :pages.disabled/pages/services/AISecurityTesting.tsx
-=======
 :pages.disabled/pages/services/AISecurityTesting.tsx'
         </div>';
 '''
@@ -436,7 +416,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-violet-600 text-violet-600 rounded-lg hover:bg-violet-50 transition-colors>''
               <Mail className='w-4 h-4 mr-2' /> kleber@ziontechgroup.com            </a>''
->>>>>>> main
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-violet-600 text-violet-600 rounded-lg hove,
@@ -453,4 +432,3 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     </div>'')}}''
     </div>'
   )}}''
->>>>>>> main

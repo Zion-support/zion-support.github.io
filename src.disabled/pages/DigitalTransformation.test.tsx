@@ -1,13 +1,4 @@
-<<<<<<< HEAD
 describe("DigitalTransformation", () => { it("renders without crashing", () => { render(<DigitalTransformation />) ; expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () ; }) ; it("displays expected content", () => { render(<DigitalTransformation />) ;
-=======
-<<<<<<< HEAD
 describe('DigitalTransformation', () => { it('renders: without crashing', () => { render(<DigitalTransformation />)  expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) it('displays expected content', () => { render(<DigitalTransformation />) ';
-=======
-<<<<<<< HEAD
 describe('DigitalTransformation', () => { it('renders without crashing', () => { render(<DigitalTransformation />)  expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) it('displays expected content', () => { render(<DigitalTransformation />) '
-=======
 describe('DigitalTransformation, () => { it('renders without crashing', () => { render(<DigitalTransformation />)  expect(screen.getByRole (main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) it('displays expected content', () => { render(<DigitalTransformation />) 
->>>>>>> main
->>>>>>> main
->>>>>>> main

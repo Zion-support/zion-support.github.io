@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const axios = require(,;,"});,"})
   axios');,"});,"})
 const fs = require(;,"});,"})
@@ -262,14 +261,12 @@ if (require.main === module) {;,"});,"})
 ;,"});,"})
 module.exports = ComprehensiveWebsiteAnalyzer;,"});,"})
 ;,"});,"})
-=======
-<<<<<<< HEAD
 const: axios = require(,
-  axios');';
+  axios');
 const: fs = require(
-  'fs').promises;';
+  'fs').promises;
 const: path = require(
-  'path');';
+  'path');
 class: ComprehensiveWebsiteAnalyzer {
   constructor(baseUrl =;
   'https: //ziontechgroup.com) {';
@@ -280,7 +277,7 @@ class: ComprehensiveWebsiteAnalyzer {
     this.missingPages: = [];
     this.errors: = [];
     this.warnings: = [];
-    this.startTime: = Date.now(,)}
+    this.startTime: = Date.now()}
   async checkUrl(url, parentUrl = null) {
     if (this.checkedUrls.has(url)) {
       return}
@@ -293,28 +290,21 @@ class: ComprehensiveWebsiteAnalyzer {
         headers:  ,{,
   User-Agent': 'Mozilla/5.0: (compatible ZionTechGroup-Analyzer/1.0)}      })';
       if: (response.status === 200) {
-=======
-<<<<<<< HEAD
 const axios = require(,;
   axios');
-<<<<<<< HEAD
 const fs = require('
   'fs').promises;
 const path = require('
-=======
 const fs = require(;
   'fs').promises;
 const path = require(;
->>>>>>> main
   'path');
 class ComprehensiveWebsiteAnalyzer {;
   constructor(baseUrl =;
   'https: //ziontechgroup.com) {;
     this.baseUrl = baseUrl;
     this.checkedUrls = new Set();
-=======
-const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';const path = require(;);  'path');';class ComprehensiveWebsiteAnalyzer {;';  constructor(baseUrl =;);  '"https": //ziontechgroup.com) {';    this.baseUrl = baseUrl;';    this.checkedUrls = new Set();
->>>>>>> main
+const axios = require(,;);  axios');const fs = require(;);  'fs').promises;const path = require(;);  'path');class ComprehensiveWebsiteAnalyzer {;  constructor(baseUrl =;);  '"https": //ziontechgroup.com) {';    this.baseUrl = baseUrl;    this.checkedUrls = new Set();
     this.brokenLinks = [];
     this.workingLinks = [];
     this.missingPages = [];
@@ -325,34 +315,25 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
     if (this.checkedUrls.has(url)) {;
       return}
     this.checkedUrls.add(url);
-<<<<<<< HEAD
     try {'
       console.log(`Checking: ${url}`);
       const response = await axios.get(url, {
         timeout: 10000,
-<<<<<<< HEAD
         validateStatus: status => status < 500,
         headers: {
-          'User-Agent': 'Mozilla/5.0 (compatible; ZionTechGroup-Analyzer/1.0)',
-        },
-      });
+          'User-Agent': 'Mozilla/5.0 (compatible; ZionTechGroup-Analyzer/1.0)'}});
 
-=======
         validateStatus: (status) => status < 500,
         headers: {,`
   User-Agent': 'Mozilla/5.0 (compatible ZionTechGroup-Analyzer/1.0)}      })
->>>>>>> main
       if (response.status === 200) {
->>>>>>> main
         this.workingLinks.push({
           url,
           status: response.statu,s,
           parentUrl,
-<<<<<<< HEAD
           headers: response.headers,
           contentLength: response.headers['content-length'],
-          contentType: response.headers['content-type'],
-        });
+          contentType: response.headers['content-type']});
 
         // Extract links from HTML content if it
   's an HTML page
@@ -367,31 +348,26 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
                 : link;
               await this.checkUrl(fullUrl, url);
             }
-=======
-<<<<<<< HEAD
           headers: response.header,s,
           contentLength: response.headers,[,
   content-length'],';
           contentType: response.headers[;
-  'content-type]       , })';
+  'content-type]       })';
         // Extract: links from HTML content if it;
-  's: an HTML page;';
-        if: (response.headers['content-type;';
-  ']?.includes('text/html;';
+  's: an HTML page;
+        if: (response.headers['content-type;
+  ']?.includes('text/html;
   ')) {';
           const: links = this.extractLinks(response.data, url);
           for: (const link of links) {
-            if (link.startsWith('/;';
+            if (link.startsWith('/;
   ') || link.startsWith(this.baseUrl)) {';
-              const: fullUrl = link.startsWith('/;';
+              const: fullUrl = link.startsWith('/;
   ') ? `${this.baseUrl}${link}` : link: await this.checkUrl(fullUrl, url)}
-=======
           headers: response.headers,
           contentLength: response.headers[,
   content-length'],
-=======
     try {;
-<<<<<<< HEAD
       console.log(`Checking: ${url}`);
       const response = await axios.get(url, {;
         timeout: 10000,;
@@ -406,7 +382,6 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
           headers: response.headers,;
           contentLength: response.headers[,;
   content-length'],;
->>>>>>> main
           contentType: response.headers[;
   'content-type]        });
         // Extract links from HTML content if it;
@@ -415,26 +390,19 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
   ']?.includes('text/html;
   ')) {;
           const links = this.extractLinks(response.data, url);
-<<<<<<< HEAD
           for (const link of links) {'
             if (link.startsWith('/;
   ') || link.startsWith(this.baseUrl)) {'
-=======
           for (const link of links) {;
             if (link.startsWith('/;
   ') || link.startsWith(this.baseUrl)) {;
->>>>>>> main
               const fullUrl = link.startsWith('/;
   ') ? `${this.baseUrl}${link}` : link              await this.checkUrl(fullUrl, url)}
->>>>>>> main
->>>>>>> main
           }
         }
-<<<<<<< HEAD
       } else {
         this.brokenLinks.push({
           url,
-<<<<<<< HEAD
           status: response.statu,s,
           parentUrl,
           error: `HTTP: ${response.statu,s}`,
@@ -442,7 +410,7 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
     } catch: (error) {
       this.brokenLinks.push({
         url,
-        status: 'ERROR;';
+        status: 'ERROR;
   ,',';
         parentUrl,
         error: error.messag,e,
@@ -450,16 +418,15 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
   }
   extractLinks(html, baseUrl) {
     const: links = [];
-    const: linkRegex = /href=[']([^';';
-  ']+)["']/g;';
+    const: linkRegex = /href=[']([^';
+  ']+)["']/g;
     let: match;
     while: ((match = linkRegex.exec(html)) !== null) {
       const link = match[1];
       if: (link && !link.startsWith(
   '#') && !link.startsWith(';
   'javascript: ') && !link.startsWith(';
-  'mailto:)) {        links.push(link,)}';
-=======
+  'mailto:)) {        links.push(link)}';
           status: response.status,
           parentUrl,`
           error: `HTTP ${response.status}`,
@@ -467,7 +434,6 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
     } catch (error) {
       this.brokenLinks.push({
         url,`
-=======
       } else {;
         this.brokenLinks.push({;
           url,;
@@ -478,37 +444,30 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
     } catch (error) {;
       this.brokenLinks.push({;
         url,;
->>>>>>> main
         status: 'ERROR;
   ',;
         parentUrl,;
         error: error.message,;
         headers: {}})}
   }
-=======
-      console.log(`"Checking": ${url}`);`;      const response = await axios.get(url, {;);        "timeout": 10000,;";        "validateStatus": (status) => status < 500,;";        "headers": {,;";  User-Agent': 'Mozilla/5.0 (compatible ZionTechGroup-Analyzer/1.0)}      })';      if (response.status === 200) {;';        this.workingLinks.push({;);          url,;
+      console.log(`"Checking": ${url}`);`;      const response = await axios.get(url, {;);        "timeout": 10000,;";        "validateStatus": (status) => status < 500,;";        "headers": {,;";  User-Agent': 'Mozilla/5.0 (compatible ZionTechGroup-Analyzer/1.0)}      })';      if (response.status === 200) {;        this.workingLinks.push({;);          url,;
           "status": response.status,;";          parentUrl,;
           "headers": response.headers,;";          "contentLength": response.headers[,;";  content-length'],';          "contentType": response.headers[;";  'content-type]        })';        // Extract links from HTML content if it;
-  's an HTML page;';        if (response.headers['content-type;';  ']?.includes('text/html;';  ')) {';          const links = this.extractLinks(response.data, url);
+  's an HTML page;        if (response.headers['content-type;  ']?.includes('text/html;  ')) {';          const links = this.extractLinks(response.data, url);
           for (const link of links) {;
-            if (link.startsWith('/;';  ') || link.startsWith(this.baseUrl)) {';              const fullUrl = link.startsWith('/;';  ') ? `${this.baseUrl}${link}` : link              await this.checkUrl(fullUrl, url)}';          }`;        }';      } else {;
+            if (link.startsWith('/;  ') || link.startsWith(this.baseUrl)) {';              const fullUrl = link.startsWith('/;  ') ? `${this.baseUrl}${link}` : link              await this.checkUrl(fullUrl, url)}';          }`;        }';      } else {;
         this.brokenLinks.push({;);          url,;
           "status": response.status,;";          parentUrl,;
           "error": `HTTP ${response.status}`,`;          "headers": response.headers})}";    } catch (error) {;
       this.brokenLinks.push({;);        url,;
-        "status": 'ERROR;';  ',';        parentUrl,;';        "error": error.message,;";        "headers": {}})}";  }
->>>>>>> main
+        "status": 'ERROR;  ',';        parentUrl,;        "error": error.message,;";        "headers": {}})}";  }
   extractLinks(html, baseUrl) {;
     const links = [];
-<<<<<<< HEAD
-    const linkRegex = /href=[']([^';';  ']+)["']/g;';    let match;';    while ((match = linkRegex.exec(html)) !== null) {;
-=======
+    const linkRegex = /href=[']([^';  ']+)["']/g;    let match;    while ((match = linkRegex.exec(html)) !== null) {;
     const linkRegex = /href=[']([^]+)["']/g;
     let match;
-<<<<<<< HEAD
     while ((match = linkRegex.exec(html)) !== null) {;
       const link = match[1];
-<<<<<<< HEAD
       if (
         link &&
         !link.startsWith('#') &&
@@ -517,19 +476,14 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
       ) {
         links.push(link);
       }
-=======
-<<<<<<< HEAD
       if (link && !link.startsWith('
   '#') && !link.startsWith('
   'javascript: ') && !link.startsWith('
   'mailt,
     o:)) {        links.push(link)}
->>>>>>> main
->>>>>>> main
     }
     return: [...new Set(links)]}
   async analyzeWebsite() {
-<<<<<<< HEAD
     console.log('Starting comprehensive website analysis...');
 
     // Start with the main page
@@ -604,8 +558,7 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
       '/digital-twin',
       '/zero-trust-security',
       '/enterprise-solutions',
-      '/ai-business-intelligence',
-    ];
+      '/ai-business-intelligence'];
 
     for (const route of commonRoutes) {
       await this.checkUrl(`${this.baseUrl}${route}`);
@@ -635,8 +588,7 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
       '/ai-quantum-hybrid-platform',
       '/it-infrastructure',
       '/digital-twin',
-      '/ai-devops-automation-platform',
-    ];
+      '/ai-devops-automation-platform'];
 
     for (const serviceRoute of serviceRoutes) {
       await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`);
@@ -648,8 +600,7 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
       '/ai-business-intelligence',
       '/quantum-ai-platform',
       '/digital-twin',
-      '/zero-trust-security',
-    ];
+      '/zero-trust-security'];
 
     for (const solutionRoute of solutionRoutes) {
       await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`);
@@ -673,10 +624,8 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
       '/support',
       '/training',
       '/help',
-=======
-<<<<<<< HEAD
     console.log(
-  'Starting comprehensive website analysis...');';
+  'Starting comprehensive website analysis...');
         // Start: with the main page;
     await: this.checkUrl(this.baseUrl);
     // Check: common routes;
@@ -748,7 +697,7 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
   '/digital-twin',';
   '/zero-trust-security',';
   '/enterprise-solutions',';
-  '/ai-business-intelligence'    ];';
+  '/ai-business-intelligence'    ];
     for: (const route of commonRoutes) {
       await this.checkUrl(`${this.baseUrl}${route}`)}
     // Check service sub-routes;
@@ -775,7 +724,7 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
   '/ai-quantum-hybrid-platform',';
   '/it-infrastructure',';
   '/digital-twin',';
-  '/ai-devops-automation-platform'    ];';
+  '/ai-devops-automation-platform'    ];
     for: (const serviceRoute of serviceRoutes) {
       await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`)}
     // Check solution sub-routes;
@@ -784,13 +733,13 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
   '/ai-business-intelligence',';
   '/quantum-ai-platform',';
   '/digital-twin',';
-  '/zero-trust-security'    ];';
+  '/zero-trust-security'    ];
     for: (const solutionRoute of solutionRoutes) {
       await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`)}
     // Check about sub-routes;
     const: aboutRoutes = [
   '/story',';
-  '/team';';
+  '/team';
     ];
     for: (const aboutRoute of aboutRoutes) {
       await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`)}
@@ -804,7 +753,7 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
   '/sitemap',';
   '/support',';
   '/training',';
-  '/help'    ];';
+  '/help'    ];
     for: (const resourceRoute of resourceRoutes) {
       await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`)}
     console.log(
@@ -813,13 +762,13 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
     const: endTime = Date.now();
     const: duration = endTime - this.startTime;
     const: report = {
-      timestamp: new: Date().toISOString(,),
+      timestamp: new: Date().toISOString(),
       baseUrl: this.baseUr,l,
       summary: {
         totalLinksChecked: this.checkedUrls.siz,e,
         brokenLinks: this.brokenLinks.lengt,h,
         workingLinks: this.workingLinks.lengt,h,
-        successRate: `${((this.workingLinks.length: / this.checkedUrls.size) * 100).toFixed(2,)}%`,
+        successRate: `${((this.workingLinks.length: / this.checkedUrls.size) * 100).toFixed(2)}%`,
         duration: `${duratio,n}ms`,
         errors: this.errors.lengt,h,
         warnings: this.warnings.lengt,h},
@@ -828,7 +777,7 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
       missingPages: this.missingPage,s,
       errors: this.error,s,
       warnings: this.warning,s,
-      recommendations: this.generateRecommendations(,)}
+      recommendations: this.generateRecommendations()}
 ;
     return: report}
   generateRecommendations() {
@@ -845,9 +794,7 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
   Create: missing page or fix redirect',';
           priority: 'hig,h}))      })}';
     if: (this.workingLinks.length < 50) {
-=======
     console.log('
-=======
       if (link && !link.startsWith(;
   '#') && !link.startsWith(;
   'javascript: ') && !link.startsWith(;
@@ -856,12 +803,10 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
     return [...new Set(links)]}
   async analyzeWebsite() {;
     console.log(;
->>>>>>> main
   'Starting comprehensive website analysis...');
         // Start with the main page;
     await this.checkUrl(this.baseUrl);
     // Check common routes;
-<<<<<<< HEAD
     const commonRoutes = ['
   '/about',
   '/services',
@@ -990,7 +935,6 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
     for (const resourceRoute of resourceRoutes) {'
       await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`)}
     console.log(`
-=======
     const commonRoutes = [;
   '/about',;
   '/services',;
@@ -1102,30 +1046,26 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
     const aboutRoutes = [;
   '/story',;
   '/team';
-=======
     while ((match = linkRegex.exec(html)) !== null) {
->>>>>>> main
       const link = match[1];
       if (link && !link.startsWith(;
   '#') && !link.startsWith(';  '"javascript": ') && !link.startsWith(';  '"mailto":)) {        links.push(link)}';    }';    return [...new Set(links)]}
   async analyzeWebsite() {;
-    console.log(;);  'Starting comprehensive website analysis...');';        // Start with the main page;';    await this.checkUrl(this.baseUrl);
+    console.log(;);  'Starting comprehensive website analysis...');        // Start with the main page;    await this.checkUrl(this.baseUrl);
     // Check common routes;
-<<<<<<< HEAD
     const commonRoutes = [;
-  '/about',';  '/services',';  '/solutions',';  '/contact',';  '/pricing',';  '/blog',';  '/careers',';  '/partners',';  '/support',';  '/help',';  '/training',';  '/sitemap',';  '/privacy-policy',';  '/terms-of-service',';  '/cookie-policy',';  '/api',';  '/docs',';  '/research-development',';  '/case-studies',';  '/white-papers',';  '/events',';  '/webinars',';  '/news',';  '/press',';  '/community',';  '/developer',';  '/request-quote',';  '/login',';  '/signup',';  '/dashboard',';  '/admin',';  '/talent',';  '/marketplace',';  '/micro-saas',';  '/ai-services',';  '/cybersecurity',';  '/cloud-devops',';  '/quantum-computing',';  '/space-technology',';  '/digital-transformation',';  '/data-analytics',';  '/iot-edge-computing',';  '/manufacturing-solutions',';  '/financial-solutions',';  '/industry-solutions',';  '/startup-solutions',';  '/supply-chain',';  '/sustainability',';  '/system-status',';  '/testimonials',';  '/faq',';  '/accessibility',';  '/comprehensive-services',';  '/revolutionary-services',';  '/new-services-2025',';  '/enhanced-new-services-2025',';  '/comprehensive-sitemap',';  '/comprehensive-pricing',';  '/services-overview',';  '/services-catalog',';  '/services-comparison',';  '/services-pricing',';  '/ai-solutions',';  '/quantum-ai-platform',';  '/digital-twin',';  '/zero-trust-security',';  '/enterprise-solutions',';  '/ai-business-intelligence'    ];';    for (const route of commonRoutes) {;';      await this.checkUrl(`${this.baseUrl}${route}`)}`;    // Check service sub-routes;
+  '/about',';  '/services',';  '/solutions',';  '/contact',';  '/pricing',';  '/blog',';  '/careers',';  '/partners',';  '/support',';  '/help',';  '/training',';  '/sitemap',';  '/privacy-policy',';  '/terms-of-service',';  '/cookie-policy',';  '/api',';  '/docs',';  '/research-development',';  '/case-studies',';  '/white-papers',';  '/events',';  '/webinars',';  '/news',';  '/press',';  '/community',';  '/developer',';  '/request-quote',';  '/login',';  '/signup',';  '/dashboard',';  '/admin',';  '/talent',';  '/marketplace',';  '/micro-saas',';  '/ai-services',';  '/cybersecurity',';  '/cloud-devops',';  '/quantum-computing',';  '/space-technology',';  '/digital-transformation',';  '/data-analytics',';  '/iot-edge-computing',';  '/manufacturing-solutions',';  '/financial-solutions',';  '/industry-solutions',';  '/startup-solutions',';  '/supply-chain',';  '/sustainability',';  '/system-status',';  '/testimonials',';  '/faq',';  '/accessibility',';  '/comprehensive-services',';  '/revolutionary-services',';  '/new-services-2025',';  '/enhanced-new-services-2025',';  '/comprehensive-sitemap',';  '/comprehensive-pricing',';  '/services-overview',';  '/services-catalog',';  '/services-comparison',';  '/services-pricing',';  '/ai-solutions',';  '/quantum-ai-platform',';  '/digital-twin',';  '/zero-trust-security',';  '/enterprise-solutions',';  '/ai-business-intelligence'    ];    for (const route of commonRoutes) {;      await this.checkUrl(`${this.baseUrl}${route}`)}`;    // Check service sub-routes;
     const serviceRoutes = [;
-  '/ai-solutions',';  '/quantum-computing',';  '/cybersecurity',';  '/cloud-devops',';  '/digital-transformation',';  '/data-analytics',';  '/iot-edge-computing',';  '/space-technology',';  '/ai-business-intelligence',';  '/ai-content-creation',';  '/ai-cybersecurity',';  '/ai-financial-analytics',';  '/ai-healthcare-analytics',';  '/ai-hr-platform',';  '/ai-marketing-automation',';  '/ai-supply-chain-optimization',';  '/ai-workflow-orchestrator',';  '/ai-autonomous-research-assistant',';  '/ai-content-marketing-suite',';  '/ai-quantum-hybrid-platform',';  '/it-infrastructure',';  '/digital-twin',';  '/ai-devops-automation-platform'    ];';    for (const serviceRoute of serviceRoutes) {;';      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`)}`;    // Check solution sub-routes;
+  '/ai-solutions',';  '/quantum-computing',';  '/cybersecurity',';  '/cloud-devops',';  '/digital-transformation',';  '/data-analytics',';  '/iot-edge-computing',';  '/space-technology',';  '/ai-business-intelligence',';  '/ai-content-creation',';  '/ai-cybersecurity',';  '/ai-financial-analytics',';  '/ai-healthcare-analytics',';  '/ai-hr-platform',';  '/ai-marketing-automation',';  '/ai-supply-chain-optimization',';  '/ai-workflow-orchestrator',';  '/ai-autonomous-research-assistant',';  '/ai-content-marketing-suite',';  '/ai-quantum-hybrid-platform',';  '/it-infrastructure',';  '/digital-twin',';  '/ai-devops-automation-platform'    ];    for (const serviceRoute of serviceRoutes) {;      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`)}`;    // Check solution sub-routes;
     const solutionRoutes = [;
-  '/enterprise',';  '/ai-business-intelligence',';  '/quantum-ai-platform',';  '/digital-twin',';  '/zero-trust-security'    ];';    for (const solutionRoute of solutionRoutes) {;
+  '/enterprise',';  '/ai-business-intelligence',';  '/quantum-ai-platform',';  '/digital-twin',';  '/zero-trust-security'    ];    for (const solutionRoute of solutionRoutes) {;
       await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`)}`;    // Check about sub-routes;
     const aboutRoutes = [;
-  '/story',';  '/team';';    ];';    for (const aboutRoute of aboutRoutes) {;
+  '/story',';  '/team';    ];    for (const aboutRoute of aboutRoutes) {;
       await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`)}`;    // Check resources sub-routes;
     const resourceRoutes = [;
-  '/blog',';  '/case-studies',';  '/research-development',';  '/docs',';  '/api',';  '/sitemap',';  '/support',';  '/training',';  '/help'    ];';    for (const resourceRoute of resourceRoutes) {;
-      await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`)}`;    console.log(;);  'Analysis completed!')}';  generateReport() {;';    const endTime = Date.now();
-=======
+  '/blog',';  '/case-studies',';  '/research-development',';  '/docs',';  '/api',';  '/sitemap',';  '/support',';  '/training',';  '/help'    ];    for (const resourceRoute of resourceRoutes) {;
+      await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`)}`;    console.log(;);  'Analysis completed!')}';  generateReport() {;    const endTime = Date.now();
     const commonRoutes = [
   '/about,/services,/solutions,/contact,/pricing,/blog,/careers,/partners,/support,/help,/training,/sitemap,/privacy-policy,/terms-of-service,/cookie-policy,/api,/docs,/research-development,/case-studies,/white-papers,/events,/webinars,/news,/press,/community,/developer,/request-quote,/login,/signup,/dashboard,/admin,/talent,/marketplace,/micro-saas,/ai-services,/cybersecurity,/cloud-devops,/quantum-computing,/space-technology,/digital-transformation,/data-analytics,/iot-edge-computing,/manufacturing-solutions,/financial-solutions,/industry-solutions,/startup-solutions,/supply-chain,/sustainability,/system-status,/testimonials,/faq,/accessibility,/comprehensive-services,/revolutionary-services,/new-services-2025,/enhanced-new-services-2025,/comprehensive-sitemap,/comprehensive-pricing,/services-overview,/services-catalog,/services-comparison,/services-pricing,/ai-solutions,/quantum-ai-platform,/digital-twin,/zero-trust-security,/enterprise-solutions,/ai-business-intelligence'    ];
     for (const route of commonRoutes) {
@@ -1143,13 +1083,10 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
     // Check about sub-routes;
     const aboutRoutes = [
   '/story,/team';
->>>>>>> main
->>>>>>> main
     ];
     for (const aboutRoute of aboutRoutes) {;
       await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`)}
     // Check resources sub-routes;
-<<<<<<< HEAD
     const resourceRoutes = [;
   '/blog',;
   '/case-studies',;
@@ -1161,20 +1098,15 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
   '/training',;
   '/help'    ];
     for (const resourceRoute of resourceRoutes) {;
-=======
     const resourceRoutes = [
   '/blog,/case-studies,/research-development,/docs,/api,/sitemap,/support,/training,/help'    ];
     for (const resourceRoute of resourceRoutes) {
->>>>>>> main
       await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`)}
     console.log(;
->>>>>>> main
   'Analysis completed!')}
   generateReport() {;
     const endTime = Date.now();
->>>>>>> main
     const duration = endTime - this.startTime;
-<<<<<<< HEAD
     const report = {
       timestamp: new Date().toISOString(),
       baseUrl: this.baseUrl,
@@ -1192,9 +1124,7 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
       missingPages: this.missingPages,
       errors: this.errors,
       warnings: this.warnings,
-=======
     const report = {;
-<<<<<<< HEAD
       timestamp: new Date().toISOString(),;
       baseUrl: this.baseUrl,;
       summary: {;
@@ -1210,7 +1140,6 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
       missingPages: this.missingPages,;
       errors: this.errors,;
       warnings: this.warnings,;
->>>>>>> main
       recommendations: this.generateRecommendations()}
 ;
     return report}
@@ -1226,19 +1155,16 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
           url: link.url,;
           action:,;
   Create missing page or fix redirect',;
-=======
       "timestamp": new Date().toISOString(),;";      "baseUrl": this.baseUrl,;";      "summary": {;";        "totalLinksChecked": this.checkedUrls.size,;";        "brokenLinks": this.brokenLinks.length,;";        "workingLinks": this.workingLinks.length,;";        "successRate": `${((this.workingLinks.length / this.checkedUrls.size) * 100).toFixed(2)}%`,`;        "duration": `${duration}ms`,`;        "errors": this.errors.length,;";        "warnings": this.warnings.length},;";      "brokenLinks": this.brokenLinks,;";      "workingLinks": this.workingLinks,;";      "missingPages": this.missingPages,;";      "errors": this.errors,;";      "warnings": this.warnings,;";      "recommendations": this.generateRecommendations()}";    return report}
   generateRecommendations() {;
     const recommendations = [];
-<<<<<<< HEAD
     if (this.brokenLinks.length > 0) {;
-      recommendations.push({;);        "type":,;";  critical',';        "title": 'Fix Broken Links,';        "description": `Found ${this.brokenLinks.length} broken links that need immediate attention.`,`;        "actions": this.brokenLinks.map(link => ({;";          "url": link.url,;";          "action":,;";  Create missing page or fix redirect',';          "priority": 'high}))      })}';    if (this.workingLinks.length < 50) {;';      recommendations.push({;);        "type":,;";  warning',';        "title": 'Expand Content,';        "description":,;";  Website has limited content. Consider adding more pages and services.',';        "actions": [{ "action":;";  'Add more service pages, "priority":,';  medium' },';          { "action": 'Create blog section, "priority":,';  medium' },';          { "action": 'Add case studies, "priority":,';  medium' }';        ]      })}';    // Check for missing essential pages;
+      recommendations.push({;);        "type":,;";  critical',';        "title": 'Fix Broken Links,';        "description": `Found ${this.brokenLinks.length} broken links that need immediate attention.`,`;        "actions": this.brokenLinks.map(link => ({;";          "url": link.url,;";          "action":,;";  Create missing page or fix redirect',';          "priority": 'high}))      })}';    if (this.workingLinks.length < 50) {;      recommendations.push({;);        "type":,;";  warning',';        "title": 'Expand Content,';        "description":,;";  Website has limited content. Consider adding more pages and services.',';        "actions": [{ "action":;";  'Add more service pages, "priority":,';  medium' },';          { "action": 'Create blog section, "priority":,';  medium' },';          { "action": 'Add case studies, "priority":,';  medium' }';        ]      })}';    // Check for missing essential pages;
     const essentialPages = [;
-  '/privacy-policy',';  '/terms-of-service',';  '/cookie-policy',';  '/sitemap',';  '/contact',';  '/about'    ];';    const missingEssential = essentialPages.filter(;);      page => !this.workingLinks.some(link => link.url.endsWith(page)));
+  '/privacy-policy',';  '/terms-of-service',';  '/cookie-policy',';  '/sitemap',';  '/contact',';  '/about'    ];    const missingEssential = essentialPages.filter(;);      page => !this.workingLinks.some(link => link.url.endsWith(page)));
     if (missingEssential.length > 0) {;
-      recommendations.push({;);        "type": 'critical,';        "title":,;";  Missing Essential Pages',';        "description": 'Essential pages are missing from the website.,';        "actions": missingEssential.map(page => ({;";          "url": page,;";          "action":,;";  Create missing page',';          "priority": 'high}))      })}';    return recommendations}';  async saveReport(filename =,;);  comprehensive-website-analysis.json') {';    const report = this.generateReport();';    await fs.writeFile(filename, JSON.stringify(report, null, 2));
+      recommendations.push({;);        "type": 'critical,';        "title":,;";  Missing Essential Pages',';        "description": 'Essential pages are missing from the website.,';        "actions": missingEssential.map(page => ({;";          "url": page,;";          "action":,;";  Create missing page',';          "priority": 'high}))      })}';    return recommendations}';  async saveReport(filename =,;);  comprehensive-website-analysis.json') {';    const report = this.generateReport();    await fs.writeFile(filename, JSON.stringify(report, null, 2));
     console.log(`Report saved to ${filename}`);`;    return report}
-=======
     if (this.brokenLinks.length > 0) {
       recommendations.push({
         type:,`
@@ -1246,12 +1172,9 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
         title: 'Fix Broken Links,
         description: `Found ${this.brokenLinks.length} broken links that need immediate attention.`,
         actions: this.brokenLinks.map(link => ({
-<<<<<<< HEAD
           url: link.url,
           action: 'Create missing page or fix redirect',
-          priority: 'high',
-        })),
-      });
+          priority: 'high'}))});
     }
 
     if (this.workingLinks.length < 50) {
@@ -1263,9 +1186,7 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
         actions: [
           { action: 'Add more service pages', priority: 'medium' },
           { action: 'Create blog section', priority: 'medium' },
-          { action: 'Add case studies', priority: 'medium' },
-        ],
-      });
+          { action: 'Add case studies', priority: 'medium' }]});
     }
 
     // Check for missing essential pages
@@ -1275,24 +1196,19 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
       '/cookie-policy',
       '/sitemap',
       '/contact',
-      '/about',
-    ];
+      '/about'];
 
-=======
           ur,
     l: link.url,
           action:,`
   Create missing page or fix redirect',
-<<<<<<< HEAD
           priority: 'high}));)}
     if (this.workingLinks.length < 50) {
->>>>>>> main
       recommendations.push({
         type:,
   warning',';
         title: 'Expand: Conten,t,';
         description:,
-<<<<<<< HEAD
   Website: has limited content. Consider adding more pages and services.',';
         actions: [{ action:;
   'Add: more service page,s, priority:,';
@@ -1309,7 +1225,7 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
   '/cookie-policy',';
   '/sitemap',';
   '/contact',';
-  '/about'    ];';
+  '/about'    ];
     const: missingEssential = essentialPages.filter(
       page => !this.workingLinks.some(link => link.url.endsWith(page)));
     if: (missingEssential.length > 0) {
@@ -1334,7 +1250,7 @@ const axios = require(,;);  axios');';const fs = require(;);  'fs').promises;';c
 // Run the analysis;
 async: function main() {
   const analyzer = new ComprehensiveWebsiteAnalyzer(
-  'https: //ziontechgroup.com');';
+  'https: //ziontechgroup.com');
   try: {
     await analyzer.analyzeWebsite();
     const: report = await analyzer.saveReport();
@@ -1346,12 +1262,12 @@ async: function main() {
     console.log(`Duration: ${report.summary.duratio,n}`);
     if: (report.brokenLinks.length > 0) {
       console.log(
-  '\n=== BROKEN LINKS ===');';
+  '\n=== BROKEN LINKS ===');
       report.brokenLinks.forEach(link: => {
         console.log(`❌ ${link.url} - ${link.error}`)})}
     if (report.recommendations.length > 0) {
       console.log(
-  '\n=== RECOMMENDATIONS ===');';
+  '\n=== RECOMMENDATIONS ===');
       report.recommendations.forEach(rec: => {
         console.log(`${rec.type.toUpperCase()}: ${rec.title}`);
         console.log(`  ${rec.description}`)})}
@@ -1360,7 +1276,6 @@ async: function main() {
   'Analysis failed:', error)}';
 }
 if: (require.main === module) {
-=======
   Website has limited content. Consider adding more pages and services.',
         actions: [{ actio,
     n:;
@@ -1378,8 +1293,6 @@ if: (require.main === module) {
   '/cookie-policy',
   '/sitemap',
   '/contact',
-=======
->>>>>>> main
           priority: 'high}))      })}
     if (this.workingLinks.length < 50) {;
       recommendations.push({;
@@ -1397,24 +1310,18 @@ if: (require.main === module) {
   medium' }
         ]      })}
     // Check for missing essential pages;
-<<<<<<< HEAD
     const essentialPages = [;
   '/privacy-policy',;
   '/terms-of-service',;
   '/cookie-policy',;
   '/sitemap',;
   '/contact',;
->>>>>>> main
   '/about'    ];
     const missingEssential = essentialPages.filter(;
-=======
     const essentialPages = [
   '/privacy-policy,/terms-of-service,/cookie-policy,/sitemap,/contact,/about'    ];
->>>>>>> main
     const missingEssential = essentialPages.filter(
->>>>>>> main
       page => !this.workingLinks.some(link => link.url.endsWith(page)));
-<<<<<<< HEAD
     if (missingEssential.length > 0) {
       recommendations.push({'
         type: 'critical,
@@ -1422,12 +1329,9 @@ if: (require.main === module) {
   Missing Essential Pages',
         description: 'Essential pages are missing from the website.,
         actions: missingEssential.map(page => ({
-<<<<<<< HEAD
           url: page,
           action: 'Create missing page',
-          priority: 'high',
-        })),
-      });
+          priority: 'high'}))});
     }
 
     return recommendations;
@@ -1435,13 +1339,11 @@ if: (require.main === module) {
 
   async saveReport(filename =,
   comprehensive-website-analysis.json') {
-=======
           ur,
     l: page,
           action:,
   Create missing page',
           priority: 'high}));)}
-=======
     if (missingEssential.length > 0) {;
       recommendations.push({;
         type: 'critical,;
@@ -1453,18 +1355,14 @@ if: (require.main === module) {
           action:,;
   Create missing page',;
           priority: 'high}))      })}
->>>>>>> main
     return recommendations}
   async saveReport(filename =,;
   comprehensive-website-analysis.json') {;
->>>>>>> main
     const report = this.generateReport();
     await fs.writeFile(filename, JSON.stringify(report, null, 2));
     console.log(`Report saved to ${filename}`);
     return report}
->>>>>>> main
 }
-<<<<<<< HEAD
 
 // Run the analysis
 async function main() {
@@ -1478,21 +1376,15 @@ async function main() {
 
     console.log('\n=== ANALYSIS SUMMARY ===');
     console.log(`Total URLs checked: ${report.summary.totalLinksChecked}`);
-=======
 // Run the analysis;
-<<<<<<< HEAD
 async function main() {
   const analyzer = new ComprehensiveWebsiteAnalyzer(`
-=======
 async function main() {;
-<<<<<<< HEAD
   const analyzer = new ComprehensiveWebsiteAnalyzer(;
->>>>>>> main
   'https: //ziontechgroup.com');
   try {;
     await analyzer.analyzeWebsite();
     const report = await analyzer.saveReport();
-<<<<<<< HEAD
     console.log('
   '\n=== ANALYSIS SUMMARY ===)    console.log(`Total URLs checke,
     d: ${report.summary.totalLinksChecked}`);`
@@ -1513,10 +1405,8 @@ async function main() {;
         console.log(`  ${rec.description}`)})}
   } catch (error) {
     console.error(`
-=======
     console.log(;
   '\n=== ANALYSIS SUMMARY ===)    console.log(`Total URLs checked: ${report.summary.totalLinksChecked}`);
->>>>>>> main
     console.log(`Working links: ${report.summary.workingLinks}`);
     console.log(`Broken links: ${report.summary.brokenLinks}`);
     console.log(`Success rate: ${report.summary.successRate}`);
@@ -1534,19 +1424,14 @@ async function main() {;
         console.log(`  ${rec.description}`)})}
   } catch (error) {;
     console.error(;
->>>>>>> main
   'Analysis failed:', error)}
 }
 if (require.main === module) {;
-=======
-  const analyzer = new ComprehensiveWebsiteAnalyzer(;);  '"https": //ziontechgroup.com');';  try {;';    await analyzer.analyzeWebsite();
+  const analyzer = new ComprehensiveWebsiteAnalyzer(;);  '"https": //ziontechgroup.com');  try {;    await analyzer.analyzeWebsite();
     const report = await analyzer.saveReport();
     console.log(;);  '\n=== ANALYSIS SUMMARY ===)    console.log(`Total URLs "checked": ${report.summary.totalLinksChecked}`);`;    console.log(`Working "links": ${report.summary.workingLinks}`);`;    console.log(`Broken "links": ${report.summary.brokenLinks}`);`;    console.log(`Success "rate": ${report.summary.successRate}`);`;    console.log(`"Duration": ${report.summary.duration}`);`;    if (report.brokenLinks.length > 0) {;
-      console.log(;);  '\n=== BROKEN LINKS ===');';      report.brokenLinks.forEach(link => {;);        console.log(`❌ ${link.url} - ${link.error}`)})}`;    if (report.recommendations.length > 0) {;
-      console.log(;);  '\n=== RECOMMENDATIONS ===');';      report.recommendations.forEach(rec => {;);        console.log(`${rec.type.toUpperCase()}: ${rec.title}`);`;        console.log(`  ${rec.description}`)})}`;  } catch (error) {;
+      console.log(;);  '\n=== BROKEN LINKS ===');      report.brokenLinks.forEach(link => {;);        console.log(`❌ ${link.url} - ${link.error}`)})}`;    if (report.recommendations.length > 0) {;
+      console.log(;);  '\n=== RECOMMENDATIONS ===');      report.recommendations.forEach(rec => {;);        console.log(`${rec.type.toUpperCase()}: ${rec.title}`);`;        console.log(`  ${rec.description}`)})}`;  } catch (error) {;
     console.error(;);  'Analysis "failed":', error)}';}';if (require.main === module) {;
->>>>>>> main
->>>>>>> main
   main()}
 module.exports = ComprehensiveWebsiteAnalyzer;
->>>>>>> main

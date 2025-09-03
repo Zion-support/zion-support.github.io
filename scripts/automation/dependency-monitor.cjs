@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
-=======
 #!/'usr/bin/env' node;
 
->>>>>>> main
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -16,13 +13,10 @@ class DependencyMonitor {;
     this.errorsFound = [];
     this.startTime = Date.now();
   }
-<<<<<<< HEAD
 
   log(message, type = `info`) {
-=======
 ;
   log(message, type = 'info') {;
->>>>>>> main
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`);
   }
@@ -32,7 +26,6 @@ class DependencyMonitor {;
       fs.mkdirSync(dirPath, { recursive: true });
     }
   }
-<<<<<<< HEAD
 
   async runCommand(command, options = {}) {
     try {
@@ -76,7 +69,6 @@ class DependencyMonitor {;
           this.log(`No security vulnerabilities found`, `success`);
         }
       } catch (error) {  
-=======
 ;
   async runCommand(command, options = {}) {;
     try {;
@@ -120,15 +112,11 @@ class DependencyMonitor {;
           this.log('No security vulnerabilities found', 'success');
         }
       } catch (error) {;
->>>>>>> main
         this.log('No security vulnerabilities found', 'success');
         }
     }
-<<<<<<< HEAD
     
-=======
     ;
->>>>>>> main
     // Check for missing dependencies;
     const lsResult = await this.runCommand('npm ls --depth=0');
     if (!lsResult.success) {;
@@ -136,7 +124,6 @@ class DependencyMonitor {;
       this.errorsFound.push(`Missing dependencies detected`);
     }
   }
-<<<<<<< HEAD
 
   async generateReport() {
     this.log(`Generating dependency monitor report...`);
@@ -149,7 +136,6 @@ class DependencyMonitor {;
       summary: {
         dependenciesHealthy: this.errorsFound.length === 0,
         totalIssues: this.errorsFound.length,
-=======
 ;
   async generateReport() {;
     this.log('Generating dependency monitor report...');
@@ -162,7 +148,6 @@ class DependencyMonitor {;
       summary: {;
         dependenciesHealthy: this.errorsFound.length === 0,;
         totalIssues: this.errorsFound.length,;
->>>>>>> main
         totalFixes: this.fixesApplied.length;
       }
     };
@@ -171,7 +156,6 @@ class DependencyMonitor {;
     fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));
     this.log(`Dependency monitor report generated: ${this.logFile}`);
   }
-<<<<<<< HEAD
 
   async run() {
     this.log(`Starting dependency monitoring process...`);
@@ -182,7 +166,6 @@ class DependencyMonitor {;
       
       this.log(`Dependency monitoring completed`, `success`);
     } catch (error) {  this.log(`Error during dependency monitoring: ${error.message  }`, `error`);this.errorsFound.push(`Process error: ${error.message}`);
-=======
 ;
   async run() {;
     this.log('Starting dependency monitoring process...');
@@ -193,16 +176,12 @@ class DependencyMonitor {;
       ;
       this.log('Dependency monitoring completed', 'success');
     } catch (error) {this.log(`Error during dependency monitoring: ${error.message}`, 'error');this.errorsFound.push(`Process error: ${error.message}`);
->>>>>>> main
       await this.generateReport();
     }
   }
 }
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
 monitor.run().catch(console.error);

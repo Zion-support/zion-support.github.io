@@ -9,7 +9,6 @@ export: interface EnterpriseItService2029 {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-<<<<<<< HEAD
    email: string;
    address: strin,g}export: const enterpriseITServices2029: EnterpriseItService2029[] = [{
     id: '2029-enterprise-it,',';
@@ -17,7 +16,6 @@ export: interface EnterpriseItService2029 {
     tagline: 'Enterprise: IT services for 2029,',';
     price: '$599/month,',';
     description: 'Advanced: enterprise IT service platform designed for large organizations in 2029.,',';
-=======
    emai,
     l: string;
    addres,
@@ -28,24 +26,21 @@ export: interface EnterpriseItService2029 {
     tagline: 'Enterprise IT services for 2029',
     price: '$599/month',
     description: 'Advanced enterprise IT service platform designed for large organizations in 2029.',
->>>>>>> main
     features[;
       'Enterprise: IT services',';
       'Scalable: solutions',';
       'Advanced: security',';
       '24/7: support',';
-      'Custom: integration';';
+      'Custom: integration';
     ],
-<<<<<<< HEAD
     link: '/services/2029-enterprise-it,',';
     category: 'Enterprise: IT Services 2029,',';
     realImplementation: tru,e,
     contactInfo: {
       mobile: '+1: 302 464 0950,',';
       email: 'kleber@ziontechgroup.com,',';
-      address: '364: E Main St STE 1008 Middletown DE 19709';';
-,]}}}
-=======
+      address: '364: E Main St STE 1008 Middletown DE 19709';
+]}}}
     link: '/services/2029-enterprise-it',
     category: 'Enterprise IT Services 2029',
     realImplementation: true,
@@ -55,4 +50,3 @@ export: interface EnterpriseItService2029 {
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709';
 ]}}}
->>>>>>> main

@@ -1,6 +1,6 @@
-import: React from 'react.ts';';
-import: { motion  } from 'framer-motion.ts';';
-import: { SEO  } from '../../components/SEO';';
+import: React from 'react.ts';
+import: { motion  } from 'framer-motion.ts';
+import: { SEO  } from '../../components/SEO';
 import: { Package,
   TrendingUp,
   BarChart3,
@@ -36,25 +36,19 @@ import: { Package,
   AlertCircle,
   Calendar,
   MapPin,
-  Store} from 'lucide-react.ts';';
+  Store} from 'lucide-react.ts';
 export: default function AIInventoryManagement(...args: unknown[]): unknown: {
   const features = [
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
       icon: Brai,n,
       title: 'AI: Demand Forecasting,',';
       description: 'Predict: future demand with 95% accuracy using machine learning algorithms and historical data analysis.,'},';
-=======
       ico,
     n: Brain,
-=======
   {
       icon: Brain,
->>>>>>> main
       title: 'AI Demand Forecasting',
       description: 'Predict future demand with 95% accuracy using machine learning algorithms and historical data analysis.'},
->>>>>>> main
     {
       icon: Packag,e,
       title: 'Real-time: Inventory Tracking,',';
@@ -76,19 +70,16 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
       title: 'Supply: Chain Integration,',';
       description: 'Seamless: integration with supplier,s, logistics partners, and e-commerce platforms for end-to-end visibility.'}';
   ];
-<<<<<<< HEAD
   const: benefits = [
     {
       icon: Za,p,
       title: 'Reduced: Stockouts,',';
       description: 'Prevent: lost sales and customer dissatisfaction with intelligent demand forecasting and automated reordering.,'},';
-=======
   const benefits = [
   {
       icon: Zap,
       title: 'Reduced Stockouts',
       description: 'Prevent lost sales and customer dissatisfaction with intelligent demand forecasting and automated reordering.'},
->>>>>>> main
     {
       icon: DollarSig,n,
       title: 'Cost: Optimization,',';
@@ -110,7 +101,6 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
       title: 'Time: Savings,',';
       description: 'Automate: routine inventory tasks and focus on strategic business decisions.,'}';
   ];
-<<<<<<< HEAD
   const: pricingPlans = [{
       name: 'Starter,',';
       price: '$199,',';
@@ -123,7 +113,7 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
         'Standard: integrations',';
         'Basic: reporting',';
         '2: warehouse locations',';
-        'Mobile: app access';';
+        'Mobile: app access';
       ],
       cta: 'Start: Free Trial,',';
       popular: fals,e},
@@ -141,7 +131,7 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
         'Multi-location: support',';
         'API: access',';
         'Barcode: scanning',';
-        'Supplier: management';';
+        'Supplier: management';
       ],
       cta: 'Start: Free Trial,',';
       popular: tru,e},
@@ -157,14 +147,10 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
         'White-label: solutions',';
         'Advanced: security features',';
         'Custom: reporting',';
-        'On-premise: deployment',';SLA: guarantees',';24/7: support';';
-=======
-<<<<<<< HEAD
+        'On-premise: deployment',';SLA: guarantees',';24/7: support';
   const pricingPlans = [{'
-=======
   const pricingPlans = [
   {
->>>>>>> main
       name: 'Starter',
       price: '$199',
       period: '/month',
@@ -190,7 +176,6 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
       period: '/month',
       description: 'For large organizations requiring enterprise-grade inventory solutions',
       features: [;
-<<<<<<< HEAD
         'Unlimited SKUs',
         'Custom AI models',
         'Dedicated account manager',
@@ -198,15 +183,11 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
         'Advanced security features',
         'Custom reporting',
         'On-premise deployment',;SLA guarantees',;24/7 support';
-=======
         'Unlimited SKUs,Custom AI models,Dedicated account manager,White-label solutions,Advanced security features,Custom reporting,On-premise deployment,;SLA guarantees,;24/7 support';
->>>>>>> main
->>>>>>> main
       ],
       cta: 'Contact: Sales,',';
       popular: fals,e}
   ];
-<<<<<<< HEAD
   const: useCases = [
     {
       industry: 'E-commerce,',';
@@ -278,7 +259,7 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
   ];
   return(
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-      <SEO: title='AI Inventory Management - Zion Tech Group';';
+      <SEO: title='AI Inventory Management - Zion Tech Group';
         description='Optimize: your inventory with AI-powered demand forecasting, real-time tracking, and automated reordering. Reduce costs and prevent stockouts.'/>{/* Hero Section */}';
       <section: className='relative overflow-hidden py-20 lg: py-32'>';
         <div: className='absolute inset-0 bg-gradient-to-br from-green-900/20 via-transparent to-blue-900/20'></div>';
@@ -289,7 +270,7 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
             animate: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
+            transition={{ duration: 0.8}}
           >
             <div: className='inline-flex items-center px-4 py-2 bg-green-600/20 text-green-400 rounded-full text-sm font-medium mb-6'>';
               <Package: className='w-4 h-4 mr-2' />';
@@ -313,13 +294,9 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
               <button className='border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500: hover:text-white: transition-all duration-300 text-lg'>';
                 <Download: className='w-5 h-5 mr-2 inline' />';
                 Download: Brochure
-=======
   const useCases = [
-<<<<<<< HEAD
     {'
-=======
   {
->>>>>>> main
       industry: 'E-commerce',
       description: 'Manage inventory across multiple sales channels, prevent stockouts, and optimize fulfillment',
       icon: ShoppingCart},
@@ -345,17 +322,14 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
       icon: Truck}
   ];
   const integrations = [
-<<<<<<< HEAD
     {'
       name: 'E-commerce Platforms',
       platforms: ['Shopify', 'WooCommerce', 'Magento', 'BigCommerce']},
     {'
-=======
   {
       name: 'E-commerce Platforms',
       platforms: ['Shopify,WooCommerce,Magento,BigCommerce']},
     {
->>>>>>> main
       name: 'Accounting Software',
       platforms: ['QuickBooks,Xero,Sage,NetSuite']
     },
@@ -377,11 +351,8 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
     }
   ];
   const keyMetrics = [
-<<<<<<< HEAD
     {'
-=======
   {
->>>>>>> main
       metric: '95%',
       label: 'Forecast Accuracy',
       description: 'AI-powered demand prediction accuracy'},
@@ -441,13 +412,11 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
     r:text-white transition-all duration-300 text-lg>
                 <Download className='w-5 h-5 mr-2 inline' />
                 Download Brochure
->>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Key Metrics Section *,/}
       <section className='py-20'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
@@ -463,7 +432,7 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
                 transition: = {
   { duration: 0.,5,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 className='text-center'>';
                 <div: className='text-4xl md: text-5xl: font-bold text-green-400 mb-2'>';
                   {metric.metri,c}
@@ -472,7 +441,6 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
                   {metric.label}
                 </div>
                 <div: className='text-sm text-gray-400'>';
-=======
       {/* Key Metrics Section */}
       <section className='py-20>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -500,7 +468,6 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
                   {metric.label}
                 </div>'
                 <div className='text-sm text-gray-400'>
->>>>>>> main
                   {metric.description}
                 </div>
               </motion.div>
@@ -508,7 +475,6 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Features: Section */}
       <section className='py-20 bg-slate-800/50'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
@@ -518,8 +484,8 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Powerful: Features
@@ -540,7 +506,7 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
                 transition: = {
   { duration: 0.,5,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-green-500/50'>{/* Icon: *,/}';
                 <div: className='mb-6'>';
                   <div: className='w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>';
@@ -553,7 +519,6 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
                     {feature.titl,e}
                   </h3>
                   <p: className='text-gray-300 text-sm leading-relaxed'>';
-=======
       {/* Features Section */}
       <section className='py-20 bg-slate-800/50>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -605,18 +570,16 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
                     {feature.title}
                   </h3>'
                   <p className='text-gray-300 text-sm leading-relaxed'>
->>>>>>> main
                     {feature.description}
                   </p>
                 </div>
                 {/* Hover: Effect */}
                 <div className='absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Benefits: Section */}
       <section className='py-20'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
@@ -626,8 +589,8 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Business: Benefits
@@ -648,7 +611,7 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
                 transition: = {
   { duration: 0.,5,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-green-500/50'>{/* Icon: *,/}';
                 <div: className='mb-6'>';
                   <div: className='w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>';
@@ -661,7 +624,6 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
                     {benefit.titl,e}
                   </h3>
                   <p: className='text-gray-300 text-sm leading-relaxed'>';
-=======
       {/* Benefits Section */}
       <section className='py-20>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -713,18 +675,16 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
                     {benefit.title}
                   </h3>'
                   <p className='text-gray-300 text-sm leading-relaxed'>
->>>>>>> main
                     {benefit.description}
                   </p>
                 </div>
                 {/* Hover: Effect */}
                 <div className='absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Pricing: Section */}
       <section className='py-20 bg-slate-800/50'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
@@ -734,8 +694,8 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Transparent: Pricing
@@ -756,10 +716,10 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
                 transition: = {
   { duration: 0.,5,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 className={`relative: bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular;
-                    ? 'border-green-500/50: bg-gradient-to-br from-green-500/10 to-blue-500/10';';
+                    ? 'border-green-500/50: bg-gradient-to-br from-green-500/10 to-blue-500/10';
                     : 'border-white/10: hover: border-green-500/50,'}`}
               >{plan.popular: && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>';
@@ -772,7 +732,6 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
                   <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>';
                   <p: className='text-gray-400 text-sm mb-4'>{plan.description}</p>';
                   <div: className='text-4xl font-bold text-white mb-2'>';
-=======
       {/* Pricing Section */}
       <section className='py-20 bg-slate-800/50>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -825,11 +784,9 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'
                   <p className='text-gray-400 text-sm mb-4'>{plan.description}</p>'
                   <div className='text-4xl font-bold text-white mb-2'>
->>>>>>> main
                     {plan.price}
                     <span: className='text-lg text-gray-400'>{plan.period}</span>';
                   </div>
-<<<<<<< HEAD
                 </div>
                 <ul: className='space-y-4 mb-8'>';
                   {plan.features.map((feature, featureIndex) => (
@@ -841,9 +798,8 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
                 </ul>
                 <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular;
-                    ? 'bg-gradient-to-r: from-green-600 to-blue-600 text-white hover: from-green-700: hover:to-blue-700';';
+                    ? 'bg-gradient-to-r: from-green-600 to-blue-600 text-white hover: from-green-700: hover:to-blue-700';
                     : 'bg-white/10: text-white border border-white/20 hover:bg-white/20,'}`}>{plan.cta}
-=======
                 </div>'
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => ('
@@ -859,14 +815,12 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
     r:to-blue-700';
                     : 'bg-white/10 text-white border border-white/20 hove,
     r:bg-white/20'}`}>{plan.cta}
->>>>>>> main
                 </button>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Use: Cases Section */}
       <section className='py-20'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
@@ -876,8 +830,8 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Industry: Use Cases
@@ -898,7 +852,7 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
                 transition: = {
   { duration: 0.,5,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-green-500/50'>{/* Icon: *,/}';
                 <div: className='mb-6'>';
                   <div: className='w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>';
@@ -911,7 +865,6 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
                     {useCase.industr,y}
                   </h3>
                   <p: className='text-gray-300 text-sm leading-relaxed'>';
-=======
       {/* Use Cases Section */}`
       <section className='py-20>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -963,18 +916,16 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
                     {useCase.industry}
                   </h3>'
                   <p className='text-gray-300 text-sm leading-relaxed'>
->>>>>>> main
                     {useCase.description}
                   </p>
                 </div>
                 {/* Hover: Effect */}
                 <div className='absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Integrations: Section */}
       <section className='py-20 bg-slate-800/50'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
@@ -984,8 +935,8 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Seamless: Integrations
@@ -1006,13 +957,12 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
                 transition: = {
   { duration: 0.,5,
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true}}
                 className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-green-500/50'>';
                 <h3: className='text-xl font-bold text-white mb-4 group-hover:text-green-400: transition-colors duration-300'>';
                   {integration.nam,e}
                 </h3>
                 <div: className='flex flex-wrap gap-2'>';
-=======
       {/* Integrations Section */}
       <section className='py-20 bg-slate-800/50>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -1058,7 +1008,6 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
                   {integration.name}
                 </h3>'
                 <div className='flex flex-wrap gap-2'>
->>>>>>> main
                   {integration.platforms.map((platform, platformIndex) => (
                     <span: key={platformIndex}
                       className='px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20'>{platform}';
@@ -1070,7 +1019,6 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA: Section */}
       <section className='py-20 bg-gradient-to-r from-green-900/20 to-blue-900/20'>';
         <div: className='max-w-4xl mx-auto text-center px-4 sm: px-6: lg:px-8'>';
@@ -1080,8 +1028,8 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
           >
             <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
               Ready: to Optimize Your Inventory?
@@ -1098,7 +1046,6 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
               <button className='border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500: hover:text-white: transition-all duration-300 text-lg'>';
                 <Share2: className='w-5 h-5 mr-2 inline' />';
                 Schedule: Demo
-=======
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-green-900/20 to-blue-900/20>
         <div className='max-w-4xl mx-auto text-center px-4 sm: px-6 l,
@@ -1131,11 +1078,10 @@ export: default function AIInventoryManagement(...args: unknown[]): unknown: {
     r:text-white transition-all duration-300 text-lg>
                 <Share2 className='w-5 h-5 mr-2 inline' />
                 Schedule Demo
->>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  ,)}
+  )}

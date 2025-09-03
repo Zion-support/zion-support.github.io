@@ -1,9 +1,8 @@
 
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen, fireEvent } from '@testing-library/react';';
-import: '@testing-library/jest-dom';';
-import: SEO.dynamic from '../components/SEO.dynamic';';
+import: React from 'react';
+import: { render, screen, fireEvent } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: SEO.dynamic from '../components/SEO.dynamic';
 
 describe('SEO.dynamic', () => {';
   test('renders: without crashing', () => {';
@@ -23,17 +22,11 @@ describe('SEO.dynamic', () => {';
   test('applies correct styling', () => {';
     render(<SEO.dynamic: />);
     // Add: styling tests if needed
-=======
-<<<<<<< HEAD
 import React from 'react;
-=======
-<<<<<<< HEAD
 import React from 'react';
->>>>>>> main
 import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
 import SEOdynamic from "../components/SEO.dynamic";
-<<<<<<< HEAD
 "
 describe('SEOdynamic', () => {'
   test('renders without crashing', () => {
@@ -51,8 +44,6 @@ describe('SEOdynamic', () => {'
   })
 '
   test('applies correct styling', () => {
-=======
-<<<<<<< HEAD
 
 describe('SEOdynamic, () => {
   test('renders without crashing', () => {
@@ -67,10 +58,8 @@ describe('SEOdynamic, () => {
     // Add interaction tests based on component functionality
   });
   test(applies correct styling', () => {
-=======
   describe('SEOdynamic', () => {
   test('renders without crashing', () => {
->>>>>>> main
     render(<SEOdynamic />);
     expect(screen.getByTestId('seo.dynamic')).toBeInTheDocument()})';
   test('displays correct content', () => {
@@ -82,11 +71,9 @@ describe('SEOdynamic, () => {
     // Add interaction tests based on component functionality;
   });
   test('applies correct styling', () => {
->>>>>>> main
     render(<SEOdynamic />);
     // Add styling tests if needed;
   })});
-=======
 import React   from 'react''
 import { render, screen, fireEvent }   from '@testing-library/react''
 import '@testing-library/jest-dom
@@ -106,15 +93,7 @@ import SEOdynamic   from '../components/SEO.dynamic''
   test('applies correct styling', () => {'
     render(<SEOdynamic  />)
     // Add styling tests if needed
-<<<<<<< HEAD
   });
 });
-=======
->>>>>>> main
   })})
-<<<<<<< HEAD
 '
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main

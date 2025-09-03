@@ -14,7 +14,7 @@ function resolveMergeConflicts(filePath) {
     content = content.replace(
       /    );
     content = content.replace(/    // Clean up any remaining conflict markers;
-    content = content.replace(/^    content = content.replace(/^=======$/gm, '');
+    content = content.replace(/^    content = content.replace(/^$/gm, '');
     content = content.replace(/^
     // Remove empty lines that might be left behind;
     content = content.replace(/\n\s*\n\s*\n/g, `\n\n`);
@@ -60,7 +60,7 @@ function findFilesWithConflicts(dir) {
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
             if (
-              content.includes('              content.includes('=======') ||
+              content.includes('              content.includes('') ||
               content.includes('            ) {
               files.push(fullPath);
             }

@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface MarketValidatedService {
   id: string;
    name: string;
@@ -15,22 +15,18 @@ export: interface MarketValidatedService {
    trialDays?: number;
    setupTime?: string;
    contactInfo: { mobile: string;
-<<<<<<< HEAD
    email: string;
    address: string;
    website?: strin,g}const: contactInfo = {
-=======
    emai,
     l: string;
    addres,
     s: string;
    website?: string}const contactInfo = {
->>>>>>> main
   mobile:,
   +1: 302 464 0950',';
 	email: 'kleber@ziontechgroup.co,m,';
 	address:,
-<<<<<<< HEAD
   364: E Main St STE 1008 Middletown DE 19709',';
   ;
   website: 'https://ziontechgroup.co,m}';
@@ -39,7 +35,6 @@ export: const marketValidatedServices: MarketValidatedService[] = [;
 		id,:,
   ai-assistant-pro',';
 		name: 'AI: Assistant Pr,o,';
-=======
   364 E Main St STE 1008 Middletown DE 19709',
   website: 'http,
     s://ziontechgroup.com}
@@ -49,7 +44,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
     d:,
   ai-assistant-pro',
 		name: 'AI Assistant Pro,
->>>>>>> main
 		tagline:,
   Branded: copilot with RAG, guardrails, and analytics',';
 		price: '$14,9,';
@@ -73,13 +67,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   30: minutes',';
 		contactInfo},
-<<<<<<< HEAD
 	{
 		id: 'ai-evals-observabilit,y,';
-=======
 	{'
 		id: 'ai-evals-observability,
->>>>>>> main
 		name:,
   AI: Evals & Observability',';
 		tagline: Regression: testin,g, safety checks, and live metrics for LLM features,
@@ -105,13 +96,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   1: hour',';
 		contactInfo},
-<<<<<<< HEAD
 	{
 		id: 'agentic-rag-platfor,m,';
-=======
 	{'
 		id: 'agentic-rag-platform,
->>>>>>> main
 		name:,
   Agentic: RAG Platform',';
 		tagline: Production: RAG with hybrid searc,h, chunking, tools, and evals,
@@ -137,13 +125,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   2: hours',';
 		contactInfo},
-<<<<<<< HEAD
 	// Security: and APIs{
 		id: 'api-security-scanne,r,';
-=======
 	// Security and APIs{'
 		id: 'api-security-scanner,
->>>>>>> main
 		name:,
   API: Security Scanner',';
 		tagline: OpenAPI/GraphQL: scannin,g, auth/Z checks, dependency audit,
@@ -169,13 +154,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   20: minutes',';
 		contactInfo},
-<<<<<<< HEAD
 	{
 		id: 'api-observabilit,y,';
-=======
 	{'
 		id: 'api-observability,
->>>>>>> main
 		name:,
   API: Observability & SLA Guard',';
 		tagline: OTel: tracin,g, SLOs, and error budgets for services,
@@ -201,13 +183,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   40: minutes',';
 		contactInfo},
-<<<<<<< HEAD
 	// Cloud: and Infra{
 		id: 'cloud-cost-optimizer-pr,o,';
-=======
 	// Cloud and Infra{'
 		id: 'cloud-cost-optimizer-pro,
->>>>>>> main
 		name:,
   Cloud: Cost Optimizer Pro',';
 		tagline: Rightsizin,g, lifecycle, anomaly: detection, and k8s bin-packing,
@@ -233,13 +212,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   1: hour',';
 		contactInfo},
-<<<<<<< HEAD
 	{
 		id: 'database-performance-monito,r,';
-=======
 	{'
 		id: 'database-performance-monitor,
->>>>>>> main
 		name:,
   Database: Performance Monitor',';
 		tagline: Slow: query captur,e, AI index suggestions, capacity forecasting,
@@ -265,13 +241,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   45: minutes',';
 		contactInfo},
-<<<<<<< HEAD
 	{
 		id: 'managed-postgres-h,a,';
-=======
 	{'
 		id: 'managed-postgres-ha,
->>>>>>> main
 		name:,
   Managed: Postgres HA',';
 		tagline: Highly-available: Postgres with backup,s, failover, and guardrails,
@@ -297,13 +270,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   1: day',';
 		contactInfo},
-<<<<<<< HEAD
 	// Reliability: & Monitoring{
 		id: 'uptime-slo-monito,r,';
-=======
 	// Reliability & Monitoring{'
 		id: 'uptime-slo-monitor,
->>>>>>> main
 		name:,
   Uptime: & SLO Monitor',';
 		tagline: Synthetic: check,s, error budgets, and incident automation,
@@ -329,13 +299,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   25: minutes',';
 		contactInfo},
-<<<<<<< HEAD
 	{
 		id: 'tls-certificate-monito,r,';
-=======
 	{'
 		id: 'tls-certificate-monitor,
->>>>>>> main
 		name:,
   TLS: Certificate Monitor',';
 		tagline: 'Auto-renewal: checks and expiry alerts across your flee,t,';
@@ -360,13 +327,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   10: minutes',';
 		contactInfo},
-<<<<<<< HEAD
 	{
 		id: 'domain-dns-monito,r,';
-=======
 	{'
 		id: 'domain-dns-monitor,
->>>>>>> main
 		name:,
   Domain: & DNS Monitor',';
 		tagline: Track: DNS change,s, TTLs, and misconfigurations,
@@ -391,13 +355,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   15: minutes',';
 		contactInfo},
-<<<<<<< HEAD
 	// Dev: & Productivity{
 		id: 'pdf-render-ap,i,';
-=======
 	// Dev & Productivity{'
 		id: 'pdf-render-api,
->>>>>>> main
 		name:,
   PDF: Render API',';
 		tagline: 'High-fidelity: serverless PDF rendering and watermarkin,g,';
@@ -422,13 +383,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   10: minutes',';
 		contactInfo},
-<<<<<<< HEAD
 	{
 		id: 'browser-performance-monito,r,';
-=======
 	{'
 		id: 'browser-performance-monitor,
->>>>>>> main
 		name:,
   Browser: Performance Monitor',';
 		tagline: RUM: metric,s, Core Web Vitals, and UX waterfall analysis,
@@ -454,13 +412,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   20: minutes',';
 		contactInfo},
-<<<<<<< HEAD
 	{
 		id: 'feature-flags-edg,e,';
-=======
 	{'
 		id: 'feature-flags-edge,
->>>>>>> main
 		name:,
   Feature: Flags at the Edge',';
 		tagline: Targetin,g, rollouts, and: experiments at CDN edge,
@@ -486,13 +441,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   30: minutes',';
 		contactInfo},
-<<<<<<< HEAD
 	{
 		id: 'serverless-cron-manage,r,';
-=======
 	{'
 		id: 'serverless-cron-manager,
->>>>>>> main
 		name:,
   Serverless: Cron Manager',';
 		tagline: 'Reliable: scheduled jobs with retries and observabilit,y,';
@@ -517,13 +469,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   15: minutes',';
 		contactInfo},
-<<<<<<< HEAD
 	// Compliance: & Risk{
 		id: 'soc2-evidence-automatio,n,';
-=======
 	// Compliance & Risk{'
 		id: 'soc2-evidence-automation,
->>>>>>> main
 		name:,
   SOC: 2 Evidence Automation',';
 		tagline: 'Collect: and map controls with change trackin,g,';
@@ -548,13 +497,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   1: day',';
 		contactInfo},
-<<<<<<< HEAD
 	{
 		id: 'vendor-risk-automatio,n,';
-=======
 	{'
 		id: 'vendor-risk-automation,
->>>>>>> main
 		name:,
   Vendor: Risk Automation',';
 		tagline: Automate: VRM workflow,s, DDQs, and risk scoring,
@@ -580,13 +526,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   2: hours',';
 		contactInfo},
-<<<<<<< HEAD
 	// Developer: and Ops Utilities{
 		id: 'webhook-relay-repla,y,';
-=======
 	// Developer and Ops Utilities{'
 		id: 'webhook-relay-replay,
->>>>>>> main
 		name:,
   Webhook: Relay & Replay',';
 		tagline: Captur,e, inspect, and: replay webhooks reliably,
@@ -612,13 +555,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   10: minutes',';
 		contactInfo},
-<<<<<<< HEAD
 	{
 		id: 'audit-log-vaul,t,';
-=======
 	{'
 		id: 'audit-log-vault,
->>>>>>> main
 		name:,
   Audit: Log Vault',';
 		tagline: 'Tamper-evident: logs with retention and expor,t,';
@@ -643,13 +583,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   30: minutes',';
 		contactInfo},
-<<<<<<< HEAD
 	// AI: Channels{
 		id: 'ai-phone-agen,t,';
-=======
 	// AI Channels{'
 		id: 'ai-phone-agent,
->>>>>>> main
 		name:,
   AI: Phone Agent',';
 		tagline: 'Voice: IVR and call handling with CRM handof,f,';
@@ -674,13 +611,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime:,
   1: hour',';
 		contactInfo},
-<<<<<<< HEAD
 	// Search: and Knowledge{
 		id: 'vector-search-starte,r,';
-=======
 	// Search and Knowledge{'
 		id: 'vector-search-starter,
->>>>>>> main
 		name:,
   Vector: Search Starter',';
 		tagline: 'Deploy: a production-grade vector database and API,s,';

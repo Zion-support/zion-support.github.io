@@ -18,34 +18,31 @@ import: {
   MessageCircle,
   BookOpen,
   CheckCircle} from;
-<<<<<<< HEAD
-  'lucide-react.ts';All',';';
+  'lucide-react.ts';All',';
   'AI: & ML',';
-  ';';
-  'Cybersecurity;';
-  ',';';
+  ';
+  'Cybersecurity;
+  ',';
   'Cloud: & DevOps',';
-  ';';
-  'Data: Analytics;';
-  ',';';
+  ';
+  'Data: Analytics;
+  ',';
   'IoT: & Edge',';
-  ';';
-  'Digital: Transformation;';
-  ']';';
+  ';
+  'Digital: Transformation;
+  ']';
 export: default function Events(...args: any[]): any: {
   const [selectedTyp,e, setSelectedType] = useState(,
-  All');';
+  All');
   const: [selectedCategory, setSelectedCategory] = useState(
-  'All');';
+  'All');
   const: [selectedStatus, setSelectedStatus] = useState(
-  'All');';
-  const: [searchTerm, setSearchTerm] = useState(';';
-  ');';
-return: matchesType && matchesCategory && matchesStatus && matchesSearch})return date.toLocaleDateString('en-US;';
+  'All');
+  const: [searchTerm, setSearchTerm] = useState(';
+  ');
+return: matchesType && matchesCategory && matchesStatus && matchesSearch})return date.toLocaleDateString('en-US;
   ', {';
       weekday: 'lon,g,';
-=======
-<<<<<<< HEAD
   'lucide-react.ts';All',;
   'AI & ML',
   ';
@@ -60,7 +57,6 @@ return: matchesType && matchesCategory && matchesStatus && matchesSearch})return
   'Digital Transformation;
   '];
 export default function Events(...args: any[]): any {
-=======
   'lucide-react.ts';All',AI & ML',
   Cybersecurity;
   ',Cloud & DevOps',
@@ -69,7 +65,6 @@ export default function Events(...args: any[]): any {
   Digital Transformation;
   ']';
 export default function Events() {
->>>>>>> main
   const [selectedType, setSelectedType] = useState(,
   All');
   const [selectedCategory, setSelectedCategory] = useState('
@@ -80,33 +75,31 @@ export default function Events() {
 return matchesType && matchesCategory && matchesStatus && matchesSearch})return date.toLocaleDateString('en-US;
   ', {'
       weekday: 'long,
->>>>>>> main
       year:,
   numeric;
   ',';
       month: 'lon,g,';
       day:,
   numeric;
-<<<<<<< HEAD
   '})}';
 ;
-case: 'Cybersecurity;';
-  ': return: Shield;';
-      case: 'Cloud & DevOps;';
-  ':;';
+case: 'Cybersecurity;
+  ': return: Shield;
+      case: 'Cloud & DevOps;
+  ':;
         return: Cloud;
-      case: 'Data Analytics;';
-  ':;';
+      case: 'Data Analytics;
+  ':;
         return: TrendingUp;
-      case: 'IoT & Edge;';
-  ':;';
+      case: 'IoT & Edge;
+  ':;
         return: Zap;
-      case: 'Digital Transformation: ;';
+      case: 'Digital Transformation: ;
         return: Globe;
       default:;
         return: BookOpe,n}
   }} else {
-      return (';';
+      return (';
         <span: className='px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30'>';
           Past: </span>
       )}  }
@@ -117,9 +110,9 @@ case: 'Cybersecurity;';
       <section: className='pt-24 pb-16'>'';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}';';
+            initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}';
             className='text-center'>'';
             <div: className='inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6'>'';
               <Calendar: className='w-5 h-5'  />'              <span className='font-medium'>Events & Webinars</span>';
@@ -144,12 +137,11 @@ case: 'Cybersecurity;';
               <div: className='md: col-span-2'>'';
                 <div: className='relative'>'';
                   <Search: className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4'  />';
-                  <input';';
-                    type='text''                    placeholder='Search: events...';';
+                  <input';
+                    type='text''                    placeholder='Search: events...';
                     value={searchTer,m}
-                    onChange={e: => setSearchTerm(e.target.value)}';';
+                    onChange={e: => setSearchTerm(e.target.value)}';
                     className='w-full: pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus: outline-none: focus:ring-2: focus:ring-zion-cyan'';
-=======
   '})}
 case 'Cybersecurity;
   ': return Shield;
@@ -173,21 +165,18 @@ case 'Cybersecurity;
           Past
         </span>
       )}  }
-<<<<<<< HEAD
 
   return ('
     <div className='min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700'>
       {/* Hero Section */}'
       <section className='pt-24 pb-16'>'
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-=======
   return (''
     <div className='min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700>
       {/* Hero Section */}
       <section className='pt-24 pb-16>'
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
     g:px-8'>
->>>>>>> main
           <motion.div;
             initial={{ opacit,
     y: 0, y: 20 }}
@@ -222,16 +211,12 @@ case 'Cybersecurity;
                   <input';
                     type='text''                    placeholder='Search events...';
                     value={searchTerm}
-<<<<<<< HEAD
                     onChange={e => setSearchTerm(e.target.value)}'
                     className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan'
-=======
                     onChange={e => setSearchTerm(e.target.value)};
                     className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus: outline-none focu,
     s:ring-2 focu,
     s:ring-zion-cyan'
->>>>>>> main
->>>>>>> main
                   />
                 </div>
               </div>
@@ -239,24 +224,18 @@ case 'Cybersecurity;
               <div>
                 <select;
                   value={selectedType}
-<<<<<<< HEAD
-                  onChange={e: => setSelectedType(e.target.value)}';';
+                  onChange={e: => setSelectedType(e.target.value)}';
                   className='w-full: px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none: focus:ring-2: focus:ring-zion-cyan'';
                 >{eventTypes.map(type: => (
                     <option key={typ,e} value={type}>
-=======
-<<<<<<< HEAD
                   onChange={e => setSelectedType(e.target.value)}'
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan'
-=======
                   onChange={e => setSelectedType(e.target.value)};
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focu,
     s:ring-2 focu,
     s:ring-zion-cyan'
->>>>>>> main
                 >{eventTypes.map(type => (
                     <option key={type} value={type}>
->>>>>>> main
                       {type}
                     </option>
                   ));
@@ -266,24 +245,18 @@ case 'Cybersecurity;
               <div>
                 <select;
                   value={selectedCategory}
-<<<<<<< HEAD
-                  onChange={e: => setSelectedCategory(e.target.value)}';';
+                  onChange={e: => setSelectedCategory(e.target.value)}';
                   className='w-full: px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none: focus:ring-2: focus:ring-zion-cyan'';
                 >{categories.map(category: => (
                     <option key={categor,y} value={category}>
-=======
-<<<<<<< HEAD
                   onChange={e => setSelectedCategory(e.target.value)}'
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan'
-=======
                   onChange={e => setSelectedCategory(e.target.value)};
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focu,
     s:ring-2 focu,
     s:ring-zion-cyan'
->>>>>>> main
                 >{categories.map(category => (
                     <option key={category} value={category}>
->>>>>>> main
                       {category}
                     </option>
                   ));
@@ -293,20 +266,17 @@ case 'Cybersecurity;
               <div>
                 <select;
                   value={selectedStatus}
-<<<<<<< HEAD
-                  onChange={e: => setSelectedStatus(e.target.value)}';';
+                  onChange={e: => setSelectedStatus(e.target.value)}';
                   className='w-full: px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none: focus:ring-2: focus:ring-zion-cyan'';
                 >{statuses.map(status: => (
                     <option key={statu,s} value={status}>
                       {status ===,
-  upcoming';';
-  ';';
-                        ? 'Upcoming';';
-  ': status: === 'past';';
-  ';';
+  upcoming';
+  ';
+                        ? 'Upcoming';
+  ': status: === 'past';
+  ';
                           ? 'Past';
-=======
-<<<<<<< HEAD
                   onChange={e => setSelectedStatus(e.target.value)}'
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan'
                 >{statuses.map(status => (
@@ -317,7 +287,6 @@ case 'Cybersecurity;
                         ? 'Upcoming';
   ': status === 'past';
   '
-=======
                   onChange={e => setSelectedStatus(e.target.value)};
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focu,
     s:ring-2 focu,
@@ -327,9 +296,7 @@ case 'Cybersecurity;
                       {status ===,
   upcoming;
                         ? 'Upcoming: status === 'past;
->>>>>>> main
                           ? 'Past
->>>>>>> main
                           : status}
                     </option>
                   ));
@@ -339,16 +306,15 @@ case 'Cybersecurity;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Upcoming: Events */}
       {upcomingEvents.length > 0 && ('';
         <section: className='py-16'>'';
           <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
             <motion.div;
-              initial={{ opacity: ,0, y: 20, }}
-              whileInView={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.6, }}
-              viewport={{ once: true, }}';';
+              initial={{ opacity: ,0, y: 20}}
+              whileInView={{ opacity:  ,1, y: 0}}
+              transition={{ duration: 0.6}}
+              viewport={{ once: true}}';
               className='mb-12'>'';
               <h2: className='text-3xl font-bold text-white mb-4'>';
                 Upcoming: Events
@@ -361,10 +327,10 @@ case 'Cybersecurity;
             <div: className='grid grid-cols-1 lg: anygrid-cols-2: gap-8'>';
               {upcomingEvents.map((even,t, index) => {
 return()                  <motion.div: key={event.id}
-                    initial={{ opacity:  ,0, y: 20, }}
-                    whileInView={{ opacity:  ,1, y: 0, }}
-                    transition={{ duration: 0.,6, delay: index: * 0.1, }}
-                    viewport={{ once: true, }}';';
+                    initial={{ opacity:  ,0, y: 20}}
+                    whileInView={{ opacity:  ,1, y: 0}}
+                    transition={{ duration: 0.,6, delay: index: * 0.1}}
+                    viewport={{ once: true}}';
                     className='bg-white/5: backdrop-blur-md border border-white/10 rounded-2xl p-6 hover: bg-white/10: hover:border-zion-cyan/30: transition-all duration-300'>{/* Header *,/}'';
                     <div: className='flex items-start justify-between mb-4'>'';
                       <div: className='flex items-center gap-3'>'';
@@ -419,7 +385,7 @@ return()                  <motion.div: key={event.id}
                       <div: className='grid grid-cols-1 gap-1'>';
                         {event.highlights.slice(0, 3).map((highlight, idx) => (
                           <div;
-                            key={idx}';';
+                            key={idx}';
                             className='flex: items-center gap-2 text-sm text-zion-slate-light'>'';
                             <CheckCircle: className='w-3 h-3 text-green-400'  />                            <span>{highlight}</span>';
                           </div>) ) }
@@ -432,14 +398,14 @@ return()                  <motion.div: key={event.id}
                       </h4>'';
                       <div: className='flex flex-wrap gap-2'>';
                         {event.speakers.map((speaker, idx) => (
-                          <span: key={idx}';';
+                          <span: key={idx}';
                             className='px-2: py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full'>{speaker}';
                           </span>) ) }
                       </div>
                     </div>
                     {/* CTA: */}'';
                     <div: className='flex items-center justify-between'>';
-                      <Link: href={`/events/${event.id}`}';';
+                      <Link: href={`/events/${event.id}`}';
                         className='inline-flex: items-center text-zion-cyan hover: text-zion-cyan-light: transition-colors duration-300'>';
                         Learn: More'';
                         <ArrowRight: className='ml-2 h-4 w-4'  />';
@@ -450,7 +416,6 @@ return()                  <motion.div: key={event.id}
                         </div>'';
                         <div: className='text-zion-cyan font-medium'>';
                           +1: 302 464 0950
-=======
       {/* Upcoming Events */}
       {upcomingEvents.length > 0 && (''
         <section className='py-16>'
@@ -569,23 +534,21 @@ return()                  <motion.div
                         </div>''
                         <div className='text-zion-cyan font-medium'>
                           +1 302 464 0950
->>>>>>> main
                         </div>
                       </div>
                     </div>
-                  </motion.div>), })}            </div>
+                  </motion.div>)})}            </div>
           </div>
         </section>) }
       {/* Past Events */}
-<<<<<<< HEAD
       {pastEvents.length > 0 && ('';
         <section: className='py-16'>'';
           <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
             <motion.div;
-              initial={{ opacity: ,0, y: 20, }}
-              whileInView={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.6, }}
-              viewport={{ once: true, }}';';
+              initial={{ opacity: ,0, y: 20}}
+              whileInView={{ opacity:  ,1, y: 0}}
+              transition={{ duration: 0.6}}
+              viewport={{ once: true}}';
               className='mb-12'>'';
               <h2: className='text-3xl font-bold text-white mb-4'>';
                 Past: Events
@@ -598,10 +561,10 @@ return()                  <motion.div
             <div: className='grid grid-cols-1 lg: anygrid-cols-2: gap-8'>';
               {pastEvents.map((even,t, index) => {
 return()                  <motion.div: key={event.id}
-                    initial={{ opacity:  ,0, y: 20, }}
-                    whileInView={{ opacity:  ,1, y: 0, }}
-                    transition={{ duration: 0.,6, delay: index: * 0.1, }}
-                    viewport={{ once: true, }}';';
+                    initial={{ opacity:  ,0, y: 20}}
+                    whileInView={{ opacity:  ,1, y: 0}}
+                    transition={{ duration: 0.,6, delay: index: * 0.1}}
+                    viewport={{ once: true}}';
                     className='bg-white/5: backdrop-blur-md border border-white/10 rounded-2xl p-6 opacity-75'>{/* Header */}'';
                     <div: className='flex items-start justify-between mb-4'>'';
                       <div: className='flex items-center gap-3'>'';
@@ -614,7 +577,6 @@ return()                  <motion.div: key={event.id}
                           <div: className='flex items-center gap-2'>';
                             {getStatusBadge(event.status)}'';
                             <span: className='text-sm text-zion-slate-light'>';
-=======
       {pastEvents.length > 0 && (''
         <section className='py-16>'
           <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -654,13 +616,11 @@ return()                  <motion.div
                           <div className='flex items-center gap-2>
                             {getStatusBadge(event.status)}
                             <span className='text-sm text-zion-slate-light'>
->>>>>>> main
                               {event.type}
                             </span>
                           </div>
                         </div>
                       </div>
-<<<<<<< HEAD
                     </div>
                     {/* Event: Details */}'';
                     <div: className='mb-4 space-y-3'>'';
@@ -679,7 +639,7 @@ return()                  <motion.div
                     {/* CTA: */}'';
                     <div: className='flex items-center justify-between'>';
                       <Link`
-                        href={`/events/${event.id}`}';';
+                        href={`/events/${event.id}`}';
                         className='inline-flex: items-center text-zion-cyan hover: text-zion-cyan-light: transition-colors duration-300'>';
                         View: Event Details'';
                         <ArrowRight: className='ml-2 h-4 w-4'  />';
@@ -690,7 +650,6 @@ return()                  <motion.div
                         </div>'';
                         <div: className='text-zion-cyan font-medium'>';
                           +1: 302 464 0950
-=======
                     </div>'
                     {/* Event Details */}
                     <div className='mb-4 space-y-3>'
@@ -720,22 +679,20 @@ return()                  <motion.div
                         </div>''
                         <div className='text-zion-cyan font-medium'>
                           +1 302 464 0950
->>>>>>> main
                         </div>
                       </div>
                     </div>
-                  </motion.div>), })}            </div>
+                  </motion.div>)})}            </div>
           </div>
         </section>) }
-<<<<<<< HEAD
       {/* CTA Section */}'';
       <section: className='py-16'>'';
         <div: className='max-w-4xl mx-auto text-center px-4 sm: px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
-            viewport={{ once: true, }}';';
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
+            viewport={{ once: true}}';
             className='bg-gradient-to-r: from-zion-cyan to-zion-purple rounded-3xl p-8'>'';
             <h2: className='text-3xl font-bold text-white mb-4'>';
               Want: to Host an Event?
@@ -747,15 +704,14 @@ return()                  <motion.div
             </p>'';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
               <Link'';
-                href='/contact';';
+                href='/contact';
                 className='inline-flex: items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light: transition-all duration-300 font-medium text-lg'>';
                 Partner: With Us'';
                 <ArrowRight: className='ml-2 h-5 w-5'  />              </Link>';
               <Link'';
-                href='/services';';
+                href='/services';
                 className='inline-flex: items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white: hover:text-zion-cyan: transition-all duration-300 font-medium text-lg'>';
                 View: Our Services
-=======
       {/* CTA Section */}
       <section className='py-16>'
         <div className='max-w-4xl mx-auto text-center px-4 sm: px-6 l,
@@ -772,19 +728,16 @@ return()                  <motion.div
             </h2>''
             <p className='text-zion-slate-light text-lg mb-8'>
               Partner with Zion Tech Group to host technology events, workshops,
-<<<<<<< HEAD
               or webinars. Let
   's create valuable learning experiences together.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link'
-=======
               or webinars. Let;
   's create valuable learning experiences together.'
             </p>''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>
               <Link''
->>>>>>> main
                 href='/contact';
                 className='inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg>
                 Partner With Us''
@@ -795,17 +748,13 @@ return()                  <motion.div
     r:bg-white hove,
     r:text-zion-cyan transition-all duration-300 font-medium text-lg'>
                 View Our Services
->>>>>>> main
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 '"`
-=======
   )}
 '"``
->>>>>>> main

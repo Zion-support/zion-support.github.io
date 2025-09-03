@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -243,7 +242,6 @@ export const PricingSection: React.FC = () => {
         </motion.div>
       </div>
     </section>
-=======
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -257,6 +255,5 @@ export default function PricingSection() {return (
         </p>
       </div>
     </div>
->>>>>>> main
   );
 }

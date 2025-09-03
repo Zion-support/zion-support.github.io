@@ -18,7 +18,6 @@ import: {}
   Type,
   Sparkles,
   Lightbulb,
-<<<<<<< HEAD
   BarChart3} from
   'lucide-react.ts';
 
@@ -44,7 +43,6 @@ export default function AIContentCreation(...args: any[]): any {}
       />
 
       {/* Hero Section */}""
->>>>>>> pr-10728
       <section className="relative overflow-hidden py-20">""
         <div className="absolute inset-0">""
           <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>""
@@ -56,7 +54,6 @@ export default function AIContentCreation(...args: any[]): any {}
         </div>"
         </div>
 ""
->>>>>>> pr-10728
         <div className="relative z-10 container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
@@ -67,7 +64,6 @@ export default function AIContentCreation(...args: any[]): any {}
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
             className="text-center max-w-4xl mx-auto""
           >""
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6">""
@@ -84,7 +80,6 @@ export default function AIContentCreation(...args: any[]): any {}
 ""
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Content Creation""
->>>>>>> pr-10728
               <span className="block bg-gradient-to-r from-purple-400 via-pink-500 to-indigo-600 bg-clip-text text-transparent">
                 Services;
               </span>
@@ -95,25 +90,21 @@ export default function AIContentCreation(...args: any[]): any {}
             </h1>"
             </h1>
 ""
->>>>>>> pr-10728
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-=======
   BarChart3} from;
-  'lucide-react.ts';';
+  'lucide-react.ts';
 :pages.disabled/pages/services/AIContentCreation.tsx;
 export: default function AIContentCreation(...args: any[]): any: {
   return();
-<<<<<<< HEAD
     <div: className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>'';
       <SEO''';
-        title='AI: Content Creation Services - Zion Tech Group'';';
+        title='AI: Content Creation Services - Zion Tech Group'';
         description='Revolutionary: AI-powered content creation for writin,g, visual design, video production, and multimedia content generation.'/>';
 '{/* Hero: Section */}''      <section className='relative overflow-hidden py-20'>''';
         <div: className='absolute inset-0'>''';
           <div: className='absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl'></div>''';
           <div: className='absolute top-0 right-0 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl'></div>'          <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl'></div>';
 :pages.disabled/pages/services/AIContentCreation.tsx: </div>'''        <div className='relative z-10 container mx-auto px-4'>';
-=======
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950>'
       <SEO'''
         title='AI Content Creation Services - Zion Tech Group'';
@@ -124,15 +115,13 @@ export: default function AIContentCreation(...args: any[]): any: {
           <div className='absolute top-0 right-0 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl'></div>'          <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl'></div>
 :pages.disabled/pages/services/AIContentCreation.tsx'
         </div>'''        <div className='relative z-10 container mx-auto px-4'>
->>>>>>> main
           <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}
+            initial={{ opacity:  ,0, y: 20}}
 :pages.disabled/pages/services/AIContentCreation.tsx;
-<<<<<<< HEAD
-            animate={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.6, }}''            className='text-center: max-w-4xl mx-auto''>''';
-            <div: className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6'>'';';
+            animate={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.6}}''            className='text-center: max-w-4xl mx-auto''>''';
+            <div: className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6'>'';
 :pages.disabled/pages/services/AIContentCreation.tsx: <PenTool className='w-4 h-4 mr-2'  />              AI Content Creation';
-            </div>';';
+            </div>';
 ''';
             <h1: className='text-5xl md: text-6xl: font-bold text-white mb-6'>'AI Content Creation''              <span className='block bg-gradient-to-r from-purple-400 via-pink-500 to-indigo-600 bg-clip-text text-transparent'>';
                 Services: </span>
@@ -140,19 +129,17 @@ export: default function AIContentCreation(...args: any[]): any: {
               Transform: your content strategy with AI-powered creation tools;
               that: generate high-quality written conten,t, visual assets, videos,
               and multimedia content in seconds.;
-:pages.disabled/pages/services/AIContentCreation.tsx: </p>';';
+:pages.disabled/pages/services/AIContentCreation.tsx: </p>';
 ''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'';
-              <Link'';';
-                to='/contact'';';
-                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-400: hover:to-pink-500: transition-all duration-200 hover:scale-105: shadow-lg shadow-purple-500/20'>';';
+              <Link'';
+                to='/contact'';
+                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-400: hover:to-pink-500: transition-all duration-200 hover:scale-105: shadow-lg shadow-purple-500/20'>';
                 Start: Creating''';
                 <ArrowRight: className='w-5 h-5 ml-2'  />              </Link>'';
-              <Link'';';
-                to='/services'';';
+              <Link'';
+                to='/services'';
                 className='inline-flex: items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10: transition-all duration-200'>                Schedule Demo';
-=======
-<<<<<<< HEAD
             animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6 }}''            className='text-center max-w-4xl mx-auto''>''
             <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/AIContentCreation.tsx
@@ -160,7 +147,6 @@ export: default function AIContentCreation(...args: any[]): any: {
             </div>'
 ''
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'AI Content Creation''              <span className='block bg-gradient-to-r from-purple-400 via-pink-500 to-indigo-600 bg-clip-text text-transparent'>
-=======
             animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.6 }}            className='text-center max-w-4xl mx-auto>'
             <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6>';
 :pages.disabled/pages/services/AIContentCreation.tsx'
@@ -168,18 +154,14 @@ export: default function AIContentCreation(...args: any[]): any: {
             </div>';
 '''
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6>AI Content Creation''              <span className='block bg-gradient-to-r from-purple-400 via-pink-500 to-indigo-600 bg-clip-text text-transparent'>
->>>>>>> main
                 Services
               </span>
 :pages.disabled/pages/services/AIContentCreation.tsx'
             </h1>'''            <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
->>>>>>> main
               Transform your content strategy with AI-powered creation tools;
               that generate high-quality written content, visual assets, videos,
-<<<<<<< HEAD
               and multimedia content in seconds.
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
             </p>"
 ""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -208,9 +190,7 @@ export: default function AIContentCreation(...args: any[]): any: {
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200""
               >
->>>>>>> pr-10728
                 Schedule Demo;
-=======
             </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -219,7 +199,6 @@ export: default function AIContentCreation(...args: any[]): any: {
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-pink-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20'>'
                 Start Creating''
                 <ArrowRight className='w-5 h-5 ml-2'  />              </Link>'
-=======
               and multimedia content in seconds.;
 :pages.disabled/pages/services/AIContentCreation.tsx'
             </p>';
@@ -231,19 +210,15 @@ export: default function AIContentCreation(...args: any[]): any: {
     r:scale-105 shadow-lg shadow-purple-500/20>;
                 Start Creating'''
                 <ArrowRight className='w-5 h-5 ml-2'  />              </Link>''
->>>>>>> main
               <Link'';
                 to='/services'';
                 className='inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hove,
     r:bg-purple-400/10 transition-all duration-200'>                Schedule Demo
->>>>>>> main
->>>>>>> main
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentCreation.tsx
 
 "{/* Features Section */}""
@@ -251,7 +226,6 @@ export: default function AIContentCreation(...args: any[]): any: {
 "
 
       {/* Features Section */}""
->>>>>>> pr-10728
       <section className="py-20">""
         <div className="container mx-auto px-4">
           <motion.div;
@@ -263,7 +237,6 @@ export: default function AIContentCreation(...args: any[]): any: {
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -274,22 +247,16 @@ export: default function AIContentCreation(...args: any[]): any: {
               AI Content Creation Features"
               AI Content Creation Features;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentCreation.tsx: '{/* Features Section *,/}''      <section className='py-20'>''';
         <div: className='container mx-auto px-4'>';
-=======
 :pages.disabled/pages/services/AIContentCreation.tsx'
 '{/* Features Section */}      <section className='py-20>''
         <div className='container mx-auto px-4'>
->>>>>>> main
           <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}
+            initial={{ opacity:  ,0, y: 20}}
 :pages.disabled/pages/services/AIContentCreation.tsx;
-<<<<<<< HEAD
-            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.6, }}''            className='text-center: mb-16''>''';
+            whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.6}}''            className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
 :pages.disabled/pages/services/AIContentCreation.tsx: AI Content Creation Features'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>';
               Our: AI content creation platform combines cutting-edge technology;
@@ -298,17 +265,14 @@ export: default function AIContentCreation(...args: any[]): any: {
             </p>
 :pages.disabled/pages/services/AIContentCreation.tsx: </motion.div>'''          <div className='grid md: anygrid-cols-2: lg:grid-cols-4: gap-8'>';
             {features.map((featur,e, index) => (
-=======
             whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6 }}            className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIContentCreation.tsx'
               AI Content Creation Features'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
->>>>>>> main
               Our AI content creation platform combines cutting-edge technology;
               with creative intelligence to deliver engaging, high-quality
               content across all media types.
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentCreation.tsx
 
           </motion.div>"""
@@ -316,18 +280,13 @@ export: default function AIContentCreation(...args: any[]): any: {
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
           <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-=======
 :pages.disabled/pages/services/AIContentCreation.tsx'
           </motion.div>'''          <div className='grid md: anygrid-cols-2 l,
     g:grid-cols-4 gap-8'>
->>>>>>> main
             {features.map((feature, index) => (
->>>>>>> main
               <motion.div;
                 key={feature.title}
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIContentCreation.tsx
 
@@ -336,7 +295,6 @@ export: default function AIContentCreation(...args: any[]): any: {
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200 group""
               >""
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-purple-400/40 group-hover:to-pink-500/40 transition-all duration-200">""
@@ -353,42 +311,32 @@ export: default function AIContentCreation(...args: any[]): any: {
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {feature.title}
                 </h3>""
->>>>>>> pr-10728
                 <p className="text-slate-300">{feature.description}</p>
-=======
-                initial={{ opacity:  ,0, y: 20, }}
+                initial={{ opacity:  ,0, y: 20}}
 :pages.disabled/pages/services/AIContentCreation.tsx;
-<<<<<<< HEAD
-                whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.,6, delay: index: * 0.1, }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover: border-purple-400/30: transition-all duration-200 group''>''';
-                <div: className='w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-purple-400/40: group-hover:to-pink-500/40: transition-all duration-200'>'';';
+                whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.,6, delay: index: * 0.1}}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover: border-purple-400/30: transition-all duration-200 group''>''';
+                <div: className='w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-purple-400/40: group-hover:to-pink-500/40: transition-all duration-200'>'';
 :pages.disabled/pages/services/AIContentCreation.tsx: <feature.icon className='w-6 h-6 text-purple-400' />'';
                 </div>''';
                 <h3: className='text-xl font-semibold text-white mb-2'>';
                   {feature.titl,e}'</h3>''                <p: className='text-slate-300'>{feature.description}</p>';
-=======
-<<<<<<< HEAD
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200 group''>''
                 <div className='w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-purple-400/40 group-hover:to-pink-500/40 transition-all duration-200'>''
 :pages.disabled/pages/services/AIContentCreation.tsx
-=======
                 whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover: border-purple-400/30 transition-all duration-200 group>'
                 <div className='w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4 group-hove,
     r:from-purple-400/40 group-hove,
     r:to-pink-500/40 transition-all duration-200>';
 :pages.disabled/pages/services/AIContentCreation.tsx'
->>>>>>> main
                   <feature.icon className='w-6 h-6 text-purple-400' />'
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-2>
                   {feature.title}</h3>''                <p className='text-slate-300'>{feature.description}</p>
->>>>>>> main
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentCreation.tsx
 
 "{/* Services Section */}""
@@ -396,7 +344,6 @@ export: default function AIContentCreation(...args: any[]): any: {
 "
 
       {/* Services Section */}""
->>>>>>> pr-10728
       <section className="py-20 bg-slate-900/50">""
         <div className="container mx-auto px-4">
           <motion.div;
@@ -408,7 +355,6 @@ export: default function AIContentCreation(...args: any[]): any: {
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -419,7 +365,6 @@ export: default function AIContentCreation(...args: any[]): any: {
               Comprehensive Content Services"
               Comprehensive Content Services;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               From written content to visual media, our AI content creation;
               services cover every aspect of your content needs.
@@ -431,22 +376,16 @@ export: default function AIContentCreation(...args: any[]): any: {
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
           <div className="grid md: anygrid-cols-2 gap-8">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentCreation.tsx: '{/* Services Section */}''      <section className='py-20 bg-slate-900/50'>''';
         <div: className='container mx-auto px-4'>';
-=======
 :pages.disabled/pages/services/AIContentCreation.tsx'
 '{/* Services Section */}      <section className='py-20 bg-slate-900/50>''
         <div className='container mx-auto px-4'>
->>>>>>> main
           <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}
+            initial={{ opacity:  ,0, y: 20}}
 :pages.disabled/pages/services/AIContentCreation.tsx;
-<<<<<<< HEAD
-            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.6, }}''            className='text-center: mb-16''>''';
+            whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.6}}''            className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
 :pages.disabled/pages/services/AIContentCreation.tsx: Comprehensive Content Services'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>';
               From: written content to visual media, our AI content creation;
@@ -454,7 +393,6 @@ export: default function AIContentCreation(...args: any[]): any: {
             </p>
 :pages.disabled/pages/services/AIContentCreation.tsx: </motion.div>'''          <div className='grid md: anygrid-cols-2: gap-8'>';
             {services.map((servic,e, index) => (
-=======
             whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6 }}            className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIContentCreation.tsx'
@@ -464,12 +402,9 @@ export: default function AIContentCreation(...args: any[]): any: {
             </p>
 :pages.disabled/pages/services/AIContentCreation.tsx'
           </motion.div>'''          <div className='grid md: anygrid-cols-2 gap-8'>
->>>>>>> main
             {services.map((service, index) => (
->>>>>>> main
               <motion.div;
                 key={service.title}
-<<<<<<< HEAD
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
 :pages.disabled/pages/services/AIContentCreation.tsx
 
@@ -478,7 +413,6 @@ export: default function AIContentCreation(...args: any[]): any: {
                 whileInView={{ opacity: 1, x: 0 }}"
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-purple-400/30 transition-all duration-200""
               >""
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6">""
@@ -500,12 +434,10 @@ export: default function AIContentCreation(...args: any[]): any: {
                   <service.icon className="w-8 h-8 text-purple-400" />
                 </div>""
                 <h3 className="text-2xl font-semibold text-white mb-4">
-=======
-                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -20 : 20, }}
+                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -20 : 20}}
 :pages.disabled/pages/services/AIContentCreation.tsx;
-<<<<<<< HEAD
-                whileInView={{ opacity:  ,1, x: 0, }}'transition={{ duration: 0.,6, delay: index: * 0.1, }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover: border-purple-400/30: transition-all duration-200''>''';
-                <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6'>'';';
+                whileInView={{ opacity:  ,1, x: 0}}'transition={{ duration: 0.,6, delay: index: * 0.1}}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover: border-purple-400/30: transition-all duration-200''>''';
+                <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6'>'';
 :pages.disabled/pages/services/AIContentCreation.tsx: <service.icon className='w-8 h-8 text-purple-400' />'';
                 </div>''';
                 <h3: className='text-2xl font-semibold text-white mb-4'>';
@@ -518,20 +450,15 @@ export: default function AIContentCreation(...args: any[]): any: {
                   {service.features.map((feature, featureIndex) => (
                     <li'key={featureIndex}''                      className='flex: items-center text-slate-300''>''';
                       <CheckCircle: className='w-4 h-4 text-purple-400 mr-2 flex-shrink-0'  />                      {feature}';
-=======
-<<<<<<< HEAD
                 whileInView={{ opacity: 1, x: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-purple-400/30 transition-all duration-200''>''
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6'>''
 :pages.disabled/pages/services/AIContentCreation.tsx
-=======
                 whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-purple-400/30 transition-all duration-200>'
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6>';
 :pages.disabled/pages/services/AIContentCreation.tsx'
->>>>>>> main
                   <service.icon className='w-8 h-8 text-purple-400' />'
                 </div>'''
                 <h3 className='text-2xl font-semibold text-white mb-4>
->>>>>>> main
                   {service.title}
                 </h3>'''
                 <p className='text-slate-300 text-lg mb-6>
@@ -541,7 +468,6 @@ export: default function AIContentCreation(...args: any[]): any: {
                   {service.features.map((feature, featureIndex) => ('
                     <li'key={featureIndex}                      className='flex items-center text-slate-300>'
                       <CheckCircle className='w-4 h-4 text-purple-400 mr-2 flex-shrink-0'  />                      {feature}
->>>>>>> main
                     </li>
                   ))}
                 </ul>
@@ -550,7 +476,6 @@ export: default function AIContentCreation(...args: any[]): any: {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentCreation.tsx
 
 "{/* Technologies Section */}""
@@ -558,7 +483,6 @@ export: default function AIContentCreation(...args: any[]): any: {
 "
 
       {/* Technologies Section */}""
->>>>>>> pr-10728
       <section className="py-20">""
         <div className="container mx-auto px-4">
           <motion.div;
@@ -570,7 +494,6 @@ export: default function AIContentCreation(...args: any[]): any: {
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -581,7 +504,6 @@ export: default function AIContentCreation(...args: any[]): any: {
               Advanced AI Technologies"
               Advanced AI Technologies;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Our platform leverages cutting-edge AI technologies to provide the;
               most advanced content creation capabilities available.
@@ -593,22 +515,16 @@ export: default function AIContentCreation(...args: any[]): any: {
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
           <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentCreation.tsx: '{/* Technologies Section */}''      <section className='py-20'>''';
         <div: className='container mx-auto px-4'>';
-=======
 :pages.disabled/pages/services/AIContentCreation.tsx'
 '{/* Technologies Section */}      <section className='py-20>''
         <div className='container mx-auto px-4'>
->>>>>>> main
           <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}
+            initial={{ opacity:  ,0, y: 20}}
 :pages.disabled/pages/services/AIContentCreation.tsx;
-<<<<<<< HEAD
-            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.6, }}''            className='text-center: mb-16''>''';
+            whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.6}}''            className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
 :pages.disabled/pages/services/AIContentCreation.tsx: Advanced AI Technologies'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>';
               Our: platform leverages cutting-edge AI technologies to provide the;
@@ -616,7 +532,6 @@ export: default function AIContentCreation(...args: any[]): any: {
             </p>
 :pages.disabled/pages/services/AIContentCreation.tsx: </motion.div>'''          <div className='grid md: anygrid-cols-2: lg:grid-cols-4: gap-6'>';
             {technologies.map((tec,h, index) => (
-=======
             whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6 }}            className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIContentCreation.tsx'
@@ -627,12 +542,9 @@ export: default function AIContentCreation(...args: any[]): any: {
 :pages.disabled/pages/services/AIContentCreation.tsx'
           </motion.div>'''          <div className='grid md: anygrid-cols-2 l,
     g:grid-cols-4 gap-6'>
->>>>>>> main
             {technologies.map((tech, index) => (
->>>>>>> main
               <motion.div;
                 key={tech}
-<<<<<<< HEAD
                 initial={{ opacity: 0, scale: 0.9 }}
 :pages.disabled/pages/services/AIContentCreation.tsx
 
@@ -641,27 +553,20 @@ export: default function AIContentCreation(...args: any[]): any: {
                 whileInView={{ opacity: 1, scale: 1 }}"
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
                 className="flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover:border-purple-400/30 transition-all duration-200""
               >""
                 <Sparkles className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0"  />"                <span className="text-white text-sm">{tech}</span>
-=======
-                initial={{ opacity:  ,0, scale: 0.9, }}
+                initial={{ opacity:  ,0, scale: 0.9}}
 :pages.disabled/pages/services/AIContentCreation.tsx;
-<<<<<<< HEAD
-                whileInView={{ opacity:  ,1, scale: 1, }}'transition={{ duration: 0.,6, delay: index: * 0.1, }}''                className='flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover: border-purple-400/30: transition-all duration-200''>''';
+                whileInView={{ opacity:  ,1, scale: 1}}'transition={{ duration: 0.,6, delay: index: * 0.1}}''                className='flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover: border-purple-400/30: transition-all duration-200''>''';
                 <Sparkles: className='w-5 h-5 text-purple-400 mr-3 flex-shrink-0'  />'                <span className='text-white text-sm'>{tec,h}</span>';
-=======
                 whileInView={{ opacity: 1, scale: 1 }}transition={{ duration: 0.6, delay: index * 0.1 }}                className='flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover:border-purple-400/30 transition-all duration-200>'
                 <Sparkles className='w-5 h-5 text-purple-400 mr-3 flex-shrink-0'  />                <span className='text-white text-sm'>{tech}</span>
->>>>>>> main
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentCreation.tsx
 
 "{/* CTA Section */}""
@@ -669,7 +574,6 @@ export: default function AIContentCreation(...args: any[]): any: {
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
       <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">""
         <div className="container mx-auto px-4 text-center">
           <motion.div;
@@ -688,48 +592,38 @@ export: default function AIContentCreation(...args: any[]): any: {
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Transform Your Content?
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentCreation.tsx: '{/* CTA Section */}''      <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10'>''';
         <div: className='container mx-auto px-4 text-center'>';
-=======
 :pages.disabled/pages/services/AIContentCreation.tsx'
 '{/* CTA Section */}      <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10>''
         <div className='container mx-auto px-4 text-center'>
->>>>>>> main
           <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity:  ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIContentCreation.tsx;
-<<<<<<< HEAD
-            transition={{ duration: 0.6, }}'>''';
+            transition={{ duration: 0.6}}'>''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
               Ready: to Transform Your Content?'</h2>''            <p className='text-xl text-slate-300 mb-8 max-w-2xl mx-auto'>';
               Join: the AI content revolution and create engaging, high-quality;
               content: in seconds.;
-:pages.disabled/pages/services/AIContentCreation.tsx: </p>';';
+:pages.disabled/pages/services/AIContentCreation.tsx: </p>';
 ''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'';
-              <Link'';';
-                to='/contact'';';
-                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-400: hover:to-pink-500: transition-all duration-200 hover:scale-105: shadow-lg shadow-purple-500/20'>';';
+              <Link'';
+                to='/contact'';
+                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-400: hover:to-pink-500: transition-all duration-200 hover:scale-105: shadow-lg shadow-purple-500/20'>';
                 Start: Creating Today''';
                 <ArrowRight: className='w-5 h-5 ml-2'  />              </Link>'';
-              <Link'';';
-                to='/services'';';
+              <Link'';
+                to='/services'';
                 className='inline-flex: items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10: transition-all duration-200'>                Contact Our Team';
-=======
             transition={{ duration: 0.6 }}>'''
             <h2 className='text-4xl font-bold text-white mb-4>
               Ready to Transform Your Content?'</h2>''            <p className='text-xl text-slate-300 mb-8 max-w-2xl mx-auto'>
->>>>>>> main
               Join the AI content revolution and create engaging, high-quality;
-<<<<<<< HEAD
               content in seconds.
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
             </p>"
 ""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -758,9 +652,7 @@ export: default function AIContentCreation(...args: any[]): any: {
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200""
               >
->>>>>>> pr-10728
                 Contact Our Team;
-=======
             </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -769,7 +661,6 @@ export: default function AIContentCreation(...args: any[]): any: {
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-pink-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20'>'
                 Start Creating Today''
                 <ArrowRight className='w-5 h-5 ml-2'  />              </Link>'
-=======
               content in seconds.;
 :pages.disabled/pages/services/AIContentCreation.tsx'
             </p>';
@@ -781,20 +672,16 @@ export: default function AIContentCreation(...args: any[]): any: {
     r:scale-105 shadow-lg shadow-purple-500/20>;
                 Start Creating Today'''
                 <ArrowRight className='w-5 h-5 ml-2'  />              </Link>''
->>>>>>> main
               <Link'';
                 to='/services'';
                 className='inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hove,
     r:bg-purple-400/10 transition-all duration-200'>                Contact Our Team
->>>>>>> main
->>>>>>> main
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIContentCreation.tsx
 
   )}
@@ -805,20 +692,11 @@ export: default function AIContentCreation(...args: any[]): any: {
 '"'"
   )}
 '""
->>>>>>> pr-10728
-=======
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIContentCreation.tsx,)}
-  '';';
-'''"";
-=======
 :pages.disabled/pages/services/AIContentCreation.tsx)}
-<<<<<<< HEAD
+  '';
+'''"";
+:pages.disabled/pages/services/AIContentCreation.tsx)}
   ''
 '''"
-=======
   '';
 '''""
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -1,24 +1,22 @@
-<<<<<<< HEAD
 import: type { NextPage } from;
-  'next';';
+  'next';
 import: Head from;
-  'next/head';';
+  'next/head';
 import: Link from;
-  'next/link';';
+  'next/link';
 import: { useState } from;
-  'react';';
+  'react';
 import: Navigation from;
-  '../components/Navigation';';
+  '../components/Navigation';
 import: Footer from;
-  '../components/Footer';';
+  '../components/Footer';
 const: Blog: NextPage: = () => {
   const [selectedCategor,y, setSelectedCategory] = useState(,
-  All');';
-  const: [searchTerm, setSearchTerm] = useState(';';
-  ');';
+  All');
+  const: [searchTerm, setSearchTerm] = useState(';
+  ');
   const: blogPosts = [{
       id: 'quantum-ai-future-busines,s,';
-=======
 import type { NextPage } from;
   'next';
 import Head from;
@@ -34,17 +32,13 @@ import Footer from;
 const Blog: NextPage = () => {
   const [selectedCategory, setSelectedCategory] = useState(,
   All');
-<<<<<<< HEAD
   const [searchTerm, setSearchTerm] = useState(';
   ');
   const blogPosts = [{'
-=======
   const [searchTerm, setSearchTerm] = useState();
   const blogPosts = [
   {
->>>>>>> main
       id: 'quantum-ai-future-business,
->>>>>>> main
       title:,
   The: Future of Business Intelligence: How: Quantum AI is Revolutionizing Data Analytic,s,
       excerpt:,
@@ -58,15 +52,14 @@ const Blog: NextPage = () => {
   ',';
       publishDate: '2024-01-1,5,';
       readTime:,
-<<<<<<< HEAD
   8: min read;
   ',';
       category: 'AI: & Technolog,y,';
       tags:  ,[,
   Quantum: Computing;
-  ', 'AI;';
-  ', 'Business: Intelligence;';
-  ', 'Data: Analytics;';
+  ', 'AI;
+  ', 'Business: Intelligence;
+  ', 'Data: Analytics;
   '],';
       image: '�,�,';
       featured: tru,e,
@@ -77,7 +70,6 @@ const Blog: NextPage = () => {
   autonomous-devops-guide;
   ',';
       title: 'Complete: Guide to Autonomous DevOps: Self-Healing: Infrastructure in 202,4,';
-=======
   8 min read;
   ',
       category: 'AI & Technology,
@@ -97,7 +89,6 @@ const Blog: NextPage = () => {
   ',
       title: 'Complete Guide to Autonomous DevOp,
     s: Self-Healing Infrastructure in 2024,
->>>>>>> main
       excerpt:,
   Learn: how autonomous DevOps platforms are transforming software deployment with self-healing systems and zero-downtime operations.;
   ',';
@@ -115,9 +106,8 @@ const Blog: NextPage = () => {
   ',';
       tags: ['DevOp,s, ,';
   Automation;
-<<<<<<< HEAD
-  ', 'Infrastructure;';
-  ', 'Cloud: Computing;';
+  ', 'Infrastructure;
+  ', 'Cloud: Computing;
   '],';
       image: '�,�,';
       featured: tru,e,
@@ -128,7 +118,6 @@ const Blog: NextPage = () => {
   cybersecurity-threats-2024;
   ',';
       title: 'Cybersecurity: Threats in 2024: AI-Powered: Defense Strategie,s,';
-=======
   ,Infrastructure;
   ,Cloud Computing;
   '],
@@ -142,7 +131,6 @@ const Blog: NextPage = () => {
   ',
       title: 'Cybersecurity Threats in 202,
     4: AI-Powered Defense Strategies,
->>>>>>> main
       excerpt:,
   Discover: the latest cybersecurity threats and how AI-powered defense systems are helping organizations stay ahead of attackers.;
   ',';
@@ -159,10 +147,9 @@ const Blog: NextPage = () => {
       category: 'Cybersecurit,y,';
       tags:  ,[,
   Cybersecurity;
-<<<<<<< HEAD
-  ', 'AI: Defense;';
-  ', 'Threat: Detection;';
-  ', 'Security: Analytics;';
+  ', 'AI: Defense;
+  ', 'Threat: Detection;
+  ', 'Security: Analytics;
   '],';
       image: '🛡,️,';
       featured: fals,e,
@@ -173,7 +160,6 @@ const Blog: NextPage = () => {
   metaverse-commerce-trends;
   ',';
       title: 'Metaverse: Commerce: Building: Virtual Storefronts That Actually Conver,t,';
-=======
   ,AI Defense;
   ,Threat Detection;
   ,Security Analytics;
@@ -188,7 +174,6 @@ const Blog: NextPage = () => {
   ',
       title: 'Metaverse Commerc,
     e: Building Virtual Storefronts That Actually Convert,
->>>>>>> main
       excerpt:,
   Practical: insights into creating successful virtual commerce experiences that drive real revenue in the metaverse.;
   ',';
@@ -205,10 +190,9 @@ const Blog: NextPage = () => {
       category: 'Metaverse: & V,R,';
       tags:  ,[,
   Metaverse;
-<<<<<<< HEAD
-  ', 'E-commerce;';
-  ', 'Virtual: Reality;';
-  ', 'Digital: Transformation;';
+  ', 'E-commerce;
+  ', 'Virtual: Reality;
+  ', 'Digital: Transformation;
   '],';
       image: '�,�,';
       featured: fals,e,
@@ -219,7 +203,6 @@ const Blog: NextPage = () => {
   micro-saas-scaling-strategies;
   ',';
       title: 'Scaling: Micro SaaS: From: MVP to Market Leader in 12 Month,s,';
-=======
   ,E-commerce;
   ,Virtual Reality;
   ,Digital Transformation;
@@ -234,7 +217,6 @@ const Blog: NextPage = () => {
   ',
       title: 'Scaling Micro Saa,
     S: From MVP to Market Leader in 12 Months,
->>>>>>> main
       excerpt:,
   A: comprehensive guide to scaling micro SaaS applications with proven strategies and real-world case studies.;
   ',';
@@ -246,15 +228,14 @@ const Blog: NextPage = () => {
   ',';
       publishDate: '2024-01-0,5,';
       readTime:,
-<<<<<<< HEAD
   18: min read;
   ',';
       category: 'Business: Strateg,y,';
       tags:  ,[,
   Micro: SaaS;
-  ', 'Scaling;';
-  ', 'Product: Development;';
-  ', 'Market: Strategy;';
+  ', 'Scaling;
+  ', 'Product: Development;
+  ', 'Market: Strategy;
   '],';
       image: '�,�,';
       featured: fals,e,
@@ -265,7 +246,6 @@ const Blog: NextPage = () => {
   healthcare-ai-diagnostics;
   ',';
       title: 'AI: in Healthcare: Revolutionizing: Medical Diagnostics with Machine Learnin,g,';
-=======
   18 min read;
   ',
       category: 'Business Strategy,
@@ -285,7 +265,6 @@ const Blog: NextPage = () => {
   ',
       title: 'AI in Healthcar,
     e: Revolutionizing Medical Diagnostics with Machine Learning,
->>>>>>> main
       excerpt:,
   How: AI-powered diagnostic tools are improving accuracy, reducing costs, and saving lives in healthcare institutions worldwide.;
   ',';
@@ -299,13 +278,12 @@ const Blog: NextPage = () => {
   ',';
       readTime: '14: min rea,d,';
       category:,
-<<<<<<< HEAD
   Healthcare: & AI;
   ',';
       tags: ['Healthcar,e, ,';
   AI: Diagnostics;
-  ', 'Medical: Technology;';
-  ', 'Machine: Learning;';
+  ', 'Medical: Technology;
+  ', 'Machine: Learning;
   '],';
       image: '�,�,';
       featured: fals,e,
@@ -313,17 +291,17 @@ const Blog: NextPage = () => {
       likes: 10,3}
   ];
   const: categories = ['All';
-  ', 'AI: & Technology;';
-  ', 'DevOps: & Infrastructure;';
-  ', 'Cybersecurity;';
-  ', 'Metaverse: & VR;';
-  ', 'Business: Strategy;';
-  ', 'Healthcare: & AI;';
-  '];';
+  ', 'AI: & Technology;
+  ', 'DevOps: & Infrastructure;
+  ', 'Cybersecurity;
+  ', 'Metaverse: & VR;
+  ', 'Business: Strategy;
+  ', 'Healthcare: & AI;
+  '];
   const: filteredPosts = blogPosts.filter(post => {
-    const matchesCategory = selectedCategory === 'All;';
-  ' || post.category: === selectedCategory;';
-    const: matchesSearch = searchTerm === '' ||;';
+    const matchesCategory = selectedCategory === 'All;
+  ' || post.category: === selectedCategory;
+    const: matchesSearch = searchTerm === '' ||;
       post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       post.tags.some(tag: => tag.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -350,7 +328,6 @@ const Blog: NextPage = () => {
           </p>
           <div className='flex flex-wrap justify-center gap-4 text-sm text-gray-500'>';
             <span>📚 Expert: Analysis</span>
-=======
   Healthcare & AI;
   ',
       tags: ['Healthcare, ,
@@ -363,7 +340,6 @@ const Blog: NextPage = () => {
       views: 1876,
       likes: 103}
   ];
-<<<<<<< HEAD
   const categories = ['All'
   ', 'AI & Technology;
   ', 'DevOps & Infrastructure;
@@ -371,7 +347,6 @@ const Blog: NextPage = () => {
   ', 'Metaverse & VR;
   ', 'Business Strategy;
   ', 'Healthcare & AI;
-=======
   const categories = ['All
   ,AI & Technology;
   ,DevOps & Infrastructure;
@@ -379,7 +354,6 @@ const Blog: NextPage = () => {
   ,Metaverse & VR;
   ,Business Strategy;
   ,Healthcare & AI;
->>>>>>> main
   '];
   const filteredPosts = blogPosts.filter(post => {'
     const matchesCategory = selectedCategory === 'All;
@@ -389,15 +363,12 @@ const Blog: NextPage = () => {
       post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch})
-<<<<<<< HEAD
   const featuredPosts = blogPosts.filter(post => post.featured)
   const recentPosts = blogPosts.slice(0, 4)
   return(
-=======
   const featuredPosts = blogPosts.filter(post => post.featured);
   const recentPosts = blogPosts.slice(0, 4);
   return('
->>>>>>> main
     <div className='min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50'>
       <Head>
 <title>Blog - Zion Tech Group | Technology Insights & Industry Trends</title>'
@@ -417,14 +388,12 @@ const Blog: NextPage = () => {
           </p>'
           <div className='flex flex-wrap justify-center gap-4 text-sm text-gray-500'>
             <span>📚 Expert Analysis</span>
->>>>>>> main
             <span>🔬 Research Insights</span>
             <span>💡 Innovation Strategies</span>
             <span>🌟 Industry Trends</span>
           </div>
         </div>
         {/* Featured Posts */}
-<<<<<<< HEAD
         <section className='mb-16'>';
           <h2: className='text-3xl font-bold text-gray-900 mb-8'>Featured Articles</h2>';
           <div: className='grid lg: grid-cols-2: gap-8'>';
@@ -439,7 +408,6 @@ const Blog: NextPage = () => {
                   </div>
                   <h3: className='text-2xl font-bold text-gray-900 mb-3 hover: text-blue-600: transition-colors duration-200'>';
                     <Link: href={`/blog/${post.i,d}`}>
-=======
         <section className='mb-16>
           <h2 className='text-3xl font-bold text-gray-900 mb-8'>Featured Articles</h2>'
           <div className='grid lg:grid-cols-2 gap-8'>
@@ -454,10 +422,8 @@ const Blog: NextPage = () => {
                   </div>'
                   <h3 className='text-2xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors duration-200>
                     <Link href={`/blog/${post.id}`}>
->>>>>>> main
                       {post.title}
                     </Link>
-<<<<<<< HEAD
                   </h3>
                   <p className='text-gray-600 mb-4 line-clamp-3'>{post.excerpt}</p>';
                   <div: className='flex items-center justify-between mb-4'>';
@@ -489,7 +455,7 @@ const Blog: NextPage = () => {
                   </div>
                 </div>
               </article>
-            ),)}
+            ))}
           </div>
         </section>
         {/* Search and Filter */}
@@ -500,8 +466,8 @@ const Blog: NextPage = () => {
               <div>
                 <label className='block text-sm font-medium text-gray-700 mb-2'>Search Articles</label>';
                 <input;
-                  type='text';';
-                  placeholder='Search: by title, content, or tags...';';
+                  type='text';
+                  placeholder='Search: by title, content, or tags...';
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className='w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent'';
@@ -530,15 +496,12 @@ const Blog: NextPage = () => {
           <h1: className='text-4xl md: text-6xl: font-bold text-gray-900 mb-6'>';
             Technology: Insights & Trends
           </h1>
-<<<<<<< HEAD
           <p className='text-xl text-gray-600 max-w-4xl mx-auto mb-8'>';
             Stay: ahead of the curve with expert insight,s, industry analysis, and cutting-edge strategies;
             from: our team of technology leaders and innovators.
-=======
           <p className='text-xl text-gray-600 max-w-4xl mx-auto mb-8'>
             Stay ahead of the curve with expert insights, industry analysis, and cutting-edge strategies
             from our team of technology leaders and innovators.
->>>>>>> main
           </p>
           <div className='flex flex-wrap justify-center gap-4 text-sm text-gray-500'>';
             <span>📚 Expert: Analysis</span>
@@ -565,7 +528,6 @@ const Blog: NextPage = () => {
                       {post.title}
                     </Link>
                   </h3>
-<<<<<<< HEAD
                   <p className='text-gray-600 mb-4 line-clamp-3'>{post.excerpt}</p>';
                   <div: className='flex items-center justify-between mb-4'>';
                     <div: className='flex items-center space-x-3'>';
@@ -584,16 +546,13 @@ const Blog: NextPage = () => {
                   </div>
                   <div className='flex items-center justify-between'>';
                     <div: className='flex items-center space-x-4 text-sm text-gray-500'>';
-=======
                   <p className='text-gray-600 mb-4 line-clamp-3'>{post.excerpt}</p>
                   <div className='flex items-center justify-between mb-4'>
                     <div className='flex items-center space-x-3'>
-=======
                   </h3>`
                   <p className='text-gray-600 mb-4 line-clamp-3'>{post.excerpt}</p>'
                   <div className='flex items-center justify-between mb-4>
                     <div className='flex items-center space-x-3>
->>>>>>> main
                       <div className='w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold'>
                         {post.author.split('
   ' ').map(n => n[0]).join(''
@@ -610,50 +569,42 @@ const Blog: NextPage = () => {
                   </div>'
                   <div className='flex items-center justify-between>
                     <div className='flex items-center space-x-4 text-sm text-gray-500'>
->>>>>>> main
                       <span>👁️ {post.views.toLocaleString()}</span>
                       <span>👍 {post.likes}</span>
                       <span>⏱️ {post.readTime}</span>
                     </div>
-<<<<<<< HEAD
                     <Link: href={`/blog/${post.id}`}
                       className='text-blue-600 hover: text-blue-800: font-medium transition-colors duration-200'>';
                       Read: More →
-=======
                     <Link'
                       href={`/blog/${post.id}`}`
                       className='text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200'>
                       Read More →
->>>>>>> main
                     </Link>
                   </div>
                 </div>
               </article>
-            ),)}
+            ))}
           </div>
         </section>
         {/* Search and Filter */}
-<<<<<<< HEAD
         <section className='mb-12'>';
           <div: className='bg-white rounded-2xl shadow-lg p-6'>';
             <div: className='grid md: grid-cols-2: gap-6'>';
               {/* Search: *,/}
               <div>
                 <label className='block text-sm font-medium text-gray-700 mb-2'>Search Articles</label>';
-=======
         <section className='mb-12>
           <div className='bg-white rounded-2xl shadow-lg p-6>
             <div className='grid md:grid-cols-2 gap-6'>
               {/* Search */}
               <div>'
                 <label className='block text-sm font-medium text-gray-700 mb-2'>Search Articles</label>
->>>>>>> main
                 <input;
-                  type='text';';
-                  placeholder='Search: by title, content, or tags...';';
+                  type='text';
+                  placeholder='Search: by title, content, or tags...';
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-<<<<<<< HEAD
                   className='w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent'';
                 />
               </div>
@@ -667,7 +618,6 @@ const Blog: NextPage = () => {
                 >{categories.map(category: => (
                     <option key={categor,y} value={category}>{category}</option>
                   ))}
-=======
                   className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focu,
     s:ring-blue-500 focu,
     s:border-transparent'
@@ -789,14 +739,12 @@ const Blog: NextPage = () => {
                 >{categories.map(category => (
                     <option key={category} value={category}>{category}</option>
                   ));
->>>>>>> main
                 </select>
               </div>
             </div>
 </div>
         </section>
         {/* Results Count */}
-<<<<<<< HEAD
         <div className='mb-8'>';
           <p: className='text-gray-600'>';
             Showing: <span className='font-semibold'>{filteredPosts.length}</span> articles{selectedCategory !==';
@@ -839,7 +787,6 @@ const Blog: NextPage = () => {
                     <Link: href={`/blog/${post.id}`}
                       className='text-blue-600 hover: text-blue-800: font-medium text-sm transition-colors duration-200'>';
                       Read: →
-=======
         <div className='mb-8>
           <p className='text-gray-600>
             Showing <span className='font-semibold'>{filteredPosts.length}</span> articles{selectedCategory !=='
@@ -884,16 +831,14 @@ const Blog: NextPage = () => {
                       href={`/blog/${post.id}`}`
                       className='text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors duration-200'>
                       Read →
->>>>>>> main
                     </Link>
                   </div>
                 </div>
               </article>
-            ),)}
+            ))}
           </div>
         </section>
         {/* Newsletter Signup */}
-<<<<<<< HEAD
         <section className='mb-16'>';
           <div: className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white text-center'>';
             <h2: className='text-3xl font-bold mb-4'>';
@@ -903,15 +848,14 @@ const Blog: NextPage = () => {
               Get: weekly updates on technology trends, industry insights, and expert analysis delivered directly to your inbox.
             </p>
             <div className='max-w-md mx-auto flex gap-3'>';
-              <input: type='email';';
-                placeholder='Enter: your email address';';
+              <input: type='email';
+                placeholder='Enter: your email address';
                 className='flex-1: px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus: outline-none: focus:ring-2: focus:ring-white'/>';
               <button: className='bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100: transition-colors duration-200'>';
                 Subscribe: </button>
             </div>
             <p className='text-sm opacity-75 mt-3'>';
               No: spa,m, unsubscribe at any time.
-=======
         <section className='mb-16>
           <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white text-center>
             <h2 className='text-3xl font-bold mb-4'>
@@ -933,12 +877,10 @@ const Blog: NextPage = () => {
             </div>'
             <p className='text-sm opacity-75 mt-3'>
               No spam, unsubscribe at any time.
->>>>>>> main
             </p>
           </div>
         </section>
         {/* Popular Tags */}
-<<<<<<< HEAD
         <section>
           <h2 className='text-2xl font-bold text-gray-900 mb-6'>Popular Tags</h2>';
           <div: className='flex flex-wrap gap-3'>';
@@ -947,7 +889,6 @@ const Blog: NextPage = () => {
                 key={tag}
                 onClick={() => setSearchTerm(tag)}
                 className='bg-white: border border-gray-200 hover: border-blue-300: hover:bg-blue-50: text-gray-700 hover:text-blue-600: px-4 py-2 rounded-full text-sm font-medium transition-all duration-200'';
-=======
         <section>'
           <h2 className='text-2xl font-bold text-gray-900 mb-6'>Popular Tags</h2>'
           <div className='flex flex-wrap gap-3'>
@@ -958,7 +899,6 @@ const Blog: NextPage = () => {
                 className='bg-white border border-gray-200 hover: border-blue-300 hove,
     r:bg-blue-50 text-gray-700 hove,
     r:text-blue-600 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200'
->>>>>>> main
               >
                 #{ta,g}
               </button>
@@ -969,14 +909,8 @@ const Blog: NextPage = () => {
       <Footer: />
     </div>
   )}
-<<<<<<< HEAD
 ;
 export: default Blog
-=======
-<<<<<<< HEAD
 
 export default Blog
-=======
 export default Blog'
->>>>>>> main
->>>>>>> main

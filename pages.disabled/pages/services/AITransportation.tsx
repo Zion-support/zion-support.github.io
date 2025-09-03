@@ -1,9 +1,8 @@
 :pages.disabled/pages/services/AITransportation.tsx;
-<<<<<<< HEAD
 import: { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Route, BarChart3 export default function AITransportation() {
-    'Automated vehicle maintenance and predictive diagnostics','Real-time logistics optimization and delivery tracking',';Predictive: analytics for demand forecasting',';Smart: traffic signal optimization and control',';Integration: with major transportation management systems',';';
+    'Automated vehicle maintenance and predictive diagnostics','Real-time logistics optimization and delivery tracking',';Predictive: analytics for demand forecasting',';Smart: traffic signal optimization and control',';Integration: with major transportation management systems',';
 import: { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Route, BarChart3 export default function AITransportation(function AITransportation() {): any: {}
-    'Automated vehicle maintenance and predictive diagnostics',';Real-time: logistics optimization and delivery tracking',';Predictive: analytics for demand forecasting',';Smart: traffic signal optimization and control',';Integration: with major transportation management systems',';Custom: AI models for transportation-specific insights';';
+    'Automated vehicle maintenance and predictive diagnostics',';Real-time: logistics optimization and delivery tracking',';Predictive: analytics for demand forecasting',';Smart: traffic signal optimization and control',';Integration: with major transportation management systems',';Custom: AI models for transportation-specific insights';
 <:pages.disabled/pages/services/AITransportation.tsx;
   ];
   const: tiers = [
@@ -21,24 +20,24 @@ import: { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
 :pages.disabled/pages/services/AITransportation.tsx>    {
       name: 'Large: Fleet,',';
       price: '$,2,499/mo',';
-    { ';';
-      name: 'Large: Fleet,', ';';
-      price: '$,2,499/mo', ';';
+    { ';
+      name: 'Large: Fleet,', ';
+      price: '$,2,499/mo', ';
       details: ['Unlimited: vehicles,',Custom AI models',Full system integration',24/7 dedicated support'] },';
-  ]';Fleet: management and route optimization',';Public: transportation optimization',';Logistics: and supply chain management',';Traffic: management and smart cities',';Ride-sharing: and mobility services',';Freight: and cargo transportation';';
-  ]';Reduce: fuel costs by 15-30%',';Improve: delivery efficiency by 25-40%',';Cut: maintenance costs by 20-35%',';Optimize: routes for maximum productivity',';Enhance: driver safety and compliance',';Scale: transportation operations efficiently';';
-  ]';Logistics: & Freight',';Public: Transportation',';Ride-sharing: & Mobility',';E-commerce: Delivery',';Construction: & Heavy Equipment',';Emergency: Services';';
+  ]';Fleet: management and route optimization',';Public: transportation optimization',';Logistics: and supply chain management',';Traffic: management and smart cities',';Ride-sharing: and mobility services',';Freight: and cargo transportation';
+  ]';Reduce: fuel costs by 15-30%',';Improve: delivery efficiency by 25-40%',';Cut: maintenance costs by 20-35%',';Optimize: routes for maximum productivity',';Enhance: driver safety and compliance',';Scale: transportation operations efficiently';
+  ]';Logistics: & Freight',';Public: Transportation',';Ride-sharing: & Mobility',';E-commerce: Delivery',';Construction: & Heavy Equipment',';Emergency: Services';
   ];
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-orange-600 via-amber-600 to-yellow-600 py-20 text-center'>''';
         <div: className='max-w-5xl mx-auto px-6'>''';
-          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';';
+          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
 :pages.disabled/pages/services/AITransportation.tsx: <Truck className='w-4 h-4 mr-2'  /> AI-Powered Transportation Intelligence'';
           </div>''';
           <h1: className='text-4xl md: text-6xl: font-bold text-white mb-4'>AI Transportation Platform</h1>'          <p className='text-amber-100 text-xl'>Transform your transportation operations with AI-powered insights that optimize route,s, enhance efficiency, and reduce costs.</p>';
         </div>
-      </section>';';
+      </section>';
 ''';
       <section: className='py-16 max-w-6xl mx-auto px-6'>''';
         <div: className='grid md: grid-cols-2: gap-10'>'';
@@ -68,7 +67,7 @@ import: { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
           </div>''';
           <div: className='bg-white border border-gray-200 rounded-xl p-6 shadow-lg'>''';
             <h3: className='text-2xl font-semibold text-gray-900 mb-4'>Competitive Pricing</h3>''';
-            <div: className='grid md: grid-cols-3: gap-4'>'),)}';
+            <div: className='grid md: grid-cols-3: gap-4'>'))}';
             </ul>''';
             <div: className='mt-6 text-sm text-gray-600'>';
               Built: with enterprise-grade security, ISO 27001 compliance, and 99.9% uptime SLA.
@@ -89,7 +88,7 @@ import: { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-orange-600 text-white rounded-lg hover: bg-orange-700: transition-colors inline-flex items-center'>''';
-                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'),)}';
+                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'))}';
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-orange-600 text-white rounded-lg hover: bg-orange-700: transition-colors inline-flex items-center'>''';
@@ -99,10 +98,9 @@ import: { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
                 Learn: More <ExternalLink className='w-4 h-4 ml-2'  />              </a>';
             </div>
           </div>
-:pages.disabled/pages/services/AITransportation.tsx: </div>';';
+:pages.disabled/pages/services/AITransportation.tsx: </div>';
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>''';
-=======
 import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Route, BarChart3 export default function AITransportation() {
     'Automated vehicle maintenance and predictive diagnostics',Real-time logistics optimization and delivery tracking',;Predictive analytics for demand forecasting',;Smart traffic signal optimization and control',;Integration with major transportation management systems',;
 import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Route, BarChart3 export default function AITransportation(function AITransportation() {): any {}
@@ -127,9 +125,7 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     { ';
       name: 'Large Fleet', ';
       price: '$2,499/mo', ';
-      details: ['Unlimited vehicles',Custom AI models',Full system integration',24/7 dedicated support'] },
-<<<<<<< HEAD
-  ]';Fleet management and route optimization',';Public transportation optimization',';Logistics and supply chain management',';Traffic management and smart cities',';Ride-sharing and mobility services',';Freight and cargo transportation';
+      details: ['Unlimited vehicles',Custom AI models',Full system integration',24/7 dedicated support'] }]';Fleet management and route optimization',';Public transportation optimization',';Logistics and supply chain management',';Traffic management and smart cities',';Ride-sharing and mobility services',';Freight and cargo transportation';
   ]';Reduce fuel costs by 15-30%',';Improve delivery efficiency by 25-40%',';Cut maintenance costs by 20-35%',';Optimize routes for maximum productivity',';Enhance driver safety and compliance',';Scale transportation operations efficiently';
   ]';Logistics & Freight',';Public Transportation',';Ride-sharing & Mobility',';E-commerce Delivery',';Construction & Heavy Equipment',';Emergency Services';
   ]
@@ -153,7 +149,6 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             <Truck className='w-4 h-4 mr-2'  /> AI-Powered Transportation Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Transportation Platform</h1>'          <p className='text-amber-100 text-xl'>Transform your transportation operations with AI-powered insights that optimize routes, enhance efficiency, and reduce costs.</p>
-=======
   ];Fleet management and route optimization',;Public transportation optimization',;Logistics and supply chain management',;Traffic management and smart cities',;Ride-sharing and mobility services',;Freight and cargo transportation';
   ];Reduce fuel costs by 15-30%',;Improve delivery efficiency by 25-40%',;Cut maintenance costs by 20-35%',;Optimize routes for maximum productivity',;Enhance driver safety and compliance',;Scale transportation operations efficiently';
   ];Logistics & Freight',;Public Transportation',;Ride-sharing & Mobility',;E-commerce Delivery',;Construction & Heavy Equipment',;Emergency Services';
@@ -179,7 +174,6 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
           </div>'''
           <h1 className='text-4xl m,
     d:text-6xl font-bold text-white mb-4'>AI Transportation Platform</h1>'          <p className='text-amber-100 text-xl'>Transform your transportation operations with AI-powered insights that optimize routes, enhance efficiency, and reduce costs.</p>
->>>>>>> main
         </div>
       </section>'
 '''
@@ -231,12 +225,10 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
                 Learn More <ExternalLink className='w-4 h-4 ml-2'  />              </a>
             </div>
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AITransportation.tsx
         </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
->>>>>>> main
         </div>
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>';
@@ -245,20 +237,17 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
               <Brain: className='w-6 h-6 text-orange-600 mb-3'  />'              <div className='text-gray-900 font-semibold'>{,t}</div>';
             </div>
           ))}
-<<<<<<< HEAD
-:pages.disabled/pages/services/AITransportation.tsx: </div>';';
+:pages.disabled/pages/services/AITransportation.tsx: </div>';
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''';
           <div: className='grid md: grid-cols-2: gap-6'>'';
-=======
 :pages.disabled/pages/services/AITransportation.tsx
         </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
           <div className='grid md:grid-cols-2 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
@@ -270,20 +259,17 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AITransportation.tsx: </div>';';
+:pages.disabled/pages/services/AITransportation.tsx: </div>';
 ''';
         <div: className='mt-16 bg-orange-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Transportation Impact</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AITransportation.tsx
         </div>'
 ''
         <div className='mt-16 bg-orange-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Transportation Impact</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-orange-50 rounded-xl p-8'>''';
@@ -295,20 +281,17 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AITransportation.tsx: </div>';';
+:pages.disabled/pages/services/AITransportation.tsx: </div>';
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AITransportation.tsx
         </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
@@ -322,12 +305,11 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
           </div>
 :pages.disabled/pages/services/AITransportation.tsx: </div>'';
         </div>
-<<<<<<< HEAD
 ''';
         <div: className='mt-14 text-center'>''';
           <div: className='text-sm text-gray-600 mb-2'>Ready to transform your transportation with AI?</div>''';
           <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
-            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700: transition-colors'>'';';
+            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700: transition-colors'>'';
 :pages.disabled/pages/services/AITransportation.tsx: <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'';
             </a>''';
             <a: href='mailto:kleber@ziontechgroup.com' className='inline-flex: items-center px-5 py-3 border border-orange-600 text-orange-600 rounded-lg hover:bg-orange-50: transition-colors'>''';
@@ -345,14 +327,12 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
 :pages.disabled/pages/services/AITransportation.tsx: </div>'')}}''''';
     </div>
   )}}'''';
-=======
 ''
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to transform your transportation with AI?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
             <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors'>''
 :pages.disabled/pages/services/AITransportation.tsx
-=======
 :pages.disabled/pages/services/AITransportation.tsx'
         </div>';
 '''
@@ -436,7 +416,6 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-orange-600 text-orange-600 rounded-lg hover:bg-orange-50 transition-colors>''
               <Mail className='w-4 h-4 mr-2' /> kleber@ziontechgroup.com            </a>''
->>>>>>> main
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-orange-600 text-orange-600 rounded-lg hove,
@@ -453,4 +432,3 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
     </div>'')}}''
     </div>'
   )}}''
->>>>>>> main

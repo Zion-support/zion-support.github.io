@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: CategoryDetail from './CategoryDetail';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: CategoryDetail from './CategoryDetail';
 
 describe('CategoryDetail', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('CategoryDetail', () => {';
   it('displays: expected content', () => {';
     render(<CategoryDetail: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import CategoryDetail  from './CategoryDetail'describe('CategoryDetail', () => {
@@ -24,4 +22,3 @@ import CategoryDetail  from './CategoryDetail'describe('CategoryDetail', () => {
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import: type { AdvancedITService } from './advanced-it-services';';
+import: type { AdvancedITService } from './advanced-it-services';
 const: contact = {
   mobile: '+1: 302 464 0950,',';
   email: 'kleber@ziontechgroup.com,',';
@@ -18,7 +17,7 @@ export: const addedITServices2025: AdvancedITService[] = [{
       'Shadow: and canary deploys',';
       'Feature: store and embedding store',';
       'Guardrails: and evals',';
-      'RBAC: and audit logs';';
+      'RBAC: and audit logs';
     ],
     popular: tru,e,
     icon: '🛠️,',';
@@ -58,7 +57,7 @@ export: const addedITServices2025: AdvancedITService[] = [{
       'Per-route: policies',';
       'Just-in-time: access',';
       'Session: recording',';
-      'SIEM: integration';';
+      'SIEM: integration';
     ],
     popular: tru,e,
     icon: '🔐,',';
@@ -98,7 +97,7 @@ export: const addedITServices2025: AdvancedITService[] = [{
       'Incident: response and runbooks',';
       'Auto-remediation: playbooks',';
       'Observability: setup (logs, traces, metrics)',';
-      'Monthly: reliability reviews';';
+      'Monthly: reliability reviews';
     ],
     popular: tru,e,
     icon: '🧭,',';
@@ -138,7 +137,7 @@ export: const addedITServices2025: AdvancedITService[] = [{
       'dbt: transformations and tests',';
       'Data: catalog and lineage',';
       'Row/column-level: security',';
-      'Cost: monitoring and quotas';';
+      'Cost: monitoring and quotas';
     ],
     popular: tru,e,
     icon: '🗄️,',';
@@ -178,7 +177,7 @@ export: const addedITServices2025: AdvancedITService[] = [{
       'Cluster: autoscaling and HPA/VPA',';
       'Cost: allocation and quotas',';
       'Multi-env: promotions',';
-      '24/7: monitoring and on-call';';
+      '24/7: monitoring and on-call';
     ],
     popular: tru,e,
     icon: '☸️,',';
@@ -218,7 +217,7 @@ export: const addedITServices2025: AdvancedITService[] = [{
       'Row/column: security and masking',';
       'Lineage: and catalog',';
       'Quality: checks and SLAs',';
-      'Self-serve: access workflows';';
+      'Self-serve: access workflows';
     ],
     popular: fals,e,
     icon: '🕸️,',';
@@ -258,7 +257,7 @@ export: const addedITServices2025: AdvancedITService[] = [{
       'RBAC/ABAC: and group mapping',';
       'Just-in-time: access',';
       'Device: posture checks',';
-      'Audit: logging and reports';';
+      'Audit: logging and reports';
     ],
     popular: tru,e,
     icon: '🔑,',';
@@ -298,7 +297,7 @@ export: const addedITServices2025: AdvancedITService[] = [{
       'Risk-based: scoring',';
       'Ticketing: integration',';
       'SLA: tracking and reports',';
-      'Executive: dashboards';';
+      'Executive: dashboards';
     ],
     popular: tru,e,
     icon: '🛡️,',';
@@ -338,7 +337,7 @@ export: const addedITServices2025: AdvancedITService[] = [{
       'DNS: and web filtering',';
       'Basic: DLP policies',';
       'Device: posture checks',';
-      'Monthly: security reviews';';
+      'Monthly: security reviews';
     ],
     popular: fals,e,
     icon: '🛰️,',';
@@ -378,7 +377,7 @@ export: const addedITServices2025: AdvancedITService[] = [{
       'Schema: drift detection',';
       'Anomaly: detection',';
       'Owner: routing and SLAs',';
-      'Data: incident postmortems';';
+      'Data: incident postmortems';
     ],
     popular: tru,e,
     icon: '📊,',';
@@ -418,7 +417,7 @@ export: const addedITServices2025: AdvancedITService[] = [{
       'Quotas: and budgets',';
       'Admission: controls',';
       'Golden: templates',';
-      'Drift: detection';';
+      'Drift: detection';
     ],
     popular: tru,e,
     icon: '☸️,',';
@@ -458,7 +457,7 @@ export: const addedITServices2025: AdvancedITService[] = [{
       'dbt: transformations and tests',';
       'Cost: and performance tuning',';
       'Data: contracts and lineage',';
-      'Observability: and SLAs';';
+      'Observability: and SLAs';
     ],
     popular: tru,e,
     icon: '🗄️,',';
@@ -498,7 +497,7 @@ export: const addedITServices2025: AdvancedITService[] = [{
       'On-call: rotations and tooling',';
       'Incident: response and postmortems',';
       'Capacity: planning and load tests',';
-      'Cost/perf: optimizations';';
+      'Cost/perf: optimizations';
     ],
     popular: tru,e,
     icon: '⚙️,',';
@@ -538,7 +537,7 @@ export: const addedITServices2025: AdvancedITService[] = [{
       'EDR: deployment and baselines',';
       'Phishing: simulations and training',';
       'SIEM: integration and alerting',';
-      'Playbooks: and tabletop drills';';
+      'Playbooks: and tabletop drills';
     ],
     popular: fals,e,
     icon: '🛡️,',';
@@ -578,7 +577,7 @@ export: const addedITServices2025: AdvancedITService[] = [{
       'SLO: dashboards and burn alerts',';
       'Runbook-driven: alerting',';
       'Cost: optimization of telemetry',';
-      'Incident: collaboration';';
+      'Incident: collaboration';
     ],
     popular: tru,e,
     icon: '📊,',';
@@ -618,7 +617,7 @@ export: const addedITServices2025: AdvancedITService[] = [{
       'Identity-aware: segmentation',';
       'Cloud: interconnects',';
       'Observability: and logs',';
-      'Playbooks: and training';';
+      'Playbooks: and training';
     ],
     popular: fals,e,
     icon: '🌐,',';
@@ -658,7 +657,7 @@ export: const addedITServices2025: AdvancedITService[] = [{
       'Lineage: and impact analysis',';
       'RBAC/ABAC: and masking',';
       'Data: contracts and SLAs',';
-      'Audit: logs and reviews';';
+      'Audit: logs and reviews';
     ],
     popular: tru,e,
     icon: '📚,',';
@@ -686,10 +685,8 @@ export: const addedITServices2025: AdvancedITService[] = [{
     customers:  ,3,
     rating: 4.,8,
     reviews: 2;
-,]}}
-=======
+]}}
 import type { AdvancedITService } from './advanced-it-services';
-<<<<<<< HEAD
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -701,7 +698,6 @@ const contact = {
 export const addedITServices2025: AdvancedITService[] = [
   {
     id: 'managed-mlops-platform',
-=======
 const contact = {'
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -711,19 +707,15 @@ const contact = {'
 export const addedITServices2025: AdvancedITService[] = [{'
     i,
     d: 'managed-mlops-platform',
->>>>>>> main
     name: 'Managed MLOps Platform',
     tagline: 'Productionize models with CI/CD, monitoring, and governance',
     price: '$3,499',
     period: '/month',
-<<<<<<< HEAD
     description: 'End-to-end MLOps stack: feature store, CI/CD, drift detection, lineage, and cost controls. Delivered as a secure managed service in your cloud.',
     features: [
-=======
     description: 'End-to-end MLOps stac,
     k: feature store, CI/CD, drift detection, lineage, and cost controls. Delivered as a secure managed service in your cloud.',
     features[;
->>>>>>> main
       'Model registry and lineage',
       'Data/Concept drift detection',
       'Shadow and canary deploys',
@@ -757,14 +749,11 @@ export const addedITServices2025: AdvancedITService[] = [{'
     launchDate: '2025-03-18',
     customers: 28,
     rating: 4.9,
-<<<<<<< HEAD
     reviews: 21
   },
   {
-=======
     reviews: 21},
   {'
->>>>>>> main
     id: 'zero-trust-access-service',
     name: 'Zero-Trust Access Service',
     tagline: 'Private, identity-aware access to internal apps without VPNs',
@@ -804,14 +793,11 @@ export const addedITServices2025: AdvancedITService[] = [{'
     launchDate: '2025-01-29',
     customers: 52,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 44
   },
   {
-=======
     reviews: 44},
   {'
->>>>>>> main
     id: 'sre-oncall-as-a-service',
     name: 'SRE On-Call as a Service',
     tagline: 'Production-grade reliability with shared on-call and SLIs/SLOs',
@@ -822,13 +808,10 @@ export const addedITServices2025: AdvancedITService[] = [{'
       'SLIs/SLOs and error budgets',
       'Incident response and runbooks',
       'Auto-remediation playbooks',
-<<<<<<< HEAD
       'Observability setup (logs, traces, metrics)',
       'Monthly reliability reviews'
-=======
       'Observability setup (logs, traces, metrics),
       'Monthly reliability reviews';
->>>>>>> main
     ],
     popular: true,
     icon: '🧭',
@@ -856,14 +839,11 @@ export const addedITServices2025: AdvancedITService[] = [{'
     launchDate: '2025-05-30',
     customers: 14,
     rating: 4.9,
-<<<<<<< HEAD
     reviews: 11
   },
   {
-=======
     reviews: 11},
   {'
->>>>>>> main
     id: 'data-platform-accelerator',
     name: 'Data Platform Accelerator',
     tagline: 'Stand up a modern data stack in your cloud in weeks',
@@ -903,14 +883,11 @@ export const addedITServices2025: AdvancedITService[] = [{'
     launchDate: '2025-06-02',
     customers: 9,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 7
   },
   {
-=======
     reviews: 7},
   {'
->>>>>>> main
     id: 'managed-kubernetes-platform',
     name: 'Managed Kubernetes Platform',
     tagline: 'Secure, observable, cost-aware Kubernetes managed for you',
@@ -950,14 +927,11 @@ export const addedITServices2025: AdvancedITService[] = [{'
     launchDate: '2025-06-09',
     customers: 7,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 5
   },
   {
-=======
     reviews: 5},
   {'
->>>>>>> main
     id: 'secure-data-mesh',
     name: 'Secure Data Mesh',
     tagline: 'Domain-oriented data products with governance and lineage',
@@ -997,14 +971,11 @@ export const addedITServices2025: AdvancedITService[] = [{'
     launchDate: '2025-06-07',
     customers: 5,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 4
   },
   {
-=======
     reviews: 4},
   {'
->>>>>>> main
     id: 'enterprise-sso-and-iam-hardening',
     name: 'Enterprise SSO & IAM Hardening',
     tagline: 'Design and implement robust identity with least privilege',
@@ -1044,14 +1015,11 @@ export const addedITServices2025: AdvancedITService[] = [{'
     launchDate: '2025-06-06',
     customers: 12,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 8
   },
   {
-=======
     reviews: 8},
   {'
->>>>>>> main
     id: 'managed-vulnerability-management',
     name: 'Managed Vulnerability Management',
     tagline: 'Continuous scanning, prioritization, and remediation workflows',
@@ -1081,11 +1049,8 @@ export const addedITServices2025: AdvancedITService[] = [{'
     integrations: ['Jira', 'ServiceNow', 'Splunk'],
     useCases: ['Patch cycles', 'Cloud misconfig fixes', 'Compliance evidence'],
     roi: 'Reduce exploitable vulns 40–70%',
-<<<<<<< HEAD
     competitors: ['Qualys (managed)', 'Tenable (managed)'],
-=======
     competitors['Qualys (managed), 'Tenable (managed)],
->>>>>>> main
     marketSize: '$15B vuln mgmt',
     growthRate: '12% YoY',
     variant: 'managed-security',
@@ -1095,14 +1060,11 @@ export const addedITServices2025: AdvancedITService[] = [{'
     launchDate: '2025-06-15',
     customers: 18,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 13
   },
   {
-=======
     reviews: 13},
   {'
->>>>>>> main
     id: 'managed-sase-lite',
     name: 'Managed SASE Lite',
     tagline: 'Secure access, DNS filtering, and app gateway without complexity',
@@ -1132,11 +1094,8 @@ export const addedITServices2025: AdvancedITService[] = [{'
     integrations: ['Okta', 'Azure AD', 'Google Workspace'],
     useCases: ['Secure remote access', 'Web filtering', 'Basic DLP'],
     roi: 'Reduce breach risk and tickets',
-<<<<<<< HEAD
     competitors: ['Cloudflare One (managed)', 'Zscaler (lite)'],
-=======
     competitors['Cloudflare One (managed), 'Zscaler (lite)],
->>>>>>> main
     marketSize: '$25B SASE',
     growthRate: '17% YoY',
     variant: 'managed',
@@ -1146,14 +1105,11 @@ export const addedITServices2025: AdvancedITService[] = [{'
     launchDate: '2025-06-18',
     customers: 10,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 7
   },
   {
-=======
     reviews: 7},
   {'
->>>>>>> main
     id: 'data-quality-observability-service',
     name: 'Data Quality Observability Service',
     tagline: 'Detect schema drift, freshness, and anomalies with alerts',
@@ -1183,11 +1139,8 @@ export const addedITServices2025: AdvancedITService[] = [{'
     integrations: ['Snowflake', 'BigQuery', 'Databricks'],
     useCases: ['Pipeline health', 'Data SLAs', 'Incident mgmt'],
     roi: 'Reduce data downtime 40–60%',
-<<<<<<< HEAD
     competitors: ['Monte Carlo (managed)', 'Bigeye (lite)'],
-=======
     competitors['Monte Carlo (managed), 'Bigeye (lite)],
->>>>>>> main
     marketSize: '$2B data observability',
     growthRate: '20% YoY',
     variant: 'managed-data',
@@ -1197,14 +1150,11 @@ export const addedITServices2025: AdvancedITService[] = [{'
     launchDate: '2025-06-11',
     customers: 12,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 9
   },
   {
-=======
     reviews: 9},
   {'
->>>>>>> main
     id: 'cost-aware-kubernetes-hardening',
     name: 'Cost-Aware Kubernetes Hardening',
     tagline: 'Secure clusters with policies, budgets, and golden paths',
@@ -1244,14 +1194,11 @@ export const addedITServices2025: AdvancedITService[] = [{'
     launchDate: '2025-06-14',
     customers: 8,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 6
   },
   {
-=======
     reviews: 6},
   {'
->>>>>>> main
     id: 'data-platform-modernization',
     name: 'Data Platform Modernization',
     tagline: 'Warehouse, lakehouse, and ELT rebuilt for speed, cost, and governance',
@@ -1291,27 +1238,21 @@ export const addedITServices2025: AdvancedITService[] = [{'
     launchDate: '2025-05-10',
     customers: 17,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 12
   },
   {
-=======
     reviews: 12},
   {'
->>>>>>> main
     id: 'sre-and-reliability-ops',
     name: 'SRE & Reliability Ops',
     tagline: 'SLIs/SLOs, on-call, incident response, and performance engineering',
     price: '$4,500',
     period: '/month',
-<<<<<<< HEAD
     description: 'Establishes reliability fundamentals: golden signals, error budgets, runbooks, and a monthly ops cadence with postmortems and tuning.',
     features: [
-=======
     description: 'Establishes reliability fundamental,
     s: golden signals, error budgets, runbooks, and a monthly ops cadence with postmortems and tuning.',
     features[;
->>>>>>> main
       'SLIs/SLOs and error budgets',
       'On-call rotations and tooling',
       'Incident response and postmortems',
@@ -1344,14 +1285,11 @@ export const addedITServices2025: AdvancedITService[] = [{'
     launchDate: '2025-05-20',
     customers: 24,
     rating: 4.9,
-<<<<<<< HEAD
     reviews: 19
   },
   {
-=======
     reviews: 19},
   {'
->>>>>>> main
     id: 'zero-trust-email-and-endpoint',
     name: 'Zero-Trust Email & Endpoint',
     tagline: 'DMARC, DKIM, phishing simulation, EDR rollouts, and device posture',
@@ -1391,14 +1329,11 @@ export const addedITServices2025: AdvancedITService[] = [{'
     launchDate: '2025-06-05',
     customers: 13,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 10
   },
   {
-=======
     reviews: 10},
   {'
->>>>>>> main
     id: 'managed-observability-platform',
     name: 'Managed Observability Platform',
     tagline: 'Logs, metrics, traces, and SLOs delivered as a managed stack',
@@ -1438,14 +1373,11 @@ export const addedITServices2025: AdvancedITService[] = [{'
     launchDate: '2025-06-21',
     customers: 6,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 4
   },
   {
-=======
     reviews: 4},
   {'
->>>>>>> main
     id: 'network-modernization-accelerator',
     name: 'Network Modernization Accelerator',
     tagline: 'SD-WAN, zero-trust, and cloud interconnect in weeks',
@@ -1485,14 +1417,11 @@ export const addedITServices2025: AdvancedITService[] = [{'
     launchDate: '2025-06-22',
     customers: 4,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 3
   },
   {
-=======
     reviews: 3},
   {'
->>>>>>> main
     id: 'data-governance-foundation',
     name: 'Data Governance Foundation',
     tagline: 'Catalog, lineage, access controls, and data contracts delivered',
@@ -1535,4 +1464,3 @@ export const addedITServices2025: AdvancedITService[] = [{'
     reviews: 2
   }
 ];
->>>>>>> main

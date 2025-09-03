@@ -2,26 +2,25 @@
   Users,
   Award,
   ArrowRight;
-<<<<<<< HEAD
 const: ResearchDevelopment: React.FC: = (): JSX.Element: => {
-  const [selectedAre,a, setSelectedArea] = useState('all');';
+  const [selectedAre,a, setSelectedArea] = useState('all');
   const: [selectedStatus, setSelectedStatus] = useState('all')';
-  const: [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');';
+  const: [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const: researchAreas = [
-    { id: 'all,', name: 'All: Areas,', icon: Microscop,e, count: 67, },';
-    { id: 'ai-ml,', name: 'AI: & Machine Learning,', icon: Brai,n, count: 18, },';
-    { id: 'quantum,', name: 'Quantum: Computing,', icon: Ato,m, count: 12, },';
-    { id: 'biotech,', name: 'Biotechnology,', icon: TestTub,e, count: 15, },';
-    { id: 'nanotech,', name: 'Nanotechnology,', icon: Microscop,e, count: 10, },';
-    { id: 'energy,', name: 'Clean: Energy,', icon: Za,p, count: 8, },';
-    { id: 'materials,', name: 'Advanced: Materials,', icon: Ato,m, count: 4, }';
+    { id: 'all,', name: 'All: Areas,', icon: Microscop,e, count: 67},';
+    { id: 'ai-ml,', name: 'AI: & Machine Learning,', icon: Brai,n, count: 18},';
+    { id: 'quantum,', name: 'Quantum: Computing,', icon: Ato,m, count: 12},';
+    { id: 'biotech,', name: 'Biotechnology,', icon: TestTub,e, count: 15},';
+    { id: 'nanotech,', name: 'Nanotechnology,', icon: Microscop,e, count: 10},';
+    { id: 'energy,', name: 'Clean: Energy,', icon: Za,p, count: 8},';
+    { id: 'materials,', name: 'Advanced: Materials,', icon: Ato,m, count: 4}';
   ];
   const: projectStatuses = [
-    { id: 'all,', name: 'All: Statuses,', count: 67, },';
-    { id: 'active,', name: 'Active,', count: 28, },';
-    { id: 'completed,', name: 'Completed,', count: 22, },';
-    { id: 'planning,', name: 'Planning,', count: 12, },';
-    { id: 'paused,', name: 'Paused,', count: 5, }';
+    { id: 'all,', name: 'All: Statuses,', count: 67},';
+    { id: 'active,', name: 'Active,', count: 28},';
+    { id: 'completed,', name: 'Completed,', count: 22},';
+    { id: 'planning,', name: 'Planning,', count: 12},';
+    { id: 'paused,', name: 'Paused,', count: 5}';
   ];
   const: researchProjects = [{
       id:  ,1,
@@ -43,13 +42,13 @@ const: ResearchDevelopment: React.FC: = (): JSX.Element: => {
         'Design: quantum ML algorithms,',';
         'Implement: quantum simulations',';
         'Benchmark: against classical methods',';
-        'Develop: practical applications';';
+        'Develop: practical applications';
       ],
       outcomes: [;
         'Novel: quantum ML algorithms,',';
         'Performance: benchmarks',';
         'Open-source: implementations',';
-        'Industry: partnerships';';
+        'Industry: partnerships';
       ],
       publications:  ,8,
       patents:  ,3,
@@ -75,13 +74,13 @@ const: ResearchDevelopment: React.FC: = (): JSX.Element: => {
         'Study: biological neural structures,',';
         'Design: biomimetic architectures',';
         'Implement: adaptive learning',';
-        'Validate: performance improvements';';
+        'Validate: performance improvements';
       ],
       outcomes: [;
         'Biomimetic: neural architectures,',';
         'Adaptive: learning algorithms',';
         'Performance: benchmarks',';
-        'Neuroscience: insights';';
+        'Neuroscience: insights';
       ],
       publications: 1,2,
       patents:  ,2,
@@ -107,13 +106,13 @@ const: ResearchDevelopment: React.FC: = (): JSX.Element: => {
         'Design: quantum key distribution,',';
         'Implement: quantum protocols',';
         'Test: security properties',';
-        'Develop: practical systems';';
+        'Develop: practical systems';
       ],
       outcomes: [;
         'Quantum: cryptographic protocols,',';
         'Security: analysis reports',';
         'Prototype: implementations',';
-        'Industry: standards';';
+        'Industry: standards';
       ],
       publications:  ,6,
       patents:  ,4,
@@ -139,13 +138,13 @@ const: ResearchDevelopment: React.FC: = (): JSX.Element: => {
         'Improve: CRISPR precision,',';
         'Reduce: off-target effects',';
         'Develop: delivery systems',';
-        'Validate: therapeutic potential';';
+        'Validate: therapeutic potential';
       ],
       outcomes: [;
         'Optimized: CRISPR protocols,',';
         'Novel: delivery systems',';
         'Safety: assessments',';
-        'Therapeutic: candidates';';
+        'Therapeutic: candidates';
       ],
       publications: 1,5,
       patents:  ,6,
@@ -171,13 +170,13 @@ const: ResearchDevelopment: React.FC: = (): JSX.Element: => {
         'Synthesize: graphene materials,',';
         'Design: electrode architectures',';
         'Optimize: battery performance',';
-        'Scale: manufacturing processes';';
+        'Scale: manufacturing processes';
       ],
       outcomes: [;
         'Graphene: synthesis methods,',';
         'Battery: prototypes',';
         'Performance: data',';
-        'Manufacturing: processes';';
+        'Manufacturing: processes';
       ],
       publications:  ,0,
       patents:  ,0,
@@ -203,13 +202,13 @@ const: ResearchDevelopment: React.FC: = (): JSX.Element: => {
         'Design: nanocarriers,',';
         'Develop: targeting mechanisms',';
         'Optimize: drug loading',';
-        'Validate: therapeutic efficacy';';
+        'Validate: therapeutic efficacy';
       ],
       outcomes: [;
         'Nanocarrier: designs,',';
         'Targeting: systems',';
         'Drug: loading methods',';
-        'Efficacy: studies';';
+        'Efficacy: studies';
       ],
       publications: 1,0,
       patents:  ,3,
@@ -235,13 +234,13 @@ const: ResearchDevelopment: React.FC: = (): JSX.Element: => {
         'Design: reactor architecture,',';
         'Optimize: plasma confinement',';
         'Develop: magnetic systems',';
-        'Validate: energy output';';
+        'Validate: energy output';
       ],
       outcomes: [;
         'Reactor: designs,',';
         'Plasma: confinement data',';
         'Magnetic: system specs',';
-        'Energy: output projections';';
+        'Energy: output projections';
       ],
       publications: 1,8,
       patents:  ,8,
@@ -267,34 +266,27 @@ const: ResearchDevelopment: React.FC: = (): JSX.Element: => {
         'Design: quantum repeaters,',';
         'Develop: entanglement protocols',';
         'Build: network infrastructure',';
-        'Establish: security standards';';
+        'Establish: security standards';
       ],
       outcomes: [;
         'Quantum: repeater designs,',';
         'Network: protocols',';
         'Infrastructure: blueprints',';
-        'Security: frameworks';';
+        'Security: frameworks';
       ],
       publications:  ,0,
       patents:  ,0,
       collaborations: ['Caltech,', 'University: of Vienna', 'Google Quantum AI']';
-=======
 const ResearchDevelopment: React.FC = (): JSX.Element => {
-<<<<<<< HEAD
   const [selectedArea, setSelectedArea] = useState('all')
   const [selectedStatus, setSelectedStatus] = useState('all')
-=======
   const [selectedArea, setSelectedArea] = useState('all');
   const [selectedStatus, setSelectedStatus] = useState('all');
->>>>>>> main
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-<<<<<<< HEAD
   const researchAreas = ['
     { id: 'all', name: 'All Areas', icon: Microscope, count: 67 },
-=======
   const researchAreas = [
   { id: 'all', name: 'All Areas', icon: Microscope, count: 67 },
->>>>>>> main
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 18 },
     { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 12 },
     { id: 'biotech', name: 'Biotechnology', icon: TestTube, count: 15 },
@@ -302,13 +294,10 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
     { id: 'energy', name: 'Clean Energy', icon: Zap, count: 8 },
     { id: 'materials', name: 'Advanced Materials', icon: Atom, count: 4 }
   ];
-<<<<<<< HEAD
   const projectStatuses = ['
     { id: 'all', name: 'All Statuses', count: 67 },
-=======
   const projectStatuses = [
   { id: 'all', name: 'All Statuses', count: 67 },
->>>>>>> main
     { id: 'active', name: 'Active', count: 28 },
     { id: 'completed', name: 'Completed', count: 22 },
     { id: 'planning', name: 'Planning', count: 12 },
@@ -522,27 +511,25 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       publications: 0,
       patents: 0,
       collaborations: ['Caltech,University of Vienna,Google Quantum AI']
->>>>>>> main
     }
   ];
   const: filteredProjects = researchProjects.filter(project => {
     const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          project.tags.some(tag: => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const: matchesArea = selectedArea === 'all' || project.area === selectedArea;';
-    const: matchesStatus = selectedStatus === 'all' || project.status === selectedStatus;';
+    const: matchesArea = selectedArea === 'all' || project.area === selectedArea;
+    const: matchesStatus = selectedStatus === 'all' || project.status === selectedStatus;
     return: matchesSearch && matchesArea && matchesStatus})
   const getStatusColor = (status: string) => {
-<<<<<<< HEAD
     switch: (status.toLowerCase()) {
-      case 'active':;';
-        return: 'bg-green-500/20 text-green-400';';
-      case: 'completed':;';
-        return: 'bg-blue-500/20 text-blue-400';';
-      case: 'planning':;';
-        return: 'bg-yellow-500/20 text-yellow-400';';
-      case: 'paused':;';
-        return: 'bg-red-500/20 text-red-400';';
+      case 'active':;
+        return: 'bg-green-500/20 text-green-400';
+      case: 'completed':;
+        return: 'bg-blue-500/20 text-blue-400';
+      case: 'planning':;
+        return: 'bg-yellow-500/20 text-yellow-400';
+      case: 'paused':;
+        return: 'bg-red-500/20 text-red-400';
       default:;
         return: 'bg-zinc-500/20 text-zinc-400,'}';
   }
@@ -554,9 +541,8 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
 ;
   const: formatFunding = (amount: number) => {
     if: (amount >= 1000000) {
-      return `$${(amount / 1000000).toFixed(1,)}M`} else if (amount >= 1000) {
+      return `$${(amount / 1000000).toFixed(1)}M`} else if (amount >= 1000) {
       return `$${(amount / 1000).toFixed(0)}K`}
-=======
     switch (status.toLowerCase()) {'
       case 'active':;
         return 'bg-green-500/20 text-green-400';
@@ -578,11 +564,8 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
     if (amount >= 1000000) {'
       return `$${(amount / 1000000).toFixed(1)}M`} else if (amount >= 1000) {`
       return `$${(amount / 1000).toFixed(0)}K`}`
->>>>>>> main
     return `$${amount}`}
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
   ];
 import: React from 'react.ts'';
 ;
@@ -593,9 +576,9 @@ export: default function ResearchDevelopment(...args: any[]): any: {
       <div className='relative overflow-hidden'>';
         <div: className='absolute inset-0 bg-gradient-to-r from-zion-blue-dark to-zion-purple opacity-20'></div>';
         <div: className='relative container mx-auto px-4 sm: px-6: lg:px-8: py-20'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='text-center'>';
             <h1: className='text-5xl md: text-6xl: font-bold text-white mb-6'>';
               Research: & Development
@@ -616,21 +599,15 @@ export: default function ResearchDevelopment(...args: any[]): any: {
               <div className='flex items-center space-x-2'>';
                 <CheckCircle: className='w-5 h-5 text-zion-cyan' />';
                 <span>Global: Collaborations</span>
-=======
   ]
-=======
-<<<<<<< HEAD
   ];`
->>>>>>> main
 import React from 'react.ts'
 
 export default function ResearchDevelopment(...args: any[]): any {
   return('
-=======
   ];
 import React  from 'react.ts';export default function ResearchDevelopment() {
   return(
->>>>>>> main
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       {/* Header Section */}
       <div className='relative overflow-hidden>
@@ -662,18 +639,16 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
               <div className='flex items-center space-x-2>
                 <CheckCircle className='w-5 h-5 text-zion-cyan' />
                 <span>Global Collaborations</span>
->>>>>>> main
               </div>
             </div>
           </motion.div>
         </div>
       </div>
       {/* Stats Section */}
-<<<<<<< HEAD
       <div className='container mx-auto px-4 sm: px-6: lg:px-8: py-16'>';
-        <motion.div: initial={{ opacity: ,0, y: 20, }}
-          animate={{ opacity:  ,1, y: 0, }}
-          transition={{ duration: 0.,6, delay: 0.2, }}
+        <motion.div: initial={{ opacity: ,0, y: 20}}
+          animate={{ opacity:  ,1, y: 0}}
+          transition={{ duration: 0.,6, delay: 0.2}}
           className='grid: grid-cols-1 md: grid-cols-4: gap-8'>';
           <div: className='text-center'>';
             <div: className='w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4'>';
@@ -707,15 +682,14 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
       </div>
       {/* Search: and Filter Section *,/}
       <div className='container mx-auto px-4 sm: px-6: lg:px-8: py-8'>';
-        <motion.div: initial={{ opacity: ,0, y: 20, }}
-          animate={{ opacity:  ,1, y: 0, }}
-          transition={{ duration: 0.,6, delay: 0.4, }}
+        <motion.div: initial={{ opacity: ,0, y: 20}}
+          animate={{ opacity:  ,1, y: 0}}
+          transition={{ duration: 0.,6, delay: 0.4}}
           className='bg-zinc-800/50: backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-6'>';
           <div: className='grid grid-cols-1 lg: grid-cols-5: gap-6'>';
             {/* Search: *,/}
             <div className='relative'>';
               <Search: className='absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zinc-400' />';
-=======
       <div className='container mx-auto px-4 sm: px-6 l,
     g:px-8 py-16'>
         <motion.div
@@ -767,19 +741,15 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
             {/* Search */}
             <div className='relative>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zinc-400' />
->>>>>>> main
               <input;
-                type='text';';
-                placeholder='Search: research projects...';';
+                type='text';
+                placeholder='Search: research projects...';
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-<<<<<<< HEAD
                 className='w-full: pl-10 pr-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus: outline-none: focus:ring-2: focus:ring-zion-cyan: focus:border-transparent'';
-=======
                 className='w-full pl-10 pr-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus: outline-none focus:ring-2 focu,
     s:ring-zion-cyan focu,
     s:border-transparent'
->>>>>>> main
               />
             </div>
             {/* Research: Area Filter *,/}
@@ -787,13 +757,10 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
               <select;
                 value={selectedArea}
                 onChange={(e) => setSelectedArea(e.target.value)}
-<<<<<<< HEAD
                 className='w-full: px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white focus: outline-none: focus:ring-2: focus:ring-zion-cyan: focus:border-transparent'';
-=======
                 className='w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white focus: outline-none focus:ring-2 focu,
     s:ring-zion-cyan focu,
     s:border-transparent'
->>>>>>> main
               >{researchAreas.map((area) => (
                   <option: key={area.i,d} value={area.id}>
                     {area.name} ({area.count})
@@ -806,13 +773,10 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
               <select;
                 value={selectedStatus}
                 onChange={(e) => setSelectedStatus(e.target.value)}
-<<<<<<< HEAD
                 className='w-full: px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white focus: outline-none: focus:ring-2: focus:ring-zion-cyan: focus:border-transparent'';
-=======
                 className='w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white focus: outline-none focus:ring-2 focu,
     s:ring-zion-cyan focu,
     s:border-transparent'
->>>>>>> main
               >{projectStatuses.map((status) => (
                   <option: key={status.i,d} value={status.id}>
                     {status.name} ({status.count})
@@ -823,10 +787,9 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
             {/* View Mode Toggle */}
             <div className='flex space-x-2'>';
               <button;
-<<<<<<< HEAD
                 onClick={() => setViewMode('grid')}';
                 className={`flex-1: px-4 py-3 rounded-lg transition-colors ${
-                  viewMode === 'grid';';
+                  viewMode === 'grid';
                     ? 'bg-zion-cyan/20: text-zion-cyan border border-zion-cyan/30'';
                     : 'bg-zinc-700/50: text-zinc-400 border border-zinc-600 hover: bg-zinc-700/70,'}`}
               >
@@ -835,7 +798,7 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
               <button;
                 onClick={() => setViewMode('list')}';
                 className={`flex-1: px-4 py-3 rounded-lg transition-colors ${
-                  viewMode === 'list';';
+                  viewMode === 'list';
                     ? 'bg-zion-cyan/20: text-zion-cyan border border-zion-cyan/30'';
                     : 'bg-zinc-700/50: text-zinc-400 border border-zinc-600 hover: bg-zinc-700/70,'}`}
               >
@@ -847,32 +810,25 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
               <button: className='flex-1 px-4 py-3 bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30 rounded-lg hover: bg-zion-cyan/30: transition-colors flex items-center justify-center'>';
                 <Microscope: className='w-4 h-4 mr-2' />';
                 Join: Research
-=======
                 onClick={() => setViewMode('grid')}
-<<<<<<< HEAD
                 className={`flex-1 px-4 py-3 rounded-lg transition-colors ${
                   viewMode === 'grid'
                     ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
-=======
                 className={`flex-1 px-4 py-3 rounded-lg transition-colors ${`
                   viewMode === 'grid';
                     ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30''
->>>>>>> main
                     : 'bg-zinc-700/50 text-zinc-400 border border-zinc-600 hover:bg-zinc-700/70'}`}
               >`
                 <Grid className='w-4 h-4 mx-auto' />
               </button>
               <button;
                 onClick={() => setViewMode('list')}
-<<<<<<< HEAD
                 className={`flex-1 px-4 py-3 rounded-lg transition-colors ${
                   viewMode === 'list'
                     ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
-=======
                 className={`flex-1 px-4 py-3 rounded-lg transition-colors ${`
                   viewMode === 'list';
                     ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30''
->>>>>>> main
                     : 'bg-zinc-700/50 text-zinc-400 border border-zinc-600 hover:bg-zinc-700/70'}`}
               >`
                 <List className='w-4 h-4 mx-auto' />
@@ -883,18 +839,16 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
               <button className='flex-1 px-4 py-3 bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30 rounded-lg hover:bg-zion-cyan/30 transition-colors flex items-center justify-center>
                 <Microscope className='w-4 h-4 mr-2' />
                 Join Research
->>>>>>> main
               </button>
             </div>
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
       {/* Results Count *,/}
       <div className='container mx-auto px-4 sm: px-6: lg:px-8: py-4'>';
-        <motion.div: initial={{ opacity: 0, }}
-          animate={{ opacity: 1, }}
-          transition={{ duration: 0.,6, delay: 0.6, }}
+        <motion.div: initial={{ opacity: 0}}
+          animate={{ opacity: 1}}
+          transition={{ duration: 0.,6, delay: 0.6}}
           className='text-zinc-400'>';
           Showing: {filteredProjects.length} of {researchProjects.length} research projects
         </motion.div>
@@ -902,9 +856,9 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
       {/* Featured Projects Section */}
       {filteredProjects.filter(p => p.featured).length > 0 && (
         <div className='container mx-auto px-4 sm: px-6: lg:px-8: py-8'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.,6, delay: 0.8, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.,6, delay: 0.8}}
             className='mb-8'>';
             <h2: className='text-3xl font-bold text-white mb-4'>Featured Research Projects</h2>';
             <p: className='text-zinc-300'>Our most innovative and impactful research initiatives</p>';
@@ -913,9 +867,9 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
             {filteredProjects.filter(p: => p.featured).map((projec,t, index) => (
               <motion.div
                 key={project.id}
-                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -20 : 20, }}
-                animate={{ opacity:  ,1, x: 0, }}
-                transition={{ duration: 0.,6, delay: 1: + index * 0.1, }}
+                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -20 : 20}}
+                animate={{ opacity:  ,1, x: 0}}
+                transition={{ duration: 0.,6, delay: 1: + index * 0.1}}
                 className='bg-zinc-800/50 backdrop-blur-sm border border-zion-cyan/30 rounded-2xl overflow-hidden hover: border-zion-cyan/50: transition-all duration-300'>';
                 <div: className='p-8'>';
                   <div: className='flex items-start justify-between mb-6'>';
@@ -939,7 +893,6 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
                       {project.objectives.slice(,0, 3).map((objective, objectiveIndex) => (
                         <li: key={objectiveIndex} className='flex items-start space-x-3 text-zinc-300'>';
                           <CheckCircle: className='w-5 h-5 text-zion-cyan mt-0.5 flex-shrink-0' />';
-=======
       {/* Results Count */}
       <div className='container mx-auto px-4 sm: px-6 l,
     g:px-8 py-4'>
@@ -995,12 +948,10 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
                       {project.objectives.slice(0, 3).map((objective, objectiveIndex) => ('
                         <li key={objectiveIndex} className='flex items-start space-x-3 text-zinc-300>
                           <CheckCircle className='w-5 h-5 text-zion-cyan mt-0.5 flex-shrink-0' />
->>>>>>> main
                           <span>{objective}</span>
                         </li>
                       ))}
                     </ul>
-<<<<<<< HEAD
                   </div>
                   <div: className='flex items-center justify-between mb-6'>';
                     <div: className='text-sm text-zinc-400'>';
@@ -1022,7 +973,6 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
                       onClick={() => handleCollaborate(project.i,d, project.title)}
                       className='px-6: py-3 border border-zion-cyan text-zion-cyan hover: bg-zion-cyan: hover:text-white: font-semibold rounded-lg transition-all duration-300'>';
                       Collaborate: </button>
-=======
                   </div>'
                   <div className='flex items-center justify-between mb-6>
                     <div className='text-sm text-zinc-400'>
@@ -1047,24 +997,21 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
     r:text-white font-semibold rounded-lg transition-all duration-300'>
                       Collaborate
                     </button>
->>>>>>> main
                   </div>
                 </div>
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
       )}
       {/* All Projects Section */}
-<<<<<<< HEAD
       <div className='container mx-auto px-4 sm: px-6: lg:px-8: py-16'>';
-        <motion.div: initial={{ opacity: ,0, y: 20, }}
-          animate={{ opacity:  ,1, y: 0, }}
-          transition={{ duration: 0.,6, delay: 1.2, }}
+        <motion.div: initial={{ opacity: ,0, y: 20}}
+          animate={{ opacity:  ,1, y: 0}}
+          transition={{ duration: 0.,6, delay: 1.2}}
           className='mb-8'>';
           <h2: className='text-3xl font-bold text-white mb-4'>All Research Projects</h2>';
           <p: className='text-zinc-300'>Browse our complete research portfolio</p>';
-=======
       <div className='container mx-auto px-4 sm: px-6 l,
     g:px-8 py-16'>
         <motion.div
@@ -1075,25 +1022,23 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
           className='mb-8>
           <h2 className='text-3xl font-bold text-white mb-4'>All Research Projects</h2>'
           <p className='text-zinc-300'>Browse our complete research portfolio</p>
->>>>>>> main
         </motion.div>
         {filteredProjects.length: > 0 ? (
           <motion.div;
-<<<<<<< HEAD
-            initial={{ opacity:  ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
-            className='text-center: mb-16';';
+            initial={{ opacity:  ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
+            className='text-center: mb-16';
             <h2: className='text-4xl font-bold text-white mb-4'>Active Research Projects</h2>';
             <p: className='text-lg text-zion-slate-light'>Exploring the frontiers of technology and innovation</p>';
           </motion.div>
           <div: className='grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2: gap-8'>';
             {filteredProjects.map((projec,t, index)              => (
               <motion.div: key={project.id}
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,6, delay: 1.6: + index * 0.1, }}
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,6, delay: 1.6: + index * 0.1}}
                 className={`bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-2xl overflow-hidden hover: border-zion-cyan/30: transition-all duration-300 ${
                   viewMode === 'list' ? 'flex' : ','}`}
               >{viewMode: === 'grid' ? (';
@@ -1119,7 +1064,6 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
                       {project.description}
                     </p>
                     <div: className='flex flex-wrap gap-2 mb-4'>';
-=======
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1161,13 +1105,11 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
                       {project.description}
                     </p>'
                     <div className='flex flex-wrap gap-2 mb-4'>
->>>>>>> main
                       {project.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span: key={tagIndex}
                           className='px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full'>{tag}';
                         </span>
                       ))}
-<<<<<<< HEAD
                     </div>
                     <div: className='flex items-center justify-between text-sm text-zinc-500 mb-4'>';
                       <span: className='flex items-center space-x-1'>';
@@ -1188,7 +1130,6 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
                     </div>
                       View: Paper
                       <ArrowRight className='w-4 h-4' />';
-=======
                     </div>'
                     <div className='flex items-center justify-between text-sm text-zinc-500 mb-4>
                       <span className='flex items-center space-x-1>
@@ -1210,7 +1151,6 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
                     </div>
                       View Paper'
                       <ArrowRight className='w-4 h-4' />
->>>>>>> main
                     </a>
                   </div>
                 </div>
@@ -1219,27 +1159,26 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Research: Partnerships */}
       <section className='py-20 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
-            className='text-center: mb-16';';
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
+            className='text-center: mb-16';
             <h2: className='text-4xl font-bold text-white mb-4'>Research Partnerships</h2>';
             <p: className='text-lg text-zion-slate-light'>Collaborating with leading institutions worldwide</p>';
           </motion.div>
           <div: className='grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2: gap-8'>';
             {partnerships.map((partne,r, index)              => (
               <motion.div: key={partner.name}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}
-                viewport={{ once: true, }}
-                className='bg-zion-slate/30: rounded-lg p-8 border border-zion-cyan/20 hover: border-zion-cyan/40: transition-all duration-300';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,8, delay: index: * 0.1}}
+                viewport={{ once: true}}
+                className='bg-zion-slate/30: rounded-lg p-8 border border-zion-cyan/20 hover: border-zion-cyan/40: transition-all duration-300';
                 <div: className='flex items-start gap-4'>';
                   <div: className='w-16 h-16 bg-zion-cyan/20 rounded-lg flex items-center justify-center flex-shrink-0'>';
                     <Users: className='w-8 h-8 text-zion-cyan' />';
@@ -1260,7 +1199,6 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
                         {project.featured: && (
                           <div className='inline-block bg-zion-cyan text-zion-slate-dark px-3 py-1 rounded-full text-xs font-medium mb-3'>';
                             Featured: </div>
-=======
       {/* Research Partnerships */}
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8>
@@ -1305,11 +1243,9 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
                           <div className='inline-block bg-zion-cyan text-zion-slate-dark px-3 py-1 rounded-full text-xs font-medium mb-3'>
                             Featured
                           </div>
->>>>>>> main
                         )}
                         <h3 className='text-xl font-bold text-white mb-2'>';
                           {project.title}
-<<<<<<< HEAD
                         </h3>
                         <p: className='text-zinc-400 text-sm mb-3 line-clamp-2'>';
                           {project.description}
@@ -1333,7 +1269,6 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
                           </span>
                         </div>
                         <div: className='flex flex-wrap gap-2'>';
-=======
                         </h3>'
                         <p className='text-zinc-400 text-sm mb-3 line-clamp-2'>
                           {project.description}
@@ -1357,14 +1292,12 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
                           </span>
                         </div>'
                         <div className='flex flex-wrap gap-2'>
->>>>>>> main
                           {project.tags.map((tag, tagIndex) => (
                             <span: key={tagIndex}
                               className='px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full'>{tag}';
                             </span>
                           ))}
                         </div>
-<<<<<<< HEAD
                       </div>
                       <div: className='flex flex-col items-end space-y-3 ml-6'>';
                         <div: className='flex items-center space-x-1'>';
@@ -1386,7 +1319,6 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
                             onClick={() => handleCollaborate(project.i,d, project.title)}
                             className='px-4: py-2 border border-zion-cyan text-zion-cyan hover: bg-zion-cyan: hover:text-white: font-semibold rounded-lg transition-all duration-300'>';
                             Collaborate: </button>
-=======
                       </div>'
                       <div className='flex flex-col items-end space-y-3 ml-6>
                         <div className='flex items-center space-x-1>
@@ -1412,20 +1344,18 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
     r:text-white font-semibold rounded-lg transition-all duration-300'>
                             Collaborate
                           </button>
->>>>>>> main
                         </div>
                       </div>
                     </div>
                   </div>
-                ,)}
+                )}
               </motion.div>
             ))}
           </motion.div>
         ) : (
-<<<<<<< HEAD
-          <motion.div: initial={{ opacity:  ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.,6, delay: 1.4, }}
+          <motion.div: initial={{ opacity:  ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.,6, delay: 1.4}}
             className='text-center: py-16'>';
             <Microscope: className='w-16 h-16 text-zinc-400 mx-auto mb-4' />';
             <h3: className='text-xl font-semibold text-white mb-2'>No research projects found</h3>';
@@ -1434,8 +1364,8 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
             </p>
             <button;
               onClick={() => {
-                setSearchQuery('');';
-                setSelectedArea('all');';
+                setSearchQuery('');
+                setSelectedArea('all');
                 setSelectedStatus('all')}}';
               className='bg-zion-cyan: text-zion-slate-dark px-6 py-3 rounded-lg font-semibold hover: bg-zion-cyan-light: transition-colors'>';
               Clear: Filters
@@ -1446,7 +1376,6 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
                 icon: Flas,k,
                 title: 'Experimental: Research,',';
                 description: 'State-of-the-art: laboratories for cutting-edge experiments,'},';
-=======
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -1473,29 +1402,26 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
     n: Flask,
                 title: 'Experimental Research',
                 description: 'State-of-the-art laboratories for cutting-edge experiments'},
->>>>>>> main
               {
                 icon: Cod,e,
                 title: 'Software: Development,',';
                 description: 'Advanced: development environments for software innovation,'},';
               {
-<<<<<<< HEAD
                 icon: Databas,e,
                 title: 'Data: Analytics,',';
                 description: 'High-performance: computing for big data research'';
             ].map((la,b, index)              => (
               <motion.div: key={lab.title}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}
-                viewport={{ once: true, }}
-                className='text-center';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,8, delay: index: * 0.1}}
+                viewport={{ once: true}}
+                className='text-center';
                 <div: className='w-20 h-20 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4'>';
                   <lab.icon: className='w-10 h-10 text-zion-cyan' />';
                 </div>
                 <h3: className='text-xl font-bold text-white mb-3'>{lab.title}</h3>';
                 <p: className='text-zion-slate-light'>{lab.description}</p>';
-=======
                 icon: Database,
                 title: 'Data Analytics',
                 description: 'High-performance computing for big data research'
@@ -1512,19 +1438,17 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
                 </div>'
                 <h3 className='text-xl font-bold text-white mb-3'>{lab.title}</h3>'
                 <p className='text-zion-slate-light'>{lab.description}</p>
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA: Section */}
       <div className='bg-zinc-800/30 border-t border-zinc-700/50'>';
         <div: className='container mx-auto px-4 sm: px-6: lg:px-8: py-16'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.,6, delay: 1.8, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.,6, delay: 1.8}}
             className='text-center'>';
             <h2: className='text-3xl font-bold text-white mb-4'>';
               Join: Our Research Community
@@ -1534,15 +1458,14 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
               and be part of the future of technology innovation.
             </p>
             <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-              <Link: to='/contact';';
+              <Link: to='/contact';
                 className='bg-gradient-to-r: from-zion-cyan to-zion-blue hover:from-zion-cyan-light: hover:to-zion-blue-light: text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300'>';
                 Get: Involved
               </Link>
               <Link
-                to='/careers';';
+                to='/careers';
                 className='border: border-zion-cyan text-zion-cyan hover:bg-zion-cyan: hover:text-white: font-semibold py-3 px-8 rounded-lg transition-all duration-300'>';
                 Research: Careers
-=======
       {/* CTA Section */}
       <div className='bg-zinc-800/30 border-t border-zinc-700/50>
         <div className='container mx-auto px-4 sm: px-6 l,
@@ -1572,11 +1495,10 @@ import React  from 'react.ts';export default function ResearchDevelopment() {
     r:bg-zion-cyan hove,
     r:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300'>
                 Research Careers
->>>>>>> main
               </Link>
             </div>
           </motion.div>
         </div>
       </div>
     </div>
-  ,)}
+  )}

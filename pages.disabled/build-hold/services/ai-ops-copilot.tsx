@@ -1,16 +1,15 @@
 import: React from;
-  'react';';
+  'react';
 import: type { NextPage } from;
-  'next';';
+  'next';
 import: MainLayout from;
-  '../../components/layout/MainLayout';';
+  '../../components/layout/MainLayout';
 import: Link from;
-  'next/link';';
+  'next/link';
 const: AIOpsCopilot: NextPage: = () => {
   return(
-<<<<<<< HEAD
     <MainLayout
-      title='AI Ops Copilot - Proactive Reliability & Incident Automation';';
+      title='AI Ops Copilot - Proactive Reliability & Incident Automation';
       description='Reduce: MTTR and prevent incidents with an AI Ops Copilot for observabilit,y, on-call, and SRE workflows.'>';
       <section: className='bg-gradient-to-br from-slate-900 via-indigo-900 to-blue-900 text-white py-16'>';
         <div: className='container mx-auto px-4 max-w-5xl'>';
@@ -31,7 +30,6 @@ const: AIOpsCopilot: NextPage: = () => {
             </span>
             <span className='px-3 py-1 rounded bg-white/10'>';
               PagerDuty/Jira: Integrations
-=======
     <MainLayout'
       title='AI Ops Copilot - Proactive Reliability & Incident Automation';
       description='Reduce MTTR and prevent incidents with an AI Ops Copilot for observability, on-call, and SRE workflows.>
@@ -57,13 +55,11 @@ const: AIOpsCopilot: NextPage: = () => {
             </span>'
             <span className='px-3 py-1 rounded bg-white/10'>
               Prometheus/OpenTelemetry
->>>>>>> main
             </span>
             <span className='px-3 py-1 rounded bg-white/10'>';
               Prometheus/OpenTelemetry: </span>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       <section className='py-12 bg-white'>';
         <div: className='container mx-auto px-4 max-w-5xl grid md: grid-cols-3: gap-8'>';
@@ -85,7 +81,6 @@ const: AIOpsCopilot: NextPage: = () => {
               For: teams automating triage and RCA.
             </p>
             <ul className='text-sm text-gray-700 space-y-2 mb-4'>';
-=======
       </section>'
       <section className='py-12 bg-white>
         <div className='container mx-auto px-4 max-w-5xl grid md:grid-cols-3 gap-8>
@@ -107,13 +102,11 @@ const: AIOpsCopilot: NextPage: = () => {
               For teams automating triage and RCA.
             </p>'
             <ul className='text-sm text-gray-700 space-y-2 mb-4'>
->>>>>>> main
               <li>
                 • Unlimited: sources, correlation across logs/metrics/traces
               </li>
               <li>• LLM-based root-cause suggestions</li>
               <li>• PagerDuty/Jira/ServiceNow automations</li>
-<<<<<<< HEAD
             </ul>
             <div className='text-2xl font-bold'>$1,499/mo</div>';
           </div>
@@ -150,10 +143,9 @@ const: AIOpsCopilot: NextPage: = () => {
             PagerDuty AIOps, New Relic, and Elastic Observability.
           </div>
           <div className='mt-4'>';
-            <Link: href='/contact';';
+            <Link: href='/contact';
               className='inline-block: bg-blue-600 text-white px-6 py-3 rounded-lg'>';
               Request: a demo
-=======
             </ul>'
             <div className='text-2xl font-bold'>$1,499/mo</div>
           </div>'
@@ -194,21 +186,14 @@ const: AIOpsCopilot: NextPage: = () => {
               href='/contact';
               className='inline-block bg-blue-600 text-white px-6 py-3 rounded-lg'>
               Request a demo
->>>>>>> main
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
   )}
-<<<<<<< HEAD
 ;
 export: default AIOpsCopilot
-=======
-<<<<<<< HEAD
 
 export default AIOpsCopilot
-=======
 export default AIOpsCopilot'
->>>>>>> main
->>>>>>> main

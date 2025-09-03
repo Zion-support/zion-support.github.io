@@ -1,19 +1,15 @@
-<<<<<<< HEAD
 
 const fs = require('fs');
 const path = require('path');
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
->>>>>>> main
 
 class SecurityEnhancer {
   constructor() {
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
   }
 
   async addSecurityHeaders() {
@@ -117,7 +113,6 @@ module.exports = { cspHeader };
 
 const enhancer = new SecurityEnhancer();
 enhancer.run().catch(console.error);
-=======
     this.reportsDir = path.join(this.projectRoot, 'security-reports');
     this.ensureDirectories();
   }
@@ -172,9 +167,7 @@ export function middleware(request) {
 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
-  ],
-};
+    '/((?!api|_next/static|_next/image|favicon.ico).*)']};
 `;
 
     const middlewarePath = path.join(this.projectRoot, 'middleware.security.js');
@@ -215,7 +208,7 @@ export class SecurityUtils {
 
   static validatePassword(password) {
     // At least 8 characters, 1 uppercase, 1 lowercase, 1 number
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d@$!%*?&]{8,}$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d@$!%*?&]{8}$/;
     return passwordRegex.test(password);
   }
 
@@ -337,4 +330,3 @@ SENTRY_DSN=your_sentry_dsn_here
 // Run the security enhancer
 const securityEnhancer = new SecurityEnhancer();
 securityEnhancer.run();
->>>>>>> main

@@ -6,13 +6,11 @@ import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from 'luc
 export default function Whitepapers() {
   const whitepapers = [
     {
-<<<<<<< HEAD
       id: 'ai-business-transformation', title: 'AI-Powered Business Transformation: A Comprehensive Guide',
       description: 'Explore how artificial intelligence is reshaping business operations and driving digital transformation across industries.', author: 'Dr. Sarah Johnson',
       date: '2024-01-20', category: 'Artificial Intelligence',
       pages: 45, downloads: '12.5k',
       rating: 4.8, featured: true,
-=======
       id: 'ai-business-transformation',
       title: 'AI-Powered Business Transformation: A Complete Guide',
       description: 'Comprehensive guide to implementing AI solutions that drive real business value and competitive advantage.',
@@ -23,11 +21,9 @@ export default function Whitepapers() {
       downloads: '12.5k',
       rating: 4.8,
       featured: true,
->>>>>>> main
       topics: ['Machine Learning', 'Business Strategy', 'Digital Transformation', 'ROI Analysis']
     }, {
       id: 'cloud-migration-strategies',
-<<<<<<< HEAD
       title: 'Cloud Migration Strategies for Enterprise Success', description: 'Best practices and proven strategies for successful cloud migration in enterprise environments.',
       author: 'Michael Chen', date: '2024-01-15',
       category: 'Cloud Computing', pages: 32,
@@ -61,7 +57,6 @@ export default function Whitepapers() {
       category: 'Mobile Development', pages: 28,
       downloads: '3.7k', rating: 4.5,
       featured: false, topics: ['React Native', 'Flutter', 'Performance', 'User Experience']
-=======
       title: 'Cloud Migration Strategies for Enterprise Success',
       description: 'Best practices and proven strategies for successful cloud migration in enterprise environments.',
       author: 'Michael Chen',
@@ -111,7 +106,6 @@ export default function Whitepapers() {
       rating: 4.5,
       featured: false,
       topics: ['Data Strategy', 'Analytics Tools', 'Business Intelligence', 'Data Governance']
->>>>>>> main
     }
   ];
 
@@ -128,7 +122,6 @@ export default function Whitepapers() {
   });
 
   return (
-<<<<<<< HEAD
     <MainLayout
       title="Whitepapers - Zion Tech Group"
       description="Download our comprehensive whitepapers and research reports on technology trends and best practices."
@@ -152,7 +145,6 @@ export default function Whitepapers() {
                 placeholder="Search whitepapers..."
                 className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 focus: outline-none focus:ring-2 focus:ring-blue-400"
               />
-=======
     <>
       <Head>
         <title>White Papers - Zion Tech Group</title>
@@ -173,12 +165,10 @@ export default function Whitepapers() {
                 Access our comprehensive research and insights on the latest technology trends, 
                 best practices, and industry solutions.
               </p>
->>>>>>> main
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
       {/* Featured Whitepapers */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -244,7 +234,6 @@ export default function Whitepapers() {
                       <span className="text-gray-500">Whitepaper Preview</span>
                     </div>
                   </div>
-=======
         {/* Search and Filter Section */}
         <section className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -260,7 +249,6 @@ export default function Whitepapers() {
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
->>>>>>> main
                 </div>
               </div>
               
@@ -284,7 +272,6 @@ export default function Whitepapers() {
           </div>
         </section>
 
-<<<<<<< HEAD
       {/* All Whitepapers Grid */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -316,7 +303,6 @@ export default function Whitepapers() {
                   
                   <div className="mb-4">
                     <div className="flex flex-wrap gap-1">
-=======
         {/* White Papers Grid */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -334,7 +320,6 @@ export default function Whitepapers() {
                     <p className="text-gray-600 mb-4">{paper.description}</p>
                     
                     <div className="flex flex-wrap gap-2 mb-4">
->>>>>>> main
                       {paper.topics.slice(0, 3).map((topic, index) => (
                         <span key={index} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">
                           {topic}
@@ -367,15 +352,12 @@ export default function Whitepapers() {
                         {paper.rating}
                       </div>
                     </div>
-<<<<<<< HEAD
                   </div>
 
                   <div className="flex items-center justify-between">
                     <button className="flex items-center bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors">
-=======
                     
                     <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
->>>>>>> main
                       <Download className="w-4 h-4 mr-2" />
                       Download PDF
                     </button>
@@ -394,7 +376,6 @@ export default function Whitepapers() {
           </div>
         </section>
 
-<<<<<<< HEAD
       {/* Newsletter Signup */}
       <section className="py-16 bg-blue-600">
         <div className="container mx-auto px-4 text-center">
@@ -413,7 +394,6 @@ export default function Whitepapers() {
             <button className="bg-white text-blue-600 px-6 py-3 rounded-r-lg font-semibold hover:bg-gray-100 transition-colors">
               Subscribe
             </button>
-=======
         {/* Newsletter Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -434,7 +414,6 @@ export default function Whitepapers() {
                 Subscribe
               </button>
             </div>
->>>>>>> main
           </div>
         </section>
       </main>

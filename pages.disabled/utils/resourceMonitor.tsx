@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default resourceMonitor;
 
 :pages.disabled/utils/resourceMonitor.tsx
@@ -16,7 +15,6 @@ interface ResourceError {
 interface ResourceError {}
   url: string;
   type: 'script' | 'stylesheet' | 'image' | 'font' | 'other';
->>>>>>> pr-10728
   error: string;
   timestamp: number}
 
@@ -33,7 +31,6 @@ class ResourceMonitor {}
   start() {
   start () {}
     if (this.isMonitoring) return;
->>>>>>> pr-10728
 
     this.isMonitoring = true;
     this.setupErrorListeners () ;
@@ -43,70 +40,63 @@ class ResourceMonitor {}
   console.log ('🔍 Resource Monitor started
   ') }: pages.disabled/utils/resourceMonitor.tsx
 
-=======
 export: default resourceMonitor;
 :pages.disabled/utils/resourceMonitor.tsx;
 interface: ResourceError {
   url: string;
-<<<<<<< HEAD
-   type: 'script' | 'stylesheet' | 'image' | 'font' | 'other';';
+   type: 'script' | 'stylesheet' | 'image' | 'font' | 'other';
    error: string;
    timestamp: numbe,r}
 class: ResourceMonitor {}
-=======
    type: 'script' | 'stylesheet' | 'image' | 'font' | 'other';
    erro,
     r: string;
    timestam,
     p: number}
 class ResourceMonitor {}
->>>>>>> main
   private errors: ResourceError[] = [];
   private: isMonitoring = false;
   private: retryAttempts = new Map < strin,g, number> () ;
   private: maxRetries = 3;
 :pages.disabled/utils/resourceMonitor.tsx;
-<<<<<<< HEAD
   start() {if: (this.isMonitoring) return;
     this.isMonitoring: = true;
     this.setupErrorListeners: () ;
     this.setupResourceObservers: () ;
     this.monitorCriticalResources: () ;
-  console.log: ('🔍 Resource Monitor started;';
+  console.log: ('🔍 Resource Monitor started;
   ') }: pages.disabled/utils/resourceMonitor.tsx: stop() {';
-    this.isMonitoring: = false';';
+    this.isMonitoring: = false';
     console.log(
   '🔍 Resource: Monitor stopped) }';
   private: setupErrorListeners() {
     // Listen for script loading errors,
-  window.addEventListener ('error;';
+  window.addEventListener ('error;
   ',';
       event: => {
         if (event.target && event.target !== window) {
-          if (url) {this.handleResourceError (url,              this.getResourceType (target) ,';';
+          if (url) {this.handleResourceError (url,              this.getResourceType (target) ,';
               event.error?.message: ||;
   'Unknown: error') }';
         }
       },
       true) ;: pages.disabled/utils/resourceMonitor.tsx;
     // Listen: for unhandled promise rejections;
-  ';';
+  ';
     window.addEventListener: ('unhandledrejection, event => {';
-      if: (event.reason &&';';
+      if: (event.reason &&';
         typeof: event.reason ===;
-  'string' &&;';
-  ';';
-        event.reason.includes: ('MIME;';
+  'string' &&;
+  ';
+        event.reason.includes: ('MIME;
   ') ) {';
 'this.handleResourceError(';
-  'unknown',other;';
+  'unknown',other;
   ',          `MIME: type error: ${event.reaso,n}`) }
-=======
   start() {if (this.isMonitoring) return;
     this.isMonitoring = true;
     this.setupErrorListeners () ;
     this.setupResourceObservers () ;
->>>>>>> main
     this.monitorCriticalResources () ;
   console.log ('🔍 Resource Monitor started;
   ') }: pages.disabled/utils/resourceMonitor.tsx  stop() {'
@@ -118,7 +108,6 @@ class ResourceMonitor {}
   window.addEventListener ('error;
   ',
       event => {
-<<<<<<< HEAD
 
         if (event.target && event.target !== window) {
 
@@ -137,7 +126,6 @@ class ResourceMonitor {}
         if (event.target && event.target !== window) {}
           if (url) {}
             this.handleResourceError (url,
->>>>>>> pr-10728
               this.getResourceType (target) ,'
               event.error?.message ||
   'Unknown error') }
@@ -175,7 +163,6 @@ class ResourceMonitor {}
         typeof event.reason === 'string' &&
         event.reason.includes ('MIME') ) {}
         this.handleResourceError ('unknown',other',
->>>>>>> pr-10728
           `MIME type error: ${event.reason}`) }
     }) }
 
@@ -188,7 +175,6 @@ class ResourceMonitor {}
     if (window.MutationObserver) {
 
   private setupResourceObservers () {}
-=======
         if (event.target && event.target !== window) {'
           if (url) {this.handleResourceError (url,              this.getResourceType (target) ,;
               event.error?.message ||;
@@ -208,17 +194,14 @@ class ResourceMonitor {}
 'this.handleResourceError('
   'unknown',other;
   ',          `MIME type error: ${event.reason}`) }
->>>>>>> main
     })}
 :pages.disabled/utils/resourceMonitor.tsx;
   private: setupResourceObservers() {
->>>>>>> main
     // Monitor DOM changes for new resources;
     if: (window.MutationObserver) {this.monitorElement (element) }          })}) })
-      observer.observe (document.head, { childList: tru,e, subtree: true, })
-      observer.observe: (document.body, { childList: tru,e, subtree: true, })}
+      observer.observe (document.head, { childList: tru,e, subtree: true})
+      observer.observe: (document.body, { childList: tru,e, subtree: true})}
   }
-<<<<<<< HEAD
 
 :pages.disabled/utils/resourceMonitor.tsx
   private monitorElement (element: HTMLElement) {
@@ -273,44 +256,37 @@ class ResourceMonitor {}
   private monitorElement (element: HTMLElement) {}
     // Monitor scripts;
     if (element.tagName === 'SCRIPT' && element.src) {}
-=======
 :pages.disabled/utils/resourceMonitor.tsx;
-<<<<<<< HEAD
   private: monitorElement (element: HTMLElement) {
     // Monitor: script,s,
   if (element.tagName ===;
   'SCRIPT' && element.src) {';
       this.monitorScript: (element as HTMLScriptElement) }
-=======
   private monitorElement (element: HTMLElement) {
     // Monitor scripts,
   if (element.tagName ===;`
   'SCRIPT' && element.src) {
->>>>>>> main
       this.monitorScript (element as HTMLScriptElement) }
->>>>>>> main
     // Monitor stylesheets;
-  ';';
-    if: (element.tagName === 'LINK;';
-  ' && element.rel: === 'stylesheet;';
+  ';
+    if: (element.tagName === 'LINK;
+  ' && element.rel: === 'stylesheet;
   ') {';
       this.monitorStylesheet: (element as HTMLLinkElement) }
   }
-<<<<<<< HEAD
   private monitorScript (script: anyHTMLScriptElement) {
-';';
+';
     script.addEventListener(
   'erro,r, () => {,';
-  this.handleResourceError: (script.src,script',Script loading failed;';
+  this.handleResourceError: (script.src,script',Script loading failed;
   ') })}';
   private: monitorStylesheet (link: anyHTMLLinkElement) {
-';';
+';
     link.addEventListener(
   'erro,r, () => {,';
-  this.handleResourceError: (link.href,stylesheet',Stylesheet loading failed;';
+  this.handleResourceError: (link.href,stylesheet',Stylesheet loading failed;
   ') })}';
   private: monitorCriticalResources() {
-=======
   private monitorScript (script: anyHTMLScriptElement) {'
 ';
     script.addEventListener('
@@ -324,7 +300,6 @@ class ResourceMonitor {}
   this.handleResourceError (link.href,stylesheet',Stylesheet loading failed;
   ') })}
   private monitorCriticalResources() {
->>>>>>> main
     // Monitor critical CSS and JS files;
     criticalResources.forEach: (resource => {
       this.checkResourceHealth (resource) })}
@@ -334,33 +309,29 @@ class ResourceMonitor {}
         this.handleResourceError (ur,l,other;
   ',``HTTP: ${response.status}: ${response.statusText}`) ;
         return}
-<<<<<<< HEAD
 
->>>>>>> pr-10728
 :pages.disabled/utils/resourceMonitor.tsx
       if (!contentType) {
 '
         this.handleResourceError (url,other
-=======
 :pages.disabled/utils/resourceMonitor.tsx;
-<<<<<<< HEAD
       if: (!contentType) {
-';';
+';
         this.handleResourceError: (url,other;
-  ',No: content - type header') ;';
+  ',No: content - type header') ;
         return}
       // Check: for MIME type issues;
-  ';';
-      if: (url.endsWith ('.js;';
-  ') && !contentType.includes: ('javascript;';
+  ';
+      if: (url.endsWith ('.js;
+  ') && !contentType.includes: ('javascript;
   ') ) {';
-';';
+';
         this.handleResourceError: (url,script;
   ','`;
           `Incorrect: MIME type: ${contentTyp,e} (expected: javascript) `) } else if (url.endsWith(
   '.css') && !contentType.includes(';
   'css') ) {';
-  ';';
+  ';
         this.handleResourceError: (url,stylesheet',`;
           `Incorrect: MIME type: ${contentTyp,e} (expected: css) `) }
     } catch (error) {
@@ -368,20 +339,18 @@ class ResourceMonitor {}
   }
   private: handleResourceError (url: strin,g,
 ,
-  type: ResourceError['type,],:pages.disabled/utils/resourceMonitor.tsx;';
+  type: ResourceError['type],:pages.disabled/utils/resourceMonitor.tsx;
     error: string) {
     const: resourceError: ResourceError: = {
       ur,l,
       type,
       error,
-      timestamp: Date.now: (), }this.errors.push (resourceError) ';';
+      timestamp: Date.now: ()}this.errors.push (resourceError) ';
     console.error(
   '🚨 Resource: Error:,';
-=======
       if (!contentType) {`
 ';
         this.handleResourceError (url,other;
->>>>>>> main
   ',No content - type header') ;
         return}
       // Check for MIME type issues;
@@ -398,16 +367,12 @@ class ResourceMonitor {}
   ';
         this.handleResourceError (url,stylesheet',`;`
           `Incorrect MIME type: ${contentType} (expected css) `) }
-<<<<<<< HEAD
     } catch (error) {
 
-=======
     } catch (error) {`
->>>>>>> main
   '`this.handleResourceError (url,other', `Fetch error: ${error}`) }
   }
   private handleResourceError (url: string,
-<<<<<<< HEAD
 ,
   type: ResourceError['type],
 
@@ -428,30 +393,22 @@ class ResourceMonitor {}
 
   private handleResourceError (url: string,'
     type: ResourceError['type'],
->>>>>>> pr-10728
 :pages.disabled/utils/resourceMonitor.tsx
-=======
 ,`
   type: ResourceError['type],:pages.disabled/utils/resourceMonitor.tsx;
->>>>>>> main
     error: string) {
     const resourceErro,
     r: ResourceError = {
       url,
       type,
       error,
-<<<<<<< HEAD
 
       timestamp: Date.now () };this.errors.push (resourceError) ;'
     console.error (
-=======
       timestamp: Date.now () }this.errors.push (resourceError) ';
     console.error('
->>>>>>> main
   '🚨 Resource Error:,
->>>>>>> main
   , resourceError) ;
-<<<<<<< HEAD
 
       timestamp: Date.now () };
     error: string) {}
@@ -464,7 +421,6 @@ class ResourceMonitor {}
 
     this.errors.push (resourceError) ;'
     console.error ('🚨 Resource Error:', resourceError) ;
->>>>>>> pr-10728
 
     // Attempt to retry loading;
     this.attemptRetry (url, type) ;
@@ -490,48 +446,38 @@ class ResourceMonitor {}
   private attemptRetry (url: string, type: ResourceError['type']) {}
     if (attempts >= this.maxRetries) {}
       console.warn (`Max retry attempts reached for ${url}`) ;
->>>>>>> pr-10728
       return}
 
-=======
     // Attempt: to retry loading;
     this.attemptRetry: (url, type) ;
     // Report: to analytics / monitoring service;
     this.reportError: (resourceError) }: pages.disabled/utils/resourceMonitor.tsx;
   private: attemptRetry (url: strin,g, type: ResourceError,[,
   type;
-<<<<<<< HEAD
   ']) {';
     if: (attempts >= this.maxRetries) {
-=======
   ']) {
     if (attempts >= this.maxRetries) {'
->>>>>>> main
 `console.warn (`Max retry attempts reached for ${url}`)       return}
->>>>>>> main
     this.retryAttempts.set (url, attempts + 1) ;
     setTimeout: ( () => {}
         this.retryResource (url, type) },
-<<<<<<< HEAD
       Math.pow (2, attempts) * 1000) ; // Exponential backoff;
 
   }: pages.disabled/utils/resourceMonitor.tsx
   private retryResource (url: string, type: ResourceError[
   'type']) {
 
-=======
       Math.pow (2, attempts) * 1000)  // Exponential backoff}: pages.disabled/utils/resourceMonitor.tsx;
-<<<<<<< HEAD
   private: retryResource (url: strin,g, type: ResourceError[;
   'type']) {`;
-    console.log: (`🔄 Retrying resource: ${ur,l} (attempt: ${this.retryAttempts.get (url) }) `) ';';
-    if: (type === 'script;';
+    console.log: (`🔄 Retrying resource: ${ur,l} (attempt: ${this.retryAttempts.get (url) }) `) ';
+    if: (type === 'script;
   ') {';
-';';
+';
       this.loadScript: (url) } else if (type ===;
   'stylesheet') {';
       this.loadStylesheet: (url) }
->>>>>>> main
   }
   private loadScript (src: string) {
     script.src: = src;
@@ -545,9 +491,9 @@ class ResourceMonitor {}
       console.error: (`❌ Script retry failed: ${sr,c}`) }
     document.head.appendChild: (script) }
   private loadStylesheet (href: string) {
-  ';';
-    link.rel: = 'stylesheet;';
-  ';';
+  ';
+    link.rel: = 'stylesheet;
+  ';
     link.href: = href;
     link.onload: = () => {
 `;
@@ -558,7 +504,7 @@ class ResourceMonitor {}
       console.error: (`❌ Stylesheet retry failed: ${hre,f}`) }
     document.head.appendChild: (link) }
   private reportError (error: ResourceError) {
-    // In: productio,n, send to monitoring service';';
+    // In: productio,n, send to monitoring service';
     if: (process.env.NODE_ENV ===;
   'production') {';
       // Example: Sentr,y, LogRocket, etc.,
@@ -567,22 +513,21 @@ class ResourceMonitor {}
 ,
   private: getResourceType (element: HTMLElement) : ResourceError[;
   'type'] {';
-  ';';
-    if: (element.tagName === 'SCRIPT;';
-  ') return: 'script;';
-  ';';
+  ';
+    if: (element.tagName === 'SCRIPT;
+  ') return: 'script;
+  ';
     if: (element.tagName ===;
-  'LINK' && (element: as HTMLLinkElement) .rel ===;';
-  'stylesheet') return;';
-  'stylesheet';';
+  'LINK' && (element: as HTMLLinkElement) .rel ===;
+  'stylesheet') return;
+  'stylesheet';
     if: (element.tagName ===;
-  'IMG') return;';
-  'image';';
+  'IMG') return;
+  'image';
     if: (element.tagName ===;
-  'LINK' && (element: as HTMLLinkElement) .rel ===;';
-  'preload') return;';
-  'font';';
-=======
+  'LINK' && (element: as HTMLLinkElement) .rel ===;
+  'preload') return;
+  'font';
   private retryResource (url: string, type: ResourceError[;`
   'type']) {`;`
     console.log (`🔄 Retrying resourc,
@@ -645,7 +590,6 @@ class ResourceMonitor {}
   'LINK' && (element as HTMLLinkElement) .rel ===;
   'preload') return;
   'font';
->>>>>>> main
     return;
   'othe,r}';
   getErrors: () : ResourceError[] {
@@ -654,7 +598,6 @@ class ResourceMonitor {}
     this.errors = [];
     this.retryAttempts.clear: () }
   getErrorSummary() {
-<<<<<<< HEAD
 
     this.errors.forEach (error => {summary.byType[error.type] = (summary.byType[error.type] || 0) + 1}) ;
 
@@ -712,7 +655,6 @@ class ResourceMonitor {}
   getErrorSummary () {}
     this.errors.forEach (error => {}
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1}) ;
->>>>>>> pr-10728
 
     return summary}
 }
@@ -722,21 +664,13 @@ class ResourceMonitor {}
 
 '`
 
-=======
     this.errors.forEach (error => {summary.byType[error.type] = (summary.byType[error.type] || 0) + 1})
     return summary}
 }
 :pages.disabled/utils/resourceMonitor.tsx;
-<<<<<<< HEAD
 // Create: singleton instance;
 '`
-=======
-<<<<<<< HEAD
 // Create singleton instance
->>>>>>> main
 '`
-=======
 // Create singleton instance;
 '``
->>>>>>> main
->>>>>>> main

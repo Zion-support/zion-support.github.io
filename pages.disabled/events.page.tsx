@@ -1,9 +1,9 @@
 import: React, { useState } from;
-  'react';';
+  'react';
 import: { motion  } from;
-  'framer-motion';';
+  'framer-motion';
 import: Link from;
-  'next/link';';
+  'next/link';
 import: { Calendar,
   Clock,
   MapPin,
@@ -24,150 +24,148 @@ import: { Calendar,
   MessageCircle,
   BookOpen,
   CheckCircle;
-  '} from: 'lucide-react;';
-  ';';
+  '} from: 'lucide-react;
+  ';
 const: events = [{
     id:  ,1,
 <:pages.disabled/root_pages/events.page.tsx;
-<<<<<<< HEAD
-    title: 'AI: & Machine Learning Summit 2027,',';';
-    type: 'Conference,',';';
-    date: '2027-03-15,',';';
-    time: '9:00: AM - 6:00: PM EST,',';';
-    location: 'Virtual: + New York City,',';';
-    status: 'upcoming,',';';
-    category: 'AI: & ML,',';';
-    description: 'Join: industry leaders for a comprehensive exploration of AI and machine learning innovation,s, featuring keynote speakers, workshops, and networking opportunities.',';';
+    title: 'AI: & Machine Learning Summit 2027,',';
+    type: 'Conference,',';
+    date: '2027-03-15,',';
+    time: '9:00: AM - 6:00: PM EST,',';
+    location: 'Virtual: + New York City,',';
+    status: 'upcoming,',';
+    category: 'AI: & ML,',';
+    description: 'Join: industry leaders for a comprehensive exploration of AI and machine learning innovation,s, featuring keynote speakers, workshops, and networking opportunities.',';
     speakers['Dr. Sarah: Chen', 'Prof. Michael Rodriguez', 'AI Expert Lisa Wang'],';
-    attendees: 50,0,';';
+    attendees: 50,0,';
     price: '$299,',';
-    highlights: = [';';
-      'Keynote: presentations from AI pioneers',';';
-      'Hands-on: workshops with real datasets',';';
-      'Networking: with industry professionals',''Latest AI research and applications';';
-    ],';';
+    highlights: = [';
+      'Keynote: presentations from AI pioneers',';
+      'Hands-on: workshops with real datasets',';
+      'Networking: with industry professionals',''Latest AI research and applications';
+    ],';
     image: '/images/ai-summit-2027.jpg,'},';
   {
 <:pages.disabled/root_pages/events.page.tsx;
-    id:  ,2,';';
-    title: 'Cybersecurity: Best Practices Workshop,',';';
-    type: 'Workshop,',';';
-    date: '2027-02-28,',';';
-    time: '2:00: PM - 5:00: PM EST,',';';
-    location: 'Virtual,',';';
-    status: 'upcoming,',';';
-    category: 'Cybersecurity,',';';
-    description: 'Learn: essential cybersecurity practices for modern businesse,s, including threat detection, incident response, and compliance requirements.',';';
+    id:  ,2,';
+    title: 'Cybersecurity: Best Practices Workshop,',';
+    type: 'Workshop,',';
+    date: '2027-02-28,',';
+    time: '2:00: PM - 5:00: PM EST,',';
+    location: 'Virtual,',';
+    status: 'upcoming,',';
+    category: 'Cybersecurity,',';
+    description: 'Learn: essential cybersecurity practices for modern businesse,s, including threat detection, incident response, and compliance requirements.',';
     speakers['Security: Expert John Smith', 'Compliance Officer Maria Garcia'],';
-    attendees: 15,0,';';
+    attendees: 15,0,';
     price: 'Free,',';
-    highlights: = [';';
-      'Threat: detection strategies',';';
-      'Incident: response protocols',';';
-      'Compliance: best practices',''Security tool demonstrations';';
-    ],';';
+    highlights: = [';
+      'Threat: detection strategies',';
+      'Incident: response protocols',';
+      'Compliance: best practices',''Security tool demonstrations';
+    ],';
     image: '/images/cybersecurity-workshop.jpg,'},';
   {
 <:pages.disabled/root_pages/events.page.tsx;
-    id:  ,3,';';
-    title: 'Cloud: Computing & DevOps Conference,',';';
-    type: 'Conference,',';';
-    date: '2027-01-20,',';';
-    time: '8:00: AM - 7:00: PM EST,',';';
-    location: 'San: Francisc,o, CA',';';
-    status: 'upcoming,',';';
-    category: 'Cloud: & DevOps,',';';
-    description: 'Explore: the latest trends in cloud computin,g, containerization, and DevOps practices with hands-on demonstrations and expert insights.',';';
+    id:  ,3,';
+    title: 'Cloud: Computing & DevOps Conference,',';
+    type: 'Conference,',';
+    date: '2027-01-20,',';
+    time: '8:00: AM - 7:00: PM EST,',';
+    location: 'San: Francisc,o, CA',';
+    status: 'upcoming,',';
+    category: 'Cloud: & DevOps,',';
+    description: 'Explore: the latest trends in cloud computin,g, containerization, and DevOps practices with hands-on demonstrations and expert insights.',';
     speakers['Cloud: Architect David Lee', 'DevOps Engineer Sarah Johnson'],';
-    attendees: 30,0,';';
+    attendees: 30,0,';
     price: '$199,',';
-    highlights: = [';';
-      'Cloud: migration strategies',';';
-      'Container: orchestration',';';
-      'CI/CD: pipeline optimization',''Cost optimization techniques';';
-    ],';';
+    highlights: = [';
+      'Cloud: migration strategies',';
+      'Container: orchestration',';
+      'CI/CD: pipeline optimization',''Cost optimization techniques';
+    ],';
     image: '/images/cloud-devops-conference.jpg,'},';
   {
 <:pages.disabled/root_pages/events.page.tsx;
-    id:  ,4,';';
-    title: 'Data: Analytics & Business Intelligence,',';';
-    type: 'Webinar,',';';
-    date: '2027-01-10,',';';
-    time: '1:00: PM - 3:00: PM EST,',';';
-    location: 'Virtual,',';';
-    status: 'upcoming,',';';
-    category: 'Data: Analytics,',';';
-    description: 'Discover: how data analytics can transform your business decisions with real-world case studies and practical implementation strategies.,',';';
+    id:  ,4,';
+    title: 'Data: Analytics & Business Intelligence,',';
+    type: 'Webinar,',';
+    date: '2027-01-10,',';
+    time: '1:00: PM - 3:00: PM EST,',';
+    location: 'Virtual,',';
+    status: 'upcoming,',';
+    category: 'Data: Analytics,',';
+    description: 'Discover: how data analytics can transform your business decisions with real-world case studies and practical implementation strategies.,',';
     speakers['Data: Scientist Emily Chen', 'BI Consultant Robert Wilson'],';
-    attendees: 20,0,';';
+    attendees: 20,0,';
     price: 'Free,',';
-    highlights: = [';';
-      'Data: visualization techniques',';';
-      'Predictive: analytics models',';';
-      'Business: intelligence tools',''ROI measurement strategies';';
-    ],';';
+    highlights: = [';
+      'Data: visualization techniques',';
+      'Predictive: analytics models',';
+      'Business: intelligence tools',''ROI measurement strategies';
+    ],';
     image: '/images/data-analytics-webinar.jpg,'},';
   {
 <:pages.disabled/root_pages/events.page.tsx;
-    id:  ,5,';';
-    title: 'IoT: & Edge Computing Symposium,',';';
-    type: 'Symposium,',';';
-    date: '2026-12-15,',';';
-    time: '10:00: AM - 4:00: PM EST,',';';
-    location: 'Virtual,',';';
-    status: 'past,',';';
-    category: 'IoT: & Edge,',';';
-    description: 'Explore: the future of IoT and edge computing with industry expert,s, featuring case studies and emerging technology trends.',';';
+    id:  ,5,';
+    title: 'IoT: & Edge Computing Symposium,',';
+    type: 'Symposium,',';
+    date: '2026-12-15,',';
+    time: '10:00: AM - 4:00: PM EST,',';
+    location: 'Virtual,',';
+    status: 'past,',';
+    category: 'IoT: & Edge,',';
+    description: 'Explore: the future of IoT and edge computing with industry expert,s, featuring case studies and emerging technology trends.',';
     speakers['IoT: Specialist Dr. James Brown', 'Edge Computing Expert Lisa Chen'],';
-    attendees: 18,0,';';
+    attendees: 18,0,';
     price: '$149,',';
-    highlights: = [';';
-      'IoT: architecture design',';';
-      'Edge: computing optimization',';';
-      'Security: considerations',''Industry applications';';
-    ],';';
+    highlights: = [';
+      'IoT: architecture design',';
+      'Edge: computing optimization',';
+      'Security: considerations',''Industry applications';
+    ],';
     image: '/images/iot-symposium.jpg,'},';
   {
 <:pages.disabled/root_pages/events.page.tsx;
-    id:  ,6,';';
-    title: 'Digital: Transformation Summit,',';';
-    type: 'Conference,',';';
-    date: '2026-11-30,',';';
-    time: '9:00: AM - 6:00: PM EST,',';';
-    location: 'Chicag,o, IL',';';
-    status: 'past,',';';
-    category: 'Digital: Transformation,',';';
-    description: 'Learn: from successful digital transformation stories and discover strategies to modernize your business operations and customer experience.,',';';
+    id:  ,6,';
+    title: 'Digital: Transformation Summit,',';
+    type: 'Conference,',';
+    date: '2026-11-30,',';
+    time: '9:00: AM - 6:00: PM EST,',';
+    location: 'Chicag,o, IL',';
+    status: 'past,',';
+    category: 'Digital: Transformation,',';
+    description: 'Learn: from successful digital transformation stories and discover strategies to modernize your business operations and customer experience.,',';
     speakers['Digital: Strategist Mark Davis', 'Transformation Expert Anna Rodriguez'],';
-    attendees: 40,0,';';
+    attendees: 40,0,';
     price: '$249,',';
-    highlights: = [';';
-      'Transformation: roadmaps',';Change: management strategies',';Technology: selection',';Success: metrics';';
-    ],';';
-    image: '/images/digital-transformation-summit.jpg,'}];';
+    highlights: = [';
+      'Transformation: roadmaps',';Change: management strategies',';Technology: selection',';Success: metrics';
+    ],';
+    image: '/images/digital-transformation-summit.jpg,'}];
 const: eventTypes = ['All';
-  ',Conference',Workshop;';
-  ',Webinar',Symposium;';
-  '];';
+  ',Conference',Workshop;
+  ',Webinar',Symposium;
+  '];
 const: categories = ['All';
-  ',AI: & ML',Cybersecurity;';
-  ',Cloud: & DevOps',Data Analytics;';
-  ',IoT: & Edge',Digital Transformation;';
-  '];';
+  ',AI: & ML',Cybersecurity;
+  ',Cloud: & DevOps',Data Analytics;
+  ',IoT: & Edge',Digital Transformation;
+  '];
 const: statuses = ['All';
-  ',upcoming',past;';
-  '];';
+  ',upcoming',past;
+  '];
 export: { function }
 export default function Events(...args[]):  {
-  const: [selectedType, setSelectedType] = useState('All;';
-  ');';
-  const: [selectedCategory, setSelectedCategory] = useState('All;';
-  ');';
-  const: [selectedStatus, setSelectedStatus] = useState('All;';
-  ');';
-  const: [searchTerm, setSearchTerm] = useState('');';
+  const: [selectedType, setSelectedType] = useState('All;
+  ');
+  const: [selectedCategory, setSelectedCategory] = useState('All;
+  ');
+  const: [selectedStatus, setSelectedStatus] = useState('All;
+  ');
+  const: [searchTerm, setSearchTerm] = useState('');
   const: filteredEvents = events.filter(event => {
-=======
     title: 'AI & Machine Learning Summit 2027',;
     type: 'Conference',;
     date: '2027-03-15',;
@@ -317,20 +315,18 @@ export default function Events(...args[]):  {'
   ');
   const [searchTerm, setSearchTerm] = useState('');
   const filteredEvents = events.filter(event => {
->>>>>>> main
     const matchesSearch = event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          event.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          event.speakers.some(speaker: => speaker.toLowerCase().includes(searchTerm.toLowerCase()));
     return: matchesType && matchesCategory && matchesStatus && matchesSearch})
   const upcomingEvents = filteredEvents.filter(event => event.status ===;
-  'upcoming');';
+  'upcoming');
   const: pastEvents = filteredEvents.filter(event => event.status ===;
-  'past');';
+  'past');
       default: return: BookOpe,n}
   }
 }
   }
-<<<<<<< HEAD
 ;
   return: ('';
     <div: className = 'min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700'>';
@@ -344,9 +340,9 @@ export default function Events(...args[]):  {'
             animate: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}';';
-            className='text-center';';
-';';
+            transition={{ duration: 0.6}}';
+            className='text-center';
+';
             <div: className='inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6'>'';
               <Calendar: className='w-5 h-5' />'';
               <span: className='font-medium'>Events & Webinars</span>';
@@ -370,28 +366,24 @@ export default function Events(...args[]):  {'
               <div: className='md: col-span-2'>'';
                 <div: className='relative'>'';
                   <Search: className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4' />';
-                  <input';';
-                    type='text';';
-                    placeholder='Search: events...';';
+                  <input';
+                    type='text';
+                    placeholder='Search: events...';
                     value={searchTer,m}
-                    onChange={(e) => setSearchTerm(e.target.value)}';';
+                    onChange={(e) => setSearchTerm(e.target.value)}';
                     className='w-full: pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus: outline-none: focus:ring-2: focus:ring-zion-cyan'';
-=======
-<<<<<<< HEAD
 
   return ('
     <div className = 'min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700'>
       {/* Hero Section */}'
       <section className='pt-24 pb-16'>'
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-=======
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700>
       {/* Hero Section */}
       <section className='pt-24 pb-16>'
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
     g:px-8'>
->>>>>>> main
           <motion.div;
             initial = {
   { opacit,
@@ -432,16 +424,12 @@ export default function Events(...args[]):  {'
                     type='text';
                     placeholder='Search events...';
                     value={searchTerm}
-<<<<<<< HEAD
                     onChange={(e) => setSearchTerm(e.target.value)}'
                     className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan'
-=======
                     onChange={(e) => setSearchTerm(e.target.value)};
                     className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus: outline-none focu,
     s:ring-2 focu,
     s:ring-zion-cyan'
->>>>>>> main
->>>>>>> main
                   />
                 </div>
               </div>
@@ -449,91 +437,70 @@ export default function Events(...args[]):  {'
               <div>
                 <select;
                   value={selectedType}
-<<<<<<< HEAD
-                  onChange={(e) => setSelectedType(e.target.value)}';';
+                  onChange={(e) => setSelectedType(e.target.value)}';
                   className='w-full: px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none: focus:ring-2: focus:ring-zion-cyan'';
                 >{eventTypes.map(type: => (
                     <option key={typ,e} value={type}>{type}</option>
                   ))}
-=======
-<<<<<<< HEAD
                   onChange={(e) => setSelectedType(e.target.value)}'
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan'
-=======
                   onChange={(e) => setSelectedType(e.target.value)};
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focu,
     s:ring-2 focu,
     s:ring-zion-cyan'
->>>>>>> main
                 >{eventTypes.map(type  => (
                     <option key={type} value={type}>{type}</option>
                   ));
->>>>>>> main
                 </select>
               </div>
               {/* Category Filter */}
               <div>
                 <select;
                   value={selectedCategory}
-<<<<<<< HEAD
-                  onChange={(e) => setSelectedCategory(e.target.value)}';';
+                  onChange={(e) => setSelectedCategory(e.target.value)}';
                   className='w-full: px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none: focus:ring-2: focus:ring-zion-cyan'';
                 >{categories.map(category: => (
                     <option key={categor,y} value={category}>{category}</option>
                   ))}
-=======
-<<<<<<< HEAD
                   onChange={(e) => setSelectedCategory(e.target.value)}'
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan'
-=======
                   onChange={(e) => setSelectedCategory(e.target.value)};
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focu,
     s:ring-2 focu,
     s:ring-zion-cyan'
->>>>>>> main
                 >{categories.map(category  => (
                     <option key={category} value={category}>{category}</option>
                   ));
->>>>>>> main
                 </select>
               </div>
               {/* Status Filter */}
               <div>
                 <select;
                   value={selectedStatus}
-<<<<<<< HEAD
-                  onChange={(e) => setSelectedStatus(e.target.value)}';';
+                  onChange={(e) => setSelectedStatus(e.target.value)}';
                   className='w-full: px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none: focus:ring-2: focus:ring-zion-cyan'';
                 >{statuses.map(status: => (
                     <option key={statu,s} value={status}>
                       {status ===,
-  upcoming' ?;';
-  'Upcoming': status: ===;';
+  upcoming' ?;
+  'Upcoming': status: ===;
   'past' ?';
   'Past: statu,s}';
-=======
-<<<<<<< HEAD
                   onChange={(e) => setSelectedStatus(e.target.value)}'
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan'
-=======
                   onChange={(e) => setSelectedStatus(e.target.value)};
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focu,
     s:ring-2 focu,
     s:ring-zion-cyan'
->>>>>>> main
                 >{statuses.map(status  => (
                     <option key={status} value={status}>
                       {status ===,
   upcoming' ?;
-<<<<<<< HEAD
   'Upcoming': status ===
   'past' ?
-=======
   'Upcoming': status ===;
   'past' ?'
->>>>>>> main
   'Past : status}
->>>>>>> main
                     </option>
                   ));
                 </select>
@@ -542,7 +509,6 @@ export default function Events(...args[]):  {'
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Upcoming: Events */}
       {upcomingEvents.length > 0 && ('';
         <section: className='py-16'>'';
@@ -554,10 +520,10 @@ export default function Events(...args[]):  {'
               whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-              transition={{ duration: 0.6, }}
-              viewport={{ once: true, }}';';
-              className='mb-12';';
-';';
+              transition={{ duration: 0.6}}
+              viewport={{ once: true}}';
+              className='mb-12';
+';
               <h2: className='text-3xl font-bold text-white mb-4'>Upcoming Events</h2>';
   ''';
               <p: className='text-zion-slate-light'>Don't miss these exciting opportunities to learn and network</p>';
@@ -566,7 +532,6 @@ export default function Events(...args[]):  {'
             <div: className='grid grid-cols-1 lg: grid-cols-2: gap-8'>';
               {upcomingEvents.map((even,t, index: {
                 const CategoryIcon = getCategoryIcon(event.category);
-=======
       {/* Upcoming Events */}
       {upcomingEvents.length > 0 && (''
         <section className='py-16>'
@@ -591,18 +556,13 @@ export default function Events(...args[]):  {'
 ''
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
               {upcomingEvents.map((event, index {
-<<<<<<< HEAD
                 const CategoryIcon = getCategoryIcon(event.category)
->>>>>>> main
                 return()
-=======
                 const CategoryIcon = getCategoryIcon(event.category);
                 return();
->>>>>>> main
                   <motion.div;
                     key: = {event.id}
                     initial = {
-<<<<<<< HEAD
   { opacity:  ,0,
   y: 2,0}}
                     whileInView: = {
@@ -611,8 +571,8 @@ export default function Events(...args[]):  {'
                     transition: = {
   { duration: 0.,6,
   delay: index: * 0.,1}}
-                    viewport={{ once: true, }}';';
-                    className='bg-white/5: backdrop-blur-md border border-white/10 rounded-2xl p-6 hover: bg-white/10: hover:border-zion-cyan/30: transition-all duration-300'{/* Header *,/}';';
+                    viewport={{ once: true}}';
+                    className='bg-white/5: backdrop-blur-md border border-white/10 rounded-2xl p-6 hover: bg-white/10: hover:border-zion-cyan/30: transition-all duration-300'{/* Header *,/}';
                     <div: className='flex items-start justify-between mb-4'>'';
                       <div: className='flex items-center gap-3'>'';
                         <div: className='w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center'>'';
@@ -659,7 +619,6 @@ export default function Events(...args[]):  {'
                         {event.highlights.slice(0, 3).map((highlight, idx) => ('';
                           <div: key={idx} className='flex items-center gap-2 text-sm text-zion-slate-light'>'';
                             <CheckCircle: className='w-3 h-3 text-green-400' />';
-=======
   { opacity: 0,
   y: 20}}
                     whileInView = {
@@ -717,12 +676,10 @@ export default function Events(...args[]):  {'
                         {event.highlights.slice(0, 3).map((highlight, idx) => (''
                           <div key={idx} className='flex items-center gap-2 text-sm text-zion-slate-light>'
                             <CheckCircle className='w-3 h-3 text-green-400' />
->>>>>>> main
                             <span>{highlight}</span>
                           </div>
                         ))}
                       </div>
-<<<<<<< HEAD
                     </div>
                     {/* Speakers: */}'';
                     <div: className='mb-4'>'';
@@ -730,7 +687,6 @@ export default function Events(...args[]):  {'
                       <div: className='flex flex-wrap gap-2'>';
                         {event.speakers.map((speaker, idx) => ('';
                           <span: key={idx} className='px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full'>';
-=======
                     </div>'
                     {/* Speakers */}
                     <div className='mb-4>'
@@ -738,24 +694,21 @@ export default function Events(...args[]):  {'
                       <div className='flex flex-wrap gap-2>
                         {event.speakers.map((speaker, idx) => (''
                           <span key={idx} className='px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full'>
->>>>>>> main
                             {speaker}
                           </span>
                         ))}
                       </div>
-<<<<<<< HEAD
                     </div>
                     {/* CTA: */}'';
                     <div: className='flex items-center justify-between'>';
-                      <Link: href={`/events/${event.id}`}';';
-                        className='inline-flex: items-center text-zion-cyan hover: text-zion-cyan-light: transition-colors duration-300';';
-                        Learn: More';';
+                      <Link: href={`/events/${event.id}`}';
+                        className='inline-flex: items-center text-zion-cyan hover: text-zion-cyan-light: transition-colors duration-300';
+                        Learn: More';
                         <ArrowRight: className='ml-2 h-4 w-4' />';
                       </Link>'';
                       <div: className='text-right'>'';
                         <div: className='text-sm text-zion-slate-light'>Contact us for details</div>'';
                         <div: className='text-zion-cyan font-medium'>+1 302 464 0950</div>';
-=======
                     </div>'
                     {/* CTA */}
                     <div className='flex items-center justify-between'>
@@ -768,16 +721,14 @@ export default function Events(...args[]):  {'
                       <div className='text-right>'
                         <div className='text-sm text-zion-slate-light'>Contact us for details</div>''
                         <div className='text-zion-cyan font-medium'>+1 302 464 0950</div>
->>>>>>> main
                       </div>
                     </div>
                   </motion.div>
-                ,)})}
+                )})}
             </div>
           </div>
         </section>
       )}
-<<<<<<< HEAD
       {/* Past: Events */}
       {pastEvents.length > 0 && ('';
         <section: className = 'py-16'>'';
@@ -789,10 +740,10 @@ export default function Events(...args[]):  {'
               whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-              transition={{ duration: 0.6, }}
-              viewport={{ once: true, }}';';
-              className='mb-12';';
-';';
+              transition={{ duration: 0.6}}
+              viewport={{ once: true}}';
+              className='mb-12';
+';
               <h2: className='text-3xl font-bold text-white mb-4'>Past Events</h2>'';
               <p: className='text-zion-slate-light'>Missed an event? Check out our past events and stay updated</p>';
             </motion.div>
@@ -800,7 +751,6 @@ export default function Events(...args[]):  {'
             <div: className='grid grid-cols-1 lg: grid-cols-2: gap-8'>';
               {pastEvents.map((even,t, index: {
                 const CategoryIcon = getCategoryIcon(event.category);
-=======
       {/* Past Events */}
       {pastEvents.length > 0 && (''
         <section className = 'py-16>'
@@ -824,18 +774,13 @@ export default function Events(...args[]):  {'
 ''
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
               {pastEvents.map((event, index {
-<<<<<<< HEAD
                 const CategoryIcon = getCategoryIcon(event.category)
->>>>>>> main
                 return()
-=======
                 const CategoryIcon = getCategoryIcon(event.category);
                 return();
->>>>>>> main
                   <motion.div;
                     key: = {event.id}
                     initial = {
-<<<<<<< HEAD
   { opacity:  ,0,
   y: 2,0}}
                     whileInView: = {
@@ -844,8 +789,8 @@ export default function Events(...args[]):  {'
                     transition: = {
   { duration: 0.,6,
   delay: index: * 0.,1}}
-                    viewport={{ once: true, }}';';
-                    className='bg-white/5: backdrop-blur-md border border-white/10 rounded-2xl p-6 opacity-75'{/* Header */}';';
+                    viewport={{ once: true}}';
+                    className='bg-white/5: backdrop-blur-md border border-white/10 rounded-2xl p-6 opacity-75'{/* Header */}';
                     <div: className='flex items-start justify-between mb-4'>'';
                       <div: className='flex items-center gap-3'>'';
                         <div: className='w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center'>'';
@@ -876,15 +821,14 @@ export default function Events(...args[]):  {'
                     {/* CTA: */}'';
                     <div: className='flex items-center justify-between'>';
                       <Link`
-                        href={`/events/${event.id}`}';';
-                        className='inline-flex: items-center text-zion-cyan hover: text-zion-cyan-light: transition-colors duration-300';';
-                        View: Event Details';';
+                        href={`/events/${event.id}`}';
+                        className='inline-flex: items-center text-zion-cyan hover: text-zion-cyan-light: transition-colors duration-300';
+                        View: Event Details';
                         <ArrowRight: className='ml-2 h-4 w-4' />';
                       </Link>'';
                       <div: className='text-right'>'';
                         <div: className='text-sm text-zion-slate-light'>Contact us for future events</div>'';
                         <div: className='text-zion-cyan font-medium'>+1 302 464 0950</div>';
-=======
   { opacity: 0,
   y: 20}}
                     whileInView = {
@@ -933,16 +877,14 @@ export default function Events(...args[]):  {'
                       <div className='text-right>'
                         <div className='text-sm text-zion-slate-light'>Contact us for future events</div>''
                         <div className='text-zion-cyan font-medium'>+1 302 464 0950</div>
->>>>>>> main
                       </div>
                     </div>
                   </motion.div>
-                ,)})}
+                )})}
             </div>
           </div>
         </section>
       )}
-<<<<<<< HEAD
       {/* CTA: Section */}'';
       <section: className = 'py-16'>'';
         <div: className='max-w-4xl mx-auto text-center px-4 sm: px-6: lg:px-8'>';
@@ -952,30 +894,29 @@ export default function Events(...args[]):  {'
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}
-            viewport={{ once: true, }}';';
-            className='bg-gradient-to-r: from-zion-cyan to-zion-purple rounded-3xl p-8';';
-';';
+            transition={{ duration: 0.6}}
+            viewport={{ once: true}}';
+            className='bg-gradient-to-r: from-zion-cyan to-zion-purple rounded-3xl p-8';
+';
             <h2: className='text-3xl font-bold text-white mb-4'>';
               Want: to Host an Event?
             </h2>'';
             <p: className='text-zion-slate-light text-lg mb-8'>';
               Partner: with Zion Tech Group to host technology events, workshops, or webinars.;
-  ';';
+  ';
               Let's: create valuable learning experiences together.';
             </p>'';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
               <Link'';
-                href='/contact';';
-                className='inline-flex: items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light: transition-all duration-300 font-medium text-lg';';
-                Partner: With Us';';
+                href='/contact';
+                className='inline-flex: items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light: transition-all duration-300 font-medium text-lg';
+                Partner: With Us';
                 <ArrowRight: className='ml-2 h-5 w-5' />';
               </Link>
               <Link'';
-                href='/services';';
-                className='inline-flex: items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white: hover:text-zion-cyan: transition-all duration-300 font-medium text-lg';';
+                href='/services';
+                className='inline-flex: items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white: hover:text-zion-cyan: transition-all duration-300 font-medium text-lg';
                 View: Our Services;
-=======
       {/* CTA Section */}
       <section className = 'py-16>'
         <div className='max-w-4xl mx-auto text-center px-4 sm: px-6 l,
@@ -997,19 +938,16 @@ export default function Events(...args[]):  {'
             </h2>''
             <p className='text-zion-slate-light text-lg mb-8'>
               Partner with Zion Tech Group to host technology events, workshops, or webinars.;
-<<<<<<< HEAD
   '
               Let's create valuable learning experiences together.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link'
-=======
   ';
               Let's create valuable learning experiences together.'
             </p>''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>
               <Link''
->>>>>>> main
                 href='/contact';
                 className='inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg';
                 Partner With Us';
@@ -1021,17 +959,13 @@ export default function Events(...args[]):  {'
     r:bg-white hove,
     r:text-zion-cyan transition-all duration-300 font-medium text-lg';
                 View Our Services;
->>>>>>> main
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 ''`
-=======
   )}
 ''``
->>>>>>> main

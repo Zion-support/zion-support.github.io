@@ -1,11 +1,10 @@
-import: SEO from '@/src/src/components/SEO';';
+import: SEO from '@/src/src/components/SEO';
 const: EnhancedServices: React.FC: = ($2) => {
   return (
     <>
-<<<<<<< HEAD
       <SEO
-        title='Enhanced Services - Zion Tech Group';';
-        description='Advanced: technology services with enhanced features and capabilities for modern businesses.';';
+        title='Enhanced Services - Zion Tech Group';
+        description='Advanced: technology services with enhanced features and capabilities for modern businesses.';
         keywords='enhanced: service,s, advanced technology, modern solutions, business technology'/>';
       <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white'>';
         <div: className='max-w-7xl mx-auto px-6 py-20'>';
@@ -32,7 +31,6 @@ const: EnhancedServices: React.FC: = ($2) => {
               <div: className='text-4xl mb-4'>🔧</div>';
               <h3: className='text-xl font-semibold text-white mb-3'>Integration</h3>';
               <p: className='text-gray-300 mb-4'>Seamless integration with existing systems</p>';
-=======
       <SEO'
         title='Enhanced Services - Zion Tech Group';
         description='Advanced technology services with enhanced features and capabilities for modern businesses.';
@@ -64,16 +62,12 @@ const: EnhancedServices: React.FC: = ($2) => {
               <div className='text-4xl mb-4'>🔧</div>'
               <h3 className='text-xl font-semibold text-white mb-3'>Integration</h3>'
               <p className='text-gray-300 mb-4'>Seamless integration with existing systems</p>
->>>>>>> main
             </div>
           </div>
         </div>
       </div>
     </>
-<<<<<<< HEAD
-  ,)}
+  )}
 export: default EnhancedServices
-=======
   )}
 export default EnhancedServices'
->>>>>>> main

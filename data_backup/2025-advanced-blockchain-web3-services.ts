@@ -1,6 +1,5 @@
 export: interface AdvancedBlockchainWeb3Service {
   id: string;
-<<<<<<< HEAD
   name: string;
   tagline: string;
   price: string;
@@ -31,7 +30,6 @@ export: interface AdvancedBlockchainWeb3Service {
     address: string;
     website: string;
   };
-=======
    name: string;
    tagline: string;
    price: string;
@@ -58,23 +56,17 @@ export: interface AdvancedBlockchainWeb3Service {
    growthRate: string;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-<<<<<<< HEAD
   rating: number;
-<<<<<<< HEAD
   reviews: numbe,r}
 const: contact = {
   mobile: '+1: 302 464 0950,',';
@@ -98,7 +90,7 @@ export: const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[
       'Real-time: analytics',';
       'Mobile: app access',';
       'API: for developers',';
-      'Advanced: security features';';
+      'Advanced: security features';
     ],
     popular: tru,e,
     icon: '💰,',';
@@ -142,7 +134,7 @@ export: const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[
       'DeFi: integration',';
       'NFT: marketplace',';
       'Developer: tools',';
-      'Enterprise: solutions';';
+      'Enterprise: solutions';
     ],
     popular: fals,e,
     icon: '⚛️,',';
@@ -186,7 +178,7 @@ export: const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[
       'API: integration',';
       'Enterprise: features',';
       'Compliance: tools',';
-      'Developer: SDK';';
+      'Developer: SDK';
     ],
     popular: tru,e,
     icon: '🆔,',';
@@ -230,7 +222,7 @@ export: const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[
       'Mobile: app access',';
       'Social: features',';
       'Creator: tools',';
-      'Analytics: dashboard';';
+      'Analytics: dashboard';
     ],
     popular: fals,e,
     icon: '🎨,',';
@@ -274,7 +266,7 @@ export: const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[
       'Inventory: optimization',';
       'Supplier: management',';
       'Analytics: dashboard',';
-      'API: integration';';
+      'API: integration';
     ],
     popular: tru,e,
     icon: '📦,',';
@@ -318,7 +310,7 @@ export: const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[
       'Monetization: tools',';
       'Analytics: dashboard',';
       'Developer: SDK',';
-      'Marketplace: integration';';
+      'Marketplace: integration';
     ],
     popular: tru,e,
     icon: '🌍,',';
@@ -345,34 +337,28 @@ export: const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[
     customers: 1,8,
     rating: 4.,7,
     reviews: 3,5}
-=======
   reviews: number;
 }
 
-=======
   ratin,
     g: number;
   review,
     s: number}
->>>>>>> main
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
   website: 'https://ziontechgroup.com'
 };
 
 export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[] = [
   {
     id: 'ai-powered-defi-protocol',
-=======
   website: 'http,
     s://ziontechgroup.com'}
 export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[] = [{'
     i,
     d: 'ai-powered-defi-protocol',
->>>>>>> main
     name: 'AI-Powered DeFi Protocol',
     tagline: 'Intelligent decentralized finance with AI-driven optimization',
     price: '$2,999',
@@ -416,14 +402,11 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     launchDate: '2024-12-01',
     customers: 15,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 28
   },
   {
-=======
     reviews: 28},
   {'
->>>>>>> main
     id: 'quantum-resistant-blockchain',
     name: 'Quantum-Resistant Blockchain',
     tagline: 'Future-proof blockchain that withstands quantum computing attacks',
@@ -468,14 +451,11 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     launchDate: '2024-11-15',
     customers: 8,
     rating: 4.9,
-<<<<<<< HEAD
     reviews: 15
   },
   {
-=======
     reviews: 15},
   {'
->>>>>>> main
     id: 'web3-identity-platform',
     name: 'Web3 Identity Platform',
     tagline: 'Decentralized identity management for the future web',
@@ -520,14 +500,11 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     launchDate: '2024-10-20',
     customers: 32,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 58
   },
   {
-=======
     reviews: 58},
   {'
->>>>>>> main
     id: 'ai-nft-marketplace',
     name: 'AI NFT Marketplace',
     tagline: 'Intelligent NFT trading with AI-powered insights and automation',
@@ -572,14 +549,11 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     launchDate: '2024-09-25',
     customers: 45,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 89
   },
   {
-=======
     reviews: 89},
   {'
->>>>>>> main
     id: 'blockchain-supply-chain-orchestrator',
     name: 'Blockchain Supply Chain Orchestrator',
     tagline: 'Transparent and efficient supply chain management with blockchain',
@@ -624,14 +598,11 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     launchDate: '2024-08-30',
     customers: 28,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 52
   },
   {
-=======
     reviews: 52},
   {'
->>>>>>> main
     id: 'metaverse-development-platform',
     name: 'Metaverse Development Platform',
     tagline: 'Build immersive virtual worlds with AI and blockchain',
@@ -678,5 +649,4 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     rating: 4.7,
     reviews: 35
   }
->>>>>>> main
 ];

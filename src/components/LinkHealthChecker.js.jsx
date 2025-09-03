@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
  const LinkHealthChecker = ({ links, className = " }) => { const [linkStatuses, setLinkStatuses] = useState ([]) ; const [isChecking, setIsChecking] = useState (false) ; const checkLinkHealth = async url => { const startTime = Date.now () ; try {"""";,"});,"})
 ;,"});,"})
@@ -8,7 +7,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink  } from 'lucide-react
   CheckCircle,;,"});,"})
   XCircle,;,"});,"})
   AlertTriangle,';,"});,"})
-  ExternalLink} from 'lucide-react';';,"});,"})
+  ExternalLink} from 'lucide-react';,"});,"})
 const LinkHealthChecker = ({ links, className = '' }) => {}"});,"})
   const [linkStatuses, setLinkStatuses] = useState([]);,"});,"})
   const [isChecking, setIsChecking] = useState(false);,"});,"})
@@ -52,7 +51,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {}"});,"})
     }"});,"})
   };,"});,"})
   const checkAllLinks = async () => {}"});,"})
-    setIsChecking(true);';,"});,"})
+    setIsChecking(true);,"});,"})
     setLinkStatuses(links.map(link => ({ url: link.url, status: 'checking' })));,"});,"})
     const statuses = await Promise.all();,"});,"})
       links.map(link => checkLinkHealth(link.url));,"});,"})
@@ -72,7 +71,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {}"});,"})
       case 'broken':"""";,"});,"})
         return <XCircle className="w-5 h-5 text-red-500" />;'""";,"});,"})
       case 'external':"""";,"});,"})
-        return <ExternalLink className="w-5 h-5 text-blue-500" />;';,"});,"})
+        return <ExternalLink className="w-5 h-5 text-blue-500" />;,"});,"})
       case 'checking':""";,"});,"})
         return ("""";,"});,"})
           <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse" />;,"});,"})
@@ -112,7 +111,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {}"});,"})
       case 'checking':'''';,"});,"})
         return 'text-yellow-500';''';,"});,"})
       default:'''';,"});,"})
-        return 'text-gray-500';';,"});,"})
+        return 'text-gray-500';,"});,"})
     }'';,"});,"})
   };''';,"});,"})
   const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length;''';,"});,"})
@@ -246,18 +245,9 @@ export { LinkHealthChecker };,"});,"})
 export { LinkHealthChecker };,"});,"})
 ;,"});,"})
 export { LinkHealthChecker };,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
-<<<<<<< HEAD
  const LinkHealthChecker = ({ links, className = ' }) => { const [linkStatuses, setLinkStatuses] = useState ([])  const [isChecking, setIsChecking] = useState (false)  const checkLinkHealth = async url => { const startTime = Date.now ()  try {'''";
-=======
-<<<<<<< HEAD
  const LinkHealthChecker = ({ links, className = ' }) => { const [linkStatuses, setLinkStatuses] = useState ([])  const [isChecking, setIsChecking] = useState (false)  const checkLinkHealth = async url => { const startTime = Date.now ()  try {'''""
-=======
  const LinkHealthChecker = ({ links, className=' }) => { const [linkStatuses, setLinkStatuses] = useState ([])  const [isChecking, setIsChecking] = useState (false)  const checkLinkHealth = async url => { const startTime = Date.now ()  try {'"
->>>>>>> main
 
 ""
 }}}
->>>>>>> main
->>>>>>> main

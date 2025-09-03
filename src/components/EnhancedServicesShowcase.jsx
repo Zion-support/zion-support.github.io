@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 ;,"});,"})
 import React, { useState } from 'react';''';,"});,"})
@@ -135,7 +134,7 @@ const EnhancedServicesShowcase = () => {}"});,"})
                     {service.icon}""";,"});,"})
                   </div>"'""";,"});,"})
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>'"'""";,"});,"})
-                  <p className="text-sm text-blue-400 font-medium">{service.category.replace('-',).toUpperCase()}</p>;,"});,"})
+                  <p className="text-sm text-blue-400 font-medium">{service.category.replace('-').toUpperCase()}</p>;,"});,"})
                 </div>;,"});,"})
 """;,"});,"})
                 {/* Tagline */}"""";,"});,"})
@@ -306,9 +305,6 @@ export { EnhancedServicesShowcase };,"});,"})
 export { EnhancedServicesShowcase };,"});,"})
 ;,"});,"})
 export { EnhancedServicesShowcase };,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -319,8 +315,6 @@ const EnhancedServicesShowcase = () => {}
   const [searchTerm, setSearchTerm] = useState(')';
   const categories = [';
     { id: 'all', name: 'All Services', icon: '🌟' },'{ id: 'micro-saas', name: 'Micro SAAS', icon: '💻' },'{ id: 'it-services', name: 'IT Services', icon: '🖥️' },'{ id: 'ai-services', name: 'AI Services', icon: '🤖' },'{ id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' }
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -336,11 +330,9 @@ export default function EnhancedServicesShowcase() {return (
     </div>
   );
 }
-=======
-<<<<<<< HEAD
-import React, { useState } from &apos;react&apos;';
-import { Link } from &apos;react-router-dom&apos;';
-import { motion } from &apos;framer-motion&apos;';
+import React, { useState } from &apos;react&apos;
+import { Link } from &apos;react-router-dom&apos;
+import { motion } from &apos;framer-motion&apos;
 import { enhancedServices2025 } from &apos;../data/enhanced-services-2025';&apos;&apos;
 const EnhancedServicesShowcase = () => {}
 ';&apos;&apos;
@@ -349,14 +341,10 @@ const EnhancedServicesShowcase = () => {}
   const categories = [&apos;&apos;
     { id: &apos;all&apos;, name: &apos;All Services&apos;, icon: &apos;🌟&apos; },&apos;{ id: &apos;micro-saas&apos;, name: &apos;Micro SAAS&apos;, icon: &apos;💻&apos; },&apos;{ id: &apos;it-services&apos;, name: &apos;IT Services&apos;, icon: &apos;🖥️&apos; },&apos;{ id: &apos;ai-services&apos;, name: &apos;AI Services&apos;, icon: &apos;🤖&apos; },&apos;{ id: &apos;emerging-tech&apos;, name: &apos;Emerging Tech&apos;, icon: &apos;🚀&apos; }
   ];&apos;&apos;
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react'';'
 import { Link } from 'react-router-dom'';'
 import { motion } from 'framer-motion'';'
-<<<<<<< HEAD
 ""
-=======
 import { enhancedServices2025 } from '../data/enhanced-services-2025';
 const EnhancedServicesShowcase = () => {}
 ';'
@@ -364,22 +352,16 @@ const EnhancedServicesShowcase = () => {}
   const [searchTerm, setSearchTerm] = useState('')';'
   const categories = [''
     { id: 'all', name: 'All Services', icon: '🌟' }, '{ id: 'micro-saas', name: 'Micro SAAS', icon: '💻' },'{ id: 'it-services', name: 'IT Services', icon: '🖥️' }, '{ id: 'ai-services', name: 'AI Services', icon: '🤖' },'{ id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' }
->>>>>>> main
   ];
->>>>>>> main
   const filteredServices = enhancedServices2025.filter(service => {}
     const;const;const matchesSearch =;
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-<<<<<<< HEAD
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
     return matchesCategory && matchesSearch})
-=======
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch});
->>>>>>> main
   const containerVariants = {}
-<<<<<<< HEAD
     hidden: { opacity: 0 },;
     visible: {}
       opacity: 1,;
@@ -452,18 +434,13 @@ const EnhancedServicesShowcase = () => {}
               className='px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80''/>'';
             <div className='flex flex-wrap gap-2'>;
               {categories.map(category => (;
-=======
-<<<<<<< HEAD
     hidden: { opacit,y: 0 },
     visible: {}
-=======
     hidden: { opacity: 0 }, visible: {}
->>>>>>> main
       opacity: 1,
       transition: {}
         staggerChildren: 0.1, delayChildren: 0.2}}}
   const itemVariants = {}
-<<<<<<< HEAD
     hidden: { opacit,y: 0, y: 20 },
     visible: {}
       opacity: 1,
@@ -474,19 +451,18 @@ const EnhancedServicesShowcase = () => {}
       <section className=&apos;py-20 px-4 sm:px-6 lg:px-8&apos;>'&apos;&apos;'&apos;&apos;
         <div className=&apos;max-w-7xl mx-auto text-center&apos;>'&apos;&apos;''
           <;<motion.h1&apos;&apos;'';
-            className=&apos;text-4xl md:text-6xl font-bold mb-6&apos;&apos;';
+            className=&apos;text-4xl md:text-6xl font-bold mb-6&apos;&apos;
             initial={{ opacit,y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >&apos;&apos;';
+          >&apos;&apos;
             Comprehensive&apos;&apos;'&apos;&apos;'
             <span className=&apos;text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400&apos;>&apos;{&apos; &apos;}
               Technology Solutions&apos;&apos;
             </span>
           </motion.h1>&apos;&apos;'&apos;&apos;
           <motion.p&apos;&apos;'&apos;
-            className=&apos;text-xl text-gray-300 mb-8 max-w-4xl mx-auto&apos;&apos;';
-=======
+            className=&apos;text-xl text-gray-300 mb-8 max-w-4xl mx-auto&apos;&apos;
     hidden: { opacity: 0, y: 20 }, visible: {}
       opacity: 1,
       y: 0, transition: { duration: 0.5 }}}
@@ -507,18 +483,16 @@ const EnhancedServicesShowcase = () => {}
           </motion.h1>''''
           <motion.p''''
             className='text-xl text-gray-300 mb-8 max-w-4xl mx-auto''';
->>>>>>> main
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             Discover our extensive portfolio of innovative micro SAAS services,
             enterprise IT solutions, cutting-edge AI services, and emerging
-<<<<<<< HEAD
             technology solutions designed to transform your business.&apos;&apos;</motion.p>
           {/* Contact Information */}&apos;&apos;'&apos;&apos;
           <motion.div&apos;&apos;'';
-            className=&apos;bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto&apos;&apos;';
+            className=&apos;bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto&apos;&apos;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}&apos;&apos;'>&apos;&apos;'&apos;&apos;'
@@ -539,20 +513,19 @@ const EnhancedServicesShowcase = () => {}
           </motion.div>
           {/* Search and Filter */}&apos;&apos;'&apos;&apos;
           <motion.div&apos;&apos;'';
-            className=&apos;flex flex-col md:flex-row gap-4 justify-center items-center mb-12&apos;&apos;';
+            className=&apos;flex flex-col md:flex-row gap-4 justify-center items-center mb-12&apos;&apos;
             initial={{ opacit,y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >&apos;&apos;'&apos;&apos;
             <input&apos;&apos;'';
               type=&apos;text&apos;&apos;'';
-              placeholder=&apos;Search services...&apos;&apos;';
-              value={searchTerm}&apos;&apos;';
+              placeholder=&apos;Search services...&apos;&apos;
+              value={searchTerm}&apos;&apos;
               onChange={e => setSearchTerm(e.target.value)}&apos;&apos;'';
               className=&apos;px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full m,d:w-80&apos;&apos;'&apos;/>&apos;&apos;'&apos;&apos;'
             <div className=&apos;flex flex-wrap gap-2&apos;>
               {categories.map(category => (&apos;}
-=======
             technology solutions designed to transform your business.</motion.p>
           {/* Contact Information */}''''
           <motion.div'''';
@@ -590,36 +563,27 @@ const EnhancedServicesShowcase = () => {}
               className='px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80''''/>'''''
             <div className='flex flex-wrap gap-2'>
               {categories.map(category => (
->>>>>>> main
->>>>>>> main
                 <button;
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg border transition-all duration-300 ${}
-<<<<<<< HEAD
 ';
-<<<<<<< HEAD
                     selectedCategory === category.id';
                       ? 'bg-blue-600 border-blue-400 text-white''`;
                       : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40'``}`}''>'';
                   <span className='mr-2'>{category.icon}</span>;
-=======
-                    selectedCategory === category.id&apos;';
+                    selectedCategory === category.id&apos;
                       ? &apos;bg-blue-600 border-blue-400 text-white&apos;&apos;'`;
                       : &apos;bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hove,r:border-white/40&apos;``}`}&apos;&apos;'>&apos;&apos;'&apos;&apos;'
                   <span className=&apos;mr-2&apos;>{category.icon}&apos;</span>
-=======
 ';'
                     selectedCategory === category.id'';
                       ? 'bg-blue-600 border-blue-400 text-white'''`
                       : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40'``}`}'''>'''''
                   <span className='mr-2'>{category.icon}</span>
->>>>>>> main
->>>>>>> main
                   {category.name}
                 </button>;
               ))}
-<<<<<<< HEAD
             </div>;
           </motion.div>;
         </div>;
@@ -646,7 +610,7 @@ const EnhancedServicesShowcase = () => {}
                   <h3 className='text-xl font-semibold text-white mb-2'>;
                     {service.name}'';
                   </h3>'';
-                  <p className='text-sm text-blue-400 font-medium'>'{service.category.replace('-',).toUpperCase()}
+                  <p className='text-sm text-blue-400 font-medium'>'{service.category.replace('-').toUpperCase()}
                   </p>;
                 </div>;
 ''{/* Tagline */}'';
@@ -675,12 +639,10 @@ const EnhancedServicesShowcase = () => {}
                         key={idx}'';
                         className='text-xs text-gray-300 flex items-center''>'';
                         <span className='w-1.5 h-1.5 bg-blue-400 rounded-full mr-2'></span>;
-=======
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 &apos;&apos;'{/* Services Grid */}&apos;&apos;'&apos;&apos;'
       <section className=&apos;py-20 px-4 sm:px-6 lg:px-8&apos;>'&apos;&apos;'&apos;&apos;
         <div className=&apos;max-w-7xl mx-auto&apos;>'&apos;&apos;''
@@ -688,8 +650,7 @@ const EnhancedServicesShowcase = () => {}
             className=&apos;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-3 gap-8&apos;&apos;'';
             variants={containerVariants}&apos;&apos;'';
             initial=&apos;hidden&apos;&apos;'';
-            whileInView=&apos;visible&apos;&apos;';
-=======
+            whileInView=&apos;visible&apos;&apos;
 '''{/* Services Grid */}'''''
       <section className='py-20 px-4 sm: px-6 lg:px-8'>''''
         <div className='max-w-7xl mx-auto'>''''
@@ -698,12 +659,10 @@ const EnhancedServicesShowcase = () => {}
             variants={containerVariants}'''';
             initial='hidden'''';'
             whileInView='visible''';
->>>>>>> main
             viewport={{ once: true }}
           >{filteredServices.map((service, index) => (&apos;}&apos;
               <motion.div;
-<<<<<<< HEAD
-                key={service.id}&apos;&apos;';
+                key={service.id}&apos;&apos;
                 variants={itemVariants}&apos;&apos;'';
                 className=&apos;bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hove,r:scale-105 group &apos;>'&apos;&apos;{/* Service Header */}&apos;&apos;'&apos;&apos;'
                 <div className=&apos;text-center mb-6&apos;>`&apos;
@@ -714,7 +673,7 @@ const EnhancedServicesShowcase = () => {}
                   <h3 className=&apos;text-xl font-semibold text-white mb-2&apos;>
                     {service.name}&apos;&apos;'&apos;&apos;
                   </h3>&apos;&apos;'&apos;&apos;'
-                  <p className=&apos;text-sm text-blue-400 font-medium&apos;>&apos;{service.category.replace(&apos;-&apos;,).toUpperCase()}&apos;&apos;
+                  <p className=&apos;text-sm text-blue-400 font-medium&apos;>&apos;{service.category.replace(&apos;-&apos;).toUpperCase()}&apos;&apos;
                   </p>
                 </div>
 &apos;&apos;'{/* Tagline */}&apos;&apos;'&apos;&apos;'
@@ -727,7 +686,6 @@ const EnhancedServicesShowcase = () => {}
                     Pricing&apos;&apos;'&apos;&apos;
                   </h4>&apos;&apos;'&apos;&apos;'
                   <div className=&apos;space-y-1 text-xs text-gray-300&apos;>&apos;'
-=======
                 key={service.id}''';'
                 variants={itemVariants}'''';
                 className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-300 hover:transform hover:scale-105 group '>'''{/* Service Header */}'''''
@@ -739,7 +697,7 @@ const EnhancedServicesShowcase = () => {}
                   <h3 className='text-xl font-semibold text-white mb-2'>
                     {service.name}''''
                   </h3>''''
-                  <p className='text-sm text-blue-400 font-medium'>'{service.category.replace('-',).toUpperCase()}'
+                  <p className='text-sm text-blue-400 font-medium'>'{service.category.replace('-').toUpperCase()}'
                   </p>
                 </div>
 '''{/* Tagline */}'''''
@@ -752,13 +710,11 @@ const EnhancedServicesShowcase = () => {}
                     Pricing''''
                   </h4>''''
                   <div className='space-y-1 text-xs text-gray-300'>
->>>>>>> main
                     <div>Monthly: {service.pricing.monthly}</div>
                     <div>Yearly: {service.pricing.yearly}</div>
                     <div>Setup: {service.pricing.setup}</div>
                   </div>
                 </div>
-<<<<<<< HEAD
 &apos;&apos;'{/* Key Features */}&apos;&apos;'&apos;&apos;'
                 <div className=&apos;mb-4&apos;>'&apos;&apos;'&apos;&apos;
                   <h4 className=&apos;text-sm font-semibold text-blue-400 mb-2&apos;>
@@ -766,11 +722,10 @@ const EnhancedServicesShowcase = () => {}
                   </h4>&apos;&apos;'&apos;&apos;'
                   <ul className=&apos;space-y-1&apos;>
                     {service.features.slice(0, 4).map((feature, idx) => (&apos;}
-                      <li&apos;&apos;';
+                      <li&apos;&apos;
                         key={idx}&apos;&apos;'';
                         className=&apos;text-xs text-gray-300 flex items-center&apos;&apos;'&apos;>'&apos;&apos;'&apos;&apos;
                         <span className=&apos;w-1.5 h-1.5 bg-blue-400 rounded-full mr-2&apos;>&apos;'</span>
-=======
 '''{/* Key Features */}'''''
                 <div className='mb-4'>''''
                   <h4 className='text-sm font-semibold text-blue-400 mb-2'>
@@ -782,12 +737,9 @@ const EnhancedServicesShowcase = () => {}
                         key={idx}'''';
                         className='text-xs text-gray-300 flex items-center''''>'''''
                         <span className='w-1.5 h-1.5 bg-blue-400 rounded-full mr-2'></span>
->>>>>>> main
->>>>>>> main
                         {feature}
                       </li>;
                     ))}
-<<<<<<< HEAD
                   </ul>;
                 </div>;
 ''{/* Benefits */}'';
@@ -801,10 +753,8 @@ const EnhancedServicesShowcase = () => {}
                         key={idx}'';
                         className='text-xs text-gray-300 flex items-center''>'';
                         <span className='w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2'></span>;
-=======
                   </ul>
                 </div>
-<<<<<<< HEAD
 &apos;&apos;'{/* Benefits */}&apos;&apos;'&apos;&apos;'
                 <div className=&apos;mb-4&apos;>'&apos;&apos;'&apos;&apos;
                   <h4 className=&apos;text-sm font-semibold text-yellow-400 mb-2&apos;>
@@ -812,11 +762,10 @@ const EnhancedServicesShowcase = () => {}
                   </h4>&apos;&apos;'&apos;&apos;'
                   <ul className=&apos;space-y-1&apos;>
                     {service.benefits.slice(0, 3).map((benefit, idx) => (&apos;}
-                      <li&apos;&apos;';
+                      <li&apos;&apos;
                         key={idx}&apos;&apos;'';
                         className=&apos;text-xs text-gray-300 flex items-center&apos;&apos;'&apos;>'&apos;&apos;'&apos;&apos;
                         <span className=&apos;w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2&apos;>&apos;'</span>
-=======
 '''{/* Benefits */}'''''
                 <div className='mb-4'>''''
                   <h4 className='text-sm font-semibold text-yellow-400 mb-2'>
@@ -828,12 +777,9 @@ const EnhancedServicesShowcase = () => {}
                         key={idx}'''';
                         className='text-xs text-gray-300 flex items-center''''>'''''
                         <span className='w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2'></span>
->>>>>>> main
->>>>>>> main
                         {benefit}
                       </li>;
                     ))}
-<<<<<<< HEAD
                   </ul>;
                 </div>;
 ''{/* ROI and Setup */}'';
@@ -841,10 +787,8 @@ const EnhancedServicesShowcase = () => {}
                   <div className='text-xs text-gray-300'>''';
                     <div className='mb-1'>''';
                       <span className='text-green-400 font-medium'>ROI:</span>{' '}
-=======
                   </ul>
                 </div>
-<<<<<<< HEAD
 &apos;&apos;'{/* ROI and Setup */}&apos;&apos;'&apos;&apos;'
                 <div className=&apos;bg-white/5 rounded-lg p-3 mb-4&apos;>'&apos;&apos;'&apos;&apos;
                   <div className=&apos;text-xs text-gray-300&apos;>'&apos;&apos;'&apos;&apos;'
@@ -874,19 +818,16 @@ const EnhancedServicesShowcase = () => {}
                         strokeLinejoin=&apos;round&apos;&apos;'';
                         strokeWidth={2}&apos;&apos;'';
                         d=&apos;M9 5l7 7-7 7&apos;&apos;'/>&apos;&apos;
-=======
 '''{/* ROI and Setup */}'''''
                 <div className='bg-white/5 rounded-lg p-3 mb-4'>''''
                   <div className='text-xs text-gray-300'>''''''
                     <div className='mb-1'>''''''
                       <span className='text-green-400 font-medium'>ROI: </span>{' '}
->>>>>>> main
                       {service.roi}
                     </div>'';
                     <div>''';
                       <span className='text-blue-400 font-medium'>Setup:</span>{' '}
                       {service.setupTime}
-<<<<<<< HEAD
                     </div>;
                   </div>;
                 </div>;
@@ -910,7 +851,6 @@ const EnhancedServicesShowcase = () => {}
                   </Link>;
                 </div>;
               </motion.div>;
-=======
                     </div>
                   </div>
                 </div>
@@ -930,16 +870,13 @@ const EnhancedServicesShowcase = () => {}
                         strokeLinejoin='round'''';'
                         strokeWidth={2}'''';
                         d='M9 5l7 7-7 7'''/>
->>>>>>> main
                     </svg>
                   </Link>
                 </div>
               </motion.div>
->>>>>>> main
             ))}
           </motion.div>;
           {/* No Results Message */}
-<<<<<<< HEAD
           {filteredServices.length === 0 && ('';
             <motion.div'';
               className='text-center py-12'';
@@ -1028,11 +965,9 @@ const EnhancedServicesShowcase = () => {}
 '';
           <motion.div'';
             className='mt-8 text-sm text-gray-400'';
-=======
-<<<<<<< HEAD
           {filteredServices.length === 0 && (&apos;&apos;'&apos;}&apos;
             <motion.div&apos;&apos;'';
-              className=&apos;text-center py-12&apos;&apos;';
+              className=&apos;text-center py-12&apos;&apos;
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}&apos;&apos;'>&apos;&apos;'&apos;&apos;'
               <p className=&apos;text-gray-400 text-lg&apos;>
@@ -1044,7 +979,6 @@ const EnhancedServicesShowcase = () => {}
                   setSearchTerm(&apos;&apos;)';&apos;}}&apos;&apos;'';
                 className=&apos;mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 &apos;>
                 View All Services&apos;&apos;
-=======
           {filteredServices.length === 0 && (''''
             <motion.div'''';
               className='text-center py-12''';
@@ -1059,18 +993,16 @@ const EnhancedServicesShowcase = () => {}
                   setSearchTerm('')';'}}''''
                 className='mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors duration-300 '>
                 View All Services
->>>>>>> main
               </button>
             </motion.div>
           )}
         </div>
       </section>
-<<<<<<< HEAD
 &apos;&apos;'{/* Enhanced CTA Section */}&apos;&apos;'&apos;&apos;'
       <section className=&apos;py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50&apos;>'&apos;&apos;'&apos;&apos;
         <div className=&apos;max-w-4xl mx-auto text-center&apos;>'&apos;&apos;''
           <motion.h2&apos;&apos;'&apos;
-            className=&apos;text-3xl md:text-4xl font-bold text-white mb-6&apos;&apos;';
+            className=&apos;text-3xl md:text-4xl font-bold text-white mb-6&apos;&apos;
             initial={{ opacit,y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -1078,7 +1010,7 @@ const EnhancedServicesShowcase = () => {}
             Ready to Transform Your Business?&apos;&apos;
           </motion.h2>&apos;&apos;'&apos;&apos;
           <motion.p&apos;&apos;'';
-            className=&apos;text-xl text-gray-300 mb-8&apos;&apos;';
+            className=&apos;text-xl text-gray-300 mb-8&apos;&apos;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -1088,7 +1020,7 @@ const EnhancedServicesShowcase = () => {}
           </motion.p>
 &apos;&apos;'&apos;&apos;
           <motion.div&apos;&apos;'';
-            className=&apos;flex flex-col sm:flex-row gap-4 justify-center mb-8&apos;&apos;';
+            className=&apos;flex flex-col sm:flex-row gap-4 justify-center mb-8&apos;&apos;
             initial={{ opacit,y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -1106,7 +1038,7 @@ const EnhancedServicesShowcase = () => {}
           </motion.div>
 &apos;&apos;'&apos;&apos;
           <motion.div&apos;&apos;'';
-            className=&apos;bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto&apos;&apos;';
+            className=&apos;bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto&apos;&apos;
             initial={{ opacit,y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}&apos;&apos;'>&apos;&apos;'&apos;&apos;'
@@ -1128,7 +1060,6 @@ const EnhancedServicesShowcase = () => {}
               </div>&apos;&apos;'&apos;&apos;'
               <div className=&apos;flex items-center&apos;>'&apos;&apos;'&apos;&apos;
                 <span className=&apos;text-green-400 mr-2&apos;>✓&apos;</span>
-=======
 '''{/* Enhanced CTA Section */}'''''
       <section className='py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50'>''''
         <div className='max-w-4xl mx-auto text-center'>''''
@@ -1146,11 +1077,8 @@ const EnhancedServicesShowcase = () => {}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >';'
-<<<<<<< HEAD
             Let's discuss how our innovative services can help drive your'
-=======
             Let&apos;s discuss how our innovative services can help drive your;'
->>>>>>> main
             success and competitive advantage
           </motion.p>
 ''''
@@ -1195,26 +1123,20 @@ const EnhancedServicesShowcase = () => {}
               </div>''''
               <div className='flex items-center'>''''
                 <span className='text-green-400 mr-2'>✓</span>
->>>>>>> main
                 Custom Solutions & Integration
               </div>
             </div>
           </motion.div>
-<<<<<<< HEAD
 &apos;&apos;'&apos;&apos;
           <motion.div&apos;&apos;'&apos;
-            className=&apos;mt-8 text-sm text-gray-400&apos;&apos;';
+            className=&apos;mt-8 text-sm text-gray-400&apos;&apos;
             initial={{ opacit,y: 0 }}
-=======
 ''''
           <motion.div''''
             className='mt-8 text-sm text-gray-400''';
->>>>>>> main
             initial={{ opacity: 0 }}
->>>>>>> main
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-<<<<<<< HEAD
           >;
             <p>Email: kleber@ziontechgroup.com</p>;
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
@@ -1229,10 +1151,8 @@ const EnhancedServicesShowcase = () => {}
           </motion.div>;
         </div>;
       </section>;
-=======
           >&apos;&apos;
             <p>Email: kleber@ziontechgroup.com</p>
-<<<<<<< HEAD
             <p>Addres,s: 364 E Main St STE 1008, Middletown DE 19709</p>
             <p>';
               Website:{&apos; &apos;}&apos;&apos;'&apos;&apos;
@@ -1240,7 +1160,6 @@ const EnhancedServicesShowcase = () => {}
                 href=&apos;https://ziontechgroup.com&apos;&apos;'';
                 className=&apos;text-blue-400 hover:text-blue-300 &apos;>
                 http,s://ziontechgroup.com&apos;&apos;
-=======
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             <p>''
               Website: {' '}''''
@@ -1248,13 +1167,11 @@ const EnhancedServicesShowcase = () => {}
                 href='https://ziontechgroup.com'''';'
                 className='text-blue-400 hover: text-blue-300 '>
                 https://ziontechgroup.com
->>>>>>> main
               </a>
             </p>
           </motion.div>
         </div>
       </section>
->>>>>>> main
     </div>)}
 export default EnhancedServicesShowcase;
 export { EnhancedServicesShowcase }
@@ -1264,27 +1181,16 @@ export { EnhancedServicesShowcase }
 export { EnhancedServicesShowcase }
 
 export { EnhancedServicesShowcase }
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
 export { EnhancedServicesShowcase };
 ;
 export { EnhancedServicesShowcase };
 ;
 export { EnhancedServicesShowcase };
-=======
 export { EnhancedServicesShowcase }
-=======
 
 export { EnhancedServicesShowcase }
-=======
 import React, { useState }  from 'react;'
 import { Link }  from 'react-router-dom;'
 import { motion }  from 'framer-motion;'
 "
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

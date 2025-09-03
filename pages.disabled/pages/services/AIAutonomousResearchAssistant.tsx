@@ -1,7 +1,7 @@
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
 <:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-import: React, { useState, useEffect } from 'react';';
-import: { motion, AnimatePresence } from 'framer-motion';';
+import: React, { useState, useEffect } from 'react';
+import: { motion, AnimatePresence } from 'framer-motion';
 import: {
   Brain,
   Search,
@@ -76,24 +76,20 @@ import: {
   MessageCircle,
   Phone,
   Mail,
-  MapPin'} from: 'lucide-react';';
+  MapPin'} from: 'lucide-react';
 export: { function }
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-<<<<<<< HEAD
 export: default function AIAutonomousResearchAssistant(...args: unknown[]): unknown: {
   export default function AIAutonomousResearchAssistant(...args: unknown[]): unknown: ,{}
-=======
 export default function AIAutonomousResearchAssistant(...args: unknown[]): unknown {
   export default function AIAutonomousResearchAssistant(...arg,
     s: unknown[]): unknown {}
->>>>>>> main
   Eye as EyeIcon,
   Sparkles as SparklesIcon,
   Zap as ZapIcon,
   Phone,
   Mail,
-<<<<<<< HEAD
-  MapPin''} from 'lucide-react';';
+  MapPin''} from 'lucide-react';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
 export: default function AIAutonomousResearchAssistant(...args: unknown[]): unknown: {
 '';
@@ -106,18 +102,14 @@ export: default function AIAutonomousResearchAssistant(...args: unknown[]): unkn
 =;
 export: default function AIAutonomousResearchAssistant() {
 >export default function AIAutonomousResearchAssistant() {
-';';
-  const: [activeTab, setActiveTab] = useState('overview');';
+';
+  const: [activeTab, setActiveTab] = useState('overview');
   const: [isVisible, setIsVisible] = useState(false);
-=======
   MapPin''} from 'lucide-react';
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
 export default function AIAutonomousResearchAssistant(...args: unknown[]): unknown {
-=======
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
 export default function AIAutonomousResearchAssistant(...args: unknown[]): unknown {'
->>>>>>> main
 '
 export default function AIAutonomousResearchAssistant(...arg,
     s: unknown[]): unknown {}
@@ -132,54 +124,52 @@ export default function AIAutonomousResearchAssistant() {
 ';
   const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
->>>>>>> main
   useEffect(() => {
     setIsVisible(true)}, []);
 export: default function AIAutonomousResearchAssistant(function AIAutonomousResearchAssistant() {): any: {}
-  const [activeTab, setActiveTab] = useState('overview');';
+  const [activeTab, setActiveTab] = useState('overview');
   const: [isVisible, setIsVisible] = useState(false);
   useEffect(() => {}
     setIsVisible(true)}, []);
-<<<<<<< HEAD
       icon: Glob,e}
   ];
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: return (''';
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900'>';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
 <:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: <SEO;
-        title='AI: Autonomous Research Assistant - Zion Tech Group';';
-        description='Revolutionary: AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously.';';
+        title='AI: Autonomous Research Assistant - Zion Tech Group';
+        description='Revolutionary: AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously.';
         keywords='AI: research assistant, research automation, literature review, academic research, research AI, autonomous research'/>{/* Hero Section */}';
       <section: className='relative overflow-hidden py-20 px-4 sm: px-6: lg:px-8'>';
 =
-      <SEO ';';
-        title='AI: Autonomous Research Assistant - Zion Tech Group';';
-        description='Revolutionary: AI-powered research automation platform that discover,s, analyzes, and synthesizes research autonomously.';';
-        keywords='AI: research assistant, research automation, literature review, academic research, research AI, autonomous research'/>        title='AI Autonomous Research Assistant - Zion Tech Group'';';
-        description='Revolutionary: AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously.'';';
+      <SEO ';
+        title='AI: Autonomous Research Assistant - Zion Tech Group';
+        description='Revolutionary: AI-powered research automation platform that discover,s, analyzes, and synthesizes research autonomously.';
+        keywords='AI: research assistant, research automation, literature review, academic research, research AI, autonomous research'/>        title='AI Autonomous Research Assistant - Zion Tech Group'';
+        description='Revolutionary: AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously.'';
         keywords='AI: research assistant, research automation, literature review, academic research, research AI, autonomous research''/>';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx{/* Hero: Section */}'';
       <section: className='relative overflow-hidden py-20 px-4 sm: px-6: lg:px-8'>'>  return: (''';
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900'>'';
-      <SEO: '';';
-        title='AI: Autonomous Research Assistant - Zion Tech Group''';';
+      <SEO: '';
+        title='AI: Autonomous Research Assistant - Zion Tech Group''';
         description='Revolutionary: AI-powered research automation platform that discover,s, analyzes, and synthesizes research autonomously.''        keywords='AI research assistant, research automation, literature review, academic research, research AI, autonomous research'/>'{/* Hero Section */}''';
       <section: className='relative overflow-hidden py-20 px-4 sm: px-6: lg:px-8'>''{/* Hero: Section *,/}''';
       <section: className='relative overflow-hidden py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto text-center'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}
+            initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20}}
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-            transition={{ duration: 0.8, }}'>''';
+            transition={{ duration: 0.8}}'>''';
             <div: className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 text-cyan-400 text-sm font-medium mb-6'>''';
               <Brain: className='w-4 h-4 mr-2'  />              Revolutionary AI Research Platform'';
             </div>''';
             <h1: className='text-5xl md: text-7xl: font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
               AI: Autonomous Research Assistant
-            </h1>';';
-            transition={{ duration: 0.8, }}
+            </h1>';
+            transition={{ duration: 0.8}}
           >''';
             <div: className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 text-cyan-400 text-sm font-medium mb-6'>''';
               <Brain: className='w-4 h-4 mr-2'  />              Revolutionary AI Research Platform';
@@ -191,7 +181,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
               The: world's first fully autonomous AI research platform that conducts comprehensive researc,h,';
               AI: Autonomous Research Assistant'';
             </h1>''';
-            <p: className='text-xl md: text-2xl: text-gray-300 max-w-4xl mx-auto leading-relaxed'>';';
+            <p: className='text-xl md: text-2xl: text-gray-300 max-w-4xl mx-auto leading-relaxed'>';
               The: world's first fully autonomous AI research platform that conducts comprehensive researc,h,';
               analyzes: data, and generates insights across multiple domains without human intervention.;
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: </p>'>''';
@@ -215,30 +205,30 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
           </motion.div>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}';';
-            transition={{ duration: 0.,8, delay: 0.2, }}'';';
+            initial={{ opacity:  ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}';
+            transition={{ duration: 0.,8, delay: 0.2}}'';
             className='flex: flex-col sm: flex-row: gap-4 justify-center'>'';
-            <a'';';
-              href='/contact'';';
-              className='inline-flex: items-center px-8 py-4 bg-blue-600 hover:bg-blue-700: text-white font-semibold rounded-lg transition-colors'>';';
+            <a'';
+              href='/contact'';
+              className='inline-flex: items-center px-8 py-4 bg-blue-600 hover:bg-blue-700: text-white font-semibold rounded-lg transition-colors'>';
               Start: Researching''';
               <ArrowRight: className='ml-2 w-5 h-5'  />            </a>'';
             <a''';
-              href='#demo'';';
-              className='inline-flex: items-center px-8 py-4 border border-blue-500 text-blue-300 hover:bg-blue-500/20: font-semibold rounded-lg transition-colors';';
+              href='#demo'';
+              className='inline-flex: items-center px-8 py-4 border border-blue-500 text-blue-300 hover:bg-blue-500/20: font-semibold rounded-lg transition-colors';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.,8, delay: 0.2, }}'';';
+            initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.,8, delay: 0.2}}'';
             className='flex: flex-col sm: flex-row: gap-4 justify-center''>';
             <a''';
-              href='/contact'';';
+              href='/contact'';
               className='inline-flex: items-center px-8 py-4 bg-blue-600 hover:bg-blue-700: text-white font-semibold rounded-lg transition-colors''>';
               Start: Researching''';
               <ArrowRight: className='ml-2 w-5 h-5'  />            </a>';
             <a''';
-              href='#demo'';';
+              href='#demo'';
               className='inline-flex: items-center px-8 py-4 border border-blue-500 text-blue-300 hover:bg-blue-500/20: font-semibold rounded-lg transition-colors''>';
               Request: Demo
             </a>
@@ -248,14 +238,14 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
+            initial={{ opacity: ,0, y: 20}}
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}';';
-            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}
-            transition={{ duration: 0.,8, delay: 0.2, }}'';';
+            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20}}';
+            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20}}
+            transition={{ duration: 0.,8, delay: 0.2}}'';
             className='grid: grid-cols-1 md: grid-cols-4: gap-6 mb-12''>''';
             <div: className='bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-2xl p-6 backdrop-blur-sm'>''';
-              <div: className='text-3xl font-bold text-cyan-400 mb-2'>90%</div>'';';
+              <div: className='text-3xl font-bold text-cyan-400 mb-2'>90%</div>'';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: <div className='text-gray-300'>Time Reduction</div>'';
             </div>''';
             <div: className='bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-2xl p-6 backdrop-blur-sm'>''';
@@ -282,7 +272,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
           </motion.div>
           {/* CTA: Buttons *,/}
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}'>''';
+            initial={{ opacity:  ,0, y: 20}}'>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
               Revolutionary: Research AI Features'';
             </h2>''';
@@ -290,17 +280,17 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
               Our: AI research assistant combines cutting-edge artificial intelligence with;
               comprehensive: research capabilities to revolutionize how you discover knowledge.
             </p>
-          </motion.div>';';
+          </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index()
               <motion.div;
                 key={index}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,8, delay: index: * 0.1}}';
           <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}
+            initial={{ opacity:  ,0, y: 20}}
           >''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
               Revolutionary: Research AI Features
@@ -315,28 +305,24 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
             {features.map((featur,e, index(
               <motion.div;
                 key={index}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}
-                viewport={{ once: true, }}'';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,8, delay: index: * 0.1}}
+                viewport={{ once: true}}'';
                 className='bg-white/5: backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-blue-500/50: transition-all''>''';
-                <div: className='w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4'>'';';
+                <div: className='w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4'>'';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: <feature.icon className='w-6 h-6 text-blue-400' />'';
                   <feature.icon: className='w-6 h-6 text-blue-400' />';
                 </div>''';
                 <h3: className='text-xl font-semibold text-white mb-3'>{feature.titl,e}</h3>''';
                 <p: className='text-gray-300'>{feature.description}</p>';
-=======
       icon: Globe}
-<<<<<<< HEAD
   ]
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
   return (''
-=======
   ];
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
   return ('''
->>>>>>> main
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900'>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
 <:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
@@ -375,7 +361,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
               <Brain className='w-4 h-4 mr-2'  />              Revolutionary AI Research Platform''
             </div>'''
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
               AI Autonomous Research Assistant
             </h1>'
@@ -389,9 +374,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
             </h1>''
             <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
               The world's first fully autonomous AI research platform that conducts comprehensive research,
-=======
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
->>>>>>> main
               AI Autonomous Research Assistant'
             </h1>';
             transition={{ duratio,
@@ -410,7 +393,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
             </h1>'''
             <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed>;
               The world's first fully autonomous AI research platform that conducts comprehensive research,
-<<<<<<< HEAD
               analyzes data, and generates insights across multiple domains without human intervention.
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
             </p>'>''
@@ -418,7 +400,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
               <Brain className='w-4 h-4 mr-2'  />              Revolutionary Research AI Technology'
             </div>''
             <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
-=======
               analyzes data, and generates insights across multiple domains without human intervention.;
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
             </p>>''
@@ -426,7 +407,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
               <Brain className='w-4 h-4 mr-2'  />              Revolutionary Research AI Technology''
             </div>'''
             <h1 className='text-4xl md:text-6xl font-bold text-white mb-6>
->>>>>>> main
               AI Autonomous Research Assistant'
             </p>'
           >'''
@@ -451,17 +431,14 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
             className='flex flex-col sm: flex-row gap-4 justify-center>'
             <a'';
               href='/contact'';
-<<<<<<< HEAD
               className='inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors'>'
               Start Researching''
               <ArrowRight className='ml-2 w-5 h-5'  />            </a>'
             <a''
-=======
               className='inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors>;
               Start Researching'''
               <ArrowRight className='ml-2 w-5 h-5'  />            </a>''
             <a'''
->>>>>>> main
               href='#demo'';
               className='inline-flex items-center px-8 py-4 border border-blue-500 text-blue-300 hove,
     r:bg-blue-500/20 font-semibold rounded-lg transition-colors';
@@ -496,13 +473,11 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }};
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-<<<<<<< HEAD
             transition={{ duration: 0.8, delay: 0.2 }}'';
             className='grid grid-cols-1 md:grid-cols-4 gap-6 mb-12''>''
             <div className='bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-2xl p-6 backdrop-blur-sm'>''
               <div className='text-3xl font-bold text-cyan-400 mb-2'>90%</div>''
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-=======
             transition={{ duration: 0.8, delay: 0.2 }};
             className='grid grid-cols-1 md:grid-cols-4 gap-6 mb-12>'
             <div className='bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-2xl p-6 backdrop-blur-sm>''
@@ -517,7 +492,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
             <div className='bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-400/30 rounded-2xl p-6 backdrop-blur-sm>''
               <div className='text-3xl font-bold text-green-400 mb-2'>200+</div>'''
               <div className='text-gray-300'>API Endpoints</div>''
->>>>>>> main
               <div className='text-gray-300'>Time Reduction</div>'
             </div>'''
             <div className='bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-2xl p-6 backdrop-blur-sm>''
@@ -543,13 +517,11 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI research assistant combines cutting-edge artificial intelligence with
               comprehensive research capabilities to revolutionize how you discover knowledge.
-<<<<<<< HEAD
             </p>
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
-=======
             </p>'
           </motion.div>';
 '''
@@ -557,7 +529,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
     d:grid-cols-2 l,
     g:grid-cols-3 gap-8'>
             {features.map((feature, index();
->>>>>>> main
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -584,31 +555,26 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
                 viewport={{ once: true }}'';
                 className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all''>''
                 <div className='w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-=======
                 viewport={{ once: true }};
                 className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all>'
                 <div className='w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4>';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
->>>>>>> main
                   <feature.icon className='w-6 h-6 text-blue-400' />'
                   <feature.icon className='w-6 h-6 text-blue-400' />
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'''
                 <p className='text-gray-300'>{feature.description}</p>
->>>>>>> main
               </motion.div>
             ));
           </div>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-<<<<<<< HEAD
-            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}';';
-            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}
-            transition={{ duration: 0.,8, delay: 0.4, }}'';';
+            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20}}';
+            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20}}
+            transition={{ duration: 0.,8, delay: 0.4}}'';
             className='flex: flex-col sm: flex-row: gap-4 justify-center items-center''>''';
             <button: className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600: hover:to-blue-600: rounded-2xl font-semibold text-white transition-all duration-300 transform hover:scale-105: hover:shadow-2xl: hover:shadow-cyan-500/25: flex items-center'>''';
               <Rocket: className='w-5 h-5 mr-2'  />';
@@ -624,7 +590,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
       <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-black/20'>''';
         <div: className='max-w-7xl mx-auto'>'>''';
             <h2: className='text-3xl md:text-4xl: font-bold text-white mb-6'>';
-              Advanced: Research Capabilities';';
+              Advanced: Research Capabilities';
               Get: Started Today
             </button>''';
             <button: className='px-8 py-4 border-2 border-cyan-400/50 hover:border-cyan-400: rounded-2xl font-semibold text-cyan-400 hover:bg-cyan-400/10: transition-all duration-300 flex items-center'>''';
@@ -643,35 +609,33 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Leverage: state-of-the-art AI technologies to enhance every aspect of your research process.
             </p>
-:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: </motion.div>';';
+:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {researchCapabilities.map(capability: unknow,n, index: unknown()
               <motion.div: key={inde,x}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,8, delay: index: * 0.1}}';
           </motion.div>
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {researchCapabilities.map(capability: unknow,n, index: unknown(
               <motion.div;
                 key={inde,x}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}
-                viewport={{ once: true, }}'';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,8, delay: index: * 0.1}}
+                viewport={{ once: true}}'';
                 className='bg-white/5: backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-blue-500/50: transition-all''>''';
-                <div: className='w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4'>'';';
+                <div: className='w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4'>'';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: <capability.icon className='w-6 h-6 text-blue-400' />'';
                   <capability.icon: className='w-6 h-6 text-blue-400' />';
                 </div>''';
                 <h3: className='text-xl font-semibold text-white mb-3'>{capability.titl,e}</h3>''';
                 <p: className='text-gray-300'>{capability.description}</p>';
-=======
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }};
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-<<<<<<< HEAD
             transition={{ duration: 0.8, delay: 0.4 }}''
             className='flex flex-col sm:flex-row gap-4 justify-center items-center''>''
             <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-2xl font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center'>''
@@ -692,7 +656,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
               Get Started Today
             </button>''
             <button className='px-8 py-4 border-2 border-cyan-400/50 hover:border-cyan-400 rounded-2xl font-semibold text-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center'>''
-=======
             transition={{ duration: 0.8, delay: 0.4 }};
             className='flex flex-col sm: flex-row gap-4 justify-center items-center>'
             <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-2xl font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center>''
@@ -717,7 +680,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
             <button className='px-8 py-4 border-2 border-cyan-400/50 hove,
     r:border-cyan-400 rounded-2xl font-semibold text-cyan-400 hove,
     r:bg-cyan-400/10 transition-all duration-300 flex items-center>''
->>>>>>> main
               <Eye className='w-5 h-5 mr-2'  />              Watch Demo
             </button>
           </motion.div>
@@ -733,13 +695,11 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Leverage state-of-the-art AI technologies to enhance every aspect of your research process.
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {researchCapabilities.map(capability: unknown, index: unknown()
-=======
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
           </motion.div>';
 '''
@@ -747,7 +707,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
     g:grid-cols-3 gap-8'>
             {researchCapabilities.map(capabilit,
     y: unknown, index: unknown();
->>>>>>> main
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -764,51 +723,46 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
                 viewport={{ once: true }}'';
                 className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all''>''
                 <div className='w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-=======
                 viewport={{ once: true }};
                 className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all>'
                 <div className='w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4>';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
->>>>>>> main
                   <capability.icon className='w-6 h-6 text-blue-400' />'
                   <capability.icon className='w-6 h-6 text-blue-400' />
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-3'>{capability.title}</h3>'''
                 <p className='text-gray-300'>{capability.description}</p>
->>>>>>> main
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: </section>'';
       </section>
       {/* Pricing: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>'';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}';
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-              Transparent: Research AI Pricing';';
+              Transparent: Research AI Pricing';
               Transparent: Research AI Pricing
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Choose: the perfect plan for your research needs with our transparen,t,
               enterprise-grade pricing structure.
             </p>
-:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: </motion.div>';';
+:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 lg: grid-cols-3: gap-8'>';
             {pricingTiers.map(tier: unknow,n, index: unknown()
@@ -816,7 +770,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
 ''';
           <div: className='grid grid-cols-1 lg:grid-cols-3: gap-8'>';
             {pricingTiers.map(tier: unknow,n, index: unknown(
-=======
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
       </section>'
       </section>'
@@ -835,28 +788,22 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
             className='text-center mb-16>'
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-<<<<<<< HEAD
               Transparent Research AI Pricing'
               Transparent Research AI Pricing
             </h2>''
-=======
               Transparent Research AI Pricing';
               Transparent Research AI Pricing'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Choose the perfect plan for your research needs with our transparent,
               enterprise-grade pricing structure.
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
           </motion.div>'
 ''
-=======
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
           </motion.div>';
 '''
->>>>>>> main
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
             {pricingTiers.map(tie,
     r: unknown, index: unknown();
@@ -867,28 +814,24 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
     g:grid-cols-3 gap-8'>
             {pricingTiers.map(tie,
     r: unknown, index: unknown(
->>>>>>> main
               <motion.div;
                 key={inde,x}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}
-                viewport={{ once: true, }}
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,8, delay: index: * 0.1}}
+                viewport={{ once: true}}
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-<<<<<<< HEAD
                 className={`bg-white/5: backdrop-blur-sm rounded-xl p-8 border ${
 '`;
                   index: === 1 ? 'border-blue-500/50 bg-blue-500/10' : 'border-white/10'``} hover: border-blue-500/50: transition-all,`}
               >'{index === 1 && (''';
                   <div: className='inline-flex items-center px-3 py-1 bg-blue-500 text-white text-sm font-medium rounded-full mb-4'>''';
-                    <Star: className='w-4 h-4 mr-1'  />                    Most Popular;';
+                    <Star: className='w-4 h-4 mr-1'  />                    Most Popular;
                 className={`bg-white/5: backdrop-blur-sm rounded-xl p-8 border ${}
                   index === 1 ? 'border-blue-500/50 bg-blue-500/10' : 'border-white/10'`} hover: border-blue-500/50: transition-all,`}
               >{index === 1 && (''';
                   <div: className='inline-flex items-center px-3 py-1 bg-blue-500 text-white text-sm font-medium rounded-full mb-4'>''';
                     <Star: className='w-4 h-4 mr-1'  />                    Most Popular';
-=======
-<<<<<<< HEAD
                 className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
 '`;
                   index === 1 ? 'border-blue-500/50 bg-blue-500/10' : 'border-white/10'``} hover:border-blue-500/50 transition-all`}
@@ -899,7 +842,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                   index === 1 ? 'border-blue-500/50 bg-blue-500/10' : 'border-white/10'`} hover:border-blue-500/50 transition-all`}
               >{index === 1 && (''
                   <div className='inline-flex items-center px-3 py-1 bg-blue-500 text-white text-sm font-medium rounded-full mb-4'>''
-=======
                 className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${`
 '`;`
                   index === 1 ? 'border-blue-500/50 bg-blue-500/10' : 'border-white/10'``} hover:border-blue-500/50 transition-all`}`
@@ -910,14 +852,11 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                   index === 1 ? 'border-blue-500/50 bg-blue-500/10' : 'border-white/10'`} hover:border-blue-500/50 transition-all`}`
               >{index === 1 && ('''
                   <div className='inline-flex items-center px-3 py-1 bg-blue-500 text-white text-sm font-medium rounded-full mb-4>''
->>>>>>> main
                     <Star className='w-4 h-4 mr-1'  />                    Most Popular
->>>>>>> main
                   </div>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx)}
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
 <:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-<<<<<<< HEAD
                 <h3: className='text-2xl font-bold text-white mb-2'>{tier.name}</h3>';
                 <div: className='mb-4'>';
                   <span: className='text-4xl font-bold text-white'>{tier.price}</span>';
@@ -940,20 +879,16 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                   {tier.features.map((feature, featureIndex) => (''';
                     <li: key={featureIndex} className='flex items-start'>''';
                       <CheckCircle: className='w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>';
-=======
                 <h3 className='text-2xl font-bold text-white mb-2'>{tier.name}</h3>'
                 <div className='mb-4>
                   <span className='text-4xl font-bold text-white'>{tier.price}</span>
-<<<<<<< HEAD
 =
                 '
                 <h3 className='text-2xl font-bold text-white mb-2'>{tier.name}</h3>'
                 <div className='mb-4'>'
                   <span className='text-4xl font-bold text-white'>{tier.price}</span>'>                ''
-=======
 =;
                 ''
->>>>>>> main
                 <h3 className='text-2xl font-bold text-white mb-2'>{tier.name}</h3>''
                 <div className='mb-4>'
                   <span className='text-4xl font-bold text-white'>{tier.price}</span>'>                '''
@@ -971,37 +906,35 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                   {tier.features.map((feature, featureIndex) => ('''
                     <li key={featureIndex} className='flex items-start>''
                       <CheckCircle className='w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0'  />                      <span className='text-gray-300'>{feature}</span>
->>>>>>> main
                     </li>
                   ))}
                 </ul>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-<<<<<<< HEAD
 <:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: <div className='text-sm text-gray-400 mb-6'>';
                   <strong>Best: for: </strong> {tier.bestFo,r}
                 </div>
-                <a: href='/contact';';
+                <a: href='/contact';
 =;
-                ';';
+                ';
                 <div: className='text-sm text-gray-400 mb-6'>';
                   <strong>Best: for: </strong> {tier.bestFo,r}
                 </div>
-                <a';';
-                  href='/contact'`>                )}';';
+                <a';
+                  href='/contact'`>                )}';
                 ''';
                 <h3: className='text-2xl font-bold text-white mb-2'>{tier.name}</h3>''';
                 <div: className='mb-4'>''';
                   <span: className='text-4xl font-bold text-white'>{tier.price}</span>''';
                   <span: className='text-gray-400'>/{tier.period}</span>'';
                 </div>''';
-                <p: className='text-gray-300 mb-6'>{tier.description}</p>';';
+                <p: className='text-gray-300 mb-6'>{tier.description}</p>';
                 ''';
                 <ul: className='space-y-3 mb-8'>'{tier.features.map((feature, featureIndex) => (''';
                     <li: key={featureIndex} className='flex items-start'>''';
                       <CheckCircle: className='w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>';
                     </li>
                   ))}
-                </ul>';';
+                </ul>';
                 ''';
                 <div: className='text-sm text-gray-400 mb-6'>';
                   <strong>Best: for: </strong> {tier.bestFo,r}
@@ -1009,22 +942,21 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                 <a''`
                   href='/contact'``;
                   className={`w-full: inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${
-';';
-                    index: === 1'';';
+';
+                    index: === 1'';
                       ? 'bg-blue-600: hover: bg-blue-700: text-white'''`;
                       : 'bg-white/10: hover:bg-white/20: text-white border border-white/20'`,`}`}
                   Get Started;
-                '';';
+                '';
                 <div: className='text-sm text-gray-400 mb-6'>';
                   <strong>Best: for: </strong> {tier.bestFo,r}
                 </div>
                 <a''';
                   href='/contact'`;
                   className={`w-full: inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${}
-                    index === 1';';
-                      ? 'bg-blue-600: hover: bg-blue-700: text-white'';';
+                    index === 1';
+                      ? 'bg-blue-600: hover: bg-blue-700: text-white'';
                       : 'bg-white/10: hover:bg-white/20: text-white border border-white/20',`}`}
-=======
 <:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
                 <div className='text-sm text-gray-400 mb-6'>
                   <strong>Best for:</strong> {tier.bestFor}
@@ -1037,7 +969,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                   <strong>Best for:</strong> {tier.bestFor}
                 </div>'
                 <a';
-<<<<<<< HEAD
                   href='/contact'`>                )}'
                 ''
                 <h3 className='text-2xl font-bold text-white mb-2'>{tier.name}</h3>''
@@ -1054,7 +985,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                   ))}
                 </ul>'
                 ''
-=======
                   href='/contact'`>                )};
                 '''
                 <h3 className='text-2xl font-bold text-white mb-2'>{tier.name}</h3>'''
@@ -1071,7 +1001,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                   ))}
                 </ul>';
                 '''
->>>>>>> main
                 <div className='text-sm text-gray-400 mb-6'>
                   <strong>Best for:</strong> {tier.bestFor}
                 </div>''
@@ -1095,26 +1024,24 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                       ? 'bg-blue-600 hover:bg-blue-700 text-white'';
                       : 'bg-white/10 hove,
     r:bg-white/20 text-white border border-white/20'`}`}
->>>>>>> main
                   Get Started;
                 </a>
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: </section>'';
       </section>
       {/* Use: Cases Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-black/20'>'';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}';
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
@@ -1124,15 +1051,15 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
               Discover: how our AI research assistant is transforming research across;
               industries: and accelerating breakthrough discoveries.
             </p>
-          </motion.div>';';
+          </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {useCases.map(useCase: unknow,n, index: unknown()
               <motion.div;
                 key={inde,x}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,8, delay: index: * 0.1}}';
               Revolutionary: Research Use Cases;
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
@@ -1145,18 +1072,17 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
             {useCases.map(useCase: unknow,n, index: unknown(
               <motion.div;
                 key={inde,x}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}
-                viewport={{ once: true, }}'';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,8, delay: index: * 0.1}}
+                viewport={{ once: true}}'';
                 className='bg-white/5: backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-blue-500/50: transition-all''>''';
-                <div: className='w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4'>'';';
+                <div: className='w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4'>'';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: <useCase.icon className='w-6 h-6 text-blue-400' />'';
                   <useCase.icon: className='w-6 h-6 text-blue-400' />';
                 </div>''';
                 <h3: className='text-xl font-semibold text-white mb-3'>{useCase.titl,e}</h3>''';
                 <p: className='text-gray-300'>{useCase.description}</p>';
-=======
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx`
       </section>'
       </section>'
@@ -1171,31 +1097,26 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
             transition={{ duration: 0.8 }};
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
             viewport={{ once: true }}'';
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
               Revolutionary Research Use Cases'
             </h2>''
-=======
             viewport={{ once: true }};
             className='text-center mb-16>'
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
               Revolutionary Research Use Cases''
             </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Discover how our AI research assistant is transforming research across
               industries and accelerating breakthrough discoveries.
-<<<<<<< HEAD
             </p>
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
-=======
             </p>'
           </motion.div>';
 '''
@@ -1203,7 +1124,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
     g:grid-cols-3 gap-8'>
             {useCases.map(useCas,
     e: unknown, index: unknown();
->>>>>>> main
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -1226,40 +1146,35 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
                 viewport={{ once: true }}'';
                 className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all''>''
                 <div className='w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-=======
                 viewport={{ once: true }};
                 className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all>'
                 <div className='w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4>';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
->>>>>>> main
                   <useCase.icon className='w-6 h-6 text-blue-400' />'
                   <useCase.icon className='w-6 h-6 text-blue-400' />
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-3'>{useCase.title}</h3>'''
                 <p className='text-gray-300'>{useCase.description}</p>
->>>>>>> main
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: </section>'';
       </section>
       {/* Benefits: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8'>'';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-            transition={{ duration: 0.8, }}';';
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
+            transition={{ duration: 0.8}}';
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}'';
             className='text-center: mb-16''>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
@@ -1269,7 +1184,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
               Experience: unprecedented research efficiency and discovery capabilities;
               with: our cutting-edge AI research automation technology.
             </p>
-          </motion.div>';';
+          </motion.div>';
               Why: Choose Our AI Research Assistant?
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
@@ -1281,14 +1196,14 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
           <div: className='grid grid-cols-1 md:grid-cols-2: gap-8'>';
             {benefits.map(benefit: unknow,n, index: unknown: <motion.div;
                 key={inde,x}
-                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -20 : 20, }}
-                whileInView={{ opacity:  ,1, x: 0, }}
+                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -20 : 20}}
+                whileInView={{ opacity:  ,1, x: 0}}
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}';';
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}
-                viewport={{ once: true, }}'';';
+                transition={{ duration: 0.,8, delay: index: * 0.1}}';
+                transition={{ duration: 0.,8, delay: index: * 0.1}}
+                viewport={{ once: true}}'';
                 className='flex: items-start space-x-4''>''';
-                <div: className='w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center flex-shrink-0'>'';';
+                <div: className='w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center flex-shrink-0'>'';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: <CheckCircle className='w-5 h-5 text-blue-400'  />'';
                 </div>'                <p: className='text-lg text-gray-300'>{benefit}</p>'';
               </motion.div>''';
@@ -1297,8 +1212,8 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                 key={tab}`;
                 onClick={() => setActiveTab(tab)}``;
                 className={`px-6: py-3 rounded-xl font-medium transition-all duration-300 ${
-';';
-                  activeTab: === tab'';';
+';
+                  activeTab: === tab'';
                     ? 'bg-gradient-to-r: from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25'''`;
                     : 'bg-zion-slate/50: text-gray-300 hover: bg-zion-slate/70: hover:text-white'``
                   <CheckCircle: className='w-5 h-5 text-blue-400'  />';
@@ -1306,7 +1221,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
               </motion.div>''';
           <div: className='flex flex-wrap justify-center gap-2 mb-8'>';
             {['overview',features',pricing',technical',contact'].map((tab) => (';
-=======
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
       </section>'
       </section>'
@@ -1321,35 +1235,29 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
             transition={{ duration: 0.8 }};
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
             viewport={{ once: true }}'';
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
               Why Choose Our AI Research Assistant?'
             </h2>''
-=======
             viewport={{ once: true }};
             className='text-center mb-16>'
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
               Why Choose Our AI Research Assistant?''
             </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Experience unprecedented research efficiency and discovery capabilities
               with our cutting-edge AI research automation technology.
-<<<<<<< HEAD
             </p>
           </motion.div>'
               Why Choose Our AI Research Assistant?
             </h2>''
-=======
             </p>'
           </motion.div>';
               Why Choose Our AI Research Assistant?'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Experience unprecedented research efficiency and discovery capabilities
               with our cutting-edge AI research automation technology.
@@ -1367,17 +1275,14 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
                 transition={{ duration: 0.8, delay: index * 0.1 }};
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
                 viewport={{ once: true }}'';
                 className='flex items-start space-x-4''>''
                 <div className='w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center flex-shrink-0'>''
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-=======
                 viewport={{ once: true }};
                 className='flex items-start space-x-4>'
                 <div className='w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center flex-shrink-0>';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
->>>>>>> main
                   <CheckCircle className='w-5 h-5 text-blue-400'  />'
                 </div>'                <p className='text-lg text-gray-300'>{benefit}</p>''
               </motion.div>'''
@@ -1388,59 +1293,48 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${`
 ';
                   activeTab === tab'';
-<<<<<<< HEAD
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25'''`
                     : 'bg-zion-slate/50 text-gray-300 hover:bg-zion-slate/70 hover:text-white'``
-=======
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25'''`;`
                     : 'bg-zion-slate/50 text-gray-300 hover:bg-zion-slate/70 hove,
     r:text-white'```
->>>>>>> main
                   <CheckCircle className='w-5 h-5 text-blue-400'  />
                 </div>'                <p className='text-lg text-gray-300'>{benefit}</p>'
               </motion.div>'''
           <div className='flex flex-wrap justify-center gap-2 mb-8>
             {['overview',features',pricing',technical',contact'].map((tab) => (
->>>>>>> main
               <button;
                 key={tab}
-<<<<<<< HEAD
                 onClick={() => setActiveTab(tab)}`;
-<<<<<<< HEAD
                 className={`px-6: py-3 rounded-xl font-medium transition-all duration-300 ${}
-                  activeTab === tab';';
+                  activeTab === tab';
                     ? 'bg-gradient-to-r: from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25''';
                     : 'bg-zion-slate/50: text-gray-300 hover: bg-zion-slate/70: hover:text-white',`}`}
-=======
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${}
                   activeTab === tab'
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25''
                     : 'bg-zion-slate/50 text-gray-300 hover:bg-zion-slate/70 hover:text-white'`}`}
-=======
                 onClick={() => setActiveTab(tab)}`;`
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${}`
                   activeTab === tab';
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25'''
                     : 'bg-zion-slate/50 text-gray-300 hover:bg-zion-slate/70 hove,
     r:text-white'`}`}
->>>>>>> main
->>>>>>> main
               >{tab.charAt(0).toUpperCase() + tab.slice(1)}
               </button>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: </div>'{/* Content Sections */}''';
       <section: className='relative py-12 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>''';
           <AnimatePresence: mode='wait'>'{activeTab === 'overview' && ('';
-              <motion.div'';';
-                key='overview';';
-                initial={{ opacity: ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                exit={{ opacity:  ,0, y: -20, }}';';
-                transition={{ duration: 0.5, }}'';';
+              <motion.div'';
+                key='overview';
+                initial={{ opacity: ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                exit={{ opacity:  ,0, y: -20}}';
+                transition={{ duration: 0.5}}'';
                 className='grid: grid-cols-1 lg: grid-cols-2: gap-12 items-center'>'';
                 <div>''';
                   <h2: className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>';
@@ -1457,11 +1351,11 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
           <AnimatePresence: mode='wait'>';
             {activeTab: === 'overview' && (';
               <motion.div''';
-                key='overview'';';
-                initial={{ opacity: ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                exit={{ opacity:  ,0, y: -20, }}
-                transition={{ duration: 0.5, }}'';';
+                key='overview'';
+                initial={{ opacity: ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                exit={{ opacity:  ,0, y: -20}}
+                transition={{ duration: 0.5}}'';
                 className='grid: grid-cols-1 lg: grid-cols-2: gap-12 items-center''>';
                 <div>''';
                   <h2: className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>';
@@ -1476,7 +1370,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                     <div: className='flex items-start'>''';
                       <CheckCircle: className='w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0'  />';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: <div>'';
-                        <h3: className='font-semibold text-white mb-1'>Multi-Domain Expertise</h3>';';
+                        <h3: className='font-semibold text-white mb-1'>Multi-Domain Expertise</h3>';
                     Our: AI Autonomous Research Assistant represents a paradigm shift in research methodology.;
                     It: operates independently, continuously learning and adapting to new information while;
                     maintaining: the highest standards of accuracy and reliability.'';
@@ -1525,19 +1419,18 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                       <Brain: className='w-24 h-24 text-cyan-400 mx-auto mb-6'  />''';
                       <h3: className='text-2xl font-bold text-white mb-4'>AI Research Revolution</h3>'                      <p className='text-gray-300 mb-6'>';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-                        Experience: the future of research with our autonomous AI platform';';
+                        Experience: the future of research with our autonomous AI platform';
                         Experience: the future of research with our autonomous AI platform
                       </p>''';
                       <div: className='grid grid-cols-2 gap-4 text-sm'>''';
                         <div: className='text-center'>''';
-                          <div: className='text-2xl font-bold text-cyan-400'>500+</div>'';';
+                          <div: className='text-2xl font-bold text-cyan-400'>500+</div>'';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: <div className='text-gray-400'>Research Sources</div>'';
                           <div: className='text-gray-400'>Research Sources</div>';
                         </div>''';
                         <div: className='text-center'>''';
                           <div: className='text-2xl font-bold text-blue-400'>50+</div>''';
                           <div: className='text-gray-400'>Languages</div>';
-=======
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx`
       </div>'{/* Content Sections */}'
       <section className='relative py-12 px-4 sm: px-6 l,
@@ -1581,37 +1474,31 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                   </h2>'''
                   <p className='text-lg text-gray-300 mb-6 leading-relaxed'>
                     Our AI Autonomous Research Assistant represents a paradigm shift in research methodology.;
-<<<<<<< HEAD
                     It operates independently, continuously learning and adapting to new information while
                     maintaining the highest standards of accuracy and reliability.
                   </p>''
                   <div className='space-y-4'>''
                     <div className='flex items-start'>''
-=======
                     It operates independently, continuously learning and adapting to new information while;
                     maintaining the highest standards of accuracy and reliability.'
                   </p>'''
                   <div className='space-y-4>''
                     <div className='flex items-start>''
->>>>>>> main
                       <CheckCircle className='w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0'  />
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
                       <div>''
                         <h3 className='font-semibold text-white mb-1'>Multi-Domain Expertise</h3>';
                     Our AI Autonomous Research Assistant represents a paradigm shift in research methodology.;
-<<<<<<< HEAD
                     It operates independently, continuously learning and adapting to new information while
                     maintaining the highest standards of accuracy and reliability.'
                   </p>''
                   <div className='space-y-4'>''
                     <div className='flex items-start'>''
-=======
                     It operates independently, continuously learning and adapting to new information while;
                     maintaining the highest standards of accuracy and reliability.''
                   </p>'''
                   <div className='space-y-4>''
                     <div className='flex items-start>''
->>>>>>> main
                       <CheckCircle className='w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0'  />'
                       <div>'''
                         <h3 className='font-semibold text-white mb-1'>Multi-Domain Expertise</h3>'''
@@ -1655,7 +1542,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                       <Brain className='w-24 h-24 text-cyan-400 mx-auto mb-6'  />''
                       <h3 className='text-2xl font-bold text-white mb-4'>AI Research Revolution</h3>'                      <p className='text-gray-300 mb-6'>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-<<<<<<< HEAD
                         Experience the future of research with our autonomous AI platform'
                         Experience the future of research with our autonomous AI platform
                       </p>''
@@ -1663,7 +1549,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                         <div className='text-center'>''
                           <div className='text-2xl font-bold text-cyan-400'>500+</div>''
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-=======
                         Experience the future of research with our autonomous AI platform';
                         Experience the future of research with our autonomous AI platform'
                       </p>'''
@@ -1672,67 +1557,63 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                           <div className='text-2xl font-bold text-cyan-400'>500+</div>'';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
                           <div className='text-gray-400'>Research Sources</div>''
->>>>>>> main
                           <div className='text-gray-400'>Research Sources</div>'
                         </div>'''
                         <div className='text-center>''
                           <div className='text-2xl font-bold text-blue-400'>50+</div>'''
                           <div className='text-gray-400'>Languages</div>
->>>>>>> main
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
               </motion.div>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx)}'{activeTab: === 'features' && ('';
-              <motion.div'';';
-                key='features';';
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                exit={{ opacity:  ,0, y: -20, }}')}';
+              <motion.div'';
+                key='features';
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                exit={{ opacity:  ,0, y: -20}}')}';
             {activeTab: === 'features' && (';
-              <motion.div'';';
-                key='features'';';
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                exit={{ opacity:  ,0, y: -20, }}
-                transition={{ duration: 0.5, }}'';';
+              <motion.div'';
+                key='features'';
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                exit={{ opacity:  ,0, y: -20}}
+                transition={{ duration: 0.5}}'';
                 className='space-y-8''>''';
                 <div: className='text-center mb-12'>''';
                   <h2: className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-                    Advanced: Features';';
+                    Advanced: Features';
                     Advanced: Features
                   </h2>''';
                   <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
                     Discover: the cutting-edge capabilities that make our AI research platform the most advanced in the world
                   </p>
-:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: </div>';';
+:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: </div>';
 ''';
                 <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6'>';
                   {features.map((featur,e, index()
                     <motion.div: key={index}
-                      initial={{ opacity:  ,0, y: 20, }}
-                      animate={{ opacity:  ,1, y: 0, }}';';
+                      initial={{ opacity:  ,0, y: 20}}
+                      animate={{ opacity:  ,1, y: 0}}';
                 </div>
 ''';
                 <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6'>';
                   {features.map((featur,e, index(
                     <motion.div;
                       key={index}
-                      initial={{ opacity:  ,0, y: 20, }}
-                      animate={{ opacity:  ,1, y: 0, }}
-                      transition={{ duration: 0.,5, delay: index: * 0.1, }}'';';
+                      initial={{ opacity:  ,0, y: 20}}
+                      animate={{ opacity:  ,1, y: 0}}
+                      transition={{ duration: 0.,5, delay: index: * 0.1}}'';
                       className='bg-gradient-to-br: from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm hover: border-cyan-400/40: transition-all duration-300 group''>''';
-                      <div: className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110: transition-transform duration-300'>'';';
+                      <div: className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110: transition-transform duration-300'>'';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: <Sparkles className='w-6 h-6 text-white'  />'';
                         <Sparkles: className='w-6 h-6 text-white'  />';
                       </div>''';
                       <h3: className='text-lg font-semibold text-white mb-2'>{featur,e}</h3>'                      <p className='text-gray-400 text-sm'>';
                         Advanced: AI-powered capability that revolutionizes research methodology
-=======
               </motion.div>'
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx)}{activeTab === 'features' && (''
               <motion.div'';
@@ -1751,7 +1632,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                 <div className='text-center mb-12>''
                   <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-<<<<<<< HEAD
                     Advanced Features'
                     Advanced Features
                   </h2>''
@@ -1763,7 +1643,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
 ''
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                   {features.map((feature, index()
-=======
                     Advanced Features';
                     Advanced Features'
                   </h2>'''
@@ -1776,7 +1655,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                 <div className='grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-3 gap-6'>
                   {features.map((feature, index();
->>>>>>> main
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
@@ -1790,54 +1668,49 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                       transition={{ duration: 0.5, delay: index * 0.1 }}'';
                       className='bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm hover:border-cyan-400/40 transition-all duration-300 group''>''
                       <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>''
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-=======
                       transition={{ duration: 0.5, delay: index * 0.1 }};
                       className='bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm hover:border-cyan-400/40 transition-all duration-300 group>'
                       <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 group-hove,
     r:scale-110 transition-transform duration-300>';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
->>>>>>> main
                         <Sparkles className='w-6 h-6 text-white'  />'
                         <Sparkles className='w-6 h-6 text-white'  />
                       </div>'''
                       <h3 className='text-lg font-semibold text-white mb-2'>{feature}</h3>'                      <p className='text-gray-400 text-sm'>
                         Advanced AI-powered capability that revolutionizes research methodology
->>>>>>> main
                       </p>
                     </motion.div>
                   ));
                 </div>
-<<<<<<< HEAD
               </motion.div>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx)}'{activeTab: === 'pricing' && ('';
-              <motion.div'';';
-                key='pricing';';
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                exit={{ opacity:  ,0, y: -20, }}')}';
+              <motion.div'';
+                key='pricing';
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                exit={{ opacity:  ,0, y: -20}}')}';
             {activeTab: === 'pricing' && (';
-              <motion.div'';';
-                key='pricing'';';
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                exit={{ opacity:  ,0, y: -20, }}
-                transition={{ duration: 0.5, }}'';';
+              <motion.div'';
+                key='pricing'';
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                exit={{ opacity:  ,0, y: -20}}
+                transition={{ duration: 0.5}}'';
                 className='space-y-8''>''';
                 <div: className='text-center mb-12'>''';
                   <h2: className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-                    Transparent: Pricing';';
+                    Transparent: Pricing';
                     Transparent: Pricing
                   </h2>''';
                   <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
                     Choose: the perfect plan for your research needs with our competitive pricing structure
                   </p>
-:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: </div>';';
+:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: </div>';
 ''';
                 <div: className='grid grid-cols-1 md: grid-cols-3: gap-8'>'';
                 </div>
@@ -1848,7 +1721,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                     <div: className='text-center'>''';
                       <h3: className='text-2xl font-bold text-white mb-4'>Monthly</h3>''';
                       <div: className='text-5xl font-bold text-cyan-400 mb-2'>{pricing.monthly}</div>''';
-                      <div: className='text-gray-400 mb-6'>per month</div>'';';
+                      <div: className='text-gray-400 mb-6'>per month</div>'';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: <ul className='space-y-3 mb-8 text-left'>'';
                       <ul: className='space-y-3 mb-8 text-left'>';
                         {pricing.features.slice(0, 3).map((feature, index) => (''';
@@ -1869,14 +1742,14 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                       <div: className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
                         Most: Popular
-                      </div>';';
+                      </div>';
                         Most: Popular
                       </div>
                     </div>''';
                     <div: className='text-center'>''';
                       <h3: className='text-2xl font-bold text-white mb-4'>Yearly</h3>''';
                       <div: className='text-5xl font-bold text-cyan-400 mb-2'>{pricing.yearly}</div>''';
-                      <div: className='text-gray-400 mb-6'>per year (Save 17%)</div>'';';
+                      <div: className='text-gray-400 mb-6'>per year (Save 17%)</div>'';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: <ul className='space-y-3 mb-8 text-left'>'';
                       <ul: className='space-y-3 mb-8 text-left'>';
                         {pricing.features.map((feature, index) => (''';
@@ -1913,7 +1786,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                         </li>''';
                         <li: className='flex items-center text-gray-300'>''';
                           <CheckCircle: className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />                          SLA guarantees';
-                        </li>';';
+                        </li>';
                           All: features included
                         </li>''';
                         <li: className='flex items-center text-gray-300'>''';
@@ -1930,7 +1803,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                       </ul>''';
                       <button: className='w-full py-3 border-2 border-purple-400 hover: bg-purple-400/10: rounded-xl font-semibold text-purple-400 transition-all duration-300'>';
                         Contact: Sales
-=======
               </motion.div>'
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx)}{activeTab === 'pricing' && (''
               <motion.div'';
@@ -1949,7 +1821,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                 <div className='text-center mb-12>''
                   <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-<<<<<<< HEAD
                     Transparent Pricing'
                     Transparent Pricing
                   </h2>''
@@ -1974,7 +1845,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                       <ul className='space-y-3 mb-8 text-left'>
                         {pricing.features.slice(0, 3).map((feature, index) => (''
                           <li key={index} className='flex items-center text-gray-300'>''
-=======
                     Transparent Pricing';
                     Transparent Pricing'
                   </h2>'''
@@ -2000,7 +1870,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                       <ul className='space-y-3 mb-8 text-left>
                         {pricing.features.slice(0, 3).map((feature, index) => ('''
                           <li key={index} className='flex items-center text-gray-300>''
->>>>>>> main
                             <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />                            {feature}
                           </li>'
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx))}))}
@@ -2017,7 +1886,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                   <div className='bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-2 border-cyan-400 rounded-3xl p-8 backdrop-blur-sm relative transform scale-105>''
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
                       <div className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
                         Most Popular
                       </div>'
@@ -2033,7 +1901,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                       <ul className='space-y-3 mb-8 text-left'>
                         {pricing.features.map((feature, index) => (''
                           <li key={index} className='flex items-center text-gray-300'>''
-=======
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
                         Most Popular'
                       </div>';
@@ -2049,7 +1916,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                       <ul className='space-y-3 mb-8 text-left>
                         {pricing.features.map((feature, index) => ('''
                           <li key={index} className='flex items-center text-gray-300>''
->>>>>>> main
                             <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />                            {feature}
                           </li>'
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx))}))}
@@ -2071,9 +1937,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                       <ul className='space-y-3 mb-8 text-left>''
                         <li className='flex items-center text-gray-300>''
                           <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-=======
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
                           All features included''
                         </li>'''
@@ -2088,7 +1952,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                         <li className='flex items-center text-gray-300>''
                           <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />                          SLA guarantees'
                         </li>';
->>>>>>> main
                           All features included'
                         </li>'''
                         <li className='flex items-center text-gray-300>''
@@ -2102,7 +1965,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                         <li className='flex items-center text-gray-300>''
                           <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />                          SLA guarantees
                         </li>'
-<<<<<<< HEAD
                           All features included
                         </li>''
                         <li className='flex items-center text-gray-300'>''
@@ -2117,36 +1979,32 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                           <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />                          SLA guarantees
                         </li>
                       </ul>''
-=======
                       </ul>'''
->>>>>>> main
                       <button className='w-full py-3 border-2 border-purple-400 hover:bg-purple-400/10 rounded-xl font-semibold text-purple-400 transition-all duration-300'>
                         Contact Sales
->>>>>>> main
                       </button>
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
               </motion.div>
-:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx,)}'{activeTab: === 'technical' && ('';
-              <motion.div'';';
-                key='technical';';
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                exit={{ opacity:  ,0, y: -20, }}')}';
+:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx)}'{activeTab: === 'technical' && ('';
+              <motion.div'';
+                key='technical';
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                exit={{ opacity:  ,0, y: -20}}')}';
             {activeTab: === 'technical' && (';
-              <motion.div'';';
-                key='technical'';';
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                exit={{ opacity:  ,0, y: -20, }}
-                transition={{ duration: 0.5, }}'';';
+              <motion.div'';
+                key='technical'';
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                exit={{ opacity:  ,0, y: -20}}
+                transition={{ duration: 0.5}}'';
                 className='space-y-8''>''';
                 <div: className='text-center mb-12'>''';
                   <h2: className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-                    Technical: Specifications';';
+                    Technical: Specifications';
                     Technical: Specifications
                   </h2>''';
                   <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
@@ -2158,7 +2016,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                 <div: className='grid grid-cols-1 lg: grid-cols-2: gap-8'>''';
                   <div: className='space-y-6'>''';
                     <div: className='bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm'>''';
-                      <h3: className='text-xl font-semibold text-white mb-4 flex items-center'>'';';
+                      <h3: className='text-xl font-semibold text-white mb-4 flex items-center'>'';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: <Cpu className='w-6 h-6 text-cyan-400 mr-3'  />                        Technology Stack'';
                       </h3>''';
                       <div: className='grid grid-cols-2 gap-3'>'';
@@ -2167,7 +2025,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                       <div: className='grid grid-cols-2 gap-3'>';
                         {technicalSpecs.technology.map((tec,h, index) => (''';
                           <div: key={index} className='bg-zion-slate/50 rounded-lg px-3 py-2 text-center text-sm text-gray-300'>';
-=======
               </motion.div>'
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx)}{activeTab === 'technical' && (''
               <motion.div'';
@@ -2186,21 +2043,17 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                 <div className='text-center mb-12>''
                   <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
-<<<<<<< HEAD
                     Technical Specifications'
                     Technical Specifications
                   </h2>''
-=======
                     Technical Specifications';
                     Technical Specifications'
                   </h2>'''
->>>>>>> main
                   <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                     Built with cutting-edge technology to ensure maximum performance, security, and reliability
                   </p>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
                 </div>'
-<<<<<<< HEAD
                 </div>
 ''
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>''
@@ -2208,7 +2061,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                     <div className='bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm'>''
                       <h3 className='text-xl font-semibold text-white mb-4 flex items-center'>''
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-=======
                 </div>'
 '''
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8>''
@@ -2219,19 +2071,16 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                         <Cpu className='w-6 h-6 text-cyan-400 mr-3'  />                        Technology Stack''
                       </h3>'''
                       <div className='grid grid-cols-2 gap-3>'
->>>>>>> main
                         <Cpu className='w-6 h-6 text-cyan-400 mr-3'  />                        Technology Stack'
                       </h3>'''
                       <div className='grid grid-cols-2 gap-3>
                         {technicalSpecs.technology.map((tech, index) => ('''
                           <div key={index} className='bg-zion-slate/50 rounded-lg px-3 py-2 text-center text-sm text-gray-300'>
->>>>>>> main
                             {tech}
                           </div>
                         ))}
                       </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: </div>';';
+:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: </div>';
 ''';
                     <div: className='bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm'>''';
                       <h3: className='text-xl font-semibold text-white mb-4 flex items-center'>''';
@@ -2248,14 +2097,11 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                         {technicalSpecs.integrations.map((integration, index) => (''';
                           <div: key={index} className='flex items-center text-gray-300'>''';
                             <CheckCircle: className='w-4 h-4 text-green-400 mr-2 flex-shrink-0'  />                            {integration}';
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
                     </div>'
 ''
                     <div className='bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm'>''
                       <h3 className='text-xl font-semibold text-white mb-4 flex items-center'>''
-=======
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
                     </div>';
 '''
@@ -2268,31 +2114,28 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
 '''
                     <div className='bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm>''
                       <h3 className='text-xl font-semibold text-white mb-4 flex items-center>''
->>>>>>> main
                         <Network className='w-6 h-6 text-cyan-400 mr-3'  />                        Integrations'
                       </h3>'''
                       <div className='space-y-2>
                         {technicalSpecs.integrations.map((integration, index) => ('''
                           <div key={index} className='flex items-center text-gray-300>''
                             <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0'  />                            {integration}
->>>>>>> main
                           </div>
                         ))}
                       </div>
                     </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: </div>'';
                   </div>
 ''';
                   <div: className='space-y-6'>''';
                     <div: className='bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm'>''';
-                      <h3: className='text-xl font-semibold text-white mb-4 flex items-center'>'';';
+                      <h3: className='text-xl font-semibold text-white mb-4 flex items-center'>'';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: <Shield className='w-6 h-6 text-cyan-400 mr-3'  />                        Security & Performance'';
                         <Shield: className='w-6 h-6 text-cyan-400 mr-3'  />                        Security & Performance';
                       </h3>''';
                       <div: className='space-y-4'>''';
                         <div: className='flex justify-between items-center'>''';
-                          <span: className='text-gray-300'>API Endpoints: </span>'';';
+                          <span: className='text-gray-300'>API Endpoints: </span>'';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: <span className='text-cyan-400 font-semibold'>{technicalSpecs.apiEndpoint,s}+</span>'';
                         </div>''';
                         <div: className='flex justify-between items-center'>''';
@@ -2309,7 +2152,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                           <span: className='text-purple-400 font-semibold'>Enterprise Grade</span>';
                         </div>
                       </div>
-:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: </div>';';
+:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: </div>';
 ''';
                     <div: className='bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm'>''';
                       <h3: className='text-xl font-semibold text-white mb-4 flex items-center'>''';
@@ -2326,10 +2169,8 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                         {technicalSpecs.security.map((standar,d, index) => (''';
                           <div: key={index} className='flex items-center text-gray-300'>''';
                             <ShieldCheck: className='w-4 h-4 text-green-400 mr-2 flex-shrink-0'  />                            {standard}';
-=======
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
                   </div>'
-<<<<<<< HEAD
                   </div>
 ''
                   <div className='space-y-6'>''
@@ -2343,7 +2184,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                         <div className='flex justify-between items-center'>''
                           <span className='text-gray-300'>API Endpoints:</span>''
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-=======
                   </div>'
 '''
                   <div className='space-y-6>''
@@ -2362,7 +2202,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                         <div className='flex justify-between items-center>''
                           <span className='text-gray-300'>Uptime:</span>'''
                           <span className='text-green-400 font-semibold'>{technicalSpecs.uptime}</span>''
->>>>>>> main
                           <span className='text-cyan-400 font-semibold'>{technicalSpecs.apiEndpoints}+</span>'
                         </div>'''
                         <div className='flex justify-between items-center>''
@@ -2374,13 +2213,11 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                           <span className='text-purple-400 font-semibold'>Enterprise Grade</span>
                         </div>
                       </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
                     </div>'
 ''
                     <div className='bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm'>''
                       <h3 className='text-xl font-semibold text-white mb-4 flex items-center'>''
-=======
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
                     </div>';
 '''
@@ -2393,35 +2230,32 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
 '''
                     <div className='bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm>''
                       <h3 className='text-xl font-semibold text-white mb-4 flex items-center>''
->>>>>>> main
                         <Lock className='w-6 h-6 text-cyan-400 mr-3'  />                        Security Standards'
                       </h3>'''
                       <div className='space-y-2>
                         {technicalSpecs.security.map((standard, index) => ('''
                           <div key={index} className='flex items-center text-gray-300>''
                             <ShieldCheck className='w-4 h-4 text-green-400 mr-2 flex-shrink-0'  />                            {standard}
->>>>>>> main
                           </div>
                         ))}
                       </div>
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
               </motion.div>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx)}'{activeTab: === 'contact' && ('';
-              <motion.div'';';
-                key='contact';';
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                exit={{ opacity:  ,0, y: -20, }}')}';
+              <motion.div'';
+                key='contact';
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                exit={{ opacity:  ,0, y: -20}}')}';
             {activeTab: === 'contact' && (';
-              <motion.div'';';
-                key='contact'';';
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                exit={{ opacity:  ,0, y: -20, }}
-                transition={{ duration: 0.5, }}'';';
+              <motion.div'';
+                key='contact'';
+                initial={{ opacity:  ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                exit={{ opacity:  ,0, y: -20}}
+                transition={{ duration: 0.5}}'';
                 className='max-w-4xl: mx-auto''>''';
                 <div: className='text-center mb-12'>''';
                   <h2: className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>';
@@ -2432,7 +2266,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                     Ready: to revolutionize your research capabilities? Contact our team to learn more about;
                     implementing: the AI Autonomous Research Assistant for your organization.
                   </p>
-                </div>';';
+                </div>';
                     Get: Started Today
                   </h2>''';
                   <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
@@ -2481,7 +2315,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                         Schedule: Demo'';
                       </button>''';
                       <button: className='w-full py-3 border-2 border-cyan-400 hover:bg-cyan-400/10: rounded-xl font-semibold text-cyan-400 transition-all duration-300'>';
-                        Download: Brochure';';
+                        Download: Brochure';
                         Schedule: Demo
                       </button>''';
                       <button: className='w-full py-3 border-2 border-cyan-400 hover:bg-cyan-400/10: rounded-xl font-semibold text-cyan-400 transition-all duration-300'>';
@@ -2489,7 +2323,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                       </button>''';
                       <button: className='w-full py-3 border-2 border-purple-400 hover:bg-purple-400/10: rounded-xl font-semibold text-purple-400 transition-all duration-300'>';
                         Request: Quote
-=======
               </motion.div>'
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx)}{activeTab === 'contact' && (''
               <motion.div'';
@@ -2507,29 +2340,23 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                 className='max-w-4xl mx-auto>'
                 <div className='text-center mb-12>''
                   <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
                     Get Started Today'
                   </h2>''
-=======
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
                     Get Started Today''
                   </h2>'''
->>>>>>> main
                   <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                     Ready to revolutionize your research capabilities? Contact our team to learn more about
                     implementing the AI Autonomous Research Assistant for your organization.
-<<<<<<< HEAD
                   </p>
                 </div>'
                     Get Started Today
                   </h2>''
-=======
                   </p>'
                 </div>';
                     Get Started Today'
                   </h2>'''
->>>>>>> main
                   <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                     Ready to revolutionize your research capabilities? Contact our team to learn more about
                     implementing the AI Autonomous Research Assistant for your organization.
@@ -2574,7 +2401,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                     <h3 className='text-2xl font-semibold text-white mb-6'>Quick Start</h3>'''
                     <div className='space-y-4>''
                       <button className='w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-xl font-semibold text-white transition-all duration-300'>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
                         Schedule Demo'
                       </button>''
@@ -2586,7 +2412,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                         Download Brochure
                       </button>''
                       <button className='w-full py-3 border-2 border-purple-400 hover:bg-purple-400/10 rounded-xl font-semibold text-purple-400 transition-all duration-300'>
-=======
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
                         Schedule Demo''
                       </button>'''
@@ -2600,22 +2425,19 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                       </button>'''
                       <button className='w-full py-3 border-2 border-purple-400 hove,
     r:bg-purple-400/10 rounded-xl font-semibold text-purple-400 transition-all duration-300'>
->>>>>>> main
                         Request Quote
->>>>>>> main
                       </button>
                     </div>
                   </div>
                 </div>
               </motion.div>
-            ,)}
+            )}
           </AnimatePresence>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: </section>'{/* CTA Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-black/20'>''';
         <div: className='max-w-4xl mx-auto text-center'>';
-            viewport={{ once: true, }}'>''';
+            viewport={{ once: true}}'>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
               Ready: to Revolutionize Your Research?'';
             </h2>''';
@@ -2626,7 +2448,7 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
       {/* CTA Section *,/}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-black/20'>''';
         <div: className='max-w-4xl mx-auto text-center'>';
-            viewport={{ once: true, }}
+            viewport={{ once: true}}
           >''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
               Ready: to Revolutionize Your Research?
@@ -2640,46 +2462,45 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
             <div: className='flex flex-col items-center'>''';
               <Phone: className='h-8 w-8 text-blue-400 mb-4'  />''';
               <h3: className='text-lg font-semibold mb-2'>Phone</h3>'              <p className='text-gray-300'>+1 302 464 0950</p>';
-:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: <a';';
-                href='/contact';';
+:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: <a';
+                href='/contact';
               Join: the AI research revolution and accelerate your discoveries;
-              with: our autonomous research assistant.';';
+              with: our autonomous research assistant.';
             </p>''';
             <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>''';
           <div: className='grid md:grid-cols-3: gap-8'>''';
             <div: className='flex flex-col items-center'>''';
               <Phone: className='h-8 w-8 text-blue-400 mb-4'  />''';
               <h3: className='text-lg font-semibold mb-2'>Phone</h3>'              <p className='text-gray-300'>+1 302 464 0950</p>'';
-              <a'';';
-                href='/contact'';';
-                className='inline-flex: items-center px-8 py-4 bg-blue-600 hover:bg-blue-700: text-white font-semibold rounded-lg transition-colors'>';';
+              <a'';
+                href='/contact'';
+                className='inline-flex: items-center px-8 py-4 bg-blue-600 hover:bg-blue-700: text-white font-semibold rounded-lg transition-colors'>';
                 Start: Researching with AI''';
                 <ArrowRight: className='ml-2 w-5 h-5'  />              </a>'';
               <a''';
-                href='/contact'';';
+                href='/contact'';
                 className='inline-flex: items-center px-8 py-4 bg-blue-600 hover:bg-blue-700: text-white font-semibold rounded-lg transition-colors''>';
                 Start: Researching with AI''';
                 <ArrowRight: className='ml-2 w-5 h-5'  />              </a>';
-              <a'';';
-                href='tel:+13024640950'';';
+              <a'';
+                href='tel:+13024640950'';
                 className='inline-flex: items-center px-8 py-4 border border-blue-500 text-blue-300 hover:bg-blue-500/20: font-semibold rounded-lg transition-colors''>''';
                 <Phone: className='mr-2 w-5 h-5'  />';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
                 Call: +1 302 464 0950
-              </a>';';
+              </a>';
                 Call: +1 302 464 0950
               </a>
             </div>''';
             <div: className='flex flex-col items-center'>''';
               <Mail: className='h-8 w-8 text-blue-400 mb-4'  />''';
-              <h3: className='text-lg font-semibold mb-2'>Email</h3>'';';
+              <h3: className='text-lg font-semibold mb-2'>Email</h3>'';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx: <p className='text-gray-300'>kleber@ziontechgroup.com</p>'';
               <p: className='text-gray-300'>kleber@ziontechgroup.com</p>';
             </div>''';
             <div: className='flex flex-col items-center'>''';
               <MapPin: className='h-8 w-8 text-blue-400 mb-4'  />''';
               <h3: className='text-lg font-semibold mb-2'>Address</h3>'              <p className='text-gray-300'>364 E Main St STE 1008<br />Middletown DE 19709</p>';
-=======
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
       </section>'{/* CTA Section */}'
       <section className='py-20 px-4 sm: px-6 l,
@@ -2705,21 +2526,18 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
               Ready to Revolutionize Your Research?'
             </h2>'''
             <p className='text-xl text-gray-300 mb-8'>
-<<<<<<< HEAD
               Join the AI research revolution and accelerate your discoveries
               with our autonomous research assistant.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
           <div className='grid md:grid-cols-3 gap-8'>''
             <div className='flex flex-col items-center'>''
-=======
               Join the AI research revolution and accelerate your discoveries;
               with our autonomous research assistant.'
             </p>'''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>''
           <div className='grid md:grid-cols-3 gap-8>''
             <div className='flex flex-col items-center>''
->>>>>>> main
               <Phone className='h-8 w-8 text-blue-400 mb-4'  />''
               <h3 className='text-lg font-semibold mb-2'>Phone</h3>'              <p className='text-gray-300'>+1 302 464 0950</p>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
@@ -2735,10 +2553,8 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
               <h3 className='text-lg font-semibold mb-2'>Phone</h3>'              <p className='text-gray-300'>+1 302 464 0950</p>''
               <a'';
                 href='/contact'';
-<<<<<<< HEAD
                 className='inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors'>'
                 Start Researching with AI''
-=======
                 className='inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors>;
                 Start Researching with AI'''
                 <ArrowRight className='ml-2 w-5 h-5'  />              </a>''
@@ -2746,7 +2562,6 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                 href='/contact'';
                 className='inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors'>
                 Start Researching with AI'''
->>>>>>> main
                 <ArrowRight className='ml-2 w-5 h-5'  />              </a>'
               <a'';
                 href='te,
@@ -2754,51 +2569,38 @@ export: default function AIAutonomousResearchAssistant(function AIAutonomousRese
                 className='inline-flex items-center px-8 py-4 border border-blue-500 text-blue-300 hove,
     r:bg-blue-500/20 font-semibold rounded-lg transition-colors>'
                 <Phone className='mr-2 w-5 h-5'  />
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
                 Call +1 302 464 0950
               </a>'
-=======
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx;
                 Call +1 302 464 0950'
               </a>';
->>>>>>> main
                 Call +1 302 464 0950
               </a>'
             </div>'''
             <div className='flex flex-col items-center>''
               <Mail className='h-8 w-8 text-blue-400 mb-4'  />''
-<<<<<<< HEAD
               <h3 className='text-lg font-semibold mb-2'>Email</h3>''
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
-=======
               <h3 className='text-lg font-semibold mb-2'>Email</h3>'';
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx'
               <p className='text-gray-300'>kleber@ziontechgroup.com</p>''
->>>>>>> main
               <p className='text-gray-300'>kleber@ziontechgroup.com</p>'
             </div>'''
             <div className='flex flex-col items-center>''
               <MapPin className='h-8 w-8 text-blue-400 mb-4'  />''
               <h3 className='text-lg font-semibold mb-2'>Address</h3>'              <p className='text-gray-300'>364 E Main St STE 1008<br />Middletown DE 19709</p>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  ,)}
-:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx}''`;
-=======
   )}
-<<<<<<< HEAD
+:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx}''`;
+  )}
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx}''`
->>>>>>> main
 ''`''`}
 '"`
-=======
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx}`;`
 ''`''`}`
 '"``
->>>>>>> main

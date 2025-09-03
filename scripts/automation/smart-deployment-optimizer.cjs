@@ -1,22 +1,16 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
-=======
 #!/'usr/bin/env' node;
 
->>>>>>> main
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 ;
 console.log(`'🚀 Starting Smart Deployment Optimizer...');
 ;
 // Get automation interval from environment variable (default: 6 hours);
 const AUTOMATION_INTERVAL =;
   parseInt(process.env.AUTOMATION_INTERVAL) || 21600000; // 6 hours;
-=======
 
-<<<<<<< HEAD
 // Get automation interval from environment variable (default: 6 hours)
 const AUTOMATION_INTERVAL =
   parseInt(process.env.AUTOMATION_INTERVAL) || 21600000; // 6 hours;
@@ -28,9 +22,7 @@ class SmartDeploymentOptimizer {
       deploymentFrequency: 0,
       successRate: 0,
       optimizationSuggestions: [],
-=======
 console.log(`🚀 Starting Smart Deployment Optimizer...`);
->>>>>>> main
 
 class SmartDeploymentOptimizer {;
   constructor() {;
@@ -40,7 +32,6 @@ class SmartDeploymentOptimizer {;
       deploymentFrequency: 0,;
       successRate: 0,;
       optimizationSuggestions: [],;
->>>>>>> main
     };
     this.reportDir = path.join(process.cwd(), 'deployment-reports');
     this.ensureReportDirectory();
@@ -58,7 +49,6 @@ class SmartDeploymentOptimizer {;
       const historicalFile = path.join(;
         this.reportDir,deployment-history.json';
       );
-<<<<<<< HEAD
       if (fs.existsSync(historicalFile)) {
         const data = JSON.parse(fs.readFileSync(historicalFile, `utf8`));
         this.deploymentMetrics = { ...this.deploymentMetrics, ...data };
@@ -66,22 +56,18 @@ class SmartDeploymentOptimizer {;
     } catch (error) {  
       console.log(``No historical deployment data found, starting fresh`);
       }
-=======
       if (fs.existsSync(historicalFile)) {;
         const data = JSON.parse(fs.readFileSync(historicalFile, 'utf8'));
         this.deploymentMetrics = { ...this.deploymentMetrics, ...data };
       }
-<<<<<<< HEAD
     } catch (error) {;
       console.log(`'No historical deployment data found, starting fresh');
     }
->>>>>>> main
   }
 ;
   async optimizeDeployment() {;
     try {;
       console.log(`🚀 Running smart deployment optimization at ${new Date().toISOString()}';
-=======
     } catch (error) {
       console.log(`No historical deployment data found, starting fresh`);
     }
@@ -89,7 +75,6 @@ class SmartDeploymentOptimizer {;
 
   async optimizeDeployment() {
     try {
-<<<<<<< HEAD
       console.log(`🚀 Running smart deployment optimization at ${new Date().toISOString()}`
       );
 
@@ -115,9 +100,7 @@ class SmartDeploymentOptimizer {;
     } catch (error) {  
       console.error(`❌ Smart deployment optimization failed:', error.message);
       }
-=======
       console.log(`🚀 Running smart deployment optimization at ${new Date().toISOString()}`);
->>>>>>> main
       );
 ;
       // Analyze current build configuration;
@@ -142,16 +125,12 @@ class SmartDeploymentOptimizer {;
     } catch (error) {;
       console.error('❌ Smart deployment optimization failed:', error.message);
     }
->>>>>>> main
   }
 ;
   async analyzeBuildConfiguration() {;
     console.log('🔍 Analyzing build configuration...');
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
     // Analyze Vite configuration;
     const viteConfigPath = path.join(process.cwd(), 'vite.config.ts');
     if (fs.existsSync(viteConfigPath)) {;
@@ -166,7 +145,6 @@ class SmartDeploymentOptimizer {;
       };
 ;
       console.log('📊 Vite configuration analysis:', analysis);
-<<<<<<< HEAD
 
       // Suggest improvements;
       if (!analysis.hasOptimization) {
@@ -175,7 +153,6 @@ class SmartDeploymentOptimizer {;
           priority: 'high',
           description: 'Enable dependency optimization in Vite config',
           action: 'Add optimizeDeps configuration to vite.config.ts',
-=======
 ;
       // Suggest improvements;
       if (!analysis.hasOptimization) {;
@@ -184,7 +161,6 @@ class SmartDeploymentOptimizer {;
           priority: 'high',;
           description: 'Enable dependency optimization in Vite config',;
           action: 'Add optimizeDeps configuration to vite.config.ts',;
->>>>>>> main
         });
       }
 ;
@@ -197,7 +173,6 @@ class SmartDeploymentOptimizer {;
         });
       }
     }
-<<<<<<< HEAD
 
     // Analyze package.json for optimization opportunities;
     const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
@@ -217,7 +192,6 @@ class SmartDeploymentOptimizer {;
           priority: `medium`,
           description: Consider optimizing large dependencies: ${largeDependencies.map(([name]) => name).join(', ')},
           action: `Use tree-shaking or replace with lighter alternatives`,
-=======
 ;
     // Analyze package.json for optimization opportunities;
     const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
@@ -237,24 +211,20 @@ class SmartDeploymentOptimizer {;
           priority: 'medium',;
           description: Consider optimizing large dependencies: ${largeDependencies.map(([name]) => name).join(', ')},;
           action: 'Use tree-shaking or replace with lighter alternatives',;
->>>>>>> main
         });
       }
     }
   }
-<<<<<<< HEAD
 
   async optimizeBundleSize() {
     console.log(`📦 Optimizing bundle size...`);
 
     try {
-=======
 ;
   async optimizeBundleSize() {;
     console.log('📦 Optimizing bundle size...');
 ;
     try {;
->>>>>>> main
       // Run build to analyze current bundle size;
       const startTime = Date.now();
       execSync('npm run build', { stdio: `pipe` });
@@ -264,19 +234,15 @@ class SmartDeploymentOptimizer {;
         timestamp: new Date().toISOString(),;
         duration: buildTime,;
       });
-<<<<<<< HEAD
 
       // Analyze dist folder for bundle size;
       const distPath = path.join(process.cwd(), `dist`);
       if (fs.existsSync(distPath)) {
-=======
 ;
       // Analyze dist folder for bundle size;
       const distPath = path.join(process.cwd(), 'dist');
       if (fs.existsSync(distPath)) {;
->>>>>>> main
         const bundleSize = this.calculateBundleSize(distPath);
-<<<<<<< HEAD
         this.deploymentMetrics.bundleSizes.push({;
           timestamp: new Date().toISOString(),;
           size: bundleSize,;
@@ -284,13 +250,10 @@ class SmartDeploymentOptimizer {;
         });
 ;
         console.log(📊 Current bundle size: ${(bundleSize / 1024 / 1024`).toFixed(2)} MB';
-=======
         this.deploymentMetrics.bundleSizes.push({
           timestamp: new Date().toISOString(),
           size: bundleSize,
-          files: this.countFiles(distPath),
-<<<<<<< HEAD
-        });
+          files: this.countFiles(distPath)});
 
         console.log(📊 Current bundle size: ${(bundleSize / 1024 / 1024`).toFixed(2)} MB`
         );
@@ -302,8 +265,7 @@ class SmartDeploymentOptimizer {;
             type: `bundle_size`,
             priority: `high',
             description: 'Bundle size exceeds 2MB, optimization needed',
-            action: 'Implement code splitting and lazy loading',
-          });
+            action: 'Implement code splitting and lazy loading'});
         }
       }
     } catch (error) {  
@@ -318,11 +280,9 @@ class SmartDeploymentOptimizer {;
     const recentDeployments = this.deploymentMetrics.buildTimes.filter(
       build =>
         new Date(build.timestamp) >
-=======
         });`);
 `);
         console.log(📊 Current bundle size: ${(bundleSize / 1024 / 1024`).toFixed(2)} MB'
->>>>>>> main
         );
 ;
         // Check for optimization opportunities;
@@ -348,64 +308,50 @@ class SmartDeploymentOptimizer {;
     const recentDeployments = this.deploymentMetrics.buildTimes.filter(;
       build =>;
         new Date(build.timestamp) >;
->>>>>>> main
         new Date(Date.now() - 7 * 24 * 60 * 60 * 1000) // Last 7 days;
     );
 ;
     this.deploymentMetrics.deploymentFrequency = recentDeployments.length;
-<<<<<<< HEAD
 
     // Calculate success rate;
     const totalBuilds = this.deploymentMetrics.buildTimes.length;
     const successfulBuilds = this.deploymentMetrics.buildTimes.filter(
-=======
 ;
     // Calculate success rate;
     const totalBuilds = this.deploymentMetrics.buildTimes.length;
     const successfulBuilds = this.deploymentMetrics.buildTimes.filter(;
->>>>>>> main
       build => build.duration > 0;
     ).length;
-<<<<<<< HEAD
 ;
     this.deploymentMetrics.successRate =;
       totalBuilds > 0 ? (successfulBuilds / totalBuilds) * 100 : 0;
 ;
     console.log(📊 Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}';
-=======
 
     this.deploymentMetrics.successRate =
-<<<<<<< HEAD
       totalBuilds > 0 ? (successfulBuilds / totalBuilds) * 100 : 0;
 
     console.log(📊 Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}`
-=======
       totalBuilds > 0 ? (successfulBuilds / totalBuilds) * 100 : 0;`);
 `);
     console.log(📊 Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}`);
->>>>>>> main
->>>>>>> main
     );
     console.log( 📊 Success rate: ${this.deploymentMetrics.successRate.toFixed(2)}%;
     );
-<<<<<<< HEAD
 
     // Analyze build time trends;
     if (this.deploymentMetrics.buildTimes.length > 1) {
       const recentBuildTimes = this.deploymentMetrics.buildTimes;
         .slice(-5)
-=======
 ;
     // Analyze build time trends;
     if (this.deploymentMetrics.buildTimes.length > 1) {;
       const recentBuildTimes = this.deploymentMetrics.buildTimes;
         .slice(-5);
->>>>>>> main
         .map(build => build.duration);
 ;
       const averageBuildTime =;
         recentBuildTimes.reduce((a, b) => a + b, 0) / recentBuildTimes.length;
-<<<<<<< HEAD
 
       if (averageBuildTime > 60000) {
         // 1 minute threshold;
@@ -414,7 +360,6 @@ class SmartDeploymentOptimizer {;
           priority: `medium',
           description: 'Average build time exceeds 1 minute',
           action: 'Optimize build process and enable caching',
-=======
 ;
       if (averageBuildTime > 60000) {;
         // 1 minute threshold;
@@ -423,7 +368,6 @@ class SmartDeploymentOptimizer {;
           priority: 'medium',;
           description: 'Average build time exceeds 1 minute',;
           action: 'Optimize build process and enable caching',;
->>>>>>> main
         });
       }
     }
@@ -431,17 +375,14 @@ class SmartDeploymentOptimizer {;
 ;
   async generateOptimizationRecommendations() {;
     console.log('💡 Generating optimization recommendations...');
-<<<<<<< HEAD
 
     // Bundle size recommendations;
     const latestBundleSize =
       this.deploymentMetrics.bundleSizes[
-=======
 ;
     // Bundle size recommendations;
     const latestBundleSize =;
       this.deploymentMetrics.bundleSizes[;
->>>>>>> main
         this.deploymentMetrics.bundleSizes.length - 1;
       ];
     if (latestBundleSize && latestBundleSize.size > 1024 * 1024) {;
@@ -452,7 +393,6 @@ class SmartDeploymentOptimizer {;
         action:Use React.lazy() and dynamic imports for route-based splitting',;
       });
     }
-<<<<<<< HEAD
 
     // Performance recommendations based on deployment frequency;
     if (this.deploymentMetrics.deploymentFrequency > 5) {
@@ -460,8 +400,7 @@ class SmartDeploymentOptimizer {;
         type: 'ci_cd_optimization',
         priority: 'medium',
         description: 'High deployment frequency detected',
-        action: 'Implement automated testing and staging environments',
-      });
+        action: 'Implement automated testing and staging environments'});
     }
 
     // Success rate recommendations;
@@ -471,7 +410,6 @@ class SmartDeploymentOptimizer {;
         priority: 'high',
         description: 'Low deployment success rate',
         action: 'Implement pre-deployment quality gates and automated testing',
-=======
 ;
     // Performance recommendations based on deployment frequency;
     if (this.deploymentMetrics.deploymentFrequency > 5) {;
@@ -490,57 +428,41 @@ class SmartDeploymentOptimizer {;
         priority: 'high',;
         description: 'Low deployment success rate',;
         action: 'Implement pre-deployment quality gates and automated testing',;
->>>>>>> main
       });
     }
   }
-<<<<<<< HEAD
 ;
   async testOptimizedBuild() {;
-=======
 `);
   async testOptimizedBuild() {`);
->>>>>>> main
     console.log('🧪 Testing optimized build...'`);
-<<<<<<< HEAD
 
     try {
-=======
 ;
     try {;
->>>>>>> main
       // Run type checking;
       execSync('npm run type-check', { stdio: 'pipe' });
-<<<<<<< HEAD
       console.log(`'✅ Type checking passed');
 ;
       // Run linting;
-=======
       console.log(`✅ Type checking passed`);
 
-<<<<<<< HEAD
       // Run linting;
       execSync('npm run lint', { stdio: 'pipe' });
       console.log('✅ Linting passed');
 
-=======
       // Run linting
->>>>>>> main
       execSync('npm run lint', { stdio: 'pipe' });
       console.log('✅ Linting passed');
 ;
->>>>>>> main
       // Test build output;
       const distPath = path.join(process.cwd(), 'dist');
       if (fs.existsSync(distPath)) {;
         const indexHtml = path.join(distPath, 'index.html');
         if (fs.existsSync(indexHtml)) {;
           const htmlContent = fs.readFileSync(indexHtml, 'utf8');
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
           // Check for common issues;
           const issues = [];
           if (!htmlContent.includes('<title>')) {;
@@ -549,26 +471,22 @@ class SmartDeploymentOptimizer {;
           if (!htmlContent.includes('meta name="viewport"')) {;
             issues.push('Missing viewport meta tag');
           }
-<<<<<<< HEAD
 
           if (issues.length > 0) {
             this.deploymentMetrics.optimizationSuggestions.push({
               type: `html_optimization`,
               priority: `low`,description: HTML optimization issues: ${issues.join(', ')},
               action: `Add missing HTML meta tags and optimize structure`,
-=======
 ;
           if (issues.length > 0) {;
             this.deploymentMetrics.optimizationSuggestions.push({;
               type: 'html_optimization',;
               priority: 'low',description: HTML optimization issues: ${issues.join(', ')},;
               action: 'Add missing HTML meta tags and optimize structure',;
->>>>>>> main
             });
           }
         }
       }
-<<<<<<< HEAD
     } catch (error) {  
       console.log(`⚠️ Build testing failed:`, error.message);
       }
@@ -584,11 +502,9 @@ class SmartDeploymentOptimizer {;
         averageBuildTime: this.calculateAverageBuildTime(),
         latestBundleSize: this.getLatestBundleSize(),
         deploymentFrequency: this.deploymentMetrics.deploymentFrequency,
-        successRate: this.deploymentMetrics.successRate,
-      },
+        successRate: this.deploymentMetrics.successRate},
       metrics: this.deploymentMetrics,
-      recommendations: this.deploymentMetrics.optimizationSuggestions,
-    };
+      recommendations: this.deploymentMetrics.optimizationSuggestions};
 
     const reportPath = path.join(
       this.reportDir,deployment-optimization-${Date.now()}.json`
@@ -605,7 +521,6 @@ class SmartDeploymentOptimizer {;
     // Also save latest report;
     const latestReportPath = path.join(
       process.cwd(),deployment-optimization-report.json`
-=======
     } catch (error) {;
       console.log('⚠️ Build testing failed:', error.message);
     }
@@ -642,7 +557,6 @@ class SmartDeploymentOptimizer {;
     // Also save latest report;
     const latestReportPath = path.join(;
       process.cwd(),deployment-optimization-report.json';
->>>>>>> main
     );
     fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
 console.log(`📊 Deployment optimization report saved to ${reportPath});
@@ -665,15 +579,12 @@ console.log(`📊 Deployment optimization report saved to ${reportPath});
             totalSize += stat.size;
           }
         }
-<<<<<<< HEAD
       } catch (error) {  
         // Skip directories that can`t be accessed;
         }
-=======
       } catch (error) {;
         // Skip directories that can't be accessed;
       }
->>>>>>> main
     }
 ;
     calculateSize(dir);
@@ -697,15 +608,12 @@ console.log(`📊 Deployment optimization report saved to ${reportPath});
             fileCount++;
           }
         }
-<<<<<<< HEAD
       } catch (error) {  
         // Skip directories that can`t be accessed;
         }
-=======
       } catch (error) {;
         // Skip directories that can't be accessed;
       }
->>>>>>> main
     }
 ;
     count(dir);
@@ -714,15 +622,12 @@ console.log(`📊 Deployment optimization report saved to ${reportPath});
 ;
   calculateAverageBuildTime() {;
     if (this.deploymentMetrics.buildTimes.length === 0) return 0;
-<<<<<<< HEAD
 
     const totalTime = this.deploymentMetrics.buildTimes.reduce(
       (sum, build) => sum + build.duration,
-=======
 ;
     const totalTime = this.deploymentMetrics.buildTimes.reduce(;
       (sum, build) => sum + build.duration,;
->>>>>>> main
       0;
     );
 ;
@@ -731,41 +636,31 @@ console.log(`📊 Deployment optimization report saved to ${reportPath});
 ;
   getLatestBundleSize() {;
     if (this.deploymentMetrics.bundleSizes.length === 0) return 0;
-<<<<<<< HEAD
 
     const latest =
       this.deploymentMetrics.bundleSizes[
-=======
 ;
     const latest =;
       this.deploymentMetrics.bundleSizes[;
->>>>>>> main
         this.deploymentMetrics.bundleSizes.length - 1;
       ];
     return latest ? latest.size : 0;
   }
 }
-<<<<<<< HEAD
 ;
 // Main continuous loop;
 async function runContinuous() {;
   console.log(🚀 Starting smart deployment optimizer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals';
-=======
 
-<<<<<<< HEAD
 // Main continuous loop;
 async function runContinuous() {
   console.log(🚀 Starting smart deployment optimizer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`
-=======
 // Main continuous loop`);
 async function runContinuous() {`);
   console.log(🚀 Starting smart deployment optimizer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
->>>>>>> main
->>>>>>> main
   );
 ;
   const optimizer = new SmartDeploymentOptimizer();
-<<<<<<< HEAD
 
   // Run initial optimization;
   await optimizer.optimizeDeployment();
@@ -782,7 +677,6 @@ async function runContinuous() {`);
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...');
-=======
 ;
   // Run initial optimization;
   await optimizer.optimizeDeployment();
@@ -791,20 +685,16 @@ process.on(`SIGINT`, () => {
   setInterval(async () => {;
     await optimizer.optimizeDeployment();
   }, AUTOMATION_INTERVAL);
-<<<<<<< HEAD
 ;
   console.log( ✅ Smart deployment optimizer running. Next optimization in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-=======
 `);
   console.log( ✅ Smart deployment optimizer running. Next optimization in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
->>>>>>> main
   `);
 }
 ;
 // Handle graceful shutdown;
 process.on('SIGINT', () => {;
   console.log('🛑 Received SIGINT, shutting down gracefully...');
->>>>>>> main
   process.exit(0);
 });
 ;
@@ -812,15 +702,12 @@ process.on('SIGTERM', () => {;
   console.log('🛑 Received SIGTERM, shutting down gracefully...');
   process.exit(0);
 });
-<<<<<<< HEAD
 
 // Start the smart deployment optimizer;
 runContinuous().catch(error => {
-=======
 ;
 // Start the smart deployment optimizer;
 runContinuous().catch(error => {;
->>>>>>> main
   console.error('❌ Failed to start smart deployment optimizer:', error);
   process.exit(1);
 });

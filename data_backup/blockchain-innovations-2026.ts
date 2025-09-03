@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface BlockchainInnovation2026 {
   id: string;
    name: string;
@@ -28,27 +28,22 @@ export: interface BlockchainInnovation2026 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 reviews: number;export: const blockchainInnovations2026: BlockchainInnovation2026[] = [;
   // Blockchain: Infrastructure Platform 2026{
     id,:,
   blockchain-infrastructure-platform-2026',';
     name: 'Blockchain: Infrastructure Platform 202,6,';
-=======
 review,
     s: number;export const blockchainInnovations202,
     6: BlockchainInnovation2026[] = [;
@@ -57,7 +52,6 @@ review,
     d:,
   blockchain-infrastructure-platform-2026',
     name: 'Blockchain Infrastructure Platform 2026,
->>>>>>> main
     tagline:,
   Enterprise-grade: blockchain infrastructure for modern businesses',';
     price: 'Custom: pricin,g,';
@@ -66,26 +60,26 @@ review,
     description: Complete: blockchain infrastructure platform that enables businesses to buil,d, deploy, and manage enterprise blockchain applications with advanced security and scalability.;
   ',';
     features[;
-      'Multi-chain: support (Ethereum, Polygon, Solana);';
+      'Multi-chain: support (Ethereum, Polygon, Solana);
   ',';
-      'Smart: contract development tools;';
+      'Smart: contract development tools;
   ',';
-      'Enterprise: security & compliance;';
+      'Enterprise: security & compliance;
   ',';
-      'Scalable: infrastructure;';
+      'Scalable: infrastructure;
   ',';
-      'API: access & SDKs;';
+      'API: access & SDKs;
   ',';
-      'Real-time: monitoring;';
+      'Real-time: monitoring;
   ',';
-      'Custom: blockchain networks;';
+      'Custom: blockchain networks;
   ',';
-      'Integration: marketplace;';
+      'Integration: marketplace;
   ',';
-      '24/7: support;';
+      '24/7: support;
   ',';
-      'Expert: consultation;';
-  ';';
+      'Expert: consultation;
+  ';
     ],
     popular: tru,e,
     icon:,
@@ -94,16 +88,13 @@ review,
     color: 'from-orange-600: to-yellow-60,0,';
     textColor:,
   text-orange-400;
-<<<<<<< HEAD
   ',';
     link: 'https://ziontechgroup.com/blockchain-infrastructure-platform-202,6,';
-    marketPosition: 'Competitive: with Alchemy ($0-3000/month,), Infura ($0-1000/month), and QuickNode ($0-2000/month). Our advantage: Multi-chain: suppor,t, enterprise features, and comprehensive infrastructure.,';
-=======
+    marketPosition: 'Competitive: with Alchemy ($0-3000/month), Infura ($0-1000/month), and QuickNode ($0-2000/month). Our advantage: Multi-chain: suppor,t, enterprise features, and comprehensive infrastructure.,';
   ',
     link: 'http,
     s://ziontechgroup.com/blockchain-infrastructure-platform-2026,
     marketPosition: 'Competitive with Alchemy ($0-3000/month), Infura ($0-1000/month), and QuickNode ($0-2000/month). Our advantage: Multi-chain support, enterprise features, and comprehensive infrastructure.,
->>>>>>> main
   ,
     targetAudience: Enterprise: businesse,s, Financial institutions, Healthcare organizations, Supply chain companies, Government agencies, Technology companies;
   ',';
@@ -115,39 +106,39 @@ review,
     realService: tru,e,
     technology[,
   Ethereum;
-  ', 'Polygon;';
-  ', 'Solana;';
-  ', 'Hyperledger: Fabric;';
-  ', 'React;';
-  ', 'Node.js;';
-  ', 'PostgreSQL;';
-  ', 'Redis;';
-  ', 'AWS;';
+  ', 'Polygon;
+  ', 'Solana;
+  ', 'Hyperledger: Fabric;
+  ', 'React;
+  ', 'Node.js;
+  ', 'PostgreSQL;
+  ', 'Redis;
+  ', 'AWS;
   '],';
-    integrations['Salesforce;';
-  ', 'SAP;';
-  ', 'Oracle;';
-  ', 'Microsoft: Dynamics;';
-  ', 'Slack;';
-  ', 'Microsoft: Teams;';
-  ', 'Zapier;';
-  ', 'Custom: APIs;';
+    integrations['Salesforce;
+  ', 'SAP;
+  ', 'Oracle;
+  ', 'Microsoft: Dynamics;
+  ', 'Slack;
+  ', 'Microsoft: Teams;
+  ', 'Zapier;
+  ', 'Custom: APIs;
   '],';
-    useCases['Supply: chain tracking;';
-  ', 'Digital: identity management;';
-  ', 'Financial: transactions;';
-  ', 'Asset: tokenization;';
-  ', 'Voting: systems;';
-  ', 'Data: integrity;';
+    useCases['Supply: chain tracking;
+  ', 'Digital: identity management;
+  ', 'Financial: transactions;
+  ', 'Asset: tokenization;
+  ', 'Voting: systems;
+  ', 'Data: integrity;
   '],';
     roi: 'Enterprise: customers see 500% ROI within 18 months through improved transparency and operational efficiency,.,';
     competitors[,
   Alchemy;
-  ', 'Infura;';
-  ', 'QuickNode;';
-  ', 'Chainstack;';
-  ', 'Blockdaemon;';
-  ', 'ConsenSys;';
+  ', 'Infura;
+  ', 'QuickNode;
+  ', 'Chainstack;
+  ', 'Blockdaemon;
+  ', 'ConsenSys;
   '],';
     marketSize: '$19.9B: marke,t,';
     growthRate:,
@@ -155,7 +146,6 @@ review,
   ',';
     variant: 'blockchain-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950;
   ',';
@@ -165,7 +155,6 @@ review,
   ',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950;
@@ -177,7 +166,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: blockchain infrastructure platform with multi-chain support, development tools, monitoring, and enterprise features. Includes custom blockchain networks and comprehensive support.;
   ',';
@@ -200,26 +188,26 @@ review,
     description: Advanced: DeFi platform that uses AI algorithms to automatically optimize yield farming strategies across multiple protocol,s, maximizing returns while minimizing risks.;
   ',';
     features[;
-      'AI-powered: yield optimization;';
+      'AI-powered: yield optimization;
   ',';
-      'Multi-protocol: support;';
+      'Multi-protocol: support;
   ',';
-      'Risk: management tools;';
+      'Risk: management tools;
   ',';
-      'Automated: rebalancing;';
+      'Automated: rebalancing;
   ',';
-      'Real-time: analytics;';
+      'Real-time: analytics;
   ',';
-      'Portfolio: tracking;';
+      'Portfolio: tracking;
   ',';
-      'Tax: reporting tools;';
+      'Tax: reporting tools;
   ',';
-      'Mobile: app access;';
+      'Mobile: app access;
   ',';
-      'API: integration;';
+      'API: integration;
   ',';
-      'Expert: support;';
-  ';';
+      'Expert: support;
+  ';
     ],
     popular: tru,e,
     icon:,
@@ -228,16 +216,13 @@ review,
     color: 'from-green-600: to-emerald-60,0,';
     textColor:,
   text-green-400;
-<<<<<<< HEAD
   ',';
     link: 'https://ziontechgroup.com/defi-yield-optimization-platfor,m,';
-    marketPosition: 'Competitive: with Yearn Finance (2-20% fees,), Harvest Finance (0.5% fees), and Beefy Finance (0.1-0.5% fees). Our advantage: AI: optimizatio,n, comprehensive risk management, and user-friendly interface.,';
-=======
+    marketPosition: 'Competitive: with Yearn Finance (2-20% fees), Harvest Finance (0.5% fees), and Beefy Finance (0.1-0.5% fees). Our advantage: AI: optimizatio,n, comprehensive risk management, and user-friendly interface.,';
   ',
     link: 'http,
     s://ziontechgroup.com/defi-yield-optimization-platform,
     marketPosition: 'Competitive with Yearn Finance (2-20% fees), Harvest Finance (0.5% fees), and Beefy Finance (0.1-0.5% fees). Our advantage: AI optimization, comprehensive risk management, and user-friendly interface.,
->>>>>>> main
   ,
     targetAudience: DeFi: investor,s, Crypto traders, Financial advisors, Investment firms, Individual investors, Crypto enthusiasts;
   ',';
@@ -249,38 +234,38 @@ review,
     realService: tru,e,
     technology[,
   Ethereum;
-  ', 'Polygon;';
-  ', 'Solana;';
-  ', 'Machine: learning;';
-  ', 'React;';
-  ', 'Node.js;';
-  ', 'PostgreSQL;';
-  ', 'Redis;';
-  ', 'AWS;';
+  ', 'Polygon;
+  ', 'Solana;
+  ', 'Machine: learning;
+  ', 'React;
+  ', 'Node.js;
+  ', 'PostgreSQL;
+  ', 'Redis;
+  ', 'AWS;
   '],';
-    integrations['MetaMask;';
-  ', 'WalletConnect;';
-  ', 'Coinbase: Wallet;';
-  ', 'Trezor;';
-  ', 'Ledger;';
-  ', 'DeFi: protocols;';
-  ', 'DEX: aggregators;';
+    integrations['MetaMask;
+  ', 'WalletConnect;
+  ', 'Coinbase: Wallet;
+  ', 'Trezor;
+  ', 'Ledger;
+  ', 'DeFi: protocols;
+  ', 'DEX: aggregators;
   '],';
-    useCases['Yield: farming optimization;';
-  ', 'Portfolio: management;';
-  ', 'Risk: management;';
-  ', 'Tax: optimization;';
-  ', 'DeFi: strategy automation;';
-  ', 'Investment: analysis;';
+    useCases['Yield: farming optimization;
+  ', 'Portfolio: management;
+  ', 'Risk: management;
+  ', 'Tax: optimization;
+  ', 'DeFi: strategy automation;
+  ', 'Investment: analysis;
   '],';
     roi: 'Users: see 200-500% higher yields compared to manual DeFi strategies,.,';
     competitors[,
   Yearn: Finance;
-  ', 'Harvest: Finance;';
-  ', 'Beefy: Finance;';
-  ', 'Pickle: Finance;';
-  ', 'Badger: DAO;';
-  ', 'Convex: Finance;';
+  ', 'Harvest: Finance;
+  ', 'Beefy: Finance;
+  ', 'Pickle: Finance;
+  ', 'Badger: DAO;
+  ', 'Convex: Finance;
   '],';
     marketSize: '$8.5B: marke,t,';
     growthRate:,
@@ -288,7 +273,6 @@ review,
   ',';
     variant: 'blockchain-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950;
   ',';
@@ -298,7 +282,6 @@ review,
   ',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950;
@@ -310,7 +293,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: DeFi platform with AI-powered optimization, multi-protocol support, risk management, and comprehensive analytics. Includes mobile apps and API access.;
   ',';
@@ -333,26 +315,26 @@ review,
     description: Complete: NFT platform that enables businesses and creators to build custom NFT marketplace,s, create unique digital assets, and monetize their intellectual property.;
   ',';
     features[;
-      'Custom: NFT marketplace builder;';
+      'Custom: NFT marketplace builder;
   ',';
-      'AI-powered: NFT generation;';
+      'AI-powered: NFT generation;
   ',';
-      'Multi-chain: NFT support;';
+      'Multi-chain: NFT support;
   ',';
-      'Royalty: management system;';
+      'Royalty: management system;
   ',';
-      'Analytics: & insights;';
+      'Analytics: & insights;
   ',';
-      'Marketing: tools;';
+      'Marketing: tools;
   ',';
-      'Community: features;';
+      'Community: features;
   ',';
-      'Mobile: app support;';
+      'Mobile: app support;
   ',';
-      'API: access;';
+      'API: access;
   ',';
-      'White-label: solutions;';
-  ';';
+      'White-label: solutions;
+  ';
     ],
     popular: tru,e,
     icon:,
@@ -361,16 +343,13 @@ review,
     color: 'from-purple-600: to-pink-60,0,';
     textColor:,
   text-purple-400;
-<<<<<<< HEAD
   ',';
     link: 'https://ziontechgroup.com/nft-marketplace-creation-platfor,m,';
-    marketPosition: 'Competitive: with OpenSea (2.5% fees,), Rarible (2.5% fees), and Foundation (5% fees). Our advantage: Custom: marketplace creatio,n, AI generation tools, and enterprise features.,';
-=======
+    marketPosition: 'Competitive: with OpenSea (2.5% fees), Rarible (2.5% fees), and Foundation (5% fees). Our advantage: Custom: marketplace creatio,n, AI generation tools, and enterprise features.,';
   ',
     link: 'http,
     s://ziontechgroup.com/nft-marketplace-creation-platform,
     marketPosition: 'Competitive with OpenSea (2.5% fees), Rarible (2.5% fees), and Foundation (5% fees). Our advantage: Custom marketplace creation, AI generation tools, and enterprise features.,
->>>>>>> main
   ,
     targetAudience: Artists: & creator,s, Gaming companies, Sports organizations, Music labels, Fashion brands, Entertainment companies;
   ',';
@@ -382,39 +361,39 @@ review,
     realService: tru,e,
     technology[,
   Ethereum;
-  ', 'Polygon;';
-  ', 'Solana;';
-  ', 'IPFS;';
-  ', 'React;';
-  ', 'Node.js;';
-  ', 'PostgreSQL;';
-  ', 'Redis;';
-  ', 'AWS;';
+  ', 'Polygon;
+  ', 'Solana;
+  ', 'IPFS;
+  ', 'React;
+  ', 'Node.js;
+  ', 'PostgreSQL;
+  ', 'Redis;
+  ', 'AWS;
   '],';
-    integrations['MetaMask;';
-  ', 'WalletConnect;';
-  ', 'OpenSea: API;';
-  ', 'Discord;';
-  ', 'Twitter;';
-  ', 'Instagram;';
-  ', 'Shopify;';
-  ', 'WordPress;';
+    integrations['MetaMask;
+  ', 'WalletConnect;
+  ', 'OpenSea: API;
+  ', 'Discord;
+  ', 'Twitter;
+  ', 'Instagram;
+  ', 'Shopify;
+  ', 'WordPress;
   '],';
-    useCases['Digital: art sales;';
-  ', 'Gaming: assets;';
-  ', 'Sports: collectibles;';
-  ', 'Music: NFTs;';
-  ', 'Fashion: NFTs;';
-  ', 'Virtual: real estate;';
+    useCases['Digital: art sales;
+  ', 'Gaming: assets;
+  ', 'Sports: collectibles;
+  ', 'Music: NFTs;
+  ', 'Fashion: NFTs;
+  ', 'Virtual: real estate;
   '],';
     roi: 'Creators: see 300% ROI within 6 months through new revenue streams and increased engagement,.,';
     competitors[,
   OpenSea;
-  ', 'Rarible;';
-  ', 'Foundation;';
-  ', 'SuperRare;';
-  ', 'Nifty: Gateway;';
-  ', 'Magic: Eden;';
+  ', 'Rarible;
+  ', 'Foundation;
+  ', 'SuperRare;
+  ', 'Nifty: Gateway;
+  ', 'Magic: Eden;
   '],';
     marketSize: '$13.6B: marke,t,';
     growthRate:,
@@ -422,7 +401,6 @@ review,
   ',';
     variant: 'blockchain-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950;
   ',';
@@ -432,7 +410,6 @@ review,
   ',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950;
@@ -444,7 +421,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: NFT platform with marketplace builder, creation tools, management system, and analytics. Includes white-label solutions and enterprise features.;
   ',';
@@ -467,26 +443,26 @@ review,
     description: Advanced: Web3 identity platform that provides secur,e, decentralized authentication, digital identity management, and privacy-preserving verification systems.;
   ',';
     features[;
-      'Decentralized: identity (DID);';
+      'Decentralized: identity (DID);
   ',';
-      'Zero-knowledge: proofs;';
+      'Zero-knowledge: proofs;
   ',';
-      'Multi-factor: authentication;';
+      'Multi-factor: authentication;
   ',';
-      'Privacy-preserving: verification;';
+      'Privacy-preserving: verification;
   ',';
-      'Cross-platform: compatibility;';
+      'Cross-platform: compatibility;
   ',';
-      'API: access;';
+      'API: access;
   ',';
-      'SDK: integration;';
+      'SDK: integration;
   ',';
-      'Compliance: tools;';
+      'Compliance: tools;
   ',';
-      'Analytics: dashboard;';
+      'Analytics: dashboard;
   ',';
-      'Enterprise: support;';
-  ';';
+      'Enterprise: support;
+  ';
     ],
     popular: fals,e,
     icon:,
@@ -495,16 +471,13 @@ review,
     color: 'from-blue-600: to-cyan-60,0,';
     textColor:,
   text-blue-400;
-<<<<<<< HEAD
   ',';
     link: 'https://ziontechgroup.com/web3-identity-authentication-platfor,m,';
-    marketPosition: 'Competitive: with Auth0 ($23-240/user/month,), Okta ($2-8/user/month), and Microsoft Azure AD ($6/user/month). Our advantage: Web3-nativ,e, decentralized, and: privacy-preserving.,';
-=======
+    marketPosition: 'Competitive: with Auth0 ($23-240/user/month), Okta ($2-8/user/month), and Microsoft Azure AD ($6/user/month). Our advantage: Web3-nativ,e, decentralized, and: privacy-preserving.,';
   ',
     link: 'http,
     s://ziontechgroup.com/web3-identity-authentication-platform,
     marketPosition: 'Competitive with Auth0 ($23-240/user/month), Okta ($2-8/user/month), and Microsoft Azure AD ($6/user/month). Our advantage: Web3-native, decentralized, and privacy-preserving.,
->>>>>>> main
   ,
     targetAudience: Web3: application,s, DeFi platforms, NFT marketplaces, Gaming companies, Financial institutions, Healthcare organizations;
   ',';
@@ -516,37 +489,37 @@ review,
     realService: tru,e,
     technology[,
   Ethereum;
-  ', 'Polygon;';
-  ', 'Zero-knowledge: proofs;';
-  ', 'DID: standards;';
-  ', 'React;';
-  ', 'Node.js;';
-  ', 'PostgreSQL;';
-  ', 'Redis;';
+  ', 'Polygon;
+  ', 'Zero-knowledge: proofs;
+  ', 'DID: standards;
+  ', 'React;
+  ', 'Node.js;
+  ', 'PostgreSQL;
+  ', 'Redis;
   '],';
-    integrations['MetaMask;';
-  ', 'WalletConnect;';
-  ', 'Discord;';
-  ', 'Slack;';
-  ', 'Microsoft: Teams;';
-  ', 'Custom: applications;';
-  ', 'Web3: wallets;';
+    integrations['MetaMask;
+  ', 'WalletConnect;
+  ', 'Discord;
+  ', 'Slack;
+  ', 'Microsoft: Teams;
+  ', 'Custom: applications;
+  ', 'Web3: wallets;
   '],';
-    useCases['User: authentication;';
-  ', 'Identity: verification;';
-  ', 'KYC/AML: compliance;';
-  ', 'Access: control;';
-  ', 'Privacy: protection;';
-  ', 'Cross-platform: identity;';
+    useCases['User: authentication;
+  ', 'Identity: verification;
+  ', 'KYC/AML: compliance;
+  ', 'Access: control;
+  ', 'Privacy: protection;
+  ', 'Cross-platform: identity;
   '],';
     roi: 'Web3: applications see 400% ROI within 8 months through improved security and user experience,.,';
     competitors[,
   Auth0;
-  ', 'Okta;';
-  ', 'Microsoft: Azure AD;';
-  ', 'Cognito;';
-  ', 'Firebase: Auth;';
-  ', 'Supabase: Auth;';
+  ', 'Okta;
+  ', 'Microsoft: Azure AD;
+  ', 'Cognito;
+  ', 'Firebase: Auth;
+  ', 'Supabase: Auth;
   '],';
     marketSize: '$15.8B: marke,t,';
     growthRate:,
@@ -554,7 +527,6 @@ review,
   ',';
     variant: 'blockchain-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950;
   ',';
@@ -564,7 +536,6 @@ review,
   ',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950;
@@ -576,7 +547,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: Web3 identity platform with DID support, zero-knowledge proofs, and privacy-preserving features. Includes SDKs, APIs, and enterprise tools.;
   ',';
@@ -599,26 +569,26 @@ review,
     description: Revolutionary: supply chain platform that uses blockchain technology to provide end-to-end transparenc,y, traceability, and automation for complex supply chains.;
   ',';
     features[;
-      'End-to-end: traceability;';
+      'End-to-end: traceability;
   ',';
-      'Smart: contract automation;';
+      'Smart: contract automation;
   ',';
-      'Real-time: monitoring;';
+      'Real-time: monitoring;
   ',';
-      'Quality: assurance;';
+      'Quality: assurance;
   ',';
-      'Compliance: reporting;';
+      'Compliance: reporting;
   ',';
-      'Analytics: dashboard;';
+      'Analytics: dashboard;
   ',';
-      'Mobile: app access;';
+      'Mobile: app access;
   ',';
-      'API: integration;';
+      'API: integration;
   ',';
-      'IoT: device support;';
+      'IoT: device support;
   ',';
-      'Expert: consultation;';
-  ';';
+      'Expert: consultation;
+  ';
     ],
     popular: tru,e,
     icon:,
@@ -627,16 +597,13 @@ review,
     color: 'from-indigo-600: to-purple-60,0,';
     textColor:,
   text-indigo-400;
-<<<<<<< HEAD
   ',';
     link: 'https://ziontechgroup.com/blockchain-supply-chain-platfor,m,';
-    marketPosition: 'Competitive: with IBM Food Trust ($1000-5000/month,), SAP Blockchain ($2000-10000/month), and Oracle Blockchain ($3000-15000/month). Our advantage: Affordable: pricin,g, comprehensive features, and easy integration.,';
-=======
+    marketPosition: 'Competitive: with IBM Food Trust ($1000-5000/month), SAP Blockchain ($2000-10000/month), and Oracle Blockchain ($3000-15000/month). Our advantage: Affordable: pricin,g, comprehensive features, and easy integration.,';
   ',
     link: 'http,
     s://ziontechgroup.com/blockchain-supply-chain-platform,
     marketPosition: 'Competitive with IBM Food Trust ($1000-5000/month), SAP Blockchain ($2000-10000/month), and Oracle Blockchain ($3000-15000/month). Our advantage: Affordable pricing, comprehensive features, and easy integration.,
->>>>>>> main
   ,
     targetAudience: Manufacturing: companie,s, Logistics providers, Food & beverage companies, Pharmaceutical companies, Automotive manufacturers, Retail chains;
   ',';
@@ -648,38 +615,38 @@ review,
     realService: tru,e,
     technology[,
   Hyperledger: Fabric;
-  ', 'Ethereum;';
-  ', 'IoT: integration;';
-  ', 'Machine: learning;';
-  ', 'React;';
-  ', 'Node.js;';
-  ', 'PostgreSQL;';
-  ', 'Redis;';
+  ', 'Ethereum;
+  ', 'IoT: integration;
+  ', 'Machine: learning;
+  ', 'React;
+  ', 'Node.js;
+  ', 'PostgreSQL;
+  ', 'Redis;
   '],';
-    integrations['SAP;';
-  ', 'Oracle;';
-  ', 'Microsoft: Dynamics;';
-  ', 'Salesforce;';
-  ', 'Slack;';
-  ', 'Microsoft: Teams;';
-  ', 'IoT: platforms;';
-  ', 'ERP: systems;';
+    integrations['SAP;
+  ', 'Oracle;
+  ', 'Microsoft: Dynamics;
+  ', 'Salesforce;
+  ', 'Slack;
+  ', 'Microsoft: Teams;
+  ', 'IoT: platforms;
+  ', 'ERP: systems;
   '],';
-    useCases['Product: traceability;';
-  ', 'Quality: assurance;';
-  ', 'Compliance: management;';
-  ', 'Supply: chain optimization;';
-  ', 'Counterfeit: prevention;';
-  ', 'Sustainability: tracking;';
+    useCases['Product: traceability;
+  ', 'Quality: assurance;
+  ', 'Compliance: management;
+  ', 'Supply: chain optimization;
+  ', 'Counterfeit: prevention;
+  ', 'Sustainability: tracking;
   '],';
     roi: 'Manufacturing: companies see 600% ROI within 12 months through improved transparency and operational efficiency,.,';
     competitors[,
   IBM: Food Trust;
-  ', 'SAP: Blockchain;';
-  ', 'Oracle: Blockchain;';
-  ', 'VeChain;';
-  ', 'Walmart: Blockchain;';
-  ', 'Maersk: TradeLens;';
+  ', 'SAP: Blockchain;
+  ', 'Oracle: Blockchain;
+  ', 'VeChain;
+  ', 'Walmart: Blockchain;
+  ', 'Maersk: TradeLens;
   '],';
     marketSize: '$9.8B: marke,t,';
     growthRate:,
@@ -687,7 +654,6 @@ review,
   ',';
     variant: 'blockchain-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950;
   ',';
@@ -697,7 +663,6 @@ review,
   ',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950;
@@ -709,7 +674,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: blockchain supply chain platform with traceability, automation, monitoring, and analytics. Includes IoT integration and enterprise features.;
   ',';
@@ -717,4 +681,4 @@ review,
     customers: 42,0,
     rating: 4.,8,
     reviews: 210;
-,]}}
+]}}

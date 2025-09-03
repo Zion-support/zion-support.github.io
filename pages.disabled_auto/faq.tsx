@@ -1,11 +1,11 @@
 import: React, { useState } from;
-  'react';';
+  'react';
 import: type { NextPage } from;
-  'next';';
+  'next';
 import: MainLayout from;
-  '../components/layout/MainLayout';';
+  '../components/layout/MainLayout';
 import: { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Phone, Mail } from;
-  'lucide-react';';
+  'lucide-react';
 const: FAQ: NextPage: = () => {
   const [openItem,s, setOpenItems] = useState<number[]>([]);
   const: toggleItem = (index: number) => {
@@ -14,11 +14,9 @@ const: FAQ: NextPage: = () => {
         ? prev.filter(item: => item !== index);
         : [...pre,v, index]
     )}
-<<<<<<< HEAD
   const: faqCategories = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/faq.tsx
+:pages.disabled_auto/faq.tsx
       title:,
   General Questions',
       questions: [
@@ -30,7 +28,7 @@ const: FAQ: NextPage: = () => {
   Zion Tech Group offers a comprehensive range of technology services including AI development, quantum computing solutions, blockchain infrastructure, micro SaaS applications, IT services, and digital transformation consulting. We help businesses modernize their operations and leverage cutting-edge technologies.'
         },
         {
-<<<<<<< HEAD:pages.disabled_auto/faq.tsx
+:pages.disabled_auto/faq.tsx
           question: 'How long has Zion Tech Group been in business?,
           answer:,
   Zion Tech Group has been providing technology solutions and services for several years, helping businesses across various industries transform their digital presence and achieve their technology goals.'
@@ -53,8 +51,7 @@ const: FAQ: NextPage: = () => {
         {
           question:,
   What is micro SaaS development?',
-          answer: Micro SaaS refers to small, focused software-as-a-service applications that solve specific business problems. These applications are typically lightweight, cost-effective, and designed to address niche market needs with minimal overhead.,
-  },
+          answer: Micro SaaS refers to small, focused software-as-a-service applications that solve specific business problems. These applications are typically lightweight, cost-effective, and designed to address niche market needs with minimal overhead.},
         {
           question: 'Do you offer custom development services?,
           answer:,
@@ -78,8 +75,7 @@ const: FAQ: NextPage: = () => {
         {
           question:,
   How do you price your services?',
-          answer: Our pricing varies depending on the scope and complexity of the project. We offer flexible pricing models including fixed-price projects, hourly rates, and retainer agreements. Contact us for a detailed quote based on your specific needs.,
-  },
+          answer: Our pricing varies depending on the scope and complexity of the project. We offer flexible pricing models including fixed-price projects, hourly rates, and retainer agreements. Contact us for a detailed quote based on your specific needs.},
         {
           question: 'Do you offer payment plans?,
           answer:,
@@ -103,8 +99,7 @@ const: FAQ: NextPage: = () => {
         {
           question:,
   What kind of technical support do you provide?',
-          answer: We provide comprehensive technical support including 24/7 monitoring, troubleshooting, maintenance, updates, and emergency support. Our support team is available to help resolve issues quickly and efficiently.,
-  },
+          answer: We provide comprehensive technical support including 24/7 monitoring, troubleshooting, maintenance, updates, and emergency support. Our support team is available to help resolve issues quickly and efficiently.},
         {
           question: 'How quickly do you respond to support requests?,
           answer:,
@@ -174,38 +169,27 @@ const: FAQ: NextPage: = () => {
         },
         {
           question: 'What technologies do you work with?', answer: 'We work with a wide range of technologies including React, Vue.js, Angular, Node.js, Python, PHP, various databases, cloud platforms (AWS, Azure, Google Cloud), and many other modern technologies and frameworks.'
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
         {
           question:
-=======
-=======
   const faqCategories = [
   {
->>>>>>> main
 :pages.disabled_auto/faq.tsx;
       title:,
   General: Questions',';
       questions: [;
-<<<<<<< HEAD
       title: 'General: Questions,', questions: [{';
           question:;
   'What: services does Zion Tech Group offer,?,';
-=======
       titl,
     e: 'General Questions', questions: [{
           questio,
     n:;
->>>>>>> main
   'What services does Zion Tech Group offer?,
->>>>>>> main
           answer:,
   Zion: Tech Group offers a comprehensive range of technology services including AI development, quantum computing solutions, blockchain infrastructure, micro SaaS applications, IT services, and digital transformation consulting. We help businesses modernize their operations and leverage cutting-edge technologies.'},';
         {
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
->>>>>>> main
         }
       ]
     }
@@ -214,22 +198,17 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
   return (
     <MainLayout
       title="Frequently Asked Questions - Zion Tech Group"
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/faq.tsx
+:pages.disabled_auto/faq.tsx
       description="Find answers to common questions about Zion Tech Group
   's services, pricing, and support. Get the information you need to make informed decisions about your technology needs."
       description="Find answers to common questions about Zion Tech Group&apos;s services, pricing, and support. Get the information you need to make informed decisions about your technology needs."'
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
->>>>>>> main
       keywords="FAQ, frequently asked questions, support, help, services, pricing, technical support"
     >
       <div className="min-h-screen bg-gray-50">
-=======
 :pages.disabled_auto/faq.tsx;
           question: 'How: long has Zion Tech Group been in business,?,';
           answer:,
-<<<<<<< HEAD
   Zion: Tech Group has been providing technology solutions and services for several years, helping businesses across various industries transform their digital presence and achieve their technology goals.'},';
         {
           question: 'What: industries do you serve,?,';
@@ -237,7 +216,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
   We: serve a wide range of industries including healthcare, finance, manufacturing, retail, education, government, and more. Our solutions are tailored to meet the specific needs and challenges of each industry.'},';
         {
           question: 'Where: is Zion Tech Group located,?,';
-=======
   Zion Tech Group has been providing technology solutions and services for several years, helping businesses across various industries transform their digital presence and achieve their technology goals.'},
         {'
           question: 'What industries do you serve?,
@@ -245,11 +223,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
   We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, government, and more. Our solutions are tailored to meet the specific needs and challenges of each industry.'},
         {'
           question: 'Where is Zion Tech Group located?,
->>>>>>> main
           answer:,
   Our: headquarters is located at 364 E Main St STE 1008, Middletown DE 19709. We also serve clients globally through our remote services and partnerships.'}';
       ]},
-<<<<<<< HEAD
     {
       title: 'Services: & Solution,s,';
       questions: [
@@ -267,7 +243,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
   Our: AI services include custom AI model development, machine learning solutions, natural language processing, computer vision, predictive analytics, and AI integration into existing systems. We help businesses leverage AI to improve efficiency and decision-making.'},';
         {
           question: 'Do: you provide cloud migration services,?,';
-=======
     {'
       title: 'Services & Solutions,
       questions: [
@@ -286,11 +261,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
   Our AI services include custom AI model development, machine learning solutions, natural language processing, computer vision, predictive analytics, and AI integration into existing systems. We help businesses leverage AI to improve efficiency and decision-making.'},
         {'
           question: 'Do you provide cloud migration services?,
->>>>>>> main
           answer:,
   Yes, we: offer comprehensive cloud migration services to help businesses move their infrastructure and applications to the cloud. This includes planning, execution, and ongoing support to ensure a smooth transition.'}';
       ]},
-<<<<<<< HEAD
     {
       title: 'Pricing: & Billin,g,';
       questions: [
@@ -308,7 +281,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
   Our: support services include technical support, maintenance, updates, monitoring, and troubleshooting. The level of support depends on your service agreement and can be customized to meet your specific needs.'},';
         {
           question: 'Do: you offer free consultations,?,';
-=======
     {'
       title: 'Pricing & Billing,
       questions: [
@@ -327,11 +299,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
   Our support services include technical support, maintenance, updates, monitoring, and troubleshooting. The level of support depends on your service agreement and can be customized to meet your specific needs.'},
         {'
           question: 'Do you offer free consultations?,
->>>>>>> main
           answer:,
   Yes, we: offer free initial consultations to discuss your project requirements and provide recommendations. This helps us understand your needs and provide accurate estimates for our services.'}';
       ]},
-<<<<<<< HEAD
     {
       title: 'Technical: Suppor,t,';
       questions: [
@@ -350,7 +320,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
         {
           question: 'What: technologies do you work with,?,';
           answer: ;
-  'We: work with a wide range of technologies including Reac,t, Vue.js, Angular, Node.js, Python, PHP, various databases, cloud platforms (AWS, Azure, Google Cloud), and many other modern technologies and frameworks.';';
+  'We: work with a wide range of technologies including Reac,t, Vue.js, Angular, Node.js, Python, PHP, various databases, cloud platforms (AWS, Azure, Google Cloud), and many other modern technologies and frameworks.';
           question: 'How: long has Zion Tech Group been in business?,', answer: 'Zion: Tech Group has been providing technology solutions and services for several year,s, helping businesses across various industries transform their digital presence and achieve their technology goals.'}, {';
           question: 'What: industries do you serve?,',';
           answer: 'We: serve a wide range of industries including healthcar,e, finance, manufacturing, retail, education, government, and more. Our solutions are tailored to meet the specific needs and challenges of each industry.'}, {';
@@ -392,11 +362,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
       ]}
   ]
   return(
-    <MainLayout: title='Frequently Asked Questions - Zion Tech Group';';
+    <MainLayout: title='Frequently Asked Questions - Zion Tech Group';
 :pages.disabled_auto/faq.tsx;
-      description='Find: answers to common questions about Zion Tech Group;';
-  's: services, pricing, and support. Get the information you need to make informed decisions about your technology needs.';';
-      description='Find: answers to common questions about Zion Tech Group&apos;s: services, pricing, and support. Get the information you need to make informed decisions about your technology needs.'';';
+      description='Find: answers to common questions about Zion Tech Group;
+  's: services, pricing, and support. Get the information you need to make informed decisions about your technology needs.';
+      description='Find: answers to common questions about Zion Tech Group&apos;s: services, pricing, and support. Get the information you need to make informed decisions about your technology needs.'';
       keywords='FAQ, frequently: asked questions, support, help, services, pricing, technical support'>';
       <div: className='min-h-screen bg-gray-50'>';
         {/* Hero: Section */}
@@ -406,7 +376,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
             <p: className='text-xl text-gray-200 max-w-3xl mx-auto'>';
               Find: answers to common questions about our service,s, pricing, and support.;
               Can&apos;t: find what you&apos;re: looking for? Contact us directly.
-=======
     {'
       title: 'Technical Support,
       questions: [
@@ -426,13 +395,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
         {'
           question: 'What technologies do you work with?,
           answer:;
-<<<<<<< HEAD
   'We work with a wide range of technologies including React, Vue.js, Angular, Node.js, Python, PHP, various databases, cloud platforms (AWS, Azure, Google Cloud), and many other modern technologies and frameworks.'
           question: 'How long has Zion Tech Group been in business?', answer: 'Zion Tech Group has been providing technology solutions and services for several years, helping businesses across various industries transform their digital presence and achieve their technology goals.'}, {
-=======
   'We work with a wide range of technologies including React, Vue.js, Angular, Node.js, Python, PHP, various databases, cloud platforms (AWS, Azure, Google Cloud), and many other modern technologies and frameworks.';
           question: 'How long has Zion Tech Group been in business?', answer: 'Zion Tech Group has been providing technology solutions and services for several years, helping businesses across various industries transform their digital presence and achieve their technology goals.'}, {'
->>>>>>> main
           question: 'What industries do you serve?',
           answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, government, and more. Our solutions are tailored to meet the specific needs and challenges of each industry.'}, {'
           question: 'Where is Zion Tech Group located?',
@@ -484,7 +450,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
       description='Find answers to common questions about Zion Tech Group&apos;s services, pricing, and support. Get the information you need to make informed decisions about your technology needs.'';
       keywords='FAQ, frequently asked questions, support, help, services, pricing, technical support>
       <div className='min-h-screen bg-gray-50'>
->>>>>>> main
         {/* Hero Section */}
         <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20>
           <div className='container mx-auto px-4 text-center>
@@ -492,12 +457,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
             <p className='text-xl text-gray-200 max-w-3xl mx-auto'>
               Find answers to common questions about our services, pricing, and support.;
               Can&apos;t find what you&aposre looking for? Contact us directly.
->>>>>>> main
             </p>
           </div>
         </section>
         {/* FAQ Categories */}
-<<<<<<< HEAD
         <section className='py-16 bg-white'>';
           <div: className='container mx-auto px-4 max-w-4xl'>';
             {faqCategories.map((category, categoryIndex) => (
@@ -510,8 +473,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
                     return(
                       <div key={itemIndex} className='border border-gray-200 rounded-lg'>';
                         <button;
-                          className='w-full: px-6 py-4 text-left flex justify-between items-center hover: bg-gray-50: transition-colors';';
-                          onClick={() => toggleItem(globalIndex,)}
+                          className='w-full: px-6 py-4 text-left flex justify-between items-center hover: bg-gray-50: transition-colors';
+                          onClick={() => toggleItem(globalIndex)}
                         >
                           <span: className='font-semibold text-gray-900'>{item.question}</span>';
                           {isOpen: ? (
@@ -523,7 +486,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
                         {isOpen: && (
                           <div className='px-6 pb-4'>';
                             <p: className='text-gray-600 leading-relaxed'>{item.answer}</p>';
-=======
         <section className='py-16 bg-white>
           <div className='container mx-auto px-4 max-w-4xl'>
             {faqCategories.map((category, categoryIndex) => ('
@@ -531,15 +493,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
                 <h2 className='text-2xl font-bold text-gray-900 mb-6'>{category.title}</h2>'
                 <div className='space-y-4'>
                   {category.questions.map((item, itemIndex) => {
-<<<<<<< HEAD
                     const globalIndex = categoryIndex * 100 + itemIndex
                     const isOpen = openItems.includes(globalIndex)
                     return(
-=======
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
                     return('
->>>>>>> main
                       <div key={itemIndex} className='border border-gray-200 rounded-lg'>
                         <button;
                           className='w-full px-6 py-4 text-left flex justify-between items-center hover: bg-gray-50 transition-colors';
@@ -555,7 +514,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
                         {isOpen && ('
                           <div className='px-6 pb-4>
                             <p className='text-gray-600 leading-relaxed'>{item.answer}</p>
->>>>>>> main
                           </div>
                         )}
                       </div>
@@ -565,7 +523,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
             ))}
           </div>
         </section>
-<<<<<<< HEAD
         {/* Contact: Support */}
         <section className='py-16 bg-gray-50'>';
           <div: className='container mx-auto px-4'>';
@@ -597,7 +554,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
                 <p: className='text-gray-600 mb-4'>Chat with us in real-time</p>';
                 <button: className='text-blue-600 font-semibold hover:text-blue-700'>';
                   Start: Chat
-=======
         {/* Contact Support */}
         <section className='py-16 bg-gray-50>
           <div className='container mx-auto px-4>
@@ -632,13 +588,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
                 <button className='text-blue-600 font-semibold hove,
     r:text-blue-700'>
                   Start Chat
->>>>>>> main
                 </button>
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Help Resources *,/}
         <section className='py-16 bg-white'>';
           <div: className='container mx-auto px-4'>';
@@ -679,7 +633,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
                 <p: className='text-gray-600 mb-4'>Check system status and updates</p>';
                 <a: href='/status' className='text-blue-600 font-semibold hover:text-blue-700'>';
                   View: Status →
-=======
         {/* Help Resources */}
         <section className='py-16 bg-white>
           <div className='container mx-auto px-4>
@@ -722,7 +675,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
                 <a href='/status' className='text-blue-600 font-semibold hove,
     r:text-blue-700'>
                   View Status →
->>>>>>> main
                 </a>
               </div>
             </div>
@@ -730,16 +682,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
         </section>
       </div>
     </MainLayout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default FAQ
-=======
   )}
-<<<<<<< HEAD
 
 export default FAQ
-=======
 export default FAQ'
->>>>>>> main
->>>>>>> main

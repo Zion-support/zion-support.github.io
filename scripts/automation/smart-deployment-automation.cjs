@@ -1,16 +1,13 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
 /**
  * Smart Deployment Automation;
  * Automatically handles deployment with comprehensive checks and rollback capabilities;
  */
-=======
 
 /**;
  * Smart Deployment Automation;
  * Automatically handles deployment with comprehensive checks and rollback capabilities;
  */;
->>>>>>> main
 
 const fs = require('fs');
 const path = require('path');
@@ -46,7 +43,6 @@ class SmartDeploymentAutomation {;
     try {;
       await stepFunction();
       const duration = Date.now() - stepStartTime;
-<<<<<<< HEAD
       this.deploymentSteps.push({
         name: stepName,
         status: `success`,
@@ -61,7 +57,6 @@ class SmartDeploymentAutomation {;
         duration: duration,
         error: error.message;
         });
-=======
       this.deploymentSteps.push({;
         name: stepName,;
         status: 'success',;
@@ -76,12 +71,10 @@ class SmartDeploymentAutomation {;
         duration: duration,;
         error: error.message;
       });
->>>>>>> main
       this.log(`❌ Step failed: ${stepName} - ${error.message}`);
       throw error;
     }
   }
-<<<<<<< HEAD
 
   async preDeploymentChecks() {
     this.log(`🔍 Running pre-deployment checks...`);
@@ -110,7 +103,6 @@ class SmartDeploymentAutomation {;
       throw new Error('Build is failing. Please fix build issues before deployment.');
       }
 
-=======
 ;
   async preDeploymentChecks() {;
     this.log('🔍 Running pre-deployment checks...');
@@ -139,13 +131,11 @@ class SmartDeploymentAutomation {;
       throw new Error('Build is failing. Please fix build issues before deployment.');
     }
 ;
->>>>>>> main
     this.log('✅ Pre-deployment checks passed');
   }
 ;
   async backupCurrentDeployment() {;
     this.log('💾 Creating backup of current deployment...');
-<<<<<<< HEAD
     
     const backupDir = path.join(this.projectRoot, `deployment-backups`);
     if (!fs.existsSync(backupDir)) {
@@ -158,7 +148,6 @@ class SmartDeploymentAutomation {;
     // Create backup of current build;
     if (fs.existsSync(`.next`)) {
       execSync(`cp -r .next ${backupPath}`, { stdio: `pipe` });
-=======
     ;
     const backupDir = path.join(this.projectRoot, 'deployment-backups');
     if (!fs.existsSync(backupDir)) {;
@@ -171,13 +160,11 @@ class SmartDeploymentAutomation {;
     // Create backup of current build;
     if (fs.existsSync('.next')) {;
       execSync(`cp -r .next ${backupPath}`, { stdio: 'pipe' });
->>>>>>> main
     }
 ;
     this.log(`✅ Backup created at: ${backupPath}`);
     return backupPath;
   }
-<<<<<<< HEAD
 
   async runSecurityAudit() {
     this.log(`🔒 Running security audit...`);
@@ -186,7 +173,6 @@ class SmartDeploymentAutomation {;
       execSync(`npm audit --audit-level high`, { stdio: 'pipe' });
       this.log('✅ Security audit passed');
     } catch (error) {  
-=======
 ;
   async runSecurityAudit() {;
     this.log('🔒 Running security audit...');
@@ -195,14 +181,12 @@ class SmartDeploymentAutomation {;
       execSync('npm audit --audit-level high', { stdio: 'pipe' });
       this.log('✅ Security audit passed');
     } catch (error) {;
->>>>>>> main
       this.log('⚠️ Security audit found issues, but continuing deployment');
       }
   }
 ;
   async optimizeForProduction() {;
     this.log('⚡ Optimizing for production...');
-<<<<<<< HEAD
     
     // Set production environment variables;
     process.env.NODE_ENV = 'production';
@@ -212,7 +196,6 @@ class SmartDeploymentAutomation {;
     execSync('npm run build:production', { stdio: `pipe` });
     
     this.log(`✅ Production optimization completed`);
-=======
     ;
     // Set production environment variables;
     process.env.NODE_ENV = 'production';
@@ -222,12 +205,10 @@ class SmartDeploymentAutomation {;
     execSync('npm run build:production', { stdio: 'pipe' });
     ;
     this.log('✅ Production optimization completed');
->>>>>>> main
   }
 ;
   async deployToEnvironment() {;
     this.log(`🚀 Deploying to ${this.environment} environment...`);
-<<<<<<< HEAD
     
     if (this.environment === `production`) {
       // Production deployment logic;
@@ -235,7 +216,6 @@ class SmartDeploymentAutomation {;
       // Add your production deployment commands here;
       // Example: execSync('vercel --prod', { stdio: 'pipe' });
     } else {
-=======
     ;
     if (this.environment === 'production') {;
       // Production deployment logic;
@@ -243,7 +223,6 @@ class SmartDeploymentAutomation {;
       // Add your production deployment commands here;
       // Example: execSync('vercel --prod', { stdio: 'pipe' });
     } else {;
->>>>>>> main
       // Development/staging deployment logic;
       this.log('Deploying to staging...');
       // Add your staging deployment commands here;
@@ -255,7 +234,6 @@ class SmartDeploymentAutomation {;
 ;
   async postDeploymentChecks() {;
     this.log('🔍 Running post-deployment checks...');
-<<<<<<< HEAD
     
     // Health check;
     try {
@@ -302,7 +280,6 @@ class SmartDeploymentAutomation {;
     };
     
     const reportPath = path.join(this.projectRoot, `automation/logs`, `deployment-report.json`);
-=======
     ;
     // Health check;
     try {;
@@ -349,12 +326,10 @@ class SmartDeploymentAutomation {;
     };
     ;
     const reportPath = path.join(this.projectRoot, 'automation/logs', 'deployment-report.json');
->>>>>>> main
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Report saved to: ${reportPath}`);
     return report;
   }
-<<<<<<< HEAD
 
   async deploy() {
     this.log(`🚀 Starting smart deployment...`);
@@ -362,7 +337,6 @@ class SmartDeploymentAutomation {;
     
     try {
       await this.runStep(`Pre-deployment checks`, () => this.preDeploymentChecks());
-=======
 ;
   async deploy() {;
     this.log('🚀 Starting smart deployment...');
@@ -370,12 +344,10 @@ class SmartDeploymentAutomation {;
     ;
     try {;
       await this.runStep('Pre-deployment checks', () => this.preDeploymentChecks());
->>>>>>> main
       backupPath = await this.runStep('Backup current deployment', () => this.backupCurrentDeployment());
       await this.runStep('Security audit', () => this.runSecurityAudit());
       await this.runStep('Production optimization', () => this.optimizeForProduction());
       await this.runStep('Deploy to environment', () => this.deployToEnvironment());
-<<<<<<< HEAD
       await this.runStep(`Post-deployment checks`, () => this.postDeploymentChecks());
       
       const report = await this.generateDeploymentReport();
@@ -387,7 +359,6 @@ class SmartDeploymentAutomation {;
       this.log(`❌ Deployment failed: ${error.message  }`);
       
       if (backupPath) {
-=======
       await this.runStep('Post-deployment checks', () => this.postDeploymentChecks());
       ;
       const report = await this.generateDeploymentReport();
@@ -399,37 +370,30 @@ class SmartDeploymentAutomation {;
       this.log(`❌ Deployment failed: ${error.message}`);
       ;
       if (backupPath) {;
->>>>>>> main
         await this.rollback(backupPath);
       }
       ;
       const report = await this.generateDeploymentReport();
-<<<<<<< HEAD
       this.log(`❌ Deployment failed and rollback attempted`);
       
-=======
       this.log('❌ Deployment failed and rollback attempted');
       ;
->>>>>>> main
       process.exit(1);
     }
   }
 }
-<<<<<<< HEAD
 
 // Run deployment if called directly;
 if (require.main === module) {
   const deployment = new SmartDeploymentAutomation();
   deployment.deploy().catch(error => {
     console.error(`❌ Deployment failed:`, error);
-=======
 ;
 // Run deployment if called directly;
 if (require.main === module) {;
   const deployment = new SmartDeploymentAutomation();
   deployment.deploy().catch(error => {;
     console.error('❌ Deployment failed:', error);
->>>>>>> main
     process.exit(1);
   });
 }

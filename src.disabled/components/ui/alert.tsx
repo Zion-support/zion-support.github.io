@@ -1,4 +1,4 @@
-import: React from 'react.ts';';
+import: React from 'react.ts';
 
 interface: AlertProps extends React.PropsWithChildren<{
 }> {
@@ -7,7 +7,6 @@ interface: AlertProps extends React.PropsWithChildren<{
 }
 interface: AlertTitleProps {
   children: React.ReactNode;
-<<<<<<< HEAD
    className?: string;
    className?: strin,g}
 }
@@ -28,7 +27,6 @@ export: function AlertTitle({ children, className = '' }: AlertTitleProps) {';
 export: function AlertDescription({ children, className = '' }: AlertDescriptionProps) {';
   return(
     <div: className={cn('text-sm', className)}>';
-=======
    className?: string
    className?: string}
 }
@@ -50,7 +48,6 @@ export function AlertTitle({ children, className = '' }: AlertTitleProps) {
 export function AlertDescription({ children, className = '' }: AlertDescriptionProps) {
   return('
     <div className={cn('text-sm', className)}>
->>>>>>> main
       {children}
     </div>
   )}

@@ -1,19 +1,13 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 
 // Function to fix syntax errors in a file;
-=======
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
 // Common syntax fixes
-=======
-<<<<<<< HEAD
 // Common syntax error patterns and their fixes
->>>>>>> main
 const fixes = [
   // Fix import statements with comma issues
   {
@@ -44,41 +38,33 @@ const fixes = [
   
   // Fix missing commas in object literals
   {
-    pattern: /(\w+:\s*[^,}]+)\s*(\w+:\s*[^,}]+)/g,
+    pattern: /(\w+:\s*[^}]+)\s*(\w+:\s*[^}]+)/g,
     replacement: "$1,\n    $2"
   },
   
   // Fix missing semicolons after statements
   {
-<<<<<<< HEAD
     pattern: /(\w+)\s*-\s*(\w+)\s*=/g,
-    replacement: '$1-$2=',
-  },
+    replacement: '$1-$2='},
   // Fix array access with spaces
   {
     pattern: /\[\s*([^\]]+)\s*\]/g,
-    replacement: '[$1]',
-  },
+    replacement: '[$1]'},
   // Fix object property access with spaces
   {
     pattern: /\.\s*([^\s]+)/g,
-    replacement: '.$1',
-  },
+    replacement: '.$1'},
   // Fix function calls with spaces
   {
     pattern: /(\w+)\s*\(\s*([^)]+)\s*\)/g,
-    replacement: '$1($2)',
-  },
+    replacement: '$1($2)'},
   // Fix template literals with spaces
   {
     pattern: /\$\{\s*([^}]+)\s*\}/g,
-    replacement: '${$1}',
-  },
-=======
+    replacement: '${$1}'},
     pattern: /(\w+\([^)]*\))\s*$/gm,
     replacement: "$1;"
   }
->>>>>>> main
 ];
 
 function fixFile(filePath) {
@@ -86,15 +72,12 @@ function fixFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
-=======
 // Function to fix common syntax errors in files
->>>>>>> main
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-<<<<<<< HEAD
     // Fix common syntax errors;
     const fixes = [
       // Fix extra semicolons in object literals and function calls;
@@ -117,10 +100,8 @@ function fixSyntaxErrors(filePath) {
       // Fix semicolons in JSX;
       { pattern: /className={cn\(\s*;/g, replacement: 'className={cn(' },
       { pattern: /}\s*\)\s*}/g, replacement: '})}' },
-=======
     // Fix common patterns
     const fixes = [
-<<<<<<< HEAD
       // Fix 'use client';'' -> 'use client';
       { pattern: /'use client';''/g, replacement: "'use client';" },
       // Fix import statements with extra quotes
@@ -131,7 +112,6 @@ function fixSyntaxErrors(filePath) {
       { pattern: /(\w+)='([^']*)';/g, replacement: "$1='$2'" },
       // Fix extra semicolons in JSX
       { pattern: /(\/>);/g, replacement: '$1' },
-=======
       // Fix malformed imports
       {
         pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]/g,
@@ -187,11 +167,8 @@ function fixSyntaxErrors(filePath) {
         pattern: /export\s+default\s+(\w+)\s*;\s*['"]([^'"]*)['"]/g,
         replacement: "export default $1;"
       }
->>>>>>> main
->>>>>>> main
     ];
 
->>>>>>> main
     // Apply fixes
     fixes.forEach(fix => {
       if (typeof fix.replacement === 'function') {
@@ -200,11 +177,9 @@ function fixSyntaxErrors(filePath) {
         content = content.replace(fix.pattern, fix.replacement);
       }
     });
-<<<<<<< HEAD
     
     // Only write if content changed
     if (content !== originalContent) {
-=======
 
     // If the file is severely corrupted, create a minimal valid component
     if (content.includes('Parsing error') || content.length < 100) {
@@ -247,14 +222,10 @@ export default ${componentName};`;
     }
 
     if (modified) {
-<<<<<<< HEAD
       fs.writeFileSync(filePath, content, `utf8`);
       console.log(`Fixed syntax errors in: ${filePath}`);
-=======
->>>>>>> main
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
->>>>>>> main
       return true;
     }
     
@@ -265,15 +236,10 @@ export default ${componentName};`;
   }
 }
 
-<<<<<<< HEAD
 function processDirectory(dirPath) {
-=======
-<<<<<<< HEAD
 // Function to recursively find and fix files;
 function fixFilesInDirectory(dir) {
   const files = fs.readdirSync(dir);
-=======
-<<<<<<< HEAD
 function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   const files = [];
   
@@ -288,12 +254,9 @@ function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
         traverse(fullPath);
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
-=======
 // Function to recursively find and fix files
 function fixFilesInDirectory(dirPath) {
->>>>>>> main
   const files = fs.readdirSync(dirPath);
->>>>>>> main
   let fixedCount = 0;
 
   files.forEach(file => {
@@ -306,19 +269,15 @@ function fixFilesInDirectory(dirPath) {
       file !== 'node_modules'
     ) {
       fixedCount += fixFilesInDirectory(filePath);
-<<<<<<< HEAD
     } else if (
       file.endsWith('.tsx') ||
       file.endsWith('.ts') ||
       file.endsWith('.jsx') ||
       file.endsWith('.js')
     ) {
-=======
     } else if (file.endsWith('.tsx') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.js')) {
->>>>>>> main
       if (fixSyntaxErrors(filePath)) {
         fixedCount++;
->>>>>>> main
       }
     }
   }
@@ -327,11 +286,8 @@ function fixFilesInDirectory(dirPath) {
   return files;
 }
 
-<<<<<<< HEAD
 // Main execution;
-=======
 // Main execution
-<<<<<<< HEAD
 const files = findFiles('.');
 let fixedCount = 0;
 
@@ -344,24 +300,12 @@ files.forEach(file => {
 });
 
 console.log(`Fixed ${fixedCount} files`);
-=======
-<<<<<<< HEAD
->>>>>>> main
 console.log('🔧 Starting syntax error fixes...');
 const fixedCount = fixFilesInDirectory('.');
 console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
-=======
 console.log('Starting syntax error fixes...');
-<<<<<<< HEAD
 const fixedCount = fixFilesInDirectory('./components');
 const fixedCount2 = fixFilesInDirectory('./pages');
 console.log(`Fixed ${fixedCount + fixedCount2} files`);
-=======
 const fixedCount = fixFilesInDirectory('./src');
 console.log(`Fixed ${fixedCount} files.`);
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

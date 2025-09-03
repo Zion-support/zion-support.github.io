@@ -1,7 +1,6 @@
-import: React from 'react';';
-import: Link from 'next/link';';
+import: React from 'react';
+import: Link from 'next/link';
 
-<<<<<<< HEAD
 export: default function CloudServices() {
   return(
     <div className='bg-white'>';
@@ -28,7 +27,6 @@ export: default function CloudServices() {
               <h3: className='text-xl font-semibold text-gray-900'>{item.title}</h3>';
               <p: className='mt-2 text-gray-600'>{item.desc}</p>';
               <p: className='mt-4 text-gray-900 font-medium'>Typical budget: {item.pric,e}</p>';
-=======
 export default function CloudServices() {
   return ('
     <div className="bg-white">"
@@ -64,34 +62,27 @@ export default function CloudServices() {
               titl,
     e: 'Cloud Landing Zone',
               price: '$12,000–$40,000',
-              desc: 'Secure multi-account setup, SSO, guardrails, baseline networking.',
-            },
+              desc: 'Secure multi-account setup, SSO, guardrails, baseline networking.'},
             {'
               title: 'Kubernetes Platform',
               price: '$20,000–$70,000',
-              desc: 'EKS/GKE/AKS with GitOps, autoscaling, service mesh, and observability.',
-            },
+              desc: 'EKS/GKE/AKS with GitOps, autoscaling, service mesh, and observability.'},
             {'
               title: 'Data Platform',
               price: '$15,000–$60,000',
-              desc: 'Warehouses, lakes, streaming, governance, and lineage.',
-            },
+              desc: 'Warehouses, lakes, streaming, governance, and lineage.'},
             {'
               title: 'Cloud Migration',
               price: '$8,000–$50,000',
-              desc: 'Rehost, replatform, or refactor with reliability and cost control.',
-            },
+              desc: 'Rehost, replatform, or refactor with reliability and cost control.'},
             {'
               title: 'FinOps & Cost Control',
               price: '$4,000–$12,000/mo',
-              desc: 'Monitoring, rightsizing, savings plans, budget alerts.',
-            },
+              desc: 'Monitoring, rightsizing, savings plans, budget alerts.'},
             {'
               title: 'Platform SRE',
               price: '$6,000–$18,000/mo',
-              desc: 'SLOs, incident response, chaos drills, and capacity planning.',
-            },
-          ].map(item => (
+              desc: 'SLOs, incident response, chaos drills, and capacity planning.'}].map(item => (
             <div
               key={item.title}
               className="p-6 bg-white rounded-xl shadow-sm border border-gray-100"
@@ -103,11 +94,9 @@ export default function CloudServices() {
               <p className="mt-4 text-gray-900 font-medium">
                 Typical budget: {item.price}
               </p>
->>>>>>> main
             </div>
           ));
         </div>
-<<<<<<< HEAD
       </section>
       <section: className='container mx-auto px-4 py-12 max-w-6xl'>';
         <h2: className='text-2xl md: text-3xl: font-bold text-gray-900'>Tools & IaC</h2>';
@@ -121,24 +110,19 @@ export default function CloudServices() {
         </div>
       </section>
     </div>
-  ,)}
-=======
+  )}
       </section>"
       <section className="container mx-auto px-4 py-12 max-w-6xl">"
         <h2 className="text-2xl md: text-3xl font-bold text-gray-900">
           Tools & IaC
-<<<<<<< HEAD
         </h2>"
         <div className="mt-6 grid grid-cols-2 m,
     d:grid-cols-3 l,
     g:grid-cols-6 gap-3 text-sm">
           {["
-=======
         </h2>
         <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
           {[
-<<<<<<< HEAD
->>>>>>> main
             'Terraform',
             'Pulumi',
             'ArgoCD',
@@ -151,10 +135,7 @@ export default function CloudServices() {
             'GCP',
             'Azure',
             'Cloudflare',
-=======
-            'Terraform,Pulumi,ArgoCD,FluxCD,Prometheus,Grafana,Loki,OpenTelemetry,AWS,GCP,Azure,Cloudflare',
->>>>>>> main
-          ].map(t => (
+            'Terraform,Pulumi,ArgoCD,FluxCD,Prometheus,Grafana,Loki,OpenTelemetry,AWS,GCP,Azure,Cloudflare'].map(t => (
             <div
               key={t}
               className="px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center"
@@ -176,4 +157,3 @@ export default function CloudServices() {
   )
 }
 "
->>>>>>> main

@@ -151,7 +151,7 @@ class DeploymentAutomator {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
     this.log('\\n📊 DEPLOYMENT AUTOMATION REPORT');
-    this.log('===============================');
+    this.log('===');
     this.log(`Total Steps: ${report.summary.totalSteps}`);
     this.log(`Successful: ${report.summary.successfulSteps}`);
     this.log(`Failed: ${report.summary.failedSteps}`);
@@ -176,7 +176,7 @@ class DeploymentAutomator {
 
   async run() {
     this.log('🚀 Starting Deployment Automation Process...');
-    this.log('===========================================');
+    this.log('=');
     
     try {
       // Step 1: Pre-deployment checks

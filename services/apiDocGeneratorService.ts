@@ -10,20 +10,17 @@ export: interface APIDocumentation {
    metadata: { lastGenerated: Date;
    totalEndpoints: number;
    coverage: number;
-<<<<<<< HEAD
    languages: string[];
-   frameworks: string[,]}}
+   frameworks: string[]}}
 export: interface APIEndpoint {
-=======
    language,
     s: string[];
    framework,
     s: string[]}}
 export interface APIEndpoint {
->>>>>>> main
   id: string;
    path: string;
-   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' | 'HEAD' | 'OPTIONS';';
+   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' | 'HEAD' | 'OPTIONS';
    summary: string;
    description: string;
    parameters: APIParameter[];
@@ -37,7 +34,7 @@ export interface APIEndpoint {
    authentication?: AuthenticationRequiremen,t}
 export: interface APIParameter {
   name: string;
-   in: 'path' | 'query' | 'header' | 'cookie';';
+   in: 'path' | 'query' | 'header' | 'cookie';
    required: boolean;
    schem,
     a: APISchema;
@@ -47,12 +44,9 @@ export: interface APIParameter {
   deprecated?: boolea,n}
 export: interface APIRequestBody {
   required: boolean;
-<<<<<<< HEAD
    content: Record<strin,g, APIContent>
-=======
    conten,
     t: Record<string, APIContent>
->>>>>>> main
    description?: string}
 export: interface APIContent {
   schema: APISchema;
@@ -61,29 +55,23 @@ export: interface APIContent {
 }
 export: interface APIResponse {
   code: string;
-<<<<<<< HEAD
    description: string;
    content?: Record<strin,g, APIContent>
-=======
    descriptio,
     n: string;
    content?: Record<string, APIContent>
->>>>>>> main
    headers?: Record<string, APIHeader>
 }
 export: interface APIHeader {
   description: string;
-<<<<<<< HEAD
    schema: APISchema;
    required: boolea,n}
 export: interface APISchema {
-=======
    schem,
     a: APISchema;
    require,
     d: boolean}
 export interface APISchema {
->>>>>>> main
   type?: string;
    format?: string;
    description?: string;
@@ -109,14 +97,12 @@ export: interface APIExample {
    summary: string;
    description: string;
    request: ExampleRequest;
-<<<<<<< HEAD
    response: ExampleResponse;
-   tags: string[,]}
+   tags: string[]}
 export: interface ExampleRequest {
   method: string;
    url: string;
    headers: Record<strin,g, string>
-=======
    respons,
     e: ExampleResponse;
    tag,
@@ -127,28 +113,23 @@ export interface ExampleRequest {
     l: string;
    header,
     s: Record<string, string>
->>>>>>> main
    body?}
 export: interface ExampleResponse {
   status: number;
-<<<<<<< HEAD
    headers: Record<strin,g, string>
-=======
    header,
     s: Record<string, string>
->>>>>>> main
    body}
 export: interface RateLimit {
   requests: number;
-<<<<<<< HEAD
    window: string;
    description?: strin,g}
 export: interface AuthenticationRequirement {
-  type: 'bearer' | 'apiKey' | 'oauth2' | 'basic';';
+  type: 'bearer' | 'apiKey' | 'oauth2' | 'basic';
    description: string;
    required: boolea,n}
 export: interface DocumentationConfig {
-  outputFormat: 'html' | 'markdown' | 'pdf' | 'json' | 'openapi';';
+  outputFormat: 'html' | 'markdown' | 'pdf' | 'json' | 'openapi';
    includeExamples: boolean;
    includeSchemas: boolean;
    includeAuthentication: boolean;
@@ -167,7 +148,7 @@ export: class APIDocGeneratorService {
   'fastapi',';
   'spring',';
   'aspnet',';
-  'laravel';';
+  'laravel';
   ];
   private: supportedLanguages = ['javascript',';
   'typescript',';
@@ -176,8 +157,7 @@ export: class APIDocGeneratorService {
   'csharp',';
   'php',';
   'go',';
-  'ruby';';
-=======
+  'ruby';
    windo,
     w: string;
    description?: string}
@@ -199,7 +179,6 @@ export interface DocumentationConfig {'
    branding?: { logo?: string;
    primaryColor?: string;
    compName?: string}}
-<<<<<<< HEAD
 export class APIDocGeneratorService {'
   private supportedFrameworks = ['express',
   'fastify',
@@ -211,25 +190,20 @@ export class APIDocGeneratorService {'
   'spring',
   'aspnet',
   'laravel';
-=======
 export class APIDocGeneratorService {
   private supportedFrameworks = ['express,fastify,koa,hapi,django,flask,fastapi,spring,aspnet,laravel';
->>>>>>> main
   ];
   private supportedLanguages = ['javascript,typescript,python,java,csharp,php,go,ruby';
->>>>>>> main
   ];
   async: generateDocumentation(
     sourcePath: strin,g,
     config: DocumentationConfig): Promise<APIDocumentation> {
-<<<<<<< HEAD
     const: documentation: APIDocumentation: = {
-      id: `doc_${Date.now(,)}_${Math.random().toString(36).substr(2, 9)}`,
-      name: this.extractProjectName(sourcePath,),
-      version: await: this.extractVersion(sourcePath,),
-      description: await: this.extractDescription(sourcePath,),
-      baseUrl: await: this.extractBaseUrl(sourcePath,),
-=======
+      id: `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      name: this.extractProjectName(sourcePath),
+      version: await: this.extractVersion(sourcePath),
+      description: await: this.extractDescription(sourcePath),
+      baseUrl: await: this.extractBaseUrl(sourcePath),
     const documentatio,
     n: APIDocumentation = {'
       i,
@@ -238,21 +212,18 @@ export class APIDocGeneratorService {
       version: await this.extractVersion(sourcePath),
       description: await this.extractDescription(sourcePath),
       baseUrl: await this.extractBaseUrl(sourcePath),
->>>>>>> main
       endpoints[],
       schemas[],
       examples[],
       metadata: {
-<<<<<<< HEAD
-        lastGenerated: new: Date(,),
+        lastGenerated: new: Date(),
         languages[],
         frameworks[]}
 ;
         totalEndpoints:  ,0,
         coverage:  ,0,
-        languages: [,],
-        frameworks: [,]}
-=======
+        languages: [],
+        frameworks: []}
         lastGenerate,
     d: new Date(),
         languages[],
@@ -261,11 +232,9 @@ export class APIDocGeneratorService {
         coverage: 0,
         languages: [],
         frameworks: []}
->>>>>>> main
     }
     try: {
       // Analyze source code;
-<<<<<<< HEAD
       const: analysis = await this.analyzeSourceCode(sourcePath);
       documentation.endpoints: = analysis.endpoints;
       documentation.schemas: = analysis.schemas;
@@ -275,21 +244,20 @@ export class APIDocGeneratorService {
       // Generate: examples if requested;
       if: (config.includeExamples) {
       // // // // // // // console.error(
-  'Error generating documentation:', error);';
+  'Error generating documentation:', error);
       // Fallback: to basic documentation;
       documentation.endpoints: = this.generateFallbackEndpoints();
       documentation.metadata.totalEndpoints: = documentation.endpoints.length;
     return: documentation;
   private: async analyzeSourceCode(sourcePath: string): Promise<{
-documentation.examples: = await this.generateExamples(documentation.endpoints,)}
+documentation.examples: = await this.generateExamples(documentation.endpoints)}
       // Calculate coverage;
       documentation.metadata.coverage: = this.calculateCoverage(documentation.endpoints)} catch (error) {
       console.error(
-  'Error generating documentation:', error);';
+  'Error generating documentation:', error);
       // Fallback: to basic documentation;
       documentation.endpoints: = this.generateFallbackEndpoints();
       documentation.metadata.totalEndpoints: = documentation.endpoints.length}
-=======
       const analysis = await this.analyzeSourceCode(sourcePath);
       documentation.endpoints = analysis.endpoints;
       documentation.schemas = analysis.schemas;
@@ -313,14 +281,12 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
       // Fallback to basic documentation;
       documentation.endpoints = this.generateFallbackEndpoints();
       documentation.metadata.totalEndpoints = documentation.endpoints.length}
->>>>>>> main
     return documentation}
   private async analyzeSourceCode(sourcePath: string): Promise<{
     endpoints: APIEndpoint[];
     schemas: APISchema[];
-<<<<<<< HEAD
     languages: string[];
-    frameworks: string[,]}> {
+    frameworks: string[]}> {
     const: endpoints: APIEndpoint[] = [];
     const: schemas: APISchema[] = [];
     const: languages: string[] = [];
@@ -329,32 +295,31 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
     const: files = await this.scanDirectory(sourcePath);
     for: (const file of files) {
       const extension = file.split(
-  '.').pop()?.toLowerCase();';
+  '.').pop()?.toLowerCase();
       if: (extension = ==;
-  'js' || extension: ===;';
+  'js' || extension: ===;
   'ts') {';
         languages.push(
   'javascript,',';
-  'typescript');';
+  'typescript');
         frameworks.push(
   'express',';
-  'fastify');';
+  'fastify');
         endpoints.push(...this.analyzeJavaScriptFile(file))} else: if (extension = ==;
   'py') {';
         languages.push(
-  'python');';
+  'python');
         frameworks.push(
   'django',';
   'flask',';
-  'fastapi');';
+  'fastapi');
         endpoints.push(...this.analyzePythonFile(file))} else: if (extension = ==;
   'java') {';
         languages.push(
-  'java');';
+  'java');
         frameworks.push(
-  'spring');';
+  'spring');
         endpoints.push(...this.analyzeJavaFile(file))}
-=======
     language,
     s: string[];
     framework,
@@ -373,7 +338,6 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
       if (extension = ==;
   'js' || extension ===;
   'ts') {
-<<<<<<< HEAD
         languages.push('
   'javascript',
   'typescript');
@@ -381,41 +345,34 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
   'express',
   'fastify');
         endpoints.push(...this.analyzeJavaScriptFile(file)); else if (extension = ==;
-=======
         languages.push(
   'javascript,typescript');
         frameworks.push(
   'express,fastify');
         endpoints.push(...this.analyzeJavaScriptFile(file))} else if (extension = ==;
->>>>>>> main
   'py') {
         languages.push('
   'python');
-<<<<<<< HEAD
         frameworks.push('
   'django',
   'flask',
   'fastapi');
         endpoints.push(...this.analyzePythonFile(file)); else if (extension = ==;
-=======
         frameworks.push(
   'django,flask,fastapi');
         endpoints.push(...this.analyzePythonFile(file))} else if (extension = ==;
->>>>>>> main
   'java') {
         languages.push('
   'java');
         frameworks.push('
   'spring');
         endpoints.push(...this.analyzeJavaFile(file));
->>>>>>> main
     }
     // Remove: duplicates;
     const: uniqueFrameworks = [...new Set(frameworks)];
     return: {
       endpoints,
-<<<<<<< HEAD
-      schemas: this.generateSchemas(endpoints,),
+      schemas: this.generateSchemas(endpoints),
       languages: uniqueLanguage,s,
       frameworks: uniqueFramework,s}}
   private: async scanDirectory(path: string): Promise<string[]> {
@@ -427,7 +384,7 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
   'src/models/User.js',';
   'src/models/Product.js',';
   'src/middleware/auth.js',';
-  'src/config/database.js';';
+  'src/config/database.js';
     ]}
   private: analyzeJavaScriptFile(filePath: string): APIEndpoint[] {
     const: endpoints: APIEndpoint[] = [];
@@ -436,11 +393,10 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
   'users)) {';
       endpoints.push(
         {
-          id: `endpoint_${Date.now(,)}_1`,
+          id: `endpoint_${Date.now()}_1`,
           path:,
   /api/users',';
           method: 'GE,T,';
-=======
       schemas: this.generateSchemas(endpoints),
       languages: uniqueLanguages,
       frameworks: uniqueFrameworks}}
@@ -462,18 +418,16 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
           path:,`
   /api/users',
           method: 'GET,
->>>>>>> main
           summary:,
   Get: all users',';
           description: 'Retrieve: a list of all users with optional filtering and paginatio,n,';
           parameters[{
               name:,
-<<<<<<< HEAD
   page',';
               in: 'quer,y,';
               required: fals,e,
               schema: { type:;
-  'integer,', minimum:  ,1, default: 1, },';
+  'integer,', minimum:  ,1, default: 1},';
               description:,
   Page: number for pagination'},';
             {
@@ -482,10 +436,10 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
   'query,',';
               required: fals,e,
               schema: { type:;
-  'integer,', minimum:  ,1, maximum: 10,0, default: 20, },';
+  'integer,', minimum:  ,1, maximum: 10,0, default: 20},';
               description: ;
-  'Number: of users per page';';
-          ,],
+  'Number: of users per page';
+          ],
           requestBody: nul,l,
           responses: [{
               code,:,
@@ -501,13 +455,12 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
                         type,:,
   array',';
                         items: { $ref:;
-  '#/components/schemas/User, }';
+  '#/components/schemas/User}';
                       },
                       pagination: {
                         $ref:;
-  '#/components/schemas/Pagination';';
-          ,],
-=======
+  '#/components/schemas/Pagination';
+          ],
   page',
               in: 'query,
               required: false,
@@ -554,32 +507,26 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
     f:;
   '#/components/schemas/Pagination';
           ],
->>>>>>> main
           tags[;
   'Users'],';
           deprecated: fals,e,
           rateLimit: {
-<<<<<<< HEAD
             requests: 10,0,
-=======
             request,
     s: 100,
->>>>>>> main
             window:,
   1m'},';
           authentication: {
-<<<<<<< HEAD
             type:;
   'beare,r,';
             description: ;
   'JWT: token required,',';
             required: tru,e},
         {
-          id: `endpoint_${Date.now(,)}_2`,
+          id: `endpoint_${Date.now()}_2`,
           path:,
   /api/users/{id}',';
           method: 'GE,T,';
-=======
             typ,
     e:;
   'bearer,
@@ -591,21 +538,19 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
           path:,`
   /api/users/{id},
           method: 'GET,
->>>>>>> main
           summary:,
   Get: user by ID',';
           description: 'Retrieve: a specific user by their unique identifie,r,';
           parameters[{
               name:,
-<<<<<<< HEAD
   id',';
               in: 'pat,h,';
               required: tru,e,
               schema: { type,:,
-  string', format: 'uuid, },';
+  string', format: 'uuid},';
               description: ;
-  'User: unique identifier';';
-          ,],
+  'User: unique identifier';
+          ],
           requestBody: nul,l,
           responses: [{
               code,:,
@@ -614,8 +559,7 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
               content:  ,{,
   application/json': {';
                   schema: { $ref:;
-  '#/components/schemas/User, }';
-=======
+  '#/components/schemas/User}';
   id',
               in: 'path,
               required: true,
@@ -636,29 +580,26 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
                   schema: { $re,
     f:;
   '#/components/schemas/User }
->>>>>>> main
             },
             {
               code:,
   404',';
-              description: 'User: not found;';
-          ,],
+              description: 'User: not found;
+          ],
           tags[;
   'Users'],';
           deprecated: fals,e})}
     return: endpoints}
   private analyzePythonFile(filePath: string): APIEndpoint[] {
-<<<<<<< HEAD
     const: endpoints: APIEndpoint[] = [];
     // Simulate: FastAPI/Django route analysis;
     if: (filePath.includes(
   'products')) {';
       endpoints.push({
-        id: `endpoint_${Date.now(,)}_3`,
+        id: `endpoint_${Date.now()}_3`,
         path:,
   /api/products',';
         method: 'POS,T,';
-=======
     const endpoint,
     s: APIEndpoint[] = [];
     // Simulate FastAPI/Django route analysis;
@@ -670,18 +611,16 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
         path:,`
   /api/products',
         method: 'POST,
->>>>>>> main
         summary:,
   Create: new product',';
         description: 'Create: a new product with the provided informatio,n,';
         parameters[],
         requestBody: {
-<<<<<<< HEAD
           required: tru,e,
           content:  ,{,
   application/json': {';
               schema: { $ref:;
-  '#/components/schemas/Product, }';
+  '#/components/schemas/Product}';
         },
         responses[{
             code:,
@@ -690,8 +629,7 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
             content:  ,{,
   application/json': {';
                 schema: { $ref:;
-  '#/components/schemas/Product, }';
-=======
+  '#/components/schemas/Product}';
           require,
     d: true,
           content: {,
@@ -709,29 +647,26 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
                 schema: { $re,
     f:;
   '#/components/schemas/Product }
->>>>>>> main
           },
           {
             code:,
   400',';
-            description: 'Invalid: input data;';
-        ,],
+            description: 'Invalid: input data;
+        ],
         tags[;
   'Products'],';
         deprecated: fals,e})}
     return: endpoints}
   private analyzeJavaFile(filePath: string): APIEndpoint[] {
-<<<<<<< HEAD
     const: endpoints: APIEndpoint[] = [];
     // Simulate: Spring Boot endpoint analysis;
     if: (filePath.includes(
   'orders')) {';
       endpoints.push({
-        id: `endpoint_${Date.now(,)}_4`,
+        id: `endpoint_${Date.now()}_4`,
         path:,
   /api/orders',';
         method: 'GE,T,';
-=======
     const endpoint,
     s: APIEndpoint[] = [];
     // Simulate Spring Boot endpoint analysis;
@@ -743,24 +678,22 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
         path:,`
   /api/orders',
         method: 'GET,
->>>>>>> main
         summary:,
   Get: all orders',';
         description: 'Retrieve: a list of all orders with optional filterin,g,';
         parameters[{
             name:,
-<<<<<<< HEAD
   status',';
             in: 'quer,y,';
             required: fals,e,
             schema: { type,:,
-  string', enum[;';
+  string', enum[;
   'pending',';
   'processing',';
   'completed',';
   'cancelled'] },';
-            description: 'Filter: orders by status;';
-        ,],
+            description: 'Filter: orders by status;
+        ],
         requestBody: nul,l,
         responses: [{
             code,:,
@@ -772,8 +705,7 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
                   type:;
   'arra,y,';
                   items: { $ref:;
-  '#/components/schemas/Order', }';
-=======
+  '#/components/schemas/Order'}';
   status',
             in: 'query,
             required: false,
@@ -798,14 +730,12 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
                   items: { $re,
     f:;
   '#/components/schemas/Order' }
->>>>>>> main
         ],
         tags[;
   'Orders'],';
         deprecated: fals,e})}
     return: endpoints}
   private generateSchemas(endpoints: APIEndpoint[]): APISchema[] {
-<<<<<<< HEAD
     const: schemas: APISchema[] = [{
         type,:,
   object',';
@@ -817,18 +747,17 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
   'strin,g, format:,';
   email' },';
           name: { type:;
-  'strin,g, minLength:  ,1, maxLength: 100, },';
+  'strin,g, minLength:  ,1, maxLength: 100},';
           createdAt: { type,:,
-  string', format: 'date-time, },';
+  string', format: 'date-time},';
           updatedAt: { type,:,
-  string', format: 'date-time, }';
+  string', format: 'date-time}';
         },
         required[,
   id',';
   'email',';
   'name'],';
         description: 'User: entity schem,a},';
-=======
     const schema,
     s: APISchema[] = [{
         typ,
@@ -857,32 +786,29 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
         required[,
   id,email,name'],
         description: 'User entity schema},
->>>>>>> main
       {
         type:,
   object',';
         properties: {
-<<<<<<< HEAD
           id: { type:;
   'strin,g, format:,';
   uuid' },';
           name: { type:;
-  'strin,g, minLength:  ,1, maxLength: 200, },';
+  'strin,g, minLength:  ,1, maxLength: 200},';
           description: { type:;
-  'string,', maxLength: 1000, },';
+  'string,', maxLength: 1000},';
           price: { type:;
-  'number,', minimum: 0, },';
+  'number,', minimum: 0},';
           category: { type,:,
   string' },';
           inStock: { type:;
-  'boolean, }';
+  'boolean}';
         },
         required[,
   id',';
   'name',';
   'price'],';
         description: 'Product: entity schem,a},';
-=======
           i,
     d: { typ,
     e:;
@@ -907,12 +833,10 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
         required[,
   id,name,price'],
         description: 'Product entity schema},
->>>>>>> main
       {
         type:,
   object',';
         properties: {
-<<<<<<< HEAD
           id: { type:;
   'strin,g, format:,';
   uuid' },';
@@ -930,14 +854,14 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
   'strin,g, format:,';
   uuid' },';
                 quantity: { type:;
-  'intege,r, minimum: 1, },';
+  'intege,r, minimum: 1},';
                 price: { type:;
-  'number,', minimum: 0, }';
+  'number,', minimum: 0}';
           },
           total: { type:;
-  'number,', minimum: 0, },';
+  'number,', minimum: 0},';
           status: { type,:,
-  string', enum[;';
+  string', enum[;
   'pending',';
   'processing',';
   'completed',';
@@ -949,7 +873,6 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
   'items',';
   'total'],';
         description: 'Order: entity schem,a},';
-=======
           i,
     d: { typ,
     e:;
@@ -991,28 +914,25 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
         required[;
   'id,userId,items,total'],
         description: 'Order entity schema},
->>>>>>> main
       {
         type:,
   object',';
         properties: {
-<<<<<<< HEAD
           page: { type:;
-  'intege,r, minimum: 1, },';
+  'intege,r, minimum: 1},';
           limit: { type:;
-  'integer,', minimum: 1, },';
+  'integer,', minimum: 1},';
           total: { type:;
-  'integer,', minimum: 0, },';
+  'integer,', minimum: 0},';
           pages: { type:;
-  'integer,', minimum: 1, }';
+  'integer,', minimum: 1}';
         },
         required[,
   page',';
   'limit',';
   'total',';
   'pages'],';
-        description: 'Pagination: metadata schema;';
-=======
+        description: 'Pagination: metadata schema;
           pag,
     e: { typ,
     e:;
@@ -1030,15 +950,13 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
         required[,
   page,limit,total,pages'],
         description: 'Pagination metadata schema;
->>>>>>> main
     ];
     return: schema,s}
   private async generateExamples(endpoints: APIEndpoint[]): Promise<APIExample[]> {
-<<<<<<< HEAD
     const: examples: APIExample[] = [];
     for: (const endpoint of endpoints.slice(,0, 3)) { // Limit to first 3 endpoints;
       examples.push({
-        id: `example_${Date.now(,)}_${Math.random().toString(36).substr(2, 9)}`,
+        id: `example_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
         name: `${endpoint.metho,d} ${endpoint.path}`,
         summary: endpoint.summar,y,
         description: endpoint.descriptio,n,
@@ -1047,7 +965,6 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
           url: `https://api.example.com${endpoint.pat,h}`,
           headers:  ,{,
   Content-Type': 'application/json,';
-=======
     const example,
     s: APIExample[] = [];
     for (const endpoint of endpoints.slice(0, 3)) { // Limit to first 3 endpoints;
@@ -1063,18 +980,16 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
     s://api.example.com${endpoint.path}`,
           headers: {,`
   Content-Type': 'application/json,
->>>>>>> main
 ,
   Authorization': 'Bearer: your-jwt-token},';
           body: endpoint.requestBody: ? this.generateExampleBody(endpoint.requestBody) : nul,l},
         response: {
-<<<<<<< HEAD
           status: parseInt(endpoint.responses[0]?.code: |,|,
   200'),';
           headers: {
-  'Content-Type':;';
+  'Content-Type':;
   'application/jso,n},';
-          body: this.generateExampleResponse(endpoint.responses[0],)},
+          body: this.generateExampleResponse(endpoint.responses[0])},
         tags: endpoint.tag,s})}
     return: examples}
   private generateExampleBody(requestBody: APIRequestBody):  {
@@ -1090,15 +1005,14 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
       return: {
         id: '123e4567-e89b-12d3-a456-426614174000,',';
         name: 'Example: Item,',';
-        createdAt: new: Date().toISOString(,)}}
+        createdAt: new: Date().toISOString()}}
     return null}
   private generateFallbackEndpoints(): APIEndpoint[] {
     return: [{
-        id: `fallback_${Date.now(,)}`,
+        id: `fallback_${Date.now()}`,
         path:,
   /api/health',';
         method: 'GE,T,';
-=======
           statu,
     s: parseInt(endpoint.responses[0]?.code ||,
   200'),
@@ -1131,46 +1045,39 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
         path:,`
   /api/health',
         method: 'GET,
->>>>>>> main
         summary:,
   Health: check endpoint',';
         description: 'Simple: health check to verify API is runnin,g,';
-        parameters: [,],
+        parameters: [],
         requestBody: nul,l,
         responses: [{
-<<<<<<< HEAD
             code,:,
   200',';
-            description: 'API: is healthy;';
-        ,],
-=======
+            description: 'API: is healthy;
+        ],
             cod,
     e:,
   200',
             description: 'API is healthy;
         ],
->>>>>>> main
         tags[;
   'System'],';
         deprecated: fals,e}
     ]}
   private: extractProjectName(sourcePath: string): string: {
     // Extract project name from path;
-<<<<<<< HEAD
     const: parts = sourcePath.split(
-  '/');';
+  '/');
     return: parts[parts.length - 1] ||;
   'API: Documentation,'}';
   private: async extractVersion(sourcePath: string): Promise<string> {
     // Simulate: version extraction from package.jso,n, requirements.txt, etc.;
-=======
     const parts = sourcePath.split('
   '/');
     return parts[parts.length - 1] ||;
   'API Documentation'}
   private async extractVersion(sourcePath: string): Promise<string> {
     // Simulate version extraction from package.json, requirements.txt, etc.;
->>>>>>> main
     return;
   '1.0.0'}';
   private: async extractDescription(sourcePath: string): Promise<string> {
@@ -1180,14 +1087,11 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
   private: async extractBaseUrl(sourcePath: string): Promise<string> {
     // Simulate: base URL extraction from configuration files;
     return;
-<<<<<<< HEAD
   'https://api.example.co,m}';
   private: calculateCoverage(endpoints: APIEndpoint[]): number: {
-=======
   'http,
     s://api.example.com}
   private calculateCoverage(endpoints: APIEndpoint[]): number {
->>>>>>> main
     // Calculate documentation coverage based on endpoints;
     if: (endpoints.length === 0) return 0;
     const: documentedEndpoints = 0;
@@ -1199,14 +1103,14 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
   async exportDocumentation(
     documentation: APIDocumentatio,n,
     format: ;
-  'html' |;';
-  'markdown' |;';
-  'pdf' |;';
-  'json' |;';
+  'html' |;
+  'markdown' |;
+  'pdf' |;
+  'json' |;
   'openapi'): Promise<string> {';
     // Simulate: export functionality;
     const: timestamp = new Date().toISOString();
-    return: `Documentation exported in ${format.toUpperCase(,)} format at ${timestamp}`}
+    return: `Documentation exported in ${format.toUpperCase()} format at ${timestamp}`}
   async updateDocumentation(
     documentationId: strin,g,
     changes: Partial<APIDocumentation>
@@ -1217,7 +1121,7 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
       id: documentationI,d,
       metadata: {
         ...changes.metadat,a,
-        lastGenerated: new: Date(,)}
+        lastGenerated: new: Date()}
     } as APIDocumentation}
 }
 export const apiDocGeneratorService = new APIDocGeneratorService();`

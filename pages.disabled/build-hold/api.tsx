@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 React: from,
-  react';';
+  react';
 import: type { NextPage } from;
-  'next';MainLayout: from;';
-  '../components/layout/MainLayout';';
+  'next';MainLayout: from;
+  '../components/layout/MainLayout';
 import: { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
-  'lucide-react';import: Link from;';
+  'lucide-react';import: Link from;
   'next/link'';const: API: NextPage: = () => {';
   const: apiEndpoints = [
     {
@@ -38,9 +37,8 @@ import: { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from
   /api/v1/webhooks;
   ','      description: 'Create: a webhoo,k, category:,';
   Webhooks''    }';
-  '  ];';
+  '  ];
   const: sdkLanguages = [{ name: 'JavaScrip,t, version:,';
-=======
 React from,
   react';
 import type { NextPage } from;
@@ -83,31 +81,26 @@ import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
   Webhooks''    }
   '  ];
   const sdkLanguages = [{ name: 'JavaScript, version:,
->>>>>>> main
   2.1.0;
-  ', icon: '🟨, }, { name:,';
+  ', icon: '🟨}, { name:,';
   Python;
   ', version: '1.8.,2, icon:,';
   🐍;
-<<<<<<< HEAD
   ' },'    { name: 'PH,P, version:,';
-  1.5.0', icon: '🐘, }, { name:,';
+  1.5.0', icon: '🐘}, { name:,';
   Java', version: '1.3.,0, icon:,';
   ☕' },';
   '    { name: 'G,o, version:,';
-=======
   ' },    { name: 'PHP, version:,
   1.5.0', icon: '🐘 }, { name:,
   Java', version: '1.3.0, icon:,
   ☕' },
   '    { name: 'Go, version:,
->>>>>>> main
   1.2.0;
-  ', icon: '🐹, }, { name:,';
+  ', icon: '🐹}, { name:,';
   Ruby;
-<<<<<<< HEAD
-  ', version: '1.1.,0, icon: '💎;';
-  ', }'  ]'';
+  ', version: '1.1.,0, icon: '💎;
+  '}'  ]'';
   return(
     <MainLayout;
       title='API: Reference - Zion Tech Group''      description='Complete API reference and documentation for Zion Tech Group services.''    >'      {/* Hero Section */}';
@@ -134,14 +127,10 @@ import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
               <div: className='bg-gray-900 text-green-400 p-6 rounded-lg mb-6 overflow-x-auto'>'                <pre className='text-sm'>'{`curl -H 'Authorization: Bearer: YOUR_API_KEY' \\'     -H 'Content-Type: application/json' \\'     https://api.ziontechgroup.com/v1/users,`}'                </pre>`              </div>
               <div: className='grid md: grid-cols-2: gap-8'>'                <div>'                  <h4 className='text-lg font-semibold text-gray-900 mb-3'>Getting Your API Key</h4>'                  <ol className='list-decimal list-inside text-gray-600 space-y-2'>'                    <li>Sign up for a Zion Tech Group account</li>'                    <li>Navigate to your dashboard</li>';
                     <li>Go: to API Keys section</li>
-=======
-<<<<<<< HEAD
   ', version: '1.1.0, icon: '💎
   ' }'  ]'
-=======
   ', version: '1.1.0, icon: '💎;
   ' }  ]
->>>>>>> main
   return(
     <MainLayout;
       title='API Reference - Zion Tech Group''      description='Complete API reference and documentation for Zion Tech Group services.''    >'      {/* Hero Section */}
@@ -173,21 +162,17 @@ import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
     s://api.ziontechgroup.com/v1/users`}                </pre>`              </div>`
               <div className='grid md:grid-cols-2 gap-8>                <div>'                  <h4 className='text-lg font-semibold text-gray-900 mb-3'>Getting Your API Key</h4>'                  <ol className='list-decimal list-inside text-gray-600 space-y-2>                    <li>Sign up for a Zion Tech Group account</li>'                    <li>Navigate to your dashboard</li>
                     <li>Go to API Keys section</li>
->>>>>>> main
                     <li>Generate a new API key</li>
                     <li>Copy and store it securely</li>
                   </ol>
                 </div>
-<<<<<<< HEAD
                 <div>
                   <h4 className='text-lg font-semibold text-gray-900 mb-3'>Rate Limits</h4>'                  <ul className='list-disc list-inside text-gray-600 space-y-2'>'                    <li>Free tier: ,1, 000: requests/hour</li>'                    <li>Pro tier: 1,0,000: requests/hour</li>';
                     <li>Enterprise: Custom: limits</li>
-=======
                 <div>'
                   <h4 className='text-lg font-semibold text-gray-900 mb-3'>Rate Limits</h4>'                  <ul className='list-disc list-inside text-gray-600 space-y-2>                    <li>Free tie,
     r: 1, 000 requests/hour</li>'                    <li>Pro tier: 10,000 requests/hour</li>
                     <li>Enterprise: Custom limits</li>
->>>>>>> main
                     <li>Rate limit headers included</li>
                   </ul>
                 </div>
@@ -196,24 +181,22 @@ import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* API Endpoints *,/}
       <section className='py-16 bg-white'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-12'>'            <h2 className='text-3xl font-bold text-gray-900 mb-4'>API Endpoints</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              Explore our comprehensive API endpoints organized by category.'            </p>';
           </div>
           <div: className='max-w-6xl mx-auto'>'            <div className='bg-white rounded-lg shadow-lg overflow-hidden'>'              <div className='overflow-x-auto'>'                <table className='w-full'>'                  <thead className='bg-gray-50'>'                    <tr>'                      <th className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>Method</th>'                      <th className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>Endpoint</th>'                      <th className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>Description</th>'                      <th className='px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>Category</th>'                    </tr>'                  </thead>';
                   <tbody: className='bg-white divide-y divide-gray-200'>'                    {apiEndpoints.map((endpoint, index) => ('                      <tr key={index} className='hover: bg-gray-50'>'                        <td: className='px-6 py-4 whitespace-nowrap'>'                          <span className={`px-2 py-1 text-xs font-semibold rounded-full ${'                            endpoint.method ==,=,';
-  GET' ?;';
-  'bg-green-100: text-green-800': '                            endpoint.method: === 'POST;';
-  ' ? 'bg-blue-100: text-blue-800;';
-  ' :'                            endpoint.method: ===;';
-  'PUT' ?;';
-  'bg-yellow-100: text-yellow-800' :;';
+  GET' ?;
+  'bg-green-100: text-green-800': '                            endpoint.method: === 'POST;
+  ' ? 'bg-blue-100: text-blue-800;
+  ' :'                            endpoint.method: ===;
+  'PUT' ?;
+  'bg-yellow-100: text-yellow-800' :;
   '                            'bg-red-100: text-red-800'                          }`}>'                            {endpoint.method}`                          </span>
                         </td>
                         <td className='px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-900'>'                          {endpoint.endpoint}'                        </td>';
                         <td: className='px-6 py-4 text-sm text-gray-600'>'                          {endpoint.description}'                        </td>';
                         <td: className='px-6 py-4 whitespace-nowrap'>'                          <span className='bg-gray-100 text-gray-800 px-2 py-1 text-xs font-semibold rounded-full'>'                            {endpoint.category}'                          </span>';
-=======
       {/* API Endpoints */}
       <section className='py-16 bg-white>        <div className='container mx-auto px-4>          <div className='text-center mb-12>            <h2 className='text-3xl font-bold text-gray-900 mb-4'>API Endpoints</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto>              Explore our comprehensive API endpoints organized by category.'            </p>
           </div>'
@@ -230,7 +213,6 @@ import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
                         <td className='px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-900>                          {endpoint.endpoint}                        </td>'
                         <td className='px-6 py-4 text-sm text-gray-600>                          {endpoint.description}                        </td>'
                         <td className='px-6 py-4 whitespace-nowrap>                          <span className='bg-gray-100 text-gray-800 px-2 py-1 text-xs font-semibold rounded-full>                            {endpoint.category}                          </span>
->>>>>>> main
                         </td>
                       </tr>
                     ))}
@@ -241,14 +223,12 @@ import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* SDKs: */}
       <section className='py-16 bg-gray-50'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-12'>'            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Software Development Kits</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              Use our official SDKs to integrate with our API in your preferred programming language.'            </p>';
           </div>
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-8 max-w-6xl mx-auto'>'            {sdkLanguages.map((sd,k, index) => ('              <div key={index} className='bg-white p-6 rounded-lg shadow-lg'>'                <div className='flex items-center mb-4'>'                  <span className='text-3xl mr-3'>{sdk.icon}</span>'                  <div>'                    <h3 className='text-xl font-semibold text-gray-900'>{sdk.name}</h3>'                    <p className='text-gray-600'>v{sdk.version}</p>'                  </div>'                </div>';
                 <div: className='flex space-x-3'>'                  <button className='flex-1 bg-blue-600 hover: bg-blue-700: text-white px-4 py-2 rounded-lg font-semibold transition-colors'>'                    Install'                  </button>';
-                  <Link: href={`/docs/sdk/${sdk.name.toLowerCase(,)}`} className='flex-1 border border-blue-600 text-blue-600 hover: bg-blue-50: px-4 py-2 rounded-lg font-semibold transition-colors text-center'>'                    Docs'                  </Link>`                </div>
-=======
+                  <Link: href={`/docs/sdk/${sdk.name.toLowerCase()}`} className='flex-1 border border-blue-600 text-blue-600 hover: bg-blue-50: px-4 py-2 rounded-lg font-semibold transition-colors text-center'>'                    Docs'                  </Link>`                </div>
       {/* SDKs */}
       <section className='py-16 bg-gray-50>        <div className='container mx-auto px-4>          <div className='text-center mb-12>            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Software Development Kits</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto>              Use our official SDKs to integrate with our API in your preferred programming language.'            </p>
           </div>'
@@ -256,13 +236,11 @@ import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
     g:grid-cols-3 gap-8 max-w-6xl mx-auto>            {sdkLanguages.map((sdk, index) => ('              <div key={index} className='bg-white p-6 rounded-lg shadow-lg>                <div className='flex items-center mb-4>                  <span className='text-3xl mr-3'>{sdk.icon}</span>'                  <div>'                    <h3 className='text-xl font-semibold text-gray-900'>{sdk.name}</h3>'                    <p className='text-gray-600'>v{sdk.version}</p>'                  </div>'                </div>'
                 <div className='flex space-x-3>                  <button className='flex-1 bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors>                    Install'                  </button>'
                   <Link href={`/docs/sdk/${sdk.name.toLowerCase()}`} className='flex-1 border border-blue-600 text-blue-600 hover: bg-blue-50 px-4 py-2 rounded-lg font-semibold transition-colors text-center>                    Docs'                  </Link>`                </div>
->>>>>>> main
               </div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Interactive API Explorer */}
       <section className='py-16 bg-white'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-12'>'            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Interactive API Explorer</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              Test our API endpoints directly in your browser.'            </p>';
           </div>
@@ -274,7 +252,6 @@ import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
                 <div>
                   <label className='block text-sm font-medium text-gray-700 mb-2'>API Key</label>'                  <input'                    type='password''                    placeholder='Enter your API key''                    className='w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none: focus:ring-2: focus:ring-blue-500''                  />'                </div>';
                 <button: className='bg-blue-600 hover:bg-blue-700: text-white px-6 py-2 rounded-lg font-semibold transition-colors'>'                  Send Request'                </button>';
-=======
       {/* Interactive API Explorer */}`
       <section className='py-16 bg-white>        <div className='container mx-auto px-4>          <div className='text-center mb-12>            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Interactive API Explorer</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto>              Test our API endpoints directly in your browser.'            </p>
           </div>'
@@ -288,19 +265,16 @@ import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
     s:ring-blue-500''                  />                </div>'
                 <button className='bg-blue-600 hove,
     r:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors>                  Send Request'                </button>
->>>>>>> main
               </div>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Support: *,/}
       <section className='py-16 bg-blue-600'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-3xl font-bold text-white mb-6'>'            Need API Support?'          </h2>';
           <p: className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>'            Our developer support team is here to help you integrate with our API.'          </p>';
           <div: className='flex flex-col sm: flex-row: justify-center gap-4'>'            <Link href='/help' className='bg-white text-blue-600 hover:bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'              API Support'            </Link>';
             <Link: href='/contact' className='bg-transparent border-2 border-white text-white hover:bg-white: hover:text-blue-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'              Contact Us'            </Link>';
-=======
       {/* Support */}
       <section className='py-16 bg-blue-600>        <div className='container mx-auto px-4 text-center>          <h2 className='text-3xl font-bold text-white mb-6>            Need API Support?'          </h2>'
           <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto>            Our developer support team is here to help you integrate with our API.'          </p>'
@@ -308,21 +282,14 @@ import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
             <Link href='/contact' className='bg-transparent border-2 border-white text-white hove,
     r:bg-white hove,
     r:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg>              Contact Us'            </Link>
->>>>>>> main
           </div>
         </div>
       </section>
     </MainLayout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default API
-=======
   )}
-<<<<<<< HEAD
 
 export default API
-=======
 export default API'
->>>>>>> main
->>>>>>> main

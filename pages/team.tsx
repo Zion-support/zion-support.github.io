@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { Button } from '../components/ui/Button';
@@ -19,24 +18,17 @@ import {
   Heart, Sparkles,
   CheckCircle, ArrowRight
 } from 'lucide-react';
-=======
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-=======
 import Navigation from '../components/layout/EnhancedNavigation';
 import Footer from '../components/layout/Footer';
 import { ArrowRight, Award, Brain, Code, Globe, Shield, Users, Zap } from 'lucide-react';
->>>>>>> main
 
->>>>>>> main
 export default function Team() {
   const teamMembers = [
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
       id: 1, name: "Dr. Sarah Johnson",
       title: "Chief Executive Officer", bio: "Visionary leader with 15+ years of experience in AI and technology innovation. Former VP of Engineering at leading tech companies.",
       image: "/api/placeholder/300/300", expertise: ["AI Strategy", "Leadership", "Innovation"], education: "PhD in Computer Science, MIT", experience: "15+ years",
@@ -102,11 +94,9 @@ export default function Team() {
     { label: "PhD Holders", value: "15+", icon: GraduationCap }, { label: "Research Papers Published", value: "100+", icon: Star }
   ];
 
-=======
       name: 'Kleber Santos', role: 'CEO & Founder',
       expertise: 'AI & Machine Learning', description: 'Visionary leader with 15+ years in AI and technology innovation.',
       icon: Brain, linkedin: 'https://linkedin.com/in/kleber-santos'
-=======
   {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
@@ -114,7 +104,6 @@ export default function Team() {
       description: 'Visionary leader with 15+ years in AI and technology innovation.',
       icon: Brain,
       linkedin: 'https://linkedin.com/in/kleber-santos'
->>>>>>> main
     },
     {
       name: 'Sarah Johnson', role: 'CTO',
@@ -143,11 +132,8 @@ export default function Team() {
     }
   ];
 
->>>>>>> main
   const values = [
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
       title: "Innovation First", description: "We push the boundaries of what&apos;s possible with AI and technology", ''
       icon: Brain
     },
@@ -161,13 +147,10 @@ export default function Team() {
     {
       title: "Continuous Learning", description: "We stay at the forefront of technology through constant learning",
       icon: TrendingUp
-=======
       icon: Brain, title: 'Innovation First',
-=======
   {
       icon: Brain,
       title: 'Innovation First',
->>>>>>> main
       description: 'We push the boundaries of technology to deliver cutting-edge solutions.'
     }, {
       icon: Users,
@@ -179,7 +162,6 @@ export default function Team() {
     }, {
       icon: Zap,
       title: 'Agile Delivery', description: 'Fast, efficient delivery without compromising on quality or security.'
->>>>>>> main
     }
   ];
 
@@ -192,7 +174,6 @@ export default function Team() {
         <link rel="canonical" href="https: //ziontechgroup.com/team" />
       </Head>
       
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -457,7 +438,6 @@ export default function Team() {
                 <Mail className="w-5 h-5 mr-2" />
                 Contact HR Team
               </Button>
-=======
       <Navigation />
       
       <main className="min-h-screen bg-white">
@@ -472,7 +452,6 @@ export default function Team() {
                 Our diverse team of technology experts brings together decades of experience 
                 in AI, cloud computing, cybersecurity, and software development.
               </p>
->>>>>>> main
             </div>
           </div>
         </section>

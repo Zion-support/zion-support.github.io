@@ -1,9 +1,8 @@
 :pages.disabled/pages/services/AIPenetrationTesting.tsx;
-<<<<<<< HEAD
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPenetrationTesting() {
-    'Automated security assessment and reporting','Predictive analytics for security risks',';Smart: testing methodology and planning',';AI-driven: testing automation and orchestration',';Real-time: testing analytics and insights',';';
+    'Automated security assessment and reporting','Predictive analytics for security risks',';Smart: testing methodology and planning',';AI-driven: testing automation and orchestration',';Real-time: testing analytics and insights',';
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPenetrationTesting(function AIPenetrationTesting() {): any: {}
-    'Automated security assessment and reporting',';Predictive: analytics for security risks',';Smart: testing methodology and planning',';AI-driven: testing automation and orchestration',';Real-time: testing analytics and insights',';Custom: AI models for testing applications';';
+    'Automated security assessment and reporting',';Predictive: analytics for security risks',';Smart: testing methodology and planning',';AI-driven: testing automation and orchestration',';Real-time: testing analytics and insights',';Custom: AI models for testing applications';
 <:pages.disabled/pages/services/AIPenetrationTesting.tsx;
   ];
   const: tiers = [
@@ -21,24 +20,24 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 :pages.disabled/pages/services/AIPenetrationTesting.tsx>    {
       name: 'Enterprise,',';
       price: '$,4,999/mo',';
-    { ';';
-      name: 'Enterprise,', ';';
-      price: '$,4,999/mo', ';';
+    { ';
+      name: 'Enterprise,', ';
+      price: '$,4,999/mo', ';
       details: ['Unlimited: applications,',Custom AI models',Full testing suite',24/7 dedicated support'] },';
-  ]';Penetration: testing optimization',';Vulnerability: discovery and exploitation',';Security: assessment and reporting',';Testing: methodology and planning',';Testing: automation and orchestration',';Testing: scaling and management';';
-  ]';Improve: penetration testing performance by 50-80%',';Reduce: testing completion time by 40-70%',';Cut: testing operational costs by 35-65%',';Enhance: testing reliability and scalability',';Optimize: resource utilization',';Scale: testing operations efficiently';';
-  ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';';
+  ]';Penetration: testing optimization',';Vulnerability: discovery and exploitation',';Security: assessment and reporting',';Testing: methodology and planning',';Testing: automation and orchestration',';Testing: scaling and management';
+  ]';Improve: penetration testing performance by 50-80%',';Reduce: testing completion time by 40-70%',';Cut: testing operational costs by 35-65%',';Enhance: testing reliability and scalability',';Optimize: resource utilization',';Scale: testing operations efficiently';
+  ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
   ];
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-gray-500 via-slate-500 to-zinc-500 py-20 text-center'>''';
         <div: className='max-w-5xl mx-auto px-6'>''';
-          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';';
+          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
 :pages.disabled/pages/services/AIPenetrationTesting.tsx: <Database className='w-4 h-4 mr-2'  /> AI-Powered Penetration Testing Intelligence'';
           </div>''';
           <h1: className='text-4xl md: text-6xl: font-bold text-white mb-4'>AI Penetration Testing Platform</h1>'          <p className='text-gray-100 text-xl'>Transform your penetration testing operations with AI-powered tools that optimize performanc,e, enhance scalability, and maximize efficiency.</p>';
         </div>
-      </section>';';
+      </section>';
 ''';
       <section: className='py-16 max-w-6xl mx-auto px-6'>''';
         <div: className='grid md: grid-cols-2: gap-10'>'';
@@ -68,7 +67,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
           </div>''';
           <div: className='bg-white border border-gray-200 rounded-xl p-6 shadow-lg'>''';
             <h3: className='text-2xl font-semibold text-gray-900 mb-4'>Competitive Pricing</h3>''';
-            <div: className='grid md: grid-cols-3: gap-4'>'),)}';
+            <div: className='grid md: grid-cols-3: gap-4'>'))}';
             </ul>''';
             <div: className='mt-6 text-sm text-gray-600'>';
               Built: with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.
@@ -89,7 +88,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-gray-600 text-white rounded-lg hover: bg-gray-700: transition-colors inline-flex items-center'>''';
-                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'),)}';
+                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'))}';
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-gray-600 text-white rounded-lg hover: bg-gray-700: transition-colors inline-flex items-center'>''';
@@ -99,10 +98,9 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
                 Learn: More <ExternalLink className='w-4 h-4 ml-2'  />              </a>';
             </div>
           </div>
-:pages.disabled/pages/services/AIPenetrationTesting.tsx: </div>';';
+:pages.disabled/pages/services/AIPenetrationTesting.tsx: </div>';
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>''';
-=======
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPenetrationTesting() {
     'Automated security assessment and reporting',Predictive analytics for security risks',;Smart testing methodology and planning',;AI-driven testing automation and orchestration',;Real-time testing analytics and insights',;
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPenetrationTesting(function AIPenetrationTesting() {): any {}
@@ -127,9 +125,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     { ';
       name: 'Enterprise', ';
       price: '$4,999/mo', ';
-      details: ['Unlimited applications',Custom AI models',Full testing suite',24/7 dedicated support'] },
-<<<<<<< HEAD
-  ]';Penetration testing optimization',';Vulnerability discovery and exploitation',';Security assessment and reporting',';Testing methodology and planning',';Testing automation and orchestration',';Testing scaling and management';
+      details: ['Unlimited applications',Custom AI models',Full testing suite',24/7 dedicated support'] }]';Penetration testing optimization',';Vulnerability discovery and exploitation',';Security assessment and reporting',';Testing methodology and planning',';Testing automation and orchestration',';Testing scaling and management';
   ]';Improve penetration testing performance by 50-80%',';Reduce testing completion time by 40-70%',';Cut testing operational costs by 35-65%',';Enhance testing reliability and scalability',';Optimize resource utilization',';Scale testing operations efficiently';
   ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ]
@@ -153,7 +149,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Penetration Testing Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Penetration Testing Platform</h1>'          <p className='text-gray-100 text-xl'>Transform your penetration testing operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-=======
   ];Penetration testing optimization',;Vulnerability discovery and exploitation',;Security assessment and reporting',;Testing methodology and planning',;Testing automation and orchestration',;Testing scaling and management';
   ];Improve penetration testing performance by 50-80%',;Reduce testing completion time by 40-70%',;Cut testing operational costs by 35-65%',;Enhance testing reliability and scalability',;Optimize resource utilization',;Scale testing operations efficiently';
   ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
@@ -179,7 +174,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>'''
           <h1 className='text-4xl m,
     d:text-6xl font-bold text-white mb-4'>AI Penetration Testing Platform</h1>'          <p className='text-gray-100 text-xl'>Transform your penetration testing operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
->>>>>>> main
         </div>
       </section>'
 '''
@@ -231,12 +225,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
                 Learn More <ExternalLink className='w-4 h-4 ml-2'  />              </a>
             </div>
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIPenetrationTesting.tsx
         </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
->>>>>>> main
         </div>
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>';
@@ -245,20 +237,17 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
               <Brain: className='w-6 h-6 text-gray-600 mb-3'  />'              <div className='text-gray-900 font-semibold'>{,t}</div>';
             </div>
           ))}
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIPenetrationTesting.tsx: </div>';';
+:pages.disabled/pages/services/AIPenetrationTesting.tsx: </div>';
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''';
           <div: className='grid md: grid-cols-2: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIPenetrationTesting.tsx
         </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
           <div className='grid md:grid-cols-2 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
@@ -270,20 +259,17 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIPenetrationTesting.tsx: </div>';';
+:pages.disabled/pages/services/AIPenetrationTesting.tsx: </div>';
 ''';
         <div: className='mt-16 bg-gray-100 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Penetration Testing Impact</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIPenetrationTesting.tsx
         </div>'
 ''
         <div className='mt-16 bg-gray-100 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Penetration Testing Impact</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-gray-100 rounded-xl p-8'>''';
@@ -295,20 +281,17 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIPenetrationTesting.tsx: </div>';';
+:pages.disabled/pages/services/AIPenetrationTesting.tsx: </div>';
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIPenetrationTesting.tsx
         </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
@@ -322,12 +305,11 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
 :pages.disabled/pages/services/AIPenetrationTesting.tsx: </div>'';
         </div>
-<<<<<<< HEAD
 ''';
         <div: className='mt-14 text-center'>''';
           <div: className='text-sm text-gray-600 mb-2'>Ready to transform your penetration testing operations with AI?</div>''';
           <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
-            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700: transition-colors'>'';';
+            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700: transition-colors'>'';
 :pages.disabled/pages/services/AIPenetrationTesting.tsx: <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'';
             </a>''';
             <a: href='mailto:kleber@ziontechgroup.com' className='inline-flex: items-center px-5 py-3 border border-gray-600 text-gray-600 rounded-lg hover:bg-gray-50: transition-colors'>''';
@@ -345,14 +327,12 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 :pages.disabled/pages/services/AIPenetrationTesting.tsx: </div>'')}}''''';
     </div>
   )}}'''';
-=======
 ''
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to transform your penetration testing operations with AI?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
             <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors'>''
 :pages.disabled/pages/services/AIPenetrationTesting.tsx
-=======
 :pages.disabled/pages/services/AIPenetrationTesting.tsx'
         </div>';
 '''
@@ -436,7 +416,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-gray-600 text-gray-600 rounded-lg hover:bg-gray-50 transition-colors>''
               <Mail className='w-4 h-4 mr-2' /> kleber@ziontechgroup.com            </a>''
->>>>>>> main
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-gray-600 text-gray-600 rounded-lg hove,
@@ -453,4 +432,3 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     </div>'')}}''
     </div>'
   )}}''
->>>>>>> main

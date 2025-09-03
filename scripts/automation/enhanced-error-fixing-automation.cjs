@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
-=======
-<<<<<<< HEAD
 #!/'usr/bin/env' node;
-=======
 #!/usr/bin/env node
->>>>>>> main
 
->>>>>>> main
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 ;
 console.log(`'🚀 Starting Enhanced Error Fixing Automation System...');
 ;
@@ -69,8 +62,6 @@ class EnhancedErrorFixingAutomation {;
     const logsDir = path.join(process.cwd(), 'automation', 'logs');
     if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursive: true });
-<<<<<<< HEAD
-=======
     }
   }
 ;
@@ -170,7 +161,6 @@ class EnhancedErrorFixingAutomation {;
       content = content.replace(;
         new RegExp(import.*from\\s+['"]${moduleName}['"], 'g'),import { } from '${moduleName}';
       );
-=======
 const { execSync, spawn } = require('child_process');
 const glob = require(`glob`);
 
@@ -267,22 +257,17 @@ export default [
         it: 'readonly',
         test: 'readonly',
         expect: 'readonly',
-        vi: 'readonly',
-      },
+        vi: 'readonly'},
       parser: tsparser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
-        project: './tsconfig.json',
-      },
-    },
+          jsx: true},
+        project: './tsconfig.json'}},
     plugins: {
       react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
-      '@typescript-eslint': tseslint,
-    },
+      '@typescript-eslint': tseslint},
     rules: {
       'react/jsx-uses-react': 'error',
       'react/jsx-uses-vars': 'error',
@@ -296,23 +281,16 @@ export default [
       'no-console': 'warn',
       'no-debugger': 'error',
       'prefer-const': 'error',
-      'no-var': 'error',
-    },
-  },
+      'no-var': 'error'}},
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       parser: tsparser,
       parserOptions: {
-        project: './tsconfig.json',
-      },
-    },
+        project: './tsconfig.json'}},
     rules: {
       '@typescript-eslint/no-unused-vars': 'error',
-      '@typescript-eslint/no-explicit-any': 'warn',
-    },
-  },
-];`;
+      '@typescript-eslint/no-explicit-any': 'warn'}}];`;
       
       fs.writeFileSync(flatConfigPath, flatConfig);
       this.fixesApplied.push({
@@ -320,7 +298,6 @@ export default [
         file: 'eslint.config.js',
         description: 'Created ESLint flat configuration'
       });
->>>>>>> main
     }
   }
 
@@ -407,10 +384,8 @@ export default [
           lines[lineIndex] = line.replace(moduleName, moduleFixes[moduleName]);
         }
       }
->>>>>>> main
     }
   }
-<<<<<<< HEAD
 ;
   fixPropertyError(content, error) {;
     // Fix property access errors;
@@ -421,7 +396,6 @@ export default [
       // Add optional chaining or type assertion;
       content = content.replace(new RegExp(\\.${propertyName}`, 'g'`),?.${propertyName}';
       );
-=======
 
   async fixPropertyAccess(lines, lineIndex, message) {
     const line = lines[lineIndex];
@@ -433,10 +407,8 @@ export default [
         // Add optional chaining;
         lines[lineIndex] = line.replace(new RegExp(`\\.${property}\\b`), `?.${property}`);
       }
->>>>>>> main
     }
   }
-<<<<<<< HEAD
 ;
   fixTypeError(content, error) {;
     // Fix type assignment errors;
@@ -486,7 +458,6 @@ export default [
         if (content !== originalContent) {;
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-=======
 
   async fixTypeMismatch(lines, lineIndex, message) {
     const line = lines[lineIndex];
@@ -549,7 +520,7 @@ export default [
     for (const file of files) {
       try {
         const content = fs.readFileSync(file, 'utf8');
-        if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+        if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
           const fixedContent = this.resolveMergeConflicts(content);
           fs.writeFileSync(file, fixedContent);
           
@@ -570,10 +541,7 @@ export default [
   resolveMergeConflicts(content) {
     // Simple merge conflict resolution - keep the first version;
     return content;
-      .replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n[\s\S]*?\n>>>>>>> [^\n]+\n?/g, `$1`)
-      .replace(/<<<<<<< [^\n]+\n[\s\S]*?\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n?/g, '$1');
-  }
-
+      .replace(/\n([\s\S]*?)\n\n[\s\S]*?\n      .replace(/
   async fixESLintErrors() {
     this.log('Fixing ESLint errors...');
     
@@ -604,12 +572,10 @@ export default [
         if (match) {
           const [, filePath, line, column, message] = match;
           await this.fixESLintError(filePath, parseInt(line), parseInt(column), message);
->>>>>>> main
         }
       }
     }
   }
-<<<<<<< HEAD
 ;
   fixImportStatements(content) {;
     // Fix duplicate imports;
@@ -895,7 +861,6 @@ export default [
           walkDir(fullPath);
         } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {;
           files.push(fullPath);
-=======
 
   async fixESLintError(filePath, line, column, message) {
     try {
@@ -910,7 +875,6 @@ export default [
         if (varMatch) {
           const varName = varMatch[1];
           lines[line - 1] = lines[line - 1].replace(new RegExp(`\\b${varName}\\b`), `_${varName}`);
->>>>>>> main
         }
       } else if (message.includes(`no-console`)) {
         // Remove console statements;
@@ -953,7 +917,6 @@ export default [
         missingDeps.push(dep);
       }
     }
-<<<<<<< HEAD
 ;
     if (fs.existsSync(srcDir)) {;
       walkDir(srcDir);
@@ -1011,7 +974,6 @@ if (require.main === module) {;
 }
 ;
 module.exports = EnhancedErrorFixingAutomation;
-=======
     
     if (missingDeps.length > 0) {
       this.log(`Installing missing dependencies: ${missingDeps.join(', ')}`);

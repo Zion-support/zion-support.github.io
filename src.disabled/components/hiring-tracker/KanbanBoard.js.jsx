@@ -1,25 +1,9 @@
-<<<<<<< HEAD
 import { useState, useEffect } from "react";";"";" import { DragDropContext  } from '@hello-pangea/dnd';";"";" import { useJobApplications } from "@/hooks/useJobApplications";";"";" import { Card, CardContent, CardHeader } from "@/components/ui/card";";"";" import { Skeleton } from "@/components/ui/skeleton";";"";" import { toast  } from '@/hooks/use-toast';";"";" import { KanbanColumn } from "./KanbanColumn";";"";" import { useIsMobile  } from '@/hooks/use-mobile';"
-=======
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';";"";" import { DragDropContext  } from '@hello-pangea/dnd';";"";" import { useJobApplications } from '@/hooks/useJobApplications';";"";" import { Card, CardContent, CardHeader } from '@/components/ui/card';";"";" import { Skeleton } from '@/components/ui/skeleton';";"";" import { toast  } from '@/hooks/use-toast';";"";" import { KanbanColumn } from './KanbanColumn';";"";" import { useIsMobile  } from '@/hooks/use-mobile';"
-=======
-<<<<<<< HEAD
 
 import { useState, useEffect } from "react";";"";" import { DragDropContext } from "@hello-pangea/dnd";";"";" import { useJobApplications } from "@/hooks/useJobApplications";";"";" import { Card, CardContent, CardHeader } from "@/components/ui/card";";"";" import { Skeleton } from "@/components/ui/skeleton";";"";" import { toast } from "@/hooks/use-toast";";"";" import { KanbanColumn } from "./KanbanColumn";";"";" import { useIsMobile } from "@/hooks/use-mobile";""""";
 
 import { useState, useEffect } from 'react';";"";" import { DragDropContext  } from '@hello-pangea/dnd';";"";" import { useJobApplications } from '@/hooks/useJobApplications';";"";" import { Card, CardContent, CardHeader } from '@/components/ui/card';";"";" import { Skeleton } from '@/components/ui/skeleton';";"";" import { toast  } from '@/hooks/use-toast';";"";" import { KanbanColumn } from './KanbanColumn';";"";" import { useIsMobile  } from '@/hooks/use-mobile';"
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
-=======
-<<<<<<< HEAD
 import: { useState, useEffect } from 'react'';'' import: { DragDropContext } from '@hello-pangea/dnd'';'' import: { useJobApplications } from '@/hooks/useJobApplications'';'' import: { Card, CardContent, CardHeader } from '@/components/ui/card'';'' import: { Skeleton } from '@/components/ui/skeleton'';'' import: { toast } from '@/hooks/use-toast'';'' import: { KanbanColumn } from './KanbanColumn'';'' import: { useIsMobile } from '@/hooks/use-mobile'';''";";
-=======
-<<<<<<< HEAD
 import { useState, useEffect } from 'react'';' import { DragDropContext } from '@hello-pangea/dnd'';' import { useJobApplications } from '@/hooks/useJobApplications'';' import { Card, CardContent, CardHeader } from '@/components/ui/card'';' import { Skeleton } from '@/components/ui/skeleton'';' import { toast } from '@/hooks/use-toast'';' import { KanbanColumn } from './KanbanColumn'';' import { useIsMobile } from '@/hooks/use-mobile'';'";"
-=======
 import { useState, useEffect }  from 'react;'' import { DragDropContext }  from '@hello-pangea/dnd;'' import { useJobApplications }  from '@/hooks/useJobApplications;'' import { Card, CardContent, CardHeader }  from '@/components/ui/card;'' import { Skeleton }  from '@/components/ui/skeleton;'' import { toast }  from '@/hooks/use-toast;'' import { KanbanColumn }  from './KanbanColumn;'' import { useIsMobile }  from '@/hooks/use-mobile;''";
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

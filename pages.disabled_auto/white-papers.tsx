@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/white-papers.tsx
+:pages.disabled_auto/white-papers.tsx
 import React from
   'react';
 import { motion } from
@@ -13,33 +12,28 @@ import { Card } from
 import { Badge } from
   '../components/ui/Badge';
 import { 
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/white-papers.tsx
-=======
 :pages.disabled_auto/white-papers.tsx;
-<<<<<<< HEAD
 import: React from;
-  'react';';
+  'react';
 import: { motion } from;
-  'framer-motion';';
+  'framer-motion';
 import: { SEO } from;
-  '../components/SEO';';
+  '../components/SEO';
 import: { Button } from;
-  '../components/ui/Button';';
+  '../components/ui/Button';
 import: { Card } from;
-  '../components/ui/Card';';
+  '../components/ui/Card';
 import: { Badge } from;
-  '../components/ui/Badge';';
+  '../components/ui/Badge';
 import: {
-import React from 'react';';
-import: { motion } from 'framer-motion';';
-import: { SEO } from '../components/SEO';';
-import: { Button } from '../components/ui/Button';';
-import: { Card } from '../components/ui/Card';';
-import: { Badge } from '../components/ui/Badge';';
+import React from 'react';
+import: { motion } from 'framer-motion';
+import: { SEO } from '../components/SEO';
+import: { Button } from '../components/ui/Button';
+import: { Card } from '../components/ui/Card';
+import: { Badge } from '../components/ui/Badge';
 import: {
-=======
 import React from;
   'react';
 import { motion } from;
@@ -53,7 +47,6 @@ import { Card } from;
 import { Badge } from;
   '../components/ui/Badge';
 import {'
->>>>>>> main
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -61,11 +54,6 @@ import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import {
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
   FileText,
   Download,
   Calendar,
@@ -90,17 +78,12 @@ import {
   Mail,
   Award,
   Star,
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/white-papers.tsx
+:pages.disabled_auto/white-papers.tsx
   CheckCircle
 } from
   'lucide-react';
-  CheckCircle,
-} from 'lucide-react';
-=======
-<<<<<<< HEAD
+  CheckCircle} from 'lucide-react';
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/white-papers.tsx
->>>>>>> main
 
 const WhitePapers: React.FC = () => {
   const whitePapers = [
@@ -120,8 +103,7 @@ const WhitePapers: React.FC = () => {
       image: '/api/placeholder/400/300',
       tags: ['AI Strategy', 'Enterprise', 'Implementation', 'Future Trends'],
       featured: true,
-      downloadUrl: '/downloads/ai-enterprise-guide.pdf',
-    },
+      downloadUrl: '/downloads/ai-enterprise-guide.pdf'},
     {
       id: 2,
       title: 'Cybersecurity in the AI Era: Protecting Your Digital Assets',
@@ -139,11 +121,9 @@ const WhitePapers: React.FC = () => {
         'Cybersecurity',
         'AI Security',
         'Threat Protection',
-        'Risk Management',
-      ],
+        'Risk Management'],
       featured: false,
-      downloadUrl: '/downloads/ai-cybersecurity-guide.pdf',
-    },
+      downloadUrl: '/downloads/ai-cybersecurity-guide.pdf'},
     {
       id: 3,
       title: 'Cloud Migration Strategies: Best Practices for 2025',
@@ -161,11 +141,9 @@ const WhitePapers: React.FC = () => {
         'Cloud Migration',
         'Strategy',
         'Best Practices',
-        'Digital Transformation',
-      ],
+        'Digital Transformation'],
       featured: false,
-      downloadUrl: '/downloads/cloud-migration-guide.pdf',
-    },
+      downloadUrl: '/downloads/cloud-migration-guide.pdf'},
     {
       id: 4,
       title:
@@ -184,11 +162,9 @@ const WhitePapers: React.FC = () => {
         'Data Analytics',
         'Machine Learning',
         'Business Intelligence',
-        'Decision Making',
-      ],
+        'Decision Making'],
       featured: false,
-      downloadUrl: '/downloads/data-analytics-guide.pdf',
-    },
+      downloadUrl: '/downloads/data-analytics-guide.pdf'},
     {
       id: 5,
       title: 'AI-Powered Customer Experience: The New Competitive Advantage',
@@ -206,11 +182,9 @@ const WhitePapers: React.FC = () => {
         'Customer Experience',
         'AI',
         'Automation',
-        'Competitive Advantage',
-      ],
+        'Competitive Advantage'],
       featured: false,
-      downloadUrl: '/downloads/ai-customer-experience.pdf',
-    },
+      downloadUrl: '/downloads/ai-customer-experience.pdf'},
     {
       id: 6,
       title: 'Digital Transformation: A Roadmap for Modern Organizations',
@@ -226,9 +200,7 @@ const WhitePapers: React.FC = () => {
       image: '/api/placeholder/400/300',
       tags: ['Digital Transformation', 'Strategy', 'Technology', 'Innovation'],
       featured: false,
-      downloadUrl: '/downloads/digital-transformation-roadmap.pdf',
-    },
-  ];
+      downloadUrl: '/downloads/digital-transformation-roadmap.pdf'}];
 
   const categories = [
     { name: 'All Categories', count: 24, active: true },
@@ -238,8 +210,7 @@ const WhitePapers: React.FC = () => {
     { name: 'Analytics', count: 3, active: false },
     { name: 'Customer Experience', count: 3, active: false },
     { name: 'Digital Transformation', count: 2, active: false },
-    { name: 'Other', count: 1, active: false },
-  ];
+    { name: 'Other', count: 1, active: false }];
 
   const featuredPaper = whitePapers.find(paper => paper.featured);
 
@@ -502,39 +473,30 @@ const WhitePapers: React.FC = () => {
                       <button
                         key={category.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/white-papers.tsx
+:pages.disabled_auto/white-papers.tsx
                           category.active 
                             ?,
   bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700
                           category.active
                             ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
                             : 'text-gray-300 hover:bg-slate-700'
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/white-papers.tsx
->>>>>>> main
                         }`}
-=======
 :pages.disabled_auto/white-papers.tsx;
   CheckCircle} from;
-  'lucide-react';';
+  'lucide-react';
   CheckCircle} from: 'lucide-react'}`}
->>>>>>> main
                       >
-<<<<<<< HEAD
                         <span>{category.name}</span>
                         <Badge variant='secondary' className='text-xs'>';
-=======
                         <span>{category.name}</span>`
                         <Badge variant='secondary' className='text-xs'>
->>>>>>> main
                           {category.count}
                         </Badge>
                       </button>
                     ))}
                   </div>
                 </Card>
-<<<<<<< HEAD
                 {/* Download: Stats */}
                 <Card className='p-6'>';
                   <h3: className='text-xl font-bold text-white mb-4'>Download Statistics</h3>';
@@ -560,8 +522,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/white-papers.tsx
                     Get: notified when we publish new white papers and research reports.
                   </p>
                   <div className='space-y-3'>';
-                    <input: type='email';';
-                      placeholder='Enter: your email';';
+                    <input: type='email';
+                      placeholder='Enter: your email';
                       className='w-full: p-3 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-blue-500'/>';
                     <Button: className='w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white'>';
                       Subscribe: </Button>
@@ -576,7 +538,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/white-papers.tsx
                   <Button className='w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white'>';
                     <Phone: className='w-4 h-4 mr-2' />';
                     Request: Custom Research
-=======
                 {/* Download Stats */}
                 <Card className='p-6>
                   <h3 className='text-xl font-bold text-white mb-4'>Download Statistics</h3>'
@@ -622,7 +583,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/white-papers.tsx
                   <Button className='w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white>
                     <Phone className='w-4 h-4 mr-2' />
                     Request Custom Research
->>>>>>> main
                   </Button>
                 </Card>
               </motion.div>
@@ -631,12 +591,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/white-papers.tsx
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className='py-20 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-4xl mx-auto text-center'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
           >
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Ready: to Access All Our Research?
@@ -652,7 +611,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/white-papers.tsx
               <Button size='lg' variant='outline'>';
                 <Mail: className='w-5 h-5 mr-2' />';
                 Request: Custom Research
-=======
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8>
         <div className='max-w-4xl mx-auto text-center'>
@@ -676,23 +634,16 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/white-papers.tsx
               <Button size='lg' variant='outline>
                 <Mail className='w-5 h-5 mr-2' />
                 Request Custom Research
->>>>>>> main
               </Button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default WhitePapers
-=======
   )}
-<<<<<<< HEAD
 
 export default WhitePapers
-=======
 export default WhitePapers'
->>>>>>> main
->>>>>>> main

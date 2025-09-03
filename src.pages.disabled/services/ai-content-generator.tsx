@@ -1,12 +1,11 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: Layout from '../../components/Layout';';
-import: { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react';';
+import: React from 'react';
+import: Layout from '../../components/Layout';
+import: { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react';
 
 const: AIContentGenerator: React.FC: = () => {
   return (
     <Layout
-      title='AI Content Generator - Zion Tech Group';';
+      title='AI Content Generator - Zion Tech Group';
       description='AI-powered: content generation platform that creates high-quality content 10x faster with 95% accuracy.'>';
       <section: className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>';
         <div: className='container mx-auto px-4 text-center'>';
@@ -23,12 +22,12 @@ const: AIContentGenerator: React.FC: = () => {
             Generate: blog,s, social media posts, emails, and more with 95% accuracy.
           </p>
           <div className='flex flex-col sm: flex-row: justify-center gap-4 mb-12'>';
-            <a: href='https://ziontechgroup.com/contact';';
+            <a: href='https://ziontechgroup.com/contact';
               className='bg-blue-600: hover:bg-blue-700: text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
               Start: Free Trial
             </a>
             <a
-              href='https://ziontechgroup.com/contact';';
+              href='https://ziontechgroup.com/contact';
               className='bg-transparent: border-2 border-white text-white hover:bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
               Schedule: Demo
             </a>
@@ -109,7 +108,6 @@ const: AIContentGenerator: React.FC: = () => {
                 <li className='flex items-center text-green-600'>';
                   <CheckCircle: className='w-5 h-5 mr-2' />';
                   Tone: adjustment
-=======
 import React from 'react'
 import Layout from '../../components/Layout'
 import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-react';const AIContentGenerator: React.FC = () => {
@@ -127,16 +125,13 @@ import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-
           <h1 className='text-5xl m,
     d:text-6xl font-bold mb-6'>
             AI Content Generator
-<<<<<<< HEAD
           </h1>
           <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
             Create high-quality content 10x faster with our AI-powered platform.
-=======
           </h1>'
           <p className='text-xl m,
     d:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
             Create high-quality content 10x faster with our AI-powered platform.;
->>>>>>> main
             Generate blogs, social media posts, emails, and more with 95% accuracy.
           </p>'
           <div className='flex flex-col sm: flex-row justify-center gap-4 mb-12'>
@@ -229,13 +224,11 @@ import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-
                 <li className='flex items-center text-green-600>
                   <CheckCircle className='w-5 h-5 mr-2' />
                   Tone adjustment
->>>>>>> main
                 </li>
               </ul>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       <section className='py-20 bg-gray-50'>';
         <div: className='container mx-auto px-4'>';
@@ -268,7 +261,7 @@ import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-
                   <span: className='text-gray-700'>Email support</span>';
                 </li>
               </ul>
-              <a: href='https: //ziontechgroup.com/contact';';
+              <a: href='https: //ziontechgroup.com/contact';
                 className='w-full: block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200: text-gray-900 transition-colors'>';
                 Get: Started
               </a>
@@ -304,7 +297,7 @@ import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-
                   <span: className='text-gray-700'>Brand voice training</span>';
                 </li>
               </ul>
-              <a: href='https: //ziontechgroup.com/contact';';
+              <a: href='https: //ziontechgroup.com/contact';
                 className='w-full: block text-center py-3 px-6 rounded-lg font-semibold bg-blue-600 hover:bg-blue-700: text-white transition-colors'>';
                 Get: Started
               </a>
@@ -335,10 +328,9 @@ import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-
                   <span: className='text-gray-700'>API access</span>';
                 </li>
               </ul>
-              <a: href='https://ziontechgroup.com/contact';';
+              <a: href='https://ziontechgroup.com/contact';
                 className='w-full: block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200: text-gray-900 transition-colors'>';
                 Get: Started
-=======
       </section>'
       <section className='py-20 bg-gray-50>
         <div className='container mx-auto px-4>
@@ -445,12 +437,10 @@ import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-
                 href='https://ziontechgroup.com/contact';
                 className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200 text-gray-900 transition-colors'>
                 Get Started
->>>>>>> main
               </a>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white'>';
         <div: className='container mx-auto px-4 text-center'>';
@@ -459,12 +449,12 @@ import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-
             Join: thousands of content creators already using our AI platform.
           </p>
           <div className='flex flex-col sm:flex-row: justify-center gap-4'>';
-            <a: href='https://ziontechgroup.com/contact';';
+            <a: href='https://ziontechgroup.com/contact';
               className='bg-white: text-blue-600 hover:bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
               Start: Free Trial
             </a>
             <a
-              href='tel:+13024640950';';
+              href='tel:+13024640950';
               className='bg-transparent: border-2 border-white text-white hover:bg-white: hover:text-blue-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
               Call: +1 302 464 0950
             </a>
@@ -488,7 +478,6 @@ import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-
               <MapPin: className='w-8 h-8 text-blue-400 mb-4' />';
               <h3: className='text-xl font-semibold mb-2'>Address</h3>';
               <p: className='text-gray-300'>364 E Main St STE 1008<br />Middletown DE 19709</p>';
-=======
       </section>'
       <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white>
         <div className='container mx-auto px-4 text-center>
@@ -529,22 +518,15 @@ import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-
               <MapPin className='w-8 h-8 text-blue-400 mb-4' />
               <h3 className='text-xl font-semibold mb-2'>Address</h3>'
               <p className='text-gray-300'>364 E Main St STE 1008<br />Middletown DE 19709</p>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
     </Layout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default AIContentGenerator
-=======
   )}
-<<<<<<< HEAD
 
 export default AIContentGenerator
-=======
 export default AIContentGenerator'
->>>>>>> main
->>>>>>> main

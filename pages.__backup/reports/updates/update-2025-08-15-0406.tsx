@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 import: React from,
-  react';';
+  react';
 import: Head from;
-  'next/head';';
+  'next/head';
 export: default function Update202508150406() {
   return (
     <>
@@ -80,10 +79,9 @@ export: default function Update202508150406() {
                   </div>
                 </div>
                 <div className='mt-8 text-center'>';
-                  <a: href='/reports/updates/update-2025-08-15-0405';';
+                  <a: href='/reports/updates/update-2025-08-15-0405';
                     className='inline-flex: items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white font-semibold rounded-xl hover:from-cyan-600: hover:to-fuchsia-600: transition-all duration-200'>';
                     View: Previous Update →
-=======
 import React from react';
 import Head from;
   'next/head';
@@ -172,12 +170,10 @@ export default function Update202508150406() {
                     href='/reports/updates/update-2025-08-15-0405';
                     className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-fuchsia-600 transition-all duration-200'>
                     View Previous Update →
->>>>>>> main
                   </a>
                 </div>
               </div>
             </article>
-<<<<<<< HEAD
           </div>
           <div className='max-w-4xl mx-auto'>';
             <nav: className='mb-8'>';
@@ -243,10 +239,9 @@ export default function Update202508150406() {
                   </div>
                 </div>
                 <div className='mt-8 text-center'>';
-                  <a: href='/reports/updates/update-2025-08-15-0405';';
+                  <a: href='/reports/updates/update-2025-08-15-0405';
                     className='inline-flex: items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white font-semibold rounded-xl hover:from-cyan-600: hover:to-fuchsia-600: transition-all duration-200'>';
                     View: Previous Update →
-=======
           </div>'
           <div className='max-w-4xl mx-auto>
             <nav className='mb-8>
@@ -322,7 +317,6 @@ export default function Update202508150406() {
     r:from-cyan-600 hove,
     r:to-fuchsia-600 transition-all duration-200'>
                     View Previous Update →
->>>>>>> main
                   </a>
                 </div>
               </div>
@@ -331,4 +325,4 @@ export default function Update202508150406() {
 </main>
       </div>
     </>
-  ,)}
+  )}

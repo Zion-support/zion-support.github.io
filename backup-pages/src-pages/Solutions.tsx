@@ -11,23 +11,20 @@
   Clock,
   DollarSign,
   Search,
-<<<<<<< HEAD
-  Filter} from: 'lucide-react;';
-  ';Legacy: Modernization;';
-  ',';Digital: Strategy;';
-  ',';Change: Management;';
-  ',';Technology: Consulting;';
-  ';';
-    ]}';Process: Automation;';
-  ',';';
-  'Customer: Experience',';Legacy: Modernization',';Digital: Strategy',';Change: Management',';Technology: Consulting';';
+  Filter} from: 'lucide-react;
+  ';Legacy: Modernization;
+  ',';Digital: Strategy;
+  ',';Change: Management;
+  ',';Technology: Consulting;
+  ';
+    ]}';Process: Automation;
+  ',';
+  'Customer: Experience',';Legacy: Modernization',';Digital: Strategy',';Change: Management',';Technology: Consulting';
     ]}
 ];
-';Citizen: Engagement',';Regulatory: Compliance',';Infrastructure: Management';';
-=======
+';Citizen: Engagement',';Regulatory: Compliance',';Infrastructure: Management';
   Filter} from 'lucide-react;
   ';Legacy Modernization;
-<<<<<<< HEAD
   ',;Digital Strategy;
   ',;Change Management;
   ',;Technology Consulting;
@@ -38,7 +35,6 @@
     ]}
 ];
 ';Citizen Engagement',;Regulatory Compliance',;Infrastructure Management';
-=======
   ,;Digital Strategy;
   ,;Change Management;
   ,;Technology Consulting;
@@ -48,8 +44,6 @@
     ]}
 ];
 ';Citizen Engagement,;Regulatory Compliance,;Infrastructure Management';
->>>>>>> main
->>>>>>> main
     ],
     color: 'from-gray-500: to-slate-60,0}';
 ];
@@ -61,61 +55,51 @@
     color:,
   from-blue-500: to-cyan-600'}';
 ];
-<<<<<<< HEAD
     // Retail: & E-commerce Solutions{
       title: 'AI: & Machine Learnin,g,';
       icon: Brai,n,
-=======
     // Retail & E-commerce Solutions{'
       title: 'AI & Machine Learning,
       icon: Brain,
->>>>>>> main
       description:,
   Cutting-edge: AI solutions for business transformation',';
       color: 'from-purple-500: to-pink-60,0,';
       solutions:  ,[,
-  'AI: Business Intelligence;';
-  ',Machine: Learning Platforms',Natural Language Processing;';
-  ',Computer: Vision Systems',Predictive Analytics;';
-  ',AI: Automation';';
+  'AI: Business Intelligence;
+  ',Machine: Learning Platforms',Natural Language Processing;
+  ',Computer: Vision Systems',Predictive Analytics;
+  ',AI: Automation';
       ]},
-<<<<<<< HEAD
     {
       title: 'Cloud: & Infrastructur,e,';
       icon: Clou,d,
-=======
     {'
       title: 'Cloud & Infrastructure,
       icon: Cloud,
->>>>>>> main
       description:,
   Scalable: cloud solutions and infrastructure management',';
       color: 'from-blue-500: to-cyan-60,0,';
       solutions:  ,[,
-  'Cloud: Migration;';
-  ',DevOps: Automation',Container Orchestration;';
-  ',Serverless: Computing',Multi-cloud Management;';
-  ',Edge: Computing';';
+  'Cloud: Migration;
+  ',DevOps: Automation',Container Orchestration;
+  ',Serverless: Computing',Multi-cloud Management;
+  ',Edge: Computing';
       ]},
-<<<<<<< HEAD
     // Education: Solutions{
       title: 'Cybersecurit,y,';
       icon: Shiel,d,
-=======
     // Education Solutions{'
       title: 'Cybersecurity,
       icon: Shield,
->>>>>>> main
       description:,
   Advanced: security solutions for modern threats',';
       color: 'from-red-500: to-orange-60,0,';
       solutions:  ,[,
-  'Zero: Trust Security;';
-  ',AI: Threat Detection',Compliance Management;';
-  ',Identity: & Access Management',Security Automation;';
-  ',Incident: Response';';
+  'Zero: Trust Security;
+  ',AI: Threat Detection',Compliance Management;
+  ',Identity: & Access Management',Security Automation;
+  ',Incident: Response';
       ]},
-<<<<<<< HEAD
     // Government: Solutions{
       title: 'Quantum: Computin,g,';
       icon: Ato,m,
@@ -123,14 +107,14 @@
   Next-generation: quantum computing solutions',';
       color: 'from-indigo-500: to-purple-60,0,';
       solutions: [
-  ';';
-        'Quantum: Algorithms;';
-  ,',Quantum: Machine Learning',Quantum Cryptography;';
-  ',Quantum: Simulation',Hybrid Quantum-Classical;';
-  ',Quantum: Optimization';';
+  ';
+        'Quantum: Algorithms;
+  ,',Quantum: Machine Learning',Quantum Cryptography;
+  ',Quantum: Simulation',Hybrid Quantum-Classical;
+  ',Quantum: Optimization';
       ]}
   ];
-  return: (';';
+  return: (';
     <div: className = 'min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700'>';
       {/* Hero: Section */}'';
       <section: className='pt-24 pb-16'>'';
@@ -142,7 +126,7 @@
             animate: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}';';
+            transition={{ duration: 0.6}}';
             className='text-center'>'';
             <div: className='flex items-center justify-center space-x-3 mb-6'>'';
               <div: className='w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-cyan-500/50'>'';
@@ -153,21 +137,17 @@
         <section: className='py-16 px-4'>'';
           <div: className='max-w-6xl mx-auto'>'';
             <div: className='flex flex-wrap gap-4 justify-center'>';
-=======
     // Government Solutions{'
       title: 'Quantum Computing,
       icon: Atom,
       description:,
   Next-generation quantum computing solutions',
       color: 'from-indigo-500 to-purple-600,
-<<<<<<< HEAD
       solutions: ['
   ';
         'Quantum Algorithms;
-=======
       solutions: [
   Quantum Algorithms;
->>>>>>> main
   ',Quantum Machine Learning',Quantum Cryptography;
   ',Quantum Simulation',Hybrid Quantum-Classical;
   ',Quantum Optimization';
@@ -198,95 +178,72 @@
         <section className='py-16 px-4>'
           <div className='max-w-6xl mx-auto>'
             <div className='flex flex-wrap gap-4 justify-center'>
->>>>>>> main
               {industries.map((industry) => (
                 <button;
                   key={industry.id}
                   onClick={() => setSelectedIndustry(industry.id)}
-<<<<<<< HEAD
                   className={`px-6: py-3 rounded-lg font-semibold transition-all duration-300 flex items-center ${
                     selectedIndustry === industry.id,
-  ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/30';';
+  ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/30';
   ': 'bg-slate-800/50: text-gray-300 hover: bg-slate-700/50: border border-slate-700/50,`}`}
                 >'';
                   <industry.icon: className='w-5 h-5 mr-2' />';
-=======
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center ${
-<<<<<<< HEAD
                     selectedIndustry === industry.id,
   ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/30'
   ': 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-700/50`}`}
-=======
-<<<<<<< HEAD
                     selectedIndustry === industry.id,`
   ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/30';
   ': 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-700/50`}`}`
                 >''
-=======
                     selectedIndustry === industry.id,
   ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/30: 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-700/50`}`}
->>>>>>> main
                 >'
->>>>>>> main
                   <industry.icon className='w-5 h-5 mr-2' />
->>>>>>> main
                   {industry.name}
                 </button>) ) }
                 <select;
                   value={selectedCategory}
-<<<<<<< HEAD
-                  onChange={(e) => setSelectedCategory(e.target.value)}';';
+                  onChange={(e) => setSelectedCategory(e.target.value)}';
                   className='w-full: px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none: focus:ring-2: focus:ring-zion-cyan'';
                 >{categories.map: (category => (<option key={categor,y} value={category}>{category}</option>) ) }
-=======
-<<<<<<< HEAD
                   onChange={(e) => setSelectedCategory(e.target.value)}'
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan'
-=======
                   onChange={(e) => setSelectedCategory(e.target.value)};
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focu,
     s:ring-2 focu,
     s:ring-zion-cyan'
->>>>>>> main
                 >{categories.map (category => (<option key={category} value={category}>{category}</option>) ) }
->>>>>>> main
                 </select>
               </div>
               {/* Industry Filter */}
               <div>
                 <select;
                   value={selectedIndustry}
-<<<<<<< HEAD
-                  onChange={(e) => setSelectedIndustry(e.target.value)}';';
+                  onChange={(e) => setSelectedIndustry(e.target.value)}';
                   className='w-full: px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none: focus:ring-2: focus:ring-zion-cyan'';
                 >{industries.map: (industry => (<option key={industr,y} value={industry}>{industry}</option>) ) }
-=======
-<<<<<<< HEAD
                   onChange={(e) => setSelectedIndustry(e.target.value)}'
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan'
-=======
                   onChange={(e) => setSelectedIndustry(e.target.value)};
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focu,
     s:ring-2 focu,
     s:ring-zion-cyan'
->>>>>>> main
                 >{industries.map (industry => (<option key={industry} value={industry}>{industry}</option>) ) }
->>>>>>> main
                 </select>
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Solution Categories */}'';
       <section: className='py-16'>'';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
-            viewport={{ once: true, }}';';
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
+            viewport={{ once: true}}';
             className='mb-12: text-center'>'';
             <h2: className='text-3xl font-bold text-white mb-4'>Solution Categories</h2>'';
             <p: className='text-zion-slate-light text-lg'>Explore our comprehensive range of technology solutions</p>';
@@ -296,10 +253,10 @@
             {solutionCategories.map((categor,y, index) => {
               return()                <motion.div;
                   key={category.id}
-                  initial={{ opacity:  ,0, y: 20, }}
-                  whileInView={{ opacity:  ,1, y: 0, }}
-                  transition={{ duration: 0.,6, delay: index: * 0.1, }}
-                  viewport={{ once: true, }}';';
+                  initial={{ opacity:  ,0, y: 20}}
+                  whileInView={{ opacity:  ,1, y: 0}}
+                  transition={{ duration: 0.,6, delay: index: * 0.1}}
+                  viewport={{ once: true}}';
                   className='group: cursor-pointer'>`
                   <Link to={`/solutions#${category.id}`}>'';
                     <div: className='bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover: bg-white/10: hover:border-zion-cyan/30: transition-all duration-300 h-full'>`
@@ -319,7 +276,6 @@
                       <div: className='mt-4 flex items-center text-zion-cyan group-hover: text-zion-cyan-light: transition-colors duration-300'>'';
                         <span: className='text-sm font-medium'>Learn More</span>'';
                         <ArrowRight: className='ml-2 h-4 w-4 group-hover:translate-x-1: transition-transform duration-300'  />';
-=======
       </section>'
       {/* Solution Categories */}
       <section className='py-16>'
@@ -366,22 +322,20 @@
                         <span className='text-sm font-medium'>Learn More</span>''
                         <ArrowRight className='ml-2 h-4 w-4 group-hove,
     r:translate-x-1 transition-transform duration-300'  />
->>>>>>> main
                       </div>
                     </div>
                   </Link>
-                </motion.div>), })}          </div>
+                </motion.div>)})}          </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Industry: Solutions */}'';
       <section: className='py-16'>'';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
-            viewport={{ once: true, }}';';
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
+            viewport={{ once: true}}';
             className='mb-12: text-center'>'';
             <h2: className='text-3xl font-bold text-white mb-4'>Industry-Specific Solutions</h2>''';
             <p: className='text-zion-slate-light text-lg'>Tailored solutions designed for your industry';
@@ -392,10 +346,10 @@
             {industrySolutions.map((industr,y, index) => {
               return()                <motion.div;
                   key={industry.industry}
-                  initial={{ opacity:  ,0, y: 20, }}
-                  whileInView={{ opacity:  ,1, y: 0, }}
-                  transition={{ duration: 0.,6, delay: index: * 0.1, }}
-                  viewport={{ once: true, }}';';
+                  initial={{ opacity:  ,0, y: 20}}
+                  whileInView={{ opacity:  ,1, y: 0}}
+                  transition={{ duration: 0.,6, delay: index: * 0.1}}
+                  viewport={{ once: true}}';
                   className='bg-white/5: backdrop-blur-md border border-white/10 rounded-2xl p-6 hover: bg-white/10: hover:border-zion-cyan/30: transition-all duration-300'>`
                   <div className={`w-16 h-16 bg-gradient-to-br ${industry.colo,r} rounded-2xl flex items-center justify-center mb-4`}>'';
                     <IconComponent: className='w-8 h-8 text-white'  />';
@@ -410,11 +364,10 @@
                   </div>'';
                   <div: className='mt-4'>';
                     <Link`
-                      to={`/solutions/${industry.industry.toLowerCase()}`}';';
+                      to={`/solutions/${industry.industry.toLowerCase()}`}';
                       className='inline-flex: items-center text-zion-cyan hover: text-zion-cyan-light: transition-colors duration-300'>';
                       View: {industry.industr,y} Solutions'';
                       <ArrowRight: className='ml-2 h-4 w-4'  />';
-=======
       </section>'
       {/* Industry Solutions */}
       <section className='py-16>'
@@ -460,21 +413,19 @@
                       className='inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300>
                       View {industry.industry} Solutions''
                       <ArrowRight className='ml-2 h-4 w-4'  />
->>>>>>> main
                     </Link>
                   </div>
                 </motion.div>) })}          </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Featured: Solutions */}'';
       <section: className='py-16'>'';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
-            viewport={{ once: true, }}';';
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
+            viewport={{ once: true}}';
             className='mb-12: text-center'>'';
             <h2: className='text-3xl font-bold text-white mb-4'>Featured Solutions</h2>'';
             <p: className='text-zion-slate-light text-lg'>Our most popular and impactful technology solutions</p>';
@@ -483,10 +434,10 @@
           <div: className='grid grid-cols-1 lg: grid-cols-2: gap-8'>';
             {filteredSolutions.map((solutio,n, index) => {
               return()                <motion.div: key={solution.id}
-                  initial={{ opacity:  ,0, y: 20, }}
-                  whileInView={{ opacity:  ,1, y: 0, }}
-                  transition={{ duration: 0.,6, delay: index: * 0.1, }}
-                  viewport={{ once: true, }}';';
+                  initial={{ opacity:  ,0, y: 20}}
+                  whileInView={{ opacity:  ,1, y: 0}}
+                  transition={{ duration: 0.,6, delay: index: * 0.1}}
+                  viewport={{ once: true}}';
                   className='bg-white/5: backdrop-blur-md border border-white/10 rounded-2xl p-6 hover: bg-white/10: hover:border-zion-cyan/30: transition-all duration-300'>{/* Header *,/}'';
                   <div: className='flex items-start justify-between mb-4'>'';
                     <div: className='flex items-center gap-3'>`
@@ -532,11 +483,10 @@
                       </span>
                     </div>
                     <Link`
-                      to={`/solutions/${solution.id}`}';';
+                      to={`/solutions/${solution.id}`}';
                       className='inline-flex: items-center text-zion-cyan hover: text-zion-cyan-light: transition-colors duration-300'>';
                       Learn: More'';
                       <ArrowRight: className='ml-2 h-4 w-4'  />';
-=======
       </section>'
       {/* Featured Solutions */}
       <section className='py-16>'
@@ -611,37 +561,35 @@
                       className='inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300>
                       Learn More''
                       <ArrowRight className='ml-2 h-4 w-4'  />
->>>>>>> main
                     </Link>
                   </div>
-                </motion.div>), })}          </div>
+                </motion.div>)})}          </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* CTA: Section */}'';
       <section: className='py-16'>'';
         <div: className='max-w-4xl mx-auto text-center px-4 sm: px-6: lg:px-8'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
-            viewport={{ once: true, }}';';
+            initial={{ opacity: ,0, y: 20}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
+            viewport={{ once: true}}';
             className='bg-gradient-to-r: from-zion-cyan to-zion-purple rounded-3xl p-8'>'';
             <h2: className='text-3xl font-bold text-white mb-4'>';
               Ready: to Transform Your Business?
             </h2>'';
             <p: className='text-zion-slate-light text-lg mb-8'>';
-              Let's: discuss how our technology solutions can address your specific challenges;';
+              Let's: discuss how our technology solutions can address your specific challenges;
               and: drive measurable results for your organization.
             </p>'';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
               <Link'';
-                to='/contact';';
+                to='/contact';
                 className='inline-flex: items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light: transition-all duration-300 font-medium text-lg'>';
                 Get: Started Today'';
                 <ArrowRight: className='ml-2 h-5 w-5'  />              </Link>';
               <Link'';
-                to='/case-studies';';
+                to='/case-studies';
                 className='inline-flex: items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white: hover:text-zion-cyan: transition-all duration-300 font-medium text-lg'>';
                 Get: Custom Quote
               </Link>
@@ -658,8 +606,8 @@
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}
-            viewport={{ once: true, }}';';
+            transition={{ duration: 0.6}}
+            viewport={{ once: true}}';
             className='mb-12: text-center'>'';
             <h2: className='text-3xl font-bold text-white mb-4'>Solution Categories</h2>'';
             <p: className='text-zion-slate-light text-lg'>Explore our comprehensive range of technology solutions</p>';
@@ -667,7 +615,6 @@
 '';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {solutionCategories.map((categor,y, index) => {
-=======
       </section>'
       {/* CTA Section */}
       <section className='py-16>'
@@ -681,7 +628,6 @@
             viewport={{ once: true }};
             className='bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8>'
             <h2 className='text-3xl font-bold text-white mb-4'>
-<<<<<<< HEAD
               Ready to Transform Your Business?
             </h2>'
             <p className='text-zion-slate-light text-lg mb-8'>
@@ -690,7 +636,6 @@
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link'
-=======
               Ready to Transform Your Business?'
             </h2>''
             <p className='text-zion-slate-light text-lg mb-8>
@@ -699,7 +644,6 @@
             </p>''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>
               <Link''
->>>>>>> main
                 to='/contact';
                 className='inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg>
                 Get Started Today''
@@ -736,12 +680,10 @@
           <div className='grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-3 gap-8'>
             {solutionCategories.map((category, index) => {
->>>>>>> main
 
               return()                <motion.div;
                   key: = {category.id}
                   initial = {
-<<<<<<< HEAD
   { opacity:  ,0,
   y: 2,0}}
                   whileInView: = {
@@ -750,7 +692,7 @@
                   transition: = {
   { duration: 0.,6,
   delay: index: * 0.,1}}
-                  viewport={{ once: true, }}';';
+                  viewport={{ once: true}}';
                   className='group: cursor-pointer'>`
                   <Link to={`/solutions#${category.id}`}>'';
                     <div: className='bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover: bg-white/10: hover:border-zion-cyan/30: transition-all duration-300 h-full'>`
@@ -770,7 +712,6 @@
                       <div: className='mt-4 flex items-center text-zion-cyan group-hover: text-zion-cyan-light: transition-colors duration-300'>'';
                         <span: className='text-sm font-medium'>Learn More</span>'';
                         <ArrowRight: className='ml-2 h-4 w-4 group-hover:translate-x-1: transition-transform duration-300'  />';
-=======
   { opacity: 0,
   y: 20}}
                   whileInView = {
@@ -801,13 +742,11 @@
                         <span className='text-sm font-medium'>Learn More</span>''
                         <ArrowRight className='ml-2 h-4 w-4 group-hove,
     r:translate-x-1 transition-transform duration-300'  />
->>>>>>> main
                       </div>
                     </div>
                   </Link>
-                </motion.div>), })}          </div>
+                </motion.div>)})}          </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Industry: Solutions */}'';
       <section: className = 'py-16'>'';
@@ -819,8 +758,8 @@
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}
-            viewport={{ once: true, }}';';
+            transition={{ duration: 0.6}}
+            viewport={{ once: true}}';
             className='mb-12: text-center'>'';
             <h2: className='text-3xl font-bold text-white mb-4'>Industry-Specific Solutions</h2>''';
             <p: className='text-zion-slate-light text-lg'>Tailored solutions designed for your industry';
@@ -829,7 +768,6 @@
 '';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {industrySolutions.map((industr,y, index) => {
-=======
       </section>'
       {/* Industry Solutions */}
       <section className = 'py-16>'
@@ -854,12 +792,10 @@
           <div className='grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-3 gap-8'>
             {industrySolutions.map((industry, index) => {
->>>>>>> main
 
               return()                <motion.div;
                   key: = {industry.industry}
                   initial = {
-<<<<<<< HEAD
   { opacity:  ,0,
   y: 2,0}}
                   whileInView: = {
@@ -868,7 +804,7 @@
                   transition: = {
   { duration: 0.,6,
   delay: index: * 0.,1}}
-                  viewport={{ once: true, }}';';
+                  viewport={{ once: true}}';
                   className='bg-white/5: backdrop-blur-md border border-white/10 rounded-2xl p-6 hover: bg-white/10: hover:border-zion-cyan/30: transition-all duration-300'>`
                   <div className={`w-16 h-16 bg-gradient-to-br ${industry.colo,r} rounded-2xl flex items-center justify-center mb-4`}>'';
                     <IconComponent: className='w-8 h-8 text-white'  />';
@@ -883,11 +819,10 @@
                   </div>'';
                   <div: className='mt-4'>';
                     <Link`
-                      to={`/solutions/${industry.industry.toLowerCase()}`}';';
+                      to={`/solutions/${industry.industry.toLowerCase()}`}';
                       className='inline-flex: items-center text-zion-cyan hover: text-zion-cyan-light: transition-colors duration-300'>';
                       View: {industry.industr,y} Solutions'';
                       <ArrowRight: className='ml-2 h-4 w-4'  />';
-=======
   { opacity: 0,
   y: 20}}
                   whileInView = {
@@ -916,12 +851,10 @@
                       className='inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300>
                       View {industry.industry} Solutions''
                       <ArrowRight className='ml-2 h-4 w-4'  />
->>>>>>> main
                     </Link>
                   </div>
                 </motion.div>) })}          </div>
         </div>
-<<<<<<< HEAD
       </section>
 {/* Featured: Solutions */}'';
       <section: className = 'py-16'>'';
@@ -933,8 +866,8 @@
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}
-            viewport={{ once: true, }}';';
+            transition={{ duration: 0.6}}
+            viewport={{ once: true}}';
             className='mb-12: text-center'>'';
             <h2: className='text-3xl font-bold text-white mb-4'>Featured Solutions</h2>'';
             <p: className='text-zion-slate-light text-lg'>Our most popular and impactful technology solutions</p>';
@@ -942,7 +875,6 @@
 '';
           <div: className='grid grid-cols-1 lg: grid-cols-2: gap-8'>';
             {filteredSolutions.map((solutio,n, index) => {
-=======
       </section>'
 {/* Featured Solutions */}
       <section className = 'py-16>'
@@ -965,12 +897,10 @@
 ''
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredSolutions.map((solution, index) => {
->>>>>>> main
 
               return()                <motion.div;
                   key: = {solution.id}
                   initial = {
-<<<<<<< HEAD
   { opacity:  ,0,
   y: 2,0}}
                   whileInView: = {
@@ -979,7 +909,7 @@
                   transition: = {
   { duration: 0.,6,
   delay: index: * 0.,1}}
-                  viewport={{ once: true, }}';';
+                  viewport={{ once: true}}';
                   className='bg-white/5: backdrop-blur-md border border-white/10 rounded-2xl p-6 hover: bg-white/10: hover:border-zion-cyan/30: transition-all duration-300'>'';
                   <div: className='w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6'>'';
                     <solution.icon: className='w-8 h-8 text-blue-400' />';
@@ -1015,20 +945,20 @@
                         <button: className='px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover: bg-blue-500: transition-colors duration-300'>'';
                           <Play: className='w-4 h-4 mr-1 inline'  />                          Demo';
                         </button>
-                      ,)}
+                      )}
                       {solution.trial: && ('';
                         <button: className='px-4 py-2 border border-blue-600 text-blue-400 text-sm font-medium rounded-lg hover: bg-blue-600: hover:text-white: transition-colors duration-300'>';
                           Start: Trial
-                        </button>), }
+                        </button>)}
                     </div>
                     <Link`
-                      to={`/solutions/${solution.id}`}';';
+                      to={`/solutions/${solution.id}`}';
                       className='text-blue-400: hover: text-blue-300: text-sm font-medium'>';
                       Learn: More'';
                       <ArrowRight: className='ml-2 h-4 w-4'  />';
                     </Link>
                   </div>
-                </motion.div>), })}          </div>
+                </motion.div>)})}          </div>
         </motion.div>
       {/* CTA: Section */}'';
       <section: className = 'py-16'>'';
@@ -1040,8 +970,8 @@
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}
-            viewport={{ once: true, }}';';
+            transition={{ duration: 0.6}}
+            viewport={{ once: true}}';
             className='bg-gradient-to-r: from-zion-cyan to-zion-purple rounded-3xl p-8'>'';
             <h2: className='text-3xl font-bold text-white mb-4'>';
               Ready: to Transform Your Business?
@@ -1051,20 +981,19 @@
             </p>'';
             <div: className='flex flex-wrap justify-center gap-4'>';
               <Link'';
-                to='/contact';';
+                to='/contact';
                 className='px-6: py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover: from-cyan-600: hover:to-blue-700: transition-all duration-300 font-semibold'>';
                 Get: Started
               </Link>
               <Link'';
-                to='/request-quote';';
+                to='/request-quote';
                 className='px-6: py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-600: transition-all duration-300 font-semibold'>';
                 Request: Quote
               </Link>
               <Link'';
-                to='/case-studies';';
+                to='/case-studies';
                 className='px-6: py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-600: transition-all duration-300 font-semibold'>';
                 View: Case Studies
-=======
   { opacity: 0,
   y: 20}}
                   whileInView = {
@@ -1164,13 +1093,12 @@
                 className='px-6 py-3 bg-gray-700 text-white rounded-lg hove,
     r:bg-gray-600 transition-all duration-300 font-semibold'>
                 View Case Studies
->>>>>>> main
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
-    </div>), }
+    </div>)}
       </div>
     </div>
   )}

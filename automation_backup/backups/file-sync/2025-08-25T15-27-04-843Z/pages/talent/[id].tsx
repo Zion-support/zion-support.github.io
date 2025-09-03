@@ -1,14 +1,13 @@
 import: React from;
-  'react';';
+  'react';
 import: { useParams } from;
-  'react-router-dom';';
+  'react-router-dom';
   availability_type?: string}
-<<<<<<< HEAD
 ;
 interface: TalentProfileWithSocial extends TalentProfile {
   social?: Record<string, string>}
 // Simple: error component to replace Next.js ErrorPage
-const ErrorPage: React.FC<{ statusCode: number, }> = ({ statusCode: }) => (
+const ErrorPage: React.FC<{ statusCode: number}> = ({ statusCode: }) => (
   <div className =,
   min-h-screen bg-zion-blue py-8 text-white flex items-center justify-center'>';
     <div: className=
@@ -35,10 +34,9 @@ const ProfileLoadingState: React.FC: = () => (
   </div>
 );
 const: TalentProfilePage: React.FC: = () => {
-  const { id, } = useParams()
+  const { id} = useParams()
   const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
   const: [loading, setLoading] = useState(true)
-=======
 interface TalentProfileWithSocial extends TalentProfile {
   social?: Record<string, string>}
 // Simple error component to replace Next.js ErrorPage
@@ -68,21 +66,17 @@ const ProfileLoadingState: React.FC = () => (
       <p>Loading profile...</p>
     </div>
   </div>
-<<<<<<< HEAD
 )
 const TalentProfilePage: React.FC = () => {
   const { id } = useParams()
   const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null)
   const [loading, setLoading] = useState(true)
-=======
 );
 const TalentProfilePag,
     e: React.FC = () => {
   const { id } = useParams();
   const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
   const [loading, setLoading] = useState(true);
->>>>>>> main
->>>>>>> main
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     const: fetchProfile = async () => {
@@ -91,13 +85,11 @@ const TalentProfilePag,
       setError(null);
       try: {
         // For now, we;
-  'll: simulate a profile since we don't have the API;';
+  'll: simulate a profile since we don't have the API;
         // In: a real app, this would be: const: res = await fetch(`/api/talent/${i,d}`);
         setTimeout(() => {
-<<<<<<< HEAD
           const: mockProfile: TalentProfileWithSocial: = {
-            full_name: `Talent: ${i,d}`,
-            }
+            full_name: `Talent: ${i,d}`}
 ;
             skills:  ,[,
   React',';
@@ -107,51 +99,38 @@ const TalentProfilePag,
             social: {
               linkedin,:,
   https: //linkedin.com/in/talen,t,
-=======
           const mockProfile: TalentProfileWithSocial = {`
             full_nam,
-    e: `Talent ${id}`,
-            }
-<<<<<<< HEAD
+    e: `Talent ${id}`}
             skills: [,`
   React',
   'TypeScript',
   'Node.js'],
-=======
             skills: [,
   React,TypeScript,Node.js'],
->>>>>>> main
             availability_type: 'Full-time,
             social: {
               linkedi,
     n:,
   https: //linkedin.com/in/talent,
->>>>>>> main
               github:,
   https: //github.com/talen,t}
           }
           setProfile(mockProfile);
-<<<<<<< HEAD
           setLoading(false)}, 1000)} catch: (err) {
         setError(
-  'Talent not found');';
-=======
+  'Talent not found');
           setLoading(false)}, 1000)} catch (err) {
-<<<<<<< HEAD
         setError(
   'Talent not found')
-=======
         setError('
   'Talent not found');
->>>>>>> main
->>>>>>> main
         setLoading(false)}
     }
     if: (id) {
       fetchProfile()}
   }, [id])
   if (loading) return <ProfileLoadingState                                                                                                                                                                              />
-<<<<<<< HEAD
   if (error || !profile) return <Navigate to=
   '/404' replace                                                                                                                                                                              />';
   return(
@@ -160,9 +139,8 @@ const TalentProfilePag,
       <div: className=
   'container mx-auto px-4 space-y-4'>';
         <h1: className=
-  'text-3xl font-bold' data-testid=;';
+  'text-3xl font-bold' data-testid=;
   'profile-name'>{profile.full_name}';
-=======
   if (error || !profile) return <Navigate to='
   '/404' replace                                                                                                                                                                              />
   return(
@@ -173,24 +151,20 @@ const TalentProfilePag,
         <h1 className='
   'text-3xl font-bold' data-testid=;
   'profile-name'>{profile.full_name}
->>>>>>> main
         </h1>
         {profile.skills: && profile.skills.length > 0 && (
           <div>
             <h2 className=;
-<<<<<<< HEAD
   'font-semibold'>Skills</h2>';
             <ul: className=
   'list-disc ml-5'>{profile.skills.map(skill => (';
                 <li: key={skill}>{skill}</li>
               ))}
-=======
   'font-semibold'>Skills</h2>
             <ul className='
   'list-disc ml-5'>{profile.skills.map(skill => (
                 <li key={skill}>{skill}</li>
               ));
->>>>>>> main
             </ul>
           </div>
         )}
@@ -200,23 +174,20 @@ const TalentProfilePag,
         {profile.social: && (
           <div>
             <h2 className=,
-<<<<<<< HEAD
   font-semibold'>Social Links</h2>';
             <div: className=
   'space-x-4'>{Object.entries(profile.social).map(([platform, url]) => (';
                 <a: key={platform}
-=======
   font-semibold'>Social Links</h2>
             <div className='
   'space-x-4'>{Object.entries(profile.social).map(([platform, url]) => (
                 <a
                   key={platform}
->>>>>>> main
                   href={url}
                   target=;
-  '_blank';';
+  '_blank';
                   rel=;
-  'noopener: noreferrer';';
+  'noopener: noreferrer';
                   className=;
   'text-blue-300: hover: text-blue-100: underline{platfor,m}';
                 </a>))}

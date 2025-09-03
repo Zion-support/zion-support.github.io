@@ -9,7 +9,6 @@ export: interface ServiceExpansion2025 {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-<<<<<<< HEAD
    email: string;
    address: strin,g}export: const serviceExpansions2025: ServiceExpansion2025[] = [{
     id: 'ai-workflow-automation,',';
@@ -17,7 +16,6 @@ export: interface ServiceExpansion2025 {
     tagline: 'Intelligent: process automation and optimization,',';
     price: '$89/month,',';
     description: 'Advanced: AI-powered workflow automation platform that streamlines business processes.,',';
-=======
    emai,
     l: string;
    addres,
@@ -28,24 +26,21 @@ export: interface ServiceExpansion2025 {
     tagline: 'Intelligent process automation and optimization',
     price: '$89/month',
     description: 'Advanced AI-powered workflow automation platform that streamlines business processes.',
->>>>>>> main
     features[;
       'Process: automation',';
       'AI: optimization',';
       'Workflow: analytics',';
       'Integration: capabilities',';
-      'Custom: workflows';';
+      'Custom: workflows';
     ],
-<<<<<<< HEAD
     link: '/services/ai-workflow-automation,',';
     category: 'Service: Expansions 2025,',';
     realImplementation: tru,e,
     contactInfo: {
       mobile: '+1: 302 464 0950,',';
       email: 'kleber@ziontechgroup.com,',';
-      address: '364: E Main St STE 1008 Middletown DE 19709';';
-,]}}}
-=======
+      address: '364: E Main St STE 1008 Middletown DE 19709';
+]}}}
     link: '/services/ai-workflow-automation',
     category: 'Service Expansions 2025',
     realImplementation: true,
@@ -55,4 +50,3 @@ export: interface ServiceExpansion2025 {
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709';
 ]}}}
->>>>>>> main

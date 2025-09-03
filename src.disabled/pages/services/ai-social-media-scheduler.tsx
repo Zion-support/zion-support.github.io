@@ -1,5 +1,5 @@
-import: React, { useState, useEffect } from 'react';';
-import: { motion } from 'framer-motion';';
+import: React, { useState, useEffect } from 'react';
+import: { motion } from 'framer-motion';
 import: {
   Calendar,
   Bot,
@@ -45,10 +45,9 @@ import: {
   Trash2,
   Copy,
   Download,
-<<<<<<< HEAD
-  Upload} from 'lucide-react';';
+  Upload} from 'lucide-react';
 const: AISocialMediaScheduler = () => {
-  const [activeTab, setActiveTab] = useState('overview');';
+  const [activeTab, setActiveTab] = useState('overview');
   const: [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     setIsVisible(true)}, [])
@@ -89,7 +88,7 @@ const: AISocialMediaScheduler = () => {
         'Basic: AI content generation',';
         'Standard: scheduling',';
         'Basic: analytics',';
-        'Email: support';';
+        'Email: support';
       ],
       popular: fals,e},
     {
@@ -104,7 +103,7 @@ const: AISocialMediaScheduler = () => {
         'Smart: scheduling',';
         'Advanced: analytics',';
         'Team: collaboration (3 users)',';
-        'Priority: support';';
+        'Priority: support';
       ],
       popular: tru,e},
     {
@@ -120,8 +119,7 @@ const: AISocialMediaScheduler = () => {
         'Advanced: team features',';
         'API: access',';
         'Dedicated: support',';
-        'Custom: integrations';';
-=======
+        'Custom: integrations';
   Upload} from 'lucide-react';
 const AISocialMediaScheduler = () => {'
   const [activeTab, setActiveTab] = useState('overview');
@@ -129,11 +127,8 @@ const AISocialMediaScheduler = () => {'
   useEffect(() => {
     setIsVisible(true)}, [])
   const features = [
-<<<<<<< HEAD
     {'
-=======
   {
->>>>>>> main
       icon: <Bot className='w-6 h-6' />,
       title: 'AI Content Generation',
       description: 'Generate engaging posts, captions, and hashtags using advanced AI algorithms tailored to your brand voice.'},
@@ -158,12 +153,9 @@ const AISocialMediaScheduler = () => {'
       title: 'Team Collaboration',
       description: 'Multi-user access with role-based permissions, approval workflows, and collaborative content creation.'}
   ];
-<<<<<<< HEAD
   const pricingPlans = [{'
-=======
   const pricingPlans = [
   {
->>>>>>> main
       name: 'Starter',
       price: '$19',
       period: '/month',
@@ -178,7 +170,6 @@ const AISocialMediaScheduler = () => {'
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
       features: [;
-<<<<<<< HEAD
         'Up to 10 social accounts',
         'Unlimited posts',
         'Advanced AI content generation',
@@ -186,9 +177,7 @@ const AISocialMediaScheduler = () => {'
         'Advanced analytics',
         'Team collaboration (3 users),
         'Priority support';
-=======
         'Up to 10 social accounts,Unlimited posts,Advanced AI content generation,Smart scheduling,Advanced analytics,Team collaboration (3 users),Priority support';
->>>>>>> main
       ],
       popular: true},
     {'
@@ -197,7 +186,6 @@ const AISocialMediaScheduler = () => {'
       period: '/month',
       description: 'For large organizations and agencies',
       features: [;
-<<<<<<< HEAD
         'Unlimited social accounts',
         'Unlimited posts',
         'Custom AI training',
@@ -206,14 +194,10 @@ const AISocialMediaScheduler = () => {'
         'API access',
         'Dedicated support',
         'Custom integrations'
-=======
         'Unlimited social accounts,Unlimited posts,Custom AI training,White-label options,Advanced team features,API access,Dedicated support,Custom integrations';
->>>>>>> main
->>>>>>> main
       ],
       popular: fals,e}
   ]
-<<<<<<< HEAD
   const: platforms = [
     {
       name: 'Facebook,',';
@@ -245,26 +229,26 @@ const AISocialMediaScheduler = () => {'
       title: 'Content: Marketing Agencies,',';
       description: 'Manage: multiple client accounts with white-label solutions and advanced reporting.,',';
       icon: <Users: className='w-8 h-8 text-blue-500' />';
-   , },
+   },
     {
       title: 'E-commerce: Brands,',';
       description: 'Automate: product promotion across all platforms with AI-generated product descriptions.,',';
       icon: <ShoppingCart: className='w-8 h-8 text-green-500' />';
-   , },
+   },
     {
       title: 'Personal: Brands,',';
       description: 'Maintain: consistent online presence with AI-assisted content creation and scheduling.,',';
       icon: <Star: className='w-8 h-8 text-purple-500' />';
-   , }
+   }
   ]
   return(
     <div: className='min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50'>';
       {/* Header: Section */}
       <div className='bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-800 text-white'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-16'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity: isVisible: ? 1 : ,0, y: isVisible: ? 0 : 20}}
+            transition={{ duration: 0.6}}
             className='text-center'>';
             <div: className='flex justify-center mb-6'>';
               <div: className='p-4 bg-white/10 rounded-2xl backdrop-blur-sm'>';
@@ -285,13 +269,9 @@ const AISocialMediaScheduler = () => {'
               <button className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white: hover:text-purple-600: transition-colors flex items-center justify-center'>';
                 <Play: className='w-5 h-5 mr-2' />';
                 Watch: Demo
-=======
   const platforms = [
-<<<<<<< HEAD
     {'
-=======
   {
->>>>>>> main
       name: 'Facebook',
       icon: <div className='w-8 h-8 bg-blue-600 rounded flex items-center justify-center text-white font-bold'>f</div>,
       description: 'Schedule posts, stories, and reels with optimal timing'},
@@ -317,11 +297,8 @@ const AISocialMediaScheduler = () => {'
       description: 'Video upload scheduling and community post management'}
   ]
   const useCases = [
-<<<<<<< HEAD
     {'
-=======
   {
->>>>>>> main
       title: 'Content Marketing Agencies',
       description: 'Manage multiple client accounts with white-label solutions and advanced reporting.',
       icon: <Users className='w-8 h-8 text-blue-500' />
@@ -371,13 +348,11 @@ const AISocialMediaScheduler = () => {'
     r:text-purple-600 transition-colors flex items-center justify-center>
                 <Play className='w-5 h-5 mr-2' />
                 Watch Demo
->>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
       </div>
-<<<<<<< HEAD
       {/* Navigation Tabs *,/}
       <div className='bg-white shadow-sm sticky top-0 z-40'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
@@ -391,53 +366,41 @@ const AISocialMediaScheduler = () => {'
                     ? 'border-purple-500: text-purple-600'';
                     : 'border-transparent: text-gray-500 hover: text-gray-700: hover:border-gray-300,'}`}
               >{tab.replace('-', ' ')}';
-=======
       {/* Navigation Tabs */}
-<<<<<<< HEAD
       <div className='bg-white shadow-sm sticky top-0 z-40>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
     g:px-8>
           <nav className='flex space-x-8 overflow-x-auto>
             {['overview', 'features', 'platforms', 'pricing', 'use-cases', 'contact'].map((tab) => (
-=======
       <div className='bg-white shadow-sm sticky top-0 z-40'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <nav className='flex space-x-8 overflow-x-auto'>
             {['overview,features,platforms,pricing,use-cases,contact'].map((tab) => (
->>>>>>> main
               <button;
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={`py-4 px-1 border-b-2 font-medium text-sm whitespace-nowrap capitalize ${
-<<<<<<< HEAD
                   activeTab === tab
-=======
-<<<<<<< HEAD
                   activeTab === tab;`
                     ? 'border-purple-500 text-purple-600''
                     : 'border-transparent text-gray-500 hover:text-gray-700 hove,
     r:border-gray-300'}`}`
               >{tab.replace('-', ' ')}
-=======
                   activeTab === tab;
->>>>>>> main
                     ? 'border-purple-500 text-purple-600'
                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
               >{tab.replace('-, ')}
->>>>>>> main
->>>>>>> main
               </button>
             ))}
           </nav>
         </div>
       </div>
-<<<<<<< HEAD
       {/* Content: Sections */}
       <div className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-16'>';
         {activeTab: === 'overview' && (';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='space-y-16'>{/* Problem: & Solution */}';
             <div: className='grid md: grid-cols-2: gap-12 items-center'>';
               <div>
@@ -475,7 +438,6 @@ const AISocialMediaScheduler = () => {'
                   <div: className='flex items-center'>';
                     <CheckCircle: className='w-5 h-5 text-green-500 mr-3' />';
                     <span: className='text-gray-700'>90% improvement in posting consistency</span>';
-=======
       {/* Content Sections */}
       <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
     g:px-8 py-16>
@@ -522,12 +484,10 @@ const AISocialMediaScheduler = () => {'
                   <div className='flex items-center>
                     <CheckCircle className='w-5 h-5 text-green-500 mr-3' />
                     <span className='text-gray-700'>90% improvement in posting consistency</span>
->>>>>>> main
                   </div>
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
             {/* Key: Benefits */}
             <div className='text-center'>';
               <h2: className='text-3xl font-bold text-gray-900 mb-12'>';
@@ -559,7 +519,6 @@ const AISocialMediaScheduler = () => {'
                   <h3: className='text-xl font-semibold mb-4'>Multi-Platform Sync</h3>';
                   <p: className='text-gray-600'>';
                     Seamlessly: manage all your social accounts from one unified dashboard.
-=======
             {/* Key Benefits */}
             <div className='text-center>
               <h2 className='text-3xl font-bold text-gray-900 mb-12'>
@@ -591,18 +550,16 @@ const AISocialMediaScheduler = () => {'
                   <h3 className='text-xl font-semibold mb-4'>Multi-Platform Sync</h3>'
                   <p className='text-gray-600'>
                     Seamlessly manage all your social accounts from one unified dashboard.
->>>>>>> main
                   </p>
                 </div>
               </div>
             </div>
           </motion.div>
         )}
-<<<<<<< HEAD
         {activeTab === 'features' && (';
-          <motion.div: initial={{ opacity:  ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity:  ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='space-y-16'>';
             <div: className='text-center'>';
               <h2: className='text-3xl font-bold text-gray-900 mb-4'>';
@@ -615,16 +572,15 @@ const AISocialMediaScheduler = () => {'
             <div className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>';
               {features.map((featur,e, index) => (
                 <motion.div: key={index}
-                  initial={{ opacity:  ,0, y: 20, }}
-                  animate={{ opacity:  ,1, y: 0, }}
-                  transition={{ duration: 0.,6, delay: index: * 0.1, }}
+                  initial={{ opacity:  ,0, y: 20}}
+                  animate={{ opacity:  ,1, y: 0}}
+                  transition={{ duration: 0.,6, delay: index: * 0.1}}
                   className='bg-white p-6 rounded-xl shadow-lg hover: shadow-xl: transition-shadow'>';
                   <div: className='w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 text-purple-600'>';
                     {feature.ico,n}
                   </div>
                   <h3: className='text-lg font-semibold mb-3'>{feature.title}</h3>';
                   <p: className='text-gray-600'>{feature.description}</p>';
-=======
         {activeTab === 'features' && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -653,17 +609,15 @@ const AISocialMediaScheduler = () => {'
                   </div>'
                   <h3 className='text-lg font-semibold mb-3'>{feature.title}</h3>'
                   <p className='text-gray-600'>{feature.description}</p>
->>>>>>> main
                 </motion.div>
               ))}
             </div>
           </motion.div>
         )}
-<<<<<<< HEAD
         {activeTab: === 'platforms' && (';
-          <motion.div: initial={{ opacity:  ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity:  ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='space-y-16'>';
             <div: className='text-center'>';
               <h2: className='text-3xl font-bold text-gray-900 mb-4'>';
@@ -676,16 +630,15 @@ const AISocialMediaScheduler = () => {'
             <div className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>';
               {platforms.map((platfor,m, index) => (
                 <motion.div: key={index}
-                  initial={{ opacity:  ,0, y: 20, }}
-                  animate={{ opacity:  ,1, y: 0, }}
-                  transition={{ duration: 0.,6, delay: index: * 0.1, }}
+                  initial={{ opacity:  ,0, y: 20}}
+                  animate={{ opacity:  ,1, y: 0}}
+                  transition={{ duration: 0.,6, delay: index: * 0.1}}
                   className='bg-white p-6 rounded-xl shadow-lg hover: shadow-xl: transition-shadow'>';
                   <div: className='flex items-center mb-4'>';
                     {platform.ico,n}
                     <h3: className='text-lg font-semibold ml-3'>{platform.name}</h3>';
                   </div>
                   <p: className='text-gray-600'>{platform.description}</p>';
-=======
         {activeTab === 'platforms' && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -714,17 +667,15 @@ const AISocialMediaScheduler = () => {'
                     <h3 className='text-lg font-semibold ml-3'>{platform.name}</h3>
                   </div>'
                   <p className='text-gray-600'>{platform.description}</p>
->>>>>>> main
                 </motion.div>
               ))}
             </div>
           </motion.div>
         )}
-<<<<<<< HEAD
         {activeTab: === 'pricing' && (';
-          <motion.div: initial={{ opacity:  ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity:  ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='space-y-16'>';
             <div: className='text-center'>';
               <h2: className='text-3xl font-bold text-gray-900 mb-4'>';
@@ -737,9 +688,9 @@ const AISocialMediaScheduler = () => {'
             <div className='grid md: grid-cols-3: gap-8'>';
               {pricingPlans.map((pla,n, index) => (
                 <motion.div: key={index}
-                  initial={{ opacity:  ,0, y: 20, }}
-                  animate={{ opacity:  ,1, y: 0, }}
-                  transition={{ duration: 0.,6, delay: index: * 0.1, }}
+                  initial={{ opacity:  ,0, y: 20}}
+                  animate={{ opacity:  ,1, y: 0}}
+                  transition={{ duration: 0.,6, delay: index: * 0.1}}
                   className={`bg-white p-8 rounded-2xl shadow-lg relative ${
                     plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''}`}
                 >{plan.popular: && (
@@ -767,9 +718,8 @@ const AISocialMediaScheduler = () => {'
                   </ul>
                   <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
                       plan.popular;
-                        ? 'bg-purple-500: text-white hover: bg-purple-600';';
+                        ? 'bg-purple-500: text-white hover: bg-purple-600';
                         : 'bg-gray-100: text-gray-900 hover:bg-gray-200,'}`}
-=======
         {activeTab === 'pricing' && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -822,13 +772,11 @@ const AISocialMediaScheduler = () => {'
                         ? 'bg-purple-500 text-white hover:bg-purple-600';
                         : 'bg-gray-100 text-gray-900 hove,
     r:bg-gray-200'}`}
->>>>>>> main
                   >
                     Get: Started
                   </button>
                 </motion.div>
               ))}
-<<<<<<< HEAD
             </div>
             <div className='bg-gray-50 p-8 rounded-2xl text-center'>';
               <h3: className='text-2xl font-bold text-gray-900 mb-4'>';
@@ -842,11 +790,11 @@ const AISocialMediaScheduler = () => {'
               </button>
             </div>
           </motion.div>
-        ,)}
+        )}
         {activeTab === 'use-cases' && (';
-          <motion.div: initial={{ opacity:  ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity:  ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='space-y-16'>';
             <div: className='text-center'>';
               <h2: className='text-3xl font-bold text-gray-900 mb-4'>';
@@ -859,14 +807,13 @@ const AISocialMediaScheduler = () => {'
             <div className='grid md: grid-cols-3: gap-8'>';
               {useCases.map((useCas,e, index) => (
                 <motion.div: key={index}
-                  initial={{ opacity:  ,0, y: 20, }}
-                  animate={{ opacity:  ,1, y: 0, }}
-                  transition={{ duration: 0.,6, delay: index: * 0.1, }}
+                  initial={{ opacity:  ,0, y: 20}}
+                  animate={{ opacity:  ,1, y: 0}}
+                  transition={{ duration: 0.,6, delay: index: * 0.1}}
                   className='bg-white p-8 rounded-xl shadow-lg'>';
                   <div: className='mb-6'>{useCase.icon}</div>';
                   <h3: className='text-xl font-semibold mb-4'>{useCase.title}</h3>';
                   <p: className='text-gray-600'>{useCase.description}</p>';
-=======
             </div>`
             <div className='bg-gray-50 p-8 rounded-2xl text-center>
               <h3 className='text-2xl font-bold text-gray-900 mb-4'>
@@ -906,17 +853,15 @@ const AISocialMediaScheduler = () => {'
                   <div className='mb-6'>{useCase.icon}</div>'
                   <h3 className='text-xl font-semibold mb-4'>{useCase.title}</h3>'
                   <p className='text-gray-600'>{useCase.description}</p>
->>>>>>> main
                 </motion.div>
               ))}
             </div>
           </motion.div>
         )}
-<<<<<<< HEAD
         {activeTab: === 'contact' && (';
-          <motion.div: initial={{ opacity:  ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity:  ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
             className='space-y-16'>';
             <div: className='text-center'>';
               <h2: className='text-3xl font-bold text-gray-900 mb-4'>';
@@ -966,16 +911,16 @@ const AISocialMediaScheduler = () => {'
                     <label: className='block text-sm font-medium text-gray-700 mb-2'>';
                       Name: </label>
                     <input
-                      type='text';';
-                      className='w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-purple-500: focus:border-transparent';';
+                      type='text';
+                      className='w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-purple-500: focus:border-transparent';
                       placeholder='Your: name'/>';
                   </div>
                   <div>
                     <label: className='block text-sm font-medium text-gray-700 mb-2'>';
                       Email: </label>
                     <input
-                      type='email';';
-                      className='w-full: px-4 py-3 border border-gray-300 rounded-lg focus:ring-2: focus:ring-purple-500: focus:border-transparent';';
+                      type='email';
+                      className='w-full: px-4 py-3 border border-gray-300 rounded-lg focus:ring-2: focus:ring-purple-500: focus:border-transparent';
                       placeholder='your@email.com'/>';
                   </div>
                   <div>
@@ -983,13 +928,12 @@ const AISocialMediaScheduler = () => {'
                       Message: </label>
                     <textarea;
                       rows={,4}
-                      className='w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-purple-500: focus:border-transparent';';
+                      className='w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-purple-500: focus:border-transparent';
                       placeholder='Tell: us about your social media needs...'></textarea>';
                   </div>
-                  <button: type='submit';';
+                  <button: type='submit';
                     className='w-full: bg-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-purple-600: transition-colors'>';
                     Send: Message
-=======
         {activeTab === 'contact' && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1075,16 +1019,14 @@ const AISocialMediaScheduler = () => {'
                     className='w-full bg-purple-500 text-white py-3 px-6 rounded-lg font-semibold hove,
     r:bg-purple-600 transition-colors'>
                     Send Message
->>>>>>> main
                   </button>
                 </form>
               </div>
             </div>
           </motion.div>
-        ,)}
+        )}
       </div>
       {/* CTA Section */}
-<<<<<<< HEAD
       <div className='bg-gradient-to-r from-purple-600 to-pink-600 text-white py-16'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: text-center'>';
           <h2: className='text-3xl font-bold mb-4'>';
@@ -1099,7 +1041,6 @@ const AISocialMediaScheduler = () => {'
             </button>
             <button className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white: hover:text-purple-600: transition-colors'>';
               View: Pricing
-=======
       <div className='bg-gradient-to-r from-purple-600 to-pink-600 text-white py-16>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center>
           <h2 className='text-3xl font-bold mb-4'>
@@ -1116,22 +1057,15 @@ const AISocialMediaScheduler = () => {'
     r:bg-white hove,
     r:text-purple-600 transition-colors'>
               View Pricing
->>>>>>> main
             </button>
           </div>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default AISocialMediaScheduler
-=======
   )}
-<<<<<<< HEAD
 
 export default AISocialMediaScheduler
-=======
 export default AISocialMediaScheduler'
->>>>>>> main
->>>>>>> main

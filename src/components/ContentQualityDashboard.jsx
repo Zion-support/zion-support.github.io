@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';,"});,"})
 import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X } from 'lucide-react';,"});,"})
 ,"});,"})
@@ -52,12 +51,12 @@ const ContentQualityDashboard = ({ className = '' }) => {;,"});,"})
                     title: 'Contact Us - Get in Touch',;,"});,"})
                     content: 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business with cutting-edge solutions.',;,"});,"})
                     metaDescription: 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business.',;,"});,"})
-import React, { useState, useEffect, useCallback } from 'react';';,"});,"})
+import React, { useState, useEffect, useCallback } from 'react';,"});,"})
 import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X } from 'lucide-react';,"});,"})
 ';,"});,"})
 const ContentQualityDashboard = ({ className = '' }) => {}"});,"})
     const [isOpen, setIsOpen] = useState(false);,"});,"})
-    const [isLoading, setIsLoading] = useState(false);';,"});,"})
+    const [isLoading, setIsLoading] = useState(false);,"});,"})
     const [report, setReport] = useState(null);'';,"});,"})
     const [selectedPage, setSelectedPage] = useState(null);''';,"});,"})
     const [searchTerm, setSearchTerm] = useState('');''';,"});,"})
@@ -160,9 +159,9 @@ const ContentQualityDashboard = ({ className = '' }) => {}"});,"})
                 switch (filterStatus) {}"});,"})
 ';,"});,"})
                     case 'excellent': any;,"});,"})
-                        return page.overallScore >= 80;';,"});,"})
+                        return page.overallScore >= 80;,"});,"})
                     case 'good': any;,"});,"})
-                        return page.overallScore >= 60 && page.overallScore < 80;';,"});,"})
+                        return page.overallScore >= 60 && page.overallScore < 80;,"});,"})
                     case 'poor': any;,"});,"})
                         return page.overallScore < 40;,"});,"})
                     default: any;,"});,"})
@@ -175,7 +174,7 @@ const ContentQualityDashboard = ({ className = '' }) => {}"});,"})
         if (score >= 60)';,"});,"})
             return 'text-yellow-600 bg-yellow-50 border-yellow-200';,"});,"})
         if (score >= 40)';,"});,"})
-            return 'text-orange-600 bg-orange-50 border-orange-200';';,"});,"})
+            return 'text-orange-600 bg-orange-50 border-orange-200';,"});,"})
         return 'text-red-600 bg-red-50 border-red-200'};,"});,"})
     const getStatusText = (score) => {}"});,"})
         if (score >= 80)';,"});,"})
@@ -183,11 +182,11 @@ const ContentQualityDashboard = ({ className = '' }) => {}"});,"})
         if (score >= 60)';,"});,"})
             return 'Good';,"});,"})
         if (score >= 40)';,"});,"})
-            return 'Fair';';,"});,"})
+            return 'Fair';,"});,"})
         return 'Poor'};,"});,"})
     const exportReport = () => {}"});,"})
         if (!report);,"});,"})
-            return;';,"});,"})
+            return;,"});,"})
         const csvContent = ['';,"});,"})
             ['Page URL',Title',Word Count',SEO Score',Overall Score',Issues',Recommendations'],;,"});,"})
             ...report.pageMetrics.map(page => [page.pageUrl,;,"});,"})
@@ -198,11 +197,11 @@ const ContentQualityDashboard = ({ className = '' }) => {}"});,"})
                 page.issues.join('; '),';,"});,"})
                 page.recommendations.join('; ')'""";,"});,"})
             ])'"'""";,"});,"})
-        ].map(row => row.map(cell => `"${cell}"`).join(',)).join('\n');';,"});,"})
+        ].map(row => row.map(cell => `"${cell}"`).join(')).join('\n');,"});,"})
         const blob = new Blob([csvContent], { type: 'text/csv' });,"});,"})
-        const url = window.URL.createObjectURL(blob);';,"});,"})
+        const url = window.URL.createObjectURL(blob);,"});,"})
         const a = document.createElement('a');,"});,"})
-        a.href = url;';,"});,"})
+        a.href = url;,"});,"})
         a.download = 'content-quality-report.csv';,"});,"})
         a.click();,"});,"})
         window.URL.revokeObjectURL(url)};`;,"});,"})
@@ -421,46 +420,17 @@ export { ContentQualityDashboard };,"});,"})
 export { ContentQualityDashboard };,"});,"})
 ;,"});,"})
 export { ContentQualityDashboard, ContentQualityDashboard };,"});,"})
-=======
-<<<<<<< HEAD
  const: ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''";";";";
-=======
-<<<<<<< HEAD
  const ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''""
-=======
-<<<<<<< HEAD
  const ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''";""
-=======
-<<<<<<< HEAD
  const ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {'";
-=======
-<<<<<<< HEAD
  const ContentQualityDashboard = ({className=' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''";"
-=======
-<<<<<<< HEAD
  const ContentQualityDashboard = memo(({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''";"
-=======
-<<<<<<< HEAD
  const ContentQualityDashboard = ({ className = &apos; }) => {&apos;} const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const;const [searchTerm, setSearchTerm] = useState (&apos;)&apos;'  const [filterStatus, setFilterStatus] = useState (&apos;all&apos;)&apos;'  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const;const;const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {&apos;&apos;";
 &quot;}}"
-=======
-<<<<<<< HEAD
  const ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''";"
-<<<<<<< HEAD
 ""
 }}}
-=======
-=======
  const ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''
 "
 }}}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

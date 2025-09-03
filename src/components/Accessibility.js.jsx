@@ -1,16 +1,10 @@
-<<<<<<< HEAD
 import React from 'react'; const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" ); } return context; };
-=======
-<<<<<<< HEAD
 import React from 'react'; const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" ); } return context; };
-=======
-<<<<<<< HEAD
 
 ;,"});,"})
  const AccessibilityContext = createContext (null) ; export const useAccessibility = () => { const context = useContext (AccessibilityContext) ; if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider") ; } return context; };"""";,"});,"})
 ;,"});,"})
  const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" ); } return context; };,"});,"})
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff;,"});,"})
 import React, { useState, useEffect, createContext, useContext } from 'react';''';,"});,"})
 import { motion, AnimatePresence } from 'framer-motion';,"});,"})
 import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';,"});,"})
@@ -30,8 +24,8 @@ export const useAccessibility = () => {}"});,"})
 // Accessibility Provider Component;,"});,"})
 export const AccessibilityProvider = ({ children }) => {}"});,"})
   const [highContrast, setHighContrast] = useState(false);,"});,"})
-  const [reducedMotion, setReducedMotion] = useState(false);';,"});,"})
-  const [fontSize, setFontSize] = useState('medium');';,"});,"})
+  const [reducedMotion, setReducedMotion] = useState(false);,"});,"})
+  const [fontSize, setFontSize] = useState('medium');,"});,"})
   const [colorBlindMode, setColorBlindMode] = useState('none');,"});,"})
   // Load settings from localStorage;,"});,"})
   useEffect(() => {}"});,"})
@@ -42,8 +36,8 @@ export const AccessibilityProvider = ({ children }) => {}"});,"})
     if (savedSettings) {}"});,"})
       const settings = JSON.parse(savedSettings);,"});,"})
       setHighContrast(settings.highContrast || false);,"});,"})
-      setReducedMotion(settings.reducedMotion || false);';,"});,"})
-      setFontSize(settings.fontSize || 'medium');';,"});,"})
+      setReducedMotion(settings.reducedMotion || false);,"});,"})
+      setFontSize(settings.fontSize || 'medium');,"});,"})
       setColorBlindMode(settings.colorBlindMode || 'none');,"});,"})
     }"});,"})
   }, []);,"});,"})
@@ -84,7 +78,7 @@ export const AccessibilityProvider = ({ children }) => {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-      root.classList.remove('reduced-motion');';,"});,"})
+      root.classList.remove('reduced-motion');,"});,"})
     }'';,"});,"})
     // Font size''';,"});,"})
     root.style.fontSize ='''';,"});,"})
@@ -155,7 +149,7 @@ export const AccessibilityPanel = () => {}"});,"})
         event.key === 'M';,"});,"})
       ) {}"});,"})
         event.preventDefault();,"});,"})
-        toggleReducedMotion();';,"});,"})
+        toggleReducedMotion();,"});,"})
       }'';,"});,"})
     };''';,"});,"})
     window.addEventListener('keydown', handleKeyDown);''';,"});,"})
@@ -377,7 +371,7 @@ export const useFocusTrap = isActive => {}"});,"})
   useEffect(() => {}"});,"})
     if (!isActive) return;'""";,"});,"})
     const focusableElements ='"'""";,"});,"})
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);';,"});,"})
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);,"});,"})
     const container = document.activeElement?.closest('[data-focus-trap]');,"});,"})
     if(!container) return;,"});,"})
     const firstFocusableElement = focusableContent[0];,"});,"})
@@ -408,19 +402,11 @@ export const SrOnly = ({ children }) => ("""";,"});,"})
 );,"});,"})
 export default AccessibilityPanel;'""";,"});,"})
 '"'""";,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
-<<<<<<< HEAD
  const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider')  } return context }';'';import React, { useState, useEffect, createContext, useContext } from 'react'';import { motion, AnimatePresence } from 'framer-motion';
-=======
-<<<<<<< HEAD
  const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider')  } return context }';'';import React, { useState, useEffect, createContext, useContext } from 'react'''
 import { motion, AnimatePresence } from 'framer-motion';""
-=======
  const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider')  } return context }';import React, { useState, useEffect, createContext, useContext }  from 'react
 import { motion, AnimatePresence } from 'framer-motion
->>>>>>> main
->>>>>>> main
 import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
 const AccessibilityContext = createContext(null)
 export const useAccessibility = () => {}
@@ -431,9 +417,8 @@ export const useAccessibility = () => {}
 ''''
     throw new Error(''''
       'useAccessibility must be used within an AccessibilityProvider'
-    ), }
-  return context,
-}
+    )}
+  return context}
 // Accessibility Provider Component
 export const AccessibilityProvider = ({ children }) => {}
   const [highContrast, setHighContrast] = useState(false)""
@@ -451,24 +436,21 @@ export const AccessibilityProvider = ({ children }) => {}
       setHighContrast(settings.highContrast || false)""
       setReducedMotion(settings.reducedMotion || false)''
       setFontSize(settings.fontSize || 'medium')''
-      setColorBlindMode(settings.colorBlindMode || 'none'), }
+      setColorBlindMode(settings.colorBlindMode || 'none')}
   }, [])
   // Save settings to localStorage
   useEffect(() => {}
-<<<<<<< HEAD
     const settings = {}""
       highContrast, reducedMotion,''
       fontSize, '';""
       colorBlindMode}';'
-=======
     const settings = {}"
       highContrast, reducedMotion,'
       fontSize,'
       colorBlindMode}
->>>>>>> main
     localStorage.setItem(''''
       'zion-accessibility-settings', JSON.stringify(settings)
-    ), }, [highContrast, reducedMotion, fontSize, colorBlindMode])
+    )}, [highContrast, reducedMotion, fontSize, colorBlindMode])
   // Apply accessibility settings to document
   useEffect(() => {}
     const root = document.documentElement
@@ -477,17 +459,17 @@ export const AccessibilityProvider = ({ children }) => {}
 ''
 ''
 ''''
-      root.classList.add('high-contrast'), } else {}""
+      root.classList.add('high-contrast')} else {}""
 ''
 ''
 ''''
-      root.classList.remove('high-contrast'), }
+      root.classList.remove('high-contrast')}
     // Reduced motion
     if (reducedMotion) {}""
 ''
 ''
 ''''
-      root.classList.add('reduced-motion'), } else {}""
+      root.classList.add('reduced-motion')} else {}""
 ''
 ''
 ''''
@@ -513,7 +495,7 @@ export const AccessibilityProvider = ({ children }) => {}
     <AccessibilityContext .Provider value={value}" >"
       {children}
     </AccessibilityContext.Provider>
-  ), }
+  )}
 // Accessibility Panel Component
 export const AccessibilityPanel = () => {}
   const [isOpen, setIsOpen] = useState(false)
@@ -529,7 +511,7 @@ export const AccessibilityPanel = () => {}
         event.key === 'A'
       ) {}
         event.preventDefault()
-        setIsOpen(!isOpen), }
+        setIsOpen(!isOpen)}
       // Ctrl/Cmd + Shift + H to toggle high contrast
       if()""
         (event.ctrlKey || event.metaKey) &&''
@@ -537,7 +519,7 @@ export const AccessibilityPanel = () => {}
         event.key === 'H'
       ) {}
         event.preventDefault()
-        toggleHighContrast(), }
+        toggleHighContrast()}
       // Ctrl/Cmd + Shift + M to toggle reduced motion
       if()""
         (event.ctrlKey || event.metaKey) &&''
@@ -546,17 +528,12 @@ export const AccessibilityPanel = () => {}
       ) {}
         event.preventDefault()""
         toggleReducedMotion()', '
-}'',
-<<<<<<< HEAD
-}';'
+}''}';'
     window.addEventListener('keydown', handleKeyDown)';'
-    return () => window.removeEventListener('keydown', handleKeyDown), }, [isOpen, toggleHighContrast, toggleReducedMotion])
-=======
+    return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])
 }
     window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown),
-}, [isOpen, toggleHighContrast, toggleReducedMotion])
->>>>>>> main
+    return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])
   return ()
     <>
       {/* Floating Accessibility Button */}
@@ -564,13 +541,10 @@ export const AccessibilityPanel = () => {}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() =" > setIsOpen(true)}"
-<<<<<<< HEAD
         className='fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300'''''
         aria-label='Open Accessibility Settings'''''
-=======
         className='fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover:shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300''
         aria-label='Open Accessibility Settings''''
->>>>>>> main
       >''''
         <Accessibility className='w-6 h-6' /" >"
       </motion.button>
@@ -581,13 +555,10 @@ export const AccessibilityPanel = () => {}
             initial={{ opacity: 0 }}""
             animate={{ opacity: 1 }}''''
             exit={{ opacity: 0 }}''''
-<<<<<<< HEAD
             className='fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4'''
             onClick={() =" > setIsOpen(false)}"
-=======
             className='fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4'
             onClick={() =" > setIsOpen(false)}
->>>>>>> main
           >
             <motion .div
               initial={{ scale: 0.9, opacity: 0 }}""
@@ -603,17 +574,14 @@ export const AccessibilityPanel = () => {}
                   Accessibility Settings""
                 </h2>''''
                 <Button ''''
-<<<<<<< HEAD
                   variant='ghost'''''
                   size='sm'''''
                   onClick={() =" > setIsOpen(false)}''''"
                   className='text-zion-slate-light hover: text-white'''''
-=======
                   variant='ghost''''
                   size='sm''''
                   onClick={() =" > setIsOpen(false)}''''
                   className='text-zion-slate-light hover:text-white''
->>>>>>> main
                 >''''
                   <X className='w-4 h-4' /" >"
                 </Button>
@@ -639,7 +607,7 @@ export const AccessibilityPanel = () => {}
 ''
                       highContrast''
                         ? 'bg-zion-cyan text-white'''
-                        : 'border-zion-cyan/30 text-zion-cyan', }"" >''''
+                        : 'border-zion-cyan/30 text-zion-cyan'}"" >''''
                     {highContrast ? (''''
                       <Eye className='w-4 h-4' /" >''''"
                     ) : (''''
@@ -666,7 +634,7 @@ export const AccessibilityPanel = () => {}
 ''
                       reducedMotion''
                         ? 'bg-zion-cyan text-white'''
-                        : 'border-zion-cyan/30 text-zion-cyan', }"" >''''
+                        : 'border-zion-cyan/30 text-zion-cyan'}"" >''''
                     {reducedMotion ? (''''
                       <VolumeX className='w-4 h-4' /" >''''"
                     ) : (''''
@@ -690,7 +658,7 @@ export const AccessibilityPanel = () => {}
 ''''
                           fontSize === size''''
                             ? 'bg-zion-cyan text-white'''''
-                            : 'border-zion-cyan/30 text-zion-cyan', }
+                            : 'border-zion-cyan/30 text-zion-cyan'}
                       >
                         {size.charAt(0).toUpperCase() + size.slice(1)}
                       </Button>
@@ -718,7 +686,7 @@ export const AccessibilityPanel = () => {}
 ''''
                             colorBlindMode === mode''''
                               ? 'bg-zion-cyan text-white'''''
-                              : 'border-zion-cyan/30 text-zion-cyan', }
+                              : 'border-zion-cyan/30 text-zion-cyan'}
                         >
                           {mode.charAt(0).toUpperCase() + mode.slice(1)}
                         </Button>
@@ -767,7 +735,7 @@ export const AccessibilityPanel = () => {}
         )}
       </AnimatePresence>
 </>
-  ), }
+  )}
 // Skip to Content Link""
 export const SkipToContent = () => (''''
   <a''''
@@ -778,13 +746,10 @@ export const SkipToContent = () => (''''
 )
 // Focus Trap Hook
 export const useFocusTrap = isActive => {}
-<<<<<<< HEAD
   useEffect(() => {}""
     if (!isActive) return'';''
-=======
   useEffect(() => {}"
     if (!isActive) return'
->>>>>>> main
     const focusableElements =''''''
       'button, [href], input, select, textarea, [tabindex]: not([tabindex='-1'])'
     const container = document.activeElement?.closest('[data-focus-trap]')
@@ -797,36 +762,27 @@ export const useFocusTrap = isActive => {}
         if(e.shiftKey) {}
           if(document.activeElement === firstFocusableElement) {}
             e.preventDefault()
-            lastFocusableElement.focus(), }
+            lastFocusableElement.focus()}
         } else {}
           if(document.activeElement === lastFocusableElement) {}
             e.preventDefault()
-            firstFocusableElement.focus(), }","
+            firstFocusableElement.focus()}","
 }', '
-}'',
-<<<<<<< HEAD
-}';'
+}''}';'
     document.addEventListener('keydown', handleTabKey)';'
-    return () => document.removeEventListener('keydown', handleTabKey), }, [isActive]), }""
+    return () => document.removeEventListener('keydown', handleTabKey)}, [isActive])}""
 // Screen Reader Only Text''''
 export const SrOnly = ({ children }) => (''''
   <span className='sr-only'>{children}</span>
 )""
 export default AccessibilityPanel'';''
 '''''"'"
-=======
 }
     document.addEventListener('keydown', handleTabKey)
-    return () => document.removeEventListener('keydown', handleTabKey),
-}, [isActive]),
-}"
+    return () => document.removeEventListener('keydown', handleTabKey)}, [isActive])}"
 // Screen Reader Only Text'''
 export const SrOnly = ({ children }) => (''''
   <span className='sr-only'>{children}</span>
 )"
 export default AccessibilityPanel'
 '''''"
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

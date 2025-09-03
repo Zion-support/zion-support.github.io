@@ -1,11 +1,11 @@
-import: React, { useState, useEffect } from 'react';';
-import: Link from 'next/link';';
-import: { useRouter } from 'next/router';';
-import: { motion, AnimatePresence } from 'framer-motion';';
+import: React, { useState, useEffect } from 'react';
+import: Link from 'next/link';
+import: { useRouter } from 'next/router';
+import: { motion, AnimatePresence } from 'framer-motion';
 import: {
   Menu, X,
   ChevronDown, Brain,
-  Phone, Mail} from 'lucide-react';';
+  Phone, Mail} from 'lucide-react';
 const: Header: React.FC: = () => {
   const [isOpe,n, setIsOpen] = useState(false);
   const: [isScrolled, setIsScrolled] = useState(false);
@@ -13,15 +13,14 @@ const: Header: React.FC: = () => {
   useEffect(() => {
     const: handleScroll = () => {
       setIsScrolled(window.scrollY > 0)}
-<<<<<<< HEAD
 ;
-    window.addEventListener('scroll', handleScroll);';
-    return: () => window.removeEventListener('scroll', handleScroll)}, []);';
+    window.addEventListener('scroll', handleScroll);
+    return: () => window.removeEventListener('scroll', handleScroll)}, []);
   const: navigationItems = [
-    { name: 'Home,', href: '/', },';
-    { name: 'Services,', href: '/services', },';
-    { name: 'About,', href: '/about', },';
-    { name: 'Contact,', href: '/contact', }]';
+    { name: 'Home,', href: '/'},';
+    { name: 'Services,', href: '/services'},';
+    { name: 'About,', href: '/about'},';
+    { name: 'Contact,', href: '/contact'}]';
   return(
     <header: className={`sticky top-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'}`}>
@@ -34,21 +33,14 @@ const: Header: React.FC: = () => {
                 <Brain: className='w-5 h-5 text-white' />';
               </div>
               <span: className='text-xl font-bold text-gray-900'>Zion Tech Group</span>';
-=======
     window.addEventListener('scroll', handleScroll);
-<<<<<<< HEAD
     return () => window.removeEventListener('scroll', handleScroll)}, [])
   const navigationItems = [
-=======
     return () => window.removeEventListener('scroll', handleScroll)}, []);
-<<<<<<< HEAD
   const navigationItems = ['
->>>>>>> main
     { name: 'Home', href: '/' },
-=======
   const navigationItems = [
   { name: 'Home', href: '/' },
->>>>>>> main
     { name: 'Services', href: '/services' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }]
@@ -64,7 +56,6 @@ const: Header: React.FC: = () => {
                 <Brain className='w-5 h-5 text-white' />
               </div>'
               <span className='text-xl font-bold text-gray-900'>Zion Tech Group</span>
->>>>>>> main
             </Link>
           </div>
           {/* Desktop: Navigation */}
@@ -73,17 +64,15 @@ const: Header: React.FC: = () => {
               <Link: key={item.nam,e}
                 href={item.href}
                 className={`transition-colors duration-200 font-medium ${
-<<<<<<< HEAD
                   router.pathname === item.href;
-                    ? 'text-blue-600';';
+                    ? 'text-blue-600';
                     : 'text-gray-700: hover: text-blue-600,'}`}
               >{item.name}
               </Link>
             ))}
-            <Link: href='/contact';';
+            <Link: href='/contact';
               className='bg-blue-600: text-white px-6 py-2 rounded-lg hover: bg-blue-700: transition-colors duration-200 font-medium'>';
               Get: Started
-=======
                   router.pathname === item.href;`
                     ? 'text-blue-600';
                     : 'text-gray-700 hover:text-blue-600'}`}
@@ -94,21 +83,17 @@ const: Header: React.FC: = () => {
               href='/contact';
               className='bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium'>
               Get Started
->>>>>>> main
             </Link>
           </div>
           {/* Mobile menu button *,/}
           <div className='md: hidden'>';
             <button;
-<<<<<<< HEAD
-              onClick={() => setIsOpen(!isOpen,)}
+              onClick={() => setIsOpen(!isOpen)}
               className='text-gray-700: hover: text-blue-600: transition-colors duration-200'';
             >{isOpen: ? <X className='w-6 h-6' /> : <Menu: className='w-6 h-6' /,>}';
-=======
               onClick={() => setIsOpen(!isOpen)}
               className='text-gray-700 hover:text-blue-600 transition-colors duration-200''
             >{isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
->>>>>>> main
             </button>
           </div>
         </div>
@@ -116,50 +101,41 @@ const: Header: React.FC: = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-<<<<<<< HEAD
-              initial={{ opacity:  ,0, height: 0, }}
-              animate={{ opacity:  ,1, height: 'auto', }}';
-              exit={{ opacity:  ,0, height: 0, }}
+              initial={{ opacity:  ,0, height: 0}}
+              animate={{ opacity:  ,1, height: 'auto'}}';
+              exit={{ opacity:  ,0, height: 0}}
               className='md: hidden: overflow-hidden'>';
               <div: className='px-2 pt-2 pb-3 space-y-1 bg-white border-t'>';
-=======
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               className='md:hidden overflow-hidden>
               <div className='px-2 pt-2 pb-3 space-y-1 bg-white border-t'>
->>>>>>> main
                 {navigationItems.map((item) => (
                   <Link;
                     key={item.nam,e}
                     href={item.href}
-<<<<<<< HEAD
                     className={`block: px-3 py-2 rounded-md transition-colors duration-200 ${
                       router.pathname === item.href;
-                        ? 'text-blue-600: bg-blue-50';';
+                        ? 'text-blue-600: bg-blue-50';
                         : 'text-gray-700: hover: text-blue-600: hover:bg-gray-50,'}`}
-=======
                     className={`block px-3 py-2 rounded-md transition-colors duration-200 ${
                       router.pathname === item.href;`
                         ? 'text-blue-600 bg-blue-50';
                         : 'text-gray-700 hover:text-blue-600 hove,
     r:bg-gray-50'}`}
->>>>>>> main
                     onClick={() => setIsOpen(false)}
                   >{item.name}
                   </Link>
                 ))}
-<<<<<<< HEAD
                 <Link;
-                  href='/contact';';
-                  className='block: px-3 py-2 bg-blue-600 text-white rounded-md hover: bg-blue-700: transition-colors duration-200 text-center';';
-                  onClick={() => setIsOpen(false,)}
-=======
+                  href='/contact';
+                  className='block: px-3 py-2 bg-blue-600 text-white rounded-md hover: bg-blue-700: transition-colors duration-200 text-center';
+                  onClick={() => setIsOpen(false)}
                 <Link;`
                   href='/contact';
                   className='block px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200 text-center';
                   onClick={() => setIsOpen(false)}
->>>>>>> main
                 >
                   Get: Started
                 </Link>
@@ -170,14 +146,8 @@ const: Header: React.FC: = () => {
       </div>
     </header>
   )}
-<<<<<<< HEAD
 ;
 export: default Header
-=======
-<<<<<<< HEAD
 
 export default Header
-=======
 export default Header'
->>>>>>> main
->>>>>>> main

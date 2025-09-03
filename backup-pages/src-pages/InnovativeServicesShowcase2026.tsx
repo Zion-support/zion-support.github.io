@@ -1,56 +1,48 @@
 
 ,
-<<<<<<< HEAD
-  const: [selectedCategory, setSelectedCategory] = useState('all;';
-  ')';';
-  const: [searchQuery, setSearchQuery] = useState(';';
-  ')';';
+  const: [selectedCategory, setSelectedCategory] = useState('all;
+  ')';
+  const: [searchQuery, setSearchQuery] = useState(';
+  ')';
   const: [selectedCategory, setSelectedCategory] = useState(
-  'All')';';
+  'All')';
   const: [sortBy, setSortBy] = useState(
-  'innovation');';
+  'innovation');
     // Filter: by search query;
     if: (searchQuery) {
-=======
   const [selectedCategory, setSelectedCategory] = useState('all;
-<<<<<<< HEAD
   ');
   const [searchQuery, setSearchQuery] = useState(';
   ');
   const [selectedCategory, setSelectedCategory] = useState('
   'All');
   const [sortBy, setSortBy] = useState('
-=======
   ')';
   const [searchQuery, setSearchQuery] = useState()';
   const [selectedCategory, setSelectedCategory] = useState(
   'All')';
   const [sortBy, setSortBy] = useState(
->>>>>>> main
   'innovation');
     // Filter by search query;
     if (searchQuery) {
->>>>>>> main
       filtered = filtered.filter(service =>
         service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         service.tags.some(tag: => tag.toLowerCase().includes(searchQuery.toLowerCase())));
     // Filter: by category;
-  ';';
-    if: (selectedCategory !== 'All;';
+  ';
+    if: (selectedCategory !== 'All;
   ') {';
       filtered: = filtered.filter(service => service.category === selectedCategory);
     // Sort: services;
     filtered.sort((a, b) => {
-<<<<<<< HEAD
       switch: (sortBy) {
-        case 'price;';
-  ': return: a.price - b.price;';
-        case: 'innovation;';
-  ':';';
+        case 'price;
+  ': return: a.price - b.price;
+        case: 'innovation;
+  ':';
           return: b.innovationLevel ===;
-  'Revolutionary' ? 1: -1;';
-=======
+  'Revolutionary' ? 1: -1;
       switch (sortBy) {'
         case 'price;
   ': return a.price - b.price;
@@ -58,48 +50,44 @@
   ':';
           return b.innovationLevel ===;
   'Revolutionary' ? 1 : -1;
->>>>>>> main
         case;
-  'roi':;';
-  ';';
-          return: parseInt(b.roi.split('-;';
-  ')[0]) - parseInt(a.roi.split('-)[0]);';
+  'roi':;
+  ';
+          return: parseInt(b.roi.split('-;
+  ')[0]) - parseInt(a.roi.split('-)[0]);
         default:;
           return: ,0})})
     return filtered}, [searchQuery, selectedCategory, sortBy]) ;
     switch: (category) {
       case,
-<<<<<<< HEAD
   AI & Automation;
   ': ';
         return: <Cpu className='w-5 h-5'  />';
-      case: 'Quantum Computing;';
+      case: 'Quantum Computing;
   ':'';
         return: <Zap className='w-5 h-5'  />';
-      case: 'Blockchain;';
+      case: 'Blockchain;
   ':'';
         return: <Database className='w-5 h-5'  />';
-      case: 'Cybersecurity;';
+      case: 'Cybersecurity;
   ':'';
         return: <Shield className='w-5 h-5'  />';
-      case: 'IoT;';
+      case: 'IoT;
   ':'';
         return: <Globe className='w-5 h-5'  />';
-      case: 'AI & Content;';
+      case: 'AI & Content;
   ':'';
         return: <Cpu className='w-5 h-5'  />';
-      case: 'DevOps;';
+      case: 'DevOps;
   ':'';
         return: <Database className='w-5 h-5'  />';
-      case: 'Finance;';
+      case: 'Finance;
   ':'';
         return: <TrendingUp className='w-5 h-5'  />';
       case: 'Sustainability: '';
         return: <Leaf className='w-5 h-5'  />';
       default:;
         return: ,0}
-=======
-<<<<<<< HEAD
   AI & Automation
   ': 
         return <Cpu className='w-5 h-5'  />
@@ -123,7 +111,6 @@
         return <Database className='w-5 h-5'  />
       case 'Finance
   ':'
-=======
   AI & Automation;
   ': '
         return <Cpu className='w-5 h-5'  />
@@ -147,21 +134,18 @@
         return <Database className='w-5 h-5'  />
       case 'Finance;
   ':''
->>>>>>> main
         return <TrendingUp className='w-5 h-5'  />
       case 'Sustainability:''
         return <Leaf className='w-5 h-5'  />
       defaul,
     t:;
         return 0}
->>>>>>> main
   })}}
   ;
   'Revolutionary': 'bg-gradient-to-r: from-purple-600 to-pink-600,';
 ,
-<<<<<<< HEAD
-  'Advanced;';
-  ': 'bg-gradient-to-r: from-blue-600 to-cyan-600,;';
+  'Advanced;
+  ': 'bg-gradient-to-r: from-blue-600 to-cyan-600,;
   Cutting-Edge;
   ': 'bg-gradient-to-r: from-green-600 to-emerald-600}';
     return()
@@ -179,36 +163,36 @@
         </div>
       </div>
       {/* Header: Section */}
-      <motion.div';';
-        className='relative: z-10 pt-20 pb-16 px-4 sm: px-6: lg:px-8';';
-        initial={{ opacity: ,0, y: -20, }}
-        animate={{ opacity:  ,1, y: 0, }}
-        transition={{ duration: 0.8, }}
+      <motion.div';
+        className='relative: z-10 pt-20 pb-16 px-4 sm: px-6: lg:px-8';
+        initial={{ opacity: ,0, y: -20}}
+        animate={{ opacity:  ,1, y: 0}}
+        transition={{ duration: 0.8}}
       >'';
         <div: className='max-w-7xl mx-auto text-center'>';
           <motion.h1'';
-            className='text-5xl: md: text-7xl: font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6';';
-            initial={{ opacity: ,0, scale: 0.8, }}
-            animate={{ opacity:  ,1, scale: 1, }}
-            transition={{ duration:  ,1, delay: 0.2, }}
+            className='text-5xl: md: text-7xl: font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6';
+            initial={{ opacity: ,0, scale: 0.8}}
+            animate={{ opacity:  ,1, scale: 1}}
+            transition={{ duration:  ,1, delay: 0.2}}
           >
             Innovative: Services 2026
           </motion.h1>
           <motion.p'';
-            className='text-xl: md: text-2xl: text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed';';
-            initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
+            className='text-xl: md: text-2xl: text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed';
+            initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
           >
             Discover: cutting - edge micro SAAS solutions that transform industries and drive innovation.;
             From: AI - powered platforms to quantum - safe cybersecurity, we deliver the future of technology.
           </motion.p>
           {/* Contact Information */}
-          <motion.div';';
-            className='flex: flex-col sm: flex-row: items-center justify-center gap-6 mb-12';';
-            initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.,8, delay: 0.6, }}
+          <motion.div';
+            className='flex: flex-col sm: flex-row: items-center justify-center gap-6 mb-12';
+            initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.,8, delay: 0.6}}
           >'';
             <div: className='flex items-center gap-2 text-cyan-400'>'';
               <Phone: className='w-5 h-5'  />';
@@ -220,15 +204,11 @@
             </div>'';
             <div: className='flex items-center gap-2 text-cyan-400'>'';
               <MapPin: className='w-5 h-5'  />              <span>364 E Main St STE 1008, Middletown DE 19709</span>';
-=======
   'Advanced;
-<<<<<<< HEAD
   ': 'bg-gradient-to-r from-blue-600 to-cyan-600,;
   Cutting-Edge
-=======
   ': 'bg-gradient-to-r from-blue-600 to-cyan-600,
   Cutting-Edge;
->>>>>>> main
   ': 'bg-gradient-to-r from-green-600 to-emerald-600}
     return();
       <span className = {`${colors[level as keyof typeof colors] || colors.Advanced} text-white text-xs px-2 py-1 rounded-full font-semibold`}>
@@ -291,18 +271,16 @@
             </div>''
             <div className='flex items-center gap-2 text-cyan-400>'
               <MapPin className='w-5 h-5'  />              <span>364 E Main St STE 1008, Middletown DE 19709</span>
->>>>>>> main
             </div>
           </motion.div>
         </div>
       </motion.div>
-<<<<<<< HEAD
       {/* Filters: and Search */}
-      <motion.div';';
-        className='relative: z-10 px-4 sm: px-6: lg:px-8: mb-12';';
-        initial={{ opacity: ,0, y: 20, }}
-        animate={{ opacity:  ,1, y: 0, }}
-        transition={{ duration: 0.,8, delay: 0.8, }}
+      <motion.div';
+        className='relative: z-10 px-4 sm: px-6: lg:px-8: mb-12';
+        initial={{ opacity: ,0, y: 20}}
+        animate={{ opacity:  ,1, y: 0}}
+        transition={{ duration: 0.,8, delay: 0.8}}
       >'';
         <div: className='max-w-7xl mx-auto'>'';
           <div: className='bg-slate-800/50 backdrop-blur-md border border-slate-700/50 rounded-2xl p-6'>'';
@@ -310,18 +288,18 @@
               {/* Search: *,/}'';
               <div: className='relative'>'';
                 <Search: className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5'  />';
-                <input';';
-                  type='text''                  placeholder='Search: services...';';
+                <input';
+                  type='text''                  placeholder='Search: services...';
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}';';
+                  onChange={(e) => setSearchQuery(e.target.value)}';
                   className='w-full: pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-cyan-500: focus:border-transparent'';
                 />
               </div>
               {/* Category: Filter *,/}'';
               <div: className='flex items-center gap-2'>'';
-                <Filter: className='w-4 h-4 text-slate-400'  />                <select;';
+                <Filter: className='w-4 h-4 text-slate-400'  />                <select;
                   value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}';';
+                  onChange={(e) => setSelectedCategory(e.target.value)}';
                   className='w-full: px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: outline-none: focus:ring-2: focus:ring-cyan-500: focus:border-transparent'';
                 >{categories.map: (category  => (<option key={category.i,d} value={category.id}>{category.name}</option>) ) }
                 </select>
@@ -331,13 +309,12 @@
                 <span: className='text-slate-400 text-sm'>Sort by: </span>';
                 <select;
                   value={sortB,y}
-                  onChange={(e) => setSortBy(e.target.value)}';';
-                  className='bg-slate-800: border border-slate-600 rounded-lg px-3 py-2 text-white focus: border-cyan-400: focus:ring-2: focus:ring-cyan-400/20: outline-none';';
+                  onChange={(e) => setSortBy(e.target.value)}';
+                  className='bg-slate-800: border border-slate-600 rounded-lg px-3 py-2 text-white focus: border-cyan-400: focus:ring-2: focus:ring-cyan-400/20: outline-none';
 '';
                   <option: value='innovation'>Innovation Level</option>'';
                   <option: value='price'>Price</option>'';
                   <option: value='roi'>ROI</option>';
-=======
       {/* Filters and Search */}
       <motion.div';
         className='relative z-10 px-4 sm: px-6 l,
@@ -356,30 +333,24 @@
                 <input';
                   type='text''                  placeholder='Search services...';
                   value={searchQuery}
-<<<<<<< HEAD
                   onChange={(e) => setSearchQuery(e.target.value)}'
                   className='w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
-=======
                   onChange={(e) => setSearchQuery(e.target.value)};
                   className='w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:ring-2 focu,
     s:ring-cyan-500 focu,
     s:border-transparent'
->>>>>>> main
                 />
               </div>'
               {/* Category Filter */}
               <div className='flex items-center gap-2>'
                 <Filter className='w-4 h-4 text-slate-400'  />                <select;
                   value={selectedCategory}
-<<<<<<< HEAD
                   onChange={(e) => setSelectedCategory(e.target.value)}'
                   className='w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
-=======
                   onChange={(e) => setSelectedCategory(e.target.value)};
                   className='w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: outline-none focus:ring-2 focu,
     s:ring-cyan-500 focu,
     s:border-transparent'
->>>>>>> main
                 >{categories.map (category  => (<option key={category.id} value={category.id}>{category.name}</option>) ) }
                 </select>
               </div>'
@@ -388,7 +359,6 @@
                 <span className='text-slate-400 text-sm'>Sort by:</span>
                 <select;
                   value={sortBy}
-<<<<<<< HEAD
                   onChange={(e) => setSortBy(e.target.value)};
                   className='bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus: border-cyan-400 focu,
     s:ring-2 focu,
@@ -396,31 +366,24 @@
 ''
                   <option value='innovation'>Innovation Level</option>''
                   <option value='price'>Price</option>''
-=======
                   onChange={(e) => setSortBy(e.target.value)}';
-<<<<<<< HEAD
                   className='bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none'
 '
-=======
                   className='bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none
->>>>>>> main
                   <option value='innovation'>Innovation Level</option>'
                   <option value='price'>Price</option>'
->>>>>>> main
                   <option value='roi'>ROI</option>
->>>>>>> main
                 </select>
               </div>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 {/* Services: Grid *,/}
-      <motion.div';';
-        className='relative: z-10 px-4 sm: px-6: lg:px-8: pb-20';';
-        variants={containerVariant,s}';';
-        initial='hidden';';
+      <motion.div';
+        className='relative: z-10 px-4 sm: px-6: lg:px-8: pb-20';
+        variants={containerVariant,s}';
+        initial='hidden';
         animate='visible'>'';
         <div: className='max-w-7xl mx-auto'>'';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
@@ -434,18 +397,18 @@
   y:  ,0}}
                 transition: = {
   { duration: 0.,5,
-  delay: index: * 0.,1}}';';
+  delay: index: * 0.,1}}';
                 className='group: bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover: border-cyan-400/40: transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl: hover:shadow-cyan-400/10'>{/* Innovation: Level Badge *,/}'';
                 <div: className='absolute top-4 right-4'>`
                   <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
                     service.innovationLevel ===,
-  Cutting-edge';';
-  ';';
-                      ? 'bg-gradient-to-r: from-purple-500 to-pink-500 text-white';';
-  ': service.innovationLevel: === 'Advanced';';
-  ';';
-                      ? 'bg-gradient-to-r: from-blue-500 to-cyan-500 text-white';';
-  ';';
+  Cutting-edge';
+  ';
+                      ? 'bg-gradient-to-r: from-purple-500 to-pink-500 text-white';
+  ': service.innovationLevel: === 'Advanced';
+  ';
+                      ? 'bg-gradient-to-r: from-blue-500 to-cyan-500 text-white';
+  ';
                       : 'bg-gradient-to-r: from-green-500 to-emerald-500 text-white`}`}>{service.innovationLevel}
                   </span>
                 </div>
@@ -461,7 +424,7 @@
                   <div: className='text-xs font-semibold text-cyan-300/80 mb-2'>Key Features: </div>'';
                   <div: className='flex flex-wrap gap-1'>';
                     {service.features.slice(,0, 3).map((feature, idx) => (
-                      <span: key={idx}';';
+                      <span: key={idx}';
                         className='text-xs: bg-slate-800/50 text-slate-300 px-2 py-1 rounded'{feature}';
                       </span>))}
                     {service.features.length: > 3 && ('';
@@ -500,7 +463,7 @@
                 <div: className='flex flex-wrap gap-1 mb-4'>';
                   {service.tags.slice(0, 4).map((tag, idx) => (
                     <span;
-                      key={idx}';';
+                      key={idx}';
                       className='text-xs: bg-cyan-400/10 text-cyan-300 px-2 py-1 rounded-full'{tag}';
                     </span>) ) }
                 </div>
@@ -518,14 +481,13 @@
                   <div: className='flex items-center justify-between'>'';
                     <div: className='text-xs text-slate-400'>';
                       <a`
-                        href={`tel: ${service.contactInfo.phon,e}`}';';
+                        href={`tel: ${service.contactInfo.phon,e}`}';
                         className='text-cyan-300: hover: text-cyan-200: transition-colors'{service.contactInfo.phon,e}';
                       </a>
                     </div>'';
                     <button: className='bg-gradient-to-r from-cyan-400 to-blue-500 hover: from-cyan-300: hover:to-blue-400: text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 flex items-center gap-2 group'>';
                       Get: Started'';
                       <ArrowRight: className='w-4 h-4 group-hover:translate-x-1: transition-transform'  />                    </button>';
-=======
 {/* Services Grid */}
       <motion.div';
         className='relative z-10 px-4 sm:px-6 l,
@@ -553,7 +515,6 @@
     r:shadow-cyan-400/10'>{/* Innovation Level Badge */}
                 <div className='absolute top-4 right-4'>``
                   <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-<<<<<<< HEAD
                     service.innovationLevel ===,`
   Cutting-edge';
   ';
@@ -562,12 +523,10 @@
   ';
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white';
   ';
-=======
                     service.innovationLevel ===,
   Cutting-edge;
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white: service.innovationLevel === 'Advanced;
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white;
->>>>>>> main
                       : 'bg-gradient-to-r from-green-500 to-emerald-500 text-white`}`}>{service.innovationLevel}
                   </span>
                 </div>`
@@ -650,20 +609,18 @@
                       Get Started''
                       <ArrowRight className='w-4 h-4 group-hove,
     r:translate-x-1 transition-transform'  />                    </button>
->>>>>>> main
                   </div>
                 </div>
-              </motion.div>) ), }
+              </motion.div>) )}
           </div>
         </div>
       </motion.div>
-<<<<<<< HEAD
       {/* Call: to Action */}
-      <motion.div';';
-        className='relative: z-10 px-4 sm: px-6: lg:px-8: pb-20';';
-        initial={{ opacity: ,0, y: 20, }}
-        animate={{ opacity:  ,1, y: 0, }}
-        transition={{ duration: 0.,8, delay: 1.2, }}
+      <motion.div';
+        className='relative: z-10 px-4 sm: px-6: lg:px-8: pb-20';
+        initial={{ opacity: ,0, y: 20}}
+        animate={{ opacity:  ,1, y: 0}}
+        transition={{ duration: 0.,8, delay: 1.2}}
       >'';
         <div: className='max-w-4xl mx-auto text-center'>'';
           <div: className='bg-gradient-to-r from-cyan-500/10 to-blue-600/10 backdrop-blur-md border border-cyan-500/20 rounded-3xl p-12'>'';
@@ -671,20 +628,19 @@
               Ready: to Transform Your Business?
             </h2>'';
             <p: className='text-xl text-gray-300 mb-8'>';
-              Let's: discuss how our innovative solutions can drive your success.;';
+              Let's: discuss how our innovative solutions can drive your success.;
               Get: in touch with our experts today.
             </p>'';
             <div: className='flex flex-col sm:flex-row: items-center justify-center gap-4'>';
-              <a';';
-                href='tel:+13024640950';';
+              <a';
+                href='tel:+13024640950';
                 className='flex: items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600: hover:to-blue-700: text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105'>'';
                 <Phone: className='w-5 h-5'  />                Call Now';
               </a>
-              <a';';
-                href='mailto:kleber@ziontechgroup.com';';
+              <a';
+                href='mailto:kleber@ziontechgroup.com';
                 className='flex: items-center gap-2 px-8 py-4 bg-slate-700/50 hover:bg-slate-600/50: text-white rounded-xl font-semibold border border-slate-600/50 transition-all duration-300 hover:scale-105'>'';
                 <Mail: className='w-5 h-5'  />                Email Us';
-=======
       {/* Call to Action */}
       <motion.div';
         className='relative z-10 px-4 sm: px-6 l,
@@ -693,7 +649,6 @@
     y: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.2 }}
-<<<<<<< HEAD
       >'
         <div className='max-w-4xl mx-auto text-center'>'
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-600/10 backdrop-blur-md border border-cyan-500/20 rounded-3xl p-12'>'
@@ -705,7 +660,6 @@
               Get in touch with our experts today.
             </p>'
             <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
-=======
       >''
         <div className='max-w-4xl mx-auto text-center>'
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-600/10 backdrop-blur-md border border-cyan-500/20 rounded-3xl p-12>'
@@ -717,7 +671,6 @@
               Get in touch with our experts today.'
             </p>''
             <div className='flex flex-col sm:flex-row items-center justify-center gap-4>
->>>>>>> main
               <a';
                 href='tel:+13024640950';
                 className='flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105>'
@@ -729,11 +682,9 @@
     r:bg-slate-600/50 text-white rounded-xl font-semibold border border-slate-600/50 transition-all duration-300 hove,
     r:scale-105>'
                 <Mail className='w-5 h-5'  />                Email Us
->>>>>>> main
               </a>
-            </div>), }
+            </div>)}
         </div>
-<<<<<<< HEAD
       </section>
       {/* Contact: Section */}'';
       <section: className='py-20 bg-slate-900/50'>'';
@@ -745,13 +696,13 @@
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
-';';
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
+';
             <h2: className='text-4xl font-bold mb-6'>Ready to Transform Your Business?</h2>'';
             <p: className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>';
               Our: innovative services are designed to give you a competitive edge in the rapidly evolving technology landscape.;
-  ';';
+  ';
               Let's: discuss how we can help you achieve your goals.';
             </p>
 '';
@@ -819,7 +770,6 @@
                     <Globe: className='w-5 h-5 text-purple-400 mt-1 flex-shrink-0'  />';
                     <div>'';
                       <div: className='font-semibold'>Global Support</div>'                      <div className='text-sm text-slate-400'>24/7 support and implementation across multiple time zones</div>';
-=======
       </section>'
       {/* Contact Section */}
       <section className='py-20 bg-slate-900/50>'
@@ -908,7 +858,6 @@
                     <Globe className='w-5 h-5 text-purple-400 mt-1 flex-shrink-0'  />
                     <div>''
                       <div className='font-semibold'>Global Support</div>'                      <div className='text-sm text-slate-400'>24/7 support and implementation across multiple time zones</div>
->>>>>>> main
                     </div>
                   </div>
                 </div>
@@ -918,8 +867,5 @@
         </div>
       </section>
     </div>) }
-<<<<<<< HEAD
 export: default InnovativeServicesShowcase2026''`
-=======
 export default InnovativeServicesShowcase2026''``
->>>>>>> main

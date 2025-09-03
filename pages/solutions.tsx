@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
 import {
   Target,
   Users,
@@ -13,8 +12,6 @@ import {
   Shield,
   BarChart3,
   Lightbulb,
-=======
-<<<<<<< HEAD
 import Layout from '../components/Layout';
 import { SEO } from '../components/SEO';
 import { Button } from '../components/ui/Button';
@@ -43,9 +40,7 @@ import {
   Workflow,
   BarChart3,
   MessageSquare,
-  FileText,
->>>>>>> main
-} from 'lucide-react';
+  FileText} from 'lucide-react';
 
 export default function Solutions() {
   const solutions = [
@@ -59,10 +54,8 @@ export default function Solutions() {
         'Blog Post Generation',
         'Social Media Content',
         'Email Campaigns',
-        'SEO Optimization',
-      ],
-      color: 'blue',
-    },
+        'SEO Optimization'],
+      color: 'blue'},
     {
       title: 'Email Automation',
       description:
@@ -73,10 +66,8 @@ export default function Solutions() {
         'Drip Campaigns',
         'Welcome Sequences',
         'Abandoned Cart Recovery',
-        'Newsletter Automation',
-      ],
-      color: 'green',
-    },
+        'Newsletter Automation'],
+      color: 'green'},
     {
       title: 'Customer Support Platform',
       description: 'AI-powered customer service and support ticket management',
@@ -86,10 +77,8 @@ export default function Solutions() {
         'Live Chat Integration',
         'Ticket Management',
         'Knowledge Base',
-        'Response Automation',
-      ],
-      color: 'purple',
-    },
+        'Response Automation'],
+      color: 'purple'},
     {
       title: 'Event Management',
       description: 'Complete event planning and management solution',
@@ -99,10 +88,8 @@ export default function Solutions() {
         'Event Registration',
         'Attendee Management',
         'Payment Processing',
-        'Analytics Dashboard',
-      ],
-      color: 'orange',
-    },
+        'Analytics Dashboard'],
+      color: 'orange'},
     {
       title: 'Project Management',
       description:
@@ -113,10 +100,8 @@ export default function Solutions() {
         'Task Management',
         'Team Collaboration',
         'Time Tracking',
-        'Progress Reports',
-      ],
-      color: 'indigo',
-    },
+        'Progress Reports'],
+      color: 'indigo'},
     {
       title: 'Workflow Automation',
       description: 'Automate repetitive business processes and workflows',
@@ -126,18 +111,14 @@ export default function Solutions() {
         'Process Automation',
         'Integration Management',
         'Approval Workflows',
-        'Performance Monitoring',
-      ],
-      color: 'red',
-    },
-  ];
+        'Performance Monitoring'],
+      color: 'red'}];
 
   const stats = [
     { number: '95%', label: 'Process Efficiency' },
     { number: '60%', label: 'Time Savings' },
     { number: '40%', label: 'Cost Reduction' },
     { number: '99%', label: 'Customer Satisfaction' },
-=======
 import { Target, Users, Building, Zap, CheckCircle, ArrowRight, Globe, Shield, BarChart3, Lightbulb } from 'lucide-react';
 
 export default function Solutions() {
@@ -145,99 +126,78 @@ export default function Solutions() {
   {
       icon: Building,
       title: 'Enterprise Solutions',
-<<<<<<< HEAD
       description:
         'Comprehensive technology solutions for large organizations and enterprises.',
       features: [
         'Scalable Architecture',
         'Enterprise Security',
         'Integration Services',
-        '24/7 Support',
-      ],
+        '24/7 Support'],
       href: '/solutions/enterprise',
-=======
       description: 'Comprehensive technology solutions for large organizations and enterprises.',
       features: ['Scalable Architecture,Enterprise Security,Integration Services,24/7 Support'],
       href: '/solutions/enterprise'
->>>>>>> main
     },
     {
       icon: Users,
       title: 'Small Business Solutions',
-<<<<<<< HEAD
       description:
         'Cost-effective technology solutions designed for small and medium businesses.',
       features: [
         'Affordable Pricing',
         'Quick Deployment',
         'Easy Management',
-        'Local Support',
-      ],
+        'Local Support'],
       href: '/solutions/small-business',
-=======
       description: 'Cost-effective technology solutions designed for small and medium businesses.',
       features: ['Affordable Pricing,Quick Deployment,Easy Management,Local Support'],
       href: '/solutions/small-business'
->>>>>>> main
     },
     {
       icon: Zap,
       title: 'Startup Solutions',
-<<<<<<< HEAD
       description:
         'Rapid development and deployment solutions for startups and new ventures.',
       features: [
         'Fast Time-to-Market',
         'MVP Development',
         'Scalable Infrastructure',
-        'Growth Support',
-      ],
+        'Growth Support'],
       href: '/solutions/startups',
-=======
       description: 'Rapid development and deployment solutions for startups and new ventures.',
       features: ['Fast Time-to-Market,MVP Development,Scalable Infrastructure,Growth Support'],
       href: '/solutions/startups'
->>>>>>> main
     },
     {
       icon: Target,
       title: 'Custom Development',
-<<<<<<< HEAD
       description:
         'Tailored software solutions built specifically for your unique business needs.',
       features: [
         'Bespoke Solutions',
         'Flexible Architecture',
         'Custom Integrations',
-        'Ongoing Evolution',
-      ],
+        'Ongoing Evolution'],
       href: '/solutions/custom-development',
-=======
       description: 'Tailored software solutions built specifically for your unique business needs.',
       features: ['Bespoke Solutions,Flexible Architecture,Custom Integrations,Ongoing Evolution'],
       href: '/solutions/custom-development'
->>>>>>> main
     },
     {
       icon: Globe,
       title: 'Digital Transformation',
-<<<<<<< HEAD
       description:
         'Transform your business processes with modern digital solutions.',
       features: [
         'Process Automation',
         'Digital Workflows',
         'Data Analytics',
-        'Cloud Migration',
-      ],
-      href: '/solutions/digital-transformation',
-    },
-=======
+        'Cloud Migration'],
+      href: '/solutions/digital-transformation'},
       description: 'Transform your business processes with modern digital solutions.',
       features: ['Process Automation,Digital Workflows,Data Analytics,Cloud Migration'],
       href: '/solutions/digital-transformation'
     }
->>>>>>> main
   ];
 
   const benefits = [
@@ -245,34 +205,25 @@ export default function Solutions() {
       icon: BarChart3,
       title: 'Improved Efficiency',
       description:
-        'Streamline operations and boost productivity with our technology solutions.',
-    },
+        'Streamline operations and boost productivity with our technology solutions.'},
     {
       icon: Shield,
       title: 'Enhanced Security',
       description:
-        'Protect your business with enterprise-grade security and compliance measures.',
-    },
+        'Protect your business with enterprise-grade security and compliance measures.'},
     {
       icon: Lightbulb,
       title: 'Innovation Focus',
       description:
-        'Stay ahead of the competition with cutting-edge technology and innovation.',
-    },
+        'Stay ahead of the competition with cutting-edge technology and innovation.'},
     {
       icon: Users,
       title: 'Expert Support',
       description:
-        'Get dedicated support from our team of technology experts and specialists.',
-    },
-  ];
+        'Get dedicated support from our team of technology experts and specialists.'}];
 
-<<<<<<< HEAD
   const industries = ['
-=======
   const industries = [
-<<<<<<< HEAD
->>>>>>> main
     'Healthcare & Medical',
     'Financial Services',
     'E-commerce & Retail',
@@ -281,16 +232,12 @@ export default function Solutions() {
     'Real Estate',
     'Professional Services',
     'Non-Profit Organizations',
-=======
     'Healthcare & Medical,Financial Services,E-commerce & Retail,Manufacturing,Education,Real Estate,Professional Services,Non-Profit Organizations'
->>>>>>> main
->>>>>>> main
   ];
 
   return (
     <>
       <Head>
-<<<<<<< HEAD
         <title>Solutions - Zion Tech Group</title>'
         <meta name="description" content="Comprehensive technology solutions for enterprises, small businesses, and startups. Custom development and digital transformation services." />"
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -306,15 +253,11 @@ export default function Solutions() {
                 <Target className="h-8 w-8 text-blue-600 mr-3" />"
                 <span className="text-base font-semibold leading-7 text-blue-600">Solutions</span>
               </div>"
-=======
         <title>Solutions - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta
           name="description"
           content="Comprehensive technology solutions for enterprises, small businesses, and startups. Custom development and digital transformation services."
         />
-=======
-<<<<<<< HEAD
         <meta
           name="description"
           content="Comprehensive business solutions powered by AI and automation"
@@ -349,9 +292,7 @@ export default function Solutions() {
                 >
                   Schedule Demo
                 </Button>
-=======
         <meta name="description" content="Comprehensive technology solutions for enterprises, small businesses, and startups. Custom development and digital transformation services." />
->>>>>>> main
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
@@ -362,16 +303,11 @@ export default function Solutions() {
             <div className="text-center">
               <div className="flex items-center justify-center mb-4">
                 <Target className="h-8 w-8 text-blue-600 mr-3" />
-<<<<<<< HEAD
                 <span className="text-base font-semibold leading-7 text-blue-600">
                   Solutions
                 </span>
-=======
                 <span className="text-base font-semibold leading-7 text-blue-600">Solutions</span>
->>>>>>> main
->>>>>>> main
               </div>
->>>>>>> main
               <h1 className="text-4xl font-bold text-gray-900 mb-6">
                 Technology Solutions for Every Business
               </h1>"
@@ -383,14 +319,11 @@ export default function Solutions() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Solutions Overview */}"
         <section className="py-20">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">"
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Solutions</h2>"
-=======
-<<<<<<< HEAD
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -401,7 +334,6 @@ export default function Solutions() {
                     {stat.number}
                   </div>
                   <div className="text-gray-600">{stat.label}</div>
-=======
         {/* Solutions Overview */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -409,13 +341,11 @@ export default function Solutions() {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Our Solutions
               </h2>
->>>>>>> main
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 We offer specialized solutions designed to meet the unique needs
                 of different business types and sizes.
               </p>
             </div>
-<<<<<<< HEAD
             "
             <div className="grid grid-cols-1 m,
     d:grid-cols-2 l,
@@ -431,7 +361,6 @@ export default function Solutions() {
                   "
                   <p className="text-gray-600 mb-6">{solution.description}</p>
                   "
-=======
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {solutions.map((solution, index) => (
@@ -450,7 +379,6 @@ export default function Solutions() {
 
                   <p className="text-gray-600 mb-6">{solution.description}</p>
 
->>>>>>> main
                   <ul className="space-y-2 mb-6">
                     {solution.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center">"
@@ -459,29 +387,24 @@ export default function Solutions() {
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                   
                   <Link 
                     href={solution.href}"
                     className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
-=======
 
                   <Link
                     href={solution.href}
                     className="inline-flex items-center text-blue-600 font-semibold hover: text-blue-700 transition-colors"
->>>>>>> main
                   >
                     Learn More"
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
->>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Benefits Section */}"
         <section className="py-20 bg-gray-50">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
@@ -501,8 +424,6 @@ export default function Solutions() {
                     <benefit.icon className="w-8 h-8 text-blue-600" />
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{benefit.title}</h3>"
-=======
-<<<<<<< HEAD
         {/* Solutions Grid */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -555,7 +476,6 @@ export default function Solutions() {
                     </Button>
                   </Link>
                 </Card>
-=======
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -578,16 +498,13 @@ export default function Solutions() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {benefit.title}
                   </h3>
->>>>>>> main
                   <p className="text-gray-600">{benefit.description}</p>
                 </div>
->>>>>>> main
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Industries & CTA Section */}"
         <section className="py-20">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -596,7 +513,6 @@ export default function Solutions() {
     g:grid-cols-2 gap-12 items-center">
               <div>"
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Industries We Serve</h2>"
-=======
         {/* Industries & CTA Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -605,31 +521,26 @@ export default function Solutions() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
                   Industries We Serve
                 </h2>
->>>>>>> main
                 <p className="text-lg text-gray-600 mb-8">
                   Our solutions are designed to work across various industries,
                   with deep understanding of sector-specific challenges and
                   requirements.
                 </p>
-<<<<<<< HEAD
                 "
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {industries.map((industry, index) => ("
                     <div key={index} className="flex items-center">"
                       <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>"
-=======
 
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
                   {industries.map((industry, index) => (
                     <div key={index} className="flex items-center">
                       <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
->>>>>>> main
                       <span className="text-gray-700">{industry}</span>
                     </div>
                   ))}
                 </div>
               </div>
-<<<<<<< HEAD
               "
               <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">"
                 <h3 className="text-2xl font-bold mb-6">Ready to Get Started?</h3>"
@@ -638,7 +549,6 @@ export default function Solutions() {
                 </p>'
                 <div className="space-y-4">"
                   <div className="flex items-center">"
-=======
 
               <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
                 <h3 className="text-2xl font-bold mb-6">
@@ -651,7 +561,6 @@ export default function Solutions() {
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center">
->>>>>>> main
                     <CheckCircle className="w-5 h-5 mr-3" />
                     <span>Free consultation and assessment</span>
                   </div>"
@@ -664,15 +573,12 @@ export default function Solutions() {
                     <span>Expert implementation support</span>
                   </div>
                 </div>
-<<<<<<< HEAD
                 <Link "
                   href="/contact" "
                   className="inline-flex items-center mt-6 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-=======
                 <Link
                   href="/contact"
                   className="inline-flex items-center mt-6 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors"
->>>>>>> main
                 >
                   Get Started"
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -682,14 +588,11 @@ export default function Solutions() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
-=======
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-<<<<<<< HEAD
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -716,14 +619,11 @@ export default function Solutions() {
                 >
                   View Pricing
                 </Button>
-=======
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> main
             <h2 className="text-3xl font-bold text-white mb-6">
               Find Your Perfect Solution
             </h2>"
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-<<<<<<< HEAD
               Every business is unique. Let us help you find the technology solution that fits your specific needs.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -733,7 +633,6 @@ export default function Solutions() {
               <Link href="/services" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hove,
     r:bg-white hove,
     r:text-blue-600 transition-colors">
-=======
               Every business is unique. Let us help you find the technology
               solution that fits your specific needs.
             </p>
@@ -748,25 +647,17 @@ export default function Solutions() {
                 href="/services"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
->>>>>>> main
                 View Our Services
->>>>>>> main
               </Link>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
       </div>
     </Layout>
   )
 }
-=======
       </main>
     </>
   );
-<<<<<<< HEAD
 }"
-=======
 }
->>>>>>> main
->>>>>>> main

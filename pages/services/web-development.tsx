@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-import: type { NextPage } from 'next';';';';
-import: Layout from '../../components/Layout';';';';
-import: Link from 'next/link';';';';
-import: { Code, Globe, Smartphone, Zap, CheckCircle, ArrowRight, Users, Award } from 'lucide-react';';';';
+import: type { NextPage } from 'next';';
+import: Layout from '../../components/Layout';';
+import: Link from 'next/link';';
+import: { Code, Globe, Smartphone, Zap, CheckCircle, ArrowRight, Users, Award } from 'lucide-react';';
 
 const: WebDevelopment: NextPage: = () => ,{,
   return (
@@ -30,8 +29,6 @@ const: WebDevelopment: NextPage: = () => ,{,
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-green-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
               View: All Services
-=======
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import { Award, Best, Code, Cross, Globe, Mobile, Regular, Smartphone, Today, User, Users, Zap } from 'lucide-react';
 '
@@ -49,11 +46,9 @@ const WebDevelopment: NextPage = () => {
           <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">"
             <Code className="w-10 h-10 text-white" />
           </div>"
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { Code, Globe, Smartphone, Zap, CheckCircle, ArrowRight, Users, Award } from 'lucide-react';
 ;
 const WebDevelopment: NextPage = () => {;
@@ -265,8 +260,6 @@ const WebDevelopment: NextPage = () => {;
 };
 ;
 export default WebDevelopment;
-=======
-<<<<<<< HEAD
 import {
   Code,
   Globe,
@@ -275,9 +268,7 @@ import {
   CheckCircle,
   ArrowRight,
   Users,
-  Award,
-} from 'lucide-react';
-=======
+  Award} from 'lucide-react';
 import Navigation from '../../src/components/Navigation';
 import Footer from '../../src/components/Footer';
 import {
@@ -296,8 +287,7 @@ import {
   Lock,
   BarChart3,
   Palette,
-  Search,
-} from 'lucide-react';
+  Search} from 'lucide-react';
 
 export default function WebDevelopment() {
   const features = [
@@ -305,36 +295,29 @@ export default function WebDevelopment() {
       icon: Code,
       title: 'Custom Development',
       description:
-        'Tailored web applications built with modern technologies and best practices',
-    },
+        'Tailored web applications built with modern technologies and best practices'},
     {
       icon: Globe,
       title: 'Responsive Design',
       description:
-        'Mobile-first approach ensuring perfect display across all devices',
-    },
+        'Mobile-first approach ensuring perfect display across all devices'},
     {
       icon: Database,
       title: 'Database Integration',
-      description: 'Robust data management with scalable database solutions',
-    },
+      description: 'Robust data management with scalable database solutions'},
     {
       icon: Shield,
       title: 'Security First',
       description:
-        'Enterprise-grade security measures to protect your data and users',
-    },
+        'Enterprise-grade security measures to protect your data and users'},
     {
       icon: Zap,
       title: 'Performance Optimized',
-      description: 'Lightning-fast loading times and optimized user experience',
-    },
+      description: 'Lightning-fast loading times and optimized user experience'},
     {
       icon: Users,
       title: 'User-Centric Design',
-      description: 'Intuitive interfaces designed with your users in mind',
-    },
-  ];
+      description: 'Intuitive interfaces designed with your users in mind'}];
 
   const technologies = [
   { name: 'React', category: 'Frontend' },
@@ -346,8 +329,7 @@ export default function WebDevelopment() {
     { name: 'AWS', category: 'Cloud' },
     { name: 'Docker', category: 'DevOps' },
     { name: 'GraphQL', category: 'API' },
-    { name: 'Tailwind CSS', category: 'Styling' },
-  ];
+    { name: 'Tailwind CSS', category: 'Styling' }];
 
   const services = [
   {
@@ -355,60 +337,43 @@ export default function WebDevelopment() {
       description:
         'Modern, responsive user interfaces built with React, Vue, or Angular',
       icon: Monitor,
-<<<<<<< HEAD
       features: [
         'Responsive Design',
         'Progressive Web Apps',
         'Component Architecture',
-        'State Management',
-      ],
-=======
+        'State Management'],
       features: ['Responsive Design,Progressive Web Apps,Component Architecture,State Management']
->>>>>>> main
     },
     {
       title: 'Backend Development',
       description: 'Scalable server-side applications and APIs',
       icon: Server,
-<<<<<<< HEAD
       features: ['RESTful APIs', 'GraphQL', 'Microservices', 'Database Design'],
-=======
       features: ['RESTful APIs,GraphQL,Microservices,Database Design']
->>>>>>> main
     },
     {
       title: 'Full-Stack Solutions',
       description: 'Complete web applications from frontend to backend',
       icon: Cloud,
-<<<<<<< HEAD
       features: [
         'End-to-End Development',
         'DevOps Integration',
         'Performance Optimization',
-        'Security Implementation',
-      ],
-=======
+        'Security Implementation'],
       features: ['End-to-End Development,DevOps Integration,Performance Optimization,Security Implementation']
->>>>>>> main
     },
     {
       title: 'E-commerce Platforms',
       description: 'Custom online stores and marketplace solutions',
       icon: BarChart3,
-<<<<<<< HEAD
       features: [
         'Payment Integration',
         'Inventory Management',
         'Order Processing',
-        'Analytics Dashboard',
-      ],
-    },
-=======
+        'Analytics Dashboard']},
       features: ['Payment Integration,Inventory Management,Order Processing,Analytics Dashboard']
     }
->>>>>>> main
   ];
->>>>>>> main
 
   return (
     <>
@@ -457,8 +422,6 @@ export default function WebDevelopment() {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
->>>>>>> main
           <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Web Development"
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">"
@@ -470,17 +433,14 @@ export default function WebDevelopment() {
             Modern, responsive web applications built with cutting-edge
             technologies that deliver exceptional user experiences.
           </p>
-<<<<<<< HEAD
 "
           <div className="flex flex-col sm: flex-row justify-center gap-4 mb-12">
             <Link"
               href="/contact""
-=======
 
           <div className="flex flex-col sm: flex-row justify-center gap-4 mb-12">
             <Link
               href="/contact"
->>>>>>> main
               className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
             >
               Get Started Today
@@ -492,13 +452,11 @@ export default function WebDevelopment() {
     r:text-green-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
             >
               View All Services
->>>>>>> main
             </Link>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 bg-gray-50">";";";
         <div: className="container mx-auto px-4">";";";
@@ -520,7 +478,6 @@ export default function WebDevelopment() {
               </p>
               <ul className="text-sm text-gray-500 space-y-2">";";";
                 <li>• Business: Applications</li>
-=======
       {/* Features Section */}"
       <section className="py-20 bg-gray-50">"
         <div className="container mx-auto px-4">"
@@ -549,13 +506,11 @@ export default function WebDevelopment() {
               </p>"
               <ul className="text-sm text-gray-500 space-y-2">
                 <li>• Business Applications</li>
->>>>>>> main
                 <li>• E-commerce Platforms</li>
                 <li>• Content Management Systems</li>
                 <li>• Customer Portals</li>
               </ul>
             </div>
-<<<<<<< HEAD
 
             <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",;,";";
               <div: className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">";";";
@@ -567,7 +522,6 @@ export default function WebDevelopment() {
               </p>
               <ul className="text-sm text-gray-500 space-y-2">";";";
                 <li>• Mobile-First: Design</li>
-=======
 "
             <div className="bg-white rounded-lg p-8 shadow-lg hove,
     r:shadow-xl transition-shadow">"
@@ -581,13 +535,11 @@ export default function WebDevelopment() {
               </p>"
               <ul className="text-sm text-gray-500 space-y-2">
                 <li>• Mobile-First Design</li>
->>>>>>> main
                 <li>• Cross-Browser Compatibility</li>
                 <li>• Touch-Friendly Interfaces</li>
                 <li>• Adaptive Layouts</li>
               </ul>
             </div>
-<<<<<<< HEAD
 
             <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",;,";";
               <div: className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">";";";
@@ -599,7 +551,6 @@ export default function WebDevelopment() {
               </p>
               <ul className="text-sm text-gray-500 space-y-2">";";";
                 <li>• Speed: Optimization</li>
-=======
 "
             <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow">"
               <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">"
@@ -614,13 +565,11 @@ export default function WebDevelopment() {
               </p>"
               <ul className="text-sm text-gray-500 space-y-2">
                 <li>• Speed Optimization</li>
->>>>>>> main
                 <li>• SEO Best Practices</li>
                 <li>• Core Web Vitals</li>
                 <li>• Progressive Web Apps</li>
               </ul>
             </div>
-<<<<<<< HEAD
 
             <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",;,";";
               <div: className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">";";";
@@ -632,7 +581,6 @@ export default function WebDevelopment() {
               </p>
               <ul className="text-sm text-gray-500 space-y-2">";";";
                 <li>• React: & Next.js</li>
-=======
 "
             <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow">"
               <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">"
@@ -647,13 +595,11 @@ export default function WebDevelopment() {
               </p>"
               <ul className="text-sm text-gray-500 space-y-2">
                 <li>• React & Next.js</li>
->>>>>>> main
                 <li>• Node.js & Express</li>
                 <li>• TypeScript</li>
                 <li>• Modern CSS Frameworks</li>
               </ul>
             </div>
-<<<<<<< HEAD
 
             <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",;,";";
               <div: className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">";";";
@@ -665,7 +611,6 @@ export default function WebDevelopment() {
               </p>
               <ul className="text-sm text-gray-500 space-y-2">";";";
                 <li>• UX/UI: Design</li>
-=======
 "
             <div className="bg-white rounded-lg p-8 shadow-lg hove,
     r:shadow-xl transition-shadow">"
@@ -681,13 +626,11 @@ export default function WebDevelopment() {
               </p>"
               <ul className="text-sm text-gray-500 space-y-2">
                 <li>• UX/UI Design</li>
->>>>>>> main
                 <li>• User Research</li>
                 <li>• Prototyping</li>
                 <li>• Usability Testing</li>
               </ul>
             </div>
-<<<<<<< HEAD
 
             <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",;,";";
               <div: className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">";";";
@@ -699,7 +642,6 @@ export default function WebDevelopment() {
               </p>
               <ul className="text-sm text-gray-500 space-y-2">";";";
                 <li>• Regular: Updates</li>
-=======
 "
             <div className="bg-white rounded-lg p-8 shadow-lg hove,
     r:shadow-xl transition-shadow">"
@@ -715,7 +657,6 @@ export default function WebDevelopment() {
               </p>"
               <ul className="text-sm text-gray-500 space-y-2">
                 <li>• Regular Updates</li>
->>>>>>> main
                 <li>• Security Patches</li>
                 <li>• Performance Monitoring</li>
                 <li>• Technical Support</li>
@@ -725,7 +666,6 @@ export default function WebDevelopment() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Process Section */}
       <section className="py-20 bg-white">";";";
         <div: className="container mx-auto px-4">";";";
@@ -767,7 +707,6 @@ export default function WebDevelopment() {
               </div>
               <h3: className="text-xl font-semibold mb-2">Deployment & Launch</h3>";";";
               <p: className="text-gray-600">We deploy your application and provide ongoing support.</p>";";";
-=======
       {/* Process Section */}"
       <section className="py-20 bg-white">"
         <div className="container mx-auto px-4">"
@@ -829,19 +768,17 @@ export default function WebDevelopment() {
               <p className="text-gray-600">
                 We deploy your application and provide ongoing support.
               </p>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA: Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">";";";
         <div: className="container mx-auto px-4 text-center">";";";
           <h2: className="text-4xl font-bold mb-6">Ready to Build Your Web Application?</h2>";";";
           <p: className="text-xl mb-8 max-w-3xl mx-auto">";";";
-            Let's: discuss your web development needs and create a solution that drives your business forward.';';';
+            Let's: discuss your web development needs and create a solution that drives your business forward.';';
           </p>
           <div: className="flex flex-col sm: flex-row: justify-center gap-4">",;,";";
             <Link: href="/contact" className="bg-white text-green-600 hover: bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
@@ -849,13 +786,11 @@ export default function WebDevelopment() {
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-green-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
               View: All Services
-=======
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">"
         <div className="container mx-auto px-4 text-center">"
           <h2 className="text-4xl font-bold mb-6">
             Ready to Build Your Web Application?
-<<<<<<< HEAD
           </h2>"
           <p className="text-xl mb-8 max-w-3xl mx-auto">"
             Let's discuss your web development needs and create a solution that
@@ -864,7 +799,6 @@ export default function WebDevelopment() {
           <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link"
               href="/contact""
-=======
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Let&apos;s discuss your web development needs and create a solution
@@ -873,7 +807,6 @@ export default function WebDevelopment() {
           <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link
               href="/contact"
->>>>>>> main
               className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
             >
               Start Your Project
@@ -885,7 +818,6 @@ export default function WebDevelopment() {
     r:text-green-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
             >
               View All Services
->>>>>>> main
             </Link>
           </div>
         </div>
@@ -893,18 +825,11 @@ export default function WebDevelopment() {
     </Layout>
   );
 };
-<<<<<<< HEAD
 export default WebDevelopment
-=======
 
-<<<<<<< HEAD
 export: default WebDevelopment;
-=======
 export default WebDevelopment;
-<<<<<<< HEAD
 "
-=======
-=======
         </section>
 
         {/* Features Section */}
@@ -1031,27 +956,22 @@ export default WebDevelopment;
                   step: '01',
                   title: 'Discovery & Planning',
                   description:
-                    'Understanding your requirements and creating a detailed project roadmap',
-                },
+                    'Understanding your requirements and creating a detailed project roadmap'},
                 {
                   step: '02',
                   title: 'Design & Prototyping',
                   description:
-                    'Creating wireframes, mockups, and interactive prototypes',
-                },
+                    'Creating wireframes, mockups, and interactive prototypes'},
                 {
                   step: '03',
                   title: 'Development & Testing',
                   description:
-                    'Building your application with continuous testing and quality assurance',
-                },
+                    'Building your application with continuous testing and quality assurance'},
                 {
                   step: '04',
                   title: 'Deployment & Support',
                   description:
-                    'Launching your application and providing ongoing maintenance and support',
-                },
-              ].map((phase, index) => (
+                    'Launching your application and providing ongoing maintenance and support'}].map((phase, index) => (
                 <div key={index} className="text-center">
                   <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mx-auto mb-4">
                     {phase.step}
@@ -1098,11 +1018,3 @@ export default WebDevelopment;
     </>
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

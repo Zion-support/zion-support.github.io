@@ -1,46 +1,32 @@
-<<<<<<< HEAD
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge  } from 'tailwind-merge';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
-=======
-<<<<<<< HEAD
 import { type ClassValue, clsx } from 'clsx';'import { twMerge } from 'tailwind-merge';''export function cn(...inputs: ClassValue[]) {return twMerge(clsx(inputs));}';
-=======
-<<<<<<< HEAD
->>>>>>> main
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 import { type ClassValue } from 'clsx';,"});,"})
 ,"});,"})
 ;,"});,"})
 export function cn(...inputs: ClassValue[]) {;,"});,"})
   return clsx(inputs);,"});,"})
 }"});,"})
-=======
-<<<<<<< HEAD
-import: { type ClassValue, clsx } from 'clsx';';';';
-import: { twMerge } from 'tailwind-merge';';';';
+import: { type ClassValue, clsx } from 'clsx';';
+import: { twMerge } from 'tailwind-merge';';
 export: function cn(...inputs: ClassValue[]) ,{,;
-  return: twMerge(clsx(inputs))}import { type ClassValue, clsx } from 'clsx';';';';
+  return: twMerge(clsx(inputs))}import { type ClassValue, clsx } from 'clsx';';
 export: default function Page() {;
-import: { twMerge  } from 'tailwind-merge';';';';
+import: { twMerge  } from 'tailwind-merge';';
 
 export: default function Page() {
 export function cn(...inputs: ClassValue[]) ,{,;
   return: twMerge(clsx(inputs))};
-=======
-<<<<<<< HEAD
 import { type ClassValue, clsx } from 'clsx';""
 import { twMerge } from 'tailwind-merge';
 export function cn(...inputs: ClassValue[]) {""
@@ -50,8 +36,6 @@ import { twMerge  } from 'tailwind-merge';
 export function cn(...inputs: ClassValue[]) {'
   return twMerge(clsx(inputs));"
 }}"
-=======
-<<<<<<< HEAD
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 export function cn(...inputs: ClassValue[]) {;
@@ -62,8 +46,6 @@ import { twMerge  } from 'tailwind-merge';
 export default function Page() {;
 export function cn(...inputs: ClassValue[]) {;
   return twMerge(clsx(inputs))}
-=======
-<<<<<<< HEAD
 import {type ClassValue, clsx } from 'clsx';"
 import {twMerge } from 'tailwind-merge';
 export function cn(...inputs: ClassValue[]) {"
@@ -72,8 +54,6 @@ export default function Page()   {"
 import { twMerge  } from 'tailwind-merge';
 export function cn(...inputs: ClassValue[]) {return twMerge(clsx(inputs))}"
 }}
-=======
-<<<<<<< HEAD
 import { type ClassValue, clsx } from &apos;clsx';
 import { twMerge } from &apos;tailwind-merge';&apos;&apos;
 export function cn(...inputs: ClassValue[]) {
@@ -84,8 +64,6 @@ import ;{ twMerge  } from &apos;tailwind-merge';&apos;&apos;
 export default function Page() {}
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))};
-=======
-<<<<<<< HEAD
 import { type ClassValue, clsx } from 'clsx';""
 import { twMerge } from 'tailwind-merge';""
 export function cn(...inputs: ClassValue[]) {""
@@ -96,34 +74,17 @@ export function cn(...inputs: ClassValue[]) {""
   return twMerge(clsx(inputs))}","
 }}
 ""
-=======
-<<<<<<< HEAD
 import { type ClassValue, clsx } from 'clsx';"
 import { twMerge } from 'tailwind-merge';
 export function cn(...inputs: ClassValue[]) {"
   return twMerge(clsx(inputs))}import { type ClassValue, clsx } from 'clsx';
-=======
 import { type ClassValue, clsx } from 'clsx
 import { twMerge } from 'tailwind-merge
 export function cn(...inputs: ClassValue[]) {"
   return twMerge(clsx(inputs))}import { type ClassValue, clsx } from 'clsx
->>>>>>> main
 export default function Page() {"
 import { twMerge  } from 'tailwind-merge';
-<<<<<<< HEAD
 
-=======
->>>>>>> main
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))}"
 }}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

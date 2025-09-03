@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 export const AIChatbot = ({ welcomeMessage = "Hello! I"m Zion Tech Group"s AI assistant.How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => { const { trackEvent } = useAnalytics({ ";"
-=======
-<<<<<<< HEAD
 
 export const AIChatbot = ({ welcomeMessage = "Hello! I"m Zion Tech Group"s AI assistant.How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => { const { trackEvent } = useAnalytics({ ";";,"});,"})
 import React, { useState, useCallback, useEffect, useRef } from 'react';,"});,"})
@@ -12,7 +9,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     const { trackEvent } = useAnalytics({        enableTracking: true,;,"});,"})
         enableUserBehaviorTracking: true;,"});,"})
     });,"});,"})
-    const [isOpen, setIsOpen] = useState(false);';,"});,"})
+    const [isOpen, setIsOpen] = useState(false);,"});,"})
     const [isMinimized, setIsMinimized] = useState(false);'';,"});,"})
     const [messages, setMessages] = useState([]);''';,"});,"})
     const [inputValue, setInputValue] = useState('');,"});,"})
@@ -76,7 +73,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             type: 'bot',;,"});,"})
             content,;,"});,"})
             metadata;,"});,"})
-        });';,"});,"})
+        });,"});,"})
         // Track bot response'';,"});,"})
         trackChatbotInteraction('bot_response', {}"});,"})
             messageId: message.id,;,"});,"})
@@ -89,7 +86,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         // Simulate processing delay;,"});,"})
         await new Promise(resolve => setTimeout (resolve, responseDelay) ) ;,"});,"})
         // Simple AI logic - in production, this would connect to a real AI service;,"});,"})
-        const input = userInput.toLowerCase();';,"});,"})
+        const input = userInput.toLowerCase();,"});,"})
         // Intent recognition'';,"});,"})
         if (input.includes('service') || input.includes('offer')) {}"});,"})
 """;,"});,"})
@@ -122,12 +119,12 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
 ';,"});,"})
             type: 'user',;,"});,"})
             content: input.trim();,"});,"})
-        });';,"});,"})
+        });,"});,"})
         // Track user input'';,"});,"})
         trackChatbotInteraction('user_input', {}"});,"})
             messageId: userMessage.id,;,"});,"})
             inputLength: input.length;,"});,"})
-        });';,"});,"})
+        });,"});,"})
         // Clear input'';,"});,"})
         setInputValue('');,"});,"})
         setIsTyping(true);,"});,"})
@@ -144,7 +141,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                     "Get a quote",;,"});,"})
                     "View services",;,"});,"})
                     "Contact sales"                ];,"});,"})
-            });';,"});,"})
+            });,"});,"})
             // Track successful interaction'';,"});,"})
             trackChatbotInteraction('conversation_success', {}"});,"})
                 userInput: input,;,"});,"})
@@ -157,7 +154,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
 ';,"});,"})
                 intent: 'error',;,"});,"})
                 confidence: 0.8;,"});,"})
-            });';,"});,"})
+            });,"});,"})
             trackChatbotInteraction('conversation_error', {}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -173,19 +170,19 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         handleUserInput(inputValue)}, [inputValue, handleUserInput]);,"});,"})
     // Handle suggestion click;,"});,"})
     const handleSuggestionClick = useCallback((suggestion) => {}"});,"})
-        handleUserInput(suggestion);';,"});,"})
+        handleUserInput(suggestion);,"});,"})
         trackChatbotInteraction('suggestion_clicked', { suggestion })}, [handleUserInput, trackChatbotInteraction]);,"});,"})
     // Toggle chatbot;,"});,"})
     const toggleChatbot = useCallback(() => {}"});,"})
-        setIsOpen(!isOpen);';,"});,"})
+        setIsOpen(!isOpen);,"});,"})
         trackChatbotInteraction('chatbot_toggled', { action: !isOpen ? 'opened' : 'closed' })}, [isOpen, trackChatbotInteraction]);,"});,"})
     // Minimize/maximize;,"});,"})
     const toggleMinimize = useCallback(() => {}"});,"})
-        setIsMinimized(!isMinimized);';,"});,"})
+        setIsMinimized(!isMinimized);,"});,"})
         trackChatbotInteraction('chatbot_minimized', { action: !isMinimized ? 'minimized' : 'maximized' })}, [isMinimized, trackChatbotInteraction]);,"});,"})
     // Clear conversation;,"});,"})
     const clearConversation = useCallback(() => {}"});,"})
-        setMessages([]);';,"});,"})
+        setMessages([]);,"});,"})
         // setConversationContext([]); // This line was removed'';,"});,"})
         trackChatbotInteraction('conversation_cleared')}, [trackChatbotInteraction]);""";,"});,"})
     // Get typing indicator"""";,"});,"})
@@ -321,20 +318,13 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
       </AnimatePresence>;,"});,"})
     </>)};'"`;,"});,"})
 '"`'"`;,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
-<<<<<<< HEAD
 export const AIChatbot = ({ welcomeMessage = 'Hello! I'm Zion Tech Group's AI assistant.How can I help you today?', maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => { const { trackEvent } = useAnalytics({ '';
-=======
-<<<<<<< HEAD
 import React, {useState, useCallback, useEffect, useRef } from 'react';
 import {motion, AnimatePresence } from 'framer-motion';
 import {MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react';
 import {useAnalytics } from "../hooks/useAnalytics";
 export const AIChatbot = ({welcomeMessage = "Hello! I&apos;m Zion Tech Group&apos;s AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {const { trackEvent } = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true
     });
-=======
-<<<<<<< HEAD
 import React, { useState, useCallback, useEffect, useRef } from &apos;
 import { motion } from &apos;framer-motion';;react';
 import { motion, AnimatePresence } from &apos;framer-motion';
@@ -344,64 +334,41 @@ export const AIChatbot = ({ welcomeMessage = &quot;Hello! I&apos;m Zion Tech Gro
     const;const { trackEvent } = useAnalytics({
         enableTracking: true,
         enableUserBehaviorTracking: true
-=======
-<<<<<<< HEAD
 import React, { useState, useCallback, useEffect, useRef } from 'react';""
 import { motion, AnimatePresence } from 'framer-motion';""
 import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react';""
 import { useAnalytics } from "../hooks/useAnalytics";""
-=======
-<<<<<<< HEAD
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react';
-<<<<<<< HEAD
 import { useAnalytics } from "../hooks/useAnalytics";"
-=======
 import { useAnalytics } from "../hooks/useAnalytics";
-<<<<<<< HEAD
 export const AIChatbot = memo(({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&apos;s AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {
 
-=======
 export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&apos;s AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {
->>>>>>> main
     const { trackEvent } = useAnalytics({
         enableTracking: true, enableUserBehaviorTracking: true
->>>>>>> main
     });
-=======
 import React, { useState, useCallback, useEffect, useRef } from 'react
 import { motion, AnimatePresence } from 'framer-motion
 import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react
 import { useAnalytics } from "../hooks/useAnalytics
->>>>>>> main
->>>>>>> main
 export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&apos;s AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {
 
     const { trackEvent } = useAnalytics({
-        enableTracking: true, enableUserBehaviorTracking: true,
-});
->>>>>>> main
->>>>>>> main
+        enableTracking: true, enableUserBehaviorTracking: true});
     const [isOpen, setIsOpen] = useState(false);
-<<<<<<< HEAD
     const [isMinimized, setIsMinimized] = useState(false);"
-=======
-<<<<<<< HEAD
     const [isMinimized, setIsMinimized] = useState(false);
     const [messages, setMessages] = useState([]);
     const [inputValue, setInputValue] = useState(&apos;&apos;);&apos;&apos;
-=======
     const [isMinimized, setIsMinimized] = useState(false);""
->>>>>>> main
     const [messages, setMessages] = useState([]);""
     const [inputValue, setInputValue] = useState('');
->>>>>>> main
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef(null);
     const inputRef = useRef(null);
     // Initialize chatbot
-<<<<<<< HEAD
     useEffect(() => {
         if (isOpen && messages.length === 0) {'
             addBotMessage(welcomeMessage, {""
@@ -409,15 +376,11 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
                 confidence: 1.0, suggestions: ['
                     "Tell me about your services","
                     "How can I get a quote?", "What technologies do you use?","
-=======
-<<<<<<< HEAD
     useEffect(() => {if (isOpen && messages.length === 0) {
             addBotMessage(welcomeMessage, {"
                 intent: 'greeting',
                 confidence: 1.0, suggestions: ["Tell me about your services",
-=======
     useEffect(() => {
-<<<<<<< HEAD
         if (isOpen && messages.length === 0) {
             addBotMessage(welcomeMessage, {
                 intent: &apos;greeting&apos;,
@@ -427,41 +390,27 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
                     &quot;How can I get a quote?&quot;,
                     &quot;What technologies do you use?&quot;,
                     &quot;Contact information&quot;
-=======
         if (isOpen && messages.length === 0) {""
             addBotMessage(welcomeMessage, {""
                 intent: 'greeting',
-<<<<<<< HEAD
                 confidence: 1.0, suggestions: [""
                     "Tell me about your services",""
                     "How can I get a quote?", "What technologies do you use?",""
-                    "Contact information", 
-]
-            });, }
-=======
-<<<<<<< HEAD
+                    "Contact information"]
+            });}
                 confidence: 1.0, suggestions: [
                     "Tell me about your services",
->>>>>>> main
                     "How can I get a quote?", "What technologies do you use?",
->>>>>>> main
                     "Contact information"
->>>>>>> main
                 ]
             });
         }
-=======
                 confidence: 1.0, suggestions: ["
                     "Tell me about your services,
                     "How can I get a quote?,What technologies do you use?,
-                    "Contact information",
-]
-            });,
-}
->>>>>>> main
->>>>>>> main
+                    "Contact information"]
+            });}
     }, [isOpen, messages.length, welcomeMessage]);
-<<<<<<< HEAD
     // Auto-scroll to bottom"
     useEffect(() => {""
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}, [messages]);
@@ -472,8 +421,6 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
     const addMessage = useCallback((message) => {
         const newMessage = {'
             ...message, id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`, timestamp: new Date();
-=======
-<<<<<<< HEAD
     // Auto-scroll to bottom
     useEffect(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: &apos;smooth&apos; });
@@ -490,7 +437,6 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
             timestamp: new Date()
         };
         setMessages(prev => {}
-=======
     // Auto-scroll to bottom""
     useEffect(() => {""
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}, [messages]);
@@ -498,113 +444,70 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
     const trackChatbotInteraction = useCallback((action, metadata) => {""
         trackEvent('chatbot', action, 'chatbot_interaction', null, metadata)}, [trackEvent]);
     // Add message to chat
-<<<<<<< HEAD
     const addMessage = useCallback((message) => {const newMessage = {
             ...message, id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`, timestamp: new Date()
->>>>>>> main
         };
         setMessages(prev => {const updated = [...prev, newMessage];
             // Keep only the last maxMessages
             return updated.slice(-maxMessages)})
         // Update conversation context
-        if (enableContext && message.content.length > 10) {// setConversationContext(prev => [...prev.slice(-4), message.content]); // This line was removed,
-}
+        if (enableContext && message.content.length > 10) {// setConversationContext(prev => [...prev.slice(-4), message.content]); // This line was removed}
         return newMessage}, [maxMessages, enableContext]);
     // Add bot message with typing effect
     const addBotMessage = useCallback((content, metadata) => {const message = addMessage({
-=======
     const addMessage = useCallback((message) => {
         const newMessage = {
-<<<<<<< HEAD
-            ...message, id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`, timestamp: new Date(), };
-=======
-<<<<<<< HEAD
+            ...message, id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`, timestamp: new Date()};
             ...message, id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`, timestamp: new Date()
         };
-=======
-            ...message, id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`, timestamp: new Date(),
-};
->>>>>>> main
->>>>>>> main
+            ...message, id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`, timestamp: new Date()};
         setMessages(prev => {
->>>>>>> main
             const updated = [...prev, newMessage];
             // Keep only the last maxMessages
             return updated.slice(-maxMessages)})
         // Update conversation context
         if (enableContext && message.content.length > 10) {
-            // setConversationContext(prev => [...prev.slice(-4), message.content]); // This line was removed, }
+            // setConversationContext(prev => [...prev.slice(-4), message.content]); // This line was removed}
         return newMessage}, [maxMessages, enableContext]);
     // Add bot message with typing effect
-<<<<<<< HEAD
     const addBotMessage = useCallback((content, metadata) => {}
         const;const;const message = addMessage({
             type: &apos;bot&apos;,
             content,
-=======
     const addBotMessage = useCallback((content, metadata) => {
-<<<<<<< HEAD
         const message = addMessage({`
-=======
-<<<<<<< HEAD
         const message = addMessage({""
-=======
-<<<<<<< HEAD
         const message = addMessage({
->>>>>>> main
->>>>>>> main
             type: 'bot', content,
->>>>>>> main
             metadata
         });
-<<<<<<< HEAD
         // Track bot response'
         trackChatbotInteraction('bot_response', {
-=======
         // Track bot response
-<<<<<<< HEAD
         trackChatbotInteraction('bot_response', {messageId: message.id,
-=======
         trackChatbotInteraction(&apos;bot_response&apos;, {
->>>>>>> main
             messageId: message.id,
->>>>>>> main
             intent: metadata?.intent, confidence: metadata?.confidence
         });
         return message;
     }, [addMessage, trackChatbotInteraction]);
-<<<<<<< HEAD
     // Simulate AI processing&apos;
-=======
-=======
         const message = addMessage({"
->>>>>>> main
             type: 'bot', content,
-            metadata, });
+            metadata});
         // Track bot response""
         trackChatbotInteraction('bot_response', {
             messageId: message.id,
-            intent: metadata?.intent, confidence: metadata?.confidence,
-});
-<<<<<<< HEAD
-        return message;, }, [addMessage, trackChatbotInteraction]);
-=======
-        return message;,
-}, [addMessage, trackChatbotInteraction]);
->>>>>>> main
->>>>>>> main
+            intent: metadata?.intent, confidence: metadata?.confidence});
+        return message;}, [addMessage, trackChatbotInteraction]);
+        return message;}, [addMessage, trackChatbotInteraction]);
     // Simulate AI processing
-<<<<<<< HEAD
     const simulateAIProcessing = useCallback(async (userInput) => {// Simulate processing delay
-=======
->>>>>>> main
     const simulateAIProcessing = useCallback(async (userInput) => {
         // Simulate processing delay
->>>>>>> main
         await new Promise(resolve => setTimeout(resolve, responseDelay));
         // Simple AI logic - in production, this would connect to a real AI service}
         const input = userInput.toLowerCase();
-<<<<<<< HEAD
         // Intent recognition'
         if (input.includes('service') || input.includes('offer')) {'
             return "We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?";
@@ -624,29 +527,24 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
         }
         // Default response with suggestions"
         return "I understand you&apos;re asking about '" + userInput + "'. Let me help you better. Could you provide more details about what you&apos;re looking for?";
-=======
-<<<<<<< HEAD
         // Intent recognition""
         if (input.includes('service') || input.includes('offer')) {""
-            return "We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?";, }""
+            return "We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?";}""
         if (input.includes('quote') || input.includes('price') || input.includes('cost')) {""
             return "I&apos;d be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate.";', '
 }""
         if (input.includes('contact') || input.includes('phone') || input.includes('email')) {""
-            return "You can reach us at: \\n📧 kleber@ziontechgroup.com\\n📞 +1 (302) 464-0950\\n🌐 https: //ziontechgroup.com\\n\nWhen would be the best time to call you?";, }""
+            return "You can reach us at: \\n📧 kleber@ziontechgroup.com\\n📞 +1 (302) 464-0950\\n🌐 https: //ziontechgroup.com\\n\nWhen would be the best time to call you?";}""
         if (input.includes('technology') || input.includes('tech') || input.includes('stack')) {""
-            return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?";, }""
+            return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?";}""
         if (input.includes('experience') || input.includes('portfolio') || input.includes('work')) {""
-            return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions. Would you like me to share some case studies?";, }
+            return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions. Would you like me to share some case studies?";}
         // Default response with suggestions""
-        return "I understand you&apos;re asking about '" + userInput + "'. Let me help you better. Could you provide more details about what you&apos;re looking for?";, }, [responseDelay]);
-=======
-<<<<<<< HEAD
+        return "I understand you&apos;re asking about '" + userInput + "'. Let me help you better. Could you provide more details about what you&apos;re looking for?";}, [responseDelay]);
         // Intent recognition
         if (input.includes(&apos;service&apos;) || input.includes(&apos;offer&apos;)) {
             return &quot;We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?";
         }
-<<<<<<< HEAD
         if (input.includes('quote') || input.includes('price') || input.includes('cost')) {return "I&apos;d be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate.";'
         }
         if (input.includes('contact') || input.includes('phone') || input.includes('email')) {return "You can reach us at: \\n📧 kleber@ziontechgroup.com\\n📞 +1 (302) 464-0950\\n🌐 https: //ziontechgroup.com\\n\nWhen would be the best time to call you?";
@@ -654,32 +552,25 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
         if (input.includes('technology') || input.includes('tech') || input.includes('stack')) {return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?";
         }
         if (input.includes('experience') || input.includes('portfolio') || input.includes('work')) {return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions. Would you like me to share some case studies?";
-=======
-<<<<<<< HEAD
         if (input.includes(&apos;quote&apos;) || input.includes(&apos;price&apos;) || input.includes(&apos;cost&apos;)) {
             return &quot;I&apos;d be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate.";
         }
         if (input.includes(&apos;contact&apos;) || input.includes(&apos;phone&apos;) || input.includes(&apos;email&apos;)) {
             return &quot;You can reach us at:\n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 http,s://ziontechgroup.com\n\nWhen would be the best time to call you?";
-=======
         if (input.includes('quote') || input.includes('price') || input.includes('cost')) {
             return "I&apos;d be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate.";'
         }
         if (input.includes('contact') || input.includes('phone') || input.includes('email')) {
             return "You can reach us at: \n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 https: //ziontechgroup.com\n\nWhen would be the best time to call you?";
->>>>>>> main
         }
         if (input.includes(&apos;technology&apos;) || input.includes(&apos;tech&apos;) || input.includes(&apos;stack&apos;)) {
             return &quot;We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?";
         }
         if (input.includes(&apos;experience&apos;) || input.includes(&apos;portfolio&apos;) || input.includes(&apos;work&apos;)) {
             return &quot;We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions. Would you like me to share some case studies?";
->>>>>>> main
         }
         // Default response with suggestions
-<<<<<<< HEAD
         return &quot;I understand you&apos;re asking about &apos;&quot; + userInput + "&apos;. Let me help you better. Could you provide more details about what you&apos;re looking for?";
->>>>>>> main
     }, [responseDelay]);
     // Handle user input&quot;&quot;
     const handleUserInput = useCallback(async (input) => {
@@ -697,94 +588,62 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
         });
         // Clear input
         setInputValue(&apos;&apos;);
-=======
         return "I understand you&apos;re asking about '" + userInput + "'. Let me help you better. Could you provide more details about what you&apos;re looking for?";
     }, [responseDelay]);
-=======
         // Intent recognition"
         if (input.includes('service') || input.includes('offer')) {"
-            return "We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?";,
-}"
+            return "We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?";}"
         if (input.includes('quote') || input.includes('price') || input.includes('cost')) {"
-            return "I&apos;d be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate.,
-}"
+            return "I&apos;d be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate.}"
         if (input.includes('contact') || input.includes('phone') || input.includes('email')) {"
-            return "You can reach us at: \\n📧 kleber@ziontechgroup.com\\n📞 +1 (302) 464-0950\\n🌐 https: //ziontechgroup.com\\n\nWhen would be the best time to call you?";,
-}"
+            return "You can reach us at: \\n📧 kleber@ziontechgroup.com\\n📞 +1 (302) 464-0950\\n🌐 https: //ziontechgroup.com\\n\nWhen would be the best time to call you?";}"
         if (input.includes('technology') || input.includes('tech') || input.includes('stack')) {"
-            return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?";,
-}"
+            return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?";}"
         if (input.includes('experience') || input.includes('portfolio') || input.includes('work')) {"
-            return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions. Would you like me to share some case studies?";,
-}
+            return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions. Would you like me to share some case studies?";}
         // Default response with suggestions"
-        return "I understand you&apos;re asking about '" + userInput + "'. Let me help you better. Could you provide more details about what you&apos;re looking for?";,
-}, [responseDelay]);
->>>>>>> main
->>>>>>> main
+        return "I understand you&apos;re asking about '" + userInput + "'. Let me help you better. Could you provide more details about what you&apos;re looking for?";}, [responseDelay]);
     // Handle user input
     const handleUserInput = useCallback(async (input) => {if (!input.trim())
             return;
         // Add user message
-<<<<<<< HEAD
         const userMessage = addMessage({"
             type: 'user', content: input.trim();
         });
         // Track user input'
         trackChatbotInteraction('user_input', {
             messageId: userMessage.id,
-            inputLength: input.length,
-});
+            inputLength: input.length});
         // Clear input""
-=======
-<<<<<<< HEAD
         const userMessage = addMessage({""
-            type: 'user', content: input.trim(), });
+            type: 'user', content: input.trim()});
         // Track user input""
-=======
-<<<<<<< HEAD
         const userMessage = addMessage({
             type: 'user', content: input.trim()
         });
         // Track user input
-<<<<<<< HEAD
         trackChatbotInteraction('user_input', {messageId: userMessage.id,
-            inputLength: input.length,
-})
+            inputLength: input.length})
         // Clear input"
-=======
-=======
         const userMessage = addMessage({"
-            type: 'user', content: input.trim(),
-});
+            type: 'user', content: input.trim()});
         // Track user input"
->>>>>>> main
->>>>>>> main
         trackChatbotInteraction('user_input', {
             messageId: userMessage.id,
-            inputLength: input.length, })""
+            inputLength: input.length})""
         // Clear input""
->>>>>>> main
->>>>>>> main
         setInputValue('');
->>>>>>> main
         setIsTyping(true);
-<<<<<<< HEAD
         try {// Get AI response
-=======
         try {
             // Get AI response&apos;}&apos;
->>>>>>> main
             const response = await simulateAIProcessing(input);
-<<<<<<< HEAD
             // Add bot response'
             addBotMessage(response, {""
                 intent: 'response',
                 confidence: 0.9, suggestions: ['
                     "Tell me more","
                     "Get a quote", "View services","
-=======
-<<<<<<< HEAD
             // Add bot response
             addBotMessage(response, {
                 intent: &apos;response&apos;,
@@ -794,72 +653,44 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
                     &quot;Get a quote&quot;,
                     &quot;View services&quot;,
                     &quot;Contact sales&quot;
-=======
             // Add bot response""
             addBotMessage(response, {""
                 intent: 'response',
-<<<<<<< HEAD
                 confidence: 0.9, suggestions: ["Tell me more",
-=======
-<<<<<<< HEAD
                 confidence: 0.9, suggestions: [""
                     "Tell me more",""
                     "Get a quote", "View services",""
                     "Contact sales", 
-=======
-<<<<<<< HEAD
                 confidence: 0.9, suggestions: [
                     "Tell me more",
->>>>>>> main
                     "Get a quote", "View services",
->>>>>>> main
                     "Contact sales"
->>>>>>> main
                 ]
-=======
                 confidence: 0.9, suggestions: ["
                     "Tell me more,
                     "Get a quote,View services,
-                    "Contact sales",
->>>>>>> main
-]
->>>>>>> main
+                    "Contact sales"]
             });
-<<<<<<< HEAD
             // Track successful interaction"
             trackChatbotInteraction('conversation_success', {
                 userInput: input,
-=======
-<<<<<<< HEAD
             // Track successful interaction
-<<<<<<< HEAD
             trackChatbotInteraction('conversation_success', {userInput: input,
->>>>>>> main
-                responseLength: response.length,
-})}
+                responseLength: response.length})}
         catch (error) {// Handle error
-=======
             trackChatbotInteraction(&apos;conversation_success&apos;, {
-=======
             // Track successful interaction""
             trackChatbotInteraction('conversation_success', {
->>>>>>> main
                 userInput: input,
-                responseLength: response.length, })}
+                responseLength: response.length})}
         catch (error) {
-<<<<<<< HEAD
             // Handle error'
             addBotMessage("I apologize, but I&apos;m experiencing some technical difficulties. Please try again or contact our team directly.", {''
                 intent: 'error',
                 confidence: 0.8,
-=======
-<<<<<<< HEAD
             // Handle error""
             addBotMessage("I apologize, but I&apos;m experiencing some technical difficulties. Please try again or contact our team directly.", {''
-=======
-<<<<<<< HEAD
             // Handle error
-<<<<<<< HEAD
             addBotMessage(&quot;I apologize, but I&apos;m experiencing some technical difficulties. Please try again or contact our team directly.&quot;, {
                 intent: &apos;error&apos;,
                 confidence: 0.8
@@ -867,28 +698,19 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
             trackChatbotInteraction(&apos;conversation_error&apos;, {
                 error: error instanceof Error ? error.message : &apos;Unknown error&apos;
             })}
-=======
-=======
             // Handle error"
->>>>>>> main
->>>>>>> main
             addBotMessage("I apologize, but I&apos;m experiencing some technical difficulties. Please try again or contact our team directly.", {'
->>>>>>> main
                 intent: 'error',
                 confidence: 0.8, ","
->>>>>>> main
 })""
             trackChatbotInteraction('conversation_error', {""
-                error: error instanceof Error ? error.message : 'Unknown error',
-})}
-<<<<<<< HEAD
+                error: error instanceof Error ? error.message : 'Unknown error'})}
         finally {setIsTyping(false)}
     }, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction]);
     // Handle form submission
     const handleSubmit = useCallback((e) => {e.preventDefault();
         handleUserInput(inputValue)}, [inputValue, handleUserInput]);
     // Handle suggestion click
-<<<<<<< HEAD
     const handleSuggestionClick = useCallback((suggestion) => {'
         handleUserInput(suggestion);""
         trackChatbotInteraction('suggestion_clicked', { suggestion })}, [handleUserInput, trackChatbotInteraction]);
@@ -903,7 +725,6 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
     // Clear conversation
     const clearConversation = useCallback(() => {
         setMessages([]);
-<<<<<<< HEAD
         // setConversationContext([]); // This line was removed
         trackChatbotInteraction('conversation_cleared')}, [trackChatbotInteraction])
     // Get typing indicator
@@ -913,7 +734,6 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
-=======
         // setConversationContext([]); // This line was removed""
         trackChatbotInteraction('conversation_cleared')}, [trackChatbotInteraction]);
     // Get typing indicator""
@@ -924,7 +744,6 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
     y: '0ms' }}" ></div>""
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}" ></div>""
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}" ></div>"
-=======
     const handleSuggestionClick = useCallback((suggestion) => {handleUserInput(suggestion);"
         trackChatbotInteraction('suggestion_clicked', { suggestion })}, [handleUserInput, trackChatbotInteraction]);
     // Toggle chatbot
@@ -949,8 +768,6 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
     </motion.div>);
     // Get message suggestions
     const MessageSuggestions = ({suggestions }) => (<motion.div initial = {{ opacity: 0, y: 10 }} animate = {{ opacity: 1, y: 0 }} className="flex flex-wrap gap-2 mt-3">
-=======
->>>>>>> main
         finally {
             setIsTyping(false)}
     }, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction]);
@@ -959,7 +776,6 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
         e.preventDefault();
         handleUserInput(inputValue)}, [inputValue, handleUserInput]);
     // Handle suggestion click
-<<<<<<< HEAD
     const handleSuggestionClick = useCallback((suggestion) => {
         handleUserInput(suggestion);
         trackChatbotInteraction(&apos;suggestion_clicked&apos;, { suggestion })}, [handleUserInput, trackChatbotInteraction]);
@@ -983,7 +799,6 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
         <div className=&quot;w-2 h-2 bg-gray-400 rounded-full animate-bounce&quot; style={{ animationDela,y: &apos;0ms&apos; }}>&apos;</div>
         <div className=&quot;w-2 h-2 bg-gray-400 rounded-full animate-bounce&quot; style={{ animationDelay: &apos;150ms&apos; }}>&apos;</div>
         <div className=&quot;w-2 h-2 bg-gray-400 rounded-full animate-bounce&quot; style={{ animationDelay: &apos;300ms&apos; }}>&apos;</div>
->>>>>>> main
       </div>
       <span className=&quot;text-sm text-gray-600 dark:text-gray-400&quot;>AI is typing...&quot;</span>
     <;</motion.div>);
@@ -991,7 +806,6 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
     const MessageSuggestions = ({ suggestions }) => (<;<motion.div initial = {
   { opacity: 0,
   y: 10 
-=======
     const handleSuggestionClick = useCallback((suggestion) => {""
         handleUserInput(suggestion);""
         trackChatbotInteraction('suggestion_clicked', { suggestion })}, [handleUserInput, trackChatbotInteraction]);
@@ -1015,115 +829,76 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}"" ></div>""
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}"" ></div>""
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}"" ></div>""
->>>>>>> main
       </div>""
       <span className="text-sm text-gray-600 dark:text-gray-400">AI is typing...</span>
     </motion.div>)
     // Get message suggestions
     const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {
-<<<<<<< HEAD
   { opacity: 0, y: 10 
->>>>>>> main
 
 
 
 
 
 
-=======
-  { opacity: 0, y: 10,
->>>>>>> main
-}} animate = {
+  { opacity: 0, y: 10}} animate = {
   { opacity: 1, y: 0 
 
 
 
 
 
-<<<<<<< HEAD
 "
 }} className="flex flex-wrap gap-2 mt-3">"
       {suggestions.map((suggestion, index) => (<button key={index} onClick={() => handleSuggestionClick(suggestion)} className="px-3 py-1 text-xs bg-blue-100 dark: bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dar,
     k:hove,
     r:bg-blue-900/50 transition-colors">
-=======
-<<<<<<< HEAD
 ","
 }} className="flex flex-wrap gap-2 mt-3">""
       {suggestions.map((suggestion, index) => (<button key={index} onClick={() =" > handleSuggestionClick(suggestion)} className="px-3 py-1 text-xs bg-blue-100 dark: bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors">"
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 }} className=&quot;flex flex-wrap gap-2 mt-3&quot;>
       {suggestions.map((suggestion, index) => (&quot;}<button key={index} onClick={() => handleSuggestionClick(suggestion)} className=&quot;px-3 py-1 text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hove,r:bg-blue-900/50 transition-colors&quot;>
           {suggestion}&quot;
-=======
 }} className="flex flex-wrap gap-2 mt-3">
->>>>>>> main
       {suggestions.map((suggestion, index) => (<button key={index} onClick={() => handleSuggestionClick(suggestion)} className="px-3 py-1 text-xs bg-blue-100 dark: bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors">
-=======
-",
-}} className="flex flex-wrap gap-2 mt-3">"
+"}} className="flex flex-wrap gap-2 mt-3">"
       {suggestions.map((suggestion, index) => (<button key={index} onClick={() =" > handleSuggestionClick(suggestion)} className="px-3 py-1 text-xs bg-blue-100 dark: bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors">
->>>>>>> main
->>>>>>> main
->>>>>>> main
           {suggestion}
->>>>>>> main
         </button>))}
-<<<<<<< HEAD
     </motion.div>)
-=======
     <;</motion.div>);
->>>>>>> main
     return (<>
-<<<<<<< HEAD
       {/* Chatbot Toggle Button */}"
       <motion.button onClick={toggleChatbot} className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focu,
     s:ring-blue-300" whileHover={{ scal,
     e: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Open AI chatbot">"
         <MessageCircle className="w-6 h-6"/>"
-=======
-<<<<<<< HEAD
       {/* Chatbot Toggle Button */}""
       <motion.button onClick={toggleChatbot} className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Open AI chatbot">""
-=======
-<<<<<<< HEAD
       {/* Chatbot Toggle Button */}
-<<<<<<< HEAD
       <motion.button onClick={toggleChatbot} className=&quot;fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300&quot; whileHover={{ scal,e: 1.1 }} whileTap={{ scale: 0.9 }} aria-label=&quot;Open AI chatbot&quot;>&quot;"
         <MessageCircle className=&quot;w-6 h-6&quot;/>
         {messages.length > 0 && (&quot;}<div className=&quot;absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center&quot;>
             {Math.min(messages.length, 9)}&quot;
-=======
       <motion.button onClick={toggleChatbot} className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Open AI chatbot">
         <MessageCircle className="w-6 h-6"/>
-=======
       {/* Chatbot Toggle Button */}"
       <motion.button onClick={toggleChatbot} className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Open AI chatbot">"
->>>>>>> main
         <MessageCircle className="w-6 h-6"/" >"
->>>>>>> main
->>>>>>> main
         {messages.length > 0 && (<div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
             {Math.min(messages.length, 9)}
->>>>>>> main
           </div>)}
       </motion.button>
 
       {/* Chatbot Interface */}
       <AnimatePresence>
-<<<<<<< HEAD
         {isOpen && (<motion .div initial = {
   { opacity: 0, scale: 0.9,
-  y: 20,
-}} animate = {
+  y: 20}} animate = {
   { opacity: 1, scale: 1,
   y: 0,
-=======
-<<<<<<< HEAD
-        {isOpen && (<motion .div initial = { { opacity: 0, scale: 0.9, y: 20, }} animate = {{ opacity: 1, scale: 1, y: 0, }} exit = {{ opacity: 0, scale: 0.9, y: 20 ",` }} className={`fixed bottom-24 right-6 z-40 w-96 bg-white dark: bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? 'h-16' : 'h-[500px]'}`}" >
+        {isOpen && (<motion .div initial = { { opacity: 0, scale: 0.9, y: 20}} animate = {{ opacity: 1, scale: 1, y: 0}} exit = {{ opacity: 0, scale: 0.9, y: 20 ",` }} className={`fixed bottom-24 right-6 z-40 w-96 bg-white dark: bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? 'h-16' : 'h-[500px]'}`}" >
             {/* Header */}"
             <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">"
               <div className="flex items-center justify-between">"
@@ -1132,30 +907,21 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
                   <span className="font-semibold">AI Assistant</span>"
                   <div className="flex items-center gap-1">"
                     <Sparkles className="w-3 h-3 text-yellow-300"/" >"
-=======
-<<<<<<< HEAD
         {isOpen && (}<motion.div initial = {
-=======
         {isOpen && (<motion .div initial = {
->>>>>>> main
   { opacity: 0, scale: 0.9,
-  y: 20, }} animate = {
-  { opacity: 1, scale: 1, y: 0,
->>>>>>> main
-}} exit = {
+  y: 20}} animate = {
+  { opacity: 1, scale: 1, y: 0}} exit = {
   { opacity: 0, scale: 0.9,
   y: 20 
 
 
 
 
-<<<<<<< HEAD
 "
 ",``
 }} className={`fixed bottom-24 right-6 z-40 w-96 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dar,
     k:border-gray-700 overflow-hidden ${isMinimized ? 'h-16' : 'h-[500px]}`}" >"
-=======
-<<<<<<< HEAD
 
 
 }} className={`fixed bottom-24 right-6 z-40 w-96 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dar,k:border-gray-700 overflow-hidden ${isMinimized ? &apos;h-16&apos; : &apos;h-[500px]&apos;}`}>
@@ -1168,39 +934,29 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
                   <div className=&quot;flex items-center gap-1&quot;>&quot;"
                     <Sparkles className=&quot;w-3 h-3 text-yellow-300&quot;/>&quot;
                     <span className=&quot;text-xs&quot;>Powered by AI&quot;</span>
-=======
 "`"
 ", `",`
 }} className={`fixed bottom-24 right-6 z-40 w-96 bg-white dark: bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? 'h-16' : 'h-[500px]'}`}"" >""
->>>>>>> main
             {/* Header */}""
             <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">""
               <div className="flex items-center justify-between">""
                 <div className="flex items-center gap-2">""
-<<<<<<< HEAD
                   <Bot className="w-5 h-5"/" >""
                   <span className="font-semibold">AI Assistant</span>""
                   <div className="flex items-center gap-1">""
                     <Sparkles className="w-3 h-3 text-yellow-300"/" >""
-=======
                   <Bot className="w-5 h-5"/"" >""
                   <span className="font-semibold">AI Assistant</span>""
                   <div className="flex items-center gap-1">""
                     <Sparkles className="w-3 h-3 text-yellow-300"/"" >""
->>>>>>> main
->>>>>>> main
                     <span className="text-xs">Powered by AI</span>
->>>>>>> main
                   </div>
-<<<<<<< HEAD
                 </div>"
                 <div className="flex items-center gap-2">"
                   <button onClick={toggleMinimize} className="p-1 hover: bg-white/20 rounded transition-colors" aria-label={isMinimized ? 'Maximize' : 'Minimize'}>'
                     {isMinimized ? <Maximize2 className="w-4 h-4"/> : <Minimize2 className="w-4 h-4"/>}
                   </button>"
                   <button onClick={toggleChatbot} className="p-1 hover:bg-white/20 rounded transition-colors" aria-label="Close chatbot">"
-=======
-<<<<<<< HEAD
                 </div>""
                 <div className="flex items-center gap-2">""
                   <button onClick={toggleMinimize} className="p-1 hover: bg-white/20 rounded transition-colors" aria-label={isMinimized ? 'Maximize' : 'Minimize'}" >"
@@ -1208,25 +964,19 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
                   </button>""
                   <button onClick={toggleChatbot} className="p-1 hover:bg-white/20 rounded transition-colors" aria-label="Close chatbot">""
                     <X className="w-4 h-4"/" >"
-=======
-<<<<<<< HEAD
                 </div>
-<<<<<<< HEAD
                 <div className=&quot;flex items-center gap-2&quot;>&quot;"
                   <button onClick={toggleMinimize} className=&quot;p-1 hover:bg-white/20 rounded transition-colors&quot; aria-label={isMinimized ? &apos;Maximize&apos; : &apos;Minimize&apos;}>
                     {isMinimized ?&apos;} <Maximize2 className=&quot;w-4 h-4&quot;/> :&quot; <Minimize2 className=&quot;w-4 h-4&quot;/>}&quot;
                   </button>
                   <button onClick={toggleChatbot} className=&quot;p-1 hover:bg-white/20 rounded transition-colors&quot; aria-label=&quot;Close chatbot&quot;>&quot;"
                     <X className=&quot;w-4 h-4&quot;/>&quot;
-=======
                 <div className="flex items-center gap-2">
                   <button onClick={toggleMinimize} className="p-1 hover: bg-white/20 rounded transition-colors" aria-label={isMinimized ? 'Maximize' : 'Minimize'}>
                     {isMinimized ? <Maximize2 className="w-4 h-4"/> : <Minimize2 className="w-4 h-4"/>}
                   </button>
                   <button onClick={toggleChatbot} className="p-1 hover: bg-white/20 rounded transition-colors" aria-label="Close chatbot">
->>>>>>> main
                     <X className="w-4 h-4"/>
-=======
                 </div>"
                 <div className="flex items-center gap-2">"
                   <button onClick={toggleMinimize} className="p-1 hover: bg-white/20 rounded transition-colors" aria-label={isMinimized ? 'Maximize' : 'Minimize'}" >"
@@ -1234,15 +984,11 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
                   </button>"
                   <button onClick={toggleChatbot} className="p-1 hover:bg-white/20 rounded transition-colors" aria-label="Close chatbot">"
                     <X className="w-4 h-4"/" >
->>>>>>> main
->>>>>>> main
->>>>>>> main
                   </button>
                 </div>
               </div>
             </div>
 
-<<<<<<< HEAD
             {/* Chat Content */}
             {!isMinimized && (<>"
                 {/* Messages */}""
@@ -1279,8 +1025,6 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
     k:text-gray-200'}`}" >""
                           <p className="text-sm whitespace-pre-wrap">{message.content}</p>
 "
-=======
-<<<<<<< HEAD
             {/* Chat Content */}, {!isMinimized && (<>
                 {/* Messages */}"
                 <div className="flex-1 p-4 space-y-4 overflow-y-auto max-h-80">
@@ -1302,44 +1046,32 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
                       </div>
                     </motion.div>))}, {/* Typing Indicator */}, {isTyping && <TypingIndicator /" >}, {/* Scroll anchor */}
                   <div ref={messagesEndRef}/" >
-=======
             {/* Chat Content */}
-<<<<<<< HEAD
             {!isMinimized && (}<>
                 {/* Messages */}
                 <div className=&quot;flex-1 p-4 space-y-4 overflow-y-auto max-h-80&quot;>
                   {messages.map((message) => (&quot;}<motion.div key={message.id} initial = {
   { opacity: 0,
   x: message.type === &apos;user&apos; ? 20 : -20 
-=======
             {!isMinimized && (<>""
                 {/* Messages */}""
                 <div className="flex-1 p-4 space-y-4 overflow-y-auto max-h-80">
-<<<<<<< HEAD
                   {messages.map((message) => (<motion .div key={message.id} initial = {""
-=======
-<<<<<<< HEAD
                   {messages.map((message) => (<motion.div key={message.id} initial = {
   { opacity: 0, x: message.type === 'user' ? 20 : -20 
->>>>>>> main
 
 
 
 
 
 
-=======
                   {messages.map((message) => (<motion .div key={message.id} initial = {"
->>>>>>> main
-  { opacity: 0, x: message.type === 'user' ? 20 : -20,
->>>>>>> main
-}} animate = {
+  { opacity: 0, x: message.type === 'user' ? 20 : -20}} animate = {
   { opacity: 1, x: 0 
 
 
 
 
-<<<<<<< HEAD
 
 
 }} className={`flex ${message.type === &apos;user&apos; ? &apos;justify-end&apos; : &apos;justify-start&apos;}`}>&apos;
@@ -1363,7 +1095,6 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
 
                           {/* Suggestions */}
                           {message.type === &apos;bot&apos; && message.metadata?.suggestions && enableSuggestions && (&apos;}<MessageSuggestions suggestions={message.metadata.suggestions}/>)}
-=======
 "`"
 ",`", `
 }} className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}"" >"`"`
@@ -1379,27 +1110,21 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
                         : 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200'}`}"" >""
                           <p className="text-sm whitespace-pre-wrap">{message.content}</p>
 ""
->>>>>>> main
                           {/* Message Metadata */}""
                           {message.metadata && (<div className="mt-2 text-xs opacity-70">""
                               {message.metadata.confidence && (<span className="mr-2">Confidence: {Math.round(message.metadata.confidence * 100)}%</span>)}
                               {message.metadata.intent && (<span>Intent: {message.metadata.intent}</span>)}
                             </div>)}
-<<<<<<< HEAD
 "
                           {/* Suggestions */}""
                           {message.type === 'bot' && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions}/" >)}
-=======
 ""
                           {/* Suggestions */}""
                           {message.type === 'bot' && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions}/"" >)}
->>>>>>> main
->>>>>>> main
                         </div>
                       </div>
                     </motion.div>))}
 
-<<<<<<< HEAD
                   {/* Typing Indicator */}"
                   {isTyping && <TypingIndicator /" >}
 
@@ -1416,81 +1141,57 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
                     <button type="submit" disabled={!inputValue.trim() || isTyping} className="px-4 py-2 bg-blue-500 hover: bg-blue-600 disable,
     d:bg-gray-400 text-white rounded-lg transition-colors disable,
     d:cursor-not-allowed flex items-center gap-2">"
-=======
-<<<<<<< HEAD
                   {/* Typing Indicator */}
                   {isTyping &&} <TypingIndicator />}
-=======
                   {/* Typing Indicator */}""
                   {isTyping && <TypingIndicator /"" >}
->>>>>>> main
 
                   {/* Scroll anchor */}""
                   <div ref={messagesEndRef}/"" >
->>>>>>> main
                 </div>
 
-<<<<<<< HEAD
                 {/* Input Area */}""
                 <div className="p-4 border-t border-gray-200 dark: border-gray-700">""
                   <form onSubmit={handleSubmit} className="flex gap-2">""
-=======
-<<<<<<< HEAD
                 {/* Input Area */}
-<<<<<<< HEAD
                 <div className=&quot;p-4 border-t border-gray-200 dark:border-gray-700&quot;>&quot;"
                   <form onSubmit={handleSubmit} className=&quot;flex gap-2&quot;>&quot;"
                     <input ref={inputRef} type=&quot;text&quot; value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder=&quot;Type your message...&quot; className=&quot;flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dar,k:text-gray-100&quot; disabled={isTyping}/>&quot;
                     <button type=&quot;submit&quot; disabled={!inputValue.trim() || isTyping} className=&quot;px-4 py-2 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-400 text-white rounded-lg transition-colors disable,d:cursor-not-allowed flex items-center gap-2&quot;>
                       {isTyping ? (&quot;}<Loader2 className=&quot;w-4 h-4 animate-spin&quot;/>) : (&quot;<Send className=&quot;w-4 h-4&quot;/>)}&quot;
-=======
                 <div className="p-4 border-t border-gray-200 dark: border-gray-700">
                   <form onSubmit={handleSubmit} className="flex gap-2">
                     <input ref={inputRef} type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your message..." className="flex-1 px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" disabled={isTyping}/>
                     <button type="submit" disabled={!inputValue.trim() || isTyping} className="px-4 py-2 bg-blue-500 hover: bg-blue-600 disabled:bg-gray-400 text-white rounded-lg transition-colors disabled:cursor-not-allowed flex items-center gap-2">
->>>>>>> main
                       {isTyping ? (<Loader2 className="w-4 h-4 animate-spin"/>) : (<Send className="w-4 h-4"/>)}
->>>>>>> main
                     </button>
                   </form>
 
-<<<<<<< HEAD
                   {/* Quick Actions */}"
                   <div className="flex items-center justify-between mt-3 text-xs text-gray-500">"
                     <button onClick={clearConversation} className="hover: text-gray-700 dar,
     k:hove,
     r:text-gray-300 transition-colors">
-=======
                   {/* Quick Actions */}
-<<<<<<< HEAD
                   <div className=&quot;flex items-center justify-between mt-3 text-xs text-gray-500&quot;>&quot;"
                     <button onClick={clearConversation} className=&quot;hover:text-gray-700 dark:hove,r:text-gray-300 transition-colors&quot;>
                       Clear chat&quot;
-=======
                   <div className="flex items-center justify-between mt-3 text-xs text-gray-500">
-=======
                 {/* Input Area */}"
                 <div className="p-4 border-t border-gray-200 dark: border-gray-700">"
                   <form onSubmit={handleSubmit} className="flex gap-2">"
->>>>>>> main
                     <input ref={inputRef} type="text" value={inputValue} onChange={(e) =" > setInputValue(e.target.value)} placeholder="Type your message..." className="flex-1 px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" disabled={isTyping}/>"
                     <button type="submit" disabled={!inputValue.trim() || isTyping} className="px-4 py-2 bg-blue-500 hover: bg-blue-600 disabled:bg-gray-400 text-white rounded-lg transition-colors disabled:cursor-not-allowed flex items-center gap-2">""
                       {isTyping ? (<Loader2 className="w-4 h-4 animate-spin"/" >) : (<Send className="w-4 h-4"/" >)}
                     </button>
                   </form>
 
-<<<<<<< HEAD
                   {/* Quick Actions */}""
                   <div className="flex items-center justify-between mt-3 text-xs text-gray-500">""
-=======
                   {/* Quick Actions */}"
                   <div className="flex items-center justify-between mt-3 text-xs text-gray-500">"
->>>>>>> main
->>>>>>> main
                     <button onClick={clearConversation} className="hover: text-gray-700 dark:hover:text-gray-300 transition-colors">
->>>>>>> main
                       Clear chat
->>>>>>> main
                     </button>
                     <span>{messages.length} messages</span>
                   </div>
@@ -1498,23 +1199,8 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
 </>)}
           </motion.div>)}
       </AnimatePresence>
-<<<<<<< HEAD
 </>)}
-=======
-<<<<<<< HEAD
 </>)};"
-=======
-<<<<<<< HEAD
 </>)};"`"
-=======
-<<<<<<< HEAD
 </>)};
-=======
 </>)};"`
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

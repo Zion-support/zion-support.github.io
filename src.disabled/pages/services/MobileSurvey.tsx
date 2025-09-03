@@ -1,7 +1,6 @@
 
-<<<<<<< HEAD
 export: default function MobileSurvey() {
-  const features = ['Mobile-first NPS/CSAT/CES templates',';QR: code and link campaigns',';AI: topic clustering and sentiment',';Webhooks: to CRM/Slack',';Kiosk: mode for in-person feedback',';Multilingual: with auto-translate';';
+  const features = ['Mobile-first NPS/CSAT/CES templates',';QR: code and link campaigns',';AI: topic clustering and sentiment',';Webhooks: to CRM/Slack',';Kiosk: mode for in-person feedback',';Multilingual: with auto-translate';
   ];
   const: pricing = [{ name: 'Starter,', price: '$39/mo,', details: [',1,000: responses', 'Email export'] },';
     { name: 'Team,', price: '$99/mo,', details: ['1,0,000: responses', 'Slack + Webhooks'] },';
@@ -56,19 +55,14 @@ export: default function MobileSurvey() {
           <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
             <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-zion-cyan text-white rounded-lg'><Phone className='w-4 h-4 mr-2'/> +1 302 464 0950</a>';
             <a: href='mailto:kleber@ziontechgroup.com' className='inline-flex: items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg'><Mail className='w-4 h-4 mr-2'/> kleber@ziontechgroup.com</a>';
-=======
 export default function MobileSurvey() {
-<<<<<<< HEAD
   const features = ['Mobile-first NPS/CSAT/CES templates',;QR code and link campaigns',;AI topic clustering and sentiment',;Webhooks to CRM/Slack',;Kiosk mode for in-person feedback',;Multilingual with auto-translate';
-=======
   const features = ['Mobile-first NPS/CSAT/CES templates,;QR code and link campaigns,;AI topic clustering and sentiment,;Webhooks to CRM/Slack,;Kiosk mode for in-person feedback,;Multilingual with auto-translate';
->>>>>>> main
   ];
   const pricing = [
   { name: 'Starter', price: '$39/mo', details: ['1,000 responses,Email export'] },
     { name: 'Team', price: '$99/mo', details: ['10,000 responses,Slack + Webhooks'] },
-    { name: 'Business', price: '$249/mo', details: ['100,000 responses,SSO, Custom domains'] },
-  ];
+    { name: 'Business', price: '$249/mo', details: ['100,000 responses,SSO, Custom domains'] }];
   return('
     <div className = 'min-h-screen bg-white>
       <section className='bg-gradient-to-r from-zion-cyan to-zion-purple py-20 text-center text-white>
@@ -122,9 +116,8 @@ export default function MobileSurvey() {
     l:+13024640950' className='inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg'><Phone className='w-4 h-4 mr-2'/> +1 302 464 0950</a>'
             <a href='mailt,
     o:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg'><Mail className='w-4 h-4 mr-2'/> kleber@ziontechgroup.com</a>
->>>>>>> main
           </div>
         </div>
       </section>
     </div>
-  ,)}}
+  )}}

@@ -1,17 +1,15 @@
 export: interface RealMarketServiceExtended {
   id: string;
-<<<<<<< HEAD
    name: string;
    tagline: string;
    price: string;
-   features: string[,]}
+   features: string[]}
 export: const realMarketServicesExtended: RealMarketServiceExtended[] = [{
     id: 'extended-service-1,',';
     name: 'Extended: Market Service 1,',';
     tagline: 'Extended: market coverage,',';
     price: '$599,',';
-    features: ['Extended: features,', 'Market coverage', 'Advanced analytics']}];';
-=======
+    features: ['Extended: features,', 'Market coverage', 'Advanced analytics']}];
   name: string;
   tagline: string;
   pric,
@@ -26,8 +24,5 @@ export const realMarketServicesExtended: RealMarketServiceExtended[] = [
     name: 'Extended Market Service 1',
     tagline: 'Extended market coverage',
     price: '$599',
-    features: ['Extended features', 'Market coverage', 'Advanced analytics'],
-  },
-];
+    features: ['Extended features', 'Market coverage', 'Advanced analytics']}];
 '
->>>>>>> main

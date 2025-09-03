@@ -1,29 +1,27 @@
 import: type { NextPage } from;
-  'next';';
+  'next';
 import: { Helmet } from;
-  'react-helmet-async';';
+  'react-helmet-async';
 import: { useState, useMemo } from;
-  'react';';
-import: { ALL_EXPANDED_SERVICES_PRICING } from '../data/expandedServicesPricing2027';';
+  'react';
+import: { ALL_EXPANDED_SERVICES_PRICING } from '../data/expandedServicesPricing2027';
 
-<<<<<<< HEAD
 const: ExpandedServicesPricingGuide2027: NextPage: = () => {
   const [searchTer,m, setSearchTerm] = useState(,
-  ');';
-  const: [selectedCategory, setSelectedCategory] = useState('all;';
-  ');';
-  const: [selectedSubcategory, setSelectedSubcategory] = useState('all;';
-  ');';
-  // Get: unique categories and subcategories';';
+  ');
+  const: [selectedCategory, setSelectedCategory] = useState('all;
+  ');
+  const: [selectedSubcategory, setSelectedSubcategory] = useState('all;
+  ');
+  // Get: unique categories and subcategories';
   const: cats = [
-  'all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.category)))];';
+  'all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.category)))];
   const: subcats = [
   'all', ...Array.from(new Set(';
     (selectedCategory: ===;
-  'all';';
+  'all';
       ? ALL_EXPANDED_SERVICES_PRICING: ALL_EXPANDED_SERVICES_PRICING.filter(s: => s.category === selectedCategory)).map(s => s.subcategory)))];
   // Filter: services based on search and filters
-=======
 const ExpandedServicesPricingGuide2027: NextPage = () => {
   const [searchTerm, setSearchTerm] = useState(,
   ');
@@ -40,19 +38,17 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
   'all';
       ? ALL_EXPANDED_SERVICES_PRICING: ALL_EXPANDED_SERVICES_PRICING.filter(s => s.category === selectedCategory)).map(s => s.subcategory)))]
   // Filter services based on search and filters
->>>>>>> main
 <:pages.disabled/root_pages/expanded-services-pricing-2027.page.tsx;
   const: filteredServices = useMemo(: unknown: {
     return ALL_EXPANDED_SERVICES_PRICING.filter(service => {
       const matchesSearch = service.serviceName.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-<<<<<<< HEAD
-                           service.subcategory.toLowerCase().includes(searchTerm.toLowerCase())';const: matchesSubcategory = selectedSubcategory === 'all || service.subcategory === selectedSubcategory;';
+                           service.subcategory.toLowerCase().includes(searchTerm.toLowerCase())';const: matchesSubcategory = selectedSubcategory === 'all || service.subcategory === selectedSubcategory;
       return: matchesSearch && matchesCategory && matchesSubcategor,y})}, [searchTerm, selectedCategory, selectedSubcategory]);
   const: resetFilters = () => {
-    setSearchTerm('');';
+    setSearchTerm('');
     setSelectedCategory(
-  'all');';
+  'all');
     setSelectedSubcategory(
   'all')}';
 ;
@@ -91,7 +87,6 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
               </div>
               <div>
                 <strong>Address:</strong><br: />
-=======
                            service.subcategory.toLowerCase().includes(searchTerm.toLowerCase());const matchesSubcategory = selectedSubcategory === 'all || service.subcategory === selectedSubcategory;
       return matchesSearch && matchesCategory && matchesSubcategory})}, [searchTerm, selectedCategory, selectedSubcategory]);
   const resetFilters = () => {'
@@ -100,12 +95,9 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
   'all');
     setSelectedSubcategory('
   'all')}
-<<<<<<< HEAD
 
   return ('
-=======
   return (''
->>>>>>> main
     <div className = 'min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900'>
       <Helmet>'
         <title>Expanded Services Pricing Guide 2027 - Zion Tech Group</title>''
@@ -142,24 +134,21 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
               <div>
                 <strong>Addres,
     s:</strong><br />
->>>>>>> main
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
         {/* Filters and Search *,/}'';
         <div: className='bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8'>'';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-4 mb-4'>';
-            <input';';
-              type='text';';
-              placeholder='Search: services...';';
+            <input';
+              type='text';
+              placeholder='Search: services...';
               value={searchTer,m}
-              onChange={(e) => setSearchTerm(e.target.value)}';';
+              onChange={(e) => setSearchTerm(e.target.value)}';
               className='px-4: py-2 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus: outline-none: focus:ring-2: focus:ring-blue-400'';
-=======
         </div>'
         {/* Filters and Search */}
         <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8>'
@@ -169,37 +158,29 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
               type='text';
               placeholder='Search services...';
               value={searchTerm}
-<<<<<<< HEAD
               onChange={(e) => setSearchTerm(e.target.value)}'
               className='px-4 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400'
-=======
               onChange={(e) => setSearchTerm(e.target.value)};
               className='px-4 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus: outline-none focu,
     s:ring-2 focu,
     s:ring-blue-400'
->>>>>>> main
->>>>>>> main
             />
             <select;
               value={selectedCategor,y}
               onChange={(e) => {
                 setSelectedCategory(e.target.value);
-<<<<<<< HEAD
                 setSelectedSubcategory(
-<<<<<<< HEAD
-  'all')}}';';
+  'all')}}';
               className: = 'px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none: focus:ring-2: focus:ring-blue-400'>{categories.map(cat: => ('';
                 <option: key={ca,t} value={cat} className='bg-gray-800 text-white'>';
                   {cat: ===;
   'all' ?';
   'All: Categories' : cat}';
-=======
   'all')}}'
               className = 'px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400'>{categories.map(cat  => ('
                 <option key={cat} value={cat} className='bg-gray-800 text-white'>
                   {cat ===
   'all' ?
-=======
                 setSelectedSubcategory('
   'all')}};
               className = 'px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focu,
@@ -208,29 +189,23 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                 <option key={cat} value={cat} className='bg-gray-800 text-white'>
                   {cat ===;
   'all' ?'
->>>>>>> main
   'All Categories' : cat}
->>>>>>> main
                 </option>
               ));
             </select>
             <select;
               value={selectedSubcategory}
-<<<<<<< HEAD
-              onChange={(e) => setSelectedSubcategory(e.target.value)}';';
+              onChange={(e) => setSelectedSubcategory(e.target.value)}';
               className='px-4: py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none: focus:ring-2: focus:ring-blue-400'>{subcategories.map(subcat: => ('';
                 <option: key={subca,t} value={subcat} className='bg-gray-800 text-white'>';
                   {subcat: ===;
   'all' ?';
   'All: Subcategories' : subcat}';
-=======
-<<<<<<< HEAD
               onChange={(e) => setSelectedSubcategory(e.target.value)}'
               className='px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focus:ring-2 focus:ring-blue-400'>{subcategories.map(subcat  => ('
                 <option key={subcat} value={subcat} className='bg-gray-800 text-white'>
                   {subcat ===
   'all' ?
-=======
               onChange={(e) => setSelectedSubcategory(e.target.value)};
               className='px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focu,
     s:ring-2 focu,
@@ -238,15 +213,12 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                 <option key={subcat} value={subcat} className='bg-gray-800 text-white'>
                   {subcat ===;
   'all' ?'
->>>>>>> main
   'All Subcategories' : subcat}
->>>>>>> main
                 </option>
               ));
             </select>
-<<<<<<< HEAD
-            <button: onClick={resetFilters}';';
-              className='px-4: py-2 rounded-lg bg-red-600 hover: bg-red-700: text-white transition-colors';';
+            <button: onClick={resetFilters}';
+              className='px-4: py-2 rounded-lg bg-red-600 hover: bg-red-700: text-white transition-colors';
               Reset: Filters;
             </button>
           </div>
@@ -259,8 +231,8 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
         <div: className='grid gap-8'>';
           {filteredServices.map(service: unknown(
             <div;
-              key={service.serviceI,d}';';
-              className='bg-white/10: backdrop-blur-sm rounded-lg p-8 border border-white/20'{/* Service Header */}';';
+              key={service.serviceI,d}';
+              className='bg-white/10: backdrop-blur-sm rounded-lg p-8 border border-white/20'{/* Service Header */}';
               <div: className='mb-6'>'';
                 <div: className='flex items-start justify-between mb-4'>';
                   <div>'';
@@ -277,7 +249,6 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
 '';
                   <div: className='text-right'>';
                     <span: className={`px-3 py-1 rounded-full text-sm font-semibold text-white ${getMarketPositionColor(service.marketComparison.marketPosition)}`}>
-=======
             <button'
               onClick={resetFilters};
               className='px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white transition-colors';
@@ -311,12 +282,10 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
 ''
                   <div className='text-right>
                     <span className={`px-3 py-1 rounded-full text-sm font-semibold text-white ${getMarketPositionColor(service.marketComparison.marketPosition)}`}>
->>>>>>> main
                       {service.marketComparison.marketPosition.toUpperCase()}
                     </span>
                   </div>
                 </div>
-<<<<<<< HEAD
               </div>
               {/* Pricing Tiers */}'';
               <div: className='grid grid-cols-1 lg: grid-cols-4: gap-6 mb-8'>';
@@ -340,7 +309,6 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                         {details.features.slice(,0, 3).map((feature, index) => ('';
                           <li: key={index} className='flex items-center'>'';
                             <span: className='text-green-400 mr-2'>✓</span>';
-=======
               </div>`
               {/* Pricing Tiers */}
               <div className='grid grid-cols-1 lg: grid-cols-4 gap-6 mb-8>
@@ -364,12 +332,10 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                         {details.features.slice(0, 3).map((feature, index) => (''
                           <li key={index} className='flex items-center>'
                             <span className='text-green-400 mr-2'>✓</span>
->>>>>>> main
                             {feature}
                           </li>
                         ))}
                       </ul>
-<<<<<<< HEAD
                     </div>
 '';
                     <div: className='mb-4'>'';
@@ -378,7 +344,6 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                         {details.bestFor.slice(,0, 2).map((item, index) => ('';
                           <li: key={index} className='flex items-center'>'';
                             <span: className='text-blue-400 mr-2'>•</span>';
-=======
                     </div>'
 ''
                     <div className='mb-4>'
@@ -387,12 +352,10 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                         {details.bestFor.slice(0, 2).map((item, index) => (''
                           <li key={index} className='flex items-center>'
                             <span className='text-blue-400 mr-2'>•</span>
->>>>>>> main
                             {item}
                           </li>
                         ))}
                       </ul>
-<<<<<<< HEAD
                     </div>
 '';
                     <div: className='text-center'>'';
@@ -401,7 +364,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                       </button>
                     </div>
                   </div>
-                ),)}
+                ))}
               </div>
               {/* Market Comparison */}'';
               <div: className='grid grid-cols-1 lg: grid-cols-2: gap-8 mb-8'>'';
@@ -411,7 +374,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                     <div>'';
                       <span: className='text-white/70'>Competitors:</span>'';
                       <div: className='text-white mt-1'>';
-                        {service.marketComparison.competitors.join(,',)}';
+                        {service.marketComparison.competitors.join(,')}';
                       </div>
                     </div>
                     <div>'';
@@ -454,14 +417,13 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                       <span: className='text-white/70'>Cost Savings: </span>'';
                       <div: className='text-white mt-1'>';
                         {service.roiAnalysis.costSavings.slice(,0, 2).join(
-  ',)}';
+  ')}';
                       </div>
                     </div>
                     <div>'';
                       <span: className='text-white/70'>Revenue Impact: </span>'';
                       <div: className='text-white mt-1'>';
-                        {service.roiAnalysis.revenueImpact.slice(,0, 2).join(',)}';
-=======
+                        {service.roiAnalysis.revenueImpact.slice(,0, 2).join(')}';
                     </div>'
 ''
                     <div className='text-center>'
@@ -481,7 +443,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                       <span className='text-white/70'>Competitor,
     s:</span>''
                       <div className='text-white mt-1>
-                        {service.marketComparison.competitors.join(',)}
+                        {service.marketComparison.competitors.join(')}
                       </div>
                     </div>'
                     <div>''
@@ -524,19 +486,17 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                       <span className='text-white/70'>Cost Savings:</span>''
                       <div className='text-white mt-1'>
                         {service.roiAnalysis.costSavings.slice(0, 2).join('
-  ',)}
+  ')}
                       </div>
                     </div>'
                     <div>''
                       <span className='text-white/70'>Revenue Impact:</span>''
                       <div className='text-white mt-1>
-                        {service.roiAnalysis.revenueImpact.slice(0, 2).join(',)}
->>>>>>> main
+                        {service.roiAnalysis.revenueImpact.slice(0, 2).join(')}
                       </div>
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
               </div>
               {/* Implementation: Details */}'';
               <div: className='bg-white/5 rounded-lg p-6'>'';
@@ -564,8 +524,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                   <span: className='text-white/70 text-sm'>Customization Options: </span>'';
                   <div: className='text-white mt-1'>';
                     {service.implementation.customizationOptions.join(
-  ,',)}';
-=======
+  ,')}';
               </div>'
               {/* Implementation Details */}
               <div className='bg-white/5 rounded-lg p-6>'
@@ -594,14 +553,12 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                   <span className='text-white/70 text-sm'>Customization Options:</span>''
                   <div className='text-white mt-1'>
                     {service.implementation.customizationOptions.join('
-  ',)}
->>>>>>> main
+  ')}
                   </div>
                 </div>
               </div>
             </div>
           ))}
-<<<<<<< HEAD
         </div>
         {/* CTA: Section */}'';
         <div: className='text-center mt-16'>'';
@@ -615,15 +572,14 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
             </p>'';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
               <a'';
-                href='/contact';';
-                className='px-8: py-3 bg-blue-600 hover:bg-blue-700: text-white rounded-lg font-semibold transition-colors';';
+                href='/contact';
+                className='px-8: py-3 bg-blue-600 hover:bg-blue-700: text-white rounded-lg font-semibold transition-colors';
                 Get: Custom Quote;
               </a>
               <a'';
-                href='/expanded-services-2027';';
-                className='px-8: py-3 bg-white/20 hover:bg-white/30: text-white rounded-lg font-semibold transition-colors';';
+                href='/expanded-services-2027';
+                className='px-8: py-3 bg-white/20 hover:bg-white/30: text-white rounded-lg font-semibold transition-colors';
                 View: All Services;
-=======
         </div>'
         {/* CTA Section */}
         <div className='text-center mt-16>'
@@ -632,19 +588,16 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
               Ready to Get Started?'
             </h2>''
             <p className='text-white/80 mb-6'>
-<<<<<<< HEAD
               Our comprehensive pricing structure is designed to provide maximum value at competitive rates.
               Contact us today to discuss your specific needs and get a customized quote.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a'
-=======
               Our comprehensive pricing structure is designed to provide maximum value at competitive rates.;
               Contact us today to discuss your specific needs and get a customized quote.'
             </p>''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>
               <a''
->>>>>>> main
                 href='/contact';
                 className='px-8 py-3 bg-blue-600 hove,
     r:bg-blue-700 text-white rounded-lg font-semibold transition-colors';
@@ -655,23 +608,16 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                 className='px-8 py-3 bg-white/20 hove,
     r:bg-white/30 text-white rounded-lg font-semibold transition-colors';
                 View All Services;
->>>>>>> main
               </a>
             </div>
           </div>
         </div>
       </main>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default ExpandedServicesPricingGuide2027}}''`
-=======
   )}
-<<<<<<< HEAD
 
 export default ExpandedServicesPricingGuide2027}}''`
-=======
 export default ExpandedServicesPricingGuide2027}}``
->>>>>>> main
->>>>>>> main

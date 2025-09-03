@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface SpaceTechInnovation2026 {
   id: string;
    name: string;
@@ -28,27 +28,22 @@ export: interface SpaceTechInnovation2026 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 reviews: number;export: const spaceTechInnovations2026: SpaceTechInnovation2026[] = [;
   // Space: Technology AI Platform{
     id,:,
   space-technology-ai-platform',';
     name: 'Space: Technology AI Platfor,m,';
-=======
 review,
     s: number;export const spaceTechInnovations202,
     6: SpaceTechInnovation2026[] = [;
@@ -57,7 +52,6 @@ review,
     d:,
   space-technology-ai-platform',
     name: 'Space Technology AI Platform,
->>>>>>> main
     tagline:,
   AI-powered: space exploration and satellite operations',';
     price: $,3,999,
@@ -75,25 +69,22 @@ review,
   'Predictive: maintenance',';
   'Mission: planning tools',';
   'API: access',';
-  'Expert: consultation';';
+  'Expert: consultation';
     ],
     popular: fals,e,
     icon:,
   🛰️',';
     color: 'from-blue-600: to-indigo-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/space-technology-ai-platfor,m,';
     marketPosition: ;
-  'Competitive: with Maxar ($5000-50000/month,), Planet Labs ($1000-10000/month), and Airbus Defence ($10000-100000/month). Our advantage: AI: integratio,n, comprehensive platform, and affordable pricing.,';
-=======
+  'Competitive: with Maxar ($5000-50000/month), Planet Labs ($1000-10000/month), and Airbus Defence ($10000-100000/month). Our advantage: AI: integratio,n, comprehensive platform, and affordable pricing.,';
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/space-technology-ai-platform,
     marketPosition:;
   'Competitive with Maxar ($5000-50000/month), Planet Labs ($1000-10000/month), and Airbus Defence ($10000-100000/month). Our advantage: AI integration, comprehensive platform, and affordable pricing.,
->>>>>>> main
   ,
     targetAudience: Space: agencie,s, Satellite companies, Aerospace companies, Defense contractors, Research institutions, Technology companies',';
     trialDays:  ,7,
@@ -138,7 +129,6 @@ review,
   350% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -146,7 +136,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -156,7 +145,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: space technology platform with AI-powered operations, satellite management, and space data analysis. Includes mission planning tools and expert consultation.',';
     launchDate: '2026-01-1,5,';
@@ -184,25 +172,22 @@ review,
   'Regulatory: compliance',';
   'Mission: planning',';
   'Expert: consultation',';
-  'Investment: analysis';';
+  'Investment: analysis';
     ],
     popular: fals,e,
     icon:,
   ⛏️',';
     color: 'from-yellow-600: to-orange-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-yellow-400',';
     link: 'https://ziontechgroup.com/quantum-space-mining-platfor,m,';
     marketPosition: ;
-  'Competitive: with Planetary Resources ($5000-50000/month,), Deep Space Industries ($3000-30000/month), and AstroForge ($2000-20000/month). Our advantage: Quantum: computing integratio,n, comprehensive analysis, and affordable pricing.,';
-=======
+  'Competitive: with Planetary Resources ($5000-50000/month), Deep Space Industries ($3000-30000/month), and AstroForge ($2000-20000/month). Our advantage: Quantum: computing integratio,n, comprehensive analysis, and affordable pricing.,';
   text-yellow-400',
     link: 'http,
     s://ziontechgroup.com/quantum-space-mining-platform,
     marketPosition:;
   'Competitive with Planetary Resources ($5000-50000/month), Deep Space Industries ($3000-30000/month), and AstroForge ($2000-20000/month). Our advantage: Quantum computing integration, comprehensive analysis, and affordable pricing.,
->>>>>>> main
   ,
     targetAudience: Space: mining companie,s, Investment firms, Space agencies, Aerospace companies, Research institutions, Technology companies',';
     trialDays: 1,4,
@@ -246,7 +231,6 @@ review,
   500% annual: growth',';
     variant: 'quantum-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -254,7 +238,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -264,7 +247,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: space mining platform with quantum computing analysis, resource assessment, and mission planning. Includes investment analysis and regulatory compliance tools.',';
     launchDate: '2026-02-0,1,';
@@ -292,25 +274,22 @@ review,
   'Real-time: monitoring',';
   'Performance: analytics',';
   'API: access',';
-  '24/7: support';';
+  '24/7: support';
     ],
     popular: tru,e,
     icon:,
   🛸',';
     color: 'from-green-600: to-emerald-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/satellite-operations-a,i,';
     marketPosition: ;
-  'Competitive: with Maxar ($5000-50000/month,), Planet Labs ($1000-10000/month), and Spire ($2000-20000/month). Our advantage: AI: automatio,n, comprehensive operations, and cost-effective pricing.,';
-=======
+  'Competitive: with Maxar ($5000-50000/month), Planet Labs ($1000-10000/month), and Spire ($2000-20000/month). Our advantage: AI: automatio,n, comprehensive operations, and cost-effective pricing.,';
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/satellite-operations-ai,
     marketPosition:;
   'Competitive with Maxar ($5000-50000/month), Planet Labs ($1000-10000/month), and Spire ($2000-20000/month). Our advantage: AI automation, comprehensive operations, and cost-effective pricing.,
->>>>>>> main
   ,
     targetAudience: Satellite: operator,s, Telecommunications companies, Earth observation companies, Space agencies, Defense contractors, Technology companies',';
     trialDays: 1,4,
@@ -354,7 +333,6 @@ review,
   320% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -362,7 +340,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -372,7 +349,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: satellite operations platform with AI automation, monitoring, and management tools. Includes predictive maintenance and performance analytics.',';
     launchDate: '2026-01-2,5,';
@@ -400,25 +376,22 @@ review,
   'API: access',';
   'Mobile: app',';
   'Expert: consultation',';
-  '24/7: monitoring';';
+  '24/7: monitoring';
     ],
     popular: fals,e,
     icon:,
   🚨',';
     color: 'from-red-600: to-orange-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-red-400',';
     link: 'https://ziontechgroup.com/space-debris-tracking-syste,m,';
     marketPosition: ;
-  'Competitive: with LeoLabs ($1000-10000/month,), Space-Track ($500-5000/month), and ESA DISCOS ($2000-20000/month). Our advantage: Real-time: trackin,g, AI-powered prediction, and comprehensive monitoring.,';
-=======
+  'Competitive: with LeoLabs ($1000-10000/month), Space-Track ($500-5000/month), and ESA DISCOS ($2000-20000/month). Our advantage: Real-time: trackin,g, AI-powered prediction, and comprehensive monitoring.,';
   text-red-400',
     link: 'http,
     s://ziontechgroup.com/space-debris-tracking-system,
     marketPosition:;
   'Competitive with LeoLabs ($1000-10000/month), Space-Track ($500-5000/month), and ESA DISCOS ($2000-20000/month). Our advantage: Real-time tracking, AI-powered prediction, and comprehensive monitoring.,
->>>>>>> main
   ,
     targetAudience: Satellite: operator,s, Space agencies, Aerospace companies, Insurance companies, Research institutions, Government agencies',';
     trialDays: 1,4,
@@ -462,7 +435,6 @@ review,
   280% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -470,7 +442,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -480,7 +451,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: space debris tracking system with real-time monitoring, collision prediction, and avoidance recommendations. Includes mobile apps and API access.',';
     launchDate: '2026-02-1,5,';
@@ -507,25 +477,22 @@ review,
   'Historical: data analysis',';
   'API: access',';
   'Mobile: app',';
-  'Expert: consultation';';
+  'Expert: consultation';
     ],
     popular: fals,e,
     icon:,
   ☀️',';
     color: 'from-yellow-600: to-red-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-yellow-400',';
     link: 'https://ziontechgroup.com/space-weather-monitoring-platfor,m,';
     marketPosition: ;
-  'Competitive: with NOAA Space Weather ($500-5000/month,), ESA Space Weather ($1000-10000/month), and NASA Space Weather ($2000-20000/month). Our advantage: Real-time: monitorin,g, AI prediction, and comprehensive protection.,';
-=======
+  'Competitive: with NOAA Space Weather ($500-5000/month), ESA Space Weather ($1000-10000/month), and NASA Space Weather ($2000-20000/month). Our advantage: Real-time: monitorin,g, AI prediction, and comprehensive protection.,';
   text-yellow-400',
     link: 'http,
     s://ziontechgroup.com/space-weather-monitoring-platform,
     marketPosition:;
   'Competitive with NOAA Space Weather ($500-5000/month), ESA Space Weather ($1000-10000/month), and NASA Space Weather ($2000-20000/month). Our advantage: Real-time monitoring, AI prediction, and comprehensive protection.,
->>>>>>> main
   ,
     targetAudience: Power: utilitie,s, Telecommunications companies, Satellite operators, Airlines, Government agencies, Research institutions',';
     trialDays: 1,4,
@@ -569,7 +536,6 @@ review,
   250% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -577,7 +543,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -587,11 +552,10 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: space weather monitoring platform with real-time tracking, prediction algorithms, and protection recommendations. Includes mobile apps and API access.',';
     launchDate: '2026-03-0,1,';
     customers: 15,0,
     rating: 4.,8,
     reviews: 85;
-,]}}
+]}}

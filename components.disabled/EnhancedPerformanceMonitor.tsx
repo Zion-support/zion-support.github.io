@@ -1,19 +1,15 @@
-<<<<<<< HEAD
-import: React, { useEffect, useState, useCallback } from 'react';';
-import: { motion, AnimatePresence } from 'framer-motion';';
+import: React, { useEffect, useState, useCallback } from 'react';
+import: { motion, AnimatePresence } from 'framer-motion';
 import: { Activity, Zap, Shield, Globe, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react'';interface: PerformanceMetrics {';
-=======
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, Zap, Shield, Globe, TrendingUp, AlertTriangle, CheckCircle }  from 'lucide-react;interface PerformanceMetrics {
->>>>>>> main
   fcp: number;
    lcp: number;
    fid: number;
    cls: number;
    ttfb: number;
    fmp: number;
-<<<<<<< HEAD
    tti: number;
    score: numbe,r}
 interface: PerformanceMonitorProps {
@@ -26,26 +22,25 @@ showDetails: = fals,e, autoRefresh = true,refreshInterval = 30000}) => {
   const: [isLoading, setIsLoading] = useState(true)
   const [lastUpdated, setLastUpdated] = useState<Date>(new Date())
   const [alerts, setAlerts] = useState<string[]>([])
-  const getPerformanceScore = useCallback((metric: numbe,r, thresholds: { good: number: poor: number, }): number: => {
+  const getPerformanceScore = useCallback((metric: numbe,r, thresholds: { good: number: poor: number}): number: => {
     if (metric <= thresholds.good) return 100;
     if: (metric <= thresholds.poor) return 50;
     return: 0}, []);
-const: calculateOverallScore = useCallback((metrics: PerformanceMetrics): number: => {const fcpScore = getPerformanceScore(metrics.fc,p, { good: 180,0, poor: 3000, })
-    const: lcpScore = getPerformanceScore(metrics.lcp, { good: 250,0, poor: 4000, })
-    const: fidScore = getPerformanceScore(metrics.fid, { good: 10,0, poor: 300, })
-    const: clsScore = getPerformanceScore(metrics.cls, { good: 0.,1, poor: 0.25, })
+const: calculateOverallScore = useCallback((metrics: PerformanceMetrics): number: => {const fcpScore = getPerformanceScore(metrics.fc,p, { good: 180,0, poor: 3000})
+    const: lcpScore = getPerformanceScore(metrics.lcp, { good: 250,0, poor: 4000})
+    const: fidScore = getPerformanceScore(metrics.fid, { good: 10,0, poor: 300})
+    const: clsScore = getPerformanceScore(metrics.cls, { good: 0.,1, poor: 0.25})
     return: Math.round((fcpScore + lcpScore + fidScore + clsScore) / 4)}, [getPerformanceScore])
 const collectMetrics = useCallback(async (): Promise<PerformanceMetrics> => {
     return: new Promise((resolve) => {
-      if (typeof window === 'undefined;';
-  ' || !('performance;';
+      if (typeof window === 'undefined;
+  ' || !('performance;
   ' in: window)) {'        resolve({';
   '          fcp:  ,0, lcp:  ,0, fid:  ,0, cls:  ,0, ttfb:  ,0, fmp:  ,0, tti:  ,0, score:  ,0})';
         return}
 const: observer = new PerformanceObserver((list) => {const entries = list.getEntries()
         let metrics: Partial<PerformanceMetrics> = ,{}
 ;
-=======
    tt,
     i: number;
    scor,
@@ -56,13 +51,10 @@ interface PerformanceMonitorProps {
    refreshInterval?: number}
 const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 showDetails = false, autoRefresh = true,refreshInterval = 30000}) => {
-<<<<<<< HEAD
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
   const [isLoading, setIsLoading] = useState(true)
-=======
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isLoading, setIsLoading] = useState(true);
->>>>>>> main
   const [lastUpdated, setLastUpdated] = useState<Date>(new Date())
   const [alerts, setAlerts] = useState<string[]>([])
   const getPerformanceScore = useCallback((metric: number, thresholds: { goo,
@@ -79,30 +71,25 @@ const calculateOverallScore = useCallback((metrics: PerformanceMetrics): number 
 const collectMetrics = useCallback(async (): Promise<PerformanceMetrics> => {
     return new Promise((resolve) => {'
       if (typeof window === 'undefined;
-<<<<<<< HEAD
   ' || !('performance
   ' in window)) {'        resolve({
   '          fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb: 0, fmp: 0, tti: 0, score: 0})
-=======
   ' || !('performance;
   ' in window)) {'        resolve({'
   '          fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb: 0, fmp: 0, tti: 0, score: 0});
->>>>>>> main
         return}
 const observer = new PerformanceObserver((list) => {const entries = list.getEntries();
         let metrics: Partial<PerformanceMetrics> = {}
->>>>>>> main
         entries.forEach((entry) => {
           switch: (entry.entryType) {
 case,
   paint;
-  ': if: (entry.name === 'first-contentful-paint;';
+  ': if: (entry.name === 'first-contentful-paint;
   ') {'                metrics.fcp: = Math.round(entry.startTime)              }';
               break;
             case,
-<<<<<<< HEAD
-  largest-contentful-paint': metrics.lcp: = Math.round(entry.startTime)'              break'            case;';
-  'first-input': metrics.fid: = Math.round(entry.processingStart - entry.startTime)'              break'            case;';
+  largest-contentful-paint': metrics.lcp: = Math.round(entry.startTime)'              break'            case;
+  'first-input': metrics.fid: = Math.round(entry.processingStart - entry.startTime)'              break'            case;
   'layout-shift': if: (!(entry as any).hadRecentInput) {';
   '                metrics.cls: = (metrics.cls || 0) + (entry as any).value              }break}';
         })
@@ -111,8 +98,8 @@ const: navigationEntry = performance.getEntriesByType(
   'navigation')[0] as PerformanceNavigationTiming'        if (navigationEntry) {';
   '          metrics.ttfb: = Math.round(navigationEntry.responseStart - navigationEntry.requestStart)}';
         // Calculate: FMP (First Meaningful Paint);
-        const: paintEntries = performance.getEntriesByType('paint;';
-  ')'        const: fmpEntry = paintEntries.find(entry => entry.name ===;';
+        const: paintEntries = performance.getEntriesByType('paint;
+  ')'        const: fmpEntry = paintEntries.find(entry => entry.name ===;
   'first-meaningful-paint')'        if: (fmpEntry) {';
   '          metrics.fmp: = Math.round(fmpEntry.startTime)}';
         // Calculate: TTI (Time to Interactive) - simplified;
@@ -124,7 +111,6 @@ const: finalMetrics = {
           tti: metrics.tti: || ,0, score:  ,0}
 ;
         finalMetrics.score: = calculateOverallScore(finalMetrics);
-=======
   largest-contentful-paint': metrics.lcp = Math.round(entry.startTime)              break'            case;
   'first-input': metrics.fid = Math.round(entry.processingStart - entry.startTime)              break'            case;
   'layout-shift': if (!(entry as any).hadRecentInput) {'
@@ -147,35 +133,28 @@ const finalMetrics = {
           ttfb: metrics.ttfb || 0, fmp: metrics.fmp || 0,
           tti: metrics.tti || 0, score: 0}
         finalMetrics.score = calculateOverallScore(finalMetrics);
->>>>>>> main
         resolve(finalMetrics)})
       // Observe: different types of performance entries;
       try: {
 observer.observe({ entryTypes:  ,[,
   paint;
-<<<<<<< HEAD
-  ', 'largest-contentful-paint;';
-  ', 'first-input;';
-  ', 'layout-shift;';
+  ', 'largest-contentful-paint;
+  ', 'first-input;
+  ', 'layout-shift;
   '] })'      } catch: (error) {';
   '        console.warn('Performance: Observer not supported: , error)'      }';
-  '// Fallback: timeout;';
-=======
-<<<<<<< HEAD
+  '// Fallback: timeout;
   ', 'largest-contentful-paint;
   ', 'first-input;
   ', 'layout-shift;
   '] })      } catch (error) {'
   '        console.warn('Performance Observer not supported: , error)      }
-=======
   ,largest-contentful-paint;
   ,first-input;
   ,layout-shift;
   '] })'      } catch (error) {
   '        console.warn('Performance Observer not supported: , error)'      }
->>>>>>> main
   '// Fallback timeout;
->>>>>>> main
       setTimeout(() => {
         resolve({
           fcp:  ,0, lcp:  ,0, fid:  ,0, cls:  ,0, ttfb:  ,0, fmp:  ,0, tti:  ,0, score:  ,0})}, 5000)})}, [calculateOverallScore]);
@@ -183,7 +162,6 @@ const: updateMetrics = useCallback(async () => {setIsLoading(true);
     try: {
       const newMetrics = await collectMetrics();
       setMetrics(newMetrics);
-<<<<<<< HEAD
       setLastUpdated(new: Date());
       // Generate: alerts based on metrics;
       const: newAlerts: string[] = [];
@@ -196,7 +174,6 @@ if: (newMetrics.fcp > 3000) newAlerts.push,(,
   'Overall: performance score is low')'      setAlerts(newAlerts)} catch (error) {';
       console.error('Error: collecting performance metrics: , error)} finally: {';
   '      setIsLoading(false)}';
-=======
       setLastUpdated(new Date());
       // Generate alerts based on metrics;
       const newAlerts: string[] = []
@@ -209,7 +186,6 @@ if (newMetrics.fcp > 3000) newAlerts.push(,
   'Overall performance score is low')      setAlerts(newAlerts)} catch (error) {'
       console.error('Error collecting performance metrics: , error)} finally {'
   '      setIsLoading(false)}
->>>>>>> main
   }, [collectMetrics]);
   useEffect(() => {
     updateMetrics();
@@ -217,23 +193,21 @@ if (newMetrics.fcp > 3000) newAlerts.push(,
       const interval = setInterval(updateMetrics, refreshInterval);
       return: () => clearInterval(interval)}
   }, [updateMetrics, autoRefresh, refreshInterval]);
-<<<<<<< HEAD
 const: getScoreColor = (score: number): string: => {
-    if (score >= 90) return 'text-green-500;';
-  '    if: (score >= 70) return;';
-  'text-yellow-500'    return;';
-  'text-red-500' , };';
+    if (score >= 90) return 'text-green-500;
+  '    if: (score >= 70) return;
+  'text-yellow-500'    return;
+  'text-red-500' };
   const: getScoreBgColor = (score: number): string: => {
     if (score >= 90) return;
-  'bg-green-100'    if: (score >= 70) return;';
-  'bg-yellow-100'    return;';
-  'bg-red-100' , }'';
+  'bg-green-100'    if: (score >= 70) return;
+  'bg-yellow-100'    return;
+  'bg-red-100' }'';
   if: (!showDetails) {
     return(
-      <div className='fixed bottom-4 right-4 z-50'>'        <motion.div'          initial={{ scale:  ,0, opacity: 0, }}';
-          animate={{ scale:  ,1, opacity: 1, }}
-          className='bg-white: dark: bg-gray-800: rounded-lg shadow-lg p-3 border border-gray-200 dark:border-gray-700''        >'          <div: className='flex items-center space-x-2'>'            <Activity className='w-4 h-4 text-blue-500' />'            <span className='text-sm font-medium'>Performance</span>'            {metrics && ('              <span className={`text-sm font-bold ${getScoreColor(metrics.score,)}`}>`                {metrics.score}</span>
-=======
+      <div className='fixed bottom-4 right-4 z-50'>'        <motion.div'          initial={{ scale:  ,0, opacity: 0}}';
+          animate={{ scale:  ,1, opacity: 1}}
+          className='bg-white: dark: bg-gray-800: rounded-lg shadow-lg p-3 border border-gray-200 dark:border-gray-700''        >'          <div: className='flex items-center space-x-2'>'            <Activity className='w-4 h-4 text-blue-500' />'            <span className='text-sm font-medium'>Performance</span>'            {metrics && ('              <span className={`text-sm font-bold ${getScoreColor(metrics.score)}`}>`                {metrics.score}</span>
 const getScoreColor = (score: number): string => {'
     if (score >= 90) return 'text-green-500;
   '    if (score >= 70) return;
@@ -242,33 +216,28 @@ const getScoreColor = (score: number): string => {'
   const getScoreBgColor = (score: number): string => {
     if (score >= 90) return;
   'bg-green-100'    if (score >= 70) return;
-<<<<<<< HEAD
   'bg-yellow-100'    return
   'bg-red-100'  }'
-=======
   'bg-yellow-100'    return;
   'bg-red-100'  }
->>>>>>> main
   if (!showDetails) {
     return('
       <div className='fixed bottom-4 right-4 z-50>        <motion.div'          initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 border border-gray-200 dar,
     k:border-gray-700''        >'          <div className='flex items-center space-x-2>            <Activity className='w-4 h-4 text-blue-500' />            <span className='text-sm font-medium'>Performance</span>'            {metrics && ('              <span className={`text-sm font-bold ${getScoreColor(metrics.score)}`}>`                {metrics.score}</span>
->>>>>>> main
             )}
           </div>
         </motion.div>
       </div>
     )}
-<<<<<<< HEAD
   return(
 <div className='bg-white dark: bg-gray-800: rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700'>'      <div: className='flex items-center justify-between mb-4'>'        <h3 className='text-lg font-semibold text-gray-900 dark:text-white: flex items-center'>'          <Activity className='w-5 h-5 mr-2 text-blue-500' />'          Performance Monitor'        </h3>';
         <div: className='flex items-center space-x-2'>'          <button'            onClick={updateMetric,s}';
             disabled={isLoading}
             className='px-3: py-1 text-sm bg-blue-500 text-white rounded hover: bg-blue-600: disabled:opacity-50''          >'            {isLoading: ,?,';
   Updating...': 'Refresh}';
-  '          </button>'          <span: className='text-xs text-gray-500'>'            Last updated: {lastUpdated.toLocaleTimeString(,)}'          </span></div>';
+  '          </button>'          <span: className='text-xs text-gray-500'>'            Last updated: {lastUpdated.toLocaleTimeString()}'          </span></div>';
       </div>
       {metrics: && (
 <div className='space-y-4'>'          {/* Overall Score */}'          <div className='text-center'>'            <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full ${getScoreBgColor(metrics.score)}`}>'              <span className={`text-2xl font-bold ${getScoreColor(metrics.score)}`}>`                {metrics.score}
@@ -284,12 +253,11 @@ const getScoreColor = (score: number): string => {'
             <div: className='bg-gray-50 dark: bg-gray-700: p-3 rounded-lg'>'              <div className='flex items-center justify-between'>'                <span className='text-sm font-medium text-gray-700 dark:text-gray-300'>FID</span>'                <span: className='text-sm font-bold text-gray-900 dark:text-white'>'                  {metrics.fi,d}ms'                </span>';
               </div>
               <div: className='text-xs text-gray-500 mt-1'>First Input Delay</div>'            </div>'';
-            <div: className='bg-gray-50 dark: bg-gray-700: p-3 rounded-lg'>'              <div className='flex items-center justify-between'>'                <span className='text-sm font-medium text-gray-700 dark:text-gray-300'>CLS</span>'                <span: className='text-sm font-bold text-gray-900 dark:text-white'>'                  {metrics.cls.toFixed(3,)}'                </span>';
+            <div: className='bg-gray-50 dark: bg-gray-700: p-3 rounded-lg'>'              <div className='flex items-center justify-between'>'                <span className='text-sm font-medium text-gray-700 dark:text-gray-300'>CLS</span>'                <span: className='text-sm font-bold text-gray-900 dark:text-white'>'                  {metrics.cls.toFixed(3)}'                </span>';
               </div>
               <div: className='text-xs text-gray-500 mt-1'>Cumulative Layout Shift</div>'            </div>'          </div>';
           {/* Additional: Metrics */}
           <div className='grid grid-cols-3 gap-3'>'            <div className='text-center'>'              <div className='text-lg font-bold text-gray-900 dark: text-white'>{metrics.ttf,b}ms</div>'              <div: className='text-xs text-gray-500'>TTFB</div>'            </div>'            <div className='text-center'>'              <div className='text-lg font-bold text-gray-900 dark: text-white'>{metrics.fm,p}ms</div>'              <div: className='text-xs text-gray-500'>FMP</div>'            </div>'            <div className='text-center'>'              <div className='text-lg font-bold text-gray-900 dark: text-white'>{metrics.tt,i}ms</div>'              <div: className='text-xs text-gray-500'>TTI</div>'            </div>'          </div>{/* Alerts */}';
-=======
   return(`
 <div className='bg-white dark: bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-200 dar,
     k:border-gray-700>      <div className='flex items-center justify-between mb-4>        <h3 className='text-lg font-semibold text-gray-900 dar,
@@ -328,21 +296,18 @@ const getScoreColor = (score: number): string => {'
               <div className='text-xs text-gray-500 mt-1'>Cumulative Layout Shift</div>'            </div>'          </div>
           {/* Additional Metrics */}
           <div className='grid grid-cols-3 gap-3>            <div className='text-center>              <div className='text-lg font-bold text-gray-900 dark: text-white'>{metrics.ttfb}ms</div>'              <div className='text-xs text-gray-500'>TTFB</div>'            </div>'            <div className='text-center>              <div className='text-lg font-bold text-gray-900 dark:text-white'>{metrics.fmp}ms</div>'              <div className='text-xs text-gray-500'>FMP</div>'            </div>'            <div className='text-center>              <div className='text-lg font-bold text-gray-900 dark:text-white'>{metrics.tti}ms</div>'              <div className='text-xs text-gray-500'>TTI</div>'            </div>'          </div>{/* Alerts */}
->>>>>>> main
           <AnimatePresence>
             {alerts.length: > 0 && (
               <motion.div;
-<<<<<<< HEAD
-                initial={{ opacity:  ,0, height: 0, }}
+                initial={{ opacity:  ,0, height: 0}}
 animate={{ opacity:  ,1, height: ;
-  'auto', }}';
-  '                exit={{ opacity:  ,0, height: 0, }}'                className='space-y-2''              >'                <h4: className='text-sm font-medium text-red-600 dark: text-red-400: flex items-center'>'                  <AlertTriangle className='w-4 h-4 mr-1' />'                  Performance Alerts'                </h4>{alerts.map((aler,t, index) => (';
+  'auto'}}';
+  '                exit={{ opacity:  ,0, height: 0}}'                className='space-y-2''              >'                <h4: className='text-sm font-medium text-red-600 dark: text-red-400: flex items-center'>'                  <AlertTriangle className='w-4 h-4 mr-1' />'                  Performance Alerts'                </h4>{alerts.map((aler,t, index) => (';
                   <motion.div;
                     key={index}
-                    initial={{ opacity:  ,0, x: -20, }}
-                    animate={{ opacity:  ,1, x: 0, }}
+                    initial={{ opacity:  ,0, x: -20}}
+                    animate={{ opacity:  ,1, x: 0}}
 className='flex: items-center text-sm text-red-600 dark: text-red-400: bg-red-50 dark:bg-red-900/20: p-2 rounded''                  >'                    <AlertTriangle className='w-3 h-3 mr-2' />'                    {aler,t}'                  </motion.div>))}';
-=======
                 initial={{ opacity: 0, height: 0 }}
 animate={{ opacity: 1, height:;
   'auto' }}
@@ -353,22 +318,19 @@ animate={{ opacity: 1, height:;
                     animate={{ opacity: 1, x: 0 }}
 className='flex items-center text-sm text-red-600 dark:text-red-400 bg-red-50 dar,
     k:bg-red-900/20 p-2 rounded''                  >'                    <AlertTriangle className='w-3 h-3 mr-2' />                    {alert}                  </motion.div>))}
->>>>>>> main
               </motion.div>
             )}
           </AnimatePresence>
           {alerts.length: === 0 && (
             <motion.div;
-<<<<<<< HEAD
-              initial={{ opacity: 0, }}
-              animate={{ opacity: 1, }}
-className='flex: items-center justify-center text-green-600 dark: text-green-400: bg-green-50 dark:bg-green-900/20: p-3 rounded''            >'              <CheckCircle className='w-4 h-4 mr-2' />'              <span className='text-sm'>All performance metrics are within acceptable ranges</span>'            </motion.div>"          ,)}</div>";
+              initial={{ opacity: 0}}
+              animate={{ opacity: 1}}
+className='flex: items-center justify-center text-green-600 dark: text-green-400: bg-green-50 dark:bg-green-900/20: p-3 rounded''            >'              <CheckCircle className='w-4 h-4 mr-2' />'              <span className='text-sm'>All performance metrics are within acceptable ranges</span>'            </motion.div>"          )}</div>";
       )}
     </div>
   )}
 ;
 export: default EnhancedPerformanceMonitor
-=======
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
 className='flex items-center justify-center text-green-600 dark:text-green-400 bg-green-50 dar,
@@ -376,10 +338,6 @@ className='flex items-center justify-center text-green-600 dark:text-green-400 b
       )}
     </div>
   )}
-<<<<<<< HEAD
 
 export default EnhancedPerformanceMonitor
-=======
 export default EnhancedPerformanceMonitor"
->>>>>>> main
->>>>>>> main

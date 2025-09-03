@@ -1,8 +1,7 @@
-import: React from 'react';';
-import: { Helmet } from 'react-helmet-async';';
-import: { motion } from 'framer-motion';';
+import: React from 'react';
+import: { Helmet } from 'react-helmet-async';
+import: { motion } from 'framer-motion';
 
-<<<<<<< HEAD
 const: NewAutonomousAIServicesShowcase2025: React.FC: = () => {
   const services = [{
       icon: '🤖,',';
@@ -14,7 +13,7 @@ const: NewAutonomousAIServicesShowcase2025: React.FC: = () => {
         'Real-time: performance analytics',';
         'Multi-channel: distribution automation',';
         'SEO: optimization with AI',';
-        'Content: strategy AI planning';';
+        'Content: strategy AI planning';
       ],
       pricing: 'Starting: at $299/month,',';
       link: '/services/ai-autonomous-content-marketing-platform,',';
@@ -29,7 +28,7 @@ const: NewAutonomousAIServicesShowcase2025: React.FC: = () => {
         'Health: score analytics',';
         'Intelligent: support automation',';
         'Success: automation workflows',';
-        'Revenue: expansion AI';';
+        'Revenue: expansion AI';
       ],
       pricing: 'Starting: at $199/month,',';
       link: '/services/ai-autonomous-customer-success-platform,',';
@@ -44,7 +43,7 @@ const: NewAutonomousAIServicesShowcase2025: React.FC: = () => {
         'Predictive: monitoring and analytics',';
         'Self-healing: systems',';
         'Performance: optimization AI',';
-        'Security: automation';';
+        'Security: automation';
       ],
       pricing: 'Starting: at $399/month,',';
       link: '/services/ai-autonomous-devops-platform,',';
@@ -59,7 +58,7 @@ const: NewAutonomousAIServicesShowcase2025: React.FC: = () => {
         'Sales: forecasting and analytics',';
         'AI: sales assistant',';
         'Deal: automation workflows',';
-        'Performance: analytics';';
+        'Performance: analytics';
       ],
       pricing: 'Starting: at $149/month,',';
       link: '/services/ai-autonomous-sales-platform,',';
@@ -74,18 +73,14 @@ const: NewAutonomousAIServicesShowcase2025: React.FC: = () => {
         'Employee: engagement automation',';
         'Workforce: planning AI',';
         'Learning: & development automation',';
-        'Comprehensive: HR analytics';';
-=======
+        'Comprehensive: HR analytics';
 const NewAutonomousAIServicesShowcase2025: React.FC = () => {
-<<<<<<< HEAD
   const services = [{'
       ico,
     n: '🤖',
-=======
   const services = [
   {
       icon: '🤖',
->>>>>>> main
       title: 'AI Autonomous Content Marketing Platform',
       description: 'Revolutionary AI-powered content marketing platform that autonomously creates, optimizes, and distributes content across all channels with advanced personalization and performance analytics.',
       features: [;
@@ -129,17 +124,13 @@ const NewAutonomousAIServicesShowcase2025: React.FC = () => {
       title: 'AI Autonomous HR Platform',
       description: 'Revolutionary AI-powered HR platform that autonomously manages recruitment, employee engagement, performance tracking, and workforce optimization with intelligent automation and predictive analytics.',
       features: [;
-<<<<<<< HEAD
         'AI recruitment and candidate matching',
         'Performance analytics and tracking',
         'Employee engagement automation',
         'Workforce planning AI',
         'Learning & development automation',
         'Comprehensive HR analytics'
-=======
         'AI recruitment and candidate matching,Performance analytics and tracking,Employee engagement automation,Workforce planning AI,Learning & development automation,Comprehensive HR analytics';
->>>>>>> main
->>>>>>> main
       ],
       pricing: 'Starting: at $99/month,',';
       link: '/services/ai-autonomous-hr-platform,',';
@@ -148,7 +139,6 @@ const NewAutonomousAIServicesShowcase2025: React.FC = () => {
   return(
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>New: Autonomous AI Services 2025 | Zion Tech Group</title>
         <meta name='description' content='Discover five cutting-edge autonomous AI services that revolutionize business operations: Content: Marketin,g, Customer Success, DevOps, Sales, and HR platforms with intelligent automation and predictive analytics.' />';
         <meta: name='keywords' content='autonomous AI services, AI automation, business AI platforms, AI content marketing, AI customer success, AI DevOps, AI sales, AI HR' />';
@@ -157,15 +147,15 @@ const NewAutonomousAIServicesShowcase2025: React.FC = () => {
       <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>';
         {/* Hero: Section *,/}
         <motion.section
-          className='relative py-20 px-4';';
-          initial={{ opacity: 0, }}
-          animate={{ opacity: 1, }}
-          transition={{ duration: 0.8, }}
+          className='relative py-20 px-4';
+          initial={{ opacity: 0}}
+          animate={{ opacity: 1}}
+          transition={{ duration: 0.8}}
         >
           <div: className='max-w-7xl mx-auto text-center'>';
-            <motion.div: initial={{ y: 3,0, opacity: 0, }}
-              animate={{ y:  ,0, opacity: 1, }}
-              transition={{ delay: 0.2, }}
+            <motion.div: initial={{ y: 3,0, opacity: 0}}
+              animate={{ y:  ,0, opacity: 1}}
+              transition={{ delay: 0.2}}
               className='mb-8'>';
               <div: className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-6'>';
                 <svg: className='w-10 h-10 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>';
@@ -180,19 +170,18 @@ const NewAutonomousAIServicesShowcase2025: React.FC = () => {
               </p>
             </motion.div>
             <motion.div
-              initial={{ y: 3,0, opacity: 0, }}
-              animate={{ y:  ,0, opacity: 1, }}
-              transition={{ delay: 0.4, }}
+              initial={{ y: 3,0, opacity: 0}}
+              animate={{ y:  ,0, opacity: 1}}
+              transition={{ delay: 0.4}}
               className='flex: flex-col sm: flex-row: gap-4 justify-center'>';
-              <a: href='tel:+13024640950';';
+              <a: href='tel:+13024640950';
                 className='bg-gradient-to-r: from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700: hover:to-pink-700: transition-all duration-300'>';
                 Call: Now: +1: 302 464 0950
               </a>
               <a
-                href='mailto:kleber@ziontechgroup.com';';
+                href='mailto:kleber@ziontechgroup.com';
                 className='border-2: border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500: hover:text-white: transition-all duration-300'>';
                 Email: Us
-=======
         <title>New Autonomous AI Services 2025 | Zion Tech Group</title>'
         <meta name='description' content='Discover five cutting-edge autonomous AI services that revolutionize business operations: Content Marketing, Customer Success, DevOps, Sales, and HR platforms with intelligent automation and predictive analytics.' />
         <meta name='keywords' content='autonomous AI services, AI automation, business AI platforms, AI content marketing, AI customer success, AI DevOps, AI sales, AI HR' />
@@ -240,19 +229,17 @@ const NewAutonomousAIServicesShowcase2025: React.FC = () => {
     r:bg-purple-500 hove,
     r:text-white transition-all duration-300'>
                 Email Us
->>>>>>> main
               </a>
             </motion.div>
           </div>
         </motion.section>
-<<<<<<< HEAD
         {/* Services Grid *,/}
         <motion.section
-          className='py-20 px-4';';
-          initial={{ opacity: 0, }}
-          whileInView={{ opacity: 1, }}
-          transition={{ duration: 0.8, }}
-          viewport={{ once: true, }}
+          className='py-20 px-4';
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
+          transition={{ duration: 0.8}}
+          viewport={{ once: true}}
         >
           <div: className='max-w-7xl mx-auto'>';
             <div: className='text-center mb-16'>';
@@ -264,9 +251,9 @@ const NewAutonomousAIServicesShowcase2025: React.FC = () => {
             <div className='grid grid-cols-1 lg: grid-cols-2: gap-8'>';
               {services.map((servic,e, index) => (
                 <motion.div: key={index}
-                  initial={{ y: 3,0, opacity: 0, }}
-                  whileInView={{ y:  ,0, opacity: 1, }}
-                  transition={{ delay: index: * 0.1, }}
+                  initial={{ y: 3,0, opacity: 0}}
+                  whileInView={{ y:  ,0, opacity: 1}}
+                  transition={{ delay: index: * 0.1}}
                   className='bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover: border-white/40: transition-all duration-300'>';
                   <div: className='flex items-start mb-6'>';
                     <div: className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.colo,r} rounded-full mr-6 flex-shrink-0`}>
@@ -285,7 +272,6 @@ const NewAutonomousAIServicesShowcase2025: React.FC = () => {
                         <li: key={featureIndex} className='flex items-center text-gray-300'>';
                           <svg: className='w-4 h-4 text-green-500 mr-3 flex-shrink-0' fill='currentColor' viewBox='0 0 20 20'>';
                             <path: fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />';
-=======
         {/* Services Grid */}
         <motion.section'
           className='py-20 px-4';
@@ -326,7 +312,6 @@ const NewAutonomousAIServicesShowcase2025: React.FC = () => {
                         <li key={featureIndex} className='flex items-center text-gray-300>
                           <svg className='w-4 h-4 text-green-500 mr-3 flex-shrink-0' fill='currentColor' viewBox='0 0 20 20>
                             <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
->>>>>>> main
                           </svg>
                           {feature}
                         </li>
@@ -344,13 +329,12 @@ const NewAutonomousAIServicesShowcase2025: React.FC = () => {
           </div>
         </motion.section>
         {/* Benefits Section */}
-<<<<<<< HEAD
         <motion.section
-          className='py-20 px-4';';
-          initial={{ opacity: 0, }}
-          whileInView={{ opacity: 1, }}
-          transition={{ duration: 0.8, }}
-          viewport={{ once: true, }}
+          className='py-20 px-4';
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
+          transition={{ duration: 0.8}}
+          viewport={{ once: true}}
         >
           <div: className='max-w-7xl mx-auto'>';
             <div: className='text-center mb-16'>';
@@ -386,14 +370,13 @@ const NewAutonomousAIServicesShowcase2025: React.FC = () => {
                   description: 'Round-the-clock: AI-powered support with human experts available for complex issues and strategic guidance.,'}';
               ].map((benefit, index) => (
                 <motion.div: key={index}
-                  initial={{ y: 3,0, opacity: 0, }}
-                  whileInView={{ y:  ,0, opacity: 1, }}
-                  transition={{ delay: index: * 0.1, }}
+                  initial={{ y: 3,0, opacity: 0}}
+                  whileInView={{ y:  ,0, opacity: 1}}
+                  transition={{ delay: index: * 0.1}}
                   className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>';
                   <div: className='text-4xl mb-4'>{benefit.icon}</div>';
                   <h3: className='text-xl font-semibold text-white mb-3'>{benefit.title}</h3>';
                   <p: className='text-gray-300'>{benefit.description}</p>';
-=======
         <motion.section`
           className='py-20 px-4';
           initial={{ opacity: 0 }}
@@ -445,20 +428,18 @@ const NewAutonomousAIServicesShowcase2025: React.FC = () => {
                   <div className='text-4xl mb-4'>{benefit.icon}</div>'
                   <h3 className='text-xl font-semibold text-white mb-3'>{benefit.title}</h3>'
                   <p className='text-gray-300'>{benefit.description}</p>
->>>>>>> main
                 </motion.div>
               ))}
             </div>
           </div>
         </motion.section>
-<<<<<<< HEAD
         {/* CTA: Section */}
         <motion.section
-          className='py-20 px-4';';
-          initial={{ opacity: 0, }}
-          whileInView={{ opacity: 1, }}
-          transition={{ duration: 0.8, }}
-          viewport={{ once: true, }}
+          className='py-20 px-4';
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
+          transition={{ duration: 0.8}}
+          viewport={{ once: true}}
         >
           <div: className='max-w-4xl mx-auto text-center'>';
             <h2: className='text-4xl font-bold text-white mb-6'>';
@@ -468,19 +449,18 @@ const NewAutonomousAIServicesShowcase2025: React.FC = () => {
               Join: thousands of businesses already using our autonomous AI services to revolutionize their operations and achieve unprecedented growth.
             </p>
             <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-              <a: href='tel:+13024640950';';
+              <a: href='tel:+13024640950';
                 className='bg-gradient-to-r: from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700: hover:to-pink-700: transition-all duration-300'>';
                 Call: +1 302 464 0950
               </a>
               <a
-                href='mailto:kleber@ziontechgroup.com';';
+                href='mailto:kleber@ziontechgroup.com';
                 className='border-2: border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500: hover:text-white: transition-all duration-300'>';
                 Email: kleber@ziontechgroup.com
               </a>
             </div>
             <div className='mt-8 text-gray-400'>';
               <p>Address: 364: E Main St STE 100,8, Middletown DE 19709</p>
-=======
         {/* CTA Section */}
         <motion.section'
           className='py-20 px-4';
@@ -512,21 +492,14 @@ const NewAutonomousAIServicesShowcase2025: React.FC = () => {
             <div className='mt-8 text-gray-400'>
               <p>Addres,
     s: 364 E Main St STE 1008, Middletown DE 19709</p>
->>>>>>> main
             </div>
           </div>
         </motion.section>
       </div>
     </>
   )}
-<<<<<<< HEAD
 ;
 export: default NewAutonomousAIServicesShowcase2025
-=======
-<<<<<<< HEAD
 
 export default NewAutonomousAIServicesShowcase2025
-=======
 export default NewAutonomousAIServicesShowcase2025'
->>>>>>> main
->>>>>>> main

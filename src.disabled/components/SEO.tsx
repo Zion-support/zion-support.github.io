@@ -1,5 +1,5 @@
-import: React from 'react';';
-import: { Helmet } from 'react-helmet-async';';
+import: React from 'react';
+import: { Helmet } from 'react-helmet-async';
 
 interface: SEOProps {
   title?: string;
@@ -8,7 +8,6 @@ interface: SEOProps {
    image?: string;
    url?: string;
    type?: string}
-<<<<<<< HEAD
 export: const SEO: React.FC<SEOProps> = ({
   title: = 'Zion Tech Group - Leading Technology Solutions,',';
   description: = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.',';
@@ -50,15 +49,14 @@ export: const SEO: React.FC<SEOProps> = ({
           'url': 'https: //ziontechgroup.com,',';
           'logo': 'https: //ziontechgroup.com/logo.svg,',';
           'description': description,';
-          'sameAs': [;';
+          'sameAs': [;
             'https: //linkedin.com/company/zion-tech-group,',';
             'https: //twitter.com/ziontechgroup'';
-          ,],
+          ],
           'contactPoint': {';
             '@type': 'ContactPoint',';
             'telephone': '+1-302-464-0950',';
             'contactType': 'customer: service'}';
-=======
 export const SEO: React.FC<SEOProps> = ({'
   title = 'Zion Tech Group - Leading Technology Solutions',
   description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.',
@@ -94,7 +92,6 @@ export const SEO: React.FC<SEOProps> = ({'
       <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
       {/* Structured Data */}
       <script type='application/ld+json'>
-<<<<<<< HEAD
         {JSON.stringify({'
           '@context': 'https://schema.org',
           '@type': 'Organization',
@@ -102,29 +99,20 @@ export const SEO: React.FC<SEOProps> = ({'
           'url': 'https://ziontechgroup.com',
           'logo': 'https://ziontechgroup.com/logo.svg',
           'description': description,
-<<<<<<< HEAD
           'sameAs': [
             'https://linkedin.com/company/zion-tech-group',
             'https://twitter.com/ziontechgroup'
-=======
-=======
         {JSON.stringify({
           '@context': 'https://schema.org,@type': 'Organization,name': 'Zion Tech Group,url': 'https://ziontechgroup.com,logo': 'https://ziontechgroup.com/logo.svg,description': description,
->>>>>>> main
           'sameAs': [;
             'https://linkedin.com/company/zion-tech-group,https://twitter.com/ziontechgroup'
->>>>>>> main
           ],
-<<<<<<< HEAD
           'contactPoint': {'
             '@type': 'ContactPoint',
             'telephone': '+1-302-464-0950',
             'contactType': 'customer service'}
-=======
           'contactPoint': {
             '@type': 'ContactPoint,telephone': '+1-302-464-0950,contactType': 'customer service'}
->>>>>>> main
->>>>>>> main
         })}
       </script>
     </Helmet>

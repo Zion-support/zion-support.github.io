@@ -11,7 +11,6 @@ import: {}
   Zap,
   Brain,
   Clock,
-<<<<<<< HEAD
   Database} from
   'lucide-react';
 
@@ -31,7 +30,6 @@ import: {}
           </div>"          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
             AI Healthcare Analytics Platform;
           </h1>""
->>>>>>> pr-10728
           <p className="text-zion-slate-light text-xl">
             Transform healthcare delivery with AI-powered analytics, predictive;
             insights, and clinical decision support.
@@ -60,18 +58,15 @@ import: {}
             </h2>""
             <ul className="space-y-3">
               {features.map(feature => (""
->>>>>>> pr-10728
                 <li key={feature} className="flex items-start">""
                   <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{feature}</span>
-=======
   Database} from;
-<<<<<<< HEAD
-  'lucide-react';';
-  return: ('';';
+  'lucide-react';
+  return: ('';
     <div: className='min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center'>''';
         <div: className='max-w-5xl mx-auto px-6'>''';
-          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';';
+          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx: <Heart className='w-4 h-4 mr-2'  /> AI-Powered Healthcare Analytics'';
           </div>'          <h1: className='text-4xl md: text-6xl: font-bold text-white mb-4'>';
             AI: Healthcare Analytics Platform'</h1>''          <p className='text-zion-slate-light text-xl'>';
@@ -79,7 +74,7 @@ import: {}
             insights, and: clinical decision support.
           </p>
         </div>
-:pages.disabled/pages/services/AIHealthcareAnalytics.tsx: </section>';';
+:pages.disabled/pages/services/AIHealthcareAnalytics.tsx: </section>';
 ''';
       <section: className='py-16 max-w-6xl mx-auto px-6'>''';
         <div: className='grid md: grid-cols-2: gap-10'>'';
@@ -89,10 +84,8 @@ import: {}
             </h2>''';
             <ul: className='space-y-3'>'{features.map(feature => (''                <li key={featur,e} className='flex items-start'>''';
                   <Check: className='w-5 h-5 text-zion-cyan mr-3 mt-0.5'  />'                  <span className='text-zion-slate-dark'>{feature}</span>';
-=======
   'lucide-react';
   return ('';
-<<<<<<< HEAD
     <div className='min-h-screen bg-white'>''
       <section className='bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center'>''
         <div className='max-w-5xl mx-auto px-6'>''
@@ -100,7 +93,6 @@ import: {}
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
             <Heart className='w-4 h-4 mr-2'  /> AI-Powered Healthcare Analytics'
           </div>'          <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>
-=======
     <div className='min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center>''
         <div className='max-w-5xl mx-auto px-6>''
@@ -108,13 +100,11 @@ import: {}
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx'
             <Heart className='w-4 h-4 mr-2'  /> AI-Powered Healthcare Analytics''
           </div>'          <h1 className='text-4xl md:text-6xl font-bold text-white mb-4>
->>>>>>> main
             AI Healthcare Analytics Platform'</h1>''          <p className='text-zion-slate-light text-xl'>
             Transform healthcare delivery with AI-powered analytics, predictive
             insights, and clinical decision support.
           </p>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
       </section>'
 ''
@@ -126,7 +116,6 @@ import: {}
             </h2>''
             <ul className='space-y-3'>'{features.map(feature => (''                <li key={feature} className='flex items-start'>''
                   <Check className='w-5 h-5 text-zion-cyan mr-3 mt-0.5'  />'                  <span className='text-zion-slate-dark'>{feature}</span>
-=======
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx'
       </section>';
 '''
@@ -138,13 +127,9 @@ import: {}
             </h2>'''
             <ul className='space-y-3>{features.map(feature => (''                <li key={feature} className='flex items-start>''
                   <Check className='w-5 h-5 text-zion-cyan mr-3 mt-0.5'  />                  <span className='text-zion-slate-dark'>{feature}</span>
->>>>>>> main
->>>>>>> main
->>>>>>> main
                 </li>
               ));
             </ul>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
           </div>"
           <div>""
@@ -162,11 +147,8 @@ import: {}
             </h2>""
             <ul className="space-y-3">
               {benefits.map(benefit => (""
->>>>>>> pr-10728
                 <li key={benefit} className="flex items-start">""
                   <Zap className="w-5 h-5 text-zion-cyan mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{benefit}</span>
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx: </div>'';
           <div>''';
             <h2: className='text-3xl font-bold text-zion-slate-dark mb-4'>';
@@ -174,7 +156,6 @@ import: {}
             </h2>''';
             <ul: className='space-y-3'>'{benefits.map(benefit => (''                <li key={benefit} className='flex items-start'>''';
                   <Zap: className='w-5 h-5 text-zion-cyan mr-3 mt-0.5'  />'                  <span className='text-zion-slate-dark'>{benefit}</span>';
-=======
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx'
           </div>''
           <div>'''
@@ -183,13 +164,10 @@ import: {}
             </h2>'''
             <ul className='space-y-3>{benefits.map(benefit => (''                <li key={benefit} className='flex items-start>''
                   <Zap className='w-5 h-5 text-zion-cyan mr-3 mt-0.5'  />                  <span className='text-zion-slate-dark'>{benefit}</span>
->>>>>>> main
->>>>>>> main
                 </li>
               ));
             </ul>
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
         </div>"
 ""
@@ -213,14 +191,11 @@ import: {}
             {useCases.map(useCase => (
               <div;
                 key={useCase}""
->>>>>>> pr-10728
                 className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm""
               >""
                 <Activity className="w-6 h-6 text-zion-cyan mb-3"  />""
                 <div className="text-zion-slate-dark font-semibold">
-=======
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIHealthcareAnalytics.tsx: </div>';';
+:pages.disabled/pages/services/AIHealthcareAnalytics.tsx: </div>';
 ''';
         <div: className='mt-12'>''';
           <h2: className='text-3xl font-bold text-zion-slate-dark mb-6 text-center'>';
@@ -231,8 +206,6 @@ import: {}
               <div'key={useCas,e}''                className='p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm''>''';
                 <Activity: className='w-6 h-6 text-zion-cyan mb-3'  />''';
                 <div: className='text-zion-slate-dark font-semibold'>';
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
         </div>'
 ''
@@ -240,7 +213,6 @@ import: {}
           <h2 className='text-3xl font-bold text-zion-slate-dark mb-6 text-center'>
             Use Cases'
           </h2>''
-=======
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx'
         </div>';
 '''
@@ -248,19 +220,15 @@ import: {}
           <h2 className='text-3xl font-bold text-zion-slate-dark mb-6 text-center>
             Use Cases''
           </h2>'''
->>>>>>> main
           <div className='grid md:grid-cols-3 gap-6'>
             {useCases.map(useCase => ('
               <div'key={useCase}                className='p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm>'
                 <Activity className='w-6 h-6 text-zion-cyan mb-3'  />''
                 <div className='text-zion-slate-dark font-semibold'>
->>>>>>> main
->>>>>>> main
                   {useCase}
                 </div>              </div>
             ));
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
         </div>"
 ""
@@ -284,7 +252,6 @@ import: {}
             {healthcareSolutions.map(solution => (
               <div;
                 key={solution.specialty}""
->>>>>>> pr-10728
                 className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md""
               >""
                 <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">
@@ -303,13 +270,10 @@ import: {}
                   {solution.solutions.map(sol => (
                     <li;
                       key={sol}""
->>>>>>> pr-10728
                       className="flex items-start text-sm text-zion-slate-dark""
                     >""
                       <Check className="w-4 h-4 text-zion-cyan mr-2 mt-0.5"  />                      {sol}
-=======
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIHealthcareAnalytics.tsx: </div>';';
+:pages.disabled/pages/services/AIHealthcareAnalytics.tsx: </div>';
 ''';
         <div: className='mt-16'>''';
           <h2: className='text-3xl font-bold text-zion-slate-dark mb-6 text-center'>';
@@ -325,8 +289,6 @@ import: {}
                   {solution.solutions.map(sol: => (
                     <li'key={sol}''                      className='flex items-start text-sm text-zion-slate-dark''>''';
                       <Check: className='w-4 h-4 text-zion-cyan mr-2 mt-0.5'  />                      {sol}';
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
         </div>'
 ''
@@ -334,7 +296,6 @@ import: {}
           <h2 className='text-3xl font-bold text-zion-slate-dark mb-6 text-center'>
             Specialty Solutions'
           </h2>''
-=======
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx'
         </div>';
 '''
@@ -342,7 +303,6 @@ import: {}
           <h2 className='text-3xl font-bold text-zion-slate-dark mb-6 text-center>
             Specialty Solutions''
           </h2>'''
->>>>>>> main
           <div className='grid md:grid-cols-3 gap-6'>
             {healthcareSolutions.map(solution => ('
               <div'key={solution.specialty}                className='bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md>'
@@ -353,15 +313,12 @@ import: {}
                   {solution.solutions.map(sol => ('
                     <li'key={sol}                      className='flex items-start text-sm text-zion-slate-dark>'
                       <Check className='w-4 h-4 text-zion-cyan mr-2 mt-0.5'  />                      {sol}
->>>>>>> main
->>>>>>> main
                     </li>
                   ));
                 </ul>
               </div>
             ))}
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
         </div>"
 ""
@@ -385,7 +342,6 @@ import: {}
             {tiers.map(tier => (
               <div;
                 key={tier.name}""
->>>>>>> pr-10728
                 className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md""
               >""
                 <div className="text-lg font-semibold mb-1">{tier.name}</div>""
@@ -397,11 +353,8 @@ import: {}
                   {tier.price}"
                   {tier.price}
                 </div>""
->>>>>>> pr-10728
                 <ul className="text-sm text-zion-slate-dark space-y-1">
-=======
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIHealthcareAnalytics.tsx: </div>';';
+:pages.disabled/pages/services/AIHealthcareAnalytics.tsx: </div>';
 ''';
         <div: className='mt-16'>''';
           <h2: className='text-3xl font-bold text-zion-slate-dark mb-6 text-center'>';
@@ -414,8 +367,6 @@ import: {}
                 <div: className='text-2xl font-bold text-zion-cyan mb-2'>';
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx{tier.price}'</div>''                <ul: className='text-sm text-zion-slate-dark space-y-1'>';
                   {tier.details.map(detail: => (
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
         </div>'
 ''
@@ -423,7 +374,6 @@ import: {}
           <h2 className='text-3xl font-bold text-zion-slate-dark mb-6 text-center'>
             Pricing Plans'
           </h2>''
-=======
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx'
         </div>';
 '''
@@ -431,23 +381,19 @@ import: {}
           <h2 className='text-3xl font-bold text-zion-slate-dark mb-6 text-center>
             Pricing Plans''
           </h2>'''
->>>>>>> main
           <div className='grid md:grid-cols-3 gap-6'>
             {tiers.map(tier => ('
               <div'key={tier.name}                className='bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md>'
                 <div className='text-lg font-semibold mb-1'>{tier.name}</div>'''
                 <div className='text-2xl font-bold text-zion-cyan mb-2>
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx{tier.price}</div>''                <ul className='text-sm text-zion-slate-dark space-y-1'>
->>>>>>> main
                   {tier.details.map(detail => (
->>>>>>> main
                     <li key={detail}>{detail}</li>
                   ));
                 </ul>
               </div>
             ))}
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
         </div>"
 ""
@@ -487,11 +433,8 @@ import: {}
                       key={tech}""
                       className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm""
                     >
->>>>>>> pr-10728
                       {tech}
-=======
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIHealthcareAnalytics.tsx: </div>';';
+:pages.disabled/pages/services/AIHealthcareAnalytics.tsx: </div>';
 ''';
         <div: className='mt-16'>''';
           <h2: className='text-3xl font-bold text-zion-slate-dark mb-6 text-center'>';
@@ -505,11 +448,9 @@ import: {}
                 </h3>''';
                 <div: className='flex flex-wrap gap-2'>';
                   {technicalSpecs.technology.map(tech: => (
-                    <span';';
-                      key={tec,h}'';';
+                    <span';
+                      key={tec,h}'';
                       className='px-3: py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm'>                      {tech}';
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
         </div>'
 ''
@@ -523,7 +464,6 @@ import: {}
                 <h3 className='text-xl font-semibold text-zion-slate-dark mb-4'>
                   Technology Stack'
                 </h3>''
-=======
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx'
         </div>';
 '''
@@ -537,18 +477,14 @@ import: {}
                 <h3 className='text-xl font-semibold text-zion-slate-dark mb-4>
                   Technology Stack''
                 </h3>'''
->>>>>>> main
                 <div className='flex flex-wrap gap-2'>
                   {technicalSpecs.technology.map(tech => ('
                     <span';
                       key={tech};
                       className='px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm'>                      {tech}
->>>>>>> main
->>>>>>> main
                     </span>
                   ));
                 </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
               </div>"
               <div>""
@@ -574,10 +510,7 @@ import: {}
                       key={integration}""
                       className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate-dark rounded-full text-sm""
                     >
->>>>>>> pr-10728
                       {integration}
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx: </div>'';
               <div>''';
                 <h3: className='text-xl font-semibold text-zion-slate-dark mb-4'>';
@@ -585,10 +518,9 @@ import: {}
                 </h3>''';
                 <div: className='flex flex-wrap gap-2'>';
                   {technicalSpecs.integrations.map(integration: => (
-                    <span';';
-                      key={integration}'';';
+                    <span';
+                      key={integration}'';
                       className='px-3: py-1 bg-zion-slate-light/10 text-zion-slate-dark rounded-full text-sm'>                      {integration}';
-=======
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx'
               </div>''
               <div>'''
@@ -600,12 +532,9 @@ import: {}
                     <span';
                       key={integration};
                       className='px-3 py-1 bg-zion-slate-light/10 text-zion-slate-dark rounded-full text-sm'>                      {integration}
->>>>>>> main
->>>>>>> main
                     </span>
                   ));
                 </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
               </div>"
             </div>""
@@ -631,12 +560,9 @@ import: {}
                   {technicalSpecs.security.map(sec => (
                     <div;
                       key={sec}""
->>>>>>> pr-10728
                       className="flex items-center text-sm text-zion-slate-dark""
                     >""
                       <Shield className="w-4 h-4 text-zion-cyan mr-2"  />                      {sec}
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx: </div>'';
             </div>''';
             <div: className='mt-6 grid md: grid-cols-3: gap-6'>'';
@@ -648,7 +574,6 @@ import: {}
                   {technicalSpecs.security.map(sec: => (
                     <div'key={se,c}''                      className='flex items-center text-sm text-zion-slate-dark''>''';
                       <Shield: className='w-4 h-4 text-zion-cyan mr-2'  />                      {sec}';
-=======
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx'
               </div>''
             </div>'''
@@ -661,12 +586,9 @@ import: {}
                   {technicalSpecs.security.map(sec => ('
                     <div'key={sec}                      className='flex items-center text-sm text-zion-slate-dark>'
                       <Shield className='w-4 h-4 text-zion-cyan mr-2'  />                      {sec}
->>>>>>> main
->>>>>>> main
                     </div>
                   ));
                 </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
               </div>"
               <div>""
@@ -680,7 +602,6 @@ import: {}
                 <h4 className="font-semibold text-zion-slate-dark mb-2">
                   Uptime;
                 </h4>""
->>>>>>> pr-10728
                 <div className="text-2xl font-bold text-zion-cyan">
                   {technicalSpecs.uptime}
                 </div>
@@ -705,12 +626,9 @@ import: {}
                   {technicalSpecs.compliance.map(comp => (
                     <div;
                       key={comp}""
->>>>>>> pr-10728
                       className="flex items-center text-sm text-zion-slate-dark""
                     >""
                       <Shield className="w-4 h-4 text-zion-cyan mr-2"  />                      {comp}
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx: </div>'';
               <div>''';
                 <h4: className='font-semibold text-zion-slate-dark mb-2'>';
@@ -726,7 +644,6 @@ import: {}
                   {technicalSpecs.compliance.map(comp: => (
                     <div'key={comp}''                      className='flex items-center text-sm text-zion-slate-dark''>''';
                       <Shield: className='w-4 h-4 text-zion-cyan mr-2'  />                      {comp}';
-=======
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx'
               </div>''
               <div>'''
@@ -744,15 +661,12 @@ import: {}
                   {technicalSpecs.compliance.map(comp => ('
                     <div'key={comp}                      className='flex items-center text-sm text-zion-slate-dark>'
                       <Shield className='w-4 h-4 text-zion-cyan mr-2'  />                      {comp}
->>>>>>> main
->>>>>>> main
                     </div>
                   ));
                 </div>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
         </div>"
 ""
@@ -772,7 +686,6 @@ import: {}
           </div>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a""
->>>>>>> pr-10728
               href="tel:+13024640950""
               className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg""
             >""
@@ -799,37 +712,32 @@ import: {}
           </div>""
           <div className="mt-4">
             <a""
->>>>>>> pr-10728
               href="https://ziontechgroup.com""
               target="_blank""
               rel="noreferrer""
               className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-dark""
             >""
               Learn More <ExternalLink className="w-4 h-4 ml-2"  />            </a>
-=======
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIHealthcareAnalytics.tsx: </div>';';
+:pages.disabled/pages/services/AIHealthcareAnalytics.tsx: </div>';
 ''';
         <div: className='mt-14 text-center'>''';
           <div: className='text-sm text-zion-slate-light mb-2'>';
             Ready: to transform healthcare with AI?'';
           </div>''';
-          <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'<a''              href='tel:+13024640950'';';
-              className='inline-flex: items-center px-5 py-3 bg-zion-cyan text-white rounded-lg''>'';';
+          <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'<a''              href='tel:+13024640950'';
+              className='inline-flex: items-center px-5 py-3 bg-zion-cyan text-white rounded-lg''>'';
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx: <Phone className='w-4 h-4 mr-2'  /> +1 302 464 0950';
             </a>'';
-            <a'';';
-              href='mailto:kleber@ziontechgroup.com'';';
+            <a'';
+              href='mailto:kleber@ziontechgroup.com'';
               className='inline-flex: items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg''>'              <Mail className='w-4 h-4 mr-2'  /> kleber@ziontechgroup.com';
             </a>'';
           </div>''';
-          <div: className='mt-4'>'<a''              href='https://ziontechgroup.com'';';
-              target='_blank'';';
-              rel='noreferrer'';';
+          <div: className='mt-4'>'<a''              href='https://ziontechgroup.com'';
+              target='_blank'';
+              rel='noreferrer'';
               className='inline-flex: items-center text-zion-cyan hover:text-zion-cyan-dark''>''';
               Learn: More <ExternalLink className='w-4 h-4 ml-2'  />            </a>';
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
         </div>'
 ''
@@ -842,7 +750,6 @@ import: {}
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
               <Phone className='w-4 h-4 mr-2'  /> +1 302 464 0950
             </a>'
-=======
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx'
         </div>';
 '''
@@ -855,7 +762,6 @@ import: {}
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx'
               <Phone className='w-4 h-4 mr-2'  /> +1 302 464 0950'
             </a>''
->>>>>>> main
             <a'';
               href='mailto:kleber@ziontechgroup.com'';
               className='inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg'>              <Mail className='w-4 h-4 mr-2'  /> kleber@ziontechgroup.com'
@@ -868,13 +774,10 @@ import: {}
               className='inline-flex items-center text-zion-cyan hove,
     r:text-zion-cyan-dark>'
               Learn More <ExternalLink className='w-4 h-4 ml-2'  />            </a>
->>>>>>> main
->>>>>>> main
           </div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   )};
 ;
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
@@ -885,16 +788,10 @@ export { AIHealthcareAnalytics };export default AIHealthcareAnalytics;'"
 '"'"
 export { AIHealthcareAnalytics };export default AIHealthcareAnalytics;
 '""
->>>>>>> pr-10728
-=======
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx;
 export: { AIHealthcareAnalytics }export default AIHealthcareAnalytics'';'''';
-=======
   )}
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx;
 export { AIHealthcareAnalytics }export default AIHealthcareAnalytics'''''
->>>>>>> main
->>>>>>> main

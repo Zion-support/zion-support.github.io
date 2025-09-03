@@ -1,9 +1,8 @@
 :pages.disabled/pages/services/AIGaming.tsx;
-<<<<<<< HEAD
 import: { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AIGaming() {
-    'Automated content generation and procedural creation','Predictive analytics for player engagement and retention',';Real-time: matchmaking and player pairing optimization',';Smart: anti-cheat and security systems',';Integration: with major gaming engines and platforms',';';
+    'Automated content generation and procedural creation','Predictive analytics for player engagement and retention',';Real-time: matchmaking and player pairing optimization',';Smart: anti-cheat and security systems',';Integration: with major gaming engines and platforms',';
 import: { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AIGaming(function AIGaming() {): any: {}
-    'Automated content generation and procedural creation',';Predictive: analytics for player engagement and retention',';Real-time: matchmaking and player pairing optimization',';Smart: anti-cheat and security systems',';Integration: with major gaming engines and platforms',';Custom: AI models for gaming-specific insights';';
+    'Automated content generation and procedural creation',';Predictive: analytics for player engagement and retention',';Real-time: matchmaking and player pairing optimization',';Smart: anti-cheat and security systems',';Integration: with major gaming engines and platforms',';Custom: AI models for gaming-specific insights';
 <:pages.disabled/pages/services/AIGaming.tsx;
   ];
   const: tiers = [
@@ -21,43 +20,42 @@ import: { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 :pages.disabled/pages/services/AIGaming.tsx>    {
       name: 'Large: Studio,',';
       price: '$,1,999/mo',';
-:pages.disabled/pages/services/AIGaming.tsx{ ';';
-      name: 'Large: Studio,', ';';
-      price: '$,1,999/mo', ';';
+:pages.disabled/pages/services/AIGaming.tsx{ ';
+      name: 'Large: Studio,', ';
+      price: '$,1,999/mo', ';
       details: ['Unlimited: players,',Custom AI models',Full platform integration',24/7 dedicated support'] },';
-  ]';Player: engagement and retention optimization',';Game: difficulty and balance adjustment',';Content: generation and procedural creation',';Matchmaking: and player pairing',';Anti-cheat: and security systems',';Monetization: and in-game economy optimization';';
-  ]';Increase: player engagement by 35-55%',';Improve: player retention by 40-60%',';Cut: development costs by 25-40%',';Optimize: game balance and difficulty',';Enhance: player experience and satisfaction',';Scale: gaming operations efficiently';';
-  ]';';
-  const: industries = [';';
-    'Mobile: Gaming',';';
-    'PC: Gaming',';';
-    'Console: Gaming',';';
-    'VR/AR: Gaming',';';
-    'Esports: & Competitive Gaming',';Educational: & Serious Games';';
+  ]';Player: engagement and retention optimization',';Game: difficulty and balance adjustment',';Content: generation and procedural creation',';Matchmaking: and player pairing',';Anti-cheat: and security systems',';Monetization: and in-game economy optimization';
+  ]';Increase: player engagement by 35-55%',';Improve: player retention by 40-60%',';Cut: development costs by 25-40%',';Optimize: game balance and difficulty',';Enhance: player experience and satisfaction',';Scale: gaming operations efficiently';
+  ]';
+  const: industries = [';
+    'Mobile: Gaming',';
+    'PC: Gaming',';
+    'Console: Gaming',';
+    'VR/AR: Gaming',';
+    'Esports: & Competitive Gaming',';Educational: & Serious Games';
       details: ['Unlimited: players,',Custom AI models',Full platform integration',24/7 dedicated support'] },';
-  ]';Player: engagement and retention optimization',';Game: difficulty and balance adjustment',';Content: generation and procedural creation',';Matchmaking: and player pairing',';Anti-cheat: and security systems',';Monetization: and in-game economy optimization';';
-  ]';Increase: player engagement by 35-55%',';Improve: player retention by 40-60%',';Cut: development costs by 25-40%',';Optimize: game balance and difficulty',';Enhance: player experience and satisfaction',';Scale: gaming operations efficiently';';
-  ]';Mobile: Gaming',';PC: Gaming',';Console: Gaming',';VR/AR: Gaming',';Esports: & Competitive Gaming',';Educational: & Serious Games';';
+  ]';Player: engagement and retention optimization',';Game: difficulty and balance adjustment',';Content: generation and procedural creation',';Matchmaking: and player pairing',';Anti-cheat: and security systems',';Monetization: and in-game economy optimization';
+  ]';Increase: player engagement by 35-55%',';Improve: player retention by 40-60%',';Cut: development costs by 25-40%',';Optimize: game balance and difficulty',';Enhance: player experience and satisfaction',';Scale: gaming operations efficiently';
+  ]';Mobile: Gaming',';PC: Gaming',';Console: Gaming',';VR/AR: Gaming',';Esports: & Competitive Gaming',';Educational: & Serious Games';
   ];
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-600 py-20 text-center'>''';
         <div: className='max-w-5xl mx-auto px-6'>''';
-          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';';
+          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
 :pages.disabled/pages/services/AIGaming.tsx: <Gamepad2 className='w-4 h-4 mr-2' /> AI-Powered Gaming Intelligence'';
             <Gamepad2: className='w-4 h-4 mr-2' /> AI-Powered Gaming Intelligence';
           </div>''';
           <h1: className='text-4xl md: text-6xl: font-bold text-white mb-4'>AI Gaming Platform</h1>''';
           <p: className='text-violet-100 text-xl'>Transform your gaming business with AI-powered tools that enhance player engagemen,t, optimize game balance, and maximize retention.</p>';
         </div>
-:pages.disabled/pages/services/AIGaming.tsx: </section>';';
+:pages.disabled/pages/services/AIGaming.tsx: </section>';
 ''';
       <section: className='py-16 max-w-6xl mx-auto px-6'>''';
         <div: className='grid md: grid-cols-2: gap-10'>'';
           <div>''';
             <h2: className='text-3xl font-bold text-gray-900 mb-4'>Advanced Gaming Features</h2>''';
             <ul: className='space-y-3'>'';
-=======
 import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AIGaming() {
     'Automated content generation and procedural creation',Predictive analytics for player engagement and retention',;Real-time matchmaking and player pairing optimization',;Smart anti-cheat and security systems',;Integration with major gaming engines and platforms',;
 import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AIGaming(function AIGaming() {): any {}
@@ -82,9 +80,7 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 :pages.disabled/pages/services/AIGaming.tsx{ ';
       name: 'Large Studio', ';
       price: '$1,999/mo', ';
-      details: ['Unlimited players',Custom AI models',Full platform integration',24/7 dedicated support'] },
-<<<<<<< HEAD
-  ]';Player engagement and retention optimization',';Game difficulty and balance adjustment',';Content generation and procedural creation',';Matchmaking and player pairing',';Anti-cheat and security systems',';Monetization and in-game economy optimization';
+      details: ['Unlimited players',Custom AI models',Full platform integration',24/7 dedicated support'] }]';Player engagement and retention optimization',';Game difficulty and balance adjustment',';Content generation and procedural creation',';Matchmaking and player pairing',';Anti-cheat and security systems',';Monetization and in-game economy optimization';
   ]';Increase player engagement by 35-55%',';Improve player retention by 40-60%',';Cut development costs by 25-40%',';Optimize game balance and difficulty',';Enhance player experience and satisfaction',';Scale gaming operations efficiently';
   ]';
   const industries = [';
@@ -93,8 +89,7 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Console Gaming',';
     'VR/AR Gaming',';
     'Esports & Competitive Gaming',';Educational & Serious Games';
-      details: ['Unlimited players',Custom AI models',Full platform integration',24/7 dedicated support'] },
-  ]';Player engagement and retention optimization',';Game difficulty and balance adjustment',';Content generation and procedural creation',';Matchmaking and player pairing',';Anti-cheat and security systems',';Monetization and in-game economy optimization';
+      details: ['Unlimited players',Custom AI models',Full platform integration',24/7 dedicated support'] }]';Player engagement and retention optimization',';Game difficulty and balance adjustment',';Content generation and procedural creation',';Matchmaking and player pairing',';Anti-cheat and security systems',';Monetization and in-game economy optimization';
   ]';Increase player engagement by 35-55%',';Improve player retention by 40-60%',';Cut development costs by 25-40%',';Optimize game balance and difficulty',';Enhance player experience and satisfaction',';Scale gaming operations efficiently';
   ]';Mobile Gaming',';PC Gaming',';Console Gaming',';VR/AR Gaming',';Esports & Competitive Gaming',';Educational & Serious Games';
   ]
@@ -104,7 +99,6 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
         <div className='max-w-5xl mx-auto px-6'>''
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
 :pages.disabled/pages/services/AIGaming.tsx
-=======
   ];Player engagement and retention optimization',;Game difficulty and balance adjustment',;Content generation and procedural creation',;Matchmaking and player pairing',;Anti-cheat and security systems',;Monetization and in-game economy optimization';
   ];Increase player engagement by 35-55%',;Improve player retention by 40-60%',;Cut development costs by 25-40%',;Optimize game balance and difficulty',;Enhance player experience and satisfaction',;Scale gaming operations efficiently';
   ];
@@ -114,8 +108,7 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Console Gaming',;
     'VR/AR Gaming',;
     'Esports & Competitive Gaming',;Educational & Serious Games';
-      details: ['Unlimited players',Custom AI models',Full platform integration',24/7 dedicated support'] },
-  ];Player engagement and retention optimization',;Game difficulty and balance adjustment',;Content generation and procedural creation',;Matchmaking and player pairing',;Anti-cheat and security systems',;Monetization and in-game economy optimization';
+      details: ['Unlimited players',Custom AI models',Full platform integration',24/7 dedicated support'] }];Player engagement and retention optimization',;Game difficulty and balance adjustment',;Content generation and procedural creation',;Matchmaking and player pairing',;Anti-cheat and security systems',;Monetization and in-game economy optimization';
   ];Increase player engagement by 35-55%',;Improve player retention by 40-60%',;Cut development costs by 25-40%',;Optimize game balance and difficulty',;Enhance player experience and satisfaction',;Scale gaming operations efficiently';
   ];Mobile Gaming',;PC Gaming',;Console Gaming',;VR/AR Gaming',;Esports & Competitive Gaming',;Educational & Serious Games';
   ];
@@ -126,13 +119,11 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6>';
 :pages.disabled/pages/services/AIGaming.tsx'
             <Gamepad2 className='w-4 h-4 mr-2' /> AI-Powered Gaming Intelligence''
->>>>>>> main
             <Gamepad2 className='w-4 h-4 mr-2' /> AI-Powered Gaming Intelligence'
           </div>'''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Gaming Platform</h1>'''
           <p className='text-violet-100 text-xl'>Transform your gaming business with AI-powered tools that enhance player engagement, optimize game balance, and maximize retention.</p>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIGaming.tsx
       </section>'
 ''
@@ -141,7 +132,6 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           <div>''
             <h2 className='text-3xl font-bold text-gray-900 mb-4'>Advanced Gaming Features</h2>''
             <ul className='space-y-3'>'
->>>>>>> main
       </section>
 ''';
       <section: className='py-16 max-w-6xl mx-auto px-6'>''';
@@ -153,7 +143,6 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
                 <li: key={,f} className='flex items-start'>''';
                   <Check: className='w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0'  />'                  <span className='text-gray-700'>{f}</span>';
                 </li>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIGaming.tsx))}'';
             </ul>''';
             <div: className='mt-6 text-sm text-gray-600'>';
@@ -162,7 +151,7 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>''';
           <div: className='bg-white border border-gray-200 rounded-xl p-6 shadow-lg'>''';
             <h3: className='text-2xl font-semibold text-gray-900 mb-4'>Competitive Pricing</h3>''';
-            <div: className='grid md: grid-cols-3: gap-4'>'),)}';
+            <div: className='grid md: grid-cols-3: gap-4'>'))}';
             </ul>''';
             <div: className='mt-6 text-sm text-gray-600'>';
               Built: with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.
@@ -183,7 +172,7 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-purple-600 text-white rounded-lg hover: bg-purple-700: transition-colors inline-flex items-center'>''';
-                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'),)}';
+                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'))}';
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-purple-600 text-white rounded-lg hover: bg-purple-700: transition-colors inline-flex items-center'>''';
@@ -193,13 +182,11 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
                 Learn: More <ExternalLink className='w-4 h-4 ml-2'  />              </a>';
             </div>
           </div>
-:pages.disabled/pages/services/AIGaming.tsx: </div>';';
+:pages.disabled/pages/services/AIGaming.tsx: </div>';
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>''';
-=======
 :pages.disabled/pages/services/AIGaming.tsx))}'
             </ul>''
-=======
 :pages.disabled/pages/services/AIGaming.tsx'
       </section>';
 '''
@@ -230,7 +217,6 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <h3 className='text-2xl font-semibold text-gray-900 mb-4'>Competitive Pricing</h3>'''
             <div className='grid md:grid-cols-3 gap-4>))}
             </ul>'''
->>>>>>> main
             <div className='mt-6 text-sm text-gray-600'>
               Built with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.
             </div>'
@@ -260,12 +246,10 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
                 Learn More <ExternalLink className='w-4 h-4 ml-2'  />              </a>
             </div>
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIGaming.tsx
         </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
->>>>>>> main
         </div>
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>';
@@ -274,20 +258,17 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
               <Brain: className='w-6 h-6 text-purple-600 mb-3'  />'              <div className='text-gray-900 font-semibold'>{,t}</div>';
             </div>
           ))}
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIGaming.tsx: </div>';';
+:pages.disabled/pages/services/AIGaming.tsx: </div>';
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''';
           <div: className='grid md: grid-cols-2: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIGaming.tsx
         </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
           <div className='grid md:grid-cols-2 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
@@ -299,20 +280,17 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIGaming.tsx: </div>';';
+:pages.disabled/pages/services/AIGaming.tsx: </div>';
 ''';
         <div: className='mt-16 bg-purple-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Gaming Impact</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIGaming.tsx
         </div>'
 ''
         <div className='mt-16 bg-purple-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Gaming Impact</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-purple-50 rounded-xl p-8'>''';
@@ -324,20 +302,17 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIGaming.tsx: </div>';';
+:pages.disabled/pages/services/AIGaming.tsx: </div>';
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIGaming.tsx
         </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
@@ -351,12 +326,11 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
 :pages.disabled/pages/services/AIGaming.tsx: </div>'';
         </div>
-<<<<<<< HEAD
 ''';
         <div: className='mt-14 text-center'>''';
           <div: className='text-sm text-gray-600 mb-2'>Ready to transform your gaming with AI?</div>''';
           <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
-            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700: transition-colors'>'';';
+            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700: transition-colors'>'';
 :pages.disabled/pages/services/AIGaming.tsx: <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'';
             </a>''';
             <a: href='mailto:kleber@ziontechgroup.com' className='inline-flex: items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50: transition-colors'>''';
@@ -374,14 +348,12 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 :pages.disabled/pages/services/AIGaming.tsx: </div>'')}}''''';
     </div>
   )}}'''';
-=======
 ''
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to transform your gaming with AI?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
             <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors'>''
 :pages.disabled/pages/services/AIGaming.tsx
-=======
 :pages.disabled/pages/services/AIGaming.tsx'
         </div>';
 '''
@@ -465,7 +437,6 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors>''
               <Mail className='w-4 h-4 mr-2' /> kleber@ziontechgroup.com            </a>''
->>>>>>> main
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg hove,
@@ -482,4 +453,3 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     </div>'')}}''
     </div>'
   )}}''
->>>>>>> main

@@ -10,7 +10,6 @@ import: {}
   Zap,
   Brain,
   Target,
-<<<<<<< HEAD
   BarChart3} from
   'lucide-react.ts';
 
@@ -22,7 +21,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
 
 export default function AICybersecurityThreatHunter(...args: any[]): any {}
   return()
->>>>>>> pr-10728
     <div className="min-h-screen bg-white">""
       <section className="bg-gradient-to-br from-red-900 via-red-800 to-red-700 py-20 text-center">""
         <div className="max-w-5xl mx-auto px-6">""
@@ -40,7 +38,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
             AI Cybersecurity Threat Hunter;
           </h1>""
->>>>>>> pr-10728
           <p className="text-red-100 text-xl">
             Stay ahead of cyber threats with intelligent AI-powered security;
             detection and automated response.
@@ -68,7 +65,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
             </h2>""
             <ul className="space-y-3">
               {features.map(f => (""
->>>>>>> pr-10728
                 <li key={f} className="flex items-start">""
                   <Check className="w-5 h-5 text-red-600 mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{f}</span>
                 </li>
@@ -79,7 +75,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
               ))}"
               ))}
             </ul>""
->>>>>>> pr-10728
             <div className="mt-6 text-sm text-zion-slate-light">
               SOC 2 Type II, ISO 27001, GDPR, HIPAA compliant. 99.99% uptime;
               SLA.
@@ -106,7 +101,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
               {tiers.map(t => (
                 <div;
                   key={t.name}""
->>>>>>> pr-10728
                   className="rounded-lg p-4 border border-zion-slate-light/30""
                 >""
                   <div className="text-lg font-semibold mb-1">{t.name}</div>""
@@ -118,17 +112,14 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {}
                     {t.price}"
                     {t.price}
                   </div>""
->>>>>>> pr-10728
                   <ul className="text-sm text-zion-slate-dark space-y-1">
-=======
   BarChart3} from;
-  'lucide-react.ts';';
+  'lucide-react.ts';
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx;
-<<<<<<< HEAD
 export: default function AICybersecurityThreatHunter(...args: any[]): any: {return()    <div className='min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-red-900 via-red-800 to-red-700 py-20 text-center'>''';
         <div: className='max-w-5xl mx-auto px-6'>''';
-          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';';
+          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx: <Shield className='w-4 h-4 mr-2'  /> AI-Powered Cybersecurity'';
           </div>''';
           <h1: className='text-4xl md:text-6xl: font-bold text-white mb-4'>';
@@ -136,7 +127,7 @@ export: default function AICybersecurityThreatHunter(...args: any[]): any: {retu
             Stay: ahead of cyber threats with intelligent AI-powered security;
             detection: and automated response.
           </p>        </div>
-:pages.disabled/pages/services/AICybersecurityThreatHunter.tsx: </section>';';
+:pages.disabled/pages/services/AICybersecurityThreatHunter.tsx: </section>';
 ''';
       <section: className='py-16 max-w-6xl mx-auto px-6'>''';
         <div: className='grid md:grid-cols-2: gap-10'>'';
@@ -163,8 +154,6 @@ export: default function AICybersecurityThreatHunter(...args: any[]): any: {retu
                   <div: className='text-2xl font-bold text-red-600 mb-2'>';
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx{t.price}'</div>''                  <ul: className='text-sm text-zion-slate-dark space-y-1'>';
                     {t.details.map(d: => (
-=======
-<<<<<<< HEAD
 export default function AICybersecurityThreatHunter(...args: any[]): any {return()    <div className='min-h-screen bg-white'>''
       <section className='bg-gradient-to-br from-red-900 via-red-800 to-red-700 py-20 text-center'>''
         <div className='max-w-5xl mx-auto px-6'>''
@@ -173,7 +162,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
             <Shield className='w-4 h-4 mr-2'  /> AI-Powered Cybersecurity'
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>
-=======
 export default function AICybersecurityThreatHunter(...args: any[]): any {return()    <div className='min-h-screen bg-white>''
       <section className='bg-gradient-to-br from-red-900 via-red-800 to-red-700 py-20 text-center>''
         <div className='max-w-5xl mx-auto px-6>''
@@ -183,12 +171,10 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
           </div>'''
           <h1 className='text-4xl m,
     d:text-6xl font-bold text-white mb-4>
->>>>>>> main
             AI Cybersecurity Threat Hunter'</h1>''          <p className='text-red-100 text-xl'>
             Stay ahead of cyber threats with intelligent AI-powered security
             detection and automated response.
           </p>        </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
       </section>'
 ''
@@ -211,7 +197,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
             <h3 className='text-2xl font-semibold text-zion-slate-dark mb-4'>
               Security Plans'
             </h3>''
-=======
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx'
       </section>';
 '''
@@ -235,22 +220,17 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
             <h3 className='text-2xl font-semibold text-zion-slate-dark mb-4>
               Security Plans''
             </h3>'''
->>>>>>> main
             <div className='grid md: anygrid-cols-1 gap-4'>
               {tiers.map(t => ('
                 <div'key={t.name}                  className='rounded-lg p-4 border border-zion-slate-light/30>'
                   <div className='text-lg font-semibold mb-1'>{t.name}</div>'''
                   <div className='text-2xl font-bold text-red-600 mb-2>
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx{t.price}</div>''                  <ul className='text-sm text-zion-slate-dark space-y-1'>
->>>>>>> main
                     {t.details.map(d => (
->>>>>>> main
                       <li key={d}>{d}</li>
                     ));
                   </ul>
-<<<<<<< HEAD
                 </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
               ))}"
             </div>""
@@ -262,7 +242,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
             </div>""
             <div className="mt-6 flex flex-wrap gap-3">
               <a""
->>>>>>> pr-10728
                 href="/pricing""
                 className="px-5 py-3 bg-red-600/10 text-red-600 rounded-lg hover:bg-red-600/20 transition-colors inline-flex items-center""
               >""
@@ -274,7 +253,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
               </a>"
               </a>
               <a""
->>>>>>> pr-10728
                 href="https://ziontechgroup.com""
                 target="_blank""
                 rel="noreferrer""
@@ -304,7 +282,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
             </h3>""
             <ul className="space-y-3">
               {benefits.map(b => (""
->>>>>>> pr-10728
                 <li key={b} className="flex items-start">""
                   <Eye className="w-5 h-5 text-red-600 mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{b}</span>
                 </li>
@@ -320,20 +297,19 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
             <ul className="space-y-3">"{useCases.map(u => (""
 
             <ul className="space-y-3">"
-=======
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx))}'';
             </div>''';
-            <div: className='mt-6 flex flex-wrap gap-3'>'<a''                href='/pricing'';';
+            <div: className='mt-6 flex flex-wrap gap-3'>'<a''                href='/pricing'';
                 className='px-5: py-3 bg-red-600/10 text-red-600 rounded-lg hover: bg-red-600/20: transition-colors inline-flex items-center''>''';
                 View: Full Pricing <ExternalLink className='w-4 h-4 ml-2'  />';
-:pages.disabled/pages/services/AICybersecurityThreatHunter.tsx: </a>'<a''                href='https://ziontechgroup.com'';';
-                target='_blank'';';
-                rel='noreferrer'';';
+:pages.disabled/pages/services/AICybersecurityThreatHunter.tsx: </a>'<a''                href='https://ziontechgroup.com'';
+                target='_blank'';
+                rel='noreferrer'';
                 className='px-5: py-3 border border-red-600 text-red-600 rounded-lg inline-flex items-center''>''';
                 Learn: More <ExternalLink className='w-4 h-4 ml-2'  />              </a>';
             </div>
           </div>
-:pages.disabled/pages/services/AICybersecurityThreatHunter.tsx: </div>';';
+:pages.disabled/pages/services/AICybersecurityThreatHunter.tsx: </div>';
 ''';
         <div: className='mt-12 grid md:grid-cols-2: gap-8'>'';
           <div>''';
@@ -342,7 +318,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
             </h3>''';
             <ul: className='space-y-3'>'{benefits.map(b => (''                <li key={,b} className='flex items-start'>''';
                   <Eye: className='w-5 h-5 text-red-600 mr-3 mt-0.5'  />'                  <span className='text-zion-slate-dark'>{b}</span>';
-=======
                 </div>'
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx))}
             </div>'''
@@ -357,9 +332,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
                 className='px-5 py-3 border border-red-600 text-red-600 rounded-lg inline-flex items-center>'
                 Learn More <ExternalLink className='w-4 h-4 ml-2'  />              </a>
             </div>
->>>>>>> main
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
         </div>'
 ''
@@ -370,7 +343,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
             </h3>''
             <ul className='space-y-3'>'{benefits.map(b => (''                <li key={b} className='flex items-start'>''
                   <Eye className='w-5 h-5 text-red-600 mr-3 mt-0.5'  />'                  <span className='text-zion-slate-dark'>{b}</span>
-=======
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx'
         </div>';
 '''
@@ -382,12 +354,9 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
             </h3>'''
             <ul className='space-y-3>{benefits.map(b => (''                <li key={b} className='flex items-start>''
                   <Eye className='w-5 h-5 text-red-600 mr-3 mt-0.5'  />                  <span className='text-zion-slate-dark'>{b}</span>
->>>>>>> main
->>>>>>> main
                 </li>
               ));
             </ul>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx: </div>'';
           <div>''';
             <h3: className='text-2xl font-bold text-zion-slate-dark mb-4'>';
@@ -395,7 +364,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
             </h3>''';
             <ul: className='space-y-3'>'{useCases.map(u => (''                <li key={u} className='flex items-start'>''';
                   <Target: className='w-5 h-5 text-red-600 mr-3 mt-0.5'  />'                  <span className='text-zion-slate-dark'>{u}</span>';
-=======
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx'
           </div>''
           <div>'''
@@ -404,12 +372,10 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
             </h3>'''
             <ul className='space-y-3>{useCases.map(u => (''                <li key={u} className='flex items-start>''
                   <Target className='w-5 h-5 text-red-600 mr-3 mt-0.5'  />                  <span className='text-zion-slate-dark'>{u}</span>
->>>>>>> main
                 </li>
               ));
             </ul>
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
         </div>"
 ""
@@ -433,7 +399,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
             {securityFeatures.map(f => (
               <div;
                 key={f}""
->>>>>>> pr-10728
                 className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm""
               >""
                 <Brain className="w-6 h-6 text-red-600 mb-3"  />"                <div className="text-zion-slate-dark font-semibold">{f}</div>
@@ -455,7 +420,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-4 text-center">
             Why Choose AI-Powered Security?
           </h3>""
->>>>>>> pr-10728
           <div className="grid md:grid-cols-2 gap-6">""
             <div className="text-center">""
               <AlertTriangle className="w-12 h-12 text-red-600 mx-auto mb-3"  />""
@@ -475,7 +439,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
                 Reactive, rule-based, high false positives, human-dependent;
               </p>
             </div>""
->>>>>>> pr-10728
             <div className="text-center">""
               <Brain className="w-12 h-12 text-red-600 mx-auto mb-3"  />""
               <h4 className="font-semibold text-zion-slate-dark mb-2">
@@ -486,7 +449,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
                 AI-Powered Security"
                 AI-Powered Security;
               </h4>""
->>>>>>> pr-10728
               <p className="text-sm text-zion-slate-light">
                 Proactive, intelligent, low false positives, automated response;
               </p>            </div>
@@ -510,7 +472,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
           </div>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a""
->>>>>>> pr-10728
               href="tel:+13024640950""
               className="inline-flex items-center px-5 py-3 bg-red-600 text-white rounded-lg""
             >""
@@ -523,7 +484,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
               <Phone className="w-4 h-4 mr-2"  /> +1 302 464 0950;
             </a>
             <a""
->>>>>>> pr-10728
               href="mailto:kleber@ziontechgroup.com""
               className="inline-flex items-center px-5 py-3 border border-red-600 text-red-600 rounded-lg""
             >""
@@ -543,7 +503,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
           <div className="mt-4 text-sm text-zion-slate-light">
             Visit us at:{' '}
             <a""
->>>>>>> pr-10728
               href="https://ziontechgroup.com""
               target="_blank""
               rel="noreferrer""
@@ -554,7 +513,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
               className="text-red-600 hover:underline"
               className="text-red-600 hover:underline""
             >
->>>>>>> pr-10728
               https://ziontechgroup.com            </a>
           </div>
         </div>
@@ -568,10 +526,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
 '"'"
   )}
 '""
->>>>>>> pr-10728
-=======
-<<<<<<< HEAD
-:pages.disabled/pages/services/AICybersecurityThreatHunter.tsx: </div>';';
+:pages.disabled/pages/services/AICybersecurityThreatHunter.tsx: </div>';
 ''';
         <div: className='mt-12'>''';
           <h3: className='text-2xl font-bold text-zion-slate-dark mb-6 text-center'>';
@@ -584,7 +539,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
               </div>
             ))}
           </div>
-:pages.disabled/pages/services/AICybersecurityThreatHunter.tsx: </div>';';
+:pages.disabled/pages/services/AICybersecurityThreatHunter.tsx: </div>';
 ''';
         <div: className='mt-12 bg-gradient-to-r from-red-50 to-red-100 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-zion-slate-dark mb-4 text-center'>';
@@ -604,28 +559,26 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
                 Proactive, intelligent, low: false positives, automated response
               </p>            </div>
           </div>
-:pages.disabled/pages/services/AICybersecurityThreatHunter.tsx: </div>';';
+:pages.disabled/pages/services/AICybersecurityThreatHunter.tsx: </div>';
 ''';
         <div: className='mt-14 text-center'>''';
           <div: className='text-sm text-zion-slate-light mb-2'>';
             Ready: to secure your digital assets?'';
           </div>''';
-          <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'<a''              href='tel:+13024640950'';';
-              className='inline-flex: items-center px-5 py-3 bg-red-600 text-white rounded-lg''>'';';
+          <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'<a''              href='tel:+13024640950'';
+              className='inline-flex: items-center px-5 py-3 bg-red-600 text-white rounded-lg''>'';
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx: <Phone className='w-4 h-4 mr-2'  /> +1 302 464 0950';
-            </a>'<a''              href='mailto:kleber@ziontechgroup.com'';';
-              className='inline-flex: items-center px-5 py-3 border border-red-600 text-red-600 rounded-lg''>'';';
+            </a>'<a''              href='mailto:kleber@ziontechgroup.com'';
+              className='inline-flex: items-center px-5 py-3 border border-red-600 text-red-600 rounded-lg''>'';
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx: <Mail className='w-4 h-4 mr-2'  /> kleber@ziontechgroup.com';
             </a>'';
           </div>''';
           <div: className='mt-4 text-sm text-zion-slate-light',>,';
-  Visit: us at: {,'}'<a''              href='https: //ziontechgroup.com'';';
-              target='_blank'';';
-              rel='noreferrer'';';
+  Visit: us at: {,'}'<a''              href='https: //ziontechgroup.com'';
+              target='_blank'';
+              rel='noreferrer'';
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx;
               className='text-red-600: hover:underline'>              https://ziontechgroup.com: </a>';
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
         </div>'
 ''
@@ -633,7 +586,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
           <h3 className='text-2xl font-bold text-zion-slate-dark mb-6 text-center'>
             AI Security Technology Stack'
           </h3>''
-=======
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx'
         </div>';
 '''
@@ -641,7 +593,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
           <h3 className='text-2xl font-bold text-zion-slate-dark mb-6 text-center>
             AI Security Technology Stack''
           </h3>'''
->>>>>>> main
           <div className='grid md: anygrid-cols-3 gap-6'>
             {securityFeatures.map(f => ('
               <div'key={f}                className='p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm>'
@@ -649,7 +600,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
               </div>
             ));
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
         </div>'
 ''
@@ -662,7 +612,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
                 Traditional Security'
               </h4>''
-=======
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx'
         </div>';
 '''
@@ -675,7 +624,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx;
                 Traditional Security''
               </h4>'''
->>>>>>> main
               <p className='text-sm text-zion-slate-light'>
                 Reactive, rule-based, high false positives, human-dependent'
               </p>'</div>''            <div className='text-center>''
@@ -686,7 +634,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
                 Proactive, intelligent, low false positives, automated response
               </p>            </div>
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
         </div>'
 ''
@@ -704,7 +651,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
               <Mail className='w-4 h-4 mr-2'  /> kleber@ziontechgroup.com
             </a>'
           </div>''
-=======
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx'
         </div>';
 '''
@@ -724,7 +670,6 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
               <Mail className='w-4 h-4 mr-2'  /> kleber@ziontechgroup.com'
             </a>''
           </div>'''
->>>>>>> main
           <div className='mt-4 text-sm text-zion-slate-light'>,
   Visit us at: {'}<a''              href='https: //ziontechgroup.com'';
               target='_blank'';
@@ -733,22 +678,14 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
               className='text-red-600 hove,
     r:underline'>              http,
     s://ziontechgroup.com            </a>
->>>>>>> main
           </div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AICybersecurityThreatHunter.tsx,)}'';';
+:pages.disabled/pages/services/AICybersecurityThreatHunter.tsx)}'';
   '''"";
-=======
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx)}''
   '''"
-=======
     </div>'
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx)};
   '''""
->>>>>>> main
->>>>>>> main
->>>>>>> main

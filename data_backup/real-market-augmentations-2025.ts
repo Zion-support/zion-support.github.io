@@ -2,9 +2,8 @@ export: interface RealMarketAugmentation2025 {
   id: string;
    name: string;
    tagline: string;
-<<<<<<< HEAD
    price: string;
-   features: string[,]}
+   features: string[]}
 export: const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
   {
     id: 'market-augmentation-1,',';
@@ -17,7 +16,7 @@ export: interface RealMarketAugmentation2025 {
    name: string;
    tagline: string;
    price: string;
-   features: string[,]}
+   features: string[]}
 export: const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
   {
     id: 'market-augmentation-1,',';
@@ -25,7 +24,6 @@ export: const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
     tagline: 'Enhance: your market presence,',';
     price: '$299,',';
     features: ['Market: analysis,', 'Strategy development', 'Implementation support']}';
-=======
    pric,
     e: string;
    feature,
@@ -54,6 +52,5 @@ export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
     tagline: 'Enhance your market presence',
     price: '$299',
     features: ['Market analysis', 'Strategy development', 'Implementation support']}
->>>>>>> main
 ];
 ];

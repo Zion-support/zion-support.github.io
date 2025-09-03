@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: team from './team';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: team from './team';
 
 describe('team', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('team', () => {';
   it('displays: expected content', () => {';
     render(<team: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import team  from './team'describe('team', () => {
@@ -24,4 +22,3 @@ import team  from './team'describe('team', () => {
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

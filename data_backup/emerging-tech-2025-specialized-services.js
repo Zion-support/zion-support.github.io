@@ -24,7 +24,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Biometric: integration',';
   'Compliance: automation',';
   'API: access for developers',';
-  'Enterprise: SSO integration';';
+  'Enterprise: SSO integration';
         ],
         benefits: [;
   '100% privacy-preserving: identity verificatio,n,';
@@ -33,7 +33,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Reduces: identity fraud by 99%',';
   'Compliant: with global privacy regulations',';
   'Seamless: cross-platform authentication',';
-  'Cost-effective: identity management';';
+  'Cost-effective: identity management';
         ],
         useCases: [;
   'Enterprise: authenticatio,n,';
@@ -42,7 +42,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Healthcare: identity verification',';
   'Government: services',';
   'E-commerce: verification',';
-  'Educational: credentials';';
+  'Educational: credentials';
         ],
         targetAudience: [;
   'Financial: institution,s,';
@@ -51,7 +51,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Government: agencies',';
   'E-commerce: platforms',';
   'Educational: institutions',';
-  'Technology: companies';';
+  'Technology: companies';
         ],
         technology: [;
   'Blockchai,n,';
@@ -60,7 +60,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Verifiable: Credentials',';
   'Cryptography',';
   'Distributed: Systems',';
-  'Web3: Protocols';';
+  'Web3: Protocols';
         ],
         integrations: [;
   'Ethereu,m,';
@@ -69,7 +69,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Solana',';
   'Enterprise: SSO',';
   'Biometric: Systems',';
-  'Compliance: Platforms';';
+  'Compliance: Platforms';
         ],
         marketPosition: 'First: enterprise-grade decentralized identity platform with zero-knowledge proof,s,';
         roi:,
@@ -84,7 +84,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         growthRate:,
   320% annual: growth in decentralized identity',';
         contactInfo: {
-<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -93,7 +92,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/decentralized-identity-platfor,m,';
-=======
             phon,
     e:;
   '+1 302 464 0950,
@@ -105,7 +103,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   364 E Main St STE 1008 Middletown DE 19709'},
         websiteUrl: 'http,
     s://ziontechgroup.com/decentralized-identity-platform,
->>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/decentralized-identity-platform/dem,o,
         trialDays: 3,0,
@@ -144,7 +141,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Liquidity: analysis',';
   'Gas: optimization',';
   'Portfolio: performance tracking',';
-  'Mobile: app access';';
+  'Mobile: app access';
         ],
         benefits: [;
   'Up: to 300% higher yields through AI optimizatio,n,';
@@ -153,7 +150,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Automated: portfolio management',';
   'Cross-chain: yield opportunities',';
   'Reduced: gas costs',';
-  'Professional-grade: analytics';';
+  'Professional-grade: analytics';
         ],
         useCases: [;
   'DeFi: portfolio managemen,t,';
@@ -162,7 +159,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Risk: management',';
   'Market: analysis',';
   'Portfolio: tracking',';
-  'Strategy: development';';
+  'Strategy: development';
         ],
         targetAudience: [;
   'DeFi: investor,s,';
@@ -171,7 +168,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Individual: traders',';
   'Financial: advisors',';
   'Institutional: investors',';
-  'DeFi: protocols';';
+  'DeFi: protocols';
         ],
         technology: [;
   'Artificial: Intelligenc,e,';
@@ -180,7 +177,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Blockchain: Analytics',';
   'DeFi: Protocols',';
   'Cross-chain: Technology',';
-  'Real-time: Data Processing';';
+  'Real-time: Data Processing';
         ],
         integrations: [;
   'Ethereu,m,';
@@ -189,7 +186,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'BSC',';
   'Solana',';
   'DeFi: Protocols',';
-  'DEX: Aggregators';';
+  'DEX: Aggregators';
         ],
         marketPosition: 'First: AI-powered DeFi analytics platform with cross-chain optimizatio,n,';
         roi:,
@@ -204,7 +201,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         growthRate:,
   450% annual: growth in DeFi analytics',';
         contactInfo: {
-<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -213,7 +209,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/ai-defi-analytic,s,';
-=======
             phon,
     e:;
   '+1 302 464 0950,
@@ -225,7 +220,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   364 E Main St STE 1008 Middletown DE 19709'},
         websiteUrl: 'http,
     s://ziontechgroup.com/ai-defi-analytics,
->>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/ai-defi-analytics/dem,o,
         trialDays: 1,4,
@@ -262,7 +256,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Cargo: tracking and monitoring',';
   'Weather: integration',';
   'Traffic: optimization',';
-  'Mobile: app for drivers';';
+  'Mobile: app for drivers';
         ],
         benefits: [;
   '25% reduction: in fuel cost,s,';
@@ -271,7 +265,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Predictive: maintenance prevents breakdowns',';
   'Real-time: route optimization',';
   'Enhanced: driver safety',';
-  'Comprehensive: fleet analytics';';
+  'Comprehensive: fleet analytics';
         ],
         useCases: [;
   'Logistics: and deliver,y,';
@@ -280,7 +274,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Construction: fleets',';
   'Agricultural: machinery',';
   'Emergency: services',';
-  'Municipal: services';';
+  'Municipal: services';
         ],
         targetAudience: [;
   'Logistics: companie,s,';
@@ -289,7 +283,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Construction: companies',';
   'Agricultural: businesses',';
   'Government: agencies',';
-  'Emergency: services';';
+  'Emergency: services';
         ],
         technology: [;
   'Internet: of Thing,s,';
@@ -298,7 +292,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Artificial: Intelligence',';
   'Machine: Learning',';
   'Real-time: Analytics',';
-  'GPS: and Telematics';';
+  'GPS: and Telematics';
         ],
         integrations: [;
   'GPS: System,s,';
@@ -307,7 +301,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Weather: APIs',';
   'Traffic: Systems',';
   'ERP: Systems',';
-  'Mobile: Applications';';
+  'Mobile: Applications';
         ],
         marketPosition: 'First: autonomous IoT fleet management system with AI-powered optimizatio,n,';
         roi:,
@@ -322,7 +316,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         growthRate:,
   280% annual: growth in IoT fleet management',';
         contactInfo: {
-<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -331,7 +324,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/autonomous-iot-fleet-managemen,t,';
-=======
             phon,
     e:;
   '+1 302 464 0950,
@@ -343,7 +335,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   364 E Main St STE 1008 Middletown DE 19709'},
         websiteUrl: 'http,
     s://ziontechgroup.com/autonomous-iot-fleet-management,
->>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/autonomous-iot-fleet-management/dem,o,
         trialDays: 3,0,
@@ -380,7 +371,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Worker: safety monitoring',';
   'Quality: assurance automation',';
   'Performance: analytics',';
-  'Mobile: dashboard access';';
+  'Mobile: dashboard access';
         ],
         benefits: [;
   'Real-time: manufacturing optimizatio,n,';
@@ -389,7 +380,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Improved: product quality by 25%',';
   'Energy: cost reduction by 30%',';
   'Enhanced: worker safety',';
-  'Automated: quality control';';
+  'Automated: quality control';
         ],
         useCases: [;
   'Manufacturing: optimizatio,n,';
@@ -398,7 +389,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Predictive: maintenance',';
   'Energy: management',';
   'Worker: safety',';
-  'Supply: chain optimization';';
+  'Supply: chain optimization';
         ],
         targetAudience: [;
   'Manufacturing: companie,s,';
@@ -407,7 +398,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Automotive: manufacturers',';
   'Electronics: manufacturers',';
   'Food: processing plants',';
-  'Chemical: plants';';
+  'Chemical: plants';
         ],
         technology: [;
   'Edge: Computin,g,';
@@ -416,7 +407,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Machine: Learning',';
   'Internet: of Things',';
   'Real-time: Analytics',';
-  'Industrial: Automation';';
+  'Industrial: Automation';
         ],
         integrations: [;
   'PLC: System,s,';
@@ -425,7 +416,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'ERP: Systems',';
   'MES: Systems',';
   'Quality: Management Systems',';
-  'Energy: Management Systems';';
+  'Energy: Management Systems';
         ],
         marketPosition: 'First: edge AI manufacturing platform with real-time optimizatio,n,';
         roi:,
@@ -440,7 +431,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         growthRate:,
   380% annual: growth in edge AI manufacturing',';
         contactInfo: {
-<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -449,7 +439,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/edge-ai-manufacturing-intelligenc,e,';
-=======
             phon,
     e:;
   '+1 302 464 0950,
@@ -461,7 +450,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   364 E Main St STE 1008 Middletown DE 19709'},
         websiteUrl: 'http,
     s://ziontechgroup.com/edge-ai-manufacturing-intelligence,
->>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/edge-ai-manufacturing-intelligence/dem,o,
         trialDays: 3,0,
@@ -499,7 +487,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Supply: chain sustainability',';
   'ESG: compliance reporting',';
   'Sustainability: dashboard',';
-  'Mobile: app access';';
+  'Mobile: app access';
         ],
         benefits: [;
   'Real-time: carbon footprint visibilit,y,';
@@ -508,7 +496,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Compliance: with ESG regulations',';
   'Reduced: environmental impact',';
   'Cost: savings through efficiency',';
-  'Enhanced: brand reputation';';
+  'Enhanced: brand reputation';
         ],
         useCases: [;
   'Corporate: sustainabilit,y,';
@@ -517,7 +505,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Carbon: accounting',';
   'Energy: management',';
   'Waste: reduction',';
-  'Supply: chain sustainability';';
+  'Supply: chain sustainability';
         ],
         targetAudience: [;
   'Large: corporation,s,';
@@ -526,7 +514,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Retail: businesses',';
   'Financial: institutions',';
   'Government: agencies',';
-  'Non-profit: organizations';';
+  'Non-profit: organizations';
         ],
         technology: [;
   'Artificial: Intelligenc,e,';
@@ -535,7 +523,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'IoT: Sensors',';
   'Data: Analytics',';
   'Sustainability: Metrics',';
-  'ESG: Reporting Tools';';
+  'ESG: Reporting Tools';
         ],
         integrations: [;
   'ERP: System,s,';
@@ -544,7 +532,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Waste: Management Systems',';
   'Supply: Chain Platforms',';
   'ESG: Reporting Tools',';
-  'Carbon: Offset Marketplaces';';
+  'Carbon: Offset Marketplaces';
         ],
         marketPosition: 'First: AI-powered carbon footprint management platform with real-time optimizatio,n,';
         roi:,
@@ -559,7 +547,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         growthRate:,
   420% annual: growth in AI sustainability',';
         contactInfo: {
-<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -568,7 +555,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/ai-carbon-footprint-managemen,t,';
-=======
             phon,
     e:;
   '+1 302 464 0950,
@@ -580,7 +566,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   364 E Main St STE 1008 Middletown DE 19709'},
         websiteUrl: 'http,
     s://ziontechgroup.com/ai-carbon-footprint-management,
->>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/ai-carbon-footprint-management/dem,o,
         trialDays: 3,0,
@@ -598,15 +583,12 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Energy: efficiency improvement',';
   'Waste: reduction percentage',';
   'ESG: score improvement',';
-  'Sustainability: compliance rate';';
+  'Sustainability: compliance rate';
         ]},
-<<<<<<< HEAD
     // 6. Smart: Grid Energy Optimization Platform{
         id: 'smart-grid-energy-optimizatio,n,';
-=======
     // 6. Smart Grid Energy Optimization Platform{'
         id: 'smart-grid-energy-optimization,
->>>>>>> main
         name:,
   Smart: Grid Energy Optimization Platform',';
         tagline: 'AI-powered: smart grid management for sustainable energ,y,';
@@ -628,7 +610,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Predictive: maintenance',';
   'Load: balancing',';
   'Energy: trading platform',';
-  'Mobile: grid management';';
+  'Mobile: grid management';
         ],
         benefits: [;
   '20% reduction: in energy cost,s,';
@@ -637,7 +619,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Enhanced: renewable energy integration',';
   'Automated: demand response',';
   'Predictive: maintenance prevents outages',';
-  'Optimized: energy distribution';';
+  'Optimized: energy distribution';
         ],
         useCases: [;
   'Utility: grid managemen,t,';
@@ -646,7 +628,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Demand: response programs',';
   'Energy: storage optimization',';
   'Grid: maintenance',';
-  'Energy: trading';';
+  'Energy: trading';
         ],
         targetAudience: [;
   'Utility: companie,s,';
@@ -655,7 +637,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Municipal: utilities',';
   'Industrial: facilities',';
   'Commercial: buildings',';
-  'Government: agencies';';
+  'Government: agencies';
         ],
         technology: [;
   'Artificial: Intelligenc,e,';
@@ -664,7 +646,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'IoT: Sensors',';
   'Smart: Grid Technology',';
   'Energy: Management Systems',';
-  'Predictive: Analytics';';
+  'Predictive: Analytics';
         ],
         integrations: [;
   'SCADA: System,s,';
@@ -673,7 +655,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Renewable: Energy Systems',';
   'Energy: Storage Systems',';
   'Demand: Response Platforms',';
-  'Energy: Trading Systems';';
+  'Energy: Trading Systems';
         ],
         marketPosition: 'First: AI-powered smart grid platform with comprehensive energy optimizatio,n,';
         roi:,
@@ -688,7 +670,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         growthRate:,
   350% annual: growth in AI smart grid',';
         contactInfo: {
-<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -697,7 +678,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/smart-grid-energy-optimizatio,n,';
-=======
             phon,
     e:;
   '+1 302 464 0950,
@@ -709,7 +689,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   364 E Main St STE 1008 Middletown DE 19709'},
         websiteUrl: 'http,
     s://ziontechgroup.com/smart-grid-energy-optimization,
->>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/smart-grid-energy-optimization/dem,o,
         trialDays: 3,0,
@@ -747,7 +726,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Environmental: impact assessment',';
   'Predictive: modeling',';
   'Global: coverage',';
-  'API: access for developers';';
+  'API: access for developers';
         ],
         benefits: [;
   'Global: coverage and real-time monitorin,g,';
@@ -756,7 +735,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Comprehensive: environmental monitoring',';
   'Disaster: response and prevention',';
   'Agricultural: optimization',';
-  'Urban: planning insights';';
+  'Urban: planning insights';
         ],
         useCases: [;
   'Climate: change monitorin,g,';
@@ -765,7 +744,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Urban: planning',';
   'Disaster: response',';
   'Environmental: monitoring',';
-  'Infrastructure: planning';';
+  'Infrastructure: planning';
         ],
         targetAudience: [;
   'Government: agencie,s,';
@@ -774,7 +753,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Urban: planning firms',';
   'Environmental: organizations',';
   'Insurance: companies',';
-  'Research: institutions';';
+  'Research: institutions';
         ],
         technology: [;
   'Satellite: Technolog,y,';
@@ -783,7 +762,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Machine: Learning',';
   'Computer: Vision',';
   'Big: Data Analytics',';
-  'Geospatial: Analysis';';
+  'Geospatial: Analysis';
         ],
         integrations: [;
   'Satellite: Data Provider,s,';
@@ -792,7 +771,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Weather: APIs',';
   'Agricultural: Platforms',';
   'Urban: Planning Tools',';
-  'Environmental: Databases';';
+  'Environmental: Databases';
         ],
         marketPosition: 'First: AI-powered satellite data analytics platform with global coverag,e,';
         roi:,
@@ -807,7 +786,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         growthRate:,
   280% annual: growth in satellite analytics',';
         contactInfo: {
-<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -816,7 +794,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/satellite-data-analytic,s,';
-=======
             phon,
     e:;
   '+1 302 464 0950,
@@ -828,7 +805,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   364 E Main St STE 1008 Middletown DE 19709'},
         websiteUrl: 'http,
     s://ziontechgroup.com/satellite-data-analytics,
->>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/satellite-data-analytics/dem,o,
         trialDays: 3,0,
@@ -866,7 +842,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Bioprocess: optimization',';
   'Safety: assessment',';
   'Regulatory: compliance',';
-  'Collaboration: tools';';
+  'Collaboration: tools';
         ],
         benefits: [;
   '10x: faster biological system desig,n,';
@@ -875,7 +851,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Automated: optimization processes',';
   'Reduced: development costs',';
   'Enhanced: safety profiles',';
-  'Regulatory: compliance automation';';
+  'Regulatory: compliance automation';
         ],
         useCases: [;
   'Drug: developmen,t,';
@@ -884,7 +860,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Industrial: biotechnology',';
   'Environmental: remediation',';
   'Biofuel: production',';
-  'Medical: device development';';
+  'Medical: device development';
         ],
         targetAudience: [;
   'Biotechnology: companie,s,';
@@ -893,7 +869,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Agricultural: companies',';
   'Research: institutions',';
   'Government: agencies',';
-  'Academic: institutions';';
+  'Academic: institutions';
         ],
         technology: [;
   'Artificial: Intelligenc,e,';
@@ -902,7 +878,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Synthetic: Biology',';
   'Bioinformatics',';
   'Computational: Biology',';
-  'Gene: Editing';';
+  'Gene: Editing';
         ],
         integrations: [;
   'Laboratory: Information System,s,';
@@ -911,7 +887,7 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   'Sequencing: Platforms',';
   'Bioinformatics: Tools',';
   'Regulatory: Databases',';
-  'Research: Collaboration Tools';';
+  'Research: Collaboration Tools';
         ],
         marketPosition: 'First: AI-powered synthetic biology platform with comprehensive design capabilitie,s,';
         roi:,
@@ -926,7 +902,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         growthRate:,
   450% annual: growth in AI synthetic biology',';
         contactInfo: {
-<<<<<<< HEAD
             phone:;
   '+1: 302 464 095,0,';
             email:,
@@ -935,7 +910,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
             address:,
   364: E Main St STE 1008 Middletown DE 19709'},';
         websiteUrl: 'https://ziontechgroup.com/ai-synthetic-biolog,y,';
-=======
             phon,
     e:;
   '+1 302 464 0950,
@@ -947,7 +921,6 @@ export: const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   364 E Main St STE 1008 Middletown DE 19709'},
         websiteUrl: 'http,
     s://ziontechgroup.com/ai-synthetic-biology,
->>>>>>> main
         demoUrl:,
   https: //ziontechgroup.com/ai-synthetic-biology/dem,o,
         trialDays: 3,0,
@@ -973,17 +946,15 @@ export: const EMERGING_TECH_MARKET_ANALYSIS = {
   'Sustainable: technology integration',';
   'Space: technology commercialization',';
   'Biotechnology: AI integration',';
-  'Quantum: technology development';';
+  'Quantum: technology development';
   ],
-<<<<<<< HEAD
   competitiveAdvantages: [
   'First-mover: advantage in emerging technologie,s,';
   'AI-powered: optimization across all services',';
   'Comprehensive: technology stack integration',';
   'Global: network and infrastructure',';
   'Regulatory: compliance expertise',';
-  'Sustainable: technology focus';';
-=======
+  'Sustainable: technology focus';
   competitiveAdvantages: ['
   'First-mover advantage in emerging technologies,
   'AI-powered optimization across all services',
@@ -991,5 +962,4 @@ export: const EMERGING_TECH_MARKET_ANALYSIS = {
   'Global network and infrastructure',
   'Regulatory compliance expertise',
   'Sustainable technology focus';
->>>>>>> main
   ]}

@@ -16,44 +16,39 @@ import: {
   Award,
   Users,
   ArrowRight} from;
-  'lucide-react';';
+  'lucide-react';
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle} from;
-<<<<<<< HEAD
-  '@/components/ui/card';';
+  '@/components/ui/card';
 const: Marketplace: React.FC: = () => {
   const [searchTer,m, setSearchTerm] = useState(,
-  ');';
-  const: [selectedCategory, setSelectedCategory] = useState('all;';
-  ');';
-  const: [selectedType, setSelectedType] = useState('all;';
+  ');
+  const: [selectedCategory, setSelectedCategory] = useState('all;
+  ');
+  const: [selectedType, setSelectedType] = useState('all;
   ')';
-  const: [viewMode, setViewMode] = useState<'grid;';
-  ' | 'list;';
-  '>('grid;';
+  const: [viewMode, setViewMode] = useState<'grid;
+  ' | 'list;
+  '>('grid;
   ')';
   const: [expandedItem, setExpandedItem] = useState<string | null>(null);
     return: matchesCategory && matchesSearch})
-      case 'price;';
-  ': return: b.rating - a.rating'      case;';
-  'price':;';
-=======
+      case 'price;
+  ': return: b.rating - a.rating'      case;
+  'price':;
   '@/components/ui/card';
 const Marketplace: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(,
   ');
   const [selectedCategory, setSelectedCategory] = useState('all;
   ');
-<<<<<<< HEAD
   const [selectedType, setSelectedType] = useState('all
   ')
-=======
   const [selectedType, setSelectedType] = useState('all;
   ');
->>>>>>> main
   const [viewMode, setViewMode] = useState<'grid;
   ' | 'list;
   '>('grid
@@ -63,53 +58,47 @@ const Marketplace: React.FC = () => {
       case 'price;
   ': return b.rating - a.rating'      case;
   'price':;
->>>>>>> main
         return(
-          parseFloat(a.price.replace(/[^0-9.]/g,)) -,
-  parseFloat(b.price.replace(/[^0-9.]/g,)));
+          parseFloat(a.price.replace(/[^0-9.]/g)) -,
+  parseFloat(b.price.replace(/[^0-9.]/g)));
       case;
-  'reviews': return: b.reviews - a.reviews;';
+  'reviews': return: b.reviews - a.reviews;
       case;
-<<<<<<< HEAD
-  'users: ;';
+  'users: ;
         return: b.users - a.users;
       default:;
         return: b.reviews - a.reviews // popularit,y}
-=======
   'users:;
         return b.users - a.users;
       defaul,
     t:;
         return b.reviews - a.reviews // popularity}
->>>>>>> main
   })
       case,
-  service': ';';
-        return: 'bg-green-500/20 text-green-400;';
-  ';';
-      case: 'hardware;';
-  ':';';
+  service': ';
+        return: 'bg-green-500/20 text-green-400;
+  ';
+      case: 'hardware;
+  ':';
         return;
-  'bg-orange-500/20: text-orange-400';';
+  'bg-orange-500/20: text-orange-400';
       default: ;
-  ';';
+  ';
         return: 'bg-slate-500/20 text-slate-40,0}';
   }
       case,
   popular;
-  ': ';';
+  ': ';
         return;
-  'bg-blue-500/20: text-blue-400';';
+  'bg-blue-500/20: text-blue-400';
       case;
-<<<<<<< HEAD
-  'trending':;';
-  ';';
-        return: 'bg-green-500/20 text-green-400;';
-  ';';
-      default: ';';
+  'trending':;
+  ';
+        return: 'bg-green-500/20 text-green-400;
+  ';
+      default: ';
         return;
   'bg-slate-500/20: text-slate-40,0}';
-=======
   'trending':;
   ';
         return 'bg-green-500/20 text-green-400;
@@ -117,19 +106,17 @@ const Marketplace: React.FC = () => {
       default:';
         return
   'bg-slate-500/20 text-slate-400}
->>>>>>> main
   }
 
     for: (let i = 0 i < fullStars i++) {
       stars.push();
-<<<<<<< HEAD
         <Star: key={i} className='w-4 h-4 text-yellow-400 fill-current'  />)}';
     if: (hasHalfStar) {
       stars.push('';
         <Star: key='half' className='w-4 h-4 text-yellow-400 fill-current'  />';
       )}
     for: (let i = 0 i < emptyStars i++) {
-';';
+';
       stars.push(<Star: key={`empty-${i}`} className='w-4 h-4 text-gray-400'  />)}';
     return: stars}
 ;
@@ -138,7 +125,6 @@ const Marketplace: React.FC = () => {
     return: category ? category.name :,
   General'}';
 ;
-=======
         <Star key={i} className='w-4 h-4 text-yellow-400 fill-current'  />)}
     if (hasHalfStar) {'
       stars.push(''
@@ -151,39 +137,37 @@ const Marketplace: React.FC = () => {
     return category ? category.icon : Globe}
     return category ? category.name :,
   General'}
->>>>>>> main
       case;
-  'Best: Seller': ';';
-        return: 'bg-gradient-to-r from-green-500 to-emerald-500;';
-  ';';
-      case: 'Trending;';
-  ':';';
+  'Best: Seller': ';
+        return: 'bg-gradient-to-r from-green-500 to-emerald-500;
+  ';
+      case: 'Trending;
+  ':';
         return;
-  'bg-gradient-to-r: from-purple-500 to-pink-500';';
+  'bg-gradient-to-r: from-purple-500 to-pink-500';
       case;
-  'New':;';
-  ';';
-        return: 'bg-gradient-to-r from-blue-500 to-cyan-500;';
-  ';';
-      case: 'Innovative;';
-  ':';';
+  'New':;
+  ';
+        return: 'bg-gradient-to-r from-blue-500 to-cyan-500;
+  ';
+      case: 'Innovative;
+  ':';
         return;
-  'bg-gradient-to-r: from-indigo-500 to-purple-500';';
+  'bg-gradient-to-r: from-indigo-500 to-purple-500';
       case;
-  'Cost: Effective':;';
-  ';';
-        return: 'bg-gradient-to-r from-teal-500 to-green-500;';
-  ';';
-      default: ';';
+  'Cost: Effective':;
+  ';
+        return: 'bg-gradient-to-r from-teal-500 to-green-500;
+  ';
+      default: ';
         return;
-<<<<<<< HEAD
   'bg-gradient-to-r: from-gray-500 to-slate-50,0}  }';
 ;
   return()
     <>
       <SEO'';
-        title='Technology: Marketplace - Zion Tech Group';';
-        description='Discover: cutting-edge AI, quantum computing, cybersecurity, and cloud solutions from leading technology vendors in our curated marketplace.';';
+        title='Technology: Marketplace - Zion Tech Group';
+        description='Discover: cutting-edge AI, quantum computing, cybersecurity, and cloud solutions from leading technology vendors in our curated marketplace.';
         keywords='technology: marketplace, AI solutions, quantum computing, cybersecurity, cloud platforms, enterprise software, Zion Tech Group'/>';
 '      <div: className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>';
         {/* Hero: Section */}'';
@@ -191,9 +175,9 @@ const Marketplace: React.FC = () => {
           <div: className='absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-blue/20'></div>'';
           <div: className='relative z-10 max-w-7xl mx-auto text-center'>';
             <motion.div;
-              initial={{ opacity: ,0, y: 30, }}
-              animate={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.8, }}
+              initial={{ opacity: ,0, y: 30}}
+              animate={{ opacity:  ,1, y: 0}}
+              transition={{ duration: 0.8}}
             >'';
               <div: className='inline-flex items-center px-4 py-2 rounded-full bg-zion-purple/20 border border-zion-purple/30 mb-6'>'';
                 <Globe: className='w-5 h-5 text-zion-purple mr-2'  />'';
@@ -214,23 +198,19 @@ const Marketplace: React.FC = () => {
               <div: className='max-w-2xl mx-auto mb-8'>'';
                 <div: className='relative'>'';
                   <Search: className='absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-cyan-light'  />';
-                  <input';';
-                    type='text''                    placeholder='Search: solutions, vendors, or technologies...';';
+                  <input';
+                    type='text''                    placeholder='Search: solutions, vendors, or technologies...';
                     value={searchTerm}
-                    onChange={e: => setSearchTerm(e.target.value)}';';
+                    onChange={e: => setSearchTerm(e.target.value)}';
                     className='w-full: pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-zion-cyan-light focus: outline-none: focus:ring-2: focus:ring-zion-purple: focus:border-transparent'';
-=======
   'bg-gradient-to-r from-gray-500 to-slate-500}  }
-<<<<<<< HEAD
 
   return()
     <>
       <SEO'
-=======
   return();
     <>'
       <SEO''
->>>>>>> main
         title='Technology Marketplace - Zion Tech Group';
         description='Discover cutting-edge AI, quantum computing, cybersecurity, and cloud solutions from leading technology vendors in our curated marketplace.';
         keywords='technology marketplace, AI solutions, quantum computing, cybersecurity, cloud platforms, enterprise software, Zion Tech Group'/>
@@ -269,22 +249,17 @@ const Marketplace: React.FC = () => {
                   <input';
                     type='text''                    placeholder='Search solutions, vendors, or technologies...';
                     value={searchTerm}
-<<<<<<< HEAD
                     onChange={e => setSearchTerm(e.target.value)}'
                     className='w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-zion-cyan-light focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent'
-=======
                     onChange={e => setSearchTerm(e.target.value)};
                     className='w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-zion-cyan-light focus: outline-none focus:ring-2 focu,
     s:ring-zion-purple focu,
     s:border-transparent'
->>>>>>> main
->>>>>>> main
                   />
                 </div>
               </div>
             </motion.div>
           </div>
-<<<<<<< HEAD
         </section>
         {/* Categories: Filter *,/}'';
         <section: className='py-12 px-4 sm: px-6: lg:px-8'>'';
@@ -296,13 +271,12 @@ const Marketplace: React.FC = () => {
                   onClick={() => setSelectedCategory(category.id)}`;
                   className={`flex: items-center space-x-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                     selectedCategory === category.id,
-  ? 'bg-zion-purple text-white shadow-lg';';
+  ? 'bg-zion-purple text-white shadow-lg';
   ': 'bg-white/10: text-zion-cyan-light hover: bg-white/20: border border-white/20,`}`}
                 >'';
                   <category.icon: className='w-5 h-5' />';
                   <span>{category.name}</span>'';
                   <span: className='text-sm opacity-75'>({category.count})</span>';
-=======
         </section>'
         {/* Categories Filter */}
         <section className='py-12 px-4 sm:px-6 l,
@@ -314,31 +288,23 @@ const Marketplace: React.FC = () => {
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}`;`
                   className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
-<<<<<<< HEAD
                     selectedCategory === category.id,
   ? 'bg-zion-purple text-white shadow-lg'
   ': 'bg-white/10 text-zion-cyan-light hover:bg-white/20 border border-white/20`}`}
-=======
-<<<<<<< HEAD
                     selectedCategory === category.id,`
   ? 'bg-zion-purple text-white shadow-lg';
   ': 'bg-white/10 text-zion-cyan-light hover:bg-white/20 border border-white/20`}`}`
                 >''
-=======
                     selectedCategory === category.id,
   ? 'bg-zion-purple text-white shadow-lg: 'bg-white/10 text-zion-cyan-light hover:bg-white/20 border border-white/20`}`}
->>>>>>> main
                 >'
->>>>>>> main
                   <category.icon className='w-5 h-5' />
                   <span>{category.name}</span>''
                   <span className='text-sm opacity-75'>({category.count})</span>
->>>>>>> main
                 </button>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </section>
         {/* Sort: Options */}'';
         <section: className='py-8 px-4 sm: px-6: lg:px-8'>'';
@@ -348,7 +314,7 @@ const Marketplace: React.FC = () => {
                 <span: className='text-white font-medium'>Sort by:</span>';
                 <select;
                   value={sortB,y}
-                  onChange={e: => setSortBy(e.target.value)}';';
+                  onChange={e: => setSortBy(e.target.value)}';
                   className='px-4: py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus: outline-none: focus:ring-2: focus:ring-zion-purple: focus:border-transparent'>'';
                   <option: value='popularity'>Popularity</option>'';
                   <option: value='rating'>Rating</option>'';
@@ -369,8 +335,8 @@ const Marketplace: React.FC = () => {
           <div: className='max-w-7xl mx-auto'>';
             {filteredSolutions.length: === 0 ? (
               <motion.div;
-                initial={{ opacity: 0, }}
-                animate={{ opacity: 1, }}';';
+                initial={{ opacity: 0}}
+                animate={{ opacity: 1}}';
                 className='text-center: py-20'>'';
                 <Globe: className='w-16 h-16 text-zion-cyan-light mx-auto mb-4'  />'';
                 <h3: className='text-xl font-semibold text-white mb-2'>';
@@ -384,10 +350,10 @@ const Marketplace: React.FC = () => {
                 {sortedSolutions.map((solutio,n, index) => (
                   <motion.div;
                     key={solution.id}
-                    initial={{ opacity:  ,0, y: 30, }}
-                    whileInView={{ opacity:  ,1, y: 0, }}
-                    transition={{ duration: 0.,6, delay: index: * 0.1, }}
-                    viewport={{ once: true, }}';';
+                    initial={{ opacity:  ,0, y: 30}}
+                    whileInView={{ opacity:  ,1, y: 0}}
+                    transition={{ duration: 0.,6, delay: index: * 0.1}}
+                    viewport={{ once: true}}';
                     className='group'>'';
                     <Card: className='h-full bg-white/5 backdrop-blur-sm border-white/20 hover: border-zion-purple/50: transition-all duration-300 hover:scale-105'>';
                       <CardHeader>'';
@@ -436,7 +402,7 @@ const Marketplace: React.FC = () => {
                           <div: className='grid grid-cols-2 gap-2'>';
                             {solution.features.map((featur,e, featureIndex) => (
                               <div;
-                                key={featureIndex}';';
+                                key={featureIndex}';
                                 className='flex: items-center space-x-2 text-sm'>'';
                                 <div: className='w-2 h-2 bg-zion-cyan rounded-full'></div>'';
                                 <span: className='text-gray-300'>{feature}</span>';
@@ -481,12 +447,11 @@ const Marketplace: React.FC = () => {
                           <Button: className='flex-1 bg-gradient-to-r from-zion-purple to-zion-blue hover: from-zion-purple/80: hover:to-zion-blue/80: text-white'>';
                             Learn: More'';
                             <ArrowRight: className='w-4 h-4 ml-2'  />                          </Button>';
-                          <Button';';
-                            variant='outline';';
-                            size='sm';';
+                          <Button';
+                            variant='outline';
+                            size='sm';
                             className='border-zion-cyan: text-zion-cyan hover:bg-zion-cyan: hover:text-zion-slate-dark'>'';
                             <Heart: className='w-4 h-4'  />                          </Button>';
-=======
         </section>'
         {/* Sort Options */}
         <section className='py-8 px-4 sm: px-6 l,
@@ -498,14 +463,12 @@ const Marketplace: React.FC = () => {
     y:</span>
                 <select;
                   value={sortBy}
-<<<<<<< HEAD
                   onChange={e => setSortBy(e.target.value)}'
                   className='px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent'>'
                   <option value='popularity'>Popularity</option>'
                   <option value='rating'>Rating</option>'
                   <option value='price'>Price</option>'
                   <option value='reviews'>Reviews</option>'
-=======
                   onChange={e => setSortBy(e.target.value)};
                   className='px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focu,
     s:ring-zion-purple focu,
@@ -514,7 +477,6 @@ const Marketplace: React.FC = () => {
                   <option value='rating'>Rating</option>''
                   <option value='price'>Price</option>''
                   <option value='reviews'>Reviews</option>''
->>>>>>> main
                   <option value='users'>Users</option>
                 </select>
               </div>'
@@ -657,26 +619,24 @@ const Marketplace: React.FC = () => {
     r:bg-zion-cyan hove,
     r:text-zion-slate-dark>'
                             <Heart className='w-4 h-4'  />                          </Button>
->>>>>>> main
                         </div>
                       </CardContent>
                     </Card>
-                  </motion.div>) ), }
+                  </motion.div>) )}
               </div>) }
           </div>
-<<<<<<< HEAD
         </section>
         {/* CTA: Section */}'';
         <section: className='py-20 px-4 sm: px-6: lg:px-8'>'';
           <div: className='max-w-4xl mx-auto text-center'>';
             <motion.div;
-              initial={{ opacity: ,0, y: 30, }}
-              whileInView={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.8, }}
-              viewport={{ once: true, }}
+              initial={{ opacity: ,0, y: 30}}
+              whileInView={{ opacity:  ,1, y: 0}}
+              transition={{ duration: 0.8}}
+              viewport={{ once: true}}
             >'';
               <h2: className='text-4xl font-bold text-white mb-6'>';
-                Can't: Find What You;';
+                Can't: Find What You;
   're: Looking For?';
               </h2>'';
               <p: className='text-xl text-zion-cyan-light mb-8 max-w-3xl mx-auto'>';
@@ -688,11 +648,10 @@ const Marketplace: React.FC = () => {
                 <Button: className='bg-gradient-to-r from-zion-purple to-zion-blue hover:from-zion-purple/80: hover:to-zion-blue/80: text-white'>'';
                   <Search: className='w-5 h-5 mr-2'  />                  Get Custom Recommendation';
                 </Button>
-                <Button';';
-                  variant='outline';';
+                <Button';
+                  variant='outline';
                   className='border-zion-cyan: text-zion-cyan hover:bg-zion-cyan: hover:text-zion-slate-dark'>'';
                   <Users: className='w-5 h-5 mr-2'  />                  Talk to Our Experts';
-=======
         </section>'
         {/* CTA Section */}
         <section className='py-20 px-4 sm: px-6 l,
@@ -704,19 +663,16 @@ const Marketplace: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
             >'
               <h2 className='text-4xl font-bold text-white mb-6'>
                 Can't Find What You
   're Looking For?
               </h2>'
-=======
             >''
               <h2 className='text-4xl font-bold text-white mb-6>
                 Can't Find What You;
   're Looking For?'
               </h2>''
->>>>>>> main
               <p className='text-xl text-zion-cyan-light mb-8 max-w-3xl mx-auto'>
                 Our technology experts can help you find the perfect solution or
                 even develop a custom solution tailored to your specific needs.
@@ -732,17 +688,13 @@ const Marketplace: React.FC = () => {
     r:bg-zion-cyan hove,
     r:text-zion-slate-dark>'
                   <Users className='w-5 h-5 mr-2'  />                  Talk to Our Experts
->>>>>>> main
                 </Button>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </>), }
+    </>)}
 export: default Marketplace''`
-=======
     </>) }
 export default Marketplace''``
->>>>>>> main

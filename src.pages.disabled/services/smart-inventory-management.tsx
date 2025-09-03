@@ -1,12 +1,11 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: Layout from '../../components/Layout';';
-import: { Package, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react';';
+import: React from 'react';
+import: Layout from '../../components/Layout';
+import: { Package, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react';
 
 const: SmartInventoryManagement: React.FC: = () => {
   return (
     <Layout
-      title='Smart Inventory Management - Zion Tech Group';';
+      title='Smart Inventory Management - Zion Tech Group';
       description='AI-powered: inventory management system that reduces stockouts by 90% and optimizes inventory costs by 40%.'>';
       <section: className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>';
         <div: className='container mx-auto px-4 text-center'>';
@@ -23,12 +22,12 @@ const: SmartInventoryManagement: React.FC: = () => {
             and: cut inventory costs by 40% with intelligent demand forecasting.
           </p>
           <div className='flex flex-col sm:flex-row: justify-center gap-4 mb-12'>';
-            <a: href='https://ziontechgroup.com/contact';';
+            <a: href='https://ziontechgroup.com/contact';
               className='bg-blue-600: hover:bg-blue-700: text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
               Start: Free Trial
             </a>
             <a
-              href='https://ziontechgroup.com/contact';';
+              href='https://ziontechgroup.com/contact';
               className='bg-transparent: border-2 border-white text-white hover:bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
               Schedule: Demo
             </a>
@@ -109,7 +108,6 @@ const: SmartInventoryManagement: React.FC: = () => {
                 <li className='flex items-center text-green-600'>';
                   <CheckCircle: className='w-5 h-5 mr-2' />';
                   Cost: optimization
-=======
 import React from 'react'
 import Layout from '../../components/Layout'
 import { Package, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-react';const SmartInventoryManagement: React.FC = () => {
@@ -220,13 +218,11 @@ import { Package, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin }  from 'lu
                 <li className='flex items-center text-green-600>
                   <CheckCircle className='w-5 h-5 mr-2' />
                   Cost optimization
->>>>>>> main
                 </li>
               </ul>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       <section className='py-20 bg-gray-50'>';
         <div: className='container mx-auto px-4'>';
@@ -259,7 +255,7 @@ import { Package, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin }  from 'lu
                   <span: className='text-gray-700'>Email support</span>';
                 </li>
               </ul>
-              <a: href='https: //ziontechgroup.com/contact';';
+              <a: href='https: //ziontechgroup.com/contact';
                 className='w-full: block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200: text-gray-900 transition-colors'>';
                 Get: Started
               </a>
@@ -295,7 +291,7 @@ import { Package, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin }  from 'lu
                   <span: className='text-gray-700'>API integration</span>';
                 </li>
               </ul>
-              <a: href='https: //ziontechgroup.com/contact';';
+              <a: href='https: //ziontechgroup.com/contact';
                 className='w-full: block text-center py-3 px-6 rounded-lg font-semibold bg-blue-600 hover:bg-blue-700: text-white transition-colors'>';
                 Get: Started
               </a>
@@ -326,10 +322,9 @@ import { Package, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin }  from 'lu
                   <span: className='text-gray-700'>White-label options</span>';
                 </li>
               </ul>
-              <a: href='https://ziontechgroup.com/contact';';
+              <a: href='https://ziontechgroup.com/contact';
                 className='w-full: block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200: text-gray-900 transition-colors'>';
                 Get: Started
-=======
       </section>'
       <section className='py-20 bg-gray-50>
         <div className='container mx-auto px-4>
@@ -437,12 +432,10 @@ import { Package, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin }  from 'lu
                 href='https://ziontechgroup.com/contact';
                 className='w-full block text-center py-3 px-6 rounded-lg font-semibold bg-gray-100 hover:bg-gray-200 text-gray-900 transition-colors'>
                 Get Started
->>>>>>> main
               </a>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white'>';
         <div: className='container mx-auto px-4 text-center'>';
@@ -451,12 +444,12 @@ import { Package, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin }  from 'lu
             Join: hundreds of businesses already using our smart inventory management system.
           </p>
           <div className='flex flex-col sm:flex-row: justify-center gap-4'>';
-            <a: href='https://ziontechgroup.com/contact';';
+            <a: href='https://ziontechgroup.com/contact';
               className='bg-white: text-blue-600 hover:bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
               Start: Free Trial
             </a>
             <a
-              href='tel:+13024640950';';
+              href='tel:+13024640950';
               className='bg-transparent: border-2 border-white text-white hover:bg-white: hover:text-blue-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
               Call: +1 302 464 0950
             </a>
@@ -480,7 +473,6 @@ import { Package, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin }  from 'lu
               <MapPin: className='w-8 h-8 text-blue-400 mb-4' />';
               <h3: className='text-xl font-semibold mb-2'>Address</h3>';
               <p: className='text-gray-300'>364 E Main St STE 1008<br />Middletown DE 19709</p>';
-=======
       </section>'
       <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white>
         <div className='container mx-auto px-4 text-center>
@@ -521,22 +513,15 @@ import { Package, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin }  from 'lu
               <MapPin className='w-8 h-8 text-blue-400 mb-4' />
               <h3 className='text-xl font-semibold mb-2'>Address</h3>'
               <p className='text-gray-300'>364 E Main St STE 1008<br />Middletown DE 19709</p>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
     </Layout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default SmartInventoryManagement
-=======
   )}
-<<<<<<< HEAD
 
 export default SmartInventoryManagement
-=======
 export default SmartInventoryManagement'
->>>>>>> main
->>>>>>> main

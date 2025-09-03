@@ -111,7 +111,6 @@ export default function Solutions() {
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-<<<<<<< HEAD
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Technology
@@ -202,7 +201,6 @@ export default function Solutions() {
               <Link href="/services/ai-services" className="bg-green-600 hover: bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-block">
                 Explore AI Services
               </Link>
-=======
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Badge className="mb-4 bg-blue-500 text-white">
@@ -225,7 +223,6 @@ export default function Solutions() {
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
                 Schedule Demo
               </Button>
->>>>>>> main
             </div>
           </div>
         </div>
@@ -304,7 +301,6 @@ export default function Solutions() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
               </div>
-<<<<<<< HEAD
               <p className="text-gray-600 mb-4">
                 Secure, compliant solutions for banking, insurance, and fintech companies.
               </p>
@@ -497,15 +493,12 @@ export default function Solutions() {
                 We deploy your solution and provide ongoing support and optimization.
               </p>
             </div>
-=======
             ))}
->>>>>>> main
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Find Your Solution?</h2>
@@ -515,7 +508,6 @@ export default function Solutions() {
           <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Get Started Today
-=======
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -531,7 +523,6 @@ export default function Solutions() {
                 Get Free Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
->>>>>>> main
             </Link>
             <Link href="/pricing">
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">

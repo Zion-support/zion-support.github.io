@@ -1,21 +1,8 @@
-<<<<<<< HEAD
 export const GlobalSpinner = () => { const { state } = useUIContext(); if(!state.isLoading) { return null; } return(<div style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0, display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0, 0, 0, 0.5)", zIndex: 9999,
-=======
-<<<<<<< HEAD
 export const GlobalSpinner = () => { const { state } = useUIContext(); if(!state.isLoading) { return null; } return (<div style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0, display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0, 0, 0, 0.5)", zIndex: 9999,
-=======
-<<<<<<< HEAD
 
 export const GlobalSpinner = () => { const { state } = useUIContext(); if (!state.isLoading) { return null; } return ( <div style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0, display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0, 0, 0, 0.5)", zIndex: 9999,""";
 
 export const GlobalSpinner = () => { const { state } = useUIContext(); if(!state.isLoading) { return null; } return (<div style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0, display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0, 0, 0, 0.5)", zIndex: 9999,
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
-=======
-<<<<<<< HEAD
 export: const GlobalSpinner = () => { const { state } = useUIContext() if (!state.isLoading) { return null } return ( <div style={{ position: 'fixed,', top:  ,0, left:  ,0, right:  ,0, bottom:  ,0, display: 'flex,', justifyContent: 'center,', alignItems: 'center,', backgroundColor: 'rgba(,0, 0, 0, 0.5)', zIndex: 999,9,''";";
-=======
 export const GlobalSpinner = () => { const { state } = useUIContext() if (!state.isLoading) { return null } return ( <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0, 0, 0, 0.5), zIndex: 9999,'";"
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

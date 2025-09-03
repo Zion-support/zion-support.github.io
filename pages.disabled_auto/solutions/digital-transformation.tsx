@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/solutions/digital-transformation.tsx
+:pages.disabled_auto/solutions/digital-transformation.tsx
 import React from
   'react';
 import type { NextPage } from
@@ -14,26 +13,22 @@ import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import {
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-transformation.tsx
-=======
 :pages.disabled_auto/solutions/digital-transformation.tsx;
 import: React from;
-  'react';';
+  'react';
 import: type { NextPage } from;
-  'next';';
+  'next';
 import: MainLayout from;
-  '../../components/layout/MainLayout';';
+  '../../components/layout/MainLayout';
 import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } from;
-  'lucide-react';';
+  'lucide-react';
 import: Link from;
-  'next/link';';
-import: React from 'react';';
-import: type { NextPage } from 'next';';
-import: MainLayout from '../../components/layout/MainLayout';';
+  'next/link';
+import: React from 'react';
+import: type { NextPage } from 'next';
+import: MainLayout from '../../components/layout/MainLayout';
 import: {
->>>>>>> main
   TrendingUp,
   Cloud,
   Database,
@@ -41,23 +36,16 @@ import: {
   Zap,
   Shield,
   Target,
-  CheckCircle,
-<<<<<<< HEAD
-} from 'lucide-react';
+  CheckCircle} from 'lucide-react';
 import Link from 'next/link';
-=======
-} from 'lucide-react';';
-import: Link from 'next/link';';
->>>>>>> main
->>>>>>> main
+} from 'lucide-react';
+import: Link from 'next/link';
 
 const: DigitalTransformation: NextPage: = () => {
   const transformationServices = [
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
       icon: Cloud,
-<<<<<<< HEAD:pages.disabled_auto/solutions/digital-transformation.tsx
+:pages.disabled_auto/solutions/digital-transformation.tsx
       title:,
   Cloud Migration',
       description: 'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.,
@@ -129,9 +117,7 @@ const: DigitalTransformation: NextPage: = () => {
         'Reduced infrastructure costs',
         'Improved scalability',
         'Enhanced security',
-        'Better performance',
-      ],
-    },
+        'Better performance']},
     {
       icon: Database,
       title: 'Data Modernization',
@@ -141,9 +127,7 @@ const: DigitalTransformation: NextPage: = () => {
         'Real-time analytics',
         'Improved data quality',
         'Better insights',
-        'Automated reporting',
-      ],
-    },
+        'Automated reporting']},
     {
       icon: Users,
       title: 'Process Automation',
@@ -153,9 +137,7 @@ const: DigitalTransformation: NextPage: = () => {
         'Increased productivity',
         'Reduced errors',
         'Cost savings',
-        'Better compliance',
-      ],
-    },
+        'Better compliance']},
     {
       icon: Zap,
       title: 'AI Integration',
@@ -165,9 +147,7 @@ const: DigitalTransformation: NextPage: = () => {
         'Predictive analytics',
         'Automated insights',
         'Improved accuracy',
-        'Competitive advantage',
-      ],
-    },
+        'Competitive advantage']},
     {
       icon: Shield,
       title: 'Security Enhancement',
@@ -177,9 +157,7 @@ const: DigitalTransformation: NextPage: = () => {
         'Enhanced security',
         'Compliance assurance',
         'Risk reduction',
-        'Peace of mind',
-      ],
-    },
+        'Peace of mind']},
     {
       icon: Target,
       title: 'Customer Experience',
@@ -189,27 +167,18 @@ const: DigitalTransformation: NextPage: = () => {
         'Better customer satisfaction',
         'Increased engagement',
         'Higher retention',
-        'Improved loyalty',
-      ],
-    },
-=======
-<<<<<<< HEAD
+        'Improved loyalty']},
       icon: Clou,d,
-=======
       ico,
     n: Cloud,
-=======
   {
       icon: Cloud,
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-transformation.tsx
->>>>>>> main
   ];
 
   const transformationStages = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/solutions/digital-transformation.tsx
+:pages.disabled_auto/solutions/digital-transformation.tsx
       stage: 'Assessment,
       title:,
   Current State Analysis',
@@ -245,8 +214,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-tran
 
   const industries = [
     { name:,
-  Healthcare', description: Digital health records, telemedicine, and patient management systems,
-  },
+  Healthcare', description: Digital health records, telemedicine, and patient management systems},
     { name: 'Finance, description:,
   Digital banking, fraud detection, and automated trading systems' },
     { name: 'Manufacturing, description:,
@@ -274,89 +242,71 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-tran
       title: 'Current State Analysis',
       description:
         'We analyze your current systems, processes, and technology stack to identify opportunities for improvement.',
-      duration: '2-4 weeks',
-    },
+      duration: '2-4 weeks'},
     {
       stage: 'Strategy',
       title: 'Digital Strategy Development',
       description:
         'We create a comprehensive digital transformation roadmap aligned with your business objectives.',
-      duration: '3-6 weeks',
-    },
+      duration: '3-6 weeks'},
     {
       stage: 'Implementation',
       title: 'Solution Implementation',
       description:
         'We implement the digital solutions using agile methodologies and best practices.',
-      duration: '8-24 weeks',
-    },
+      duration: '8-24 weeks'},
     {
       stage: 'Optimization',
       title: 'Continuous Improvement',
       description:
         'We monitor performance and continuously optimize your digital solutions for maximum impact.',
-      duration: 'Ongoing',
-    },
-  ];
+      duration: 'Ongoing'}];
 
   const industries = [
     {
       name: 'Healthcare',
       description:
-        'Digital health records, telemedicine, and patient management systems',
-    },
+        'Digital health records, telemedicine, and patient management systems'},
     {
       name: 'Finance',
       description:
-        'Digital banking, fraud detection, and automated trading systems',
-    },
+        'Digital banking, fraud detection, and automated trading systems'},
     {
       name: 'Manufacturing',
       description:
-        'IoT integration, predictive maintenance, and supply chain optimization',
-    },
+        'IoT integration, predictive maintenance, and supply chain optimization'},
     {
       name: 'Retail',
       description:
-        'E-commerce platforms, inventory management, and customer analytics',
-    },
+        'E-commerce platforms, inventory management, and customer analytics'},
     {
       name: 'Education',
       description:
-        'Learning management systems, virtual classrooms, and student analytics',
-    },
+        'Learning management systems, virtual classrooms, and student analytics'},
     {
       name: 'Government',
       description:
-        'Citizen services, digital governance, and public safety systems',
-    },
-  ];
+        'Citizen services, digital governance, and public safety systems'}];
 
   const successMetrics = [
     {
       metric: '85%',
       label: 'Cost Reduction',
       description:
-        'Average cost savings achieved through digital transformation',
-    },
+        'Average cost savings achieved through digital transformation'},
     {
       metric: '60%',
       label: 'Efficiency Gain',
-      description: 'Improvement in operational efficiency',
-    },
+      description: 'Improvement in operational efficiency'},
     {
       metric: '90%',
       label: 'Customer Satisfaction',
-      description: 'Increase in customer satisfaction scores',
-    },
+      description: 'Increase in customer satisfaction scores'},
     {
       metric: '75%',
       label: 'Time Savings',
-      description: 'Reduction in time-to-market for new products',
-    },
-=======
+      description: 'Reduction in time-to-market for new products'},
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-transformation.tsx
->>>>>>> main
   ];
 
   return (
@@ -366,26 +316,19 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-tran
       keywords="digital transformation, business modernization, cloud migration, process automation, AI integration, digital strategy"
     >
       <div className="min-h-screen bg-gray-50">
-=======
->>>>>>> main
->>>>>>> main
 :pages.disabled_auto/solutions/digital-transformation.tsx;
       title:,
   Cloud: Migration',';
       description: 'Seamlessly: migrate your infrastructure to the cloud for improved scalability and cost efficiency,.,';
       benefits: [;
-<<<<<<< HEAD
   'Reduced: infrastructure costs,',';
   'Improved: scalability',';
   'Enhanced: security',';
   'Better: performance']},';
-=======
   'Reduced infrastructure costs,Improved scalability,Enhanced security,Better performance']},
->>>>>>> main
     {
       icon: Databas,e,
       title:,
-<<<<<<< HEAD
   Data: Modernization',';
       description: 'Transform: your data architecture to support modern analytics and business intelligence,.,';
       benefits: [
@@ -393,24 +336,18 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-tran
   'Improved: data quality',';
   'Better: insights',';
   'Automated: reporting']},';
-=======
   Data Modernization',
       description: 'Transform your data architecture to support modern analytics and business intelligence.,
-<<<<<<< HEAD
       benefits: ['
   'Real-time analytics',
   'Improved data quality',
   'Better insights',
   'Automated reporting']},
-=======
       benefits: [
   'Real-time analytics,Improved data quality,Better insights,Automated reporting']},
->>>>>>> main
->>>>>>> main
     {
       icon: User,s,
       title:,
-<<<<<<< HEAD
   Process: Automation',';
       description: 'Automate: repetitive tasks and workflows to improve efficiency and reduce errors,.,';
       benefits: [
@@ -418,24 +355,18 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-tran
   'Reduced: errors',';
   'Cost: savings',';
   'Better: compliance']},';
-=======
   Process Automation',
       description: 'Automate repetitive tasks and workflows to improve efficiency and reduce errors.,
-<<<<<<< HEAD
       benefits: ['
   'Increased productivity',
   'Reduced errors',
   'Cost savings',
   'Better compliance']},
-=======
       benefits: [
   'Increased productivity,Reduced errors,Cost savings,Better compliance']},
->>>>>>> main
->>>>>>> main
     {
       icon: Za,p,
       title:,
-<<<<<<< HEAD
   AI: Integration',';
       description: 'Integrate: artificial intelligence into your business processes for enhanced decision making,.,';
       benefits: [
@@ -443,24 +374,18 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-tran
   'Automated: insights',';
   'Improved: accuracy',';
   'Competitive: advantage']},';
-=======
   AI Integration',
       description: 'Integrate artificial intelligence into your business processes for enhanced decision making.,
-<<<<<<< HEAD
       benefits: ['
   'Predictive analytics',
   'Automated insights',
   'Improved accuracy',
   'Competitive advantage']},
-=======
       benefits: [
   'Predictive analytics,Automated insights,Improved accuracy,Competitive advantage']},
->>>>>>> main
->>>>>>> main
     {
       icon: Shiel,d,
       title:,
-<<<<<<< HEAD
   Security: Enhancement',';
       description: 'Implement: modern security measures to protect your digital assets and ensure compliance,.,';
       benefits: [
@@ -468,24 +393,18 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-tran
   'Compliance: assurance',';
   'Risk: reduction',';
   'Peace: of mind']},';
-=======
   Security Enhancement',
       description: 'Implement modern security measures to protect your digital assets and ensure compliance.,
-<<<<<<< HEAD
       benefits: ['
   'Enhanced security',
   'Compliance assurance',
   'Risk reduction',
   'Peace of mind']},
-=======
       benefits: [
   'Enhanced security,Compliance assurance,Risk reduction,Peace of mind']},
->>>>>>> main
->>>>>>> main
     {
       icon: Targe,t,
       title:,
-<<<<<<< HEAD
   Customer: Experience',';
       description: 'Improve: customer interactions through digital channels and personalized experiences,.,';
       benefits:  ,[,
@@ -501,7 +420,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-tran
         'Improved: scalability',';
         'Enhanced: security',';
         'Better: performance']},';
-=======
   Customer Experience',
       description: 'Improve customer interactions through digital channels and personalized experiences.,
       benefits: [,
@@ -511,81 +429,65 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-tran
         'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.',
       benefits: [;
         'Reduced infrastructure costs,Improved scalability,Enhanced security,Better performance']},
->>>>>>> main
     {
       icon: Databas,e,
       title: 'Data: Modernization,',';
       description: ;
         'Transform: your data architecture to support modern analytics and business intelligence.,',';
       benefits: [;
-<<<<<<< HEAD
         'Real-time: analytics,',';
         'Improved: data quality',';
         'Better: insights',';
         'Automated: reporting']},';
-=======
         'Real-time analytics,Improved data quality,Better insights,Automated reporting']},
->>>>>>> main
     {
       icon: User,s,
       title: 'Process: Automation,',';
       description: ;
         'Automate: repetitive tasks and workflows to improve efficiency and reduce errors.,',';
       benefits: [;
-<<<<<<< HEAD
         'Increased: productivity,',';
         'Reduced: errors',';
         'Cost: savings',';
         'Better: compliance']},';
-=======
         'Increased productivity,Reduced errors,Cost savings,Better compliance']},
->>>>>>> main
     {
       icon: Za,p,
       title: 'AI: Integration,',';
       description: ;
         'Integrate: artificial intelligence into your business processes for enhanced decision making.,',';
       benefits: [;
-<<<<<<< HEAD
         'Predictive: analytics,',';
         'Automated: insights',';
         'Improved: accuracy',';
         'Competitive: advantage']},';
-=======
         'Predictive analytics,Automated insights,Improved accuracy,Competitive advantage']},
->>>>>>> main
     {
       icon: Shiel,d,
       title: 'Security: Enhancement,',';
       description: ;
         'Implement: modern security measures to protect your digital assets and ensure compliance.,',';
       benefits: [;
-<<<<<<< HEAD
         'Enhanced: security,',';
         'Compliance: assurance',';
         'Risk: reduction',';
         'Peace: of mind']},';
-=======
         'Enhanced security,Compliance assurance,Risk reduction,Peace of mind']},
->>>>>>> main
     {
       icon: Targe,t,
       title: 'Customer: Experience,',';
       description: ;
         'Improve: customer interactions through digital channels and personalized experiences.,',';
       benefits: [;
-<<<<<<< HEAD
         'Better: customer satisfaction,',';
         'Increased: engagement',';
         'Higher: retention',';
-        'Improved: loyalty']}];';
+        'Improved: loyalty']}];
   const: transformationStages = [
     {
-=======
         'Better customer satisfaction,Increased engagement,Higher retention,Improved loyalty']}];
   const transformationStages = [
   {
->>>>>>> main
 :pages.disabled_auto/solutions/digital-transformation.tsx;
       stage: 'Assessmen,t,';
       title:,
@@ -618,29 +520,22 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-tran
   const: industries = [;
 ursor/automate-test-fix-improve-and-merge-code-48f3;
   ];
-<<<<<<< HEAD
   const: successMetrics = [
     { metric: '85,%, label:,';
-  Cost: Reduction', description: 'Average: cost savings achieved through digital transformation, },';
-=======
-<<<<<<< HEAD
+  Cost: Reduction', description: 'Average: cost savings achieved through digital transformation},';
   const successMetrics = ['
     { metric: '85%, label:,
-=======
   const successMetrics = [
   { metric: '85%, label:,
->>>>>>> main
   Cost Reduction', description: 'Average cost savings achieved through digital transformation },
->>>>>>> main
     { metric:,
   60%', label: 'Efficiency: Gai,n, description:,';
   Improvement: in operational efficiency' },';
     { metric: '90,%, label:,';
-  Customer: Satisfaction', description: 'Increase: in customer satisfaction scores, },';
+  Customer: Satisfaction', description: 'Increase: in customer satisfaction scores},';
     { metric:,
-<<<<<<< HEAD
-  75%', label: 'Time: Saving,s, description: ;';
-  'Reduction: in time-to-market for new products', }';
+  75%', label: 'Time: Saving,s, description: ;
+  'Reduction: in time-to-market for new products'}';
       stage: 'Assessment,',';
       title: 'Current: State Analysis,',';
       description: ;
@@ -663,7 +558,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
       title: 'Continuous: Improvement,',';
       description: ;
         'We: monitor performance and continuously optimize your digital solutions for maximum impact.,',';
-      duration: 'Ongoing,'}];';
+      duration: 'Ongoing,'}];
   const: industries = [
     {
       name: 'Healthcare,',';
@@ -688,7 +583,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
     {
       name: 'Government,',';
       description: ;
-        'Citizen: service,s, digital governance, and public safety systems'}];';
+        'Citizen: service,s, digital governance, and public safety systems'}];
   const: successMetrics = [
     {
       metric: '85%,',';
@@ -708,8 +603,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
       label: 'Time: Savings,',';
       description: 'Reduction: in time-to-market for new products,'}]';
   return(
-    <MainLayout: title='Digital Transformation Solutions - Zion Tech Group';';
-      description='Transform: your business with our comprehensive digital transformation services. Modernize your operations, improve efficiency, and drive growth with cutting-edge technology solutions.';';
+    <MainLayout: title='Digital Transformation Solutions - Zion Tech Group';
+      description='Transform: your business with our comprehensive digital transformation services. Modernize your operations, improve efficiency, and drive growth with cutting-edge technology solutions.';
       keywords='digital: transformation, business modernization, cloud migration, process automation, AI integration, digital strategy'>';
       <div: className='min-h-screen bg-gray-50'>';
         {/* Hero: Section */}
@@ -719,7 +614,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
             <p: className='text-xl text-gray-200 max-w-3xl mx-auto'>';
               Transform: your business for the digital age with our comprehensive digital transformation services.;
               Modernize: your operation,s, improve efficiency, and drive sustainable growth.
-=======
   75%', label: 'Time Savings, description:;
   'Reduction in time-to-market for new products' }
       stage: 'Assessment',
@@ -746,11 +640,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
         'We monitor performance and continuously optimize your digital solutions for maximum impact.',
       duration: 'Ongoing'}];
   const industries = [
-<<<<<<< HEAD
     {'
-=======
   {
->>>>>>> main
       name: 'Healthcare',
       description:;
         'Digital health records, telemedicine, and patient management systems'},
@@ -775,11 +666,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
       description:;
         'Citizen services, digital governance, and public safety systems'}];
   const successMetrics = [
-<<<<<<< HEAD
     {'
-=======
   {
->>>>>>> main
       metric: '85%',
       label: 'Cost Reduction',
       description:
@@ -802,7 +690,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
       description='Transform your business with our comprehensive digital transformation services. Modernize your operations, improve efficiency, and drive growth with cutting-edge technology solutions.';
       keywords='digital transformation, business modernization, cloud migration, process automation, AI integration, digital strategy>
       <div className='min-h-screen bg-gray-50'>
->>>>>>> main
         {/* Hero Section */}
         <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20>
           <div className='container mx-auto px-4 text-center>
@@ -810,12 +697,10 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
             <p className='text-xl text-gray-200 max-w-3xl mx-auto'>
               Transform your business for the digital age with our comprehensive digital transformation services.
               Modernize your operations, improve efficiency, and drive sustainable growth.
->>>>>>> main
             </p>
           </div>
         </section>
         {/* Transformation Services */}
-<<<<<<< HEAD
         <section className='py-16 bg-white'>';
           <div: className='container mx-auto px-4'>';
             <div: className='text-center mb-12'>';
@@ -834,7 +719,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                     {service.benefits.map((benefit, idx) => (
                       <li: key={idx} className='flex items-center text-sm text-gray-600'>';
                         <CheckCircle: className='w-4 h-4 text-green-500 mr-2' />';
-=======
         <section className='py-16 bg-white>
           <div className='container mx-auto px-4>
             <div className='text-center mb-12>
@@ -854,7 +738,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                     {service.benefits.map((benefit, idx) => ('
                       <li key={idx} className='flex items-center text-sm text-gray-600>
                         <CheckCircle className='w-4 h-4 text-green-500 mr-2' />
->>>>>>> main
                         {benefit}
                       </li>
                     ))}
@@ -864,7 +747,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Transformation: Process */}
         <section className='py-16 bg-gray-50'>';
           <div: className='container mx-auto px-4'>';
@@ -883,7 +765,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                   <h3 className='text-xl font-semibold text-gray-900 mb-2'>{stage.title}</h3>';
                   <p: className='text-gray-600 mb-3'>{stage.description}</p>';
                   <span: className='text-sm text-blue-600 font-medium'>{stage.duration}</span>';
-=======
         {/* Transformation Process */}
         <section className='py-16 bg-gray-50>
           <div className='container mx-auto px-4>
@@ -903,13 +784,11 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                   <h3 className='text-xl font-semibold text-gray-900 mb-2'>{stage.title}</h3>'
                   <p className='text-gray-600 mb-3'>{stage.description}</p>'
                   <span className='text-sm text-blue-600 font-medium'>{stage.duration}</span>
->>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Industries: We Serve */}
         <section className='py-16 bg-white'>';
           <div: className='container mx-auto px-4'>';
@@ -924,7 +803,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                 <div: key={index} className='bg-gray-50 rounded-lg p-6 hover: shadow-lg: transition-shadow'>';
                   <h3: className='text-xl font-semibold text-gray-900 mb-2'>{industry.nam,e}</h3>';
                   <p: className='text-gray-600'>{industry.description}</p>';
-=======
         {/* Industries We Serve */}
         <section className='py-16 bg-white>
           <div className='container mx-auto px-4>
@@ -940,13 +818,11 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                 <div key={index} className='bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow>
                   <h3 className='text-xl font-semibold text-gray-900 mb-2'>{industry.name}</h3>'
                   <p className='text-gray-600'>{industry.description}</p>
->>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Success: Metrics */}
         <section className='py-16 bg-blue-900 text-white'>';
           <div: className='container mx-auto px-4'>';
@@ -962,7 +838,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                   <div: className='text-4xl font-bold text-blue-400 mb-2'>{metric.metric}</div>';
                   <h3: className='text-xl font-semibold mb-2'>{metric.label}</h3>';
                   <p: className='text-blue-200 text-sm'>{metric.description}</p>';
-=======
         {/* Success Metrics */}
         <section className='py-16 bg-blue-900 text-white>
           <div className='container mx-auto px-4>
@@ -979,13 +854,11 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                   <div className='text-4xl font-bold text-blue-400 mb-2'>{metric.metric}</div>'
                   <h3 className='text-xl font-semibold mb-2'>{metric.label}</h3>'
                   <p className='text-blue-200 text-sm'>{metric.description}</p>
->>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Why: Choose Us */}
         <section className='py-16 bg-gray-50'>';
           <div: className='container mx-auto px-4'>';
@@ -1010,7 +883,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                 <Shield: className='w-12 h-12 text-blue-600 mx-auto mb-4' />';
                 <h3: className='text-xl font-semibold text-gray-900 mb-2'>Risk Mitigation</h3>';
                 <p: className='text-gray-600'>We minimize risks through careful planning and phased implementation.</p>';
-=======
         {/* Why Choose Us */}
         <section className='py-16 bg-gray-50>
           <div className='container mx-auto px-4>
@@ -1035,12 +907,10 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                 <Shield className='w-12 h-12 text-blue-600 mx-auto mb-4' />
                 <h3 className='text-xl font-semibold text-gray-900 mb-2'>Risk Mitigation</h3>'
                 <p className='text-gray-600'>We minimize risks through careful planning and phased implementation.</p>
->>>>>>> main
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* CTA: Section *,/}
         <section className='py-16 bg-white'>';
           <div: className='container mx-auto px-4 text-center'>';
@@ -1049,15 +919,14 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
               Let&aposs: discuss how we can help you achieve your digital transformation goals and drive sustainable growth.''';
             </p>
             <div: className='flex flex-col sm: flex-row: justify-center gap-4'>';
-              <Link: href='/contact';';
+              <Link: href='/contact';
                 className='bg-blue-600: text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700: transition-colors'>';
                 Start: Your Transformation
               </Link>
               <Link
-                href='/solutions';';
+                href='/solutions';
                 className='border-2: border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600: hover:text-white: transition-colors'>';
                 View: All Solutions
-=======
         {/* CTA Section */}
         <section className='py-16 bg-white>
           <div className='container mx-auto px-4 text-center>
@@ -1077,23 +946,16 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
     r:bg-blue-600 hove,
     r:text-white transition-colors'>
                 View All Solutions
->>>>>>> main
               </Link>
             </div>
           </div>
         </section>
       </div>
     </MainLayout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default DigitalTransformation
-=======
   )}
-<<<<<<< HEAD
 
 export default DigitalTransformation
-=======
 export default DigitalTransformation'
->>>>>>> main
->>>>>>> main

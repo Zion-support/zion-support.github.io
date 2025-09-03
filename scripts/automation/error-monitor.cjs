@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
-=======
 #!/'usr/bin/env' node;
 
->>>>>>> main
 const fs = require('fs');
 const path = require('path');
 const { spawn, exec } = require('child_process');
@@ -31,13 +28,10 @@ class ErrorMonitor {;
   setupSignalHandlers() {;
     process.on('SIGTERM', () => this.shutdown());
     process.on('SIGINT', () => this.shutdown());
-<<<<<<< HEAD
     process.on('uncaughtException', (error) => {
       this.log(`error`, `Uncaught exception:`, error);
-=======
     process.on('uncaughtException', (error) => {;
       this.log('error', 'Uncaught exception:', error);
->>>>>>> main
       this.shutdown();
     });
   }
@@ -45,24 +39,20 @@ class ErrorMonitor {;
   log(level, ...args) {;
     const timestamp = new Date().toISOString();
     const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;
-<<<<<<< HEAD
     console.log(`message);
     
     const logFile = path.join(this.logDir, `error-monitor.log`);
     fs.appendFileSync(logFile, message + `\\n`);
-=======
     console.log(message);
     ;
     const logFile = path.join(this.logDir, 'error-monitor.log');
     fs.appendFileSync(logFile, message + '\n');
->>>>>>> main
   }
 ;
   async runLintCheck() {;
     return new Promise((resolve) => {;
       exec('npm run lint', { cwd: this.projectRoot }, (error, stdout, stderr) => {;
         const hasErrors = error !== null;
-<<<<<<< HEAD
         const errorCount = hasErrors ? (stdout.match(/''error/g'') || []).length : 0;
         const warningCount = hasErrors ? (stdout.match(/''warning/g'') || []).length : 0;
         
@@ -70,7 +60,6 @@ class ErrorMonitor {;
           hasErrors,
           errorCount,
           warningCount,
-=======
         const errorCount = hasErrors ? (stdout.match(/'error/g') || []).length : 0;
         const warningCount = hasErrors ? (stdout.match(/'warning/g') || []).length : 0;
         ;
@@ -78,7 +67,6 @@ class ErrorMonitor {;
           hasErrors,;
           errorCount,;
           warningCount,;
->>>>>>> main
           output: stdout + stderr;
         });
       });
@@ -89,19 +77,16 @@ class ErrorMonitor {;
     return new Promise((resolve) => {;
       exec('npm run type-check', { cwd: this.projectRoot }, (error, stdout, stderr) => {;
         const hasErrors = error !== null;
-<<<<<<< HEAD
         const errorCount = hasErrors ? (stderr.match(/error ''TS/g'') || []).length : 0;
         
         resolve({
           hasErrors,
           errorCount,
-=======
         const errorCount = hasErrors ? (stderr.match(/error 'TS/g') || []).length : 0;
         ;
         resolve({;
           hasErrors,;
           errorCount,;
->>>>>>> main
           output: stdout + stderr;
         });
       });
@@ -112,17 +97,14 @@ class ErrorMonitor {;
     return new Promise((resolve) => {;
       exec('npm run build', { cwd: this.projectRoot, timeout: 120000 }, (error, stdout, stderr) => {;
         const hasErrors = error !== null;
-<<<<<<< HEAD
         
         resolve({
           hasErrors,
           buildSuccess: !hasErrors,
-=======
         ;
         resolve({;
           hasErrors,;
           buildSuccess: !hasErrors,;
->>>>>>> main
           output: stdout + stderr;
         });
       });
@@ -146,7 +128,6 @@ class ErrorMonitor {;
           } else if (item.match(/\\.(ts|tsx|js|jsx)$/)) {;
             try {;
               const content = fs.readFileSync(itemPath, 'utf8');
-<<<<<<< HEAD
               
               // Check for common corruption patterns;
               if (
@@ -164,7 +145,6 @@ class ErrorMonitor {;
                 });
               }
             } catch (error) {  
-=======
               ;
               // Check for common corruption patterns;
               if (;
@@ -181,7 +161,6 @@ class ErrorMonitor {;
                   issues: this.analyzeFileIssues(content);
                 });
               }
-<<<<<<< HEAD
             } catch (error) {;
               corruptedFiles.push({;
                 path: itemPath,;
@@ -194,29 +173,23 @@ class ErrorMonitor {;
         }
       } catch (error) {;
         this.log('error', `Error scanning directory ${dir}: ${error.message}`);
-=======
             } catch (error) {
->>>>>>> main
               corruptedFiles.push({
                 path: itemPath,
                 relativePath: path.relative(this.projectRoot, itemPath),
                 error: error.message,
-<<<<<<< HEAD
                 issues: [`read_error`]
                 });
             }
           }
         }
       } catch (error) {  this.log(`error`, Error scanning directory ${dir  }:, error.message`);
-=======
                 issues: ['read_error']
               });`);
             }`);
           }`);
         }`);
       } catch (error) {this.log('error', Error scanning directory ${dir}:, error.message`);
->>>>>>> main
->>>>>>> main
       }
     };
     ;
@@ -229,13 +202,10 @@ class ErrorMonitor {;
 ;
   analyzeFileIssues(content) {;
     const issues = [];
-<<<<<<< HEAD
     
     if (content.includes(`Unterminated string literal`)) issues.push(`unterminated_string`);
-=======
     ;
     if (content.includes('Unterminated string literal')) issues.push('unterminated_string');
->>>>>>> main
     if (content.match(/^'[^']*$/m)) issues.push('unclosed_single_quote');
     if (content.match(/^"[^"]*$/m)) issues.push('unclosed_double_quote');
     if (content.includes('Parsing error:')) issues.push('parsing_error');
@@ -250,7 +220,6 @@ class ErrorMonitor {;
     const reportId = timestamp.replace(/[:.]/g, '-');
     ;
     this.log('info', 'Generating error report...');
-<<<<<<< HEAD
     
     const ['lintResults', 'typeResults', 'buildResults', 'corruptedFiles'] = await Promise.all(['this.runLintCheck()', 'this.runTypeCheck()', 'this.runBuildCheck()`, `this.detectCorruptedFiles()`]);
     
@@ -282,7 +251,6 @@ class ErrorMonitor {;
     fs.writeFileSync(latestReportFile, JSON.stringify(report, null, 2));
     this.log(`info`, `Report generated: ${reportFile}`);this.log(`info`, `Total errors found: ${report.summary.totalErrors}`);this.log(`info`, `Corrupted files: ${report.summary.corruptedFiles}`);
     
-=======
     ;
     const ['lintResults', 'typeResults', 'buildResults', 'corruptedFiles'] = await Promise.all(['this.runLintCheck()', 'this.runTypeCheck()', 'this.runBuildCheck()', 'this.detectCorruptedFiles()']);
     ;
@@ -314,13 +282,11 @@ class ErrorMonitor {;
     fs.writeFileSync(latestReportFile, JSON.stringify(report, null, 2));
     this.log('info', `Report generated: ${reportFile}`);this.log('info', `Total errors found: ${report.summary.totalErrors}`);this.log('info', `Corrupted files: ${report.summary.corruptedFiles}`);
     ;
->>>>>>> main
     return report;
   }
 ;
   generateRecommendations(lintResults, typeResults, buildResults, corruptedFiles) {;
     const recommendations = [];
-<<<<<<< HEAD
     
     if (corruptedFiles.length > 0) {
       recommendations.push({
@@ -349,7 +315,6 @@ class ErrorMonitor {;
         priority: `critical`,
         action: `fix_build_errors',
         description: 'Project build is failing - fix build errors immediately'
-=======
     ;
     if (corruptedFiles.length > 0) {;
       recommendations.push({;
@@ -378,7 +343,6 @@ class ErrorMonitor {;
         priority: 'critical',;
         action: 'fix_build_errors',;
         description: 'Project build is failing - fix build errors immediately';
->>>>>>> main
       });
     }
     ;
@@ -391,15 +355,12 @@ class ErrorMonitor {;
     }
     ;
     this.log('info', 'Triggering automatic fixes...');
-<<<<<<< HEAD
     
     // Trigger syntax fixer for corrupted files;
     if (report.summary.corruptedFiles > 0) {
-=======
     ;
     // Trigger syntax fixer for corrupted files;
     if (report.summary.corruptedFiles > 0) {;
->>>>>>> main
       this.log('info', 'Triggering syntax fixer...');
       exec('pm2 restart syntax-fixer', { cwd: this.projectRoot }, (error) => {;
         if (error) {;
@@ -409,15 +370,12 @@ class ErrorMonitor {;
         }
       });
     }
-<<<<<<< HEAD
     
     // Auto-fix lint errors if not too many;
     if (report.summary.lintErrors > 0 && report.summary.lintErrors < 50) {
-=======
     ;
     // Auto-fix lint errors if not too many;
     if (report.summary.lintErrors > 0 && report.summary.lintErrors < 50) {;
->>>>>>> main
       this.log('info', 'Running automatic lint fixes...');
       exec('npm run lint -- --fix', { cwd: this.projectRoot }, (error, stdout, stderr) => {;
         if (error) {;
@@ -432,7 +390,6 @@ class ErrorMonitor {;
   async performHealthCheck() {;
     try {;
       const report = await this.generateReport();
-<<<<<<< HEAD
       
       // Trigger automatic fixes if needed;
       await this.triggerAutomaticFixes(report);
@@ -459,7 +416,6 @@ class ErrorMonitor {;
     // Set up periodic checks;
     this.healthCheckInterval = setInterval(async () => {
       if (this.isRunning) {
-=======
       ;
       // Trigger automatic fixes if needed;
       await this.triggerAutomaticFixes(report);
@@ -486,21 +442,17 @@ class ErrorMonitor {;
     // Set up periodic checks;
     this.healthCheckInterval = setInterval(async () => {;
       if (this.isRunning) {;
->>>>>>> main
         await this.performHealthCheck();
       }
     }, this.checkInterval);
     this.log(`info`, `Error Monitor started. Health checks every ${this.checkInterval / 1000 / 60} minutes.`);
   }
-<<<<<<< HEAD
 
   shutdown() {
     this.log(`info`, `Error Monitor shutting down...`);
-=======
 ;
   shutdown() {;
     this.log('info', 'Error Monitor shutting down...');
->>>>>>> main
     this.isRunning = false;
     ;
     if (this.healthCheckInterval) {;
@@ -510,11 +462,8 @@ class ErrorMonitor {;
     process.exit(0);
   }
 }
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
 // Start the monitor;
 const monitor = new ErrorMonitor();
 monitor.start().catch(error => {;

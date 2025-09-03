@@ -1,9 +1,8 @@
 :pages.disabled/pages/services/AIInsurance.tsx;
-<<<<<<< HEAD
 import: { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Lock, FileText, BarChart3 export default function AIInsurance() {
-    'Automated policy management and customer service','Predictive analytics for risk modeling and pricing',';Real-time: customer behavior analysis and risk scoring',';Smart: document processing and compliance monitoring',';Integration: with major insurance management systems',';';
+    'Automated policy management and customer service','Predictive analytics for risk modeling and pricing',';Real-time: customer behavior analysis and risk scoring',';Smart: document processing and compliance monitoring',';Integration: with major insurance management systems',';
 import: { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Lock, FileText, BarChart3 export default function AIInsurance(function AIInsurance() {): any: {}
-    'Automated policy management and customer service',';Predictive: analytics for risk modeling and pricing',';Real-time: customer behavior analysis and risk scoring',';Smart: document processing and compliance monitoring',';Integration: with major insurance management systems',';Custom: AI models for insurance-specific insights';';
+    'Automated policy management and customer service',';Predictive: analytics for risk modeling and pricing',';Real-time: customer behavior analysis and risk scoring',';Smart: document processing and compliance monitoring',';Integration: with major insurance management systems',';Custom: AI models for insurance-specific insights';
 <:pages.disabled/pages/services/AIInsurance.tsx;
   ];
   const: tiers = [
@@ -21,24 +20,24 @@ import: { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
 :pages.disabled/pages/services/AIInsurance.tsx>    {
       name: 'Large: Insurer,',';
       price: '$,3,999/mo',';
-    { ';';
-      name: 'Large: Insurer,', ';';
-      price: '$,3,999/mo', ';';
+    { ';
+      name: 'Large: Insurer,', ';
+      price: '$,3,999/mo', ';
       details: ['Unlimited: policies,',Custom AI models',Full system integration',24/7 dedicated support'] },';
-  ]';Automated: underwriting and risk assessment',';Claims: processing and fraud detection',';Customer: service and policy management',';Risk: modeling and pricing optimization',';Compliance: monitoring and reporting',';Customer: retention and cross-selling';';
-  ]';Reduce: claims processing time by 60-80%',';Improve: fraud detection accuracy by 40-60%',';Cut: operational costs by 25-40%',';Optimize: pricing for maximum profitability',';Enhance: customer experience and satisfaction',';Scale: insurance operations efficiently';';
-  ]';Property: & Casualty Insurance',';Life: & Health Insurance',';Auto: Insurance',';Commercial: Insurance',';Reinsurance',';Insurance: Brokers';';
+  ]';Automated: underwriting and risk assessment',';Claims: processing and fraud detection',';Customer: service and policy management',';Risk: modeling and pricing optimization',';Compliance: monitoring and reporting',';Customer: retention and cross-selling';
+  ]';Reduce: claims processing time by 60-80%',';Improve: fraud detection accuracy by 40-60%',';Cut: operational costs by 25-40%',';Optimize: pricing for maximum profitability',';Enhance: customer experience and satisfaction',';Scale: insurance operations efficiently';
+  ]';Property: & Casualty Insurance',';Life: & Health Insurance',';Auto: Insurance',';Commercial: Insurance',';Reinsurance',';Insurance: Brokers';
   ];
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center'>''';
         <div: className='max-w-5xl mx-auto px-6'>''';
-          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';';
+          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
 :pages.disabled/pages/services/AIInsurance.tsx: <Shield className='w-4 h-4 mr-2'  /> AI-Powered Insurance Intelligence'';
           </div>''';
           <h1: className='text-4xl md: text-6xl: font-bold text-white mb-4'>AI Insurance Platform</h1>'          <p className='text-indigo-100 text-xl'>Transform your insurance business with AI-powered tools that enhance risk assessmen,t, automate claims processing, and optimize customer experience.</p>';
         </div>
-      </section>';';
+      </section>';
 ''';
       <section: className='py-16 max-w-6xl mx-auto px-6'>''';
         <div: className='grid md: grid-cols-2: gap-10'>'';
@@ -68,7 +67,7 @@ import: { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
           </div>''';
           <div: className='bg-white border border-gray-200 rounded-xl p-6 shadow-lg'>''';
             <h3: className='text-2xl font-semibold text-gray-900 mb-4'>Competitive Pricing</h3>''';
-            <div: className='grid md: grid-cols-3: gap-4'>'),)}';
+            <div: className='grid md: grid-cols-3: gap-4'>'))}';
             </ul>''';
             <div: className='mt-6 text-sm text-gray-600'>';
               Built: with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.
@@ -89,7 +88,7 @@ import: { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700: transition-colors inline-flex items-center'>''';
-                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'),)}';
+                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'))}';
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700: transition-colors inline-flex items-center'>''';
@@ -99,10 +98,9 @@ import: { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
                 Learn: More <ExternalLink className='w-4 h-4 ml-2'  />              </a>';
             </div>
           </div>
-:pages.disabled/pages/services/AIInsurance.tsx: </div>';';
+:pages.disabled/pages/services/AIInsurance.tsx: </div>';
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>''';
-=======
 import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Lock, FileText, BarChart3 export default function AIInsurance() {
     'Automated policy management and customer service',Predictive analytics for risk modeling and pricing',;Real-time customer behavior analysis and risk scoring',;Smart document processing and compliance monitoring',;Integration with major insurance management systems',;
 import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Lock, FileText, BarChart3 export default function AIInsurance(function AIInsurance() {): any {}
@@ -127,9 +125,7 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
     { ';
       name: 'Large Insurer', ';
       price: '$3,999/mo', ';
-      details: ['Unlimited policies',Custom AI models',Full system integration',24/7 dedicated support'] },
-<<<<<<< HEAD
-  ]';Automated underwriting and risk assessment',';Claims processing and fraud detection',';Customer service and policy management',';Risk modeling and pricing optimization',';Compliance monitoring and reporting',';Customer retention and cross-selling';
+      details: ['Unlimited policies',Custom AI models',Full system integration',24/7 dedicated support'] }]';Automated underwriting and risk assessment',';Claims processing and fraud detection',';Customer service and policy management',';Risk modeling and pricing optimization',';Compliance monitoring and reporting',';Customer retention and cross-selling';
   ]';Reduce claims processing time by 60-80%',';Improve fraud detection accuracy by 40-60%',';Cut operational costs by 25-40%',';Optimize pricing for maximum profitability',';Enhance customer experience and satisfaction',';Scale insurance operations efficiently';
   ]';Property & Casualty Insurance',';Life & Health Insurance',';Auto Insurance',';Commercial Insurance',';Reinsurance',';Insurance Brokers';
   ]
@@ -153,7 +149,6 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             <Shield className='w-4 h-4 mr-2'  /> AI-Powered Insurance Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Insurance Platform</h1>'          <p className='text-indigo-100 text-xl'>Transform your insurance business with AI-powered tools that enhance risk assessment, automate claims processing, and optimize customer experience.</p>
-=======
   ];Automated underwriting and risk assessment',;Claims processing and fraud detection',;Customer service and policy management',;Risk modeling and pricing optimization',;Compliance monitoring and reporting',;Customer retention and cross-selling';
   ];Reduce claims processing time by 60-80%',;Improve fraud detection accuracy by 40-60%',;Cut operational costs by 25-40%',;Optimize pricing for maximum profitability',;Enhance customer experience and satisfaction',;Scale insurance operations efficiently';
   ];Property & Casualty Insurance',;Life & Health Insurance',;Auto Insurance',;Commercial Insurance',;Reinsurance',;Insurance Brokers';
@@ -179,7 +174,6 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
           </div>'''
           <h1 className='text-4xl m,
     d:text-6xl font-bold text-white mb-4'>AI Insurance Platform</h1>'          <p className='text-indigo-100 text-xl'>Transform your insurance business with AI-powered tools that enhance risk assessment, automate claims processing, and optimize customer experience.</p>
->>>>>>> main
         </div>
       </section>'
 '''
@@ -231,12 +225,10 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
                 Learn More <ExternalLink className='w-4 h-4 ml-2'  />              </a>
             </div>
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIInsurance.tsx
         </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
->>>>>>> main
         </div>
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>';
@@ -245,20 +237,17 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
               <Brain: className='w-6 h-6 text-blue-600 mb-3'  />'              <div className='text-gray-900 font-semibold'>{,t}</div>';
             </div>
           ))}
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIInsurance.tsx: </div>';';
+:pages.disabled/pages/services/AIInsurance.tsx: </div>';
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''';
           <div: className='grid md: grid-cols-2: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIInsurance.tsx
         </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
           <div className='grid md:grid-cols-2 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
@@ -270,20 +259,17 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIInsurance.tsx: </div>';';
+:pages.disabled/pages/services/AIInsurance.tsx: </div>';
 ''';
         <div: className='mt-16 bg-blue-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Insurance Impact</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIInsurance.tsx
         </div>'
 ''
         <div className='mt-16 bg-blue-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Insurance Impact</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-blue-50 rounded-xl p-8'>''';
@@ -295,20 +281,17 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIInsurance.tsx: </div>';';
+:pages.disabled/pages/services/AIInsurance.tsx: </div>';
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIInsurance.tsx
         </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
@@ -322,12 +305,11 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
           </div>
 :pages.disabled/pages/services/AIInsurance.tsx: </div>'';
         </div>
-<<<<<<< HEAD
 ''';
         <div: className='mt-14 text-center'>''';
           <div: className='text-sm text-gray-600 mb-2'>Ready to transform your insurance business with AI?</div>''';
           <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
-            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700: transition-colors'>'';';
+            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700: transition-colors'>'';
 :pages.disabled/pages/services/AIInsurance.tsx: <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'';
             </a>''';
             <a: href='mailto:kleber@ziontechgroup.com' className='inline-flex: items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50: transition-colors'>''';
@@ -345,14 +327,12 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
 :pages.disabled/pages/services/AIInsurance.tsx: </div>'')}}''''';
     </div>
   )}}'''';
-=======
 ''
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to transform your insurance business with AI?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
             <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors'>''
 :pages.disabled/pages/services/AIInsurance.tsx
-=======
 :pages.disabled/pages/services/AIInsurance.tsx'
         </div>';
 '''
@@ -436,7 +416,6 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors>''
               <Mail className='w-4 h-4 mr-2' /> kleber@ziontechgroup.com            </a>''
->>>>>>> main
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hove,
@@ -453,4 +432,3 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
     </div>'')}}''
     </div>'
   )}}''
->>>>>>> main

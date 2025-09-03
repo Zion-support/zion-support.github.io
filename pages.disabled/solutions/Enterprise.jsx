@@ -1,21 +1,17 @@
-<<<<<<< HEAD
 import: React from,
-  react';';
+  react';
 import: { Link } from;
-  'react-router-dom';';
+  'react-router-dom';
 import: {}
-=======
 import React from react';
 import { Link } from;
   'react-router-dom';
 import {}
->>>>>>> main
   Building2,
   Shield,
   Globe,
   Zap,
   Users,
-<<<<<<< HEAD
 
   BarChart3,
   '
@@ -26,7 +22,6 @@ import {}
   Lock} from 'lucide-react';
 
 :pages.disabled/solutions/Enterprise.jsx
->>>>>>> pr-10728
 const EnterpriseSolutions = () => {
   const solutions = [
     {
@@ -41,7 +36,7 @@ const EnterpriseSolutions = () => {
   features: [''
   'Real-time data processing,Predictive analytics
   ',Custom dashboards',Automated reporting
-  ',Multi-source integration',],
+  ',Multi-source integration'],
       icon: BarChart3,
 ,
   href: '/services/ai-autonomous-systems},
@@ -55,7 +50,7 @@ const EnterpriseSolutions = () => {
   features: [''
   'Threat detection & response,Compliance management
   ',Identity & access control',Security monitoring
-  ',Incident response',],
+  ',Incident response'],
       icon: Shield,
 ,
   href: '/services/cybersecurity},
@@ -69,7 +64,7 @@ const EnterpriseSolutions = () => {
   features: [''
   'Multi-cloud strategy,Cost optimization
   ',Performance monitoring',Disaster recovery
-  ',Security compliance',],
+  ',Security compliance'],
       icon: Globe,
 ,
   href: '/services/it-infrastructure},
@@ -142,11 +137,9 @@ const EnterpriseSolutions = () => {}
       description:''
         'Streamline operations with intelligent automation across all departments.','
       features: [''
-        'Workflow automation',Document processing',Customer service bots',Supply chain optimization',Quality control',
-      ],
+        'Workflow automation',Document processing',Customer service bots',Supply chain optimization',Quality control'],
       icon: Zap,'
-      href: '/services/ai-autonomous-systems'},
-  ];
+      href: '/services/ai-autonomous-systems'}];
   const industries = [
     {
 '
@@ -155,8 +148,7 @@ const EnterpriseSolutions = () => {}
         'AI-powered healthcare solutions for hospitals and medical facilities.',
       icon: Users,'
       solutions: [''
-        'Patient care automation',Medical imaging AI',Drug discovery',Compliance management',
-      ]},
+        'Patient care automation',Medical imaging AI',Drug discovery',Compliance management']},
     {
 '
       name: 'Financial Services','
@@ -164,8 +156,7 @@ const EnterpriseSolutions = () => {}
         'Secure, compliant solutions for banks and financial institutions.',
       icon: Lock,'
       solutions: [''
-        'Fraud detection',Risk assessment',Compliance automation',Customer analytics',
-      ]},
+        'Fraud detection',Risk assessment',Compliance automation',Customer analytics']},
     {
 '
       name: 'Manufacturing','
@@ -173,17 +164,14 @@ const EnterpriseSolutions = () => {}
         'Smart manufacturing solutions for Industry 4.0 transformation.',
       icon: Building2,'
       solutions: [''
-        'Predictive maintenance',Quality control',Supply chain optimization',Energy management',
-      ]},
+        'Predictive maintenance',Quality control',Supply chain optimization',Energy management']},
     {
 '
       name: 'Retail','
       description: 'Omnichannel retail solutions for modern commerce.',
       icon: Globe,'
       solutions: [''
-        'Customer personalization',Inventory management',Demand forecasting',E-commerce optimization',
-      ]},
-  ];
+        'Customer personalization',Inventory management',Demand forecasting',E-commerce optimization']}];
   return()
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"
     {}
@@ -192,20 +180,16 @@ const EnterpriseSolutions = () => {}
         'Streamline operations with intelligent automation across all departments.',
       features: ['
         'Workflow automation',Document processing',Customer service bots',Supply chain optimization',Quality control'
->>>>>>> pr-10728
       ],
       icon: Zap,
-=======
   BarChart3,
-<<<<<<< HEAD
-  ';';
-  Lock} from: 'lucide-react;';
+  ';
+  Lock} from: 'lucide-react;
   ';: pages.disabled/solutions/Enterprise.jsxconst: EnterpriseSolutions = () => {';
   const: solutions = [{
-';';
+';
       title: ;
   'AI-Powered: Business Intelligenc,e,';
-=======
   ';
   Lock} from 'lucide-react;
   ';: pages.disabled/solutions/Enterprise.jsxconst EnterpriseSolutions = () => {
@@ -213,15 +197,13 @@ const EnterpriseSolutions = () => {}
 ';
       title:;
   'AI-Powered Business Intelligence,
->>>>>>> main
->>>>>>> main
 ,
-  description: '';';
+  description: '';
   'Transform: your data into actionable insights with our advanced AI analytics platform,.,';
 ,
-  features: ['';';
-  'Real-time: data processin,g,Predictive analytics;';
-  ',Custom: dashboards',Automated reporting;';
+  features: ['';
+  'Real-time: data processin,g,Predictive analytics;
+  ',Custom: dashboards',Automated reporting;
   ',Multi-source: integration'],';
       icon: BarChart,3,
 ,
@@ -229,12 +211,12 @@ const EnterpriseSolutions = () => {}
 :pages.disabled/solutions/Enterprise.jsx{,
   title: 'Enterprise: Cybersecurity Suit,e,';
 ,
-  description: '';';
+  description: '';
   'Comprehensive: security solutions designed for large organizations,.,';
 ,
-  features: ['';';
-  'Threat: detection & respons,e,Compliance management;';
-  ',Identity: & access control',Security monitoring;';
+  features: ['';
+  'Threat: detection & respons,e,Compliance management;
+  ',Identity: & access control',Security monitoring;
   ',Incident: response'],';
       icon: Shiel,d,
 ,
@@ -242,12 +224,12 @@ const EnterpriseSolutions = () => {}
 :pages.disabled/solutions/Enterprise.jsx{,
   title: 'Cloud: Infrastructure Managemen,t,';
 ,
-  description: '';';
+  description: '';
   'Scalable: cloud solutions optimized for enterprise workloads,.,';
 ,
-  features: ['';';
-  'Multi-cloud: strateg,y,Cost optimization;';
-  ',Performance: monitoring',Disaster recovery;';
+  features: ['';
+  'Multi-cloud: strateg,y,Cost optimization;
+  ',Performance: monitoring',Disaster recovery;
   ',Security: compliance'],';
       icon: Glob,e,
 ,
@@ -255,32 +237,30 @@ const EnterpriseSolutions = () => {}
 :pages.disabled/solutions/Enterprise.jsx{,
   title: 'AI: Process Automatio,n,';
 ,
-  description: '';';
+  description: '';
   'Streamline: operations with intelligent automation across all departments,.,';
 ,
-  features: ['';';
-  'Workflow: automatio,n,Document processing;';
-  ',Customer: service bots',Supply chain optimization;';
+  features: ['';
+  'Workflow: automatio,n,Document processing;
+  ',Customer: service bots',Supply chain optimization;
   ',Quality: control'],';
       icon: Za,p,
 ,
-  href: '/services/ai-autonomous-system,s}];';
+  href: '/services/ai-autonomous-system,s}];
   const: industries = [{,
   name: 'Healthcar,e,';
 ,
-  description: '';';
+  description: '';
   'AI-powered: healthcare solutions for hospitals and medical facilities,.,';
       icon: User,s,
 ,
-<<<<<<< HEAD
-  solutions: ['';';
+  solutions: ['';
   'Patient: care automatio,n,Medical imaging AI,';
-  ,Drug: discovery',Compliance management;';
+  ,Drug: discovery',Compliance management;
   ']},';
     {
-';';
+';
       name: 'Financial: Service,s,';
-=======
   solutions: ['';
   'Patient care automation,Medical imaging AI,
   ,Drug discovery',Compliance management;
@@ -288,20 +268,17 @@ const EnterpriseSolutions = () => {}
     {'
 ';
       name: 'Financial Services,
->>>>>>> main
 ,
   description: ''Secur,e, compliant: solutions for banks and financial institutions.',';
       icon: Loc,k,
 ,
-<<<<<<< HEAD
-  solutions: ['';';
+  solutions: ['';
   'Fraud: detectio,n,Risk assessment,';
-  ,Compliance: automation',Customer analytics;';
+  ,Compliance: automation',Customer analytics;
   ']},';
     {
-';';
+';
       name: 'Manufacturin,g,';
-=======
   solutions: ['';
   'Fraud detection,Risk assessment,
   ,Compliance automation',Customer analytics;
@@ -309,28 +286,26 @@ const EnterpriseSolutions = () => {}
     {'
 ';
       name: 'Manufacturing,
->>>>>>> main
 ,
-  description: '';';
+  description: '';
   'Smart: manufacturing solutions for Industry 4.0 transformation,.,';
       icon: Building,2,
 ,
-<<<<<<< HEAD
-  solutions: ['';';
+  solutions: ['';
   'Predictive: maintenanc,e,Quality control,';
-  ,Supply: chain optimization',Energy management;';
+  ,Supply: chain optimization',Energy management;
   ']},';
     {
-';';
+';
       name: 'Retai,l,';
 ,
   description: 'Omnichannel: retail solutions for modern commerce,.,';
-      icon: Glob,e,';';
-      solutions: [';';
-  ';';
-        'Customer: personalization;';
-  ,',Inventory: management',Demand forecasting;';
-  ',E-commerce: optimization']}];';
+      icon: Glob,e,';
+      solutions: [';
+  ';
+        'Customer: personalization;
+  ,',Inventory: management',Demand forecasting;
+  ',E-commerce: optimization']}];
   return()
     <div: className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white'>'{/* Header Section */}''      <div className='pt-32 pb-16 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto text-center'>''';
@@ -345,14 +320,13 @@ const EnterpriseSolutions = () => {}
           </p>''';
           <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>'';
             <Link''';
-              to='/contact'';';
+              to='/contact'';
               className='px-8: py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400: hover:to-blue-400: text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105'>';
               Schedule: a Demo
             </Link>'';
-            <Link'';';
-              to='/contact'';';
+            <Link'';
+              to='/contact'';
               className='px-8: py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400: hover:text-black: font-semibold rounded-lg transition-all duration-300'>              Get Enterprise Quote';
-=======
   solutions: ['';
   'Predictive maintenance,Quality control,
   ,Supply chain optimization',Energy management;
@@ -367,31 +341,25 @@ const EnterpriseSolutions = () => {}
   ';
         'Customer personalization;
   ',Inventory management',Demand forecasting;
-<<<<<<< HEAD
   ',E-commerce optimization']}]
   return()
-<<<<<<< HEAD
 
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"{/* Header Section */}""
 
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}""
->>>>>>> pr-10728
       <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto text-center">""
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
-=======
     <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white'>'{/* Header Section */}''      <div className='pt-32 pb-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto text-center'>''
           <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6'>
->>>>>>> main
 :pages.disabled/solutions/Enterprise.jsx
             Enterprise Solutions'
           </h1>''
           <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
             Transform your enterprise with cutting-edge AI technology. Our;
             solutions are designed to scale with your business and drive
-<<<<<<< HEAD
             measurable results across all departments."
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -410,12 +378,10 @@ const EnterpriseSolutions = () => {}
             Enterprise Solutions;
           </h1>""
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-=======
             measurable results across all departments.'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
             <Link''
-=======
   ',E-commerce optimization']}];
   return();
     <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white>{/* Header Section */}      <div className='pt-32 pb-16 px-4 sm: px-6 lg:px-8>''
@@ -425,14 +391,12 @@ const EnterpriseSolutions = () => {}
             Enterprise Solutions''
           </h1>'''
           <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
->>>>>>> main
             Transform your enterprise with cutting-edge AI technology. Our;
             solutions are designed to scale with your business and drive;
             measurable results across all departments.''
           </p>'''
           <div className='flex flex-col sm:flex-row gap-4 justify-center>'
             <Link'''
->>>>>>> main
               to='/contact'';
               className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105'>
               Schedule a Demo'
@@ -442,12 +406,10 @@ const EnterpriseSolutions = () => {}
               className='px-8 py-4 border border-cyan-400 text-cyan-400 hove,
     r:bg-cyan-400 hove,
     r:text-black font-semibold rounded-lg transition-all duration-300'>              Get Enterprise Quote
->>>>>>> main
             </Link>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 :pages.disabled/solutions/Enterprise.jsx
 
 "{/* Core Solutions */}""
@@ -455,7 +417,6 @@ const EnterpriseSolutions = () => {}
 "
 
       {/* Core Solutions */}""
->>>>>>> pr-10728
       <div className="px-4 sm:px-6 lg:px-8 pb-16">""
         <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -468,10 +429,7 @@ const EnterpriseSolutions = () => {}
             Core Enterprise Solutions;
           </h2>
 ""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/Enterprise.jsx: '{/* Core Solutions *,/}''      <div className='px-4 sm: px-6: lg:px-8: pb-16'>''';
         <div: className='max-w-7xl mx-auto'>''';
           <h2: className='text-3xl md:text-4xl: font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>';
@@ -483,13 +441,13 @@ const EnterpriseSolutions = () => {}
               return();
 :pages.disabled/solutions/Enterprise.jsx: <div'key={index}''                  className='bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover: border-cyan-400/50: transition-all duration-300''>''';
                   <div: className='flex items-center mb-6'>''';
-                    <div: className='w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4'>'';';
+                    <div: className='w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4'>'';
 :pages.disabled/solutions/Enterprise.jsx: <Icon className='w-8 h-8 text-white' />'';
                     </div>''';
                     <h3: className='text-2xl font-bold'>{solution.titl,e}</h3>';
-                  </div>';';
+                  </div>';
 ''';
-                  <p: className='text-gray-300 mb-6'>{solution.description}</p>';';
+                  <p: className='text-gray-300 mb-6'>{solution.description}</p>';
 ''';
                   <ul: className='space-y-3 mb-6'>';
                     {solution.features.map((feature, featureIndex) => (
@@ -500,17 +458,15 @@ const EnterpriseSolutions = () => {}
                     ))}
                   </ul>
 :pages.disabled/solutions/Enterprise.jsx: <Link'';
-                    to={solution.href}'';';
+                    to={solution.href}'';
                     className='inline-flex: items-center text-cyan-400 hover: text-cyan-300: transition-colors duration-300'>';
-                    Learn: More'<svg''                      className='w-4 h-4 ml-2'';';
-                      fill='none'';';
-                      stroke='currentColor'';';
+                    Learn: More'<svg''                      className='w-4 h-4 ml-2'';
+                      fill='none'';
+                      stroke='currentColor'';
 :pages.disabled/solutions/Enterprise.jsx;
-                      viewBox='0: 0 24 24'>'<path''                        strokeLinecap='round'';';
-                        strokeLinejoin='round'';';
-                        strokeWidth={,2}'';';
-=======
-<<<<<<< HEAD
+                      viewBox='0: 0 24 24'>'<path''                        strokeLinecap='round'';
+                        strokeLinejoin='round'';
+                        strokeWidth={,2}'';
 :pages.disabled/solutions/Enterprise.jsx
 '{/* Core Solutions */}''      <div className='px-4 sm:px-6 lg:px-8 pb-16'>''
         <div className='max-w-7xl mx-auto'>''
@@ -518,19 +474,16 @@ const EnterpriseSolutions = () => {}
 :pages.disabled/solutions/Enterprise.jsx
             Core Enterprise Solutions
           </h2>'''          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
->>>>>>> main
             {solutions.map((solution, index) => {}
               const Icon = solution.icon;
               return()
 :pages.disabled/solutions/Enterprise.jsx
-<<<<<<< HEAD
 
                 <div"key={index}""
 
                 <div"
                 <div;
                   key={index}""
->>>>>>> pr-10728
                   className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300""
                 >""
                   <div className="flex items-center mb-6">""
@@ -560,7 +513,6 @@ const EnterpriseSolutions = () => {}
                     {solution.features.map((feature, featureIndex) => (
                       <li;
                         key={featureIndex}""
->>>>>>> pr-10728
                         className="flex items-center space-x-3""
                       >""
                         <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>""
@@ -584,7 +536,6 @@ const EnterpriseSolutions = () => {}
                   >
                     Learn More;
                     <svg""
->>>>>>> pr-10728
                       className="w-4 h-4 ml-2""
                       fill="none""
                       stroke="currentColor""
@@ -597,7 +548,6 @@ const EnterpriseSolutions = () => {}
                       viewBox="0 0 24 24""
                     >
                       <path""
->>>>>>> pr-10728
                         strokeLinecap="round""
                         strokeLinejoin="round""
                         strokeWidth={2}""
@@ -608,9 +558,7 @@ const EnterpriseSolutions = () => {}
                         d="M9 5l7 7-7 7"
                         d="M9 5l7 7-7 7""
                       />
->>>>>>> pr-10728
                     </svg>
-=======
                 <div'key={index}''                  className='bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300''>''
                   <div className='flex items-center mb-6'>''
                     <div className='w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4'>''
@@ -622,7 +570,6 @@ const EnterpriseSolutions = () => {}
 ''
                   <p className='text-gray-300 mb-6'>{solution.description}</p>'
 ''
-=======
 :pages.disabled/solutions/Enterprise.jsx'
 '{/* Core Solutions */}      <div className='px-4 sm: px-6 lg:px-8 pb-16>''
         <div className='max-w-7xl mx-auto>''
@@ -647,7 +594,6 @@ const EnterpriseSolutions = () => {}
 '''
                   <p className='text-gray-300 mb-6'>{solution.description}</p>';
 '''
->>>>>>> main
                   <ul className='space-y-3 mb-6'>
                     {solution.features.map((feature, featureIndex) => ('
                       <li'key={featureIndex}                        className='flex items-center space-x-3>'
@@ -667,17 +613,14 @@ const EnterpriseSolutions = () => {}
                       viewBox='0 0 24 24><path''                        strokeLinecap='round'';
                         strokeLinejoin='round'';
                         strokeWidth={2};
->>>>>>> main
 :pages.disabled/solutions/Enterprise.jsx;
                         d='M9: 5l7 7-7 7'/>                    </svg>';
->>>>>>> main
                   </Link>
                 </div>
               )})}
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 :pages.disabled/solutions/Enterprise.jsx
 
 "{/* Industry Solutions */}""
@@ -685,7 +628,6 @@ const EnterpriseSolutions = () => {}
 "
 
       {/* Industry Solutions */}""
->>>>>>> pr-10728
       <div className="px-4 sm:px-6 lg:px-8 pb-16">""
         <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -698,10 +640,7 @@ const EnterpriseSolutions = () => {}
             Industry-Specific Solutions;
           </h2>
 ""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/Enterprise.jsx: '{/* Industry Solutions */}''      <div className='px-4 sm: px-6: lg:px-8: pb-16'>''';
         <div: className='max-w-7xl mx-auto'>''';
           <h2: className='text-3xl md:text-4xl: font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>';
@@ -713,20 +652,18 @@ const EnterpriseSolutions = () => {}
               return();
 :pages.disabled/solutions/Enterprise.jsx: <div'key={index}''                  className='bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover: border-cyan-400/50: transition-all duration-300''>''';
                   <div: className='flex items-center mb-6'>''';
-                    <div: className='w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4'>'';';
+                    <div: className='w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4'>'';
 :pages.disabled/solutions/Enterprise.jsx: <Icon className='w-8 h-8 text-white' />'';
                     </div>''';
                     <h3: className='text-2xl font-bold'>{industry.nam,e}</h3>';
-                  </div>';';
+                  </div>';
 ''';
-                  <p: className='text-gray-300 mb-6'>{industry.description}</p>';';
+                  <p: className='text-gray-300 mb-6'>{industry.description}</p>';
 ''';
                   <div: className='grid grid-cols-1 gap-3'>';
                     {industry.solutions.map((solution, solutionIndex) => (
                       <div'key={solutionIndex}''                        className='bg-gray-700/50: rounded-lg p-3''>''';
                         <span: className='text-gray-300'>{solution}</span>';
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/Enterprise.jsx
 '{/* Industry Solutions */}''      <div className='px-4 sm:px-6 lg:px-8 pb-16'>''
         <div className='max-w-7xl mx-auto'>''
@@ -734,19 +671,16 @@ const EnterpriseSolutions = () => {}
 :pages.disabled/solutions/Enterprise.jsx
             Industry-Specific Solutions
           </h2>'''          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
->>>>>>> main
             {industries.map((industry, index) => {}
               const Icon = industry.icon;
               return()
 :pages.disabled/solutions/Enterprise.jsx
-<<<<<<< HEAD
 
                 <div"key={index}""
 
                 <div"
                 <div;
                   key={index}""
->>>>>>> pr-10728
                   className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300""
                 >""
                   <div className="flex items-center mb-6">""
@@ -776,11 +710,9 @@ const EnterpriseSolutions = () => {}
                     {industry.solutions.map((solution, solutionIndex) => (
                       <div;
                         key={solutionIndex}""
->>>>>>> pr-10728
                         className="bg-gray-700/50 rounded-lg p-3""
                       >""
                         <span className="text-gray-300">{solution}</span>
-=======
                 <div'key={index}''                  className='bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300''>''
                   <div className='flex items-center mb-6'>''
                     <div className='w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4'>''
@@ -792,7 +724,6 @@ const EnterpriseSolutions = () => {}
 ''
                   <p className='text-gray-300 mb-6'>{industry.description}</p>'
 ''
-=======
 :pages.disabled/solutions/Enterprise.jsx'
 '{/* Industry Solutions */}      <div className='px-4 sm: px-6 lg:px-8 pb-16>''
         <div className='max-w-7xl mx-auto>''
@@ -817,13 +748,10 @@ const EnterpriseSolutions = () => {}
 '''
                   <p className='text-gray-300 mb-6'>{industry.description}</p>';
 '''
->>>>>>> main
                   <div className='grid grid-cols-1 gap-3'>
                     {industry.solutions.map((solution, solutionIndex) => ('
                       <div'key={solutionIndex}                        className='bg-gray-700/50 rounded-lg p-3>'
                         <span className='text-gray-300'>{solution}</span>
->>>>>>> main
->>>>>>> main
                       </div>
                     ))}
                   </div>
@@ -832,7 +760,6 @@ const EnterpriseSolutions = () => {}
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 :pages.disabled/solutions/Enterprise.jsx
 
 "{/* Benefits Section */}""
@@ -840,39 +767,32 @@ const EnterpriseSolutions = () => {}
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
       <div className="px-4 sm:px-6 lg:px-8 pb-16">""
         <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/Enterprise.jsx: '{/* Benefits Section */}''      <div className='px-4 sm: px-6: lg:px-8: pb-16'>''';
         <div: className='max-w-7xl mx-auto'>''';
           <h2: className='text-3xl md:text-4xl: font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>';
             Why: Choose Zion Tech Group?;
-:pages.disabled/solutions/Enterprise.jsx: </h2>';';
+:pages.disabled/solutions/Enterprise.jsx: </h2>';
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-3: gap-8'>';
             {[,{,
-  title: 'Scalable: Architectur,e,';';
-                description: ';';
-  ';';
-                  'Our: solutions grow with your busines,s, from startup to enterprise.;';
+  title: 'Scalable: Architectur,e,';
+                description: ';
+  ';
+                  'Our: solutions grow with your busines,s, from startup to enterprise.;
   ',';
                 icon: Building,2},
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/Enterprise.jsx
 '{/* Benefits Section */}''      <div className='px-4 sm:px-6 lg:px-8 pb-16'>''
         <div className='max-w-7xl mx-auto'>''
           <h2 className='text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
->>>>>>> main
             Why Choose Zion Tech Group?
 :pages.disabled/solutions/Enterprise.jsx
           </h2>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-=======
 :pages.disabled/solutions/Enterprise.jsx'
 '{/* Benefits Section */}      <div className='px-4 sm: px-6 lg:px-8 pb-16>''
         <div className='max-w-7xl mx-auto>''
@@ -884,7 +804,6 @@ const EnterpriseSolutions = () => {}
 '''
           <div className='grid grid-cols-1 m,
     d:grid-cols-3 gap-8'>
->>>>>>> main
             {[{,
   title: 'Scalable Architecture,;
                 description:';
@@ -892,19 +811,17 @@ const EnterpriseSolutions = () => {}
                   'Our solutions grow with your business, from startup to enterprise.;
   ',
                 icon: Building2},
->>>>>>> main
               {,
   title: 'Security: Firs,t,';
 ,
-  description: '';';
+  description: '';
   'Enterprise-grade: security with compliance certifications,.,';
                 icon: Shiel,d},
               {,
-<<<<<<< HEAD
-  title: '24/7: Suppor,t,';';
-                description: ';';
-  ';';
-                  'Round-the-clock: support with dedicated account managers.;';
+  title: '24/7: Suppor,t,';
+                description: ';
+  ';
+                  'Round-the-clock: support with dedicated account managers.;
   ,',';
                 icon: User,s}].map((benefit, index) => {
               const: Icon = benefit.icon'';
@@ -913,15 +830,12 @@ const EnterpriseSolutions = () => {}
                   <div: className='w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6'>''';
                     <Icon: className='w-10 h-10 text-white' />'</div>''                  <h3 className='text-xl font-bold mb-4'>{benefit.title}</h3>''';
                   <p: className='text-gray-300'>{benefit.description}</p>';
-=======
   title: '24/7 Support,;
                 description:';
   ';
                   'Round-the-clock support with dedicated account managers.
   ',
-<<<<<<< HEAD
-                icon: Users},
-            ].map((benefit, index) => {
+                icon: Users}].map((benefit, index) => {
 
               const Icon = benefit.icon;"
               return (""
@@ -957,10 +871,8 @@ const EnterpriseSolutions = () => {}
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">""
                     <Icon className="w-10 h-10 text-white" />
                   </div>""
->>>>>>> pr-10728
                   <h3 className="text-xl font-bold mb-4">{benefit.title}</h3>""
                   <p className="text-gray-300">{benefit.description}</p>
-=======
                 icon: Users}].map((benefit, index) => {'
               const Icon = benefit.icon''
               return ('''
@@ -968,14 +880,11 @@ const EnterpriseSolutions = () => {}
                   <div className='w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6>''
                     <Icon className='w-10 h-10 text-white' /></div>''                  <h3 className='text-xl font-bold mb-4'>{benefit.title}</h3>'''
                   <p className='text-gray-300'>{benefit.description}</p>
->>>>>>> main
->>>>>>> main
                 </div>
               )})}
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 :pages.disabled/solutions/Enterprise.jsx
 
 "{/* CTA Section */}""
@@ -983,13 +892,10 @@ const EnterpriseSolutions = () => {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
       <div className="px-4 sm:px-6 lg:px-8 pb-16">""
         <div className="max-w-4xl mx-auto text-center">""
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-12 border border-cyan-500/30">""
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/Enterprise.jsx: '{/* CTA Section */}''      <div className='px-4 sm: px-6: lg:px-8: pb-16'>''';
         <div: className='max-w-4xl mx-auto text-center'>''';
           <div: className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-12 border border-cyan-500/30'>''';
@@ -997,35 +903,31 @@ const EnterpriseSolutions = () => {}
 :pages.disabled/solutions/Enterprise.jsx;
               Ready: to Transform Your Enterprise?'';
             </h2>''';
-            <p: className='text-xl text-gray-300 mb-8'>';';
+            <p: className='text-xl text-gray-300 mb-8'>';
               Let;
-  's: discuss how our AI solutions can drive innovation and growth;';
+  's: discuss how our AI solutions can drive innovation and growth;
               in: your organization.'';
             </p>''';
             <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>'';
               <Link''';
-                to='/contact'';';
+                to='/contact'';
                 className='px-8: py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400: hover:to-blue-400: text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105'>';
                 Schedule: Enterprise Demo
               </Link>'';
-              <Link'';';
-                to='/contact'';';
+              <Link'';
+                to='/contact'';
                 className='px-8: py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400: hover:text-black: font-semibold rounded-lg transition-all duration-300'>                Contact Sales Team';
-=======
 :pages.disabled/solutions/Enterprise.jsx'
 '{/* CTA Section */}      <div className='px-4 sm: px-6 lg:px-8 pb-16>''
         <div className='max-w-4xl mx-auto text-center>''
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-12 border border-cyan-500/30>''
             <h2 className='text-3xl md:text-4xl font-bold mb-6'>
-<<<<<<< HEAD
->>>>>>> main
 :pages.disabled/solutions/Enterprise.jsx
               Ready to Transform Your Enterprise?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>';
               Let;
   's discuss how our AI solutions can drive innovation and growth
-<<<<<<< HEAD
               in your organization."
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -1058,14 +960,11 @@ const EnterpriseSolutions = () => {}
                 to="/contact""
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300""
               >
->>>>>>> pr-10728
                 Contact Sales Team;
-=======
               in your organization.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <Link''
-=======
 :pages.disabled/solutions/Enterprise.jsx;
               Ready to Transform Your Enterprise?''
             </h2>'''
@@ -1076,7 +975,6 @@ const EnterpriseSolutions = () => {}
             </p>'''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>'
               <Link'''
->>>>>>> main
                 to='/contact'';
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105'>
                 Schedule Enterprise Demo'
@@ -1086,15 +984,12 @@ const EnterpriseSolutions = () => {}
                 className='px-8 py-4 border border-cyan-400 text-cyan-400 hove,
     r:bg-cyan-400 hove,
     r:text-black font-semibold rounded-lg transition-all duration-300'>                Contact Sales Team
->>>>>>> main
->>>>>>> main
               </Link>
             </div>
           </div>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
 };
 
@@ -1106,16 +1001,10 @@ export default EnterpriseSolutions;'"
 '"'"
 export default EnterpriseSolutions;
 '""
->>>>>>> pr-10728
-=======
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 :pages.disabled/solutions/Enterprise.jsx;
 export: default EnterpriseSolutions'';'''';
-=======
   )}
 :pages.disabled/solutions/Enterprise.jsx;
 export default EnterpriseSolutions'''''
->>>>>>> main
->>>>>>> main

@@ -1,9 +1,8 @@
 :pages.disabled/pages/services/AIRetail.tsx;
-<<<<<<< HEAD
 import: { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Store, BarChart3 export default function AIRetail() {
-    'Automated pricing optimization and dynamic pricing','Real-time customer sentiment and feedback analysis',';Predictive: analytics for sales and customer lifetime value',';Smart: recommendation engines and cross-selling',';Integration: with major e-commerce and POS platforms',';';
+    'Automated pricing optimization and dynamic pricing','Real-time customer sentiment and feedback analysis',';Predictive: analytics for sales and customer lifetime value',';Smart: recommendation engines and cross-selling',';Integration: with major e-commerce and POS platforms',';
 import: { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Store, BarChart3 export default function AIRetail(function AIRetail() {): any: {}
-    'Automated pricing optimization and dynamic pricing',';Real-time: customer sentiment and feedback analysis',';Predictive: analytics for sales and customer lifetime value',';Smart: recommendation engines and cross-selling',';Integration: with major e-commerce and POS platforms',';Custom: AI models for retail-specific insights';';
+    'Automated pricing optimization and dynamic pricing',';Real-time: customer sentiment and feedback analysis',';Predictive: analytics for sales and customer lifetime value',';Smart: recommendation engines and cross-selling',';Integration: with major e-commerce and POS platforms',';Custom: AI models for retail-specific insights';
 <:pages.disabled/pages/services/AIRetail.tsx;
   ];
   const: tiers = [
@@ -21,24 +20,24 @@ import: { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
 :pages.disabled/pages/services/AIRetail.tsx>    {
       name: 'Large: Retailer,',';
       price: '$,1,999/mo',';
-    { ';';
-      name: 'Large: Retailer,', ';';
-      price: '$,1,999/mo', ';';
+    { ';
+      name: 'Large: Retailer,', ';
+      price: '$,1,999/mo', ';
       details: ['Unlimited: products,',Custom AI models',Full platform integration',24/7 dedicated support'] },';
-  ]';E-commerce: optimization and conversion rate improvement',';Brick-and-mortar: store analytics and optimization',';Inventory: management and supply chain optimization',';Customer: segmentation and targeted marketing',';Price: optimization and competitive analysis',';Omnichannel: retail experience enhancement';';
-  ]';Increase: sales conversion rates by 20-40%',';Improve: customer retention by 30-50%',';Reduce: inventory costs by 25-40%',';Optimize: pricing for maximum profitability',';Enhance: customer experience and satisfaction',';Scale: retail operations efficiently';';
-  ]';E-commerce: & Online Retail',';Brick: & Mortar Stores',';Fashion: & Apparel',';Electronics: & Technology',';Home: & Garden',';Food: & Beverage Retail';';
+  ]';E-commerce: optimization and conversion rate improvement',';Brick-and-mortar: store analytics and optimization',';Inventory: management and supply chain optimization',';Customer: segmentation and targeted marketing',';Price: optimization and competitive analysis',';Omnichannel: retail experience enhancement';
+  ]';Increase: sales conversion rates by 20-40%',';Improve: customer retention by 30-50%',';Reduce: inventory costs by 25-40%',';Optimize: pricing for maximum profitability',';Enhance: customer experience and satisfaction',';Scale: retail operations efficiently';
+  ]';E-commerce: & Online Retail',';Brick: & Mortar Stores',';Fashion: & Apparel',';Electronics: & Technology',';Home: & Garden',';Food: & Beverage Retail';
   ];
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center'>''';
         <div: className='max-w-5xl mx-auto px-6'>''';
-          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';';
+          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
 :pages.disabled/pages/services/AIRetail.tsx: <ShoppingCart className='w-4 h-4 mr-2'  /> AI-Powered Retail Intelligence'';
           </div>''';
           <h1: className='text-4xl md: text-6xl: font-bold text-white mb-4'>AI Retail Platform</h1>'          <p className='text-indigo-100 text-xl'>Transform your retail business with AI-powered insights that optimize pricin,g, enhance customer experience, and maximize sales performance.</p>';
         </div>
-      </section>';';
+      </section>';
 ''';
       <section: className='py-16 max-w-6xl mx-auto px-6'>''';
         <div: className='grid md: grid-cols-2: gap-10'>'';
@@ -68,7 +67,7 @@ import: { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
           </div>''';
           <div: className='bg-white border border-gray-200 rounded-xl p-6 shadow-lg'>''';
             <h3: className='text-2xl font-semibold text-gray-900 mb-4'>Competitive Pricing</h3>''';
-            <div: className='grid md: grid-cols-3: gap-4'>'),)}';
+            <div: className='grid md: grid-cols-3: gap-4'>'))}';
             </ul>''';
             <div: className='mt-6 text-sm text-gray-600'>';
               Built: with enterprise-grade security, PCI DSS compliance, and 99.9% uptime SLA.
@@ -89,7 +88,7 @@ import: { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700: transition-colors inline-flex items-center'>''';
-                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'),)}';
+                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'))}';
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700: transition-colors inline-flex items-center'>''';
@@ -99,10 +98,9 @@ import: { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
                 Learn: More <ExternalLink className='w-4 h-4 ml-2'  />              </a>';
             </div>
           </div>
-:pages.disabled/pages/services/AIRetail.tsx: </div>';';
+:pages.disabled/pages/services/AIRetail.tsx: </div>';
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>''';
-=======
 import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Store, BarChart3 export default function AIRetail() {
     'Automated pricing optimization and dynamic pricing',Real-time customer sentiment and feedback analysis',;Predictive analytics for sales and customer lifetime value',;Smart recommendation engines and cross-selling',;Integration with major e-commerce and POS platforms',;
 import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Store, BarChart3 export default function AIRetail(function AIRetail() {): any {}
@@ -127,9 +125,7 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
     { ';
       name: 'Large Retailer', ';
       price: '$1,999/mo', ';
-      details: ['Unlimited products',Custom AI models',Full platform integration',24/7 dedicated support'] },
-<<<<<<< HEAD
-  ]';E-commerce optimization and conversion rate improvement',';Brick-and-mortar store analytics and optimization',';Inventory management and supply chain optimization',';Customer segmentation and targeted marketing',';Price optimization and competitive analysis',';Omnichannel retail experience enhancement';
+      details: ['Unlimited products',Custom AI models',Full platform integration',24/7 dedicated support'] }]';E-commerce optimization and conversion rate improvement',';Brick-and-mortar store analytics and optimization',';Inventory management and supply chain optimization',';Customer segmentation and targeted marketing',';Price optimization and competitive analysis',';Omnichannel retail experience enhancement';
   ]';Increase sales conversion rates by 20-40%',';Improve customer retention by 30-50%',';Reduce inventory costs by 25-40%',';Optimize pricing for maximum profitability',';Enhance customer experience and satisfaction',';Scale retail operations efficiently';
   ]';E-commerce & Online Retail',';Brick & Mortar Stores',';Fashion & Apparel',';Electronics & Technology',';Home & Garden',';Food & Beverage Retail';
   ]
@@ -153,7 +149,6 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
             <ShoppingCart className='w-4 h-4 mr-2'  /> AI-Powered Retail Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Retail Platform</h1>'          <p className='text-indigo-100 text-xl'>Transform your retail business with AI-powered insights that optimize pricing, enhance customer experience, and maximize sales performance.</p>
-=======
   ];E-commerce optimization and conversion rate improvement',;Brick-and-mortar store analytics and optimization',;Inventory management and supply chain optimization',;Customer segmentation and targeted marketing',;Price optimization and competitive analysis',;Omnichannel retail experience enhancement';
   ];Increase sales conversion rates by 20-40%',;Improve customer retention by 30-50%',;Reduce inventory costs by 25-40%',;Optimize pricing for maximum profitability',;Enhance customer experience and satisfaction',;Scale retail operations efficiently';
   ];E-commerce & Online Retail',;Brick & Mortar Stores',;Fashion & Apparel',;Electronics & Technology',;Home & Garden',;Food & Beverage Retail';
@@ -179,7 +174,6 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
           </div>'''
           <h1 className='text-4xl m,
     d:text-6xl font-bold text-white mb-4'>AI Retail Platform</h1>'          <p className='text-indigo-100 text-xl'>Transform your retail business with AI-powered insights that optimize pricing, enhance customer experience, and maximize sales performance.</p>
->>>>>>> main
         </div>
       </section>'
 '''
@@ -231,12 +225,10 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
                 Learn More <ExternalLink className='w-4 h-4 ml-2'  />              </a>
             </div>
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIRetail.tsx
         </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
->>>>>>> main
         </div>
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>';
@@ -245,20 +237,17 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
               <Brain: className='w-6 h-6 text-blue-600 mb-3'  />'              <div className='text-gray-900 font-semibold'>{,t}</div>';
             </div>
           ))}
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIRetail.tsx: </div>';';
+:pages.disabled/pages/services/AIRetail.tsx: </div>';
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''';
           <div: className='grid md: grid-cols-2: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIRetail.tsx
         </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
           <div className='grid md:grid-cols-2 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
@@ -270,20 +259,17 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIRetail.tsx: </div>';';
+:pages.disabled/pages/services/AIRetail.tsx: </div>';
 ''';
         <div: className='mt-16 bg-blue-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Retail Impact</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIRetail.tsx
         </div>'
 ''
         <div className='mt-16 bg-blue-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Retail Impact</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-blue-50 rounded-xl p-8'>''';
@@ -295,20 +281,17 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIRetail.tsx: </div>';';
+:pages.disabled/pages/services/AIRetail.tsx: </div>';
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIRetail.tsx
         </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
@@ -322,12 +305,11 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
           </div>
 :pages.disabled/pages/services/AIRetail.tsx: </div>'';
         </div>
-<<<<<<< HEAD
 ''';
         <div: className='mt-14 text-center'>''';
           <div: className='text-sm text-gray-600 mb-2'>Ready to transform your retail business with AI?</div>''';
           <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
-            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700: transition-colors'>'';';
+            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700: transition-colors'>'';
 :pages.disabled/pages/services/AIRetail.tsx: <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'';
             </a>''';
             <a: href='mailto:kleber@ziontechgroup.com' className='inline-flex: items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50: transition-colors'>''';
@@ -345,14 +327,12 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
 :pages.disabled/pages/services/AIRetail.tsx: </div>'')}}''''';
     </div>
   )}}'''';
-=======
 ''
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to transform your retail business with AI?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
             <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors'>''
 :pages.disabled/pages/services/AIRetail.tsx
-=======
 :pages.disabled/pages/services/AIRetail.tsx'
         </div>';
 '''
@@ -436,7 +416,6 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors>''
               <Mail className='w-4 h-4 mr-2' /> kleber@ziontechgroup.com            </a>''
->>>>>>> main
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hove,
@@ -453,4 +432,3 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
     </div>'')}}''
     </div>'
   )}}''
->>>>>>> main

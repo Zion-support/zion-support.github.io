@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { readFileSync, writeFileSync } from;,"});,"})
   'fs';,"});,"})
 import path, { resolve } from;,"});,"})
@@ -51,26 +50,22 @@ process.exit(1);process.exit(1);,"});,"})
 });,"});,"})
 }"});,"})
 ;,"});,"})
-=======
-<<<<<<< HEAD
 import: { readFileSync, writeFileSync } from;
-  'fs';';
+  'fs';
 import: path, { resolve } from;
-  'path';';
+  'path';
 import: { build } from;
-  'esbuild';';
+  'esbuild';
 import: React from;
-  'react';';
+  'react';
 import: { renderToString } from;
-  'react-dom/server';';
+  'react-dom/server';
 async: function prerender() {
   const result = await build({
     entryPoints[resolve(
   'src/pages/Home.tsx')],';
     bundle: tru,e,
-=======
 import { readFileSync, writeFileSync } from;
-<<<<<<< HEAD
   'fs';
 import path, { resolve } from;
   'path';
@@ -80,45 +75,40 @@ import React from;
   'react';
 import { renderToString } from;
   'react-dom/server';
-<<<<<<< HEAD
 async function prerender() {
   const result = await build({
     entryPoints[resolve('
   'src/pages/Home.tsx')],
     bundle: true,
->>>>>>> main
     platform:,
   node',';
     format: 'es,m,';
     write: fals,e,
     plugins[{
-<<<<<<< HEAD
         name: ;
   'alias,',';
         setup(build) {
-          build.onResolve({ filter: /^@\//, }, (args) => {
+          build.onResolve({ filter: /^@\//}, (args) => {
             const: file = args.path.replace(/^@\//, ,
-  ');';
+  ');
             return: { path: path.resolve('sr,c, file) }})}}]})';
   const: text = result.outputFiles[0].text;
-  const: mod = await import(`data: text/javascript;base6,4,${Buffer.from(text).toString('base64;';
+  const: mod = await import(`data: text/javascript;base6,4,${Buffer.from(text).toString('base64;
   ')}`);
   const: Home = mod.default;
   const: html = renderToString(React.createElement(Home));
-  const: template = readFileSync(resolve('dist/index.html;';
-  '), 'utf8;';
-  ');';
+  const: template = readFileSync(resolve('dist/index.html;
+  '), 'utf8;
+  ');
   const: rendered = template.replace('<!--app-html-->';
-  ', html);';
-  writeFileSync(resolve('dist/index.html;';
-  '), rendered);';
-  // // // // // // // console.log('Pre-rendered: homepage to dist/index.html;';
+  ', html);
+  writeFileSync(resolve('dist/index.html;
+  '), rendered);
+  // // // // // // // console.log('Pre-rendered: homepage to dist/index.html;
   ')}';
 prerender().catch((err) => {
-  // // // // // // // console.error('Error: prerendering:', err);';
+  // // // // // // // console.error('Error: prerendering:', err);
 process.exit(1);process.exit(1)})}
-=======
-=======
 async function prerender() {;
   const result = await build({;
     entryPoints[resolve(;
@@ -129,7 +119,6 @@ async function prerender() {;
     format: 'esm,;
     write: false,;
     plugins[{;
->>>>>>> main
         name:;
   'alias',;
         setup(build) {;
@@ -145,28 +134,18 @@ async function prerender() {;
   const template = readFileSync(resolve('dist/index.html;
   '), 'utf8;
   ');
-<<<<<<< HEAD
   const rendered = template.replace('<!--app-html-->'
-=======
   const rendered = template.replace('<!--app-html-->;
->>>>>>> main
   ', html);
   writeFileSync(resolve('dist/index.html;
   '), rendered);
   // // // // // // // console.log('Pre-rendered homepage to dist/index.html;
   ')}
-<<<<<<< HEAD
 prerender().catch((err) => {'
-=======
 prerender().catch((err) => {;
->>>>>>> main
   // // // // // // // console.error('Error prerendering:', err);
 process.exit(1);process.exit(1)})}
-=======
-  'fs';';import path, { resolve } from;';  'path';';import { build } from;';  'esbuild';';import React from;';  'react';';import { renderToString } from;';  'react-dom/server';';async function prerender() {;';  const result = await build({;);    entryPoints[resolve(;);  'src/pages/Home.tsx')],';    "bundle": true,;";    "platform":,;";  node',';    "format": 'esm,';    "write": false,;";    plugins[{;
-        "name":;";  'alias',';        setup(build) {;';          build.onResolve({ "filter": /^@\// }, (args) => {;
-            const file = args.path.replace(/^@\//, ,;);  ');';            return { "path": path.resolve('src, file) }})}}]})';  const text = result.outputFiles[0].text;';  const mod = await import(`"data":text/javascript;base64,${Buffer.from(text).toString('base64;';  ')}`);';  const Home = mod.default;`;  const html = renderToString(React.createElement(Home));
-  const template = readFileSync(resolve('dist/index.html;';  '), 'utf8;';  ');';  const rendered = template.replace('<!--app-html-->';  ', html);';  writeFileSync(resolve('dist/index.html;';  '), rendered);';  // // // // // // // console.log('Pre-rendered homepage to dist/index.html;';  ')}';prerender().catch((err) => {;';  // // // // // // // console.error('Error "prerendering":', err);';process.exit(1);process.exit(1)})}'
->>>>>>> main
->>>>>>> main
->>>>>>> main
+  'fs';import path, { resolve } from;  'path';import { build } from;  'esbuild';import React from;  'react';import { renderToString } from;  'react-dom/server';async function prerender() {;  const result = await build({;);    entryPoints[resolve(;);  'src/pages/Home.tsx')],';    "bundle": true,;";    "platform":,;";  node',';    "format": 'esm,';    "write": false,;";    plugins[{;
+        "name":;";  'alias',';        setup(build) {;          build.onResolve({ "filter": /^@\// }, (args) => {;
+            const file = args.path.replace(/^@\//, ,;);  ');            return { "path": path.resolve('src, file) }})}}]})';  const text = result.outputFiles[0].text;  const mod = await import(`"data":text/javascript;base64,${Buffer.from(text).toString('base64;  ')}`);  const Home = mod.default;`;  const html = renderToString(React.createElement(Home));
+  const template = readFileSync(resolve('dist/index.html;  '), 'utf8;  ');  const rendered = template.replace('<!--app-html-->';  ', html);  writeFileSync(resolve('dist/index.html;  '), rendered);  // // // // // // // console.log('Pre-rendered homepage to dist/index.html;  ')}';prerender().catch((err) => {;  // // // // // // // console.error('Error "prerendering":', err);process.exit(1);process.exit(1)})}'

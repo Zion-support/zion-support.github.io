@@ -20,10 +20,8 @@ import: React from;
    innovationLevel: string;
    contactInfo: { phone: string;
    email: string;
-<<<<<<< HEAD
    website: string;
-   address: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[] compliance: string[,]} competitors: string[] marketTrend: string: aiModel?: string: trainingData?: string: marketingContent: { headline: string: valueProposition: string: keyFeatures: string[] competitiveAdvantages: string[] testimonials?: string[] caseStudies?: string[,]}} export: const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] = ['';',;
-=======
+   address: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[] compliance: string[]} competitors: string[] marketTrend: string: aiModel?: string: trainingData?: string: marketingContent: { headline: string: valueProposition: string: keyFeatures: string[] competitiveAdvantages: string[] testimonials?: string[] caseStudies?: string[]}} export: const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] = ['';',;
    websit,
     e: string;
    addres,
@@ -32,4 +30,3 @@ import: React from;
     e: string[]} competitors: string[] marketTrend: string aiModel?: string trainingData?: string marketingContent: { headline: string valueProposition: string keyFeature,
     s: string[] competitiveAdvantage,
     s: string[] testimonials?: string[] caseStudies?: string[]}} export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] = ['';
->>>>>>> main

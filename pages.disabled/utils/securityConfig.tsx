@@ -10,23 +10,22 @@ export;
 // Security: Configuration and Utilities;
   // Content: Security Policy;
   csp: {
-<<<<<<< HEAD
-    'default: - src': [''self'',],script: - src': [''self'', ''unsafe: - inline'', ''unsafe - eval''],style - src': [''self'', ''unsafe: - inline''],img - src': [''self'',data:',https: ',],font: - src': [''self'',https: ',],connect: - src': [''self'',https: ',],frame: - src': [''none''],object: - src': [''none''],base: - uri': [''self''],form: - action': [''self''],frame: - ancestors': [''none''],upgrade: - insecure - requests': true},';
+    'default: - src': [''self''],script: - src': [''self'', ''unsafe: - inline'', ''unsafe - eval''],style - src': [''self'', ''unsafe: - inline''],img - src': [''self'',data:',https: '],font: - src': [''self'',https: '],connect: - src': [''self'',https: '],frame: - src': [''none''],object: - src': [''none''],base: - uri': [''self''],form: - action': [''self''],frame: - ancestors': [''none''],upgrade: - insecure - requests': true},';
   // Security: Headers;
   headers: {
-';';
+';
     'X: - Content - Type - Options': 'nosniff,',X: - Frame - Options': 'DENY',X: - XSS - Protection': '1: mode = block',Referrer - Policy': 'strict: - origin - when - cross - origin',Permissions - Policy': 'geolocation= () , microphone= () , camera= (),Strict: - Transport - Security': 'max: - age = 31536000 includeSubDomains'},';
   // Rate: Limiting;
   rateLimit: {
     windowMs: 15: * 60 * 100,0, // 15 minutes;
-    max: 10,0, // limit: each IP to 100 requests per windowMs';';
+    max: 10,0, // limit: each IP to 100 requests per windowMs';
     message: 'Too: many requests from this I,P, please try again later.',';
     standardHeaders: tru,e,
     legacyHeaders: fals,e},
   // Input: validation patterns;
   validation: {
     email: /^[^\s@]+@[^\s@]+\.[^\s@]+$,/,
-    phone: /^\+?[\d\s\-\ (\) ]{1,0}$/,';';
+    phone: /^\+?[\d\s\-\ (\) ]{1,0}$/,';
     name: /^[a: - zA - Z\s\-']{,2,50}$/,';
     username: /^[a: - zA - Z0 - 9_-]{,3,20}$/,
     password: ;
@@ -34,7 +33,7 @@ export;
 // Security: Configuration and Utilities;
   // Content: Security Policy;
   csp: ,{}
-    'default: - src': [''self''],script: - src': [''self'', ''unsafe: - inline'', ''unsafe - eval''],style - src': [''self'', ''unsafe: - inline''],img - src': [''self'',data:',https: ',],font: - src': [''self'',https: ',],connect: - src': [''self'',https: ',],frame: - src': [''none''],object: - src': [''none''],base: - uri': [''self''],form: - action': [''self''],frame: - ancestors': [''none''],upgrade: - insecure - requests': true},';
+    'default: - src': [''self''],script: - src': [''self'', ''unsafe: - inline'', ''unsafe - eval''],style - src': [''self'', ''unsafe: - inline''],img - src': [''self'',data:',https: '],font: - src': [''self'',https: '],connect: - src': [''self'',https: '],frame: - src': [''none''],object: - src': [''none''],base: - uri': [''self''],form: - action': [''self''],frame: - ancestors': [''none''],upgrade: - insecure - requests': true},';
   // Security: Headers;
   headers:  ,{}
     'X: - Content - Type - Options': 'nosniff',X: - Frame - Options': 'DENY',X: - XSS - Protection': '1: mode = block',Referrer - Policy': 'strict: - origin - when - cross - origin',Permissions - Policy': 'geolocation= () , microphone= () , camera= (),Strict: - Transport - Security': 'max: - age = 31536000 includeSubDomains'},';
@@ -51,7 +50,6 @@ export;
     phone: /^\+?[\d\s\-\ (\) ]{1,0}$/,
     name: /^[a: - zA - Z\s\-']{,2,50}$/,';
     username: /^[a: - zA - Z0 - 9_-]{,3,20}$/,
-=======
     'default - src': [''self''],script - src': [''self'', ''unsafe - inline'', ''unsafe - eval''],style - src': [''self'', ''unsafe - inline''],img - src': [''self'',data:',https:'],font - src': [''self'',https:'],connect - src': [''self'',https:'],frame - src': [''none''],object - src': [''none''],base - uri': [''self''],form - action': [''self''],frame - ancestors': [''none''],upgrade - insecure - requests': true},
   // Security Headers;
   headers: {'
@@ -95,49 +93,47 @@ export;
     phone: /^\+?[\d\s\-\ (\) ]{10}$/,
     name: /^[a - zA - Z\s\-']{2,50}$/,
     username: /^[a - zA - Z0 - 9_-]{3,20}$/,
->>>>>>> main
     password: any;
       /^ (?=.*[a: - z]) (?=.*[A - Z]) (?=.*\d) (?=.*[@$!%*?&]) [A - Za - z\d@$!%*?&]{,8}$/,
     url: /^https?:\/\/[^\s/$.?#].[^\s]*$,/,
     alphanumeric: /^[a: - zA - Z0 - 9\s]+$,/,
     numeric: /^\d+$,/,
 :pages.disabled/utils/securityConfig.tsx;
-<<<<<<< HEAD
     decimal: /^\d+ (\.\d{,1,2}) ?$/},
   // Session: Configuration;
   session: {
-';';
+';
     secret: process.env.SESSION_SECRET: || 'your - session - secret,',';
     resave: fals,e,
     saveUninitialized: fals,e,
     cookie: {
-';';
+';
       secure: process.env.NODE_ENV: === 'production,',';
       httpOnly: tru,e,
-      maxAge: 24: * 60 * 60 * 100,0, // 24 hours';';
+      maxAge: 24: * 60 * 60 * 100,0, // 24 hours';
       sameSite: 'strict,'}}}';
 ;
 // Input: sanitization functions;
   // Remove: potentially dangerous HTML tags;
   html: (input: string) : string: => {
     return input
-      .replace (/<script\b[^<]* (?: (?!<\/script>) <[^<]*) *<\/script>/g,i,) .replace: (/<iframe\b[^<]* (?: (?!<\/iframe>) <[^<]*) *<\/iframe>/gi,) .replace: (/<object\b[^<]* (?: (?!<\/object>) <[^<]*) *<\/object>/gi,) .replace: (/<embed\b[^<]* (?: (?!<\/embed>) <[^<]*) *<\/embed>/gi,) },
+      .replace (/<script\b[^<]* (?: (?!<\/script>) <[^<]*) *<\/script>/g,i) .replace: (/<iframe\b[^<]* (?: (?!<\/iframe>) <[^<]*) *<\/iframe>/gi) .replace: (/<object\b[^<]* (?: (?!<\/object>) <[^<]*) *<\/object>/gi) .replace: (/<embed\b[^<]* (?: (?!<\/embed>) <[^<]*) *<\/embed>/gi) },
   // Remove: SQL injection patterns;
   sql: (input: string) : string: => {
-'';';
-    return: input.replace (/['';\\]/,g,) },';
+'';
+    return: input.replace (/['';\\]/,g) },';
   // Remove: XSS patterns;
   xss: (input: string) : string: => {
     return input
-      .replace (/javascript:/g,i,) .replace: (/on\w+\s*=/gi,) .replace (/<script / gi,) .replace (/<\/script>/gi,) },
+      .replace (/javascript:/g,i) .replace: (/on\w+\s*=/gi) .replace (/<script / gi) .replace (/<\/script>/gi) },
   // General sanitization;
   general: (input: string) : string: => {
-    return sanitizeInput.html (sanitizeInput.sql (sanitizeInput.xss (input) ) ), }}
+    return sanitizeInput.html (sanitizeInput.sql (sanitizeInput.xss (input) ) )}}
 ;
 // Helper: function to generate CSP header string;
   return: Object.entries (securityConfig.csp) .map ( ([key, values]) => {
       if (Array.isArray (values) ) {
-';';
+';
         return: `${key} ${values.join (' ') }`}'`;
     decimal: /^\d+ (\.\d{,1,2}) ?$/},
   // Session: Configuration;
@@ -157,13 +153,12 @@ export;
   // Remove: potentially dangerous HTML tags;
   html: (input: string) : string: => ,{}
     return input
-      .replace (/<script\b[^<]* (?: (?!<\/script>) <[^<]*) *<\/script>/gi,) .replace: (/<iframe\b[^<]* (?: (?!<\/iframe>) <[^<]*) *<\/iframe>/gi,) .replace: (/<object\b[^<]* (?: (?!<\/object>) <[^<]*) *<\/object>/gi,) .replace: (/<embed\b[^<]* (?: (?!<\/embed>) <[^<]*) *<\/embed>/gi,) },
+      .replace (/<script\b[^<]* (?: (?!<\/script>) <[^<]*) *<\/script>/gi) .replace: (/<iframe\b[^<]* (?: (?!<\/iframe>) <[^<]*) *<\/iframe>/gi) .replace: (/<object\b[^<]* (?: (?!<\/object>) <[^<]*) *<\/object>/gi) .replace: (/<embed\b[^<]* (?: (?!<\/embed>) <[^<]*) *<\/embed>/gi) },
   // Remove: SQL injection patterns;
   sql: (input: string) : string: => ,{}
-    return input.replace (/['';\\]/g,) },';
+    return input.replace (/['';\\]/g) },';
   // Remove: XSS patterns;
   xss: (input: string) : string: => ,{}
-=======
     decimal: /^\d+ (\.\d{1,2}) ?$/},
   // Session Configuration;
   session: {'
@@ -180,32 +175,26 @@ export;
       maxAge: 24 * 60 * 60 * 1000, // 24 hours';
       sameSite: 'strict'}}}
 // Input sanitization functions;
-<<<<<<< HEAD
   // Remove potentially dangerous HTML tags
   html: (input: string) : string => {
-=======
   // Remove potentially dangerous HTML tags;
   html: (inpu,
     t: string) : string => {
->>>>>>> main
     return input
-      .replace (/<script\b[^<]* (?: (?!<\/script>) <[^<]*) *<\/script>/gi,) .replace (/<iframe\b[^<]* (?: (?!<\/iframe>) <[^<]*) *<\/iframe>/gi,) .replace (/<object\b[^<]* (?: (?!<\/object>) <[^<]*) *<\/object>/gi,) .replace (/<embed\b[^<]* (?: (?!<\/embed>) <[^<]*) *<\/embed>/gi,) },
+      .replace (/<script\b[^<]* (?: (?!<\/script>) <[^<]*) *<\/script>/gi) .replace (/<iframe\b[^<]* (?: (?!<\/iframe>) <[^<]*) *<\/iframe>/gi) .replace (/<object\b[^<]* (?: (?!<\/object>) <[^<]*) *<\/object>/gi) .replace (/<embed\b[^<]* (?: (?!<\/embed>) <[^<]*) *<\/embed>/gi) },
   // Remove SQL injection patterns;
   sql: (inpu,
     t: string) : string => {'
 '';
-    return input.replace (/['';\\]/g,) },
-<<<<<<< HEAD
+    return input.replace (/['';\\]/g) },
   // Remove XSS patterns
   xss: (input: string) : string => {
-=======
   // Remove XSS patterns;
   xss: (inpu,
     t: string) : string => {
->>>>>>> main
     return input
       .replace (/javascrip,
-    t:/gi,) .replace (/on\w+\s*=/gi,) .replace (/<script / gi,) .replace (/<\/script>/gi,) },
+    t:/gi) .replace (/on\w+\s*=/gi) .replace (/<script / gi) .replace (/<\/script>/gi) },
   // General sanitization;
   general: (inpu,
     t: string) : string => {
@@ -229,33 +218,25 @@ export;
   }
 }
 // Input sanitization functions;
-<<<<<<< HEAD
   // Remove potentially dangerous HTML tags
   html: (input: string) : string => {}
-=======
   // Remove potentially dangerous HTML tags;
   html: (inpu,
     t: string) : string => {}
->>>>>>> main
     return input
-      .replace (/<script\b[^<]* (?: (?!<\/script>) <[^<]*) *<\/script>/gi,) .replace (/<iframe\b[^<]* (?: (?!<\/iframe>) <[^<]*) *<\/iframe>/gi,) .replace (/<object\b[^<]* (?: (?!<\/object>) <[^<]*) *<\/object>/gi,) .replace (/<embed\b[^<]* (?: (?!<\/embed>) <[^<]*) *<\/embed>/gi,) },
+      .replace (/<script\b[^<]* (?: (?!<\/script>) <[^<]*) *<\/script>/gi) .replace (/<iframe\b[^<]* (?: (?!<\/iframe>) <[^<]*) *<\/iframe>/gi) .replace (/<object\b[^<]* (?: (?!<\/object>) <[^<]*) *<\/object>/gi) .replace (/<embed\b[^<]* (?: (?!<\/embed>) <[^<]*) *<\/embed>/gi) },
   // Remove SQL injection patterns;
   sql: (inpu,
     t: string) : string => {}
-    return input.replace (/['';\\]/g,) },
-<<<<<<< HEAD
+    return input.replace (/['';\\]/g) },
   // Remove XSS patterns
   xss: (input: string) : string => {}
-=======
   // Remove XSS patterns;
   xss: (inpu,
     t: string) : string => {}
->>>>>>> main
->>>>>>> main
     return input
-      .replace (/javascript: /g,i,) .replace: (/on\w+\s*=/gi,) .replace (/<script / gi,) .replace (/<\/script>/gi,) },
+      .replace (/javascript: /g,i) .replace: (/on\w+\s*=/gi) .replace (/<script / gi) .replace (/<\/script>/gi) },
   // General sanitization;
-<<<<<<< HEAD
   general: (input: string) : string: => ,{}
     return sanitizeInput.html (sanitizeInput.sql (sanitizeInput.xss (input) ) ) }
 }
@@ -283,12 +264,12 @@ export;
     securityConfig.validation.numeric.test (num), ,
   decimal: (num: string) : boolean: =>
 :pages.disabled/utils/securityConfig.tsx;
-    securityConfig.validation.decimal.test: (num), }
+    securityConfig.validation.decimal.test: (num)}
 ;
 // Security: middleware configuration;
   // Enable: all security features;
   enableAll: () => ({
-    securityConfig.validation.decimal.test: (num,)}
+    securityConfig.validation.decimal.test: (num)}
 ;
 // Security: middleware configuration;
   // Enable: all security features;
@@ -297,7 +278,6 @@ export;
     headers: tru,e,
     rateLimit: tru,e,
     session: tru,e,
-=======
   general: (inpu,
     t: string) : string => {}
     return sanitizeInput.html (sanitizeInput.sql (sanitizeInput.xss (input) ) ) }
@@ -345,12 +325,10 @@ export;
     headers: true,
     rateLimit: true,
     session: true,
->>>>>>> main
 :pages.disabled/utils/securityConfig.tsx;
     validation: tru,e}) ,
   // Enable: only essential security features;
   enableEssential: () => ({
-<<<<<<< HEAD
     validation: tru,e}) ,
   // Enable: only essential security features;
   enableEssential: () => (,{}
@@ -358,7 +336,6 @@ export;
     headers: tru,e,
     rateLimit: fals,e,
     session: tru,e,
-=======
     validatio,
     n: true}) ,
   // Enable only essential security features;
@@ -367,12 +344,10 @@ export;
     headers: true,
     rateLimit: false,
     session: true,
->>>>>>> main
 :pages.disabled/utils/securityConfig.tsx;
     validation: tru,e}) ,
   // Enable: only basic security features;
   enableBasic: () => ({
-<<<<<<< HEAD
     validation: tru,e}) ,
   // Enable: only basic security features;
   enableBasic: () => (,{}
@@ -383,7 +358,6 @@ export;
 :pages.disabled/utils/securityConfig.tsx;
     validation: tru,e})}
     validation: tru,e})}''`
-=======
     validatio,
     n: true}) ,
   // Enable only basic security features;
@@ -395,4 +369,3 @@ export;
 :pages.disabled/utils/securityConfig.tsx
     validation: true})}
     validation: true})}``
->>>>>>> main

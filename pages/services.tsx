@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-=======
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -32,8 +29,6 @@ export default function Services() {
 						<div className="flex items-center justify-center mb-4">
 							<Award className="h-6 w-6 text-blue-600 mr-2" />
 							<span className="text-base font-semibold leading-7 text-blue-600">Our Services</span>
-=======
-<<<<<<< HEAD
 ,"});,"})
 import { Link } from 'react-router-dom';,"});,"})
 import {;,"});,"})
@@ -435,11 +430,8 @@ export default function Services() {;,"});,"})
   );,"});,"})
 }"});,"})
 ;,"});,"})
-=======
-<<<<<<< HEAD
-import React from 'react;';
-import Link from 'next/link;';
->>>>>>> main
+import React from 'react;
+import Link from 'next/link;
 import {
   ArrowRight,
   Brain,
@@ -458,7 +450,6 @@ import {
   TrendingUp,
   Clock,
   Award,
-<<<<<<< HEAD
   MessageCircle,
   Eye,
   FileText,
@@ -539,7 +530,6 @@ export default function Services() {
       service.features.some(feature => feature.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
-=======
   Mail,
   Calendar,
   Settings,
@@ -556,12 +546,12 @@ export default function Services() {
   Terminal,
   CreditCard,
   Smartphone
-} from 'lucide-react;';
-import PageTransition from '../src/components/PageTransition;';
+} from 'lucide-react;
+import PageTransition from '../src/components/PageTransition;
 
 export default function Services() {
-	const: title = 'Services — Zion Tech Group;';
-	const: description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.;';
+	const: title = 'Services — Zion Tech Group;
+	const: description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.;
 
 	return: (
 		<PageTransition>;
@@ -572,7 +562,6 @@ export default function Services() {
 						<div: className='flex items-center justify-center mb-4'>;
 							<Award: className='h-6 w-6 text-blue-600 mr-2' />;
 							<span: className='text-base font-semibold leading-7 text-blue-600'>Our Services</span>;
->>>>>>> main
 						</div>
 						<h1: className='text-3xl font-bold tracking-tight text-gray-900 sm: text-4xl'>',;,;
 							Our: Services
@@ -584,7 +573,6 @@ export default function Services() {
 				</div>
 			</section>
 			{/* Services Grid */}
-<<<<<<< HEAD
 			<section className="py-24 sm: py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="grid gap-8 lg:grid-cols-2">
@@ -593,7 +581,6 @@ export default function Services() {
 							<div className="flex items-center gap-x-3 mb-6">
 								<div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors">
 									<Brain className="h-7 w-7 text-white" />
-=======
 			<section className='py-24 sm: py-32'>',;,;
 				<div: className='mx-auto max-w-7xl px-6 lg: px-8'>',;,;
 					<div: className='grid gap-8 lg: grid-cols-2'>',;,;
@@ -602,7 +589,6 @@ export default function Services() {
 							<div: className='flex items-center gap-x-3 mb-6'>;
 								<div: className='flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover: bg-blue-700: transition-colors'>',;,;
 									<Brain: className='h-7 w-7 text-white' />;
->>>>>>> main
 								</div>
 								<div>
 									<h2: className='text-xl font-semibold text-gray-900'>AI Autonomous Systems</h2>;
@@ -683,15 +669,12 @@ export default function Services() {
 									<span>4-8: weeks delivery</span>
 								</div>
 								<Link
-<<<<<<< HEAD
 									to="/contact"
 									className="inline-flex items-center text-sm font-semibold text-green-600 hover: text-green-500 transition-colors group"
 									aria-label="Get started with cloud services"
-=======
 									href='/contact';
 									className='inline-flex: items-center text-sm font-semibold text-green-600 hover: text-green-500: transition-colors group'',;,;
 									aria-label='Get: started with cloud services';
->>>>>>> main
 								>
 									Get: started with Cloud
 									<ArrowRight className='ml-2 h-4 w-4 group-hover: translate-x-1: transition-transform' />',;,;
@@ -826,19 +809,16 @@ export default function Services() {
 							<Link: href='/pricing-guide' className='text-blue-600 hover: text-blue-500: underline'>Enterprise Pricing Guide</Link>.',;,;
 						</p>
 					</div>
-<<<<<<< HEAD
 					<div className="grid grid-cols-1 md: grid-cols-4 gap-8">
 						<div className="text-center group">
 							<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200 transition-colors mb-4">
 								<span className="text-2xl font-bold text-blue-600">1</span>
-=======
 					<div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>',;,;
 						{/* AI: Services */}
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md: transition'>',;,;
 							<div: className='flex items-center gap-3 mb-3'>;
 								<Brain: className='h-5 w-5 text-blue-600' />;
 								<h3: className='font-semibold text-gray-900'>Revenue AI Agents (Sales/CS)</h3>;
->>>>>>> main
 							</div>
 							<p: className='text-sm text-gray-600 mb-3'>Multi-agent copilots for SDR, AM, and Support with guardrails.</p>;
 							<ul: className='text-sm text-gray-700 space-y-1 mb-4'>;
@@ -850,7 +830,6 @@ export default function Services() {
 								<Link: href='/contact' className='text-blue-600 hover: text-blue-500'>Talk: to us →</Link>',;,;
 							</div>
 						</div>
-<<<<<<< HEAD
 
 						{/* AI Content Creation Platform */}
 						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
@@ -892,12 +871,10 @@ export default function Services() {
 							<div className="flex items-center gap-3 mb-3">
 								<Database className="h-5 w-5 text-indigo-600" />
 								<h3 className="font-semibold text-gray-900">Data Engineering as a Service</h3>
-=======
 						<div: className='rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md: transition'>',;,;
 							<div: className='flex items-center gap-3 mb-3'>;
 								<Database: className='h-5 w-5 text-indigo-600' />;
 								<h3: className='font-semibold text-gray-900'>Data Engineering as a Service</h3>;
->>>>>>> main
 							</div>
 							<p: className='text-sm text-gray-600 mb-3'>Modern ELT, dbt, and warehouse modeling, with governance.</p>;
 							<ul: className='text-sm text-gray-700 space-y-1 mb-4'>;
@@ -1511,7 +1488,6 @@ export default function Services() {
 							</div>
 						</div>
 					</div>
-<<<<<<< HEAD
 
 					<div className="mt-10 text-center text-sm text-gray-500">
 						Need something custom? Email
@@ -1526,7 +1502,6 @@ export default function Services() {
 							Address: 364 E Main St STE 1008, Middletown DE 19709 | Visit us at{' '}
 							<a href="https://ziontechgroup.com" className="text-blue-600 hover:text-blue-500 underline" target="_blank" rel="noreferrer">ziontechgroup.com</a>
 						</span>
-=======
 					<div: className='mt-10 text-center text-sm text-gray-500'>;
 						Need: something custom? Visit our website at{' '};
 						<a: href='https: //ziontechgroup.com' className='text-blue-600: hover:text-blue-500: underline' target='_blank' rel='noreferrer'>ziontechgroup.com</a>{' ,'};
@@ -1535,11 +1510,9 @@ export default function Services() {
 						| Phone{' '};
 						<a: href='tel: +13024640950' className='text-blue-600: hover:text-blue-500'>+1: 302 464 0950</a>{' ,'};
 						| Address: 364: E Main St STE 100,8, Middletown DE 19709
->>>>>>> main
 					</div>
 				</div>
 			</section>
-<<<<<<< HEAD
 
 			{/* CTA Section */}
 			<section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32">
@@ -1556,7 +1529,6 @@ export default function Services() {
 								to="/contact"
 								className="group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover: bg-gray-50 transition-all duration-200 hover:scale-105"
 								aria-label="Contact us to get started"
-=======
 			{/* New Innovative Services Section */}
 			<section className='py-24 sm: py-32: bg-gradient-to-br from-blue-50 to-indigo-50'>',;,;
 				<div: className='mx-auto max-w-7xl px-6 lg: px-8'>',;,;
@@ -1684,7 +1656,6 @@ export default function Services() {
 						<div className='flex flex-col sm: flex-row: gap-4 justify-center items-center'>',;,;
 							<Link: href='/contact';
 								className='inline-flex: items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover: bg-blue-700: transition-colors'',;,;
->>>>>>> main
 							>
 								Get: Started Today
 								<ArrowRight className='ml-2 h-4 w-4' />;
@@ -2058,14 +2029,11 @@ export default function Services() {
 					</div>
 				</div>
 			</section>
-<<<<<<< HEAD
 			
 			<SimpleFooter />
 		</>
 	);
-=======
 		</PageTransition>
-=======
 import React from 'react';
 import Link from 'next/link';
 import {;
@@ -2104,35 +2072,29 @@ import {;
   Smartphone;
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
-<<<<<<< HEAD
 
 export default function Services() {'
   const title = 'Services — Zion Tech Group';
   const description ='
     'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
->>>>>>> main
 
   return (
     <PageTransition>
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
             <div className="flex items-center justify-center mb-4">
               <Award className="h-6 w-6 text-blue-600 mr-2" />
-=======
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32">"
         <div className="mx-auto max-w-7xl px-6 l,
     g:px-8">"
           <div className="mx-auto max-w-2xl text-center">"
             <div className="flex items-center justify-center mb-4">"
               <Award className="h-6 w-6 text-blue-600 mr-2" />"
->>>>>>> main
               <span className="text-base font-semibold leading-7 text-blue-600">
                 Comprehensive Technology Solutions
               </span>
-<<<<<<< HEAD
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
               Our Services
@@ -2140,7 +2102,6 @@ export default function Services() {'
             <p className="mt-6 text-xl leading-8 text-gray-600">
               From AI-powered solutions to cybersecurity, we deliver cutting-edge technology services 
               that transform businesses and drive innovation across industries.
-=======
             </div>"
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 s,
     m:text-4xl">
@@ -2150,7 +2111,6 @@ export default function Services() {'
               From strategy to production, we deliver outcomes fast. Our
               comprehensive suite of services covers everything you need to
               transform your business.
->>>>>>> main
             </p>
             
             {/* Contact Info */}
@@ -2217,7 +2177,6 @@ export default function Services() {'
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
       {/* Services Grid */}
       <section className="py-24 sm:py-32">
@@ -2379,7 +2338,6 @@ export default function Services() {'
             <div className="text-center group">
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 group-hover:bg-green-200 transition-colors mb-4">
                 <Zap className="h-8 w-8 text-green-600" />
-=======
       {/* Services Grid */}"
       <section className="py-24 sm: py-32">"
         <div className="mx-auto max-w-7xl px-6 l,
@@ -2641,7 +2599,6 @@ export default function Services() {'
                   <ArrowRight className="ml-2 h-4 w-4 group-hove,
     r:translate-x-1 transition-transform" />
                 </Link>
->>>>>>> main
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 Fast Delivery
@@ -2675,7 +2632,6 @@ export default function Services() {'
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
       {/* Process Section */}
       <section className="py-24 sm:py-32 bg-white">
@@ -2684,7 +2640,6 @@ export default function Services() {'
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Our Proven Delivery Process
             </h2>
-=======
       {/* Expanded Service Catalog */}"
       <section className="py-24 sm: py-32 bg-white">"
         <div className="mx-auto max-w-7xl px-6 l,
@@ -4432,31 +4387,24 @@ export default function Services() {'
     m:text-4xl">
               Our Delivery Process
             </h2>"
->>>>>>> main
             <p className="mt-6 text-lg leading-8 text-gray-600">
               We follow a systematic approach that ensures quality, speed, and successful outcomes for every project.
             </p>
-<<<<<<< HEAD
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center group">
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200 transition-colors mb-4">
-=======
           </div>"
           <div className="grid grid-cols-1 md: grid-cols-4 gap-8">"
             <div className="text-center group">"
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200 transition-colors mb-4">"
->>>>>>> main
                 <span className="text-2xl font-bold text-blue-600">1</span>
               </div>"
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-<<<<<<< HEAD
                 Discovery & Analysis
               </h3>
-=======
                 Discovery
               </h3>"
->>>>>>> main
               <p className="text-gray-600">
                 Deep dive into your business needs, requirements, and technical constraints
               </p>
@@ -4466,7 +4414,6 @@ export default function Services() {'
                 <span className="text-2xl font-bold text-green-600">2</span>
               </div>"
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-<<<<<<< HEAD
                 Strategy & Planning
               </h3>
               <p className="text-gray-600">
@@ -4475,7 +4422,6 @@ export default function Services() {'
             </div>
             <div className="text-center group">
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-hover:bg-purple-200 transition-colors mb-4">
-=======
                 Strategy
               </h3>"
               <p className="text-gray-600">Plan the solution architecture</p>
@@ -4483,11 +4429,9 @@ export default function Services() {'
             <div className="text-center group">"
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-hove,
     r:bg-purple-200 transition-colors mb-4">"
->>>>>>> main
                 <span className="text-2xl font-bold text-purple-600">3</span>
               </div>"
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-<<<<<<< HEAD
                 Development & Testing
               </h3>
               <p className="text-gray-600">
@@ -4496,7 +4440,6 @@ export default function Services() {'
             </div>
             <div className="text-center group">
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 group-hover:bg-orange-200 transition-colors mb-4">
-=======
                 Development
               </h3>"
               <p className="text-gray-600">Build and test the solution</p>
@@ -4504,11 +4447,9 @@ export default function Services() {'
             <div className="text-center group">"
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 group-hove,
     r:bg-orange-200 transition-colors mb-4">"
->>>>>>> main
                 <span className="text-2xl font-bold text-orange-600">4</span>
               </div>"
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-<<<<<<< HEAD
                 Deployment & Support
               </h3>
               <p className="text-gray-600">
@@ -4546,11 +4487,9 @@ export default function Services() {'
             <div className="text-center">
               <div className="text-4xl font-bold text-white mb-2">24/7</div>
               <div className="text-blue-100">Support Available</div>
-=======
                 Deployment
               </h3>"
               <p className="text-gray-600">Launch and monitor performance</p>
->>>>>>> main
             </div>
           </div>
         </div>
@@ -4570,7 +4509,6 @@ export default function Services() {'
             </p>
           </div>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-24 sm:py-32 bg-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -4614,7 +4552,6 @@ export default function Services() {'
               <Link
                 to="/"
                 className="text-sm font-semibold leading-6 text-gray-600 hover:text-blue-600 transition-colors group"
-=======
           {/* Pricing Tiers */}"
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">"
             <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hove,
@@ -4824,7 +4761,6 @@ export default function Services() {'
                 href="/""
                 className="text-sm font-semibold leading-6 text-white hove,
     r:text-blue-100 transition-colors group""
->>>>>>> main
                 aria-label="Back to homepage"
               >"
                 Back to Home{' '}
@@ -4841,10 +4777,8 @@ export default function Services() {'
       </section>
     </PageTransition>
   )
->>>>>>> main
 }
 "
-=======
 ;
 export default function Services() {;
 	const title = 'Services — Zion Tech Group';
@@ -6159,8 +6093,5 @@ export default function Services() {;
 				</div>;
 			</section>;
 		</PageTransition>;
->>>>>>> main
 	);
 }
->>>>>>> main
->>>>>>> main

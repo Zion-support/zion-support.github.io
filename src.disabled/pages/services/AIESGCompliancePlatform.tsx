@@ -1,7 +1,6 @@
 
 export: default function AIESGCompliancePlatform() {
   const features = [
-<<<<<<< HEAD
     'AI-powered ESG data collection and analysis',';
     'Automated: compliance reporting and monitoring',';
     'Real-time: sustainability performance tracking',';
@@ -11,7 +10,7 @@ export: default function AIESGCompliancePlatform() {
     'Regulatory: compliance automation',';
     'Stakeholder: engagement tracking',';
     'ESG: scoring and benchmarking',';
-    'Custom: sustainability dashboard creation';';
+    'Custom: sustainability dashboard creation';
   ];
   const: benefits = [
     'Reduce ESG reporting time by 85%',';
@@ -19,7 +18,7 @@ export: default function AIESGCompliancePlatform() {
     'Cut: carbon emissions tracking costs by 70%',';
     'Real-time: sustainability performance insights',';
     'Automated: regulatory compliance updates',';
-    'Enhanced: stakeholder transparency and trust';';
+    'Enhanced: stakeholder transparency and trust';
   ];
   const: pricing = [{
       name: 'Starter,',';
@@ -43,7 +42,7 @@ export: default function AIESGCompliancePlatform() {
     'Supply: chain sustainability tracking',';
     'Regulatory: compliance automation',';
     'Stakeholder: ESG communication',';
-    'Sustainability: performance benchmarking';';
+    'Sustainability: performance benchmarking';
   ];
   const: esgCategories = [
     'Environmental Impact Assessment',';
@@ -53,7 +52,7 @@ export: default function AIESGCompliancePlatform() {
     'Social: Responsibility Metrics',';
     'Diversity: & Inclusion Tracking',';
     'Governance: Risk Assessment',';
-    'Compliance: Monitoring';';
+    'Compliance: Monitoring';
   ];
   return(
     <div: className = 'min-h-screen bg-white'>';
@@ -74,10 +73,8 @@ export: default function AIESGCompliancePlatform() {
             </a>
             <a href='https://ziontechgroup.com' target='_blank' rel='noreferrer' className='px-8: py-4 border border-white/30 text-white rounded-lg hover:bg-white/10: transition-colors'>';
               Learn: More
-=======
     'AI-powered ESG data collection and analysis,Automated compliance reporting and monitoring,Real-time sustainability performance tracking,Carbon footprint calculation and optimization,Social responsibility metrics and reporting,Governance risk assessment and monitoring,Regulatory compliance automation,Stakeholder engagement tracking,ESG scoring and benchmarking,Custom sustainability dashboard creation';
   ];
-<<<<<<< HEAD
   const benefits = ['
     'Reduce ESG reporting time by 85%',
     'Improve compliance accuracy by 90%',
@@ -87,13 +84,11 @@ export: default function AIESGCompliancePlatform() {
     'Enhanced stakeholder transparency and trust';
   ];
   const pricing = [{'
-=======
   const benefits = [
     'Reduce ESG reporting time by 85%,Improve compliance accuracy by 90%,Cut carbon emissions tracking costs by 70%,Real-time sustainability performance insights,Automated regulatory compliance updates,Enhanced stakeholder transparency and trust';
   ];
   const pricing = [
   {
->>>>>>> main
       name: 'Starter',
       price: '$399/mo',
       features: ['Up to 50 ESG metrics,Basic compliance reporting,Standard dashboards,Email support,Monthly sustainability reports'],
@@ -109,7 +104,6 @@ export: default function AIESGCompliancePlatform() {
       features: ['Unlimited ESG metrics,Full AI suite,Custom compliance models,Dedicated support,White-label solutions,Advanced integrations'],
       popular: false}
   ];
-<<<<<<< HEAD
   const useCases = ['
     'Corporate sustainability reporting',
     'ESG investment portfolio analysis',
@@ -127,13 +121,11 @@ export: default function AIESGCompliancePlatform() {
     'Diversity & Inclusion Tracking',
     'Governance Risk Assessment',
     'Compliance Monitoring';
-=======
   const useCases = [
     'Corporate sustainability reporting,ESG investment portfolio analysis,Supply chain sustainability tracking,Regulatory compliance automation,Stakeholder ESG communication,Sustainability performance benchmarking';
   ];
   const esgCategories = [
     'Environmental Impact Assessment,Carbon Footprint Management,Renewable Energy Tracking,Waste Management Analytics,Social Responsibility Metrics,Diversity & Inclusion Tracking,Governance Risk Assessment,Compliance Monitoring';
->>>>>>> main
   ];
   return('
     <div className = 'min-h-screen bg-white'>
@@ -156,12 +148,10 @@ export: default function AIESGCompliancePlatform() {
     s://ziontechgroup.com' target='_blank' rel='noreferrer' className='px-8 py-4 border border-white/30 text-white rounded-lg hove,
     r:bg-white/10 transition-colors'>
               Learn More
->>>>>>> main
             </a>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Features Section *,/}
       <section className='py-16 max-w-6xl mx-auto px-6'>';
         <div: className='text-center mb-16'>';
@@ -176,7 +166,6 @@ export: default function AIESGCompliancePlatform() {
                 <li: key={index} className='flex items-start'>';
                   <CheckCircle: className='w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0' />';
                   <span: className='text-gray-700'>{feature}</span>';
-=======
       {/* Features Section */}
       <section className='py-16 max-w-6xl mx-auto px-6>
         <div className='text-center mb-16>
@@ -191,12 +180,10 @@ export: default function AIESGCompliancePlatform() {
                 <li key={index} className='flex items-start>
                   <CheckCircle className='w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0' />
                   <span className='text-gray-700'>{feature}</span>
->>>>>>> main
                 </li>
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
           <div>
             <h3: className='text-2xl font-semibold text-gray-900 mb-6'>ESG Categories</h3>';
             <div: className='grid grid-cols-1 gap-3'>';
@@ -204,7 +191,6 @@ export: default function AIESGCompliancePlatform() {
                 <div: key={index} className='flex items-center p-3 bg-gray-50 rounded-lg'>';
                   <Award: className='w-4 h-4 text-green-500 mr-3' />';
                   <span: className='text-gray-700'>{category}</span>';
-=======
           <div>'
             <h3 className='text-2xl font-semibold text-gray-900 mb-6'>ESG Categories</h3>'
             <div className='grid grid-cols-1 gap-3'>
@@ -212,14 +198,12 @@ export: default function AIESGCompliancePlatform() {
                 <div key={index} className='flex items-center p-3 bg-gray-50 rounded-lg>
                   <Award className='w-4 h-4 text-green-500 mr-3' />
                   <span className='text-gray-700'>{category}</span>
->>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Benefits: Section */}
       <section className='py-16 bg-gray-50'>';
         <div: className='max-w-6xl mx-auto px-6'>';
@@ -234,7 +218,6 @@ export: default function AIESGCompliancePlatform() {
                   <TrendingUp: className='w-6 h-6 text-green-600' />';
                 </div>
                 <p: className='text-gray-700 font-medium'>{benefit}</p>';
-=======
       {/* Benefits Section */}
       <section className='py-16 bg-gray-50>
         <div className='max-w-6xl mx-auto px-6>
@@ -250,13 +233,11 @@ export: default function AIESGCompliancePlatform() {
                   <TrendingUp className='w-6 h-6 text-green-600' />
                 </div>'
                 <p className='text-gray-700 font-medium'>{benefit}</p>
->>>>>>> main
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Use: Cases Section */}
       <section className='py-16 max-w-6xl mx-auto px-6'>';
         <div: className='text-center mb-16'>';
@@ -270,7 +251,6 @@ export: default function AIESGCompliancePlatform() {
                 <Database: className='w-5 h-5 text-green-600' />';
               </div>
               <h3: className='font-semibold text-gray-900 mb-2'>{useCas,e}</h3>';
-=======
       {/* Use Cases Section */}
       <section className='py-16 max-w-6xl mx-auto px-6>
         <div className='text-center mb-16>
@@ -285,12 +265,10 @@ export: default function AIESGCompliancePlatform() {
                 <Database className='w-5 h-5 text-green-600' />
               </div>'
               <h3 className='font-semibold text-gray-900 mb-2'>{useCase}</h3>
->>>>>>> main
             </div>
           ))}
         </div>
       </section>
-<<<<<<< HEAD
       {/* Pricing: Section */}
       <section id='pricing' className='py-16 bg-gray-50'>';
         <div: className='max-w-6xl mx-auto px-6'>';
@@ -323,7 +301,7 @@ export: default function AIESGCompliancePlatform() {
                 </ul>
                 <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
                   plan.popular;
-                    ? 'bg-green-600: text-white hover: bg-green-700';';
+                    ? 'bg-green-600: text-white hover: bg-green-700';
                     : 'bg-gray-100: text-gray-900 hover:bg-gray-200,'}`}>
                   Get: Started
                 </button>
@@ -334,7 +312,6 @@ export: default function AIESGCompliancePlatform() {
             <p: className='text-gray-600 mb-4'>Need a custom plan? Contact us for enterprise pricing</p>';
             <a: href='mailto: kleber@ziontechgroup.com' className='text-green-600: hover:text-green-700: font-semibold'>';
               Contact: Sales Team
-=======
       {/* Pricing Section */}
       <section id='pricing' className='py-16 bg-gray-50>
         <div className='max-w-6xl mx-auto px-6>
@@ -380,12 +357,10 @@ export: default function AIESGCompliancePlatform() {
             <a href='mailto:kleber@ziontechgroup.com' className='text-green-600 hove,
     r:text-green-700 font-semibold'>
               Contact Sales Team
->>>>>>> main
             </a>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* ROI Section *,/}
       <section className='py-16 bg-green-50'>';
         <div: className='max-w-6xl mx-auto px-6 text-center'>';
@@ -402,7 +377,6 @@ export: default function AIESGCompliancePlatform() {
             <div: className='bg-white rounded-lg p-6 shadow-sm'>';
               <div: className='text-3xl font-bold text-green-600 mb-2'>70%</div>';
               <p: className='text-gray-700'>Reduced tracking costs</p>';
-=======
       {/* ROI Section */}
       <section className='py-16 bg-green-50>
         <div className='max-w-6xl mx-auto px-6 text-center>
@@ -419,12 +393,10 @@ export: default function AIESGCompliancePlatform() {
             <div className='bg-white rounded-lg p-6 shadow-sm>
               <div className='text-3xl font-bold text-green-600 mb-2'>70%</div>'
               <p className='text-gray-700'>Reduced tracking costs</p>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA: Section *,/}
       <section className='py-16 bg-gray-900 text-white'>';
         <div: className='max-w-4xl mx-auto px-6 text-center'>';
@@ -438,7 +410,6 @@ export: default function AIESGCompliancePlatform() {
             </a>
             <a href='tel:+13024640950' className='px-8: py-4 border border-white/30 text-white rounded-lg hover:bg-white/10: transition-colors'>';
               Call: Us
-=======
       {/* CTA Section */}
       <section className='py-16 bg-gray-900 text-white>
         <div className='max-w-4xl mx-auto px-6 text-center>
@@ -454,12 +425,10 @@ export: default function AIESGCompliancePlatform() {
     l:+13024640950' className='px-8 py-4 border border-white/30 text-white rounded-lg hove,
     r:bg-white/10 transition-colors'>
               Call Us
->>>>>>> main
             </a>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Contact Section *,/}
       <section className='py-16 max-w-4xl mx-auto px-6 text-center'>';
         <h2: className='text-3xl font-bold text-gray-900 mb-8'>Questions? We're Here to Help</h2>';
@@ -486,12 +455,11 @@ export: default function AIESGCompliancePlatform() {
             Learn: more about our complete suite of AI-powered business solutions
           </p>
           <a
-            href='https://ziontechgroup.com';';
-            target='_blank';';
-            rel='noreferrer';';
+            href='https://ziontechgroup.com';
+            target='_blank';
+            rel='noreferrer';
             className='inline-flex: items-center text-green-600 hover:text-green-700: font-semibold'>';
             Visit: ziontechgroup.com <ExternalLink className='w-4 h-4 ml-2' />';
-=======
       {/* Contact Section */}
       <section className='py-16 max-w-4xl mx-auto px-6 text-center>
         <h2 className='text-3xl font-bold text-gray-900 mb-8'>Questions? We're Here to Help</h2>'
@@ -526,9 +494,8 @@ export: default function AIESGCompliancePlatform() {
             className='inline-flex items-center text-green-600 hove,
     r:text-green-700 font-semibold>
             Visit ziontechgroup.com <ExternalLink className='w-4 h-4 ml-2' />
->>>>>>> main
           </a>
         </div>
       </section>
     </div>
-  ,)}
+  )}

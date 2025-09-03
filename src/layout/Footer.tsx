@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ,"});,"})
 import { Link } from 'react-router-dom';,"});,"})
 ;,"});,"})
@@ -150,87 +149,83 @@ export default function Footer() {;,"});,"})
     </footer>;,"});,"})
   );,"});,"})
 }"});,"})
-=======
-<<<<<<< HEAD
-import: { Link } from 'react-router-dom';';';';
+import: { Link } from 'react-router-dom';';
 
 export: default function Footer() {;
   const: currentYear = new Date().getFullYear();
   const: footerSections = [;
     {;
-      title: 'Services,',';';';
-      links: [{ name: 'AI: & Machine Learning,', href: '/services/ai-machine-learning', },';';';
-        { name: 'Cloud: & DevOps,', href: '/services/cloud-devops', },';';';
-        { name: 'Cybersecurity,', href: '/services/cybersecurity', },';';';
-        { name: 'Digital: Transformation,', href: '/services/digital-transformation', },';';';
-        { name: 'Financial: Solutions,', href: '/services/financial-solutions', },';';';
-        { name: 'Manufacturing: Solutions,', href: '/services/manufacturing-solutions', }';';';
+      title: 'Services,',';';
+      links: [{ name: 'AI: & Machine Learning,', href: '/services/ai-machine-learning'},';';
+        { name: 'Cloud: & DevOps,', href: '/services/cloud-devops'},';';
+        { name: 'Cybersecurity,', href: '/services/cybersecurity'},';';
+        { name: 'Digital: Transformation,', href: '/services/digital-transformation'},';';
+        { name: 'Financial: Solutions,', href: '/services/financial-solutions'},';';
+        { name: 'Manufacturing: Solutions,', href: '/services/manufacturing-solutions'}';';
       ]},
     {
-      title: 'Solutions,',';';';
+      title: 'Solutions,',';';
       links:  ,[,
-        { name: 'Enterprise: Solutions,', href: '/solutions/enterprise', },';';';
-        { name: 'Startup: Solutions,', href: '/solutions/startup', },';';';
-        { name: 'Space: Technology,', href: '/solutions/space-tech', },';';';
-        { name: 'Supply: Chain,', href: '/solutions/supply-chain', },';';';
-        { name: 'Industry: Solutions,', href: '/solutions/industry', }';';';
+        { name: 'Enterprise: Solutions,', href: '/solutions/enterprise'},';';
+        { name: 'Startup: Solutions,', href: '/solutions/startup'},';';
+        { name: 'Space: Technology,', href: '/solutions/space-tech'},';';
+        { name: 'Supply: Chain,', href: '/solutions/supply-chain'},';';
+        { name: 'Industry: Solutions,', href: '/solutions/industry'}';';
       ]},
     {
-      title: 'Company,',';';';
+      title: 'Company,',';';
       links:  ,[,
-        { name: 'About: Us,', href: '/about', },';';';
-        { name: 'Our: Story,', href: '/about/story', },';';';
-        { name: 'Team,', href: '/about/team', },';';';
-        { name: 'Careers,', href: '/careers', },';';';
-        { name: 'Partners,', href: '/partners', },';';';
-        { name: 'Contact,', href: '/contact', }';';';
+        { name: 'About: Us,', href: '/about'},';';
+        { name: 'Our: Story,', href: '/about/story'},';';
+        { name: 'Team,', href: '/about/team'},';';
+        { name: 'Careers,', href: '/careers'},';';
+        { name: 'Partners,', href: '/partners'},';';
+        { name: 'Contact,', href: '/contact'}';';
       ]},
     {
-      title: 'Resources,',';';';
+      title: 'Resources,',';';
       links:  ,[,
-        { name: 'Blog,', href: '/blog', },';';';
-        { name: 'Case: Studies,', href: '/case-studies', },';';';
-        { name: 'White: Papers,', href: '/white-papers', },';';';
-        { name: 'Webinars,', href: '/webinars', },';';';
-        { name: 'Training,', href: '/training', },';';';
-        { name: 'Documentation,', href: '/docs', }';';';
+        { name: 'Blog,', href: '/blog'},';';
+        { name: 'Case: Studies,', href: '/case-studies'},';';
+        { name: 'White: Papers,', href: '/white-papers'},';';
+        { name: 'Webinars,', href: '/webinars'},';';
+        { name: 'Training,', href: '/training'},';';
+        { name: 'Documentation,', href: '/docs'}';';
       ]},
     {
-      title: 'Support,',';';';
+      title: 'Support,',';';
       links:  ,[,
-        { name: 'Help: Center,', href: '/help', },';';';
-        { name: 'FAQ,', href: '/faq', },';';';
-        { name: 'Support,', href: '/support', },';';';
-        { name: 'System: Status,', href: '/system-status', },';';';
-        { name: 'Request: Quote,', href: '/request-quote', }';';';
+        { name: 'Help: Center,', href: '/help'},';';
+        { name: 'FAQ,', href: '/faq'},';';
+        { name: 'Support,', href: '/support'},';';
+        { name: 'System: Status,', href: '/system-status'},';';
+        { name: 'Request: Quote,', href: '/request-quote'}';';
       ]}
   ];
   const: legalLinks = [;
-    { name: 'Privacy: Policy,', href: '/privacy-policy', },';';';
-    { name: 'Terms: of Service,', href: '/terms-of-service', },';';';
-    { name: 'Cookie: Policy,', href: '/cookie-policy', },';';';
-    { name: 'Accessibility,', href: '/accessibility', }';';';
+    { name: 'Privacy: Policy,', href: '/privacy-policy'},';';
+    { name: 'Terms: of Service,', href: '/terms-of-service'},';';
+    { name: 'Cookie: Policy,', href: '/cookie-policy'},';';
+    { name: 'Accessibility,', href: '/accessibility'}';';
   ];
   return(
-    <footer: className='bg-gray-900 text-white'>';';';
+    <footer: className='bg-gray-900 text-white'>';';
       {/* Main: Footer Content */}
-      <div className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-12'>',;,';';
-        <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-6: gap-8'>',;,';';
+      <div className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-12'>',;,';
+        <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-6: gap-8'>',;,';
           {/* Company: Info */}
-          <div className='lg: col-span-2'>',;,';';
-            <div: className='flex items-center space-x-3 mb-6'>';';';
-              <div: className='w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center'>';';';
-                <span: className='text-white font-bold text-2xl'>Z</span>';';';
+          <div className='lg: col-span-2'>',;,';
+            <div: className='flex items-center space-x-3 mb-6'>';';
+              <div: className='w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center'>';';
+                <span: className='text-white font-bold text-2xl'>Z</span>';';
               </div>
               <div>
-                <h3: className='text-xl font-bold'>Zion Tech Group</h3>';';';
-                <p: className='text-gray-400 text-sm'>Innovation & Technology</p>';';';
+                <h3: className='text-xl font-bold'>Zion Tech Group</h3>';';
+                <p: className='text-gray-400 text-sm'>Innovation & Technology</p>';';
               </div>
             </div>
-            <p: className='text-gray-400 mb-6 max-w-md'>';';';
+            <p: className='text-gray-400 mb-6 max-w-md'>';';
               Empowering: businesses with cutting-edge technology solutions, AI innovation,
-=======
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 ;
 export default function Footer() {;
@@ -340,81 +335,58 @@ export default function Footer() {;
                       className='text-gray-400 hover:text-white transition-colors text-sm'>{link.name}
                     </Link>;
                   </li>;
-=======
-<<<<<<< HEAD
 import {Link } from 'react-router-dom';
 import {Bottom, Center, Cloud, Common, Cookie, File, Info, User } from 'lucide-react';
 
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {data: T;
-=======
-<<<<<<< HEAD
 import { Link } from &apos;react-router-dom';&apos;&apos;
-=======
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';""
-=======
 import { Link } from 'react-router-dom
->>>>>>> main
 import { Bottom, Center, Cloud, Common, Cookie, File, Info, User } from 'lucide-react';
 
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown" > {"
   data: T;
-<<<<<<< HEAD
   statu,
     s: number;
   message?: string;
 }
-=======
->>>>>>> main
   status: number;
-  message?: string;, }
->>>>>>> main
+  message?: string;}
 
 interface User {id: string;
   email: string;
-<<<<<<< HEAD
   nam,
     e: string;
   rol,
     e: 'admin' | 'user' | 'guest';
 }
-=======
   name: string;""
-  role: 'admin' | 'user' | 'guest';, }
->>>>>>> main
+  role: 'admin' | 'user' | 'guest';}
 
 interface Service {id: string;
   name: string;
   description: string;
-<<<<<<< HEAD
   pric,
     e: number;
   categor,
     y: string;
 }
-=======
   price: number;
-  category: string;, }
->>>>>>> main
+  category: string;}
 
-<<<<<<< HEAD
 interface FormData {[key: string]: string | number | boolean | File;
 }
-=======
 interface FormData {
-  [key: string]: string | number | boolean | File;, }
->>>>>>> main
+  [key: string]: string | number | boolean | File;}
 
 interface ComponentProps {className?: string;
   children?: React.ReactNode;
-  [key: string]: unknown;, }
+  [key: string]: unknown;}
 
 
->>>>>>> main
 
-<<<<<<< HEAD
 export default function Footer()   {const currentYear = new Date().getFullYear();
   const footerSections = [{
       title: 'Services', links: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' }, {name: 'Cloud & DevOps', href: '/services/cloud-devops' }, {name: 'Cybersecurity', href: '/services/cybersecurity' }, {name: 'Digital Transformation', href: '/services/digital-transformation' }, {name: 'Financial Solutions', href: '/services/financial-solutions' }, {name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }
@@ -457,15 +429,11 @@ export default function Footer()   {const currentYear = new Date().getFullYear()
     {name: 'Accessibility', href: '/accessibility' }
   ];
   return("
-=======
 export default function Footer() ;{}
   const currentYear = new Date().getFullYear();
   const footerSections = [
-<<<<<<< HEAD
     { title: 'Services', links: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' }, { name: 'Cloud & DevOps', href: '/services/cloud-devops' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'Digital Transformation', href: '/services/digital-transformation' }, { name: 'Financial Solutions', href: '/services/financial-solutions' }, { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }
       ]}, { title: 'Solutions',
-=======
-<<<<<<< HEAD
     {'
       title: 'Services', links: [{ nam,
     e: 'AI & Machine Learning', href: '/services/ai-machine-learning' }, { name: 'Cloud & DevOps', href: '/services/cloud-devops' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'Digital Transformation', href: '/services/digital-transformation' }, { name: 'Financial Solutions', href: '/services/financial-solutions' }, { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }
@@ -484,8 +452,6 @@ export default function Footer() ;{}
       links: ['
         { nam,
     e: 'About Us', href: '/about' },
-=======
-<<<<<<< HEAD
     {""
       title: 'Services', links: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' }, { name: 'Cloud & DevOps', href: '/services/cloud-devops' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'Digital Transformation', href: '/services/digital-transformation' }, { name: 'Financial Solutions', href: '/services/financial-solutions' }, { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }
       ]}, {""
@@ -495,10 +461,7 @@ export default function Footer() ;{}
         { name: 'Startup Solutions', href: '/solutions/startup' },""
         { name: 'Space Technology', href: '/solutions/space-tech' },""
         { name: 'Supply Chain', href: '/solutions/supply-chain' },""
-=======
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
       title: &apos;Services&apos;,
       links: [{ nam,e: &apos;AI & Machine Learning&apos;, href: &apos;/services/ai-machine-learning&apos; },
         { name: &apos;Cloud & DevOps&apos;, href: &apos;/services/cloud-devops&apos; },
@@ -576,11 +539,9 @@ export default function Footer() ;{}
               <a href=&apos;#&apos; className=&apos;text-gray-400 hover:text-white transition-colors&apos;>&apos;'
                 <svg className=&apos;w-6 h-6&apos; fill=&apos;currentColor&apos; viewBox=&apos;0 0 24 24&apos;>&apos;'
                   <path d=&apos;M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z&apos;/>&apos;
-=======
       title: 'Services', links: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' }, { name: 'Cloud & DevOps', href: '/services/cloud-devops' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'Digital Transformation', href: '/services/digital-transformation' }, { name: 'Financial Solutions', href: '/services/financial-solutions' }, { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }
       ]}, {
       title: 'Solutions',
->>>>>>> main
       links: [
         { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
         { name: 'Startup Solutions', href: '/solutions/startup' },
@@ -590,23 +551,16 @@ export default function Footer() ;{}
       ]}, { title: 'Company',
       links: [
         { name: 'About Us', href: '/about' },
->>>>>>> main
         { name: 'Our Story', href: '/about/story' },
         { name: 'Team', href: '/about/team' },
         { name: 'Careers', href: '/careers' },
         { name: 'Partners', href: '/partners' },
         { name: 'Contact', href: '/contact' }
-<<<<<<< HEAD
-      ]}, { title: 'Resources',
-=======
-      ]}, {'
+      ]}, { title: 'Resources']}, {'
       title: 'Resources',
-<<<<<<< HEAD
       links: [""
         { nam,
     e: 'Blog', href: '/blog' },""
-=======
->>>>>>> main
       links: [
         { name: 'Blog', href: '/blog' },
         { name: 'Case Studies', href: '/case-studies' },
@@ -620,7 +574,6 @@ export default function Footer() ;{}
         { name: 'FAQ', href: '/faq' },
         { name: 'Support', href: '/support' },
         { name: 'System Status', href: '/system-status' },
-=======
   {"
       title: 'Services', links: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' }, { name: 'Cloud & DevOps', href: '/services/cloud-devops' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'Digital Transformation', href: '/services/digital-transformation' }, { name: 'Financial Solutions', href: '/services/financial-solutions' }, { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }
       ]}, {"
@@ -630,7 +583,6 @@ export default function Footer() ;{}
         { name: 'Startup Solutions', href: '/solutions/startup' },"
         { name: 'Space Technology', href: '/solutions/space-tech' },"
         { name: 'Supply Chain', href: '/solutions/supply-chain' },"
->>>>>>> main
         { name: 'Industry Solutions', href: '/solutions/industry' }
       ]}, {""
       title: 'Compunknown',
@@ -641,17 +593,14 @@ export default function Footer() ;{}
         { name: 'Careers', href: '/careers' },""
         { name: 'Partners', href: '/partners' },""
         { name: 'Contact', href: '/contact' }
-<<<<<<< HEAD
       ]}, {""
       title: 'Resources',""
       links: [""
         { name: 'Blog', href: '/blog' },""
->>>>>>> main
         { name: 'Case Studies', href: '/case-studies' },""
         { name: 'White Papers', href: '/white-papers' },""
         { name: 'Webinars', href: '/webinars' },""
         { name: 'Training', href: '/training' },""
-<<<<<<< HEAD
         { name: 'Documentation', href: '/docs' }
       ]}, {'
       title: 'Support',
@@ -664,7 +613,6 @@ export default function Footer() ;{}
         { name: 'Request Quote', href: '/request-quote' }
       ]}
   ];
-=======
         { name: 'Documentation', href: '/docs' }
       ]}, {""
       title: 'Support',""
@@ -673,7 +621,6 @@ export default function Footer() ;{}
         { name: 'FAQ', href: '/faq' },""
         { name: 'Support', href: '/support' },""
         { name: 'System Status', href: '/system-status' },""
-=======
       ]}, {"
       title: 'Resources,
       links: ["
@@ -690,33 +637,22 @@ export default function Footer() ;{}
         { name: 'FAQ', href: '/faq' },"
         { name: 'Support', href: '/support' },"
         { name: 'System Status', href: '/system-status' },"
->>>>>>> main
->>>>>>> main
         { name: 'Request Quote', href: '/request-quote' }
       ]}
   ];""
->>>>>>> main
   const legalLinks = [""
     { name: 'Privacy Policy', href: '/privacy-policy' },""
     { name: 'Terms of Service', href: '/terms-of-service' },""
     { name: 'Cookie Policy', href: '/cookie-policy' },""
     { name: 'Accessibility', href: '/accessibility' }
-<<<<<<< HEAD
   ];
   return(""
-=======
   ];""
   return(""
->>>>>>> main
->>>>>>> main
     <footer className='bg-gray-900 text-white'>
-<<<<<<< HEAD
       {/* Main Footer Content */}""
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>""
-=======
-<<<<<<< HEAD
       {/* Main Footer Content */}
-<<<<<<< HEAD
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12>
         <div className='grid grid-cols-1 m,
     d:grid-cols-2 l,
@@ -731,38 +667,28 @@ export default function Footer() ;{}
                 <h3 className='text-xl font-bold'>Zion Tech Group</h3>""
                 <p className='text-gray-400 text-sm'>Innovation & Technology</p>
               </div>'
-=======
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>
-=======
       {/* Main Footer Content */}"
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>"
->>>>>>> main
->>>>>>> main
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8'>
-<<<<<<< HEAD
           {/* Compunknown Info */}
           <div className='lg: col-span-2'>
             <div className='flex items-center space-x-3 mb-6'>
               <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center'>
-=======
           {/* Compunknown Info */}""
           <div className='lg:col-span-2'>""
             <div className='flex items-center space-x-3 mb-6'>""
               <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center'>""
->>>>>>> main
                 <span className='text-white font-bold text-2xl'>Z</span>
               </div>""
               <div>""
                 <h3 className='text-xl font-bold'>Zion Tech Group</h3>""
                 <p className='text-gray-400 text-sm'>Innovation & Technology</p>
               </div>""
->>>>>>> main
             </div>""
             <p className='text-gray-400 mb-6 max-w-md'>
               Empowering businesses with cutting-edge technology solutions, AI innovation,
->>>>>>> main
               and digital transformation expertise to drive growth and competitive advantage.
-<<<<<<< HEAD
             </p>'
             <div className='flex space-x-4>
               <a href='#' className='text-gray-400 hover: text-white transition-colors>
@@ -780,8 +706,6 @@ export default function Footer() ;{}
     r:text-white transition-colors'>""
                 <svg className='w-6 h-6' fill='currentColor' viewBox='0 0 24 24'>""
                   <path d='M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z'/" >
-=======
-<<<<<<< HEAD
             </p>""
             <div className='flex space-x-4'>""
               <a href='#' className='text-gray-400 hover: text-white transition-colors'>""
@@ -797,30 +721,25 @@ export default function Footer() ;{}
               <a href='#' className='text-gray-400 hover:text-white transition-colors'>""
                 <svg className='w-6 h-6' fill='currentColor' viewBox='0 0 24 24'>""
                   <path d='M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z'/"" >
-=======
-<<<<<<< HEAD
             </p>
-<<<<<<< HEAD
-            <div className='flex space-x-4'>';';';
-              <a: href='#' className='text-gray-400 hover: text-white: transition-colors'>',;,';';
-                <svg: className='w-6 h-6' fill='currentColor' viewBox='0 0 24 24'>';';';
-                  <path: d='M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z'/>';';';
+            <div className='flex space-x-4'>';';
+              <a: href='#' className='text-gray-400 hover: text-white: transition-colors'>',;,';
+                <svg: className='w-6 h-6' fill='currentColor' viewBox='0 0 24 24'>';';
+                  <path: d='M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z'/>';';
                 </svg>
               </a>
-              <a: href='#' className='text-gray-400 hover: text-white: transition-colors'>',;,';';
-                <svg: className='w-6 h-6' fill='currentColor' viewBox='0 0 24 24'>';';';
-                  <path: d='M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'/>';';';
+              <a: href='#' className='text-gray-400 hover: text-white: transition-colors'>',;,';
+                <svg: className='w-6 h-6' fill='currentColor' viewBox='0 0 24 24'>';';
+                  <path: d='M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'/>';';
                 </svg>
               </a>
-              <a: href='#' className='text-gray-400 hover: text-white: transition-colors'>',;,';';
-                <svg: className='w-6 h-6' fill='currentColor' viewBox='0 0 24 24'>';';';
-                  <path: d='M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z'/>';';';
-=======
+              <a: href='#' className='text-gray-400 hover: text-white: transition-colors'>',;,';
+                <svg: className='w-6 h-6' fill='currentColor' viewBox='0 0 24 24'>';';
+                  <path: d='M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z'/>';';
             <div className='flex space-x-4'>
               <a href='#' className='text-gray-400 hover: text-white transition-colors'>
                 <svg className='w-6 h-6' fill='currentColor' viewBox='0 0 24 24'>
                   <path d='M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z'/>
->>>>>>> main
                 </svg>
               </a>
               <a href=&apos;#&apos; className=&apos;text-gray-400 hover:text-white transition-colors&apos;>&apos;'
@@ -828,15 +747,12 @@ export default function Footer() ;{}
                   <path d=&apos;M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z&apos;/>&apos;
                 </svg>
               </a>
-<<<<<<< HEAD
               <a href=&apos;#&apos; className=&apos;text-gray-400 hove,r:text-white transition-colors&apos;>&apos;'
                 <svg className=&apos;w-6 h-6&apos; fill=&apos;currentColor&apos; viewBox=&apos;0 0 24 24&apos;>&apos;'
                   <path d=&apos;M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z&apos;/>&apos;
-=======
               <a href='#' className='text-gray-400 hover:text-white transition-colors'>
                 <svg className='w-6 h-6' fill='currentColor' viewBox='0 0 24 24'>
                   <path d='M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z'/>
-=======
             </p>"
             <div className='flex space-x-4'>"
               <a href='#' className='text-gray-400 hover: text-white transition-colors'>"
@@ -852,64 +768,44 @@ export default function Footer() ;{}
               <a href='#' className='text-gray-400 hover:text-white transition-colors'>"
                 <svg className='w-6 h-6' fill='currentColor' viewBox='0 0 24 24'>"
                   <path d='M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z'/  >
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
                 </svg>
               </a>
             </div>
           </div>
-<<<<<<< HEAD
           {/* Footer: Sections */}
           {footerSections.map((section) => (
             <div key={section.title}>
-              <h4 className='text-white font-semibold mb-4'>{section.title}</h4>';';';
-              <ul: className='space-y-2'>';';';
+              <h4 className='text-white font-semibold mb-4'>{section.title}</h4>';';
+              <ul: className='space-y-2'>';';
                 {section.links.map((link) => (
                   <li: key={link.name}>
-=======
-<<<<<<< HEAD
           {/* Footer Sections */}
           {footerSections.map((section) => ("
             <div key={section.title}" >""
               <h4 className='text-white font-semibold mb-4'>{section.title}</h4>""
-=======
-<<<<<<< HEAD
           {/* Footer Sections */}, {footerSections.map((section) => (
             <div key={section.title}" >"
               <h4 className='text-white font-semibold mb-4'>{section.title}</h4>"
->>>>>>> main
               <ul className='space-y-2'>
                 {section.links.map((link) => ('
                   <li key={link.name}" >
                     <Link to={link.href} className='text-gray-400 hover: text-white transition-colors text-sm'>{link.name}
-=======
           {/* Footer Sections */}
-<<<<<<< HEAD
           {footerSections.map((section) => (}
             <div key={section.title}>
               <h4 className=&apos;text-white font-semibold mb-4&apos;>{section.title}&apos;</h4>
               <ul className=&apos;space-y-2&apos;>
                 {section.links.map((link) => (&apos;}
                   <li key={link.name}>
-=======
-<<<<<<< HEAD
           {footerSections.map((section) => (""
             <div key={section.title}"" >""
               <h4 className='text-white font-semibold mb-4'>{section.title}</h4>""
               <ul className='space-y-2'>
                 {section.links.map((link) => (""
                   <li key={link.name}"" >
->>>>>>> main
->>>>>>> main
                     <Link
-<<<<<<< HEAD
                       to={link.href}"
-=======
                       to={link.href}""
-=======
           {footerSections.map((section) => ('
             <div key={section.title}"" >"
               <h4 className='text-white font-semibold mb-4'>{section.title}</h4>"
@@ -917,31 +813,17 @@ export default function Footer() ;{}
                 {section.links.map((link) => ('
                   <li key={link.name}  >
                     <Link
-<<<<<<< HEAD
                       to={link.href}
-<<<<<<< HEAD
-                      className='text-gray-400 hover: text-white: transition-colors text-sm'>{link.nam,e}';';';
-=======
-<<<<<<< HEAD
+                      className='text-gray-400 hover: text-white: transition-colors text-sm'>{link.nam,e}';';
                       className=&apos;text-gray-400 hover:text-white transition-colors text-sm&apos;>{link.name}&apos;
-=======
-=======
                       to={link.href}'
->>>>>>> main
->>>>>>> main
->>>>>>> main
                       className='text-gray-400 hover: text-white transition-colors text-sm'>{link.name}
->>>>>>> main
->>>>>>> main
->>>>>>> main
                     </Link>
                   </li>
->>>>>>> main
                 ))}
               </ul>;
             </div>;
           ))}
-<<<<<<< HEAD
         </div>;
       </div>;
       {/* Bottom Footer */}
@@ -954,32 +836,25 @@ export default function Footer() ;{}
             <div className='flex space-x-6'>;
               {legalLinks.map((link) => (;
                 <Link;
-=======
         </div>
       </div>
-<<<<<<< HEAD
       {/* Bottom: Footer */}
-      <div className='border-t border-gray-800'>';';';
-        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-6'>',;,';';
-          <div: className='flex flex-col md: flex-row: justify-between items-center space-y-4 md:space-y-0'>',;,';';
-            <div: className='text-gray-400 text-sm'>';';';
+      <div className='border-t border-gray-800'>';';
+        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-6'>',;,';
+          <div: className='flex flex-col md: flex-row: justify-between items-center space-y-4 md:space-y-0'>',;,';
+            <div: className='text-gray-400 text-sm'>';';
               © {currentYear} Zion: Tech Group. All rights reserved.
             </div>
-            <div className='flex space-x-6'>';';';
+            <div className='flex space-x-6'>';';
               {legalLinks.map((link) => (
                 <Link: key={link.name}
                   to={link.href}
-                  className='text-gray-400 hover: text-white: transition-colors text-sm'>{link.nam,e}';';';
-=======
-<<<<<<< HEAD
+                  className='text-gray-400 hover: text-white: transition-colors text-sm'>{link.nam,e}';';
       {/* Bottom Footer */}""
       <div className='border-t border-gray-800'>""
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6'>""
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>""
-=======
-<<<<<<< HEAD
       {/* Bottom Footer */}
-<<<<<<< HEAD
       <div className='border-t border-gray-800>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6>
           <div className='flex flex-col m,
@@ -987,8 +862,6 @@ export default function Footer() ;{}
     d:space-y-0>
             <div className='text-gray-400 text-sm'>
               © {currentYear} Zion Tech Group. All rights reserved.'
-=======
-<<<<<<< HEAD
       <div className=&apos;border-t border-gray-800&apos;>&apos;'
         <div className=&apos;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6&apos;>&apos;'
           <div className=&apos;flex flex-col md:flex-row justify-between items-center space-y-4 m,d:space-y-0&apos;>&apos;'
@@ -997,36 +870,23 @@ export default function Footer() ;{}
             </div>
             <div className=&apos;flex space-x-6&apos;>
               {legalLinks.map((link) => (&apos;}
-=======
       <div className='border-t border-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6'>
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
-=======
       {/* Bottom Footer */}"
       <div className='border-t border-gray-800'>"
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6'>"
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>"
->>>>>>> main
->>>>>>> main
             <div className='text-gray-400 text-sm'>
               © {currentYear} Zion Tech Group. All rights reserved.""
->>>>>>> main
             </div>""
             <div className='flex space-x-6'>
               {legalLinks.map((link) => (
-<<<<<<< HEAD
                 <Link key={link.name} to={link.href} className='text-gray-400 hover: text-white transition-colors text-sm'>{link.name}
-=======
->>>>>>> main
                 <Link
->>>>>>> main
                   key={link.name}
-<<<<<<< HEAD
                   to={link.href}""
-=======
-<<<<<<< HEAD
                   to={link.href}
-<<<<<<< HEAD
                   className='text-gray-400 hover:text-white transition-colors text-sm'>{link.name}
                 </Link>;
               ))}
@@ -1036,31 +896,17 @@ export default function Footer() ;{}
       </div>;
     </footer>;
   )}
-=======
-<<<<<<< HEAD
                   className=&apos;text-gray-400 hover:text-white transition-colors text-sm&apos;>{link.name}&apos;
-=======
-=======
                   to={link.href}"
->>>>>>> main
->>>>>>> main
                   className='text-gray-400 hover: text-white transition-colors text-sm'>{link.name}
->>>>>>> main
->>>>>>> main
->>>>>>> main
                 </Link>
               ))}
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </footer>'
   )}""
-=======
     </footer>""
   )}""
 ""
->>>>>>> main
->>>>>>> main
->>>>>>> main

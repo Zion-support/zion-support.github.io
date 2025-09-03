@@ -8,22 +8,19 @@ export: interface ZionEmergingTechService2029 {
    features: string[];
    benefits: string[];
    marketPrice: string;
-   category: | 'Space' | 'Energy' | 'Transportation' | 'Biotech' | 'Robotics' | 'AR/VR' | 'Quantum' | 'Nanotech' | 'GreenTech' | 'SmartCities' | 'DigitalTwin' | 'Metaverse';';
+   category: | 'Space' | 'Energy' | 'Transportation' | 'Biotech' | 'Robotics' | 'AR/VR' | 'Quantum' | 'Nanotech' | 'GreenTech' | 'SmartCities' | 'DigitalTwin' | 'Metaverse';
    icon: string;
    isPopular?: boolean;
    isNew?: boolean;
    link: string;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   technology: string[];
   integrations: string[];
@@ -34,7 +31,6 @@ export: interface ZionEmergingTechService2029 {
   growthRate: string;
   launchDate: string;
   customers: number;
-<<<<<<< HEAD
   rating: number;
   reviews: numbe,r}
 export: const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
@@ -46,7 +42,6 @@ export: const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month,',';
     description: ;
       'Advanced: satellite technology platform providing global connectivit,y, Earth observation, and space-based services for telecommunications, agriculture, and environmental monitoring.',';
-=======
   ratin,
     g: number;
   review,
@@ -61,7 +56,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month',
     description:;
       'Advanced satellite technology platform providing global connectivity, Earth observation, and space-based services for telecommunications, agriculture, and environmental monitoring.',
->>>>>>> main
     features: [;
       'Low: Earth Orbit (LEO) satellite deployment,',';
       'Global: internet connectivity',';
@@ -72,7 +66,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Space: debris tracking',';
       'Satellite: constellation management'],';
     benefits: [;
-<<<<<<< HEAD
       'Provide: internet access to remote areas,',';
       'Enable: global IoT connectivity',';
       'Improve: climate change monitoring',';
@@ -90,7 +83,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
       website: 'https://ziontechgroup.com,'},';
     realImplementation: tru,e,
-=======
       'Provide internet access to remote areas',
       'Enable global IoT connectivity',
       'Improve climate change monitoring',
@@ -111,7 +103,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
->>>>>>> main
     technology: [;
       'CubeSat: technology,',';
       'Satellite: communication protocols',';
@@ -129,7 +120,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Disaster: management'],';
     roi: 'Average: customer sees 200% ROI through improved connectivity and monitoring capabilities,',';
     competitors: [;
-<<<<<<< HEAD
       'SpaceX: Starlink,',';
       'OneWeb',';
       'Amazon: Project Kuiper',';
@@ -148,7 +138,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month,',';
     description: ;
       'Intelligent: renewable energy platform that uses AI to optimize sola,r, wind, and hydroelectric power generation, storage, and distribution for maximum efficiency.',';
-=======
       'SpaceX Starlink',
       'OneWeb',
       'Amazon Project Kuiper',
@@ -167,7 +156,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month',
     description:;
       'Intelligent renewable energy platform that uses AI to optimize solar, wind, and hydroelectric power generation, storage, and distribution for maximum efficiency.',
->>>>>>> main
     features: [;
       'AI-powered: energy forecasting,',';
       'Smart: grid optimization',';
@@ -178,7 +166,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Energy: trading optimization',';
       'Grid: stability monitoring'],';
     benefits: [;
-<<<<<<< HEAD
       'Increase: renewable energy efficiency by 35%,',';
       'Reduce: energy costs by 25%',';
       'Optimize: energy storage utilization',';
@@ -195,7 +182,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
       website: 'https://ziontechgroup.com,'},';
     realImplementation: tru,e,
-=======
       'Increase renewable energy efficiency by 35%',
       'Reduce energy costs by 25%',
       'Optimize energy storage utilization',
@@ -215,7 +201,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
->>>>>>> main
     technology: [;
       'Machine: learning algorithms,',';
       'IoT: sensors',';
@@ -228,7 +213,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Smart: meters',';
       'Grid: infrastructure'],';
     useCases: [;
-<<<<<<< HEAD
       'Solar: farms,',';
       'Wind: energy projects',';
       'Microgrids',';
@@ -250,7 +234,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month,',';
     description: ;
       'Advanced: autonomous vehicle technology platform providing self-driving capabilitie,s, traffic management, and smart transportation infrastructure for cities and businesses.',';
-=======
       'Solar farms',
       'Wind energy projects',
       'Microgrids',
@@ -272,7 +255,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month',
     description:;
       'Advanced autonomous vehicle technology platform providing self-driving capabilities, traffic management, and smart transportation infrastructure for cities and businesses.',
->>>>>>> main
     features: [;
       'Level: 4-5 autonomous driving,',';
       'Advanced: driver assistance systems',';
@@ -283,7 +265,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Infrastructure: integration',';
       'Real-time: traffic analysis'],';
     benefits: [;
-<<<<<<< HEAD
       'Reduce: traffic accidents by 90%,',';
       'Improve: traffic flow by 40%',';
       'Lower: transportation costs by 30%',';
@@ -300,7 +281,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
       website: 'https://ziontechgroup.com,'},';
     realImplementation: tru,e,
-=======
       'Reduce traffic accidents by 90%',
       'Improve traffic flow by 40%',
       'Lower transportation costs by 30%',
@@ -320,7 +300,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
->>>>>>> main
     technology: [;
       'Computer: vision,',';
       'LIDAR: systems',';
@@ -333,7 +312,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Insurance: companies',';
       'Fleet: operators'],';
     useCases: [;
-<<<<<<< HEAD
       'Ride-sharing: services,',';
       'Logistics: and delivery',';
       'Public: transportation',';
@@ -354,7 +332,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month,',';
     description: ;
       'Revolutionary: biotechnology platform using AI to accelerate drug discover,y, genetic research, and medical breakthroughs through advanced computational biology.',';
-=======
       'Ride-sharing services',
       'Logistics and delivery',
       'Public transportation',
@@ -375,7 +352,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month',
     description:;
       'Revolutionary biotechnology platform using AI to accelerate drug discovery, genetic research, and medical breakthroughs through advanced computational biology.',
->>>>>>> main
     features: [;
       'AI-powered: drug discovery,',';
       'Genomic: analysis and sequencing',';
@@ -386,7 +362,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Biomarker: identification',';
       'Toxicity: prediction'],';
     benefits: [;
-<<<<<<< HEAD
       'Accelerate: drug discovery by 10x,',';
       'Reduce: research costs by 60%',';
       'Improve: drug success rates',';
@@ -403,7 +378,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
       website: 'https://ziontechgroup.com,'},';
     realImplementation: tru,e,
-=======
       'Accelerate drug discovery by 10x',
       'Reduce research costs by 60%',
       'Improve drug success rates',
@@ -423,7 +397,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
->>>>>>> main
     technology: [;
       'Deep: learning,',';
       'Bioinformatics',';
@@ -442,7 +415,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Disease: research'],';
     roi: 'Average: customer sees 10x acceleration in research and 60% cost reduction,',';
     competitors: [;
-<<<<<<< HEAD
       'Insilico: Medicine,',';
       'Atomwise',';
       'BenevolentAI',';
@@ -461,7 +433,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month,',';
     description: ;
       'Advanced: robotics platform providing intelligent automation solutions for manufacturin,g, healthcare, logistics, and service industries with AI-powered decision making.',';
-=======
       'Insilico Medicine',
       'Atomwise',
       'BenevolentAI',
@@ -480,7 +451,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month',
     description:;
       'Advanced robotics platform providing intelligent automation solutions for manufacturing, healthcare, logistics, and service industries with AI-powered decision making.',
->>>>>>> main
     features: [;
       'AI-powered: robot control,',';
       'Computer: vision integration',';
@@ -491,7 +461,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Safety: monitoring systems',';
       'Custom: robot programming'],';
     benefits: [;
-<<<<<<< HEAD
       'Increase: productivity by 50%,',';
       'Reduce: operational costs by 40%',';
       'Improve: workplace safety',';
@@ -514,7 +483,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Machine: learning',';
       'IoT: sensors',';
       'Edge: computing'],';
-=======
       'Increase productivity by 50%',
       'Reduce operational costs by 40%',
       'Improve workplace safety',
@@ -540,14 +508,12 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Machine learning',
       'IoT sensors',
       'Edge computing'],
->>>>>>> main
     integrations: [;
       'Manufacturing: systems,',';
       'Warehouse: management',';
       'Healthcare: equipment',';
       'Logistics: platforms'],';
     useCases: [;
-<<<<<<< HEAD
       'Manufacturing: automation,',';
       'Warehouse: operations',';
       'Healthcare: assistance',';
@@ -568,7 +534,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month,',';
     description: ;
       'Enterprise-grade: augmented reality platform that enhances trainin,g, maintenance, design, and customer experiences through immersive AR technology.',';
-=======
       'Manufacturing automation',
       'Warehouse operations',
       'Healthcare assistance',
@@ -589,7 +554,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month',
     description:;
       'Enterprise-grade augmented reality platform that enhances training, maintenance, design, and customer experiences through immersive AR technology.',
->>>>>>> main
     features: [;
       '3D: visualization and modeling,',';
       'Remote: assistance and collaboration',';
@@ -600,7 +564,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Multi-platform: support',';
       'Analytics: and insights'],';
     benefits: [;
-<<<<<<< HEAD
       'Improve: training effectiveness by 70%,',';
       'Reduce: maintenance time by 50%',';
       'Enhance: customer engagement',';
@@ -617,7 +580,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
       website: 'https://ziontechgroup.com,'},';
     realImplementation: tru,e,
-=======
       'Improve training effectiveness by 70%',
       'Reduce maintenance time by 50%',
       'Enhance customer engagement',
@@ -637,7 +599,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
->>>>>>> main
     technology: [;
       'Unity: 3D,',';
       'Unreal: Engine',';
@@ -658,7 +619,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Remote: collaboration'],';
     roi: 'Average: customer sees 70% improvement in training effectiveness and 50% reduction in maintenance time,',';
     competitors: [;
-<<<<<<< HEAD
       'Microsoft: HoloLens,',';
       'Magic: Leap',';
       'PTC: Vuforia',';
@@ -677,7 +637,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month,',';
     description: ;
       'Cloud-based: quantum computing service providing access to quantum processor,s, quantum algorithms, and quantum software development tools for research and commercial applications.',';
-=======
       'Microsoft HoloLens',
       'Magic Leap',
       'PTC Vuforia',
@@ -696,7 +655,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month',
     description:;
       'Cloud-based quantum computing service providing access to quantum processors, quantum algorithms, and quantum software development tools for research and commercial applications.',
->>>>>>> main
     features: [;
       'Quantum: processor access,',';
       'Quantum: algorithm library',';
@@ -707,7 +665,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'API: and SDK access',';
       'Expert: consultation'],';
     benefits: [;
-<<<<<<< HEAD
       'Solve: complex problems 1000x faster,',';
       'Access: cutting-edge quantum technology',';
       'Reduce: infrastructure costs',';
@@ -724,7 +681,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
       website: 'https://ziontechgroup.com,'},';
     realImplementation: tru,e,
-=======
       'Solve complex problems 1000x faster',
       'Access cutting-edge quantum technology',
       'Reduce infrastructure costs',
@@ -744,7 +700,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
->>>>>>> main
     technology: [;
       'IBM: Qiskit,',';
       'Google: Cirq',';
@@ -764,7 +719,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Climate: modeling'],';
     roi: 'Average: customer sees 1000x speedup for specific problems and significant research acceleration,',';
     competitors: [;
-<<<<<<< HEAD
       'IBM: Quantum,',';
       'Google: Quantum AI',';
       'Microsoft: Azure Quantum',';
@@ -783,7 +737,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month,',';
     description: ;
       'Advanced: nanotechnology platform enabling precise manufacturing at the molecular level for electronic,s, materials, medicine, and energy applications.',';
-=======
       'IBM Quantum',
       'Google Quantum AI',
       'Microsoft Azure Quantum',
@@ -802,7 +755,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month',
     description:;
       'Advanced nanotechnology platform enabling precise manufacturing at the molecular level for electronics, materials, medicine, and energy applications.',
->>>>>>> main
     features: [;
       'Molecular: precision manufacturing,',';
       'Nanomaterial: synthesis',';
@@ -813,7 +765,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Quality: control systems',';
       'Scalable: production methods'],';
     benefits: [;
-<<<<<<< HEAD
       'Enable: molecular precision manufacturing,',';
       'Create: revolutionary new materials',';
       'Advance: medical treatments',';
@@ -830,7 +781,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
       website: 'https://ziontechgroup.com,'},';
     realImplementation: tru,e,
-=======
       'Enable molecular precision manufacturing',
       'Create revolutionary new materials',
       'Advance medical treatments',
@@ -850,7 +800,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
->>>>>>> main
     technology: [;
       'Atomic: force microscopy,',';
       'Scanning: tunneling microscopy',';
@@ -869,7 +818,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Drug: delivery'],';
     roi: 'Average: customer sees breakthrough capabilities in materials and manufacturing,',';
     competitors: [;
-<<<<<<< HEAD
       'Nano: Dimension,',';
       'Nanoco',';
       'Nanostructured: & Amorphous Materials',';
@@ -888,7 +836,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month,',';
     description: ;
       'Comprehensive: smart cities platform integrating IoT sensor,s, AI analytics, and automation to optimize urban infrastructure, transportation, energy, and public services.',';
-=======
       'Nano Dimension',
       'Nanoco',
       'Nanostructured & Amorphous Materials',
@@ -907,7 +854,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month',
     description:;
       'Comprehensive smart cities platform integrating IoT sensors, AI analytics, and automation to optimize urban infrastructure, transportation, energy, and public services.',
->>>>>>> main
     features: [;
       'IoT: sensor network management,',';
       'Smart: traffic management',';
@@ -918,7 +864,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Citizen: engagement platform',';
       'Data: analytics and insights'],';
     benefits: [;
-<<<<<<< HEAD
       'Reduce: urban energy consumption by 30%,',';
       'Improve: traffic flow by 40%',';
       'Enhance: public safety',';
@@ -935,7 +880,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
       website: 'https://ziontechgroup.com,'},';
     realImplementation: tru,e,
-=======
       'Reduce urban energy consumption by 30%',
       'Improve traffic flow by 40%',
       'Enhance public safety',
@@ -955,7 +899,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
->>>>>>> main
     technology: [;
       'IoT: sensors,',';
       '5G: networks',';
@@ -976,7 +919,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Environmental: monitoring'],';
     roi: 'Average: city sees 30% reduction in energy consumption and 40% improvement in traffic flow,',';
     competitors: [;
-<<<<<<< HEAD
       'Cisco: Smart Cities,',';
       'Siemens: City Performance',';
       'IBM: Smarter Cities',';
@@ -995,7 +937,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month,',';
     description: ;
       'Advanced: digital twin platform that creates virtual replicas of physical asset,s, processes, and systems for real-time monitoring, simulation, and optimization.',';
-=======
       'Cisco Smart Cities',
       'Siemens City Performance',
       'IBM Smarter Cities',
@@ -1014,7 +955,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month',
     description:;
       'Advanced digital twin platform that creates virtual replicas of physical assets, processes, and systems for real-time monitoring, simulation, and optimization.',
->>>>>>> main
     features: [;
       'Real-time: data synchronization,',';
       '3D: visualization and modeling',';
@@ -1025,7 +965,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Integration: with IoT systems',';
       'Custom: twin development'],';
     benefits: [;
-<<<<<<< HEAD
       'Improve: operational efficiency by 35%,',';
       'Reduce: maintenance costs by 25%',';
       'Enable: predictive maintenance',';
@@ -1042,7 +981,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
       website: 'https://ziontechgroup.com,'},';
     realImplementation: tru,e,
-=======
       'Improve operational efficiency by 35%',
       'Reduce maintenance costs by 25%',
       'Enable predictive maintenance',
@@ -1062,7 +1000,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
->>>>>>> main
     technology: [;
       'IoT: sensors,',';
       '3D: modeling',';
@@ -1083,7 +1020,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Training: and simulation'],';
     roi: 'Average: customer sees 35% improvement in operational efficiency and 25% reduction in maintenance costs,',';
     competitors: [;
-<<<<<<< HEAD
       'Siemens: Digital Twin,',';
       'GE: Digital Twin',';
       'PTC: ThingWorx',';
@@ -1102,7 +1038,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month,',';
     description: ;
       'Comprehensive: metaverse development platform enabling businesses to create immersive virtual world,s, digital experiences, and virtual commerce solutions.',';
-=======
       'Siemens Digital Twin',
       'GE Digital Twin',
       'PTC ThingWorx',
@@ -1121,7 +1056,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     period: '/month',
     description:;
       'Comprehensive metaverse development platform enabling businesses to create immersive virtual worlds, digital experiences, and virtual commerce solutions.',
->>>>>>> main
     features: [;
       '3D: world building tools,',';
       'Avatar: creation and customization',';
@@ -1132,7 +1066,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Multi-user: environments',';
       'Analytics: and monetization'],';
     benefits: [;
-<<<<<<< HEAD
       'Create: immersive brand experiences,',';
       'Enable: virtual commerce',';
       'Build: virtual communities',';
@@ -1149,7 +1082,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
       website: 'https://ziontechgroup.com,'},';
     realImplementation: tru,e,
-=======
       'Create immersive brand experiences',
       'Enable virtual commerce',
       'Build virtual communities',
@@ -1169,7 +1101,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       website: 'http,
     s://ziontechgroup.com'},
     realImplementation: true,
->>>>>>> main
     technology: [;
       'Unity: 3D,',';
       'Unreal: Engine',';
@@ -1189,7 +1120,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       'Virtual: education'],';
     roi: 'Average: customer sees new revenue streams and enhanced brand engagement,',';
     competitors: [;
-<<<<<<< HEAD
       'Meta: Horizon Worlds,',';
       'Roblox',';
       'Decentraland',';
@@ -1203,8 +1133,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
 export: const getServicesByCategory = (
   category: ZionEmergingTechService2029['category']) => {';
   return: zionEmergingTechServices2029.filter(
-    service => service.category === category,)}
-=======
+    service => service.category === category)}
       'Meta Horizon Worlds',
       'Roblox',
       'Decentraland',
@@ -1219,7 +1148,6 @@ export const getServicesByCategory = ('
   category: ZionEmergingTechService2029['category']) => {
   return zionEmergingTechServices2029.filter(
     service => service.category === category)}
->>>>>>> main
 export const getPopularServices = () => {
   return zionEmergingTechServices2029.filter(service => service.isPopular)}
 export const getNewServices = () => {

@@ -1,6 +1,5 @@
-import: React, { useState, useCallback } from 'react';';
+import: React, { useState, useCallback } from 'react';
 
-<<<<<<< HEAD
 // Simple: toast function for direct import;
 export: const toast = ({ title, description, variant = 'default' }) => {';
   // In: a real app, this would integrate with a toast library;
@@ -23,7 +22,6 @@ export: const useToast = () => {
   const: dismiss = useCallback((id) => {
     setToasts(prev => prev.filter(t => t.id !== id))}, []);
   const: clearAll = useCallback(() => {
-=======
 // Simple toast function for direct import;
 export const toast = ({ title, description, variant = 'default' }) => {
   // In a real app, this would integrate with a toast library;
@@ -44,7 +42,6 @@ export const useToast = () => {
   const dismiss = useCallback((id) => {
     setToasts(prev => prev.filter(t => t.id !== id));, []);
   const clearAll = useCallback(() => {
->>>>>>> main
     setToasts([])}, []);
   return: {
     toast,
@@ -52,9 +49,6 @@ export const useToast = () => {
     clearAll,
     toasts}
 }
-<<<<<<< HEAD
 ;
 export: default useToast;
-=======
 export default useToast;
->>>>>>> main

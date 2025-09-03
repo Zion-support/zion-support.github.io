@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface InnovativeBusinessSolution {
   id: string;
    name: string;
@@ -28,27 +28,22 @@ export: interface InnovativeBusinessSolution {
    variant: string;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 reviews: number;export: const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution[] = [;
   // AI-Powered: Marketing Automation Platform{
     id,:,
   ai-marketing-automation-platform',';
     name: 'AI: Marketing Automation Platfor,m,';
-=======
 review,
     s: number;export const innovativeBusinessSolutionsEnhanced202,
     5: InnovativeBusinessSolution[] = [;
@@ -57,7 +52,6 @@ review,
     d:,
   ai-marketing-automation-platform',
     name: 'AI Marketing Automation Platform,
->>>>>>> main
     tagline:,
   Intelligent: marketing automation with predictive analytics',';
     price: '$29,9,';
@@ -74,21 +68,18 @@ review,
   'Lead: scoring and nurturing',';
   'Email: marketing automation',';
   'Social: media management',';
-  'ROI: tracking and optimization';';
+  'ROI: tracking and optimization';
     ],
     popular: tru,e,
     icon:,
   📈',';
     color: 'from-green-600: to-emerald-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/ai-marketing-automatio,n,';
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/ai-marketing-automation,
->>>>>>> main
     marketPosition:,
   Competes: with HubSpot ($45/month), Marketo ($895/month), Pardot ($1,250/month). Our advantage: AI: automation increases conversion rates by 45% and reduces customer acquisition costs by 30%,.,
     targetAudience: ;
@@ -112,7 +103,6 @@ review,
   19% annual: growth',';
     variant: 'ai-marketing-enterpris,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -120,7 +110,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -130,7 +119,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Enterprise-grade: marketing automation platform with AI-powered predictive analytics and campaign optimization.',';
     launchDate: '2024-11-1,0,';
@@ -157,21 +145,18 @@ review,
   'Real-time: sales alerts',';
   'Integration: with CRM systems',';
   'Custom: sales workflows',';
-  'Advanced: reporting dashboard';';
+  'Advanced: reporting dashboard';
     ],
     popular: tru,e,
     icon:,
   💰',';
     color: 'from-yellow-600: to-orange-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-yellow-400',';
     link: 'https://ziontechgroup.com/ai-sales-intelligenc,e,';
-=======
   text-yellow-400',
     link: 'http,
     s://ziontechgroup.com/ai-sales-intelligence,
->>>>>>> main
     marketPosition:,
   Competes: with Salesforce ($25/month), Pipedrive ($15/month), HubSpot Sales ($45/month). Our advantage: AI: intelligence increases sales conversion by 50% and reduces sales cycle by 35%,.,
     targetAudience: ;
@@ -195,7 +180,6 @@ review,
   21% annual: growth',';
     variant: 'ai-sales-enterpris,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -203,7 +187,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -213,7 +196,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Intelligent: sales platform with AI-powered lead scoring and sales process optimization.',';
     launchDate: '2024-12-0,1,';
@@ -240,21 +222,18 @@ review,
   'Compliance: monitoring',';
   'Employee: engagement tracking',';
   'Custom: HR workflows',';
-  'Advanced: analytics dashboard';';
+  'Advanced: analytics dashboard';
     ],
     popular: tru,e,
     icon:,
   👥',';
     color: 'from-blue-600: to-indigo-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/ai-hr-managemen,t,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/ai-hr-management,
->>>>>>> main
     marketPosition:,
   Competes: with BambooHR ($6.19/month), Workday ($45/month), ADP ($59/month). Our advantage: AI: automation reduces hiring time by 60% and improves employee retention by 40%,.,
     targetAudience: ;
@@ -278,7 +257,6 @@ review,
   18% annual: growth',';
     variant: 'ai-hr-enterpris,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -286,7 +264,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -296,7 +273,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Comprehensive: HR management platform with AI-powered automation and people analytics capabilities.',';
     launchDate: '2024-11-2,5,';
@@ -323,21 +299,18 @@ review,
   'Budget: planning and tracking',';
   'Investment: analysis',';
   'Compliance: monitoring',';
-  'Advanced: financial dashboard';';
+  'Advanced: financial dashboard';
     ],
     popular: tru,e,
     icon:,
   💼',';
     color: 'from-emerald-600: to-teal-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-emerald-400',';
     link: 'https://ziontechgroup.com/ai-financial-analytic,s,';
-=======
   text-emerald-400',
     link: 'http,
     s://ziontechgroup.com/ai-financial-analytics,
->>>>>>> main
     marketPosition:,
   Competes: with QuickBooks ($30/month), Xero ($30/month), FreshBooks ($15/month). Our advantage: AI: analytics improves financial forecasting accuracy by 70% and reduces financial risks by 50%,.,
     targetAudience: ;
@@ -361,7 +334,6 @@ review,
   16% annual: growth',';
     variant: 'ai-finance-enterpris,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -369,7 +341,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -379,7 +350,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Enterprise-grade: financial analytics platform with AI-powered forecasting and risk management.',';
     launchDate: '2024-12-1,5,';
@@ -406,21 +376,18 @@ review,
   'Cost: optimization',';
   'Automated: procurement',';
   'Custom: supply chain workflows',';
-  'Advanced: analytics dashboard';';
+  'Advanced: analytics dashboard';
     ],
     popular: tru,e,
     icon:,
   🚚',';
     color: 'from-purple-600: to-pink-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/ai-supply-chain-optimizatio,n,';
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/ai-supply-chain-optimization,
->>>>>>> main
     marketPosition:,
   Competes: with SAP ($108/month), Oracle ($300/month), Infor ($200/month). Our advantage: AI: optimization reduces supply chain costs by 25% and improves delivery times by 40%,.,
     targetAudience: ;
@@ -444,7 +411,6 @@ review,
   17% annual: growth',';
     variant: 'ai-supply-chain-enterpris,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -452,7 +418,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -462,11 +427,10 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Comprehensive: supply chain optimization platform with AI-powered demand forecasting and inventory management.',';
     launchDate: '2024-11-3,0,';
     customers: 9,8,
     rating: 4.,8,
     reviews: 67;
-,]}}
+]}}

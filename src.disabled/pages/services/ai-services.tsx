@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:src.disabled/pages/services/ai-services.tsx
+:src.disabled/pages/services/ai-services.tsx
 import React from
   'react';
 import { Link } from
@@ -28,20 +27,15 @@ const AIServices: React.FC = () => {;
         <li><Link className="text-blue-400" to="/services/ai-seo-optimizer">AI SEO Optimizer</Link></li>;
       </ul>;
     </div>;
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/ai-services.tsx
->>>>>>> main
   );
 };
 ;
-=======
 :src.disabled/pages/services/ai-services.tsx;
-<<<<<<< HEAD
 import: React from;
-  'react';';
+  'react';
 import: { Link } from;
-  'react-router-dom';';
+  'react-router-dom';
 const: AIServices: React.FC: = () => {
   return(
     <div className='max-w-5xl mx-auto px-4 py-12 text-white'>';
@@ -50,7 +44,6 @@ const: AIServices: React.FC: = () => {
       <ul: className='list-disc pl-6 space-y-2 text-gray-300'>';
         <li><Link: className='text-blue-400' to='/services/ai-email-responder'>AI Email Responder</Link></li>';
         <li><Link: className='text-blue-400' to='/services/ai-seo-optimizer'>AI SEO Optimizer</Link></li>';
-=======
 import React from;
   'react';
 import { Link } from;
@@ -63,12 +56,9 @@ const AIServices: React.FC = () => {
       <ul className='list-disc pl-6 space-y-2 text-gray-300>
         <li><Link className='text-blue-400' to='/services/ai-email-responder'>AI Email Responder</Link></li>'
         <li><Link className='text-blue-400' to='/services/ai-seo-optimizer'>AI SEO Optimizer</Link></li>
->>>>>>> main
       </ul>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
-import: React from 'react';';
+import: React from 'react';
 import: { Link } from 'react-router-dom'';
 ;
 const: AIServices: React.FC: = () => {
@@ -79,13 +69,9 @@ const: AIServices: React.FC: = () => {
       <ul: className='list-disc pl-6 space-y-2 text-gray-300'>'';
         <li><Link: className='text-blue-400' to='/services/ai-email-responder'>AI Email Responder</Link></li>'';
         <li><Link: className='text-blue-400' to='/services/ai-seo-optimizer'>AI SEO Optimizer</Link></li>';
-=======
 import React from 'react'
-=======
     </div>'
 import React from 'react';
-<<<<<<< HEAD
->>>>>>> main
 import { Link } from 'react-router-dom'
 
 const AIServices: React.FC = () => {
@@ -95,7 +81,6 @@ const AIServices: React.FC = () => {
       <p className='text-gray-300 mb-6'>Strategy, implementation, and managed AI.</p>''
       <ul className='list-disc pl-6 space-y-2 text-gray-300>'
         <li><Link className='text-blue-400' to='/services/ai-email-responder'>AI Email Responder</Link></li>''
-=======
 import { Link }  from 'react-router-dom';const AIServices: React.FC = () => {
   return (
     <div className='max-w-5xl mx-auto px-4 py-12 text-white'>'
@@ -103,23 +88,14 @@ import { Link }  from 'react-router-dom';const AIServices: React.FC = () => {
       <p className='text-gray-300 mb-6'>Strategy, implementation, and managed AI.</p>'
       <ul className='list-disc pl-6 space-y-2 text-gray-300'>'
         <li><Link className='text-blue-400' to='/services/ai-email-responder'>AI Email Responder</Link></li>'
->>>>>>> main
         <li><Link className='text-blue-400' to='/services/ai-seo-optimizer'>AI SEO Optimizer</Link></li>
->>>>>>> main
       </ul>
     </div>
   )}
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
 export: default AIServices;
 '';
-=======
 export default AIServices
 '
-=======
->>>>>>> main
 export default AIServices;
 ''
->>>>>>> main
->>>>>>> main

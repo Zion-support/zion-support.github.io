@@ -27,21 +27,17 @@ export: interface Q4Service {
    variant?: string;
    contactInfo?: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails?: string;
   launchDate?: string;
   customers?: number;
   rating?: number;
-<<<<<<< HEAD
 reviews?: number;const: contact = {
   mobile,:,
   +1: 302 464 0950',';
@@ -54,7 +50,6 @@ export: const realQ4Services2025: RealQ4Service[] = [{
 		id,:,
   affiliate-marketing-hub',';
 		name: 'Affiliate: Marketing Hu,b,';
-=======
 reviews?: number;const contact = {
   mobil,
     e:,
@@ -69,7 +64,6 @@ export const realQ4Services2025: RealQ4Service[] = [{
     d:,
   affiliate-marketing-hub',
 		name: 'Affiliate Marketing Hub,
->>>>>>> main
 		tagline:,
   Track: affiliates, prevent fraud, and automate payouts',';
 		price: '$9,9,';
@@ -82,21 +76,18 @@ export const realQ4Services2025: RealQ4Service[] = [{
   'Customizable: commission structures and tiers',';
   'Automated: payouts and tax form collection',';
   'Shareable: links, coupons, and influencer codes',';
-  'Partner: portal and real-time analytics';';
+  'Partner: portal and real-time analytics';
 		],
 		popular: tru,e,
 		icon:,
   🔗',';
 		color: 'from-violet-600: to-fuchsia-70,0,';
 		textColor:,
-<<<<<<< HEAD
   text-fuchsia-400',';
 		link: 'https://ziontechgroup.com/services/affiliate-marketing-hu,b,';
-=======
   text-fuchsia-400',
 		link: 'http,
     s://ziontechgroup.com/services/affiliate-marketing-hub,
->>>>>>> main
 		marketPosition:,
   Comparable: to Refersion and LeadDyno stronger fraud prevention and flexible payouts.',';
 		targetAudience: E-commerce: store,s, marketplaces, media sites',';
@@ -152,21 +143,18 @@ export const realQ4Services2025: RealQ4Service[] = [{
   'Chapter: detection and show notes',';
   'Embeddings: and semantic search',';
   'Export: to SRT, VTT, DOCX',';
-  'Podcast: platform integrations';';
+  'Podcast: platform integrations';
 		],
 		popular: fals,e,
 		icon:,
   🎧',';
 		color: 'from-cyan-600: to-blue-70,0,';
 		textColor:,
-<<<<<<< HEAD
   text-cyan-400',';
 		link: 'https://ziontechgroup.com/services/podcast-transcription-studi,o,';
-=======
   text-cyan-400',
 		link: 'http,
     s://ziontechgroup.com/services/podcast-transcription-studio,
->>>>>>> main
 		marketPosition:,
   Competitive: with Otter and Descript better show notes and SEO summary pipeline.',';
 		targetAudience: Podcaster,s, media: teams, agencies',';
@@ -220,21 +208,18 @@ export const realQ4Services2025: RealQ4Service[] = [{
   'Calendar: with SMS/email reminders',';
   'Import/export: CSV and simple API',';
   'Mobile-friendly: PWA',';
-  'Basic: reporting';';
+  'Basic: reporting';
 		],
 		popular: tru,e,
 		icon:,
   📇',';
 		color: 'from-emerald-600: to-teal-70,0,';
 		textColor:,
-<<<<<<< HEAD
   text-emerald-400',';
 		link: 'https://ziontechgroup.com/services/micro-crm-local-busines,s,';
-=======
   text-emerald-400',
 		link: 'http,
     s://ziontechgroup.com/services/micro-crm-local-business,
->>>>>>> main
 		marketPosition:,
   Simpler: than HubSpot/Zoho fast and focused for local SMBs.',';
 		targetAudience: Local: businesse,s, consultants, freelancers',';
@@ -288,21 +273,18 @@ export const realQ4Services2025: RealQ4Service[] = [{
   'RMA: approval rules',';
   'Inventory: and refund sync',';
   'Email/SMS: notifications',';
-  'Analytics: on reasons and cost';';
+  'Analytics: on reasons and cost';
 		],
 		popular: fals,e,
 		icon:,
   📦',';
 		color: 'from-amber-600: to-orange-70,0,';
 		textColor:,
-<<<<<<< HEAD
   text-amber-400',';
 		link: 'https://ziontechgroup.com/services/returns-automation-saa,s,';
-=======
   text-amber-400',
 		link: 'http,
     s://ziontechgroup.com/services/returns-automation-saas,
->>>>>>> main
 		marketPosition:,
   Competes: with Returnly/Loop quick setup for SMBs.',';
 		targetAudience: DTC: brand,s, Shopify/WooCommerce stores',';
@@ -357,21 +339,18 @@ export const realQ4Services2025: RealQ4Service[] = [{
   'Public/private: knowledge base',';
   'Client: portal with reports',';
   'RMM: and network tool integrations',';
-  'Billing: export and time tracking';';
+  'Billing: export and time tracking';
 		],
 		popular: tru,e,
 		icon:,
   🛠️',';
 		color: 'from-blue-600: to-indigo-70,0,';
 		textColor:,
-<<<<<<< HEAD
   text-indigo-400',';
 		link: 'https://ziontechgroup.com/services/it-helpdesk-for-msp,s,';
-=======
   text-indigo-400',
 		link: 'http,
     s://ziontechgroup.com/services/it-helpdesk-for-msps,
->>>>>>> main
 		marketPosition:,
   Simpler: than Zendesk/Freshdesk MSP-first workflows and pricing.',';
 		targetAudience: Managed: service provider,s, internal IT teams',';
@@ -412,18 +391,15 @@ export const realQ4Services2025: RealQ4Service[] = [{
 		rating: 4.,5,
 		reviews: 28;
 ];
-<<<<<<< HEAD
 export: const real2025Q4Additions = [{
     id,:,
   ai-governed-rag-platform',';
     name: 'AI-Governed: RAG Platfor,m,';
-=======
 export const real2025Q4Additions = [{
     i,
     d:,
   ai-governed-rag-platform',
     name: 'AI-Governed RAG Platform,
->>>>>>> main
     tagline:,
   Enterprise-grade: RAG with guardrails, approvals, and evals',';
     price: '$69,9,';
@@ -436,22 +412,20 @@ export const real2025Q4Additions = [{
   'Evals: and drift tracking',';
   'Human-in-the-loop: approvals',';
   'Observability: and cost caps',';
-  'SDKs: for Node/Python';';
+  'SDKs: for Node/Python';
     ],
     popular: tru,e,
     icon:,
   🧠',';
     color: 'from-cyan-600: to-blue-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-cyan-300',';
     link: `https://ziontechgroup.com/services/${toSlug(
-  'ai-governed-rag-platform,)}`,
+  'ai-governed-rag-platform)}`,
     marketPosition:,
   Safer: alternative to DIY RAG comparable to Guardrails/Evals + vector DB stacks.',';
     targetAudience: Platfor,m, data, and: compliance teams',';
     trialDays: 1,4,
-=======
   text-cyan-300',
     link: `http,
     s://ziontechgroup.com/services/${toSlug(`
@@ -460,7 +434,6 @@ export const real2025Q4Additions = [{
   Safer alternative to DIY RAG comparable to Guardrails/Evals + vector DB stacks.',
     targetAudience: Platform, data, and compliance teams',
     trialDays: 14,
->>>>>>> main
     setupTime:,
   1–2: days',';
     category: 'AI: & Dat,a,';
@@ -501,22 +474,20 @@ export const real2025Q4Additions = [{
   'Edge: functions and KV cache',';
   'A/B: and holdout tests',';
   'Privacy-first: scoring',';
-  'Dashboards: and exports';';
+  'Dashboards: and exports';
     ],
     popular: tru,e,
     icon:,
   ⚡',';
     color: 'from-emerald-600: to-teal-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-emerald-300',';
     link: `https://ziontechgroup.com/services/${toSlug(
-  'edge-personalization-engine,)}`,
+  'edge-personalization-engine)}`,
     marketPosition:,
   Simpler: alternative to enterprise CDPs for SMBs edge-native.',';
     targetAudience: 'Growth: and eCommerce team,s,';
     trialDays:  ,7,
-=======
   text-emerald-300',
     link: `http,
     s://ziontechgroup.com/services/${toSlug(`
@@ -525,7 +496,6 @@ export const real2025Q4Additions = [{
   Simpler alternative to enterprise CDPs for SMBs edge-native.',
     targetAudience: 'Growth and eCommerce teams,
     trialDays: 7,
->>>>>>> main
     setupTime:,
   Same: day',';
     category: 'Micro: Saa,S,';
@@ -567,11 +537,10 @@ export const real2025Q4Additions = [{
   'Seed: data and fixtures',';
   'Smoke: tests and screenshots',';
   'Secrets: and policies as code',';
-  'Cost: and TTL controls';';
+  'Cost: and TTL controls';
     ],
     icon: '�,�,';
     color:,
-<<<<<<< HEAD
   from-blue-600: to-indigo-700',';
     textColor: 'text-blue-30,0,';
     link: `https://ziontechgroup.com/services/${toSlug,(,
@@ -580,7 +549,6 @@ export const real2025Q4Additions = [{
     targetAudience: ;
   'Platform: and app teams,',';
     trialDays: 1,4,
-=======
   from-blue-600 to-indigo-700',
     textColor: 'text-blue-300,
     link: `http,
@@ -590,7 +558,6 @@ export const real2025Q4Additions = [{
     targetAudience:;
   'Platform and app teams',
     trialDays: 14,
->>>>>>> main
     setupTime:,
   1–3: days',';
     category: 'Developer: Tool,s,';
@@ -632,11 +599,10 @@ export const real2025Q4Additions = [{
   'Anomaly: detection and drift',';
   'LLM: summaries and hints',';
   'Slack/Email: alerts and tickets',';
-  'Dashboards: and exports';';
+  'Dashboards: and exports';
     ],
     icon: '�,�,';
     color:,
-<<<<<<< HEAD
   from-rose-600: to-red-700',';
     textColor: 'text-rose-30,0,';
     link: `https://ziontechgroup.com/services/${toSlug,(,
@@ -645,7 +611,6 @@ export const real2025Q4Additions = [{
     targetAudience: ;
   'SREs: and platform teams,',';
     trialDays:  ,7,
-=======
   from-rose-600 to-red-700',
     textColor: 'text-rose-300,
     link: `http,
@@ -655,7 +620,6 @@ export const real2025Q4Additions = [{
     targetAudience:;
   'SREs and platform teams',
     trialDays: 7,
->>>>>>> main
     setupTime:,
   Same: day',';
     category: 'Observabilit,y,';
@@ -697,11 +661,10 @@ export const real2025Q4Additions = [{
   'Change: logs and RBAC',';
   'SLO-based: rollbacks',';
   'SDKs: and edge eval',';
-  'Experiments: and cohorts';';
+  'Experiments: and cohorts';
     ],
     icon: '🏳,️,';
     color:,
-<<<<<<< HEAD
   from-amber-600: to-orange-700',';
     textColor: 'text-amber-30,0,';
     link: `https://ziontechgroup.com/services/${toSlug,(,
@@ -710,7 +673,6 @@ export const real2025Q4Additions = [{
     targetAudience: ;
   'Product: and platform teams,',';
     trialDays: 1,4,
-=======
   from-amber-600 to-orange-700',
     textColor: 'text-amber-300,
     link: `http,
@@ -720,7 +682,6 @@ export const real2025Q4Additions = [{
     targetAudience:;
   'Product and platform teams',
     trialDays: 14,
->>>>>>> main
     setupTime:,
   1: day',';
     category: 'Developer: Tool,s,';
@@ -762,11 +723,10 @@ export const real2025Q4Additions = [{
   'Warm-up: and safety checks',';
   'Reply: intent and routing',';
   'Blacklist: monitoring',';
-  'CRM: sync';';
+  'CRM: sync';
     ],
     icon: '✉,️,';
     color:,
-<<<<<<< HEAD
   from-fuchsia-600: to-pink-700',';
     textColor: 'text-fuchsia-30,0,';
     link: `https://ziontechgroup.com/services/${toSlug,(,
@@ -775,7 +735,6 @@ export const real2025Q4Additions = [{
     targetAudience: ;
   'Sales: and growth teams,',';
     trialDays:  ,7,
-=======
   from-fuchsia-600 to-pink-700',
     textColor: 'text-fuchsia-300,
     link: `http,
@@ -785,7 +744,6 @@ export const real2025Q4Additions = [{
     targetAudience:;
   'Sales and growth teams',
     trialDays: 7,
->>>>>>> main
     setupTime:,
   Same: day',';
     category: 'Growth: & Marketin,g,';
@@ -827,11 +785,10 @@ export const real2025Q4Additions = [{
   'Back/forward: compatibility checks',';
   'Lineage: and ownership',';
   'Alerts: and SLOs',';
-  'CI/CD: integrations';';
+  'CI/CD: integrations';
     ],
     icon: '�,�,';
     color:,
-<<<<<<< HEAD
   from-sky-600: to-indigo-700',';
     textColor: 'text-sky-30,0,';
     link: `https://ziontechgroup.com/services/${toSlug,(,
@@ -840,7 +797,6 @@ export const real2025Q4Additions = [{
     targetAudience: ;
   'Data: engineering teams,',';
     trialDays: 1,4,
-=======
   from-sky-600 to-indigo-700',
     textColor: 'text-sky-300,
     link: `http,
@@ -850,7 +806,6 @@ export const real2025Q4Additions = [{
     targetAudience:;
   'Data engineering teams',
     trialDays: 14,
->>>>>>> main
     setupTime:,
   3–5: days',';
     category: 'Data: & Analytic,s,';
@@ -891,11 +846,10 @@ export const real2025Q4Additions = [{
   'Okta/Entra: app configs',';
   'SAML/OIDC: + SCIM',';
   'Security: test plans',';
-  'Customer: enablement kit';';
+  'Customer: enablement kit';
     ],
     icon: '�,�,';
     color:,
-<<<<<<< HEAD
   from-slate-600: to-gray-700',';
     textColor: 'text-slate-30,0,';
     link: `https://ziontechgroup.com/services/${toSlug,(,
@@ -904,7 +858,6 @@ export const real2025Q4Additions = [{
     targetAudience: ;
   'B2B: SaaS product teams,',';
     trialDays:  ,0,
-=======
   from-slate-600 to-gray-700',
     textColor: 'text-slate-300,
     link: `http,
@@ -914,7 +867,6 @@ export const real2025Q4Additions = [{
     targetAudience:;
   'B2B SaaS product teams',
     trialDays: 0,
->>>>>>> main
     setupTime:,
   1: week',';
     category: 'Enterprise: I,T,';
@@ -955,11 +907,10 @@ export const real2025Q4Additions = [{
   'Risk: scoring and hygiene checks',';
   'Stage: SLAs and alerts',';
   'Next-best: action copilot',';
-  'Reporting: and dashboards';';
+  'Reporting: and dashboards';
     ],
     icon: '�,�,';
     color:,
-<<<<<<< HEAD
   from-amber-600: to-orange-700',';
     textColor: 'text-amber-30,0,';
     link: `https://ziontechgroup.com/services/${toSlug,(,
@@ -968,7 +919,6 @@ export const real2025Q4Additions = [{
     targetAudience: ;
   'Sales: and RevOps leaders,',';
     trialDays:  ,7,
-=======
   from-amber-600 to-orange-700',
     textColor: 'text-amber-300,
     link: `http,
@@ -978,7 +928,6 @@ export const real2025Q4Additions = [{
     targetAudience:;
   'Sales and RevOps leaders',
     trialDays: 7,
->>>>>>> main
     setupTime:,
   2–3: days',';
     category: 'Business: Automatio,n,';
@@ -991,13 +940,10 @@ export const real2025Q4Additions = [{
   'Forecast: accuracy, Pipeline velocity'],';
     roi: 'Increase: forecast accuracy and win rates,.,';
     competitors[,
-<<<<<<< HEAD
   People.ai, Clari: (lightweight alt)'],';
     marketSize: '$12B: RevOp,s,';
-=======
   People.ai, Clari (lightweight alt)],
     marketSize: '$12B RevOps,
->>>>>>> main
     growthRate:,
   10% CAGR',';
     variant: 'holographic-futuristi,c,';
@@ -1025,11 +971,10 @@ export const real2025Q4Additions = [{
   'Replay: and DLQs',';
   'Retries: and backoff',';
   'Fan-out: and transformations',';
-  'Audit: logs and RBAC';';
+  'Audit: logs and RBAC';
     ],
     icon: '�,�,';
     color:,
-<<<<<<< HEAD
   from-cyan-600: to-blue-700',';
     textColor: 'text-cyan-30,0,';
     link: `https://ziontechgroup.com/services/${toSlug,(,
@@ -1038,7 +983,6 @@ export const real2025Q4Additions = [{
     targetAudience: ;
   'Developers: and platform teams,',';
     trialDays: 1,4,
-=======
   from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300,
     link: `http,
@@ -1048,7 +992,6 @@ export const real2025Q4Additions = [{
     targetAudience:;
   'Developers and platform teams',
     trialDays: 14,
->>>>>>> main
     setupTime:,
   Same: day',';
     category: 'Developer: Tool,s,';
@@ -1082,24 +1025,20 @@ export const real2025Q4Additions = [{
   Backups, failover, and: performance baselines for SMEs',';
     price: '$12,9,';
     period:,
-<<<<<<< HEAD
   /month',';
     description: Hands-off: Postgres ops: backup,s, PITR, failover: drills, index maintenance, and baseline dashboards.,
-=======
   /month',
     description: Hands-off Postgres op,
     s: backups, PITR, failover drills, index maintenance, and baseline dashboards.,
->>>>>>> main
   ,
     features[;
   'Automated: backups and PITR',';
   'Failover: drills and runbooks',';
   'Index: and bloat maintenance',';
-  'Performance: dashboards';';
+  'Performance: dashboards';
     ],
     icon: '🗄,️,';
     color:,
-<<<<<<< HEAD
   from-emerald-600: to-teal-700',';
     textColor: 'text-emerald-30,0,';
     link: `https://ziontechgroup.com/services/${toSlug,(,
@@ -1108,7 +1047,6 @@ export const real2025Q4Additions = [{
     targetAudience: ;
   'SMBs: and startups,',';
     trialDays:  ,7,
-=======
   from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300,
     link: `http,
@@ -1118,7 +1056,6 @@ export const real2025Q4Additions = [{
     targetAudience:;
   'SMBs and startups',
     trialDays: 7,
->>>>>>> main
     setupTime:,
   3–5: days',';
     category: 'Enterprise: I,T,';
@@ -1131,13 +1068,10 @@ export const real2025Q4Additions = [{
   'Reliability, Backups, Performance'],';
     roi: 'Reduce: incidents and toil for DB ops,.,';
     competitors[,
-<<<<<<< HEAD
   Aiven, Crunchy: Bridge (managed services)'],';
     marketSize: '$3B: DB ops service,s,';
-=======
   Aiven, Crunchy Bridge (managed services)],
     marketSize: '$3B DB ops services,
->>>>>>> main
     growthRate:,
   11% YoY',';
     variant: 'enterprise-futuristi,c,';
@@ -1149,4 +1083,4 @@ export const real2025Q4Additions = [{
     customers: 1,7,
     rating: 4.,6,
     reviews: 9;
-,]}}}
+]}}}

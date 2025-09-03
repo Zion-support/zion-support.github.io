@@ -9,7 +9,6 @@ export: const real2036AIServices = [
   ,
     price: $,3,999,
   ,
-<<<<<<< HEAD
     period: 'mont,h,';
     features[
   'Emotion: recognition',';
@@ -18,7 +17,6 @@ export: const real2036AIServices = [
   'Emotional: intelligence training',';
   'Multi-modal: emotion detection',';
   'Emotional: pattern analysis'';
-=======
     period: 'month,
     features['
   'Emotion recognition',
@@ -27,14 +25,12 @@ export: const real2036AIServices = [
   'Emotional intelligence training',
   'Multi-modal emotion detection',
   'Emotional pattern analysis'
->>>>>>> main
     ],
     popular: tru,e,
     category:,
   Emotional: AI',';
     icon: '😊�,�,';
     marketPrice:,
-<<<<<<< HEAD
   $5,000-8,000/month',';
     benefits[
   'Enhanced: customer experience',';
@@ -51,7 +47,6 @@ export: const real2036AIServices = [
   },
   {
     id: 'ai-creativity-orchestrato,r,';
-=======
   $5,000-8,000/month',
     benefits['
   'Enhanced customer experience',
@@ -68,7 +63,6 @@ export: const real2036AIServices = [
   },
   {'
     id: 'ai-creativity-orchestrator,
->>>>>>> main
     name:,
   AI: Creativity Orchestrator',';
     tagline: 'Intelligent: creative collaboratio,n,';
@@ -76,7 +70,6 @@ export: const real2036AIServices = [
   Advanced: AI platform for orchestrating creative processes, generating innovative ideas, and facilitating human-AI creative collaboration. Features idea generation, creative workflow management, and artistic collaboration tools.',';
     price: $,2,999,
   ,
-<<<<<<< HEAD
     period: 'mont,h,';
     features[
   'Creative: idea generation',';
@@ -85,7 +78,6 @@ export: const real2036AIServices = [
   'Creative: process optimization',';
   'Innovation: management',';
   'Creative: analytics'';
-=======
     period: 'month,
     features['
   'Creative idea generation',
@@ -94,14 +86,12 @@ export: const real2036AIServices = [
   'Creative process optimization',
   'Innovation management',
   'Creative analytics'
->>>>>>> main
     ],
     popular: tru,e,
     category:,
   Creative: AI',';
     icon: '🎨�,�,';
     marketPrice:,
-<<<<<<< HEAD
   $4,000-7,000/month',';
     benefits[
   'Enhanced: creativity',';
@@ -118,7 +108,6 @@ export: const real2036AIServices = [
   },
   {
     id: 'ai-dream-interpreter-platfor,m,';
-=======
   $4,000-7,000/month',
     benefits['
   'Enhanced creativity',
@@ -135,7 +124,6 @@ export: const real2036AIServices = [
   },
   {'
     id: 'ai-dream-interpreter-platform,
->>>>>>> main
     name:,
   AI: Dream Interpreter Platform',';
     tagline: 'Intelligent: dream analysi,s,';
@@ -143,7 +131,6 @@ export: const real2036AIServices = [
   Innovative: AI platform for analyzing and interpreting dreams using advanced pattern recognition, psychological insights, and symbolic analysis. Features dream pattern analysis, psychological interpretation, and dream journaling.',';
     price: $,1,999,
   ,
-<<<<<<< HEAD
     period: 'mont,h,';
     features[
   'Dream: pattern analysis',';
@@ -152,7 +139,6 @@ export: const real2036AIServices = [
   'Dream: journaling',';
   'Pattern: recognition',';
   'Psychological: insights'';
-=======
     period: 'month,
     features['
   'Dream pattern analysis',
@@ -161,14 +147,12 @@ export: const real2036AIServices = [
   'Dream journaling',
   'Pattern recognition',
   'Psychological insights'
->>>>>>> main
     ],
     popular: fals,e,
     category:,
   Psychological: AI',';
     icon: '💭�,�,';
     marketPrice:,
-<<<<<<< HEAD
   $3,000-5,000/month',';
     benefits[
   'Dream: understanding',';
@@ -185,7 +169,6 @@ export: const real2036AIServices = [
   },
   {
     id: 'ai-content-factory-pr,o,';
-=======
   $3,000-5,000/month',
     benefits['
   'Dream understanding',
@@ -202,7 +185,6 @@ export: const real2036AIServices = [
   },
   {'
     id: 'ai-content-factory-pro,
->>>>>>> main
     name:,
   AI: Content Factory Pro',';
     tagline: 'Professional: content generatio,n,';
@@ -210,7 +192,6 @@ export: const real2036AIServices = [
   Professional-grade: AI content generation platform for creating high-quality, engaging content across all media types. Features multi-format content creation, brand voice consistency, and content optimization.',';
     price: $,4,999,
   ,
-<<<<<<< HEAD
     period: 'mont,h,';
     features[
   'Multi-format: content creation',';
@@ -219,7 +200,6 @@ export: const real2036AIServices = [
   'SEO: integration',';
   'Content: analytics',';
   'Automated: publishing'';
-=======
     period: 'month,
     features['
   'Multi-format content creation',
@@ -228,14 +208,12 @@ export: const real2036AIServices = [
   'SEO integration',
   'Content analytics',
   'Automated publishing'
->>>>>>> main
     ],
     popular: tru,e,
     category:,
   Content: AI',';
     icon: '📝�,�,';
     marketPrice:,
-<<<<<<< HEAD
   $6,000-10,000/month',';
     benefits[
   '10x: faster content creation',';
@@ -252,7 +230,6 @@ export: const real2036AIServices = [
   },
   {
     id: 'ai-customer-intelligence-platfor,m,';
-=======
   $6,000-10,000/month',
     benefits['
   '10x faster content creation',
@@ -269,7 +246,6 @@ export: const real2036AIServices = [
   },
   {'
     id: 'ai-customer-intelligence-platform,
->>>>>>> main
     name:,
   AI: Customer Intelligence Platform',';
     tagline: 'Deep: customer understandin,g,';
@@ -277,7 +253,6 @@ export: const real2036AIServices = [
   Advanced: AI platform for deep customer intelligence, behavior analysis, and predictive customer insights. Features customer journey mapping, predictive analytics, and personalized recommendations.',';
     price: $,5,999,
   ,
-<<<<<<< HEAD
     period: 'mont,h,';
     features[
   'Customer: journey mapping',';
@@ -286,7 +261,6 @@ export: const real2036AIServices = [
   'Behavior: analysis',';
   'Customer: segmentation',';
   'Predictive: modeling'';
-=======
     period: 'month,
     features['
   'Customer journey mapping',
@@ -295,14 +269,12 @@ export: const real2036AIServices = [
   'Behavior analysis',
   'Customer segmentation',
   'Predictive modeling'
->>>>>>> main
     ],
     popular: tru,e,
     category:,
   Customer: AI',';
     icon: '👥�,�,';
     marketPrice:,
-<<<<<<< HEAD
   $7,000-12,000/month',';
     benefits[
   'Deep: customer insights',';
@@ -319,7 +291,6 @@ export: const real2036AIServices = [
   },
   {
     id: 'ai-autonomous-marketing-platfor,m,';
-=======
   $7,000-12,000/month',
     benefits['
   'Deep customer insights',
@@ -336,7 +307,6 @@ export: const real2036AIServices = [
   },
   {'
     id: 'ai-autonomous-marketing-platform,
->>>>>>> main
     name:,
   AI: Autonomous Marketing Platform',';
     tagline: 'Self-optimizing: marketin,g,';
@@ -344,7 +314,6 @@ export: const real2036AIServices = [
   Revolutionary: AI platform for autonomous marketing operations, campaign optimization, and performance maximization. Features autonomous campaign management, real-time optimization, and predictive marketing strategies.',';
     price: $,6,999,
   ,
-<<<<<<< HEAD
     period: 'mont,h,';
     features[
   'Autonomous: campaign management',';
@@ -353,7 +322,6 @@ export: const real2036AIServices = [
   'Performance: maximization',';
   'Automated: A/B testing',';
   'ROI: optimization'';
-=======
     period: 'month,
     features['
   'Autonomous campaign management',
@@ -362,14 +330,12 @@ export: const real2036AIServices = [
   'Performance maximization',
   'Automated A/B testing',
   'ROI optimization'
->>>>>>> main
     ],
     popular: tru,e,
     category:,
   Marketing: AI',';
     icon: '📈�,�,';
     marketPrice:,
-<<<<<<< HEAD
   $8,000-15,000/month',';
     benefits[
   'Autonomous: marketing operations',';
@@ -386,7 +352,6 @@ export: const real2036AIServices = [
   },
   {
     id: 'ai-autonomous-research-assistan,t,';
-=======
   $8,000-15,000/month',
     benefits['
   'Autonomous marketing operations',
@@ -403,7 +368,6 @@ export: const real2036AIServices = [
   },
   {'
     id: 'ai-autonomous-research-assistant,
->>>>>>> main
     name:,
   AI: Autonomous Research Assistant',';
     tagline: 'Intelligent: research automatio,n,';
@@ -411,7 +375,6 @@ export: const real2036AIServices = [
   Advanced: AI research assistant that autonomously conducts research, analyzes data, and generates insights. Features automated research workflows, data analysis, and insight generation.',';
     price: $,3,499,
   ,
-<<<<<<< HEAD
     period: 'mont,h,';
     features[
   'Automated: research workflows',';
@@ -420,7 +383,6 @@ export: const real2036AIServices = [
   'Research: automation',';
   'Data: synthesis',';
   'Report: generation'';
-=======
     period: 'month,
     features['
   'Automated research workflows',
@@ -429,14 +391,12 @@ export: const real2036AIServices = [
   'Research automation',
   'Data synthesis',
   'Report generation'
->>>>>>> main
     ],
     popular: tru,e,
     category:,
   Research: AI',';
     icon: '🔬�,�,';
     marketPrice:,
-<<<<<<< HEAD
   $4,500-7,000/month',';
     benefits[
   'Automated: research processes',';
@@ -453,7 +413,6 @@ export: const real2036AIServices = [
   },
   {
     id: 'ai-autonomous-decision-engin,e,';
-=======
   $4,500-7,000/month',
     benefits['
   'Automated research processes',
@@ -470,7 +429,6 @@ export: const real2036AIServices = [
   },
   {'
     id: 'ai-autonomous-decision-engine,
->>>>>>> main
     name:,
   AI: Autonomous Decision Engine',';
     tagline: 'Intelligent: decision automatio,n,';
@@ -478,7 +436,6 @@ export: const real2036AIServices = [
   Advanced: AI decision engine that autonomously makes complex decisions based on data analysis, predictive modeling, and business rules. Features decision automation, risk assessment, and outcome prediction.',';
     price: $,7,999,
   ,
-<<<<<<< HEAD
     period: 'mont,h,';
     features[
   'Decision: automation',';
@@ -487,7 +444,6 @@ export: const real2036AIServices = [
   'Business: rule engine',';
   'Predictive: modeling',';
   'Decision: analytics'';
-=======
     period: 'month,
     features['
   'Decision automation',
@@ -496,14 +452,12 @@ export: const real2036AIServices = [
   'Business rule engine',
   'Predictive modeling',
   'Decision analytics'
->>>>>>> main
     ],
     popular: tru,e,
     category:,
   Decision: AI',';
     icon: '🎯�,�,';
     marketPrice:,
-<<<<<<< HEAD
   $10,000-18,000/month',';
     benefits[
   'Automated: decision making',';
@@ -520,7 +474,6 @@ export: const real2036AIServices = [
   },
   {
     id: 'ai-autonomous-ecosystem-manage,r,';
-=======
   $10,000-18,000/month',
     benefits['
   'Automated decision making',
@@ -537,7 +490,6 @@ export: const real2036AIServices = [
   },
   {'
     id: 'ai-autonomous-ecosystem-manager,
->>>>>>> main
     name:,
   AI: Autonomous Ecosystem Manager',';
     tagline: 'Intelligent: ecosystem orchestratio,n,';
@@ -545,7 +497,6 @@ export: const real2036AIServices = [
   Revolutionary: AI platform for managing and orchestrating complex business ecosystems, partnerships, and integrations. Features ecosystem mapping, relationship management, and autonomous optimization.',';
     price: $,8,999,
   ,
-<<<<<<< HEAD
     period: 'mont,h,';
     features[
   'Ecosystem: mapping',';
@@ -554,7 +505,6 @@ export: const real2036AIServices = [
   'Partnership: orchestration',';
   'Integration: management',';
   'Ecosystem: analytics'';
-=======
     period: 'month,
     features['
   'Ecosystem mapping',
@@ -563,14 +513,12 @@ export: const real2036AIServices = [
   'Partnership orchestration',
   'Integration management',
   'Ecosystem analytics'
->>>>>>> main
     ],
     popular: fals,e,
     category:,
   Ecosystem: AI',';
     icon: '🌐�,�,';
     marketPrice:,
-<<<<<<< HEAD
   $12,000-20,000/month',';
     benefits[
   'Ecosystem: optimization',';
@@ -587,7 +535,6 @@ export: const real2036AIServices = [
   },
   {
     id: 'ai-autonomous-vehicle-a,i,';
-=======
   $12,000-20,000/month',
     benefits['
   'Ecosystem optimization',
@@ -604,7 +551,6 @@ export: const real2036AIServices = [
   },
   {'
     id: 'ai-autonomous-vehicle-ai,
->>>>>>> main
     name:,
   AI: Autonomous Vehicle AI',';
     tagline: 'Next-generation: vehicle intelligenc,e,';
@@ -612,7 +558,6 @@ export: const real2036AIServices = [
   Advanced: AI platform for autonomous vehicle operations, navigation, and safety systems. Features autonomous navigation, safety monitoring, and intelligent traffic management.',';
     price: $,9,999,
   ,
-<<<<<<< HEAD
     period: 'mont,h,';
     features[
   'Autonomous: navigation',';
@@ -621,7 +566,6 @@ export: const real2036AIServices = [
   'Vehicle: optimization',';
   'Predictive: maintenance',';
   'Safety: systems'';
-=======
     period: 'month,
     features['
   'Autonomous navigation',
@@ -630,14 +574,12 @@ export: const real2036AIServices = [
   'Vehicle optimization',
   'Predictive maintenance',
   'Safety systems'
->>>>>>> main
     ],
     popular: tru,e,
     category:,
   Vehicle: AI',';
     icon: '🚗�,�,';
     marketPrice:,
-<<<<<<< HEAD
   $15,000-25,000/month',';
     benefits[
   'Enhanced: vehicle safety',';
@@ -650,7 +592,6 @@ useCases: [
   'Fleet: management',';
   'Traffic: optimization',';
   'Safety: systems'';
-=======
   $15,000-25,000/month',
     benefits['
   'Enhanced vehicle safety',
@@ -663,7 +604,6 @@ useCases: ['
   'Fleet management',
   'Traffic optimization',
   'Safety systems'
->>>>>>> main
     ]
 
 ]}

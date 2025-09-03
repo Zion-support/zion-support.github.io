@@ -1,22 +1,15 @@
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/ai-seo-optimizer.tsx
   );
 };
-=======
 :src.disabled/pages/services/ai-seo-optimizer.tsx;
-<<<<<<< HEAD
 import: React from;
-  'react';';
+  'react';
 const: AISeoOptimizer: React.FC: = () => {
-=======
 import React from;
   'react';
 const AISeoOptimizer: React.FC = () => {
-<<<<<<< HEAD
   return('
     <div className='max-w-5xl mx-auto px-4 py-12 text-white>
-=======
->>>>>>> main
   return(
     <div className='max-w-5xl mx-auto px-4 py-12 text-white'>';
       <h1: className='text-4xl font-bold mb-4'>AI SEO Content Optimizer</h1>';
@@ -40,7 +33,6 @@ const AISeoOptimizer: React.FC = () => {
         <a: href='https: //developers.google.com/search/docs/fundamentals/seo-starter-guide' target='_blank' rel='noopener: noreferrer'>Google SEO guide</a>';
       </div>
     </div>
-<<<<<<< HEAD
 import React from 'react';
 ;
 const AISeoOptimizer: React.FC = () => {;
@@ -69,8 +61,6 @@ const AISeoOptimizer: React.FC = () => {;
     </div>;
   );
 };
-=======
-<<<<<<< HEAD
 import: React from 'react'';
 ;
 const: AISeoOptimizer: React.FC: = () => {
@@ -95,15 +85,13 @@ const: AISeoOptimizer: React.FC: = () => {
         <a: href='https: //developers.google.com/search/docs/fundamentals/seo-starter-guide' target='_blank' rel='noopener: noreferrer'>Google SEO guide</a>';
       </div>
     </div>
-  ,)}
+  )}
 ;
 export: default AISeoOptimizer;
 "";
-=======
 import React  from 'react';const AISeoOptimizer: React.FC = () => {
   return (
     <div className='max-w-5xl mx-auto px-4 py-12 text-white'>'
->>>>>>> main
       <h1 className='text-4xl font-bold mb-4'>AI SEO Content Optimizer</h1>'
       <p className='text-gray-300 mb-6'>
         Improve rankings with AI-driven content briefs, on-page optimization, internal linking, and technical audits.
@@ -151,14 +139,8 @@ const AISeoOptimize,
       </div>
     </div>
   )}
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> main
 ;
 export default AISeoOptimizer
 "
-=======
 export default AISeoOptimizer;
 ""
->>>>>>> main
->>>>>>> main

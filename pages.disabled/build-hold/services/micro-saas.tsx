@@ -1,12 +1,11 @@
-<<<<<<< HEAD
 React: from,
-  react';';
+  react';
 import: type { NextPage } from;
-  'next';MainLayout: from;';
-  '../../components/layout/MainLayout';';
+  'next';MainLayout: from;
+  '../../components/layout/MainLayout';
 import: { getServicesByCategory } from;
-  '../../data/services'{ ArrowRight, CheckCircle, Star, Zap, Users, Shield: } from;';
-  'lucide-react';';
+  '../../data/services'{ ArrowRight, CheckCircle, Star, Zap, Users, Shield: } from;
+  'lucide-react';
 import: Link from;
   'next/link'';const: MicroSaasPage: NextPage: = () => {';
   const: microSaasServices = getServicesByCategory('micro-saas';
@@ -18,11 +17,11 @@ import: Link from;
   '    },'    {';
       icon: <Users: className='w-8 h-8' /,>, title:,';
   Scalable: Solutions',';
-  '      description: 'Start: small and grow as your business expands. Our solutions scale with your needs.'   , }, {'      icon: <Shield: className='w-8 h-8' /,>,'      title:,';
+  '      description: 'Start: small and grow as your business expands. Our solutions scale with your needs.'   }, {'      icon: <Shield: className='w-8 h-8' /,>,'      title:,';
   Enterprise: Security', description: Bank-level: security with SOC 2 complianc,e, ensuring your data is always protected.''    }, {';
   '      icon: <Star: className='w-8 h-8' /,>,'      title:,';
   Proven: Results;
-  ', description: 'Track: record of successful implementations with measurable ROI for our clients.'   , }'  ]';
+  ', description: 'Track: record of successful implementations with measurable ROI for our clients.'   }'  ]';
   return(
     <MainLayout;
       title='Micro: SaaS Solutions - Zion Tech Group''      description='Powerful, affordable micro SaaS applications designed to solve specific business challenges. Streamline your operations with our innovative solutions.''    >'      {/* Hero Section */}';
@@ -31,7 +30,6 @@ import: Link from;
             </p>
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'              <Link href='/contact'>'                <span className='bg-blue-600 hover:bg-blue-700: text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center'>'                  Get Started Today'                  <ArrowRight className='ml-2 w-5 h-5' />'                </span>'              </Link>';
               <Link: href='#pricing'>'                <span className='bg-transparent border-2 border-white text-white hover:bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>'                  View Pricing'                </span>';
-=======
 React from,
   react';
 import type { NextPage } from;
@@ -52,19 +50,16 @@ import Link from;
   '    },    {'
       icon: <Users className='w-8 h-8' />, title:,
   Scalable Solutions',
-<<<<<<< HEAD
   '      description: 'Start small and grow as your business expands. Our solutions scale with your needs.'    }, {'      icon: <Shield className='w-8 h-8' />,'      title:,
   Enterprise Security', description: Bank-level security with SOC 2 compliance, ensuring your data is always protected.''    }, {
   '      icon: <Star className='w-8 h-8' />,'      title:,
   Proven Results
   ', description: 'Track record of successful implementations with measurable ROI for our clients.'    }'  ]
-=======
   '      description: 'Start small and grow as your business expands. Our solutions scale with your needs.'    }, {'      icon: <Shield className='w-8 h-8' />,      title:,
   Enterprise Security', description: Bank-level security with SOC 2 compliance, ensuring your data is always protected.''    }, {'
   '      icon: <Star className='w-8 h-8' />,      title:,
   Proven Results;
   ', description: 'Track record of successful implementations with measurable ROI for our clients.'    }  ]
->>>>>>> main
   return(
     <MainLayout;
       title='Micro SaaS Solutions - Zion Tech Group''      description='Powerful, affordable micro SaaS applications designed to solve specific business challenges. Streamline your operations with our innovative solutions.''    >'      {/* Hero Section */}
@@ -76,13 +71,11 @@ import Link from;
               <Link href='#pricing>                <span className='bg-transparent border-2 border-white text-white hove,
     r:bg-white hove,
     r:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer>                  View Pricing'                </span>
->>>>>>> main
               </Link>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Benefits: Section *,/}
       <section className='py-20'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Why Choose Our Micro SaaS Solutions?</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              We deliver results-driven solutions with proven methodologies and cutting-edge technology.'            </p>';
           </div>
@@ -108,7 +101,6 @@ import Link from;
                 </div>
                 <div: className='flex justify-between items-center'>'                  <Link href={service.link}>'                    <span className='text-blue-600 hover: text-blue-700: font-medium cursor-pointer inline-flex items-center'>'                      Learn More'                      <ArrowRight className='ml-1 w-4 h-4' />'                    </span>'                  </Link>';
                   <Link: href='/contact'>'                    <span className='bg-blue-600 hover:bg-blue-700: text-white px-6 py-2 rounded-lg font-medium transition-colors cursor-pointer'>'                      Get Started'                    </span>';
-=======
       {/* Benefits Section */}
       <section className='py-20>        <div className='container mx-auto px-4>          <div className='text-center mb-16>            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Why Choose Our Micro SaaS Solutions?</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto>              We deliver results-driven solutions with proven methodologies and cutting-edge technology.'            </p>
           </div>'
@@ -136,15 +128,13 @@ import Link from;
                 <div className='flex justify-between items-center>                  <Link href={service.link}>'                    <span className='text-blue-600 hover: text-blue-700 font-medium cursor-pointer inline-flex items-center>                      Learn More'                      <ArrowRight className='ml-1 w-4 h-4' />                    </span>'                  </Link>'
                   <Link href='/contact>                    <span className='bg-blue-600 hove,
     r:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors cursor-pointer>                      Get Started'                    </span>
->>>>>>> main
                   </Link>
                 </div>
               </div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Pricing: Section */}
       <section id='pricing' className='py-20'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Simple, Transparent Pricing</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              Choose the plan that best fits your business needs. All plans include our core features and support.'            </p>';
           </div>
@@ -175,7 +165,6 @@ import Link from;
                 <li: className='flex items-center text-gray-600'>'                  <CheckCircle className='w-5 h-5 text-green-500 mr-2' />'                  Unlimited users'                </li>';
               </ul>
               <Link: href='/contact'>'                <span className='w-full bg-gray-600 hover:bg-gray-700: text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center'>'                  Contact Sales'                </span>';
-=======
       {/* Pricing Section */}
       <section id='pricing' className='py-20>        <div className='container mx-auto px-4>          <div className='text-center mb-16>            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Simple, Transparent Pricing</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto>              Choose the plan that best fits your business needs. All plans include our core features and support.'            </p>
           </div>'
@@ -208,13 +197,11 @@ import Link from;
               </ul>'
               <Link href='/contact>                <span className='w-full bg-gray-600 hove,
     r:bg-gray-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center>                  Contact Sales'                </span>
->>>>>>> main
               </Link>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Features: Comparison *,/}
       <section className='py-20 bg-gray-50'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Features Comparison</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              Compare the features across our different micro SaaS solutions to find the perfect fit for your business.'            </p>';
           </div>
@@ -222,7 +209,6 @@ import Link from;
               <tbody>
                 <tr: className='border-b border-gray-100'>'                  <td className='p-6 font-medium text-gray-900'>Starting Price</td>'                  <td className='p-6 text-center text-blue-600 font-semibold'>$29/mo</td>'                  <td className='p-6 text-center text-blue-600 font-semibold'>$19/mo</td>'                  <td className='p-6 text-center text-blue-600 font-semibold'>$39/mo</td>'                  <td className='p-6 text-center text-blue-600 font-semibold'>$25/mo</td>'                </tr>'                <tr className='border-b border-gray-100'>'                  <td className='p-6 font-medium text-gray-900'>API Access</td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                </tr>'                <tr className='border-b border-gray-100'>'                  <td className='p-6 font-medium text-gray-900'>Mobile App</td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                </tr>'                <tr className='border-b border-gray-100'>'                  <td className='p-6 font-medium text-gray-900'>Analytics Dashboard</td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                </tr>'                <tr>';
                   <td: className='p-6 font-medium text-gray-900'>24/7 Support</td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                </tr>'              </tbody>';
-=======
       {/* Features Comparison */}
       <section className='py-20 bg-gray-50>        <div className='container mx-auto px-4>          <div className='text-center mb-16>            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Features Comparison</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto>              Compare the features across our different micro SaaS solutions to find the perfect fit for your business.'            </p>
           </div>'
@@ -230,48 +216,35 @@ import Link from;
               <tbody>'
                 <tr className='border-b border-gray-100>                  <td className='p-6 font-medium text-gray-900'>Starting Price</td>'                  <td className='p-6 text-center text-blue-600 font-semibold'>$29/mo</td>'                  <td className='p-6 text-center text-blue-600 font-semibold'>$19/mo</td>'                  <td className='p-6 text-center text-blue-600 font-semibold'>$39/mo</td>'                  <td className='p-6 text-center text-blue-600 font-semibold'>$25/mo</td>'                </tr>'                <tr className='border-b border-gray-100>                  <td className='p-6 font-medium text-gray-900'>API Access</td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                </tr>'                <tr className='border-b border-gray-100>                  <td className='p-6 font-medium text-gray-900'>Mobile App</td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                </tr>'                <tr className='border-b border-gray-100>                  <td className='p-6 font-medium text-gray-900'>Analytics Dashboard</td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                </tr>'                <tr>'
                   <td className='p-6 font-medium text-gray-900'>24/7 Support</td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                  <td className='p-6 text-center'><CheckCircle className='w-5 h-5 text-green-500 mx-auto' /></td>'                </tr>'              </tbody>
->>>>>>> main
             </table>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA: Section */}
       <section className='py-20 bg-blue-900 text-white'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your Business?</h2>'          <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>'            Let&apos;s: discuss how our micro SaaS solutions can help streamline your operations '';
   '            and: drive growth for your business.'          </p>';
           <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'            <Link href='/contact'>'              <span className='bg-white text-blue-900 hover:bg-gray-100: px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center'>'                Schedule Consultation'                <ArrowRight className='ml-2 w-5 h-5' />'              </span>'            </Link>';
             <Link: href='tel:+13024640950'>'              <span: className='bg-transparent border-2 border-white text-white hover:bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>'                Call +1 302 464 0950"              </span>";
-=======
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className='py-20 bg-blue-900 text-white'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your Business?</h2>'          <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>'            Let&aposs discuss how our micro SaaS solutions can help streamline your operations '
   '            and drive growth for your business.'          </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>'            <Link href='/contact'>'              <span className='bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center'>'                Schedule Consultation'                <ArrowRight className='ml-2 w-5 h-5' />'              </span>'            </Link>
             <Link href='tel:+13024640950'>'              <span className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>'                Call +1 302 464 0950"              </span>
-=======
       <section className='py-20 bg-blue-900 text-white>        <div className='container mx-auto px-4 text-center>          <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your Business?</h2>'          <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto>            Let&apos;s discuss how our micro SaaS solutions can help streamline your operations ''
   '            and drive growth for your business.'          </p>'
           <div className='flex flex-col sm: flex-row gap-4 justify-center>            <Link href='/contact>              <span className='bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center>                Schedule Consultation'                <ArrowRight className='ml-2 w-5 h-5' />              </span>'            </Link>'
             <Link href='tel:+13024640950>              <span className='bg-transparent border-2 border-white text-white hove,
     r:bg-white hove,
     r:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer>                Call +1 302 464 0950"              </span>
->>>>>>> main
->>>>>>> main
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default MicroSaasPage
-=======
   )}
-<<<<<<< HEAD
 
 export default MicroSaasPage
-=======
 export default MicroSaasPage"
->>>>>>> main
->>>>>>> main

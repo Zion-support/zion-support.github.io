@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
-=======
 #!/'usr/bin/env' node;
 
->>>>>>> main
 const { execSync, spawn } = require('child_process');
 const fs = require('fs').promises;
 const path = require('path');
@@ -23,21 +20,18 @@ class ProjectErrorAutomation {;
     await this.ensureDirectories();
     await this.log('🚀 Starting Project Error Automation');
   }
-<<<<<<< HEAD
 
   async ensureDirectories() {
     const dirs = ['''automation/logs'''', '''automation/reports''', '''automation/backups''``];
     
     for (const dir of dirs) {
       await fs.mkdir(path.join(this.projectRoot, `dir)`, { recursive: true });
-=======
 ;
   async ensureDirectories() {;
     const dirs = [''automation/logs'', ''automation/reports'', ''automation/backups''];
     ;
     for (const dir of dirs) {;
       await fs.mkdir(path.join(this.projectRoot, 'dir)', { recursive: true });
->>>>>>> main
     }
   }
 ;
@@ -47,7 +41,6 @@ class ProjectErrorAutomation {;
     console.log(`logMessage);
     await fs.appendFile(this.logFile, logMessage + `\n`);
   }
-<<<<<<< HEAD
 
   async runCommand(command, options = {}) {
     try {
@@ -60,7 +53,6 @@ class ProjectErrorAutomation {;
       return { success: true, output: result };
     } catch (error) {  
       return { success: false, output: error.stdout || error.stderr || error.message   };
-=======
 ;
   async runCommand(command, options = {}) {;
     try {;
@@ -73,36 +65,29 @@ class ProjectErrorAutomation {;
       return { success: true, output: result };
     } catch (error) {;
       return { success: false, output: error.stdout || error.stderr || error.message };
->>>>>>> main
     }
   }
 ;
   async checkDependencies() {;
     await this.log('📦 Checking dependencies...');
-<<<<<<< HEAD
     
-=======
     ;
->>>>>>> main
     // Check for dependency conflicts;
     const npmCheck = await this.runCommand('npm ls --depth=0', { silent: true });
     if (!npmCheck.success) {;
       await this.log('⚠️  Dependency conflicts detected');
-<<<<<<< HEAD
       this.errorsFound.push({
         type: 'dependency-conflict',
         message: 'Dependency conflicts found',
         details: npmCheck.output;
       });
       
-=======
       this.errorsFound.push({;
         type: 'dependency-conflict',;
         message: 'Dependency conflicts found',;
         details: npmCheck.output;
       });
       ;
->>>>>>> main
       // Try to fix with legacy peer deps;
       await this.log('🔧 Attempting to fix dependency conflicts...');
       const fixResult = await this.runCommand('npm install --legacy-peer-deps');
@@ -125,21 +110,18 @@ class ProjectErrorAutomation {;
     const typeCheck = await this.runCommand('npm run type-check', { silent: true });
     if (!typeCheck.success) {;
       await this.log('⚠️  TypeScript errors detected');
-<<<<<<< HEAD
       this.errorsFound.push({
         type: 'typescript-error',
         message: 'TypeScript compilation errors',
         details: typeCheck.output;
       });
       
-=======
       this.errorsFound.push({;
         type: 'typescript-error',;
         message: 'TypeScript compilation errors',;
         details: typeCheck.output;
       });
       ;
->>>>>>> main
       // Try to fix common TypeScript issues;
       await this.fixTypeScriptErrors(typeCheck.output);
     } else {;
@@ -151,7 +133,6 @@ class ProjectErrorAutomation {;
     await this.log('🔧 Attempting to fix TypeScript errors...');
     ;
     const fixes = [];
-<<<<<<< HEAD
     
     // Fix common import issues;
     if (errorOutput.includes('Cannot find module')) {
@@ -165,7 +146,6 @@ class ProjectErrorAutomation {;
     
     // Fix JSX issues;
     if (errorOutput.includes('JSX element')) {
-=======
     ;
     // Fix common import issues;
     if (errorOutput.includes('Cannot find module')) {;
@@ -179,7 +159,6 @@ class ProjectErrorAutomation {;
     ;
     // Fix JSX issues;
     if (errorOutput.includes('JSX element')) {;
->>>>>>> main
       fixes.push('jsx-fix');
     }
     ;
@@ -210,7 +189,6 @@ class ProjectErrorAutomation {;
         const filePath = path.join(this.projectRoot, 'file);
         let content = await fs.readFile(filePath', 'utf8');
         let modified = false;
-<<<<<<< HEAD
         
         // Fix React imports;
         if (content.includes('React') && !content.includes("import React")) {
@@ -222,7 +200,6 @@ class ProjectErrorAutomation {;
         if (content.includes('useState') && !content.includes("import { useState }")) {
           content = content.replace(
             /import React from `react`/,import React, { useState } from `react`"
-=======
         ;
         // Fix React imports;
         if (content.includes('React') && !content.includes("import React")) {;
@@ -234,38 +211,30 @@ class ProjectErrorAutomation {;
         if (content.includes('useState') && !content.includes("import { useState }")) {;
           content = content.replace(;
             /import React from 'react'/,import React, { useState } from 'react'";
->>>>>>> main
           );
-<<<<<<< HEAD
           modified = true;
         }
         ;
         if (modified) {;
-=======
           modified = true;`);
         }`);
         `);
         if (modified) {`);
->>>>>>> main
           await fs.writeFile(filePath, content);await this.log(✅ Fixed imports in ${file}`);
-<<<<<<< HEAD
           this.fixesApplied.push({
             type: `import-fix`,
             file: file,
             timestamp: new Date().toISOString()
-=======
           this.fixesApplied.push({;
             type: 'import-fix',;
             file: file,;
             timestamp: new Date().toISOString();
->>>>>>> main
           });
         }
       } catch (error) {  await this.log(`❌ Error fixing imports in ${file  }: ${error.message}`);
       }
     }
   }
-<<<<<<< HEAD
 
   async fixTypeAnnotations() {
     const tsFiles = glob.sync(`src/**/*.{ts,tsx}`, { cwd: this.projectRoot });
@@ -276,7 +245,6 @@ class ProjectErrorAutomation {;
         let content = await fs.readFile(filePath`, `utf8`);
         let modified = false;
         
-=======
 ;
   async fixTypeAnnotations() {;
     const tsFiles = glob.sync('src/**/*.{ts,tsx}', { cwd: this.projectRoot });
@@ -287,7 +255,6 @@ class ProjectErrorAutomation {;
         let content = await fs.readFile(filePath', 'utf8');
         let modified = false;
         ;
->>>>>>> main
         // Add explicit any types where needed;
         const anyPattern = /const\s+(\w+)\s*:\s*any\s*=\s*([^;]+);/g;
         if (anyPattern.test(content)) {;
@@ -298,24 +265,20 @@ class ProjectErrorAutomation {;
         ;
         if (modified) {;
           await fs.writeFile(filePath, content);await this.log(`✅ Fixed type annotations in ${file}`);
-<<<<<<< HEAD
           this.fixesApplied.push({
             type: `type-annotation-fix`,
             file: file,
             timestamp: new Date().toISOString()
-=======
           this.fixesApplied.push({;
             type: 'type-annotation-fix',;
             file: file,;
             timestamp: new Date().toISOString();
->>>>>>> main
           });
         }
       } catch (error) {  await this.log(`❌ Error fixing type annotations in ${file  }: ${error.message}`);
       }
     }
   }
-<<<<<<< HEAD
 
   async fixJSXIssues() {
     const jsxFiles = glob.sync(`src/**/*.{jsx,tsx}`, { cwd: this.projectRoot });
@@ -335,7 +298,6 @@ class ProjectErrorAutomation {;
         // Fix JSX attribute issues;
         if (content.includes(`class=`)) {
           content = content.replace(/class=/g, `className=`);
-=======
 ;
   async fixJSXIssues() {;
     const jsxFiles = glob.sync('src/**/*.{jsx,tsx}', { cwd: this.projectRoot });
@@ -355,30 +317,25 @@ class ProjectErrorAutomation {;
         // Fix JSX attribute issues;
         if (content.includes('class=')) {;
           content = content.replace(/class=/g, 'className=');
->>>>>>> main
           modified = true;
         }
         ;
         if (modified) {;
           await fs.writeFile(filePath, content);await this.log(`✅ Fixed JSX issues in ${file}`);
-<<<<<<< HEAD
           this.fixesApplied.push({
             type: `jsx-fix`,
             file: file,
             timestamp: new Date().toISOString()
-=======
           this.fixesApplied.push({;
             type: 'jsx-fix',;
             file: file,;
             timestamp: new Date().toISOString();
->>>>>>> main
           });
         }
       } catch (error) {  await this.log(`❌ Error fixing JSX issues in ${file  }: ${error.message}`);
       }
     }
   }
-<<<<<<< HEAD
 
   async checkLintingErrors() {
     await this.log(`🔍 Checking linting errors...`);
@@ -395,7 +352,6 @@ class ProjectErrorAutomation {;
         details: lintCheck.output;
       });
       
-=======
 ;
   async checkLintingErrors() {;
     await this.log('🔍 Checking linting errors...');
@@ -412,7 +368,6 @@ class ProjectErrorAutomation {;
         details: lintCheck.output;
       });
       ;
->>>>>>> main
       // Try to auto-fix linting issues;
       await this.log('🔧 Attempting to auto-fix linting issues...');
       const fixResult = await this.runCommand('npm run lint -- --fix', { silent: true });
@@ -433,7 +388,6 @@ class ProjectErrorAutomation {;
     try {;
       const eslintConfigPath = path.join(this.projectRoot, '.eslintrc.js');
       const configContent = await fs.readFile(eslintConfigPath, 'utf8');
-<<<<<<< HEAD
       
       // Check if there's a module.exports issue;
       if (!configContent.includes('module.exports')) {
@@ -442,7 +396,6 @@ class ProjectErrorAutomation {;
   rules: {@typescript-''eslint/no-unused-vars''': 'warn',@typescript-''eslint/no-explicit-any''': 'warn',''react/react-in-jsx-scope''': 'off',''react/prop-types''': 'off',no-console': 'warn'
   },
   ignorePatterns: ['node_modules/', '.next/', 'out/', 'dist/']
-=======
       ;
       // Check if there's a module.exports issue;
       if (!configContent.includes('module.exports')) {;
@@ -451,28 +404,23 @@ class ProjectErrorAutomation {;
   rules: {@typescript-'eslint/no-unused-vars'': 'warn',@typescript-'eslint/no-explicit-any'': 'warn','react/react-in-jsx-scope'': 'off','react/prop-types'': 'off',no-console': 'warn';
   },;
   ignorePatterns: ['node_modules/', '.next/', 'out/', 'dist/'];
->>>>>>> main
 };`;
         ;
         await fs.writeFile(eslintConfigPath, fixedConfig);
         await this.log('✅ ESLint configuration fixed');
-<<<<<<< HEAD
         this.fixesApplied.push({
           type: `eslint-config-fix`,
           file: `.eslintrc.js`,
           timestamp: new Date().toISOString()
-=======
         this.fixesApplied.push({;
           type: 'eslint-config-fix',;
           file: '.eslintrc.js',;
           timestamp: new Date().toISOString();
->>>>>>> main
         });
       }
     } catch (error) {  await this.log(`❌ Error fixing ESLint config: ${error.message  }`);
     }
   }
-<<<<<<< HEAD
 
   async checkBuildErrors() {
     await this.log(`🔍 Checking build errors...`);
@@ -486,7 +434,6 @@ class ProjectErrorAutomation {;
         details: buildCheck.output;
       });
       
-=======
 ;
   async checkBuildErrors() {;
     await this.log('🔍 Checking build errors...');
@@ -500,7 +447,6 @@ class ProjectErrorAutomation {;
         details: buildCheck.output;
       });
       ;
->>>>>>> main
       // Try to fix build issues;
       await this.fixBuildErrors(buildCheck.output);
     } else {;
@@ -510,7 +456,6 @@ class ProjectErrorAutomation {;
 ;
   async fixBuildErrors(errorOutput) {;
     await this.log('🔧 Attempting to fix build errors...');
-<<<<<<< HEAD
     
     // Fix syntax errors in automation files;
     if (errorOutput.includes('Unexpected token')) {
@@ -519,7 +464,6 @@ class ProjectErrorAutomation {;
     
     // Fix module resolution issues;
     if (errorOutput.includes('Cannot find module')) {
-=======
     ;
     // Fix syntax errors in automation files;
     if (errorOutput.includes('Unexpected token')) {;
@@ -528,7 +472,6 @@ class ProjectErrorAutomation {;
     ;
     // Fix module resolution issues;
     if (errorOutput.includes('Cannot find module')) {;
->>>>>>> main
       await this.fixModuleResolution();
     }
   }
@@ -541,7 +484,6 @@ class ProjectErrorAutomation {;
         const filePath = path.join(this.projectRoot, 'file);
         let content = await fs.readFile(filePath', 'utf8');
         let modified = false;
-<<<<<<< HEAD
         
         // Fix missing commas in objects;
         const objectPattern = /(\w+:\s*['^', '}']+)\s*\n\s*(\w+:)/g;
@@ -554,7 +496,6 @@ class ProjectErrorAutomation {;
         const semicolonPattern = /(\w+)\s*\n\s*(\w+)/g;
         if (semicolonPattern.test(content)) {
           content = content.replace(semicolonPattern, `$1;\n$2`);
-=======
         ;
         // Fix missing commas in objects;
         const objectPattern = /(\w+:\s*['^', '}']+)\s*\n\s*(\w+:)/g;
@@ -567,30 +508,25 @@ class ProjectErrorAutomation {;
         const semicolonPattern = /(\w+)\s*\n\s*(\w+)/g;
         if (semicolonPattern.test(content)) {;
           content = content.replace(semicolonPattern, '$1;\n$2');
->>>>>>> main
           modified = true;
         }
         ;
         if (modified) {;
           await fs.writeFile(filePath, content);await this.log(`✅ Fixed syntax errors in ${file}`);
-<<<<<<< HEAD
           this.fixesApplied.push({
             type: `syntax-fix`,
             file: file,
             timestamp: new Date().toISOString()
-=======
           this.fixesApplied.push({;
             type: 'syntax-fix',;
             file: file,;
             timestamp: new Date().toISOString();
->>>>>>> main
           });
         }
       } catch (error) {  await this.log(`❌ Error fixing syntax in ${file  }: ${error.message}`);
       }
     }
   }
-<<<<<<< HEAD
 
   async fixModuleResolution() {
     await this.log(`🔧 Fixing module resolution issues...`);
@@ -598,7 +534,6 @@ class ProjectErrorAutomation {;
     // Update tsconfig.json if needed;
     try {
       const tsConfigPath = path.join(this.projectRoot, `tsconfig.json`);
-=======
 ;
   async fixModuleResolution() {;
     await this.log('🔧 Fixing module resolution issues...');
@@ -606,17 +541,13 @@ class ProjectErrorAutomation {;
     // Update tsconfig.json if needed;
     try {;
       const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
->>>>>>> main
       const tsConfig = JSON.parse(await fs.readFile(tsConfigPath, 'utf8'));
       ;
       if (!tsConfig.compilerOptions) {;
         tsConfig.compilerOptions = {};
       }
-<<<<<<< HEAD
       
-=======
       ;
->>>>>>> main
       // Add module resolution settings;
       tsConfig.compilerOptions.moduleResolution = 'node';
       tsConfig.compilerOptions.allowSyntheticDefaultImports = true;
@@ -624,17 +555,14 @@ class ProjectErrorAutomation {;
       ;
       await fs.writeFile(tsConfigPath, JSON.stringify(tsConfig, null, 2));
       await this.log('✅ TypeScript configuration updated');
-<<<<<<< HEAD
       this.fixesApplied.push({
         type: `tsconfig-fix`,
         file: `tsconfig.json`,
         timestamp: new Date().toISOString()
-=======
       this.fixesApplied.push({;
         type: 'tsconfig-fix',;
         file: 'tsconfig.json',;
         timestamp: new Date().toISOString();
->>>>>>> main
       });
     } catch (error) {  await this.log(`❌ Error fixing TypeScript config: ${error.message  }`);
     }
@@ -643,7 +571,6 @@ class ProjectErrorAutomation {;
   async generateReport() {;
     const endTime = new Date();
     const duration = endTime - this.startTime;
-<<<<<<< HEAD
     
     const report = {
       timestamp: endTime.toISOString(),
@@ -657,7 +584,6 @@ class ProjectErrorAutomation {;
         typescriptIssues: this.errorsFound.filter(e => e.type === `typescript-error`).length,
         lintingIssues: this.errorsFound.filter(e => e.type === `linting-error`).length,
         buildIssues: this.errorsFound.filter(e => e.type === `build-error`).length;
-=======
     ;
     const report = {;
       timestamp: endTime.toISOString(),;
@@ -671,7 +597,6 @@ class ProjectErrorAutomation {;
         typescriptIssues: this.errorsFound.filter(e => e.type === 'typescript-error').length,;
         lintingIssues: this.errorsFound.filter(e => e.type === 'linting-error').length,;
         buildIssues: this.errorsFound.filter(e => e.type === 'build-error').length;
->>>>>>> main
       }
     };
     ;
@@ -683,38 +608,28 @@ class ProjectErrorAutomation {;
   async run() {;
     try {;
       await this.init();
-<<<<<<< HEAD
       
-=======
       ;
->>>>>>> main
       // Run all checks and fixes;
       await this.checkDependencies();
       await this.checkTypeScriptErrors();
       await this.checkLintingErrors();
       await this.checkBuildErrors();
-<<<<<<< HEAD
       
-=======
       ;
->>>>>>> main
       // Generate final report;
       const report = await this.generateReport();
       await this.log(`✅ Project Error Automation completed`);await this.log(`📈 Summary: ${report.errorsFound} errors found, ${report.fixesApplied} fixes applied`);
       ;
       return report;
-<<<<<<< HEAD
       
     } catch (error) {  await this.log(`❌ Error in automation: ${error.message  }`);
-=======
       ;
     } catch (error) {await this.log(`❌ Error in automation: ${error.message}`);
->>>>>>> main
       throw error;
     }
   }
 }
-<<<<<<< HEAD
 
 // Run the automation if called directly;
 if (require.main === module) {
@@ -726,7 +641,6 @@ if (require.main === module) {
     })
     .catch(error => {
       console.error(`Automation failed:`, error);
-=======
 ;
 // Run the automation if called directly;
 if (require.main === module) {;
@@ -738,7 +652,6 @@ if (require.main === module) {;
     });
     .catch(error => {;
       console.error('Automation failed:', error);
->>>>>>> main
       process.exit(1);
     });
 }

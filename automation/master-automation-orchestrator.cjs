@@ -57,7 +57,7 @@ class MasterAutomationOrchestrator {
 
   async runDependencyFix() {
     this.log('\\n🔧 PHASE 1: DEPENDENCY FIXING');
-    this.log('==============================');
+    this.log('==');
     
     this.results.dependencyFix = await this.runScript(
       'Dependency Fixer',
@@ -67,7 +67,7 @@ class MasterAutomationOrchestrator {
 
   async runTypeScriptFix() {
     this.log('\\n📝 PHASE 2: TYPESCRIPT FIXING');
-    this.log('==============================');
+    this.log('==');
     
     this.results.typescriptFix = await this.runScript(
       'TypeScript Fixer',
@@ -77,7 +77,7 @@ class MasterAutomationOrchestrator {
 
   async runHealthCheck() {
     this.log('\\n🔍 PHASE 3: HEALTH CHECK');
-    this.log('========================');
+    this.log('===');
     
     this.results.healthCheck = await this.runScript(
       'Health Check',
@@ -87,7 +87,7 @@ class MasterAutomationOrchestrator {
 
   async runSecurityScan() {
     this.log('\\n🛡️  PHASE 4: SECURITY SCAN');
-    this.log('===========================');
+    this.log('======');
     
     this.results.securityScan = await this.runScript(
       'Security Scanner',
@@ -97,7 +97,7 @@ class MasterAutomationOrchestrator {
 
   async runPerformanceOptimize() {
     this.log('\\n⚡ PHASE 5: PERFORMANCE OPTIMIZATION');
-    this.log('====================================');
+    this.log('=');
     
     this.results.performanceOptimize = await this.runScript(
       'Performance Optimizer',
@@ -107,7 +107,7 @@ class MasterAutomationOrchestrator {
 
   async runBuildTest() {
     this.log('\\n🏗️  PHASE 6: BUILD TEST');
-    this.log('========================');
+    this.log('===');
     
     const startTime = Date.now();
     this.log('🚀 Running build test...');
@@ -161,7 +161,7 @@ class MasterAutomationOrchestrator {
     
     // Display report
     this.log('\\n📊 MASTER AUTOMATION ORCHESTRATOR REPORT');
-    this.log('========================================');
+    this.log('=====');
     this.log(`Total Duration: ${report.totalDuration}`);
     this.log(`Phases Completed: ${report.summary.successfulPhases}/${report.summary.totalPhases}`);
     this.log(`Overall Success: ${report.summary.overallSuccess ? '✅' : '❌'}`);
@@ -184,7 +184,7 @@ class MasterAutomationOrchestrator {
 
   async run() {
     this.log('🎯 MASTER AUTOMATION ORCHESTRATOR');
-    this.log('================================');
+    this.log('====');
     this.log('Starting comprehensive automation workflow...\\n');
     
     try {

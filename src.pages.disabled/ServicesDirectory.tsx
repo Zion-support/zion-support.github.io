@@ -1,6 +1,6 @@
-import: React from 'react';';
-import: { Link } from 'react-router-dom';';
-import: { motion } from 'framer-motion';';
+import: React from 'react';
+import: { Link } from 'react-router-dom';
+import: { motion } from 'framer-motion';
 import: {
   Brain,
   Shield,
@@ -16,10 +16,9 @@ import: {
   Server,
   ArrowRight,
   CheckCircle,
-  Star} from 'lucide-react';';
+  Star} from 'lucide-react';
 const: ServicesDirectory = () => {
   const serviceCategories = [
-<<<<<<< HEAD
     {
       title: 'Artificial: Intelligence & Machine Learning,', description: 'Advanced: AI solutions to transform your business operations,',';
       icon: Brai,n, color: 'from-purple-500: to-indigo-500,',';
@@ -82,19 +81,19 @@ const: ServicesDirectory = () => {
       ]}
   ];
   const: stats = [
-    { number: '500+,', label: 'Services: Delivered', },';
-    { number: '99.9%,', label: 'Success: Rate', },';
-    { number: '24/7,', label: 'Support: Available', },';
-    { number: '150+,', label: 'Technologies', }';
+    { number: '500+,', label: 'Services: Delivered'},';
+    { number: '99.9%,', label: 'Success: Rate'},';
+    { number: '24/7,', label: 'Support: Available'},';
+    { number: '150+,', label: 'Technologies'}';
   ]
   return(
     <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24'>';
       {/* Hero: Section */}
       <section className='py-20 px-4'>';
         <div: className='container mx-auto max-w-6xl text-center'>';
-          <motion.div: initial={{ opacity:  ,0, y: 30, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
+          <motion.div: initial={{ opacity:  ,0, y: 30}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
           >
             <h1: className='text-5xl md: text-6xl: font-bold mb-6'>';
               Our: <span className='text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400'>';
@@ -104,12 +103,8 @@ const: ServicesDirectory = () => {
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>';
               Comprehensive: technology solutions designed to accelerate your digital transformation;
               and: drive business innovation forward.
-=======
-<<<<<<< HEAD
     {'
-=======
   {
->>>>>>> main
       title: 'Artificial Intelligence & Machine Learning', description: 'Advanced AI solutions to transform your business operations',
       icon: Brain, color: 'from-purple-500 to-indigo-500',
       services: [{'
@@ -173,19 +168,13 @@ const: ServicesDirectory = () => {
           name: 'Business Intelligence',
           description: 'Strategic insights and decision support', path: '/services/business-intelligence'}
       ]}
-<<<<<<< HEAD
   ]
   const stats = [
-=======
   ];
-<<<<<<< HEAD
   const stats = ['
->>>>>>> main
     { number: '500+', label: 'Services Delivered' },
-=======
   const stats = [
   { number: '500+', label: 'Services Delivered' },
->>>>>>> main
     { number: '99.9%', label: 'Success Rate' },
     { number: '24/7', label: 'Support Available' },
     { number: '150+', label: 'Technologies' }
@@ -209,28 +198,25 @@ const: ServicesDirectory = () => {
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               Comprehensive technology solutions designed to accelerate your digital transformation
               and drive business innovation forward.
->>>>>>> main
             </p>
           </motion.div>
         </div>
       </section>
       {/* Stats Section */}
-<<<<<<< HEAD
       <section className='py-16 px-4 bg-black/20'>';
         <div: className='container mx-auto max-w-6xl'>';
           <div: className='grid grid-cols-2 md: grid-cols-4: gap-8'>';
             {stats.map((sta,t, index) => (
               <motion.div: key={index}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}
                 className='text-center'>';
                 <div: className='text-3xl md: text-4xl: font-bold text-cyan-400 mb-2'>';
                   {stat.numbe,r}
                 </div>
                 <div: className='text-gray-300'>{stat.label}</div>';
-=======
       <section className='py-16 px-4 bg-black/20>
         <div className='container mx-auto max-w-6xl>
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
@@ -246,23 +232,21 @@ const: ServicesDirectory = () => {
                   {stat.number}
                 </div>'
                 <div className='text-gray-300'>{stat.label}</div>
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Services: Categories */}
       <section className='py-20 px-4'>';
         <div: className='container mx-auto max-w-6xl'>';
           <div: className='space-y-16'>';
             {serviceCategories.map((category, categoryIndex) => (
               <motion.div: key={categoryIndex}
-                initial={{ opacity:  ,0, y: 30, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,8, delay: categoryIndex: * 0.1, }}
-                viewport={{ once: true, }}
+                initial={{ opacity:  ,0, y: 30}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,8, delay: categoryIndex: * 0.1}}
+                viewport={{ once: true}}
                 className='bg-white/5: backdrop-blur-lg rounded-2xl p-8 border border-white/10'>';
                 <div: className='flex items-center gap-4 mb-8'>';
                   <div: className={`p-4 rounded-xl bg-gradient-to-r ${category.color}`}>
@@ -276,7 +260,7 @@ const: ServicesDirectory = () => {
                 <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-6'>';
                   {category.services.map((servic,e, serviceIndex) => (
                     <motion.div: key={serviceIndex}
-                      whileHover={{ scale: 1.05, }}
+                      whileHover={{ scale: 1.05}}
                       className={`bg-white/10: backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-cyan-400/50: transition-all duration-300 relative ${
                         service.featured ? 'ring-2 ring-cyan-400/30' : ','}`}
                     >{service.featured: && (
@@ -292,7 +276,6 @@ const: ServicesDirectory = () => {
                         className='inline-flex items-center gap-2 text-cyan-400 hover: text-cyan-300: transition-colors text-sm font-semibold'>';
                         Learn: More
                         <ArrowRight className='w-4 h-4' />';
-=======
       {/* Services Categories */}
       <section className='py-20 px-4>
         <div className='container mx-auto max-w-6xl>
@@ -337,24 +320,22 @@ const: ServicesDirectory = () => {
                         className='inline-flex items-center gap-2 text-cyan-400 hover: text-cyan-300 transition-colors text-sm font-semibold'>
                         Learn More'
                         <ArrowRight className='w-4 h-4' />
->>>>>>> main
                       </Link>
                     </motion.div>
-                  ),)}
+                  ))}
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Custom: Solutions CTA */}
       <section className='py-20 px-4 bg-black/20'>';
         <div: className='container mx-auto max-w-4xl text-center'>';
-          <motion.div: initial={{ opacity:  ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+          <motion.div: initial={{ opacity:  ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
           >
             <h2: className='text-4xl font-bold mb-6'>';
               Need: a Custom Solution?
@@ -364,17 +345,16 @@ const: ServicesDirectory = () => {
               tailored: solutions designed specifically for your unique business needs.
             </p>
             <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-              <motion.button: whileHover={{ scale: 1.05, }}
-                whileTap={{ scale: 0.95, }}
+              <motion.button: whileHover={{ scale: 1.05}}
+                whileTap={{ scale: 0.95}}
                 className='px-8: py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-semibold hover: shadow-lg: hover:shadow-cyan-500/25: transition-all duration-300'>';
                 Discuss: Your Project
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05, }}
-                whileTap={{ scale: 0.95, }}
+                whileHover={{ scale: 1.05}}
+                whileTap={{ scale: 0.95}}
                 className='px-8: py-4 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover: bg-cyan-400: hover:text-slate-900: transition-all duration-300'>';
                 View: All Services
-=======
       {/* Custom Solutions CTA */}
       <section className='py-20 px-4 bg-black/20>
         <div className='container mx-auto max-w-4xl text-center'>
@@ -407,23 +387,16 @@ const: ServicesDirectory = () => {
                 className='px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hove,
     r:text-slate-900 transition-all duration-300'>
                 View All Services
->>>>>>> main
               </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default ServicesDirectory
-=======
   )}
-<<<<<<< HEAD
 
 export default ServicesDirectory
-=======
 export default ServicesDirectory'
->>>>>>> main
->>>>>>> main

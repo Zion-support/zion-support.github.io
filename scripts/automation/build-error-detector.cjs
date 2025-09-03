@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
-=======
 #!/'usr/bin/env' node;
 
->>>>>>> main
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -16,22 +13,18 @@ class BuildErrorDetector {;
     this.ensureDirectories();
     this.buildHistory = new Map();
   }
-<<<<<<< HEAD
 
   ensureDirectories() {
     ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-=======
 ;
   ensureDirectories() {;
     ['this.logsPath', 'this.reportsPath'].forEach(dir => {;
       if (!fs.existsSync(dir)) {;
->>>>>>> main
         fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
-<<<<<<< HEAD
 
   log(message, level = `INFO`) {
     const timestamp = new Date().toISOString();
@@ -40,7 +33,6 @@ class BuildErrorDetector {;
 
     const logFile = path.join(this.logsPath, `build-error-detector.log`);
     fs.appendFileSync(logFile, logMessage + `\n`);
-=======
 ;
   log(message, level = 'INFO') {;
     const timestamp = new Date().toISOString();
@@ -49,42 +41,34 @@ class BuildErrorDetector {;
 ;
     const logFile = path.join(this.logsPath, 'build-error-detector.log');
     fs.appendFileSync(logFile, logMessage + '\n');
->>>>>>> main
   }
 ;
   async runBuildCheck() {;
     try {;
       this.log('🔍 Running build check...');
-<<<<<<< HEAD
       const result = execSync('npm run build', {
         cwd: this.workspacePath,
         encoding: 'utf8',
-        stdio: `pipe`,
-      });
+        stdio: `pipe`});
       this.log(`✅ Build check passed successfully`);
       return { success: true, output: result, errors: [] };
     } catch (error) {  
       if (error.stdout) {
         const errors = this.parseBuildErrors(error.stdout);this.log(❌ Build check failed with ${errors.length  } errors`);
-=======
       const result = execSync('npm run build', {;
         cwd: this.workspacePath,;
         encoding: 'utf8',;
         stdio: 'pipe',;
       });
-<<<<<<< HEAD
       this.log('✅ Build check passed successfully');
       return { success: true, output: result, errors: [] };
     } catch (error) {;
       if (error.stdout) {;
-=======
       this.log('✅ Build check passed successfully');`);
       return { success: true, output: result, errors: [] };`);
     } catch (error) {`);
       if (error.stdout) {`);
->>>>>>> main
         const errors = this.parseBuildErrors(error.stdout);this.log(❌ Build check failed with ${errors.length} errors`);
->>>>>>> main
         return { success: false, output: error.stdout, errors };
       }
       return { success: false, output: error.message, errors: [] };
@@ -93,7 +77,6 @@ class BuildErrorDetector {;
 ;
   parseBuildErrors(output) {;
     const errors = [];
-<<<<<<< HEAD
     const lines = output.split(`\n`);
 
     for (const line of lines) {
@@ -106,7 +89,6 @@ class BuildErrorDetector {;
           line: line.trim(),
           severity: `error`,
           timestamp: new Date().toISOString(),
-=======
     const lines = output.split('\n');
 ;
     for (const line of lines) {;
@@ -119,7 +101,6 @@ class BuildErrorDetector {;
           line: line.trim(),;
           severity: 'error',;
           timestamp: new Date().toISOString(),;
->>>>>>> main
         });
       }
     }
@@ -144,42 +125,35 @@ class BuildErrorDetector {;
           fixed,;
           timestamp: new Date().toISOString(),;
         });
-<<<<<<< HEAD
       } catch (fixError) {this.log(`❌ Error fixing build error: ${fixError.message}`, `ERROR`);
         fixResults.push({
           error,
           fixed: false,
           error: fixError.message,
-          timestamp: new Date().toISOString(),
-=======
-      } catch (fixError) {this.log(`❌ Error fixing build error: ${fixError.message}`, 'ERROR');
+          timestamp: new Date().toISOString()} catch (fixError) {this.log(`❌ Error fixing build error: ${fixError.message}`, 'ERROR');
         fixResults.push({;
           error,;
           fixed: false,;
           error: fixError.message,;
           timestamp: new Date().toISOString(),;
->>>>>>> main
         });
       }
     }
 this.log(`✅ Fixed ${fixedCount} out of ${errors.length} build errors`);
     return { fixedCount, totalErrors: errors.length, results: fixResults };
   }
-<<<<<<< HEAD
 
   async fixBuildError(error) {
     // Common build error fixes;
     const errorLine = error.line.toLowerCase();
 
     if (errorLine.includes(`memory`) || errorLine.includes(`heap`)) {
-=======
 ;
   async fixBuildError(error) {;
     // Common build error fixes;
     const errorLine = error.line.toLowerCase();
 ;
     if (errorLine.includes('memory') || errorLine.includes('heap')) {;
->>>>>>> main
       return await this.fixMemoryError();
     } else if (;
       errorLine.includes('dependency') ||;
@@ -198,22 +172,18 @@ this.log(`✅ Fixed ${fixedCount} out of ${errors.length} build errors`);
   async fixMemoryError() {;
     try {;
       this.log('🔧 Fixing memory error...');
-<<<<<<< HEAD
 
       // Clear build cache;
       execSync('rm -rf dist build .next ''node_modules/.cache''', {
         cwd: this.workspacePath,
-        stdio: 'pipe',
-      });
+        stdio: 'pipe'});
 
       // Reinstall dependencies;
       execSync('npm install', {
         cwd: this.workspacePath,
-        stdio: `pipe`,
-      });
+        stdio: `pipe`});
 
       this.log(`✅ Memory error fix applied`);
-=======
 ;
       // Clear build cache;
       execSync('rm -rf dist build .next 'node_modules/.cache'', {;
@@ -228,13 +198,11 @@ this.log(`✅ Fixed ${fixedCount} out of ${errors.length} build errors`);
       });
 ;
       this.log('✅ Memory error fix applied');
->>>>>>> main
       return true;
     } catch (error) {  this.log(`❌ Failed to fix memory error: ${error.message  }`, `ERROR`);
       return false;
     }
   }
-<<<<<<< HEAD
 
   async fixDependencyError() {
     try {
@@ -243,16 +211,13 @@ this.log(`✅ Fixed ${fixedCount} out of ${errors.length} build errors`);
       // Clear node_modules and reinstall;
       execSync('rm -rf node_modules package-lock.json', {
         cwd: this.workspacePath,
-        stdio: 'pipe',
-      });
+        stdio: 'pipe'});
 
       execSync('npm install', {
         cwd: this.workspacePath,
-        stdio: `pipe`,
-      });
+        stdio: `pipe`});
 
       this.log(`✅ Dependency error fix applied`);
-=======
 ;
   async fixDependencyError() {;
     try {;
@@ -270,13 +235,11 @@ this.log(`✅ Fixed ${fixedCount} out of ${errors.length} build errors`);
       });
 ;
       this.log('✅ Dependency error fix applied');
->>>>>>> main
       return true;
     } catch (error) {  this.log(`❌ Failed to fix dependency error: ${error.message  }`, `ERROR`);
       return false;
     }
   }
-<<<<<<< HEAD
 
   async fixSyntaxError() {
     try {
@@ -285,11 +248,9 @@ this.log(`✅ Fixed ${fixedCount} out of ${errors.length} build errors`);
       // Run lint fix;
       execSync('npm run lint:fix', {
         cwd: this.workspacePath,
-        stdio: `pipe`,
-      });
+        stdio: `pipe`});
 
       this.log(`✅ Syntax error fix applied`);
-=======
 ;
   async fixSyntaxError() {;
     try {;
@@ -302,13 +263,11 @@ this.log(`✅ Fixed ${fixedCount} out of ${errors.length} build errors`);
       });
 ;
       this.log('✅ Syntax error fix applied');
->>>>>>> main
       return true;
     } catch (error) {  this.log(`❌ Failed to fix syntax error: ${error.message  }`, `ERROR`);
       return false;
     }
   }
-<<<<<<< HEAD
 
   async fixTypeError() {
     try {
@@ -317,11 +276,9 @@ this.log(`✅ Fixed ${fixedCount} out of ${errors.length} build errors`);
       // Run TypeScript check to identify issues;
       execSync('npm run type-check', {
         cwd: this.workspacePath,
-        stdio: `pipe`,
-      });
+        stdio: `pipe`});
 
       this.log(`✅ Type error fix applied`);
-=======
 ;
   async fixTypeError() {;
     try {;
@@ -334,13 +291,11 @@ this.log(`✅ Fixed ${fixedCount} out of ${errors.length} build errors`);
       });
 ;
       this.log('✅ Type error fix applied');
->>>>>>> main
       return true;
     } catch (error) {  this.log(`❌ Failed to fix type error: ${error.message  }`, `ERROR`);
       return false;
     }
   }
-<<<<<<< HEAD
 
   async generateReport(fixResults) {
     this.log(`📊 Generating build error detection report...`);
@@ -355,15 +310,12 @@ this.log(`✅ Fixed ${fixedCount} out of ${errors.length} build errors`);
             ? ((fixResults.fixedCount / fixResults.totalErrors) * 100).toFixed(
                 2;
               )
-            : 100,
-      },
+            : 100},
       fixResults: fixResults.results,
-      recommendations: ['Review any remaining build errors manually'', 'Check for memory constraints in build process', 'Verify all dependencies are properly installed'', 'Monitor build performance and optimize if needed', ``],
-    };
+      recommendations: ['Review any remaining build errors manually'', 'Check for memory constraints in build process', 'Verify all dependencies are properly installed'', 'Monitor build performance and optimize if needed', ``]};
 
     const reportFile = path.join(
       this.reportsPath,build-error-detector-report.json`
-=======
 ;
   async generateReport(fixResults) {;
     this.log('📊 Generating build error detection report...');
@@ -386,13 +338,11 @@ this.log(`✅ Fixed ${fixedCount} out of ${errors.length} build errors`);
 ;
     const reportFile = path.join(;
       this.reportsPath,build-error-detector-report.json';
->>>>>>> main
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log(`📄 Report generated: ${reportFile}`);
     return report;
   }
-<<<<<<< HEAD
 
   async run() {
     this.log(`🚀 Starting Build Error Detector...`);
@@ -414,7 +364,6 @@ this.log(`📄 Report generated: ${reportFile}`);
 
       this.log(`🎉 Build Error Detector completed!`);
       this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors`
-=======
 ;
   async run() {;
     this.log('🚀 Starting Build Error Detector...');
@@ -436,7 +385,6 @@ this.log(`📄 Report generated: ${reportFile}`);
 ;
       this.log('🎉 Build Error Detector completed!');
       this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors';
->>>>>>> main
       );
 ;
       return {;
@@ -450,15 +398,12 @@ this.log(`📄 Report generated: ${reportFile}`);
     }
   }
 }
-<<<<<<< HEAD
 
 // Run the automation if called directly;
 if (require.main === module) {
-=======
 ;
 // Run the automation if called directly;
 if (require.main === module) {;
->>>>>>> main
   const detector = new BuildErrorDetector();
   detector.run().catch(console.error);
 }

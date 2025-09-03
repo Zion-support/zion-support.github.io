@@ -6,22 +6,17 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
-<<<<<<< HEAD:components/disabled/Layout.tsx
-<<<<<<< HEAD
+:components/disabled/Layout.tsx
 const Layout: React.FC<LayoutProps> = ({ 
   children, 
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.'
-=======
 const Layout: React.FC<LayoutProps> = ({
   children,
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
-  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
->>>>>>> origin/main
-}) => {
-=======
+  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.'}) => {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
->>>>>>> main:components/Layout.tsx
+:components/Layout.tsx
   return (
     <div className='min-h-screen flex flex-col'>
       <Navigation />
@@ -33,12 +28,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 };
 
-<<<<<<< HEAD:components/disabled/Layout.tsx
-<<<<<<< HEAD
+:components/disabled/Layout.tsx
 export default Layout;
-=======
 export default Layout;
->>>>>>> origin/main
-=======
 export default Layout;
->>>>>>> main:components/Layout.tsx
+:components/Layout.tsx

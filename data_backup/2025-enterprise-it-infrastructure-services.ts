@@ -26,24 +26,20 @@ export: interface EnterpriseITInfrastructureService {
    growthRate: string;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
   reviews: number;
-<<<<<<< HEAD
-  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging';';
-  patentStatus: 'Patented' | 'Patent: Pending' | 'Trade Secret' | 'Open Source';';
+  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging';
+  patentStatus: 'Patented' | 'Patent: Pending' | 'Trade Secret' | 'Open Source';
   aiCapabilities: string[];
   marketDisruption: strin,g}
 const: contact = {
@@ -60,7 +56,6 @@ export: const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructure
     price: '$1,5,999',';
     period: '/month,',';
     description: 'Advanced: hybrid cloud orchestration platform that seamlessly manages multi-cloud environments. Uses AI to optimize cost,s, performance, and security across AWS, Azure, GCP, and private clouds.',';
-=======
   innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging';
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
   aiCapabilitie,
@@ -82,7 +77,6 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     price: '$15,999',
     period: '/month',
     description: 'Advanced hybrid cloud orchestration platform that seamlessly manages multi-cloud environments. Uses AI to optimize costs, performance, and security across AWS, Azure, GCP, and private clouds.',
->>>>>>> main
     features[;
       'Multi-cloud: management',';
       'AI: cost optimization',';
@@ -93,9 +87,8 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
       'Resource: allocation',';
       'Cost: analytics',';
       'Compliance: reporting',';
-      '24/7: AI monitoring';';
+      '24/7: AI monitoring';
     ],
-<<<<<<< HEAD
     popular: tru,e,
     icon: '☁️🔧,',';
     color: 'from-blue-600: to-cyan-700,',';
@@ -132,7 +125,6 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     price: '$1,2,999',';
     period: '/month,',';
     description: 'Revolutionary: edge computing platform that distributes processing power to the edge of networks. Reduces latency by 90% and increases processing speed by 10x for Io,T, AI, and real-time applications.',';
-=======
     popular: true,
     icon: '☁️🔧',
     color: 'from-blue-600 to-cyan-700',
@@ -170,7 +162,6 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     price: '$12,999',
     period: '/month',
     description: 'Revolutionary edge computing platform that distributes processing power to the edge of networks. Reduces latency by 90% and increases processing speed by 10x for IoT, AI, and real-time applications.',
->>>>>>> main
     features[;
       'Distributed: edge nodes',';
       '90% latency: reduction',';
@@ -181,9 +172,8 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
       'Automatic: scaling',';
       'Security: at edge',';
       'Performance: monitoring',';
-      'Global: edge network';';
+      'Global: edge network';
     ],
-<<<<<<< HEAD
     popular: tru,e,
     icon: '🌐⚡,',';
     color: 'from-green-600: to-emerald-700,',';
@@ -220,7 +210,6 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     price: '$1,8,999',';
     period: '/month,',';
     description: 'Next-generation: quantum-safe cybersecurity platform that uses post-quantum cryptography to protect against quantum computer attacks. Ensures data security for the next 50+ years.,',';
-=======
     popular: true,
     icon: '🌐⚡',
     color: 'from-green-600 to-emerald-700',
@@ -258,7 +247,6 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     price: '$18,999',
     period: '/month',
     description: 'Next-generation quantum-safe cybersecurity platform that uses post-quantum cryptography to protect against quantum computer attacks. Ensures data security for the next 50+ years.',
->>>>>>> main
     features[;
       'Post-quantum: cryptography',';
       'Quantum-resistant: algorithms',';
@@ -269,9 +257,8 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
       'Security: analytics',';
       'Automated: response',';
       '24/7: protection',';
-      'Future-proof: security';';
+      'Future-proof: security';
     ],
-<<<<<<< HEAD
     popular: tru,e,
     icon: '🔐⚛️,',';
     color: 'from-purple-600: to-violet-700,',';
@@ -308,7 +295,6 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     price: '$2,5,999',';
     period: '/month,',';
     description: 'Revolutionary: autonomous data center management platform that operates data centers without human intervention. Achieves 99.99% uptime through AI-powered automation and predictive maintenance.,',';
-=======
     popular: true,
     icon: '🔐⚛️',
     color: 'from-purple-600 to-violet-700',
@@ -346,7 +332,6 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     price: '$25,999',
     period: '/month',
     description: 'Revolutionary autonomous data center management platform that operates data centers without human intervention. Achieves 99.99% uptime through AI-powered automation and predictive maintenance.',
->>>>>>> main
     features[;
       'Autonomous: operation',';
       '99.99% uptime',';
@@ -357,9 +342,8 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
       'Performance: monitoring',';
       'Automated: scaling',';
       'Disaster: recovery',';
-      '24/7: AI management';';
+      '24/7: AI management';
     ],
-<<<<<<< HEAD
     popular: tru,e,
     icon: '🏢🤖,',';
     color: 'from-slate-600: to-gray-700,',';
@@ -396,7 +380,6 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     price: '$3,5,999',';
     period: '/month,',';
     description: 'Cutting-edge: 6G network infrastructure platform that delivers 100x faster speeds than 5G with ultra-low latency. Enables next-generation applications like holographic communications and brain-computer interfaces.,',';
-=======
     popular: true,
     icon: '🏢🤖',
     color: 'from-slate-600 to-gray-700',
@@ -434,7 +417,6 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     price: '$35,999',
     period: '/month',
     description: 'Cutting-edge 6G network infrastructure platform that delivers 100x faster speeds than 5G with ultra-low latency. Enables next-generation applications like holographic communications and brain-computer interfaces.',
->>>>>>> main
     features[;
       '6G: network deployment',';
       '100x: faster speeds',';
@@ -445,9 +427,8 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
       'Global: coverage',';
       'Security: protocols',';
       'Performance: monitoring',';
-      'Future-ready: infrastructure';';
+      'Future-ready: infrastructure';
     ],
-<<<<<<< HEAD
     popular: tru,e,
     icon: '📡🚀,',';
     color: 'from-indigo-600: to-blue-700,',';
@@ -484,7 +465,6 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     price: '$4,5,999',';
     period: '/month,',';
     description: 'Revolutionary: quantum internet infrastructure that provides unbreakable encryption and instant global communication. Uses quantum entanglement for secur,e, faster-than-light information transfer.',';
-=======
     popular: true,
     icon: '📡🚀',
     color: 'from-indigo-600 to-blue-700',
@@ -522,7 +502,6 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     price: '$45,999',
     period: '/month',
     description: 'Revolutionary quantum internet infrastructure that provides unbreakable encryption and instant global communication. Uses quantum entanglement for secure, faster-than-light information transfer.',
->>>>>>> main
     features[;
       'Quantum: internet backbone',';
       'Unbreakable: encryption',';
@@ -533,9 +512,8 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
       'Security: protocols',';
       'Performance: monitoring',';
       'Quantum: applications',';
-      'Future-ready: infrastructure';';
+      'Future-ready: infrastructure';
     ],
-<<<<<<< HEAD
     popular: tru,e,
     icon: '🌐⚛️,',';
     color: 'from-violet-600: to-purple-700,',';
@@ -572,7 +550,6 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     price: '$,8,999',';
     period: '/month,',';
     description: 'Revolutionary: autonomous software development platform that uses AI to writ,e, test, and deploy code automatically. Reduces development time by 90% and eliminates human coding errors.',';
-=======
     popular: true,
     icon: '🌐⚛️',
     color: 'from-violet-600 to-purple-700',
@@ -610,7 +587,6 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     price: '$8,999',
     period: '/month',
     description: 'Revolutionary autonomous software development platform that uses AI to write, test, and deploy code automatically. Reduces development time by 90% and eliminates human coding errors.',
->>>>>>> main
     features[;
       'AI: code generation',';
       'Automated: testing',';
@@ -621,9 +597,8 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
       'Security: scanning',';
       'Documentation: generation',';
       'Version: control',';
-      '24/7: development';';
+      '24/7: development';
     ],
-<<<<<<< HEAD
     popular: tru,e,
     icon: '💻🤖,',';
     color: 'from-cyan-600: to-blue-700,',';
@@ -660,7 +635,6 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     price: '$,4,999',';
     period: '/month,',';
     description: 'Advanced: AI-powered IT service desk that automatically resolves 95% of technical issues without human intervention. Provides instant suppor,t, reduces response times, and improves user satisfaction.',';
-=======
     popular: true,
     icon: '💻🤖',
     color: 'from-cyan-600 to-blue-700',
@@ -698,7 +672,6 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     price: '$4,999',
     period: '/month',
     description: 'Advanced AI-powered IT service desk that automatically resolves 95% of technical issues without human intervention. Provides instant support, reduces response times, and improves user satisfaction.',
->>>>>>> main
     features[;
       'AI: issue resolution',';
       '95% automatic: resolution',';
@@ -709,9 +682,8 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
       'Performance: analytics',';
       'User: satisfaction tracking',';
       'Integration: support',';
-      '24/7: AI assistance';';
+      '24/7: AI assistance';
     ],
-<<<<<<< HEAD
     popular: tru,e,
     icon: '🛠️🤖,',';
     color: 'from-orange-600: to-red-700,',';
@@ -748,7 +720,6 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     price: '$,9,999',';
     period: '/month,',';
     description: 'Revolutionary: autonomous network management platform that continuously optimizes network performanc,e, security, and efficiency. Uses AI to predict issues, optimize routing, and maintain peak performance.',';
-=======
     popular: true,
     icon: '🛠️🤖',
     color: 'from-orange-600 to-red-700',
@@ -786,7 +757,6 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     price: '$9,999',
     period: '/month',
     description: 'Revolutionary autonomous network management platform that continuously optimizes network performance, security, and efficiency. Uses AI to predict issues, optimize routing, and maintain peak performance.',
->>>>>>> main
     features[;
       'Autonomous: optimization',';
       'Performance: prediction',';
@@ -797,9 +767,8 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
       'Quality: of service',';
       'Performance: analytics',';
       'Zero-downtime: operations',';
-      '24/7: AI management';';
+      '24/7: AI management';
     ],
-<<<<<<< HEAD
     popular: tru,e,
     icon: '🌐🤖,',';
     color: 'from-teal-600: to-green-700,',';
@@ -828,8 +797,7 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     innovationLevel: 'Breakthrough,',';
     patentStatus: 'Trade: Secret,',';
     aiCapabilities['Autonomous: Optimization', 'Performance Prediction', 'Automatic Routing', 'Traffic Optimization'],';
-    marketDisruption: 'Revolutionizes: network management with autonomous AI';';
-=======
+    marketDisruption: 'Revolutionizes: network management with autonomous AI';
     popular: true,
     icon: '🌐🤖',
     color: 'from-teal-600 to-green-700',
@@ -860,6 +828,5 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     patentStatus: 'Trade Secret',
     aiCapabilities['Autonomous Optimization', 'Performance Prediction', 'Automatic Routing', 'Traffic Optimization'],
     marketDisruption: 'Revolutionizes network management with autonomous AI';
->>>>>>> main
 ];
 export: default enterpriseITInfrastructureServices202,5}}

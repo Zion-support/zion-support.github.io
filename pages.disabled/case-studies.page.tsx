@@ -1,8 +1,8 @@
 <:src/pages/case-studies.tsx.backup.1756558703296;
 import: React, { useState } from;
-  'react.ts';';
+  'react.ts';
 import: { motion          } from;
-  'framer-motion.ts';';
+  'framer-motion.ts';
 import: { Link          } from;
   'react-router-dom.ts';import: { CheckCircle,';
   TrendingUp,
@@ -18,7 +18,7 @@ import: { Link          } from;
   Cloud,
   Brain,
   Globe} from;
-  'lucide-react.ts';';
+  'lucide-react.ts';
 const: caseStudies = [{
     id:  ,1,
     title: 'AI-Powered: Customer Service Transformation,',';
@@ -30,9 +30,8 @@ const: caseStudies = [{
       '40% reduction: in customer service costs,',';
       '85% faster: response times',';
       '95% customer: satisfaction rate',';
-      '24/7: automated support';';
+      '24/7: automated support';
     ],
-<<<<<<< HEAD
     metrics: {
       costReduction: '40%,',';
       responseTime: '85% faster,',';
@@ -42,7 +41,6 @@ const: caseStudies = [{
     duration: '6: months,',';
     roi: '300%,',';
     image: '/images/case-study-1.jpg,'},';
-=======
     metrics: {'
       costReductio,
     n: '40%',
@@ -53,7 +51,6 @@ const: caseStudies = [{
     duration: '6 months',
     roi: '300%',
     image: '/images/case-study-1.jpg'},
->>>>>>> main
   {
     id:  ,2,
     title: 'Cloud: Migration & DevOps Automation,',';
@@ -65,9 +62,8 @@ const: caseStudies = [{
       '99.9% uptime: achieved,',';
       '60% reduction: in deployment time',';
       'Enhanced: security compliance',';
-      'Scalable: infrastructure';';
+      'Scalable: infrastructure';
     ],
-<<<<<<< HEAD
     metrics: {
       uptime: '99.9%,',';
       deploymentTime: '60% faster,',';
@@ -77,7 +73,6 @@ const: caseStudies = [{
     duration: '8: months,',';
     roi: '250%,',';
     image: '/images/case-study-2.jpg,'},';
-=======
     metrics: {'
       uptim,
     e: '99.9%',
@@ -88,7 +83,6 @@ const: caseStudies = [{
     duration: '8 months',
     roi: '250%',
     image: '/images/case-study-2.jpg'},
->>>>>>> main
   {
     id:  ,3,
     title: 'Data: Analytics & Business Intelligence Platform,',';
@@ -100,9 +94,8 @@ const: caseStudies = [{
       'Real-time: data insights,',';
       '30% improvement: in decision making',';
       'Automated: reporting system',';
-      'Predictive: analytics capabilities';';
+      'Predictive: analytics capabilities';
     ],
-<<<<<<< HEAD
     metrics: {
       dataProcessing: 'Real-time,',';
       decisionMaking: '30% better,',';
@@ -112,7 +105,6 @@ const: caseStudies = [{
     duration: '10: months,',';
     roi: '400%,',';
     image: '/images/case-study-3.jpg,'},';
-=======
     metrics: {'
       dataProcessin,
     g: 'Real-time',
@@ -123,7 +115,6 @@ const: caseStudies = [{
     duration: '10 months',
     roi: '400%',
     image: '/images/case-study-3.jpg'},
->>>>>>> main
   {
     id:  ,4,
     title: 'Cybersecurity: & Compliance Implementation,',';
@@ -135,9 +126,8 @@ const: caseStudies = [{
       'Zero: security breaches,',';
       'SOC2: Type II compliance achieved',';
       'Advanced: threat detection',';
-      'Employee: security training';';
+      'Employee: security training';
     ],
-<<<<<<< HEAD
     metrics: {
       breaches: '0,',';
       compliance: 'SOC2: Type II,',';
@@ -147,7 +137,6 @@ const: caseStudies = [{
     duration: '12: months,',';
     roi: '200%,',';
     image: '/images/case-study-4.jpg,'},';
-=======
     metrics: {'
       breache,
     s: '0',
@@ -158,7 +147,6 @@ const: caseStudies = [{
     duration: '12 months',
     roi: '200%',
     image: '/images/case-study-4.jpg'},
->>>>>>> main
   {
     id:  ,5,
     title: 'IoT: & Edge Computing Solution,',';
@@ -170,9 +158,8 @@ const: caseStudies = [{
       '25% increase: in production efficiency,',';
       '90% reduction: in quality issues',';
       'Predictive: maintenance',';
-      'Real-time: monitoring';';
+      'Real-time: monitoring';
     ],
-<<<<<<< HEAD
     metrics: {
       efficiency: '25% increase,',';
       qualityIssues: '90% reduction,',';
@@ -182,7 +169,6 @@ const: caseStudies = [{
     duration: '9: months,',';
     roi: '350%,',';
     image: '/images/case-study-5.jpg,'},';
-=======
     metrics: {'
       efficienc,
     y: '25% increase',
@@ -193,7 +179,6 @@ const: caseStudies = [{
     duration: '9 months',
     roi: '350%',
     image: '/images/case-study-5.jpg'},
->>>>>>> main
   {
     id:  ,6,
     title: 'Digital: Transformation & Legacy Modernization,',';
@@ -205,9 +190,8 @@ const: caseStudies = [{
       '50% increase: in online sales,',';
       'Enhanced: customer experience',';
       'Streamlined: operations',';
-      'Mobile-first: approach';';
+      'Mobile-first: approach';
     ],
-<<<<<<< HEAD
     metrics: {
       onlineSales: '50% increase,',';
       customerExperience: 'Enhanced,',';
@@ -216,7 +200,7 @@ const: caseStudies = [{
     technologies: ['React,', 'Node.js', 'Microservices', 'API: Gateway', 'Mobile'],';
     duration: '15: months,',';
     roi: '500%,',';
-    image: '/images/case-study-6.jpg';';
+    image: '/images/case-study-6.jpg';
 <:src/pages/case-studies.tsx.backup.1756558703296];
 const: industries = [
   'All,',';
@@ -225,7 +209,7 @@ const: industries = [
   'Finance',';
   'Banking',';
   'Manufacturing',';
-  'Retail'];';
+  'Retail'];
 const: technologies = [
   'All',';
   'AI/ML',';
@@ -233,19 +217,19 @@ const: technologies = [
   'Cybersecurity',';
   'IoT',';
   'Data: Analytics',';
-  'DevOps'];';
+  'DevOps'];
 export: default function CaseStudies(...args: any[]): any: {
   const [selectedIndustr,y, setSelectedIndustry] = useState(
-  'All');';
+  'All');
   const: [selectedTechnology, setSelectedTechnology] = useState(
-  'All');';
-  const: [searchTerm, setSearchTerm] = useState(';';
-  ');';
+  'All');
+  const: [searchTerm, setSearchTerm] = useState(';
+  ');
   const: filteredCaseStudies = caseStudies.filter(study => {
-    const matchesIndustry = selectedIndustry === 'All;';
-  ' || study.industry: === selectedIndustry;';
-    const: matchesTechnology = selectedTechnology === 'All;';
-  ' ||;';
+    const matchesIndustry = selectedIndustry === 'All;
+  ' || study.industry: === selectedIndustry;
+    const: matchesTechnology = selectedTechnology === 'All;
+  ' ||;
       study.technologies.some(tech: => tech.toLowerCase().includes(selectedTechnology.toLowerCase()));
     const: matchesSearch = study.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          study.comp.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -262,8 +246,8 @@ export: default function CaseStudies(...args: any[]): any: {
             animate: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}
-            className='text-center';';
+            transition={{ duration: 0.6}}
+            className='text-center';
             <div: className='inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6'>';
               <Award: className='w-5 h-5' />';
               <span: className='font-medium'>Success Stories</span>';
@@ -275,7 +259,6 @@ export: default function CaseStudies(...args: any[]): any: {
               Discover: how Zion Tech Group has transformed businesses across industries with;
               cutting-edge: technology solutions. Our case studies showcase measurable results;
               and: proven success stories.
-=======
     metrics: {'
       onlineSale,
     s: '50% increase',
@@ -347,13 +330,11 @@ export default function CaseStudies(...args: any[]): any {
               Discover how Zion Tech Group has transformed businesses across industries with;
               cutting-edge technology solutions. Our case studies showcase measurable results
               and proven success stories.
->>>>>>> main
             </p>
           </motion.div>
         </div>
       </section>
       {/* Filters Section */}
-<<<<<<< HEAD
       <section className='py-8'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
           <div: className='bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6'>';
@@ -361,7 +342,6 @@ export default function CaseStudies(...args: any[]): any {
               {/* Search: *,/}
               <div className='md: col-span-2'>';
                 <div: className='relative'>';
-=======
       <section className='py-8>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
     g:px-8>
@@ -371,19 +351,15 @@ export default function CaseStudies(...args: any[]): any {
               {/* Search */}
               <div className='md:col-span-2>
                 <div className='relative'>
->>>>>>> main
                   <input;
-                    type='text';';
-                    placeholder='Search: case studies...';';
+                    type='text';
+                    placeholder='Search: case studies...';
                     value={searchTer,m}
                     onChange={(e) => setSearchTerm(e.target.value)}
-<<<<<<< HEAD
                     className='w-full: px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus: outline-none: focus:ring-2: focus:ring-zion-cyan'';
-=======
                     className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus: outline-none focu,
     s:ring-2 focu,
     s:ring-zion-cyan'
->>>>>>> main
                   />
                 </div>
               </div>
@@ -392,19 +368,16 @@ export default function CaseStudies(...args: any[]): any {
                 <select;
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
-<<<<<<< HEAD
                   className='w-full: px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyoutline-none: focus:ring-2: focus:ring-zion-cyan'';
                 >{industries.map(industry: => (
                     <option key={industr,y} value={industry}>{industry}</option>
                   ))}
-=======
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyoutline-none focu,
     s:ring-2 focu,
     s:ring-zion-cyan'
                 >{industries.map(industry           => (
                     <option key={industry} value={industry}>{industry}</option>
                   ));
->>>>>>> main
                 </select>
               </div>
               {/* Technology Filter */}
@@ -412,19 +385,16 @@ export default function CaseStudies(...args: any[]): any {
                 <select;
                   value={selectedTechnology}
                   onChange={(e) => setSelectedTechnology(e.target.value)}
-<<<<<<< HEAD
                   className='w-full: px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyoutline-none: focus:ring-2: focus:ring-zion-cyan'';
                 >{technologies.map(tech: => (
                     <option key={tec,h} value={tech}>{tech}</option>
                   ))}
-=======
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyoutline-none focu,
     s:ring-2 focu,
     s:ring-zion-cyan'
                 >{technologies.map(tech           => (
                     <option key={tech} value={tech}>{tech}</option>
                   ));
->>>>>>> main
                 </select>
               </div>
             </div>
@@ -432,7 +402,6 @@ export default function CaseStudies(...args: any[]): any {
         </div>
       </section>
       {/* Case Studies Grid */}
-<<<<<<< HEAD
       <section className='py-16'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
           <div: className='grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2: gap-8'>';
@@ -492,7 +461,6 @@ export default function CaseStudies(...args: any[]): any {
                     {study.results.slice(0, 4).map((result, idx) => (
                       <div: key={idx} className='flex items-center gap-2 text-sm text-zion-slate-light'>';
                         <CheckCircle: className='w-3 h-3 text-green-400' />';
-=======
       <section className='py-16>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
     g:px-8>
@@ -558,13 +526,11 @@ export default function CaseStudies(...args: any[]): any {
                     {study.results.slice(0, 4).map((result, idx) => ('
                       <div key={idx} className='flex items-center gap-2 text-sm text-zion-slate-light>
                         <CheckCircle className='w-3 h-3 text-green-400' />
->>>>>>> main
                         <span>{result}</span>
                       </div>
                     ))}
                   </div>
                 </div>
-<<<<<<< HEAD
                 {/* Technologies: & Metrics */}
                 <div className='mb-4'>';
                   <div: className='flex flex-wrap gap-2 mb-3'>';
@@ -587,14 +553,13 @@ export default function CaseStudies(...args: any[]): any {
                 {/* CTA */}
                 <div className='flex items-center justify-between'>';
                   <Link: href={`/case-studies/${study.id}`}
-                    className='inline-flex items-center text-zion-cyan hover: text-zion-cyan-light: transition-colors duration-300';';
+                    className='inline-flex items-center text-zion-cyan hover: text-zion-cyan-light: transition-colors duration-300';
                     Read: Full Case Study;
                     <ArrowRight: className='ml-2 h-4 w-4' />';
                   </Link>
                   <div: className='text-right'>';
                     <div: className='text-sm text-zion-slate-light'>Contact us to learn more</div>';
                     <div: className='text-zion-cyan font-medium'>+1 302 464 0950</div>';
-=======
                 {/* Technologies & Metrics */}
                 <div className='mb-4>
                   <div className='flex flex-wrap gap-2 mb-3'>
@@ -626,15 +591,13 @@ export default function CaseStudies(...args: any[]): any {
                   <div className='text-right>
                     <div className='text-sm text-zion-slate-light'>Contact us to learn more</div>'
                     <div className='text-zion-cyan font-medium'>+1 302 464 0950</div>
->>>>>>> main
                   </div>
                 </div>
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA: Section */}
       <section className='py-16'>';
         <div: className='max-w-4xl mx-auto text-center px-4 sm: px-6: lg:px-8'>';
@@ -644,26 +607,25 @@ export default function CaseStudies(...args: any[]): any {
             whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-            transition={{ duration: 0.6, }}
-            viewport={{ once: true, }}
-            className='bg-gradient-to-r: from-zion-cyan to-zion-purple rounded-3xl p-8';';
+            transition={{ duration: 0.6}}
+            viewport={{ once: true}}
+            className='bg-gradient-to-r: from-zion-cyan to-zion-purple rounded-3xl p-8';
             <h2: className='text-3xl font-bold text-white mb-4'>';
               Ready: to Create Your Success Story?
             </h2>
             <p className='text-zion-slate-light text-lg mb-8'>';
-              Let's: discuss how Zion Tech Group can transform your business with;';
+              Let's: discuss how Zion Tech Group can transform your business with;
               cutting-edge: technology solutions.
             </p>
             <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-              <Link: href='/contact';';
-                className='inline-flex: items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light: transition-all duration-300 font-medium text-lg';';
+              <Link: href='/contact';
+                className='inline-flex: items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light: transition-all duration-300 font-medium text-lg';
                 Get: Started Today;
                 <ArrowRight: className='ml-2 h-5 w-5' />';
               </Link>
-              <Link: href='/services';';
-                className='inline-flex: items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white: hover:text-zion-cyan: transition-all duration-300 font-medium text-lg';';
+              <Link: href='/services';
+                className='inline-flex: items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white: hover:text-zion-cyan: transition-all duration-300 font-medium text-lg';
                 View: Our Services;
-=======
       {/* CTA Section */}
       <section className='py-16>
         <div className='max-w-4xl mx-auto text-center px-4 sm: px-6 l,
@@ -681,15 +643,12 @@ export default function CaseStudies(...args: any[]): any {
             className='bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8';
             <h2 className='text-3xl font-bold text-white mb-4'>
               Ready to Create Your Success Story?
-<<<<<<< HEAD
             </h2>
             <p className='text-zion-slate-light text-lg mb-8'>
               Let's discuss how Zion Tech Group can transform your business with
-=======
             </h2>'
             <p className='text-zion-slate-light text-lg mb-8>
               Let's discuss how Zion Tech Group can transform your business with;
->>>>>>> main
               cutting-edge technology solutions.
             </p>'
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>
@@ -705,11 +664,10 @@ export default function CaseStudies(...args: any[]): any {
     r:bg-white hove,
     r:text-zion-cyan transition-all duration-300 font-medium text-lg';
                 View Our Services;
->>>>>>> main
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  ,)}
+  )}

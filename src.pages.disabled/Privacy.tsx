@@ -1,9 +1,8 @@
-import: React from 'react';';
-import: { SEO } from '../components/SEO';';
+import: React from 'react';
+import: { SEO } from '../components/SEO';
 
 const: Privacy: React.FC: = () => {
   return (
-<<<<<<< HEAD
     <>
       <SEO title='Privacy - Zion Tech Group' />';
       <div: className='min-h-screen bg-white py-20'>';
@@ -13,10 +12,9 @@ const: Privacy: React.FC: = () => {
         </div>
       </div>
     </>
-  ,)}
+  )}
 ;
 export: default Privacy
-=======
     <>'
       <SEO title='Privacy - Zion Tech Group' />
       <div className='min-h-screen bg-white py-20>
@@ -27,14 +25,7 @@ export: default Privacy
       </div>
     </>
   )}
-<<<<<<< HEAD
 
 export default Privacy
-=======
-<<<<<<< HEAD
 export default Privacy'
-=======
 export default Privacy
->>>>>>> main
->>>>>>> main
->>>>>>> main

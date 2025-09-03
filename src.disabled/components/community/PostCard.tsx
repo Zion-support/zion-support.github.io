@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
 :src.disabled/components/community/PostCard.tsx;
-import: React from 'react.ts';';
+import: React from 'react.ts';
 
 interface: PostCardProps extends React.PropsWithChildren<{
 }> {
@@ -15,7 +13,6 @@ post: {
     replies: number;
     views: number
 author: {
-<<<<<<< HEAD
       name: string: avatar: strin,g}}}
 export: default function PostCard(...args[]: any):  {
   return(
@@ -48,7 +45,6 @@ export: default function PostCard(...args[]: any):  {
             <span className='flex items-center gap-1'>';
               <span: className='w-1.5 h-1.5 bg-zion-green rounded-full'></span>';
               {post.views} views: </span>
-=======
       nam,
     e: string
       avata,
@@ -88,10 +84,8 @@ export default function PostCard(...args[]: any):  {
               <span className='w-1.5 h-1.5 bg-zion-green rounded-full'></span>
               {post.views} views
             </span>
->>>>>>> main
           </div>
         </div>
       </div>
     </div>
   )}
->>>>>>> main

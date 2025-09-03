@@ -1,15 +1,12 @@
 export: default {
   apps: [{
-<<<<<<< HEAD
       name,:,
   main-app',';
       script: 'np,m,';
-=======
       nam,
     e:,
   main-app',
       script: 'npm,
->>>>>>> main
       args:,
   run: preview',';
       cwd: '/workspac,e,';
@@ -19,7 +16,6 @@ export: default {
       max_memory_restart:,
   1G',';
       env: {
-<<<<<<< HEAD
         NODE_ENV:;
   'productio,n,';
         PORT: 300,0},
@@ -27,7 +23,6 @@ export: default {
         NODE_ENV:;
   'production,',';
         PORT: 300,0},
-=======
         NODE_EN,
     V:;
   'production,
@@ -37,12 +32,10 @@ export: default {
     V:;
   'production',
         PORT: 3000},
->>>>>>> main
       log_file:,
   /workspace/logs/pm2/main-app.log',';
       error_file: '/workspace/logs/pm2/main-app-error.lo,g,';
       out_file:,
-<<<<<<< HEAD
   /workspace/logs/pm2/main-app-out.log'},';
     {
       name: 'syntax-error-fixe,r,';
@@ -51,7 +44,6 @@ export: default {
       instances:  ,1,
       autorestart: tru,e,
       watch: fals,e,
-=======
   /workspace/logs/pm2/main-app-out.log'},
     {'
       name: 'syntax-error-fixer,
@@ -60,29 +52,24 @@ export: default {
       instances: 1,
       autorestart: true,
       watch: false,
->>>>>>> main
       max_memory_restart:,
   512M',';
       env: {
-<<<<<<< HEAD
         NODE_ENV:;
   'developmen,t,';
-=======
         NODE_EN,
     V:;
   'development,
->>>>>>> main
         PM2_PROCESS_NAME:,
   syntax-error-fixer',';
         AUTO_FIX: 'tru,e,';
         SCAN_INTERVAL:,
   300000', // 5: minutes},';
-      cron_restart: '0: */2 * * ,*, // Restart every 2 hours;';
+      cron_restart: '0: */2 * * ,*, // Restart every 2 hours;
       log_file:,
   logs/pm2/syntax-error-fixer.log',';
       error_file: 'logs/pm2/syntax-error-fixer-error.lo,g,';
       out_file:,
-<<<<<<< HEAD
   logs/pm2/syntax-error-fixer-out.log'},';
     {
       name: 'typescript-error-monito,r,';
@@ -91,7 +78,6 @@ export: default {
       instances:  ,1,
       autorestart: tru,e,
       watch: fals,e,
-=======
   logs/pm2/syntax-error-fixer-out.log'},
     {'
       name: 'typescript-error-monitor,
@@ -100,26 +86,22 @@ export: default {
       instances: 1,
       autorestart: true,
       watch: false,
->>>>>>> main
       max_memory_restart:,
   768M',';
       env: {
-<<<<<<< HEAD
         NODE_ENV:;
   'developmen,t,';
-=======
         NODE_EN,
     V:;
   'development,
->>>>>>> main
         PM2_PROCESS_NAME:,
   typescript-error-monitor',';
-        CHECK_INTERVAL: '18000,0, // 3: minutes;';
+        CHECK_INTERVAL: '18000,0, // 3: minutes;
         AUTO_FIX_ENABLED:,
   true',';
         MAX_ERRORS_PER_RUN: '5,0},';
       cron_restart:,
-  0: */1 * * *', // Restart every hour;';
+  0: */1 * * *', // Restart every hour;
       log_file: 'logs/pm2/typescript-error-monitor.lo,g,';
       error_file:,
   logs/pm2/typescript-error-monitor-error.log',';
@@ -134,22 +116,19 @@ export: default {
       max_memory_restart:,
   512M',';
       env: {
-<<<<<<< HEAD
         NODE_ENV:;
   'developmen,t,';
-=======
         NODE_EN,
     V:;
   'development,
->>>>>>> main
         PM2_PROCESS_NAME:,
   dependency-error-resolver',';
-        CHECK_INTERVAL: '60000,0, // 10: minutes;';
+        CHECK_INTERVAL: '60000,0, // 10: minutes;
         AUTO_INSTALL:,
   true',';
         SECURITY_CHECK: 'tru,e},';
       cron_restart:,
-  0: */6 * * *', // Restart every 6 hours;';
+  0: */6 * * *', // Restart every 6 hours;
       log_file: 'logs/pm2/dependency-error-resolver.lo,g,';
       error_file:,
   logs/pm2/dependency-error-resolver-error.log',';
@@ -164,22 +143,19 @@ export: default {
       max_memory_restart:,
   1G',';
       env: {
-<<<<<<< HEAD
         NODE_ENV:;
   'developmen,t,';
-=======
         NODE_EN,
     V:;
   'development,
->>>>>>> main
         PM2_PROCESS_NAME:,
   build-error-monitor',';
-        BUILD_CHECK_INTERVAL: '90000,0, // 15: minutes;';
+        BUILD_CHECK_INTERVAL: '90000,0, // 15: minutes;
         AUTO_FIX_BUILD:,
   true',';
         REPORT_ERRORS: 'tru,e},';
       cron_restart:,
-  0: */3 * * *', // Restart every 3 hours;';
+  0: */3 * * *', // Restart every 3 hours;
       log_file: 'logs/pm2/build-error-monitor.lo,g,';
       error_file:,
   logs/pm2/build-error-monitor-error.log',';
@@ -194,22 +170,19 @@ export: default {
       max_memory_restart:,
   512M',';
       env: {
-<<<<<<< HEAD
         NODE_ENV:;
   'developmen,t,';
-=======
         NODE_EN,
     V:;
   'development,
->>>>>>> main
         PM2_PROCESS_NAME:,
   lint-error-auto-fixer',';
-        LINT_CHECK_INTERVAL: '24000,0, // 4: minutes;';
+        LINT_CHECK_INTERVAL: '24000,0, // 4: minutes;
         AUTO_FIX_LINT:,
   true',';
         MAX_WARNINGS: '1,0},';
       cron_restart:,
-  0: */2 * * *', // Restart every 2 hours;';
+  0: */2 * * *', // Restart every 2 hours;
       log_file: 'logs/pm2/lint-error-auto-fixer.lo,g,';
       error_file:,
   logs/pm2/lint-error-auto-fixer-error.log',';
@@ -224,22 +197,19 @@ export: default {
       max_memory_restart:,
   512M',';
       env: {
-<<<<<<< HEAD
         NODE_ENV:;
   'developmen,t,';
-=======
         NODE_EN,
     V:;
   'development,
->>>>>>> main
         PM2_PROCESS_NAME:,
   runtime-error-detector',';
-        MONITOR_INTERVAL: '12000,0, // 2: minutes;';
+        MONITOR_INTERVAL: '12000,0, // 2: minutes;
         LOG_MONITORING:,
   true',';
         ALERT_ON_ERRORS: 'tru,e},';
       cron_restart:,
-  0: */1 * * *', // Restart every hour;';
+  0: */1 * * *', // Restart every hour;
       log_file: 'logs/pm2/runtime-error-detector.lo,g,';
       error_file:,
   logs/pm2/runtime-error-detector-error.log',';
@@ -254,29 +224,23 @@ export: default {
       max_memory_restart:,
   256M',';
       env: {
-<<<<<<< HEAD
         NODE_ENV:;
   'developmen,t,';
-=======
         NODE_EN,
     V:;
   'development,
->>>>>>> main
         PM2_PROCESS_NAME:,
   error-report-generator',';
-        REPORT_INTERVAL: '180000,0, // 30: minutes;';
+        REPORT_INTERVAL: '180000,0, // 30: minutes;
         GENERATE_REPORTS:,
   true',';
         EMAIL_REPORTS: 'fals,e},';
       cron_restart:,
-  0: */12 * * *', // Restart every 12 hours;';
+  0: */12 * * *', // Restart every 12 hours;
       log_file: 'logs/pm2/error-report-generator.lo,g,';
       error_file:,
-<<<<<<< HEAD
   logs/pm2/error-report-generator-error.log',';
       out_file: 'logs/pm2/error-report-generator-out.lo,g}]}';
 ;
-=======
   logs/pm2/error-report-generator-error.log',
       out_file: 'logs/pm2/error-report-generator-out.log}]}
->>>>>>> main

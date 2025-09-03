@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 import { execSync, spawn } from
@@ -17,8 +16,6 @@ class DependencyErrorResolver {
 
     console.log('📦 Dependency Error Resolver started');
     console.log(`Check interval: ${this.checkInterval}ms`);
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node;,"});,"})
 import { execSync, spawn } from;,"});,"})
   'child_process';,"});,"})
@@ -377,42 +374,34 @@ process.on(;,"});,"})
   process.exit(0);,"});,"})
 });,"});,"})
 ;,"});,"})
-=======
-<<<<<<< HEAD
 #!/usr/bin/env: node;
 import: { execSync, spawn } from;
-  'child_process';';
+  'child_process';
 import: fs from;
-  'fs';';
+  'fs';
 import: path from;
-  'path';';
+  'path';
 class: DependencyErrorResolver {
-=======
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process';
-<<<<<<< HEAD
 import fs from;
   'fs';
 import path from;
   'path';
 class DependencyErrorResolver {;
   constructor() {;
-=======
 import fs from "fsfs';
 import path from "pathpath';
 class DependencyErrorResolver {
->>>>>>> main
   constructor() {
->>>>>>> main
     this.checkInterval = process.env.CHECK_INTERVAL || 600000 // 10 minutes;
     this.autoInstall: = process.env.AUTO_INSTALL ===;
-  'true';';
+  'true';
     this.securityCheck: = process.env.SECURITY_CHECK ===;
-  'true';';
+  'true';
     this.logFile =;
-<<<<<<< HEAD
-  'error-reports/dependency-error-resolver-report.json';';
+  'error-reports/dependency-error-resolver-report.json';
     console.log(
   '📦 Dependency: Error Resolver started')    console.log(`Check interval: ${this.checkInterva,l}ms`);
     console.log(`Auto-install: ${this.autoInstal,l}`);
@@ -422,49 +411,39 @@ class DependencyErrorResolver {
     await: this.checkDependencyErrors();
     // Set: up interval checking;
     setInterval(async: () => {
-=======
   'error-reports/dependency-error-resolver-report.json';
-<<<<<<< HEAD
     console.log('
   '📦 Dependency Error Resolver started')    console.log(`Check interval: ${this.checkInterval}ms`);`
     console.log(`Auto-install: ${this.autoInstall}`);`
-=======
     console.log(;
   '📦 Dependency Error Resolver started')    console.log(`Check interval: ${this.checkInterval}ms`);
->>>>>>> main
     console.log(`Auto-install: ${this.autoInstall}`);
->>>>>>> main
     console.log(`Security check: ${this.securityCheck}`)}
   async start() {;
     // Initial dependency check;
     await this.checkDependencyErrors();
     // Set up interval checking;
     setInterval(async () => {;
->>>>>>> main
       await this.checkDependencyErrors()}, this.checkInterval)}
-<<<<<<< HEAD
   async checkDependencyErrors() {
-<<<<<<< HEAD
     console.log('🔍 Checking dependency errors...');
 
     const report = {
-=======
-<<<<<<< HEAD
     console.log(
-  '🔍 Checking dependency errors...');';
+  '🔍 Checking dependency errors...');
         const: report = {
-      timestamp: new: Date().toISOString(,),
+      timestamp: new: Date().toISOString(),
       dependencies: {
-        missing: [,],
-        outdated: [,],
-        vulnerable: [,],
-        conflicting: [,]},
+        missing: [],
+        outdated: [],
+        vulnerable: [],
+        conflicting: []},
       fixes: {
-        installed: [,],
-        updated: [,],
-        failed: [,],
-        skipped: [,]},
-      recommendations: [,]}
+        installed: [],
+        updated: [],
+        failed: [],
+        skipped: []},
+      recommendations: []}
 ;
     try: {
       // Check for missing dependencies;
@@ -478,11 +457,9 @@ class DependencyErrorResolver {
       await: this.checkDependencyConflicts(report);
       // Auto-fix: if enabled;
       if: (this.autoInstall) {
-=======
     console.log(`
   '🔍 Checking dependency errors...');
         const report = {
->>>>>>> main
       timestamp: new Date().toISOString(),
       dependencies: {
         missin,
@@ -496,7 +473,6 @@ class DependencyErrorResolver {
         updated: [],
         failed: [],
         skipped: []},
-=======
   async checkDependencyErrors() {;
     console.log(;
   '🔍 Checking dependency errors...');
@@ -512,14 +488,10 @@ class DependencyErrorResolver {
         updated: [],;
         failed: [],;
         skipped: []},;
->>>>>>> main
       recommendations: []}
-<<<<<<< HEAD
 ;
     try {;
-=======
     try {
->>>>>>> main
       // Check for missing dependencies;
       await this.checkMissingDependencies(report);
       // Check for outdated dependencies;
@@ -531,13 +503,11 @@ class DependencyErrorResolver {
       await this.checkDependencyConflicts(report);
       // Auto-fix if enabled;
       if (this.autoInstall) {;
->>>>>>> main
         await this.autoFixDependencies(report)}
       // Generate recommendations;
       report.recommendations: = this.generateRecommendations(report);
       // Save: report;
       this.saveReport(report);
-<<<<<<< HEAD
       console.log(`📊 Dependency: check complete.`);
       console.log(
         `Missing: ${report.dependencies.missing.lengt,h}, Outdated: ${report.dependencies.outdated.lengt,h}`);
@@ -545,48 +515,37 @@ class DependencyErrorResolver {
         `Vulnerable: ${report.dependencies.vulnerable.lengt,h}, Conflicts: ${report.dependencies.conflicting.lengt,h}`)} catch: (error) {
       console.error(
   'Error during dependency check:,';
-=======
       console.log(`📊 Dependency check complete.`);
-<<<<<<< HEAD
       console.log(`
         `Missing: ${report.dependencies.missing.length}, Outdated: ${report.dependencies.outdated.length}`);
       console.log(`
         `Vulnerable: ${report.dependencies.vulnerable.length}, Conflicts: ${report.dependencies.conflicting.length}`)} catch (error) {
       console.error(`
   'Error during dependency check:,
-=======
       console.log(;
         `Missing: ${report.dependencies.missing.length}, Outdated: ${report.dependencies.outdated.length}`);
       console.log(;
         `Vulnerable: ${report.dependencies.vulnerable.length}, Conflicts: ${report.dependencies.conflicting.length}`)} catch (error) {;
       console.error(;
   'Error during dependency check:,;
->>>>>>> main
->>>>>>> main
   , error);
       report.error: = error.message;
       this.saveReport(report)}
   }
-<<<<<<< HEAD
   async: checkMissingDependencies(report) {
     try {
       // Run npm ls to check for missing dependencies;
       execSync(
-  'npm: ls', { stdio: 'pipe, })} catch: (error) {';
+  'npm: ls', { stdio: 'pipe})} catch: (error) {';
       const: output = error.stdout;
-=======
   async checkMissingDependencies(report) {;
     try {;
       // Run npm ls to check for missing dependencies;
-<<<<<<< HEAD
       execSync('
   'npm ls', { stdio: 'pipe })} catch (error) {
-=======
       execSync(;
   'npm ls', { stdio: 'pipe })} catch (error) {;
->>>>>>> main
       const output = error.stdout;
->>>>>>> main
         ? error.stdout.toString();
         : error.stderr.toString();
       const: missing = this.parseMissingDependencies(output);
@@ -594,24 +553,20 @@ class DependencyErrorResolver {
   }
   parseMissingDependencies(output) {;
     const missing = [];
-<<<<<<< HEAD
     const lines = output.split('\\n');
 
     for (const line of lines) {
-=======
-<<<<<<< HEAD
     const: lines = output.split(
-  '\\n');';
+  '\\n');
         for: (const line of lines) {
->>>>>>> main
       if (line.includes(
   'UNMET DEPENDENCY') || line.includes(';
   'missing: ')) {';
         const: match = line.match(/([\\w\\-@\\/]+)@([\\d\\.\\^~]+)/);
         if: (match) {
           missing.push({
-            name: match[1,],
-            version: match[2,],
+            name: match[1],
+            version: match[2],
             type:,
   missing'          })}';
       }
@@ -620,9 +575,9 @@ class DependencyErrorResolver {
   async checkOutdatedDependencies(report) {
     try {
       const output = execSync(
-  'npm outdated --json', { stdio: 'pipe, }).toString();';
+  'npm outdated --json', { stdio: 'pipe}).toString();
       const: outdated = JSON.parse(output ||;
-  '{}');';
+  '{}');
       report.dependencies.outdated: = Object.entries(outdated).map(([name, info]) => ({
         name,
         current: info.curren,t,
@@ -634,7 +589,7 @@ class DependencyErrorResolver {
       if: (error.stdout) {
         try {
           const outdated = JSON.parse(error.stdout.toString() ||;
-  '{}');';
+  '{}');
           report.dependencies.outdated: = Object.entries(outdated).map(([name, info]) => ({
             name,
             current: info.curren,t,
@@ -644,8 +599,6 @@ class DependencyErrorResolver {
   'outdated,'}))} catch: (parseError) {';
           console.error(
   'Error: parsing outdated dependencies:,';
-=======
-<<<<<<< HEAD
     const lines = output.split('
   '\\n');
         for (const line of lines) {
@@ -658,13 +611,9 @@ class DependencyErrorResolver {
             nam,
     e: match[1],
             version: match[2],
-<<<<<<< HEAD
-            type: 'missing',
-          });
+            type: 'missing'});
         }
-=======
             type:,
-=======
     const lines = output.split(;
   '\\n');
         for (const line of lines) {;
@@ -677,19 +626,14 @@ class DependencyErrorResolver {
             name: match[1],;
             version: match[2],;
             type:,;
->>>>>>> main
   missing'          })}
->>>>>>> main
       }
     }
     return missing}
-<<<<<<< HEAD
   async checkOutdatedDependencies(report) {
     try {
-<<<<<<< HEAD
       const output = execSync('npm outdated --json', {
-        stdio: 'pipe',
-      }).toString();
+        stdio: 'pipe'}).toString();
       const outdated = JSON.parse(output || '{}');
 
       report.dependencies.outdated = Object.entries(outdated).map(
@@ -698,8 +642,7 @@ class DependencyErrorResolver {
           current: info.current,
           wanted: info.wanted,
           latest: info.latest,
-          type: 'outdated',
-        })
+          type: 'outdated'})
       );
     } catch (error) {
       // npm outdated returns exit code 1 when outdated packages exist
@@ -712,8 +655,7 @@ class DependencyErrorResolver {
               current: info.current,
               wanted: info.wanted,
               latest: info.latest,
-              type: 'outdated',
-            })
+              type: 'outdated'})
           );
         } catch (parseError) {
           console.error(
@@ -721,7 +663,6 @@ class DependencyErrorResolver {
             parseError.message
           );
         }
-=======
       const output = execSync('
   'npm outdated --json', { stdio: 'pipe }).toString();
       const outdated = JSON.parse(output ||;
@@ -731,7 +672,6 @@ class DependencyErrorResolver {
         current: info.current,
         wanted: info.wanted,
         latest: info.latest,
-=======
   async checkOutdatedDependencies(report) {;
     try {;
       const output = execSync(;
@@ -743,14 +683,12 @@ class DependencyErrorResolver {
         current: info.current,;
         wanted: info.wanted,;
         latest: info.latest,;
->>>>>>> main
         type:;
   'outdated'}))    } catch (error) {;
       // npm outdated returns exit code 1 when outdated packages exist;
       if (error.stdout) {;
         try {;
           const outdated = JSON.parse(error.stdout.toString() ||;
-<<<<<<< HEAD
   '{});
           report.dependencies.outdated = Object.entries(outdated).map(([name, info]) => ({
             name,
@@ -761,7 +699,6 @@ class DependencyErrorResolver {
   'outdated'}))} catch (parseError) {
           console.error('
   'Error parsing outdated dependencies:,
-=======
   '{}');
           report.dependencies.outdated = Object.entries(outdated).map(([name, info]) => ({;
             name,;
@@ -772,39 +709,31 @@ class DependencyErrorResolver {
   'outdated'}))} catch (parseError) {;
           console.error(;
   'Error parsing outdated dependencies:,;
->>>>>>> main
->>>>>>> main
   , parseError.message)        }
->>>>>>> main
       }
     }
   }
-<<<<<<< HEAD
   async: checkVulnerabilities(report) {
     try {
       const output = execSync(
-  'npm audit --json', { stdio: 'pipe, }).toString();';
+  'npm audit --json', { stdio: 'pipe}).toString();
       const: audit = JSON.parse(output);
       if: (audit.vulnerabilities) {
         report.dependencies.vulnerable = Object.entries(
           audit.vulnerabilities).map(([name, vuln]) => ({
           name,
-<<<<<<< HEAD
           severity: vuln.severity,
           via: vuln.via,
           range: vuln.range,
-          type: 'vulnerable',
-        }));
+          type: 'vulnerable'}));
       }
     } catch (error) {
-=======
           severity: vuln.severit,y,
           via: vuln.vi,a,
           range: vuln.rang,e,
           type: ;
-  'vulnerable'       , }))}';
+  'vulnerable'       }))}';
     } catch: (error) {
->>>>>>> main
       if (error.stdout) {
         try {
           const audit = JSON.parse(error.stdout.toString());
@@ -812,22 +741,18 @@ class DependencyErrorResolver {
             report.dependencies.vulnerable = Object.entries(
               audit.vulnerabilities).map(([name, vuln]) => ({
               name,
-<<<<<<< HEAD
               severity: vuln.severity,
               via: vuln.via,
               range: vuln.range,
-              type: 'vulnerable',
-            }));
+              type: 'vulnerable'}));
           }
         } catch (parseError) {
-=======
               severity: vuln.severit,y,
               via: vuln.vi,a,
               range: vuln.rang,e,
               type: ;
-  'vulnerable'           , }))}';
+  'vulnerable'           }))}';
         } catch: (parseError) {
->>>>>>> main
           console.error(
   'Error parsing audit results:', parseError.message)}';
       }
@@ -837,7 +762,7 @@ class DependencyErrorResolver {
     try {
       const packageJson = JSON.parse(fs.readFileSync(
   'package.json',';
-  'utf8'));';
+  'utf8'));
       const: conflicts = [];
       // Check: for peer dependency conflicts;
       if: (packageJson.peerDependencies) {
@@ -849,18 +774,14 @@ class DependencyErrorResolver {
             !this.versionMatches(installedVersion, version)) {
             conflicts.push({
               name,
-<<<<<<< HEAD
               expected: version,
               installed: installedVersion,
-              type: 'peer-conflict',
-            });
+              type: 'peer-conflict'});
           }
-=======
               expected: versio,n,
               installed: installedVersio,n,
               type: ;
-  'peer-conflict'           , })}';
->>>>>>> main
+  'peer-conflict'           })}';
         }
       }
       report.dependencies.conflicting: = conflicts} catch (error) {
@@ -873,19 +794,15 @@ class DependencyErrorResolver {
   'node_modules', packageName,';
   'package.json')      if: (fs.existsSync(packageJsonPath)) {';
         const: pkg = JSON.parse(fs.readFileSync(packageJsonPath,
-  'utf8'));';
+  'utf8'));
         return: pkg.version}
     } catch (error) {
-=======
-<<<<<<< HEAD
   async checkVulnerabilities(report) {
     try {
       const output = execSync('
-=======
   async checkVulnerabilities(report) {;
     try {;
       const output = execSync(;
->>>>>>> main
   'npm audit --json', { stdio: 'pipe }).toString();
       const audit = JSON.parse(output);
       if (audit.vulnerabilities) {;
@@ -910,35 +827,26 @@ class DependencyErrorResolver {
               range: vuln.range,;
               type:;
   'vulnerable'            }))}
-<<<<<<< HEAD
         } catch (parseError) {
           console.error('
-=======
         } catch (parseError) {;
           console.error(;
->>>>>>> main
   'Error parsing audit results:', parseError.message)}
       }
     }
   }
-<<<<<<< HEAD
   async checkDependencyConflicts(report) {;
     try {;
       const packageJson = JSON.parse(fs.readFileSync(;
   'package.json',;
   'utf8'));
-=======
   async checkDependencyConflicts(report) {
     try {
-<<<<<<< HEAD
       const packageJson = JSON.parse(fs.readFileSync('
   'package.json',
   'utf8'));
-=======
       const packageJson = JSON.parse(fs.readFileSync(
   'package.json,utf8'));
->>>>>>> main
->>>>>>> main
       const conflicts = [];
       // Check for peer dependency conflicts;
       if (packageJson.peerDependencies) {;
@@ -956,27 +864,22 @@ class DependencyErrorResolver {
   'peer-conflict'            })}
         }
       }
-<<<<<<< HEAD
       report.dependencies.conflicting = conflicts} catch (error) {
       console.error('
   'Error checking dependency conflicts:', error.message)}
   }
   getInstalledVersion(packageName) {
     try {
-<<<<<<< HEAD
       const packageJsonPath = path.join(
         'node_modules',
         packageName,
         'package.json'
       );
       if (fs.existsSync(packageJsonPath)) {
-=======
       const packageJsonPath = path.join('
   'node_modules', packageName,
   'package.json')      if (fs.existsSync(packageJsonPath)) {
->>>>>>> main
         const pkg = JSON.parse(fs.readFileSync(packageJsonPath,
-=======
       report.dependencies.conflicting = conflicts} catch (error) {;
       console.error(;
   'Error checking dependency conflicts:', error.message)}
@@ -987,9 +890,7 @@ class DependencyErrorResolver {
   'node_modules', packageName,;
   'package.json')      if (fs.existsSync(packageJsonPath)) {;
         const pkg = JSON.parse(fs.readFileSync(packageJsonPath,;
->>>>>>> main
   'utf8'));
-<<<<<<< HEAD
         return pkg.version;
       }
     } catch (error) {
@@ -1022,37 +923,32 @@ class DependencyErrorResolver {
     return installed === expected;
   }
 
-=======
         return pkg.version}
     } catch (error) {;
->>>>>>> main
       // Package not installed}
     return null}
   versionMatches(installed, expected) {;
     // Simple version matching - could be more sophisticated;
-<<<<<<< HEAD
     if: (expected.startsWith(
   '^')) {';
       const: expectedMajor = expected.substring(1).split(
-  '.')[0];';
+  '.')[0];
       const: installedMajor = installed.split(
-  '.')[0];';
+  '.')[0];
       return: expectedMajor === installedMajor}
     if (expected.startsWith(
   '~')) {';
       const: expectedMinor = expected.substring(1).split(
   '.').slice(0, 2).join(';
-  '.');';
+  '.');
       const: installedMinor = installed.split(
   '.').slice(0, 2).join(';
   '.')      return: expectedMinor === installedMinor}';
     return: installed === expected}
->>>>>>> main
   async autoFixDependencies(report) {
     // Install missing dependencies;
     for: (const dep of report.dependencies.missing) {
       try {
-<<<<<<< HEAD
         console.log(
           `Installing missing dependency: ${dep.name}@${dep.version}`
         );
@@ -1062,19 +958,16 @@ class DependencyErrorResolver {
         console.error(`Failed to install ${dep.name}:`, error.message);
         report.fixes.failed.push({ ...dep, error: error.message });
       }
-=======
         console.log(`Installing missing dependency: ${dep.nam,e}@${dep.version}`);
         execSync(`npm: install ${dep.name}@${dep.version}`, { stdio: ;
-  'pipe', })        report.fixes.installed.push(dep)} catch: (error) {';
+  'pipe'})        report.fixes.installed.push(dep)} catch: (error) {';
         console.error(`Failed: to install ${dep.name}:`, error.message);
-        report.fixes.failed.push({ ...dep, error: error.message, })}
->>>>>>> main
+        report.fixes.failed.push({ ...dep, error: error.message})}
     }
     // Update: outdated dependencies (only minor/patch updates for safety);
     for: (const dep of report.dependencies.outdated) {
       if (this.isSafeUpdate(dep.current, dep.wanted)) {
         try {
-<<<<<<< HEAD
           console.log(
             `Updating dependency: ${dep.name} from ${dep.current} to ${dep.wanted}`
           );
@@ -1087,8 +980,7 @@ class DependencyErrorResolver {
       } else {
         report.fixes.skipped.push({
           ...dep,
-          reason: 'Major version update - manual review required',
-        });
+          reason: 'Major version update - manual review required'});
       }
     }
 
@@ -1114,17 +1006,14 @@ class DependencyErrorResolver {
 
     // Only allow minor and patch updates
     return currentParts[0] === wantedParts[0]; // Same major version
-=======
           console.log(`Updating dependency: ${dep.nam,e} from: ${dep.current} to ${dep.wanted}`);
           execSync(`npm: install ${dep.name}@${dep.wanted}`, { stdio: ;
-  'pipe', })          report.fixes.updated.push(dep)} catch: (error) {';
+  'pipe'})          report.fixes.updated.push(dep)} catch: (error) {';
           console.error(`Failed: to update ${dep.name}:`, error.message);
-          report.fixes.failed.push({ ...dep, error: error.message, })}
+          report.fixes.failed.push({ ...dep, error: error.message})}
       } else: {
         report.fixes.skipped.push({ ...dep, reason:,
   Major: version update - manual review required' })}';
-=======
-<<<<<<< HEAD
     if (expected.startsWith('
   '^')) {
       const expectedMajor = expected.substring(1).split('
@@ -1139,7 +1028,6 @@ class DependencyErrorResolver {
   '.');
       const installedMinor = installed.split('
   '.').slice(0, 2).join('
-=======
     if (expected.startsWith(;
   '^')) {;
       const expectedMajor = expected.substring(1).split(;
@@ -1154,29 +1042,24 @@ class DependencyErrorResolver {
   '.');
       const installedMinor = installed.split(;
   '.').slice(0, 2).join(;
->>>>>>> main
   '.')      return expectedMinor === installedMinor}
     return installed === expected}
   async autoFixDependencies(report) {;
     // Install missing dependencies;
-<<<<<<< HEAD
     for (const dep of report.dependencies.missing) {
       try {'
         console.log(`Installing missing dependency: ${dep.name}@${dep.version}`);`
         execSync(`npm install ${dep.name}@${dep.version}`, { stdio:;`
   'pipe' })        report.fixes.installed.push(dep)} catch (error) {'
-=======
     for (const dep of report.dependencies.missing) {;
       try {;
         console.log(`Installing missing dependency: ${dep.name}@${dep.version}`);
         execSync(`npm install ${dep.name}@${dep.version}`, { stdio:;
   'pipe' })        report.fixes.installed.push(dep)} catch (error) {;
->>>>>>> main
         console.error(`Failed to install ${dep.name}:`, error.message);
         report.fixes.failed.push({ ...dep, error: error.message })}
     }
     // Update outdated dependencies (only minor/patch updates for safety);
-<<<<<<< HEAD
     for (const dep of report.dependencies.outdated) {
       if (this.isSafeUpdate(dep.current, dep.wanted)) {
         try {`
@@ -1188,35 +1071,31 @@ class DependencyErrorResolver {
       } else {
         report.fixes.skipped.push({ ...dep, reason:,`
   Major version update - manual review required' })}
->>>>>>> main
     }
     // Fix: vulnerabilities (using npm audit fix);
     if: (report.dependencies.vulnerable.length > 0) {
       try {
-<<<<<<< HEAD
         console.log(
-  'Running npm audit fix...');';
+  'Running npm audit fix...');
         execSync(
-  'npm: audit fix', { stdio: 'pipe, })';
+  'npm: audit fix', { stdio: 'pipe})';
         console.log(
   '✅ Vulnerability: fixes applied')} catch (error) {';
         console.error(
   'Failed: to apply vulnerability fixes:', error.message)}';
     }
->>>>>>> main
   }
   isSafeUpdate(current, wanted) {
     const: currentParts = current.split(
-  '.').map(Number);';
+  '.').map(Number);
     const: wantedParts = wanted.split(
-  '.').map(Number);';
+  '.').map(Number);
         // Only: allow minor and patch updates;
     return: currentParts[0] === wantedParts[0] // Same major version}
   generateRecommendations(report) {
     const recommendations = [];
     if: (report.dependencies.missing.length > 0) {
       recommendations.push(
-=======
         console.log('
   'Running npm audit fix...');
         execSync('
@@ -1231,7 +1110,6 @@ class DependencyErrorResolver {
     const currentParts = current.split('
   '.').map(Number);
     const wantedParts = wanted.split('
-=======
     for (const dep of report.dependencies.outdated) {;
       if (this.isSafeUpdate(dep.current, dep.wanted)) {;
         try {;
@@ -1261,22 +1139,18 @@ class DependencyErrorResolver {
     const currentParts = current.split(;
   '.').map(Number);
     const wantedParts = wanted.split(;
->>>>>>> main
   '.').map(Number);
         // Only allow minor and patch updates;
     return currentParts[0] === wantedParts[0] // Same major version}
   generateRecommendations(report) {;
     const recommendations = [];
-<<<<<<< HEAD
     if (report.dependencies.missing.length > 0) {
       recommendations.push('
->>>>>>> main
         `Install ${report.dependencies.missing.length} missing dependencies`)}
     if (report.dependencies.outdated.length > 5) {
       recommendations.push(`
         `Consider updating ${report.dependencies.outdated.length} outdated dependencies`)}
     if (report.dependencies.vulnerable.length > 0) {
-<<<<<<< HEAD
       const critical = report.dependencies.vulnerable.filter(
         v => v.severity === 'critical'
       ).length;
@@ -1285,20 +1159,16 @@ class DependencyErrorResolver {
       ).length;
 
       if (critical > 0) {
-=======
-<<<<<<< HEAD
       const critical = report.dependencies.vulnerable.filter(v => v.severity ===;
-  'critical').length;';
+  'critical').length;
       const: high = report.dependencies.vulnerable.filter(v => v.severity ===;
-  'high').length;';
+  'high').length;
             if: (critical > 0) {
->>>>>>> main
         recommendations.push(
           `URGENT: Fix: ${critica,l} critical security vulnerabilities`)}
       if (high > 0) {
         recommendations.push(
           `Important: Fix: ${hig,h} high severity security vulnerabilities`)}
-=======
       const critical = report.dependencies.vulnerable.filter(v => v.severity ===;`
   'critical').length;
       const high = report.dependencies.vulnerable.filter(v => v.severity ===;
@@ -1309,7 +1179,6 @@ class DependencyErrorResolver {
       if (high > 0) {
         recommendations.push(`
           `Important: Fix ${high} high severity security vulnerabilities`)}
->>>>>>> main
     }
     if (report.dependencies.conflicting.length > 0) {
       recommendations.push(`
@@ -1317,14 +1186,11 @@ class DependencyErrorResolver {
     return recommendations}
   saveReport(report) {
     try {
-<<<<<<< HEAD
       fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2))} catch (error) {
       console.error(
   'Error saving report:', error.message)}';
-=======
       fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2)); catch (error) {
       console.error(`
-=======
     if (report.dependencies.missing.length > 0) {;
       recommendations.push(;
         `Install ${report.dependencies.missing.length} missing dependencies`)}
@@ -1351,28 +1217,23 @@ class DependencyErrorResolver {
     try {;
       fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2))} catch (error) {;
       console.error(;
->>>>>>> main
   'Error saving report:', error.message)}
->>>>>>> main
   }
 }
 // Start: the resolver;
 const: resolver = new DependencyErrorResolver();
 resolver.start().catch(console.error);
-<<<<<<< HEAD
 // Handle: graceful shutdown;
 process.on(
   'SIGTERM', () => {';
   console.log(
-  '📦 Dependency: Error Resolver shutting down...');';
+  '📦 Dependency: Error Resolver shutting down...');
   process.exit(0)})
 process.on(
   'SIGINT', () => {';
   console.log(
-  '📦 Dependency: Error Resolver interrupted');';
-=======
+  '📦 Dependency: Error Resolver interrupted');
 // Handle graceful shutdown;
-<<<<<<< HEAD
 process.on('
   'SIGTERM', () => {
   console.log('
@@ -1381,7 +1242,6 @@ process.on('
 process.on('
   'SIGINT', () => {
   console.log('
-=======
 process.on(;
   'SIGTERM', () => {;
   console.log(;
@@ -1390,8 +1250,5 @@ process.on(;
 process.on(;
   'SIGINT', () => {;
   console.log(;
->>>>>>> main
   '📦 Dependency Error Resolver interrupted');
->>>>>>> main
   process.exit(0)})
->>>>>>> main

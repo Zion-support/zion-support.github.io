@@ -126,45 +126,32 @@ export default [
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
+          jsx: true}}},
     plugins: {
       '@typescript-eslint': typescript,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-    },
+      'react-refresh': reactRefresh},
     rules: {
       ...typescript.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true },
-      ],
+        { allowConstantExport: true }],
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-      '@typescript-eslint/no-explicit-any': 'warn',
-    },
-  },
-];`
+      '@typescript-eslint/no-explicit-any': 'warn'}}];`
       },
       {
         file: 'next.config.js',
         content: `/** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    appDir: true,
-  },
+    appDir: true},
   typescript: {
-    ignoreBuildErrors: false,
-  },
+    ignoreBuildErrors: false},
   eslint: {
-    ignoreDuringBuilds: false,
-  },
+    ignoreDuringBuilds: false},
   images: {
-    domains: ['localhost'],
-  },
-};
+    domains: ['localhost']}};
 
 module.exports = nextConfig;`
       }
@@ -689,7 +676,7 @@ scanner.runSecurityScan().catch(console.error);`
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
     this.log('\\n📊 COMPREHENSIVE APP IMPROVEMENT REPORT');
-    this.log('=====================================');
+    this.log('==');
     this.log(`Duration: ${report.duration}`);
     this.log(`Fixes Applied: ${report.summary.totalFixes}`);
     this.log(`Errors Found: ${report.summary.totalErrors}`);
@@ -714,7 +701,7 @@ scanner.runSecurityScan().catch(console.error);`
 
   async run() {
     this.log('🚀 Starting Comprehensive App Improvement Process...');
-    this.log('================================================');
+    this.log('======');
     
     try {
       // Step 1: Fix package.json

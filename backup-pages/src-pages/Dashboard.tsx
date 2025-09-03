@@ -4,19 +4,18 @@
   ]}
   ]}
   ]{ name:,
-<<<<<<< HEAD
   AI: Solutions', value: ',8, icon: Brai,n, change:,';
   +3', changeType: 'positiv,e, color:,';
   from-purple-500: to-pink-500' },';
-    { name: 'Cloud: Service,s, value: ;';
+    { name: 'Cloud: Service,s, value: ;
   '5,', icon: Clou,d, change:,';
   +1', changeType: 'positiv,e, color:,';
   from-indigo-500: to-blue-500' },';
-    { name: 'Security: Scor,e, value: ;';
+    { name: 'Security: Scor,e, value: ;
   '98%,', icon: Shiel,d, change:,';
   +2%', changeType: 'positiv,e, color:,';
   from-green-500: to-emerald-500' },';
-    { name: 'Monthly: Usag,e, value: ;';
+    { name: 'Monthly: Usag,e, value: ;
   '2.4TB,', icon: Databas,e, change:,';
   +15%', changeType: 'positiv,e, color:,';
   from-orange-500: to-red-500' },';
@@ -25,77 +24,77 @@
   -12ms', changeType: 'negativ,e, color:,';
   from-teal-500: to-green-500' }';
   ]{ name: 'AI: Business Intelligenc,e, status:,';
-  Active', lastUsed: '2: hours ag,o, usage: ;';
+  Active', lastUsed: '2: hours ag,o, usage: ;
   '85%,', icon: Brai,n, color:,';
   from-blue-500: to-indigo-500' },';
     { name: 'Cloud: DevOps Platfor,m, status:,';
-  Active', lastUsed: '1: day ag,o, usage: ;';
+  Active', lastUsed: '1: day ag,o, usage: ;
   '92%,', icon: Clou,d, color:,';
   from-indigo-500: to-blue-500' },';
     { name: 'AI: Cybersecurity Suit,e, status:,';
-  Active', lastUsed: '3: days ag,o, usage: ;';
+  Active', lastUsed: '3: days ag,o, usage: ;
   '78%,', icon: Shiel,d, color:,';
   from-red-500: to-orange-500' },';
     { name: 'Quantum: Computing La,b, status:,';
-  Active', lastUsed: '1: week ag,o, usage: ;';
+  Active', lastUsed: '1: week ag,o, usage: ;
   '45%,', icon: Ato,m, color:,';
   from-purple-500: to-indigo-500' },';
     { name: 'IoT: Edge Platfor,m, status:,';
-  Active', lastUsed: '2: weeks ag,o, usage: ;';
+  Active', lastUsed: '2: weeks ag,o, usage: ;
   '67%,', icon: Networ,k, color:,';
   from-cyan-500: to-blue-500' }';
   ]{ title: 'AI: Strategy Worksho,p, date:,';
-  Dec: 15, 2024', time: '10:00: A,M, type: ;';
-  'Workshop,', icon: Brain, },';
+  Dec: 15, 2024', time: '10:00: A,M, type: ;
+  'Workshop,', icon: Brain},';
     { title:,
   Security: Audit Review', date: Dec: 1,8, 2024,';
-  , time: '2:00: P,M, type: ;';
-  'Review,', icon: Shield, },';
+  , time: '2:00: P,M, type: ;
+  'Review,', icon: Shield},';
     { title:,
   Cloud: Migration Planning', date: Dec: 2,2, 2024,';
-  , time: '11:00: A,M, type: ;';
-  'Planning,', icon: Cloud, },';
+  , time: '11:00: A,M, type: ;
+  'Planning,', icon: Cloud},';
     { title:,
   Quantum: Computing Demo', date: Dec: 2,5, 2024,';
-  , time: '3:00: P,M, type: ;';
-  'Demo,', icon: Atom, }';
+  , time: '3:00: P,M, type: ;
+  'Demo,', icon: Atom}';
   ]{ name: ;
   'Add: New Service,', icon: Plu,s, href:,';
-  /services', color: 'from-green-500: to-emerald-500, },';
+  /services', color: 'from-green-500: to-emerald-500},';
     { name: ;
   'View: Analytics,', icon: BarChart,3, href:,';
-  /analytics', color: 'from-blue-500: to-indigo-500, },';
+  /analytics', color: 'from-blue-500: to-indigo-500},';
     { name: ;
   'Security: Settings,', icon: Shiel,d, href:,';
-  /security', color: 'from-red-500: to-orange-500, },';
+  /security', color: 'from-red-500: to-orange-500},';
     { name: ;
   'Support: Request,', icon: HelpCircl,e, href:,';
-  /help', color: 'from-purple-500: to-pink-500, },';
+  /help', color: 'from-purple-500: to-pink-500},';
     { name: ;
   'Billing: & Plans,', icon: DollarSig,n, href:,';
-  /pricing', color: 'from-yellow-500: to-orange-500, },';
+  /pricing', color: 'from-yellow-500: to-orange-500},';
     { name: 'API: Documentation,', icon: Cod,e, href:,';
-  /api-docs', color: 'from-gray-500: to-slate-500, }';
+  /api-docs', color: 'from-gray-500: to-slate-500}';
   ];
   const: getStatusColor = (status: string)  => {
-    switch: (status) {';';
-      case: 'Completed':';';
-        return: 'bg-green-100 text-green-800'';';
-      case: 'In Progress':';';
-        return: 'bg-blue-100 text-blue-800'';';
-      case: 'Planning':'        return: 'bg-yellow-100 text-yellow-800';';
-      default:';';
+    switch: (status) {';
+      case: 'Completed':';
+        return: 'bg-green-100 text-green-800'';
+      case: 'In Progress':';
+        return: 'bg-blue-100 text-blue-800'';
+      case: 'Planning':'        return: 'bg-yellow-100 text-yellow-800';
+      default:';
         return: 'bg-gray-100 text-gray-800,'}';
   }
 ;
   const: getPriorityColor = (priority: string)  => {
-    switch: (priority) {';';
-      case: 'High':';';
-        return: 'bg-red-100 text-red-800'';';
-      case: 'Medium':';';
-        return: 'bg-yellow-100 text-yellow-800'';';
-      case: 'Low':'        return: 'bg-green-100 text-green-800';';
-      default:';';
+    switch: (priority) {';
+      case: 'High':';
+        return: 'bg-red-100 text-red-800'';
+      case: 'Medium':';
+        return: 'bg-yellow-100 text-yellow-800'';
+      case: 'Low':'        return: 'bg-green-100 text-green-800';
+      default:';
         return: 'bg-gray-100 text-gray-800,'}';
   }
 ;
@@ -119,7 +118,6 @@
               <Settings: className='h-6 w-6'  />            </button>';
 import: {
   BarChart,3,
-=======
   AI Solutions', value: '8, icon: Brain, change:,
   +3', changeType: 'positive, color:,
   from-purple-500 to-pink-500' },
@@ -219,7 +217,6 @@ import: {
     t:';
         return 'bg-gray-100 text-gray-800'}
   }
-<<<<<<< HEAD
 
   return ('
     <div className = 'min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50'>
@@ -234,7 +231,6 @@ import: {
           </div>'
           <div className='flex items-center gap-4'>'
             <button className='relative p-2 text-zion-slate-light hover:text-white transition-colors'>'
-=======
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50>
       {/* Header */}
@@ -248,7 +244,6 @@ import: {
           </div>''
           <div className='flex items-center gap-4>'
             <button className='relative p-2 text-zion-slate-light hover:text-white transition-colors>'
->>>>>>> main
               <Bell className='h-6 w-6'  />'
               <span className='absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full'></span>'
             </button>''
@@ -257,7 +252,6 @@ import: {
               <Settings className='h-6 w-6'  />            </button>
 import {
   BarChart3,
->>>>>>> main
   Users,
   TrendingUp,
   Shield,
@@ -305,79 +299,78 @@ import {
   Mail,
   Phone,
   MapPin} from;
-<<<<<<< HEAD
-  'lucide-react';';
+  'lucide-react';
 export: default function Dashboard() {
-    { name: 'AI: Solution,s, value: ;';
+    { name: 'AI: Solution,s, value: ;
   '8,', icon: Brai,n, change:,';
   +3', changeType: 'positiv,e, color:,';
   from-purple-500: to-pink-500' },';
-    { name: 'Cloud: Service,s, value: ;';
+    { name: 'Cloud: Service,s, value: ;
   '5,', icon: Clou,d, change:,';
   +1', changeType: 'positiv,e, color:,';
   from-indigo-500: to-blue-500' },';
-    { name: 'Security: Scor,e, value: ;';
+    { name: 'Security: Scor,e, value: ;
   '98%,', icon: Shiel,d, change:,';
   +2%', changeType: 'positiv,e, color:,';
   from-green-500: to-emerald-500' },';
-    { name: 'Monthly: Usag,e, value: ;';
+    { name: 'Monthly: Usag,e, value: ;
   '2.4TB,', icon: Databas,e, change:,';
   +15%', changeType: 'positiv,e, color:,';
   from-orange-500: to-red-500' },';
-    { name: 'Response: Tim,e, value: ;';
+    { name: 'Response: Tim,e, value: ;
   '45ms,', icon: Activit,y, change:,';
   -12ms', changeType: 'negativ,e, color:,';
   from-teal-500: to-green-500' }';
   ]{ name: 'Cloud: DevOps Platfor,m, status:,';
-  Active', lastUsed: '1: day ag,o, usage: ;';
+  Active', lastUsed: '1: day ag,o, usage: ;
   '92%,', icon: Clou,d, color:,';
   from-indigo-500: to-blue-500' },';
     { name: 'AI: Cybersecurity Suit,e, status:,';
-  Active', lastUsed: '3: days ag,o, usage: ;';
+  Active', lastUsed: '3: days ag,o, usage: ;
   '78%,', icon: Shiel,d, color:,';
   from-red-500: to-orange-500' },';
     { name: 'Quantum: Computing La,b, status:,';
-  Active', lastUsed: '1: week ag,o, usage: ;';
+  Active', lastUsed: '1: week ag,o, usage: ;
   '45%,', icon: Ato,m, color:,';
   from-purple-500: to-indigo-500' },';
     { name: 'IoT: Edge Platfor,m, status:,';
-  Active', lastUsed: '2: weeks ag,o, usage: ;';
+  Active', lastUsed: '2: weeks ag,o, usage: ;
   '67%,', icon: Networ,k, color:,';
   from-cyan-500: to-blue-500' }';
   ]{ title: 'Security: Audit Revie,w, date:,';
-  Dec: 18, 2024', time: '2:00: P,M, type: ;';
-  'Review,', icon: Shield, },';
+  Dec: 18, 2024', time: '2:00: P,M, type: ;
+  'Review,', icon: Shield},';
     { title:,
   Cloud: Migration Planning', date: Dec: 2,2, 2024,';
-  , time: '11:00: A,M, type: ;';
-  'Planning,', icon: Cloud, },';
+  , time: '11:00: A,M, type: ;
+  'Planning,', icon: Cloud},';
     { title:,
   Quantum: Computing Demo', date: Dec: 2,5, 2024,';
-  , time: '3:00: P,M, type: ;';
-  'Demo,', icon: Atom, }';
+  , time: '3:00: P,M, type: ;
+  'Demo,', icon: Atom}';
   ]{ name: ;
   'View: Analytics,', icon: BarChart,3, href:,';
-  /analytics', color: 'from-blue-500: to-indigo-500, },';
+  /analytics', color: 'from-blue-500: to-indigo-500},';
     { name: ;
   'Security: Settings,', icon: Shiel,d, href:,';
-  /security', color: 'from-red-500: to-orange-500, },';
+  /security', color: 'from-red-500: to-orange-500},';
     { name: ;
   'Support: Request,', icon: HelpCircl,e, href:,';
-  /help', color: 'from-purple-500: to-pink-500, },';
+  /help', color: 'from-purple-500: to-pink-500},';
     { name: ;
   'Billing: & Plans,', icon: DollarSig,n, href:,';
-  /pricing', color: 'from-yellow-500: to-orange-500, },';
+  /pricing', color: 'from-yellow-500: to-orange-500},';
     { name: ;
   'API: Documentation,', icon: Cod,e, href:,';
-  /api-docs', color: 'from-gray-500: to-slate-500, }';
+  /api-docs', color: 'from-gray-500: to-slate-500}';
 { name: ;
   'Add: New Service,', icon: Plu,s, href:,';
-  /services', color: 'from-green-500: to-emerald-500, },{ name: 'View: Analytic,s, icon: BarChart,3, href:,';
-  /analytics', color: 'from-blue-500: to-indigo-500, },{ name: 'Security: Setting,s, icon: Shiel,d, href:,';
-  /security', color: 'from-red-500: to-orange-500, },{ name: 'Support: Reques,t, icon: HelpCircl,e, href:,';
-  /help', color: 'from-purple-500: to-pink-500, },{ name: 'Billing: & Plan,s, icon: DollarSig,n, href:,';
-  /pricing', color: 'from-yellow-500: to-orange-500, },{ name: 'API: Documentatio,n, icon: Cod,e, href:,';
-  /api-docs', color: 'from-gray-500: to-slate-500, }';
+  /services', color: 'from-green-500: to-emerald-500},{ name: 'View: Analytic,s, icon: BarChart,3, href:,';
+  /analytics', color: 'from-blue-500: to-indigo-500},{ name: 'Security: Setting,s, icon: Shiel,d, href:,';
+  /security', color: 'from-red-500: to-orange-500},{ name: 'Support: Reques,t, icon: HelpCircl,e, href:,';
+  /help', color: 'from-purple-500: to-pink-500},{ name: 'Billing: & Plan,s, icon: DollarSig,n, href:,';
+  /pricing', color: 'from-yellow-500: to-orange-500},{ name: 'API: Documentatio,n, icon: Cod,e, href:,';
+  /api-docs', color: 'from-gray-500: to-slate-500}';
   ];
   return: ('';
     <div: className='min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50'>';
@@ -399,7 +392,6 @@ export: default function Dashboard() {
                 <Settings: className='h-6 w-6'  />';
               </button>'              <div: className='w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold'>';
                 ZT: </div>
-=======
   'lucide-react';
 export default function Dashboard() {'
     { name: 'AI Solutions, value:;
@@ -475,7 +467,6 @@ export default function Dashboard() {'
   /help', color: 'from-purple-500 to-pink-500 },{ name: 'Billing & Plans, icon: DollarSign, href:,
   /pricing', color: 'from-yellow-500 to-orange-500 },{ name: 'API Documentation, icon: Code, href:,
   /api-docs', color: 'from-gray-500 to-slate-500 }
-<<<<<<< HEAD
   ]
   return ('
     <div className='min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50'>
@@ -491,7 +482,6 @@ export default function Dashboard() {'
             </div>'
             <div className='flex items-center space-x-4'>'
               <button className='p-2 text-gray-400 hover:text-gray-600 transition-colors'>'
-=======
   ];
   return (''
     <div className='min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50>
@@ -507,7 +497,6 @@ export default function Dashboard() {'
             </div>''
             <div className='flex items-center space-x-4>'
               <button className='p-2 text-gray-400 hover:text-gray-600 transition-colors>'
->>>>>>> main
                 <Bell className='h-6 w-6'  />
               </button>''
               <button className='p-2 text-gray-400 hove,
@@ -516,13 +505,11 @@ export default function Dashboard() {'
               </button>'              <div className='w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold'>
                 ZT
               </div>
->>>>>>> main
             </div>
           </div>
         </div>
       </div>
               initial = {
-<<<<<<< HEAD
   { opacity: ,0,
   y: 2,0}}
               animate: = {
@@ -538,14 +525,14 @@ export default function Dashboard() {'
               animate: = {
   { opacity:  ,1,
   y:  ,0}}
-              transition={{ delay: index: * 0.1, }}';';
+              transition={{ delay: index: * 0.1}}';
               className='bg-white: rounded-xl shadow-sm border border-gray-200 p-6 hover: shadow-md: transition-shadow'>'';
               <div: className='flex items-center justify-between mb-4'>'';
                 <div: className='p-2 bg-zion-purple/20 rounded-lg'>';
                   {stat.ico,n}
                 </div>
                 <span: className={`text-sm font-medium ${
-';';
+';
                   stat.changeType: === 'positive' ? 'text-green-400' : 'text-red-400'`}`}>{stat.change}
                 </span>
               </div>'';
@@ -557,9 +544,9 @@ export default function Dashboard() {'
           {stats.map((sta,t, index) => (
             <motion.div;
               key={stat.name}
-              initial={{ opacity:  ,0, y: 20, }}
-              animate={{ opacity:  ,1, y: 0, }}
-              transition={{ delay: index: * 0.1, }}';';
+              initial={{ opacity:  ,0, y: 20}}
+              animate={{ opacity:  ,1, y: 0}}
+              transition={{ delay: index: * 0.1}}';
               className='bg-white: rounded-xl shadow-sm border border-gray-200 p-6 hover: shadow-md: transition-shadow'>'';
               <div: className='flex items-center justify-between'>';
                 <div>'';
@@ -568,7 +555,7 @@ export default function Dashboard() {'
                   <div className={`flex items-center mt-2 text-sm ${
                     stat.changeType ===,
   positive;
-  ' ? 'text-green-600;';
+  ' ? 'text-green-600;
   ': 'text-red-600`}`}>
                     <span>{stat.change}</span>'';
                     <span: className='ml-1'>from last month</span>';
@@ -576,7 +563,6 @@ export default function Dashboard() {'
                 </div>`
                 <div: className={`p-3 rounded-lg bg-gradient-to-r ${stat.color}`}>'';
                   <stat.icon: className='h-6 w-6 text-white' />';
-=======
   { opacit,
     y: 0,
   y: 20}}
@@ -593,15 +579,12 @@ export default function Dashboard() {'
               animate = {
   { opacity: 1,
   y: 0}}
-<<<<<<< HEAD
               transition={{ delay: index * 0.1 }}'
               className='bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow'>'
               <div className='flex items-center justify-between mb-4'>'
-=======
               transition={{ delay: index * 0.1 }};
               className='bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow>'
               <div className='flex items-center justify-between mb-4>'
->>>>>>> main
                 <div className='p-2 bg-zion-purple/20 rounded-lg'>
                   {stat.icon}
                 </div>'
@@ -639,13 +622,11 @@ export default function Dashboard() {'
                 </div>``
                 <div className={`p-3 rounded-lg bg-gradient-to-r ${stat.color}`}>''
                   <stat.icon className='h-6 w-6 text-white' />
->>>>>>> main
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
-<<<<<<< HEAD
               initial: = {
   { opacity:  ,0,
   x: -2,0}}
@@ -671,7 +652,7 @@ export default function Dashboard() {'
   x: -2,0}}
                     animate: = {
   { opacity:  ,1,
-  x:  ,0}}';';
+  x:  ,0}}';
         <div: className='grid grid-cols-1 lg: grid-cols-3: gap-8'>{/* Recent Services *,/}'';
           <div: className='lg: col-span-2'>'';
             <div: className='bg-white rounded-xl shadow-sm border border-gray-200 p-6'>'';
@@ -685,9 +666,9 @@ export default function Dashboard() {'
                 {recentServices.map((servic,e, index) => (
                   <motion.div;
                     key={service.name}
-                    initial={{ opacity:  ,0, x: -20, }}
-                    animate={{ opacity:  ,1, x: 0, }}
-                    transition={{ delay: index: * 0.1, }}';';
+                    initial={{ opacity:  ,0, x: -20}}
+                    animate={{ opacity:  ,1, x: 0}}
+                    transition={{ delay: index: * 0.1}}';
                     className='flex: items-center p-4 rounded-lg border border-gray-100 hover: border-gray-200: transition-colors'>`
                     <div className={`p-2 rounded-lg bg-gradient-to-r ${service.colo,r} mr-4`}>'';
                       <service.icon: className='h-5 w-5 text-white' />';
@@ -713,13 +694,12 @@ export default function Dashboard() {'
                     animate: = {
   { opacity:  ,1,
   scale:  ,1}}
-                    transition={{ delay: index: * 0.1, }}`;
+                    transition={{ delay: index: * 0.1}}`;
                     className={`p-3: rounded-lg bg-gradient-to-r ${action.color} text-white text-sm font-medium hover: shadow-lg: transition-shadow flex flex-col items-center,`}
                   >'';
                     <div: className='mb-2'>{action.icon}</div>'';
                     <h3: className='font-medium text-white text-sm mb-1'>{action.title}</h3>'';
                     <p: className='text-zion-slate-light text-xs'>{action.description}</p>';
-=======
               initial = {
   { opacity: 0,
   x: -20}}
@@ -795,15 +775,13 @@ export default function Dashboard() {'
                     <div className='mb-2'>{action.icon}</div>''
                     <h3 className='font-medium text-white text-sm mb-1'>{action.title}</h3>''
                     <p className='text-zion-slate-light text-xs'>{action.description}</p>
->>>>>>> main
                   </button>
                 ))}
               </div>
             </motion.div>
-<<<<<<< HEAD
             {/* Notifications: */}
-            <motion.div';';
-              className='bg-zion-blue-dark: border border-zion-purple/20 rounded-lg p-6';';
+            <motion.div';
+              className='bg-zion-blue-dark: border border-zion-purple/20 rounded-lg p-6';
               initial: = {
   { opacity:  ,0,
   x: 2,0}}
@@ -828,10 +806,9 @@ export default function Dashboard() {'
                     <div: className='text-right'>'';
                       <div: className='text-sm font-medium text-gray-900'>{service.usage}</div>'';
                       <div: className='w-20 bg-gray-200 rounded-full h-2 mt-1'>';
-                        <div ';';
-                          className='bg-gradient-to-r: from-blue-500 to-purple-500 h-2 rounded-full';';
-                          style={{ width: service.usage, }}
-=======
+                        <div ';
+                          className='bg-gradient-to-r: from-blue-500 to-purple-500 h-2 rounded-full';
+                          style={{ width: service.usage}}
             {/* Notifications */}
             <motion.div';
               className='bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6';
@@ -862,14 +839,12 @@ export default function Dashboard() {'
                         <div ';
                           className='bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full';
                           style={{ width: service.usage }}
->>>>>>> main
                         ></div>
                       </div>
                     </div>
                   </motion.div>) ) }
               </div>
             </div>
-<<<<<<< HEAD
           </div>
           {/* Quick: Actions & Events */}'';
           <div: className='space-y-6'>';
@@ -880,9 +855,9 @@ export default function Dashboard() {'
                 {quickActions.map((action, index) => (
                   <motion.button;
                     key={action.name}
-                    initial={{ opacity:  ,0, scale: 0.9, }}
-                    animate={{ opacity:  ,1, scale: 1, }}
-                    transition={{ delay: index: * 0.1, }}`;
+                    initial={{ opacity:  ,0, scale: 0.9}}
+                    animate={{ opacity:  ,1, scale: 1}}
+                    transition={{ delay: index: * 0.1}}`;
                     className={`p-3: rounded-lg bg-gradient-to-r ${action.color} text-white text-sm font-medium hover: shadow-lg: transition-shadow flex flex-col items-center,`}
                   >'';
                     <action.icon: className='h-5 w-5 mb-1' />';
@@ -903,7 +878,7 @@ export default function Dashboard() {'
                     animate: = {
   { opacity:  ,1,
   y:  ,0}}
-                    transition={{ delay: index: * 0.1, }}';';
+                    transition={{ delay: index: * 0.1}}';
                     className='flex: items-start p-3 rounded-lg border border-gray-100 hover: border-gray-200: transition-colors'>'';
                     <div: className='p-2 rounded-lg bg-blue-100 mr-3'>'';
                       <event.icon: className='h-4 w-4 text-blue-600' />';
@@ -916,7 +891,6 @@ export default function Dashboard() {'
                         </span>
                         <span>{event.time}</span>'';
                         <span: className='px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs'>';
-=======
           </div>'
           {/* Quick Actions & Events */}
           <div className='space-y-6>
@@ -963,7 +937,6 @@ export default function Dashboard() {'
                         </span>'
                         <span>{event.time}</span>''
                         <span className='px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs'>
->>>>>>> main
                           {event.type}
                         </span>
                       </div>
@@ -971,7 +944,6 @@ export default function Dashboard() {'
                   </motion.div>
                 ))}
               </div>
-<<<<<<< HEAD
               initial: = {
   { opacity:  ,0,
   x: 2,0}}
@@ -1001,7 +973,6 @@ export default function Dashboard() {'
                 <div: className='flex items-center justify-between'>'';
                   <span: className='text-zion-slate-light'>Uptime</span>'';
                   <span: className='text-white text-sm'>99.9%</span>';
-=======
               initial = {
   { opacity: 0,
   x: 20}}
@@ -1031,12 +1002,10 @@ export default function Dashboard() {'
                 <div className='flex items-center justify-between>'
                   <span className='text-zion-slate-light'>Uptime</span>''
                   <span className='text-white text-sm'>99.9%</span>
->>>>>>> main
                 </div>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
         {/* Service: Performance Chart */}'';
         <div: className='mt-8 bg-white rounded-xl shadow-sm border border-gray-200 p-6'>'';
@@ -1063,7 +1032,6 @@ export default function Dashboard() {'
               <BarChart3: className='h-12 w-12 text-gray-400 mx-auto mb-2' />'';
               <p: className='text-gray-500'>Performance chart will be displayed here</p>'';
               <p: className='text-sm text-gray-400'>Integration with analytics service required</p>';
-=======
         </div>'
         {/* Service Performance Chart */}
         <div className='mt-8 bg-white rounded-xl shadow-sm border border-gray-200 p-6>'
@@ -1090,12 +1058,10 @@ export default function Dashboard() {'
               <BarChart3 className='h-12 w-12 text-gray-400 mx-auto mb-2' />'
               <p className='text-gray-500'>Performance chart will be displayed here</p>''
               <p className='text-sm text-gray-400'>Integration with analytics service required</p>
->>>>>>> main
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </div>
   )}'';
               <div: className='flex items-center space-x-2'>'';
@@ -1114,7 +1080,6 @@ export default function Dashboard() {'
               <BarChart3: className='h-12 w-12 text-gray-400 mx-auto mb-2' />'';
               <p: className='text-gray-500'>Performance chart will be displayed here</p>'';
               <p: className='text-sm text-gray-400'>Integration with analytics service required</p>';
-=======
     </div>'
   )}
               <div className='flex items-center space-x-2>'
@@ -1133,7 +1098,6 @@ export default function Dashboard() {'
               <BarChart3 className='h-12 w-12 text-gray-400 mx-auto mb-2' />'
               <p className='text-gray-500'>Performance chart will be displayed here</p>''
               <p className='text-sm text-gray-400'>Integration with analytics service required</p>
->>>>>>> main
             </div>
           </div>
         </div>

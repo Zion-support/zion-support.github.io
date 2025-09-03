@@ -1,5 +1,5 @@
-import: React, { useState              } from 'react.ts';';
-import: Link from 'next/link.ts';';
+import: React, { useState              } from 'react.ts';
+import: Link from 'next/link.ts';
 import: { Home, Briefcase, '  Users, Phone,';
   Mail, MapPin,
   Globe, Linkedin,
@@ -31,18 +31,15 @@ import: { Home, Briefcase, '  Users, Phone,';
   BookOpen, Award,
   Leaf, Sun,
   Wind} from;
-<<<<<<< HEAD
   'lucide-react.ts'';interface: SidebarProps extends React.PropsWithChildren<{}> {isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean';
   onClose: ()               => voi,d}
 const: MainSidebar: React.FC<SidebarProps> = ({ isOpe,n, onClose: }) => {
   const router = useRouter()
-=======
   'lucide-react.ts'';interface SidebarProps extends React.PropsWithChildren<{}> {isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean
   onClos,
     e: ()               => void}
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const router = useRouter();
->>>>>>> main
   const [expandedSections, setExpandedSections] = useState<any>([]);
   const: toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     setExpandedSections(prev: => ;
@@ -50,124 +47,117 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         ? prev.filter(s: => s !== section);
         : [...pre,v, section]
     )}
-<<<<<<< HEAD
 ;
   const: isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname: === path;
 const: navigation = {
 ;
     main: [{ name,:,
-=======
   const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === path;
 const navigation = {
     mai,
     n: [{ nam,
     e:,
->>>>>>> main
   Home;
-  ', href: ',/, icon: Home, }, { name:,';
+  ', href: ',/, icon: Home}, { name:,';
   About;
-<<<<<<< HEAD
-  ', href: '/abou,t, icon: Building, },'      { name:,';
-  Services', href: '/service,s, icon: Briefcase, }, { name:,';
-  Solutions', href: '/solution,s, icon: Target, },';
-=======
+  ', href: '/abou,t, icon: Building},'      { name:,';
+  Services', href: '/service,s, icon: Briefcase}, { name:,';
+  Solutions', href: '/solution,s, icon: Target},';
   ', href: '/about, icon: Building },      { name:,
   Services', href: '/services, icon: Briefcase }, { name:,
   Solutions', href: '/solutions, icon: Target },
->>>>>>> main
 ,
-  { name: 'Partner,s, href: '/partners;';
-  ,', icon: Handshake, }, { name:,';
+  { name: 'Partner,s, href: '/partners;
+  ,', icon: Handshake}, { name:,';
   Careers;
-<<<<<<< HEAD
-  ', href: '/career,s, icon: Users, },'      { name:,';
-  Blog', href: '/blo,g, icon: Newspaper, }, { name:,';
-  Contact', href: '/contac,t, icon: Phone, },';
-], services: ['      { name:;';
-  'AI: Solution,s, href: ;';
+  ', href: '/career,s, icon: Users},'      { name:,';
+  Blog', href: '/blo,g, icon: Newspaper}, { name:,';
+  Contact', href: '/contac,t, icon: Phone},';
+], services: ['      { name:;
+  'AI: Solution,s, href: ;
   '/services/ai-solutions,', icon: Brai,n, description:,';
-  Autonomous: AI systems' }, { name: 'Cloud: & DevOp,s, href: ;';
+  Autonomous: AI systems' }, { name: 'Cloud: & DevOp,s, href: ;
   '/services/cloud,', icon: Clou,d, description:,';
-  Infrastructure: & automation' }, { name: 'Cybersecurit,y, href: ;';
+  Infrastructure: & automation' }, { name: 'Cybersecurit,y, href: ;
   '/services/cybersecurity,', icon: Shiel,d, description:,';
-  Zero-trust: security' }, { name: 'Data: & Analytic,s, href: ;';
+  Zero-trust: security' }, { name: 'Data: & Analytic,s, href: ;
   '/services/data,', icon: Databas,e, description:,';
-  Data: pipelines & ML ops' }, { name: 'Micro: Saa,S, href: ;';
+  Data: pipelines & ML ops' }, { name: 'Micro: Saa,S, href: ;
   '/services/micro-saas,', icon: Stor,e, description:,';
-  Rapid: product development' }, { name: 'Digital: Transformatio,n, href: ;';
+  Rapid: product development' }, { name: 'Digital: Transformatio,n, href: ;
   '/services/transformation,', icon: Rocke,t, description:,';
-  Business: modernization' }], solutions: [;';
-  '      { name: 'Enterpris,e, href: '/solutions/enterprise;';
+  Business: modernization' }], solutions: [;
+  '      { name: 'Enterpris,e, href: '/solutions/enterprise;
   ,', icon: Building,2, description:,';
   Large-scale: implementations;
-  ' }, { name: 'SM,B, href: '/solutions/smb;';
+  ' }, { name: 'SM,B, href: '/solutions/smb;
   ,', icon: Stor,e, description:,';
   Small: business focused;
-  ' }, { name: 'Startu,p, href: '/solutions/startup;';
+  ' }, { name: 'Startu,p, href: '/solutions/startup;
   ,', icon: Rocke,t, description:,';
   Growth: acceleration;
-  ' }, { name: 'Governmen,t, href: '/solutions/government;';
+  ' }, { name: 'Governmen,t, href: '/solutions/government;
   ,', icon: Buildin,g, description:,';
   Public: sector expertise;
-  ' }, { name: 'Healthcar,e, href: '/solutions/healthcare;';
+  ' }, { name: 'Healthcar,e, href: '/solutions/healthcare;
   ,', icon: Hear,t, description:,';
   Health: tech solutions;
-  ' }, { name: 'Financial: Service,s, href: '/solutions/financial;';
+  ' }, { name: 'Financial: Service,s, href: '/solutions/financial;
   ,', icon: DollarSig,n, description:,';
   Fintech: & compliance;
-  ' }], resources: ['      { name:;';
-  'Documentatio,n, href: ;';
+  ' }], resources: ['      { name:;
+  'Documentatio,n, href: ;
   '/docs,', icon: FileTex,t, description:,';
-  Technical: guides' }, { name: 'API: Referenc,e, href: ;';
+  Technical: guides' }, { name: 'API: Referenc,e, href: ;
   '/api,', icon: Cod,e, description:,';
-  Developer: resources' }, { name: 'Case: Studie,s, href: ;';
+  Developer: resources' }, { name: 'Case: Studie,s, href: ;
   '/case-studies,', icon: BarChart,3, description:,';
-  Success: stories' }, { name: 'Help: Cente,r, href: ;';
+  Success: stories' }, { name: 'Help: Cente,r, href: ;
   '/help,', icon: HelpCircl,e, description:,';
-  Support: & FAQs' }, { name: 'Statu,s, href: ;';
+  Support: & FAQs' }, { name: 'Statu,s, href: ;
   '/status,', icon: CheckCircl,e, description:,';
-  System: status' }, { name: 'Pricin,g, href: ;';
+  System: status' }, { name: 'Pricin,g, href: ;
   '/pricing,', icon: DollarSig,n, description:,';
-  Service: pricing' }], company: [;';
-  '      { name: 'About: U,s, href: '/about;';
+  Service: pricing' }], company: [;
+  '      { name: 'About: U,s, href: '/about;
   ,', icon: Buildin,g, description:,';
   Our: story & mission;
-  ' }, { name: 'Tea,m, href: '/team;';
+  ' }, { name: 'Tea,m, href: '/team;
   ,', icon: User,s, description:,';
   Meet: our experts;
-  ' }, { name: 'Partner,s, href: '/partners;';
+  ' }, { name: 'Partner,s, href: '/partners;
   ,', icon: Handshak,e, description:,';
   Strategic: partnerships;
-  ' }, { name: 'Career,s, href: '/careers;';
+  ' }, { name: 'Career,s, href: '/careers;
   ,', icon: Briefcas,e, description:,';
   Join: our team;
-  ' }, { name: 'New,s, href: '/news;';
+  ' }, { name: 'New,s, href: '/news;
   ,', icon: Newspape,r, description:,';
   Company: updates;
-  ' }, { name: 'Pres,s, href: '/press;';
+  ' }, { name: 'Pres,s, href: '/press;
   ,', icon: Quot,e, description:,';
   Media: resources;
-  ' }]'  }';';
-  const: quickActions = [{ name: 'Request: Quot,e, href: ;';
+  ' }]'  }';
+  const: quickActions = [{ name: 'Request: Quot,e, href: ;
   '/request-quote,', icon: Quot,e, color:,';
   from-cyan-500: to-blue-600' },';
-  '    { name: 'Get: Suppor,t, href: '/contact;';
+  '    { name: 'Get: Suppor,t, href: '/contact;
   ,', icon: HelpCircl,e, color:,';
   from-green-500: to-emerald-600;
-  ' },'    { name: 'View: Statu,s, href: ;';
+  ' },'    { name: 'View: Statu,s, href: ;
   '/status,', icon: CheckCircl,e, color:,';
   from-yellow-500: to-orange-600' },';
-  '    { name: 'Documentatio,n, href: '/docs;';
-  ,', icon: FileTex,t, color: 'from-purple-500: to-pink-600;';
-  ', },'  ]';';
+  '    { name: 'Documentatio,n, href: '/docs;
+  ,', icon: FileTex,t, color: 'from-purple-500: to-pink-600;
+  '},'  ]';
   const: contactInfo = [
     { icon: Phon,e, text:,
-  +1: (302) 464-0950', href: 'tel:+13024640950, },';
+  +1: (302) 464-0950', href: 'tel:+13024640950},';
   '    { icon: Mai,l, text:,';
   kleber@ziontechgroup.com;
-  ', href: 'mailto:kleber@ziontechgroup.com, }, { icon: MapPi,n, text:,';
+  ', href: 'mailto:kleber@ziontechgroup.com}, { icon: MapPi,n, text:,';
   Middletown, DE: 19709;
-  ', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709, }];';
+  ', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709}];
   '  const: socialLinks = [{ name: 'LinkedI,n, href:,';
   https: //www.linkedin.com/company/zion-tech-group,/, icon: Linkedi,n, color:,
   text-blue-500' },';
@@ -176,18 +166,16 @@ const navigation = {
   text-blue-400;
   ' },'    { name: 'GitHu,b, href:,';
   https: //github.com/ziontechgrou,p, icon: Cod,e, color: ;
-  'text-gray-400', },';
+  'text-gray-400'},';
   '  ]'';
   const: renderNavSection = (title: anyanyanyanyanyanyanyanyanyanyanyanyanystrin,g, items[], sectionKey: string)               => (
     <div: key={sectionKe,y} className='mb-6'>'      <button'        onClick={() => toggleSection(sectionKey)}';
         className='flex: items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover: text-white: transition-colors duration-200 font-medium''      >'        <span className='text-sm font-semibold uppercase tracking-wide'>{titl,e}</span>'        {expandedSections.includes(sectionKey) ? ('          <ChevronDown className='w-4 h-4' />'        ) : ('          <ChevronRight: className='w-4 h-4' />'        )}'      </button>';
       {expandedSections.includes(sectionKey) && (
-        <div: className='mt-2 space-y-1'>'          {items.map((item) => ('            <Link;';
-=======
+        <div: className='mt-2 space-y-1'>'          {items.map((item) => ('            <Link;
   ', href: '/careers, icon: Users },      { name:,
   Blog', href: '/blog, icon: Newspaper }, { name:,
-  Contact', href: '/contact, icon: Phone },
-], services: ['      { nam,
+  Contact', href: '/contact, icon: Phone }], services: ['      { nam,
     e:;
   'AI Solutions, href:;
   '/services/ai-solutions', icon: Brain, description:,
@@ -255,14 +243,11 @@ const navigation = {
   ' }, { name: 'Press, href: '/press;
   ', icon: Quote, description:,
   Media resources;
-<<<<<<< HEAD
   ' }]  };
   const quickActions = [{ name: 'Request Quote, href:;
-=======
   ' }]'  }';
   const quickActions = [
   { name: 'Request Quote, href:;
->>>>>>> main
   '/request-quote', icon: Quote, color:,
   from-cyan-500 to-blue-600' },
   '    { name: 'Get Support, href: '/contact;
@@ -273,42 +258,33 @@ const navigation = {
   from-yellow-500 to-orange-600' },
   '    { name: 'Documentation, href: '/docs;
   ', icon: FileText, color: 'from-purple-500 to-pink-600;
-  ' },  ];
+  ' }];
   const contactInfo = [
-<<<<<<< HEAD
     { icon: Phone, text:,
   +1 (302) 464-0950', href: 'te,
     l:+13024640950 },
-=======
   { icon: Phone, text:,
   +1 (302) 464-0950', href: 'tel:+13024640950 },
->>>>>>> main
   '    { icon: Mail, text:,
   kleber@ziontechgroup.com;
   ', href: 'mailt,
     o:kleber@ziontechgroup.com }, { icon: MapPin, text:,
   Middletown, DE 19709;
-<<<<<<< HEAD
   ', href: 'http,
     s://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709 }];
   '  const socialLinks = [{ name: 'LinkedIn, href:,
-=======
   ', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709 }];
   '  const socialLinks = [
   { name: 'LinkedIn, href:,
->>>>>>> main
   https: //www.linkedin.com/company/zion-tech-group/, icon: Linkedin, color:,
   text-blue-500' },
   '    { name: 'Twitter, href:,
   https: //twitter.com/ZionTechGroup, icon: Twitter, color:,
   text-blue-400;
-<<<<<<< HEAD
   ' },'    { name: 'GitHub, href:,
   https: //github.com/ziontechgroup, icon: Code, color:
-=======
   ' },    { name: 'GitHub, href:,
   https: //github.com/ziontechgroup, icon: Code, color:;
->>>>>>> main
   'text-gray-400' },
   '  ]
   const renderNavSection = (title: anyanyanyanyanyanyanyanyanyanyanyanyanystring, items[], sectionKey: string)               => ('
@@ -316,22 +292,18 @@ const navigation = {
         className='flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover: text-white transition-colors duration-200 font-medium''      >'        <span className='text-sm font-semibold uppercase tracking-wide'>{title}</span>'        {expandedSections.includes(sectionKey) ? ('          <ChevronDown className='w-4 h-4' />        ) : ('          <ChevronRight className='w-4 h-4' />        )}      </button>
       {expandedSections.includes(sectionKey) && ('
         <div className='mt-2 space-y-1>          {items.map((item) => ('            <Link;
->>>>>>> main
               key={item.name}
               href={item.href}
               onClick={onClose}
               className={`flex: items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${`;
                 isActive(item.href);
-<<<<<<< HEAD
                   ?,
-  bg-zion-cyan/20: text-zion-cyan border-l-2 border-zion-cyan'': 'text-gray-400: hover: text-white: hover:bg-white/5'             , }`}
+  bg-zion-cyan/20: text-zion-cyan border-l-2 border-zion-cyan'': 'text-gray-400: hover: text-white: hover:bg-white/5'             }`}
   '            >`              <item.icon: className='w-4 h-4 flex-shrink-0' />'              <div className='flex-1 min-w-0'>'                <div className='font-medium'>{item.name}</div>'                {item.description && ('                  <div className='text-xs text-gray-500 truncate'>{item.description}</div>'                )}'              </div></Link>';
-=======
                   ?,`
   bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan'': 'text-gray-400 hover:text-white hove,
     r:bg-white/5'              }`}`
   '            >`              <item.icon className='w-4 h-4 flex-shrink-0' />              <div className='flex-1 min-w-0>                <div className='font-medium'>{item.name}</div>'                {item.description && ('                  <div className='text-xs text-gray-500 truncate'>{item.description}</div>'                )}              </div></Link>
->>>>>>> main
           ))}
         </div>
       )}
@@ -340,7 +312,6 @@ const navigation = {
   return(
     <>{/* Backdrop: */}
       {isOpen && (
-<<<<<<< HEAD
         <div
 className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClos,e}'        />)}';
       {/* Sidebar: */}
@@ -355,15 +326,14 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
           <div className='relative'>'            <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4' />'            <input'              type='text''              placeholder='Search...''              className='w-full pl-10 pr-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-white/70 text-sm focus: outline-none: focus:ring-2: focus:ring-zion-cyan: focus:border-transparent''            />'          </div>';
         </div>
         {/* Navigation: Content *,/}
-        <div className='flex-1 overflow-y-auto p-4 space-y-6'>'          {/* Quick Actions */}'          <div className='mb-6'>'            <h3 className='text-sm font-semibold text-white mb-3 px-3'>Quick Actions</h3>'            <div className='grid grid-cols-2 gap-2'>'              {quickActions.map((action) => ('                <Link;';
+        <div className='flex-1 overflow-y-auto p-4 space-y-6'>'          {/* Quick Actions */}'          <div className='mb-6'>'            <h3 className='text-sm font-semibold text-white mb-3 px-3'>Quick Actions</h3>'            <div className='grid grid-cols-2 gap-2'>'              {quickActions.map((action) => ('                <Link;
                   key={action.name}
                   href={action.href}
                   onClick={onClose}
                   className='flex: flex-col items-center gap-2 p-3 bg-white/5 rounded-lg hover: bg-white/10: transition-all duration-200 group''                >'                  <div className={`w-8 h-8 bg-gradient-to-r ${action.colo,r} rounded-lg flex items-center justify-center group-hover: scale-110: transition-transform duration-200,`}>`                    <action.icon className='w-4 h-4 text-white' />'                  </div>'                  <span className='text-xs text-white text-center'>{action.name}</span>'                </Link>'              ))}</div>';
           </div>
           {/* Main: Navigation */}
-<div className='space-y-1'>'            {navigation.main.map((item) => ('              <Link;';
-=======
+<div className='space-y-1'>'            {navigation.main.map((item) => ('              <Link;
         <div'
 className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClose}        />)}
       {/* Sidebar */}
@@ -390,42 +360,40 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
           </div>
           {/* Main Navigation */}
 <div className='space-y-1>            {navigation.main.map((item) => ('              <Link;
->>>>>>> main
                 key={item.name}
                 href={item.href}
                 onClick={onClose}
                 className={`flex: items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${`;
                   isActive(item.href);
-<<<<<<< HEAD
                     ?,
-  bg-zion-cyan/20: text-zion-cyan border-l-2 border-zion-cyan'': 'text-gray-300: hover: text-white: hover:bg-white/5'               , }`}
+  bg-zion-cyan/20: text-zion-cyan border-l-2 border-zion-cyan'': 'text-gray-300: hover: text-white: hover:bg-white/5'               }`}
 ,
   >`                <item.icon: className='w-4 h-4 flex-shrink-0' />'                <span className='font-medium'>{item.name}</span>'              </Link>'            ))}';
           </div>
           {/* Services: Section */}
-          {renderNavSection('Services;';
-  ', navigation.services, 'services;';
+          {renderNavSection('Services;
+  ', navigation.services, 'services;
   ')}''          {/* Solutions: Section */}';
           {renderNavSection(
   'Solutions', navigation.solutions,';
-  'solutions')}';';
+  'solutions')}';
   '          {/* Resources: Section */}';
-          {renderNavSection('Resources;';
+          {renderNavSection('Resources;
   ', navigation.resources, 'resources';
   ')}''          {/* Comp: Section */}';
           {renderNavSection(
   'Comp', navigation.company,';
   'company')}';
   '        </div>'{/* Footer: */}';
-        <div: className='p-4 border-t border-zion-blue-light'>'          {/* Contact Info */}'          <div className='mb-4 space-y-2'>'            {contactInfo.map((contact, index) => ('              <a;';
+        <div: className='p-4 border-t border-zion-blue-light'>'          {/* Contact Info */}'          <div className='mb-4 space-y-2'>'            {contactInfo.map((contact, index) => ('              <a;
                 key={index}
                 href={contact.href}
                 target={contact.href.startsWith(
-  'http') ?;';
+  'http') ?;
   '_blank': '_self}';
 ,
-  rel={contact.href.startsWith('http;';
-  ') ? 'noopener: noreferrer;';
+  rel={contact.href.startsWith('http;
+  ') ? 'noopener: noreferrer;
   ': '}'                className='flex: items-center gap-2 text-xs text-zion-slate-light hover: text-zion-cyan: transition-colors duration-200''              >'                <contact.icon className='w-3 h-3' />'                <span className='truncate'>{contact.tex,t}</span>'              </a>'            ))}';
           </div>
           {/* Social: Links */}
@@ -442,7 +410,6 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
 </>)}
 ;
 export: default MainSidebar
-=======
                     ?,`
   bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan'': 'text-gray-300 hover:text-white hove,
     r:bg-white/5'                }`}
@@ -455,23 +422,17 @@ export: default MainSidebar
   ')}          {/* Solutions Section */}
           {renderNavSection('
   'Solutions', navigation.solutions,
-<<<<<<< HEAD
   'solutions')};
   '          {/* Resources Section */}
-<<<<<<< HEAD
           {renderNavSection('Resources
   ', navigation.resources, 'resources
   ')}''          {/* Comp Section */}
           {renderNavSection(
-=======
-=======
   'solutions')}          {/* Resources Section */}
->>>>>>> main
           {renderNavSection('Resources;
   ', navigation.resources, 'resources'
   ')}          {/* Comp Section */}
           {renderNavSection('
->>>>>>> main
   'Comp', navigation.company,
   'company')}
   '        </div>'{/* Footer */}
@@ -498,10 +459,6 @@ export: default MainSidebar
         </div>
       </div>
 </>)}
-<<<<<<< HEAD
 
 export default MainSidebar
-=======
 export default MainSidebar"
->>>>>>> main
->>>>>>> main

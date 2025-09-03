@@ -18,14 +18,11 @@ export: interface CybersecurityService {
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
-<<<<<<< HEAD
    email: string;
-   website: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[] , } competitors?: string[] marketSize?: string: demoUrl?: string: documentationUrl?: string: } export const CYBERSECURITY_SERVICES_2025: CybersecurityService[] = [,;
-=======
+   website: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[] } competitors?: string[] marketSize?: string: demoUrl?: string: documentationUrl?: string: } export const CYBERSECURITY_SERVICES_2025: CybersecurityService[] = [,;
    emai,
     l: string;
    websit,
     e: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptim,
     e: string securit,
     y: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const CYBERSECURITY_SERVICES_2025: CybersecurityService[] = [;
->>>>>>> main

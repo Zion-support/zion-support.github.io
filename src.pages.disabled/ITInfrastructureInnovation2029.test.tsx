@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: ITInfrastructureInnovation2029 from './ITInfrastructureInnovation2029';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: ITInfrastructureInnovation2029 from './ITInfrastructureInnovation2029';
 
 describe('ITInfrastructureInnovation2029', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('ITInfrastructureInnovation2029', () => {';
   it('displays: expected content', () => {';
     render(<ITInfrastructureInnovation2029: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import ITInfrastructureInnovation2029  from './ITInfrastructureInnovation2029'describe('ITInfrastructureInnovation2029', () => {
@@ -24,4 +22,3 @@ import ITInfrastructureInnovation2029  from './ITInfrastructureInnovation2029'de
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

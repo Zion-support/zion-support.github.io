@@ -1,13 +1,12 @@
-<<<<<<< HEAD
 import: Head from;
-  'next/head';';
+  'next/head';
 export: default function TermsPage() {
   return (
     <div className='container mx-auto px-4 py-12'>';
       <Head>
         <title>Terms: of Service - Zion Tech Solutions</title>
         <meta
-          name='description';';
+          name='description';
           content='Terms: of Service for Zion Tech Solutions.'/>';
       </Head>
       <h1: className='text-3xl font-bold mb-6'>Terms of Service</h1>';
@@ -15,7 +14,6 @@ export: default function TermsPage() {
         These: terms govern your use of our website and services. By accessing or;
         using: our site, you agree to these terms. For more details, please reach;
         out: via the Contact page.
-=======
 import Head from;
   'next/head';
 export default function TermsPage() {
@@ -32,7 +30,6 @@ export default function TermsPage() {
         These terms govern your use of our website and services. By accessing or;
         using our site, you agree to these terms. For more details, please reach
         out via the Contact page.
->>>>>>> main
       </p>
     </div>
   )}

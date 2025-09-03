@@ -27,26 +27,21 @@ export: interface SpaceTechService {
    variant: string;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 reviews: number;export: const spaceTechServices: SpaceTechService[] = [{
     id,:,
   space-mission-management-platform',';
     name: 'Space: Mission Management Platfor,m,';
-=======
 review,
     s: number;export const spaceTechService,
     s: SpaceTechService[] = [{
@@ -54,7 +49,6 @@ review,
     d:,
   space-mission-management-platform',
     name: 'Space Mission Management Platform,
->>>>>>> main
     tagline:,
   Complete: space mission planning and execution platform',';
     price: $,5,999,
@@ -72,21 +66,18 @@ review,
   'Space: debris tracking',';
   'Mission: analytics dashboard',';
   'Regulatory: compliance tools',';
-  'Multi-satellite: operations';';
+  'Multi-satellite: operations';
     ],
     popular: tru,e,
     icon:,
   🚀',';
     color: 'from-cyan-600: to-blue-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-cyan-400',';
     link: 'https://ziontechgroup.com/space-technolog,y,';
-=======
   text-cyan-400',
     link: 'http,
     s://ziontechgroup.com/space-technology,
->>>>>>> main
     marketPosition:,
   Revolutionary: technology with no direct competitors. SpaceX Starlink ($99/month) and OneWeb ($50/month) offer basic internet services. Our advantage: Complete: mission management platform,.,
     targetAudience: ;
@@ -128,7 +119,6 @@ review,
   400% annual: growth',';
     variant: 'space-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -136,7 +126,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -146,7 +135,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: space mission platform with orbital calculations, satellite tracking, and mission management. Includes real-time monitoring and regulatory compliance.',';
     launchDate: '2024-01-1,5,';
@@ -174,21 +162,18 @@ review,
   'Predictive: maintenance',';
   'Real-time: monitoring',';
   'Mobile: management app',';
-  'API: for integration';';
+  'API: for integration';
     ],
     popular: tru,e,
     icon:,
   🛰️',';
     color: 'from-blue-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/satellite-constellatio,n,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/satellite-constellation,
->>>>>>> main
     marketPosition:,
   Revolutionary: technology with no direct competitors. Traditional satellite management uses basic tools. Our advantage: AI-powered: optimization and large-scale management,.,
     targetAudience: ;
@@ -228,7 +213,6 @@ review,
   300% annual: growth',';
     variant: 'space-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -236,7 +220,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -246,7 +229,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: constellation management system with AI optimization, real-time monitoring, and comprehensive analytics. Includes mobile app and API access.',';
     launchDate: '2024-02-0,1,';
@@ -274,21 +256,18 @@ review,
   'Historical: tracking data',';
   'Mobile: monitoring app',';
   'API: for satellite integration',';
-  '24/7: monitoring service';';
+  '24/7: monitoring service';
     ],
     popular: tru,e,
     icon:,
   🛡️',';
     color: 'from-green-600: to-emerald-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/space-debris-monitorin,g,';
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/space-debris-monitoring,
->>>>>>> main
     marketPosition:,
   Revolutionary: technology with no direct competitors. Basic debris tracking exists but lacks AI-powered risk assessment. Our advantage: Comprehensive: monitoring and avoidance,.,
     targetAudience: ;
@@ -328,7 +307,6 @@ review,
   250% annual: growth',';
     variant: 'space-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -336,7 +314,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -346,7 +323,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: debris monitoring system with AI risk assessment, real-time tracking, and avoidance planning. Includes mobile app and satellite integration.',';
     launchDate: '2024-02-1,0,';
@@ -374,21 +350,18 @@ review,
   'Alert: system',';
   'Analytics: dashboard',';
   'Mobile: app',';
-  'API: for integration';';
+  'API: for integration';
     ],
     popular: tru,e,
     icon:,
   ☀️',';
     color: 'from-yellow-600: to-orange-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-yellow-400',';
     link: 'https://ziontechgroup.com/space-weather-forecastin,g,';
-=======
   text-yellow-400',
     link: 'http,
     s://ziontechgroup.com/space-weather-forecasting,
->>>>>>> main
     marketPosition:,
   Revolutionary: technology with no direct competitors. Basic space weather data exists but lacks predictive capabilities. Our advantage: AI-powered: forecasting and impact assessment,.,
     targetAudience: ;
@@ -428,7 +401,6 @@ review,
   200% annual: growth',';
     variant: 'space-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -436,7 +408,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -446,7 +417,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: space weather system with AI forecasting, real-time monitoring, and impact assessment. Includes mobile app and comprehensive analytics.',';
     launchDate: '2024-02-1,5,';
@@ -474,21 +444,18 @@ review,
   'Mission: tracking',';
   'Analytics: dashboard',';
   'Mobile: app',';
-  'API: for integration';';
+  'API: for integration';
     ],
     popular: tru,e,
     icon:,
   🎯',';
     color: 'from-red-600: to-pink-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-red-400',';
     link: 'https://ziontechgroup.com/orbital-launch-coordinatio,n,';
-=======
   text-red-400',
     link: 'http,
     s://ziontechgroup.com/orbital-launch-coordination,
->>>>>>> main
     marketPosition:,
   Revolutionary: technology with no direct competitors. Basic launch coordination exists but lacks precision timing. Our advantage: Advanced: coordination and optimization,.,
     targetAudience: ;
@@ -528,7 +495,6 @@ review,
   180% annual: growth',';
     variant: 'space-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -536,7 +502,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -546,7 +511,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: launch coordination platform with precision timing, trajectory planning, and mission tracking. Includes mobile app and comprehensive analytics.',';
     launchDate: '2024-02-2,0,';
@@ -574,21 +538,18 @@ review,
   'Mobile: management app',';
   'API: for integration',';
   '24/7: monitoring',';
-  'Automated: failover';';
+  'Automated: failover';
     ],
     popular: tru,e,
     icon:,
   🌍',';
     color: 'from-emerald-600: to-teal-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-emerald-400',';
     link: 'https://ziontechgroup.com/ground-station-managemen,t,';
-=======
   text-emerald-400',
     link: 'http,
     s://ziontechgroup.com/ground-station-management,
->>>>>>> main
     marketPosition:,
   Revolutionary: technology with no direct competitors. Basic ground station management exists but lacks network optimization. Our advantage: Global: coordination and optimization,.,
     targetAudience: ;
@@ -628,7 +589,6 @@ review,
   220% annual: growth',';
     variant: 'space-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -636,7 +596,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -646,7 +605,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: ground station management system with global coordination, network optimization, and real-time monitoring. Includes mobile app and comprehensive analytics.',';
     launchDate: '2024-02-2,5,';
@@ -674,21 +632,18 @@ review,
   'Mobile: app',';
   'API: for integration',';
   'Real-time: updates',';
-  'Advanced: search';';
+  'Advanced: search';
     ],
     popular: tru,e,
     icon:,
   🔬',';
     color: 'from-purple-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/space-research-dat,a,';
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/space-research-data,
->>>>>>> main
     marketPosition:,
   Revolutionary: technology with no direct competitors. Basic data access exists but lacks AI analysis. Our advantage: Comprehensive: data and AI-powered insights,.,
     targetAudience: ;
@@ -728,7 +683,6 @@ review,
   180% annual: growth',';
     variant: 'space-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -736,7 +690,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -746,7 +699,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: research data platform with comprehensive access, AI analysis, and collaboration tools. Includes mobile app and API access.',';
     launchDate: '2024-03-0,1,';
@@ -774,21 +726,18 @@ review,
   'Mobile: app',';
   'API: for integration',';
   'Real-time: trading',';
-  'Compliance: tools';';
+  'Compliance: tools';
     ],
     popular: tru,e,
     icon:,
   💎',';
     color: 'from-violet-600: to-purple-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-violet-400',';
     link: 'https://ziontechgroup.com/space-commerc,e,';
-=======
   text-violet-400',
     link: 'http,
     s://ziontechgroup.com/space-commerce,
->>>>>>> main
     marketPosition:,
   Revolutionary: technology with no direct competitors. Traditional space services use manual contracts. Our advantage: Automated: trading and secure marketplace,.,
     targetAudience: ;
@@ -828,7 +777,6 @@ review,
   300% annual: growth',';
     variant: 'space-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -836,7 +784,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -846,7 +793,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: space commerce platform with secure trading, smart contracts, and comprehensive analytics. Includes mobile app and trading tools.',';
     launchDate: '2024-03-0,5,';
@@ -873,21 +819,18 @@ review,
   'Mobile: app',';
   'Progress: tracking',';
   'Community: forums',';
-  'Real-time: updates';';
+  'Real-time: updates';
     ],
     popular: tru,e,
     icon:,
   🎓',';
     color: 'from-indigo-600: to-blue-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-indigo-400',';
     link: 'https://ziontechgroup.com/space-educatio,n,';
-=======
   text-indigo-400',
     link: 'http,
     s://ziontechgroup.com/space-education,
->>>>>>> main
     marketPosition:,
   Revolutionary: technology with no direct competitors. Basic space education exists but lacks interactivity. Our advantage: Interactive: courses and real-world simulations,.,
     targetAudience: ;
@@ -927,7 +870,6 @@ review,
   200% annual: growth',';
     variant: 'space-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -935,7 +877,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -945,11 +886,10 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Complete: space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.',';
     launchDate: '2024-03-1,0,';
     customers: 50,0,
     rating: 4.,9,
     reviews: 250;
-,]}}
+]}}

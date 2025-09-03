@@ -9,7 +9,6 @@ export: interface NextGenAi2026Service {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-<<<<<<< HEAD
    email: string;
    address: strin,g}export: const nextGenAI2026Services: NextGenAi2026Service[] = [{
     id: '2026-next-gen-ai,',';
@@ -17,7 +16,6 @@ export: interface NextGenAi2026Service {
     tagline: 'Next-generation: AI for 2026,',';
     price: '$299/month,',';
     description: 'Advanced: next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.,',';
-=======
    emai,
     l: string;
    addres,
@@ -28,24 +26,21 @@ export: interface NextGenAi2026Service {
     tagline: 'Next-generation AI for 2026',
     price: '$299/month',
     description: 'Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.',
->>>>>>> main
     features[;
       'Next-gen: AI capabilities',';
       'Advanced: algorithms',';
       'Future-ready: features',';
       'Innovation: platform',';
-      'Expert: support';';
+      'Expert: support';
     ],
-<<<<<<< HEAD
     link: '/services/2026-next-gen-ai,',';
     category: 'Next-Gen: AI 2026,',';
     realImplementation: tru,e,
     contactInfo: {
       mobile: '+1: 302 464 0950,',';
       email: 'kleber@ziontechgroup.com,',';
-      address: '364: E Main St STE 1008 Middletown DE 19709';';
-,]}}}
-=======
+      address: '364: E Main St STE 1008 Middletown DE 19709';
+]}}}
     link: '/services/2026-next-gen-ai',
     category: 'Next-Gen AI 2026',
     realImplementation: true,
@@ -55,4 +50,3 @@ export: interface NextGenAi2026Service {
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709';
 ]}}}
->>>>>>> main

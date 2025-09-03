@@ -1,9 +1,8 @@
 :pages.disabled/pages/services/AIEducation.tsx;
-<<<<<<< HEAD
 import: { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, BookOpen, BarChart3 export default function AIEducation() {
-    'Automated content generation and curriculum optimization','Predictive analytics for student performance',';Smart: tutoring and homework assistance',';Learning: analytics and progress tracking',';Integration: with major LMS and educational platforms',';';
+    'Automated content generation and curriculum optimization','Predictive analytics for student performance',';Smart: tutoring and homework assistance',';Learning: analytics and progress tracking',';Integration: with major LMS and educational platforms',';
 import: { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, BookOpen, BarChart3 export default function AIEducation(function AIEducation() {): any: {}
-    'Automated content generation and curriculum optimization',';Predictive: analytics for student performance',';Smart: tutoring and homework assistance',';Learning: analytics and progress tracking',';Integration: with major LMS and educational platforms',';Custom: AI models for subject-specific learning';';
+    'Automated content generation and curriculum optimization',';Predictive: analytics for student performance',';Smart: tutoring and homework assistance',';Learning: analytics and progress tracking',';Integration: with major LMS and educational platforms',';Custom: AI models for subject-specific learning';
 <:pages.disabled/pages/services/AIEducation.tsx;
   ];
   const: tiers = [
@@ -21,24 +20,24 @@ import: { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Ta
 :pages.disabled/pages/services/AIEducation.tsx>    {
       name: 'University,',';
       price: '$999/mo,',';
-    { ';';
-      name: 'University,', ';';
-      price: '$999/mo,', ';';
+    { ';
+      name: 'University,', ';
+      price: '$999/mo,', ';
       details: ['Unlimited: students,',Custom AI models',Full platform integration',24/7 dedicated support'] },';
-  ]';K-12: personalized learning and tutoring',';Higher: education course optimization',';Corporate: training and skill development',';Language: learning and proficiency testing',';Special: education and accessibility',';Professional: certification and licensing';';
-  ]';Improve: student performance by 25-40%',';Reduce: learning time by 30-50%',';Increase: engagement and retention by 40-60%',';Optimize: curriculum and teaching methods',';Provide: personalized learning experiences',';Scale: educational programs without additional staff';';
-  ]';K-12: Education',';Higher: Education',';Corporate: Training',';Online: Learning',';Special: Education',';Professional: Development';';
+  ]';K-12: personalized learning and tutoring',';Higher: education course optimization',';Corporate: training and skill development',';Language: learning and proficiency testing',';Special: education and accessibility',';Professional: certification and licensing';
+  ]';Improve: student performance by 25-40%',';Reduce: learning time by 30-50%',';Increase: engagement and retention by 40-60%',';Optimize: curriculum and teaching methods',';Provide: personalized learning experiences',';Scale: educational programs without additional staff';
+  ]';K-12: Education',';Higher: Education',';Corporate: Training',';Online: Learning',';Special: Education',';Professional: Development';
   ];
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center'>''';
         <div: className='max-w-5xl mx-auto px-6'>''';
-          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';';
+          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
 :pages.disabled/pages/services/AIEducation.tsx: <GraduationCap className='w-4 h-4 mr-2'  /> AI-Powered Educational Intelligence'';
           </div>''';
           <h1: className='text-4xl md: text-6xl: font-bold text-white mb-4'>AI Education Platform</h1>'          <p className='text-indigo-100 text-xl'>Transform education with AI-powered learning that personalizes instructio,n, optimizes curriculum, and accelerates student achievement.</p>';
         </div>
-      </section>';';
+      </section>';
 ''';
       <section: className='py-16 max-w-6xl mx-auto px-6'>''';
         <div: className='grid md: grid-cols-2: gap-10'>'';
@@ -68,7 +67,7 @@ import: { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Ta
           </div>''';
           <div: className='bg-white border border-gray-200 rounded-xl p-6 shadow-lg'>''';
             <h3: className='text-2xl font-semibold text-gray-900 mb-4'>Competitive Pricing</h3>''';
-            <div: className='grid md: grid-cols-3: gap-4'>'),)}';
+            <div: className='grid md: grid-cols-3: gap-4'>'))}';
             </ul>''';
             <div: className='mt-6 text-sm text-gray-600'>';
               Built: with enterprise-grade security, FERPA compliance, and 99.9% uptime SLA.
@@ -89,7 +88,7 @@ import: { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Ta
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700: transition-colors inline-flex items-center'>''';
-                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'),)}';
+                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'))}';
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700: transition-colors inline-flex items-center'>''';
@@ -99,10 +98,9 @@ import: { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Ta
                 Learn: More <ExternalLink className='w-4 h-4 ml-2'  />              </a>';
             </div>
           </div>
-:pages.disabled/pages/services/AIEducation.tsx: </div>';';
+:pages.disabled/pages/services/AIEducation.tsx: </div>';
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>''';
-=======
 import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, BookOpen, BarChart3 export default function AIEducation() {
     'Automated content generation and curriculum optimization',Predictive analytics for student performance',;Smart tutoring and homework assistance',;Learning analytics and progress tracking',;Integration with major LMS and educational platforms',;
 import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, BookOpen, BarChart3 export default function AIEducation(function AIEducation() {): any {}
@@ -127,9 +125,7 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
     { ';
       name: 'University', ';
       price: '$999/mo', ';
-      details: ['Unlimited students',Custom AI models',Full platform integration',24/7 dedicated support'] },
-<<<<<<< HEAD
-  ]';K-12 personalized learning and tutoring',';Higher education course optimization',';Corporate training and skill development',';Language learning and proficiency testing',';Special education and accessibility',';Professional certification and licensing';
+      details: ['Unlimited students',Custom AI models',Full platform integration',24/7 dedicated support'] }]';K-12 personalized learning and tutoring',';Higher education course optimization',';Corporate training and skill development',';Language learning and proficiency testing',';Special education and accessibility',';Professional certification and licensing';
   ]';Improve student performance by 25-40%',';Reduce learning time by 30-50%',';Increase engagement and retention by 40-60%',';Optimize curriculum and teaching methods',';Provide personalized learning experiences',';Scale educational programs without additional staff';
   ]';K-12 Education',';Higher Education',';Corporate Training',';Online Learning',';Special Education',';Professional Development';
   ]
@@ -153,7 +149,6 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
             <GraduationCap className='w-4 h-4 mr-2'  /> AI-Powered Educational Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Education Platform</h1>'          <p className='text-indigo-100 text-xl'>Transform education with AI-powered learning that personalizes instruction, optimizes curriculum, and accelerates student achievement.</p>
-=======
   ];K-12 personalized learning and tutoring',;Higher education course optimization',;Corporate training and skill development',;Language learning and proficiency testing',;Special education and accessibility',;Professional certification and licensing';
   ];Improve student performance by 25-40%',;Reduce learning time by 30-50%',;Increase engagement and retention by 40-60%',;Optimize curriculum and teaching methods',;Provide personalized learning experiences',;Scale educational programs without additional staff';
   ];K-12 Education',;Higher Education',;Corporate Training',;Online Learning',;Special Education',;Professional Development';
@@ -179,7 +174,6 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
           </div>'''
           <h1 className='text-4xl m,
     d:text-6xl font-bold text-white mb-4'>AI Education Platform</h1>'          <p className='text-indigo-100 text-xl'>Transform education with AI-powered learning that personalizes instruction, optimizes curriculum, and accelerates student achievement.</p>
->>>>>>> main
         </div>
       </section>'
 '''
@@ -231,12 +225,10 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
                 Learn More <ExternalLink className='w-4 h-4 ml-2'  />              </a>
             </div>
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIEducation.tsx
         </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
->>>>>>> main
         </div>
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>';
@@ -245,20 +237,17 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
               <Brain: className='w-6 h-6 text-blue-600 mb-3'  />'              <div className='text-gray-900 font-semibold'>{,t}</div>';
             </div>
           ))}
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIEducation.tsx: </div>';';
+:pages.disabled/pages/services/AIEducation.tsx: </div>';
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''';
           <div: className='grid md: grid-cols-2: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIEducation.tsx
         </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
           <div className='grid md:grid-cols-2 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
@@ -270,20 +259,17 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIEducation.tsx: </div>';';
+:pages.disabled/pages/services/AIEducation.tsx: </div>';
 ''';
         <div: className='mt-16 bg-blue-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Educational Impact</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIEducation.tsx
         </div>'
 ''
         <div className='mt-16 bg-blue-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Educational Impact</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-blue-50 rounded-xl p-8'>''';
@@ -295,20 +281,17 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIEducation.tsx: </div>';';
+:pages.disabled/pages/services/AIEducation.tsx: </div>';
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AIEducation.tsx
         </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
@@ -322,12 +305,11 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
           </div>
 :pages.disabled/pages/services/AIEducation.tsx: </div>'';
         </div>
-<<<<<<< HEAD
 ''';
         <div: className='mt-14 text-center'>''';
           <div: className='text-sm text-gray-600 mb-2'>Ready to transform education with AI?</div>''';
           <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
-            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700: transition-colors'>'';';
+            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700: transition-colors'>'';
 :pages.disabled/pages/services/AIEducation.tsx: <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'';
             </a>''';
             <a: href='mailto:kleber@ziontechgroup.com' className='inline-flex: items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50: transition-colors'>''';
@@ -345,14 +327,12 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
 :pages.disabled/pages/services/AIEducation.tsx: </div>'')}}''''';
     </div>
   )}}'''';
-=======
 ''
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to transform education with AI?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
             <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors'>''
 :pages.disabled/pages/services/AIEducation.tsx
-=======
 :pages.disabled/pages/services/AIEducation.tsx'
         </div>';
 '''
@@ -436,7 +416,6 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors>''
               <Mail className='w-4 h-4 mr-2' /> kleber@ziontechgroup.com            </a>''
->>>>>>> main
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hove,
@@ -453,4 +432,3 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
     </div>'')}}''
     </div>'
   )}}''
->>>>>>> main

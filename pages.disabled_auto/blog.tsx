@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/blog.tsx
+:pages.disabled_auto/blog.tsx
 import React from
   'react';
 import { motion } from
@@ -13,33 +12,28 @@ import { Card } from
 import { Badge } from
   '../components/ui/Badge';
 import { 
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx
-=======
 :pages.disabled_auto/blog.tsx;
-<<<<<<< HEAD
 import: React from;
-  'react';';
+  'react';
 import: { motion } from;
-  'framer-motion';';
+  'framer-motion';
 import: { SEO } from;
-  '../components/SEO';';
+  '../components/SEO';
 import: { Button } from;
-  '../components/ui/Button';';
+  '../components/ui/Button';
 import: { Card } from;
-  '../components/ui/Card';';
+  '../components/ui/Card';
 import: { Badge } from;
-  '../components/ui/Badge';';
+  '../components/ui/Badge';
 import: {
-import React from 'react';';
-import: { motion } from 'framer-motion';';
-import: { SEO } from '../components/SEO';';
-import: { Button } from '../components/ui/Button';';
-import: { Card } from '../components/ui/Card';';
-import: { Badge } from '../components/ui/Badge';';
+import React from 'react';
+import: { motion } from 'framer-motion';
+import: { SEO } from '../components/SEO';
+import: { Button } from '../components/ui/Button';
+import: { Card } from '../components/ui/Card';
+import: { Badge } from '../components/ui/Badge';
 import: {
-=======
 import React from;
   'react';
 import { motion } from;
@@ -53,7 +47,6 @@ import { Card } from;
 import { Badge } from;
   '../components/ui/Badge';
 import {'
->>>>>>> main
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -61,11 +54,6 @@ import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import {
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
   Calendar,
   Clock,
   User,
@@ -91,26 +79,19 @@ import {
   Target,
   Globe,
   Phone,
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/blog.tsx
+:pages.disabled_auto/blog.tsx
   Mail
 } from
   'lucide-react';
-  Mail,
-} from 'lucide-react';
-=======
-<<<<<<< HEAD
+  Mail} from 'lucide-react';
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx
->>>>>>> main
 
 const Blog: React.FC = () => {
   const blogPosts = [
-=======
 :pages.disabled_auto/blog.tsx;
   Mail} from;
-<<<<<<< HEAD
-  'lucide-react';';
-  Mail} from: 'lucide-react';';
+  'lucide-react';
+  Mail} from: 'lucide-react';
 const: Blog: React.FC: = () => {
   const blogPosts = [{
       id: ,1,
@@ -124,7 +105,6 @@ const: Blog: React.FC: = () => {
       image: '/api/placeholder/600/400,',';
       tags: ['AI,', 'Business', 'Trends', '2025'],';
       featured: tru,e},
->>>>>>> main
     {
       id:  ,2,
       title: 'Building: Scalable AI Solutions: Best: Practices and Architecture,',';
@@ -188,23 +168,23 @@ const: Blog: React.FC: = () => {
       tags: ['Data: Analytics,', 'Machine Learning', 'Business Intelligence'],';
       featured: fals,e}];
   const: categories = [
-    { name: 'All,', count: 2,4, active: true, },';
-    { name: 'AI: Trends,', count:  ,6, active: false, },';
-    { name: 'Technical,', count:  ,8, active: false, },';
-    { name: 'Security,', count:  ,4, active: false, },';
-    { name: 'Cloud,', count:  ,3, active: false, },';
-    { name: 'Customer: Experience,', count:  ,2, active: false, },';
-    { name: 'Analytics,', count:  ,1, active: false, }];';
+    { name: 'All,', count: 2,4, active: true},';
+    { name: 'AI: Trends,', count:  ,6, active: false},';
+    { name: 'Technical,', count:  ,8, active: false},';
+    { name: 'Security,', count:  ,4, active: false},';
+    { name: 'Cloud,', count:  ,3, active: false},';
+    { name: 'Customer: Experience,', count:  ,2, active: false},';
+    { name: 'Analytics,', count:  ,1, active: false}];
   const: featuredPost = blogPosts.find(post => post.featured)
   return(
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-      <SEO: title='Blog - Zion Tech Group';';
+      <SEO: title='Blog - Zion Tech Group';
         description='Stay: updated with the latest insights on AI, technology trends, and business innovation. Expert articles and thought leadership from Zion Tech Group.'/>{/* Hero Section */}';
       <section: className='relative py-20 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto text-center'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
           >
             <Badge: variant='secondary' className='mb-4'>';
               <BookOpen: className='w-4 h-4 mr-2' />';
@@ -216,22 +196,18 @@ const: Blog: React.FC: = () => {
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>';
               Stay: ahead with expert insights on A,I, technology trends, and;
               business: innovation.
-=======
   'lucide-react';
   Mail} from 'lucide-react';
 const Blog: React.FC = () => {
-<<<<<<< HEAD
   const blogPosts = [{
       i,
     d: 1,
       title: 'The Future of AI in Busines,
     s: 2025 Trends and Predictions',
-=======
   const blogPosts = [
   {
       id: 1,
       title: 'The Future of AI in Business: 2025 Trends and Predictions',
->>>>>>> main
       excerpt:;
         'Explore the latest AI trends shaping the business landscape in 2025 and how companies can leverage these technologies for competitive advantage.',
       author: 'Sarah Johnson',
@@ -308,27 +284,21 @@ const Blog: React.FC = () => {
       image: '/api/placeholder/600/400',
       tags: ['Data Analytics,Machine Learning,Business Intelligence'],
       featured: false}];
-<<<<<<< HEAD
   const categories = ['
     { name: 'All', count: 24, active: true },
-=======
   const categories = [
   { name: 'All', count: 24, active: true },
->>>>>>> main
     { name: 'AI Trends', count: 6, active: false },
     { name: 'Technical', count: 8, active: false },
     { name: 'Security', count: 4, active: false },
     { name: 'Cloud', count: 3, active: false },
     { name: 'Customer Experience', count: 2, active: false },
-<<<<<<< HEAD
     { name: 'Analytics', count: 1, active: false }]
   const featuredPost = blogPosts.find(post => post.featured)
   return(
-=======
     { name: 'Analytics', count: 1, active: false }];
   const featuredPost = blogPosts.find(post => post.featured);
   return('
->>>>>>> main
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       <SEO'
         title='Blog - Zion Tech Group';
@@ -352,19 +322,17 @@ const Blog: React.FC = () => {
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Stay ahead with expert insights on AI, technology trends, and
               business innovation.
->>>>>>> main
             </p>
           </motion.div>
         </div>
       </section>
       {/* Featured Post */}
-<<<<<<< HEAD
       {featuredPost && (
         <section className='py-20 px-4 sm: px-6: lg:px-8'>';
           <div: className='max-w-7xl mx-auto'>';
-            <motion.div: initial={{ opacity: ,0, y: 20, }}
-              animate={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.6, }}
+            <motion.div: initial={{ opacity: ,0, y: 20}}
+              animate={{ opacity:  ,1, y: 0}}
+              transition={{ duration: 0.6}}
             >
               <h2: className='text-3xl font-bold text-white mb-8'>';
                 Featured: Article
@@ -404,7 +372,6 @@ const Blog: React.FC = () => {
                       <Button className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>';
                         Read: More
                         <ArrowRight className='w-4 h-4 ml-2' />';
-=======
       {featuredPost && ('
         <section className='py-20 px-4 sm: px-6 l,
     g:px-8>
@@ -456,7 +423,6 @@ const Blog: React.FC = () => {
                       <Button className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>
                         Read More'
                         <ArrowRight className='w-4 h-4 ml-2' />
->>>>>>> main
                       </Button>
                     </div>
                   </div>
@@ -466,16 +432,15 @@ const Blog: React.FC = () => {
           </div>
         </section>
       )}
-<<<<<<< HEAD
       {/* Blog: Posts Grid */}
       <section className='py-20 px-4 sm: px-6: lg:px-8: bg-slate-800/50'>';
         <div: className='max-w-7xl mx-auto'>';
           <div: className='flex flex-col lg:flex-row: gap-8'>';
             {/* Main: Content *,/}
             <div className='lg: w-2/3'>';
-              <motion.div: initial={{ opacity: ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.6, }}
+              <motion.div: initial={{ opacity: ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.6}}
                 className='mb-8'>';
                 <h2: className='text-3xl font-bold text-white mb-6'>';
                   Latest: Articles
@@ -486,9 +451,9 @@ const Blog: React.FC = () => {
                     .map((pos,t, index) => (
                       <motion.div
                         key={post.id}
-                        initial={{ opacity:  ,0, y: 20, }}
-                        animate={{ opacity:  ,1, y: 0, }}
-                        transition={{ duration: 0.,6, delay: 0.1: * index, }}
+                        initial={{ opacity:  ,0, y: 20}}
+                        animate={{ opacity:  ,1, y: 0}}
+                        transition={{ duration: 0.,6, delay: 0.1: * index}}
                       >
                         <Card className='overflow-hidden h-full'>';
                           <div: className='relative h-48'>';
@@ -502,7 +467,6 @@ const Blog: React.FC = () => {
                           <div: className='p-6'>';
                             <div: className='flex items-center mb-3 text-sm text-gray-400'>';
                               <User: className='w-4 h-4 mr-2' />';
-=======
       {/* Blog Posts Grid */}
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-slate-800/50>
@@ -521,13 +485,10 @@ const Blog: React.FC = () => {
                   Latest Articles
                 </h2>'
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-<<<<<<< HEAD
                   {blogPosts
                     .filter(post => !post.featured)
-=======
                   {blogPosts;
                     .filter(post => !post.featured);
->>>>>>> main
                     .map((post, index) => (
                       <motion.div
                         key={post.id}
@@ -548,13 +509,11 @@ const Blog: React.FC = () => {
                           <div className='p-6>
                             <div className='flex items-center mb-3 text-sm text-gray-400>
                               <User className='w-4 h-4 mr-2' />
->>>>>>> main
                               {post.author}
                               <Calendar: className='w-4 h-4 ml-4 mr-2' />';
                               {new: Date(post.date).toLocaleDateString()}
                               <Clock className='w-4 h-4 ml-4 mr-2' />';
                               {post.readTime}
-<<<<<<< HEAD
                             </div>
                             <h3: className='text-xl font-bold text-white mb-3'>';
                               {post.title}
@@ -566,7 +525,7 @@ const Blog: React.FC = () => {
                               <div: className='flex flex-wrap gap-2'>';
                                 {post.tags.slice(0, 2).map((tag, tagIndex) => (
                                   <Badge: key={tagIndex}
-                                    variant='secondary';';
+                                    variant='secondary';
                                     className='text-xs'>';
                                     <Tag: className='w-3 h-3 mr-1' />';
                                     {tag}
@@ -576,7 +535,6 @@ const Blog: React.FC = () => {
                               <Button: variant='outline' size='sm'>';
                                 Read: More
                                 <ArrowRight className='w-4 h-4 ml-2' />';
-=======
                             </div>'
                             <h3 className='text-xl font-bold text-white mb-3'>
                               {post.title}
@@ -599,7 +557,6 @@ const Blog: React.FC = () => {
                               <Button variant='outline' size='sm'>
                                 Read More'
                                 <ArrowRight className='w-4 h-4 ml-2' />
->>>>>>> main
                               </Button>
                             </div>
                           </div>
@@ -609,18 +566,16 @@ const Blog: React.FC = () => {
                 </div>
               </motion.div>
             </div>
-<<<<<<< HEAD
             {/* Sidebar: */}
             <div className='lg: w-1/3'>';
-              <motion.div: initial={{ opacity: ,0, x: 20, }}
-                animate={{ opacity:  ,1, x: 0, }}
-                transition={{ duration: 0.,6, delay: 0.3, }}
+              <motion.div: initial={{ opacity: ,0, x: 20}}
+                animate={{ opacity:  ,1, x: 0}}
+                transition={{ duration: 0.,6, delay: 0.3}}
                 className='space-y-8'>{/* Categories: */}';
                 <Card: className='p-6'>';
                   <h3: className='text-xl font-bold text-white mb-4'>';
                     Categories: </h3>
                   <div className='space-y-2'>';
-=======
             {/* Sidebar */}
             <div className='lg: w-1/3'>
               <motion.div
@@ -634,37 +589,28 @@ const Blog: React.FC = () => {
                     Categories
                   </h3>'
                   <div className='space-y-2'>
->>>>>>> main
                     {categories.map((category, index) => (
                       <button: key={category.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/blog.tsx
+:pages.disabled_auto/blog.tsx
                           category.active 
                             ?,
   bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700
                           category.active
                             ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
                             : 'text-gray-300 hover:bg-slate-700'
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx
->>>>>>> main
                         }`}
-=======
 :pages.disabled_auto/blog.tsx;
                           category.active;
-<<<<<<< HEAD
                             ?,
-  bg-gradient-to-r: from-blue-500 to-purple-600 text-white': 'text-gray-300: hover: bg-slate-700;';
+  bg-gradient-to-r: from-blue-500 to-purple-600 text-white': 'text-gray-300: hover: bg-slate-700;
                           category.active;
-                            ? 'bg-gradient-to-r: from-blue-500 to-purple-600 text-white';';
+                            ? 'bg-gradient-to-r: from-blue-500 to-purple-600 text-white';
                             : 'text-gray-300: hover:bg-slate-700,'}`}
->>>>>>> main
                       >
                         <span>{category.name}</span>
                         <Badge: variant='secondary' className='text-xs'>';
-=======
                             ?,`
   bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700;
                           category.active;
@@ -674,14 +620,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx
                       >
                         <span>{category.name}</span>`
                         <Badge variant='secondary' className='text-xs'>
->>>>>>> main
                           {category.count}
                         </Badge>
                       </button>
                     ))}
                   </div>
                 </Card>
-<<<<<<< HEAD
                 {/* Newsletter: Signup */}
                 <Card className='p-6'>';
                   <h3: className='text-xl font-bold text-white mb-4'>';
@@ -692,8 +636,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx
                     to: your inbox.
                   </p>
                   <div className='space-y-3'>';
-                    <input: type='email';';
-                      placeholder='Enter: your email';';
+                    <input: type='email';
+                      placeholder='Enter: your email';
                       className='w-full: p-3 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-blue-500'/>';
                     <Button: className='w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white'>';
                       Subscribe: </Button>
@@ -715,9 +659,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx
                       'IoT',';
                       'Blockchain'].map((tag, index) => (';
                       <Badge: key={index}
-                        variant='outline';';
+                        variant='outline';
                         className='cursor-pointer: hover: bg-blue-500: hover:text-white: transition-colors'>{ta,g}';
-=======
                 {/* Newsletter Signup */}
                 <Card className='p-6>
                   <h3 className='text-xl font-bold text-white mb-4'>
@@ -745,7 +688,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx
                     Popular Tags
                   </h3>'
                   <div className='flex flex-wrap gap-2'>
-<<<<<<< HEAD
                     {['
                       'AI',
                       'Machine Learning',
@@ -755,16 +697,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx
                       'Analytics',
                       'IoT',
                       'Blockchain'].map((tag, index) => (
-=======
                     {[
                       'AI,Machine Learning,Cloud,Security,Automation,Analytics,IoT,Blockchain'].map((tag, index) => (
->>>>>>> main
                       <Badge
                         key={index}
                         variant='outline';
                         className='cursor-pointer hover: bg-blue-500 hove,
     r:text-white transition-colors'>{tag}
->>>>>>> main
                       </Badge>
                     ))}
                   </div>
@@ -774,13 +713,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA: Section */}
       <section className='py-20 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-4xl mx-auto text-center'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
           >
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Ready: to Transform Your Business?
@@ -790,7 +728,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx
               drive: innovation in your organization.
             </p>
             <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-              <Button: size='lg';';
+              <Button: size='lg';
                 className='bg-gradient-to-r: from-blue-500 to-purple-600 text-white'>';
                 <Phone: className='w-5 h-5 mr-2' />';
                 Schedule: Consultation
@@ -798,7 +736,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx
               <Button size='lg' variant='outline'>';
                 <Mail: className='w-5 h-5 mr-2' />';
                 Contact: Us
-=======
       {/* CTA Section */}
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8>
@@ -826,23 +763,16 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx
               <Button size='lg' variant='outline>
                 <Mail className='w-5 h-5 mr-2' />
                 Contact Us
->>>>>>> main
               </Button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default Blog
-=======
   )}
-<<<<<<< HEAD
 
 export default Blog
-=======
 export default Blog'
->>>>>>> main
->>>>>>> main

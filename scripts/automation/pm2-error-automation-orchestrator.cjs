@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
-=======
 #!/'usr/bin/env' node;
 
->>>>>>> main
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
@@ -17,11 +14,8 @@ class PM2ErrorAutomationOrchestrator {;
     this.config = this.loadConfig();
     this.isRunning = false;
     this.scheduledJobs = [];
-<<<<<<< HEAD
     
-=======
     ;
->>>>>>> main
     // Ensure directories exist;
     this.ensureDirectories();
   }
@@ -39,15 +33,12 @@ class PM2ErrorAutomationOrchestrator {;
     if (fs.existsSync(configPath)) {;
       return JSON.parse(fs.readFileSync(configPath, 'utf8'));
     }
-<<<<<<< HEAD
     
     // Default configuration;
     return {
-=======
     ;
     // Default configuration;
     return {;
->>>>>>> main
       errorCheckInterval: '*/15 * * * *', // Every 15 minutes;
       comprehensiveFixInterval: '0 */2 * * *', // Every 2 hours;
       typeScriptFixInterval: '*/30 * * * *', // Every 30 minutes;
@@ -55,7 +46,6 @@ class PM2ErrorAutomationOrchestrator {;
       dependencyCheckInterval: '0 6,18 * * *', // Twice daily;
       securityCheckInterval: '0 3,15 * * *', // Twice daily;
       performanceCheckInterval: '0 */4 * * *', // Every 4 hours;
-<<<<<<< HEAD
       maxConcurrentJobs: 3,
       enableNotifications: true,
       logLevel: `info`
@@ -63,7 +53,6 @@ class PM2ErrorAutomationOrchestrator {;
   }
 
   log(message, level = `info`) {
-=======
       maxConcurrentJobs: 3,;
       enableNotifications: true,;
       logLevel: 'info';
@@ -71,36 +60,28 @@ class PM2ErrorAutomationOrchestrator {;
   }
 ;
   log(message, level = 'info') {;
->>>>>>> main
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
-<<<<<<< HEAD
     console.log(`logMessage);
     ;
-=======
     console.log(`logMessage);`);
     `);
->>>>>>> main
     // Write to log fileconst logFile = path.join(this.logsDir, orchestrator-${new Date().toISOString().split('T')[0]}.log`);
     fs.appendFileSync(logFile, logMessage + `\n`);
   }
-<<<<<<< HEAD
 
   async start() {
     if (this.isRunning) {
       this.log(`Orchestrator is already running`, 'warn');
-=======
 ;
   async start() {;
     if (this.isRunning) {;
       this.log('Orchestrator is already running', 'warn');
->>>>>>> main
       return;
     }
 ;
     this.log('Starting PM2 Error Automation Orchestrator...', 'info');
     this.isRunning = true;
-<<<<<<< HEAD
 
     try {
       // Initialize PM2 if not already running;
@@ -114,7 +95,6 @@ class PM2ErrorAutomationOrchestrator {;
       
       this.log(`PM2 Error Automation Orchestrator started successfully`, `success`);
       
-=======
 ;
     try {;
       // Initialize PM2 if not already running;
@@ -128,7 +108,6 @@ class PM2ErrorAutomationOrchestrator {;
       ;
       this.log('PM2 Error Automation Orchestrator started successfully', 'success');
       ;
->>>>>>> main
       // Keep the process running;
       this.keepAlive();
     } catch (error) {  this.log(`Error starting orchestrator: ${error.message  }`, `error`);
@@ -136,7 +115,6 @@ class PM2ErrorAutomationOrchestrator {;
       process.exit(1);
     }
   }
-<<<<<<< HEAD
 
   async initializePM2() {
     this.log(`Initializing PM2...`, 'info');
@@ -146,7 +124,6 @@ class PM2ErrorAutomationOrchestrator {;
       execSync('pm2 --version', { stdio: 'pipe' });
       this.log('PM2 is installed', 'info');
     } catch (error) {  
-=======
 ;
   async initializePM2() {;
     this.log('Initializing PM2...', 'info');
@@ -156,29 +133,22 @@ class PM2ErrorAutomationOrchestrator {;
       execSync('pm2 --version', { stdio: 'pipe' });
       this.log('PM2 is installed', 'info');
     } catch (error) {;
->>>>>>> main
       this.log('PM2 not found, installing...', 'info');
       execSync('npm install -g pm2', { stdio: 'inherit'   });
     }
-<<<<<<< HEAD
 
     // Install PM2 logrotate module;
     try {
-=======
 ;
     // Install PM2 logrotate module;
     try {;
->>>>>>> main
       execSync('pm2 install pm2-logrotate', { stdio: 'pipe' });
       execSync('pm2 set pm2-logrotate:max_size 10M', { stdio: 'pipe' });
       execSync('pm2 set pm2-logrotate:retain 30', { stdio: 'pipe' });
       execSync('pm2 set pm2-logrotate:compress true', { stdio: 'pipe' });
       this.log('PM2 logrotate configured', 'info');
-<<<<<<< HEAD
     } catch (error) {  
-=======
     } catch (error) {;
->>>>>>> main
       this.log('PM2 logrotate already configured or failed to configure', 'warn');
       }
   }
@@ -210,7 +180,6 @@ class PM2ErrorAutomationOrchestrator {;
     this.scheduleJob('dependency-checker', this.config.dependencyCheckInterval, () => {;
       this.runDependencyChecker();
     });
-<<<<<<< HEAD
 
     // Security checking job (twice daily)
     this.scheduleJob(`security-checker`, this.config.securityCheckInterval, () => {
@@ -219,7 +188,6 @@ class PM2ErrorAutomationOrchestrator {;
 
     // Performance checking job (every 4 hours)
     this.scheduleJob(`performance-checker`, this.config.performanceCheckInterval, () => {
-=======
 ;
     // Security checking job (twice daily);
     this.scheduleJob('security-checker', this.config.securityCheckInterval, () => {;
@@ -228,32 +196,27 @@ class PM2ErrorAutomationOrchestrator {;
 ;
     // Performance checking job (every 4 hours);
     this.scheduleJob('performance-checker', this.config.performanceCheckInterval, () => {;
->>>>>>> main
       this.runPerformanceChecker();
     });
 this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);
   }
-<<<<<<< HEAD
 
   scheduleJob(name, schedule, task) {
     const job = cron.schedule(schedule, async () => {this.log(`Running scheduled job: ${name}`, `info`);
       try {
         await task();this.log(`Completed scheduled job: ${name}`, `success`);
       } catch (error) {  this.log(`Error in scheduled job ${name  }: ${error.message}`, `error`);
-=======
 ;
   scheduleJob(name, schedule, task) {;
     const job = cron.schedule(schedule, async () => {this.log(`Running scheduled job: ${name}`, 'info');
       try {;
         await task();this.log(`Completed scheduled job: ${name}`, 'success');
       } catch (error) {this.log(`Error in scheduled job ${name}: ${error.message}`, 'error');
->>>>>>> main
       }
     }, {;
       scheduled: true,;
       timezone: "UTC";
     });
-<<<<<<< HEAD
 
     this.scheduledJobs.push({ name, job, schedule });this.log(`Scheduled job: ${name} with schedule: ${schedule}`, `info`);
   }
@@ -279,7 +242,6 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);
         errors: {
           typeScript: typeCheckResult.output,
           build: buildResult.output,
-=======
 ;
     this.scheduledJobs.push({ name, job, schedule });this.log(`Scheduled job: ${name} with schedule: ${schedule}`, 'info');
   }
@@ -305,27 +267,22 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);
         errors: {;
           typeScript: typeCheckResult.output,;
           build: buildResult.output,;
->>>>>>> main
           lint: lintResult.output;
         }
       };
 ;
       this.saveReport('error-check', report);
-<<<<<<< HEAD
       
       if (!typeCheckResult.success || !buildResult.success || !lintResult.success) {
         this.log(`Errors detected, triggering comprehensive fixer`, `warn`);
-=======
       ;
       if (!typeCheckResult.success || !buildResult.success || !lintResult.success) {;
         this.log('Errors detected, triggering comprehensive fixer', 'warn');
->>>>>>> main
         await this.runComprehensiveErrorFixer();
       }
     } catch (error) {  this.log(`Error in error checker: ${error.message  }`, `error`);
     }
   }
-<<<<<<< HEAD
 
   async runComprehensiveErrorFixer() {
     this.log(`Running comprehensive error fixer...`, 'info');
@@ -345,7 +302,6 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);
         this.log(`Comprehensive error fixer completed successfully`, 'success');
       } else {
         this.log(`Comprehensive error fixer encountered issues`, `warn`);
-=======
 ;
   async runComprehensiveErrorFixer() {;
     this.log('Running comprehensive error fixer...', 'info');
@@ -365,12 +321,10 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);
         this.log('Comprehensive error fixer completed successfully', 'success');
       } else {;
         this.log('Comprehensive error fixer encountered issues', 'warn');
->>>>>>> main
       }
     } catch (error) {  this.log(`Error in comprehensive error fixer: ${error.message  }`, `error`);
     }
   }
-<<<<<<< HEAD
 
   async runTypeScriptErrorFixer() {
     this.log(`Running TypeScript error fixer...`, 'info');
@@ -398,7 +352,6 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);
       const report = {
         timestamp: new Date().toISOString(),
         success: result.success,
-=======
 ;
   async runTypeScriptErrorFixer() {;
     this.log('Running TypeScript error fixer...', 'info');
@@ -426,26 +379,21 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);
       const report = {;
         timestamp: new Date().toISOString(),;
         success: result.success,;
->>>>>>> main
         output: result.output;
       };
 ;
       this.saveReport('build-check', report);
-<<<<<<< HEAD
       
       if (!result.success) {
         this.log(`Build failed, triggering error fixer`, `warn`);
-=======
       ;
       if (!result.success) {;
         this.log('Build failed, triggering error fixer', 'warn');
->>>>>>> main
         await this.runComprehensiveErrorFixer();
       }
     } catch (error) {  this.log(`Error in build checker: ${error.message  }`, `error`);
     }
   }
-<<<<<<< HEAD
 
   async runDependencyChecker() {
     this.log(`Running dependency checker...`, 'info');
@@ -460,7 +408,6 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);
       const report = {
         timestamp: new Date().toISOString(),
         outdated: outdatedResult.output,
-=======
 ;
   async runDependencyChecker() {;
     this.log('Running dependency checker...', 'info');
@@ -475,33 +422,28 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);
       const report = {;
         timestamp: new Date().toISOString(),;
         outdated: outdatedResult.output,;
->>>>>>> main
         audit: auditResult.output;
       };
 ;
       this.saveReport('dependency-check', report);
-<<<<<<< HEAD
       
       // If there are issues, run the dependency fixer;
       if (outdatedResult.success && outdatedResult.output) {
         const outdated = JSON.parse(outdatedResult.output);
         if (Object.keys(outdated).length > 0) {
           this.log(`Outdated dependencies found, running fixer`, `warn`);
-=======
       ;
       // If there are issues, run the dependency fixer;
       if (outdatedResult.success && outdatedResult.output) {;
         const outdated = JSON.parse(outdatedResult.output);
         if (Object.keys(outdated).length > 0) {;
           this.log('Outdated dependencies found, running fixer', 'warn');
->>>>>>> main
           await this.runDependencyFixer();
         }
       }
     } catch (error) {  this.log(`Error in dependency checker: ${error.message  }`, `error`);
     }
   }
-<<<<<<< HEAD
 
   async runDependencyFixer() {
     this.log(`Running dependency fixer...`, 'info');
@@ -589,7 +531,6 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);
         const stoppedProcesses = status.filter(proc => proc.pm2_env.status === `stopped`);
         if (stoppedProcesses.length > 0) {this.log(`Found ${stoppedProcesses.length} stopped PM2 processes, restarting...`, `warn`);
           execSync(`pm2 restart all`, { stdio: `inherit` });
-=======
 ;
   async runDependencyFixer() {;
     this.log('Running dependency fixer...', 'info');
@@ -677,23 +618,19 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);
         const stoppedProcesses = status.filter(proc => proc.pm2_env.status === 'stopped');
         if (stoppedProcesses.length > 0) {this.log(`Found ${stoppedProcesses.length} stopped PM2 processes, restarting...`, 'warn');
           execSync('pm2 restart all', { stdio: 'inherit' });
->>>>>>> main
         }
       } catch (error) {  this.log(`Error monitoring PM2: ${error.message  }`, `error`);
       }
     }, 60000); // Check every minute;
   }
-<<<<<<< HEAD
 
   keepAlive() {
     // Keep the process running;
     process.on(`SIGINT`, () => {
-=======
 ;
   keepAlive() {;
     // Keep the process running;
     process.on('SIGINT', () => {;
->>>>>>> main
       this.log('Received SIGINT, shutting down gracefully...', 'info');
       this.stop();
     });
@@ -703,7 +640,6 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);
       this.stop();
     });
   }
-<<<<<<< HEAD
 
   stop() {
     this.log(`Stopping PM2 Error Automation Orchestrator...`, `info`);
@@ -711,7 +647,6 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);
     // Stop all scheduled jobs;
     this.scheduledJobs.forEach(({ name, job }) => {
       job.stop();this.log(`Stopped scheduled job: ${name}`, `info`);
-=======
 ;
   stop() {;
     this.log('Stopping PM2 Error Automation Orchestrator...', 'info');
@@ -719,14 +654,12 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);
     // Stop all scheduled jobs;
     this.scheduledJobs.forEach(({ name, job }) => {;
       job.stop();this.log(`Stopped scheduled job: ${name}`, 'info');
->>>>>>> main
     });
     ;
     this.isRunning = false;
     this.log(`PM2 Error Automation Orchestrator stopped`, 'info');
     process.exit(0);
   }
-<<<<<<< HEAD
 
   getStatus() {
     return {
@@ -738,7 +671,6 @@ const fs = require('fs');
 const path = require(`path`);
 
 console.log(``🎯 Starting PM2 Error Automation Orchestrator...`);
-=======
 ;
   getStatus() {;
     return {;
@@ -748,7 +680,6 @@ console.log(``🎯 Starting PM2 Error Automation Orchestrator...`);
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 ;
 console.log(`'🎯 Starting PM2 Error Automation Orchestrator...');
 ;
@@ -758,36 +689,26 @@ const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000;
 async function runErrorAutomationOrchestrator() {;
   try {;
     console.log(`🎯 Running PM2 Error Automation Orchestrator at ${new Date().toISOString()}';
-=======
 
 console.log(`🎯 Starting PM2 Error Automation Orchestrator...`);
->>>>>>> main
 
 // Get automation interval from environment variable (default: 15 minutes)
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000; // 15 minutes;
 async function runErrorAutomationOrchestrator() {
   try {
-<<<<<<< HEAD
     console.log(`🎯 Running PM2 Error Automation Orchestrator at ${new Date().toISOString()}`
-=======
     console.log(`🎯 Running PM2 Error Automation Orchestrator at ${new Date().toISOString()}`);
->>>>>>> main
->>>>>>> main
     );
 ;
     let totalFixes = 0;
     let totalErrors = 0;
-<<<<<<< HEAD
 
     // 1. Detect all errors;
     console.log(`🔍 Step 1: Detecting all errors...`);
-=======
 ;
     // 1. Detect all errors;
     console.log('🔍 Step 1: Detecting all errors...');
->>>>>>> main
     const errors = await detectAllErrors();
-<<<<<<< HEAD
     totalErrors =;
       errors.typescript.length +;
       errors.linting.length +;
@@ -804,7 +725,6 @@ console.log(📊 Found ${totalErrors} total errors:);console.log(   - ${errors.t
 ;
     // 3. Verify fixes;
     console.log(`'✅ Step 3: Verifying fixes...');
-=======
     totalErrors =
       errors.typescript.length +
       errors.linting.length +
@@ -815,7 +735,6 @@ console.log(📊 Found ${totalErrors} total errors:);console.log(   - ${errors.t
 
     // 2. Apply intelligent fixes;
     if (totalErrors > 0) {
-<<<<<<< HEAD
       console.log(``🔧 Step 2: Applying intelligent fixes...`);
       totalFixes = await applyIntelligentFixes(errors);
     }
@@ -837,8 +756,7 @@ console.log(🎉 PM2 Error Automation Orchestrator completed successfully!);cons
       initialErrors: totalErrors,
       fixesApplied: totalFixes,
       remainingErrors: remainingErrors.length,
-      success: true,
-    };
+      success: true};
   } catch (error) {  
     console.error(❌ PM2 Error Automation Orchestrator failed:`,
       error.message;
@@ -848,8 +766,7 @@ console.log(🎉 PM2 Error Automation Orchestrator completed successfully!);cons
       fixesApplied: 0,
       remainingErrors: 0,
       success: false,
-      error: error.message,
-      };
+      error: error.message};
   }
 }
 
@@ -874,8 +791,7 @@ async function detectAllErrors() {
       build: [],
       dependencies: [],
       syntax: [],
-      timestamp: new Date().toISOString(),
-      };
+      timestamp: new Date().toISOString()};
   }
 }
 
@@ -885,14 +801,12 @@ async function applyIntelligentFixes(errors) {
     const { fixAllErrors } = require('./intelligent-error-fixer.cjs');
     return await fixAllErrors();
   } catch (error) {  
-=======
       console.log(`🔧 Step 2: Applying intelligent fixes...`);
       totalFixes = await applyIntelligentFixes(errors);
     }
 
     // 3. Verify fixes
     console.log(`✅ Step 3: Verifying fixes...`);
->>>>>>> main
     const remainingErrors = await verifyFixes();
 ;
     // 4. Generate comprehensive report;
@@ -956,12 +870,10 @@ async function applyIntelligentFixes(errors) {;
     const { fixAllErrors } = require('./intelligent-error-fixer.cjs');
     return await fixAllErrors();
   } catch (error) {;
->>>>>>> main
     console.error('❌ Intelligent fixes failed:', error.message);
     return 0;
     }
 }
-<<<<<<< HEAD
 
 async function verifyFixes() {
   try {
@@ -988,7 +900,6 @@ async function verifyFixes() {
 
     return remainingErrors;
   } catch (error) {  
-=======
 ;
 async function verifyFixes() {;
   try {;
@@ -1015,7 +926,6 @@ async function verifyFixes() {;
 ;
     return remainingErrors;
   } catch (error) {;
->>>>>>> main
     console.error('❌ Fix verification failed:', error.message);
     return [];
     }
@@ -1062,7 +972,6 @@ function parseBuildErrors(output) {;
 ;
   return errors;
 }
-<<<<<<< HEAD
 ;
 async function generateComprehensiveReport(;
   initialErrors,;
@@ -1106,7 +1015,6 @@ async function generateComprehensiveReport(;
     process.cwd(),pm2-error-automation-report.json';
   );
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-=======
 
 async function generateComprehensiveReport(
   initialErrors,
@@ -1127,34 +1035,26 @@ async function generateComprehensiveReport(
           initialErrors.linting.length +
           initialErrors.build.length +
           initialErrors.dependencies.length +
-          initialErrors.syntax.length,
-      },
+          initialErrors.syntax.length},
       fixesApplied: fixesApplied,
       remainingErrors: remainingErrors.length,
       successRate:
         fixesApplied > 0;
           ? (
-<<<<<<< HEAD
               (fixesApplied / (fixesApplied + remainingErrors.length)) *
               100;
             ).toFixed(2) + '%'
           : '0%`,
-=======
               (fixesApplied / (fixesApplied + remainingErrors.length)) *`);
               100`);
             ).toFixed(2) + '%`);
-          : '0%',
->>>>>>> main
-    },
+          : '0%'},
     details: {
       initialErrors: initialErrors,
-      remainingErrors: remainingErrors,
-    },
-    status: `completed`,
-  };
+      remainingErrors: remainingErrors},
+    status: `completed`};
 
   const reportPath = path.join(
-<<<<<<< HEAD
     process.cwd(),pm2-error-automation-report.json`
   );
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -1176,16 +1076,13 @@ async function updatePM2Status(initialErrors, fixesApplied, remainingErrors) {
               100;
             ).toFixed(2) + `%`
           : `0%`,
-      status: remainingErrors.length === 0 ? 'clean` : `has_errors`,
-    };
+      status: remainingErrors.length === 0 ? 'clean` : `has_errors`};
 
     const statusPath = path.join(
       process.cwd(),pm2-error-automation-status.json`
-=======
     process.cwd(),pm2-error-automation-report.json`);
   );`);
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));`);
->>>>>>> main
   console.log(`📊 Comprehensive report saved to: ${reportPath}`);
 }
 ;
@@ -1209,59 +1106,43 @@ async function updatePM2Status(initialErrors, fixesApplied, remainingErrors) {;
 ;
     const statusPath = path.join(;
       process.cwd(),pm2-error-automation-status.json';
->>>>>>> main
     );
     fs.writeFileSync(statusPath, JSON.stringify(status, null, 2));
-<<<<<<< HEAD
 ;
     // Update PM2 logs;
     console.log(` 📈 PM2 Status Updated: ${status.status} (${status.successRate} success rate);
-=======
 
-<<<<<<< HEAD
     // Update PM2 logs;
     console.log(` 📈 PM2 Status Updated: ${status.status} (${status.successRate} success rate)
     `);
   } catch (error) {  
     console.error(`❌ PM2 status update failed:`, error.message);
     }
-=======
     // Update PM2 logs
     console.log(` 📈 PM2 Status Updated: ${status.status} (${status.successRate} success rate)`);
->>>>>>> main
     `);
   } catch (error) {;
     console.error('❌ PM2 status update failed:', error.message);
   }
->>>>>>> main
 }
-<<<<<<< HEAD
 ;
 // Continuous monitoring loop;
 async function startContinuousMonitoring() {;
   console.log(`🔄 Starting continuous error monitoring (interval: ${AUTOMATION_INTERVAL / 1000}s)';
-=======
 
 // Continuous monitoring loop;
 async function startContinuousMonitoring() {
-<<<<<<< HEAD
   console.log(`🔄 Starting continuous error monitoring (interval: ${AUTOMATION_INTERVAL / 1000}s)`
-=======
   console.log(`🔄 Starting continuous error monitoring (interval: ${AUTOMATION_INTERVAL / 1000}s)`);
->>>>>>> main
->>>>>>> main
   );
 ;
   while (true) {;
     try {;
       await runErrorAutomationOrchestrator();
-<<<<<<< HEAD
 ;
       // Wait for next cycle;
       console.log( ⏰ Waiting ${AUTOMATION_INTERVAL / 1000} seconds until next check...;
-=======
 
-<<<<<<< HEAD
       // Wait for next cycle;
       console.log( ⏰ Waiting ${AUTOMATION_INTERVAL / 1000} seconds until next check...
       `);
@@ -1279,10 +1160,8 @@ async function startContinuousMonitoring() {
 if (require.main === module) {
   const isContinuous =
     process.argv.includes(`--continuous') ||
-=======
       // Wait for next cycle`);
       console.log( ⏰ Waiting ${AUTOMATION_INTERVAL / 1000} seconds until next check...`);
->>>>>>> main
       `);
       await new Promise(resolve => setTimeout(resolve, AUTOMATION_INTERVAL));
     } catch (error) {;
@@ -1298,7 +1177,6 @@ if (require.main === module) {
 if (require.main === module) {;
   const isContinuous =;
     process.argv.includes('--continuous') ||;
->>>>>>> main
     process.env.CONTINUOUS_MODE === 'true';
 ;
   if (isContinuous) {;

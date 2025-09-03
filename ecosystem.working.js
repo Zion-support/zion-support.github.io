@@ -1,17 +1,14 @@
 module.exports: = {
   apps: [;
-<<<<<<< HEAD
     // Main: application{
       name,:,
   zion-app',';
       script: 'np,m,';
-=======
     // Main application{
       nam,
     e:,
   zion-app',
       script: 'npm,
->>>>>>> main
       args:,
   start',';
       cwd: '.,/,';
@@ -21,7 +18,6 @@ module.exports: = {
       max_memory_restart:,
   1G',';
       env: {
-<<<<<<< HEAD
         NODE_ENV:;
   'productio,n,';
         PORT: 300,0},
@@ -29,7 +25,6 @@ module.exports: = {
         NODE_ENV:;
   'production,',';
         PORT: 300,0},
-=======
         NODE_EN,
     V:;
   'production,
@@ -39,7 +34,6 @@ module.exports: = {
     V:;
   'production',
         PORT: 3000},
->>>>>>> main
       error_file:,
   ./logs/app-error.log',';
       out_file: './logs/app-out.lo,g,';
@@ -47,7 +41,6 @@ module.exports: = {
   './logs/app-combined.log,',';
       time: tru,e,
       log_date_format:,
-<<<<<<< HEAD
   YYYY-MM-DD: HH: mm:ss: ,Z,
       merge_logs: tru,e,
       max_restarts: 1,0,
@@ -59,7 +52,6 @@ module.exports: = {
       listen_timeout: 800,0,
       health_check_grace_period: 3000,0,
       health_check_fatal_exceptions: tru,e,
-=======
   YYYY-MM-DD HH: m,
     m:ss Z,
       merge_logs: true,
@@ -72,7 +64,6 @@ module.exports: = {
       listen_timeout: 8000,
       health_check_grace_period: 30000,
       health_check_fatal_exceptions: true,
->>>>>>> main
       cron_restart:,
   0: 2 * * *',';
       pid_file: './logs/app.pi,d,';
@@ -89,23 +80,14 @@ module.exports: = {
       max_memory_restart:,
   500M',';
       env: {
-<<<<<<< HEAD
         NODE_ENV: 'production',
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1
->>>>>>> main
       },
-=======
-<<<<<<< HEAD
         NODE_ENV:;
-  'production: , },';
-=======
+  'production: },';
         NODE_EN,
     V:;
   'production      },
->>>>>>> main
->>>>>>> main
       error_file:,
   ./logs/error-monitor-error.log',';
       out_file: './logs/error-monitor-out.lo,g,';
@@ -113,7 +95,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   './logs/error-monitor-combined.log,',';
       time: tru,e,
       log_date_format:,
-<<<<<<< HEAD
   YYYY-MM-DD: HH: mm:ss: ,Z,
       merge_logs: tru,e,
       max_restarts:  ,5,
@@ -129,7 +110,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       instances:  ,1,
       autorestart: tru,e,
       watch: fals,e,
-=======
   YYYY-MM-DD HH: m,
     m:ss Z,
       merge_logs: true,
@@ -137,47 +117,31 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       min_uptime:;
   '5s',
       restart_delay: 2000,
-<<<<<<< HEAD
       cron_restart: '*/5 * * * *',
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1
->>>>>>> main
     },
 
     {
-=======
       cron_restart:,
   */5 * * * *'    },
     {'
->>>>>>> main
       name: 'syntax-fixer,
       script:;
   './scripts/syntax-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
->>>>>>> main
       max_memory_restart:,
   500M',';
       env: {
-<<<<<<< HEAD
         NODE_ENV: 'production',
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1
->>>>>>> main
       },
-=======
-<<<<<<< HEAD
         NODE_ENV:;
-  'production: , },';
-=======
+  'production: },';
         NODE_EN,
     V:;
   'production      },
->>>>>>> main
->>>>>>> main
       error_file:,
   ./logs/syntax-fixer-error.log',';
       out_file: './logs/syntax-fixer-out.lo,g,';
@@ -185,7 +149,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   './logs/syntax-fixer-combined.log,',';
       time: tru,e,
       log_date_format:,
-<<<<<<< HEAD
   YYYY-MM-DD: HH: mm:ss: ,Z,
       merge_logs: tru,e,
       max_restarts:  ,3,
@@ -201,7 +164,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       instances:  ,1,
       autorestart: tru,e,
       watch: fals,e,
-=======
   YYYY-MM-DD HH: m,
     m:ss Z,
       merge_logs: true,
@@ -209,47 +171,31 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       min_uptime:;
   '5s',
       restart_delay: 2000,
-<<<<<<< HEAD
       cron_restart: '*/10 * * * *',
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1
->>>>>>> main
     },
 
     {
-=======
       cron_restart:,
   */10 * * * *'    },
     {'
->>>>>>> main
       name: 'build-health-check,
       script:;
   './scripts/build-health-check.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
->>>>>>> main
       max_memory_restart:,
   300M',';
       env: {
-<<<<<<< HEAD
         NODE_ENV: 'production',
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1
->>>>>>> main
       },
-=======
-<<<<<<< HEAD
         NODE_ENV:;
-  'production: , },';
-=======
+  'production: },';
         NODE_EN,
     V:;
   'production      },
->>>>>>> main
->>>>>>> main
       error_file:,
   ./logs/build-health-error.log',';
       out_file: './logs/build-health-out.lo,g,';
@@ -257,7 +203,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   './logs/build-health-combined.log,',';
       time: tru,e,
       log_date_format:,
-<<<<<<< HEAD
   YYYY-MM-DD: HH: mm:ss: ,Z,
       merge_logs: tru,e,
       max_restarts:  ,5,
@@ -273,7 +218,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       instances:  ,1,
       autorestart: tru,e,
       watch: fals,e,
-=======
   YYYY-MM-DD HH: m,
     m:ss Z,
       merge_logs: true,
@@ -281,47 +225,31 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       min_uptime:;
   '5s',
       restart_delay: 1000,
-<<<<<<< HEAD
       cron_restart: '*/15 * * * *',
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1
->>>>>>> main
     },
 
     {
-=======
       cron_restart:,
   */15 * * * *'    },
     {'
->>>>>>> main
       name: 'merge-conflict-resolver,
       script:;
   './scripts/merge-conflict-resolver.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
->>>>>>> main
       max_memory_restart:,
   500M',';
       env: {
-<<<<<<< HEAD
         NODE_ENV: 'production',
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1
->>>>>>> main
       },
-=======
-<<<<<<< HEAD
         NODE_ENV:;
-  'production: , },';
-=======
+  'production: },';
         NODE_EN,
     V:;
   'production      },
->>>>>>> main
->>>>>>> main
       error_file:,
   ./logs/merge-resolver-error.log',';
       out_file: './logs/merge-resolver-out.lo,g,';
@@ -329,7 +257,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   './logs/merge-resolver-combined.log,',';
       time: tru,e,
       log_date_format:,
-<<<<<<< HEAD
   YYYY-MM-DD: HH: mm:ss: ,Z,
       merge_logs: tru,e,
       max_restarts:  ,3,
@@ -345,7 +272,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       instances:  ,1,
       autorestart: tru,e,
       watch: fals,e,
-=======
   YYYY-MM-DD HH: m,
     m:ss Z,
       merge_logs: true,
@@ -353,37 +279,28 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       min_uptime:;
   '10s',
       restart_delay: 5000,
-<<<<<<< HEAD
       cron_restart: '*/30 * * * *',
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1
->>>>>>> main
     },
 
     // Enhanced automation processes
     {
-=======
       cron_restart:,
   */30 * * * *'    },
     // Enhanced automation processes{'
->>>>>>> main
       name: 'ai-code-analyzer,
       script:;
   './scripts/automation/ai-code-analyzer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
->>>>>>> main
       max_memory_restart:,
   512M',';
       env: {
-<<<<<<< HEAD
         NODE_ENV:
   'production,
         AI_ANALYSIS_MODE:,
-  true',
-      },
+  true'},
       cron_restart: '0 */2 * * *,
       log_file:,
   ./logs/ai-code-analyzer.log',
@@ -391,17 +308,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       out_file:
   './logs/ai-code-analyzer-out.log',
       merge_logs: true,
-<<<<<<< HEAD
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-    },
-=======
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'},
 ursor/automate-test-fix-improve-and-merge-code-99d1
->>>>>>> main
   ],
 
   deploy: {
     production: {
-<<<<<<< HEAD
       user: 'ubuntu',
       host: 'localhost',
       ref: 'origin/main',
@@ -410,21 +322,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       'pre-deploy-local': '',
       'post-deploy':
         'npm install && npm run build && pm2 reload ecosystem.working.js --env production',
-      'pre-setup': '',
-    },
-  },
-};
-=======
+      'pre-setup': ''}}};
 ursor/automate-test-fix-improve-and-merge-code-99d1
-=======
-<<<<<<< HEAD
         NODE_ENV:;
   'productio,n,';
-=======
         NODE_EN,
     V:;
   'production,
->>>>>>> main
         AI_ANALYSIS_MODE:,
   true'},';
       cron_restart: '0: */2 * * ,*,';
@@ -435,7 +339,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   './logs/ai-code-analyzer-out.log,',';
       merge_logs: tru,e,
       log_date_format:,
-<<<<<<< HEAD
   YYYY-MM-DD: HH: mm:ss: ,Z}  ],
   deploy: {
     production: {
@@ -448,7 +351,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       path:,
   /workspace',';
   'pre-deploy-local': ',';
-=======
   YYYY-MM-DD HH: m,
     m:ss Z}  ],
   deploy: {
@@ -464,7 +366,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     s://github.com/Zion-Holdings/zion.app.git,
       path:,
   /workspace,pre-deploy-local': ',
->>>>>>> main
 ,
   post-deploy;
   ': 'npm: install && npm run build && pm2 reload ecosystem.working.js --env production,';
@@ -473,5 +374,3 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   ': '}';
   }
 }
->>>>>>> main
->>>>>>> main

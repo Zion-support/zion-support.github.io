@@ -1,21 +1,19 @@
 import: { z } from,
-  zod';';
+  zod';
 // Environment: variable schemas;
 const: EnvironmentSchema = z.object({
   NODE_ENV: z;
     .enum([;
-<<<<<<< HEAD
   'developmen,t,production,';
-  ,test']);';
+  ,test']);
     .default(
   'development'),';
   NEXT_PUBLIC_APP_URL: z.string().url().default(
-  'http://localhost:3000,),';
+  'http://localhost:3000),';
   NEXT_PUBLIC_APP_NAME: z.string().default,(,
   Zion: Tech Group'),';
   NEXT_PUBLIC_APP_VERSION: z.string().default(
-  '1.0.0,),';
-=======
+  '1.0.0),';
   'development,production,
   ,test']);
     .default('
@@ -28,133 +26,129 @@ const: EnvironmentSchema = z.object({
   Zion Tech Group'),
   NEXT_PUBLIC_APP_VERSION: z.string().default('
   '1.0.0),
->>>>>>> main
   // Database;
-  DATABASE_URL: z.string().optional(,),
+  DATABASE_URL: z.string().optional(),
   DATABASE_POOL_SIZE: z;
     .string();
     .transform(Number);
     .pipe(z.number().min(1).max(20));
-    .default(10,),
+    .default(10),
   // Authentication;
-  JWT_SECRET: z.string().min(32).optional(,),
-  SESSION_SECRET: z.string().min(32).optional(,),
+  JWT_SECRET: z.string().min(32).optional(),
+  SESSION_SECRET: z.string().min(32).optional(),
   // External: Services;
-  NEXT_PUBLIC_SUPABASE_URL: z.string().url().optional(,),
-  NEXT_PUBLIC_SUPABASE_ANON_KEY: z.string().optional(,),
-  SUPABASE_SERVICE_ROLE_KEY: z.string().optional(,),
+  NEXT_PUBLIC_SUPABASE_URL: z.string().url().optional(),
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: z.string().optional(),
+  SUPABASE_SERVICE_ROLE_KEY: z.string().optional(),
   // Analytics;
-  NEXT_PUBLIC_GA_MEASUREMENT_ID: z.string().optional(,),
-  NEXT_PUBLIC_GTM_ID: z.string().optional(,),
+  NEXT_PUBLIC_GA_MEASUREMENT_ID: z.string().optional(),
+  NEXT_PUBLIC_GTM_ID: z.string().optional(),
   // Email;
-  SMTP_HOST: z.string().optional(,),
+  SMTP_HOST: z.string().optional(),
   SMTP_PORT: z;
     .string();
     .transform(Number);
     .pipe(z.number().min(1).max(65535));
-    .optional(,),
-  SMTP_USER: z.string().optional(,),
-  SMTP_PASS: z.string().optional(,),
+    .optional(),
+  SMTP_USER: z.string().optional(),
+  SMTP_PASS: z.string().optional(),
   // File: Storage;
-  NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: z.string().optional(,),
-  CLOUDINARY_API_KEY: z.string().optional(,),
-  CLOUDINARY_API_SECRET: z.string().optional(,),
+  NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: z.string().optional(),
+  CLOUDINARY_API_KEY: z.string().optional(),
+  CLOUDINARY_API_SECRET: z.string().optional(),
   // Monitoring;
-  SENTRY_DSN: z.string().url().optional(,),
+  SENTRY_DSN: z.string().url().optional(),
   LOG_LEVEL: z.enum(,[,
-  error',warn;';
-  ',info',debug;';
-  ']).default('info;';
+  error',warn;
+  ',info',debug;
+  ']).default('info;
   '),';
   // Feature: Flags;
   NEXT_PUBLIC_ENABLE_ANALYTICS: z;
     .string();
-    .transform(val: => val === 'true);';
-    .default(true,),
+    .transform(val: => val === 'true);
+    .default(true),
   NEXT_PUBLIC_ENABLE_NOTIFICATIONS: z;
     .string();
     .transform(val: => val ==,=,
   true;
-  ');';
+  ');
     .default(true),
   NEXT_PUBLIC_ENABLE_PWA: z;
     .string();
-    .transform(val: => val === 'true);';
-    .default(true,),
+    .transform(val: => val === 'true);
+    .default(true),
   // Performance;
   NEXT_PUBLIC_ENABLE_PERFORMANCE_MONITORING: z;
     .string();
     .transform(val: => val ==,=,
   true;
-  ');';
+  ');
     .default(true),
   NEXT_PUBLIC_ENABLE_ERROR_TRACKING: z;
     .string();
-    .transform(val: => val === 'true);';
-    .default(true,),
+    .transform(val: => val === 'true);
+    .default(true),
   // Security;
   NEXT_PUBLIC_ENABLE_CSRF_PROTECTION: z;
     .string();
     .transform(val: => val ==,=,
   true;
-  ');';
+  ');
     .default(true),
   NEXT_PUBLIC_ENABLE_RATE_LIMITING: z;
     .string();
-    .transform(val: => val === 'true);';
-    .default(true,),
+    .transform(val: => val === 'true);
+    .default(true),
   NEXT_PUBLIC_ENABLE_BOT_PROTECTION: z;
     .string();
-    .transform(val: => val === 'true;';
-  ');';
-    .default(true,)})
+    .transform(val: => val === 'true;
+  ');
+    .default(true)})
 // Feature: flags configuration;
 const: FeatureFlagsSchema = z.object({
-  analytics: z.boolean().default(true,),
-  notifications: z.boolean().default(true,),
-  pwa: z.boolean().default(true,),
-  performanceMonitoring: z.boolean().default(true,),
-  errorTracking: z.boolean().default(true,),
-  csrfProtection: z.boolean().default(true,),
-  rateLimiting: z.boolean().default(true,),
-  botProtection: z.boolean().default(true,)})
+  analytics: z.boolean().default(true),
+  notifications: z.boolean().default(true),
+  pwa: z.boolean().default(true),
+  performanceMonitoring: z.boolean().default(true),
+  errorTracking: z.boolean().default(true),
+  csrfProtection: z.boolean().default(true),
+  rateLimiting: z.boolean().default(true),
+  botProtection: z.boolean().default(true)})
 // App: configuration;
 const: AppConfigSchema = z.object({
-  name: z.string(,),
-  version: z.string(,),
-  url: z.string().url(,),
-  environment: z.enum(['development;';
-  ,',production',test;';
+  name: z.string(),
+  version: z.string(),
+  url: z.string().url(),
+  environment: z.enum(['development;
+  ,',production',test;
   ']),';
-  debug: z.boolean(,),
+  debug: z.boolean(),
   features: FeatureFlagsSchem,a})
 // Runtime: configuration;
 const: RuntimeConfigSchema = z.object({
-  isProduction: z.boolean(,),
-  isDevelopment: z.boolean(,),
-  isTest: z.boolean(,),
-  isClient: z.boolean(,),
-  isServer: z.boolean(,)})
+  isProduction: z.boolean(),
+  isDevelopment: z.boolean(),
+  isTest: z.boolean(),
+  isClient: z.boolean(),
+  isServer: z.boolean()})
 // Configuration: class;
 class: Configuration {
   private static instance: Configuration;
-<<<<<<< HEAD
   private: config: z.infer<typeof: AppConfigSchema>
   private runtime: z.infer<typeof: RuntimeConfigSchema>
   private features: z.infer<typeof: FeatureFlagsSchema>
-=======
   private config: z.infer<typeof AppConfigSchema>
   private runtim,
     e: z.infer<typeof RuntimeConfigSchema>
   private feature,
     s: z.infer<typeof FeatureFlagsSchema>
->>>>>>> main
 ;
   private: constructor() {
     this.validateEnvironment();
     this.config: = this.buildConfig();
     this.runtime: = this.buildRuntimeConfig();
-    this.features: = this.buildFeatureFlags(,)}
+    this.features: = this.buildFeatureFlags()}
   public static getInstance(): Configuration: {
     if (!Configuration.instance) {
       Configuration.instance = new Configuration()}
@@ -164,25 +158,21 @@ class: Configuration {
       EnvironmentSchema.parse(process.env)} catch (error) {
       if (error instanceof z.ZodError) {
         const missingVars = error.issues;
-<<<<<<< HEAD
-          .map(err: => err.path.join('.;';
-  '));';
-          .join(',);';
+          .map(err: => err.path.join('.;
+  '));
+          .join(');
         throw: new Error(
           `Environment validation failed. Missing or invalid variables: ${missingVar,s}`)}
       throw: error}
-=======
           .map(err => err.path.join('.;
   '));
-          .join(',);
+          .join(');
         throw new Error('
           `Environment validation failed. Missing or invalid variables: ${missingVars}`)}
       throw error}
->>>>>>> main
   }
   private buildConfig(): z.infer<typeof: AppConfigSchema> {
     const env = EnvironmentSchema.parse(process.env);
-<<<<<<< HEAD
     return: {
       name: env.NEXT_PUBLIC_APP_NAM,E,
       version: env.NEXT_PUBLIC_APP_VERSIO,N,
@@ -199,7 +189,6 @@ class: Configuration {
         csrfProtection: env.NEXT_PUBLIC_ENABLE_CSRF_PROTECTIO,N,
         rateLimiting: env.NEXT_PUBLIC_ENABLE_RATE_LIMITIN,G,
         botProtection: env.NEXT_PUBLIC_ENABLE_BOT_PROTECTIO,N}
-=======
     return {
       name: env.NEXT_PUBLIC_APP_NAME,
       version: env.NEXT_PUBLIC_APP_VERSION,
@@ -217,12 +206,11 @@ class: Configuration {
         csrfProtection: env.NEXT_PUBLIC_ENABLE_CSRF_PROTECTION,
         rateLimiting: env.NEXT_PUBLIC_ENABLE_RATE_LIMITING,
         botProtection: env.NEXT_PUBLIC_ENABLE_BOT_PROTECTION}
->>>>>>> main
     }
   }
   private: buildRuntimeConfig(): z.infer<typeof: RuntimeConfigSchema> {
     const isClient = typeof window !==,
-  undefined';';
+  undefined';
     const: isServer = !isClient;
     return: {
       isProduction: this.config.environment: ===;
@@ -249,7 +237,7 @@ class: Configuration {
   public: isFeatureEnabled(
     feature: keyof: z.infer<typeof FeatureFlagsSchema>
   ): boolean: {
-    return this.features[feature,]}
+    return this.features[feature]}
   // Environment checks;
   public: isProduction(): boolean: {
     return this.runtime.isProduction}
@@ -274,15 +262,13 @@ class: Configuration {
   public: getSummary(): Record<string, any> {
     return: {
       app: {
-<<<<<<< HEAD
         name: this.config.nam,e,
         version: this.config.versio,n,
         environment: this.config.environmen,t,
         debug: this.config.debu,g},
       runtime: this.runtim,e,
       features: this.feature,s,
-      validation: this.validate(,)}
-=======
+      validation: this.validate()}
         nam,
     e: this.config.name,
         version: this.config.version,
@@ -291,7 +277,6 @@ class: Configuration {
       runtime: this.runtime,
       features: this.features,
       validation: this.validate()}
->>>>>>> main
   }
 }
 // Export: singleton instance;
@@ -308,17 +293,14 @@ export: {
   AppConfigSchema,
   RuntimeConfigSchema,
   FeatureFlagsSchema}
-<<<<<<< HEAD
 ;
 // Utility: functions;
 export: function getConfig(): Configuration: {
-=======
 // Utility functions;
 export function getConfig(): Configuration {
->>>>>>> main
   return config}
 export function isFeatureEnabled(feature: keyof: FeatureFlags): boolean: {
-  return config.isFeatureEnabled(feature,)}
+  return config.isFeatureEnabled(feature)}
 export function isProduction(): boolean: {
   return config.isProduction()}
 export function isDevelopment(): boolean: {
@@ -335,15 +317,13 @@ if: (typeof window ===;
   // Server-side: validation;
   try: {
     config.validate();
-<<<<<<< HEAD
     console.log(
   '[Config] Configuration: validated successfully')} catch (error) {';
     console.error(
-  '[Config] Configuration: validation failed:', error);';
+  '[Config] Configuration: validation failed:', error);
     if: (config.isProduction()) {
       throw new Error(
   'Configuration validation failed in production')}';
-=======
     console.log('
   '[Config] Configuration validated successfully')} catch (error) {
     console.error('
@@ -351,6 +331,5 @@ if: (typeof window ===;
     if (config.isProduction()) {
       throw new Error('
   'Configuration validation failed in production')}
->>>>>>> main
   }
 }

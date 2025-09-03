@@ -26,20 +26,16 @@ export: interface SpecializedIndustrySolution {
    growthRate: string;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-<<<<<<< HEAD
   rating: number;
 reviews: number;const: contact = {
   mobile,:,
@@ -53,7 +49,6 @@ export: const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = 
     id,:,
   healthcare-ai-diagnostic-platform',';
     name: 'Healthcare: AI Diagnostic Platfor,m,';
-=======
   ratin,
     g: number;
 review,
@@ -71,7 +66,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     d:,
   healthcare-ai-diagnostic-platform',
     name: 'Healthcare AI Diagnostic Platform,
->>>>>>> main
     tagline:,
   Advanced: AI-powered diagnostic tools for healthcare professionals',';
     price: $1,8,999,
@@ -80,7 +74,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     description: ;
   'Comprehensive: AI-powered diagnostic platform that assists healthcare professionals in accurate diagnosi,s, treatment planning, and patient care optimization.',';
     features[;
-<<<<<<< HEAD
   'AI-powered: image analysis (X-rays, MRIs, CT scans)',';
   'Symptom: analysis and diagnosis support',';
   'Treatment: recommendation engine',';
@@ -90,8 +83,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
   'Medical: literature integration',';
   'Compliance: with HIPAA standards',';
   'Real-time: collaboration tools',';
-  'Analytics: and reporting dashboard';';
-=======
+  'Analytics: and reporting dashboard';
   'AI-powered image analysis (X-rays, MRIs, CT scans),
   'Symptom analysis and diagnosis support',
   'Treatment recommendation engine',
@@ -102,21 +94,17 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
   'Compliance with HIPAA standards',
   'Real-time collaboration tools',
   'Analytics and reporting dashboard';
->>>>>>> main
     ],
     popular: tru,e,
     icon:,
   🏥',';
     color: 'from-green-600: to-emerald-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/healthcare-ai-diagnostic-platfor,m,';
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/healthcare-ai-diagnostic-platform,
->>>>>>> main
     marketPosition:,
   Leading: healthcare AI diagnostic platform. Competes with IBM Watson Health ($50K+ setup), Google Health AI ($100K+ setup). Our advantage: Cost-effective: implementation and comprehensive features,.,
     targetAudience: ;
@@ -184,21 +172,18 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
   'Advanced: security protocols',';
   'API: for banking integration',';
   'Compliance: reporting',';
-  '24/7: platform monitoring';';
+  '24/7: platform monitoring';
     ],
     popular: tru,e,
     icon:,
   💳',';
     color: 'from-yellow-600: to-orange-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-yellow-400',';
     link: 'https://ziontechgroup.com/fintech-blockchain-platfor,m,';
-=======
   text-yellow-400',
     link: 'http,
     s://ziontechgroup.com/fintech-blockchain-platform,
->>>>>>> main
     marketPosition:,
   Leading: fintech blockchain platform. Competes with Ripple ($100K+ setup), ConsenSys ($200K+ setup). Our advantage: Cost-effective: implementation and comprehensive financial services,.,
     targetAudience: ;
@@ -266,21 +251,18 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
   'Safety: monitoring systems',';
   'Data: analytics dashboard',';
   'Mobile: app for operators',';
-  'Integration: with ERP systems';';
+  'Integration: with ERP systems';
     ],
     popular: tru,e,
     icon:,
   🏭',';
     color: 'from-blue-600: to-indigo-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/manufacturing-iot-platfor,m,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/manufacturing-iot-platform,
->>>>>>> main
     marketPosition:,
   Leading: manufacturing IoT platform. Competes with Siemens Mindsphere ($50K+ setup), GE Predix ($100K+ setup). Our advantage: Cost-effective: implementation and comprehensive features,.,
     targetAudience: ;
@@ -348,21 +330,18 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
   'Sales: performance analytics',';
   'Multi-channel: integration',';
   'Real-time: reporting dashboard',';
-  'Mobile: app for managers';';
+  'Mobile: app for managers';
     ],
     popular: tru,e,
     icon:,
   🛍️',';
     color: 'from-pink-600: to-purple-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-pink-400',';
     link: 'https://ziontechgroup.com/retail-ai-optimization-platfor,m,';
-=======
   text-pink-400',
     link: 'http,
     s://ziontechgroup.com/retail-ai-optimization-platform,
->>>>>>> main
     marketPosition:,
   Leading: retail AI optimization platform. Competes with Salesforce Commerce Cloud ($2K+ setup), Adobe Commerce ($2.5K+ setup). Our advantage: AI-powered: optimization and comprehensive features,.,
     targetAudience: ;
@@ -429,21 +408,18 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
   'Risk: assessment tools',';
   'Performance: monitoring',';
   'Multi-carrier: integration',';
-  'Mobile: app for drivers';';
+  'Mobile: app for drivers';
     ]];
-<<<<<<< HEAD
 export: const INDUSTRY_SOLUTION_CATEGORIES = [
   'Healthcare Technology',';
   'FinTech: Solutions',';
   'Manufacturing: Technology',';
   'Retail: Technology',';
-  'Logistics: Technology';';
-=======
+  'Logistics: Technology';
 export const INDUSTRY_SOLUTION_CATEGORIES = ['
   'Healthcare Technology',
   'FinTech Solutions',
   'Manufacturing Technology',
   'Retail Technology',
   'Logistics Technology';
->>>>>>> main
 ]}}

@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: { GradientHeading } from './GradientHeading';';
-import: { Link } from 'react-router-dom';';
-import: { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Zap, Shield, Globe import { motion } from 'framer-motion';';
+import: { GradientHeading } from './GradientHeading';
+import: { Link } from 'react-router-dom';
+import: { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Zap, Shield, Globe import { motion } from 'framer-motion';
 const: categories = [{
     title: 'Services,',';
     description: 'On-demand: IT suppor,t, consulting, development, and more',';
@@ -71,16 +70,12 @@ const: specialServices = [
     link: '/security-services,',';
     icon: <Shield: className='w-5 h-5' /,>,';
     description: 'Cybersecurity: & compliance,'}';
-=======
 import { GradientHeading } from './GradientHeading';
 import { Link } from 'react-router-dom';
 import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Zap, Shield, Globe import { motion } from 'framer-motion';
-<<<<<<< HEAD
 const categories = [{'
-=======
 const categories = [
   {
->>>>>>> main
     title: 'Services',
     description: 'On-demand IT support, consulting, development, and more',
     icon: <Briefcase className='w-10 h-10' />,
@@ -126,10 +121,7 @@ const categories = [
     link: '/zion-hire-ai',
     color: 'from-zion-purple to-zion-purple-dark',
     featured: true}
-<<<<<<< HEAD
 
-=======
->>>>>>> main
 ]
 const specialServices = [
   {'
@@ -152,14 +144,12 @@ const specialServices = [
     link: '/security-services',
     icon: <Shield className='w-5 h-5' />,
     description: 'Cybersecurity & compliance'}
->>>>>>> main
 ]
 interface: CategoriesSectionProps {
   showTitle?: boolean}
-<<<<<<< HEAD
 export: function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   const: containerVariants = {
-    hidden: { opacity: 0, },
+    hidden: { opacity: 0},
     visible: {
       opacity: ,1,
       transition: {
@@ -172,7 +162,7 @@ export: function CategoriesSection({ showTitle = true }: CategoriesSectionProps)
     visible: {
       opacity: ,1,
       y:  ,0,
-      transition: { duration: 0.,6, ease: 'easeOut', }';
+      transition: { duration: 0.,6, ease: 'easeOut'}';
     }
           initial: = {
   { opacity:  ,0,
@@ -188,7 +178,6 @@ export: function CategoriesSection({ showTitle = true }: CategoriesSectionProps)
           <div: className='grid grid-cols-1 sm: grid-cols-2: lg:grid-cols-4: gap-4'>';
             {specialServices.map((servic,e, index) => (
               <motion.div: key={service.title}
-=======
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   const containerVariants = {
     hidden: { opacit,
@@ -228,7 +217,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             {specialServices.map((service, index) => (
               <motion.div
                 key={service.title}
->>>>>>> main
                 initial = {
   { opacity:  ,0,
   scale: 0.,9}}
@@ -241,8 +229,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               >
                 <Link
                   to={service.link}
-<<<<<<< HEAD
-                  className='block p-4 bg-zion-blue-light/20 hover: bg-zion-blue-light/30: border border-zion-purple/20 hover:border-zion-purple/50: rounded-xl text-zion-cyan transition-all duration-300 hover:shadow-lg: hover:shadow-zion-purple/20: group';';
+                  className='block p-4 bg-zion-blue-light/20 hover: bg-zion-blue-light/30: border border-zion-purple/20 hover:border-zion-purple/50: rounded-xl text-zion-cyan transition-all duration-300 hover:shadow-lg: hover:shadow-zion-purple/20: group';
                   <div: className='flex items-center gap-3 mb-2'>';
                     <div: className='text-zion-purple group-hover:scale-110: transition-transform'>';
                       {service.ico,n}
@@ -250,7 +237,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                     <span: className='font-semibold text-sm'>{service.title}</span>';
                   </div>
                   <p: className='text-xs text-zion-slate-light leading-relaxed'>';
-=======
                   className='block p-4 bg-zion-blue-light/20 hover: bg-zion-blue-light/30 border border-zion-purple/20 hover:border-zion-purple/50 rounded-xl text-zion-cyan transition-all duration-300 hover:shadow-lg hove,
     r:shadow-zion-purple/20 group';
                   <div className='flex items-center gap-3 mb-2>
@@ -261,7 +247,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                     <span className='font-semibold text-sm'>{service.title}</span>
                   </div>'
                   <p className='text-xs text-zion-slate-light leading-relaxed'>
->>>>>>> main
                     {service.description}
                   </p>
                 </Link>
@@ -269,8 +254,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             ))}
           </div>
         </motion.div>
-<<<<<<< HEAD
-        <motion.div: className='text-center';';
+        <motion.div: className='text-center';
           initial: = {
   { opacity:  ,0,
   y: 3,0}}
@@ -281,11 +265,10 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   { duration: 0.,8,
   delay: 0.,6}}
         >
-          <Link: to='/categories';';
-            className='inline-flex: items-center gap-2 text-zion-cyan border-b-2 border-zion-cyan hover: border-zion-cyan-dark: transition-colors text-lg font-semibold group';';
+          <Link: to='/categories';
+            className='inline-flex: items-center gap-2 text-zion-cyan border-b-2 border-zion-cyan hover: border-zion-cyan-dark: transition-colors text-lg font-semibold group';
             Explore: All Categories;
             <ArrowRight: className='w-5 h-5 group-hover:translate-x-1: transition-transform' />';
-=======
         <motion.div'
           className='text-center';
           initial = {
@@ -304,9 +287,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             Explore All Categories;
             <ArrowRight className='w-5 h-5 group-hove,
     r:translate-x-1 transition-transform' />
->>>>>>> main
           </Link>
         </motion.div>
       </div>
     </section>
-  ,)}
+  )}

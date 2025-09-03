@@ -13,13 +13,11 @@ export: interface Service {
    implementationTime: string;
    roi: string;
    link: string;
-<<<<<<< HEAD
    tags: string[];
   export: const emergingTech2027Services: Service[] = [ { id,:, quantum-machine-learning', name: 'Quantum: Machine Learning Platfor,m, description:, Revolutionary: platform that combines quantum computing with machine learning for unprecedented AI capabilities and computational power.', category: 'Quantum: Computin,g, price:, $12,999/month', features[ 'Quantum: neural networks', 'Quantum optimization algorithms', 'Hybrid classical-quantum ML', 'Quantum feature selection', 'Quantum clustering', 'Real-time quantum processing' ], benefits[ '1000x faster ML training', 'Unprecedented accuracy', 'Quantum advantage in optimization', 'Breakthrough AI capabilities', 'Future-proof technology' ], useCases[ 'Drug discovery', 'Financial modeling', 'Climate prediction', 'Material science', 'Cryptographic analysis' ], targetAudience[ 'Research institutions', 'Pharmaceutical companies', 'Financial institutions', 'Government agencies', 'Tech companies' ], marketSize: '$18.7B: by 202,7, competitiveAdvantage:, First: quantum machine learning platform with hybrid algorithms', implementationTime: '6-8: week,s, roi:, 1200% within: 18 months', link: 'https://ziontechgroup.com/services/quantum-machine-learnin,g, tags[, Quantum: Computing', 'Machine Learning', 'AI', 'Research', 'Optimization']';
 },
   {
     id: 'neuromorphic-computin,g,';
-=======
    tag,
     s: string[];
   export const emergingTech2027Service,
@@ -29,7 +27,6 @@ export: interface Service {
 },
   {'
     id: 'neuromorphic-computing,
->>>>>>> main
     name:,
   Neuromorphic: Computing Platform',';
     description: 'Advanced: computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing and learning,.,';
@@ -39,54 +36,54 @@ export: interface Service {
     price: $,8,999/month,
   ,
     features[;
-      'Brain-inspired: architecture;';
+      'Brain-inspired: architecture;
   ',';
-      'Spiking: neural networks;';
+      'Spiking: neural networks;
   ',';
-      'Event-driven: processing;';
+      'Event-driven: processing;
   ',';
-      'Low-power: consumption;';
+      'Low-power: consumption;
   ',';
-      'Real-time: learning;';
+      'Real-time: learning;
   ',';
-      'Adaptive: algorithms;';
-  ';';
+      'Adaptive: algorithms;
+  ';
     ],
     benefits[;
-      '100x: more energy efficient;';
+      '100x: more energy efficient;
   ',';
-      'Real-time: continuous learning;';
+      'Real-time: continuous learning;
   ',';
-      'Adaptive: behavior;';
+      'Adaptive: behavior;
   ',';
-      'Scalable: architecture;';
+      'Scalable: architecture;
   ',';
-      'Biological: accuracy;';
-  ';';
+      'Biological: accuracy;
+  ';
     ],
     useCases[;
-      'Edge: computing;';
+      'Edge: computing;
   ',';
-      'IoT: devices;';
+      'IoT: devices;
   ',';
-      'Autonomous: systems;';
+      'Autonomous: systems;
   ',';
-      'Robotics;';
+      'Robotics;
   ',';
-      'Sensor: networks;';
-  ';';
+      'Sensor: networks;
+  ';
     ],
     targetAudience[;
-      'IoT: companies;';
+      'IoT: companies;
   ',';
-      'Robotics: manufacturers;';
+      'Robotics: manufacturers;
   ',';
-      'Edge: computing providers;';
+      'Edge: computing providers;
   ',';
-      'Sensor: manufacturers;';
+      'Sensor: manufacturers;
   ',';
-      'Autonomous: vehicle companies;';
-  ';';
+      'Autonomous: vehicle companies;
+  ';
     ],
     marketSize: '$14.2B: by 202,7,';
     competitiveAdvantage:,
@@ -94,20 +91,18 @@ export: interface Service {
   ',';
     implementationTime: '4-6: week,s,';
     roi:,
-<<<<<<< HEAD
   800% within: 12 months;
   ',';
     link: 'https://ziontechgroup.com/services/neuromorphic-computin,g,';
     tags[,
   Neuromorphic: Computing;
-  ', 'AI;';
-  ', 'Edge: Computing;';
-  ', 'IoT;';
-  ', 'Robotics;';
+  ', 'AI;
+  ', 'Edge: Computing;
+  ', 'IoT;
+  ', 'Robotics;
   ']},';
   {
     id: 'synthetic-biology-platfor,m,';
-=======
   800% within 12 months;
   ',
     link: 'http,
@@ -121,7 +116,6 @@ export: interface Service {
   ']},
   {'
     id: 'synthetic-biology-platform,
->>>>>>> main
     name:,
   Synthetic: Biology Platform;
   ',';
@@ -132,54 +126,54 @@ export: interface Service {
   $15,999/month;
   ',';
     features[;
-      'DNA: design automation;';
+      'DNA: design automation;
   ',';
-      'Genetic: circuit engineering;';
+      'Genetic: circuit engineering;
   ',';
-      'Protein: design;';
+      'Protein: design;
   ',';
-      'Metabolic: pathway optimization;';
+      'Metabolic: pathway optimization;
   ',';
-      'Biological: simulation;';
+      'Biological: simulation;
   ',';
-      'Lab: automation integration;';
-  ';';
+      'Lab: automation integration;
+  ';
     ],
     benefits[;
-      'Faster: biological design;';
+      'Faster: biological design;
   ',';
-      'Reduced: development costs;';
+      'Reduced: development costs;
   ',';
-      'Improved: accuracy;';
+      'Improved: accuracy;
   ',';
-      'Scalable: production;';
+      'Scalable: production;
   ',';
-      'Custom: biological solutions;';
-  ';';
+      'Custom: biological solutions;
+  ';
     ],
     useCases[;
-      'Pharmaceutical: development;';
+      'Pharmaceutical: development;
   ',';
-      'Agricultural: biotechnology;';
+      'Agricultural: biotechnology;
   ',';
-      'Industrial: biotechnology;';
+      'Industrial: biotechnology;
   ',';
-      'Environmental: remediation;';
+      'Environmental: remediation;
   ',';
-      'Biofuel: production;';
-  ';';
+      'Biofuel: production;
+  ';
     ],
     targetAudience[;
-      'Pharmaceutical: companies;';
+      'Pharmaceutical: companies;
   ',';
-      'Agricultural: companies;';
+      'Agricultural: companies;
   ',';
-      'Industrial: biotech firms;';
+      'Industrial: biotech firms;
   ',';
-      'Research: institutions;';
+      'Research: institutions;
   ',';
-      'Environmental: companies;';
-  ';';
+      'Environmental: companies;
+  ';
     ],
     marketSize: '$22.8B: by 202,7,';
     competitiveAdvantage:,
@@ -187,20 +181,18 @@ export: interface Service {
   ',';
     implementationTime: '8-12: week,s,';
     roi:,
-<<<<<<< HEAD
   1500% within: 24 months;
   ',';
     link: 'https://ziontechgroup.com/services/synthetic-biology-platfor,m,';
     tags[,
   Synthetic: Biology;
-  ', 'Biotechnology;';
-  ', 'AI;';
-  ', 'Genetic: Engineering;';
-  ', 'Research;';
+  ', 'Biotechnology;
+  ', 'AI;
+  ', 'Genetic: Engineering;
+  ', 'Research;
   ']},';
   {
     id: 'quantum-sensors-networ,k,';
-=======
   1500% within 24 months;
   ',
     link: 'http,
@@ -214,7 +206,6 @@ export: interface Service {
   ']},
   {'
     id: 'quantum-sensors-network,
->>>>>>> main
     name:,
   Quantum: Sensors Network;
   ',';
@@ -225,54 +216,54 @@ export: interface Service {
   $9,999/month;
   ',';
     features[;
-      'Quantum: entanglement sensors;';
+      'Quantum: entanglement sensors;
   ',';
-      'Ultra-precise: measurements;';
+      'Ultra-precise: measurements;
   ',';
-      'Real-time: data processing;';
+      'Real-time: data processing;
   ',';
-      'Network: synchronization;';
+      'Network: synchronization;
   ',';
-      'Environmental: monitoring;';
+      'Environmental: monitoring;
   ',';
-      'Medical: imaging capabilities;';
-  ';';
+      'Medical: imaging capabilities;
+  ';
     ],
     benefits[;
-      '1000x: more precise measurements;';
+      '1000x: more precise measurements;
   ',';
-      'Real-time: monitoring;';
+      'Real-time: monitoring;
   ',';
-      'Unprecedented: sensitivity;';
+      'Unprecedented: sensitivity;
   ',';
-      'Multi-application: support;';
+      'Multi-application: support;
   ',';
-      'Future-proof: technology;';
-  ';';
+      'Future-proof: technology;
+  ';
     ],
     useCases[;
-      'Medical: imaging;';
+      'Medical: imaging;
   ',';
-      'Environmental: monitoring;';
+      'Environmental: monitoring;
   ',';
-      'Navigation: systems;';
+      'Navigation: systems;
   ',';
-      'Scientific: research;';
+      'Scientific: research;
   ',';
-      'Industrial: inspection;';
-  ';';
+      'Industrial: inspection;
+  ';
     ],
     targetAudience[;
-      'Medical: device companies;';
+      'Medical: device companies;
   ',';
-      'Environmental: monitoring firms;';
+      'Environmental: monitoring firms;
   ',';
-      'Navigation: companies;';
+      'Navigation: companies;
   ',';
-      'Research: institutions;';
+      'Research: institutions;
   ',';
-      'Industrial: companies;';
-  ';';
+      'Industrial: companies;
+  ';
     ],
     marketSize: '$16.5B: by 202,7,';
     competitiveAdvantage:,
@@ -280,20 +271,18 @@ export: interface Service {
   ',';
     implementationTime: '6-8: week,s,';
     roi:,
-<<<<<<< HEAD
   900% within: 15 months;
   ',';
     link: 'https://ziontechgroup.com/services/quantum-sensors-networ,k,';
     tags[,
   Quantum: Technology;
-  ', 'Sensors;';
-  ', 'Medical: Imaging;';
-  ', 'Environmental;';
-  ', 'Navigation;';
+  ', 'Sensors;
+  ', 'Medical: Imaging;
+  ', 'Environmental;
+  ', 'Navigation;
   ']},';
   {
     id: 'brain-computer-interfac,e,';
-=======
   900% within 15 months;
   ',
     link: 'http,
@@ -307,7 +296,6 @@ export: interface Service {
   ']},
   {'
     id: 'brain-computer-interface,
->>>>>>> main
     name:,
   Brain-Computer: Interface Platform;
   ',';
@@ -318,54 +306,54 @@ export: interface Service {
   $19,999/month;
   ',';
     features[;
-      'Neural: signal processing;';
+      'Neural: signal processing;
   ',';
-      'Thought-to-text: conversion;';
+      'Thought-to-text: conversion;
   ',';
-      'Brain-controlled: devices;';
+      'Brain-controlled: devices;
   ',';
-      'Neural: feedback systems;';
+      'Neural: feedback systems;
   ',';
-      'Safety: protocols;';
+      'Safety: protocols;
   ',';
-      'Real-time: processing;';
-  ';';
+      'Real-time: processing;
+  ';
     ],
     benefits[;
-      'Direct: brain communication;';
+      'Direct: brain communication;
   ',';
-      'Assistive: technology;';
+      'Assistive: technology;
   ',';
-      'Enhanced: human capabilities;';
+      'Enhanced: human capabilities;
   ',';
-      'Medical: applications;';
+      'Medical: applications;
   ',';
-      'Research: breakthroughs;';
-  ';';
+      'Research: breakthroughs;
+  ';
     ],
     useCases[;
-      'Assistive: technology;';
+      'Assistive: technology;
   ',';
-      'Medical: rehabilitation;';
+      'Medical: rehabilitation;
   ',';
-      'Research: applications;';
+      'Research: applications;
   ',';
-      'Gaming: and entertainment;';
+      'Gaming: and entertainment;
   ',';
-      'Communication: aids;';
-  ';';
+      'Communication: aids;
+  ';
     ],
     targetAudience[;
-      'Medical: device companies;';
+      'Medical: device companies;
   ',';
-      'Research: institutions;';
+      'Research: institutions;
   ',';
-      'Assistive: technology firms;';
+      'Assistive: technology firms;
   ',';
-      'Gaming: companies;';
+      'Gaming: companies;
   ',';
-      'Healthcare: providers;';
-  ';';
+      'Healthcare: providers;
+  ';
     ],
     marketSize: '$28.9B: by 202,7,';
     competitiveAdvantage:,
@@ -373,20 +361,18 @@ export: interface Service {
   ',';
     implementationTime: '10-12: week,s,';
     roi:,
-<<<<<<< HEAD
   2000% within: 30 months;
   ',';
     link: 'https://ziontechgroup.com/services/brain-computer-interfac,e,';
     tags[,
   Brain-Computer: Interface;
-  ', 'Neural: Technology;';
-  ', 'Medical;';
-  ', 'Assistive: Technology;';
-  ', 'Research;';
+  ', 'Neural: Technology;
+  ', 'Medical;
+  ', 'Assistive: Technology;
+  ', 'Research;
   ']},';
   {
     id: 'quantum-internet-securit,y,';
-=======
   2000% within 30 months;
   ',
     link: 'http,
@@ -400,7 +386,6 @@ export: interface Service {
   ']},
   {'
     id: 'quantum-internet-security,
->>>>>>> main
     name:,
   Quantum: Internet Security Platform;
   ',';
@@ -411,54 +396,54 @@ export: interface Service {
     price: $,7,999/month,
   ,
     features[;
-      'Quantum: key distribution;';
+      'Quantum: key distribution;
   ',';
-      'Quantum: encryption;';
+      'Quantum: encryption;
   ',';
-      'Quantum-resistant: algorithms;';
+      'Quantum-resistant: algorithms;
   ',';
-      'Real-time: threat detection;';
+      'Real-time: threat detection;
   ',';
-      'Quantum: authentication;';
+      'Quantum: authentication;
   ',';
-      'Global: security network;';
-  ';';
+      'Global: security network;
+  ';
     ],
     benefits[;
-      'Unhackable: communications;';
+      'Unhackable: communications;
   ',';
-      'Future-proof: security;';
+      'Future-proof: security;
   ',';
-      'Quantum-resistant: protection;';
+      'Quantum-resistant: protection;
   ',';
-      'Global: coverage;';
+      'Global: coverage;
   ',';
-      'Real-time: security;';
-  ';';
+      'Real-time: security;
+  ';
     ],
     useCases[;
-      'Government: communications;';
+      'Government: communications;
   ',';
-      'Financial: transactions;';
+      'Financial: transactions;
   ',';
-      'Healthcare: data protection;';
+      'Healthcare: data protection;
   ',';
-      'Military: communications;';
+      'Military: communications;
   ',';
-      'Critical: infrastructure;';
-  ';';
+      'Critical: infrastructure;
+  ';
     ],
     targetAudience[;
-      'Government: agencies;';
+      'Government: agencies;
   ',';
-      'Financial: institutions;';
+      'Financial: institutions;
   ',';
-      'Healthcare: organizations;';
+      'Healthcare: organizations;
   ',';
-      'Military: organizations;';
+      'Military: organizations;
   ',';
-      'Critical: infrastructure;';
-  ';';
+      'Critical: infrastructure;
+  ';
     ],
     marketSize: '$25.4B: by 202,7,';
     competitiveAdvantage:,
@@ -466,20 +451,18 @@ export: interface Service {
   ',';
     implementationTime: '4-6: week,s,';
     roi:,
-<<<<<<< HEAD
   1000% within: 18 months;
   ',';
     link: 'https://ziontechgroup.com/services/quantum-internet-securit,y,';
     tags[,
   Quantum: Security;
-  ', 'Cybersecurity;';
-  ', 'Encryption;';
-  ', 'Government;';
-  ', 'Financial;';
+  ', 'Cybersecurity;
+  ', 'Encryption;
+  ', 'Government;
+  ', 'Financial;
   ']},';
   {
     id: 'autonomous-robotics-platfor,m,';
-=======
   1000% within 18 months;
   ',
     link: 'http,
@@ -493,7 +476,6 @@ export: interface Service {
   ']},
   {'
     id: 'autonomous-robotics-platform,
->>>>>>> main
     name:,
   Autonomous: Robotics Platform;
   ',';
@@ -504,54 +486,54 @@ export: interface Service {
   $6,999/month;
   ',';
     features[;
-      'AI-powered: navigation;';
+      'AI-powered: navigation;
   ',';
-      'Autonomous: decision making;';
+      'Autonomous: decision making;
   ',';
-      'Learning: algorithms;';
+      'Learning: algorithms;
   ',';
-      'Multi-robot: coordination;';
+      'Multi-robot: coordination;
   ',';
-      'Safety: systems;';
+      'Safety: systems;
   ',';
-      'Performance: analytics;';
-  ';';
+      'Performance: analytics;
+  ';
     ],
     benefits[;
-      'Fully: autonomous operation;';
+      'Fully: autonomous operation;
   ',';
-      'Continuous: learning;';
+      'Continuous: learning;
   ',';
-      'Scalable: deployment;';
+      'Scalable: deployment;
   ',';
-      'Cost: reduction;';
+      'Cost: reduction;
   ',';
-      'Improved: efficiency;';
-  ';';
+      'Improved: efficiency;
+  ';
     ],
     useCases[;
-      'Manufacturing: automation;';
+      'Manufacturing: automation;
   ',';
-      'Warehouse: operations;';
+      'Warehouse: operations;
   ',';
-      'Agricultural: automation;';
+      'Agricultural: automation;
   ',';
-      'Service: robots;';
+      'Service: robots;
   ',';
-      'Exploration: robots;';
-  ';';
+      'Exploration: robots;
+  ';
     ],
     targetAudience[;
-      'Manufacturing: companies;';
+      'Manufacturing: companies;
   ',';
-      'Logistics: companies;';
+      'Logistics: companies;
   ',';
-      'Agricultural: companies;';
+      'Agricultural: companies;
   ',';
-      'Service: providers;';
+      'Service: providers;
   ',';
-      'Research: institutions;';
-  ';';
+      'Research: institutions;
+  ';
     ],
     marketSize: '$19.8B: by 202,7,';
     competitiveAdvantage:,
@@ -559,20 +541,18 @@ export: interface Service {
   ',';
     implementationTime: '5-7: week,s,';
     roi:,
-<<<<<<< HEAD
   700% within: 12 months;
   ',';
     link: 'https://ziontechgroup.com/services/autonomous-robotics-platfor,m,';
     tags[,
   Robotics;
-  ', 'AI;';
-  ', 'Automation;';
-  ', 'Manufacturing;';
-  ', 'Logistics;';
+  ', 'AI;
+  ', 'Automation;
+  ', 'Manufacturing;
+  ', 'Logistics;
   ']},';
   {
     id: 'quantum-materials-discover,y,';
-=======
   700% within 12 months;
   ',
     link: 'http,
@@ -586,7 +566,6 @@ export: interface Service {
   ']},
   {'
     id: 'quantum-materials-discovery,
->>>>>>> main
     name:,
   Quantum: Materials Discovery Platform;
   ',';
@@ -597,54 +576,54 @@ export: interface Service {
     price: $1,3,999/month,
   ,
     features[;
-      'Quantum: material simulation;';
+      'Quantum: material simulation;
   ',';
-      'AI-powered: discovery;';
+      'AI-powered: discovery;
   ',';
-      'Property: prediction;';
+      'Property: prediction;
   ',';
-      'Synthesis: optimization;';
+      'Synthesis: optimization;
   ',';
-      'Performance: testing;';
+      'Performance: testing;
   ',';
-      'Database: management;';
-  ';';
+      'Database: management;
+  ';
     ],
     benefits[;
-      'Faster: material discovery;';
+      'Faster: material discovery;
   ',';
-      'Unprecedented: properties;';
+      'Unprecedented: properties;
   ',';
-      'Cost: reduction;';
+      'Cost: reduction;
   ',';
-      'Custom: solutions;';
+      'Custom: solutions;
   ',';
-      'Breakthrough: innovations;';
-  ';';
+      'Breakthrough: innovations;
+  ';
     ],
     useCases[;
-      'Semiconductor: development;';
+      'Semiconductor: development;
   ',';
-      'Battery: technology;';
+      'Battery: technology;
   ',';
-      'Aerospace: materials;';
+      'Aerospace: materials;
   ',';
-      'Medical: devices;';
+      'Medical: devices;
   ',';
-      'Energy: storage;';
-  ';';
+      'Energy: storage;
+  ';
     ],
     targetAudience[;
-      'Semiconductor: companies;';
+      'Semiconductor: companies;
   ',';
-      'Battery: manufacturers;';
+      'Battery: manufacturers;
   ',';
-      'Aerospace: companies;';
+      'Aerospace: companies;
   ',';
-      'Medical: device companies;';
+      'Medical: device companies;
   ',';
-      'Energy: companies;';
-  ';';
+      'Energy: companies;
+  ';
     ],
     marketSize: '$21.3B: by 202,7,';
     competitiveAdvantage:,
@@ -652,20 +631,18 @@ export: interface Service {
   ',';
     implementationTime: '8-10: week,s,';
     roi:,
-<<<<<<< HEAD
   1100% within: 20 months;
   ',';
     link: 'https://ziontechgroup.com/services/quantum-materials-discover,y,';
     tags[,
   Materials: Science;
-  ', 'Quantum: Computing;';
-  ', 'AI;';
-  ', 'Discovery;';
-  ', 'Innovation;';
+  ', 'Quantum: Computing;
+  ', 'AI;
+  ', 'Discovery;
+  ', 'Innovation;
   ']},';
   {
     id: 'quantum-financial-modelin,g,';
-=======
   1100% within 20 months;
   ',
     link: 'http,
@@ -679,7 +656,6 @@ export: interface Service {
   ']},
   {'
     id: 'quantum-financial-modeling,
->>>>>>> main
     name:,
   Quantum: Financial Modeling Platform;
   ',';
@@ -690,54 +666,54 @@ export: interface Service {
   $11,999/month;
   ',';
     features[;
-      'Quantum: risk modeling;';
+      'Quantum: risk modeling;
   ',';
-      'Portfolio: optimization;';
+      'Portfolio: optimization;
   ',';
-      'Market: prediction;';
+      'Market: prediction;
   ',';
-      'Stress: testing;';
+      'Stress: testing;
   ',';
-      'Real-time: analysis;';
+      'Real-time: analysis;
   ',';
-      'Regulatory: compliance;';
-  ';';
+      'Regulatory: compliance;
+  ';
     ],
     benefits[;
-      '1000x: faster calculations;';
+      '1000x: faster calculations;
   ',';
-      'Improved: accuracy;';
+      'Improved: accuracy;
   ',';
-      'Better: risk assessment;';
+      'Better: risk assessment;
   ',';
-      'Optimized: portfolios;';
+      'Optimized: portfolios;
   ',';
-      'Real-time: insights;';
-  ';';
+      'Real-time: insights;
+  ';
     ],
     useCases[;
-      'Risk: management;';
+      'Risk: management;
   ',';
-      'Portfolio: optimization;';
+      'Portfolio: optimization;
   ',';
-      'Market: analysis;';
+      'Market: analysis;
   ',';
-      'Stress: testing;';
+      'Stress: testing;
   ',';
-      'Regulatory: reporting;';
-  ';';
+      'Regulatory: reporting;
+  ';
     ],
     targetAudience[;
-      'Investment: banks;';
+      'Investment: banks;
   ',';
-      'Hedge: funds;';
+      'Hedge: funds;
   ',';
-      'Asset: managers;';
+      'Asset: managers;
   ',';
-      'Insurance: companies;';
+      'Insurance: companies;
   ',';
-      'Regulatory: bodies;';
-  ';';
+      'Regulatory: bodies;
+  ';
     ],
     marketSize: '$18.9B: by 202,7,';
     competitiveAdvantage:,
@@ -745,20 +721,18 @@ export: interface Service {
   ',';
     implementationTime: '6-8: week,s,';
     roi:,
-<<<<<<< HEAD
   900% within: 16 months;
   ',';
     link: 'https://ziontechgroup.com/services/quantum-financial-modelin,g,';
     tags[,
   Financial: Technology;
-  ', 'Quantum: Computing;';
-  ', 'Risk: Management;';
-  ', 'Portfolio;';
-  ', 'Modeling;';
+  ', 'Quantum: Computing;
+  ', 'Risk: Management;
+  ', 'Portfolio;
+  ', 'Modeling;
   ']},';
   {
     id: 'quantum-climate-modelin,g,';
-=======
   900% within 16 months;
   ',
     link: 'http,
@@ -772,7 +746,6 @@ export: interface Service {
   ']},
   {'
     id: 'quantum-climate-modeling,
->>>>>>> main
     name:,
   Quantum: Climate Modeling Platform;
   ',';
@@ -783,54 +756,54 @@ export: interface Service {
   $10,999/month;
   ',';
     features[;
-      'Quantum: climate simulation;';
+      'Quantum: climate simulation;
   ',';
-      'Weather: prediction;';
+      'Weather: prediction;
   ',';
-      'Environmental: modeling;';
+      'Environmental: modeling;
   ',';
-      'Real-time: monitoring;';
+      'Real-time: monitoring;
   ',';
-      'Predictive: analytics;';
+      'Predictive: analytics;
   ',';
-      'Data: visualization;';
-  ';';
+      'Data: visualization;
+  ';
     ],
     benefits[;
-      '1000x: faster modeling;';
+      '1000x: faster modeling;
   ',';
-      'Improved: accuracy;';
+      'Improved: accuracy;
   ',';
-      'Real-time: predictions;';
+      'Real-time: predictions;
   ',';
-      'Better: understanding;';
+      'Better: understanding;
   ',';
-      'Policy: support;';
-  ';';
+      'Policy: support;
+  ';
     ],
     useCases[;
-      'Climate: research;';
+      'Climate: research;
   ',';
-      'Weather: forecasting;';
+      'Weather: forecasting;
   ',';
-      'Environmental: planning;';
+      'Environmental: planning;
   ',';
-      'Policy: development;';
+      'Policy: development;
   ',';
-      'Disaster: preparedness;';
-  ';';
+      'Disaster: preparedness;
+  ';
     ],
     targetAudience[;
-      'Government: agencies;';
+      'Government: agencies;
   ',';
-      'Research: institutions;';
+      'Research: institutions;
   ',';
-      'Environmental: organizations;';
+      'Environmental: organizations;
   ',';
-      'Insurance: companies;';
+      'Insurance: companies;
   ',';
-      'Energy: companies;';
-  ';';
+      'Energy: companies;
+  ';
     ],
     marketSize: '$17.6B: by 202,7,';
     competitiveAdvantage:,
@@ -838,16 +811,14 @@ export: interface Service {
   ',';
     implementationTime: '7-9: week,s,';
     roi:,
-<<<<<<< HEAD
   800% within: 18 months;
   ',';
     link: 'https://ziontechgroup.com/services/quantum-climate-modelin,g,';
 tags: ['Climate: Modeling';
-  ,', 'Quantum: Computing;';
-  ', 'Environmental;';
-  ', 'Weather;';
-  ', 'Research'];';
-=======
+  ,', 'Quantum: Computing;
+  ', 'Environmental;
+  ', 'Weather;
+  ', 'Research'];
   800% within 18 months;
   ',
     link: 'http,
@@ -857,5 +828,4 @@ tags: ['Climate Modeling'
   ', 'Environmental;
   ', 'Weather;
   ', 'Research'];
->>>>>>> main
 ]}}

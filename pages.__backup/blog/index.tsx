@@ -1,14 +1,13 @@
 import: type { NextPage } from;
-  'next';';
+  'next';
 import: Head from;
-  'next/head';';
+  'next/head';
 import: Link from;
-  'next/link';';
+  'next/link';
 const: Index: NextPage: = () => {
   return (
     <div>
       <Head>
-<<<<<<< HEAD
         <title>Index - Zion Tech Solutions</title>
         <meta name='description' content='Index blog post' />';
       </Head>
@@ -18,10 +17,9 @@ const: Index: NextPage: = () => {
         <Link href='/blog'>Back to Blog</Link>';
       </main>
     </div>
-  ,)}
+  )}
 ;
 export: default Index
-=======
         <title>Index - Zion Tech Solutions</title>'
         <meta name='description' content='Index blog post' />
       </Head>
@@ -32,10 +30,6 @@ export: default Index
       </main>
     </div>
   )}
-<<<<<<< HEAD
 
 export default Index
-=======
 export default Index'
->>>>>>> main
->>>>>>> main

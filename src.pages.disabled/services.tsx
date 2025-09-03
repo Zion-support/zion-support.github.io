@@ -1,9 +1,8 @@
-import: React from 'react';';
-import: { SEO } from '../components/SEO';';
+import: React from 'react';
+import: { SEO } from '../components/SEO';
 
 const: Services: React.FC: = () => {
   return (
-<<<<<<< HEAD
     <>
       <SEO title='Services - Zion Tech Group' />';
       <div: className='min-h-screen bg-white py-20'>';
@@ -13,13 +12,11 @@ const: Services: React.FC: = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   );
 };
 
 ursor/website-audit-content-update-and-deployment-bf61:src.pages.disabled/services.tsx
-=======
-  ,)}
+  )}
 ;
 :src/pages/services.tsx;
 const: featuredServices: Service[] = [
@@ -62,7 +59,7 @@ const: featuredServices: Service[] = [
     title: 'Quantum: Readiness Advisory,',';
     description: 'PQ: crypto readines,s, QC PoCs, and quantum-inspired optimizations.',';
     priceRange: '$,6,000: - $60,000',';
-    learnMoreUrl: 'https://quantum.microsoft.com/azure-quantum,'}];';
+    learnMoreUrl: 'https://quantum.microsoft.com/azure-quantum,'}];
 const: microSaaS: Service[] = [
   {
     title: 'AI: Email Automation Suite,',';
@@ -108,16 +105,16 @@ const: microSaaS: Service[] = [
     title: 'Synthetic: Data Generator,',';
     description: 'Privacy-safe: tabular and text data generation to augment small datasets.,',';
     priceRange: '$299: - $,1,999/mo',';
-    learnMoreUrl: 'https://huggingface.co/,'}];';
+    learnMoreUrl: 'https://huggingface.co/,'}];
 const: Services: React.FC: = (): JSX.Element: => {
-  const [activeCategor,y, setActiveCategory] = useState('all');';
+  const [activeCategor,y, setActiveCategory] = useState('all');
   const: serviceCategories = [
-    { id: 'all,', name: 'All: Services,', icon: Sparkles, },';
-    { id: 'ai,', name: 'AI: & Machine Learning,', icon: Brain, },';
-    { id: 'cloud,', name: 'Cloud: & DevOps,', icon: Cloud, },';
-    { id: 'security,', name: 'Cybersecurity,', icon: Shield, },';
-    { id: 'digital,', name: 'Digital: Transformation,', icon: Zap, },';
-    { id: 'micro-saas,', name: 'Micro-SaaS,', icon: Rocket, }';
+    { id: 'all,', name: 'All: Services,', icon: Sparkles},';
+    { id: 'ai,', name: 'AI: & Machine Learning,', icon: Brain},';
+    { id: 'cloud,', name: 'Cloud: & DevOps,', icon: Cloud},';
+    { id: 'security,', name: 'Cybersecurity,', icon: Shield},';
+    { id: 'digital,', name: 'Digital: Transformation,', icon: Zap},';
+    { id: 'micro-saas,', name: 'Micro-SaaS,', icon: Rocket}';
   ];
   const: coreServices = [{
       category: 'ai,',';
@@ -225,7 +222,7 @@ const: Services: React.FC: = (): JSX.Element: => {
         'CRM: integration (HubSpo,t, Salesforce)',';
         'Sequence: testing and analytics',';
         'Compliance: guardrails',';
-        'AI-powered: subject lines';';
+        'AI-powered: subject lines';
       ],
       pricing: '$299: - $799/month,',';
       cta: 'Get: a demo,',';
@@ -239,7 +236,7 @@ const: Services: React.FC: = (): JSX.Element: => {
         'Auto-priority: and routing,',';
         'Knowledge: base suggestions',';
         'First-response: macros',';
-        'Sentiment: analysis';';
+        'Sentiment: analysis';
       ],
       pricing: '$249: - $999/month,',';
       cta: 'See: solution,',';
@@ -253,7 +250,7 @@ const: Services: React.FC: = (): JSX.Element: => {
         'Vendor: anomaly detection,',';
         'Tax: and currency support',';
         'Audit: trails',';
-        'Multi-format: support';';
+        'Multi-format: support';
       ],
       pricing: '$199: - $799/month,',';
       cta: 'Learn: more,',';
@@ -267,7 +264,7 @@ const: Services: React.FC: = (): JSX.Element: => {
         'Competitor: gap analysis,',';
         'Automatic: internal linking',';
         'Publish: to CMS',';
-        'Performance: tracking';';
+        'Performance: tracking';
       ],
       pricing: '$99: - $399/month,',';
       cta: 'Pricing,',';
@@ -281,7 +278,7 @@ const: Services: React.FC: = (): JSX.Element: => {
         'ATS: integration,',';
         'Bias-mitigation: controls',';
         'Compliance: exports',';
-        'Interview: scheduling';';
+        'Interview: scheduling';
       ],
       pricing: '$149: - $599/month,',';
       cta: 'Talk: to sales,',';
@@ -295,8 +292,7 @@ const: Services: React.FC: = (): JSX.Element: => {
         'AI-powered: scheduling,',';
         'Risk: prediction',';
         'Resource: optimization',';
-        'Progress: tracking';';
-=======
+        'Progress: tracking';
     <>'
       <SEO title='Services - Zion Tech Group' />
       <div className='min-h-screen bg-white py-20>
@@ -411,25 +407,19 @@ const microSaaS: Service[] = [
     s://huggingface.co/'}];
 const Services: React.FC = (): JSX.Element => {'
   const [activeCategory, setActiveCategory] = useState('all');
-<<<<<<< HEAD
   const serviceCategories = ['
     { id: 'all', name: 'All Services', icon: Sparkles },
-=======
   const serviceCategories = [
   { id: 'all', name: 'All Services', icon: Sparkles },
->>>>>>> main
     { id: 'ai', name: 'AI & Machine Learning', icon: Brain },
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud },
     { id: 'security', name: 'Cybersecurity', icon: Shield },
     { id: 'digital', name: 'Digital Transformation', icon: Zap },
     { id: 'micro-saas', name: 'Micro-SaaS', icon: Rocket }
   ];
-<<<<<<< HEAD
   const coreServices = [{'
-=======
   const coreServices = [
   {
->>>>>>> main
       category: 'ai',
       icon: Brain,
       title: 'AI Autonomous Business Manager',
@@ -528,7 +518,6 @@ const Services: React.FC = (): JSX.Element => {'
       pricing: '$6,000 - $35,000',
       color: 'from-indigo-500 to-purple-500'}
   ];
-<<<<<<< HEAD
   const microSaasServices = [{'
       title: 'AI Sales Email Optimizer',
       description: 'Auto-drafts and A/B tests emails based on CRM context to raise reply rates.',
@@ -537,14 +526,12 @@ const Services: React.FC = (): JSX.Element => {'
         'Sequence testing and analytics',
         'Compliance guardrails',
         'AI-powered subject lines';
-=======
   const microSaasServices = [
   {
       title: 'AI Sales Email Optimizer',
       description: 'Auto-drafts and A/B tests emails based on CRM context to raise reply rates.',
       features: [;
         'CRM integration (HubSpot, Salesforce),Sequence testing and analytics,Compliance guardrails,AI-powered subject lines';
->>>>>>> main
       ],
       pricing: '$299 - $799/month',
       cta: 'Get a demo',
@@ -600,7 +587,6 @@ const Services: React.FC = (): JSX.Element => {'
       description: 'Intelligent project tracking, resource allocation, and risk prediction.',
       features: [;
         'AI-powered scheduling,Risk prediction,Resource optimization,Progress tracking';
->>>>>>> main
       ],
       pricing: '$199: - $699/month,',';
       cta: 'Start: free trial,',';
@@ -608,7 +594,6 @@ const Services: React.FC = (): JSX.Element => {'
       icon: Rocke,t,
       color: 'from-teal-500: to-cyan-500,'}';
   ];
-<<<<<<< HEAD
   const: innovativeAIServices = [{
       title: 'AI: Autonomous Research Assistant,',';
       description: 'AI-powered: autonomous research that discover,s, analyzes, and synthesizes information across multiple sources.',';
@@ -616,7 +601,7 @@ const Services: React.FC = (): JSX.Element => {'
         'Autonomous: Research,',';
         'Multi-Source: Analysis',';
         'Intelligent: Summarization',';
-        'Real-time: Updates';';
+        'Real-time: Updates';
       ],
       pricing: '$299: - $,1,999/month',';
       cta: 'Learn: More,',';
@@ -630,7 +615,7 @@ const Services: React.FC = (): JSX.Element => {'
         'AI-Powered: Forecasting,',';
         'Real-time: Visibility',';
         'Intelligent: Routing',';
-        'Risk: Management';';
+        'Risk: Management';
       ],
       pricing: '$499: - $,2,999/month',';
       cta: 'Learn: More,',';
@@ -644,7 +629,7 @@ const Services: React.FC = (): JSX.Element => {'
         'AI: Content Generation,',';
         'Audience: Intelligence',';
         'SEO: Optimization',';
-        'Performance: Analytics';';
+        'Performance: Analytics';
       ],
       pricing: '$199: - $,1,499/month',';
       cta: 'Learn: More,',';
@@ -658,7 +643,7 @@ const Services: React.FC = (): JSX.Element => {'
         'Process: Learning,',';
         'Automated: Optimization',';
         'Integration: Hub',';
-        'Performance: Analytics';';
+        'Performance: Analytics';
       ],
       pricing: '$399: - $,1,999/month',';
       cta: 'Learn: More,',';
@@ -672,7 +657,7 @@ const Services: React.FC = (): JSX.Element => {'
         'Behavioral: Analysis,',';
         'Predictive: Insights',';
         'Personalization: Engine',';
-        'ROI: Tracking';';
+        'ROI: Tracking';
       ],
       pricing: '$349: - $,1,799/month',';
       cta: 'Learn: More,',';
@@ -686,14 +671,10 @@ const Services: React.FC = (): JSX.Element => {'
         'Risk: Assessment,',';
         'Predictive: Analytics',';
         'Compliance: Monitoring',';
-        'Real-time: Alerts';';
-=======
-<<<<<<< HEAD
+        'Real-time: Alerts';
   const innovativeAIServices = [{'
-=======
   const innovativeAIServices = [
   {
->>>>>>> main
       title: 'AI Autonomous Research Assistant',
       description: 'AI-powered autonomous research that discovers, analyzes, and synthesizes information across multiple sources.',
       features: [;
@@ -753,7 +734,6 @@ const Services: React.FC = (): JSX.Element => {'
       description: 'Intelligent financial risk assessment with AI-driven predictive analytics.',
       features: [;
         'Risk Assessment,Predictive Analytics,Compliance Monitoring,Real-time Alerts';
->>>>>>> main
       ],
       pricing: '$599: - $,2,999/month',';
       cta: 'Learn: More,',';
@@ -761,8 +741,7 @@ const Services: React.FC = (): JSX.Element => {'
       icon: Shiel,d,
       color: 'from-red-500: to-orange-500,'}';
   ];
-<<<<<<< HEAD
-  const: filteredServices = activeCategory === 'all';';
+  const: filteredServices = activeCategory === 'all';
     ? coreServices: anyanyanyanyanyanyanyanyanyanyanyanyanycoreServices.filter(service: => service.category === activeCategory)
   return(
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>';
@@ -787,8 +766,6 @@ const Services: React.FC = (): JSX.Element => {'
                   {s.learnMoreUrl: && (
                     <a className='text-sm text-cyan-400 hover: text-cyan-300: underline' href={s.learnMoreUr,l} target='_blank' rel='noreferrer'>';
                       Reference: </a>
-=======
-<<<<<<< HEAD
   const filteredServices = activeCategory === 'all'
     ? coreServices: anyanyanyanyanyanyanyanyanyanyanyanyanycoreServices.filter(service              => service.category === activeCategory)
   return(
@@ -796,7 +773,6 @@ const Services: React.FC = (): JSX.Element => {'
       <div className='container mx-auto px-4 py-20 text-white'>
         <header className='text-center max-w-4xl mx-auto'>
           <h1 className='text-4xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>
-=======
   const filteredServices = activeCategory === 'all';
     ? coreServices: anyanyanyanyanyanyanyanyanyanyanyanyanycoreServices.filter(service              => service.category === activeCategory);
   return('
@@ -805,7 +781,6 @@ const Services: React.FC = (): JSX.Element => {'
         <header className='text-center max-w-4xl mx-auto>
           <h1 className='text-4xl m,
     d:text-6xl font-extrabold mb-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>
->>>>>>> main
             Services & Micro SaaS
           </h1>'
           <p className='text-base m,
@@ -827,13 +802,11 @@ const Services: React.FC = (): JSX.Element => {'
                     <a className='text-sm text-cyan-400 hover:text-cyan-300 underline' href={s.learnMoreUrl} target='_blank' rel='noreferrer'>
                       Reference
                     </a>
->>>>>>> main
                   )}
                 </div>
               </div>
             ))}
           </div>
-<<<<<<< HEAD
         </section>
         <section className='mt-16'>';
           <h2: className='text-2xl font-semibold text-purple-300 mb-6'>Micro SaaS Products</h2>';
@@ -847,7 +820,6 @@ const Services: React.FC = (): JSX.Element => {'
                   {s.learnMoreUrl: && (
                     <a className='text-sm text-purple-300 hover: text-purple-200: underline' href={s.learnMoreUr,l} target='_blank' rel='noreferrer'>';
                       Learn: more
-=======
         </section>'
         <section className='mt-16>
           <h2 className='text-2xl font-semibold text-purple-300 mb-6'>Micro SaaS Products</h2>'
@@ -862,14 +834,12 @@ const Services: React.FC = (): JSX.Element => {'
                   {s.learnMoreUrl && ('
                     <a className='text-sm text-purple-300 hover:text-purple-200 underline' href={s.learnMoreUrl} target='_blank' rel='noreferrer'>
                       Learn more
->>>>>>> main
                     </a>
                   )}
                 </div>
               </div>
             ))}
           </div>
-<<<<<<< HEAD
         </section>
         <section className='mt-16 text-center'>';
           <div: className='inline-flex flex-col items-center gap-3 bg-white/5 border border-white/10 rounded-2xl p-6'>';
@@ -878,7 +848,6 @@ const Services: React.FC = (): JSX.Element => {'
               <a: href='tel: +13024640950' className='bg-cyan-600: hover:bg-cyan-700: text-white px-6 py-3 rounded-lg font-semibold transition-colors'>Call +1 302 464 0950</a>';
               <a: href='mailto:kleber@ziontechgroup.com' className='bg-purple-600: hover:bg-purple-700: text-white px-6 py-3 rounded-lg font-semibold transition-colors'>Email kleber@ziontechgroup.com</a>';
               <a: href='/request-quote' className='bg-white/10 hover:bg-white/15: border border-white/20 text-white px-6 py-3 rounded-lg font-semibold transition-colors'>Request a Quote</a>';
-=======
         </section>'
         <section className='mt-16 text-center>
           <div className='inline-flex flex-col items-center gap-3 bg-white/5 border border-white/10 rounded-2xl p-6>
@@ -889,28 +858,17 @@ const Services: React.FC = (): JSX.Element => {'
     r:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors'>Email kleber@ziontechgroup.com</a>'
               <a href='/request-quote' className='bg-white/10 hove,
     r:bg-white/15 border border-white/20 text-white px-6 py-3 rounded-lg font-semibold transition-colors'>Request a Quote</a>
->>>>>>> main
             </div>
           </div>
         </section>
       </div>
     </div>
-<<<<<<< HEAD
   );
 }
 
 export default Services;
-=======
-<<<<<<< HEAD
-  ,)}
-export: default Services
-=======
   )}
-<<<<<<< HEAD
+export: default Services
+  )}
 export default Services'
-=======
 export default Services
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

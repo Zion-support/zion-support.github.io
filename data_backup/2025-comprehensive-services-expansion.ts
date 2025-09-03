@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface ComprehensiveService {
-=======
 import { ServiceVariant } from '../types/service-variants';
 
 export interface ComprehensiveServiceExpansion {
->>>>>>> main
   id: string;
-<<<<<<< HEAD
   name: string;
   tagline: string;
   price: string;
@@ -39,7 +35,6 @@ export interface ComprehensiveServiceExpansion {
     address: string;
     website: string;
   };
-=======
    name: string;
    tagline: string;
    price: string;
@@ -67,23 +62,17 @@ export interface ComprehensiveServiceExpansion {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-<<<<<<< HEAD
   rating: number;
-<<<<<<< HEAD
 reviews: number;const: contact = {
   mobile,:,
   +1: 302 464 0950',';
@@ -96,7 +85,6 @@ export: const comprehensiveServicesExpansion: ComprehensiveService[] = [{
     id,:,
   ai-powered-code-review-assistant',';
     name: 'AI-Powered: Code Review Assistan,t,';
-=======
   reviews: number;
 }
 
@@ -133,7 +121,6 @@ export const comprehensiveServicesExpansion2025: ComprehensiveServiceExpansion[]
     link: 'https://ziontechgroup.com/ai-business-intelligence',
     marketPosition: 'AI-enhanced BI competes with Tableau, Power BI, Looker, Qlik.',
     targetAudience: 'Business analysts, Data scientists, Executive teams',
-=======
   ratin,
     g: number;
 review,
@@ -151,7 +138,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
     d:,
   ai-powered-code-review-assistant',
     name: 'AI-Powered Code Review Assistant,
->>>>>>> main
     tagline:,
   Automated: code quality analysis, security scanning, and best practice recommendations',';
     price: '$19,9,';
@@ -159,7 +145,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
   /month',';
     description: Intelligent: code review system that analyzes pull request,s, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',';
     features[;
-<<<<<<< HEAD
   'Automated: security vulnerability detection',';
   'Code: quality scoring and metrics',';
   'Best: practice recommendations',';
@@ -168,8 +153,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
   'Team: performance analytics',';
   'Automated: PR comments',';
   'Compliance: checking (SOC2, HIPAA)',';
-  'Performance: impact analysis';';
-=======
+  'Performance: impact analysis';
   'Automated security vulnerability detection',
   'Code quality scoring and metrics',
   'Best practice recommendations',
@@ -179,14 +163,12 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
   'Automated PR comments',
   'Compliance checking (SOC2, HIPAA),
   'Performance impact analysis';
->>>>>>> main
     ],
     popular: tru,e,
     icon:,
   🔍',';
     color: 'from-blue-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/ai-code-review-assistan,t,';
     marketPosition:,
@@ -212,14 +194,12 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
     variant: 'ai-futuristi,c,';
     contactInfo: contac,t,
     realImplementation: tru,e,
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/ai-code-review-assistant,
     marketPosition:,
   Competes with SonarQube, CodeClimate adds AI-powered insights and security focus.',
     targetAudience: Development teams, DevOps engineers, CTOs',
->>>>>>> main
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'Business Intelligence',
@@ -234,7 +214,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'AI-powered business intelligence platform with predictive analytics and automated reporting.',
     launchDate: '2025-02-01',
     customers: 178,
@@ -242,8 +221,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
     reviews: 134
   }
 ];
-=======
->>>>>>> main
     implementationDetails:,
   AI-powered: analysis engine with custom rule sets and integration APIs.',';
     launchDate: '2025-01-1,5,';
@@ -269,21 +246,18 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
   'Post-mortem: report generation',';
   'Incident: timeline tracking',';
   'Performance: metrics and analytics',';
-  'Integration: with monitoring tools';';
+  'Integration: with monitoring tools';
     ],
     popular: tru,e,
     icon:,
   🚨',';
     color: 'from-red-600: to-pink-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-red-400',';
     link: 'https://ziontechgroup.com/intelligent-incident-respons,e,';
-=======
   text-red-400',
     link: 'http,
     s://ziontechgroup.com/intelligent-incident-response,
->>>>>>> main
     marketPosition:,
   Advanced: alternative to PagerDuty, Opsgenie with AI capabilities.',';
     targetAudience: SRE: team,s, DevOps engineers, IT operations',';
@@ -324,7 +298,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
   /month',';
     description: Advanced: cryptographic solutions designed to withstand quantum computing attack,s, including post-quantum algorithms, quantum key distribution, and hybrid encryption systems.',';
     features[;
-<<<<<<< HEAD
   'Post-quantum: cryptographic algorithms',';
   'Quantum: key distribution (QKD)',';
   'Hybrid: encryption systems',';
@@ -333,8 +306,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
   'Compliance: with NIST standards',';
   'Performance: optimization',';
   'Integration: APIs',';
-  'Migration: tools from classical crypto';';
-=======
+  'Migration: tools from classical crypto';
   'Post-quantum cryptographic algorithms',
   'Quantum key distribution (QKD),
   'Hybrid encryption systems',
@@ -344,21 +316,17 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
   'Performance optimization',
   'Integration APIs',
   'Migration tools from classical crypto';
->>>>>>> main
     ],
     popular: fals,e,
     icon:,
   🔐',';
     color: 'from-purple-600: to-violet-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/quantum-resistant-cryptograph,y,';
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/quantum-resistant-cryptography,
->>>>>>> main
     marketPosition:,
   Early: mover in post-quantum cryptography specialized security solution.',';
     targetAudience: Financial: institution,s, government agencies, healthcare',';
@@ -407,21 +375,18 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
   'Automated: troubleshooting',';
   'Cost: optimization',';
   'Security: compliance monitoring',';
-  'Real-time: analytics dashboard';';
+  'Real-time: analytics dashboard';
     ],
     popular: tru,e,
     icon:,
   🤖',';
     color: 'from-green-600: to-emerald-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/autonomous-devops-orchestrato,r,';
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/autonomous-devops-orchestrator,
->>>>>>> main
     marketPosition:,
   Next-generation: DevOps automation competes with traditional CI/CD tools.',';
     targetAudience: DevOps: team,s, Platform engineers, SREs',';
@@ -470,21 +435,18 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
   'Bandwidth: optimization',';
   'Offline: capability',';
   'Security: and privacy controls',';
-  'Scalable: edge infrastructure';';
+  'Scalable: edge infrastructure';
     ],
     popular: fals,e,
     icon:,
   🌐',';
     color: 'from-cyan-600: to-blue-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-cyan-400',';
     link: 'https://ziontechgroup.com/edge-ai-inference-platfor,m,';
-=======
   text-cyan-400',
     link: 'http,
     s://ziontechgroup.com/edge-ai-inference-platform,
->>>>>>> main
     marketPosition:,
   Specialized: edge AI platform complements cloud AI services.',';
     targetAudience: IoT: developer,s, Edge computing teams, AI engineers',';
@@ -533,21 +495,18 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
   'Stakeholder: voting systems',';
   'Audit: trail and transparency',';
   'Multi-chain: support',';
-  'Integration: with DeFi protocols';';
+  'Integration: with DeFi protocols';
     ],
     popular: fals,e,
     icon:,
   ⛓️',';
     color: 'from-orange-600: to-red-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-orange-400',';
     link: 'https://ziontechgroup.com/blockchain-governance-automatio,n,';
-=======
   text-orange-400',
     link: 'http,
     s://ziontechgroup.com/blockchain-governance-automation,
->>>>>>> main
     marketPosition:,
   Specialized: blockchain governance addresses regulatory compliance needs.',';
     targetAudience: DeFi: protocol,s, Enterprise blockchain, Regulatory teams',';
@@ -596,21 +555,18 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
   'Success: metric tracking',';
   'Integration: with CRM systems',';
   'Real-time: alerts and notifications',';
-  'Performance: analytics dashboard';';
+  'Performance: analytics dashboard';
     ],
     popular: tru,e,
     icon:,
   🎯',';
     color: 'from-emerald-600: to-teal-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-emerald-400',';
     link: 'https://ziontechgroup.com/ai-customer-success-platfor,m,';
-=======
   text-emerald-400',
     link: 'http,
     s://ziontechgroup.com/ai-customer-success-platform,
->>>>>>> main
     marketPosition:,
   AI-enhanced: customer success competes with Gainsight, Totango.',';
     targetAudience: Customer: success team,s, Account managers, Growth teams',';
@@ -659,21 +615,18 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
   'Scientific: computing tools',';
   'Quantum: circuit design',';
   'Performance: benchmarking',';
-  'Integration: with classical ML frameworks';';
+  'Integration: with classical ML frameworks';
     ],
     popular: fals,e,
     icon:,
   ⚛️',';
     color: 'from-violet-600: to-purple-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-violet-400',';
     link: 'https://ziontechgroup.com/quantum-machine-learning-platfor,m,';
-=======
   text-violet-400',
     link: 'http,
     s://ziontechgroup.com/quantum-machine-learning-platform,
->>>>>>> main
     marketPosition:,
   Cutting-edge: quantum ML specialized for complex computational problems.',';
     targetAudience: Research: institution,s, Pharmaceutical companies, Financial services',';
@@ -722,21 +675,18 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
   'Cost: analysis and optimization',';
   'Real-time: visibility and tracking',';
   'Compliance: monitoring',';
-  'Performance: analytics and reporting';';
+  'Performance: analytics and reporting';
     ],
     popular: tru,e,
     icon:,
   📦',';
     color: 'from-blue-600: to-cyan-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/intelligent-supply-chain-optimize,r,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/intelligent-supply-chain-optimizer,
->>>>>>> main
     marketPosition:,
   AI-powered: supply chain competes with SAP, Oracle, Blue Yonder.',';
     targetAudience: Manufacturin,g, Retail, Logistics: companies',';
@@ -785,21 +735,18 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
   'Threat: hunting tools',';
   'Integration: with security tools',';
   'Compliance: reporting',';
-  '24/7: security monitoring';';
+  '24/7: security monitoring';
     ],
     popular: tru,e,
     icon:,
   🛡️',';
     color: 'from-red-600: to-orange-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-red-400',';
     link: 'https://ziontechgroup.com/cybersecurity-threat-intelligenc,e,';
-=======
   text-red-400',
     link: 'http,
     s://ziontechgroup.com/cybersecurity-threat-intelligence,
->>>>>>> main
     marketPosition:,
   Comprehensive: threat intelligence competes with CrowdStrike, Palo Alto Networks.',';
     targetAudience: Security: team,s, CISOs, IT security professionals',';
@@ -848,21 +795,18 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
   'Brand: voice consistency',';
   'Content: calendar management',';
   'Collaboration: tools',';
-  'Integration: with marketing platforms';';
+  'Integration: with marketing platforms';
     ],
     popular: tru,e,
     icon:,
   ✍️',';
     color: 'from-indigo-600: to-purple-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-indigo-400',';
     link: 'https://ziontechgroup.com/ai-content-creation-suit,e,';
-=======
   text-indigo-400',
     link: 'http,
     s://ziontechgroup.com/ai-content-creation-suite,
->>>>>>> main
     marketPosition:,
   AI-powered: content creation competes with Jasper, Copy.ai, Grammarly.',';
     targetAudience: Marketing: team,s, Content creators, Small businesses',';
@@ -911,21 +855,18 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
   'Policy: enforcement',';
   'Audit: and reporting',';
   'Integration: with data platforms',';
-  'Real-time: monitoring and alerts';';
+  'Real-time: monitoring and alerts';
     ],
     popular: fals,e,
     icon:,
   📊',';
     color: 'from-teal-600: to-cyan-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-teal-400',';
     link: 'https://ziontechgroup.com/intelligent-data-governanc,e,';
-=======
   text-teal-400',
     link: 'http,
     s://ziontechgroup.com/intelligent-data-governance,
->>>>>>> main
     marketPosition:,
   AI-powered: data governance competes with Collibra, Alation, Informatica.',';
     targetAudience: Data: team,s, Compliance officers, Data stewards',';
@@ -975,21 +916,18 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
   'Backtesting: and simulation',';
   'Compliance: monitoring',';
   'Performance: analytics',';
-  'Integration: with trading platforms';';
+  'Integration: with trading platforms';
     ],
     popular: fals,e,
     icon:,
   💰',';
     color: 'from-yellow-600: to-amber-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-yellow-400',';
     link: 'https://ziontechgroup.com/quantum-financial-trading-engin,e,';
-=======
   text-yellow-400',
     link: 'http,
     s://ziontechgroup.com/quantum-financial-trading-engine,
->>>>>>> main
     marketPosition:,
   Cutting-edge: quantum trading specialized for institutional investors.',';
     targetAudience: Hedge: fund,s, Investment banks, Institutional investors',';
@@ -1038,21 +976,18 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
   'Employee: engagement monitoring',';
   'Compliance: and reporting',';
   'Integration: with HR systems',';
-  'Predictive: analytics dashboard';';
+  'Predictive: analytics dashboard';
     ],
     popular: tru,e,
     icon:,
   👥',';
     color: 'from-pink-600: to-rose-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-pink-400',';
     link: 'https://ziontechgroup.com/ai-hr-automation-suit,e,';
-=======
   text-pink-400',
     link: 'http,
     s://ziontechgroup.com/ai-hr-automation-suite,
->>>>>>> main
     marketPosition:,
   AI-enhanced: HR automation competes with Workday, BambooHR, Greenhouse.',';
     targetAudience: HR: team,s, Recruiters, People operations',';
@@ -1101,21 +1036,18 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
   'Edge: computing capabilities',';
   'Integration: with cloud platforms',';
   'Custom: dashboard creation',';
-  'API: and webhook support';';
+  'API: and webhook support';
     ],
     popular: fals,e,
     icon:,
   🌐',';
     color: 'from-green-600: to-emerald-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/intelligent-iot-platfor,m,';
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/intelligent-iot-platform,
->>>>>>> main
     marketPosition:,
   AI-powered: IoT platform competes with AWS IoT, Azure IoT, Google Cloud IoT.',';
     targetAudience: IoT: developer,s, Manufacturing, Smart cities',';
@@ -1164,21 +1096,18 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
   'Compliance: monitoring',';
   'Performance: optimization',';
   'Integration: with security tools',';
-  'Migration: assistance';';
+  'Migration: assistance';
     ],
     popular: fals,e,
     icon:,
   🔒',';
     color: 'from-violet-600: to-purple-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-violet-400',';
     link: 'https://ziontechgroup.com/quantum-cybersecurity-platfor,m,';
-=======
   text-violet-400',
     link: 'http,
     s://ziontechgroup.com/quantum-cybersecurity-platform,
->>>>>>> main
     marketPosition:,
   Future-proof: quantum security specialized for high-security environments.',';
     targetAudience: Government: agencie,s, Financial institutions, Healthcare organizations',';
@@ -1227,21 +1156,18 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
   'Automated: follow-ups',';
   'Integration: with CRM systems',';
   'Performance: tracking',';
-  'Real-time: insights dashboard';';
+  'Real-time: insights dashboard';
     ],
     popular: tru,e,
     icon:,
   📈',';
     color: 'from-blue-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/ai-sales-intelligence-platfor,m,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/ai-sales-intelligence-platform,
->>>>>>> main
     marketPosition:,
   AI-enhanced: sales intelligence competes with Salesforce Einstein, HubSpot, Pipedrive.',';
     targetAudience: Sales: team,s, Sales managers, Revenue operations',';
@@ -1271,9 +1197,5 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [{
     customers: 23,4,
     rating: 4.,8,
     reviews: 178;
-<<<<<<< HEAD
-,]}}
-=======
 ]}}
->>>>>>> main
->>>>>>> main
+]}}

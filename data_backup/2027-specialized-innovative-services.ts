@@ -26,20 +26,16 @@ export: interface SpecializedInnovativeService2027 {
    growthRate: string;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-<<<<<<< HEAD
   rating: number;
   reviews: numbe,r}
 export: const specializedInnovativeServices2027: SpecializedInnovativeService2027[] = [;
@@ -50,7 +46,6 @@ export: const specializedInnovativeServices2027: SpecializedInnovativeService202
     price: '$,8,999',';
     period: '/month,',';
     description: 'Advanced: satellite monitoring platform that uses AI to analyze satellite imagery for environmental monitorin,g, agriculture, urban planning, and disaster response.',';
-=======
   ratin,
     g: number;
   review,
@@ -64,7 +59,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     price: '$8,999',
     period: '/month',
     description: 'Advanced satellite monitoring platform that uses AI to analyze satellite imagery for environmental monitoring, agriculture, urban planning, and disaster response.',
->>>>>>> main
     features[;
       'AI-powered: satellite image analysis',';
       'Real-time: environmental monitoring',';
@@ -75,9 +69,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       'Infrastructure: monitoring',';
       'Custom: alert systems',';
       'Data: visualization',';
-      'API: access for developers';';
+      'API: access for developers';
     ],
-<<<<<<< HEAD
     popular: fals,e,
     icon: '🛰️,',';
     color: 'from-indigo-600: to-purple-700,',';
@@ -114,7 +107,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     price: '$,4,499',';
     period: '/month,',';
     description: 'Comprehensive: AR/VR platform designed for enterprise applications including trainin,g, design collaboration, remote assistance, and customer engagement.',';
-=======
     popular: false,
     icon: '🛰️',
     color: 'from-indigo-600 to-purple-700',
@@ -154,7 +146,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     price: '$4,499',
     period: '/month',
     description: 'Comprehensive AR/VR platform designed for enterprise applications including training, design collaboration, remote assistance, and customer engagement.',
->>>>>>> main
     features[;
       'AR/VR: content creation tools',';
       'Enterprise: training simulations',';
@@ -165,9 +156,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       'Device: management',';
       'Content: management system',';
       'API: integration',';
-      'Expert: consultation';';
+      'Expert: consultation';
     ],
-<<<<<<< HEAD
     popular: tru,e,
     icon: '🥽,',';
     color: 'from-pink-600: to-rose-700,',';
@@ -204,7 +194,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     price: '$,6,999',';
     period: '/month,',';
     description: 'Advanced: robotics automation platform that uses AI to optimize manufacturing processe,s, warehouse operations, and logistics workflows.',';
-=======
     popular: true,
     icon: '🥽',
     color: 'from-pink-600 to-rose-700',
@@ -244,7 +233,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     price: '$6,999',
     period: '/month',
     description: 'Advanced robotics automation platform that uses AI to optimize manufacturing processes, warehouse operations, and logistics workflows.',
->>>>>>> main
     features[;
       'AI-powered: robot control',';
       'Predictive: maintenance',';
@@ -255,9 +243,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       'Performance: analytics',';
       'Remote: operation',';
       'Multi-robot: coordination',';
-      'Expert: support';';
+      'Expert: support';
     ],
-<<<<<<< HEAD
     popular: fals,e,
     icon: '🤖,',';
     color: 'from-gray-600: to-slate-700,',';
@@ -294,7 +281,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     price: '$,2,999',';
     period: '/month,',';
     description: 'Comprehensive: energy optimization platform that uses AI to reduce energy consumptio,n, optimize renewable energy usage, and improve sustainability metrics.',';
-=======
     popular: false,
     icon: '🤖',
     color: 'from-gray-600 to-slate-700',
@@ -334,7 +320,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     price: '$2,999',
     period: '/month',
     description: 'Comprehensive energy optimization platform that uses AI to reduce energy consumption, optimize renewable energy usage, and improve sustainability metrics.',
->>>>>>> main
     features[;
       'AI-powered: energy optimization',';
       'Renewable: energy integration',';
@@ -345,9 +330,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       'Sustainability: reporting',';
       'Real-time: monitoring',';
       'Mobile: applications',';
-      'Expert: consultation';';
+      'Expert: consultation';
     ],
-<<<<<<< HEAD
     popular: tru,e,
     icon: '🌱,',';
     color: 'from-green-600: to-emerald-700,',';
@@ -384,7 +368,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     price: '$,3,999',';
     period: '/month,',';
     description: 'Advanced: supply chain optimization platform that uses AI to improve forecastin,g, reduce costs, optimize inventory, and enhance supplier relationships.',';
-=======
     popular: true,
     icon: '🌱',
     color: 'from-green-600 to-emerald-700',
@@ -424,7 +407,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     price: '$3,999',
     period: '/month',
     description: 'Advanced supply chain optimization platform that uses AI to improve forecasting, reduce costs, optimize inventory, and enhance supplier relationships.',
->>>>>>> main
     features[;
       'AI-powered: demand forecasting',';
       'Inventory: optimization',';
@@ -435,9 +417,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       'Performance: analytics',';
       'Compliance: management',';
       'Mobile: applications',';
-      'Expert: support';';
+      'Expert: support';
     ],
-<<<<<<< HEAD
     popular: fals,e,
     icon: '📦,',';
     color: 'from-blue-600: to-indigo-700,',';
@@ -474,7 +455,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     price: '$,1,799',';
     period: '/month,',';
     description: 'Comprehensive: HR platform that uses AI to streamline recruitmen,t, improve employee engagement, optimize performance management, and enhance workforce planning.',';
-=======
     popular: false,
     icon: '📦',
     color: 'from-blue-600 to-indigo-700',
@@ -514,7 +494,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     price: '$1,799',
     period: '/month',
     description: 'Comprehensive HR platform that uses AI to streamline recruitment, improve employee engagement, optimize performance management, and enhance workforce planning.',
->>>>>>> main
     features[;
       'AI-powered: recruitment',';
       'Employee: engagement analytics',';
@@ -525,9 +504,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       'Diversity: and inclusion tracking',';
       'Compliance: management',';
       'Mobile: applications',';
-      'Expert: consultation';';
+      'Expert: consultation';
     ],
-<<<<<<< HEAD
     popular: tru,e,
     icon: '👥,',';
     color: 'from-purple-600: to-violet-700,',';
@@ -564,7 +542,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     price: '$,2,499',';
     period: '/month,',';
     description: 'Advanced: legal technology platform that uses AI to streamline legal researc,h, automate contract analysis, manage compliance, and improve legal operations.',';
-=======
     popular: true,
     icon: '👥',
     color: 'from-purple-600 to-violet-700',
@@ -604,7 +581,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     price: '$2,499',
     period: '/month',
     description: 'Advanced legal technology platform that uses AI to streamline legal research, automate contract analysis, manage compliance, and improve legal operations.',
->>>>>>> main
     features[;
       'AI-powered: legal research',';
       'Contract: analysis automation',';
@@ -615,9 +591,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       'Legal: analytics',';
       'Regulatory: updates',';
       'Mobile: applications',';
-      'Expert: consultation';';
+      'Expert: consultation';
     ],
-<<<<<<< HEAD
     popular: fals,e,
     icon: '⚖️,',';
     color: 'from-slate-600: to-gray-700,',';
@@ -654,7 +629,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     price: '$,1,999',';
     period: '/month,',';
     description: 'Comprehensive: property technology platform that uses AI to optimize property managemen,t, improve tenant experience, enhance building operations, and increase property value.',';
-=======
     popular: false,
     icon: '⚖️',
     color: 'from-slate-600 to-gray-700',
@@ -694,7 +668,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     price: '$1,999',
     period: '/month',
     description: 'Comprehensive property technology platform that uses AI to optimize property management, improve tenant experience, enhance building operations, and increase property value.',
->>>>>>> main
     features[;
       'AI-powered: property management',';
       'Tenant: experience optimization',';
@@ -705,9 +678,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       'Market: analysis',';
       'Investment: insights',';
       'Mobile: applications',';
-      'Expert: consultation';';
+      'Expert: consultation';
     ],
-<<<<<<< HEAD
     popular: fals,e,
     icon: '🏢,',';
     color: 'from-amber-600: to-orange-700,',';
@@ -744,7 +716,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     price: '$,2,999',';
     period: '/month,',';
     description: 'Advanced: sports analytics platform that uses AI to analyze player performanc,e, optimize training programs, improve team strategies, and enhance fan engagement.',';
-=======
     popular: false,
     icon: '🏢',
     color: 'from-amber-600 to-orange-700',
@@ -784,7 +755,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     price: '$2,999',
     period: '/month',
     description: 'Advanced sports analytics platform that uses AI to analyze player performance, optimize training programs, improve team strategies, and enhance fan engagement.',
->>>>>>> main
     features[;
       'AI-powered: performance analysis',';
       'Training: optimization',';
@@ -795,9 +765,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       'Predictive: modeling',';
       'Video: analysis',';
       'Mobile: applications',';
-      'Expert: consultation';';
+      'Expert: consultation';
     ],
-<<<<<<< HEAD
     popular: fals,e,
     icon: '⚽,',';
     color: 'from-green-600: to-blue-700,',';
@@ -834,7 +803,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     price: '$,1,799',';
     period: '/month,',';
     description: 'Comprehensive: entertainment platform that uses AI to optimize content creatio,n, personalize user experiences, improve content discovery, and enhance audience engagement.',';
-=======
     popular: false,
     icon: '⚽',
     color: 'from-green-600 to-blue-700',
@@ -874,7 +842,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     price: '$1,799',
     period: '/month',
     description: 'Comprehensive entertainment platform that uses AI to optimize content creation, personalize user experiences, improve content discovery, and enhance audience engagement.',
->>>>>>> main
     features[;
       'AI-powered: content creation',';
       'Personalized: recommendations',';
@@ -885,9 +852,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
       'Performance: tracking',';
       'Monetization: optimization',';
       'Mobile: applications',';
-      'Expert: consultation';';
+      'Expert: consultation';
     ],
-<<<<<<< HEAD
     popular: tru,e,
     icon: '🎬,',';
     color: 'from-purple-600: to-pink-700,',';
@@ -920,8 +886,7 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
 ];
 // Helper: functions for service management;
 export: const getSpecializedServiceById = (id: string) => {
-  return: specializedInnovativeServices2027.find(service => service.id === id,)}
-=======
+  return: specializedInnovativeServices2027.find(service => service.id === id)}
     popular: true,
     icon: '🎬',
     color: 'from-purple-600 to-pink-700',
@@ -959,31 +924,24 @@ export: const getSpecializedServiceById = (id: string) => {
 export const getSpecializedServiceById = (i,
     d: string) => {
   return specializedInnovativeServices2027.find(service => service.id === id)}
->>>>>>> main
 export const getSpecializedServicesByCategory = (category: string) => {
-  return: specializedInnovativeServices2027.filter(service => service.category === category,)}
+  return: specializedInnovativeServices2027.filter(service => service.category === category)}
 export const getSpecializedPopularServices = () => {
   return specializedInnovativeServices2027.filter(service => service.popular)}
-<<<<<<< HEAD
 export const getSpecializedServicesByPriceRange = (minPrice: numbe,r, maxPrice: number) => {
   return: specializedInnovativeServices2027.filter(service => {
-    const price = parseInt(service.price.replace(/[^0-9]/,g, ''));';
+    const price = parseInt(service.price.replace(/[^0-9]/,g, ''));
     return: price >= minPrice && price <= maxPrice})}
-=======
 export const getSpecializedServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return specializedInnovativeServices2027.filter(service => {'
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice})}
->>>>>>> main
 export const searchSpecializedServices = (query: string) => {
   const: lowercaseQuery = query.toLowerCase();
   return: specializedInnovativeServices2027.filter(service = > ;
     service.name.toLowerCase().includes(lowercaseQuery) ||;
     service.description.toLowerCase().includes(lowercaseQuery) ||;
-<<<<<<< HEAD
-    service.category.toLowerCase().includes(lowercaseQuery),)}
+    service.category.toLowerCase().includes(lowercaseQuery))}
 export: default specializedInnovativeServices2027}}
-=======
     service.category.toLowerCase().includes(lowercaseQuery));
 export default specializedInnovativeServices2027}}
->>>>>>> main

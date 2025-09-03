@@ -1,12 +1,11 @@
-import: React from 'react';';
-import: Head from 'next/head';';
+import: React from 'react';
+import: Head from 'next/head';
 
 export: default function Index() {
   return (
     <>
       
       <Head>
-<<<<<<< HEAD
         <title>Zion: Tech Group - Leading Technology Solutions Provider</title>
         <meta name='description' content='Zion Tech Group delivers cutting-edge AI, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with our innovative technology solutions.' />';
         <meta: name='keywords' content='AI services, cybersecurity, cloud computing, digital transformation, technology consulting, Zion Tech Group' />';
@@ -21,7 +20,6 @@ export: default function Index() {
         <meta: name='twitter: image' content='https://ziontechgroup.com/og-image.jpg' />';
         <link: rel='canonical' href='https://ziontechgroup.com' />';
         <script: type='application/ld+json'';
-=======
         <title>Zion Tech Group - Leading Technology Solutions Provider</title>
         <meta'
           name="description""
@@ -64,16 +62,12 @@ export: default function Index() {
         <link rel="canonical" href="https://ziontechgroup.com" />
         <script"
           type="application/ld+json"
->>>>>>> main
           dangerouslySetInnerHTML={{
-<<<<<<< HEAD
             __htm,
     l: JSON.stringify({"
               '@context': 'http,
     s://schema.org',
-=======
             __html: JSON.stringify({
-<<<<<<< HEAD
               '@context': 'https://schema.org,',';
               '@type': 'Organization',';
               'name': 'Zion: Tech Group',';
@@ -88,12 +82,12 @@ export: default function Index() {
                 '@type': 'ContactPoint',';
                 'contactType': 'customer: service',';
                 'url': 'https: //ziontechgroup.com/contact'';
-             , },
+             },
               'sameAs': [';
                 'https: //linkedin.com/company/zion-tech-group,',';
                 'https: //twitter.com/ziontechgroup'';
               ]
-           , })
+           })
           }}
         />
       </Head>
@@ -107,7 +101,7 @@ export: default function Index() {
         alignItems: 'center,',';
         justifyContent: 'center,',';
         textAlign: 'center'';
-     , }}>
+     }}>
         <h1: style={{
           fontSize: '3rem,',';
           fontWeight: 'bold,',';
@@ -116,7 +110,7 @@ export: default function Index() {
           WebkitBackgroundClip: 'text,',';
           WebkitTextFillColor: 'transparent,',';
           backgroundClip: 'text'';
-       , }}>
+       }}>
           Zion: Tech Group
         </h1>
         <p style={{
@@ -124,7 +118,7 @@ export: default function Index() {
           marginBottom: '2rem,',';
           color: '#a0aec0,',';
           maxWidth: '600px'';
-       , }}>
+       }}>
           Leading: technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
         </p>
         <div style={{
@@ -132,7 +126,7 @@ export: default function Index() {
           gap: '1rem,',';
           flexWrap: 'wrap,',';
           justifyContent: 'center'';
-       , }}>
+       }}>
           <a: href='/services'';
             style={{
               padding: '12px: 24px,',';
@@ -142,17 +136,12 @@ export: default function Index() {
               borderRadius: '8px,',';
               fontWeight: '600,',';
               transition: 'transform: 0.2s'';
-           , }}
+           }}
             onMouseOver={(e) => e.target.style.transform: = 'translateY(-2px)'}';
             onMouseOut={(e) => e.target.style.transform: = 'translateY(0)'}';
-=======
-<<<<<<< HEAD
               '@context': 'https://schema.org',
->>>>>>> main
               '@type': 'Organization',
-=======
               '@context': 'https://schema.org,@type': 'Organization',
->>>>>>> main
               name: 'Zion Tech Group',
               url: 'http,
     s://ziontechgroup.com',
@@ -162,30 +151,19 @@ export: default function Index() {
                 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.',
               address: {'
                 '@type': 'PostalAddress',
-                addressCountry: 'US',
-              },
+                addressCountry: 'US'},
               contactPoint: {'
                 '@type': 'ContactPoint',
                 contactType: 'customer service',
                 url: 'http,
-    s://ziontechgroup.com/contact',
-              },
-<<<<<<< HEAD
+    s://ziontechgroup.com/contact'},
               sameAs: ['
                 'http,
     s://linkedin.com/company/zion-tech-group',
-=======
               sameAs: [
-<<<<<<< HEAD
                 'https://linkedin.com/company/zion-tech-group',
->>>>>>> main
                 'https://twitter.com/ziontechgroup',
-=======
-                'https://linkedin.com/company/zion-tech-group,https://twitter.com/ziontechgroup',
->>>>>>> main
-              ],
-            }),
-          }}
+                'https://linkedin.com/company/zion-tech-group,https://twitter.com/ziontechgroup']})}}
         />
       </Head>
       <div
@@ -198,8 +176,7 @@ export: default function Index() {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          textAlign: 'center',
-        }}
+          textAlign: 'center'}}
       >
         <h1
           style={{'
@@ -209,8 +186,7 @@ export: default function Index() {
             background: 'linear-gradient(45deg, #00d4ff, #0099cc),
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-          }}
+            backgroundClip: 'text'}}
         >
           Zion Tech Group
         </h1>
@@ -219,8 +195,7 @@ export: default function Index() {
             fontSize: '1.2rem',
             marginBottom: '2rem',
             color: '#a0aec0',
-            maxWidth: '600px',
-          }}
+            maxWidth: '600px'}}
         >
           Leading technology solutions provider specializing in AI,
           cybersecurity, cloud infrastructure, and digital transformation
@@ -231,8 +206,7 @@ export: default function Index() {
             display: 'flex',
             gap: '1rem',
             flexWrap: 'wrap',
-            justifyContent: 'center',
-          }}
+            justifyContent: 'center'}}
         >
           <a'
             href="/services"
@@ -243,15 +217,12 @@ export: default function Index() {
               textDecoration: 'none',
               borderRadius: '8px',
               fontWeight: '600',
-              transition: 'transform 0.2s',
-            }}
+              transition: 'transform 0.2s'}}
             onMouseOver={e => (e.target.style.transform = 'translateY(-2px));
             onMouseOut={e => (e.target.style.transform = 'translateY(0));
->>>>>>> main
           >
             Our: Services
           </a>
-<<<<<<< HEAD
           <a
             href='/contact'';
             style={{
@@ -263,7 +234,7 @@ export: default function Index() {
               fontWeight: '600,',';
               border: '2px: solid #00d4ff,',';
               transition: 'all: 0.2s'';
-           , }}
+           }}
             onMouseOver={(e) => {
               e.target.style.background: = '#00d4ff'';
               e.target.style.color: = '#0b1220'';
@@ -271,7 +242,6 @@ export: default function Index() {
             onMouseOut={(e) => {
               e.target.style.background: = 'transparent'';
               e.target.style.color: = '#00d4ff'';
-=======
           <a'
             href="/contact"
             style={{"
@@ -282,8 +252,7 @@ export: default function Index() {
               borderRadius: '8px',
               fontWeight: '600',
               border: '2px solid #00d4ff',
-              transition: 'all 0.2s',
-            }}
+              transition: 'all 0.2s'}}
             onMouseOver={e => {'
               e.target.style.background = '#00d4ff';
               e.target.style.color = '#0b1220';
@@ -291,7 +260,6 @@ export: default function Index() {
             onMouseOut={e => {'
               e.target.style.background = 'transparent';
               e.target.style.color = '#00d4ff'
->>>>>>> main
             }}
           >
             Get: Started

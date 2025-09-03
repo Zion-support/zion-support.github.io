@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface AIEmergingTechService {
-=======
 import { ServiceVariant } from '../types/service-variants';
 
 export interface AIEmergingTechService {
->>>>>>> main
   id: string;
-<<<<<<< HEAD
   name: string;
   tagline: string;
   price: string;
@@ -39,7 +35,6 @@ export interface AIEmergingTechService {
     address: string;
     website: string;
   };
-=======
    name: string;
    tagline: string;
    price: string;
@@ -67,23 +62,17 @@ export interface AIEmergingTechService {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-<<<<<<< HEAD
   rating: number;
-<<<<<<< HEAD
   reviews: numbe,r}
 export: const aiEmergingTechServices: AIEmergingTechService[] = [;
   // AI-Powered: Video Generation Platform{
@@ -125,20 +114,16 @@ export: const aiEmergingTechServices: AIEmergingTechService[] = [;
   '4K: video export',';
   'Brand: customization',';
   'Social: media optimization',';
-  'API: access for developers';';
+  'API: access for developers';
     ],
     popular: tru,e,
-=======
   reviews: number;
 }
 
 export const aiEmergingTechServices: AIEmergingTechService[] = [
   // AI-Powered Video Generation Platform
   {
-<<<<<<< HEAD
-=======
     id: 'ai-video-generation-platform',
-=======
   ratin,
     g: number;
   review,
@@ -148,7 +133,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
 :data_backup/2024-ai-emerging-tech-services.ts;
     i,
     d: 'ai-video-generation-platform',
->>>>>>> main
     name: 'AI Video Generation Platform',
     tagline: 'Create professional videos with AI in minutes',
     price: '$499',
@@ -165,7 +149,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
       'Brand customization',
       'Social media optimization',
       'API access for developers'
-<<<<<<< HEAD
     ,
     id:,
   ai-video-generation-platform',
@@ -188,30 +171,22 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   'Brand customization',
   'Social media optimization',
   'API access for developers'
-    ],
-=======
-    ],
->>>>>>> main
->>>>>>> main
+    ]],
     popular: true,
-<<<<<<< HEAD
     icon: '🎬',
     color: 'from-purple-500 to-pink-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-video-generation-platform',
     marketPosition: 'Competitive with Runway ML ($35/month), Synthesia ($30/month), and Lumen5 ($19/month). Our advantage: Better quality, more features, and professional-grade output.',
     targetAudience: 'Content creators, Marketing teams, Video producers, Social media managers, Businesses',
-=======
->>>>>>> main
     icon:,
   🎬',';
     color: 'from-purple-500: to-pink-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/ai-video-generation-platfor,m,';
     marketPosition: ;
-  'Competitive: with Runway ML ($35/month,), Synthesia ($30/month), and Lumen5 ($19/month). Our advantage: Better: qualit,y, more features, and professional-grade output.,';
+  'Competitive: with Runway ML ($35/month), Synthesia ($30/month), and Lumen5 ($19/month). Our advantage: Better: qualit,y, more features, and professional-grade output.,';
   ,
     targetAudience: Content: creator,s, Marketing teams, Video producers, Social media managers, Businesses',';
     trialDays:  ,7,
@@ -294,10 +269,9 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   'Security: orchestration',';
   'Threat: hunting automation',';
   'Mobile: security monitoring',';
-  'Cloud: security integration';';
+  'Cloud: security integration';
     ],
     popular: tru,e,
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/ai-video-generation-platform,
@@ -305,13 +279,10 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   'Competitive with Runway ML ($35/month), Synthesia ($30/month), and Lumen5 ($19/month). Our advantage: Better quality, more features, and professional-grade output.,
   ,
     targetAudience: Content creators, Marketing teams, Video producers, Social media managers, Businesses',
->>>>>>> main
     trialDays: 7,
     setupTime: '30 minutes',
     category: 'AI & Content Creation',
     realService: true,
-<<<<<<< HEAD
-=======
     technology: 'Python, TensorFlow, PyTorch, React, Node.js, AWS, GPU clusters',
     integrations: 'YouTube, Vimeo, Facebook, Instagram, TikTok, Adobe Premiere',
     useCases: 'Marketing videos, Social media content, Product demos, Training videos, Brand storytelling',
@@ -320,7 +291,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
     marketSize: '$3.2B market',
     growthRate: '45% annual growth',
     variant: 'ai-futuristic',
-<<<<<<< HEAD
     technology:,
   Python, TensorFlow, PyTorch, React, Node.js, AWS, GPU clusters',
     integrations: YouTube, Vimeo, Facebook, Instagram, TikTok, Adobe Premiere,
@@ -334,17 +304,12 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
     growthRate:,
   45% annual growth',
     variant: 'ai-futuristic,
-=======
->>>>>>> main
->>>>>>> main
     contactInfo: {
-<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -353,9 +318,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   364 E Main St STE 1008 Middletown DE 19709',
       website: 'http,
     s://ziontechgroup.com},
->>>>>>> main
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails:,
   Production-ready AI video generation platform with state-of-the-art models, GPU acceleration, and comprehensive video editing tools. Includes mobile apps and API access.',
     launchDate: '2024-02-01,
@@ -365,8 +328,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   },
   // Quantum Machine Learning Platform
   {
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     id: 'quantum-machine-learning-platform',
     name: 'Quantum Machine Learning Platform',
     tagline: 'Harness quantum computing for advanced ML',
@@ -407,8 +369,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   'Research collaboration tools',
   'Educational resources'
     ],
-=======
->>>>>>> main
     popular: true,
     icon:,
   ⚛️',
@@ -425,8 +385,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   1 day',
     category: 'Quantum Computing,
     realService: true,
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     technology: 'Python, Qiskit, Cirq, TensorFlow Quantum, React, Node.js, AWS',
     integrations: 'IBM Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum',
     useCases: 'Drug discovery, Financial modeling, Logistics optimization, Climate modeling, AI research',
@@ -448,8 +407,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
     growthRate:,
   65% annual growth',
     variant: 'quantum-futuristic,
-=======
->>>>>>> main
     contactInfo: {
       mobile:,
   +1 302 464 0950',
@@ -462,18 +419,14 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
     implementationDetails:,
   Advanced quantum ML platform with hybrid classical-quantum algorithms, real-time quantum simulation, and comprehensive research tools. Includes educational resources and collaboration features.',
     launchDate: '2024-01-15,
-=======
     implementationDetails: 'Advanced AI video generation platform with state-of-the-art models, comprehensive editing tools, and seamless integration capabilities. Includes real-time collaboration and cloud-based processing.',
     launchDate: '2024-01-15',
->>>>>>> main
     customers: 450,
     rating: 4.9,
     reviews: 280
   },
   // AI-Powered Cybersecurity Platform
   {
-<<<<<<< HEAD
-=======
     id: 'ai-cybersecurity-platform',
     name: 'AI-Powered Cybersecurity Platform',
     tagline: 'Next-generation threat detection and response',
@@ -491,7 +444,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
       'Threat hunting automation',
       'Mobile security monitoring',
       'Cloud security integration'
-<<<<<<< HEAD
     ,
     id:,
   ai-cybersecurity-platform',
@@ -514,30 +466,22 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   'Threat hunting automation',
   'Mobile security monitoring',
   'Cloud security integration'
-    ],
-=======
-    ],
->>>>>>> main
->>>>>>> main
+    ]],
     popular: true,
-<<<<<<< HEAD
     icon: '🛡️',
     color: 'from-red-500 to-orange-600',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-cybersecurity-platform',
     marketPosition: 'Competitive with CrowdStrike ($8.99/user/month), SentinelOne ($8.99/user/month), and Darktrace ($50,000/year). Our advantage: Better AI, lower cost, and comprehensive protection.',
     targetAudience: 'CISOs, Security teams, IT managers, Compliance officers, Businesses',
-=======
->>>>>>> main
     icon:,
   🛡️',';
     color: 'from-red-500: to-orange-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-red-400',';
     link: 'https://ziontechgroup.com/ai-cybersecurity-platfor,m,';
     marketPosition: ;
-  'Competitive: with CrowdStrike ($8.99/user/month,), SentinelOne ($8.99/user/month), and Darktrace ($50,000/year). Our advantage: Better: A,I, lower cost, and comprehensive protection.,';
+  'Competitive: with CrowdStrike ($8.99/user/month), SentinelOne ($8.99/user/month), and Darktrace ($50,000/year). Our advantage: Better: A,I, lower cost, and comprehensive protection.,';
   ,
     targetAudience: CISO,s, Security: teams, IT managers, Compliance officers, Businesses',';
     trialDays: 2,1,
@@ -620,10 +564,9 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   'Tokenized: AI services',';
   'Cross-chain: AI operations',';
   'Decentralized: governance',';
-  'AI: audit trails';';
+  'AI: audit trails';
     ],
     popular: tru,e,
-=======
   text-red-400',
     link: 'http,
     s://ziontechgroup.com/ai-cybersecurity-platform,
@@ -631,13 +574,10 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   'Competitive with CrowdStrike ($8.99/user/month), SentinelOne ($8.99/user/month), and Darktrace ($50,000/year). Our advantage: Better AI, lower cost, and comprehensive protection.,
   ,
     targetAudience: CISOs, Security teams, IT managers, Compliance officers, Businesses',
->>>>>>> main
     trialDays: 21,
     setupTime: '1 day',
     category: 'Cybersecurity',
     realService: true,
-<<<<<<< HEAD
-=======
     technology: 'Python, TensorFlow, PyTorch, React, Node.js, AWS, Kubernetes',
     integrations: 'SIEM systems, EDR solutions, Firewalls, Cloud platforms, Identity providers',
     useCases: 'Threat detection, Incident response, Compliance monitoring, Security automation, Risk assessment',
@@ -646,7 +586,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
     marketSize: '$173.5B market',
     growthRate: '18.3% annual growth',
     variant: 'enterprise-futuristic',
-<<<<<<< HEAD
     technology:,
   Python, TensorFlow, PyTorch, React, Node.js, AWS, Kubernetes',
     integrations: SIEM systems, EDR solutions, Firewalls, Cloud platforms, Identity providers,
@@ -660,17 +599,12 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
     growthRate:,
   18.3% annual growth',
     variant: 'enterprise-futuristic,
-=======
->>>>>>> main
->>>>>>> main
     contactInfo: {
-<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -679,9 +613,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   364 E Main St STE 1008 Middletown DE 19709',
       website: 'http,
     s://ziontechgroup.com},
->>>>>>> main
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails:,
   Production-ready cybersecurity platform with advanced AI models, real-time threat detection, and automated response capabilities. Includes comprehensive reporting and compliance tools.',
     launchDate: '2024-01-20,
@@ -691,8 +623,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   },
   // Autonomous Robotics Platform
   {
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     id: 'autonomous-robotics-platform',
     name: 'Autonomous Robotics Platform',
     tagline: 'Build and deploy intelligent robots',
@@ -733,8 +664,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   'Remote operation tools',
   'Integration APIs'
     ],
-=======
->>>>>>> main
     popular: true,
     icon:,
   🤖',
@@ -751,8 +680,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   2 weeks',
     category: 'Robotics & Automation,
     realService: true,
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     technology: 'Python, ROS, TensorFlow, PyTorch, React, Node.js, AWS, IoT platforms',
     integrations: 'Manufacturing systems, Warehouse management, Healthcare systems, Research platforms',
     useCases: 'Manufacturing automation, Warehouse logistics, Healthcare assistance, Research automation, Service robots',
@@ -774,8 +702,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
     growthRate:,
   25.8% annual growth',
     variant: 'autonomous-futuristic,
-=======
->>>>>>> main
     contactInfo: {
       mobile:,
   +1 302 464 0950',
@@ -788,18 +714,14 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
     implementationDetails:,
   Advanced robotics platform with AI-powered navigation, computer vision, and comprehensive fleet management. Includes development tools, safety monitoring, and cloud-based control.',
     launchDate: '2024-01-10,
-=======
     implementationDetails: 'Advanced cybersecurity platform with AI-powered threat detection, automated response capabilities, and comprehensive security analytics. Includes real-time monitoring and predictive intelligence.',
     launchDate: '2024-01-10',
->>>>>>> main
     customers: 320,
     rating: 4.8,
     reviews: 180
   },
   // Blockchain AI Platform
   {
-<<<<<<< HEAD
-=======
     id: 'blockchain-ai-platform',
     name: 'Blockchain AI Platform',
     tagline: 'Decentralized AI for the future',
@@ -817,7 +739,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
       'Cross-chain AI operations',
       'Decentralized governance',
       'AI audit trails'
-<<<<<<< HEAD
     ,
     id:,
   blockchain-ai-platform',
@@ -840,30 +761,22 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   'Cross-chain AI operations',
   'Decentralized governance',
   'AI audit trails'
-    ],
-=======
-    ],
->>>>>>> main
->>>>>>> main
+    ]],
     popular: true,
-<<<<<<< HEAD
     icon: '🔗',
     color: 'from-green-500 to-emerald-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/blockchain-ai-platform',
     marketPosition: 'Competitive with SingularityNET ($AGI tokens), Ocean Protocol ($OCEAN tokens), and Fetch.ai ($FET tokens). Our advantage: Better usability, comprehensive features, and enterprise support.',
     targetAudience: 'AI developers, Blockchain developers, Enterprises, Research institutions, DeFi platforms',
-=======
->>>>>>> main
     icon:,
   🔗',';
     color: 'from-green-500: to-emerald-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/blockchain-ai-platfor,m,';
     marketPosition: ;
-  'Competitive: with SingularityNET ($AGI tokens,), Ocean Protocol ($OCEAN tokens), and Fetch.ai ($FET tokens). Our advantage: Better: usabilit,y, comprehensive features, and enterprise support.,';
+  'Competitive: with SingularityNET ($AGI tokens), Ocean Protocol ($OCEAN tokens), and Fetch.ai ($FET tokens). Our advantage: Better: usabilit,y, comprehensive features, and enterprise support.,';
   ,
     targetAudience: AI: developer,s, Blockchain developers, Enterprises, Research institutions, DeFi platforms',';
     trialDays: 1,4,
@@ -946,10 +859,9 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   'Collaborative: research tools',';
   'Regulatory: compliance',';
   'Patent: analysis',';
-  'Research: collaboration network';';
+  'Research: collaboration network';
     ],
     popular: tru,e,
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/blockchain-ai-platform,
@@ -957,13 +869,10 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   'Competitive with SingularityNET ($AGI tokens), Ocean Protocol ($OCEAN tokens), and Fetch.ai ($FET tokens). Our advantage: Better usability, comprehensive features, and enterprise support.,
   ,
     targetAudience: AI developers, Blockchain developers, Enterprises, Research institutions, DeFi platforms',
->>>>>>> main
     trialDays: 14,
     setupTime: '1 week',
     category: 'Blockchain & AI',
     realService: true,
-<<<<<<< HEAD
-=======
     technology: 'Python, Solidity, TensorFlow, PyTorch, React, Node.js, Ethereum, Polygon',
     integrations: 'Ethereum, Polygon, Binance Smart Chain, IPFS, MetaMask, WalletConnect',
     useCases: 'Decentralized AI training, Privacy-preserving ML, AI model marketplace, Cross-chain AI, DeFi AI',
@@ -972,7 +881,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
     marketSize: '$2.1B market',
     growthRate: '52% annual growth',
     variant: 'blockchain-futuristic',
-<<<<<<< HEAD
     technology:,
   Python, Solidity, TensorFlow, PyTorch, React, Node.js, Ethereum, Polygon',
     integrations: Ethereum, Polygon, Binance Smart Chain, IPFS, MetaMask, WalletConnect,
@@ -986,17 +894,12 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
     growthRate:,
   52% annual growth',
     variant: 'blockchain-futuristic,
-=======
->>>>>>> main
->>>>>>> main
     contactInfo: {
-<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -1005,9 +908,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   364 E Main St STE 1008 Middletown DE 19709',
       website: 'http,
     s://ziontechgroup.com},
->>>>>>> main
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails:,
   Production-ready blockchain AI platform with decentralized computing, smart contract execution, and comprehensive AI tools. Includes marketplace, governance, and cross-chain capabilities.',
     launchDate: '2024-02-15,
@@ -1017,8 +918,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   },
   // Edge AI Computing Platform
   {
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     id: 'edge-ai-computing-platform',
     name: 'Edge AI Computing Platform',
     tagline: 'AI at the edge for real-time processing',
@@ -1059,8 +959,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   'Multi-device coordination',
   'API for edge applications'
     ],
-=======
->>>>>>> main
     popular: true,
     icon:,
   🌐',
@@ -1077,8 +975,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   1 week',
     category: 'Edge Computing & AI,
     realService: true,
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     technology: 'Python, TensorFlow Lite, ONNX, React, Node.js, AWS IoT, Kubernetes',
     integrations: 'AWS IoT, Azure IoT, Google Cloud IoT, MQTT, CoAP, HTTP/2',
     useCases: 'Smart manufacturing, Autonomous vehicles, Healthcare monitoring, Smart cities, Retail analytics',
@@ -1100,8 +997,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
     growthRate:,
   38.9% annual growth',
     variant: 'edge-futuristic,
-=======
->>>>>>> main
     contactInfo: {
       mobile:,
   +1 302 464 0950',
@@ -1114,18 +1009,14 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
     implementationDetails:,
   Advanced edge AI platform with optimized models, real-time processing, and comprehensive device management. Includes security features, cloud synchronization, and multi-device coordination.',
     launchDate: '2024-01-25,
-=======
     implementationDetails: 'Advanced blockchain AI platform with decentralized computing, smart contract integration, and comprehensive AI marketplace. Includes privacy-preserving features and cross-chain capabilities.',
     launchDate: '2024-01-25',
->>>>>>> main
     customers: 950,
     rating: 4.6,
     reviews: 580
   },
   // AI-Powered Drug Discovery Platform
   {
-<<<<<<< HEAD
-=======
     id: 'ai-drug-discovery-platform',
     name: 'AI-Powered Drug Discovery Platform',
     tagline: 'Accelerate drug discovery with AI',
@@ -1143,7 +1034,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
       'Regulatory compliance',
       'Patent analysis',
       'Research collaboration network'
-<<<<<<< HEAD
     ,
     id:,
   ai-drug-discovery-platform',
@@ -1166,26 +1056,18 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   'Regulatory compliance',
   'Patent analysis',
   'Research collaboration network'
-    ],
-=======
-    ],
->>>>>>> main
->>>>>>> main
+    ]],
     popular: true,
-<<<<<<< HEAD
     icon: '🧬',
     color: 'from-emerald-500 to-green-600',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/ai-drug-discovery-platform',
     marketPosition: 'Competitive with Atomwise ($50,000/project), BenevolentAI ($100,000/project), and Insilico Medicine ($200,000/project). Our advantage: Lower cost, better AI models, and comprehensive tools.',
     targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Drug developers, Academic researchers',
-=======
->>>>>>> main
     icon:,
   🧬',';
     color: 'from-emerald-500: to-green-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-emerald-400',';
     link: 'https://ziontechgroup.com/ai-drug-discovery-platfor,m,';
     marketPosition: ;
@@ -1234,7 +1116,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
     rating: 4.,8,
     reviews: 280;
 :data_backup/2024-ai-emerging-tech-services.t,s}}
-=======
   text-emerald-400',
     link: 'http,
     s://ziontechgroup.com/ai-drug-discovery-platform,
@@ -1242,13 +1123,10 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   'Competitive with Atomwise ($50,000/project), BenevolentAI ($100,000/project), and Insilico Medicine ($200,000/project). Our advantage: Lower cost, better AI models, and comprehensive tools.,
   ,
     targetAudience: Pharmaceutical companies, Biotech startups, Research institutions, Drug developers, Academic researchers',
->>>>>>> main
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Biotech & AI',
     realService: true,
-<<<<<<< HEAD
-=======
     technology: 'Python, TensorFlow, PyTorch, RDKit, OpenMM, React, Node.js, AWS',
     integrations: 'Research databases, Laboratory systems, Clinical trial platforms, Patent databases',
     useCases: 'Drug discovery, Target identification, Clinical trial design, Drug repurposing, Research collaboration',
@@ -1257,7 +1135,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
     marketSize: '$1.2B market',
     growthRate: '42% annual growth',
     variant: 'biotech-futuristic',
-<<<<<<< HEAD
     technology:,
   Python, TensorFlow, PyTorch, RDKit, OpenMM, React, Node.js, AWS',
     integrations: Research databases, Laboratory systems, Clinical trial platforms, Patent databases,
@@ -1271,17 +1148,12 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
     growthRate:,
   42% annual growth',
     variant: 'biotech-futuristic,
-=======
->>>>>>> main
->>>>>>> main
     contactInfo: {
-<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -1290,9 +1162,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   364 E Main St STE 1008 Middletown DE 19709',
       website: 'http,
     s://ziontechgroup.com},
->>>>>>> main
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails:,
   Advanced drug discovery platform with AI molecular modeling, comprehensive research tools, and collaboration features. Includes regulatory compliance, patent analysis, and research network.',
     launchDate: '2024-01-05,
@@ -1302,8 +1172,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   },
   // AI-Powered Climate Modeling Platform
   {
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     id: 'ai-climate-modeling-platform',
     name: 'AI-Powered Climate Modeling Platform',
     tagline: 'Predict climate change with AI precision',
@@ -1344,8 +1213,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   'Collaborative research platform',
   'Public awareness tools'
     ],
-=======
->>>>>>> main
     popular: true,
     icon:,
   🌍',
@@ -1362,8 +1229,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   1 week',
     category: 'Climate Tech & AI,
     realService: true,
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     technology: 'Python, TensorFlow, PyTorch, Climate models, React, Node.js, AWS, GPU clusters',
     integrations: 'Climate databases, Satellite data, Weather stations, GIS systems, Policy databases',
     useCases: 'Climate prediction, Risk assessment, Adaptation planning, Policy development, Research collaboration',
@@ -1385,8 +1251,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
     growthRate:,
   35% annual growth',
     variant: 'simulation-futuristic,
-=======
->>>>>>> main
     contactInfo: {
       mobile:,
   +1 302 464 0950',
@@ -1402,20 +1266,14 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
     customers: 420,
     rating: 4.8,
     reviews: 280
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
 ;}}
   }
 ];
-=======
-=======
     implementationDetails: 'Advanced drug discovery platform with AI molecular modeling, virtual screening, and comprehensive research tools. Includes collaboration features and regulatory compliance support.',
     launchDate: '2024-02-01',
     customers: 420,
     rating: 4.8,
     reviews: 280
->>>>>>> main
   }
 ];
->>>>>>> main
->>>>>>> main

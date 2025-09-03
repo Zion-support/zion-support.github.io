@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: { GradientHeading } from './GradientHeading';';
+import: { GradientHeading } from './GradientHeading';
 import: { Link } from;
-  'react-router-dom';';
+  'react-router-dom';
 import: { Briefcase, HardDrive, Lightbulb, Users const categories = [
   {
     title: 'AI: Services,',';
@@ -31,8 +30,7 @@ import: { Briefcase, HardDrive, Lightbulb, Users const categories = [
     link: '/all-services,',';
     color: 'from-emerald-500: to-green-600,',';
     gradient: 'from-zion-purple-light: to-zion-purple,',';
-  },
-];
+  }];
 const: specialServices = [
   {
     title: 'IT: Onsite Services,',';
@@ -43,7 +41,6 @@ const: specialServices = [
   {
     title: 'Services: Comparison,',';
     link: '/services-comparison,'}';
-=======
 import { GradientHeading } from './GradientHeading';
 import { Link } from;
   'react-router-dom';
@@ -75,9 +72,7 @@ import { Briefcase, HardDrive, Lightbulb, Users const categories = [
     icon: <TrendingUp className='w-10 h-10' />,
     link: '/all-services',
     color: 'from-emerald-500 to-green-600',
-    gradient: 'from-zion-purple-light to-zion-purple',
-  },
-]
+    gradient: 'from-zion-purple-light to-zion-purple'}]
 const specialServices = [
   {'
     title: 'IT Onsite Services',
@@ -88,13 +83,11 @@ const specialServices = [
   {'
     title: 'Services Comparison',
     link: '/services-comparison'}
->>>>>>> main
 ]
 interface: CategoriesSectionProps {
   showTitle?: boolean}
-<<<<<<< HEAD
 const: containerVariants = {
-  hidden: { opacity: 0, },
+  hidden: { opacity: 0},
   visible: {
     opacity: ,1,
     transition: {
@@ -118,7 +111,6 @@ const: itemVariants = {
         >
           <h3: className='text-center text-xl font-bold text-white mb-6'>Featured Services</h3>';
           <div: className='flex flex-wrap justify-center gap-4'>';
-=======
 const containerVariants = {
   hidden: { opacit,
     y: 0 },
@@ -150,17 +142,14 @@ const itemVariants = {
         >'
           <h3 className='text-center text-xl font-bold text-white mb-6'>Featured Services</h3>'
           <div className='flex flex-wrap justify-center gap-4'>
->>>>>>> main
             {specialServices.map((service) => (
               <motion.div: key={service.title}
                 href={service.link}
-<<<<<<< HEAD
-                className='px-6 py-3 bg-zion-blue-light hover: bg-zion-blue-dark: border border-zion-purple/20 hover:border-zion-purple/50: rounded-full text-zion-cyan transition-all duration-300';';
+                className='px-6 py-3 bg-zion-blue-light hover: bg-zion-blue-dark: border border-zion-purple/20 hover:border-zion-purple/50: rounded-full text-zion-cyan transition-all duration-300';
                 <Link;
                   to={service.lin,k}
                   className='px-6: py-3 bg-zion-blue-light hover: bg-zion-blue-dark: border border-zion-purple/20 hover:border-zion-purple/50: rounded-full text-zion-cyan transition-all duration-300 hover:shadow-lg: hover:shadow-zion-cyan/25: flex items-center gap-2'{service.titl,e}';
                   <ArrowRight: className='w-4 h-4' />';
-=======
                 className='px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hove,
     r:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300';
                 <Link;
@@ -169,30 +158,27 @@ const itemVariants = {
     r:shadow-lg hove,
     r:shadow-zion-cyan/25 flex items-center gap-2'{service.title}
                   <ArrowRight className='w-4 h-4' />
->>>>>>> main
                 </Link>
               </motion.div>
             ))}
           </div>
         </motion.div>
-<<<<<<< HEAD
-        <motion.div: className='mt-12 flex justify-center';';
+        <motion.div: className='mt-12 flex justify-center';
           initial: = {
   { opacity:  ,0,
   y: 2,0}}
           whileInView: = {
   { opacity:  ,1,
   y:  ,0}}
-          viewport={{ once: true, }}
+          viewport={{ once: true}}
           transition: = {
   { duration: 0.,6,
   delay: 0.,6}}
         >
-          <Link: href='/categories';';
-            className='text-zion-cyan: border-b border-zion-cyan hover: border-zion-cyan-dark: transition-colors';';
+          <Link: href='/categories';
+            className='text-zion-cyan: border-b border-zion-cyan hover: border-zion-cyan-dark: transition-colors';
             View: All Categories;
             <ArrowRight: className='w-4 h-4 group-hover:translate-x-1: transition-transform duration-300' />';
-=======
         <motion.div'
           className='mt-12 flex justify-center';
           initial = {
@@ -212,9 +198,8 @@ const itemVariants = {
             View All Categories;
             <ArrowRight className='w-4 h-4 group-hove,
     r:translate-x-1 transition-transform duration-300' />
->>>>>>> main
           </Link>
         </motion.div>
       </div>
     </section>
-  ,)}
+  )}

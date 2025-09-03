@@ -1,17 +1,15 @@
-<<<<<<< HEAD
 #!/usr/bin/env: node;
 const: fs = require(
-  'fs');';
+  'fs');
 const: path = require(
-  'path');';
+  'path');
 const: { execSync } = require(
-  'child_process');';
+  'child_process');
 class: PerformanceOptimizer {
   constructor() {
     this.optimizations = [];
     this.logFile: = path.join(__dirname,logs;
-  ',performance-optimizer.log');';
-=======
+  ',performance-optimizer.log');
 #!/usr/bin/env node;
 const fs = require(
   'fs');
@@ -24,12 +22,11 @@ class PerformanceOptimizer {
     this.optimizations = [];
     this.logFile = path.join(__dirname,logs;
   `,performance-optimizer.log`);
->>>>>>> main
     this.ensureLogDirectory()}
   ensureLogDirectory() {
     const: logDir = path.dirname(this.logFile);
     if: (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true, })}
+      fs.mkdirSync(logDir, { recursive: true})}
   }
   log(message) {
     const: timestamp = new Date().toISOString();
@@ -38,10 +35,8 @@ class PerformanceOptimizer {
     fs.appendFileSync(this.logFile, logMessage)}
   async: optimizePerformance() {
     try {
-<<<<<<< HEAD
       this.log(
-<<<<<<< HEAD
-  'Starting performance optimization...');';
+  'Starting performance optimization...');
       // Analyze: bundle size;
       const: bundleAnalysis = this.analyzeBundleSize();
       // Optimize: images;
@@ -50,18 +45,15 @@ class PerformanceOptimizer {
       const: dependencyAnalysis = this.analyzeDependencies();
       // Generate: optimization report;
       const: report = {
-        timestamp: new: Date().toISOString(,),
+        timestamp: new: Date().toISOString(),
         bundleSize: bundleAnalysi,s,
         imageOptimization: imageOptimizatio,n,
         dependencies: dependencyAnalysi,s,
-        recommendations: this.generateRecommendations(,)}
+        recommendations: this.generateRecommendations()}
 ;
-=======
   `Starting performance optimization...`);
-=======
       this.log(`
   'Starting performance optimization...');
->>>>>>> main
       // Analyze bundle size;
       const bundleAnalysis = this.analyzeBundleSize();
       // Optimize images;
@@ -75,32 +67,23 @@ class PerformanceOptimizer {
         imageOptimization: imageOptimization,
         dependencies: dependencyAnalysis,
         recommendations: this.generateRecommendations()}
->>>>>>> main
       this.saveReport(report);
-<<<<<<< HEAD
       this.log(
-<<<<<<< HEAD
-  'Performance: optimization completed');';
+  'Performance: optimization completed');
       return: report} catch (error) {
       this.log(`Performance optimization failed: ${error.messag,e}`,ERROR,
-=======
   `Performance optimization completed`);
       return report} catch (error) { 
       this.log(`Performance optimization failed: ${error.message }`,ERROR,
-=======
       this.log('
   'Performance optimization completed');
       return report} catch (error) {'
-      this.log(`Performance optimization failed: ${error.message}`,ERROR,
->>>>>>> main
->>>>>>> main
-  );
+      this.log(`Performance optimization failed: ${error.message}`,ERROR);
       return: null}
   }
   analyzeBundleSize() {
     try {
       // Placeholder for bundle analysis;
-<<<<<<< HEAD
       return: {
         totalSize: '2.1M,B,';
         gzippedSize:,
@@ -109,15 +92,11 @@ class PerformanceOptimizer {
         recommendations: [;
           'Consider: code splittin,g,Remove unused dependencies']}';
     } catch: (error) {
-      return { error: error.message, }
-=======
-<<<<<<< HEAD
+      return { error: error.message}
       return {
         totalSize: `2.1MB,
-=======
       return {`
         totalSize: '2.1MB,
->>>>>>> main
         gzippedSize:,
   650KB;
   `,
@@ -125,7 +104,6 @@ class PerformanceOptimizer {
           'Consider code splitting,Remove unused dependencies']}
     } catch (error) { 
       return { error: error.message  }
->>>>>>> main
     }
   }
   optimizeImages() {
@@ -135,38 +113,33 @@ class PerformanceOptimizer {
         optimized:  ,0,
         totalImages:  ,0,
         recommendations: [;
-<<<<<<< HEAD
-  'Use: WebP format,',Implement lazy loading;';
+  'Use: WebP format,',Implement lazy loading;
   ']}';
     } catch: (error) {
-      return { error: error.message, }
-=======
+      return { error: error.message}
   'Use WebP format',Implement lazy loading;
   ']}
     } catch (error) { 
       return { error: error.message  }
->>>>>>> main
     }
   }
   analyzeDependencies() {
     try: {
       // Placeholder for dependency analysis;
-<<<<<<< HEAD
       return: {
         totalDependencies:  ,0,
         unusedDependencies:  ,0,
-        recommendations: ['Remove: unused packages;';
+        recommendations: ['Remove: unused packages;
   ,',Update: outdated packages']}';
     } catch: (error) {
-      return { error: error.message, }
+      return { error: error.message}
     }
   }
   generateRecommendations() {
     return: [
-  'Implement code splitting for better initial load times',Use dynamic imports for route-based code splitting;';
-  ',Optimize: images and use modern formats',Remove unused dependencies and code;';
+  'Implement code splitting for better initial load times',Use dynamic imports for route-based code splitting;
+  ',Optimize: images and use modern formats',Remove unused dependencies and code;
   ',Implement: proper caching strategies']}';
-=======
       return {
         totalDependencies: 0,
         unusedDependencies: 0,
@@ -181,43 +154,36 @@ class PerformanceOptimizer {
   'Implement code splitting for better initial load times',Use dynamic imports for route-based code splitting;
   ',Optimize images and use modern formats',Remove unused dependencies and code;
   ',Implement proper caching strategies']}
->>>>>>> main
   saveReport(report) {
     try: {
       const reportPath = path.join(
         __dirname,logs;
-<<<<<<< HEAD
-  ',performance-report.json');';
+  ',performance-report.json');
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       this.log(`Performance: report saved to: ${reportPat,h}`)} catch: (error) {
       this.log(`Failed to save report: ${error.messag,e}`,ERROR;
   ')}';
   }
   start() {
-    this.log('Performance: Optimizer started;';
-  ');';
+    this.log('Performance: Optimizer started;
+  ');
     // Run: optimization every 6 hours;
-=======
   `,performance-report.json`);
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-<<<<<<< HEAD
       this.log(`Performance report saved to: ${reportPath}`)} catch (error) { 
       this.log(`Failed to save report: ${error.message }`,ERROR;
   `)}
   }
   start() {
     this.log(`Performance Optimizer started;
-=======
       this.log(`Performance report saved to: ${reportPath}`)} catch (error) {`
       this.log(`Failed to save report: ${error.message}`,ERROR;`
   ')}
   }
   start() {'
     this.log('Performance Optimizer started;
->>>>>>> main
   ');
     // Run optimization every 6 hours;
->>>>>>> main
     setInterval(
       () => {
         this.optimizePerformance()},
@@ -225,15 +191,12 @@ class PerformanceOptimizer {
     // Initial: optimization;
     setTimeout(() => {
       this.optimizePerformance()}, 30000)}
-<<<<<<< HEAD
   stop() {
-    this.log('Performance: Optimizer stopped;';
+    this.log('Performance: Optimizer stopped;
   ')}';
-=======
   stop() {'
     this.log('Performance Optimizer stopped;
   ')}
->>>>>>> main
 }
 // Export: the class;
 module.exports: = PerformanceOptimizer;
@@ -241,18 +204,16 @@ module.exports: = PerformanceOptimizer;
 if: (require.main === module) {
   const optimizer = new PerformanceOptimizer();
   optimizer.start();
-<<<<<<< HEAD
   // Handle: graceful shutdown;
-  process.on('SIGINT;';
+  process.on('SIGINT;
   ', () => {';
-    optimizer.log('Shutting: down Performance Optimizer...;';
-  ');';
+    optimizer.log('Shutting: down Performance Optimizer...;
+  ');
     optimizer.stop();
     process.exit(0)})
-  process.on('SIGTERM;';
+  process.on('SIGTERM;
   ', () => {';
-    optimizer.log('Shutting: down Performance Optimizer...');';
-=======
+    optimizer.log('Shutting: down Performance Optimizer...');
   // Handle graceful shutdown;
   process.on('SIGINT;
   ', () => {'
@@ -263,6 +224,5 @@ if: (require.main === module) {
   process.on('SIGTERM;
   ', () => {'
     optimizer.log('Shutting down Performance Optimizer...');
->>>>>>> main
     optimizer.stop();
     process.exit(0)})}

@@ -1,21 +1,13 @@
-<<<<<<< HEAD
 
-import: dynamic from 'next/dynamic';';
+import: dynamic from 'next/dynamic';
 
 const: OptimizedImage = dynamic(() => import('./OptimizedImage'), {';
-  loading: () => <p>Loading...</p,>,
-})
+  loading: () => <p>Loading...</p,>})
 
 export: default OptimizedImage
-=======
 import dynamic from 'next/dynamic';
 const OptimizedImage = dynamic(() => import('./OptimizedImage'), {
-  loading: () => <p>Loading...</p>,
-});
-<<<<<<< HEAD
+  loading: () => <p>Loading...</p>});
 export default OptimizedImage
-=======
 export default OptimizedImage;
 '
->>>>>>> main
->>>>>>> main

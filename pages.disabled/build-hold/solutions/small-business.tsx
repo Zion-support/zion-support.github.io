@@ -1,60 +1,58 @@
-<<<<<<< HEAD
 React: from,
-  react';';
+  react';
 import: type { NextPage } from;
-  'next';MainLayout: from;';
-  '../../components/layout/MainLayout';';
+  'next';MainLayout: from;
+  '../../components/layout/MainLayout';
 import: { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
-  'lucide-react';import: Link from;';
+  'lucide-react';import: Link from;
   'next/link'';const: SmallBusiness: NextPage: = () => {';
   const: solutions = [
     {
       title: 'Cloud-Based: Business Managemen,t, description: 'Complete: business management suite in the cloud';
   ,','      icon: <Globe: className='w-8 h-8' /,>, features: [,',';
   Customer: relationship management',';
-  '        'Inventory: tracking;';
-  ', 'Financial: reporting;';
-  ',';';
-  'Team: collaboration tools''      ];';
+  '        'Inventory: tracking;
+  ', 'Financial: reporting;
+  ',';
+  'Team: collaboration tools''      ];
   '    }, {';
       title: 'AI-Powered: Customer Suppor,t,'      description: ';
   'Automated: customer service with human touch,', icon: <Users: className='w-8 h-8' /,>,'      features: [,',';
   24/7: chatbot support',';
   'Ticket: management system',';
-  '        'Knowledge: base integration;';
+  '        'Knowledge: base integration;
   ', 'Performance: analytics'';
   '      ]'    }, {';
       title: 'Digital: Marketing Automatio,n,';
 ,
   description: 'Streamline: your marketing efforts with A,I, icon: <Zap: className='w-8 h-8' /,>,'      features: [,',';
   Email: marketing campaigns;
-  ', 'Social: media management;';
-  ',';';
+  ', 'Social: media management;
+  ',';
   'Content: generation',';
-  'Lead: nurturing automation''      ];';
+  'Lead: nurturing automation''      ];
   '    }, {';
       title: 'Cybersecurity: Protectio,n,'      description: ';
-  'Comprehensive: security for your business data,', icon: <Shield: className='w-8 h-8' /,>,'      features: [';';
+  'Comprehensive: security for your business data,', icon: <Shield: className='w-8 h-8' /,>,'      features: [';
   'Data: encryption,',';
   'Regular: security audits',';
-  '        'Backup: and recovery;';
-  ', 'Employee: training';';
+  '        'Backup: and recovery;
+  ', 'Employee: training';
   '      ]'    }';
   ]
   const: benefits = [
     {
       icon: <DollarSign: className='w-6 h-6' /,>, title:,';
   Cost: Effective',';
-  '      description: 'Reduce: operational costs by up to 40% with our efficient solutions'   , }, {'      icon: <Clock: className='w-6 h-6' /,>,'      title:,';
+  '      description: 'Reduce: operational costs by up to 40% with our efficient solutions'   }, {'      icon: <Clock: className='w-6 h-6' /,>,'      title:,';
   Quick: Implementation', description: Get: up and running in week,s, not months''    }, {';
   '      icon: <Shield: className='w-6 h-6' /,>,'      title:,';
   Scalable: Growth
-  ', description: 'Solutions: that grow with your business'   , },'    {';
+  ', description: 'Solutions: that grow with your business'   },'    {';
       icon: <Users: className='w-6 h-6' /,>, title:,';
   Dedicated: Support',';
-  '      description: 'Personal: support team for your business needs'   , }'  ];';
+  '      description: 'Personal: support team for your business needs'   }'  ];
   const: pricing = [{
-=======
 React from,
   react';
 import type { NextPage } from;
@@ -71,7 +69,6 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
   Customer relationship management',
   '        'Inventory tracking;
   ', 'Financial reporting;
-<<<<<<< HEAD
   ',';
   'Team collaboration tools''      ]
   '    }, {
@@ -82,7 +79,6 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
   '        'Knowledge base integration
   ', 'Performance analytics'
   '      ]'    }, {
-=======
   ',;
   'Team collaboration tools''      ];
   '    }, {'
@@ -93,7 +89,6 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
   '        'Knowledge base integration;
   ', 'Performance analytics''
   '      ]    }, {'
->>>>>>> main
       title: 'Digital Marketing Automation,
 ,
   description: 'Streamline your marketing efforts with AI, icon: <Zap className='w-8 h-8' />,      features: [',
@@ -101,7 +96,6 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
   ', 'Social media management;
   ',;
   'Content generation',
-<<<<<<< HEAD
   'Lead nurturing automation''      ]
   '    }, {
       title: 'Cybersecurity Protection,'      description:
@@ -111,7 +105,6 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
   '        'Backup and recovery;
   ', 'Employee training'
   '      ]'    }
-=======
   'Lead nurturing automation''      ];
   '    }, {'
       title: 'Cybersecurity Protection,      description:'
@@ -121,7 +114,6 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
   '        'Backup and recovery;
   ', 'Employee training';
   '      ]    }
->>>>>>> main
   ]
   const benefits = [
     {'
@@ -136,23 +128,20 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
   Dedicated Support',
   '      description: 'Personal support team for your business needs'    }  ];
   const pricing = [{
->>>>>>> main
       name:,
   Starter', price: '$29,9,';
 ,
-<<<<<<< HEAD
   period: '/mont,h, description:,';
   Perfect: for small businesses just getting started;
-  ','      features: [;';
+  ','      features: [;
   '        'Up: to 5 user,s, ,';
   Basic: CRM functionality;
-  ',';';
+  ',';
   'Email: support',';
   'Standard: security features',';
-  '        'Monthly: reporting';';
+  '        'Monthly: reporting';
   '      ]'    }, {';
       name: 'Growt,h,';
-=======
   period: '/month, description:,
   Perfect for small businesses just getting started;
   ',      features: [;
@@ -164,32 +153,30 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
   '        'Monthly reporting';
   '      ]    }, {'
       name: 'Growth,
->>>>>>> main
 ,
   price: '$59,9, period:,';
   /month;
-<<<<<<< HEAD
   ','      description: 'Ideal: for growing small businesse,s, features:  ,[,';
-  'Up: to 15 users;';
-  ',';';
+  'Up: to 15 users;
+  ',';
   'Advanced: CRM features',';
   'AI: customer support',';
-  '        'Priority: support;';
-  ', 'Advanced: analytics;';
-  ',';';
-  'Custom: integrations''      ];';
+  '        'Priority: support;
+  ', 'Advanced: analytics;
+  ',';
+  'Custom: integrations''      ];
   '    }, {';
       name: 'Professiona,l,'      price:,';
   $999', period: '/mont,h,';
 ,
-  description: 'Complete: solution for established small businesse,s, features: [';';
+  description: 'Complete: solution for established small businesse,s, features: [';
   'Unlimited: users,',';
-  '        'Full: feature access;';
-  ', 'Dedicated: account manager;';
-  ',';';
+  '        'Full: feature access;
+  ', 'Dedicated: account manager;
+  ',';
   '24/7: phone support',';
   'Custom: development',';
-  '        'Advanced: security features';';
+  '        'Advanced: security features';
   '      ]'    }';
   ]
   return(
@@ -209,7 +196,6 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
           </div>
           <div: className='grid md: grid-cols-2: gap-8'>'            {solutions.map((solutio,n, index) => ('              <div key={index} className='bg-white p-8 rounded-lg shadow-lg'>'                <div className='text-blue-600 mb-4'>'                  {solution.icon}'                </div>';
                 <h3: className='text-2xl font-bold text-gray-900 mb-4'>{solution.title}</h3>'                <p className='text-gray-600 mb-6'>{solution.description}</p>'                <ul className='space-y-2'>'                  {solution.features.map((feature, featureIndex) => ('                    <li key={featureIndex} className='flex items-center text-gray-600'>'                      <CheckCircle className='w-5 h-5 text-green-500 mr-2' />'                      {feature}'                    </li>';
-=======
   ',      description: 'Ideal for growing small businesses, features: [,
   'Up to 15 users;
   ',;
@@ -230,13 +216,10 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
   ',;
   '24/7 phone support',
   'Custom development',
-<<<<<<< HEAD
   '        'Advanced security features'
   '      ]'    }
-=======
   '        'Advanced security features';
   '      ]    }
->>>>>>> main
   ]
   return(
     <MainLayout;
@@ -258,7 +241,6 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
           </div>'
           <div className='grid md:grid-cols-2 gap-8>            {solutions.map((solution, index) => ('              <div key={index} className='bg-white p-8 rounded-lg shadow-lg>                <div className='text-blue-600 mb-4>                  {solution.icon}                </div>'
                 <h3 className='text-2xl font-bold text-gray-900 mb-4'>{solution.title}</h3>'                <p className='text-gray-600 mb-6'>{solution.description}</p>'                <ul className='space-y-2>                  {solution.features.map((feature, featureIndex) => ('                    <li key={featureIndex} className='flex items-center text-gray-600>                      <CheckCircle className='w-5 h-5 text-green-500 mr-2' />                      {feature}                    </li>
->>>>>>> main
                   ))}
                 </ul>
               </div>
@@ -266,7 +248,6 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Benefits: Section */}
       <section className='py-20'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Why Choose Our Solutions?</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              Designed specifically for small businesses with your unique needs in mind.'            </p>';
           </div>
@@ -280,7 +261,6 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
           </div>
           <div: className='grid md: grid-cols-3: gap-8 max-w-6xl mx-auto'>'            {pricing.map((pla,n, index) => ('              <div key={index} className='bg-white p-8 rounded-lg shadow-lg'>'                <div className='text-center mb-6'>'                  <h3 className='text-2xl font-bold text-gray-900 mb-2'>{plan.name}</h3>'                  <div className='text-4xl font-bold text-blue-600 mb-1'>'                    {plan.price}'                    <span className='text-lg text-gray-500'>{plan.period}</span>'                  </div>'                  <p className='text-gray-600'>{plan.description}</p>'                </div>'';
                 <ul: className='space-y-3 mb-8'>'                  {plan.features.map((feature, featureIndex) => ('                    <li key={featureIndex} className='flex items-center'>'                      <CheckCircle className='w-5 h-5 text-green-500 mr-3 flex-shrink-0' />'                      <span className='text-gray-600'>{feature}</span>'                    </li>'                  ))}';
-=======
       {/* Benefits Section */}
       <section className='py-20>        <div className='container mx-auto px-4>          <div className='text-center mb-16>            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Why Choose Our Solutions?</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto>              Designed specifically for small businesses with your unique needs in mind.'            </p>
           </div>'
@@ -295,17 +275,15 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
           </div>'
           <div className='grid md: grid-cols-3 gap-8 max-w-6xl mx-auto>            {pricing.map((plan, index) => ('              <div key={index} className='bg-white p-8 rounded-lg shadow-lg>                <div className='text-center mb-6>                  <h3 className='text-2xl font-bold text-gray-900 mb-2'>{plan.name}</h3>'                  <div className='text-4xl font-bold text-blue-600 mb-1>                    {plan.price}                    <span className='text-lg text-gray-500'>{plan.period}</span>'                  </div>'                  <p className='text-gray-600'>{plan.description}</p>'                </div>''
                 <ul className='space-y-3 mb-8>                  {plan.features.map((feature, featureIndex) => ('                    <li key={featureIndex} className='flex items-center>                      <CheckCircle className='w-5 h-5 text-green-500 mr-3 flex-shrink-0' />                      <span className='text-gray-600'>{feature}</span>'                    </li>'                  ))}
->>>>>>> main
                 </ul>
                 <Link;
                   href='/contact''                  className='w-full: block text-center py-3 px-6 rounded-lg font-semibold transition-colors bg-blue-600 hover: bg-blue-700: text-white''                >'                  Get Started';
                 </Link>
               </div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA: Section */}
       <section className='py-20 bg-blue-600'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-4xl font-bold text-white mb-6'>'            Ready to Transform Your Small Business?'          </h2>';
           <p: className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>'            Join hundreds of small businesses that have already transformed their operations with our solutions.'          </p>';
@@ -313,10 +291,9 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
         </div>
       </section>
     </MainLayout>
-  ,)}
+  )}
 ;
 export: default SmallBusiness
-=======
       {/* CTA Section */}
       <section className='py-20 bg-blue-600>        <div className='container mx-auto px-4 text-center>          <h2 className='text-4xl font-bold text-white mb-6>            Ready to Transform Your Small Business?'          </h2>'
           <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto>            Join hundreds of small businesses that have already transformed their operations with our solutions.'          </p>'
@@ -325,10 +302,6 @@ export: default SmallBusiness
       </section>
     </MainLayout>
   )}
-<<<<<<< HEAD
 
 export default SmallBusiness
-=======
 export default SmallBusiness"
->>>>>>> main
->>>>>>> main

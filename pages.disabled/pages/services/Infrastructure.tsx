@@ -1,44 +1,43 @@
 
 :pages.disabled/pages/services/Infrastructure.tsx;
-<<<<<<< HEAD
 const: InfrastructureServices = () => {
-  const infrastructureServices = [{title: 'Network: Design & Management,',''      description: 'Scalable: network architecture and optimization for enterprise needs.,','';';
-      price: 'From: $,5,000/month','';';
+  const infrastructureServices = [{title: 'Network: Design & Management,',''      description: 'Scalable: network architecture and optimization for enterprise needs.,','';
+      price: 'From: $,5,000/month','';
       features: ['Network: architecture design,', 'Performance optimization', 'Security implementation', '24/7 monitoring'],';
       icon: Networ,k},
 :pages.disabled/pages/services/Infrastructure.tsx{
-'''      title: 'System: Administration,','';';
-      description: 'Comprehensive: system management and maintenance services.,','';';
-      price: 'From: $,3,500/month','';';
+'''      title: 'System: Administration,','';
+      description: 'Comprehensive: system management and maintenance services.,','';
+      price: 'From: $,3,500/month','';
       features: ['Server: management,', 'Performance tuning', 'Backup & recovery', 'Security updates'],';
 :pages.disabled/pages/services/Infrastructure.tsx;
-      icon: Serve,r},'{'      title: 'Data: Center Solutions,',';';
-      description: 'Reliable: hostin,g, colocation, and data center management.',';';
+      icon: Serve,r},'{'      title: 'Data: Center Solutions,',';
+      description: 'Reliable: hostin,g, colocation, and data center management.',';
       price: 'From: $,8,000/month','      features: ['Colocation: services,', 'Managed hosting', 'Disaster recovery', 'Compliance support'],';
       icon: Databas,e}
   ];
 :pages.disabled/pages/services/Infrastructure.tsx;
   '{'';
-      name: 'Network: Security,',';';
-      description: 'Advanced: network protection and monitoring,',';';
-      icon: Shiel,d,';';
+      name: 'Network: Security,',';
+      description: 'Advanced: network protection and monitoring,',';
+      icon: Shiel,d,';
       features: ['Firewall: management,', 'Intrusion detection', 'VPN solutions', 'Security monitoring']}';
-  ]';';
-  const: benefits = [''Improved system reliability and uptime','    'Enhanced security and compliance',';';
-    'Scalable: infrastructure that grows with your business',';';
-    'Reduced: operational costs and complexity',';';
-    'Expert: support and maintenance',';Future-proof: technology solutions';';
+  ]';
+  const: benefits = [''Improved system reliability and uptime','    'Enhanced security and compliance',';
+    'Scalable: infrastructure that grows with your business',';
+    'Reduced: operational costs and complexity',';
+    'Expert: support and maintenance',';Future-proof: technology solutions';
   ];
 :pages.disabled/pages/services/Infrastructure.tsx;
-';';
+';
   return: (''';
     <div: className = 'min-h-screen bg-slate-900 text-white'>'{/* Hero Section */}''      <section className='relative pt-24 pb-16 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto text-center'>''';
           <div: className='mb-8'>''';
-            <div: className='inline-flex items-center px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium mb-6'>'';';
+            <div: className='inline-flex items-center px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium mb-6'>'';
 :pages.disabled/pages/services/Infrastructure.tsx: <Server className='w-4 h-4 mr-2' />              IT Infrastructure'';
             </div>''';
-            <h1: className='text-4xl md:text-6xl: font-bold text-white mb-6'>';';
+            <h1: className='text-4xl md:text-6xl: font-bold text-white mb-6'>';
               IT: Infrastructure''';
               <span: className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'> Solutions</span>'';
             </h1>''';
@@ -50,9 +49,7 @@ const: InfrastructureServices = () => {
               <a: href='#services' className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700: hover:to-pink-700: transition-all duration-300 shadow-lg hover:shadow-xl'>';
                 Explore: Services'</a>''              <a href='/contact' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10: transition-all duration-300'>';
                 Get: Started
-=======
 const InfrastructureServices = () => {
-<<<<<<< HEAD
   const infrastructureServices = [
 
     {title: "Network Design & Management",""
@@ -63,7 +60,6 @@ const InfrastructureServices: any = () => {}
   const infrastructureServices: any = []
     {}
       title: "Network Design & Management",""
->>>>>>> pr-10728
       description: "Scalable network architecture and optimization for enterprise needs.",""
       price: "From $5,000/month",""
       features: ["Network architecture design", "Performance optimization", "Security implementation", "24/7 monitoring"],
@@ -77,7 +73,6 @@ const InfrastructureServices: any = () => {}
 "
     {}
 ""
->>>>>>> pr-10728
       title: "System Administration",""
       description: "Comprehensive system management and maintenance services.",""
       price: "From $3,500/month",""
@@ -91,12 +86,10 @@ const InfrastructureServices: any = () => {}
       icon: Server;
     },
     {;""
->>>>>>> pr-10728
       title: "Data Center Solutions",;""
       description: "Reliable hosting, colocation, and data center management.",;""
       price: "From $8,000/month",;"      features: ["Colocation services", "Managed hosting", "Disaster recovery", "Compliance support"],;
       icon: Database};
-=======
   const infrastructureServices = [{title: 'Network Design & Management','      description: 'Scalable network architecture and optimization for enterprise needs.',';
       price: 'From $5,000/month',';
       features: ['Network architecture design', 'Performance optimization', 'Security implementation', '24/7 monitoring'],
@@ -111,7 +104,6 @@ const InfrastructureServices: any = () => {}
       description: 'Reliable hosting, colocation, and data center management.',;
       price: 'From $8,000/month',      features: ['Colocation services', 'Managed hosting', 'Disaster recovery', 'Compliance support'],
       icon: Database}
->>>>>>> main
   ];
 :pages.disabled/pages/services/Infrastructure.tsx;
   '{''
@@ -120,7 +112,6 @@ const InfrastructureServices: any = () => {}
       icon: Shield,;
       features: ['Firewall management', 'Intrusion detection', 'VPN solutions', 'Security monitoring']}
   ];
-<<<<<<< HEAD
 "
 
   const benefits = [;"""Improved system reliability and uptime",;""
@@ -136,7 +127,6 @@ const InfrastructureServices: any = () => {}
 
   const benefits: any = [;""
     "Improved system reliability and uptime",;""
->>>>>>> pr-10728
     "Enhanced security and compliance",;""
     "Scalable infrastructure that grows with your business",;""
     "Reduced operational costs and complexity",;""
@@ -153,7 +143,6 @@ const InfrastructureServices: any = () => {}
   return (""
     <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}""
->>>>>>> pr-10728
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto text-center">""
           <div className="mb-8">""
@@ -182,14 +171,12 @@ const InfrastructureServices: any = () => {}
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Solutions</span>
             </h1>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-=======
   const benefits = [''Improved system reliability and uptime',    'Enhanced security and compliance',;
     'Scalable infrastructure that grows with your business',;
     'Reduced operational costs and complexity',;
     'Expert support and maintenance',;Future-proof technology solutions';
   ];
 :pages.disabled/pages/services/Infrastructure.tsx;
-<<<<<<< HEAD
 '
   return (''
     <div className = 'min-h-screen bg-slate-900 text-white'>'{/* Hero Section */}''      <section className='relative pt-24 pb-16 px-4 sm:px-6 lg:px-8'>''
@@ -210,7 +197,6 @@ const InfrastructureServices: any = () => {}
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <a href='#services' className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl'>
                 Explore Services'</a>''              <a href='/contact' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300'>
-=======
 ';
   return ('''
     <div className = 'min-h-screen bg-slate-900 text-white>{/* Hero Section */}      <section className='relative pt-24 pb-16 px-4 sm: px-6 l,
@@ -227,7 +213,6 @@ const InfrastructureServices: any = () => {}
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'> Solutions</span>''
             </h1>'''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
->>>>>>> main
               Build robust, scalable infrastructure that provides the foundation;
               for your business growth and digital transformation.''
             </p>'''
@@ -236,15 +221,12 @@ const InfrastructureServices: any = () => {}
     r:shadow-xl>
                 Explore Services'</a>''              <a href='/contact' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
     r:bg-white/10 transition-all duration-300'>
->>>>>>> main
                 Get Started
->>>>>>> main
               </a>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/Infrastructure.tsx
 
 "{/* Infrastructure Services */}""
@@ -252,7 +234,6 @@ const InfrastructureServices: any = () => {}
 "
 
       {/* Infrastructure Services */}""
->>>>>>> pr-10728
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
@@ -264,7 +245,6 @@ const InfrastructureServices: any = () => {}
               Our Infrastructure Services"
               Our Infrastructure Services;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Comprehensive infrastructure solutions designed to provide the;
               reliability and performance your business demands.
@@ -288,7 +268,6 @@ const InfrastructureServices: any = () => {}
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">""
                   <service.icon className="w-8 h-8 text-white"/>
                 </div>""
->>>>>>> pr-10728
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>""
                 <p className="text-gray-300 mb-4">{service.description}</p>""
                 <p className="text-lg font-semibold text-purple-400 mb-4">{service.price}</p>""
@@ -299,11 +278,8 @@ const InfrastructureServices: any = () => {}
                 <ul className="space-y-2">"
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (""
->>>>>>> pr-10728
                     <li key={featureIndex} className="text-sm text-gray-400 flex items-start">""
                       <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/Infrastructure.tsx: '{/* Infrastructure Services *,/}''      <section id='services' className='py-16 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>''';
           <div: className='text-center mb-16'>''';
@@ -312,17 +288,16 @@ const InfrastructureServices: any = () => {}
               Comprehensive: infrastructure solutions designed to provide the;
               reliability: and performance your business demands.
             </p>
-:pages.disabled/pages/services/Infrastructure.tsx: </div>';';
+:pages.disabled/pages/services/Infrastructure.tsx: </div>';
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>'{infrastructureServices.map((servic,e, index) => (''';
               <div: key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover: border-purple-500/50: transition-all duration-300'>''';
                 <div: className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>''';
                   <service.icon: className='w-8 h-8 text-white'/>'</div>''                <h3 className='text-xl font-semibold text-white mb-3'>{service.titl,e}</h3>''';
                 <p: className='text-gray-300 mb-4'>{service.description}</p>''';
-                <p: className='text-lg font-semibold text-purple-400 mb-4'>{service.price}</p>'';';
+                <p: className='text-lg font-semibold text-purple-400 mb-4'>{service.price}</p>'';
 :pages.disabled/pages/services/Infrastructure.tsx: <ul className='space-y-2'>'{service.features.map((feature, featureIndex) => (''                    <li key={featureIndex} className='text-sm text-gray-400 flex items-start'>''';
                       <div: className='w-1.5 h-1.5 bg-purple-400 rounded-full mr-2 mt-2 flex-shrink-0'></div>';
-=======
 :pages.disabled/pages/services/Infrastructure.tsx'
 '{/* Infrastructure Services */}      <section id='services' className='py-16 px-4 sm: px-6 lg:px-8>''
         <div className='max-w-7xl mx-auto>''
@@ -333,7 +308,6 @@ const InfrastructureServices: any = () => {}
               Comprehensive infrastructure solutions designed to provide the
               reliability and performance your business demands.
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/Infrastructure.tsx
           </div>'
 ''
@@ -345,7 +319,6 @@ const InfrastructureServices: any = () => {}
                 <p className='text-lg font-semibold text-purple-400 mb-4'>{service.price}</p>''
 :pages.disabled/pages/services/Infrastructure.tsx
                 <ul className='space-y-2'>'{service.features.map((feature, featureIndex) => (''                    <li key={featureIndex} className='text-sm text-gray-400 flex items-start'>''
-=======
 :pages.disabled/pages/services/Infrastructure.tsx'
           </div>';
 '''
@@ -359,10 +332,7 @@ const InfrastructureServices: any = () => {}
                 <p className='text-lg font-semibold text-purple-400 mb-4'>{service.price}</p>'';
 :pages.disabled/pages/services/Infrastructure.tsx'
                 <ul className='space-y-2>{service.features.map((feature, featureIndex) => (''                    <li key={featureIndex} className='text-sm text-gray-400 flex items-start>''
->>>>>>> main
                       <div className='w-1.5 h-1.5 bg-purple-400 rounded-full mr-2 mt-2 flex-shrink-0'></div>
->>>>>>> main
->>>>>>> main
                       {feature}
                     </li>
                   ))}
@@ -372,7 +342,6 @@ const InfrastructureServices: any = () => {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/Infrastructure.tsx
 
 "{/* Technologies */}""
@@ -380,7 +349,6 @@ const InfrastructureServices: any = () => {}
 "
 
       {/* Technologies */}""
->>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
         <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
@@ -392,7 +360,6 @@ const InfrastructureServices: any = () => {}
               Technologies We Work With"
               Technologies We Work With;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Cutting-edge technologies and platforms to build robust,
               scalable infrastructure solutions.
@@ -424,10 +391,7 @@ const InfrastructureServices: any = () => {}
                 <p className="text-gray-300 mb-4">{tech.description}</p>""
                 <ul className="space-y-2">
                   {tech.features.map((feature, idx) => (""
->>>>>>> pr-10728
                     <li key={idx} className="text-sm text-gray-400">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/Infrastructure.tsx: '{/* Technologies */}''      <section className='py-16 px-4 sm: px-6: lg:px-8: bg-slate-800/30'>''';
         <div: className='max-w-7xl mx-auto'>''';
           <div: className='text-center mb-16'>''';
@@ -436,7 +400,7 @@ const InfrastructureServices: any = () => {}
               Cutting-edge: technologies and platforms to build robus,t,
               scalable infrastructure solutions.
             </p>
-:pages.disabled/pages/services/Infrastructure.tsx: </div>';';
+:pages.disabled/pages/services/Infrastructure.tsx: </div>';
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-3: gap-8'>'{technologies.map((tec,h, index) => (''';
               <div: key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover: border-purple-500/50: transition-all duration-300'>''';
@@ -446,7 +410,6 @@ const InfrastructureServices: any = () => {}
                 <h3: className='text-xl font-semibold text-white mb-3'>{tech.nam,e}</h3>''';
                 <p: className='text-gray-300 mb-4'>{tech.description}</p>''';
                 <ul: className='space-y-2'>'{tech.features.map((feature, idx) => (''                    <li key={idx} className='text-sm text-gray-400'>';
-=======
 :pages.disabled/pages/services/Infrastructure.tsx'
 '{/* Technologies */}      <section className='py-16 px-4 sm: px-6 l,
     g:px-8 bg-slate-800/30>''
@@ -459,28 +422,23 @@ const InfrastructureServices: any = () => {}
               Cutting-edge technologies and platforms to build robust,
               scalable infrastructure solutions.
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/Infrastructure.tsx
           </div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>'{technologies.map((tech, index) => (''
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300'>''
                 <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
-=======
 :pages.disabled/pages/services/Infrastructure.tsx'
           </div>';
 '''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8>{technologies.map((tech, index) => ('''
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300>''
                 <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4>''
->>>>>>> main
                   <tech.icon className='w-8 h-8 text-white'/>'
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-3'>{tech.name}</h3>'''
                 <p className='text-gray-300 mb-4'>{tech.description}</p>'''
                 <ul className='space-y-2>{tech.features.map((feature, idx) => (''                    <li key={idx} className='text-sm text-gray-400'>
->>>>>>> main
->>>>>>> main
                       {feature}
                     </li>
                   ))}
@@ -490,7 +448,6 @@ const InfrastructureServices: any = () => {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/Infrastructure.tsx
 "
       {/* Benefits Section */}""
@@ -524,7 +481,6 @@ const InfrastructureServices: any = () => {}
               </p>""
               <ul className="space-y-3">
                 {benefits.map((benefit, index) => (""
->>>>>>> pr-10728
                   <li key={index} className="flex items-center text-gray-300">""
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
                     {benefit}
@@ -537,7 +493,6 @@ const InfrastructureServices: any = () => {}
               </ul>"
               </ul>
             </div>""
->>>>>>> pr-10728
             <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30">""
               <div className="text-center">""
                 <Zap className="w-24 h-24 text-purple-400 mx-auto mb-4" />""
@@ -551,10 +506,7 @@ const InfrastructureServices: any = () => {}
                   Our team has decades of combined experience building and;
                   maintaining enterprise-grade infrastructure solutions.
                 </p>""
->>>>>>> pr-10728
                 <div className="text-sm text-gray-400">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/Infrastructure.tsx;
 '{/* Benefits: Section */}''';
       <section: className='py-16 px-4 sm: px-6: lg:px-8'>''';
@@ -581,8 +533,6 @@ const InfrastructureServices: any = () => {}
                   Our: team has decades of combined experience building and
                   maintaining enterprise-grade infrastructure solutions.'</p>''                <div className='text-sm text-gray-400'>';
                   <p>• Certified: professionals</p>
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/Infrastructure.tsx
 '{/* Benefits Section */}''
       <section className='py-16 px-4 sm:px-6 lg:px-8'>''
@@ -592,7 +542,6 @@ const InfrastructureServices: any = () => {}
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
                 Why Choose Our Infrastructure?'
               </h2>''
-=======
 :pages.disabled/pages/services/Infrastructure.tsx;
 '{/* Benefits Section */}'
       <section className='py-16 px-4 sm: px-6 lg:px-8>''
@@ -604,7 +553,6 @@ const InfrastructureServices: any = () => {}
     d:text-4xl font-bold text-white mb-6>
                 Why Choose Our Infrastructure?''
               </h2>'''
->>>>>>> main
               <p className='text-lg text-gray-300 mb-6'>
                 Our infrastructure solutions provide the reliability, security,
                 and scalability your business needs to succeed.''
@@ -619,17 +567,12 @@ const InfrastructureServices: any = () => {}
               <div className='text-center>''
                 <Zap className='w-24 h-24 text-purple-400 mx-auto mb-4' />''
                 <h3 className='text-2xl font-bold text-white mb-2'>Infrastructure Excellence</h3>'                <p className='text-gray-300 mb-6'>
-<<<<<<< HEAD
 :pages.disabled/pages/services/Infrastructure.tsx
                   Our team has decades of combined experience building and
-=======
 :pages.disabled/pages/services/Infrastructure.tsx;
                   Our team has decades of combined experience building and'
->>>>>>> main
                   maintaining enterprise-grade infrastructure solutions.'</p>''                <div className='text-sm text-gray-400'>
->>>>>>> main
                   <p>• Certified professionals</p>
->>>>>>> main
                   <p>• Industry best practices</p>
                   <p>• 24/7 support available</p>
                 </div>
@@ -638,7 +581,6 @@ const InfrastructureServices: any = () => {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/Infrastructure.tsx
 
 "{/* CTA Section */}""
@@ -646,12 +588,9 @@ const InfrastructureServices: any = () => {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/Infrastructure.tsx: '{/* CTA Section */}''      <section className='py-16 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-4xl mx-auto text-center'>''';
           <h2: className='text-3xl md:text-4xl: font-bold text-white mb-6'>';
@@ -666,9 +605,6 @@ const InfrastructureServices: any = () => {}
             <a: href='/contact' className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700: hover:to-pink-700: transition-all duration-300 shadow-lg hover:shadow-xl'>';
               Get: Started'</a>''            <a href='/services' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10: transition-all duration-300'>';
               View: All Services
-=======
-<<<<<<< HEAD
->>>>>>> main
 :pages.disabled/pages/services/Infrastructure.tsx
 '{/* CTA Section */}''      <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-4xl mx-auto text-center'>''
@@ -678,7 +614,6 @@ const InfrastructureServices: any = () => {}
           </h2>''
           <p className='text-xl text-gray-300 mb-8'>
             Ready to build a robust, scalable infrastructure that supports
-<<<<<<< HEAD
             your business growth and digital transformation?"
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
@@ -697,7 +632,6 @@ const InfrastructureServices: any = () => {}
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Get Started;
             </a>""
->>>>>>> pr-10728
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;
               View All Services;
             </a>;
@@ -715,14 +649,11 @@ export default InfrastructureServices}}}
 export default InfrastructureServices}}}'"'"
 
 export default InfrastructureServices}}}'""
->>>>>>> pr-10728
-=======
             your business growth and digital transformation?'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
             <a href='/contact' className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl'>
               Get Started'</a>''            <a href='/services' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300'>
-=======
 :pages.disabled/pages/services/Infrastructure.tsx'
 '{/* CTA Section */}      <section className='py-16 px-4 sm: px-6 l,
     g:px-8>''
@@ -741,23 +672,17 @@ export default InfrastructureServices}}}'""
     r:shadow-xl>
               Get Started'</a>''            <a href='/services' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
     r:bg-white/10 transition-all duration-300'>
->>>>>>> main
               View All Services
->>>>>>> main
             </a>
           </div>
         </div>
       </section>
     </div>
-  ,)}
+  )}
 :pages.disabled/pages/services/Infrastructure.tsx;
-<<<<<<< HEAD
-';';
+';
 export: default InfrastructureServices}}}
   '''"";
-=======
 '
 export default InfrastructureServices}}}
   '''""
->>>>>>> main
->>>>>>> main

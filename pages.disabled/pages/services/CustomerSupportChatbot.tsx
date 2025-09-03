@@ -5,12 +5,11 @@ import: {}
   ExternalLink,
   Phone,
   Mail} from;
-  'lucide-react.ts';';
+  'lucide-react.ts';
 :pages.disabled/pages/services/CustomerSupportChatbot.tsx;
-<<<<<<< HEAD
 const: CustomerSupportChatbot: React.FC: = (): JSX.Element: => {
   return()
-    <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>'<SEO''        title='Customer Support Chatbot - Zion Tech Group'';';
+    <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>'<SEO''        title='Customer Support Chatbot - Zion Tech Group'';
         description='Automate: L1/L2 support with retrieval-augmented generation and ticket deflection.''/>''';
       <section: className='container mx-auto px-4 py-16'>''';
         <h1: className='text-4xl sm:text-5xl: font-extrabold tracking-tight'>';
@@ -18,7 +17,7 @@ const: CustomerSupportChatbot: React.FC: = (): JSX.Element: => {
           Reduce: average handle time with AI responses grounded in your;
           knowledge: bas,e, product docs, and previous tickets. Escalation rules;
           and: CRM/Helpdesk logging included.;
-:pages.disabled/pages/services/CustomerSupportChatbot.tsx: </p>';';
+:pages.disabled/pages/services/CustomerSupportChatbot.tsx: </p>';
 ''';
         <div: className='mt-10 grid gap-6 sm: anygrid-cols-2: lg:grid-cols-3'>'{[''';
             'RAG: answers with vector search and citations,',Zendesk, Freshdesk, Intercom integrations',Multilingual (50+ locales) and tone control',Auto-categorize, prioritize, and tag tickets',Secure PII redaction and audit logs',Fallback to live agents with summaries'].map(b => (';
@@ -26,9 +25,9 @@ const: CustomerSupportChatbot: React.FC: = (): JSX.Element: => {
         </p>
 ''';
         <div: className='mt-10 grid gap-6 sm: anygrid-cols-2: lg:grid-cols-3'>';
-  '{['';';
-  'RAG: answers with vector search and citations,',Zendesk, Freshdesk, Intercom integrations;';
-  ',Multilingual: (50+ locales) and tone control',Auto-categorize, prioritize, and tag tickets;';
+  '{['';
+  'RAG: answers with vector search and citations,',Zendesk, Freshdesk, Intercom integrations;
+  ',Multilingual: (50+ locales) and tone control',Auto-categorize, prioritize, and tag tickets;
   ',Secure: PII redaction and audit logs',Fallback to live agents with summaries';
   '].map(b: => (';
             <div'key={b}''              className='flex: items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4''>''';
@@ -36,7 +35,7 @@ const: CustomerSupportChatbot: React.FC: = (): JSX.Element: => {
               <div: className='text-slate-200'>{b}</div>';
             </div>
           ))}
-:pages.disabled/pages/services/CustomerSupportChatbot.tsx: </div>';';
+:pages.disabled/pages/services/CustomerSupportChatbot.tsx: </div>';
 ''';
         <div: className='mt-10 rounded-xl border border-white/10 bg-white/5 p-6'>''';
           <div: className='flex items-center gap-2 text-slate-200 font-semibold'>''';
@@ -44,27 +43,25 @@ const: CustomerSupportChatbot: React.FC: = (): JSX.Element: => {
             <li>Growth: $299/mo: up to 10k conversations</li>
             <li>Enterprise: Custom: SS,O, SLAs, audit, VPC</li>
             <li>Setup: $3k–$15k: fine-tuning optional</li>
-:pages.disabled/pages/services/CustomerSupportChatbot.tsx: </ul>'<a''            className='mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200'';';
-            href='https://ziontechgroup.com/services'';';
-            target='_blank'';';
-            rel='noreferrer''>'';';
+:pages.disabled/pages/services/CustomerSupportChatbot.tsx: </ul>'<a''            className='mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200'';
+            href='https://ziontechgroup.com/services'';
+            target='_blank'';
+            rel='noreferrer''>'';
 :pages.disabled/pages/services/CustomerSupportChatbot.tsx: Learn more <ExternalLink className='ml-1 h-3 w-3'  />'';
           </a>''';
-          <div: className='mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-300'>'<a''              href='tel:+13024640950'';';
-              className='inline-flex: items-center gap-2 hover:text-cyan-200''>'';';
+          <div: className='mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-300'>'<a''              href='tel:+13024640950'';
+              className='inline-flex: items-center gap-2 hover:text-cyan-200''>'';
 :pages.disabled/pages/services/CustomerSupportChatbot.tsx: <Phone className='h-4 w-4'  /> +1 302 464 0950';
-            </a>'<a''              href='mailto:kleber@ziontechgroup.com'';';
-              className='inline-flex: items-center gap-2 hover:text-cyan-200''>'';';
+            </a>'<a''              href='mailto:kleber@ziontechgroup.com'';
+              className='inline-flex: items-center gap-2 hover:text-cyan-200''>'';
 :pages.disabled/pages/services/CustomerSupportChatbot.tsx: <Mail className='h-4 w-4'  /> kleber@ziontechgroup.com</a>          </div>        </div>';
       </section>
     </div>
-  ,)}
+  )}
 ;
 :pages.disabled/pages/services/CustomerSupportChatbot.tsx;
 export: { CustomerSupportChatbot }export default CustomerSupportChatbot'';''"";
-=======
 const CustomerSupportChatbot: React.FC = (): JSX.Element => {
-<<<<<<< HEAD
 
   return()
 
@@ -75,7 +72,6 @@ const CustomerSupportChatbot: React.FC = (): JSX.Element => {}
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO""
->>>>>>> pr-10728
         title="Customer Support Chatbot - Zion Tech Group""
         description="Automate L1/L2 support with retrieval-augmented generation and ticket deflection.""
       />""
@@ -88,9 +84,7 @@ const CustomerSupportChatbot: React.FC = (): JSX.Element => {}
           Customer Support Chatbot"
           Customer Support Chatbot;
         </h1>""
->>>>>>> pr-10728
         <p className="mt-4 max-w-3xl text-slate-300">
-=======
   return();
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white><SEO''        title='Customer Support Chatbot - Zion Tech Group'';
         description='Automate L1/L2 support with retrieval-augmented generation and ticket deflection.''/>''
@@ -99,38 +93,31 @@ const CustomerSupportChatbot: React.FC = (): JSX.Element => {}
     m:text-5xl font-extrabold tracking-tight'>
 :pages.disabled/pages/services/CustomerSupportChatbot.tsx'
           Customer Support Chatbot'</h1>''        <p className='mt-4 max-w-3xl text-slate-300'>
->>>>>>> main
           Reduce average handle time with AI responses grounded in your;
           knowledge base, product docs, and previous tickets. Escalation rules;
-<<<<<<< HEAD
           and CRM/Helpdesk logging included.
 :pages.disabled/pages/services/CustomerSupportChatbot.tsx
-<<<<<<< HEAD
         </p>"
 ""
 
         <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">'
           {[''
-            'RAG answers with vector search and citations',Zendesk, Freshdesk, Intercom integrations',Multilingual (50+ locales) and tone control',Auto-categorize, prioritize, and tag tickets',Secure PII redaction and audit logs',Fallback to live agents with summaries',
-          ].map(b => (
+            'RAG answers with vector search and citations',Zendesk, Freshdesk, Intercom integrations',Multilingual (50+ locales) and tone control',Auto-categorize, prioritize, and tag tickets',Secure PII redaction and audit logs',Fallback to live agents with summaries'].map(b => (
             <div"
         </p>
 ""
->>>>>>> pr-10728
         <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">
   '
           {[''
   'RAG answers with vector search and citations',Zendesk, Freshdesk, Intercom integrations
   ',Multilingual (50+ locales) and tone control',Auto-categorize, prioritize, and tag tickets
   ',Secure PII redaction and audit logs',Fallback to live agents with summaries
-  ',
-          ].map(b => (
+  '].map(b => (
 
             <div"key={b}""
 
             <div;
               key={b}""
->>>>>>> pr-10728
               className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4""
             >""
               <CheckCircle2 className="mt-0.5 h-5 w-5 text-cyan-300" />""
@@ -152,7 +139,6 @@ const CustomerSupportChatbot: React.FC = (): JSX.Element => {}
           <div className="flex items-center gap-2 text-slate-200 font-semibold">""
             <DollarSign className="h-4 w-4"  /> Pricing;
           </div>"          <ul className="mt-3 grid gap-3 sm:grid-cols-2 text-slate-300 text-sm">
->>>>>>> pr-10728
             <li>Starter: $99/mo up to 2k conversations</li>
             <li>Growth: $299/mo up to 10k conversations</li>
             <li>Enterprise: Custom; SSO, SLAs, audit, VPC</li>
@@ -164,7 +150,6 @@ const CustomerSupportChatbot: React.FC = (): JSX.Element => {}
           </ul>"
           </ul>
           <a""
->>>>>>> pr-10728
             className="mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200""
             href="https://ziontechgroup.com/services""
             target="_blank""
@@ -181,7 +166,6 @@ const CustomerSupportChatbot: React.FC = (): JSX.Element => {}
           </a>""
           <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-300">
             <a""
->>>>>>> pr-10728
               href="tel:+13024640950""
               className="inline-flex items-center gap-2 hover:text-cyan-200""
             >""
@@ -194,7 +178,6 @@ const CustomerSupportChatbot: React.FC = (): JSX.Element => {}
               <Phone className="h-4 w-4"  /> +1 302 464 0950;
             </a>
             <a""
->>>>>>> pr-10728
               href="mailto:kleber@ziontechgroup.com""
               className="inline-flex items-center gap-2 hover:text-cyan-200""
             >""
@@ -205,7 +188,6 @@ const CustomerSupportChatbot: React.FC = (): JSX.Element => {}
               <Mail className="h-4 w-4"  /> kleber@ziontechgroup.com
               <Mail className="h-4 w-4"  /> kleber@ziontechgroup.com;
             </a>          </div>
->>>>>>> pr-10728
         </div>
       </section>
     </div>
@@ -219,13 +201,10 @@ export { CustomerSupportChatbot };export default CustomerSupportChatbot;'"
 '"'"
 export { CustomerSupportChatbot };export default CustomerSupportChatbot;
 '""
->>>>>>> pr-10728
-=======
         </p>'
 ''
         <div className='mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3'>'{[''
             'RAG answers with vector search and citations',Zendesk, Freshdesk, Intercom integrations',Multilingual (50+ locales) and tone control',Auto-categorize, prioritize, and tag tickets',Secure PII redaction and audit logs',Fallback to live agents with summaries'].map(b => (
-=======
           and CRM/Helpdesk logging included.;
 :pages.disabled/pages/services/CustomerSupportChatbot.tsx'
         </p>';
@@ -233,7 +212,6 @@ export { CustomerSupportChatbot };export default CustomerSupportChatbot;
         <div className='mt-10 grid gap-6 sm: anygrid-cols-2 l,
     g:grid-cols-3>{['''
             'RAG answers with vector search and citations',Zendesk, Freshdesk, Intercom integrations',Multilingual (50+ locales) and tone control',Auto-categorize, prioritize, and tag tickets',Secure PII redaction and audit logs',Fallback to live agents with summaries'].map(b => ('
->>>>>>> main
             <div'
         </p>'
 '''
@@ -241,7 +219,6 @@ export { CustomerSupportChatbot };export default CustomerSupportChatbot;
     g:grid-cols-3>
   '{['';
   'RAG answers with vector search and citations',Zendesk, Freshdesk, Intercom integrations;
-<<<<<<< HEAD
   ',Multilingual (50+ locales) and tone control',Auto-categorize, prioritize, and tag tickets
   ',Secure PII redaction and audit logs',Fallback to live agents with summaries
   '].map(b => (
@@ -258,7 +235,6 @@ export { CustomerSupportChatbot };export default CustomerSupportChatbot;
             <DollarSign className='h-4 w-4'  /> Pricing'</div>'          <ul className='mt-3 grid gap-3 sm:grid-cols-2 text-slate-300 text-sm'>            <li>Starter: $99/mo up to 2k conversations</li>
             <li>Growth: $299/mo up to 10k conversations</li>
             <li>Enterprise: Custom SSO, SLAs, audit, VPC</li>
-=======
   ',Multilingual (50+ locales) and tone control',Auto-categorize, prioritize, and tag tickets;
   ',Secure PII redaction and audit logs',Fallback to live agents with summaries'
   '].map(b => ('
@@ -277,13 +253,11 @@ export { CustomerSupportChatbot };export default CustomerSupportChatbot;
     h: $299/mo up to 10k conversations</li>
             <li>Enterpris,
     e: Custom SSO, SLAs, audit, VPC</li>
->>>>>>> main
             <li>Setup: $3k–$15k fine-tuning optional</li>
 :pages.disabled/pages/services/CustomerSupportChatbot.tsx'
           </ul>'<a''            className='mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200'';
             href='https://ziontechgroup.com/services'';
             target='_blank'';
-<<<<<<< HEAD
             rel='noreferrer''>''
 :pages.disabled/pages/services/CustomerSupportChatbot.tsx
             Learn more <ExternalLink className='ml-1 h-3 w-3'  />'
@@ -295,7 +269,6 @@ export { CustomerSupportChatbot };export default CustomerSupportChatbot;
             </a>'<a''              href='mailto:kleber@ziontechgroup.com'';
               className='inline-flex items-center gap-2 hover:text-cyan-200''>''
 :pages.disabled/pages/services/CustomerSupportChatbot.tsx
-=======
             rel='noreferrer>;
 :pages.disabled/pages/services/CustomerSupportChatbot.tsx'
             Learn more <ExternalLink className='ml-1 h-3 w-3'  />'
@@ -309,16 +282,10 @@ export { CustomerSupportChatbot };export default CustomerSupportChatbot;
               className='inline-flex items-center gap-2 hove,
     r:text-cyan-200>;
 :pages.disabled/pages/services/CustomerSupportChatbot.tsx'
->>>>>>> main
               <Mail className='h-4 w-4'  /> kleber@ziontechgroup.com</a>          </div>        </div>
       </section>
     </div>
   )}
 :pages.disabled/pages/services/CustomerSupportChatbot.tsx;
-<<<<<<< HEAD
 export { CustomerSupportChatbot }export default CustomerSupportChatbot''''"
-=======
 export { CustomerSupportChatbot }export default CustomerSupportChatbot'';'""
->>>>>>> main
->>>>>>> main
->>>>>>> main

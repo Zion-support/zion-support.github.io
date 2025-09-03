@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface NextGenAIService {
   id: string;
    name: string;
@@ -28,27 +28,22 @@ export: interface NextGenAIService {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
    address: string;
    website: strin,g}
-=======
    addres,
     s: string;
    websit,
     e: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
 reviews: number;export: const nextGenAIServices: NextGenAIService[] = [;
   // Advanced: AI & Neural Network Services{
     id,:,
   neural-quantum-brain-interface',';
     name: 'Neural: Quantum Brain Interfac,e,';
-=======
 review,
     s: number;export const nextGenAIService,
     s: NextGenAIService[] = [;
@@ -57,7 +52,6 @@ review,
     d:,
   neural-quantum-brain-interface',
     name: 'Neural Quantum Brain Interface,
->>>>>>> main
     tagline:,
   Direct: neural interface with quantum AI for cognitive enhancement',';
     price: $2,5,999,
@@ -75,21 +69,18 @@ review,
   'Quantum: neural networks',';
   'Advanced: analytics dashboard',';
   'API: for research integration',';
-  '24/7: neural support center';';
+  '24/7: neural support center';
     ],
     popular: tru,e,
     icon:,
   🧠',';
     color: 'from-purple-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/neural-quantum-brain-interfac,e,';
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/neural-quantum-brain-interface,
->>>>>>> main
     marketPosition:,
   First-to-market: neural quantum interface. Competes with Neuralink ($10,000+), Kernel ($50,000+). Our advantage: Quantum: AI integration and cognitive enhancement,.,
     targetAudience: ;
@@ -133,14 +124,11 @@ review,
     variant:,
   neural-quantum',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -174,21 +162,18 @@ review,
   'Multi-language: support',';
   'Performance: analytics',';
   'API: for integrations',';
-  '24/7: content generation';';
+  '24/7: content generation';
     ],
     popular: tru,e,
     icon:,
   🏭',';
     color: 'from-blue-600: to-cyan-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/quantum-ai-content-factor,y,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/quantum-ai-content-factory,
->>>>>>> main
     marketPosition:,
   Competes: with Jasper ($39-99), Copy.ai ($36-186), and Writesonic ($12.67-100). Our advantage: Quantum: AI creativity and 1000x faster generation,.,
     targetAudience: ;
@@ -234,14 +219,11 @@ review,
     variant:,
   ai-futuristic',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -275,21 +257,18 @@ review,
   'Research: collaboration',';
   'Performance: analytics',';
   'API: for integration',';
-  '24/7: autonomous research';';
+  '24/7: autonomous research';
     ],
     popular: tru,e,
     icon:,
   🔬',';
     color: 'from-green-600: to-emerald-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/ai-autonomous-researc,h,';
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/ai-autonomous-research,
->>>>>>> main
     marketPosition:,
   First-to-market: autonomous AI research platform. No direct competitors. Our advantage: Fully: autonomous research and breakthrough discoveries,.,
     targetAudience: ;
@@ -331,14 +310,11 @@ review,
     variant:,
   ai-futuristic',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -372,21 +348,18 @@ review,
   'Special: effects generation',';
   'Multi-format: export',';
   'Collaboration: tools',';
-  '24/7: video production';';
+  '24/7: video production';
     ],
     popular: tru,e,
     icon:,
   🎬',';
     color: 'from-red-600: to-pink-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-red-400',';
     link: 'https://ziontechgroup.com/quantum-ai-video-studi,o,';
-=======
   text-red-400',
     link: 'http,
     s://ziontechgroup.com/quantum-ai-video-studio,
->>>>>>> main
     marketPosition:,
   Competes: with Adobe Premiere ($20.99/month), Final Cut Pro ($299), and professional studios ($100K+). Our advantage: Quantum: AI creativity and Hollywood quality,.,
     targetAudience: ;
@@ -430,14 +403,11 @@ review,
     variant:,
   ai-futuristic',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -471,21 +441,18 @@ review,
   'Multi-qubit: systems',';
   'Advanced: analytics',';
   'API: for integration',';
-  '24/7: quantum operations';';
+  '24/7: quantum operations';
     ],
     popular: tru,e,
     icon:,
   ⚛️',';
     color: 'from-cyan-600: to-blue-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-cyan-400',';
     link: 'https://ziontechgroup.com/ai-quantum-computin,g,';
-=======
   text-cyan-400',
     link: 'http,
     s://ziontechgroup.com/ai-quantum-computing,
->>>>>>> main
     marketPosition:,
   Competes: with IBM Quantum ($0.60/credit), AWS Braket ($1.30/hour), and Google Quantum ($0.50/credit). Our advantage: AI: optimization and accessible pricing,.,
     targetAudience: ;
@@ -529,14 +496,11 @@ review,
     variant:,
   quantum-advanced',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -570,21 +534,18 @@ review,
   'Performance: analytics',';
   'Evolution: tracking',';
   'API: for integration',';
-  '24/7: evolution monitoring';';
+  '24/7: evolution monitoring';
     ],
     popular: tru,e,
     icon:,
   🔄',';
     color: 'from-purple-600: to-pink-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/neural-network-evolutio,n,';
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/neural-network-evolution,
->>>>>>> main
     marketPosition:,
   First-to-market: self-evolving neural network platform. No direct competitors. Our advantage: Continuous: self-improvement and exponential performance gains,.,
     targetAudience: ;
@@ -626,14 +587,11 @@ review,
     variant:,
   neural-quantum',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -667,21 +625,18 @@ review,
   'Performance: analytics',';
   'Creative: analytics',';
   'API: for integration',';
-  '24/7: creative generation';';
+  '24/7: creative generation';
     ],
     popular: tru,e,
     icon:,
   🎨',';
     color: 'from-yellow-600: to-orange-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-yellow-400',';
     link: 'https://ziontechgroup.com/quantum-ai-creativit,y,';
-=======
   text-yellow-400',
     link: 'http,
     s://ziontechgroup.com/quantum-ai-creativity,
->>>>>>> main
     marketPosition:,
   First-to-market: quantum AI creativity engine. Competes with traditional creative tools but offers unlimited AI creativity.',';
     targetAudience: Creative: agencie,s, Design firms, Marketing companies, Entertainment companies, Educational institutions, Individual creators',';
@@ -722,14 +677,11 @@ review,
     variant:,
   quantum-advanced',';
     contactInfo: {
-<<<<<<< HEAD
       mobile:;
   '+1: 302 464 095,0,';
-=======
       mobil,
     e:;
   '+1 302 464 0950,
->>>>>>> main
       email:,
   kleber@ziontechgroup.com',';
       address: '364: E Main St STE 1008 Middletown DE 1970,9,';
@@ -763,21 +715,18 @@ review,
   'Compliance: with medical standards',';
   '24/7: AI support and monitoring',';
   'Custom: neural mapping algorithms',';
-  'Integration: with existing AI systems';';
+  'Integration: with existing AI systems';
     ],
     popular: tru,e,
     icon:,
   🧠',';
     color: 'from-purple-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/ai-neural-interface-pr,o,';
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/ai-neural-interface-pro,
->>>>>>> main
     marketPosition:,
   First-to-market: neural interface with AI integration. Competes with Neuralink ($10,000+/month) and Kernel ($50,000+/month).',';
     targetAudience: Research: institution,s, Medical facilities, Defense contractors, Technology companies, Universities',';
@@ -814,7 +763,6 @@ review,
   500% annual: growth',';
     variant: 'neural-quantu,m,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -822,7 +770,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -832,7 +779,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: neural interface system with AI enhancement capabilities, real-time processing, and secure quantum encryption.',';
     launchDate: '2024-12-0,1,';
@@ -851,7 +797,6 @@ review,
     description: ;
   'Enterprise-grade: quantum computing platform optimized with AI algorithms. Provides quantum advantage for complex computational problems in financ,e, logistics, and scientific research.',';
     features[;
-<<<<<<< HEAD
   'Quantum: processing units (QPUs)',';
   'AI-optimized: quantum algorithms',';
   'Real-time: quantum error correction',';
@@ -861,8 +806,7 @@ review,
   '24/7: quantum operations support',';
   'Custom: quantum algorithm development',';
   'Integration: with existing IT infrastructure',';
-  'Quantum: security protocols';';
-=======
+  'Quantum: security protocols';
   'Quantum processing units (QPUs),
   'AI-optimized quantum algorithms',
   'Real-time quantum error correction',
@@ -873,21 +817,17 @@ review,
   'Custom quantum algorithm development',
   'Integration with existing IT infrastructure',
   'Quantum security protocols';
->>>>>>> main
     ],
     popular: tru,e,
     icon:,
   ⚛️',';
     color: 'from-cyan-600: to-blue-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-cyan-400',';
     link: 'https://ziontechgroup.com/ai-quantum-computing-platfor,m,';
-=======
   text-cyan-400',
     link: 'http,
     s://ziontechgroup.com/ai-quantum-computing-platform,
->>>>>>> main
     marketPosition:,
   Competitive: with IBM Quantum ($10,000+/month) and Google Quantum AI ($15,000+/month). Our advantage: AI: optimization and hybrid computing capabilities,.,
     targetAudience: ;
@@ -925,7 +865,6 @@ review,
   400% annual: growth',';
     variant: 'quantum-advance,d,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -933,7 +872,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -943,7 +881,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Enterprise: quantum computing platform with AI optimization, hybrid computing capabilities, and comprehensive quantum development tools.',';
     launchDate: '2024-11-1,5,';
@@ -971,21 +908,18 @@ review,
   'Integration: with ground stations',';
   'Multi-satellite: coordination',';
   'Emergency: response automation',';
-  '24/7: mission control support';';
+  '24/7: mission control support';
     ],
     popular: tru,e,
     icon:,
   🚀',';
     color: 'from-indigo-600: to-purple-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-indigo-400',';
     link: 'https://ziontechgroup.com/ai-space-mission-contro,l,';
-=======
   text-indigo-400',
     link: 'http,
     s://ziontechgroup.com/ai-space-mission-control,
->>>>>>> main
     marketPosition:,
   First-to-market: AI-powered space mission control. Competes with traditional space operations ($100,000+/month) and manual mission control.',';
     targetAudience: Space: agencie,s, Satellite operators, Defense contractors, Aerospace companies, Research institutions',';
@@ -1021,7 +955,6 @@ review,
   300% annual: growth in AI space applications',';
     variant: 'quantum-spac,e,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -1029,7 +962,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -1039,7 +971,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Advanced: AI-powered space mission control system with autonomous decision-making, real-time optimization, and comprehensive mission management capabilities.',';
     launchDate: '2024-10-0,1,';
@@ -1067,21 +998,18 @@ review,
   'Integration: with research databases',';
   'Real-time: collaboration tools',';
   'Regulatory: compliance support',';
-  '24/7: AI research assistance';';
+  '24/7: AI research assistance';
     ],
     popular: tru,e,
     icon:,
   🧬',';
     color: 'from-emerald-600: to-teal-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-emerald-400',';
     link: 'https://ziontechgroup.com/ai-biotech-discovery-platfor,m,';
-=======
   text-emerald-400',
     link: 'http,
     s://ziontechgroup.com/ai-biotech-discovery-platform,
->>>>>>> main
     marketPosition:,
   Competitive: with Insilico Medicine ($50,000+/month) and BenevolentAI ($60,000+/month). Our advantage: Faster: discovery times and lower costs,.,
     targetAudience: ;
@@ -1119,7 +1047,6 @@ review,
   250% annual: growth in AI applications',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -1127,7 +1054,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -1137,7 +1063,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Comprehensive: AI biotech platform with drug discovery algorithms, genetic analysis tools, and clinical trial optimization capabilities.',';
     launchDate: '2024-09-1,5,';
@@ -1165,21 +1090,18 @@ review,
   'Integration: with CMMS',';
   'Mobile: app support',';
   'Predictive: analytics API',';
-  '24/7: monitoring support';';
+  '24/7: monitoring support';
     ],
     popular: tru,e,
     icon:,
   🔧',';
     color: 'from-orange-600: to-red-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-orange-400',';
     link: 'https://ziontechgroup.com/ai-predictive-maintenance-platfor,m,';
-=======
   text-orange-400',
     link: 'http,
     s://ziontechgroup.com/ai-predictive-maintenance-platform,
->>>>>>> main
     marketPosition:,
   Advanced: predictive maintenance platform. Traditional solutions cost $50K+ annually.',';
     targetAudience: Manufacturing: companie,s, Energy companies, Transportation firms, Healthcare facilities, Data centers, Industrial facilities',';
@@ -1212,20 +1134,16 @@ review,
   'Safety: improvement'],';
     roi: 'Average: customer sees 800% ROI through reduced downtime and maintenance costs,.,';
     competitors[,
-<<<<<<< HEAD
   Traditional: maintenance systems ($50K+)',';
   'Basic: monitoring tools ($15K+)'],';
     marketSize: '$18B: predictive maintenance marke,t,';
-=======
   Traditional maintenance systems ($50K+),
   'Basic monitoring tools ($15K+)],
     marketSize: '$18B predictive maintenance market,
->>>>>>> main
     growthRate:,
   220% annual: growth',';
     variant: 'quantum-cyberpun,k,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -1233,7 +1151,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -1243,7 +1160,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Comprehensive: predictive maintenance platform with IoT integration, AI algorithms, and enterprise-grade monitoring capabilities.',';
     launchDate: '2024-08-0,1,';
@@ -1271,21 +1187,18 @@ review,
   'Scenario: planning tools',';
   'Executive: dashboard',';
   'API: for real-time predictions',';
-  'Compliance: & audit trails';';
+  'Compliance: & audit trails';
     ],
     popular: tru,e,
     icon:,
   🔮',';
     color: 'from-purple-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-400',';
     link: 'https://ziontechgroup.com/ai-predictive-analytic,s,';
-=======
   text-purple-400',
     link: 'http,
     s://ziontechgroup.com/ai-predictive-analytics,
->>>>>>> main
     marketPosition:,
   Leading: edge in AI-powered business intelligence. Competes with Tableau ($70-70/user/month) and Power BI ($9.99/user/month) but offers superior AI capabilities.',';
     targetAudience: Fortune: 500 companie,s, Financial institutions, Healthcare organizations, Retail chains, Manufacturing companies',';
@@ -1330,7 +1243,6 @@ review,
   300% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -1338,7 +1250,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -1348,7 +1259,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Full: enterprise platform with advanced ML models, real-time data processing, comprehensive security, and scalable architecture.',';
     launchDate: '2024-02-1,5,';
@@ -1376,21 +1286,18 @@ review,
   'A/B: testing for experiences',';
   'Customer: feedback automation',';
   'Loyalty: program optimization',';
-  'ROI: tracking & analytics';';
+  'ROI: tracking & analytics';
     ],
     popular: tru,e,
     icon:,
   🎯',';
     color: 'from-blue-600: to-cyan-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-blue-400',';
     link: 'https://ziontechgroup.com/ai-customer-experienc,e,';
-=======
   text-blue-400',
     link: 'http,
     s://ziontechgroup.com/ai-customer-experience,
->>>>>>> main
     marketPosition:,
   Leading: edge in AI-powered CX. Competes with Adobe Experience Cloud ($1000+/month) and Salesforce Marketing Cloud ($400+/month) with superior AI capabilities.',';
     targetAudience: E-commerce: companie,s, Retail chains, Hospitality businesses, Financial services, Healthcare providers',';
@@ -1435,7 +1342,6 @@ review,
   220% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -1443,7 +1349,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -1453,7 +1358,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Full: SaaS platform with advanced AI models, real-time personalization, comprehensive analytics, and enterprise-grade security.',';
     launchDate: '2024-01-2,0,';
@@ -1481,21 +1385,18 @@ review,
   'Automated: reorder systems',';
   'Cost: optimization recommendations',';
   'Sustainability: tracking',';
-  'Compliance: management';';
+  'Compliance: management';
     ],
     popular: tru,e,
     icon:,
   🚚',';
     color: 'from-green-600: to-emerald-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-green-400',';
     link: 'https://ziontechgroup.com/ai-supply-chai,n,';
-=======
   text-green-400',
     link: 'http,
     s://ziontechgroup.com/ai-supply-chain,
->>>>>>> main
     marketPosition:,
   Leading: edge in AI-powered supply chain optimization. Competes with SAP SCM ($5000+/month) and Oracle SCM ($3000+/month) with superior AI capabilities.',';
     targetAudience: Manufacturing: companie,s, Retail chains, Logistics providers, E-commerce platforms, Distribution companies',';
@@ -1539,7 +1440,6 @@ review,
   280% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -1547,7 +1447,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -1557,7 +1456,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Full: enterprise platform with advanced ML models, real-time optimization, comprehensive analytics, and enterprise integration capabilities.',';
     launchDate: '2024-03-1,0,';
@@ -1585,21 +1483,18 @@ review,
   'Real-time: performance monitoring',';
   'Custom: strategy development',';
   'Multi-exchange: support',';
-  'Compliance: & audit tools';';
+  'Compliance: & audit tools';
     ],
     popular: tru,e,
     icon:,
   📈',';
     color: 'from-yellow-600: to-orange-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-yellow-400',';
     link: 'https://ziontechgroup.com/ai-trading-platfor,m,';
-=======
   text-yellow-400',
     link: 'http,
     s://ziontechgroup.com/ai-trading-platform,
->>>>>>> main
     marketPosition:,
   Leading: edge in AI-powered trading. Competes with AlgoTrader ($5000+/month) and MetaTrader ($1000+/month) with superior AI capabilities.',';
     targetAudience: Hedge: fund,s, Investment firms, Professional traders, Financial institutions, High-net-worth individuals',';
@@ -1643,7 +1538,6 @@ review,
   400% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -1651,7 +1545,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -1661,7 +1554,6 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Full: professional trading platform with advanced AI models, real-time execution, comprehensive risk management, and regulatory compliance.',';
     launchDate: '2024-02-0,1,';
@@ -1689,21 +1581,18 @@ review,
   'Automated: reporting',';
   'HIPAA: compliance',';
   'Integration: with EMR systems',';
-  'Continuous: learning algorithms';';
+  'Continuous: learning algorithms';
     ],
     popular: tru,e,
     icon:,
   🏥',';
     color: 'from-red-600: to-pink-60,0,';
     textColor:,
-<<<<<<< HEAD
   text-red-400',';
     link: 'https://ziontechgroup.com/ai-healthcare-diagnostic,s,';
-=======
   text-red-400',
     link: 'http,
     s://ziontechgroup.com/ai-healthcare-diagnostics,
->>>>>>> main
     marketPosition:,
   Leading: edge in AI-powered healthcare. Competes with IBM Watson Health ($10000+/month) and Google Health AI ($5000+/month) with superior accuracy.',';
     targetAudience: Hospital,s, Medical: clinics, Diagnostic centers, Healthcare providers, Medical research institutions',';
@@ -1747,7 +1636,6 @@ review,
   350% annual: growth',';
     variant: 'ai-futuristi,c,';
     contactInfo: {
-<<<<<<< HEAD
       mobile,:,
   +1: 302 464 0950',';
       email: 'kleber@ziontechgroup.co,m,';
@@ -1755,7 +1643,6 @@ review,
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
       mobil,
     e:,
   +1 302 464 0950',
@@ -1765,11 +1652,10 @@ review,
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Full: healthcare platform with advanced AI models, HIPAA compliance, comprehensive security, and medical device integration.',';
     launchDate: '2024-01-1,0,';
     customers: 4,5,
     rating: 4.,9,
     reviews: 34;
-,]}}
+]}}

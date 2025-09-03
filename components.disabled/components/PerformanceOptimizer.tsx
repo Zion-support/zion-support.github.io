@@ -10,10 +10,8 @@ interface PerformanceOptimizerProps {
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   preloadImages = [],
   preloadFonts = [
-    'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap',
-  ],
-  criticalCSS,
-}) => {
+    'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'],
+  criticalCSS}) => {
   useEffect(() => {
     // Performance monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -38,17 +36,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       });
 
       try {
-<<<<<<< HEAD
         observer.observe({
           entryTypes: [
             'largest-contentful-paint',
             'first-input',
-            'layout-shift',
-          ],
-        });
-=======
+            'layout-shift']});
         observer.observe({ entryTypes: ['largest-contentful-paint,first-input,layout-shift'] });
->>>>>>> main
       } catch (e) {
         // Fallback for browsers that don't support all entry types
         console.log('Performance monitoring not fully supported');

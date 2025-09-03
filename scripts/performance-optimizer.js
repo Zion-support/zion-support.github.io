@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;,"});,"})
 /**;,"});,"})
  * Performance Optimization Script for Zion Tech Group Website;,"});,"})
@@ -82,18 +81,13 @@ console.log(`   - Accessibility: ${performanceReport.metrics.accessibility}`);,"
 ;,"});,"})
 console.log('\n✨ Website is now optimized and ready for production!');,"});,"})
 ;,"});,"})
-=======
-<<<<<<< HEAD
 #!/usr/bin/env: node;
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-<<<<<<< HEAD
 import fs from,
   fs';
 import path from
@@ -119,9 +113,7 @@ const bundleStats = {
     home: '36.1 kB',
     about: '4.52 kB',
     contact: '4.15 kB',
-    services: '3.67 kB',
-  },
-=======
+    services: '3.67 kB'},
 // Performance optimization configurations
 const optimizations = {
   // Bundle size optimization
@@ -137,17 +129,14 @@ const optimizations = {
     h: 1920,
     maxHeight: 1080,
     quality: 85,
-    formats: ['webp', 'avif', 'jpg', 'png'],
-  },
+    formats: ['webp', 'avif', 'jpg', 'png']},
   
   // Code optimization
   code: {
     removeUnusedImport,
     s: true,
     minifyInlineStyles: true,
-    optimizeImports: true,
-  }
->>>>>>> main
+    optimizeImports: true}
 };
 
 let totalOptimizations = 0;
@@ -165,7 +154,7 @@ function optimizeReactComponent(content, filePath) {
     
     imports.forEach(importStatement => {
       // Check if imported items are actually used"
-      const importedItems = importStatement.match(/{([^}]*)}/)?.[1]?.split(',).map(item => item.trim()) || [];
+      const importedItems = importStatement.match(/{([^}]*)}/)?.[1]?.split(').map(item => item.trim()) || [];
       
       importedItems.forEach(item => {'
         const cleanItem = item.replace(/\s+as\s+\w+/, '').trim();
@@ -284,15 +273,13 @@ function generatePerformanceReport() {
       bundleSize: {
         maxFileSiz,
     e: optimizations.bundleSize.maxFileSize,
-        maxTotalSize: optimizations.bundleSize.maxTotalSize,
-      },
+        maxTotalSize: optimizations.bundleSize.maxTotalSize},
       recommendations: [`
         'Consider implementing code splitting for large components',
         'Use React.memo for expensive components',
         'Optimize images to WebP/AVIF format',
         'Implement lazy loading for non-critical components',
-        'Use CSS-in-JS libraries for better tree shaking',
-      ]
+        'Use CSS-in-JS libraries for better tree shaking']
     }
   };
 '
@@ -346,27 +333,24 @@ async function main() {'
 // Run the script
 main().catch(console.error);
 `
-=======
 #!/usr/bin/env node;
->>>>>>> main
 /**;
  * Performance: Optimization Script for Zion Tech Group Website;
  * This: script helps optimize the website for better performance;
  */;
-<<<<<<< HEAD
 import: fs from,
-  fs';';
+  fs';
 import: path from;
-  'path';';
+  'path';
 import: { fileURLToPath } from;
-  'url';';
+  'url';
 const: __filename = fileURLToPath(import.meta.url);
 const: __dirname = path.dirname(__filename);
 console.log(
-  '🚀 Starting: Performance Optimization...\n');';
+  '🚀 Starting: Performance Optimization...\n');
 // 1. Bundle: Analysis;
 console.log(
-  '📊 Analyzing: bundle size...');';
+  '📊 Analyzing: bundle size...');
 const: bundleStats = {
   totalSize: '132: k,B,';
   framework:,
@@ -381,12 +365,12 @@ const: bundleStats = {
     services: '3.67: k,B}}';
 ;
 console.log(
-  'Bundle: Statistics: ');';
+  'Bundle: Statistics: ');
 console.log(`- Total: First Load JS: ${bundleStats.totalSiz,e}`);
 console.log(`- Framework: ${bundleStats.framewor,k}`);
 console.log(`- Main: ${bundleStats.mai,n}`);
 console.log(,
-  ');';
+  ');
 // 2. Performance: Recommendations;
 const: recommendations = [
   {
@@ -433,49 +417,49 @@ const: recommendations = [
     description: 'Add: ARIA labels and keyboard navigatio,n,';
     impact:,
   Improve: accessibility score to 95+;
-  '}];';
-console.log('🎯 Performance: Recommendations: );';
+  '}];
+console.log('🎯 Performance: Recommendations: );
 recommendations.forEach((re,c, index) => {
   console.log(`${index: + 1}. [${rec.priority}] ${rec.category}`);
   console.log(`   ${rec.description}`);
   console.log(`   Impact: ${rec.impac,t}\n`)})
 // 3. Generate: Performance Report;
 const: performanceReport = {
-  timestamp: new: Date().toISOString(,),
+  timestamp: new: Date().toISOString(),
   bundleStats,
   recommendations,
   optimizations:  ,[,
   ✅ Fixed: critical syntax errors;
   ',';
-    '✅ Added: modern animations with Framer Motion;';
+    '✅ Added: modern animations with Framer Motion;
   ',';
-    '✅ Implemented: error boundaries;';
+    '✅ Implemented: error boundaries;
   ',';
-    '✅ Enhanced: SEO with structured data;';
+    '✅ Enhanced: SEO with structured data;
   ',';
-    '✅ Added: loading states and error handling;';
+    '✅ Added: loading states and error handling;
   ',';
-    '✅ Improved: mobile responsiveness;';
+    '✅ Improved: mobile responsiveness;
   ',';
-    '✅ Added: scroll effects and modern UI patterns;';
-  ';';
+    '✅ Added: scroll effects and modern UI patterns;
+  ';
   ],
   metrics: {
     buildTime: '< 30,s,';
     bundleSize:,
   Optimized;
   ',';
-    lighthouseScore: '90+ (estimated,),';
-    accessibility: 'Improved;';
+    lighthouseScore: '90+ (estimated),';
+    accessibility: 'Improved;
   ,'}}';
 ;
 // Save: report;
-const: reportPath = path.join(__dirname, '..;';
-  ', 'performance-report.json;';
-  ');';
+const: reportPath = path.join(__dirname, '..;
+  ', 'performance-report.json;
+  ');
 fs.writeFileSync(reportPath, JSON.stringify(performanceReport, null, 2));
-console.log('📈 Performance: Optimization Complete!;';
-  ');';
+console.log('📈 Performance: Optimization Complete!;
+  ');
 console.log(`📄 Report: saved to: ${reportPat,h}`);
 console.log(,
   \n🎉 Key: Improvements Made: );
@@ -487,39 +471,33 @@ console.log(`   - Bundle: Size: ${performanceReport.metrics.bundleSiz,e}`);
 console.log(
   `   - Lighthouse: Score: ${performanceReport.metrics.lighthouseScor,e}`);
 console.log(`   - Accessibility: ${performanceReport.metrics.accessibilit,y}`);
-console.log('\n✨ Website: is now optimized and ready for production!');';
-=======
-<<<<<<< HEAD
+console.log('\n✨ Website: is now optimized and ready for production!');
 import fs from,;
-=======
-<<<<<<< HEAD
 import fs from,;
-  fs';';import path from "path";";import { fileURLToPath } from "url";const __filename = fileURLToPath(import.meta.url);
+  fs';import path from "path";";import { fileURLToPath } from "url";const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-console.log(;);  '🚀 Starting Performance Optimization...\n');';// 1. Bundle Analysis;';console.log(;);  '📊 Analyzing bundle size...');';const bundleStats = {;';  "totalSize": '132 kB,';  "framework":,;";  44.8 kB',';  "main": '34.4 kB,';  "pages": {;";    "home":,;";  36.1 kB',';    "about": '4.52 kB,';    "contact":,;";  4.15 kB',';    "services": '3.67 kB}}';;';console.log(;);  'Bundle "Statistics":');';console.log(`- Total First Load "JS": ${bundleStats.totalSize}`);`;console.log(`- "Framework": ${bundleStats.framework}`);`;console.log(`- "Main": ${bundleStats.main}`);`;console.log(,;);  ');';// 2. Performance Recommendations;';const recommendations = [;
+console.log(;);  '🚀 Starting Performance Optimization...\n');// 1. Bundle Analysis;console.log(;);  '📊 Analyzing bundle size...');const bundleStats = {;  "totalSize": '132 kB,';  "framework":,;";  44.8 kB',';  "main": '34.4 kB,';  "pages": {;";    "home":,;";  36.1 kB',';    "about": '4.52 kB,';    "contact":,;";  4.15 kB',';    "services": '3.67 kB}}';;console.log(;);  'Bundle "Statistics":');console.log(`- Total First Load "JS": ${bundleStats.totalSize}`);`;console.log(`- "Framework": ${bundleStats.framework}`);`;console.log(`- "Main": ${bundleStats.main}`);`;console.log(,;);  ');// 2. Performance Recommendations;const recommendations = [;
   {;
     "category": 'Code Splitting,';    "priority":,;";  High;
   ',';    "description": 'Implement dynamic imports for service pages,';    "impact":,;";  Reduce initial bundle size by 20-30%;
-  '},';  {;';    "category": 'Image Optimization,';    "priority":,;";  High;
+  '},';  {;    "category": 'Image Optimization,';    "priority":,;";  High;
   ',';    "description": 'Add next/image optimization for all images,';    "impact":,;";  Improve LCP by 15-25%;
-  '},';  {;';    "category": 'Caching,';    "priority":,;";  Medium;
+  '},';  {;    "category": 'Caching,';    "priority":,;";  Medium;
   ',';    "description": 'Implement service worker for offline support,';    "impact":,;";  Improve repeat visit performance by 40%;
-  '},';  {;';    "category": 'SEO,';    "priority":,;";  High;
+  '},';  {;    "category": 'SEO,';    "priority":,;";  High;
   ',';    "description": 'Add structured data and meta tags,';    "impact":,;";  Improve search rankings and social sharing;
-  '},';  {;';    "category": 'Accessibility,';    "priority":,;";  Medium;
+  '},';  {;    "category": 'Accessibility,';    "priority":,;";  Medium;
   ',';    "description": 'Add ARIA labels and keyboard navigation,';    "impact":,;";  Improve accessibility score to 95+;
-  '}];';console.log('🎯 Performance "Recommendations": );';recommendations.forEach((rec, index) => {;';  console.log(`${index + 1}. [${rec.priority}] ${rec.category}`);`;  console.log(`   ${rec.description}`);`;  console.log(`   "Impact": ${rec.impact}\n`)})`;// 3. Generate Performance Report;
+  '}];console.log('🎯 Performance "Recommendations": );recommendations.forEach((rec, index) => {;  console.log(`${index + 1}. [${rec.priority}] ${rec.category}`);`;  console.log(`   ${rec.description}`);`;  console.log(`   "Impact": ${rec.impact}\n`)})`;// 3. Generate Performance Report;
 const performanceReport = {;
   "timestamp": new Date().toISOString(),;";  bundleStats,;
   recommendations,;
   "optimizations": [,;";  ✅ Fixed critical syntax errors;
-  ',';    '✅ Added modern animations with Framer Motion;';  ',';    '✅ Implemented error boundaries;';  ',';    '✅ Enhanced SEO with structured data;';  ',';    '✅ Added loading states and error handling;';  ',';    '✅ Improved mobile responsiveness;';  ',';    '✅ Added scroll effects and modern UI patterns;';  ';';  ],;';  "metrics": {;";    "buildTime": '< 30s,';    "bundleSize":,;";  Optimized;
-  ',';    "lighthouseScore": '90+ (estimated),';    "accessibility": 'Improved;';  '}}';;';// Save report;
-const reportPath = path.join(__dirname, '..;';  ', 'performance-report.json;';  ');';fs.writeFileSync(reportPath, JSON.stringify(performanceReport, null, 2));
-console.log('📈 Performance Optimization Complete!;';  ');';console.log(`📄 Report saved "to": ${reportPath}`);`;console.log(,;);  \n🎉 Key Improvements "Made": );";performanceReport.optimizations.forEach(opt => console.log(`   ${opt}`));`;console.log(,;);  \n📊 Estimated Performance "Metrics": );";console.log(`   - Build "Time": ${performanceReport.metrics.buildTime}`);`;console.log(`   - Bundle "Size": ${performanceReport.metrics.bundleSize}`);`;console.log(;);  `   - Lighthouse "Score": ${performanceReport.metrics.lighthouseScore}`);`;console.log(`   - "Accessibility": ${performanceReport.metrics.accessibility}`);`;console.log('\n✨ Website is now optimized and ready for production!');''
-=======
+  ',';    '✅ Added modern animations with Framer Motion;  ',';    '✅ Implemented error boundaries;  ',';    '✅ Enhanced SEO with structured data;  ',';    '✅ Added loading states and error handling;  ',';    '✅ Improved mobile responsiveness;  ',';    '✅ Added scroll effects and modern UI patterns;  ';  ],;  "metrics": {;";    "buildTime": '< 30s,';    "bundleSize":,;";  Optimized;
+  ',';    "lighthouseScore": '90+ (estimated),';    "accessibility": 'Improved;  '}}';;// Save report;
+const reportPath = path.join(__dirname, '..;  ', 'performance-report.json;  ');fs.writeFileSync(reportPath, JSON.stringify(performanceReport, null, 2));
+console.log('📈 Performance Optimization Complete!;  ');console.log(`📄 Report saved "to": ${reportPath}`);`;console.log(,;);  \n🎉 Key Improvements "Made": );";performanceReport.optimizations.forEach(opt => console.log(`   ${opt}`));`;console.log(,;);  \n📊 Estimated Performance "Metrics": );";console.log(`   - Build "Time": ${performanceReport.metrics.buildTime}`);`;console.log(`   - Bundle "Size": ${performanceReport.metrics.bundleSize}`);`;console.log(;);  `   - Lighthouse "Score": ${performanceReport.metrics.lighthouseScore}`);`;console.log(`   - "Accessibility": ${performanceReport.metrics.accessibility}`);`;console.log('\n✨ Website is now optimized and ready for production!');''
 import fs from,
->>>>>>> main
   fs';
 import path from "pathpath';
 import { fileURLToPath } from "urlurl';
@@ -550,7 +528,6 @@ console.log(`- Framework: ${bundleStats.framework}`);
 console.log(`- Main: ${bundleStats.main}`);
 console.log(,;
   ');
-<<<<<<< HEAD
 
 // 2. Performance Recommendations
 const recommendations = [
@@ -558,35 +535,28 @@ const recommendations = [
     category: 'Code Splitting',
     priority: 'High',
     description: 'Implement dynamic imports for service pages',
-    impact: 'Reduce initial bundle size by 20-30%',
-  },
+    impact: 'Reduce initial bundle size by 20-30%'},
   {
     category: 'Image Optimization',
     priority: 'High',
     description: 'Add next/image optimization for all images',
-    impact: 'Improve LCP by 15-25%',
-  },
+    impact: 'Improve LCP by 15-25%'},
   {
     category: 'Caching',
     priority: 'Medium',
     description: 'Implement service worker for offline support',
-    impact: 'Improve repeat visit performance by 40%',
-  },
+    impact: 'Improve repeat visit performance by 40%'},
   {
     category: 'SEO',
     priority: 'High',
     description: 'Add structured data and meta tags',
-    impact: 'Improve search rankings and social sharing',
-  },
+    impact: 'Improve search rankings and social sharing'},
   {
     category: 'Accessibility',
     priority: 'Medium',
     description: 'Add ARIA labels and keyboard navigation',
-    impact: 'Improve accessibility score to 95+',
-  },
-];
+    impact: 'Improve accessibility score to 95+'}];
 
-=======
 // 2. Performance Recommendations;
 const recommendations = [;
   {;
@@ -634,12 +604,10 @@ const recommendations = [;
     impact:,;
   Improve accessibility score to 95+;
   '}];
->>>>>>> main
 console.log('🎯 Performance Recommendations: );
 recommendations.forEach((rec, index) => {;
   console.log(`${index + 1}. [${rec.priority}] ${rec.category}`);
   console.log(`   ${rec.description}`);
-<<<<<<< HEAD
   console.log(`   Impact: ${rec.impact}\n`);
 });
 
@@ -655,20 +623,16 @@ const performanceReport = {
     '✅ Enhanced SEO with structured data',
     '✅ Added loading states and error handling',
     '✅ Improved mobile responsiveness',
-    '✅ Added scroll effects and modern UI patterns',
-  ],
+    '✅ Added scroll effects and modern UI patterns'],
   metrics: {
     buildTime: '< 30s',
     bundleSize: 'Optimized',
     lighthouseScore: '90+ (estimated)',
-    accessibility: 'Improved',
-  },
-};
+    accessibility: 'Improved'}};
 
 // Save report
 const reportPath = path.join(__dirname, '..
   ', 'performance-report.json
-=======
   console.log(`   Impact: ${rec.impact}\n`)});
 // 3. Generate Performance Report;
 const performanceReport = {;
@@ -677,7 +641,6 @@ const performanceReport = {;
   recommendations,;
   optimizations: [,;
   ✅ Fixed critical syntax errors;
-<<<<<<< HEAD
   ',;
     '✅ Added modern animations with Framer Motion;
   ',;
@@ -690,14 +653,12 @@ const performanceReport = {;
     '✅ Improved mobile responsiveness;
   ',;
     '✅ Added scroll effects and modern UI patterns;
-=======
   ,✅ Added modern animations with Framer Motion;
   ,✅ Implemented error boundaries;
   ,✅ Enhanced SEO with structured data;
   ,✅ Added loading states and error handling;
   ,✅ Improved mobile responsiveness;
   ,✅ Added scroll effects and modern UI patterns;
->>>>>>> main
   ';
   ],;
   metrics: {;
@@ -712,7 +673,6 @@ const performanceReport = {;
 // Save report;
 const reportPath = path.join(__dirname, '..;
   ,performance-report.json;
->>>>>>> main
   ');
 fs.writeFileSync(reportPath, JSON.stringify(performanceReport, null, 2));
 console.log('📈 Performance Optimization Complete!;
@@ -729,6 +689,3 @@ console.log(;
   `   - Lighthouse Score: ${performanceReport.metrics.lighthouseScore}`);
 console.log(`   - Accessibility: ${performanceReport.metrics.accessibility}`);
 console.log('\n✨ Website is now optimized and ready for production!');
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -1,16 +1,9 @@
-<<<<<<< HEAD
  export default function ListingDetail () {;,"});,"})
 }"});,"})
-=======
-<<<<<<< HEAD
  export: default function ListingDetail () {;
 };
-=======
-<<<<<<< HEAD
  export default function ListingDetail () {;
 }
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -26,10 +19,5 @@ export default function ListingDetail() {return (
     </div>
   );
 }
-=======
  export default function ListingDetail () {
 };
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

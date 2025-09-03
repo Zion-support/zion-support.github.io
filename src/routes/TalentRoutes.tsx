@@ -1,30 +1,20 @@
-<<<<<<< HEAD
 import { Route, Routes  } from 'react-router-dom'; import { ProtectedRoute } from '../components/ProtectedRoute'; import TalentDirectory from '../pages/TalentDirectory'; import TalentsPage from '../pages/TalentsPage'; import TalentProfilePage from '../pages/TalentProfilePage'; import SavedTalentsPage from '../pages/SavedTalentsPage'; import CreateTalentProfile from '../pages/CreateTalentProfile'; import ProfilePage from '../pages/ProfilePage'; ; export default function TalentRoutes() {; return(; <>; <Route path = "directory" element={<TalentDirectory />} />;";"";" <Route path="list" element={<TalentsPage />} />;";" </>;";" );"";" }";"";"
-=======
-<<<<<<< HEAD
 import { Route, Routes    } from 'react-router-dom'; import { ProtectedRoute } from '../components/ProtectedRoute'; import TalentDirectory from '../pages/TalentDirectory'; import TalentsPage from '../pages/TalentsPage'; import TalentProfilePage from '../pages/TalentProfilePage'; import SavedTalentsPage from '../pages/SavedTalentsPage'; import CreateTalentProfile from '../pages/CreateTalentProfile'; import ProfilePage from '../pages/ProfilePage'; ; export default function TalentRoutes() {; return (; <>; <Route path = "directory" element={<TalentDirectory />} />;";"";" <Route path="list" element={<TalentsPage />} />;";" </>;";" );"";" }";"";"
-=======
-<<<<<<< HEAD
 
 import { Route, Routes } from 'react-router-dom.ts'; import { ProtectedRoute } from '../components/ProtectedRoute';       ; export default function TalentRoutes(...args: any[]): { return (; <>; <Route path = "directory" element={<TalentDirectory />} />;";"";" <Route path="list" element={<TalentsPage />} />;";" </>;";" );"";" }";"";""""";,"});,"})
 ;,"});,"})
 import { Route, Routes    } from 'react-router-dom'; import { ProtectedRoute } from '../components/ProtectedRoute';       ; export default function TalentRoutes() {; return (; <>; <Route path = "directory" element={<TalentDirectory />} />;";"";" <Route path="list" element={<TalentsPage />} />;";" </>;";" );"";" }";"";";,"});,"})
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff;,"});,"})
-=======
-<<<<<<< HEAD
-import { Route, Routes } from 'react-router-dom.ts' import { ProtectedRoute } from '../components/ProtectedRoute' import TalentDirectory from '../pages/TalentDirectory' import TalentsPage from '../pages/TalentsPage' import TalentProfilePage from '../pages/TalentProfilePage' import SavedTalentsPage from '../pages/SavedTalentsPage' import CreateTalentProfile from '../pages/CreateTalentProfile' import ProfilePage from '../pages/ProfilePage'  export default function TalentRoutes(...args: any[]): { return ( <> <Route path = "directory" element={<TalentDirectory />} />';;"" <Route path="list" element={<TalentsPage />} />'; </>'; )';" }"';';""";
-import { Route, Routes } from 'react-router-dom.ts' import { ProtectedRoute } from '../components/ProtectedRoute' import TalentDirectory from '../pages/TalentDirectory' import TalentsPage from '../pages/TalentsPage' import TalentProfilePage from '../pages/TalentProfilePage' import SavedTalentsPage from '../pages/SavedTalentsPage' import CreateTalentProfile from '../pages/CreateTalentProfile' import ProfilePage from '../pages/ProfilePage'  export default function TalentRoutes(...args: any[]): { return ( <> <Route path = 'directory' element={<TalentDirectory />} />';;'' <Route path='list' element={<TalentsPage />} />'; </>'; )';' }'';';''";
-=======
-<<<<<<< HEAD
-import: React from 'react';';';';
-import: { Route, Routes } from 'react-router-dom';';';';
-import: { ProtectedRoute } from '../components/ProtectedRoute';';';';
-import: TalentDirectory from '../pages/TalentDirectory';';';';
-import: TalentsPage from '../pages/TalentsPage';';';';
-import: TalentProfilePage from '../pages/TalentProfilePage';';';';
-import: SavedTalentsPage from '../pages/SavedTalentsPage';';';';
-import: CreateTalentProfile from '../pages/CreateTalentProfile';';';';
-import: ProfilePage from '../pages/ProfilePage';';';';
+import { Route, Routes } from 'react-router-dom.ts' import { ProtectedRoute } from '../components/ProtectedRoute' import TalentDirectory from '../pages/TalentDirectory' import TalentsPage from '../pages/TalentsPage' import TalentProfilePage from '../pages/TalentProfilePage' import SavedTalentsPage from '../pages/SavedTalentsPage' import CreateTalentProfile from '../pages/CreateTalentProfile' import ProfilePage from '../pages/ProfilePage'  export default function TalentRoutes(...args: any[]): { return ( <> <Route path = "directory" element={<TalentDirectory />} />';;"" <Route path="list" element={<TalentsPage />} />'; </>'; )';" }"';""";
+import { Route, Routes } from 'react-router-dom.ts' import { ProtectedRoute } from '../components/ProtectedRoute' import TalentDirectory from '../pages/TalentDirectory' import TalentsPage from '../pages/TalentsPage' import TalentProfilePage from '../pages/TalentProfilePage' import SavedTalentsPage from '../pages/SavedTalentsPage' import CreateTalentProfile from '../pages/CreateTalentProfile' import ProfilePage from '../pages/ProfilePage'  export default function TalentRoutes(...args: any[]): { return ( <> <Route path = 'directory' element={<TalentDirectory />} />';;'' <Route path='list' element={<TalentsPage />} />'; </>'; )';' }'';''";
+import: React from 'react';';
+import: { Route, Routes } from 'react-router-dom';';
+import: { ProtectedRoute } from '../components/ProtectedRoute';';
+import: TalentDirectory from '../pages/TalentDirectory';';
+import: TalentsPage from '../pages/TalentsPage';';
+import: TalentProfilePage from '../pages/TalentProfilePage';';
+import: SavedTalentsPage from '../pages/SavedTalentsPage';';
+import: CreateTalentProfile from '../pages/CreateTalentProfile';';
+import: ProfilePage from '../pages/ProfilePage';';
 
 export: default function TalentRoutes() {
   return (;
@@ -35,10 +25,6 @@ export: default function TalentRoutes() {
       <Route: path="saved" element={<SavedTalentsPage />} />";";";
       <Route: path="create" element={<CreateTalentProfile />} />";";";
       <Route: path="profile" element={<ProfilePage />} />";";";
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Route, Routes } from 'react-router-dom';""
 import { ProtectedRoute } from '../components/ProtectedRoute';""
 import TalentDirectory from '../pages/TalentDirectory';""
@@ -46,8 +32,6 @@ import TalentsPage from '../pages/TalentsPage';""
 import TalentProfilePage from '../pages/TalentProfilePage';""
 import SavedTalentsPage from '../pages/SavedTalentsPage';""
 import CreateTalentProfile from '../pages/CreateTalentProfile';""
-=======
-<<<<<<< HEAD
 import {Route, Routes } from 'react-router-dom';"
 import {ProtectedRoute } from '../components/ProtectedRoute';"
 import TalentDirectory from '../pages/TalentDirectory';"
@@ -57,8 +41,6 @@ import SavedTalentsPage from '../pages/SavedTalentsPage';"
 import CreateTalentProfile from '../pages/CreateTalentProfile';"
 import {Route, Routes } from 'react-router-dom';
 import {ProtectedRoute } from '../components/ProtectedRoute';
-=======
-<<<<<<< HEAD
 import React from &apos;react';
 import { Route, Routes } from &apos;react-router-dom';
 import { ProtectedRoute } from &apos;../components/ProtectedRoute';
@@ -78,19 +60,14 @@ export default function TalentRoutes() ;{
       <Route path=&quot;saved&quot; element={&quot;}<SavedTalentsPage />} />
       <Route path=&quot;create&quot; element={&quot;}<CreateTalentProfile />} />
       <Route path=&quot;profile&quot; element={&quot;}<ProfilePage />} />
-=======
->>>>>>> main
->>>>>>> main
 import { Route, Routes } from 'react-router-dom';
-import { ProtectedRoute, } from '../components/ProtectedRoute';
->>>>>>> main
+import { ProtectedRoute} from '../components/ProtectedRoute';
 import TalentDirectory from '../pages/TalentDirectory';
 import TalentsPage from '../pages/TalentsPage';
 import TalentProfilePage from '../pages/TalentProfilePage';
 import SavedTalentsPage from '../pages/SavedTalentsPage';
 import CreateTalentProfile from '../pages/CreateTalentProfile';
 import ProfilePage from '../pages/ProfilePage';
-<<<<<<< HEAD
 export default function TalentRoutes() {
   return (
     <Routes>'
@@ -102,8 +79,6 @@ export default function TalentRoutes() {
       <Route path="profile" element={<ProfilePage />} />
     </Routes>"
   )}""
-=======
-<<<<<<< HEAD
 ;
 export default function TalentRoutes() {;
   return (;
@@ -115,7 +90,6 @@ export default function TalentRoutes() {;
       <Route path="create" element={<CreateTalentProfile />} />;
       <Route path="profile" element={<ProfilePage />} />;
     </Routes>;
-=======
 export default function TalentRoutes()   {return (
     <Routes>
       <Route path="directory" element={<TalentDirectory />} />
@@ -124,19 +98,8 @@ export default function TalentRoutes()   {return (
       <Route path="saved" element={<SavedTalentsPage />} />
       <Route path="create" element={<CreateTalentProfile />} />
       <Route path="profile" element={<ProfilePage />} />
->>>>>>> main
->>>>>>> main
     </Routes>
-<<<<<<< HEAD
   )
 }
-=======
->>>>>>> main
   );
 }
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

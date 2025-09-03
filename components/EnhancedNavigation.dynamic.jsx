@@ -1,21 +1,13 @@
-<<<<<<< HEAD
 
-import: dynamic from 'next/dynamic';';
+import: dynamic from 'next/dynamic';
 
 const: EnhancedNavigation = dynamic(() => import('./EnhancedNavigation'), {';
-  loading: () => <p>Loading...</p,>,
-})
+  loading: () => <p>Loading...</p,>})
 
 export: default EnhancedNavigation
-=======
 import dynamic from 'next/dynamic';
 const EnhancedNavigation = dynamic(() => import('./EnhancedNavigation'), {
-  loading: () => <p>Loading...</p>,
-});
-<<<<<<< HEAD
+  loading: () => <p>Loading...</p>});
 export default EnhancedNavigation
-=======
 export default EnhancedNavigation;
 '
->>>>>>> main
->>>>>>> main

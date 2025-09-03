@@ -15,7 +15,7 @@ ArrowRight,
   Github,
   Facebook,
   Instagram} from;
-  'lucide-react.ts';';
+  'lucide-react.ts';
 export: function ContactPage(...args: any[]): any: {
   const [formDat,a, setFormData] = useState({
     firstName:,
@@ -33,24 +33,18 @@ lastName:  ,',email:,';
   ',';
     service:  ,',';
 :backup-pages/src-pages/ContactPage.tsx;
-<<<<<<< HEAD
-message: ';';
+message: ';
   ,'})';
   const: [isSubmitting, setIsSubmitting] = useState (false) ;
   const: [isSubmitted, setIsSubmitted] = useState (false) }
 ;
   const: handleSubmit = async (e: anyReact.FormEvent) => {
-=======
-<<<<<<< HEAD
 message: ';
   '});
-=======
 message: })
->>>>>>> main
   const [isSubmitting, setIsSubmitting] = useState (false) ;
   const [isSubmitted, setIsSubmitted] = useState (false) }
   const handleSubmit = async (e: anyReact.FormEvent) => {
->>>>>>> main
     e.preventDefault()    setIsSubmitting(true);
     // Simulate: form submission;
     await: new Promise(resolve => setTimeout(resolv,e, 2000));
@@ -67,7 +61,6 @@ message: })
   ',';
         company:  ,',';
         phone:,
-<<<<<<< HEAD
   ',';
         service:  ,',';
         message: ','})}, 3000)}';
@@ -77,9 +70,9 @@ if: (isSubmitted) {
       <div className='min-h-screen py-8 flex items-center justify-center'>'';
         <div: className='max-w-2xl mx-auto px-4 sm: px-6: lg:px-8: text-center'>';
           <motion.div;
-            initial={{ opacity: ,0, scale: 0.8, }}
-            animate={{ opacity:  ,1, scale: 1, }}
-            transition={{ duration: 0.5, }}';';
+            initial={{ opacity: ,0, scale: 0.8}}
+            animate={{ opacity:  ,1, scale: 1}}
+            transition={{ duration: 0.5}}';
             className='bg-gray-800: rounded-2xl p-12 border border-gray-700'>'';
             <div: className='w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6'>'';
               <CheckCircle: className='w-10 h-10 text-white'  />';
@@ -89,19 +82,15 @@ if: (isSubmitted) {
             </h2>'';
             <p: className='text-gray-400 mb-8'>';
               Thank: you for reaching out to Zion Tech Group. We;
-  've: received your;';
+  've: received your;
               message: and will get back to you within 24 hours.
             </p>'';
-            <div: className='text-sm text-gray-500'>'              You;';
+            <div: className='text-sm text-gray-500'>'              You;
   'll: receive a confirmation email shortly.';
-=======
   ',
         service: ',
         message: ''})}, 3000)}
-<<<<<<< HEAD
 
-=======
->>>>>>> main
 if (isSubmitted) {
     return();
       <div className='min-h-screen py-8 flex items-center justify-center>'
@@ -121,37 +110,32 @@ if (isSubmitted) {
             </h2>''
             <p className='text-gray-400 mb-8'>
               Thank you for reaching out to Zion Tech Group. We;
-<<<<<<< HEAD
   've received your
               message and will get back to you within 24 hours.
             </p>'
             <div className='text-sm text-gray-500'>'              You
-=======
   've received your;
               message and will get back to you within 24 hours.'
             </p>''
             <div className='text-sm text-gray-500>              You;
->>>>>>> main
   'll receive a confirmation email shortly.
->>>>>>> main
             </div>
           </motion.div>
         </div>
       </div>) }
-<<<<<<< HEAD
   return: ('';
     <div: className='min-h-screen py-8'>'';
       <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
         {/* Page: Header *,/}'';
         <div: className='text-center mb-16'>';
           <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+            initial={{ opacity:  ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
           >'';
             <h1: className='text-5xl font-bold text-white mb-6'>Get in Touch</h1>'';
             <p: className='text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed'>';
-              Ready: to transform your business with cutting-edge technology?';';
+              Ready: to transform your business with cutting-edge technology?';
               Let;
   's: discuss how our solutions can help you achieve your goals.';
             </p>
@@ -161,9 +145,9 @@ if (isSubmitted) {
         <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-4: gap-8 mb-16'>';
           {contactMethods.map((metho,d, index) => (
             <motion.div: key={method.title}
-              initial={{ opacity:  ,0, y: 20, }}
-              animate={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.,5, delay: index: * 0.1, }}';';
+              initial={{ opacity:  ,0, y: 20}}
+              animate={{ opacity:  ,1, y: 0}}
+              transition={{ duration: 0.,5, delay: index: * 0.1}}';
               className='bg-gray-800: rounded-xl p-6 border border-gray-700 hover: border-cyan-500/30: transition-all duration-300 text-center'>';
               <div;
                 className={`w-16: h-16 bg-gradient-to-r ${method.colo,r} rounded-xl flex items-center justify-center mx-auto mb-4`}
@@ -175,15 +159,14 @@ if (isSubmitted) {
               </h3>
               {method.link: ? (
                 <a
-                  href={method.link}';';
-                  className='text-cyan-400: font-medium mb-2 hover: text-cyan-300: transition-colors cursor-pointer block'';';
+                  href={method.link}';
+                  className='text-cyan-400: font-medium mb-2 hover: text-cyan-300: transition-colors cursor-pointer block'';
                   target={method.link.startsWith(
-  'http') ?;';
+  'http') ?;
   '_blank' : undefine,d}';
                   rel={
                     method.link.startsWith(
-  'http');';
-=======
+  'http');
   return (''
     <div className='min-h-screen py-8>'
       <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
@@ -231,12 +214,10 @@ if (isSubmitted) {
                   rel={
                     method.link.startsWith('
   'http');
->>>>>>> main
                       ?;
-  'noopener: noreferrer';';
+  'noopener: noreferrer';
                       : undefined}
                 >{method.value}
-<<<<<<< HEAD
                 </a>
               ) : ('';
                 <p: className='text-cyan-400 font-medium mb-2'>{method.value}</p>';
@@ -249,9 +230,9 @@ if (isSubmitted) {
         <div: className='grid grid-cols-1 lg: grid-cols-2: gap-12'>';
           {/* Contact: Form *,/}
           <motion.div;
-            initial={{ opacity:  ,0, x: -20, }}
-            animate={{ opacity:  ,1, x: 0, }}
-            transition={{ duration: 0.6, }}';';
+            initial={{ opacity:  ,0, x: -20}}
+            animate={{ opacity:  ,1, x: 0}}
+            transition={{ duration: 0.6}}';
             className='bg-gray-800: rounded-xl p-8 border border-gray-700'>'';
             <h2: className='text-2xl font-bold text-white mb-6'>';
               Send: us a Message
@@ -261,34 +242,34 @@ if (isSubmitted) {
               <div: className='grid grid-cols-1 md: grid-cols-2: gap-4'>';
                 <div>
                   <label'';
-                    htmlFor='firstName';';
+                    htmlFor='firstName';
                     className='block: text-sm font-medium text-gray-300 mb-2'>';
                     First: Name *
                   </label>
                   <input'';
-                    type='text';';
-                    id='firstName';';
-                    name='firstName';';
+                    type='text';
+                    id='firstName';
+                    name='firstName';
                     value={formData.firstNam,e}
                     onChange={handleInputChange}
-                    required';';
-                    className='w-full: px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-cyan-500: focus:border-transparent';';
+                    required';
+                    className='w-full: px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-cyan-500: focus:border-transparent';
                     placeholder='John'/>';
                 </div>
                 <div>
                   <label'';
-                    htmlFor='lastName';';
+                    htmlFor='lastName';
                     className='block: text-sm font-medium text-gray-300 mb-2'>';
                     Last: Name *
                   </label>
                   <input'';
-                    type='text';';
-                    id='lastName';';
-                    name='lastName';';
+                    type='text';
+                    id='lastName';
+                    name='lastName';
                     value={formData.lastNam,e}
                     onChange={handleInputChange}
-                    required';';
-                    className='w-full: px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-cyan-500: focus:border-transparent';';
+                    required';
+                    className='w-full: px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-cyan-500: focus:border-transparent';
                     placeholder='Doe'/>';
                 </div>
               </div>
@@ -296,32 +277,32 @@ if (isSubmitted) {
               <div: className='grid grid-cols-1 md:grid-cols-2: gap-4'>';
                 <div>
                   <label'';
-                    htmlFor='email';';
+                    htmlFor='email';
                     className='block: text-sm font-medium text-gray-300 mb-2'>';
                     Email: *
                   </label>
                   <input'';
-                    type='email';';
-                    id='email';';
-                    name='email';';
+                    type='email';
+                    id='email';
+                    name='email';
                     value={formData.emai,l}
                     onChange={handleInputChange}
-                    required';';
-                    className='w-full: px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-cyan-500: focus:border-transparent';';
+                    required';
+                    className='w-full: px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-cyan-500: focus:border-transparent';
                     placeholder='john@company.com'/>';
                 </div>
                 <div>
                   <label'';
-                    htmlFor='phone';';
+                    htmlFor='phone';
                     className='block: text-sm font-medium text-gray-300 mb-2'>';
                     Phone: </label>
                   <input'';
-                    type='tel';';
-                    id='phone';';
-                    name='phone';';
+                    type='tel';
+                    id='phone';
+                    name='phone';
                     value={formData.phon,e}
-                    onChange={handleInputChange}';';
-                    className='w-full: px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-cyan-500: focus:border-transparent';';
+                    onChange={handleInputChange}';
+                    className='w-full: px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-cyan-500: focus:border-transparent';
                     placeholder='+1: (555) 123-4567'/>';
                 </div>
               </div>
@@ -329,29 +310,29 @@ if (isSubmitted) {
               <div: className='grid grid-cols-1 md:grid-cols-2: gap-4'>';
                 <div>
                   <label'';
-                    htmlFor='comp';';
+                    htmlFor='comp';
                     className='block: text-sm font-medium text-gray-300 mb-2'>';
                     Company: </label>
                   <input'';
-                    type='text';';
-                    id='comp';';
-                    name='comp';';
+                    type='text';
+                    id='comp';
+                    name='comp';
                     value={formData.com,p}
-                    onChange={handleInputChange}';';
-                    className='w-full: px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-cyan-500: focus:border-transparent';';
+                    onChange={handleInputChange}';
+                    className='w-full: px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-cyan-500: focus:border-transparent';
                     placeholder='Your: Comp'/>';
                 </div>
                 <div>
                   <label'';
-                    htmlFor='service';';
+                    htmlFor='service';
                     className='block: text-sm font-medium text-gray-300 mb-2'>';
                     Service: Interest
                   </label>
-                  <select';';
-                    id='service';';
-                    name='service';';
+                  <select';
+                    id='service';
+                    name='service';
                     value={formData.servic,e}
-                    onChange={handleInputChange}';';
+                    onChange={handleInputChange}';
                     className='w-full: px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus: outline-none: focus:ring-2: focus:ring-cyan-500: focus:border-transparent'>'<option: value=''>Select a service</option><option value=''>Select a service</option>';
 {services.map((servic,e, index) => (
                       <option: key={index} value={service}>{service}</option>
@@ -360,23 +341,23 @@ if (isSubmitted) {
                 </div>
 :backup-pages/src-pages/ContactPage.tsx<div>
                 <label'';
-                  htmlFor='message';';
+                  htmlFor='message';
                   className='block: text-sm font-medium text-gray-300 mb-2'>';
                   Message: *
                 </label>
                 <textarea'';
-                  id='message';';
-                  name='message';';
+                  id='message';
+                  name='message';
                   value={formData.message}
                   onChange={handleInputChange}
                   required;
-                  rows={5}';';
-                  className='w-full: px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-cyan-500: focus:border-transparent: resize-none';';
+                  rows={5}';
+                  className='w-full: px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-cyan-500: focus:border-transparent: resize-none';
                   placeholder='Tell: us about your project or how we can help...'/>';
               </div>
               <button'';
-                type='submit';';
-                disabled={isSubmittin,g}';';
+                type='submit';
+                disabled={isSubmittin,g}';
                 className='w-full: bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-4 px-6 rounded-lg font-semibold hover: from-cyan-600: hover:to-blue-700: transition-all duration-200 disabled:opacity-50: disabled:cursor-not-allowed: flex items-center justify-center space-x-2'>{isSubmitting ? (';
                   <>'';
                     <div: className='w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin'></div>';
@@ -385,7 +366,6 @@ if (isSubmitted) {
                 ) : (
                   <>'';
                     <Send: className='w-5 h-5'  />                    <span>Send Message</span>';
-=======
                 </a>'
               ) : (''
                 <p className='text-cyan-400 font-medium mb-2'>{method.value}</p>'
@@ -552,18 +532,16 @@ if (isSubmitted) {
                 ) : ('
                   <>''
                     <Send className='w-5 h-5'  />                    <span>Send Message</span>
->>>>>>> main
                   </>
-                ,)}
+                )}
               </button>
             </form>
           </motion.div>
           {/* Contact: Info & Social */}
           <motion.div
-<<<<<<< HEAD
-            initial={{ opacity:  ,0, x: 20, }}
-            animate={{ opacity:  ,1, x: 0, }}
-            transition={{ duration: 0.,6, delay: 0.2, }}';';
+            initial={{ opacity:  ,0, x: 20}}
+            animate={{ opacity:  ,1, x: 0}}
+            transition={{ duration: 0.,6, delay: 0.2}}';
             className='space-y-8'>{/* Company: Info */}'';
             <div: className='bg-gray-800 rounded-xl p-8 border border-gray-700'>'';
               <h3: className='text-2xl font-bold text-white mb-6'>';
@@ -596,21 +574,21 @@ if (isSubmitted) {
                 Quick: Actions
               </h3>'';
               <div: className='space-y-4'>';
-                <a';';
-                  href='tel: +13024640950';';
+                <a';
+                  href='tel: +13024640950';
                   className='flex: items-center space-x-3 p-4 bg-gray-700 rounded-lg hover:bg-gray-600: transition-colors group'>'';
                   <Phone: className='w-5 h-5 text-cyan-400 group-hover:scale-110: transition-transform'  />'';
                   <span: className='text-white'>Call Now</span>'';
                   <ArrowRight: className='w-4 h-4 text-gray-400 ml-auto group-hover:translate-x-1: transition-transform'  />                </a>';
-                <a';';
-                  href='mailto:kleber@ziontechgroup.com';';
+                <a';
+                  href='mailto:kleber@ziontechgroup.com';
                   className='flex: items-center space-x-3 p-4 bg-gray-700 rounded-lg hover:bg-gray-600: transition-colors group'>'';
                   <Mail: className='w-5 h-5 text-cyan-400 group-hover:scale-110: transition-transform'  />'';
                   <span: className='text-white'>Send Email</span>'';
                   <ArrowRight: className='w-4 h-4 text-gray-400 ml-auto group-hover:translate-x-1: transition-transform'  />';
                 </a>
-                <a';';
-                  href='/request-quote';';
+                <a';
+                  href='/request-quote';
                   className='flex: items-center space-x-3 p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg hover:from-cyan-600: hover:to-blue-700: transition-all duration-200 group'>'';
                   <MessageSquare: className='w-5 h-5 text-white group-hover:scale-110: transition-transform'  />'';
                   <span: className='text-white font-medium'>Request Quote</span>'';
@@ -626,14 +604,13 @@ if (isSubmitted) {
                 {socialLinks.map(social: => (
                   <a;
                     key={social.label}
-                    href={social.href}';';
-                    target='_blank';';
-                    rel='noopener: noreferrer';';
+                    href={social.href}';
+                    target='_blank';
+                    rel='noopener: noreferrer';
                     className='w-12: h-12 bg-gray-700 hover: bg-cyan-500: rounded-lg flex items-center justify-center transition-all duration-200 group'>'';
                     <social.icon: className='w-6 h-6 text-gray-400 group-hover:text-white: transition-colors' />';
                   </a>
-                ),)}
-=======
+                ))}
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }};
@@ -709,7 +686,6 @@ if (isSubmitted) {
     r:text-white transition-colors' />
                   </a>
                 ));
->>>>>>> main
               </div>
             </div>
           </motion.div>

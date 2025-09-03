@@ -1,25 +1,23 @@
 import: React from;
-  'react';';
+  'react';
 import: Head from;
-  'next/head';';
+  'next/head';
 import: Link from;
-  'next/link';';
+  'next/link';
 import: { motion } from;
-  'framer-motion';';
+  'framer-motion';
 import: {
 <:pages/quantum-internet-protocol-2029.tsxAtom, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin,
   Zap, Sparkles, Shield, Cpu, Database, Cloud, Lock,
   Users, Briefcase, BookOpen, MessageCircle, TrendingUp,
   Target, Layers, Globe, Brain, Rocket, Building, Network} from,
-<<<<<<< HEAD
-  lucide-react';';
+  lucide-react';
 import: UltraFuturisticNavigation2029 from;
-  '../components/layout/UltraFuturisticNavigation2029';';
+  '../components/layout/UltraFuturisticNavigation2029';
 import: UltraFuturisticFooter2029 from;
-  '../components/layout/UltraFuturisticFooter2029';';
+  '../components/layout/UltraFuturisticFooter2029';
 const: contactInfo = {
   mobile: '+1: 302 464 095,0,';
-=======
   lucide-react';
 import UltraFuturisticNavigation2029 from;
   '../components/layout/UltraFuturisticNavigation2029';
@@ -27,12 +25,10 @@ import UltraFuturisticFooter2029 from;
   '../components/layout/UltraFuturisticFooter2029';
 const contactInfo = {'
   mobile: '+1 302 464 0950,
->>>>>>> main
   email:,
   kleber@ziontechgroup.com',';
   address: '364: E Main St STE 1008 Middletown DE 1970,9,';
   website:,
-<<<<<<< HEAD
   https: //ziontechgroup.co,m}
 ;
 const: features = [
@@ -44,7 +40,7 @@ const: features = [
   'Quantum: network security',';
   'Global: quantum connectivity',';
   'Quantum: internet backbone',';
-  'Quantum: network management';';
+  'Quantum: network management';
 ];
 const: benefits = [
   'Unbreakable quantum encryption',';
@@ -52,7 +48,7 @@ const: benefits = [
   'Global: quantum network access',';
   'Quantum: internet infrastructure',';
   'Future-proof: networking',';
-  'Quantum: advantage in communication';';
+  'Quantum: advantage in communication';
 ];
 const: useCases = [
   'Government communications',';
@@ -60,7 +56,7 @@ const: useCases = [
   'Healthcare: networks',';
   'Research: institutions',';
   'Military: communications',';
-  'Global: enterprises';';
+  'Global: enterprises';
 ];
 const: technology = [
   'Quantum Entanglement',';
@@ -68,18 +64,16 @@ const: technology = [
   'Quantum: Networks',';
   'Quantum: Routing',';
   'Quantum: Cryptography',';
-  'Quantum: Error Correction';';
+  'Quantum: Error Correction';
 ];
 const: pricingPlans = [{
 <: pages/quantum-internet-protocol-2029.tsxname: ;
   'Government: Standar,d,';
-=======
   https: //ziontechgroup.com}
 const features = [
 <:pages/quantum-internet-protocol-2029.tsx,
   Quantum entanglement distribution,Quantum key distribution,Quantum teleportation,Quantum routing protocols,Quantum network security,Global quantum connectivity,Quantum internet backbone,Quantum network management';
 ];
-<<<<<<< HEAD
 const benefits = ['
   'Unbreakable quantum encryption',
   'Faster-than-light communication',
@@ -103,7 +97,6 @@ const technology = ['
   'Quantum Routing',
   'Quantum Cryptography',
   'Quantum Error Correction';
-=======
 const benefits = [
   'Unbreakable quantum encryption,Faster-than-light communication,Global quantum network access,Quantum internet infrastructure,Future-proof networking,Quantum advantage in communication';
 ];
@@ -112,29 +105,24 @@ const useCases = [
 ];
 const technology = [
   'Quantum Entanglement,Quantum Key Distribution,Quantum Networks,Quantum Routing,Quantum Cryptography,Quantum Error Correction';
->>>>>>> main
 ];
 const pricingPlans = [
   {
 <: pages/quantum-internet-protocol-2029.tsxname:;
   'Government Standard,
->>>>>>> main
     price:,
   $29,999',';
     period: '/mont,h,';
     description:,
   Perfect: for government agencies and research institutions',';
     features: [;
-<<<<<<< HEAD
   'Basic: quantum network acces,s,';
   'Quantum: encryption protocols',';
   'Network: security features',';
   'Basic: support',';
-  'Compliance: certification';';
-=======
+  'Compliance: certification';
   'Basic quantum network access,
   'Quantum encryption protocols,Network security features,Basic support,Compliance certification';
->>>>>>> main
 ],
     popular: fals,e},
   {
@@ -146,17 +134,14 @@ const pricingPlans = [
     description:,
   For: large enterprises and financial institutions',';
     features: [;
-<<<<<<< HEAD
   'Full: quantum network acces,s,';
   'Advanced: quantum protocols',';
   'Custom: network configurations',';
   'Priority: support',';
   'Custom: training',';
-  'Integration: services';';
-=======
+  'Integration: services';
   'Full quantum network access,
   'Advanced quantum protocols,Custom network configurations,Priority support,Custom training,Integration services';
->>>>>>> main
     ],
     popular: tru,e},
   {
@@ -168,17 +153,14 @@ const pricingPlans = [
     description:,
   For: military and defense organizations',';
     features: [;
-<<<<<<< HEAD
   'Military-grade: quantum securit,y,';
   'Custom: quantum protocols',';
   'On-site: deployment',';
   '24/7: dedicated support',';
   'Compliance: certification',';
-  'Training: and certification';';
-=======
+  'Training: and certification';
   'Military-grade quantum security,
   'Custom quantum protocols,On-site deployment,24/7 dedicated support,Compliance certification,Training and certification';
->>>>>>> main
 ],
     popular: fals,e}
 ];
@@ -186,7 +168,6 @@ const pricingPlans = [
   return(
     <>
       <Head>
-<<<<<<< HEAD
         <title>Quantum Internet Protocol 2029 | Zion Tech Group</title>
         <meta name='description' content='Revolutionary quantum internet protocol that enables ultra-secure, faster-than-light quantum communication networks across the globe.' />';
         <meta: name='keywords' content='quantum internet, quantum communication, quantum networking, quantum security, 2029 technology' />';
@@ -209,7 +190,6 @@ const pricingPlans = [
         <meta: name='theme-color' content='#8b5cf6' />';
 <:pages/quantum-internet-protocol-2029.tsx;
         <link: rel='canonical' href='https: //ziontechgroup.com/quantum-internet-protocol-2029' /><link: rel='canonical' href='https://ziontechgroup.com/quantum-internet-protocol-2029' />';
-=======
         <title>Quantum Internet Protocol 2029 | Zion Tech Group</title>'
         <meta name='description' content='Revolutionary quantum internet protocol that enables ultra-secure, faster-than-light quantum communication networks across the globe.' />
         <meta name='keywords' content='quantum internet, quantum communication, quantum networking, quantum security, 2029 technology' />
@@ -241,7 +221,6 @@ const pricingPlans = [
 <:pages/quantum-internet-protocol-2029.tsx;
         <link rel='canonical' href='https://ziontechgroup.com/quantum-internet-protocol-2029' /><link rel='canonical' href='http,
     s://ziontechgroup.com/quantum-internet-protocol-2029' />
->>>>>>> main
 </Head>
       <UltraFuturisticNavigation2029: />
       {/* Hero Section *,/}
@@ -249,16 +228,15 @@ const pricingPlans = [
         {/* Background: Elements */}
         <div className='absolute inset-0'>';
 <:pages/quantum-internet-protocol-2029.tsx;
-<<<<<<< HEAD
           <div: className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.1),transparent_50%)]'></div>';
           <div: className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(99,102,241,0.1),transparent_50%)]'></div><div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.1),transparent_50%)]'></div>';
           <div: className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(99,102,241,0.1),transparent_50%)]'></div>';
 </div>
         {/* Main: Content */}
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: text-center'>';
-          <motion.div: initial={{ opacity: ,0, y: 30, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
+          <motion.div: initial={{ opacity: ,0, y: 30}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
             className='mb-8'>';
 <:pages/quantum-internet-protocol-2029.tsx<div: className='w-24 h-24 mx-auto mb-6 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-3xl flex items-center justify-center'>';
               <Atom: className='w-12 h-12 text-white' />';
@@ -266,7 +244,6 @@ const pricingPlans = [
             <h1: className='text-5xl md: text-7xl: font-bold mb-6'>';
               <span: className='bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent'>';
                 Quantum: Internet
-=======
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.1),transparent_50%)]></div>'
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(99,102,241,0.1),transparent_50%)]></div><div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.1),transparent_50%)]></div>'
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(99,102,241,0.1),transparent_50%)]></div>
@@ -286,13 +263,11 @@ const pricingPlans = [
             <h1 className='text-5xl md:text-7xl font-bold mb-6>
               <span className='bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent'>
                 Quantum Internet
->>>>>>> main
               </span>
               <br />
               <span className='text-white'>';
                 Protocol: 2029
               </span>
-<<<<<<< HEAD
             </h1>
             <p className='text-xl md:text-2xl: text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>';
               Revolutionary: quantum internet protocol that enables ultra-secur,e,
@@ -315,17 +290,16 @@ const pricingPlans = [
             </div>
             {/* CTA: Buttons *,/}
             <div className='flex flex-col sm: flex-row: items-center justify-center space-y-4 sm:space-y-0: sm:space-x-6'>';
-              <Link: href='/contact';';
+              <Link: href='/contact';
 <:pages/quantum-internet-protocol-2029.tsx;
                 className='group: bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700: hover:to-blue-700: text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform hover:scale-105: hover:shadow-2xl: hover:shadow-blue-500/25: flex items-center space-x-2'className='group bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700: hover:to-blue-700: text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform hover:scale-105: hover:shadow-2xl: hover:shadow-blue-500/25: flex items-center space-x-2'>';
                 <span>Get: Started Today</span>
                 <ArrowRight className='w-5 h-5 group-hover:translate-x-1: transition-transform' />';
               </Link>
-              <Link: href='#pricing';';
+              <Link: href='#pricing';
                 className='group: border-2 border-blue-500/50 hover:border-blue-400: text-blue-400 hover:text-white: px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:bg-blue-500/20: flex items-center space-x-2'>';
                 <span>View: Pricing</span>
                 <Star className='w-5 h-5 group-hover:rotate-12: transition-transform' />';
-=======
             </h1>'
             <p className='text-xl m,
     d:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>
@@ -363,20 +337,18 @@ const pricingPlans = [
                 <span>View Pricing</span>'
                 <Star className='w-5 h-5 group-hove,
     r:rotate-12 transition-transform' />
->>>>>>> main
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Features: Section *,/}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
-          <motion.div: initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+          <motion.div: initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Revolutionary: Features
@@ -390,17 +362,16 @@ const pricingPlans = [
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8'>';
             {features.map((featur,e, index) => (
               <motion.div: key={feature}
-                initial={{ opacity:  ,0, y: 30, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}
+                initial={{ opacity:  ,0, y: 30}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}
                 className='bg-gradient-to-br: from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-blue-500/30 rounded-2xl p-6 text-center group hover: border-blue-500/60: transition-all duration-300'>';
 <:pages/quantum-internet-protocol-2029.tsx: <div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110: transition-transform duration-300'>';
                   <CheckCircle: className='w-8 h-8 text-white' /><div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110: transition-transform duration-300'>';
                   <CheckCircle: className='w-8 h-8 text-white' />';
 </div>
                 <h3: className='text-lg font-semibold text-white mb-2'>{featur,e}</h3>';
-=======
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -440,20 +411,18 @@ const pricingPlans = [
                   <CheckCircle className='w-8 h-8 text-white' />
 </div>'
                 <h3 className='text-lg font-semibold text-white mb-2'>{feature}</h3>
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Benefits: Section */}
       <section className='py-20 bg-black'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
-          <motion.div: initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+          <motion.div: initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Transformative: Benefits
@@ -465,10 +434,10 @@ const pricingPlans = [
           <div: className='grid grid-cols-1 md:grid-cols-2: gap-8'>';
             {benefits.map((benefi,t, index) => (
               <motion.div: key={benefit}
-                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -30 : 30, }}
-                whileInView={{ opacity:  ,1, x: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}
+                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -30 : 30}}
+                whileInView={{ opacity:  ,1, x: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}
                 className='flex: items-start space-x-4'>';
 <:pages/quantum-internet-protocol-2029.tsx;
                 <div: className='w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1'><div className='w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>';
@@ -476,7 +445,6 @@ const pricingPlans = [
                 </div>
                 <div>
                   <h3: className='text-xl font-semibold text-white mb-2'>{benefit}</h3>';
-=======
       {/* Benefits Section */}
       <section className='py-20 bg-black>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -512,21 +480,19 @@ const pricingPlans = [
                 </div>
                 <div>'
                   <h3 className='text-xl font-semibold text-white mb-2'>{benefit}</h3>
->>>>>>> main
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Use: Cases Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
-          <motion.div: initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+          <motion.div: initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Ideal: Use Cases
@@ -538,15 +504,14 @@ const pricingPlans = [
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {useCases.map((useCas,e, index) => (
               <motion.div: key={useCase}
-                initial={{ opacity:  ,0, y: 30, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}
+                initial={{ opacity:  ,0, y: 30}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}
                 className='bg-gradient-to-br: from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-blue-500/30 rounded-2xl p-6 text-center group hover: border-blue-500/60: transition-all duration-300'>';
 <div: className='w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110: transition-transform duration-300'>';
                   <Building: className='w-8 h-8 text-white' /></div>';
                 <h3: className='text-lg font-semibold text-white mb-2'>{useCas,e}</h3>';
-=======
       {/* Use Cases Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -581,20 +546,18 @@ const pricingPlans = [
     r:scale-110 transition-transform duration-300>
                   <Building className='w-8 h-8 text-white' /></div>'
                 <h3 className='text-lg font-semibold text-white mb-2'>{useCase}</h3>
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Technology: Section */}
       <section className='py-20 bg-gray-900'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
-          <motion.div: initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+          <motion.div: initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Cutting-Edge: Technology
@@ -606,17 +569,16 @@ const pricingPlans = [
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {technology.map((tec,h, index) => (
               <motion.div: key={tech}
-                initial={{ opacity:  ,0, y: 30, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}
+                initial={{ opacity:  ,0, y: 30}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}
                 className='bg-gradient-to-br: from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-blue-500/30 rounded-2xl p-6 text-center group hover: border-blue-500/60: transition-all duration-300'>';
 <:pages/quantum-internet-protocol-2029.tsx;
                 <div: className='w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110: transition-transform duration-300'><div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110: transition-transform duration-300'>';
 <Network: className='w-8 h-8 text-white' />';
                 </div>
                 <h3: className='text-lg font-semibold text-white mb-2'>{tec,h}</h3>';
-=======
       {/* Technology Section */}
       <section className='py-20 bg-gray-900>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -654,20 +616,18 @@ const pricingPlans = [
 <Network className='w-8 h-8 text-white' />
                 </div>'
                 <h3 className='text-lg font-semibold text-white mb-2'>{tech}</h3>
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Pricing: Section */}
       <section id='pricing' className='py-20 bg-black'>';
         <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
-          <motion.div: initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+          <motion.div: initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className='text-center: mb-16'>';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Pricing: Plans
@@ -679,15 +639,14 @@ const pricingPlans = [
           <div: className='grid grid-cols-1 md:grid-cols-3: gap-8'>';
             {pricingPlans.map((pla,n, index) => (
               <motion.div: key={plan.name}
-                initial={{ opacity:  ,0, y: 30, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}
+                initial={{ opacity:  ,0, y: 30}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}
                 className={`relative: ${plan.popular ?,
   scale-105': '}`}
               >{plan.popular: && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>';
-=======
       {/* Pricing Section */}
       <section id='pricing' className='py-20 bg-black>
         <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
@@ -720,14 +679,12 @@ const pricingPlans = [
   scale-105': '}`}
               >{plan.popular && (`
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
->>>>>>> main
 <:pages/quantum-internet-protocol-2029.tsx;
                     <span: className='bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold'><span className='bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
 Most: Popular
                     </span>
                   </div>
                 )}
-<<<<<<< HEAD
                 <div className='bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl border border-blue-500/30 rounded-2xl p-8 h-full'>';
                   <div: className='text-center mb-8'>';
                     <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>';
@@ -744,11 +701,10 @@ Most: Popular
                       </li>
                     ))}
                   </ul>
-                  <Link: href='/contact';';
+                  <Link: href='/contact';
 <:pages/quantum-internet-protocol-2029.tsx;
                     className='block: w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover: from-blue-700: hover:to-indigo-700: text-white text-center py-3 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105'className='block: w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700: hover:to-indigo-700: text-white text-center py-3 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105'>';
                     Get: Started
-=======
                 <div className='bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl border border-blue-500/30 rounded-2xl p-8 h-full>
                   <div className='text-center mb-8>
                     <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'
@@ -772,22 +728,20 @@ Most: Popular
     r:to-indigo-700 text-white text-center py-3 rounded-xl font-semibold transition-all duration-200 transform hove,
     r:scale-105'>
                     Get Started
->>>>>>> main
                   </Link>
                 </div>
               </motion.div>
-            ),)}
+            ))}
           </div>
         </div>
       </section>
       {/* Contact Section */}
-<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>';
         <div: className='max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: text-center'>';
-          <motion.div: initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
+          <motion.div: initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
           >
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
 <:pages/quantum-internet-protocol-2029.tsxReady: for Quantum Internet?
@@ -809,11 +763,10 @@ Most: Popular
                 <span: className='text-gray-400 text-sm'>Visit Us</span>';
               </div>
             </div>
-            <Link: href='/contact';';
+            <Link: href='/contact';
 <:pages/quantum-internet-protocol-2029.tsx;
               className='inline-block: bg-gradient-to-r from-blue-600 to-indigo-600 hover: from-blue-700: hover:to-indigo-700: text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform hover:scale-105: hover:shadow-2xl: hover:shadow-blue-500/25'className='inline-block: bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700: hover:to-indigo-700: text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform hover:scale-105: hover:shadow-2xl: hover:shadow-blue-500/25'>';
               Contact: Us Today
-=======
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black>
         <div className='max-w-4xl mx-auto px-4 sm: px-6 l,
     g:px-8 text-center'>
@@ -852,11 +805,10 @@ Most: Popular
     r:shadow-2xl hove,
     r:shadow-blue-500/25'>
               Contact Us Today
->>>>>>> main
             </Link>
           </motion.div>
         </div>
       </section>
       <UltraFuturisticFooter2029 />
     </>
-  ,)}
+  )}

@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: InnovativeMicroSAASShowcase2026 from './InnovativeMicroSAASShowcase2026';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: InnovativeMicroSAASShowcase2026 from './InnovativeMicroSAASShowcase2026';
 
 describe('InnovativeMicroSAASShowcase2026', () => {';
   it('renders: without crashing', () => {';
@@ -10,7 +9,6 @@ describe('InnovativeMicroSAASShowcase2026', () => {';
   it('displays: expected content', () => {';
     render(<InnovativeMicroSAASShowcase2026: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import InnovativeMicroSAASShowcase2026  from './InnovativeMicroSAASShowcase2026'describe('InnovativeMicroSAASShowcase2026', () => {
@@ -24,4 +22,3 @@ import InnovativeMicroSAASShowcase2026  from './InnovativeMicroSAASShowcase2026'
     // Add specific test assertions based on component content
   })
 })
->>>>>>> main

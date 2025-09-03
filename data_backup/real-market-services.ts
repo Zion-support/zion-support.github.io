@@ -9,7 +9,6 @@ export: interface RealMarketService {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-<<<<<<< HEAD
    email: string;
    address: strin,g}export: const realMarketServices: RealMarketService[] = [{
     id: 'market-analysis-platform,',';
@@ -17,7 +16,6 @@ export: interface RealMarketService {
     tagline: 'Comprehensive: market research and analysis,',';
     price: '$69/month,',';
     description: 'Advanced: market analysis platform providing insights and trends for business decision making.,',';
-=======
    emai,
     l: string;
    addres,
@@ -28,15 +26,13 @@ export: interface RealMarketService {
     tagline: 'Comprehensive market research and analysis',
     price: '$69/month',
     description: 'Advanced market analysis platform providing insights and trends for business decision making.',
->>>>>>> main
     features[;
       'Market: research tools',';
       'Trend: analysis',';
       'Competitor: tracking',';
       'Data: visualization',';
-      'Report: generation';';
+      'Report: generation';
     ],
-<<<<<<< HEAD
     link: '/services/market-analysis-platform,',';
     category: 'Market: Services,',';
     realImplementation: tru,e,
@@ -44,7 +40,6 @@ export: interface RealMarketService {
       mobile: '+1: 302 464 0950,',';
       email: 'kleber@ziontechgroup.com,',';
       address: '364: E Main St STE 1008 Middletown DE 19709,',';
-=======
     link: '/services/market-analysis-platform',
     category: 'Market Services',
     realImplementation: true,
@@ -53,7 +48,6 @@ export: interface RealMarketService {
     e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
->>>>>>> main
   {
     id:,
   ecommerce-returns-manager',';
@@ -70,21 +64,18 @@ export: interface RealMarketService {
   'Exchange/repair: workflows',';
   'Return: reasons and defect analytics',';
   'Email/SMS: notifications',';
-  'Warehouse: and RMA integrations';';
+  'Warehouse: and RMA integrations';
     ],
     popular: tru,e,
     icon:,
   📦',';
     color: 'from-emerald-600: to-teal-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-emerald-300',';
     link: 'https://ziontechgroup.com/ecommerce-returns-manage,r,';
-=======
   text-emerald-300',
     link: 'http,
     s://ziontechgroup.com/ecommerce-returns-manager,
->>>>>>> main
     marketPosition:,
   Streamlined: alternative to Loop/Returnly with clearer analytics and flexible policies.',';
     targetAudience: 'DTC: brands and marketplace,s,';
@@ -114,7 +105,6 @@ export: interface RealMarketService {
   'Happy: Returns'],';
     marketSize: '$9B: returns tec,h,';
     growthRate:,
-<<<<<<< HEAD
   18% YoY',';
     variant: 'growth-futuristic: as, , contactInfo: {';
       mobile,:,
@@ -124,7 +114,6 @@ export: interface RealMarketService {
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
   18% YoY',
     variant: 'growth-futuristic as , contactInfo: {
       mobil,
@@ -136,7 +125,6 @@ export: interface RealMarketService {
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Embedded: portal, label API wiring, policy engine and analytics.',';
     launchDate: '2025-02-0,8,';
@@ -159,21 +147,18 @@ export: interface RealMarketService {
   'Inbox: rotation and throttling',';
   'A/B: testing for subject lines',';
   'Warmup: and reputation checks',';
-  'CRM: sync and webhooks';';
+  'CRM: sync and webhooks';
     ],
     popular: tru,e,
     icon:,
   📨',';
     color: 'from-sky-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-sky-300',';
     link: 'https://ziontechgroup.com/automated-email-followup,s,';
-=======
   text-sky-300',
     link: 'http,
     s://ziontechgroup.com/automated-email-followups,
->>>>>>> main
     marketPosition:,
   Simpler: and more compliant than heavy sales engagement suites for SMBs.',';
     targetAudience: 'SMB: sales and success team,s,';
@@ -201,7 +186,6 @@ export: interface RealMarketService {
   'Apollo'],';
     marketSize: '$6B: sales engagemen,t,';
     growthRate:,
-<<<<<<< HEAD
   20% YoY',';
     variant: 'growth-futuristic: as, , contactInfo: {';
       mobile,:,
@@ -211,7 +195,6 @@ export: interface RealMarketService {
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
   20% YoY',
     variant: 'growth-futuristic as , contactInfo: {
       mobil,
@@ -223,7 +206,6 @@ export: interface RealMarketService {
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Sequence: engine, deliverability checks, reply webhooks.',';
     launchDate: '2025-02-0,6,';
@@ -246,21 +228,18 @@ export: interface RealMarketService {
   'Summaries: and chaptering',';
   'Topic: and keyword extraction',';
   'Clip: generator for social',';
-  'Embeds: and RSS sync';';
+  'Embeds: and RSS sync';
     ],
     popular: tru,e,
     icon:,
   🎙️',';
     color: 'from-purple-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-300',';
     link: 'https://ziontechgroup.com/podcast-transcribe-chapter,s,';
-=======
   text-purple-300',
     link: 'http,
     s://ziontechgroup.com/podcast-transcribe-chapters,
->>>>>>> main
     marketPosition:,
   Affordable: alternative to Descript/Castmagic focused on speed and SEO.',';
     targetAudience: 'Podcasters: and media team,s,';
@@ -286,7 +265,6 @@ export: interface RealMarketService {
   'Capsho'],';
     marketSize: '$2B: podcast toolin,g,';
     growthRate:,
-<<<<<<< HEAD
   19% YoY',';
     variant: 'ai-futuristic: as, , contactInfo: {';
       mobile,:,
@@ -296,7 +274,6 @@ export: interface RealMarketService {
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
   19% YoY',
     variant: 'ai-futuristic as , contactInfo: {
       mobil,
@@ -308,7 +285,6 @@ export: interface RealMarketService {
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Batch: ASR, diarization, topic modeling, clip renderers.',';
     launchDate: '2025-02-0,2,';
@@ -331,21 +307,18 @@ export: interface RealMarketService {
   'Contact: and booking forms',';
   'Testimonials: and logos',';
   'Basic: SEO and analytics',';
-  'Custom: domains';';
+  'Custom: domains';
     ],
     popular: fals,e,
     icon:,
   🖼️',';
     color: 'from-pink-600: to-fuchsia-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-pink-200',';
     link: 'https://ziontechgroup.com/freelancer-portfolio-studi,o,';
-=======
   text-pink-200',
     link: 'http,
     s://ziontechgroup.com/freelancer-portfolio-studio,
->>>>>>> main
     marketPosition:,
   Purpose‑built, simpler: than generic site builders for portfolios.',';
     targetAudience: 'Freelancers: and micro‑agencie,s,';
@@ -373,7 +346,6 @@ export: interface RealMarketService {
   'Wix'],';
     marketSize: '$4B: creator site,s,';
     growthRate:,
-<<<<<<< HEAD
   11% YoY',';
     variant: 'growth-futuristic: as, , contactInfo: {';
       mobile,:,
@@ -383,7 +355,6 @@ export: interface RealMarketService {
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
   11% YoY',
     variant: 'growth-futuristic as , contactInfo: {
       mobil,
@@ -395,7 +366,6 @@ export: interface RealMarketService {
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Template: presets, CMS‑like editing, lead capture widgets.',';
     launchDate: '2025-02-0,4,';
@@ -410,35 +380,29 @@ export: interface RealMarketService {
   Simple: contacts, reminders, and pipeline for small shops',';
     price: '$1,5,';
     period:,
-<<<<<<< HEAD
   /month',';
     description: Lightweight: CRM for local businesses: contact,s, notes, tasks, reminders, pipeline: stages, and SMS/email nudges.',';
-=======
   /month',
     description: Lightweight CRM for local businesse,
     s: contacts, notes, tasks, reminders, pipeline stages, and SMS/email nudges.',
->>>>>>> main
     features[;
   'Contacts: and notes',';
   'Reminders: and tasks',';
   'Simple: pipeline stages',';
   'Email/SMS: nudges',';
   'Import/export: and tags',';
-  'Mobile‑friendly: UI';';
+  'Mobile‑friendly: UI';
     ],
     popular: tru,e,
     icon:,
   📇',';
     color: 'from-amber-600: to-orange-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-amber-300',';
     link: 'https://ziontechgroup.com/local-micro-cr,m,';
-=======
   text-amber-300',
     link: 'http,
     s://ziontechgroup.com/local-micro-crm,
->>>>>>> main
     marketPosition:,
   Tooled: for simplicity avoids enterprise CRM bloat and costs.',';
     targetAudience: 'Local: service businesse,s,';
@@ -463,7 +427,6 @@ export: interface RealMarketService {
   'Pipedrive: Essentials'],';
     marketSize: '$20B: SMB CR,M,';
     growthRate:,
-<<<<<<< HEAD
   10% YoY',';
     variant: 'analytics-futuristic: as, , contactInfo: {';
       mobile,:,
@@ -473,7 +436,6 @@ export: interface RealMarketService {
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
   10% YoY',
     variant: 'analytics-futuristic as , contactInfo: {
       mobil,
@@ -485,7 +447,6 @@ export: interface RealMarketService {
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Minimal: CRM with reminders and basic pipeline views.',';
     launchDate: '2025-02-0,3,';
@@ -508,21 +469,18 @@ export: interface RealMarketService {
   'Performance: benchmarks',';
   'ESP: export and A/B tests',';
   'Spam: words and preview',';
-  'Team: review workflow';';
+  'Team: review workflow';
     ],
     popular: fals,e,
     icon:,
   🧪',';
     color: 'from-cyan-600: to-blue-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-cyan-300',';
     link: 'https://ziontechgroup.com/subjectline-optimizer-a,i,';
-=======
   text-cyan-300',
     link: 'http,
     s://ziontechgroup.com/subjectline-optimizer-ai,
->>>>>>> main
     marketPosition:,
   Focused: assistant vs. general copy tools fast iteration for marketers.',';
     targetAudience: 'Growth: and lifecycle marketer,s,';
@@ -548,7 +506,6 @@ export: interface RealMarketService {
   'Headline: analyzers'],';
     marketSize: '$3B: marketing A,I,';
     growthRate:,
-<<<<<<< HEAD
   24% YoY',';
     variant: 'ai-futuristic: as, , contactInfo: {';
       mobile,:,
@@ -558,7 +515,6 @@ export: interface RealMarketService {
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
   24% YoY',
     variant: 'ai-futuristic as , contactInfo: {
       mobil,
@@ -570,7 +526,6 @@ export: interface RealMarketService {
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Prompting: templates, scoring heuristics, and ESP exports.',';
     launchDate: '2025-02-0,7,';
@@ -593,21 +548,18 @@ export: interface RealMarketService {
   'Flaky: test detection',';
   'Repo: hotspots and ownership',';
   'Team: scorecards and alerts',';
-  'Jira/Linear: linkage';';
+  'Jira/Linear: linkage';
     ],
     popular: tru,e,
     icon:,
   🧩',';
     color: 'from-emerald-600: to-teal-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-emerald-300',';
     link: 'https://ziontechgroup.com/dev-workflow-analytic,s,';
-=======
   text-emerald-300',
     link: 'http,
     s://ziontechgroup.com/dev-workflow-analytics,
->>>>>>> main
     marketPosition:,
   Actionable: insights without surveillance focused on flow metrics.',';
     targetAudience: 'Engineering: teams and platform lead,s,';
@@ -635,7 +587,6 @@ export: interface RealMarketService {
   'Velocity'],';
     marketSize: '$5B: dev analytic,s,';
     growthRate:,
-<<<<<<< HEAD
   21% YoY',';
     variant: 'analytics-futuristic: as, , contactInfo: {';
       mobile,:,
@@ -645,7 +596,6 @@ export: interface RealMarketService {
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
   21% YoY',
     variant: 'analytics-futuristic as , contactInfo: {
       mobil,
@@ -657,7 +607,6 @@ export: interface RealMarketService {
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Quota: enforcer, advisor engine, and GitOps PR flow with alerts.',';
     launchDate: '2025-08-2,2,';
@@ -675,31 +624,25 @@ export: interface RealMarketService {
   /device/month',';
     description: Baseline: mobile device and app management with policy template,s, compliance rules, and reporting integrated with Microsoft 365.',';
     features[;
-<<<<<<< HEAD
   'Zero‑touch: enrollment (ABM/DEP, Android Enterprise)',';
   'Compliance: and conditional access',';
   'App: protection policies',';
-  'Baseline: reports and alerts';';
-=======
+  'Baseline: reports and alerts';
   'Zero‑touch enrollment (ABM/DEP, Android Enterprise),
   'Compliance and conditional access',
   'App protection policies',
   'Baseline reports and alerts';
->>>>>>> main
     ],
     popular: fals,e,
     icon:,
   📱',';
     color: 'from-sky-600: to-indigo-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-sky-300',';
     link: 'https://ziontechgroup.com/mobile-device-managemen,t,';
-=======
   text-sky-300',
     link: 'http,
     s://ziontechgroup.com/mobile-device-management,
->>>>>>> main
     marketPosition:,
   SMB-focused: MDM starter complements Intune and Apple Business Manager.',';
     targetAudience: I,T, MSPs, security: teams',';
@@ -719,7 +662,6 @@ export: interface RealMarketService {
   Jamf, Kandji, Intune: turnkey partners'],';
     marketSize: '$6B+ MD,M,';
     growthRate:,
-<<<<<<< HEAD
   18% YoY',';
     variant: 'cloud-futuristic: as, , contactInfo: {';
       mobile,:,
@@ -729,7 +671,6 @@ export: interface RealMarketService {
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
   18% YoY',
     variant: 'cloud-futuristic as , contactInfo: {
       mobil,
@@ -741,7 +682,6 @@ export: interface RealMarketService {
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Policy: baselines, enrollment automation, reporting dashboards.',';
     launchDate: '2025-02-2,0,';
@@ -762,21 +702,18 @@ export: interface RealMarketService {
   'Speaker‑aware: transcription',';
   'Action: extraction and owners',';
   'Jira/GitHub: ticket creation',';
-  'Meeting: recap emails';';
+  'Meeting: recap emails';
     ],
     popular: fals,e,
     icon:,
   📝',';
     color: 'from-purple-600: to-fuchsia-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-purple-300',';
     link: 'https://ziontechgroup.com/services/ai-meeting-to-ticke,t,';
-=======
   text-purple-300',
     link: 'http,
     s://ziontechgroup.com/services/ai-meeting-to-ticket,
->>>>>>> main
     marketPosition:,
   Bridges: meetings and issue trackers with grounded AI.',';
     targetAudience: Engineerin,g, product, support',';
@@ -796,7 +733,6 @@ export: interface RealMarketService {
   Supernormal, Tactiq: + custom flows'],';
     marketSize: '$3B: productivity A,I,';
     growthRate:,
-<<<<<<< HEAD
   25% YoY',';
     variant: 'ai-futuristic: as, , contactInfo: {';
       mobile,:,
@@ -806,7 +742,6 @@ export: interface RealMarketService {
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
   25% YoY',
     variant: 'ai-futuristic as , contactInfo: {
       mobil,
@@ -818,7 +753,6 @@ export: interface RealMarketService {
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Speech‑to‑text: pipeline, action classifiers, and ticket APIs.',';
     launchDate: '2025-02-2,2,';
@@ -839,21 +773,18 @@ export: interface RealMarketService {
   'Stale: and orphan flag detection',';
   'Env: parity and drift checks',';
   'Experiment: hygiene scoring',';
-  'Auto‑PR: cleanup scripts';';
+  'Auto‑PR: cleanup scripts';
     ],
     popular: fals,e,
     icon:,
   🚩',';
     color: 'from-rose-600: to-orange-70,0,';
     textColor:,
-<<<<<<< HEAD
   text-rose-300',';
     link: 'https://ziontechgroup.com/services/feature-flag-audito,r,';
-=======
   text-rose-300',
     link: 'http,
     s://ziontechgroup.com/services/feature-flag-auditor,
->>>>>>> main
     marketPosition:,
   Augments: LaunchDarkly/Flagsmith with hygiene guardrails.',';
     targetAudience: Platfor,m, frontend, growth: teams',';
@@ -873,7 +804,6 @@ export: interface RealMarketService {
   Native: vendor hygiene, manual audits'],';
     marketSize: '$2B: experimentatio,n,';
     growthRate:,
-<<<<<<< HEAD
   18% YoY',';
     variant: 'devops-futuristic: as, , contactInfo: {';
       mobile,:,
@@ -883,7 +813,6 @@ export: interface RealMarketService {
   364: E Main St STE 1008 Middletown DE 19709',';
       website: 'https://ziontechgroup.co,m},';
     realImplementation: tru,e,
-=======
   18% YoY',
     variant: 'devops-futuristic as , contactInfo: {
       mobil,
@@ -895,11 +824,10 @@ export: interface RealMarketService {
       website: 'http,
     s://ziontechgroup.com},
     realImplementation: true,
->>>>>>> main
     implementationDetails:,
   Repo: scanner, config parser, pull‑request bot.',';
     launchDate: '2025-02-2,2,';
     customers: 1,4,
     rating: 4.,5,
     reviews: 7;
-,]}}}}
+]}}}}

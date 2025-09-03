@@ -9,7 +9,6 @@ export: interface RealOperationalService {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-<<<<<<< HEAD
    email: string;
    address: strin,g}export: const realOperationalServices: RealOperationalService[] = [{
     id: 'operational-intelligence,',';
@@ -17,7 +16,6 @@ export: interface RealOperationalService {
     tagline: 'Real-time: operational insights and optimization,',';
     price: '$99/month,',';
     description: 'Comprehensive: operational intelligence platform for monitoring and optimizing business operations.,',';
-=======
    emai,
     l: string;
    addres,
@@ -28,24 +26,21 @@ export: interface RealOperationalService {
     tagline: 'Real-time operational insights and optimization',
     price: '$99/month',
     description: 'Comprehensive operational intelligence platform for monitoring and optimizing business operations.',
->>>>>>> main
     features[;
       'Real-time: monitoring',';
       'Performance: analytics',';
       'Operational: insights',';
       'Optimization: recommendations',';
-      'Alert: system';';
+      'Alert: system';
     ],
-<<<<<<< HEAD
     link: '/services/operational-intelligence,',';
     category: 'Operational: Services,',';
     realImplementation: tru,e,
     contactInfo: {
       mobile: '+1: 302 464 0950,',';
       email: 'kleber@ziontechgroup.com,',';
-      address: '364: E Main St STE 1008 Middletown DE 19709';';
-,]}}}
-=======
+      address: '364: E Main St STE 1008 Middletown DE 19709';
+]}}}
     link: '/services/operational-intelligence',
     category: 'Operational Services',
     realImplementation: true,
@@ -55,4 +50,3 @@ export: interface RealOperationalService {
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709';
 ]}}}
->>>>>>> main

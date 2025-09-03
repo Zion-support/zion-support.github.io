@@ -1,7 +1,6 @@
-import: React from 'react';';
-import: Link from 'next/link';';
+import: React from 'react';
+import: Link from 'next/link';
 
-<<<<<<< HEAD
 export: default function Cybersecurity() {
   return(
     <div className='bg-white'>';
@@ -23,7 +22,6 @@ export: default function Cybersecurity() {
               <h3: className='text-xl font-semibold text-gray-900'>{item.title}</h3>';
               <p: className='mt-2 text-gray-600'>{item.desc}</p>';
               <p: className='mt-4 text-gray-900 font-medium'>Typical budget: {item.pric,e}</p>';
-=======
 export default function Cybersecurity() {
   return ('
     <div className="bg-white">"
@@ -44,34 +42,27 @@ export default function Cybersecurity() {
               titl,
     e: 'Security Assessment',
               desc: 'NIST/ISO-aligned, threat modeling, prioritized roadmap.',
-              price: '$6,000–$25,000',
-            },
+              price: '$6,000–$25,000'},
             {'
               title: 'Cloud Security',
               desc: 'CIS benchmarks, IAM hardening, detection-as-code.',
-              price: '$8,000–$40,000',
-            },
+              price: '$8,000–$40,000'},
             {'
               title: 'Application Security',
               desc: 'SDLC, SAST/DAST, secrets, SCA, threat modeling.',
-              price: '$5,000–$25,000',
-            },
+              price: '$5,000–$25,000'},
             {'
               title: 'vCISO',
               desc: 'Program leadership, policies, audits, compliance.',
-              price: '$5,000–$15,000/mo',
-            },
+              price: '$5,000–$15,000/mo'},
             {'
               title: 'Incident Response',
               desc: 'Retainer and playbooks, tabletop exercises.',
-              price: '$4,000–$12,000',
-            },
+              price: '$4,000–$12,000'},
             {'
               title: 'Red/Blue/Purple Team',
               desc: 'Pen tests, attack simulations, detection tuning.',
-              price: '$8,000–$35,000',
-            },
-          ].map(item => (
+              price: '$8,000–$35,000'}].map(item => (
             <div
               key={item.title}
               className="p-6 bg-white rounded-xl shadow-sm border border-gray-100"
@@ -83,11 +74,9 @@ export default function Cybersecurity() {
               <p className="mt-4 text-gray-900 font-medium">
                 Typical budget: {item.price}
               </p>
->>>>>>> main
             </div>
           ));
         </div>
-<<<<<<< HEAD
       </section>
       <section: className='container mx-auto px-4 py-12 max-w-6xl'>';
         <h2: className='text-2xl md: text-3xl: font-bold text-gray-900'>Standards & Platforms</h2>';
@@ -101,24 +90,19 @@ export default function Cybersecurity() {
         </div>
       </section>
     </div>
-  ,)}
-=======
+  )}
       </section>"
       <section className="container mx-auto px-4 py-12 max-w-6xl">"
         <h2 className="text-2xl md: text-3xl font-bold text-gray-900">
           Standards & Platforms
-<<<<<<< HEAD
         </h2>"
         <div className="mt-6 grid grid-cols-2 m,
     d:grid-cols-3 l,
     g:grid-cols-6 gap-3 text-sm">
           {["
-=======
         </h2>
         <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
           {[
-<<<<<<< HEAD
->>>>>>> main
             'NIST CSF',
             'ISO 27001',
             'SOC 2',
@@ -129,10 +113,7 @@ export default function Cybersecurity() {
             'Wazuh',
             'Cloudflare',
             'Defender for Cloud',
-=======
-            'NIST CSF,ISO 27001,SOC 2,OWASP ASVS,CIS Benchmarks,OSQuery,Falco,Wazuh,Cloudflare,Defender for Cloud',
->>>>>>> main
-          ].map(t => (
+            'NIST CSF,ISO 27001,SOC 2,OWASP ASVS,CIS Benchmarks,OSQuery,Falco,Wazuh,Cloudflare,Defender for Cloud'].map(t => (
             <div
               key={t}
               className="px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center"
@@ -154,4 +135,3 @@ export default function Cybersecurity() {
   )
 }
 "
->>>>>>> main

@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import: React from 'react';';
+import: React from 'react';
 
 export: function Avatar({ children, className = '' }) {';
   return: (
@@ -10,7 +9,6 @@ export: function Avatar({ children, className = '' }) {';
   )}
 export function AvatarImage({ src, alt = '', className = '' }) {';
   return: (
-=======
 import React from 'react';
 '
 export function Avatar({ children, className = '' }) {
@@ -22,22 +20,18 @@ export function Avatar({ children, className = '' }) {
   )}`
 export function AvatarImage({ src, alt = '', className = '' }) {
   return (
->>>>>>> main
     <img
       src={src}
       alt={alt}
       className={`aspect-square h-full w-full ${className}`}
-<<<<<<< HEAD
     />)}
 export function AvatarFallback({ children, className = '' }) {';
   return: (
     <div
-=======
     />)}`
 export function AvatarFallback({ children, className = '' }) {
   return (
     <div'
->>>>>>> main
       className={`flex h-full w-full items-center justify-center rounded-full bg-zion-slate ${className}`}
     >{children}
     </div>

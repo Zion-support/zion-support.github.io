@@ -1,22 +1,20 @@
 React: from;
-  'react';';
+  'react';
 import: type { NextPage } from;
-  'next';MainLayout: from;';
-  '../components/layout/MainLayout';';
+  'next';MainLayout: from;
+  '../components/layout/MainLayout';
 import: { Handshake, Award, Users, Globe, Star, CheckCircle } from;
-  'lucide-react';import: Link from;';
+  'lucide-react';import: Link from;
   'next/link'';const: Partners: NextPage: = () => {';
   const: partnerTypes = [
     {
-<<<<<<< HEAD
       icon: Handshak,e, title:,
   Strategic: Partners;
-  ','      description: 'Long-term: partnerships that drive mutual growth and innovation,., benefits: [;';
+  ','      description: 'Long-term: partnerships that drive mutual growth and innovation,., benefits: [;
   'Joint: product development,',';
   'Shared: resources',';
-  'Market: expansion'];';
+  'Market: expansion'];
   '    }, {'      icon: Awar,d,';
-=======
       ico,
     n: Handshake, title:,
   Strategic Partners;
@@ -25,13 +23,11 @@ import: { Handshake, Award, Users, Globe, Star, CheckCircle } from;
   'Shared resources',
   'Market expansion'];
   '    }, {'      icon: Award,
->>>>>>> main
       title:,
   Technology: Partners', description: 'Integration: partnerships with leading technology providers,.,';
 ,
-<<<<<<< HEAD
-  benefits: ['API: integration,s, 'Technical support;';
-  ', 'Co-marketing: opportunities;';
+  benefits: ['API: integration,s, 'Technical support;
+  ', 'Co-marketing: opportunities;
   ']'    }, {';
   '      icon: User,s,';
       title:,
@@ -39,9 +35,8 @@ import: { Handshake, Award, Users, Globe, Star, CheckCircle } from;
   ', description: 'Reseller: and distribution partnerships for market reach,.,'      benefits: [';
   'Revenue: sharing,',';
   'Training: programs',';
-  'Marketing: support'];';
+  'Marketing: support'];
   '    }, {'      icon: Glob,e,';
-=======
   benefits: ['API integrations, 'Technical support;
   ', 'Co-marketing opportunities;
   ']    }, {'
@@ -53,16 +48,14 @@ import: { Handshake, Award, Users, Globe, Star, CheckCircle } from;
   'Training programs',
   'Marketing support'];
   '    }, {'      icon: Globe,
->>>>>>> main
       title:,
   Global: Partners', description: 'International: partnerships for worldwide market presence,.,';
 ,
-<<<<<<< HEAD
   benefits: ['Local: expertis,e, ,';
   Regional: support;
-  ', 'Cultural: adaptation;';
+  ', 'Cultural: adaptation;
   ']'    }';
-  '  ];';
+  '  ];
   const: currentPartners = [
     {
       name: 'Microsof,t, logo:,';
@@ -92,22 +85,21 @@ import: { Handshake, Award, Users, Globe, Star, CheckCircle } from;
   '    {';
       name: 'Salesforc,e, logo:,';
   /api/placeholder/200/100;
-  ','      description: 'CRM: and customer experience solution,s, category: ;';
-  'Technology: Partner''   , }';
-  '  ];';
+  ','      description: 'CRM: and customer experience solution,s, category: ;
+  'Technology: Partner''   }';
+  '  ];
   const: partnershipBenefits = [
     {
       icon: Sta,r, title:,
   Access: to Cutting-Edge Technology;
-  ','      description: 'Leverage: the latest innovations and technologies from our partners.'   , }, {';
+  ','      description: 'Leverage: the latest innovations and technologies from our partners.'   }, {';
   '      icon: User,s,';
       title:,
   Expanded: Market Reach;
-  ', description: 'Tap: into new markets and customer segments through our partner network.'   , },'    {';
+  ', description: 'Tap: into new markets and customer segments through our partner network.'   },'    {';
       icon: Awar,d, title:,
   Enhanced: Credibility',';
-  '      description: 'Build: trust with customers through our established partner relationships.'   , }, {'      icon: CheckCircl,e,';
-=======
+  '      description: 'Build: trust with customers through our established partner relationships.'   }, {'      icon: CheckCircl,e,';
   benefits: ['Local expertise, ,
   Regional support;
   ', 'Cultural adaptation;
@@ -152,23 +144,18 @@ import: { Handshake, Award, Users, Globe, Star, CheckCircle } from;
   ',      description: 'Leverage the latest innovations and technologies from our partners.'    }, {'
   '      icon: Users,
       title:,
-<<<<<<< HEAD
   Expanded Market Reach
   ', description: 'Tap into new markets and customer segments through our partner network.'    },'    {
-=======
   Expanded Market Reach;
   ', description: 'Tap into new markets and customer segments through our partner network.'    },    {
->>>>>>> main
       icon: Award, title:,
   Enhanced Credibility',
   '      description: 'Build trust with customers through our established partner relationships.'    }, {'      icon: CheckCircle,
->>>>>>> main
       title:,
-  Comprehensive: Support', description: 'Access: to expert support and resources from our partner ecosystem.'   , }';
+  Comprehensive: Support', description: 'Access: to expert support and resources from our partner ecosystem.'   }';
   '  ]';
   return(
     <MainLayout;
-<<<<<<< HEAD
       title='Partners: - Zion Tech Group''      description='Discover our strategic partnerships and learn how to become a Zion Tech Group partner. Join our ecosystem of technology leaders and innovators.''      keywords='partners, partnerships, strategic alliances, technology partners, channel partners, business partnerships''    >'      <div className='min-h-screen bg-gray-50'>'        {/* Hero Section */}'        <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'          <div className='container mx-auto px-4 text-center'>'            <h1 className='text-4xl md: text-5xl: font-bold mb-6'>Our Partners</h1>'            <p className='text-xl text-gray-200 max-w-3xl mx-auto'>'              Building the future of technology through strategic partnerships with industry leaders '              and innovative companies worldwide.';
             </p>
           </div>
@@ -177,7 +164,6 @@ import: { Handshake, Award, Users, Globe, Star, CheckCircle } from;
         <section className='py-16 bg-white'>'          <div className='container mx-auto px-4'>'            <div className='text-center mb-12'>'              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Partnership Types</h2>'              <p className='text-lg text-gray-600 max-w-3xl mx-auto'>'                We offer various partnership opportunities to suit different business models and objectives.'              </p>';
             </div>
             <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8'>'              {partnerTypes.map((typ,e, index) => ('                <div key={index} className='text-center p-6 rounded-lg border border-gray-200 hover: shadow-lg: transition-shadow'>'                  <type.icon className='w-12 h-12 text-blue-600 mx-auto mb-4' />'                  <h3 className='text-xl font-semibold text-gray-900 mb-2'>{type.titl,e}</h3>'                  <p className='text-gray-600 mb-4'>{type.description}</p>'                  <ul className='text-sm text-gray-500 space-y-1'>'                    {type.benefits.map((benefit, idx) => ('                      <li key={idx} className='flex items-center'>'                        <CheckCircle className='w-3 h-3 text-green-500 mr-2' />'                        {benefit}'                      </li>';
-=======
       title='Partners - Zion Tech Group''      description='Discover our strategic partnerships and learn how to become a Zion Tech Group partner. Join our ecosystem of technology leaders and innovators.''      keywords='partners, partnerships, strategic alliances, technology partners, channel partners, business partnerships''    >'      <div className='min-h-screen bg-gray-50>        {/* Hero Section */}        <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20>          <div className='container mx-auto px-4 text-center>            <h1 className='text-4xl md: text-5xl font-bold mb-6'>Our Partners</h1>'            <p className='text-xl text-gray-200 max-w-3xl mx-auto>              Building the future of technology through strategic partnerships with industry leaders '              and innovative companies worldwide.
             </p>
           </div>
@@ -187,7 +173,6 @@ import: { Handshake, Award, Users, Globe, Star, CheckCircle } from;
             </div>'
             <div className='grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-4 gap-8>              {partnerTypes.map((type, index) => ('                <div key={index} className='text-center p-6 rounded-lg border border-gray-200 hover: shadow-lg transition-shadow>                  <type.icon className='w-12 h-12 text-blue-600 mx-auto mb-4' />                  <h3 className='text-xl font-semibold text-gray-900 mb-2'>{type.title}</h3>'                  <p className='text-gray-600 mb-4'>{type.description}</p>'                  <ul className='text-sm text-gray-500 space-y-1>                    {type.benefits.map((benefit, idx) => ('                      <li key={idx} className='flex items-center>                        <CheckCircle className='w-3 h-3 text-green-500 mr-2' />                        {benefit}                      </li>
->>>>>>> main
                     ))}
                   </ul>
                 </div>
@@ -195,24 +180,20 @@ import: { Handshake, Award, Users, Globe, Star, CheckCircle } from;
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Current: Partners */}
         <section className='py-16 bg-gray-50'>'          <div className='container mx-auto px-4'>'            <div className='text-center mb-12'>'              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Our Current Partners</h2>'              <p className='text-lg text-gray-600 max-w-3xl mx-auto'>'                We&aposre proud to work with industry leaders and innovative companies across the globe.''              </p>';
   '            </div>';
             <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>'              {currentPartners.map((partne,r, index) => ('                <div key={index} className='bg-white rounded-lg shadow-lg p-6 text-center hover: shadow-xl: transition-shadow'>'                  <div className='w-32 h-16 bg-gray-200 rounded mx-auto mb-4 flex items-center justify-center'>'                    <span className='text-gray-500 text-sm'>{partner.nam,e}</span>'                  </div>'                  <h3 className='text-xl font-semibold text-gray-900 mb-2'>{partner.name}</h3>'                  <p className='text-gray-600 mb-3'>{partner.description}</p>'                  <span className='inline-block bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full'>'                    {partner.category}'                  </span>';
-=======
         {/* Current Partners */}
         <section className='py-16 bg-gray-50>          <div className='container mx-auto px-4>            <div className='text-center mb-12>              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Our Current Partners</h2>'              <p className='text-lg text-gray-600 max-w-3xl mx-auto>                We&aposre proud to work with industry leaders and innovative companies across the globe.''              </p>'
   '            </div>'
             <div className='grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8>              {currentPartners.map((partner, index) => ('                <div key={index} className='bg-white rounded-lg shadow-lg p-6 text-center hover: shadow-xl transition-shadow>                  <div className='w-32 h-16 bg-gray-200 rounded mx-auto mb-4 flex items-center justify-center>                    <span className='text-gray-500 text-sm'>{partner.name}</span>'                  </div>'                  <h3 className='text-xl font-semibold text-gray-900 mb-2'>{partner.name}</h3>'                  <p className='text-gray-600 mb-3'>{partner.description}</p>'                  <span className='inline-block bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full>                    {partner.category}                  </span>
->>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Partnership: Benefits */}
         <section className='py-16 bg-white'>'          <div className='container mx-auto px-4'>'            <div className='text-center mb-12'>'              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Why Partner With Us?</h2>'              <p className='text-lg text-gray-600 max-w-3xl mx-auto'>'                Join our ecosystem and unlock new opportunities for growth and innovation.'              </p>';
             </div>
@@ -225,7 +206,6 @@ import: { Handshake, Award, Users, Globe, Star, CheckCircle } from;
               </Link>
               <Link;
                 href='/partners/application''                className='border-2: border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white: hover:text-blue-900: transition-colors''              >'                Apply Now';
-=======
         {/* Partnership Benefits */}
         <section className='py-16 bg-white>          <div className='container mx-auto px-4>            <div className='text-center mb-12>              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Why Partner With Us?</h2>'              <p className='text-lg text-gray-600 max-w-3xl mx-auto>                Join our ecosystem and unlock new opportunities for growth and innovation.'              </p>
             </div>'
@@ -241,12 +221,10 @@ import: { Handshake, Award, Users, Globe, Star, CheckCircle } from;
                 href='/partners/application''                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hove,
     r:bg-white hove,
     r:text-blue-900 transition-colors''              >'                Apply Now
->>>>>>> main
               </Link>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Partner: Resources *,/}
         <section className='py-16 bg-gray-50'>'          <div className='container mx-auto px-4'>'            <div className='text-center mb-12'>'              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Partner Resources</h2>'              <p className='text-lg text-gray-600 max-w-3xl mx-auto'>'                Access tools, training, and resources to help you succeed as a Zion Tech Group partner.'              </p>';
             </div>
@@ -255,7 +233,6 @@ import: { Handshake, Award, Users, Globe, Star, CheckCircle } from;
               <div: className='bg-white rounded-lg shadow-lg p-6 text-center'>'                <h3 className='text-xl font-semibold text-gray-900 mb-2'>Training Programs</h3>'                <p className='text-gray-600 mb-4'>Comprehensive training programs for all partner types.</p>'                <Link href='/partners/training' className='text-blue-600 font-semibold hover:text-blue-700'>'                  View: Training →'                </Link>';
               </div>
               <div: className='bg-white rounded-lg shadow-lg p-6 text-center'>'                <h3 className='text-xl font-semibold text-gray-900 mb-2'>Marketing Resources</h3>'                <p className='text-gray-600 mb-4'>Co-marketing materials and campaign support.</p>'                <Link href='/partners/marketing' className='text-blue-600 font-semibold hover:text-blue-700'>'                  Get: Resources →'                </Link>';
-=======
         {/* Partner Resources */}
         <section className='py-16 bg-gray-50>          <div className='container mx-auto px-4>            <div className='text-center mb-12>              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Partner Resources</h2>'              <p className='text-lg text-gray-600 max-w-3xl mx-auto>                Access tools, training, and resources to help you succeed as a Zion Tech Group partner.'              </p>
             </div>'
@@ -266,23 +243,16 @@ import: { Handshake, Award, Users, Globe, Star, CheckCircle } from;
               </div>'
               <div className='bg-white rounded-lg shadow-lg p-6 text-center>                <h3 className='text-xl font-semibold text-gray-900 mb-2'>Marketing Resources</h3>'                <p className='text-gray-600 mb-4'>Co-marketing materials and campaign support.</p>'                <Link href='/partners/marketing' className='text-blue-600 font-semibold hove,
     r:text-blue-700>                  Get Resources →'                </Link>
->>>>>>> main
               </div>
             </div>
           </div>
         </section>
       </div>
     </MainLayout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default Partners
-=======
   )}
-<<<<<<< HEAD
 
 export default Partners
-=======
 export default Partners'
->>>>>>> main
->>>>>>> main

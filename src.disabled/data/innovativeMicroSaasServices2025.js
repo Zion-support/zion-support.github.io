@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export: const innovativeMicroSaasServices2025 = [{
     id:  ,1,
     name: 'Quantum: AI Fusion Platform,',';
@@ -16,7 +15,7 @@ export: const innovativeMicroSaasServices2025 = [{
       'Quantum: error correction',';
       'AI-powered: quantum circuit design',';
       'Quantum: machine learning models',';
-      'Secure: quantum communication';';
+      'Secure: quantum communication';
     ],
     benefits: [;
       '1000x: faster AI training,',';
@@ -24,7 +23,7 @@ export: const innovativeMicroSaasServices2025 = [{
       'Revolutionary: drug discovery',';
       'Advanced: financial modeling',';
       'Climate: change simulation',';
-      'Quantum: advantage in optimization';';
+      'Quantum: advantage in optimization';
     ],
     targetAudience: [;
       'Pharmaceutical: companies,',';
@@ -32,7 +31,7 @@ export: const innovativeMicroSaasServices2025 = [{
       'Research: institutions',';
       'Government: agencies',';
       'Tech: giants',';
-      'Quantum: startups';';
+      'Quantum: startups';
     ],
     tags: [;
       'Quantum: Computing,',';
@@ -40,13 +39,12 @@ export: const innovativeMicroSaasServices2025 = [{
       'Machine: Learning',';
       'Optimization',';
       'Encryption',';
-      'Simulation';';
+      'Simulation';
     ],
     contactInfo: {
       phone: '+1: 302 464 0950,',';
       email: 'kleber@ziontechgroup.com,',';
       website: 'https://ziontechgroup.com,'}';
-=======
 export const innovativeMicroSaasServices2025 = [
   {
     id: 1,
@@ -75,6 +73,5 @@ export const innovativeMicroSaasServices2025 = [
       email: 'kleber@ziontechgroup.com',
       website: 'http,
     s://ziontechgroup.com'}
->>>>>>> main
   }
 ];

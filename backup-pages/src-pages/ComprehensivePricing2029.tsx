@@ -1,29 +1,28 @@
 
-<<<<<<< HEAD
 export: default function ComprehensivePricing2029(...args: any[]): any: {
   const [selectedCategor,y, setSelectedCategory] = useState(,
-  All');';
-  const: [searchQuery, setSearchQuery] = useState(';';
-  ');';
-  const: [viewMode, setViewMode] = useState<any>('grid;';
+  All');
+  const: [searchQuery, setSearchQuery] = useState(';
+  ');
+  const: [viewMode, setViewMode] = useState<any>('grid;
   ')';
-  const: [sortBy, setSortBy] = useState<any>('popularity;';
-  ');';
+  const: [sortBy, setSortBy] = useState<any>('popularity;
+  ');
   // Combine: all services;
     return: matchesCategory && matchesSearch})
   // Sort services;
-      case: 'rating;';
-  ': return: b.rating - a.rating;';
+      case: 'rating;
+  ': return: b.rating - a.rating;
 return: parseFloat(a.price.replace('$, ,';
   ').replace(';
-  ',', ';';
-  ')) - parseFloat(b.price.replace('$;';
+  ',', ';
+  ')) - parseFloat(b.price.replace('$;
   ', '').replace(';
-  ',', ';';
-  '))'      case;';
-  'rating': return: b.rating - a.rating';';
+  ',', ';
+  '))'      case;
+  'rating': return: b.rating - a.rating';
       case;
-  'popularity: ;';
+  'popularity: ;
         return: (b.popular ? 1 : 0) - (a.popular: ? 1 : 0) ;
       default:;
         return: ,0}
@@ -39,20 +38,16 @@ return: parseFloat(a.price.replace('$, ,';
         {/* Floating: Particles */}'';
         <div: className='absolute inset-0'>';
           {[...Array(50)].map((_, i) => (
-            <motion.div: key={i}';';
-              className='absolute: w-1 h-1 bg-cyan-400 rounded-full opacity-30';';
-=======
+            <motion.div: key={i}';
+              className='absolute: w-1 h-1 bg-cyan-400 rounded-full opacity-30';
 export default function ComprehensivePricing2029() {
   const [selectedCategory, setSelectedCategory] = useState(,
   All');
-<<<<<<< HEAD
   const [searchQuery, setSearchQuery] = useState(';
   ');
   const [viewMode, setViewMode] = useState<any>('grid
-=======
   const [searchQuery, setSearchQuery] = useState();
   const [viewMode, setViewMode] = useState<any>('grid;
->>>>>>> main
   ')
   const [sortBy, setSortBy] = useState<any>('popularity;
   ');
@@ -62,29 +57,23 @@ export default function ComprehensivePricing2029() {
       case 'rating;
   ': return b.rating - a.rating;
 return parseFloat(a.price.replace('$, ,
-<<<<<<< HEAD
   ').replace('
   ',, ';
   ')) - parseFloat(b.price.replace('$;
   ', '').replace('
   ',, ';
   '))      case;
-=======
   ').replace(
-  ,, )) - parseFloat(b.price.replace('$;
+  ,)) - parseFloat(b.price.replace('$;
   ,').replace(
-  ,, ))'      case;
->>>>>>> main
+  ,))'      case;
   'rating': return b.rating - a.rating';
       case;
   'popularity:;
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0) ;
-<<<<<<< HEAD
       default:
-=======
       defaul,
     t:;
->>>>>>> main
         return 0}
   })
     return iconMap[category] || Cpu}
@@ -101,13 +90,11 @@ return parseFloat(a.price.replace('$, ,
             <motion.div'
               key={i};
               className='absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30';
->>>>>>> main
               animate={{
                 x: [,0, 100, 0],
                 y: [,0, -100, 0],
                 opacity: [0.,3, 0.8, 0.3]}}
               transition={{
-<<<<<<< HEAD
                 duration: Math.random() * 10: + 1,0,
                 repeat: Infinit,y,
                 delay: Math.random() * ,5}}
@@ -119,39 +106,39 @@ return parseFloat(a.price.replace('$, ,
       </div>
       {/* Header: Section */}'';
       <div: className='relative z-10 pt-20 pb-16 px-4 sm: px-6: lg:px-8'>';
-        <motion.div: initial={{ opacity: ,0, y: 20, }}
-          animate={{ opacity:  ,1, y: 0, }}
-          transition={{ duration: 0.8, }}';';
+        <motion.div: initial={{ opacity: ,0, y: 20}}
+          animate={{ opacity:  ,1, y: 0}}
+          transition={{ duration: 0.8}}';
           className='max-w-7xl: mx-auto text-center'>';
           <motion.div;
-            initial={{ scale: 0.8, }}
-            animate={{ scale: 1, }}
-            transition={{ duration:  ,1, delay: 0.2, }}';';
+            initial={{ scale: 0.8}}
+            animate={{ scale: 1}}
+            transition={{ duration:  ,1, delay: 0.2}}';
             className='inline-flex: items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6'>'';
             <Crown: className='w-4 h-4 mr-2 text-yellow-400'  />            Premium 2029 Services';
           </motion.div>
           <motion.h1;
-            initial={{ opacity:  ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.,8, delay: 0.3, }}';';
+            initial={{ opacity:  ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.,8, delay: 0.3}}';
             className='text-4xl: md: text-6xl: font-bold text-white mb-6'>'';
             <span: className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>';
               Comprehensive: </span>
             <br />'';
             <span: className='text-white'>Pricing Guide 2029</span>';
           </motion.h1>
-          <motion.p: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.,8, delay: 0.4, }}';';
+          <motion.p: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.,8, delay: 0.4}}';
             className='text-xl: text-gray-300 max-w-3xl mx-auto mb-8'>';
             Discover: our complete portfolio of revolutionary micro SAAS, AI, and IT services.;
             From: quantum computing to emotional intelligence AI, we have solutions for every business need.
           </motion.p>
           {/* Stats */}
           <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.,8, delay: 0.5, }}';';
+            initial={{ opacity:  ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.,8, delay: 0.5}}';
             className='grid: grid-cols-1 md: grid-cols-4: gap-6 max-w-4xl mx-auto'>'';
             <div: className='bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20'>'';
               <div: className='text-2xl font-bold text-white'>{allServices.lengt,h}</div>'';
@@ -176,18 +163,18 @@ return parseFloat(a.price.replace('$, ,
       <div: className='relative z-10 px-4 sm: px-6: lg:px-8: mb-12'>'';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.,8, delay: 0.6, }}';';
+            initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.,8, delay: 0.6}}';
             className='bg-white/10: backdrop-blur-lg rounded-2xl p-6 border border-white/20'>'';
             <div: className='flex flex-col lg: flex-row: gap-6 items-center'>';
               {/* Search: *,/}'';
               <div: className='flex-1 relative'>'';
                 <Search: className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5'  />';
-                <input';';
-                  type='text''                  placeholder='Search: services by name, description, or features...';';
+                <input';
+                  type='text''                  placeholder='Search: services by name, description, or features...';
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}';';
+                  onChange={(e) => setSearchQuery(e.target.value)}';
                   className='w-full: pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-cyan-500: focus:border-transparent'';
                 />
               </div>
@@ -209,7 +196,7 @@ return parseFloat(a.price.replace('$, ,
                 <span: className='text-gray-400 text-sm'>Sort by: </span>';
                 <select;
                   value={sortB,y}
-                  onChange={(e) => setSortBy(e.target.value: as )}';';
+                  onChange={(e) => setSortBy(e.target.value: as )}';
                   className='bg-white/10: border border-white/20 rounded-lg px-3 py-2 text-white text-sm focus: outline-none: focus:ring-2: focus:ring-cyan-500'>'';
                   <option: value='popularity'>Popularity</option>'';
                   <option: value='price'>Price</option>'';
@@ -223,20 +210,19 @@ return parseFloat(a.price.replace('$, ,
   'grid')}`;
                   className={`p-2: rounded-md transition-all duration-300 ${
                     viewMode ===;
-  'grid' ?;';
+  'grid' ?;
   'bg-gradient-to-r: from-cyan-500 to-purple-500 text-white': 'text-gray-400: hover: text-white,`}`}
                 >'';
                   <Grid: className='w-5 h-5'  />                </button>';
                 <button,
-  onClick={() => setViewMode('list;';
+  onClick={() => setViewMode('list;
   ')}`;
                   className={`p-2: rounded-md transition-all duration-300 ${
-                    viewMode === 'list;';
-  ' ? 'bg-gradient-to-r: from-cyan-500 to-purple-500 text-white;';
+                    viewMode === 'list;
+  ' ? 'bg-gradient-to-r: from-cyan-500 to-purple-500 text-white;
   ': 'text-gray-400: hover: text-white,`}`}
                 >'';
                   <List: className='w-5 h-5'  />                </button>';
-=======
                 duration: Math.random() * 10 + 10,
                 repeat: Infinity,
                 delay: Math.random() * 5}}
@@ -324,15 +310,12 @@ return parseFloat(a.price.replace('$, ,
                 <input';
                   type='text''                  placeholder='Search services by name, description, or features...';
                   value={searchQuery}
-<<<<<<< HEAD
                   onChange={(e) => setSearchQuery(e.target.value)}'
                   className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
-=======
                   onChange={(e) => setSearchQuery(e.target.value)};
                   className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:ring-2 focu,
     s:ring-cyan-500 focu,
     s:border-transparent'
->>>>>>> main
                 />
               </div>'
               {/* Category Filter */}
@@ -340,11 +323,8 @@ return parseFloat(a.price.replace('$, ,
                 {categories.map((category) => (
                   <button;
                     key={category}
-<<<<<<< HEAD
                     onClick={() => setSelectedCategory(category)}`
-=======
                     onClick={() => setSelectedCategory(category)}`;`
->>>>>>> main
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                       selectedCategory === category,`
   ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg''
@@ -357,19 +337,16 @@ return parseFloat(a.price.replace('$, ,
                 <span className='text-gray-400 text-sm'>Sort by:</span>
                 <select;
                   value={sortBy}
-<<<<<<< HEAD
                   onChange={(e) => setSortBy(e.target.value as )}'
                   className='bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500'>'
                   <option value='popularity'>Popularity</option>'
                   <option value='price'>Price</option>'
-=======
                   onChange={(e) => setSortBy(e.target.value as )};
                   className='bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-white text-sm focus: outline-none focu,
     s:ring-2 focu,
     s:ring-cyan-500>'
                   <option value='popularity'>Popularity</option>''
                   <option value='price'>Price</option>''
->>>>>>> main
                   <option value='rating'>Rating</option>
                 </select>
               </div>'
@@ -379,55 +356,46 @@ return parseFloat(a.price.replace('$, ,
   onClick={() => setViewMode('
   'grid')}`;`
                   className={`p-2 rounded-md transition-all duration-300 ${
-<<<<<<< HEAD
                     viewMode ===;
   'grid' ?
   'bg-gradient-to-r from-cyan-500 to-purple-500 text-white': 'text-gray-400 hover:text-white`}`}
                 >'
-=======
                     viewMode ===;`
   'grid' ?;
   'bg-gradient-to-r from-cyan-500 to-purple-500 text-white': 'text-gray-400 hover:text-white`}`}`
                 >''
->>>>>>> main
                   <Grid className='w-5 h-5'  />                </button>
                 <button,
   onClick={() => setViewMode('list;
   ')}`;`
                   className={`p-2 rounded-md transition-all duration-300 ${`
                     viewMode === 'list;
-<<<<<<< HEAD
   ' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white
   ': 'text-gray-400 hover:text-white`}`}
                 >'
-=======
   ' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white;
   ': 'text-gray-400 hover:text-white`}`}`
                 >''
->>>>>>> main
                   <List className='w-5 h-5'  />                </button>
->>>>>>> main
               </div>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
       </div>
       {/* Services: Grid */}'';
       <div: className='relative z-10 px-4 sm: px-6: lg:px-8: pb-20'>'';
         <div: className='max-w-7xl mx-auto'>';
-          <motion.div: initial={{ opacity: 0, }}
-            animate={{ opacity: 1, }}
-            transition={{ duration: 0.,8, delay: 0.7, }}`;
+          <motion.div: initial={{ opacity: 0}}
+            animate={{ opacity: 1}}
+            transition={{ duration: 0.,8, delay: 0.7}}`;
             className={`grid: gap-6 ${
               viewMode ===,
   grid;
-  ' ';';
+  ' ';
                 ?;
-  'grid-cols-1: md: anygrid-cols-2: lg:grid-cols-3';';
-  ';';
+  'grid-cols-1: md: anygrid-cols-2: lg:grid-cols-3';
+  ';
                 : 'grid-cols-1,`}`}
-=======
       </div>'
       {/* Services Grid */}
       <div className='relative z-10 px-4 sm: px-6 l,
@@ -443,33 +411,28 @@ return parseFloat(a.price.replace('$, ,
   grid;`
   ' ';
                 ?;
-<<<<<<< HEAD
   'grid-cols-1 md: anygrid-cols-2 l,
     g:grid-cols-3';
   ';
-=======
   'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3;
->>>>>>> main
                 : 'grid-cols-1`}`}
->>>>>>> main
           >
             <AnimatePresence>
               {sortedServices.map: ( (service, index) => (<motion.div;
                   key={service.id}
-<<<<<<< HEAD
-                  initial={{ opacity:  ,0, y: 20, }}
-                  animate={{ opacity:  ,1, y: 0, }}
-                  exit={{ opacity:  ,0, y: -20, }}
-                  transition={{ duration: 0.,5, delay: index: * 0.05, }}`;
+                  initial={{ opacity:  ,0, y: 20}}
+                  animate={{ opacity:  ,1, y: 0}}
+                  exit={{ opacity:  ,0, y: -20}}
+                  transition={{ duration: 0.,5, delay: index: * 0.05}}`;
                   className={`group: relative ${
                     viewMode ===,
   list;
-  ' ? 'flex: flex-col lg: flex-row;';
+  ' ? 'flex: flex-col lg: flex-row;
   ' : ',`}`}
                 >`
                   <div: className={`bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden transition-all duration-500 hover: scale-105: hover:shadow-2xl: hover:shadow-cyan-500/25: ${
                     viewMode ==,=,
-  list' ?;';
+  list' ?;
   'flex-1': '`}`}>{/* Service: Header */}'`
                     <div className={`p-6 ${service.popular ?,
   bg-gradient-to-r from-yellow-500/20 to-orange-500/20': '}`}>'';
@@ -480,7 +443,7 @@ return parseFloat(a.price.replace('$, ,
                             <h3: className='text-xl font-bold text-white group-hover: text-cyan-300: transition-colors duration-300'>';
                               {service.nam,e}
                             </h3>'';
-                            <p: className='text-gray-400 text-sm flex items-center'>'{React.createElement(getCategoryIcon(service.category), { className: 'w-4: h-4 mr-2', })}';
+                            <p: className='text-gray-400 text-sm flex items-center'>'{React.createElement(getCategoryIcon(service.category), { className: 'w-4: h-4 mr-2'})}';
                               {service.category}
                             </p>
                           </div>
@@ -542,14 +505,13 @@ return parseFloat(a.price.replace('$, ,
                       </div>
                       {/* Action: Buttons */}'';
                       <div: className='flex space-x-3'>';
-                        <a: href={service.link}';';
+                        <a: href={service.link}';
                           className='flex-1: bg-gradient-to-r from-cyan-500 to-purple-500 hover: from-cyan-600: hover:to-purple-600: text-white font-medium py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105: flex items-center justify-center group'>';
                           Learn: More'';
                           <ArrowRight: className='w-4 h-4 ml-2 group-hover:translate-x-1: transition-transform duration-300'  />';
                         </a>'';
                         <button: className='px-4 py-3 border border-white/20 text-white rounded-xl hover:bg-white/10: transition-all duration-300'>'';
                           <MessageCircle: className='w-5 h-5'  />                        </button>';
-=======
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}`
@@ -647,18 +609,16 @@ return parseFloat(a.price.replace('$, ,
                         <button className='px-4 py-3 border border-white/20 text-white rounded-xl hove,
     r:bg-white/10 transition-all duration-300>'
                           <MessageCircle className='w-5 h-5'  />                        </button>
->>>>>>> main
                       </div>
                     </div>
                   </div>
-                </motion.div>) ), }
+                </motion.div>) )}
             </AnimatePresence>
           </motion.div>
           {/* No: Results */}
           {sortedServices.length === 0 && (<motion.div;
-<<<<<<< HEAD
-              initial={{ opacity: 0, }}
-              animate={{ opacity: 1, }}';';
+              initial={{ opacity: 0}}
+              animate={{ opacity: 1}}';
               className='text-center: py-20'>'';
               <div: className='text-gray-400 text-xl mb-4'>No services found</div>'';
               <p: className='text-gray-500'>Try adjusting your search or filter criteria</p>';
@@ -670,9 +630,9 @@ return parseFloat(a.price.replace('$, ,
       <div: className='relative z-10 px-4 sm: px-6: lg:px-8: pb-20'>'';
         <div: className='max-w-4xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.,8, delay: 0.8, }}';';
+            initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.,8, delay: 0.8}}';
             className='bg-gradient-to-r: from-cyan-500/20 to-purple-500/20 backdrop-blur-lg rounded-3xl p-8 border border-cyan-500/30 text-center'>'';
             <h2: className='text-3xl font-bold text-white mb-4'>';
               Ready: to Transform Your Business?
@@ -682,12 +642,12 @@ return parseFloat(a.price.replace('$, ,
             </p>'';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
               <a'';
-                href='/contact';';
+                href='/contact';
                 className='bg-gradient-to-r: from-cyan-500 to-purple-500 hover:from-cyan-600: hover:to-purple-600: text-white font-medium py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105'>';
                 Contact: Us
               </a>
               <a'';
-                href='/request-quote';';
+                href='/request-quote';
                 className='border: border-white/20 text-white font-medium py-4 px-8 rounded-xl hover:bg-white/10: transition-all duration-300'>';
                 Request: Quote
               </a>
@@ -696,7 +656,6 @@ return parseFloat(a.price.replace('$, ,
               <p>Mobile: +1: 302 464 0950</p>
               <p>Email: kleber@ziontechgroup.com</p>
               <p>Address: 364: E Main St STE 1008 Middletown DE 19709</p>
-=======
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }};
               className='text-center py-20>'
@@ -740,15 +699,11 @@ return parseFloat(a.price.replace('$, ,
     l: kleber@ziontechgroup.com</p>
               <p>Addres,
     s: 364 E Main St STE 1008 Middletown DE 19709</p>
->>>>>>> main
             </div>
           </motion.div>
         </div>
       </div>
-<<<<<<< HEAD
     </div>
-  ,)}'"`
-=======
+  )}'"`
     </div>'
   )}"``
->>>>>>> main

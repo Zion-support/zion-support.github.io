@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -14,7 +13,6 @@ export default function EnhancedLayout() {return (
     </div>
   );
 }
-=======
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import { PerformanceOptimizer } from './PerformanceOptimizer';
@@ -206,4 +204,3 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
 };
 
 export default EnhancedLayout;
->>>>>>> main

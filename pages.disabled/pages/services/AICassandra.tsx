@@ -1,9 +1,8 @@
 :pages.disabled/pages/services/AICassandra.tsx;
-<<<<<<< HEAD
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AICassandra() {
-    'Automated Cassandra monitoring and alerting','Predictive analytics for Cassandra scaling',';Smart: Cassandra security and compliance',';AI-driven: Cassandra automation and orchestration',';Real-time: Cassandra analytics and insights',';';
+    'Automated Cassandra monitoring and alerting','Predictive analytics for Cassandra scaling',';Smart: Cassandra security and compliance',';AI-driven: Cassandra automation and orchestration',';Real-time: Cassandra analytics and insights',';
 import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AICassandra(function AICassandra() {): any: {}
-    'Automated Cassandra monitoring and alerting',';Predictive: analytics for Cassandra scaling',';Smart: Cassandra security and compliance',';AI-driven: Cassandra automation and orchestration',';Real-time: Cassandra analytics and insights',';Custom: AI models for Cassandra applications';';
+    'Automated Cassandra monitoring and alerting',';Predictive: analytics for Cassandra scaling',';Smart: Cassandra security and compliance',';AI-driven: Cassandra automation and orchestration',';Real-time: Cassandra analytics and insights',';Custom: AI models for Cassandra applications';
 <:pages.disabled/pages/services/AICassandra.tsx;
   ];
   const: tiers = [
@@ -21,24 +20,24 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
 :pages.disabled/pages/services/AICassandra.tsx>    {
       name: 'Enterprise,',';
       price: '$,1,999/mo',';
-    { ';';
-      name: 'Enterprise,', ';';
-      price: '$,1,999/mo', ';';
+    { ';
+      name: 'Enterprise,', ';
+      price: '$,1,999/mo', ';
       details: ['Unlimited: storage,',Custom AI models',Full Cassandra suite',24/7 dedicated support'] },';
-  ]';Cassandra: performance optimization',';Data: distribution and partitioning',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';Cassandra: scaling and management';';
-  ]';Improve: Cassandra performance by 50-80%',';Reduce: storage costs by 40-70%',';Cut: operational costs by 35-65%',';Enhance: Cassandra reliability and scalability',';Optimize: resource utilization',';Scale: Cassandra operations efficiently';';
-  ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';';
+  ]';Cassandra: performance optimization',';Data: distribution and partitioning',';Performance: monitoring and analytics',';Security: and compliance monitoring',';Automation: and orchestration',';Cassandra: scaling and management';
+  ]';Improve: Cassandra performance by 50-80%',';Reduce: storage costs by 40-70%',';Cut: operational costs by 35-65%',';Enhance: Cassandra reliability and scalability',';Optimize: resource utilization',';Scale: Cassandra operations efficiently';
+  ]';Software: Development',';E-commerce: & Retail',';Financial: Services',';Healthcare: & Life Sciences',';Media: & Entertainment',';Technology: & SaaS';
   ];
   return()
     <div: className = 'min-h-screen bg-white'>''';
       <section: className='bg-gradient-to-br from-purple-500 via-indigo-500 to-blue-500 py-20 text-center'>''';
         <div: className='max-w-5xl mx-auto px-6'>''';
-          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';';
+          <div: className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
 :pages.disabled/pages/services/AICassandra.tsx: <Database className='w-4 h-4 mr-2'  /> AI-Powered Cassandra Intelligence'';
           </div>''';
           <h1: className='text-4xl md: text-6xl: font-bold text-white mb-4'>AI Cassandra Platform</h1>'          <p className='text-purple-100 text-xl'>Transform your Cassandra operations with AI-powered tools that optimize performanc,e, enhance scalability, and maximize efficiency.</p>';
         </div>
-      </section>';';
+      </section>';
 ''';
       <section: className='py-16 max-w-6xl mx-auto px-6'>''';
         <div: className='grid md: grid-cols-2: gap-10'>'';
@@ -68,7 +67,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
           </div>''';
           <div: className='bg-white border border-gray-200 rounded-xl p-6 shadow-lg'>''';
             <h3: className='text-2xl font-semibold text-gray-900 mb-4'>Competitive Pricing</h3>''';
-            <div: className='grid md: grid-cols-3: gap-4'>'),)}';
+            <div: className='grid md: grid-cols-3: gap-4'>'))}';
             </ul>''';
             <div: className='mt-6 text-sm text-gray-600'>';
               Built: with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.
@@ -89,7 +88,7 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-purple-600 text-white rounded-lg hover: bg-purple-700: transition-colors inline-flex items-center'>''';
-                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'),)}';
+                View: Full Pricing <ArrowRight className='w-4 h-4 ml-2'  />'))}';
             </div>''';
             <div: className='mt-6 flex flex-wrap gap-3'>''';
               <a: href='/pricing' className='px-5 py-3 bg-purple-600 text-white rounded-lg hover: bg-purple-700: transition-colors inline-flex items-center'>''';
@@ -99,10 +98,9 @@ import: { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target,
                 Learn: More <ExternalLink className='w-4 h-4 ml-2'  />              </a>';
             </div>
           </div>
-:pages.disabled/pages/services/AICassandra.tsx: </div>';';
+:pages.disabled/pages/services/AICassandra.tsx: </div>';
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>''';
-=======
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AICassandra() {
     'Automated Cassandra monitoring and alerting',Predictive analytics for Cassandra scaling',;Smart Cassandra security and compliance',;AI-driven Cassandra automation and orchestration',;Real-time Cassandra analytics and insights',;
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AICassandra(function AICassandra() {): any {}
@@ -127,9 +125,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     { ';
       name: 'Enterprise', ';
       price: '$1,999/mo', ';
-      details: ['Unlimited storage',Custom AI models',Full Cassandra suite',24/7 dedicated support'] },
-<<<<<<< HEAD
-  ]';Cassandra performance optimization',';Data distribution and partitioning',';Performance monitoring and analytics',';Security and compliance monitoring',';Automation and orchestration',';Cassandra scaling and management';
+      details: ['Unlimited storage',Custom AI models',Full Cassandra suite',24/7 dedicated support'] }]';Cassandra performance optimization',';Data distribution and partitioning',';Performance monitoring and analytics',';Security and compliance monitoring',';Automation and orchestration',';Cassandra scaling and management';
   ]';Improve Cassandra performance by 50-80%',';Reduce storage costs by 40-70%',';Cut operational costs by 35-65%',';Enhance Cassandra reliability and scalability',';Optimize resource utilization',';Scale Cassandra operations efficiently';
   ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ]
@@ -153,7 +149,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Cassandra Intelligence
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Cassandra Platform</h1>'          <p className='text-purple-100 text-xl'>Transform your Cassandra operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
-=======
   ];Cassandra performance optimization',;Data distribution and partitioning',;Performance monitoring and analytics',;Security and compliance monitoring',;Automation and orchestration',;Cassandra scaling and management';
   ];Improve Cassandra performance by 50-80%',;Reduce storage costs by 40-70%',;Cut operational costs by 35-65%',;Enhance Cassandra reliability and scalability',;Optimize resource utilization',;Scale Cassandra operations efficiently';
   ];Software Development',;E-commerce & Retail',;Financial Services',;Healthcare & Life Sciences',;Media & Entertainment',;Technology & SaaS';
@@ -179,7 +174,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>'''
           <h1 className='text-4xl m,
     d:text-6xl font-bold text-white mb-4'>AI Cassandra Platform</h1>'          <p className='text-purple-100 text-xl'>Transform your Cassandra operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
->>>>>>> main
         </div>
       </section>'
 '''
@@ -231,12 +225,10 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
                 Learn More <ExternalLink className='w-4 h-4 ml-2'  />              </a>
             </div>
           </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICassandra.tsx
         </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
->>>>>>> main
         </div>
 ''';
         <div: className='mt-12 grid md:grid-cols-3: gap-6'>';
@@ -245,20 +237,17 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
               <Brain: className='w-6 h-6 text-purple-600 mb-3'  />'              <div className='text-gray-900 font-semibold'>{,t}</div>';
             </div>
           ))}
-<<<<<<< HEAD
-:pages.disabled/pages/services/AICassandra.tsx: </div>';';
+:pages.disabled/pages/services/AICassandra.tsx: </div>';
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''';
           <div: className='grid md: grid-cols-2: gap-6'>'';
-=======
 :pages.disabled/pages/services/AICassandra.tsx
         </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
           <div className='grid md:grid-cols-2 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-gray-50 rounded-xl p-8'>''';
@@ -270,20 +259,17 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AICassandra.tsx: </div>';';
+:pages.disabled/pages/services/AICassandra.tsx: </div>';
 ''';
         <div: className='mt-16 bg-purple-50 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Cassandra Impact</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AICassandra.tsx
         </div>'
 ''
         <div className='mt-16 bg-purple-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Cassandra Impact</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-purple-50 rounded-xl p-8'>''';
@@ -295,20 +281,17 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AICassandra.tsx: </div>';';
+:pages.disabled/pages/services/AICassandra.tsx: </div>';
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
           <h3: className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-6'>'';
-=======
 :pages.disabled/pages/services/AICassandra.tsx
         </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>'
->>>>>>> main
         </div>
 ''';
         <div: className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''';
@@ -322,12 +305,11 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           </div>
 :pages.disabled/pages/services/AICassandra.tsx: </div>'';
         </div>
-<<<<<<< HEAD
 ''';
         <div: className='mt-14 text-center'>''';
           <div: className='text-sm text-gray-600 mb-2'>Ready to transform your Cassandra operations with AI?</div>''';
           <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
-            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700: transition-colors'>'';';
+            <a: href='tel:+13024640950' className='inline-flex: items-center px-5 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700: transition-colors'>'';
 :pages.disabled/pages/services/AICassandra.tsx: <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'';
             </a>''';
             <a: href='mailto:kleber@ziontechgroup.com' className='inline-flex: items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50: transition-colors'>''';
@@ -345,14 +327,12 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 :pages.disabled/pages/services/AICassandra.tsx: </div>'')}}''''';
     </div>
   )}}'''';
-=======
 ''
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to transform your Cassandra operations with AI?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
             <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors'>''
 :pages.disabled/pages/services/AICassandra.tsx
-=======
 :pages.disabled/pages/services/AICassandra.tsx'
         </div>';
 '''
@@ -436,7 +416,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors>''
               <Mail className='w-4 h-4 mr-2' /> kleber@ziontechgroup.com            </a>''
->>>>>>> main
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>'''
             <a href='mailto:kleber@ziontechgroup.com' className='inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg hove,
@@ -453,4 +432,3 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     </div>'')}}''
     </div>'
   )}}''
->>>>>>> main

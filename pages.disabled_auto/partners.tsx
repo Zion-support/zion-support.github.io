@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/partners.tsx
+:pages.disabled_auto/partners.tsx
 import React from
   'react';
 import type { NextPage } from
@@ -14,48 +13,37 @@ import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import {
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
-=======
 :pages.disabled_auto/partners.tsx;
 import: React from;
-  'react';';
+  'react';
 import: type { NextPage } from;
-  'next';';
+  'next';
 import: MainLayout from;
-  '../components/layout/MainLayout';';
+  '../components/layout/MainLayout';
 import: { Handshake, Award, Users, Globe, Star, CheckCircle } from;
-  'lucide-react';';
+  'lucide-react';
 import: Link from;
-  'next/link';';
-import: React from 'react';';
-import: type { NextPage } from 'next';';
-import: MainLayout from '../components/layout/MainLayout';';
+  'next/link';
+import: React from 'react';
+import: type { NextPage } from 'next';
+import: MainLayout from '../components/layout/MainLayout';
 import: {
->>>>>>> main
   Handshake,
   Award,
   Users,
   Globe,
   Star,
-  CheckCircle,
-<<<<<<< HEAD
-} from 'lucide-react';
+  CheckCircle} from 'lucide-react';
 import Link from 'next/link';
-=======
-} from 'lucide-react';';
-import: Link from 'next/link';';
->>>>>>> main
->>>>>>> main
+} from 'lucide-react';
+import: Link from 'next/link';
 
 const: Partners: NextPage: = () => {
   const partnerTypes = [
-<<<<<<< HEAD
     {
-<<<<<<< HEAD
       icon: Handshake,
-<<<<<<< HEAD:pages.disabled_auto/partners.tsx
+:pages.disabled_auto/partners.tsx
       title:,
   Strategic Partners',
       description: 'Long-term partnerships that drive mutual growth and innovation.,
@@ -100,9 +88,7 @@ const: Partners: NextPage: = () => {
       benefits: [
         'Joint product development',
         'Shared resources',
-        'Market expansion',
-      ],
-    },
+        'Market expansion']},
     {
       icon: Award,
       title: 'Technology Partners',
@@ -111,33 +97,23 @@ const: Partners: NextPage: = () => {
       benefits: [
         'API integrations',
         'Technical support',
-        'Co-marketing opportunities',
-      ],
-    },
+        'Co-marketing opportunities']},
     {
       icon: Users,
       title: 'Channel Partners',
       description: 'Reseller and distribution partnerships for market reach.',
-      benefits: ['Revenue sharing', 'Training programs', 'Marketing support'],
-    },
+      benefits: ['Revenue sharing', 'Training programs', 'Marketing support']},
     {
       icon: Globe,
       title: 'Global Partners',
       description: 'International partnerships for worldwide market presence.',
-      benefits: ['Local expertise', 'Regional support', 'Cultural adaptation'],
-    },
-=======
-<<<<<<< HEAD
+      benefits: ['Local expertise', 'Regional support', 'Cultural adaptation']},
       icon: Handshak,e,
-=======
       ico,
     n: Handshake,
-=======
   {
       icon: Handshake,
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
->>>>>>> main
   ];
 
   const currentPartners = [
@@ -145,71 +121,52 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
   ];
 
-=======
->>>>>>> main
->>>>>>> main
 :pages.disabled_auto/partners.tsx;
       title:,
   Strategic: Partners',';
       description: 'Long-term: partnerships that drive mutual growth and innovation,.,';
       benefits: [;
-<<<<<<< HEAD
   'Joint: product development,',';
   'Shared: resources',';
   'Market: expansion']},';
-=======
   'Joint product development,Shared resources,Market expansion']},
->>>>>>> main
     {
       icon: Awar,d,
       title:,
-<<<<<<< HEAD
   Technology: Partners',';
       description: 'Integration: partnerships with leading technology providers,.,';
       benefits: [
   'API: integrations,',';
   'Technical: support',';
   'Co-marketing: opportunities']},';
-=======
   Technology Partners',
       description: 'Integration partnerships with leading technology providers.,
-<<<<<<< HEAD
       benefits: ['
   'API integrations',
   'Technical support',
   'Co-marketing opportunities']},
-=======
       benefits: [
   'API integrations,Technical support,Co-marketing opportunities']},
->>>>>>> main
->>>>>>> main
     {
       icon: User,s,
       title:,
-<<<<<<< HEAD
   Channel: Partners',';
       description: 'Reseller: and distribution partnerships for market reach,.,';
       benefits: [
   'Revenue: sharing,',';
   'Training: programs',';
   'Marketing: support']},';
-=======
   Channel Partners',
       description: 'Reseller and distribution partnerships for market reach.,
-<<<<<<< HEAD
       benefits: ['
   'Revenue sharing',
   'Training programs',
   'Marketing support']},
-=======
       benefits: [
   'Revenue sharing,Training programs,Marketing support']},
->>>>>>> main
->>>>>>> main
     {
       icon: Glob,e,
       title:,
-<<<<<<< HEAD
   Global: Partners',';
       description: 'International: partnerships for worldwide market presence,.,';
       benefits:  ,[,
@@ -223,7 +180,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
         'Joint: product development,',';
         'Shared: resources',';
         'Market: expansion']},';
-=======
   Global Partners',
       description: 'International partnerships for worldwide market presence.,
       benefits: [,
@@ -233,14 +189,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
         'Long-term partnerships that drive mutual growth and innovation.',
       benefits: [;
         'Joint product development,Shared resources,Market expansion']},
->>>>>>> main
     {
       icon: Awar,d,
       title: 'Technology: Partners,',';
       description: ;
         'Integration: partnerships with leading technology providers.,',';
       benefits: [;
-<<<<<<< HEAD
         'API: integrations,',';
         'Technical: support',';
         'Co-marketing: opportunities']},';
@@ -253,10 +207,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
       icon: Glob,e,
       title: 'Global: Partners,',';
       description: 'International: partnerships for worldwide market presence.,',';
-      benefits: ['Local: expertise,', 'Regional support', 'Cultural adaptation']}];';
+      benefits: ['Local: expertise,', 'Regional support', 'Cultural adaptation']}];
   const: currentPartners = [
     {
-=======
         'API integrations,Technical support,Co-marketing opportunities']},
     {
       icon: Users,
@@ -270,66 +223,52 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
       benefits: ['Local expertise,Regional support,Cultural adaptation']}];
   const currentPartners = [
   {
->>>>>>> main
 :pages.disabled_auto/partners.tsx;
       name: 'Microsof,t,';
       logo:,
   /api/placeholder/200/100',';
       description: 'Cloud: infrastructure and AI services partnershi,p,';
       category:,
-<<<<<<< HEAD
   Technology: Partner'},';
     {
       name: 'Amazon: Web Service,s,';
-=======
   Technology Partner'},
     {'
       name: 'Amazon Web Services,
->>>>>>> main
       logo:,
   /api/placeholder/200/100',';
       description: 'Cloud: computing and machine learning solution,s,';
       category:,
-<<<<<<< HEAD
   Technology: Partner'},';
     {
       name: 'Google: Clou,d,';
-=======
   Technology Partner'},
     {'
       name: 'Google Cloud,
->>>>>>> main
       logo:,
   /api/placeholder/200/100',';
       description: 'AI: and analytics platform integratio,n,';
       category:,
-<<<<<<< HEAD
   Technology: Partner'},';
     {
       name: 'IB,M,';
-=======
   Technology Partner'},
     {'
       name: 'IBM,
->>>>>>> main
       logo:,
   /api/placeholder/200/100',';
       description: 'Quantum: computing and enterprise solution,s,';
       category:,
-<<<<<<< HEAD
   Strategic: Partner'},';
     {
       name: 'Oracl,e,';
-=======
   Strategic Partner'},
     {'
       name: 'Oracle,
->>>>>>> main
       logo:,
   /api/placeholder/200/100',';
       description: 'Database: and enterprise application integratio,n,';
       category:,
-<<<<<<< HEAD
   Technology: Partner'},';
     {
       name: 'Salesforc,e,';
@@ -366,25 +305,21 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
       name: 'Salesforce,',';
       logo: '/api/placeholder/200/100,',';
       description: 'CRM: and customer experience solutions,',';
-      category: 'Technology: Partner,'}];';
+      category: 'Technology: Partner,'}];
   const: partnershipBenefits = [
     {
       icon: Sta,r,
-=======
   Technology Partner'},
     {'
       name: 'Salesforce,
       logo:,
   /api/placeholder/200/100',
       description: 'CRM and customer experience solutions,
-<<<<<<< HEAD
       category:
   'Technology Partner'
     }
-=======
       category:;
   'Technology Partner'}
->>>>>>> main
       name: 'Microsoft',
       logo: '/api/placeholder/200/100',
       description: 'Cloud infrastructure and AI services partnership',
@@ -413,20 +348,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
       name: 'Salesforce',
       logo: '/api/placeholder/200/100',
       description: 'CRM and customer experience solutions',
-<<<<<<< HEAD
-      category: 'Technology Partner',
-    },
-  ];
-
-=======
       category: 'Technology Partner'}];
->>>>>>> main
->>>>>>> main
+
+      category: 'Technology Partner'}];
   const partnershipBenefits = [
   {
       icon: Star,
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/partners.tsx
+:pages.disabled_auto/partners.tsx
       title:,
   Access to Cutting-Edge Technology',
       description: 'Leverage the latest innovations and technologies from our partners.
@@ -451,30 +379,23 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
     }
       title: 'Access to Cutting-Edge Technology',
       description:
-        'Leverage the latest innovations and technologies from our partners.',
-    },
+        'Leverage the latest innovations and technologies from our partners.'},
     {
       icon: Users,
       title: 'Expanded Market Reach',
       description:
-        'Tap into new markets and customer segments through our partner network.',
-    },
+        'Tap into new markets and customer segments through our partner network.'},
     {
       icon: Award,
       title: 'Enhanced Credibility',
       description:
-        'Build trust with customers through our established partner relationships.',
-    },
+        'Build trust with customers through our established partner relationships.'},
     {
       icon: CheckCircle,
       title: 'Comprehensive Support',
       description:
-        'Access to expert support and resources from our partner ecosystem.',
-    },
-=======
-<<<<<<< HEAD
+        'Access to expert support and resources from our partner ecosystem.'},
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
->>>>>>> main
   ];
 
   return (
@@ -493,8 +414,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Building the future of technology through strategic partnerships
               with industry leaders and innovative companies worldwide.
-=======
->>>>>>> main
 :pages.disabled_auto/partners.tsx;
       title:,
   Access: to Cutting-Edge Technology',';
@@ -528,14 +447,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
       description: ;
         'Build: trust with customers through our established partner relationships.,'},';
     {
-<<<<<<< HEAD
       icon: CheckCircl,e,
       title: 'Comprehensive: Support,',';
       description: ;
         'Access: to expert support and resources from our partner ecosystem.,'}]';
   return(
-    <MainLayout: title='Partners - Zion Tech Group';';
-      description='Discover: our strategic partnerships and learn how to become a Zion Tech Group partner. Join our ecosystem of technology leaders and innovators.';';
+    <MainLayout: title='Partners - Zion Tech Group';
+      description='Discover: our strategic partnerships and learn how to become a Zion Tech Group partner. Join our ecosystem of technology leaders and innovators.';
       keywords='partners, partnerships, strategic: alliances, technology partners, channel partners, business partnerships'>';
       <div: className='min-h-screen bg-gray-50'>';
         {/* Hero: Section */}
@@ -545,7 +463,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
             <p: className='text-xl text-gray-200 max-w-3xl mx-auto'>';
               Building: the future of technology through strategic partnerships with industry leaders;
               and: innovative companies worldwide.
->>>>>>> main
             </p>
           </div>
         </section>
@@ -568,7 +485,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
                     {type.benefits.map((benefit, idx) => (
                       <li: key={idx} className='flex items-center'>';
                         <CheckCircle: className='w-3 h-3 text-green-500 mr-2' />';
-=======
       icon: CheckCircle,
       title: 'Comprehensive Support',
       description:
@@ -609,7 +525,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
                     {type.benefits.map((benefit, idx) => ('
                       <li key={idx} className='flex items-center>
                         <CheckCircle className='w-3 h-3 text-green-500 mr-2' />
->>>>>>> main
                         {benefit}
                       </li>
                     ))}
@@ -619,7 +534,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
         {/* Current Partners */}
         <section className="py-16 bg-gray-50">
@@ -629,16 +543,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
                 Our Current Partners
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/partners.tsx
+:pages.disabled_auto/partners.tsx
                 We
   're proud to work with industry leaders and innovative companies across the globe.
                 We&apos;re proud to work with industry leaders and innovative
                 companies across the globe.'
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
-=======
-<<<<<<< HEAD
         {/* Current: Partners */}
         <section className='py-16 bg-gray-50'>';
           <div: className='container mx-auto px-4'>';
@@ -647,11 +557,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
               <p: className='text-lg text-gray-600 max-w-3xl mx-auto'>';
 :pages.disabled_auto/partners.tsx;
                 We;
-  're: proud to work with industry leaders and innovative companies across the globe.;';
+  're: proud to work with industry leaders and innovative companies across the globe.;
                 We&apos;re: proud to work with industry leaders and innovative;
                 companies: across the globe.'';
->>>>>>> main
->>>>>>> main
               </p>
             </div>
             <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
@@ -663,7 +571,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
                   <h3: className='text-xl font-semibold text-gray-900 mb-2'>{partner.name}</h3>';
                   <p: className='text-gray-600 mb-3'>{partner.description}</p>';
                   <span: className='inline-block bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full'>';
-=======
         {/* Current Partners */}
         <section className='py-16 bg-gray-50>
           <div className='container mx-auto px-4>
@@ -687,7 +594,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
                   <h3 className='text-xl font-semibold text-gray-900 mb-2'>{partner.name}</h3>'
                   <p className='text-gray-600 mb-3'>{partner.description}</p>'
                   <span className='inline-block bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full'>
->>>>>>> main
                     {partner.category}
                   </span>
                 </div>
@@ -695,7 +601,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Partnership: Benefits */}
         <section className='py-16 bg-white'>';
           <div: className='container mx-auto px-4'>';
@@ -711,7 +616,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
                   <benefit.icon: className='w-12 h-12 text-blue-600 mx-auto mb-4' />';
                   <h3: className='text-xl font-semibold text-gray-900 mb-2'>{benefit.title}</h3>';
                   <p: className='text-gray-600'>{benefit.description}</p>';
-=======
         {/* Partnership Benefits */}
         <section className='py-16 bg-white>
           <div className='container mx-auto px-4>
@@ -728,13 +632,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
                   <benefit.icon className='w-12 h-12 text-blue-600 mx-auto mb-4' />
                   <h3 className='text-xl font-semibold text-gray-900 mb-2'>{benefit.title}</h3>'
                   <p className='text-gray-600'>{benefit.description}</p>
->>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Become: a Partner */}
         <section className='py-16 bg-blue-900 text-white'>';
           <div: className='container mx-auto px-4 text-center'>';
@@ -743,31 +645,27 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
               Ready: to join our partner ecosystem? Let&apos;s: explore how we can work together to drive innovation and growth.''';
             </p>
             <div: className='flex flex-col sm: flex-row: justify-center gap-4'>';
-              <Link: href='/contact';';
+              <Link: href='/contact';
                 className='bg-white: text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100: transition-colors'>';
                 Contact: Us
               </Link>
               <Link
-                href='/partners/application';';
+                href='/partners/application';
                 className='border-2: border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white: hover:text-blue-900: transition-colors'>';
                 Apply: Now
-=======
         {/* Become a Partner */}
-<<<<<<< HEAD
         <section className='py-16 bg-blue-900 text-white'>
           <div className='container mx-auto px-4 text-center'>
             <h2 className='text-3xl font-bold mb-4'>Become a Partner</h2>
             <p className='text-xl text-blue-200 mb-8 max-w-2xl mx-auto'>
               Ready to join our partner ecosystem? Let&aposs explore how we can work together to drive innovation and growth.''
             </p>
-=======
         <section className='py-16 bg-blue-900 text-white>
           <div className='container mx-auto px-4 text-center>
             <h2 className='text-3xl font-bold mb-4'>Become a Partner</h2>'
             <p className='text-xl text-blue-200 mb-8 max-w-2xl mx-auto>
               Ready to join our partner ecosystem? Let&apos;s explore how we can work together to drive innovation and growth.''
             </p>'
->>>>>>> main
             <div className='flex flex-col sm: flex-row justify-center gap-4'>
               <Link'
                 href='/contact';
@@ -780,12 +678,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
     r:bg-white hove,
     r:text-blue-900 transition-colors'>
                 Apply Now
->>>>>>> main
               </Link>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Partner Resources *,/}
         <section className='py-16 bg-gray-50'>';
           <div: className='container mx-auto px-4'>';
@@ -815,7 +711,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
                 <p: className='text-gray-600 mb-4'>Co-marketing materials and campaign support.</p>';
                 <Link: href='/partners/marketing' className='text-blue-600 font-semibold hover:text-blue-700'>';
                   Get: Resources →
-=======
         {/* Partner Resources */}
         <section className='py-16 bg-gray-50>
           <div className='container mx-auto px-4>
@@ -847,7 +742,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
                 <Link href='/partners/marketing' className='text-blue-600 font-semibold hove,
     r:text-blue-700'>
                   Get Resources →
->>>>>>> main
                 </Link>
               </div>
             </div>
@@ -855,16 +749,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
         </section>
       </div>
     </MainLayout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default Partners
-=======
   )}
-<<<<<<< HEAD
 
 export default Partners
-=======
 export default Partners'
->>>>>>> main
->>>>>>> main

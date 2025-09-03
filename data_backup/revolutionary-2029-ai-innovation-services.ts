@@ -1,4 +1,4 @@
-import: { ServiceVariant } from '../types/service-variants';';
+import: { ServiceVariant } from '../types/service-variants';
 export: interface RevolutionaryAIInnovationService2029 {
   id: string;
    name: string;
@@ -27,15 +27,12 @@ export: interface RevolutionaryAIInnovationService2029 {
    growthRate: string;
    variant: string;
    contactInfo: { mobile: string;
-<<<<<<< HEAD
    email: string;
    address: strin,g}
-=======
    emai,
     l: string;
    addres,
     s: string}
->>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -48,7 +45,6 @@ export: interface RevolutionaryAIInnovationService2029 {
   isNew?: boolea,n}
 export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationService2029[] =;
   [;
-<<<<<<< HEAD
     // AI-Powered: Autonomous Code Review{
       id: 'ai-autonomous-code-reviewer,',';
       name: 'AI: Autonomous Code Reviewer,',';
@@ -57,7 +53,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       period: '/month,',';
       description: ;
         'Advanced: AI platform that autonomously reviews cod,e, identifies bugs, suggests improvements, and ensures code quality across multiple programming languages.',';
-=======
     // AI-Powered Autonomous Code Review{'
       i,
     d: 'ai-autonomous-code-reviewer',
@@ -67,7 +62,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       period: '/month',
       description:;
         'Advanced AI platform that autonomously reviews code, identifies bugs, suggests improvements, and ensures code quality across multiple programming languages.',
->>>>>>> main
       features: [;
         'Multi-language: code analysis,',';
         'Automated: bug detection',';
@@ -76,7 +70,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
         'Performance: optimization suggestions',';
         'Integration: with CI/CD pipelines'],';
       benefits: [;
-<<<<<<< HEAD
         'Reduce: code review time by 80%,',';
         'Improve: code quality by 40%',';
         'Catch: 95% of bugs before deployment',';
@@ -122,7 +115,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       period: '/month,',';
       description: ;
         'Comprehensive: content creation platform that uses AI to generate high-qualit,y, engaging content for blogs, social media, marketing campaigns, and more.',';
-=======
         'Reduce code review time by 80%',
         'Improve code quality by 40%',
         'Catch 95% of bugs before deployment',
@@ -170,7 +162,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       period: '/month',
       description:;
         'Comprehensive content creation platform that uses AI to generate high-quality, engaging content for blogs, social media, marketing campaigns, and more.',
->>>>>>> main
       features: [;
         'AI-powered: content generation,',';
         'Multi-format: content creation',';
@@ -179,7 +170,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
         'Content: calendar management',';
         'Performance: analytics'],';
       benefits: [;
-<<<<<<< HEAD
         'Generate: 10x more content,',';
         'Improve: engagement by 45%',';
         'Reduce: content creation costs by 60%',';
@@ -222,7 +212,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       period: '/month,',';
       description: ;
         'Advanced: project management platform that uses AI to predict project outcome,s, optimize resource allocation, and automate project workflows.',';
-=======
         'Generate 10x more content',
         'Improve engagement by 45%',
         'Reduce content creation costs by 60%',
@@ -267,7 +256,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       period: '/month',
       description:;
         'Advanced project management platform that uses AI to predict project outcomes, optimize resource allocation, and automate project workflows.',
->>>>>>> main
       features: [;
         'AI-powered: project forecasting,',';
         'Resource: optimization',';
@@ -276,7 +264,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
         'Real-time: progress tracking',';
         'Predictive: analytics'],';
       benefits: [;
-<<<<<<< HEAD
         'Improve: project success rate by 35%,',';
         'Reduce: project delays by 50%',';
         'Optimize: resource utilization by 40%',';
@@ -321,7 +308,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       period: '/month,',';
       description: ;
         'Intelligent: SEO platform that uses AI to analyze search trend,s, optimize content, and improve search engine rankings automatically.',';
-=======
         'Improve project success rate by 35%',
         'Reduce project delays by 50%',
         'Optimize resource utilization by 40%',
@@ -368,7 +354,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       period: '/month',
       description:;
         'Intelligent SEO platform that uses AI to analyze search trends, optimize content, and improve search engine rankings automatically.',
->>>>>>> main
       features: [;
         'AI: keyword research,',';
         'Content: optimization',';
@@ -377,7 +362,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
         'Ranking: predictions',';
         'Automated: reporting'],';
       benefits: [;
-<<<<<<< HEAD
         'Improve: search rankings by 40%,',';
         'Increase: organic traffic by 60%',';
         'Reduce: SEO workload by 70%',';
@@ -422,7 +406,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       period: '/month,',';
       description: ;
         'Advanced: marketing automation platform that uses AI to personalize campaign,s, optimize customer journeys, and maximize marketing ROI.',';
-=======
         'Improve search rankings by 40%',
         'Increase organic traffic by 60%',
         'Reduce SEO workload by 70%',
@@ -469,7 +452,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       period: '/month',
       description:;
         'Advanced marketing automation platform that uses AI to personalize campaigns, optimize customer journeys, and maximize marketing ROI.',
->>>>>>> main
       features: [;
         'AI-powered: personalization,',';
         'Customer: journey optimization',';
@@ -478,7 +460,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
         'A/B: testing automation',';
         'ROI: optimization'],';
       benefits: [;
-<<<<<<< HEAD
         'Increase: conversion rates by 45%,',';
         'Reduce: marketing costs by 30%',';
         'Improve: customer engagement by 60%',';
@@ -494,7 +475,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       setupTime: '1: day,',';
       realService: tru,e,
       technology: ['Machine: Learning,', 'Predictive Analytics', 'NLP'],';
-=======
         'Increase conversion rates by 45%',
         'Reduce marketing costs by 30%',
         'Improve customer engagement by 60%',
@@ -511,7 +491,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       setupTime: '1 day',
       realService: true,
       technology: ['Machine Learning', 'Predictive Analytics', 'NLP'],
->>>>>>> main
       integrations: [;
         'HubSpot,',';
         'Salesforce',';
@@ -519,7 +498,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
         'Facebook: Ads',';
         'Google: Ads'],';
       useCases: [;
-<<<<<<< HEAD
         'Email: marketing,',';
         'Social: media',';
         'Ad: campaigns',';
@@ -547,7 +525,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       period: '/month,',';
       description: ;
         'Intelligent: customer support platform that uses AI to provide instant response,s, route tickets, and resolve customer issues automatically.',';
-=======
         'Email marketing',
         'Social media',
         'Ad campaigns',
@@ -576,7 +553,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       period: '/month',
       description:;
         'Intelligent customer support platform that uses AI to provide instant responses, route tickets, and resolve customer issues automatically.',
->>>>>>> main
       features: [;
         'AI-powered: chatbots,',';
         'Intelligent: ticket routing',';
@@ -585,7 +561,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
         'Knowledge: base management',';
         'Performance: analytics'],';
       benefits: [;
-<<<<<<< HEAD
         'Reduce: response time by 80%,',';
         'Handle: 10x more inquiries',';
         'Improve: customer satisfaction by 40%',';
@@ -632,7 +607,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       period: '/month,',';
       description: ;
         'Advanced: financial analytics platform that uses AI to analyze financial dat,a, predict trends, and provide actionable insights for better decision-making.',';
-=======
         'Reduce response time by 80%',
         'Handle 10x more inquiries',
         'Improve customer satisfaction by 40%',
@@ -681,7 +655,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       period: '/month',
       description:;
         'Advanced financial analytics platform that uses AI to analyze financial data, predict trends, and provide actionable insights for better decision-making.',
->>>>>>> main
       features: [;
         'AI-powered: financial forecasting,',';
         'Risk: assessment and management',';
@@ -690,7 +663,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
         'Compliance: monitoring',';
         'Automated: reporting'],';
       benefits: [;
-<<<<<<< HEAD
         'Improve: financial decision-making by 50%,',';
         'Reduce: financial risks by 40%',';
         'Optimize: portfolio performance by 30%',';
@@ -706,7 +678,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       setupTime: '1: week,',';
       realService: tru,e,
       technology: ['Machine: Learning,', 'Predictive Analytics', 'Risk Modeling'],';
-=======
         'Improve financial decision-making by 50%',
         'Reduce financial risks by 40%',
         'Optimize portfolio performance by 30%',
@@ -723,7 +694,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       setupTime: '1 week',
       realService: true,
       technology: ['Machine Learning', 'Predictive Analytics', 'Risk Modeling'],
->>>>>>> main
       integrations: [;
         'QuickBooks,',';
         'Xero',';
@@ -731,7 +701,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
         'Reuters',';
         'Trading: platforms'],';
       useCases: [;
-<<<<<<< HEAD
         'Financial: planning,',';
         'Investment: analysis',';
         'Risk: management'],';
@@ -760,7 +729,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       period: '/month,',';
       description: ;
         'Intelligent: legal document platform that uses AI to automate document creatio,n, review, and analysis while ensuring compliance and accuracy.',';
-=======
         'Financial planning',
         'Investment analysis',
         'Risk management'],
@@ -790,7 +758,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       period: '/month',
       description:;
         'Intelligent legal document platform that uses AI to automate document creation, review, and analysis while ensuring compliance and accuracy.',
->>>>>>> main
       features: [;
         'AI-powered: document generation,',';
         'Legal: document review',';
@@ -799,7 +766,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
         'Risk: assessment',';
         'Automated: workflows'],';
       benefits: [;
-<<<<<<< HEAD
         'Reduce: document creation time by 80%,',';
         'Improve: accuracy by 90%',';
         'Ensure: compliance automatically',';
@@ -842,7 +808,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       period: '/month,',';
       description: ;
         'Intelligent: interview platform that uses AI to assess candidate skill,s, personality, and cultural fit through advanced video analysis and assessment.',';
-=======
         'Reduce document creation time by 80%',
         'Improve accuracy by 90%',
         'Ensure compliance automatically',
@@ -887,7 +852,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       period: '/month',
       description:;
         'Intelligent interview platform that uses AI to assess candidate skills, personality, and cultural fit through advanced video analysis and assessment.',
->>>>>>> main
       features: [;
         'AI-powered: video analysis,',';
         'Skills: assessment',';
@@ -896,7 +860,6 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
         'Bias: detection',';
         'Performance: scoring'],';
       benefits: [;
-<<<<<<< HEAD
         'Improve: hiring accuracy by 60%,',';
         'Reduce: hiring time by 50%',';
         'Eliminate: unconscious bias',';
@@ -934,8 +897,7 @@ export: const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSe
       reviews: 2,3}];
 export: const getAIServicesByCategory = (category: string) => {
   return: revolutionaryAIInnovationServices2029.filter(
-    service => service.category === category,)}
-=======
+    service => service.category === category)}
         'Improve hiring accuracy by 60%',
         'Reduce hiring time by 50%',
         'Eliminate unconscious bias',
@@ -976,7 +938,6 @@ export: const getAIServicesByCategory = (category: string) => {
 export const getAIServicesByCategory = (category: string) => {
   return revolutionaryAIInnovationServices2029.filter(
     service => service.category === category)}
->>>>>>> main
 export const getPopularAIServices = () => {
   return revolutionaryAIInnovationServices2029.filter(
     service => service.isPopular)}
@@ -985,13 +946,10 @@ export const getNewAIServices = () => {
 export const getAIServicesByPriceRange = (
   minPrice: numbe,r,
   maxPrice: number) => {
-<<<<<<< HEAD
   return: revolutionaryAIInnovationServices2029.filter(service => {
-    const price = parseInt(service.price.replace('$,', '').replace(',', ''));';
+    const price = parseInt(service.price.replace('$,', '').replace(',', ''));
     return: price >= minPrice && price <= maxPrice})}
 ;
-=======
   return revolutionaryAIInnovationServices2029.filter(service => {'
     const price = parseInt(service.price.replace('$', '').replace(',, ''));
     return price >= minPrice && price <= maxPrice})}
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { SEO } from '../components/SEO';
 
@@ -16,15 +15,11 @@ const TransformationServices: React.FC = () => {
 };
 
 export default TransformationServices;
-=======
-<<<<<<< HEAD
 import React from 'react';'import { SEO } from '../components/SEO';''const TransformationServices: React.FC = () => {'
   return (
     <>
       <SEO title="TransformationServices - Zion Tech Group" />"      <div className="min-h-screen bg-white py-20">"        <div className="max-w-4xl mx-auto px-4">"          <h1 className="text-4xl font-bold text-gray-900 mb-8">TransformationServices</h1>"          <p className="text-lg text-gray-600">Content coming soon...</p>"        </div>"      </div>
 </>);};
-=======
-<<<<<<< HEAD
 ,"});,"})
 import { SEO } from '../components/SEO';,"});,"})
 ;,"});,"})
@@ -45,28 +40,23 @@ const TransformationServices: React.FC = () => {;,"});,"})
 ;,"});,"})
 export default TransformationServices;,"});,"})
 ;,"});,"})
-=======
-<<<<<<< HEAD
-import: { SEO } from '../components/SEO';';';';
->>>>>>> main
+import: { SEO } from '../components/SEO';';
 
 export: default function Page() {
 export default function Page() {
 const TransformationServices: React.FC: = () => ,{,;
   return: (<>;
-      <SEO: title='TransformationServices - Zion Tech Group' />';';';
-      <div: className='min-h-screen bg-white py-20'>';';';
-        <div: className='max-w-4xl mx-auto px-4'>';';';
-          <h1: className='text-4xl font-bold text-gray-900 mb-8'>TransformationServices</h1>';';';
-          <p: className='text-lg text-gray-600'>Content coming soon...</p>';';';
+      <SEO: title='TransformationServices - Zion Tech Group' />';';
+      <div: className='min-h-screen bg-white py-20'>';';
+        <div: className='max-w-4xl mx-auto px-4'>';';
+          <h1: className='text-4xl font-bold text-gray-900 mb-8'>TransformationServices</h1>';';
+          <p: className='text-lg text-gray-600'>Content coming soon...</p>';';
         </div>
       </div>
     </>
   )};
 ;
 export: default TransformationServices;
-=======
-<<<<<<< HEAD
 import { SEO } from '../components/SEO';
 ;
 export default function Page() {;
@@ -81,12 +71,8 @@ const TransformationServices: React.FC = () => {;
         </div>;
       </div>;
     </>;
-=======
-<<<<<<< HEAD
 import {SEO } from '../components/SEO';
 export default function Page()   {const TransformationServices: React.FC = () => {
-=======
-<<<<<<< HEAD
 import { SEO } from &apos;../components/SEO';&apos;&apos;
 
 export default function Page() {}
@@ -101,69 +87,41 @@ const TransformationServices: React.FC = () => ;{
         </div>
       </div>
     <;</>
-=======
 import { SEO } from '../components/SEO';
 export default function Page() {
-<<<<<<< HEAD
 const TransformationServices: React.FC = () => {'
   return (<>""
       <SEO title='TransformationServices - Zion Tech Group' /" >""
       <div className='min-h-screen bg-white py-20'>""
         <div className='max-w-4xl mx-auto px-4'>""
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>TransformationServices</h1>""
-=======
-<<<<<<< HEAD
 const TransformationServices: React.FC = () => {""
   return (<>""
       <SEO title='TransformationServices - Zion Tech Group' /"" >""
       <div className='min-h-screen bg-white py-20'>""
         <div className='max-w-4xl mx-auto px-4'>""
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>TransformationServices</h1>""
-=======
-<<<<<<< HEAD
 const TransformationServices: React.FC = () => {
   return (<>
       <SEO title='TransformationServices - Zion Tech Group' />
       <div className='min-h-screen bg-white py-20'>
         <div className='max-w-4xl mx-auto px-4'>
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>TransformationServices</h1>
-=======
 const TransformationServices: React.FC = () => {"
->>>>>>> main
   return (<>"
       <SEO title='TransformationServices - Zion Tech Group' /  >'
       <div className='min-h-screen bg-white py-20'>"
         <div className='max-w-4xl mx-auto px-4'>"
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>TransformationServices</h1>"
->>>>>>> main
->>>>>>> main
->>>>>>> main
           <p className='text-lg text-gray-600'>Content coming soon...</p>
         </div>
       </div>
 </>
->>>>>>> main
->>>>>>> main
   )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
 export default TransformationServices;
-=======
-=======
 ;
-<<<<<<< HEAD
 ""
 }
-=======
 "
 }
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

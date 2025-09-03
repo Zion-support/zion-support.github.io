@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';''';,"});,"})
 import { motion } from 'framer-motion';''';,"});,"})
 import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react';,"});,"})
@@ -616,44 +615,36 @@ export { AdvancedServiceInnovationHub };,"});,"})
 export { AdvancedServiceInnovationHub };,"});,"})
 ;,"});,"})
 export { AdvancedServiceInnovationHub };,"});,"})
-=======
-<<<<<<< HEAD
 import React, { useState, useMemo } from 'react'''
 import { motion } from 'framer-motion'''
 import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react';""
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'';'''
 import { Button } from './ui/button'';'''
 import { Badge } from './ui/badge'';'''
-=======
 import React, { useState, useMemo } from 'react''
 import { motion }  from 'framer-motion
 import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react
 import { Card, CardContent, CardHeader, CardTitle }  from './ui/card;''
 import { Button }  from './ui/button;''
 import { Badge }  from './ui/badge;''
->>>>>>> main
 import { Input } from './ui/input';
 const AdvancedServiceInnovationHub = () => {}""
 ''
 ''
-<<<<<<< HEAD
 ''';"'"
     const [selectedCategory, setSelectedCategory] = useState('all')';'
     const [selectedImpact, setSelectedImpact] = useState('all')';'
     const [selectedStatus, setSelectedStatus] = useState('all')';'
     const [searchTerm, setSearchTerm] = useState('')';'
-=======
     const [selectedCategory, setSelectedCategory] = useState('all')
     const [selectedImpact, setSelectedImpact] = useState('all')
     const [selectedStatus, setSelectedStatus] = useState('all')
     const [searchTerm, setSearchTerm] = useState('')
->>>>>>> main
     const [viewMode, setViewMode] = useState('trends')
     // Mock data - in real app this would come from API
     const innovationTrends = []
         {}""
 ''
-<<<<<<< HEAD
 ''
 ''''
             id: 'quantum-supremacy', ''''
@@ -666,7 +657,7 @@ const AdvancedServiceInnovationHub = () => {}""
             investment: '$50B+',''''
             keyPlayers['IBM', Google',Microsoft', Startups'], ';''
             technologies['Quantum Computing', Quantum Algorithms',Quantum Software'], ';'
-            status: 'Emerging', }, {}""
+            status: 'Emerging'}, {}""
 ''
 ''
 ''''
@@ -680,7 +671,7 @@ const AdvancedServiceInnovationHub = () => {}""
             investment: '$100B+',''''
             keyPlayers['OpenAI', Anthropic',Research Labs', Universities'], ';''
             technologies['AI Consciousness', General AI',Neural Networks'], ';'
-            status: 'Emerging', }, {}""
+            status: 'Emerging'}, {}""
 ''
 ''
 ''''
@@ -694,7 +685,7 @@ const AdvancedServiceInnovationHub = () => {}""
             investment: '$200B+',''''
             keyPlayers['SpaceX', Blue Origin',Asteroid Mining Companies'], ';'
             technologies['Space Robotics', Resource Processing',Space Logistics'], ';'
-            status: 'Emerging', }, {}""
+            status: 'Emerging'}, {}""
 ''
 ''
 ''''
@@ -708,7 +699,7 @@ const AdvancedServiceInnovationHub = () => {}""
             investment: '$500B+',''''
             keyPlayers['ITER', Private Fusion Companies',Government Labs'], ';'
             technologies['Fusion Physics', Plasma Confinement',Energy Conversion'], ';'
-            status: 'Growing', }, {}""
+            status: 'Growing'}, {}""
 ''
 ''
 ''''
@@ -722,7 +713,7 @@ const AdvancedServiceInnovationHub = () => {}""
             investment: '$150B+',''''
             keyPlayers['Ginkgo Bioworks', Twist Bioscience',Research Institutions'], ';'
             technologies['DNA Programming', Genetic Engineering',Bio-Manufacturing'], ';'
-            status: 'Growing', }, {}""
+            status: 'Growing'}, {}""
 ''
 ''
 ''''
@@ -736,8 +727,7 @@ const AdvancedServiceInnovationHub = () => {}""
             investment: '$80B+',''''
             keyPlayers['Neuralink', Kernel',Medical Device Companies'], ';'
             technologies['Neural Interfaces', Signal Processing',AI/ML'], ';'
-            status: 'Emerging', }
-=======
+            status: 'Emerging'}
 '''
             id: 'quantum-supremacy,''
             title: 'Quantum Supremacy & Commercialization,''
@@ -749,8 +739,7 @@ const AdvancedServiceInnovationHub = () => {}""
             investment: '$50B+,''
             keyPlayers['IBM',Google',Microsoft',Startups'],
             technologies['Quantum Computing',Quantum Algorithms',Quantum Software'],
-            status: 'Emerging',
-}, {}"
+            status: 'Emerging'}, {}"
 '
 ''
 '''
@@ -764,8 +753,7 @@ const AdvancedServiceInnovationHub = () => {}""
             investment: '$100B+,''
             keyPlayers['OpenAI',Anthropic',Research Labs',Universities'],
             technologies['AI Consciousness',General AI',Neural Networks'],
-            status: 'Emerging',
-}, {}"
+            status: 'Emerging'}, {}"
 '
 ''
 '''
@@ -779,8 +767,7 @@ const AdvancedServiceInnovationHub = () => {}""
             investment: '$200B+,''
             keyPlayers['SpaceX',Blue Origin',Asteroid Mining Companies'],
             technologies['Space Robotics',Resource Processing',Space Logistics'],
-            status: 'Emerging',
-}, {}"
+            status: 'Emerging'}, {}"
 '
 ''
 '''
@@ -794,8 +781,7 @@ const AdvancedServiceInnovationHub = () => {}""
             investment: '$500B+,''
             keyPlayers['ITER',Private Fusion Companies',Government Labs'],
             technologies['Fusion Physics',Plasma Confinement',Energy Conversion'],
-            status: 'Growing',
-}, {}"
+            status: 'Growing'}, {}"
 '
 ''
 '''
@@ -809,8 +795,7 @@ const AdvancedServiceInnovationHub = () => {}""
             investment: '$150B+,''
             keyPlayers['Ginkgo Bioworks',Twist Bioscience',Research Institutions'],
             technologies['DNA Programming',Genetic Engineering',Bio-Manufacturing'],
-            status: 'Growing',
-}, {}"
+            status: 'Growing'}, {}"
 '
 ''
 '''
@@ -824,9 +809,7 @@ const AdvancedServiceInnovationHub = () => {}""
             investment: '$80B+,''
             keyPlayers['Neuralink',Kernel',Medical Device Companies'],
             technologies['Neural Interfaces',Signal Processing',AI/ML'],
-            status: 'Emerging',
-}
->>>>>>> main
+            status: 'Emerging'}
     ]
     const filteredTrends = useMemo(() => {}
         return innovationTrends.filter(trend => {}
@@ -858,7 +841,6 @@ const AdvancedServiceInnovationHub = () => {}""
         switch(category) {}""
 ''''
 ''''''
-<<<<<<< HEAD
             case 'quantum': return <Atom className='w-5 h-5'/" >'';''''"
             case 'ai': return <Brain className='w-5 h-5'/" >'';''''"
             case 'space-tech': return <Satellite className='w-5 h-5'/" >'';''''"
@@ -874,7 +856,6 @@ const AdvancedServiceInnovationHub = () => {}""
         { id: 'green-tech', name: 'Green Technology', icon: <Leaf className='w-4 h-4'/" > }, ''''''"
         { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className='w-4 h-4'/" > }''','"
 ]';'''
-=======
             case 'quantum': return <Atom className='w-5 h-5'/" >'''
             case 'ai': return <Brain className='w-5 h-5'/" >'''
             case 'space-tech': return <Satellite className='w-5 h-5'/" >'''
@@ -888,17 +869,13 @@ const AdvancedServiceInnovationHub = () => {}""
         { id: 'ai', name: 'Artificial Intelligence', icon: <Brain className='w-4 h-4'/" > },'''''
         { id: 'space-tech', name: 'Space Technology', icon: <Satellite className='w-4 h-4'/" > },'''''
         { id: 'green-tech', name: 'Green Technology', icon: <Leaf className='w-4 h-4'/" > },'''''
-        { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className='w-4 h-4'/" > }''',
-]'
->>>>>>> main
+        { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className='w-4 h-4'/" > }''']'
     return (<div className='max-w-7xl mx-auto p-6'>
       {/* Header */}
       <motion.div initial = {}
-  { opacity: 0, y: 20,
-}} animate = {}""
+  { opacity: 0, y: 20}} animate = {}""
   { opacity: 1, y: 0 ''''
-'''',
-}} className='mb-8'>''''
+''''}} className='mb-8'>''''
         <div className='flex flex-col lg: flex-row lg:items-center lg:justify-between gap-4'>''''
           <div>''''
             <h1 className='text-3xl font-bold text-zion-blue-dark mb-2'>""
@@ -924,11 +901,9 @@ const AdvancedServiceInnovationHub = () => {}""
       {viewMode === 'trends' && (<>
           {/* Filters */}
           <motion.div initial = {}
-  { opacity: 0, y: 20,
-}} animate = {}""
+  { opacity: 0, y: 20}} animate = {}""
   { opacity: 1, y: 0 ''''
-'''',
-}} transition={{ delay: 0.1 }} className='bg-white rounded-lg shadow-lg p-6 mb-8'>''''
+''''}} transition={{ delay: 0.1 }} className='bg-white rounded-lg shadow-lg p-6 mb-8'>''''
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>''''
               <div>''''
                 <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Category</label>''''
@@ -968,23 +943,16 @@ const AdvancedServiceInnovationHub = () => {}""
           </motion.div>
           {/* Trends Grid */}
           <motion.div initial = {}
-  { opacity: 0, y: 20,
-}} animate = {}""
+  { opacity: 0, y: 20}} animate = {}""
   { opacity: 1, y: 0 ''''
-'''',
-}} transition={{ delay: 0.2 }} className='grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8'>
+''''}} transition={{ delay: 0.2 }} className='grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8'>
             {filteredTrends.map((trend, index) => (<motion .div key={trend.id} initial = {}
-  { opacity: 0, x: index % 2 === 0 ? -20 : 20,
-<<<<<<< HEAD
-}} animate = {}""
-  { opacity: 1, x: 0';', }} transition={{ delay: 0.1 * index }}" >''''"
+  { opacity: 0, x: index % 2 === 0 ? -20 : 20}} animate = {}""
+  { opacity: 1, x: 0';'}} transition={{ delay: 0.1 * index }}" >''''"
                 <Card className='h-full hover:shadow-lg transition-shadow'>''''
-=======
 }} animate = {}"
-  { opacity: 1, x: 0,
-}} transition={{ delay: 0.1 * index }}" >''''
+  { opacity: 1, x: 0}} transition={{ delay: 0.1 * index }}" >''''
                 <Card className='h-full hover:shadow-lg transition-shadow'>'''
->>>>>>> main
                   <CardHeader>''''
                     <div className='flex items-start justify-between mb-4'>''''
                       <div className='flex items-center gap-3'>''''
@@ -1060,23 +1028,16 @@ const AdvancedServiceInnovationHub = () => {}""
 ""
       {/* Future Roadmap View */}''
       {viewMode === 'roadmap' && (<motion.div initial = {}
-  { opacity: 0, y: 20,
-}} animate = {}""
+  { opacity: 0, y: 20}} animate = {}""
   { opacity: 1, y: 0 ''''
-'''',
-}} transition={{ delay: 0.1 }} className='space-y-6'>
+''''}} transition={{ delay: 0.1 }} className='space-y-6'>
           {futureRoadmap.map((roadmap, index) => (<motion .div key={roadmap.id} initial = {}
-  { opacity: 0, x: -20,
-<<<<<<< HEAD
-}} animate = {}""
-  { opacity: 1, x: 0';', }} transition={{ delay: 0.1 * index }}" >''''"
+  { opacity: 0, x: -20}} animate = {}""
+  { opacity: 1, x: 0';'}} transition={{ delay: 0.1 * index }}" >''''"
               <Card className='hover:shadow-lg transition-shadow'>''''
-=======
 }} animate = {}"
-  { opacity: 1, x: 0,
-}} transition={{ delay: 0.1 * index }}" >''''
+  { opacity: 1, x: 0}} transition={{ delay: 0.1 * index }}" >''''
               <Card className='hover:shadow-lg transition-shadow'>'''
->>>>>>> main
                 <CardHeader>''''
                   <div className='flex items-start justify-between'>''''
                     <div className='flex-1'>''''
@@ -1155,11 +1116,9 @@ const AdvancedServiceInnovationHub = () => {}""
 ""
       {/* Strategic Insights View */}''
       {viewMode === 'insights' && (<motion.div initial = {}
-  { opacity: 0, y: 20,
-}} animate = {}""
+  { opacity: 0, y: 20}} animate = {}""
   { opacity: 1, y: 0 ''''
-'''',
-}} transition={{ delay: 0.1 }} className='space-y-6'>''''
+''''}} transition={{ delay: 0.1 }} className='space-y-6'>''''
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>""
             <Card>''''
               <CardHeader>''''
@@ -1299,11 +1258,9 @@ const AdvancedServiceInnovationHub = () => {}""
 
       {/* CTA Section */}
       <motion.div initial = {}
-  { opacity: 0, y: 20,
-}} animate = {}""
+  { opacity: 0, y: 20}} animate = {}""
   { opacity: 1, y: 0 ''''
-'''',
-}} transition={{ delay: 0.4 }} className='mt-12 text-center'>''''
+''''}} transition={{ delay: 0.4 }} className='mt-12 text-center'>''''
         <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>''''
           <h3 className='text-3xl font-bold mb-4'>Ready to Shape the Future?</h3>''''
           <p className='text-xl mb-6 max-w-2xl mx-auto'>
@@ -1342,4 +1299,3 @@ export { AdvancedServiceInnovationHub }
 export { AdvancedServiceInnovationHub }
 
 export { AdvancedServiceInnovationHub }"`"
->>>>>>> main

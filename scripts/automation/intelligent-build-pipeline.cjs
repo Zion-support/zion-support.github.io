@@ -1,17 +1,14 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
 /**
  * Intelligent Build Pipeline Management - PM2 Automation;
  * Optimizes build processes, detects bottlenecks, and automatically adjusts build strategies;
  */
-=======
 #!/'usr/bin/env' node;
 
 /**;
  * Intelligent Build Pipeline Management - PM2 Automation;
  * Optimizes build processes, detects bottlenecks, and automatically adjusts build strategies;
  */;
->>>>>>> main
 
 const fs = require('fs');
 const path = require('path');
@@ -21,7 +18,6 @@ const crypto = require('crypto');
 class IntelligentBuildPipeline {;
   constructor() {;
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'intelligent-build-pipeline.log';
@@ -33,7 +29,6 @@ class IntelligentBuildPipeline {;
     this.optimizationLog = path.join(;
       this.projectRoot,logs',;
       'build-optimizations.json';
-=======
     this.logFile = path.join(
       this.projectRoot, 'logs',
       'intelligent-build-pipeline.log'
@@ -43,14 +38,10 @@ class IntelligentBuildPipeline {;
       'build-pipeline.json'
     );
     this.optimizationLog = path.join(
-<<<<<<< HEAD
       this.projectRoot,logs',
       `build-optimizations.json`
-=======
       this.projectRoot, 'logs',
       'build-optimizations.json'
->>>>>>> main
->>>>>>> main
     );
     this.ensureLogsDirectory();
     this.pipelineConfig = this.loadPipelineConfig();
@@ -64,32 +55,26 @@ class IntelligentBuildPipeline {;
       fs.mkdirSync(logsDir, { recursive: true });
     }
   }
-<<<<<<< HEAD
 
   log(message, level = `INFO`) {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
-=======
 ;
   log(message, level = 'INFO') {;
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 ;
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}');
->>>>>>> main
   }
-<<<<<<< HEAD
 ;
   loadPipelineConfig() {;
     try {;
       const configPath = path.join(;
         this.projectRoot,build-pipeline.config.json';
-=======
 
   loadPipelineConfig() {
-<<<<<<< HEAD
     try {
       const configPath = path.join(
         this.projectRoot,build-pipeline.config.json`
@@ -109,40 +94,31 @@ class IntelligentBuildPipeline {;
           caching: true,
           minification: false,
           sourceMaps: true,
-          watchMode: true,
-        },
+          watchMode: true},
         staging: {
           parallelization: true,
           caching: true,
           minification: true,
           sourceMaps: true,
-          watchMode: false,
-        },
+          watchMode: false},
         production: {
           parallelization: true,
           caching: true,
           minification: true,
           sourceMaps: false,
           watchMode: false,
-          optimization: `maximum`,
-        },
-      },
+          optimization: `maximum`}},
       thresholds: {
-=======
     try {`);
       const configPath = path.join(`);
         this.projectRoot,build-pipeline.config.json`);
->>>>>>> main
       );
       if (fs.existsSync(configPath)) {;
         return JSON.parse(fs.readFileSync(configPath, 'utf8'));
-<<<<<<< HEAD
       }
     } catch (error) {;
-=======
       }`);
     } catch (error) {`);
->>>>>>> main
       this.log(`Failed to load pipeline config: ${error.message}`, 'WARN');
     }
 ;
@@ -173,27 +149,22 @@ class IntelligentBuildPipeline {;
         },;
       },;
       thresholds: {;
->>>>>>> main
         maxBuildTime: 120000, // 2 minutes;
         maxBundleSize: 5 * 1024 * 1024, // 5MB;
         maxMemoryUsage: 2 * 1024 * 1024 * 1024, // 2GB;
         acceptableBuildTime: 60000, // 1 minute;
-<<<<<<< HEAD
       },
       optimization: {
         autoParallelization: true,
         cacheOptimization: true,
         dependencyOptimization: true,
-        bundleSplitting: true,
-      },
-    };
+        bundleSplitting: true}};
   }
 
   savePipelineConfig() {
     try {
       const configPath = path.join(
         this.projectRoot,build-pipeline.config.json`
-=======
       },;
       optimization: {;
         autoParallelization: true,;
@@ -208,7 +179,6 @@ class IntelligentBuildPipeline {;
     try {;
       const configPath = path.join(;
         this.projectRoot,build-pipeline.config.json';
->>>>>>> main
       );
       fs.writeFileSync(;
         configPath,;
@@ -217,19 +187,16 @@ class IntelligentBuildPipeline {;
     } catch (error) {  this.log(`Failed to save pipeline config: ${error.message  }`, `ERROR`);
     }
   }
-<<<<<<< HEAD
 
   loadBuildHistory() {
     try {
       if (fs.existsSync(this.pipelineLog)) {
         return JSON.parse(fs.readFileSync(this.pipelineLog, `utf8`));
-=======
 ;
   loadBuildHistory() {;
     try {;
       if (fs.existsSync(this.pipelineLog)) {;
         return JSON.parse(fs.readFileSync(this.pipelineLog, 'utf8'));
->>>>>>> main
       }
     } catch (error) {  this.log(`Failed to load build history: ${error.message  }`, `WARN`);
     }
@@ -250,7 +217,6 @@ class IntelligentBuildPipeline {;
     } catch (error) {  this.log(`Failed to save build history: ${error.message  }`, `ERROR`);
     }
   }
-<<<<<<< HEAD
 
   initializeOptimizationStrategies() {
     return {
@@ -259,37 +225,31 @@ class IntelligentBuildPipeline {;
         description:Execute build tasks in parallel to reduce total build time',
         impact: 'HIGH',
         risk: 'LOW',
-        implementation: this.implementParallelization.bind(this),
-      },
+        implementation: this.implementParallelization.bind(this)},
       caching: {
         name: 'Build Cache Optimization',
         description: 'Optimize build cache usage for faster incremental builds',
         impact: 'MEDIUM',
         risk: 'LOW',
-        implementation: this.optimizeBuildCache.bind(this),
-      },
+        implementation: this.optimizeBuildCache.bind(this)},
       dependencyOptimization: {
         name: 'Dependency Tree Optimization',
         description: 'Optimize dependency resolution and tree-shaking',
         impact: 'MEDIUM',
         risk: 'LOW',
-        implementation: this.optimizeDependencies.bind(this),
-      },
+        implementation: this.optimizeDependencies.bind(this)},
       bundleOptimization: {
         name: 'Bundle Size Optimization',
         description: 'Optimize bundle splitting and code splitting',
         impact: 'HIGH',
         risk: 'MEDIUM',
-        implementation: this.optimizeBundleSize.bind(this),
-      },
+        implementation: this.optimizeBundleSize.bind(this)},
       memoryOptimization: {
         name: 'Memory Usage Optimization',
         description: 'Optimize memory usage during build process',
         impact: 'MEDIUM',
         risk: 'LOW',
-        implementation: this.optimizeMemoryUsage.bind(this),
-      },
-    };
+        implementation: this.optimizeMemoryUsage.bind(this)}};
   }
 
   async runIntelligentBuildPipeline() {
@@ -337,7 +297,6 @@ class IntelligentBuildPipeline {;
       );
 
       this.log(`Intelligent Build Pipeline completed successfully`);
-=======
 ;
   initializeOptimizationStrategies() {;
     return {;
@@ -424,13 +383,11 @@ class IntelligentBuildPipeline {;
       );
 ;
       this.log('Intelligent Build Pipeline completed successfully');
->>>>>>> main
       return report;
     } catch (error) {  this.log(`Intelligent Build Pipeline failed: ${error.message  }`, `ERROR`);
       throw error;
     }
   }
-<<<<<<< HEAD
 
   async analyzeCurrentBuildPerformance() {
     this.log(`Analyzing current build performance...`);
@@ -440,8 +397,7 @@ class IntelligentBuildPipeline {;
       buildMetrics: {},
       systemMetrics: {},
       dependencyMetrics: {},
-      optimizationMetrics: {},
-    };
+      optimizationMetrics: {}};
 
     try {
       // Measure build performance;
@@ -462,7 +418,6 @@ class IntelligentBuildPipeline {;
     } catch (error) {  
       this.log(Failed to analyze build performance: ${error.message  }`,
         `ERROR`
-=======
 ;
   async analyzeCurrentBuildPerformance() {;
     this.log('Analyzing current build performance...');
@@ -494,7 +449,6 @@ class IntelligentBuildPipeline {;
     } catch (error) {;
       this.log(Failed to analyze build performance: ${error.message}',;
         'ERROR';
->>>>>>> main
       );
       throw error;
     }
@@ -502,7 +456,6 @@ class IntelligentBuildPipeline {;
 ;
   async measureBuildPerformance() {;
     const buildMetrics = {};
-<<<<<<< HEAD
 
     try {
       // Measure clean build time;
@@ -511,7 +464,6 @@ class IntelligentBuildPipeline {;
 
       execSync(`npm run build', { encoding: 'utf8', stdio: 'pipe' });
 
-=======
 ;
     try {;
       // Measure clean build time;
@@ -520,7 +472,6 @@ class IntelligentBuildPipeline {;
 ;
       execSync('npm run build', { encoding: 'utf8', stdio: 'pipe' });
 ;
->>>>>>> main
       const cleanBuildEnd = Date.now();
       const cleanBuildMemoryEnd = process.memoryUsage();
 ;
@@ -533,11 +484,8 @@ class IntelligentBuildPipeline {;
           heapTotal: cleanBuildMemoryEnd.heapTotal - cleanBuildMemory.heapTotal,;
         },;
       };
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
       // Measure incremental build time;
       const incrementalBuildStart = Date.now();
       execSync('npm run build', { encoding: 'utf8', stdio: 'pipe' });
@@ -547,17 +495,13 @@ class IntelligentBuildPipeline {;
         incrementalBuildEnd - incrementalBuildStart;
       buildMetrics.buildTimeImprovement =;
         buildMetrics.cleanBuildTime - buildMetrics.incrementalBuildTime;
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
       // Measure bundle size;
       const distPath = path.join(this.projectRoot, 'dist');
       if (fs.existsSync(distPath)) {;
         buildMetrics.bundleSize = this.calculateBundleSize(distPath);
       }
-<<<<<<< HEAD
 
       // Measure build success;
       buildMetrics.buildSuccess = true;
@@ -566,7 +510,6 @@ class IntelligentBuildPipeline {;
       buildMetrics.buildError = error.message;
       }
 
-=======
 ;
       // Measure build success;
       buildMetrics.buildSuccess = true;
@@ -575,7 +518,6 @@ class IntelligentBuildPipeline {;
       buildMetrics.buildError = error.message;
     }
 ;
->>>>>>> main
     return buildMetrics;
   }
 ;
@@ -583,7 +525,6 @@ class IntelligentBuildPipeline {;
     let totalSize = 0;
     let fileCount = 0;
     const fileSizes = {};
-<<<<<<< HEAD
 
     const calculateSize = (dir, prefix = ``) => {
       const files = fs.readdirSync(dir);
@@ -593,7 +534,6 @@ class IntelligentBuildPipeline {;
 
         if (stats.isDirectory()) {calculateSize(filePath`, `${prefix}${file}/`);
         } else {const relativePath = `${prefix}${file}`;
-=======
 ;
     const calculateSize = (dir, prefix = ') => {;
       const files = fs.readdirSync(dir);
@@ -603,7 +543,6 @@ class IntelligentBuildPipeline {;
 ;
         if (stats.isDirectory()) {calculateSize(filePath', `${prefix}${file}/`);
         } else {const relativePath = `${prefix}${file}';
->>>>>>> main
           fileSizes[relativePath] = stats.size;
           totalSize += stats.size;
           fileCount++;
@@ -612,7 +551,6 @@ class IntelligentBuildPipeline {;
     };
 ;
     calculateSize(distPath);
-<<<<<<< HEAD
 
     return {
       totalSize,
@@ -623,7 +561,6 @@ class IntelligentBuildPipeline {;
         .sort(([``, `a'], ['', 'b']) => b - a)
         .slice(0, 5)
         .map(([`file`, `size`]) => ({ file, size })),
-=======
 ;
     return {;
       totalSize,;
@@ -634,19 +571,15 @@ class IntelligentBuildPipeline {;
         .sort(([', 'a'], [', 'b']) => b - a);
         .slice(0, 5);
         .map((['file', 'size']) => ({ file, size })),;
->>>>>>> main
     };
   }
 ;
   async measureSystemPerformance() {;
     const systemMetrics = {};
-<<<<<<< HEAD
 
     try {
-=======
 ;
     try {;
->>>>>>> main
       // CPU usage;
       const cpuStart = process.cpuUsage();
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -656,7 +589,6 @@ class IntelligentBuildPipeline {;
         user: cpuEnd.user - cpuStart.user,;
         system: cpuEnd.system - cpuStart.system,;
       };
-<<<<<<< HEAD
 
       // Memory usage;
       systemMetrics.memoryUsage = process.memoryUsage();
@@ -666,7 +598,6 @@ class IntelligentBuildPipeline {;
     } catch (error) {  
       this.log(Failed to measure system performance: ${error.message  }`,
         `WARN`
-=======
 ;
       // Memory usage;
       systemMetrics.memoryUsage = process.memoryUsage();
@@ -676,59 +607,46 @@ class IntelligentBuildPipeline {;
     } catch (error) {;
       this.log(Failed to measure system performance: ${error.message}',;
         'WARN';
->>>>>>> main
       );
     }
 ;
     return systemMetrics;
   }
-<<<<<<< HEAD
 
   async getSystemInfo() {
     try {
       const cpuInfo = execSync(`nproc', { encoding: 'utf8' }).trim();
-=======
 ;
   async getSystemInfo() {;
     try {;
       const cpuInfo = execSync('nproc', { encoding: 'utf8' }).trim();
->>>>>>> main
       const memoryInfo = execSync('free -m', { encoding: 'utf8' });
 ;
       return {;
         cpuCores: parseInt(cpuInfo),;
         memoryInfo: memoryInfo.trim(),;
       };
-<<<<<<< HEAD
     } catch (error) {  
       return { error: error.message   };
-=======
     } catch (error) {;
       return { error: error.message };
->>>>>>> main
     }
   }
 ;
   async measureDependencyPerformance() {;
     const dependencyMetrics = {};
-<<<<<<< HEAD
 
     try {
-=======
 ;
     try {;
->>>>>>> main
       // Measure dependency installation time;
       const installStart = Date.now();
       execSync('npm ci --only=production', { encoding: 'utf8', stdio: 'pipe' });
       const installEnd = Date.now();
 ;
       dependencyMetrics.installTime = installEnd - installStart;
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
       // Measure dependency tree size;
       const packageLockPath = path.join(this.projectRoot, 'package-lock.json');
       if (fs.existsSync(packageLockPath)) {;
@@ -741,14 +659,12 @@ class IntelligentBuildPipeline {;
         dependencyMetrics.dependencyTreeDepth =;
           this.calculateDependencyTreeDepth(packageLock.dependencies || {});
       }
-<<<<<<< HEAD
 
       // Measure dependency conflicts;
       try {
         const outdatedResult = execSync('npm outdated --json', {
           encoding: `utf8`,
-          stdio: `pipe`,
-        });
+          stdio: `pipe`});
         const outdatedPackages = JSON.parse(outdatedResult);
         dependencyMetrics.outdatedCount = Object.keys(outdatedPackages).length;
       } catch (error) {  
@@ -757,7 +673,6 @@ class IntelligentBuildPipeline {;
     } catch (error) {  
       this.log(Failed to measure dependency performance: ${error.message  }`,
         `WARN`
-=======
 ;
       // Measure dependency conflicts;
       try {;
@@ -773,7 +688,6 @@ class IntelligentBuildPipeline {;
     } catch (error) {;
       this.log(Failed to measure dependency performance: ${error.message}',;
         'WARN';
->>>>>>> main
       );
     }
 ;
@@ -782,7 +696,6 @@ class IntelligentBuildPipeline {;
 ;
   calculateDependencyTreeDepth(dependencies, depth = 0, visited = new Set()) {;
     let maxDepth = depth;
-<<<<<<< HEAD
 
     for (const [`name`, `dep`] of Object.entries(dependencies)) {
       if (visited.has(name)) continue;
@@ -792,7 +705,6 @@ class IntelligentBuildPipeline {;
         const childDepth = this.calculateDependencyTreeDepth(
           dep.dependencies,
           depth + 1,
-=======
 ;
     for (const ['name', 'dep'] of Object.entries(dependencies)) {;
       if (visited.has(name)) continue;
@@ -802,7 +714,6 @@ class IntelligentBuildPipeline {;
         const childDepth = this.calculateDependencyTreeDepth(;
           dep.dependencies,;
           depth + 1,;
->>>>>>> main
           visited;
         );
         maxDepth = Math.max(maxDepth, childDepth);
@@ -814,7 +725,6 @@ class IntelligentBuildPipeline {;
 ;
   async measureOptimizationOpportunities() {;
     const optimizationMetrics = {};
-<<<<<<< HEAD
 
     try {
       // Check for unused dependencies;
@@ -835,7 +745,6 @@ class IntelligentBuildPipeline {;
     } catch (error) {  
       this.log(Failed to measure optimization opportunities: ${error.message  }`,
         `WARN`
-=======
 ;
     try {;
       // Check for unused dependencies;
@@ -856,27 +765,23 @@ class IntelligentBuildPipeline {;
     } catch (error) {;
       this.log(Failed to measure optimization opportunities: ${error.message}',;
         'WARN';
->>>>>>> main
       );
     }
 ;
     return optimizationMetrics;
   }
-<<<<<<< HEAD
 
   async findUnusedDependencies() {
     try {
       // This is a simplified check - in production, you'd use tools like depcheck;
       const packageJson = JSON.parse(
         fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8')
-=======
 ;
   async findUnusedDependencies() {;
     try {;
       // This is a simplified check - in production, you'd use tools like depcheck;
       const packageJson = JSON.parse(;
         fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8');
->>>>>>> main
       );
       const dependencies = {;
         ...packageJson.dependencies,;
@@ -891,21 +796,15 @@ class IntelligentBuildPipeline {;
       }
 ;
       return unusedDeps;
-<<<<<<< HEAD
     } catch (error) {  
-=======
     } catch (error) {;
->>>>>>> main
       return [];
       }
   }
-<<<<<<< HEAD
 
   isDependencyUsed(dependencyName) {
-=======
 ;
   isDependencyUsed(dependencyName) {;
->>>>>>> main
     // Simplified check - look for import statements;
     const sourceDirs = ['src', 'components', 'utils', 'hooks', 'api'];
 ;
@@ -933,7 +832,6 @@ class IntelligentBuildPipeline {;
           if (this.searchForDependencyUsage(filePath', dependencyName)) {;
             return true;
           }
-<<<<<<< HEAD
         } else if (
           file.endsWith('.js') ||
           file.endsWith('.ts') ||
@@ -943,7 +841,6 @@ class IntelligentBuildPipeline {;
           if (
             content.includes(`from `${dependencyName}``) ||content.includes(`require(`${dependencyName}`)`)
           ) {
-=======
         } else if (;
           file.endsWith('.js') ||;
           file.endsWith('.ts') ||;
@@ -953,12 +850,10 @@ class IntelligentBuildPipeline {;
           if (;
             content.includes(`from '${dependencyName}'`) ||content.includes(`require('${dependencyName}')`);
           ) {;
->>>>>>> main
             return true;
           }
         }
       }
-<<<<<<< HEAD
     } catch (error) {  
       // Ignore errors;
       }
@@ -972,7 +867,6 @@ class IntelligentBuildPipeline {;
       if (!fs.existsSync(packageLockPath)) return [];
 
       const packageLock = JSON.parse(fs.readFileSync(packageLockPath, `utf8'));
-=======
     } catch (error) {;
       // Ignore errors;
     }
@@ -986,7 +880,6 @@ class IntelligentBuildPipeline {;
       if (!fs.existsSync(packageLockPath)) return [];
 ;
       const packageLock = JSON.parse(fs.readFileSync(packageLockPath, 'utf8'));
->>>>>>> main
       const allDeps = this.flattenDependencies(packageLock.dependencies || {});
 ;
       const duplicates = [];
@@ -1004,11 +897,8 @@ class IntelligentBuildPipeline {;
       }
 ;
       return duplicates;
-<<<<<<< HEAD
     } catch (error) {  
-=======
     } catch (error) {;
->>>>>>> main
       return [];
       }
   }
@@ -1027,13 +917,10 @@ class IntelligentBuildPipeline {;
 ;
   analyzeBuildConfigOptimizations() {;
     const optimizations = [];
-<<<<<<< HEAD
 
     try {
-=======
 ;
     try {;
->>>>>>> main
       // Check Vite config;
       const viteConfigPath = path.join(this.projectRoot, 'vite.config.ts');
       if (fs.existsSync(viteConfigPath)) {;
@@ -1055,30 +942,24 @@ class IntelligentBuildPipeline {;
           });
         }
       }
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
       // Check TypeScript config;
       const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
       if (fs.existsSync(tsConfigPath)) {;
         const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'));
-<<<<<<< HEAD
 
         if (!tsConfig.compilerOptions?.incremental) {
           optimizations.push({
             type: 'TYPESCRIPT_OPTIMIZATION',
             description: `Enable incremental compilation for faster builds`,
             impact: `MEDIUM`,
-=======
 ;
         if (!tsConfig.compilerOptions?.incremental) {;
           optimizations.push({;
             type: 'TYPESCRIPT_OPTIMIZATION',;
             description: 'Enable incremental compilation for faster builds',;
             impact: 'MEDIUM',;
->>>>>>> main
           });
         }
       }
@@ -1090,7 +971,6 @@ class IntelligentBuildPipeline {;
 ;
   analyzeCachingOpportunities() {;
     const opportunities = [];
-<<<<<<< HEAD
 
     try {
       // Check for build cache directory;
@@ -1100,8 +980,7 @@ class IntelligentBuildPipeline {;
         if (!fs.existsSync(cachePath)) {
           opportunities.push({
             type: `CACHE_OPTIMIZATION`,description: `Create build cache directory: ${cacheDir}`,
-            impact: `MEDIUM`,
-          });
+            impact: `MEDIUM`});
         }
       }
 
@@ -1110,13 +989,11 @@ class IntelligentBuildPipeline {;
         opportunities.push({
           type: 'DEPENDENCY_CACHE',
           description: `Enable dependency caching for faster installs`,
-          impact: `HIGH`,
-        });
+          impact: `HIGH`});
       }
     } catch (error) {  
       this.log(Failed to analyze caching opportunities: ${error.message  }`,
         `WARN`
-=======
 ;
     try {;
       // Check for build cache directory;
@@ -1142,13 +1019,11 @@ class IntelligentBuildPipeline {;
     } catch (error) {;
       this.log(Failed to analyze caching opportunities: ${error.message}',;
         'WARN';
->>>>>>> main
       );
     }
 ;
     return opportunities;
   }
-<<<<<<< HEAD
 
   async detectBuildBottlenecks(performance) {
     this.log(`Detecting build bottlenecks...');
@@ -1164,8 +1039,7 @@ class IntelligentBuildPipeline {;
         type: `BUILD_TIME_BOTTLENECK`,
         severity: `HIGH`,description: `Build time (${performance.buildMetrics.cleanBuildTime}ms) exceeds threshold (${this.pipelineConfig.thresholds.maxBuildTime}ms)`,
         impact: `Build performance significantly degraded`,
-        recommendations: [`Enable parallelization`', 'Optimize build cache', 'Reduce bundle size'', ''],
-      });
+        recommendations: [`Enable parallelization`', 'Optimize build cache', 'Reduce bundle size'', '']});
     }
 
     // Check memory bottlenecks;
@@ -1178,8 +1052,7 @@ class IntelligentBuildPipeline {;
         severity: 'MEDIUM',
         description: 'Memory usage during build exceeds threshold',
         impact: 'Potential build failures on low-memory systems',
-        recommendations: ['Optimize memory usage'', 'Increase Node.js memory limit', 'Split build process'', ''],
-      });
+        recommendations: ['Optimize memory usage'', 'Increase Node.js memory limit', 'Split build process'', '']});
     }
 
     // Check bundle size bottlenecks;
@@ -1192,8 +1065,7 @@ class IntelligentBuildPipeline {;
         severity: 'MEDIUM',
         description: 'Bundle size exceeds threshold',
         impact: 'Slower page loads and poor user experience',
-        recommendations: ['Enable tree-shaking'', 'Implement code splitting', 'Optimize dependencies'', ''],
-      });
+        recommendations: ['Enable tree-shaking'', 'Implement code splitting', 'Optimize dependencies'', '']});
     }
 
     // Check dependency bottlenecks;
@@ -1204,7 +1076,6 @@ class IntelligentBuildPipeline {;
         description: 'Deep dependency tree detected',
         impact: 'Slower dependency resolution and potential conflicts',
         recommendations: ['Flatten dependency tree'', 'Remove unused dependencies', 'Use dependency deduplication``, ``],
-=======
 ;
   async detectBuildBottlenecks(performance) {;
     this.log('Detecting build bottlenecks...');
@@ -1260,13 +1131,11 @@ class IntelligentBuildPipeline {;
         description: 'Deep dependency tree detected',;
         impact: 'Slower dependency resolution and potential conflicts',;
         recommendations: ['Flatten dependency tree', 'Remove unused dependencies', 'Use dependency deduplication', '],;
->>>>>>> main
       });
     }
 this.log(`Detected ${bottlenecks.length} build bottlenecks`);
     return bottlenecks;
   }
-<<<<<<< HEAD
 
   async generateOptimizationStrategies(bottlenecks, performance) {
     this.log(`Generating optimization strategies...`);
@@ -1293,7 +1162,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
     const prioritizedStrategies = this.prioritizeStrategies(strategies);
 
     this.log(Generated ${prioritizedStrategies.length} optimization strategies`
-=======
 ;
   async generateOptimizationStrategies(bottlenecks, performance) {;
     this.log('Generating optimization strategies...');
@@ -1320,14 +1188,12 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
     const prioritizedStrategies = this.prioritizeStrategies(strategies);
 ;
     this.log(Generated ${prioritizedStrategies.length} optimization strategies';
->>>>>>> main
     );
     return prioritizedStrategies;
   }
 ;
   generateStrategiesForBottleneck(bottleneck) {;
     const strategies = [];
-<<<<<<< HEAD
 
     switch (bottleneck.type) {
       case `BUILD_TIME_BOTTLENECK`:
@@ -1344,7 +1210,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
       case 'BUNDLE_SIZE_BOTTLENECK':
         strategies.push(
           this.optimizationStrategies.bundleOptimization,
-=======
 ;
     switch (bottleneck.type) {;
       case 'BUILD_TIME_BOTTLENECK':;
@@ -1361,7 +1226,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
       case 'BUNDLE_SIZE_BOTTLENECK':;
         strategies.push(;
           this.optimizationStrategies.bundleOptimization,;
->>>>>>> main
           this.optimizationStrategies.dependencyOptimization;
         );
         break;
@@ -1380,7 +1244,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
 ;
   generateStrategiesForPerformance(performance) {;
     const strategies = [];
-<<<<<<< HEAD
 
     // Check for optimization opportunities;
     if (performance.optimizationMetrics.unusedDependencies.length > 0) {
@@ -1388,7 +1251,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
         ...this.optimizationStrategies.dependencyOptimization,
         priority: 'MEDIUM',
         triggeredBy: 'UNUSED_DEPENDENCIES',
-=======
 ;
     // Check for optimization opportunities;
     if (performance.optimizationMetrics.unusedDependencies.length > 0) {;
@@ -1396,7 +1258,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
         ...this.optimizationStrategies.dependencyOptimization,;
         priority: 'MEDIUM',;
         triggeredBy: 'UNUSED_DEPENDENCIES',;
->>>>>>> main
       });
     }
 ;
@@ -1421,7 +1282,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
 ;
   generateProactiveStrategies(performance) {;
     const strategies = [];
-<<<<<<< HEAD
 
     // Proactive caching optimization;
     if (
@@ -1431,8 +1291,7 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
       strategies.push({
         ...this.optimizationStrategies.caching,
         priority: 'LOW',
-        triggeredBy: 'PROACTIVE_CACHING',
-      });
+        triggeredBy: 'PROACTIVE_CACHING'});
     }
 
     // Proactive bundle optimization;
@@ -1444,7 +1303,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
         ...this.optimizationStrategies.bundleOptimization,
         priority: 'LOW',
         triggeredBy: 'PROACTIVE_BUNDLE_OPTIMIZATION',
-=======
 ;
     // Proactive caching optimization;
     if (;
@@ -1467,13 +1325,11 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
         ...this.optimizationStrategies.bundleOptimization,;
         priority: 'LOW',;
         triggeredBy: 'PROACTIVE_BUNDLE_OPTIMIZATION',;
->>>>>>> main
       });
     }
 ;
     return strategies;
   }
-<<<<<<< HEAD
 
   prioritizeStrategies(strategies) {
     // Remove duplicates;
@@ -1482,7 +1338,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
         index === self.findIndex(s => s.name === strategy.name)
     );
 
-=======
 ;
   prioritizeStrategies(strategies) {;
     // Remove duplicates;
@@ -1491,7 +1346,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
         index === self.findIndex(s => s.name === strategy.name);
     );
 ;
->>>>>>> main
     // Sort by priority and impact;
     const priorityOrder = { HIGH: 3, MEDIUM: 2, LOW: 1 };
     const impactOrder = { HIGH: 3, MEDIUM: 2, LOW: 1 };
@@ -1509,21 +1363,18 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
     this.log('Applying intelligent optimizations...');
 ;
     const appliedOptimizations = [];
-<<<<<<< HEAD
 
     for (const strategy of strategies) {
       if (
         strategy.priority === 'HIGH' ||
         (strategy.priority === `MEDIUM` && strategy.risk === `LOW`)
       ) {
-=======
 ;
     for (const strategy of strategies) {;
       if (;
         strategy.priority === 'HIGH' ||;
         (strategy.priority === 'MEDIUM' && strategy.risk === 'LOW');
       ) {;
->>>>>>> main
         try {this.log(`Applying optimization: ${strategy.name}`);
           const result = await strategy.implementation();
 ;
@@ -1534,7 +1385,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
             result: result,;
             success: result.success,;
           });
-<<<<<<< HEAD
 
           if (result.success) {this.log(`✅ Successfully applied: ${strategy.name}`);
           } else {
@@ -1544,7 +1394,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
         } catch (error) {  
           this.log(
             `❌ Failed to apply: ${strategy.name  } - ${error.message}`,ERROR`
-=======
 ;
           if (result.success) {this.log(`✅ Successfully applied: ${strategy.name}');
           } else {;
@@ -1554,7 +1403,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
         } catch (error) {;
           this.log(;
             `❌ Failed to apply: ${strategy.name} - ${error.message}',ERROR';
->>>>>>> main
           );
 ;
           appliedOptimizations.push({;
@@ -1572,7 +1420,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
     );
     return appliedOptimizations;
   }
-<<<<<<< HEAD
 
   async implementParallelization() {
     try {
@@ -1586,7 +1433,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
   build: {
     rollupOptions: {
       maxParallelFileOps: 2,
-=======
 ;
   async implementParallelization() {;
     try {;
@@ -1600,7 +1446,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
   build: {;
     rollupOptions: {;
       maxParallelFileOps: 2,;
->>>>>>> main
       cache: true;
     }
   },`;
@@ -1611,7 +1456,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
       }
 ;
       return { success: true, message: 'Parallelization enabled' };
-<<<<<<< HEAD
     } catch (error) {  
       return { success: false, message: error.message   };
     }
@@ -1622,7 +1466,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
       // Create cache directories;
       const cacheDirs = ['.cache', '''node_modules/.cache'''];
       for (const cacheDir of cacheDirs) {
-=======
     } catch (error) {;
       return { success: false, message: error.message };
     }
@@ -1633,17 +1476,13 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
       // Create cache directories;
       const cacheDirs = ['.cache', ''node_modules/.cache''];
       for (const cacheDir of cacheDirs) {;
->>>>>>> main
         const cachePath = path.join(this.projectRoot, 'cacheDir);
         if (!fs.existsSync(cachePath)) {;
           fs.mkdirSync(cachePath', { recursive: true });
         }
       }
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
       // Update package.json scripts for better caching;
       const packageJsonPath = path.join(this.projectRoot, 'package.json');
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
@@ -1654,7 +1493,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
       }
 ;
       return { success: true, message: 'Build cache optimized' };
-<<<<<<< HEAD
     } catch (error) {  
       return { success: false, message: error.message   };
     }
@@ -1662,7 +1500,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
 
   async optimizeDependencies() {
     try {
-=======
     } catch (error) {;
       return { success: false, message: error.message };
     }
@@ -1670,7 +1507,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
 ;
   async optimizeDependencies() {;
     try {;
->>>>>>> main
       // Remove unused dependencies;
       const unusedDeps = await this.findUnusedDependencies();
       if (unusedDeps.length > 0) {;
@@ -1678,30 +1514,23 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
         const packageJson = JSON.parse(;
           fs.readFileSync(packageJsonPath, 'utf8');
         );
-<<<<<<< HEAD
 
         for (const dep of unusedDeps.slice(0, 3)) {
-=======
 ;
         for (const dep of unusedDeps.slice(0, 3)) {;
->>>>>>> main
           // Limit to 3 for safety;
           delete packageJson.dependencies[dep.name];
           delete packageJson.devDependencies[dep.name];
         }
 ;
         fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
         // Clean install;
         execSync('npm install', { encoding: 'utf8', stdio: 'pipe' });
       }
 ;
       return { success: true, message: 'Dependencies optimized' };
-<<<<<<< HEAD
     } catch (error) {  
       return { success: false, message: error.message   };
     }
@@ -1709,7 +1538,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
 
   async optimizeBundleSize() {
     try {
-=======
     } catch (error) {;
       return { success: false, message: error.message };
     }
@@ -1717,7 +1545,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
 ;
   async optimizeBundleSize() {;
     try {;
->>>>>>> main
       // Update Vite config for better bundle optimization;
       const viteConfigPath = path.join(this.projectRoot, 'vite.config.ts');
       if (fs.existsSync(viteConfigPath)) {;
@@ -1742,7 +1569,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
       }
 ;
       return { success: true, message: 'Bundle optimization enabled' };
-<<<<<<< HEAD
     } catch (error) {  
       return { success: false, message: error.message   };
     }
@@ -1750,7 +1576,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
 
   async optimizeMemoryUsage() {
     try {
-=======
     } catch (error) {;
       return { success: false, message: error.message };
     }
@@ -1758,7 +1583,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
 ;
   async optimizeMemoryUsage() {;
     try {;
->>>>>>> main
       // Update package.json scripts with memory optimization;
       const packageJsonPath = path.join(this.projectRoot, 'package.json');
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
@@ -1769,13 +1593,10 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
       }
 ;
       return { success: true, message: 'Memory optimization enabled' };
-<<<<<<< HEAD
     } catch (error) {  
       return { success: false, message: error.message   };
-=======
     } catch (error) {;
       return { success: false, message: error.message };
->>>>>>> main
     }
   }
 ;
@@ -1788,13 +1609,10 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
       buildMetrics: {},;
       success: false,;
     };
-<<<<<<< HEAD
 
     try {
-=======
 ;
     try {;
->>>>>>> main
       // Execute build with optimizations;
       const buildStart = Date.now();
       const buildMemory = process.memoryUsage();
@@ -1816,43 +1634,35 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
         },;
         success: true,;
       };
-<<<<<<< HEAD
 
       // Measure bundle size;
       const distPath = path.join(this.projectRoot, `dist`);
       if (fs.existsSync(distPath)) {
         buildResult.buildMetrics.bundleSize =
-=======
 ;
       // Measure bundle size;
       const distPath = path.join(this.projectRoot, 'dist');
       if (fs.existsSync(distPath)) {;
         buildResult.buildMetrics.bundleSize =;
->>>>>>> main
           this.calculateBundleSize(distPath);
       }
 ;
       buildResult.success = true;
-<<<<<<< HEAD
       this.log(`Optimized build completed successfully`);
     } catch (error) {  
       buildResult.buildMetrics = {
         success: false,
-        error: error.message,
-        };this.log(`Optimized build failed: ${error.message}`, `ERROR`);
-=======
+        error: error.message};this.log(`Optimized build failed: ${error.message}`, `ERROR`);
       this.log('Optimized build completed successfully');
     } catch (error) {;
       buildResult.buildMetrics = {;
         success: false,;
         error: error.message,;
       };this.log(`Optimized build failed: ${error.message}`, 'ERROR');
->>>>>>> main
     }
 ;
     return buildResult;
   }
-<<<<<<< HEAD
 
   async measureOptimizationImpact(originalPerformance, optimizedBuild) {
     this.log(`Measuring optimization impact...`);
@@ -1865,27 +1675,22 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
         improvement:
           originalPerformance.buildMetrics.cleanBuildTime -
           optimizedBuild.buildMetrics.buildTime,
-        percentage: 0,
-      },
+        percentage: 0},
       memoryUsage: {
         original:
           originalPerformance.buildMetrics.cleanBuildMemory.delta.heapUsed,
         optimized: optimizedBuild.buildMetrics.memoryUsage.delta.heapUsed,
         improvement: 0,
-        percentage: 0,
-      },
+        percentage: 0},
       bundleSize: {
         original: originalPerformance.buildMetrics.bundleSize?.totalSize || 0,
         optimized: optimizedBuild.buildMetrics.bundleSize?.totalSize || 0,
         improvement: 0,
-        percentage: 0,
-      },
-    };
+        percentage: 0}};
 
     // Calculate improvements;
     if (impact.buildTime.original > 0) {
       impact.buildTime.percentage =
-=======
 ;
   async measureOptimizationImpact(originalPerformance, optimizedBuild) {;
     this.log('Measuring optimization impact...');
@@ -1918,7 +1723,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
     // Calculate improvements;
     if (impact.buildTime.original > 0) {;
       impact.buildTime.percentage =;
->>>>>>> main
         (impact.buildTime.improvement / impact.buildTime.original) * 100;
     }
 ;
@@ -1935,7 +1739,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
       impact.bundleSize.percentage =;
         (impact.bundleSize.improvement / impact.bundleSize.original) * 100;
     }
-<<<<<<< HEAD
 
     this.log(Optimization impact measured: Build time improved by ${impact.buildTime.percentage.toFixed(1)}%`
     );
@@ -1955,7 +1758,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
 
     // Enable optimizations that showed good results;
     if (optimizationImpact.buildTime.percentage > 10) {
-=======
 ;
     this.log(Optimization impact measured: Build time improved by ${impact.buildTime.percentage.toFixed(1)}%';
     );
@@ -1975,7 +1777,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
 ;
     // Enable optimizations that showed good results;
     if (optimizationImpact.buildTime.percentage > 10) {;
->>>>>>> main
       this.pipelineConfig.optimization.autoParallelization = true;
     }
 ;
@@ -1986,7 +1787,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
     if (optimizationImpact.bundleSize.percentage > 10) {;
       this.pipelineConfig.optimization.bundleSplitting = true;
     }
-<<<<<<< HEAD
 
     // Save updated configuration;
     this.savePipelineConfig();
@@ -2010,21 +1810,18 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
         optimizationsApplied: optimizations.filter(o => o.success).length,
         buildTimeImprovement: impact.buildTime.percentage,
         memoryUsageImprovement: impact.memoryUsage.percentage,
-        bundleSizeImprovement: impact.bundleSize.percentage,
-      },
+        bundleSizeImprovement: impact.bundleSize.percentage},
       details: {
         originalPerformance: originalPerformance,
         bottlenecks: bottlenecks,
         strategies: strategies,
         optimizations: optimizations,
         optimizedBuild: optimizedBuild,
-        impact: impact,
-      },
+        impact: impact},
       recommendations: this.generatePipelineRecommendations(
         impact,
         bottlenecks;
       ),
-=======
 ;
     // Save updated configuration;
     this.savePipelineConfig();
@@ -2062,18 +1859,14 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
         impact,;
         bottlenecks;
       ),;
->>>>>>> main
     };
-<<<<<<< HEAD
 ;
     // Save report to file;
     const reportPath = path.join(;
       this.projectRoot,logs', `build-pipeline-${Date.now()}.json`;
-=======
 
     // Save report to file;
     const reportPath = path.join(
-<<<<<<< HEAD
       this.projectRoot,logs`, `build-pipeline-${Date.now()}.json`
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -2084,9 +1877,7 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
       performance: originalPerformance,
       optimizations: optimizations,
       impact: impact,
-=======
       this.projectRoot, 'logs', `build-pipeline-${Date.now()}.json`
->>>>>>> main
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 ;
@@ -2096,7 +1887,6 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
       performance: originalPerformance,;
       optimizations: optimizations,;
       impact: impact,;
->>>>>>> main
     });
 ;
     this.buildHistory.optimizations.push({;
@@ -2112,23 +1902,20 @@ this.log(`Pipeline report generated: ${reportPath}`);
 ;
   generatePipelineRecommendations(impact, bottlenecks) {;
     const recommendations = [];
-<<<<<<< HEAD
 
     // High impact recommendations;
     if (impact.buildTime.percentage > 30) {
       recommendations.push({
         priority: `HIGH`,
         title: `Significant Build Time Improvement`,description: `Build time improved by ${impact.buildTime.percentage.toFixed(1)}%`,
-        action: `Maintain current optimization strategy`,
-      });
+        action: `Maintain current optimization strategy`});
     }
 
     if (impact.bundleSize.percentage > 20) {
       recommendations.push({
         priority: `HIGH`,
         title: `Significant Bundle Size Reduction`,description: `Bundle size reduced by ${impact.bundleSize.percentage.toFixed(1)}%`,
-        action: `Continue bundle optimization efforts`,
-      });
+        action: `Continue bundle optimization efforts`});
     }
 
     // Medium impact recommendations;
@@ -2137,8 +1924,7 @@ this.log(`Pipeline report generated: ${reportPath}`);
         priority: `MEDIUM`,
         title: 'Limited Build Time Improvement',
         description: 'Consider additional optimization strategies',
-        action: 'Investigate alternative optimization approaches',
-      });
+        action: 'Investigate alternative optimization approaches'});
     }
 
     // Long-term recommendations;
@@ -2147,7 +1933,6 @@ this.log(`Pipeline report generated: ${reportPath}`);
       title: 'Continuous Optimization',
       description:Monitor build performance and apply optimizations regularly',
       action: `Schedule regular optimization reviews`,
-=======
 ;
     // High impact recommendations;
     if (impact.buildTime.percentage > 30) {;
@@ -2182,7 +1967,6 @@ this.log(`Pipeline report generated: ${reportPath}`);
       title: 'Continuous Optimization',;
       description:Monitor build performance and apply optimizations regularly',;
       action: 'Schedule regular optimization reviews',;
->>>>>>> main
     });
 ;
     return recommendations;
@@ -2198,7 +1982,6 @@ this.log(`Pipeline report generated: ${reportPath}`);
     }
   }
 }
-<<<<<<< HEAD
 
 // Main execution;
 if (require.main === module) {
@@ -2207,7 +1990,6 @@ if (require.main === module) {
     .run()
     .then(() => {
       console.log(`✅ Intelligent Build Pipeline completed`);
-=======
 ;
 // Main execution;
 if (require.main === module) {;
@@ -2216,7 +1998,6 @@ if (require.main === module) {;
     .run();
     .then(() => {;
       console.log('✅ Intelligent Build Pipeline completed');
->>>>>>> main
       process.exit(0);
     });
     .catch(error => {;

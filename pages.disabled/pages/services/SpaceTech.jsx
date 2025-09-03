@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from
   'react';'
 import { Link } from
@@ -27,16 +26,13 @@ const SpaceTech = () => {}
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             Space Technology Solutions;
           </h1>""
->>>>>>> pr-10728
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-=======
-<<<<<<< HEAD
 import: React from;
-  'react';';
+  'react';
 import: { Link } from;
-  'react-router-dom';';
+  'react-router-dom';
 import: { Cog } from;
-  'lucide-react';';
+  'lucide-react';
 const: SpaceTech = () => {}
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white'>''';
@@ -52,10 +48,9 @@ const: SpaceTech = () => {}
             This: service page is under development. Contact us for more;
             information.;
 :pages.disabled/pages/services/SpaceTech.jsx: </p>'';
-          <Link'';';
-            to='/contact'';';
+          <Link'';
+            to='/contact'';
             className='bg-gradient-to-r: from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700: hover:to-cyan-700: transition-all duration-300 text-lg'>            Contact Us for More Information';
-=======
 import React from;
   'react';
 import { Link } from;
@@ -75,12 +70,9 @@ const SpaceTech = () => {}
           </div>'''
           <h1 className='text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent>
             Space Technology Solutions'</h1>''          <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
->>>>>>> main
             This service page is under development. Contact us for more;
-<<<<<<< HEAD
             information.
 :pages.disabled/pages/services/SpaceTech.jsx
-<<<<<<< HEAD
           </p>"
           <Link""
             to="/contact""
@@ -93,27 +85,20 @@ const SpaceTech = () => {}
             to="/contact""
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg""
           >
->>>>>>> pr-10728
             Contact Us for More Information;
-=======
           </p>'
-=======
             information.;
 :pages.disabled/pages/services/SpaceTech.jsx'
           </p>''
->>>>>>> main
           <Link'';
             to='/contact'';
             className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hove,
     r:from-blue-700 hove,
     r:to-cyan-700 transition-all duration-300 text-lg'>            Contact Us for More Information
->>>>>>> main
->>>>>>> main
           </Link>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
 };
 ;
@@ -126,18 +111,12 @@ export default SpaceTech;'"
 '"'"
 export default SpaceTech;
 '""
->>>>>>> pr-10728
-=======
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: { SpaceTech }
 :pages.disabled/pages/services/SpaceTech.jsx;
 export: default SpaceTech'';'''';
-=======
   )}
 export { SpaceTech }
 :pages.disabled/pages/services/SpaceTech.jsx;
 export default SpaceTech'''''
->>>>>>> main
->>>>>>> main

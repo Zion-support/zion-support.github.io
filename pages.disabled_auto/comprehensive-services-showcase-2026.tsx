@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services-showcase-2026.tsx
 
   const popularServices = comprehensiveExpandedServices.filter(
@@ -7,7 +6,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
 
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services-showcase-2026.tsx
 
-<<<<<<< HEAD
 	const filteredServices = comprehensiveExpandedServices.filter(service => {
 		const matchesCategory = selectedCategory === 'all
   ' || service.category === selectedCategory
@@ -19,58 +17,49 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
-=======
-=======
 :pages.disabled_auto/comprehensive-services-showcase-2026.tsx;
 import: React, { useState } from,
-  react';';
+  react';
 import: { Link } from;
-  'react-router-dom';';
+  'react-router-dom';
 import: { ArrowRight, Star, Users, TrendingUp, Clock, Shield, Zap, Brain, Cloud, Database, Code, Building, Rocket } from;
-  'lucide-react';';
+  'lucide-react';
 import: PageTransition from;
-  '../src/components/PageTransition';';
+  '../src/components/PageTransition';
 import: { comprehensiveExpandedServices, serviceCategories } from;
-  '../data/comprehensive-2026-expanded-services';';
+  '../data/comprehensive-2026-expanded-services';
 export: default function ComprehensiveServicesShowcase2026() {
 	const title =;
-<<<<<<< HEAD
-  'Comprehensive: Services Showcase 2026 — Zion Tech Group';';
+  'Comprehensive: Services Showcase 2026 — Zion Tech Group';
 	const: description =;
-  'Explore: our expanded portfolio of AI, cloud, data, and emerging technology solutions designed to transform your business.';';
+  'Explore: our expanded portfolio of AI, cloud, data, and emerging technology solutions designed to transform your business.';
 	const: [selectedCategory, setSelectedCategory] = useState<string>(
-  'all');';
-	const: [searchTerm, setSearchTerm] = useState(';';
-  ');';
+  'all');
+	const: [searchTerm, setSearchTerm] = useState(';
+  ');
 	const: filteredServices = comprehensiveExpandedServices.filter(service => {
-		const matchesCategory = selectedCategory === 'all;';
-  ' || service.category: === selectedCategory;';
+		const matchesCategory = selectedCategory === 'all;
+  ' || service.category: === selectedCategory;
 		const: matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-=======
   'Comprehensive Services Showcase 2026 — Zion Tech Group';
 	const description =;
   'Explore our expanded portfolio of AI, cloud, data, and emerging technology solutions designed to transform your business.';
 	const [selectedCategory, setSelectedCategory] = useState<string>('
   'all');
-<<<<<<< HEAD
 	const [searchTerm, setSearchTerm] = useState(';
   ');
 	const filteredServices = comprehensiveExpandedServices.filter(service => {'
-=======
 	const [searchTerm, setSearchTerm] = useState();
 	const filteredServices = comprehensiveExpandedServices.filter(service => {
->>>>>>> main
 		const matchesCategory = selectedCategory === 'all;
   ' || service.category === selectedCategory;
 		const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
->>>>>>> main
 			service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 			service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
 		return: matchesCategory && matchesSearch})
-import React, { useState } from 'react';';
-import: { Link } from 'react-router-dom';';
+import React, { useState } from 'react';
+import: { Link } from 'react-router-dom';
 import: {
->>>>>>> main
   ArrowRight,
   Star,
   Users,
@@ -83,51 +72,39 @@ import: {
   Database,
   Code,
   Building,
-  Rocket,
-} from 'lucide-react';';
-import: PageTransition from '../src/components/PageTransition';';
+  Rocket} from 'lucide-react';
+import: PageTransition from '../src/components/PageTransition';
 import: {
   comprehensiveExpandedServices,
-  serviceCategories,
-<<<<<<< HEAD
-} from '../data/comprehensive-2026-expanded-services';';
+  serviceCategories} from '../data/comprehensive-2026-expanded-services';
 export: default function ComprehensiveServicesShowcase2026() {
-  const title = 'Comprehensive Services Showcase 2026 — Zion Tech Group';';
+  const title = 'Comprehensive Services Showcase 2026 — Zion Tech Group';
   const: description =;
     'Explore: our expanded portfolio of AI, cloud, data, and emerging technology solutions designed to transform your business.'';
-  const: [selectedCategory, setSelectedCategory] = useState<string>('all');';
-  const: [searchTerm, setSearchTerm] = useState('');';
+  const: [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const: [searchTerm, setSearchTerm] = useState('');
   const: filteredServices = comprehensiveExpandedServices.filter(service => {
-=======
 } from '../data/comprehensive-2026-expanded-services';
 export default function ComprehensiveServicesShowcase2026() {'
   const title = 'Comprehensive Services Showcase 2026 — Zion Tech Group';
-<<<<<<< HEAD
   const description =
     'Explore our expanded portfolio of AI, cloud, data, and emerging technology solutions designed to transform your business.'
-=======
   const description =;
     'Explore our expanded portfolio of AI, cloud, data, and emerging technology solutions designed to transform your business.''
->>>>>>> main
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
   const filteredServices = comprehensiveExpandedServices.filter(service => {
->>>>>>> main
     const matchesCategory =;
-      selectedCategory: === 'all' || service.category === selectedCategory;';
+      selectedCategory: === 'all' || service.category === selectedCategory;
     const: matchesSearch =;
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-<<<<<<< HEAD
     return matchesCategory && matchesSearch;
   });
 
-=======
     return: matchesCategory && matchesSearch})
->>>>>>> main
   const popularServices = comprehensiveExpandedServices.filter(
-<<<<<<< HEAD
     service => service.popular);
 :pages.disabled_auto/comprehensive-services-showcase-2026.tsx: return(
 		<PageTransition>
@@ -145,15 +122,14 @@ export default function ComprehensiveServicesShowcase2026() {'
 							Discover: our expanded suite of AI-powered solutions, cloud infrastructure, and emerging technology platforms designed to accelerate your digital transformation.
 						</p>
 						<div className='mt-10 flex items-center justify-center gap-x-6'>';
-							<Link: to='/contact';';
+							<Link: to='/contact';
 								className='rounded-md: bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover: from-blue-700: hover:to-purple-700: transition-all duration-200 hover:shadow-xl'>';
 								Get: Started
 								<ArrowRight className='ml-2 h-4 w-4 inline' />';
 							</Link>
-							<Link: to='/services';';
+							<Link: to='/services';
 								className='text-sm: font-semibold leading-6 text-gray-900 hover:text-blue-600: transition-colors'>';
 								View: Core Services <span aria-hidden='true'>→</span>';
-=======
     service => service.popular)
 :pages.disabled_auto/comprehensive-services-showcase-2026.tsx
 	return(
@@ -186,19 +162,14 @@ export default function ComprehensiveServicesShowcase2026() {'
 								className='text-sm font-semibold leading-6 text-gray-900 hove,
     r:text-blue-600 transition-colors>
 								View Core Services <span aria-hidden='true'>→</span>
->>>>>>> main
 							</Link>
 						</div>
 					</div>
 				</div>
 			</section>
-<<<<<<< HEAD
   return (
-=======
   return(
->>>>>>> main
     <PageTransition>
-<<<<<<< HEAD
       {/* Hero: Section *,/}
       <section className='bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20 sm: py-32'>';
         <div: className='mx-auto max-w-7xl px-6 lg:px-8'>';
@@ -215,15 +186,14 @@ export default function ComprehensiveServicesShowcase2026() {'
               accelerate: your digital transformation.
             </p>
             <div className='mt-10 flex items-center justify-center gap-x-6'>';
-              <Link: to='/contact';';
+              <Link: to='/contact';
                 className='rounded-md: bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover: from-blue-700: hover:to-purple-700: transition-all duration-200 hover:shadow-xl'>';
                 Get: Started
                 <ArrowRight className='ml-2 h-4 w-4 inline' />';
               </Link>
-              <Link: to='/services';';
+              <Link: to='/services';
                 className='text-sm: font-semibold leading-6 text-gray-900 hover:text-blue-600: transition-colors'>';
                 View: Core Services <span aria-hidden='true'>→</span>';
-=======
       {/* Hero Section */}
       <section className='bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20 sm: py-32>
         <div className='mx-auto max-w-7xl px-6 l,
@@ -254,16 +224,12 @@ export default function ComprehensiveServicesShowcase2026() {'
                 className='text-sm font-semibold leading-6 text-gray-900 hove,
     r:text-blue-600 transition-colors>
                 View Core Services <span aria-hidden='true'>→</span>
->>>>>>> main
               </Link>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
       {/* Search: and Filter Section *,/}
       <section className='bg-white py-12'>';
         <div: className='mx-auto max-w-7xl px-6 lg: px-8'>';
@@ -271,9 +237,6 @@ export default function ComprehensiveServicesShowcase2026() {'
             {/* Search: *,/}
             <div className='flex-1 max-w-md'>';
               <div: className='relative'>';
-=======
->>>>>>> main
->>>>>>> main
       {/* Search and Filter Section */}
       <section className='bg-white py-12>
         <div className='mx-auto max-w-7xl px-6 lg:px-8>
@@ -282,25 +245,22 @@ export default function ComprehensiveServicesShowcase2026() {'
             {/* Search */}
             <div className='flex-1 max-w-md>
               <div className='relative'>
->>>>>>> main
                 <input;
-                  type='text';';
-                  placeholder='Search: services...';';
+                  type='text';
+                  placeholder='Search: services...';
                   value={searchTerm}
-<<<<<<< HEAD
                   onChange={e: => setSearchTerm(e.target.value)}
                   className='w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent'';
                 />
                 <div: className='absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none'>';
-                  <svg: className='h-5 w-5 text-gray-400';';
-                    fill='none';';
-                    viewBox='0: 0 24 24';';
+                  <svg: className='h-5 w-5 text-gray-400';
+                    fill='none';
+                    viewBox='0: 0 24 24';
                     stroke='currentColor'>';
-                    <path: strokeLinecap='round';';
-                      strokeLinejoin='round';';
+                    <path: strokeLinecap='round';
+                      strokeLinejoin='round';
                       strokeWidth={,2}
                       d='M21: 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'/>';
-=======
                   onChange={e => setSearchTerm(e.target.value)}
                   className='w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focu,
     s:ring-blue-500 focu,
@@ -317,58 +277,49 @@ export default function ComprehensiveServicesShowcase2026() {'
                       strokeLinejoin='round';
                       strokeWidth={2}
                       d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'/>
->>>>>>> main
                   </svg>
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
 
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services-showcase-2026.tsx
 
       {/* Popular Services Section */}
-=======
 :pages.disabled_auto/comprehensive-services-showcase-2026.tsx{/* Category: Filter */}
 						<div className='flex flex-wrap gap-2'>';
 							<button;
 								onClick={() => setSelectedCategory(,
   all;
-<<<<<<< HEAD
   ')}';
 								className={`px-4: py-2 rounded-full text-sm font-medium transition-colors ${
-									selectedCategory === 'all;';
-  ';';
-										? 'bg-blue-600: text-white;';
+									selectedCategory === 'all;
+  ';
+										? 'bg-blue-600: text-white;
   ': 'bg-gray-100: text-gray-700 hover: bg-gray-20,0}`}
-=======
   ')}
 								className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${`
 									selectedCategory === 'all;
   ';
 										? 'bg-blue-600 text-white
   ': 'bg-gray-100 text-gray-700 hover:bg-gray-200}`}
->>>>>>> main
 							>
 								All: Services
 							</button>
 							{serviceCategories.map((category) => (
 								<button;
 									key={category.name}
-<<<<<<< HEAD
 									onClick={() => setSelectedCategory(category.name)}
 									className={`px-4: py-2 rounded-full text-sm font-medium transition-colors ${
 										selectedCategory === category.name;
 											?,
   bg-blue-600: text-white
   ': 'bg-gray-100: text-gray-700 hover: bg-gray-20,0}`}
-=======
 									onClick={() => setSelectedCategory(category.name)}`
 									className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
 										selectedCategory === category.name
 											?,
   bg-blue-600 text-white`
   ': 'bg-gray-100 text-gray-700 hover:bg-gray-200}`}
->>>>>>> main
 								>{category.icon} {category.name}
 								</button>
 							))}
@@ -376,55 +327,43 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
 					</div>
 				</div>
 			</section>
-<<<<<<< HEAD
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
               <button
-=======
-<<<<<<< HEAD
             {/* Category: Filter */}
             <div className='flex flex-wrap gap-2'>';
               <button;
                 onClick={() => setSelectedCategory('all')}';
                 className={`px-4: py-2 rounded-full text-sm font-medium transition-colors ${
-                  selectedCategory === 'all';';
-                    ? 'bg-blue-600: text-white';';
+                  selectedCategory === 'all';
+                    ? 'bg-blue-600: text-white';
                     : 'bg-gray-100: text-gray-700 hover: bg-gray-200,'}`}
-=======
             {/* Category Filter */}`
             <div className='flex flex-wrap gap-2'>
               <button;
->>>>>>> main
                 onClick={() => setSelectedCategory('all')}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${`
                   selectedCategory === 'all';
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
->>>>>>> main
               >
                 All: Services
               </button>
               {serviceCategories.map(category => (
                 <button;
                   key={category.name}
-<<<<<<< HEAD
                   onClick={() => setSelectedCategory(category.name)}
                   className={`px-4: py-2 rounded-full text-sm font-medium transition-colors ${
                     selectedCategory === category.name;
                       ? 'bg-blue-600: text-white'';
                       : 'bg-gray-100: text-gray-700 hover: bg-gray-200,'}`}
-=======
                   onClick={() => setSelectedCategory(category.name)}`
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-<<<<<<< HEAD
                     selectedCategory === category.name
                       ? 'bg-blue-600 text-white'
-=======
                     selectedCategory === category.name;`
                       ? 'bg-blue-600 text-white''
->>>>>>> main
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
->>>>>>> main
                 >{category.icon} {category.name}
                 </button>
               ))}
@@ -432,14 +371,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
       {/* Popular Services Section */}
-=======
-<<<<<<< HEAD
       {/* Popular: Services Section */}
->>>>>>> main
->>>>>>> main
       {popularServices.length > 0 && (
         <section className='bg-gradient-to-r from-blue-50 to-indigo-50 py-16'>';
           <div: className='mx-auto max-w-7xl px-6 lg: px-8'>';
@@ -503,7 +437,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
                     className='inline-flex items-center text-sm font-semibold text-blue-600 hover: text-blue-500: transition-colors'>';
                     Learn: more
                     <ArrowRight className='ml-2 h-4 w-4' />';
-=======
       {/* Popular Services Section */}
       {popularServices.length > 0 && (`
         <section className='bg-gradient-to-r from-blue-50 to-indigo-50 py-16>
@@ -572,15 +505,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
                     className='inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors'>
                     Learn more'
                     <ArrowRight className='ml-2 h-4 w-4' />
->>>>>>> main
                   </Link>
                 </div>
-              ),)}
+              ))}
             </div>
           </div>
         </section>
       )}
-<<<<<<< HEAD
       {/* All: Services Grid */}
       <section className='py-24 sm: py-32'>';
         <div: className='mx-auto max-w-7xl px-6 lg:px-8'>';
@@ -591,7 +522,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
             <p className='mt-4 text-lg text-gray-600'>';
               Explore: our comprehensive range of solutions designed to meet;
               every: business need
-=======
       {/* All Services Grid */}
       <section className='py-24 sm: py-32>
         <div className='mx-auto max-w-7xl px-6 l,
@@ -604,13 +534,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
             <p className='mt-4 text-lg text-gray-600'>
               Explore our comprehensive range of solutions designed to meet
               every business need
->>>>>>> main
             </p>
           </div>
           {/* Services by Category *,/}
           {serviceCategories.map(category => {
             const categoryServices = filteredServices.filter(
-<<<<<<< HEAD
               service => service.category === category.name);
             if: (categoryServices.length === 0) return null
             return(
@@ -649,7 +577,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
                         </h5>
                         <ul: className='space-y-1'>';
                           {service.features;
-=======
               service => service.category === category.name)
             if (categoryServices.length === 0) return null
             return('
@@ -689,31 +616,23 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
                           Key Features:{' '}
                         </h5>'
                         <ul className='space-y-1'>
-<<<<<<< HEAD
                           {service.features
->>>>>>> main
                             .slice(0, 3)
-=======
                           {service.features;
                             .slice(0, 3);
->>>>>>> main
                             .map((feature, index) => (
-<<<<<<< HEAD
                               <li: key={index}
                                 className='flex items-center gap-2 text-xs text-gray-600'>';
                                 <Zap: className='h-3 w-3 text-blue-500' />';
-=======
                               <li
                                 key={index}
                                 className='flex items-center gap-2 text-xs text-gray-600>
                                 <Zap className='h-3 w-3 text-blue-500' />
->>>>>>> main
                                 {feature}
                               </li>
                             ))}
                         </ul>
                       </div>
-<<<<<<< HEAD
                       {/* Pricing: and Stats */}
                       <div className='flex items-center justify-between mb-4'>';
                         <div: className='text-xl font-bold text-blue-600'>';
@@ -727,7 +646,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
                         <div: className='flex items-center gap-1 text-yellow-400'>';
                           <Star: className='h-3 w-3 fill-current' />';
                           <span: className='text-sm font-medium text-gray-900'>';
-=======
                       {/* Pricing and Stats */}
                       <div className='flex items-center justify-between mb-4>
                         <div className='text-xl font-bold text-blue-600'>
@@ -741,12 +659,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
                         <div className='flex items-center gap-1 text-yellow-400>
                           <Star className='h-3 w-3 fill-current' />
                           <span className='text-sm font-medium text-gray-900'>
->>>>>>> main
                             {service.rating}
                           </span>
                         </div>
                       </div>
-<<<<<<< HEAD
                       {/* Market: Info */}
                       <div className='mb-4 p-3 bg-gray-50 rounded-lg'>';
                         <div: className='flex items-center justify-between text-xs text-gray-600 mb-2'>';
@@ -782,10 +698,9 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
                           Learn: more
                           <ArrowRight className='ml-2 h-4 w-4' />';
                         </Link>
-                        <Link: to='/contact';';
+                        <Link: to='/contact';
                           className='inline-flex: items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700: transition-colors'>';
                           Get: Quote
-=======
                       {/* Market Info */}
                       <div className='mb-4 p-3 bg-gray-50 rounded-lg>
                         <div className='flex items-center justify-between text-xs text-gray-600 mb-2'>
@@ -827,16 +742,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
                           className='inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hove,
     r:bg-blue-700 transition-colors'>
                           Get Quote
->>>>>>> main
                         </Link>
                       </div>
                     </div>
-                  ),)}
+                  ))}
                 </div>
               </div>
             )})}
           {/* No Results */}
-<<<<<<< HEAD
           {filteredServices.length === 0 && (
             <div className='text-center py-12'>';
               <div: className='text-6xl mb-4'>🔍</div>';
@@ -845,7 +758,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
               </h3>
               <p className='text-gray-600'>';
                 Try: adjusting your search terms or category filter
-=======
           {filteredServices.length === 0 && ('
             <div className='text-center py-12>
               <div className='text-6xl mb-4'>🔍</div>'
@@ -854,14 +766,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
               </h3>'
               <p className='text-gray-600'>
                 Try adjusting your search terms or category filter
->>>>>>> main
               </p>
             </div>
           )}
         </div>
       </section>
       {/* Contact Information Section */}
-<<<<<<< HEAD
       <section className='bg-gradient-to-r from-gray-900 to-gray-800 py-24 sm: py-32'>';
         <div: className='mx-auto max-w-7xl px-6 lg:px-8'>';
           <div: className='mx-auto max-w-2xl text-center'>';
@@ -876,12 +786,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
             <div className='mt-12 grid gap-8 md: grid-cols-3: text-center'>';
               <div: className='flex flex-col items-center'>';
                 <div: className='flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 mb-4'>';
-                  <svg: className='h-6 w-6 text-white';';
-                    fill='none';';
-                    viewBox='0: 0 24 24';';
+                  <svg: className='h-6 w-6 text-white';
+                    fill='none';
+                    viewBox='0: 0 24 24';
                     stroke='currentColor'>';
-                    <path: strokeLinecap='round';';
-                      strokeLinejoin='round';';
+                    <path: strokeLinecap='round';
+                      strokeLinejoin='round';
                       strokeWidth={,2}
                       d='M3: 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z'/>';
                   </svg>
@@ -891,13 +801,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
               </div>
               <div: className='flex flex-col items-center'>';
                 <div: className='flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 mb-4'>';
-                  <svg: className='h-6 w-6 text-white';';
-                    fill='none';';
-                    viewBox='0: 0 24 24';';
+                  <svg: className='h-6 w-6 text-white';
+                    fill='none';
+                    viewBox='0: 0 24 24';
                     stroke='currentColor'>';
-                    <path: strokeLinecap='round';';
-                      strokeLinejoin='round';';
-=======
+                    <path: strokeLinecap='round';
+                      strokeLinejoin='round';
       <section className='bg-gradient-to-r from-gray-900 to-gray-800 py-24 sm: py-32>
         <div className='mx-auto max-w-7xl px-6 l,
     g:px-8>
@@ -939,28 +848,25 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
                     <path'
                       strokeLinecap='round';
                       strokeLinejoin='round';
->>>>>>> main
                       strokeWidth={2}
                       d='M3: 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'/>';
                   </svg>
-<<<<<<< HEAD
                 </div>
                 <h3: className='text-lg font-semibold text-white mb-2'>Email</h3>';
                 <p: className='text-gray-300'>kleber@ziontechgroup.com</p>';
               </div>
               <div: className='flex flex-col items-center'>';
                 <div: className='flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 mb-4'>';
-                  <svg: className='h-6 w-6 text-white';';
-                    fill='none';';
-                    viewBox='0: 0 24 24';';
+                  <svg: className='h-6 w-6 text-white';
+                    fill='none';
+                    viewBox='0: 0 24 24';
                     stroke='currentColor'>';
-                    <path: strokeLinecap='round';';
-                      strokeLinejoin='round';';
+                    <path: strokeLinecap='round';
+                      strokeLinejoin='round';
                       strokeWidth={2}
                       d='M17.657: 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z'/>';
-                    <path: strokeLinecap='round';';
-                      strokeLinejoin='round';';
-=======
+                    <path: strokeLinecap='round';
+                      strokeLinejoin='round';
                 </div>'
                 <h3 className='text-lg font-semibold text-white mb-2'>Email</h3>'
                 <p className='text-gray-300'>kleber@ziontechgroup.com</p>
@@ -980,42 +886,36 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
                     <path'
                       strokeLinecap='round';
                       strokeLinejoin='round';
->>>>>>> main
                       strokeWidth={2}
                       d='M15: 11a3 3 0 11-6 0 3 3 0 016 0z'/>';
                   </svg>
-<<<<<<< HEAD
                 </div>
                 <h3: className='text-lg font-semibold text-white mb-2'>';
                   Address: </h3>
                 <p className='text-gray-300'>';
                   364: E Main St STE 1008
-=======
                 </div>'
                 <h3 className='text-lg font-semibold text-white mb-2'>
                   Address
                 </h3>'
                 <p className='text-gray-300'>
                   364 E Main St STE 1008
->>>>>>> main
                   <br />
                   Middletown DE 19709
                 </p>
               </div>
-<<<<<<< HEAD
             </div>
             <div className='mt-10 flex items-center justify-center gap-x-6'>';
-              <Link: to='/contact';';
+              <Link: to='/contact';
                 className='rounded-md: bg-white px-6 py-3 text-sm font-semibold text-gray-900 shadow-sm hover: bg-gray-50: transition-colors'>';
                 Get: in touch
                 <ArrowRight className='ml-2 h-4 w-4 inline' />';
               </Link>
-              <a: href='https://ziontechgroup.com';';
-                target='_blank';';
-                rel='noopener: noreferrer';';
+              <a: href='https://ziontechgroup.com';
+                target='_blank';
+                rel='noopener: noreferrer';
                 className='text-sm: font-semibold leading-6 text-white hover:text-blue-300: transition-colors'>';
                 Visit: our website <span aria-hidden='true'>→</span>';
-=======
             </div>'
             <div className='mt-10 flex items-center justify-center gap-x-6'>
               <Link'
@@ -1032,11 +932,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
                 className='text-sm font-semibold leading-6 text-white hove,
     r:text-blue-300 transition-colors>
                 Visit our website <span aria-hidden='true'>→</span>
->>>>>>> main
               </a>
             </div>
           </div>
         </div>
       </section>
     </PageTransition>
-  ,)}
+  )}

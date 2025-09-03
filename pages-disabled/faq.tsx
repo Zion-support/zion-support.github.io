@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import type { NextPage } from 'next';
 import MainLayout from "../src/components/layout/MainLayout";
 import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-react';
-=======
 import React, { useState } from
   'react';
 import type { NextPage } from
@@ -12,7 +10,6 @@ import MainLayout from
   '../components/layout/MainLayout';
 import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Phone, Mail } from
   'lucide-react';
->>>>>>> origin/main
 
 const FAQ: NextPage = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
@@ -27,13 +24,12 @@ const FAQ: NextPage = () => {
 
   const faqCategories = [
     {
-<<<<<<< HEAD:pages/faq.tsx
+:pages/faq.tsx
       title: 'General Questions', questions: [
-=======
       title:,
   General Questions',
       questions: [
->>>>>>> main:pages-disabled/faq.tsx
+:pages-disabled/faq.tsx
         {
           question:
   'What services does Zion Tech Group offer?,
@@ -41,7 +37,7 @@ const FAQ: NextPage = () => {
   Zion Tech Group offers a comprehensive range of technology services including AI development, quantum computing solutions, blockchain infrastructure, micro SaaS applications, IT services, and digital transformation consulting. We help businesses modernize their operations and leverage cutting-edge technologies.'
         },
         {
-<<<<<<< HEAD:pages/faq.tsx
+:pages/faq.tsx
           question: 'How long has Zion Tech Group been in business?', answer: 'Zion Tech Group has been providing technology solutions and services for several years, helping businesses across various industries transform their digital presence and achieve their technology goals.'
         }, {
           question: 'What industries do you serve?',
@@ -97,7 +93,6 @@ const FAQ: NextPage = () => {
         },
         {
           question: 'What technologies do you work with?', answer: 'We work with a wide range of technologies including React, Vue.js, Angular, Node.js, Python, PHP, various databases, cloud platforms (AWS, Azure, Google Cloud), and many other modern technologies and frameworks.'
-=======
           question: 'How long has Zion Tech Group been in business?,
           answer:,
   Zion Tech Group has been providing technology solutions and services for several years, helping businesses across various industries transform their digital presence and achieve their technology goals.'
@@ -120,8 +115,7 @@ const FAQ: NextPage = () => {
         {
           question:,
   What is micro SaaS development?',
-          answer: Micro SaaS refers to small, focused software-as-a-service applications that solve specific business problems. These applications are typically lightweight, cost-effective, and designed to address niche market needs with minimal overhead.,
-  },
+          answer: Micro SaaS refers to small, focused software-as-a-service applications that solve specific business problems. These applications are typically lightweight, cost-effective, and designed to address niche market needs with minimal overhead.},
         {
           question: 'Do you offer custom development services?,
           answer:,
@@ -145,8 +139,7 @@ const FAQ: NextPage = () => {
         {
           question:,
   How do you price your services?',
-          answer: Our pricing varies depending on the scope and complexity of the project. We offer flexible pricing models including fixed-price projects, hourly rates, and retainer agreements. Contact us for a detailed quote based on your specific needs.,
-  },
+          answer: Our pricing varies depending on the scope and complexity of the project. We offer flexible pricing models including fixed-price projects, hourly rates, and retainer agreements. Contact us for a detailed quote based on your specific needs.},
         {
           question: 'Do you offer payment plans?,
           answer:,
@@ -170,8 +163,7 @@ const FAQ: NextPage = () => {
         {
           question:,
   What kind of technical support do you provide?',
-          answer: We provide comprehensive technical support including 24/7 monitoring, troubleshooting, maintenance, updates, and emergency support. Our support team is available to help resolve issues quickly and efficiently.,
-  },
+          answer: We provide comprehensive technical support including 24/7 monitoring, troubleshooting, maintenance, updates, and emergency support. Our support team is available to help resolve issues quickly and efficiently.},
         {
           question: 'How quickly do you respond to support requests?,
           answer:,
@@ -186,7 +178,7 @@ const FAQ: NextPage = () => {
           question: 'What technologies do you work with?,
           answer:
   'We work with a wide range of technologies including React, Vue.js, Angular, Node.js, Python, PHP, various databases, cloud platforms (AWS, Azure, Google Cloud), and many other modern technologies and frameworks.'
->>>>>>> main:pages-disabled/faq.tsx
+:pages-disabled/faq.tsx
         }
       ]
     }
@@ -195,12 +187,11 @@ const FAQ: NextPage = () => {
   return (
     <MainLayout
       title="Frequently Asked Questions - Zion Tech Group"
-<<<<<<< HEAD:pages/faq.tsx
+:pages/faq.tsx
       description="Find answers to common questions about Zion Tech Group&apos;s services, pricing, and support. Get the information you need to make informed decisions about your technology needs."''
-=======
       description="Find answers to common questions about Zion Tech Group
   's services, pricing, and support. Get the information you need to make informed decisions about your technology needs."
->>>>>>> main:pages-disabled/faq.tsx
+:pages-disabled/faq.tsx
       keywords="FAQ, frequently asked questions, support, help, services, pricing, technical support"
     >
       <div className="min-h-screen bg-gray-50">

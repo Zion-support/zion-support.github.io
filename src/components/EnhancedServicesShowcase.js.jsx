@@ -1,12 +1,11 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';''';,"});,"})
 import { Link } from 'react-router-dom';''';,"});,"})
 import { motion } from 'framer-motion';''';,"});,"})
 import { enhancedServices2025 } from '../data/enhanced-services-2025';,"});,"})
 const EnhancedServicesShowcase = () => {}"});,"})
 ';,"});,"})
-  const [selectedCategory, setSelectedCategory] = useState('all');';,"});,"})
-  const [searchTerm, setSearchTerm] = useState('');';,"});,"})
+  const [selectedCategory, setSelectedCategory] = useState('all');,"});,"})
+  const [searchTerm, setSearchTerm] = useState('');,"});,"})
   const categories = ['';,"});,"})
     { id: 'all', name: 'All Services', icon: '🌟' },';,"});,"})
     { id: 'micro-saas', name: 'Micro SAAS', icon: '💻' },';,"});,"})
@@ -144,7 +143,7 @@ const EnhancedServicesShowcase = () => {}"});,"})
                     {service.name}""";,"});,"})
                   </h3>"""";,"});,"})
                   <p className="text-sm text-blue-400 font-medium">';,"});,"})
-                    {service.category.replace('-',).toUpperCase()}"});,"})
+                    {service.category.replace('-').toUpperCase()}"});,"})
                   </p>;,"});,"})
                 </div>;,"});,"})
 """;,"});,"})
@@ -252,7 +251,7 @@ const EnhancedServicesShowcase = () => {}"});,"})
               <button;,"});,"})
                 onClick={() => {}"});,"})
 ';,"});,"})
-                  setSelectedCategory('all');';,"});,"})
+                  setSelectedCategory('all');,"});,"})
                   setSearchTerm('');""";,"});,"})
                 }}"""";,"});,"})
                 className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300""";,"});,"})
@@ -366,16 +365,12 @@ export { EnhancedServicesShowcase };,"});,"})
 export { EnhancedServicesShowcase };,"});,"})
 ;,"});,"})
 export { EnhancedServicesShowcase };,"});,"})
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react'''
 import { Link } from 'react-router-dom'''
 import { motion } from 'framer-motion'''
-=======
 import React, { useState } from 'react''
 import { Link } from 'react-router-dom''
 import { motion }  from 'framer-motion
->>>>>>> main
 import { enhancedServices2025 } from '../data/enhanced-services-2025';
 const EnhancedServicesShowcase = () => {}""
 ''
@@ -393,7 +388,7 @@ const EnhancedServicesShowcase = () => {}""
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
-    return matchesCategory && matchesSearch, })
+    return matchesCategory && matchesSearch})
   const containerVariants = {}
     hidden: { opacity: 0 }, visible: {}
       opacity: 1, transition: {}
@@ -454,15 +449,12 @@ const EnhancedServicesShowcase = () => {}""
             <input ''''
               type='text'''''
               placeholder='Search services...'''
-<<<<<<< HEAD
               value={searchTerm}''''
               onChange={e =" > setSearchTerm(e.target.value)}''''"
               className='px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80'''''
-=======
               value={searchTerm}'''
               onChange={e =" > setSearchTerm(e.target.value)}''''
               className='px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80''
->>>>>>> main
             />''''
             <div className='flex flex-wrap gap-2'>
               {categories.map(category => (
@@ -488,11 +480,8 @@ const EnhancedServicesShowcase = () => {}""
       <section className='py-20 px-4 sm: px-6 lg:px-8'>''''
         <div className='max-w-7xl mx-auto'>''''
           <motion .div''''
-<<<<<<< HEAD
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'''''
-=======
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8''
->>>>>>> main
             variants={containerVariants}''''
             initial='hidden'''''
             whileInView='visible'''
@@ -512,7 +501,7 @@ const EnhancedServicesShowcase = () => {}""
                     {service.name}''''
                   </h3>''''
                   <p className='text-sm text-blue-400 font-medium'>''
-                    {service.category.replace('-',).toUpperCase()}
+                    {service.category.replace('-').toUpperCase()}
                   </p>
                 </div>""
 ''''
@@ -542,11 +531,8 @@ const EnhancedServicesShowcase = () => {}""
                     {service.features.slice(0, 4).map((feature, idx) => (""
                       <li ''''
                         key={idx}''''
-<<<<<<< HEAD
                         className='text-xs text-gray-300 flex items-center''''" >'''''"
-=======
                         className='text-xs text-gray-300 flex items-center''" >''''
->>>>>>> main
                         <span className='w-1.5 h-1.5 bg-blue-400 rounded-full mr-2'></span>
                         {feature}
                       </li>
@@ -563,11 +549,8 @@ const EnhancedServicesShowcase = () => {}""
                     {service.benefits.slice(0, 3).map((benefit, idx) => (""
                       <li ''''
                         key={idx}''''
-<<<<<<< HEAD
                         className='text-xs text-gray-300 flex items-center''''" >'''''"
-=======
                         className='text-xs text-gray-300 flex items-center''" >''''
->>>>>>> main
                         <span className='w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2'></span>
                         {benefit}
                       </li>
@@ -596,17 +579,14 @@ const EnhancedServicesShowcase = () => {}""
                     className='inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300 text-sm '>""
                     Learn More''''
                     <svg ''''
-<<<<<<< HEAD
                       className='ml-2 h-4 w-4'''''
                       fill='none'''''
                       stroke='currentColor'''''
                       viewBox='0 0 24 24'''" >''''"
-=======
                       className='ml-2 h-4 w-4''
                       fill='none''''
                       stroke='currentColor''''
                       viewBox='0 0 24 24'''" >'''
->>>>>>> main
                       <path ''''
                         strokeLinecap='round'''''
                         strokeLinejoin='round'''''
@@ -622,7 +602,6 @@ const EnhancedServicesShowcase = () => {}""
           {/* No Results Message */}""
           {filteredServices.length === 0 && (''''
             <motion .div''''
-<<<<<<< HEAD
               className='text-center py-12'''
               initial={{ opacity: 0 }}""
               animate={{ opacity: 1 }}'''" >'''''"
@@ -631,9 +610,8 @@ const EnhancedServicesShowcase = () => {}""
               <button onClick={() =" > {}"
 ''
                   setSelectedCategory('all')';"'"
-                  setSearchTerm('')';', }}''''
+                  setSearchTerm('')';'}}''''
                 className='mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors duration-300 '>
-=======
               className='text-center py-12'
               initial={{ opacity: 0 }}"
               animate={{ opacity: 1 }}'''" >''''
@@ -642,10 +620,8 @@ const EnhancedServicesShowcase = () => {}""
               <button onClick={() =" > {}"
 '
                   setSelectedCategory('all')
-                  setSearchTerm(''),
-}}''''
+                  setSearchTerm('')}}''''
                 className='mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 '>
->>>>>>> main
                 View All Services
               </button>
             </motion.div>
@@ -657,11 +633,8 @@ const EnhancedServicesShowcase = () => {}""
       <section className='py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50'>''''
         <div className='max-w-4xl mx-auto text-center'>''''
           <motion .h2''''
-<<<<<<< HEAD
             className='text-3xl md: text-4xl font-bold text-white mb-6'''
-=======
             className='text-3xl md:text-4xl font-bold text-white mb-6'
->>>>>>> main
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}" >"
@@ -677,11 +650,8 @@ const EnhancedServicesShowcase = () => {}""
           </motion.p>""
 ''''
           <motion .div''''
-<<<<<<< HEAD
             className='flex flex-col sm: flex-row gap-4 justify-center mb-8'''
-=======
             className='flex flex-col sm:flex-row gap-4 justify-center mb-8'
->>>>>>> main
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}"" >''''
@@ -755,4 +725,3 @@ export { EnhancedServicesShowcase }
 export { EnhancedServicesShowcase }
 
 export { EnhancedServicesShowcase }"`"
->>>>>>> main
