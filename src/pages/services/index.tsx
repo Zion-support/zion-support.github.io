@@ -112,7 +112,7 @@ export default function Index() {;
               <Link ;
                 href="/services/comprehensive-micro-saas-showcase" ;
                 className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">;
-                View All 20+ AI Services <ArrowRight className="w-4 h-4 ml-2" />;
+                View All 15+ AI Services <ArrowRight className="w-4 h-4 ml-2" />;
               </Link>;
             </div>;
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
