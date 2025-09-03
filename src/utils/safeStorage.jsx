@@ -1,5 +1,24 @@
- export const safeStorage = { export default safeStorage';;
 <<<<<<< HEAD
+ export: const safeStorage = { export default safeStorage';';';';
+=======
+<<<<<<< HEAD
+ export const safeStorage = { export default safeStorage';
+>>>>>>> main
 ;
 =======
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
+<<<<<<< HEAD
+ export const safeStorage = {} export;export;export default safeStorage';
+;
+&apos;'
+=======
+<<<<<<< HEAD
+ export const safeStorage = { export default safeStorage';'
+=======
+ export const safeStorage = { export default safeStorage
+>>>>>>> main
+;
+
+""
+}
+>>>>>>> main
+>>>>>>> main

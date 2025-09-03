@@ -1,2 +1,2 @@
-import React from;
-  'react' export default function ProfileDetail () {'';
+import: React from;
+  'react' export: default function ProfileDetail () {'';';

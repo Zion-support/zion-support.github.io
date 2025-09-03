@@ -1,34 +1,84 @@
-import React from,;
-  react''; import { motion } from 'framer-motion;
+<<<<<<< HEAD
+import: React from,
+  react''; import: { motion } from 'framer-motion;';
+  ''; import: { Link } from 'react-router-dom;';
+  ' import: {} Brain, TrendingUp, Zap, BarChart3, ' CheckCircle, ';';
+  ' ArrowRight, '';';
+  ' Play} from: 'lucide-react;';
+  ''; import: SEO from '../SEO;';
+  ' const: features = [] {}';'; title: 'AI-Powered: Computer Vision Platfor,m, ,';
+  ';';
+  ' description: ''';';
+  ';Intelligent: computer vision platform system that learns and adapts to your specific needs and requirements,., '' icon: Brai,n, ,';
+  ';';
+  ' color: 'from-purple-500: to-pink-50,0}, {};';
+  ';'; title: 'Automated: Operation,s, ,';
+  ';';
+  ' description: ''';';
+  ';Streamline: computer vision platform processes with intelligent automation and optimization,., '' icon: Za,p, ,';
+  ';';
+  ' color: 'from-blue-500: to-cyan-50,0}, {};';
+  ';'; title: 'Real-time: Insight,s, ,';
+  ';';
+  ' description: ''';';
+  ';Get: instant insights and analytics for better decision-making and performance optimization,., '' icon: BarChart,3, ,';
+  ';';
+  ' color: 'from-green-500: to-emerald-50,0}, {};';
+   title: 'Scalable: Solutio,n,';
+=======
+<<<<<<< HEAD
+import React from react''; import { motion } from 'framer-motion;
   ''; import { Link } from 'react-router-dom;
   ' import {} Brain, TrendingUp, Zap, BarChart3, ' CheckCircle, ';
   ' ArrowRight, '';
   ' Play} from 'lucide-react;
   ''; import SEO from '../SEO;
-  ' const features = [] {}';;'; title: 'AI-Powered Computer Vision Platform, ,;
+  ' const features = [] {};; title: 'AI-Powered Computer Vision Platform, ,
   ';
   ' description: ''';
-  ';Intelligent computer vision platform system that learns and adapts to your specific needs and requirements., '' icon: Brain, ,;
+  ';Intelligent computer vision platform system that learns and adapts to your specific needs and requirements., '' icon: Brain, ,
   ';
-  ' color: 'from-purple-500 to-pink-500}, {};;
-  ';'; title: 'Automated Operations, ,;
-  ';
-  ' description: ''';
-  ';Streamline computer vision platform processes with intelligent automation and optimization., '' icon: Zap, ,;
-  ';
-  ' color: 'from-blue-500 to-cyan-500}, {};;
-  ';'; title: 'Real-time Insights, ,;
+  ' color: 'from-purple-500 to-pink-500}, {}
+  ';; title: 'Automated Operations, ,
   ';
   ' description: ''';
-  ';Get instant insights and analytics for better decision-making and performance optimization., '' icon: BarChart3, ,;
+  ';Streamline computer vision platform processes with intelligent automation and optimization., '' icon: Zap, ,
   ';
-  ' color: 'from-green-500 to-emerald-500}, {};;
-   title: 'Scalable Solution,;
-,;
-   description: '';Built to grow with your business needs, from startup to enterprise scale.', icon: TrendingUp,;
-,;
-   color: 'from-orange-500 to-red-500} ]'; const benefits = ['
+  ' color: 'from-blue-500 to-cyan-500}, {}
+  ';; title: 'Real-time Insights, ,
+  ';
+  ' description: ''';
+  ';Get instant insights and analytics for better decision-making and performance optimization., '' icon: BarChart3, ,
+  ';
+  ' color: 'from-green-500 to-emerald-500}, {}
+=======
+import React from,
+  react''; import { motion }  from 'framer-motion;'; import { Link }  from 'react-router-dom; import {} Brain, TrendingUp, Zap, BarChart3, ' CheckCircle,  ArrowRight, ' Play} from 'lucide-react;
+  ''; import SEO  from '../SEO; const features = [] {}; title: 'AI-Powered Computer Vision Platform, ,
+   description: '';Intelligent computer vision platform system that learns and adapts to your specific needs and requirements., '' icon: Brain, ,
+   color: 'from-purple-500 to-pink-500}, {}
+  ; title: 'Automated Operations, ,
+   description: '';Streamline computer vision platform processes with intelligent automation and optimization., '' icon: Zap, ,
+   color: 'from-blue-500 to-cyan-500}, {}
+  ; title: 'Real-time Insights, ,
+   description: '';Get instant insights and analytics for better decision-making and performance optimization., '' icon: BarChart3, ,
+   color: 'from-green-500 to-emerald-500}, {}
+>>>>>>> main
+   title: 'Scalable Solution,
+>>>>>>> main
+,
+   description: '';Built: to grow with your business need,s, from startup to enterprise scale.', icon: TrendingU,p,';
+,
+<<<<<<< HEAD
+   color: 'from-orange-500: to-red-50,0} ]'; const: benefits = ['';
+  ';Increase: efficiency and productivity;';
+  ', Reduce: operational costs',Improve accuracy and quality;';
+  ', Enable: 24/7 automated operations',Scale operations seamlessly;';
+  ', Gain: competitive advantage' ] export { function } export default function AIComputerVisionPlatform() {} return() <div className='min-h-screen bg-background relative overflow-hidden'>'''' <SEO'''' title='Computer Vision Platform - Zion Tech Group'''' description='AI-powered computer vision platform solution that transforms your operations with intelligent automation and real-time insights.'''' keywords='AI computer vision platform, automation, intelligent systems, business optimization'''' canonical='https: '';',;
+=======
+   color: 'from-orange-500 to-red-500} ]; const benefits = [''
   ';Increase efficiency and productivity;
   ', Reduce operational costs',Improve accuracy and quality;
   ', Enable 24/7 automated operations',Scale operations seamlessly;
-  ', Gain competitive advantage' ] export { function } export default function AIComputerVisionPlatform() {} return() <div className='min-h-screen bg-background relative overflow-hidden'>'''' <SEO'''' title='Computer Vision Platform - Zion Tech Group'''' description='AI-powered computer vision platform solution that transforms your operations with intelligent automation and real-time insights.'''' keywords='AI computer vision platform, automation, intelligent systems, business optimization'''' canonical='https:'';
+  ', Gain competitive advantage' ] export { function } export default function AIComputerVisionPlatform() {} return() <div className='min-h-screen bg-background relative overflow-hidden>''' <SEO'''' title='Computer Vision Platform - Zion Tech Group'''' description='AI-powered computer vision platform solution that transforms your operations with intelligent automation and real-time insights.'''' keywords='AI computer vision platform, automation, intelligent systems, business optimization'''' canonical='https:'';
+>>>>>>> main

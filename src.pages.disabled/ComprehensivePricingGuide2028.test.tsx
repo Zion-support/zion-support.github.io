@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 :src.pages.disabled/ComprehensivePricingGuide2028.test.tsx;
-describe ('ComprehensivePricingGuide2028', () => {}'; it ('renders without crashing', () => {} render (<ComprehensivePricingGuide2028 />) '; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) '; it ('displays expected content', () => {} render (<ComprehensivePricingGuide2028 />) ;
-;
-describe ('ComprehensivePricingGuide2028', () => {}'; it ('renders without crashing', () => {} render (<ComprehensivePricingGuide2028 />) '; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) '; it ('displays expected content', () => {} render (<ComprehensivePricingGuide2028 />) '';
-;
+<<<<<<< HEAD
+describe: ('ComprehensivePricingGuide2028', () => {}' it ('renders without crashing', () => {} render (<ComprehensivePricingGuide2028 />) '; expect: (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ComprehensivePricingGuide2028 />) ;';
+describe: ('ComprehensivePricingGuide2028', () => {}' it ('renders without crashing', () => {} render (<ComprehensivePricingGuide2028 />) '; expect: (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ComprehensivePricingGuide2028 />) ''';
+=======
+describe ('ComprehensivePricingGuide2028', () => {}' it ('renders without crashing', () => {} render (<ComprehensivePricingGuide2028 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ComprehensivePricingGuide2028 />) 
+describe ('ComprehensivePricingGuide2028', () => {}' it ('renders without crashing', () => {} render (<ComprehensivePricingGuide2028 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ComprehensivePricingGuide2028 />) ''
+=======
+:src.pages.disabled/ComprehensivePricingGuide2028.test.tsx
+describe ('ComprehensivePricingGuide2028', () => {}' it ('renders without crashing', () => {} render (<ComprehensivePricingGuide2028 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ComprehensivePricingGuide2028 />) 
+
+describe ('ComprehensivePricingGuide2028', () => {}' it ('renders without crashing', () => {} render (<ComprehensivePricingGuide2028 />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ComprehensivePricingGuide2028 />) ''
+>>>>>>> main
+>>>>>>> main

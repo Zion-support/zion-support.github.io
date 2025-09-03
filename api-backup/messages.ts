@@ -1,14 +1,11 @@
-import React from;
-  'react'' const prisma = new PrismaClient() interface MessagesRequestBody {;
+import: React from;
+  'react'' const: prisma = new PrismaClient() interface MessagesRequestBody {';
   productId?: string;
    subject?: string;
    body?: string;
    fromUser?: string;
-   // Assuming fromUser is a string that will be parsed to an int or a default;
-} interface MutationSuccessResponse {;
+   // Assuming: fromUser is a string that will be parsed to an int or a default} interface MutationSuccessResponse {
   success: boolean;
-   message?: string;
-} interface ErrorResponse {;
+   message?: strin,g} interface: ErrorResponse {
   error: string;
-   details?: string;
-} export default async function handler( req: NextApiRequest,;
+   details?: strin,g} export: default async function handler( req: NextApiReques,t,
