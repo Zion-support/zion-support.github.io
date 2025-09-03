@@ -1,16 +1,16 @@
 {
-  "timestamp": "2025-09-02T16:01:24.318Z",
+  "timestamp": "2025-09-03T01:21:28.603Z",
   "overall": "unhealthy",
   "checks": [
     {
       "name": "Package.json",
       "status": "pass",
-      "result": "Package: zion-tech-group v0.1.0"
+      "result": "Package: bolt.new.zion.app v0.1.0"
     },
     {
       "name": "Dependencies",
       "status": "pass",
-      "result": "Dependencies: 43 prod, 11 dev"
+      "result": "Dependencies: 18 prod, 24 dev"
     },
     {
       "name": "TypeScript",

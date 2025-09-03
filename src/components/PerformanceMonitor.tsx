@@ -33,11 +33,14 @@ export function PerformanceMonitor() {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
-            console.log('Navigation timing:', {
-              domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
-              loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
-              totalTime: navEntry.loadEventEnd - navEntry.fetchStart
-            });
+            // Log performance metrics in development only
+            if (process.env.NODE_ENV === 'development') {
+              console.log('Navigation timing:', {
+                domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
+                loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
+                totalTime: navEntry.loadEventEnd - navEntry.fetchStart
+              });
+            }
           }
         }
       });

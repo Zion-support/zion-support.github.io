@@ -81,7 +81,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData || defaultStructuredData)
+          __html: JSON.stringify(structuredData || defaultStructuredData, null, 2)
         }}
       />
       

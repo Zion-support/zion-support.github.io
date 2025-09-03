@@ -1,5 +1,3 @@
-/* eslint-env node */
-/* global module */
 module.exports = {
   semi: true,
   trailingComma: 'es5',
@@ -12,4 +10,4 @@ module.exports = {
   bracketSpacing: true,
   jsxSingleQuote: true,
   quoteProps: 'as-needed',
-};
+}
