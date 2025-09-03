@@ -1,14 +1,9 @@
 #!/usr/bin/env node;
-import fs from "fs";
-  'fs';
-import path from "path";
-  'path';
-import http from "http";
-  'http';
-import { execSync } from "child_process";
-  'child_process';
-import { fileURLToPath } from "url";
-  'url';
+import fs from "fsfs';
+import path from "pathpath';
+import http from "httphttp';
+import { execSync } from "child_processchild_process';
+import { fileURLToPath } from "urlurl';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 class HealthChecker {
@@ -64,8 +59,7 @@ class HealthChecker {
   'error', (error) => {
         const responseTime = Date.now() - startTime;
         this.log(
-  'error',
-  'Application health check failed', { error: error.message })        resolve({
+  'error,Application health check failed', { error: error.message })        resolve({
           status:;
   'unhealthy',
           responseTime,
@@ -74,8 +68,7 @@ class HealthChecker {
         req.destroy();
         const responseTime = Date.now() - startTime;
         this.log(,
-  error',
-  'Application health check timed out');
+  error,Application health check timed out');
         resolve({
           status: 'unhealthy,
           responseTime,
@@ -93,8 +86,7 @@ class HealthChecker {
       const diskInfo = lines[1].split(/\s+/);
       const usage = diskInfo[4];
       const usagePercent = parseInt(usage.replace(
-  '%', ';
-  '));
+  '%', ));
       const status = usagePercent > 90 ? 'critical;
   ': usagePercent > 80 ? 'warning;
   ' : 'healthy;
@@ -109,7 +101,7 @@ class HealthChecker {
     } catch (error) {
       this.log(,
   error;
-  ', 'Failed to check disk space;
+  ,Failed to check disk space;
   ', error);
       return {
         status: 'unknown,
@@ -142,7 +134,7 @@ class HealthChecker {
     } catch (error) {
       this.log(,
   error;
-  ', 'Failed to check memory usage;
+  ,Failed to check memory usage;
   ', error);
       return {
         status: 'unknown,
@@ -180,7 +172,7 @@ class HealthChecker {
     } catch (error) {
       this.log(,
   error;
-  ', 'Failed to check PM2 processes;
+  ,Failed to check PM2 processes;
   ', error);
       return {
         status: 'unknown,
@@ -215,7 +207,7 @@ class HealthChecker {
     } catch (error) {
       this.log(,
   error;
-  ', 'Failed to check log files;
+  ,Failed to check log files;
   ', error);
       return {
         status: 'unknown,
@@ -235,7 +227,7 @@ class HealthChecker {
       const nodeModulesExists = fs.existsSync(nodeModulesPath);
       if (!nodeModulesExists) {
         this.log('warning;
-  ', 'node_modules directory not found;
+  ,node_modules directory not found;
   ');
         return {
           status: 'warning,
@@ -258,7 +250,7 @@ class HealthChecker {
     } catch (error) {
       this.log(,
   error;
-  ', 'Failed to check dependencies;
+  ,Failed to check dependencies;
   ', error);
       return {
         status: 'unknown,
@@ -289,15 +281,15 @@ class HealthChecker {
   ') {
       try {
         this.log('warning;
-  ', 'Triggering application restart due to poor health;
+  ,Triggering application restart due to poor health;
   ');
         execSync('pm2 restart zion-app;
   ', { cwd: this.projectRoot })
         this.log('info;
-  ', 'Application restarted successfully;
+  ,Application restarted successfully;
   ')        return true} catch (error) {
         this.log('error;
-  ', 'Failed to restart application;
+  ,Failed to restart application;
   ', error);
         return false}
     }
@@ -331,11 +323,11 @@ class HealthChecker {
     try {
       this.log(,
   info;
-  ', 'Starting health check...;
+  ,Starting health check...;
   ');
       // Run all health checks;
       const healthChecks = [
-        { name: 'application, check: this.checkApplicationHealth.bind(this) },
+  { name: 'application, check: this.checkApplicationHealth.bind(this) },
         { name: 'diskSpace;
   ', check: this.checkDiskSpace.bind(this) },
         { name: 'memory;
@@ -360,7 +352,7 @@ class HealthChecker {
   ', `Health check completed. Overall status: ${overallHealth}`);
             return report} catch (error) {
       this.log('error;
-  ', 'Health check failed;
+  ,Health check failed;
   ', error);
       throw error}
   }

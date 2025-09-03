@@ -1,12 +1,8 @@
 #!/usr/bin/env node;
-import fs from "fs";
-  'fs';
-import path from "path";
-  'path';
-import { execSync } from "child_process";
-  'child_process';
-import { fileURLToPath } from "url";
-  'url';
+import fs from "fsfs';
+import path from "pathpath';
+import { execSync } from "child_processchild_process';
+import { fileURLToPath } from "urlurl';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 class LogCleaner {
@@ -44,11 +40,11 @@ class LogCleaner {
   async cleanOldLogs() {
     try {
       this.log('info;
-  ', 'Cleaning old log files...;
+  ,Cleaning old log files...;
   ');
             if (!fs.existsSync(this.logDir)) {
         this.log('info;
-  ', 'Log directory does not exist;
+  ,Log directory does not exist;
   ');
         return}
       const files = fs.readdirSync(this.logDir);
@@ -80,14 +76,14 @@ class LogCleaner {
       }
     } catch (error) {
       this.log('error;
-  ', 'Failed to clean old logs;
+  ,Failed to clean old logs;
   ', error);
       this.errors.push(`Failed to clean old logs: ${error.message}`)}
   }
   async cleanLargeLogs() {
     try {
       this.log('info;
-  ', 'Cleaning large log files...;
+  ,Cleaning large log files...;
   ');
             if (!fs.existsSync(this.logDir)) {
         return}
@@ -111,7 +107,7 @@ class LogCleaner {
       }
     } catch (error) {
       this.log('error;
-  ', 'Failed to clean large logs;
+  ,Failed to clean large logs;
   ', error);
       this.errors.push(`Failed to clean large logs: ${error.message}`)}
   }
@@ -144,8 +140,7 @@ class LogCleaner {
   async manageTotalLogSize() {
     try {
       this.log(
-  'info',
-  'Managing total log directory size...');
+  'info,Managing total log directory size...');
             if (!fs.existsSync(this.logDir)) {
         return}
       // Calculate total size;
@@ -198,19 +193,16 @@ class LogCleaner {
       }
     } catch (error) {
       this.log(
-  'error',
-  'Failed to manage total log size', error);
+  'error,Failed to manage total log size', error);
       this.errors.push(`Failed to manage total log size: ${error.message}`)}
   }
   async cleanErrorReports() {
     try {
       this.log(
-  'info',
-  'Cleaning old error reports...');
+  'info,Cleaning old error reports...');
             if (!fs.existsSync(this.errorReportDir)) {
         this.log(
-  'info',
-  'Error reports directory does not exist');
+  'info,Error reports directory does not exist');
         return}
       const files = fs.readdirSync(this.errorReportDir);
       const now = Date.now();
@@ -237,24 +229,22 @@ class LogCleaner {
       }
     } catch (error) {
       this.log(
-  'error',
-  'Failed to clean error reports', error);
+  'error,Failed to clean error reports', error);
       this.errors.push(`Failed to clean error reports: ${error.message}`)}
   }
   async rotatePM2Logs() {
     try {
       this.log(
-  'info',
-  'Rotating PM2 logs...');
+  'info,Rotating PM2 logs...');
       // Use PM2;
   's built-in log rotation;
       execSync('pm2 flush;
   ', { timeout: 30000 })
       this.log('info;
-  ', 'PM2 logs rotated successfully;
+  ,PM2 logs rotated successfully;
   ')    } catch (error) {
       this.log('error;
-  ', 'Failed to rotate PM2 logs;
+  ,Failed to rotate PM2 logs;
   ', error);
       this.errors.push(`Failed to rotate PM2 logs: ${error.message}`)}
   }
@@ -285,7 +275,7 @@ class LogCleaner {
   async run() {
     try {
       this.log('info;
-  ', 'Starting log cleanup...;
+  ,Starting log cleanup...;
   ');
             // Ensure log directory exists;
       if (!fs.existsSync(this.logDir)) {
@@ -303,7 +293,7 @@ class LogCleaner {
   ', `Log cleanup completed. Cleaned ${this.cleanedFiles.length} files, archived ${this.archivedFiles.length} files, reclaimed ${totalSpaceReclaimed}MB`);
             return report} catch (error) {
       this.log('error;
-  ', 'Log cleanup failed;
+  ,Log cleanup failed;
   ', error);
       throw error}
   }

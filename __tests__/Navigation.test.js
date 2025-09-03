@@ -1,26 +1,46 @@
-import React from 'react';';
-import { render, screen, fireEvent } from '@testing-library/react';';
-import '@testing-library/jest-dom';';
-import Navigation from '../components/Navigation';';
-  describe('Navigation', () => {';
-  test('renders without crashing', () => {';
+<<<<<<< HEAD
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import Navigation from '../components/Navigation';
+
+describe('Navigation', () => {
+  test('renders without crashing', () => {
     render(<Navigation />);
-    expect(screen.getByTestId('navigation')).toBeInTheDocument();';
+    expect(screen.getByTestId('navigation')).toBeInTheDocument();
   });
-;
-  test('displays correct content', () => {';
+
+  test('displays correct content', () => {
     render(<Navigation />);
-    // Add specific content tests based on component;
+=======
+import React   from 'react''
+import { render, screen, fireEvent }   from '@testing-library/react''
+import '@testing-library/jest-dom
+import Navigation   from '../components/Navigation''
+  describe('Navigation', () => {'
+  test('renders without crashing', () => {'
+    render(<Navigation  />)
+    expect(screen.getByTestId('navigation')).toBeInTheDocument();'
+  })
+
+  test('displays correct content', () => {'
+    render(<Navigation  />)
+>>>>>>> main
+    // Add specific content tests based on component
   });
-;
-  test('handles user interactions', () => {';
-    render(<Navigation />);
-    // Add interaction tests based on component functionality;
+
+  test('handles user interactions', () => {'
+    render(<Navigation  />)
+    // Add interaction tests based on component functionality
   });
-;
-  test('applies correct styling', () => {';
-    render(<Navigation />);
-    // Add styling tests if needed;
+
+  test('applies correct styling', () => {'
+    render(<Navigation  />)
+    // Add styling tests if needed
+<<<<<<< HEAD
   });
 });
-;
+=======
+  })
+})
+>>>>>>> main

@@ -56,10 +56,17 @@ function ToastContainer({ toasts, removeToast }: { toasts: Toast[]; removeToast:
   )}
 
 function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => void }) {
+<<<<<<< HEAD
+  const bgColor = {
+    success: 'bg-green-500', error: 'bg-red-500',
+    warning: 'bg-yellow-500', info: 'bg-blue-500',
+  }[toast.type]
+=======
   const bgColor = {"
-    success: 'bg-green-500', error: 'bg-red-500',"
+    success: 'bg-green-500', error: 'bg-red-500,
     warning: 'bg-yellow-500', info: 'bg-blue-500',
   }[toast.type];
+>>>>>>> main
 
   return ("
     <div className={`${bgColor} text-white px-4 py-3 rounded-lg shadow-lg max-w-sm`}"" >"
@@ -70,7 +77,12 @@ function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => vo
             <p className="text-sm opacity-90 mt-1">{toast.message}</p>
           )}
         </div>
+<<<<<<< HEAD
+        <button
+          onClick={() => onRemove(toast.id)}
+=======
         <button onClick={() =" > onRemove(toast.id)}"
+>>>>>>> main
           className="ml-2 text-white hover: text-gray-200"
         >
           ×

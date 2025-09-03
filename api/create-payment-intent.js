@@ -1,34 +1,29 @@
 import Stripe from,;
-  stripe';';
+  stripe;
 import { withErrorLogging } from;
-  './withErrorLogging.cjs';';
+  './withErrorLogging.cjs;
 const PROD_DOMAIN =;
-  'app.ziontechgroup.com';';
+  'app.ziontechgroup.com;
 function isProdDomain() {;
-  const url = process.env.URL || ';';
-  ';';
+  const url = process.env.URL || ;
+  ;
   try {;
     return new URL(url).hostname === PROD_DOMAIN} catch {;
     return false}
 }
 async function handler(req, res) {;
-  if (req.method !== 'POST;';
-  ') {';
+  if (req.method !== 'POST;) {';
     res.statusCode = 405;
-    res.setHeader('Allow;';
-  ', 'POST;';
-  ');';
-    res.end('Method Not Allowed;';
-  ');';
+    res.setHeader('Allow;, 'POST;);';
+    res.end('Method Not Allowed;);';
     return}
   const { amount } = req.body || {}
-  if (typeof amount !== 'number;';
-  ') {';
+  if (typeof amount !== 'number;) {';
     res.statusCode = 400;
     res.json({ error: 'Invalid amount })';
     return}
   try {;
-    const liveKey = process.env.STRIPE_SECRET_KEY || '';';
+    const liveKey = process.env.STRIPE_SECRET_KEY || ';
     const testKey = process.env.STRIPE_TEST_SECRET_KEY || liveKey;
     if(;
       !isProdDomain() &&;
@@ -43,7 +38,7 @@ async function handler(req, res) {;
     const intent = await stripe.paymentIntents.create({;
       amount: Math.round(amount * 100),;
       currency:;
-  'usd',';
+  'usd,;
       automatic_payment_methods: { enabled: true }});
     res.statusCode = 200;
     res.json({ clientSecret: intent.client_secret, id: intent.id })} catch (err) {;

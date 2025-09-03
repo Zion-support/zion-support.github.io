@@ -7,43 +7,44 @@ const Navigation: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const navigationItems = [
-    { name: 'Home', href: '/' },
+  { name: 'Home', href: '/' },
     {
       name: 'Services', 
       href: '/services',
       dropdown: [
         { name: 'AI Services', href: '/services/ai-services' },
         { name: 'IT Services', href: '/services/it-services' },
+<<<<<<< HEAD
+        { name: 'Micro SaaS', href: '/services/micro-saas' }
+=======
         { name: 'Micro SaaS', href: '/services/micro-saas' },
         { name: 'Web Development', href: '/services/web-development' },
         { name: 'Cloud Services', href: '/services/cloud-services' },
         { name: 'AI Development', href: '/services/ai-development' }
+>>>>>>> main
       ]
     }, 
     {
       name: 'Solutions',
       href: '/solutions', 
       dropdown: [
+<<<<<<< HEAD
+        { name: 'Custom Development', href: '/solutions/custom-development' },
+        { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise' }
+=======
         { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
         { name: 'Customer Support', href: '/solutions/customer-support' },
         { name: 'Email Automation', href: '/solutions/email-automation' },
         { name: 'Event Management', href: '/solutions/event-management' },
         { name: 'Project Management', href: '/solutions/project-management' },
         { name: 'Workflow Automation', href: '/solutions/workflow-automation' }
+>>>>>>> main
       ]
-    },
-    {
-      name: 'Company',
-      href: '/about',
-      dropdown: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' }
-      ]
-    },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Pricing', href: '/pricing' },
+    }, 
+    { name: 'About', href: '/about' }, 
+    { name: 'Blog', href: '/blog' }, 
+    { name: 'Careers', href: '/careers' }, 
     { name: 'Contact', href: '/contact' }
   ];
 

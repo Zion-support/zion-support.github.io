@@ -47,7 +47,7 @@ export default function EnhancedFooter() {
   };
 
   const socialLinks = [
-    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup' },
+  { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup' },
     { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup' },
     { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup' },
     { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup' }

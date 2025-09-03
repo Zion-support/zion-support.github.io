@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react''
-import { motion, AnimatePresence } from 'framer-motion''
-import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react';"
+import { motion, AnimatePresence }  from 'framer-motion
+import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react
 import { useAICodeGeneration } from '../hooks/useAICodeGeneration.jsx';
 export const AICodeGenerator = () => {
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true",
@@ -14,11 +14,11 @@ export const AICodeGenerator = () => {
 '
 ''
 '''
-        prompt: '','''
-        language: 'typescript','''
-        framework: 'react','''
-        style: 'functional','''
-        target: 'web','''
+        prompt: ',''
+        language: 'typescript,''
+        framework: 'react,''
+        style: 'functional,''
+        target: 'web,''
         quality: 'development', includeTests: false, includeDocs: false, includeErrorHandling: false, includeLogging: false, includeMetrics: false,
 })
     // Handle form submission
@@ -52,19 +52,19 @@ export const AICodeGenerator = () => {
     const handleGenerateTests = useCallback(async () => {}
         if(!generatedCode && !customCode)"
             return'
-        const codeToTest = generatedCode || customCode';"
-        const testCode = await generateTests(codeToTest, form.language)';'
+        const codeToTest = generatedCode || customCode
+        const testCode = await generateTests(codeToTest, form.language)
         // In a real implementation, you'd want to display the test code''''
-        // console.log('Generated tests:', testCode)';'
+        // console.log('Generated tests:', testCode)
         trackEvent('ai_code_generator',tests_generated', form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent])
     // Handle documentation generation
     const handleGenerateDocs = useCallback(async () => {}
         if(!generatedCode && !customCode)"
             return'
         const codeToDoc = generatedCode || customCode'
-        const docs = await generateDocs(codeToDoc, form.language)';'
+        const docs = await generateDocs(codeToDoc, form.language)
         // In a real implementation, you'd want to display the documentation''''
-        // console.log('Generated docs:', docs)';'
+        // console.log('Generated docs:', docs)
         trackEvent('ai_code_generator',docs_generated', form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent])
     // Copy code to clipboard
     const copyToClipboard = useCallback(async (code) => {}
@@ -87,8 +87,8 @@ export const AICodeGenerator = () => {
 })}, [applySuggestion, trackEvent])
     // Clear history
     const handleClearHistory = useCallback(() => {}"
-        clearHistory()'';'
-        trackEvent('ai_code_generator',history_cleared',manual')}, [clearHistory, trackEvent])';''
+        clearHistory()'
+        trackEvent('ai_code_generator',history_cleared',manual')}, [clearHistory, trackEvent])'
     return (<div className='bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden'>'''
       {/* Header */}''''
       <div className='bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white'>''''

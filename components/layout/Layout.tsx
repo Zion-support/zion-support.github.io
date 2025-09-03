@@ -1,10 +1,17 @@
 React from
   'react'
-import Header from 'react'
-  './Header';import Footer from 'react'
-  './Footer
+import Header  from 'react./Header';import Footer  from 'react./Footer
 
+<<<<<<< HEAD
+type LayoutProps = {
+  children: React.ReactNode;
+};
+
+export default function Layout({ children }: LayoutProps) {
+  return <div>{children}</div>;
+=======
 type LayoutProps = {children: React.ReactNode
+>>>>>>> main
 }
 export default function Layout({ children }: LayoutProps) {
   return (

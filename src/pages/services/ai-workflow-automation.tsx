@@ -1,5 +1,5 @@
-import React from 'react';"
-import { SEO } from '../../components/SEO';"
+import React  from 'react
+import { SEO }  from ';../../components/SEO';
 import { motion } from 'framer-motion';
 import { 
   Workflow, 
@@ -35,102 +35,102 @@ import {
 
 const AIWorkflowAutomation: React.FC = () => {
   const features = [
-    {
+  {
       icon: Workflow,"
-      title: 'Visual Workflow Builder',"
-      description: 'Create complex automation workflows with our intuitive drag-and-drop interface',"
+      title: 'Visual Workflow Builder,
+      description: 'Create complex automation workflows with our intuitive drag-and-drop interface,
       color: 'from-blue-500 to-cyan-500',
 },
     {
       icon: Bot,"
-      title: 'AI-Powered Automation',"
-      description: 'Intelligent bots that learn and adapt to your business processes automatically',"
+      title: 'AI-Powered Automation,
+      description: 'Intelligent bots that learn and adapt to your business processes automatically,
       color: 'from-green-500 to-emerald-500',
 },
     {
       icon: Link,"
-      title: '500+ Integrations',"
-      description: 'Connect with popular tools like Slack, Salesforce, HubSpot, and more',"
+      title: '500+ Integrations,
+      description: 'Connect with popular tools like Slack, Salesforce, HubSpot, and more,
       color: 'from-purple-500 to-pink-500',
 },
     {
       icon: Clock,"
-      title: 'Real-Time Processing',"
-      description: 'Execute workflows instantly with sub-second response times',"
+      title: 'Real-Time Processing,
+      description: 'Execute workflows instantly with sub-second response times,
       color: 'from-yellow-500 to-orange-500',
 },
     {
       icon: Shield,"
-      title: 'Enterprise Security',"
-      description: 'Bank-level security with encryption, audit logs, and compliance features',"
+      title: 'Enterprise Security,
+      description: 'Bank-level security with encryption, audit logs, and compliance features,
       color: 'from-red-500 to-pink-500',
 },
     {
       icon: BarChart3,"
-      title: 'Analytics & Insights',"
-      description: 'Track workflow performance and optimize processes with detailed analytics',"
+      title: 'Analytics & Insights,
+      description: 'Track workflow performance and optimize processes with detailed analytics,
       color: 'from-indigo-500 to-blue-500',
 }
   ];
 
   const automationTypes = [
-    {"
-      title: 'Sales Automation',"
+  {"
+      title: 'Sales Automation,
       description: 'Automate lead scoring, follow-ups, and pipeline management',
       icon: Target,"
-      benefits: ['Lead qualification', 'Email sequences', 'CRM updates', 'Pipeline tracking'],"
-      pricing: '$49/month',"
+      benefits: ['Lead qualification,Email sequences,CRM updates,Pipeline tracking'],"
+      pricing: '$49/month,
       color: 'from-blue-500 to-cyan-500',
 },
     {"
-      title: 'Marketing Automation',"
+      title: 'Marketing Automation,
       description: 'Streamline campaigns, content distribution, and customer engagement',
       icon: Users,"
-      benefits: ['Campaign management', 'Social media posting', 'Email marketing', 'Analytics'],"
-      pricing: '$39/month',"
+      benefits: ['Campaign management,Social media posting,Email marketing,Analytics'],"
+      pricing: '$39/month,
       color: 'from-green-500 to-emerald-500',
 },
     {"
-      title: 'HR Automation',"
+      title: 'HR Automation,
       description: 'Automate recruitment, onboarding, and employee management processes',
       icon: Users,"
-      benefits: ['Resume screening', 'Interview scheduling', 'Onboarding workflows', 'Performance tracking'],"
-      pricing: '$59/month',"
+      benefits: ['Resume screening,Interview scheduling,Onboarding workflows,Performance tracking'],"
+      pricing: '$59/month,
       color: 'from-purple-500 to-pink-500',
 },
     {"
-      title: 'Finance Automation',"
+      title: 'Finance Automation,
       description: 'Automate invoicing, expense management, and financial reporting',
       icon: BarChart3,"
-      benefits: ['Invoice generation', 'Expense tracking', 'Payment processing', 'Financial reports'],"
-      pricing: '$69/month',"
+      benefits: ['Invoice generation,Expense tracking,Payment processing,Financial reports'],"
+      pricing: '$69/month,
       color: 'from-yellow-500 to-orange-500',
 }
   ];
 
   const benefits = ["
-    'Reduce manual work by 90%',"
-    'Increase productivity by 300%',"
-    'Eliminate human errors',"
-    '24/7 automated operations',"
-    'Scalable workflows',"
-    'Cost savings up to 70%',"
-    'Faster decision making',"
+    'Reduce manual work by 90%,
+    'Increase productivity by 300%,
+    'Eliminate human errors,
+    '24/7 automated operations,
+    'Scalable workflows,
+    'Cost savings up to 70%,
+    'Faster decision making,
     'Improved compliance',;
 ];
 
   const integrations = ["
-    'Salesforce',"
-    'HubSpot',"
-    'Slack',"
-    'Microsoft Teams',"
-    'Google Workspace',"
-    'Zapier',"
-    'Mailchimp',"
-    'QuickBooks',"
-    'Shopify',"
-    'WordPress',"
-    'Jira',"
+    'Salesforce,
+    'HubSpot,
+    'Slack,
+    'Microsoft Teams,
+    'Google Workspace,
+    'Zapier,
+    'Mailchimp,
+    'QuickBooks,
+    'Shopify,
+    'WordPress,
+    'Jira,
     'Trello',;
 ];
 

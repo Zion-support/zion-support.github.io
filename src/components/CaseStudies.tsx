@@ -1,25 +1,47 @@
-import { motion     } from 'framer-motion';"
-import { CheckCircle, TrendingUp, Users, DollarSign     } from 'lucide-react';"
-import { motion     } from 'framer-motion';"
+import { motion     } from 'framer-motion
+import { CheckCircle, TrendingUp, Users, DollarSign     } from 'lucide-react
+import { motion     } from 'framer-motion
 import { CheckCircle, TrendingUp, Users, DollarSign     } from 'lucide-react';
 interface CaseStudy {
   id: string title: string description: string industry: string results: { metric: string value: string icon: React.ReactNode,
 }[]
   technologies: string[]
+<<<<<<< HEAD
+  duration: string}
+const caseStudies: CaseStudy[] = [{ id: '1', title: 'AI-Powered Customer Service Automation',
+    description: 'Implemented multi-agent AI system for enterprise customer service, reducing response time and improving satisfaction.',
+    industry: 'E-commerce', results: [{ metric: 'Response Time', value: '85% faster', icon: <TrendingUp className='w-5 h-5' /> },
+      { metric: 'Customer Satisfaction', value: '+32%', icon: <CheckCircle className='w-5 h-5' /> }, { metric: 'Cost Reduction', value: '40%', icon: <DollarSign className='w-5 h-5' /> }
+    ], technologies: ['OpenAI GPT-4', 'LangChain', 'React', 'Node.js', 'PostgreSQL'], duration: '3 months'},
+  { id: '2', title: 'Cloud-Native Data Platform Migration',
+    description: 'Migrated legacy data infrastructure to modern cloud-native platform with real-time analytics capabilities.', industry: 'Financial Services',
+    results: [{ metric: 'Processing Speed', value: '10x faster', icon: <TrendingUp className='w-5 h-5' /> }, { metric: 'Scalability', value: 'Unlimited', icon: <Users className='w-5 h-5' /> },
+      { metric: 'Infrastructure Cost', value: '-60%', icon: <DollarSign className='w-5 h-5' /> }
+    ], technologies: ['AWS', 'Kubernetes', 'Apache Kafka', 'Apache Spark', 'Terraform'], duration: '6 months'},
+  { id: '3', title: 'Zero-Trust Cybersecurity Implementation',
+    description: 'Deployed comprehensive zero-trust security framework with automated threat detection and response.', industry: 'Healthcare',
+    results: [{ metric: 'Security Incidents', value: '-95%', icon: <CheckCircle className='w-5 h-5' /> }, { metric: 'Compliance Score', value: '99.9%', icon: <CheckCircle className='w-5 h-5' /> },
+      { metric: 'Detection Time', value: 'Real-time', icon: <TrendingUp className='w-5 h-5' /> }
+    ], technologies: ['Okta', 'CrowdStrike', 'Splunk', 'AWS GuardDuty', 'Python'], duration: '4 months'}
+]
+export default function CaseStudies() {
+  return (<section className='py-24 sm: py-32 bg-gradient-to-br from-slate-50 to-blue-50'>
+=======
   duration: string,
 }
 "
 const caseStudies: CaseStudy[] = [{ id: '1', title: 'AI-Powered Customer Service Automation', description: 'Implemented multi-agent AI system for enterprise customer service, reducing response time and improving satisfaction.', industry: 'E-commerce', results: ["
       { metric: 'Response Time', value: '85% faster', icon: <TrendingUp className='w-5 h-5' /" > }, { metric: 'Customer Satisfaction', value: '+32%', icon: <CheckCircle className='w-5 h-5' /" > }, { metric: 'Cost Reduction', value: '40%', icon: <DollarSign className='w-5 h-5' /" > }",
-], technologies: ['OpenAI GPT-4', 'LangChain', 'React', 'Node.js', 'PostgreSQL'], duration: '3 months',
+], technologies: ['OpenAI GPT-4,LangChain,React,Node.js,PostgreSQL'], duration: '3 months',
 }, { id: '2', title: 'Cloud-Native Data Platform Migration', description: 'Migrated legacy data infrastructure to modern cloud-native platform with real-time analytics capabilities.', industry: 'Financial Services', results: [{ metric: 'Processing Speed', value: '10x faster', icon: <TrendingUp className='w-5 h-5' /" > }, { metric: 'Scalability', value: 'Unlimited', icon: <Users className='w-5 h-5' /" > }, { metric: 'Infrastructure Cost', value: '-60%', icon: <DollarSign className='w-5 h-5' /" > }",
-], technologies: ['AWS', 'Kubernetes', 'Apache Kafka', 'Apache Spark', 'Terraform'], duration: '6 months',
+], technologies: ['AWS,Kubernetes,Apache Kafka,Apache Spark,Terraform'], duration: '6 months',
 }, { id: '3', title: 'Zero-Trust Cybersecurity Implementation', description: 'Deployed comprehensive zero-trust security framework with automated threat detection and response.', industry: 'Healthcare', results: [{ metric: 'Security Incidents', value: '-95%', icon: <CheckCircle className='w-5 h-5' /" > }, { metric: 'Compliance Score', value: '99.9%', icon: <CheckCircle className='w-5 h-5' /" > }, { metric: 'Detection Time', value: 'Real-time', icon: <TrendingUp className='w-5 h-5' /" > }",
-], technologies: ['Okta', 'CrowdStrike', 'Splunk', 'AWS GuardDuty', 'Python'], duration: '4 months',
+], technologies: ['Okta,CrowdStrike,Splunk,AWS GuardDuty,Python'], duration: '4 months',
 }
 ]
 export default function CaseStudies() {"
   return (<section className='py-24 sm:py-32 bg-gradient-to-br from-slate-50 to-blue-50'>"
+>>>>>>> main
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         {/* Header */}"
         <div className='mx-auto max-w-2xl lg:text-center mb-16'>
@@ -47,12 +69,21 @@ export default function CaseStudies() {"
             transition={{ duration: 0.6, delay: 0.2 }}" >
             See how our AI, cloud, and cybersecurity solutions have transformed businesses across industries.</motion.p>
         </div>
+<<<<<<< HEAD
+        {/* Case Studies Grid */}
+        <div className='grid gap-8 lg: grid-cols-1'>
+          {caseStudies.map((study, index) => (
+            <motion.div
+              key={study.id}
+              className='bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover: shadow-xl transition-all duration-300';
+=======
         {/* Case Studies Grid */}"
         <div className='grid gap-8 lg:grid-cols-1'>
           {caseStudies.map((study, index) => (
             <motion .div
               key={study.id}"
               className='bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300'
+>>>>>>> main
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true  }}
@@ -99,7 +130,7 @@ export default function CaseStudies() {"
                   <div className='flex flex-wrap gap-2'>
                     {study.technologies.map((tech, idx) => (
                       <span key={idx}"
-                        className='bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm'" >
+                        className='bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm  >
                         {tech}
                       </span>
                     ))}
@@ -110,7 +141,7 @@ export default function CaseStudies() {"
           ))}
         </div>
         {/* CTA */}
-        <motion .div"
+        <motion .div'
           className='text-center mt-12'
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -119,9 +150,15 @@ export default function CaseStudies() {"
           <p className='text-lg text-gray-600 mb-6'>
             Ready to see similar results for your business?
           </p>
+<<<<<<< HEAD
+          <a
+            href='/contact';
+            className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl'>
+=======
           <a "
             href='/contact'
-            className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl'" >
+            className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl  >
+>>>>>>> main
             Start Your Project
           </a>
         </motion.div>
@@ -129,4 +166,4 @@ export default function CaseStudies() {"
     </section>
   ),
 }
-;"
+;'

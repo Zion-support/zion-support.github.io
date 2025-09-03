@@ -7,29 +7,52 @@ import {
 } from 'lucide-react';
 export default function Team() {
   const teamMembers = [
+<<<<<<< HEAD
     {
       id: 1, name: "Dr. Sarah Chen",
       role: "Chief Executive Officer", department: "Executive",
       bio: "Visionary leader with 15+ years in AI and quantum computing. Former MIT researcher and Google AI pioneer.", expertise: ["AI Strategy", "Quantum Computing", "Leadership"], achievements: ["MIT PhD", "Google AI Research", "50+ Patents"]
+=======
+  {
+      id: 1, name: "Dr. Sarah Chen",
+      role: "Chief Executive Officer", department: "Executive",
+      bio: "Visionary leader with 15+ years in AI and quantum computing. Former MIT researcher and Google AI pioneer.", expertise: ["AI Strategy,Quantum Computing,Leadership"], achievements: ["MIT PhD,Google AI Research,50+ Patents"]
+>>>>>>> main
     }, {
       id: 2,
       name: "Prof. Michael Rodriguez", role: "Chief Technology Officer",
       department: "Technology", bio: "Quantum computing expert and former IBM Research scientist. Leading our quantum technology initiatives.",
+<<<<<<< HEAD
       expertise: ["Quantum Computing", "Research", "Innovation"], achievements: ["IBM Research", "Quantum Pioneer", "Nobel Nominee"]
+=======
+      expertise: ["Quantum Computing,Research,Innovation"], achievements: ["IBM Research,Quantum Pioneer,Nobel Nominee"]
+>>>>>>> main
     }, {
       id: 3,
       name: "Alex Thompson", role: "Head of AI Research",
       department: "AI & Machine Learning", bio: "AI researcher and entrepreneur. Former DeepMind engineer with expertise in neural networks and deep learning.",
+<<<<<<< HEAD
       expertise: ["Deep Learning", "Neural Networks", "AI Ethics"], achievements: ["DeepMind Alumni", "AI Ethics Leader", "30+ Publications"]
+=======
+      expertise: ["Deep Learning,Neural Networks,AI Ethics"], achievements: ["DeepMind Alumni,AI Ethics Leader,30+ Publications"]
+>>>>>>> main
     }, {
       id: 4,
       name: "Lisa Park", role: "Chief Security Officer",
       department: "Cybersecurity", bio: "Cybersecurity expert with 12+ years protecting enterprise systems. Former NSA security analyst.",
+<<<<<<< HEAD
       expertise: ["Cybersecurity", "Risk Management", "Compliance"], achievements: ["NSA Experience", "Security Expert", "CISSP Certified"]
+=======
+      expertise: ["Cybersecurity,Risk Management,Compliance"], achievements: ["NSA Experience,Security Expert,CISSP Certified"]
+>>>>>>> main
     }
   ];
   const stats = [
+<<<<<<< HEAD
     { number: "50+", label: "Team Members", icon: Users }, { number: "15+", label: "Countries", icon: Globe },
+=======
+  { number: "50+", label: "Team Members", icon: Users }, { number: "15+", label: "Countries", icon: Globe },
+>>>>>>> main
     { number: "200+", label: "Years Combined Experience", icon: Award }, { number: "95%", label: "Employee Satisfaction", icon: Star }
   ];
   return (
@@ -147,7 +170,11 @@ export default function Team() {
 
                     <div className="flex items-center justify-center space-x-4 pt-4 border-t border-slate-600/50">
                       <a
+<<<<<<< HEAD
+                        href={`mailto: ${member.name.toLowerCase().replace(/\s+/g, '.')}@ziontechgroup.com`}
+=======
                         href={`mailto: ${member.name.toLowerCase().replace(/\\s+/g, '.')}@ziontechgroup.com`}
+>>>>>>> main
                         className="text-gray-400 hover: text-green-400 transition-colors"
                       >
                         <Mail className="w-5 h-5" />
@@ -173,7 +200,11 @@ export default function Team() {
                 Join Our Team
               </h2>
               <p className="text-xl text-gray-300 mb-8">
+<<<<<<< HEAD
+                We&apos;re always looking for exceptional talent to join our mission of advancing technology '
+=======
                 We're always looking for exceptional talent to join our mission of advancing technology '
+>>>>>>> main
                 and solving complex challenges. Explore opportunities to work with the best minds in tech.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">

@@ -1,4 +1,7 @@
-import React from 'react';"
+<<<<<<< HEAD
+import React, { useState } from 'react' import { Link } from 'react - router - dom' import { motion } from 'framer - motion' import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from 'lucide - react' export function FooterNewsletter () { const [email, setEmail] = useState ('')  const [isSubscribed, setIsSubscribed] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const handleSubscribe = async (e) => { e.preventDefault ()  if (!email) return setIsLoading (true) ';'
+=======
+import React from 'react
 import { Link } from 'react-router-dom';
 import { 
   Mail, 
@@ -20,7 +23,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
-    {"
+  {"
       title: 'Services',
       links: ["
         { name: 'AI Services', href: '/services/ai' },"
@@ -132,7 +135,7 @@ export function Footer() {
                 {section.links.map((link) => (
                   <li key={link.name}" >
                     <Link to={link.href}"
-                      className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center group"" >"
+                      className='text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center group  >'
                       <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" /" >
                       {link.name}
                     </Link>
@@ -230,3 +233,4 @@ export function Footer() {
   );,
 }
 "
+>>>>>>> main

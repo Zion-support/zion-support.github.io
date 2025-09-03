@@ -6,13 +6,7 @@ import { glob } from 'glob';
 
 // Common Lucide React icons that are frequently used
 const commonIcons = [
-  'ArrowRight', 'CheckCircle', 'Star', 'Users', 'Zap', 'Shield', 'Globe', 
-  'TrendingUp', 'Award', 'Clock', 'Brain', 'Cloud', 'Database', 'Network', 
-  'Target', 'Phone', 'Mail', 'MessageSquare', 'FileText', 'Search', 'Menu',
-  'X', 'ChevronDown', 'ChevronUp', 'ChevronLeft', 'ChevronRight', 'Plus',
-  'Minus', 'Edit', 'Trash', 'Save', 'Download', 'Upload', 'Settings',
-  'User', 'Lock', 'Unlock', 'Eye', 'EyeOff', 'Heart', 'Share', 'Copy',
-  'ExternalLink', 'Home', 'Info', 'AlertCircle', 'Check', 'XCircle'
+  'ArrowRight,CheckCircle,Star,Users,Zap,Shield,Globe,TrendingUp,Award,Clock,Brain,Cloud,Database,Network,Target,Phone,Mail,MessageSquare,FileText,Search,Menu,X,ChevronDown,ChevronUp,ChevronLeft,ChevronRight,Plus,Minus,Edit,Trash,Save,Download,Upload,Settings,User,Lock,Unlock,Eye,EyeOff,Heart,Share,Copy,ExternalLink,Home,Info,AlertCircle,Check,XCircle'
 ];
 
 let totalFixes = 0;
@@ -58,15 +52,15 @@ function fixMissingImports(content, filePath) {
   
   if (existingImport) {
     // Add missing icons to existing import
-    const existingIcons = existingImport[0].match(/{([^}]*)}/)?.[1]?.split(',').map(icon => icon.trim()) || [];
+    const existingIcons = existingImport[0].match(/{([^}]*)}/)?.[1]?.split(,).map(icon => icon.trim()) || [];
     const allIcons = [...new Set([...existingIcons, ...missingImports])].sort();
     
-    const newImport = `import { ${allIcons.join(', ')} } from 'lucide-react';`;
+    const newImport = `import { ${allIcons.join(,)} } from 'lucide-react';`;
     fixedContent = fixedContent.replace(existingImportRegex, newImport);
     changes++;
   } else {
     // Create new import statement
-    const newImport = `import { ${missingImports.join(', ')} } from 'lucide-react';\n`;
+    const newImport = `import { ${missingImports.join(,)} } from 'lucide-react';\n`;
     
     // Find the best place to insert the import
     const importIndex = fixedContent.indexOf('import');
@@ -105,22 +99,11 @@ async function main() {
   console.log('🔧 Starting missing imports fix...\n');
   
   const patterns = [
-    'pages/**/*.{tsx,jsx}',
-    'src/**/*.{tsx,jsx}',
-    'components/**/*.{tsx,jsx}'
+    'pages/**/*.{tsx,jsx},src/**/*.{tsx,jsx},components/**/*.{tsx,jsx}'
   ];
   
   const excludeDirs = [
-    'node_modules',
-    '.next',
-    'build',
-    'dist',
-    'scripts',
-    'automation',
-    'automation_backup',
-    'src.disabled',
-    'pages.disabled',
-    'components.disabled'
+    'node_modules,.next,build,dist,scripts,automation,automation_backup,src.disabled,pages.disabled,components.disabled'
   ];
   
   for (const pattern of patterns) {

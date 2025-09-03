@@ -8,11 +8,19 @@ try {
   console.log('📦 Testing component imports...');
   // Test basic React functionality;
   const React = require('react');
+<<<<<<< HEAD
+  console.log('✅ React import successful');
+
+  // Test framer-motion;
+  const { motion } = require('framer-motion');
+  console.log('✅ Framer Motion import successful');
+=======
   console.log('✅ React import successful', React.version);
 
   // Test framer-motion;
   const { motion } = require('framer-motion');
   console.log('✅ Framer Motion import successful', typeof motion);
+>>>>>>> main
 
   // Test lucide-react icons;
   const {
@@ -23,6 +31,9 @@ try {
     Shield,
     Zap,
   } = require('lucide-react');
+<<<<<<< HEAD
+  console.log('✅ Lucide React icons import successful');
+=======
   console.log('✅ Lucide React icons import successful', {
     ArrowRight: typeof ArrowRight,
     CheckCircle: typeof CheckCircle,
@@ -31,6 +42,7 @@ try {
     Shield: typeof Shield,
     Zap: typeof Zap
   });
+>>>>>>> main
 
   console.log('🎉 All core dependencies imported successfully!');
   console.log('📋 Components should be ready for build');

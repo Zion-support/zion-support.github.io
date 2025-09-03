@@ -18,6 +18,14 @@ class ErrorBoundary extends Component<Props, State> {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error: ', error, errorInfo);
+    // Log to external service in production;
+    if(process.env.NODE_ENV === 'production') {
+      // You can integrate with services like Sentry here
+      console.error('Production error: ', { error, errorInfo })}
+=======
 
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
@@ -32,8 +40,11 @@ class ErrorBoundary extends Component<Props, State> {
     // Log error to monitoring service
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
-    // You can also log the error to an error reporting service here
-    // Example: Sentry.captureException(error, { extra: errorInfo });
+    // In production, you would send this to your error reporting service
+    if (process.env.NODE_ENV === 'production') {
+      // Example: Sentry.captureException(error, { extra: errorInfo });
+    }
+>>>>>>> main
   }
 
   handleRetry = () => {
@@ -48,21 +59,50 @@ class ErrorBoundary extends Component<Props, State> {
 
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="mb-6">
-              <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
-              <h1 className="text-2xl font-bold text-gray-900 mb-2">
-                Something went wrong
-              </h1>
-              <p className="text-gray-600 mb-6">
-                We're sorry, but something unexpected happened. Please try again or return to the homepage.
-              </p>
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
+            <div className="flex justify-center mb-4">
+              <AlertTriangle className="w-16 h-16 text-red-500" />
             </div>
+<<<<<<< HEAD
+            <div className='mt-4 text-center'>
+              <h3 className='text-lg font-medium text-gray-900'>Something went wrong</h3>
+              <p className='mt-2 text-sm text-gray-500'>
+                We&apos;re sorry, but something unexpected happened.Please try refreshing the page.</p>'
+              <div className='mt-6'>
+                <button;
+                  onClick={() => window.location.reload()}
+                  className='inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'>
+                  Refresh Page
+                </button>
+=======
             
-            <div className="space-y-3">
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">
+              Oops! Something went wrong
+            </h1>
+            
+            <p className="text-gray-600 mb-6">
+              We're sorry, but something unexpected happened. Please try again or contact support if the problem persists.
+            </p>
+
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-left">
+                <h3 className="font-semibold text-red-800 mb-2">Error Details:</h3>
+                <pre className="text-xs text-red-700 overflow-auto">
+                  {this.state.error.toString()}
+                </pre>
+                {this.state.errorInfo && (
+                  <pre className="text-xs text-red-600 mt-2 overflow-auto">
+                    {this.state.errorInfo.componentStack}
+                  </pre>
+                )}
+>>>>>>> main
+              </div>
+            )}
+
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button
                 onClick={this.handleRetry}
-                className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center"
+                className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
@@ -70,24 +110,21 @@ class ErrorBoundary extends Component<Props, State> {
               
               <Link
                 href="/"
-                className="w-full border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors flex items-center justify-center"
+                className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
               >
                 <Home className="w-4 h-4 mr-2" />
                 Go Home
               </Link>
             </div>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-3 rounded overflow-auto">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
-              </details>
-            )}
+            <div className="mt-6 pt-6 border-t border-gray-200">
+              <p className="text-sm text-gray-500">
+                Need help?{' '}
+                <Link href="/contact" className="text-blue-600 hover:text-blue-700">
+                  Contact our support team
+                </Link>
+              </p>
+            </div>
           </div>
         </div>
       );

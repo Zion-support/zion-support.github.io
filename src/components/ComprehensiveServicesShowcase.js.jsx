@@ -1,10 +1,10 @@
-import React, { useState } from 'react''
+import React, { useState }  from 'react
 import { motion, AnimatePresence } from 'framer-motion';
 import {}"
   Brain, Shield, Rocket, Globe, Zap, ArrowRight, Star, Users, TrendingUp, CheckCircle, DollarSign,'
   Clock,''
   Target,'''
-  Award'''' } from 'lucide-react''
+  Award'''' }  from 'lucide-react
 import { Link } from 'react-router-dom';
 // Import the new service data
 
@@ -13,20 +13,20 @@ import { Link } from 'react-router-dom';
 const serviceCategories = []
   {}"
 '
-    id: 'micro-saas',''''
-    name: 'Micro SAAS Solutions',''''
+    id: 'micro-saas,'''
+    name: 'Micro SAAS Solutions,'''
     icon: <Rocket className='w-6 h-6' /" >,'
     color: 'from-purple-600 to-pink-600', services: revolutionary2027AdvancedMicroSaasServices,
 }, {}"
 '
-    id: 'it-infrastructure',''''
-    name: 'IT Infrastructure & Cybersecurity',''''
+    id: 'it-infrastructure,'''
+    name: 'IT Infrastructure & Cybersecurity,'''
     icon: <Shield className='w-6 h-6' /" >,'
     color: 'from-red-600 to-orange-600', services: revolutionary2027ITInfrastructureCybersecurityServices,
 }, {}"
 '
-    id: 'ai-innovation',''''
-    name: 'AI Innovation Services',''''
+    id: 'ai-innovation,'''
+    name: 'AI Innovation Services,'''
     icon: <Brain className='w-6 h-6' /" >,'
     color: 'from-blue-600 to-cyan-600', services: revolutionary2027AIInnovationServices,
 }
@@ -67,13 +67,13 @@ export function ComprehensiveServicesShowcase() {}"
         ease: 'easeOut''',
 }
     };",
-}';'
+}
   return (''''
     <section className='py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>''''
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>"
         {/* Header Section */}'''
         <motion .div ''''
-          className='text-center mb-16'''
+          className='text-center mb-16'
           initial = {}
   { opacity: 0, y: 30,
 }}
@@ -118,7 +118,7 @@ export function ComprehensiveServicesShowcase() {}"
         </motion.div>"
         {/* Category Navigation */}'''
         <motion .div ''''
-          className='flex flex-wrap justify-center gap-4 mb-12'''
+          className='flex flex-wrap justify-center gap-4 mb-12'
           initial = {}
   { opacity: 0, y: 20,
 }}
@@ -145,19 +145,19 @@ export function ComprehensiveServicesShowcase() {}"
         </motion.div>"
         {/* Services Grid */}'''
         <motion .div''''
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8''''
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8''
           variants={containerVariants}''''
           initial='hidden''''
           animate='visible'''" >
           {currentServices.map((service) => ("
             <motion .div'''
               key={service.id}''''
-              className='group cursor-pointer'''
+              className='group cursor-pointer'
               variants={itemVariants}
               onClick={ () =" > setSelectedService (service) }"
             >'''
               <motion .div''''
-                className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 h-full'''
+                className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 h-full'
                 variants={cardVariants}
                 whileHover = {}
   {}"
@@ -243,7 +243,7 @@ export function ComprehensiveServicesShowcase() {}"
         </motion.div>"
         {/* Call to Action */}'''
         <motion .div ''''
-          className='text-center mt-16'''
+          className='text-center mt-16'
           initial = {}
   { opacity: 0, y: 30,
 }}
@@ -280,14 +280,14 @@ export function ComprehensiveServicesShowcase() {}"
       <AnimatePresence>"
         {selectedService && ('''
           <motion .div''''
-            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'''
+            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={ () =" > setSelectedService (null) }"
           >'''
             <motion .div''''
-              className='bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'''
+              className='bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
               initial = {}
   { scale: 0.9, opacity: 0,
 }}

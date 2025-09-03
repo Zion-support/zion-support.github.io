@@ -54,14 +54,7 @@ const ContactForm: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const services = [
-    'AI & Machine Learning',
-    'Cloud & DevOps',
-    'Cybersecurity',
-    'Web Development',
-    'Mobile Development',
-    'Data Analytics',
-    'Digital Transformation',
-    'Other',
+    'AI & Machine Learning,Cloud & DevOps,Cybersecurity,Web Development,Mobile Development,Data Analytics,Digital Transformation,Other',
   ];
   const validateForm = (): boolean => {
     const newErrors: Partial<FormData> = {};

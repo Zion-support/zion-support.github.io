@@ -1,6 +1,5 @@
-import React, { useState, useCallback, useEffect, useRef } from 'react'
-import { motion } from 'framer-motion';"
-import { Users, MessageSquare, Sparkles, Save, Download, Loader2 } from 'lucide-react'
+import React, { useState, useCallback, useEffect, useRef }  from 'react';import { motion } from 'framer-motion
+import { Users, MessageSquare, Sparkles, Save, Download, Loader2 }  from 'lucide-react';
 ;"
 export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true,
@@ -62,8 +61,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         if(!enableCollaboration || !collaboration.isConnected)
             return"
         const rect = event.currentTarget.getBoundingClientRect()'
-        const x = event.clientX - rect.left';"
-        const y = event.clientY - rect.top';'
+        const x = event.clientX - rect.left
+        const y = event.clientY - rect.top
         collaboration.updateCursor(x, y,editor')}, [enableCollaboration, collaboration])
     // Generate AI suggestions
     const generateAISuggestions = useCallback(async () => {}
@@ -79,12 +78,12 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 `
 ``"`
                     id: `suggestion_${Date.now()}_1`,''''
-                    type: 'grammar','''''
+                    type: 'grammar,''''
                     text: 'it's', confidence: 0.95,'
                     position: editorState.content.indexOf('its'),'''
                     length: 3,'''''
-                    reason: 'Consider using 'it's' (contraction of 'it is') instead of 'its' (possessive)','''''
-                    alternatives['it's', 'it is']",
+                    reason: 'Consider using 'it's' (contraction of 'it is') instead of 'its' (possessive),''''
+                    alternatives['it's,it is']",
 })}'
             // Style suggestions''
             if (editorState.content.includes('very')) {}
@@ -92,12 +91,12 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 `
 ``"`
                     id: `suggestion_${Date.now()}_2`,''''
-                    type: 'style',''''
+                    type: 'style,'''
                     text: 'extremely', confidence: 0.88,'
                     position: editorState.content.indexOf('very'),'''
                     length: 4,'''''
-                    reason: 'Consider using a more specific adjective instead of 'very'',''''
-                    alternatives['extremely', 'highly', 'remarkably', 'exceptionally']",
+                    reason: 'Consider using a more specific adjective instead of 'very','''
+                    alternatives['extremely,highly,remarkably,exceptionally']",
 })}'
             // Completion suggestions''
             if (editorState.content.endsWith('The main benefits')) {}
@@ -105,13 +104,13 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 `
 ``"`
                     id: `suggestion_${Date.now()}_3`,''''
-                    type: 'completion',''''
+                    type: 'completion,'''
                     text: ' include improved efficiency, cost savings, and enhanced user experience.', confidence: 0.92, position: editorState.content.length,'''
                     length: 0,''''
-                    reason: 'Complete the sentence with common benefit statements','''
+                    reason: 'Complete the sentence with common benefit statements,''
                     alternatives['''
-                        ' include improved efficiency, cost savings, and enhanced user experience.',''''
-                        ' are numerous and well-documented in industry research.',''''
+                        ' include improved efficiency, cost savings, and enhanced user experience.,'''
+                        ' are numerous and well-documented in industry research.,'''
                         ' can be measured through key performance indicators.''',
 ]
                 })}
@@ -382,8 +381,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 }} className='absolute w-4 h-4' style = {}
   {}"
                     left: x, top: y,'
-                    transform: 'translate(-50%, -50%)';',
-}}" >';''
+                    transform: 'translate(-50%, -50%),
+}}" >'
               <div className='w-full h-full rounded-full border-2 border-white shadow-lg' style={{ backgroundColor: user.color }}" ></div>''''
               <div className='absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap'>
                 {user.name}

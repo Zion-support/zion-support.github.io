@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 export default function Pricing() {
   const pricingPlans = [
+<<<<<<< HEAD
     {
       name: "Starter", price: "$99",
       period: "per month", description: "Perfect for small businesses getting started with AI",
@@ -13,33 +14,52 @@ export default function Pricing() {
         "Basic AI tools and services", "Email support",
         "Up to 5 users", "Standard security features",
         "Basic analytics dashboard"
+=======
+  {
+      name: "Starter", price: "$99",
+      period: "per month", description: "Perfect for small businesses getting started with AI",
+      features: [
+        "Basic AI tools and services,Email support,Up to 5 users,Standard security features,Basic analytics dashboard"
+>>>>>>> main
       ], popular: false,
       color: "from-blue-500 to-cyan-500"
     }, {
       name: "Professional",
       price: "$299", period: "per month",
       description: "Ideal for growing businesses with advanced needs", features: [
+<<<<<<< HEAD
         "Advanced AI and machine learning tools",
         "Priority support", "Up to 25 users",
         "Enhanced security features", "Advanced analytics and reporting",
         "API access", "Custom integrations"
+=======
+        "Advanced AI and machine learning tools,Priority support,Up to 25 users,Enhanced security features,Advanced analytics and reporting,API access,Custom integrations"
+>>>>>>> main
       ], popular: true,
       color: "from-purple-500 to-pink-500"
     }, {
       name: "Enterprise",
       price: "$999", period: "per month",
       description: "Comprehensive solution for large organizations", features: [
+<<<<<<< HEAD
         "Full AI and quantum computing suite",
         "24/7 dedicated support", "Unlimited users",
         "Enterprise-grade security", "Custom analytics and dashboards",
         "Full API access", "Custom development services",
         "Dedicated account manager"
+=======
+        "Full AI and quantum computing suite,24/7 dedicated support,Unlimited users,Enterprise-grade security,Custom analytics and dashboards,Full API access,Custom development services,Dedicated account manager"
+>>>>>>> main
       ], popular: false,
       color: "from-orange-500 to-red-500"
     }
   ];
   const serviceCategories = [
+<<<<<<< HEAD
     {
+=======
+  {
+>>>>>>> main
       title: "AI Services", icon: Brain,
       startingPrice: "$99/month", description: "Machine learning, natural language processing, and AI automation"
     },
@@ -60,8 +80,13 @@ export default function Pricing() {
     <>
       <SEO 
         title="Pricing - Zion Tech Group | Transparent Technology Solutions Pricing"
-        description="Explore Zion Tech Group's transparent pricing for AI services, quantum computing, cybersecurity, and micro SaaS solutions. Choose the plan that fits your needs."'
+<<<<<<< HEAD
+        description="Explore Zion Tech Group&apos;s transparent pricing for AI services, quantum computing, cybersecurity, and micro SaaS solutions. Choose the plan that fits your needs."'
         keywords="pricing, AI services pricing, quantum computing cost, cybersecurity pricing, micro SaaS pricing, Zion Tech Group"
+=======
+        description="Explore Zion Tech Group's transparent pricing for AI services, quantum computing, cybersecurity, and micro SaaS solutions. Choose the plan that fits your needs. 
+        keywords='pricing, AI services pricing, quantum computing cost, cybersecurity pricing, micro SaaS pricing, Zion Tech Group"
+>>>>>>> main
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
