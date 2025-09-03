@@ -4,35 +4,40 @@ const typescriptEslint = require("@typescript-eslint/eslint-plugin");
 const typescriptParser = require("@typescript-eslint/parser");
 const nextConfig = require("eslint-config-next");
 const compat = new FlatCompat({
-  baseDirectory: __dirname,;
-  recommendedConfig: js.configs.recommended,;,
+  baseDirectory: __dirname,
+  recommendedConfig: js.configs.recommended,
 });
 module.exports = [
 <<<<<<< HEAD
+<<<<<<< HEAD
   ...compat.extends("next/core-web-vitals"),;
+=======
+  ...compat.extends("next/core-web-vitals"),
+>>>>>>> origin/main
   {
-  files: ["**/*.{js,jsx,ts,tsx}"],;
+    files: ["**/*.{js,jsx,ts,tsx}"],
     languageOptions: {
-  parser: typescriptParser,;
+      parser: typescriptParser,
       parserOptions: {
-  ecmaVersion: "latest",;
-        sourceType: "module",;
+        ecmaVersion: "latest",
+        sourceType: "module",
         ecmaFeatures: {
-  jsx: true,;,
-},;,
-},;,
-},;
+          jsx: true,
+        },
+      },
+    },
     plugins: {
-  "@typescript-eslint": typescriptEslint,;,
-},;
+      "@typescript-eslint": typescriptEslint,
+    },
     rules: {
-  "@typescript-eslint/no-unused-vars": "warn",;
-      "@typescript-eslint/no-explicit-any": "warn",;
-      "react/no-unescaped-entities": "off",;
-      "react-hooks/exhaustive-deps": "warn";,
-},;,
-},;
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "react/no-unescaped-entities": "off",
+      "react-hooks/exhaustive-deps": "warn",
+    },
+  },
   {
+<<<<<<< HEAD
   ignores: [
   "node_modules/",;
       ".next/",;
@@ -50,4 +55,18 @@ module.exports = [
     ignores: ['**/*'],
   },
 ];
+>>>>>>> origin/main
+=======
+    ignores: [
+      "node_modules/",
+      ".next/",
+      "out/",
+      "build/",
+      "dist/",
+      "*.config.js",
+      "*.config.cjs",
+      "*.config.mjs",
+    ],
+  },
+]
 >>>>>>> origin/main
