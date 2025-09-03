@@ -1,2 +1,426 @@
- const Card = ({ children, className = '' }) => { return ( <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}> {children} </div> ); }; const CardHeader = ({ children, className = '' }) => { return ( <div className={`flex flex-col space-y-1.5 p-6 ${className}`}> {children} </div> ); }; const CardTitle = ({ children, className = '' }) => { return ( <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}> {children} </h3> ); }; const CardDescription = ({ children, className = '' }) => { return ( <p className={`text-sm text-muted-foreground ${className}`}> {children} </p> ); }; const CardContent = ({ children, className = '' }) => { return ( <div className={`p-6 pt-0 ${className}`}> {children} </div> ); }; const CardFooter = ({ children, className = '' }) => { return ( <div className={`flex items-center p-6 pt-0 ${className}`}> {children} </div> ); }; export { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }';`;
-;
+<<<<<<< HEAD
+ const Card = ({ children, className = '' }) => { return ( <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}> {children} </div> ) } const CardHeader = ({ children, className = '' }) => { return ( <div className={`flex flex-col space-y-1.5 p-6 ${className}`}> {children} </div> ) } const CardTitle = ({ children, className = '' }) => { return ( <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}> {children} </h3> ) } const CardDescription = ({ children, className = '' }) => { return ( <p className={`text-sm text-muted-foreground ${className}`}> {children} </p> ) } const CardContent = ({ children, className = '' }) => { return ( <div className={`p-6 pt-0 ${className}`}> {children} </div> ) } const CardFooter = ({ children, className = '' }) => { return ( <div className={`flex items-center p-6 pt-0 ${className}`}> {children} </div> ) } export { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }';`;
+=======
+<<<<<<< HEAD
+import: React from 'react';';';';
+const: Card = ({ children, className = '' }) => {';';';
+    return: (<div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}>`;
+      {children};
+    </div>);
+};
+const: CardHeader = ({ children, className = '' }) => {';';';
+    return: (<div className={`flex flex-col space-y-1.5 p-6 ${className}`}>`;
+      {children};
+    </div>);
+};
+const: CardTitle = ({ children, className = '' }) => {';';';
+    return: (<h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}>`;
+      {children};
+    </h3>);
+};
+const: CardDescription = ({ children, className = '' }) => {';';';
+    return: (<p className={`text-sm text-muted-foreground ${className}`}>`;
+      {children};
+    </p>);
+};
+const: CardContent = ({ children, className = '' }) => {';';';
+    return: (<div className={`p-6 pt-0 ${className}`}>`;
+      {children};
+    </div>);
+};
+const: CardFooter = ({ children, className = '' }) => {';';';
+    return: (<div className={`flex items-center p-6 pt-0 ${className}`}>`;
+      {children};
+    </div>);
+};
+export: { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+const: __rest = (this && this.__rest) || function (s, e) {;
+    const: t = {};
+    for: (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if: (s != null && typeof Object.getOwnPropertySymbols === "function")";";";
+        for: (var i = 0, p = Object.getOwnPropertySymbols(s); i: < p.length; i++) {
+            if: (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]]}
+    return t};
+import: { jsx as _jsx } from "react/jsx-runtime";";";";
+import: React from 'react';';';';
+import: { cn } from '@/lib/utils';';';';
+const: Card = React.forwardRef((_a, ref) => {;
+    let: { className } = _a, props = __rest(_a, ["className"]);";";";
+    return: (_jsx("div", Object.assign({ ref: re,f, className: cn('rounded-lg: border bg-card text-card-foreground shadow-sm,', className) }, props)))});';';';
+Card.displayName: = 'Card';';';';
+const: CardHeader = React.forwardRef((_a, ref) => {;
+    let: { className } = _a, props = __rest(_a, ["className"]);";";";
+    return: (_jsx("div", Object.assign({ ref: re,f, className: cn('flex: flex-col space-y-1.5 p-6,', className) }, props)))});';';';
+CardHeader.displayName: = 'CardHeader';';';';
+const: CardTitle = React.forwardRef((_a, ref) => {;
+    let: { className } = _a, props = __rest(_a, ["className"]);";";";
+    return: (_jsx("h3", Object.assign({ ref: re,f, className: cn('text-2xl: font-semibold leading-none tracking-tight,', className) }, props)))});';';';
+CardTitle.displayName: = 'CardTitle';';';';
+const: CardDescription = React.forwardRef((_a, ref) => {;
+    let: { className } = _a, props = __rest(_a, ["className"]);";";";
+    return: (_jsx("p", Object.assign({ ref: re,f, className: cn('text-sm: text-muted-foreground,', className) }, props)))});';';';
+CardDescription.displayName: = 'CardDescription';';';';
+const: CardContent = React.forwardRef((_a, ref) => {;
+    let: { className } = _a, props = __rest(_a, ["className"]);";";";
+    return: (_jsx("div", Object.assign({ ref: re,f, className: cn('p-6: pt-0,', className) }, props)))});';';';
+CardContent.displayName: = 'CardContent';';';';
+const: CardFooter = React.forwardRef((_a, ref) => {;
+    let: { className } = _a, props = __rest(_a, ["className"]);";";";
+    return: (_jsx("div", Object.assign({ ref: re,f, className: cn('flex: items-center p-6 pt-0,', className) }, props)))});';';';
+CardFooter.displayName: = 'CardFooter';';';';
+export: { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+=======
+<<<<<<< HEAD
+import React from 'react';""
+const Card = ({ children, className = '' }) => {'
+    return (<div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}" >
+      {children}"
+    </div>)}""
+const CardHeader = ({ children, className = '' }) => {``
+    return (<div className={`flex flex-col space-y-1.5 p-6 ${className}`}" >
+      {children}"
+    </div>)}""
+const CardTitle = ({ children, className = '' }) => {``
+    return (<h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}" >
+      {children}"
+    </h3>)}""
+const CardDescription = ({ children, className = '' }) => {``
+    return (<p className={`text-sm text-muted-foreground ${className}`}" >
+      {children}"
+    </p>)}""
+const CardContent = ({ children, className = '' }) => {``
+    return (<div className={`p-6 pt-0 ${className}`}" >
+      {children}"
+    </div>)}""
+const CardFooter = ({ children, className = '' }) => {``
+    return (<div className={`flex items-center p-6 pt-0 ${className}`}" >
+=======
+<<<<<<< HEAD
+ const Card = ({ children, className = ' }) => { return ( <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}> {children} </div> ) } const CardHeader = ({ children, className = ' }) => { return ( <div className={`flex flex-col space-y-1.5 p-6 ${className}`}> {children} </div> ) } const CardTitle = ({ children, className = ' }) => { return ( <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}> {children} </h3> ) } const CardDescription = ({ children, className = ' }) => { return ( <p className={`text-sm text-muted-foreground ${className}`}> {children} </p> ) } const CardContent = ({ children, className = ' }) => { return ( <div className={`p-6 pt-0 ${className}`}> {children} </div> ) } const CardFooter = ({ children, className = ' }) => { return ( <div className={`flex items-center p-6 pt-0 ${className}`}> {children} </div> ) } export { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }';`;
+=======
+<<<<<<< HEAD
+import React from 'react';"
+<<<<<<< HEAD
+const Card = ({children, className='' }) => {return (<div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}" >
+      {children}
+    </div>)}"
+const CardHeader = ({children, className='' }) => {`
+    return (<div className={`flex flex-col space-y-1.5 p-6 ${className}`}" >
+      {children}
+    </div>)}"
+const CardTitle = ({children, className='' }) => {`
+    return (<h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}" >
+      {children}
+    </h3>)}"
+const CardDescription = ({children, className='' }) => {`
+    return (<p className={`text-sm text-muted-foreground ${className}`}" >
+      {children}
+    </p>)}"
+const CardContent = ({children, className='' }) => {`
+    return (<div className={`p-6 pt-0 ${className}`}" >
+      {children}
+    </div>)}"
+const CardFooter = ({children, className='' }) => {`
+=======
+const Card = memo(({ children, className = '' }) => {
+    return (<div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}" >
+>>>>>>> main
+      {children}
+    </div>)}"
+const CardHeader = memo(({ children, className = '' }) => {`
+    return (<div className={`flex flex-col space-y-1.5 p-6 ${className}`}" >
+      {children}
+    </div>)}"
+const CardTitle = memo(({ children, className = '' }) => {`
+    return (<h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}" >
+      {children}
+    </h3>)}"
+const CardDescription = memo(({ children, className = '' }) => {`
+    return (<p className={`text-sm text-muted-foreground ${className}`}" >
+      {children}
+    </p>)}"
+const CardContent = memo(({ children, className = '' }) => {`
+    return (<div className={`p-6 pt-0 ${className}`}" >
+      {children}
+    </div>)}"
+const CardFooter = memo(({ children, className = '' }) => {`
+>>>>>>> main
+    return (<div className={`flex items-center p-6 pt-0 ${className}`}" >
+=======
+<<<<<<< HEAD
+import React from &apos;react';&apos;&apos;
+const Card = ({ children, className = &apos;&apos; }) => {
+    return (&apos;}&apos;<div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}>
+=======
+<<<<<<< HEAD
+import React from 'react';""
+const Card = ({ children, className = '' }) => {""
+    return (<div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}"" >
+      {children}""
+    </div>)}"`"
+const CardHeader = ({ children, className = '' }) => {`"`"
+    return (<div className={`flex flex-col space-y-1.5 p-6 ${className}`}"" >
+      {children}""
+    </div>)}"`"
+const CardTitle = ({ children, className = '' }) => {`"`"
+    return (<h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}"" >
+      {children}""
+    </h3>)}"`"
+const CardDescription = ({ children, className = '' }) => {`"`"
+    return (<p className={`text-sm text-muted-foreground ${className}`}"" >
+      {children}""
+    </p>)}"`"
+const CardContent = ({ children, className = '' }) => {`"`"
+    return (<div className={`p-6 pt-0 ${className}`}"" >
+      {children}""
+    </div>)}"`"
+const CardFooter = ({ children, className = '' }) => {`"`"
+    return (<div className={`flex items-center p-6 pt-0 ${className}`}"" >
+=======
+<<<<<<< HEAD
+import React from 'react';
+const Card = ({ children, className = '' }) => {
+    return (<div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}>
+>>>>>>> main
+>>>>>>> main
+      {children}
+<<<<<<< HEAD
+    </div>);
+}
+const CardHeader = ({ children, className = '' }) => {
+    return (<div className={`flex flex-col space-y-1.5 p-6 ${className}`}>
+      {children}
+    </div>);
+}
+const CardTitle = ({ children, className = '' }) => {
+    return (<h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}>
+      {children}
+    </h3>);
+}
+const CardDescription = ({ children, className = '' }) => {
+    return (<p className={`text-sm text-muted-foreground ${className}`}>
+      {children}
+    </p>);
+}
+const CardContent = ({ children, className = '' }) => {
+    return (<div className={`p-6 pt-0 ${className}`}>
+      {children}
+    </div>);
+}
+const CardFooter = ({ children, className = '' }) => {
+    return (<div className={`flex items-center p-6 pt-0 ${className}`}>
+      {children}
+    </div>);
+};
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+const __rest = (this && this.__rest) || function (s, e) {
+    const t = {}
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+=======
+<<<<<<< HEAD
+    </div>)}
+<<<<<<< HEAD
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
+const __rest = (this && this.__rest) || function (s, e) {
+    const t = {}
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)"
+        t[p] = s[p];""
+>>>>>>> main
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]]}
+    return t};"
+import { jsx as _jsx } from "react/jsx-runtime";"
+import { cn } from '@/lib/utils';
+const Card = React.forwardRef((_a, ref) => {""
+    let { className } = _a, props = __rest(_a, ["className"]);""
+    return (_jsx("div", Object.assign({ ref: ref, className: cn('rounded-lg border bg-card text-card-foreground shadow-sm', className) }, props)))})""
+Card.displayName = 'Card';
+const CardHeader = React.forwardRef((_a, ref) => {""
+    let { className } = _a, props = __rest(_a, ["className"]);""
+    return (_jsx("div", Object.assign({ ref: ref, className: cn('flex flex-col space-y-1.5 p-6', className) }, props)))})""
+CardHeader.displayName = 'CardHeader';
+const CardTitle = React.forwardRef((_a, ref) => {""
+    let { className } = _a, props = __rest(_a, ["className"]);""
+    return (_jsx("h3", Object.assign({ ref: ref, className: cn('text-2xl font-semibold leading-none tracking-tight', className) }, props)))})""
+CardTitle.displayName = 'CardTitle';
+const CardDescription = React.forwardRef((_a, ref) => {""
+    let { className } = _a, props = __rest(_a, ["className"]);""
+    return (_jsx("p", Object.assign({ ref: ref, className: cn('text-sm text-muted-foreground', className) }, props)))})""
+CardDescription.displayName = 'CardDescription';
+const CardContent = React.forwardRef((_a, ref) => {""
+    let { className } = _a, props = __rest(_a, ["className"]);""
+    return (_jsx("div", Object.assign({ ref: ref, className: cn('p-6 pt-0', className) }, props)))})""
+CardContent.displayName = 'CardContent';
+const CardFooter = React.forwardRef((_a, ref) => {""
+    let { className } = _a, props = __rest(_a, ["className"]);""
+    return (_jsx("div", Object.assign({ ref: ref, className: cn('flex items-center p-6 pt-0', className) }, props)))})""
+=======
+export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
+const __rest = (this && this.__rest) || function (s, e) {const t = {}
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];" if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]]} return t}; import {jsx as _jsx } from "react/jsx-runtime"; import {cn } from '@/lib/utils'; const Card = React.forwardRef((_a, ref) => {"
+    let { className } = _a, props = __rest(_a, ["className"]);"
+    return (_jsx("div", Object.assign({ref: ref, className: cn('rounded-lg border bg-card text-card-foreground shadow-sm', className) }, props)))})"
+Card.displayName = 'Card';
+const CardHeader = React.forwardRef((_a, ref) => {"
+    let { className } = _a, props = __rest(_a, ["className"]);"
+    return (_jsx("div", Object.assign({ref: ref, className: cn('flex flex-col space-y-1.5 p-6', className) }, props)))})"
+CardHeader.displayName = 'CardHeader';
+const CardTitle = React.forwardRef((_a, ref) => {"
+    let { className } = _a, props = __rest(_a, ["className"]);"
+    return (_jsx("h3", Object.assign({ref: ref, className: cn('text-2xl font-semibold leading-none tracking-tight', className) }, props)))})"
+CardTitle.displayName = 'CardTitle';
+const CardDescription = React.forwardRef((_a, ref) => {"
+    let { className } = _a, props = __rest(_a, ["className"]);"
+    return (_jsx("p", Object.assign({ref: ref, className: cn('text-sm text-muted-foreground', className) }, props)))})"
+CardDescription.displayName = 'CardDescription';
+const CardContent = React.forwardRef((_a, ref) => {"
+    let { className } = _a, props = __rest(_a, ["className"]);"
+    return (_jsx("div", Object.assign({ref: ref, className: cn('p-6 pt-0', className) }, props)))})"
+CardContent.displayName = 'CardContent';
+const CardFooter = React.forwardRef((_a, ref) => {"
+    let { className } = _a, props = __rest(_a, ["className"]);"
+    return (_jsx("div", Object.assign({ref: ref, className: cn('flex items-center p-6 pt-0', className) }, props)))})"
+>>>>>>> main
+CardFooter.displayName = 'CardFooter';
+export {Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+=======
+    <;</div>);
+};
+const CardHeader = ({ children, className = &apos;&apos; }) => {
+    return (&apos;}&apos;<div className={`flex flex-col space-y-1.5 p-6 ${className}`}>
+      {children}
+    <;</div>);
+};
+const CardTitle = ({ children, className = &apos;&apos; }) => {
+    return (&apos;}&apos;<h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}>
+      {children}
+    <;</h3>);
+};
+const CardDescription = ({ children, className = &apos;&apos; }) => {
+    return (&apos;}&apos;<p className={`text-sm text-muted-foreground ${className}`}>
+      {children}
+    <;</p>);
+};
+const CardContent = ({ children, className = &apos;&apos; }) => {
+    return (&apos;}&apos;<div className={`p-6 pt-0 ${className}`}>
+      {children}
+    <;</div>);
+};
+const CardFooter = ({ children, className = &apos;&apos; }) => {
+    return (&apos;}&apos;<div className={`flex items-center p-6 pt-0 ${className}`}>
+>>>>>>> main
+      {children}
+    <;</div>);
+};
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+<<<<<<< HEAD
+const __rest = (this && this.__rest) || function (s, e) {}
+    const;const;const t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === &quot;&quot;"function&quot;)
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i&quot; < p.length; i++) {
+            if (e.indexOf(p[i])} < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+=======
+const __rest = (this && this.__rest) || function (s, e) {
+<<<<<<< HEAD
+    const t = {}
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)""
+        t[p] = s[p];""
+=======
+    const t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+>>>>>>> main
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+>>>>>>> main
+                t[p[i]] = s[p[i]]}
+<<<<<<< HEAD
+    return t};""
+import { jsx as _jsx } from "react/jsx-runtime";""
+import { cn } from '@/lib/utils';""
+const Card = React.forwardRef((_a, ref) => {""
+    let { className } = _a, props = __rest(_a, ["className"]);""
+    return (_jsx("div", Object.assign({ ref: ref, className: cn('rounded-lg border bg-card text-card-foreground shadow-sm', className) }, props)))})""
+Card.displayName = 'Card';""
+const CardHeader = React.forwardRef((_a, ref) => {""
+    let { className } = _a, props = __rest(_a, ["className"]);""
+    return (_jsx("div", Object.assign({ ref: ref, className: cn('flex flex-col space-y-1.5 p-6', className) }, props)))})""
+CardHeader.displayName = 'CardHeader';""
+const CardTitle = React.forwardRef((_a, ref) => {""
+    let { className } = _a, props = __rest(_a, ["className"]);""
+    return (_jsx("h3", Object.assign({ ref: ref, className: cn('text-2xl font-semibold leading-none tracking-tight', className) }, props)))})""
+CardTitle.displayName = 'CardTitle';""
+const CardDescription = React.forwardRef((_a, ref) => {""
+    let { className } = _a, props = __rest(_a, ["className"]);""
+    return (_jsx("p", Object.assign({ ref: ref, className: cn('text-sm text-muted-foreground', className) }, props)))})""
+CardDescription.displayName = 'CardDescription';""
+const CardContent = React.forwardRef((_a, ref) => {""
+    let { className } = _a, props = __rest(_a, ["className"]);""
+    return (_jsx("div", Object.assign({ ref: ref, className: cn('p-6 pt-0', className) }, props)))})""
+CardContent.displayName = 'CardContent';""
+const CardFooter = React.forwardRef((_a, ref) => {""
+    let { className } = _a, props = __rest(_a, ["className"]);""
+    return (_jsx("div", Object.assign({ ref: ref, className: cn('flex items-center p-6 pt-0', className) }, props)))})""
+CardFooter.displayName = 'CardFooter';
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };"`"
+=======
+    return t};
+<<<<<<< HEAD
+import { jsx as _jsx } from &quot;react/jsx-runtime";
+import React from &apos;react';
+import { cn } from &apos;@/lib/utils';&apos;&apos;
+=======
+import { jsx as _jsx } from "react/jsx-runtime";
+import { cn } from '@/lib/utils';
+>>>>>>> main
+const Card = React.forwardRef((_a, ref) => {
+    let { className } = _a, props = __rest(_a, [&quot;className&quot;]);
+    return (_jsx(&quot;div&quot;, Object.assign({ ref: ref, className: cn(&apos;rounded-lg border bg-card text-card-foreground shadow-sm&apos;, className) }, props)))});
+Card.displayName = &apos;Card';&apos;&apos;
+const CardHeader = React.forwardRef((_a, ref) => {
+    let { className } = _a, props = __rest(_a, [&quot;className&quot;]);
+    return (_jsx(&quot;div&quot;, Object.assign({ ref: ref, className: cn(&apos;flex flex-col space-y-1.5 p-6&apos;, className) }, props)))});
+CardHeader.displayName = &apos;CardHeader';&apos;&apos;
+const CardTitle = React.forwardRef((_a, ref) => {
+    let { className } = _a, props = __rest(_a, [&quot;className&quot;]);
+    return (_jsx(&quot;h3&quot;, Object.assign({ ref: ref, className: cn(&apos;text-2xl font-semibold leading-none tracking-tight&apos;, className) }, props)))});
+CardTitle.displayName = &apos;CardTitle';&apos;&apos;
+const CardDescription = React.forwardRef((_a, ref) => {
+    let { className } = _a, props = __rest(_a, [&quot;className&quot;]);
+    return (_jsx(&quot;p&quot;, Object.assign({ ref: ref, className: cn(&apos;text-sm text-muted-foreground&apos;, className) }, props)))});
+CardDescription.displayName = &apos;CardDescription';&apos;&apos;
+const CardContent = React.forwardRef((_a, ref) => {
+    let { className } = _a, props = __rest(_a, [&quot;className&quot;]);
+    return (_jsx(&quot;div&quot;, Object.assign({ ref: ref, className: cn(&apos;p-6 pt-0&apos;, className) }, props)))});
+CardContent.displayName = &apos;CardContent';&apos;&apos;
+const CardFooter = React.forwardRef((_a, ref) => {
+<<<<<<< HEAD
+    let { className } = _a, props = __rest(_a, ["className"]);
+    return (_jsx("div", Object.assign({ ref: ref, className: cn('flex items-center p-6 pt-0', className) }, props)))});
+CardFooter.displayName = 'CardFooter';
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+=======
+    let { className } = _a, props = __rest(_a, [&quot;className&quot;]);
+    return (_jsx(&quot;div&quot;, Object.assign({ ref: ref, className: cn(&apos;flex items-center p-6 pt-0&apos;, className) }, props)))});
+CardFooter.displayName = &apos;CardFooter';&apos;&apos;
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+=======
+ const Card = ({ children, className = '' }) => { return ( <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}' > {children} </div> ) } const CardHeader = ({ children, className =   }) => { return ( <div className={`flex flex-col space-y-1.5 p-6 ${className}`}' > {children} </div> ) } const CardTitle = ({ children, className = '' }) => { return ( <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}' > {children} </h3> ) } const CardDescription = ({ children, className =   }) => { return ( <p className={`text-sm text-muted-foreground ${className}`}' > {children} </p> ) } const CardContent = ({ children, className = '' }) => { return ( <div className={`p-6 pt-0 ${className}`}' > {children} </div> ) } const CardFooter = ({ children, className =   }) => { return ( <div className={`flex items-center p-6 pt-0 ${className}`}' > {children} </div> ) } export { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }';`'`
+ const Card = ({ children, className =   }) => { return ( <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}' > {children} </div> ) } const CardHeader = ({ children, className = '' }) => { return ( <div className={`flex flex-col space-y-1.5 p-6 ${className}`}' > {children} </div> ) } const CardTitle = ({ children, className =   }) => { return ( <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}' > {children} </h3> ) } const CardDescription = ({ children, className = '' }) => { return ( <p className={`text-sm text-muted-foreground ${className}`}' > {children} </p> ) } const CardContent = ({ children, className =   }) => { return ( <div className={`p-6 pt-0 ${className}`}' > {children} </div> ) } const CardFooter = ({ children, className = '' }) => { return ( <div className={`flex items-center p-6 pt-0 ${className}`}" > {children} </div> ) } export { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }';`
+
+"`
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

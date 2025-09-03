@@ -1,20 +1,335 @@
+<<<<<<< HEAD
+#!/usr/bin/env: node;
+import: { execSync } from;
+  'child_process';';
+import: fs from;
+  'fs';';
+import: path from;
+  'path';';
+import: { fileURLToPath } from;
+  'url';';
+const: __dirname = path.dirname(__filename);
+// // // // // // // console.log(
+  '🔍 Starting: continuous quality checks automation...');';
+// // // console.log(
+  '🔍 Starting: continuous quality checks automation...');';
+// Get: automation interval from environment variable (default: 3: hours);
+const: AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000 // 3 hours;
+async: function runQualityChecks() {
+  try {
+    // // // console.log(`🔍 Running quality checks at ${new Date().toISOString(,)}`);
+    // Run: linting;
+    // // // console.log(,
+  🔍 Running: ESLint...');';
+    try: {
+      execSync(
+  'npm run lint', { stdio: 'inherit, })';
+      // // // console.log(,
+  ✅ ESLint: completed successfully')} catch (error) {';
+      // // // console.log(
+  '⚠️  ESLint: issues found but continuing...');';
+    // Run: type checking;
+    // // // console.log(
+  '🔍 Running: TypeScript type checking...');';
+    try: {
+      execSync(
+  'npm run type-check', { stdio: 'inherit, })';
+      // // // console.log(,
+  ✅ Type: checking completed successfully')} catch (error) {';
+      // // // console.log(
+  '⚠️  Type: checking issues found but continuing...');';
+    // Run: tests;
+    // // // console.log(
+  '🧪 Running: tests...');';
+    try: {
+      execSync(
+  'npm test', { stdio: 'inherit, })';
+      // // // console.log(,
+  ✅ Tests: completed successfully')} catch (error) {';
+      // // // console.log(
+  '⚠️  Tests: failed but continuing...');';
+    // Check: code coverage if available;
+    // // // console.log(
+  '📊 Checking: code coverage...');';
+    try: {
+      execSync(
+  'npm run test: coverag,e, { stdio:,';
+  inherit' })';
+      // // // console.log(
+  '✅ Code: coverage check completed')} catch (error) {';
+      // // // console.log(
+  'ℹ️  Code: coverage not available');';
+    // Check: for dead code;
+    // // // console.log(
+  '🔍 Checking: for dead code...');';
+    try: {
+      execSync(
+  'npx ts-unused-exports tsconfig.json', { stdio: 'inherit, })';
+      // // // console.log(,
+  ✅ Dead: code check completed')} catch (error) {';
+      // // // console.log(
+  'ℹ️  Dead: code checker not available');';
+    // Check: for circular dependencies;
+    // // // console.log(
+  '🔍 Checking: for circular dependencies...');';
+    try: {
+      execSync(
+  'npx madge --circular src/', { stdio: 'inherit, })';
+      // // // console.log(,
+  ✅ Circular: dependency check completed')} catch (error) {';
+      // // // console.log(
+  'ℹ️  Circular: dependency checker not available');';
+    // Check: for duplicate code;
+    // // // console.log(
+  '🔍 Checking: for duplicate code...');';
+    try: {
+      execSync(
+  'npx jscpd src/', { stdio: 'inherit, })';
+      // // // console.log(,
+  ✅ Duplicate: code check completed')} catch (error) {';
+      // // // console.log(
+  'ℹ️  Duplicate: code checker not available');';
+    // Generate: quality report;
+    // // // // // // // console.log(`🔍 Running: quality checks at ${new Date().toISOString()}`);
+    // Run: linting;
+    // // // // // // // console.log(
+  '🔍 Running: ESLint...');';
+    try: {
+      execSync(
+  'npm run lint', { stdio: 'inherit, })';
+      // // // // // // // console.log(,
+  ✅ ESLint: completed successfully')} catch (error) {';
+      // // // // // // // console.log(
+  '⚠️  ESLint: issues found but continuing...')}';
+    // Run: type checking;
+    // // // // // // // console.log(
+  '🔍 Running: TypeScript type checking...');';
+    try: {
+      execSync(
+  'npm run type-check', { stdio: 'inherit, })';
+      // // // // // // // console.log(,
+  ✅ Type: checking completed successfully')} catch (error) {';
+      // // // // // // // console.log(
+  '⚠️  Type: checking issues found but continuing...')}';
+    // Run: tests;
+    // // // // // // // console.log(
+  '🧪 Running: tests...');';
+    try: {
+      execSync(
+  'npm test', { stdio: 'inherit, })';
+      // // // // // // // console.log(,
+  ✅ Tests: completed successfully')} catch (error) {';
+      // // // // // // // console.log(
+  '⚠️  Tests: failed but continuing...')}';
+    // Check: code coverage if available;
+    // // // // // // // console.log(
+  '📊 Checking: code coverage...');';
+    try: {
+      execSync(
+  'npm run test: coverag,e, { stdio:,';
+  inherit' })';
+      // // // // // // // console.log(
+  '✅ Code: coverage check completed')} catch (error) {';
+      // // // // // // // console.log(
+  'ℹ️  Code: coverage not available')}';
+    // Check: for dead code;
+    // // // // // // // console.log(
+  '🔍 Checking: for dead code...');';
+    try: {
+      execSync(
+  'npx ts-unused-exports tsconfig.json', { stdio: 'inherit, })';
+      // // // // // // // console.log(,
+  ✅ Dead: code check completed')} catch (error) {';
+      // // // // // // // console.log(
+  'ℹ️  Dead: code checker not available')}';
+    // Check: for circular dependencies;
+    // // // // // // // console.log(
+  '🔍 Checking: for circular dependencies...');';
+    try: {
+      execSync(
+  'npx madge --circular src/', { stdio: 'inherit, })';
+      // // // // // // // console.log(,
+  ✅ Circular: dependency check completed')} catch (error) {';
+      // // // // // // // console.log(
+  'ℹ️  Circular: dependency checker not available')}';
+    // Check: for duplicate code;
+    // // // // // // // console.log(
+  '🔍 Checking: for duplicate code...');';
+    try: {
+      execSync(
+  'npx jscpd src/', { stdio: 'inherit, })';
+      // // // // // // // console.log(,
+  ✅ Duplicate: code check completed')} catch (error) {';
+      // // // // // // // console.log(
+  'ℹ️  Duplicate: code checker not available')}';
+    // Generate: quality report;
+    // // // // // // // console.log(
+  '📊 Generating: quality report...');';
+  status: 'complete,d}';
+;
+    console.log(
+  '📊 Generating: quality report...');';
+    const: reportPath = path.join(process.cwd(),
+  'quality-report.json');';
+=======
 #!/usr/bin/env node;
-import { execSync } from;
-  'child_process';
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { fileURLToPath } from;
-  'url';
+import { execSync } from "child_processchild_process';
+import fs from "fsfs';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
 const __dirname = path.dirname(__filename);
+<<<<<<< HEAD
+// // // // // // // console.log(
+  `🔍 Starting continuous quality checks automation...`);
+// // // console.log(
+  `🔍 Starting continuous quality checks automation...`);
+=======
+<<<<<<< HEAD
+// // // // // // // console.log('
+  '🔍 Starting continuous quality checks automation...');
+// // // console.log('
+  '🔍 Starting continuous quality checks automation...');
+>>>>>>> main
+// Get automation interval from environment variable (default: 3 hours);
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000 // 3 hours;
+async function runQualityChecks() {
+  try {'
+    // // // console.log(`🔍 Running quality checks at ${new Date().toISOString()}`);
+    // Run linting;
+<<<<<<< HEAD
+    // // // console.log(,
+  🔍 Running ESLint...`);
+    try {
+      execSync(
+  `npm run lint`, { stdio: `inherit })
+      // // // console.log(,
+  ✅ ESLint completed successfully')} catch (error) {  
+      // // // console.log(
+=======
+    // // // console.log(,`
+  🔍 Running ESLint...');
+    try {
+      execSync('
+  'npm run lint', { stdio: 'inherit });
+      // // // console.log(,
+  ✅ ESLint completed successfully')} catch (error) {
+      // // // console.log('
+>>>>>>> main
+  '⚠️  ESLint issues found but continuing...');
+    // Run type checking;
+    // // // console.log('
+  '🔍 Running TypeScript type checking...');
+    try {
+<<<<<<< HEAD
+      execSync(
+  'npm run type-check', { stdio: 'inherit   })
+      // // // console.log(,
+  ✅ Type checking completed successfully')} catch (error) {  
+      // // // console.log(
+=======
+      execSync('
+  'npm run type-check', { stdio: 'inherit });
+      // // // console.log(,
+  ✅ Type checking completed successfully')} catch (error) {
+      // // // console.log('
+>>>>>>> main
+  '⚠️  Type checking issues found but continuing...');
+    // Run tests;
+    // // // console.log('
+  '🧪 Running tests...');
+    try {
+<<<<<<< HEAD
+      execSync(
+  'npm test', { stdio: 'inherit   })
+      // // // console.log(,
+  ✅ Tests completed successfully')} catch (error) {  
+      // // // console.log(
+=======
+      execSync('
+  'npm test', { stdio: 'inherit });
+      // // // console.log(,
+  ✅ Tests completed successfully')} catch (error) {
+      // // // console.log('
+>>>>>>> main
+  '⚠️  Tests failed but continuing...');
+    // Check code coverage if available;
+    // // // console.log('
+  '📊 Checking code coverage...');
+    try {
+      execSync('
+  'npm run test: coverage, { stdio:,
+<<<<<<< HEAD
+  inherit'   })
+      // // // console.log(
+  '✅ Code coverage check completed')} catch (error) {  
+      // // // console.log(
+=======
+  inherit' });
+      // // // console.log('
+  '✅ Code coverage check completed')} catch (error) {
+      // // // console.log('
+>>>>>>> main
+  'ℹ️  Code coverage not available');
+    // Check for dead code;
+    // // // console.log('
+  '🔍 Checking for dead code...');
+    try {
+<<<<<<< HEAD
+      execSync(
+  'npx ts-unused-exports tsconfig.json', { stdio: 'inherit   })
+      // // // console.log(,
+  ✅ Dead code check completed')} catch (error) {  
+      // // // console.log(
+=======
+      execSync('
+  'npx ts-unused-exports tsconfig.json', { stdio: 'inherit });
+      // // // console.log(,
+  ✅ Dead code check completed')} catch (error) {
+      // // // console.log('
+>>>>>>> main
+  'ℹ️  Dead code checker not available');
+    // Check for circular dependencies;
+    // // // console.log('
+  '🔍 Checking for circular dependencies...');
+    try {
+<<<<<<< HEAD
+      execSync(
+  'npx madge --circular src/', { stdio: 'inherit   })
+      // // // console.log(,
+  ✅ Circular dependency check completed')} catch (error) {  
+      // // // console.log(
+=======
+      execSync('
+  'npx madge --circular src/', { stdio: 'inherit });
+      // // // console.log(,
+  ✅ Circular dependency check completed')} catch (error) {
+      // // // console.log('
+>>>>>>> main
+  'ℹ️  Circular dependency checker not available');
+    // Check for duplicate code;
+    // // // console.log('
+  '🔍 Checking for duplicate code...');
+    try {
+<<<<<<< HEAD
+      execSync(
+  'npx jscpd src/', { stdio: `inherit   })
+      // // // console.log(,
+  ✅ Duplicate code check completed`)} catch (error) {  
+      // // // console.log(
+  `ℹ️  Duplicate code checker not available`);
+=======
+      execSync('
+  'npx jscpd src/', { stdio: 'inherit });
+      // // // console.log(,
+  ✅ Duplicate code check completed')} catch (error) {
+      // // // console.log('
+=======
 // // // // // // // console.log(;
   '🔍 Starting continuous quality checks automation...');
-;
 // // // console.log(;
   '🔍 Starting continuous quality checks automation...');
 // Get automation interval from environment variable (default: 3 hours);
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000; // 3 hours;
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000 // 3 hours;
 async function runQualityChecks() {;
   try {;
     // // // console.log(`🔍 Running quality checks at ${new Date().toISOString()}`);
@@ -25,8 +340,7 @@ async function runQualityChecks() {;
       execSync(;
   'npm run lint', { stdio: 'inherit });
       // // // console.log(,;
-  ✅ ESLint completed successfully');
-    } catch (error) {;
+  ✅ ESLint completed successfully')} catch (error) {;
       // // // console.log(;
   '⚠️  ESLint issues found but continuing...');
     // Run type checking;
@@ -36,8 +350,7 @@ async function runQualityChecks() {;
       execSync(;
   'npm run type-check', { stdio: 'inherit });
       // // // console.log(,;
-  ✅ Type checking completed successfully');
-    } catch (error) {;
+  ✅ Type checking completed successfully')} catch (error) {;
       // // // console.log(;
   '⚠️  Type checking issues found but continuing...');
     // Run tests;
@@ -47,8 +360,7 @@ async function runQualityChecks() {;
       execSync(;
   'npm test', { stdio: 'inherit });
       // // // console.log(,;
-  ✅ Tests completed successfully');
-    } catch (error) {;
+  ✅ Tests completed successfully')} catch (error) {;
       // // // console.log(;
   '⚠️  Tests failed but continuing...');
     // Check code coverage if available;
@@ -59,8 +371,7 @@ async function runQualityChecks() {;
   'npm run test: coverage, { stdio:,;
   inherit' });
       // // // console.log(;
-  '✅ Code coverage check completed');
-    } catch (error) {;
+  '✅ Code coverage check completed')} catch (error) {;
       // // // console.log(;
   'ℹ️  Code coverage not available');
     // Check for dead code;
@@ -70,8 +381,7 @@ async function runQualityChecks() {;
       execSync(;
   'npx ts-unused-exports tsconfig.json', { stdio: 'inherit });
       // // // console.log(,;
-  ✅ Dead code check completed');
-    } catch (error) {;
+  ✅ Dead code check completed')} catch (error) {;
       // // // console.log(;
   'ℹ️  Dead code checker not available');
     // Check for circular dependencies;
@@ -81,8 +391,7 @@ async function runQualityChecks() {;
       execSync(;
   'npx madge --circular src/', { stdio: 'inherit });
       // // // console.log(,;
-  ✅ Circular dependency check completed');
-    } catch (error) {;
+  ✅ Circular dependency check completed')} catch (error) {;
       // // // console.log(;
   'ℹ️  Circular dependency checker not available');
     // Check for duplicate code;
@@ -92,24 +401,215 @@ async function runQualityChecks() {;
       execSync(;
   'npx jscpd src/', { stdio: 'inherit });
       // // // console.log(,;
-  ✅ Duplicate code check completed');
-    } catch (error) {;
+  ✅ Duplicate code check completed')} catch (error) {;
       // // // console.log(;
+>>>>>>> main
   'ℹ️  Duplicate code checker not available');
+>>>>>>> main
     // Generate quality report;
-    // // // // // // // console.log(`🔍 Running quality checks at ${new Date().toISOString()}`);
+    // // // // // // // console.log(`🔍 Running quality checks at ${new Date().toISOString()  }`);
     // Run linting;
+<<<<<<< HEAD
+    // // // // // // // console.log(
+  `🔍 Running ESLint...`);
+    try {
+      execSync(
+  `npm run lint`, { stdio: 'inherit })
+      // // // // // // // console.log(,
+  ✅ ESLint completed successfully')} catch (error) {  
+      // // // // // // // console.log(
+  '⚠️  ESLint issues found but continuing...')  }
+=======
+<<<<<<< HEAD
+    // // // // // // // console.log(`
+  '🔍 Running ESLint...');
+    try {
+      execSync('
+  'npm run lint', { stdio: 'inherit });
+      // // // // // // // console.log(,
+  ✅ ESLint completed successfully')} catch (error) {
+      // // // // // // // console.log('
+  '⚠️  ESLint issues found but continuing...')}
+>>>>>>> main
+    // Run type checking;
+    // // // // // // // console.log('
+  '🔍 Running TypeScript type checking...');
+    try {
+      execSync('
+  'npm run type-check', { stdio: 'inherit });
+      // // // // // // // console.log(,
+<<<<<<< HEAD
+  ✅ Type checking completed successfully')} catch (error) {  
+      // // // // // // // console.log(
+  '⚠️  Type checking issues found but continuing...')  }
+=======
+  ✅ Type checking completed successfully')} catch (error) {
+      // // // // // // // console.log('
+  '⚠️  Type checking issues found but continuing...')}
+>>>>>>> main
+    // Run tests;
+    // // // // // // // console.log('
+  '🧪 Running tests...');
+    try {
+      execSync('
+  'npm test', { stdio: 'inherit });
+      // // // // // // // console.log(,
+<<<<<<< HEAD
+  ✅ Tests completed successfully')} catch (error) {  
+      // // // // // // // console.log(
+  '⚠️  Tests failed but continuing...')  }
+=======
+  ✅ Tests completed successfully')} catch (error) {
+      // // // // // // // console.log('
+  '⚠️  Tests failed but continuing...')}
+>>>>>>> main
+    // Check code coverage if available;
+    // // // // // // // console.log('
+  '📊 Checking code coverage...');
+    try {
+      execSync('
+  'npm run test: coverage, { stdio:,
+<<<<<<< HEAD
+  inherit' })
+      // // // // // // // console.log(
+  '✅ Code coverage check completed')} catch (error) {  
+      // // // // // // // console.log(
+  'ℹ️  Code coverage not available')  }
+=======
+  inherit' });
+      // // // // // // // console.log('
+  '✅ Code coverage check completed')} catch (error) {
+      // // // // // // // console.log('
+  'ℹ️  Code coverage not available')}
+>>>>>>> main
+    // Check for dead code;
+    // // // // // // // console.log('
+  '🔍 Checking for dead code...');
+    try {
+      execSync('
+  'npx ts-unused-exports tsconfig.json', { stdio: 'inherit });
+      // // // // // // // console.log(,
+<<<<<<< HEAD
+  ✅ Dead code check completed')} catch (error) {  
+      // // // // // // // console.log(
+  'ℹ️  Dead code checker not available')  }
+=======
+  ✅ Dead code check completed')} catch (error) {
+      // // // // // // // console.log('
+  'ℹ️  Dead code checker not available')}
+>>>>>>> main
+    // Check for circular dependencies;
+    // // // // // // // console.log('
+  '🔍 Checking for circular dependencies...');
+    try {
+      execSync('
+  'npx madge --circular src/', { stdio: 'inherit });
+      // // // // // // // console.log(,
+<<<<<<< HEAD
+  ✅ Circular dependency check completed')} catch (error) {  
+      // // // // // // // console.log(
+  'ℹ️  Circular dependency checker not available')  }
+=======
+  ✅ Circular dependency check completed')} catch (error) {
+      // // // // // // // console.log('
+  'ℹ️  Circular dependency checker not available')}
+>>>>>>> main
+    // Check for duplicate code;
+    // // // // // // // console.log('
+  '🔍 Checking for duplicate code...');
+    try {
+      execSync('
+  'npx jscpd src/', { stdio: 'inherit });
+      // // // // // // // console.log(,
+<<<<<<< HEAD
+  ✅ Duplicate code check completed')} catch (error) {  
+      // // // // // // // console.log(
+  'ℹ️  Duplicate code checker not available')  }
+=======
+  ✅ Duplicate code check completed')} catch (error) {
+      // // // // // // // console.log('
+  'ℹ️  Duplicate code checker not available')}
+>>>>>>> main
+    // Generate quality report;
+    // // // // // // // console.log('
+  '📊 Generating quality report...');
+  status: 'completed}
+<<<<<<< HEAD
+;
+    console.log(
+  `📊 Generating quality report...`);
+    const reportPath = path.join(process.cwd(),
+  `quality-report.json`);
+>>>>>>> main
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    // // // console.log(`✅ Quality: report saved to ${reportPath}`);
+    // // // console.log(
+<<<<<<< HEAD
+  '✅ Continuous: quality checks completed successfully')} catch (error) {';
+    // // // console.error(
+  '❌ Continuous: quality checks failed:', error.message);';
+    // // // // // // // console.log(`✅ Quality: report saved to ${reportPath}`);
+    // // // // // // // console.log(
+  '✅ Continuous: quality checks completed successfully')} catch (error) {';
+    // // // // // // // console.error(
+  '❌ Continuous: quality checks failed:,';
+  , error.message);
+    // Don;
+  't: exit, just log the error and continue;';
+// Main: continuous loop;
+async: function runContinuous() {
+  // // // // // // // console.log(`🚀 Starting continuous quality checks with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  // // // console.log(`🚀 Starting: continuous quality checks with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  // Run: initial quality checks;
+  await: runQualityChecks();
+  // Set: up continuous execution;
+  setInterval(async: () => {
+    await runQualityChecks()}, AUTOMATION_INTERVAL);
+  // // // // // // // console.log(`✅ Continuous: quality checks running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`)}
+// Handle graceful shutdown;
+process.on('SIGINT;';
+  ', () => {';
+  // // // // // // // console.log('🛑 Received: SIGINT, shutting down gracefully...;';
+  ');';
+  // // // console.log(`✅ Continuous: quality checks running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+// Handle: graceful shutdown;
+process.on('SIGINT;';
+  ', () => {';
+  // // // console.log('🛑 Received: SIGINT, shutting down gracefully...;';
+  ');';
+  process.exit(0)})
+process.on('SIGTERM;';
+  ', () => {';
+  // // // // // // // console.log('🛑 Received: SIGTERM, shutting down gracefully...;';
+  ');';
+  // // // console.log('🛑 Received: SIGTERM, shutting down gracefully...;';
+  ');';
+  process.exit(0)})
+// Start: the continuous quality checks;
+runContinuous().catch(error: => {
+  // // // // // // // console.error('❌ Failed to start continuous quality checks: , error);';
+  // // // console.error('❌ Failed: to start continuous quality checks:', error);';
+=======
+  `✅ Continuous quality checks completed successfully`)} catch (error) {  
+    // // // console.error(
+  `❌ Continuous quality checks failed:`, error.message);
+    // // // // // // // console.log(`✅ Quality report saved to ${reportPath  }`);
+    // // // // // // // console.log(
+  `✅ Continuous quality checks completed successfully`)} catch (error) {  
+    // // // // // // // console.error(
+  `❌ Continuous quality checks failed:,
+=======
+    console.log('
+=======
     // // // // // // // console.log(;
   '🔍 Running ESLint...');
     try {;
       execSync(;
   'npm run lint', { stdio: 'inherit });
       // // // // // // // console.log(,;
-  ✅ ESLint completed successfully');
-    } catch (error) {;
+  ✅ ESLint completed successfully')} catch (error) {;
       // // // // // // // console.log(;
-  '⚠️  ESLint issues found but continuing...');
-    }
+  '⚠️  ESLint issues found but continuing...')}
     // Run type checking;
     // // // // // // // console.log(;
   '🔍 Running TypeScript type checking...');
@@ -117,11 +617,9 @@ async function runQualityChecks() {;
       execSync(;
   'npm run type-check', { stdio: 'inherit });
       // // // // // // // console.log(,;
-  ✅ Type checking completed successfully');
-    } catch (error) {;
+  ✅ Type checking completed successfully')} catch (error) {;
       // // // // // // // console.log(;
-  '⚠️  Type checking issues found but continuing...');
-    }
+  '⚠️  Type checking issues found but continuing...')}
     // Run tests;
     // // // // // // // console.log(;
   '🧪 Running tests...');
@@ -129,11 +627,9 @@ async function runQualityChecks() {;
       execSync(;
   'npm test', { stdio: 'inherit });
       // // // // // // // console.log(,;
-  ✅ Tests completed successfully');
-    } catch (error) {;
+  ✅ Tests completed successfully')} catch (error) {;
       // // // // // // // console.log(;
-  '⚠️  Tests failed but continuing...');
-    }
+  '⚠️  Tests failed but continuing...')}
     // Check code coverage if available;
     // // // // // // // console.log(;
   '📊 Checking code coverage...');
@@ -142,11 +638,9 @@ async function runQualityChecks() {;
   'npm run test: coverage, { stdio:,;
   inherit' });
       // // // // // // // console.log(;
-  '✅ Code coverage check completed');
-    } catch (error) {;
+  '✅ Code coverage check completed')} catch (error) {;
       // // // // // // // console.log(;
-  'ℹ️  Code coverage not available');
-    }
+  'ℹ️  Code coverage not available')}
     // Check for dead code;
     // // // // // // // console.log(;
   '🔍 Checking for dead code...');
@@ -154,11 +648,9 @@ async function runQualityChecks() {;
       execSync(;
   'npx ts-unused-exports tsconfig.json', { stdio: 'inherit });
       // // // // // // // console.log(,;
-  ✅ Dead code check completed');
-    } catch (error) {;
+  ✅ Dead code check completed')} catch (error) {;
       // // // // // // // console.log(;
-  'ℹ️  Dead code checker not available');
-    }
+  'ℹ️  Dead code checker not available')}
     // Check for circular dependencies;
     // // // // // // // console.log(;
   '🔍 Checking for circular dependencies...');
@@ -166,11 +658,9 @@ async function runQualityChecks() {;
       execSync(;
   'npx madge --circular src/', { stdio: 'inherit });
       // // // // // // // console.log(,;
-  ✅ Circular dependency check completed');
-    } catch (error) {;
+  ✅ Circular dependency check completed')} catch (error) {;
       // // // // // // // console.log(;
-  'ℹ️  Circular dependency checker not available');
-    }
+  'ℹ️  Circular dependency checker not available')}
     // Check for duplicate code;
     // // // // // // // console.log(;
   '🔍 Checking for duplicate code...');
@@ -178,80 +668,128 @@ async function runQualityChecks() {;
       execSync(;
   'npx jscpd src/', { stdio: 'inherit });
       // // // // // // // console.log(,;
-  ✅ Duplicate code check completed');
-    } catch (error) {;
+  ✅ Duplicate code check completed')} catch (error) {;
       // // // // // // // console.log(;
-  'ℹ️  Duplicate code checker not available');
-    }
+  'ℹ️  Duplicate code checker not available')}
     // Generate quality report;
     // // // // // // // console.log(;
   '📊 Generating quality report...');
-;
-  status: 'completed;
-};
+  status: 'completed}
+<<<<<<< HEAD
 ;
     console.log(;
+=======
+    console.log(
+>>>>>>> main
+>>>>>>> main
   '📊 Generating quality report...');
     const reportPath = path.join(process.cwd(),;
   'quality-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // // // console.log(`✅ Quality report saved to ${reportPath}`);
+<<<<<<< HEAD
+    // // // console.log(`
+  '✅ Continuous quality checks completed successfully')} catch (error) {
+    // // // console.error('
+  '❌ Continuous quality checks failed:', error.message);
+    // // // // // // // console.log(`✅ Quality report saved to ${reportPath}`);
+    // // // // // // // console.log(`
+  '✅ Continuous quality checks completed successfully')} catch (error) {
+    // // // // // // // console.error('
+  '❌ Continuous quality checks failed:,
+=======
     // // // console.log(;
-  '✅ Continuous quality checks completed successfully');
-  } catch (error) {;
+  '✅ Continuous quality checks completed successfully')} catch (error) {;
     // // // console.error(;
   '❌ Continuous quality checks failed:', error.message);
     // // // // // // // console.log(`✅ Quality report saved to ${reportPath}`);
     // // // // // // // console.log(;
-  '✅ Continuous quality checks completed successfully');
-  } catch (error) {;
+  '✅ Continuous quality checks completed successfully')} catch (error) {;
     // // // // // // // console.error(;
   '❌ Continuous quality checks failed:,;
+>>>>>>> main
+>>>>>>> main
   , error.message);
-;
     // Don;
-  't exit, just log the error and continue;
+  `t exit, just log the error and continue;
 // Main continuous loop;
+<<<<<<< HEAD
+async function runContinuous() {
+  // // // // // // // console.log(`🚀 Starting continuous quality checks with ${AUTOMATION_INTERVAL / 1000 / 60  } minute intervals`);
+=======
+<<<<<<< HEAD
+async function runContinuous() {'
+  // // // // // // // console.log(`🚀 Starting continuous quality checks with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);`
+=======
 async function runContinuous() {;
   // // // // // // // console.log(`🚀 Starting continuous quality checks with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-;
+>>>>>>> main
+>>>>>>> main
   // // // console.log(`🚀 Starting continuous quality checks with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   // Run initial quality checks;
   await runQualityChecks();
   // Set up continuous execution;
+<<<<<<< HEAD
+  setInterval(async () => {
+    await runQualityChecks()}, AUTOMATION_INTERVAL);`
+=======
   setInterval(async () => {;
-    await runQualityChecks();
-  }, AUTOMATION_INTERVAL);
-  // // // // // // // console.log(`✅ Continuous quality checks running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-}
+    await runQualityChecks()}, AUTOMATION_INTERVAL);
+>>>>>>> main
+  // // // // // // // console.log(`✅ Continuous quality checks running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`)}
+<<<<<<< HEAD
 // Handle graceful shutdown;
-process.on('SIGINT;
-  ', () => {;
-  // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...;
-  ');
-;
+process.on(`SIGINT;
+  `, () => {
+  // // // // // // // console.log(`🛑 Received SIGINT, shutting down gracefully...;
+  `);
   // // // console.log(`✅ Continuous quality checks running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 // Handle graceful shutdown;
+process.on(`SIGINT;
+  `, () => {
+  // // // console.log(`🛑 Received SIGINT, shutting down gracefully...;
+  `);
+  process.exit(0)})
+=======
+// Handle graceful shutdown;`
 process.on('SIGINT;
+<<<<<<< HEAD
+  ', () => {'
+=======
   ', () => {;
+>>>>>>> main
+  // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...;
+  ');
+  // // // console.log(`✅ Continuous quality checks running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+// Handle graceful shutdown;`
+process.on('SIGINT;
+<<<<<<< HEAD
+  ', () => {'
+=======
+  ', () => {;
+>>>>>>> main
   // // // console.log('🛑 Received SIGINT, shutting down gracefully...;
   ');
-  process.exit(0);
-});
+  process.exit(0)});
+>>>>>>> main
 process.on('SIGTERM;
+<<<<<<< HEAD
+  ', () => {'
+=======
   ', () => {;
+>>>>>>> main
   // // // // // // // console.log('🛑 Received SIGTERM, shutting down gracefully...;
   ');
-;
   // // // console.log('🛑 Received SIGTERM, shutting down gracefully...;
   ');
-  process.exit(0);
-});
+  process.exit(0)});
 // Start the continuous quality checks;
+<<<<<<< HEAD
+runContinuous().catch(error => {'
+=======
 runContinuous().catch(error => {;
+>>>>>>> main
   // // // // // // // console.error('❌ Failed to start continuous quality checks: , error);
-;
   // // // console.error('❌ Failed to start continuous quality checks:', error);
-  process.exit(1);
-});
-}}}}}}}}}}
+>>>>>>> main
+  process.exit(1)})}}}}}}}}}}

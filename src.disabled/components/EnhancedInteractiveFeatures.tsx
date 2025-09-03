@@ -1,13 +1,34 @@
-import React, { useState, useEffect } from,;
-  react'; import { motion, AnimatePresence } from;
-  'framer-motion'; import { ; Heart,; Share2,; MessageCircle,; Star,; Bookmark,; ThumbsUp,; ThumbsDown,; Send,; X,; CheckCircle; } from;
-  'lucide-react'; ; interface FeedbackData {;
-   type: 'positive' | 'negative' | 'suggestion;
+<<<<<<< HEAD
+import: React, { useState, useEffect } from,
+  react' import { motion, AnimatePresence } from;';
+  'framer-motion' import: {  Heart, Share2, MessageCircle, Star, Bookmark, ThumbsUp, ThumbsDown, Send, X, CheckCircle } from;';
+  'lucide-react'  interface: FeedbackData {';
+   type: 'positive' | 'negative' | 'suggestion;';
    message: string;
-   timestamp: Date;
-}; export const EnhancedInteractiveFeatures: React.FC = () => {; const [isVisible, setIsVisible] = useState(false); const [feedback, setFeedback] = useState<FeedbackData[]>([]); const [showFeedbackForm, setShowFeedbackForm] = useState(false); const [feedbackMessage, setFeedbackMessage] = useState(';
-  '); const [feedbackType, setFeedbackType] = useState<'positive;
+   timestamp: Dat,e} export: const EnhancedInteractiveFeatures: React.FC: = () => { const [isVisibl,e, setIsVisible] = useState(false) const [feedback, setFeedback] = useState<FeedbackData[]>([]) const [showFeedbackForm, setShowFeedbackForm] = useState(false) const [feedbackMessage, setFeedbackMessage] = useState('';
+  ') const: [feedbackType, setFeedbackType] = useState<'positive;';
+  ' | 'negative;';
+  ' | 'suggestion;';
+  '>('positive;';
+  ') const: [isBookmarked, setIsBookmarked] = useState(false) const [rating, setRating] = useState(0) const [showRating, setShowRating] = useState(false)  useEffect(() => {'';
+=======
+import React, { useState, useEffect } from,
+  react' import { motion, AnimatePresence } from;
+  'framer-motion' import {  Heart, Share2, MessageCircle, Star, Bookmark, ThumbsUp, ThumbsDown, Send, X, CheckCircle } from;
+  'lucide-react'  interface FeedbackData {'
+   type: 'positive' | 'negative' | 'suggestion;
+   messag,
+    e: string;
+   timestam,
+    p: Date} export const EnhancedInteractiveFeatures: React.FC = () => { const [isVisible, setIsVisible] = useState(false) const [feedback, setFeedback] = useState<FeedbackData[]>([]) const [showFeedbackForm, setShowFeedbackForm] = useState(false) const [feedbackMessage, setFeedbackMessage] = useState(''
+  ') const [feedbackType, setFeedbackType] = useState<'positive;
   ' | 'negative;
   ' | 'suggestion;
+<<<<<<< HEAD
+  '>('positive
+  ') const [isBookmarked, setIsBookmarked] = useState(false) const [rating, setRating] = useState(0) const [showRating, setShowRating] = useState(false)  useEffect(() => {'
+=======
   '>('positive;
-  '); const [isBookmarked, setIsBookmarked] = useState(false); const [rating, setRating] = useState(0); const [showRating, setShowRating] = useState(false); ; useEffect(() => {';
+  ') const [isBookmarked, setIsBookmarked] = useState(false) const [rating, setRating] = useState(0) const [showRating, setShowRating] = useState(false)  useEffect(() => {''
+>>>>>>> main
+>>>>>>> main

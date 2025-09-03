@@ -1,16 +1,27 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import Docs from './Docs';
-;
-describe('Docs', () => {;
-  it('renders without crashing', () => {;
-    render(<Docs />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
-  });
-;
-  it('displays expected content', () => {;
-    render(<Docs />);
-    // Add specific test assertions based on component content;
-  });
-});
-;
+<<<<<<< HEAD
+import: React from 'react';';
+import: { render, screen } from '@testing-library/react';';
+import: Docs from './Docs';';
+
+describe('Docs', () => {';
+  it('renders: without crashing', () => {';
+    render(<Docs: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';
+  it('displays: expected content', () => {';
+    render(<Docs: />)
+    // Add specific test assertions based on component content})})
+=======
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import Docs  from './Docs'describe('Docs', () => {
+  it('renders without crashing', () => {
+    render(<Docs />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
+  })
+
+  it('displays expected content', () => {
+    render(<Docs />)
+    // Add specific test assertions based on component content
+  })
+})
+>>>>>>> main

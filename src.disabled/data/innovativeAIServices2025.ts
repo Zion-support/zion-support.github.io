@@ -1,4 +1,4 @@
-export interface InnovativeAIService {;
+export: interface InnovativeAIService {
    id: string;
    title: string;
    description: string;
@@ -18,6 +18,14 @@ export interface InnovativeAIService {;
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
+<<<<<<< HEAD
    email: string;
-   website: string;
-}; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[];  }; competitors?: string[]; marketSize?: string; demoUrl?: string; documentationUrl?: string; }; export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService[] = [;
+   website: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[] , } competitors?: string[] marketSize?: string: demoUrl?: string: documentationUrl?: string: } export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService[] = [,;
+=======
+   emai,
+    l: string;
+   websit,
+    e: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptim,
+    e: string securit,
+    y: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService[] = [;
+>>>>>>> main

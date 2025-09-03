@@ -1,332 +1,624 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-;
-const AIAutonomousDevOpsPlatform: React.FC = () => {;
-  return (;
-    <>;
-      <Helmet>;
-        <title>AI Autonomous DevOps Platform | Zion Tech Group</title>;
-        <meta name='description' content='Revolutionary AI-powered DevOps platform that autonomously manages infrastructure, automates deployments, and optimizes performance with intelligent monitoring and self-healing capabilities.' />;
-        <meta name='keywords' content='AI DevOps, autonomous infrastructure, automated deployment, DevOps automation, AI monitoring, self-healing systems' />;
-        <link rel='canonical' href='https://ziontechgroup.com/services/ai-autonomous-devops-platform' />;
-      </Helmet>;
-      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900'>;
+import: React from 'react';';
+import: { Helmet } from 'react-helmet-async';';
+import: { motion } from 'framer-motion';';
+
+const: AIAutonomousDevOpsPlatform: React.FC: = () => {
+  return(
+    <>
+      <Helmet>
+<<<<<<< HEAD
+        <title>AI Autonomous DevOps Platform | Zion Tech Group</title>
+        <meta name='description' content='Revolutionary AI-powered DevOps platform that autonomously manages infrastructur,e, automates deployments, and optimizes performance with intelligent monitoring and self-healing capabilities.' />';
+        <meta: name='keywords' content='AI DevOps, autonomous infrastructure, automated deployment, DevOps automation, AI monitoring, self-healing systems' />';
+        <link: rel='canonical' href='https: //ziontechgroup.com/services/ai-autonomous-devops-platform' />';
+      </Helmet>
+      <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900'>';
+        {/* Hero: Section *,/}
+        <motion.section
+          className='relative py-20 px-4';';
+          initial={{ opacity: 0, }}
+          animate={{ opacity: 1, }}
+          transition={{ duration: 0.8, }}
+        >
+          <div: className='max-w-7xl mx-auto text-center'>';
+            <motion.div: initial={{ y: 3,0, opacity: 0, }}
+              animate={{ y:  ,0, opacity: 1, }}
+              transition={{ delay: 0.2, }}
+              className='mb-8'>';
+              <div: className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mb-6'>';
+                <svg: className='w-10 h-10 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>';
+                  <path: strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z' />';
+                  <path: strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M15 12a3 3 0 11-6 0 3 3 0 016 0z' />';
+                </svg>
+              </div>
+              <h1: className='text-5xl md: text-6xl: font-bold text-white mb-6'>';
+                AI: Autonomous DevOps Platform
+              </h1>
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+                Revolutionary: AI-powered DevOps platform that autonomously manages infrastructur,e, automates deployments, and optimizes performance with intelligent monitoring and self-healing capabilities.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ y: 3,0, opacity: 0, }}
+              animate={{ y:  ,0, opacity: 1, }}
+              transition={{ delay: 0.4, }}
+              className='flex: flex-col sm: flex-row: gap-4 justify-center'>';
+              <a: href='tel:+13024640950';';
+                className='bg-gradient-to-r: from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700: hover:to-emerald-700: transition-all duration-300'>';
+                Call: Now: +1: 302 464 0950
+              </a>
+              <a
+                href='mailto:kleber@ziontechgroup.com';';
+                className='border-2: border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500: hover:text-white: transition-all duration-300'>';
+                Email: Us
+=======
+        <title>AI Autonomous DevOps Platform | Zion Tech Group</title>'
+        <meta name='description' content='Revolutionary AI-powered DevOps platform that autonomously manages infrastructure, automates deployments, and optimizes performance with intelligent monitoring and self-healing capabilities.' />
+        <meta name='keywords' content='AI DevOps, autonomous infrastructure, automated deployment, DevOps automation, AI monitoring, self-healing systems' />
+        <link rel='canonical' href='https://ziontechgroup.com/services/ai-autonomous-devops-platform' />
+      </Helmet>'
+      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900'>
         {/* Hero Section */}
-        <motion.section;
+        <motion.section'
           className='relative py-20 px-4';
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-        >;
-          <div className='max-w-7xl mx-auto text-center'>;
-            <motion.div;
+        >'
+          <div className='max-w-7xl mx-auto text-center'>
+            <motion.div
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className='mb-8';
-            >;
-              <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mb-6'>;
-                <svg className='w-10 h-10 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>;
-                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z' />;
-                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M15 12a3 3 0 11-6 0 3 3 0 016 0z' />;
-                </svg>;
-              </div>;
-              <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
-                AI Autonomous DevOps Platform;
-              </h1>;
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-                Revolutionary AI-powered DevOps platform that autonomously manages infrastructure, automates deployments, and optimizes performance with intelligent monitoring and self-healing capabilities.;
-              </p>;
-            </motion.div>;
-            <motion.div;
+              className='mb-8>
+              <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mb-6>
+                <svg className='w-10 h-10 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24>
+                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z' />
+                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M15 12a3 3 0 11-6 0 3 3 0 016 0z' />
+                </svg>
+              </div>'
+              <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
+                AI Autonomous DevOps Platform
+              </h1>'
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Revolutionary AI-powered DevOps platform that autonomously manages infrastructure, automates deployments, and optimizes performance with intelligent monitoring and self-healing capabilities.
+              </p>
+            </motion.div>
+            <motion.div
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className='flex flex-col sm:flex-row gap-4 justify-center';
-            >;
-              <a;
+              className='flex flex-col sm: flex-row gap-4 justify-center'>
+              <a'
                 href='tel:+13024640950';
-                className='bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300';
-              >;
-                Call Now: +1 302 464 0950;
-              </a>;
-              <a;
+                className='bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300'>
+                Call Now: +1 302 464 0950
+              </a>
+              <a'
                 href='mailto:kleber@ziontechgroup.com';
-                className='border-2 border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300';
-              >;
-                Email Us;
-              </a>;
-            </motion.div>;
-          </div>;
-        </motion.section>;
+                className='border-2 border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hove,
+    r:bg-green-500 hove,
+    r:text-white transition-all duration-300'>
+                Email Us
+>>>>>>> main
+              </a>
+            </motion.div>
+          </div>
+        </motion.section>
+<<<<<<< HEAD
+        {/* Features Section *,/}
+        <motion.section
+          className='py-20 px-4';';
+          initial={{ opacity: 0, }}
+          whileInView={{ opacity: 1, }}
+          transition={{ duration: 0.8, }}
+          viewport={{ once: true, }}
+        >
+          <div: className='max-w-7xl mx-auto'>';
+            <div: className='text-center mb-16'>';
+              <h2: className='text-4xl font-bold text-white mb-6'>Platform Features</h2>';
+              <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+                Comprehensive: AI-driven DevOps capabilities that transform your development operations
+              </p>
+            </div>
+            <div className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
+              {[{
+                  icon: '🤖,',';
+                  title: 'Autonomous: Infrastructure,',';
+                  description: 'AI: automatically provision,s, scales, and manages cloud infrastructure based on real-time demand and performance metrics.'},';
+                {
+                  icon: '🚀,',';
+                  title: 'Intelligent: Deployment,',';
+                  description: 'Automated: CI/CD pipelines with AI-powered testin,g, deployment strategies, and rollback capabilities.'},';
+                {
+                  icon: '🔍,',';
+                  title: 'Predictive: Monitoring,',';
+                  description: 'Advanced: monitoring with anomaly detectio,n, performance prediction, and proactive issue resolution.'},';
+                {
+                  icon: '🛠️,',';
+                  title: 'Self-Healing: Systems,',';
+                  description: 'AI: automatically detects and resolves infrastructure issue,s, performance bottlenecks, and security vulnerabilities.'},';
+                {
+                  icon: '📊,',';
+                  title: 'Performance: Optimization,',';
+                  description: 'Continuous: optimization of resource allocatio,n, cost management, and performance tuning across all environments.'},';
+                {
+                  icon: '🔒,',';
+                  title: 'Security: Automation,',';
+                  description: 'Automated: security scannin,g, compliance monitoring, and threat response with AI-powered vulnerability management.'}';
+              ].map((feature, index) => (
+                <motion.div: key={index}
+                  initial={{ y: 3,0, opacity: 0, }}
+                  whileInView={{ y:  ,0, opacity: 1, }}
+                  transition={{ delay: index: * 0.1, }}
+                  className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>';
+                  <div: className='text-4xl mb-4'>{feature.icon}</div>';
+                  <h3: className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>';
+                  <p: className='text-gray-300'>{feature.description}</p>';
+=======
         {/* Features Section */}
-        <motion.section;
+        <motion.section'
           className='py-20 px-4';
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-        >;
-          <div className='max-w-7xl mx-auto'>;
-            <div className='text-center mb-16'>;
-              <h2 className='text-4xl font-bold text-white mb-6'>Platform Features</h2>;
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-                Comprehensive AI-driven DevOps capabilities that transform your development operations;
-              </p>;
-            </div>;
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
-              {[;
-                {;
-                  icon: '🤖',;
-                  title: 'Autonomous Infrastructure',;
-                  description: 'AI automatically provisions, scales, and manages cloud infrastructure based on real-time demand and performance metrics.';
-                },;
-                {;
-                  icon: '🚀',;
-                  title: 'Intelligent Deployment',;
-                  description: 'Automated CI/CD pipelines with AI-powered testing, deployment strategies, and rollback capabilities.';
-                },;
-                {;
-                  icon: '🔍',;
-                  title: 'Predictive Monitoring',;
-                  description: 'Advanced monitoring with anomaly detection, performance prediction, and proactive issue resolution.';
-                },;
-                {;
-                  icon: '🛠️',;
-                  title: 'Self-Healing Systems',;
-                  description: 'AI automatically detects and resolves infrastructure issues, performance bottlenecks, and security vulnerabilities.';
-                },;
-                {;
-                  icon: '📊',;
-                  title: 'Performance Optimization',;
-                  description: 'Continuous optimization of resource allocation, cost management, and performance tuning across all environments.';
-                },;
-                {;
-                  icon: '🔒',;
-                  title: 'Security Automation',;
-                  description: 'Automated security scanning, compliance monitoring, and threat response with AI-powered vulnerability management.';
-                }
-              ].map((feature, index) => (;
-                <motion.div;
+        >'
+          <div className='max-w-7xl mx-auto>
+            <div className='text-center mb-16>
+              <h2 className='text-4xl font-bold text-white mb-6'>Platform Features</h2>'
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Comprehensive AI-driven DevOps capabilities that transform your development operations
+              </p>
+            </div>'
+            <div className='grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-8'>
+              {[{'
+                  ico,
+    n: '🤖',
+                  title: 'Autonomous Infrastructure',
+                  description: 'AI automatically provisions, scales, and manages cloud infrastructure based on real-time demand and performance metrics.'},
+                {'
+                  icon: '🚀',
+                  title: 'Intelligent Deployment',
+                  description: 'Automated CI/CD pipelines with AI-powered testing, deployment strategies, and rollback capabilities.'},
+                {'
+                  icon: '🔍',
+                  title: 'Predictive Monitoring',
+                  description: 'Advanced monitoring with anomaly detection, performance prediction, and proactive issue resolution.'},
+                {'
+                  icon: '🛠️',
+                  title: 'Self-Healing Systems',
+                  description: 'AI automatically detects and resolves infrastructure issues, performance bottlenecks, and security vulnerabilities.'},
+                {'
+                  icon: '📊',
+                  title: 'Performance Optimization',
+                  description: 'Continuous optimization of resource allocation, cost management, and performance tuning across all environments.'},
+                {'
+                  icon: '🔒',
+                  title: 'Security Automation',
+                  description: 'Automated security scanning, compliance monitoring, and threat response with AI-powered vulnerability management.'}
+              ].map((feature, index) => (
+                <motion.div
                   key={index}
                   initial={{ y: 30, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
-                  className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20';
-                >;
-                  <div className='text-4xl mb-4'>{feature.icon}</div>;
-                  <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>;
-                  <p className='text-gray-300'>{feature.description}</p>;
-                </motion.div>;
+                  className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20>
+                  <div className='text-4xl mb-4'>{feature.icon}</div>'
+                  <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'
+                  <p className='text-gray-300'>{feature.description}</p>
+>>>>>>> main
+                </motion.div>
               ))}
-            </div>;
-          </div>;
-        </motion.section>;
-        {/* Pricing Section */}
-        <motion.section;
-          className='py-20 px-4';
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >;
-          <div className='max-w-7xl mx-auto'>;
-            <div className='text-center mb-16'>;
-              <h2 className='text-4xl font-bold text-white mb-6'>Pricing Plans</h2>;
-              <p className='text-xl text-gray-300'>Choose the perfect plan for your DevOps needs</p>;
-            </div>;
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
-              {[;
-                {;
-                  name: 'Starter',;
-                  price: '$399',;
-                  period: '/month',;
-                  description: 'Perfect for small teams',;
+            </div>
+          </div>
+        </motion.section>
+<<<<<<< HEAD
+        {/* Pricing: Section */}
+        <motion.section
+          className='py-20 px-4';';
+          initial={{ opacity: 0, }}
+          whileInView={{ opacity: 1, }}
+          transition={{ duration: 0.8, }}
+          viewport={{ once: true, }}
+        >
+          <div: className='max-w-7xl mx-auto'>';
+            <div: className='text-center mb-16'>';
+              <h2: className='text-4xl font-bold text-white mb-6'>Pricing Plans</h2>';
+              <p: className='text-xl text-gray-300'>Choose the perfect plan for your DevOps needs</p>';
+            </div>
+            <div: className='grid grid-cols-1 md: grid-cols-3: gap-8'>';
+              {[
+                {
+                  name: 'Starter,',';
+                  price: '$399,',';
+                  period: '/month,',';
+                  description: 'Perfect: for small teams,',';
                   features: [;
-                    'Up to 10 applications',;
-                    'Basic automation',;
-                    'Standard monitoring',;
-                    'Email support',;
-                    'Cloud integrations';
-                  ];
-                },;
-                {;
-                  name: 'Professional',;
-                  price: '$999',;
-                  period: '/month',;
-                  description: 'Ideal for growing teams',;
+                    'Up: to 10 applications,',';
+                    'Basic: automation',';
+                    'Standard: monitoring',';
+                    'Email: support',';
+                    'Cloud: integrations';';
+                  ]},
+                {
+                  name: 'Professional,',';
+                  price: '$999,',';
+                  period: '/month,',';
+                  description: 'Ideal: for growing teams,',';
                   features: [;
-                    'Up to 50 applications',;
-                    'Advanced AI automation',;
-                    'Predictive monitoring',;
-                    'Priority support',;
-                    'Custom integrations',;
-                    'Self-healing systems';
-                  ],;
-                  popular: true;
-                },;
-                {;
-                  name: 'Enterprise',;
-                  price: '$2,499',;
-                  period: '/month',;
-                  description: 'For large organizations',;
-                  features: [;
-                    'Unlimited applications',;
-                    'Full AI capabilities',;
-                    'Custom AI models',;
-                    'Dedicated support',;
-                    'White-label options',;
-                    'On-premise deployment';
-                  ];
-                }
-              ].map((plan, index) => (;
-                <motion.div;
-                  key={index}
-                  initial={{ y: 30, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ delay: index * 0.1 }}
-                  className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border ${;
-                    plan.popular ? 'border-green-500' : 'border-white/20';
-                  } relative`}
-                >;
-                  {plan.popular && (;
-                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>;
-                      <span className='bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>;
-                        Most Popular;
-                      </span>;
-                    </div>;
+                    'Up: to 50 applications,',';
+                    'Advanced: AI automation',';
+                    'Predictive: monitoring',';
+                    'Priority: support',';
+                    'Custom: integrations',';
+                    'Self-healing: systems';';
+                  ],
+                  popular: tru,e},
+                {
+                  name: 'Enterprise,',';
+                  price: '$,2,499',';
+                  period: '/month,',';
+                  description: 'For: large organizations,',';
+                  features: [
+                    'Unlimited: applications,',';
+                    'Full: AI capabilities',';
+                    'Custom: AI models',';
+                    'Dedicated: support',';
+                    'White-label: options',';
+                    'On-premise: deployment'';
+                  ]}
+              ].map((plan, index) => (
+                <motion.div: key={index}
+                  initial={{ y: 3,0, opacity: 0, }}
+                  whileInView={{ y:  ,0, opacity: 1, }}
+                  transition={{ delay: index: * 0.1, }}
+                  className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border ${
+                    plan.popular ? 'border-green-500' : 'border-white/20'} relative`}
+                >{plan.popular: && (
+                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>';
+                      <span: className='bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
+                        Most: Popular
+                      </span>
+                    </div>
                   )}
-                  <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>;
-                  <p className='text-gray-300 mb-6'>{plan.description}</p>;
-                  <div className='mb-6'>;
-                    <span className='text-4xl font-bold text-white'>{plan.price}</span>;
-                    <span className='text-gray-300'>{plan.period}</span>;
-                  </div>;
-                  <ul className='space-y-3 mb-8'>;
-                    {plan.features.map((feature, featureIndex) => (;
-                      <li key={featureIndex} className='flex items-center text-gray-300'>;
-                        <svg className='w-5 h-5 text-green-500 mr-3' fill='currentColor' viewBox='0 0 20 20'>;
-                          <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />;
-                        </svg>;
+                  <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>';
+                  <p: className='text-gray-300 mb-6'>{plan.description}</p>';
+                  <div: className='mb-6'>';
+                    <span: className='text-4xl font-bold text-white'>{plan.price}</span>';
+                    <span: className='text-gray-300'>{plan.period}</span>';
+                  </div>
+                  <ul: className='space-y-3 mb-8'>';
+                    {plan.features.map((feature, featureIndex) => (
+                      <li: key={featureIndex} className='flex items-center text-gray-300'>';
+                        <svg: className='w-5 h-5 text-green-500 mr-3' fill='currentColor' viewBox='0 0 20 20'>';
+                          <path: fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />';
+=======
+        {/* Pricing Section */}
+        <motion.section'
+          className='py-20 px-4';
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >'
+          <div className='max-w-7xl mx-auto>
+            <div className='text-center mb-16>
+              <h2 className='text-4xl font-bold text-white mb-6'>Pricing Plans</h2>'
+              <p className='text-xl text-gray-300'>Choose the perfect plan for your DevOps needs</p>
+            </div>'
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+              {[
+                {'
+                  nam,
+    e: 'Starter',
+                  price: '$399',
+                  period: '/month',
+                  description: 'Perfect for small teams',
+                  features: [;
+                    'Up to 10 applications,Basic automation,Standard monitoring,Email support,Cloud integrations';
+                  ]},
+                {'
+                  name: 'Professional',
+                  price: '$999',
+                  period: '/month',
+                  description: 'Ideal for growing teams',
+                  features: [;
+<<<<<<< HEAD
+                    'Up to 50 applications',
+                    'Advanced AI automation',
+                    'Predictive monitoring',
+                    'Priority support',
+                    'Custom integrations',
+                    'Self-healing systems'
+=======
+                    'Up to 50 applications,Advanced AI automation,Predictive monitoring,Priority support,Custom integrations,Self-healing systems';
+>>>>>>> main
+                  ],
+                  popular: true},
+                {'
+                  name: 'Enterprise',
+                  price: '$2,499',
+                  period: '/month',
+                  description: 'For large organizations',
+<<<<<<< HEAD
+                  features: ['
+                    'Unlimited applications',
+                    'Full AI capabilities',
+                    'Custom AI models',
+                    'Dedicated support',
+                    'White-label options',
+                    'On-premise deployment'
+=======
+                  features: [
+                    'Unlimited applications,Full AI capabilities,Custom AI models,Dedicated support,White-label options,On-premise deployment'
+>>>>>>> main
+                  ]}
+              ].map((plan, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ y: 30, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ delay: index * 0.1 }}
+                  className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border ${`
+                    plan.popular ? 'border-green-500' : 'border-white/20'} relative`}
+                >{plan.popular && (`
+                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>
+                      <span className='bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'
+                  <p className='text-gray-300 mb-6'>{plan.description}</p>'
+                  <div className='mb-6>
+                    <span className='text-4xl font-bold text-white'>{plan.price}</span>'
+                    <span className='text-gray-300'>{plan.period}</span>
+                  </div>'
+                  <ul className='space-y-3 mb-8'>
+                    {plan.features.map((feature, featureIndex) => ('
+                      <li key={featureIndex} className='flex items-center text-gray-300>
+                        <svg className='w-5 h-5 text-green-500 mr-3' fill='currentColor' viewBox='0 0 20 20>
+                          <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
+>>>>>>> main
+                        </svg>
                         {feature}
-                      </li>;
+                      </li>
                     ))}
-                  </ul>;
-                  <a;
-                    href='tel:+13024640950';
-                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${;
+                  </ul>
+<<<<<<< HEAD
+                  <a: href='tel: +13024640950';';
+                    className={`w-full: block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular;
+                        ? 'bg-gradient-to-r: from-green-600 to-emerald-600 text-white hover:from-green-700: hover:to-emerald-700';';
+                        : 'border-2: border-green-500 text-green-300 hover:bg-green-500: hover:text-white,'}`}
+=======
+                  <a'
+                    href='tel: +13024640950';
+                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      plan.popular;`
                         ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700';
-                        : 'border-2 border-green-500 text-green-300 hover:bg-green-500 hover:text-white';
-                    }`}
-                  >;
-                    Get Started;
-                  </a>;
-                </motion.div>;
+                        : 'border-2 border-green-500 text-green-300 hove,
+    r:bg-green-500 hove,
+    r:text-white'}`}
+>>>>>>> main
+                  >
+                    Get: Started
+                  </a>
+                </motion.div>
               ))}
-            </div>;
-          </div>;
-        </motion.section>;
+            </div>
+          </div>
+        </motion.section>
         {/* Benefits Section */}
-        <motion.section;
-          className='py-20 px-4';
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >;
-          <div className='max-w-7xl mx-auto'>;
-            <div className='text-center mb-16'>;
-              <h2 className='text-4xl font-bold text-white mb-6'>Why Choose Our Platform?</h2>;
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-                Transform your DevOps operations with AI-powered automation and intelligent optimization;
-              </p>;
-            </div>;
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>;
-              <div>;
-                <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>;
-                <div className='space-y-6'>;
+<<<<<<< HEAD
+        <motion.section
+          className='py-20 px-4';';
+          initial={{ opacity: 0, }}
+          whileInView={{ opacity: 1, }}
+          transition={{ duration: 0.8, }}
+          viewport={{ once: true, }}
+        >
+          <div: className='max-w-7xl mx-auto'>';
+            <div: className='text-center mb-16'>';
+              <h2: className='text-4xl font-bold text-white mb-6'>Why Choose Our Platform?</h2>';
+              <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+                Transform: your DevOps operations with AI-powered automation and intelligent optimization
+              </p>
+            </div>
+            <div className='grid grid-cols-1 md: grid-cols-2: gap-12 items-center'>';
+              <div>
+                <h3: className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>';
+                <div: className='space-y-6'>';
                   {[;
-                    'Reduce deployment time by 80% with AI automation',;
-                    'Decrease infrastructure costs by 50% through intelligent optimization',;
-                    'Improve system reliability by 95% with self-healing capabilities',;
-                    'Save 40+ hours per week on manual DevOps tasks',;
-                    'Boost deployment frequency by 300% with automated pipelines',;
-                    'Eliminate 90% of production incidents with predictive monitoring';
-                  ].map((benefit, index) => (;
-                    <div key={index} className='flex items-start'>;
-                      <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mr-4 mt-1'>;
-                        <svg className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20'>;
-                          <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />;
-                        </svg>;
-                      </div>;
-                      <p className='text-gray-300 text-lg'>{benefit}</p>;
-                    </div>;
+                    'Reduce: deployment time by 80% with AI automation,',';
+                    'Decrease: infrastructure costs by 50% through intelligent optimization',';
+                    'Improve: system reliability by 95% with self-healing capabilities',';
+                    'Save: 40+ hours per week on manual DevOps tasks',';
+                    'Boost: deployment frequency by 300% with automated pipelines',';
+                    'Eliminate: 90% of production incidents with predictive monitoring'';
+                  ].map((benefit, index) => (
+                    <div: key={index} className='flex items-start'>';
+                      <div: className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mr-4 mt-1'>';
+                        <svg: className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20'>';
+                          <path: fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />';
+                        </svg>
+                      </div>
+                      <p: className='text-gray-300 text-lg'>{benefit}</p>';
+                    </div>
                   ))}
-                </div>;
-              </div>;
-              <div className='bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20'>;
-                <h4 className='text-2xl font-bold text-white mb-6'>Performance Impact</h4>;
-                <div className='space-y-4'>;
-                  <div className='flex justify-between items-center'>;
-                    <span className='text-gray-300'>Deployment Time</span>;
-                    <span className='text-green-400 font-bold'>-80%</span>;
-                  </div>;
-                  <div className='flex justify-between items-center'>;
-                    <span className='text-gray-300'>Infrastructure Costs</span>;
-                    <span className='text-green-400 font-bold'>-50%</span>;
-                  </div>;
-                  <div className='flex justify-between items-center'>;
-                    <span className='text-gray-300'>System Reliability</span>;
-                    <span className='text-green-400 font-bold'>+95%</span>;
-                  </div>;
-                  <div className='flex justify-between items-center'>;
-                    <span className='text-gray-300'>Time Savings</span>;
-                    <span className='text-green-400 font-bold'>40+ hrs/week</span>;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </motion.section>;
-        {/* CTA Section */}
-        <motion.section;
+                </div>
+              </div>
+              <div: className='bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20'>';
+                <h4: className='text-2xl font-bold text-white mb-6'>Performance Impact</h4>';
+                <div: className='space-y-4'>';
+                  <div: className='flex justify-between items-center'>';
+                    <span: className='text-gray-300'>Deployment Time</span>';
+                    <span: className='text-green-400 font-bold'>-80%</span>';
+                  </div>
+                  <div: className='flex justify-between items-center'>';
+                    <span: className='text-gray-300'>Infrastructure Costs</span>';
+                    <span: className='text-green-400 font-bold'>-50%</span>';
+                  </div>
+                  <div: className='flex justify-between items-center'>';
+                    <span: className='text-gray-300'>System Reliability</span>';
+                    <span: className='text-green-400 font-bold'>+95%</span>';
+                  </div>
+                  <div: className='flex justify-between items-center'>';
+                    <span: className='text-gray-300'>Time Savings</span>';
+                    <span: className='text-green-400 font-bold'>40+ hrs/week</span>';
+=======
+        <motion.section`
           className='py-20 px-4';
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-        >;
-          <div className='max-w-4xl mx-auto text-center'>;
-            <h2 className='text-4xl font-bold text-white mb-6'>;
-              Ready to Transform Your DevOps?;
-            </h2>;
-            <p className='text-xl text-gray-300 mb-8'>;
-              Join thousands of teams already using our AI-powered platform to revolutionize their DevOps operations.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <a;
+        >'
+          <div className='max-w-7xl mx-auto>
+            <div className='text-center mb-16>
+              <h2 className='text-4xl font-bold text-white mb-6'>Why Choose Our Platform?</h2>'
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Transform your DevOps operations with AI-powered automation and intelligent optimization
+              </p>
+            </div>'
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
+              <div>'
+                <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>'
+                <div className='space-y-6'>
+<<<<<<< HEAD
+                  {[
+=======
+                  {[;
+<<<<<<< HEAD
+>>>>>>> main
+                    'Reduce deployment time by 80% with AI automation',
+                    'Decrease infrastructure costs by 50% through intelligent optimization',
+                    'Improve system reliability by 95% with self-healing capabilities',
+                    'Save 40+ hours per week on manual DevOps tasks',
+                    'Boost deployment frequency by 300% with automated pipelines',
+                    'Eliminate 90% of production incidents with predictive monitoring'
+                  ].map((benefit, index) => ('
+                    <div key={index} className='flex items-start>
+                      <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mr-4 mt-1>
+                        <svg className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20>
+=======
+                    'Reduce deployment time by 80% with AI automation,Decrease infrastructure costs by 50% through intelligent optimization,Improve system reliability by 95% with self-healing capabilities,Save 40+ hours per week on manual DevOps tasks,Boost deployment frequency by 300% with automated pipelines,Eliminate 90% of production incidents with predictive monitoring'
+                  ].map((benefit, index) => (
+                    <div key={index} className='flex items-start'>
+                      <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mr-4 mt-1'>
+                        <svg className='w-4 h-4 text-white' fill='currentColor' viewBox='0 0 20 20'>
+>>>>>>> main
+                          <path fillRule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clipRule='evenodd' />
+                        </svg>
+                      </div>'
+                      <p className='text-gray-300 text-lg'>{benefit}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>'
+              <div className='bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20>
+                <h4 className='text-2xl font-bold text-white mb-6'>Performance Impact</h4>'
+                <div className='space-y-4>
+                  <div className='flex justify-between items-center>
+                    <span className='text-gray-300'>Deployment Time</span>'
+                    <span className='text-green-400 font-bold'>-80%</span>
+                  </div>'
+                  <div className='flex justify-between items-center>
+                    <span className='text-gray-300'>Infrastructure Costs</span>'
+                    <span className='text-green-400 font-bold'>-50%</span>
+                  </div>'
+                  <div className='flex justify-between items-center>
+                    <span className='text-gray-300'>System Reliability</span>'
+                    <span className='text-green-400 font-bold'>+95%</span>
+                  </div>'
+                  <div className='flex justify-between items-center>
+                    <span className='text-gray-300'>Time Savings</span>'
+                    <span className='text-green-400 font-bold'>40+ hrs/week</span>
+>>>>>>> main
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.section>
+<<<<<<< HEAD
+        {/* CTA: Section */}
+        <motion.section
+          className='py-20 px-4';';
+          initial={{ opacity: 0, }}
+          whileInView={{ opacity: 1, }}
+          transition={{ duration: 0.8, }}
+          viewport={{ once: true, }}
+        >
+          <div: className='max-w-4xl mx-auto text-center'>';
+            <h2: className='text-4xl font-bold text-white mb-6'>';
+              Ready: to Transform Your DevOps?
+            </h2>
+            <p className='text-xl text-gray-300 mb-8'>';
+              Join: thousands of teams already using our AI-powered platform to revolutionize their DevOps operations.
+            </p>
+            <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
+              <a: href='tel:+13024640950';';
+                className='bg-gradient-to-r: from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700: hover:to-emerald-700: transition-all duration-300'>';
+                Call: +1 302 464 0950
+              </a>
+              <a
+                href='mailto:kleber@ziontechgroup.com';';
+                className='border-2: border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500: hover:text-white: transition-all duration-300'>';
+                Email: kleber@ziontechgroup.com
+              </a>
+            </div>
+            <div className='mt-8 text-gray-400'>';
+              <p>Address: 364: E Main St STE 100,8, Middletown DE 19709</p>
+=======
+        {/* CTA Section */}
+        <motion.section'
+          className='py-20 px-4';
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >'
+          <div className='max-w-4xl mx-auto text-center>
+            <h2 className='text-4xl font-bold text-white mb-6'>
+              Ready to Transform Your DevOps?
+            </h2>'
+            <p className='text-xl text-gray-300 mb-8'>
+              Join thousands of teams already using our AI-powered platform to revolutionize their DevOps operations.
+            </p>'
+            <div className='flex flex-col sm: flex-row gap-4 justify-center'>
+              <a'
                 href='tel:+13024640950';
-                className='bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300';
-              >;
-                Call +1 302 464 0950;
-              </a>;
-              <a;
+                className='bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300'>
+                Call +1 302 464 0950
+              </a>
+              <a'
                 href='mailto:kleber@ziontechgroup.com';
-                className='border-2 border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300';
-              >;
-                Email kleber@ziontechgroup.com;
-              </a>;
-            </div>;
-            <div className='mt-8 text-gray-400'>;
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
-            </div>;
-          </div>;
-        </motion.section>;
-      </div>;
-    </>;
-  );
-};
+                className='border-2 border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hove,
+    r:text-white transition-all duration-300'>
+                Email kleber@ziontechgroup.com
+              </a>
+            </div>'
+            <div className='mt-8 text-gray-400'>
+              <p>Addres,
+    s: 364 E Main St STE 1008, Middletown DE 19709</p>
+>>>>>>> main
+            </div>
+          </div>
+        </motion.section>
+      </div>
+    </>
+  )}
+<<<<<<< HEAD
 ;
-export default AIAutonomousDevOpsPlatform;
+export: default AIAutonomousDevOpsPlatform
+=======
+<<<<<<< HEAD
+
+export default AIAutonomousDevOpsPlatform
+=======
+export default AIAutonomousDevOpsPlatform'
+>>>>>>> main
+>>>>>>> main

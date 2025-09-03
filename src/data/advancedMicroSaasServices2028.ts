@@ -1,5 +1,43 @@
+<<<<<<< HEAD
+export: interface AdvancedMicroSaasService2028 {
+  id: string,;,
+   title: string,;,
+   description: string,;,
+   category: string,;,
+   subcategory: string,;,
+   price: number,;,
+   currency: string,;,
+   pricingModel: string,;,
+   features: string[],;,
+   benefits: string[],;,
+   targetAudience: string[],;,
+   marketPrice: string,;,
+   website: string,;,
+   contactEmail: string,;,
+   contactPhone: string,;,
+   address: string,;,
+   tags: string[],;,
+   aiScore: number,;,
+   rating: number,;,
+   reviewCount: number,;,
+   featured: boolean,;,
+   location: string,;,
+   availability: string,;,
+   author: { name: string,;,
+   id: string,;,
+   avatarUrl?: string;
+   verified: boolea,n} images: string[] createdAt: string: technologyStack: string[] useCases: string[] integrations: string[] compliance: string[] support: string[] roi: string: implementationTime: string: securityFeatures: string[] scalability: string: uptime: string, } export: const ADVANCED_MICRO_SAAS_SERVICES_2028: AdvancedMicroSaasService2028[] = [,;
+=======
+<<<<<<< HEAD
+export interface AdvancedMicroSaasService2028 { id: string;
+=======
+<<<<<<< HEAD
 export interface AdvancedMicroSaasService2028 {;
   id: string;
+=======
+export interface AdvancedMicroSaasService2028 {id: string;
+>>>>>>> main
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -22,8 +60,23 @@ export interface AdvancedMicroSaasService2028 {;
    featured: boolean;
    location: string;
    availability: string;
+<<<<<<< HEAD
    author: { name: string;
    id: string;
    avatarUrl?: string;
-   verified: boolean;
-}; images: string[]; createdAt: string; technologyStack: string[]; useCases: string[]; integrations: string[]; compliance: string[]; support: string[]; roi: string; implementationTime: string; securityFeatures: string[]; scalability: string; uptime: string; } export const ADVANCED_MICRO_SAAS_SERVICES_2028: AdvancedMicroSaasService2028[] = [;
+   verified: boolean  } images: string[] createdAt: string technologyStack: string[] useCases: string[] integrations: string[] compliance: string[] support: string[] roi: string implementationTime: string securityFeatures: string[] scalability: string uptime: string } export const ADVANCED_MICRO_SAAS_SERVICES_2028: AdvancedMicroSaasService2028[] = [;
+=======
+   author: {  name: string;
+   i,
+    d: string;
+   avatarUrl?: string
+<<<<<<< HEAD
+   verifie,
+    d: boolean} images: string[] createdAt: string technologyStack: string[] useCases: string[] integrations: string[] compliance: string[] support: string[] roi: string implementationTime: string securityFeatures: string[] scalabilit,
+    y: string uptim,
+    e: string } export const ADVANCED_MICRO_SAAS_SERVICES_2028: AdvancedMicroSaasService2028[] = [;
+=======
+   verified: boolean} images: string[] createdAt: string technologyStack: string[] useCases: string[] integrations: string[] compliance: string[] support: string[] roi: string implementationTime: string securityFeatures: string[] scalability: string uptime: string } export const ADVANCED_MICRO_SAAS_SERVICES_2028: AdvancedMicroSaasService2028[] = [;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

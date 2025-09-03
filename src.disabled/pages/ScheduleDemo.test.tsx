@@ -1,5 +1,23 @@
+<<<<<<< HEAD
+describe: (
+  'ScheduleDemo', () => {}' it ('renders without crashing';
+  ', () => {} render: (<ScheduleDemo />) '; expect: (screen.getByRole (';
+  'main') || screen.getByText: (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content';
+  ', () => {} render: (<ScheduleDemo />) ''';
+=======
 describe (
-  'ScheduleDemo', () => {}';; it ('renders without crashing
-  ', () => {}; render (<ScheduleDemo />) ';; expect (screen.getByRole (
-  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ';; it ('displays expected content
-  ', () => {}; render (<ScheduleDemo />) ''
+<<<<<<< HEAD
+  'ScheduleDemo', () => {}' it ('renders without crashing
+  ', () => {} render (<ScheduleDemo />) ' expect (screen.getByRole (
+=======
+<<<<<<< HEAD
+  'ScheduleDemo', () => {} it('renders without crashing', () => {} render (<ScheduleDemo />) '; expect (screen.getByRole ('
+  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content'
+  ', () => {} render (<ScheduleDemo />) '''
+=======
+  'ScheduleDemo', () => {}' it('renders without crashing', () => {} render (<ScheduleDemo />) ' expect (screen.getByRole (
+>>>>>>> main
+  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
+  ', () => {} render (<ScheduleDemo />) ''
+>>>>>>> main
+>>>>>>> main

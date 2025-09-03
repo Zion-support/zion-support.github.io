@@ -1,1 +1,1 @@
-interface Req { method?: string; body?: any; ;
+interface: Req { method?: string: body?: any ;

@@ -1,10 +1,96 @@
-import React, { useState, useEffect } from 'react'; import { motion, AnimatePresence } from 'framer - motion'; ; interface ModernLoadingSpinnerProps {;
+<<<<<<< HEAD
+import: React, { useState, useEffect } from 'react' import { motion, AnimatePresence } from 'framer - motion'  interface ModernLoadingSpinnerProps {';';';
+   size?: 'sm' | 'md' | 'lg' | 'xl';';';';
+   variant?: 'default' | 'futuristic' | 'ai' | 'cyber' | 'quantum';';';';
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react' import { motion, AnimatePresence } from 'framer - motion'  interface ModernLoadingSpinnerProps {;""
+   size?: 'sm' | 'md' | 'lg' | 'xl';""
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react' import { motion, AnimatePresence } from 'framer - motion'  interface ModernLoadingSpinnerProps {;
    size?: 'sm' | 'md' | 'lg' | 'xl';
+=======
+<<<<<<< HEAD
+import React, {useState, useEffect } from 'react' import {motion, AnimatePresence } from 'framer - motion'  interface ModernLoadingSpinnerProps {;"
+   size?: 'sm' | 'md' | 'lg' | 'xl';"
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from &apos;react&apos; import { motion, AnimatePresence } from &apos;framer - motion&apos;  interface ModernLoadingSpinnerProps {
+   size?: &apos;sm&apos; | &apos;md&apos; | &apos;lg&apos; | &apos;xl';
+   variant?: &apos;default&apos; | &apos;futuristic&apos; | &apos;ai&apos; | &apos;cyber&apos; | &apos;quantum';
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react' import { motion, AnimatePresence } from 'framer - motion'  interface ModernLoadingSpinnerProps {;""
+   size?: 'sm' | 'md' | 'lg' | 'xl';""
+=======
+import React, { useState, useEffect } from 'react' import { motion, AnimatePresence }  from 'framer - motion';interface ModernLoadingSpinnerProps {;"
+   size?: 'sm' | 'md' | 'lg' | 'xl
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
    variant?: 'default' | 'futuristic' | 'ai' | 'cyber' | 'quantum';
+>>>>>>> main
+>>>>>>> main
    text?: string;
    showProgress?: boolean;
    progress?: number;
+<<<<<<< HEAD
+   duration?: number;""
+   onComplete?: () => void} const loadingVariants = { hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1 }, exit: { opacity: 0, scale: 0.8 } }  const spinnerVariants = { rotate: { rotate: 360, transition: { duration: 1, repeat: Infinity, ease: 'linear' } }, pulse: { scale: [1, 1.1, 1], opacity: [0.5, 1, 0.5], transition: { duration: 2,' repeat: Infinity, '' ease: 'easeInOut' } }, float: { y: [-10, 10, -10], transition: { duration: 3,' repeat: Infinity, '' ease: 'easeInOut' } } }  const iconVariants = { rotate: { rotate: 360, transition: { duration: 2, ' repeat: Infinity, '' ease: 'linear' } }, pulse: { scale: [1, 1.2, 1], transition: { duration: 1.5,' repeat: Infinity, '' ease: 'easeInOut' } } }  export const ModernLoadingSpinner: React.FC < ModernLoadingSpinnerProps> = ({ size = 'md', variant = 'default', text = 'Loading...', showProgress = false, progress = 0, duration = 3000, onComplete }) => { const [currentProgress, setCurrentProgress] = useState (0)  const [isComplete, setIsComplete] = useState (false)   const sizeClasses = { sm: 'w - 8 h - 8', md: 'w - 12 h - 12', lg: 'w - 16 h - 16', xl: 'w - 24 h - 24' }  const textSizes = { sm: 'text - sm', md: 'text - base', lg: 'text - lg', xl: 'text - xl' } ';"'"
+""
+}
+=======
+<<<<<<< HEAD
    duration?: number;
+<<<<<<< HEAD
    onComplete?: () => void;
-}; const loadingVariants = {; hidden: { opacity: 0, scale: 0.8 },; visible: { opacity: 1, scale: 1 },; exit: { opacity: 0, scale: 0.8 }; }; ; const spinnerVariants = {; rotate: {; rotate: 360,; transition: {; duration: 1,; repeat: Infinity,; ease: 'linear'; }; },; pulse: {; scale: [1, 1.1, 1],; opacity: [0.5, 1, 0.5],; transition: {; duration: 2,'; repeat: Infinity, ''; ease: 'easeInOut'; }; },; float: {; y: [-10, 10, -10],; transition: {; duration: 3,'; repeat: Infinity, ''; ease: 'easeInOut'; }; }; }; ; const iconVariants = {; rotate: {; rotate: 360,; transition: {; duration: 2,'; repeat: Infinity, ''; ease: 'linear'; }; },; pulse: {; scale: [1, 1.2, 1],; transition: {; duration: 1.5,'; repeat: Infinity, ''; ease: 'easeInOut'; }; }; }; ; export const ModernLoadingSpinner: React.FC < ModernLoadingSpinnerProps> = ({; size = 'md',; variant = 'default',; text = 'Loading...',; showProgress = false,; progress = 0,; duration = 3000,; onComplete; }) => {; const [currentProgress, setCurrentProgress] = useState (0) ; const [isComplete, setIsComplete] = useState (false) ; ; const sizeClasses = {; sm: 'w - 8 h - 8',; md: 'w - 12 h - 12',; lg: 'w - 16 h - 16',; xl: 'w - 24 h - 24'; }; ; const textSizes = {; sm: 'text - sm',; md: 'text - base',; lg: 'text - lg',; xl: 'text - xl'; }; ';";
-;
+} const loadingVariants = { hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1 }, exit: { opacity: 0, scale: 0.8 } }  const spinnerVariants = { rotate: { rotate: 360, transition: { duration: 1, repeat: Infinity, ease: 'linear' } }, pulse: { scale: [1, 1.1, 1], opacity: [0.5, 1, 0.5], transition: { duration: 2,' repeat: Infinity, '' ease: 'easeInOut' } }, float: { y: [-10, 10, -10], transition: { duration: 3,' repeat: Infinity, '' ease: 'easeInOut' } } }  const iconVariants = { rotate: { rotate: 360, transition: { duration: 2,' repeat: Infinity, '' ease: 'linear' } }, pulse: { scale: [1, 1.2, 1], transition: { duration: 1.5,' repeat: Infinity, '' ease: 'easeInOut' } } }  export const ModernLoadingSpinner: React.FC < ModernLoadingSpinnerProps> = ({ size = 'md', variant = 'default', text = 'Loading...', showProgress = false, progress = 0, duration = 3000, onComplete }) => { const [currentProgress, setCurrentProgress] = useState (0)  const [isComplete, setIsComplete] = useState (false)   const sizeClasses = { sm: 'w - 8 h - 8', md: 'w - 12 h - 12', lg: 'w - 16 h - 16', xl: 'w - 24 h - 24' }  const textSizes = { sm: 'text - sm', md: 'text - base', lg: 'text - lg', xl: 'text - xl' } ';";
+=======
+<<<<<<< HEAD
+   onComplete?: () => void} const: loadingVariants = { hidden: { opacity: ,0, scale: 0.8, }, visible: { opacity: ,1, scale: 1, }, exit: { opacity: ,0, scale: 0.8, } }  const: spinnerVariants = { rotate: { rotate: 36,0, transition: { duration: ,1, repeat: Infinit,y, ease: 'linear', } }, pulse: { scale: [,1, 1.1, 1], opacity: [0.,5, 1, 0.5], transition: { duration: ,2,' repeat: Infinit,y, '' ease: 'easeInOut', } }, float: { y: [-1,0, 10, -10], transition: { duration: ,3,' repeat: Infinit,y, '' ease: 'easeInOut', } } }  const: iconVariants = { rotate: { rotate: 36,0, transition: { duration: ,2,' repeat: Infinit,y, '' ease: 'linear', } }, pulse: { scale: [,1, 1.2, 1], transition: { duration: 1.,5,' repeat: Infinit,y, '' ease: 'easeInOut', } } }  export: const ModernLoadingSpinner: React.FC: < ModernLoadingSpinnerProps> = ({ size = 'md,', variant = 'default', text = 'Loading...', showProgress = false, progress = 0, duration = 3000, onComplete }) => { const [currentProgress, setCurrentProgress] = useState (0)  const [isComplete, setIsComplete] = useState (false)   const sizeClasses = { sm: 'w: - 8 h - 8,', md: 'w: - 12 h - 12,', lg: 'w: - 16 h - 16,', xl: 'w: - 24 h - 24', }  const textSizes = { sm: 'text: - sm,', md: 'text: - base,', lg: 'text: - lg,', xl: 'text: - xl', } ';"";";";
+=======
+<<<<<<< HEAD
+   onComplete?: () => void} const loadingVariants = { hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1 }, exit: { opacity: 0, scale: 0.8 } }  const spinnerVariants = { rotate: { rotate: 360, transition: { duration: 1, repeat: Infinity, ease: 'linear' } }, pulse: { scale: [1, 1.1, 1], opacity: [0.5, 1, 0.5], transition: { duration: 2,' repeat: Infinity, '' ease: 'easeInOut' } }, float: { y: [-10, 10, -10], transition: { duration: 3,' repeat: Infinity, '' ease: 'easeInOut' } } }  const iconVariants = { rotate: { rotate: 360, transition: { duration: 2, ' repeat: Infinity, '' ease: 'linear' } }, pulse: { scale: [1, 1.2, 1], transition: { duration: 1.5,' repeat: Infinity, '' ease: 'easeInOut' } } }  export const ModernLoadingSpinner: React.FC < ModernLoadingSpinnerProps> = ({ size = 'md', variant = 'default', text = 'Loading...', showProgress = false, progress = 0, duration = 3000, onComplete }) => { const [currentProgress, setCurrentProgress] = useState (0)  const [isComplete, setIsComplete] = useState (false)   const sizeClasses = { sm: 'w - 8 h - 8', md: 'w - 12 h - 12', lg: 'w - 16 h - 16', xl: 'w - 24 h - 24' }  const textSizes = { sm: 'text - sm', md: 'text - base', lg: 'text - lg', xl: 'text - xl' } '"'"
+=======
+<<<<<<< HEAD
+   onComplete?: () => void} const loadingVariants = { hidden: { opacit,
+    y: 0, scale: 0.8 }, visible: { opacit,
+    y: 1, scale: 1 }, exit: { opacit,
+    y: 0, scale: 0.8 } }  const spinnerVariants = { rotate: { rotat,
+    e: 360, transition: { duratio,
+    n: 1, repeat: Infinity, ease: 'linear' } }, pulse: { scal,
+    e: [1, 1.1, 1], opacity: [0.5, 1, 0.5], transition: { duratio,
+    n: 2, repeat: Infinity, '' ease: 'easeInOut' } }, float: { ,
+    y: [-10, 10, -10], transition: { duratio,
+    n: 3, repeat: Infinity, '' ease: 'easeInOut' } } }  const iconVariants = { rotate: { rotat,
+    e: 360, transition: { duratio,
+    n: 2, ' repeat: Infinity, '' ease: 'linear' } }, pulse: { scal,
+    e: [1, 1.2, 1], transition: { duratio,
+    n: 1.5, repeat: Infinity, '' ease: 'easeInOut' } } }  export const ModernLoadingSpinner: React.FC < ModernLoadingSpinnerProps> = ({ size = 'md', variant = 'default', text = 'Loading...', showProgress = false, progress = 0, duration = 3000, onComplete }) => { const [currentProgress, setCurrentProgress] = useState (0)  const [isComplete, setIsComplete] = useState (false)   const sizeClasses = { sm: 'w - 8 h - 8', md: 'w - 12 h - 12', lg: 'w - 16 h - 16', xl: 'w - 24 h - 24' }  const textSizes = { sm: 'text - sm', md: 'text - base', lg: 'text - lg', xl: 'text - xl' } ';"'""
+=======
+<<<<<<< HEAD
+   onComplete?: () => void} const loadingVariants = { hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1 }, exit: { opacity: 0, scale: 0.8 } }  const spinnerVariants = { rotate: { rotate: 360, transition: { duration: 1, repeat: Infinity, ease: 'linear' } }, pulse: { scale: [1, 1.1, 1], opacity: [0.5, 1, 0.5], transition: { duration: 2,' repeat: Infinity, ' ease: 'easeInOut' } }, float: { y: [-10, 10, -10], transition: { duration: 3,' repeat: Infinity, ' ease: 'easeInOut' } } }  const iconVariants = { rotate: { rotate: 360, transition: { duration: 2,' repeat: Infinity, ' ease: 'linear' } }, pulse: { scale: [1, 1.2, 1], transition: { duration: 1.5,' repeat: Infinity, ' ease: 'easeInOut' } } }  export const ModernLoadingSpinner: React.FC < ModernLoadingSpinnerProps> = ({ size = 'md', variant = 'default', text = 'Loading...', showProgress = false, progress = 0, duration = 3000, onComplete }) => { const [currentProgress, setCurrentProgress] = useState (0)  const [isComplete, setIsComplete] = useState (false)   const sizeClasses = { sm: 'w - 8 h - 8', md: 'w - 12 h - 12', lg: 'w - 16 h - 16', xl: 'w - 24 h - 24' }  const textSizes = { sm: 'text - sm', md: 'text - base', lg: 'text - lg', xl: 'text - xl' } ';"
+=======
+<<<<<<< HEAD
+   onComplete?: () => void} const loadingVariants = {hidden: { opacity: 0, scale: 0.8 }, visible: {opacity: 1, scale: 1 }, exit: {opacity: 0, scale: 0.8 } }  const spinnerVariants = {rotate: { rotate: 360, transition: { duration: 1, repeat: Infinity, ease: 'linear' } }, pulse: {scale: [1, 1.1, 1], opacity: [0.5, 1, 0.5], transition: { duration: 2,' repeat: Infinity, '' ease: 'easeInOut' } }, float: {y: [-10, 10, -10], transition: { duration: 3,' repeat: Infinity, '' ease: 'easeInOut' } } }  const iconVariants = {rotate: { rotate: 360, transition: { duration: 2, ' repeat: Infinity, '' ease: 'linear' } }, pulse: {scale: [1, 1.2, 1], transition: { duration: 1.5,' repeat: Infinity, '' ease: 'easeInOut' } } }  export const ModernLoadingSpinner: React.FC < ModernLoadingSpinnerProps> = ({size = 'md', variant = 'default', text = 'Loading...', showProgress = false, progress = 0, duration = 3000, onComplete }) => {const [currentProgress, setCurrentProgress] = useState (0)  const [isComplete, setIsComplete] = useState (false)   const sizeClasses = { sm: 'w - 8 h - 8', md: 'w - 12 h - 12', lg: 'w - 16 h - 16', xl: 'w - 24 h - 24' }  const textSizes = {sm: 'text - sm', md: 'text - base', lg: 'text - lg', xl: 'text - xl' } ';"'"
+=======
+<<<<<<< HEAD
+   onComplete?: () => void}&apos;&apos; const loadingVariants = { hidden: { opacit,y: 0, scale: 0.8 }, visible: { opacit,y: 1, scale: 1 }, exit: { opacit,y: 0, scale: 0.8 } }  const;const spinnerVariants = { rotate: { rotat,e: 360, transition: { duratio,n: 1, repeat: Infinity, ease: &apos;linear&apos; } }, pulse: { scal,e: [1, 1.1, 1], opacity: [0.5, 1, 0.5], transition: { duratio,n: 2,&apos; repeat: Infinity, &apos;&apos; ease: &apos;easeInOut&apos; } }, float: { ,y: [-10, 10, -10], transition: { duratio,n: 3,&apos; repeat: Infinity, &apos;&apos; ease: &apos;easeInOut&apos; } } }&apos;&apos;  const iconVariants = { rotate: { rotat,e: 360, transition: { duratio,n: 2,&apos; repeat: Infinity, &apos;&apos; ease: &apos;linear&apos; } }, pulse: { scal,e: [1, 1.2, 1], transition: { duratio,n: 1.5,&apos; repeat: Infinity, &apos;&apos; ease: &apos;easeInOut&apos; } } }&apos;&apos;  export const ModernLoadingSpinner: React.FC < ModernLoadingSpinnerProps> = ({ size = &apos;md&apos;, variant = &apos;default&apos;, text = &apos;Loading...&apos;, showProgress = false, progress = 0, duration = 3000, onComplete }) => {&apos;} const [currentProgress, setCurrentProgress] = useState (0)  const [isComplete, setIsComplete] = useState (false)   const;const sizeClasses = { sm: &apos;w - 8 h - 8&apos;, md: &apos;w - 12 h - 12&apos;, lg: &apos;w - 16 h - 16&apos;, xl: &apos;w - 24 h - 24&apos; }&apos;  const;const textSizes = { sm: &apos;text - sm&apos;, md: &apos;text - base&apos;, lg: &apos;text - lg&apos;, xl: &apos;text - xl&apos; } ';&quot;&quot;"
+=======
+   onComplete?: () => void} const loadingVariants = { hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1 }, exit: { opacity: 0, scale: 0.8 } }  const spinnerVariants = { rotate: { rotate: 360, transition: { duration: 1, repeat: Infinity, ease: 'linear' } }, pulse: { scale: [1, 1.1, 1], opacity: [0.5, 1, 0.5], transition: { duration: 2,' repeat: Infinity, '' ease: 'easeInOut' } }, float: { y: [-10, 10, -10], transition: { duration: 3,' repeat: Infinity, '' ease: 'easeInOut' } } }  const iconVariants = { rotate: { rotate: 360, transition: { duration: 2, ' repeat: Infinity, '' ease: 'linear' } }, pulse: { scale: [1, 1.2, 1], transition: { duration: 1.5,' repeat: Infinity, '' ease: 'easeInOut' } } }  export const ModernLoadingSpinner: React.FC < ModernLoadingSpinnerProps> = ({ size = 'md', variant = 'default', text = 'Loading...', showProgress = false, progress = 0, duration = 3000, onComplete }) => { const [currentProgress, setCurrentProgress] = useState (0)  const [isComplete, setIsComplete] = useState (false)   const sizeClasses = { sm: 'w - 8 h - 8', md: 'w - 12 h - 12', lg: 'w - 16 h - 16', xl: 'w - 24 h - 24' }  const textSizes = { sm: 'text - sm', md: 'text - base', lg: 'text - lg', xl: 'text - xl' } ';"'"
+=======
+   duration?: number;"
+   onComplete?: () => void} const loadingVariants = { hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1 }, exit: { opacity: 0, scale: 0.8 } }  const spinnerVariants = { rotate: { rotate: 360, transition: { duration: 1, repeat: Infinity, ease: 'linear' } }, pulse: { scale: [1, 1.1, 1], opacity: [0.5, 1, 0.5], transition: { duration: 2,' repeat: Infinity, '' ease: 'easeInOut' } }, float: { y: [-10, 10, -10], transition: { duration: 3,' repeat: Infinity, '' ease: 'easeInOut' } } }  const iconVariants = { rotate: { rotate: 360, transition: { duration: 2, ' repeat: Infinity, '' ease: 'linear' } }, pulse: { scale: [1, 1.2, 1], transition: { duration: 1.5,' repeat: Infinity, '' ease: 'easeInOut' } } }  export const ModernLoadingSpinner: React.FC < ModernLoadingSpinnerProps> = ({ size = 'md', variant = 'default', text = 'Loading...', showProgress = false, progress = 0, duration = 3000, onComplete }) => { const [currentProgress, setCurrentProgress] = useState (0)  const [isComplete, setIsComplete] = useState (false)   const sizeClasses = { sm: 'w - 8 h - 8', md: 'w - 12 h - 12', lg: 'w - 16 h - 16', xl: 'w - 24 h - 24' }  const textSizes = { sm: 'text - sm', md: 'text - base', lg: 'text - lg', xl: 'text - xl' } '"
+"
+}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

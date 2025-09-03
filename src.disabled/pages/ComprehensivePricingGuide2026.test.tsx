@@ -1,5 +1,23 @@
+<<<<<<< HEAD
+describe: (
+  'ComprehensivePricingGuide2026', () => {}' it ('renders without crashing';
+  ', () => {} render: (<ComprehensivePricingGuide2026 />) '; expect: (screen.getByRole (';
+  'main') || screen.getByText: (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content';
+  ', () => {} render: (<ComprehensivePricingGuide2026 />) ''';
+=======
 describe (
-  'ComprehensivePricingGuide2026', () => {}';; it ('renders without crashing
-  ', () => {}; render (<ComprehensivePricingGuide2026 />) ';; expect (screen.getByRole (
-  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ';; it ('displays expected content
-  ', () => {}; render (<ComprehensivePricingGuide2026 />) ''
+<<<<<<< HEAD
+  'ComprehensivePricingGuide2026', () => {}' it ('renders without crashing
+  ', () => {} render (<ComprehensivePricingGuide2026 />) ' expect (screen.getByRole (
+=======
+<<<<<<< HEAD
+  'ComprehensivePricingGuide2026', () => {} it('renders without crashing', () => {} render (<ComprehensivePricingGuide2026 />) '; expect (screen.getByRole ('
+  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content'
+  ', () => {} render (<ComprehensivePricingGuide2026 />) '''
+=======
+  'ComprehensivePricingGuide2026', () => {}' it('renders without crashing', () => {} render (<ComprehensivePricingGuide2026 />) ' expect (screen.getByRole (
+>>>>>>> main
+  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
+  ', () => {} render (<ComprehensivePricingGuide2026 />) ''
+>>>>>>> main
+>>>>>>> main

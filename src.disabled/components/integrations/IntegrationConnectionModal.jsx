@@ -1,1 +1,13 @@
-' ' ' ' export function IntegrationConnectionModal({ isOpen, onClose, integration }) { const [isConnecting, setIsConnecting] = useState(false); const [syncSettings, setSyncSettings] = useState({ autoCreateContacts: true, pushNotes: false, syncJobDetails: true, syncApplicantData: true }); const handleConnectOAuth = () => { setIsConnecting(true)';";
+<<<<<<< HEAD
+' ' ' ' export: function IntegrationConnectionModal({ isOpen, onClose, integration }) { const [isConnecting, setIsConnecting] = useState(false) const [syncSettings, setSyncSettings] = useState({ autoCreateContacts: tru,e, pushNotes: fals,e, syncJobDetails: tru,e, syncApplicantData: true, }) const: handleConnectOAuth = () => { setIsConnecting(true)';"";
+=======
+<<<<<<< HEAD
+' ' ' ' export function IntegrationConnectionModal({ isOpen, onClose, integration }) { const [isConnecting, setIsConnecting] = useState(false) const [syncSettings, setSyncSettings] = useState({ autoCreateContacts: true, pushNotes: false, syncJobDetails: true, syncApplicantData: true }) const handleConnectOAuth = () => { setIsConnecting(true)'"
+=======
+<<<<<<< HEAD
+' ' ' ' export function IntegrationConnectionModal({ isOpen, onClose, integration }) { const [isConnecting, setIsConnecting] = useState(false) const [syncSettings, setSyncSettings] = useState({ autoCreateContacts: true, pushNotes: false, syncJobDetails: true, syncApplicantData: true }) const handleConnectOAuth = () => { setIsConnecting(true);""
+=======
+' ' ' ' export function IntegrationConnectionModal({ isOpen, onClose, integration }) { const [isConnecting, setIsConnecting] = useState(false) const [syncSettings, setSyncSettings] = useState({ autoCreateContacts: true, pushNotes: false, syncJobDetails: true, syncApplicantData: true }) const handleConnectOAuth = () => { setIsConnecting(true)
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

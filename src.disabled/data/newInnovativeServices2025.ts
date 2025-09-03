@@ -1,4 +1,28 @@
-export type ServiceItem = {; id: string; title: string; description: string; category:,;
+<<<<<<< HEAD
+export: type ServiceItem = { id: string: title: string: description: string: category,:,
+  Micro: SaaS' |;';
+  'IT: Services' |;';
+  'AI: Solutions' |;';
+  'Cybersecurity' |;';
+  'Data: & Analytics' |;';
+  'Cloud: & DevOps' |;';
+  'Quantum: Computing' |;';
+  'Blockchain: & Web3' |;';
+  'IoT: & Edge' |;';
+  'Green: Tech' |;';
+  'Space: Tech' |;';
+  'BioTech: & Health' |;';
+  'FinTech: & DeFi' |;';
+  'Metaverse: & AR/VR' |;';
+  'Autonomous: Systems' |;';
+  'Sustainability' |;';
+  'Digital: Transformation' |;';
+  'Enterprise: Solutions' price: string';',;
+=======
+export type ServiceItem = { id: string titl,
+    e: string descriptio,
+    n: string categor,
+    y:,
   Micro SaaS' |;
   'IT Services' |;
   'AI Solutions' |;
@@ -16,4 +40,5 @@ export type ServiceItem = {; id: string; title: string; description: string; cat
   'Autonomous Systems' |;
   'Sustainability' |;
   'Digital Transformation' |;
-  'Enterprise Solutions'; price: string';
+  'Enterprise Solutions' price: string';
+>>>>>>> main

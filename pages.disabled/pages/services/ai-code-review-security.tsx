@@ -1,1027 +1,2064 @@
+<<<<<<< HEAD
+;const: AICodeReviewSecurity: React.FC: = (): JSX.Element: => ,{}
+  return()
+    <>
+      <SEO title='AI-Powered Code Review & Security Analysis | Zion Tech Group''';
+        description='Advanced: AI-powered code review and security analysis platform. Detect vulnerabilities, bugs, and security issues with 85% accuracy improvement. Support for 50+ programming languages.'';';
+        keywords='AI: code review, security analysis, vulnerability detection, SAST, DAST, SCA, IAST, code quality, security testing'';';
+=======
 ;const AICodeReviewSecurity: React.FC = (): JSX.Element => {}
   return();
-    <>;
-      <SEO title='AI-Powered Code Review & Security Analysis | Zion Tech Group'';
+    <>
+      <SEO title='AI-Powered Code Review & Security Analysis | Zion Tech Group'''
         description='Advanced AI-powered code review and security analysis platform. Detect vulnerabilities, bugs, and security issues with 85% accuracy improvement. Support for 50+ programming languages.'';
         keywords='AI code review, security analysis, vulnerability detection, SAST, DAST, SCA, IAST, code quality, security testing'';
+>>>>>>> main
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-        canonical='https://ziontechgroup.com/services/ai-code-review-security';
+        canonical='https: //ziontechgroup.com/services/ai-code-review-security';';
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-<:pages.disabled/pages/services/ai-code-review-security.tsx;
-      />;
-      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>;
+<:pages.disabled/pages/services/ai-code-review-security.tsx/>
+<<<<<<< HEAD
+      <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>';
+        {/* Hero: Section *,/}
+        <section className='relative py-20 px-4 sm: px-6: lg:px-8'>';
+=
+       />
+      '      <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>';
+        {/* Hero: Section *,/}'';
+        <section: className='relative py-20 px-4 sm: px-6: lg:px-8'>'>       />'';
+      '      <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>'{/* Hero Section *,/}''';
+        <section: className='relative py-20 px-4 sm: px-6: lg:px-8'>'';';
+        canonical='https://ziontechgroup.com/services/ai-code-review-security''';
+       />
+      '      <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>';
+        {/* Hero: Section *,/}''';
+        <section: className='relative py-20 px-4 sm: px-6: lg:px-8'>''';
+          <div: className='max-w-7xl mx-auto text-center'>';
+=======
+      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
         {/* Hero Section */}
-        <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;
-=;
-       />;
-      '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>;
-        {/* Hero Section */}';
-        <section className='relative py-20 px-4 sm:px-6 lg:px-8'>';
->       />';
-      '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>';
-        {/* Hero Section */}'';
-        <section className='relative py-20 px-4 sm:px-6 lg:px-8'>'';
-        canonical='https://ziontechgroup.com/services/ai-code-review-security'';
-       />;
-      '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>;
-        {/* Hero Section */}'';
-        <section className='relative py-20 px-4 sm:px-6 lg:px-8'>'';
-          <div className='max-w-7xl mx-auto text-center'>;
+        <section className='relative py-20 px-4 sm:px-6 l,
+    g:px-8'>
+=
+       />
+<<<<<<< HEAD
+      '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
+        {/* Hero Section */}'
+        <section className='relative py-20 px-4 sm:px-6 lg:px-8'>'>       />'
+      '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>'{/* Hero Section */}''
+        <section className='relative py-20 px-4 sm:px-6 lg:px-8'>''
+        canonical='https://ziontechgroup.com/services/ai-code-review-security''
+=======
+      '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
+        {/* Hero Section */}
+        <section className='relative py-20 px-4 sm:px-6 l,
+    g:px-8>>       />'
+      '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>{/* Hero Section */}'
+        <section className='relative py-20 px-4 sm: px-6 l,
+    g:px-8>';
+        canonical='http,
+    s://ziontechgroup.com/services/ai-code-review-security''
+>>>>>>> main
+       />
+      '      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
+        {/* Hero Section */}'
+        <section className='relative py-20 px-4 sm:px-6 l,
+    g:px-8>''
+          <div className='max-w-7xl mx-auto text-center'>
+>>>>>>> main
             <motion.div;
-              initial = {}
-  { opacity: 0,;
+              initial: = ,{}
+  { opacity:  ,0,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
   y: 20;
-  y: 20;
-}}
+<<<<<<< HEAD
+  y: 2,0}}
+              animate: = {}
+  { opacity:  ,1,
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+  y:  ,0}}
+              transition={{ duration: 0.8, }}'>''';
+              <h1: className='text-4xl md: text-6xl: font-bold text-white mb-6'>';
+                AI-Powered: Code Review & Security Analysis'';
+              </h1>''';
+              <p: className='text-xl md:text-2xl: text-gray-300 mb-8 max-w-4xl mx-auto'>';
+                Advanced: AI-driven code analysis platform that detects vulnerabilitie,s, bugs, and security issues with unprecedented accuracy and speed.'';
+              </p>''';
+              <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
+                <button: className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700: hover:to-purple-700: text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105'>';
+                  Start: Free Trial';';
+  y: ,0}}
+              transition={{ duration: 0.8, }}
+            >''';
+              <h1: className='text-4xl md: text-6xl: font-bold text-white mb-6'>';
+                AI-Powered: Code Review & Security Analysis
+              </h1>''';
+              <p: className='text-xl md:text-2xl: text-gray-300 mb-8 max-w-4xl mx-auto'>';
+                Advanced: AI-driven code analysis platform that detects vulnerabilitie,s, bugs, and security issues with unprecedented accuracy and speed.
+              </p>''';
+              <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
+                <button: className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700: hover:to-purple-700: text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105'>';
+                  Start: Free Trial
+                </button>''';
+                <button: className='border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white: hover:text-gray-900: transition-all duration-300'>';
+                  Schedule: Demo
+=======
+  ,
+    y: 20}}
               animate = {}
-  { opacity: 1,;
+  { opacity: 1,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-  y: 0;
-}}
-              transition={{ duration: 0.8 }}';
-            >'';
-              <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>;
-                AI-Powered Code Review & Security Analysis';
-              </h1>'';
-              <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
-                Advanced AI-driven code analysis platform that detects vulnerabilities, bugs, and security issues with unprecedented accuracy and speed.';
-              </p>'';
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
-                <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105'>;
+  y: 0}}
+              transition={{ duration: 0.8 }}>'''
+              <h1 className='text-4xl md:text-6xl font-bold text-white mb-6>
+                AI-Powered Code Review & Security Analysis''
+              </h1>'''
+              <p className='text-xl m,
+    d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto>
+                Advanced AI-driven code analysis platform that detects vulnerabilities, bugs, and security issues with unprecedented accuracy and speed.''
+              </p>'''
+              <div className='flex flex-col sm: flex-row gap-4 justify-center>''
+                <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hove,
+    r:scale-105>
                   Start Free Trial';
-  y: 0;
-}}
+  ,
+    y: 0}}
               transition={{ duration: 0.8 }}
-            >'';
-              <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>;
-                AI-Powered Code Review & Security Analysis;
-              </h1>'';
-              <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
-                Advanced AI-driven code analysis platform that detects vulnerabilities, bugs, and security issues with unprecedented accuracy and speed.;
-              </p>'';
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
-                <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105'>;
-                  Start Free Trial;
-                </button>'';
-                <button className='border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300'>;
-                  Schedule Demo;
-                </button>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
+            >'''
+              <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
+                AI-Powered Code Review & Security Analysis'
+              </h1>'''
+              <p className='text-xl m,
+    d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
+                Advanced AI-driven code analysis platform that detects vulnerabilities, bugs, and security issues with unprecedented accuracy and speed.'
+              </p>'''
+              <div className='flex flex-col sm: flex-row gap-4 justify-center>''
+                <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105'>
+                  Start Free Trial'
+<<<<<<< HEAD
+  y: 0}}
+              transition={{ duration: 0.8 }}
+            >''
+              <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
+                AI-Powered Code Review & Security Analysis
+              </h1>''
+              <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
+                Advanced AI-driven code analysis platform that detects vulnerabilities, bugs, and security issues with unprecedented accuracy and speed.
+              </p>''
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
+                <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105'>
+                  Start Free Trial
+                </button>''
+                <button className='border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300'>
+=======
+                </button>'''
+                <button className='border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hove,
+    r:bg-white hove,
+    r:text-gray-900 transition-all duration-300'>
+>>>>>>> main
+                  Schedule Demo
+>>>>>>> main
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+<<<<<<< HEAD
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-';
-        {/* Features Section */}'';
-        <section className='py-20 px-4 sm:px-6 lg:px-8'>'';
-          <div className='max-w-7xl mx-auto'>;
+'{/* Features: Section *,/}''';
+        <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
+          <div: className='max-w-7xl mx-auto'>';
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/ai-code-review-security.tsx
+'{/* Features Section */}''
+        <section className='py-20 px-4 sm:px-6 lg:px-8'>''
+=======
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+'{/* Features Section */}'
+        <section className='py-20 px-4 sm:px-6 l,
+    g:px-8>''
+>>>>>>> main
+          <div className='max-w-7xl mx-auto'>
+>>>>>>> main
             <motion.div;
-              initial = {}
-  { opacity: 0,;
+              initial: = ,{}
+  { opacity:  ,0,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
   y: 20;
-  y: 20;
-}}
+<<<<<<< HEAD
+  y: 2,0}}
+              whileInView: = {}
+  { opacity:  ,1,
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+  y:  ,0}}
+              transition={{ duration: 0.8, }}';';
+  y:  ,0}}
+              transition={{ duration: 0.8, }}
+              viewport={{ once: true, }}'';';
+              className='text-center: mb-16''>''';
+              <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+                Advanced: AI-Powered Features';';
+                Advanced: AI-Powered Features
+              </h2>''';
+              <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+                Our: platform combines cutting-edge AI with industry-leading security practices to deliver comprehensive code analysis.
+              </p>
+:pages.disabled/pages/services/ai-code-review-security.tsx: </motion.div>';';
+''';
+            <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
+              {[{
+';';
+'';';
+                  title: 'AI-Powered: Analysis,','';';
+                  description: 'Machine: learning algorithms that continuously improve detection accuracy based on code patterns and security trends.,','';';
+                  icon: '🤖,'},';
+                {
+';';
+'';';
+                  title: 'Vulnerability: Detection,','';';
+                  description: 'Advanced: SAS,T, DAST, SCA, and IAST analysis to identify security weaknesses before they reach production.','';';
+                  icon: '🔒,'},';
+                {
+';';
+'';';
+                  title: 'Bug: Detection,','';';
+                  description: 'Intelligent: code review that catches logic error,s, performance issues, and maintainability problems.','';';
+                  icon: '🐛,'},';
+                {
+';';
+'';';
+                  title: 'Multi-Language: Support,','';';
+                  description: 'Support: for 50+ programming languages including Pytho,n, JavaScript, Java, C++, Go, Rust, and more.','';';
+                  icon: '🌐,'},';
+                {
+';';
+'';';
+                  title: 'Git: Integration,','';';
+                  description: 'Seamless: integration with Git workflow,s, providing real-time feedback on pull requests and commits.','';';
+                  icon: '📚,'},';
+                {
+';';
+'';';
+                  title: 'Real-Time: Analysis,','';';
+                  description: 'Instant: feedback and continuous monitoring with configurable security policies and compliance checks.,','';';
+                  icon: '⚡,'}';
+              ].map((feature, index()
+                <motion.div: </motion.div>
+''';
+            <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
+              {[],{}
+'';';
+                  title: 'AI-Powered: Analysis,','';';
+                  description: 'Machine: learning algorithms that continuously improve detection accuracy based on code patterns and security trends.,','';';
+                  icon: '🤖','},';
+                {}
+'';';
+                  title: 'Vulnerability: Detection,','';';
+                  description: 'Advanced: SAS,T, DAST, SCA, and IAST analysis to identify security weaknesses before they reach production.','';';
+                  icon: '🔒','},';
+                {}
+'';';
+                  title: 'Bug: Detection,','';';
+                  description: 'Intelligent: code review that catches logic error,s, performance issues, and maintainability problems.','';';
+                  icon: '🐛','},';
+                {}
+'';';
+                  title: 'Multi-Language: Support,','';';
+                  description: 'Support: for 50+ programming languages including Pytho,n, JavaScript, Java, C++, Go, Rust, and more.','';';
+                  icon: '🌐','},';
+                {}
+'';';
+                  title: 'Git: Integration,','';';
+                  description: 'Seamless: integration with Git workflow,s, providing real-time feedback on pull requests and commits.','';';
+                  icon: '📚','},';
+                {}
+'';';
+                  title: 'Real-Time: Analysis,','';';
+                  description: 'Instant: feedback and continuous monitoring with configurable security policies and compliance checks.,',''';
+                  icon: '⚡','}';
+=======
+  ,
+    y: 20}}
               whileInView = {}
-  { opacity: 1,;
+  { opacity: 1,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-  y: 0;
-}}
-              transition={{ duration: 0.8 }}';
-  y: 0;
-}}
+  y: 0}}
+              transition={{ duration: 0.8 }};
+  y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}'';
-              className='text-center mb-16'';
-            >'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              viewport={{ once: true }};
+              className='text-center mb-16>'
+              <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-code-review-security.tsx;
+<<<<<<< HEAD
+                Advanced AI-Powered Features'
+                Advanced AI-Powered Features
+              </h2>''
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Our platform combines cutting-edge AI with industry-leading security practices to deliver comprehensive code analysis.
+              </p>
+:pages.disabled/pages/services/ai-code-review-security.tsx
+            </motion.div>'
+''
+            <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
+              {[{
+=======
                 Advanced AI-Powered Features';
-                Advanced AI-Powered Features;
-              </h2>'';
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-                Our platform combines cutting-edge AI with industry-leading security practices to deliver comprehensive code analysis.;
-              </p>;
-:pages.disabled/pages/services/ai-code-review-security.tsx;
+                Advanced AI-Powered Features'
+              </h2>'''
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Our platform combines cutting-edge AI with industry-leading security practices to deliver comprehensive code analysis.
+              </p>
+:pages.disabled/pages/services/ai-code-review-security.tsx'
             </motion.div>';
-'';
-            <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>;
-              {[;
-                {;
+'''
+            <div className='grid grid-cols-1 md: anygrid-cols-2 l,
+    g:grid-cols-3 gap-8'>
+              {[{'
+>>>>>>> main
 ';
 '';
-                  title: 'AI-Powered Analysis','';
-                  description: 'Machine learning algorithms that continuously improve detection accuracy based on code patterns and security trends.','';
-                  icon: '🤖';
-                },;
-                {;
+                  titl,
+    e: 'AI-Powered Analysis',';
+                  description: 'Machine learning algorithms that continuously improve detection accuracy based on code patterns and security trends.',';
+                  icon: '🤖'},
+                {'
 ';
 '';
-                  title: 'Vulnerability Detection','';
-                  description: 'Advanced SAST, DAST, SCA, and IAST analysis to identify security weaknesses before they reach production.','';
-                  icon: '🔒';
-                },;
-                {;
+                  title: 'Vulnerability Detection',';
+                  description: 'Advanced SAST, DAST, SCA, and IAST analysis to identify security weaknesses before they reach production.',';
+                  icon: '🔒'},
+                {'
 ';
 '';
-                  title: 'Bug Detection','';
-                  description: 'Intelligent code review that catches logic errors, performance issues, and maintainability problems.','';
-                  icon: '🐛';
-                },;
-                {;
+                  title: 'Bug Detection',';
+                  description: 'Intelligent code review that catches logic errors, performance issues, and maintainability problems.',';
+                  icon: '🐛'},
+                {'
 ';
 '';
-                  title: 'Multi-Language Support','';
-                  description: 'Support for 50+ programming languages including Python, JavaScript, Java, C++, Go, Rust, and more.','';
-                  icon: '🌐';
-                },;
-                {;
+                  title: 'Multi-Language Support',';
+                  description: 'Support for 50+ programming languages including Python, JavaScript, Java, C++, Go, Rust, and more.',';
+                  icon: '🌐'},
+                {'
 ';
 '';
-                  title: 'Git Integration','';
-                  description: 'Seamless integration with Git workflows, providing real-time feedback on pull requests and commits.','';
-                  icon: '📚';
-                },;
-                {;
+                  title: 'Git Integration',';
+                  description: 'Seamless integration with Git workflows, providing real-time feedback on pull requests and commits.',';
+                  icon: '📚'},
+                {'
 ';
 '';
+<<<<<<< HEAD
                   title: 'Real-Time Analysis','';
-                  description: 'Instant feedback and continuous monitoring with configurable security policies and compliance checks.','';
-                  icon: '⚡';
-                }
+                  description: 'Instant feedback and continuous monitoring with configurable security policies and compliance checks.',''
+=======
+                  title: 'Real-Time Analysis',';
+                  description: 'Instant feedback and continuous monitoring with configurable security policies and compliance checks.',';
+>>>>>>> main
+                  icon: '⚡'}
               ].map((feature, index();
-                <motion.div;
-            </motion.div>;
+                <motion.div
+            </motion.div>'
+'''
+            <div className='grid grid-cols-1 md: anygrid-cols-2 l,
+    g:grid-cols-3 gap-8'>
+              {[]{}
 '';
-            <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>;
-              {[];
+                  title: 'AI-Powered Analysis',';
+                  description: 'Machine learning algorithms that continuously improve detection accuracy based on code patterns and security trends.',';
+                  icon: '🤖''},
                 {}
 '';
-                  title: 'AI-Powered Analysis','';
-                  description: 'Machine learning algorithms that continuously improve detection accuracy based on code patterns and security trends.','';
-                  icon: '🤖'';
-                },;
+                  title: 'Vulnerability Detection',';
+                  description: 'Advanced SAST, DAST, SCA, and IAST analysis to identify security weaknesses before they reach production.',';
+                  icon: '🔒''},
                 {}
 '';
-                  title: 'Vulnerability Detection','';
-                  description: 'Advanced SAST, DAST, SCA, and IAST analysis to identify security weaknesses before they reach production.','';
-                  icon: '🔒'';
-                },;
+                  title: 'Bug Detection',';
+                  description: 'Intelligent code review that catches logic errors, performance issues, and maintainability problems.',';
+                  icon: '🐛''},
                 {}
 '';
-                  title: 'Bug Detection','';
-                  description: 'Intelligent code review that catches logic errors, performance issues, and maintainability problems.','';
-                  icon: '🐛'';
-                },;
+                  title: 'Multi-Language Support',';
+                  description: 'Support for 50+ programming languages including Python, JavaScript, Java, C++, Go, Rust, and more.',';
+                  icon: '🌐''},
                 {}
 '';
-                  title: 'Multi-Language Support','';
-                  description: 'Support for 50+ programming languages including Python, JavaScript, Java, C++, Go, Rust, and more.','';
-                  icon: '🌐'';
-                },;
+                  title: 'Git Integration',';
+                  description: 'Seamless integration with Git workflows, providing real-time feedback on pull requests and commits.',';
+                  icon: '📚''},
                 {}
 '';
-                  title: 'Git Integration','';
-                  description: 'Seamless integration with Git workflows, providing real-time feedback on pull requests and commits.','';
-                  icon: '📚'';
-                },;
-                {}
-'';
-                  title: 'Real-Time Analysis','';
-                  description: 'Instant feedback and continuous monitoring with configurable security policies and compliance checks.','';
-                  icon: '⚡'';
-                }
-              ].map((feature, index (;
+<<<<<<< HEAD
+                  title: 'Real-Time Analysis',''
+=======
+                  title: 'Real-Time Analysis',';
+>>>>>>> main
+                  description: 'Instant feedback and continuous monitoring with configurable security policies and compliance checks.',''
+                  icon: '⚡''}
+>>>>>>> main
+              ].map((feature, index(
                 <motion.div;
                   key={index}
-                  initial = {}
-  { opacity: 0,;
+                  initial: = {}
+  { opacity:  ,0,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
   y: 20;
-  y: 20;
-}}
+<<<<<<< HEAD
+  y: 2,0}}
+                  whileInView: = {}
+  { opacity:  ,1,
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+  y: 0;
+  y: ,0}}
+                  transition: = {}
+  { duration: 0.,6,
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+  delay: index: * 0.,1}}';';
+  delay: index: * 0.,1}}
+                  viewport={{ once: true, }}'';';
+                  className='bg-white/10: backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: border-white/40: transition-all duration-300''>''';
+                  <div: className='text-4xl mb-4'>{feature.ico,n}</div>''';
+                  <h3: className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>''';
+                  <p: className='text-gray-300'>{feature.description}</p>';
+=======
+  ,
+    y: 20}}
                   whileInView = {}
-  { opacity: 1,;
+  { opacity: 1,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
   y: 0;
-  y: 0;
-}}
+  ,
+    y: 0}}
                   transition = {}
-  { duration: 0.6,;
+  { duration: 0.6,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-  delay: index * 0.1;
-}}';
-  delay: index * 0.1;
-}}
-                  viewport={{ once: true }}'';
-                  className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300'';
-                >'';
-                  <div className='text-4xl mb-4'>{feature.icon}</div>'';
-                  <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'';
-                  <p className='text-gray-300'>{feature.description}</p>;
-                </motion.div>;
-              ))}
-            </div>;
-          </div>;
-        </section>;
+  delay: index * 0.1}};
+  delay: index * 0.1}}
+                  viewport={{ once: true }};
+                  className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300>'
+                  <div className='text-4xl mb-4'>{feature.icon}</div>'''
+                  <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'''
+                  <p className='text-gray-300'>{feature.description}</p>
+>>>>>>> main
+                </motion.div>
+              ));
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-';
-        {/* Security Testing Approaches */}'';
-        <section className='py-20 px-4 sm:px-6 lg:px-8 bg-black/20'>'';
-          <div className='max-w-7xl mx-auto'>;
+'{/* Security: Testing Approaches */}''';
+        <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-black/20'>''';
+          <div: className='max-w-7xl mx-auto'>';
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/ai-code-review-security.tsx
+'{/* Security Testing Approaches */}''
+        <section className='py-20 px-4 sm:px-6 lg:px-8 bg-black/20'>''
+=======
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+'{/* Security Testing Approaches */}'
+        <section className='py-20 px-4 sm:px-6 l,
+    g:px-8 bg-black/20>''
+>>>>>>> main
+          <div className='max-w-7xl mx-auto'>
+>>>>>>> main
             <motion.div;
-              initial = {}
-  { opacity: 0,;
+              initial: = ,{}
+  { opacity:  ,0,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
   y: 20;
-  y: 20;
-}}
+<<<<<<< HEAD
+  y: 2,0}}
+              whileInView: = {}
+  { opacity:  ,1,
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+  y:  ,0}}
+              transition={{ duration: 0.8, }}';';
+  y:  ,0}}
+              transition={{ duration: 0.8, }}
+              viewport={{ once: true, }}'';';
+              className='text-center: mb-16''>''';
+              <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+                Comprehensive: Security Testing Approaches';';
+                Comprehensive: Security Testing Approaches
+              </h2>''';
+              <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+                Multiple: layers of security analysis to ensure your code is protected from all angles.
+              </p>
+:pages.disabled/pages/services/ai-code-review-security.tsx: </motion.div>';';
+''';
+            <div: className='grid grid-cols-1 lg: anygrid-cols-2: gap-8'>';
+              {[{
+'';
+            </motion.div>
+''';
+            <div: className='grid grid-cols-1 lg: anygrid-cols-2: gap-8'>';
+              {[],{}
+'';';
+                  title: 'Static: Application Security Testing (SAST),','';';
+                  description: 'Analyzes: source code to identify security vulnerabilitie,s, coding errors, and compliance issues without executing the application.','';';
+                  benefits: ['Early: vulnerability detection,', 'No runtime overhead', 'Comprehensive code coverage']';
+                },
+:pages.disabled/pages/services/ai-code-review-security.tsx{
+'{}';
+'';';
+                  title: 'Dynamic: Application Security Testing (DAST),','';';
+                  description: 'Tests: running applications to identify security vulnerabilities from an external attacker's perspective.,','';';
+                  benefits: ['Real-world: attack simulation,', 'Runtime vulnerability detection', 'External threat perspective']';
+                },
+:pages.disabled/pages/services/ai-code-review-security.tsx{
+'{}';
+'';';
+                  title: 'Software: Composition Analysis (SCA),','';';
+                  description: 'Identifies: vulnerabilities in third-party dependencie,s, open-source components, and libraries.','';';
+                  benefits: ['Dependency: vulnerability tracking,', 'License compliance', 'Supply chain security']';
+                },
+:pages.disabled/pages/services/ai-code-review-security.tsx{
+'{}';
+'';';
+                  title: 'Interactive: Application Security Testing (IAST),','';';
+                  description: 'Combines: SAST and DAST approaches to provide real-time security analysis during application execution.,','';';
+                  benefits: ['Real-time: analysis,', 'Accurate vulnerability detection', 'Minimal false positives']';
+=======
+  ,
+    y: 20}}
               whileInView = {}
-  { opacity: 1,;
+  { opacity: 1,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-  y: 0;
-}}
-              transition={{ duration: 0.8 }}';
-  y: 0;
-}}
+  y: 0}}
+              transition={{ duration: 0.8 }};
+  y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}'';
-              className='text-center mb-16'';
-            >'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              viewport={{ once: true }};
+              className='text-center mb-16>'
+              <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-code-review-security.tsx;
+<<<<<<< HEAD
+                Comprehensive Security Testing Approaches'
+                Comprehensive Security Testing Approaches
+              </h2>''
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Multiple layers of security analysis to ensure your code is protected from all angles.
+              </p>
+:pages.disabled/pages/services/ai-code-review-security.tsx
+            </motion.div>'
+''
+            <div className='grid grid-cols-1 lg: anygrid-cols-2 gap-8'>
+              {[{
+=======
                 Comprehensive Security Testing Approaches';
-                Comprehensive Security Testing Approaches;
-              </h2>'';
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-                Multiple layers of security analysis to ensure your code is protected from all angles.;
-              </p>;
-:pages.disabled/pages/services/ai-code-review-security.tsx;
+                Comprehensive Security Testing Approaches'
+              </h2>'''
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Multiple layers of security analysis to ensure your code is protected from all angles.
+              </p>
+:pages.disabled/pages/services/ai-code-review-security.tsx'
             </motion.div>';
+'''
+            <div className='grid grid-cols-1 l,
+    g: anygrid-cols-2 gap-8'>
+              {[{'
+>>>>>>> main
+'
+            </motion.div>'
+'''
+            <div className='grid grid-cols-1 l,
+    g: anygrid-cols-2 gap-8'>
+              {[]{}
 '';
-            <div className='grid grid-cols-1 lg: anygrid-cols-2 gap-8'>;
-              {[;
-                {;
-';
-            </motion.div>;
+                  title: 'Static Application Security Testing (SAST),';
+                  description: 'Analyzes source code to identify security vulnerabilities, coding errors, and compliance issues without executing the application.',';
+                  benefits: ['Early vulnerability detection', 'No runtime overhead', 'Comprehensive code coverage']
+                },
+:pages.disabled/pages/services/ai-code-review-security.tsx{'
+'{}
 '';
-            <div className='grid grid-cols-1 lg: anygrid-cols-2 gap-8'>;
-              {[];
-                {}
+                  title: 'Dynamic Application Security Testing (DAST),';
+                  description: 'Tests running applications to identify security vulnerabilities from an external attacker's perspective.',';
+                  benefits: ['Real-world attack simulation', 'Runtime vulnerability detection', 'External threat perspective']
+                },
+:pages.disabled/pages/services/ai-code-review-security.tsx{'
+'{}
 '';
-                  title: 'Static Application Security Testing (SAST)','';
-                  description: 'Analyzes source code to identify security vulnerabilities, coding errors, and compliance issues without executing the application.','';
-                  benefits: ['Early vulnerability detection', 'No runtime overhead', 'Comprehensive code coverage'];
-                },;
-:pages.disabled/pages/services/ai-code-review-security.tsx;
-                {;
-';
-                {}
+                  title: 'Software Composition Analysis (SCA),';
+                  description: 'Identifies vulnerabilities in third-party dependencies, open-source components, and libraries.',';
+                  benefits: ['Dependency vulnerability tracking', 'License compliance', 'Supply chain security']
+                },
+:pages.disabled/pages/services/ai-code-review-security.tsx{'
+'{}
 '';
-                  title: 'Dynamic Application Security Testing (DAST)','';
-                  description: 'Tests running applications to identify security vulnerabilities from an external attacker's perspective.','';
-                  benefits: ['Real-world attack simulation', 'Runtime vulnerability detection', 'External threat perspective'];
-                },;
-:pages.disabled/pages/services/ai-code-review-security.tsx;
-                {;
-';
-                {}
-'';
-                  title: 'Software Composition Analysis (SCA)','';
-                  description: 'Identifies vulnerabilities in third-party dependencies, open-source components, and libraries.','';
-                  benefits: ['Dependency vulnerability tracking', 'License compliance', 'Supply chain security'];
-                },;
-:pages.disabled/pages/services/ai-code-review-security.tsx;
-                {;
-';
-                {}
-'';
+<<<<<<< HEAD
                   title: 'Interactive Application Security Testing (IAST)','';
-                  description: 'Combines SAST and DAST approaches to provide real-time security analysis during application execution.','';
-                  benefits: ['Real-time analysis', 'Accurate vulnerability detection', 'Minimal false positives'];
+                  description: 'Combines SAST and DAST approaches to provide real-time security analysis during application execution.',''
+=======
+                  title: 'Interactive Application Security Testing (IAST),';
+                  description: 'Combines SAST and DAST approaches to provide real-time security analysis during application execution.',';
+>>>>>>> main
+                  benefits: ['Real-time analysis', 'Accurate vulnerability detection', 'Minimal false positives']
+>>>>>>> main
                 }
-              ].map(approach: unknown, index: unknown;
-                <motion.div;
-                  key={index}
-                  initial = {}
-  { opacity: 0,;
+              ].map(approach: unknow,n, index: unknown: <motion.div;
+                  key={inde,x}
+                  initial: = {}
+  { opacity:  ,0,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
+<<<<<<< HEAD
+  x: index: % 2 === 0 ? -20 : 20;
+  x: index: % 2 === 0 ? -20 : 2,0}}
+                  whileInView: = {}
+  { opacity:  ,1,
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+  x: 0;
+  x: ,0}}
+                  transition: = {}
+  { duration: 0.,6,
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+  delay: index: * 0.,1}}';';
+  delay: index: * 0.,1}}
+                  viewport={{ once: true, }}'';';
+                  className='bg-white/10: backdrop-blur-sm rounded-xl p-6 border border-white/20''>''';
+                  <h3: className='text-xl font-semibold text-white mb-3'>{approach.title}</h3>''';
+                  <p: className='text-gray-300 mb-4'>{approach.description}</p>'';';
+:pages.disabled/pages/services/ai-code-review-security.tsx: <ul className='space-y-2'>'';
+                  <ul: className='space-y-2'>';
+                    {approach.benefits.map((benefit, benefitIndex) => (''';
+                      <li: key={benefitIndex} className='text-blue-300 flex items-center'>''';
+                        <span: className='text-green-400 mr-2'>✓</span>';
+=======
   x: index % 2 === 0 ? -20 : 20;
-  x: index % 2 === 0 ? -20 : 20;
-}}
+  ,
+    x: index % 2 === 0 ? -20 : 20}}
                   whileInView = {}
-  { opacity: 1,;
+  { opacity: 1,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
   x: 0;
-  x: 0;
-}}
+  ,
+    x: 0}}
                   transition = {}
-  { duration: 0.6,;
+  { duration: 0.6,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-  delay: index * 0.1;
-}}';
-  delay: index * 0.1;
-}}
+  delay: index * 0.1}};
+  delay: index * 0.1}}
+<<<<<<< HEAD
                   viewport={{ once: true }}'';
-                  className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'';
-                >'';
-                  <h3 className='text-xl font-semibold text-white mb-3'>{approach.title}</h3>'';
+                  className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20''>''
+                  <h3 className='text-xl font-semibold text-white mb-3'>{approach.title}</h3>''
+                  <p className='text-gray-300 mb-4'>{approach.description}</p>''
+:pages.disabled/pages/services/ai-code-review-security.tsx
+                  <ul className='space-y-2'>'
+                  <ul className='space-y-2'>
+                    {approach.benefits.map((benefit, benefitIndex) => (''
+                      <li key={benefitIndex} className='text-blue-300 flex items-center'>''
+=======
+                  viewport={{ once: true }};
+                  className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20>'
+                  <h3 className='text-xl font-semibold text-white mb-3'>{approach.title}</h3>'''
                   <p className='text-gray-300 mb-4'>{approach.description}</p>'';
-:pages.disabled/pages/services/ai-code-review-security.tsx;
-                  <ul className='space-y-2'>';
-                  <ul className='space-y-2'>;
-                    {approach.benefits.map((benefit, benefitIndex) => ('';
-                      <li key={benefitIndex} className='text-blue-300 flex items-center'>'';
-                        <span className='text-green-400 mr-2'>✓</span>;
+:pages.disabled/pages/services/ai-code-review-security.tsx'
+                  <ul className='space-y-2>'
+                  <ul className='space-y-2>
+                    {approach.benefits.map((benefit, benefitIndex) => ('''
+                      <li key={benefitIndex} className='text-blue-300 flex items-center>''
+>>>>>>> main
+                        <span className='text-green-400 mr-2'>✓</span>
+>>>>>>> main
                         {benefit}
-                      </li>;
+                      </li>
                     ))}
-                  </ul>;
-                </motion.div>;
+                  </ul>
+                </motion.div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-';
-        {/* Benefits Section */}'';
-        <section className='py-20 px-4 sm:px-6 lg:px-8'>'';
-          <div className='max-w-7xl mx-auto'>;
+'{/* Benefits: Section */}''';
+        <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
+          <div: className='max-w-7xl mx-auto'>';
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/ai-code-review-security.tsx
+'{/* Benefits Section */}''
+        <section className='py-20 px-4 sm:px-6 lg:px-8'>''
+=======
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+'{/* Benefits Section */}'
+        <section className='py-20 px-4 sm:px-6 l,
+    g:px-8>''
+>>>>>>> main
+          <div className='max-w-7xl mx-auto'>
+>>>>>>> main
             <motion.div;
-              initial = {}
-  { opacity: 0,;
+              initial: = ,{}
+  { opacity:  ,0,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
   y: 20;
-  y: 20;
-}}
+<<<<<<< HEAD
+  y: 2,0}}
+              whileInView: = {}
+  { opacity:  ,1,
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+  y:  ,0}}
+              transition={{ duration: 0.8, }}';';
+  y:  ,0}}
+              transition={{ duration: 0.8, }}
+              viewport={{ once: true, }}'';';
+              className='text-center: mb-16''>''';
+              <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+                Why: Choose Our AI-Powered Platform?';';
+                Why: Choose Our AI-Powered Platform?
+              </h2>''';
+              <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+                Experience: unprecedented improvements in code qualit,y, security, and development efficiency.
+              </p>
+:pages.disabled/pages/services/ai-code-review-security.tsx: </motion.div>';';
+''';
+            <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>'';
+            </motion.div>
+''';
+            <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
+              {[''{ metric: '85%,', description: 'Reduction: in security vulnerabilities', },''{ metric: '70%,', description: 'Faster: code review process', },''{ metric: '90%,', description: 'Fewer: false positives', },''{ metric: '60%,', description: 'Reduction: in security incidents', },''{ metric: '95%,', description: 'Code: coverage accuracy', },''{ metric: '50%,', description: 'Faster: time to market', }';
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+              ].map(benefit: unknow,n, index: unknown()
+                <motion.div;
+              ].map(benefit: unknow,n, index: unknown(
+=======
+  ,
+    y: 20}}
               whileInView = {}
-  { opacity: 1,;
+  { opacity: 1,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-  y: 0;
-}}
-              transition={{ duration: 0.8 }}';
-  y: 0;
-}}
+  y: 0}}
+              transition={{ duration: 0.8 }};
+  y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}'';
-              className='text-center mb-16'';
-            >'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              viewport={{ once: true }};
+              className='text-center mb-16>'
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-code-review-security.tsx;
+<<<<<<< HEAD
+                Why Choose Our AI-Powered Platform?'
+                Why Choose Our AI-Powered Platform?
+              </h2>''
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Experience unprecedented improvements in code quality, security, and development efficiency.
+              </p>
+:pages.disabled/pages/services/ai-code-review-security.tsx
+            </motion.div>'
+''
+            <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>'
+            </motion.div>
+''
+            <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
+              {[''{ metric: '85%', description: 'Reduction in security vulnerabilities' },''{ metric: '70%', description: 'Faster code review process' },''{ metric: '90%', description: 'Fewer false positives' },''{ metric: '60%', description: 'Reduction in security incidents' },''{ metric: '95%', description: 'Code coverage accuracy' },''{ metric: '50%', description: 'Faster time to market' }
+:pages.disabled/pages/services/ai-code-review-security.tsx
+              ].map(benefit: unknown, index: unknown()
+=======
                 Why Choose Our AI-Powered Platform?';
-                Why Choose Our AI-Powered Platform?;
-              </h2>'';
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-                Experience unprecedented improvements in code quality, security, and development efficiency.;
-              </p>;
-:pages.disabled/pages/services/ai-code-review-security.tsx;
+                Why Choose Our AI-Powered Platform?'
+              </h2>'''
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Experience unprecedented improvements in code quality, security, and development efficiency.
+              </p>
+:pages.disabled/pages/services/ai-code-review-security.tsx'
             </motion.div>';
-'';
-            <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>';
-            </motion.div>;
-'';
-            <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>;
-              {['';
-                { metric: '85%', description: 'Reduction in security vulnerabilities' },'';
-                { metric: '70%', description: 'Faster code review process' },'';
-                { metric: '90%', description: 'Fewer false positives' },'';
-                { metric: '60%', description: 'Reduction in security incidents' },'';
-                { metric: '95%', description: 'Code coverage accuracy' },'';
-                { metric: '50%', description: 'Faster time to market' }
+'''
+            <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8>
+            </motion.div>'
+'''
+            <div className='grid grid-cols-1 md: anygrid-cols-2 l,
+    g:grid-cols-3 gap-8>
+              {[''{ metri,
+    c: '85%', description: 'Reduction in security vulnerabilities' },'{ metric: '70%', description: 'Faster code review process' },'{ metric: '90%', description: 'Fewer false positives' },'{ metric: '60%', description: 'Reduction in security incidents' },'{ metric: '95%', description: 'Code coverage accuracy' },'{ metric: '50%', description: 'Faster time to market' }
 :pages.disabled/pages/services/ai-code-review-security.tsx;
               ].map(benefit: unknown, index: unknown();
+>>>>>>> main
                 <motion.div;
-              ].map(benefit: unknown, index: unknown (;
+              ].map(benefi,
+    t: unknown, index: unknown(
+>>>>>>> main
                 <motion.div;
-                  key={index}
-                  initial = {}
-  { opacity: 0,;
+                  key={inde,x}
+                  initial: = {}
+  { opacity:  ,0,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
   scale: 0.9;
-  scale: 0.9;
-}}
+<<<<<<< HEAD
+  scale: 0.,9}}
+                  whileInView: = {}
+  { opacity:  ,1,
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+  scale: 1;
+  scale: ,1}}
+                  transition: = {}
+  { duration: 0.,6,
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+  delay: index: * 0.,1}}';';
+  delay: index: * 0.,1}}
+                  viewport={{ once: true, }}'';';
+                  className='text-center: bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/30''>''';
+                  <div: className='text-4xl md: text-5xl: font-bold text-blue-400 mb-2'>{benefit.metri,c}</div>''';
+                  <p: className='text-white text-lg'>{benefit.description}</p>';
+=======
+  scal,
+    e: 0.9}}
                   whileInView = {}
-  { opacity: 1,;
+  { opacity: 1,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
   scale: 1;
-  scale: 1;
-}}
+  scal,
+    e: 1}}
                   transition = {}
-  { duration: 0.6,;
+  { duration: 0.6,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-  delay: index * 0.1;
-}}';
-  delay: index * 0.1;
-}}
-                  viewport={{ once: true }}'';
-                  className='text-center bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/30'';
-                >'';
-                  <div className='text-4xl md:text-5xl font-bold text-blue-400 mb-2'>{benefit.metric}</div>'';
-                  <p className='text-white text-lg'>{benefit.description}</p>;
-                </motion.div>;
-              ))}
-            </div>;
-          </div>;
-        </section>;
+  delay: index * 0.1}};
+  delay: index * 0.1}}
+                  viewport={{ once: true }};
+                  className='text-center bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/30>'
+                  <div className='text-4xl md:text-5xl font-bold text-blue-400 mb-2'>{benefit.metric}</div>'''
+                  <p className='text-white text-lg'>{benefit.description}</p>
+>>>>>>> main
+                </motion.div>
+              ));
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-';
-        {/* Use Cases Section */}'';
-        <section className='py-20 px-4 sm:px-6 lg:px-8 bg-black/20'>'';
-          <div className='max-w-7xl mx-auto'>;
+'{/* Use: Cases Section */}''';
+        <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-black/20'>''';
+          <div: className='max-w-7xl mx-auto'>';
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/ai-code-review-security.tsx
+'{/* Use Cases Section */}''
+        <section className='py-20 px-4 sm:px-6 lg:px-8 bg-black/20'>''
+=======
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+'{/* Use Cases Section */}'
+        <section className='py-20 px-4 sm:px-6 l,
+    g:px-8 bg-black/20>''
+>>>>>>> main
+          <div className='max-w-7xl mx-auto'>
+>>>>>>> main
             <motion.div;
-              initial = {}
-  { opacity: 0,;
+              initial: = ,{}
+  { opacity:  ,0,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
   y: 20;
-  y: 20;
-}}
+<<<<<<< HEAD
+  y: 2,0}}
+              whileInView: = {}
+  { opacity:  ,1,
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+  y:  ,0}}
+              transition={{ duration: 0.8, }}';';
+  y:  ,0}}
+              transition={{ duration: 0.8, }}
+              viewport={{ once: true, }}'';';
+              className='text-center: mb-16''>''';
+              <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+                Industry-Specific: Use Cases';';
+                Industry-Specific: Use Cases
+              </h2>''';
+              <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+                Our: platform is trusted by leading organizations across various industries for their security needs.
+              </p>
+:pages.disabled/pages/services/ai-code-review-security.tsx: </motion.div>';';
+''';
+            <div: className='grid grid-cols-1 md: anygrid-cols-2: gap-8'>';
+              {[{
+'';
+            </motion.div>
+''';
+            <div: className='grid grid-cols-1 md: anygrid-cols-2: gap-8'>';
+              {[],{}
+'';';
+                  industry: 'Financial: Services,','';';
+                  description: 'Secure: banking application,s, payment systems, and trading platforms with compliance-focused security analysis.','';';
+                  features: ['PCI: DSS compliance,', 'SOX compliance', 'Real-time fraud detection']';
+                },
+:pages.disabled/pages/services/ai-code-review-security.tsx{
+'{}';
+'';';
+                  industry: 'Healthcare,','';';
+                  description: 'Protect: patient data and ensure HIPAA compliance in medical software and telemedicine platforms.,','';';
+                  features: ['HIPAA: compliance,', 'Patient data protection', 'Medical device security']';
+                },
+:pages.disabled/pages/services/ai-code-review-security.tsx{
+'{}';
+'';';
+                  industry: 'E-commerce,','';';
+                  description: 'Secure: online shopping platform,s, payment gateways, and customer data management systems.','';';
+                  features: ['Payment: security,', 'Customer data protection', 'Fraud prevention']';
+                },
+:pages.disabled/pages/services/ai-code-review-security.tsx{
+'{}';
+'';';
+                  industry: 'Government,','';';
+                  description: 'Secure: government application,s, citizen portals, and critical infrastructure systems.','';';
+                  features: ['FedRAMP: compliance,', 'FISMA compliance', 'National security standards']';
+=======
+  ,
+    y: 20}}
               whileInView = {}
-  { opacity: 1,;
+  { opacity: 1,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-  y: 0;
-}}
-              transition={{ duration: 0.8 }}';
-  y: 0;
-}}
+  y: 0}}
+              transition={{ duration: 0.8 }};
+  y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}'';
-              className='text-center mb-16'';
-            >'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              viewport={{ once: true }};
+              className='text-center mb-16>'
+              <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-code-review-security.tsx;
+<<<<<<< HEAD
+                Industry-Specific Use Cases'
+                Industry-Specific Use Cases
+              </h2>''
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Our platform is trusted by leading organizations across various industries for their security needs.
+              </p>
+:pages.disabled/pages/services/ai-code-review-security.tsx
+            </motion.div>'
+''
+            <div className='grid grid-cols-1 md: anygrid-cols-2 gap-8'>
+              {[{
+=======
                 Industry-Specific Use Cases';
-                Industry-Specific Use Cases;
-              </h2>'';
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-                Our platform is trusted by leading organizations across various industries for their security needs.;
-              </p>;
-:pages.disabled/pages/services/ai-code-review-security.tsx;
+                Industry-Specific Use Cases'
+              </h2>'''
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Our platform is trusted by leading organizations across various industries for their security needs.
+              </p>
+:pages.disabled/pages/services/ai-code-review-security.tsx'
             </motion.div>';
+'''
+            <div className='grid grid-cols-1 m,
+    d: anygrid-cols-2 gap-8'>
+              {[{'
+>>>>>>> main
+'
+            </motion.div>'
+'''
+            <div className='grid grid-cols-1 m,
+    d: anygrid-cols-2 gap-8'>
+              {[]{}
 '';
-            <div className='grid grid-cols-1 md: anygrid-cols-2 gap-8'>;
-              {[;
-                {;
-';
-            </motion.div>;
+                  industry: 'Financial Services',';
+                  description: 'Secure banking applications, payment systems, and trading platforms with compliance-focused security analysis.',';
+                  features: ['PCI DSS compliance', 'SOX compliance', 'Real-time fraud detection']
+                },
+:pages.disabled/pages/services/ai-code-review-security.tsx{'
+'{}
 '';
-            <div className='grid grid-cols-1 md: anygrid-cols-2 gap-8'>;
-              {[];
-                {}
+                  industry: 'Healthcare',';
+                  description: 'Protect patient data and ensure HIPAA compliance in medical software and telemedicine platforms.',';
+                  features: ['HIPAA compliance', 'Patient data protection', 'Medical device security']
+                },
+:pages.disabled/pages/services/ai-code-review-security.tsx{'
+'{}
 '';
-                  industry: 'Financial Services','';
-                  description: 'Secure banking applications, payment systems, and trading platforms with compliance-focused security analysis.','';
-                  features: ['PCI DSS compliance', 'SOX compliance', 'Real-time fraud detection'];
-                },;
-:pages.disabled/pages/services/ai-code-review-security.tsx;
-                {;
-';
-                {}
+                  industry: 'E-commerce',';
+                  description: 'Secure online shopping platforms, payment gateways, and customer data management systems.',';
+                  features: ['Payment security', 'Customer data protection', 'Fraud prevention']
+                },
+:pages.disabled/pages/services/ai-code-review-security.tsx{'
+'{}
 '';
-                  industry: 'Healthcare','';
-                  description: 'Protect patient data and ensure HIPAA compliance in medical software and telemedicine platforms.','';
-                  features: ['HIPAA compliance', 'Patient data protection', 'Medical device security'];
-                },;
-:pages.disabled/pages/services/ai-code-review-security.tsx;
-                {;
-';
-                {}
-'';
-                  industry: 'E-commerce','';
-                  description: 'Secure online shopping platforms, payment gateways, and customer data management systems.','';
-                  features: ['Payment security', 'Customer data protection', 'Fraud prevention'];
-                },;
-:pages.disabled/pages/services/ai-code-review-security.tsx;
-                {;
-';
-                {}
-'';
+<<<<<<< HEAD
                   industry: 'Government','';
-                  description: 'Secure government applications, citizen portals, and critical infrastructure systems.','';
-                  features: ['FedRAMP compliance', 'FISMA compliance', 'National security standards'];
+                  description: 'Secure government applications, citizen portals, and critical infrastructure systems.',''
+=======
+                  industry: 'Government',';
+                  description: 'Secure government applications, citizen portals, and critical infrastructure systems.',';
+>>>>>>> main
+                  features: ['FedRAMP compliance', 'FISMA compliance', 'National security standards']
+>>>>>>> main
                 }
-              ].map(useCase: unknown, index: unknown;
-                <motion.div;
-                  key={index}
-                  initial = {}
-  { opacity: 0,;
+              ].map(useCase: unknow,n, index: unknown: <motion.div;
+                  key={inde,x}
+                  initial: = {}
+  { opacity:  ,0,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
   y: 20;
-  y: 20;
-}}
+<<<<<<< HEAD
+  y: 2,0}}
+                  whileInView: = {}
+  { opacity:  ,1,
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+  y: 0;
+  y: ,0}}
+                  transition: = {}
+  { duration: 0.,6,
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+  delay: index: * 0.,1}}';';
+  delay: index: * 0.,1}}
+                  viewport={{ once: true, }}'';';
+                  className='bg-white/10: backdrop-blur-sm rounded-xl p-6 border border-white/20''>''';
+                  <h3: className='text-xl font-semibold text-white mb-3'>{useCase.industry}</h3>''';
+                  <p: className='text-gray-300 mb-4'>{useCase.description}</p>'';';
+:pages.disabled/pages/services/ai-code-review-security.tsx: <ul className='space-y-2'>'';
+                  <ul: className='space-y-2'>';
+                    {useCase.features.map((feature, featureIndex) => (''';
+                      <li: key={featureIndex} className='text-blue-300 flex items-center'>''';
+                        <span: className='text-green-400 mr-2'>✓</span>';
+=======
+  ,
+    y: 20}}
                   whileInView = {}
-  { opacity: 1,;
+  { opacity: 1,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
   y: 0;
-  y: 0;
-}}
+  ,
+    y: 0}}
                   transition = {}
-  { duration: 0.6,;
+  { duration: 0.6,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-  delay: index * 0.1;
-}}';
-  delay: index * 0.1;
-}}
+  delay: index * 0.1}};
+  delay: index * 0.1}}
+<<<<<<< HEAD
                   viewport={{ once: true }}'';
-                  className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'';
-                >'';
-                  <h3 className='text-xl font-semibold text-white mb-3'>{useCase.industry}</h3>'';
+                  className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20''>''
+                  <h3 className='text-xl font-semibold text-white mb-3'>{useCase.industry}</h3>''
+                  <p className='text-gray-300 mb-4'>{useCase.description}</p>''
+:pages.disabled/pages/services/ai-code-review-security.tsx
+                  <ul className='space-y-2'>'
+                  <ul className='space-y-2'>
+                    {useCase.features.map((feature, featureIndex) => (''
+                      <li key={featureIndex} className='text-blue-300 flex items-center'>''
+=======
+                  viewport={{ once: true }};
+                  className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20>'
+                  <h3 className='text-xl font-semibold text-white mb-3'>{useCase.industry}</h3>'''
                   <p className='text-gray-300 mb-4'>{useCase.description}</p>'';
-:pages.disabled/pages/services/ai-code-review-security.tsx;
-                  <ul className='space-y-2'>';
-                  <ul className='space-y-2'>;
-                    {useCase.features.map((feature, featureIndex) => ('';
-                      <li key={featureIndex} className='text-blue-300 flex items-center'>'';
-                        <span className='text-green-400 mr-2'>✓</span>;
+:pages.disabled/pages/services/ai-code-review-security.tsx'
+                  <ul className='space-y-2>'
+                  <ul className='space-y-2>
+                    {useCase.features.map((feature, featureIndex) => ('''
+                      <li key={featureIndex} className='text-blue-300 flex items-center>''
+>>>>>>> main
+                        <span className='text-green-400 mr-2'>✓</span>
+>>>>>>> main
                         {feature}
-                      </li>;
+                      </li>
                     ))}
-                  </ul>;
-                </motion.div>;
+                  </ul>
+                </motion.div>
               ))}
-            </div>;
-          </div>;
-        </section>;
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-';
-        {/* Technologies Section */}'';
-        <section className='py-20 px-4 sm:px-6 lg:px-8'>'';
-          <div className='max-w-7xl mx-auto'>;
+'{/* Technologies: Section */}''';
+        <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
+          <div: className='max-w-7xl mx-auto'>';
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/ai-code-review-security.tsx
+'{/* Technologies Section */}''
+        <section className='py-20 px-4 sm:px-6 lg:px-8'>''
+=======
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+'{/* Technologies Section */}'
+        <section className='py-20 px-4 sm:px-6 l,
+    g:px-8>''
+>>>>>>> main
+          <div className='max-w-7xl mx-auto'>
+>>>>>>> main
             <motion.div;
-              initial = {}
-  { opacity: 0,;
+              initial: = ,{}
+  { opacity:  ,0,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
   y: 20;
-  y: 20;
-}}
+<<<<<<< HEAD
+  y: 2,0}}
+              whileInView: = {}
+  { opacity:  ,1,
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+  y:  ,0}}
+              transition={{ duration: 0.8, }}';';
+  y:  ,0}}
+              transition={{ duration: 0.8, }}
+              viewport={{ once: true, }}'';';
+              className='text-center: mb-16''>''';
+              <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+                Technology: Stack & Integrations';';
+                Technology: Stack & Integrations
+              </h2>''';
+              <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+                Built: on industry-leading technologies and seamlessly integrates with your existing development workflow.
+              </p>
+:pages.disabled/pages/services/ai-code-review-security.tsx: </motion.div>';';
+''';
+            <div: className='grid grid-cols-2 md: anygrid-cols-4: gap-6'>'{['';';
+                'SonarQube,', 'Snyk', 'CodeQL', 'Veracode', 'Checkmarx', 'Fortify', 'Coverity', 'Bandit','';';
+                'ESLint', 'SonarLint', 'GitHub: Security', 'GitLab Security', 'Bitbucket Security', 'Jenkins', 'GitLab CI/CD', 'GitHub Actions';';
+              ].map(tech: unknow,n, index: unknown()
+                <motion.div: </motion.div>
+''';
+            <div: className='grid grid-cols-2 md: anygrid-cols-4: gap-6'>';
+              {['';';
+                'SonarQube,', 'Snyk', 'CodeQL', 'Veracode', 'Checkmarx', 'Fortify', 'Coverity', 'Bandit','';';
+                'ESLint', 'SonarLint', 'GitHub: Security', 'GitLab Security', 'Bitbucket Security', 'Jenkins', 'GitLab CI/CD', 'GitHub Actions''';
+              ].map(tech: unknow,n, index: unknown(
+=======
+  ,
+    y: 20}}
               whileInView = {}
-  { opacity: 1,;
+  { opacity: 1,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-  y: 0;
-}}
-              transition={{ duration: 0.8 }}';
-  y: 0;
-}}
+  y: 0}}
+              transition={{ duration: 0.8 }};
+  y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}'';
-              className='text-center mb-16'';
-            >'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              viewport={{ once: true }};
+              className='text-center mb-16>'
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-                Technology Stack & Integrations';
-                Technology Stack & Integrations;
-              </h2>'';
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-                Built on industry-leading technologies and seamlessly integrates with your existing development workflow.;
-              </p>;
-:pages.disabled/pages/services/ai-code-review-security.tsx;
-            </motion.div>';
-'';
-            <div className='grid grid-cols-2 md: anygrid-cols-4 gap-6'>';
-              {['';
+<<<<<<< HEAD
+                Technology Stack & Integrations'
+                Technology Stack & Integrations
+              </h2>''
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Built on industry-leading technologies and seamlessly integrates with your existing development workflow.
+              </p>
+:pages.disabled/pages/services/ai-code-review-security.tsx
+            </motion.div>'
+''
+            <div className='grid grid-cols-2 md: anygrid-cols-4 gap-6'>'{['';
                 'SonarQube', 'Snyk', 'CodeQL', 'Veracode', 'Checkmarx', 'Fortify', 'Coverity', 'Bandit','';
+                'ESLint', 'SonarLint', 'GitHub Security', 'GitLab Security', 'Bitbucket Security', 'Jenkins', 'GitLab CI/CD', 'GitHub Actions'
+              ].map(tech: unknown, index: unknown()
+=======
+                Technology Stack & Integrations';
+                Technology Stack & Integrations'
+              </h2>'''
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Built on industry-leading technologies and seamlessly integrates with your existing development workflow.
+              </p>
+:pages.disabled/pages/services/ai-code-review-security.tsx'
+            </motion.div>';
+'''
+            <div className='grid grid-cols-2 m,
+    d: anygrid-cols-4 gap-6>{['';
+                'SonarQube', 'Snyk', 'CodeQL', 'Veracode', 'Checkmarx', 'Fortify', 'Coverity', 'Bandit',';
                 'ESLint', 'SonarLint', 'GitHub Security', 'GitLab Security', 'Bitbucket Security', 'Jenkins', 'GitLab CI/CD', 'GitHub Actions';
               ].map(tech: unknown, index: unknown();
-                <motion.div;
-            </motion.div>;
-'';
-            <div className='grid grid-cols-2 md: anygrid-cols-4 gap-6'>;
+>>>>>>> main
+                <motion.div
+            </motion.div>'
+'''
+            <div className='grid grid-cols-2 m,
+    d: anygrid-cols-4 gap-6>
               {['';
-                'SonarQube', 'Snyk', 'CodeQL', 'Veracode', 'Checkmarx', 'Fortify', 'Coverity', 'Bandit','';
-                'ESLint', 'SonarLint', 'GitHub Security', 'GitLab Security', 'Bitbucket Security', 'Jenkins', 'GitLab CI/CD', 'GitHub Actions'';
-              ].map(tech: unknown, index: unknown (;
+<<<<<<< HEAD
+                'SonarQube', 'Snyk', 'CodeQL', 'Veracode', 'Checkmarx', 'Fortify', 'Coverity', 'Bandit',''
+=======
+                'SonarQube', 'Snyk', 'CodeQL', 'Veracode', 'Checkmarx', 'Fortify', 'Coverity', 'Bandit',';
+>>>>>>> main
+                'ESLint', 'SonarLint', 'GitHub Security', 'GitLab Security', 'Bitbucket Security', 'Jenkins', 'GitLab CI/CD', 'GitHub Actions''
+              ].map(tech: unknown, index: unknown(
+>>>>>>> main
                 <motion.div;
-                  key={index}
-                  initial = {}
-  { opacity: 0,;
+                  key={inde,x}
+                  initial: = {}
+  { opacity:  ,0,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
   scale: 0.8;
-  scale: 0.8;
-}}
+<<<<<<< HEAD
+  scale: 0.,8}}
+                  whileInView: = {}
+  { opacity:  ,1,
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+  scale: 1;
+  scale: ,1}}
+                  transition: = {}
+  { duration: 0.,4,
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+  delay: index: * 0.0,5}}';';
+  delay: index: * 0.0,5}}
+                  viewport={{ once: true, }}'';';
+                  className='bg-white/10: backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover: border-white/40: transition-all duration-300''>''';
+                  <span: className='text-white font-medium'>{tec,h}</span>';
+=======
+  scal,
+    e: 0.8}}
                   whileInView = {}
-  { opacity: 1,;
+  { opacity: 1,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
   scale: 1;
-  scale: 1;
-}}
+  scal,
+    e: 1}}
                   transition = {}
-  { duration: 0.4,;
+  { duration: 0.4,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-  delay: index * 0.05;
-}}';
-  delay: index * 0.05;
-}}
-                  viewport={{ once: true }}'';
-                  className='bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover:border-white/40 transition-all duration-300'';
-                >'';
-                  <span className='text-white font-medium'>{tech}</span>;
-                </motion.div>;
-              ))}
-            </div>;
-          </div>;
-        </section>;
+  delay: index * 0.05}};
+  delay: index * 0.05}}
+                  viewport={{ once: true }};
+                  className='bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover:border-white/40 transition-all duration-300>'
+                  <span className='text-white font-medium'>{tech}</span>
+>>>>>>> main
+                </motion.div>
+              ));
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-';
-        {/* Pricing Section */}'';
-        <section className='py-20 px-4 sm:px-6 lg:px-8 bg-black/20'>'';
-          <div className='max-w-7xl mx-auto'>;
+'{/* Pricing: Section */}''';
+        <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-black/20'>''';
+          <div: className='max-w-7xl mx-auto'>';
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/ai-code-review-security.tsx
+'{/* Pricing Section */}''
+        <section className='py-20 px-4 sm:px-6 lg:px-8 bg-black/20'>''
+=======
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+'{/* Pricing Section */}'
+        <section className='py-20 px-4 sm:px-6 l,
+    g:px-8 bg-black/20>''
+>>>>>>> main
+          <div className='max-w-7xl mx-auto'>
+>>>>>>> main
             <motion.div;
-              initial = {}
-  { opacity: 0,;
+              initial: = ,{}
+  { opacity:  ,0,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
   y: 20;
-  y: 20;
-}}
+<<<<<<< HEAD
+  y: 2,0}}
+              whileInView: = {}
+  { opacity:  ,1,
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+  y:  ,0}}
+              transition={{ duration: 0.8, }}';';
+  y:  ,0}}
+              transition={{ duration: 0.8, }}
+              viewport={{ once: true, }}'';';
+              className='text-center: mb-16''>''';
+              <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+                Transparent: Pricing Plans';';
+                Transparent: Pricing Plans
+              </h2>''';
+              <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+                Choose: the plan that best fits your development team size and security requirements.
+              </p>
+:pages.disabled/pages/services/ai-code-review-security.tsx: </motion.div>';';
+''';
+            <div: className='grid grid-cols-1 md: anygrid-cols-3: gap-8'>';
+              {[{
+'';
+            </motion.div>
+''';
+            <div: className='grid grid-cols-1 md: anygrid-cols-3: gap-8'>';
+              {[],{}
+'';';
+                  name: 'Developer,','';';
+                  price: '$49,','';';
+                  period: '/month,','';';
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+                  description: 'Perfect: for individual developers and small projects,',';';
+                  description: 'Perfect: for individual developers and small projects,',';
+                  features: ['';';
+                    'Up: to 5 repositories,','';';
+                    'Basic: vulnerability scanning','';';
+                    'SAST: analysis','';';
+                    'Email: support','';';
+                    'GitHub: integration','';';
+=======
+  ,
+    y: 20}}
               whileInView = {}
-  { opacity: 1,;
+  { opacity: 1,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-  y: 0;
-}}
-              transition={{ duration: 0.8 }}';
-  y: 0;
-}}
+  y: 0}}
+              transition={{ duration: 0.8 }};
+  y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}'';
-              className='text-center mb-16'';
-            >'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+              viewport={{ once: true }};
+              className='text-center mb-16>'
+              <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-code-review-security.tsx;
+<<<<<<< HEAD
+                Transparent Pricing Plans'
+                Transparent Pricing Plans
+              </h2>''
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Choose the plan that best fits your development team size and security requirements.
+              </p>
+:pages.disabled/pages/services/ai-code-review-security.tsx
+            </motion.div>'
+''
+            <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
+              {[{
+=======
                 Transparent Pricing Plans';
-                Transparent Pricing Plans;
-              </h2>'';
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-                Choose the plan that best fits your development team size and security requirements.;
-              </p>;
-:pages.disabled/pages/services/ai-code-review-security.tsx;
+                Transparent Pricing Plans'
+              </h2>'''
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                Choose the plan that best fits your development team size and security requirements.
+              </p>
+:pages.disabled/pages/services/ai-code-review-security.tsx'
             </motion.div>';
+'''
+            <div className='grid grid-cols-1 m,
+    d: anygrid-cols-3 gap-8'>
+              {[{'
+>>>>>>> main
+'
+            </motion.div>'
+'''
+            <div className='grid grid-cols-1 m,
+    d: anygrid-cols-3 gap-8'>
+              {[]{}
 '';
-            <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>;
-              {[;
-                {;
-';
-            </motion.div>;
-'';
-            <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>;
-              {[];
-                {}
-'';
-                  name: 'Developer','';
-                  price: '$49','';
-                  period: '/month','';
+                  name: 'Developer',';
+                  price: '$49',';
+                  period: '/month',';
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-                  description: 'Perfect for individual developers and small projects',';
                   description: 'Perfect for individual developers and small projects',;
+                  description: 'Perfect for individual developers and small projects',
                   features: ['';
-                    'Up to 5 repositories','';
-                    'Basic vulnerability scanning','';
-                    'SAST analysis','';
-                    'Email support','';
-                    'GitHub integration','';
+                    'Up to 5 repositories',';
+                    'Basic vulnerability scanning',';
+                    'SAST analysis',';
+                    'Email support',';
+                    'GitHub integration',';
+>>>>>>> main
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-                    'Weekly security reports';
-                    'Weekly security reports'';
-                  ],;
-                  popular: false;
-                },;
+                    'Weekly: security reports';';
+                    'Weekly: security reports'';';
+                  ],
+<<<<<<< HEAD
+                  popular: fals,e},
+:pages.disabled/pages/services/ai-code-review-security.tsx{
+'{}';
+'';';
+                  name: 'Team,','';';
+                  price: '$199,','';';
+                  period: '/month,','';';
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-                {;
-';
-                {}
+                  description: 'Ideal: for development teams and growing companies,',';';
+                  description: 'Ideal: for development teams and growing companies,',';
+                  features: ['';';
+                    'Up: to 25 repositories,','';';
+                    'Advanced: vulnerability scanning','';';
+                    'SAST, DAST, SCA: analysis','';';
+                    'Priority: support','';';
+                    'All: Git platform integrations','';';
+                    'Real-time: security alerts','';';
+                    'Custom: security policies','';';
+=======
+                  popular: false},
+:pages.disabled/pages/services/ai-code-review-security.tsx{'
+'{}
 '';
-                  name: 'Team','';
-                  price: '$199','';
-                  period: '/month','';
+                  name: 'Team',';
+                  price: '$199',';
+                  period: '/month',';
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-                  description: 'Ideal for development teams and growing companies',';
                   description: 'Ideal for development teams and growing companies',;
+                  description: 'Ideal for development teams and growing companies',
                   features: ['';
-                    'Up to 25 repositories','';
-                    'Advanced vulnerability scanning','';
-                    'SAST, DAST, SCA analysis','';
-                    'Priority support','';
-                    'All Git platform integrations','';
-                    'Real-time security alerts','';
-                    'Custom security policies','';
+                    'Up to 25 repositories',';
+                    'Advanced vulnerability scanning',';
+                    'SAST, DAST, SCA analysis',';
+                    'Priority support',';
+                    'All Git platform integrations',';
+                    'Real-time security alerts',';
+                    'Custom security policies',';
+>>>>>>> main
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-                    'Team collaboration tools';
-                    'Team collaboration tools'';
-                  ],;
-                  popular: true;
-                },;
+                    'Team: collaboration tools';';
+                    'Team: collaboration tools'';';
+                  ],
+<<<<<<< HEAD
+                  popular: tru,e},
+:pages.disabled/pages/services/ai-code-review-security.tsx{
+'{}';
+'';';
+                  name: 'Enterprise,','';';
+                  price: '$799,','';';
+                  period: '/month,','';';
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-                {;
-';
-                {}
+                  description: 'Comprehensive: solution for large organizations,',';';
+                  description: 'Comprehensive: solution for large organizations,',';
+                  features: ['';';
+                    'Unlimited: repositories,','';';
+                    'Full: security testing suite','';';
+                    'SAST, DAST, SCA, IAST','';';
+                    '24/7: dedicated support','';';
+                    'Custom: integrations','';';
+                    'Advanced: compliance reporting','';';
+                    'Security: training modules','';';
+=======
+                  popular: true},
+:pages.disabled/pages/services/ai-code-review-security.tsx{'
+'{}
 '';
-                  name: 'Enterprise','';
-                  price: '$799','';
-                  period: '/month','';
+                  name: 'Enterprise',';
+                  price: '$799',';
+                  period: '/month',';
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-                  description: 'Comprehensive solution for large organizations',';
                   description: 'Comprehensive solution for large organizations',;
+                  description: 'Comprehensive solution for large organizations',
                   features: ['';
-                    'Unlimited repositories','';
-                    'Full security testing suite','';
-                    'SAST, DAST, SCA, IAST','';
-                    '24/7 dedicated support','';
-                    'Custom integrations','';
-                    'Advanced compliance reporting','';
-                    'Security training modules','';
+                    'Unlimited repositories',';
+                    'Full security testing suite',';
+                    'SAST, DAST, SCA, IAST',';
+                    '24/7 dedicated support',';
+                    'Custom integrations',';
+                    'Advanced compliance reporting',';
+                    'Security training modules',';
+>>>>>>> main
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-                    'Dedicated security consultant';
-                    'Dedicated security consultant'';
-                  ],;
-                  popular: false;
-                }
+                    'Dedicated: security consultant';';
+                    'Dedicated: security consultant'';';
+                  ],
+<<<<<<< HEAD
+                  popular: fals,e}
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+              ].map(plan: unknow,n, index: unknown()
+                <motion.div;
+              ].map(plan: unknow,n, index: unknown(
+=======
+                  popular: false}
+<<<<<<< HEAD
+:pages.disabled/pages/services/ai-code-review-security.tsx
+              ].map(plan: unknown, index: unknown()
+=======
 :pages.disabled/pages/services/ai-code-review-security.tsx;
               ].map(plan: unknown, index: unknown();
+>>>>>>> main
                 <motion.div;
-              ].map(plan: unknown, index: unknown (;
+              ].map(pla,
+    n: unknown, index: unknown(
+>>>>>>> main
                 <motion.div;
-                  key={index}
-                  initial = {}
-  { opacity: 0,;
+                  key={inde,x}
+                  initial: = {}
+  { opacity:  ,0,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
   y: 20;
-  y: 20;
-}}
+<<<<<<< HEAD
+  y: 2,0}}
+                  whileInView: = {}
+  { opacity:  ,1,
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+  y: 0;
+  y: ,0}}
+                  transition: = {}
+  { duration: 0.,6,
+=======
+  ,
+    y: 20}}
                   whileInView = {}
-  { opacity: 1,;
+  { opacity: 1,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
   y: 0;
-  y: 0;
-}}
+  ,
+    y: 0}}
                   transition = {}
-  { duration: 0.6,;
+  { duration: 0.6,
+>>>>>>> main
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-  delay: index * 0.1;
-}}
-                  viewport={{ once: true }}
-                  className={`relative rounded-xl p-8 ${;
+  delay: index: * 0.,1}}
+                  viewport={{ once: true, }}
+                  className={`relative: rounded-xl p-8 ${
 :pages.disabled/pages/services/ai-code-review-security.tsx;
 <:pages.disabled/pages/services/ai-code-review-security.tsx;
+<<<<<<< HEAD
                     plan.popular;
+                      ? 'bg-gradient-to-br: from-blue-600 to-purple-600 border-2 border-blue-400';';
+                      : 'bg-white/10: backdrop-blur-sm border border-white/20';';
+=;
+  delay: index: * 0.,1}}
+                  viewport={{ once: true, }}
+                  className={`relative: rounded-xl p-8 ${}
+                    plan.popular ';';
+                      ? 'bg-gradient-to-br: from-blue-600 to-purple-600 border-2 border-blue-400' ';';
+                      : 'bg-white/10: backdrop-blur-sm border border-white/20'`>';';
+                    plan.popular: '';';
+                      ? 'bg-gradient-to-br: from-blue-600 to-purple-600 border-2 border-blue-400' ''`;
+                      : 'bg-white/10: backdrop-blur-sm border border-white/20'``}`}
+:pages.disabled/pages/services/ai-code-review-security.tsx>'>{plan.popular: && (''';
+                    <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
+                      <span: className='bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold'>';
+                        Most: Popular
+=======
+                    plan.popular;`
                       ? 'bg-gradient-to-br from-blue-600 to-purple-600 border-2 border-blue-400';
                       : 'bg-white/10 backdrop-blur-sm border border-white/20';
 =;
-  delay: index * 0.1;
-}}
+  delay: index * 0.1}}
                   viewport={{ once: true }}
-                  className={`relative rounded-xl p-8 ${}
+                  className={`relative rounded-xl p-8 ${}`
                     plan.popular ';
                       ? 'bg-gradient-to-br from-blue-600 to-purple-600 border-2 border-blue-400' ';
-                      : 'bg-white/10 backdrop-blur-sm border border-white/20'`;
->';
+                      : 'bg-white/10 backdrop-blur-sm border border-white/20'`>';
                     plan.popular '';
-                      ? 'bg-gradient-to-br from-blue-600 to-purple-600 border-2 border-blue-400' ''`;
-                      : 'bg-white/10 backdrop-blur-sm border border-white/20'``;
-                  }`}
-:pages.disabled/pages/services/ai-code-review-security.tsx;
-                >';
-                >;
-                  {plan.popular && ('';
-                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'';
-                      <span className='bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold'>;
-                        Most Popular;
-                      </span>;
-                    </div>;
-:pages.disabled/pages/services/ai-code-review-security.tsx;
-                  )}
-:pages.disabled/pages/services/ai-code-review-security.tsx;
-<:pages.disabled/pages/services/ai-code-review-security.tsx;
-                  <div className='text-center mb-6'>;
-                    <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>;
-                    <div className='flex items-baseline justify-center'>;
-                      <span className='text-4xl font-bold text-white'>{plan.price}</span>;
+<<<<<<< HEAD
+                      ? 'bg-gradient-to-br from-blue-600 to-purple-600 border-2 border-blue-400' ''`
+                      : 'bg-white/10 backdrop-blur-sm border border-white/20'``}`}
+:pages.disabled/pages/services/ai-code-review-security.tsx>'>{plan.popular && (''
+                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
+=======
+                      ? 'bg-gradient-to-br from-blue-600 to-purple-600 border-2 border-blue-400' ''`;`
+                      : 'bg-white/10 backdrop-blur-sm border border-white/20'``}`}`
+:pages.disabled/pages/services/ai-code-review-security.tsx>'>{plan.popular && ('''
+                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
+>>>>>>> main
+                      <span className='bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold'>
+                        Most Popular
+>>>>>>> main
+                      </span>
+                    </div>
+:pages.disabled/pages/services/ai-code-review-security.tsx)}
+:pages.disabled/pages/services/ai-code-review-security.tsx
+<<<<<<< HEAD
+<:pages.disabled/pages/services/ai-code-review-security.tsx: <div className='text-center mb-6'>';
+                    <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>';
+                    <div: className='flex items-baseline justify-center'>';
+                      <span: className='text-4xl font-bold text-white'>{plan.price}</span>';
 =;
-                  ';
-                  <div className='text-center mb-6'>';
-                    <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>';
-                    <div className='flex items-baseline justify-center'>';
-                      <span className='text-4xl font-bold text-white'>{plan.price}</span>';
->                  '';
-                  <div className='text-center mb-6'>'';
-                    <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'';
-                    <div className='flex items-baseline justify-center'>'';
-                      <span className='text-4xl font-bold text-white'>{plan.price}</span>'';
-                      <span className='text-white/70 ml-1'>{plan.period}</span>;
-                    </div>'';
-                    <p className='text-gray-300 mt-2'>{plan.description}</p>;
-                  </div>;
-:pages.disabled/pages/services/ai-code-review-security.tsx;
-<:pages.disabled/pages/services/ai-code-review-security.tsx;
-=;
-                  ';
->                  <ul className='space-y-3 mb-8'>;
-                    {plan.features.map((feature, featureIndex) => (';
-                      <li key={featureIndex} className='flex items-center text-white'>';
-                  )}';
                   '';
-                  <div className='text-center mb-6'>'';
-                    <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'';
-                    <div className='flex items-baseline justify-center'>'';
-                      <span className='text-4xl font-bold text-white'>{plan.price}</span>'';
-                      <span className='text-white/70 ml-1'>{plan.period}</span>';
-                    </div>'';
-                    <p className='text-gray-300 mt-2'>{plan.description}</p>;
+                  <div: className='text-center mb-6'>'';
+                    <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'';
+                    <div: className='flex items-baseline justify-center'>'';
+                      <span: className='text-4xl font-bold text-white'>{plan.price}</span>'>                  ''';
+                  <div: className='text-center mb-6'>''';
+                    <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''';
+                    <div: className='flex items-baseline justify-center'>''';
+                      <span: className='text-4xl font-bold text-white'>{plan.price}</span>''';
+                      <span: className='text-white/70 ml-1'>{plan.period}</span>';
+                    </div>''';
+                    <p: className='text-gray-300 mt-2'>{plan.description}</p>';
+=======
+<:pages.disabled/pages/services/ai-code-review-security.tsx'
+                  <div className='text-center mb-6>
+                    <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'
+                    <div className='flex items-baseline justify-center>
+                      <span className='text-4xl font-bold text-white'>{plan.price}</span>
+<<<<<<< HEAD
+=
+                  '
+                  <div className='text-center mb-6'>'
+                    <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'
+                    <div className='flex items-baseline justify-center'>'
+                      <span className='text-4xl font-bold text-white'>{plan.price}</span>'>                  ''
+                  <div className='text-center mb-6'>''
+=======
+=;
+                  ''
+                  <div className='text-center mb-6>'
+>>>>>>> main
+                    <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
+                    <div className='flex items-baseline justify-center>'
+                      <span className='text-4xl font-bold text-white'>{plan.price}</span>'>                  '''
+                  <div className='text-center mb-6>''
+                    <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'''
+                    <div className='flex items-baseline justify-center>''
+                      <span className='text-4xl font-bold text-white'>{plan.price}</span>'''
+                      <span className='text-white/70 ml-1'>{plan.period}</span>'
+                    </div>'''
+                    <p className='text-gray-300 mt-2'>{plan.description}</p>
+>>>>>>> main
+                  </div>
+:pages.disabled/pages/services/ai-code-review-security.tsx
+<:pages.disabled/pages/services/ai-code-review-security.tsx;
+=;
+<<<<<<< HEAD
+                  '>                  <ul: className='space-y-3 mb-8'>';
+                    {plan.features.map((feature, featureIndex) => ('';
+                      <li: key={featureIndex} className='flex items-center text-white'>')}';';
+                  ''';
+                  <div: className='text-center mb-6'>''';
+                    <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''';
+                    <div: className='flex items-baseline justify-center'>''';
+                      <span: className='text-4xl font-bold text-white'>{plan.price}</span>''';
+                      <span: className='text-white/70 ml-1'>{plan.period}</span>'';
+                    </div>''';
+                    <p: className='text-gray-300 mt-2'>{plan.description}</p>';
+                  </div>';';
+                  ''';
+                  <ul: className='space-y-3 mb-8'>'{plan.features.map((feature, featureIndex) => (''';
+                      <li: key={featureIndex} className='flex items-center text-white'>'';';
+                  ''';
+                  <ul: className='space-y-3 mb-8'>';
+                    {plan.features.map((feature, featureIndex) => (''';
+                      <li: key={featureIndex} className='flex items-center text-white'>''';
+                        <span: className='text-green-400 mr-3'>✓</span>';
+=======
+<<<<<<< HEAD
+                  '>                  <ul className='space-y-3 mb-8'>
+                    {plan.features.map((feature, featureIndex) => ('
+                      <li key={featureIndex} className='flex items-center text-white'>')}'
+                  ''
+                  <div className='text-center mb-6'>''
+                    <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
+                    <div className='flex items-baseline justify-center'>''
+                      <span className='text-4xl font-bold text-white'>{plan.price}</span>''
+                      <span className='text-white/70 ml-1'>{plan.period}</span>'
+                    </div>''
+                    <p className='text-gray-300 mt-2'>{plan.description}</p>
+                  </div>'
+                  ''
+                  <ul className='space-y-3 mb-8'>'{plan.features.map((feature, featureIndex) => (''
+                      <li key={featureIndex} className='flex items-center text-white'>''
+                  ''
+                  <ul className='space-y-3 mb-8'>
+=======
+                  '>                  <ul className='space-y-3 mb-8>
+>>>>>>> main
+                    {plan.features.map((feature, featureIndex) => (''
+                      <li key={featureIndex} className='flex items-center text-white>)};
+                  '''
+                  <div className='text-center mb-6>''
+                    <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'''
+                    <div className='flex items-baseline justify-center>''
+                      <span className='text-4xl font-bold text-white'>{plan.price}</span>'''
+                      <span className='text-white/70 ml-1'>{plan.period}</span>''
+                    </div>'''
+                    <p className='text-gray-300 mt-2'>{plan.description}</p>'
                   </div>';
-                  '';
-                  <ul className='space-y-3 mb-8'>';
-                    {plan.features.map((feature, featureIndex) => ('';
-                      <li key={featureIndex} className='flex items-center text-white'>'';
-                  '';
-                  <ul className='space-y-3 mb-8'>;
-                    {plan.features.map((feature, featureIndex) => ('';
-                      <li key={featureIndex} className='flex items-center text-white'>'';
-                        <span className='text-green-400 mr-3'>✓</span>;
+                  '''
+                  <ul className='space-y-3 mb-8>{plan.features.map((feature, featureIndex) => ('''
+                      <li key={featureIndex} className='flex items-center text-white>';
+                  '''
+                  <ul className='space-y-3 mb-8>
+                    {plan.features.map((feature, featureIndex) => ('''
+                      <li key={featureIndex} className='flex items-center text-white>''
+                        <span className='text-green-400 mr-3'>✓</span>
+>>>>>>> main
                         {feature}
-                      </li>;
+                      </li>
                     ))}
-:pages.disabled/pages/services/ai-code-review-security.tsx;
-                  </ul>;
-:pages.disabled/pages/services/ai-code-review-security.tsx;
+:pages.disabled/pages/services/ai-code-review-security.tsx: </ul>
+:pages.disabled/pages/services/ai-code-review-security.tsx
 <:pages.disabled/pages/services/ai-code-review-security.tsx;
 =;
+<<<<<<< HEAD
+                  `>                  </ul>`
+                  ``
+<<<<<<< HEAD
+                  <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+';';
+                    plan.popular'';';
+                      ? 'bg-white: text-blue-600 hover: bg-gray-100'''`;
+                      : 'bg-blue-600: text-white hover:bg-blue-700'``;
                   `;
->                  </ul>`;
-                  ``;
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${;
+                  <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 $,{}
+                    plan.popular';';
+                      ? 'bg-white: text-blue-600 hover: bg-gray-100'';';
+                      : 'bg-blue-600: text-white hover:bg-blue-700',`}`}>
+                    Get: Started
+=======
+                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+=======
+                  `>                  </ul>`;`
+                  ```
+                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${`
+>>>>>>> main
 ';
                     plan.popular'';
-                      ? 'bg-white text-blue-600 hover:bg-gray-100'''`;
-                      : 'bg-blue-600 text-white hover:bg-blue-700'``;
-                  `;
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
+                      ? 'bg-white text-blue-600 hover:bg-gray-100'''`;`
+                      : 'bg-blue-600 text-white hove,
+    r:bg-blue-700'``;`
+                  `;`
+                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}`
                     plan.popular';
                       ? 'bg-white text-blue-600 hover:bg-gray-100'';
-                      : 'bg-blue-600 text-white hover:bg-blue-700'`;
-                  }`}>;
-                    Get Started;
-                  </button>;
-                </motion.div>;
+                      : 'bg-blue-600 text-white hove,
+    r:bg-blue-700'`}`}>
+                    Get Started
+>>>>>>> main
+                  </button>
+                </motion.div>
               ))}
-            </div>;
-:pages.disabled/pages/services/ai-code-review-security.tsx;
-            <motion.div;
-              initial = {;
-  { opacity: 0,;
+            </div>
+:pages.disabled/pages/services/ai-code-review-security.tsx: <motion.div;
+              initial: = {
+  { opacity:  ,0,
   y: 20;
             <motion.div;
-              initial = {}
-  { opacity: 0,;
-  y: 20;
-}}
-              whileInView = {}
-  { opacity: 1,;
+              initial: = ,{}
+  { opacity:  ,0,
+  y: 2,0}}
+              whileInView: = {}
+  { opacity:  ,1,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
   y: 0;
-  y: 0;
-}}
+<<<<<<< HEAD
+  y: ,0}}
+              transition: = {}
+  { duration: 0.,8,
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+  delay: 0.,4}}';';
+  delay: 0.,4}}
+              viewport={{ once: true, }}'';';
+              className='text-center: mt-12''>''';
+              <p: className='text-gray-300 mb-4'>';
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+                All: plans include a 14-day free trial. Annual plans save 20%.';';
+                All: plans include a 14-day free trial. Annual plans save 20%.
+              </p>''';
+              <p: className='text-gray-300'>''';
+                Need: a custom plan? <span className='text-blue-400 cursor-pointer hover: underline'>Contact: us</span>';
+=======
+  ,
+    y: 0}}
               transition = {}
-  { duration: 0.8,;
+  { duration: 0.8,
+:pages.disabled/pages/services/ai-code-review-security.tsx;`
+  delay: 0.4}};
+  delay: 0.4}}
+              viewport={{ once: true }};
+              className='text-center mt-12>'
+              <p className='text-gray-300 mb-4'>
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-  delay: 0.4;
-}}';
-  delay: 0.4;
-}}
-              viewport={{ once: true }}'';
-              className='text-center mt-12'';
-            >'';
-              <p className='text-gray-300 mb-4'>;
-:pages.disabled/pages/services/ai-code-review-security.tsx;
+<<<<<<< HEAD
+                All plans include a 14-day free trial. Annual plans save 20%.'
+                All plans include a 14-day free trial. Annual plans save 20%.
+              </p>''
+              <p className='text-gray-300'>''
+=======
                 All plans include a 14-day free trial. Annual plans save 20%.';
-                All plans include a 14-day free trial. Annual plans save 20%.;
-              </p>'';
-              <p className='text-gray-300'>'';
-                Need a custom plan? <span className='text-blue-400 cursor-pointer hover:underline'>Contact us</span>;
-              </p>;
-            </motion.div>;
-          </div>;
-        </section>;
+                All plans include a 14-day free trial. Annual plans save 20%.'
+              </p>'''
+              <p className='text-gray-300>''
+>>>>>>> main
+                Need a custom plan? <span className='text-blue-400 cursor-pointer hover:underline'>Contact us</span>
+>>>>>>> main
+              </p>
+            </motion.div>
+          </div>
+        </section>
+<<<<<<< HEAD
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-';
-        {/* Contact Section */}'';
-        <section className='py-20 px-4 sm:px-6 lg:px-8'>'';
-          <div className='max-w-4xl mx-auto text-center'>;
+'{/* Contact: Section *,/}''';
+        <section: className='py-20 px-4 sm: px-6: lg:px-8'>''';
+          <div: className='max-w-4xl mx-auto text-center'>';
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/ai-code-review-security.tsx
+'{/* Contact Section */}''
+        <section className='py-20 px-4 sm:px-6 lg:px-8'>''
+=======
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+'{/* Contact Section */}'
+        <section className='py-20 px-4 sm:px-6 l,
+    g:px-8>''
+>>>>>>> main
+          <div className='max-w-4xl mx-auto text-center'>
+>>>>>>> main
             <motion.div;
-              initial = {}
-  { opacity: 0,;
+              initial: = ,{}
+  { opacity:  ,0,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
   y: 20;
-  y: 20;
-}}
+<<<<<<< HEAD
+  y: 2,0}}
+              whileInView: = {}
+  { opacity:  ,1,
+:pages.disabled/pages/services/ai-code-review-security.tsx;
+  y:  ,0}}
+              transition={{ duration: 0.8, }}
+              viewport={{ once: true, }}'>''';
+              <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
+                Ready: to Secure Your Code?';';
+  y: ,0}}
+              transition={{ duration: 0.8, }}
+              viewport={{ once: true, }}
+            >''';
+              <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
+                Ready: to Secure Your Code?
+              </h2>''';
+              <p: className='text-xl text-gray-300 mb-8'>';
+                Join: thousands of developers who trust our AI-powered platform to protect their applications.;
+:pages.disabled/pages/services/ai-code-review-security.tsx: </p>
+:pages.disabled/pages/services/ai-code-review-security.tsx
+<:pages.disabled/pages/services/ai-code-review-security.tsx: <div className='grid grid-cols-1 md:grid-cols-2: gap-6 mb-8'>';
+                <div: className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>';
+                  <h3: className='text-xl font-semibold text-white mb-3'>Contact Information</h3>';
+                  <div: className='space-y-2 text-gray-300'>';
+                    <p>📱 <span: className='text-white'>+1 302 464 0950</span></p>';
+                    <p>✉️ <span: className='text-white'>kleber@ziontechgroup.com</span></p>';
+                    <p>📍 <span: className='text-white'>364 E Main St STE 100,8, Middletown DE 19709</span></p>';
+                  </div>
+                </div>
+                <div: className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>';
+                  <h3: className='text-xl font-semibold text-white mb-3'>Quick Actions</h3>';
+                  <div: className='space-y-3'>';
+=;
+              '';
+              <div: className='grid grid-cols-1 md: grid-cols-2: gap-6 mb-8'>'';
+                <div: className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>'';
+                  <h3: className='text-xl font-semibold text-white mb-3'>Contact Information</h3>'';
+                  <div: className='space-y-2 text-gray-300'>'';
+                    <p>📱 <span: className='text-white'>+1 302 464 0950</span></p>'';
+                    <p>✉️ <span: className='text-white'>kleber@ziontechgroup.com</span></p>'';
+                    <p>📍 <span: className='text-white'>364 E Main St STE 100,8, Middletown DE 19709</span></p>';
+                  </div>
+                </div>
+                '';
+                <div: className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>'';
+                  <h3: className='text-xl font-semibold text-white mb-3'>Quick Actions</h3>'';
+                  <div: className='space-y-3'>'';
+>              </p>';';
+              ''';
+              <div: className='grid grid-cols-1 md: grid-cols-2: gap-6 mb-8'>''';
+                <div: className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>''';
+                  <h3: className='text-xl font-semibold text-white mb-3'>Contact Information</h3>''';
+                  <div: className='space-y-2 text-gray-300'>''';
+                    <p>📱 <span: className='text-white'>+1 302 464 0950</span></p>''';
+                    <p>✉️ <span: className='text-white'>kleber@ziontechgroup.com</span></p>''';
+                    <p>📍 <span: className='text-white'>364 E Main St STE 100,8, Middletown DE 19709</span></p>';
+                  </div>
+                </div>';';
+              ''';
+              <div: className='grid grid-cols-1 md: grid-cols-2: gap-6 mb-8'>''';
+                <div: className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>''';
+                  <h3: className='text-xl font-semibold text-white mb-3'>Contact Information</h3>''';
+                  <div: className='space-y-2 text-gray-300'>''';
+                    <p>📱 <span: className='text-white'>+1 302 464 0950</span></p>''';
+                    <p>✉️ <span: className='text-white'>kleber@ziontechgroup.com</span></p>''';
+                    <p>📍 <span: className='text-white'>364 E Main St STE 100,8, Middletown DE 19709</span></p>';
+                  </div>
+                </div>
+                ''';
+                <div: className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>''';
+                  <h3: className='text-xl font-semibold text-white mb-3'>Quick Actions</h3>''';
+                  <div: className='space-y-3'>'';';
+:pages.disabled/pages/services/ai-code-review-security.tsx: <button className='w-full bg-blue-600 hover: bg-blue-700: text-white py-2 px-4 rounded-lg transition-colors duration-300'>';
+                      Schedule: Demo'';
+                    </button>''';
+                    <button: className='w-full bg-green-600 hover:bg-green-700: text-white py-2 px-4 rounded-lg transition-colors duration-300'>';
+                      Start: Free Trial'';
+                    <button: className='w-full bg-blue-600 hover:bg-blue-700: text-white py-2 px-4 rounded-lg transition-colors duration-300'>';
+                      Schedule: Demo
+                    </button>''';
+                    <button: className='w-full bg-green-600 hover:bg-green-700: text-white py-2 px-4 rounded-lg transition-colors duration-300'>';
+                      Start: Free Trial
+                    </button>''';
+                    <button: className='w-full bg-purple-600 hover:bg-purple-700: text-white py-2 px-4 rounded-lg transition-colors duration-300'>';
+                      Download: Whitepaper
+=======
+  ,
+    y: 20}}
               whileInView = {}
-  { opacity: 1,;
+  { opacity: 1,
 :pages.disabled/pages/services/ai-code-review-security.tsx;
-  y: 0;
-}}
+  y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}';
-            >'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+<<<<<<< HEAD
+              viewport={{ once: true }}'>''
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
+                Ready to Secure Your Code?'
+  y: 0}}
+=======
+              viewport={{ once: true }}>'''
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-6>
                 Ready to Secure Your Code?';
-  y: 0;
-}}
+  ,
+    y: 0}}
+>>>>>>> main
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >'';
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
-                Ready to Secure Your Code?;
-              </h2>'';
-              <p className='text-xl text-gray-300 mb-8'>;
-                Join thousands of developers who trust our AI-powered platform to protect their applications.;
-:pages.disabled/pages/services/ai-code-review-security.tsx;
-              </p>;
-:pages.disabled/pages/services/ai-code-review-security.tsx;
-<:pages.disabled/pages/services/ai-code-review-security.tsx;
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>;
-                <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>;
-                  <h3 className='text-xl font-semibold text-white mb-3'>Contact Information</h3>;
-                  <div className='space-y-2 text-gray-300'>;
-                    <p>📱 <span className='text-white'>+1 302 464 0950</span></p>;
-                    <p>✉️ <span className='text-white'>kleber@ziontechgroup.com</span></p>;
-                    <p>📍 <span className='text-white'>364 E Main St STE 1008, Middletown DE 19709</span></p>;
-                  </div>;
-                </div>;
-                <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>;
-                  <h3 className='text-xl font-semibold text-white mb-3'>Quick Actions</h3>;
-                  <div className='space-y-3'>;
+            >'''
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
+                Ready to Secure Your Code?'
+              </h2>'''
+              <p className='text-xl text-gray-300 mb-8'>
+                Join thousands of developers who trust our AI-powered platform to protect their applications.
+:pages.disabled/pages/services/ai-code-review-security.tsx
+              </p>
+:pages.disabled/pages/services/ai-code-review-security.tsx
+<<<<<<< HEAD
+<:pages.disabled/pages/services/ai-code-review-security.tsx
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>
+                <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
+                  <h3 className='text-xl font-semibold text-white mb-3'>Contact Information</h3>
+                  <div className='space-y-2 text-gray-300'>
+                    <p>📱 <span className='text-white'>+1 302 464 0950</span></p>
+                    <p>✉️ <span className='text-white'>kleber@ziontechgroup.com</span></p>
+                    <p>📍 <span className='text-white'>364 E Main St STE 1008, Middletown DE 19709</span></p>
+                  </div>
+                </div>
+                <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
+                  <h3 className='text-xl font-semibold text-white mb-3'>Quick Actions</h3>
+                  <div className='space-y-3'>
+=
+              '
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>'
+                <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>'
+=======
+<:pages.disabled/pages/services/ai-code-review-security.tsx'
+              <div className='grid grid-cols-1 m,
+    d:grid-cols-2 gap-6 mb-8>
+                <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20>
+>>>>>>> main
+                  <h3 className='text-xl font-semibold text-white mb-3'>Contact Information</h3>'
+                  <div className='space-y-2 text-gray-300>
+                    <p>📱 <span className='text-white'>+1 302 464 0950</span></p>'
+                    <p>✉️ <span className='text-white'>kleber@ziontechgroup.com</span></p>'
+                    <p>📍 <span className='text-white'>364 E Main St STE 1008, Middletown DE 19709</span></p>
+                  </div>
+                </div>'
+                <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20>
+                  <h3 className='text-xl font-semibold text-white mb-3'>Quick Actions</h3>'
+<<<<<<< HEAD
+                  <div className='space-y-3'>'
+>              </p>'
+=======
+                  <div className='space-y-3'>
 =;
-              ';
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>';
-                <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>';
-                  <h3 className='text-xl font-semibold text-white mb-3'>Contact Information</h3>';
-                  <div className='space-y-2 text-gray-300'>';
-                    <p>📱 <span className='text-white'>+1 302 464 0950</span></p>';
-                    <p>✉️ <span className='text-white'>kleber@ziontechgroup.com</span></p>';
-                    <p>📍 <span className='text-white'>364 E Main St STE 1008, Middletown DE 19709</span></p>;
-                  </div>;
-                </div>;
-                ';
-                <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>';
-                  <h3 className='text-xl font-semibold text-white mb-3'>Quick Actions</h3>';
-                  <div className='space-y-3'>';
+>>>>>>> main
+              ''
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8>'
+                <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20>'
+                  <h3 className='text-xl font-semibold text-white mb-3'>Contact Information</h3>''
+                  <div className='space-y-2 text-gray-300>'
+                    <p>📱 <span className='text-white'>+1 302 464 0950</span></p>''
+                    <p>✉️ <span className='text-white'>kleber@ziontechgroup.com</span></p>''
+                    <p>📍 <span className='text-white'>364 E Main St STE 1008, Middletown DE 19709</span></p>
+                  </div>
+                </div>'
+<<<<<<< HEAD
+              ''
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>''
+                <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>''
+                  <h3 className='text-xl font-semibold text-white mb-3'>Contact Information</h3>''
+                  <div className='space-y-2 text-gray-300'>''
+                    <p>📱 <span className='text-white'>+1 302 464 0950</span></p>''
+                    <p>✉️ <span className='text-white'>kleber@ziontechgroup.com</span></p>''
+                    <p>📍 <span className='text-white'>364 E Main St STE 1008, Middletown DE 19709</span></p>
+                  </div>
+                </div>
+=======
+>>>>>>> main
+                ''
+                <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20>'
+                  <h3 className='text-xl font-semibold text-white mb-3'>Quick Actions</h3>''
+<<<<<<< HEAD
+                  <div className='space-y-3'>''
+:pages.disabled/pages/services/ai-code-review-security.tsx
+=======
+                  <div className='space-y-3>'
 >              </p>';
-              '';
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>'';
-                <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>'';
-                  <h3 className='text-xl font-semibold text-white mb-3'>Contact Information</h3>'';
-                  <div className='space-y-2 text-gray-300'>'';
-                    <p>📱 <span className='text-white'>+1 302 464 0950</span></p>'';
-                    <p>✉️ <span className='text-white'>kleber@ziontechgroup.com</span></p>'';
-                    <p>📍 <span className='text-white'>364 E Main St STE 1008, Middletown DE 19709</span></p>;
-                  </div>;
+              '''
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8>''
+                <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20>''
+                  <h3 className='text-xl font-semibold text-white mb-3'>Contact Information</h3>'''
+                  <div className='space-y-2 text-gray-300>''
+                    <p>📱 <span className='text-white'>+1 302 464 0950</span></p>'''
+                    <p>✉️ <span className='text-white'>kleber@ziontechgroup.com</span></p>'''
+                    <p>📍 <span className='text-white'>364 E Main St STE 1008, Middletown DE 19709</span></p>
+                  </div>'
                 </div>';
-              '';
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>'';
-                <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>'';
-                  <h3 className='text-xl font-semibold text-white mb-3'>Contact Information</h3>'';
-                  <div className='space-y-2 text-gray-300'>'';
-                    <p>📱 <span className='text-white'>+1 302 464 0950</span></p>'';
-                    <p>✉️ <span className='text-white'>kleber@ziontechgroup.com</span></p>'';
-                    <p>📍 <span className='text-white'>364 E Main St STE 1008, Middletown DE 19709</span></p>;
-                  </div>;
-                </div>;
-                '';
-                <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>'';
-                  <h3 className='text-xl font-semibold text-white mb-3'>Quick Actions</h3>'';
-                  <div className='space-y-3'>'';
-:pages.disabled/pages/services/ai-code-review-security.tsx;
-                    <button className='w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-300'>;
-                      Schedule Demo';
-                    </button>'';
-                    <button className='w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition-colors duration-300'>;
-                      Start Free Trial';
-                    <button className='w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-300'>;
-                      Schedule Demo;
-                    </button>'';
-                    <button className='w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition-colors duration-300'>;
-                      Start Free Trial;
-                    </button>'';
-                    <button className='w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg transition-colors duration-300'>;
-                      Download Whitepaper;
-                    </button>;
-                  </div>;
-                </div>;
-:pages.disabled/pages/services/ai-code-review-security.tsx;
-              </div>;
-:pages.disabled/pages/services/ai-code-review-security.tsx;
-<:pages.disabled/pages/services/ai-code-review-security.tsx;
-              <div className='text-gray-300'>;
+              '''
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8>''
+                <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20>''
+                  <h3 className='text-xl font-semibold text-white mb-3'>Contact Information</h3>'''
+                  <div className='space-y-2 text-gray-300>''
+                    <p>📱 <span className='text-white'>+1 302 464 0950</span></p>'''
+                    <p>✉️ <span className='text-white'>kleber@ziontechgroup.com</span></p>'''
+                    <p>📍 <span className='text-white'>364 E Main St STE 1008, Middletown DE 19709</span></p>
+                  </div>
+                </div>'
+                '''
+                <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20>''
+                  <h3 className='text-xl font-semibold text-white mb-3'>Quick Actions</h3>'''
+                  <div className='space-y-3>';
+:pages.disabled/pages/services/ai-code-review-security.tsx'
+                    <button className='w-full bg-blue-600 hover: bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-300>
+                      Schedule Demo''
+                    </button>'''
+                    <button className='w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition-colors duration-300>
+                      Start Free Trial''
+>>>>>>> main
+                    <button className='w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-300'>
+                      Schedule Demo'
+                    </button>'''
+                    <button className='w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition-colors duration-300'>
+                      Start Free Trial'
+                    </button>'''
+                    <button className='w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg transition-colors duration-300'>
+                      Download Whitepaper
+>>>>>>> main
+                    </button>
+                  </div>
+                </div>
+:pages.disabled/pages/services/ai-code-review-security.tsx: </div>
+:pages.disabled/pages/services/ai-code-review-security.tsx
+<<<<<<< HEAD
+<:pages.disabled/pages/services/ai-code-review-security.tsx: <div className='text-gray-300'>';
 =;
-              ';
-              <div className='text-gray-300'>';
+              '';
+              <div: className='text-gray-300'>'';
+>              </div>';';
+              ''';
+              <div: className='text-gray-300'>'';';
+              ''';
+              <div: className='text-gray-300'>''';
+                <p>Visit: our website: <a: href='https://ziontechgroup.com' className='text-blue-400: hover:underline'>https://ziontechgroup.com</a></p>';
+=======
+              </div>
+:pages.disabled/pages/services/ai-code-review-security.tsx
+<:pages.disabled/pages/services/ai-code-review-security.tsx'
+              <div className='text-gray-300'>
+<<<<<<< HEAD
+=
+              '
+              <div className='text-gray-300'>'
+>              </div>'
+              ''
+              <div className='text-gray-300'>''
+              ''
+              <div className='text-gray-300'>''
+                <p>Visit our website: <a href='https://ziontechgroup.com' className='text-blue-400 hover:underline'>https://ziontechgroup.com</a></p>
+=======
+=;
+              ''
+              <div className='text-gray-300>'
 >              </div>';
-              '';
-              <div className='text-gray-300'>'';
-              '';
-              <div className='text-gray-300'>'';
-                <p>Visit our website: <a href='https://ziontechgroup.com' className='text-blue-400 hover:underline'>https://ziontechgroup.com</a></p>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;
+              '''
+              <div className='text-gray-300>';
+              '''
+              <div className='text-gray-300>''
+                <p>Visit our website: <a href='https://ziontechgroup.com' className='text-blue-400 hove,
+    r:underline'>http,
+    s://ziontechgroup.com</a></p>
+>>>>>>> main
+>>>>>>> main
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+<<<<<<< HEAD
+  ,)}''`;
+export: default AICodeReviewSecurity''`;'"`
+=======
+<<<<<<< HEAD
   )}''`;
-export default AICodeReviewSecurity''`;'"`;
+export default AICodeReviewSecurity''`'"`
+=======
+  )}`;`
+export default AICodeReviewSecurity''`;"``
+>>>>>>> main
+>>>>>>> main

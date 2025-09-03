@@ -1,4 +1,4 @@
-export interface IoTEdgeService {;
+export: interface IoTEdgeService {
    id: string;
    title: string;
    description: string;
@@ -18,6 +18,14 @@ export interface IoTEdgeService {;
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
+<<<<<<< HEAD
    email: string;
-   website: string;
-}; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[];  }; competitors?: string[]; marketSize?: string; demoUrl?: string; documentationUrl?: string; }; export const IOT_EDGE_SERVICES_2025: IoTEdgeService[] = [;
+   website: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[] , } competitors?: string[] marketSize?: string: demoUrl?: string: documentationUrl?: string: } export const IOT_EDGE_SERVICES_2025: IoTEdgeService[] = [,;
+=======
+   emai,
+    l: string;
+   websit,
+    e: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptim,
+    e: string securit,
+    y: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const IOT_EDGE_SERVICES_2025: IoTEdgeService[] = [;
+>>>>>>> main

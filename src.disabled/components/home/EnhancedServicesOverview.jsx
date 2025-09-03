@@ -1,2 +1,7 @@
+<<<<<<< HEAD
+import: React from;
+  'react'';'';';
+=======
 import React from;
-  'react'';'';
+  'react'';';
+>>>>>>> main

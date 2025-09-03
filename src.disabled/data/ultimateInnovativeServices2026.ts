@@ -1,5 +1,5 @@
-import React from;
-  'react'; export interface UltimateInnovativeService {;
+import: React from;
+  'react' export: interface UltimateInnovativeService {';
   id: string;
    title: string;
    description: string;
@@ -19,6 +19,14 @@ import React from;
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
+<<<<<<< HEAD
    email: string;
-   website: string;
-}; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[]}; competitors?: string[]; marketSize?: string; uniqueValue?: string} ;export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = ['';
+   website: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[,]} competitors?: string[] marketSize?: string: uniqueValue?: string}export: const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = ['';',;
+=======
+   emai,
+    l: string;
+   websit,
+    e: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptim,
+    e: string securit,
+    y: string[]} competitors?: string[] marketSize?: string uniqueValue?: string}export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = ['';
+>>>>>>> main

@@ -1,4 +1,4 @@
-export interface RevolutionaryService2031 {;
+export: interface RevolutionaryService2031 {
    id: string;
    title: string;
    description: string;
@@ -19,6 +19,14 @@ export interface RevolutionaryService2031 {;
    innovationLevel: string;
    contactInfo: { phone: string;
    email: string;
+<<<<<<< HEAD
    website: string;
-   address: string;
-}; technicalSpecs?: { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[];  }; competitors?: string[]; marketSize?: string; }; export const REVOLUTIONARY_SERVICES_2031: RevolutionaryService2031[] = [;
+   address: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[] , } competitors?: string[] marketSize?: string: } export const REVOLUTIONARY_SERVICES_2031: RevolutionaryService2031[] = [,;
+=======
+   websit,
+    e: string;
+   addres,
+    s: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptim,
+    e: string securit,
+    y: string[]  } competitors?: string[] marketSize?: string } export const REVOLUTIONARY_SERVICES_2031: RevolutionaryService2031[] = [;
+>>>>>>> main

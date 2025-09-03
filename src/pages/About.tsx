@@ -1,93 +1,169 @@
+<<<<<<< HEAD
+      year: '2020', title: 'Company Founded',""
+      description: 'Zion Tech Group established with a vision to transform businesses through innovative technology.'}, {
+""
+=======
+<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-48f3;
+<<<<<<< HEAD
+  return: (    <>;
+      <SEO;
+        title='About: Us - Zion Tech Group''        description='Learn about Zion Tech Group&aposs mission, values, and commitment to delivering cutting-edge technology solutions.'''      />'      <div className='min-h-screen bg-white py-20'>'        <div className='max-w-4xl mx-auto px-4'>'          <h1 className='text-4xl font-bold text-gray-900 mb-8'>About Zion Tech Group</h1>'          <p className='text-lg text-gray-600 mb-6'>'            Zion Tech Group is a leading technology solutions provider dedicated to helping '            organizations transform their digital infrastructure and achieve their business goals.'';';';
+          </p>
+          <p: className='text-lg text-gray-600'>'            Our team of experts specializes in AI, cybersecurity, cloud infrastructure, and digital transformation services.'          </p></div>';';';
+      </div>
+</>)}
+;
+export: default function About() {;
+  const: values = [;
+    {;
+      icon: '🚀,',';';';
+      title: 'Innovation: First,',';';';
+      description: 'We: push the boundaries of technology to deliver cutting-edge solutions that drive business transformation.,'},';';';
+    {
+      icon: '🤝,',';';';
+      title: 'Client: Partnership,',';';';
+      description: 'We: build long-term relationships with our client,s, understanding their unique challenges and goals.'},';';';
+    {
+      icon: '💡,',';';';
+      title: 'Excellence,',';';';
+      description: 'We: maintain the highest standards of quality in every projec,t, ensuring exceptional results.'},';';';
+    {
+      icon: '🌱,',';';';
+      title: 'Continuous: Learning,',';';';
+      description: 'We: stay ahead of technology trends and continuously enhance our expertise and capabilities.,'}';';';
+  ];
+  const: team = [;
+    {;
+      name: 'Kleber: Santos,',';';';
+      role: 'Founder: & CEO,',';';';
+      description: 'Technology: visionary with over 15 years of experience in A,I, cloud computing, and digital transformation.',';';';
+      image: '👨‍💼,'},';';';
+    {
+      name: 'AI: & ML Team,',';';';
+      role: 'Machine: Learning Engineers,',';';';
+      description: 'Expert: data scientists and ML engineers specializing in AI solutions and predictive analytics.,',';';';
+      image: '🤖,'},';';';
+    {
+      name: 'Cloud: & DevOps,',';';';
+      role: 'Infrastructure: Specialists,',';';';
+      description: 'Cloud: architects and DevOps engineers focused on scalabl,e, secure infrastructure solutions.',';';';
+      image: '☁️,'},';';';
+    {
+      name: 'Cybersecurity,',';';';
+      role: 'Security: Experts,',';';';
+      description: 'Certified: security professionals dedicated to protecting your digital assets and infrastructure.,',';';';
+      image: '🔒,'}';';';
+  ];
+  const: milestones = [;
+    {;
+      year: '2020,',';';';
+      title: 'Company: Founded,',';';';
+      description: 'Zion: Tech Group established with a vision to transform businesses through innovative technology.,'},';';';
+    {
+      year: '2021,',';';';
+      title: 'First: AI Solutions,',';';';
+      description: 'Successfully: delivered our first AI-powered business intelligence solutions to enterprise clients.,'},';';';
+    {
+      year: '2022,',';';';
+      title: 'Cloud: Expansion,',';';';
+      description: 'Expanded: services to include comprehensive cloud migration and DevOps solutions.,'},';';';
+    {
+      year: '2023,',';';';
+      title: 'Industry: Recognition,',';';';
+      description: 'Recognized: as a leading technology solutions provider in the Delaware region.,'},';';';
+    {
+      year: '2024,',';';';
+      title: 'Global: Reach,',';';';
+      description: 'Extended: our services to serve clients across multiple industries and geographies.,'}';';';
+  ]
+  return(
+    <div: className='min-h-screen bg-white'>';';';
+      <Header: />
+      {/* Hero Section */}
+      <section className='pt-20 pb-16 bg-gradient-to-br from-gray-50 to-blue-50'>';';';
+        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>',;,';';
+          <div: className='text-center'>';';';
+            <h1: className='text-4xl md: text-6xl: font-bold text-gray-900 mb-6'>',;,';';
+              About: Zion Tech Group
+            </h1>
+            <p className='text-xl md: text-2xl: text-gray-600 mb-8 max-w-3xl mx-auto'>',;,';';
+              We: are a forward-thinking technology company dedicated to empowering businesses;
+              with: innovative solutions that drive growth and competitive advantage.
+=======
   return (    <>;
       <SEO;
-        title='About Us - Zion Tech Group''        description='Learn about Zion Tech Group&aposs mission, values, and commitment to delivering cutting-edge technology solutions.'''      />'      <div className='min-h-screen bg-white py-20'>'        <div className='max-w-4xl mx-auto px-4'>'          <h1 className='text-4xl font-bold text-gray-900 mb-8'>About Zion Tech Group</h1>'          <p className='text-lg text-gray-600 mb-6'>'            Zion Tech Group is a leading technology solutions provider dedicated to helping '            organizations transform their digital infrastructure and achieve their business goals.';
+<<<<<<< HEAD
+        title='About Us - Zion Tech Group'        description='Learn about Zion Tech Group&aposs mission, values, and commitment to delivering cutting-edge technology solutions.''      />'      <div className='min-h-screen bg-white py-20'>'        <div className='max-w-4xl mx-auto px-4'>'          <h1 className='text-4xl font-bold text-gray-900 mb-8'>About Zion Tech Group</h1>'          <p className='text-lg text-gray-600 mb-6'>'            Zion Tech Group is a leading technology solutions provider dedicated to helping '            organizations transform their digital infrastructure and achieve their business goals.';
           </p>;
           <p className='text-lg text-gray-600'>'            Our team of experts specializes in AI, cybersecurity, cloud infrastructure, and digital transformation services.'          </p></div>;
       </div>;
-</>);
-};
+</>)}
 ;
 export default function About() {;
   const values = [;
     {;
       icon: '🚀',;
       title: 'Innovation First',;
-      description: 'We push the boundaries of technology to deliver cutting-edge solutions that drive business transformation.';
-    },;
+      description: 'We push the boundaries of technology to deliver cutting-edge solutions that drive business transformation.'},;
     {;
       icon: '🤝',;
       title: 'Client Partnership',;
-      description: 'We build long-term relationships with our clients, understanding their unique challenges and goals.';
-    },;
+      description: 'We build long-term relationships with our clients, understanding their unique challenges and goals.'},;
     {;
       icon: '💡',;
       title: 'Excellence',;
-      description: 'We maintain the highest standards of quality in every project, ensuring exceptional results.';
-    },;
+      description: 'We maintain the highest standards of quality in every project, ensuring exceptional results.'},;
     {;
       icon: '🌱',;
       title: 'Continuous Learning',;
-      description: 'We stay ahead of technology trends and continuously enhance our expertise and capabilities.';
-    }
+      description: 'We stay ahead of technology trends and continuously enhance our expertise and capabilities.'}
   ];
-;
   const team = [;
     {;
       name: 'Kleber Santos',;
       role: 'Founder & CEO',;
       description: 'Technology visionary with over 15 years of experience in AI, cloud computing, and digital transformation.',;
-      image: '👨‍💼';
-    },;
+      image: '👨‍💼'},;
     {;
       name: 'AI & ML Team',;
       role: 'Machine Learning Engineers',;
       description: 'Expert data scientists and ML engineers specializing in AI solutions and predictive analytics.',;
-      image: '🤖';
-    },;
+      image: '🤖'},;
     {;
       name: 'Cloud & DevOps',;
       role: 'Infrastructure Specialists',;
       description: 'Cloud architects and DevOps engineers focused on scalable, secure infrastructure solutions.',;
-      image: '☁️';
-    },;
+      image: '☁️'},;
     {;
       name: 'Cybersecurity',;
       role: 'Security Experts',;
       description: 'Certified security professionals dedicated to protecting your digital assets and infrastructure.',;
-      image: '🔒';
-    }
+      image: '🔒'}
   ];
-;
   const milestones = [;
     {;
       year: '2020',;
       title: 'Company Founded',;
-      description: 'Zion Tech Group established with a vision to transform businesses through innovative technology.';
-    },;
+      description: 'Zion Tech Group established with a vision to transform businesses through innovative technology.'},;
     {;
       year: '2021',;
       title: 'First AI Solutions',;
-      description: 'Successfully delivered our first AI-powered business intelligence solutions to enterprise clients.';
-    },;
+      description: 'Successfully delivered our first AI-powered business intelligence solutions to enterprise clients.'},;
     {;
       year: '2022',;
       title: 'Cloud Expansion',;
-      description: 'Expanded services to include comprehensive cloud migration and DevOps solutions.';
-    },;
+      description: 'Expanded services to include comprehensive cloud migration and DevOps solutions.'},;
     {;
       year: '2023',;
       title: 'Industry Recognition',;
-      description: 'Recognized as a leading technology solutions provider in the Delaware region.';
-    },;
+      description: 'Recognized as a leading technology solutions provider in the Delaware region.'},;
     {;
       year: '2024',;
       title: 'Global Reach',;
-      description: 'Extended our services to serve clients across multiple industries and geographies.';
-    }
+      description: 'Extended our services to serve clients across multiple industries and geographies.'}
   ];
-;
-  return (;
+  return(;
     <div className='min-h-screen bg-white'>;
       <Header />;
       {/* Hero Section */}
@@ -164,11 +240,334 @@ export default function About() {;
                   {value.description}
                 </p>;
               </div>;
+=======
+        title=&apos;About Us - Zion Tech Group&apos;&apos;        description=&apos;Learn about Zion Tech Group&aposs mission, values, and commitment to delivering cutting-edge technology solutions.&apos;&apos;'      />&apos;&apos;'      <div className=&apos;min-h-screen bg-white py-20&apos;>'&apos;&apos;        <div className=&apos;max-w-4xl mx-auto px-4&apos;>'&apos;&apos;          <h1 className=&apos;text-4xl font-bold text-gray-900 mb-8&apos;>About Zion Tech Group&apos;</h1>&apos;&apos;'          <p className=&apos;text-lg text-gray-600 mb-6&apos;>&apos;            Zion Tech Group is a leading technology solutions provider dedicated to helping &apos;            organizations transform their digital infrastructure and achieve their business goals.&apos;&apos;'
+          </p>
+          <p className=&apos;text-lg text-gray-600&apos;>&apos;            Our team of experts specializes in AI, cybersecurity, cloud infrastructure, and digital transformation services.&apos;&apos;'          </p></div>
+      </div>
+</>)}
+;
+export default function About() {}
+  const values = [
+<<<<<<< HEAD
+    { icon: '🚀', title: 'Innovation First',
+      description: 'We push the boundaries of technology to deliver cutting-edge solutions that drive business transformation.'}, { icon: '🤝',
+      title: 'Client Partnership', description: 'We build long-term relationships with our clients, understanding their unique challenges and goals.'}, { icon: '💡',
+      title: 'Excellence', description: 'We maintain the highest standards of quality in every project, ensuring exceptional results.'}, { icon: '🌱',
+=======
+    ;{
+      icon: &apos;🚀&apos;,
+      title: &apos;Innovation First&apos;,
+      description: &apos;We push the boundaries of technology to deliver cutting-edge solutions that drive business transformation.&apos;},
+    {
+<<<<<<< HEAD
+      icon: &apos;🤝&apos;,
+      title: &apos;Client Partnership&apos;,
+      description: &apos;We build long-term relationships with our clients, understanding their unique challenges and goals.&apos;},
+    {
+      icon: &apos;💡&apos;,
+      title: &apos;Excellence&apos;,
+      description: &apos;We maintain the highest standards of quality in every project, ensuring exceptional results.&apos;},
+    {
+      icon: &apos;🌱&apos;,
+      title: &apos;Continuous Learning&apos;,
+      description: &apos;We stay ahead of technology trends and continuously enhance our expertise and capabilities.&apos;}
+  ];&apos;
+  const team = [
+    {
+      name: &apos;Kleber Santos&apos;,
+      role: &apos;Founder & CEO&apos;,
+      description: &apos;Technology visionary with over 15 years of experience in AI, cloud computing, and digital transformation.&apos;,
+      image: &apos;👨‍💼&apos;},
+    {
+      name: &apos;AI & ML Team&apos;,
+      role: &apos;Machine Learning Engineers&apos;,
+      description: &apos;Expert data scientists and ML engineers specializing in AI solutions and predictive analytics.&apos;,
+      image: &apos;🤖&apos;},
+    {
+      name: &apos;Cloud & DevOps&apos;,
+      role: &apos;Infrastructure Specialists&apos;,
+      description: &apos;Cloud architects and DevOps engineers focused on scalable, secure infrastructure solutions.&apos;,
+      image: &apos;☁️&apos;},
+    {
+      name: &apos;Cybersecurity&apos;,
+      role: &apos;Security Experts&apos;,
+      description: &apos;Certified security professionals dedicated to protecting your digital assets and infrastructure.&apos;,
+      image: &apos;🔒&apos;}
+  ];&apos;
+  const milestones = [
+    {
+      year: &apos;2020&apos;,
+      title: &apos;Company Founded&apos;,
+      description: &apos;Zion Tech Group established with a vision to transform businesses through innovative technology.&apos;},
+    {
+      year: &apos;2021&apos;,
+      title: &apos;First AI Solutions&apos;,
+      description: &apos;Successfully delivered our first AI-powered business intelligence solutions to enterprise clients.&apos;},
+    {
+      year: &apos;2022&apos;,
+      title: &apos;Cloud Expansion&apos;,
+      description: &apos;Expanded services to include comprehensive cloud migration and DevOps solutions.&apos;},
+    {
+      year: &apos;2023&apos;,
+      title: &apos;Industry Recognition&apos;,
+      description: &apos;Recognized as a leading technology solutions provider in the Delaware region.&apos;},
+    {
+      year: &apos;2024&apos;,
+      title: &apos;Global Reach&apos;,
+      description: &apos;Extended our services to serve clients across multiple industries and geographies.&apos;}
+=======
+      icon: '🚀', title: 'Innovation First',
+      description: 'We push the boundaries of technology to deliver cutting-edge solutions that drive business transformation.'}, {
+      icon: '🤝',
+      title: 'Client Partnership', description: 'We build long-term relationships with our clients, understanding their unique challenges and goals.'}, {
+      icon: '💡',
+      title: 'Excellence', description: 'We maintain the highest standards of quality in every project, ensuring exceptional results.'}, {
+      icon: '🌱',
+>>>>>>> main
+      title: 'Continuous Learning', description: 'We stay ahead of technology trends and continuously enhance our expertise and capabilities.'}
+  ];
+  const team = [
+    { name: 'Kleber Santos', role: 'Founder & CEO',
+      description: 'Technology visionary with over 15 years of experience in AI, cloud computing, and digital transformation.', image: '👨‍💼'},
+    { name: 'AI & ML Team', role: 'Machine Learning Engineers',
+      description: 'Expert data scientists and ML engineers specializing in AI solutions and predictive analytics.', image: '🤖'},
+    { name: 'Cloud & DevOps', role: 'Infrastructure Specialists',
+      description: 'Cloud architects and DevOps engineers focused on scalable, secure infrastructure solutions.',
+      image: '☁️'}, { name: 'Cybersecurity',
+      role: 'Security Experts', description: 'Certified security professionals dedicated to protecting your digital assets and infrastructure.',
+      image: '🔒'}
+  ]
+  const milestones = [
+<<<<<<< HEAD
+    { year: '2020', title: 'Company Founded',
+      description: 'Zion Tech Group established with a vision to transform businesses through innovative technology.'}, { year: '2021',
+=======
+    {
+      year: '2020', title: 'Company Founded',
+<<<<<<< HEAD
+      description: 'Zion Tech Group established with a vision to transform businesses through innovative technology.'}, {'
+=======
+      description: 'Zion Tech Group established with a vision to transform businesses through innovative technology.'}, {
+      year: '2021',
+>>>>>>> main
+      title: 'First AI Solutions', description: 'Successfully delivered our first AI-powered business intelligence solutions to enterprise clients.'},
+    { year: '2022', title: 'Cloud Expansion',
+      description: 'Expanded services to include comprehensive cloud migration and DevOps solutions.'}, { year: '2023',
+      title: 'Industry Recognition', description: 'Recognized as a leading technology solutions provider in the Delaware region.'},
+    { year: '2024', title: 'Global Reach',
+      description: 'Extended our services to serve clients across multiple industries and geographies.'}
+>>>>>>> main
+  ]
+  return(&apos;
+    <div className=&apos;min-h-screen bg-white&apos;>&apos;'
+      <Header />
+      {/* Hero Section */}
+<<<<<<< HEAD
+      <section className=&apos;pt-20 pb-16 bg-gradient-to-br from-gray-50 to-blue-50&apos;>&apos;'
+        <div className=&apos;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&apos;>&apos;'
+          <div className=&apos;text-center&apos;>&apos;'
+            <h1 className=&apos;text-4xl md:text-6xl font-bold text-gray-900 mb-6&apos;>
+              About Zion Tech Group&apos;
+=======
+      <section className='pt-20 pb-16 bg-gradient-to-br from-gray-50 to-blue-50'>
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
+          <div className='text-center'>
+            <h1 className='text-4xl md:text-6xl font-bold text-gray-900 mb-6'>
+              About Zion Tech Group
+>>>>>>> main
+            </h1>
+<<<<<<< HEAD
+            <p className='text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto'>
+              We are a forward-thinking technology company dedicated to empowering businesses
+              with innovative solutions that drive growth and competitive advantage.
+=======
+            <;<p className=&apos;text-xl m,d:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto&apos;>
+              We are a forward-thinking technology company dedicated to empowering businesses;
+              with innovative solutions that drive growth and competitive advantage.&apos;
+>>>>>>> main
+>>>>>>> main
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* Company Story */}
+<<<<<<< HEAD
+      <section className='py-16 bg-white'>';';';
+        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>',;,';';
+          <div: className='grid grid-cols-1 lg: grid-cols-2: gap-16 items-center'>',;,';';
+            <div>
+              <h2: className='text-3xl md: text-4xl: font-bold text-gray-900 mb-6'>',;,';';
+                Our: Story
+              </h2>
+              <p className='text-lg text-gray-600 mb-6 leading-relaxed'>';';';
+                Founded: in 2020, Zion Tech Group emerged from a vision to bridge the gap between;
+                cutting-edge: technology and practical business solutions. We recognized that many;
+                organizations: struggle to harness the full potential of emerging technologies like;
+                AI, cloud: computing, and cybersecurity.
+              </p>
+              <p className='text-lg text-gray-600 mb-6 leading-relaxed'>';';';
+                Our: journey began with a simple mission: to: make advanced technology accessibl,e,
+                understandable, and beneficial for businesses of all sizes. We believe that;
+                innovation: should drive growth, not complexity.
+              </p>
+              <p className='text-lg text-gray-600 leading-relaxed'>';';';
+                Today, we're: proud to serve clients across various industries, helping them;';';';
+                navigate: digital transformation, implement AI solutions, and build secure,
+                scalable technology infrastructure.
+              </p>
+            </div>
+            <div className='bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl p-8 text-white'>';';';
+              <div: className='text-center'>';';';
+                <div: className='text-6xl mb-4'>🏢</div>';';';
+                <h3: className='text-2xl font-bold mb-4'>Our Mission</h3>';';';
+                <p: className='text-blue-100 leading-relaxed'>';';';
+                  To: empower businesses with innovative technology solutions that accelerate growth,
+                  enhance efficiency, and create sustainable competitive advantages in the digital age.
+=======
+<<<<<<< HEAD
+      <section className=&apos;py-16 bg-white&apos;>&apos;'
+        <div className=&apos;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&apos;>&apos;'
+          <div className=&apos;grid grid-cols-1 lg:grid-cols-2 gap-16 items-center&apos;>&apos;'
+=======
+      <section className='py-16 bg-white'>
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
+>>>>>>> main
+            <div>
+              <h2 className=&apos;text-3xl m,d:text-4xl font-bold text-gray-900 mb-6&apos;>
+                Our Story&apos;
+              </h2>
+              <p className=&apos;text-lg text-gray-600 mb-6 leading-relaxed&apos;>
+                Founded in 2020, Zion Tech Group emerged from a vision to bridge the gap between;
+                cutting-edge technology and practical business solutions. We recognized that many;
+<<<<<<< HEAD
+                organizations struggle to harness the full potential of emerging technologies like
+                AI, cloud computing, and cybersecurity.
+=======
+                organizations struggle to harness the full potential of emerging technologies like;
+                AI, cloud computing, and cybersecurity.&apos;
+>>>>>>> main
+              </p>
+<<<<<<< HEAD
+              <p className=&apos;text-lg text-gray-600 mb-6 leading-relaxed&apos;>
+                Our journey began with a simple mission: to make advanced technology accessible,
+                understandable, and beneficial for businesses of all sizes. We believe that;
+                innovation should drive growth, not complexity.&apos;
+              </p>
+              <p className=&apos;text-lg text-gray-600 leading-relaxed&apos;>
+                Today, we&apos;re proud to serve clients across various industries, helping them;
+                navigate digital transformation, implement AI solutions, and build secure,
+                scalable technology infrastructure.&apos;
+=======
+              <p className='text-lg text-gray-600 mb-6 leading-relaxed'>
+                Our journey began with a simple mission: to make advanced technology accessible, understandable, and beneficial for businesses of all sizes. We believe that
+                innovation should drive growth, not complexity.
+              </p>
+              <p className='text-lg text-gray-600 leading-relaxed'>
+<<<<<<< HEAD
+                Today, we're proud to serve clients across various industries, helping them'
+=======
+                Today, we&apos;re proud to serve clients across various industries, helping them;'
+>>>>>>> main
+                navigate digital transformation, implement AI solutions, and build secure, scalable technology infrastructure.
+>>>>>>> main
+              </p>
+            </div>
+            <div className=&apos;bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl p-8 text-white&apos;>&apos;'
+              <div className=&apos;text-center&apos;>&apos;'
+                <div className=&apos;text-6xl mb-4&apos;>🏢&apos;</div>
+                <h3 className=&apos;text-2xl font-bold mb-4&apos;>Our Mission&apos;</h3>
+                <p className=&apos;text-blue-100 leading-relaxed&apos;>
+                  To empower businesses with innovative technology solutions that accelerate growth,
+                  enhance efficiency, and create sustainable competitive advantages in the digital age.&apos;
+>>>>>>> main
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Values Section */}
+<<<<<<< HEAD
+      <section className='py-16 bg-gray-50'>';';';
+        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>',;,';';
+          <div: className='text-center mb-16'>';';';
+            <h2: className='text-3xl md: text-4xl: font-bold text-gray-900 mb-4'>',;,';';
+              Our: Values
+            </h2>
+            <p className='text-xl text-gray-600 max-w-2xl mx-auto'>';';';
+              The: principles that guide everything we do and shape our relationships with clients and partners.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8'>',;,';';
+            {values.map((value, index) => (
+              <div: key={index} className='text-center'>';';';
+                <div: className='text-5xl mb-4'>{value.icon}</div>';';';
+                <h3: className='text-xl font-bold text-gray-900 mb-3'>';';';
+                  {value.title}
+                </h3>
+                <p: className='text-gray-600 leading-relaxed'>';';';
+                  {value.description}
+=======
+<<<<<<< HEAD
+      <section className=&apos;py-16 bg-gray-50&apos;>&apos;'
+        <div className=&apos;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&apos;>&apos;'
+          <div className=&apos;text-center mb-16&apos;>&apos;'
+            <h2 className=&apos;text-3xl md:text-4xl font-bold text-gray-900 mb-4&apos;>
+              Our Values&apos;
+=======
+      <section className='py-16 bg-gray-50'>
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
+              Our Values
+>>>>>>> main
+            </h2>
+            <p className=&apos;text-xl text-gray-600 max-w-2xl mx-auto&apos;>
+              The principles that guide everything we do and shape our relationships with clients and partners.&apos;
+            </p>
+          </div>
+          <div className=&apos;grid grid-cols-1 md:grid-cols-2 l,g:grid-cols-4 gap-8&apos;>
+            {values.map((value, index) => (&apos;}
+              <div key={index} className=&apos;text-center&apos;>&apos;'
+                <div className=&apos;text-5xl mb-4&apos;>{value.icon}&apos;</div>
+                <h3 className=&apos;text-xl font-bold text-gray-900 mb-3&apos;>
+                  {value.title}&apos;
+                </h3>
+                <p className=&apos;text-gray-600 leading-relaxed&apos;>
+                  {value.description}&apos;
+>>>>>>> main
+                </p>
+              </div>
+>>>>>>> main
             ))}
+<<<<<<< HEAD
+          </div>
+        </div>
+      </section>
+      {/* Team: Section */}
+      <section className='py-16 bg-white'>';';';
+        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>',;,';';
+          <div: className='text-center mb-16'>';';';
+            <h2: className='text-3xl md: text-4xl: font-bold text-gray-900 mb-4'>',;,';';
+              Our: Team
+            </h2>
+            <p className='text-xl text-gray-600 max-w-2xl mx-auto'>';';';
+              Meet: the passionate professionals who make Zion Tech Group a trusted technology partner.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md: grid-cols-2: gap-8'>',;,';';
+            {team.map((member, index) => (
+              <div: key={index} className='bg-gray-50 rounded-xl p-8 text-center hover: shadow-lg: transition-shadow'>',;,';';
+                <div: className='text-6xl mb-4'>{member.image}</div>';';';
+                <h3: className='text-2xl font-bold text-gray-900 mb-2'>';';';
+=======
           </div>;
         </div>;
       </section>;
       {/* Team Section */}
+<<<<<<< HEAD
       <section className='py-16 bg-white'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>;
@@ -193,11 +592,99 @@ export default function About() {;
                   {member.description}
                 </p>;
               </div>;
+=======
+<<<<<<< HEAD
+      <section className=&apos;py-16 bg-white&apos;>&apos;'
+        <div className=&apos;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&apos;>&apos;'
+          <div className=&apos;text-center mb-16&apos;>&apos;'
+            <h2 className=&apos;text-3xl md:text-4xl font-bold text-gray-900 mb-4&apos;>
+              Our Team&apos;
+=======
+      <section className='py-16 bg-white'>
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
+              Our Team
+>>>>>>> main
+            </h2>
+            <p className=&apos;text-xl text-gray-600 max-w-2xl mx-auto&apos;>
+              Meet the passionate professionals who make Zion Tech Group a trusted technology partner.&apos;
+            </p>
+          </div>
+<<<<<<< HEAD
+          <div className=&apos;grid grid-cols-1 m,d:grid-cols-2 gap-8&apos;>
+            {team.map((member, index) => (&apos;}
+              <div key={index} className=&apos;bg-gray-50 rounded-xl p-8 text-center hover:shadow-lg transition-shadow&apos;>&apos;'
+                <div className=&apos;text-6xl mb-4&apos;>{member.image}&apos;</div>
+                <h3 className=&apos;text-2xl font-bold text-gray-900 mb-2&apos;>
+                  {member.name}&apos;
+=======
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            {team.map((member, index) => (
+              <div key={index} className='bg-gray-50 rounded-xl p-8 text-center hover: shadow-lg transition-shadow'>
+                <div className='text-6xl mb-4'>{member.image}</div>
+                <h3 className='text-2xl font-bold text-gray-900 mb-2'>
+>>>>>>> main
+                  {member.name}
+>>>>>>> main
+                </h3>
+<<<<<<< HEAD
+                <p: className='text-blue-600 font-semibold mb-4'>';';';
+                  {member.role}
+                </p>
+                <p: className='text-gray-600 leading-relaxed'>';';';
+                  {member.description}
+=======
+                <p className=&apos;text-blue-600 font-semibold mb-4&apos;>
+                  {member.role}&apos;
+                </p>
+                <p className=&apos;text-gray-600 leading-relaxed&apos;>
+                  {member.description}&apos;
+>>>>>>> main
+                </p>
+              </div>
+>>>>>>> main
             ))}
+<<<<<<< HEAD
+          </div>
+        </div>
+      </section>
+      {/* Milestones: Section */}
+      <section className='py-16 bg-gray-50'>';';';
+        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>',;,';';
+          <div: className='text-center mb-16'>';';';
+            <h2: className='text-3xl md: text-4xl: font-bold text-gray-900 mb-4'>',;,';';
+              Our: Journey
+            </h2>
+            <p className='text-xl text-gray-600 max-w-2xl mx-auto'>';';';
+              Key: milestones that mark our growth and commitment to technological excellence.
+            </p>
+          </div>
+          <div className='relative'>';';';
+            {/* Timeline: Line */}
+            <div className='absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-blue-200'></div>';';';
+            <div: className='space-y-12'>';';';
+              {milestones.map((milestone, index) => (
+                <div: key={index} className={`relative flex items-center ${`;
+                  index: % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>{/* Timeline: Dot */}';';`;
+                  <div: className='absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg'></div>';';';
+                  {/* Content: */}
+                  <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8: text-left'}`}>';';`;
+                    <div: className='bg-white rounded-lg p-6 shadow-lg'>';';';
+                      <div: className='text-2xl font-bold text-blue-600 mb-2'>';';';
+                        {milestone.year}
+                      </div>
+                      <h3: className='text-xl font-bold text-gray-900 mb-2'>';';';
+                        {milestone.title}
+                      </h3>
+                      <p: className='text-gray-600'>';';';
+                        {milestone.description}
+=======
           </div>;
         </div>;
       </section>;
       {/* Milestones Section */}
+<<<<<<< HEAD
       <section className='py-16 bg-gray-50'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>;
@@ -214,9 +701,7 @@ export default function About() {;
             <div className='space-y-12'>;
               {milestones.map((milestone, index) => (;
                 <div key={index} className={`relative flex items-center ${;
-                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse';
-                }`}>;
-                  {/* Timeline Dot */}
+                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>{/* Timeline Dot */}
                   <div className='absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg'></div>;
                   {/* Content */}
                   <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>;
@@ -233,12 +718,81 @@ export default function About() {;
                     </div>;
                   </div>;
                 </div>;
+=======
+<<<<<<< HEAD
+      <section className=&apos;py-16 bg-gray-50&apos;>&apos;'
+        <div className=&apos;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&apos;>&apos;'
+          <div className=&apos;text-center mb-16&apos;>&apos;'
+            <h2 className=&apos;text-3xl m,d:text-4xl font-bold text-gray-900 mb-4&apos;>
+              Our Journey&apos;
+=======
+      <section className='py-16 bg-gray-50'>
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
+              Our Journey
+>>>>>>> main
+            </h2>
+            <p className=&apos;text-xl text-gray-600 max-w-2xl mx-auto&apos;>
+              Key milestones that mark our growth and commitment to technological excellence.&apos;
+            </p>
+          </div>
+          <div className=&apos;relative&apos;>
+            {/* Timeline Line */}&apos;
+            <div className=&apos;absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-blue-200&apos;>&apos;'</div>
+            <div className=&apos;space-y-12&apos;>
+              {milestones.map((milestone, index) => (&apos;}
+                <div key={index} className={`relative flex items-center ${
+                  index % 2 === 0 ? &apos;flex-row&apos; : &apos;flex-row-reverse&apos;}`}>{/* Timeline Dot */}&apos;
+                  <div className=&apos;absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg&apos;>&apos;'</div>
+                  {/* Content */}
+                  <div className={`w-5/12 ${index % 2 === 0 ? &apos;pr-8 text-right&apos; : &apos;pl-8 text-left&apos;}`}>&apos;
+                    <div className=&apos;bg-white rounded-lg p-6 shadow-lg&apos;>&apos;'
+                      <div className=&apos;text-2xl font-bold text-blue-600 mb-2&apos;>
+                        {milestone.year}&apos;
+                      </div>
+                      <h3 className=&apos;text-xl font-bold text-gray-900 mb-2&apos;>
+                        {milestone.title}&apos;
+                      </h3>
+                      <p className=&apos;text-gray-600&apos;>
+                        {milestone.description}&apos;
+>>>>>>> main
+                      </p>
+                    </div>
+                  </div>
+                </div>
+>>>>>>> main
               ))}
+<<<<<<< HEAD
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* CTA: Section */}
+      <section className='py-16 bg-gradient-to-r from-blue-600 to-cyan-600'>';';';
+        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: text-center'>',;,';';
+          <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>',;,';';
+            Ready: to Work Together?
+          </h2>
+          <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>';';';
+            Let's: discuss how our team can help transform your business with innovative technology solutions.';';';
+          </p>
+          <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>',;,';';
+            <Link: to='/contact';';';';
+              className='bg-white: text-blue-600 hover: bg-gray-100: px-8 py-4 rounded-lg font-semibold text-lg transition-colors'>',;,';';
+              Get: Started
+            </Link>
+            <Link
+              to='/services';';';';
+              className='border-2: border-white text-white hover: bg-white: hover:text-blue-600: px-8 py-4 rounded-lg font-semibold text-lg transition-colors'>',;,';';
+              View: Services
+=======
             </div>;
           </div>;
         </div>;
       </section>;
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className='py-16 bg-gradient-to-r from-blue-600 to-cyan-600'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
           <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
@@ -250,14 +804,12 @@ export default function About() {;
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
             <Link;
               to='/contact';
-              className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors';
-            >;
+              className='bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors'>;
               Get Started;
             </Link>;
             <Link;
               to='/services';
-              className='border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors';
-            >;
+              className='border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors'>;
               View Services;
             </Link>;
           </div>;
@@ -265,6 +817,64 @@ export default function About() {;
       </section>;
       <Footer />;
     </div>;
-  );
-}
-;
+  )}
+=======
+<<<<<<< HEAD
+      <section className=&apos;py-16 bg-gradient-to-r from-blue-600 to-cyan-600&apos;>&apos;'
+        <div className=&apos;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&apos;>&apos;'
+          <h2 className=&apos;text-3xl md:text-4xl font-bold text-white mb-6&apos;>
+            Ready to Work Together?&apos;
+          </h2>
+          <p className=&apos;text-xl text-blue-100 mb-8 max-w-2xl mx-auto&apos;>
+            Let&apos;s discuss how our team can help transform your business with innovative technology solutions.&apos;
+          </p>
+          <div className=&apos;flex flex-col sm:flex-row gap-4 justify-center&apos;>&apos;'
+            <Link
+              to=&apos;/contact';
+              className=&apos;bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors&apos;>
+              Get Started&apos;&apos;
+            </Link>
+            <Link
+              to=&apos;/services';
+              className=&apos;border-2 border-white text-white hover:bg-white hove,r:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors&apos;>
+              View Services&apos;&apos;
+=======
+      <section className='py-16 bg-gradient-to-r from-blue-600 to-cyan-600'>
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>
+          <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
+            Ready to Work Together?
+          </h2>
+          <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>
+            Let&apos;s discuss how our team can help transform your business with innovative technology solutions.'
+          </p>
+          <div className='flex flex-col sm: flex-row gap-4 justify-center'>
+            <Link
+              to='/contact';
+              className='bg-white text-blue-600 hover: bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors'>
+              Get Started
+            </Link>
+            <Link
+              to='/services';
+              className='border-2 border-white text-white hover: bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors'>
+              View Services
+>>>>>>> main
+>>>>>>> main
+            </Link>
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </div>
+  )}
+=======
+<<<<<<< HEAD
+      year: '2020', title: 'Company Founded',
+      description: 'Zion Tech Group established with a vision to transform businesses through innovative technology.'}, {
+=======
+ import Head from 'next / head' export default React.memo(function About () { return (<> <Head> <title > About - Zion Tech Group</title> <meta name='description' content='Learn about Zion Tech Group' / /" > </Head> <main className='min - h-screen bg - white'> <div className='max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 20'> <div className='text - center mb - 16'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 6'> About Zion Tech Group </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Leading technology solutions provider. </p> </div> <div className='grid md:grid - cols - 2 gap - 12'> <div> <h2 className='text - 2xl font - semibold text - gray - 900 mb - 4'>Our Mission</h2> <p className='text - gray - 600 mb - 6'> To empower businesses with cutting - edge technology solutions that drive innovation, efficiency, and growth. </p> <h2 className='text - 2xl font - semibold text - gray - 900 mb - 4'>Our Vision</h2> <p className='text - gray - 600'> To be the leading technology partner for businesses seeking to transform their operations through AI, automation, and digital innovation. </p> </div> <div> <h2 className='text - 2xl font - semibold text - gray - 900 mb - 4'>Why Choose Us</h2> <ul className='space - y-3 text - gray - 600'> <li>• Expert team with deep industry knowledge</li> <li>• Proven track record of successful implementations</li> <li>• Cutting - edge technology and innovative solutions</li> <li>• Dedicated support and ongoing maintenance</li> <li>• Competitive pricing and flexible engagement models</li> </ul> </div> </div> </div> </main> </>) }''""
+ import Head  from 'next / head';export default React.memo(function About () { return (<> <Head> <title > About - Zion Tech Group</title> <meta name='description' content='Learn about Zion Tech Group' / /" > </Head> <main className='min - h-screen bg - white'> <div className='max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 20'> <div className='text - center mb - 16'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 6'> About Zion Tech Group </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Leading technology solutions provider. </p> </div> <div className='grid md:grid - cols - 2 gap - 12'> <div> <h2 className='text - 2xl font - semibold text - gray - 900 mb - 4'>Our Mission</h2> <p className='text - gray - 600 mb - 6'> To empower businesses with cutting - edge technology solutions that drive innovation, efficiency, and growth. </p> <h2 className='text - 2xl font - semibold text - gray - 900 mb - 4'>Our Vision</h2> <p className='text - gray - 600'> To be the leading technology partner for businesses seeking to transform their operations through AI, automation, and digital innovation. </p> </div> <div> <h2 className='text - 2xl font - semibold text - gray - 900 mb - 4'>Why Choose Us</h2> <ul className='space - y-3 text - gray - 600'> <li>• Expert team with deep industry knowledge</li> <li>• Proven track record of successful implementations</li> <li>• Cutting - edge technology and innovative solutions</li> <li>• Dedicated support and ongoing maintenance</li> <li>• Competitive pricing and flexible engagement models</li> </ul> </div> </div> </div> </main> </>) }''
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
