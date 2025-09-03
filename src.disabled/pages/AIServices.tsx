@@ -1,15 +1,1 @@
-<<<<<<< HEAD:src.disabled/pages/AIServices.tsx
-React from
-  'react';
-import { SEO } from
-  '../components/SEO';''const AIServices: React.FC = () => {
-=======
-import React from 'react'
-import  { SEO } from '../components/SEO'''const AIServices: React.FC = () => {'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/pages/AIServices.tsx
-  return (
-    <>
-      <SEO title="AIServices - Zion Tech Group" />"      <div className="min-h-screen bg-white py-20">"        <div className="max-w-4xl mx-auto px-4">"          <h1 className="text-4xl font-bold text-gray-900 mb-8">AIServices</h1>"          <p className="text-lg text-gray-600">Content coming soon...</p>"        </div>"      </div>
-</>);};
-
-export default AIServices;
+:src.disabled/pages/AIServices.tsx React from "react";"const AIServices: React.FC = () => { return ( <> <SEO title="AIServices - Zion Tech Group /> <div className="min-h-screen" bg-white py-20> <div className="max-w-4xl" mx-auto px-4">" <h1 className="text-4xl" font-bold text-gray-900 mb-8>AIServices</h1> <p className="text-lg" text-gray-600>Content coming soon...</p> </div>" </div> </>),};"const AIServices React.FC = () => {"; export default AIServices; return ( <>; <SEO title="AIServices - Zion Tech Group /> <div className="min" - h-screen bg - white py - 20> <div className="max" - w-4xl mx - auto px - 4">" <h1 className="text" - 4xl font - bold text - gray - 900 mb - 8>AIServices</h1> <p className="text" - lg text - gray - 600>Content coming soon...</p> </div>" </div>, </>) }; : src.disabled/pages/AIServices.tsx; React from; "react";"; "../components/SEO"";const AIServices: React.FC = () => {"; return: ( <> <SEO title="AIServices - Zion Tech Group" />" <div className="min-h-screen bg-white py-20">" <div className="max-w-4xl mx-auto px-4">" <h1 className="text-4xl font-bold text-gray-900 mb-8">AIServices</h1>" <p className="text-lg text-gray-600">Content coming soon...</p>" </div>" </div>", </>)} ;const AIServices: React.FC = () => {";", export default AIServices return ( <> <SEO title="AIServices - Zion Tech Group" />" <div className="min - h-screen bg - white py - 20">" <div className="max - w-4xl mx - auto px - 4">" <h1 className="text - 4xl font - bold text - gray - 900 mb - 8">AIServices</h1>" <p className="text - lg text - gray - 600">Content coming soon...</p>" </div>" </div>" </>), } ";const AIServices: React.FC = () => {"const AIServices: React.FC = () => {", export default AIServices return ( <>" <SEO title="AIServices - Zion Tech Group" /> <div className="min - h-screen bg - white py - 20> <div className="max - w-4xl mx - auto px - 4> <h1 className="text - 4xl font - bold text - gray - 900 mb - 8">AIServices</h1>" <p className="text - lg text - gray - 600">Content coming soon...</p>" </div>" </div> </>) } "

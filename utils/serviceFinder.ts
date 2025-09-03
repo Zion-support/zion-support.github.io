@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Service finder utility for searching and filtering services
 
 export interface Service {
@@ -12,20 +13,26 @@ export interface Service {
 }
 
 export function findServicesByCategory(
-  allServiceArrays: Service[][], categoryIncludes: string
+  allServiceArrays: Service[][],
+  categoryIncludes: string
 ): Service[] {
   const results: Service[] = [];
   
   for (const arr of allServiceArrays) {
     for (const s of arr) {
-if (s && typeof s.category === 'string' && s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {'        results.push(s);'      }}
+      if (s && typeof s.category === 'string' && s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {
+        results.push(s);
+      }
+    }
   }
   
   return results;
 }
 
 export function findServicesByTag(
-allServiceArrays: Service[][], tagIncludes: string): Service[] {
+  allServiceArrays: Service[][],
+  tagIncludes: string
+): Service[] {
   const results: Service[] = [];
   
   for (const arr of allServiceArrays) {
@@ -45,7 +52,8 @@ allServiceArrays: Service[][], tagIncludes: string): Service[] {
 }
 
 export function findServicesByPriceRange(
-  allServiceArrays: Service[][], minPrice: number,
+  allServiceArrays: Service[][],
+  minPrice: number,
   maxPrice: number
 ): Service[] {
   const results: Service[] = [];
@@ -62,7 +70,9 @@ export function findServicesByPriceRange(
 }
 
 export function searchServices(
-allServiceArrays: Service[][], searchTerm: string): Service[] {
+  allServiceArrays: Service[][],
+  searchTerm: string
+): Service[] {
   const results: Service[] = [];
   const term = searchTerm.toLowerCase();
   
@@ -81,4 +91,7 @@ allServiceArrays: Service[][], searchTerm: string): Service[] {
   }
   
   return results;
+=======
+// comment
+>>>>>>> main
 }

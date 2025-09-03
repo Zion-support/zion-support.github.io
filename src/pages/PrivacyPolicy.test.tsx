@@ -1,1 +1,22 @@
-describe ('PrivacyPolicy', () => {} '; it ('renders without crashing', () => {}; render (<PrivacyPolicy />) '; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () })  '; it ('displays expected content', () => {}; render (<PrivacyPolicy />) '''
+<<<<<<< HEAD
+describe('PrivacyPolicy', () => {}; '; it('renders without crashing', () => {}; render(<PrivacyPolicy />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<PrivacyPolicy />) ;
+=======
+describe("PrivacyPolicy", () => {}; "; it("renders without crashing", () => {}; render(<PrivacyPolicy / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<PrivacyPolicy  />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
+  })
+}
+""
+  it("displays expected content", () => {
+    render(<PrivacyPolicy /" >)
+}
+    // comment
+  })
+}
+  });"
+"
+});""
+>>>>>>> main
