@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -13,3 +14,17 @@ export default function OpenAppRedirect() {return (
     </div>
   );
 }
+=======
+<<<<<<< HEAD
+ export default OpenAppRedirect';'
+=======
+ export default OpenAppRedirect
+>>>>>>> main
+;
+<<<<<<< HEAD
+&apos;'
+=======
+
+""
+>>>>>>> main
+>>>>>>> main

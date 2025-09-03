@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -13,3 +14,17 @@ export default function ProductReviews() {return (
     </div>
   );
 }
+=======
+<<<<<<< HEAD
+';'
+=======
+
+>>>>>>> main
+;
+<<<<<<< HEAD
+&apos;'
+=======
+
+""
+>>>>>>> main
+>>>>>>> main

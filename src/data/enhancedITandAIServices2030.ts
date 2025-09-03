@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -13,3 +14,17 @@ export default function enhancedITandAIServices2030() {return (
     </div>
   );
 }
+=======
+<<<<<<< HEAD
+import React from &apos;react
+';
+&apos;'
+=======
+<<<<<<< HEAD
+import React from 'react'
+';'
+=======
+
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

@@ -18,4 +18,8 @@ export interface CybersecurityService {id: string;
    innovationLevel: string;
    contactInfo: {  phone: string;
    email: string
+<<<<<<< HEAD
    website: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const CYBERSECURITY_SERVICES_2025: CybersecurityService[] = [;
+=======
+   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const CYBERSECURITY_SERVICES_2025: CybersecurityService[] = [;
+>>>>>>> main

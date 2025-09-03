@@ -1,8 +1,6 @@
-import React from 'react';
-import Layout from '../../components/Layout';
-import { Cloud, Shield, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react';
-
-const CloudMigrationServices: React.FC = () => {
+import React from 'react'
+import Layout from '../../components/Layout'
+import { Cloud, Shield, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-react';const CloudMigrationServices: React.FC = () => {
   return (
     <Layout
       title='Cloud Migration Services - Zion Tech Group';

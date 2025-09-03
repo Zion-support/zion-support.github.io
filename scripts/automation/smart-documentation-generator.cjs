@@ -4,7 +4,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log(`'📚 Starting Smart Documentation Generator...');
+console.log(`📚 Starting Smart Documentation Generator...`);
 
 // Get automation interval from environment variable (default: 24 hours)
 const AUTOMATION_INTERVAL =
@@ -35,7 +35,7 @@ class SmartDocumentationGenerator {
 
   async generateDocumentation() {
     try {
-      console.log(`📚 Running smart documentation generation at ${new Date().toISOString()}'
+      console.log(`📚 Running smart documentation generation at ${new Date().toISOString()}`);
       );
 
       // Analyze codebase structure
@@ -60,9 +60,9 @@ class SmartDocumentationGenerator {
       await this.calculateDocumentationCoverage();
 
       // Generate report
-      await this.generateReport();
-
-      console.log(`'✅ Smart documentation generation completed successfully');
+      await this.generateReport();`);
+`);
+      console.log(`✅ Smart documentation generation completed successfully`);
     } catch (error) {
       console.error('❌ Smart documentation generation failed:', error.message);
     }
@@ -267,7 +267,7 @@ console.log(✅ Generated API documentation for ${service.name}');
   }
 
   async generateComponentDocumentation() {
-    console.log(`'⚛️ Generating component documentation...');
+    console.log(`⚛️ Generating component documentation...`);
 
     const structure = this.documentationMetrics.docPatterns.get('structure');
     if (!structure) return;
@@ -300,18 +300,18 @@ console.log(✅ Generated API documentation for ${service.name}');
           timestamp: new Date().toISOString(),
         });
 
-        console.log(`✅ Generated component documentation for ${component.name}'
+        console.log(`✅ Generated component documentation for ${component.name}`);
         );
       } catch (error) {
-        console.log( ⚠️ Failed to generate component docs for ${component.name}:,
-          error.message
+        console.log( ⚠️ Failed to generate component docs for ${component.name}:,`);
+          error.message`);
         `);
       }
     }
   }
 
   async generateSetupGuides() {
-    console.log(`'📋 Generating setup guides...');
+    console.log(`📋 Generating setup guides...`);
 
     // Generate installation guide
     const installationGuide = this.generateInstallationGuide();
@@ -353,7 +353,7 @@ console.log(✅ Generated API documentation for ${service.name}');
   }
 
   async updateREADME() {
-    console.log(`'📝 Updating README...');
+    console.log(`📝 Updating README...`);
 
     try {
       const readmePath = path.join(process.cwd(), 'README.md');
@@ -865,7 +865,7 @@ const result = await ${serviceName}.createItem({
 
 // Main continuous loop
 async function runContinuous() {
-  console.log(`📚 Starting smart documentation generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals'
+  console.log(`📚 Starting smart documentation generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   );
 
   const generator = new SmartDocumentationGenerator();
@@ -877,8 +877,8 @@ async function runContinuous() {
   setInterval(async () => {
     await generator.generateDocumentation();
   }, AUTOMATION_INTERVAL);
-
-  console.log( ✅ Smart documentation generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes
+`);
+  console.log( ✅ Smart documentation generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
   `);
 }
 

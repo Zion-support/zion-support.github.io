@@ -57,10 +57,10 @@ class AutoMergeConflictResolver {
     
     for (const line of lines) {
       if (line.includes('UU ') || line.includes('AA ') || line.includes('DD ')) {
-        const filePath = line.substring(3);
-        conflictedFiles.push(filePath);
-      }
-    }
+        const filePath = line.substring(3);`);
+        conflictedFiles.push(filePath);`);
+      }`);
+    }`);
 this.log(📊 Found ${conflictedFiles.length} conflicted files`);
     return conflictedFiles;
   }

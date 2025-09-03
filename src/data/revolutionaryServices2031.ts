@@ -19,4 +19,8 @@ export interface RevolutionaryService2031 {id: string;
    contactInfo: {  phone: string;
    email: string;
    website: string
+<<<<<<< HEAD
    address: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string } export const REVOLUTIONARY_SERVICES_2031: RevolutionaryService2031[] = [;
+=======
+   address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string } export const REVOLUTIONARY_SERVICES_2031: RevolutionaryService2031[] = [;
+>>>>>>> main

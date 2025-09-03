@@ -5,8 +5,9 @@ import React from;
   'lucide-react'  export const ApiDocs: React.FC = () => { const [searchQuery, setSearchQuery] = React.useState(,
   ') const [selectedCategory, setSelectedCategory] = React.useState('all
   ') const [expandedSections, setExpandedSections] = React.useState<string[]>(['authentication;
-  ', 'ai-services;
-  '])  const categories = [ { id: 'all, name: 'All APIs;
+  ,ai-services;
+  '])  const categories = [
+  { id: 'all, name: 'All APIs;
   ', count: 0, active: true }, { id:,
   authentication;
   ', name: 'Authentication, count: 3, active: false }, { id:,
@@ -21,7 +22,8 @@ import React from;
   iot;
   ', name: 'IoT & Edge, count: 4, active: false }, { id:,
   quantum;
-  ', name: 'Quantum Computing, count: 2, active: false } ]  const apiSections = [ { id:,
+  ', name: 'Quantum Computing, count: 2, active: false } ]  const apiSections = [
+  { id:,
   authentication;
   ', title: 'Authentication & Security, icon: Shield, color:,
   from-green-500 to-emerald-500;

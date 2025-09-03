@@ -18,4 +18,8 @@ export interface InnovativeAIService {id: string;
    innovationLevel: string;
    contactInfo: {  phone: string;
    email: string
+<<<<<<< HEAD
    website: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService[] = [;
+=======
+   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService[] = [;
+>>>>>>> main

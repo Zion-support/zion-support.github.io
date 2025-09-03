@@ -14,15 +14,15 @@ class SmartDependencyOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'smart-dependency-optimizer.log'
     );
     this.optimizationLog = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'dependency-optimizations.json'
     );
     this.usageAnalysis = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'dependency-usage-analysis.json'
     );
     this.ensureLogsDirectory();
@@ -801,7 +801,7 @@ return `${major}.${minor + 1}.${patch}`;
     };
 
     const reportPath = path.join(
-      this.projectRoot,logs', `dependency-optimization-report-${Date.now()}.json`
+      this.projectRoot, 'logs', `dependency-optimization-report-${Date.now()}.json`
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 this.log(`📊 Optimization Report generated: ${reportPath}`);

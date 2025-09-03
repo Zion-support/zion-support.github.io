@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -13,3 +14,7 @@ export default function EditPostPage() {return (
     </div>
   );
 }
+=======
+ export default function EditPostPage () {
+};
+>>>>>>> main

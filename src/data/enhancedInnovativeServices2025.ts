@@ -1,7 +1,12 @@
  export interface ServiceContact {phone: string;
    email: string;
    website: string;
+<<<<<<< HEAD
    address: string} export interface MicroSaasService {id: number;
+=======
+   addres,s: string} export interface MicroSaasService {
+  id: number;
+>>>>>>> main
    name: string;
    category: string;
    pricing: string;
@@ -20,7 +25,12 @@
    setupTime: string;
    integrations: string[];
    freeTier: boolean;
+<<<<<<< HEAD
    trialPeriod: string} export interface ITService {id: number;
+=======
+   trialPerio,d: string} export interface ITService {
+  id: number;
+>>>>>>> main
    name: string;
    category: string;
    description: string;
@@ -36,7 +46,12 @@
    sla: string;
    certifications: string[];
    deliveryTime: string;
+<<<<<<< HEAD
    support: string} export interface AIService {id: number;
+=======
+   suppor,t: string} export interface AIService {
+  id: number;
+>>>>>>> main
    name: string;
    category: string;
    description: string;
@@ -54,4 +69,14 @@
    trainingData: string;
    compliance: string[];
    aiScore: number;
-   useCases: string[]} export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = ['';"
+<<<<<<< HEAD
+   useCase,s: string[]} export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [&apos;';&apos;'
+=======
+<<<<<<< HEAD
+   useCases: string[]} export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = ['';""
+""
+=======
+   useCases: string[]} export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = ['
+"
+>>>>>>> main
+>>>>>>> main
