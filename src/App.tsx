@@ -17,6 +17,17 @@ const ServicesOverview = lazy(() => import('./pages/services-overview'));
 const AIContentGenerationSuite = lazy(() => import('./pages/services/ai-content-generation-suite'));
 const CloudMigrationServices = lazy(() => import('./pages/services/cloud-migration-services'));
 const SmartCRMPlatform = lazy(() => import('./pages/services/smart-crm-platform'));
+const SmartInvoiceAutomationSuite = lazy(() => import('./pages/services/smart-invoice-automation-suite'));
+const AISocialMediaContentStudio = lazy(() => import('./pages/services/ai-social-media-content-studio'));
+const AICustomerSupportAutomation = lazy(() => import('./pages/services/ai-customer-support-automation'));
+const AIProjectManagementPlatform = lazy(() => import('./pages/services/ai-project-management-platform'));
+const AIEmailMarketingAutomation = lazy(() => import('./pages/services/ai-email-marketing-automation'));
+const AITimeTrackingProductivity = lazy(() => import('./pages/services/ai-time-tracking-productivity'));
+const AILegalDocumentAnalyzer = lazy(() => import('./pages/services/ai-legal-document-analyzer'));
+const AIHealthcareAnalyticsPlatform = lazy(() => import('./pages/services/ai-healthcare-analytics-platform'));
+const AIFinancialTradingPlatform = lazy(() => import('./pages/services/ai-financial-trading-platform'));
+const AISupplyChainOptimization = lazy(() => import('./pages/services/ai-supply-chain-optimization'));
+const AIHRRecruitmentPlatform = lazy(() => import('./pages/services/ai-hr-recruitment-platform'));
 
 // Simple Header component
 const Header = () => (
@@ -69,6 +80,17 @@ function App() {
             <Route path="/services/ai-content-generation-suite" element={<AIContentGenerationSuite />} />
             <Route path="/services/cloud-migration-services" element={<CloudMigrationServices />} />
             <Route path="/services/smart-crm-platform" element={<SmartCRMPlatform />} />
+            <Route path="/services/smart-invoice-automation-suite" element={<SmartInvoiceAutomationSuite />} />
+            <Route path="/services/ai-social-media-content-studio" element={<AISocialMediaContentStudio />} />
+            <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
+            <Route path="/services/ai-project-management-platform" element={<AIProjectManagementPlatform />} />
+            <Route path="/services/ai-email-marketing-automation" element={<AIEmailMarketingAutomation />} />
+            <Route path="/services/ai-time-tracking-productivity" element={<AITimeTrackingProductivity />} />
+            <Route path="/services/ai-legal-document-analyzer" element={<AILegalDocumentAnalyzer />} />
+            <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
+            <Route path="/services/ai-financial-trading-platform" element={<AIFinancialTradingPlatform />} />
+            <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+            <Route path="/services/ai-hr-recruitment-platform" element={<AIHRRecruitmentPlatform />} />
             <Route path="*" element={<HomePage />} />
           </Routes>
         </Suspense>

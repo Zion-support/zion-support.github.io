@@ -9,28 +9,46 @@ export default function Services() {
       name: "AI-Powered Solutions",
       description: "Revolutionary AI services that transform business operations",
       icon: Brain,
-      count: 25,
+      count: 45,
       color: "from-purple-400 to-pink-500",
       href: "/ai-services",
-      services: ["AI Revenue Optimization", "AI Customer Experience", "AI Autonomous DevOps", "AI Business Intelligence"]
+      services: ["AI Revenue Optimization", "AI Customer Experience", "AI Autonomous DevOps", "AI Business Intelligence", "AI Legal Research", "AI Healthcare Analytics", "AI Financial Trading", "AI Supply Chain Optimization"]
     },
     {
       name: "Micro SAAS Platforms",
       description: "Innovative software solutions for modern businesses",
       icon: Database,
-      count: 35,
+      count: 65,
       color: "from-blue-400 to-cyan-500",
       href: "/micro-saas",
-      services: ["Content Creation Studio", "Project Management", "Customer Support", "Sales Analytics"]
+      services: ["Content Creation Studio", "Project Management", "Customer Support", "Sales Analytics", "Invoice Automation", "Social Media Scheduler", "Email Marketing", "Time Tracking"]
     },
     {
       name: "IT Infrastructure",
       description: "Enterprise-grade technology solutions and services",
       icon: Shield,
-      count: 20,
+      count: 35,
       color: "from-green-400 to-emerald-500",
       href: "/it-services",
-      services: ["Quantum Secure Infrastructure", "Edge Computing", "Cloud Migration", "Cybersecurity"]
+      services: ["Quantum Secure Infrastructure", "Edge Computing", "Cloud Migration", "Cybersecurity", "DevOps Automation", "Network Security", "Data Backup", "IT Consulting"]
+    },
+    {
+      name: "Business Automation",
+      description: "Streamline operations with intelligent automation solutions",
+      icon: Zap,
+      count: 25,
+      color: "from-orange-400 to-red-500",
+      href: "/business-automation",
+      services: ["Workflow Automation", "Document Processing", "Customer Onboarding", "Inventory Management", "HR Automation", "Financial Reporting", "Lead Generation", "Quality Assurance"]
+    },
+    {
+      name: "Digital Transformation",
+      description: "Modernize your business with cutting-edge digital solutions",
+      icon: Rocket,
+      count: 30,
+      color: "from-teal-400 to-blue-500",
+      href: "/digital-transformation",
+      services: ["Cloud Migration", "API Integration", "Mobile App Development", "Web Development", "E-commerce Solutions", "Digital Marketing", "SEO Optimization", "Analytics Dashboard"]
     }
   ]
 
@@ -46,31 +64,104 @@ export default function Services() {
       benefits: ["Increase revenue by 25-40%", "Reduce revenue leakage by 60%", "Optimize pricing strategies", "Improve customer retention"]
     },
     {
-      title: "AI Autonomous DevOps Platform",
-      description: "Eliminate 95% of manual DevOps tasks and reduce deployment time by 80% with intelligent automation.",
-      price: "From $1,999/month",
-      features: ["Autonomous Code Deployment", "AI-Powered Infrastructure Management", "Intelligent Monitoring", "Self-Healing Infrastructure"],
-      href: "/services/ai-autonomous-devops-platform",
+      title: "Smart Invoice Automation Suite",
+      description: "Automate 95% of invoice processing with AI-powered document recognition and approval workflows.",
+      price: "From $299/month",
+      features: ["AI Document Recognition", "Automated Approval Workflows", "Multi-Currency Support", "Real-time Analytics"],
+      href: "/services/smart-invoice-automation-suite",
+      color: "from-green-400 to-emerald-500",
+      popular: true,
+      benefits: ["Reduce processing time by 95%", "Eliminate manual data entry", "Improve accuracy by 99.8%", "Save 20+ hours weekly"]
+    },
+    {
+      title: "AI Social Media Content Studio",
+      description: "Generate engaging social media content 10x faster with AI-powered creation and scheduling tools.",
+      price: "From $199/month",
+      features: ["AI Content Generation", "Multi-Platform Scheduling", "Brand Voice Consistency", "Performance Analytics"],
+      href: "/services/ai-social-media-content-studio",
       color: "from-blue-400 to-cyan-500",
-      benefits: ["Reduce deployment time by 80%", "Eliminate 95% of manual tasks", "Improve reliability by 99.9%", "Reduce costs by 40%"]
+      benefits: ["Create content 10x faster", "Increase engagement by 45%", "Maintain brand consistency", "Save 15+ hours weekly"]
     },
     {
-      title: "Quantum Secure Infrastructure",
-      description: "Future-proof your organization with quantum-secure infrastructure that protects against quantum computing threats.",
-      price: "From $15,000",
-      features: ["Quantum-Resistant Encryption", "Post-Quantum Cryptography", "Quantum Key Distribution", "Zero-Trust Architecture"],
-      href: "/services/quantum-secure-infrastructure",
+      title: "AI Customer Support Automation",
+      description: "Resolve 80% of customer inquiries instantly with intelligent chatbots and automated workflows.",
+      price: "From $499/month",
+      features: ["Intelligent Chatbots", "Multi-Language Support", "Sentiment Analysis", "Escalation Management"],
+      href: "/services/ai-customer-support-automation",
+      color: "from-orange-400 to-red-500",
+      benefits: ["Resolve 80% of inquiries instantly", "Reduce support costs by 60%", "Improve customer satisfaction", "24/7 availability"]
+    },
+    {
+      title: "AI Project Management Platform",
+      description: "Streamline project delivery with AI-powered task management, resource optimization, and risk prediction.",
+      price: "From $399/month",
+      features: ["AI Task Prioritization", "Resource Optimization", "Risk Prediction", "Progress Analytics"],
+      href: "/services/ai-project-management-platform",
       color: "from-indigo-400 to-purple-500",
-      benefits: ["Protect against quantum threats", "Future-proof security", "Reduce vulnerabilities by 99.9%", "Military-grade standards"]
+      benefits: ["Improve delivery time by 35%", "Reduce project risks by 70%", "Optimize resource allocation", "Increase team productivity"]
     },
     {
-      title: "Edge Computing Orchestration",
-      description: "Reduce latency by 90% and improve performance by 70% with intelligent edge computing orchestration.",
-      price: "From $3,999/month",
-      features: ["Distributed Edge Computing", "Real-time Data Processing", "Intelligent Load Balancing", "Edge AI Inference"],
-      href: "/services/edge-computing-orchestration-platform",
-      color: "from-green-400 to-teal-500",
-      benefits: ["Reduce latency by 90%", "Improve performance by 70%", "Lower bandwidth costs by 60%", "Enable real-time decisions"]
+      title: "AI Email Marketing Automation",
+      description: "Boost email engagement by 65% with AI-powered personalization and send-time optimization.",
+      price: "From $199/month",
+      features: ["AI Personalization", "Send-Time Optimization", "A/B Testing", "Advanced Analytics"],
+      href: "/services/ai-email-marketing-automation",
+      color: "from-teal-400 to-blue-500",
+      benefits: ["Increase open rates by 45%", "Boost click-through rates by 65%", "Reduce unsubscribe rates", "Improve ROI by 200%"]
+    },
+    {
+      title: "AI Time Tracking & Productivity",
+      description: "Optimize team productivity with AI-powered time tracking and intelligent insights.",
+      price: "From $149/month",
+      features: ["Automatic Time Tracking", "Productivity Analytics", "Distraction Detection", "Performance Insights"],
+      href: "/services/ai-time-tracking-productivity",
+      color: "from-yellow-400 to-orange-500",
+      benefits: ["Increase productivity by 25%", "Reduce time waste by 40%", "Improve focus time", "Optimize work schedules"]
+    },
+    {
+      title: "AI Legal Document Analyzer",
+      description: "Analyze legal documents 50x faster with AI-powered contract review and risk assessment.",
+      price: "From $799/month",
+      features: ["Contract Analysis", "Risk Assessment", "Compliance Checking", "Document Comparison"],
+      href: "/services/ai-legal-document-analyzer",
+      color: "from-red-400 to-pink-500",
+      benefits: ["Analyze documents 50x faster", "Reduce legal costs by 70%", "Improve accuracy by 95%", "Identify risks instantly"]
+    },
+    {
+      title: "AI Healthcare Analytics Platform",
+      description: "Improve patient outcomes with AI-powered healthcare analytics and predictive insights.",
+      price: "From $1,999/month",
+      features: ["Patient Risk Prediction", "Treatment Optimization", "Resource Planning", "Compliance Monitoring"],
+      href: "/services/ai-healthcare-analytics-platform",
+      color: "from-emerald-400 to-green-500",
+      benefits: ["Improve patient outcomes by 30%", "Reduce readmission rates", "Optimize resource allocation", "Ensure compliance"]
+    },
+    {
+      title: "AI Financial Trading Platform",
+      description: "Maximize trading profits with AI-powered market analysis and automated trading strategies.",
+      price: "From $2,499/month",
+      features: ["AI Market Analysis", "Automated Trading", "Risk Management", "Portfolio Optimization"],
+      href: "/services/ai-financial-trading-platform",
+      color: "from-purple-400 to-indigo-500",
+      benefits: ["Increase trading profits by 40%", "Reduce risk by 60%", "24/7 market monitoring", "Automated execution"]
+    },
+    {
+      title: "AI Supply Chain Optimization",
+      description: "Optimize supply chain operations with AI-powered demand forecasting and inventory management.",
+      price: "From $1,499/month",
+      features: ["Demand Forecasting", "Inventory Optimization", "Supplier Management", "Risk Assessment"],
+      href: "/services/ai-supply-chain-optimization",
+      color: "from-cyan-400 to-blue-500",
+      benefits: ["Reduce inventory costs by 25%", "Improve forecast accuracy by 85%", "Minimize stockouts", "Optimize supplier relationships"]
+    },
+    {
+      title: "AI HR Recruitment Platform",
+      description: "Hire top talent 3x faster with AI-powered candidate screening and interview automation.",
+      price: "From $599/month",
+      features: ["AI Candidate Screening", "Interview Automation", "Skills Assessment", "Cultural Fit Analysis"],
+      href: "/services/ai-hr-recruitment-platform",
+      color: "from-pink-400 to-rose-500",
+      benefits: ["Hire 3x faster", "Improve candidate quality", "Reduce bias in hiring", "Save 20+ hours per hire"]
     }
   ]
 
