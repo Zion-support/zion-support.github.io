@@ -21,7 +21,8 @@ export const PricingSection: React.FC = () => {
   monthly' |;
   'annual'>(
   'annual');
-  const plans = [{
+  const plans = [
+  {
       name: 'Starter,
       icon: Rocket,
       description:,
@@ -31,12 +32,7 @@ export const PricingSection: React.FC = () => {
       originalPrice: billingCycle ===;
   'annual' ? 399 : 449,
       features: [,
-  AI-powered analytics dashboard',
-  'Basic cloud infrastructure',
-  '24/7 email support',
-  'Monthly performance reports',
-  'Basic security features',
-  'Up to 5 team members';
+  AI-powered analytics dashboard,Basic cloud infrastructure,24/7 email support,Monthly performance reports,Basic security features,Up to 5 team members';
       ],
       cta: 'Get Started,
       popular: false,
@@ -52,14 +48,7 @@ export const PricingSection: React.FC = () => {
       originalPrice: billingCycle ===;
   'annual' ? 999 : 1099,
       features: [,
-  Everything in Starter',
-  'Advanced AI & ML capabilities',
-  'Custom integrations',
-  'Priority support (4hr response)',
-  'Advanced security & compliance',
-  'Up to 25 team members',
-  'Custom reporting',
-  'API access';
+  Everything in Starter,Advanced AI & ML capabilities,Custom integrations,Priority support (4hr response),Advanced security & compliance,Up to 25 team members,Custom reporting,API access';
       ],
       cta: 'Start Free Trial,
       popular: true,
@@ -73,15 +62,7 @@ export const PricingSection: React.FC = () => {
       price: 'Custom,
       originalPrice: null,
       features: [,
-  Everything in Professional',
-  'Custom AI model training',
-  'Dedicated account manager',
-  '24/7 phone & chat support',
-  'SOC 2 compliance',
-  'Unlimited team members',
-  'Custom SLA guarantees',
-  'On-premise deployment options',
-  'White-label solutions';
+  Everything in Professional,Custom AI model training,Dedicated account manager,24/7 phone & chat support,SOC 2 compliance,Unlimited team members,Custom SLA guarantees,On-premise deployment options,White-label solutions';
       ],
       cta: 'Contact Sales,
       popular: false,
@@ -274,24 +255,24 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSectio
 import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 export const PricingSection: React.FC = () => {
-import { motion } from 'framer - motion'
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'> ('annual') ;
-  const plans = [{
+import { motion }  from 'framer - motion';const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'> ('annual') ;
+  const plans = [
+  {
       name: 'Starter', icon: Rocket,
       description: 'Perfect for small businesses and startups', price: billingCycle === 'annual' ? 299 : 349,
-      originalPrice: billingCycle === 'annual' ? 399 : 449, features: [';AI - powered analytics dashboard',';Basic cloud infrastructure', '24 / 7 email support',';Monthly performance reports', 'Basic security features',';Up to 5 team members';
+      originalPrice: billingCycle === 'annual' ? 399 : 449, features: [';AI - powered analytics dashboard,;Basic cloud infrastructure,24 / 7 email support,;Monthly performance reports,Basic security features,;Up to 5 team members';
       ], cta: 'Get Started',
       popular: false, color: 'from - blue - 500 to - cyan - 500'},
     {
       name: 'Professional', icon: Building,
       description: 'Ideal for growing businesses', price: billingCycle === 'annual' ? 799 : 899,
-      originalPrice: billingCycle === 'annual' ? 999 : 1099, features: [';Everything in Starter',';Advanced AI & ML capabilities', 'Custom integrations',';Priority support (4hr response) ', 'Advanced security & compliance',';Up to 25 team members', 'Custom reporting',';API access';
+      originalPrice: billingCycle === 'annual' ? 999 : 1099, features: [';Everything in Starter,;Advanced AI & ML capabilities,Custom integrations,;Priority support (4hr response) ,Advanced security & compliance,;Up to 25 team members,Custom reporting,;API access';
       ], cta: 'Start Free Trial',
       popular: true, color: 'from - purple - 500 to - pink - 500'},
     {
       name: 'Enterprise', icon: Crown,
       description: 'For large organizations with complex needs', price: 'Custom',
-      originalPrice: null, features: [';Everything in Professional',';Custom AI model training', 'Dedicated account manager',';24 / 7 phone & chat support', 'SOC 2 compliance',';Unlimited team members', 'Custom SLA guarantees',';On - premise deployment options', 'White - label solutions';
+      originalPrice: null, features: [';Everything in Professional,;Custom AI model training,Dedicated account manager,;24 / 7 phone & chat support,SOC 2 compliance,;Unlimited team members,Custom SLA guarantees,;On - premise deployment options,White - label solutions';
       ], cta: 'Contact Sales',
       popular: false, color: 'from - yellow - 500 to - orange - 500'}
   ];

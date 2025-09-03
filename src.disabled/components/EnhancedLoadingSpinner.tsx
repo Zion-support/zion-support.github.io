@@ -7,12 +7,10 @@ export default function EnhancedLoadingSpinner({
   size =,
   md;
   ', text = 'Loading...;
-  ','  className = '';
-  '}: EnhancedLoadingSpinnerProps) {'  const sizeClasses = {
+  ,  className = '}: EnhancedLoadingSpinnerProps) {'  const sizeClasses = {
     sm:;
   'w-8 h-8, md:,
-  w-12 h-12',
-  '    lg: 'w-16 h-16'  }';
+  w-12 h-12,    lg: 'w-16 h-16'  }';
   const textSizes = {
     sm:,
   text-sm', md: 'text-base,
@@ -39,17 +37,17 @@ export default function EnhancedLoadingSpinner({
             className='w-2 h-2 bg-blue-600 rounded-full''            animate={{ '              scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5]
             }}
 
-import React from 'react''import { motion } from 'framer - motion';interface EnhancedLoadingSpinnerProps {
+import React  from 'reactimport { motion } from 'framer - motion';interface EnhancedLoadingSpinnerProps {
   ';
    export default React.memo(/** * EnhancedLoadingSpinner function * @param {*} params - Function parameters;
  * @returns {*} Function return value;
  */;
 function EnhancedLoadingSpinner ({
   size?: 'sm' | 'md' | 'lg''  text?: string'  className?: string}
-  size = 'md', text = 'Loading...','  className = '''}: EnhancedLoadingSpinnerProps) {'  const sizeClasses = {';
-    sm: 'w - 8 h - 8', md: 'w - 12 h - 12','    lg: 'w - 16 h - 16''  }'';
+  size = 'md', text = 'Loading...,  className = '''}: EnhancedLoadingSpinnerProps) {'  const sizeClasses = {';
+    sm: 'w - 8 h - 8', md: 'w - 12 h - 12,    lg: 'w - 16 h - 16''  }'';
   const textSizes = {
-    sm: 'text - sm', md: 'text - base','    lg: 'text - lg''  }'';
+    sm: 'text - sm', md: 'text - base,    lg: 'text - lg''  }'';
   return(
     <div className={`flex flex - col items - center justify - center space - y-4 ${className}`}>`      <motion.div;
         className={`${sizeClasses[size]} relative`}`        animate={{ rotate: 360 }}

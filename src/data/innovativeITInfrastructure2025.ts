@@ -1,5 +1,9 @@
-export interface InnovativeITInfrastructureService {
+<<<<<<< HEAD
+export interface InnovativeITInfrastructureService {;
   id: string;
+=======
+export interface InnovativeITInfrastructureService {id: string;
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -19,4 +23,8 @@ export interface InnovativeITInfrastructureService {
    innovationLevel: string;
    contactInfo: {  phone: string;
    email: string
+<<<<<<< HEAD
+   website: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] } competitors?: string[] marketSize?: string}  export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureService[] = [;
+=======
    website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] } competitors?: string[] marketSize?: string}  export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureService[] = [;
+>>>>>>> main

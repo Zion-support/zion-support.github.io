@@ -26,13 +26,11 @@ const categoryColors: { [key: string]: string } = {,
 export default function InnovativeServices2027() {
   const [selectedCategory, setSelectedCategory] = useState<string>(
   'all');
-  const [searchQuery, setSearchQuery] = useState(';
-  ')
+  const [searchQuery, setSearchQuery] = useState()
   const [sortBy, setSortBy] = useState<'price;
   ' | 'innovation;
   ' | 'roi;
-  '>(';
-  'innovation');
+  '>(innovation');
       return matchesCategory && matchesSearch})
       case;
   'roi': return a.price - b.price'      case;
@@ -103,8 +101,7 @@ export default function InnovativeServices2027() {
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${
                     selectedCategory === category,
-  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg';
-  ': 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50`}`}
+  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg: 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50`}`}
                 >{category === 'all;
   ' ? 'All Services
   ' : category}
@@ -238,8 +235,7 @@ export default function InnovativeServices2027() {
                     <motion.button;
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}';
-                      className='w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg';
-  ';
+                      className='w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg;
                       onClick={() => (window.location.href = '/contact;
   ')}
                     >
@@ -310,8 +306,7 @@ export default function InnovativeServices2027() {
               <motion.button;
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}';
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg text-lg';
-  ';
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg text-lg;
                 onClick={() => (window.location.href = '/contact;
   ')}
               >

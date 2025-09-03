@@ -1,5 +1,9 @@
-export interface ComprehensiveInnovativeService {
+<<<<<<< HEAD
+export interface ComprehensiveInnovativeService {;
   id: string;
+=======
+export interface ComprehensiveInnovativeService {id: string;
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -19,4 +23,8 @@ export interface ComprehensiveInnovativeService {
    innovationLevel: string;
    contactInfo: {  phone: string;
    email: string
+<<<<<<< HEAD
+   website: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string } export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeService[] = [;
+=======
    website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string } export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeService[] = [;
+>>>>>>> main

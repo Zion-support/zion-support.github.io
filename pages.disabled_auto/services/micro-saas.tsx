@@ -29,7 +29,7 @@ const MicroSaasPage: NextPage = () => {
   const microSaasServices = getServicesByCategory(
   'micro-saas)
   const benefits = [
-    {
+  {
       icon: <Zap className='w-8 h-8' />,
 :pages.disabled_auto/services/micro-saas.tsx
       title:,

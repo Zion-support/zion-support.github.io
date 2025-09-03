@@ -1,5 +1,9 @@
- export interface AdvancedMicroSaasService {
+<<<<<<< HEAD
+ export interface AdvancedMicroSaasService {;
   id: string;
+=======
+ export interface AdvancedMicroSaasService {id: string;
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -17,6 +21,26 @@
    marketPrice: string;
    roi: string;
    innovationLevel: string;
+<<<<<<< HEAD
+   contactInfo: { phone: string;
+   email: string;
+<<<<<<< HEAD
+   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string}export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [';
+=======
+   websit,e: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string securit,y: string[]} competitors?: string[] marketSize?: string}export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [&apos;';&apos;'
+=======
    contactInfo: {  phone: string;
    email: string
-   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string}export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = ['';"
+<<<<<<< HEAD
+   website: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string}export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = ['';"
+=======
+<<<<<<< HEAD
+   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string}export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = ['';""
+""
+=======
+   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string}export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = ['
+"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

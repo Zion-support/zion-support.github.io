@@ -1,5 +1,9 @@
-export interface BlockchainWeb3Service {
+<<<<<<< HEAD
+export interface BlockchainWeb3Service {;
   id: string;
+=======
+export interface BlockchainWeb3Service {id: string;
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -19,4 +23,8 @@ export interface BlockchainWeb3Service {
    innovationLevel: string;
    contactInfo: {  phone: string;
    email: string
+<<<<<<< HEAD
+   website: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const BLOCKCHAIN_WEB3_SERVICES_2025: BlockchainWeb3Service[] = [;
+=======
    website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const BLOCKCHAIN_WEB3_SERVICES_2025: BlockchainWeb3Service[] = [;
+>>>>>>> main

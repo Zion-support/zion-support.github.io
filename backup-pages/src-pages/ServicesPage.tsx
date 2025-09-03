@@ -28,8 +28,7 @@ import {
   Globe as GlobeIcon} from,
   lucide-react';
 export default function ServicesPage() {
-  const [searchQuery, setSearchQuery] = useState(';
-  ');
+  const [searchQuery, setSearchQuery] = useState();
   const [selectedCategory, setSelectedCategory] = useState('all;
   ');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all;
@@ -203,8 +202,7 @@ return a.price - b.price'      case;
             </div>
 '
             <div className='text-zion-slate-light'>
-              Showing {sortedServices.length} of{';
-  '}
+              Showing {sortedServices.length} of{}
               {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length} services
             </div>
           </motion.div>
@@ -268,10 +266,8 @@ return a.price - b.price'      case;
                         <span`
                           className={`px-2 py-1 rounded-full text-xs font-medium ${
                             service.innovationLevel ===,
-  Cutting-edge';
-  ';
-                              ? 'bg-zion-cyan/20 text-zion-cyan';
-  ': 'bg-zion-purple/20 text-zion-purple`}`}
+  Cutting-edge;
+                              ? 'bg-zion-cyan/20 text-zion-cyan: 'bg-zion-purple/20 text-zion-purple`}`}
                         >{service.innovationLevel}
                         </span>
                       </div>

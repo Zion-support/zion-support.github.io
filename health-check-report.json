@@ -26,6 +26,10 @@
       "valid": true,
       "issues": []
     }
+<<<<<<< HEAD
+  ]
+}
+=======
   },
   "dependencies": {
     "total": 45,
@@ -37,3 +41,7 @@
     "issues": []
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main

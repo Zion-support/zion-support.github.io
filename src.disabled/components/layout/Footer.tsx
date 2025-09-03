@@ -29,5 +29,6 @@ import React from;
   /api' }, { name: 'Developer Portal, href:,
   /developer' }, { name: 'Training, href:,
   /training' }, { name: 'Support, href:,
-  /support' } ] } const socialLinks = [ { name: 'Facebook, icon: Facebook, href:,
+  /support' } ] } const socialLinks = [
+  { name: 'Facebook, icon: Facebook, href:,
   https: ''

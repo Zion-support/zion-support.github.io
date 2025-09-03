@@ -1,5 +1,9 @@
-export interface ComprehensivePricingGuide2034 {
+<<<<<<< HEAD
+export interface ComprehensivePricingGuide2034 {;
   id: string;
+=======
+export interface ComprehensivePricingGuide2034 {id: string;
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -9,9 +13,14 @@ export interface ComprehensivePricingGuide2034 {
    targetAudience: string[];
    contactInfo: {  phone: string;
    email: string;
-   website: string
-   address: string} marketPositioning: string competitiveAdvantages: string[] testimonials: string[] caseStudies: string[] } export interface PricingTier {
+<<<<<<< HEAD
+   website: string;
+   address: string} marketPositioning: string competitiveAdvantages: string[] testimonials: string[] caseStudies: string[] } export interface PricingTier {;
   name: string;
+=======
+   website: string
+   address: string} marketPositioning: string competitiveAdvantages: string[] testimonials: string[] caseStudies: string[] } export interface PricingTier {name: string;
+>>>>>>> main
    price: number;
    currency: string;
    period: string;

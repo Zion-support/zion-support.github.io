@@ -1,16 +1,72 @@
+<<<<<<< HEAD
+describe('WhitePapers', () => {}' it('renders without crashing', () => {} render(<WhitePapers />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<WhitePapers />)
+=======
+<<<<<<< HEAD
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import {render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import WhitePapers from './WhitePapers';
 
+describe('WhitePapers', () => {it('renders without crashing', () => {
+=======
+<<<<<<< HEAD
+import React from 'react;
+import { render, screen } from '@testing-library/react';
+import @testing-library/jest-dom';
+import WhitePapers from './WhitePapers;
+
 describe('WhitePapers', () => {
-  it('renders without crashing', () => {
+  it(renders without crashing', () => {
+>>>>>>> main
     render(<WhitePapers />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
   });
 
+<<<<<<< HEAD
+  it('displays expected content', () => {render(<WhitePapers />);
+=======
+=======
+<<<<<<< HEAD
+describe(&apos;WhitePapers&apos;, () => {}&apos; it(&apos;renders without crashing&apos;, () => {} render(&apos;<WhitePapers />) '; expect(screen.getByRole (&apos;main&apos;) || screen.getByText(/.*/) ) .toBeInTheDocument () }) &apos; it(&apos;displays expected content&apos;, () => {} render(&apos;&apos;<WhitePapers />) 
+=======
+<<<<<<< HEAD
+import React from 'react';""
+import { render, screen } from '@testing-library/react';""
+import '@testing-library/jest-dom';""
+import WhitePapers from './WhitePapers';
+""
+describe('WhitePapers', () => {""
+  it('renders without crashing', () => {
+    render(<WhitePapers /" >);"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();, });
+""
+>>>>>>> main
   it('displays expected content', () => {
-    render(<WhitePapers />);
+    render(<WhitePapers /" >);"
+    // Add more specific tests here, });, });
+""
+=======
+<<<<<<< HEAD
+describe('WhitePapers', () => {}' it('renders without crashing', () => {} render(<WhitePapers />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<WhitePapers />) '
+=======
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import WhitePapers from './WhitePapers
+describe('WhitePapers', () => {"
+  it('renders without crashing', () => {
+    render(<WhitePapers /" >);"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
+"
+  it('displays expected content', () => {
+    render(<WhitePapers /" >)
+>>>>>>> main
     // Add more specific tests here
-  });
 });
+})
+"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

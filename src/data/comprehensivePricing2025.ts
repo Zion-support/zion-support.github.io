@@ -1,5 +1,9 @@
-export interface ComprehensivePricingService {
+<<<<<<< HEAD
+export interface ComprehensivePricingService {;
   id: string;
+=======
+export interface ComprehensivePricingService {id: string;
+>>>>>>> main
    title: string;
    description: string;
    category: string;

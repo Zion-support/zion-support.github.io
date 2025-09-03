@@ -1,5 +1,9 @@
-export interface EmergingTechService2028 {
+<<<<<<< HEAD
+export interface EmergingTechService2028 {;
   id: string;
+=======
+export interface EmergingTechService2028 {id: string;
+>>>>>>> main
    title: string;
    description: string;
    category: string;

@@ -1,5 +1,9 @@
-export interface RevolutionaryService2030 {
+<<<<<<< HEAD
+export interface RevolutionaryService2030 {;
   id: string;
+=======
+export interface RevolutionaryService2030 {id: string;
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -8,9 +12,14 @@ export interface RevolutionaryService2030 {
    yearly: number;
    custom: string;
    currency: string;
-   pricingModel: string
-   marketPrice: string} features: string[] benefits: string[] useCases: string[] targetAudience: string[] technologies: string[] integrations: string[] support: string[] website: string contactEmail: string phone: string email: string website: string address: string}  export interface MicroSaasService {
+<<<<<<< HEAD
+   pricingModel: string;
+   marketPrice: string} features: string[] benefits: string[] useCases: string[] targetAudience: string[] technologies: string[] integrations: string[] support: string[] website: string contactEmail: string phone: string email: string website: string address: string}  export interface MicroSaasService {;
   id: number;
+=======
+   pricingModel: string
+   marketPrice: string} features: string[] benefits: string[] useCases: string[] targetAudience: string[] technologies: string[] integrations: string[] support: string[] website: string contactEmail: string phone: string email: string website: string address: string}  export interface MicroSaasService {id: number;
+>>>>>>> main
    name: string;
    category: string;
    pricing: string;
@@ -32,8 +41,12 @@ export interface RevolutionaryService2030 {
    trialPeriod: string;
    innovationLevel: string;
    marketSize: string;
-   growthRate: string}  export interface ITService {
+<<<<<<< HEAD
+   growthRate: string}  export interface ITService {;
   id: number;
+=======
+   growthRate: string}  export interface ITService {id: number;
+>>>>>>> main
    name: string;
    category: string;
    description: string;
@@ -52,8 +65,12 @@ export interface RevolutionaryService2030 {
    support: string;
    innovationLevel: string;
    marketSize: string;
-   compliance: string[]}  export interface AIService {
+<<<<<<< HEAD
+   compliance: string[]}  export interface AIService {;
   id: number;
+=======
+   compliance: string[]}  export interface AIService {id: number;
+>>>>>>> main
    name: string;
    category: string;
    description: string;
