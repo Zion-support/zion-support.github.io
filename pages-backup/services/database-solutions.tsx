@@ -1,25 +1,24 @@
 import React from "react";
       icon: Server,;
       title: "Database Administration",;
-      description: "24/7 monitoring, maintenance, and optimization of your database systems;,
-},;
-    {;
+      description: "24/7 monitoring, maintenance, and optimization of your database systems},;
+    {
       icon: Shield,";
       title: "Data Security & Backup",";
       description: "Enterprise-grade security with automated backup and disaster recovery"},;
-    {;
+    {
       icon: Zap,";
       title: "Performance Optimization",";
       description: "Advanced tuning and optimization for maximum database performance"},;
-    {;
+    {
       icon: Cloud,";
       title: "Cloud Database Migration",";
       description: "Seamless migration to cloud-based database solutions"},;
-    {;
+    {
       icon: BarChart3,";
       title: "Data Analytics & Reporting",";
       description: "Transform your data into actionable insights with advanced analytics'}
-;
+
   ];
 
   const databaseTypes = [];
@@ -85,15 +84,15 @@ that scale with your business needs.;
                 </div>";
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">,;
                   {feature.title}
-;
+
                 </h3>";
                 <p className="text-gray-600">;
                   {feature.description}
-;
+
                 </p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -116,15 +115,15 @@ that scale with your business needs.;
                 </div>";
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">,;
                   {type.name}
-;
+
                 </h3>";
                 <p className="text-gray-600 text-sm">;
                   {type.description}
-;
+
                 </p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -146,7 +145,7 @@ that scale with your business needs.;
                     <span className="text-gray-300">{benefit}</span>;
                   </div>;
                 ))}
-;
+
               </div>;
             </div>";
             <div className="grid grid-cols-2 gap-6">";
@@ -196,5 +195,5 @@ the perfect database solution for your business.;
       <Footer  />;
     </ErrorBoundary>";,;
   )}
-;
+
 export default Component

@@ -1,5 +1,5 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
+
  params - Function parameters;
  * @returns {*} Function return value;
  */;
@@ -9,9 +9,7 @@ function InteractiveTestimonials () {};
       prev === filteredTestimonials.length-1 ? 0 : prev + 1;) };
 ;
     setSelectedTestimonial((prev) => ;
-      prev === 0 ? filteredTestimonials.length-1 : prev - 1;) ;,
-};
-;
+      prev === 0 ? filteredTestimonials.length-1 : prev - 1;) }
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
       <div  className="max - w-7xl mx - auto px-6">;
         <div>Broken JSX</div>
@@ -129,8 +127,7 @@ function InteractiveTestimonials () {};
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
-;
+    </section>;) }
 export default InteractiveTestimonials;";
             <span className="text-2xl">→</span>;
           </div>;

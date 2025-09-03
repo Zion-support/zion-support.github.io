@@ -13,6 +13,5 @@ export default function Page() {};
           Image upload feature is currently unavailable.</p>;
       )}
     </div>;
-  );,
-}
+  )}
 '"

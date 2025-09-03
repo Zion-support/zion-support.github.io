@@ -6,8 +6,7 @@
       price: "From $1,999/month","";
       features["Predictive Diagnostics", "Patient Monitoring", "Population Analytics", "Treatment Optimization"],;"";
       link: "/services/ai-healthcare-predictive-analytics","";
-      category: "Healthcare";,
-},;
+      category: "Healthcare"},;
     {}
 ";
       icon: TrendingUp,"";
@@ -16,8 +15,7 @@
       price: "From $2,999/month","";
       features["AI Trading Algorithms", "Risk Management", "Market Analysis", "High-Frequency Trading"],;"";
       link: "/services/ai-financial-trading-risk-management","";
-      category: "FinTech";,
-},;
+      category: "FinTech"},;
     {}
 ";
       icon: Truck,"";
@@ -26,8 +24,7 @@
       price: "From $2,499/month","";
       features["Demand Forecasting", "Route Optimization", "Risk Management", "Real-time Monitoring"],;"";
       link: "/services/ai-supply-chain-optimization","";
-      category: "Logistics";,
-},;
+      category: "Logistics"},;
     {}
 ";
       icon: Shield,"";
@@ -36,8 +33,7 @@
       price: "From $1,999/month","";
       features["Threat Detection", "Automated Response", "Vulnerability Assessment", "Compliance Monitoring"],;"";
       link: "/services/ai-cybersecurity-suite","";
-      category: "Security";,
-},;
+      category: "Security"},;
     {}
 ";
       icon: BarChart3,"";
@@ -46,7 +42,7 @@
       price: "From $1,499/month",;"";
       features: ["Data Analytics", "Predictive Insights", "Custom Dashboards", "Real-time Reporting"],;"";
       link: "/services/ai-business-intelligence-platform",;"";
-      category: "Analytics"};
+      category: "Analytics"}
   ]},;";
     {};
       icon: Zap};
@@ -61,7 +57,7 @@
     "Edge Computing & IoT Integration",;"";
     "Blockchain & Distributed Systems",;"    "Quantum Computing Solutions";
   ];
-;
+
   return();
     <>";
       <div>Broken JSX</div>
@@ -233,14 +229,10 @@
         </section>;
       </div>;
     </>;
-  );,
-}
-;
+  )}
 
-export { ComprehensiveAIServicesShowcase2025 };
-;
-export { ComprehensiveAIServicesShowcase2025 };
-;
-export { ComprehensiveAIServicesShowcase2025 };
-;
-export { ComprehensiveAIServicesShowcase2025 };
+
+export { ComprehensiveAIServicesShowcase2025 }
+export { ComprehensiveAIServicesShowcase2025 }
+export { ComprehensiveAIServicesShowcase2025 }
+export { ComprehensiveAIServicesShowcase2025 }

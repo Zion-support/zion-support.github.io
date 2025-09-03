@@ -1,7 +1,7 @@
 'use client;
-;
+
 import Image from 'next/image;
-;
+
 interface OptimizedImageProps {src: string;
   alt: string;
   width?: number;
@@ -14,30 +14,21 @@ priority?: boolean;
   style?: React.CSSProperties;
   onClick?: () => void;
   onLoad?: () => void;
-  onError?: () => void;,
-}
-  const [hasError, setHasError] = useState(false);,
-}
-  const [isInView, setIsInView] = useState(priority);,
-}
-  const imageRef = useRef<HTMLDivElement>(null);,
-}
-  const [isLoading, setIsLoading] = useState(true);,
-}
-  const [hasError, setHasError] = useState(false);,
-}
-  const [isInView, setIsInView] = useState(priority);,
-}
-  const imageRef = useRef<HTMLDivElement>(null);,
-}
+  onError?: () => void}
+  const [hasError, setHasError] = useState(false)}
+  const [isInView, setIsInView] = useState(priority)}
+  const imageRef = useRef<HTMLDivElement>(null)}
+  const [isLoading, setIsLoading] = useState(true)}
+  const [hasError, setHasError] = useState(false)}
+  const [isInView, setIsInView] = useState(priority)}
+  const imageRef = useRef<HTMLDivElement>(null)}
   // comment;
-useEffect(() => {;
+useEffect(() => {
     if (priority) return;
-    const observer = new IntersectionObserver();,
-}
-      ([entry]) => {;
-        if (entry.isIntersecting) {;
-;
+    const observer = new IntersectionObserver()}
+      ([entry]) => {
+        if (entry.isIntersecting) {
+
 const OptimizedImage: React.FC<OptimizedImageProps> = ({;
 
 src, alt,;
@@ -47,74 +38,67 @@ src, alt,;
 , priority = false,;
 '  quality = 75, ;
 '  placeholder = 'empty','  blurDataURL, sizes,'  fill = false, style,;
-  onClick, onLoad,onError}) => {;
+  onClick, onLoad,onError}) => {
 
   const [isLoading, setIsLoading] = useState(true);
-;
+
   const [hasError, setHasError] = useState(false);
   const [isInView, setIsInView] = useState(priority);
-;
-  const imageRef = useRef<HTMLDivElement>(null);
-;
-  // Intersection Observer for lazy loading;
-  useEffect(() => {;
-    if (priority) return;
-;
-const observer = new IntersectionObserver();
-([entry]) => {;
 
-        if (entry.isIntersecting) {;
+  const imageRef = useRef<HTMLDivElement>(null);
+
+  // Intersection Observer for lazy loading;
+  useEffect(() => {
+    if (priority) return;
+
+const observer = new IntersectionObserver();
+([entry]) => {
+
+        if (entry.isIntersecting) {
 
           setIsInView(true);
           observer.disconnect();
-;,
 }
-}, {;
+}, {
 
-        rootMargin: '50px', // Start loading 50px before the image comes into view'        threshold: 0.1}'    );if (imageRef.current) {;
+        rootMargin: '50px', // Start loading 50px before the image comes into view'        threshold: 0.1}'    );if (imageRef.current) {
 
       observer.observe(imageRef.current);
-;,
 }
-;
-    return () => observer.disconnect();,
-}, [priority]);
-;
+
+    return () => observer.disconnect()}, [priority]);
+
   // Handle image load;
-const handleLoad = () => {;setIsLoading(false);
-;
-    onLoad?.();,
-};
-;
+const handleLoad = () => {setIsLoading(false);
+
+    onLoad?.()}
   // Handle image error;
-const handleError = () => {;setHasError(true);
-;
+const handleError = () => {setHasError(true);
+
     setIsLoading(false);
     onError?.();
-;,
-};
-;
+}
   // Fallback image for errors;
-  if (hasError) {;
+  if (hasError) {
 
 return();
-;
+
       <div;
 '        className={`flex items-center justify-center bg-gray-200 dark: bg-gray-700 text-gray-500 dark:text-gray-400 ${className}}
 '        style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}'      >'        <div className="text-center>""          <svg"""            className="mx-auto h-8 w-8 mb-2""            fill="none""""            viewBox="0 0 24 24""""            stroke="currentColor"">"""            <path"""              strokeLinecap="round""""              strokeLinejoin="round""""              strokeWidth={2}"""              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z""            />"""          </svg>"""          <p className="text-xs>Image failed to load</p>        </div>"      </div>    );}
-;
+
   // Loading skeleton;
-  if (!isInView) {;
+  if (!isInView) {
 
 return();
-;
+
       <div``        ref={imageRef}
-;
+
         className={`bg-gray-200 dark: bg-gray-700 animate-pulse ${className}`}
 '        style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}'      />'    );  }
-;
+
   return();
-;
+
     <div`      ref={imageRef}`      className={`relative ${className}`}      style={style}
       onClick={onClick}
     >;
@@ -125,8 +109,7 @@ return();
 width={fill ? undefined : width}`        height={fill ? undefined : height}`        className={`transition-opacity duration-300 ${`;
 
           isLoading ? 'opacity-0' : 'opacity-100;
-`;,
-}`}'        priority={priority}        quality={quality}placeholder={placeholder}
+`}`}'        priority={priority}        quality={quality}placeholder={placeholder}
         blurDataURL={blurDataURL}
         sizes={sizes}
         fill={fill}
@@ -136,18 +119,15 @@ width={fill ? undefined : width}`        height={fill ? undefined : height}`    
 
           objectFit: fill ? 'cover' : 'contain'}}'      />';
       {/* Loading spinner */}"""      {isLoading && ("""        <div className="absolute inset-0 flex items-center justify-center z-20>""          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600></div>        </div>"      )}</div>;
-  );,
-};
-;
+  )}
 // HOC for wrapping components with image optimization;
 export const withImageOptimization = <P extends object>(;Component: React.ComponentType<P>;
-) => {;
+) => {
 
   return (props: P) => (;
     <Component {...props} />;
   );
-;,
-};
+}
 '";
 ""export default OptimizedImage;'"`;
 "`""`;

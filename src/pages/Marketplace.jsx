@@ -15,7 +15,7 @@ export {};
   const [listings, setListings] = useState([]);'';
   const [isLoading, setIsLoading] = useState(false);''';
   const [view, setView] = useState('grid');
-;
+
   // Sample data for demonstration;
   useEffect ( () => {}
     setListings ([];
@@ -35,9 +35,8 @@ export {};
         availability: 'Available',;
         rating: 4.9,';
         description: 'Enterprise cloud infrastructure and DevOps solutions'}
-    ]);,
-}, []);
-;
+    ])}, []);
+
   const clearAllFilters = () => {}
   return <div>Component</div>;
 };
@@ -48,9 +47,7 @@ export {};
     setSelectedProductTypes([]);
     setSelectedLocations([]);
     setSelectedAvailability([]);
-    setSelectedRating(null);,
-};
-;
+    setSelectedRating(null)}
   const handleRequestQuote = listingId => {}
     const listing = listings.find(item => item.id === listingId);
     if (listing) {}
@@ -58,23 +55,19 @@ export {};
       navigate('/request-quote', {}
         state: {}
           serviceType: listing.category,;
-          specificItem: listing}});,
-}
-  };
-;
+          specificItem: listing}})}
+  }
   const filteredListings = listings.filter(listing => {}
     if();
       searchQuery &&;
       !listing.title.toLowerCase().includes(searchQuery.toLowerCase());
     ) {}
-      return false;,
-}
+      return false}
     if();
       selectedProductTypes.length > 0 &&;
       !selectedProductTypes.includes(listing.category);
     ) {}
-      return false;,
-}
+      return false}
     if();
       selectedLocations.length > 0 &&;
       !selectedLocations.includes(listing.location);
@@ -172,16 +165,11 @@ export {};
           </div>) }
       </div>;
     </main>;
-  );,
-}
-;
+  )}
 
-export { Marketplace };
-;
-export { Marketplace };
-;
-export { Marketplace };
-;
-export { Marketplace };
-;
-export { Marketplace };
+
+export { Marketplace }
+export { Marketplace }
+export { Marketplace }
+export { Marketplace }
+export { Marketplace }

@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface InnovativeAgricultureService {;
+export interface InnovativeAgricultureService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface InnovativeAgricultureService {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -36,18 +36,17 @@ export interface InnovativeAgricultureService {;
   launchDate: string;
   customers: number;
   rating: number;
-const contact = {;
+const contact = {
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709";
-  ;
-  ;
-  ;
-  ;
-  website: "https://ziontechgroup.com";,;,
-}
+
+
+
+
+  website: "https://ziontechgroup.com"}
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
-  {;
+  {
     id: "ai-powered-precision-agriculture",;
     name: "AI-Powered Precision Agriculture",;
     tagline: "Intelligent farming with AI-powered crop monitoring and optimization",;
@@ -90,9 +89,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     launchDate: "2025-01-09",;
     customers: 234,;
     rating: 4.8,;
-    reviews: 178;,;,
-},;
-  {;
+    reviews: 178},;
+  {
     id: "quantum-agriculture-optimization",;
     name: "Quantum Agriculture Optimization",;
     tagline: "Quantum-powered agriculture optimization for crop planning and resource allocation",;
@@ -135,9 +133,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     launchDate: "2025-01-15",;
     customers: 34,;
     rating: 4.6,;
-    reviews: 26;,;,
-},;
-  {;
+    reviews: 26},;
+  {
     id: "ai-powered-food-safety-monitoring",;
     name: "AI-Powered Food Safety Monitoring",;
     tagline: "Intelligent food safety monitoring with AI-powered contamination detection and quality control",;
@@ -180,9 +177,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     launchDate: "2025-01-20",;
     customers: 189,;
     rating: 4.7,;
-    reviews: 145;,;,
-},;
-  {;
+    reviews: 145},;
+  {
     id: "blockchain-food-traceability",;
     name: "Blockchain Food Traceability",;
     tagline: "Transparent food traceability with blockchain technology and supply chain tracking",;
@@ -225,9 +221,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     launchDate: "2025-01-26",;
     customers: 89,;
     rating: 4.5,;
-    reviews: 67;,;,
-},;
-  {;
+    reviews: 67},;
+  {
     id: "ai-powered-vertical-farming",;
     name: "AI-Powered Vertical Farming",;
     tagline: "Intelligent vertical farming with AI-powered climate control and crop optimization",;

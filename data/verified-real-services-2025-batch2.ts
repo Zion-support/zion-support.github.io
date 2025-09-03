@@ -1,4 +1,4 @@
-export interface VerifiedRealService2025Batch2 {;
+export interface VerifiedRealService2025Batch2 {
   id: string;
   name: string;
   tagline: string;
@@ -8,11 +8,11 @@ export interface VerifiedRealService2025Batch2 {;
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [;
-  {;
+  {
     id: "ai-quality-assurance",;
     name: "AI Quality Assurance Platform",;
     tagline: "Automated testing and quality control",;
@@ -28,7 +28,7 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     link: "/services/ai-quality-assurance",;
     category: "Verified Services 2025",;
     realImplementation: true,;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709";

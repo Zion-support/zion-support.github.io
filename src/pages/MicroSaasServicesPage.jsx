@@ -1,6 +1,6 @@
 import React from 'react';
-;
-;
+
+
 ;import { Building, Users, BarChart3, MessageSquare, Calendar, FileText, CreditCard, Globe, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, BarChart, Shield, Zap } from "lucide-react";
 export {};
   return null;
@@ -32,12 +32,10 @@ export {};
 "";
                 starter: "$29/month","";
                 professional: "$79/month","";
-                enterprise: "$199/month"";,
-},"";
+                enterprise: "$199/month""},"";
             freeTrial: "14 days",;
             rating: 4.8,;
-            reviewCount: 342;,
-},;
+            reviewCount: 342},;
         {}
 ";
 "";
@@ -64,12 +62,10 @@ export {};
 "";
                 starter: "$19/month","";
                 professional: "$49/month","";
-                enterprise: "$99/month"";,
-},"";
+                enterprise: "$99/month""},"";
             freeTrial: "30 days",;
             rating: 4.7,;
-            reviewCount: 267;,
-},;
+            reviewCount: 267},;
         {}
 ";
 "";
@@ -96,8 +92,7 @@ export {};
 "";
                 starter: "$39/month","";
                 professional: "$89/month","";
-                enterprise: "$199/month"";,
-},"";
+                enterprise: "$199/month""},"";
             freeTrial: "21 days",;
             rating: 4.9,;
             reviewCount: 189;,
@@ -208,8 +203,7 @@ export {};
 },;
             freeTrial: "14 days",;
             rating: 4.7,;
-            reviewCount: 234;,
-}
+            reviewCount: 234}
     ];
     const categories = ["All Services",;
         "Business Tools",;
@@ -248,13 +242,12 @@ export {};
         filtered.sort((a, b) => {};
 }
         }) ;
-        setFilteredServices(filtered) ;,
-}, [selectedCategory, selectedPricing, searchQuery, sortBy]) ;
+        setFilteredServices(filtered) }, [selectedCategory, selectedPricing, searchQuery, sortBy]) ;
     const ServiceCard = ({ service }) => (<div className="group relative bg-gradient - to - br from - zion - blue - dark / 50 to - zion - slate - dark / 50 border border-zion - blue - light / 20 rounded-2xl p - 6 hover:border-zion - purple / 50 transition - all duration - 500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion -purple / 20">;
       {/* Featured Badge */}
       {};
         </div>) }
-;
+
       {/* Service Image */}
       <div className="relative mb-6 overflow-hidden rounded-xl">;
         <img src={service.images[0]} alt={service.title} className="w-full h-48 object - cover group - hover:scale - 110 transition - transform duration -500"/>;
@@ -273,8 +266,7 @@ export {};
         </div>;
       </div > import React, {useState} from 'react';
             SERVICE_CATEGORIES,;
-            type} MicroSaasService;,
-} from '@/data / microSaasServices';
+            type} MicroSaasService} from '@/data / microSaasServices';
             Clock,;
             Users,;
             Zap,;
@@ -288,24 +280,21 @@ export {};
             MessageCircle,;
             ArrowRight,;
             Sparkles} from 'lucide - react';
-;
+
   const [selectedCategory, setSelectedCategory] = useState < string> ('all') ;
   const [searchQuery, setSearchQuery] = useState < string> ('') ;
-;
+
   const filteredServices = MICRO_SAAS_SERVICES.filter(service => {}
     const matchesSearch = service.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
                          service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
                          service.tags.some(tag => tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
-    return matchesCategory && matchesSearch;,
-}) ;
-;
+    return matchesCategory && matchesSearch}) ;
+
   const formatPrice = (price: number, currency: string, model: string) => { /* empty */ }
     if(model === 'monthly') return `${currency}${price}/month`;
     if(model === 'yearly') return `${currency}${price}/year`;
     if(model === 'one - time') return `${currency}${price}`;
-    return `${currency}${price}`;,
-};
-;
+    return `${currency}${price}`}
   const ServiceCard = ({service}: {service}: MicroSaasService }) => (<Card className="group relative overflow-hidden border-0 bg-gradient - to - br from - zion - blue - dark / 50 to - zion - slate / 50 backdrop - blur - sm hover:from - zion - blue - dark / 70 hover:to - zion - slate / 70 transition - all duration - 500 hover:scale - 105 hover:shadow-2xl hover:shadow-zion -purple / 20">;
       <div className="absolute inset - 0 bg-gradient - to - r from - zion - purple / 5 to - zion - cyan / 5 opacity - 0 group - hover:opacity - 100 transition - opacity duration -500"></div>;
 
@@ -443,7 +432,7 @@ export {};
         </div>;
       </div>;
     </div>) ;
-;
+
   return (<div className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - blue - dark to - zion - slate -dark">;
       <SEO title="Micro SAAS Services - Zion Tech Group" description="Discover innovative micro SAAS services and solutions in AI, IT, and business automation.Transform your business with cutting - edge technology." keywords="micro SAAS, AI services, IT solutions, business automation, Zion Tech Group" canonical="https://ziontechgroup.com / micro - saas - services"/>;
 
@@ -594,14 +583,10 @@ export {};
         </div>;
       </div>;
     </div>)}
-;
 
-export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-;
-export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-;
-export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-;
-export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-;
-export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
+
+export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard }
+export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard }
+export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard }
+export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard }
+export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard }

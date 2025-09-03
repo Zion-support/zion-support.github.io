@@ -51,7 +51,7 @@ const AICustomerExperienceOrchestrator = () => {};
         <meta name="description" content="Revolutionary AI-powered customer experience platform that increases satisfaction by 45% and reduces churn by 60% through intelligent orchestration." />;
         <meta name="keywords" content="AI customer experience, customer journey, personalization, customer analytics, CX orchestration" />;
       </Head>;
-      ;
+
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-pink-600 via-purple-600 to-indigo-600 py-20 text-center">;
@@ -83,7 +83,7 @@ const AICustomerExperienceOrchestrator = () => {};
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Intelligent Customer Experience Features</h2>;
             <p className="text-gray-600 text-lg">AI-driven capabilities that create exceptional customer experiences across all touchpoints</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {};
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">;
@@ -104,7 +104,7 @@ const AICustomerExperienceOrchestrator = () => {};
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Customer Experience Results</h2>;
               <p className="text-gray-600 text-lg">Join 400+ companies that have transformed their customer experience with AI orchestration</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-2 gap-8">;
               <div>;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Key Benefits</h3>;
@@ -117,7 +117,7 @@ const AICustomerExperienceOrchestrator = () => {};
                   ))}
                 </ul>;
               </div>;
-              ;
+
               <div className="bg-white rounded-xl p-6 shadow-lg">;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Use Cases</h3>;
                 <ul className="space-y-3">;
@@ -139,7 +139,7 @@ const AICustomerExperienceOrchestrator = () => {};
             <h2 className="text-3xl font-bold text-gray-900 mb-4">AI-Powered Customer Journey Intelligence</h2>;
             <p className="text-gray-600 text-lg">Understand and optimize every step of your customer's journey</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-3 gap-8">;
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">;
@@ -148,7 +148,7 @@ const AICustomerExperienceOrchestrator = () => {};
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Journey Mapping</h3>;
               <p className="text-gray-600">AI automatically maps customer journeys across all touchpoints and identifies optimization opportunities.</p>;
             </div>;
-            ;
+
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">;
                 <Zap className="w-6 h-6 text-white" />;
@@ -156,7 +156,7 @@ const AICustomerExperienceOrchestrator = () => {};
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Real-time Personalization</h3>;
               <p className="text-gray-600">Dynamic personalization engine that adapts experiences in real-time based on customer behavior and preferences.</p>;
             </div>;
-            ;
+
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">;
                 <BarChart3 className="w-6 h-6 text-white" />;
@@ -174,7 +174,7 @@ const AICustomerExperienceOrchestrator = () => {};
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Flexible Pricing Plans</h2>;
               <p className="text-gray-600 text-lg">Choose the plan that scales with your customer base</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-3 gap-8">;
               {};
                 <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.name === 'Enterprise' ? 'border-2 border-pink-500 bg-pink-50' : 'border border-gray-200 bg-white'}`}>;
@@ -207,7 +207,7 @@ const AICustomerExperienceOrchestrator = () => {};
               <h2 className="text-3xl font-bold mb-4">Ready to Transform Customer Experience?</h2>;
               <p className="text-gray-300 text-lg">Contact our customer experience experts today</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-2 gap-8">;
               <div>;
                 <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>;
@@ -226,7 +226,7 @@ const AICustomerExperienceOrchestrator = () => {};
                   </div>;
                 </div>;
               </div>;
-              ;
+
               <div className="bg-white rounded-xl p-6">;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Start Your Free Trial</h3>;
                 <p className="text-gray-600 mb-4">Experience AI-powered customer orchestration with our 14-day free trial</p>;

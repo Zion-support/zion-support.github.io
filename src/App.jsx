@@ -7,7 +7,7 @@ import PerformanceOptimizer from './components/PerformanceOptimizer.tsx';
 import SEOEnhancer from './components/SEOEnhancer.tsx';
 import SecurityEnhancer from './components/SecurityEnhancer.tsx';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer.tsx';
-;
+
 // Lazy load components for better performance;
 const HomePage = lazy(() => import('./pages/home.tsx'));
 const ServicesPage = lazy(() => import('./pages/services.tsx'));
@@ -30,7 +30,6 @@ function App() {};
         <ChatAssistant />;
       </div>;
     </Router>;
-  );,
-}
-;
+  )}
+
 export default App;

@@ -14,12 +14,11 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {};
     {};
       growthRate: '150% annually'};
   ];
-;
+
     if(categoryId === 'all') return ultimateZionServices2025;
-    return ultimateZionServices2025.filter(service => service.category === categoryId) };
-;
+    return ultimateZionServices2025.filter(service => service.category === categoryId) }
   const selectedServices = getServicesByCategory(selectedCategory) ;
-;
+
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">;
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -141,7 +140,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {};
                   </div>;
                 </motion.div>;) }) () }          </div>;
         </section>) }
-;
+
       {/* Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div  className="max - w-7xl mx -auto">;
@@ -163,7 +162,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {};
                     {service.innovationLevel}
                   </div>";
                   <p className="text-sm text-purple-400 font-medium">;
-                    {service.category.replace('-',).toUpperCase()}
+                    {service.category.replace('-').toUpperCase()}
                   </p>;
                 </div>;
 
@@ -232,7 +231,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {};
                       </p>;
                     </div>;
                   </div>) }
-;
+
                 {/* Trial and Setup */}";
                 <div className="flex justify-between items-center mb-6 text-sm">";
                   <div className="text-center">";
@@ -295,5 +294,5 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {};
           </motion.div>;
         </div>;
       </section>;
-    </div>;) };
+    </div>;) }
 export default UltimateZionServicesMarketing;'"`;

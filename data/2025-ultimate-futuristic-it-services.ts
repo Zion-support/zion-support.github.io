@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface UltimateFuturisticITService {;
+export interface UltimateFuturisticITService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface UltimateFuturisticITService {;
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface UltimateFuturisticITService {;
   rating: number;
 export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [;
   // Zero-Trust Quantum Security Platform;
-  {;
+  {
     id: "zero-trust-quantum-security-platform",;
     name: "Zero-Trust Quantum Security Platform",;
     tagline: "Unbreakable security with quantum encryption and zero-trust architecture",;
@@ -76,21 +76,19 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     marketSize: "$45B cybersecurity market",;
     growthRate: "35% annual growth",;
     variant: "quantum-security-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum-secured zero-trust platform with advanced threat detection, behavioral analytics, and automated incident response.",;
     launchDate: "2024-12-01",;
     customers: 19,;
     rating: 4.9,;
-    reviews: 11;,;,
-},;
+    reviews: 11},;
   // Autonomous DevOps Platform;
-  {;
+  {
     id: "autonomous-devops-platform",;
     name: "Autonomous DevOps Platform",;
     tagline: "DevOps that runs itself with AI automation",;
@@ -128,21 +126,19 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     marketSize: "$8B DevOps market",;
     growthRate: "25% annual growth",;
     variant: "autonomous-devops-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Autonomous DevOps platform with AI-powered automation, self-healing systems, and predictive maintenance capabilities.",;
     launchDate: "2024-11-01",;
     customers: 34,;
     rating: 4.8,;
-    reviews: 18;,;,
-},;
+    reviews: 18},;
   // Quantum-Enhanced Cloud Infrastructure;
-  {;
+  {
     id: "quantum-enhanced-cloud-infrastructure",;
     name: "Quantum-Enhanced Cloud Infrastructure",;
     tagline: "Cloud infrastructure powered by quantum computing",;
@@ -180,21 +176,19 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     marketSize: "$480B cloud computing market",;
     growthRate: "25% annual growth",;
     variant: "quantum-cloud-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum-enhanced cloud infrastructure with quantum processing, quantum networking, and quantum-secured storage.",;
     launchDate: "2024-10-01",;
     customers: 12,;
     rating: 4.9,;
-    reviews: 7;,;,
-},;
+    reviews: 7},;
   // AI-Powered IT Asset Management;
-  {;
+  {
     id: "ai-powered-it-asset-management",;
     name: "AI-Powered IT Asset Management",;
     tagline: "Intelligent IT asset tracking and optimization",;
@@ -232,21 +226,19 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     marketSize: "$2B IT asset management market",;
     growthRate: "20% annual growth",;
     variant: "ai-itam-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "AI-powered IT asset management platform with automatic discovery, classification, and optimization capabilities.",;
     launchDate: "2024-09-01",;
     customers: 78,;
     rating: 4.7,;
-    reviews: 45;,;,
-},;
+    reviews: 45},;
   // Autonomous Network Management;
-  {;
+  {
     id: "autonomous-network-management",;
     name: "Autonomous Network Management",;
     tagline: "Networks that manage and optimize themselves",;
@@ -284,21 +276,19 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     marketSize: "$12B network management market",;
     growthRate: "30% annual growth",;
     variant: "autonomous-networking-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Autonomous network management platform with AI-powered monitoring, optimization, and self-healing capabilities.",;
     launchDate: "2024-08-01",;
     customers: 45,;
     rating: 4.8,;
-    reviews: 23;,;,
-},;
+    reviews: 23},;
   // Quantum-Secure Data Center;
-  {;
+  {
     id: "quantum-secure-data-center",;
     name: "Quantum-Secure Data Center",;
     tagline: "Ultra-secure data centers with quantum encryption",;
@@ -336,21 +326,19 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     marketSize: "$50B data center market",;
     growthRate: "20% annual growth",;
     variant: "quantum-datacenter-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum-secured data center platform with quantum encryption, zero-trust security, and high-performance computing capabilities.",;
     launchDate: "2024-07-01",;
     customers: 8,;
     rating: 4.9,;
-    reviews: 5;,;,
-},;
+    reviews: 5},;
   // AI-Powered IT Service Desk;
-  {;
+  {
     id: "ai-powered-it-service-desk",;
     name: "AI-Powered IT Service Desk",;
     tagline: "Intelligent IT support with AI automation",;
@@ -388,21 +376,19 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     marketSize: "$8B IT service management market",;
     growthRate: "25% annual growth",;
     variant: "ai-itsm-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "AI-powered IT service desk with automated ticket resolution, intelligent routing, and predictive problem prevention.",;
     launchDate: "2024-06-01",;
     customers: 67,;
     rating: 4.6,;
-    reviews: 34;,;,
-},;
+    reviews: 34},;
   // Quantum-Enhanced Backup & Recovery;
-  {;
+  {
     id: "quantum-enhanced-backup-recovery",;
     name: "Quantum-Enhanced Backup & Recovery",;
     tagline: "Ultra-secure backup with quantum encryption",;
@@ -440,21 +426,19 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     marketSize: "$15B backup and recovery market",;
     growthRate: "20% annual growth",;
     variant: "quantum-backup-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum-enhanced backup and recovery platform with quantum encryption, zero-knowledge security, and instant recovery capabilities.",;
     launchDate: "2024-05-01",;
     customers: 23,;
     rating: 4.8,;
-    reviews: 12;,;,
-},;
+    reviews: 12},;
   // Autonomous IT Compliance Platform;
-  {;
+  {
     id: "autonomous-it-compliance-platform",;
     name: "Autonomous IT Compliance Platform",;
     tagline: "Compliance management that runs itself",;
@@ -492,12 +476,11 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     marketSize: "$5B GRC market",;
     growthRate: "15% annual growth",;
     variant: "autonomous-compliance-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Autonomous compliance platform with AI-powered monitoring, automated reporting, and regulatory intelligence.",;
     launchDate: "2024-04-01",;

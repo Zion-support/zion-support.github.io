@@ -213,16 +213,11 @@ import {};
           </div>;
         </motion.div>;
       </div>;
-    </div>)};
-export default AIMarketingAutomation;,
-}}}}}}}}}
-;
-export { AIMarketingAutomation };
-;
-export { AIMarketingAutomation };
-;
-export { AIMarketingAutomation };
-;
-export { AIMarketingAutomation };
-;
-export { AIMarketingAutomation };
+    </div>)}
+export default AIMarketingAutomation}}}}}}}}}
+
+export { AIMarketingAutomation }
+export { AIMarketingAutomation }
+export { AIMarketingAutomation }
+export { AIMarketingAutomation }
+export { AIMarketingAutomation }

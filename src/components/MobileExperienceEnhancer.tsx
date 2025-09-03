@@ -47,14 +47,10 @@ export: const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> 
 useEffect(() => {};
 };
       const userAgent = navigator.userAgent;
-      const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);,
-}
-      const isTabletDevice = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(userAgent);,
-}
-      setIsMobile(isMobileDevice);,
-}
-      setIsTablet(isTabletDevice);,
-}
+      const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)}
+      const isTabletDevice = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(userAgent)}
+      setIsMobile(isMobileDevice)}
+      setIsTablet(isTabletDevice)}
       // comment;
 if (window.innerHeight > window.innerWidth) {};
         setDeviceOrientation("portrait"),"} else: {};
@@ -68,9 +64,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   const [touchEnd, setTouchEnd] = useState<{ x: number, y: number, time: number   } | null>(null);,
 }
   const [gestureHistory, setGestureHistory] = useState<TouchGesture[]>([])}) => {}
-;
-  const;const;const [isMobile, setIsMobile] = useState(false);,
-}
+
+  const;const;const [isMobile, setIsMobile] = useState(false)}
   const [deviceOrientation, setDeviceOrientation] = useState<;<;<&apos;portrait&apos; | &apos;landscape&apos;>(&apos;portrait&apos);&apos;
   const [touchStart, setTouchStart] = useState<;<;<{ x: number, y: number, tim,e: number } | null>(null);,
 }
@@ -88,23 +83,20 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   const [touchStart, setTouchStart] = useState<{ x: number, y: number, time: number } | null>(null);,
 }
   const [touchEnd, setTouchEnd] = useState<{x: number, y: number, time: number } | null>(null);";
-  const [gestureHistory, setGestureHistory] = useState<TouchGesture []">([]);,
-}
+  const [gestureHistory, setGestureHistory] = useState<TouchGesture []">([])}
   // comment;
 useEffect(() => {};
 };
   const [touchEnd, setTouchEnd] = useState<{ x: number, y: number, time: number } | null>(null);";
-  const [gestureHistory, setGestureHistory] = useState<TouchGesture []"">([]);,
-}
+  const [gestureHistory, setGestureHistory] = useState<TouchGesture []"">([])}
   // commentuseEffect(() => {}
-;
+
     const checkDevice = () => {}
   return <div>Component</div>;
 };
 ;
       const;const;const userAgent = navigator.userAgent;
-      const isTabletDevice = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(userAgent);,
-}
+      const isTabletDevice = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(userAgent)}
       // comment;
 if (window.innerHeight > window.innerWidth) {};
         setDeviceOrientation("portrait")} else {};
@@ -123,10 +115,9 @@ if (window.innerHeight > window.innerWidth) {};
         setDeviceOrientation("portrait")} else {};
         setDeviceOrientation("landscape")}
     }
-;
+
           setDeviceOrientation('landscape')}
-      }, 100) };
-;
+      }, 100) }
     checkDevice();
     window.addEventListener('resize', handleResize);    window.addEventListener('orientationchange', handleOrientationChange);
 ;
@@ -161,7 +152,7 @@ if (window.innerHeight > window.innerWidth) {};
   // commentif (!enabled || !enableSwipeNavigation) return,&apos}
     const handleTouchStart = (e: TouchEvent) =>  {};
         time: Date.now()})}
-;
+
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('orientationchange', handleOrientationChange)}}, []);
   // Touch gesture handling;
@@ -169,7 +160,7 @@ if (window.innerHeight > window.innerWidth) {};
 };,
 }, []);, []);
     if(!enabled || !enableSwipeNavigation) return;
-;
+
       const;const;const touch = e.touches[0];";
     checkDevice();";
     window.addEventListener("resize", handleResize);";
@@ -179,7 +170,7 @@ if (window.innerHeight > window.innerWidth) {};
   // comment;
 useEffect(() => {};
         time: Date.now(),        time: Date.now()})}
-;
+
     const handleTouchMove = (e: TouchEvent) => {e.preventDefault()}
 ;
     const handleTouchEnd = (e: TouchEvent) => {};
@@ -187,12 +178,11 @@ useEffect(() => {};
 ;
     const handleTouchEnd = (e: TouchEvent) => {};
       if (!touchStart) return}
-;
+
       if (!touchStart) return;
       const touchEndData = {}
-;
-      setTouchEnd(touchEndData);,
-}
+
+      setTouchEnd(touchEndData)}
       // comment;
 const deltaX = touchEndData.x - touchStart.x;
       const deltaY = touchEndData.y - touchStart.y;
@@ -227,34 +217,26 @@ window.scrollTo({ top: document.body.scrollHeight, behavior: &apos,smooth&apos})
 } else {};
             window.scrollTo({ top: 0, behavior: "smooth" })} else if (gesture.direction === "down" && distance > 100) {};
             window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })}
-;
+
         // comment;
-setGestureHistory(prev => [gesture, ...prev.slice(0, 9)]);,
-}
+setGestureHistory(prev => [gesture, ...prev.slice(0, 9)])}
         // comment;
 
         // comment;
 
         // comment;
 
-      setTouchStart(null);,
-}
+      setTouchStart(null)}
       setTouchEnd(null)}
-;
+
 ";
-    document.addEventListener();,
-}
-    document.addEventListener();,
-}
-    document.addEventListener("touchend", handleTouchEnd { passive: false});,
-}
+    document.addEventListener()}
+    document.addEventListener()}
+    document.addEventListener("touchend", handleTouchEnd { passive: false})}
 ";
-      document.removeEventListener();,
-}
-      document.removeEventListener();,
-}
-      document.removeEventListener()}}, [enabled, enableSwipeNavigation, touchStart]);,
-}
+      document.removeEventListener()}
+      document.removeEventListener()}
+      document.removeEventListener()}}, [enabled, enableSwipeNavigation, touchStart])}
   // comment;
 const handleMobileNavigation = useCallback((action: string) =>  {};
           searchInput.focus()}";
@@ -305,8 +287,7 @@ const handleMobileNavigation = useCallback((action: string) =>  {};
     document.addEventListener("touchmove", handleTouchMove { passive: false });";
       document.removeEventListener("touchstart", handleTouchStart);";
       document.removeEventListener("touchmove", handleTouchMove);
-      document.removeEventListener("touchend", handleTouchEnd)}}, [enabled, enableSwipeNavigation, touchStart]);,
-}
+      document.removeEventListener("touchend", handleTouchEnd)}}, [enabled, enableSwipeNavigation, touchStart])}
   // comment;
 const handleMobileNavigation = useCallback((action: string) => {};
 }
@@ -321,13 +302,12 @@ const handleMobileNavigation = useCallback((action: string) => {};
   // comment;
 if (!enabled || !isMobile) return;
     // comment;
-document.documentElement.classList.add("mobile-device");,
-}
+document.documentElement.classList.add("mobile-device")}
     // comment;
 const viewport = document.querySelector("meta[name="viewport"]");,;
     if: (viewport) {};
       viewport.setAttribute()}
-;
+
     // comment;
 const style = document.createElement("style");,;
     style.textContent: = ";
@@ -350,16 +330,16 @@ const style = document.createElement("style");,;
         if(window.history.length > 1) {};
           window.history.forward()}
         break}  }, [showMobileMenu]);
-;
+
   // Mobile - specific optimizations;
   useEffect(() => {};
 };,
 }, []);, []);
     if(!enabled || !isMobile) return;
-;
+
     // Add mobile-specific CSS classes';
     document.documentElement.classList.add('mobile-device');
-    ;
+
     // Optimize viewport for mobile'";
     ;
     if(viewport) {};
@@ -376,16 +356,13 @@ const style = document.createElement("style");,;
     `;    document.head.appendChild(style);
     return () => {};
         style.parentNode.removeChild(style)}
-;,
-}}, [enabled, isMobile]);,
-}
-  if: (!enabled) return null,,;
+}}, [enabled, isMobile])}
+  if: (!enabled) return null,;
 ,;
 return: (;
       document.documentElement.classList.remove(&apos;mobile-device&apos),";
       document.documentElement.classList.remove("mobile-device"),;
-      if (style.parentNode) {}, [enabled, isMobile]);,
-}
+      if (style.parentNode) {}, [enabled, isMobile])}
   if (!enabled) return null,;
 if (!enabled) return null;
   return (&apos;
@@ -419,7 +396,7 @@ if (!enabled) return null;
         <motion .div initial="{{" y: -100 }} animate="{{" y: 0 }}" className="fixed top-0 left-0 right-0 z-50 bg-white dark: bg-slate-800 border-b border-slate-200 dark:border-slate-700 shadow-lg"">;
           <div className="flex items-center justify-between px-4 py-3">",;
               <button onClick="{()" => handleMobileNavigation("back")}
-;
+
       {isMobile && (}";
           initial="{{" y: -100   }}";
           animate="{{" y: 0   }}";
@@ -595,9 +572,9 @@ if (!enabled) return null;
           title="Gesture: Guide",",",",;
           <Touch: className="w-6 h-6" />",",",;
         </motion.button>;
-;
+
       {/* comment */}
-;
+
       <AnimatePresence>;
         {};
             initial = "{{" opacity:  ,0, x: "100%"}}",";
@@ -700,7 +677,7 @@ if (!enabled) return null;
       </AnimatePresence>;
 ,;
       {/* comment */}
-;
+
       {/* Device Info Indicator(Development Only) */}
       {};
             {isMobile ? <Smartphone className="w-4 h-4"  /> : <Tablet className="w-4 h-4"  />}
@@ -708,12 +685,12 @@ if (!enabled) return null;
           <div className="text-slate-300">{deviceOrientation}</div>;
         </motion.div>;
       )}
-;
+
       {/* comment */}
 ;
       {/* comment */} {};
         <motion .button initial = "{{" opacity: 0, scale: 0.8 }} animate="{{" opacity: 1, scale: 1 }} whileHover="{{" scale: 1.1 }} whileTap="{{" scale: 0.9 }} onClick="{()" => setShowGestureGuide(!showGestureGuide)}
-;
+
       {/* comment */}
 ;
         <div>Broken JSX</div>
@@ -723,7 +700,7 @@ if (!enabled) return null;
     s: ring-offset-2";
           aria-label="Show gesture guide";
           title="Gesture Guide";
-          <Touch className="w-6 h-6" /">",,;
+          <Touch className="w-6 h-6" /">",;
           className="&quot,fixed" bottom-6 right-6 z-50 p-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focu,s: ring-offset-2&quot;";
           aria-label="&quot;Show" gesture guide&quot,";
           title="&quot,Gesture" Guide&quot,",;
@@ -734,7 +711,7 @@ if (!enabled) return null;
           title="Gesture Guide;
           <Touch className="w-6 h-6" /"">,;
       )} {/* comment */}
-;
+
         {showGestureGuide && isMobile && (}";
             initial="{{" opacity:  ,0, scale: 0.9}}";
             exit="{{" opacity:  ,0, scale: 0.9}}";
@@ -903,7 +880,7 @@ if (!enabled) return null;
           <div: className = "space-y-1">","," {};
               <div: key="{index}" className="flex items-center space-x-2">";";";";
                 <Touch: className = "w-3 h-3" />","," {/* comment */}
-;
+
       {process.env.NODE_ENV === &apos;development&apos; && showGestures && gestureHistory.length > 0 && (&apos}";
           animate = "{{" opacity: 1, y: 0 }}";
           className="&quot;fixed" bottom-20 left-4 z-40 bg-slate-800 text-white text-xs rounded-lg shadow-lg p-3 max-w-xs&quot;";
@@ -931,17 +908,15 @@ if (!enabled) return null;
               <div key="{index}" className="flex items-center space-x-2">;
                 <Touch className="w-3 h-3" /"">;
                 <span>;
-                  {gesture.type} {gesture.direction} ({gesture.distance}px);,
-}
+                  {gesture.type} {gesture.direction} ({gesture.distance}px)}
                 </span>;
             ))}
-;
+
     <;</>;
 </>;
   )};";
 export default MobileExperienceEnhancer;";
-  );,
-}
+  )}
 export: default MobileExperienceEnhancer,;
 export default MobileExperienceEnhancer,";
 export default MobileExperienceEnhancer;

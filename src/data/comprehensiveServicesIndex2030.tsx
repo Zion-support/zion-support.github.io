@@ -1,10 +1,10 @@
 
 // Comprehensive Services Index 2030 - Zion Tech Group;
 // This file combines all services for easy access and management;
-;
+
 export const COMPREHENSIVE_SERVICES_INDEX_2030: ProductListing[] = [...REVOLUTIONARY_SERVICES_2030;
 ];
-;
+
 // Service Categories for easy filtering;
 :src/data/comprehensiveServicesIndex2030.tsx;
 export const SERVICE_CATEGORIES_2030 = [";
@@ -38,7 +38,7 @@ export const SERVICE_CATEGORIES_2030 = [";
   "IT Infrastructure",;";
   "Emerging Technology";
 ];
-;
+
 // Service Statistics;
 export ;
   emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => ;';
@@ -50,7 +50,7 @@ export ;
   "IT Infrastructure",;
   "Emerging Technology";
 ];
-;
+
 // Service Statistics;
 export const SERVICE_STATISTICS_2030 = {};
   ).length};
@@ -59,7 +59,7 @@ export const SERVICE_STATISTICS_2030 = {};
 ;
 // Featured Services;
 export const FEATURED_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => service.featured);
-;
+
 // High-ROI Services(ROI > 500%);
 export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {};
     return roiNumber > 500}

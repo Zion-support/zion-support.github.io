@@ -118,16 +118,11 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {}
           </a>;
         </motion.p>;
       </motion.div>;
-    </div>)};
-export default NotFound;,
-}
-;
-export { NotFound };
-;
-export { NotFound };
-;
-export { NotFound };
-;
-export { NotFound };
-;
-export { NotFound };
+    </div>)}
+export default NotFound}
+
+export { NotFound }
+export { NotFound }
+export { NotFound }
+export { NotFound }
+export { NotFound }

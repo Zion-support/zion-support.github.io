@@ -17,7 +17,7 @@ export {};
     name: 'Advanced Search',''';
     description:'''';
       'Quickly locate products, services and talent using intelligent search filters.',''';
-    url: 'https://app.ziontechgroup.com/features/search'};
+    url: 'https://app.ziontechgroup.com/features/search'}
   return();
     <>;
       <div>Broken JSX</div>
@@ -75,14 +75,10 @@ export {};
       </main>;
       <Footer />;
     </>)}
-;
 
-export { SearchFeature };
-;
-export { SearchFeature };
-;
-export { SearchFeature };
-;
-export { SearchFeature };
-;
-export { SearchFeature };
+
+export { SearchFeature }
+export { SearchFeature }
+export { SearchFeature }
+export { SearchFeature }
+export { SearchFeature }

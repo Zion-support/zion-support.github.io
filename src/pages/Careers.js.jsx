@@ -18,7 +18,6 @@ export {};
                 department: "Engineering","";
                 description: "Join our frontend team to build beautiful, responsive,"";
   and accessible user interfaces for our AI-powered marketplace.";
-;,
 },;
             {}
 ";
@@ -27,8 +26,7 @@ export {};
                 location: "San Francisco, CA",;"";
                 type: "Full-time",;"";
                 department: "Engineering",;"";
-                description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems.";,
-},;
+                description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems."},;
             {}
 ";
 "";
@@ -36,8 +34,7 @@ export {};
                 location: "Remote",;"";
                 type: "Full-time",;"";
                 department: "Engineering",;"";
-                description: "Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL.";,
-}
+                description: "Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL."}
         ],;
         product = [];
             {}
@@ -47,8 +44,7 @@ export {};
                 location: "New York, NY","";
                 type: "Full-time","";
                 department: "Product","";
-                description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients.";,
-},;
+                description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."},;
             {}
 ";
 "";
@@ -56,8 +52,7 @@ export {};
                 location: "Remote","";
                 type: "Full-time","";
                 department: "Product","";
-                description: "Create intuitive and engaging user experiences that make complex technology accessible to all users.";,
-}
+                description: "Create intuitive and engaging user experiences that make complex technology accessible to all users."}
         ],;
         marketing = [];
             {}
@@ -67,8 +62,7 @@ export {};
                 location: "Remote","";
                 type: "Full-time","";
                 department: "Marketing","";
-                description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace.";,
-},;
+                description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."},;
             {}
 ";
 "";
@@ -76,8 +70,7 @@ export {};
                 location: "London, UK","";
                 type: "Full-time","";
                 department: "Marketing","";
-                description: "Develop compelling content that educates and inspires our audience about the future of AI and technology.";,
-}
+                description: "Develop compelling content that educates and inspires our audience about the future of AI and technology."}
         ],;
         operations = [];
             {}
@@ -87,8 +80,7 @@ export {};
                 location: "Remote","";
                 type: "Full-time","";
                 department: "Operations","";
-                description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts.";,
-},;
+                description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts."},;
             {}
 ";
 "";
@@ -96,10 +88,8 @@ export {};
                 location: "Remote","";
                 type: "Full-time","";
                 department: "Operations","";
-                description: "Help connect the right talent with the right opportunities on our platform through personalized matching.";,
-}
-        ];,
-};
+                description: "Help connect the right talent with the right opportunities on our platform through personalized matching."}
+        ]}
     // Benefits list;
     const benefits = [];
         {}
@@ -109,8 +99,7 @@ export {};
             description: "Remote-first culture with flexible hours to support your productivity and work-life balance.","";
             icon: (<svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">"";
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>;
-        </svg>);,
-},;
+        </svg>)},;
         {}
 ";
 "";
@@ -118,8 +107,7 @@ export {};
             description: "Comprehensive health insurance and wellness programs to keep you at your best.","";
             icon: (<svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">"";
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>;
-        </svg>);,
-},;
+        </svg>)},;
         {}
 ";
 "";
@@ -127,8 +115,7 @@ export {};
             description: "Education stipends and dedicated learning time to help you grow professionally.","";
             icon: (<svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">"";
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>;
-        </svg>);,
-},;
+        </svg>)},;
         {}
 ";
 "";
@@ -136,8 +123,7 @@ export {};
             description: "Salary packages that recognize your value, plus equity options to share in our success.","";
             icon: (<svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">"";
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>;
-        </svg>);,
-}
+        </svg>)}
     ];";
     return (<>"";
       <SEO title="Careers at Zion - Join Our Team" description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform." keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs" canonical="https://ziontechgroup.com/careers"/>"";
@@ -232,14 +218,10 @@ export {};
         </div>;
       </main>;
     </>)}
-;
 
-export { Careers };
-;
-export { Careers };
-;
-export { Careers };
-;
-export { Careers };
-;
-export { Careers };
+
+export { Careers }
+export { Careers }
+export { Careers }
+export { Careers }
+export { Careers }

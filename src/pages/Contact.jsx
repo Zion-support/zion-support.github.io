@@ -9,7 +9,7 @@ export default function Contact() {};
 });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-;
+
   const contactMethods = [;
     {};
 },;
@@ -20,7 +20,7 @@ export default function Contact() {};
     {};
 }
   ];
-;
+
   const services = [;
     "AI & Machine Learning",;
     "Cloud Solutions",;
@@ -254,14 +254,10 @@ export default function Contact() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
 
-export { Contact };
-;
-export { Contact };
-;
-export { Contact };
-;
-export { Contact };
+
+export { Contact }
+export { Contact }
+export { Contact }
+export { Contact }

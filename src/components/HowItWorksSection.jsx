@@ -25,7 +25,5 @@ export const HowItWorksSection = () => {};
         </div>;
       </div>;
     </section>;
-  );,
-};
-  );,
-}
+  )}
+  )}

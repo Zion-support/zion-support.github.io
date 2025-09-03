@@ -23,14 +23,10 @@ import React from "react"; "export { function };export default function PostCard
         </div>;
       </div>;
     </div>)}
-;
 
-export { PostCard };
-;
-export { PostCard };
-;
-export { PostCard };
-;
-export { PostCard };
-;
-export { PostCard };
+
+export { PostCard }
+export { PostCard }
+export { PostCard }
+export { PostCard }
+export { PostCard }

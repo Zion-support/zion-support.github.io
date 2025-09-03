@@ -14,7 +14,7 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
         const handleClickOutside = (event) => {}
             if (menuRef.current && !menuRef.current.contains(event.target)) {}
                 onToggle()}
-        };
+        }
         if (isOpen) {}
 ';
 '';
@@ -41,8 +41,7 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
                 { label: 'Cloud Services', href: '/services/cloud' },''';
                 { label: 'Digital Transformation', href: '/services/transformation' },''';
                 { label: 'Consulting', href: '/services/consulting' }
-            ];,
-},;
+            ]},;
         {}
 ';
 '';
@@ -54,8 +53,7 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
                 { label: 'Startup Solutions', href: '/solutions/startup' },''';
                 { label: 'Government Solutions', href: '/solutions/government' },''';
                 { label: 'Healthcare Solutions', href: '/solutions/healthcare' }
-            ];,
-},;
+            ]},;
         {}
 ';
 '';
@@ -68,8 +66,7 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
                 { label: 'Finance', href: '/industries/finance' },''';
                 { label: 'Manufacturing', href: '/industries/manufacturing' },''';
                 { label: 'Education', href: '/industries/education' }
-            ];,
-},;
+            ]},;
         {}
 ';
 '';
@@ -86,13 +83,12 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
 
     ];
     const toggleDropdown = (label) => {}
-        setActiveDropdown(activeDropdown === label ? null : label)};
+        setActiveDropdown(activeDropdown === label ? null : label)}
     const handleSearch = (e) => {}
         e.preventDefault();';
         // Implement search functionality'';
-        // // // // // // // // console.log('Search query:', searchQuery);,
-};';
-        // console.log('Search query:', searchQuery)};
+        // // // // // // // // console.log('Search query:', searchQuery)};';
+        // console.log('Search query:', searchQuery)}
     const menuVariants = {}
   closed: {}
 ';
@@ -102,24 +98,21 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
             opacity: 0,;
             transition: {}
                 duration: 0.3,';
-  ease: 'easeInOut';,
-}
+  ease: 'easeInOut'}
         },;
         open: {}
             x: 0,;
             opacity: 1,;
             transition: {}
                 duration: 0.3,';
-                ease: 'easeInOut';,
-};
+                ease: 'easeInOut'}
     const dropdownVariants = {}
   closed: {}
             height: 0,;
             opacity: 0,;
             transition: {}
                 duration: 0.2,';
-  ease: 'easeInOut';,
-}
+  ease: 'easeInOut'}
         },;
         open: {}
 ';
@@ -129,8 +122,7 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
             opacity: 1,;
             transition: {}
                 duration: 0.2,';
-                ease: 'easeInOut';,
-};
+                ease: 'easeInOut'}
     return (<AnimatePresence>;
       {};
           {/* Backdrop */}
@@ -225,16 +217,11 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
             </div>;
           </motion.div>;
         </>)}
-    </AnimatePresence>)};
-export default MobileNavigation;,
-}}}}}}}}}</motion.div>}
-;
-export { MobileNavigation };
-;
-export { MobileNavigation };
-;
-export { MobileNavigation };
-;
-export { MobileNavigation };
-;
-export { MobileNavigation };
+    </AnimatePresence>)}
+export default MobileNavigation}}}}}}}}}</motion.div>}
+
+export { MobileNavigation }
+export { MobileNavigation }
+export { MobileNavigation }
+export { MobileNavigation }
+export { MobileNavigation }

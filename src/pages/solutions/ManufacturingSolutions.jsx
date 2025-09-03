@@ -159,15 +159,10 @@ import {};
           </motion.div>;
         </div>;
       </section>;
-    </div>);,
-}}}}
-;
-export { ManufacturingSolutions };
-;
-export { ManufacturingSolutions };
-;
-export { ManufacturingSolutions };
-;
-export { ManufacturingSolutions };
-;
-export { ManufacturingSolutions };
+    </div>)}}}}
+
+export { ManufacturingSolutions }
+export { ManufacturingSolutions }
+export { ManufacturingSolutions }
+export { ManufacturingSolutions }
+export { ManufacturingSolutions }

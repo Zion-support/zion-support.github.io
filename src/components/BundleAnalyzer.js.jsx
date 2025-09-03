@@ -15,7 +15,7 @@ export default function Page() {};
                     'Consolidate empty vendor chunks(stripe-vendor, pdf-vendor),Consider code splitting for ServicesOverview page',Optimize animation-vendor bundle size',Implement tree shaking for unused dependencies',Add bundle size monitoring to CI/CD pipeline';
                 ],;
                 score: 78,;
-                lastUpdated: new Date () };
+                lastUpdated: new Date () }
             setAnalysis(mockAnalysis) }
         catch(error) {};
             // console.error('Bundle analysis failed:', error)}
@@ -36,7 +36,7 @@ export default function Page() {};
     };
     const getOptimizationIcon = (optimization) => {};
             default: return <Info className="w-4 h-4"/>}
-    };
+    }
     if(!analysis) return null;
     return (<>;
       {/* Bundle Analyzer Button */}";
@@ -134,7 +134,7 @@ export default function Page() {};
                     </button>;
                   </div>;
                 </div>) }
-;
+
               {/* Chunks Tab */}'";
               {};
                   {analysis.chunks.map((chunk, index) => (<div key={index} className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">";
@@ -166,7 +166,7 @@ export default function Page() {};
                         </div>) }
                     </div>) ) }
                 </div>) }
-;
+
               {/* Recommendations Tab */}'";
               {};
                   {analysis.recommendations.map((recommendation, index) => (<div key={index} className="p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">";
@@ -198,5 +198,5 @@ export default function Page() {};
             </div>;
           </motion.div>) }
       </AnimatePresence>;
-    </>)};
+    </>)}
 '"`

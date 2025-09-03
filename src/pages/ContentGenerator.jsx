@@ -25,11 +25,11 @@ export default function Page() {};
             if(error) throw error;
             // // // // // // // console.error("Error sending test newsletter:", error) ;
             toast.error("Failed to send test newsletter.Please try again.") ;
-;
+
             toast.success(`Test newsletter sent to ${testEmail}!`) }
         catch(error) {};
             toast.error("Failed to send test newsletter.Please try again.") }
-    };
+    }
     // Check if user is still loading;
     if(isLoading) {};
       </>) }
@@ -206,17 +206,13 @@ export default function Page() {};
           </div>;
         </div>;
       </div>;
-      ;
-    </>)}
-;
 
-export { ContentGenerator };
-;
-export { ContentGenerator };
-;
-export { ContentGenerator };
-;
-export { ContentGenerator };
-;
-export { ContentGenerator };
+    </>)}
+
+
+export { ContentGenerator }
+export { ContentGenerator }
+export { ContentGenerator }
+export { ContentGenerator }
+export { ContentGenerator }
 }

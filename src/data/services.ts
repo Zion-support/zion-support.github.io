@@ -25,10 +25,9 @@ export const microSAASServices = [;
   {};
 },;
     link: '/services/ai-customer-support-automation',;
-    category: 'Customer Service';,
-}
+    category: 'Customer Service'}
 ];
-;
+
 export const itServices = [;
   {};
 },;
@@ -53,10 +52,9 @@ export const itServices = [;
   {};
 },;
     link: '/services/it-onsite-services',;
-    category: 'Support Services';,
-}
+    category: 'Support Services'}
 ];
-;
+
 export const aiServices = [;
   {};
 },;
@@ -81,16 +79,15 @@ export const aiServices = [;
   {};
 },;
     link: '/services/ai-quantum-hybrid-platform',;
-    category: 'Quantum AI';,
-}
+    category: 'Quantum AI'}
 ];
-;
+
 export const allServices = [;
   ...microSAASServices,;
   ...itServices,;
   ...aiServices;
 ];
-;
+
 export const serviceCategories = [;
   {};
 },;
@@ -99,7 +96,7 @@ export const serviceCategories = [;
   {};
 }
 ];
-;
+
 export const industrySolutions = [;
   {};
 },;

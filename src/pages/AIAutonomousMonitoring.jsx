@@ -272,16 +272,12 @@ const AIAutonomousMonitoring = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default AIAutonomousMonitoring;
-;
 
-export { AIAutonomousMonitoring };
-;
-export { AIAutonomousMonitoring };
-;
-export { AIAutonomousMonitoring };
-;
-export { AIAutonomousMonitoring };
-;
+
+export { AIAutonomousMonitoring }
+export { AIAutonomousMonitoring }
+export { AIAutonomousMonitoring }
+export { AIAutonomousMonitoring }
 export { AIAutonomousMonitoring };)

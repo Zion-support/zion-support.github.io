@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface UltimateRealMicroSaasService {;
+export interface UltimateRealMicroSaasService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface UltimateRealMicroSaasService {;
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface UltimateRealMicroSaasService {;
   rating: number;
 export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] = [;
   // AI-Powered Customer Success Platform;
-  {;
+  {
     id: "ai-customer-success-platform",;
     name: "AI Customer Success Platform",;
     tagline: "Predict and prevent churn with AI-powered customer insights",;
@@ -76,21 +76,19 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     marketSize: "$1.2B Customer Success market",;
     growthRate: "25% annual growth",;
     variant: "ai-customer-success-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Cloud-native SaaS platform with AI algorithms for customer behavior analysis, churn prediction, and automated success workflows.",;
     launchDate: "2024-12-01",;
     customers: 67,;
     rating: 4.9,;
-    reviews: 34;,;,
-},;
+    reviews: 34},;
   // Intelligent Supply Chain Optimization Platform;
-  {;
+  {
     id: "intelligent-supply-chain-optimization",;
     name: "Intelligent Supply Chain Optimization",;
     tagline: "Optimize your supply chain with AI and real-time analytics",;
@@ -128,21 +126,19 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     marketSize: "$15.8B Supply Chain Management market",;
     growthRate: "18% annual growth",;
     variant: "supply-chain-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade SaaS platform with AI algorithms for supply chain optimization, real-time monitoring, and predictive analytics.",;
     launchDate: "2024-11-15",;
     customers: 89,;
     rating: 4.8,;
-    reviews: 56;,;,
-},;
+    reviews: 56},;
   // AI Financial Planning Platform;
-  {;
+  {
     id: "ai-financial-planning-platform",;
     name: "AI Financial Planning Platform",;
     tagline: "Intelligent financial planning and forecasting for modern businesses",;
@@ -180,21 +176,19 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     marketSize: "$3.2B Financial Planning market",;
     growthRate: "22% annual growth",;
     variant: "financial-planning-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Cloud-native SaaS platform with AI algorithms for financial forecasting, automated planning, and intelligent financial insights.",;
     launchDate: "2024-10-15",;
     customers: 123,;
     rating: 4.7,;
-    reviews: 78;,;,
-},;
+    reviews: 78},;
   // Intelligent HR Analytics Platform;
-  {;
+  {
     id: "intelligent-hr-analytics-platform",;
     name: "Intelligent HR Analytics Platform",;
     tagline: "Transform HR data into actionable insights with AI",;
@@ -232,21 +226,19 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     marketSize: "$2.8B HR Analytics market",;
     growthRate: "20% annual growth",;
     variant: "hr-analytics-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise SaaS platform with AI algorithms for HR analytics, predictive modeling, and intelligent workforce insights.",;
     launchDate: "2024-09-01",;
     customers: 156,;
     rating: 4.8,;
-    reviews: 92;,;,
-},;
+    reviews: 92},;
   // AI Sales Intelligence Platform;
-  {;
+  {
     id: "ai-sales-intelligence-platform",;
     name: "AI Sales Intelligence Platform",;
     tagline: "Supercharge your sales with AI-powered intelligence and automation",;
@@ -284,21 +276,19 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     marketSize: "$4.5B Sales Intelligence market",;
     growthRate: "24% annual growth",;
     variant: "sales-intelligence-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Cloud-native SaaS platform with AI algorithms for sales intelligence, lead scoring, and automated sales workflows.",;
     launchDate: "2024-08-15",;
     customers: 234,;
     rating: 4.9,;
-    reviews: 145;,;,
-},;
+    reviews: 145},;
   // AI Decision Engine;
-  {;
+  {
     id: "ai-powered-decision-engine",;
     name: "AI Decision Engine",;
     tagline: "Make better business decisions with AI-powered analytics and insights",;
@@ -336,21 +326,19 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     marketSize: "$8.9B Decision Intelligence market",;
     growthRate: "28% annual growth",;
     variant: "decision-engine-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade SaaS platform with advanced AI algorithms for decision modeling, predictive analytics, and business intelligence.",;
     launchDate: "2024-07-01",;
     customers: 78,;
     rating: 4.9,;
-    reviews: 45;,;,
-},;
+    reviews: 45},;
   // Intelligent Content Automation Platform;
-  {;
+  {
     id: "intelligent-content-automation-platform",;
     name: "Intelligent Content Automation Platform",;
     tagline: "Automate content creation and management with AI",;
@@ -388,21 +376,19 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     marketSize: "$6.2B Content Marketing market",;
     growthRate: "26% annual growth",;
     variant: "content-automation-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Cloud-native SaaS platform with AI algorithms for content generation, optimization, and multi-channel automation.",;
     launchDate: "2024-06-15",;
     customers: 345,;
     rating: 4.7,;
-    reviews: 189;,;,
-},;
+    reviews: 189},;
   // Smart CRM Intelligence Suite;
-  {;
+  {
     id: "smart-crm-intelligence-suite",;
     name: "Smart CRM Intelligence Suite",;
     tagline: "Transform your CRM with AI-powered intelligence and automation",;
@@ -440,21 +426,19 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     marketSize: "$40.2B CRM market",;
     growthRate: "15% annual growth",;
     variant: "crm-intelligence-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Intelligent SaaS platform that enhances existing CRM systems with AI-powered analytics, automation, and predictive insights.",;
     launchDate: "2024-05-01",;
     customers: 456,;
     rating: 4.8,;
-    reviews: 234;,;,
-},;
+    reviews: 234},;
   // API Observability Starter;
-  {;
+  {
     id: "api-observability-starter",;
     name: "API Observability Starter",;
     tagline: "Instant traces, metrics and logs with best-practice SLOs",;
@@ -492,21 +476,19 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     marketSize: "$7.8B APM/Observability market",;
     growthRate: "18% annual growth",;
     variant: "observability-starter",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "SDKs, OTel collectors, prebuilt dashboards and alert policies with guided onboarding.",;
     launchDate: "2024-09-01",;
     customers: 210,;
     rating: 4.8,;
-    reviews: 118;,;,
-},;
+    reviews: 118},;
   // API Security Scanner;
-  {;
+  {
     id: "api-security-scanner",;
     name: "API Security Scanner",;
     tagline: "Automated OWASP API testing and CI/CD gatekeeping",;
@@ -544,21 +526,19 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     marketSize: "$3.5B API Security market",;
     growthRate: "28% annual growth",;
     variant: "api-security",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Scanner engine with OpenAPI import, CI integration and dashboards.",;
     launchDate: "2024-08-10",;
     customers: 160,;
     rating: 4.7,;
-    reviews: 92;,;,
-},;
+    reviews: 92},;
   // Email Deliverability Monitor;
-  {;
+  {
     id: "email-deliverability-monitor",;
     name: "Email Deliverability Monitor",;
     tagline: "DMARC, SPF, DKIM, bounce and spam-trap analytics",;
@@ -596,21 +576,19 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     marketSize: "$1.1B Email Delivery market",;
     growthRate: "12% annual growth",;
     variant: "email-deliverability",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "DNS checks, webhook ingestion and scoring dashboards.",;
     launchDate: "2024-07-20",;
     customers: 95,;
     rating: 4.6,;
-    reviews: 44;,;,
-},;
+    reviews: 44},;
   // Domain & DNS Monitor;
-  {;
+  {
     id: "domain-dns-monitor",;
     name: "Domain & DNS Monitor",;
     tagline: "Expiry, NS/DS changes and DNSSEC integrity alerts",;
@@ -648,21 +626,19 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     marketSize: "$0.5B DNS Monitoring market",;
     growthRate: "10% annual growth",;
     variant: "dns-monitor",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "DNS polling and event rules with alerting and audits.",;
     launchDate: "2024-06-10",;
     customers: 140,;
     rating: 4.5,;
-    reviews: 39;,;,
-},;
+    reviews: 39},;
   // Kubernetes RBAC Auditor;
-  {;
+  {
     id: "kubernetes-rbac-auditor",;
     name: "Kubernetes RBAC Auditor",;
     tagline: "Detect privilege escalations and enforce least privilege",;
@@ -700,21 +676,19 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     marketSize: "$2.2B Kubernetes Security market",;
     growthRate: "24% annual growth",;
     variant: "k8s-rbac",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Cluster scanner, rules engine and policy generator with CI.",;
     launchDate: "2024-04-05",;
     customers: 85,;
     rating: 4.7,;
-    reviews: 41;,;,
-},;
+    reviews: 41},;
   // Cloud Cost Optimizer;
-  {;
+  {
     id: "cloud-cost-optimizer",;
     name: "Cloud Cost Optimizer",;
     tagline: "Reduce cloud spend with automated savings plans and rightsizing",;
@@ -752,21 +726,19 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     marketSize: "$2.7B FinOps market",;
     growthRate: "30% annual growth",;
     variant: "finops-optimizer",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Ingest cloud billing, generate recs and automate remediation via tags and policies.",;
     launchDate: "2024-03-01",;
     customers: 130,;
     rating: 4.8,;
-    reviews: 77;,;,
-},;
+    reviews: 77},;
   // Incident Automation Suite;
-  {;
+  {
     id: "incident-automation-suite",;
     name: "Incident Automation Suite",;
     tagline: "Runbooks, chatops and auto-mitigation with SLO context",;
@@ -804,21 +776,19 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     marketSize: "$4.2B Incident Management market",;
     growthRate: "16% annual growth",;
     variant: "incident-automation",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Runbook engine with chatops integrations, ownership model and templates.",;
     launchDate: "2024-02-10",;
     customers: 90,;
     rating: 4.7,;
-    reviews: 51;,;,
-},;
+    reviews: 51},;
   // PDF Render API;
-  {;
+  {
     id: "pdf-render-api",;
     name: "PDF Render API",;
     tagline: "HTML-to-PDF rendering with webhooks and templates",;
@@ -856,21 +826,19 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     marketSize: "$0.9B Document Generation market",;
     growthRate: "14% annual growth",;
     variant: "pdf-render",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Headless Chromium rendering service with queue and storage.",;
     launchDate: "2024-01-30",;
     customers: 220,;
     rating: 4.6,;
-    reviews: 99;,;,
-},;
+    reviews: 99},;
   // API Latency SLO Tracker;
-  {;
+  {
     id: "api-latency-slo-tracker",;
     name: "API Latency SLO Tracker",;
     tagline: "Set latency objectives and track error budgets",;
@@ -908,21 +876,19 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     marketSize: "$1.2B SRE tooling market",;
     growthRate: "20% annual growth",;
     variant: "slo-tracker",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "SLO engine with burn rate policies and dashboards.",;
     launchDate: "2024-05-20",;
     customers: 110,;
     rating: 4.7,;
-    reviews: 53;,;,
-},;
+    reviews: 53},;
   // Browser Performance Monitor;
-  {;
+  {
     id: "browser-performance-monitor",;
     name: "Browser Performance Monitor",;
     tagline: "RUM with Core Web Vitals and user journey analytics",;
@@ -960,12 +926,11 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     marketSize: "$1.5B Web Performance market",;
     growthRate: "19% annual growth",;
     variant: "rum-monitor",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "JS SDK for RUM with ingestion and analytics UI.",;
     launchDate: "2024-06-01",;

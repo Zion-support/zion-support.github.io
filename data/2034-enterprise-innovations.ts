@@ -1,4 +1,4 @@
-export interface EnterpriseService2034 {;
+export interface EnterpriseService2034 {
   id: string;
   name: string;
   description: string;
@@ -24,7 +24,7 @@ export interface EnterpriseService2034 {;
   uptime: string;
   contact: string;
 export const enterprise2034Services: EnterpriseService2034[] = [;
-  {;
+  {
     id: "quantum-zero-trust-architecture",;
     name: "Quantum Zero Trust Architecture Platform",;
     description: "Revolutionary security platform that implements quantum-enhanced zero trust principles across all enterprise systems and networks.",;
@@ -79,9 +79,8 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
     scalability: "Unlimited enterprise protection",;
     uptime: "99.999% security platform availability",;
     contact: "+1 302 464 0950",;
-    website: "https://ziontechgroup.com/quantum-zero-trust-architecture";,;,
-},;
-  {;
+    website: "https://ziontechgroup.com/quantum-zero-trust-architecture"},;
+  {
     id: "ai-autonomous-devops-platform",;
     name: "AI Autonomous DevOps Platform",;
     description: "Next-generation DevOps platform that uses AI to autonomously manage, optimize, and operate enterprise development and operations.",;
@@ -136,9 +135,8 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
     scalability: "Unlimited DevOps automation",;
     uptime: "99.99% DevOps platform availability",;
     contact: "+1 302 464 0950",;
-    website: "https://ziontechgroup.com/ai-autonomous-devops-platform";,;,
-},;
-  {;
+    website: "https://ziontechgroup.com/ai-autonomous-devops-platform"},;
+  {
     id: "quantum-edge-computing-orchestrator",;
     name: "Quantum Edge Computing Orchestrator",;
     description: "Advanced platform that orchestrates edge computing resources using quantum algorithms for optimal performance and resource allocation.",;
@@ -193,9 +191,8 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
     scalability: "Unlimited edge orchestration",;
     uptime: "99.99% edge platform availability",;
     contact: "+1 302 464 0950",;
-    website: "https://ziontechgroup.com/quantum-edge-computing-orchestrator";,;,
-},;
-  {;
+    website: "https://ziontechgroup.com/quantum-edge-computing-orchestrator"},;
+  {
     id: "ai-powered-it-operations-center",;
     name: "AI-Powered IT Operations Center",;
     description: "Intelligent IT operations platform that uses AI to autonomously monitor, manage, and optimize enterprise IT infrastructure.",;
@@ -250,9 +247,8 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
     scalability: "Unlimited IT operations",;
     uptime: "99.99% operations platform availability",;
     contact: "+1 302 464 0950",;
-    website: "https://ziontechgroup.com/ai-powered-it-operations-center";,;,
-},;
-  {;
+    website: "https://ziontechgroup.com/ai-powered-it-operations-center"},;
+  {
     id: "quantum-blockchain-infrastructure",;
     name: "Quantum Blockchain Infrastructure Platform",;
     description: "Revolutionary blockchain platform that integrates quantum computing for enhanced security, scalability, and performance.",;
@@ -307,9 +303,8 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
     scalability: "Unlimited blockchain transactions",;
     uptime: "99.99% blockchain platform availability",;
     contact: "+1 302 464 0950",;
-    website: "https://ziontechgroup.com/quantum-blockchain-infrastructure";,;,
-},;
-  {;
+    website: "https://ziontechgroup.com/quantum-blockchain-infrastructure"},;
+  {
     id: "ai-autonomous-data-center",;
     name: "AI Autonomous Data Center Platform",;
     description: "Next-generation data center management platform that uses AI to autonomously operate and optimize enterprise data centers.",;

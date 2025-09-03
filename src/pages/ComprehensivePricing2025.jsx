@@ -56,7 +56,7 @@ export default function ComprehensivePricing2025() {};
       icon: Building,";
       color: "from-orange-500 to-red-500",;
       popular: false}
-;
+
   ];
 
   const addOns = [];
@@ -146,7 +146,7 @@ export default function ComprehensivePricing2025() {};
         "Training & Certification,;
         "Strategic Consulting"], icon: Building,;
       color: "from-orange-500 to-red-500", popular: false}
-;
+
   ];
 
   const addOns = []";
@@ -218,7 +218,7 @@ with flexible options to scale as you grow.;
                     Save {savings}%;
                   </span>;
                 )}
-;
+
               </span>;
             </div>;
       </section>;
@@ -249,11 +249,11 @@ with flexible options to scale as you grow.;
                   </div>;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <p className="text-zion-slate-light mb-6">{plan.description}</p>";
-                  ;
+
                   <div className="mb-6">;
                     <span className="{};
                       ${plan.price[billingCycle]}
-;
+
                     </span>;
                     <span className=""}text-zion-slate-light" ml-2">;
 ";
@@ -267,21 +267,21 @@ with flexible options to scale as you grow.;
                   <div className="mb-6">";
                     <span className="{};
                       ${plan.price[billingCycle]}
-;
+
                     </span>""}";
                     <span className="text-zion-slate-light ml-2">";
                       /{billingCycle === "monthly" ? "month" : "year"}
-;
+
                     </span>;
                   </div>;
 ";
                   <button onClick="{()" => setSelectedPlan(plan.id)}";
                     className="{};
                         : "bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 hover:bg-zion-purple/30"}"}
-;
+
                   >;
                     {selectedPlan === plan.id ? "Current Plan" : "Choose Plan"}
-;
+
                   </button>;
                 </div>";
 ";
@@ -300,7 +300,7 @@ with flexible options to scale as you grow.;
                     className="{};
 }"}">;
                     {selectedPlan = == plan.id ? "Current Plan" : "Choose Plan"}
-;
+
                   </button>;
                 </div>";
 ";
@@ -312,10 +312,10 @@ with flexible options to scale as you grow.;
                       <span className="text-zion-slate-light text-sm">{feature}</span>;
                     </div>;
                   ))}
-;
+
                 </div>;
             ))}
-;
+
           </div>;
       </section>;
 ";
@@ -350,7 +350,7 @@ with flexible options to scale as you grow.;
                 <div className="text-center">;
                   <div className="{};
                     ${addon.price[billingCycle]}
-;
+
                   </div>;
                   <span className=""}text-zion-slate-light" text-sm">";
 ";
@@ -375,15 +375,15 @@ with flexible options to scale as you grow.;
                 <div className="text-center">";
                   <div className="{};
                     ${addon.price[billingCycle]}
-;
+
                   </div>""}";
                   <span className="text-zion-slate-light text-sm">;
                     /{billingCycle === "monthly" ? "month" : "year"}
-;
+
                   </span>;
                 </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -431,7 +431,7 @@ with flexible options to scale as you grow.;
                 answer: "No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity."},";
               {};
                 answer: "We"ll notify you before any limits are exceeded. You can either upgrade your plan or purchase additional add-ons as needed."}
-;
+
             ].map((faq, index) => (";
               <div key = "{index}" className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6">";
                 <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>;
@@ -457,7 +457,7 @@ with flexible options to scale as you grow.;
                 <p className="text-zion-slate-light">{faq.answer}</p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
 ";

@@ -31,8 +31,7 @@ const InteractiveServiceShowcase = () => {}
             features['Strategic Planning',Implementation Roadmap',ROI Analysis',Team Training'],;'';
             isPopular: true,''';
             color: 'from-zion-cyan to-zion-blue',''';
-            href: '/services/ai';,
-},;
+            href: '/services/ai'},;
         {}
 ';
 '';
@@ -46,8 +45,7 @@ const InteractiveServiceShowcase = () => {}
             features['Quantum Algorithms',AI Integration',Performance Optimization',Scalable Architecture'],;'';
             isNew: true,''';
             color: 'from-zion-purple to-zion-cyan',''';
-            href: '/services/quantum';,
-},;
+            href: '/services/quantum'},;
         {}
 ';
 '';
@@ -60,8 +58,7 @@ const InteractiveServiceShowcase = () => {}
             category: 'ai',''';
             features['Neural Networks',Efficient Processing',Scalable Architecture',Low Power Consumption'],;''';
             color: 'from-zion-blue to-zion-cyan',''';
-            href: '/services/ai';,
-},;
+            href: '/services/ai'},;
         {}
 ';
 '';
@@ -74,8 +71,7 @@ const InteractiveServiceShowcase = () => {}
             category: 'cloud',''';
             features['Edge Deployment',Load Balancing',Real-time Processing',IoT Integration'],;''';
             color: 'from-zion-cyan to-zion-green',''';
-            href: '/services/cloud';,
-},;
+            href: '/services/cloud'},;
         {}
 ';
 '';
@@ -88,8 +84,7 @@ const InteractiveServiceShowcase = () => {}
             category: 'security',''';
             features['Data Privacy',Distributed Training',Secure Communication',Compliance Ready'],;''';
             color: 'from-zion-green to-zion-cyan',''';
-            href: '/services/security';,
-},;
+            href: '/services/security'},;
         {}
 ';
 '';
@@ -102,8 +97,7 @@ const InteractiveServiceShowcase = () => {}
             category: 'ai',''';
             features['Ethical Guidelines',Compliance Tools',Audit Trails',Risk Assessment'],;''';
             color: 'from-zion-yellow to-zion-orange',''';
-            href: '/services/ai';,
-},;
+            href: '/services/ai'},;
         {}
 ';
 '';
@@ -117,8 +111,7 @@ const InteractiveServiceShowcase = () => {}
             features['Post-Quantum Cryptography',Quantum Key Distribution',Threat Detection',Zero Trust'],;'';
             isNew: true,''';
             color: 'from-zion-purple to-zion-red',''';
-            href: '/services/security';,
-},;
+            href: '/services/security'},;
         {}
 ';
 '';
@@ -131,8 +124,7 @@ const InteractiveServiceShowcase = () => {}
             category: 'automation',''';
             features['Infrastructure as Code',Auto-scaling',Cost Optimization',Monitoring'],;''';
             color: 'from-zion-orange to-zion-yellow',''';
-            href: '/services/automation'';,
-}'';
+            href: '/services/automation''}'';
     ];''';
     const filteredServices = activeCategory === 'all';
         ? services;
@@ -142,10 +134,9 @@ const InteractiveServiceShowcase = () => {}
         visible: {}
             opacity: 1,;
             transition: {}
-                staggerChildren: 0.1;,
-}
+                staggerChildren: 0.1}
         }
-    };
+    }
     const itemVariants = {}
   hidden: {};
 },;
@@ -154,10 +145,9 @@ const InteractiveServiceShowcase = () => {}
             opacity: 1,;
             transition: {}
                 duration: 0.5,;
-                ease: "easeOut"";,
-}
+                ease: "easeOut""}
         }
-    };
+    }
     const categoryVariants = {}
   hidden: {};
 },;
@@ -167,10 +157,8 @@ const InteractiveServiceShowcase = () => {}
             transition: {}
 ";
                 duration: 0.3,"";
-                ease: "easeOut";,
-}
-        }";,
-};"";
+                ease: "easeOut"}
+        }"};"";
     return (<section className="py-24 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">"";
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
         {/* Header Section */}"";
@@ -283,16 +271,12 @@ const InteractiveServiceShowcase = () => {}
           </div>;
         </motion.div>;
       </div>;
-    </section>)};
+    </section>)}
 export default InteractiveServiceShowcase;
-;
 
-export { InteractiveServiceShowcase };
-;
-export { InteractiveServiceShowcase };
-;
-export { InteractiveServiceShowcase };
-;
-export { InteractiveServiceShowcase };
-;
-export { InteractiveServiceShowcase };
+
+export { InteractiveServiceShowcase }
+export { InteractiveServiceShowcase }
+export { InteractiveServiceShowcase }
+export { InteractiveServiceShowcase }
+export { InteractiveServiceShowcase }

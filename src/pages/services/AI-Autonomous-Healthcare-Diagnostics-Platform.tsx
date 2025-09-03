@@ -13,7 +13,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {};
     {};
 }
   ];
-;
+
   const pricingPlans = [;
     {};
 },;
@@ -22,7 +22,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {};
     {};
 }
   ];
-;
+
   const useCases = [;
     {};
 },;
@@ -33,7 +33,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {};
     {};
 }
   ];
-;
+
   const benefits = [;
     {};
 },;
@@ -44,7 +44,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {};
     {};
 }
   ];
-;
+
   const specialties = [;
     "Cardiology",;
     "Neurology",;
@@ -55,7 +55,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {};
     "Ophthalmology",;
     "Orthopedics";
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">;
       <div>Broken JSX</div>
@@ -74,15 +74,15 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {};
                 <Heart className="w-8 h-8 text-white" />;
               </div>;
             </div>;
-            ;
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
               AI Autonomous Healthcare Diagnostics Platform;
             </h1>;
-            ;
+
             <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed">;
               Transform healthcare delivery with the world's most advanced AI platform for autonomous medical diagnostics, disease detection, and predictive health analytics.;
             </p>;
-            ;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">;
@@ -140,7 +140,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {};
             {};
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>;
                 <p className="text-slate-300 mb-6 leading-relaxed">{feature.description}</p>;
-                ;
+
                 <ul className="space-y-3">;
                   {};
                     <li key={idx} className="flex items-center text-slate-300">;
@@ -193,11 +193,11 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {};
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {};
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <p className="text-slate-400 mb-6">{plan.description}</p>;
-                  ;
+
                   <div className="flex items-baseline justify-center">;
                     <span className="text-5xl font-bold text-white">{plan.price}</span>;
                     <span className="text-slate-400 ml-1">{plan.period}</span>;
@@ -254,12 +254,12 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {};
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Ready to Transform Healthcare Delivery?;
             </h2>;
-            ;
+
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">;
               Join the future of healthcare with our AI Autonomous Diagnostics Platform. ;
               Get in touch today to schedule a personalized demo and see how we can improve patient care.;
             </p>;
-            ;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">;
@@ -271,7 +271,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {};
                 Contact Sales;
               </a>;
             </div>;
-            ;
+
             <div className="mt-8 text-slate-400">;
               <p>Questions? Call us at <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">+1 302 464 0950</a></p>;
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
@@ -280,7 +280,5 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {};
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default AIAutonomousHealthcareDiagnosticsPlatform;

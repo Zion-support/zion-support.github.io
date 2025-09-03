@@ -128,17 +128,12 @@ const ITSolutions = () => {}
         </div>;
       </section>;
     </div>;
-  );,
-};
+  )}
 export default ITSolutions;
-;
 
-export { ITSolutions };
-;
-export { ITSolutions };
-;
-export { ITSolutions };
-;
-export { ITSolutions };
-;
-export { ITSolutions };
+
+export { ITSolutions }
+export { ITSolutions }
+export { ITSolutions }
+export { ITSolutions }
+export { ITSolutions }

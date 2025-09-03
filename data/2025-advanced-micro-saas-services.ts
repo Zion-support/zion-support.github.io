@@ -1,5 +1,5 @@
 export const advancedMicroSaasServices2025 = [;
-  {;
+  {
     id: "ai-powered-customer-success-platform",;
     name: "CustomerSuccess AI Pro",;
     description: "Intelligent customer success platform that predicts churn, automates onboarding, and drives customer lifetime value through AI-powered insights and automation.",;
@@ -13,7 +13,7 @@ export const advancedMicroSaasServices2025 = [;
       "Automated check-in scheduling",;
       "Customer sentiment analysis";
     ],;
-    pricing: {;
+    pricing: {
       starter: { price: 89, period: "month", features["Up to 500 customers", "Basic AI insights", "Email automation"] },;
       professional: { price: 199, period: "month", features["Up to 2,000 customers", "Advanced AI models", "Full automation suite", "Custom integrations"] },;
       enterprise: { price: 499, period: "month", features["Unlimited customers", "Custom AI training", "White-label solution", "Dedicated success manager"] }
@@ -21,15 +21,13 @@ export const advancedMicroSaasServices2025 = [;
     category: "Customer Success",;
     tags["AI", "Customer Success", "Automation", "Analytics"],;
     website: "https://ziontechgroup.com/customer-success-ai-pro",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,;,
-},;
+      email: "kleber@ziontechgroup.com"},;
     marketSize: "$2.1B",;
     targetAudience: "SaaS companies, subscription businesses, enterprise software",;
-    competitiveAdvantage: "Industry-leading AI accuracy in churn prediction, comprehensive automation, and seamless integration ecosystem";,;,
-},;
-  {;
+    competitiveAdvantage: "Industry-leading AI accuracy in churn prediction, comprehensive automation, and seamless integration ecosystem"},;
+  {
     id: "intelligent-inventory-optimization",;
     name: "SmartInventory AI",;
     description: "AI-powered inventory management platform that optimizes stock levels, predicts demand, and automates reordering to reduce costs and improve cash flow.",;
@@ -43,7 +41,7 @@ export const advancedMicroSaasServices2025 = [;
       "Advanced reporting and analytics",;
       "Mobile app for warehouse management";
     ],;
-    pricing: {;
+    pricing: {
       starter: { price: 79, period: "month", features["Up to 1,000 SKUs", "Basic forecasting", "Email alerts"] },;
       professional: { price: 179, period: "month", features["Up to 10,000 SKUs", "Advanced AI models", "Full automation", "Multi-location support"] },;
       enterprise: { price: 399, period: "month", features["Unlimited SKUs", "Custom AI training", "API access", "Dedicated support"] }
@@ -51,15 +49,13 @@ export const advancedMicroSaasServices2025 = [;
     category: "Inventory Management",;
     tags["AI", "Inventory", "Supply Chain", "Automation"],;
     website: "https://ziontechgroup.com/smart-inventory-ai",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,;,
-},;
+      email: "kleber@ziontechgroup.com"},;
     marketSize: "$3.8B",;
     targetAudience: "E-commerce businesses, retail chains, manufacturers, distributors",;
-    competitiveAdvantage: "Advanced AI demand forecasting with 92% accuracy, comprehensive automation, and seamless e-commerce integration";,;,
-},;
-  {;
+    competitiveAdvantage: "Advanced AI demand forecasting with 92% accuracy, comprehensive automation, and seamless e-commerce integration"},;
+  {
     id: "automated-hr-compliance-suite",;
     name: "HRCompliance Pro",;
     description: "Comprehensive HR compliance platform that automates policy management, tracks regulatory changes, and ensures legal compliance across all HR operations.",;
@@ -73,7 +69,7 @@ export const advancedMicroSaasServices2025 = [;
       "Advanced reporting and analytics",;
       "Legal document generation";
     ],;
-    pricing: {;
+    pricing: {
       starter: { price: 99, period: "month", features["Up to 100 employees", "Basic compliance tools", "Policy templates"] },;
       professional: { price: 249, period: "month", features["Up to 500 employees", "Advanced automation", "Custom policies", "Full compliance suite"] },;
       enterprise: { price: 599, period: "month", features["Unlimited employees", "Custom compliance rules", "White-label solution", "Legal consultation"] }
@@ -81,15 +77,13 @@ export const advancedMicroSaasServices2025 = [;
     category: "HR & Compliance",;
     tags["HR", "Compliance", "Automation", "Legal"],;
     website: "https://ziontechgroup.com/hr-compliance-pro",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,;,
-},;
+      email: "kleber@ziontechgroup.com"},;
     marketSize: "$4.2B",;
     targetAudience: "HR departments, legal teams, compliance officers, small to enterprise businesses",;
-    competitiveAdvantage: "Comprehensive compliance automation, real-time regulatory updates, and seamless HRIS integration";,;,
-},;
-  {;
+    competitiveAdvantage: "Comprehensive compliance automation, real-time regulatory updates, and seamless HRIS integration"},;
+  {
     id: "intelligent-expense-management",;
     name: "ExpenseAI Manager",;
     description: "AI-powered expense management platform that automates receipt processing, enforces policy compliance, and provides real-time spending insights.",;
@@ -103,7 +97,7 @@ export const advancedMicroSaasServices2025 = [;
       "Advanced reporting and dashboards",;
       "Automated approval workflows";
     ],;
-    pricing: {;
+    pricing: {
       starter: { price: 59, period: "month", features["Up to 50 users", "Basic OCR", "Expense tracking"] },;
       professional: { price: 149, period: "month", features["Up to 200 users", "Advanced AI", "Full automation", "Custom policies"] },;
       enterprise: { price: 349, period: "month", features["Unlimited users", "Custom AI training", "API access", "Dedicated support"] }
@@ -111,15 +105,13 @@ export const advancedMicroSaasServices2025 = [;
     category: "Expense Management",;
     tags["AI", "Expense Management", "OCR", "Automation"],;
     website: "https://ziontechgroup.com/expense-ai-manager",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,;,
-},;
+      email: "kleber@ziontechgroup.com"},;
     marketSize: "$2.8B",;
     targetAudience: "Finance teams, accounting firms, small to enterprise businesses",;
-    competitiveAdvantage: "Industry-leading OCR accuracy, comprehensive automation, and seamless accounting software integration";,;,
-},;
-  {;
+    competitiveAdvantage: "Industry-leading OCR accuracy, comprehensive automation, and seamless accounting software integration"},;
+  {
     id: "smart-contract-automation-platform",;
     name: "ContractFlow AI",;
     description: "Intelligent contract management platform that automates contract creation, negotiation, and lifecycle management using AI-powered insights and automation.",;
@@ -133,7 +125,7 @@ export const advancedMicroSaasServices2025 = [;
       "Custom workflow automation",;
       "Legal compliance monitoring";
     ],;
-    pricing: {;
+    pricing: {
       starter: { price: 129, period: "month", features["Up to 100 contracts", "Basic AI analysis", "Template library"] },;
       professional: { price: 299, period: "month", features["Up to 1,000 contracts", "Advanced AI", "Full automation", "Custom workflows"] },;
       enterprise: { price: 699, period: "month", features["Unlimited contracts", "Custom AI training", "White-label solution", "Legal consultation"] }
@@ -141,15 +133,13 @@ export const advancedMicroSaasServices2025 = [;
     category: "Contract Management",;
     tags["AI", "Contract Management", "Legal Tech", "Automation"],;
     website: "https://ziontechgroup.com/contract-flow-ai",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,;,
-},;
+      email: "kleber@ziontechgroup.com"},;
     marketSize: "$3.1B",;
     targetAudience: "Legal departments, contract managers, procurement teams, enterprise businesses",;
-    competitiveAdvantage: "Advanced AI contract analysis, comprehensive automation, and seamless legal workflow integration";,;,
-},;
-  {;
+    competitiveAdvantage: "Advanced AI contract analysis, comprehensive automation, and seamless legal workflow integration"},;
+  {
     id: "intelligent-vendor-management",;
     name: "VendorIQ Pro",;
     description: "AI-powered vendor management platform that streamlines procurement, monitors vendor performance, and optimizes supplier relationships.",;
@@ -163,7 +153,7 @@ export const advancedMicroSaasServices2025 = [;
       "Risk assessment and mitigation",;
       "Supplier diversity tracking";
     ],;
-    pricing: {;
+    pricing: {
       starter: { price: 89, period: "month", features["Up to 50 vendors", "Basic performance tracking", "Procurement tools"] },;
       professional: { price: 199, period: "month", features["Up to 200 vendors", "Advanced AI", "Full automation", "Custom workflows"] },;
       enterprise: { price: 449, period: "month", features["Unlimited vendors", "Custom AI training", "API access", "Dedicated support"] }
@@ -171,15 +161,13 @@ export const advancedMicroSaasServices2025 = [;
     category: "Vendor Management",;
     tags["AI", "Vendor Management", "Procurement", "Automation"],;
     website: "https://ziontechgroup.com/vendor-iq-pro",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,;,
-},;
+      email: "kleber@ziontechgroup.com"},;
     marketSize: "$2.5B",;
     targetAudience: "Procurement teams, supply chain managers, enterprise businesses",;
-    competitiveAdvantage: "Comprehensive vendor performance analytics, advanced automation, and seamless ERP integration";,;,
-},;
-  {;
+    competitiveAdvantage: "Comprehensive vendor performance analytics, advanced automation, and seamless ERP integration"},;
+  {
     id: "automated-project-management-ai",;
     name: "ProjectAI Manager",;
     description: "Intelligent project management platform that uses AI to optimize resource allocation, predict project risks, and automate project workflows.",;
@@ -193,7 +181,7 @@ export const advancedMicroSaasServices2025 = [;
       "Custom workflow automation",;
       "Team collaboration tools";
     ],;
-    pricing: {;
+    pricing: {
       starter: { price: 69, period: "month", features["Up to 10 projects", "Basic AI insights", "Task management"] },;
       professional: { price: 169, period: "month", features["Up to 50 projects", "Advanced AI", "Full automation", "Custom workflows"] },;
       enterprise: { price: 399, period: "month", features["Unlimited projects", "Custom AI training", "API access", "Dedicated support"] }
@@ -201,15 +189,13 @@ export const advancedMicroSaasServices2025 = [;
     category: "Project Management",;
     tags["AI", "Project Management", "Automation", "Analytics"],;
     website: "https://ziontechgroup.com/project-ai-manager",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,;,
-},;
+      email: "kleber@ziontechgroup.com"},;
     marketSize: "$5.2B",;
     targetAudience: "Project managers, development teams, consulting firms, enterprise businesses",;
-    competitiveAdvantage: "Advanced AI resource optimization, comprehensive risk prediction, and seamless development tool integration";,;,
-},;
-  {;
+    competitiveAdvantage: "Advanced AI resource optimization, comprehensive risk prediction, and seamless development tool integration"},;
+  {
     id: "intelligent-workflow-automation",;
     name: "WorkflowAI Studio",;
     description: "AI-powered workflow automation platform that intelligently designs, optimizes, and executes business processes across  industry.",;
@@ -223,7 +209,7 @@ export const advancedMicroSaasServices2025 = [;
       "Custom automation rules",;
       "Process mining and analysis";
     ],;
-    pricing: {;
+    pricing: {
       starter: { price: 79, period: "month", features["Up to 10 workflows", "Basic automation", "Process templates"] },;
       professional: { price: 199, period: "month", features["Up to 100 workflows", "Advanced AI", "Full automation", "Custom rules"] },;
       enterprise: { price: 499, period: "month", features["Unlimited workflows", "Custom AI training", "White-label solution", "Dedicated support"] }
@@ -231,15 +217,13 @@ export const advancedMicroSaasServices2025 = [;
     category: "Workflow Automation",;
     tags["AI", "Workflow Automation", "Process Mining", "Integration"],;
     website: "https://ziontechgroup.com/workflow-ai-studio",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,;,
-},;
+      email: "kleber@ziontechgroup.com"},;
     marketSize: "$8.7B",;
     targetAudience: "Business analysts, operations teams, process improvement specialists, enterprise businesses",;
-    competitiveAdvantage: "Advanced AI process discovery, comprehensive automation, and extensive business tool integration";,;,
-},;
-  {;
+    competitiveAdvantage: "Advanced AI process discovery, comprehensive automation, and extensive business tool integration"},;
+  {
     id: "smart-data-governance-platform",;
     name: "DataGuardian AI",;
     description: "Intelligent data governance platform that automates data quality monitoring, enforces compliance policies, and provides real-time data insights.",;
@@ -253,7 +237,7 @@ export const advancedMicroSaasServices2025 = [;
       "Custom governance rules",;
       "Data catalog management";
     ],;
-    pricing: {;
+    pricing: {
       starter: { price: 149, period: "month", features["Up to 1TB data", "Basic quality monitoring", "Compliance templates"] },;
       professional: { price: 349, period: "month", features["Up to 10TB data", "Advanced AI", "Full automation", "Custom rules"] },;
       enterprise: { price: 799, period: "month", features["Unlimited data", "Custom AI training", "White-label solution", "Dedicated support"] }
@@ -261,15 +245,13 @@ export const advancedMicroSaasServices2025 = [;
     category: "Data Governance",;
     tags["AI", "Data Governance", "Compliance", "Data Quality"],;
     website: "https://ziontechgroup.com/data-guardian-ai",;
-    contact: {;
+    contact: {
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,;,
-},;
+      email: "kleber@ziontechgroup.com"},;
     marketSize: "$4.8B",;
     targetAudience: "Data governance teams, compliance officers, data engineers, enterprise businesses",;
-    competitiveAdvantage: "Advanced AI data quality scoring, comprehensive compliance automation, and seamless data warehouse integration";,;,
-},;
-  {;
+    competitiveAdvantage: "Advanced AI data quality scoring, comprehensive compliance automation, and seamless data warehouse integration"},;
+  {
     id: "intelligent-api-management-suite",;
     name: "APIGuardian Pro",;
     description: "AI-powered API management platform that provides intelligent monitoring, security, and optimization for enterprise API ecosystems.",;
@@ -283,7 +265,7 @@ export const advancedMicroSaasServices2025 = [;
       "Custom security policies",;
       "API versioning and lifecycle management";
     ],;
-    pricing: {;
+    pricing: {
       starter: { price: 99, period: "month", features["Up to 100 API calls/min", "Basic monitoring", "Security alerts"] },;
       professional: { price: 249, period: "month", features["Up to 1,000 API calls/min", "Advanced AI", "Full automation", "Custom policies"] },;
       enterprise: { price: 599, period: "month", features["Unlimited API calls", "Custom AI training", "White-label solution", "Dedicated support"] }
@@ -291,5 +273,5 @@ export const advancedMicroSaasServices2025 = [;
     category: "API Management",;
     tags["AI", "API Management", "Security", "Monitoring"],;
     website: "https://ziontechgroup.com/api-guardian-pro",;
-    contact: {;
+    contact: {
 }}

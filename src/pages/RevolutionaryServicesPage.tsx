@@ -46,6 +46,5 @@ const RevolutionaryServicesPage = () => {};
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default RevolutionaryServicesPage;

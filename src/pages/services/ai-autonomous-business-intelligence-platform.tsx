@@ -18,7 +18,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {};
     {};
 }
   ];
-;
+
   const pricingPlans = [;
     {};
 },;
@@ -27,7 +27,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {};
     {};
 }
   ];
-;
+
   const benefits = [;
     {};
 },;
@@ -38,7 +38,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {};
     {};
 }
   ];
-;
+
   const useCases = [;
     {};
 },;
@@ -49,7 +49,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {};
     {};
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate-darker to-zion-slate-darkest">;
       {/* Hero Section */}
@@ -244,7 +244,6 @@ export function AIAutonomousBusinessIntelligencePlatform() {};
         </div>;
       </footer>;
     </div>;
-  );,
-}
-;
+  )}
+
 export default AIAutonomousBusinessIntelligencePlatform;

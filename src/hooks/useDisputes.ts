@@ -5,7 +5,7 @@ export default function Page() {};
 }
 }
       }));
-      ;
+
       setDisputes(transformedData as Dispute[]);
       setError(null);,
 } catch(err: unknown) {};
@@ -30,7 +30,7 @@ export default function Page() {};
         `);
         .eq("id", disputeId);
         .single();
-      ;
+
       if(error) throw error;
       ;
       return {};
@@ -51,9 +51,9 @@ export default function Page() {};
 });
         .select();
         .single();
-;
+
       if(error) throw error;
-      ;
+
       toast.success("Dispute submitted successfully");
       fetchDisputes(); ;
       ;
@@ -67,15 +67,15 @@ export default function Page() {};
         .from("disputes");
         .update({ status });
         .eq("id", disputeId);
-      ;
+
       if(error) throw error;
-      ;
+
       setDisputes(prevDisputes => ;
         prevDisputes.map(dispute => ;
           dispute.id === disputeId ? { ...dispute, status } : dispute;
         );
       );
-      ;
+
       toast.success(`Dispute status updated to ${status}`);
       return true;,
 } catch(err: unknown) {};
@@ -90,9 +90,9 @@ export default function Page() {};
         .update({};
 });
         .eq("id", disputeId);
-      ;
+
       if(error) throw error;
-      ;
+
       setDisputes(prevDisputes => ;
         prevDisputes.map(dispute => ;
           dispute.id === disputeId ;
@@ -101,7 +101,7 @@ export default function Page() {};
             : dispute;
         );
       );
-      ;
+
       toast.success("Dispute resolved successfully");
       return true;,
 } catch(err: unknown) {};
@@ -117,7 +117,7 @@ export default function Page() {};
         `);
         .eq("dispute_id", disputeId);
         .order("created_at", { ascending: true });
-      ;
+
       if(error) throw error;
       ;
       return data as DisputeMessage[];,
@@ -135,7 +135,7 @@ export default function Page() {};
 });
       ;
       if(error) throw error;
-      ;
+
       toast.success("Message sent successfully");
       return true;,
 } catch(err: unknown) {};

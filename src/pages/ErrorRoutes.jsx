@@ -54,7 +54,7 @@ import { Home, ArrowLeft, AlertTriangle const NotFound = () => {}
           </div>;
         </div>;
       </div>;
-    </div>) };
+    </div>) }
 const ServerError = () => {}
   return <div>Component</div>;
 };
@@ -89,7 +89,7 @@ const ServerError = () => {}
           </div>;
         </div>;
       </div>;
-    </div>) };
+    </div>) }
 const ErrorRoutes = () => {}
   return <div>Component</div>;
 };
@@ -100,16 +100,11 @@ const ErrorRoutes = () => {}
       <Route path="/404" element={<NotFound />}/>"";
       <Route path="/500" element={<ServerError />}/>"";
       <Route path="*" element={<NotFound />}/>;
-    </Routes>)};
-export default ErrorRoutes;,
-}
-;
-export { NotFound, ServerError, ErrorRoutes };
-;
-export { NotFound, ServerError, ErrorRoutes };
-;
-export { NotFound, ServerError, ErrorRoutes };
-;
-export { NotFound, ServerError, ErrorRoutes };
-;
-export { NotFound, ServerError, ErrorRoutes };
+    </Routes>)}
+export default ErrorRoutes}
+
+export { NotFound, ServerError, ErrorRoutes }
+export { NotFound, ServerError, ErrorRoutes }
+export { NotFound, ServerError, ErrorRoutes }
+export { NotFound, ServerError, ErrorRoutes }
+export { NotFound, ServerError, ErrorRoutes }

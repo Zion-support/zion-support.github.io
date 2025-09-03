@@ -24,13 +24,11 @@ import {}
   Store,';
   Tag,'';
   Brain,''';
-  Code'''';,
-} from 'lucide-react';
-;
-    integrations["E - commerce", "POS Systems", "Mobile Apps", "CRM"];,
-}
+  Code''''} from 'lucide-react';
+
+    integrations["E - commerce", "POS Systems", "Mobile Apps", "CRM"]}
 ];
-;
+
 const retailTrends = [];
   {}
 ";
@@ -38,24 +36,21 @@ const retailTrends = [];
     title: "AI-Powered Personalization","";
     description: "Machine learning algorithms that provide personalized shopping experiences",";
     icon: Brain,"";
-    impact: "High";,
-},;
+    impact: "High"},;
   {}
 ";
 "";
     title: "Omnichannel Integration","";
     description: "Seamless experience across online, mobile, and physical stores",";
     icon: Globe,"";
-    impact: "High";,
-},;
+    impact: "High"},;
   {}
 ";
 "";
     title: "Mobile-First Shopping","";
     description: "Mobile devices driving majority of online retail traffic",";
     icon: Smartphone,"";
-    impact: "Critical";,
-},;
+    impact: "Critical"},;
   {}
 ";
 "";
@@ -64,7 +59,7 @@ const retailTrends = [];
     icon: BarChart3,"";
     impact: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -74,8 +69,7 @@ const successStories = [];
     challenge: "Needed omnichannel platform to connect online and physical stores","";
     solution: "Built integrated e-commerce and POS system with unified inventory","";
     results: "40% increase in online sales, 25% reduction in inventory costs","";
-    logo: "FF";,
-},;
+    logo: "FF"},;
   {}
 ";
     id: 2,"";
@@ -84,8 +78,7 @@ const successStories = [];
     challenge: "Required mobile app for enhanced customer engagement","";
     solution: "Developed feature-rich mobile shopping app with AR product preview","";
     results: "60% mobile traffic increase, 35% higher conversion rate","";
-    logo: "TG";,
-},;
+    logo: "TG"},;
   {}
 ";
     id: 3,"";
@@ -96,7 +89,7 @@ const successStories = [];
     results: "30% reduction in stockouts, 20% improvement in order fulfillment","";
     logo: "HG";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -104,24 +97,21 @@ const processSteps = [];
     title: "Retail Assessment","";
     description: "Analyze current retail operations and identify improvement opportunities",";
     icon: Target,"";
-    duration: "1-2 weeks";,
-},;
+    duration: "1-2 weeks"},;
   {}
 ";
     step: 2,"";
     title: "Solution Design","";
     description: "Design customized retail technology solution based on requirements",";
     icon: FileText,"";
-    duration: "2-3 weeks";,
-},;
+    duration: "2-3 weeks"},;
   {}
 ";
     step: 3,"";
     title: "Development & Testing","";
     description: "Build and thoroughly test the retail solution",";
     icon: Code,"";
-    duration: "8-24 weeks";,
-},;
+    duration: "8-24 weeks"},;
   {}
 ";
     step: 4,"";
@@ -260,9 +250,8 @@ export {};
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -270,9 +259,8 @@ export {};
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {};
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -383,14 +371,10 @@ export {};
       </section>;
     </div>;
   )}
-;
 
-export { RetailSolutions };
-;
-export { RetailSolutions };
-;
-export { RetailSolutions };
-;
-export { RetailSolutions };
-;
-export { RetailSolutions };
+
+export { RetailSolutions }
+export { RetailSolutions }
+export { RetailSolutions }
+export { RetailSolutions }
+export { RetailSolutions }

@@ -109,7 +109,7 @@ export default function IoTEdgeComputingServices() {};
                 Our IoT expertise combined with cutting-edge edge computing technologies enables us to deliver ;
                 solutions that provide real business value and competitive advantage.;
               </p>;
-              ;
+
               <div className="space-y-4">;
                 {benefits.map((benefit, index) => (<div key={index} className="flex items-start">;
                     <Check className="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0"/>;
@@ -277,16 +277,11 @@ export default function IoTEdgeComputingServices() {};
           </div>;
         </div>;
       </section>;
-    </div>);,
-}
-;
+    </div>)}
 
-export { IoTEdgeComputingServices };
-;
-export { IoTEdgeComputingServices };
-;
-export { IoTEdgeComputingServices };
-;
-export { IoTEdgeComputingServices };
-;
-export { IoTEdgeComputingServices };
+
+export { IoTEdgeComputingServices }
+export { IoTEdgeComputingServices }
+export { IoTEdgeComputingServices }
+export { IoTEdgeComputingServices }
+export { IoTEdgeComputingServices }

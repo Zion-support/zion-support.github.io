@@ -20,7 +20,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({};
       resourceEntries.forEach((entry:) => {};
             largestChunk = { name: entry.name, size }}        }
       }) ;
-;
+
       const gzipSavings = totalSize * 0.7; // Estimate 70% savings with gzip;
 
       setMetrics({};
@@ -33,7 +33,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({};
       console.log(`Largest Chunk: ${largestChunk.name} (${(largestChunk.size / 1024 / 1024) .toFixed(2) } MB) `) ;
       console.log(`Average Chunk Size: ${(averageChunkSize / 1024 / 1024) .toFixed(2) } MB`) ;
       console.log(`Estimated Gzip Savings: ${(gzipSavings / 1024 / 1024) .toFixed(2) } MB`) ;
-;
+
       // Performance recommendations;
       if(totalSize > 5 * 1024 * 1024) {};
 }
@@ -59,7 +59,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({};
 ;
     if(metrics.largestChunk.size > 2 * 1024 * 1024) {};
       optimizations.push('Implement tree shaking')}
-;
+
     // Apply optimizations;
     optimizations.forEach(optimization => {};
       // console.log(`🔧 Optimization: unknown${optimization}`)});
@@ -68,7 +68,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({};
   useEffect(() => {};
 }, []);
     if(!enabled) return;
-;
+
     // Analyze bundle after page load;
     const timer = setTimeout(analyzeBundle, 2000) ;
 ;
@@ -77,7 +77,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({};
   useEffect(() => {};
 }, []);
     if(!enabled) return;
-;
+
     // Run optimization analysis;
     const optimizations = optimizeBundle () ;
     if(optimizations && optimizations.length > 0) {};

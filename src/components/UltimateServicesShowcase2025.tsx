@@ -89,7 +89,7 @@ export default function Page() {};
           </div>;
         </div>;
       </section>;
-;
+
       {/* Services Grid / List */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div  className="max - w-7xl mx -auto">;
@@ -257,5 +257,5 @@ export default function Page() {};
             </motion.div>;
           </motion.div>) }
       </AnimatePresence>;
-    </div>) };
+    </div>) }
 export default UltimateServicesShowcase2025;'"`;

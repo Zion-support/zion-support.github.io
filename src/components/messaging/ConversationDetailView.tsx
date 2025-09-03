@@ -26,10 +26,10 @@ export default function Page() {};
 });,
 }
   });
-  ;
+
   const hasContextData = activeConversation.context_data && ;
     (activeConversation.context_data.title || activeConversation.context_data.description);
-;
+
   return (<div className="flex-1 flex flex-col h-full">;
       {/* Header */}
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">;
@@ -76,7 +76,6 @@ export default function Page() {};
           </div>;
         </div>;
       )}
-      ;
       <div className="flex-1 overflow-y-auto p-4 space-y-4">;
         {};
             <div key={group.date}>;
@@ -90,7 +89,7 @@ export default function Page() {};
         )}
         <div ref={messagesEndRef} />;
       </div>;
-      ;
+
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <div>Broken JSX</div>
@@ -105,5 +104,4 @@ export default function Page() {};
         </form>;
       </div>;
     </div>;
-  );,
-}
+  )}

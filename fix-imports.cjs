@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
-function fixImportsInFile(filePath) {;
-  try {;
+function fixImportsInFile(filePath) {
+  try {
   let content = fs.readFileSync(filePath, "utf8");
     // Fix concatenated imports;
     content = content.replace(;
@@ -45,25 +45,21 @@ function fixImportsInFile(filePath) {;
       "$1: "$2"\n      $3";
     );
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);,;,
-} catch (error) {;
-  console.error(`Error fixing ${filePath}:`, error.message);,;,
+    console.log(`Fixed: ${filePath}`);} catch (error) {
+  console.error(`Error fixing ${filePath}:`, error.message);}
 }
-}
-;
-function walkDirectory(dir) {;
+
+function walkDirectory(dir) {
   const files = fs.readdirSync(dir);
-  for (const file of files) {;
+  for (const file of files) {
   const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    if (stat.isDirectory()) {;
-  walkDirectory(filePath);,;,
-} else if (file.endsWith(".tsx") || file.endsWith(".ts")) {;
-  fixImportsInFile(filePath);,;,
-}
+    if (stat.isDirectory()) {
+  walkDirectory(filePath);} else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
+  fixImportsInFile(filePath);}
   }
 }
-;
+
 // Fix components directory;
 walkDirectory("./components");
 console.log("Import fixing completed!")}}}}}))

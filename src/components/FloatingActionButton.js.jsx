@@ -1,7 +1,7 @@
 import React, { useState } from "react";""";,"});,"})","});,"})","})";
-  PlusIcon,,"});,"})";
-  XMarkIcon,,"});,"})";
-  ChatBubbleLeftRightIcon,,"});,"})";
+  PlusIcon,"});,"})";
+  XMarkIcon,"});,"})";
+  ChatBubbleLeftRightIcon,"});,"})";
   PhoneIcon,";,"});,"})";
   EnvelopeIcon} from "@heroicons/react/24/outline";,"});,"})";
 const FloatingActionButton = ({ className = "" }) => {}"});,"})";
@@ -12,12 +12,12 @@ const FloatingActionButton = ({ className = "" }) => {}"});,"})";
       icon: ChatBubbleLeftRightIcon,";,"});,"})";
       label: "Live Chat",";,"});,"})";
       action: () => window.open("https:// comment;
-      color: "bg-green-500 hover:bg-green-600"},,"});,"})";
+      color: "bg-green-500 hover:bg-green-600"},"});,"})";
     {}"});,"})";
       icon: PhoneIcon,";,"});,"})";
       label: "Call Us",";,"});,"})";
       action: () => window.open("tel:+1-555-0123",_self"),";,"});,"})";
-      color: "bg-blue-500 hover:bg-blue-600"},,"});,"})";
+      color: "bg-blue-500 hover:bg-blue-600"},"});,"})";
     {}"});,"})";
       icon: EnvelopeIcon,";,"});,"})";
       label: "Email",";,"});,"})";
@@ -74,10 +74,8 @@ export { FloatingActionButton };,"});,"})";
 export { FloatingActionButton };,"});,"})";
 ;,"});,"})";
 export { FloatingActionButton };,"});,"})";
-  const [isOpen, setIsOpen] = useState();,
-}
-  const toggleMenu = () => setIsOpen();,
-}
+  const [isOpen, setIsOpen] = useState()}
+  const toggleMenu = () => setIsOpen()}
   const actionItems = []";
     {}
       icon: ChatBubbleLeftRightIcon, ";
@@ -91,11 +89,9 @@ export { FloatingActionButton };,"});,"})";
       icon: EnvelopeIcon, ";
       label: "Email",";
       action: () => window.open("mailto: info@ziontechgroup.com", _self"), ";const FloatingActionButton = ({ className = "" }) => {}
-;
-  const [isOpen, setIsOpen] = useState();,
-}
-  const toggleMenu = () => setIsOpen();,
-}
+
+  const [isOpen, setIsOpen] = useState()}
+  const toggleMenu = () => setIsOpen()}
   const actionItems = []";
     {}";
       icon: ChatBubbleLeftRightIcon,;
@@ -110,7 +106,7 @@ export { FloatingActionButton };,"});,"})";
       label: "Email,";
       action: () => window.open("mailto:info@ziontechgroup.com",_self"),;
       color: "bg-purple-500 hover:bg-purple-600"}
-;
+
   ];
   return ()";
     <div className="{"fixed" bottom-6 right-6 z-50 ${className}"}">";
@@ -125,11 +121,11 @@ export { FloatingActionButton };,"});,"})";
                 <div>Broken JSX</div>
                   className="bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap ">;
                   {item.label}
-;
+
                 </motion.span>;
               </motion.div>;
             ))}
-;
+
           </motion.div>;
         )}";
       </AnimatePresence>;
@@ -154,19 +150,15 @@ export { FloatingActionButton };,"});,"})";
               <PlusIcon className="w-6 h-6" /">";
             </motion.div>;
           )}
-;
+
         </AnimatePresence>;
       </motion.button>;
-    </div>)};
+    </div>)}
 export default FloatingActionButton;
-;
 
-export { FloatingActionButton };
-;
-export { FloatingActionButton };
-;
-export { FloatingActionButton };
-;
-export { FloatingActionButton };
-;
-export { FloatingActionButton };
+
+export { FloatingActionButton }
+export { FloatingActionButton }
+export { FloatingActionButton }
+export { FloatingActionButton }
+export { FloatingActionButton }

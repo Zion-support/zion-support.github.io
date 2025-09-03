@@ -29,16 +29,12 @@ const Talent = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default Talent;
-;
 
-export { Talent };
-;
-export { Talent };
-;
-export { Talent };
-;
-export { Talent };
-;
-export { Talent };
+
+export { Talent }
+export { Talent }
+export { Talent }
+export { Talent }
+export { Talent }

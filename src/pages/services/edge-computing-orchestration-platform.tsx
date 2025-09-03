@@ -51,7 +51,7 @@ const EdgeComputingOrchestrationPlatform = () => {};
         <meta name="description" content="Advanced edge computing orchestration platform that reduces latency by 90% and enables real-time processing across distributed edge locations." />;
         <meta name="keywords" content="edge computing, distributed computing, real-time processing, edge orchestration, low-latency computing" />;
       </Head>;
-      ;
+
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-green-600 via-teal-600 to-blue-600 py-20 text-center">;
@@ -83,7 +83,7 @@ const EdgeComputingOrchestrationPlatform = () => {};
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Edge Computing Features</h2>;
             <p className="text-gray-600 text-lg">Intelligent orchestration that optimizes computing resources across edge locations</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {};
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">;
@@ -104,7 +104,7 @@ const EdgeComputingOrchestrationPlatform = () => {};
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Edge Computing Performance Results</h2>;
               <p className="text-gray-600 text-lg">Transform your applications with distributed edge computing</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-2 gap-8">;
               <div>;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Key Benefits</h3>;
@@ -117,7 +117,7 @@ const EdgeComputingOrchestrationPlatform = () => {};
                   ))}
                 </ul>;
               </div>;
-              ;
+
               <div className="bg-white rounded-xl p-6 shadow-lg">;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Use Cases</h3>;
                 <ul className="space-y-3">;
@@ -139,7 +139,7 @@ const EdgeComputingOrchestrationPlatform = () => {};
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Intelligent Edge Architecture</h2>;
             <p className="text-gray-600 text-lg">Built for distributed computing and real-time processing</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-3 gap-8">;
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">;
@@ -148,7 +148,7 @@ const EdgeComputingOrchestrationPlatform = () => {};
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Global Edge Network</h3>;
               <p className="text-gray-600">Distributed edge nodes across multiple geographic locations for optimal performance and redundancy.</p>;
             </div>;
-            ;
+
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">;
                 <Brain className="w-6 h-6 text-white" />;
@@ -156,7 +156,7 @@ const EdgeComputingOrchestrationPlatform = () => {};
               <h3 className="text-xl font-semibold text-gray-900 mb-3">AI-Powered Orchestration</h3>;
               <p className="text-gray-600">Intelligent resource allocation and workload distribution using machine learning algorithms.</p>;
             </div>;
-            ;
+
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
               <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">;
                 <Zap className="w-6 h-6 text-white" />;
@@ -174,7 +174,7 @@ const EdgeComputingOrchestrationPlatform = () => {};
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Edge Computing Pricing Plans</h2>;
               <p className="text-gray-600 text-lg">Scale your edge computing infrastructure with flexible pricing</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-3 gap-8">;
               {};
                 <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.name === 'Edge Enterprise' ? 'border-2 border-green-500 bg-green-50' : 'border border-gray-200 bg-white'}`}>;
@@ -207,7 +207,7 @@ const EdgeComputingOrchestrationPlatform = () => {};
               <h2 className="text-3xl font-bold mb-4">Ready to Deploy Edge Computing?</h2>;
               <p className="text-gray-300 text-lg">Contact our edge computing experts today</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-2 gap-8">;
               <div>;
                 <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>;
@@ -226,7 +226,7 @@ const EdgeComputingOrchestrationPlatform = () => {};
                   </div>;
                 </div>;
               </div>;
-              ;
+
               <div className="bg-white rounded-xl p-6">;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Start Your Free Trial</h3>;
                 <p className="text-gray-600 mb-4">Experience edge computing orchestration with our 14-day free trial</p>;

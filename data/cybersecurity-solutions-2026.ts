@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface CybersecuritySolutions2026 {;
+export interface CybersecuritySolutions2026 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface CybersecuritySolutions2026 {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface CybersecuritySolutions2026 {;
   rating: number;
 export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [;
   // Advanced Threat Intelligence Platform;
-  {;
+  {
     id: "advanced-threat-intelligence-platform",;
     name: "Advanced Threat Intelligence Platform",;
     tagline: "Real-time threat detection with AI-powered intelligence",;
@@ -76,21 +76,19 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [;
     marketSize: "$35B market",;
     growthRate: "350% annual growth",;
     variant: "security-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced threat intelligence platform with AI-powered detection, real-time analysis, and automated response capabilities.",;
     launchDate: "2026-01-25",;
     customers: 280,;
     rating: 4.9,;
-    reviews: 178;,;,
-},;
+    reviews: 178},;
   // Quantum-Resistant Cryptography Suite;
-  {;
+  {
     id: "quantum-resistant-cryptography-suite",;
     name: "Quantum-Resistant Cryptography Suite",;
     tagline: "Future-proof encryption against quantum computing threats",;
@@ -128,21 +126,19 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [;
     marketSize: "$25B market",;
     growthRate: "400% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum-resistant cryptography suite with future-proof algorithms, key management, and comprehensive security features.",;
     launchDate: "2026-02-01",;
     customers: 150,;
     rating: 4.9,;
-    reviews: 89;,;,
-},;
+    reviews: 89},;
   // AI-Powered Security Operations Center;
-  {;
+  {
     id: "ai-powered-security-operations-center",;
     name: "AI-Powered Security Operations Center",;
     tagline: "Intelligent security operations with AI automation",;
@@ -180,21 +176,19 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [;
     marketSize: "$45B market",;
     growthRate: "400% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced AI-powered security operations center with intelligent monitoring, automated response, and comprehensive security management capabilities.",;
     launchDate: "2026-02-15",;
     customers: 120,;
     rating: 4.8,;
-    reviews: 78;,;,
-},;
+    reviews: 78},;
   // Zero-Day Vulnerability Detection System;
-  {;
+  {
     id: "zero-day-vulnerability-detection-system",;
     name: "Zero-Day Vulnerability Detection System",;
     tagline: "Detect unknown vulnerabilities before they become threats",;
@@ -232,21 +226,19 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [;
     marketSize: "$30B market",;
     growthRate: "320% annual growth",;
     variant: "security-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced zero-day vulnerability detection system with AI-powered analysis, proactive protection, and comprehensive security capabilities.",;
     launchDate: "2026-02-20",;
     customers: 320,;
     rating: 4.9,;
-    reviews: 198;,;,
-},;
+    reviews: 198},;
   // Blockchain-Based Identity Management;
-  {;
+  {
     id: "blockchain-based-identity-management",;
     name: "Blockchain-Based Identity Management",;
     tagline: "Secure, decentralized identity management with blockchain technology",;
@@ -284,12 +276,11 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [;
     marketSize: "$35B market",;
     growthRate: "380% annual growth",;
     variant: "blockchain-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced blockchain-based identity management system with decentralized verification, advanced security, and comprehensive identity capabilities.",;
     launchDate: "2026-03-01",;

@@ -16,7 +16,7 @@ export default function Page() {};
                             Object.assign(acc, flattenObject (obj[key], `${pre}${key}`) ) }
                         else {};
                             acc[`${pre}${key}`] = obj[key]}
-                        return acc}, {}) };
+                        return acc}, {}) }
                 currentTranslations[lang.code] = flattenObject(res) }
         }) ;
         setTranslations(currentTranslations) ;
@@ -173,16 +173,12 @@ export default function Page() {};
           </CardContent>;
         </Card>;
       </main>;
-      ;
-    </>)}
-;
 
-export { TranslationManager };
-;
-export { TranslationManager };
-;
-export { TranslationManager };
-;
-export { TranslationManager };
-;
-export { TranslationManager };
+    </>)}
+
+
+export { TranslationManager }
+export { TranslationManager }
+export { TranslationManager }
+export { TranslationManager }
+export { TranslationManager }

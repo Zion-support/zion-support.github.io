@@ -17,8 +17,7 @@ const ContentQualityDashboard = ({ className = '' }) => {};
                     content: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.',''';
                     metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.',''';
                     images['/images/hero-ai-solutions.jpg',/images/hero-it-services.jpg'],;''';
-                    links['/services',/ai-solutions',/about',/contact'];,
-},;
+                    links['/services',/ai-solutions',/about',/contact']},;
                 {}
 ';
 '';
@@ -28,8 +27,7 @@ const ContentQualityDashboard = ({ className = '' }) => {};
                     content: 'We offer a wide range of technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation. Our expert team delivers innovative solutions tailored to your business needs.',''';
                     metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.',''';
                     images['/images/services-overview.jpg'],;''';
-                    links['/ai-solutions',/cloud-devops',/cybersecurity',/about'];,
-},;
+                    links['/ai-solutions',/cloud-devops',/cybersecurity',/about']},;
                 {}
 ';
 '';
@@ -39,8 +37,7 @@ const ContentQualityDashboard = ({ className = '' }) => {};
                     content: 'Cutting-edge artificial intelligence solutions for modern businesses. Machine learning, predictive analytics, and AI automation to drive innovation and efficiency.',''';
                     metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.',''';
                     images['/images/ai-solutions.jpg'],;''';
-                    links['/services',/about',/contact'];,
-},;
+                    links['/services',/about',/contact']},;
                 {}
 ';
 '';
@@ -94,14 +91,14 @@ const ContentQualityDashboard = ({ className = '' }) => {};
                 page.issues.join('; '),;
                 page.recommendations.join('; ');
             ])'";
-        ].map(row => row.map(cell => `"${cell}"`).join(',)).join('\n');
+        ].map(row => row.map(cell => `"${cell}"`).join(')).join('\n');
         const blob = new Blob([csvContent], { type: 'text/csv' });
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
         a.download = 'content-quality-report.csv';
         a.click();
-        window.URL.revokeObjectURL(url)};
+        window.URL.revokeObjectURL(url)}
     const filteredPages = getFilteredPages();`;
     return (<div className={`fixed bottom-6 left-6 z-50 ${className}`}>;
       {/* Floating Action Button */}";
@@ -122,7 +119,7 @@ const ContentQualityDashboard = ({ className = '' }) => {};
                 ×;
               </button>;
             </div>;
-            ;
+
             {/* Summary Stats */}";
             {};
                   <div className="text-2xl font-bold">{report.totalPages}</div>";
@@ -165,9 +162,8 @@ const ContentQualityDashboard = ({ className = "" }) => {    const [isOpen, setI
                     title: "Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services",""";,"});,"})";
                     content: "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.",""";,"});,"})";
                     metaDescription: "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.",""";,"});,"})";
-                    images["/images/hero - ai-solutions.jpg",/images/hero-it-services.jpg"],,"";,"});,"})";
-                    links["/services",/ai-solutions",/about",/contact"];,"});,"});";,
-},,"});,"})";
+                    images["/images/hero - ai-solutions.jpg",/images/hero-it-services.jpg"],"";,"});,"})";
+                    links["/services",/ai-solutions",/about",/contact"];,"});,"});"},"});,"})";
                 {}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
@@ -176,9 +172,8 @@ const ContentQualityDashboard = ({ className = "" }) => {    const [isOpen, setI
                     title: "Our Services - Comprehensive Technology Solutions",""";,"});,"})";
                     content: "We offer a wide range of technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation. Our expert team delivers innovative solutions tailored to your business needs.",""";,"});,"})";
                     metaDescription: "Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.",""";,"});,"})";
-                    images["/images/services - overview.jpg"],,"";,"});,"})";
-                    links["/ai-solutions",/cloud-devops",/cybersecurity",/about"];,"});,"});";,
-},,"});,"})";
+                    images["/images/services - overview.jpg"],"";,"});,"})";
+                    links["/ai-solutions",/cloud-devops",/cybersecurity",/about"];,"});,"});"},"});,"})";
                 {}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
@@ -187,9 +182,8 @@ const ContentQualityDashboard = ({ className = "" }) => {    const [isOpen, setI
                     title: "AI Solutions - Artificial Intelligence Services",""";,"});,"})";
                     content: "Cutting-edge artificial intelligence solutions for modern businesses. Machine learning, predictive analytics, and AI automation to drive innovation and efficiency.",""";,"});,"})";
                     metaDescription: "Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.",""";,"});,"})";
-                    images["/images/ai - solutions.jpg"],,"";,"});,"})";
-                    links["/services",/about",/contact"];,"});,"});";,
-},,"});,"})";
+                    images["/images/ai - solutions.jpg"],"";,"});,"})";
+                    links["/services",/about",/contact"];,"});,"});"},"});,"})";
                 {}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
@@ -198,9 +192,8 @@ const ContentQualityDashboard = ({ className = "" }) => {    const [isOpen, setI
                     title: "About Us - Zion Tech Group",""";,"});,"})";
                     content: "Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions. Discover our team of experts and our journey in the tech industry.",""";,"});,"})";
                     metaDescription: "Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions.",""";,"});,"})";
-                    images["/images/about - team.jpg"],,"";,"});,"})";
-                    links["/services",/team",/contact",/mission"];,"});,"});";,
-},,"});,"})";
+                    images["/images/about - team.jpg"],"";,"});,"})";
+                    links["/services",/team",/contact",/mission"];,"});,"});"},"});,"})";
                 {}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
@@ -209,9 +202,8 @@ const ContentQualityDashboard = ({ className = "" }) => {    const [isOpen, setI
                     title: "Contact Us - Get in Touch",""";,"});,"})";
                     content: "Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business with cutting-edge solutions.",""";,"});,"})";
                     metaDescription: "Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business.",""";,"});,"})";
-                    images["/images/contact - office.jpg"],,"";,"});,"})";
-                    links["/services",/about",/team"];,"});,"});";,
-}"});,"})";
+                    images["/images/contact - office.jpg"],"";,"});,"})";
+                    links["/services",/about",/team"];,"});,"});"}"});,"})";
             ],"});,"})";
             for(const page of samplePages) {}"});,"})";
                 contentAnalyzer.analyzePageContent(page.url, page.title, page.content, page.metaDescription, page.images, page.links)}"});,"})";
@@ -223,8 +215,7 @@ const ContentQualityDashboard = ({ className = "" }) => {    const [isOpen, setI
 """;,"});,"})";
             // comment;
         finally {}"});,"})";
-            setIsLoading(false)}"});,"});";,
-}, [contentAnalyzer]);,"});,"})";
+            setIsLoading(false)}"});,"});"}, [contentAnalyzer]);,"});,"})";
     useEffect(() => {}"});,"})";
         // comment;
         analyzeAllPages()}, [analyzeAllPages]);,"});,"})";
@@ -267,11 +258,11 @@ const ContentQualityDashboard = ({ className = "" }) => {    const [isOpen, setI
 };
         if (!report);,"});,"})";
             return,"});,"})";
-        const csvContent = [],,"});,"})";
-            ...report.pageMetrics.map(page => [page.pageUrl,,"});,"})";
-                page.title,,"});,"})";
-                page.wordCount.toString(),,"});,"})";
-                page.seoScore.toString(),,"});,"})";
+        const csvContent = [],"});,"})";
+            ...report.pageMetrics.map(page => [page.pageUrl,"});,"})";
+                page.title,"});,"})";
+                page.wordCount.toString(),"});,"})";
+                page.seoScore.toString(),"});,"})";
                 page.overallScore.toString(),";,"});,"})";
                 page.issues.join("; "),";,"});,"})";
                 page.recommendations.join("; ")""";,"});,"})";
@@ -285,8 +276,7 @@ const ContentQualityDashboard = ({ className = "" }) => {    const [isOpen, setI
         a.download = "content-quality-report.csv";,"});,"})";
         a.click();,"});,"})";
         window.URL.revokeObjectURL(url)};";,"});,"})";
-    const filteredPages = getFilteredPages();"";,"});,"});,
-}
+    const filteredPages = getFilteredPages();"";,"});,"})}
     return (";
     <div className="{"fixed" bottom-6 left-6 z-50 ${className}"}>""";,"});,"})";
       {/* comment */}"""";,"});,"})";
@@ -668,16 +658,12 @@ const ContentQualityDashboardJs = () => {};
             </button>;
           </div>;
         </div>)}
-    </div>)};
+    </div>)}
 export default ContentQualityDashboard;
-;
 
-export { ContentQualityDashboard };
-;
-export { ContentQualityDashboard };
-;
-export { ContentQualityDashboard };
-;
-export { ContentQualityDashboard };
-;
-export { ContentQualityDashboard };
+
+export { ContentQualityDashboard }
+export { ContentQualityDashboard }
+export { ContentQualityDashboard }
+export { ContentQualityDashboard }
+export { ContentQualityDashboard }

@@ -14,7 +14,7 @@ const AIContentGenerationSuite = () => {};
     'Content calendar management',;
     'Performance analytics';
   ];
-;
+
   const benefits = [;
     'Save 80% content creation time',;
     'Consistent brand voice across all channels',;
@@ -78,7 +78,7 @@ const AIContentGenerationSuite = () => {};
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Powerful AI Content Features</h2>;
           <p className="text-xl text-gray-600">Everything you need to create engaging content at scale</p>;
         </div>;
-        ;
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
           {};
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature}</h3>;
@@ -94,7 +94,7 @@ const AIContentGenerationSuite = () => {};
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our AI Content Suite?</h2>;
             <p className="text-xl text-gray-600">Measurable results that drive business growth</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {};
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit}</h3>;
@@ -110,18 +110,17 @@ const AIContentGenerationSuite = () => {};
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Flexible Pricing Plans</h2>;
           <p className="text-xl text-gray-600">Choose the plan that fits your content needs</p>;
         </div>;
-        ;
+
         <div className="grid md:grid-cols-3 gap-8">;
           {};
               )}
-              ;
               <div className="text-center mb-6">;
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>;
                 <div className="text-4xl font-bold text-purple-600 mb-2">{plan.price}</div>;
                 <p className="text-gray-500 line-through">{plan.marketPrice}</p>;
                 <p className="text-green-600 font-semibold">Save up to 40%</p>;
               </div>;
-              ;
+
               <ul className="space-y-3 mb-8">;
                 {};
                   <li key={featureIndex} className="flex items-center text-gray-600">;
@@ -147,7 +146,7 @@ const AIContentGenerationSuite = () => {};
             <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Content Strategy?</h2>;
             <p className="text-xl text-gray-300">Contact us today for a free consultation and demo</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             <div className="text-center">;
               <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />;
@@ -189,7 +188,5 @@ const AIContentGenerationSuite = () => {};
         </div>;
       </footer>;
     </div>;
-  );,
-};
-;
+  )}
 export default AIContentGenerationSuite;

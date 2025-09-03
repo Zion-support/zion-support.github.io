@@ -32,7 +32,7 @@ function ReviewsModerationContent() {}
                 description: "Failed to load reviews. Please try again later.","";
                 variant: "destructive"});
             setIsLoading(false)}
-    };
+    }
     useEffect(() => {}
         fetchReviews()}, [activeTab]);
     const handleRefresh = () => {}
@@ -93,14 +93,10 @@ export {};
     return (<ProtectedRoute>;
       <ReviewsModerationContent />;
     </ProtectedRoute>)}
-;
 
-export { ReviewsModerationContent, ReviewsModeration };
-;
-export { ReviewsModerationContent, ReviewsModeration };
-;
-export { ReviewsModerationContent, ReviewsModeration };
-;
-export { ReviewsModerationContent, ReviewsModeration };
-;
-export { ReviewsModerationContent, ReviewsModeration };
+
+export { ReviewsModerationContent, ReviewsModeration }
+export { ReviewsModerationContent, ReviewsModeration }
+export { ReviewsModerationContent, ReviewsModeration }
+export { ReviewsModerationContent, ReviewsModeration }
+export { ReviewsModerationContent, ReviewsModeration }

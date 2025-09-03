@@ -1,8 +1,7 @@
 
-"";,"});,})";
-;,});,"});,
-}
-;
+"";,"});})";
+;});,"})}
+
 // import { useAuth } from '@/hooks/useAuth'; // Assuming an auth hook exists;
 // For now, let's mock a basic useAuth hook if not available to allow component structure;
 // In a real scenario, this would come from your actual auth context/hooks;
@@ -16,9 +15,7 @@ const useAuth = () => {};
 }, []);, []);
   //  // logic to check actual auth status and set user;
   // }, []);
-  return { user, isAuthenticated: user?.isLoggedIn ?? false };,
-};
-;
+  return { user, isAuthenticated: user?.isLoggedIn ?? false }}
 // Assuming RatingStars component exists as seen in ProductListingCard.tsx;
 // If not, a simple display of rating number will be shown.// For actual stars, you'd import your RatingStars component:;
 // import { RatingStars } from '@/components/RatingStars'; // Or its correct path;
@@ -35,7 +32,7 @@ const RatingStarsDisplay: React.FC<Pick<RatingStarsProps, 'value'>> = ({ value }
     <span className="ml-2 text-sm text-gray-600">({value.toFixed(1)})</span>;
   </div>;
 );
-;
+
 // Placeholder for an interactive star rating input;
 const StarRatingInput: React.FC<Pick<RatingStarsProps, 'value' | 'onRate'>> = ({ value, onRate }) => (;
   <div className="flex">;
@@ -54,7 +51,7 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {};
   const [reviews, setReviews] = useState<Review[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-;
+
   const [newRating, setNewRating] = useState(0);
   const [newComment, setNewComment] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -154,7 +151,5 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {};
       {};
       )}
     </div>;
-  );,
-};
-;
+  )}
 export default ProductReviews;

@@ -1,12 +1,11 @@
 import type { AdvancedITService } from "./advanced-it-services";
-const contact = {;
+const contact = {
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709",;
-  website: "https://ziontechgroup.com";,;,
-}
+  website: "https://ziontechgroup.com"}
 export const addedITServices2025: AdvancedITService[] = [;
-  {;
+  {
     id: "managed-mlops-platform",;
     name: "Managed MLOps Platform",;
     tagline: "Productionize models with CI/CD, monitoring, and governance",;
@@ -46,9 +45,8 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-03-18",;
     customers: 28,;
     rating: 4.9,;
-    reviews: 21;,;,
-},;
-  {;
+    reviews: 21},;
+  {
     id: "zero-trust-access-service",;
     name: "Zero-Trust Access Service",;
     tagline: "Private, identity-aware access to internal apps without VPNs",;
@@ -87,9 +85,8 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-01-29",;
     customers: 52,;
     rating: 4.8,;
-    reviews: 44;,;,
-},;
-  {;
+    reviews: 44},;
+  {
     id: "sre-oncall-as-a-service",;
     name: "SRE On-Call as a Service",;
     tagline: "Production-grade reliability with shared on-call and SLIs/SLOs",;
@@ -128,9 +125,8 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-05-30",;
     customers: 14,;
     rating: 4.9,;
-    reviews: 11;,;,
-},;
-  {;
+    reviews: 11},;
+  {
     id: "data-platform-accelerator",;
     name: "Data Platform Accelerator",;
     tagline: "Stand up a modern data stack in your cloud in weeks",;
@@ -169,9 +165,8 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-02",;
     customers: 9,;
     rating: 4.8,;
-    reviews: 7;,;,
-},;
-  {;
+    reviews: 7},;
+  {
     id: "managed-kubernetes-platform",;
     name: "Managed Kubernetes Platform",;
     tagline: "Secure, observable, cost-aware Kubernetes managed for you",;
@@ -210,9 +205,8 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-09",;
     customers: 7,;
     rating: 4.8,;
-    reviews: 5;,;,
-},;
-  {;
+    reviews: 5},;
+  {
     id: "secure-data-mesh",;
     name: "Secure Data Mesh",;
     tagline: "Domain-oriented data products with governance and lineage",;
@@ -251,9 +245,8 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-07",;
     customers: 5,;
     rating: 4.7,;
-    reviews: 4;,;,
-},;
-  {;
+    reviews: 4},;
+  {
     id: "enterprise-sso-and-iam-hardening",;
     name: "Enterprise SSO & IAM Hardening",;
     tagline: "Design and implement robust identity with least privilege",;
@@ -292,9 +285,8 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-06",;
     customers: 12,;
     rating: 4.8,;
-    reviews: 8;,;,
-},;
-  {;
+    reviews: 8},;
+  {
     id: "managed-vulnerability-management",;
     name: "Managed Vulnerability Management",;
     tagline: "Continuous scanning, prioritization, and remediation workflows",;
@@ -333,9 +325,8 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-15",;
     customers: 18,;
     rating: 4.7,;
-    reviews: 13;,;,
-},;
-  {;
+    reviews: 13},;
+  {
     id: "managed-sase-lite",;
     name: "Managed SASE Lite",;
     tagline: "Secure access, DNS filtering, and app gateway without complexity",;
@@ -374,9 +365,8 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-18",;
     customers: 10,;
     rating: 4.6,;
-    reviews: 7;,;,
-},;
-  {;
+    reviews: 7},;
+  {
     id: "data-quality-observability-service",;
     name: "Data Quality Observability Service",;
     tagline: "Detect schema drift, freshness, and anomalies with alerts",;
@@ -415,9 +405,8 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-11",;
     customers: 12,;
     rating: 4.7,;
-    reviews: 9;,;,
-},;
-  {;
+    reviews: 9},;
+  {
     id: "cost-aware-kubernetes-hardening",;
     name: "Cost-Aware Kubernetes Hardening",;
     tagline: "Secure clusters with policies, budgets, and golden paths",;
@@ -456,9 +445,8 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-14",;
     customers: 8,;
     rating: 4.8,;
-    reviews: 6;,;,
-},;
-  {;
+    reviews: 6},;
+  {
     id: "data-platform-modernization",;
     name: "Data Platform Modernization",;
     tagline: "Warehouse, lakehouse, and ELT rebuilt for speed, cost, and governance",;
@@ -497,9 +485,8 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-05-10",;
     customers: 17,;
     rating: 4.8,;
-    reviews: 12;,;,
-},;
-  {;
+    reviews: 12},;
+  {
     id: "sre-and-reliability-ops",;
     name: "SRE & Reliability Ops",;
     tagline: "SLIs/SLOs, on-call, incident response, and performance engineering",;
@@ -538,9 +525,8 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-05-20",;
     customers: 24,;
     rating: 4.9,;
-    reviews: 19;,;,
-},;
-  {;
+    reviews: 19},;
+  {
     id: "zero-trust-email-and-endpoint",;
     name: "Zero-Trust Email & Endpoint",;
     tagline: "DMARC, DKIM, phishing simulation, EDR rollouts, and device posture",;
@@ -579,9 +565,8 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-05",;
     customers: 13,;
     rating: 4.7,;
-    reviews: 10;,;,
-},;
-  {;
+    reviews: 10},;
+  {
     id: "managed-observability-platform",;
     name: "Managed Observability Platform",;
     tagline: "Logs, metrics, traces, and SLOs delivered as a managed stack",;
@@ -620,9 +605,8 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-21",;
     customers: 6,;
     rating: 4.8,;
-    reviews: 4;,;,
-},;
-  {;
+    reviews: 4},;
+  {
     id: "network-modernization-accelerator",;
     name: "Network Modernization Accelerator",;
     tagline: "SD-WAN, zero-trust, and cloud interconnect in weeks",;
@@ -661,9 +645,8 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-22",;
     customers: 4,;
     rating: 4.7,;
-    reviews: 3;,;,
-},;
-  {;
+    reviews: 3},;
+  {
     id: "data-governance-foundation",;
     name: "Data Governance Foundation",;
     tagline: "Catalog, lineage, access controls, and data contracts delivered",;

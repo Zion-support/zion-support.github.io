@@ -27,14 +27,10 @@ export {};
       </main>;
       <Footer />;
     </>)}
-;
 
-export { PrivacyPolicy };
-;
-export { PrivacyPolicy };
-;
-export { PrivacyPolicy };
-;
-export { PrivacyPolicy };
-;
-export { PrivacyPolicy };
+
+export { PrivacyPolicy }
+export { PrivacyPolicy }
+export { PrivacyPolicy }
+export { PrivacyPolicy }
+export { PrivacyPolicy }

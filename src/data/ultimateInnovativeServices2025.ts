@@ -4,7 +4,7 @@ export interface UltimateInnovativeService {};
     security: string[]};
   competitors?: string[];
   caseStudies?: string[]}
-;
+
 export ;
   'IoT & Edge Computing',;
   'Metaverse & AR/VR',;

@@ -4,7 +4,7 @@ import {  import { motion  } from 'framer-motion';
 export function ServicesOverview(...args[]):  {};
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'))};
   ];
-;
+
   return ();
     <div className="py-20 bg-futuristic relative overflow-hidden">;
       {/* Background effects */}";

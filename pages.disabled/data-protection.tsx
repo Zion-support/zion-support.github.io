@@ -2,12 +2,12 @@ import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Shield, Lock, Eye, Database, UserCheck, FileText, AlertTriangle } from 'lucide-react';
-;
-const DataProtection: NextPage = () => {;
+
+const DataProtection: NextPage = () => {
   const lastUpdated = 'January 27, 2025';
-;
+
   const protectionMeasures = [;
-    {;
+    {
       icon: Lock,;
       title: 'Data Encryption',;
       description: 'All data is encrypted both in transit and at rest using industry-standard encryption protocols.',;
@@ -16,9 +16,8 @@ const DataProtection: NextPage = () => {;
         'TLS 1.3 for data in transit',;
         'End-to-end encryption for sensitive communications',;
         'Regular encryption key rotation';
-      ];,
-},;
-    {;
+      ]},;
+    {
       icon: Shield,;
       title: 'Access Controls',;
       description: 'Strict access controls ensure only authorized personnel can access your data.',;
@@ -27,9 +26,8 @@ const DataProtection: NextPage = () => {;
         'Role-based access control (RBAC)',;
         'Principle of least privilege',;
         'Regular access reviews and audits';
-      ];,
-},;
-    {;
+      ]},;
+    {
       icon: Eye,;
       title: 'Monitoring & Logging',;
       description: 'Comprehensive monitoring and logging of all data access and modifications.',;
@@ -38,9 +36,8 @@ const DataProtection: NextPage = () => {;
         'Comprehensive audit logs',;
         'Automated threat detection',;
         '24/7 security operations center';
-      ];,
-},;
-    {;
+      ]},;
+    {
       icon: Database,;
       title: 'Data Backup & Recovery',;
       description: 'Regular backups and disaster recovery procedures to protect against data loss.',;
@@ -49,70 +46,58 @@ const DataProtection: NextPage = () => {;
         'Geographically distributed storage',;
         'Point-in-time recovery capabilities',;
         'Regular disaster recovery testing';
-      ];,
-}
+      ]}
   ];
-;
+
   const complianceStandards = [;
-    {;
+    {
       name: 'GDPR',;
       description: 'General Data Protection Regulation compliance for EU data subjects',;
       status: 'Compliant',;
-      icon: '🇪🇺';,
-},;
-    {;
+      icon: '🇪🇺'},;
+    {
       name: 'CCPA',;
       description: 'California Consumer Privacy Act compliance for California residents',;
       status: 'Compliant',;
-      icon: '🇺🇸';,
-},;
-    {;
+      icon: '🇺🇸'},;
+    {
       name: 'HIPAA',;
       description: 'Health Insurance Portability and Accountability Act for healthcare data',;
       status: 'Compliant',;
-      icon: '🏥';,
-},;
-    {;
+      icon: '🏥'},;
+    {
       name: 'SOC 2',;
       description: 'Service Organization Control 2 Type II certification',;
       status: 'Certified',;
-      icon: '🔒';,
-},;
-    {;
+      icon: '🔒'},;
+    {
       name: 'ISO 27001',;
       description: 'International standard for information security management',;
       status: 'Certified',;
-      icon: '🌍';,
-}
+      icon: '🌍'}
   ];
-;
+
   const dataRights = [;
-    {;
+    {
       title: 'Right to Access',;
-      description: 'You have the right to request access to your personal data and receive a copy of the data we hold about you.';,
-},;
-    {;
+      description: 'You have the right to request access to your personal data and receive a copy of the data we hold about you.'},;
+    {
       title: 'Right to Rectification',;
-      description: 'You can request correction of inaccurate or incomplete personal data.';,
-},;
-    {;
+      description: 'You can request correction of inaccurate or incomplete personal data.'},;
+    {
       title: 'Right to Erasure',;
-      description: 'You have the right to request deletion of your personal data under certain circumstances.';,
-},;
-    {;
+      description: 'You have the right to request deletion of your personal data under certain circumstances.'},;
+    {
       title: 'Right to Portability',;
-      description: 'You can request a copy of your data in a structured, machine-readable format.';,
-},;
-    {;
+      description: 'You can request a copy of your data in a structured, machine-readable format.'},;
+    {
       title: 'Right to Object',;
-      description: 'You can object to the processing of your personal data for certain purposes.';,
-},;
-    {;
+      description: 'You can object to the processing of your personal data for certain purposes.'},;
+    {
       title: 'Right to Restrict Processing',;
-      description: 'You can request that we limit the processing of your personal data.';,
-}
+      description: 'You can request that we limit the processing of your personal data.'}
   ];
-;
+
   return (;
     <MainLayout;
       title="Data Protection - Zion Tech Group";
@@ -176,8 +161,7 @@ const DataProtection: NextPage = () => {;
                     <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${;
                       standard.status === 'Compliant' || standard.status === 'Certified';
                         ? 'bg-green-100 text-green-800';
-                        : 'bg-yellow-100 text-yellow-800';,
-}`}>;
+                        : 'bg-yellow-100 text-yellow-800'}`}>;
                       {standard.status}
                     </span>;
                   </div>;
@@ -264,7 +248,5 @@ const DataProtection: NextPage = () => {;
         </section>;
       </div>;
     </MainLayout>;
-  );,
-};
-;
+  )}
 export default DataProtection;

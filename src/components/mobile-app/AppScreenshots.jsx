@@ -36,5 +36,5 @@ export const AppScreenshots = () => {};
           </Button>;
         </div>;
       </div>;
-    </section>)};
+    </section>)}
 '"

@@ -26,7 +26,7 @@ const LiveDashboard: React.FC = () => {};
     {};
 }
   ];
-;
+
   const recentEvents = [;
     {};
 },;
@@ -39,7 +39,7 @@ const LiveDashboard: React.FC = () => {};
     {};
 }
   ];
-;
+
   const systemHealth = [;
     { service: 'Web Server', status: 'healthy', uptime: '99.99%', response: '12ms' },;
     { service: 'Database', status: 'healthy', uptime: '99.97%', response: '45ms' },;
@@ -218,7 +218,5 @@ const LiveDashboard: React.FC = () => {};
         </div>;
       </div>;
     </div>;
-  );,
-};
-;
+  )}
 export default LiveDashboard;

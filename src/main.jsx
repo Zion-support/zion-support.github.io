@@ -1,5 +1,5 @@
 
-;
+
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from "./App.tsx";
@@ -12,18 +12,18 @@ import './utils/consoleErrorToast';
 // Import i18n configuration;
 import './i18n';
 import { LanguageProvider } from '@/context/LanguageContext';
-;
+
 import { WhitelabelProvider } from '@/context/WhitelabelContext';
 import { AppLayout } from '@/layout/AppLayout';
 // Import auth and notification providers;
 import { AuthProvider } from "./context/auth/AuthProvider.jsx";
-;
+
 // Import analytics provider;
 
-;
-;
-;
-;
+
+
+
+
 // Initialize a React Query client with global error handling;
 const queryClient = new QueryClient({};
 },;,
@@ -32,7 +32,6 @@ const queryClient = new QueryClient({};
 ;
 
 const rootElement = document.getElementById('root');
-;
 
 const renderApp = () => {};
 };
@@ -63,7 +62,6 @@ const renderApp = () => {};
             </HelmetProvider>;
         </React.StrictMode>;
     );
-;
 
     if (rootElement?.hasChildNodes()) {};
 } else if (rootElement) {};
@@ -75,7 +73,7 @@ function displayFatalError(message) {};
   return null;
 }
                 <p>${message}</p>;
-            </div>`;,
+            </div>`}
 }
 }
 ;

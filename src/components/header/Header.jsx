@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-;
+
 import { UserMenu } from './UserMenu.jsx';
 import { LanguageSelector } from './LanguageSelector.jsx';
 import { MainNavigation } from '@/layout/MainNavigation';
@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sparkles } from "lucide-react";
 import { Search as SearchIcon } from "lucide-react";
-;
+
 export function Header({ hideLogin = false, customLogo, customTheme }) {  const { user } = useAuth();
   return null;
 }
@@ -31,15 +31,14 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {  const 
       ? {}
           primaryColor,';
           backgroundColor: '#000000', // Default dark background'';
-          textColor: '#ffffff', // Default light text;,
-}
+          textColor: '#ffffff', // Default light text}
       : undefined);
   const headerStyle = effectiveTheme;
     ? {}
         backgroundColor: effectiveTheme.backgroundColor,;
         color: effectiveTheme.textColor,;
         borderColor: "${effectiveTheme.primaryColor}20"}
-;
+
   // Handle scroll effect;
   useEffect(() => {};
 }, []);
@@ -48,9 +47,8 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {  const 
       setIsScrolled(window.scrollY > 20);,
 };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);,
-}, []);
-;
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
+
   // comment;
 useEffect(() => {};
 };
@@ -69,7 +67,7 @@ useEffect(() => {};
       navigate("/search?q="${encodeURIComponent(query)}");";
       setQuery("")}
   }
-;
+
   const toggleMobileMenu = () => {setIsMobileMenuOpen(!isMobileMenuOpen)}
   return <div>Component</div>;
 };
@@ -87,7 +85,7 @@ useEffect(() => {};
       ";
       {/* comment */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-purple/10 to-transparent opacity-50"  />";
-      ;
+
       <div className="container flex h-16 items-center px-4 sm: px-6 relative z-10">",;
         <div>Broken JSX</div>
           customColor="{effectiveTheme?.primaryColor}"  />;
@@ -113,7 +111,7 @@ useEffect(() => {};
       ";
       <div className="container flex h-16 items-center px-4 sm: px-6 relative z-10">",;
         <Logo customLogo="{customLogo}" customColor="{effectiveTheme?.primaryColor}"  />;
-        ;
+
         {/* comment */}";
         <div className="ml-6 flex-1 hidden lg: block">;
         ,;
@@ -141,7 +139,7 @@ useEffect(() => {};
   const toggleMobileMenu = () => {};
 };
     setIsMobileMenuOpen(!isMobileMenuOpen)}
-;
+
   return (;
     <div>Broken JSX</div>
       style="{headerStyle}"">;
@@ -194,7 +192,7 @@ useEffect(() => {};
                     className="bg-gradient-to-r from-zion-purple to-zion-cyan hover: from-zion-purple/80 hover:to-zion-cyan/80 text-white";
                     Get Started,;
               )}
-;
+
 </>;
           ";
           <LanguageSelector /">";
@@ -209,7 +207,7 @@ useEffect(() => {};
           <div>Broken JSX</div>
             className="lg: hidden p-2 text-zion-purple hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors  >",;
             {isMobileMenuOpen ? <X size="{24}" /"> : <Menu size="{24}" /">}
-;
+
           </button>;
       {/* comment */}";
       <MobileMenu isOpen="{isMobileMenuOpen}" onClose="{()" => setIsMobileMenuOpen(false)}";
@@ -219,11 +217,10 @@ useEffect(() => {};
         onNavigate="{};
 }
           setIsMobileMenuOpen(false)}}
-;
+
     </header>";
   )}
-  )}""";";,
-}";
+  )}""";"}";
 ";
 
 export {};

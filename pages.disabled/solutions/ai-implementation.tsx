@@ -2,58 +2,50 @@ import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { ArrowRight, CheckCircle, Star, Zap, Users, Shield, Brain, Target } from 'lucide-react';
 import Link from 'next/link';
-;
-const AIImplementationPage: NextPage = () => {;
+
+const AIImplementationPage: NextPage = () => {
   const benefits = [;
-    {;
+    {
       icon: <Brain className="w-8 h-8" />,;
       title: 'AI Strategy Development',;
-      description: 'Comprehensive AI strategy tailored to your business objectives and industry requirements.';,
-},;
-    {;
+      description: 'Comprehensive AI strategy tailored to your business objectives and industry requirements.'},;
+    {
       icon: <Target className="w-8 h-8" />,;
       title: 'Custom AI Solutions',;
-      description: 'Bespoke AI implementations designed to solve your specific business challenges.';,
-},;
-    {;
+      description: 'Bespoke AI implementations designed to solve your specific business challenges.'},;
+    {
       icon: <Zap className="w-8 h-8" />,;
       title: 'Rapid Deployment',;
-      description: 'Fast-track AI implementation with proven methodologies and best practices.';,
-},;
-    {;
+      description: 'Fast-track AI implementation with proven methodologies and best practices.'},;
+    {
       icon: <Shield className="w-8 h-8" />,;
       title: 'Enterprise Security',;
-      description: 'Secure AI implementations with enterprise-grade security and compliance.';,
-}
+      description: 'Secure AI implementations with enterprise-grade security and compliance.'}
   ];
-;
+
   const services = [;
-    {;
+    {
       title: 'AI Strategy Consulting',;
       description: 'Strategic planning and roadmap development for AI adoption',;
       price: 'From $5,000',;
-      features: ['AI readiness assessment', 'ROI analysis', 'Implementation roadmap', 'Technology selection'];,
-},;
-    {;
+      features: ['AI readiness assessment', 'ROI analysis', 'Implementation roadmap', 'Technology selection']},;
+    {
       title: 'Custom AI Development',;
       description: 'Bespoke AI solutions tailored to your specific needs',;
       price: 'From $15,000',;
-      features: ['Custom model development', 'Data pipeline setup', 'API integration', 'Performance optimization'];,
-},;
-    {;
+      features: ['Custom model development', 'Data pipeline setup', 'API integration', 'Performance optimization']},;
+    {
       title: 'AI Integration Services',;
       description: 'Seamless integration of AI capabilities into existing systems',;
       price: 'From $10,000',;
-      features: ['System integration', 'Data migration', 'API development', 'Testing & validation'];,
-},;
-    {;
+      features: ['System integration', 'Data migration', 'API development', 'Testing & validation']},;
+    {
       title: 'AI Training & Support',;
       description: 'Comprehensive training and ongoing support for your team',;
       price: 'From $3,000',;
-      features: ['Team training', 'Documentation', '24/7 support', 'Performance monitoring'];,
-}
+      features: ['Team training', 'Documentation', '24/7 support', 'Performance monitoring']}
   ];
-;
+
   return (;
     <MainLayout;
       title="AI Implementation Solutions - Zion Tech Group";
@@ -91,7 +83,7 @@ const AIImplementationPage: NextPage = () => {;
               We combine deep AI expertise with business acumen to deliver implementations that drive real results.;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {benefits.map((benefit, index) => (;
               <div key={index} className="text-center group">;
@@ -115,7 +107,7 @@ const AIImplementationPage: NextPage = () => {;
               Comprehensive AI implementation services designed to accelerate your digital transformation.;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 gap-8">;
             {services.map((service, index) => (;
               <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">;
@@ -154,7 +146,5 @@ const AIImplementationPage: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
-};
-;
+  )}
 export default AIImplementationPage;

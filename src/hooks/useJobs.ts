@@ -7,9 +7,9 @@ export default function Page() {};
 }
       ;
       const { data, error: fetchError } = await query;
-      ;
+
       if(fetchError) throw fetchError;
-      ;
+
       setJobs(data as Job[] || []); // Ensure data is not null;
       setError(null);,
 } catch(err: unknown) {};
@@ -23,9 +23,9 @@ export default function Page() {};
         .update({ status: newStatus });
         .eq("id", jobId);
         .eq("client_id", clientId); ;
-      ;
+
       if(updateError) throw updateError;
-      ;
+
       setJobs(prevJobs => prevJobs.map(job => job.id === jobId ? {...job, status: newStatus} : job));
       toast.success("Job status updated successfully");
       return true;,
@@ -39,9 +39,9 @@ export default function Page() {};
         .delete();
         .eq("id", jobId);
         .eq("client_id", clientId); ;
-        ;
+
       if(deleteError) throw deleteError;
-      ;
+
       setJobs(prevJobs => prevJobs.filter(job => job.id !== jobId));
       toast.success("Job deleted successfully");
       return true;,

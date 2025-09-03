@@ -16,29 +16,25 @@ export {};
 "";
             title: "AI-Powered Insights","";
             description: "Advanced machine learning algorithms analyze your data to uncover hidden patterns and opportunities","";
-            icon: <Brain className="h-6 w-6 text-zion-cyan"/>;,
-},;
+            icon: <Brain className="h-6 w-6 text-zion-cyan"/>},;
         {}
 ";
 "";
             title: "Real-time Analytics","";
             description: "Monitor your business metrics in real-time with live dashboards and instant notifications","";
-            icon: <Zap className="h-6 w-6 text-zion-purple"/>;,
-},;
+            icon: <Zap className="h-6 w-6 text-zion-purple"/>},;
         {}
 ";
 "";
             title: "Predictive Analytics","";
             description: "Forecast future trends and make data-driven decisions with confidence","";
-            icon: <TrendingUp className="h-6 w-6 text-zion-blue"/>;,
-},;
+            icon: <TrendingUp className="h-6 w-6 text-zion-blue"/>},;
         {}
 ";
 "";
             title: "Custom Dashboards","";
             description: "Build personalized dashboards tailored to your specific business needs","";
-            icon: <BarChart3 className="h-6 w-6 text-zion-cyan"/>;,
-}
+            icon: <BarChart3 className="h-6 w-6 text-zion-cyan"/>}
     ];
     const pricingPlans = [];
         {}
@@ -55,8 +51,7 @@ export {};
                 "Email support","";
                 "Monthly reports";
             ],;
-            popular: false;,
-},;
+            popular: false},;
         {}
 ";
 "";
@@ -72,8 +67,7 @@ export {};
                 "Real-time alerts","";
                 "API access";
             ],;
-            popular: true;,
-},;
+            popular: true},;
         {}
 ";
 "";
@@ -89,8 +83,7 @@ export {};
                 "Advanced security","";
                 "Custom integrations";
             ],;
-            popular: false;,
-}
+            popular: false}
     ];
     const testimonials = [];
         {}
@@ -99,24 +92,21 @@ export {};
             name: "Sarah Chen","";
             role: "CTO, TechFlow Inc.","'";
             content: "Zion's AI Analytics Dashboard transformed how we understand our customer data. The insights are game-changing.",;
-            rating: 5;,
-},;
+            rating: 5},;
         {}
 ";
 "";
             name: "Marcus Rodriguez","";
             role: "Data Scientist, DataCorp","'";
             content: "The predictive analytics capabilities are incredible. We've improved our forecasting accuracy by 40%.",;
-            rating: 5;,
-},;
+            rating: 5},;
         {}
 ";
 "";
             name: "Emily Watson","";
             role: "VP Operations, GrowthTech","";
             content: "Real-time dashboards help us make faster, better decisions. ROI was immediate.",;
-            rating: 5;,
-}";
+            rating: 5}";
     ];"";
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">"";
       <SEO title="AI Analytics Dashboard - Zion Tech Group" description="Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get started today!" keywords="AI analytics, business intelligence, predictive analytics, data insights, Zion Tech Group" canonical="https://ziontechgroup.com/ai-analytics-dashboard"/>;
@@ -279,14 +269,10 @@ export {};
         </div>;
       </section>;
     </div>)}
-;
 
-export { AIAnalyticsDashboard };
-;
-export { AIAnalyticsDashboard };
-;
-export { AIAnalyticsDashboard };
-;
-export { AIAnalyticsDashboard };
-;
-export { AIAnalyticsDashboard };
+
+export { AIAnalyticsDashboard }
+export { AIAnalyticsDashboard }
+export { AIAnalyticsDashboard }
+export { AIAnalyticsDashboard }
+export { AIAnalyticsDashboard }

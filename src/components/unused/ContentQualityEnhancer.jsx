@@ -12,8 +12,7 @@ export default function Page() {};
                     element: element,;
                     fixable: true,;
                     suggestion: 'Break into smaller paragraphs for better readability',;
-                    impact: 'readability';,
-});
+                    impact: 'readability'});
                 readabilityScore -= 5;
                 engagementScore -= 3}
             // Check for proper heading structure;
@@ -26,8 +25,7 @@ export default function Page() {};
                             element: element,;
                             fixable: true,;
                             suggestion: 'Ensure heading levels follow logical sequence',;
-                            impact: 'accessibility';,
-});
+                            impact: 'accessibility'});
                         seoScore -= 3}
                 }
             }
@@ -45,8 +43,7 @@ export default function Page() {};
                             element: element,;
                             fixable: true,;
                             suggestion: 'Reduce keyword density for more natural content',;
-                            impact: 'seo';,
-});
+                            impact: 'seo'});
                         seoScore -= 5}
                 }
             });
@@ -60,8 +57,7 @@ export default function Page() {};
                         element: element,;
                         fixable: true,;
                         suggestion: 'Meta descriptions should be 150-160 characters for optimal display',;
-                        impact: 'seo';,
-});
+                        impact: 'seo'});
                     seoScore -= 2}
             }
             // Check for broken links';
@@ -74,8 +70,7 @@ export default function Page() {};
                         element: element,;
                         fixable: true,;
                         suggestion: 'Ensure link points to valid URL or page section',;
-                        impact: 'engagement';,
-});
+                        impact: 'engagement'});
                     engagementScore -= 3}
             }
             // Check for images without alt text';
@@ -88,8 +83,7 @@ export default function Page() {};
                         element: element,;
                         fixable: true,;
                         suggestion: 'Add descriptive alt text for better accessibility and SEO',;
-                        impact: 'accessibility';,
-});
+                        impact: 'accessibility'});
                     seoScore -= 8;
                     engagementScore -= 5}
             }
@@ -142,11 +136,11 @@ export default function Page() {};
     // Get severity color;
     const getSeverityColor = (severity) => {};
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
-    };
+    }
     // Get priority color;
     const getPriorityColor = (priority) => {};
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
-    };
+    }
     return (<>;
       {/* Content Quality Toggle Button */}"`;
       <motion.button initial={{ scale: 0 }} animate={{ scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-20 right-4 z-50 w-14 h-14 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${className}`}  aria-expanded={isOpen}>";
@@ -248,13 +242,13 @@ export default function Page() {};
                         </div>;
                       </div>;
                     </>)}
-;
+
                   {/* Analyze Button */}";
                   <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">;
                     {isAnalyzing ? 'Analyzing...' : 'Analyze Content'}
                   </button>;
                 </div>)}
-;
+
               {/* Issues Tab */}'";
               {};
                       {analysis.issues.map((issue) => (<div key={issue.id} className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 transition-colors cursor-pointer" onClick={() => issue.element && highlightElement(issue.element)}>";
@@ -288,7 +282,7 @@ export default function Page() {};
                         </div>))}
                     </div>)}
                 </div>)}
-;
+
               {/* Suggestions Tab */}'";
               {};
                       {analysis.suggestions.map((suggestion) => (<div key={suggestion.id} className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-blue-50 dark:bg-blue-900/20">";
@@ -318,14 +312,14 @@ export default function Page() {};
                         </div>))}
                     </div>)}
                 </div>)}
-;
+
               {/* Actions Tab */}'";
               {};
                   {/* Auto-fix Button */}";
                   {analysis && analysis.issues.filter(i => i.fixable).length > 0 && (<button onClick={autoFixIssues} className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">;
                       Auto-fix Issues;
                     </button>)}
-;
+
                   {/* Re-analyze Button */}";
                   <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">";
                     <ArrowPathIcon className="w-4 h-4 inline mr-2"/>;
@@ -352,7 +346,6 @@ export default function Page() {};
       <style>{};
           transition: all 0.3s ease !important}`;
       `}</style>;
-    </>)};
-export { ContentQualityEnhancer };
-export default ContentQualityEnhancer;,
-}}}}}}}}}'"`;
+    </>)}
+export { ContentQualityEnhancer }
+export default ContentQualityEnhancer}}}}}}}}}'"`;

@@ -45,16 +45,16 @@ export const marketplaceItems: MarketplaceItem[] = [{};
     location: 'Remote',;
     availability: 'available',;
     deliveryTime: 'Immediate',;
-    warranty: 'N/A'};
+    warranty: 'N/A'}
 ];
-;
+
 export ;
     id: 'services',;
     name: 'Services',;
     description: 'Professional services and consulting',;
-    count: marketplaceItems.filter(item => item.category === 'services').length};
+    count: marketplaceItems.filter(item => item.category === 'services').length}
 ];
-;
+
 export ;
       { value: '0-1000', label: 'Under $1,000' },;
       { value: '1000-5000', label: '$1,000 - $5,000' },;
@@ -77,6 +77,6 @@ export ;
     options: [;
       { value: 'available', label: 'Available' },;
       { value: 'limited', label: 'Limited' },;
-      { value: 'out-of-stock', label: 'Out of Stock' };
-    ]};
+      { value: 'out-of-stock', label: 'Out of Stock' }
+    ]}
 ];

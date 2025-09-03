@@ -28,7 +28,7 @@ export {};
   contactInfo: {}
     mobile: string;
     email: string;
-    website: string};
+    website: string}
   technicalSpecs?: {}
     technology: string[];
     integrations: string[];
@@ -577,7 +577,7 @@ export {};
     color: 'from-orange-600 to-red-700',;
     featured: true}
 ];
-;
-export { innovativeServices2025 };
+
+export { innovativeServices2025 }
 export default innovativeServices2025;
 ';

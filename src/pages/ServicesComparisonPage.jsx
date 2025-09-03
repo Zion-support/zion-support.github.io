@@ -29,8 +29,7 @@ export {};
                 professional: { price: "$5,999", features["Advanced analytics", "Personalization engine", "Priority support", "Custom dashboards", "API access"] },"";
                 enterprise: { price: "$8,999+", features["Full customer intelligence suite", "Custom algorithms", "Dedicated support", "Advanced integrations", "Compliance features"] }
             }
-        ];,
-},;
+        ]},;
     {}
 ";
 "";
@@ -52,8 +51,7 @@ export {};
                 professional: { price: "$4,999", features["Multi-framework support", "Automated reporting", "Priority support", "Custom workflows", "Training"] },"";
                 enterprise: { price: "$6,999+", features["Full compliance suite", "Custom frameworks", "Dedicated support", "Advanced integrations", "Audit preparation"] }
             }
-        ];,
-},;
+        ]},;
     {}
 ";
 "";
@@ -75,8 +73,7 @@ export {};
                 professional: { price: "$4,999", features["Advanced automation", "Custom pipelines", "Priority support", "Advanced testing", "Training"] },"";
                 enterprise: { price: "$7,999+", features["Full DevOps suite", "Custom development", "Dedicated support", "Advanced monitoring", "Multi-environment support"] }
             }
-        ];,
-},;
+        ]},;
     {}
 ";
 "";
@@ -332,14 +329,10 @@ export {};
         </div>;
       </section>;
     </div>)}
-;
 
-export { SERVICE_COMPARISONS, ServicesComparisonPage };
-;
-export { SERVICE_COMPARISONS, ServicesComparisonPage };
-;
-export { SERVICE_COMPARISONS, ServicesComparisonPage };
-;
-export { SERVICE_COMPARISONS, ServicesComparisonPage };
-;
-export { SERVICE_COMPARISONS, Page, ServicesComparisonPage };
+
+export { SERVICE_COMPARISONS, ServicesComparisonPage }
+export { SERVICE_COMPARISONS, ServicesComparisonPage }
+export { SERVICE_COMPARISONS, ServicesComparisonPage }
+export { SERVICE_COMPARISONS, ServicesComparisonPage }
+export { SERVICE_COMPARISONS, Page, ServicesComparisonPage }

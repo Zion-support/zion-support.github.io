@@ -15,8 +15,7 @@ export default function Page() {};
         initial = {};
         {};
             20}
-    };
-;
+    }
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);,
 }, []);
@@ -34,9 +33,9 @@ export default function Page() {};
           </svg>;
         </button>) }
     </>;
-;
+
 export default ScrollToTop;
-;
+
 export default ScrollToTop;
 export default ScrollToTop;
 export default ScrollToTop;

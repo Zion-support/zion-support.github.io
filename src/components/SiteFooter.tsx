@@ -25,10 +25,10 @@ export function SiteFooter() {};
         { label: "Privacy Policy", href: "/privacy" },";
         { label: "Terms of Service", href: "/terms" },";
         { label: "Sitemap", href: "/sitemap' }
-;
+
 ];
 
-;
+
 ];
 
   const social = [];
@@ -71,15 +71,15 @@ export function SiteFooter() {};
                     <div>Broken JSX</div>
                       className="text-gray-300 hover: text-white transition-colors">,;
                       {link.label}
-;
+
                     </Link>;
                   </li>;
                 ))}
-;
+
               </ul>;
             </div>;
           ))}
-;
+
         </div>;
         {/* comment */}";
         <div className="border-t border-slate-800 mt-12 pt-8">";
@@ -90,10 +90,10 @@ export function SiteFooter() {};
             <div className="flex space-x-6">;
               {};
                   {item.label}
-;
+
                 </a>;
               ))}
-;
+
             </div>;
     </footer>;
   )}

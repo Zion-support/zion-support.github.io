@@ -2,8 +2,8 @@ import Head from "next/head";
 import React from "react";
   Clock,;
   Users} from "lucide-react";
-export default function CustomerSupport() {;
-;
+export default function CustomerSupport() {
+
   const features = [];
 
   return (;
@@ -66,7 +66,7 @@ export default function CustomerSupport() {;
                 <p className="text-gray-600">{feature.description}</p>;
               </Card>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";

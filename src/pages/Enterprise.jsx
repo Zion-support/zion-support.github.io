@@ -9,36 +9,31 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export {};
         {}
             icon: <Users className="h-8 w-8 text-zion-cyan"/>,"";
             title: "Team Management","";
-            description: "Manage multiple teams, projects, and stakeholders with enterprise-grade collaboration tools.";,
-},;
+            description: "Manage multiple teams, projects, and stakeholders with enterprise-grade collaboration tools."},;
         {}
 ";
 "";
             icon: <Shield className="h-8 w-8 text-zion-cyan"/>,"";
             title: "Advanced Security","";
-            description: "Enterprise-level security with SSO, role-based access control, and compliance certifications.";,
-},;
+            description: "Enterprise-level security with SSO, role-based access control, and compliance certifications."},;
         {}
 ";
 "";
             icon: <BarChart3 className="h-8 w-8 text-zion-cyan"/>,"";
             title: "Analytics & Reporting","";
-            description: "Comprehensive insights into team performance, project metrics, and ROI tracking.";,
-},;
+            description: "Comprehensive insights into team performance, project metrics, and ROI tracking."},;
         {}
 ";
 "";
             icon: <Zap className="h-8 w-8 text-zion-cyan"/>,"";
             title: "Custom Integrations","";
-            description: "Seamlessly integrate with your existing tools and workflows through our API.";,
-},;
+            description: "Seamlessly integrate with your existing tools and workflows through our API."},;
         {}
 ";
 "";
             icon: <Globe className="h-8 w-8 text-zion-cyan"/>,"";
             title: "Global Talent Pool","";
-            description: "Access to verified tech professionals from around the world, available 24/7.";,
-},;
+            description: "Access to verified tech professionals from around the world, available 24/7."},;
         {}
 ";
 "";
@@ -59,8 +54,7 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export {};
                 "Basic analytics","";
                 "Email support","";
                 "Standard integrations";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -74,8 +68,7 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export {};
                 "Priority support","";
                 "Custom integrations","";
                 "SSO authentication";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -209,14 +202,10 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export {};
         </div>;
       </section>;
     </div>)}
-;
 
-export { Enterprise };
-;
-export { Enterprise };
-;
-export { Enterprise };
-;
-export { Enterprise };
-;
-export { Enterprise };
+
+export { Enterprise }
+export { Enterprise }
+export { Enterprise }
+export { Enterprise }
+export { Enterprise }

@@ -71,8 +71,7 @@ export default function GovernmentSolutions() {};
                         {feature}
                       </li>))}
                   </ul>;
-                </div>);,
-})}
+                </div>)})}
           </div>;
         </div>;
       </section>;
@@ -161,15 +160,10 @@ export default function GovernmentSolutions() {};
           </div>;
         </div>;
       </section>;
-    </div>);,
-}}}}
-;
-export { GovernmentSolutions, Icon };
-;
-export { GovernmentSolutions, Icon };
-;
-export { GovernmentSolutions, Icon };
-;
-export { GovernmentSolutions, Icon };
-;
-export { GovernmentSolutions, Icon };
+    </div>)}}}}
+
+export { GovernmentSolutions, Icon }
+export { GovernmentSolutions, Icon }
+export { GovernmentSolutions, Icon }
+export { GovernmentSolutions, Icon }
+export { GovernmentSolutions, Icon }

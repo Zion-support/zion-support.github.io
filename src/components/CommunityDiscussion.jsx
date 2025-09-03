@@ -58,6 +58,6 @@ export default function Page() {};
       </div>";
       <div className="mt-8 text-xs text-zion-slate-dark text-center">;
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.</div>;
-    </div>)};
+    </div>)}
 '";
 }

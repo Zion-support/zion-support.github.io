@@ -29,7 +29,7 @@ export default function ResearchDevelopment() {};
     { number: "50+", label: "Research Team", icon: Users },;
     { number: "100+", label: "Publications", icon: BookOpen }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gray-50">;
       {/* Header */}
@@ -95,7 +95,7 @@ export default function ResearchDevelopment() {};
               <div className={`h-48 bg-gradient-to-br ${project.color} flex items-center justify-center`}>;
                 <project.icon className="w-16 h-16 text-white" />;
               </div>;
-              ;
+
               <div className="p-6">;
                 <div className="flex items-center gap-2 mb-3">;
                   <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">;
@@ -106,15 +106,15 @@ export default function ResearchDevelopment() {};
                     {project.status}
                   </span>;
                 </div>;
-                ;
+
                 <h2 className="text-2xl font-bold text-gray-900 mb-3">;
                   {project.title}
                 </h2>;
-                ;
+
                 <p className="text-gray-600 mb-6">;
                   {project.description}
                 </p>;
-                ;
+
                 <div className="grid grid-cols-2 gap-4 mb-6">;
                   <div className="text-center">;
                     <div className="text-lg font-bold text-gray-900">{project.funding}</div>;
@@ -125,7 +125,7 @@ export default function ResearchDevelopment() {};
                     <div className="text-sm text-gray-500">Duration</div>;
                   </div>;
                 </div>;
-                ;
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">;
                   <div>;
                     <h4 className="font-semibold text-gray-900 mb-2">Key Features</h4>;
@@ -138,7 +138,7 @@ export default function ResearchDevelopment() {};
                       ))}
                     </ul>;
                   </div>;
-                  ;
+
                   <div>;
                     <h4 className="font-semibold text-gray-900 mb-2">Expected Outcomes</h4>;
                     <ul className="space-y-1">;
@@ -151,13 +151,13 @@ export default function ResearchDevelopment() {};
                     </ul>;
                   </div>;
                 </div>;
-                ;
+
                 <div className="flex items-center justify-between">;
                   <div className="flex items-center text-sm text-gray-500">;
                     <Users className="h-4 w-4 mr-1" />;
                     {project.team} team members;
                   </div>;
-                  ;
+
                   <button className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">;
                     Learn More;
                     <ArrowRight className="ml-2 h-4 w-4" />;
@@ -177,5 +177,4 @@ export default function ResearchDevelopment() {};
         )}
       </div>;
     </div>;
-  );,
-}
+  )}

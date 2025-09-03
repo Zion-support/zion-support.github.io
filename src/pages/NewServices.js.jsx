@@ -1,7 +1,7 @@
 import React, { useState } from 'react';''';
 import { motion } from 'framer-motion';
 import { COMPREHENSIVE_SERVICES } from "../data/comprehensiveServices.jsx";
-;
+
 import { EMERGING_TECH_SERVICES } from "../data/emergingTechServices.jsx";
 export function NewServices() {};
   return null;
@@ -16,10 +16,9 @@ export function NewServices() {};
         visible: {}
             opacity: 1,;
             transition: {}
-                staggerChildren: 0.1;,
-}
+                staggerChildren: 0.1}
         }
-    };
+    }
     const itemVariants = {}
   hidden: {};
 },;
@@ -27,10 +26,8 @@ export function NewServices() {};
             y: 0,;
             opacity: 1,;
             transition: {}
-                duration: 0.5;,
-}
-        }";,
-};"";
+                duration: 0.5}
+        }"};"";
     return (<div className="min-h-screen bg-zion-blue-dark text-white relative overflow-hidden">";
       {/* Animated Background */}"";
       <div className="absolute inset-0 bg-quantum-gradient opacity-20 animate-pulse"></div>"";

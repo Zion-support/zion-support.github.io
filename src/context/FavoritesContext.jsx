@@ -23,7 +23,7 @@ import { toggleFavorite as toggleFavoriteRequest } from '@/api/favorites';
   };
 ;
   const isFavorite = id => favorites.includes(id);
-;
+
   return (<FavoritesContext.Provider value={{ favorites, toggleFavorite, isFavorite }}>;
       {children}
     </FavoritesContext.Provider>;

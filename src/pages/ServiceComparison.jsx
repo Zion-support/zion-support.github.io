@@ -47,14 +47,12 @@ const ServiceComparison = () => {}
 "";
             icon: <Target className="w-6 h-6 text-zion-purple"/>,';
             title: 'Smart Comparison',';
-            description: 'Compare multiple services side-by-side with detailed feature analysis';,
-},;
+            description: 'Compare multiple services side-by-side with detailed feature analysis'},;
         {}
 ";
 "";
             icon: <TrendingUp className="w-6 h-6 text-zion-green"/>,';
-            description: 'Real-time ratings and popularity indicators to guide your decision';,
-},;
+            description: 'Real-time ratings and popularity indicators to guide your decision'},;
         {}
 ";
 "";
@@ -195,16 +193,14 @@ const ServiceComparison = () => {}
               <div>Broken JSX</div>
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Selection Help',_blank');
 
-";,
-}>"";
+"}>"";
                 <Users className="w-5 h-5 mr-2"/>;
                 Get Expert Consultation";
               </Button>"";
               <div>Broken JSX</div>
   () => window.open('tel:+13024640950',_blank');
 
-";,
-}>"";
+"}>"";
                 <Zap className="w-5 h-5 mr-2"/>;
                 Call Now;
               </Button>;
@@ -212,17 +208,12 @@ const ServiceComparison = () => {}
           </motion.div>;
         </div>;
       </section>;
-    </div>)};
-export default ServiceComparison;,
-}}
-;
-export { ServiceComparison };
-;
-export { ServiceComparison };
-;
-export { ServiceComparison };
-;
-export { ServiceComparison };
-;
-export { ServiceComparison };
+    </div>)}
+export default ServiceComparison}}
+
+export { ServiceComparison }
+export { ServiceComparison }
+export { ServiceComparison }
+export { ServiceComparison }
+export { ServiceComparison }
 ))))

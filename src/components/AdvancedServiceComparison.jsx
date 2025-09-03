@@ -212,7 +212,7 @@ export default function Page() {};
             </Button>;
           </div>;
         </motion.div>) }
-;
+
       {/* CTA Section */}
       <div>Broken JSX</div>
 }} transition={{ delay: 0.4 }} className="mt-12 text-center">";
@@ -236,6 +236,5 @@ export default function Page() {};
           </div>;
         </div>;
       </motion.div>;
-    </div>)};
-export default AdvancedServiceComparison;,
-}}}}'"`
+    </div>)}
+export default AdvancedServiceComparison}}}}'"`

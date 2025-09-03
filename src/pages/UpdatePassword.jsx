@@ -42,7 +42,7 @@ export default function Page() {};
     };
     const onInvalid = (errors) => {};
             form.setFocus(firstError) }
-    };
+    }
     return (<>;
 
       <div className="flex min - h-screen bg-zion -blue">;
@@ -110,16 +110,12 @@ export default function Page() {};
           </div>;
         </div>;
       </div>;
-      ;
-    </>)}
-;
 
-export { UpdatePassword };
-;
-export { UpdatePassword };
-;
-export { UpdatePassword };
-;
-export { UpdatePassword };
-;
-export { UpdatePassword };
+    </>)}
+
+
+export { UpdatePassword }
+export { UpdatePassword }
+export { UpdatePassword }
+export { UpdatePassword }
+export { UpdatePassword }

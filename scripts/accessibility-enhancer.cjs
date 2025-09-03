@@ -1,23 +1,21 @@
-#!/usr/bin/env node;
-const fs = require("$1");
+#!/usr/bin/env node
+const fs = require("fs");
 const path = require("path");
-class AccessibilityEnhancer {;
-  constructor() {;
+class AccessibilityEnhancer {
+  constructor() {
     this.projectRoot = process.cwd();
-    this.accessibilityEnhancements = [],;,
-}
-;
-  log(message) {;
-    console.log(`[${new Date().toISOString()}] ${message}`),;,
-}
-;
-  async createAccessibilityConfig() {;
+    this.accessibilityEnhancements = []}
+
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`)}
+
+  async createAccessibilityConfig() {
     this.log("♿ Creating accessibility configuration...");
-    try {;
+    try {
       const accessibilityConfig = `// Accessibility configuration;
-export const accessibilityConfig = {;
+export const accessibilityConfig = {
   // ARIA labels for common elements;
-  ariaLabels: {;
+  ariaLabels: {
     navigation: "Main navigation",;
     footer: "Site footer",;
     search: "Search",;
@@ -29,73 +27,62 @@ export const accessibilityConfig = {;
     loading: "Loading",;
     error: "Error",;
     success: "Success",;
-    warning: "Warning",;,
-},;
-  ;
+    warning: "Warning"},;
+
   // Focus management;
-  focusManagement: {;
+  focusManagement: {
     skipToContent: true,;
     focusTrap: true,;
-    focusVisible: true,;,
-},;
-  ;
+    focusVisible: true},;
+
   // Color contrast;
-  colorContrast: {;
+  colorContrast: {
     minimumRatio: 4.5,;
-    enhancedRatio: 7.0,;,
-},;
-  ;
+    enhancedRatio: 7.0},;
+
   // Keyboard navigation;
-  keyboardNavigation: {;
+  keyboardNavigation: {
     tabIndex: 0,;
     arrowKeys: true,;
     escapeKey: true,;
     enterKey: true,;
-    spaceKey: true,;,
-}
+    spaceKey: true}
 }
 // Accessibility utilities;
-export const accessibilityUtils = {;
+export const accessibilityUtils = {
   // Generate unique IDs for ARIA attributes;
   generateId: (prefix = "id") => \`\${prefix}-\${Math.random().toString(36).substr(2, 9)}\`,;
-  ;
+
   // Check if element is visible;
-  isVisible: (element) => {;
+  isVisible: (element) => {
     const style = window.getComputedStyle(element);
-    return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0",;,
-},;
-  ;
+    return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},;
+
   // Announce to screen readers;
-  announce: (message) => {;
+  announce: (message) => {
     const announcement = document.createElement("div");
     announcement.setAttribute("aria-live", "polite");
     announcement.setAttribute("aria-atomic", "true");
     announcement.className = "sr-only";
     announcement.textContent = message;
     document.body.appendChild(announcement);
-    setTimeout(() => {;
-      document.body.removeChild(announcement),;,
-}, 1000),;,
-}
+    setTimeout(() => {
+      document.body.removeChild(announcement)}, 1000)}
 };`;
       const configDir = path.join(this.projectRoot, "lib");
-      if (!fs.existsSync(configDir)) {;
-        fs.mkdirSync(configDir, { recursive: true }),;,
-}
-      ;
+      if (!fs.existsSync(configDir)) {
+        fs.mkdirSync(configDir, { recursive: true })}
       fs.writeFileSync(path.join(configDir, "accessibility.ts"), accessibilityConfig);
       this.accessibilityEnhancements.push("accessibility configuration created");
-      this.log("✅ Accessibility configuration created successfully"),;,
-} catch (error) {;
-      this.log(`❌ Failed to create accessibility config: ${error.message}`),;,
-}
+      this.log("✅ Accessibility configuration created successfully")} catch (error) {
+      this.log(`❌ Failed to create accessibility config: ${error.message}`)}
   }
-;
-  async createAccessibilityStyles() {;
+
+  async createAccessibilityStyles() {
     this.log("🎨 Creating accessibility styles...");
-    try {;
-      const accessibilityStyles = `/* Accessibility styles */;
-.sr-only {;
+    try {
+      const accessibilityStyles = `/* Accessibility styles */
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -115,40 +102,34 @@ export const accessibilityUtils = {;
   margin: inherit;
   overflow: visible;
   clip: auto;
-  white-space: normal,;,
-}
-;
-/* Focus styles */;
-.focus-visible {;
+  white-space: normal}
+
+/* Focus styles */
+.focus-visible {
   outline: 2px solid #3b82f6;
-  outline-offset: 2px,;,
-}
-;
-/* High contrast mode support */;
-@media (prefers-contrast: high) {;
-  .text-gray-600 {;
-    color: #000000,;,
-}
-  ;
-  .bg-gray-100 {;
+  outline-offset: 2px}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .text-gray-600 {
+    color: #000000}
+  .bg-gray-100 {
     background-color: #ffffff;
-    border: 1px solid #000000,;,
+    border: 1px solid #000000}
 }
-}
-;
-/* Reduced motion support */;
-@media (prefers-reduced-motion: reduce) {;
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
   *,;
   *::before,;
-  *::after {;
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important,;,
+    transition-duration: 0.01ms !important}
 }
-}
-;
-/* Skip to content link */;
-.skip-to-content {;
+
+/* Skip to content link */
+.skip-to-content {
   position: absolute;
   top: -40px;
   left: 6px;
@@ -169,44 +150,37 @@ export const accessibilityUtils = {;
 }
 ;
 .focus-trap::before,;
-.focus-trap::after {;
+.focus-trap::after {
   content: ;
   position: absolute;
   width: 1px;
   height: 1px;
   opacity: 0;
-  pointer-events: none,;,
-}
-;
-/* ARIA live regions */;
-[aria-live] {;
+  pointer-events: none}
+
+/* ARIA live regions */
+[aria-live] {
   position: absolute;
   left: -10000px;
   width: 1px;
   height: 1px;
-  overflow: hidden,;,
-}`;
+  overflow: hidden}`;
       const stylesDir = path.join(this.projectRoot, "styles");
-      if (!fs.existsSync(stylesDir)) {;
-        fs.mkdirSync(stylesDir, { recursive: true }),;,
-}
-      ;
+      if (!fs.existsSync(stylesDir)) {
+        fs.mkdirSync(stylesDir, { recursive: true })}
       fs.writeFileSync(path.join(stylesDir, "accessibility.css"), accessibilityStyles);
       this.accessibilityEnhancements.push("accessibility styles created");
-      this.log("✅ Accessibility styles created successfully"),;,
-} catch (error) {;
-      this.log(`❌ Failed to create accessibility styles: ${error.message}`),;,
-}
+      this.log("✅ Accessibility styles created successfully")} catch (error) {
+      this.log(`❌ Failed to create accessibility styles: ${error.message}`)}
   }
-;
-  async run() {;
+
+  async run() {
     this.log("♿ Starting accessibility enhancement...");
     await this.createAccessibilityConfig();
     await this.createAccessibilityStyles();
-    this.log(`✅ Accessibility enhancement completed. Enhancements: ${this.accessibilityEnhancements.join(", ")}`),;,
+    this.log(`✅ Accessibility enhancement completed. Enhancements: ${this.accessibilityEnhancements.join(", ")}`)}
 }
-}
-;
+
 // Run the accessibility enhancer;
 const accessibilityEnhancer = new AccessibilityEnhancer();
 accessibilityEnhancer.run().catch(console.error)

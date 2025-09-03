@@ -17,7 +17,7 @@ const Blueprint20250818134148: React.FC = () => {};
                   Generated: 2025 08 18 134148;
                 </p>;
               </div>;
-              ;
+
               <div className="text-right">;
                 <div className="text-2xl font-bold text-blue-400">Blueprint</div>;
                 <div className="text-sm text-gray-400">blueprint-2025-08-18-134148</div>;
@@ -55,7 +55,5 @@ const Blueprint20250818134148: React.FC = () => {};
         </footer>;
       </div>;
     </>;
-  );,
-};
-;
+  )}
 export default Blueprint20250818134148;

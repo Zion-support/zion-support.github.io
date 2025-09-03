@@ -7,7 +7,7 @@ export default function Page() {};
     { id: 'equipment', name: 'Equipment', count: 0 },;
     { id: 'companies', name: 'Companies', count: 0 },;
   ];
-;
+
   const sortOptions = [{ id: 'relevance', name: 'Relevance' },;
     { id: 'newest', name: 'Newest' },;
     { id: 'rating', name: 'Highest Rated' },;
@@ -38,7 +38,7 @@ export default function Page() {};
     filteredResults.sort((a, b) => {};
 }
     }) ;
-;
+
     setResults(filteredResults) ;
     setLoading(false) ;,
 };
@@ -105,6 +105,5 @@ export default function Page() {};
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default Search;

@@ -225,16 +225,11 @@ export {};
           </motion.div>;
         </div>;
       </section>;
-    </div>);,
-}
-;
+    </div>)}
 
-export { ManufacturingSolutions };
-;
-export { ManufacturingSolutions };
-;
-export { ManufacturingSolutions };
-;
-export { ManufacturingSolutions };
-;
-export { ManufacturingSolutions };
+
+export { ManufacturingSolutions }
+export { ManufacturingSolutions }
+export { ManufacturingSolutions }
+export { ManufacturingSolutions }
+export { ManufacturingSolutions }

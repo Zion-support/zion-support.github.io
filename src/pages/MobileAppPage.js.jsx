@@ -20,16 +20,12 @@ const MobileAppPage = () => {};
                                         ,;
                                             <DownloadSection />;
                                                 ,;
-                                                    <AppStoreBanner />)};
+                                                    <AppStoreBanner />)}
 export default MobileAppPage;
-;
 
-export { MobileAppPage };
-;
-export { MobileAppPage };
-;
-export { MobileAppPage };
-;
-export { MobileAppPage };
-;
-export { MobileAppPage };
+
+export { MobileAppPage }
+export { MobileAppPage }
+export { MobileAppPage }
+export { MobileAppPage }
+export { MobileAppPage }

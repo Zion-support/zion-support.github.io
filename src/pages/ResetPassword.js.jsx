@@ -21,8 +21,7 @@ export {};
 '';
 ''';
       setError('Invalid or missing reset token.');
-      // Consider redirecting to an error page or login page;,
-}
+      // Consider redirecting to an error page or login page}
   }, [token]);
   const handleSubmit = async e => {}
     e.preventDefault();';
@@ -32,15 +31,13 @@ export {};
 '';
 ''';
       setError('Passwords do not match.');
-      return;,
-}
+      return}
     // Basic password strength check (can be enhanced);
     if (password.length <div>Broken JSX</div>
       <div className="flex min-h-screen items-center justify-center p-4 text-red-500">;
         <p>{error}</p>;
       </div>;
-    );,
-}";
+    )}";
   return ("";
     <div className="flex min-h-screen items-center justify-center p-4">"";
       <form onSubmit={handleSubmit} className="w-full max-w-sm space-y-4">"";
@@ -59,14 +56,10 @@ export {};
         </Button>;
       </form>;
     </div>)}
-;
 
-export { ResetPasswordPage };
-;
-export { ResetPasswordPage };
-;
-export { ResetPasswordPage };
-;
-export { ResetPasswordPage };
-;
-export { ResetPasswordPage };
+
+export { ResetPasswordPage }
+export { ResetPasswordPage }
+export { ResetPasswordPage }
+export { ResetPasswordPage }
+export { ResetPasswordPage }

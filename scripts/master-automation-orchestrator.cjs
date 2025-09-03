@@ -15,7 +15,7 @@ class MasterAutomationOrchestrator {
       testsPassed: 0,
       optimizations: 0,
       errors: []
-    };
+    }
     this.startTime = Date.now();
   }
 
@@ -124,8 +124,7 @@ class MasterAutomationOrchestrator {
         successfulSteps: this.results.syntaxFixes + (this.results.buildSuccess ? 1 : 0) + this.results.testsPassed + this.results.optimizations,
         failedSteps: this.results.errors.length
       }
-    };
-
+    }
     // Save report
     const reportPath = path.join(process.cwd(), 'automation', 'logs', 'master-automation-report.json');
     fs.mkdirSync(path.dirname(reportPath), { recursive: true });

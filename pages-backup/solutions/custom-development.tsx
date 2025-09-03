@@ -18,5 +18,5 @@ import React from "react";
       </div>;
     </MainLayout>;,;
   )}
-;
+
 "export default CustomDevelopment

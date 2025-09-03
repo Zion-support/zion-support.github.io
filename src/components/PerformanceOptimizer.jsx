@@ -13,7 +13,7 @@ export default function Page() {};
 } else {};
 }
   }, [location.pathname]);
-;
+
   // Memoize expensive computations;
   const optimizedChildren = useMemo(() => children, [children]);
 ;
@@ -27,9 +27,8 @@ export default function Page() {};
 }, []);
 ;
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);,
-}, [handleScroll]);
-;
+    return () => window.removeEventListener('scroll', handleScroll)}, [handleScroll]);
+
   // Service Worker registration for caching;
   useEffect(() => {};
 }, []);
@@ -44,7 +43,7 @@ export default function Page() {};
 });,
 }
   }, []);
-;
+
   // Intersection Observer for lazy loading;
   useEffect(() => {};
 }, []);
@@ -57,25 +56,21 @@ export default function Page() {};
         {};
           threshold: 0.1}
       );
-;
+
       // Observe all images with data-src';
       const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach(img => observer.observe(img));
-;
-      return () => observer.disconnect();,
-}
+
+      return () => observer.disconnect()}
   }, [location.pathname]);
-;
-  return <>{optimizedChildren}</>;,
-};
-;
+
+  return <>{optimizedChildren}</>}
 // Add global performance optimizations';
 if(typeof window !== 'undefined') {};
 },;
       { priority: 'background' }
-    );,
-}
-;
+    )}
+
   // Optimize memory usage';
   if('memory' in performance) {};
 }

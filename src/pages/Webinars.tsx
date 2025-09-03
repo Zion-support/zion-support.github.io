@@ -46,6 +46,5 @@ const Webinars = () => {};
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default Webinars;

@@ -157,12 +157,11 @@ export default function SimplePage()   {};
             link: "/partners/resources"},";
           {};
             link: "/partners/success"}
-;
+
         ];
 
-;,
 }
-;
+
 ";
     return pathMap[pathname] || {};
             link: "/services/ai"},";
@@ -227,19 +226,17 @@ export default function SimplePage()   {};
           {};
             link: "/partners/success"}
         ]}
-;,
 }
-;
+
 ";
     return pathMap[pathname] || {};
       sections: []}};";
     return pathMap[pathname] || {};
       sections: []}}
-;
+
 ";
   const pageInfo = getPageInfo(location.pathname);
-  const breadcrumbs = location.pathname.split("/").filter(Boolean);,
-}
+  const breadcrumbs = location.pathname.split("/").filter(Boolean)}
 ";
   return (';
     <div className = "min-h-screen bg-zion-blue-dark">";
@@ -270,7 +267,7 @@ export default function SimplePage()   {};
               <span className="capitalize">{crumb}</span>;
             </div>;
           ))}
-;
+
         </nav>;
       </div>;
 ";
@@ -287,7 +284,7 @@ export default function SimplePage()   {};
           <div className="text-center max-w-4xl mx-auto">";
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,;
               {pageInfo.title}
-;
+
             </h1>";
             <p className="text-xl md: text-2xl text-zion-cyan mb-6">",;
       {/* comment */}";
@@ -303,7 +300,7 @@ export default function SimplePage()   {};
             </p>";
             <p className="text-lg text-zion-slate-light leading-relaxed">;
               {pageInfo.description}
-;
+
             </p>;
           </div>;
       </section>;
@@ -315,7 +312,7 @@ export default function SimplePage()   {};
                   </h3>;
                   <p className="text-zion-slate-light mb-6 leading-relaxed">;
                     {section.description}
-;
+
                   </p>";
                   <div>Broken JSX</div>
     r: translate-x-1">";
@@ -332,7 +329,7 @@ export default function SimplePage()   {};
                   </h3>";
                   <p className="text-zion-slate-light mb-6 leading-relaxed">;
                     {section.description}
-;
+
                   </p>";
                   <Link to="{section.link}" className="inline-flex items-center text-zion-cyan hover: text-white transition-colors group-hover:translate-x-1">;
                     Learn More";
@@ -344,11 +341,11 @@ export default function SimplePage()   {};
                   </Link>;
                 </div>,;
               ))}
-;
+
             </div>;
         </section>;
       )}
-;
+
 ";
       {/* comment */}
       <section className="py-20">;
@@ -375,7 +372,7 @@ export default function SimplePage()   {};
         <div className="container mx-auto px-4">";
           <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-2xl p-12 text-center">;
       )}
-;
+
 ";
       {/* comment */}";
       <section className="py-20">";

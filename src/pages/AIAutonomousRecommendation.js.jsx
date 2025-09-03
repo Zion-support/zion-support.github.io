@@ -242,16 +242,12 @@ const AIAutonomousRecommendation = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default AIAutonomousRecommendation;
-;
 
-export { AIAutonomousRecommendation };
-;
-export { AIAutonomousRecommendation };
-;
-export { AIAutonomousRecommendation };
-;
-export { AIAutonomousRecommendation };
-;
-export { AIAutonomousRecommendation };
+
+export { AIAutonomousRecommendation }
+export { AIAutonomousRecommendation }
+export { AIAutonomousRecommendation }
+export { AIAutonomousRecommendation }
+export { AIAutonomousRecommendation }

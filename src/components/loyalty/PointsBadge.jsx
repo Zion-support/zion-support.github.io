@@ -8,7 +8,7 @@ export default function Page() {};
             await signOut()}
         else if(logout) {};
             await logout()}
-    };
+    }
     return (<DropdownMenu>;
       <TooltipProvider>;
         <Tooltip>;

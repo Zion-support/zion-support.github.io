@@ -3,11 +3,11 @@ import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import Link from 'next/link';
 import { ArrowRight, TrendingUp, Users, Clock, Award, Building } from 'lucide-react';
-;
 
-const CaseStudies: NextPage = () => {;
+
+const CaseStudies: NextPage = () => {
   const caseStudies = [;
-    {;
+    {
       id: 1,;
       title: 'Healthcare AI Platform Transformation',;
       client: 'MedTech Solutions',;
@@ -23,9 +23,8 @@ const CaseStudies: NextPage = () => {;
       technologies: ['AI/ML', 'Cloud Computing', 'Data Analytics', 'Security'],;
       duration: '6 months',;
       teamSize: '12 developers',;
-      image: '/case-studies/healthcare-ai.jpg';,
-},;
-    {;
+      image: '/case-studies/healthcare-ai.jpg'},;
+    {
       id: 2,;
       title: 'Financial Services Digital Transformation',;
       client: 'FinSecure Bank',;
@@ -41,9 +40,8 @@ const CaseStudies: NextPage = () => {;
       technologies: ['Blockchain', 'AI/ML', 'Mobile Development', 'Security'],;
       duration: '8 months',;
       teamSize: '15 developers',;
-      image: '/case-studies/financial-services.jpg';,
-},;
-    {;
+      image: '/case-studies/financial-services.jpg'},;
+    {
       id: 3,;
       title: 'Manufacturing IoT Integration',;
       client: 'AutoParts Manufacturing',;
@@ -59,9 +57,8 @@ const CaseStudies: NextPage = () => {;
       technologies: ['IoT', 'Data Analytics', 'Cloud Computing', 'AI/ML'],;
       duration: '10 months',;
       teamSize: '18 developers',;
-      image: '/case-studies/manufacturing-iot.jpg';,
-},;
-    {;
+      image: '/case-studies/manufacturing-iot.jpg'},;
+    {
       id: 4,;
       title: 'E-commerce Platform Scaling',;
       client: 'RetailMax',;
@@ -77,9 +74,8 @@ const CaseStudies: NextPage = () => {;
       technologies: ['Microservices', 'Cloud Computing', 'CDN', 'Performance Optimization'],;
       duration: '4 months',;
       teamSize: '10 developers',;
-      image: '/case-studies/ecommerce-scaling.jpg';,
-},;
-    {;
+      image: '/case-studies/ecommerce-scaling.jpg'},;
+    {
       id: 5,;
       title: 'Government Data Analytics Platform',;
       client: 'CitySmart Government',;
@@ -95,9 +91,8 @@ const CaseStudies: NextPage = () => {;
       technologies: ['Data Analytics', 'Security', 'Cloud Computing', 'AI/ML'],;
       duration: '12 months',;
       teamSize: '20 developers',;
-      image: '/case-studies/government-analytics.jpg';,
-},;
-    {;
+      image: '/case-studies/government-analytics.jpg'},;
+    {
       id: 6,;
       title: 'EdTech Learning Platform',;
       client: 'EduTech Innovations',;
@@ -113,12 +108,11 @@ const CaseStudies: NextPage = () => {;
       technologies: ['AI/ML', 'Cloud Computing', 'Mobile Development', 'Analytics'],;
       duration: '9 months',;
       teamSize: '14 developers',;
-      image: '/case-studies/edtech-platform.jpg';,
-}
+      image: '/case-studies/edtech-platform.jpg'}
   ];
-;
-  const getIndustryIcon = (industry: string) => {;
-    switch (industry) {;
+
+  const getIndustryIcon = (industry: string) => {
+    switch (industry) {
       case 'Healthcare':;
         return '🏥';
       case 'Financial Services':;
@@ -132,11 +126,10 @@ const CaseStudies: NextPage = () => {;
       case 'Education':;
         return '🎓';
       default:;
-        return '🏢';,
-}
-  };
+        return '🏢'}
+  }
   ];
-;
+
   return (;
     <MainLayout;
       title="Case Studies - Zion Tech Group";
@@ -269,7 +262,7 @@ const CaseStudies: NextPage = () => {;
               Real projects, real results, real impact on businesses across industries;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {caseStudies.map((study, index) => (;
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">;
@@ -279,7 +272,7 @@ const CaseStudies: NextPage = () => {;
                     <p className="text-sm">Case Study Image</p>;
                   </div>;
                 </div>;
-                ;
+
                 <div className="p-6">;
                   <div className="flex items-center gap-2 mb-3">;
                     <span className="bg-zion-cyan/10 text-zion-cyan px-3 py-1 rounded-full text-sm font-medium">;
@@ -287,20 +280,20 @@ const CaseStudies: NextPage = () => {;
                     </span>;
                     <span className="text-gray-500 text-sm">{study.duration}</span>;
                   </div>;
-                  ;
+
                   <h3 className="text-xl font-bold mb-2">{study.title}</h3>;
                   <p className="text-gray-600 text-sm mb-4">{study.client}</p>;
-                  ;
+
                   <div className="mb-4">;
                     <h4 className="font-semibold text-sm mb-1">Challenge:</h4>;
                     <p className="text-gray-600 text-sm">{study.challenge}</p>;
                   </div>;
-                  ;
+
                   <div className="mb-4">;
                     <h4 className="font-semibold text-sm mb-1">Solution:</h4>;
                     <p className="text-gray-600 text-sm">{study.solution}</p>;
                   </div>;
-                  ;
+
                   <div className="mb-4">;
                     <h4 className="font-semibold text-sm mb-2">Key Results:</h4>;
                     <ul className="space-y-1">;
@@ -312,7 +305,7 @@ const CaseStudies: NextPage = () => {;
                       ))}
                     </ul>;
                   </div>;
-                  ;
+
                   <Link ;
                     href={`/case-studies/${study.title.toLowerCase().replace(/\s+/g, '-')}`}
                     className="inline-flex items-center text-zion-cyan font-medium hover:text-zion-cyan/80 transition-colors">;
@@ -372,7 +365,7 @@ const CaseStudies: NextPage = () => {;
                   <div className="text-4xl font-bold text-gray-900 mb-2">{stat.number}</div>;
                   <div className="text-gray-600">{stat.label}</div>;
                 </div>;
-                ;
+
                 <div className="p-8">;
                   <div className="flex items-center justify-between mb-4">;
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">;
@@ -382,26 +375,26 @@ const CaseStudies: NextPage = () => {;
                       {study.duration} • {study.team}
                     </div>;
                   </div>;
-                  ;
+
                   <h2 className="text-2xl font-semibold mb-4 text-gray-800">;
                     {study.title}
                   </h2>;
-                  ;
+
                   <div className="mb-4">;
                     <h3 className="font-semibold text-gray-700 mb-2">Client:</h3>;
                     <p className="text-gray-600">{study.client}</p>;
                   </div>;
-                  ;
+
                   <div className="mb-4">;
                     <h3 className="font-semibold text-gray-700 mb-2">Challenge:</h3>;
                     <p className="text-gray-600 text-sm">{study.challenge}</p>;
                   </div>;
-                  ;
+
                   <div className="mb-6">;
                     <h3 className="font-semibold text-gray-700 mb-2">Solution:</h3>;
                     <p className="text-gray-600 text-sm">{study.solution}</p>;
                   </div>;
-                  ;
+
                   <div className="mb-6">;
                     <h3 className="font-semibold text-gray-700 mb-3">Key Results:</h3>;
                     <ul className="space-y-2">;
@@ -413,7 +406,7 @@ const CaseStudies: NextPage = () => {;
                       ))}
                     </ul>;
                   </div>;
-                  ;
+
                   <div className="mb-6">;
                     <h3 className="font-semibold text-gray-700 mb-2">Technologies Used:</h3>;
                     <div className="flex flex-wrap gap-2">;
@@ -426,7 +419,7 @@ const CaseStudies: NextPage = () => {;
                       ))}
                     </div>;
                   </div>;
-                  ;
+
                   <Link;
                     href={`/case-studies/${study.slug}`}
                     className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors">;
@@ -473,7 +466,5 @@ const CaseStudies: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
-};
-;
+  )}
 export default CaseStudiesPage;

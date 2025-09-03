@@ -2,7 +2,7 @@ import { Route, Routes  } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import { ProtectedRoute } from '../components/ProtectedRoute';
 import LoadingSpinner from '../components/LoadingSpinner';
-;
+
 // Lazy load auth pages;
 const Login = lazy(() => import('../pages/Login'));
 const Signup = lazy(() => import('../pages/Signup'));
@@ -35,11 +35,8 @@ const AuthRoutes: React.FC = () => {};
         <div>Broken JSX</div>
           <ProtectedRoute>;
             <div>Settings</div>;
-          </ProtectedRoute>;,
-} />;
+          </ProtectedRoute>} />;
       </Routes>;
     </Suspense>;
-  );,
-};
-;
+  )}
 export default AuthRoutes;

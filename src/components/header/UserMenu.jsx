@@ -23,7 +23,7 @@ export function UserMenu({user }) {};
 };
     // comment;
         setIsOpen(false)}
-;
+
   const menuItems = [];
 ";
   return (";
@@ -35,7 +35,7 @@ export function UserMenu({user }) {};
         <div className="w-8 h-8 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center">;
           <span className="text-white font-semibold text-sm">",;
             {user?.name?.charAt(0) || user?.email?.charAt(0) || "U"}
-;
+
           </span>";
         </div>";
         <span className="hidden sm: block text-sm font-medium">";
@@ -55,7 +55,7 @@ export function UserMenu({user }) {};
         </div>";
         <span className="hidden sm: block text-sm font-medium">",;
           {user?.name || user?.email || "User"}
-;
+
       </button>;
 ";
       {};
@@ -80,7 +80,7 @@ export function UserMenu({user }) {};
                 </p>";
                 <p className="text-zion-slate-light text-sm">;
                   {user?.email || "user@example.com"}
-;
+
                 </p>;
 ";
           {/* comment */}";
@@ -103,7 +103,7 @@ export function UserMenu({user }) {};
                   <p className="text-xs text-zion-slate-light">{item.description}</p>;
               </Link>;
             ))}
-;
+
 ";
           {/* comment */}
           <div className="p-4 border-t border-zion-purple/20">";

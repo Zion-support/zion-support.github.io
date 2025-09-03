@@ -5,9 +5,9 @@ const Match: React.FC = () => {};
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 32 },;''';
     { id: 'security', name: 'Cybersecurity', icon: Shield, count: 28 },;''';
     { id: 'data', name: 'Data & Analytics', icon: Database, count: 25 },;''';
-    { id: 'iot', name: 'IoT & Edge', icon: Cpu, count: 20 };
+    { id: 'iot', name: 'IoT & Edge', icon: Cpu, count: 20 }
   ];
-;
+
   const matchedServices: unknown = [{}
       id: 1,;
       name: "AI Business Intelligence","";
@@ -19,8 +19,7 @@ const Match: React.FC = () => {};
       features: ["Predictive Analytics", "Real-time Dashboards", "Custom AI Models", "Data Visualization"],;
       matchScore: 98,;
       icon: Brain,;
-      featured: true;,
-},;
+      featured: true},;
     {}
 ";
       id: 2,"";
@@ -33,8 +32,7 @@ const Match: React.FC = () => {};
       features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"],;
       matchScore: 95,;
       icon: Cloud,;
-      featured: false;,
-},;
+      featured: false},;
     {}
 ";
       id: 3,"";
@@ -47,8 +45,7 @@ const Match: React.FC = () => {};
       features: ["Threat Detection", "Behavioral Analysis", "Incident Response", "Risk Assessment"],;
       matchScore: 92,;
       icon: Shield,;
-      featured: true;,
-},;
+      featured: true},;
     {}
 ";
       id: 4,"";
@@ -61,8 +58,7 @@ const Match: React.FC = () => {};
       features: ["Data Mining", "Pattern Recognition", "Custom Reports", "Real-time Insights"],;
       matchScore: 90,;
       icon: Database,;
-      featured: false;,
-},;
+      featured: false},;
     {}
 ";
       id: 5,"";
@@ -75,8 +71,7 @@ const Match: React.FC = () => {};
       features: ["Edge Processing", "Real-time Analytics", "Device Management", "Security"],;
       matchScore: 88,;
       icon: Cpu,;
-      featured: false;,
-},;
+      featured: false},;
     {}
 ";
       id: 6,"";
@@ -88,10 +83,9 @@ const Match: React.FC = () => {};
       price: "$2,799/mo",;"      features: ["Process Automation", "Smart Routing", "Exception Handling", "Performance Analytics"],;
       matchScore: 87,;
       icon: Zap,;
-      featured: true;,
-};
+      featured: true}
   ];
-;
+
                          service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
     return matchesCategory && matchesSearch}) ;";
   return ("";
@@ -153,8 +147,7 @@ const Match: React.FC = () => {};
 ';
                     selectedCategory === category.id'';
                       ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'''`;
-                      : 'bg-slate-700/50 text-slate-300 hover:bg-slate-600/50 hover:text-white border border-slate-600/50'``;,
-}`}";
+                      : 'bg-slate-700/50 text-slate-300 hover:bg-slate-600/50 hover:text-white border border-slate-600/50'``}`}";
 "";
                   <category.icon className="w-4 h-4" />";
                   {category.name}"";
@@ -253,16 +246,14 @@ const Match: React.FC = () => {};
                 step: "01","";
                 title: "Analyze Your Needs","";
                 description: "Our AI analyzes your business profile, industry, and specific requirements.",;
-                icon: Brain;,
-},;
+                icon: Brain},;
               {}
 ";
 "";
                 step: "02","";
                 title: "Match with Services","";
                 description: "We match you with services that best fit your needs and budget.",;
-                icon: Target;,
-},;
+                icon: Target},;
               {}
 ";
 "";
@@ -308,17 +299,11 @@ const Match: React.FC = () => {};
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default Match;}}}
-;
-export { Match };
-;
-export { Match };
-;
-export { Match };
-;
-export { Match };
-;
-export { Match };
+
+export { Match }
+export { Match }
+export { Match }
+export { Match }
+export { Match }

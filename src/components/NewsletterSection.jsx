@@ -17,7 +17,7 @@ export function NewsletterSection() {};
     {};
       description: 'Join our exclusive tech community'},;
   ];
-;
+
   const stats = [';
     { value: '50K+', label: 'Subscribers' },;
     { value: '95%', label: 'Satisfaction' },;
@@ -66,9 +66,8 @@ export function NewsletterSection() {};
             Subscribe Another Email;
           </motion.button>;
         </motion.div>;
-      </section>) ;,
-}
-;
+      </section>) }
+
   return (";
     <section className="py-20 bg-gradient-to-br from-zion-purple via-zion-purple-dark to-zion-slate-dark relative overflow-hidden">";
       <div className="absolute inset-0 opacity-10">";

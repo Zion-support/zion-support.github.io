@@ -114,4 +114,4 @@ export ;
   if(industry === 'All') {};
   return SPECIALIZED_INDUSTRY_SOLUTIONS_2025.filter(solution => solution.industry === industry)};
 export ;
-  return SPECIALIZED_INDUSTRY_SOLUTIONS_2025};
+  return SPECIALIZED_INDUSTRY_SOLUTIONS_2025}

@@ -159,15 +159,10 @@ import {};
           </motion.div>;
         </div>;
       </section>;
-    </div>);,
-}}}}
-;
-export { RetailSolutions };
-;
-export { RetailSolutions };
-;
-export { RetailSolutions };
-;
-export { RetailSolutions };
-;
-export { RetailSolutions };
+    </div>)}}}}
+
+export { RetailSolutions }
+export { RetailSolutions }
+export { RetailSolutions }
+export { RetailSolutions }
+export { RetailSolutions }

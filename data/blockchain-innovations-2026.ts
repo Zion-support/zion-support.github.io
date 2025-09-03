@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface BlockchainInnovation2026 {;
+export interface BlockchainInnovation2026 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface BlockchainInnovation2026 {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface BlockchainInnovation2026 {;
   rating: number;
 export const blockchainInnovations2026: BlockchainInnovation2026[] = [;
   // Blockchain Infrastructure Platform 2026;
-  {;
+  {
     id: "blockchain-infrastructure-platform-2026",;
     name: "Blockchain Infrastructure Platform 2026",;
     tagline: "Enterprise-grade blockchain infrastructure for modern businesses",;
@@ -76,21 +76,19 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [;
     marketSize: "$19.9B market",;
     growthRate: "280% annual growth",;
     variant: "blockchain-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete blockchain infrastructure platform with multi-chain support, development tools, monitoring, and enterprise features. Includes custom blockchain networks and comprehensive support.",;
     launchDate: "2026-01-20",;
     customers: 850,;
     rating: 4.8,;
-    reviews: 420;,;,
-},;
+    reviews: 420},;
   // DeFi Yield Optimization Platform;
-  {;
+  {
     id: "defi-yield-optimization-platform",;
     name: "DeFi Yield Optimization Platform",;
     tagline: "Maximize returns with AI-powered DeFi yield optimization",;
@@ -128,21 +126,19 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [;
     marketSize: "$8.5B market",;
     growthRate: "350% annual growth",;
     variant: "blockchain-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete DeFi platform with AI-powered optimization, multi-protocol support, risk management, and comprehensive analytics. Includes mobile apps and API access.",;
     launchDate: "2026-02-01",;
     customers: 3200,;
     rating: 4.9,;
-    reviews: 1800;,;,
-},;
+    reviews: 1800},;
   // NFT Marketplace & Creation Platform;
-  {;
+  {
     id: "nft-marketplace-creation-platform",;
     name: "NFT Marketplace & Creation Platform",;
     tagline: "Create, trade, and monetize NFTs with enterprise-grade tools",;
@@ -180,21 +176,19 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [;
     marketSize: "$13.6B market",;
     growthRate: "400% annual growth",;
     variant: "blockchain-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete NFT platform with marketplace builder, creation tools, management system, and analytics. Includes white-label solutions and enterprise features.",;
     launchDate: "2026-01-30",;
     customers: 1800,;
     rating: 4.8,;
-    reviews: 950;,;,
-},;
+    reviews: 950},;
   // Web3 Identity & Authentication Platform;
-  {;
+  {
     id: "web3-identity-authentication-platform",;
     name: "Web3 Identity & Authentication Platform",;
     tagline: "Secure, decentralized identity management for Web3 applications",;
@@ -232,21 +226,19 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [;
     marketSize: "$15.8B market",;
     growthRate: "220% annual growth",;
     variant: "blockchain-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete Web3 identity platform with DID support, zero-knowledge proofs, and privacy-preserving features. Includes SDKs, APIs, and enterprise tools.",;
     launchDate: "2026-02-15",;
     customers: 650,;
     rating: 4.7,;
-    reviews: 320;,;,
-},;
+    reviews: 320},;
   // Blockchain Supply Chain Platform;
-  {;
+  {
     id: "blockchain-supply-chain-platform",;
     name: "Blockchain Supply Chain Platform",;
     tagline: "Transparent, traceable supply chain management with blockchain",;
@@ -284,12 +276,11 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [;
     marketSize: "$9.8B market",;
     growthRate: "250% annual growth",;
     variant: "blockchain-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete blockchain supply chain platform with traceability, automation, monitoring, and analytics. Includes IoT integration and enterprise features.",;
     launchDate: "2026-03-01",;

@@ -30,7 +30,7 @@ export default function Page() {};
     {};
 }
   ];
-;
+
   const filterOptions = [{ id: 'ai - services', name: 'AI Services', icon: Brain, count: 0 },;
     { id: 'cloud - infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },;
     { id: 'security', name: 'Security & Compliance', icon: Shield, count: 0 },;
@@ -54,7 +54,7 @@ export default function Page() {};
     filtered.sort((a, b) => {};
 }
     }) ;
-;
+
     setSearchResults(filtered) ;
     setIsSearching(false) ;,
 };
@@ -216,6 +216,5 @@ export default function Page() {};
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default SearchPage;

@@ -36,7 +36,7 @@ export {};
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[]};
+    security: string[]}
   aiCapabilities: string[];
   complianceFeatures: string[];
   scalabilityFeatures: string[]}
@@ -82,8 +82,7 @@ export {};
         roi: "300-500%","";
         setupTime: "4-6 weeks","";
         supportLevel: "enterprise","";
-        innovationLevel: "Revolutionary";,
-},;
+        innovationLevel: "Revolutionary"},;
       {}
 ";
 "";
@@ -119,8 +118,7 @@ export {};
         roi: "400-600%","";
         setupTime: "6-8 weeks","";
         supportLevel: "enterprise","";
-        innovationLevel: "Revolutionary";,
-},;
+        innovationLevel: "Revolutionary"},;
       {}
 ";
 "";
@@ -156,8 +154,7 @@ export {};
         roi: "500-800%","";
         setupTime: "8-10 weeks","";
         supportLevel: "enterprise","";
-        innovationLevel: "Revolutionary";,
-}";
+        innovationLevel: "Revolutionary"}";
     ],"";
     marketPrice: "$3,999 - $12,999/month","";
     competitors: ["Tableau", "Power BI", "Looker", "Qlik", "Domo"],"";
@@ -169,8 +166,7 @@ export {};
       phone: "+1 302 464 0950","";
       email: "kleber@ziontechgroup.com","";
       website: "https://ziontechgroup.com","";
-      address: "364 E Main St STE 1008, Middletown DE 19709";,
-},;
+      address: "364 E Main St STE 1008, Middletown DE 19709"},;
     technicalSpecs: {}
 ";
 "";
@@ -178,12 +174,10 @@ export {};
       integrations: ["Salesforce", "HubSpot", "Google Analytics", "Microsoft Power BI", "Tableau", "Slack", "Microsoft Teams"],";
       apiEndpoints: 150,"";
       uptime: "99.9%","";
-      security: ["SOC 2 Type II", "GDPR", "HIPAA", "End-to-end encryption", "Multi-factor authentication"]";,
-},"";
+      security: ["SOC 2 Type II", "GDPR", "HIPAA", "End-to-end encryption", "Multi-factor authentication"]"},"";
     aiCapabilities: ["Natural Language Processing", "Predictive Analytics", "Machine Learning", "Computer Vision", "Sentiment Analysis"],"";
     complianceFeatures: ["GDPR", "CCPA", "SOC 2", "ISO 27001", "HIPAA"],"";
-    scalabilityFeatures: ["Auto-scaling", "Multi-tenant architecture", "Load balancing", "CDN integration", "Database sharding"];,
-},;
+    scalabilityFeatures: ["Auto-scaling", "Multi-tenant architecture", "Load balancing", "CDN integration", "Database sharding"]},;
   {}
 ";
 "";
@@ -227,8 +221,7 @@ export {};
         roi: "400-800%","";
         setupTime: "8-12 weeks","";
         supportLevel: "enterprise","";
-        innovationLevel: "Revolutionary";,
-},;
+        innovationLevel: "Revolutionary"},;
       {}
 ";
 "";
@@ -264,8 +257,7 @@ export {};
         roi: "500-900%","";
         setupTime: "12-16 weeks","";
         supportLevel: "enterprise","";
-        innovationLevel: "Revolutionary";,
-},;
+        innovationLevel: "Revolutionary"},;
       {}
 ";
 "";
@@ -301,8 +293,7 @@ export {};
         roi: "600-1000%","";
         setupTime: "16-20 weeks","";
         supportLevel: "enterprise","";
-        innovationLevel: "Revolutionary";,
-}";
+        innovationLevel: "Revolutionary"}";
     ],"";
     marketPrice: "$8,999 - $25,000/month","";
     competitors: ["Palo Alto Networks", "CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],"";
@@ -314,8 +305,7 @@ export {};
       phone: "+1 302 464 0950","";
       email: "kleber@ziontechgroup.com","";
       website: "https://ziontechgroup.com","";
-      address: "364 E Main St STE 1008, Middletown DE 19709";,
-},;
+      address: "364 E Main St STE 1008, Middletown DE 19709"},;
     technicalSpecs: {}
 ";
 "";
@@ -323,11 +313,9 @@ export {};
       integrations: ["AWS Security Hub", "Azure Sentinel", "Google Cloud Security", "Splunk", "CrowdStrike"],";
       apiEndpoints: 200,"";
       uptime: "99.99%","";
-      security: ["SOC 2 Type II", "ISO 27001", "NIST", "FIPS 140-2", "Common Criteria"];,
-}}
+      security: ["SOC 2 Type II", "ISO 27001", "NIST", "FIPS 140-2", "Common Criteria"]}}
   }
-};
-;
+}
 // BlockchainForge Pricing;
 export {};
 ";
@@ -357,8 +345,7 @@ export {};
       setupTime: "1 week","";
       support: "Community support","";
       marketComparison: "50% below market average","";
-      volumeDiscounts: ["20% off annual billing"];,
-},;
+      volumeDiscounts: ["20% off annual billing"]},;
     {}
 ";
 "";
@@ -383,8 +370,7 @@ export {};
       setupTime: "2-3 weeks","";
       support: "Priority support (6h response)","";
       marketComparison: "30% below market average","";
-      volumeDiscounts: ["25% off annual billing", "Volume discounts available"];,
-},;
+      volumeDiscounts: ["25% off annual billing", "Volume discounts available"]},;
     {}
 ";
 "";
@@ -409,8 +395,7 @@ export {};
       setupTime: "3-5 weeks","";
       support: "Dedicated support (1h response)","";
       marketComparison: "Market leading pricing","";
-      volumeDiscounts: ["30% off annual billing", "Custom enterprise pricing"];,
-}
+      volumeDiscounts: ["30% off annual billing", "Custom enterprise pricing"]}
   ],;
   marketAnalysis: {}
 ";
@@ -418,18 +403,15 @@ export {};
     averagePrice: "$4,800/month","";
     priceRange: "$1,500 - $12,000/month","";
     competitors: ["OpenZeppelin Enterprise: $8,000/month", "Truffle Enterprise: $6,500/month", "Hardhat Enterprise: $7,000/month"],"";
-    valueProposition: "90% faster blockchain development with automated security and compliance";,
-},;
+    valueProposition: "90% faster blockchain development with automated security and compliance"},;
   specialOffers: {}
 ";
 "";
     annualDiscount: "30% off annual billing","";
     enterpriseDiscount: "Up to 45% off for enterprise contracts","";
     startupProgram: "70% off for qualified startups (first year)","";
-    referralProgram: "25% commission for successful referrals";,
+    referralProgram: "25% commission for successful referrals"}
 }
-};
-;
 // Export all pricing guides;
 export;
 ;export {};
@@ -449,8 +431,7 @@ export;
     approach: "Value-based pricing with ROI focus","";
     target: "15-30% below market average","";
     value: "2-3x better ROI than competitors","";
-    flexibility: "Custom pricing for enterprise clients";,
-},;
+    flexibility: "Custom pricing for enterprise clients"},;
   contactInfo: {}
 ";
 "";
@@ -458,8 +439,7 @@ export;
     email: "kleber@ziontechgroup.com","";
     website: "https://ziontechgroup.com","";
     address: "364 E Main St STE 1008 Middletown DE 19709";
-";,
-}}}}}}}}}}}}}}}"";
+"}}}}}}}}}}}}}}}"";
     aiCapabilities: ["Threat Detection", "Behavioral Analytics", "Anomaly Detection", "Predictive Security", "Automated Response"],"";
     complianceFeatures: ["SOC 2", "ISO 27001", "NIST", "GDPR", "CCPA", "HIPAA"],;"";
     scalabilityFeatures: ["Auto-scaling", "Multi-cloud", "Microservices", "Container security", "Serverless security"]},  {}
@@ -506,8 +486,7 @@ export;
         roi: "300-600%","";
         setupTime: "10-14 weeks","";
         supportLevel: "enterprise","";
-        innovationLevel: "Cutting-Edge";,
-},;
+        innovationLevel: "Cutting-Edge"},;
       {}
 ";
 "";
@@ -543,8 +522,7 @@ export;
         roi: "400-700%","";
         setupTime: "14-18 weeks","";
         supportLevel: "enterprise","";
-        innovationLevel: "Cutting-Edge";,
-},;
+        innovationLevel: "Cutting-Edge"},;
       {}
 ";
 "";
@@ -580,8 +558,7 @@ export;
         roi: "500-800%","";
         setupTime: "18-24 weeks","";
         supportLevel: "enterprise","";
-        innovationLevel: "Cutting-Edge";,
-}";
+        innovationLevel: "Cutting-Edge"}";
     ],"";
     marketPrice: "$5,999 - $18,000/month",;"";
     competitors: ["SAP Ariba", "Oracle SCM", "Kinaxis", "Blue Yonder", "E2open"],;"";

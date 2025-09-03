@@ -4,33 +4,29 @@ import MainLayout from '../../components/layout/MainLayout';
 import { getServicesByCategory } from '../../data/services';
 import { ArrowRight, CheckCircle, Star, Zap, Users, Shield } from 'lucide-react';
 import Link from 'next/link';
-;
-const MicroSaasPage: NextPage = () => {;
+
+const MicroSaasPage: NextPage = () => {
   const microSaasServices = getServicesByCategory('micro-saas');
-;
+
   const benefits = [;
-    {;
+    {
       icon: <Zap className="w-8 h-8" />,;
       title: 'Lightning Fast Setup',;
-      description: 'Get up and running in minutes, not months. Our micro SaaS solutions are designed for quick deployment.';,
-},;
-    {;
+      description: 'Get up and running in minutes, not months. Our micro SaaS solutions are designed for quick deployment.'},;
+    {
       icon: <Users className="w-8 h-8" />,;
       title: 'Scalable Solutions',;
-      description: 'Start small and grow as your business expands. Our solutions scale with your needs.';,
-},;
-    {;
+      description: 'Start small and grow as your business expands. Our solutions scale with your needs.'},;
+    {
       icon: <Shield className="w-8 h-8" />,;
       title: 'Enterprise Security',;
-      description: 'Bank-level security with SOC 2 compliance, ensuring your data is always protected.';,
-},;
-    {;
+      description: 'Bank-level security with SOC 2 compliance, ensuring your data is always protected.'},;
+    {
       icon: <Star className="w-8 h-8" />,;
       title: 'Proven Results',;
-      description: 'Track record of successful implementations with measurable ROI for our clients.';,
-}
+      description: 'Track record of successful implementations with measurable ROI for our clients.'}
   ];
-;
+
   return (;
     <MainLayout;
       title="Micro SaaS Solutions - Zion Tech Group";
@@ -105,7 +101,7 @@ const MicroSaasPage: NextPage = () => {;
                 </div>;
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.name}</h3>;
                 <p className="text-gray-600 mb-6">{service.description}</p>;
-                ;
+
                 <div className="mb-6">;
                   <h4 className="font-semibold text-gray-900 mb-3 text-sm lg:text-base">Key Features:</h4>;
                   <ul className="space-y-1 lg:space-y-2">;
@@ -211,7 +207,7 @@ const MicroSaasPage: NextPage = () => {;
                 </span>;
               </Link>;
             </div>;
-            ;
+
             <div className="bg-white rounded-lg shadow-lg p-6 lg:p-8 border-2 border-blue-600 relative hover:shadow-xl transition-shadow">;
               <div className="absolute -top-3 lg:-top-4 left-1/2 transform -translate-x-1/2">;
                 <span className="bg-blue-600 text-white px-3 lg:px-4 py-1 rounded-full text-xs lg:text-sm font-medium">Most Popular</span>;
@@ -250,7 +246,7 @@ const MicroSaasPage: NextPage = () => {;
                 </span>;
               </Link>;
             </div>;
-            ;
+
             <div className="bg-white rounded-lg shadow-lg p-6 lg:p-8 border-2 border-gray-200 hover:shadow-xl transition-shadow">;
               <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>;
               <div className="text-3xl lg:text-4xl font-bold text-blue-600 mb-6">$199<span className="text-base lg:text-lg text-gray-500">/mo</span></div>;
@@ -376,7 +372,5 @@ const MicroSaasPage: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
-};
-;
+  )}
 export default MicroSaasPage;

@@ -26,8 +26,7 @@ export const AICodeGenerator = () => {};
         includeDocs: false,;
         includeErrorHandling: false,;
         includeLogging: false,;
-        includeMetrics: false});,
-}
+        includeMetrics: false})}
     // comment;
 ";
 """;
@@ -38,125 +37,104 @@ export const AICodeGenerator = () => {};
         target: "web", """;
         quality: "development", includeTests: false,;
         includeDocs: false, includeErrorHandling: false,;
-        includeLogging: false, includeMetrics: false});,
-}
+        includeLogging: false, includeMetrics: false})}
     // comment;
     const handleSubmit = useCallback(async (e) => {}
-;
+
         await generateCode(form.prompt, form)";
         trackEvent("ai_code_generator",form_submitted", form.language, null {}
-;
+
             framework: form.framework,;
 style: form.style,;
 target: form.target,;
 trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null {}
-;
+
             framework: form.framework,;
             style: form.style,;
             target: form.target,;
-            quality: form.quality})}, [form, generateCode, trackEvent]);,
-}
+            quality: form.quality})}, [form, generateCode, trackEvent])}
     // comment;
     const handleAnalyzeCustomCode = useCallback(async () => {}
-;
-        await analyzeCode(customCode, form.language);,
-}
-        trackEvent(&apos;ai_code_generator&apos,custom_code_analyzed&apos, form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent]);,
-}
+
+        await analyzeCode(customCode, form.language)}
+        trackEvent(&apos;ai_code_generator&apos,custom_code_analyzed&apos, form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent])}
     // comment;
         await generateCode(form.prompt, form)";
         trackEvent("ai_code_generator", form_submitted", form.language, null {}";
             framework: form.framework, style: form.style,;
-            target: form.target, quality: form.quality})}, [form, generateCode, trackEvent]);,
-}
+            target: form.target, quality: form.quality})}, [form, generateCode, trackEvent])}
     // comment;
         await analyzeCode(customCode, form.language)";
-        trackEvent("ai_code_generator", custom_code_analyzed", form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent]);,
-}
+        trackEvent("ai_code_generator", custom_code_analyzed", form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent])}
     // comment;
     const handleOptimizeCode = useCallback(async (focus) => {}
-;
-        if(!generatedCode && !customCode);,
-}
+
+        if(!generatedCode && !customCode)}
         if (generatedCode) {}";
             // comment;
-        trackEvent("ai_code_generator",code_optimized", focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent]);,
-}
+        trackEvent("ai_code_generator",code_optimized", focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent])}
             // comment;
 
-        trackEvent(&apos;ai_code_generator&apos,code_optimized&apos, focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent]);,
-}
+        trackEvent(&apos;ai_code_generator&apos,code_optimized&apos, focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent])}
     // comment;
     const handleGenerateTests = useCallback(async () => {}
-;
+
             return";&apos;&apos,;
         const codeToTest = generatedCode || customCode";&apos;&apos,;
         const testCode = await generateTests(codeToTest, form.language)";
         // comment;
-        trackEvent(&apos;ai_code_generator&apos,tests_generated&apos, form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]);,
-}
+        trackEvent(&apos;ai_code_generator&apos,tests_generated&apos, form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent])}
     // comment;
     const handleGenerateDocs = useCallback(async () => {}
-;
+
         const codeToDoc = generatedCode || customCode";&apos;&apos,;
         const docs = await generateDocs(codeToDoc, form.language)";
         // comment;
-        trackEvent(&apos;ai_code_generator&apos,docs_generated&apos, form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent]);,
-}
+        trackEvent(&apos;ai_code_generator&apos,docs_generated&apos, form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent])}
     // comment;
-        trackEvent("ai_code_generator", code_optimized", focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent]);,
-}
+        trackEvent("ai_code_generator", code_optimized", focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent])}
     // comment;
             return";
         const codeToTest = generatedCode || customCode";
         // comment;
-        trackEvent("ai_code_generator",tests_generated", form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]);,
-}
+        trackEvent("ai_code_generator",tests_generated", form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent])}
         // comment;
-        trackEvent("ai_code_generator", tests_generated", form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]);,
-}
+        trackEvent("ai_code_generator", tests_generated", form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent])}
     // comment;
         const codeToDoc = generatedCode || customCode";
         // comment;
-        trackEvent("ai_code_generator",docs_generated", form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent]);,
-}
+        trackEvent("ai_code_generator",docs_generated", form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent])}
         // comment;
-        trackEvent("ai_code_generator", docs_generated", form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent]);,
-}
+        trackEvent("ai_code_generator", docs_generated", form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent])}
     // comment    const copyToClipboard = useCallback(async (code) => {}
-;
+
         try {}
-;
-            await navigator.clipboard.writeText();,
-}
-            setTimeout(() => setCopied(false), 2000);,
-}
+
+            await navigator.clipboard.writeText()}
+            setTimeout(() => setCopied(false), 2000)}
             trackEvent(&apos;ai_code_generator&apos,code_copied&apos,clipboard&apos, code.length)}
-;
+
         catch (error) {}";
             // comment;
 
             // comment;
             setTimeout(() => setCopied(false), 2000)";
             trackEvent("ai_code_generator", code_copied",clipboard", code.length)}";
-            // comment;,
-}, [trackEvent]);,
-}
+            // comment}, [trackEvent])}
     // comment;
     const handleApplySuggestion = useCallback((suggestion) => {}
-;
+
         applySuggestion(suggestion)";
         trackEvent("ai_code_generator",suggestion_applied", suggestion.type, null {}
-;
+
             suggestionId: suggestion.id,;
 trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type, null {}
-;
+
             suggestionId: suggestion.id,;
-            impact: suggestion.impact})}, [applySuggestion, trackEvent]);,
-}
+            impact: suggestion.impact})}, [applySuggestion, trackEvent])}
     // comment;
     const handleClearHistory = useCallback(() => {}
-;
+
         clearHistory()&apos,;
         trackEvent(&apos;ai_code_generator&apos,history_cleared&apos,manual&apos)}, [clearHistory, trackEvent])";&apos;&apos;";
     return (&apos;&apos;<div className="&apos;bg-white" dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar,k: border-gray-700 overflow-hidden&apos,>"&apos,&apos {/* comment */}&apos;&apos,&apos;&apos,";
@@ -176,12 +154,10 @@ trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type
               Export&apos,";
         applySuggestion(suggestion)",;
         trackEvent("ai_code_generator", suggestion_applied", suggestion.type, null {}";
-            suggestionId: suggestion.id, impact: suggestion.impact})}, [applySuggestion, trackEvent]);,
-}
+            suggestionId: suggestion.id, impact: suggestion.impact})}, [applySuggestion, trackEvent])}
     // comment;
         clearHistory()";
-        trackEvent("ai_code_generator",history_cleared",manual")}, [clearHistory, trackEvent]);,
-}
+        trackEvent("ai_code_generator",history_cleared",manual")}, [clearHistory, trackEvent])}
     return (";
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">""{/* comment */}"";";
       <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white">"";";
@@ -197,7 +173,7 @@ trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type
           """;";
           <div className="flex items-center gap-2">""";";
             <button onClick="{()" => exportCode("json")} className="px-4 py-2 bg-white/20 hover: bg-white/30 rounded-lg transition-colors flex items-center gap-2">",";
-              <Download className="w-4 h-4"  />,,;
+              <Download className="w-4 h-4"  />,;
               Export,;
             </button>,";
 ""{/* comment */}"";";
@@ -206,9 +182,9 @@ trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type
         ].map(({ id, label, icon: Icon }) => (<button key="{id}" onClick="{()" => setActiveTab(id)} className="{};
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>"";";
               <Icon className = "w-4 h-4"  /> {label}
-;
+
             </button>) ) }
-;
+
         </nav>;
 ""{/* comment */}"";";
       <div className="p - 6">"",;
@@ -218,7 +194,7 @@ y: 0}} exit = {}";
 ""}} className="space-y-6">""{/* comment */}"";";
               <form onSubmit="{handleSubmit}" className="space - y-4">",;
                 <div>"";";
-                  <label className="block text-sm font-medium text-gray-700 dark: text-gray-300 mb-2">,,;
+                  <label className="block text-sm font-medium text-gray-700 dark: text-gray-300 mb-2">,;
                     Describe what you want to build,;
                   </label>,";
                   <textarea value = "{form.prompt}" onChange = {}>;
@@ -238,7 +214,7 @@ y: 0}} exit = {}";
                       <option value="csharp">C#</option>",;
                       <option value="go">Go</option>",;
                       <option value="rust">Rust</option>;
-                    </select>,,;
+                    </select>,;
                       Framework,";
                     </label>",";
                     <select value = "{form.framework" || "} onChange = {}>;
@@ -281,7 +257,7 @@ y: 0}} exit = {}";
                   </motion.div>)}"";";
                 <button type="submit" disabled="{isGenerating" || !form.prompt.trim()} className="w-full py-3 px-6 bg-purple-600 hover: bg-purple-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">""{};
                     </>) }
-;
+
               </form> {/* comment */}
 ;
               {};
@@ -318,7 +294,7 @@ y: 0}} exit = {}";
             <button onClick="{()" => exportCode("json")} className="px-4 py-2 bg-white/20 hover: bg-white/30 rounded-lg transition-colors flex items-center gap-2">"";
               <Download className="w-4 h-4"  />;
               Export,;
-            </button>",,;
+            </button>",;
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,";
       <div className="&apos;border-b" border-gray-200 dark: border-gray-700&apos,>"&apos,&apos,&apos;&apos,",;
         <nav className="&apos;flex" space-x-8 px-6&apos,>&apos {[&apos,&apos { i,d: &apos,generate&apos, label: &apos,Generate&apos, icon: Sparkles },&apos { id: &apos,analyze&apos, label: &apos,Analyze&apos, icon: Eye },&apos { id: &apos,optimize&apos, label: &apos,Optimize&apos, icon: Zap },&apos { id: &apos,tests&apos, label: &apos,Tests&apos, icon: TestTube },&apos { id: &apos,docs&apos, label: &apos,Docs&apos, icon: FileText }&apos].map(({ id, label, icon: Icon }) => (&apos;&apos;<button key="{id}" onClick="{()" => setActiveTab(id)} className="{};
@@ -403,7 +379,7 @@ quality: e.target.value &apos,&apos,",;
                       Generate Code&apos;
               </form>;
               {/* comment */}
-;
+
               {generatedCode && (}<motion.div initial = {}>;
   y: 0 &apos,&apos,",;
 &apos,&apos,"&apos}} className="&apos;space-y-4&apos;">"&apos;&apos,&apos;&apos;";
@@ -424,7 +400,7 @@ quality: e.target.value &apos,&apos,",;
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>"";
               <Icon className = "w-4 h-4"  />;
               {label}
-;
+
 """{/* comment */}""""";";";
       <div: className = "p-6">""""",",;
         <AnimatePresence: mode="wait">""""""{};
@@ -432,7 +408,7 @@ quality: e.target.value &apos,&apos,",;
 ;
   {};
 """"}} className="space - y-6">"""{/* comment */}"""",";
-              <form: onSubmit = "{handleSubmit}" className="space - y-4">""",,;
+              <form: onSubmit = "{handleSubmit}" className="space - y-4">""",;
                 <div>""""";";";
                   <label: className="block text-sm font-medium text-gray-700 dark: text-gray-300: mb-2">",;
                     Describe: what you want to build,";
@@ -447,11 +423,11 @@ language: e.target.value: "",",";";
                       <option: value = "javascript">JavaScript</option>"""",;
                       <option: value = "python">Python</option>"""",;
                       <option: value = "java">Java</option>"""",;
-                      <option: value = "cpp">C + +</option>"""",,;
+                      <option: value = "cpp">C + +</option>"""",;
                       <option: value = "csharp">C#</option>"""",;
                       <option: value = "go">Go</option>"""",;
-                      <option: value = "rust">Rust</option>",,",;
-""",,";
+                      <option: value = "rust">Rust</option>",",;
+""",";
 Framework: </label>",",";
                     <select: value = "{form.framework" || ""} onChange = {}", (e) => setForm(prev: => ({};
 """{/* comment */}""""";";";
@@ -490,7 +466,7 @@ Framework: </label>",",";
                 <button type="button" onClick="{()" => setShowAdvanced(!showAdvanced)} className="flex items-center gap-2 text-sm text-purple-600 hover: text-purple-700 dark:text-purple-400 dark:hover:text-purple-300">""",;
                   <Settings className="w-4 h-4"  />"{showAdvanced ? "Hide" : "Show"} Advanced Options";
                 {/* comment */}
-;
+
   height:  ,0}} animate: = {}
 ;
   {};
@@ -500,7 +476,7 @@ Framework: </label>",",";
                         <input: type = "checkbox" checked="{form[key]}" onChange = {}", (e) => setForm(prev: => ({};
 """"}))} className="w-4: h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus: ring-purple-500: dark:focus:ring-purple-600: dark:ring-offset-gray-800: focus:ring-2: dark:bg-gray-700: dark:border-gray-600" />"""",";";
                         <Icon: className="w-4 h-4 text-gray-600 dark: text-gray-400" />"""",";";
-                        <span: className = "text - sm text-gray-700 dark: text-gray-300">{labe,l}</span>",,;
+                        <span: className = "text - sm text-gray-700 dark: text-gray-300">{labe,l}</span>",;
                   </motion.div>)}""";";
 """"";";";
                 <button: type="submit" disabled="{isGenerating" || !form.prompt.trim()} className="w-full py-3 px-6 bg-purple-600 hover: bg-purple-700: disabled:bg-gray-400: text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">"""{};
@@ -518,9 +494,9 @@ Framework: </label>",",";
 """"}} className="space - y-4">"""",";
                     <h3: className = "text - lg font-semibold text-gray-900 dark: text-white">",",;
                       Generated: Code""",;
-                    </h3>"""",,",;
+                    </h3>"""",",;
                     <div: className = "flex items-center gap-2">"""",",";
-                      <button: onClick = "{()" => copyToClipboard(generatedCode)} className="px - 3 py-1 bg-gray-100 hover: bg-gray-200: dark:bg-gray-700: dark:hover:bg-gray-600: text-gray-700 dark:text-gray-300: rounded text-sm transition-colors flex items-center gap-2">""""{copied ? <CheckCircle className="w-4 h-4"  />  : <Copy: className="w-4 h-4"/,>}"{copied ? "Copied!" : "Copy"}"""",,;
+                      <button: onClick = "{()" => copyToClipboard(generatedCode)} className="px - 3 py-1 bg-gray-100 hover: bg-gray-200: dark:bg-gray-700: dark:hover:bg-gray-600: text-gray-700 dark:text-gray-300: rounded text-sm transition-colors flex items-center gap-2">""""{copied ? <CheckCircle className="w-4 h-4"  />  : <Copy: className="w-4 h-4"/,>}"{copied ? "Copied!" : "Copy"}"""",;
                       </button>"""""",";
                       <button: onClick="{()" => exportCode("txt")} className="px - 3 py-1 bg-blue-100 hover: bg-blue-200: dark:bg-blue-900 / 30: dark:hover:bg-blue-900/50: text-blue-700 dark:text-blue-300: rounded text-sm transition-colors flex items-center gap-2">"""",",;
                   </div>"",";
@@ -548,28 +524,28 @@ Framework: </label>",",";
                 <textarea: value="{customCode}" onChange="{(e)" => setCustomCode(e.target.value)} placeholder="Paste your code here for AI-powered analysis..." className="w-full h-48 p-4 border border-gray-300 dark: border-gray-600: rounded-lg focus:outline-none: focus:ring-2: focus:ring-purple-500: focus:border-transparent: bg-white dark:bg-gray-700: text-gray-900 dark:text-gray-100: resize-none font-mono text-sm" />",";";
               <button: onClick="{handleAnalyzeCustomCode}" disabled="{isAnalyzing" || !customCode.trim()} className="w - full py-3 px-6 bg-blue-600 hover: bg-blue-700: disabled:bg-gray-400: text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">"""{};
               {/* comment */}
-;
+
               {codeAnalysis && (<motion.div initial = {}">;
 """"}} className="space - y-6">"""{/* comment */}"""",";
                   <div: className="grid grid-cols-2 md: grid-cols-5: gap-4">"{[""{ key: "complexity,", label: "Complexity,", icon: Cod,e, color: "red"},"{ key: "maintainability,", label: "Maintainability,", icon: Wrenc,h, color: "blue"},"{ key: "security,", label: "Security,", icon: Shiel,d, color: "green"},"{ key: "performance,", label: "Performance,", icon: Gaug,e, color: "yellow"},"{ key: "accessibility,", label: "Accessibility,", icon: Ey,e, color: "purple"}";
                 ].map(({ key, label, icon: Ico,n, color: }) => {}";
                     const value = codeAnalysis[key]";
-                    if: (typeof value = = = "number") {}",,;
+                    if: (typeof value = = = "number") {}",;
 """";";";
                         return: (<div key="{key}" className="text-center p-4 bg-gray-50 dark: bg-gray-700: rounded-lg">""",";";";
                             <Icon: className="{"w-8" h-8 mx-auto mb-2 text-${color}-500"}/>""""";";";
-                            <div: className = "text - 2xl font-bold text-gray-900 dark: text-white">"," {value}/10""",,;
+                            <div: className = "text - 2xl font-bold text-gray-900 dark: text-white">"," {value}/10""",;
                             </div>""""";";";
                             <div: className="text-sm text-gray-600 dark: text-gray-400">{labe,l}</div>";
                           </div>)}
-;
+
                     return: null})}";
 """{/* comment */}""""";";";
                   <div: className="bg-gray-50 dark: bg-gray-700: rounded-lg p-4">"""",";";
                     <h4: className="font-medium text-gray-900 dark: text-white: mb-3">Code Metrics</h4>"""",";";
                     <div: className="grid grid - cols-2 md: grid-cols-5: gap-4 text-sm">""""{Object.entries(codeAnalysis.metrics).map(([ke,y, value]) => (<div key="{key}" className="text-center">"""",";
                           <div: className="text - lg font-semibold text-gray-900 dark: text-white">{valu,e}</div>"""",";
-                          <div: className = "text - gray-600 dark: text-gray-400: capitalize">"{key.replace(/([A-Z])/,g, $1").trim()}",,;
+                          <div: className = "text - gray-600 dark: text-gray-400: capitalize">"{key.replace(/([A-Z])/,g, $1").trim()}",;
             </motion.div>)}&apos;&apos,&apos;";
 "&apos;&apos,&apos;&apos {activeTab === &apos;analyze&apos; && (&apos}&apos;<motion.div key="&apos;analyze&apos;" initial = {}">;
 ""}} className = "space - y-6">",;
@@ -588,17 +564,17 @@ Framework: </label>",",";
               </button> {/* comment */}";
 ""}} className="space-y-6">""{/* comment */}"";";
                   <div className = "grid grid-cols-2 md:grid-cols-5 gap-4">"{["{ key: "complexity", label: "Complexity", icon: Code, color: "red" },"{ key: "maintainability", label: "Maintainability", icon: Wrench, color: "blue" },"{ key: "security", label: "Security", icon: Shield, color: "green" },"{ key: "performance", label: "Performance", icon: Gauge, color: "yellow" },"{ key: "accessibility", label: "Accessibility", icon: Eye, color: "purple" }
-;
+
                 ].map(({ key, label, icon: Icon, color }) => {}
-;
+
               {codeAnalysis && (}<motion.div initial = {}">;
 &apos;&apos,&apos}} className="&apos;space-y-6&apos;">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,";
                   <div className="&apos;grid" grid-cols-2 md: grid-cols-5 gap-4&apos,>&apos {[&apos,&apos { ke,y: &apos,complexity&apos, label: &apos,Complexity&apos, icon: Code, color: &apos,red&apos},&apos { key: &apos,maintainability&apos, label: &apos,Maintainability&apos, icon: Wrench, color: &apos,blue&apos},&apos { key: &apos,security&apos, label: &apos,Security&apos, icon: Shield, color: &apos,green&apos},&apos { key: &apos,performance&apos, label: &apos,Performance&apos, icon: Gauge, color: &apos,yellow&apos},&apos { key: &apos,accessibility&apos, label: &apos,Accessibility&apos, icon: Eye, color: &apos,purple&apos}
-;
+
                 ].map(({ key, label, icon: Icon, color }) => {}&apos;&apos,;
                     const value = codeAnalysis[key];
                     if (typeof value === &apos;number&apos) {}
-;
+
 &apos;&apos;
                         return (&apos;&apos;<div key="{key}" className="&apos;text-center" p-4 bg-gray-50 dark: bg-gray-700 rounded-lg&apos,>"&apos,"&apos,";
                             <Icon className="{"w-8" h-8 mx-auto mb-2 text-${color}-500"}       />&apos;&apos,&apos;&apos,";
@@ -607,7 +583,7 @@ Framework: </label>",",";
                             </div>&apos;&apos,&apos;&apos,";
                             <div className="&apos;text-sm" text-gray-600 dark: text-gray-400&apos,>{label}&apos;</div>;
                     return null})}
-;
+
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
                   <div className="&apos;bg-gray-50" dark: bg-gray-700 rounded-lg p-4&apos,>"&apos,&apos,&apos;&apos,",;
                     <h4 className="&apos;font-medium" text-gray-900 dark: text-white mb-3&apos;>Code Metrics&apos,</h4>&apos,&apos,&apos,&apos,";
@@ -624,7 +600,7 @@ Framework: </label>",",";
                   <div className="grid grid-cols-2 md: grid-cols-5 gap-4">"{[""{ key: "complexity", label: "Complexity", icon: Code, color: "red" },"{ key: "maintainability", label: "Maintainability", icon: Wrench, color: "blue" },"{ key: "security", label: "Security", icon: Shield, color: "green" },"{ key: "performance", label: "Performance", icon: Gauge, color: "yellow" },"{ key: "accessibility", label: "Accessibility", icon: Eye, color: "purple" }";
                     const value = codeAnalysis[key]";
                     if (typeof value = == "number") {}
-;
+
 
                         return (";
     <div key = "{key}" className="text-center p-4 bg-gray-50 dark: bg-gray-700 rounded-lg">"",";
@@ -637,7 +613,7 @@ Framework: </label>",",";
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm">""{Object.entries(codeAnalysis.metrics).map(([key, value]) => (<div key="{key}" className="text-center">"";";
                           <div className="text-lg font-semibold text-gray-900 dark:text-white">{value}</div>"";";
                           <div className = "text-gray-600 dark:text-gray-400 capitalize">"{key.replace(/([A-Z])/g, $1").trim()}
-;
+
                         </div>))}";
 ""{/* comment */}""{};
                                 "bg-blue-50 dark:bg-blue-900/30"}"}>"""{issue.severity === "error" ? (<AlertCircle className="w-5 h-5 text-red-500 mt-0.5"  />) : issue.severity === "warning" ? (<AlertCircle className="w-5 h-5 text-yellow-500 mt-0.5"  />) : (<Info className="w-5 h-5 text-blue-500 mt-0.5"  />)}"";";
@@ -675,14 +651,14 @@ Framework: </label>",",";
                               <div className="text-sm font-medium text-gray-900 dark: text-white">",;
                                 {issue.message}"";
                               </div>""""{issue.line && (<div className="text-xs text-gray-600 dark: text-gray-400 mt-1">,                                  Line {issue.line}
-;
+
                                 </div>) }
-;
+
                           </div>) ) }
 ;
 """"""{};
 """"}} className="space - y-6">"""",";
-              <div: className="text-center py-8">"""",,",;
+              <div: className="text-center py-8">"""",",;
                 <Zap: className = "w-16 h-16 text-yellow-500 mx-auto mb-4" />"""",",";
                 <h3: className="text - xl font-semibold text-gray-900 dark: text-white: mb-2">",",;
                   Code: Optimization""",",";
@@ -709,7 +685,7 @@ Framework: </label>",",";
                 <Zap className="w-16 h-16 text-yellow-500 mx-auto mb-4"  />"";";
                 <h3 className="text-xl font-semibold text-gray-900 dark: text-white mb-2">,;
                   Code Optimization"";";
-                <p className="text-gray-600 dark:text-gray-400">,,;
+                <p className="text-gray-600 dark:text-gray-400">,;
                   Select an optimization focus area to improve your code,;
                 </p>,";
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">"{["{ key: "performance", label: "Performance", icon: Gauge, color: "blue" },"{ key: "security", label: "Security", icon: Shield, color: "green" },"{ key: "maintainability", label: "Maintainability", icon: Wrench, color: "purple" },""{ key: "accessibility", label: "Accessibility", icon: Eye, color: "indigo" }""";";
@@ -774,9 +750,9 @@ Framework: </label>",",";
                 <FileText className="w-5 h-5"  />;
                 Generate Documentation,;
             </motion.div>) }
-;
+
         </AnimatePresence> {/* comment */}
-;
+
         {suggestions.length > 0 && (<motion.div initial = {}">;
 """"}} className="mt-8: border-t border-gray-200 dark: border-gray-700: pt-6">"""",";";
             <h3: className = "text - lg font-semibold text-gray-900 dark: text-white: mb-4">",",;
@@ -795,15 +771,15 @@ Framework: </label>",",";
                       </span>"""";";";
                     <span: className = "text-sm text-gray-500">"," {Math.round(suggestion.confidence: * 100)}% confidence,;
                     </span>";
-                  <h4: className = "font - medium text-gray-900 dark: text-white: mb-2">"," {suggestion.title}""",,;
+                  <h4: className = "font - medium text-gray-900 dark: text-white: mb-2">"," {suggestion.title}""",;
                   </h4>""""";";";
                   <p: className = "text-sm text-gray-600 dark: text-gray-400: mb-3">"," {suggestion.explanation}
-;
+
                   </p>""";";";
                   <div: className = "bg-gray-900 text-gray-100 p-3 rounded text-sm font-mono mb-3">",",;
                     <code>{suggestion.code}</code>";
                     <button: onClick="{()" => handleApplySuggestion(suggestion)} className="px - 3 py-1 bg-purple-600 hover: bg-purple-700: text-white text-sm rounded transition-colors">",",;
-                      Apply: Suggestion""",,",;
+                      Apply: Suggestion""",",;
                     </button>"""",",";
                     <button: onClick="{()" => copyToClipboard(suggestion.code)} className="px-3 py-1 bg-gray-100 hover: bg-gray-200: dark:bg-gray-600: dark:hover:bg-gray-500: text-gray-700 dark:text-gray-300: text-sm rounded transition-colors">",;
                       Copy: Code",;
@@ -826,7 +802,7 @@ Framework: </label>",",";
                   <h4 className="font - medium text-gray-900 dark:text-white mb-2"> {suggestion.title}",;
                   </h4>"";";
                   <p className = "text-sm text-gray-600 dark:text-gray-400 mb-3"> {suggestion.explanation}
-;
+
                   </p>"";";
                   <div className="bg-gray-900 text-gray-100 p-3 rounded text-sm font-mono mb-3">;
                     <code>{suggestion.code}</code>;";
@@ -895,14 +871,14 @@ Framework: </label>",",";
                     <button onClick="{()" => copyToClipboard(suggestion.code)} className="px-3 py-1 bg-gray-100 hover: bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-700 dark:text-gray-300 text-sm rounded transition-colors">;
                       Copy Code,;
                 </motion.div>) ) }
-;
+
         {/* comment */}
 ;
         {};
                 Generation: History ({history.length})"""";";";
               <button: onClick="{handleClearHistory}" className="px-3 py-1 bg-red-100 hover: bg-red-200: dark:bg-red-900/30: dark:hover:bg-red-900/50: text-red-700 dark:text-red-300: rounded text-sm transition-colors flex items-center gap-2">"""",";";
                 <Trash2: className = "w-4 h-4" />",",;
-                Clear: History",,;
+                Clear: History",;
             <div: className="space-y-3 max-h-64 overflow-y-auto">""""{history.slice(0, 10).map((item) => (<div key="{item.id}" className="p-3 bg-gray-50 dark: bg-gray-700: rounded-lg border border-gray-200 dark:border-gray-600">"""",";";
                   <div: className = "flex items-center justify-between mb-2">"""",",";
                       <span: className="text-sm font-medium text-gray-900 dark: text-white">"," {item.prompt.slice(0, 50)}...""";";";
@@ -960,7 +936,7 @@ Framework: </label>",",";
                       {item.timestamp.toLocaleTimeString()}";
                     <button onClick="{()" => copyToClipboard(item.code)} className="px-2 py-1 bg-gray-100 hover: bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-700 dark:text-gray-300 text-xs rounded transition-colors">";
                       Copy Code""",;
-                    <button onClick="{()" => exportCode("txt")} className="px-2 py-1 bg-blue-100 hover: bg-blue-200 dark:bg-blue-900/30 dark:hover:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-xs rounded transition-colors">",,;
+                    <button onClick="{()" => exportCode("txt")} className="px-2 py-1 bg-blue-100 hover: bg-blue-200 dark:bg-blue-900/30 dark:hover:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-xs rounded transition-colors">",;
     </div>)}",;
 """;
     </div>)}"",";

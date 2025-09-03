@@ -5,7 +5,7 @@ import { useForm, type UseFormReturn } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2 } from "lucide-react";
-;
+
 import { useAuth } from "@/hooks/useAuth";
 import { register } from "@/services/auth";
 import { toast } from "@/hooks/use-toast";
@@ -38,7 +38,7 @@ export default function Signup() {};
   const [confirmPasswordValue, setConfirmPasswordValue] = useState("");
   const passwordValue = form.watch("password");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  ;
+
   // Initialize react-hook-form;
   const form = useForm({};
 },;,
@@ -51,18 +51,17 @@ export default function Signup() {};
         data.email,;
         data.password;
       );
-;
+
       // Handle duplicate email error from API;
       if (res.status === 409 && resData?.code === 'EMAIL_EXISTS') {};
         form.setError('email', { message: resData.message });
         toast.error('Email already registered – please login.');
-        return;,
-}
-;
+        return}
+
       // Check for successful response;
       if (res.ok && resData.token && resData.user) {};
         setTokens({ accessToken: resData.token, refreshToken: resData.refreshToken || null });
-;
+
       // Handle email verification required case;
       if (resData?.emailVerificationRequired) {};
 } else if (resData?.session) {};
@@ -70,8 +69,7 @@ export default function Signup() {};
         if (sessionError) {};
           form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." });
           toast.error(sessionError.message || "Failed to set session. Please try logging in.");
-          return;,
-}
+          return}
         // The onAuthStateChange listener in AuthProvider should now handle;
         // updating user state and navigating if necessary for other cases.;
         // For direct signup with session, we can navigate.;
@@ -81,9 +79,8 @@ export default function Signup() {};
         form.setError("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." });
         toast.error("Registration complete, but an unexpected issue occurred. Please try logging in manually.");
         // Potentially navigate to login or show a more specific error;
-        return;,
-}
-;
+        return}
+
       // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification);
       if (data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {};
             mergeFields: { FNAME: data.displayName }
@@ -160,6 +157,5 @@ const Signup = () => {};
                 Contact Us;
               </Link>;
             </div>;
-    </>  );,
-}
+    </>  )}
 }}

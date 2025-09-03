@@ -31,9 +31,8 @@ export default function BlogPost() {};
             case 'linkedin':;
                 return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
             default:;
-                return '#';,
-}
-    };
+                return '#'}
+    }
     return (<>;
       <SEO title={post.title} description={post.excerpt} keywords={post.tags.join(", ")} ogImage={post.featuredImage} canonical={`https://ziontechgroup.com/blog/${post.slug}`}/>;
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">;
@@ -47,7 +46,7 @@ export default function BlogPost() {};
               </Link>;
             </Button>;
           </div>;
-          ;
+
           {/* Article header */}
           <div className="mb-8 max-w-4xl mx-auto">;
             <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">;
@@ -59,7 +58,7 @@ export default function BlogPost() {};
             <p className="text-xl text-zion-slate-light mb-8">;
               {post.excerpt}
             </p>;
-            ;
+
             {/* Author and metadata */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">;
               <div className="flex items-center mb-4 sm:mb-0">;
@@ -70,7 +69,7 @@ export default function BlogPost() {};
                   <p className="text-sm text-zion-slate-light">{post.author.title}</p>;
                 </div>;
               </div>;
-              ;
+
               <div className="flex items-center space-x-4">;
                 <div className="flex items-center text-zion-slate-light">;
                   <Calendar className="h-4 w-4 mr-1"/>;
@@ -104,7 +103,7 @@ export default function BlogPost() {};
               </div>;
             </div>;
           </div>;
-          ;
+
           {/* Featured image */}
           <div className="mb-12 max-w-5xl mx-auto">;
             <div className="aspect-[21/9] rounded-lg overflow-hidden">;
@@ -112,20 +111,20 @@ export default function BlogPost() {};
 }}/>;
             </div>;
           </div>;
-          ;
+
           {/* Article content */}
           <div className="max-w-4xl mx-auto">;
             <div className="prose prose-lg prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: post.content }}/>;
-            ;
+
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mt-12">;
               {post.tags.map(tag => (<span key={tag} className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full">;
                   #{tag}
                 </span>))}
             </div>;
-            ;
+
             <Separator className="my-12 bg-zion-blue-light"/>;
-            ;
+
             {/* Related articles */}
             {};
                   {relatedPosts.map(relatedPost => (<Link key={relatedPost.id} to={`/blog/${relatedPost.slug}`} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300">;
@@ -140,7 +139,6 @@ export default function BlogPost() {};
                     </Link>))}
                 </div>;
               </div>)}
-            ;
             {/* Navigation */}
             <div className="flex justify-between items-center mt-12">;
               <Button variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" asChild>;
@@ -155,16 +153,11 @@ export default function BlogPost() {};
       </div>;
 :src/pages/BlogPost.js.jsx;
     </>)}
-;
 
-export { BlogPost };
-;
-export { BlogPost };
-;
-export { BlogPost };
-;
-export { BlogPost };
-;
-export { BlogPost };
-    </>);,
-}
+
+export { BlogPost }
+export { BlogPost }
+export { BlogPost }
+export { BlogPost }
+export { BlogPost }
+    </>)}

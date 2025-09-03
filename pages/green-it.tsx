@@ -11,8 +11,6 @@ const GreenITPage = () => {};
         <p className="text-gray-600">We build sustainable, energy-efficient technology solutions to reduce environmental impact.</p>;
       </main>;
     </>;
-  );,
-};
-;
+  )}
 export default GreenITPage;
-;
+

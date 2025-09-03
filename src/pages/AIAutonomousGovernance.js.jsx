@@ -232,16 +232,12 @@ const AIAutonomousGovernance = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default AIAutonomousGovernance;
-;
 
-export { AIAutonomousGovernance };
-;
-export { AIAutonomousGovernance };
-;
-export { AIAutonomousGovernance };
-;
-export { AIAutonomousGovernance };
-;
-export { AIAutonomousGovernance };
+
+export { AIAutonomousGovernance }
+export { AIAutonomousGovernance }
+export { AIAutonomousGovernance }
+export { AIAutonomousGovernance }
+export { AIAutonomousGovernance }

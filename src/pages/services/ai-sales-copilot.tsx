@@ -199,5 +199,4 @@ export default function AISalesCopilotPage() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

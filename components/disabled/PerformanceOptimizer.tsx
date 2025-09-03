@@ -1,53 +1,42 @@
 import Head from "next/head";
 import React, { useEffect } from "react";
-interface PerformanceOptimizerProps {;
-;
+interface PerformanceOptimizerProps {
+
   preloadImages?: string[];
   preloadFonts?: string[];
   preloadScripts?: string[];
 
-;
+
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,;
   preloadImages = [],;
   preloadFonts = [],;
-  preloadScripts = [];,
-}) => {;
-  useEffect(() => {;
+  preloadScripts = []}) => {
+  useEffect(() => {
     // comment;
 preloadImages.forEach(src = > {";
-      const link = document.createElement("link");,
-}
+      const link = document.createElement("link")}
       link.rel = "preload";
       link.as = "image";
       link.href = src;
-      document.head.appendChild(link);,
-}
-    });,
-}
+      document.head.appendChild(link)}
+    })}
     // comment;
 preloadFonts.forEach(href = > {";
-      const link = document.createElement("link");,
-}
+      const link = document.createElement("link")}
       link.rel = "preload";
       link.as = "style";
       link.href = href;
-      document.head.appendChild(link);,
-}
-    });,
-}
+      document.head.appendChild(link)}
+    })}
     // comment;
 preloadScripts.forEach(src = > {";
-      const link = document.createElement("link");,
-}
+      const link = document.createElement("link")}
       link.rel = "preload";
       link.as = "script";
       link.href = src;
-      document.head.appendChild(link);,
-}
-    });,
-}
-  }, [preloadImages, preloadFonts, preloadScripts]);,
-}
+      document.head.appendChild(link)}
+    })}
+  }, [preloadImages, preloadFonts, preloadScripts])}
   return (;
 <Head>;
       <meta name = "viewport" content="width="device-width," initial-scale=1"  />";
@@ -55,7 +44,7 @@ preloadScripts.forEach(src = > {";
       <link rel="dns-prefetch" href="// comment;
       <link rel="preconnect" href="https: // comment;
       <link rel="preconnect" href="https:// comment;
-    </Head>,,;
+    </Head>,;
   )}
-;
+
 ""export default PerformanceOptimizer

@@ -5,7 +5,7 @@ export interface AdvancedInnovativeService2026 {};
   competitors?: string[];
   marketSize?: string;
   industryTrends?: string[]}
-;
+
 export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] = [// AI-Powered Cybersecurity & Threat Intelligence;
   {};
 },;

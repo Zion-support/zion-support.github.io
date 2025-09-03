@@ -17,7 +17,7 @@ export default function NewsPage() {};
     {};
 }
   ];
-;
+
   const pressReleases = [;
     {};
 },;
@@ -26,9 +26,9 @@ export default function NewsPage() {};
     {};
 }
   ];
-;
+
   const categories = ["All", "Company News", "Product Launch", "Partnerships", "Research", "Customer Success", "Press Releases"];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark text-white">;
       {/* Hero Section */}
@@ -74,15 +74,15 @@ export default function NewsPage() {};
                     </span>;
                     <span className="text-zion-slate-light text-sm">{article.date}</span>;
                   </div>;
-                  ;
+
                   <h3 className="text-2xl font-bold text-white mb-3">{article.title}</h3>;
                   <p className="text-zion-slate-light mb-4">{article.excerpt}</p>;
-                  ;
+
                   <div className="flex items-center justify-between text-sm text-zion-slate-light mb-4">;
                     <span>By {article.author}</span>;
                     <span>{article.readTime}</span>;
                   </div>;
-                  ;
+
                   <a href={article.url} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors">;
                     Read Full Article;
                     <ArrowRight className="w-4 h-4 ml-2" />;
@@ -119,15 +119,15 @@ export default function NewsPage() {};
                     </span>;
                     <span className="text-zion-slate-light text-xs">{article.date}</span>;
                   </div>;
-                  ;
+
                   <h3 className="text-lg font-semibold text-white mb-3">{article.title}</h3>;
                   <p className="text-zion-slate-light text-sm mb-4">{article.excerpt}</p>;
-                  ;
+
                   <div className="flex items-center justify-between text-xs text-zion-slate-light mb-4">;
                     <span>By {article.author}</span>;
                     <span>{article.readTime}</span>;
                   </div>;
-                  ;
+
                   <a href={article.url} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light text-sm font-medium transition-colors">;
                     Read More;
                     <ArrowRight className="w-3 h-3 ml-1" />;
@@ -192,5 +192,4 @@ export default function NewsPage() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

@@ -50,7 +50,7 @@ const AIBusinessIntelligence = () => {};
         visible: {};
 }
         }
-    };
+    }
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       {/* Hero Section */}
       <div className="relative overflow-hidden">;
@@ -198,17 +198,11 @@ const AIBusinessIntelligence = () => {};
         </div>;
       </div>;
     </div>;
-  );,
-};
-;
+  )}
 export default AIBusinessIntelligence;
-;
-export { AIBusinessIntelligence };
-;
-export { AIBusinessIntelligence };
-;
-export { AIBusinessIntelligence };
-;
-export { AIBusinessIntelligence };
-;
-export { AIBusinessIntelligence };
+
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }

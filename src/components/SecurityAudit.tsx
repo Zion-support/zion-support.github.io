@@ -11,8 +11,7 @@ export default function SecurityAudit() {};
       {};
 }
     ];
-    setIssues(auditIssues);,
-}, []);
+    setIssues(auditIssues)}, []);
 
   return (;
     <div className="space-y-4">;
@@ -27,5 +26,4 @@ export default function SecurityAudit() {};
         ))}
       </div>;
     </div>;
-  );,
-}
+  )}

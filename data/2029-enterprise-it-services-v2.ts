@@ -1,4 +1,4 @@
-export interface EnterpriseITService2029V2 {;
+export interface EnterpriseITService2029V2 {
   id: string;
   name: string;
   description: string;
@@ -32,12 +32,12 @@ export interface EnterpriseITService2029V2 {;
   partnership: string;
   funding: string;
   exit: string;
-  contact: {;
+  contact: {
     mobile: string;
     email: string;
     website: string;
 export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [;
-  {;
+  {
     id: "autonomous-devops-platform",;
     name: "Autonomous DevOps Platform",;
     description: "Fully autonomous DevOps platform that automatically manages infrastructure, deployments, monitoring, and optimization without human intervention, reducing operational overhead by 90%.",;
@@ -94,13 +94,12 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [;
     partnership: "Strategic enterprise partnerships",;
     funding: "Series B funding, $120M valuation",;
     exit: "IPO or enterprise acquisition",;
-    contact: {;
+    contact: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
-  {;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
+  {
     id: "quantum-cloud-infrastructure",;
     name: "Quantum Cloud Infrastructure",;
     description: "Next-generation quantum-enhanced cloud infrastructure that provides quantum computing capabilities, quantum-safe security, and unprecedented performance for enterprise applications.",;
@@ -157,13 +156,12 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [;
     partnership: "Strategic cloud partnerships",;
     funding: "Series C funding, $400M valuation",;
     exit: "IPO or cloud acquisition",;
-    contact: {;
+    contact: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
-  {;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
+  {
     id: "ai-powered-enterprise-security",;
     name: "AI-Powered Enterprise Security",;
     description: "Advanced AI-driven enterprise security platform that provides real-time threat detection, automated response, and predictive security analytics to protect against evolving cyber threats.",;
@@ -220,13 +218,12 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [;
     partnership: "Strategic security partnerships",;
     funding: "Series C funding, $250M valuation",;
     exit: "IPO or security acquisition",;
-    contact: {;
+    contact: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
-  {;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
+  {
     id: "autonomous-it-operations-center",;
     name: "Autonomous IT Operations Center",;
     description: "Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal performance.",;
@@ -283,7 +280,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [;
     partnership: "Strategic enterprise partnerships",;
     funding: "Series B funding, $180M valuation",;
     exit: "IPO or enterprise acquisition",;
-    contact: {;
+    contact: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;

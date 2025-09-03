@@ -22,20 +22,20 @@ interface UserExperienceOptimizerProps {};
         location: locations[Math.floor(Math.random() * locations.length)],`;
         sessionId: `session-${Math.floor(Math.random() * 1000)}`});
     );
-;
+
     setUserBehaviors(newBehaviors)}, []);
-;
+
   // Generate UX metrics;
-  ;
+
     setUxMetrics(metrics)}, []);
-;
+
   // Generate optimization suggestions;
-  ;
+
     setOptimizationSuggestions(suggestions)}, []);
   // Start UX analysis;
-  ;
+
     setAnalysisComplete(false);
-;
+
     // Simulate analysis process;
     setTimeout(() => {};
           return sum + (normalizedValue / metric.target) * 100}, 0) / uxMetrics.length;
@@ -73,7 +73,7 @@ interface UserExperienceOptimizerProps {};
     generateUserBehaviors,;
     generateUXMetrics,;
   ]);
-;
+
   // Get trend display;
 
     return ();
@@ -81,16 +81,13 @@ interface UserExperienceOptimizerProps {};
       >;
         {icons[trend as keyof typeof icons]}"        <span className="text-sm font-medium">+{change.toFixed(1)}</span>;
       </div>;
-    )};
-;
+    )}
   // Get impact color;
-  ;
-    return colors[impact as keyof typeof colors] || colors.low};
-;
+
+    return colors[impact as keyof typeof colors] || colors.low}
   // Get effort color;
-  ;
-    return colors[effort as keyof typeof colors] || colors.low};
-;
+
+    return colors[effort as keyof typeof colors] || colors.low}
   // Filter behaviors by timeframe;
 
     return userBehaviors.filter();
@@ -251,7 +248,7 @@ interface UserExperienceOptimizerProps {};
                             </motion.div>) ) }
                         </div>;
                       </div>) }
-;
+
                     {/* User Behaviors View */}
                     {};
                             onClick={() => setShowAdvanced(!showAdvanced)}";
@@ -294,7 +291,7 @@ interface UserExperienceOptimizerProps {};
                             ))}
                         </div>;
                       </div>) }
-;
+
                     {/* Optimization Suggestions View */}
                     {};
                                         {suggestion.impact} impact;
@@ -346,7 +343,7 @@ interface UserExperienceOptimizerProps {};
                             ))}
                         </div>;
                       </div>) }
-;
+
                     {/* Action Buttons */}";
                     <div className="flex items-center justify-center space-x-4 pt-6">";
                       <button className="flex items-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">";

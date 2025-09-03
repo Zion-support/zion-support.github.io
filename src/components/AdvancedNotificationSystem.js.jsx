@@ -17,8 +17,7 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
     {};
             { label: 'Deploy Now', action: () => // console.log('Deploy'), variant: 'primary' },;
             { label: 'Schedule', action: () => // console.log('Schedule'), variant: 'secondary' }
-        ];,
-}
+        ]}
 ];
 export function AdvancedNotificationSystem() {};
   return null;
@@ -152,7 +151,7 @@ export function AdvancedNotificationSystem() {};
                       <p className="text-sm text-zion-slate-light mb-3 line-clamp-2">;
                         {notification.message}
                       </p>;
-                      ;
+
                       {/* Actions */}";
                       {};
                                 'bg-red-500 text-white hover:bg-red-600'}`}>;
@@ -161,7 +160,7 @@ export function AdvancedNotificationSystem() {};
                         </div>) }
                     </div>;
                   </div>;
-                  ;
+
                   {/* Notification Actions */}";
                   <div className="flex items-center justify-between mt-3 pt-3 border-t border-zion-slate-light/20">";
                     <div className="flex items-center gap-2">";

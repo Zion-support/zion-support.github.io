@@ -8,15 +8,14 @@ import React from "react";
   canonical = &apos;https: // comment;
   keywords = &apos;AI, cybersecurity, cloud, devops, consulting, Zion Tech Group&apos}) {};
   return (&apos}
-;
+
     <Helmet>;
       <title>{title}</title>";
       <meta name="&apos;description&apos;" content="{description}"  />&apos;";
       <meta name="&apos;keywords&apos;" content="{keywords}"  />&apos;";
       <link rel="&apos;canonical&apos;" href="{canonical}"  />&apos;
     </Helmet>;
-  );,
-}
+  )}
 );
 export default SEO;
   keywords = "AI, cybersecurity, cloud, devops, consulting, Zion Tech Group"}) {};

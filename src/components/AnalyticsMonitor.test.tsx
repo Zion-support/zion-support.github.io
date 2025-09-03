@@ -9,7 +9,5 @@ describe(&apos;AnalyticsMonitor&apos, () => {};
 }
     // comment;
     render(<AnalyticsMonitor / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

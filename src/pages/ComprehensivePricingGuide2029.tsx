@@ -12,7 +12,7 @@ export default function ComprehensivePricingGuide2029(...args: unknown[]): unkno
     {};
 }
   ];
-;
+
   const serviceCategories = [;
     {};
 },;
@@ -37,14 +37,14 @@ export default function ComprehensivePricingGuide2029(...args: unknown[]): unkno
     {};
 }
   ];
-;
+
   const getDiscountMultiplier = () => billingCycle === 'yearly' ? 0.83 : 1;
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div>Broken JSX</div>
       />;
-      ;
+
       {/* Hero Section */}
       <div className="relative overflow-hidden">;
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">;
@@ -65,8 +65,7 @@ export default function ComprehensivePricingGuide2029(...args: unknown[]): unkno
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}``;
                 className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${}
 '`;
-                  billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-gray-600'``;,
-}`}
+                  billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-gray-600'``}`}
               >`;
                 <div>Broken JSX</div>
                 />'`;
@@ -243,20 +242,17 @@ export default function ComprehensivePricingGuide2029(...args: unknown[]): unkno
 ";
 "";
               question: "Do you offer volume discounts for enterprise customers?","";
-              answer: "Absolutely! Enterprise customers with multiple service subscriptions receive significant volume discounts. Contact our sales team for custom enterprise pricing.";,
-},;
+              answer: "Absolutely! Enterprise customers with multiple service subscriptions receive significant volume discounts. Contact our sales team for custom enterprise pricing."},;
             {}
 '";
 '"'";
               question: "What's included in the support packages?","";
-              answer: "Starter plans include email support, Professional plans include priority email support, and Enterprise plans include 24/7 phone and email support with dedicated account management.";,
-},;
+              answer: "Starter plans include email support, Professional plans include priority email support, and Enterprise plans include 24/7 phone and email support with dedicated account management."},;
             {}
 ";
 "";
               question: "Can I cancel or change my plan at any time?","";
-              answer: "Yes, you can upgrade, downgrade, or cancel your plan at any time. Changes take effect at the start of your next billing cycle.";,
-},;
+              answer: "Yes, you can upgrade, downgrade, or cancel your plan at any time. Changes take effect at the start of your next billing cycle."},;
             {}
 ";
 "";
@@ -298,15 +294,10 @@ export default function ComprehensivePricingGuide2029(...args: unknown[]): unkno
         </div>;
       </div>;
     </div>;
-  );,
-}
-;
-export { ComprehensivePricingGuide2029 };
-;
-export { ComprehensivePricingGuide2029 };
-;
-export { ComprehensivePricingGuide2029 };
-;
-export { ComprehensivePricingGuide2029 };
-;
-export { ComprehensivePricingGuide2029 };
+  )}
+
+export { ComprehensivePricingGuide2029 }
+export { ComprehensivePricingGuide2029 }
+export { ComprehensivePricingGuide2029 }
+export { ComprehensivePricingGuide2029 }
+export { ComprehensivePricingGuide2029 }

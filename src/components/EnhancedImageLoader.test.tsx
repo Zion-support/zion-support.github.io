@@ -9,7 +9,5 @@ describe(&apos;EnhancedImageLoader&apos, () => {};
 }
     // comment;
     render(<EnhancedImageLoader / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

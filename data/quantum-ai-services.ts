@@ -1,4 +1,4 @@
-export interface QuantumAIService {;
+export interface QuantumAIService {
   id: string;
   name: string;
   tagline: string;
@@ -25,7 +25,7 @@ export interface QuantumAIService {;
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -36,7 +36,7 @@ export interface QuantumAIService {;
   customers: number;
   rating: number;
 export const quantumAIServices: QuantumAIService[] = [;
-  {;
+  {
     id: "quantum-ai-brain-computer-interface",;
     name: "Quantum AI Brain-Computer Interface",;
     tagline: "Revolutionary quantum-enhanced neural interface technology",;
@@ -74,20 +74,18 @@ export const quantumAIServices: QuantumAIService[] = [;
     marketSize: "$1.5B BCI market",;
     growthRate: "300% annual growth",;
     variant: "quantum-ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI neural interface with real-time processing, secure quantum encryption, and comprehensive research tools. Includes mobile monitoring and cloud quantum processing.",;
     launchDate: "2024-01-15",;
     customers: 150,;
     rating: 5.0,;
-    reviews: 75;,;,
-},;
-  {;
+    reviews: 75},;
+  {
     id: "quantum-ai-cognitive-enhancement",;
     name: "Quantum AI Cognitive Enhancement Platform",;
     tagline: "Supercharge human intelligence with quantum AI technology",;
@@ -125,20 +123,18 @@ export const quantumAIServices: QuantumAIService[] = [;
     marketSize: "$2.1B cognitive enhancement market",;
     growthRate: "400% annual growth",;
     variant: "quantum-ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete quantum AI cognitive enhancement platform with personalized training, real-time monitoring, and proven results. Includes mobile app and comprehensive analytics.",;
     launchDate: "2024-02-01",;
     customers: 800,;
     rating: 4.9,;
-    reviews: 400;,;,
-},;
-  {;
+    reviews: 400},;
+  {
     id: "quantum-blockchain-security-platform",;
     name: "Quantum Blockchain Security Platform",;
     tagline: "Unbreakable blockchain security with quantum cryptography",;
@@ -176,20 +172,18 @@ export const quantumAIServices: QuantumAIService[] = [;
     marketSize: "$3.2B blockchain security market",;
     growthRate: "350% annual growth",;
     variant: "quantum-ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete quantum blockchain security platform with quantum-resistant protocols, real-time monitoring, and comprehensive protection. Includes mobile app and API access.",;
     launchDate: "2024-01-20",;
     customers: 450,;
     rating: 5.0,;
-    reviews: 225;,;,
-},;
-  {;
+    reviews: 225},;
+  {
     id: "quantum-cybersecurity-suite",;
     name: "Quantum Cybersecurity Suite",;
     tagline: "Next-generation quantum-secured cybersecurity platform",;
@@ -227,20 +221,18 @@ export const quantumAIServices: QuantumAIService[] = [;
     marketSize: "$150B cybersecurity market",;
     growthRate: "300% annual growth",;
     variant: "quantum-ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete quantum cybersecurity platform with quantum-resistant protocols, AI threat detection, and comprehensive protection. Includes mobile management and enterprise integrations.",;
     launchDate: "2024-02-05",;
     customers: 300,;
     rating: 5.0,;
-    reviews: 150;,;,
-},;
-  {;
+    reviews: 150},;
+  {
     id: "quantum-energy-optimization",;
     name: "Quantum Energy Optimization Platform",;
     tagline: "Revolutionary energy optimization using quantum AI algorithms",;
@@ -278,20 +270,18 @@ export const quantumAIServices: QuantumAIService[] = [;
     marketSize: "$8.5B energy management market",;
     growthRate: "280% annual growth",;
     variant: "quantum-ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete quantum energy optimization platform with real-time monitoring, predictive analytics, and IoT integration. Includes mobile app and comprehensive reporting.",;
     launchDate: "2024-01-25",;
     customers: 650,;
     rating: 4.9,;
-    reviews: 325;,;,
-},;
-  {;
+    reviews: 325},;
+  {
     id: "quantum-financial-trading-platform",;
     name: "Quantum Financial Trading Platform",;
     tagline: "Revolutionary financial trading with quantum AI algorithms",;
@@ -329,20 +319,18 @@ export const quantumAIServices: QuantumAIService[] = [;
     marketSize: "$12B algorithmic trading market",;
     growthRate: "320% annual growth",;
     variant: "quantum-ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete quantum trading platform with AI algorithms, risk management, and comprehensive analytics. Includes mobile app and broker integrations.",;
     launchDate: "2024-02-10",;
     customers: 200,;
     rating: 5.0,;
-    reviews: 100;,;,
-},;
-  {;
+    reviews: 100},;
+  {
     id: "quantum-internet-security-platform",;
     name: "Quantum Internet Security Platform",;
     tagline: "Next-generation quantum-secured internet infrastructure",;
@@ -380,20 +368,18 @@ export const quantumAIServices: QuantumAIService[] = [;
     marketSize: "$150B cybersecurity market",;
     growthRate: "300% annual growth",;
     variant: "quantum-ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete quantum internet security platform with quantum key distribution, real-time monitoring, and comprehensive protection. Includes network integration and enterprise support.",;
     launchDate: "2024-01-30",;
     customers: 50,;
     rating: 5.0,;
-    reviews: 25;,;,
-},;
-  {;
+    reviews: 25},;
+  {
     id: "quantum-iot-platform",;
     name: "Quantum IoT Security & Management Platform",;
     tagline: "Secure and intelligent IoT management with quantum technology",;
@@ -431,20 +417,18 @@ export const quantumAIServices: QuantumAIService[] = [;
     marketSize: "$18B IoT platform market",;
     growthRate: "250% annual growth",;
     variant: "quantum-ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete quantum IoT platform with secure communications, AI management, and comprehensive monitoring. Includes mobile app and device integrations.",;
     launchDate: "2024-02-15",;
     customers: 750,;
     rating: 4.9,;
-    reviews: 375;,;,
-},;
-  {;
+    reviews: 375},;
+  {
     id: "quantum-logistics-optimization",;
     name: "Quantum Logistics Optimization Platform",;
     tagline: "Revolutionary supply chain optimization using quantum AI",;
@@ -482,20 +466,18 @@ export const quantumAIServices: QuantumAIService[] = [;
     marketSize: "$15B logistics optimization market",;
     growthRate: "220% annual growth",;
     variant: "quantum-ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete quantum logistics platform with AI optimization, real-time monitoring, and comprehensive analytics. Includes mobile app and enterprise integrations.",;
     launchDate: "2024-02-20",;
     customers: 400,;
     rating: 4.9,;
-    reviews: 200;,;,
-},;
-  {;
+    reviews: 200},;
+  {
     id: "quantum-metaverse-platform",;
     name: "Quantum Metaverse Development Platform",;
     tagline: "Build the future of digital reality with quantum technology",;
@@ -533,20 +515,18 @@ export const quantumAIServices: QuantumAIService[] = [;
     marketSize: "$800B metaverse market",;
     growthRate: "400% annual growth",;
     variant: "quantum-ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete quantum metaverse platform with AI generation, advanced graphics, and comprehensive tools. Includes mobile app and development APIs.",;
     launchDate: "2024-02-25",;
     customers: 100,;
     rating: 5.0,;
-    reviews: 50;,;,
-},;
-  {;
+    reviews: 50},;
+  {
     id: "quantum-robotics-platform",;
     name: "Quantum Robotics & Automation Platform",;
     tagline: "Revolutionary robotics powered by quantum AI intelligence",;
@@ -584,12 +564,11 @@ export const quantumAIServices: QuantumAIService[] = [;
     marketSize: "$25B robotics market",;
     growthRate: "350% annual growth",;
     variant: "quantum-ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete quantum robotics platform with AI decision making, advanced control, and comprehensive management. Includes mobile app and hardware integration.",;
     launchDate: "2024-03-01',;

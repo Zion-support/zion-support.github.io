@@ -1,6 +1,6 @@
 import React from 'react';''';
 import { SEO } from '../components/SEO';
-;
+
 const Pricing = () => {}
   return <div>Component</div>;
 };
@@ -56,7 +56,7 @@ const Pricing = () => {}
       cta: 'Contact Sales',';
       link: '/contact'}
   ];
-;
+
   return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       <div>Broken JSX</div>
@@ -137,17 +137,12 @@ const Pricing = () => {}
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
+
 export default Pricing;
-;
-export { Pricing };
-;
-export { Pricing };
-;
-export { Pricing };
-;
-export { Pricing };
-;
-export { Pricing };
+
+export { Pricing }
+export { Pricing }
+export { Pricing }
+export { Pricing }
+export { Pricing }

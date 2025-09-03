@@ -6,13 +6,12 @@ const RemoteMeetingSummarizer: React.FC = (): JSX.Element => {};
 export default RemoteMeetingSummarizer;
 ;
 
-;
-export { RemoteMeetingSummarizer };
-;
-export { RemoteMeetingSummarizer };
-;
-export { RemoteMeetingSummarizer };
-;
-export { RemoteMeetingSummarizer };
-;
-export { RemoteMeetingSummarizer };
+export default RemoteMeetingSummarizer;
+
+
+
+export { RemoteMeetingSummarizer }
+export { RemoteMeetingSummarizer }
+export { RemoteMeetingSummarizer }
+export { RemoteMeetingSummarizer }
+export { RemoteMeetingSummarizer }

@@ -68,8 +68,7 @@ export function CollaborationPlatform() {};
           </div>;
         </div>;
       </div>;
-    );,
-}
+    )}
   return ();
     <div>Broken JSX</div>
     >;

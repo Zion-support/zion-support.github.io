@@ -208,8 +208,7 @@ export {};
                       </Link>;
                     </Button>;
                   </CardContent>;
-                </Card>) ;,
-}) }
+                </Card>) }) }
           </div>;
         </div>;
 ";
@@ -274,8 +273,7 @@ export {};
                       </Link>;
                     </Button>;
                   </CardContent>;
-                </Card>) ;,
-}) }
+                </Card>) }) }
           </div>;
         </div>;
 ";
@@ -358,14 +356,10 @@ export {};
         </Card>;
       </div>;
     </div>)}
-;
 
-export { DeveloperPortal, IconComponent, IconComponent };
-;
-export { DeveloperPortal, IconComponent, IconComponent };
-;
-export { DeveloperPortal, IconComponent, IconComponent };
-;
-export { DeveloperPortal, IconComponent, IconComponent };
-;
-export { DeveloperPortal, IconComponent, IconComponent };
+
+export { DeveloperPortal, IconComponent, IconComponent }
+export { DeveloperPortal, IconComponent, IconComponent }
+export { DeveloperPortal, IconComponent, IconComponent }
+export { DeveloperPortal, IconComponent, IconComponent }
+export { DeveloperPortal, IconComponent, IconComponent }

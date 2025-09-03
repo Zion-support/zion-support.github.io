@@ -1,18 +1,17 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
 console.log('🎯 Targeted Syntax Fixer');
 console.log('========================');
 
-class TargetedSyntaxFixer {;
-  constructor() {;
+class TargetedSyntaxFixer {
+  constructor() {
     this.fixedFiles = [];
-    this.errors = [];,
-}
-;
-  async fixFile(filePath) {;
-    try {;
+    this.errors = []}
+
+  async fixFile(filePath) {
+    try {
       const content = fs.readFileSync(filePath, 'utf8');
       let fixedContent = content;
       let hasChanges = false;
@@ -24,72 +23,63 @@ class TargetedSyntaxFixer {;
       let inFunction = false;
       let functionStartLine = -1;
 
-      for (let i = 0; i < lines.length; i++) {;
+      for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
         const trimmedLine = line.trim();
 
         // Track function declarations;
-        if (trimmedLine.includes('function ') || trimmedLine.includes('=> {')) {;
+        if (trimmedLine.includes('function ') || trimmedLine.includes('=> {')) {
           inFunction = true;
-          functionStartLine = i;,
-}
-;
+          functionStartLine = i}
+
         // Count braces;
         const openBraces = (line.match(/\{/g) || []).length;
         const closeBraces = (line.match(/\}/g) || []).length;
         braceCount += openBraces - closeBraces;
 
         // Check for extra closing braces at the end of functions;
-        if (inFunction && braceCount === 0 && trimmedLine === '}') {;
+        if (inFunction && braceCount === 0 && trimmedLine === '}') {
           // Check if this is the last line or if next line is export;
           const nextLine = i + 1 < lines.length ? lines[i + 1].trim() : '';
-          if (nextLine === '' || nextLine.startsWith('export') || nextLine.startsWith('}')) {;
+          if (nextLine === '' || nextLine.startsWith('export') || nextLine.startsWith('}')) {
             // This might be an extra brace, skip it;
             console.log(`Removing extra brace at line ${i + 1} in ${filePath}`);
             hasChanges = true;
-            continue;,
-}
+            continue}
         }
-;
+
         // Fix corrupted meta descriptions;
-        if (line.includes('content="The page you"re looking for doesn"t exist."')) {;
+        if (line.includes('content="The page you"re looking for doesn"t exist."')) {
           fixedLines.push(line.replace('content="The page you"re looking for doesn"t exist."', 'content="The page you\'re looking for doesn\'t exist."'));
           hasChanges = true;
-          continue;,
-}
-;
+          continue}
+
         // Fix corrupted JSX closing tags;
-        if (line.includes('  />') && line.includes('  />')) {;
+        if (line.includes('  />') && line.includes('  />')) {
           fixedLines.push(line.replace(/ {2}\/>/g, ' />'));
           hasChanges = true;
-          continue;,
-}
-;
-        fixedLines.push(line);,
-}
-;
-      if (hasChanges) {;
-        fixedContent = fixedLines.join('\n');,
-}
-;
+          continue}
+
+        fixedLines.push(line)}
+
+      if (hasChanges) {
+        fixedContent = fixedLines.join('\n')}
+
       // Additional specific fixes;
       fixedContent = this.applySpecificFixes(fixedContent, filePath);
 
-      if (hasChanges || fixedContent !== content) {;
+      if (hasChanges || fixedContent !== content) {
         fs.writeFileSync(filePath, fixedContent, 'utf8');
         this.fixedFiles.push(filePath);
         console.log(`✅ Fixed: ${filePath}`);
-        return true;,
-}
-      return false;,
-} catch (error) {;
+        return true}
+      return false} catch (error) {
       this.errors.push({ file: filePath, error: error.message });
       console.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false;,
-}
+      return false}
   }
-;
-  applySpecificFixes(content, filePath) {;
+
+  applySpecificFixes(content, filePath) {
     // Fix specific patterns;
     let fixedContent = content;
 
@@ -103,15 +93,13 @@ class TargetedSyntaxFixer {;
     fixedContent = fixedContent.replace(/<(\w+)\s+([^>]*)\s*\/>/g, '<$1 $2 />');
 
     // Fix missing imports;
-    if (filePath.endsWith('.tsx') && fixedContent.includes('<Head>') && !fixedContent.includes('import Head')) {;
-      fixedContent = 'import Head from "next/head"\n' + fixedContent;,
-}
-;
+    if (filePath.endsWith('.tsx') && fixedContent.includes('<Head>') && !fixedContent.includes('import Head')) {
+      fixedContent = 'import Head from "next/head"\n' + fixedContent}
+
     // Fix missing React import;
-    if (filePath.endsWith('.tsx') && fixedContent.includes('export default function') && !fixedContent.includes('import React')) {;
-      fixedContent = 'import React from "react"\n' + fixedContent;,
-}
-;
+    if (filePath.endsWith('.tsx') && fixedContent.includes('export default function') && !fixedContent.includes('import React')) {
+      fixedContent = 'import React from "react"\n' + fixedContent}
+
     // Fix corrupted function declarations;
     fixedContent = fixedContent.replace(/export default function\s+(\w+)\s*\(\s*([^)]*)\s*\)\s*:\s*(\w+)\s*\{/g, 'export default function $1($2): $3 {');
 
@@ -162,77 +150,67 @@ class TargetedSyntaxFixer {;
     fixedContent = fixedContent.replace(/\\'/g, "'");
     fixedContent = fixedContent.replace(/\\\\/g, '\\');
 
-    return fixedContent;,
-}
-;
-  async fixDirectory(dirPath) {;
+    return fixedContent}
+
+  async fixDirectory(dirPath) {
     const files = fs.readdirSync(dirPath, { withFileTypes: true });
-    ;
-    for (const file of files) {;
+
+    for (const file of files) {
       const fullPath = path.join(dirPath, file.name);
-      ;
-      if (file.isDirectory()) {;
-        await this.fixDirectory(fullPath);,
-} else if (file.isFile() && this.shouldFixFile(fullPath)) {;
-        await this.fixFile(fullPath);,
-}
+
+      if (file.isDirectory()) {
+        await this.fixDirectory(fullPath)} else if (file.isFile() && this.shouldFixFile(fullPath)) {
+        await this.fixFile(fullPath)}
     }
   }
-;
-  shouldFixFile(filePath) {;
+
+  shouldFixFile(filePath) {
     const ext = path.extname(filePath);
     return ['.tsx', '.jsx', '.ts', '.js'].includes(ext) && ;
            !filePath.includes('node_modules') &&;
            !filePath.includes('.next') &&;
-           !filePath.includes('dist');,
-}
-;
-  async run() {;
+           !filePath.includes('dist')}
+
+  async run() {
     console.log('🔍 Starting targeted syntax fixing...');
-    ;
+
     const directories = [;
       'pages',;
       'components',;
       'src';
     ];
 
-    for (const dir of directories) {;
-      if (fs.existsSync(dir)) {;
+    for (const dir of directories) {
+      if (fs.existsSync(dir)) {
         console.log(`📁 Processing directory: ${dir}`);
-        await this.fixDirectory(dir);,
-}
+        await this.fixDirectory(dir)}
     }
-;
+
     console.log('\n📊 Summary:');
     console.log(`✅ Files fixed: ${this.fixedFiles.length}`);
     console.log(`❌ Errors: ${this.errors.length}`);
-    ;
-    if (this.fixedFiles.length > 0) {;
+
+    if (this.fixedFiles.length > 0) {
       console.log('\n📝 Fixed files:');
-      this.fixedFiles.forEach(file => console.log(`  - ${file}`));,
-}
-    ;
-    if (this.errors.length > 0) {;
+      this.fixedFiles.forEach(file => console.log(`  - ${file}`))}
+    if (this.errors.length > 0) {
       console.log('\n🚨 Errors:');
-      this.errors.forEach(({ file, error }) => console.log(`  - ${file}: ${error}`));,
-}
-;
+      this.errors.forEach(({ file, error }) => console.log(`  - ${file}: ${error}`))}
+
     // Save report;
-    const report = {;
+    const report = {
       timestamp: new Date().toISOString(),;
       fixedFiles: this.fixedFiles,;
       errors: this.errors,;
-      summary: {;
+      summary: {
         totalFixed: this.fixedFiles.length,;
-        totalErrors: this.errors.length;,
-}
+        totalErrors: this.errors.length}
     }
-;
+
     fs.writeFileSync('targeted-syntax-fix-report.json', JSON.stringify(report, null, 2));
-    console.log('\n📄 Report saved to: targeted-syntax-fix-report.json');,
+    console.log('\n📄 Report saved to: targeted-syntax-fix-report.json')}
 }
-}
-;
+
 // Run the fixer;
 const fixer = new TargetedSyntaxFixer();
 fixer.run().catch(console.error)

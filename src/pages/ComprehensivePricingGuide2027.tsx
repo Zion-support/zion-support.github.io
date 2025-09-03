@@ -36,7 +36,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
     {};
 }
   ];
-;
+
   const marketComparison = [;
     {};
 },;
@@ -47,7 +47,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
     {};
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">;
       {/* Futuristic Animated Background */}
@@ -156,7 +156,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
               {};
                     </div>) }
-;
+
                   <div className="text-center mb-8">;
                     <h3 className="text-2xl font - bold text-white mb-4">{pkg.name}</h3>;
                     <div className="mb-4">;
@@ -293,18 +293,12 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
         </section>;
       </div>;
     </div>;
-  );,
-};
-;
+  )}
 export default ComprehensivePricingGuide2027;
-;
 
-export { ComprehensivePricingGuide2027 };
-;
-export { ComprehensivePricingGuide2027 };
-;
-export { ComprehensivePricingGuide2027 };
-;
-export { ComprehensivePricingGuide2027 };
-;
-export { ComprehensivePricingGuide2027 };
+
+export { ComprehensivePricingGuide2027 }
+export { ComprehensivePricingGuide2027 }
+export { ComprehensivePricingGuide2027 }
+export { ComprehensivePricingGuide2027 }
+export { ComprehensivePricingGuide2027 }

@@ -42,14 +42,10 @@ export default function Page() {};
       <div ref={loader} className="h-1"/>;
       {isFetchingNextPage && <p className="text-center mt-4">Loading more...</p>}
     </main>)}
-;
 
-export { LIMIT, SearchResultsPage };
-;
-export { LIMIT, SearchResultsPage };
-;
-export { LIMIT, SearchResultsPage };
-;
-export { LIMIT, SearchResultsPage };
-;
-export { LIMIT, SearchResultsPage };
+
+export { LIMIT, SearchResultsPage }
+export { LIMIT, SearchResultsPage }
+export { LIMIT, SearchResultsPage }
+export { LIMIT, SearchResultsPage }
+export { LIMIT, SearchResultsPage }

@@ -12,7 +12,7 @@ export: function MobileNavigation() {};
   const toggleMenu = () => {};
 };
     setIsOpen(!isOpen)}
-;
+
   return (";
     <div: className="lg: hidden">",";";";
       <Button: variant="ghost",",",">;
@@ -29,7 +29,7 @@ export: function MobileNavigation() {};
 }
 ;
     setIsOpen(!isOpen)}
-;
+
   return (";
     <div className = "lg: hidden">",;
       <Button variant="ghost",>;
@@ -42,9 +42,9 @@ export: function MobileNavigation() {};
 ;
       </Button> {};
                 className="flex items-center space-x-3 px-3 py-2 rounded-md hover: bg-accent transition-colors","                onClick="{()" => setIsOpen(false)}
-;
+
               > {item.icon}
-;
+
                 <span>{item.name}</span>;
               </Link>;
 ";
@@ -64,13 +64,12 @@ export: function MobileNavigation() {};
                 <span>{item.name}</span>;
               </Link>;
             ))}
-;
+
           </div>;
       )}
-;
+
     </div>;
-  );,
-}
+  )}
 }
 ;";
 

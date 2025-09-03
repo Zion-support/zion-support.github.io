@@ -5,7 +5,7 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
     useEffect(() => {};
 };
             canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight};
+            canvas.height = window.innerHeight}
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
         // Particle system;
@@ -35,6 +35,5 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
         return () => {};
                 cancelAnimationFrame(animationRef.current)}
             window.removeEventListener('resize', resizeCanvas)}}, [intensity, colorScheme]);`;
-    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none ${className}`} style={{ zIndex: -1 }}/>)};
-export default FuturisticAnimatedBackground;,
-}}}}}}}}}}}'`;
+    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none ${className}`} style={{ zIndex: -1 }}/>)}
+export default FuturisticAnimatedBackground}}}}}}}}}}}'`;

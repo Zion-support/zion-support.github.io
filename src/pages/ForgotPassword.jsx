@@ -23,7 +23,7 @@ export {};
         // Simulate API call;
         setTimeout ( () => {}
             setIsSubmitted (true) ;
-            setIsLoading (false) }, 2000) };
+            setIsLoading (false) }, 2000) }
     if (isSubmitted) {}
 ";
         return (<>"";
@@ -120,16 +120,12 @@ export {};
           </div>;
         </div>;
       </div>;
-      ;
-    </>)}
-;
 
-export { ForgotPassword };
-;
-export { ForgotPassword };
-;
-export { ForgotPassword };
-;
-export { ForgotPassword };
-;
-export { ForgotPassword };
+    </>)}
+
+
+export { ForgotPassword }
+export { ForgotPassword }
+export { ForgotPassword }
+export { ForgotPassword }
+export { ForgotPassword }

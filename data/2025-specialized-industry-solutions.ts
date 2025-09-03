@@ -1,4 +1,4 @@
-export interface SpecializedIndustrySolution {;
+export interface SpecializedIndustrySolution {
   id: string;
   name: string;
   tagline: string;
@@ -25,7 +25,7 @@ export interface SpecializedIndustrySolution {;
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -37,7 +37,7 @@ export interface SpecializedIndustrySolution {;
   rating: number;
 export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [;
   // MANUFACTURING & INDUSTRIAL SOLUTIONS;
-  {;
+  {
     id: "autonomous-manufacturing-optimizer",;
     name: "Autonomous Manufacturing Optimizer",;
     tagline: "AI-powered manufacturing with zero downtime and maximum efficiency",;
@@ -75,21 +75,19 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     competitors["Traditional MES systems", "Manual optimization"],;
     marketSize: "$200B manufacturing software market",;
     growthRate: "180% annual growth",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "System integration, IoT deployment, AI model training, and team training",;
     launchDate: "2025-01-20",;
     customers: 28,;
     rating: 4.8,;
-    reviews: 67;,;,
-},;
+    reviews: 67},;
   // HEALTHCARE & MEDICAL SOLUTIONS;
-  {;
+  {
     id: "ai-powered-clinical-decision-support",;
     name: "AI-Powered Clinical Decision Support",;
     tagline: "Revolutionary clinical decision support with 99.5% accuracy",;
@@ -127,21 +125,19 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     competitors["IBM Watson Health", "Google Health AI", "Traditional CDS systems"],;
     marketSize: "$45B clinical decision support market",;
     growthRate: "220% annual growth",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "EHR integration, AI model training, regulatory compliance, and clinical validation",;
     launchDate: "2025-01-25",;
     customers: 34,;
     rating: 4.9,;
-    reviews: 89;,;,
-},;
+    reviews: 89},;
   // FINANCIAL SERVICES SOLUTIONS;
-  {;
+  {
     id: "autonomous-financial-risk-manager",;
     name: "Autonomous Financial Risk Manager",;
     tagline: "AI-powered financial risk management with real-time monitoring",;
@@ -179,21 +175,19 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     competitors["Traditional risk management", "Manual monitoring systems"],;
     marketSize: "$35B risk management market",;
     growthRate: "250% annual growth",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "System integration, AI model deployment, regulatory compliance, and team training",;
     launchDate: "2025-02-01",;
     customers: 19,;
     rating: 4.8,;
-    reviews: 45;,;,
-},;
+    reviews: 45},;
   // RETAIL & E-COMMERCE SOLUTIONS;
-  {;
+  {
     id: "ai-powered-retail-optimization-platform",;
     name: "AI-Powered Retail Optimization Platform",;
     tagline: "Intelligent retail optimization with personalized customer experiences",;
@@ -231,21 +225,19 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     competitors["Traditional retail systems", "Basic analytics platforms"],;
     marketSize: "$25B retail technology market",;
     growthRate: "180% annual growth",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "System integration, AI model training, data migration, and team training",;
     launchDate: "2025-01-30",;
     customers: 56,;
     rating: 4.7,;
-    reviews: 134;,;,
-},;
+    reviews: 134},;
   // EDUCATION & LEARNING SOLUTIONS;
-  {;
+  {
     id: "ai-powered-adaptive-learning-platform",;
     name: "AI-Powered Adaptive Learning Platform",;
     tagline: "Personalized learning experiences with AI-driven adaptation",;
@@ -283,21 +275,19 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     competitors["Traditional LMS", "Basic learning platforms"],;
     marketSize: "$15B adaptive learning market",;
     growthRate: "200% annual growth",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "LMS integration, AI model training, content migration, and educator training",;
     launchDate: "2025-02-05",;
     customers: 23,;
     rating: 4.6,;
-    reviews: 56;,;,
-},;
+    reviews: 56},;
   // TRANSPORTATION & LOGISTICS SOLUTIONS;
-  {;
+  {
     id: "autonomous-logistics-optimizer",;
     name: "Autonomous Logistics Optimizer",;
     tagline: "AI-powered logistics with maximum efficiency and cost optimization",;
@@ -335,21 +325,19 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     competitors["Traditional TMS", "Manual optimization"],;
     marketSize: "$30B logistics technology market",;
     growthRate: "160% annual growth",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "System integration, IoT deployment, AI model training, and team training",;
     launchDate: "2025-02-10",;
     customers: 31,;
     rating: 4.7,;
-    reviews: 78;,;,
-},;
+    reviews: 78},;
   // ENERGY & UTILITIES SOLUTIONS;
-  {;
+  {
     id: "ai-powered-energy-optimization-platform",;
     name: "AI-Powered Energy Optimization Platform",;
     tagline: "Intelligent energy management with maximum efficiency and sustainability",;
@@ -387,12 +375,11 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     competitors["Traditional energy management", "Basic monitoring systems"],;
     marketSize: "$20B energy management market",;
     growthRate: "180% annual growth",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "System integration, IoT deployment, AI model training, and team training",;
     launchDate: "2025-02-15",;
@@ -407,6 +394,6 @@ export const industryCategories2025: string[] = Array.from(;
       .filter((v): v is string = > Boolean(v));
   );
 ).sort();
-export const getSolutionsByIndustry = (industry: string) => {;
+export const getSolutionsByIndustry = (industry: string) => {
   if (!industry || industry === "All") return specializedIndustrySolutions2025;
     .sort((a, b) => (b.rating || 0) - (a.rating || 0))}}}

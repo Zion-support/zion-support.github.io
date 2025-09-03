@@ -6,12 +6,12 @@ export default function Page() {};
 }
   { id: 'digital-transformation', label: 'Digital Transformation', icon: Zap },;
   { id: 'it-consulting', label: 'IT Consulting', icon: Gift },;
-  { id: 'industry-insights', label: 'Industry Insights', icon: Zap };
+  { id: 'industry-insights', label: 'Industry Insights', icon: Zap }
 ];
-;
+
   { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },;
   { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;
-  { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' };
+  { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' }
       // Reset form after successful submission;
       setTimeout(() => {};
 });
@@ -19,11 +19,9 @@ export default function Page() {};
 }
         setStatus('idle')}, 3000)} catch(error) {};
       setStatus('error');      // console.error('Newsletter subscription error:', error)}
-  };
-;
+  }
       setErrors(prev => ({ ...prev, interests: null }) ) }
-  };
-;
+  }
     setFormData(prev => ({ ...prev, [field]: value }) ) ;
 ;
     // Clear error when user starts typing;
@@ -94,7 +92,7 @@ export default function Page() {};
                   className={};
 }`}
                   whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }};
+                  whileTap={{ scale: 0.98 }}
                 >;'`;
                   <Icon className={`h-4 w-4 ${isSelected ? 'text-blue-600' : 'text-slate-500'}`}  />;"                  <span className="text-sm font-medium">{interest.label}</span>;
                 </motion.button>;
@@ -142,12 +140,12 @@ export default function Page() {};
         {/* Error Message */}
         {};
           </motion.div>;) }
-;
+
         {/* Privacy Notice */}";
         <p className="text-xs text-slate-500 dark:text-slate-400 text-center">;
           By subscribing, you agree to receive marketing emails from Zion Tech Group.;
           You can unsubscribe at any time.We respect your privacy and will never share your information.;
         </p>;
       </motion.form>;
-    </div>;) };
+    </div>;) }
 '"`;

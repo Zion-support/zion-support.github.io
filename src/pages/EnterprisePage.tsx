@@ -14,7 +14,7 @@ export function EnterprisePage() {};
     {};
 }
   ];
-;
+
   const enterpriseFeatures = [;
     {};
 },;
@@ -29,7 +29,7 @@ export function EnterprisePage() {};
     {};
 }
   ];
-;
+
   const industries = [;
     {};
 },;
@@ -44,7 +44,7 @@ export function EnterprisePage() {};
     {};
 }
   ];
-;
+
   const testimonials = [;
     {};
 },;
@@ -53,7 +53,7 @@ export function EnterprisePage() {};
     {};
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -67,7 +67,7 @@ export function EnterprisePage() {};
               Transform your organization with our comprehensive enterprise-grade technology solutions. ;
               Built for scale, security, and performance.;
             </p>;
-            ;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">;
               <div>Broken JSX</div>
                 className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">;
@@ -121,7 +121,7 @@ export function EnterprisePage() {};
                   <solution.icon className="w-12 h-12 text-zion-cyan" />;
                   <h3 className="text-2xl font-semibold text-white">{solution.title}</h3>;
                 </div>;
-                ;
+
                 <p className="text-zion-slate-light mb-6 leading-relaxed">;
                   {solution.description}
                 </p>;
@@ -207,7 +207,7 @@ export function EnterprisePage() {};
                   <industry.icon className="w-8 h-8 text-zion-cyan" />;
                   <h3 className="text-xl font-semibold text-white">{industry.name}</h3>;
                 </div>;
-                ;
+
                 <p className="text-zion-slate-light mb-4 leading-relaxed">;
                   {industry.description}
                 </p>;
@@ -248,11 +248,11 @@ export function EnterprisePage() {};
                     <div key={i} className="w-4 h-4 text-yellow-400 fill-current">★</div>;
                   ))}
                 </div>;
-                ;
+
                 <p className="text-zion-slate-light mb-4 leading-relaxed">;
                   "{testimonial.content}";
                 </p>;
-                ;
+
                 <div>;
                   <div className="font-semibold text-white">{testimonial.name}</div>;
                   <div className="text-sm text-zion-cyan">{testimonial.title}</div>;
@@ -286,7 +286,6 @@ export function EnterprisePage() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
+
 export default EnterprisePage;

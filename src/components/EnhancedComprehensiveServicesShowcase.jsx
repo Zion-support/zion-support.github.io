@@ -16,7 +16,7 @@ import {}
   Phone,'';
   Mail,''';
   MapPin} from 'lucide-react';
-;
+
 const EnhancedComprehensiveServicesShowcase = () => {}
   return <div>Component</div>;
 };
@@ -26,7 +26,7 @@ const EnhancedComprehensiveServicesShowcase = () => {}
   const [activeCategory, setActiveCategory] = useState('all');''';
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState(null);
-;
+
   // Transform services for the showcase;
   const transformedServices = [];
     ...innovativeServices2025.map(service => ({}
@@ -51,15 +51,14 @@ const EnhancedComprehensiveServicesShowcase = () => {}
       color: service.color || 'from-purple-600 to-indigo-700',';
       badge: service.badge || 'New'}));
   ];
-;
+
   const filteredServices = transformedServices.filter(service => {}
     const matchesSearch =;
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;,
-});
-;
+    return matchesCategory && matchesSearch});
+
   const serviceCategories = [];
     {}
 ';
@@ -142,11 +141,9 @@ const EnhancedComprehensiveServicesShowcase = () => {}
       count: transformedServices.filter(s => s.category.includes('Digital'));
         .length}
   ];
-;
+
   const handleServiceClick = service => {}
-    setSelectedService(service);,
-};
-;
+    setSelectedService(service)}
   const closeModal = () => {}
   return <div>Component</div>;
 };
@@ -220,8 +217,7 @@ const EnhancedComprehensiveServicesShowcase = () => {}
 '''`;
                   activeCategory === category.id'''`'`;
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'''`'`'`;
-                    : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'````;,
-}`}
+                    : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'````}`}
               >;
                 {category.name} ({category.count});
               </button>;
@@ -347,14 +343,10 @@ const EnhancedComprehensiveServicesShowcase = () => {}
       </section>;
 
 export default EnhancedComprehensiveServicesShowcase;
-;
 
-export { EnhancedComprehensiveServicesShowcase };
-;
-export { EnhancedComprehensiveServicesShowcase };
-;
-export { EnhancedComprehensiveServicesShowcase };
-;
-export { EnhancedComprehensiveServicesShowcase };
-;
-export { EnhancedComprehensiveServicesShowcase };
+
+export { EnhancedComprehensiveServicesShowcase }
+export { EnhancedComprehensiveServicesShowcase }
+export { EnhancedComprehensiveServicesShowcase }
+export { EnhancedComprehensiveServicesShowcase }
+export { EnhancedComprehensiveServicesShowcase }

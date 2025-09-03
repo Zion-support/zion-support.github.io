@@ -65,15 +65,13 @@ const InnovativeServicesShowcase = () => {};
 """""";
                   activeTab === tab.id"""""""";
                     ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white""""""""";
-                    : "bg-white/10 text-gray-300 hover:bg-white/20"""", ";,
-}"}
-;
+                    : "bg-white/10 text-gray-300 hover:bg-white/20"""", "}"}
+
               >;
-                {tab.name} ({tab.count});,
-}
+                {tab.name} ({tab.count})}
               </button>;
             ))}
-;
+
           </div>;
         </div>";
       </section>;
@@ -106,7 +104,7 @@ const InnovativeServicesShowcase = () => {};
                       {activeTab === "microsaas" && service.pricingModel}";
                       {activeTab === "it" && "Professional"}";
                       {activeTab === "ai" && service.pricingModel}
-;
+
                     </div>";
                   </div>;
                 </div>""";
@@ -146,7 +144,7 @@ const InnovativeServicesShowcase = () => {};
                   </div>;
               </div>,;
             ))}
-;
+
           </div>;
         </div>";
       </section>;
@@ -188,7 +186,7 @@ const InnovativeServicesShowcase = () => {};
                       <li key="{idx}" className="text-gray-300 flex items-center">"";
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>;
                         {feature}
-;
+
                       </li>";
                     ))}
                   </ul>""";
@@ -201,10 +199,10 @@ const InnovativeServicesShowcase = () => {};
                       <li key="{idx}" className="text-gray-300 flex items-center">"";
                         <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>;
                         {benefit}
-;
+
                       </li>;
                     ))}
-;
+
                   </ul>";
                 </div>;
 """;
@@ -239,7 +237,7 @@ const InnovativeServicesShowcase = () => {};
                             <span className="text-gray-300">ROI: </span>"";
                             <span className="text-white text-green-400">,;
                               {selectedService.roi}
-;
+
                             </span>;
                           </div>";
 </>";
@@ -260,7 +258,7 @@ const InnovativeServicesShowcase = () => {};
                             <span className="text-gray-300">SLA: </span>"";
                             <span className="text-white">,;
                               {selectedService.sla}
-;
+
                             </span>;
                           </div>";
 </>;
@@ -279,7 +277,7 @@ const InnovativeServicesShowcase = () => {};
                             <span className="text-gray-300">Market Price: </span>"";
                             <span className="text-white">,;
                               {selectedService.marketPrice}
-;
+
                             </span>;
                           </div>;
 </>;
@@ -332,7 +330,7 @@ const InnovativeServicesShowcase = () => {};
                         </svg>"";
                         <span className="text-white">;
                           {selectedService.contactInfo.website}
-;
+
                         </span>";
                       </div>;
                     </div>""";
@@ -368,16 +366,12 @@ const InnovativeServicesShowcase = () => {};
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default InnovativeServicesShowcase;
-;
 
-export { InnovativeServicesShowcase };
-;
-export { InnovativeServicesShowcase };
-;
-export { InnovativeServicesShowcase };
-;
-export { InnovativeServicesShowcase };
-;
-export { InnovativeServicesShowcase };
+
+export { InnovativeServicesShowcase }
+export { InnovativeServicesShowcase }
+export { InnovativeServicesShowcase }
+export { InnovativeServicesShowcase }
+export { InnovativeServicesShowcase }

@@ -19,8 +19,7 @@ const featuredPosts = [];
             id: "user1","";
             name: "Alex Johnson","";
             avatar: "https://i.pravatar.cc/150?img=3","";
-            role: "Verified Talent"";,
-},"";
+            role: "Verified Talent""},"";
         authorId: "user1","";
         category: "ai-tools","";
         categoryId: "ai-tools","";
@@ -38,8 +37,7 @@ const featuredPosts = [];
         isAnswered: true,"";
         authorName: "Alex Johnson","";
         authorAvatar: "https://i.pravatar.cc/150?img=3","";
-        authorRole: "Verified Talent";,
-},;
+        authorRole: "Verified Talent"},;
     {}
 ";
 "";
@@ -52,8 +50,7 @@ const featuredPosts = [];
             id: "user2","";
             name: "Sarah Chen","";
             avatar: "https://i.pravatar.cc/150?img=5","";
-            role: "Verified Talent"";,
-},"";
+            role: "Verified Talent""},"";
         authorId: "user2","";
         category: "getting-hired","";
         categoryId: "getting-hired","";
@@ -87,8 +84,7 @@ const recentPosts = [];
             id: "user3","";
             name: "Michael Wong","";
             avatar: "https://i.pravatar.cc/150?img=7","";
-            role: "Developer"";,
-},"";
+            role: "Developer""},"";
         authorId: "user3","";
         category: "project-help","";
         categoryId: "project-help","";
@@ -106,8 +102,7 @@ const recentPosts = [];
         isAnswered: false,"";
         authorName: "Michael Wong","";
         authorAvatar: "https://i.pravatar.cc/150?img=7","";
-        authorRole: "Developer";,
-},;
+        authorRole: "Developer"},;
     {}
 ";
 "";
@@ -120,8 +115,7 @@ const recentPosts = [];
             id: "user4","";
             name: "Emma Davis","";
             avatar: "https://i.pravatar.cc/150?img=9","";
-            role: "Product Manager"";,
-},"";
+            role: "Product Manager""},"";
         authorId: "user4","";
         category: "feedback","";
         categoryId: "feedback","";
@@ -139,8 +133,7 @@ const recentPosts = [];
         isAnswered: false,"";
         authorName: "Emma Davis","";
         authorAvatar: "https://i.pravatar.cc/150?img=9","";
-        authorRole: "Product Manager";,
-},;
+        authorRole: "Product Manager"},;
     {}
 ";
 "";
@@ -153,8 +146,7 @@ const recentPosts = [];
             id: "user5","";
             name: "David Lin","";
             avatar: "https://i.pravatar.cc/150?img=11","";
-            role: "Freelancer"";,
-},"";
+            role: "Freelancer""},"";
         authorId: "user5","";
         category: "project-help","";
         categoryId: "project-help","";
@@ -220,14 +212,10 @@ export {};
         </Tabs>;
       </div>;
     </>)}
-;
 
-export { CommunityPage };
-;
-export { CommunityPage };
-;
-export { CommunityPage };
-;
-export { CommunityPage };
-;
-export { CommunityPage };
+
+export { CommunityPage }
+export { CommunityPage }
+export { CommunityPage }
+export { CommunityPage }
+export { CommunityPage }

@@ -26,14 +26,13 @@ export {};
 };
     competitors?: string[];
     marketSize?: string;
-    compliance?: string[];,
-}
+    compliance?: string[]}
     id: service.id,;
     title: service.name,;
     description: service.description,;
     category: service.category,;
     subcategory: service.category, // Use category as subcategory for now';
-    price: parseInt(service.price.replace(/[$,]/g,)), // Convert "$18,999" to 18999';
+    price: parseInt(service.price.replace(/[$]/g)), // Convert "$18,999" to 18999';
     currency: '$',;
     pricingModel: 'monthly',;
     features: service.features,;
@@ -52,6 +51,5 @@ export {};
 },;
     competitors: service.competitors,;
     marketSize: service.marketSize,;
-    compliance: ['SOC 2',ISO 27001'], // Default compliance;,
-}))}
+    compliance: ['SOC 2',ISO 27001'], // Default compliance}))}
 '";

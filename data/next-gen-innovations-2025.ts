@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface NextGenInnovation2025 {;
+export interface NextGenInnovation2025 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface NextGenInnovation2025 {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface NextGenInnovation2025 {;
   rating: number;
 export const nextGenInnovations2025: NextGenInnovation2025[] = [;
   // Next-Gen AI & Robotics;
-  {;
+  {
     id: "autonomous-ai-fleet-manager",;
     name: "Autonomous AI Fleet Manager",;
     tagline: "Manage autonomous vehicle fleets with AI intelligence",;
@@ -76,20 +76,18 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
     marketSize: "$6.8B market",;
     growthRate: "280% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "AI-powered autonomous fleet management platform with real-time coordination, safety protocols, and comprehensive analytics.",;
     launchDate: "2025-02-25",;
     customers: 85,;
     rating: 4.8,;
-    reviews: 52;,;,
-},;
-  {;
+    reviews: 52},;
+  {
     id: "quantum-bioinformatics-platform",;
     name: "Quantum Bioinformatics Platform",;
     tagline: "Analyze biological data using quantum computing",;
@@ -127,21 +125,19 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
     marketSize: "$9.2B market",;
     growthRate: "320% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum-powered bioinformatics platform with DNA analysis, protein folding simulation, and drug discovery acceleration.",;
     launchDate: "2025-01-30",;
     customers: 65,;
     rating: 4.9,;
-    reviews: 38;,;,
-},;
+    reviews: 38},;
   // Next-Gen Cybersecurity & Privacy;
-  {;
+  {
     id: "quantum-privacy-preserving-ai",;
     name: "Quantum Privacy-Preserving AI",;
     tagline: "AI that preserves privacy using quantum encryption",;
@@ -179,21 +175,19 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
     marketSize: "$7.5B market",;
     growthRate: "250% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum-powered privacy-preserving AI platform with federated learning, homomorphic encryption, and comprehensive privacy tools.",;
     launchDate: "2025-02-15",;
     customers: 110,;
     rating: 4.9,;
-    reviews: 78;,;,
-},;
+    reviews: 78},;
   // Next-Gen Energy & Sustainability;
-  {;
+  {
     id: "quantum-energy-optimizer",;
     name: "Quantum Energy Optimizer",;
     tagline: "Optimize energy systems using quantum algorithms",;
@@ -231,21 +225,19 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
     marketSize: "$12.8B market",;
     growthRate: "300% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum-powered energy optimization platform with grid optimization, renewable integration, and comprehensive sustainability tools.",;
     launchDate: "2025-03-05",;
     customers: 95,;
     rating: 4.8,;
-    reviews: 67;,;,
-},;
+    reviews: 67},;
   // Next-Gen Manufacturing & Industry 4.0;
-  {;
+  {
     id: "ai-industrial-automation-suite",;
     name: "AI Industrial Automation Suite",;
     tagline: "Intelligent automation for Industry 4.0 manufacturing",;
@@ -283,21 +275,19 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
     marketSize: "$18.5B market",;
     growthRate: "280% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "AI-powered industrial automation platform with predictive maintenance, quality control, and comprehensive manufacturing optimization.",;
     launchDate: "2025-02-20",;
     customers: 75,;
     rating: 4.9,;
-    reviews: 56;,;,
-},;
+    reviews: 56},;
   // Next-Gen Education & Training;
-  {;
+  {
     id: "quantum-education-platform",;
     name: "Quantum Education Platform",;
     tagline: "Learn quantum computing through AI-powered education",;
@@ -335,21 +325,19 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
     marketSize: "$5.2B market",;
     growthRate: "220% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "AI-powered quantum education platform with personalized learning, interactive simulations, and comprehensive curriculum.",;
     launchDate: "2025-01-25",;
     customers: 280,;
     rating: 4.8,;
-    reviews: 234;,;,
-},;
+    reviews: 234},;
   // Next-Gen Entertainment & Media;
-  {;
+  {
     id: "ai-content-creation-studio",;
     name: "AI Content Creation Studio",;
     tagline: "Create professional content using AI and quantum creativity",;
@@ -387,12 +375,11 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
     marketSize: "$8.5B market",;
     growthRate: "260% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "AI-powered content creation platform with video generation, audio synthesis, and comprehensive creative tools.",;
     launchDate: "2025-02-01",;

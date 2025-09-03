@@ -3,14 +3,13 @@ export default function Page() {};
   return null;
 }
       router(`/request-quote?listing=${listing.id}`)}
-  };
-;
+  }
   return ();
     <div>Broken JSX</div>
       onKeyDown={};
           handleViewListing () }
       }}
-;
+
       {/* Image */}
       <div>Broken JSX</div>
         onKeyDown={};
@@ -79,7 +78,7 @@ export default function Page() {};
       </div>;
     </div>;) }
 export default React.memo(ProductListingCard);
-;
+
 export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;

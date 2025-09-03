@@ -46,6 +46,5 @@ const ServicesComparisonMatrix2025 = () => {};
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default ServicesComparisonMatrix2025;

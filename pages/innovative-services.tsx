@@ -75,9 +75,9 @@ export default function InnovativeServices() {};
                         <span className="text-sm text-blue-600 font-medium">{service.category}</span>;
                       </div>;
                     </div>;
-                    ;
+
                     <p className="text-gray-600 mb-4">{service.description}</p>;
-                    ;
+
                     <div className="mb-4">;
                       <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>;
                       <ul className="text-sm text-gray-600 space-y-1">;
@@ -115,8 +115,7 @@ export default function InnovativeServices() {};
                       <ArrowRight className="w-4 h-4 ml-2" />;
                     </Link>;
                   </div>;
-                );,
-})}
+                )})}
             </div>;
           </div>;
         </section>;
@@ -155,5 +154,4 @@ export default function InnovativeServices() {};
         </section>;
       </div>;
     </>;
-  );,
-}
+  )}

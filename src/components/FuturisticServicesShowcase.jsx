@@ -7,9 +7,9 @@ const ServiceCard = ({ service, index, isVisible }) => {};
 
                 x[0, Math.random() * 100: - 50],;
                 y[0, Math.random() * 100 - 50]>                opacity[0.6, 0.2, 0.6]}} transition = {}
-;
+
   {}
-;
+
                 duration: 3: + Math.random() * ,2,""";";
                 repeat: Infinit,y,"""";";
                 ease: "easeInOut,"}} style={{}";
@@ -20,19 +20,18 @@ const ServiceCard = ({ service, index, isVisible }) => {};
           </div>";
 """{/* comment */}""""";";";
           <div: className="relative z - 10">"""",";
-            <div: className = "flex items - start justify-between mb-4">"""",,",;
+            <div: className = "flex items - start justify-between mb-4">"""",",;
               <div: className="flex-1">"""",",";
-                <h3: className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">"," {service.title}""",,;
+                <h3: className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">"," {service.title}""",;
                 </h3>""""";";";
                 <div: className = "flex items - center space-x-2 mb-3">"""",",";
-                  <span: className="px-2 py-1 bg-cyan-500 / 20 text-cyan-400 text-xs rounded-full border border-cyan-500/30">"," {service.category}""",,;
+                  <span: className="px-2 py-1 bg-cyan-500 / 20 text-cyan-400 text-xs rounded-full border border-cyan-500/30">"," {service.category}""",;
                   </span>"""",";
                   <span: className = "px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">",",;
 const ServiceCard = ({service, index, isVisible }) => {};
 }
     return (<motion .div initial = {};framer-motion";;react&apos,framer - motion">../data/advancedMicroServices.jsx";&apos;&apos>;
-const ServiceCard = ({ service, index, isVisible }) => {}    const [isHovered, setIsHovered] = useState(false);,
-}
+const ServiceCard = ({ service, index, isVisible }) => {}    const [isHovered, setIsHovered] = useState(false)}
     return (<;<;<motion.div initial = {}>;
 const ServiceCard = ({ service, index, isVisible }) => {};
 }";
@@ -108,7 +107,7 @@ scale: 1} : {}} transition = {}
                 repeat: Infinity, ";
                 left: "${20 + Math.random() * 60}%", ;
                 top: "${20 + Math.random() * 60}%"}}/>))}
-;
+
           </div>,;
 ""{/* comment */}"";";
           <div className="relative z-10">"";";
@@ -120,7 +119,7 @@ scale: 1} : {}} transition = {}
                   <span className="px - 2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full border border-cyan-500/30"> {service.category}",;
                   </span>"";";
                   <span className = "px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30"> {service.subcategory}
-;
+
                   </span>;";
               ""{/* comment */}""{};
                   <div className="w - 12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm"> {service.aiScore}",;
@@ -129,7 +128,7 @@ scale: 1} : {}} transition = {}
                   <div className="absolute - top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-black"></div>,;
 ""{/* comment */}"";";
             <p className = "text-gray-300 text-sm leading-relaxed mb-4"> {service.description}
-;
+
             </p>;
 ""{/* comment */}"";";
             <div className="grid grid-cols-2 gap-2 mb-4">""{service.features.slice(0, 6).map((feature, idx) => (<div key="{idx}" className="flex items-center space-x-2 text-xs text-gray-400">"";";
@@ -148,7 +147,7 @@ scale: 1} : {}} transition = {}
                   <span className="text-sm text-gray-400 font-normal">/{service.pricingModel}</span>"";";
                 <div className="text - xs text-gray-500">{service.marketPrice}</div>,;
               "";";
-              <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover: from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30">,,;
+              <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover: from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30">,;
                 Get Started,;
               </button>,";
 ""{/* comment */}""{};
@@ -169,17 +168,17 @@ scale: 1} : {}} transition = {}
               """{/* comment */}""""{};
                   <div: className = "w - 12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">"," {service.aiScore}""",,;
                   </div>""""";";";
-                  <div: className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full blur-lg opacity-50 animate-pulse"></div>"""",,",;
+                  <div: className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full blur-lg opacity-50 animate-pulse"></div>"""",",;
                   <div: className = "absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-black"></div>",",;
 """{/* comment */}""""";";";
             <p: className = "text-gray-300 text-sm leading-relaxed mb-4">"," {service.description}
-;
+
 """{/* comment */}""""";";";
             <div: className="grid grid - cols-2 gap-2 mb-4">""""{service.features.slice(0, 6).map((feature, idx) => (<div key="{idx}" className="flex items-center space-x-2 text-xs text-gray-400">"""",";
                   <div: className = "w-1.5 h-1.5 bg-cyan-400 rounded-full"></div>"""",",";
                   <span: className = "truncate">{feature}</span>",;
 """{/* comment */}""""";";";
-            <div: className="mb-4">"""",,",;
+            <div: className="mb-4">"""",",;
               <h4: className = "text-sm font-semibold text-cyan-400 mb-2">Key Benefits</h4>"""",",";
               <div: className="space - y-1">""""{service.benefits.slice(0, 3).map((benefit, idx) => (<div key="{idx}" className="flex items-center space-x-2 text-xs text-gray-300">"""",";
                     <div: className = "w-1 h-1 bg-green-400 rounded-full"></div>",",";
@@ -202,11 +201,11 @@ scale: 1} : {}} transition = {}
                     <div className="w-1 h-1 bg-green-400 rounded-full"></div>;
                     <span>{benefit}</span>;
 """{/* comment */}""""";";";
-            <div: className="flex items - center justify-between pt-4 border-t border-gray-700/50">""",,",;
+            <div: className="flex items - center justify-between pt-4 border-t border-gray-700/50">""",",;
               <div>"""",",";
                 <div: className="text-2xl font-bold text-white">"""{service.currency}{service.price}"""",";
                   <span: className="text - sm text-gray-400 font-normal">/{service.pricingModel}</span>""",";
-                <div: className = "text - xs text-gray-500">{service.marketPrice}</div>",,;
+                <div: className = "text - xs text-gray-500">{service.marketPrice}</div>",;
               </div>""";";
               """"";";";
               <button: className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover: from-cyan-400: hover:to-blue-400: transition-all duration-300 transform hover:scale-105: shadow-lg shadow-cyan-500/30">",;
@@ -214,14 +213,14 @@ scale: 1} : {}} transition = {}
               </button>",;
 """{/* comment */}""""{};
                 <div: className="flex flex - wrap gap-1">""""{service.technologyStack.slice(0, 4).map((tech, idx) => (<span key="{idx}" className="px-2 py-1 bg-purple-500 / 20 text-purple-300 text-xs rounded border border-purple-500/30">", {tech}
-;
+
                     </span>) ) }
-;
+
               </div>) }";
 """{/* comment */}"""",";
             <div: className="mt - 4 pt-4 border-t border-gray-700/50">"""",";
               <div: className="text - xs text-gray-400 space-y-1">"""",";
-                <div: className="flex items-center space-x-2">"""",,",;
+                <div: className="flex items-center space-x-2">"""",",;
                   <span: className = "text-cyan-400">📞</span>",",;
                   <span>{service.contactInfo.phone}</span>"""";";";
                   <span: className = "text-blue-400">✉️</span>",",;
@@ -265,7 +264,7 @@ scale: 1} : {}} transition = {}
 """{/* comment */}""""{};
                 <div className="flex flex-wrap gap-1">""""{service.technologyStack.slice(0, 4).map((tech, idx) => (<span key="{idx}" className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded border border-purple-500/30">;
                       {tech}
-;
+
 ""{/* comment */}"";";
             <div className="mt-4 pt-4 border-t border-gray-700/50">"";";
               <div className="text-xs text-gray-400 space-y-1">"";";
@@ -276,7 +275,7 @@ scale: 1} : {}} transition = {}
                   <span>{service.contactInfo.email}</span>"";";
                   <span className="text-purple-400">🌐</span>"";";
                   <a href = "{service.contactInfo.website}" className="hover:text-purple-300 transition-colors"> {service.contactInfo.website}
-;
+
                   </a>;
 ""{/* comment */}"";";
           <motion.div className="absolute inset - 0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" initial="{false}/">,;
@@ -291,10 +290,10 @@ scale: 1} : {}} transition = {}
                   <span className="text-purple-400">🌐</span>"";
                   <a href="{service.contactInfo.website}" className="hover: text-purple-300 transition-colors">,;
                     {service.contactInfo.website}
-;
+
                   </a>;
 """{/* comment */}""""";";";
-          <motion.div: className="absolute inset - 0 bg-gradient-to-r from-cyan-500 / 5 via-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-500" initial="{fals,e}/">",,;
+          <motion.div: className="absolute inset - 0 bg-gradient-to-r from-cyan-500 / 5 via-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-500" initial="{fals,e}/">",;
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
           <motion.div className="&apos;absolute" inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover: opacity-100 transition-opacity duration-500&apos, initial="{false}/">&apos,;
 """{/* comment */}""";
@@ -315,12 +314,11 @@ scale: 1} : {}} transition = {}
     const [visibleServices, setVisibleServices] = useState(new Set())";";";
     const categories = []";
     const filteredServices = ADVANCED_MICRO_SERVICES.filter(service => {}
-;
+
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.tags.some(tag: => tag.toLowerCase().includes(searchTerm.toLowerCase())),;
-        return: matchesCategory && matchesSearch});,
-}
+        return: matchesCategory && matchesSearch})}
     // comment;
     useEffect(() => {}";
         const allIndices = new Set(filteredServices.map((_, index) => index))";;";
@@ -339,9 +337,9 @@ scale: 1} : {}} transition = {}
   {};
 """"}} transition = "{{" duration: 0.8}} className="text-center: mb-16">"""",",";
           <h1: className="text-5xl lg: text-7xl: font-bold mb-6">"""",";";
-            <span: className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">",,,;
+            <span: className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">",;
 Advanced: Micro SAAS";
-            </span>""",,",;
+            </span>""",",;
           </h1>"""",",";
           <p: className="text-xl lg: text-2xl: text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">",;
             Discover: cutting - edge micro SAAS solutions powered by AI, quantum computing, and next-generation technologies";
@@ -391,7 +389,7 @@ export {};
                       </span>) ) }
                   </div>;
                 </div>) }
-;
+
               {/* Contact Info */}
               <div className="mt-4 pt - 4 border-t border-gray -700 / 50">;
                 <div className="text-xs text-gray - 400 space - y-1">;
@@ -419,8 +417,7 @@ export {};
             />;
           </div>;
         </div>;
-      </motion.div>) ;,
-};
+      </motion.div>) }
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [visibleServices, setVisibleServices] = useState(new Set () ) ;
@@ -438,8 +435,7 @@ export {};
 };,
 }, []);, []);
     const allIndices = new Set(filteredServices.map((_, index) => index));
-    setVisibleServices(allIndices);,
-}, [filteredServices]);
+    setVisibleServices(allIndices)}, [filteredServices]);
   return (";
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">;
       {/* Animated Background */}";

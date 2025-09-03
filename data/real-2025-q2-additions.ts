@@ -1,10 +1,10 @@
-export interface Real2025Q2Addition {;
+export interface Real2025Q2Addition {
   id: string;
   name: string;
   tagline: string;
   price: string;
 export const real2025Q2Additions: Real2025Q2Addition[] = [;
-  {;
+  {
     id: "ai-meeting-notes",;
     name: "AI Meeting Notes & Action Items",;
     tagline: "Never miss decisions and follow‑ups again",;
@@ -14,9 +14,8 @@ export const real2025Q2Additions: Real2025Q2Addition[] = [;
       "Decision and action item extraction",;
       "Email and Slack follow‑ups",;
       "Workspace search";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "uptime-sla-reporter",;
     name: "Uptime & SLA Reporter",;
     tagline: "Proactive reliability with customer‑facing transparency",;
@@ -27,5 +26,4 @@ export const real2025Q2Additions: Real2025Q2Addition[] = [;
       "Incident timelines and labels",;
       "Hosted status pages";
     ];
-];,;,
-}}
+]}}

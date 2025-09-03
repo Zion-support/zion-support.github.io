@@ -9,7 +9,5 @@ describe(&apos;InnovativeServicesShowcase&apos, () => {};
 }
     // comment;
     render(<InnovativeServicesShowcase / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

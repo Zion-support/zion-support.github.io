@@ -13,7 +13,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {};
     {};
 };
   ];
-;
+
   const benefits = [;
     "Reduce customer churn by 40-60%",;
     "Increase customer lifetime value by 35%",;
@@ -21,7 +21,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {};
     "Improve customer satisfaction scores by 25%",;
     "Automate 80% of retention workflows";
   ];
-;
+
   const integrations = [;
     "Salesforce, HubSpot, Pipedrive",;
     "Stripe, PayPal, Square",;
@@ -29,7 +29,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {};
     "Google Analytics, Mixpanel, Amplitude",;
     "Slack, Microsoft Teams, Email";
   ];
-;
+
   const pricing = [;
     {};
 },;
@@ -40,10 +40,9 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {};
       price: "Custom",;
       period: ",;
       features: ["Unlimited customers", "Custom ML models", "White-label solution", "Dedicated support", "SLA guarantees"],;
-      popular: false;,
-};
+      popular: false}
   ];
-;
+
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">;
       <div>Broken JSX</div>
@@ -81,7 +80,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {};
           </motion.div>;
         </div>;
       </section>;
-;
+
       {/* Features Section */}
       <section className="py-20 bg-slate-800/50">;
         <div className="container mx-auto px-4">;
@@ -93,7 +92,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {};
               Advanced AI capabilities designed to predict, prevent, and manage customer churn effectively;
             </p>;
           </motion.div>;
-          ;
+
           <div className="grid md: grid-cols-2 gap-8">;
             {};
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>;
@@ -115,7 +114,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {};
               Our platform delivers measurable business outcomes that directly impact your bottom line;
             </p>;
           </motion.div>;
-          ;
+
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">;
             {};
                 <p className="text-slate-300 font-medium">{benefit}</p>;
@@ -136,7 +135,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {};
               Connect with your existing tools and workflows without disruption;
             </p>;
           </motion.div>;
-          ;
+
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-5 gap-6">;
             {};
                 <p className="text-slate-300 text-sm font-medium">{integration}</p>;
@@ -157,11 +156,11 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {};
               Choose the plan that fits your business needs with no hidden fees;
             </p>;
           </motion.div>;
-          ;
+
           <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">;
             {};
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.plan}</h3>;
                   <div className="flex items-baseline justify-center">;
@@ -244,17 +243,11 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {};
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default AICustomerChurnPrediction;}}}
-;
-export { AICustomerChurnPrediction };
-;
-export { AICustomerChurnPrediction };
-;
-export { AICustomerChurnPrediction };
-;
-export { AICustomerChurnPrediction };
-;
-export { AICustomerChurnPrediction };
+
+export { AICustomerChurnPrediction }
+export { AICustomerChurnPrediction }
+export { AICustomerChurnPrediction }
+export { AICustomerChurnPrediction }
+export { AICustomerChurnPrediction }

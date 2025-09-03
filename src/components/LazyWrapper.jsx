@@ -22,16 +22,11 @@ export {};
     return (<div>Broken JSX</div>
 }} transition={{ duration: 0.6 }} className={className}>;
       {children}
-    </motion.div>)};
-export default LazyWrapper;,
-}}}
-;
-export { LazyWrapper };
-;
-export { LazyWrapper };
-;
-export { LazyWrapper };
-;
-export { LazyWrapper };
-;
-export { LazyWrapper, Page };
+    </motion.div>)}
+export default LazyWrapper}}}
+
+export { LazyWrapper }
+export { LazyWrapper }
+export { LazyWrapper }
+export { LazyWrapper }
+export { LazyWrapper, Page }

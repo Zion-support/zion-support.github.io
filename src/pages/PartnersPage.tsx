@@ -14,7 +14,7 @@ export function PartnersPage() {};
     {};
 }
   ];
-;
+
   const featuredPartners = [;
     {};
 },;
@@ -29,7 +29,7 @@ export function PartnersPage() {};
     {};
 }
   ];
-;
+
   const partnerBenefits = [;
     {};
 },;
@@ -44,7 +44,7 @@ export function PartnersPage() {};
     {};
 }
   ];
-;
+
   const partnershipPrograms = [;
     {};
 },;
@@ -53,7 +53,7 @@ export function PartnersPage() {};
     {};
 }
   ];
-;
+
   const testimonials = [;
     {};
 },;
@@ -62,7 +62,7 @@ export function PartnersPage() {};
     {};
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -76,7 +76,7 @@ export function PartnersPage() {};
               Join our global partner ecosystem and unlock new opportunities for growth, ;
               innovation, and market expansion. Together, we can deliver exceptional value to customers worldwide.;
             </p>;
-            ;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <div>Broken JSX</div>
                 className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">;
@@ -144,7 +144,7 @@ export function PartnersPage() {};
                     <p className="text-xs text-zion-slate-light">{partner.partnership}</p>;
                   </div>;
                 </div>;
-                ;
+
                 <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">;
                   {partner.description}
                 </p>;
@@ -280,11 +280,11 @@ export function PartnersPage() {};
                     <div key={i} className="w-4 h-4 text-yellow-400 fill-current">★</div>;
                   ))}
                 </div>;
-                ;
+
                 <p className="text-zion-slate-light mb-4 leading-relaxed">;
                   "{testimonial.content}";
                 </p>;
-                ;
+
                 <div>;
                   <div className="font-semibold text-white">{testimonial.name}</div>;
                   <div className="text-sm text-zion-cyan">{testimonial.title}</div>;
@@ -308,7 +308,7 @@ export function PartnersPage() {};
                 Join our partner ecosystem and unlock new opportunities for growth and innovation. ;
                 Our partnership team is ready to help you get started.;
               </p>;
-              ;
+
               <div className="space-y-4">;
                 <div className="flex items-center space-x-3">;
                   <Mail className="w-5 h-5 text-zion-cyan" />;
@@ -330,7 +330,7 @@ export function PartnersPage() {};
               <p className="text-zion-slate-light mb-6">;
                 Fill out our partnership inquiry form and we'll get back to you within 24 hours.;
               </p>;
-              ;
+
               <div className="space-y-4">;
                 <div>Broken JSX</div>
                 />;
@@ -377,7 +377,6 @@ export function PartnersPage() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
+
 export default PartnersPage;

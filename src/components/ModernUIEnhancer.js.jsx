@@ -25,7 +25,7 @@ export default function Page() {};
             const fadeElements = document.querySelectorAll('[data-fade-in]');
             fadeElements.forEach((element) => {};
                     element.classList.add('fade-in-visible')}
-            })};
+            })}
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll)}, [enableScrollEffects]);
     // Theme management;
@@ -39,7 +39,7 @@ export default function Page() {};
             root.classList.toggle('dark', prefersDark)}
         else {};
             root.classList.toggle('dark', theme === 'dark')}
-        localStorage.setItem('theme', theme)};
+        localStorage.setItem('theme', theme)}
     const themes = ['light',dark',auto'];
         const currentIndex = themes.indexOf(currentTheme) ;
         const nextTheme = themes[(currentIndex + 1) % themes.length];
@@ -168,7 +168,7 @@ export default function Page() {};
               </motion.div>)}
           </AnimatePresence>;
         </motion.button>) }
-;
+
       {/* Device Type Indicator */}
       {};
 }} className="fixed top-6 left-6 z-50 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">";
@@ -179,7 +179,7 @@ export default function Page() {};
             <span className="text-gray-700 dark:text-gray-300 capitalize">{deviceType}</span>;
           </div>;
         </motion.div>) }
-;
+
       {/* Scroll to Top Button */}
       <AnimatePresence>;
         {};
@@ -271,6 +271,6 @@ export default function Page() {};
       {};
                     ease: "linear"}}/>))}
         </div>)}
-    </>)};
+    </>)}
 export default ModernUIEnhancer;
 '"`;

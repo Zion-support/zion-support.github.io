@@ -14,7 +14,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
 });
 ;
   const [isVisible, setIsVisible] = useState(false);
-;
+
   // Apply accessibility styles;
   const applyAccessibilityStyles = useCallback((highContrast: boolean, fontSize: string, reducedMotion: boolean) => {};
 } else {};
@@ -26,7 +26,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
 } else {};
 }
   }, []);
-;
+
   // Apply settings when they change;
   useEffect(() => {};
       `${settings.fontSize}px`,;
@@ -39,7 +39,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
 };
 ;
   if (!enabled) return null;
-;
+
   return (;
     <div className="accessibility-enhancer">;
       <AnimatePresence>;
@@ -94,7 +94,6 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
         </button>;
       )}
     </div>;
-  );,
-}
-;
+  )}
+
 export default AccessibilityEnhancer;

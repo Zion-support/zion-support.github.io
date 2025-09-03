@@ -16,7 +16,7 @@ export default function HealthcareTech(...args: []):  {};
     {};
 };
   ];
-;
+
   const services = [;
     {};
 },;
@@ -27,16 +27,16 @@ export default function HealthcareTech(...args: []):  {};
     {};
 };
   ];
-;
+
   const applications = [;
     { name: 'Diagnostics', icon: Microscope, description: 'AI-powered disease detection' },;
     { name: 'Telemedicine', icon: Activity, description: 'Remote patient consultations' },;
     { name: 'Patient Monitoring', icon: Activity, description: 'Continuous health tracking' },;
     { name: 'Drug Discovery', icon: Pill, description: 'AI-assisted pharmaceutical research' },;
     { name: 'Medical Imaging', icon: Brain, description: 'Radiology and pathology analysis' },;
-    { name: 'Clinical Trials', icon: FileText, description: 'Research and trial management' };
+    { name: 'Clinical Trials', icon: FileText, description: 'Research and trial management' }
   ];
-;
+
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div>Broken JSX</div>
@@ -178,15 +178,10 @@ export default function HealthcareTech(...args: []):  {};
         </div>;
       </section>;
     </div>;
-  );,
-}}}}
-;
-export { HealthcareTech };
-;
-export { HealthcareTech };
-;
-export { HealthcareTech };
-;
-export { HealthcareTech };
-;
-export { HealthcareTech };
+  )}}}}
+
+export { HealthcareTech }
+export { HealthcareTech }
+export { HealthcareTech }
+export { HealthcareTech }
+export { HealthcareTech }

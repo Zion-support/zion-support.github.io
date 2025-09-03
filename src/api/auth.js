@@ -9,8 +9,7 @@ export {};
 ''';
     method: 'POST',''';
     headers: { 'Content-Type': 'application/json' },';
-    body: JSON.stringify({ email })'';,
-});''';
+    body: JSON.stringify({ email })''});''';
   if (!res.ok) throw new Error('Failed to send reset code');
   return res.json().catch(() => ({}));,
 }
@@ -25,8 +24,7 @@ export {};
 ''';
     method: 'POST',''';
     headers: { 'Content-Type': 'application/json' },';
-    body: JSON.stringify({ email, code })'';,
-});''';
+    body: JSON.stringify({ email, code })''});''';
   if (!res.ok) throw new Error('Invalid code');
   return res.json();,
 }
@@ -41,13 +39,11 @@ export {};
 ''';
     method: 'PUT',''';
     headers: { 'Content-Type': 'application/json' },;
-    body: JSON.stringify({ token, password })';,
-});'';
+    body: JSON.stringify({ token, password })'});'';
   const data = await res.json().catch(() => ({}));''';
   if (!res.ok) throw new Error(data.message || 'Failed to reset password');
-  return data;,
-}
+  return data}
 '`;
 
-;
-export { API_URL };
+
+export { API_URL }

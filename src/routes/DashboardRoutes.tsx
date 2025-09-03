@@ -2,7 +2,7 @@ import { Route, Routes  } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import { ProtectedRoute } from '../components/ProtectedRoute';
 import LoadingSpinner from '../components/LoadingSpinner';
-;
+
 // Lazy load dashboard pages;
 const Dashboard = lazy(() => import('../pages/Dashboard'));
 const ClientDashboard = lazy(() => import('../pages/ClientDashboard'));
@@ -54,11 +54,8 @@ const DashboardRoutes: React.FC = () => {};
         <div>Broken JSX</div>
           <ProtectedRoute>;
             <ProjectRoom />;
-          </ProtectedRoute>;,
-} />;
+          </ProtectedRoute>} />;
       </Routes>;
     </Suspense>;
-  );,
-};
-;
+  )}
 export default DashboardRoutes;

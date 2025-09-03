@@ -139,13 +139,11 @@ import {}
   Wifi,';
   Bluetooth,'';
   Battery,''';
-  Signal'''';,
-} from 'lucide-react';
-;
-    technologies["Business Intelligence", "Machine Learning", "Data Mining", "Visualization Tools"];,
-}
+  Signal''''} from 'lucide-react';
+
+    technologies["Business Intelligence", "Machine Learning", "Data Mining", "Visualization Tools"]}
 ];
-;
+
 const hrTechnologies = [];
   {}
 ";
@@ -154,8 +152,7 @@ const hrTechnologies = [];
     description: "Comprehensive employee lifecycle management",";
     icon: Users,"";
     useCase: "HR Operations","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -163,8 +160,7 @@ const hrTechnologies = [];
     description: "Intelligent automation for HR processes",";
     icon: Brain,"";
     useCase: "Process Automation","";
-    reliability: "High";,
-},;
+    reliability: "High"},;
   {}
 ";
 "";
@@ -172,8 +168,7 @@ const hrTechnologies = [];
     description: "Enterprise-grade security and compliance",";
     icon: Shield,"";
     useCase: "Data Protection","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -183,7 +178,7 @@ const hrTechnologies = [];
     useCase: "Infrastructure","";
     reliability: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -193,8 +188,7 @@ const successStories = [];
     challenge: "Needed unified HR platform for 10,000+ employees across 20 countries","";
     solution: "Built comprehensive HR platform with localization, compliance, and automation features","";
     results: "40% reduction in HR processing time, 60% improvement in employee satisfaction, streamlined global operations","";
-    logo: "GC";,
-},;
+    logo: "GC"},;
   {}
 ";
     id: 2,"";
@@ -203,8 +197,7 @@ const successStories = [];
     challenge: "Required automated recruitment and onboarding for 500+ annual hires","";
     solution: "Implemented AI-powered recruitment system with automated workflows and compliance tracking","";
     results: "70% faster hiring process, 50% reduction in administrative overhead, improved compliance","";
-    logo: "HN";,
-},;
+    logo: "HN"},;
   {}
 ";
     id: 3,"";
@@ -215,7 +208,7 @@ const successStories = [];
     results: "35% improvement in productivity, 45% increase in employee engagement, better retention","";
     logo: "MC";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -223,24 +216,21 @@ const processSteps = [];
     title: "HR Assessment","";
     description: "Evaluate current HR processes and identify improvement opportunities",";
     icon: FileText,"";
-    duration: "2-4 weeks";,
-},;
+    duration: "2-4 weeks"},;
   {}
 ";
     step: 2,"";
     title: "Platform Design","";
     description: "Design HR platform architecture and user experience",";
     icon: Code,"";
-    duration: "4-8 weeks";,
-},;
+    duration: "4-8 weeks"},;
   {}
 ";
     step: 3,"";
     title: "Development","";
     description: "Build and integrate HR platform components",";
     icon: Wrench,"";
-    duration: "16-32 weeks";,
-},;
+    duration: "16-32 weeks"},;
   {}
 ";
     step: 4,"";
@@ -249,7 +239,7 @@ const processSteps = [];
     icon: Users,"";
     duration: "2-6 weeks";
 ];
-;
+
 const hrBenefits = [];
   {}
 ";
@@ -257,32 +247,28 @@ const hrBenefits = [];
     title: "Operational Efficiency","";
     description: "Streamlined HR processes reduce administrative overhead and improve productivity",";
     icon: Zap,"";
-    examples["Automated workflows", "Reduced paperwork", "Faster processing", "Better accuracy"];,
-},;
+    examples["Automated workflows", "Reduced paperwork", "Faster processing", "Better accuracy"]},;
   {}
 ";
 "";
     title: "Employee Experience","";
     description: "Improved self-service capabilities and better communication enhance employee satisfaction",";
     icon: Users,"";
-    examples["Self-service portals", "Mobile access", "Real-time updates", "Better communication"];,
-},;
+    examples["Self-service portals", "Mobile access", "Real-time updates", "Better communication"]},;
   {}
 ";
 "";
     title: "Data-Driven Decisions","";
     description: "Advanced analytics provide insights for better workforce planning and HR strategy",";
     icon: BarChart3,"";
-    examples["Workforce analytics", "Performance insights", "Trend analysis", "Predictive modeling"];,
-},;
+    examples["Workforce analytics", "Performance insights", "Trend analysis", "Predictive modeling"]},;
   {}
 ";
 "";
     title: "Compliance & Security","";
     description: "Built-in compliance features and enterprise-grade security protect sensitive HR data",";
     icon: Shield,"";
-    examples["Regulatory compliance", "Data encryption", "Access controls", "Audit trails"];,
-}
+    examples["Regulatory compliance", "Data encryption", "Access controls", "Audit trails"]}
 ];
 ;
 export {};
@@ -443,9 +429,8 @@ export {};
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -453,9 +438,8 @@ export {};
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {};
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -566,14 +550,10 @@ export {};
       </section>;
     </div>;
   )}
-;
 
-export { HRPlatform };
-;
-export { HRPlatform };
-;
-export { HRPlatform };
-;
-export { HRPlatform };
-;
-export { HRPlatform };
+
+export { HRPlatform }
+export { HRPlatform }
+export { HRPlatform }
+export { HRPlatform }
+export { HRPlatform }

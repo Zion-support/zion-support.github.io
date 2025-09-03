@@ -56,10 +56,9 @@ export function Footer() {};
         { name: "Micro SAAS Platform", href: "/services/micro-saas-solutions", icon: Building2 },;
         { name: "Micro SAAS Solutions Comprehensive", href: "/services/micro-saas-solutions-comprehensive", icon: Layers },;
         { name: "Micro SAAS Innovation Hub", href: "/micro-saas-innovation-hub-2029", icon: Sparkles }
-      ];,
-}
+      ]}
   ];
-;
+
   const quickLinks = [;
     { name: "About Us", href: "/about", icon: Building2 },;
     { name: "Services", href: "/services", icon: Server },;
@@ -70,7 +69,7 @@ export function Footer() {};
     { name: "Support", href: "/help-center", icon: HelpCircle },;
     { name: "Documentation", href: "/documentation", icon: BookOpen }
   ];
-;
+
   const contactInfo = [;
     {};
 },;
@@ -79,7 +78,7 @@ export function Footer() {};
     {};
 }
   ];
-;
+
   const socialLinks = [;
     { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },;
     { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },;
@@ -87,7 +86,7 @@ export function Footer() {};
     { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },;
     { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram }
   ];
-;
+
   return (;
     <footer className="bg-zion-slate-darker border-t border-zion-purple/20">;
       {/* Main Footer Content */}
@@ -204,7 +203,7 @@ export function Footer() {};
                 Terms of Service;
               </Link>;
             </div>;
-            ;
+
             <div className="flex items-center space-x-4">;
               <span className="text-sm text-gray-400">Powered by</span>;
               <div className="flex items-center space-x-2">;
@@ -224,5 +223,4 @@ export function Footer() {};
         <ArrowUp className="h-5 w-5" />;
       </button>;
     </footer>;
-  );,
-}
+  )}

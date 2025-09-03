@@ -25,7 +25,7 @@ export function Notification({ id, type, title, message, duration = 5000, onClos
     const handleClose = () => {};
 };
         setIsVisible(false);
-        setTimeout(() => onClose(id), 300)};
+        setTimeout(() => onClose(id), 300)}
     if(!isVisible);
         return null;
     return (<div className={`${styles.bgColor} ${styles.borderColor} border rounded-lg p-4 shadow-lg animate-fade-in max-w-sm`} role="alert" aria-live="assertive">";

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';''';
 import { motion } from 'framer-motion';''';
 import { Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-;
-;
+
+
 import SEOHead from "../components/SEOHead.jsx";
 const AdvancedServicesShowcase2025 = () => {};
 };
@@ -22,7 +22,7 @@ const AdvancedServicesShowcase2025 = () => {};
         switch (sortBy) {}
 ';
             case 'price':'';
-                return parseFloat(a.price.replace('$',).replace(',,)) - parseFloat(b.price.replace('$',).replace(',,));';
+                return parseFloat(a.price.replace('$').replace(')) - parseFloat(b.price.replace('$').replace('));';
             case 'rating': any;
                 return b.rating - a.rating;';
             case 'category': any;
@@ -37,18 +37,16 @@ const AdvancedServicesShowcase2025 = () => {};
 '';
 ''';
   'AI & Machine Learning': '🤖',Cybersecurity': '🔐',Healthcare Technology': '🏥',Blockchain & Supply Chain': '⛓️',Financial Technology': '💰',Edge Computing & IoT': '🌐',Marketing Technology': '📢',Quantum Computing': '🔮',Human Resources Technology': '👥',Energy & Sustainability': '🌱',Legal Technology': '⚖️',Neuromorphic Computing': '🧠',Privacy AI': '🔒',AI Governance': '⚖️',DevOps & Automation': '⚡',Data Quality & Analytics': '📊',API Management': '🔌',Network Security': '🛡️'';
-'';,
-};''';
-        return icons[category] || '🚀'};
+''};''';
+        return icons[category] || '🚀'}
     const containerVariants = {}
         hidden: { opacity: 0 },;
         visible: {}
             opacity: 1,;
             transition: {}
-                staggerChildren: 0.1;,
-}
+                staggerChildren: 0.1}
         }
-    };
+    }
     const itemVariants = {}
   hidden: {};
 },;
@@ -56,10 +54,8 @@ const AdvancedServicesShowcase2025 = () => {};
             y: 0,;
             opacity: 1,;
             transition: {}
-                duration: 0.5;,
-}
-        }";,
-};"";
+                duration: 0.5}
+        }"};"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">;
       <div>Broken JSX</div>
 }}/>;
@@ -276,16 +272,12 @@ const AdvancedServicesShowcase2025 = () => {};
           </motion.div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default AdvancedServicesShowcase2025;
-;
 
-export { AdvancedServicesShowcase2025 };
-;
-export { AdvancedServicesShowcase2025 };
-;
-export { AdvancedServicesShowcase2025 };
-;
-export { AdvancedServicesShowcase2025 };
-;
-export { AdvancedServicesShowcase2025 };
+
+export { AdvancedServicesShowcase2025 }
+export { AdvancedServicesShowcase2025 }
+export { AdvancedServicesShowcase2025 }
+export { AdvancedServicesShowcase2025 }
+export { AdvancedServicesShowcase2025 }

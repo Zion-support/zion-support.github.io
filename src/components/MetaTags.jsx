@@ -40,7 +40,7 @@ export default function Page() {};
       {type === 'article' && publishedTime && (<meta property="article:published_time" content={publishedTime}/>)}'";
       {type === 'article' && modifiedTime && (<meta property="article:modified_time" content={modifiedTime}/>)}'";
       {type === 'article' && (<meta property="article:author" content={author}/>)}
-;
+
       {/* Structured Data */}";
       <script type="application/ld+json">;
         {};
@@ -54,8 +54,7 @@ export default function Page() {};
             ],";
             "foundingDate": "2020",";
             "industry": "Technology",";
-            "keywords": "AI, artificial intelligence, cybersecurity, cloud computing, IT services";,
-}) }
+            "keywords": "AI, artificial intelligence, cybersecurity, cloud computing, IT services"}) }
       </script>;
-    </Helmet>)};
+    </Helmet>)}
 '"`}

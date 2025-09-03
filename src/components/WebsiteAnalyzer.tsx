@@ -6,7 +6,7 @@ export default function Page() {};
   return null;
 }
           // console.error(`Error analyzing ${page}:`, error)}
-;
+
         // Add delay to prevent overwhelming the server;
         await new Promise(resolve => setTimeout (resolve, 100) ) }
 ;
@@ -14,14 +14,12 @@ export default function Page() {};
 }) } catch(error) {};
       // console.error('Analysis failed:', error)} finally {};
       setCurrentPage('')}
-  };
-;
+  }
     a.href = url;
     a.download = 'zion-website-analysis.json';    document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    URL.revokeObjectURL(url)};
-;
+    URL.revokeObjectURL(url)}
       case 'broken':";
         return <XCircle className="w-4 h-4 text-red-500"  />;
       case 'missing':";
@@ -30,8 +28,7 @@ export default function Page() {};
         return <ExternalLink className="w-4 h-4 text-blue-500"  />;
       default:";
         return <AlertTriangle className="w-4 h-4 text-gray-500"  />}
-  };
-;
+  }
       case 'broken':';
         return 'text-red-600 bg-red-100';
       case 'missing':';
@@ -39,8 +36,7 @@ export default function Page() {};
       case 'external':';
         return 'text-blue-600 bg-blue-100';
       default:';
-        return 'text-gray-600 bg-gray-100'}  };
-;
+        return 'text-gray-600 bg-gray-100'}  }
   return (";
     <div className="max-w-7xl mx-auto p-6 space-y-6">";
       <div className="bg-white rounded-lg shadow-lg p-6">";
@@ -132,7 +128,7 @@ export default function Page() {};
                     </div>) ) }
                 </div>;
               </div>) }
-;
+
             {/* Missing Pages */}
             {};
                     <div key={index} className="flex items-center justify-between p-3 bg-white rounded border border-yellow-200">";
@@ -145,7 +141,7 @@ export default function Page() {};
                     </div>) ) }
                 </div>;
               </div>) }
-;
+
             {/* Page Analysis */}";
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">";
               <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">";
@@ -176,5 +172,5 @@ export default function Page() {};
             </div>;
           </div>) }
       </div>;
-    </div>) };
+    </div>) }
 export default WebsiteAnalyzer;'"`;

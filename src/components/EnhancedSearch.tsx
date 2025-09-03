@@ -5,7 +5,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useDebounce } from '@/hooks / useDebounce';
  from 'framer-motion';
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
   icon?: React.ComponentType < any>}
 ];
 ;
@@ -16,7 +16,7 @@ export function EnhancedSearch({};
 }) ;
   const [showFilters, setShowFilters] = useState(false);
   const [recentSearches, setRecentSearches] = useState < string[]> ([]) ;
-;
+
 // Mock suggestions;
 const mockSuggestions: SearchSuggestion[] = [';
   { text: 'AI compliance assistant', type: 'recent' },;
@@ -34,7 +34,7 @@ export function EnhancedSearch({};
   const searchRef = useRef < HTMLDivElement> (null) ;
   const inputRef = useRef < HTMLInputElement> (null) ;
   const navigate = useNavigate () ;
-;
+
   // Handle keyboard navigation;
   useEffect(() => {};
 };,
@@ -55,9 +55,9 @@ export function EnhancedSearch({};
     if(debouncedQuery.trim().length <div>Broken JSX</div>
       .filter(item => {};
         return matchesQuery && matchesFilters}) .sort((a, b) => b.relevance - a.relevance) .slice(0, 10) ;
-;
+
     setResults(searchResults) }, [debouncedQuery, filters]) ;
-;
+
   // Handle click outside;
   useEffect(() => {};
 };,
@@ -66,7 +66,7 @@ export function EnhancedSearch({};
         setRecentSearches(JSON.parse (saved) ) } catch(error) {};
         // console.error('Failed to parse recent searches:', error)}    }
   }, []) ;
-;
+
   // Handle click outside;
   useEffect(() => {};
 };,
@@ -77,26 +77,25 @@ export function EnhancedSearch({};
     };
 ;
     document.addEventListener('mousedown', handleClickOutside);    return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
-;
+
   // Handle keyboard navigation;
   useEffect(() => {};
 };,
 }, []);, []);
         inputRef.current?.focus () }
-    };
-;
+    }
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, []);
-;
+
       // Add to recent searches;
-      ;
+
       setRecentSearches(updated);
       localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
       // Navigate to search results or close search;
       setIsOpen(false);
       setQuery('')}
   }, [recentSearches]);
-;
+
     handleSearch(result.title) ;
     router(result.url) ;
     const handleKeyDown = (event: KeyboardEvent) => {};
@@ -107,26 +106,25 @@ export function EnhancedSearch({};
           setIsOpen(false) ;
           setSelectedIndex(-1) ;
           break}
-    };
-;
+    }
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex, query]);
-;
+
     if(!query.trim () ) return;
     setIsLoading(true) ;
-;
+
     // Simulate API call delay;
     await new Promise(resolve => setTimeout (resolve, 300) ) ;
-;
+
     // Filter search results based on query and filters;
 
                           result.description.toLowerCase () .includes(query.toLowerCase () ) ||;
                           result.tags.some(tag => tag.toLowerCase () .includes(query.toLowerCase () ) ) ;
-;
+
       const matchesFilters = (filters.type.length === 0 || filters.type.includes(result.type) ) &&; (filters.category.length === 0 || filters.category.includes(result.category) ) &&; (filters.tags.length === 0 || filters.tags.some(tag => result.tags.includes (tag) ) ) ;
-;
+
       return matchesQuery && matchesFilters}) ;
-;
+
     setIsOpen(false);
     setQuery('')};
 ;
@@ -141,20 +139,17 @@ setFilters(prev: > ({};
 ;
     switch(type) {};
       case 'case-study': return <Building className="h-4 w-4"  />}
-  };
-;
+  }
     setResults([]);
 ';
     setQuery('');    setResults([]);
     setIsOpen(false);
-    setSelectedIndex(-1)};
-;
+    setSelectedIndex(-1)}
       case 'minimal':';
         return 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700';
       default:';
         return 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg'}
-  };
-;
+  }
   return ();
     <div ref = {searchRef} className={`relative ${className}`}>`;
       <div className={`relative rounded-xl ${getVariantStyles()}`}>";
@@ -243,7 +238,7 @@ setFilters(prev: > ({};
                           </button>) ) }
                       </div>;
                     </div>;) }
-;
+
                   {/* Popular Searches */}
                   <div>";
                     <h4 className="text-sm font-medium text-gray-900 mb-2 flex items-center gap-2">";
@@ -303,9 +298,9 @@ setFilters(prev: > ({};
                   </p>;
                 </div>) }
             </div>;
-          </motion.div>;) };
+          </motion.div>;) }
       </AnimatePresence>;
     </div>;) }
 '"`;
 
-;,"});,})";
+;,"});})";

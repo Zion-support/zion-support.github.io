@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface CuttingEdge2029Service {;
+export interface CuttingEdge2029Service {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface CuttingEdge2029Service {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface CuttingEdge2029Service {;
   rating: number;
 export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
   // AI Consciousness & Emotional Intelligence;
-  {;
+  {
     id: "ai-consciousness-evolution-platform",;
     name: "AI Consciousness Evolution Platform",;
     tagline: "Develop genuine AI consciousness and self-awareness",;
@@ -76,20 +76,18 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
     marketSize: "$50B+ emerging market",;
     growthRate: "500%+ annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully functional AI consciousness development platform with advanced neural networks, consciousness algorithms, and real-time monitoring capabilities.",;
     launchDate: "2025-01-15",;
     customers: 15,;
     rating: 5.0,;
-    reviews: 8;,;,
-},;
-  {;
+    reviews: 8},;
+  {
     id: "ai-emotional-intelligence-platform",;
     name: "AI Emotional Intelligence Platform",;
     tagline: "Real-time emotion analysis and response with human-like understanding",;
@@ -127,21 +125,19 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
     marketSize: "$3.2B market",;
     growthRate: "250% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Production-ready emotional intelligence platform with real-time emotion detection, analysis, and response generation.",;
     launchDate: "2024-08-01",;
     customers: 120,;
     rating: 4.9,;
-    reviews: 89;,;,
-},;
+    reviews: 89},;
   // Quantum Technology Services;
-  {;
+  {
     id: "quantum-internet-security-gateway",;
     name: "Quantum Internet Security Gateway",;
     tagline: "Unbreakable quantum encryption for the future internet",;
@@ -179,21 +175,19 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
     marketSize: "$8.5B market",;
     growthRate: "300% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Production quantum security gateway with quantum key distribution and post-quantum cryptography capabilities.",;
     launchDate: "2024-10-01",;
     customers: 25,;
     rating: 5.0,;
-    reviews: 12;,;,
-},;
+    reviews: 12},;
   // Space Technology Services;
-  {;
+  {
     id: "space-mining-automation-platform",;
     name: "Space Mining Automation Platform",;
     tagline: "Automated asteroid mining and space resource extraction",;
@@ -231,21 +225,19 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
     marketSize: "$100B+ emerging market",;
     growthRate: "1000%+ annual growth",;
     variant: "space-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced space mining automation platform with AI robotics, automated prospecting, and resource extraction capabilities.",;
     launchDate: "2025-03-01",;
     customers: 8,;
     rating: 5.0,;
-    reviews: 5;,;,
-},;
+    reviews: 5},;
   // Metaverse & Digital Reality;
-  {;
+  {
     id: "metaverse-digital-reality-platform",;
     name: "Metaverse Digital Reality Platform",;
     tagline: "Immersive virtual worlds with AI-powered experiences",;
@@ -283,21 +275,19 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
     marketSize: "$12.5B market",;
     growthRate: "400% annual growth",;
     variant: "metaverse-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Production metaverse platform with AI-powered world generation, realistic physics, and cross-platform compatibility.",;
     launchDate: "2024-09-01",;
     customers: 85,;
     rating: 4.8,;
-    reviews: 156;,;,
-},;
+    reviews: 156},;
   // Autonomous Business Management;
-  {;
+  {
     id: "ai-autonomous-business-manager",;
     name: "AI Autonomous Business Manager",;
     tagline: "Fully autonomous business operations and decision making",;
@@ -335,21 +325,19 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
     marketSize: "$25B+ emerging market",;
     growthRate: "600%+ annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced autonomous business management system with AI-powered decision making and process optimization.",;
     launchDate: "2025-02-01",;
     customers: 35,;
     rating: 4.9,;
-    reviews: 28;,;,
-},;
+    reviews: 28},;
   // Biotech & DNA Computing;
-  {;
+  {
     id: "biotech-dna-computing-platform",;
     name: "Biotech DNA Computing Platform",;
     tagline: "DNA-based computation and biological computing systems",;
@@ -387,21 +375,19 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
     marketSize: "$15B+ emerging market",;
     growthRate: "800%+ annual growth",;
     variant: "biotech-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced DNA computing platform with biological computation, molecular algorithms, and DNA-based data processing.",;
     launchDate: "2025-04-01",;
     customers: 12,;
     rating: 5.0,;
-    reviews: 7;,;,
-},;
+    reviews: 7},;
   // Quantum Financial Trading;
-  {;
+  {
     id: "quantum-financial-trading-platform",;
     name: "Quantum Financial Trading Platform",;
     tagline: "Quantum-powered trading algorithms and financial optimization",;
@@ -439,21 +425,19 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
     marketSize: "$45B market",;
     growthRate: "400% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Production quantum financial trading platform with quantum algorithms, real-time analysis, and automated trading capabilities.",;
     launchDate: "2024-11-01",;
     customers: 45,;
     rating: 4.9,;
-    reviews: 67;,;,
-},;
+    reviews: 67},;
   // AI Creativity & Innovation;
-  {;
+  {
     id: "ai-creativity-orchestrator",;
     name: "AI Creativity Orchestrator",;
     tagline: "Multi-model creativity fusion and innovation generation",;
@@ -491,12 +475,11 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
     marketSize: "$8B market",;
     growthRate: "350% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced AI creativity platform with multi-model orchestration, creative idea generation, and innovation management.",;
     launchDate: "2024-12-01",;

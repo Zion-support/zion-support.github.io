@@ -147,18 +147,17 @@ import type { NextPage } from "next";";
           <div className="flex flex-col sm: flex-row justify-center gap-4">;";
             <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,;
               Schedule a Consultation,";
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,,;
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,;
       </section>,;
     </Layout>,;
   )}
-;
+
 export default AIDevelopment;
       icon: Globe,;
       title: "Natural Language Processing",;
         "Understand and process human language with advanced NLP models"}];
   const services = [],";
-      features: ["Machine Learning Models,Deep Learning Networks,Predictive Analytics,Custom Algorithms"];,
-} {";
+      features: ["Machine Learning Models,Deep Learning Networks,Predictive Analytics,Custom Algorithms"]} {";
       title: "AI Integration",";
         "Seamlessly integrate AI capabilities into your existing systems",;
       icon: Network,";
@@ -184,7 +183,7 @@ export default AIDevelopment;
         "Model Maintenance"]},";
       features: ["Team Training,Documentation,Technical Support,Model Maintenance"];
 
-;
+
   ];
 
   const applications = [],";
@@ -248,7 +247,7 @@ href="/solutions;
             AI Development;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">",;
               {" "}
-;
+
               Services,;
             </span>";
           </h1>";
@@ -488,11 +487,11 @@ challenges,;
                     <feature.icon className="w-8 h-8 text-blue-600" />";
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">,;
                     {feature.title}
-;
+
                   </h3>";
                   <p className="text-gray-600">{feature.description}</p>;
               ))}
-;
+
         {/* comment */}";
         <section className="py-20 bg-gray-50">";
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">;
@@ -515,10 +514,10 @@ challenges,;
                         className="flex items-center text-gray-600;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2"  />;
                         {feature}
-;
+
                       </li>;
         {/* comment */}
-;
+
                 AI Applications We Build,;
 Real-world AI solutions that deliver measurable results,;
               {applications.map((app, index) => (";
@@ -532,7 +531,7 @@ Real-world AI solutions that deliver measurable results,;
                         key="{useCaseIndex}
                         <span className="text-sm">{useCase}</span>;
         {/* comment */}
-;
+
                 Benefits of AI Implementation,;
 Transform your business with artificial intelligence,;
 ";
@@ -544,7 +543,7 @@ Transform your business with artificial intelligence,;
                     {benefit.title}";
                   <p className="text-gray-600">{benefit.description}</p>;
         {/* comment */}
-;
+
                 AI Technologies We Use,;
 Cutting-edge tools and frameworks for AI development,;
 ";
@@ -572,7 +571,7 @@ step: "01",";
                     "Deploy AI solutions and continuously monitor performance"}].map((phase, index) => (";
                   <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mx-auto mb-4">;
                     {phase.step}
-;
+
                     {phase.title}";
                   <p className="text-gray-600">{phase.description}</p>;
         {/* comment */}";

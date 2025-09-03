@@ -51,7 +51,7 @@ export {};
                     variant: "destructive"})}
             finally {}
                 setIsLoading(false) }
-        };
+        }
         fetchProfile () }, [profileId]) ;
     if (isLoading) {}
 ";
@@ -206,16 +206,12 @@ export {};
           </div>;
         </div>;
       </div>;
-      ;
-    </>)}
-;
 
-export { ProfileDetail };
-;
-export { ProfileDetail };
-;
-export { ProfileDetail };
-;
-export { ProfileDetail };
-;
-export { ProfileDetail };
+    </>)}
+
+
+export { ProfileDetail }
+export { ProfileDetail }
+export { ProfileDetail }
+export { ProfileDetail }
+export { ProfileDetail }

@@ -46,8 +46,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {};
       integrations: ['Google Drive', 'Confluence', 'Notion'],;
       competitors: ['Loopio', 'Responsive'],;
       marketSize: '$2B RFP Tech',;
-      growthRate: 'Strong';,
-},;
+      growthRate: 'Strong'},;
     {}
       id: 'ai - red - team - simulator',;
       title: 'AI Red Team Simulator',;
@@ -82,8 +81,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {};
       integrations: ['GitHub', 'GitLab', 'Jenkins'],;
       competitors: ['External red team services'],;
       marketSize: '$1B AI Security',;
-      growthRate: 'High';,
-},;
+      growthRate: 'High'},;
     {}
       id: 'speech-analytics - center',;
       title: 'Contact Center Speech Analytics',;
@@ -118,8 +116,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {};
       integrations: ['Twilio', 'Amazon Connect', 'Five9'],;
       competitors: ['Gong', 'Chorus', 'Observe.AI'],;
       marketSize: '$6B Speech Analytics',;
-      growthRate: 'High';,
-},;
+      growthRate: 'High'},;
     {}
       id: 'synthetic - data - studio',;
       title: 'Synthetic Data Studio',;
@@ -154,8 +151,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {};
       integrations: ['S3', 'GCS', 'Snowflake'],;
       competitors: ['Gretel.ai', 'Mostly AI'],;
       marketSize: '$2B Synthetic Data',;
-      growthRate: 'High';,
-},;
+      growthRate: 'High'},;
     {}
       id: 'feature - store - starter',;
       title: 'Feature Store Starter',;
@@ -190,8 +186,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {};
       integrations: ['dbt', 'Airflow', 'Spark'],;
       competitors: ['Feast', 'Tecton(enterprise) '],;
       marketSize: '$1B Feature Platforms',;
-      growthRate: 'Growing';,
-},;
+      growthRate: 'Growing'},;
     {}
       id: 'model - registry - lite',;
       title: 'Model Registry Lite',;
@@ -226,8 +221,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {};
       integrations: ['MLflow', 'Weights & Biases', 'Arize'],;
       competitors: ['MLflow(self - hosted) '],;
       marketSize: '$1B MLOps',;
-      growthRate: 'High';,
-},;
+      growthRate: 'High'},;
     {}
       id: 'data - quality - monitoring',;
       title: 'Data Quality Monitoring',;
@@ -262,8 +256,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {};
       integrations: ['Snowflake', 'BigQuery', 'Redshift'],;
       competitors: ['Monte Carlo', 'Bigeye'],;
       marketSize: '$2B Data Reliability',;
-      growthRate: 'High';,
-},;
+      growthRate: 'High'},;
     {}
       id: 'privacy - request - automation',;
       title: 'Privacy Request Automation',;
@@ -298,8 +291,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {};
       integrations: ['Google Workspace', 'Salesforce', 'HubSpot'],;
       competitors: ['Transcend', 'OneTrust'],;
       marketSize: '$4B Privacy Ops',;
-      growthRate: 'High';,
-},;
+      growthRate: 'High'},;
     {}
       id: 'customer - 360 - cdp - starter',;
       title: 'Customer 360 CDP Starter',;
@@ -334,8 +326,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {};
       integrations: ['Segment', 'RudderStack', 'HubSpot'],;
       competitors: ['Twilio Segment', 'mParticle'],;
       marketSize: '$5B CDP',;
-      growthRate: 'High';,
-},;
+      growthRate: 'High'},;
     {}
       id: 'ab - testing - lab',;
       title: 'A / B Testing Lab',;
@@ -370,10 +361,9 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {};
       integrations: ['Segment', 'RudderStack', 'Snowplow'],;
       competitors: ['Optimizely', 'VWO'],;
       marketSize: '$2B Experimentation',;
-      growthRate: 'Strong';,
-}
+      growthRate: 'Strong'}
   ];
-;
+
   const categories: unknown = [...new Set(newServices.map (service => service.category) ) ];
 ;
 export {};

@@ -76,8 +76,7 @@ const HealthcareSolutions = () => {};
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>;
                     </svg>;
                   </Link>;
-                </div>);,
-})}
+                </div>)})}
           </div>;
         </div>;
       </div>;
@@ -97,8 +96,7 @@ const HealthcareSolutions = () => {};
                   </div>;
                   <h3 className="text-xl font-bold mb-4">{benefit.title}</h3>;
                   <p className="text-gray-300">{benefit.description}</p>;
-                </div>);,
-})}
+                </div>)})}
           </div>;
         </div>;
       </div>;
@@ -125,17 +123,11 @@ const HealthcareSolutions = () => {};
         </div>;
       </div>;
     </div>;
-  );,
-};
-;
+  )}
 export default HealthcareSolutions;
-;
-export { HealthcareSolutions, Icon, Icon };
-;
-export { HealthcareSolutions, Icon, Icon };
-;
-export { HealthcareSolutions, Icon, Icon };
-;
-export { HealthcareSolutions, Icon, Icon };
-;
-export { HealthcareSolutions, Icon, Icon };
+
+export { HealthcareSolutions, Icon, Icon }
+export { HealthcareSolutions, Icon, Icon }
+export { HealthcareSolutions, Icon, Icon }
+export { HealthcareSolutions, Icon, Icon }
+export { HealthcareSolutions, Icon, Icon }

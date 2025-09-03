@@ -137,8 +137,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {};
         { name: 'Press', href: '/press', icon: FileText },;
         { name: 'Careers', href: '/careers', icon: Users },;
         { name: 'Partners', href: '/partners', icon: Handshake }
-      ];,
-}
+      ]}
   ];
 ;
   const contactInfo = {};
@@ -150,7 +149,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {};
           {/* Backdrop */}
           <div>Broken JSX</div>
           />;
-          ;
+
           {/* Sidebar */}
           <div>Broken JSX</div>
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-2xl z-50 overflow-y-auto">;
@@ -230,7 +229,5 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {};
         </>;
       )}
     </AnimatePresence>;
-  );,
-};
-;
+  )}
 export default Sidebar;

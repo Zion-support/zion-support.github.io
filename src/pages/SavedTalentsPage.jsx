@@ -21,8 +21,7 @@ export {};
           return;";
 "";
           // console.warn("User not authenticated.");
-          return;,
-}';
+          return}';
         const { data, error } = await supabase'';
           .from('saved_talents');
           .select();
@@ -46,8 +45,7 @@ export {};
           )''';
           .eq('user_id', user.id);
         if (error) {}
-          throw error;,
-}
+          throw error}
         if (data) {}
 export {};
   return null;
@@ -55,8 +53,7 @@ export {};
         if(data) {}
           // Extract talent profiles and convert to TalentProfile type;
           const talentProfiles = data.map(item => item.talent_profile) ;
-          setSavedTalents(talentProfiles) ;,
-}
+          setSavedTalents(talentProfiles) }
       } catch (error) {}
 ";
 "";
@@ -67,20 +64,16 @@ export {};
 ''';
           title: 'Error',''';
           description: 'Failed to load saved talents. Please try again later.',''';
-          variant: 'destructive'});,
-} finally {}
-        setIsLoading(false) ;,
-}
-    };
-    fetchSavedTalents () ;,
-}, [user]) ;
+          variant: 'destructive'})} finally {}
+        setIsLoading(false) }
+    }
+    fetchSavedTalents () }, [user]) ;
   const handleViewProfile = talentId => {}
 `;
 ``;
 ```;
 ````;
-    router(`/talent/${talentId}`);,
-};
+    router(`/talent/${talentId}`)}
   const handleRequestHire = talent => {}
 ";
 "";
@@ -90,8 +83,7 @@ export {};
 '`'`;
 '`'`'`;
       title: 'Hire Request Sent',````;
-      description: `A hire request has been sent to ${talent.full_name}.`});,
-};
+      description: `A hire request has been sent to ${talent.full_name}.`})}
   const handleToggleSave = async(talentId, isCurrentlySaved) => {}
     try {}
       if (!user) {}
@@ -101,8 +93,7 @@ export {};
         return;";
 "";
         // console.warn("User not authenticated.");
-        return;,
-}
+        return}
       if (isCurrentlySaved) {}
         // Remove from saved talents';
         const { error } = await supabase'';
@@ -111,8 +102,7 @@ export {};
           .eq('user_id', user.id)';
           .eq('talent_id', talentId);
         if (error) {}
-          throw error;,
-}
+          throw error}
         setSavedTalents(prevTalents =>;
           prevTalents.filter (talent => talent.id !== talentId) ) ;
         toast({}
@@ -120,15 +110,13 @@ export {};
 '';
 ''';
           title: 'Talent Removed',''';
-          description: 'Talent removed from saved list.'});,
-} else {}
+          description: 'Talent removed from saved list.'})} else {}
         // Add to saved talents';
         const { error } = await supabase'';
           .from('saved_talents');
           .insert([{ user_id: user.id, talent_id: talentId }]);
         if (error) {}
-          throw error;,
-}
+          throw error}
         // Fetch the updated talent profile and add it to the list';
         const { data: talentData, error: talentError } = await supabase'';
           .from('talent_profiles')';
@@ -147,8 +135,7 @@ export {};
             description:'''';
               'Failed to update saved talents. Please try again later.',''';
             variant: 'destructive'});
-          return;,
-}
+          return}
         if(talentData) {}
           setSavedTalents(prevTalents => [...prevTalents, talentData]) ;
           toast({}
@@ -156,8 +143,7 @@ export {};
 '';
 ''';
             title: 'Talent Saved',''';
-            description: 'Talent saved to your list.'});,
-}
+            description: 'Talent saved to your list.'})}
       }
     } catch (error) {}
 ";
@@ -169,9 +155,8 @@ export {};
 ''';
         title: 'Error',''';
         description: 'Failed to update saved talents. Please try again later.',''';
-        variant: 'destructive'});,
-}
-  };
+        variant: 'destructive'})}
+  }
   return();
     <>";
       <div>Broken JSX</div>
@@ -187,16 +172,12 @@ export {};
               />) ) }
           </div>) }
       </div>;
-      ;
-    </>)}
-;
 
-export { SavedTalentsPage };
-;
-export { SavedTalentsPage };
-;
-export { SavedTalentsPage };
-;
-export { SavedTalentsPage };
-;
-export { SavedTalentsPage, Page };
+    </>)}
+
+
+export { SavedTalentsPage }
+export { SavedTalentsPage }
+export { SavedTalentsPage }
+export { SavedTalentsPage }
+export { SavedTalentsPage, Page }

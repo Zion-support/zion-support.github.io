@@ -1,8 +1,8 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
-export default function Team() {;
+const Component = () => {
+export default function Team() {
 
   const teamMembers = [], education: "PhD in Computer Science, MIT", experience: "15+ years",";
       linkedin: "https:// comment;
@@ -49,11 +49,10 @@ export default function Team() {;
       image: "/api/placeholder/300/300", expertise: ["Cloud Architecture", "Migration", "DevOps"], education: "BS in Computer Science, UT Austin", experience: "6+ years",";
       linkedin: "https:// comment;
       email: "alex@ziontechgroup.com", featured: false}
-;
+
   ];
 
-  const leadership = teamMembers.filter(member => member.featured);,
-}
+  const leadership = teamMembers.filter(member => member.featured)}
   const otherMembers = teamMembers.filter(member => !member.featured)";
 
   const companyStats = [];
@@ -109,7 +108,7 @@ name: "Kleber Santos",";
 initial="{{" opacity: 0, y: 20 }}";
             animate="{{" opacity: 1, y: 0 }}";
             transition="{{" duration: 0.6 }}
-;
+
           >";
             <Badge variant="secondary" className="mb-4">";
               <Users className="w-4 h-4 mr-2"  />;
@@ -147,7 +146,7 @@ key="{stat.label}
                 </div>;
               </motion.div>;
             ))}
-;
+
           </motion.div>;
         </div>;
       </section>;
@@ -172,7 +171,7 @@ key="{member.id}
                 initial="{{" opacity: 0, y: 20 }}";
                 animate="{{" opacity: 1, y: 0 }}";
                 transition="{{" duration: 0.6, delay: 0.1 * index }}
-;
+
               >";
                 <Card className="p-8 text-center h-full">";
                   <div className="relative mb-6">";
@@ -196,22 +195,22 @@ key="{member.id}
                       {member.expertise.map((skill, skillIndex) => (";
                         <Badge key="{skillIndex}" variant="secondary" className="text-xs">;
                           {skill}
-;
+
                         </Badge>;
                       ))}
-;
+
                     </div>;
                   ";
                   <div className="mb-6 text-sm text-gray-400">";
                     <div className="flex items-center justify-center mb-1">";
                       <GraduationCap className="w-4 h-4 mr-2"  />;
                       {member.education}
-;
+
                     </div>";
                     <div className="flex items-center justify-center">";
                       <Briefcase className="w-4 h-4 mr-2"  />;
                       {member.experience}
-;
+
                     </div>;
                   ";
                   <div className="flex justify-center gap-4">";
@@ -234,7 +233,7 @@ key="{member.id}
                 </Card>;
               </motion.div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -258,7 +257,7 @@ key="{member.id}
                 initial="{{" opacity: 0, y: 20 }}";
                 animate="{{" opacity: 1, y: 0 }}";
                 transition="{{" duration: 0.6, delay: 0.1 * index }}
-;
+
               >";
                 <Card className="p-6 text-center h-full">";
                   <div className="relative mb-4">";
@@ -277,10 +276,10 @@ key="{member.id}
                       {member.expertise.map((skill, skillIndex) => (";
                         <Badge key="{skillIndex}" variant="secondary" className="text-xs">;
                           {skill}
-;
+
                         </Badge>;
                       ))}
-;
+
                     </div>;
                   ";
                   <div className="flex justify-center gap-2">";
@@ -298,7 +297,7 @@ key="{member.id}
                 </Card>;
               </motion.div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -322,7 +321,7 @@ key="{value.title}
                 initial="{{" opacity: 0, y: 20 }}";
                 animate="{{" opacity: 1, y: 0 }}";
                 transition="{{" duration: 0.6, delay: 0.1 * index }}
-;
+
               >";
                 <Card className="p-6 text-center h-full">";
                   <div className="p-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 w-fit mx-auto mb-4">";
@@ -333,7 +332,7 @@ key="{value.title}
                 </Card>;
               </motion.div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -343,7 +342,7 @@ key="{value.title}
 initial="{{" opacity: 0, y: 20 }}";
             animate="{{" opacity: 1, y: 0 }}";
             transition="{{" duration: 0.6 }}
-;
+
           >";
             <h2 className="text-4xl font-bold text-white mb-6">;
               Join Our Team,;
@@ -408,7 +407,7 @@ in AI, cloud computing, cybersecurity, and software development.;
                   </div>;
                 </div>,;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -431,7 +430,7 @@ in AI, cloud computing, cybersecurity, and software development.;
                   <p className="text-gray-600">{value.description}</p>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";

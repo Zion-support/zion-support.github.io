@@ -1,4 +1,4 @@
-export default function SmartChurn() {;
+export default function SmartChurn() {
   return (;
     <Article;
       title="Smart Churn Predictor";
@@ -12,10 +12,9 @@ export default function SmartChurn() {;
       ]}
       links={{ website: 'https://ziontechgroup.com', contact: 'mailto:kleber@ziontechgroup.com' }}
     />;
-  );,
-}
-;
-function Article({ title, subtitle, price, bullets, links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {;
+  )}
+
+function Article({ title, subtitle, price, bullets, links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {
   return (;
     <main style={{ fontFamily: 'system-ui, sans-serif', padding: 32, maxWidth: 920, margin: '0 auto' }}>;
       <h1 style={{ marginTop: 0 }}>{title}</h1>;
@@ -30,6 +29,5 @@ function Article({ title, subtitle, price, bullets, links }: { title: string; su
         Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> · Email: <a href={links.contact}>kleber@ziontechgroup.com</a>;
       </p>;
     </main>;
-  );,
-}
-;
+  )}
+

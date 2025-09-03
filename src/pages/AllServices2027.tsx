@@ -10,8 +10,7 @@
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -26,9 +25,7 @@
           </motion.div>;
         </div>;
       </section>;
-  );,
-};
-;
+  )}
 export default AllServices2027;
 import React from "react";
 import { SEO } from "@/components/SEO";

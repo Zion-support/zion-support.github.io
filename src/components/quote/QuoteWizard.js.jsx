@@ -40,8 +40,7 @@ export function QuoteWizard({ category }) {};
     if(!selectedItemId) {};
 } to continue.`;
       );
-      return;,
-}
+      return}
     setSelectionError('');
     setStep(2);,
 };
@@ -165,8 +164,6 @@ export function QuoteWizard({ category }) {};
           Request Another Quote;
         </Button>;
       </div>;
-    );,
-}
-  return null;,
-}
+    )}
+  return null}
 '"`

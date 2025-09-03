@@ -26,14 +26,10 @@ import React from "react"; "export default function PostCard({ post }) { return 
         </div>;
       </div>;
     </div>)}
-;
 
-export { PostCard };
-;
-export { PostCard };
-;
-export { PostCard };
-;
-export { PostCard };
-;
-export { PostCard };
+
+export { PostCard }
+export { PostCard }
+export { PostCard }
+export { PostCard }
+export { PostCard }

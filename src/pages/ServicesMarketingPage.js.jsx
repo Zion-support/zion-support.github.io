@@ -391,16 +391,12 @@ const ServicesMarketingPage = () => {};
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default ServicesMarketingPage;
-;
 
-export { ServicesMarketingPage };
-;
-export { ServicesMarketingPage };
-;
-export { ServicesMarketingPage };
-;
-export { ServicesMarketingPage };
-;
-export { ServicesMarketingPage };
+
+export { ServicesMarketingPage }
+export { ServicesMarketingPage }
+export { ServicesMarketingPage }
+export { ServicesMarketingPage }
+export { ServicesMarketingPage }

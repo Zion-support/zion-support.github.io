@@ -309,7 +309,7 @@ export default function HelpCenter() {};
   );
 }
   ];
-;
+
   const popularArticles = [;
     'How to get started with AI services',;
     'Understanding our pricing structure',;
@@ -318,7 +318,7 @@ export default function HelpCenter() {};
     'API integration guide',;
     'Troubleshooting common issues';
   ];
-;
+
   const contactMethods = [;
     {};
 },;
@@ -337,7 +337,7 @@ export default function HelpCenter() {};
       article.title.toLowerCase().includes(searchQuery.toLowerCase());
     );
   );
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20">;
       {/* Hero Section */}
@@ -355,7 +355,7 @@ export default function HelpCenter() {};
               Find answers to your questions, learn how to use our platform, and get the support you need ;
               to make the most of Zion Tech Group's services.;
             </p>;
-            ;
+
             {/* Search Bar */}
             <div className="relative max-w-2xl mx-auto">;
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />;
@@ -366,7 +366,7 @@ export default function HelpCenter() {};
             </div>;
           </motion.div>;
         </div>;
-        ;
+
         {/* Background Elements */}
         <div className="absolute inset-0 opacity-10">;
           <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div>;

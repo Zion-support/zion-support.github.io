@@ -12,7 +12,7 @@ export default function NextGenInnovativeServices() {};
                 service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
             return matchesCategory && matchesSearch})}, [searchTerm, selectedCategory]);
     const formatPrice = (price, currency) => {}
-        return `${currency}${price.toLocaleString()}`};
+        return `${currency}${price.toLocaleString()}`}
     const getSupportLevelColor = (level) => {}
         switch (level.toLowerCase()) {}
 ';
@@ -22,14 +22,13 @@ export default function NextGenInnovativeServices() {};
             case 'premium': return 'bg-blue-600';''';
             case 'standard': return 'bg-green-600';''';
             default: return 'bg-gray-600'}
-    };
+    }
     const containerVariants = {}
         hidden: { opacity: 0 },;
         visible: {}
             opacity: 1,;
             transition: {}
-                staggerChildren: 0.1;,
-};
+                staggerChildren: 0.1}
     const itemVariants = {}
   hidden: {};
 },;
@@ -38,8 +37,7 @@ export default function NextGenInnovativeServices() {};
             opacity: 1,;
             transition: {}
                 duration: 0.5;
-";,
-};"";
+"};"";
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">;";
       {/* Header Section */}"";
       <div className="relative overflow-hidden">;"";
@@ -54,8 +52,7 @@ export default function NextGenInnovativeServices() {};
               Experience the future of technology with our cutting - edge AI - powered solutions across industries.Transform your business with services that leverage the latest advancements in artificial intelligence.</p>;
 
 ";
-"";,
-}} transition={{ duration: 0.8 }} className="text-center">"";
+""}} transition={{ duration: 0.8 }} className="text-center">"";
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">;
               Next-Generation Innovative Services";
             </h1>"";
@@ -401,14 +398,10 @@ export default function NextGenInnovativeServices() {};
         </motion.div>;
       </div>;
     </div>)}
-;
 
-export { NextGenInnovativeServices };
-;
-export { NextGenInnovativeServices };
-;
-export { NextGenInnovativeServices };
-;
-export { NextGenInnovativeServices };
-;
-export { NextGenInnovativeServices };
+
+export { NextGenInnovativeServices }
+export { NextGenInnovativeServices }
+export { NextGenInnovativeServices }
+export { NextGenInnovativeServices }
+export { NextGenInnovativeServices }

@@ -11,7 +11,7 @@ export default function AIHealthcareRevenueCycle() {};
     {};
 }
   ];
-;
+
   return (;
     <>;
       <div>Broken JSX</div>
@@ -50,7 +50,7 @@ export default function AIHealthcareRevenueCycle() {};
                 Built with enterprise-grade security, HIPAA compliance, and 99.9% uptime SLA.;
               </div>;
             </div>;
-            ;
+
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">;
                 Competitive Pricing;
@@ -84,5 +84,4 @@ export default function AIHealthcareRevenueCycle() {};
         </section>;
       </div>;
     </>;
-  );,
-}
+  )}

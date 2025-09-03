@@ -15,7 +15,7 @@ const QuantumComputing = () => {};
     {};
 }
   ];
-;
+
   const useCases = [;
     {};
 },;
@@ -26,7 +26,7 @@ const QuantumComputing = () => {};
     {};
 }
   ];
-;
+
   const technologies = [;
     "Quantum Annealing",;
     "Quantum Machine Learning",;
@@ -35,7 +35,7 @@ const QuantumComputing = () => {};
     "Quantum-Classical Hybrid Systems",;
     "Quantum Cloud Infrastructure";
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">;
       {/* Hero Section */}
@@ -93,8 +93,7 @@ const QuantumComputing = () => {};
                   <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>;
                   <p className="text-slate-300 text-sm">{feature.description}</p>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -116,8 +115,7 @@ const QuantumComputing = () => {};
                   <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>;
                   <p className="text-slate-300 text-sm">{useCase.description}</p>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -214,7 +212,5 @@ const QuantumComputing = () => {};
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default QuantumComputing;

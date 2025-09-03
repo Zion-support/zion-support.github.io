@@ -19,7 +19,7 @@ const BlockchainServicesPage = () => {};
     {};
 }
   ];
-;
+
   const blockchainPlatforms = [;
     'Ethereum', 'Polygon', 'Solana', 'Cardano', 'Polkadot', 'Hyperledger', 'Corda', 'Quorum';
   ];
@@ -36,8 +36,7 @@ const BlockchainServicesPage = () => {};
     visible: {};
 }
     }
-  };
-;
+  }
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">;
       <div className="container mx-auto px-4 py-12">;
@@ -56,7 +55,7 @@ const BlockchainServicesPage = () => {};
             Transform your business with blockchain technology. From smart contracts to DeFi solutions, ;
             we help you build secure, transparent, and decentralized applications.;
           </p>;
-          ;
+
           {/* Quick Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">;
             <div className="text-center">;

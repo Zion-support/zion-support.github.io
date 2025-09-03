@@ -17,10 +17,9 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         fields.forEach(field => {};
 import { useState, useEffect, useCallback } from "react";,"});,"})","});,"})","});,"})";
 ;,"});,"})";
-export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle = "Get in touch with our team", submitText = "Send Message", className = ", enableAnalytics = true, showProgressBar = true }) => {;,"});,"})";
+export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle = "Get in touch with our team", submitText = "Send Message", className = ", enableAnalytics = true, showProgressBar = true }) => {,"});,"})";
     const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,"});,"})";
-        enableUserBehaviorTracking: true,"});,"});";,
-}) ;,"});,"})";
+        enableUserBehaviorTracking: true,"});,"});"}) ;,"});,"})";
     const [formData, setFormData] = useState ({ /* comment */ }) ;,"});,"})";
     const [validation, setValidation] = useState ({ /* comment */ }) ;,"});,"})";
     const [isSubmitting, setIsSubmitting] = useState (false) ;,"});,"})";
@@ -38,8 +37,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
             initialValidation[field.name] = {}"});,"})";
                 isValid: !field.required,";,"});,"})";
                 message: ","});,"})";
-                isTouched: false,"});,"});";,
-}}) ;,"});,"})";
+                isTouched: false,"});,"});"}}) ;,"});,"})";
         setFormData(initialData) ;,"});,"})";
         setValidation(initialValidation) }, [fields]) ;,"});,"})";
     // comment;
@@ -63,8 +61,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
                 return "This field is required"}";,"});,"})";
             if (typeof value === "string" && value.trim() === "") {}"});,"})";
 ";,"});,"})";
-                return "This field is required"}"});,"});";,
-}";,"});,"})";
+                return "This field is required"}"});,"});"}";,"});,"})";
         // comment;
         if (!field.required && (typeof value === "string" && value.trim() === "")) {}"});,"})";
             return null}";,"});,"})";
@@ -76,8 +73,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;,"});,"})";
                 if (!emailPattern.test(stringValue)) {}"});,"})";
 ";,"});,"})";
-                    return "Please enter a valid email address"}"});,"});";,
-}";,"});,"})";
+                    return "Please enter a valid email address"}"});,"});"}";,"});,"})";
             // comment;
             if (field.type === "tel" && stringValue) {}"});,"})";
                 const phonePattern = /^[\+]?[1-9][\d]{0,15}$/;,"});,"})";
@@ -85,8 +81,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
 ";,"});,"})";
 "";,"});,"})";
 """;,"});,"})";
-                    return "Please enter a valid phone number"}"});,"});";,
-}"});,"})";
+                    return "Please enter a valid phone number"}"});,"});"}"});,"})";
             // comment;
             if(field.validation?.minLength && stringValue.length <div>Broken JSX</div>
             if(field.validation?.maxLength && stringValue.length > field.validation.maxLength) {}"});,"})";
@@ -105,8 +100,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
             if(field.validation?.custom) {}"});,"})";
                 const customError = field.validation.custom(stringValue);,"});,"})";
                 if(customError);,"});,"})";
-                    return customError}"});,"});";,
-}"});,"})";
+                    return customError}"});,"});"}"});,"})";
         return null}, [fields]) ;,"});,"})";
     // comment;
     const handleFieldChange = useCallback((name, value) => {}"});,"})";
@@ -114,33 +108,28 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
         // comment;
         const error = validateField(name, value);,"});,"})";
         setValidation(prev => ({}"});,"})";
-            ...prev,,"});,"})";
+            ...prev,"});,"})";
             [name]: {}"});,"})";
                 isValid: !error,";,"});,"})";
                 message: error || ","});,"})";
-                isTouched: true,"});,"});";,
-}) ) ;,"});,"})";
+                isTouched: true,"});,"});"}) ) ;,"});,"})";
         // comment;
         if (enableAnalytics) {}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
 """;,"});,"})";
-            trackEvent("form",field_changed", name, null, { fieldName: name, value: String(value) });,"});,"});";,
-}"});,"});";,
-}, [validateField, enableAnalytics, trackEvent]) ;,"});,"})";
+            trackEvent("form",field_changed", name, null, { fieldName: name, value: String(value) });,"});,"});"}"});,"});"}, [validateField, enableAnalytics, trackEvent]) ;,"});,"})";
     // comment;
     const handleFieldBlur = useCallback((name) => {}"});,"})";
         const value = formData[name];,"});,"})";
         const error = validateField(name, value);,"});,"})";
         setValidation(prev => ({}"});,"})";
-            ...prev,,"});,"})";
+            ...prev,"});,"})";
             [name]: {}"});,"})";
-                ...prev[name],,"});,"})";
+                ...prev[name],"});,"})";
                 isValid: !error,";,"});,"})";
                 message: error || ","});,"})";
-                isTouched: true,"});,"});";,
-}"});,"});";,
-}) ) }, [formData, validateField]) ;,"});,"})";
+                isTouched: true,"});,"});"}"});,"});"}) ) }, [formData, validateField]) ;,"});,"})";
     // comment;
     const isFormValid = useCallback(() => {}"});,"})";
         return Object.values(validation) .every(v => v.isValid) }, [validation]) ;,"});,"})";
@@ -152,8 +141,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
             if (enableAnalytics) {}"});,"})";
 ";,"});,"})";
                 trackEvent("form",validation_error",form_submission_failed", null, {}"});,"})";
-                    errors: Object.values(validation).filter(v => !v.isValid).length,"});,"});";,
-})}"});,"})";
+                    errors: Object.values(validation).filter(v => !v.isValid).length,"});,"});"})}"});,"})";
             return}"});,"})";
         setIsSubmitting(true) ;,"});,"})";
         try {}"});,"})";
@@ -186,18 +174,14 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
 ";,"});,"})";
 "";,"});,"})";
 """;,"});,"})";
-                    error: error instanceof Error ? error.message : "Unknown error"","});,"});";,
-}""";,"});,"})";
-            // comment;,
-}"});,"})";
+                    error: error instanceof Error ? error.message : "Unknown error"","});,"});"}""";,"});,"})";
+            // comment}"});,"})";
         finally {}"});,"})";
             setIsSubmitting(false);,"});,"})";
-;,"});,"});";,
-})}";,"});,"})";
+;,"});,"});"})}";,"});,"})";
             // comment;
         finally {}"});,"})";
-            setIsSubmitting(false)}"});,"});";,
-}, [formData, validation, isFormValid, onSubmit, enableAnalytics, trackEvent, trackConversion, title]);,"});,"})";
+            setIsSubmitting(false)}"});,"});"}, [formData, validation, isFormValid, onSubmit, enableAnalytics, trackEvent, trackConversion, title]);,"});,"})";
     // comment;
     const togglePasswordVisibility = useCallback((fieldName) => {}"});,"})";
         setShowPassword(prev => ({ ...prev, [fieldName]: !prev[fieldName] }))}, []);,"});,"})";
@@ -210,8 +194,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
             case "tel": return <Phone className="w-4 h-4"  />;"""";,"});,"})";
             case "textarea": return <MessageSquare className="w-4 h-4"  />;"""";,"});,"})";
             case "select": return <Building className="w-4 h-4"  />;"""";,"});,"})";
-            default: return <User className="w-4 h-4"  />}"});,"});";,
-}, []);,"});,"})";
+            default: return <User className="w-4 h-4"  />}"});,"});"}, []);,"});,"})";
     // comment;
     const renderField = useCallback((field) => {}"});,"})";
         const fieldValidation = validation[field.name];,"});,"})";
@@ -233,8 +216,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
   (e) => handleFieldChange(field.name,,"});,"})";
   e.target.value);,"});,"})";
 ";,"});,"})";
-"";,"});,"});";,
-} onBlur="{()" => handleFieldBlur(field.name)} placeholder="{field.placeholder}" className="{"w-full" pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched","});,"})";
+"";,"});,"});"} onBlur="{()" => handleFieldBlur(field.name)} placeholder="{field.placeholder}" className="{"w-full" pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched","});,"})";
                     ? fieldValidation.isValid"";,"});,"})";
                         ? "border-green-500 focus: ring-green-200""","});,"})";
                         : "border-red-500 focus: ring-red-200"""","});,"})";
@@ -242,8 +224,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
   (e) => handleFieldChange(field.name,,"});,"})";
   e.target.value);,"});,"})";
 ";,"});,"})";
-"";,"});,"});";,
-} onBlur="{()" => handleFieldBlur(field.name)} className="{"w-full" pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched","});,"})";
+"";,"});,"});"} onBlur="{()" => handleFieldBlur(field.name)} className="{"w-full" pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched","});,"})";
                     ? fieldValidation.isValid"";,"});,"})";
                         ? "border-green-500 focus: ring-green-200""","});,"})";
                         : "border-red-500 focus: ring-red-200"""","});,"})";
@@ -257,8 +238,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
   (e) => handleFieldChange(field.name,,"});,"})";
   e.target.checked);,"});,"})";
 """;,"});,"})";
-"""";,"});,"});";,
-} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500" />""","});,"})";
+"""";,"});,"});"} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500" />""","});,"})";
               <span className="text-sm text-gray-600 dark: text-gray-400">,"});,"})";
                 {field.placeholder}"});,"})";
               </span>";,"});,"})";
@@ -266,8 +246,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
   (e) => handleFieldChange(field.name,,"});,"})";
   e.target.value);,"});,"})";
 ";,"});,"})";
-"";,"});,"});";,
-} onBlur="{()" => handleFieldBlur(field.name)} placeholder="{field.placeholder}" className="{"w-full" pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched","});,"})";
+"";,"});,"});"} onBlur="{()" => handleFieldBlur(field.name)} placeholder="{field.placeholder}" className="{"w-full" pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched","});,"})";
                     ? fieldValidation.isValid"";,"});,"})";
                         ? "border-green-500 focus: ring-green-200""","});,"})";
                         : "border-red-500 focus: ring-red-200"""","});,"})";
@@ -383,27 +362,25 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
     const;const;const [progress, setProgress] = useState(0);,
 }
     // comment    useEffect(() => {}
-;
+
         const initialValidation = {}
-;
+
         fields.forEach(field => {}
-;
+
 ";
 
             initialData[field.name] = field.type === "checkbox" ? false : ;
             initialValidation[field.name] = {}";
                 isValid: !field.required,";
                 message: ",;
-isTouched: false}});,
-}
+isTouched: false}})}
 &apos;
 &apos;&apos;
             initialData[field.name] = field.type === &apos;checkbox&apos; ? false : &apos;
             initialValidation[field.name] = {}";
                 isValid: !field.required,;
                 message: '',;
-                isTouched: false;,
-}}) ;
+                isTouched: false}}) ;
         setFormData(initialData) ;
         setValidation(initialValidation) }, [fields]) ;
     // Update progress based on filled fields;
@@ -423,37 +400,34 @@ isTouched: false}});,
 ";
                 return "This field is required"}";
             if (typeof value = == "string" && value.trim() === ") {}
-;
+
                 return &apos;This field is required&apos}
-;
+
             if (typeof value === &apos;string&apos; && value.trim() === &apos;&apos) {}";
 
-                return &apos;This field is required&apos}";,
-}";
+                return &apos;This field is required&apos}"}";
         // comment;
         if (!field.required && (typeof value = == "string" && value.trim() === ")) {}
-;
+
             return null}";
         // comment;
         if (typeof value = == "string") {}
-;
+
             const stringValue = value.trim()";
             // comment;
         if (!field.required && (typeof value === &apos;string&apos; && value.trim() === &apos;&apos)) {}";
             return null}
-;
+
         // comment;
         if (typeof value === &apos;string&apos) {}&apos;&apos,;
-            const stringValue = value.trim();,
-}
+            const stringValue = value.trim()}
             // comment;
             if (field.type === &apos;email&apos; && stringValue) {}&apos;&apos;
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailPattern.test(stringValue)) {}";
 
-                    return &apos;Please enter a valid email address&apos}";,
-}
-;
+                    return &apos;Please enter a valid email address&apos}"}
+
             // comment;
             if (field.type === &apos;tel&apos; && stringValue) {}&apos;&apos;
                 const phonePattern = /^[\+]?[1-9][\d]{0,15}$/;
@@ -464,59 +438,55 @@ isTouched: false}});,
                     return &apos;Please enter a valid phone number&apos}";
 ";
             if (typeof value = == "boolean" && !value) {}
-;
+
 ";
                 return "This field is required"}";
             if (typeof value = == "string" && value.trim() === "") {}
-;
+
 ";
                 return "This field is required"}
-;,
 }";
         // comment;
         if (!field.required && (typeof value = == "string" && value.trim() === "")) {}
-;
+
             return null}";
         // comment;
         if (typeof value = == "string") {}
-;
+
             const stringValue = value.trim()";
             // comment;
             if (field.type = == "email" && stringValue) {}
-;
+
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailPattern.test(stringValue)) {}";
 ";
                     return "Please enter a valid email address"}
-;,
 }";
-            // comment;,
-}";
+            // comment}";
             // comment;
             if (field.type = == "tel" && stringValue) {}
-;
+
                 const phonePattern = /^[\+]?[1-9][\d]{0, 15}$/;
                 if (!phonePattern.test(stringValue.replace(/[\s\-\(\)]/g))) {}";
 ";
 
 ";
-;
+
 """;
 """;
                     return "Please enter a valid phone number"}
-;,
 }
-;
+
             // comment;
             if(field.validation?.minLength && stringValue.length <div>Broken JSX</div>
             if(field.validation?.maxLength && stringValue.length > field.validation.maxLength) {}
-;
+
 ";
 
 ";
 "";
                 return "Maximum length is ${field.validation.maxLength} characters"}
-;
+
             // comment;
             if (field.validation?.pattern && !field.validation.pattern.test(stringValue)) {}";
 ",;
@@ -525,31 +495,25 @@ isTouched: false}});,
 &apos;&apos;
                 return &apos;Please enter a valid value&apos}";
 ";
-;
+
 """;
                 return "Please enter a valid value"}
-;
+
             // comment;
             if(field.validation?.custom) {}&apos;&apos;
-                const customError = field.validation.custom(stringValue);,
+                const customError = field.validation.custom(stringValue)}
+                if(customError)}                    return customError}
 }
-                if(customError);,
-}                    return customError}
-;,
-}
-;
-        return null}, [fields]);,
-}
+
+        return null}, [fields])}
     // comment;
     const handleFieldChange = useCallback((name, value) => {}
-;
-        setFormData(prev => ({ ...prev, [name]: value }));,
-}
+
+        setFormData(prev => ({ ...prev, [name]: value }))}
         // comment;
-        const error = validateField(name, value);,
-}
+        const error = validateField(name, value)}
         setValidation(prev = > ({}
-;
+
             ...prev,;
             [name]: {}";
                 isValid: !error,";
@@ -559,69 +523,58 @@ isTouched: false}});,
                 isValid: !error,;
                 message: error || &apos,&apos,;
                 isTouched: true}
-;,
-}));,
-}
+}))}
         // comment;
         if (enableAnalytics) {}";
 ";
 
             trackEvent("form",field_changed", name, null, { fieldName: name, value: String(value) })}
-;
+
 &apos;
 &apos;&apos;
             trackEvent(&apos;form&apos,field_changed&apos, name, null, { fieldName: name, value: String(value) })}
-;
+
             ...prev, [name]: {}";
                 isValid: !error, ";
                 message: error || ", isTouched: true}
-;,
-}));,
-}
+}))}
         // comment;
         if (enableAnalytics) {}";
 ";
-;
+
 """;
             trackEvent("form", field_changed", name, null, { fieldName: name, value: String(value) })}
-;,
-}, [validateField, enableAnalytics, trackEvent]);,
-}
+}, [validateField, enableAnalytics, trackEvent])}
     // comment;
     const handleFieldBlur = useCallback((name) => {}
-;
+
         const;const;const value = formData[name];
-        const error = validateField(name, value);,
-}
+        const error = validateField(name, value)}
         setValidation(prev = > ({}
-;
+
             ...prev,;
             [name]: {}
-;
+
                 ...prev[name],;
                 isValid: !error,";
                 message: error || ",;
 message: error || &apos,&apos,;
                 isTouched: true}
-;
+
             ...prev, [name]: {}";
                 ...prev[name], isValid: !error,",";
                 message: error || ", isTouched: true}
-;,
-}))}, [formData, validateField]);,
-}
+}))}, [formData, validateField])}
     // comment;
     const isFormValid = useCallback(() => {}
-;
-        return Object.values(validation).every(v => v.isValid)}, [validation]);,
-}
+
+        return Object.values(validation).every(v => v.isValid)}, [validation])}
     // comment;
     const handleSubmit = useCallback(async (e) => {}
-;
-        e.preventDefault();,
-}
+
+        e.preventDefault()}
         if(!isFormValid()) {}
-;
+
             // comment;
             if (enableAnalytics) {}";
 
@@ -629,66 +582,57 @@ message: error || &apos,&apos,;
 ";
                 trackEvent("form", validation_error",form_submission_failed", null, {}
                     errors: Object.values(validation).filter(v = > !v.isValid).length})}
-;
+
             return}
-;
-        setIsSubmitting(true);,
-}
+
+        setIsSubmitting(true)}
         try {}
-;
+
             // comment;
             if (enableAnalytics) {}";
 ";
 
                 trackEvent("form",submission_started",form_submitted")}
-;
+
 &apos;
 &apos;&apos;
                 trackEvent(&apos;form&apos,submission_started&apos,form_submitted&apos)}
-;
-            await onSubmit(formData);,
-}
+
+            await onSubmit(formData)}
             // comment;
             if (enableAnalytics) {}";
 ";
 
-                trackEvent("form",submission_success",form_completed");,
-}
+                trackEvent("form",submission_success",form_completed")}
 &apos;
 &apos;&apos,;
-                trackEvent(&apos;form&apos,submission_success&apos,form_completed&apos);,
-}
+                trackEvent(&apos;form&apos,submission_success&apos,form_completed&apos)}
                 trackConversion(&apos;form_submission&apos, 1, { formType: title })}";
 ";
-;
+
 """;
                 trackEvent("form", submission_started",form_submitted")}
-;
-            await onSubmit(formData);,
-}
+
+            await onSubmit(formData)}
             // comment;
             if (enableAnalytics) {}";
 ";
-;
+
 """;
                 trackEvent("form", submission_success",form_completed")";
                 trackConversion("form_submission", 1, { formType: title })}
-;
-            setIsSubmitted(true);,
-}
+
+            setIsSubmitted(true)}
             // comment;
             setTimeout(() => {}
-;
-                setIsSubmitted(false);,
-}
-                setFormData({});,
-}
-                setValidation({});,
-}
+
+                setIsSubmitted(false)}
+                setFormData({})}
+                setValidation({})}
                 setProgress(0)}, 5000)}
-;
+
         catch(error) {}
-;
+
             // comment;
             if (enableAnalytics) {}";
 
@@ -705,24 +649,21 @@ message: error || &apos,&apos,;
 ";
                 trackEvent("form", submission_error",form_failed", null, {}";
 ";
-;
+
 """;
                     error: error instanceof Error ? error.message  : "Unknown error"""})}"",";
             // comment;
         finally {}
-;
+
             setIsSubmitting(false)}
-;,
-}, [formData, validation, isFormValid, onSubmit, enableAnalytics, trackEvent, trackConversion, title]);,
-}
+}, [formData, validation, isFormValid, onSubmit, enableAnalytics, trackEvent, trackConversion, title])}
     // comment;
     const togglePasswordVisibility = useCallback((fieldName) => {}
-;
-        setShowPassword(prev => ({ ...prev, [fieldName]: !prev[fieldName] }))}, []);,
-}
+
+        setShowPassword(prev => ({ ...prev, [fieldName]: !prev[fieldName] }))}, [])}
     // comment;
     const getFieldIcon = useCallback((field) => {}
-;
+
         switch(field.type) {}";
 """;
 """";
@@ -743,7 +684,7 @@ message: error || &apos,&apos,;
             case &apos;textarea&apos;: return&apos;&apos; <MessageSquare className="&apos;w-4" h-4&apos;       />&apos;&apos;&apos,";
             case &apos;select&apos;: return&apos;&apos; <Building className="&apos;w-4" h-4&apos;       />";&apos;&apos;";
             default: return&apos,&apos, <User className = "&apos,w-4" h-4&apos,       />}
-;
+
 "";
 """";
             case "email": return <Mail className="w - 4 h-4"  />",;
@@ -751,12 +692,10 @@ message: error || &apos,&apos,;
             case "textarea": return <MessageSquare className="w - 4 h-4"  />",;
             case "select": return <Building className="w - 4 h-4"  />",";
             default: return <User className = "w-4 h-4"  />}
-;,
-}, []);,
-}
+}, [])}
     // comment;
     const renderField = useCallback((field) => {}
-;
+
         const fieldValidation = validation[field.name];
         const fieldValidation = validation[field.name]";
         const isPasswordField = field.name.toLowerCase().includes("password");";
@@ -767,13 +706,13 @@ y: 20}} animate = {}
   {};
 ""}} className="space-y-2">"";";
         <label className = "block text-sm font-medium text-gray-700 dark:text-gray-300">""{field.label}""{field.required && <span className="text-red-500 ml-1">*</span>}
-;
+
         </label>;
 "";";
         <div className="relative">""{/* comment */}"";";
           <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">;
             {getFieldIcon(field)}
-;
+
           </div>;";
           {/* comment */}"{field.type = == "textarea" ? (<textarea name="{field.name}" value="{fieldValue}" onChange = {}>;
   (e) => handleFieldChange(field.name,;
@@ -795,7 +734,7 @@ y: 20}} animate = {}
 ""} className = "w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500" />",";
               <span className="text-sm text-gray-600 dark:text-gray-400">,;
                 {field.placeholder}
-;
+
               </span>";";
             </div>) : (<input type = "{isPasswordField" && showPassword[field.name] ? "text" : field.type} name="{field.name}" value="{fieldValue}" onChange = {}>;
   (e) => handleFieldChange(field.name,;
@@ -803,10 +742,10 @@ y: 20}} animate = {}
 ""} onBlur="{()" => handleFieldBlur(field.name)} placeholder="{field.placeholder}" className="{};
                     : "border-gray-300 focus:ring-blue-200 focus:border-blue-500"}"}/>)}";
 ""{/* comment */}""{isPasswordField && (<button type = "button" onClick="{()" => togglePasswordVisibility(field.name)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors">""{showPassword[field.name] ? <EyeOff className="w-4 h-4"  /> : <Eye className="w-4 h-4"  />}
-;
+
             </button>)}";
 ""{/* comment */}""{fieldValidation?.isTouched && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">""{fieldValidation.isValid ? (<CheckCircle className="w-5 h-5 text-green-500"  />) : (<AlertCircle className="w-5 h-5 text-red-500"  />)}
-;
+
         const;const;const fieldValidation = validation[field.name]";&apos;&apos;
         const isPasswordField = field.name.toLowerCase().includes(&apos;password&apos)";
         return (&apos;<div>Broken JSX</div>
@@ -816,7 +755,7 @@ y: 20}} animate = {}
   {};
 &apos,&apos,"&apos}} className="&apos;space-y-2&apos;">"&apos;&apos,&apos;&apos;";
         <label className="&apos;block" text-sm font-medium text-gray-700 dark: text-gray-300&apos,>"&apos,&apos,{field.label}&apos;&apos,&apos;{field.required &&"}&apos; <span className="&apos;text-red-500" ml-1&apos;>*&apos;</span>}
-;
+
         </label>&apos;&apos,;
 &apos;&apos,&apos;&apos,";
         <div className="&apos;relative&apos;">"&apos;&apos;{/* comment */}&apos;&apos,&apos;&apos,";
@@ -853,7 +792,7 @@ y: 20}} animate = {}
             </button>)}";
 &apos;&apos,{/* comment */}&apos;&apos,&apos;{fieldValidation?.isTouched && (&apos}&apos;<div className="&apos;absolute" right-3 top-1/2 transform -translate-y-1/2&apos;>"&apos;&apos,{fieldValidation.isValid ? (&apos}&apos;<CheckCircle className="&apos;w-5" h-5 text-green-500&apos;       />) : (&apos;<AlertCircle className="&apos;w-5" h-5 text-red-500&apos;       />)}&apos;
             </div>)}
-;
+
         </div>;
         {/* comment */}
 ;
@@ -871,7 +810,7 @@ y: 20}} animate = {}
         <div className="relative">"""{/* comment */}""";
           <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">;
             {getFieldIcon(field)}
-;
+
           </div>";
           {/* comment */}"{field.type === "textarea" ? (<textarea name="{field.name}" value="{fieldValue}" onChange = {}>;
   (e) => handleFieldChange(field.name, e.target.value)";";
@@ -899,7 +838,7 @@ y: 20}} animate = {}
             </button>)}";
 """{/* comment */}""""{fieldValidation?.isTouched && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">""""{fieldValidation.isValid ? (<CheckCircle className="w-5 h-5 text-green-500"  />) : (<AlertCircle className="w-5 h-5 text-red-500"  />)}";
             </div>)}
-;
+
         </div>;
         {/* comment */}
 ;
@@ -907,12 +846,12 @@ y: 20}} animate = {}
 height: 0}} animate = {}>;
   {};
 ""}} className = "text-sm text-red-600 dark:text-red-400">{fieldValidation.message}
-;
+
   { opacity: 0, height: 0}} animate = {}
 ;
   {};
 """"}} className = "text-sm text-red-600 dark: text-red-400">{fieldValidation.message}
-;
+
           </motion.p>)}
 ;
       </motion.div>)}, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility]);,
@@ -953,15 +892,15 @@ y: 20}} animate = {}
       <form onSubmit="{handleSubmit}" className="p-6 space-y-6">"";";
         <div className = "grid grid-cols-1 md: grid-cols-2 gap-6">,;
           {fields.map(field => renderField(field))}
-;
+
         </div>;
 ""{/* comment */}"""";";
         <motion.button type="submit" disabled="{!isFormValid()" || isSubmitting} className="{};
             : "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105"}"} whileHover="{isFormValid()" && !isSubmitting ? { scale: 1.02 } : {}} whileTap="{isFormValid()" && !isSubmitting ? { scale: 0.98 } : {}}>""{};
               <Send className="w-5 h-5"  />              {submitText}
-;
+
             </>) }
-;
+
         </motion.button>;
   { opacity: 0, scale: 0.9}} animate = {}
 ;
@@ -971,7 +910,7 @@ y: 20}} animate = {}
         <h3 className="&apos;text-2xl" font-bold text-green-800 dark: text-green-200 mb-2&apos,>";
           Thank You!&apos,&apos,&apos;&apos,",;
         </h3>&apos;&apos,&apos;&apos,";
-        <p className="&apos,text-green-600" dar,k: text-green-300&apos,>",,;
+        <p className="&apos,text-green-600" dar,k: text-green-300&apos,>",;
           Your message has been sent successfully. We&apos;ll get back to you soon!&apos;&apos,";
   scale: 1 "",";
 """"}} className = "text-center p-8 bg-green-50 dark: bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">"";
@@ -1015,10 +954,10 @@ y: 20}} animate = {}
               <Send className="&apos;w-5" h-5&apos;       />;
               {submitText}&apos;
             </>) }
-;
+
         </motion.button>;
         {/* comment */}
-;
+
         <AnimatePresence>;
           {Object.values(validation).some(v = > !v.isValid && v.isTouched) && (}<div>Broken JSX</div>
   {};
@@ -1032,7 +971,7 @@ y: 20}} animate = {}
               <p className = "&apos,text-sm" text-red-600 dar,k: text-red-400&apos,>;
                 Please fix the errors above before submitting the form.&apos,</p>;
             </motion.div>) }
-;
+
         </AnimatePresence>;
       </form>;
     </motion.div>)}&apos;&apos;";
@@ -1053,18 +992,18 @@ y: 20}} animate = {}
       <form onSubmit="{handleSubmit}" className="p-6 space-y-6">"";
         <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,;
           {fields.map(field => renderField(field))}
-;
+
         </div>";
 ""{/* comment */}"""";
         <motion.button type="submit" disabled="{!isFormValid()" || isSubmitting} className="{};
             : "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105"}"} whileHover = "{isFormValid()" && !isSubmitting ? { scale: 1.02 } : {}} whileTap="{isFormValid()" && !isSubmitting ? { scale: 0.98 } : {}}>"""{};
               <Send className="w-5 h-5"  />              {submitText}
-;
+
 </>) }
-;
+
         </motion.button>;
         {/* comment */}
-;
+
         <AnimatePresence>;
           {};
 height: 0}} animate = {}
@@ -1077,7 +1016,7 @@ height: 0}} animate = {}
               <p className = "text-sm text-red-600 dark:text-red-400">,;
                 Please fix the errors above before submitting the form.</p>,;
             </motion.div>) }
-;
+
         </AnimatePresence>;
       </form>;
     </motion.div>)}"";";
@@ -1091,7 +1030,7 @@ height: 0}} animate = {}
               <p className="text-sm text-red-600 dark:text-red-400">;
                 Please fix the errors above before submitting the form.</p>,;
             </motion.div>) }
-;
+
         </AnimatePresence>;
       </form>";
     </motion.div>)}"";

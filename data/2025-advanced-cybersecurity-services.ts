@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface AdvancedCybersecurityService {;
+export interface AdvancedCybersecurityService {
   id: string;
   name: string;
   tagline: string;
@@ -25,7 +25,7 @@ export interface AdvancedCybersecurityService {;
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -35,18 +35,17 @@ export interface AdvancedCybersecurityService {;
   launchDate: string;
   customers: number;
   rating: number;
-const contact = {;
+const contact = {
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709";
-  ;
-  ;
-  ;
-  ;
-  website: "https://ziontechgroup.com";,;,
-}
+
+
+
+
+  website: "https://ziontechgroup.com"}
 export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [;
-  {;
+  {
     id: "ai-threat-hunting-platform",;
     name: "AI Threat Hunting Platform",;
     tagline: "Proactively hunt and eliminate cyber threats before they strike",;
@@ -89,9 +88,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: "2024-12-01",;
     customers: 28,;
     rating: 4.9,;
-    reviews: 67;,;,
-},;
-  {;
+    reviews: 67},;
+  {
     id: "quantum-resistant-encryption-suite",;
     name: "Quantum-Resistant Encryption Suite",;
     tagline: "Future-proof encryption that withstands quantum computing attacks",;
@@ -134,9 +132,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: "2024-11-20",;
     customers: 15,;
     rating: 4.8,;
-    reviews: 23;,;,
-},;
-  {;
+    reviews: 23},;
+  {
     id: "zero-trust-security-framework",;
     name: "Zero Trust Security Framework",;
     tagline: "Never trust, always verify - comprehensive zero trust implementation",;
@@ -179,9 +176,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: "2024-10-15",;
     customers: 42,;
     rating: 4.7,;
-    reviews: 89;,;,
-},;
-  {;
+    reviews: 89},;
+  {
     id: "ai-powered-security-operations-center",;
     name: "AI-Powered Security Operations Center",;
     tagline: "Intelligent security operations with 24/7 AI monitoring and response",;
@@ -224,9 +220,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: "2024-09-30",;
     customers: 18,;
     rating: 4.9,;
-    reviews: 45;,;,
-},;
-  {;
+    reviews: 45},;
+  {
     id: "blockchain-security-auditor",;
     name: "Blockchain Security Auditor",;
     tagline: "Comprehensive security auditing for blockchain and DeFi applications",;
@@ -269,9 +264,8 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     launchDate: "2024-08-20",;
     customers: 35,;
     rating: 4.6,;
-    reviews: 78;,;,
-},;
-  {;
+    reviews: 78},;
+  {
     id: "iot-security-orchestrator",;
     name: "IoT Security Orchestrator",;
     tagline: "Comprehensive security for connected devices and IoT ecosystems",;

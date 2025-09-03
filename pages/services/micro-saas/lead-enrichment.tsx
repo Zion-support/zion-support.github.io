@@ -19,6 +19,5 @@ function Article({ title, subtitle, price, bullets, links }: { title: string; su
         Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> · Email: <a href={links.contact}>kleber@ziontechgroup.com</a>;
       </p>;
     </main>;
-  );,
-}
-;
+  )}
+

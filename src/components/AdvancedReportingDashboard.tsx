@@ -67,10 +67,10 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         rating: 4.6;
 
     ];
-;
+
     setReports(sampleReports) ;
     setFilteredReports(sampleReports) }, []) ;
-;
+
   // Filter and sort reports;
   useEffect(() => {};
 };,
@@ -93,7 +93,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       )}
-;
+
     // Sort reports;
     filtered.sort((a, b) => {};
   critical: 4 };          aValue = priorityOrder[a.priority as keyof typeof priorityOrder];

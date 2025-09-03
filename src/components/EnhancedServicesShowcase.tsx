@@ -35,87 +35,80 @@ function EnhancedServicesShowcase () {};
 }
 ;,"});,"})";
 ,"});,"})","});,"})","});,"})","});,"})";
-  Brain,,"});,"})";
-  Shield,,"});,"})";
-  Cloud,,"});,"})";
-  Database,,"});,"})";
-  Globe,,"});,"})";
-  Zap,,"});,"})";
-  ArrowRight,,"});,"})";
-  Star,,"});,"})";
-  TrendingUp,,"});,"})";
-  Users,,"});,"})";
-  Clock,,"});,"})";
-  CheckCircle,,"});,"})";
-  Search,"});,"});";,
-} from "lucide-react";,"});,"})";
+  Brain,"});,"})";
+  Shield,"});,"})";
+  Cloud,"});,"})";
+  Database,"});,"})";
+  Globe,"});,"})";
+  Zap,"});,"})";
+  ArrowRight,"});,"})";
+  Star,"});,"})";
+  TrendingUp,"});,"})";
+  Users,"});,"})";
+  Clock,"});,"})";
+  CheckCircle,"});,"})";
+  Search,"});,"});"} from "lucide-react";,"});,"})";
 ;,"});,"})";
 export const EnhancedServicesShowcase: React.FC = () => {"});,"})";
   const services = [],,"});,"})";
       benefits: ["Reduce manual work by 70-85%", "Improve efficiency by 60%", "Cut operational costs by 40-50%"],,"});,"})";
       color: "from-cyan-500 to-blue-600","});,"})";
-      glowColor: "cyan","});,"});";,
-},,"});,"})";
-    {;,"});,"})";
+      glowColor: "cyan","});,"});"},"});,"})";
+    {,"});,"})";
       title: "AI Cybersecurity","});,"})";
       description: "Protect your business with AI-powered threat detection and prevention","});,"})";
       price: "From $499/month","});,"})";
       path: "/services/ai-cybersecurity","});,"})";
       icon: Shield,"});,"})";
       category: "Security","});,"})";
-      features: ["Threat detection", "Behavioral analytics", "Automated response", "Compliance monitoring"],,"});,"})";
-      benefits: ["Detect threats 10x faster", "Reduce false positives by 85%", "Prevent 99.9% of attacks"],,"});,"})";
+      features: ["Threat detection", "Behavioral analytics", "Automated response", "Compliance monitoring"],"});,"})";
+      benefits: ["Detect threats 10x faster", "Reduce false positives by 85%", "Prevent 99.9% of attacks"],"});,"})";
       color: "from-purple-500 to-indigo-600","});,"})";
-      glowColor: "purple","});,"});";,
-},,"});,"})";
-    {;,"});,"})";
+      glowColor: "purple","});,"});"},"});,"})";
+    {,"});,"})";
       title: "Quantum Computing","});,"})";
       description: "Solve complex problems 1000x faster with quantum computing solutions","});,"})";
-      price: "From $2,999/month",,"});,"})";
+      price: "From $2,999/month","});,"})";
       path: "/services/quantum-computing-solutions","});,"})";
       icon: Atom,"});,"})";
       category: "Quantum Tech","});,"})";
-      features: ["Quantum algorithms", "ML acceleration", "Financial modeling", "Drug discovery"],,"});,"})";
-      benefits: ["1000x faster computation", "Breakthrough discoveries", "Unbreakable encryption"],,"});,"})";
+      features: ["Quantum algorithms", "ML acceleration", "Financial modeling", "Drug discovery"],"});,"})";
+      benefits: ["1000x faster computation", "Breakthrough discoveries", "Unbreakable encryption"],"});,"})";
       color: "from-green-500 to-emerald-600","});,"})";
-      glowColor: "green","});,"});";,
-},,"});,"})";
-    {;,"});,"})";
+      glowColor: "green","});,"});"},"});,"})";
+    {,"});,"})";
       title: "IoT Edge Computing","});,"})";
       description: "Process data at the edge and reduce latency by 90%","});,"})";
       price: "From $399/month","});,"})";
       path: "/services/iot-edge-computing","});,"})";
       icon: Cpu,"});,"})";
       category: "IoT & Edge","});,"})";
-      features: ["Edge processing", "Device management", "Real-time analytics", "AI at the edge"],,"});,"})";
-      benefits: ["Reduce latency by 90%", "Cut bandwidth costs by 60-80%", "Scale to millions of devices"],,"});,"})";
+      features: ["Edge processing", "Device management", "Real-time analytics", "AI at the edge"],"});,"})";
+      benefits: ["Reduce latency by 90%", "Cut bandwidth costs by 60-80%", "Scale to millions of devices"],"});,"})";
       color: "from-orange-500 to-red-600","});,"})";
-      glowColor: "orange","});,"});";,
-},,"});,"})";
-    {;,"});,"})";
+      glowColor: "orange","});,"});"},"});,"})";
+    {,"});,"})";
       title: "Cloud & DevOps","});,"})";
-      description: "Build, deploy, and scale with enterprise-grade cloud infrastructure",,"});,"})";
+      description: "Build, deploy, and scale with enterprise-grade cloud infrastructure","});,"})";
       price: "From $799/month","});,"})";
       path: "/services/cloud-devops","});,"})";
       icon: Cloud,"});,"})";
       category: "Infrastructure","});,"})";
-      features: ["Cloud migration", "CI/CD pipelines", "Infrastructure as code", "Monitoring & alerting"],,"});,"})";
-      benefits: ["Faster deployments", "Improved reliability", "Cost optimization", "Scalability"],,"});,"})";
+      features: ["Cloud migration", "CI/CD pipelines", "Infrastructure as code", "Monitoring & alerting"],"});,"})";
+      benefits: ["Faster deployments", "Improved reliability", "Cost optimization", "Scalability"],"});,"})";
       color: "from-blue-500 to-cyan-600","});,"})";
-      glowColor: "blue","});,"});";,
-},,"});,"})";
-    {;,"});,"})";
+      glowColor: "blue","});,"});"},"});,"})";
+    {,"});,"})";
       title: "AI Sales Copilot","});,"})";
       description: "Automate sales processes and boost conversion rates with AI","});,"})";
-      price: "From $1,500/month",,"});,"})";
+      price: "From $1,500/month","});,"})";
       path: "/services/ai-sales-copilot","});,"})";
       icon: Brain,"});,"})";
       category: "Sales AI","});,"})";
-      features: ["Lead scoring", "CRM automation", "Sales analytics", "Predictive insights"],,"});,"})";
-      benefits: ["Reduce admin time by 40-60%", "Improve conversion rates", "Shorten sales cycles"],,"});,"})";
+      features: ["Lead scoring", "CRM automation", "Sales analytics", "Predictive insights"],"});,"})";
+      benefits: ["Reduce admin time by 40-60%", "Improve conversion rates", "Shorten sales cycles"],"});,"})";
       color: "from-pink-500 to-rose-600","});,"})";
-      glowColor: "pink","});,"});";,
-};,"});,"})";
+      glowColor: "pink","});,"});"};,"});,"})";
   ],"});,"})";
 ;,"});,"})";
   const containerVariants = {});,"})";
@@ -130,8 +123,7 @@ export const EnhancedServicesShowcase: React.FC = () => {"});,"})";
 const categories = [];,"});,"})";
 ;,"});,"})";
 export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState("All");,"});,"})";
-  const [hoveredService, setHoveredService] = useState<string | null>(null);,"});,"});,
-}
+  const [hoveredService, setHoveredService] = useState<string | null>(null);,"});,"})}
 ";
 ;import { motion } from "framer-motion";";
 export default function EnhancedServicesShowcase() {};
@@ -164,16 +156,15 @@ glowColor: "orange"},;
 glowColor: "blue"},;
     {};
 glowColor: "pink"}
-;
+
   ];
   const containerVariants = {},;
     visible: {};
 transition: {staggerChildren: 0.1}
 ;,
 }
-;,
 }
-;
+
 const categories = [];
 export default function EnhancedServicesShowcase(...args: unknown[]): unknown {};
 }
@@ -198,16 +189,15 @@ export {};
       glowColor: &apos,blue&apos},;
     {};
       glowColor: &apos,pink&apos}
-;
+
   ]&apos;
   const containerVariants = {},;
     visible: {};
       transition: {staggerChildre,n: 0.1}
 ;,
 }
-;,
 }
-;
+
 const categories = [];
 ;&apos,;
 export default function EnhancedServicesShowcase(...args: unknown[]): unknown ,{}  const [selectedCategory, setSelectedCategory] = useState(&apos;All&apos)&apos,;
@@ -224,7 +214,7 @@ export const EnhancedServicesShowcase: React.FC = () => {};
       title: "IoT Edge Computing", description: "Process data at the edge and reduce latency by 90%", price: "From $399/month", path: "/services/iot-edge-computing", icon: Cpu, category: "IoT & Edge", features: ["Edge processing", "Device management", "Real-time analytics", "AI at the edge"], benefits: ["Reduce latency by 90%", "Cut bandwidth costs by 60-80%", "Scale to millions of devices"], color: "from-orange-500 to-red-600", glowColor: "orange"}, {};
       title: "Cloud & DevOps", description: "Build, deploy, and scale with enterprise-grade cloud infrastructure", price: "From $799/month", path: "/services/cloud-devops", icon: Cloud, category: "Infrastructure", features: ["Cloud migration", "CI/CD pipelines", "Infrastructure as code", "Monitoring & alerting"], benefits: ["Faster deployments", "Improved reliability", "Cost optimization", "Scalability"], color: "from-blue-500 to-cyan-600", glowColor: "blue"}, {};
       title: "AI Sales Copilot", description: "Automate sales processes and boost conversion rates with AI", price: "From $1, 500/month", path: "/services/ai-sales-copilot", icon: Brain, category: "Sales AI", features: ["Lead scoring", "CRM automation", "Sales analytics", "Predictive insights"], benefits: ["Reduce admin time by 40-60%", "Improve conversion rates", "Shorten sales cycles"], color: "from-pink-500 to-rose-600", glowColor: "pink"}
-;
+
   Clock, CheckCircle,;
   Search} from "lucide-react";
 export const EnhancedServicesShowcase: React.FC = () => {};
@@ -234,7 +224,7 @@ export const EnhancedServicesShowcase: React.FC = () => {};
       glowColor: "orange"}, {};
       glowColor: "blue"}, {};
       glowColor: "pink"}
-;
+
   ];
   const containerVariants = {}, visible: {};
       transition: { staggerChildren: 0.1  }
@@ -261,22 +251,20 @@ export const EnhancedServicesShowcase: React.FC = () => {};
       title: "IoT Edge Computing", description: "Process data at the edge and reduce latency by 90%", price: "From $399/month", path: "/services/iot-edge-computing", icon: Cpu, category: "IoT & Edge", features: ["Edge processing,Device management,Real-time analytics,AI at the edge"], benefits: ["Reduce latency by 90%,Cut bandwidth costs by 60-80%,Scale to millions of devices"], color: "from-orange-500 to-red-600", glowColor: "orange"}, {};
       title: "Cloud & DevOps", description: "Build, deploy, and scale with enterprise-grade cloud infrastructure", price: "From $799/month", path: "/services/cloud-devops", icon: Cloud, category: "Infrastructure", features: ["Cloud migration,CI/CD pipelines,Infrastructure as code,Monitoring & alerting"], benefits: ["Faster deployments,Improved reliability,Cost optimization,Scalability"], color: "from-blue-500 to-cyan-600", glowColor: "blue"}, {};
       title: "AI Sales Copilot", description: "Automate sales processes and boost conversion rates with AI", price: "From $1,500/month", path: "/services/ai-sales-copilot", icon: Brain, category: "Sales AI", features: ["Lead scoring,CRM automation,Sales analytics,Predictive insights"], benefits: ["Reduce admin time by 40-60%,Improve conversion rates,Shorten sales cycles"], color: "from-pink-500 to-rose-600", glowColor: "pink"}
-;
+
   ];
 
   const containerVariants = {}, visible: {};
 opacity: 1, transition: {staggerChildren: 0.1}
 ;,
 }
-;,
 }";
 
 const categories = [];
 ";
 ""        staggerChildren: 0.1}
-;,
 }
-;
+
                 {/* Hover Glow Effect */}`;
                 <div className={`absolute inset-0 bg-gradient-to-r ${service.color} rounded-3xl opacity-0 group-hover:opacity-5 transition-opacity duration-500 blur-xl`}></div>;
               </div>;
@@ -383,7 +371,7 @@ const categories = [];
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
+    </section>;) }
             >;
               View All Services;
               <ArrowRight className="ml-2 w-5 h-5" />;
@@ -397,12 +385,12 @@ const categories = [];
             Questions? Email <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline">kleber@ziontechgroup.com</a>;
           </div>;
         )}
-;
+
         {/* Results Count */}
         {};
             Showing {filteredServices.length} of {allServices.length} services;
           </div>;
         )}
       </div>;
-    </section>) };
+    </section>) }
 '"`;

@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface EmergingTechInnovation2025 {;
+export interface EmergingTechInnovation2025 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface EmergingTechInnovation2025 {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface EmergingTechInnovation2025 {;
   rating: number;
 export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [;
   // Neuromorphic Computing;
-  {;
+  {
     id: "neuromorphic-computing-platform",;
     name: "Neuromorphic Computing Platform",;
     tagline: "Brain-inspired computing for next-generation AI",;
@@ -76,21 +76,19 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [;
     marketSize: "$6.8B neuromorphic computing market",;
     growthRate: "320% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full-stack neuromorphic computing platform with hardware integration, software development, and comprehensive API access. Includes custom neural architecture development and optimization services.",;
     launchDate: "2025-01-25",;
     customers: 65,;
     rating: 4.8,;
-    reviews: 42;,;,
-},;
+    reviews: 42},;
   // DNA Computing;
-  {;
+  {
     id: "dna-computing-platform",;
     name: "DNA Computing Platform",;
     tagline: "Molecular computing for complex problem solving",;
@@ -128,21 +126,19 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [;
     marketSize: "$2.8B DNA computing market",;
     growthRate: "400% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Commercial DNA computing platform with laboratory integration, molecular programming, and comprehensive problem-solving capabilities. Includes custom DNA algorithm development and laboratory setup services.",;
     launchDate: "2025-02-01",;
     customers: 25,;
     rating: 4.9,;
-    reviews: 18;,;,
-},;
+    reviews: 18},;
   // Photonic Computing;
-  {;
+  {
     id: "photonic-computing-platform",;
     name: "Photonic Computing Platform",;
     tagline: "Light-speed computing with photonic processors",;
@@ -180,21 +176,19 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [;
     marketSize: "$4.2B photonic computing market",;
     growthRate: "280% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade photonic computing platform with optical integration, parallel processing, and comprehensive API access. Includes custom photonic design and optimization services.",;
     launchDate: "2025-02-05",;
     customers: 45,;
     rating: 4.7,;
-    reviews: 31;,;,
-},;
+    reviews: 31},;
   // Holographic Technology;
-  {;
+  {
     id: "holographic-display-platform",;
     name: "Holographic Display Platform",;
     tagline: "Next-generation 3D holographic visualization",;
@@ -232,21 +226,19 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [;
     marketSize: "$8.5B holographic display market",;
     growthRate: "220% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive holographic display platform with content creation tools, streaming capabilities, and mobile support. Includes custom holographic solution development and hardware integration.",;
     launchDate: "2025-02-10",;
     customers: 180,;
     rating: 4.6,;
-    reviews: 95;,;,
-},;
+    reviews: 95},;
   // Quantum Internet;
-  {;
+  {
     id: "quantum-internet-platform",;
     name: "Quantum Internet Platform",;
     tagline: "Ultra-secure quantum internet infrastructure",;
@@ -284,12 +276,11 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [;
     marketSize: "$15B quantum internet market",;
     growthRate: "350% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade quantum internet platform with network infrastructure, security protocols, and comprehensive management tools. Includes custom quantum protocol development and network integration.",;
     launchDate: "2025-02-15',;

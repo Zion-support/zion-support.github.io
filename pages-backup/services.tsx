@@ -1,9 +1,7 @@
 import Head from "next/head";
 import React from "react";
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
-const Link = dynamic(() => import("next/link"), { ssr: false });,
-}
+const Head = dynamic(() => import("next/head"), { ssr: false })}
+const Link = dynamic(() => import("next/link"), { ssr: false })}
 	const description = "AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.;
 	return (;
 		<>;
@@ -21,339 +19,332 @@ const Link = dynamic(() => import("next/link"), { ssr: false });,
 					<div className="mx-auto" max-w-2xl text-center">";
 						<div className="flex items-center justify-center mb-4>";
 							<Award className="h-6" w-6 text-blue-600 mr-2"  />";
-							<span className="text-base font-semibold leading-7 text-blue-600>Our Services</span>",,;
-,});,"})","});,})","})";
-  ArrowRight,,"});,})";
-  Brain,,});,"})";
-  Cloud,,"});,})";
-  Shield,,});,"})";
-  Zap,,"});,})";
-  Database,,});,"})";
-  Server,,"});,})";
-  Lock,,});,"})";
-  BarChart3,,"});,})";
-  Users,,});,"})";
-  Globe,,"});,})";
-  Code,,});,"})";
-  CheckCircle,,"});,})";
-  Star,,});,"})";
-  TrendingUp,,"});,})";
-  Clock,,});,"})";
-  Award,"});,});";,
-} from "lucide-react";,});,"})";
-;,"});,})";
-export default function Services() {,});,"})";
-  const title = "Services — Zion Tech Group";,"});,})";
-  const description =;,});,"})";
-    "AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.";,"});,})";
+							<span className="text-base font-semibold leading-7 text-blue-600>Our Services</span>",;
+});,"})","});})","})";
+  ArrowRight,"});})";
+  Brain});,"})";
+  Cloud,"});})";
+  Shield});,"})";
+  Zap,"});})";
+  Database});,"})";
+  Server,"});})";
+  Lock});,"})";
+  BarChart3,"});})";
+  Users});,"})";
+  Globe,"});})";
+  Code});,"})";
+  CheckCircle,"});})";
+  Star});,"})";
+  TrendingUp,"});})";
+  Clock});,"})";
+  Award,"});});"} from "lucide-react";});,"})";
+;,"});})";
+export default function Services() {});,"})";
+  const title = "Services — Zion Tech Group";,"});})";
+  const description =;});,"})";
+    "AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.";,"});})";
   return (});,"})";
-    <PageTransition>;,"});,})";
+    <PageTransition>;,"});})";
       {/* comment */}});,"})";
-      <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32>,});,"})";
-        <div className="mx-auto max-w-7xl px-6 lg: px-8>,});,"})";
-          <div className="mx-auto max-w-2xl text-center>;,});,"})";
-            <div className="flex items-center justify-center mb-4>;,});,"})";
-              <Award className="h-6 w-6 text-blue-600 mr-2       />;,});,"})";
-              <span className="text-base font-semibold leading-7 text-blue-600>;,});,"})";
-                Our Services,"});,})";
-              </span>;,});,"})";
-            </div>;,"});,})";
-            <h1 className="text-3xl" font-bold tracking-tight text-gray-900 sm: text-4xl">,"});,})";
-            </h1>;,});,"})";
-            <p className="mt-6 text-lg leading-8 text-gray-600>;,});,"})";
-              From strategy to production, we deliver outcomes fast. Our,"});,})";
-              comprehensive suite of services covers everything you need to,});,"})";
-              transform your business.;,"});,})";
-            </p>;,});,"})";
-      </section>;,"});,})";
+      <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32>});,"})";
+        <div className="mx-auto max-w-7xl px-6 lg: px-8>});,"})";
+          <div className="mx-auto max-w-2xl text-center>;});,"})";
+            <div className="flex items-center justify-center mb-4>;});,"})";
+              <Award className="h-6 w-6 text-blue-600 mr-2       />;});,"})";
+              <span className="text-base font-semibold leading-7 text-blue-600>;});,"})";
+                Our Services,"});})";
+              </span>;});,"})";
+            </div>;,"});})";
+            <h1 className="text-3xl" font-bold tracking-tight text-gray-900 sm: text-4xl">,"});})";
+            </h1>;});,"})";
+            <p className="mt-6 text-lg leading-8 text-gray-600>;});,"})";
+              From strategy to production, we deliver outcomes fast. Our,"});})";
+              comprehensive suite of services covers everything you need to});,"})";
+              transform your business.;,"});})";
+            </p>;});,"})";
+      </section>;,"});})";
       {/* comment */}});,"})";
-      <section className="py-24 sm: py-32>,});,"})";
-          <div className="grid gap-8 lg: grid-cols-2>,});,"})";
-            {/* comment */}"});,})";
-            <div,});,"})";
-              id="ai;,});,"})";
-              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-blue-300,});,"})">;,"});,})";
-              <div className="flex" items-center gap-x-3 mb-6">;,"});,})";
-                <div className="flex" h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover: bg-blue-700 transition-colors">,"});,})";
-                  <Brain className="h-7" w-7 text-white"  />;,"});,})";
-                <div>;,});,"})";
-                  <h2 className="text-xl font-semibold text-gray-900>;,});,"})";
-                    AI Autonomous Systems,"});,})";
-                  </h2>;,});,"})";
-                  <p className="text-sm text-blue-600 font-medium>;,});,"})";
-                    Intelligent Automation,"});,})";
-              <p className="text-gray-600" mb-6">;,"});,})";
-                Transform your operations with intelligent automation and,});,"})";
-                AI-powered decision making.;,"});,})";
-              <ul className="space-y-3" mb-6">;,"});,})";
-                <li className="flex" items-center gap-x-3">;,"});,})";
-                  <CheckCircle className="h-4" w-4 text-blue-600"  />;,"});,})";
-                  <span className="text-sm" text-gray-700">;,"});,})";
-                    Sales/CS multi-agent copilots,});,"})";
-                </li>;,"});,})";
-                    RAG and workflow orchestration,});,"})";
-                    Observability and guardrails,"});,})";
-                    Intelligent process automation,});,"})";
-              </ul>;,"});,})";
-              <div className="flex" items-center justify-between">;,"});,})";
-                <div className="flex" items-center space-x-2 text-sm text-gray-500">;,"});,})";
-                  <Clock className="h-4" w-4"  />;,"});,})";
-                  <span>2-4 weeks delivery</span>;,});,"})";
-                <Link,"});,})";
-                  to=/contact";,"});,})";
-                  className="inline-flex" items-center text-sm font-semibold text-blue-600 hover: text-blue-500 transition-colors group","});,})";
-                <Link;,});,"})";
-                  href="/contact;,});,"})";
-                  className="inline-flex items-center text-sm font-semibold text-blue-600 hover: text-blue-500 transition-colors group,,});,"});,
-}
-aria-label="Get started with AI services;,});,"})";
-                  Get started with AI,"});,})";
-                  <ArrowRight className="ml-2" h-4 w-4 group-hover: translate-x-1 transition-transform"  />,"});,})";
-                </Link>;,});,"})";
-            {/* comment */}"});,})";
-              id=cloud";,"});,})";
-              className="group" relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-green-300","});,})";
-                <div className="flex" h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover: bg-green-700 transition-colors">,"});,})";
-                  <Cloud className="h-7" w-7 text-white"  />;,"});,})";
-                    Cloud Platforms,});,"})";
-                  <p className="text-sm text-green-600 font-medium>;,});,"})";
-                    Scalable Infrastructure,"});,})";
-                Build scalable, resilient cloud infrastructure that grows with,});,"})";
-                your business.;,"});,})";
-                  <CheckCircle className="h-4" w-4 text-green-600"  />;,"});,})";
-                    Serverless and Kubernetes,});,"})";
-                    Data pipelines and ML ops,"});,})";
-                    FinOps and SRE practices,});,"})";
-                    Multi-cloud architecture,"});,})";
-                  <span>4-8 weeks delivery</span>;,});,"})";
-                  className="inline-flex items-center text-sm font-semibold text-green-600 hover: text-green-500 transition-colors group,});,"})";
-                  aria-label="Get started with cloud services;,});,"})";
-                  Get started with Cloud,"});,})";
+      <section className="py-24 sm: py-32>});,"})";
+          <div className="grid gap-8 lg: grid-cols-2>});,"})";
+            {/* comment */}"});})";
+            <div});,"})";
+              id="ai;});,"})";
+              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-blue-300});,"})">;,"});})";
+              <div className="flex" items-center gap-x-3 mb-6">;,"});})";
+                <div className="flex" h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover: bg-blue-700 transition-colors">,"});})";
+                  <Brain className="h-7" w-7 text-white"  />;,"});})";
+                <div>;});,"})";
+                  <h2 className="text-xl font-semibold text-gray-900>;});,"})";
+                    AI Autonomous Systems,"});})";
+                  </h2>;});,"})";
+                  <p className="text-sm text-blue-600 font-medium>;});,"})";
+                    Intelligent Automation,"});})";
+              <p className="text-gray-600" mb-6">;,"});})";
+                Transform your operations with intelligent automation and});,"})";
+                AI-powered decision making.;,"});})";
+              <ul className="space-y-3" mb-6">;,"});})";
+                <li className="flex" items-center gap-x-3">;,"});})";
+                  <CheckCircle className="h-4" w-4 text-blue-600"  />;,"});})";
+                  <span className="text-sm" text-gray-700">;,"});})";
+                    Sales/CS multi-agent copilots});,"})";
+                </li>;,"});})";
+                    RAG and workflow orchestration});,"})";
+                    Observability and guardrails,"});})";
+                    Intelligent process automation});,"})";
+              </ul>;,"});})";
+              <div className="flex" items-center justify-between">;,"});})";
+                <div className="flex" items-center space-x-2 text-sm text-gray-500">;,"});})";
+                  <Clock className="h-4" w-4"  />;,"});})";
+                  <span>2-4 weeks delivery</span>;});,"})";
+                <Link,"});})";
+                  to=/contact";,"});})";
+                  className="inline-flex" items-center text-sm font-semibold text-blue-600 hover: text-blue-500 transition-colors group","});})";
+                <Link;});,"})";
+                  href="/contact;});,"})";
+                  className="inline-flex items-center text-sm font-semibold text-blue-600 hover: text-blue-500 transition-colors group});,"})}
+aria-label="Get started with AI services;});,"})";
+                  Get started with AI,"});})";
+                  <ArrowRight className="ml-2" h-4 w-4 group-hover: translate-x-1 transition-transform"  />,"});})";
+                </Link>;});,"})";
+            {/* comment */}"});})";
+              id=cloud";,"});})";
+              className="group" relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-green-300","});})";
+                <div className="flex" h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover: bg-green-700 transition-colors">,"});})";
+                  <Cloud className="h-7" w-7 text-white"  />;,"});})";
+                    Cloud Platforms});,"})";
+                  <p className="text-sm text-green-600 font-medium>;});,"})";
+                    Scalable Infrastructure,"});})";
+                Build scalable, resilient cloud infrastructure that grows with});,"})";
+                your business.;,"});})";
+                  <CheckCircle className="h-4" w-4 text-green-600"  />;,"});})";
+                    Serverless and Kubernetes});,"})";
+                    Data pipelines and ML ops,"});})";
+                    FinOps and SRE practices});,"})";
+                    Multi-cloud architecture,"});})";
+                  <span>4-8 weeks delivery</span>;});,"})";
+                  className="inline-flex items-center text-sm font-semibold text-green-600 hover: text-green-500 transition-colors group});,"})";
+                  aria-label="Get started with cloud services;});,"})";
+                  Get started with Cloud,"});})";
             {/* comment */}});,"})";
-              id="cybersecurity;,});,"})";
-              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-purple-300,});,"})";
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover: bg-purple-700 transition-colors>,});,"})";
-                  <Shield className="h-7 w-7 text-white       />;,});,"})";
-                    Cybersecurity,"});,})";
-                  <p className="text-sm" text-purple-600 font-medium">;,"});,})";
-                    Zero-Trust Security,});,"})";
-                Protect your business with enterprise-grade security frameworks,"});,})";
-                and compliance automation.;,});,"})";
-                  <CheckCircle className="h-4 w-4 text-purple-600       />;,});,"})";
-                    Zero-trust architecture,"});,})";
-                    Compliance automation,});,"})";
-                    Incident response,"});,})";
-                  <span className="text-sm" text-gray-700">Security audits</span>;,"});,})";
-                  <span>3-6 weeks delivery</span>;,});,"})";
-                  className="inline-flex items-center text-sm font-semibold text-purple-600 hover: text-purple-500 transition-colors group,});,"})";
-                  aria-label="Get started with cybersecurity services;,});,"})";
-                  Get started with Security,"});,})";
+              id="cybersecurity;});,"})";
+              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-purple-300});,"})";
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover: bg-purple-700 transition-colors>});,"})";
+                  <Shield className="h-7 w-7 text-white       />;});,"})";
+                    Cybersecurity,"});})";
+                  <p className="text-sm" text-purple-600 font-medium">;,"});})";
+                    Zero-Trust Security});,"})";
+                Protect your business with enterprise-grade security frameworks,"});})";
+                and compliance automation.;});,"})";
+                  <CheckCircle className="h-4 w-4 text-purple-600       />;});,"})";
+                    Zero-trust architecture,"});})";
+                    Compliance automation});,"})";
+                    Incident response,"});})";
+                  <span className="text-sm" text-gray-700">Security audits</span>;,"});})";
+                  <span>3-6 weeks delivery</span>;});,"})";
+                  className="inline-flex items-center text-sm font-semibold text-purple-600 hover: text-purple-500 transition-colors group});,"})";
+                  aria-label="Get started with cybersecurity services;});,"})";
+                  Get started with Security,"});})";
             {/* comment */}});,"})";
-              id="saas;,});,"})";
-              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-orange-300,});,"})";
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover: bg-orange-700 transition-colors>,});,"})";
-                  <Code className="h-7 w-7 text-white       />;,});,"})";
-                    Micro SaaS,"});,})";
-                  <p className="text-sm" text-orange-600 font-medium">;,"});,})";
-                    Custom Solutions,});,"})";
-                Custom software solutions tailored to your specific business,"});,})";
-                needs and workflows.;,});,"})";
-                  <CheckCircle className="h-4 w-4 text-orange-600       />;,});,"})";
-                    Custom web applications,"});,})";
-                  <span className="text-sm" text-gray-700">API development</span>;,"});,})";
-                    Integration services,});,"})";
-                    Maintenance & support,"});,})";
-                  <span>6-12 weeks delivery</span>;,});,"})";
-                  className="inline-flex items-center text-sm font-semibold text-orange-600 hover: text-orange-500 transition-colors group,});,"})";
-                  aria-label="Get started with custom software services;,});,"})";
-                  Get started with SaaS,"});,})";
+              id="saas;});,"})";
+              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-orange-300});,"})";
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover: bg-orange-700 transition-colors>});,"})";
+                  <Code className="h-7 w-7 text-white       />;});,"})";
+                    Micro SaaS,"});})";
+                  <p className="text-sm" text-orange-600 font-medium">;,"});})";
+                    Custom Solutions});,"})";
+                Custom software solutions tailored to your specific business,"});})";
+                needs and workflows.;});,"})";
+                  <CheckCircle className="h-4 w-4 text-orange-600       />;});,"})";
+                    Custom web applications,"});})";
+                  <span className="text-sm" text-gray-700">API development</span>;,"});})";
+                    Integration services});,"})";
+                    Maintenance & support,"});})";
+                  <span>6-12 weeks delivery</span>;});,"})";
+                  className="inline-flex items-center text-sm font-semibold text-orange-600 hover: text-orange-500 transition-colors group});,"})";
+                  aria-label="Get started with custom software services;});,"})";
+                  Get started with SaaS,"});})";
       {/* comment */}});,"})";
-      <section className="py-24 sm: py-32 bg-gray-50>,});,"})";
-          <div className="mx-auto max-w-2xl lg: text-center mb-16>,});,"})";
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: text-4xl>,});,"})";
-              Our Delivery Process,"});,})";
-              We follow a proven methodology that ensures quality, speed, and,});,"})";
-              successful outcomes.;,"});,})";
-          <div className="grid" grid-cols-1 md: grid-cols-4 gap-8">,"});,})";
-            <div className="text-center" group">;,"});,})";
-              <div className="mx-auto" flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover: bg-blue-200 transition-colors mb-4">,"});,})";
-                <span className="text-2xl" font-bold text-blue-600">1</span>;,"});,})";
-              <h3 className="text-lg" font-semibold text-gray-900 mb-2">;,"});,})";
-                Discovery,});,"})";
-              </h3>;,"});,})";
-              <p className=text-gray-600">;,"});,})";
-                Understand your needs and requirements,});,"})";
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 group-hover: bg-green-200 transition-colors mb-4>,});,"})";
-                <span className="text-2xl font-bold text-green-600>2</span>;,});,"})";
-                Strategy,"});,})";
-              <p className=text-gray-600">Plan the solution architecture</p>;,"});,})";
-              <div className="mx-auto" flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-hover: bg-purple-200 transition-colors mb-4">,"});,})";
-                <span className="text-2xl" font-bold text-purple-600">3</span>;,"});,})";
-                Development,});,"})";
-              <p className="text-gray-600>Build and test the solution</p>;,});,"})";
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 group-hover: bg-orange-200 transition-colors mb-4>,});,"})";
-                <span className="text-2xl font-bold text-orange-600>4</span>;,});,"})";
-                Deployment,"});,})";
-              <p className=text-gray-600">Launch and monitor performance</p>;,"});,})";
+      <section className="py-24 sm: py-32 bg-gray-50>});,"})";
+          <div className="mx-auto max-w-2xl lg: text-center mb-16>});,"})";
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: text-4xl>});,"})";
+              Our Delivery Process,"});})";
+              We follow a proven methodology that ensures quality, speed, and});,"})";
+              successful outcomes.;,"});})";
+          <div className="grid" grid-cols-1 md: grid-cols-4 gap-8">,"});})";
+            <div className="text-center" group">;,"});})";
+              <div className="mx-auto" flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover: bg-blue-200 transition-colors mb-4">,"});})";
+                <span className="text-2xl" font-bold text-blue-600">1</span>;,"});})";
+              <h3 className="text-lg" font-semibold text-gray-900 mb-2">;,"});})";
+                Discovery});,"})";
+              </h3>;,"});})";
+              <p className=text-gray-600">;,"});})";
+                Understand your needs and requirements});,"})";
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 group-hover: bg-green-200 transition-colors mb-4>});,"})";
+                <span className="text-2xl font-bold text-green-600>2</span>;});,"})";
+                Strategy,"});})";
+              <p className=text-gray-600">Plan the solution architecture</p>;,"});})";
+              <div className="mx-auto" flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-hover: bg-purple-200 transition-colors mb-4">,"});})";
+                <span className="text-2xl" font-bold text-purple-600">3</span>;,"});})";
+                Development});,"})";
+              <p className="text-gray-600>Build and test the solution</p>;});,"})";
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 group-hover: bg-orange-200 transition-colors mb-4>});,"})";
+                <span className="text-2xl font-bold text-orange-600>4</span>;});,"})";
+                Deployment,"});})";
+              <p className=text-gray-600">Launch and monitor performance</p>;,"});})";
       {/* comment */}});,"})";
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm: py-32>,});,"})";
-            <h2 className="text-3xl font-bold tracking-tight text-white sm: text-4xl>,});,"})";
-              Ready to get started?;,"});,})";
-            <p className="mx-auto" mt-6 max-w-xl text-lg leading-8 text-blue-100">;,"});,})";
-              Let&apos;s discuss your project requirements and how we can help,});,"})";
-              you achieve your goals.";,"});,})";
-            <div className="mt-10" flex items-center justify-center gap-x-6">;,"});,})";
-                className="group" rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover: bg-gray-50 transition-all duration-200 hover:scale-105","});,})";
-                aria-label="Contact" us to get started";,"});,})";
-                Contact Us,});,"})";
-                <ArrowRight className="ml-2 h-4 w-4 inline group-hover: translate-x-1 transition-transform       />,});,"})";
-                to="/;,});,"})";
-                className="text-sm font-semibold leading-6 text-white hover: text-blue-100 transition-colors group,});,"})";
-                Contact Us;,"});,})";
-                <ArrowRight className="ml-2" h-4 w-4 inline group-hover: translate-x-1 transition-transform"  />,,"});,})";
-                href=/";,"});,})";
-                className="text-sm" font-semibold leading-6 text-white hover: text-blue-100 transition-colors group",,"});,});,
-}
-aria-label="Back" to homepage";,"});,})";
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm: py-32>});,"})";
+            <h2 className="text-3xl font-bold tracking-tight text-white sm: text-4xl>});,"})";
+              Ready to get started?;,"});})";
+            <p className="mx-auto" mt-6 max-w-xl text-lg leading-8 text-blue-100">;,"});})";
+              Let&apos;s discuss your project requirements and how we can help});,"})";
+              you achieve your goals.";,"});})";
+            <div className="mt-10" flex items-center justify-center gap-x-6">;,"});})";
+                className="group" rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover: bg-gray-50 transition-all duration-200 hover:scale-105","});})";
+                aria-label="Contact" us to get started";,"});})";
+                Contact Us});,"})";
+                <ArrowRight className="ml-2 h-4 w-4 inline group-hover: translate-x-1 transition-transform       />});,"})";
+                to="/;});,"})";
+                className="text-sm font-semibold leading-6 text-white hover: text-blue-100 transition-colors group});,"})";
+                Contact Us;,"});})";
+                <ArrowRight className="ml-2" h-4 w-4 inline group-hover: translate-x-1 transition-transform"  />,"});})";
+                href=/";,"});})";
+                className="text-sm" font-semibold leading-6 text-white hover: text-blue-100 transition-colors group","});})}
+aria-label="Back" to homepage";,"});})";
                 Back to Home{" "}});,"})";
-                <span,"});,})";
-                  aria-hidden=true";,"});,})";
-                  className="group-hover:" translate-x-1 transition-transform inline-block","});,})";
-                  →;,});,"})";
-    </PageTransition>;,"});,})";
-  );,});,"});";,
-}"});,})";
+                <span,"});})";
+                  aria-hidden=true";,"});})";
+                  className="group-hover:" translate-x-1 transition-transform inline-block","});})";
+                  →;});,"})";
+    </PageTransition>;,"});})";
+  );});,"});"}"});})";
 const Link = dynamic(() => import("next/link,;
   Zap as ZapIcon,;
   Globe as GlobeIcon,;
   Shield as ShieldIcon,;
   ChevronDown,;
   ChevronUp} from "), { ssr: false });lucide - react",;
-const PageTransition = dynamic(() => import("../src/components/PageTransition"), { ssr: false });,
-}
-  const [expandedService, setExpandedService] = useState<string | null>(null);,
-}
+const PageTransition = dynamic(() => import("../src/components/PageTransition"), { ssr: false })}
+  const [expandedService, setExpandedService] = useState<string | null>(null)}
 ";
   const description = "Comprehensive technology solutions including AI, IT services, SaaS platforms, cybersecurity, IoT, blockchain, AR/VR, and automation services.;
   const getIconComponent = (iconName: string) => {,;
-    const iconMap: { [key: string]: any } = {;
+    const iconMap: { [key: string]: any } = {
       MessageCircle, Eye, FileText, TrendingUp, Cloud, Settings, LinkIcon, Database,;
-      Users, CheckSquare, ShoppingCart, UserCheck, Shield, Lock, AlertTriangle,aria-label="Get started with AI services;,});,"})";
-                  Get started with AI,"});,})";
-                  <ArrowRight className="ml-2" h-4 w-4 group-hover: translate-x-1 transition-transform" />,"});,})";
-                </Link>;,});,"})";
-            {/*   */}"});,})";
-              id=cloud";,"});,})";
-              className="group" relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-green-300","});,})";
-                <div className="flex" h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover: bg-green-700 transition-colors">,"});,})";
-                  <Cloud className="h-7" w-7 text-white" />;,"});,})";
-                    Cloud Platforms,});,"})";
-                  <p className="text-sm text-green-600 font-medium>;,});,"})";
-                    Scalable Infrastructure,"});,})";
-                Build scalable, resilient cloud infrastructure that grows with,});,"})";
-                your business.;,"});,})";
-                  <CheckCircle className="h-4" w-4 text-green-600" />;,"});,})";
-                    Serverless and Kubernetes,});,"})";
-                    Data pipelines and ML ops,"});,})";
-                    FinOps and SRE practices,});,"})";
-                    Multi-cloud architecture,"});,})";
-                  <span>4-8 weeks delivery</span>;,});,"})";
-                  className="inline-flex items-center text-sm font-semibold text-green-600 hover: text-green-500 transition-colors group,});,"})";
-                  aria-label="Get started with cloud services;,});,"})";
-                  Get started with Cloud,"});,})";
+      Users, CheckSquare, ShoppingCart, UserCheck, Shield, Lock, AlertTriangle,aria-label="Get started with AI services;});,"})";
+                  Get started with AI,"});})";
+                  <ArrowRight className="ml-2" h-4 w-4 group-hover: translate-x-1 transition-transform" />,"});})";
+                </Link>;});,"})";
+            {/*   */}"});})";
+              id=cloud";,"});})";
+              className="group" relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-green-300","});})";
+                <div className="flex" h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover: bg-green-700 transition-colors">,"});})";
+                  <Cloud className="h-7" w-7 text-white" />;,"});})";
+                    Cloud Platforms});,"})";
+                  <p className="text-sm text-green-600 font-medium>;});,"})";
+                    Scalable Infrastructure,"});})";
+                Build scalable, resilient cloud infrastructure that grows with});,"})";
+                your business.;,"});})";
+                  <CheckCircle className="h-4" w-4 text-green-600" />;,"});})";
+                    Serverless and Kubernetes});,"})";
+                    Data pipelines and ML ops,"});})";
+                    FinOps and SRE practices});,"})";
+                    Multi-cloud architecture,"});})";
+                  <span>4-8 weeks delivery</span>;});,"})";
+                  className="inline-flex items-center text-sm font-semibold text-green-600 hover: text-green-500 transition-colors group});,"})";
+                  aria-label="Get started with cloud services;});,"})";
+                  Get started with Cloud,"});})";
             {/*   */}});,"})";
-              id="cybersecurity;,});,"})";
-              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-purple-300,});,"})";
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover: bg-purple-700 transition-colors>,});,"})";
-                  <Shield className="h-7 w-7 text-white />;,});,"})";
-                    Cybersecurity,"});,})";
-                  <p className="text-sm" text-purple-600 font-medium">;,"});,})";
-                    Zero-Trust Security,});,"})";
-                Protect your business with enterprise-grade security frameworks,"});,})";
-                and compliance automation.;,});,"})";
-                  <CheckCircle className="h-4 w-4 text-purple-600 />;,});,"})";
-                    Zero-trust architecture,"});,})";
-                    Compliance automation,});,"})";
-                    Incident response,"});,})";
-                  <span className="text-sm" text-gray-700">Security audits</span>;,"});,})";
-                  <span>3-6 weeks delivery</span>;,});,"})";
-                  className="inline-flex items-center text-sm font-semibold text-purple-600 hover: text-purple-500 transition-colors group,});,"})";
-                  aria-label="Get started with cybersecurity services;,});,"})";
-                  Get started with Security,"});,})";
+              id="cybersecurity;});,"})";
+              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-purple-300});,"})";
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover: bg-purple-700 transition-colors>});,"})";
+                  <Shield className="h-7 w-7 text-white />;});,"})";
+                    Cybersecurity,"});})";
+                  <p className="text-sm" text-purple-600 font-medium">;,"});})";
+                    Zero-Trust Security});,"})";
+                Protect your business with enterprise-grade security frameworks,"});})";
+                and compliance automation.;});,"})";
+                  <CheckCircle className="h-4 w-4 text-purple-600 />;});,"})";
+                    Zero-trust architecture,"});})";
+                    Compliance automation});,"})";
+                    Incident response,"});})";
+                  <span className="text-sm" text-gray-700">Security audits</span>;,"});})";
+                  <span>3-6 weeks delivery</span>;});,"})";
+                  className="inline-flex items-center text-sm font-semibold text-purple-600 hover: text-purple-500 transition-colors group});,"})";
+                  aria-label="Get started with cybersecurity services;});,"})";
+                  Get started with Security,"});})";
             {/*   */}});,"})";
-              id="saas;,});,"})";
-              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-orange-300,});,"})";
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover: bg-orange-700 transition-colors>,});,"})";
-                  <Code className="h-7 w-7 text-white />;,});,"})";
-                    Micro SaaS,"});,})";
-                  <p className="text-sm" text-orange-600 font-medium">;,"});,})";
-                    Custom Solutions,});,"})";
-                Custom software solutions tailored to your specific business,"});,})";
-                needs and workflows.;,});,"})";
-                  <CheckCircle className="h-4 w-4 text-orange-600 />;,});,"})";
-                    Custom web applications,"});,})";
-                  <span className="text-sm" text-gray-700">API development</span>;,"});,})";
-                    Integration services,});,"})";
-                    Maintenance & support,"});,})";
-                  <span>6-12 weeks delivery</span>;,});,"})";
-                  className="inline-flex items-center text-sm font-semibold text-orange-600 hover: text-orange-500 transition-colors group,});,"})";
-                  aria-label="Get started with custom software services;,});,"})";
-                  Get started with SaaS,"});,})";
+              id="saas;});,"})";
+              className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-orange-300});,"})";
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover: bg-orange-700 transition-colors>});,"})";
+                  <Code className="h-7 w-7 text-white />;});,"})";
+                    Micro SaaS,"});})";
+                  <p className="text-sm" text-orange-600 font-medium">;,"});})";
+                    Custom Solutions});,"})";
+                Custom software solutions tailored to your specific business,"});})";
+                needs and workflows.;});,"})";
+                  <CheckCircle className="h-4 w-4 text-orange-600 />;});,"})";
+                    Custom web applications,"});})";
+                  <span className="text-sm" text-gray-700">API development</span>;,"});})";
+                    Integration services});,"})";
+                    Maintenance & support,"});})";
+                  <span>6-12 weeks delivery</span>;});,"})";
+                  className="inline-flex items-center text-sm font-semibold text-orange-600 hover: text-orange-500 transition-colors group});,"})";
+                  aria-label="Get started with custom software services;});,"})";
+                  Get started with SaaS,"});})";
       {/*   */}});,"})";
-      <section className="py-24 sm: py-32 bg-gray-50>,});,"})";
-          <div className="mx-auto max-w-2xl lg: text-center mb-16>,});,"})";
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: text-4xl>,});,"})";
-              Our Delivery Process,"});,})";
-              We follow a proven methodology that ensures quality, speed, and,});,"})";
-              successful outcomes.;,"});,})";
-          <div className="grid" grid-cols-1 md: grid-cols-4 gap-8">,"});,})";
-            <div className="text-center" group">;,"});,})";
-              <div className="mx-auto" flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover: bg-blue-200 transition-colors mb-4">,"});,})";
-                <span className="text-2xl" font-bold text-blue-600">1</span>;,"});,})";
-              <h3 className="text-lg" font-semibold text-gray-900 mb-2">;,"});,})";
-                Discovery,});,"})";
-              </h3>;,"});,})";
-              <p className=text-gray-600">;,"});,})";
-                Understand your needs and requirements,});,"})";
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 group-hover: bg-green-200 transition-colors mb-4>,});,"})";
-                <span className="text-2xl font-bold text-green-600>2</span>;,});,"})";
-                Strategy,"});,})";
-              <p className=text-gray-600">Plan the solution architecture</p>;,"});,})";
-              <div className="mx-auto" flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-hover: bg-purple-200 transition-colors mb-4">,"});,})";
-                <span className="text-2xl" font-bold text-purple-600">3</span>;,"});,})";
-                Development,});,"})";
-              <p className="text-gray-600>Build and test the solution</p>;,});,"})";
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 group-hover: bg-orange-200 transition-colors mb-4>,});,"})";
-                <span className="text-2xl font-bold text-orange-600>4</span>;,});,"})";
-                Deployment,"});,})";
-              <p className=text-gray-600">Launch and monitor performance</p>;,"});,})";
+      <section className="py-24 sm: py-32 bg-gray-50>});,"})";
+          <div className="mx-auto max-w-2xl lg: text-center mb-16>});,"})";
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: text-4xl>});,"})";
+              Our Delivery Process,"});})";
+              We follow a proven methodology that ensures quality, speed, and});,"})";
+              successful outcomes.;,"});})";
+          <div className="grid" grid-cols-1 md: grid-cols-4 gap-8">,"});})";
+            <div className="text-center" group">;,"});})";
+              <div className="mx-auto" flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover: bg-blue-200 transition-colors mb-4">,"});})";
+                <span className="text-2xl" font-bold text-blue-600">1</span>;,"});})";
+              <h3 className="text-lg" font-semibold text-gray-900 mb-2">;,"});})";
+                Discovery});,"})";
+              </h3>;,"});})";
+              <p className=text-gray-600">;,"});})";
+                Understand your needs and requirements});,"})";
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 group-hover: bg-green-200 transition-colors mb-4>});,"})";
+                <span className="text-2xl font-bold text-green-600>2</span>;});,"})";
+                Strategy,"});})";
+              <p className=text-gray-600">Plan the solution architecture</p>;,"});})";
+              <div className="mx-auto" flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-hover: bg-purple-200 transition-colors mb-4">,"});})";
+                <span className="text-2xl" font-bold text-purple-600">3</span>;,"});})";
+                Development});,"})";
+              <p className="text-gray-600>Build and test the solution</p>;});,"})";
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 group-hover: bg-orange-200 transition-colors mb-4>});,"})";
+                <span className="text-2xl font-bold text-orange-600>4</span>;});,"})";
+                Deployment,"});})";
+              <p className=text-gray-600">Launch and monitor performance</p>;,"});})";
       {/*   */}});,"})";
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm: py-32>,});,"})";
-            <h2 className="text-3xl font-bold tracking-tight text-white sm: text-4xl>,});,"})";
-              Ready to get started?;,"});,})";
-            <p className="mx-auto" mt-6 max-w-xl text-lg leading-8 text-blue-100">;,"});,})";
-              Let&apos;s discuss your project requirements and how we can help,});,"})";
-              you achieve your goals.";,"});,})";
-            <div className="mt-10" flex items-center justify-center gap-x-6">;,"});,})";
-                className="group" rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover: bg-gray-50 transition-all duration-200 hover:scale-105","});,})";
-                aria-label="Contact" us to get started";,"});,})";
-                Contact Us,});,"})";
-                <ArrowRight className="ml-2 h-4 w-4 inline group-hover: translate-x-1 transition-transform />,});,"})";
-                to="/;,});,"})";
-                className="text-sm font-semibold leading-6 text-white hover: text-blue-100 transition-colors group,});,"})";
-                Contact Us;,"});,})";
-                <ArrowRight className="ml-2" h-4 w-4 inline group-hover: translate-x-1 transition-transform" />,,"});,})";
-                href=/";,"});,})";
-                className="text-sm" font-semibold leading-6 text-white hover: text-blue-100 transition-colors group",,"});,});
-aria-label="Back" to homepage";,"});,})";
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm: py-32>});,"})";
+            <h2 className="text-3xl font-bold tracking-tight text-white sm: text-4xl>});,"})";
+              Ready to get started?;,"});})";
+            <p className="mx-auto" mt-6 max-w-xl text-lg leading-8 text-blue-100">;,"});})";
+              Let&apos;s discuss your project requirements and how we can help});,"})";
+              you achieve your goals.";,"});})";
+            <div className="mt-10" flex items-center justify-center gap-x-6">;,"});})";
+                className="group" rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover: bg-gray-50 transition-all duration-200 hover:scale-105","});})";
+                aria-label="Contact" us to get started";,"});})";
+                Contact Us});,"})";
+                <ArrowRight className="ml-2 h-4 w-4 inline group-hover: translate-x-1 transition-transform />});,"})";
+                to="/;});,"})";
+                className="text-sm font-semibold leading-6 text-white hover: text-blue-100 transition-colors group});,"})";
+                Contact Us;,"});})";
+                <ArrowRight className="ml-2" h-4 w-4 inline group-hover: translate-x-1 transition-transform" />,"});})";
+                href=/";,"});})";
+                className="text-sm" font-semibold leading-6 text-white hover: text-blue-100 transition-colors group","});});
+aria-label="Back" to homepage";,"});})";
                 Back to Home{" "}});,"})";
-                <span,"});,})";
-                  aria-hidden=true";,"});,})";
-                  className="group-hover:" translate-x-1 transition-transform inline-block","});,})";
-                  →;,});,"})";
-    </PageTransition>;,"});,})";
-  );,});,"});";,;,
-}"});,})";
+                <span,"});})";
+                  aria-hidden=true";,"});})";
+                  className="group-hover:" translate-x-1 transition-transform inline-block","});})";
+                  →;});,"})";
+    </PageTransition>;,"});})";
+  );});,"});"}"});})";
 const Link = dynamic(() => import("next/link,;
   Zap as ZapIcon,;
   Globe as GlobeIcon,;
@@ -365,14 +356,14 @@ const PageTransition = dynamic(() => import("../src/components/PageTransition"),
 ";
   const description = "Comprehensive technology solutions including AI, IT services, SaaS platforms, cybersecurity, IoT, blockchain, AR/VR, and automation services.;
   const getIconComponent = (iconName: string) => {,;
-    const iconMap: { [key: string]: any } = {;
+    const iconMap: { [key: string]: any } = {
       MessageCircle, Eye, FileText, TrendingUp, Cloud, Settings, LinkIcon, Database,;
       Users, CheckSquare, ShoppingCart, UserCheck, Shield, Lock, AlertTriangle,;
       Wifi, Link2, Glasses, Bot, Brain, Code, Zap, Globe, Target, Activity}
-;
+
     return iconMap[iconName] || Code}
-;
-  const getColorClasses = (color: string) => {,,;
+
+  const getColorClasses = (color: string) => {,;
     const colorMap: { [key: string]: { bg: string, text: string, border: string, hover: string } } = {";
       blue: { bg: "bg-blue-600", text: "text-blue-600", border: "border-blue-300", hover: "hover:bg-blue-700" },";
       purple: { bg: "bg-purple-600", text: "text-purple-600", border: "border-purple-300", hover: "hover:bg-purple-700" },";
@@ -389,18 +380,16 @@ const PageTransition = dynamic(() => import("../src/components/PageTransition"),
       violet: { bg: "bg-violet-600", text: "text-violet-600", border: "border-violet-300", hover: "hover:bg-violet-700" },";
       pink: { bg: "bg-pink-600", text: "text-pink-600", border: "border-pink-300", hover: "hover:bg-pink-700" },";
       lime: { bg: "bg-lime-600", text: "text-lime-600", border: "border-lime-300", hover: "hover:bg-lime-700" }
-;
+
     return colorMap[color] || colorMap.blue}
-;
-  const filteredServices = services.filter(service => {;
+
+  const filteredServices = services.filter(service => {
     const matchesCategory = selectedCategory === "all" || service.category === selectedCategory,;
     const matchesSearch = searchTerm === "" || ;
       service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-      service.features.some(feature => feature.toLowerCase().includes(searchTerm.toLowerCase()));,
-}
-    return matchesCategory && matchesSearch});,
-}
+      service.features.some(feature => feature.toLowerCase().includes(searchTerm.toLowerCase()))}
+    return matchesCategory && matchesSearch})}
   MessageSquare,;
   Palette,;
   HardDrive,;
@@ -432,14 +421,14 @@ Our: Services,;
 			<section className="py-24" sm: py-32">";
 					<div className="grid gap-8 lg:grid-cols-2>,;
 						{/* comment */}
-;
+
 							<div: className="flex items - center gap-x-3 mb-6">,;
 								<div: className = "flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover: bg-blue-700: transition-colors">",;
 									<Brain: className="h-7 w-7 text-white" />,;
 								<div>";
 									<h2: className="text - xl font-semibold text-gray-900">AI Autonomous Systems</h2>,;
 									<p: className="text-sm text-blue-600 font-medium">Intelligent Automation</p>,",;
-							<p: className="text-gray-600 mb-6">,,;
+							<p: className="text-gray-600 mb-6">,;
 Transform: your operations with intelligent automation and AI-powered decision making.";
 							<ul className="space-y-3 mb-6">,;
 								<li: className="flex items - center gap-x-3">,;
@@ -481,7 +470,7 @@ Transform: your operations with intelligent automation and AI-powered decision m
 								<div: className="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover: bg-purple-700: transition-colors">",;
 									<Shield: className="h - 7 w-7 text-white" />,;
 									<h2: className="text-xl font-semibold text-gray-900">Cybersecurity</h2>,",;
-									<p: className="text-sm text-purple-600 font-medium">Zero-Trust Security</p>,,;
+									<p: className="text-sm text-purple-600 font-medium">Zero-Trust Security</p>,;
 Protect: your business with enterprise-grade security frameworks and compliance automation.";
 									<CheckCircle: className="h-4 w-4 text-purple-600" />,;
 									<span: className="text - sm text-gray-700">Zero-trust architecture</span>,;
@@ -497,7 +486,7 @@ Protect: your business with enterprise-grade security frameworks and compliance 
 								<div: className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover: bg-orange-700: transition-colors">",;
 									<Code: className="h - 7 w-7 text-white" />,;
 									<h2: className="text-xl font-semibold text-gray-900">Micro SaaS</h2>,",;
-									<p: className="text-sm text-orange-600 font-medium">Custom Solutions</p>,,;
+									<p: className="text-sm text-orange-600 font-medium">Custom Solutions</p>,;
 Custom: software solutions tailored to your specific business needs and workflows.";
 									<CheckCircle: className="h-4 w-4 text-orange-600" />,;
 									<span: className="text - sm text-gray-700">Custom web applications</span>,;
@@ -528,7 +517,7 @@ Custom: software solutions tailored to your specific business needs and workflow
 								<h3: className="font-semibold text-purple-900 mb-2">Micro SaaS Platforms</h3>,",;
 								<p: className = "text-purple-700">Scalable software solutions from real-time analytics to mobile development</p>,";
 						<p: className="mt-6 text-sm text-gray-500">,;
-							Pricing: based on market research from leading technology consultancies and enterprise software vendors. ",,;
+							Pricing: based on market research from leading technology consultancies and enterprise software vendors. ",;
 							For custom enterprise solutions and volume discounts, see our{" "},;
 							<div: className="flex items-center gap-3 mb-3">,",;
 								<Brain: className = "h-5 w-5 text-blue-600" />,";
@@ -648,7 +637,7 @@ Custom: software solutions tailored to your specific business needs and workflow
 								<span: className="font-semibold text-teal-600">From $249/mo</span>,";
 								<Link: href="/contact" className="text-teal-600 hover: text-teal-500">Book: a walkthrough →</Link>",;
 						{/* comment */}
-;
+
 								<Server: className="h - 5 w-5 text-lime-600" />,;
 								<h3: className="font - semibold text-gray-900">DevOps Automation Platform</h3>,;
 							<p: className="text-sm text-gray-600 mb-3">Complete CI/CD pipelines with infrastructure as code.</p>,;
@@ -707,7 +696,7 @@ Custom: software solutions tailored to your specific business needs and workflow
 								<li>• Multi-turn: conversation management</li>;
 								<li>• Context-aware response generation</li>;
 								<li>• Integration with business systems and APIs</li>;
-								<li>• Voice and text conversation support</li>",,;
+								<li>• Voice and text conversation support</li>",;
 								<span: className="font-semibold text-orange-600">From $1,200/mo</span>,;
 								<Link: href = "/contact" className="text-orange-600 hover: text-orange-500">Build: chatbot →</Link>",;
 								<TrendingUp: className="h - 5 w-5 text-red-600" />,",;
@@ -716,7 +705,7 @@ Custom: software solutions tailored to your specific business needs and workflow
 								<li>• Time: series forecasting and anomaly detection</li>;
 								<li>• Customer lifetime value prediction</li>;
 								<li>• Demand forecasting and inventory optimization</li>;
-								<li>• Risk assessment and fraud detection</li>",,;
+								<li>• Risk assessment and fraud detection</li>",;
 								<span: className="font-semibold text-red-600">From $2,800/mo</span>,;
 								<Link: href = "/contact" className="text-red-600 hover: text-red-500">Predict: trends →</Link>",;
 								<Users: className="h-5 w-5 text-emerald-600" />,",;
@@ -728,14 +717,14 @@ Custom: software solutions tailored to your specific business needs and workflow
 								<span: className="font-semibold text-emerald-600">From $149/mo</span>,";
 								<Link: href="/contact" className="text-emerald-600 hover: text-emerald-500">Start: free trial →</Link>",;
 						{/* comment */}
-;
+
 								<Cpu: className="h - 5 w-5 text-blue-600" />,",;
 								<h3: className = "font-semibold text-gray-900">Edge Computing & IoT Solutions</h3>,";
 							<p: className="text-sm text-gray-600 mb-3">Distributed computing infrastructure for real-time data processing and IoT management.</p>,;
 								<li>• Edge: server deployment and management</li>;
 								<li>• IoT device connectivity and data collection</li>;
 								<li>• Real-time analytics and decision making</li>;
-								<li>• Low-latency application deployment</li>",,;
+								<li>• Low-latency application deployment</li>",;
 								<span: className="font-semibold text-blue-600">From $4,500/mo</span>,;
 								<Link: href = "/contact" className="text-blue-600 hover: text-blue-500">Deploy: edge →</Link>",;
 								<Link2: className="h-5 w-5 text-green-600" />,";
@@ -753,7 +742,7 @@ Custom: software solutions tailored to your specific business needs and workflow
 								<li>• 5G: network planning and optimization</li>;
 								<li>• Software-defined networking (SDN)</li>;
 								<li>• Network function virtualization (NFV)</li>;
-								<li>• Private 5G network deployment</li>",,;
+								<li>• Private 5G network deployment</li>",;
 								<span: className="font-semibold text-purple-600">From $12,000/mo</span>,;
 								<Link: href = "/contact" className="text-purple-600 hover: text-purple-500">Upgrade: network →</Link>",;
 								<HardDrive: className="h - 5 w-5 text-orange-600" />,",;
@@ -762,7 +751,7 @@ Custom: software solutions tailored to your specific business needs and workflow
 								<li>• Quantum: algorithm development and testing</li>;
 								<li>• Post-quantum cryptography implementation</li>;
 								<li>• Quantum simulation and optimization</li>;
-								<li>• Hybrid classical-quantum workflows</li>",,;
+								<li>• Hybrid classical-quantum workflows</li>",;
 								<span: className="font-semibold text-orange-600">From $15,000/mo</span>,;
 								<Link: href = "/contact" className="text-orange-600 hover: text-orange-500">Go: quantum →</Link>",;
 								<Monitor: className="h-5 w-5 text-red-600" />,";
@@ -783,7 +772,7 @@ Custom: software solutions tailored to your specific business needs and workflow
 								<span: className="font-semibold text-indigo-600">From $99/mo</span>,";
 								<Link: href="/contact" className="text-indigo-600 hover: text-indigo-500">Analyze: feedback →</Link>",;
 						{/* comment */}
-;
+
 								<Activity: className="h - 5 w-5 text-blue-600" />,;
 								<h3: className="font-semibold text-gray-900">Real-Time Analytics Dashboard</h3>,;
 							<p: className="text-sm text-gray-600 mb-3">Live business intelligence with instant insights and predictive alerts.</p>,;
@@ -826,7 +815,7 @@ Custom: software solutions tailored to your specific business needs and workflow
 								<li>• React: Native and Flutter development</li>;
 								<li>• Progressive Web App (PWA) creation</li>;
 								<li>• App store optimization and deployment</li>;
-								<li>• Push notifications and analytics</li>",,;
+								<li>• Push notifications and analytics</li>",;
 								<span: className="font-semibold text-red-600">From $1,299/mo</span>,;
 								<Link: href = "/contact" className="text-red-600 hover: text-red-500">Build: apps →</Link>",;
 								<Zap: className="h-5 w-5 text-red-600" />,;
@@ -906,7 +895,7 @@ Address: 364 E Main St STE 1008, Middletown DE 19709 | Visit us at{" "}";
 						<a: href="mailto: kleber@ziontechgroup.com" className="text-blue-600: hover:text-blue-500">kleber@ziontechgroup.com</a>{" ,"},;
 						| Phone{" "},;
 						<a: href="tel: +13024640950" className="text-blue-600: hover:text-blue-500">+1: 302 464 0950</a>{" ,"}
-;
+
 						| Address: 364: E Main St STE 100,8, Middletown DE 19709,;
 			{/* comment */}";
 			<section className = "bg-gradient-to-r" from-blue-600 to-purple-600 py-24 sm: py-32">";
@@ -935,7 +924,7 @@ Address: 364 E Main St STE 1008, Middletown DE 19709 | Visit us at{" "}";
 								<span: className="font-semibold text-blue-600">From $199/mo</span>,";
 								<Link: href="/contact" className="text-blue-600 hover: text-blue-500">Start: free trial →</Link>",;
 						{/* comment */}
-;
+
 								<Mail: className="h-5 w-5 text-green-600" />,;
 								<h3: className="font-semibold text-gray-900">Smart Email Automation</h3>,",;
 							<p: className = "text-sm text-gray-600 mb-3">AI-powered email campaigns with personalized content and optimal send times.</p>,;
@@ -946,7 +935,7 @@ Address: 364 E Main St STE 1008, Middletown DE 19709 | Visit us at{" "}";
 								<span: className="font-semibold text-green-600">From $149/mo</span>,";
 								<Link: href="/contact" className="text-green-600 hover: text-green-500">Automate: now →</Link>",;
 						{/* comment */}
-;
+
 								<Zap: className="h-5 w-5 text-purple-600" />,;
 								<h3: className="font-semibold text-gray-900">AI Email Assistant</h3>,",;
 							<p: className = "text-sm text-gray-600 mb-3">Intelligent email management with smart responses and priority detection.</p>,;
@@ -957,7 +946,7 @@ Address: 364 E Main St STE 1008, Middletown DE 19709 | Visit us at{" "}";
 								<span: className="font-semibold text-purple-600">From $99/mo</span>,";
 								<Link: href="/contact" className="text-purple-600 hover: text-purple-500">Try: demo →</Link>",;
 						{/* comment */}
-;
+
 								<Users: className="h-5 w-5 text-orange-600" />,",;
 								<h3: className = "font-semibold text-gray-900">AI Customer Support Hub</h3>,";
 							<p: className="text-sm text-gray-600 mb-3">Comprehensive support platform with AI chatbots and ticket management.</p>,;
@@ -968,7 +957,7 @@ Address: 364 E Main St STE 1008, Middletown DE 19709 | Visit us at{" "}";
 								<span: className="font-semibold text-orange-600">From $299/mo</span>,";
 								<Link: href="/contact" className="text-orange-600 hover: text-orange-500">Setup: support →</Link>",;
 						{/* comment */}
-;
+
 								<Calendar: className="h-5 w-5 text-red-600" />,;
 								<h3: className="font-semibold text-gray-900">Smart Event Management</h3>,",;
 							<p: className = "text-sm text-gray-600 mb-3">Complete event planning and management with AI-powered insights.</p>,;
@@ -979,7 +968,7 @@ Address: 364 E Main St STE 1008, Middletown DE 19709 | Visit us at{" "}";
 								<span: className="font-semibold text-red-600">From $179/mo</span>,";
 								<Link: href="/contact" className="text-red-600 hover: text-red-500">Plan: events →</Link>",;
 						{/* comment */}
-;
+
 								<Settings: className="h - 5 w-5 text-indigo-600" />,;
 								<h3: className="font-semibold text-gray-900">Business Process Automation</h3>,;
 							<p: className="text-sm text-gray-600 mb-3">No-code workflow automation with AI optimization recommendations.</p>,;
@@ -1007,7 +996,7 @@ Visit: Live Demo">;
 							Enterprise-grade: IT solutions and infrastructure management services. ;
 							Professional implementation with 99.9% uptime guarantee.",;
 					<div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8">", {/* comment */}
-;
+
 								<Server: className="h-5 w-5 text-blue-600" />,",;
 								<h3: className = "font-semibold text-gray-900">DevOps Automation Suite</h3>,";
 							<p: className="text-sm text-gray-600 mb-3">Complete CI/CD pipelines with infrastructure as code and automated deployments.</p>,;
@@ -1016,7 +1005,7 @@ Visit: Live Demo">;
 								<span: className="font-semibold text-blue-600">From $599/mo</span>,";
 								<Link: href="/contact" className="text-blue-600 hover: text-blue-500">Get: started →</Link>",;
 						{/* comment */}
-;
+
 								<BarChart3: className="h-5 w-5 text-green-600" />,",;
 							<p: className = "text-sm text-gray-600 mb-3">Real-time monitoring with AI-powered anomaly detection and predictive scaling.</p>,;
 								<li>• Custom dashboards and alerting</li>";
@@ -1042,7 +1031,7 @@ Visit: Live Demo">;
 								<span: className = "font-semibold text-orange-600">From $399/mo</span>,";
 								<Link: href="/contact" className="text-orange-600 hover: text-orange-500">Optimize: DB →</Link>",;
 						{/* comment */}
-;
+
 								<Shield: className="h-5 w-5 text-red-600" />,",;
 								<h3: className = "font-semibold text-gray-900">Security Assessment & Penetration Testing</h3>,";
 							<p: className="text-sm text-gray-600 mb-3">Comprehensive security audits and penetration testing for applications and infrastructure.</p>,;
@@ -1053,7 +1042,7 @@ Visit: Live Demo">;
 								<span: className="font - semibold text-red-600">From $2,500/project</span>,;
 								<Link: href = "/contact" className="text-red-600 hover: text-red-500">Secure: now →</Link>",;
 						{/* comment */}
-;
+
 								<Cloud: className="h-5 w-5 text-indigo-600" />,;
 								<h3: className="font-semibold text-gray-900">Cloud Migration & Modernization</h3>,",;
 							<p: className = "text-sm text-gray-600 mb-3">Seamless migration to cloud platforms with modernization and optimization.</p>,;
@@ -1073,7 +1062,7 @@ View: Case Studies,;
 Specialized: software solutions designed to solve specific business challenges. ;
 							Ready-to-deploy tools with customizable features and integrations.",;
 					<div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8">", {/* comment */}
-;
+
 								<Users: className="h-5 w-5 text-blue-600" />,",;
 							<p: className = "text-sm text-gray-600 mb-3">AI-powered project tracking with intelligent resource allocation and team collaboration.</p>,;
 								<li>• Real-time collaboration and communication</li>";
@@ -1087,14 +1076,14 @@ Specialized: software solutions designed to solve specific business challenges. 
 								<li>• Data integration from multiple sources</li>";
 								<Link: href="/contact" className="text-green-600 hover: text-green-500">Analyze: data →</Link>",;
 						{/* comment */}
-;
+
 								<Star: className="h-5 w-5 text-purple-600" />,",;
 								<h3: className = "font-semibold text-gray-900">Customer Feedback Intelligence</h3>,";
 							<p: className="text-sm text-gray-600 mb-3">AI-driven sentiment analysis and actionable insights from customer feedback across channels.</p>,;
 								<li>• Customer satisfaction tracking and NPS</li>";
 								<Link: href="/contact" className="text-purple-600 hover: text-purple-500">Analyze: feedback →</Link>",;
 						{/* comment */}
-;
+
 								<h3: className="font-semibold text-gray-900">Smart Inventory Management</h3>,",;
 							<p: className = "text-sm text-gray-600 mb-3">AI-powered inventory tracking with predictive analytics and automated reordering.</p>,;
 								<li>• Real-time: inventory tracking and alerts</li>;
@@ -1158,15 +1147,15 @@ We: follow a proven methodology that ensures quality, speed, and successful outc
 						<p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">,;
 							Let&aposs: discuss your project requirements and how we can help you achieve your goals.";
 						<div className="mt-10 flex items-center justify-center gap-x-6">,;
-								className = "group: rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover: bg-gray-50: transition-all duration-200 hover:scale-105"",,;
-								aria-label="Contact: us to get started",,;
+								className = "group: rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover: bg-gray-50: transition-all duration-200 hover:scale-105"",;
+								aria-label="Contact: us to get started",;
 Contact: Us";
 								<ArrowRight className = "ml-2 h-4 w-4 inline group-hover: translate-x-1: transition-transform"  />",;
 							<Link: href="/",";
 								className = "text-sm: font-semibold leading-6 text-white hover: text-blue-100: transition-colors group""">;
 								aria-label="Back: to homepage",";
 								Back: to Home <span aria-hidden="true" className="group-hover: translate-x-1: transition-transform inline-block">→</span>";
-			;
+
 			<SimpleFooter  />;
 		</>;
 	),;
@@ -1205,7 +1194,7 @@ Contact: Us";
   CreditCard,;
   Smartphone} from "lucide-react";
 ";
-export default function Services() {;
+export default function Services() {
   const description = ";
     "AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.;
     <PageTransition>";
@@ -1232,7 +1221,7 @@ that transform businesses and drive innovation across industries.";
               From strategy to production, we deliver outcomes fast. Our,;
 comprehensive suite of services covers everything you need to,;
 transform your business.;
-            ;
+
             {/* comment */}";
             <div className="mt-8" flex flex-wrap justify-center gap-6 text-sm text-gray-600>";
               <div className="flex items-center">";
@@ -1261,24 +1250,22 @@ transform your business.;
                   selectedCategory === "all;
                     ? "bg-blue-600 text-white;
                     : "bg-gray-100 text-gray-700 hover: bg-gray-200"}"}
-;
-                All Services();,
-}
+
+                All Services()}
               </button>;
               {serviceCategories.map((category) => (";
                   key="{category.id}
                   onClick="{()" => setSelectedCategory(category.id)}
-;
+
                     selectedCategory === category.id,;
-                  {category.name} ({category.count});,
-}
+                  {category.name} ({category.count})}
               ))}
-;
+
 ";
       <section className=""py-24" sm:py-32"}>";
           <div className="grid" gap-8 lg: grid-cols-2 xl:grid-cols-3>;
             {filteredServices.map((service) => {,;
-              const IconComponent = getIconComponent(service.icon),,;
+              const IconComponent = getIconComponent(service.icon),;
               const colors = getColorClasses(service.color),;
               const isExpanded = expandedService === service.id,;
 ";
@@ -1290,10 +1277,10 @@ transform your business.;
                         {service.title}";
                       <p className="{"text-sm" ${colors.text} font-medium"}>;
                         {service.category}
-;
+
 ";
                   <p className=""text-gray-600" mb-6"}>                    {service.description}
-;
+
                   {/*   */}";
                   <div className="mb-6 p-4 bg-gray-50 rounded-lg">";
                     <div className="flex" items-center mb-2>";
@@ -1302,7 +1289,7 @@ transform your business.;
                     <div className="text-sm text-gray-600">";
                       <div>Starting: <span className="font-semibold" text-green-600>{service.pricing.starting}</span></div>";
                       <div>Average: <span className="font-semibold text-blue-600">{service.pricing.average}</span></div>;
-;
+
                   {/* comment */}";
                   <div className="mb-6 p-4 bg-gray-50 rounded-lg">";
                     <div className="flex" items-center mb-2>";
@@ -1329,9 +1316,9 @@ transform your business.;
                               <ChevronDown className="h-4 w-4 mr-1"  />,;
                               Show {service.features.length - 3} More,;
                           )}
-;
+
                   {/* comment */}
-;
+
                   {isExpanded && (";
                       <h4 className="text-sm" font-medium text-gray-700 mb-3>Benefits: </h4>,;
                         {service.benefits.map((benefit, index) => (";
@@ -1342,7 +1329,7 @@ transform your business.;
                         {service.technologies.map((tech, index) => (";
                           <span key="{index}" className="px-2" py-1 bg-gray-100 text-gray-600 text-xs rounded>;
                             {tech}
-;
+
                   {/* comment */}";
                   <div className="flex items-center justify-between">";
                     <div className="flex" items-center space-x-2 text-sm text-gray-500>";
@@ -1350,16 +1337,16 @@ transform your business.;
                       <span>{service.deliveryTime}</span>";
                       className="{"inline-flex" items-center text-sm font-semibold ${colors.text} hover:opacity-80 transition-colors group"}";
                       aria-label="{"Get" started with ${service.title}"}
-;
+
                       Get Quote";
                       <ArrowRight className=""ml-2" h-4 w-4 group-hover:translate-x-1 transition-transform"}       />              )})}
-;
+
           {filteredServices.length === 0 && (";
             <div className="text-center py-12">";
               <Search className="h-12" w-12 text-gray-400 mx-auto mb-4 />";
               <h3 className="text-lg font-medium text-gray-900 mb-2">No services found</h3>";
               <p className="text-gray-600">Try adjusting your search or filter criteria.</p>;
-;
+
           {filteredServices.length === 0 && (";
             <div className="text-center py-12">";
               <Search className="h-12" w-12 text-gray-400 mx-auto mb-4       />";
@@ -1642,8 +1629,7 @@ Out-of-the-box anomaly detection for equipment and IoT.;
                   className="text-sky-600 hover: text-sky-500,;
 See live demo →";
                 <Lock className="h-5" w-5 text-teal-600"  />";
-                  Compliance Copilot();,
-}
+                  Compliance Copilot()}
                 Automated evidence collection and continuous controls.;
                 <li>• Policy templates and auditor-ready reports</li>";
                 <span className="font-semibold" text-teal-600>;
@@ -1827,7 +1813,7 @@ r: text-blue-500 underline;
               Innovative AI & Automation Services,";
 Cutting-edge AI solutions and automation tools that transform how";
               businesses operate. Visit{" "}
-;
+
               for live demos.";
           </div>";
           <div className="grid" grid-cols-1 md: grid-cols-2 l>;
@@ -2040,7 +2026,7 @@ solutions, with transparent costs and exceptional ROI.;
               Ready to Transform Your Business?";
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600>";
               Let"s discuss your project requirements and discover how our cutting-edge technology solutions can help you achieve your business goals.;
-            ;
+
             {/* comment */}";
             <div className="mt-8" grid grid-cols-1 md: grid-cols-3 gap-6 max-w-2xl mx-auto">";
               <div className="flex items-center justify-center>";
@@ -2070,8 +2056,7 @@ Get Free Consultation";
                 <div className="text-sm" text-gray-500">per month</div>";
                 <li className="flex items-center text-sm text-gray-600>";
                   <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />;
-                  Rapid deployment();,
-}
+                  Rapid deployment()}
                   Industry-specific solutions,;
 AI-powered automation,;
 Scalable architecture";
@@ -2147,7 +2132,7 @@ you achieve your goals.";
 className="group-hover: translate-x-1 transition-transform inline-block";
                   →>;
   )}
-;
+
 >;
 	return (;
 		<PageTransition> {/* comment */}";
@@ -2158,7 +2143,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 							<Award className="h - 6 w-6 text-blue-600 mr-2"  />,;
 							<span className="text-base font-semibold leading-7 text-blue-600">Our Services</span>;
 						</div>,;
-						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">,,;
+						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">,;
 							Our Services,;
 						</h1>,;
 							From strategy to production, we deliver outcomes fast. Our comprehensive suite of services covers everything you need to transform your business.;
@@ -2166,7 +2151,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 			</section> {/* comment */}";
 			<section className = "py-24 sm: py-32">,";
 					<div className="grid gap-8 lg:grid-cols-2"> {/* comment */}
-;
+
 						<div id="ai" className="group relative rounded - 2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-blue-300">,;
 							<div className="flex items - center gap-x-3 mb-6">,;
 								<div className="flex h - 12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors">,;
@@ -2196,7 +2181,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 									<ArrowRight className = "ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform"  />,;
 								</Link>,;
 						</div> {/* comment */}
-;
+
 						<div id="cloud" className="group relative rounded - 2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-green-300">,;
 								<div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700 transition-colors">,;
 									<Cloud className="h-7 w-7 text-white"  />,",;
@@ -2213,7 +2198,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 									aria-label = "Get started with cloud services",;
 									Get started with Cloud,;
 						</div> {/* comment */}
-;
+
 						<div id="cybersecurity" className="group relative rounded - 2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-purple-300">,;
 								<div className="flex h - 12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover:bg-purple-700 transition-colors">,;
 									<Shield className="h - 7 w-7 text-white"  />,;
@@ -2230,7 +2215,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 									aria-label = "Get started with cybersecurity services",;
 									Get started with Security,;
 						</div> {/* comment */}
-;
+
 						<div id="saas" className="group relative rounded - 2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-orange-300">,;
 								<div className="flex h - 12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors">,;
 									<Code className="h - 7 w-7 text-white"  />,;
@@ -2247,7 +2232,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 									aria-label = "Get started with custom software services",;
 									Get started with SaaS,;
 			</section> {/* comment */}
-;
+
 			<section className="py-24 sm: py-32 bg-white">,",;
 					<div className = "mx-auto max-w-4xl text-center mb-14">,";
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Comprehensive Technology Solutions</h2>,;
@@ -2270,7 +2255,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 							For custom enterprise solutions and volume discounts, see our{" "}";
 							<Link href = "/pricing-guide" className="text-blue-600 hover: text-blue-500 underline">Enterprise Pricing Guide</Link>.,";
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {/* comment */}
-;
+
 						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition">,;
 							<div className="flex items-center gap-3 mb-3">,",;
 								<Brain className = "h-5 w-5 text-blue-600"  />,";
@@ -2296,7 +2281,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<span className="font - semibold text-emerald-600">Starting $15k–$60k</span>,;
 								<Link href = "/contact" className="text-emerald-600 hover: text-emerald-500">Learn more →</Link>,;
 						</div> {/* comment */}
-;
+
 								<Cloud className="h - 5 w-5 text-green-600"  />,;
 								<h3 className="font - semibold text-gray-900">FinOps & Cloud Cost Optimization</h3>,;
 							<p className="text-sm text-gray-600 mb-3">Rightsizing, savings plans, architectural refactors for cost.</p>;
@@ -2319,7 +2304,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<span className="font - semibold text-orange-600">From $4k/mo</span>,;
 								<Link href = "/contact" className="text-orange-600 hover: text-orange-500">Book intro →</Link>,;
 						</div> {/* comment */}
-;
+
 								<Brain className="h - 5 w-5 text-violet-600"  />,;
 								<h3 className="font - semibold text-gray-900">AI-Powered Business Intelligence</h3>,;
 							<p className="text-sm text-gray-600 mb-3">Automated insights, predictive analytics, and intelligent reporting.</p>;
@@ -2366,7 +2351,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<span className = "font-semibold text-teal-600">From $249/mo</span>,";
 								<Link href="/contact" className="text-teal-600 hover:text-teal-500">Book a walkthrough →</Link>,;
 						</div> {/* comment */}
-;
+
 								<Server className="h - 5 w-5 text-lime-600"  />,;
 								<h3 className="font - semibold text-gray-900">DevOps Automation Platform</h3>,;
 							<p className="text-sm text-gray-600 mb-3">Complete CI/CD pipelines with infrastructure as code.</p>;
@@ -2392,7 +2377,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<span className = "font-semibold text-amber-600">From $199/mo</span>,";
 								<Link href="/contact" className="text-amber-600 hover:text-amber-500">Monitor now →</Link>,;
 						</div> {/* comment */}
-;
+
 								<Eye className="h - 5 w-5 text-blue-600"  />,;
 								<h3 className="font - semibold text-gray-900">Computer Vision & Image Recognition</h3>,;
 							<p className="text-sm text-gray-600 mb-3">Advanced image analysis, object detection, and visual content understanding.</p>;
@@ -2424,7 +2409,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<h3 className="font-semibold text-gray-900">Conversational AI & Chatbots</h3>,;
 							<p className="text-sm text-gray-600 mb-3">Intelligent conversational agents with advanced reasoning capabilities.</p>;
 								<li>• Multi-turn conversation management</li>;
-								<li>• Context - aware response generation</li>,,;
+								<li>• Context - aware response generation</li>,;
 								<li>• Integration with business systems and APIs</li>,;
 								<li>• Voice and text conversation support</li>,";
 								<span className="font-semibold text-orange-600">From $1,200/mo</span>,;
@@ -2433,21 +2418,21 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<h3 className="font-semibold text-gray-900">Predictive Analytics & Forecasting</h3>,;
 							<p className="text-sm text-gray-600 mb-3">Advanced machine learning models for business forecasting and trend analysis.</p>;
 								<li>• Time series forecasting and anomaly detection</li>;
-								<li>• Customer lifetime value prediction</li>,,;
+								<li>• Customer lifetime value prediction</li>,;
 								<li>• Demand forecasting and inventory optimization</li>,;
 								<li>• Risk assessment and fraud detection</li>,";
 								<span className="font - semibold text-red-600">From $2,800/mo</span>,;
 								<Link href="/contact" className="text - red-600 hover: text-red-500">Predict trends →</Link>,;
 								<Users className="h - 5 w-5 text-emerald-600"  />,;
 								<h3 className="font - semibold text-gray-900">Smart Project Management Suite</h3>,;
-							<p className="text-sm text-gray-600 mb-3">AI-powered project tracking with intelligent resource allocation.</p>,,;
+							<p className="text-sm text-gray-600 mb-3">AI-powered project tracking with intelligent resource allocation.</p>,;
 								<li>• Automated task prioritization and scheduling</li>,;
 								<li>• Team performance analytics and insights</li>,;
 								<li>• Integration with popular tools (Slack, Jira, etc.)</li>,;
 								<span className="font - semibold text-emerald-600">From $149/mo</span>,;
 								<Link href = "/contact" className="text-emerald-600 hover: text-emerald-500">Start free trial →</Link>,;
 						</div> {/* comment */}
-;
+
 								<Cpu className="h - 5 w-5 text-blue-600"  />,;
 								<h3 className="font - semibold text-gray-900">Edge Computing & IoT Solutions</h3>,;
 							<p className="text-sm text-gray-600 mb-3">Distributed computing infrastructure for real-time data processing and IoT management.</p>;
@@ -2470,7 +2455,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<h3 className="font-semibold text-gray-900">5G & Network Infrastructure</h3>,;
 							<p className="text-sm text-gray-600 mb-3">Next-generation network infrastructure and connectivity solutions.</p>;
 								<li>• 5G network planning and optimization</li>;
-								<li>• Software - defined networking (SDN)</li>,,;
+								<li>• Software - defined networking (SDN)</li>,;
 								<li>• Network function virtualization (NFV)</li>,;
 								<li>• Private 5G network deployment</li>,";
 								<span className="font-semibold text-purple-600">From $12,000/mo</span>,;
@@ -2479,7 +2464,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<h3 className="font-semibold text-gray-900">Quantum Computing Readiness</h3>,;
 							<p className="text-sm text-gray-600 mb-3">Prepare your infrastructure for quantum computing and post-quantum cryptography.</p>;
 								<li>• Quantum algorithm development and testing</li>;
-								<li>• Post - quantum cryptography implementation</li>,,;
+								<li>• Post - quantum cryptography implementation</li>,;
 								<li>• Quantum simulation and optimization</li>,;
 								<li>• Hybrid classical-quantum workflows</li>,";
 								<span className="font-semibold text-orange-600">From $15,000/mo</span>,;
@@ -2502,7 +2487,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<span className = "font-semibold text-indigo-600">From $99/mo</span>,";
 								<Link href="/contact" className="text-indigo-600 hover:text-indigo-500">Analyze feedback →</Link>,;
 						</div> {/* comment */}
-;
+
 								<Activity className="h - 5 w-5 text-blue-600"  />,;
 								<h3 className="font - semibold text-gray-900">Real-Time Analytics Dashboard</h3>,;
 							<p className="text-sm text-gray-600 mb-3">Live business intelligence with instant insights and predictive alerts.</p>;
@@ -2543,7 +2528,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<h3 className="font-semibold text-gray-900">Mobile App Development Platform</h3>,;
 							<p className="text-sm text-gray-600 mb-3">Cross-platform mobile app development with native performance.</p>;
 								<li>• React Native and Flutter development</li>;
-								<li>• Progressive Web App (PWA) creation</li>,,;
+								<li>• Progressive Web App (PWA) creation</li>,;
 								<li>• App store optimization and deployment</li>,;
 								<li>• Push notifications and analytics</li>,";
 								<span className="font - semibold text-red-600">From $1,299/mo</span>,;
@@ -2560,16 +2545,16 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 						<a href="https:// comment;
 						<a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-500">kleber@ziontechgroup.com</a>{" "}";
 						<a href="tel:+13024640950" className="text-blue-600 hover:text-blue-500">+1 302 464 0950</a>{" "}
-;
+
 						| Address: 364 E Main St STE 1008, Middletown DE 19709;
 			</section> {/* comment */}";
 			<section className="py - 24 sm: py-32 bg-gradient-to-br from-blue-50 to-indigo-50">,;
 					<div className="mx-auto max-w-3xl text-center mb-16">,;
-						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Innovative AI & Automation Services</h2>,,;
+						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Innovative AI & Automation Services</h2>,;
 							Cutting-edge AI solutions and automation tools that transform how businesses operate. ,";
 							Visit <a href = "https:// comment;
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {/* comment */}
-;
+
 						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover: shadow-md transition bg-white">,",;
 								<h3 className = "font-semibold text-gray-900">AI Content Creation Suite</h3>,";
 							<p className="text-sm text-gray-600 mb-3">Generate high-quality content at scale with AI-powered writing tools.</p>,;
@@ -2580,7 +2565,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<span className="font - semibold text-blue-600">From $199/mo</span>,;
 								<Link href = "/contact" className="text-blue-600 hover: text-blue-500">Start free trial →</Link>,;
 						</div> {/* comment */}
-;
+
 								<Mail className="h - 5 w-5 text-green-600"  />,;
 								<h3 className="font - semibold text-gray-900">Smart Email Automation</h3>,;
 							<p className="text-sm text-gray-600 mb-3">AI-powered email campaigns with personalized content and optimal send times.</p>;
@@ -2591,7 +2576,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<span className="font - semibold text-green-600">From $149/mo</span>,;
 								<Link href = "/contact" className="text-green-600 hover: text-green-500">Automate now →</Link>,;
 						</div> {/* comment */}
-;
+
 								<Zap className="h - 5 w-5 text-purple-600"  />,;
 								<h3 className="font - semibold text-gray-900">AI Email Assistant</h3>,;
 							<p className="text-sm text-gray-600 mb-3">Intelligent email management with smart responses and priority detection.</p>;
@@ -2602,7 +2587,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<span className="font - semibold text-purple-600">From $99/mo</span>,;
 								<Link href = "/contact" className="text-purple-600 hover: text-purple-500">Try demo →</Link>,;
 						</div> {/* comment */}
-;
+
 								<Users className="h - 5 w-5 text-orange-600"  />,;
 								<h3 className="font - semibold text-gray-900">AI Customer Support Hub</h3>,;
 							<p className="text-sm text-gray-600 mb-3">Comprehensive support platform with AI chatbots and ticket management.</p>;
@@ -2613,7 +2598,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<span className="font - semibold text-orange-600">From $299/mo</span>,;
 								<Link href = "/contact" className="text-orange-600 hover: text-orange-500">Setup support →</Link>,;
 						</div> {/* comment */}
-;
+
 								<Calendar className="h - 5 w-5 text-red-600"  />,;
 								<h3 className="font - semibold text-gray-900">Smart Event Management</h3>,;
 							<p className="text-sm text-gray-600 mb-3">Complete event planning and management with AI-powered insights.</p>;
@@ -2624,7 +2609,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<span className="font - semibold text-red-600">From $179/mo</span>,;
 								<Link href = "/contact" className="text-red-600 hover: text-red-500">Plan events →</Link>,;
 						</div> {/* comment */}
-;
+
 								<Settings className="h - 5 w-5 text-indigo-600"  />,;
 								<h3 className="font - semibold text-gray-900">Business Process Automation</h3>,;
 							<p className="text-sm text-gray-600 mb-3">No-code workflow automation with AI optimization recommendations.</p>;
@@ -2643,12 +2628,12 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								className = "inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors",;
 								Visit Live Demo,;
 			</section> {/* comment */}
-;
-						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: text-4xl">Advanced IT & Infrastructure Services</h2>,,;
+
+						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: text-4xl">Advanced IT & Infrastructure Services</h2>,;
 							Enterprise-grade IT solutions and infrastructure management services. ,;
 							Professional implementation with 99.9% uptime guarantee.,";
 					<div className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {/* comment */}
-;
+
 								<Server className="h - 5 w-5 text-blue-600"  />,;
 								<h3 className="font - semibold text-gray-900">DevOps Automation Suite</h3>,;
 							<p className="text-sm text-gray-600 mb-3">Complete CI/CD pipelines with infrastructure as code and automated deployments.</p>;
@@ -2657,14 +2642,14 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<span className="font - semibold text-blue-600">From $599/mo</span>,;
 								<Link href = "/contact" className="text-blue-600 hover: text-blue-500">Get started →</Link>,;
 						</div> {/* comment */}
-;
+
 								<BarChart3 className="h - 5 w-5 text-green-600"  />,;
 							<p className="text-sm text-gray-600 mb-3">Real-time monitoring with AI-powered anomaly detection and predictive scaling.</p>;
 								<li>• Custom dashboards and alerting</li>;
 								<span className="font - semibold text-green-600">From $199/mo</span>,;
 								<Link href = "/contact" className="text-green-600 hover: text-green-500">Monitor now →</Link>,;
 						</div> {/* comment */}
-;
+
 								<Globe className="h - 5 w-5 text-purple-600"  />,;
 							<p className="text-sm text-gray-600 mb-3">Enterprise API gateway with rate limiting, authentication, and analytics.</p>;
 								<li>• Rate limiting and throttling</li>;
@@ -2673,7 +2658,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<span className="font - semibold text-purple-600">From $299/mo</span>,;
 								<Link href = "/contact" className="text-purple-600 hover: text-purple-500">Manage APIs →</Link>,;
 						</div> {/* comment */}
-;
+
 								<Database className="h - 5 w-5 text-orange-600"  />,;
 								<h3 className="font - semibold text-gray-900">Database Performance Optimization</h3>,;
 							<p className="text-sm text-gray-600 mb-3">Database tuning, optimization, and migration services for peak performance.</p>;
@@ -2684,7 +2669,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<span className="font - semibold text-orange-600">From $399/mo</span>,;
 								<Link href = "/contact" className="text-orange-600 hover: text-orange-500">Optimize DB →</Link>,;
 						</div> {/* comment */}
-;
+
 								<Shield className="h - 5 w-5 text-red-600"  />,;
 								<h3 className="font - semibold text-gray-900">Security Assessment & Penetration Testing</h3>,;
 							<p className="text-sm text-gray-600 mb-3">Comprehensive security audits and penetration testing for applications and infrastructure.</p>;
@@ -2695,7 +2680,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<span className="font - semibold text-red-600">From $2,500/project</span>,;
 								<Link href = "/contact" className="text-red-600 hover: text-red-500">Secure now →</Link>,;
 						</div> {/* comment */}
-;
+
 								<Cloud className="h - 5 w-5 text-indigo-600"  />,;
 								<h3 className="font - semibold text-gray-900">Cloud Migration & Modernization</h3>,;
 							<p className="text-sm text-gray-600 mb-3">Seamless migration to cloud platforms with modernization and optimization.</p>;
@@ -2706,16 +2691,16 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<span className="font - semibold text-indigo-600">From $15k–$100k</span>,;
 								<Link href = "/contact" className="text-indigo-600 hover: text-indigo-500">Migrate to cloud →</Link>,;
 							All IT services include 24 / 7 monitoring, regular maintenance, and expert support.,;
-								className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover: bg-green-700 transition-colors",,;
+								className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover: bg-green-700 transition-colors",;
 								Get IT Consultation,;
 								View Case Studies,;
 			</section> {/* comment */}";
 			<section className="py-24 sm: py-32 bg-gradient-to-br from-purple-50 to-pink-50">,;
-						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Micro SaaS Solutions</h2>,,;
+						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Micro SaaS Solutions</h2>,;
 							Specialized software solutions designed to solve specific business challenges. ,;
 							Ready-to-deploy tools with customizable features and integrations.,";
 					<div className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {/* comment */}
-;
+
 								<Users className="h - 5 w-5 text-blue-600"  />,;
 							<p className="text-sm text-gray-600 mb-3">AI-powered project tracking with intelligent resource allocation and team collaboration.</p>;
 								<li>• Real - time collaboration and communication</li>,;
@@ -2729,14 +2714,14 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<li>• Data integration from multiple sources</li>;
 								<Link href = "/contact" className="text-green-600 hover: text-green-500">Analyze data →</Link>,;
 						</div> {/* comment */}
-;
+
 								<Star className="h - 5 w-5 text-purple-600"  />,;
 								<h3 className="font - semibold text-gray-900">Customer Feedback Intelligence</h3>,;
 							<p className="text-sm text-gray-600 mb-3">AI-driven sentiment analysis and actionable insights from customer feedback across channels.</p>;
 								<li>• Customer satisfaction tracking and NPS</li>;
 								<Link href = "/contact" className="text-purple-600 hover: text-purple-500">Analyze feedback →</Link>,;
 						</div> {/* comment */}
-;
+
 								<h3 className="font - semibold text-gray-900">Smart Inventory Management</h3>,;
 							<p className="text-sm text-gray-600 mb-3">AI-powered inventory tracking with predictive analytics and automated reordering.</p>;
 								<li>• Real-time inventory tracking and alerts</li>;
@@ -2746,7 +2731,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<span className="font - semibold text-orange-600">From $179/mo</span>,;
 								<Link href = "/contact" className="text-orange-600 hover: text-orange-500">Manage inventory →</Link>,;
 						</div> {/* comment */}
-;
+
 								<Users className="h - 5 w-5 text-red-600"  />,;
 								<h3 className="font - semibold text-gray-900">HR Management Platform</h3>,;
 							<p className="text-sm text-gray-600 mb-3">Complete HR solution with employee management, payroll, and performance tracking.</p>;
@@ -2757,7 +2742,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<span className="font - semibold text-red-600">From $249/mo</span>,;
 								<Link href = "/contact" className="text-red-600 hover: text-red-500">Manage HR →</Link>,;
 						</div> {/* comment */}
-;
+
 								<TrendingUp className="h - 5 w-5 text-indigo-600"  />,;
 								<h3 className="font - semibold text-gray-900">Financial Management Suite</h3>,;
 							<p className="text-sm text-gray-600 mb-3">Comprehensive financial tracking with invoicing, expense management, and reporting.</p>;
@@ -2768,13 +2753,13 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								<span className="font - semibold text-indigo-600">From $199/mo</span>,;
 								<Link href = "/contact" className="text-indigo-600 hover: text-indigo-500">Manage finances →</Link>,;
 							All Micro SaaS solutions include free setup, training, and 30 - day money-back guarantee.,;
-								className="inline - flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover: bg-purple-700 transition-colors",,;
+								className="inline - flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover: bg-purple-700 transition-colors",;
 								Get Custom Solution,;
 								View Live Demos,;
 			</section> {/* comment */}";
 			<section className="py-24 sm: py-32 bg-gray-50">,;
 					<div className="mx - auto max-w-2xl lg:text-center mb-16">,;
-						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">,,;
+						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">,;
 							Our Delivery Process,;
 						</h2>,;
 							We follow a proven methodology that ensures quality, speed, and successful outcomes.,;
@@ -2797,7 +2782,7 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 							<h3 className = "text-lg font-semibold text-gray-900 mb-2">Deployment</h3>,";
 							<p className="text-gray-600">Launch and monitor performance</p>,;
 			</section> {/* comment */}
-;
+
 			<section className="bg - gradient-to-r from-blue-600 to-purple-600 py-24 sm: py-32">,;
 						<h2 className="text-3xl font-bold tracking-tight text-white sm: text-4xl">;
 							Ready to get started ? ,;
@@ -2809,5 +2794,5 @@ className="group-hover: translate-x-1 transition-transform inline-block";
 								href="/",;
 								className="text - sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group",;
 								aria-label="Back to homepage",;
-								Back to Home <span aria-hidden="true" className="group-hover:translate-x-1 transition-transform inline-block'>→</span>,,;
+								Back to Home <span aria-hidden="true" className="group-hover:translate-x-1 transition-transform inline-block'>→</span>,;
 			</section>,		</PageTransition>,"

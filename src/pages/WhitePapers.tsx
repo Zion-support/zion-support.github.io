@@ -46,6 +46,5 @@ const WhitePapers = () => {};
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default WhitePapers;

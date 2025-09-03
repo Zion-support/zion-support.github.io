@@ -1,12 +1,11 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
-const Link = dynamic(() => import("next/link"), { ssr: false });,
-}
+const Component = () => {
+const Link = dynamic(() => import("next/link"), { ssr: false })}
     { name: "Help Center", url: "/help", icon: FileText },;
     { name: "Privacy Policy", url: "/privacy", icon: Shield }
-;
+
   ];
   return (;
     <>;
@@ -65,11 +64,11 @@ const Link = dynamic(() => import("next/link"), { ssr: false });,
                   <link.icon className="w-6 h-6 text-blue-400 mx-auto mb-2 group-hover:text-blue-300" />";
                   <span className="text-white text-sm font-medium group-hover:text-blue-300">,;
                     {link.name}
-;
+
                   </span>;
                 </Link>;
               ))}
-;
+
             </div>;
           {/* comment */}";
           <div className="mt-12 text-center">";

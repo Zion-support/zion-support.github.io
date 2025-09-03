@@ -42,25 +42,21 @@ export {};
 '';
 ''';
           setError('Profile ID is missing.');';
-          return;'';,
-}''';
+          return;''}''';
         const { data, error } = await supabase'''';
           .from('talent_profiles')''';
           .select('*')''';
           .eq('id', profileId);
           .single();
         if (error) {}
-          throw new Error(error.message);,
-}
+          throw new Error(error.message)}
         if (!data) {}
 ';
 '';
 ''';
           setError('Profile not found.');
-          return;,
-}
-        setProfileData(data);,
-} catch (err) {}
+          return}
+        setProfileData(data)} catch (err) {}
 ';
 '';
 ''';
@@ -71,36 +67,30 @@ export {};
 ''';
           title: 'Error',''';
           description: err.message || 'Failed to fetch profile.',''';
-          variant: 'destructive'});,
-} finally {}
-        setIsLoading(false);,
-}
-    };
-    fetchProfile();,
-}, [profileId]);
+          variant: 'destructive'})} finally {}
+        setIsLoading(false)}
+    }
+    fetchProfile()}, [profileId]);
   if (isLoading) {}
     return();
       <div className="min-h-screen flex items-center justify-center">;
         <p>Loading profile...</p>;
       </div>;
-    );,
-}
+    )}
   if (error) {}
 ";
     return ("";
       <div className="min-h-screen flex items-center justify-center">;
         <p>Error: {error}</p>;
       </div>;
-    );,
-}
+    )}
   if (!profileData) {}
 ";
     return ("";
       <div className="min-h-screen flex items-center justify-center">;
         <p>Profile not found.</p>;
       </div>;
-    );,
-}`;
+    )}`;
   return()``;
     <>```;
       <div>Broken JSX</div>
@@ -271,16 +261,12 @@ export {};
           </div>;
         </div>;
       </div>;
-      ;
-    </>)}
-;
 
-export { ProfileDetail };
-;
-export { ProfileDetail };
-;
-export { ProfileDetail };
-;
-export { ProfileDetail };
-;
-export { ProfileDetail };
+    </>)}
+
+
+export { ProfileDetail }
+export { ProfileDetail }
+export { ProfileDetail }
+export { ProfileDetail }
+export { ProfileDetail }

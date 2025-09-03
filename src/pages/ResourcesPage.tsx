@@ -15,7 +15,7 @@ export function ResourcesPage() {};
     { id: 'research', name: 'Research', icon: Brain },;
     { id: 'tools', name: 'Tools', icon: Code }
   ];
-;
+
   const resources = [;
     {};
 },;
@@ -40,7 +40,7 @@ export function ResourcesPage() {};
 ;
   const featuredResources = filteredResources.filter(resource => resource.isFeatured);
   const regularResources = filteredResources.filter(resource => !resource.isFeatured);
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -54,7 +54,7 @@ export function ResourcesPage() {};
               Access our comprehensive library of white papers, case studies, guides, and tools ;
               to help you stay ahead of technology trends and implement best practices.;
             </p>;
-            ;
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">;
               <div className="relative">;
@@ -143,7 +143,7 @@ export function ResourcesPage() {};
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">;
                       {resource.title}
                     </h3>;
-                    ;
+
                     <p className="text-zion-slate-light mb-4 leading-relaxed">;
                       {resource.description}
                     </p>;
@@ -181,7 +181,7 @@ export function ResourcesPage() {};
           </div>;
         </section>;
       )}
-;
+
       {/* All Resources */}
       <section className="py-16 bg-zion-slate-darker">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
@@ -220,7 +220,7 @@ export function ResourcesPage() {};
                   <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors line-clamp-2">;
                     {resource.title}
                   </h3>;
-                  ;
+
                   <p className="text-zion-slate-light text-sm mb-4 leading-relaxed line-clamp-3">;
                     {resource.description}
                   </p>;
@@ -289,7 +289,7 @@ export function ResourcesPage() {};
               Subscribe to our newsletter and be the first to access new white papers, ;
               case studies, and tools as they're released.;
             </p>;
-            ;
+
             <div className="max-w-md mx-auto">;
               <div className="flex space-x-2">;
                 <div>Broken JSX</div>
@@ -329,7 +329,6 @@ export function ResourcesPage() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
+
 export default ResourcesPage;

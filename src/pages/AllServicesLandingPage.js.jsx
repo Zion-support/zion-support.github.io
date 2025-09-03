@@ -49,9 +49,8 @@ export {};
       case 'Digital Services':'''';
         return '🚀';''';
       default:'''';
-        return '⚡';,
-}
-  };
+        return '⚡'}
+  }
   const getCategoryIconComponent = category => {}
     switch (category) {}
 ';
@@ -64,9 +63,8 @@ export {};
       case 'Digital Services':"";
         return <ArrowUpRight className="h-6 w-6" />;";
       default:"";
-        return <Settings className="h-6 w-6" />;,
-}
-  };
+        return <Settings className="h-6 w-6" />}
+  }
   const getPricingModelColor = model => {}
     switch (model) {}
 ';
@@ -81,9 +79,8 @@ export {};
       case 'usage-based':'''';
         return 'bg-orange-100 text-orange-800';''';
       default:'''';
-        return 'bg-gray-100 text-gray-800';,
-}
-  };
+        return 'bg-gray-100 text-gray-800'}
+  }
   const getServiceIcon = subcategory => {}
     switch (subcategory) {}
 '";
@@ -110,8 +107,7 @@ export {};
       case 'E-commerce':"";
         return <ShoppingCart className="h-5 w-5" />;";
       default:"";
-        return <Settings className="h-5 w-5" />;,
-}
+        return <Settings className="h-5 w-5" />}
   };";
   return ("";
     <div className="min-h-screen bg-background">";
@@ -208,7 +204,7 @@ export {};
                           </div>;
                           <div>Broken JSX</div>
                           >';
-                            {service.pricingModel.replace('-',)}
+                            {service.pricingModel.replace('-')}
                           </Badge>";
                         </div>"";
                         <div className="flex items-center space-x-2 mb-2">";
@@ -446,14 +442,10 @@ export {};
 
       <TrustedBySection />;
     </div>)}
-;
 
-export { AllServicesLandingPage };
-;
-export { AllServicesLandingPage };
-;
-export { AllServicesLandingPage };
-;
-export { AllServicesLandingPage };
-;
-export { AllServicesLandingPage };
+
+export { AllServicesLandingPage }
+export { AllServicesLandingPage }
+export { AllServicesLandingPage }
+export { AllServicesLandingPage }
+export { AllServicesLandingPage }

@@ -9,7 +9,5 @@ describe(&apos;ModernNavigation&apos, () => {};
 }
     // comment;
     render(<ModernNavigation / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

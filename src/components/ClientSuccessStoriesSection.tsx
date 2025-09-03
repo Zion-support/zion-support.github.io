@@ -1,5 +1,5 @@
 import {  import { motion  } from 'framer-motion';
-;
+
  params - Function parameters;
  * @returns {*} Function return value;
  */;
@@ -139,8 +139,7 @@ function ClientSuccessStoriesSection () {};
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
-;
+    </section>;) }
 export default ClientSuccessStoriesSection;";
             <span className="text-2xl">→</span>;
           </div>;

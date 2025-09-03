@@ -27,17 +27,12 @@ const ServicePortfolioDashboard = () => {}
         </div>;
       </section>;
     </div>;
-  );,
-};
+  )}
 export default ServicePortfolioDashboard;
-;
 
-export { ServicePortfolioDashboard };
-;
-export { ServicePortfolioDashboard };
-;
-export { ServicePortfolioDashboard };
-;
-export { ServicePortfolioDashboard };
-;
-export { ServicePortfolioDashboard };
+
+export { ServicePortfolioDashboard }
+export { ServicePortfolioDashboard }
+export { ServicePortfolioDashboard }
+export { ServicePortfolioDashboard }
+export { ServicePortfolioDashboard }

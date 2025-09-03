@@ -115,13 +115,11 @@ import {}
   Wifi,';
   Bluetooth,'';
   Battery,''';
-  Signal'''';,
-} from 'lucide-react';
-;
-    technologies["CDN", "Edge Computing", "Load Balancing", "Performance Monitoring"];,
-}
+  Signal''''} from 'lucide-react';
+
+    technologies["CDN", "Edge Computing", "Load Balancing", "Performance Monitoring"]}
 ];
-;
+
 const contentTechnologies = [];
   {}
 ";
@@ -130,8 +128,7 @@ const contentTechnologies = [];
     description: "Professional tools for creating digital content",";
     icon: PenTool,"";
     useCase: "Content Production","";
-    reliability: "High";,
-},;
+    reliability: "High"},;
   {}
 ";
 "";
@@ -139,8 +136,7 @@ const contentTechnologies = [];
     description: "Advanced audio and video processing capabilities",";
     icon: Video,"";
     useCase: "Media Editing","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -148,8 +144,7 @@ const contentTechnologies = [];
     description: "AI-powered content creation and optimization",";
     icon: Brain,"";
     useCase: "Content Automation","";
-    reliability: "High";,
-},;
+    reliability: "High"},;
   {}
 ";
 "";
@@ -159,7 +154,7 @@ const contentTechnologies = [];
     useCase: "Performance Analysis","";
     reliability: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -169,8 +164,7 @@ const successStories = [];
     challenge: "Needed scalable content creation platform for 100+ clients","";
     solution: "Built custom CMS with AI-powered content generation and multi-channel publishing","";
     results: "300% increase in content production, 50% reduction in creation time, improved client satisfaction","";
-    logo: "DMA";,
-},;
+    logo: "DMA"},;
   {}
 ";
     id: 2,"";
@@ -179,8 +173,7 @@ const successStories = [];
     challenge: "Required video production tools for online course creation","";
     solution: "Developed web-based video editing platform with collaboration features","";
     results: "200% increase in course production, 40% improvement in video quality, enhanced student engagement","";
-    logo: "EP";,
-},;
+    logo: "EP"},;
   {}
 ";
     id: 3,"";
@@ -191,7 +184,7 @@ const successStories = [];
     results: "500% increase in content output, 60% improvement in SEO performance, higher conversion rates","";
     logo: "EB";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -199,24 +192,21 @@ const processSteps = [];
     title: "Content Strategy","";
     description: "Define content goals, target audience, and distribution channels",";
     icon: Target,"";
-    duration: "2-4 weeks";,
-},;
+    duration: "2-4 weeks"},;
   {}
 ";
     step: 2,"";
     title: "Platform Development","";
     description: "Build content creation and management tools",";
     icon: Code,"";
-    duration: "12-32 weeks";,
-},;
+    duration: "12-32 weeks"},;
   {}
 ";
     step: 3,"";
     title: "Content Production","";
     description: "Create and optimize content using the new platform",";
     icon: PenTool,"";
-    duration: "4-8 weeks";,
-},;
+    duration: "4-8 weeks"},;
   {}
 ";
     step: 4,"";
@@ -225,7 +215,7 @@ const processSteps = [];
     icon: BarChart3,"";
     duration: "Ongoing";
 ];
-;
+
 const contentBenefits = [];
   {}
 ";
@@ -233,32 +223,28 @@ const contentBenefits = [];
     title: "Increased Productivity","";
     description: "Streamlined workflows and automated processes boost content creation efficiency",";
     icon: Zap,"";
-    examples["Faster content creation", "Automated workflows", "Collaboration tools", "Template libraries"];,
-},;
+    examples["Faster content creation", "Automated workflows", "Collaboration tools", "Template libraries"]},;
   {}
 ";
 "";
     title: "Better Quality","";
     description: "Professional tools and AI assistance improve content quality and consistency",";
     icon: Award,"";
-    examples["Professional templates", "AI assistance", "Quality checks", "Brand consistency"];,
-},;
+    examples["Professional templates", "AI assistance", "Quality checks", "Brand consistency"]},;
   {}
 ";
 "";
     title: "Multi-channel Reach","";
     description: "Distribute content across multiple platforms and channels simultaneously",";
     icon: Globe,"";
-    examples["Social media", "Website", "Email marketing", "Mobile apps"];,
-},;
+    examples["Social media", "Website", "Email marketing", "Mobile apps"]},;
   {}
 ";
 "";
     title: "Data-driven Insights","";
     description: "Analytics and performance tracking optimize content strategy",";
     icon: BarChart3,"";
-    examples["Performance metrics", "Audience insights", "A/B testing", "ROI tracking"];,
-}
+    examples["Performance metrics", "Audience insights", "A/B testing", "ROI tracking"]}
 ];
 ;
 export {};
@@ -419,9 +405,8 @@ export {};
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -429,9 +414,8 @@ export {};
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {};
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -542,14 +526,10 @@ export {};
       </section>;
     </div>;
   )}
-;
 
-export { ContentCreation };
-;
-export { ContentCreation };
-;
-export { ContentCreation };
-;
-export { ContentCreation };
-;
-export { ContentCreation };
+
+export { ContentCreation }
+export { ContentCreation }
+export { ContentCreation }
+export { ContentCreation }
+export { ContentCreation }

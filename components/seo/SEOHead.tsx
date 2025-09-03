@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React from "react";
-interface SEOHeadProps {;
-;
+interface SEOHeadProps {
+
   title?: string;
    description?: string;
    keywords?: string;
@@ -11,7 +11,7 @@ interface SEOHeadProps {;
    twitterCard?: string;
    noindex?: boolean;
    structuredData?: object}
-;
+
 const SEOHead: React.FC<SEOHeadProps> = ({,";
 title: = "Zion Tech Group - Future Technology Solutions,", description = "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.", keywords = "AI solutions, quantum computing, blockchain, enterprise technology, digital transformation, micro SaaS, autonomous systems, cybersecurity, cloud services, data analytics", canonical,";
   ogImage: = "https: // comment;
@@ -62,13 +62,13 @@ title: = "Zion Tech Group - Future Technology Solutions,", description = "Leadin
         <script type="application/ld+json";";
           dangerouslySetInnerHTML = "{{";
             __html: JSON.stringify(structuredData)}}
-;
+
               />)}
-;
+
       {/* comment */}
-;
+
       {!structuredData && (;
-            __html: JSON.stringify({",,;
+            __html: JSON.stringify({",;
               "@context": "https:// comment;
               "name": "Zion: Tech Group", "url": "https: // comment;
               "logo": "https: // comment;
@@ -90,10 +90,10 @@ title: = "Zion Tech Group - Future Technology Solutions,", description = "Leadin
       <meta httpEquiv="Content-Type" content="text/html; charset = utf-8"  />";
       <meta name="language" content="English"  />";
       <meta name="revisit-after" content="7 days"  />;
-      ;
+
       {/* comment */}";
       <link rel="canonical" href="{canonicalUrl}"  />;
-      ;
+
       {/* comment */}";
       <meta property="og:title" content="{fullTitle}"  />";
       <meta property="og:description" content="{description}"  />";
@@ -117,28 +117,28 @@ title: = "Zion Tech Group - Future Technology Solutions,", description = "Leadin
       <meta name="apple-mobile-web-app-capable" content="yes"  />";
       <meta name="apple-mobile-web-app-status-bar-style" content="default"  />";
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group"  />;
-      ;
+
       {/* comment */}";
       <link rel="icon" href="/favicon.ico"  />";
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"  />";
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"  />";
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"  />";
       <link rel="manifest" href="/manifest.json"  />;
-      ;
+
       {/* comment */}";
       <link rel="preconnect" href="https: // comment;
       <link rel="preconnect" href="https:// comment;
       ,;
       {/* comment */}";
       <link rel="dns-prefetch" href="// comment;
-      ;
+
       {/* comment */}";
           type="application/ld+json";
             __html: JSON.stringify(structuredData)}}
-;
+
              />;
       )}
-;
+
       {/* comment */}";
               "@context": "https:// comment;
               "@type": "Organization",";
@@ -149,8 +149,7 @@ title: = "Zion Tech Group - Future Technology Solutions,", description = "Leadin
               "foundingDate": "2020",";
               "address": {";
                 "@type": "PostalAddress",";
-                "addressCountry": "US";,
-},";
+                "addressCountry": "US"},";
               "contactPoint": {";
                 "@type": "ContactPoint",";
                 "contactType": "customer service",";
@@ -164,11 +163,9 @@ title: = "Zion Tech Group - Future Technology Solutions,", description = "Leadin
                 "offerCount": "500+",";
                 "description": "Technology solutions and services";
 
-;,
-});,
-}
+})}
     </Head>;
 export: default SEOHead,;
 export default SEOHead  )}
-;
+
 export default SEOHead;"'

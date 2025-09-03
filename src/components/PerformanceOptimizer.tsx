@@ -10,7 +10,7 @@ const PerformanceOptimizer: React.FC = () => {};
 });
 ;
     observer.observe({ entryTypes: ['largest-contentful-paint'] });
-;
+
     // Get page load time;
     window.addEventListener('load', () => {};
 });,
@@ -18,7 +18,7 @@ const PerformanceOptimizer: React.FC = () => {};
 ;
     // Optimize images;
     optimizeImages();
-    ;
+
     // Preload critical resources;
     preloadCriticalResources();
 ;
@@ -53,10 +53,8 @@ const PerformanceOptimizer: React.FC = () => {};
 ;
     // Enable compression;
     document.documentElement.style.setProperty('--compression-enabled', 'true');
-    ;
-    setIsOptimized(true);,
-};
-;
+
+    setIsOptimized(true)}
   return (;
     <div className="performance-optimizer">;
       {};
@@ -68,7 +66,5 @@ const PerformanceOptimizer: React.FC = () => {};
         </div>;
       )}
     </div>;
-  );,
-};
-;
+  )}
 export default PerformanceOptimizer;

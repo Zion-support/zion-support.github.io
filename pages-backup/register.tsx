@@ -1,11 +1,10 @@
 import Head from "next/head";
 import React, { useState } from "react";
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
+const Head = dynamic(() => import("next/head"), { ssr: false })}
   Zap,;
   Star} from "lucide-react";
-export default function Register() {;
-;
+export default function Register() {
+
   const [formData, setFormData] = useState({";
     firstName: ",";
     lastName: ",";
@@ -15,36 +14,27 @@ export default function Register() {;
     company: ",";
     phone: ",;
     agreeToTerms: false,;
-    subscribeNewsletter: true});,
-}
-  const [showPassword, setShowPassword] = useState(false);,
-}
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);,
-}
-  const [isSubmitting, setIsSubmitting] = useState(false);,
-}
-  const [isRegistered, setIsRegistered] = useState(false);,
-}
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {,,;
+    subscribeNewsletter: true})}
+  const [showPassword, setShowPassword] = useState(false)}
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)}
+  const [isSubmitting, setIsSubmitting] = useState(false)}
+  const [isRegistered, setIsRegistered] = useState(false)}
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {,;
     const { name, value, type, checked } = e.target;
     setFormData(prev = > ({;
       ...prev,;
-      [name]: type === "checkbox" ? checked : value}));,
-}
+      [name]: type === "checkbox" ? checked : value}))}
   const handleSubmit = async (e: React.FormEvent) => {,;
     e.preventDefault(),;
     setIsSubmitting(true),;
     // comment;
-await new Promise(resolve => setTimeout(resolve, 2000));,
-}
-    setIsSubmitting(false);,
-}
-    setIsRegistered(true);,
-}
-;
+await new Promise(resolve => setTimeout(resolve, 2000))}
+    setIsSubmitting(false)}
+    setIsRegistered(true)}
+
   const benefits = [];
 
-  if (isRegistered) {;
+  if (isRegistered) {
     return (;
       <>;
 <Head>;
@@ -97,7 +87,7 @@ initial="{{" scale: 0 }}";
           </motion.div>;
         </div>;
       </>    )}
-;
+
   return (;
     <>;
 <Head>;
@@ -122,7 +112,7 @@ initial="{{" opacity: 0, y: 20 }}";
               </p>;
             </motion.div>;
           </div>;
-;
+
   return (;
     <>;
 <Head>;
@@ -171,15 +161,15 @@ key="{index}
                   </div>";
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">;
                     {benefit.title}
-;
+
                   </h3>";
                   <p className="text-gray-600">;
                     {benefit.description}
-;
+
                   </p>;
                 </motion.div>;
               ))}
-;
+
             </div>;
         {/* comment */}";
         <div className="py-16">";
@@ -286,7 +276,7 @@ value="{formData.password}
                       onClick="{()" => setShowPassword(!showPassword)}";
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600">",;
                       {showPassword ? <EyeOff className="w-5 h-5"  /> : <Eye className="w-5 h-5"  />}
-;
+
                     </button>;
                   </div>;
                 <div>";
@@ -307,7 +297,7 @@ value="{formData.confirmPassword}
                       onClick="{()" => setShowConfirmPassword(!showConfirmPassword)}";
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600">",;
                       {showConfirmPassword ? <EyeOff className="w-5 h-5"  /> : <Eye className="w-5 h-5"  />}
-;
+
                     </button>;
                   </div>;
 ";
@@ -359,7 +349,7 @@ checked="{formData.agreeToTerms}
                         <ArrowRight className="ml-2 w-5 h-5"  />;
                       </>;
                     )}
-;
+
                   </button>;
                 </div>;
               </form>;

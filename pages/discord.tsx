@@ -14,7 +14,7 @@ const Discord: React.FC = () => {};
     {};
 },;
   ];
-;
+
   const roles = [;
     { name: 'Community Member', color: 'bg-gray-600', description: 'Basic access to community channels' },;
     { name: 'Developer', color: 'bg-blue-600', description: 'Access to technical channels and resources' },;
@@ -22,7 +22,7 @@ const Discord: React.FC = () => {};
     { name: 'Marketplace Partner', color: 'bg-green-600', description: 'Special access for marketplace partners' },;
     { name: 'Moderator', color: 'bg-yellow-600', description: 'Community moderation and support' },;
   ];
-;
+
   return (;
     <>;
       <Head>;
@@ -30,7 +30,7 @@ const Discord: React.FC = () => {};
         <meta name="description" content="Join our Discord community for AI discussions, support, and networking" />;
         <meta name="keywords" content="discord, community, AI, support, networking" />;
       </Head>;
-      ;
+
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">;
         {/* Header */}
         <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30">;
@@ -44,7 +44,7 @@ const Discord: React.FC = () => {};
                   Join thousands of AI enthusiasts, developers, and professionals;
                 </p>;
               </div>;
-              ;
+
               <div className="text-right">;
                 <div className="text-6xl mb-4">🎮</div>;
                 <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">;
@@ -93,10 +93,10 @@ const Discord: React.FC = () => {};
                     <div className="text-xs text-gray-500">{channel.members} members</div>;
                   </div>;
                 </div>;
-                ;
+
                 <h3 className="text-lg font-semibold text-white mb-2">#{channel.name}</h3>;
                 <p className="text-gray-300 text-sm mb-4">{channel.description}</p>;
-                ;
+
                 <div className="flex items-center justify-between">;
                   <span className="text-xs bg-green-600 text-white px-2 py-1 rounded-full">;
                     Active;
@@ -133,19 +133,19 @@ const Discord: React.FC = () => {};
               <h3 className="text-lg font-semibold text-white mb-2">Expert Insights</h3>;
               <p className="text-gray-300 text-sm">Learn from AI professionals and industry experts</p>;
             </div>;
-            ;
+
             <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 text-center">;
               <div className="text-4xl mb-4">🔧</div>;
               <h3 className="text-lg font-semibold text-white mb-2">Technical Support</h3>;
               <p className="text-gray-300 text-sm">Get help with integration and development issues</p>;
             </div>;
-            ;
+
             <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 text-center">;
               <div className="text-4xl mb-4">🤝</div>;
               <h3 className="text-lg font-semibold text-white mb-2">Networking</h3>;
               <p className="text-gray-300 text-sm">Connect with like-minded professionals</p>;
             </div>;
-            ;
+
             <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 text-center">;
               <div className="text-4xl mb-4">📢</div>;
               <h3 className="text-lg font-semibold text-white mb-2">Latest Updates</h3>;
@@ -188,7 +188,7 @@ const Discord: React.FC = () => {};
                 <li>• Respect different opinions and perspectives</li>;
               </ul>;
             </div>;
-            ;
+
             <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">;
               <h3 className="text-xl font-semibold text-white mb-4">Stay On Topic</h3>;
               <ul className="text-gray-300 space-y-2">;
@@ -216,7 +216,5 @@ const Discord: React.FC = () => {};
         </footer>;
       </div>;
     </>;
-  );,
-};
-;
+  )}
 export default Discord;

@@ -28,8 +28,7 @@ const CloudDevOpsServices = () => {}
 ''';
     const matchesPricing ='''';
       selectedPricing === 'all' || service.pricing === selectedPricing;
-    return matchesSearch && matchesCategory && matchesPricing;,
-});
+    return matchesSearch && matchesCategory && matchesPricing});
   const getCategoryIcon = category => {}
     switch (category) {}
 ';
@@ -46,9 +45,8 @@ const CloudDevOpsServices = () => {}
       case 'Security':"";
         return <Shield className="w-6 h-6" />;";
       default:"";
-        return <Code className="w-6 h-6" />;,
-}
-  };
+        return <Code className="w-6 h-6" />}
+  }
   const getPricingColor = pricing => {}
     switch (pricing) {}
 ';
@@ -59,8 +57,7 @@ const CloudDevOpsServices = () => {}
       case 'Standard':'';
         return 'text-green-400';';
       default:'';
-        return 'text-gray-400';,
-}
+        return 'text-gray-400'}
   };";
   return ("";
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">"";
@@ -210,16 +207,12 @@ const CloudDevOpsServices = () => {}
           </div>;
         </div>;
       </div>;
-    </div>)};
+    </div>)}
 export default CloudDevOpsServices;
-;
 
-export { CloudDevOpsServices };
-;
-export { CloudDevOpsServices };
-;
-export { CloudDevOpsServices };
-;
-export { CloudDevOpsServices };
-;
-export { CloudDevOpsServices };
+
+export { CloudDevOpsServices }
+export { CloudDevOpsServices }
+export { CloudDevOpsServices }
+export { CloudDevOpsServices }
+export { CloudDevOpsServices }

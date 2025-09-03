@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, CheckCircle, ExternalLink  } from 'lucide-react';
-;
+
 const anchor = (url: unknownstring, label?: string)  => (;
   <a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">;
     {label ?? new URL(url).host + (url.includes('/pricing') ? '/pricing' : '')}
@@ -21,7 +21,7 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {};
     'SOC 2-aligned processes and data handling',;
     'Flexible deployment: SaaS or self-hosted options';
   ];
-;
+
   const spotlight = [;
     {};
 },;
@@ -34,8 +34,7 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {};
         'https://snyk.io / plans/',;
         'https://www.paloaltonetworks.com / prisma / cloud / pricing';
       ],;
-      href: '/services / security - posture - guardian';,
-},;
+      href: '/services / security - posture - guardian'},;
     {}
       title: 'AI Data Pipeline Optimizer',;
       price: 'Typical: $200–$2,000 / mo',;
@@ -43,41 +42,36 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {};
         'https://www.snowflake.com / pricing/',;
         'https://www.getdbt.com / pricing';
       ],;
-      href: '/services / ai - data - pipeline - optimizer';,
-},;
+      href: '/services / ai - data - pipeline - optimizer'},;
     {}
       title: 'Privacy Request Portal(DSAR) ',;
       price: 'From $99 / mo + usage',;
       refs: ['https://transcend.io / pricing/',;
         'https://www.onetrust.com / pricing/';
       ],;
-      href: '/services / gdpr - dsar - portal';,
-},;
+      href: '/services / gdpr - dsar - portal'},;
     {}
       title: 'CSP & Security Headers Manager',;
       price: 'From $49 / mo per domain',;
       refs: ['https://securityheaders.com/'],;
-      href: '/services / security - headers - csp - manager';,
-},;
+      href: '/services / security - headers - csp - manager'},;
     {}
       title: 'Checkout A / B Optimizer',;
       price: 'From $99 / mo',;
       refs: ['https://www.optimizely.com / pricing/'],;
-      href: '/services / checkout - performance - optimizer';,
-},;
+      href: '/services / checkout - performance - optimizer'},;
     {}
       title: 'Status & Incident Hub',;
       price: 'From $59 / mo',;
       refs: ['https://betterstack.com / status / pricing'],;
-      href: '/services / status - incident - hub';,
-}
+      href: '/services / status - incident - hub'}
   ] as const;
-;
+
 const ServicesAdvertising: React.FC = (): JSX.Element => {}
   const benefits: string[] = ['';
     'High-ROI projects with measurable KPIs',Transparent pricing with market references',Fast onboarding with templates and playbooks',Enterprise-grade security and compliance',24/7 support with SLAs',Proven architectures and reference implementations',No long-term lock-in; cancel anytime',SOC 2-aligned processes and data handling',Flexible deployment: SaaS or self-hosted options';
   ];
-;
+
   return ("";
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">";
       <div>Broken JSX</div>
@@ -182,19 +176,13 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {}
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default ServicesAdvertising;
-;
 
-;
-export { ServicesAdvertising };
-;
-export { ServicesAdvertising };
-;
-export { ServicesAdvertising };
-;
-export { ServicesAdvertising };
-;
-export { ServicesAdvertising, ServicesAdvertising };
+
+
+export { ServicesAdvertising }
+export { ServicesAdvertising }
+export { ServicesAdvertising }
+export { ServicesAdvertising }
+export { ServicesAdvertising, ServicesAdvertising }

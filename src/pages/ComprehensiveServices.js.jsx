@@ -49,9 +49,7 @@ export {};
       const matchesPricing ='''';
         selectedPricingTier === 'all' ||;
         service.pricingTier === selectedPricingTier;
-      return matchesSearch && matchesCategory && matchesPricing;,
-});,
-}, [searchTerm, selectedCategory, selectedPricingTier]);
+      return matchesSearch && matchesCategory && matchesPricing})}, [searchTerm, selectedCategory, selectedPricingTier]);
   return();
     <div className="min-h-screen bg-zion-blue-dark">";
       {/* Hero Section */}"";
@@ -214,8 +212,7 @@ export {};
                   setSearchTerm('');''';
                   setSelectedCategory('all');''';
                   setSelectedSubcategory('all');''';
-                  setPriceRange('all');,
-}}
+                  setPriceRange('all')}}
               >;
                 Clear Filters;
               </Button>;
@@ -319,14 +316,10 @@ export {};
         </div>;
       </div>;
     </div>)}
-;
 
-export { ComprehensiveServicesPage };
-;
-export { ComprehensiveServicesPage };
-;
-export { ComprehensiveServicesPage };
-;
-export { ComprehensiveServicesPage };
-;
-export { ComprehensiveServicesPage };
+
+export { ComprehensiveServicesPage }
+export { ComprehensiveServicesPage }
+export { ComprehensiveServicesPage }
+export { ComprehensiveServicesPage }
+export { ComprehensiveServicesPage }

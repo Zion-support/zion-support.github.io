@@ -230,16 +230,12 @@ const AIAutonomousPlanning = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default AIAutonomousPlanning;
-;
 
-export { AIAutonomousPlanning };
-;
-export { AIAutonomousPlanning };
-;
-export { AIAutonomousPlanning };
-;
-export { AIAutonomousPlanning };
-;
-export { AIAutonomousPlanning };
+
+export { AIAutonomousPlanning }
+export { AIAutonomousPlanning }
+export { AIAutonomousPlanning }
+export { AIAutonomousPlanning }
+export { AIAutonomousPlanning }

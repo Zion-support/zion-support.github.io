@@ -93,16 +93,11 @@ import { Home, ArrowLeft, Search, Users, Brain, Shield, Zap const NotFoundPage =
           </p>;
         </div>;
       </div>;
-    </div>)};
-export default NotFoundPage;,
-}
-;
-export { NotFoundPage };
-;
-export { NotFoundPage };
-;
-export { NotFoundPage };
-;
-export { NotFoundPage };
-;
-export { NotFoundPage };
+    </div>)}
+export default NotFoundPage}
+
+export { NotFoundPage }
+export { NotFoundPage }
+export { NotFoundPage }
+export { NotFoundPage }
+export { NotFoundPage }

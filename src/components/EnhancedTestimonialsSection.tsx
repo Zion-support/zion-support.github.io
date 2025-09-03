@@ -16,14 +16,13 @@ const testimonials: Testimonial[] = [{};
 };,
 }, []);, []);
     if(!isAutoPlaying) return;
-;
+
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length) }, 8000) ;
-;
+
     return () => clearInterval(interval) }, [isAutoPlaying, testimonials.length]) ;
-;
+
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length) ;
-    setIsAutoPlaying(false) };
-;
+    setIsAutoPlaying(false) }
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length) ;
     setIsAutoPlaying(false) };
                   animate = {};

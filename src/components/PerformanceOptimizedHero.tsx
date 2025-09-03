@@ -19,9 +19,9 @@ export default function Page() {};
 }, 3000) ;
 ;
     return () => clearInterval(interval)}, [features.length]);
-;
+
     // // // // // // // // console.log('Hero CTA clicked');
-  ;
+
     // Analytics tracking could be added here;
     // console.log('Hero CTA clicked')}, []);
 ;
@@ -32,16 +32,12 @@ export default function Page() {};
 ;
   ;
   y: 30 ;
-;,
 },;
-    visible: { opacity: 1, y: 0 }};
-;
-  ;
+    visible: { opacity: 1, y: 0 }}
+
   scale: 0.8 ;
-;,
 },;
-    visible: { opacity: 1, scale: 1 }};
-;
+    visible: { opacity: 1, scale: 1 }}
 useEffect(() => { setIsVisible(true) ; setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ; ;
   return (";
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
@@ -61,5 +57,5 @@ useEffect(() => { setIsVisible(true) ; setCurrentFeature((prev) => (prev + 1) % 
           </div>;
     </div>;,;
   )}
-;
+
 export default PerformanceOptimizedHero;

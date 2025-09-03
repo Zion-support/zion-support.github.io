@@ -46,6 +46,5 @@ const Login = () => {};
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default Login;

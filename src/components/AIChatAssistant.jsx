@@ -84,7 +84,7 @@ import {};
             {};
               </div>)}
           </div>))}
-;
+
         {/* Typing Indicator */}";
         {};
                 <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>'";
@@ -92,7 +92,7 @@ import {};
               </div>;
             </div>;
           </div>) }
-;
+
         <div ref={messagesEndRef} />;
       </div>;
 

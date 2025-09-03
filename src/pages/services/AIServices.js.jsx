@@ -127,16 +127,12 @@ const AIServices = () => {}
           </button>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default AIServices;
-;
 
-export { AIServices };
-;
-export { AIServices };
-;
-export { AIServices };
-;
-export { AIServices };
-;
-export { AIServices };
+
+export { AIServices }
+export { AIServices }
+export { AIServices }
+export { AIServices }
+export { AIServices }

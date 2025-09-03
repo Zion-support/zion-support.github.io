@@ -51,7 +51,7 @@ const AIRevenueOptimizationPlatform = () => {};
         <meta name="description" content="Revolutionary AI-powered revenue optimization platform that increases revenue by 25-40% through intelligent pricing, forecasting, and customer analytics." />;
         <meta name="keywords" content="AI revenue optimization, dynamic pricing, revenue forecasting, customer analytics, revenue growth" />;
       </Head>;
-      ;
+
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-purple-600 via-blue-600 to-cyan-600 py-20 text-center">;
@@ -83,7 +83,7 @@ const AIRevenueOptimizationPlatform = () => {};
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Revenue Intelligence Features</h2>;
             <p className="text-gray-600 text-lg">Leverage cutting-edge AI to optimize every aspect of your revenue strategy</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {};
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">;
@@ -104,7 +104,7 @@ const AIRevenueOptimizationPlatform = () => {};
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Revenue Growth Results</h2>;
               <p className="text-gray-600 text-lg">Join 500+ companies that have transformed their revenue with our AI platform</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-2 gap-8">;
               <div>;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Key Benefits</h3>;
@@ -117,7 +117,7 @@ const AIRevenueOptimizationPlatform = () => {};
                   ))}
                 </ul>;
               </div>;
-              ;
+
               <div className="bg-white rounded-xl p-6 shadow-lg">;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Use Cases</h3>;
                 <ul className="space-y-3">;
@@ -139,7 +139,7 @@ const AIRevenueOptimizationPlatform = () => {};
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Competitive Pricing Plans</h2>;
             <p className="text-gray-600 text-lg">Choose the plan that fits your revenue optimization needs</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-3 gap-8">;
             {};
               <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.name === 'Professional' ? 'border-2 border-purple-500 bg-purple-50' : 'border border-gray-200 bg-white'}`}>;
@@ -171,7 +171,7 @@ const AIRevenueOptimizationPlatform = () => {};
               <h2 className="text-3xl font-bold mb-4">Ready to Optimize Your Revenue?</h2>;
               <p className="text-gray-300 text-lg">Contact our revenue optimization experts today</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-2 gap-8">;
               <div>;
                 <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>;
@@ -190,7 +190,7 @@ const AIRevenueOptimizationPlatform = () => {};
                   </div>;
                 </div>;
               </div>;
-              ;
+
               <div className="bg-white rounded-xl p-6">;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Request a Demo</h3>;
                 <p className="text-gray-600 mb-4">See how our AI platform can transform your revenue strategy</p>;

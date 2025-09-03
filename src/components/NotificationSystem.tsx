@@ -14,15 +14,14 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({};
   const [showSettings, setShowSettings] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [unreadCount, setUnreadCount] = useState(0);
-  ;
+
   // Initialize audio for notification sounds;
       default:';
   // Initialize audio for notification sounds      default:';
         return 'top-4 right-4'}
-  };
-;
+  }
   // Update settings;
-  ;
+
     setSettings(prev => ({ ...prev, ...newSettings }) ) }, []) ;
   // Expose addNotification method globally for external use;
   useEffect(() => {};
@@ -30,7 +29,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({};
 }, []);, []); (window as) .addNotification = addNotification;
     return () => {};
       delete(window as) .addNotification}}, [addNotification]) ;
-;
+
   return ();
     <>;
       {/* Notification Bell */}`;
@@ -157,27 +156,20 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({};
                     </motion.div>) ) ) }
               </AnimatePresence>;
             </div>;
-          </motion.div>;) };
+          </motion.div>;) }
       </AnimatePresence>;
     </>;
-  )};
-;
+  )}
 // Hook for using notifications in components;
 export ;
   ;
     if((window as any).addNotification) {};
       (window as any).addNotification(notification)}
   }, []) ;
-  return { addNotification }};
-;
+  return { addNotification }}
 // Utility functions for common notification types;
 export ;
-        priority: 'medium',;,
-})};'        priority: 'medium',;
-  ;
-  ;
-  ...options;,
-}) }  },;
+        priority: 'medium'})};'        priority: 'medium',;
 
   warning: (title: string, message: string, options?: Partial<Notification>)  => {};
 }) }
@@ -194,7 +186,7 @@ export ;
   achievement: (title: string, message: string, options?: Partial<Notification>) => {};
 }) }
   }
-};
+}
 '"`;
 
-;,"});,})";
+;,"});})";

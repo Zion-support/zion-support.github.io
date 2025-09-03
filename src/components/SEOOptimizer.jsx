@@ -1,13 +1,11 @@
-;,"});,"});";,
-}) }"});,"})";
+;,"});,"});"}) }"});,"})";
         catch (error) {}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
 """;,"});,"})";
             // comment;
         finally {}"});,"})";
-            setIsAnalyzing(false)}"});,"});";,
-}, []);,"});,"})";
+            setIsAnalyzing(false)}"});,"});"}, []);,"});,"})";
     useEffect(() => {}"});,"})";
         // comment;
         analyzeSEO()}, [analyzeSEO]);,"});,"})";
@@ -40,8 +38,7 @@
         if (page.url === "/" || page.url.includes("-")) {}"});,"})";
         else if(page.url.length > 0) {}"});,"})";
             score += 8,"});,"})";
-        return Math.round((score / maxScore) * 100) ;,"});,"});";,
-};,"});,"})";
+        return Math.round((score / maxScore) * 100) ;,"});,"});"};,"});,"})";
     const issues = [];,"});,"})";
         if (!page.title || page.title.length <div>Broken JSX</div>
         else if (page.title.length > 60) {}"});,"})";
@@ -96,7 +93,7 @@
 };
         if (!report);,"});,"})";
             return,"});,"})";
-        const csvContent = [],,"});,"})";
+        const csvContent = [],"});,"})";
             ...report.pageAnalyses.map(page => [page.pageUrl,";,"});,"})";
                 page.title,"";,"});,"})";
                 page.score.toString(),"""";,"});,"})";
@@ -123,8 +120,7 @@
             return "Excellent";,"});,"})";
             return "Good";,"});,"})";
             return "Fair";""";,"});,"})";
-        return "Poor"};"""";,"});,"});,
-}
+        return "Poor"};"""";,"});,"})}
     return (";
     <div className="fixed bottom-6 right-24 z-50">""";,"});,"})";
       {/* comment */}"""";,"});,"})";
@@ -266,7 +262,7 @@ export { SEOOptimizer };,"});,"})";
   return <div>Component</div>;
 };
 ""}}}
-;
+
 const SEOOptimizer = () => {}
   return <div>Component</div>;
 };
@@ -280,14 +276,13 @@ const SEOOptimizer = () => {}
     const [selectedPage, setSelectedPage] = useState (null);,
 }
     const analyzeSEO = useCallback (async () => {}
-;
-        setIsAnalyzing (true);,
-}
+
+        setIsAnalyzing (true)}
         try {}
-;
+
             // comment;
             const samplePages = []{}
-;
+
 ";
 
                     url: "/",;
@@ -319,8 +314,7 @@ const SEOOptimizer = () => {}
                     headings[&apos;AI - Powered Business Solutions&apos,Comprehensive IT Services&apos,Micro-SaaS Solutions&apos],",;
                     images[&apos;/images/hero - ai-solutions.jpg&apos,/images/hero-it-services.jpg&apos],",;
                     links[&apos;/services&apos,/ai-solutions&apos,/about&apos,/contact&apos],;
-                    keywords[&apos;AI solutions&apos,quantum computing&apos,cybersecurity&apos,digital transformation&apos];,
-} {}";
+                    keywords[&apos;AI solutions&apos,quantum computing&apos,cybersecurity&apos,digital transformation&apos]} {}";
                     url: &apos,/services&apos,"&apos,;
                     title: &apos,Our Services - Comprehensive Technology Solutions&apos,"&apos,;
                     metaDescription: &apos,Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.&apos,"&apos,;
@@ -359,18 +353,15 @@ const SEOOptimizer = () => {}
                     links["/services", /about",/contact"], ",;
                     keywords["artificial intelligence", machine learning",predictive analytics", AI automation"];
 
-;
+
             ]&apos;&apos;
             const pageAnalyses = samplePages.map(page => {}
-;
-                const;const;const score = calculateSEOScore(page);,
-}
-                const issues = identifySEOIssues(page);,
-}
-                const recommendations = generateSEORecommendations(issues);,
-}
+
+                const;const;const score = calculateSEOScore(page)}
+                const issues = identifySEOIssues(page)}
+                const recommendations = generateSEORecommendations(issues)}
                 return {}
-;
+
                     pageUrl: page.url,;
 title: page.title,;
 metaDescription: page.metaDescription,;
@@ -380,22 +371,19 @@ links: page.links,;
 keywords: page.keywords,;
 score,;
 issues,;
-                    recommendations}});,
-}
+                    recommendations}})}
                     pageUrl: page.url, title: page.title,;
                     metaDescription: page.metaDescription, headings: page.headings,;
                     images: page.images, links: page.links,;
                     keywords: page.keywords, score,;
-                    issues, recommendations}});,
-}
+                    issues, recommendations}})}
             const totalPages = pageAnalyses.length;
-            const averageScore = Math.round(pageAnalyses.reduce ( (sum, page) => sum + page.score, 0) / totalPages);,
-}
+            const averageScore = Math.round(pageAnalyses.reduce ( (sum, page) => sum + page.score, 0) / totalPages)}
             const pagesWithIssues = pageAnalyses.filter(page => page.issues.length > 0) .length;
             // comment            const issueCounts = {}
-;
+
             pageAnalyses.forEach(page => {}
-;
+
                 page.issues.forEach(issue => {}
 ;
                     issueCounts[issue] = (issueCounts[issue] || 0) + 1})});,
@@ -415,24 +403,24 @@ issues,;
             const summary = generateSummary(pageAnalyses, topIssues);,
 }
             setReport({}
-;
+
                 totalPages,;
                 averageScore,;
                 pagesWithIssues,;
                 topIssues,;
                 pageAnalyses,;
                 summary})}
-;
+
                 totalPages, averageScore,;
                 pagesWithIssues, topIssues,;
                 pageAnalyses, summary})}
-;
+
         catch (error) {}";
             // comment;
 
             // comment;
         finally {}
-;
+
             setIsAnalyzing(false)}
     }, []);
     useEffect(() => {};

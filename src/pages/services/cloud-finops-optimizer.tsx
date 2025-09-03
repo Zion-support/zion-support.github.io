@@ -251,5 +251,4 @@ export default function CloudFinOpsOptimizerPage() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

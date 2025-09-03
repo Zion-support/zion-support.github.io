@@ -7,7 +7,7 @@ const GetStarted = () => {};
 };
   const [selectedPath, setSelectedPath] = useState<string | null>(null);
   const [currentStep, setCurrentStep] = useState(1);
-;
+
   const gettingStartedPaths = [;
     {};
 },;
@@ -16,7 +16,7 @@ const GetStarted = () => {};
     {};
 }
   ];
-;
+
   const onboardingSteps = [;
     {};
 },;
@@ -27,7 +27,7 @@ const GetStarted = () => {};
     {};
 }
   ];
-;
+
   const quickStartGuides = [;
     {};
 },;
@@ -36,7 +36,7 @@ const GetStarted = () => {};
     {};
 }
   ];
-;
+
   const supportOptions = [;
     {};
 },;
@@ -45,7 +45,7 @@ const GetStarted = () => {};
     {};
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
       {/* Hero Section */}
@@ -63,7 +63,7 @@ const GetStarted = () => {};
               Join thousands of developers and businesses already using Zion Tech Group ;
               to build the future with AI. Choose your path and start building today.;
             </p>;
-            ;
+
             <div className="flex flex-wrap justify-center gap-4 mb-8">;
               <div className="px-6 py-3 bg-cyan-500/20 border border-cyan-500/30 rounded-lg text-cyan-400">;
                 <span className="font-semibold">Free Trial</span> Available;
@@ -99,7 +99,7 @@ const GetStarted = () => {};
                 </div>;
                 <h3 className="text-2xl font-bold text-white mb-3">{path.title}</h3>;
                 <p className="text-gray-300 mb-4">{path.description}</p>;
-                ;
+
                 <div className="space-y-2 text-sm mb-6">;
                   <div className="flex items-center justify-center gap-2 text-cyan-400">;
                     <Clock className="w-4 h-4" />;
@@ -130,7 +130,6 @@ const GetStarted = () => {};
                     {/* Step Connector */}
                     {};
                     )}
-                    ;
                     <div className="flex items-start gap-6">;
                       <div>Broken JSX</div>
                         currentStep >= step.step ;
@@ -141,7 +140,7 @@ const GetStarted = () => {};
                           <span className="text-white font-bold">{step.step}</span>;
                         )}
                       </div>;
-                      ;
+
                       <div className="flex-1 bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6">;
                         <div className="flex items-center justify-between mb-4">;
                           <h3 className="text-xl font-bold text-white">{step.title}</h3>;
@@ -150,9 +149,9 @@ const GetStarted = () => {};
                             {step.duration}
                           </div>;
                         </div>;
-                        ;
+
                         <p className="text-gray-300 mb-4">{step.description}</p>;
-                        ;
+
                         <ul className="space-y-2">;
                           {};
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">;
@@ -178,7 +177,7 @@ const GetStarted = () => {};
           </div>;
         </section>;
       )}
-;
+
       {/* Quick Start Guides */}
       <section className="py-20 px-6">;
         <div className="container mx-auto">;
@@ -194,7 +193,7 @@ const GetStarted = () => {};
             {};
                 <h3 className="text-xl font-bold text-white mb-3 text-center">{guide.title}</h3>;
                 <p className="text-gray-300 text-center mb-4">{guide.description}</p>;
-                ;
+
                 <div className="flex items-center justify-center gap-4 text-sm text-gray-400 mb-6">;
                   <span className="flex items-center gap-1">;
                     <Clock className="w-4 h-4" />;
@@ -231,7 +230,7 @@ const GetStarted = () => {};
             {};
                 <h3 className="text-xl font-bold text-white mb-2">{option.title}</h3>;
                 <p className="text-gray-300 text-sm mb-4">{option.description}</p>;
-                ;
+
                 <div className="space-y-2 text-sm">;
                   <div className="text-cyan-400">;
                     Response: {option.responseTime}
@@ -240,7 +239,7 @@ const GetStarted = () => {};
                     Available: {option.availability}
                   </div>;
                 </div>;
-                ;
+
                 <button className="w-full mt-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white py-2 rounded-lg font-medium hover:from-purple-600 hover:to-pink-700 transition-all duration-300">;
                   Get Help;
                 </button>;
@@ -276,7 +275,5 @@ const GetStarted = () => {};
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default GetStarted;

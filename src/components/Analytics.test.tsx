@@ -9,7 +9,5 @@ describe(&apos;Analytics&apos, () => {};
 }
     // comment;
     render(<Analytics / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

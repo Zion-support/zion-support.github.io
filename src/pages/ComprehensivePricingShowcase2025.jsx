@@ -44,7 +44,7 @@ const ComprehensivePricingShowcase2025 = () => {};
         if (!range);
             return true;
         if (service.price) {}
-            const price = parseFloat(service.price.replace(/[^0-9.]/g,));
+            const price = parseFloat(service.price.replace(/[^0-9.]/g));
             if (range.min && range.max) {}
                 return price >= range.min && price <div>Broken JSX</div>
                 return price >= range.min}

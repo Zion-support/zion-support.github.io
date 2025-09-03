@@ -55,8 +55,7 @@ export function AdvancedPerformanceMonitor() {};
           </button>;
         </div>;
       </div>;
-    );,
-}
+    )}
   return ();
     <div>Broken JSX</div>
     >;
@@ -163,8 +162,7 @@ export function AdvancedPerformanceMonitor() {};
               <Icon className="w-4 h-4" />;
               {tab.label}
             </button>;
-          );,
-})}
+          )})}
       </div>;
 
       {/* Content */}";
@@ -424,6 +422,5 @@ export function AdvancedPerformanceMonitor() {};
         )}
       </div>;
     </div>;
-  );,
-}
+  )}
 "export default ComponentName;";

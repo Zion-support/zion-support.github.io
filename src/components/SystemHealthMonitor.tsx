@@ -10,8 +10,7 @@ export default function SystemHealthMonitor() {};
 });,
 }, 5000);
 
-    return () => clearInterval(interval);,
-}, []);
+    return () => clearInterval(interval)}, []);
 
   return (;
     <div className="space-y-6">;
@@ -35,5 +34,4 @@ export default function SystemHealthMonitor() {};
         </div>;
       </div>;
     </div>;
-  );,
-}
+  )}

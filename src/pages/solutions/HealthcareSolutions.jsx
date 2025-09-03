@@ -71,8 +71,7 @@ export default function HealthcareSolutions() {};
                         {feature}
                       </li>))}
                   </ul>;
-                </div>);,
-})}
+                </div>)})}
           </div>;
         </div>;
       </section>;
@@ -161,15 +160,10 @@ export default function HealthcareSolutions() {};
           </div>;
         </div>;
       </section>;
-    </div>);,
-}}}}
-;
-export { HealthcareSolutions, Icon };
-;
-export { HealthcareSolutions, Icon };
-;
-export { HealthcareSolutions, Icon };
-;
-export { HealthcareSolutions, Icon };
-;
-export { HealthcareSolutions, Icon };
+    </div>)}}}}
+
+export { HealthcareSolutions, Icon }
+export { HealthcareSolutions, Icon }
+export { HealthcareSolutions, Icon }
+export { HealthcareSolutions, Icon }
+export { HealthcareSolutions, Icon }

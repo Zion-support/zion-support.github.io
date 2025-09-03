@@ -38,7 +38,7 @@ const APIDocumentation: React.FC = () => {};
 {};
 }
 });
-;
+
 // Get content;
 const getContent = async () => {};
 } catch (error) {};
@@ -52,9 +52,8 @@ const getContent = async () => {};
                 <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm">;
 {};
     'Authorization': f'Bearer {api_key}',;
-    'Content-Type': 'application/json';,
-}
-;
+    'Content-Type': 'application/json'}
+
 # Get content;
 response = requests.get(f'{base_url}/content', headers=headers);
 if response.status_code == 200:;
@@ -103,7 +102,5 @@ else:;
         </div>;
       </div>;
     </div>;
-  );,
-};
-;
+  )}
 export default APIDocumentation;

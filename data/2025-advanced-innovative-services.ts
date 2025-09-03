@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface AdvancedInnovativeService {;
+export interface AdvancedInnovativeService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface AdvancedInnovativeService {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -36,18 +36,17 @@ export interface AdvancedInnovativeService {;
   launchDate: string;
   customers: number;
   rating: number;
-const contact = {;
+const contact = {
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709";
-  ;
-  ;
-  ;
-  ;
-  website: "https://ziontechgroup.com";,;,
-}
+
+
+
+
+  website: "https://ziontechgroup.com"}
 export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
-  {;
+  {
     id: "metaverse-development-platform",;
     name: "Metaverse Development Platform",;
     tagline: "Complete platform for building immersive 3D virtual worlds and experiences",;
@@ -90,9 +89,8 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-01-10",;
     customers: 89,;
     rating: 4.8,;
-    reviews: 67;,;,
-},;
-  {;
+    reviews: 67},;
+  {
     id: "quantum-bio-computing-platform",;
     name: "Quantum Bio-Computing Platform",;
     tagline: "Quantum computing for biological simulations and drug discovery",;
@@ -135,9 +133,8 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-01-20",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 19;,;,
-},;
-  {;
+    reviews: 19},;
+  {
     id: "ai-powered-legal-automation-suite",;
     name: "AI-Powered Legal Automation Suite",;
     tagline: "Intelligent contract analysis, legal research, and compliance automation",;
@@ -180,9 +177,8 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-01-25",;
     customers: 134,;
     rating: 4.7,;
-    reviews: 98;,;,
-},;
-  {;
+    reviews: 98},;
+  {
     id: "quantum-logistics-optimization-platform",;
     name: "Quantum Logistics Optimization Platform",;
     tagline: "Quantum computing for complex logistics and supply chain optimization",;
@@ -225,9 +221,8 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-02-01",;
     customers: 45,;
     rating: 4.8,;
-    reviews: 34;,;,
-},;
-  {;
+    reviews: 34},;
+  {
     id: "autonomous-ai-research-assistant",;
     name: "Autonomous AI Research Assistant",;
     tagline: "Self-directed research and discovery across multiple domains",;
@@ -270,9 +265,8 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-02-05",;
     customers: 189,;
     rating: 4.8,;
-    reviews: 145;,;,
-},;
-  {;
+    reviews: 145},;
+  {
     id: "quantum-energy-optimization-platform",;
     name: "Quantum Energy Optimization Platform",;
     tagline: "Quantum computing for energy grid optimization and renewable energy management",;
@@ -315,9 +309,8 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-02-10",;
     customers: 34,;
     rating: 4.9,;
-    reviews: 26;,;,
-},;
-  {;
+    reviews: 26},;
+  {
     id: "ai-powered-creative-design-platform",;
     name: "AI-Powered Creative Design Platform",;
     tagline: "Intelligent design generation, automation, and creative collaboration",;
@@ -360,9 +353,8 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-02-15",;
     customers: 267,;
     rating: 4.7,;
-    reviews: 198;,;,
-},;
-  {;
+    reviews: 198},;
+  {
     id: "quantum-neural-network-platform",;
     name: "Quantum Neural Network Platform",;
     tagline: "Quantum computing for advanced neural network training and optimization",;
@@ -405,9 +397,8 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-02-20",;
     customers: 28,;
     rating: 4.9,;
-    reviews: 22;,;,
-},;
-  {;
+    reviews: 22},;
+  {
     id: "intelligent-financial-planning-platform",;
     name: "Intelligent Financial Planning Platform",;
     tagline: "AI-powered financial planning, investment optimization, and wealth management",;
@@ -450,9 +441,8 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-02-25",;
     customers: 156,;
     rating: 4.8,;
-    reviews: 118;,;,
-},;
-  {;
+    reviews: 118},;
+  {
     id: "quantum-iot-security-platform",;
     name: "Quantum IoT Security Platform",;
     tagline: "Quantum-resistant security for IoT devices and networks",;
@@ -495,9 +485,8 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-03-01",;
     customers: 45,;
     rating: 4.7,;
-    reviews: 34;,;,
-},;
-  {;
+    reviews: 34},;
+  {
     id: "ai-powered-education-platform",;
     name: "AI-Powered Education Platform",;
     tagline: "Personalized learning, adaptive curriculum, and intelligent tutoring",;
@@ -540,9 +529,8 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-03-05",;
     customers: 234,;
     rating: 4.8,;
-    reviews: 178;,;,
-},;
-  {;
+    reviews: 178},;
+  {
     id: "quantum-space-technology-platform",;
     name: "Quantum Space Technology Platform",;
     tagline: "Quantum computing for space exploration and satellite optimization",;
@@ -585,9 +573,8 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-03-10",;
     customers: 19,;
     rating: 4.9,;
-    reviews: 15;,;,
-},;
-  {;
+    reviews: 15},;
+  {
     id: "ai-powered-healthcare-diagnostics",;
     name: "AI-Powered Healthcare Diagnostics",;
     tagline: "Intelligent medical imaging analysis and diagnostic assistance",;
@@ -630,9 +617,8 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-03-15",;
     customers: 89,;
     rating: 4.8,;
-    reviews: 67;,;,
-},;
-  {;
+    reviews: 67},;
+  {
     id: "quantum-materials-discovery-platform",;
     name: "Quantum Materials Discovery Platform",;
     tagline: "Quantum computing for advanced materials science and discovery",;
@@ -675,9 +661,8 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-03-20",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 18;,;,
-},;
-  {;
+    reviews: 18},;
+  {
     id: "intelligent-automotive-platform",;
     name: "Intelligent Automotive Platform",;
     tagline: "AI-powered vehicle diagnostics, predictive maintenance, and fleet management",;
@@ -720,9 +705,8 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-03-25",;
     customers: 178,;
     rating: 4.7,;
-    reviews: 134;,;,
-},;
-  {;
+    reviews: 134},;
+  {
     id: "quantum-climate-modeling-platform",;
     name: "Quantum Climate Modeling Platform",;
     tagline: "Quantum computing for advanced climate modeling and environmental analysis",;

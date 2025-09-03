@@ -14,8 +14,7 @@ export {};
             title: "Getting Started","'";
             description: "Learn the basics of using Zion's marketplace platform","";
             articles["Creating an account", "Setting up your profile", "First steps guide"],;"";
-            color: "text-zion-cyan";,
-},;
+            color: "text-zion-cyan"},;
         {}
 ";
 "";
@@ -23,8 +22,7 @@ export {};
             title: "Marketplace","";
             description: "Buying and selling on our platform","";
             articles["How to buy services", "Selling your services", "Payment methods"],;"";
-            color: "text-zion-purple";,
-},;
+            color: "text-zion-purple"},;
         {}
 ";
 "";
@@ -32,8 +30,7 @@ export {};
             title: "Talent & Hiring","";
             description: "Finding talent and getting hired","";
             articles["Hiring process", "Creating job posts", "Talent profiles"],;"";
-            color: "text-zion-cyan";,
-},;
+            color: "text-zion-cyan"},;
         {}
 ";
 "";
@@ -48,32 +45,27 @@ export {};
 ";
 "";
             question: "How do I create an account on Zion?","'";
-            answer: "Creating an account is simple! Click the 'Sign Up' button in the top right corner, fill in your basic information, verify your email, and you're ready to start using our platform.";,
-},;
+            answer: "Creating an account is simple! Click the 'Sign Up' button in the top right corner, fill in your basic information, verify your email, and you're ready to start using our platform."},;
         {}
 ";
 "";
             question: "What payment methods do you accept?","";
-            answer: "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers. All payments are processed securely through our trusted payment partners.";,
-},;
+            answer: "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers. All payments are processed securely through our trusted payment partners."},;
         {}
 ";
 "";
             question: "How do I find the right talent for my project?","";
-            answer: "Use our AI-powered matching system, browse talent profiles by category, or post a job and let qualified professionals come to you. Our platform makes it easy to find the perfect match.";,
-},;
+            answer: "Use our AI-powered matching system, browse talent profiles by category, or post a job and let qualified professionals come to you. Our platform makes it easy to find the perfect match."},;
         {}
 ";
 "";
             question: "Is my data secure on Zion?","";
-            answer: "Absolutely! We use enterprise-grade security measures including SSL encryption, secure data centers, and strict access controls. Your privacy and data security are our top priorities.";,
-},;
+            answer: "Absolutely! We use enterprise-grade security measures including SSL encryption, secure data centers, and strict access controls. Your privacy and data security are our top priorities."},;
         {}
 '";
 '"'";
             question: "What if I'm not satisfied with a service?","'";
-            answer: "We have a comprehensive dispute resolution process. If you're not satisfied, contact our support team within 7 days of service completion, and we'll work to resolve the issue.";,
-},;
+            answer: "We have a comprehensive dispute resolution process. If you're not satisfied, contact our support team within 7 days of service completion, and we'll work to resolve the issue."},;
         {}
 ";
 "";
@@ -237,14 +229,10 @@ export {};
         </div>;
       </main>;
     </>)}
-;
 
-export { HelpCenterPage };
-;
-export { HelpCenterPage };
-;
-export { HelpCenterPage };
-;
-export { HelpCenterPage };
-;
-export { HelpCenterPage };
+
+export { HelpCenterPage }
+export { HelpCenterPage }
+export { HelpCenterPage }
+export { HelpCenterPage }
+export { HelpCenterPage }

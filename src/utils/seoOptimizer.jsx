@@ -27,7 +27,7 @@ export class SEOOptimizer {};
         const pathSegments = path.split('/').filter(Boolean);
         if(pathSegments.length === 0);
             return baseTitle;
-;
+
         const lastSegment = pathSegments[pathSegments.length-1];
         const formattedSegment = lastSegment;
             .split('-');
@@ -49,9 +49,6 @@ export class SEOOptimizer {};
 ;
     static generateStructuredData(path) {};
 }
-;,
-};
-;
         // Add specific structured data based on page type';
         if(path === '/') {};
 },";
@@ -89,7 +86,7 @@ export class SEOOptimizer {};
         if(textContent.length <div>Broken JSX</div>
     <title>${seoData.title}</title>";
     <meta name="description" content="${seoData.description}" />'";
-    <meta name="keywords" content="${seoData.keywords.join(',)}" />";
+    <meta name="keywords" content="${seoData.keywords.join(')}" />";
     <link rel="canonical" href="${seoData.canonicalUrl}" />;
 
     <!-- Open Graph-->";
@@ -109,11 +106,10 @@ export class SEOOptimizer {};
     <script type="application/ld+json">;
       ${JSON.stringify(seoData.structuredData, null, 2)}
     </script>`;
-    `;,
+    `}
 }
-}
-;
+
 export const seoOptimizer = new SEOOptimizer();
-;
+
 export default SEOOptimizer;
 '"`}}

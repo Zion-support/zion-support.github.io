@@ -49,17 +49,14 @@ export {};
           </div>;
         </div>;
       </div>;
-    );,
-}
+    )}
   const handleContact = () => {}
   return <div>Component</div>;
 };
     if (user) {}
-      setIsChatOpen(true);,
-} else {}
-      setIsContactDialogOpen(true);,
-}
-  };
+      setIsChatOpen(true)} else {}
+      setIsContactDialogOpen(true)}
+  }
   return()";
     ("";
       <div className="min-h-screen bg-zion-blue py-12 px-4">"";
@@ -189,8 +186,7 @@ export {};
 '';
 ''';
                           title: 'Payment Processing',''';
-                          description: 'Redirecting to secure checkout...'});,
-}}
+                          description: 'Redirecting to secure checkout...'})}}
                     />;
                   ) : (;
                     <div>Broken JSX</div>
@@ -217,8 +213,7 @@ export {};
                           const target = e.target;';
                           target.src ='';
                             'https://ui-avatars.com/api/?name=' +;
-                            encodeURIComponent(listing.author.name);,
-}}
+                            encodeURIComponent(listing.author.name)}}
                       />";
                     ) : ("";
                       <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">"";
@@ -267,16 +262,11 @@ export {};
           <div>Broken JSX</div>
      profileName={listing.author.name} profileType="service"/>;
         </DialogContent>;
-      </Dialog>;,
-}
-;
+      </Dialog>}
 
-export { ListingDetail };
-;
-export { ListingDetail };
-;
-export { ListingDetail };
-;
-export { ListingDetail };
-;
-export { ListingDetail };
+
+export { ListingDetail }
+export { ListingDetail }
+export { ListingDetail }
+export { ListingDetail }
+export { ListingDetail }

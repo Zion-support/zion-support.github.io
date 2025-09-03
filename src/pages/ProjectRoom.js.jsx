@@ -48,9 +48,8 @@ export {};
 ';
 '';
 ''';
-      setActiveTab('video');,
-}
-  };
+      setActiveTab('video')}
+  }
   const endVideoCall = () => {}
   return <div>Component</div>;
 };
@@ -59,8 +58,7 @@ export {};
 ';
 '';
 ''';
-      description: 'Call duration and participants will be logged'});,
-};
+      description: 'Call duration and participants will be logged'})}
   const simulateUserJoining = () => {}
   return <div>Component</div>;
 };
@@ -88,8 +86,7 @@ export {};
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
     if (!callParticipants.find(p => p.id === randomUser.id)) {}
       setCallParticipants(prev => [...prev, randomUser]);
-      toast(`${randomUser.name} joined the call`);,
-}
+      toast(`${randomUser.name} joined the call`)}
   };`;
   return()``;
     <>```;
@@ -258,16 +255,12 @@ export {};
           </TabsContent>;
         </Tabs>;
       </main>;
-      ;
-    </>)}
-;
 
-export { ProjectRoom };
-;
-export { ProjectRoom };
-;
-export { ProjectRoom };
-;
-export { ProjectRoom };
-;
-export { ProjectRoom };
+    </>)}
+
+
+export { ProjectRoom }
+export { ProjectRoom }
+export { ProjectRoom }
+export { ProjectRoom }
+export { ProjectRoom }

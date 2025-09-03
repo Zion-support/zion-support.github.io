@@ -18,7 +18,7 @@ export function TalentPage() {};
     {};
 }
   ];
-;
+
   const featuredProfessionals = [;
     {};
 },;
@@ -29,7 +29,7 @@ export function TalentPage() {};
     {};
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -43,7 +43,7 @@ export function TalentPage() {};
               Connect with vetted professionals, AI experts, and technology specialists ;
               ready to accelerate your projects and drive innovation.;
             </p>;
-            ;
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">;
               <div className="relative">;
@@ -103,7 +103,7 @@ export function TalentPage() {};
                     {category.count} available;
                   </span>;
                 </div>;
-                ;
+
                 <div className="flex flex-wrap gap-2 mb-4">;
                   {};
                     <span key={skillIndex} className="text-xs bg-zion-blue-dark text-zion-cyan px-2 py-1 rounded">;
@@ -156,17 +156,17 @@ export function TalentPage() {};
                       <span className="text-sm text-white">{professional.rating}</span>;
                     </div>;
                   </div>;
-                  ;
+
                   <div className="flex items-center justify-between">;
                     <span className="text-sm text-zion-slate-light">Projects</span>;
                     <span className="text-sm text-white">{professional.projects}</span>;
                   </div>;
-                  ;
+
                   <div className="flex items-center justify-between">;
                     <span className="text-sm text-zion-slate-light">Rate</span>;
                     <span className="text-sm text-zion-cyan">{professional.hourlyRate}/hr</span>;
                   </div>;
-                  ;
+
                   <div className="flex items-center justify-between">;
                     <span className="text-sm text-zion-slate-light">Status</span>;
                     <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">;
@@ -262,7 +262,6 @@ export function TalentPage() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
+
 export default TalentPage;

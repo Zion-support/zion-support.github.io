@@ -91,5 +91,4 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {};
         </Button>;
       </form>;
     </Form>;
-  );,
-}
+  )}

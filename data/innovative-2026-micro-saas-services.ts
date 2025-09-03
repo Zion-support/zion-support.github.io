@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface Innovative2026MicroSaasService {;
+export interface Innovative2026MicroSaasService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface Innovative2026MicroSaasService {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface Innovative2026MicroSaasService {;
   rating: number;
 export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] = [;
   // AI-Powered Business Intelligence;
-  {;
+  {
     id: "ai-business-intelligence-2026",;
     name: "AI Business Intelligence 2026",;
     tagline: "Next-generation AI-powered business insights and analytics",;
@@ -76,21 +76,19 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     marketSize: "$29.5B market",;
     growthRate: "220% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully functional AI-powered BI platform with real-time data processing, predictive analytics, and automated insights generation. Includes mobile-responsive design and enterprise-grade security.",;
     launchDate: "2026-01-15",;
     customers: 1500,;
     rating: 4.9,;
-    reviews: 850;,;,
-},;
+    reviews: 850},;
   // Quantum-Secure Communication Platform;
-  {;
+  {
     id: "quantum-secure-communication-2026",;
     name: "Quantum-Secure Communication 2026",;
     tagline: "Unbreakable quantum encryption for the future of secure communications",;
@@ -128,21 +126,19 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     marketSize: "$15.8B market",;
     growthRate: "180% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum-secure communication platform with quantum key distribution, post-quantum cryptography, and enterprise-grade security features. Includes mobile apps and desktop clients.",;
     launchDate: "2026-02-01",;
     customers: 800,;
     rating: 4.8,;
-    reviews: 450;,;,
-},;
+    reviews: 450},;
   // Autonomous AI Marketing Suite;
-  {;
+  {
     id: "autonomous-ai-marketing-suite-2026",;
     name: "Autonomous AI Marketing Suite 2026",;
     tagline: "Fully autonomous AI-powered marketing that runs your campaigns 24/7",;
@@ -180,21 +176,19 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     marketSize: "$25.1B market",;
     growthRate: "250% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive autonomous AI marketing platform with automated campaign management, real-time optimization, and multi-channel integration. Includes advanced analytics and reporting.",;
     launchDate: "2026-01-20",;
     customers: 2200,;
     rating: 4.7,;
-    reviews: 1200;,;,
-},;
+    reviews: 1200},;
   // Quantum Financial Trading Platform;
-  {;
+  {
     id: "quantum-financial-trading-2026",;
     name: "Quantum Financial Trading Platform 2026",;
     tagline: "Quantum computing-powered trading for unprecedented market advantage",;
@@ -232,21 +226,19 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     marketSize: "$45.2B market",;
     growthRate: "300% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum-powered trading platform with real-time market analysis, automated trading strategies, and comprehensive risk management. Includes professional-grade tools and compliance features.",;
     launchDate: "2026-02-15",;
     customers: 500,;
     rating: 4.9,;
-    reviews: 300;,;,
-},;
+    reviews: 300},;
   // AI-Powered Healthcare Companion;
-  {;
+  {
     id: "ai-healthcare-companion-2026",;
     name: "AI Healthcare Companion 2026",;
     tagline: "Personalized AI healthcare assistant for proactive wellness management",;
@@ -284,21 +276,19 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     marketSize: "$18.7B market",;
     growthRate: "200% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive AI healthcare platform with personalized monitoring, early detection algorithms, and wellness management. Includes mobile apps and healthcare provider integration.",;
     launchDate: "2026-01-30",;
     customers: 1800,;
     rating: 4.8,;
-    reviews: 950;,;,
-},;
+    reviews: 950},;
   // Quantum Internet Security Platform;
-  {;
+  {
     id: "quantum-internet-security-2026",;
     name: "Quantum Internet Security Platform 2026",;
     tagline: "Next-generation quantum-secured internet infrastructure",;
@@ -336,21 +326,19 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     marketSize: "$35.8B market",;
     growthRate: "250% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum internet security platform with quantum-secured infrastructure, post-quantum cryptography, and comprehensive threat protection. Includes enterprise-grade security features.",;
     launchDate: "2026-03-01",;
     customers: 600,;
     rating: 4.9,;
-    reviews: 400;,;,
-},;
+    reviews: 400},;
   // Autonomous Manufacturing AI Platform;
-  {;
+  {
     id: "autonomous-manufacturing-ai-2026",;
     name: "Autonomous Manufacturing AI Platform 2026",;
     tagline: "Fully autonomous AI-powered manufacturing optimization and automation",;
@@ -388,21 +376,19 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     marketSize: "$28.9B market",;
     growthRate: "280% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive autonomous manufacturing platform with AI-powered optimization, predictive maintenance, and automated quality control. Includes IoT integration and real-time monitoring.",;
     launchDate: "2026-02-20",;
     customers: 400,;
     rating: 4.8,;
-    reviews: 250;,;,
-},;
+    reviews: 250},;
   // Quantum Space Technology Platform;
-  {;
+  {
     id: "quantum-space-technology-2026",;
     name: "Quantum Space Technology Platform 2026",;
     tagline: "Revolutionary quantum computing for space exploration and satellite operations",;
@@ -440,21 +426,19 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     marketSize: "$12.3B market",;
     growthRate: "350% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum space technology platform with satellite optimization, space weather prediction, and mission planning capabilities. Includes real-time monitoring and analytics.",;
     launchDate: "2026-03-15",;
     customers: 200,;
     rating: 4.9,;
-    reviews: 150;,;,
-},;
+    reviews: 150},;
   // AI-Powered Legal Automation Suite;
-  {;
+  {
     id: "ai-legal-automation-suite-2026",;
     name: "AI Legal Automation Suite 2026",;
     tagline: "Revolutionary AI-powered legal document automation and contract analysis",;
@@ -492,21 +476,19 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     marketSize: "$22.1B market",;
     growthRate: "220% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive AI legal automation platform with contract analysis, document generation, and workflow optimization. Includes client portal and billing automation.",;
     launchDate: "2026-01-25",;
     customers: 1200,;
     rating: 4.7,;
-    reviews: 700;,;,
-},;
+    reviews: 700},;
   // Quantum Blockchain Infrastructure;
-  {;
+  {
     id: "quantum-blockchain-infrastructure-2026",;
     name: "Quantum Blockchain Infrastructure 2026",;
     tagline: "Quantum-secured blockchain infrastructure for the future of decentralized finance",;
@@ -544,12 +526,11 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     marketSize: "$19.8B market",;
     growthRate: "320% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum blockchain infrastructure with quantum-secured transactions, smart contract automation, and DeFi integration. Includes developer tools and comprehensive APIs.",;
     launchDate: "2026-02-10",;

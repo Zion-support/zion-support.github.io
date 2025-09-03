@@ -232,16 +232,12 @@ const AIAutonomousIntegration = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default AIAutonomousIntegration;
-;
 
-export { AIAutonomousIntegration };
-;
-export { AIAutonomousIntegration };
-;
-export { AIAutonomousIntegration };
-;
-export { AIAutonomousIntegration };
-;
-export { AIAutonomousIntegration };
+
+export { AIAutonomousIntegration }
+export { AIAutonomousIntegration }
+export { AIAutonomousIntegration }
+export { AIAutonomousIntegration }
+export { AIAutonomousIntegration }

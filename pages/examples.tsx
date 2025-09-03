@@ -12,7 +12,7 @@ const Examples: React.FC = () => {};
   const examples = {};
 }
 });
-;
+
 const services = await response.json();
 console.log(services);`;,
 },;
@@ -35,8 +35,7 @@ const response = await fetch(\`https://api.zion.ai/talents?\${searchParams}\`, {
 });
 ;
 const talents = await response.json();
-console.log('Found talents:', talents);`;,
-}
+console.log('Found talents:', talents);`}
     ],;
     python: [;
       {};
@@ -74,8 +73,7 @@ response = requests.get(;
 );
 
 talents = response.json();
-print('Found talents:', talents)`;,
-}
+print('Found talents:', talents)`}
     ],;
     curl: [;
       {};
@@ -97,7 +95,7 @@ print('Found talents:', talents)`;,
 },;
       {};
 String projectData = "{\\"name\\":\\"AI Chatbot Integration\\",\\"description\\":\\"Integrate AI chatbot into our website\\",\\"budget\\":5000,\\"timeline\\":\\"2 weeks\\"}";
-;
+
 HttpClient client = HttpClient.newHttpClient();
 HttpRequest request = HttpRequest.newBuilder();
     .uri(URI.create("https://api.zion.ai/projects"));
@@ -105,14 +103,11 @@ HttpRequest request = HttpRequest.newBuilder();
     .header("Content-Type", "application/json");
     .POST(HttpRequest.BodyPublishers.ofString(projectData));
     .build();
-;
+
 HttpResponse<String> response = client.send(request, ;
     HttpResponse.BodyHandlers.ofString());
-System.out.println("Project created: " + response.body());`;,
-}
-    ];,
-};
-;
+System.out.println("Project created: " + response.body());`}
+    ]}
   return (;
     <>;
       <Head>;
@@ -120,7 +115,7 @@ System.out.println("Project created: " + response.body());`;,
         <meta name="description" content="Code examples and integration samples for Zion AI Marketplace API" />;
         <meta name="keywords" content="code examples, API, integration, Zion AI, marketplace" />;
       </Head>;
-      ;
+
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">;
         {/* Header */}
         <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30">;
@@ -157,19 +152,19 @@ System.out.println("Project created: " + response.body());`;,
           <h2 className="text-3xl font-bold text-blue-400 mb-8">;
             {languages.find(l => l.id === activeLanguage)?.name} Examples;
           </h2>;
-          ;
+
           <div className="space-y-8">;
             {};
               <div key={index} className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">;
                 <h3 className="text-xl font-semibold text-white mb-2">{example.title}</h3>;
                 <p className="text-gray-300 mb-4">{example.description}</p>;
-                ;
+
                 <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">;
                   <pre className="text-sm text-green-400">;
                     <code>{example.code}</code>;
                   </pre>;
                 </div>;
-                ;
+
                 <div className="mt-4 flex gap-3">;
                   <button className="text-blue-400 hover:text-blue-300 text-sm font-medium">;
                     Copy Code;
@@ -216,7 +211,7 @@ System.out.println("Project created: " + response.body());`;,
                 View Docs →;
               </a>;
             </div>;
-            ;
+
             <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 text-center">;
               <div className="text-4xl mb-4">🎓</div>;
               <h3 className="text-xl font-semibold text-white mb-4">Tutorials</h3>;
@@ -227,7 +222,7 @@ System.out.println("Project created: " + response.body());`;,
                 View Tutorials →;
               </a>;
             </div>;
-            ;
+
             <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 text-center">;
               <div className="text-4xl mb-4">💬</div>;
               <h3 className="text-xl font-semibold text-white mb-4">Support</h3>;
@@ -256,7 +251,5 @@ System.out.println("Project created: " + response.body());`;,
         </footer>;
       </div>;
     </>;
-  );,
-};
-;
+  )}
 export default Examples;

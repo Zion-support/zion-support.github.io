@@ -44,8 +44,7 @@ export {};
 ''';
     const matchesCategory ='''';
       selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;,
-});
+    return matchesSearch && matchesCategory});
   // Sort services;
   const sortedServices = [...filteredServices].sort((a, b) => {}
     switch (sortBy) {}
@@ -59,8 +58,7 @@ export {};
       case 'ai-score': any;
         return (b.aiScore || 0) - (a.aiScore || 0);
       default: any;
-        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);,
-}
+        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0)}
   });
   const uniqueCategories = Array.from();
     new Set(ADVANCED_SERVICES.map(service => service.category));
@@ -338,8 +336,7 @@ export {};
           </div>;
         </div>;
       </section>;
-    </div>) ;,
-}
+    </div>) }
 // Service Card Component;
 function ServiceCard({ service }) {}
   return null;
@@ -423,14 +420,10 @@ function ServiceCard({ service }) {}
         </div>;
       </CardContent>;
     </Card>)}
-;
 
-export { AdvancedServicesPage, ServiceCard };
-;
-export { AdvancedServicesPage, ServiceCard };
-;
-export { AdvancedServicesPage, ServiceCard };
-;
-export { AdvancedServicesPage, ServiceCard };
-;
-export { AdvancedServicesPage, ServiceCard };
+
+export { AdvancedServicesPage, ServiceCard }
+export { AdvancedServicesPage, ServiceCard }
+export { AdvancedServicesPage, ServiceCard }
+export { AdvancedServicesPage, ServiceCard }
+export { AdvancedServicesPage, ServiceCard }

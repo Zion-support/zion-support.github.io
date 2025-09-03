@@ -10,29 +10,25 @@ const AIWorkflowAutomation = () => {}
             icon: Brain,;
             title: "AI-Powered Process Analysis","";
             description: "Intelligent analysis of existing workflows to identify optimization opportunities and automation potential","";
-            benefits["Process mapping", "Bottleneck identification", "Efficiency scoring", "Automation recommendations"];,
-},;
+            benefits["Process mapping", "Bottleneck identification", "Efficiency scoring", "Automation recommendations"]},;
         {}
 ";
             icon: Workflow,"";
             title: "Intelligent Workflow Design","";
             description: "AI-driven workflow design that adapts to business needs and automatically optimizes for performance","";
-            benefits["Dynamic workflows", "Conditional logic", "Exception handling", "Performance optimization"];,
-},;
+            benefits["Dynamic workflows", "Conditional logic", "Exception handling", "Performance optimization"]},;
         {}
 ";
             icon: Zap,"";
             title: "Automated Decision Making","";
             description: "AI algorithms that make intelligent decisions based on data, rules, and historical patterns","";
-            benefits["Rule-based decisions", "Machine learning", "Risk assessment", "Compliance checking"];,
-},;
+            benefits["Rule-based decisions", "Machine learning", "Risk assessment", "Compliance checking"]},;
         {}
 ";
             icon: Clock,"";
             title: "Real-time Monitoring","";
             description: "Continuous monitoring of workflow performance with instant alerts and proactive optimization","";
-            benefits["Performance tracking", "Real-time alerts", "Predictive maintenance", "KPI monitoring"];,
-}
+            benefits["Performance tracking", "Real-time alerts", "Predictive maintenance", "KPI monitoring"]}
     ];
     const solutions = [];
         {}
@@ -46,8 +42,7 @@ const AIWorkflowAutomation = () => {}
                 "Form processing automation","";
                 "Document routing and approval","";
                 "Compliance checking";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -59,8 +54,7 @@ const AIWorkflowAutomation = () => {}
                 "Customer inquiry handling","";
                 "Service level monitoring","";
                 "Customer satisfaction tracking";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -72,8 +66,7 @@ const AIWorkflowAutomation = () => {}
                 "Expense report processing","";
                 "Budget monitoring","";
                 "Financial reporting";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -85,8 +78,7 @@ const AIWorkflowAutomation = () => {}
                 "Onboarding workflows","";
                 "Performance review automation","";
                 "Employee self-service";
-            ];,
-}
+            ]}
     ];
     const technologies = [];
         {}
@@ -94,43 +86,37 @@ const AIWorkflowAutomation = () => {}
 "";
             name: "Machine Learning","";
             description: "Advanced ML algorithms for process optimization and decision making",;
-            icon: Brain;,
-},;
+            icon: Brain},;
         {}
 ";
 "";
             name: "Robotic Process Automation","";
             description: "RPA tools for repetitive task automation",;
-            icon: Workflow;,
-},;
+            icon: Workflow},;
         {}
 ";
 "";
             name: "Natural Language Processing","";
             description: "AI-powered text analysis and document processing",;
-            icon: Database;,
-},;
+            icon: Database},;
         {}
 ";
 "";
             name: "Workflow Engine","";
             description: "Scalable workflow orchestration platform",;
-            icon: Zap;,
-},;
+            icon: Zap},;
         {}
 ";
 "";
             name: "Real-time Analytics","";
             description: "Instant performance monitoring and optimization",;
-            icon: BarChart3;,
-},;
+            icon: BarChart3},;
         {}
 ";
 "";
             name: "API Integration","";
             description: "Seamless integration with existing systems",;
-            icon: Globe;,
-}
+            icon: Globe}
     ];
     const benefits = [];
         {}
@@ -138,39 +124,34 @@ const AIWorkflowAutomation = () => {}
 "";
             title: "Increased Efficiency","";
             description: "Automate repetitive tasks and improve process efficiency by 40-60%",;
-            icon: TrendingUp;,
-},;
+            icon: TrendingUp},;
         {}
 ";
 "";
             title: "Cost Reduction","";
             description: "Reduce operational costs by 25-35% through automation",;
-            icon: Target;,
-},;
+            icon: Target},;
         {}
 ";
 "";
             title: "Error Reduction","";
             description: "Minimize human errors and improve accuracy by 90%+",;
-            icon: CheckCircle;,
-},;
+            icon: CheckCircle},;
         {}
 ";
 "";
             title: "Scalability","";
             description: "Scale operations without proportional increase in resources",;
-            icon: Users;,
-}
+            icon: Users}
     ];
     const containerVariants = {}
         hidden: { opacity: 0 },;
         visible: {}
             opacity: 1,;
             transition: {}
-                staggerChildren: 0.1;,
-}
+                staggerChildren: 0.1}
         }
-    };
+    }
     const itemVariants = {}
   hidden: {};
 },;
@@ -178,10 +159,8 @@ const AIWorkflowAutomation = () => {}
             y: 0,;
             opacity: 1,;
             transition: {}
-                duration: 0.5;,
-}
-        }";,
-};"";
+                duration: 0.5}
+        }"};"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       {/* Hero Section */}"";
       <div className="relative overflow-hidden">"";
@@ -351,16 +330,12 @@ const AIWorkflowAutomation = () => {}
           </div>;
         </motion.div>;
       </div>;
-    </div>)};
+    </div>)}
 export default AIWorkflowAutomation;
-;
 
-export { AIWorkflowAutomation };
-;
-export { AIWorkflowAutomation };
-;
-export { AIWorkflowAutomation };
-;
-export { AIWorkflowAutomation };
-;
-export { AIWorkflowAutomation };
+
+export { AIWorkflowAutomation }
+export { AIWorkflowAutomation }
+export { AIWorkflowAutomation }
+export { AIWorkflowAutomation }
+export { AIWorkflowAutomation }

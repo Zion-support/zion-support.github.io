@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {;
+import {
 
   Bell,;
   X,;
@@ -20,8 +20,8 @@ import {;
   MessageSquare,;
   Volume2,;
   VolumeX} from 'lucide-react';
-;
-interface Notification {;
+
+interface Notification {
 
   id: string;
   title: string;
@@ -34,21 +34,20 @@ interface Notification {;
   category: string;
   actionUrl?: string;
   metadata?: Record<string, any>;
-;,
 }
-;
-interface AdvancedNotificationCenterProps {;
+
+interface AdvancedNotificationCenterProps {
 
   // Add your props here;
 
-;
+
   maxNotifications?: number;
   autoDismiss?: boolean;
   dismissDelay?: number;
   showUnreadCount?: boolean;
   enableSound?: boolean;
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
-;
+
 const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({;
 
   maxNotifications = 50,;
@@ -56,7 +55,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
   dismissDelay = 5000,;
   showUnreadCount = true,;
   enableSound = false,;
-  position = 'top-right'}) => {;
+  position = 'top-right'}) => {
 
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -66,9 +65,9 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
   const [searchQuery, setSearchQuery] = useState('');
   const [showArchived, setShowArchived] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(enableSound);
-;
+
   // Generate mock notifications;
-  const generateMockNotifications = useCallback(() => {;
+  const generateMockNotifications = useCallback(() => {
 
     const types: Notification['type'][] = [';
       'success',warning',error',info',;
@@ -79,17 +78,17 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
     const categories = [';
       'System',Security',Performance',User',Integration',Backup',;
     ];
-;
+
     const mockNotifications: Notification[] = [];
-;
-    for (let i = 0; i < 15; i++) {;
+
+    for (let i = 0; i < 15; i++) {
 
       const type = types[Math.floor(Math.random() * types.length)];
       const priority =;
         priorities[Math.floor(Math.random() * priorities.length)];
       const category =;
         categories[Math.floor(Math.random() * categories.length)];
-;
+
       mockNotifications.push({;
 
         id: `notification-${i}`,`;
@@ -103,87 +102,78 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
         category,;
         actionUrl:`;
           Math.random() > 0.5 ? `https://example.com/action-${i}` : undefined,;
-        metadata: {;
+        metadata: {
 
           source: 'system',;
           userId: Math.floor(Math.random() * 1000),`;
-          sessionId: `session-${Math.random().toString(36).substr(2, 9)}`}});,
-}
-;
+          sessionId: `session-${Math.random().toString(36).substr(2, 9)}`}})}
+
     return mockNotifications.sort();
       (a, b) => b.timestamp.getTime() - a.timestamp.getTime();
-    );,
-}, []);
-;
-  useEffect(: unknown {;
+    )}, []);
 
-    setNotifications(generateMockNotifications());,
-}, [generateMockNotifications]);
-;
+  useEffect(: unknown {
+
+    setNotifications(generateMockNotifications())}, [generateMockNotifications]);
+
   // Auto-dismiss notifications;
-  useEffect(: unknown {;
+  useEffect(: unknown {
 
     if (!autoDismiss) return;
-;
-    const interval = setInterval(() => {;
+
+    const interval = setInterval(() => {
 
       setNotifications(prev =>;
-        prev.filter(notification => {;
+        prev.filter(notification => {
 
           const timeDiff = Date.now() - notification.timestamp.getTime();
           return (';
             timeDiff < dismissDelay || notification.priority === 'critical';
-          );,
-});
-      );,
-}, 1000);
-;
-    return () => clearInterval(interval);,
-}, [autoDismiss, dismissDelay]);
-;
+          )});
+      )}, 1000);
+
+    return () => clearInterval(interval)}, [autoDismiss, dismissDelay]);
+
   // Add new notification;
   const addNotification = useCallback();
     (';
       notification: Omit<Notification,id' | 'timestamp' | 'read' | 'archived'>;
-    ) => {;
+    ) => {
 
-      const newNotification: Notification = {;
+      const newNotification: Notification = {
 
         ...notification,`;
         id: `notification-${Date.now()}`,;
         timestamp: new Date(),;
         read: false,;
-        archived: false};
-;
+        archived: false}
       setNotifications(prev => [;
         newNotification,;
         ...prev.slice(0, maxNotifications - 1),;
       ]);
-;
-      if (soundEnabled) {;
+
+      if (soundEnabled) {
 
         // Play notification sound;
         const audio = new Audio(';
           'data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT';
         );
-        audio.play().catch(() => {}); // Ignore errors;,
-}
+        audio.play().catch(() => {}); // Ignore errors}
     },;
     [maxNotifications, soundEnabled];
   );
-;
+
   // Mark notification as read;
-  const markAsRead = useCallback((id: string) => {;
+  const markAsRead = useCallback((id: string) => {
 
     setNotifications(prev =>;
       prev.map(notification =>;
         notification.id === id ? { ...notification, read: true } : notification;
       );
-    );,
-}, []);
-;
+    )}, []);
+
   // Archive notification;
-  const archiveNotification = useCallback((id: string) => {;
+  const archiveNotification = useCallback((id: string) => {
 
     setNotifications(prev =>;
       prev.map(notification =>;
@@ -191,33 +181,29 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
           ? { ...notification, archived: true }
           : notification;
       );
-    );,
-}, []);
-;
+    )}, []);
+
   // Delete notification;
-  const deleteNotification = useCallback((id: string) => {;
+  const deleteNotification = useCallback((id: string) => {
 
     setNotifications(prev =>;
       prev.filter(notification => notification.id !== id);
-    );,
-}, []);
-;
+    )}, []);
+
   // Mark all as read;
-  const markAllAsRead = useCallback(() => {;
+  const markAllAsRead = useCallback(() => {
 
     setNotifications(prev =>;
       prev.map(notification => ({ ...notification, read: true }));
-    );,
-}, []);
-;
-  // Clear all notifications;
-  const clearAll = useCallback(: unknown {;
+    )}, []);
 
-    setNotifications([]);,
-}, []);
-;
+  // Clear all notifications;
+  const clearAll = useCallback(: unknown {
+
+    setNotifications([])}, []);
+
   // Filter notifications;
-  const filteredNotifications = notifications.filter(notification => {;
+  const filteredNotifications = notifications.filter(notification => {
 
     if (filter === 'unread' && notification.read) return false;
     if (';
@@ -232,17 +218,16 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
     );
       return false;
     if (!showArchived && notification.archived) return false;
-    return true;,
-});
-;
+    return true});
+
   const unreadCount = notifications.filter(n => !n.read).length;
   const highPriorityCount = notifications.filter(n =>;
     ['high',critical'].includes(n.priority);
   ).length;
-;
-  const getPriorityColor = (priority: Notification['priority']) => {;
 
-    switch (priority) {;
+  const getPriorityColor = (priority: Notification['priority']) => {
+
+    switch (priority) {
 
       case 'critical':';
         return 'text-red-500 bg-red-500/10 border-red-500/20';
@@ -253,13 +238,11 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       case 'low':';
         return 'text-blue-500 bg-blue-500/10 border-blue-500/20';
       default:';
-        return 'text-gray-500 bg-gray-500/10 border-gray-500/20';,
-}
-  };
-;
-  const getTypeIcon = (type: Notification['type']) => {;
+        return 'text-gray-500 bg-gray-500/10 border-gray-500/20'}
+  }
+  const getTypeIcon = (type: Notification['type']) => {
 
-    switch (type) {;
+    switch (type) {
 
       case 'success':;
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -270,13 +253,11 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       case 'info':";
         return <Info className="w-5 h-5 text-blue-500" />;
       default:";
-        return <Info className="w-5 h-5 text-gray-500" />;,
-}
-  };
-;
-  const getPositionClasses = (...args: unknown[]): unknown => {;
+        return <Info className="w-5 h-5 text-gray-500" />}
+  }
+  const getPositionClasses = (...args: unknown[]): unknown => {
 
-    switch (position) {;
+    switch (position) {
 
       case 'top-left':';
         return 'top-4 left-4';
@@ -287,10 +268,8 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       case 'bottom-right':';
         return 'bottom-4 right-4';
       default:';
-        return 'top-4 right-4';,
-}
-  };
-;
+        return 'top-4 right-4'}
+  }
   return()`;
     <div className={`fixed ${getPositionClasses()} z-50`}>;
       {/* Notification Bell */}
@@ -339,8 +318,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
 
                       soundEnabled';
                         ? 'bg-green-600 text-white'';
-                        : 'bg-gray-600 text-gray-300'`;,
-}`}
+                        : 'bg-gray-600 text-gray-300'`}`}
                   >;
                     {soundEnabled ? (";
                       <Volume2 className="w-4 h-4" />;
@@ -385,8 +363,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
 
                       showArchived';
                         ? 'bg-blue-600 text-white'';
-                        : 'bg-gray-600 text-gray-300'`;,
-}`}
+                        : 'bg-gray-600 text-gray-300'`}`}
                   >;
                     {showArchived ? (";
                       <EyeOff className="w-4 h-4" />;
@@ -415,8 +392,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
                       exit={{ opacity: 0, x: 20 }}`;
                       className={`p-4 hover:bg-gray-800 transition-colors ${;
 
-                        !notification.read ? 'bg-gray-800/50' : ''`;,
-}`}
+                        !notification.read ? 'bg-gray-800/50' : ''`}`}
                     >";
                       <div className="flex items-start gap-3">";
                         <div className="flex-shrink-0 mt-1">;
@@ -470,7 +446,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
                             Mark as read;
                           </button>;
                         )}
-;
+
                         <button;
                           onClick={() => archiveNotification(notification.id)}";
                           className="text-xs text-gray-400 hover:text-gray-300 hover:underline">;
@@ -517,8 +493,6 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
         )}
       </AnimatePresence>;
     </div>;
-  );,
-};
-;
+  )}
 export default AdvancedNotificationCenter;
 '"`}

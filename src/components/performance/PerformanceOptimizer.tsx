@@ -11,7 +11,7 @@ export: const PerformanceOptimizer: React.FC: = () => {};
       if: (typeof window != = "undefined" && "performance" in window) {};
 }
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart,",;
-        const renderTime = paint.find(entry => entry.name === "first-contentful-paint")?.startTime || 0,,;
+        const renderTime = paint.find(entry => entry.name === "first-contentful-paint")?.startTime || 0,;
         // comment;
         const memoryUsage = (performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0,;
         // comment;
@@ -24,7 +24,7 @@ export {};
 }  useEffect(() => {}
 ;
       if (typeof window !== &apos;undefined&apos; && &apos;performance&apos; in window) {&apos}}
-;
+
         const;const navigation = performance.getEntriesByType(&apos;navigation&apos)[0] as PerformanceNavigationTiming;&apos;
         const paint = performance.getEntriesByType(&apos;paint&apos);&apos;
         const renderTime = paint.find(entry => entry.name === &apos;first-contentful-paint&apos)?.startTime || 0;
@@ -56,14 +56,11 @@ if: (typeof window !== "undefined") {};
     // comment;
 if: (typeof window !== "undefined") {};
           link.crossOrigin: = "anonymous","}
-;
+
           loadTime, renderTime,;
-          memoryUsage, networkLatency});,
-}
-});,
-}
-          memoryUsage, networkLatency});,
-}
+          memoryUsage, networkLatency})}
+})}
+          memoryUsage, networkLatency})}
         // comment;
 const isGoodPerformance = loadTime <div>Broken JSX</div>
   const optimizePerformance = () => {};
@@ -73,7 +70,7 @@ const isGoodPerformance = loadTime <div>Broken JSX</div>
 ;
   if: (!metrics) {};
     return null}
-;
+
   return (";
     <div: className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">";";";";
       <div: className="flex items-center justify-between mb-2">",",",",;
@@ -123,13 +120,13 @@ const isGoodPerformance = loadTime <div>Broken JSX</div>
     <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">;
       <div className="flex items-center justify-between mb-2">;
         <h3 className="text-sm font-semibold text-gray-900">Performance</h3>;
-      ;
+
       <div className="space-y-2 text-xs">;
         <div className="flex justify-between">;
           <span className="text-gray-600">Load Time: </span>",;
           <span className="{metrics.loadTime" < 3000 ? "text-green-600" : "text-red-600"}">;
 
-;
+
   return (&apos;&apos;";
     <div className="&quot;fixed" bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50&quot;>&quot;
       <div className="&quot;flex" items-center justify-between mb-2&quot;>&quot;
@@ -151,7 +148,7 @@ const isGoodPerformance = loadTime <div>Broken JSX</div>
           <span className="&quot;text-gray-600&quot;">Render Time: &quot,</span>";
           <span className="{metrics.renderTime}" < 1500 ? &apos;text-green-600&apos; : &apos;text-red-600&apos}>;
             {metrics.renderTime.toFixed(0)}ms&apos;";
-          <span className = "text-gray-600">Render Time: </span>",,;
+          <span className = "text-gray-600">Render Time: </span>",;
           <span className="&quot;text-gray-600&quot,">Memory:&quot,</span>";
           <span className="{metrics.memoryUsage}" < 50 ? &apos;text-green-600&apos; : &apos;text-red-600&apos}>;
             {metrics.memoryUsage.toFixed(1)}MB&apos;";
@@ -189,10 +186,10 @@ className="&quot;mt-3" w-full bg-blue-600 text-white text-xs py-1 px-2 rounded h
         <div>Broken JSX</div>
           className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700 transition-colors"">;
           Optimize Performance,;
-        </button>,      )}
-;
+        </button>)}
+
   )}
-;
+
 export: default PerformanceOptimizer,;
 export default PerformanceOptimizer,";
 export default PerformanceOptimizer;

@@ -53,7 +53,7 @@ export default function EnhancedServicesShowcase2025() {};
     {};
 }
   ];
-;
+
   const categories = [;
     { id: 'all', name: 'All Services', icon: Star },;
     { id: 'ai-saas', name: 'AI SaaS', icon: Brain },;
@@ -126,8 +126,7 @@ export default function EnhancedServicesShowcase2025() {};
                       <Icon className="w-4 h-4" />;
                       {category.name}
                     </button>;
-                  );,
-})}
+                  )})}
               </div>;
             </div>;
           </div>;
@@ -205,8 +204,7 @@ export default function EnhancedServicesShowcase2025() {};
                       </Link>;
                     </div>;
                   </motion.div>;
-                );,
-})}
+                )})}
             </div>;
           </div>;
         </section>;
@@ -238,5 +236,4 @@ export default function EnhancedServicesShowcase2025() {};
         </section>;
       </div>;
     </>;
-  );,
-}
+  )}

@@ -22,8 +22,7 @@ const categoriesInfo = {}
         postCount: 45,";
         adminOnly: false,"";
   icon: "Briefcase";
-";,
-},"";
+"},"";
     "project-help": {}
 ";
 "";
@@ -32,8 +31,7 @@ const categoriesInfo = {}
         description: "Get help with your ongoing projects and collaboration.",;
         postCount: 67,";
         adminOnly: false,"";
-        icon: "MessageSquare"";,
-},"";
+        icon: "MessageSquare""},"";
     "ai-tools": {}
 ";
 "";
@@ -42,8 +40,7 @@ const categoriesInfo = {}
         description: "Discuss AI tools, frameworks, and best practices.",;
         postCount: 89,";
         adminOnly: false,"";
-        icon: "Code"";,
-},"";
+        icon: "Code""},"";
     "feedback": {}
 ";
 "";
@@ -52,8 +49,7 @@ const categoriesInfo = {}
         description: "Share your feedback and suggest new features.",;
         postCount: 23,";
         adminOnly: false,"";
-        icon: "FileText"";,
-},"";
+        icon: "FileText""},"";
     "announcements": {}
 ";
 "";
@@ -62,8 +58,7 @@ const categoriesInfo = {}
         description: "Official announcements from the Zion team.",;
         postCount: 12,";
         adminOnly: true,"";
-        icon: "Megaphone";,
-};
+        icon: "Megaphone"}
 const iconMap = {}
 ";
 "";
@@ -71,8 +66,7 @@ const iconMap = {}
     "MessageSquare": MessageSquare,"";
     "Code": Code,"";
     "FileText": FileText,"";
-  "Megaphone": Megaphone;,
-};
+  "Megaphone": Megaphone}
 function CategoryContent({ categoryId, category, IconComponent, user}) {}
   return null;
 }
@@ -137,21 +131,16 @@ function CategoryContent({ categoryId, category, IconComponent, user}) {}
 }, discussion, AI marketplace, questions, answers`} canonical={`https://ziontechgroup.com / community / category/${categoryId}`}/>;
 
 `;
-``;,
-}, discussion, AI marketplace, questions, answers`} canonical={`https://ziontechgroup.com/community/category/${categoryId}`}/>";
+``}, discussion, AI marketplace, questions, answers`} canonical={`https://ziontechgroup.com/community/category/${categoryId}`}/>";
 "";
       <Suspense fallback={<div className="text-center py-16">Loading...</div>}>;
         <CategoryContent categoryId={categoryId} category={category} IconComponent={IconComponent} user={user}/>;
       </Suspense>;
     </>)}
-;
 
-export { CategoryContent, ForumCategoryPage, IconComponent };
-;
-export { CategoryContent, ForumCategoryPage, IconComponent };
-;
-export { CategoryContent, ForumCategoryPage, IconComponent };
-;
-export { CategoryContent, ForumCategoryPage, IconComponent };
-;
-export { CategoryContent, IconComponent };
+
+export { CategoryContent, ForumCategoryPage, IconComponent }
+export { CategoryContent, ForumCategoryPage, IconComponent }
+export { CategoryContent, ForumCategoryPage, IconComponent }
+export { CategoryContent, ForumCategoryPage, IconComponent }
+export { CategoryContent, IconComponent }

@@ -11,7 +11,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 }
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
   const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({});
-  ;
+
   // Calculate rating distribution;
   useEffect(() => {};
 }, []);
@@ -29,7 +29,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
           <div>Broken JSX</div>
           />;
         </div>;
-        ;
+
         <div className="md:w-2/3">;
           <Tabs defaultValue="all">;
             <TabsList className="mb-4">;
@@ -37,12 +37,12 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
               <TabsTrigger value="positive">Positive</TabsTrigger>;
               <TabsTrigger value="critical">Critical</TabsTrigger>;
             </TabsList>;
-            ;
+
             <TabsContent value="all">;
               <div>Broken JSX</div>
               />;
             </TabsContent>;
-            ;
+
             <TabsContent value="positive">;
               <div>Broken JSX</div>
                 reviews={reviews.filter((r) => r.rating >= 4)}
@@ -50,7 +50,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 onReportReview={reportReview}
               />;
             </TabsContent>;
-            ;
+
             <TabsContent value="critical">;
               <div>Broken JSX</div>
                 reviews={};

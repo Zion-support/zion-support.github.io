@@ -2,7 +2,7 @@ import React from 'react';
 import SEO from '../components/SEO';
 // import { Header } from '../components/header/Header.jsx';
 import { Footer } from '../components/Footer';
-;
+
 import { MobileFeatureShowcase } from '../components/mobile-app/MobileFeatureShowcase.jsx';
 import { AppTestimonials } from '../components/mobile-app/AppTestimonials.jsx';
 import { MobileEmailCapture } from '../components/mobile-app/MobileEmailCapture.jsx';
@@ -28,6 +28,5 @@ export {};
       </main>;
       <Footer />;
     </>;
-  );,
-};'";
+  )};'";
 '"'"

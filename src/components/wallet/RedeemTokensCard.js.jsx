@@ -52,14 +52,10 @@ const RedeemTokensCard() {}
         </Dialog>;
       </CardContent>;
     </Card>)}
-;
 
-export { RedeemTokensCard };
-;
-export { RedeemTokensCard };
-;
-export { RedeemTokensCard };
-;
-export { RedeemTokensCard };
-;
-export { RedeemTokensCard };
+
+export { RedeemTokensCard }
+export { RedeemTokensCard }
+export { RedeemTokensCard }
+export { RedeemTokensCard }
+export { RedeemTokensCard }

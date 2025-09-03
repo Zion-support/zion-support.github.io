@@ -61,7 +61,7 @@ export default function ServicesComparison() {};
             </div>;
           </motion.div>;
         </div>;
-        ;
+
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden">;
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-cyan/20 rounded-full blur-3xl"></div>;
@@ -169,8 +169,7 @@ export default function ServicesComparison() {};
                     </div>;
                   </div>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -335,7 +334,7 @@ export default function ServicesComparison() {};
           </div>;
         </section>;
       )}
-;
+
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-zion-purple to-zion-purple-dark">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
@@ -362,5 +361,4 @@ export default function ServicesComparison() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

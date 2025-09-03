@@ -1,15 +1,13 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
-const Link = dynamic(() => import("next/link"), { ssr: false });,
-}
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })}
+const Link = dynamic(() => import("next/link"), { ssr: false })}
   MessageSquare,;
   FileText} from "lucide-react";
-export default function Solutions() {;
-;
+export default function Solutions() {
+
   const solutions = [],";
       color: "blue"},;
     {";
@@ -80,7 +78,7 @@ export default function Solutions() {;
         <meta name = "description" content="Comprehensive technology solutions for enterprises, small businesses, and startups. Custom development and digital transformation services."  />;
         <meta name="viewport" content="width=device-width, initial-scale=1"  />;
       </Head>";
-      ;
+
       <main className="min-h-screen bg-white">";
         {/* comment */}
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">;
@@ -161,7 +159,7 @@ solutions that drive growth, efficiency, and innovation.;
                 <div key="{index}" className="text-center">";
                   <div className="text-4xl font-bold text-blue-600 mb-2">;
                     {stat.number}
-;
+
                   </div>";
                   <div className="text-gray-600">{stat.label}</div>;
         {/* comment */}";
@@ -176,7 +174,7 @@ solutions that drive growth, efficiency, and innovation.;
 of different business types and sizes.;
               </p>;
             </div>";
-            ;
+
             <div className="grid grid-cols-1 m>;
     d:grid-cols-2 l,";
     g: grid-cols-3 gap-8">",;
@@ -188,7 +186,7 @@ of different business types and sizes.;
                     </div>",;
                     <h3 className="text-2xl font-bold text-gray-900">{solution.title}</h3>;
                   </div>";
-                  ;
+
                   <p className="text-gray-600 mb-6">{solution.description}</p>";
                   ";
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,;
@@ -201,7 +199,7 @@ of different business types and sizes.;
                     </div>";
                     <h3 className="text-2xl font-bold text-gray-900">,;
                       {solution.title}
-;
+
                     </h3>;
                   </div>;
 ";
@@ -214,7 +212,7 @@ of different business types and sizes.;
                         <span className="text-gray-700">{feature}</span>;
                       </li>;
                     ))}
-;
+
                   </ul>;
                   ";
                   <Link href={solution.href}
@@ -227,7 +225,7 @@ of different business types and sizes.;
                   </Link>;
                 </div>,;
               ))}
-;
+
             </div>;
         </section>;
 ";
@@ -269,16 +267,16 @@ designed to address specific challenges and drive growth.;
                   className="p-8 hover: shadow-xl transition-shadow duration-300">";
                   <div className="{"text-center" mb-6">",;
                     <div className="{"inline-flex" items-center justify-center w-16 h-16 rounded-full bg-${solution.color}-100 mb-4"}
-;
+
                     >;
                       <solution.icon,";
 className="{"h-8" w-8 text-${solution.color}-600"}
-;
+
                      />;
                     </div>";
                     <h3 className=""text-xl" font-semibold text-gray-900 mb-2"}>;
                       {solution.title}
-;
+
                     </h3>";
                     <p className="text-gray-600 mb-6">{solution.description}</p>;
                   </div>;
@@ -289,10 +287,10 @@ className="{"h-8" w-8 text-${solution.color}-600"}
                         className="flex items-center text-gray-700">";
                         <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0"  />;
                         {feature}
-;
+
                       </li>;
                     ))}
-;
+
                   </ul>;
 ";
                   <Link href="{solution.href}">";
@@ -323,12 +321,12 @@ and competitive advantage.;
                   </div>";
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">;
                     {benefit.title}
-;
+
                   </h3>";
                   <p className="text-gray-600">{benefit.description}</p>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
 ";
@@ -353,7 +351,7 @@ and competitive advantage.;
                   with deep understanding of sector-specific challenges and,;
 requirements.;
                 </p>";
-                ;
+
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-4">",;
                   {industries.map((industry, index) => (;
                     <div key="{index}" className="flex items-center">;
@@ -366,10 +364,10 @@ requirements.;
                       <span className="text-gray-700">{industry}</span>;
                     </div>;
                   ))}
-;
+
                 </div>;
               </div>";
-              ;
+
               <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">;
                 <h3 className="text-2xl font-bold mb-6">Ready to Get Started?</h3>;
                 <p className="text-lg mb-6">";
@@ -470,8 +468,7 @@ solution that fits your specific needs.;
       </div>;
     </Layout>,;
   )}
-;
+
       </main>;
     </>;
-  );";,
-}"}")))))))))
+  );"}"}")))))))))

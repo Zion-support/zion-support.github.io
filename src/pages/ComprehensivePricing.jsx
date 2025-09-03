@@ -43,7 +43,7 @@ const ComprehensivePricing = () => {};
             case 'managed services': return <Settings className="h-5 w-5"/>;'"'";
             case 'web development': return <Globe className="h-5 w-5"/>;"";
             default: return <Star className="h-5 w-5"/>}
-    };
+    }
     const getCategoryColor = (category) => {}
         switch (category.toLowerCase()) {}
 ';
@@ -77,7 +77,7 @@ const ComprehensivePricing = () => {};
             case 'managed services': return 'from-teal-500 to-cyan-500';''';
             case 'web development': return 'from-blue-500 to-green-500';''';
             default: return 'from-gray-500 to-slate-500'}
-    };
+    }
     const formatPrice = (price, pricingModel) => {}
 ';
         if (pricingModel === 'per API call') {}
@@ -111,12 +111,10 @@ const ComprehensivePricing = () => {};
 ``;
 ```;
 ````;
-            return `$${price}/month`}
-        else {}
+            return `$${price}/month`} else {}
 `;
 ``;
-            return `$${price}`}";,
-};"";
+            return `$${price}`}"};"";
     const renderITPricing = () => (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"";
       {enhancedITServices2025.map((service) => (<Card key={service.id} className="group relative overflow-hidden bg-gradient-to-br from-blue-800/50 to-indigo-700/50 border-blue-600/30 hover:border-blue-500/50 transition-all duration-500 hover:scale-105 backdrop-blur-sm">"";
           <CardHeader className="pb-4">""`;
@@ -290,16 +288,11 @@ const ComprehensivePricing = () => {};
           </div>;
         </div>;
       </section>;
-    </div>)};
-export default ComprehensivePricing;,
-}}}}}}}}}}}}
-;
-export { ComprehensivePricing };
-;
-export { ComprehensivePricing };
-;
-export { ComprehensivePricing };
-;
-export { ComprehensivePricing };
-;
-export { ComprehensivePricing };
+    </div>)}
+export default ComprehensivePricing}}}}}}}}}}}}
+
+export { ComprehensivePricing }
+export { ComprehensivePricing }
+export { ComprehensivePricing }
+export { ComprehensivePricing }
+export { ComprehensivePricing }

@@ -39,7 +39,6 @@ export function EnhancedSearchInput({};
 }
 }
     }
-    ;
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);,
 }, []);
@@ -81,7 +80,7 @@ export function EnhancedSearchInput({};
           onChange={};
 }}
           onFocus={() => setIsFocused(true)}
-          onKeyDown={handleKeyDown} ;
+          onKeyDown={handleKeyDown}
           placeholder={placeholder}
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate";
           aria-autocomplete="list";
@@ -89,7 +88,6 @@ export function EnhancedSearchInput({};
         />;
         {};
             onClick={() => onChange('')}
-            ;
           >;
             <X className="h-4 w-4" />;
           </button>;
@@ -99,5 +97,4 @@ export function EnhancedSearchInput({};
       <div>Broken JSX</div>
       />;
     </div>;
-  );,
-}
+  )}

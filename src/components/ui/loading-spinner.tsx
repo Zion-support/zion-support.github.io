@@ -29,9 +29,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({};
         <span className="sr-only">Loading...</span>;
       </div>;
     </div>;
-  );,
-}
-;
+  )}
+
 // Optimized spinner for inline use;
 export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({};
 }) => (;
@@ -41,7 +40,7 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
     <span className="sr-only">Loading</span>;
   </div>;
 );
-;
+
 // Full-screen loading overlay;
 export {};
 }> = ({};
@@ -70,7 +69,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = "md", clas
   size = &apos;md&apos,;
   className = &apos;&apos}) => {&apos}&apos;
   const sizeClasses = {}
-;
+
 // Skeleton loading component;
 export {};
 }> = ({};

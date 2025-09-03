@@ -5,8 +5,8 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { toast } from "@/components/ui/use-toast";
 import { apiClient } from "@/utils/apiClient";
 import { cn } from "@/lib/utils";
-;
-;
+
+
 import { Send, Loader2 } from "lucide-react";import { useTheme } from "@/hooks/useTheme";
 // Define suggested quick replies";
 const QUICK_REPLIES = ["";
@@ -43,7 +43,7 @@ export function ChatBotPanel() {};
             id: `user-${Date.now()}`,;
             content: text,";
             sender: "user",;
-            timestamp: new Date()};
+            timestamp: new Date()}
         setMessages((prev) => [...prev, userMessage]);";
         setInputValue("");
         setIsLoading(true);
@@ -51,7 +51,7 @@ export function ChatBotPanel() {};
                 id: `bot-${Date.now()}`,";
                 content: response.message || "Sorry, I couldn't process your request.Please try again.",";
                 sender: "bot",;
-                timestamp: new Date()};
+                timestamp: new Date()}
             setMessages((prev) => [...prev, botMessage]);
             // Check if the request was successful;
             if(!response.success) {};
@@ -89,7 +89,7 @@ export function ChatBotPanel() {};
             id: `bot-escalation-${Date.now()}`,";
             content: "I'm having trouble understanding your request.Would you like to speak with a human support agent or send an email to our support team?",";
             sender: "bot",;
-            timestamp: new Date()};
+            timestamp: new Date()}
         setMessages((prev) => [...prev, escalationMessage]);
         // Log this interaction for the support team;
         logSupportEscalation()};
@@ -112,8 +112,7 @@ export function ChatBotPanel() {};
                 id: `bot-${Date.now()}`,";
                 content: "I'm connecting you with a support agent.Please note that our support hours are Monday to Friday, 9AM to 6PM EST.If you're messaging outside these hours, a team member will follow up with you as soon as possible.",";
                 sender: "bot",;
-                timestamp: new Date();,
-}
+                timestamp: new Date()}
         ]);
         // In a real implementation, this would trigger a live chat request;
         toast({};
@@ -131,8 +130,7 @@ export function ChatBotPanel() {};
                 id: `bot-${Date.now()}`,";
                 content: "Please send your question to support@ziontechgroup.com. Our team will get back to you within 24 hours.",";
                 sender: "bot",;
-                timestamp: new Date();,
-}
+                timestamp: new Date()}
         ])};";
     return (<div className="flex flex-col h-full">";
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>";

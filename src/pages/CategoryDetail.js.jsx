@@ -35,16 +35,14 @@ function generateInnovationListing(index) {}
 ";
 "";
             name: "AutoGen Solutions","";
-            id: "autogen"";,
-},"";
+            id: "autogen""},"";
         images["https://source.unsplash.com/random/800x500?technology"],;
         createdAt: new Date().toISOString(),;
         rating,";
         reviewCount,"";
         location: "Global","";
         availability: "Immediate",;
-        aiScore: Math.floor (Math.random () * 20) + 80;,
-}}
+        aiScore: Math.floor (Math.random () * 20) + 80}}
     // Cast to specify the expected route param type since useParams may be untyped;
     const { slug } = useParams();
     const navigate = useNavigate();
@@ -55,8 +53,7 @@ function generateInnovationListing(index) {}
 "";
         title: ","";
         description: ","";
-        icon: <Bot className="w-6 h-6"/>;,
-});
+        icon: <Bot className="w-6 h-6"/>});
     const innovationCounterRef = useRef(0);
     // Map of category slugs to their display data;
     const categoryData = {}
@@ -67,75 +64,63 @@ function generateInnovationListing(index) {}
             description: "On-demand IT support, consulting, development, and more","";
   icon: <Briefcase className="w-6 h-6"/>;
 
-';,
-},talents': {}
+'},talents': {}
 ";
 "";
             title: "Talents","";
             description: "Connect with AI experts, developers, and tech specialists","";
-            icon: <Brain className="w-6 h-6"/>';,
-},equipment': {}
+            icon: <Brain className="w-6 h-6"/>'},equipment': {}
 ";
 "";
             title: "Equipment","";
             description: "Rent or buy specialized hardware, servers, and devices","";
-            icon: <Code className="w-6 h-6"/>';,
-},innovation': {}
+            icon: <Code className="w-6 h-6"/>'},innovation': {}
 ";
 "";
             title: "Innovation","";
             description: "Discover cutting-edge solutions and tech breakthroughs","";
-            icon: <Bot className="w-6 h-6"/>';,
-},ai-models-apis': {}
+            icon: <Bot className="w-6 h-6"/>'},ai-models-apis': {}
 ";
 "";
             title: "AI Models & APIs","";
             description: "Access cutting-edge AI models with easy integration","";
-            icon: <Brain className="w-6 h-6"/>';,
-},content-creation': {}
+            icon: <Brain className="w-6 h-6"/>'},content-creation': {}
 ";
 "";
             title: "Content Creation","";
             description: "Generate high-quality content for your projects","";
-            icon: <PenLine className="w-6 h-6"/>';,
-},data-analysis': {}
+            icon: <PenLine className="w-6 h-6"/>'},data-analysis': {}
 ";
 "";
             title: "Data Analysis","";
             description: "Extract insights from complex datasets","";
-            icon: <BarChart className="w-6 h-6"/>';,
-},computer-vision': {}
+            icon: <BarChart className="w-6 h-6"/>'},computer-vision': {}
 ";
 "";
             title: "Computer Vision","";
             description: "Image and video processing solutions","";
-            icon: <Eye className="w-6 h-6"/>';,
-},virtual-assistants': {}
+            icon: <Eye className="w-6 h-6"/>'},virtual-assistants': {}
 ";
 "";
             title: "Virtual Assistants","";
             description: "Intelligent automation for your workflow","";
-            icon: <Bot className="w-6 h-6"/>';,
-},voice-speech': {}
+            icon: <Bot className="w-6 h-6"/>'},voice-speech': {}
 ";
 "";
             title: "Voice & Speech","";
             description: "Speech recognition and synthesis tools","";
-            icon: <Mic className="w-6 h-6"/>';,
-},developer-tools': {}
+            icon: <Mic className="w-6 h-6"/>'},developer-tools': {}
 ";
 "";
             title: "Developer Tools","";
             description: "AI-powered coding assistance and automation","";
-            icon: <Code className="w-6 h-6"/>';,
-},business-solutions': {}
+            icon: <Code className="w-6 h-6"/>'},business-solutions': {}
 ";
 "";
             title: "Business Solutions","";
             description: "Enterprise AI integrations and services","";
-            icon: <Briefcase className="w-6 h-6"/>;,
-}
-    };
+            icon: <Briefcase className="w-6 h-6"/>}
+    }
     useEffect ( () => {}
         setIsLoading (true) ;
         // Find the category data based on slug;
@@ -144,8 +129,7 @@ function generateInnovationListing(index) {}
 '"'";
             title: slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') || "Category","";
             description: "Explore our collection in this category","";
-            icon: <Bot className="w-6 h-6"/>;,
-};
+            icon: <Bot className="w-6 h-6"/>}
         setCategory (currentCategory) ;
         innovationCounterRef.current = 0;
         // Filter listings by category;
@@ -170,13 +154,11 @@ function generateInnovationListing(index) {}
 ````;
                     name: `Provider ${index + 1}`,````;
                     id: `author-${index + 1}`,``;
-                    avatarUrl: null```;,
-},````;
+                    avatarUrl: null```},````;
                 images[`/placeholder.svg`],;
                 createdAt: new Date().toISOString(),;
                 rating: Math.floor(Math.random() * 5) + 1,;
-                reviewCount: Math.floor(Math.random() * 100);,
-}));
+                reviewCount: Math.floor(Math.random() * 100)}));
         setListings(listingsToShow);
         setIsLoading(false)}, [slug]);
     useEffect(() => {}
@@ -200,8 +182,7 @@ function generateInnovationListing(index) {}
 ";
 ""`;
                 title: "Quote Requested",``;
-                description: `Your quote request for ${listing.title} has been sent.`;,
-});";
+                description: `Your quote request for ${listing.title} has been sent.`});";
             // Navigate to the quote request page with the listing information"";
             router("/request-quote", {}
                 state: {}
@@ -210,11 +191,10 @@ function generateInnovationListing(index) {}
                         id: listing.id,;
                         title: listing.title,;
                         category: listing.category,;
-                        image: listing.images?.[0];,
-}
+                        image: listing.images?.[0]}
                 }
             }) }
-    };
+    }
     return (<>";
       "";
       <div className="min-h-screen bg-zion-blue">"";
@@ -244,16 +224,12 @@ function generateInnovationListing(index) {}
             </div>)}
         </div>;
       </div>;
-      ;
-    </>)}
-;
 
-export { AUTO_SERVICE_TITLES, CategoryDetail };
-;
-export { AUTO_SERVICE_TITLES, CategoryDetail };
-;
-export { AUTO_SERVICE_TITLES, CategoryDetail };
-;
-export { AUTO_SERVICE_TITLES, CategoryDetail };
-;
-export { AUTO_SERVICE_TITLES };
+    </>)}
+
+
+export { AUTO_SERVICE_TITLES, CategoryDetail }
+export { AUTO_SERVICE_TITLES, CategoryDetail }
+export { AUTO_SERVICE_TITLES, CategoryDetail }
+export { AUTO_SERVICE_TITLES, CategoryDetail }
+export { AUTO_SERVICE_TITLES }

@@ -33,10 +33,9 @@ export {};
       name: 'You',;
       isVideoEnabled: true,;
       isMuted: false,;
-      isScreenSharing: false;,
-}
+      isScreenSharing: false}
   ]);
-;
+
   const handleJoinCall = () => {}
   return <div>Component</div>;
 };
@@ -44,20 +43,14 @@ export {};
     // Simulate connection delay;
     setTimeout(() => {}
       setHasJoined(true) ;
-      setIsJoining(false) ;,
-}, 1500) ;,
-};
-;
+      setIsJoining(false) }, 1500) }
   const handleLeaveCall = () => {}
   return <div>Component</div>;
 };
     setHasJoined(false) ;
     // Navigate back after a short delay;
     setTimeout(() => {}
-      navigate(-1) ;,
-}, 1000) ;,
-};
-;
+      navigate(-1) }, 1000) }
   const toggleVideo = () => {}
   return <div>Component</div>;
 };
@@ -89,8 +82,7 @@ export {};
         name: 'Alex Chen',;
         isVideoEnabled: true,;
         isMuted: false,;
-        isScreenSharing: false;,
-},;
+        isScreenSharing: false},;
       {}
 ';
 '';
@@ -99,8 +91,7 @@ export {};
         name: 'Taylor Kim',;
         isVideoEnabled: false,;
         isMuted: true,;
-        isScreenSharing: false;,
-},;
+        isScreenSharing: false},;
       {}
 ';
 '';
@@ -109,15 +100,12 @@ export {};
         name: 'Jordan Smith',;
         isVideoEnabled: true,;
         isMuted: false,;
-        isScreenSharing: true;,
-}
+        isScreenSharing: true}
     ];
     const randomUser = mockUsers[Math.floor(Math.random () * mockUsers.length) ];
     if(!participants.find (p => p.id === randomUser.id) ) {}
-      setParticipants(prev => [...prev, randomUser]) ;,
-}
-  };
-;
+      setParticipants(prev => [...prev, randomUser]) }
+  }
   return (<>;
       <div>Broken JSX</div>
       />";
@@ -222,16 +210,11 @@ export {};
                 )}
             </main>;
         </>;
-    );,
-}
-;
+    )}
 
-export { VideoCall };
-;
-export { VideoCall };
-;
-export { VideoCall };
-;
-export { VideoCall };
-;
-export { VideoCall };
+
+export { VideoCall }
+export { VideoCall }
+export { VideoCall }
+export { VideoCall }
+export { VideoCall }

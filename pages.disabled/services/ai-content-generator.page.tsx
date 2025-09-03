@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import { ArrowRight, CheckCircle, Brain, Zap, Users, Shield, TrendingUp, BarChart3, MessageCircle, Star, Clock, Award } from 'lucide-react';
-;
-export default function AIContentGeneratorPage() {;
+
+export default function AIContentGeneratorPage() {
   const features = [;
     'Multi-language content generation with 50+ languages supported',;
     'SEO-optimized content with keyword research and optimization',;
@@ -13,7 +13,7 @@ export default function AIContentGeneratorPage() {;
     'Plagiarism detection and originality scoring',;
     'Extensive content templates library (1000+ templates)';
   ];
-;
+
   const benefits = [;
     '10x faster content creation compared to manual writing',;
     'Consistent brand messaging across all content',;
@@ -23,7 +23,7 @@ export default function AIContentGeneratorPage() {;
     '24/7 content generation capability',;
     'Scalable content production for any business size';
   ];
-;
+
   const useCases = [;
     'Blog content creation for content marketing',;
     'Social media management and posting',;
@@ -33,9 +33,9 @@ export default function AIContentGeneratorPage() {;
     'Technical documentation and guides',;
     'Press releases and announcements';
   ];
-;
+
   const pricingPlans = [;
-    {;
+    {
       name: 'Starter',;
       price: 29,;
       period: 'month',;
@@ -48,9 +48,8 @@ export default function AIContentGeneratorPage() {;
         'Standard analytics',;
         '1 user account';
       ],;
-      popular: false;,
-},;
-    {;
+      popular: false},;
+    {
       name: 'Professional',;
       price: 79,;
       period: 'month',;
@@ -65,9 +64,8 @@ export default function AIContentGeneratorPage() {;
         'API access',;
         'Brand voice training';
       ],;
-      popular: true;,
-},;
-    {;
+      popular: true},;
+    {
       name: 'Enterprise',;
       price: 199,;
       period: 'month',;
@@ -84,10 +82,9 @@ export default function AIContentGeneratorPage() {;
         'Dedicated account manager',;
         'White-label options';
       ],;
-      popular: false;,
-}
+      popular: false}
   ];
-;
+
   return (;
     <>;
       <Head>;
@@ -244,8 +241,7 @@ export default function AIContentGeneratorPage() {;
                 <a href="/contact" className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${;
                   plan.popular ;
                     ? 'bg-blue-600 hover:bg-blue-700 text-white' ;
-                    : 'bg-gray-100 hover:bg-gray-200 text-gray-900';,
-}`}>;
+                    : 'bg-gray-100 hover:bg-gray-200 text-gray-900'}`}>;
                   Get Started;
                 </a>;
               </div>;
@@ -277,5 +273,4 @@ export default function AIContentGeneratorPage() {;
         </div>;
       </section>;
     </>;
-  );,
-}
+  )}

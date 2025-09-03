@@ -214,16 +214,11 @@ const AIWorkflowAutomation = () => {};
           </div>;
         </motion.div>;
       </div>;
-    </div>)};
-export default AIWorkflowAutomation;,
-}}}}}}}}}
-;
-export { AIWorkflowAutomation };
-;
-export { AIWorkflowAutomation };
-;
-export { AIWorkflowAutomation };
-;
-export { AIWorkflowAutomation };
-;
-export { AIWorkflowAutomation };
+    </div>)}
+export default AIWorkflowAutomation}}}}}}}}}
+
+export { AIWorkflowAutomation }
+export { AIWorkflowAutomation }
+export { AIWorkflowAutomation }
+export { AIWorkflowAutomation }
+export { AIWorkflowAutomation }

@@ -7,29 +7,26 @@ import { Badge } from "@/components/ui/badge";"";
 import SEO from "@/components/SEO";"";
 import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react";"";
 import { Link } from "react-router-dom";
-;
+
     const features = [];
         {}
 ";
 "";
             title: "AI Writing Assistant","";
             description: "Generate high-quality content for blogs, social media, and marketing campaigns","";
-            icon: <PenTool className="h-6 w-6 text-zion-cyan"/>;,
-},;
+            icon: <PenTool className="h-6 w-6 text-zion-cyan"/>},;
         {}
 ";
 "";
             title: "Multi-Format Support","";
             description: "Create content in various formats: text, images, videos, and audio","";
-            icon: <FileText className="h-6 w-6 text-zion-purple"/>;,
-},;
+            icon: <FileText className="h-6 w-6 text-zion-purple"/>},;
         {}
 ";
 "";
             title: "Brand Voice Consistency","'";
             description: "Maintain your brand's unique voice across all content pieces","";
-            icon: <Type className="h-6 w-6 text-zion-blue"/>;,
-},;
+            icon: <Type className="h-6 w-6 text-zion-blue"/>},;
         {}
 ";
 "";
@@ -38,43 +35,38 @@ import { Link } from "react-router-dom";
             icon: <Target className="h-6 w-6 text-zion-cyan"/>;
 
     ];
-;
+
     const contentTypes = [];
         {}
 ";
 "";
             title: "Blog Posts","";
             description: "Long-form articles and blog content","";
-            icon: <FileText className="h-8 w-8 text-zion-cyan"/>;,
-},;
+            icon: <FileText className="h-8 w-8 text-zion-cyan"/>},;
         {}
 ";
 "";
             title: "Social Media","";
             description: "Posts for all major social platforms","";
-            icon: <Users className="h-8 w-8 text-zion-purple"/>;,
-},;
+            icon: <Users className="h-8 w-8 text-zion-purple"/>},;
         {}
 ";
 "";
             title: "Marketing Copy","";
             description: "Ads, landing pages, and promotional content","";
-            icon: <Target className="h-8 w-8 text-zion-blue"/>;,
-},;
+            icon: <Target className="h-8 w-8 text-zion-blue"/>},;
         {}
 ";
 "";
             title: "Product Descriptions","";
             description: "Compelling product and service descriptions","";
-            icon: <ShoppingBag className="h-8 w-8 text-zion-cyan"/>;,
-},;
+            icon: <ShoppingBag className="h-8 w-8 text-zion-cyan"/>},;
         {}
 ";
 "";
             title: "Email Campaigns","";
             description: "Newsletters and email marketing content","";
-            icon: <Mail className="h-8 w-8 text-zion-purple"/>;,
-},;
+            icon: <Mail className="h-8 w-8 text-zion-purple"/>},;
         {}
 ";
 "";
@@ -83,7 +75,7 @@ import { Link } from "react-router-dom";
             icon: <Video className="h-8 w-8 text-zion-blue"/>;
 
     ];
-;
+
     const pricingPlans = [];
         {}
 ";
@@ -99,8 +91,7 @@ import { Link } from "react-router-dom";
                 "Email support","";
                 "Basic SEO suggestions";
             ],;
-            popular: false;,
-},;
+            popular: false},;
         {}
 ";
 "";
@@ -118,8 +109,7 @@ import { Link } from "react-router-dom";
                 "Content calendar","";
                 "Team collaboration";
             ],;
-            popular: true;,
-},;
+            popular: true},;
         {}
 ";
 "";
@@ -340,11 +330,8 @@ import { Link } from "react-router-dom";
         </div>;
     );
 </Card></Card></Card></Card></Card>}}}}}
-;
-export { AIContentGenerator };
-;
-export { AIContentGenerator };
-;
-export { AIContentGenerator };
-;
-export { AIContentGenerator };
+
+export { AIContentGenerator }
+export { AIContentGenerator }
+export { AIContentGenerator }
+export { AIContentGenerator }

@@ -6,31 +6,29 @@ export default function Loading() {};
   return null;
 }
   const sizeClasses = {}
-;
+
   const content = (;
     <div className="{};
       <Loader2 className="{"${sizeClasses[size]}" animate-spin text-blue-600"}       />;
       {};
         <p className=""text-gray-600" text-sm font-medium"}>{text}</p>;
       )}
-;
+
     </div>;
   );,
 }
   if (fullScreen) {};
         {content}
-;
+
       </div>;
-    );,
-}
-;
+    )}
+
   return (";
     <div className = "flex items-center justify-center p-8">;
       {content}
-;
+
     </div>;
-  );,
-}
+  )}
 // comment;
 export function SkeletonCard() {};
   return null;
@@ -46,6 +44,6 @@ export function SkeletonText() {};
 ;
         ></di></div>;
       ))}
-;
+
     </div>;
   );"}"

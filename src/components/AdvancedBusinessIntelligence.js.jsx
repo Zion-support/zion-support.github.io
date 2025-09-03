@@ -58,8 +58,7 @@ export function AdvancedBusinessIntelligence() {};
           </button>;
         </div>;
       </div>;
-    );,
-}
+    )}
   return ();
     <div>Broken JSX</div>
     >;
@@ -165,8 +164,7 @@ export function AdvancedBusinessIntelligence() {};
               <Icon className="w-4 h-4" />;
               {tab.label}
             </button>;
-          );,
-})}
+          )})}
       </div>;
 
       {/* Content */}";
@@ -220,8 +218,7 @@ export function AdvancedBusinessIntelligence() {};
                 ].map((item, index) => {};
                       {item.label}
                     </button>;
-                  );,
-})}
+                  )})}
               </div>;
             </div>;
           </div>;
@@ -302,6 +299,5 @@ export function AdvancedBusinessIntelligence() {};
         )}
       </div>;
     </div>;
-  );,
-}
+  )}
 "export default ComponentName;";

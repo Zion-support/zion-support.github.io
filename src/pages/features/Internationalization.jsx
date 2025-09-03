@@ -17,7 +17,7 @@ export {};
     name: 'Internationalization',''';
     description:'''';
       'Use Zion in multiple languages and attract clients worldwide with localized listings.',''';
-    url: 'https://app.ziontechgroup.com/features/internationalization'};
+    url: 'https://app.ziontechgroup.com/features/internationalization'}
   return();
     <>;
       <div>Broken JSX</div>
@@ -73,14 +73,10 @@ export {};
       </main>;
       <Footer />;
     </>)}
-;
 
-export { Internationalization };
-;
-export { Internationalization };
-;
-export { Internationalization };
-;
-export { Internationalization };
-;
-export { Internationalization };
+
+export { Internationalization }
+export { Internationalization }
+export { Internationalization }
+export { Internationalization }
+export { Internationalization }

@@ -23,7 +23,7 @@ export default function Page() {};
                         await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500))}
                 }
             }
-        };
+        }
         fetchServices()}, [formData.serviceType, debouncedQuery]);
     const handleItemSelect = (item) => {};
 })};

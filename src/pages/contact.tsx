@@ -24,7 +24,7 @@ const ContactPage: React.FC = () => {};
     "AI Smart City Infrastructure",;
     "AI Quantum Financial Trading";
   ];
-;
+
   return (;
     <div className="min-h-screen bg-white">;
       {/* Hero Section */}
@@ -53,7 +53,7 @@ const ContactPage: React.FC = () => {};
             {/* Contact Details */}
             <div>;
               <h2 className="text-4xl font-bold text-gray-900 mb-8">Contact Information</h2>;
-              ;
+
               <div className="space-y-6">;
                 <div className="flex items-start">;
                   <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">;
@@ -272,7 +272,5 @@ const ContactPage: React.FC = () => {};
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default ContactPage;

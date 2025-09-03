@@ -110,7 +110,7 @@ const AICodeReviewAssistant = () => {};
 }}>;
                   {};
                     </div>)}
-;
+
                   <div className="text-center mb-6">;
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                     <div className="text-4xl font-bold text-blue-400 mb-2">;
@@ -222,16 +222,11 @@ const AICodeReviewAssistant = () => {};
           </div>;
         </section>;
       </div>;
-    </>)};
-export default AICodeReviewAssistant;,
-}}}}
-;
-export { AICodeReviewAssistant };
-;
-export { AICodeReviewAssistant };
-;
-export { AICodeReviewAssistant };
-;
-export { AICodeReviewAssistant };
-;
-export { AICodeReviewAssistant };
+    </>)}
+export default AICodeReviewAssistant}}}}
+
+export { AICodeReviewAssistant }
+export { AICodeReviewAssistant }
+export { AICodeReviewAssistant }
+export { AICodeReviewAssistant }
+export { AICodeReviewAssistant }

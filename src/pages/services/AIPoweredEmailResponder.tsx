@@ -6,13 +6,12 @@ const AIPoweredEmailResponder: React.FC = (): JSX.Element => {};
 export default AIPoweredEmailResponder;
 ;
 
-;
-export { AIPoweredEmailResponder };
-;
-export { AIPoweredEmailResponder };
-;
-export { AIPoweredEmailResponder };
-;
-export { AIPoweredEmailResponder };
-;
-export { AIPoweredEmailResponder };
+export default AIPoweredEmailResponder;
+
+
+
+export { AIPoweredEmailResponder }
+export { AIPoweredEmailResponder }
+export { AIPoweredEmailResponder }
+export { AIPoweredEmailResponder }
+export { AIPoweredEmailResponder }

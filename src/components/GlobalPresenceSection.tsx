@@ -1,5 +1,5 @@
 import {  import { motion  } from 'framer-motion';
-;
+
  params - Function parameters;
  * @returns {*} Function return value;
  */;
@@ -90,8 +90,7 @@ function GlobalPresenceSection () {};
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
-;
+    </section>;) }
 export default GlobalPresenceSection;";
             <span className="text-2xl">→</span>;
           </div>;

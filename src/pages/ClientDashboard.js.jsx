@@ -27,13 +27,11 @@ function ClientDashboardContent() {}
   useEffect(() => {}
     if (jobs.length > 0 && !selectedJobId) {}
       setSelectedJobId(jobs[0].id);
-      setSelectedJobTitle(jobs[0].title);,
-}
+      setSelectedJobTitle(jobs[0].title)}
   }, [jobs, selectedJobId]);
   const handleJobSelect = (jobId, jobTitle) => {}
     setSelectedJobId(jobId);
-    setSelectedJobTitle(jobTitle);,
-};
+    setSelectedJobTitle(jobTitle)}
   return();
     <>;
       <div>Broken JSX</div>
@@ -153,14 +151,10 @@ export {};
     <ProtectedRoute>;
       <ClientDashboardContent />;
     </ProtectedRoute>)}
-;
 
-export { ClientDashboardContent, ClientDashboard };
-;
-export { ClientDashboardContent, ClientDashboard };
-;
-export { ClientDashboardContent, ClientDashboard };
-;
-export { ClientDashboardContent, ClientDashboard };
-;
-export { ClientDashboardContent, ClientDashboard };
+
+export { ClientDashboardContent, ClientDashboard }
+export { ClientDashboardContent, ClientDashboard }
+export { ClientDashboardContent, ClientDashboard }
+export { ClientDashboardContent, ClientDashboard }
+export { ClientDashboardContent, ClientDashboard }

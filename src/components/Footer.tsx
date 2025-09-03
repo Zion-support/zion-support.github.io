@@ -14,12 +14,10 @@ export function Footer() {};
 } else {};
 }
       }
-    };
-;
+    }
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);,
-}, []);
-;
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
+
   // Toggle section expansion (for mobile);
   const toggleSection = (title: string) => {};
 } else {};
@@ -80,8 +78,7 @@ export default function Footer() {};
         { name: 'Community', href: '/community' },;
         { name: 'System Status', href: '/status' },;
         { name: 'Request Quote', href: '/request-quote' }
-      ];,
-}
+      ]}
 import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight } from 'lucide-react';
 ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})";
   Linkedin,;
@@ -157,13 +154,13 @@ icon: Atom,";
 services: [ { name: "AI-Quantum Hybrid Computing Platform", href: "/services/ai-quantum-hybrid-platform" }, { name: "Quantum Computing as a Service", href: "/services/quantum-computing-as-a-service" }, { name: "AI Space Technology Platform", href: "/services/ai-space-technology-platform" }, { name: "AI IoT Edge Computing Platform", href: "/services/ai-iot-edge-computing-platform" }";
       title: "Resources",";
 links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href: "/white-papers" }, { name: "Support Center", href: "/help" }, { name: "Training", href: "/training" }, { name: "Blog", href: "/blog" }, { name: "Research", href: "/research-development" }
-;
+
       ]}
-;
+
   ]";
   const solutions = [];
 
-;
+
   const contactInfo = [;
     { icon: Mail, label: "Email", value: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },;
     { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },;
@@ -337,5 +334,4 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
         </div>;
       </div>;
     </footer>;
-  );,
-}
+  )}

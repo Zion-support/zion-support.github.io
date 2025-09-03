@@ -22,7 +22,7 @@ export default function NextGenInnovativeServices() {};
         visible: {};
 }
         }
-    };
+    }
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">;
       {/* Header Section */}
       <div className="relative overflow-hidden">;
@@ -217,8 +217,7 @@ export default function NextGenInnovativeServices() {};
               onClick={() => {}
 ';
                 setSearchTerm('');';
-                setSelectedCategory('all');";,
-}}"";
+                setSelectedCategory('all');"}}"";
               className="text-blue-400 hover:text-blue-300 transition-colors">;
               Clear filters;
             </button>;
@@ -450,14 +449,10 @@ export default function NextGenInnovativeServices() {};
         </motion.div>;
       </div>;
     </div>)}
-;
 
-export { NextGenInnovativeServices };
-;
-export { NextGenInnovativeServices };
-;
-export { NextGenInnovativeServices };
-;
-export { NextGenInnovativeServices };
-;
-export { NextGenInnovativeServices };
+
+export { NextGenInnovativeServices }
+export { NextGenInnovativeServices }
+export { NextGenInnovativeServices }
+export { NextGenInnovativeServices }
+export { NextGenInnovativeServices }

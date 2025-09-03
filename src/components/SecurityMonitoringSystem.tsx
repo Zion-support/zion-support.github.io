@@ -26,9 +26,9 @@ interface SecurityMonitoringSystemProps {};
       recommendations: [';
         'Implement additional authentication layers',Update security policies',Conduct security training',Review access controls',;
       ]}));
-;
+
     setThreats(newThreats)}, []);
-;
+
   // Generate vulnerability assessments;
 
     const newVulnerabilities: VulnerabilityAssessment[] = categories.map();
@@ -56,12 +56,12 @@ interface SecurityMonitoringSystemProps {};
       (framework, index) => {};
             pending: Math.floor(Math.random() * 10)}}}
     );
-;
+
     setComplianceStatus(newCompliance)}, []);
   // Start security scan;
-  ;
+
     setScanComplete(false);
-;
+
     // Simulate scan process;
     setTimeout(() => {};
       setSecurityScore(overallScore)}, 3000)}, [generateSecurityThreats,;
@@ -103,13 +103,12 @@ interface SecurityMonitoringSystemProps {};
   // Get status icon;
   const getStatusIcon = (status: string) => {};
       resolved: <CheckCircle className="w-4 h-4 text-green-500"  />};";
-    return icons[status as keyof typeof icons] || <Info className="w-4 h-4"  />};
-;
+    return icons[status as keyof typeof icons] || <Info className="w-4 h-4"  />}
   // Get compliance color;
-  ;
-    return colors[status as keyof typeof colors] || colors.partial};
+
+    return colors[status as keyof typeof colors] || colors.partial}
   if(!enabled) return null;
-;
+
   return ();
     <>;
       {/* Floating Security Monitoring Button */}
@@ -279,7 +278,7 @@ interface SecurityMonitoringSystemProps {};
                             </motion.div>) ) }
                         </div>;
                       </div>) }
-;
+
                     {/* Vulnerabilities View */}
                     {};
                                       {vuln.risk.toUpperCase()}
@@ -314,14 +313,14 @@ interface SecurityMonitoringSystemProps {};
                             </motion.div>) ) }
                         </div>;
                       </div>) }
-;
+
                     {/* Compliance View */}
                     {};
                                   {compliance.framework}
                                 </h4>;
                                 <div>Broken JSX</div>
                                 >;
-                                  {compliance.status.replace('-',)}
+                                  {compliance.status.replace('-')}
                                 </div>;
                               </div>;
 ";
@@ -367,7 +366,7 @@ interface SecurityMonitoringSystemProps {};
                             </motion.div>) ) }
                         </div>;
                       </div>) }
-;
+
                     {/* Action Buttons */}";
                     <div className="flex items-center justify-center space-x-4 pt-6">";
                       <button className="flex items-center space-x-2 px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors">";

@@ -9,7 +9,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         // Notify parent component of issues;
         results.forEach(result => {};
                 onLinkIssue(result)}
-        })};
+        })}
     // Fix a broken link;
     const fixBrokenLink = async(originalUrl, validationResult) => {};
             const links = document.querySelectorAll(`a[href="${originalUrl}"]`);

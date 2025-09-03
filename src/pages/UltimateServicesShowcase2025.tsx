@@ -46,6 +46,5 @@ const UltimateServicesShowcase2025 = () => {};
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default UltimateServicesShowcase2025;

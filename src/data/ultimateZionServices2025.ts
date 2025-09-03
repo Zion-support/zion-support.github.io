@@ -28,13 +28,13 @@ const zionContact: ServiceContact = {};
     technologies["AI/ML", "Zero Trust Architecture", "Behavioral Analytics", "Security Orchestration"]},;  {};
     technologies["Cloud Computing", "AI/ML", "Big Data", "Data Governance"]},;  {};
     technologies["Multi-cloud", "Kubernetes", "Terraform", "Monitoring Tools"]}];
-;
+
 // Ultimate IT Infrastructure Services 2025;
 export const ultimateITInfrastructureServices2025: ITService[] = [{};
     technologies["SD-WAN", "Network Security", "Cloud Networking", "5G Integration"]},;  {};
     technologies["Hyperconverged Infrastructure", "Software-Defined Storage", "AI-Powered Management", "Green Computing"]},;  {};
     technologies["AI/ML", "Zero Trust", "Threat Intelligence", "Security Orchestration"]}];
-;
+
 // Ultimate AI Services 2025;
 export const ultimateAIServices2025: AIService[] = [{};
     technologies["Deep Learning", "NLP", "Computer Vision", "AutoML"]},;  {};

@@ -9,7 +9,5 @@ describe(&apos;ProductReviews&apos, () => {};
 }
     // comment;
     render(<ProductReviews / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

@@ -1,6 +1,6 @@
 import React from 'react';
-;
-;
+
+
 ;import { Building, Users, BarChart3, MessageSquare, Calendar, FileText, CreditCard, Globe, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, BarChart } from "lucide-react";
 export {};
   return null;
@@ -32,12 +32,10 @@ export {};
 "";
                 starter: "$29/month","";
                 professional: "$79/month","";
-                enterprise: "$199/month"";,
-},"";
+                enterprise: "$199/month""},"";
             freeTrial: "14 days",;
             rating: 4.8,;
-            reviewCount: 342;,
-},;
+            reviewCount: 342},;
         {}
 ";
 "";
@@ -64,12 +62,10 @@ export {};
 "";
                 starter: "$19/month","";
                 professional: "$49/month","";
-                enterprise: "$99/month"";,
-},"";
+                enterprise: "$99/month""},"";
             freeTrial: "30 days",;
             rating: 4.7,;
-            reviewCount: 267;,
-},;
+            reviewCount: 267},;
         {}
 ";
 "";
@@ -96,12 +92,10 @@ export {};
 "";
                 starter: "$39/month","";
                 professional: "$89/month","";
-                enterprise: "$199/month"";,
-},"";
+                enterprise: "$199/month""},"";
             freeTrial: "21 days",;
             rating: 4.9,;
-            reviewCount: 189;,
-},;
+            reviewCount: 189},;
         {}
 ";
 "";
@@ -128,12 +122,10 @@ export {};
 "";
                 starter: "$15/month","";
                 professional: "$39/month","";
-                enterprise: "$79/month"";,
-},"";
+                enterprise: "$79/month""},"";
             freeTrial: "7 days",;
             rating: 4.6,;
-            reviewCount: 198;,
-},;
+            reviewCount: 198},;
         {}
 ";
 "";
@@ -160,12 +152,10 @@ export {};
 "";
                 starter: "$25/month","";
                 professional: "$59/month","";
-                enterprise: "$129/month"";,
-},"";
+                enterprise: "$129/month""},"";
             freeTrial: "14 days",;
             rating: 4.8,;
-            reviewCount: 156;,
-},;
+            reviewCount: 156},;
         {}
 ";
 "";
@@ -192,12 +182,10 @@ export {};
 "";
                 starter: "2.9% + $0.30","";
                 professional: "2.5% + $0.30","";
-                enterprise: "2.2% + $0.30"";,
-},"";
+                enterprise: "2.2% + $0.30""},"";
             freeTrial: "No setup fees",;
             rating: 4.9,;
-            reviewCount: 423;,
-},;
+            reviewCount: 423},;
         {}
 ";
 "";
@@ -224,12 +212,10 @@ export {};
 "";
                 starter: "$49/month","";
                 professional: "$99/month","";
-                enterprise: "$199/month"";,
-},"";
+                enterprise: "$199/month""},"";
             freeTrial: "14 days",;
             rating: 4.7,;
-            reviewCount: 234;,
-},;
+            reviewCount: 234},;
         {}
 ";
 "";
@@ -256,12 +242,10 @@ export {};
 "";
                 starter: "$35/month","";
                 professional: "$79/month","";
-                enterprise: "$149/month"";,
-},"";
+                enterprise: "$149/month""},"";
             freeTrial: "21 days",;
             rating: 4.8,;
-            reviewCount: 178;,
-},;
+            reviewCount: 178},;
         {}
 ";
 "";
@@ -288,12 +272,10 @@ export {};
 "";
                 starter: "$45/month","";
                 professional: "$89/month","";
-                enterprise: "$179/month"";,
-},"";
+                enterprise: "$179/month""},"";
             freeTrial: "30 days",;
             rating: 4.6,;
-            reviewCount: 145;,
-},;
+            reviewCount: 145},;
         {}
 ";
 "";
@@ -320,12 +302,10 @@ export {};
 "";
                 starter: "$30/month","";
                 professional: "$69/month","";
-                enterprise: "$129/month"";,
-},"";
+                enterprise: "$129/month""},"";
             freeTrial: "30 days",;
             rating: 4.8,;
-            reviewCount: 267;,
-},;
+            reviewCount: 267},;
         {}
 ";
 "";
@@ -352,12 +332,10 @@ export {};
 "";
                 starter: "$40/month","";
                 professional: "$89/month","";
-                enterprise: "$199/month"";,
-},"";
+                enterprise: "$199/month""},"";
             freeTrial: "14 days",;
             rating: 4.7,;
-            reviewCount: 198;,
-},;
+            reviewCount: 198},;
         {}
 ";
 "";
@@ -384,12 +362,10 @@ export {};
 "";
                 starter: "$55/month","";
                 professional: "$109/month","";
-                enterprise: "$249/month"";,
-},"";
+                enterprise: "$249/month""},"";
             freeTrial: "21 days",;
             rating: 4.9,;
-            reviewCount: 167;,
-}
+            reviewCount: 167}
     ];";
     const categories = ["";
         "All Services","";
@@ -412,10 +388,8 @@ export {};
 ";
 "";
         if (selectedCategory === "All Services") {}
-            setFilteredServices(microSAASServices)}
-        else {}
-            setFilteredServices(microSAASServices.filter(service => service.category === selectedCategory))}";,
-}, [selectedCategory]);"";
+            setFilteredServices(microSAASServices)} else {}
+            setFilteredServices(microSAASServices.filter(service => service.category === selectedCategory))}"}, [selectedCategory]);"";
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">";
       {/* Hero Section */}"";
       <div className="relative overflow-hidden bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 py-20">"";
@@ -566,14 +540,10 @@ export {};
         </div>;
       </div>;
     </div>)}
-;
 
-export { MicroSAASServicesPage };
-;
-export { MicroSAASServicesPage };
-;
-export { MicroSAASServicesPage };
-;
-export { MicroSAASServicesPage };
-;
-export { MicroSAASServicesPage };
+
+export { MicroSAASServicesPage }
+export { MicroSAASServicesPage }
+export { MicroSAASServicesPage }
+export { MicroSAASServicesPage }
+export { MicroSAASServicesPage }

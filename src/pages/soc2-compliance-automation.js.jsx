@@ -1,6 +1,6 @@
 import React from 'react';
 export default Soc2ComplianceAutomation;
-;
+
 const Soc2ComplianceAutomation = () => {}
   return <div>Component</div>;
 };
@@ -8,22 +8,19 @@ const Soc2ComplianceAutomation = () => {}
         {}
             title: "Automated Monitoring","";
             description: "Continuous monitoring of security controls and compliance status","";
-            icon: "🔍";,
-},;
+            icon: "🔍"},;
         {}
 ";
 "";
             title: "Evidence Collection","";
             description: "Automated collection and validation of compliance evidence","";
-            icon: "📋";,
-},;
+            icon: "📋"},;
         {}
 ";
 "";
             title: "Risk Assessment","";
             description: "AI-powered risk identification and mitigation recommendations","";
-            icon: "⚠️";,
-},;
+            icon: "⚠️"},;
         {}
 ";
 "";
@@ -37,29 +34,25 @@ const Soc2ComplianceAutomation = () => {}
 "";
             principle: "Security","";
             description: "Protection against unauthorized access and security incidents","";
-            controls: ["Access controls", "Network security", "Vulnerability management", "Incident response"];,
-},;
+            controls: ["Access controls", "Network security", "Vulnerability management", "Incident response"]},;
         {}
 ";
 "";
             principle: "Availability","";
             description: "System availability and business continuity","";
-            controls: ["Backup and recovery", "Disaster recovery", "Performance monitoring", "Capacity planning"];,
-},;
+            controls: ["Backup and recovery", "Disaster recovery", "Performance monitoring", "Capacity planning"]},;
         {}
 ";
 "";
             principle: "Processing Integrity","";
             description: "Data processing accuracy and completeness","";
-            controls: ["Data validation", "Error handling", "Processing controls", "Quality assurance"];,
-},;
+            controls: ["Data validation", "Error handling", "Processing controls", "Quality assurance"]},;
         {}
 ";
 "";
             principle: "Confidentiality","";
             description: "Protection of confidential information","";
-            controls: ["Data classification", "Encryption", "Access controls", "Data handling"];,
-},;
+            controls: ["Data classification", "Encryption", "Access controls", "Data handling"]},;
         {}
 ";
 "";
@@ -74,22 +67,19 @@ const Soc2ComplianceAutomation = () => {}
 "";
             title: "Time Savings","";
             description: "Reduce manual compliance tasks by 80%","";
-            metric: "80%";,
-},;
+            metric: "80%"},;
         {}
 ";
 "";
             title: "Cost Reduction","";
             description: "Lower compliance costs and audit preparation time","";
-            metric: "60%";,
-},;
+            metric: "60%"},;
         {}
 ";
 "";
             title: "Risk Mitigation","";
             description: "Proactive identification and resolution of compliance gaps","";
-            metric: "90%";,
-},;
+            metric: "90%"},;
         {}
 ";
 "";
@@ -102,20 +92,17 @@ const Soc2ComplianceAutomation = () => {}
 ";
 "";
             category: "Control Monitoring","";
-            tools: ["Real-time dashboards", "Automated alerts", "Control testing", "Exception reporting"];,
-},;
+            tools: ["Real-time dashboards", "Automated alerts", "Control testing", "Exception reporting"]},;
         {}
 ";
 "";
             category: "Evidence Management","";
-            tools: ["Automated collection", "Evidence validation", "Documentation management", "Audit trails"];,
-},;
+            tools: ["Automated collection", "Evidence validation", "Documentation management", "Audit trails"]},;
         {}
 ";
 "";
             category: "Risk Management","";
-            tools: ["Risk assessment", "Vulnerability scanning", "Threat modeling", "Mitigation tracking"];,
-},;
+            tools: ["Risk assessment", "Vulnerability scanning", "Threat modeling", "Mitigation tracking"]},;
         {}
 ";
 "";
@@ -319,17 +306,11 @@ const Soc2ComplianceAutomation = () => {}
           </div>;
         </div>;
       </section>;
-    </div>) ;,
-};
-export default Soc2ComplianceAutomation;,
-}}}}
-;
-export { Soc2ComplianceAutomation };
-;
-export { Soc2ComplianceAutomation };
-;
-export { Soc2ComplianceAutomation };
-;
-export { Soc2ComplianceAutomation };
-;
-export { Soc2ComplianceAutomation };
+    </div>) }
+export default Soc2ComplianceAutomation}}}}
+
+export { Soc2ComplianceAutomation }
+export { Soc2ComplianceAutomation }
+export { Soc2ComplianceAutomation }
+export { Soc2ComplianceAutomation }
+export { Soc2ComplianceAutomation }

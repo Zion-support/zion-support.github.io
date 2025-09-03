@@ -3,7 +3,7 @@ const CTASection: React.FC = (): JSX.Element => {};
 },;
     {};
       description: "Trusted by industry leaders worldwide"};  ];
-;
+
   return (";
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/90 to-zion-slate-dark relative overflow-hidden" role="region" aria-labelledby="cta-heading">;
       {/* Background Elements */}";
@@ -28,7 +28,7 @@ const CTASection: React.FC = (): JSX.Element => {};
           <div>Broken JSX</div>
             Join hundreds of companies that have already revolutionized their operations with Zion Tech Group's cutting-edge solutions.</motion.p>;
         </div>;
-;
+
         {/* Feature Grid */}
         <div>Broken JSX</div>
         >;
@@ -60,7 +60,6 @@ const CTASection: React.FC = (): JSX.Element => {};
         </motion.div>;
       </div>;
     </section>;
-  )};
-;
+  )}
 export default CTASection}}'";
 )

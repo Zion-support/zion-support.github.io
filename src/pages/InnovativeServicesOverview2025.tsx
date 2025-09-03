@@ -19,36 +19,31 @@ export {};
       benefits: ['Improve outcomes by 35%',;
         'Reduce readmissions by 40%',;
         'Lower costs by 30%';
-      ];,
-}
+      ]}
   ];
-;
+
   const additionalServices: unknown = [{}
       name: 'AI - Powered SEO Platform',;
       description: 'Advanced SEO optimization with machine learning',;
       price: '$1,500 / month',;
-      path: '/services / ai - powered - seo';,
-},;
+      path: '/services / ai - powered - seo'},;
     {}
       name: 'AI Interview Assessment',;
       description: 'Intelligent candidate evaluation and screening',;
       price: '$800 / month',;
-      path: '/services / interview-assessment - ai';,
-},;
+      path: '/services / interview-assessment - ai'},;
     {}
       name: 'Zero Trust Network Access',;
       description: 'Enterprise - grade security with zero trust principles',;
       price: '$2,000 / month',;
-      path: '/services / zero - trust - network - access';,
-},;
+      path: '/services / zero - trust - network - access'},;
     {}
       name: 'AI Workflow Orchestrator',;
       description: 'Intelligent business process automation',;
       price: '$1,800 / month',;
-      path: '/services / ai - workflow-orchestrator';,
-}
+      path: '/services / ai - workflow-orchestrator'}
   ];
-;
+
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">";
       {/* Hero Section */}"";
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"";
@@ -96,7 +91,7 @@ export {};
               Our most innovative and impactful AI-powered solutions;
             </p>;
           </motion.div>;
-          ;
+
           <div className="grid grid-cols-1 md: unknowngrid-cols-2 gap-8">;
             {};
                   className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6`}">"";
@@ -161,7 +156,7 @@ export {};
               Explore our complete portfolio of AI-powered solutions;
             </p>;
           </motion.div>;
-          ;
+
           <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-4 gap-6">;
             {};
                   {service.name}";
@@ -224,17 +219,11 @@ export {};
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default InnovativeServicesOverview2025;
-;
-export { InnovativeServicesOverview2025 };
-;
-export { InnovativeServicesOverview2025 };
-;
-export { InnovativeServicesOverview2025 };
-;
-export { InnovativeServicesOverview2025 };
-;
-export { Page };
+
+export { InnovativeServicesOverview2025 }
+export { InnovativeServicesOverview2025 }
+export { InnovativeServicesOverview2025 }
+export { InnovativeServicesOverview2025 }
+export { Page }

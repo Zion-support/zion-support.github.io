@@ -8,7 +8,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {};
     { id: 'emerging - tech', name: 'Emerging Tech', icon: '🚀', color: 'from - orange - 600 to - red - 600' },;
     { id: 'micro - saas', name: 'Micro SAAS', icon: '💻', color: 'from - blue - 600 to - indigo - 600' },;
     { id: 'it - services', name: 'IT Services', icon: '🖥️', color: 'from - gray - 600 to - slate - 600' };  ];
-;
+
       service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||;
       service.tagline.toLowerCase () .includes(searchTerm.toLowerCase () ) ;
     return matchesCategory && matchesSearch}) ;
@@ -113,7 +113,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {};
                   </div>";
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>";
                   <p className="text-sm text-purple-400 font-medium mb-2">;
-                    {service.category.replace('-',).toUpperCase()}
+                    {service.category.replace('-').toUpperCase()}
                   </p>";
                   <div className="inline-block px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xs font-semibold">;
                     {service.innovationLevel}
@@ -185,7 +185,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {};
                       </p>;
                     </div>;
                   </div>) }
-;
+
                 {/* Trial and Setup */}";
                 <div className="flex justify-between items-center mb-6 text-sm">";
                   <div className="text-center">";
@@ -247,5 +247,5 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {};
           </motion.div>;
         </div>;
       </section>;
-    </div>;) };
+    </div>;) }
 export default UltimateZionServicesShowcase;'"`;

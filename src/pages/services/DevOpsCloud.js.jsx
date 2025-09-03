@@ -531,16 +531,11 @@ export {};
           </div>;
         </div>;
       </section>;
-    </div>);,
-}
-;
+    </div>)}
 
-export { DevOpsCloudServices };
-;
-export { DevOpsCloudServices };
-;
-export { DevOpsCloudServices };
-;
-export { DevOpsCloudServices };
-;
-export { DevOpsCloudServices };
+
+export { DevOpsCloudServices }
+export { DevOpsCloudServices }
+export { DevOpsCloudServices }
+export { DevOpsCloudServices }
+export { DevOpsCloudServices }

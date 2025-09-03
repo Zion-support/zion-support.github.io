@@ -45,7 +45,7 @@ export default function Page() {};
             lazyImages.forEach((img) => observer.observe(img));
             return () => observer.disconnect()}
     }, [location.pathname]);
-    return <>{optimizedChildren}</>};
+    return <>{optimizedChildren}</>}
 // Add global performance optimizations';
 if(typeof window !== 'null') {};
 }, { priority: 'background' })}

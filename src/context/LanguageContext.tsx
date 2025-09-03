@@ -10,11 +10,9 @@ export default function Page() {};
 const defaultLanguageContext: LanguageContextType = {};
   changeLanguage: async () => {},;
   isRTL: false,;
-  supportedLanguages;,
-};
-;
+  supportedLanguages}
 const LanguageContext = createContext(defaultLanguageContext);
-;
+
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
 ;
 interface LanguageProviderProps {};
@@ -86,5 +84,4 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({};
     >;
       {children}
     </LanguageContext.Provider>;
-  );,
-};
+  )}

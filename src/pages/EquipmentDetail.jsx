@@ -43,7 +43,7 @@ export {};
 ";
 "";
                 title: "Added to cart",;
-                description: `${quantity}x ${equipment.name} added to your cart.`})}, 800)};
+                description: `${quantity}x ${equipment.name} added to your cart.`})}, 800)}
     const handleBuyNow = async () => {}
         if (!isAuthenticated) {}
 `;
@@ -51,8 +51,7 @@ export {};
 ```;
 ````;
             router(`/login?next=/equipment/${equipmentId}`);
-            return;,
-}
+            return}
         setIsAdding(true) ;
         try {}
 ';
@@ -74,7 +73,7 @@ export {};
             toast({ title: 'Payment error', description: 'Could not start checkout.' })}
         finally {}
             setIsAdding(false) }
-    };
+    }
     return (<>";
       <Header />"";
       <div className="min-h-screen bg-zion-blue py-12 px-4">"";
@@ -183,8 +182,7 @@ export {};
                   <div className="flex items-center border border-zion-blue-light rounded-md w-32">"";
                     <div>Broken JSX</div>
   () => setQuantity(prev => Math.max(1,;
-  prev - 1));,
-} disabled={quantity <= 1 || !equipment.inStock}>;
+  prev - 1))} disabled={quantity <= 1 || !equipment.inStock}>;
                       -";
                     </button>"";
                     <input type="number" className="w-full text-center bg-transparent border-0 text-white focus:ring-0" value={quantity} readOnly/>"";
@@ -231,14 +229,10 @@ export {};
       </div>;
       <Footer />;
     </>)}
-;
 
-export { EquipmentDetail };
-;
-export { EquipmentDetail };
-;
-export { EquipmentDetail };
-;
-export { EquipmentDetail };
-;
-export { EquipmentDetail };
+
+export { EquipmentDetail }
+export { EquipmentDetail }
+export { EquipmentDetail }
+export { EquipmentDetail }
+export { EquipmentDetail }

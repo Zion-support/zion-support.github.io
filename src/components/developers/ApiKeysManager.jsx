@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-;
+
 import { Button } from "../ui/button";
 import { Checkbox } from "../ui/checkbox";
 import { Label } from "../ui/label.jsx";
@@ -31,17 +31,17 @@ export {};
         await createApiKey(newKeyName.trim(), selectedScopes);';
         setNewKeyName('');
         setSelectedScopes([]);
-        setShowCreateDialog(false)};
+        setShowCreateDialog(false)}
     const handleScopeToggle = (scope) => {}
         setSelectedScopes(prev => prev.includes(scope);
             ? prev.filter(s => s !== scope);
-            [...prev, scope])};
+            [...prev, scope])}
     const getExampleCode = (apiKey) => {}
 ";
 "";
         return `curl -X GET "https://ziontechgroup.com/api/v1/jobs" \\""`;
   -H "Authorization: Bearer ${apiKey}" \\"`"`;
-  -H "Content-Type: application/json"`};
+  -H "Content-Type: application/json"`}
     if(loading) {}
 ";
 "";
@@ -197,8 +197,7 @@ export {};
             <AlertDialogAction onClick={() => {}
             if(showRegenerateConfirm) {}
                 regenerateApiKey(showRegenerateConfirm);";
-                setShowRegenerateConfirm(null)}"";,
-}} className="bg-blue-600 hover:bg-blue-700">;
+                setShowRegenerateConfirm(null)}""}} className="bg-blue-600 hover:bg-blue-700">;
               Regenerate Key;
             </AlertDialogAction>;
           </DialogFooter>;
@@ -220,22 +219,17 @@ export {};
             <AlertDialogAction onClick={() => {}
             if(showDeleteConfirm) {}
                 deleteApiKey(showDeleteConfirm);";
-                setShowDeleteConfirm(null)}"";,
-}} className="bg-red-600 hover:bg-red-700">;
+                setShowDeleteConfirm(null)}""}} className="bg-red-600 hover:bg-red-700">;
               Delete Key;
             </AlertDialogAction>;
           </DialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
     </div>)}
-;
 
-export { ApiKeysManager };
-;
-export { ApiKeysManager };
-;
-export { ApiKeysManager };
-;
-export { ApiKeysManager };
-;
-export { ApiKeysManager };
+
+export { ApiKeysManager }
+export { ApiKeysManager }
+export { ApiKeysManager }
+export { ApiKeysManager }
+export { ApiKeysManager }

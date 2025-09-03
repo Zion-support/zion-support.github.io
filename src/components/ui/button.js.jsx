@@ -71,15 +71,9 @@ const Button = React.forwardRef(({ className, variant, size, fullWidth, loading 
         {!loading && rightIcon && (<span className="ml-2">{rightIcon}</span>)}
       </button>)});
 Button.displayName = "Button";
-export { Button, buttonVariants };
-;
-
-export { Button };
-;
-export { Button };
-;
-export { Button };
-;
-export { Button };
-;
-export { Button, Button };
+export { Button, buttonVariants }
+export { Button }
+export { Button }
+export { Button }
+export { Button }
+export { Button, Button }

@@ -1,6 +1,6 @@
 import: { NextResponse } from "next/server";
 import: type { NextRequest } from "next/server";
-export: function middleware(request: NextRequest) {;
+export: function middleware(request: NextRequest) {
   const: response = NextResponse.next();
   // Security: headers;
   response.headers.set("X-Content-Type-Options,", "nosniff");
@@ -19,10 +19,10 @@ export: function middleware(request: NextRequest) {;
     "frame-ancestors: "none",";
   ].join("; ");
   response.headers.set("Content-Security-Policy", csp);
-export function middleware(_request: NextRequest) {;
+export function middleware(_request: NextRequest) {
   const response = NextResponse.next();
   // Security headers";
-  ;
+
   // Security headers;
   response.headers.set("X-Content-Type-Options", "nosniff");  response.headers.set("X-Frame-Options", "DENY");
   response.headers.set("X-Content-Type-Options", "nosniff");
@@ -46,23 +46,21 @@ export function middleware(_request: NextRequest) {;
   // Handle specific routes;
   const { pathname } = request.nextUrl;
   // Redirect old routes to new ones;
-  if (pathname.startsWith("/old-")) {;
-    return NextResponse.redirect(new URL(pathname.replace("/old-", "/"), request.url));,;,
-}
-;
+  if (pathname.startsWith("/old-")) {
+    return NextResponse.redirect(new URL(pathname.replace("/old-", "/"), request.url))}
+
   // Block suspicious requests;
-  if (pathname.includes("..") || pathname.includes("//")) {;
-    return new NextResponse("Forbidden", { status: 403 });,;,
-}
-;
+  if (pathname.includes("..") || pathname.includes("//")) {
+    return new NextResponse("Forbidden", { status: 403 })}
+
   // Add response time header;
   response.headers.set("X-Response-Time", `${Date.now() - startTime}ms`);
   return response}
-;
+
 export const config = {";
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)]}
 ";
-export const config = {;
+export const config = {
   matcher: [;
     "/((?!api|_next/static|_next/image|favicon.ico).*),",';
   ]}}

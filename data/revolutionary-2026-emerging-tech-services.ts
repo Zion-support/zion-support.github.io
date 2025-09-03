@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface Revolutionary2026EmergingTechService {;
+export interface Revolutionary2026EmergingTechService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface Revolutionary2026EmergingTechService {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface Revolutionary2026EmergingTechService {;
   rating: number;
 export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTechService[] = [;
   // Holographic Metaverse Development Platform;
-  {;
+  {
     id: "holographic-metaverse-development-platform",;
     name: "Holographic Metaverse Development Platform",;
     tagline: "Build immersive 3D holographic metaverse experiences",;
@@ -76,21 +76,19 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     marketSize: "$74.4B market",;
     growthRate: "38.2% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete holographic metaverse platform with 3D rendering, AI content generation, and real-time collaboration capabilities.",;
     launchDate: "2024-12-01",;
     customers: 456,;
     rating: 4.8,;
-    reviews: 234;,;,
-},;
+    reviews: 234},;
   // Space Debris Management AI Platform;
-  {;
+  {
     id: "space-debris-management-ai-platform",;
     name: "Space Debris Management AI Platform",;
     tagline: "AI-powered space debris tracking and collision prevention",;
@@ -128,21 +126,19 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     marketSize: "$23.8B market",;
     growthRate: "45.7% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete space debris management platform with AI prediction, real-time monitoring, and comprehensive safety systems.",;
     launchDate: "2024-12-01",;
     customers: 89,;
     rating: 4.9,;
-    reviews: 67;,;,
-},;
+    reviews: 67},;
   // AI Climate Prediction Platform;
-  {;
+  {
     id: "ai-climate-prediction-platform",;
     name: "AI Climate Prediction Platform",;
     tagline: "Predict climate changes with unprecedented accuracy",;
@@ -180,21 +176,19 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     marketSize: "$56.3B market",;
     growthRate: "22.8% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete climate prediction platform with AI accuracy, global coverage, and comprehensive policy insights.",;
     launchDate: "2024-12-01",;
     customers: 678,;
     rating: 4.7,;
-    reviews: 345;,;,
-},;
+    reviews: 345},;
   // Autonomous Manufacturing AI Platform;
-  {;
+  {
     id: "autonomous-manufacturing-ai-platform",;
     name: "Autonomous Manufacturing AI Platform",;
     tagline: "Self-optimizing manufacturing with AI intelligence",;
@@ -232,21 +226,19 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     marketSize: "$89.7B market",;
     growthRate: "19.3% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete autonomous manufacturing platform with AI intelligence, self-optimization, and comprehensive monitoring capabilities.",;
     launchDate: "2024-12-01",;
     customers: 234,;
     rating: 4.8,;
-    reviews: 123;,;,
-},;
+    reviews: 123},;
   // Quantum Internet Infrastructure Platform;
-  {;
+  {
     id: "quantum-internet-infrastructure-platform",;
     name: "Quantum Internet Infrastructure Platform",;
     tagline: "Build the quantum internet of the future",;
@@ -284,12 +276,11 @@ export const revolutionary2026EmergingTechServices: Revolutionary2026EmergingTec
     marketSize: "$127.3B market",;
     growthRate: "35.8% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete quantum internet infrastructure platform with quantum entanglement, cryptography, and networking capabilities.",;
     launchDate: "2024-12-01",;

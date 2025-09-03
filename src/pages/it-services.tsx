@@ -13,7 +13,7 @@ const ITServices: React.FC = () => {};
     {};
 }
   ];
-;
+
   const featuredITServices = [;
     {};
 },;
@@ -22,7 +22,7 @@ const ITServices: React.FC = () => {};
     {};
 }
   ];
-;
+
   return (;
     <>;
       <Helmet>;
@@ -30,7 +30,7 @@ const ITServices: React.FC = () => {};
         <meta name="description" content="Comprehensive IT services including cloud migration, cybersecurity, network solutions, software development, and managed IT services." />;
         <meta name="keywords" content="IT services, cloud migration, cybersecurity, network solutions, managed IT services, software development" />;
       </Helmet>;
-      ;
+
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">;
         {/* Hero Section */}
         <section className="relative py-20 bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 text-white">;
@@ -74,7 +74,7 @@ const ITServices: React.FC = () => {};
                 Comprehensive IT solutions across all major technology domains;
               </p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {};
                 <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">;
@@ -122,25 +122,24 @@ const ITServices: React.FC = () => {};
                 Our most popular and comprehensive IT solutions;
               </p>;
             </div>;
-            ;
+
             <div className="grid lg:grid-cols-2 gap-8">;
               {};
                 <div key={index} className={`relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 ${service.popular ? 'ring-2 ring-cyan-500' : ''}`}>;
                   {};
                   )}
-                  ;
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6`}>;
                     <service.icon className="h-8 w-8 text-white" />;
                   </div>;
-                  ;
+
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">;
                     {service.title}
                   </h3>;
-                  ;
+
                   <p className="text-gray-600 mb-6">;
                     {service.description}
                   </p>;
-                  ;
+
                   <div className="mb-6">;
                     <p className="text-3xl font-bold text-gray-900 mb-2">;
                       {service.price}
@@ -177,7 +176,7 @@ const ITServices: React.FC = () => {};
                 Get in touch with our IT experts for a free consultation;
               </p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-3 gap-8 mb-12">;
               <div className="text-center">;
                 <Phone className="h-12 w-12 text-cyan-400 mx-auto mb-4" />;
@@ -195,7 +194,7 @@ const ITServices: React.FC = () => {};
                 <p className="text-gray-200">364 E Main St STE 1008<br />Middletown DE 19709</p>;
               </div>;
             </div>;
-            ;
+
             <div className="text-center">;
               <div>Broken JSX</div>
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center">;
@@ -207,7 +206,5 @@ const ITServices: React.FC = () => {};
         </section>;
       </div>;
     </>;
-  );,
-};
-;
+  )}
 export default ITServices;

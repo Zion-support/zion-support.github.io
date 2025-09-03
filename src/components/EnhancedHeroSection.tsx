@@ -15,17 +15,15 @@ export default function Page() {};
 };,
 }, []);, []);
     if(!isAutoPlaying) return;
-;
+
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length) }, 6000) ;
     return () => clearInterval(interval) }, [isAutoPlaying, heroSlides.length]) ;
-;
+
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length) ;
-    setIsAutoPlaying(false) };
-;
+    setIsAutoPlaying(false) }
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length) ;
-    setIsAutoPlaying(false) };
-            scale: [1, 1.1, 1];,
-}}
+    setIsAutoPlaying(false) }
+            scale: [1, 1.1, 1]}}
           transition={{ duration: 20, repeat: Infinity }}
         ></motion.div>;
 

@@ -30,8 +30,7 @@ const caseStudies: CaseStudy[] = [{};
       { metric: 'Detection Time', value: 'Real-time', icon: <TrendingUp className="w-5 h-5" /> }
     ],;
     technologies: ['Okta', 'CrowdStrike', 'Splunk', 'AWS GuardDuty', 'Python'],;
-    duration: '4 months';,
-}
+    duration: '4 months'}
 ];
 
 export default function CaseStudies() {};
@@ -120,5 +119,4 @@ export default function CaseStudies() {};
         </motion.div>;
       </div>;
     </section>;
-  );,
-}
+  )}

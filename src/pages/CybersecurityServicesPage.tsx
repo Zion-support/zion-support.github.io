@@ -15,7 +15,7 @@ export default function CybersecurityServicesPage() {};
     {};
 }
   ];
-;
+
   const features = [;
     {};
 },;
@@ -26,12 +26,12 @@ export default function CybersecurityServicesPage() {};
     {};
 }
   ];
-;
+
   return (;
     <>;
       <div>Broken JSX</div>
         }}      />;
-      ;
+
       <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black">;
         {/* Hero Section */}
         <section className="py-32 px-4 relative overflow-hidden">;
@@ -50,7 +50,7 @@ export default function CybersecurityServicesPage() {};
               <br />;
               <span className="text-white">That Never Sleeps</span>;
             </h1>;
-            ;
+
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">;
               Protect your business with enterprise-grade cybersecurity solutions. Our AI-powered security ;
               platform provides 24/7 protection against evolving cyber threats.;
@@ -81,7 +81,7 @@ export default function CybersecurityServicesPage() {};
                 We combine advanced technology with proven expertise to deliver security that exceeds expectations;
               </p>;
             </div>;
-            ;
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {};
                 <div key={index} className="text-center">;
@@ -111,7 +111,7 @@ export default function CybersecurityServicesPage() {};
                 Comprehensive cybersecurity solutions designed to protect your business from all angles;
               </p>;
             </div>;
-            ;
+
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
               {};
                 <Card key={index} className="bg-gradient-to-br from-zinc-800 to-zinc-900 border-zinc-700">;

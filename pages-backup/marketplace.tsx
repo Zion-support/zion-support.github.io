@@ -1,10 +1,9 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
-const MarketplacePage: React.FC = () => {;
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })}
+const MarketplacePage: React.FC = () => {
   const sections = [];
   return (;
     <MainLayout title = "Marketplace - Zion Tech Group" description="Discover products, talent, equipment, and services in our marketplace.">";
@@ -17,17 +16,16 @@ const MarketplacePage: React.FC = () => {;
               <p className="text-gray-600 mt-2">{s.description}</p>;
             </Link>;
           ))}
-;
+
         </div>;
       </section>;
     </MainLayout>;
-export default function Marketplace() {;
+export default function Marketplace() {
 
   const categories = [];
 
-  const featuredProducts = [];,
-},;
-    {;
+  const featuredProducts = []},;
+    {
       id: 2,";
       name: "Cloud Infrastructure Manager",";
       category: "IT Services",";
@@ -36,9 +34,8 @@ export default function Marketplace() {;
       reviews: 89,";
       description: "Comprehensive cloud management solution for AWS, Azure, and Google Cloud platforms.",";
       image: "/products/cloud-manager.jpg",";
-      features: ["Multi-Cloud Support", "Cost Optimization", "Security Monitoring", "Auto-scaling"];,
-},;
-    {;
+      features: ["Multi-Cloud Support", "Cost Optimization", "Security Monitoring", "Auto-scaling"]},;
+    {
       id: 3,";
       name: "E-commerce SaaS Platform",";
       category: "SaaS Tools",";
@@ -47,9 +44,8 @@ export default function Marketplace() {;
       reviews: 156,";
       description: "Complete e-commerce solution with inventory management, payment processing, and analytics.",";
       image: "/products/ecommerce-platform.jpg",";
-      features: ["Inventory Management", "Payment Gateway", "Analytics Dashboard", "Mobile App"];,
-},;
-    {;
+      features: ["Inventory Management", "Payment Gateway", "Analytics Dashboard", "Mobile App"]},;
+    {
       id: 4,";
       name: "React Dashboard Template",";
       category: "Templates",";
@@ -60,7 +56,7 @@ export default function Marketplace() {;
       image: "/products/react-dashboard.jpg",";
       features: ["Responsive Design", "Dark/Light Mode", "Component Library", "Documentation"];
 
-;
+
   ];
 
   const stats = [];
@@ -128,7 +124,7 @@ export default function Marketplace() {;
                   <div className="text-gray-600">{stat.label}</div>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -149,7 +145,7 @@ export default function Marketplace() {;
                   <p className="text-gray-600 text-sm">{category.description}</p>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -171,7 +167,7 @@ export default function Marketplace() {;
                     <div className="flex items-center justify-between mb-4">";
                       <span className="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">,;
                         {product.category}
-;
+
                       </span>";
                       <div className="flex items-center space-x-1">";
                         <Star className="w-4 h-4 text-yellow-400 fill-current"  />";
@@ -185,10 +181,10 @@ export default function Marketplace() {;
                       {product.features.map((feature, index) => (";
                         <span key="{index}" className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">;
                           {feature}
-;
+
                         </span>;
                       ))}
-;
+
                     </div>";
                     <div className="flex items-center justify-between">";
                       <div className="text-2xl font-bold text-gray-900">{product.price}</div>";
@@ -202,7 +198,7 @@ export default function Marketplace() {;
                       </div>;
                 </div>,;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";

@@ -9,7 +9,7 @@ interface EnhancedAnalyticsProps {};
 };,
 }, []);, []);
     if(!enabled) return;
-;
+
     // Initialize Google Analytics(if tracking ID provided);
     if(trackingId && trackingId !== 'G-XXXXXXXXXX') {};
       script.src = `https://www.googletagmanager.com / gtag / js?id=${trackingId}`;
@@ -23,13 +23,13 @@ interface EnhancedAnalyticsProps {};
       gtag('js', new Date());
       gtag('config', trackingId, {};
           custom_parameter_2: 'page_category'}});
-;
+
       // Track page view';
       gtag('event',page_view', {};
         page_referrer: document.referrer})}
     // Initialize session tracking;
     setSessionStart(Date.now());
-;
+
     // Track session start';
     trackEvent('session_start', {};
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone});
@@ -45,15 +45,14 @@ interface EnhancedAnalyticsProps {};
 ;
     const handleRouteChange = (...args: unknown[]): unknown => {};
           time_on_previous_page: timeOnPage});
-;
+
         setCurrentPage(newPage) ;
         setTimeOnPage(0) ;
         setScrollDepth(0) ;
-        setUserInteractions(0) }    };
-;
+        setUserInteractions(0) }    }
     // Listen for route changes(for SPA);
     window.addEventListener('popstate', handleRouteChange);
-;
+
     // Track initial page';
     trackEvent('page_view', {};
       is_initial_page: true});
@@ -81,7 +80,6 @@ interface EnhancedAnalyticsProps {};
 };,
 }, []);, []);
     if(!enabled) return;
-;
 
         trackEvent('performance_metrics', {};
           page_path: currentPage})}    };
@@ -96,16 +94,15 @@ interface EnhancedAnalyticsProps {};
 };,
 }, []);, []);
     if(!enabled) return;
-;
 
       trackEvent('session_end', {};
         average_time_on_page: timeOnPage})};
 ;
     window.addEventListener('beforeunload', handleBeforeUnload);
     return () => window.removeEventListener('beforeunload', handleBeforeUnload)}, [enabled, sessionStart, userInteractions, timeOnPage]);
-;
+
   // Track event function;
-  ;
+
       // Google Analytics 4;
       if(window.gtag) {};
         window.gtag('event', eventName, parameters)}
@@ -116,11 +113,11 @@ interface EnhancedAnalyticsProps {};
       if(process.env.REACT_APP_ANALYTICS_ENDPOINT) {};
           headers: { 'Content-Type': 'application/json' },;
           body: JSON.stringify(eventData)}).catch(console.error)}
-;
+
       // Store locally for dashboard;
       setAnalyticsData(prev => {};
             interactions: userInteractions}}});
-;
+
       // console.log('Analytics Event:', eventData)},;
     [enabled, currentPage, scrollDepth, timeOnPage, userInteractions];
   );
@@ -142,19 +139,19 @@ interface EnhancedAnalyticsProps {};
             cls: 0.05}}})}
   }, [showDashboard, scrollDepth, timeOnPage, userInteractions]) ;
   if(!enabled) return null;
-;
+
   return ();
     <>;
       {/* Analytics Toggle Button */}
       {};
           onClick={() => setIsVisible(!isVisible)}
           className="fixed top-4 right-32 z-50 p-3 bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2";
-          ;
+
           title="Analytics Dashboard">";
           <BarChart3 className="w-5 h-5" />;
         </motion.button>;
       )}
-;
+
       {/* Analytics Dashboard */}
       <AnimatePresence>;
         {};
@@ -324,6 +321,6 @@ interface EnhancedAnalyticsProps {};
             </div>;
           </motion.div>) }
       </AnimatePresence>;
-    </>) };
+    </>) }
 export default EnhancedAnalytics;
 '"`;

@@ -9,7 +9,5 @@ describe(&apos;AdvancedInnovativeServicesShowcase2026&apos, () => {};
 }
     // comment;
     render(<AdvancedInnovativeServicesShowcase2026 / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

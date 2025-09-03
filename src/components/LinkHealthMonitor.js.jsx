@@ -85,7 +85,7 @@ export default function Page() {};
                   </div>;
                 </div>;
               )}
-;
+
               {/* Actions */}";
               <div className="flex items-center justify-between">";
                 <div className="flex space-x-2">;
@@ -209,16 +209,12 @@ export default function Page() {};
             </div>;
           </motion.div>;
         </motion.div>)}
-    </>)};
+    </>)}
 export default LinkHealthMonitor;
-;
 
-export { LinkHealthMonitor };
-;
-export { LinkHealthMonitor };
-;
-export { LinkHealthMonitor };
-;
-export { LinkHealthMonitor };
-;
-export { LinkHealthMonitor };
+
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }

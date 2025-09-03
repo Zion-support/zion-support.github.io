@@ -20,7 +20,7 @@ const AIHealthcarePredictiveAnalytics = () => {};
     {};
 }
   ];
-;
+
   const pricingPlans = [;
     {};
 },;
@@ -29,7 +29,7 @@ const AIHealthcarePredictiveAnalytics = () => {};
     {};
 }
   ];
-;
+
   const useCases = [;
     {};
 },;
@@ -40,7 +40,7 @@ const AIHealthcarePredictiveAnalytics = () => {};
     {};
 }
   ];
-;
+
   const analyticsTypes = [;
     {};
 },;
@@ -51,7 +51,7 @@ const AIHealthcarePredictiveAnalytics = () => {};
     {};
 }
   ];
-;
+
   const benefits = [;
     {};
 },;
@@ -62,7 +62,7 @@ const AIHealthcarePredictiveAnalytics = () => {};
     {};
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div>Broken JSX</div>
@@ -78,19 +78,19 @@ const AIHealthcarePredictiveAnalytics = () => {};
               <Heart className="w-4 h-4 mr-2" />;
               AI-Powered Healthcare Analytics;
             </div>;
-            ;
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
               AI Healthcare;
               <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
                 Predictive Analytics;
               </span>;
             </h1>;
-            ;
+
             <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed">;
               Transform healthcare delivery with AI-powered predictive analytics and patient monitoring. ;
               Improve patient outcomes, optimize treatments, and reduce healthcare costs through intelligent insights.;
             </p>;
-            ;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-200 shadow-lg hover:shadow-xl">;
@@ -118,7 +118,7 @@ const AIHealthcarePredictiveAnalytics = () => {};
               Leverage cutting-edge AI technology to transform patient care;
             </p>;
           </motion.div>;
-          ;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {};
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>;
@@ -141,7 +141,7 @@ const AIHealthcarePredictiveAnalytics = () => {};
               Monitor all aspects of healthcare operations with our AI platform;
             </p>;
           </motion.div>;
-          ;
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {};
                 <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-xl flex items-center justify-center mb-6`}>;
@@ -167,7 +167,7 @@ const AIHealthcarePredictiveAnalytics = () => {};
               Transform your healthcare operations with AI-powered insights;
             </p>;
           </motion.div>;
-          ;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {};
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>;
@@ -190,7 +190,7 @@ const AIHealthcarePredictiveAnalytics = () => {};
               Our platform serves diverse healthcare organizations and institutions;
             </p>;
           </motion.div>;
-          ;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {};
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>;
@@ -213,11 +213,10 @@ const AIHealthcarePredictiveAnalytics = () => {};
               Choose the plan that fits your healthcare organization size and needs;
             </p>;
           </motion.div>;
-          ;
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {};
                 )}
-                ;
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <div className="flex items-baseline justify-center">;
@@ -226,7 +225,7 @@ const AIHealthcarePredictiveAnalytics = () => {};
                   </div>;
                   <p className="text-slate-300 mt-2">{plan.description}</p>;
                 </div>;
-                ;
+
                 <ul className="space-y-4 mb-8">;
                   {};
                     <li key={featureIndex} className="flex items-center">;
@@ -258,7 +257,7 @@ const AIHealthcarePredictiveAnalytics = () => {};
               Contact us today to learn how AI analytics can improve patient care;
             </p>;
           </motion.div>;
-          ;
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             <div>Broken JSX</div>
             >;
@@ -299,17 +298,11 @@ const AIHealthcarePredictiveAnalytics = () => {};
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default AIHealthcarePredictiveAnalytics;
-;
-export { AIHealthcarePredictiveAnalytics };
-;
-export { AIHealthcarePredictiveAnalytics };
-;
-export { AIHealthcarePredictiveAnalytics };
-;
-export { AIHealthcarePredictiveAnalytics };
-;
-export { AIHealthcarePredictiveAnalytics };
+
+export { AIHealthcarePredictiveAnalytics }
+export { AIHealthcarePredictiveAnalytics }
+export { AIHealthcarePredictiveAnalytics }
+export { AIHealthcarePredictiveAnalytics }
+export { AIHealthcarePredictiveAnalytics }

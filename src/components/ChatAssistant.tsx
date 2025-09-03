@@ -31,7 +31,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({};
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
     setIsTyping(true);
-;
+
     // Simulate AI response;
     setTimeout(() => {};
 }
@@ -59,7 +59,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({};
 };
 ;
   if(!enabled) return null;
-;
+
   return (<div className={`fixed ${positionClasses[position]} z-50`}>;
       {/* Chat Window */}
       <AnimatePresence>;
@@ -152,7 +152,5 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({};
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
       </motion.button>;
     </div>;
-  );,
-};
-;
+  )}
 export default ChatAssistant;

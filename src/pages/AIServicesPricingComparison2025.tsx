@@ -39,19 +39,15 @@ const AIServicesPricingComparison2025: React.FC = () => {};
   const containerVariants = {},;
     visible: {};
       transition: {,staggerChildren: 0.1}
-;,
 }
-;,
 }
-;
+
   const itemVariants = {},;
     visible: {};
 duration: 0.5,"        ease: "easeOut"}
-;,
 }
-;,
 }
-;
+
   return (;
     <>;
       <Helmet>;
@@ -116,10 +112,10 @@ duration: 0.5,"        ease: "easeOut"}
                   {};
                     <option key="{category.id}" value="{category.id}">;
                       {category.icon} {category.name}
-;
+
                     </option>;
                   ))}
-;
+
                 </select>;
               </div>;
             {/* comment */}
@@ -138,12 +134,12 @@ duration: 0.5,"        ease: "easeOut"}
                         <h4 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h4>";
                         <div className="{};
                           ${service.zionPrice.toLocaleString()}
-;
+
                         </div>";
                         <div className=""text-sm" text-gray-300 mb-4"}>One-time setup</div>";
                         <div className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-semibold">;
                           {service.roi}
-;
+
                         </div>;
 ";
                       <div className="space-y-3 mb-6">";
@@ -154,7 +150,7 @@ duration: 0.5,"        ease: "easeOut"}
                             <span className="text-gray-300 text-sm">{feature}</span>;
                           </div>;
                         ))}
-;
+
                       </div>;
 ";
                       <div className="text-center">";
@@ -172,7 +168,7 @@ duration: 0.5,"        ease: "easeOut"}
                           <h4 className="text-xl font-bold text-white mb-2">{competitor.name}</h4>";
                           <div className="{};
                             ${competitor.price.toLocaleString()}
-;
+
                           </div>";
                           <div className=""text-sm" text-gray-300 mb-4"}>Annual subscription</div>";
                           <div className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm font-semibold">;
@@ -187,7 +183,7 @@ duration: 0.5,"        ease: "easeOut"}
                               <span className="text-gray-400 text-sm">{feature}</span>;
                             </div>;
                           ))}
-;
+
                         </div>;
 ";
                         <div className="space-y-3 mb-6">";
@@ -198,10 +194,10 @@ duration: 0.5,"        ease: "easeOut"}
                               <span className="text-gray-400 text-sm">{feature}</span>;
                             </div>;
                           ))}
-;
+
                         </div>;
                     ))}
-;
+
                   </div>;
 ";
                   <div className="mt-8 text-center">";
@@ -222,7 +218,7 @@ duration: 0.5,"        ease: "easeOut"}
                         </div>;
                 </motion.div>;
               ))}
-;
+
             </motion.div>;
           </div>;
         </section>;
@@ -255,6 +251,6 @@ Call: +1 302 464 0950,;
       </div>;
     </>;
   )}
-;
+
 ");
 export default AIServicesPricingComparison2025;"}}}}}}}}}}}}}}

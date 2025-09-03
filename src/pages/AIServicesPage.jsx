@@ -12,8 +12,7 @@ import {};
         icon: <Brain className="h-8 w-8 text-zion-cyan"/>,"";
         category: "Strategy","";
         badge: "Popular","";
-        link: "/request-quote?service=ai-strategy";,
-},;
+        link: "/request-quote?service=ai-strategy"},;
     {}
 ";
 "";
@@ -24,8 +23,7 @@ import {};
         icon: <Server className="h-8 w-8 text-zion-purple"/>,"";
         category: "Development","";
         badge: "Premium","";
-        link: "/request-quote?service=custom-ai-models";,
-},;
+        link: "/request-quote?service=custom-ai-models"},;
     {}
 ";
 "";
@@ -35,8 +33,7 @@ import {};
         features["Image annotation", "Text labeling", "Quality assurance", "Scalable workforce"],"";
         icon: <FileText className="h-8 w-8 text-zion-blue"/>,"";
         category: "Data","";
-        link: "/request-quote?service=data-labeling";,
-},;
+        link: "/request-quote?service=data-labeling"},;
     {}
 ";
 "";
@@ -47,8 +44,7 @@ import {};
         icon: <BarChart3 className="h-8 w-8 text-zion-cyan"/>,"";
         category: "Analytics","";
         badge: "New","";
-        link: "/request-quote?service=ai-analytics";,
-},;
+        link: "/request-quote?service=ai-analytics"},;
     {}
 ";
 "";
@@ -58,8 +54,7 @@ import {};
         features["Object detection", "Image classification", "Video processing", "Edge deployment"],"";
         icon: <Eye className="h-8 w-8 text-zion-purple"/>,"";
         category: "Vision","";
-        link: "/request-quote?service=computer-vision";,
-},;
+        link: "/request-quote?service=computer-vision"},;
     {}
 ";
 "";
@@ -69,8 +64,7 @@ import {};
         features["Sentiment analysis", "Text generation", "Language translation", "Chatbot development"],"";
         icon: <MessageSquare className="h-8 w-8 text-zion-blue"/>,"";
         category: "NLP","";
-        link: "/request-quote?service=nlp";,
-},;
+        link: "/request-quote?service=nlp"},;
     {}
 ";
 "";
@@ -80,8 +74,7 @@ import {};
         features["Bias detection", "Explainability", "Privacy compliance", "Audit reports"],"";
         icon: <Shield className="h-8 w-8 text-zion-cyan"/>,"";
         category: "Compliance","";
-        link: "/request-quote?service=ai-ethics";,
-},;
+        link: "/request-quote?service=ai-ethics"},;
     {}
 ";
 "";
@@ -91,8 +84,7 @@ import {};
         features["Performance tuning", "Model compression", "Inference optimization", "Cost reduction"],"";
         icon: <Zap className="h-8 w-8 text-zion-purple"/>,"";
         category: "Optimization","";
-        link: "/request-quote?service=model-optimization";,
-},;
+        link: "/request-quote?service=model-optimization"},;
     {}
 ";
 "";
@@ -102,8 +94,7 @@ import {};
         features["Hands-on workshops", "Custom curriculum", "Certification", "Ongoing support"],"";
         icon: <Users className="h-8 w-8 text-zion-blue"/>,"";
         category: "Training","";
-        link: "/request-quote?service=ai-training";,
-},;
+        link: "/request-quote?service=ai-training"},;
     {}
 ";
 "";
@@ -113,8 +104,7 @@ import {};
         features["API development", "System integration", "Testing", "Maintenance"],"";
         icon: <Code className="h-8 w-8 text-zion-cyan"/>,"";
         category: "Integration","";
-        link: "/request-quote?service=ai-integration";,
-},;
+        link: "/request-quote?service=ai-integration"},;
     {}
 ";
 "";
@@ -124,8 +114,7 @@ import {};
         features["Adversarial testing", "Vulnerability assessment", "Security hardening", "Compliance checks"],"";
         icon: <Lock className="h-8 w-8 text-zion-purple"/>,"";
         category: "Security","";
-        link: "/request-quote?service=ai-security";,
-},;
+        link: "/request-quote?service=ai-security"},;
     {}
 ";
 "";
@@ -258,14 +247,10 @@ export {};
         </div>;
       </div>;
     </div>)}
-;
 
-export { AIServices, AIServicesPage };
-;
-export { AIServices, AIServicesPage };
-;
-export { AIServices, AIServicesPage };
-;
-export { AIServices, AIServicesPage };
-;
-export { AIServices, AIServicesPage };
+
+export { AIServices, AIServicesPage }
+export { AIServices, AIServicesPage }
+export { AIServices, AIServicesPage }
+export { AIServices, AIServicesPage }
+export { AIServices, AIServicesPage }

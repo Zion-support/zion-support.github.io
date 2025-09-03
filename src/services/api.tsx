@@ -16,7 +16,7 @@ export default function Page() {};
     throw new ApiError(500,;
       `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`) }
 }
-;
+
   // Health check;
   health: () => apiRequest('/health') ,;
 
@@ -65,7 +65,5 @@ export default function Page() {};
     apiRequest < any> (`/orders/${id}`, {};
 }) ,;
   deleteOrder: (id: number) =>;
-    apiRequest(`/orders/${id}`, { method: 'DELETE' }) ,;,
-};
-;
+    apiRequest(`/orders/${id}`, { method: 'DELETE' }) }
 }

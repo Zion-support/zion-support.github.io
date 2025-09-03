@@ -27,17 +27,12 @@ const FiveGPrivateNetworkSolutions = () => {}
         </div>;
       </section>;
     </div>;
-  );,
-};
+  )}
 export default FiveGPrivateNetworkSolutions;
-;
 
-export { FiveGPrivateNetworkSolutions };
-;
-export { FiveGPrivateNetworkSolutions };
-;
-export { FiveGPrivateNetworkSolutions };
-;
-export { FiveGPrivateNetworkSolutions };
-;
-export { FiveGPrivateNetworkSolutions };
+
+export { FiveGPrivateNetworkSolutions }
+export { FiveGPrivateNetworkSolutions }
+export { FiveGPrivateNetworkSolutions }
+export { FiveGPrivateNetworkSolutions }
+export { FiveGPrivateNetworkSolutions }

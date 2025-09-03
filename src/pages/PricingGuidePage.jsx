@@ -39,14 +39,11 @@ export {};
     const services = EXPANDED_SERVICES.filter(s => s.category === category);
     const avgRating =;
       services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length;
-    return { count: services.length, avgPrice, avgRating };,
-};
+    return { count: services.length, avgPrice, avgRating }}
   const formatPrice = price => {}
     if (price >= 1000) {}
-      return `$${(price / 1000).toFixed(1)}K`;`;,
-}``;
-    return `$${price}`;,
-};
+      return `$${(price / 1000).toFixed(1)}K`;`}``;
+    return `$${price}`}
   const getServiceTier = price => {}
     if (price <div>Broken JSX</div>
     <div className="min-h-screen bg-background">";
@@ -126,8 +123,7 @@ export {};
 ''';
                 selectedCategory === 'all''''';
                   ? 'bg-zion-cyan text-white''''';
-                  : 'border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10';,
-}
+                  : 'border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'}
             >;
               All Services({EXPANDED_SERVICES.length}) </Button>;
             {SERVICE_CATEGORIES.map(category => {}
@@ -140,11 +136,9 @@ export {};
 ''';
                     selectedCategory === category.name'''';
                       ? 'bg-zion-cyan text-white''''';
-                      : 'border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10';,
-}
+                      : 'border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'}
                 >;
-                  {category.name} ({stats.count}) </Button>) ;,
-}) }
+                  {category.name} ({stats.count}) </Button>) }) }
           </div>;
         </div>;
       </div>;
@@ -253,8 +247,7 @@ export {};
                     </Button>;
                   </div>;
                 </CardContent>;
-              </Card>) ;,
-}) }
+              </Card>) }) }
         </div>;
 ";
         {};
@@ -407,14 +400,10 @@ export {};
         </div>;
       </div>;
     </div>)}
-;
 
-export { PricingGuidePage };
-;
-export { PricingGuidePage };
-;
-export { PricingGuidePage };
-;
-export { PricingGuidePage };
-;
-export { PricingGuidePage };
+
+export { PricingGuidePage }
+export { PricingGuidePage }
+export { PricingGuidePage }
+export { PricingGuidePage }
+export { PricingGuidePage }

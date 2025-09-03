@@ -9,20 +9,18 @@ ${url.url}</loc>'`;
         ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}'`;
         ${url.priority ? `<priority>${url.priority}</priority>` : ''}`;
       </url>`;
-            return urlElement.replace(/\s+/g,).trim();,
-}).join('');`;
+            return urlElement.replace(/\s+/g).trim()}).join('');`;
         return `${xmlHeader}\n${urlsetOpen}\n${urlElements}\n${urlsetClose}`;
-;
+
     /**;
      * Generate sitemap index for large sites;
      */;
     generateIndex(sitemaps) {};
         <loc>${sitemap}</loc>;
         <lastmod>${new Date().toISOString()}</lastmod>`;
-      </sitemap>`;,
-}).join('');`;
+      </sitemap>`}).join('');`;
         return `${xmlHeader}\n${sitemapindexOpen}\n${sitemapElements}\n${sitemapindexClose}`;
-;
+
     /**;
      * Generate robots.txt content;
      */;
@@ -49,8 +47,7 @@ Sitemap: ${baseUrl}/sitemap.xml;
           { url: '/services/micro-saas', priority: '0.8', changefreq: 'weekly' }
         ],;
         totalUrls: 10,;
-        generatedAt: new Date () .toISOString () };
-;
+        generatedAt: new Date () .toISOString () }
       setSitemapData(sitemap) ;
       setIsGenerating(false) ;
 ;
@@ -74,8 +71,7 @@ Sitemap: ${baseUrl}/sitemap.xml;
               </div>;
         // // // // // // // // console.error('Error generating sitemaps:', error);
         throw error;
-;,
-};
+}
             </div>;
           </div>;
 
@@ -98,11 +94,9 @@ Sitemap: ${baseUrl}/sitemap.xml;
                 </div>) ) }            </div>;
           </div>;
         </motion.div>) }
-    </div>) ;,
-};
-;
+    </div>) }
 export default SitemapGenerator;
-;
+
 export default to;
 export default to;
 '"`

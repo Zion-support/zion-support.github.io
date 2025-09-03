@@ -16,16 +16,14 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {};
 ''';
         name: '',''';
         description: '',''';
-        image: '';,
-});
+        image: ''});
     const [transactionForm, setTransactionForm] = useState({}
 ';
 '';
 ''';
         to: '',''';
         value: '',''';
-        data: '';,
-});
+        data: ''});
     const handleConnectWallet = useCallback(async () => {}
         try {}
             await connectWallet();';
@@ -38,38 +36,32 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {};
     }, [connectWallet, trackEvent]);
     const handleMintNFT = useCallback(async () => {}
         if(nftForm.name.trim() && wallet) {}
-;
+
             try {}
-;
+
                 const metadata = {}";
   name: nftForm.name, description: nftForm.description, image: nftForm.image || "https:// comment;
-""""", ",;,
-}""";", ";,
-}";
+""""", "}""";", "}";
                 await mintNFT(contracts[1]?.address || ", metadata)",";
                 setNftForm({ name : ", description: ", image: "" })";
                 setShowMintNFT(false)",";
                 trackEvent("blockchain", dashboard",nft_minted")}";
             catch (error) {}";
   name: nftForm.name, description: nftForm.description, image: nftForm.image || "https:// comment;
-""""",",;,
-}""}";
+""""","}""}";
                 await mintNFT(contracts[1]?.address || ", metadata)";
                 setNftForm({ name: ", description: ", image: "" })";
                 setShowMintNFT(false)";
                 trackEvent("blockchain",dashboard",nft_minted")}
-;
+
             catch (error) {}
-;
+
 ";
 """;
-                // comment;,
-}
-;,
-}, [nftForm, wallet, contracts, mintNFT, trackEvent]);,
-}
+                // comment}
+}, [nftForm, wallet, contracts, mintNFT, trackEvent])}
     const handleSendTransaction = useCallback(async () => {}
-;
+
         if(transactionForm.to.trim() && transactionForm.value && wallet) {}";
             try {}
                 await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null)";
@@ -79,19 +71,15 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {};
             catch (error) {}
 ";
 """;
-                // comment;,
-}
-;,
-}, [transactionForm, wallet, sendTransaction, trackEvent]);,
-}
+                // comment}
+}, [transactionForm, wallet, sendTransaction, trackEvent])}
     const getStatusColor = (status) => {}";
         switch (status) {}
-;
+
             case "confirmed": return "text-green-600 bg-green-100";
             case "pending": return "text-yellow-600 bg-yellow-100";
             case "failed": return "text-red-600 bg-red-100;
-            default: return "text-gray-600 bg-gray-100"}", ";";,
-}"";
+            default: return "text-gray-600 bg-gray-100"}", ";"}"";
     return (";
     <div className = "{"bg-white" dark: bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}"}">"";
       {/* comment */}""";
@@ -227,7 +215,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {};
                         <span className="text-gray-500 dark: text-gray-400">Last Used:</span>"";
                         <span className="text-gray-900 dark:text-white">,;
                           {contract.lastInteraction.toLocaleDateString()}
-;
+
                         </span>;
                       </div>;
                   </div>) ) }";
@@ -274,7 +262,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {};
                         {};
                             <span className="text-green-600 font-medium">{nft.price} ETH</span>;
                           </div>)}
-;
+
                       </div>;
                   </div>) ) }";
               </div>;
@@ -339,7 +327,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {};
                         <span className="text-gray-500 dark: text-gray-400">Started:</span>"";
                         <span className="text-gray-900 dark:text-white">,;
                           {position.startDate.toLocaleDateString()}
-;
+
                         </span>;
                       </div>;
                   </div>) ) }";
@@ -382,7 +370,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}";
                         <span className="text-gray-500 dark:text-gray-400">From:</span>"";
                         <code className="block text-xs font-mono mt-1">,;
                           {tx.from.slice(0, 8)}...{tx.from.slice(-6)}
-;
+
                         </code>";
                       </div>;
                       """;
@@ -390,7 +378,7 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}";
                         <span className="text-gray-500 dark: text-gray-400">To:</span>"";
                         <code className="block text-xs font-mono mt-1">,;
                           {tx.to.slice(0, 8)}...{tx.to.slice(-6)}
-;
+
                         </code>";
                       </div>;
                       """;
@@ -416,14 +404,14 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}";
                           <span className="text-gray-500 dark: text-gray-400">Timestamp:</span>"";
                           <p className="text-gray-900 dark:text-white">,;
                             {tx.timestamp.toLocaleString()}
-;
+
                           </p>;
                         </div>;
                   </div>) ) }
-;
+
               </div>;
             </motion.div>) }
-;
+
         </AnimatePresence>";
       </div>;
       {/* comment */}""";

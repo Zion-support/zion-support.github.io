@@ -17,8 +17,7 @@ export {};
             ],';
             benefits: ['';
                 'Faster decision-making with real-time insights',Reduced manual reporting time by 80%',Improved data accuracy and consistency',Enhanced stakeholder communication';
-            ];,
-},;
+            ]},;
         {}
             icon: TrendingUp,';
             title: 'Predictive Analytics & Forecasting',';
@@ -30,8 +29,7 @@ export {};
             ],';
             benefits: ['';
                 'Proactive business planning',Risk mitigation and opportunity identification',Improved resource allocation',Competitive advantage through foresight';
-            ];,
-},;
+            ]},;
         {}
             icon: Database,';
             title: 'Data Engineering & ETL',';
@@ -43,8 +41,7 @@ export {};
             ],';
             benefits: ['';
                 'Centralized data access and management',Improved data quality and reliability',Faster data processing and delivery',Reduced data silos and duplication';
-            ];,
-},;
+            ]},;
         {}
             icon: Users,';
             title: 'Customer Analytics & Segmentation',';
@@ -56,8 +53,7 @@ export {};
             ],';
             benefits: ['';
                 'Improved customer retention and loyalty',Higher marketing ROI through targeting',Better product-market fit',Enhanced customer experience';
-            ];,
-},;
+            ]},;
         {}
             icon: Shield,';
             title: 'Data Governance & Compliance',';
@@ -69,8 +65,7 @@ export {};
             ],';
             benefits: ['';
                 'Reduced compliance risks and penalties',Enhanced data security and trust',Streamlined audit processes',Protection of sensitive information';
-            ];,
-},;
+            ]},;
         {}
             icon: Zap,';
             title: 'Real-Time Analytics & Monitoring',';
@@ -329,15 +324,10 @@ export {};
           </div>;
         </div>;
       </section>;
-    </div>);,
-}}}
-;
-export { DataAnalyticsServices };
-;
-export { DataAnalyticsServices };
-;
-export { DataAnalyticsServices };
-;
-export { DataAnalyticsServices };
-;
-export { DataAnalyticsServices };
+    </div>)}}}
+
+export { DataAnalyticsServices }
+export { DataAnalyticsServices }
+export { DataAnalyticsServices }
+export { DataAnalyticsServices }
+export { DataAnalyticsServices }

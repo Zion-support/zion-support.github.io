@@ -10,9 +10,8 @@
     launchDate: "2025-02-20",;
     customers: 41,;
     rating: 4.7,;
-    reviews: 29;,;,
-},;
-  {;
+    reviews: 29},;
+  {
     id: "local-seo-insights-engine",;
     name: "Local SEO Insights Engine",;
     tagline: "Automated audits, content briefs, and citation fixes for local businesses",;
@@ -50,9 +49,8 @@
     launchDate: "2025-05-12",;
     customers: 211,;
     rating: 4.8,;
-    reviews: 77;,;,
-},;
-  {;
+    reviews: 77},;
+  {
     id: "gdpr-cookie-consent-manager",;
     name: "GDPR Cookie Consent Manager",;
     tagline: "Automated consent banners, policy updates, and evidence logs",;
@@ -90,9 +88,8 @@
     launchDate: "2025-06-01",;
     customers: 318,;
     rating: 4.7,;
-    reviews: 96;,;,
-},;
-  {;
+    reviews: 96},;
+  {
     id: "churn-prediction-insights",;
     name: "Churn Prediction Insights",;
     tagline: "Detect at-risk accounts and trigger playbooks automatically",;
@@ -130,9 +127,8 @@
     launchDate: "2025-05-28",;
     customers: 122,;
     rating: 4.6,;
-    reviews: 41;,;,
-},;
-  {;
+    reviews: 41},;
+  {
     id: "docs-to-knowledge-bot",;
     name: "Docs-to-Knowledge Bot",;
     tagline: "Generate a robust help center and an embedded AI bot from your docs",;
@@ -170,9 +166,8 @@
     launchDate: "2025-05-15",;
     customers: 187,;
     rating: 4.8,;
-    reviews: 68;,;,
-},;
-  {;
+    reviews: 68},;
+  {
     id: "soc2-evidence-collector",;
     name: "SOC 2 Evidence Collector",;
     tagline: "Continuously gathers audit evidence from your stack with alerts",;
@@ -210,9 +205,8 @@
     launchDate: "2025-06-14",;
     customers: 57,;
     rating: 4.7,;
-    reviews: 24;,;,
-},;
-  {;
+    reviews: 24},;
+  {
     id: "smart-invoice-extractor",;
     name: "Smart Invoice Extractor",;
     tagline: "Parse invoices and receipts with high accuracy and GL mapping",;
@@ -250,9 +244,8 @@
     launchDate: "2025-06-10",;
     customers: 133,;
     rating: 4.6,;
-    reviews: 52;,;,
-},;
-  {;
+    reviews: 52},;
+  {
     id: "partner-portal-builder",;
     name: "Partner Portal Builder",;
     tagline: "Spin up a secure, branded partner portal with AI assist",;
@@ -290,9 +283,8 @@
     launchDate: "2025-06-12",;
     customers: 48,;
     rating: 4.7,;
-    reviews: 19;,;,
-},;
-  {;
+    reviews: 19},;
+  {
     id: "ai-procurement-bid-analyzer",;
     name: "AI Procurement Bid Analyzer",;
     tagline: "Parse RFPs, flag risks, and generate responsive bid outlines",;
@@ -330,9 +322,8 @@
     launchDate: "2025-06-20",;
     customers: 33,;
     rating: 4.6,;
-    reviews: 14;,;,
-},;
-  {;
+    reviews: 14},;
+  {
     id: "smart-terms-policy-generator",;
     name: "Smart Terms & Policy Generator",;
     tagline: "Generate region-aware Terms, Privacy, DPA, and ToS updates",;
@@ -370,9 +361,8 @@
     launchDate: "2025-06-18",;
     customers: 122,;
     rating: 4.7,;
-    reviews: 39;,;,
-},;
-  {;
+    reviews: 39},;
+  {
     id: "vendor-security-review-assistant",;
     name: "Vendor Security Review Assistant",;
     tagline: "Speed up vendor security questionnaires with reusable answers",;
@@ -410,9 +400,8 @@
     launchDate: "2025-06-22",;
     customers: 58,;
     rating: 4.6,;
-    reviews: 21;,;,
-},;
-  {;
+    reviews: 21},;
+  {
     id: "smart-release-notes-broadcaster",;
     name: "Smart Release Notes Broadcaster",;
     tagline: "Turn changelogs into tailored announcements and help center updates",;
@@ -450,9 +439,8 @@
     launchDate: "2025-06-21",;
     customers: 74,;
     rating: 4.7,;
-    reviews: 26;,;,
-},;
-  {;
+    reviews: 26},;
+  {
     id: "contract-redline-copilot",;
     name: "Contract Redline Copilot",;
     tagline: "Detect risky clauses and suggest edits with fallback to playbooks",;
@@ -490,9 +478,8 @@
     launchDate: "2025-06-19",;
     customers: 61,;
     rating: 4.7,;
-    reviews: 28;,;,
-},;
-  {;
+    reviews: 28},;
+  {
     id: "vendor-security-questionnaire-automation",;
     name: "Vendor Security Questionnaire Automation",;
     tagline: "Auto-complete SIG/CAIQ questionnaires with citations and policy links",;
@@ -530,9 +517,8 @@
     launchDate: "2025-05-12",;
     customers: 57,;
     rating: 4.7,;
-    reviews: 33;,;,
-},;
-  {;
+    reviews: 33},;
+  {
     id: "contract-clause-analyzer",;
     name: "Contract Clause Analyzer",;
     tagline: "Detect risky clauses and propose redlines aligned to your playbook",;
@@ -570,9 +556,8 @@
     launchDate: "2025-06-01",;
     customers: 39,;
     rating: 4.6,;
-    reviews: 22;,;,
-},;
-  {;
+    reviews: 22},;
+  {
     id: "marketing-attribution-insights",;
     name: "Marketing Attribution Insights",;
     tagline: "Unify UTMs, CRM, and ad spend to reveal true ROI",;
@@ -610,9 +595,8 @@
     launchDate: "2025-05-25",;
     customers: 102,;
     rating: 4.8,;
-    reviews: 61;,;,
-},;
-  {;
+    reviews: 61},;
+  {
     id: "ai-compliance-policy-watcher",;
     name: "AI Compliance Policy Watcher",;
     tagline: "Monitors regulatory sites and updates policies automatically",;
@@ -650,9 +634,8 @@
     launchDate: "2025-06-24",;
     customers: 27,;
     rating: 4.6,;
-    reviews: 12;,;,
-},;
-  {;
+    reviews: 12},;
+  {
     id: "smart-churn-winback-campaigns",;
     name: "Smart Churn Winback Campaigns",;
     tagline: "Auto-generates tailored winback sequences based on churn reasons",;
@@ -690,9 +673,8 @@
     launchDate: "2025-06-23",;
     customers: 44,;
     rating: 4.7,;
-    reviews: 20;,;,
-},;
-  {;
+    reviews: 20},;
+  {
     id: "ai-sla-uptime-reporter",;
     name: "AI SLA & Uptime Reporter",;
     tagline: "Generates customer-ready SLA reports from monitoring data",;
@@ -731,5 +713,5 @@
     customers: 31,;
     rating: 4.6,;
     reviews: 14;
-;
+
 ]}}

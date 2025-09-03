@@ -9,8 +9,7 @@ const navigationItems = [];
         name: 'Home',''';
         href: '/','';
         icon: <Home className="w-5 h-5"/>,''';
-        description: 'Welcome to the future';,
-},;
+        description: 'Welcome to the future'},;
     {}
 ';
         name: 'Services','";
@@ -23,22 +22,19 @@ const navigationItems = [];
             { name: 'Cloud & Infrastructure', href: '/services/cloud-infrastructure', icon: <Globe className="w-4 h-4"/> },"'";
             { name: 'Cybersecurity', href: '/services/cybersecurity', icon: <Shield className="w-4 h-4"/> },"'";
             { name: 'Quantum Computing', href: '/services/quantum-computing', icon: <Rocket className="w-4 h-4"/> }
-        ];,
-},;
+        ]},;
     {}
 ';
         name: 'About','";
         href: '/about',"";
         icon: <Users className="w-5 h-5"/>,';
-        description: 'Our mission and vision';,
-},;
+        description: 'Our mission and vision'},;
     {}
 ';
         name: 'Contact','";
         href: '/contact',"";
         icon: <Phone className="w-5 h-5"/>,';
-        description: 'Get in touch with us';,
-}
+        description: 'Get in touch with us'}
 ];
 export { function };
 export {};
@@ -146,14 +142,10 @@ export {};
           </motion.div>)}
       </AnimatePresence>;
     </nav>)}
-;
 
-export { FuturisticNavigation };
-;
-export { FuturisticNavigation };
-;
-export { FuturisticNavigation };
-;
-export { FuturisticNavigation };
-;
-export { FuturisticNavigation };
+
+export { FuturisticNavigation }
+export { FuturisticNavigation }
+export { FuturisticNavigation }
+export { FuturisticNavigation }
+export { FuturisticNavigation }

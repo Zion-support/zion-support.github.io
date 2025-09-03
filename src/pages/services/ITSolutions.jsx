@@ -95,17 +95,11 @@ const ITSolutions = () => {};
           </button>;
         </div>;
       </section>;
-    </div>);,
-};
-export default ITSolutions;,
-}}
-;
-export { ITSolutions };
-;
-export { ITSolutions };
-;
-export { ITSolutions };
-;
-export { ITSolutions };
-;
-export { ITSolutions };
+    </div>)}
+export default ITSolutions}}
+
+export { ITSolutions }
+export { ITSolutions }
+export { ITSolutions }
+export { ITSolutions }
+export { ITSolutions }

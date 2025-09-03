@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
+const Component = () => {
   return (;
     <>;
 <Head>;
@@ -51,7 +51,7 @@ description="Join" our team of innovative developers and technology experts">;
                   <p className=text-gray-600">{benefit.description}</p>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -73,17 +73,17 @@ description="Join" our team of innovative developers and technology experts">;
                         <div className="flex items-center>";
                           <MapPin className="w-4" h-4 mr-1"  />;
                           {position.location}
-;
+
                         </div>";
                         <div className="flex items-center>";
                           <Clock className="w-4" h-4 mr-1"  />;
                           {position.type}
-;
+
                         </div>";
                         <div className="flex items-center>";
                           <Users className="w-4" h-4 mr-1"  />;
                           {position.experience}
-;
+
                         </div>;
                     </div>";
                     <button className="mt-4 md: mt-0 inline-flex items-center px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300>;
@@ -94,7 +94,7 @@ description="Join" our team of innovative developers and technology experts">;
                   <p className="text-gray-600>{position.description}</p>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -146,6 +146,6 @@ description="Join" our team of innovative developers and technology experts">;
       </Layout>;
     </>,;
   )}
-;
+
 ";
 export default Careers

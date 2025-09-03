@@ -53,8 +53,8 @@ export default function Page() {};
                   className={};
 }`};
                 >;";
-                  {Icon && <Icon className="w-4 h-4"  />};
-                  {category};
+                  {Icon && <Icon className="w-4 h-4"  />}
+                  {category}
                 </button>;) }) }          </div>;
         </motion.div>;
 
@@ -94,7 +94,7 @@ export default function Page() {};
                     <div className="text-gray-400 text-xs">ROI</div>;
                   </div>;
                 </div>;
-;
+
                 {/* Price & CTA */}";
                 <div className="flex items-center justify-between mb-4">;";
                   <div className="text-2xl font-bold text-white">{service.price}</div>;
@@ -188,5 +188,5 @@ export default function Page() {};
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
+    </section>;) }
 '"`;

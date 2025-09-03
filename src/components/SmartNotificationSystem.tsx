@@ -1,6 +1,6 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
-;
+
   id: string;
   title: string;
   message: string;
@@ -13,7 +13,7 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
   actions?: NotificationAction[];
   metadata?: Record < string, any>;
   expiresAt?: Date;
-;
+
   label: string;
   action: () => void;
   variant?: 'primary' | 'secondary' | 'danger';
@@ -26,5 +26,5 @@ const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabl
   return <div className="hidden" aria-hidden="true" />};
 ;
 export default SmartNotificationSystem;
-;
-;,"});,})";
+
+;,"});})";

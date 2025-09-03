@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
  from 'framer-motion';
 import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan import { Link  } from 'react-router-dom';
 ,;
@@ -18,7 +18,7 @@ import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan import { 
 },;
             beta: { color: 'bg-yellow-500', text: 'Beta' },;
             new: { color: 'bg-blue-500', text: 'New' }
-        };
+        }
         const config = statusConfig[status];
         return (<span className={`${config.color} text-white text-xs px-2 py-1 rounded-full font - medium`}>;
         {config.text}

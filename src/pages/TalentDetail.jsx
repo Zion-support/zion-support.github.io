@@ -15,15 +15,14 @@ export {};
     () => api.get(`/talent/${id}`).then((r) => r.data),;
     { enabled: !!id }
   );
-;
+
   if (isLoading) return <Spinner />;
-;
+
   if (isLoading) return <Spinner />;
   if (!data) return <NotFound />;
-;
-  return <TalentProfile {...data} />;'`;,
-}'`'`;
+
+  return <TalentProfile {...data} />;'`}'`'`;
 '`'`'`;
 
-;
-export { TalentDetail };
+
+export { TalentDetail }

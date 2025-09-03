@@ -4,25 +4,23 @@ import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
 import SEOHead from '../src/components/SEOHead';
 import { Play, ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail, Calendar, Download } from 'lucide-react';
-;
-const Demo = () => {;
+
+const Demo = () => {
   const [selectedDemo, setSelectedDemo] = useState('ai-services');
-;
-  const structuredData = {;
+
+  const structuredData = {
     "@context": "https://schema.org",;
     "@type": "WebPage",;
     "name": "Demo - Zion Tech Group",;
     "url": "https://ziontechgroup.com/demo",;
     "description": "Watch live demos of our AI services, IT solutions, and micro SaaS platforms",;
-    "publisher": {;
+    "publisher": {
       "@type": "Organization",;
       "name": "Zion Tech Group",;
-      "url": "https://ziontechgroup.com";,
-}
-  };
-;
+      "url": "https://ziontechgroup.com"}
+  }
   const demos = [;
-    {;
+    {
       id: 'ai-services',;
       title: 'AI Services Demo',;
       description: 'See how our AI solutions can transform your business operations',;
@@ -36,9 +34,8 @@ const Demo = () => {;
         'Document Intelligence';
       ],;
       videoUrl: '#',;
-      thumbnail: '/api/placeholder/600/400';,
-},;
-    {;
+      thumbnail: '/api/placeholder/600/400'},;
+    {
       id: 'it-services',;
       title: 'IT Services Demo',;
       description: 'Explore our comprehensive IT solutions and infrastructure management',;
@@ -52,9 +49,8 @@ const Demo = () => {;
         'Data Backup & Recovery';
       ],;
       videoUrl: '#',;
-      thumbnail: '/api/placeholder/600/400';,
-},;
-    {;
+      thumbnail: '/api/placeholder/600/400'},;
+    {
       id: 'micro-saas',;
       title: 'Micro SaaS Demo',;
       description: 'Discover our scalable SaaS solutions and platform capabilities',;
@@ -68,9 +64,8 @@ const Demo = () => {;
         'Payment Integration';
       ],;
       videoUrl: '#',;
-      thumbnail: '/api/placeholder/600/400';,
-},;
-    {;
+      thumbnail: '/api/placeholder/600/400'},;
+    {
       id: 'workflow-automation',;
       title: 'Workflow Automation',;
       description: 'Learn how to automate your business processes with our tools',;
@@ -84,36 +79,32 @@ const Demo = () => {;
         'Custom Workflows';
       ],;
       videoUrl: '#',;
-      thumbnail: '/api/placeholder/600/400';,
-}
+      thumbnail: '/api/placeholder/600/400'}
   ];
-;
+
   const testimonials = [;
-    {;
+    {
       name: 'Sarah Johnson',;
       company: 'TechCorp Inc.',;
       role: 'CTO',;
       content: 'The AI demo was incredible. We could see exactly how it would fit into our workflow.',;
-      rating: 5;,
-},;
-    {;
+      rating: 5},;
+    {
       name: 'Michael Chen',;
       company: 'StartupXYZ',;
       role: 'Founder',;
       content: 'The micro SaaS demo showed us the scalability we needed for our growing business.',;
-      rating: 5;,
-},;
-    {;
+      rating: 5},;
+    {
       name: 'Emily Rodriguez',;
       company: 'Enterprise Solutions',;
       role: 'IT Director',;
       content: 'The IT services demo covered everything we needed for our digital transformation.',;
-      rating: 5;,
-}
+      rating: 5}
   ];
-;
+
   const selectedDemoData = demos.find(demo => demo.id === selectedDemo) || demos[0];
-;
+
   return (;
     <>;
       <SEOHead ;
@@ -123,7 +114,7 @@ const Demo = () => {;
         structuredData={structuredData}
       />;
       <Navigation />;
-      ;
+
       <main className="min-h-screen bg-gray-900 text-white">;
         {/* Hero Section */}
         <section className="pt-24 pb-16 bg-gradient-to-b from-gray-900 to-gray-800">;
@@ -173,8 +164,7 @@ const Demo = () => {;
                   className={`p-6 rounded-lg border-2 transition-all duration-200 text-left ${;
                     selectedDemo === demo.id;
                       ? 'border-cyan-400 bg-cyan-400/10';
-                      : 'border-gray-700 bg-gray-800 hover:border-gray-600';,
-}`}
+                      : 'border-gray-700 bg-gray-800 hover:border-gray-600'}`}
                 >;
                   <div className="flex items-center justify-between mb-3">;
                     <span className="text-sm font-semibold text-cyan-400">{demo.category}</span>;
@@ -199,10 +189,10 @@ const Demo = () => {;
                       </p>;
                     </div>;
                   </div>;
-                  ;
+
                   <h3 className="text-2xl font-bold mb-4">{selectedDemoData.title}</h3>;
                   <p className="text-gray-300 mb-6">{selectedDemoData.description}</p>;
-                  ;
+
                   <div className="space-y-3">;
                     <h4 className="font-semibold">What you'll see:</h4>;
                     {selectedDemoData.features.map((feature, index) => (;
@@ -320,7 +310,5 @@ const Demo = () => {;
 
       <Footer />;
     </>;
-  );,
-};
-;
+  )}
 export default Demo;

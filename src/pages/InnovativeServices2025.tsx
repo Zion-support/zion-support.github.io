@@ -41,7 +41,7 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {};
     {};
 }
   ];
-;
+
   const categories = [;
     { id: unknown'all', name: 'All Services', icon: Star, count: services.length },;
     { id: 'AI & ML', name: 'AI & Machine Learning', icon: Brain, count: services.filter(s  => s.category === 'AI & ML').length },;
@@ -115,8 +115,7 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {};
 ';
                     selectedCategory === category.id'';
                       ? 'bg-zion-blue text-white'''`;
-                      : 'bg-zion-slate text-zion-blue-light hover:bg-zion-slate-light'``;,
-}`}">"";
+                      : 'bg-zion-slate text-zion-blue-light hover:bg-zion-slate-light'``}`}">"";
                   <category.icon className="w-4 h-4" />";
                   <span>{category.name}</span>"";
                   <span className="bg-white/20 px-2 py-1 rounded-full text-xs">;
@@ -244,15 +243,10 @@ export default function InnovativeServices2025(...args: unknown[]): unknown {};
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
-export { InnovativeServices2025 };
-;
-export { InnovativeServices2025 };
-;
-export { InnovativeServices2025 };
-;
-export { InnovativeServices2025 };
-;
-export { InnovativeServices2025 };
+  )}
+
+export { InnovativeServices2025 }
+export { InnovativeServices2025 }
+export { InnovativeServices2025 }
+export { InnovativeServices2025 }
+export { InnovativeServices2025 }

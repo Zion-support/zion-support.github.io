@@ -280,16 +280,12 @@ const AIAutonomousThreatIntelligence = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default AIAutonomousThreatIntelligence;
-;
 
-export { AIAutonomousThreatIntelligence };
-;
-export { AIAutonomousThreatIntelligence };
-;
-export { AIAutonomousThreatIntelligence };
-;
-export { AIAutonomousThreatIntelligence };
-;
+
+export { AIAutonomousThreatIntelligence }
+export { AIAutonomousThreatIntelligence }
+export { AIAutonomousThreatIntelligence }
+export { AIAutonomousThreatIntelligence }
 export { AIAutonomousThreatIntelligence };)

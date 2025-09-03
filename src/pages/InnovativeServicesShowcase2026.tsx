@@ -46,6 +46,5 @@ const InnovativeServicesShowcase2026 = () => {};
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default InnovativeServicesShowcase2026;

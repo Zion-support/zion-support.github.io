@@ -13,8 +13,7 @@ export {};
   const handleSubmit = async e => {}
     e.preventDefault();';
     await axios.post('/auth/register', { email, password });';
-    router('/marketplace');,
-};
+    router('/marketplace')}
   return();
     <form onSubmit={handleSubmit} className="p-4 space-y-2">";
       <div>Broken JSX</div>
@@ -31,14 +30,10 @@ export {};
         Sign Up;
       </button>;
     </form>)}
-;
 
-export { SignUp };
-;
-export { SignUp };
-;
-export { SignUp };
-;
-export { SignUp };
-;
-export { SignUp };
+
+export { SignUp }
+export { SignUp }
+export { SignUp }
+export { SignUp }
+export { SignUp }

@@ -9,24 +9,21 @@ import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const
             title: "Quantum Neural Networks","";
             description: "Harness the power of quantum computing to create neural networks that can process complex data and solve problems beyond classical computing capabilities.","";
             features: ["Quantum Superposition", "Entanglement Processing", "Quantum Memory", "Advanced Pattern Recognition"],"";
-            path: "/solutions/quantum-neural-network";,
-},;
+            path: "/solutions/quantum-neural-network"},;
         {}
 ";
             icon: Zap,"";
             title: "Quantum Edge Computing","";
             description: "Deploy quantum computing capabilities at the edge for real-time processing and decision-making in distributed environments.","";
             features: ["Edge Deployment", "Real-time Processing", "Low Latency", "Distributed Computing"],"";
-            path: "/solutions/quantum-edge-computing";,
-},;
+            path: "/solutions/quantum-edge-computing"},;
         {}
 ";
             icon: CircuitBoard,"";
             title: "Quantum Algorithm Development","";
             description: "Custom quantum algorithms designed to solve specific business problems and optimize complex computational tasks.","";
             features: ["Custom Algorithms", "Problem Optimization", "Performance Tuning", "Scalable Solutions"],"";
-            path: "/solutions/quantum-algorithms";,
-},;
+            path: "/solutions/quantum-algorithms"},;
         {}
 ";
             icon: Atom,"";
@@ -40,20 +37,17 @@ import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const
 ";
             icon: Target,"";
             title: "Financial Services","";
-            description: "Optimize portfolio management, risk assessment, and algorithmic trading with quantum computing";,
-},;
+            description: "Optimize portfolio management, risk assessment, and algorithmic trading with quantum computing"},;
         {}
 ";
             icon: Shield,"";
             title: "Cybersecurity","";
-            description: "Develop quantum-resistant encryption and advanced security protocols for the future";,
-},;
+            description: "Develop quantum-resistant encryption and advanced security protocols for the future"},;
         {}
 ";
             icon: Users,"";
             title: "Healthcare","";
-            description: "Accelerate drug discovery, protein folding, and medical research with quantum simulations";,
-},;
+            description: "Accelerate drug discovery, protein folding, and medical research with quantum simulations"},;
         {}
 ";
             icon: Globe,"";
@@ -216,17 +210,11 @@ import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const
           </div>;
         </div>;
       </section>;
-    </div>);,
-};
-export default QuantumComputing;,
-}}}
-;
-export { QuantumComputing };
-;
-export { QuantumComputing };
-;
-export { QuantumComputing };
-;
-export { QuantumComputing };
-;
-export { QuantumComputing };
+    </div>)}
+export default QuantumComputing}}}
+
+export { QuantumComputing }
+export { QuantumComputing }
+export { QuantumComputing }
+export { QuantumComputing }
+export { QuantumComputing }

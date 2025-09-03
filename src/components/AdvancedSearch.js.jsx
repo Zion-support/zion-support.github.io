@@ -16,7 +16,7 @@ export function AdvancedSearch() {};
 }, []);, []);
         const handleClickOutside = (event) => {};
                 setShowSuggestions(false)}
-        };
+        }
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
     useEffect(() => {};
@@ -70,7 +70,7 @@ export function AdvancedSearch() {};
               </button>) ) }
           </div>;
         </div>) }
-;
+
       {/* Search Suggestions */}";
       {};
           {suggestions.map(suggestion => (<button key={suggestion.id} onClick={() => handleSuggestionClick(suggestion)} className="w-full p-3 text-left hover:bg-zion-slate-light/10 transition-colors border-b border-zion-slate-light last:border-b-0">";
@@ -104,7 +104,7 @@ export function AdvancedSearch() {};
             </div>;
           </div>;
         </div>) }
-;
+
       {/* No Results */}";
       {};
           <div className="text-zion-slate-light mb-2">No results found for "{query}"</div>";

@@ -31,16 +31,12 @@ const Admin = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default Admin;
-;
 
-export { Admin };
-;
-export { Admin };
-;
-export { Admin };
-;
-export { Admin };
-;
-export { Admin };
+
+export { Admin }
+export { Admin }
+export { Admin }
+export { Admin }
+export { Admin }

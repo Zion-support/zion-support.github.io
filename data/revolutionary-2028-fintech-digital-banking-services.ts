@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface Revolutionary2028FintechDigitalBankingService {;
+export interface Revolutionary2028FintechDigitalBankingService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface Revolutionary2028FintechDigitalBankingService {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface Revolutionary2028FintechDigitalBankingService {;
   rating: number;
 export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028FintechDigitalBankingService[] = [;
   // AI-Powered Digital Banking Platform;
-  {;
+  {
     id: "ai-digital-banking-platform-2028",;
     name: "AI Digital Banking Platform 2028",;
     tagline: "Transform banking with AI-powered digital services and personalized financial management",;
@@ -76,21 +76,19 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     marketSize: "$45.8B market",;
     growthRate: "310% annual growth",;
     variant: "fintech-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "AI-powered digital banking platform with personalized services, automated investment, and comprehensive financial management.",;
     launchDate: "2028-01-25",;
     customers: 320,;
     rating: 4.9,;
-    reviews: 240;,;,
-},;
+    reviews: 240},;
   // AI-Powered Investment Management Platform;
-  {;
+  {
     id: "ai-investment-management-platform-2028",;
     name: "AI Investment Management Platform 2028",;
     tagline: "Revolutionize investment management with AI-powered insights and automated trading",;
@@ -128,21 +126,19 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     marketSize: "$38.7B market",;
     growthRate: "285% annual growth",;
     variant: "fintech-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "AI-powered investment management platform with automated trading, portfolio optimization, and comprehensive risk management.",;
     launchDate: "2028-03-10",;
     customers: 680,;
     rating: 4.8,;
-    reviews: 520;,;,
-},;
+    reviews: 520},;
   // Blockchain-Based Payment Platform;
-  {;
+  {
     id: "blockchain-payment-platform-2028",;
     name: "Blockchain Payment Platform 2028",;
     tagline: "Transform payments with blockchain technology and AI-powered fraud prevention",;
@@ -177,17 +173,16 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     marketSize: "$18.7B market",;
     growthRate: "350% annual growth",;
     variant: "defi-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "DeFi lending and borrowing platform with AI risk management, smart contracts, and comprehensive DeFi solutions.",;
     launchDate: "2028-06-20",;
     customers: 850,;
     rating: 4.8,;
     reviews: 620;
-;
+
 ]}}

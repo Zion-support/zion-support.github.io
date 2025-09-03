@@ -575,13 +575,11 @@ import {}
   CheckCircle,';
   Shield,'';
   Zap,''';
-  Cpu'''';,
-} from 'lucide-react';
-;
-    technologies["Computer Vision", "Robotics", "AI", "Medical Imaging"];,
-}
+  Cpu''''} from 'lucide-react';
+
+    technologies["Computer Vision", "Robotics", "AI", "Medical Imaging"]}
 ];
-;
+
 const autonomousTechnologies = [];
   {}
 ";
@@ -590,8 +588,7 @@ const autonomousTechnologies = [];
     description: "Advanced image recognition and processing capabilities",";
     icon: Eye,"";
     useCase: "Visual Perception","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -599,8 +596,7 @@ const autonomousTechnologies = [];
     description: "AI algorithms for autonomous decision making",";
     icon: Brain,"";
     useCase: "Intelligence","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -608,8 +604,7 @@ const autonomousTechnologies = [];
     description: "Integration of multiple sensor data sources",";
     icon: Activity,"";
     useCase: "Environmental Awareness","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -619,7 +614,7 @@ const autonomousTechnologies = [];
     useCase: "Physical Control","";
     reliability: "Critical";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -629,8 +624,7 @@ const successStories = [];
     challenge: "Needed autonomous driving system for next-generation vehicles","";
     solution: "Built comprehensive autonomous system with computer vision, sensor fusion, and AI decision making","";
     results: "Level 4 autonomy achieved, 99.9% safety record, reduced accidents by 80%, improved efficiency","";
-    logo: "AM";,
-},;
+    logo: "AM"},;
   {}
 ";
     id: 2,"";
@@ -639,8 +633,7 @@ const successStories = [];
     challenge: "Required autonomous robots for 24/7 production line operation","";
     solution: "Implemented AI-powered industrial robots with computer vision and safety systems","";
     results: "100% uptime, 50% production increase, improved quality, reduced costs","";
-    logo: "MC";,
-},;
+    logo: "MC"},;
   {}
 ";
     id: 3,"";
@@ -651,7 +644,7 @@ const successStories = [];
     results: "30% yield increase, 40% water savings, reduced labor costs, improved sustainability","";
     logo: "AC";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -659,24 +652,21 @@ const processSteps = [];
     title: "System Requirements","";
     description: "Define autonomous system requirements and constraints",";
     icon: FileText,"";
-    duration: "2-4 weeks";,
-},;
+    duration: "2-4 weeks"},;
   {}
 ";
     step: 2,"";
     title: "AI Development","";
     description: "Develop AI algorithms and machine learning models",";
     icon: Code,"";
-    duration: "8-16 weeks";,
-},;
+    duration: "8-16 weeks"},;
   {}
 ";
     step: 3,"";
     title: "Hardware Integration","";
     description: "Integrate sensors, actuators, and control systems",";
     icon: Wrench,"";
-    duration: "12-24 weeks";,
-},;
+    duration: "12-24 weeks"},;
   {}
 ";
     step: 4,"";
@@ -685,7 +675,7 @@ const processSteps = [];
     icon: Shield,"";
     duration: "8-16 weeks";
 ];
-;
+
 const autonomousBenefits = [];
   {}
 ";
@@ -693,32 +683,28 @@ const autonomousBenefits = [];
     title: "Increased Efficiency","";
     description: "24/7 operation with consistent performance and reduced human error",";
     icon: Zap,"";
-    examples["24/7 operation", "Consistent performance", "Reduced errors", "Faster processing"];,
-},;
+    examples["24/7 operation", "Consistent performance", "Reduced errors", "Faster processing"]},;
   {}
 ";
 "";
     title: "Enhanced Safety","";
     description: "Advanced safety systems and risk mitigation capabilities",";
     icon: Shield,"";
-    examples["Risk mitigation", "Safety protocols", "Emergency systems", "Predictive safety"];,
-},;
+    examples["Risk mitigation", "Safety protocols", "Emergency systems", "Predictive safety"]},;
   {}
 ";
 "";
     title: "Cost Reduction","";
     description: "Lower operational costs and improved resource utilization",";
     icon: TrendingUp,"";
-    examples["Lower labor costs", "Resource optimization", "Reduced waste", "Improved ROI"];,
-},;
+    examples["Lower labor costs", "Resource optimization", "Reduced waste", "Improved ROI"]},;
   {}
 ";
 "";
     title: "Scalability","";
     description: "Systems that can scale and adapt to changing requirements",";
     icon: Rocket,"";
-    examples["Easy scaling", "Adaptive systems", "Modular design", "Future-proof technology"];,
-}
+    examples["Easy scaling", "Adaptive systems", "Modular design", "Future-proof technology"]}
 ];
 ;
 export {};
@@ -879,9 +865,8 @@ export {};
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -889,9 +874,8 @@ export {};
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {};
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -1002,14 +986,10 @@ export {};
       </section>;
     </div>;
   )}
-;
 
-export { AIAutonomousSystems };
-;
-export { AIAutonomousSystems };
-;
-export { AIAutonomousSystems };
-;
-export { AIAutonomousSystems };
-;
-export { AIAutonomousSystems };
+
+export { AIAutonomousSystems }
+export { AIAutonomousSystems }
+export { AIAutonomousSystems }
+export { AIAutonomousSystems }
+export { AIAutonomousSystems }

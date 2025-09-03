@@ -51,14 +51,10 @@ export default function Projects() {};
   return null;
 }
     return <ProjectsContent />}
-;
 
-export { ProjectsContent, Projects };
-;
-export { ProjectsContent, Projects };
-;
-export { ProjectsContent, Projects };
-;
-export { ProjectsContent, Projects };
-;
-export { ProjectsContent, Projects };
+
+export { ProjectsContent, Projects }
+export { ProjectsContent, Projects }
+export { ProjectsContent, Projects }
+export { ProjectsContent, Projects }
+export { ProjectsContent, Projects }

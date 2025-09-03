@@ -9,7 +9,5 @@ describe(&apos;EnhancedPerformanceMonitor&apos, () => {};
 }
     // comment;
     render(<EnhancedPerformanceMonitor / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

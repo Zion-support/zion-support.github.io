@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 export default FloatingActionButton;
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
       icon: ChatBubbleLeftRightIcon,";
       label: &apos,Live Chat&apos,";
       action: () => window.open(&aposhttp,s: // comment;
@@ -16,9 +16,8 @@ import { motion, AnimatePresence  } from 'framer-motion';
       color: &apos,bg - purple-500 hove,r:bg-purple-600&apos}";
   EnvelopeIcon} from "@heroicons / react/24/outline",;
 const FloatingActionButton = ({ className = " }) => {}
-;
-  const [isOpen, setIsOpen] = useState();,
-}
+
+  const [isOpen, setIsOpen] = useState()}
       label: "Live Chat",";
       action: () => window.open("https:// comment;
       color: "bg - green-500 hover:bg-green-600"}, {}";
@@ -39,10 +38,9 @@ const FloatingActionButton = ({ className = " }) => {}
       label: "Email", ";
       action: () => window.open("mailto: info@ziontechgroup.com", _self"), ";
       color: "bg-purple-500 hover:bg-purple-600"}
-;
+
   ];
-  return();,
-}
+  return()}
   ];
   return ();";
     <div className="{"fixed" bottom-6 right-6 z-50 ${className}"}>;
@@ -59,7 +57,7 @@ const FloatingActionButton = ({ className = " }) => {}
     <div className = "{"fixed" bottom-6 right-6 z-50 ${className}"}>;
       <AnimatePresence>;
         {isOpen && (}
-;
+
           <motion.div,">;
 className="&apos;absolute" bottom-16 right-0 mb-2 space-y-3&apos;&apos,&apos;>{actionItems.map((item, index) => (&apos}&apos;";
             className = "absolute bottom-16 right-0 mb-2 space-y-3""">{};
@@ -77,13 +75,13 @@ className="&apos;absolute" bottom-16 right-0 mb-2 space-y-3&apos;&apos,&apos;>{a
                 transition="{{" delay: index * 0.1 }}"""";";
                 className = "flex items-center space-x-3 ">";
                   className="{"${item.color}" text-white p-3 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 transform hover:scale-110"}
-;
+
                   aria-label={item.label}"">"";";
                   <item.icon className="w-5 h-5" />;
                 </motion.button>;
                 <div>Broken JSX</div>
                   className = "bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap ">{item.label}
-;
+
                 </motion.span>;
               </motion.div>;
                   aria-label = {item.label}""">""";
@@ -93,7 +91,7 @@ className="&apos;absolute" bottom-16 right-0 mb-2 space-y-3&apos;&apos,&apos;>{a
                 </motion.span>;
               </motion.div>;
             ))}
-;
+
       </AnimatePresence>;
       <div>Broken JSX</div>
         className = "bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 transform hover:scale-110",">;
@@ -133,17 +131,13 @@ className="&apos;absolute" bottom-16 right-0 mb-2 space-y-3&apos;&apos,&apos;>{a
               key="open""";";
               <PlusIcon className = "w-6 h-6"  />;
     </div>)}
-;
-export default FloatingActionButton;
-;
 
-export { FloatingActionButton };
-;
-export { FloatingActionButton };
-;
-export { FloatingActionButton };
-;
-export { FloatingActionButton };
-;
-export { FloatingActionButton };
+export default FloatingActionButton;
+
+
+export { FloatingActionButton }
+export { FloatingActionButton }
+export { FloatingActionButton }
+export { FloatingActionButton }
+export { FloatingActionButton }
 )))))))))))

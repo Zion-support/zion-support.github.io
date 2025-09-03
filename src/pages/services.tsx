@@ -28,7 +28,7 @@
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Service Categories</h2>;
           <p className="text-gray-600 text-lg">Comprehensive technology solutions for modern businesses</p>;
         </div>;
-        ;
+
         <div className="grid md:grid-cols-3 gap-8">;
           {};
             <Link key={index} href={category.href} className="group">;
@@ -68,7 +68,7 @@
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Services</h2>;
             <p className="text-gray-600 text-lg">Our most innovative and impactful solutions</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 gap-8">;
             {};
               <Link key={index} href={service.href} className="group">;
@@ -105,7 +105,7 @@
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Flexible Pricing Plans</h2>;
           <p className="text-gray-600 text-lg">Choose the plan that fits your business needs</p>;
         </div>;
-        ;
+
         <div className="grid md:grid-cols-3 gap-8">;
           {};
             <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.name === 'Professional' ? 'border-2 border-indigo-500 bg-indigo-50' : 'border border-gray-200 bg-white'}`}>;
@@ -137,7 +137,7 @@
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>;
             <p className="text-gray-300 text-lg">Contact our technology experts today</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 gap-8">;
             <div>;
               <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>;
@@ -160,7 +160,7 @@
                 </div>;
               </div>;
             </div>;
-            ;
+
             <div className="bg-white rounded-xl p-6">;
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Schedule a Consultation</h3>;
               <p className="text-gray-600 mb-4">Get a personalized consultation to discuss your technology needs</p>;
@@ -172,7 +172,6 @@
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
+
 export default Services;

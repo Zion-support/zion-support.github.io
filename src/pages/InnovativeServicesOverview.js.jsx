@@ -46,16 +46,14 @@ const InnovativeServicesOverview = () => {};
                 'healthcare'['Healthcare',Biology',Biotechnology',Neuroscience'],;''';
                 'finance'['Finance',Trading'],;''';
                 'sustainability'['Energy',Climate',Sustainability',;''';
-  'Green Tech'];,
-};
+  'Green Tech']}
             const targetKeywords = categoryMappings[selectedCategory] || [category.name];
             return targetKeywords.some (keyword => service.category.toLowerCase () .includes (keyword.toLowerCase () ) ) }) ;
     const fadeInUp = {}
   initial: {};
 },;
         animate: { opacity: 1, y: 0 },;
-        transition: { duration: 0.6 }";,
-};"";
+        transition: { duration: 0.6 }"};"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">";
       {/* Hero Section */}"";
       <section className="py-20 px-4 sm:px-6 lg:px-8">"";
@@ -152,7 +150,7 @@ const InnovativeServicesOverview = () => {};
                   </div>"";
                   <div className="flex items-center text-sm">"'";
                     <span className="text-cyan-400 mr-2">🎯</span>'"'";
-                    <span className="text-gray-300">{service.targetAudience.split(',).slice(0, 2).join(',)}</span>";
+                    <span className="text-gray-300">{service.targetAudience.split(').slice(0, 2).join(')}</span>";
                   </div>"";
                   <div className="flex items-center text-sm">"";
                     <span className="text-cyan-400 mr-2">⭐</span>"";
@@ -293,16 +291,12 @@ const InnovativeServicesOverview = () => {};
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default InnovativeServicesOverview;
-;
 
-export { InnovativeServicesOverview };
-;
-export { InnovativeServicesOverview };
-;
-export { InnovativeServicesOverview };
-;
-export { InnovativeServicesOverview };
-;
-export { InnovativeServicesOverview };
+
+export { InnovativeServicesOverview }
+export { InnovativeServicesOverview }
+export { InnovativeServicesOverview }
+export { InnovativeServicesOverview }
+export { InnovativeServicesOverview }

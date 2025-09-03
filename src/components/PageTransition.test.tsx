@@ -9,7 +9,5 @@ describe(&apos;PageTransition&apos, () => {};
 }
     // comment;
     render(<PageTransition / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

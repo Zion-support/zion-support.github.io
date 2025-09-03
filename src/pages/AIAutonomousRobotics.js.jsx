@@ -250,16 +250,12 @@ const AIAutonomousRobotics = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default AIAutonomousRobotics;
-;
 
-export { AIAutonomousRobotics };
-;
-export { AIAutonomousRobotics };
-;
-export { AIAutonomousRobotics };
-;
-export { AIAutonomousRobotics };
-;
-export { AIAutonomousRobotics };
+
+export { AIAutonomousRobotics }
+export { AIAutonomousRobotics }
+export { AIAutonomousRobotics }
+export { AIAutonomousRobotics }
+export { AIAutonomousRobotics }

@@ -19,10 +19,8 @@ export {};
 ';
 '';
 ''';
-      router('/unauthorized');,
-}
-    return null;,
-}
+      router('/unauthorized')}
+    return null}
   return();
     <ProtectedRoute>;
       <div>Broken JSX</div>
@@ -31,16 +29,12 @@ export {};
       <main className="min-h-screen bg-background">;
         <BillingDashboard />;
       </main>;
-      ;
-    </ProtectedRoute>)}
-;
 
-export { EnterpriseBilling };
-;
-export { EnterpriseBilling };
-;
-export { EnterpriseBilling };
-;
-export { EnterpriseBilling };
-;
-export { EnterpriseBilling };
+    </ProtectedRoute>)}
+
+
+export { EnterpriseBilling }
+export { EnterpriseBilling }
+export { EnterpriseBilling }
+export { EnterpriseBilling }
+export { EnterpriseBilling }

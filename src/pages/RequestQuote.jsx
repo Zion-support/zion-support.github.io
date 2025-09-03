@@ -208,16 +208,11 @@ export {};
 
       <Footer />;
     </div>;
-  );,
-}
-;
+  )}
 
-export { RequestQuote };
-;
-export { RequestQuote };
-;
-export { RequestQuote };
-;
-export { RequestQuote };
-;
-export { RequestQuote };
+
+export { RequestQuote }
+export { RequestQuote }
+export { RequestQuote }
+export { RequestQuote }
+export { RequestQuote }

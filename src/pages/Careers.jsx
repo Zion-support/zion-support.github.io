@@ -98,8 +98,7 @@ export {};
         department: 'Operations',';
         description:'';
           'Help connect the right talent with the right opportunities on our platform through personalized matching.'}
-    ]};
-;
+    ]}
   // Benefits list;
   const benefits = [];
     {}
@@ -114,8 +113,7 @@ export {};
           xmlns="http://www.w3.org/2000/svg">";
           <div>Broken JSX</div>
           />;
-        </svg>) ;,
-},;
+        </svg>) },;
     {}
 ';
       title: 'Health & Wellness',';
@@ -126,8 +124,7 @@ export {};
           xmlns="http://www.w3.org/2000/svg">";
           <div>Broken JSX</div>
           />;
-        </svg>) ;,
-},;
+        </svg>) },;
     {}
 ';
       title: 'Competitive Compensation',';
@@ -138,8 +135,7 @@ export {};
           xmlns="http://www.w3.org/2000/svg">";
           <div>Broken JSX</div>
           />;
-        </svg>) ;,
-},;
+        </svg>) },;
     {}
 ';
       title: 'Learning & Growth',';
@@ -150,8 +146,7 @@ export {};
           xmlns="http://www.w3.org/2000/svg">";
           <div>Broken JSX</div>
           />;
-        </svg>) ;,
-},;
+        </svg>) },;
     {}
 ';
       title: 'Team & Culture',';
@@ -162,8 +157,7 @@ export {};
           xmlns="http://www.w3.org/2000/svg">";
           <div>Broken JSX</div>
           />;
-        </svg>) ;,
-}
+        </svg>) }
   ];
 ";
   return ("";
@@ -200,15 +194,11 @@ export {};
           </div>;
         </div>;
 
-;
 
-export { Careers };
-;
-export { Careers };
-;
-export { Careers };
-;
-export { Careers };
-;
-export { Careers };
+
+export { Careers }
+export { Careers }
+export { Careers }
+export { Careers }
+export { Careers }
 )

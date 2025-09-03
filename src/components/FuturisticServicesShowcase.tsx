@@ -16,14 +16,14 @@ const futuristicServices: ServiceShowcase[] = [{};
 };,
 }, []);, []);
 		if(!isPlaying) return;
-		;
+
 			setCurrentService((prev) => (prev + 1) % futuristicServices.length) }, 5000) ;
 		return () => clearInterval(interval) }, [isPlaying]) ;
 	;
 		switch(status) {};
 			default: return 'bg-gray-500'}
 	};			default: return 'UNKNOWN'}
-	};
+	}
 	return ();
 		<div className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">";
 			<div className="container mx-auto px-4">;
@@ -134,7 +134,7 @@ const futuristicServices: ServiceShowcase[] = [{};
 								<div className="text-zion-cyan font-semibold">;
 									{service.price}
 								</div>;
-							</motion.div>;) ) };
+							</motion.div>;) ) }
 					</div>;
 				</div>;
 			</div>;

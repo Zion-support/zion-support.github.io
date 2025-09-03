@@ -46,6 +46,5 @@ const RevolutionaryServicesShowcase2029 = () => {};
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default RevolutionaryServicesShowcase2029;

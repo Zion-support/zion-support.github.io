@@ -8,7 +8,7 @@ export default function Page() {};
 export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({};
   showFilters = true}) => {};
       return acc}, {} as Record < string, any>) ;
-;
+
       return acc}, {} as Record < string, any>) ;
         results = results.sort((a, b) => {};
           return b.rating - a.rating});
@@ -18,9 +18,9 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({};
       default: // relevance;
         // Keep original order for relevance;
         break;
-;
+
     return results}, [data, searchQuery, selectedCategory, activeFilters, sortBy]) ;
-;
+
   // Update parent component with results;
   useEffect(() => {};
 };,
@@ -43,8 +43,8 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({};
       default: return <Globe className="w-4 h-4"  />};
 ;
   // Get category color;
-  ;
-    return colors[category as keyof typeof colors] || 'text-zinc-400'};
+
+    return colors[category as keyof typeof colors] || 'text-zinc-400'}
   return (";
     <div className="w-full max-w-6xl mx-auto">;
       {/* Search Bar */}";
@@ -130,7 +130,7 @@ className: {};
           {};
             </button>) }
         </div>) }
-;
+
       {/* Filter Panel */}
       <AnimatePresence>;
         {};
@@ -226,7 +226,7 @@ className: {};
                   )}";
                   <div className="flex items-center gap-1">";
                     <Tag className="w-4 h-4"  />;
-                    {result.tags.slice(0, 3).join(',)}`;
+                    {result.tags.slice(0, 3).join(')}`;
                     {result.tags.length > 3 && ` +${result.tags.length-3} more`}                  </div>;
                 </div>;
               </div>;
@@ -238,8 +238,6 @@ className: {};
       {};
         </motion.div>) }
     </div>) }
-;,
 }
-;,
 }
 '"`;

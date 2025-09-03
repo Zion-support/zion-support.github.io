@@ -22,9 +22,9 @@ export default function Page() {};
 ;
     if(element) {};
       observer.observe(element)}
-;
+
     return () => observer.disconnect()}, []);
-;
+
       />;
     ))};
           i <div>Broken JSX</div>
@@ -68,7 +68,7 @@ export default function Page() {};
                     {/* Popular Badge */}
                     {};
                       </div>) }
-;
+
                     {/* Service Icon */}`;
                     <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;";
                       <service.icon className="w-8 h-8 text-white" />;
@@ -142,5 +142,5 @@ export default function Page() {};
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
+    </section>;) }
 '"`;

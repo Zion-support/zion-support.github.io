@@ -13,8 +13,7 @@ export {};
   // Check if user has admin role'';
   const isAdmin = user?.role === 'admin';
   if (!isAdmin) {}
-    return <Navigate to="/unauthorized" />;,
-}
+    return <Navigate to="/unauthorized" />}
   return();
     <>";
       <div>Broken JSX</div>
@@ -101,16 +100,12 @@ export {};
           </Tabs>;
         </div>;
       </main>;
-      ;
-    </>)}
-;
 
-export { WhitelabelManager };
-;
-export { WhitelabelManager };
-;
-export { WhitelabelManager };
-;
-export { WhitelabelManager };
-;
-export { WhitelabelManager };
+    </>)}
+
+
+export { WhitelabelManager }
+export { WhitelabelManager }
+export { WhitelabelManager }
+export { WhitelabelManager }
+export { WhitelabelManager }

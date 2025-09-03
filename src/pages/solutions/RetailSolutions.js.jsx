@@ -224,16 +224,11 @@ export {};
           </motion.div>;
         </div>;
       </section>;
-    </div>);,
-}
-;
+    </div>)}
 
-export { RetailSolutions };
-;
-export { RetailSolutions };
-;
-export { RetailSolutions };
-;
-export { RetailSolutions };
-;
-export { RetailSolutions };
+
+export { RetailSolutions }
+export { RetailSolutions }
+export { RetailSolutions }
+export { RetailSolutions }
+export { RetailSolutions }

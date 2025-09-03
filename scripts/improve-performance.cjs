@@ -16,8 +16,7 @@ const nextConfig = {
   images: {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-  },
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]},
   
   // Bundle optimization
   webpack: (config, { dev, isServer }) => {
@@ -28,10 +27,7 @@ const nextConfig = {
           vendor: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
-            chunks: 'all',
-          },
-        },
-      };
+            chunks: 'all'}}}
     }
     return config;
   },
@@ -44,26 +40,17 @@ const nextConfig = {
         headers: [
           {
             key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
+            value: 'nosniff'},
           {
             key: 'X-Frame-Options',
-            value: 'DENY',
-          },
+            value: 'DENY'},
           {
             key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
+            value: '1; mode=block'},
           {
             key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-    ];
-  },
-};
-
+            value: 'origin-when-cross-origin'}]}];
+  }}
 module.exports = nextConfig;`;
       
       fs.writeFileSync(path.join(process.cwd(), 'next.config.js'), nextConfigContent);

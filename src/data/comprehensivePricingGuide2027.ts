@@ -231,8 +231,7 @@
     competitors: ["Semantic Scholar", "ResearchGate", "Google Scholar"],";
     roi: "400% within 6 months",";
     setupTime: "3-4 weeks",";
-    integrations: ["PubMed", "arXiv", "IEEE", "ACM", "Research Databases", "Citation Managers"];,
-},;
+    integrations: ["PubMed", "arXiv", "IEEE", "ACM", "Research Databases", "Citation Managers"]},;
   // Emerging Technology Services 2030;
   {};
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },";
@@ -286,8 +285,7 @@
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT"],";
     roi: "500% within 12 months",";
     setupTime: "6-8 weeks",";
-    integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Docker", "Kubernetes", "MQTT"];,
-},;
+    integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Docker", "Kubernetes", "MQTT"]},;
   // IT Infrastructure Services;
   {};
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },";
@@ -359,8 +357,7 @@
     competitors: ["Tableau", "Power BI", "Qlik"],";
     roi: "350% within 9 months",";
     setupTime: "5-7 weeks",";
-    integrations: ["SQL Databases", "NoSQL Databases", "Cloud Storage", "CRM Systems", "ERP Systems"];,
-}
+    integrations: ["SQL Databases", "NoSQL Databases", "Cloud Storage", "CRM Systems", "ERP Systems"]}
 ];
 export;
 export;

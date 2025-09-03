@@ -9,7 +9,5 @@ describe(&apos;SkipLink&apos, () => {};
 }
     // comment;
     render(<SkipLink / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

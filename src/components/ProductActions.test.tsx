@@ -9,7 +9,5 @@ describe(&apos;ProductActions&apos, () => {};
 }
     // comment;
     render(<ProductActions / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

@@ -10,29 +10,25 @@ const AIBusinessIntelligence = () => {}
             icon: Brain,;
             title: "AI-Powered Analytics","";
             description: "Advanced machine learning algorithms that automatically identify patterns, trends, and insights from your data","";
-            benefits["Predictive modeling", "Anomaly detection", "Pattern recognition", "Automated insights"];,
-},;
+            benefits["Predictive modeling", "Anomaly detection", "Pattern recognition", "Automated insights"]},;
         {}
 ";
             icon: BarChart3,"";
             title: "Real-time Dashboards","";
             description: "Interactive, customizable dashboards that provide instant visibility into key business metrics","";
-            benefits["Live data updates", "Customizable views", "Role-based access", "Mobile responsive"];,
-},;
+            benefits["Live data updates", "Customizable views", "Role-based access", "Mobile responsive"]},;
         {}
 ";
             icon: TrendingUp,"";
             title: "Predictive Analytics","";
             description: "Forecast future trends and outcomes using historical data and advanced statistical models","";
-            benefits["Sales forecasting", "Demand planning", "Risk assessment", "Trend prediction"];,
-},;
+            benefits["Sales forecasting", "Demand planning", "Risk assessment", "Trend prediction"]},;
         {}
 ";
             icon: Target,"";
             title: "Performance Tracking","";
             description: "Monitor and measure business performance against goals and benchmarks in real-time","";
-            benefits["KPI monitoring", "Goal tracking", "Benchmarking", "Performance alerts"];,
-}
+            benefits["KPI monitoring", "Goal tracking", "Benchmarking", "Performance alerts"]}
     ];
     const solutions = [];
         {}
@@ -46,8 +42,7 @@ const AIBusinessIntelligence = () => {}
                 "Campaign performance optimization","";
                 "Market trend analysis","";
                 "Customer lifetime value prediction";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -59,8 +54,7 @@ const AIBusinessIntelligence = () => {}
                 "Operational efficiency analysis","";
                 "Quality control monitoring","";
                 "Resource allocation optimization";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -72,8 +66,7 @@ const AIBusinessIntelligence = () => {}
                 "Profitability analysis","";
                 "Cash flow prediction","";
                 "Investment decision support";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -85,8 +78,7 @@ const AIBusinessIntelligence = () => {}
                 "Workforce planning","";
                 "Employee retention prediction","";
                 "Training effectiveness analysis";
-            ];,
-}
+            ]}
     ];
     const technologies = [];
         {}
@@ -94,53 +86,46 @@ const AIBusinessIntelligence = () => {}
 "";
             name: "Machine Learning","";
             description: "Advanced ML algorithms for pattern recognition and prediction",;
-            icon: Brain;,
-},;
+            icon: Brain},;
         {}
 ";
 "";
             name: "Big Data Processing","";
             description: "Scalable data processing for large datasets",;
-            icon: Database;,
-},;
+            icon: Database},;
         {}
 ";
 "";
             name: "Real-time Analytics","";
             description: "Instant data processing and insights delivery",;
-            icon: Zap;,
-},;
+            icon: Zap},;
         {}
 ";
 "";
             name: "Cloud Infrastructure","";
             description: "Scalable cloud-based BI platform",;
-            icon: Globe;,
-},;
+            icon: Globe},;
         {}
 ";
 "";
             name: "Data Security","";
             description: "Enterprise-grade security and compliance",;
-            icon: Shield;,
-},;
+            icon: Shield},;
         {}
 ";
 "";
             name: "24/7 Monitoring","";
             description: "Continuous monitoring and alerting",;
-            icon: Clock;,
-}
+            icon: Clock}
     ];
     const containerVariants = {}
         hidden: { opacity: 0 },;
         visible: {}
             opacity: 1,;
             transition: {}
-                staggerChildren: 0.1;,
-}
+                staggerChildren: 0.1}
         }
-    };
+    }
     const itemVariants = {}
   hidden: {};
 },;
@@ -148,10 +133,8 @@ const AIBusinessIntelligence = () => {}
             y: 0,;
             opacity: 1,;
             transition: {}
-                duration: 0.5;,
-}
-        }";,
-};"";
+                duration: 0.5}
+        }"};"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       {/* Hero Section */}"";
       <div className="relative overflow-hidden">"";
@@ -298,16 +281,12 @@ const AIBusinessIntelligence = () => {}
           </motion.div>;
         </div>;
       </div>;
-    </div>)};
+    </div>)}
 export default AIBusinessIntelligence;
-;
 
-export { AIBusinessIntelligence };
-;
-export { AIBusinessIntelligence };
-;
-export { AIBusinessIntelligence };
-;
-export { AIBusinessIntelligence };
-;
-export { AIBusinessIntelligence };
+
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }

@@ -41,14 +41,10 @@ export default function ResetPasswordPage () {};
         </Button>;
       </form>;
     </div>)}
-;
 
-export { ResetPasswordPage };
-;
-export { ResetPasswordPage };
-;
-export { ResetPasswordPage };
-;
-export { ResetPasswordPage };
-;
-export { ResetPasswordPage };
+
+export { ResetPasswordPage }
+export { ResetPasswordPage }
+export { ResetPasswordPage }
+export { ResetPasswordPage }
+export { ResetPasswordPage }

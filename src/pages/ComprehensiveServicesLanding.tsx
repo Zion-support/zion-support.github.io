@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link  } from 'react-router-dom';
-;
+
 const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
   const serviceCategories: unknown = [];
     {}
@@ -13,8 +13,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Advanced vulnerability detection with 85% accuracy improvement","";
           url: "/services/ai-code-review-security","";
           pricing: "From $49/month","";
-          icon: "🔒";,
-},;
+          icon: "🔒"},;
         {}
 ";
 "";
@@ -22,8 +21,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Boost satisfaction by 35% with AI-driven insights","";
           url: "/services/ai-customer-experience-analytics","";
           pricing: "From $299/month","";
-          icon: "📊";,
-},;
+          icon: "📊"},;
         {}
 ";
 "";
@@ -31,8 +29,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Reduce deployment time by 80% with intelligent automation","";
           url: "/services/ai-devops-automation-platform","";
           pricing: "From $199/month","";
-          icon: "🚀";,
-},;
+          icon: "🚀"},;
         {}
 ";
 "";
@@ -40,10 +37,8 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Sub-millisecond processing with 90% latency reduction","";
           url: "/services/ai-iot-edge-computing-platform","";
           pricing: "From $299/month","";
-          icon: "🌐";,
-}
-      ];,
-},;
+          icon: "🌐"}
+      ]},;
     {}
 ";
 "";
@@ -57,8 +52,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Streamlined cloud deployment and management","";
           url: "/services/cloud-devops","";
           pricing: "Custom pricing","";
-          icon: "☁️";,
-},;
+          icon: "☁️"},;
         {}
 ";
 "";
@@ -66,8 +60,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Enterprise-grade infrastructure solutions","";
           url: "/services/it-infrastructure","";
           pricing: "Custom pricing","";
-          icon: "🏗️";,
-},;
+          icon: "🏗️"},;
         {}
 ";
 "";
@@ -75,10 +68,8 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Virtual representation of physical systems","";
           url: "/services/digital-twin","";
           pricing: "Custom pricing","";
-          icon: "🔄";,
-}
-      ];,
-},;
+          icon: "🔄"}
+      ]},;
     {}
 ";
 "";
@@ -92,8 +83,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Comprehensive data analysis and visualization","";
           url: "/services/data-analytics","";
           pricing: "Custom pricing","";
-          icon: "📈";,
-},;
+          icon: "📈"},;
         {}
 ";
 "";
@@ -101,8 +91,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "AI-powered business insights and reporting","";
           url: "/services/ai-business-intelligence","";
           pricing: "Custom pricing","";
-          icon: "🧠";,
-},;
+          icon: "🧠"},;
         {}
 ";
 "";
@@ -110,10 +99,8 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Real-time edge data processing","";
           url: "/services/iot-edge","";
           pricing: "Custom pricing","";
-          icon: "⚡";,
-}
-      ];,
-},;
+          icon: "⚡"}
+      ]},;
     {}
 ";
 "";
@@ -127,8 +114,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Modern security framework for enterprise","";
           url: "/services/zero-trust-network-architecture","";
           pricing: "Custom pricing","";
-          icon: "🛡️";,
-},;
+          icon: "🛡️"},;
         {}
 ";
 "";
@@ -136,8 +122,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Comprehensive security solutions","";
           url: "/services/ai-cybersecurity-suite","";
           pricing: "Custom pricing","";
-          icon: "🔐";,
-},;
+          icon: "🔐"},;
         {}
 ";
 "";
@@ -145,12 +130,10 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "AI-powered compliance management","";
           url: "/services/ai-compliance-assistant","";
           pricing: "Custom pricing","";
-          icon: "📋";,
-}
-      ];,
-};
+          icon: "📋"}
+      ]}
   ];
-;
+
   return();
     <>";
       <div>Broken JSX</div>
@@ -337,16 +320,11 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
         </section>;
       </div>;
     </>;
-  )};
-;
+  )}
 export default ComprehensiveServicesLanding;
-;
-export { ComprehensiveServicesLanding };
-;
-export { ComprehensiveServicesLanding };
-;
-export { ComprehensiveServicesLanding };
-;
-export { ComprehensiveServicesLanding };
-;
-export { ComprehensiveServicesLanding };
+
+export { ComprehensiveServicesLanding }
+export { ComprehensiveServicesLanding }
+export { ComprehensiveServicesLanding }
+export { ComprehensiveServicesLanding }
+export { ComprehensiveServicesLanding }

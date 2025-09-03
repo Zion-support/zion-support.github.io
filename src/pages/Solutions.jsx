@@ -1,6 +1,6 @@
 import React from 'react';
 export default Solutions;
-;
+
 const Solutions = () => {}
   return <div>Component</div>;
 };
@@ -32,16 +32,12 @@ const Solutions = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default Solutions;
-;
 
-export { Solutions };
-;
-export { Solutions };
-;
-export { Solutions };
-;
-export { Solutions };
-;
-export { Solutions };
+
+export { Solutions }
+export { Solutions }
+export { Solutions }
+export { Solutions }
+export { Solutions }

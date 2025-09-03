@@ -16,5 +16,4 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {};
         </nav>;
       </div>;
     </div>;
-  );,
-}
+  )}

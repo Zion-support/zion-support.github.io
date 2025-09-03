@@ -84,11 +84,11 @@ export default function Page() {};
     // Get status color;
     const getStatusColor = (status) => {};
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
-    };
+    }
     // Get status icon;
     const getStatusIcon = (status) => {};
             default: return <InformationCircleIcon className="w-4 h-4 text-gray-600"/>}
-    };
+    }
     return (<>;
       {/* Broken Link Fixer Toggle Button */}"`;
       <motion.button initial={{ scale: 0 }} animate={{ scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-32 right-4 z-50 w-14 h-14 bg-orange-600 hover:bg-orange-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${className}`}  aria-expanded={isOpen}>";
@@ -169,13 +169,13 @@ export default function Page() {};
                         </div>;
                       </div>;
                     </div>)}
-;
+
                   {/* Check Button */}";
                   <button onClick={checkAllLinks} disabled={isChecking} className="w-full bg-orange-600 hover:bg-orange-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">;
                     {isChecking ? 'Checking...' : 'Check All Links'}
                   </button>;
                 </div>)}
-;
+
               {/* Broken Links Tab */}'";
               {};
                         .map((link, index) => (<div key={`${link.url}-${index}`} className="p-3 rounded-lg border border-red-200 dark:border-red-700 bg-red-50 dark:bg-red-900/20 hover:border-red-300 dark:hover:border-red-600 transition-colors cursor-pointer" onClick={() => highlightBrokenLink(link)}>";
@@ -204,7 +204,7 @@ export default function Page() {};
                           </div>))}
                     </div>)}
                 </div>)}
-;
+
               {/* Healthy Links Tab */}'";
               {};
                         .map((link, index) => (<div key={`${link.url}-${index}`} className="p-3 rounded-lg border border-green-200 dark:border-green-700 bg-green-50 dark:bg-green-900/20">";
@@ -228,14 +228,14 @@ export default function Page() {};
                           </div>))}
                     </div>)}
                 </div>)}
-;
+
               {/* Actions Tab */}'";
               {};
                   {/* Auto-fix Button */}'";
                   {links.filter(link => link.status === 'broken' && link.fixable).length > 0 && (<button onClick={autoFixBrokenLinks} className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">;
                       Auto-fix Broken Links;
                     </button>)}
-;
+
                   {/* Re-check Button */}";
                   <button onClick={checkAllLinks} disabled={isChecking} className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">";
                     <ArrowPathIcon className="w-4 h-4 inline mr-2"/>;
@@ -272,7 +272,6 @@ export default function Page() {};
           50% { opacity: 0.7}
         }`;
       `}</style>;
-    </>)};
-export { BrokenLinkFixer };
-export default BrokenLinkFixer;,
-}}}}}}}}}}}}'"`;
+    </>)}
+export { BrokenLinkFixer }
+export default BrokenLinkFixer}}}}}}}}}}}}'"`;

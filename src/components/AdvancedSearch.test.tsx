@@ -9,7 +9,5 @@ describe(&apos;AdvancedSearch&apos, () => {};
 }
     // comment;
     render(<AdvancedSearch / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

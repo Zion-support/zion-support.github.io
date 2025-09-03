@@ -154,10 +154,9 @@ export default function ComprehensiveSitemap() {};
         { name: 'Phone: +1 (302) 464-0950', href: 'tel:+13024640950', description: 'Call us directly', external: true },;
         { name: 'Email: kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com', description: 'Send us an email', external: true },;
         { name: 'Address: 364 E Main St STE 1008, Middletown DE 19709', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709', description: 'Visit our office', external: true }
-      ];,
-}
+      ]}
   ];
-;
+
   return (;
     <>;
       <Helmet>;
@@ -237,12 +236,10 @@ export default function ComprehensiveSitemap() {};
                               </Link>;
                             )}
                           </motion.div>;
-                        );,
-})}
+                        )})}
                     </div>;
                   </motion.div>;
-                );,
-})}
+                )})}
             </div>;
           </div>;
         </section>;
@@ -274,5 +271,4 @@ export default function ComprehensiveSitemap() {};
         </section>;
       </div>;
     </>;
-  );,
-}
+  )}

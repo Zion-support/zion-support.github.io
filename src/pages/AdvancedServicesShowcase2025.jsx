@@ -1,8 +1,8 @@
 import React, { useState } from 'react';''';
 import { motion } from 'framer-motion';''';
 import { Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-;
-;
+
+
 import SEOHead from "../components/SEOHead.jsx";
 const AdvancedServicesShowcase2025 = () => {};
 };

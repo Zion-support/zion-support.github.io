@@ -7,7 +7,7 @@ export default function Page() {};
 interface User {};
 const [newUser, setNewUser] = useState({ name: '', email: ''});
   const [healthStatus, setHealthStatus] = useState<any>('Checking...');
-;
+
   // Check API health on component mount;
   useEffect(() => {};
 };,
@@ -74,7 +74,7 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
             <p className="text-red-700">{error}</p>;
           </div>;
         )}
-;
+
         {/* Users List */}";
         <div className="p-4 bg-gray-50 rounded-lg">";
           <div className="flex justify-between items-center mb-4">";
@@ -111,6 +111,5 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
           </div>;
         </div>;
       </div>;
-    </div>;) };
-;
+    </div>;) }
 export default ApiDemo}}}}}}}'"`;

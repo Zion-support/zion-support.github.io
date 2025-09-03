@@ -77,374 +77,301 @@ export default function AIServices() {};
 
     {};
       category: 'Energy AI'},;
-      category: 'Energy AI';,
-},;
+      category: 'Energy AI'},;
 
     {};
       category: 'Cybersecurity AI'},;
-      category: 'Cybersecurity AI';,
-},;
+      category: 'Cybersecurity AI'},;
 
     {};
       category: 'Autonomous AI'},;
-      category: 'Autonomous AI';,
-},;
+      category: 'Autonomous AI'},;
 
     {};
       category: 'Climate AI'},;
-      category: 'Climate AI';,
-},;
+      category: 'Climate AI'},;
 
     {};
       category: 'Quantum ML AI'},;
-      category: 'Quantum ML AI';,
-},;
+      category: 'Quantum ML AI'},;
 
     {};
       category: 'Synthetic Media AI'},;
-      category: 'Synthetic Media AI';,
-},;
+      category: 'Synthetic Media AI'},;
 
     {};
       category: 'BCI AI'},;
-      category: 'BCI AI';,
-},;
+      category: 'BCI AI'},;
 
     {};
       category: 'Drone Swarm AI'},;
-      category: 'Drone Swarm AI';,
-},;
+      category: 'Drone Swarm AI'},;
 
     {};
       category: 'Precision Medicine AI'},;
-      category: 'Precision Medicine AI';,
-},;
+      category: 'Precision Medicine AI'},;
 
     {};
       category: 'Space Management AI'},;
-      category: 'Space Management AI';,
-},;
+      category: 'Space Management AI'},;
 
     {};
       category: 'Fusion Energy AI'},;
-      category: 'Fusion Energy AI';,
-},;
+      category: 'Fusion Energy AI'},;
 
     {};
       category: 'Synthetic Biology AI'},;
-      category: 'Synthetic Biology AI';,
-},;
+      category: 'Synthetic Biology AI'},;
 
     {};
       category: 'Neuromorphic AI'},;
-      category: 'Neuromorphic AI';,
-},;
+      category: 'Neuromorphic AI'},;
 
     {};
       category: 'Marine AI'},;
-      category: 'Marine AI';,
-},;
+      category: 'Marine AI'},;
 
     {};
       category: 'Earth Digital Twin AI'},;
-      category: 'Earth Digital Twin AI';,
-},;
+      category: 'Earth Digital Twin AI'},;
 
     {};
       category: 'Consciousness AI'},;
-      category: 'Consciousness AI';,
-},;
+      category: 'Consciousness AI'},;
 
     {};
       category: 'Cybersecurity AI'},;
-      category: 'Cybersecurity AI';,
-},;
+      category: 'Cybersecurity AI'},;
 
     {};
       category: 'FinTech AI'},;
-      category: 'FinTech AI';,
-},;
+      category: 'FinTech AI'},;
 
     {};
 },;
     {};
       category: 'Autonomous Vehicle AI'},;
-      category: 'Autonomous Vehicle AI';,
-},;
+      category: 'Autonomous Vehicle AI'},;
 
     {};
       category: 'Energy AI'},;
-      category: 'Energy AI';,
-},;
+      category: 'Energy AI'},;
 
     {};
       category: 'AgTech AI'},;
-      category: 'AgTech AI';,
-},;
+      category: 'AgTech AI'},;
 
     {};
       category: 'Smart City AI'},;
-      category: 'Smart City AI';,
-},;
+      category: 'Smart City AI'},;
 
     {};
       category: 'Manufacturing AI'},;
-      category: 'Manufacturing AI';,
-},;
+      category: 'Manufacturing AI'},;
 
     {};
       category: 'Personal Health AI'},;
-      category: 'Personal Health AI';,
-},;
+      category: 'Personal Health AI'},;
 
     {};
       category: 'Predictive AI'},;
-      category: 'Predictive AI';,
-},;
+      category: 'Predictive AI'},;
 
     {};
       category: 'Voice AI'},;
-      category: 'Voice AI';,
-},;
+      category: 'Voice AI'},;
 
     {};
       category: 'Development AI'},;
-      category: 'Development AI';,
-},;
+      category: 'Development AI'},;
 
     {};
       category: 'Blockchain AI'},;
-      category: 'Blockchain AI';,
-},;
+      category: 'Blockchain AI'},;
 
     {};
       category: 'Customer AI'},;
-      category: 'Customer AI';,
-},;
+      category: 'Customer AI'},;
 
     {};
       category: 'MLOps AI'},;
-      category: 'MLOps AI';,
-},;
+      category: 'MLOps AI'},;
 
     {};
       category: 'Industrial AI'},;
-      category: 'Industrial AI';,
-},;
+      category: 'Industrial AI'},;
 
     {};
       category: 'NLP AI'},;
-      category: 'NLP AI';,
-},;
+      category: 'NLP AI'},;
 
     {};
       category: 'FinTech AI'},;
-      category: 'FinTech AI';,
-},;
+      category: 'FinTech AI'},;
 
     {};
       category: 'HealthTech AI'},;
-      category: 'HealthTech AI';,
-},;
+      category: 'HealthTech AI'},;
 
     {};
       category: 'Manufacturing AI'},;
-      category: 'Manufacturing AI';,
-},;
+      category: 'Manufacturing AI'},;
 
     {};
       category: 'Smart City AI'},;
-      category: 'Smart City AI';,
-},;
+      category: 'Smart City AI'},;
 
     {};
       category: 'AgTech AI'},;
-      category: 'AgTech AI';,
-},;
+      category: 'AgTech AI'},;
 
     {};
       category: 'Trading AI'},;
-      category: 'Trading AI';,
-},;
+      category: 'Trading AI'},;
 
     {};
       category: 'Cybersecurity AI'},;
-      category: 'Cybersecurity AI';,
-},;
+      category: 'Cybersecurity AI'},;
 
     {};
       category: 'Personalization AI'},;
-      category: 'Personalization AI';,
-},;
+      category: 'Personalization AI'},;
 
     {};
       category: 'Quantum AI'},;
-      category: 'Quantum AI';,
-},;
+      category: 'Quantum AI'},;
 
     {};
       category: 'Autonomous AI'},;
-      category: 'Autonomous AI';,
-},;
+      category: 'Autonomous AI'},;
 
     {};
       category: 'Space AI'},;
-      category: 'Space AI';,
-},;
+      category: 'Space AI'},;
 
     {};
       category: 'Metaverse AI'},;
-      category: 'Metaverse AI';,
-},;
+      category: 'Metaverse AI'},;
 
     {};
       category: 'Blockchain AI'},;
-      category: 'Blockchain AI';,
-},;
+      category: 'Blockchain AI'},;
 
     {};
       category: 'Digital Twin AI'},;
-      category: 'Digital Twin AI';,
-},;
+      category: 'Digital Twin AI'},;
 
     {};
       category: 'Edge AI'},;
-      category: 'Edge AI';,
-},;
+      category: 'Edge AI'},;
 
     {};
       category: 'Cybersecurity AI'},;
-      category: 'Cybersecurity AI';,
-},;
+      category: 'Cybersecurity AI'},;
 
     {};
       category: 'Healthcare AI'},;
-      category: 'Healthcare AI';,
-},;
+      category: 'Healthcare AI'},;
 
     {};
       category: 'Cybersecurity AI'},;
-      category: 'Cybersecurity AI';,
-},;
+      category: 'Cybersecurity AI'},;
 
     {};
 },;
     {};
       category: 'Legal AI'},;
-      category: 'Legal AI';,
-},;
+      category: 'Legal AI'},;
 
     {};
       category: 'Financial AI'},;
-      category: 'Financial AI';,
-},;
+      category: 'Financial AI'},;
 
     {};
       category: 'Environmental AI'},;
-      category: 'Environmental AI';,
-},;
+      category: 'Environmental AI'},;
 
     {};
       category: 'Autonomous Vehicle AI'},;
-      category: 'Autonomous Vehicle AI';,
-},;
+      category: 'Autonomous Vehicle AI'},;
 
     {};
       category: 'Satellite AI'},;
-      category: 'Satellite AI';,
-},;
+      category: 'Satellite AI'},;
 
     {};
       category: 'Energy AI'},;
-      category: 'Energy AI';,
-},;
+      category: 'Energy AI'},;
 
     {};
       category: 'Pharmaceutical AI'},;
-      category: 'Pharmaceutical AI';,
-},;
+      category: 'Pharmaceutical AI'},;
 
     {};
       category: 'Generative AI'},;
-      category: 'Generative AI';,
-},;
+      category: 'Generative AI'},;
 
     {};
       category: 'Autonomous Systems AI'},;
-      category: 'Autonomous Systems AI';,
-},;
+      category: 'Autonomous Systems AI'},;
 
     {};
       category: 'Financial AI'},;
-      category: 'Financial AI';,
-},;
+      category: 'Financial AI'},;
 
     {};
       category: 'Cybersecurity AI'},;
-      category: 'Cybersecurity AI';,
-},;
+      category: 'Cybersecurity AI'},;
 
     {};
       category: 'Smart City AI'},;
-      category: 'Smart City AI';,
-},;
+      category: 'Smart City AI'},;
 
     {};
 },;
     {};
       category: 'Content Moderation AI'},;
-      category: 'Content Moderation AI';,
-},;
+      category: 'Content Moderation AI'},;
 
     {};
       category: 'Energy AI'},;
-      category: 'Energy AI';,
-},;
+      category: 'Energy AI'},;
 
     {};
       category: 'Legal AI'},;
-      category: 'Legal AI';,
-},;
+      category: 'Legal AI'},;
 
     {};
       category: 'Agricultural AI'},;
-      category: 'Agricultural AI';,
-},;
+      category: 'Agricultural AI'},;
 
     {};
       category: 'Retail AI'},;
-      category: 'Retail AI';,
-},;
+      category: 'Retail AI'},;
 
     {};
       category: 'Manufacturing AI'},;
-      category: 'Manufacturing AI';,
-},;
+      category: 'Manufacturing AI'},;
 
     {};
       category: 'Educational AI'},;
-      category: 'Educational AI';,
-},;
+      category: 'Educational AI'},;
 
     {};
       category: 'Insurance AI'},;
-      category: 'Insurance AI';,
-},;
+      category: 'Insurance AI'},;
 
     {};
       category: 'Logistics AI'},;
-      category: 'Logistics AI';,
-},;
+      category: 'Logistics AI'},;
 
     {};
       category: 'HR AI'},;
-      category: 'HR AI';,
-},;
+      category: 'HR AI'},;
 
     {};
       category: 'Real Estate AI'},;
-      category: 'Real Estate AI';,
-},;
+      category: 'Real Estate AI'},;
 
     {};
       category: 'Environmental AI'},;
@@ -667,10 +594,9 @@ export default function AIServices() {};
           </div>;
         </div>;
       </section>;
-      ;
+
       <Footer />;
     </>;
   )}
-  );,
-}
-;
+  )}
+

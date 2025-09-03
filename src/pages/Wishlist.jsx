@@ -17,7 +17,7 @@ export {};
   const [favorites, setFavorites] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-;
+
   useEffect(() => {}
 ';
 '';
@@ -26,20 +26,17 @@ export {};
     const storedFavorites = localStorage.getItem('wishlist') || '[]';
     try {}
       const parsedFavorites = JSON.parse(storedFavorites);
-      setFavorites(parsedFavorites);,
-} catch (error) {}
+      setFavorites(parsedFavorites)} catch (error) {}
 ';
 '';
 ''';
       // console.error('Error parsing favorites:', error);
-      setFavorites([]);,
-}
+      setFavorites([])}
   }, [user, isAuthLoading, navigate]);
-;
+
   if (isAuthLoading || !user) {}
     // Show loading or null while auth check or redirect happens;
-    return null; // Or a loading spinner;,
-}
+    return null; // Or a loading spinner}
   const addToCart = item => {}
     const stored = safeStorage.getItem(getCartKey(user?.id));
     const cart = stored ? JSON.parse(stored) : [];
@@ -49,27 +46,21 @@ export {};
       price: item.price || 0,';
       quantity: 1});'';
     safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));''';
-    dispatch({ type: 'SET_ITEMS', payload: cart });,
-};
-;
+    dispatch({ type: 'SET_ITEMS', payload: cart })}
   const addToCart = item => {}
 ';
 '';
 ''';
     const cart = JSON.parse(localStorage.getItem('cart') || '[]');
     const existingItem = cart.find(cartItem => cartItem.id === item.id);
-;
+
     if (existingItem) {}
-      existingItem.quantity += 1;,
-} else {}
-      cart.push({ ...item, quantity: 1 });,
-}
+      existingItem.quantity += 1} else {}
+      cart.push({ ...item, quantity: 1 })}
 ';
     localStorage.setItem('cart', JSON.stringify(cart));';
     // You could add a toast notification here'';
-    alert('Item added to cart!');,
-};
-;
+    alert('Item added to cart!')}
   if (loading) {}
     return();
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 pt-24">"";
@@ -82,16 +73,11 @@ export {};
           </div>;
         </div>;
       </div>;
-    );,
-}
-;
+    )}
 
-export { WishlistPage };
-;
-export { WishlistPage };
-;
-export { WishlistPage };
-;
-export { WishlistPage };
-;
-export { WishlistPage };
+
+export { WishlistPage }
+export { WishlistPage }
+export { WishlistPage }
+export { WishlistPage }
+export { WishlistPage }

@@ -13,14 +13,12 @@ export {};
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">"";
         <div className="animate-pulse text-zion-purple text-lg">Loading...</div>;
       </div>;
-    );,
-}
+    )}
   // Redirect to login if not authenticated;
   if (!isAuthenticated) {}
 '";
 '"'";
-    return <Navigate to="/login" state={{ from: '/publish' }} replace />;,
-}";
+    return <Navigate to="/login" state={{ from: '/publish' }} replace />}";
   return ("";
     <div className="min-h-screen flex flex-col bg-zion-blue">";
       <div>Broken JSX</div>
@@ -41,16 +39,12 @@ export {};
           </div>;
         </div>;
       </main>;
-      ;
-    </div>)}
-;
 
-export { PublishProduct };
-;
-export { PublishProduct };
-;
-export { PublishProduct };
-;
-export { PublishProduct };
-;
-export { PublishProduct };
+    </div>)}
+
+
+export { PublishProduct }
+export { PublishProduct }
+export { PublishProduct }
+export { PublishProduct }
+export { PublishProduct }

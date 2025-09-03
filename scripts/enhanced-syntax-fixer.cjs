@@ -1,73 +1,62 @@
-#!/usr/bin/env node;
-/**;
+#!/usr/bin/env node
+/**
  * Enhanced Syntax Fixer;
  * Advanced syntax error detection and fixing;
- */;
-const fs = require("$1");
+ */
+const fs = require("fs");
 const path = require("path");
-class EnhancedSyntaxFixer {;
-  constructor() {;
+class EnhancedSyntaxFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixes = [];
-    this.errors = [],;,
-}
-;
-  log(message, type = "info") {;
+    this.errors = []}
+
+  log(message, type = "info") {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logEntry),;,
-}
-;
-  async fixAllSyntaxErrors() {;
-    try {;
+    console.log(logEntry)}
+
+  async fixAllSyntaxErrors() {
+    try {
       this.log("Starting enhanced syntax fixing...");
       // Find all source files;
       const sourceFiles = this.findSourceFiles();
-      for (const file of sourceFiles) {;
-        try {;
-          await this.fixFileSyntax(file),;,
-} catch (error) {;
+      for (const file of sourceFiles) {
+        try {
+          await this.fixFileSyntax(file)} catch (error) {
           this.log(`Failed to fix ${file}: ${error.message}`, "error");
-          this.errors.push({ file, error: error.message }),;,
-}
+          this.errors.push({ file, error: error.message })}
       }
-      ;
-      this.log("Enhanced syntax fixing completed", "success"),;,
-} catch (error) {;
-      this.log(`Enhanced syntax fixing failed: ${error.message}`, "error"),;,
-}
+      this.log("Enhanced syntax fixing completed", "success")} catch (error) {
+      this.log(`Enhanced syntax fixing failed: ${error.message}`, "error")}
   }
-;
-  findSourceFiles() {;
+
+  findSourceFiles() {
     const sourceDirs = ["src", "pages", "components"];
     const extensions = [".js", ".jsx", ".ts", ".tsx"];
     const files = [];
-    for (const dir of sourceDirs) {;
-      if (fs.existsSync(dir)) {;
-        this.findFilesRecursively(dir, extensions, files),;,
-}
+    for (const dir of sourceDirs) {
+      if (fs.existsSync(dir)) {
+        this.findFilesRecursively(dir, extensions, files)}
     }
-    return files,;,
-}
-;
-  findFilesRecursively(dir, extensions, files) {;
+    return files}
+
+  findFilesRecursively(dir, extensions, files) {
     const items = fs.readdirSync(dir);
-    for (const item of items) {;
+    for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {;
-        this.findFilesRecursively(fullPath, extensions, files),;,
-} else if (stat.isFile()) {;
+      if (stat.isDirectory()) {
+        this.findFilesRecursively(fullPath, extensions, files)} else if (stat.isFile()) {
         const ext = path.extname(item);
-        if (extensions.includes(ext)) {;
-          files.push(fullPath),;,
-}
+        if (extensions.includes(ext)) {
+          files.push(fullPath)}
       }
     }
   }
-;
-  async fixFileSyntax(filePath) {;
-    try {;
+
+  async fixFileSyntax(filePath) {
+    try {
       let content = fs.readFileSync(filePath, "utf8");
       let modified = false;
       // Fix common syntax errors;
@@ -75,7 +64,7 @@ class EnhancedSyntaxFixer {;
         // Fix missing semicolons;
         { pattern: /(\w+)\s*\n\s*(\w+)/g, replacement: "$1;\n$2" },;
         // Fix missing commas in objects;
-        { pattern: /(\w+):\s*([^,}]+)\s*\n\s*(\w+):/g, replacement: "$1: $2,\n$3:" },;
+        { pattern: /(\w+):\s*([^}]+)\s*\n\s*(\w+):/g, replacement: "$1: $2,\n$3:" },;
         // Fix missing commas in arrays;
         { pattern: /(\w+)\s*\n\s*(\w+)/g, replacement: "$1,\n$2" },;
         // Fix malformed JSX;
@@ -112,7 +101,7 @@ class EnhancedSyntaxFixer {;
         // Fix missing semicolons after variable declarations;
         { pattern: /(const|let|var)\s+(\w+)\s*=\s*([^]+)\s*$/gm, replacement: "$1 $2 = $3;" },;
         // Fix missing semicolons after object properties;
-        { pattern: /(\w+):\s*([^,}]+)\s*$/gm, replacement: "$1: $2," },;
+        { pattern: /(\w+):\s*([^}]+)\s*$/gm, replacement: "$1: $2," },;
         // Fix missing semicolons after array elements;
         { pattern: /(\w+)\s*$/gm, replacement: "$1," },;
         // Fix missing semicolons after function declarations;
@@ -132,60 +121,51 @@ class EnhancedSyntaxFixer {;
         // Fix missing semicolons after var declarations;
         { pattern: /var\s+(\w+)\s*=\s*([^]+)\s*$/gm, replacement: "var $1 = $2;" }
       ];
-      for (const fix of fixes) {;
+      for (const fix of fixes) {
         const newContent = content.replace(fix.pattern, fix.replacement);
-        if (newContent !== content) {;
+        if (newContent !== content) {
           content = newContent;
-          modified = true,;,
-}
+          modified = true}
       }
-;
-      if (modified) {;
+
+      if (modified) {
         fs.writeFileSync(filePath, content);
         this.log(`Fixed syntax errors in ${filePath}`, "success");
-        this.fixes.push(`fixed_${path.basename(filePath)}`),;,
-}
-    } catch (error) {;
+        this.fixes.push(`fixed_${path.basename(filePath)}`)}
+    } catch (error) {
       this.log(`Error fixing ${filePath}: ${error.message}`, "error");
-      this.errors.push({ file: filePath, error: error.message }),;,
-}
+      this.errors.push({ file: filePath, error: error.message })}
   }
-;
-  async generateReport() {;
-    const report = {;
+
+  async generateReport() {
+    const report = {
       timestamp: new Date().toISOString(),;
-      summary: {;
+      summary: {
         totalFixes: this.fixes.length,;
-        totalErrors: this.errors.length,;,
-},;
+        totalErrors: this.errors.length},;
       fixes: this.fixes,;
-      errors: this.errors,;,
-}
+      errors: this.errors}
     const reportPath = path.join(this.projectRoot, "enhanced-syntax-fixer-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Report saved to ${reportPath}`, "success");
-    return report,;,
-}
-;
-  async run() {;
+    return report}
+
+  async run() {
     this.log("Starting Enhanced Syntax Fixer");
-    try {;
+    try {
       await this.fixAllSyntaxErrors();
       const report = await this.generateReport();
       this.log("Enhanced Syntax Fixer completed");
       this.log(`Summary: ${report.summary.totalFixes} fixes applied, ${report.summary.totalErrors} errors found`);
-      return report,;,
-} catch (error) {;
+      return report} catch (error) {
       this.log(`Enhanced syntax fixer failed: ${error.message}`, "error");
-      throw error,;,
-}
+      throw error}
   }
 }
-;
+
 // Run the enhanced syntax fixer;
-if (require.main === module) {;
+if (require.main === module) {
   const fixer = new EnhancedSyntaxFixer();
-  fixer.run().catch(console.error),;,
-}
-;
+  fixer.run().catch(console.error)}
+
 module.exports = EnhancedSyntaxFixer}}}}}}}

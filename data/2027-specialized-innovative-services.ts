@@ -1,4 +1,4 @@
-export interface SpecializedInnovativeService2027 {;
+export interface SpecializedInnovativeService2027 {
   id: string;
   name: string;
   tagline: string;
@@ -24,7 +24,7 @@ export interface SpecializedInnovativeService2027 {;
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -37,7 +37,7 @@ export interface SpecializedInnovativeService2027 {;
   reviews: number}
 export const specializedInnovativeServices2027: SpecializedInnovativeService2027[] = [;
   // SPACE TECHNOLOGY SERVICES;
-  {;
+  {
     id: "satellite-ai-monitoring-platform",;
     name: "Satellite AI Monitoring Platform",;
     tagline: "Intelligent satellite data analysis for global insights",;
@@ -74,21 +74,19 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     competitors["Planet Labs", "Maxar Technologies", "Airbus Defence and Space"],;
     marketSize: "$12B satellite monitoring market",;
     growthRate: "35% annual growth",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Satellite data integration, AI model training, and monitoring system setup",;
     launchDate: "2027-02-15",;
     customers: 6,;
     rating: 4.9,;
-    reviews: 12;,;,
-},;
+    reviews: 12},;
   // AUGMENTED REALITY & VIRTUAL REALITY;
-  {;
+  {
     id: "ar-vr-enterprise-solutions-platform",;
     name: "AR/VR Enterprise Solutions Platform",;
     tagline: "Immersive technology for business transformation",;
@@ -125,21 +123,19 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     competitors["Microsoft HoloLens", "Magic Leap", "PTC Vuforia"],;
     marketSize: "$45B AR/VR market",;
     growthRate: "28% annual growth",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Hardware setup, content development, and user training",;
     launchDate: "2027-01-28",;
     customers: 45,;
     rating: 4.7,;
-    reviews: 89;,;,
-},;
+    reviews: 89},;
   // ROBOTICS & AUTOMATION;
-  {;
+  {
     id: "ai-powered-robotics-automation-platform",;
     name: "AI-Powered Robotics Automation Platform",;
     tagline: "Intelligent automation for manufacturing and logistics",;
@@ -176,21 +172,19 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     competitors["ABB Robotics", "KUKA Robotics", "FANUC"],;
     marketSize: "$75B robotics market",;
     growthRate: "20% annual growth",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Robot integration, AI model deployment, and workflow optimization",;
     launchDate: "2027-02-05",;
     customers: 23,;
     rating: 4.8,;
-    reviews: 34;,;,
-},;
+    reviews: 34},;
   // GREEN TECHNOLOGY & SUSTAINABILITY;
-  {;
+  {
     id: "sustainable-energy-optimization-platform",;
     name: "Sustainable Energy Optimization Platform",;
     tagline: "AI-powered energy management for sustainability",;
@@ -227,21 +221,19 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     competitors["Schneider Electric", "Siemens", "Honeywell"],;
     marketSize: "$35B energy management market",;
     growthRate: "18% annual growth",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Energy audit, system integration, and optimization strategy development",;
     launchDate: "2027-01-18",;
     customers: 78,;
     rating: 4.7,;
-    reviews: 145;,;,
-},;
+    reviews: 145},;
   // SUPPLY CHAIN & LOGISTICS;
-  {;
+  {
     id: "ai-powered-supply-chain-optimization",;
     name: "AI-Powered Supply Chain Optimization",;
     tagline: "Intelligent supply chain management and optimization",;
@@ -278,21 +270,19 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     competitors["SAP Ariba", "Oracle SCM", "JDA Software"],;
     marketSize: "$28B supply chain management market",;
     growthRate: "16% annual growth",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Supply chain assessment, system integration, and optimization strategy development",;
     launchDate: "2027-02-10",;
     customers: 56,;
     rating: 4.6,;
-    reviews: 98;,;,
-},;
+    reviews: 98},;
   // HUMAN RESOURCES & TALENT MANAGEMENT;
-  {;
+  {
     id: "ai-powered-hr-talent-platform",;
     name: "AI-Powered HR & Talent Platform",;
     tagline: "Intelligent human resources and talent management",;
@@ -329,21 +319,19 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     competitors["Workday", "BambooHR", "Zenefits"],;
     marketSize: "$22B HR technology market",;
     growthRate: "12% annual growth",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "HR process assessment, system integration, and user training",;
     launchDate: "2027-01-25",;
     customers: 134,;
     rating: 4.7,;
-    reviews: 267;,;,
-},;
+    reviews: 267},;
   // LEGAL TECHNOLOGY & COMPLIANCE;
-  {;
+  {
     id: "ai-powered-legal-tech-platform",;
     name: "AI-Powered Legal Technology Platform",;
     tagline: "Intelligent legal research and compliance management",;
@@ -380,21 +368,19 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     competitors["LexisNexis", "Westlaw", "Thomson Reuters"],;
     marketSize: "$18B legal technology market",;
     growthRate: "15% annual growth",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Legal process assessment, system integration, and user training",;
     launchDate: "2027-02-20",;
     customers: 45,;
     rating: 4.8,;
-    reviews: 78;,;,
-},;
+    reviews: 78},;
   // REAL ESTATE & PROPERTY TECHNOLOGY;
-  {;
+  {
     id: "ai-powered-proptech-platform",;
     name: "AI-Powered PropTech Platform",;
     tagline: "Intelligent real estate technology solutions",;
@@ -431,21 +417,19 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     competitors["Yardi", "RealPage", "AppFolio"],;
     marketSize: "$25B PropTech market",;
     growthRate: "20% annual growth",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Property assessment, system integration, and optimization strategy development",;
     launchDate: "2027-02-25",;
     customers: 67,;
     rating: 4.6,;
-    reviews: 123;,;,
-},;
+    reviews: 123},;
   // SPORTS TECHNOLOGY & ANALYTICS;
-  {;
+  {
     id: "ai-powered-sports-analytics-platform",;
     name: "AI-Powered Sports Analytics Platform",;
     tagline: "Intelligent sports performance and analytics",;
@@ -482,21 +466,19 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     competitors["Catapult Sports", "STATS Perform", "Second Spectrum"],;
     marketSize: "$15B sports analytics market",;
     growthRate: "25% annual growth",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "System setup, data integration, and performance optimization",;
     launchDate: "2027-03-01",;
     customers: 34,;
     rating: 4.7,;
-    reviews: 56;,;,
-},;
+    reviews: 56},;
   // ENTERTAINMENT & MEDIA TECHNOLOGY;
-  {;
+  {
     id: "ai-powered-entertainment-platform",;
     name: "AI-Powered Entertainment Platform",;
     tagline: "Intelligent content creation and distribution",;
@@ -533,12 +515,11 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     competitors["Netflix", "Spotify", "YouTube"],;
     marketSize: "$30B entertainment technology market",;
     growthRate: "18% annual growth",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Content analysis, recommendation engine setup, and performance optimization",;
     launchDate: "2027-02-28",;
@@ -547,18 +528,17 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     reviews: 167;
 ];
 // Helper functions for service management;
-export const getSpecializedServiceById = (id: string) => {;
+export const getSpecializedServiceById = (id: string) => {
   return specializedInnovativeServices2027.find(service => service.id === id)}
-export const getSpecializedServicesByCategory = (category: string) => {;
+export const getSpecializedServicesByCategory = (category: string) => {
   return specializedInnovativeServices2027.filter(service => service.category === category)}
-export const getSpecializedPopularServices = () => {;
-  return specializedInnovativeServices2027.filter(service => service.popular);,;,
-}
-export const getSpecializedServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
-  return specializedInnovativeServices2027.filter(service => {;
+export const getSpecializedPopularServices = () => {
+  return specializedInnovativeServices2027.filter(service => service.popular)}
+export const getSpecializedServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+  return specializedInnovativeServices2027.filter(service => {
     const price = parseInt(service.price.replace(/[^0-9]/g, ""));
     return price >= minPrice && price <= maxPrice})}
-export const searchSpecializedServices = (query: string) => {;
+export const searchSpecializedServices = (query: string) => {
   const lowercaseQuery = query.toLowerCase();
   return specializedInnovativeServices2027.filter(service = > ;
     service.name.toLowerCase().includes(lowercaseQuery) ||;

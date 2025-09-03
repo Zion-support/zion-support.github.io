@@ -61,8 +61,7 @@ export default function Page() {};
                 author: {};
                     name: `Provider ${index + 1}`,;
                     id: `author-${index + 1}`,;
-                    avatarUrl: null;,
-},;
+                    avatarUrl: null},;
                 images[`/placeholder.svg`],;
                 createdAt: new Date () .toISOString () ,;
                 rating: Math.floor(Math.random () * 5) + 1,;
@@ -85,7 +84,7 @@ export default function Page() {};
 }
                 }
             }) }
-    };
+    }
     return (<>;
 
       <div className="min - h-screen bg-zion -blue">;
@@ -115,16 +114,12 @@ export default function Page() {};
             </div>) }
         </div>;
       </div>;
-      ;
-    </>)}
-;
 
-export { AUTO_SERVICE_TITLES, CategoryDetail };
-;
-export { AUTO_SERVICE_TITLES, CategoryDetail };
-;
-export { AUTO_SERVICE_TITLES, CategoryDetail };
-;
-export { AUTO_SERVICE_TITLES, CategoryDetail };
-;
-export { AUTO_SERVICE_TITLES };
+    </>)}
+
+
+export { AUTO_SERVICE_TITLES, CategoryDetail }
+export { AUTO_SERVICE_TITLES, CategoryDetail }
+export { AUTO_SERVICE_TITLES, CategoryDetail }
+export { AUTO_SERVICE_TITLES, CategoryDetail }
+export { AUTO_SERVICE_TITLES }

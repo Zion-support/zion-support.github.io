@@ -9,7 +9,5 @@ describe(&apos;SearchComponent&apos, () => {};
 }
     // comment;
     render(<SearchComponent / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

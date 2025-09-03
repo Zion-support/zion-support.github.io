@@ -216,7 +216,7 @@ const Home: NextPage = () => {};
                 Comprehensive technology solutions designed to drive your business forward;
               </p>;
             </div>;
-            ;
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
               {};
                 <div key={index} className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">;
@@ -246,7 +246,7 @@ const Home: NextPage = () => {};
                 We deliver exceptional results through innovation, expertise, and dedication;
               </p>;
             </div>;
-            ;
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {};
                 <div key={index} className="text-center">;
@@ -281,12 +281,11 @@ const Home: NextPage = () => {};
           </div>;
         </section>;
       </main>;
-      ;
+
       <Footer />;
     </>;
-  );,
-});
-;
+  )});
+
 Home.displayName = 'Home';
-;
+
 export default Home;

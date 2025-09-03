@@ -288,16 +288,12 @@ const AIAutonomousEdgeSecurity = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default AIAutonomousEdgeSecurity;
-;
 
-export { AIAutonomousEdgeSecurity };
-;
-export { AIAutonomousEdgeSecurity };
-;
-export { AIAutonomousEdgeSecurity };
-;
-export { AIAutonomousEdgeSecurity };
-;
+
+export { AIAutonomousEdgeSecurity }
+export { AIAutonomousEdgeSecurity }
+export { AIAutonomousEdgeSecurity }
+export { AIAutonomousEdgeSecurity }
 export { AIAutonomousEdgeSecurity };)

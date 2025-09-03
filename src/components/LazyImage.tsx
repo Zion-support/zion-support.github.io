@@ -38,7 +38,7 @@ const LazyImage: React.FC<LazyImageProps> = ({};
           placeholder="{placeholder}
           blurDataURL="{blurDataURL}" />;
       )}
-;
+
     </div>;
   )}
       },;
@@ -63,7 +63,6 @@ const LazyImage: React.FC<LazyImageProps> = ({};
         />;
       )}
     </div>;
-  );,;,
-}
+  )}
 ";
 export default LazyImage;"

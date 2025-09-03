@@ -90,6 +90,5 @@
           </motion.div>;
         </div>;
       </div>;
-    </section>;) };
-;
+    </section>;) }
 export default NewsletterSection}}}'";

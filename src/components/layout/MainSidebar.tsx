@@ -77,7 +77,7 @@ export default function Page() {};
     {};
 }
   ];
-;
+
     return ()      <div key={item.name} className="mb-1">;
         {};
                 <span>{item.name}</span>;
@@ -104,8 +104,7 @@ export default function Page() {};
           </Link>;
         )}
       </div>;
-    )};
-;
+    )}
   return ();
     <>;
       {/* Mobile menu button */}
@@ -155,7 +154,7 @@ export default function Page() {};
       {};
       )}
     </>;
-  )};
+  )}
             </div>;
           </div>;
         </div>;

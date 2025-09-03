@@ -75,8 +75,7 @@ const ComprehensiveServicesOverview2025 = () => {};
 ';
                     selectedCategory === category'';
                       ? 'bg-blue-500/20 border-blue-400 text-blue-400'''`;
-                      : 'bg-white/10 border-white/20 hover:border-blue-400 hover:text-blue-400'``;,
-}`}">"";
+                      : 'bg-white/10 border-white/20 hover:border-blue-400 hover:text-blue-400'``}`}">"";
                   <div className="text-2xl mb-1">;
                     {getCategoryIcon(category)}";
                   </div>"";
@@ -448,8 +447,7 @@ const ComprehensiveServicesOverview2025 = () => {};
                       </div>;
                     </div>;
                   </>;
-                );,
-})()}
+                )})()}
             </div>;
           </div>;
         </div>;
@@ -477,16 +475,12 @@ const ComprehensiveServicesOverview2025 = () => {};
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default ComprehensiveServicesOverview2025;
-;
 
-export { ComprehensiveServicesOverview2025 };
-;
-export { ComprehensiveServicesOverview2025 };
-;
-export { ComprehensiveServicesOverview2025 };
-;
-export { ComprehensiveServicesOverview2025 };
-;
-export { ComprehensiveServicesOverview2025 };
+
+export { ComprehensiveServicesOverview2025 }
+export { ComprehensiveServicesOverview2025 }
+export { ComprehensiveServicesOverview2025 }
+export { ComprehensiveServicesOverview2025 }
+export { ComprehensiveServicesOverview2025 }

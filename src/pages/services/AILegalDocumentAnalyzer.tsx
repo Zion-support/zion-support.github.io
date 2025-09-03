@@ -10,13 +10,13 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {};
     {};
 }
   ];
-;
+
   const competitors = [;
     { name: "Kira Systems", price: "$2,500+/month", rating: 4.2 },;
     { name: "Luminance", price: "$3,000+/month", rating: 4.0 },;
     { name: "ContractPodAi", price: "$2,800+/month", rating: 4.1 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">;
       {/* Hero Section */}
@@ -42,7 +42,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {};
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
               Advanced AI platform that automatically analyzes legal documents, contracts, and agreements to identify risks, compliance issues, and optimization opportunities.;
             </p>;
-            ;
+
             {/* Key Metrics */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">;
               <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 p-6 rounded-xl border border-cyan-500/30">;
@@ -101,7 +101,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {};
           {/* Overview Tab */}
           {};
           )}
-;
+
           {/* Features Tab */}
           {};
                     <h3 className="text-lg font-semibold mb-2">{feature}</h3>;
@@ -144,11 +144,10 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {};
               </div>;
             </motion.div>;
           )}
-;
+
           {/* Pricing Tab */}
           {};
                     )}
-                    ;
                     <div className="text-center mb-6">;
                       <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>;
                       <div className="text-4xl font-bold text-cyan-400 mb-2">;
@@ -157,7 +156,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {};
                       </div>;
                       <p className="text-gray-300">{plan.description}</p>;
                     </div>;
-                    ;
+
                     <ul className="space-y-3 mb-8">;
                       {};
                         <li key={featureIndex} className="flex items-center gap-3">;
@@ -166,7 +165,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {};
                         </li>;
                       ))}
                     </ul>;
-                    ;
+
                     <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">;
                       Get Started;
                     </button>;
@@ -182,7 +181,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {};
               </div>;
             </motion.div>;
           )}
-;
+
           {/* Competitors Tab */}
           {};
                   <div key={index} className="bg-gray-800/50 p-6 rounded-xl border border-gray-600">;
@@ -220,24 +219,18 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {};
               </div>;
             </motion.div>;
           )}
-;
+
           {/* Contact Tab */}
           {};
           )}
         </div>;
       </div>;
     </div>;
-  );,
-};
-;
+  )}
 export default AILegalDocumentAnalyzer;
-;
-export { AILegalDocumentAnalyzer };
-;
-export { AILegalDocumentAnalyzer };
-;
-export { AILegalDocumentAnalyzer };
-;
-export { AILegalDocumentAnalyzer };
-;
-export { AILegalDocumentAnalyzer };
+
+export { AILegalDocumentAnalyzer }
+export { AILegalDocumentAnalyzer }
+export { AILegalDocumentAnalyzer }
+export { AILegalDocumentAnalyzer }
+export { AILegalDocumentAnalyzer }

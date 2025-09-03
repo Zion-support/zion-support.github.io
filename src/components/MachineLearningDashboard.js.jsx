@@ -16,22 +16,19 @@ export const MachineLearningDashboard = ({ className = '' }) => {};
 ''';
         name: '',''';
         type: 'classification',''';
-        framework: 'tensorflow';,
-});
+        framework: 'tensorflow'});
     const [predictionForm, setPredictionForm] = useState({}
 ';
 '';
 ''';
         modelId: '',''';
-        input: '';,
-});
+        input: ''});
     const handleCreateModel = useCallback(() => {}
         if(newModelForm.name.trim()) {}
             createModel({}
                 name: newModelForm.name,;
                 type: newModelForm.type,;
-                framework: newModelForm.framework;,
-});';
+                framework: newModelForm.framework});';
             setNewModelForm({ name: '', type: 'classification', framework: 'tensorflow' });
             setShowCreateModel(false);';
             trackEvent('ml',dashboard',model_created')}
@@ -43,7 +40,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {};
   optimizer: 'adam';
 
         if(predictionForm.modelId && predictionForm.input.trim()) {}
-;
+
             try {}";
                 const input = JSON.parse(predictionForm.input);
                 const result = await makePrediction(predictionForm.modelId, input)";
@@ -53,13 +50,10 @@ export const MachineLearningDashboard = ({ className = '' }) => {};
             catch (error) {}
 ";
 """;
-                // comment;,
-}
-;,
-}, [predictionForm, makePrediction, trackEvent]);,
-}
+                // comment}
+}, [predictionForm, makePrediction, trackEvent])}
     const handleExportModel = useCallback((modelId) => {}
-;
+
         try {}";
             const modelData = exportModel(modelId);
             navigator.clipboard.writeText(modelData)";
@@ -67,19 +61,16 @@ export const MachineLearningDashboard = ({ className = '' }) => {};
         catch (error) {}
 ";
 """;
-            // comment;,
-}, [exportModel, trackEvent]);,
-}
+            // comment}, [exportModel, trackEvent])}
     const handleImportModel = useCallback((event) => {}
-;
+
         const file = event.target.files?.[0];
         if(file) {}
-;
-            const reader = new FileReader();,
-}            reader.onload = (e) => {}
-;
+
+            const reader = new FileReader()}            reader.onload = (e) => {}
+
                 try {}
-;
+
                     const modelData = e.target?.result,";
 importModel(modelData);
                     setShowImportModel(false)";
@@ -87,13 +78,10 @@ importModel(modelData);
                 catch (error) {}
 ";
 """;
-                    // comment;,
-}
-;
+                    // comment}
+
             reader.readAsText(file) }
-;,
-}, [importModel, trackEvent]);,
-}
+}, [importModel, trackEvent])}
     const getStatusColor = (status) => {}";
         switch (status) {}
 ";
@@ -103,9 +91,8 @@ importModel(modelData);
             case "training": return "text-yellow-600 bg-yellow-100"";
             case "archived": return "text-gray-600 bg-gray-100"";
             default: return "text-gray-600 bg-gray-100"}
-;,
 }
-;
+
     const getJobStatusColor = (status) => {}";
         switch (status) {}
 ";
@@ -115,9 +102,8 @@ importModel(modelData);
             case "failed": return "text-red-600 bg-red-100"";
             case "pending": return "text-yellow-600 bg-yellow-100"";
             default: return "text-gray-600 bg-gray-100"}
-;,
 }
-;
+
     const getModelTypeIcon = (type) => {}";
         switch(type) {}
 "";
@@ -128,8 +114,7 @@ importModel(modelData);
             case "nlp": return <Brain className="w - 4 h-4"/">",";
             case "computer_vision": return <Eye className="w - 4 h-4"/">",";
             case "recommendation": return <Zap className="w - 4 h-4"/">",;
-            default: return <Brain className="w-4 h-4"/">}";";,
-}
+            default: return <Brain className="w-4 h-4"/">}";"}
     return (";
     <div className = "{"bg-white" dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}"}">"";
 """";
@@ -140,7 +125,6 @@ importModel(modelData);
             case "computer_vision": return <Eye className="w-4 h-4"/">";
             case "recommendation": return <Zap className="w-4 h-4"/">";
             default: return <Brain className="w-4 h-4"/">}
-;,
 }";
     return (";
     <div className="{"bg-white" dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}"}">"";
@@ -284,7 +268,7 @@ importModel(modelData);
                         </span>;
                       </div>;
                     </div>) ) }
-;
+
                 </div>";
               </div>;
             </motion.div>)}""";
@@ -301,7 +285,7 @@ importModel(modelData);
                 </div>;
               </div>,;
               {/* comment */}
-;
+
               <AnimatePresence>;
                 {};
 """"}} className="bg-gray-50 dark: bg-gray-800 p-4 rounded-lg">"";
@@ -338,10 +322,10 @@ importModel(modelData);
                       </button>;
                     </div>,;
                   </motion.div>) }
-;
+
               </AnimatePresence>;
               {/* comment */}
-;
+
               <AnimatePresence>;
                 {};
 """"}} className="bg-gray-50 dark: bg-gray-800 p-4 rounded-lg">"";
@@ -414,7 +398,7 @@ importModel(modelData);
                       {model.status === "deployed" && (<button onClick="{()" ="> handleArchiveModel(model.id)} className="w-full px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-lg hover: bg-red-700">";
                           Archive,;
                         </button>) }
-;
+
                     </div>;
                   </div>) ) }";
               </div>;
@@ -470,7 +454,7 @@ Started: {job.startTime.toLocaleString()}";
                             <p className="text-sm text-gray-500 dark: text-gray-400">Latest Loss</p>"";
                             <p className="font-medium text-gray-900 dark:text-white">"",;
                               {job.metrics.loss[job.metrics.loss.length - 1]?.toFixed(4) || "N/A"}
-;
+
                             </p>";
                           </div>;
                         </div>)}""";
@@ -520,7 +504,7 @@ Started: {job.startTime.toLocaleString()}";
               {/* comment */}""";
               <div className="bg-gray-50 dark: bg-gray-800 p-4 rounded-lg">"";
                 <h4 className="font-medium text-gray-900 dark:text-white mb-3">Recent Predictions</h4>""",;
-                <div className="space-y-3">",,;
+                <div className="space-y-3">",;
                   {predictions.slice(0, 5).map((prediction) => {}
 "";
                 const model = models.find(m => m.id == = prediction.modelId)",;
@@ -559,7 +543,7 @@ Started: {job.startTime.toLocaleString()}";
                   """;
                   {};
                     </div>)}
-;
+
                 </div>";
               </div>;
             </motion.div>)}""";
@@ -605,11 +589,11 @@ Started: {job.startTime.toLocaleString()}";
                       <span className="text-sm text-gray-600 dark: text-gray-400">Total Predictions</span>"";
                       <span className="font-medium text-gray-900 dark:text-white">,;
                         {metrics.totalPredictions}
-;
+
                       </span>;
                     </div>;
             </motion.div>) }
-;
+
         </AnimatePresence>";
       </div>"";
     </div>)}""""";

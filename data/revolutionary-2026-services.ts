@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface Revolutionary2026Service {;
+export interface Revolutionary2026Service {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface Revolutionary2026Service {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface Revolutionary2026Service {;
   rating: number;
 export const revolutionary2026Services: Revolutionary2026Service[] = [;
   // AI-Powered Business Intelligence & Analytics;
-  {;
+  {
     id: "ai-business-intelligence-suite-2026",;
     name: "AI Business Intelligence Suite 2026",;
     tagline: "Next-generation AI-powered business analytics and decision intelligence",;
@@ -76,21 +76,19 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     marketSize: "$29.5B market",;
     growthRate: "220% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full-stack SaaS platform with real-time data processing, AI model training pipeline, customizable dashboards, and enterprise SSO integration.",;
     launchDate: "2026-01-15",;
     customers: 1500,;
     rating: 4.9,;
-    reviews: 890;,;,
-},;
+    reviews: 890},;
   // AI-Powered Legal Document Automation;
-  {;
+  {
     id: "ai-legal-document-automation-2026",;
     name: "AI Legal Document Automation 2026",;
     tagline: "Intelligent legal document creation, review, and compliance automation",;
@@ -128,21 +126,19 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     marketSize: "$15.8B market",;
     growthRate: "180% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade legal automation platform with AI-powered document analysis, compliance monitoring, and secure document management.",;
     launchDate: "2026-02-01",;
     customers: 800,;
     rating: 4.8,;
-    reviews: 450;,;,
-},;
+    reviews: 450},;
   // AI Healthcare Diagnostics Platform;
-  {;
+  {
     id: "ai-healthcare-diagnostics-2026",;
     name: "AI Healthcare Diagnostics Platform 2026",;
     tagline: "Revolutionary AI-powered medical diagnostics and patient care optimization",;
@@ -180,21 +176,19 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     marketSize: "$45.2B market",;
     growthRate: "250% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "HIPAA-compliant healthcare AI platform with advanced medical imaging analysis, secure patient data handling, and clinical decision support.",;
     launchDate: "2026-01-20",;
     customers: 300,;
     rating: 4.9,;
-    reviews: 180;,;,
-},;
+    reviews: 180},;
   // AI Metaverse Development Platform;
-  {;
+  {
     id: "ai-metaverse-development-platform-2026",;
     name: "AI Metaverse Development Platform 2026",;
     tagline: "Create immersive metaverse experiences with AI-powered development tools",;
@@ -232,21 +226,19 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     marketSize: "$74.4B market",;
     growthRate: "300% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full-stack metaverse development platform with AI-powered tools, 3D rendering engine, and cross-platform deployment capabilities.",;
     launchDate: "2026-02-15",;
     customers: 1200,;
     rating: 4.7,;
-    reviews: 680;,;,
-},;
+    reviews: 680},;
   // Quantum-Secure Communication Platform;
-  {;
+  {
     id: "quantum-secure-communication-2026",;
     name: "Quantum-Secure Communication Platform 2026",;
     tagline: "Unbreakable encryption for the quantum era",;
@@ -284,21 +276,19 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     marketSize: "$12.8B market",;
     growthRate: "280% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade quantum security platform with hardware integration, compliance certifications, and comprehensive security auditing.",;
     launchDate: "2026-01-10",;
     customers: 200,;
     rating: 4.9,;
-    reviews: 120;,;,
-},;
+    reviews: 120},;
   // Quantum Financial Trading Platform;
-  {;
+  {
     id: "quantum-financial-trading-2026",;
     name: "Quantum Financial Trading Platform 2026",;
     tagline: "Quantum computing advantage for financial market trading",;
@@ -336,21 +326,19 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     marketSize: "$28.9B market",;
     growthRate: "320% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade quantum trading platform with real-time market data, advanced analytics, and comprehensive compliance features.",;
     launchDate: "2026-01-25",;
     customers: 150,;
     rating: 4.8,;
-    reviews: 90;,;,
-},;
+    reviews: 90},;
   // Neuromorphic Computing Platform;
-  {;
+  {
     id: "neuromorphic-computing-platform-2026",;
     name: "Neuromorphic Computing Platform 2026",;
     tagline: "Brain-inspired computing for next-generation AI applications",;
@@ -388,21 +376,19 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     marketSize: "$8.2B market",;
     growthRate: "350% annual growth",;
     variant: "emerging-tech",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Research-grade neuromorphic computing platform with hardware integration, development tools, and comprehensive documentation.",;
     launchDate: "2026-02-01",;
     customers: 80,;
     rating: 4.7,;
-    reviews: 45;,;,
-},;
+    reviews: 45},;
   // DNA Computing Platform;
-  {;
+  {
     id: "dna-computing-platform-2026",;
     name: "DNA Computing Platform 2026",;
     tagline: "Molecular computing for complex problem solving",;
@@ -440,21 +426,19 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     marketSize: "$15.6B market",;
     growthRate: "400% annual growth",;
     variant: "emerging-tech",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Research-grade DNA computing platform with laboratory integration, bioinformatics tools, and comprehensive research support.",;
     launchDate: "2026-02-10",;
     customers: 50,;
     rating: 4.8,;
-    reviews: 30;,;,
-},;
+    reviews: 30},;
   // Photonic Computing Platform;
-  {;
+  {
     id: "photonic-computing-platform-2026",;
     name: "Photonic Computing Platform 2026",;
     tagline: "Light-speed computing with photonic processors",;
@@ -492,21 +476,19 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     marketSize: "$12.4B market",;
     growthRate: "380% annual growth",;
     variant: "emerging-tech",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade photonic computing platform with optical hardware integration, development tools, and performance optimization.",;
     launchDate: "2026-02-20",;
     customers: 120,;
     rating: 4.7,;
-    reviews: 75;,;,
-},;
+    reviews: 75},;
   // Holographic Display Platform;
-  {;
+  {
     id: "holographic-display-platform-2026",;
     name: "Holographic Display Platform 2026",;
     tagline: "Next-generation 3D holographic visualization and interaction",;
@@ -544,21 +526,19 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     marketSize: "$18.7B market",;
     growthRate: "320% annual growth",;
     variant: "emerging-tech",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full-stack holographic platform with 3D content creation tools, real-time rendering, and multi-device compatibility.",;
     launchDate: "2026-02-25",;
     customers: 800,;
     rating: 4.8,;
-    reviews: 420;,;,
-},;
+    reviews: 420},;
   // Autonomous Supply Chain Optimization;
-  {;
+  {
     id: "autonomous-supply-chain-optimization-2026",;
     name: "Autonomous Supply Chain Optimization 2026",;
     tagline: "AI-powered supply chain management and optimization",;
@@ -596,21 +576,19 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     marketSize: "$22.8B market",;
     growthRate: "200% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade supply chain platform with AI optimization, real-time monitoring, and comprehensive analytics.",;
     launchDate: "2026-01-30",;
     customers: 950,;
     rating: 4.7,;
-    reviews: 580;,;,
-},;
+    reviews: 580},;
   // Autonomous Manufacturing AI;
-  {;
+  {
     id: "autonomous-manufacturing-ai-2026",;
     name: "Autonomous Manufacturing AI 2026",;
     tagline: "AI-powered manufacturing automation and optimization",;
@@ -648,21 +626,19 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     marketSize: "$35.6B market",;
     growthRate: "280% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Industrial-grade manufacturing AI platform with IoT integration, robotic automation, and comprehensive monitoring.",;
     launchDate: "2026-02-05",;
     customers: 650,;
     rating: 4.8,;
-    reviews: 380;,;,
-},;
+    reviews: 380},;
   // Swarm Robotics Platform;
-  {;
+  {
     id: "swarm-robotics-platform-2026",;
     name: "Swarm Robotics Platform 2026",;
     tagline: "Coordinated multi-robot systems for complex tasks",;
@@ -700,21 +676,19 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     marketSize: "$18.9B market",;
     growthRate: "320% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade swarm robotics platform with robot integration, simulation tools, and comprehensive coordination algorithms.",;
     launchDate: "2026-02-15",;
     customers: 180,;
     rating: 4.7,;
-    reviews: 95;,;,
-},;
+    reviews: 95},;
   // Quantum Space Mining Platform;
-  {;
+  {
     id: "quantum-space-mining-platform-2026",;
     name: "Quantum Space Mining Platform 2026",;
     tagline: "Revolutionary space resource exploration and mining",;
@@ -752,12 +726,11 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     marketSize: "$3.8B market",;
     growthRate: "450% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Space-grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.",;
     launchDate: "2026-03-01',;

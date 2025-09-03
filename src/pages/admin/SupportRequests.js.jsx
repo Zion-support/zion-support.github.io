@@ -136,22 +136,17 @@ export {};
       !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&;
       !request.id.toLowerCase().includes(searchQuery.toLowerCase());
     ) {}
-      return false;,
-}
+      return false}
     // Apply status filter;
     if (statusFilter && request.status !== statusFilter) {}
-      return false;,
-}
+      return false}
     // Apply priority filter;
     if (priorityFilter && request.priority !== priorityFilter) {}
-      return false;,
-}
+      return false}
     // Apply category filter;
     if (categoryFilter && request.category !== categoryFilter) {}
-      return false;,
-}
-    return true;';,
-});'';
+      return false}
+    return true;'});'';
   // Count by status for the summary dashboard''';
   const openCount = MOCK_SUPPORT_REQUESTS.filter('''';
     r => r.status === 'open''';
@@ -172,8 +167,7 @@ export {};
     setSearchQuery('');
     setStatusFilter(null);
     setPriorityFilter(null);
-    setCategoryFilter(null);,
-};
+    setCategoryFilter(null)}
   return();
     (;
       <div>Broken JSX</div>
@@ -393,14 +387,10 @@ export {};
           </TabsContent>;
         </Tabs>;
       </div>)}
-;
 
-export { MOCK_SUPPORT_REQUESTS, SupportRequests };
-;
-export { MOCK_SUPPORT_REQUESTS, SupportRequests };
-;
-export { MOCK_SUPPORT_REQUESTS, SupportRequests };
-;
-export { MOCK_SUPPORT_REQUESTS, SupportRequests };
-;
-export { MOCK_SUPPORT_REQUESTS, SupportRequests };
+
+export { MOCK_SUPPORT_REQUESTS, SupportRequests }
+export { MOCK_SUPPORT_REQUESTS, SupportRequests }
+export { MOCK_SUPPORT_REQUESTS, SupportRequests }
+export { MOCK_SUPPORT_REQUESTS, SupportRequests }
+export { MOCK_SUPPORT_REQUESTS, SupportRequests }

@@ -8,7 +8,7 @@ const Tutorials: React.FC = () => {};
     { id: 'advanced', name: 'Advanced', icon: '⚡' },;
     { id: 'best-practices', name: 'Best Practices', icon: '✅' },;
   ];
-;
+
   const tutorials = [;
     {};
 },;
@@ -27,11 +27,11 @@ const Tutorials: React.FC = () => {};
     {};
 },;
   ];
-;
+
   const filteredTutorials = tutorials.filter(tutorial => ;
     activeCategory === 'all' || tutorial.category === activeCategory;
   );
-;
+
   return (;
     <>;
       <Head>;
@@ -39,7 +39,7 @@ const Tutorials: React.FC = () => {};
         <meta name="description" content="Step-by-step tutorials for AI integration and marketplace success" />;
         <meta name="keywords" content="tutorials, step-by-step, AI, integration, learning" />;
       </Head>;
-      ;
+
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">;
         {/* Header */}
         <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30">;
@@ -113,7 +113,7 @@ const Tutorials: React.FC = () => {};
               {filteredTutorials.length} tutorials found;
             </span>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {};
               <article key={tutorial.id} className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 hover:border-blue-400 transition-colors group">;
@@ -124,20 +124,20 @@ const Tutorials: React.FC = () => {};
                   </span>;
                   <span className="text-xs text-gray-400">{tutorial.duration}</span>;
                 </div>;
-                ;
+
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors cursor-pointer">;
                   {tutorial.title}
                 </h3>;
-                ;
+
                 <p className="text-gray-300 text-sm mb-4">{tutorial.description}</p>;
-                ;
+
                 <div className="flex flex-wrap gap-2 mb-4">;
                   {};
                       #{tag}
                     </span>;
                   ))}
                 </div>;
-                ;
+
                 <div className="flex items-center justify-between">;
                   <span className="text-sm text-gray-400">{tutorial.steps} steps</span>;
                   <button className="text-blue-400 hover:text-blue-300 text-sm font-medium group-hover:translate-x-1 transition-transform">;
@@ -212,7 +212,7 @@ const Tutorials: React.FC = () => {};
                 Start Practice Project;
               </button>;
             </div>;
-            ;
+
             <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">;
               <div className="text-4xl mb-4">🏆</div>;
               <h3 className="text-xl font-semibold text-white mb-4">Earn Certificates</h3>;
@@ -241,7 +241,5 @@ const Tutorials: React.FC = () => {};
         </footer>;
       </div>;
     </>;
-  );,
-};
-;
+  )}
 export default Tutorials;

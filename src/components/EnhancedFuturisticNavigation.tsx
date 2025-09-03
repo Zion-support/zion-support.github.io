@@ -166,9 +166,9 @@ export default function Page() {};
             </motion.div>) }
         </AnimatePresence>;
       </nav>;
-;
+
       {/* Spacer for fixed navigation */};";
       <div className="h-20"></div>;
     </>;
-  )};
+  )}
 '"`;

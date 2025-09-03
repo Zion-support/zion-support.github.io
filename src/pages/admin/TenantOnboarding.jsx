@@ -30,8 +30,7 @@ export {};
         comp_size: ","";
         industry: ","";
         custom_domain: ",;
-        is_co_branded: true;,
-});";
+        is_co_branded: true});";
     // Check if user has admin role"";
     const isAdmin = user?.role === "admin";
     if (!isAdmin) {}
@@ -40,7 +39,7 @@ export {};
         return <Navigate to="/unauthorized"/>}
     const handleInputChange = (e) => {}
         const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }))};
+        setFormData(prev => ({ ...prev, [name]: value }))}
     const handleSubmit = async (e) => {}
         e.preventDefault();
         setIsSubmitting(true);

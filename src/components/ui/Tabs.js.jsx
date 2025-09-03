@@ -1,7 +1,7 @@
 var __rest =;
   (this && this.__rest) ||;
   function (s, e) {}
-    var t = {};
+    var t = {}
     for (var p in s);
       if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) <div>Broken JSX</div>
 const Tabs = React.forwardRef((_a, ref) => {}
@@ -10,8 +10,7 @@ const Tabs = React.forwardRef((_a, ref) => {}
   return _jsx('';
     'div',';
     Object.assign({ ref: ref, className: cn('', className) }, props);
-  );,
-});';
+  )});';
 Tabs.displayName = 'Tabs';
 const TabsList = React.forwardRef((_a, ref) => {}
   var { className } = _a,';
@@ -26,8 +25,7 @@ const TabsList = React.forwardRef((_a, ref) => {}
         )},;
       props;
     );
-  );,
-});';
+  )});';
 TabsList.displayName = 'TabsList';
 const TabsTrigger = React.forwardRef((_a, ref) => {}
   var { className } = _a,';
@@ -42,8 +40,7 @@ const TabsTrigger = React.forwardRef((_a, ref) => {}
         )},;
       props;
     );
-  );,
-});';
+  )});';
 TabsTrigger.displayName = 'TabsTrigger';
 const TabsContent = React.forwardRef((_a, ref) => {}
   var { className } = _a,';
@@ -58,18 +55,11 @@ const TabsContent = React.forwardRef((_a, ref) => {}
         )},;
       props;
     );
-  );,
-});';
+  )});';
 TabsContent.displayName = 'TabsContent';
-export { Tabs, TabsList, TabsTrigger, TabsContent };
-;
-
-export { Tabs, TabsList, TabsTrigger, TabsContent };
-;
-export { Tabs, TabsList, TabsTrigger, TabsContent };
-;
-export { Tabs, TabsList, TabsTrigger, TabsContent };
-;
-export { Tabs, TabsList, TabsTrigger, TabsContent };
-;
-export { Tabs, TabsList, TabsTrigger, TabsContent };
+export { Tabs, TabsList, TabsTrigger, TabsContent }
+export { Tabs, TabsList, TabsTrigger, TabsContent }
+export { Tabs, TabsList, TabsTrigger, TabsContent }
+export { Tabs, TabsList, TabsTrigger, TabsContent }
+export { Tabs, TabsList, TabsTrigger, TabsContent }
+export { Tabs, TabsList, TabsTrigger, TabsContent }

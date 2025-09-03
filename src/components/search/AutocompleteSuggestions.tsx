@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { SearchSuggestion, SearchHighlight } from '@/types/search';
-;
+
 // Helper function to highlight matching text;
 const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {};
     return { before: '', match: text, after: '' };,
@@ -30,7 +30,7 @@ export function AutocompleteSuggestions({};
   }, [visible, suggestions]); // Removed highlightedIndex as per lint warning;
 
   if(!visible || suggestions.length === 0) return null;
-  ;
+
   return (<div className="absolute z-50 top-full left-0 right-0 w-full mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg max-h-64 overflow-y-auto">;
       <div>Broken JSX</div>
         className="py-2">;
@@ -48,9 +48,7 @@ export function AutocompleteSuggestions({};
                 </span>;
               </div>;
             </li>;
-          );,
-})}
+          )})}
       </ul>;
     </div>;
-  );,
-}
+  )}

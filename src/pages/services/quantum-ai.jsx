@@ -46,7 +46,7 @@ const QuantumAIServices = () => {};
                 Learn More →;
               </Link>;
             </div>;
-            ;
+
             <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-blue-500/50 transition-all duration-300">;
               <div className="w-16 h-16 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-6">;
                 <span className="text-3xl">🔬</span>;
@@ -60,7 +60,7 @@ const QuantumAIServices = () => {};
                 Learn More →;
               </Link>;
             </div>;
-            ;
+
             <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-blue-500/50 transition-all duration-300">;
               <div className="w-16 h-16 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6">;
                 <span className="text-3xl">⚡</span>;
@@ -106,7 +106,7 @@ const QuantumAIServices = () => {};
                 </li>;
               </ul>;
             </div>;
-            ;
+
             <div>;
               <h3 className="text-2xl font-semibold mb-6 text-cyan-400">Business Applications</h3>;
               <ul className="space-y-4 text-gray-300">;
@@ -152,17 +152,12 @@ const QuantumAIServices = () => {};
           </div>;
         </div>;
       </div>;
-    </div>);,
-};
+    </div>)}
 export default QuantumAIServices;
-;
 
-export { QuantumAIServices };
-;
-export { QuantumAIServices };
-;
-export { QuantumAIServices };
-;
-export { QuantumAIServices };
-;
-export { QuantumAIServices };
+
+export { QuantumAIServices }
+export { QuantumAIServices }
+export { QuantumAIServices }
+export { QuantumAIServices }
+export { QuantumAIServices }

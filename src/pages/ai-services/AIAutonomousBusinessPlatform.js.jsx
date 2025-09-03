@@ -188,8 +188,7 @@ export {};
                     {feature.description}
                   </p>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -245,8 +244,7 @@ export {};
                   </h3>"";
                   <p className="text-gray-300 text-sm">{useCase.description}</p>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -314,14 +312,10 @@ export {};
         </div>;
       </section>;
     </div>)}
-;
 
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
+
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }

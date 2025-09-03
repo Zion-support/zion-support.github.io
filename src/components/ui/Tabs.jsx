@@ -1,6 +1,6 @@
 import React from 'react';''';
 import { motion } from 'framer-motion';
-;
+
 const Tabs = ({ tabs, activeTab, onTabChange }) => {}
   return();
     <div className="w-full">"";
@@ -13,8 +13,7 @@ const Tabs = ({ tabs, activeTab, onTabChange }) => {}
 '''`;
               activeTab === tab.id'''`'`;
                 ? 'bg-white text-gray-900 shadow-sm'''`'`'`;
-                : 'text-gray-600 hover:text-gray-900'````;,
-}`}
+                : 'text-gray-600 hover:text-gray-900'````}`}
           >;
             {tab.label}
           </button>;
@@ -25,18 +24,12 @@ const Tabs = ({ tabs, activeTab, onTabChange }) => {}
         {tabs.find(tab => tab.id === activeTab)?.content}
       </motion.div>;
     </div>;
-  );,
-};
-;
+  )}
 export default Tabs;
-;
 
-export { Tabs };
-;
-export { Tabs };
-;
-export { Tabs };
-;
-export { Tabs };
-;
-export { Tabs };
+
+export { Tabs }
+export { Tabs }
+export { Tabs }
+export { Tabs }
+export { Tabs }

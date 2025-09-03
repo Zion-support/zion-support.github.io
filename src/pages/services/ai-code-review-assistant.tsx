@@ -64,7 +64,7 @@ export default function AICodeReviewAssistant() {};
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced AI Features</h2>;
             <p className="text-gray-600 text-lg">Powered by cutting-edge machine learning algorithms</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {};
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">;
@@ -94,7 +94,7 @@ export default function AICodeReviewAssistant() {};
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Results</h2>;
               <p className="text-gray-600 text-lg">Join thousands of development teams achieving better code quality</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {};
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm">;
@@ -114,7 +114,7 @@ export default function AICodeReviewAssistant() {};
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>;
             <p className="text-gray-600 text-lg">Ideal solutions for different development scenarios</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-3 gap-8">;
             {};
               <div key={index} className="text-center">;
@@ -135,7 +135,7 @@ export default function AICodeReviewAssistant() {};
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Competitive Pricing</h2>;
               <p className="text-gray-600 text-lg">Choose the plan that fits your team size and needs</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-3 gap-8">;
               {};
                 <div key={index} className={`bg-white rounded-xl p-8 shadow-lg ${tier.name === 'Professional' ? 'ring-2 ring-blue-500 relative' : ''}`}>;
@@ -191,5 +191,4 @@ export default function AICodeReviewAssistant() {};
         </section>;
       </div>;
     </>;
-  );,
-}
+  )}

@@ -136,10 +136,9 @@ const Footer: React.FC = () => {};
         { name: 'Request Quote', href: '/request-quote' },;
         { name: 'Status Page', href: '/status' },;
         { name: 'Support Portal', href: '/support' }
-      ];,
-}
+      ]}
   ];
-;
+
   const socialLinks = [;
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },;
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },;
@@ -148,7 +147,7 @@ const Footer: React.FC = () => {};
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },;
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
   ];
-;
+
   return (;
     <footer className="bg-gray-900 text-white">;
       {/* Main Footer Content */}
@@ -170,7 +169,7 @@ const Footer: React.FC = () => {};
               Empowering businesses with cutting-edge technology and comprehensive ;
               digital transformation services.;
             </p>;
-            ;
+
             {/* Contact Information */}
             <div className="space-y-3">;
               <div className="flex items-center space-x-3 text-gray-300">;
@@ -284,7 +283,5 @@ const Footer: React.FC = () => {};
         </div>;
       </div>;
     </footer>;
-  );,
-};
-;
+  )}
 export default Footer;

@@ -9,7 +9,5 @@ describe(&apos;EnhancedHero&apos, () => {};
 }
     // comment;
     render(<EnhancedHero / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

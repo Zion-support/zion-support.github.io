@@ -1,4 +1,4 @@
-export interface EmergingTech2026ServiceV2 {;
+export interface EmergingTech2026ServiceV2 {
   id: string;
   name: string;
   tagline: string;
@@ -8,11 +8,11 @@ export interface EmergingTech2026ServiceV2 {;
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
-  {;
+  {
     id: "2026-emerging-tech-v2",;
     name: "2026 Emerging Tech Platform V2",;
     tagline: "Enhanced emerging technologies",;
@@ -28,7 +28,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
     link: "/services/2026-emerging-tech-v2",;
     category: "Emerging Tech 2026 V2",;
     realImplementation: true,;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709";

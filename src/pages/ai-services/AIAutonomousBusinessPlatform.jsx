@@ -8,24 +8,21 @@ const features = [];
         title: "Cloud-Native Architecture","";
         description: "Built on modern cloud infrastructure for scalability, reliability, and global accessibility.",";
         icon: Cloud,"";
-        color: "from-blue-500 to-cyan-500";,
-},;
+        color: "from-blue-500 to-cyan-500"},;
     {}
 ";
 "";
         title: "AI-Powered Intelligence","";
         description: "Advanced machine learning algorithms that continuously learn and adapt to your business needs.",";
         icon: Brain,"";
-        color: "from-purple-500 to-pink-500";,
-},;
+        color: "from-purple-500 to-pink-500"},;
     {}
 ";
 "";
         title: "Real-time Processing","";
         description: "Instant data processing and analysis for immediate business insights and decision-making.",";
         icon: Zap,"";
-        color: "from-green-500 to-emerald-500";,
-},;
+        color: "from-green-500 to-emerald-500"},;
     {}
 ";
 "";
@@ -48,22 +45,19 @@ const useCases = [];
 "";
         title: "Multi-Location Operations","";
         description: "Manage business operations across multiple locations with centralized AI intelligence.",;
-        icon: Globe;,
-},;
+        icon: Globe},;
     {}
 ";
 "";
         title: "Team Collaboration","";
         description: "Enable seamless collaboration between distributed teams with AI-powered insights.",;
-        icon: Users;,
-},;
+        icon: Users},;
     {}
 ";
 "";
         title: "Data Analytics","";
         description: "Comprehensive business analytics with real-time dashboards and reporting.",;
-        icon: BarChart3;,
-},;
+        icon: BarChart3},;
     {}
 ";
 "";
@@ -78,8 +72,7 @@ const testimonials = [];
         content: "The AI Autonomous Business Platform has transformed how we operate. We can now manage our global operations from where with real-time insights.","";
         name: "Jennifer Martinez","";
         role: "CTO, GlobalTech Solutions",;
-        rating: 5;,
-},;
+        rating: 5},;
     {}
 ";
 "";
@@ -268,14 +261,10 @@ export {};
         </div>;
       </section>;
     </div>)}
-;
 
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
+
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }

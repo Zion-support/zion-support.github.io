@@ -18,8 +18,7 @@ export {};
       <div className="flex items-center justify-center min-h-screen">"";
         <div className="animate-pulse">Loading...</div>;
       </div>;
-    );,
-}
+    )}
   return();
     <>";
       <div>Broken JSX</div>
@@ -46,14 +45,10 @@ export {};
       {/* Add extra bottom padding on mobile to account for the bottom nav */}"";
       {isMobile && <div className="h-16"></div>}
     </>)}
-;
 
-export { PostJob };
-;
-export { PostJob };
-;
-export { PostJob };
-;
-export { PostJob };
-;
-export { PostJob };
+
+export { PostJob }
+export { PostJob }
+export { PostJob }
+export { PostJob }
+export { PostJob }

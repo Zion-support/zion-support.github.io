@@ -73,7 +73,7 @@ export default function QuantumCloudInfrastructure() {};
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Cutting-Edge Technology</h2>;
             <p className="text-gray-600 text-lg">Powered by quantum computing and AI optimization</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {};
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">;
@@ -101,7 +101,7 @@ export default function QuantumCloudInfrastructure() {};
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Unmatched Performance</h2>;
               <p className="text-gray-600 text-lg">Proven results from our quantum cloud infrastructure</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {};
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm">;
@@ -121,7 +121,7 @@ export default function QuantumCloudInfrastructure() {};
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Technology Stack</h2>;
             <p className="text-gray-600 text-lg">Built on cutting-edge technologies</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {};
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 text-center">;
@@ -142,7 +142,7 @@ export default function QuantumCloudInfrastructure() {};
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>;
               <p className="text-gray-600 text-lg">Ideal solutions for demanding computing needs</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-3 gap-8">;
               {};
                 <div key={index} className="text-center">;
@@ -164,7 +164,7 @@ export default function QuantumCloudInfrastructure() {};
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Enterprise-Grade Pricing</h2>;
               <p className="text-gray-600 text-lg">Scale with your infrastructure needs</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-3 gap-8">;
               {};
                 <div key={index} className={`bg-white rounded-xl p-8 shadow-lg border ${tier.name === 'Enterprise' ? 'ring-2 ring-purple-500 relative' : ''}`}>;
@@ -220,5 +220,4 @@ export default function QuantumCloudInfrastructure() {};
         </section>;
       </div>;
     </>;
-  );,
-}
+  )}

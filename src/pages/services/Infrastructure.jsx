@@ -35,17 +35,12 @@ const InfrastructureServices = () => {};
           <Link to="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">Get Started</Link>;
         </div>;
       </section>;
-    </div>);,
-};
+    </div>)}
 export default InfrastructureServices;
-;
 
-export { InfrastructureServices };
-;
-export { InfrastructureServices };
-;
-export { InfrastructureServices };
-;
-export { InfrastructureServices };
-;
-export { InfrastructureServices };
+
+export { InfrastructureServices }
+export { InfrastructureServices }
+export { InfrastructureServices }
+export { InfrastructureServices }
+export { InfrastructureServices }

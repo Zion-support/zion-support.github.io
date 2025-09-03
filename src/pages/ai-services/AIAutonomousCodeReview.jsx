@@ -10,24 +10,21 @@ const features = [];
         title: "Automated Code Analysis","";
         description: "AI-powered code review that identifies bugs, security vulnerabilities, and optimization opportunities.",";
         icon: Code,"";
-        color: "from-blue-500 to-cyan-500";,
-},;
+        color: "from-blue-500 to-cyan-500"},;
     {}
 ";
 "";
         title: "Security Vulnerability Detection","";
         description: "Advanced security scanning that detects potential threats and compliance issues in your codebase.",";
         icon: Shield,"";
-        color: "from-red-500 to-pink-500";,
-},;
+        color: "from-red-500 to-pink-500"},;
     {}
 ";
 "";
         title: "Performance Optimization","";
         description: "Intelligent suggestions for improving code performance, readability, and maintainability.",";
         icon: Zap,"";
-        color: "from-green-500 to-emerald-500";,
-},;
+        color: "from-green-500 to-emerald-500"},;
     {}
 ";
 "";
@@ -50,22 +47,19 @@ const useCases = [];
 "";
         title: "Development Teams","";
         description: "Streamline code review processes for development teams of  size.",;
-        icon: Users;,
-},;
+        icon: Users},;
     {}
 ";
 "";
         title: "Open Source Projects","";
         description: "Maintain high code quality standards in open source contributions.",;
-        icon: GitFork;,
-},;
+        icon: GitFork},;
     {}
 ";
 "";
         title: "Enterprise Applications","";
         description: "Ensure security and compliance in enterprise-grade applications.",;
-        icon: Shield;,
-},;
+        icon: Shield},;
     {}
 ";
 "";
@@ -80,8 +74,7 @@ const testimonials = [];
         content: "The AI Autonomous Code Review has transformed our development process. We catch issues much earlier and our code quality has improved significantly.","";
         name: "Alex Thompson","";
         role: "Lead Developer, CodeFlow Inc",;
-        rating: 5;,
-},;
+        rating: 5},;
     {}
 ";
 "";
@@ -270,14 +263,10 @@ export {};
         </div>;
       </section>;
     </div>)}
-;
 
-export { AIAutonomousCodeReview, IconComponent, IconComponent };
-;
-export { AIAutonomousCodeReview, IconComponent, IconComponent };
-;
-export { AIAutonomousCodeReview, IconComponent, IconComponent };
-;
-export { AIAutonomousCodeReview, IconComponent, IconComponent };
-;
-export { AIAutonomousCodeReview, IconComponent, IconComponent };
+
+export { AIAutonomousCodeReview, IconComponent, IconComponent }
+export { AIAutonomousCodeReview, IconComponent, IconComponent }
+export { AIAutonomousCodeReview, IconComponent, IconComponent }
+export { AIAutonomousCodeReview, IconComponent, IconComponent }
+export { AIAutonomousCodeReview, IconComponent, IconComponent }

@@ -1,4 +1,4 @@
-export interface InnovativeITService {;
+export interface InnovativeITService {
   id: string;
   name: string;
   tagline: string;
@@ -25,7 +25,7 @@ export interface InnovativeITService {;
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -36,7 +36,7 @@ export interface InnovativeITService {;
   customers: number;
   rating: number;
 export const innovativeITServices: InnovativeITService[] = [;
-  {;
+  {
     id: "quantum-cloud-orchestrator",;
     name: "Quantum Cloud Orchestrator",;
     tagline: "Autonomous cloud infrastructure management with quantum optimization",;
@@ -74,20 +74,18 @@ export const innovativeITServices: InnovativeITService[] = [;
     marketSize: "$500B cloud infrastructure market",;
     growthRate: "200% annual growth",;
     variant: "quantum-cloud-advanced",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully autonomous cloud orchestration platform with multi-cloud support, real-time optimization, automated scaling, and comprehensive analytics.",;
     launchDate: "2024-05-01",;
     customers: 95,;
     rating: 4.8,;
-    reviews: 234;,;,
-},;
-  {;
+    reviews: 234},;
+  {
     id: "ai-powered-devops-automation",;
     name: "AI-Powered DevOps Automation Suite",;
     tagline: "Intelligent CI/CD with autonomous deployment optimization",;
@@ -125,20 +123,18 @@ export const innovativeITServices: InnovativeITService[] = [;
     marketSize: "$8B DevOps market",;
     growthRate: "180% annual growth",;
     variant: "ai-devops-advanced",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully functional AI-powered DevOps platform with intelligent automation, predictive analytics, comprehensive testing, and team collaboration tools.",;
     launchDate: "2024-04-15",;
     customers: 420,;
     rating: 4.9,;
-    reviews: 567;,;,
-},;
-  {;
+    reviews: 567},;
+  {
     id: "quantum-data-center-optimizer",;
     name: "Quantum Data Center Optimizer",;
     tagline: "Autonomous data center management with quantum efficiency",;
@@ -176,20 +172,18 @@ export const innovativeITServices: InnovativeITService[] = [;
     marketSize: "$200B data center market",;
     growthRate: "150% annual growth",;
     variant: "quantum-infrastructure-advanced",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully autonomous data center optimization platform with quantum AI, real-time monitoring, predictive maintenance, and comprehensive analytics.",;
     launchDate: "2024-03-01",;
     customers: 65,;
     rating: 4.9,;
-    reviews: 123;,;,
-},;
-  {;
+    reviews: 123},;
+  {
     id: "ai-powered-network-security",;
     name: "AI-Powered Network Security Fortress",;
     tagline: "Intelligent threat detection with autonomous response",;
@@ -227,20 +221,18 @@ export const innovativeITServices: InnovativeITService[] = [;
     marketSize: "$200B cybersecurity market",;
     growthRate: "180% annual growth",;
     variant: "ai-security-advanced",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully functional AI-powered network security platform with intelligent threat detection, autonomous response, comprehensive monitoring, and regulatory compliance.",;
     launchDate: "2024-02-15",;
     customers: 280,;
     rating: 4.8,;
-    reviews: 345;,;,
-},;
-  {;
+    reviews: 345},;
+  {
     id: "quantum-ai-storage-optimizer",;
     name: "Quantum AI Storage Optimizer",;
     tagline: "Autonomous storage management with quantum efficiency",;
@@ -278,20 +270,18 @@ export const innovativeITServices: InnovativeITService[] = [;
     marketSize: "$100B storage market",;
     growthRate: "120% annual growth",;
     variant: "quantum-storage-advanced",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully autonomous storage optimization platform with quantum AI, intelligent data management, predictive analytics, and comprehensive monitoring.",;
     launchDate: "2024-01-01",;
     customers: 120,;
     rating: 4.8,;
-    reviews: 189;,;,
-},;
-  {;
+    reviews: 189},;
+  {
     id: "ai-powered-disaster-recovery",;
     name: "AI-Powered Disaster Recovery Orchestrator",;
     tagline: "Intelligent disaster recovery with autonomous failover",;
@@ -329,12 +319,11 @@ export const innovativeITServices: InnovativeITService[] = [;
     marketSize: "$50B disaster recovery market",;
     growthRate: "150% annual growth",;
     variant: "ai-recovery-advanced",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully functional AI-powered disaster recovery platform with intelligent automation, predictive analytics, comprehensive testing, and regulatory compliance.",;
     launchDate: "2024-01-15",;

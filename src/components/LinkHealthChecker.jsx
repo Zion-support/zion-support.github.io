@@ -32,7 +32,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
     };
     const getStatusColor = (status) => {};
                 return 'text-gray-500'}
-    };
+    }
     const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length;
     const brokenCount = linkStatuses.filter(s => s.status === 'broken').length;
     const externalCount = linkStatuses.filter(s => s.status === 'external').length;
@@ -92,17 +92,12 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
       {};
             {brokenCount} link{brokenCount !== 1 ? 's' : ''} {brokenCount !== 1 ? 'are' : 'is'} broken and need attention.Please review and fix these links to improve user experience.</p>;
         </div>)}
-    </div>)};
-export default LinkHealthChecker;,
-}}}}}}}}}
-;
-export { LinkHealthChecker };
-;
-export { LinkHealthChecker };
-;
-export { LinkHealthChecker };
-;
-export { LinkHealthChecker };
-;
-export { LinkHealthChecker };
+    </div>)}
+export default LinkHealthChecker}}}}}}}}}
+
+export { LinkHealthChecker }
+export { LinkHealthChecker }
+export { LinkHealthChecker }
+export { LinkHealthChecker }
+export { LinkHealthChecker }
 ";

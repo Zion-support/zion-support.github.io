@@ -46,6 +46,5 @@ const InterviewAssessmentAI = () => {};
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default InterviewAssessmentAI;

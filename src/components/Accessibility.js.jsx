@@ -12,10 +12,8 @@ export {};
 ''';
     throw new Error('''';
       'useAccessibility must be used within an AccessibilityProvider';
-    );,
-}
-  return context;,
-};
+    )}
+  return context}
 // Accessibility Provider Component;
 export {};
   const [highContrast, setHighContrast] = useState(false);
@@ -33,8 +31,7 @@ export {};
       setHighContrast(settings.highContrast || false);
       setReducedMotion(settings.reducedMotion || false);';
       setFontSize(settings.fontSize || 'medium');';
-      setColorBlindMode(settings.colorBlindMode || 'none');,
-}
+      setColorBlindMode(settings.colorBlindMode || 'none')}
   }, []);
   // Save settings to localStorage;
   useEffect(() => {};
@@ -56,10 +53,8 @@ export const useAccessibility = () => {}"});,"})";
 """;,"});,"})";
     throw new Error("""";,"});,"})";
       "useAccessibility must be used within an AccessibilityProvider";,"});,"})";
-    );,"});,"});";,
-}"});,"})";
-  return context,"});,"});";,
-};,"});,"})";
+    );,"});,"});"}"});,"})";
+  return context,"});,"});"};,"});,"})";
 // comment;
 export const AccessibilityProvider = ({ children }) => {}"});,"})";
   const [highContrast, setHighContrast] = useState(false);,"});,"})";
@@ -77,21 +72,18 @@ export const AccessibilityProvider = ({ children }) => {}"});,"})";
       setHighContrast(settings.highContrast || false);,"});,"})";
       setReducedMotion(settings.reducedMotion || false);,"});,"})";
       setFontSize(settings.fontSize || "medium");,"});,"})";
-      setColorBlindMode(settings.colorBlindMode || "none");,"});,"});";,
-}"});,"});";,
-}, []);,"});,"})";
+      setColorBlindMode(settings.colorBlindMode || "none");,"});,"});"}"});,"});"}, []);,"});,"})";
   // comment;
   useEffect(() => {}"});,"})";
     const settings = {}"});,"})";
-      highContrast,,"});,"})";
+      highContrast,"});,"})";
       reducedMotion,";,"});,"})";
       fontSize,"";,"});,"})";
       colorBlindMode};""";,"});,"})";
     localStorage.setItem("""";,"});,"})";
-      "zion-accessibility-settings",,"});,"})";
+      "zion-accessibility-settings","});,"})";
       JSON.stringify(settings);,"});,"})";
-    );,"});,"});";,
-}, [highContrast, reducedMotion, fontSize, colorBlindMode]);,"});,"})";
+    );,"});,"});"}, [highContrast, reducedMotion, fontSize, colorBlindMode]);,"});,"})";
   // comment;
   useEffect(() => {}"});,"})";
     const root = document.documentElement,"});,"})";
@@ -100,25 +92,21 @@ export const AccessibilityProvider = ({ children }) => {}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
 """;,"});,"})";
-      root.classList.add("high-contrast");,"});,"});";,
-} else {}"});,"})";
+      root.classList.add("high-contrast");,"});,"});"} else {}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
 """;,"});,"})";
-      root.classList.remove("high-contrast");,"});,"});";,
-}"});,"})";
+      root.classList.remove("high-contrast");,"});,"});"}"});,"})";
     // comment;
     if (reducedMotion) {}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
 """;,"});,"})";
-      root.classList.add("reduced-motion");,"});,"});";,
-} else {}"});,"})";
+      root.classList.add("reduced-motion");,"});,"});"} else {}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
 """;,"});,"})";
-      root.classList.remove("reduced-motion");,"});,"});";,
-}"";,"});,"})";
+      root.classList.remove("reduced-motion");,"});,"});"}"";,"});,"})";
     // comment;
     root.style.fontSize ="""";,"});,"})";
       fontSize == = "small" ? "14px" : fontSize === "large" ? "18px" : "16px",";,"});,"})";
@@ -130,37 +118,35 @@ export const AccessibilityProvider = ({ children }) => {}"});,"})";
           ? "url(#protanopia)""""";,"});,"})";
           : colorBlindMode === "deuteranopia""""";,"});,"})";
             ? "url(#deuteranopia)""""";,"});,"})";
-            : "url(#tritanopia);,"});,"});";,
-}, [highContrast, reducedMotion, fontSize, colorBlindMode]);,"});,"})";
+            : "url(#tritanopia);,"});,"});"}, [highContrast, reducedMotion, fontSize, colorBlindMode]);,"});,"})";
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion);,"});,"})";
   const value = {}"});,"})";
-    highContrast,,"});,"})";
-    reducedMotion,,"});,"})";
-    fontSize,,"});,"})";
-    colorBlindMode,,"});,"})";
-    toggleHighContrast,,"});,"})";
-    toggleReducedMotion,,"});,"})";
-    setFontSize,,"});,"})";
+    highContrast,"});,"})";
+    reducedMotion,"});,"})";
+    fontSize,"});,"})";
+    colorBlindMode,"});,"})";
+    toggleHighContrast,"});,"})";
+    toggleReducedMotion,"});,"})";
+    setFontSize,"});,"})";
     setColorBlindMode};,"});,"})";
   return ();,"});,"})";
     <AccessibilityContext.Provider value="{value}">;,"});,"})";
       {children}"});,"})";
     </AccessibilityContext.Provider>;,"});,"})";
-  );,"});,"});";,
-};,"});,"})";
+  );,"});,"});"};,"});,"})";
 // comment;
 export const AccessibilityPanel = () => {}"});,"})";
   return <div>Component</div>;
 };
   const [isOpen, setIsOpen] = useState(false);,"});,"})";
   const {}"});,"})";
-    highContrast,,"});,"})";
-    reducedMotion,,"});,"})";
-    fontSize,,"});,"})";
-    colorBlindMode,,"});,"})";
-    toggleHighContrast,,"});,"})";
-    toggleReducedMotion,,"});,"})";
-    setFontSize,,"});,"})";
+    highContrast,"});,"})";
+    reducedMotion,"});,"})";
+    fontSize,"});,"})";
+    colorBlindMode,"});,"})";
+    toggleHighContrast,"});,"})";
+    toggleReducedMotion,"});,"})";
+    setFontSize,"});,"})";
     setColorBlindMode} = useAccessibility();,"});,"})";
   // comment;
   useEffect(() => {}"});,"})";
@@ -172,8 +158,7 @@ export const AccessibilityPanel = () => {}"});,"})";
         event.key === "A";,"});,"})";
       ) {}"});,"})";
         event.preventDefault();,"});,"})";
-        setIsOpen(!isOpen);,"});,"});";,
-}"});,"})";
+        setIsOpen(!isOpen);,"});,"});"}"});,"})";
       // comment;
       if();,"});,"})";
         (event.ctrlKey || event.metaKey) &&";,"});,"})";
@@ -181,8 +166,7 @@ export const AccessibilityPanel = () => {}"});,"})";
         event.key === "H";,"});,"})";
       ) {}"});,"})";
         event.preventDefault();,"});,"})";
-        toggleHighContrast();,"});,"});";,
-}"});,"})";
+        toggleHighContrast();,"});,"});"}"});,"})";
       // comment;
       if();,"});,"})";
         (event.ctrlKey || event.metaKey) &&";,"});,"})";
@@ -190,12 +174,9 @@ export const AccessibilityPanel = () => {}"});,"})";
         event.key === "M";,"});,"})";
       ) {}"});,"})";
         event.preventDefault();,"});,"})";
-        toggleReducedMotion();,"});,"});";,
-}"";,"});,"});";,
-};""";,"});,"})";
+        toggleReducedMotion();,"});,"});"}"";,"});,"});"};""";,"});,"})";
     window.addEventListener();"";,"});,"})";
-    return () => window.removeEventListener("keydown", handleKeyDown);,"});,"});";,
-}, [isOpen, toggleHighContrast, toggleReducedMotion]);,"});,"})";
+    return () => window.removeEventListener("keydown", handleKeyDown);,"});,"});"}, [isOpen, toggleHighContrast, toggleReducedMotion]);,"});,"})";
   return ();,"});,"})";
     <>;,"});,"})";
       {/* comment */}"});,"})";
@@ -279,8 +260,7 @@ export const AccessibilityPanel = () => {}"});,"})";
 """;,"});,"})";
                           fontSize === size"""";,"});,"})";
                             ? "bg-zion-cyan text-white""""";,"});,"})";
-                            : "border-zion-cyan/30 text-zion-cyan";,"});,"});";,
-}"});,"})">;,"});,"})";
+                            : "border-zion-cyan/30 text-zion-cyan";,"});,"});"}"});,"})">;,"});,"})";
                         {size.charAt(0).toUpperCase() + size.slice(1)}"});,"})";
                       </Button>;,"});,"})";
                     ))}"});,"})";
@@ -301,8 +281,7 @@ export const AccessibilityPanel = () => {}"});,"})";
 """;,"});,"})";
                             colorBlindMode === mode"""";,"});,"})";
                               ? "bg-zion-cyan text-white""""";,"});,"})";
-                              : "border-zion-cyan/30 text-zion-cyan";,"});,"});";,
-}"});,"})">;,"});,"})";
+                              : "border-zion-cyan/30 text-zion-cyan";,"});,"});"}"});,"})">;,"});,"})";
                           {mode.charAt(0).toUpperCase() + mode.slice(1)}"});,"})";
                         </Button>;,"});,"})";
                       );,"});,"})";
@@ -345,8 +324,7 @@ export const AccessibilityPanel = () => {}"});,"})";
         )}"});,"})";
       </AnimatePresence>;,"});,"})";
     </>"});,"})";
-  );,"});,"});";,
-};,"});,"})";
+  );,"});,"});"};,"});,"})";
 // comment;
 export const SkipToContent = () => (""";,"});,"})";
   <div>Broken JSX</div>
@@ -370,20 +348,12 @@ export const useFocusTrap = isActive => {}"});,"})";
         if(e.shiftKey) {}"});,"})";
           if(document.activeElement === firstFocusableElement) {}"});,"})";
             e.preventDefault();,"});,"})";
-            lastFocusableElement.focus();,"});,"});";,
-}"});,"});";,
-} else {}"});,"})";
+            lastFocusableElement.focus();,"});,"});"}"});,"});"} else {}"});,"})";
           if(document.activeElement === lastFocusableElement) {}"});,"})";
             e.preventDefault();,"});,"})";
-            firstFocusableElement.focus();,"});,"});";,
-}"});,"});";,
-}";,"});,"});";,
-}"";,"});,"});";,
-};""";,"});,"})";
+            firstFocusableElement.focus();,"});,"});"}"});,"});"}";,"});,"});"}"";,"});,"});"};""";,"});,"})";
     document.addEventListener();"";,"});,"})";
-    return () => document.removeEventListener("keydown", handleTabKey);,"});,"});";,
-}, [isActive]);,"});,"});";,
-};,"});,"})";
+    return () => document.removeEventListener("keydown", handleTabKey);,"});,"});"}, [isActive]);,"});,"});"};,"});,"})";
 // comment;
 export const SrOnly = ({ children }) => ("""";,"});,"})";
   <span className="sr-only">{children}</span>;,"});,"})";
@@ -403,32 +373,28 @@ export {};
 """;
     throw new Error(""";
       "useAccessibility must be used within an AccessibilityProvider"    )}
-;
+
   return context}
-;
+
 // comment;
 export const AccessibilityProvider = ({ children }) => {}";
   const [highContrast, setHighContrast] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [fontSize, setFontSize] = useState("medium");
-  const [colorBlindMode, setColorBlindMode] = useState();,
-}
+  const [colorBlindMode, setColorBlindMode] = useState()}
   // comment;
 useEffect(() => {}
 ";
 """;
-    const savedSettings = localStorage.getItem();,
-}
+    const savedSettings = localStorage.getItem()}
     if (savedSettings) {}
-;
+
       const settings = JSON.parse(savedSettings)";
       setHighContrast(settings.highContrast || false);
       setReducedMotion(settings.reducedMotion || false)";
       setFontSize(settings.fontSize || "medium")";
       setColorBlindMode(settings.colorBlindMode || "none")}
-;,
-}, []);,
-}
+}, [])}
   // comment;
 useEffect(() => {}";
     const settings = {}
@@ -438,12 +404,11 @@ useEffect(() => {}";
     const settings = {}";
       highContrast, reducedMotion,;
       fontSize,;
-      colorBlindMode};
+      colorBlindMode}
     localStorage.setItem(';
       'zion-accessibility-settings',;
       JSON.stringify(settings);
-    );,
-}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
+    )}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
   // Apply accessibility settings to document;
   useEffect(() => {};
 };,
@@ -456,7 +421,7 @@ useEffect(() => {}";
 }
   // comment;
 useEffect(() => {}
-;
+
     const root = document.documentElement,;
     // comment;
 if (highContrast) {}
@@ -466,16 +431,15 @@ if (highContrast) {}
 ";
 """;
       root.classList.remove("high-contrast")}
-;
+
     // comment;
 if (reducedMotion) {}
 ";
 """;
       root.classList.add("reduced-motion")} else {}
-;
+
 "";
-      root.classList.remove("reduced - motion")", ",;,
-}";
+      root.classList.remove("reduced - motion")", "}";
     // comment;
     root.style.fontSize = """;
       fontSize === "small" ? "14px" : fontSize === "large" ? "18px" : "16px"";
@@ -487,21 +451,18 @@ if (reducedMotion) {}
           ? "url(#protanopia)"""";
           : colorBlindMode === "deuteranopia"""";
             ? "url(#deuteranopia)""";
-            : "url(#tritanopia),;,
-}, [highContrast, reducedMotion, fontSize, colorBlindMode]);,
-}
-  const toggleReducedMotion = () => setReducedMotion();,
-}  const value = {}
-;
+            : "url(#tritanopia)}, [highContrast, reducedMotion, fontSize, colorBlindMode])}
+  const toggleReducedMotion = () => setReducedMotion()}  const value = {}
+
     highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode}
-;
+
   return ()";
     <AccessibilityContext .Provider value={value}">";
       {children}
-;
+
     </AccessibilityContext.Provider>;
   )}
-;
+
     highContrast,;
     reducedMotion,;
     fontSize,;
@@ -517,35 +478,32 @@ if (reducedMotion) {}
     const handleKeyDown = event => {};
 }
   const {}
-;
-    highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode} = useAccessibility();,
-}
+
+    highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode} = useAccessibility()}
   // commentuseEffect(() => {}
-;
+
     const handleKeyDown = event => {}
-;
+
       // comment;
 if();
         (event.ctrlKey || event.metaKey) &&";
         event.shiftKey &&";
         event.key === "A;
       ) {}
-;
-        event.preventDefault();,
-}
+
+        event.preventDefault()}
         setIsOpen(!isOpen)}
-;
+
       // comment;
 if();
         (event.ctrlKey || event.metaKey) &&";
         event.shiftKey &&";
         event.key === "H";
       ) {}
-;
-        event.preventDefault();,
-}
+
+        event.preventDefault()}
         toggleHighContrast()}
-;
+
       // comment;
 if();
         (event.ctrlKey || event.metaKey) &&";
@@ -553,17 +511,13 @@ if();
         event.key === "M";
       ) {}";
         event.preventDefault();
-        toggleReducedMotion()", ";,
-}""}";
+        toggleReducedMotion()", "}""}";
     window.addEventListener("keydown", handleKeyDown)";
-    return () => window.removeEventListener("keydown", handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion]);,
-}
+    return () => window.removeEventListener("keydown", handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])}
 }";
     window.addEventListener("keydown", handleKeyDown)";
-    return () => window.removeEventListener("keydown", handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion]);,
-}
-  return();,
-}
+    return () => window.removeEventListener("keydown", handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])}
+  return()}
     <>;
       {/* comment */}
 ;
@@ -576,13 +530,13 @@ if();
         <Accessibility className="w-6 h-6" /">";
       </motion.button>,;
       {/* comment */}
-;
+
       <AnimatePresence>;
         {};
             onClick="{()" ="> setIsOpen(false)}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4;
             onClick="{()" ="> setIsOpen(false)}
-;
+
           >;
             <div>Broken JSX</div>
               onClick="{e" ="> e.stopPropagation()}">""";
@@ -620,7 +574,7 @@ if();
                         : "border-zion-cyan/30 text-zion-cyan"}"">""";
                     {};
                     )}
-;
+
                   </Button>";
                 </div>;
 """;
@@ -638,7 +592,7 @@ if();
                         : "border-zion-cyan/30 text-zion-cyan"}"">""";
                     {};
                     )}
-;
+
                   </Button>";
                 </div>;
                 {/* comment */}""";
@@ -653,13 +607,13 @@ if();
                           fontSize === size""";
                             ? "bg-zion-cyan text-white"""";
                             : "border-zion-cyan/30 text-zion-cyan"}
-;
+
                       >;
                         {size.charAt(0).toUpperCase() + size.slice(1)}
-;
+
                       </Button>;
                     ))}
-;
+
                   </div>";
                 </div>;
                 {/* comment */}""";
@@ -678,15 +632,14 @@ if();
                             colorBlindMode === mode""";
                               ? "bg-zion-cyan text-white"""";
                               : "border-zion-cyan/30 text-zion-cyan"}
-;
+
                         >;
                           {mode.charAt(0).toUpperCase() + mode.slice(1)}
-;
+
                         </Button>;
-                      );,
-}
+                      )}
                     )}
-;
+
                   </div>";
                 </div>;
 """;
@@ -726,7 +679,7 @@ sessions.</p>;
               </div>;
             </motion.div>;
         )}
-;
+
       </AnimatePresence>;
 </>;
   )}";
@@ -745,8 +698,7 @@ export const useFocusTrap = isActive => {}";
     if (!isActive) return;
     const focusableElements = """";
       "button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])";
-    const container = document.activeElement?.closest();,
-}
+    const container = document.activeElement?.closest()}
     if(!container) return,;
 const firstFocusableElement = focusableContent[0];
     const lastFocusableElement = focusableContent[focusableContent.length-1]";
@@ -769,13 +721,11 @@ const firstFocusableElement = focusableContent[0];
 }            lastFocusableElement.focus()}
 ;,
 } else {}
-;
+
           if(document.activeElement === lastFocusableElement) {}
-;
+
             e.preventDefault()";
-            firstFocusableElement.focus()}",";,
-}", ";,
-}""}";
+            firstFocusableElement.focus()}","}", "}""}";
     document.addEventListener("keydown", handleTabKey)";
     return () => document.removeEventListener("keydown", handleTabKey)}, [isActive])}
 // comment;
@@ -783,8 +733,7 @@ export const SrOnly = ({ children }) => ("";
   <span className="sr-only">{children}</span>";
 );
 export default AccessibilityPanel"";
-""""";,
-}";
+"""""}";
     document.addEventListener("keydown", handleTabKey)";
     return () => document.removeEventListener("keydown", handleTabKey)}, [isActive])}
 // comment;

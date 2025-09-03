@@ -9,7 +9,5 @@ describe(&apos;ServiceWorkerRegistration&apos, () => {};
 }
     // comment;
     render(<ServiceWorkerRegistration / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

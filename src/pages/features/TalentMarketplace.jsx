@@ -17,7 +17,7 @@ export {};
     name: 'Talent Marketplace',''';
     description:'''';
       'Hire vetted AI and tech professionals from around the world on Zion.',''';
-    url: 'https://app.ziontechgroup.com/features/talent-marketplace'};
+    url: 'https://app.ziontechgroup.com/features/talent-marketplace'}
   return();
     <>;
       <div>Broken JSX</div>
@@ -73,14 +73,10 @@ export {};
       </main>;
       <Footer />;
     </>)}
-;
 
-export { TalentMarketplace };
-;
-export { TalentMarketplace };
-;
-export { TalentMarketplace };
-;
-export { TalentMarketplace };
-;
-export { TalentMarketplace };
+
+export { TalentMarketplace }
+export { TalentMarketplace }
+export { TalentMarketplace }
+export { TalentMarketplace }
+export { TalentMarketplace }

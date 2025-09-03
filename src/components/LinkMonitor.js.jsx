@@ -5,8 +5,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         // Update progress;
         setScanProgress(((i + 1) / links.length) * 100);
         // Small delay to prevent overwhelming the browser;
-        await new Promise(resolve => setTimeout(resolve, 10));,
-}
+        await new Promise(resolve => setTimeout(resolve, 10))}
     }
     setBrokenLinks(results);
     setLastScanTime(new Date());
@@ -43,8 +42,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
     a.href = url;
     a.download = 'redirect-rules.txt';
     a.click();
-    URL.revokeObjectURL(url);,
-};
+    URL.revokeObjectURL(url)}
   // Export broken links report;
   const exportReport = () => {};
 };
@@ -57,8 +55,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
     a.href = url;
     a.download = 'broken-links-report.json';
     a.click();
-    URL.revokeObjectURL(url);,
-};
+    URL.revokeObjectURL(url)}
   // Auto-scan on component mount;
   useEffect(() => {};
 }, []);
@@ -94,7 +91,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
           </div>;
         </div>;
       )}
-;
+
       {/* Status Summary */}
       {};
               {brokenLinks.length}
@@ -121,7 +118,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
           </div>;
         </div>;
       )}
-;
+
       {/* Broken Links List */}
       {};
                     {link.url}
@@ -145,7 +142,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
           </div>;
         </div>;
       )}
-;
+
       {/* Fixed Links List */}
       {};
                     {fix.originalUrl} → {fix.newUrl}
@@ -159,7 +156,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
           </div>;
         </div>;
       )}
-;
+
       {/* Action Buttons */}";
       <div className="flex flex-wrap gap-2">;
         <div>Broken JSX</div>
@@ -176,22 +173,21 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
       {};
       )}
     </div>;
-  );,
-};
+  )}
 export default LinkMonitor;
 '"`;
 import React from "react";
 export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => { const [brokenLinks, setBrokenLinks] = useState ([]) ; const [fixedLinks, setFixedLinks] = useState ([]) ; const [isScanning, setIsScanning] = useState (false) ; const [scanProgress, setScanProgress] = useState (0) ; const [lastScanTime, setLastScanTime] = useState (null) ;"";,"});,"})";
 ;,"});,"})","});,"})";
 ;,"});,"})";
-export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true }) => {;,"});,"})";
+export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true }) => {,"});,"})";
     const [brokenLinks, setBrokenLinks] = useState([]);,"});,"})";
     const [fixedLinks, setFixedLinks] = useState([]);,"});,"})";
     const [isScanning, setIsScanning] = useState(false);,"});,"})";
     const [scanProgress, setScanProgress] = useState(0);,"});,"})";
     const [lastScanTime, setLastScanTime] = useState(null);,"});,"})";
     // comment;
-    const scanPageLinks = async () => {;,"});,"})";
+    const scanPageLinks = async () => {,"});,"})";
         setIsScanning(true);,"});,"})";
         setScanProgress(0);,"});,"})";
         const links = Array.from(document.querySelectorAll("a[href]"));,"});,"})";
@@ -201,19 +197,14 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         // comment;
         setScanProgress(((i + 1) / links.length) * 100);,"});,"})";
         // comment;
-        await new Promise(resolve => setTimeout(resolve, 10));,"});,"});";,
-}"});,"});";,
-}"});,"})";
+        await new Promise(resolve => setTimeout(resolve, 10));,"});,"});"}"});,"});"}"});,"})";
     setBrokenLinks(results);,"});,"})";
     setLastScanTime(new Date());,"});,"})";
     setIsScanning(false);,"});,"})";
     // comment;
     results.forEach(result => {}"});,"})";
       if (onLinkIssue) {}"});,"})";
-        onLinkIssue(result);,"});,"});";,
-}"});,"});";,
-});,"});,"});";,
-};,"});,"})";
+        onLinkIssue(result);,"});,"});"}"});,"});"});,"});,"});"};,"});,"})";
   // comment;
   const fixBrokenLink = async(originalUrl, validationResult) => {}"});,"})";
     if()";,"});,"})";
@@ -229,24 +220,19 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
       links.forEach(link => {}"});,"})";
         link.href = newUrl,";,"});,"})";
         link.setAttribute();""";,"});,"})";
-        link.setAttribute("title", "Fixed: Redirected from ${originalUrl}");,"});,"});";,
-});,"});,"})";
+        link.setAttribute("title", "Fixed: Redirected from ${originalUrl}");,"});,"});"});,"});,"})";
       // comment;
       const fix = {}"});,"})";
-        originalUrl,,"});,"})";
+        originalUrl,"});,"})";
         newUrl,";,"});,"})";
         type: "redirect",";,"});,"})";
         reason: "Automatically fixed broken internal link"};,"});,"})";
-      setFixedLinks(prev => [...prev, fix]);,"});,"});";,
-}"});,"});";,
-};,"});,"})";
+      setFixedLinks(prev => [...prev, fix]);,"});,"});"}"});,"});"};,"});,"})";
   // comment;
   const fixAllBrokenLinks = async () => {}"});,"})";
     for(const brokenLink of brokenLinks) {}"});,"})";
-      await fixBrokenLink(brokenLink.url, brokenLink);,"});,"});";,
-}"});,"})";
-    setBrokenLinks([]);,"});,"});";,
-};,"});,"})";
+      await fixBrokenLink(brokenLink.url, brokenLink);,"});,"});"}"});,"})";
+    setBrokenLinks([]);,"});,"});"};,"});,"})";
   // comment;
   const generateRedirectRules = () => {}"});,"})";
   return <div>Component</div>;
@@ -258,8 +244,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
     a.href = url,"});,"})";
     a.download = "redirect-rules.txt";,"});,"})";
     a.click();,"});,"})";
-    URL.revokeObjectURL(url);,"});,"});";,
-};,"});,"})";
+    URL.revokeObjectURL(url);,"});,"});"};,"});,"})";
   // comment;
   const exportReport = () => {}"});,"})";
   return <div>Component</div>;
@@ -279,14 +264,11 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
     a.href = url,"";,"});,"})";
     a.download = "broken-links-report.json";,"});,"})";
     a.click();,"});,"})";
-    URL.revokeObjectURL(url);,"});,"});";,
-};,"});,"})";
+    URL.revokeObjectURL(url);,"});,"});"};,"});,"})";
   // comment;
   useEffect(() => {}"});,"})";
     if(autoFix) {}"});,"})";
-      scanPageLinks();,"});,"});";,
-}"});,"});";,
-}, [autoFix]);""";,"});,"})";
+      scanPageLinks();,"});,"});"}"});,"});"}, [autoFix]);""";,"});,"})";
   return ("""";,"});,"})";
     <div className="link-monitor bg-white dark: bg-gray-800 rounded-lg shadow-lg p-6 max-w-4xl mx-auto">""","});,"})";
       <div className="flex items-center justify-between mb-6">"""";,"});,"})";
@@ -432,8 +414,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         </div>;,"});,"})";
       )}"});,"})";
     </div>;,"});,"})";
-  );,"});,"});";,
-};,"});,"})";
+  );,"});,"});"};,"});,"})";
 export default LinkMonitor;"";,"});,"})";
 """"`;,"});,"})";
  export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => {};

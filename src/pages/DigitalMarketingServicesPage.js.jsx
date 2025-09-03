@@ -13,8 +13,7 @@ const MarketingServices = [];
         icon: <Search className="h-8 w-8 text-zion-cyan"/>,"";
         category: "SEO","";
         badge: "Popular","";
-        link: "/request-quote?service=seo";,
-},;
+        link: "/request-quote?service=seo"},;
     {}
 ";
 "";
@@ -25,8 +24,7 @@ const MarketingServices = [];
         icon: <TrendingUp className="h-8 w-8 text-zion-purple"/>,"";
         category: "PPC","";
         badge: "Premium","";
-        link: "/request-quote?service=ppc";,
-},;
+        link: "/request-quote?service=ppc"},;
     {}
 ";
 "";
@@ -36,8 +34,7 @@ const MarketingServices = [];
         features["Content creation", "Community management", "Paid social ads", "Analytics reporting"],;"";
         icon: <Share2 className="h-8 w-8 text-zion-blue"/>,"";
         category: "Social Media","";
-        link: "/request-quote?service=social-media";,
-},;
+        link: "/request-quote?service=social-media"},;
     {}
 ";
 "";
@@ -47,8 +44,7 @@ const MarketingServices = [];
         features["Content planning", "Blog writing", "Infographics", "Content distribution"],;"";
         icon: <FileText className="h-8 w-8 text-zion-cyan"/>,"";
         category: "Content","";
-        link: "/request-quote?service=content-marketing";,
-},;
+        link: "/request-quote?service=content-marketing"},;
     {}
 ";
 "";
@@ -58,8 +54,7 @@ const MarketingServices = [];
         features["List building", "Template design", "Automation", "A/B testing"],;"";
         icon: <Mail className="h-8 w-8 text-zion-purple"/>,"";
         category: "Email","";
-        link: "/request-quote?service=email-marketing";,
-},;
+        link: "/request-quote?service=email-marketing"},;
     {}
 ";
 "";
@@ -69,8 +64,7 @@ const MarketingServices = [];
         features["Performance tracking", "ROI analysis", "Custom dashboards", "Monthly reports"],;"";
         icon: <BarChart3 className="h-8 w-8 text-zion-blue"/>,"";
         category: "Analytics","";
-        link: "/request-quote?service=marketing-analytics";,
-},;
+        link: "/request-quote?service=marketing-analytics"},;
     {}
 ";
 "";
@@ -80,8 +74,7 @@ const MarketingServices = [];
         features["A/B testing", "User experience", "Landing page optimization", "Funnel analysis"],;"";
         icon: <CheckCircle className="h-8 w-8 text-zion-cyan"/>,"";
         category: "CRO","";
-        link: "/request-quote?service=conversion-optimization";,
-},;
+        link: "/request-quote?service=conversion-optimization"},;
     {}
 ";
 "";
@@ -91,8 +84,7 @@ const MarketingServices = [];
         features["Influencer research", "Campaign management", "Content coordination", "Performance tracking"],;"";
         icon: <Users className="h-8 w-8 text-zion-purple"/>,"";
         category: "Influencer","";
-        link: "/request-quote?service=influencer-marketing";,
-},;
+        link: "/request-quote?service=influencer-marketing"},;
     {}
 ";
 "";
@@ -102,8 +94,7 @@ const MarketingServices = [];
         features["Script writing", "Video production", "Editing", "Distribution strategy"],;"";
         icon: <Video className="h-8 w-8 text-zion-blue"/>,"";
         category: "Video","";
-        link: "/request-quote?service=video-marketing";,
-},;
+        link: "/request-quote?service=video-marketing"},;
     {}
 ";
 "";
@@ -113,8 +104,7 @@ const MarketingServices = [];
         features["Logo design", "Marketing materials", "Social media graphics", "Brand guidelines"],;"";
         icon: <FileText className="h-8 w-8 text-zion-cyan"/>,"";
         category: "Design","";
-        link: "/request-quote?service=graphic-design";,
-},;
+        link: "/request-quote?service=graphic-design"},;
     {}
 ";
 "";
@@ -124,8 +114,7 @@ const MarketingServices = [];
         features["Workflow setup", "Lead nurturing", "CRM integration", "Performance monitoring"],;"";
         icon: <Zap className="h-8 w-8 text-zion-purple"/>,"";
         category: "Automation","";
-        link: "/request-quote?service=marketing-automation";,
-},;
+        link: "/request-quote?service=marketing-automation"},;
     {}
 ";
 "";
@@ -135,8 +124,7 @@ const MarketingServices = [];
         features["Local keyword optimization", "Review management", "Citation building", "Local content"],;"";
         icon: <Globe className="h-8 w-8 text-zion-blue"/>,"";
         category: "Local SEO","";
-        link: "/request-quote?service=local-seo";,
-},;
+        link: "/request-quote?service=local-seo"},;
     {}
 ";
 "";
@@ -146,8 +134,7 @@ const MarketingServices = [];
         features["Product optimization", "Shopping campaigns", "Retargeting", "Customer retention"],;"";
         icon: <ShoppingCart className="h-8 w-8 text-zion-cyan"/>,"";
         category: "E-commerce","";
-        link: "/request-quote?service=ecommerce-marketing";,
-},;
+        link: "/request-quote?service=ecommerce-marketing"},;
     {}
 ";
 "";
@@ -157,8 +144,7 @@ const MarketingServices = [];
         features["Market analysis", "Competitive research", "Strategy development", "Implementation planning"],;"";
         icon: <CheckCircle className="h-8 w-8 text-zion-purple"/>,"";
         category: "Consulting","";
-        link: "/request-quote?service=marketing-consulting";,
-},;
+        link: "/request-quote?service=marketing-consulting"},;
     {}
 ";
 "";
@@ -168,8 +154,7 @@ const MarketingServices = [];
         features["Brand strategy", "Visual identity", "Messaging framework", "Brand guidelines"],;"";
         icon: <Eye className="h-8 w-8 text-zion-blue"/>,"";
         category: "Branding","";
-        link: "/request-quote?service=brand-development";,
-},;
+        link: "/request-quote?service=brand-development"},;
     {}
 ";
 "";
@@ -179,8 +164,7 @@ const MarketingServices = [];
         features["Tool assessment", "Integration planning", "Implementation", "Training"],;"";
         icon: <Monitor className="h-8 w-8 text-zion-cyan"/>,"";
         category: "MarTech","";
-        link: "/request-quote?service=marketing-technology";,
-}
+        link: "/request-quote?service=marketing-technology"}
 ];";
 const categories = ["";
     { name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },"";
@@ -307,14 +291,10 @@ export {};
         </div>;
       </div>;
     </div>)}
-;
 
-export { MarketingServices, DigitalMarketingServicesPage };
-;
-export { MarketingServices, DigitalMarketingServicesPage };
-;
-export { MarketingServices, DigitalMarketingServicesPage };
-;
-export { MarketingServices, DigitalMarketingServicesPage };
-;
-export { MarketingServices, DigitalMarketingServicesPage };
+
+export { MarketingServices, DigitalMarketingServicesPage }
+export { MarketingServices, DigitalMarketingServicesPage }
+export { MarketingServices, DigitalMarketingServicesPage }
+export { MarketingServices, DigitalMarketingServicesPage }
+export { MarketingServices, DigitalMarketingServicesPage }

@@ -1,5 +1,5 @@
 #!/usr/bin/env node;
-;
+
 import fs from "fs";
 import path from "path";
 import { fileURLToPath  } from "url";
@@ -81,7 +81,7 @@ const corruptedFiles = [;
 // Template for a basic service page;
 const servicePageTemplate = (serviceName, displayName) => `import React from "react";
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3  } from "lucide-react";
-export default function ${serviceName}() {;
+export default function ${serviceName}() {
   const features = [;
   "AI-powered ${displayName.toLowerCase()} optimization",;
     "Automated ${displayName.toLowerCase()} management",;
@@ -107,21 +107,18 @@ export default function ${serviceName}() {;
     "Technology & SaaS";
   ];
   const pricing = [;
-  {;
+  {
   name: "Starter",;
       price: "$299/mo",;
-      details: ["Up to 10 users", "Basic features", "Email support", "Standard SLA"];,;,
-},;
-    {;
+      details: ["Up to 10 users", "Basic features", "Email support", "Standard SLA"]},;
+    {
   name: "Professional",;
       price: "$799/mo",;
-      details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"];,;,
-},;
-    {;
+      details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"]},;
+    {
   name: "Enterprise",;
       price: "$1,999/mo",;
-      details: ["Unlimited users", "Custom AI models", "Full ${displayName.toLowerCase()} suite", "24/7 dedicated support"];,;,
-}
+      details: ["Unlimited users", "Custom AI models", "Full ${displayName.toLowerCase()} suite", "24/7 dedicated support"]}
   ];
   return (;
     <div className="min-h-screen bg-white">;
@@ -137,7 +134,7 @@ export default function ${serviceName}() {;
           </p>;
         </div>;
       </section>;
-;
+
       <section className="py-16 max-w-6xl mx-auto px-6">;
         <div className="grid md:grid-cols-2 gap-10">;
           <div>;
@@ -180,7 +177,7 @@ export default function ${serviceName}() {;
           </div>;
         </div>;
       </section>;
-;
+
       <section className="py-16 bg-gray-50">;
         <div className="max-w-6xl mx-auto px-6">;
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Key Benefits</h2>;
@@ -197,7 +194,7 @@ export default function ${serviceName}() {;
           </div>;
         </div>;
       </section>;
-;
+
       <section className="py-16">;
         <div className="max-w-6xl mx-auto px-6">;
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Industries We Serve</h2>;
@@ -214,7 +211,7 @@ export default function ${serviceName}() {;
           </div>;
         </div>;
       </section>;
-;
+
       <section className="py-16 bg-indigo-600">;
         <div className="max-w-4xl mx-auto px-6 text-center">;
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your ${displayName}?</h2>;
@@ -232,46 +229,39 @@ export default function ${serviceName}() {;
         </div>;
       </section>;
     </div>;
-  );,;,
-}
+  )}
 `;
 // Function to extract service name from file path;
-function getServiceName(filePath) {;
+function getServiceName(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
   // Convert kebab-case or camelCase to PascalCase;
   return fileName;
     .split(/[-_]/);
     .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
-    .join("");,;,
-}
-;
+    .join("")}
+
 // Function to extract display name from service name;
-function getDisplayName(serviceName) {;
+function getDisplayName(serviceName) {
   // Remove common prefixes and convert to readable format;
   return serviceName;
     .replace(/^AI/, "");
     .replace(/([A-Z])/g, " $1");
-    .trim();,;,
-}
-;
+    .trim()}
+
 // Fix corrupted files;
-corruptedFiles.forEach(filePath => {;
-  try {;
+corruptedFiles.forEach(filePath => {
+  try {
   const serviceName = getServiceName(filePath);
     const displayName = getDisplayName(serviceName);
     console.log(`Fixing ${filePath}...`);
     // Ensure directory exists;
     const dir = path.dirname(filePath);
-    if (!fs.existsSync(dir)) {;
-  fs.mkdirSync(dir, { recursive: true });,;,
-}
-    ;
+    if (!fs.existsSync(dir)) {
+  fs.mkdirSync(dir, { recursive: true })}
     // Write the fixed content;
     const content = servicePageTemplate(serviceName, displayName);
     fs.writeFileSync(filePath, content, "utf8");
-    console.log(`✓ Fixed ${filePath}`);,;,
-} catch (error) {;
-  console.error(`✗ Error fixing ${filePath}:`, error.message);,;,
-}
+    console.log(`✓ Fixed ${filePath}`)} catch (error) {
+  console.error(`✗ Error fixing ${filePath}:`, error.message)}
 });
 console.log("\\nFixed all corrupted service files!")

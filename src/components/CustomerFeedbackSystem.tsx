@@ -28,14 +28,14 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({}
 },;
       {};
     setFilteredFeedback(sampleFeedback) }, []) ;
-;
+
   // Calculate stats;
   useEffect(() => {};
 };,
 }, []);, []);
     if(feedback.length > 0) {};
         return acc}, {} as Record < string, any>) ;
-;
+
           count,;
           percentage: (count / totalFeedback) * 100}) ) ;
         .sort((a, b) => b.count - a.count) ;
@@ -43,7 +43,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({}
       setStats({};
 }) }
   }, [feedback]) ;
-;
+
   // Filter feedback;
   useEffect(() => {};
 };,
@@ -63,18 +63,17 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({}
         f.customerName.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         f.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       )}
-;
+
     setFilteredFeedback(filtered.slice (0, maxFeedback) ) }, [feedback, selectedCategory, selectedRating, searchQuery, maxFeedback]) ;
-;
+
   // Handle feedback submission;
-  ;
+
     if(newFeedback.rating === 0 || !newFeedback.comment.trim () ) return;
     const feedback: Feedback = {};
 };
 ;
     setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' });
-    setShowFeedbackForm(false)};
-;
+    setShowFeedbackForm(false)}
   // Handle helpful/unhelpful votes';
   ;
         return {};
@@ -88,17 +87,16 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({}
       default: return 'text-yellow-400 bg-yellow-400/20'}  };
 ;
   // Get category color;
-  ;
-  ;
-  ;
+
+
+
 ';
   'service': 'text-blue-400 bg-blue-400/20',';
       'product': 'text-green-400 bg-green-400/20',';
       'support': 'text-purple-400 bg-purple-400/20',;  ;
   ;';
-  'overall': 'text-zion-cyan bg-zion-cyan/20';,
-};
-    return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20'};
+  'overall': 'text-zion-cyan bg-zion-cyan/20'}
+    return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20'}
   return ();
     <div className="w-full max-w-6xl mx-auto p-6">;
       {/* Header */}";
@@ -133,7 +131,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({}
             <div className="text-zinc-400">Response Rate</div>;
           </motion.div>;
         </div>) }
-;
+
       {/* Top Categories */}
       {};
                 <div className="text-2xl font-bold text-white mb-1">{category.count}</div>";
@@ -143,7 +141,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({}
             ))}
           </div>;
         </div>;) }
-;
+
       {/* Filters and Search */}
       {};
           {/* Category Filter */}
@@ -189,7 +187,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({}
             <MessageCircle className="w-4 h-4"  />;            Add Feedback;
           </button>;
         </div>) }
-;
+
       {/* Feedback Form */}
       <AnimatePresence>;
         {};
@@ -285,12 +283,12 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({}
 
             {/* Comment */}";
             <p className="text-zinc-300 mb-4 leading-relaxed">{item.comment}</p>;
-;
+
             {/* Tags */}
             {};
                   </span>) ) }
               </div>) }
-;
+
             {/* Actions */}";
             <div className="flex items-center justify-between pt-4 border-t border-zinc-700/50">";
               <div className="flex items-center gap-4">;
@@ -326,6 +324,6 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">;
             Add Feedback;
           </button>;
-        </motion.div>;) };
-    </div>;) };
+        </motion.div>;) }
+    </div>;) }
 '"`;

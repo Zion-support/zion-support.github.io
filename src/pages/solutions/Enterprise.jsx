@@ -78,8 +78,7 @@ const EnterpriseSolutions = () => {};
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>;
                     </svg>;
                   </Link>;
-                </div>);,
-})}
+                </div>)})}
           </div>;
         </div>;
       </div>;
@@ -108,8 +107,7 @@ const EnterpriseSolutions = () => {};
                         <span className="text-gray-300">{solution}</span>;
                       </div>))}
                   </div>;
-                </div>);,
-})}
+                </div>)})}
           </div>;
         </div>;
       </div>;
@@ -135,8 +133,7 @@ const EnterpriseSolutions = () => {};
                   </div>;
                   <h3 className="text-xl font-bold mb-4">{benefit.title}</h3>;
                   <p className="text-gray-300">{benefit.description}</p>;
-                </div>);,
-})}
+                </div>)})}
           </div>;
         </div>;
       </div>;
@@ -163,17 +160,11 @@ const EnterpriseSolutions = () => {};
         </div>;
       </div>;
     </div>;
-  );,
-};
-;
+  )}
 export default EnterpriseSolutions;
-;
-export { EnterpriseSolutions, Icon, Icon, Icon };
-;
-export { EnterpriseSolutions, Icon, Icon, Icon };
-;
-export { EnterpriseSolutions, Icon, Icon, Icon };
-;
-export { EnterpriseSolutions, Icon, Icon, Icon };
-;
-export { EnterpriseSolutions, Icon, Icon, Icon };
+
+export { EnterpriseSolutions, Icon, Icon, Icon }
+export { EnterpriseSolutions, Icon, Icon, Icon }
+export { EnterpriseSolutions, Icon, Icon, Icon }
+export { EnterpriseSolutions, Icon, Icon, Icon }
+export { EnterpriseSolutions, Icon, Icon, Icon }

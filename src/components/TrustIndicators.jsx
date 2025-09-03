@@ -64,7 +64,7 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
                 </div>) ) }
             </div>;
           </div>) }
-;
+
         {/* Certifications Section */}";
         {};
               {certifications.map((cert, index) => (<div key={index} className="text-center p-4 bg-white/5 rounded-lg border border-white/10">";
@@ -77,7 +77,7 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
                 </div>))}
             </div>;
           </div>) }
-;
+
         {/* Customer Testimonials Preview */}";
         <div className="mt-16 text-center">";
           <div className="flex justify-center items-center gap-2 mb-4">";

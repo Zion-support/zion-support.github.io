@@ -71,7 +71,7 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {};
                     </li>;
                   </ul>;
                 </div>;
-                ;
+
                 <div>;
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">;
                     <Shield className="w-4 h-4 mr-2" />;
@@ -143,7 +143,7 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {};
                   </ul>;
                 </div>;
               </div>;
-              ;
+
               <div className="mt-4 pt-4 border-t border-zion-purple/20">;
                 <div>Broken JSX</div>
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">;
@@ -202,7 +202,7 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {};
                     </li>;
                   </ul>;
                 </div>;
-                ;
+
                 <div>;
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">;
                     <HardDrive className="w-4 h-4 mr-2" />;
@@ -232,7 +232,7 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {};
                   </ul>;
                 </div>;
               </div>;
-              ;
+
               <div className="mt-4 pt-4 border-t border-zion-purple/20">;
                 <div>Broken JSX</div>
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">;
@@ -321,5 +321,4 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {};
         Contact;
       </Link>;
     </nav>;
-  );,
-} ;
+  )}

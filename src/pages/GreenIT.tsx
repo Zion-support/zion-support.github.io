@@ -10,7 +10,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
     { id: 'hardware', name: 'Green Hardware', count: 3 },    { id: 'software', name: 'Sustainable Software', count: 3 },;
     { id: 'data', name: 'Data Centers', count: 2 }
   ];
-;
+
   const greenSolutions: unknown = [{}
       id: 'energy - monitoring',;
       name: 'Smart Energy Monitoring',;
@@ -33,8 +33,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
       ],;
       savings: '15 - 25% energy reduction',;
       implementation: '2 - 4 weeks',;
-      pricing: 'Starting from $5,000';,
-},;
+      pricing: 'Starting from $5,000'},;
     {}
       id: 'virtualization',;
       name: 'Server Virtualization',;
@@ -56,8 +55,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
       ],;
       savings: '60 - 80% power reduction',;
       implementation: '4 - 8 weeks',;
-      pricing: 'Starting from $15,000';,
-},;
+      pricing: 'Starting from $15,000'},;
     {}
       id: 'cloud - optimization',;
       name: 'Cloud Infrastructure Optimization',;
@@ -79,8 +77,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
       ],;
       savings: '20 - 40% cost reduction',;
       implementation: '3 - 6 weeks',;
-      pricing: 'Starting from $8,000';,
-},;
+      pricing: 'Starting from $8,000'},;
     {}
       id: 'data - center - efficiency',;
       name: 'Data Center Efficiency',;
@@ -102,8 +99,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
       ],;
       savings: '30 - 50% energy reduction',;
       implementation: '8 - 16 weeks',;
-      pricing: 'Starting from $25,000';,
-},;
+      pricing: 'Starting from $25,000'},;
     {}
       id: 'smart - lighting',;
       name: 'Smart Lighting Systems',;
@@ -125,8 +121,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
       ],;
       savings: '40 - 60% energy reduction',;
       implementation: '2 - 3 weeks',;
-      pricing: 'Starting from $3,000';,
-},;
+      pricing: 'Starting from $3,000'},;
     {}
       id: 'green - software',;
       name: 'Sustainable Software Development',;
@@ -148,8 +143,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
       ],;
       savings: '20 - 35% energy reduction',;
       implementation: 'Ongoing',;
-      pricing: 'Starting from $10,000';,
-},;
+      pricing: 'Starting from $10,000'},;
     {}
       id: 'renewable - energy',;
       name: 'Renewable Energy Integration',;
@@ -171,8 +165,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
       ],;
       savings: '40 - 80% energy costs',;
       implementation: '12 - 24 weeks',;
-      pricing: 'Starting from $50,000';,
-},;
+      pricing: 'Starting from $50,000'},;
     {}
       id: 'green - hardware',;
       name: 'Energy - Efficient Hardware',;
@@ -194,8 +187,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
       ],;
       savings: '25 - 40% power reduction',;
       implementation: '1 - 2 weeks',;
-      pricing: 'Starting from $2,000';,
-},;
+      pricing: 'Starting from $2,000'},;
     {}
       id: 'waste - reduction',;
       name: 'Electronic Waste Reduction',;
@@ -217,8 +209,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
       ],;
       savings: 'Varies by program',;
       implementation: '2 - 4 weeks',;
-      pricing: 'Starting from $1,000';,
-},;
+      pricing: 'Starting from $1,000'},;
     {}
       id: 'carbon - tracking',;
       name: 'Carbon Footprint Tracking',;
@@ -240,8 +231,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
       ],;
       savings: 'Measurable impact',;
       implementation: '4 - 6 weeks',;
-      pricing: 'Starting from $6,000';,
-},;
+      pricing: 'Starting from $6,000'},;
     {}
       id: 'green - networking',;
       name: 'Energy - Efficient Networking',;
@@ -263,8 +253,7 @@ export default function GreenIT(...args: unknown[]): unknown {};
       ],;
       savings: '20 - 35% energy reduction',;
       implementation: '3 - 5 weeks',;
-      pricing: 'Starting from $12,000';,
-},;
+      pricing: 'Starting from $12,000'},;
     {}
       id: 'sustainability - reporting',;
       name: 'Sustainability Reporting Platform',;
@@ -286,14 +275,12 @@ export default function GreenIT(...args: unknown[]): unknown {};
       ],;
       savings: 'Time and resource savings',;
       implementation: '6 - 8 weeks',;
-      pricing: 'Starting from $8,000';,
-}
+      pricing: 'Starting from $8,000'}
   ];
 ;
 export {};
   const [expandedSection, setExpandedSection] = useState<string | null>(null);';
-  const [selectedCategory, setSelectedCategory] = useState('all')};
-;
+  const [selectedCategory, setSelectedCategory] = useState('all')}
   return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       <div>Broken JSX</div>
@@ -380,8 +367,7 @@ export {};
 '''`;
                   selectedCategory === category.id'''`'`;
                     ? 'bg-gradient-to-r from-green-400 to-blue-500 text-white'''`'`'`;
-                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50'````;,
-}`}
+                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50'````}`}
               >;
                 {category.name} ({category.count}) </button>) ) }
           </div>";
@@ -588,16 +574,11 @@ export {};
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
 
-export { GreenIT };
-;
-export { GreenIT };
-;
-export { GreenIT };
-;
-export { GreenIT };
-;
-export { GreenIT, GreenIT };
+
+export { GreenIT }
+export { GreenIT }
+export { GreenIT }
+export { GreenIT }
+export { GreenIT, GreenIT }

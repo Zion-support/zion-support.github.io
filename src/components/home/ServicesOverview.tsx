@@ -34,14 +34,13 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {};
 
               <div>Broken JSX</div>
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true"  />              </Link>;
-;
+
               {/* Hover indicator */}";
               <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue group-hover:w-full transition-all duration-700" />;
             </motion.div>;
-          ))};
+          ))}
         </div>;
       </div>;
     </section>;
-  )};
-;
+  )}
 export default ServicesOverview}}}'"`;

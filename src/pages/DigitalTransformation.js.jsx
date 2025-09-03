@@ -103,8 +103,7 @@ export {};
                   </div>"";
                   <div className="text-zion-slate-light">{stat.label}</div>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>";
@@ -150,8 +149,7 @@ export {};
                     <ArrowRight className="w-4 h-4" />;
                   </Link>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>";
@@ -252,8 +250,7 @@ export {};
                     </div>;
                   </div>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>";
@@ -318,14 +315,10 @@ export {};
         </div>;
       </section>;
     </div>)}
-;
 
-export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
-;
-export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
-;
-export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
-;
-export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
-;
-export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
+
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent }
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent }
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent }
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent }
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent }

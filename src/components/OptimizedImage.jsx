@@ -25,15 +25,14 @@ export default function Page() {};
 };
     setHasError(true);
     setCurrentSrc(fallback);
-    onError?.();,
-};
+    onError?.()}
   return ();
     <div className={`relative overflow-hidden ${className}`}>;
       <AnimatePresence>;
         {/* Loading Placeholder */}
         {};
         )}
-;
+
         {/* Error State */}
         {};
         )}
@@ -47,6 +46,5 @@ export default function Page() {};
       {};
       )}
     </div>;
-  );,
-};
+  )}
 '"`

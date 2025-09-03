@@ -19,7 +19,7 @@ const AboutStory = () => {};
     {};
 }
   ];
-;
+
   const missionValues = [;
     {};
 },;
@@ -28,7 +28,7 @@ const AboutStory = () => {};
     {};
 }
   ];
-;
+
   const keyAchievements = [;
     {};
 },;
@@ -43,7 +43,7 @@ const AboutStory = () => {};
     {};
 }
   ];
-;
+
   const companyCulture = [;
     {};
 },;
@@ -54,7 +54,7 @@ const AboutStory = () => {};
     {};
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
       {/* Hero Section */}
@@ -125,12 +125,12 @@ const AboutStory = () => {};
           <div className="relative">;
             {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-px w-0.5 h-full bg-gradient-to-b from-cyan-500 to-purple-500"></div>;
-            ;
+
             <div className="space-y-16">;
               {};
                   {/* Timeline Dot */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-full border-4 border-slate-900 z-10"></div>;
-                  ;
+
                   {/* Content */}
                   <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>;
                     <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300">;
@@ -143,10 +143,10 @@ const AboutStory = () => {};
                           <div className="text-sm text-gray-400">{item.milestone}</div>;
                         </div>;
                       </div>;
-                      ;
+
                       <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>;
                       <p className="text-gray-300 mb-4">{item.description}</p>;
-                      ;
+
                       <div className="space-y-2">;
                         {};
                           <div key={idx} className="flex items-center gap-2 text-sm text-gray-400">;
@@ -300,7 +300,5 @@ const AboutStory = () => {};
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default AboutStory;

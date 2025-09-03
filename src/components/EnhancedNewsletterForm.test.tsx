@@ -9,7 +9,5 @@ describe(&apos;EnhancedNewsletterForm&apos, () => {};
 }
     // comment;
     render(<EnhancedNewsletterForm / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

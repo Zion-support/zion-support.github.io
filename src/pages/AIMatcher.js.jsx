@@ -17,8 +17,7 @@ const AIMatcher = () => {}
             question: 'What industry are you in?','';
             options[;''';
                 'Technology & Software',Healthcare & Life Sciences',Financial Services',Manufacturing & Industrial',Retail & E-commerce',Education & Training',Government & Public Sector',Other';
-            ];,
-},;
+            ]},;
         {}
 ';
 '';
@@ -27,8 +26,7 @@ const AIMatcher = () => {}
             question: 'What is your comp size?','';
             options[;''';
                 'Startup (1-50 employees),Small Business (51-200 employees),Medium Business (201-1000 employees),Enterprise (1000+ employees);
-            ];,
-},;
+            ]},;
         {}
 ';
 '';
@@ -37,8 +35,7 @@ const AIMatcher = () => {}
             question: 'What are your primary AI goals?','';
             options[;''';
                 'Automate repetitive tasks',Improve customer experience',Enhance decision making',Optimize operations',Increase revenue',Reduce costs',Innovate products/services';
-            ];,
-},;
+            ]},;
         {}
 ';
 '';
@@ -47,8 +44,7 @@ const AIMatcher = () => {}
             question: 'What is your budget range for AI implementation?','';
             options[;''';
                 'Under $10,000',$10,000 - $50,000',$50,000 - $200,000',$200,000 - $1,000,000',Over $1,000,000';
-            ];,
-},;
+            ]},;
         {}
 ';
 '';
@@ -57,8 +53,7 @@ const AIMatcher = () => {}
             question: 'What is your implementation timeline?','';
             options[;''';
                 'Immediate (0-3 months),Short-term (3-6 months),Medium-term (6-12 months),Long-term (1+ years);
-            ];,
-}
+            ]}
     ];
     const aiSolutions = [];
         {}
@@ -71,8 +66,7 @@ const AIMatcher = () => {}
             bestFor['Data-driven decision making',Performance tracking',Market analysis'],;''';
             features['Predictive Analytics',Real-time Dashboards',Custom Reports'],;''';
             href: '/services/ai-business-intelligence',;
-            icon: TrendingUp;,
-},;
+            icon: TrendingUp},;
         {}
 ';
 '';
@@ -83,8 +77,7 @@ const AIMatcher = () => {}
             bestFor['Customer acquisition',Campaign optimization',Lead generation'],;''';
             features['Campaign Automation',Customer Segmentation',ROI Optimization'],;''';
             href: '/services/ai-marketing-automation',;
-            icon: Target;,
-},;
+            icon: Target},;
         {}
 ';
 '';
@@ -95,8 +88,7 @@ const AIMatcher = () => {}
             bestFor['Operational efficiency',Error reduction',Cost savings'],;''';
             features['Process Optimization',Workflow Design',Integration'],;''';
             href: '/services/ai-workflow-automation',;
-            icon: Zap;,
-},;
+            icon: Zap},;
         {}
 ';
 '';
@@ -107,8 +99,7 @@ const AIMatcher = () => {}
             bestFor['Asset optimization',Cost management',Compliance'],;''';
             features['Asset Tracking',Predictive Maintenance',Cost Analytics'],;''';
             href: '/ai-powered-it-asset-management',;
-            icon: Cloud;,
-},;
+            icon: Cloud},;
         {}
 ';
 '';
@@ -119,8 +110,7 @@ const AIMatcher = () => {}
             bestFor['End-to-end automation',Scalability',Innovation'],;''';
             features['Process Automation',Decision Support',Performance Analytics'],;''';
             href: '/autonomous-business-operations-platform',;
-            icon: Brain;,
-},;
+            icon: Brain},;
         {}
 ';
 '';
@@ -131,15 +121,14 @@ const AIMatcher = () => {}
             bestFor['24/7 support',Response time improvement',Customer satisfaction'],;''';
             features['Chatbot Integration',Ticket Routing',Knowledge Management'],;''';
             href: '/services/ai-customer-service-automation',;
-            icon: Users;,
-}
+            icon: Users}
     ];
     const handlePrevious = () => {}
   return <div>Component</div>;
 };
         if (currentStep > 1) {}
             setCurrentStep(currentStep - 1)}
-    };
+    }
     const generateRecommendations = () => {}
   return <div>Component</div>;
 };
@@ -169,13 +158,13 @@ const AIMatcher = () => {}
 ''';
             filteredSolutions = filteredSolutions.filter(s => s.category === 'Customer Experience')}
         setRecommendations(filteredSolutions.slice(0, 3));
-        setCurrentStep(questions.length + 1)};
+        setCurrentStep(questions.length + 1)}
     const resetQuiz = () => {}
   return <div>Component</div>;
 };
         setCurrentStep (1) ;
         setAnswers ({}) ;
-        setRecommendations ([]) };
+        setRecommendations ([]) }
     const progressPercentage = (currentStep / questions.length) * 100;
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       {/* Hero Section */}"";
@@ -322,16 +311,12 @@ const AIMatcher = () => {}
           </motion.div>;
         </div>;
       </div>;
-    </div>)};
+    </div>)}
 export default AIMatcher;
-;
 
-export { AIMatcher };
-;
-export { AIMatcher };
-;
-export { AIMatcher };
-;
-export { AIMatcher };
-;
-export { AIMatcher };
+
+export { AIMatcher }
+export { AIMatcher }
+export { AIMatcher }
+export { AIMatcher }
+export { AIMatcher }

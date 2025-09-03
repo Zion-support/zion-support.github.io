@@ -14,9 +14,9 @@ const Guides: React.FC = () => {};
     {};
 },;
   ];
-;
+
   const categories = ['All', 'Beginner', 'Intermediate', 'Advanced'];
-;
+
   return (;
     <>;
       <Head>;
@@ -24,7 +24,7 @@ const Guides: React.FC = () => {};
         <meta name="description" content="Comprehensive guides for AI integration and marketplace success" />;
         <meta name="keywords" content="guides, tutorials, AI, marketplace, learning" />;
       </Head>;
-      ;
+
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">;
         {/* Header */}
         <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30">;
@@ -80,20 +80,20 @@ const Guides: React.FC = () => {};
                   </span>;
                   <span className="text-xs text-gray-400">{guide.readTime}</span>;
                 </div>;
-                ;
+
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors cursor-pointer">;
                   {guide.title}
                 </h3>;
-                ;
+
                 <p className="text-gray-300 text-sm mb-4">{guide.description}</p>;
-                ;
+
                 <div className="flex flex-wrap gap-2 mb-4">;
                   {};
                       #{tag}
                     </span>;
                   ))}
                 </div>;
-                ;
+
                 <button className="text-blue-400 hover:text-blue-300 text-sm font-medium group-hover:translate-x-1 transition-transform">;
                   Read Guide →;
                 </button>;
@@ -146,7 +146,5 @@ const Guides: React.FC = () => {};
         </footer>;
       </div>;
     </>;
-  );,
-};
-;
+  )}
 export default Guides;

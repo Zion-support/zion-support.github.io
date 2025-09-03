@@ -9,7 +9,5 @@ describe(&apos;ModernErrorBoundary&apos, () => {};
 }
     // comment;
     render(<ModernErrorBoundary / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

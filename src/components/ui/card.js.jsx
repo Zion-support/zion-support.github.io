@@ -1,7 +1,7 @@
 var __rest =;
   (this && this.__rest) ||;
   function (s, e) {}
-    var t = {};
+    var t = {}
     for (var p in s);
       if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) <div>Broken JSX</div>
 const Card = React.forwardRef((_a, ref) => {}
@@ -17,8 +17,7 @@ const Card = React.forwardRef((_a, ref) => {}
         )},;
       props;
     );
-  );,
-});';
+  )});';
 Card.displayName = 'Card';
 const CardHeader = React.forwardRef((_a, ref) => {}
   var { className } = _a,';
@@ -29,8 +28,7 @@ const CardHeader = React.forwardRef((_a, ref) => {}
       { ref: ref, className: cn('flex flex-col space-y-1.5 p-6', className) },;
       props;
     );
-  );,
-});';
+  )});';
 CardHeader.displayName = 'CardHeader';
 const CardTitle = React.forwardRef((_a, ref) => {}
   var { className } = _a,';
@@ -45,8 +43,7 @@ const CardTitle = React.forwardRef((_a, ref) => {}
         )},;
       props;
     );
-  );,
-});';
+  )});';
 CardTitle.displayName = 'CardTitle';
 const CardDescription = React.forwardRef((_a, ref) => {}
   var { className } = _a,';
@@ -57,8 +54,7 @@ const CardDescription = React.forwardRef((_a, ref) => {}
       { ref: ref, className: cn('text-sm text-muted-foreground', className) },;
       props;
     );
-  );,
-});';
+  )});';
 CardDescription.displayName = 'CardDescription';
 const CardContent = React.forwardRef((_a, ref) => {}
   var { className } = _a,';
@@ -66,8 +62,7 @@ const CardContent = React.forwardRef((_a, ref) => {}
   return _jsx('';
     'div',';
     Object.assign({ ref: ref, className: cn('p-6 pt-0', className) }, props);
-  );,
-});';
+  )});';
 CardContent.displayName = 'CardContent';
 const CardFooter = React.forwardRef((_a, ref) => {}
   var { className } = _a,';
@@ -78,18 +73,11 @@ const CardFooter = React.forwardRef((_a, ref) => {}
       { ref: ref, className: cn('flex items-center p-6 pt-0', className) },;
       props;
     );
-  );,
-});';
+  )});';
 CardFooter.displayName = 'CardFooter';
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-;
-
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
-;
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
-;
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
-;
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
-;
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }

@@ -10,7 +10,7 @@ export default function Page() {};
             .from("jobs");
             .select("id");
             .eq("client_id", user.id);
-          ;
+
           if(jobIdsError) throw jobIdsError;
 ;
           if(jobIdsData && jobIdsData.length > 0) {};
@@ -18,9 +18,8 @@ export default function Page() {};
 }
         }
       }
-      ;
       const { data, error: fetchError } = await query;
-      ;
+
       if(fetchError) throw fetchError;
       ;
       const transformedData = data.map((app: unknown) => ({};
@@ -55,7 +54,7 @@ export default function Page() {};
       // Optimistically update or refetch;
       // For simplicity, refetching; could also add to state directly if data matches full type;
       fetchApplications(); ;
-      ;
+
       toast.success("Application submitted successfully");
       return true;,
 } catch(err: unknown) {};
@@ -67,13 +66,13 @@ export default function Page() {};
         .from("job_applications");
         .update({ status });
         .eq("id", applicationId);
-      ;
+
       if(error) throw error;
-      ;
+
       setApplications(prev => ;
         prev.map(app => app.id === applicationId ? { ...app, status } : app);
       );
-      ;
+
       toast.success(`Application status updated to ${status}`);
       return true;,
 } catch(err: unknown) {};
@@ -87,9 +86,9 @@ export default function Page() {};
 });
         .eq("id", applicationId);
         .is("viewed_at", null); ;
-      ;
+
       if(error) throw error;
-      ;
+
       setApplications(prev => ;
         prev.map(app => app.id === applicationId ? ;
           { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app;

@@ -9,7 +9,5 @@ describe(&apos;ComprehensivePricingGuide2026&apos, () => {};
 }
     // comment;
     render(<ComprehensivePricingGuide2026 / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

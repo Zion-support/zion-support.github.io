@@ -4,7 +4,7 @@
   description?: string;
   keywords?: string,;
   ogImage?: string,;
-  canonical?: string,,;
+  canonical?: string,;
   noindex?: boolean,;
   showPerformanceMetrics?: boolean,;
   showSEOAnalysis?: boolean}
@@ -12,8 +12,7 @@
 export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({};
   showSEOAnalysis = false}) => {};
   const fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group";
-  const canonicalUrl = canonical || (typeof window !== "undefined" ? window.location.href : "");,
-}
+  const canonicalUrl = canonical || (typeof window !== "undefined" ? window.location.href : "")}
   return (";
     <div>Broken JSX</div>
       lazyLoadThreshold="{0.1}">";
@@ -22,16 +21,16 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({};
       >;
 <Head>;
           {/* comment */}
-;
+
           <title>{fullTitle}</title>";
           <meta name="description" content="{description}"  />;
           <meta name="keywords" content="{keywords}"  />";
           <meta name="viewport" content="width=device-width, initial-scale=1"  />";
           <meta name="robots" content="{noindex" ? "noindex,nofollow" : "index,follow"}       />;
-          ;
+
           {/* comment */}";
           {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"  />}
-;
+
           {/* comment */}";
           <meta property="og:title" content="{fullTitle}"  />";
           <meta property="og:description" content="{description}"  />";
@@ -56,18 +55,18 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({};
           <meta name="language" content="en"  />";
           <meta name="revisit-after" content="7 days"  />";
           <meta name="rating" content="general"  />;
-          ;
+
           {/* comment */}";
           <meta name="geo.region" content="US-DE"  />";
           <meta name="geo.placename" content="Middletown"  />";
           <meta name="geo.position" content="39.4496;-75.7163"  />";
           <meta name = "ICBM" content="39.4496, -75.7163"  />;
-          ;
+
           {/* comment */}";
           <meta name="contact" content="kleber@ziontechgroup.com"  />";
           <meta name="phone" content="+1-302-464-0950"  />";
           <meta name="address" content="364 E Main St STE 1008, Middletown, DE 19709"  />;
-          ;
+
           {/* comment */}";
           <meta httpEquiv="X-UA-Compatible" content="IE=edge"  />";
           <meta name="format-detection" content="telephone=no"  />";
@@ -76,20 +75,20 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({};
           <meta name="apple-mobile-web-app-capable" content="yes"  />";
           <meta name="apple-mobile-web-app-status-bar-style" content="default"  />";
           <meta name="apple-mobile-web-app-title" content="Zion Tech Group"  />;
-          ;
+
           {/* comment */}";
           <div>Broken JSX</div>
             crossOrigin="anonymous"  />";
           <div>Broken JSX</div>
             as="image"  />;
-          ;
+
           {/* comment */}";
           <link rel="icon" href="/favicon.ico"  />";
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"  />";
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"  />";
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"  />";
           <link rel="manifest" href="/site.webmanifest"  />;
-          ;
+
           {/* comment */}";
           <div>Broken JSX</div>
 }>;
@@ -104,8 +103,8 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({};
           {children}
         </main>;
       </div>;
-      ;
-      {/* Footer */};
+
+      {/* Footer */}
       <FuturisticFooter  />;
-    </div>;) };
+    </div>;) }
 '"`;

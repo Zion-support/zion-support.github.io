@@ -9,7 +9,5 @@ describe(&apos;MobileNavigation&apos, () => {};
 }
     // comment;
     render(<MobileNavigation / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

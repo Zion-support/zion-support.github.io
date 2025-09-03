@@ -25,25 +25,22 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({}
 },;
       {};
     setFiles(sampleFiles) }, []) ;
-;
+
   // Get status color and icon';
-      default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> }}};
+      default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> }}}
   // Get project status color';
       default: return 'text-zinc-400 bg-zinc-400/20'}
-  };
-;
+  }
   // Get priority color';
       default: return 'text-zinc-400 bg-zinc-400/20'}
-  };
-;
+  }
   // Get file type icon";
-      default: return <File className="w-5 h-5"  />}};
+      default: return <File className="w-5 h-5"  />}}
   // Format file size;
           existingReaction.count += 1} else {};
           msg.reactions.push({ type: reactionType, count: 1 })}
       }
-      return msg}) ) };
-;
+      return msg}) ) }
   return (";
     <div className="w-full max-w-7xl mx-auto p-6">;
       {/* Header */}";
@@ -125,7 +122,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({}
                     {member.availability.charAt(0) .toUpperCase () + member.availability.slice(1) }
                   </span>;
                 </div>;
-;
+
                 {/* Skills */}";
                 <div className="mb-4">;";
                   <h4 className="text-sm font-medium text-zinc-300 mb-2">Skills</h4>";
@@ -168,7 +165,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({}
               </motion.div>) ) }
           </div>;
         </motion.div>) }
-;
+
       {/* Projects Tab */}
       {};
               <div className="text-3xl font-bold text-white mb-2">{projects.length}</div>";
@@ -201,7 +198,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({}
           <div className="space-y-6">;
             {};
                 onClick={() => handleProjectSelect(project)}
-;
+
                 {/* Project Header */}";
                 <div className="flex items-start justify-between mb-4">";
                   <div className="flex-1">";
@@ -244,7 +241,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({}
                     />;
                   </div>;
                 </div>;
-;
+
                 {/* Project Details */}";
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">;";
                   <div className="p-3 bg-zinc-800/30 rounded-lg">";
@@ -264,7 +261,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({}
                     <div className="text-white font-medium">{project.teamMembers.length} members</div>;
                   </div>;
                 </div>;
-;
+
                 {/* Tags */}";
                 <div className="flex flex-wrap gap-2">;
                   {};
@@ -283,7 +280,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({}
             </button>;
           </div>;
         </motion.div>) }
-;
+
       {/* Communication Tab */}
       {};
               <div className="text-3xl font-bold text-white mb-2">{messages.length}</div>";
@@ -366,7 +363,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({}
             </div>;
           </div>;
         </motion.div>) }
-;
+
       {/* File Sharing Tab */}
       {};
               <div className="text-3xl font-bold text-white mb-2">{files.length}</div>";
@@ -441,6 +438,6 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({}
               </button>;
             </div>;
           </div>;
-        </motion.div>;) };
-    </div>;) };
+        </motion.div>;) }
+    </div>;) }
 '"`;

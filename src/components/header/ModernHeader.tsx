@@ -23,7 +23,7 @@ export function ModernHeader() {};
   return (;
     <>;
       {/* comment */}
-;
+
       <div className="bg-blue-900 text-white py-2">";
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
           <div className="flex items-center justify-between text-sm">";
@@ -75,7 +75,7 @@ export function ModernHeader() {};
                 <button className="flex items-center text-gray-700 hover: text-blue-600 transition-colors font-medium"">;
                   onMouseEnter="{()" => setIsServicesOpen(true)}";
                   onMouseLeave="{()" => setIsServicesOpen(false)}
-;
+
                 >;
                   Services";
                   <ChevronDown className="ml-1 h-4 w-4"  />;
@@ -83,7 +83,7 @@ export function ModernHeader() {};
                 {};
                     onMouseEnter="{()" => setIsServicesOpen(true)}";
                     onMouseLeave="{()" => setIsServicesOpen(false)}
-;
+
                   >";
                     <div className="grid grid-cols-2 gap-4 px-6">;
                       {};
@@ -91,7 +91,7 @@ export function ModernHeader() {};
                           <div className="text-sm text-gray-600">{service.description}</div>;
                         </Link>;
                       ))}
-;
+
                     </div>";
                     <div className="mt-4 pt-4 border-t border-gray-200 px-6">";
                       <div>Broken JSX</div>
@@ -101,7 +101,7 @@ export function ModernHeader() {};
                     </div>;
                   </div>,;
                 )}
-;
+
               </div>;
 ";
               <Link href="/about" className="text-gray-700 hover: text-blue-600 transition-colors font-medium">;
@@ -137,7 +137,7 @@ export function ModernHeader() {};
               <div>Broken JSX</div>
                 className="text-gray-700 hover: text-blue-600 transition-colors">",;
                 {isMobileMenuOpen ? <X className="h-6 w-6"  /> : <Menu className="h-6 w-6"  />}
-;
+
               </button>;
             </div>;
         {/* comment */}
@@ -152,7 +152,7 @@ export function ModernHeader() {};
                 {};
                     onClick="{closeMobileMenu}">;
                     {service.name}
-;
+
                   </Link>;
                 ))}";
                 <div>Broken JSX</div>
@@ -201,10 +201,9 @@ export function ModernHeader() {};
                 </Link>;
               </div>;
         )}
-;
+
       </header>;
     </>;
-  );";,
-}";
+  );"}";
 
 export {};

@@ -9,38 +9,32 @@ const FiveGEnterpriseSolutions = () => {}
         {}
             icon: Wifi,;
             title: "Ultra-Fast Connectivity","";
-            description: "Lightning-fast 5G network speeds for enterprise applications";,
-},;
+            description: "Lightning-fast 5G network speeds for enterprise applications"},;
         {}
 ";
             icon: Zap,"";
             title: "Low Latency","";
-            description: "Ultra-low latency for real-time applications and IoT devices";,
-},;
+            description: "Ultra-low latency for real-time applications and IoT devices"},;
         {}
 ";
             icon: Shield,"";
             title: "Enhanced Security","";
-            description: "Advanced security protocols for enterprise-grade protection";,
-},;
+            description: "Advanced security protocols for enterprise-grade protection"},;
         {}
 ";
             icon: BarChart3,"";
             title: "Network Slicing","";
-            description: "Customized network segments for different business needs";,
-},;
+            description: "Customized network segments for different business needs"},;
         {}
 ";
             icon: Network,"";
             title: "Edge Computing","";
-            description: "Distributed computing at the network edge for faster processing";,
-},;
+            description: "Distributed computing at the network edge for faster processing"},;
         {}
 ";
             icon: Users,"";
             title: "Massive IoT Support","";
-            description: "Support for thousands of connected devices simultaneously";,
-}
+            description: "Support for thousands of connected devices simultaneously"}
     ];
     const solutions = [];
         {}
@@ -48,49 +42,42 @@ const FiveGEnterpriseSolutions = () => {}
 "";
             title: "Smart Manufacturing","";
             description: "Enable Industry 4.0 with real-time monitoring and automation","";
-            applications["Predictive Maintenance", "Quality Control", "Supply Chain Optimization"];,
-},;
+            applications["Predictive Maintenance", "Quality Control", "Supply Chain Optimization"]},;
         {}
 ";
 "";
             title: "Healthcare Innovation","";
             description: "Transform healthcare delivery with connected medical devices","";
-            applications["Remote Monitoring", "Telemedicine", "Medical IoT"];,
-},;
+            applications["Remote Monitoring", "Telemedicine", "Medical IoT"]},;
         {}
 ";
 "";
             title: "Autonomous Vehicles","";
             description: "Power the future of transportation with reliable connectivity","";
-            applications["Vehicle-to-Everything", "Fleet Management", "Safety Systems"];,
-},;
+            applications["Vehicle-to-Everything", "Fleet Management", "Safety Systems"]},;
         {}
 ";
 "";
             title: "Smart Cities","";
             description: "Build intelligent urban infrastructure and services","";
-            applications["Traffic Management", "Energy Grids", "Public Safety"];,
-}
+            applications["Traffic Management", "Energy Grids", "Public Safety"]}
     ];
     const benefits = [];
         {}
 ";
             icon: Rocket,"";
             title: "10x Faster Speeds","";
-            description: "Achieve unprecedented network performance";,
-},;
+            description: "Achieve unprecedented network performance"},;
         {}
 ";
             icon: Target,"";
             title: "Improved Efficiency","";
-            description: "Streamline operations with real-time connectivity";,
-},;
+            description: "Streamline operations with real-time connectivity"},;
         {}
 ";
             icon: Globe,"";
             title: "Global Reach","";
-            description: "Connect your enterprise worldwide";,
-}";
+            description: "Connect your enterprise worldwide"}";
     ];"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">;
       <Helmet>";
@@ -292,16 +279,12 @@ const FiveGEnterpriseSolutions = () => {}
           </motion.div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default FiveGEnterpriseSolutions;
-;
 
-export { FiveGEnterpriseSolutions };
-;
-export { FiveGEnterpriseSolutions };
-;
-export { FiveGEnterpriseSolutions };
-;
-export { FiveGEnterpriseSolutions };
-;
-export { FiveGEnterpriseSolutions };
+
+export { FiveGEnterpriseSolutions }
+export { FiveGEnterpriseSolutions }
+export { FiveGEnterpriseSolutions }
+export { FiveGEnterpriseSolutions }
+export { FiveGEnterpriseSolutions }

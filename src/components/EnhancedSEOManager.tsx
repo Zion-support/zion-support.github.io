@@ -14,10 +14,10 @@ interface SEOData {};
 const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {};
 }, []);
     // Update meta tags dynamically;
-    ;
+
       // Update title;
       document.title = seoData.title;
-;
+
       // Update meta description';
       let metaDesc = document.querySelector('meta[name="description"]');
       if(!metaDesc) {};
@@ -43,7 +43,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       updateTwitterTag('twitter:title', seoData.title) ;
       updateTwitterTag('twitter:description', seoData.description) ;
       if(seoData.ogImage) updateTwitterTag('twitter:image', seoData.ogImage) ;
-      ;
+
       // Add canonical URL;
       if(seoData.canonicalUrl) {};
 }
@@ -56,7 +56,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
 }
     };
     updateMetaTags () ;
-;
+
     // Cleanup function;
     return () => {};
 };,
@@ -69,8 +69,8 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
   seoData.keywords.join(',)} />;";
         <meta name="robots" content="index, follow" />;";
         <meta name="author" content="Zion Tech Group" />;"        <meta name="viewport" content="width=device-width, initial-scale=1.0" />;
-        ;
-        {/* Security headers */};
+
+        {/* Security headers */}
         <meta httpEquiv="X - Content - Type - Options" content="nosniff" />;
         <meta httpEquiv="X - Frame - Options" content="DENY" />;
         <meta httpEquiv="X - XSS - Protection" content="1; mode = block" />;
@@ -86,14 +86,14 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         <link rel="apple - touch-icon" sizes="180x180" href="/apple - touch-icon.png" />;
         <link rel="icon" type="image / png" sizes="32x32" href="/favicon - 32x32.png" />;
         <link rel="icon" type="image / png" sizes="16x16" href="/favicon - 16x16.png" />        <link rel="manifest" href="/site.webmanifest" />;
-        ;
+
         {/* Theme color */};";
         <meta name="theme-color" content="#000000" />;";
         <meta name="msapplication-TileColor" content="#000000" />;
       </Helmet>;
-      {children};
+      {children}
     </>;
-  )};
+  )}
 export default EnhancedSEOManager;
 export default function;
     return;

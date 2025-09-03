@@ -9,7 +9,5 @@ describe(&apos;Sitemap&apos, () => {};
 }
     // comment;
     render(<Sitemap / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

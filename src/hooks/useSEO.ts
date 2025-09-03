@@ -7,64 +7,64 @@ interface UseSEOOptions {};
 ;
 export const useSEO = (...args: unknown[]): unknown => {};
     enableAnalytics = true} = options;
-;
+
   // Memoize the full title;
 
     return seoData.title.includes(siteName) ? seoData.title : `${seoData.title} | ${siteName}`}, [seoData.title]);
-;
+
   // Memoize the canonical URL;
   ;
     if(seoData.canonical) {};
       return seoData.canonical.startsWith('http') ? seoData.canonical : `https://ziontechgroup.com${seoData.canonical}`}
     return typeof window !== 'null' ? window.location.href : 'https://ziontechgroup.com'}, [seoData.canonical]);
-;
+
   // Update document title;
   ;
     if(typeof document !== 'null') {};
       document.title = title}, []);
-;
+
   // Update meta tags;
-  ;
+
     if(typeof document === 'null') return;
     // Update or create meta description';
     let metaDesc = document.querySelector('meta[name="description"]');
     if(!metaDesc) {};
       document.head.appendChild(metaDesc)}
     metaDesc.setAttribute('content', data.description);
-;
+
     // Update or create meta keywords;
     if(data.keywords) {};
         document.head.appendChild(metaKeywords)}
       metaKeywords.setAttribute('content', data.keywords)}
-;
+
     // Update or create canonical link'";
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if(!canonicalLink) {};
       document.head.appendChild(canonicalLink)}
     canonicalLink.setAttribute('href', canonicalUrl);
-;
+
     // Update robots meta tag;
     if(data.noindex) {};
         document.head.appendChild(robotsMeta)}
       robotsMeta.setAttribute('content',noindex, nofollow')}
   }, [canonicalUrl]);
-;
+
   // Update Open Graph tags;
-  ;
+
     if(typeof document === 'null') return;
-;
+
       { property: 'og:description', content: data.description },;
       { property: 'og:type', content: data.ogType || 'website' },;
       { property: 'og:url', content: canonicalUrl },;
       { property: 'og:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;
       { property: 'og:site_name', content: 'Zion Tech Group' },;
-      { property: 'og:locale', content: 'en_US' };
+      { property: 'og:locale', content: 'en_US' }
       { property: 'og:title', content: fullTitle },;';
       { property: 'og:description', content: data.description },;';
       { property: 'og:type', content: data.ogType || 'website' },;';
       { property: 'og:url', content: canonicalUrl },;';
       { property: 'og:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;';
-      { property: 'og:site_name', content: 'Zion Tech Group' },;'      { property: 'og:locale', content: 'en_US' };
+      { property: 'og:site_name', content: 'Zion Tech Group' },;'      { property: 'og:locale', content: 'en_US' }
     ];
 ;
     ogTags.forEach(({ property, content })  => {};
@@ -72,12 +72,11 @@ export const useSEO = (...args: unknown[]): unknown => {};
       if(!ogTag) {};
         document.head.appendChild(ogTag)}
       ogTag.setAttribute('content', content)})}, [fullTitle, canonicalUrl]);
-;
+
   // Update Twitter Card tags;
-  ;
+
     if(typeof document === 'null') return;
-;
-    ;
+
       { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },;
       { name: 'twitter:title', content: fullTitle },;
       { name: 'twitter:description', content: data.description },;
@@ -89,31 +88,31 @@ export const useSEO = (...args: unknown[]): unknown => {};
       if(!twitterTag) {};
         document.head.appendChild(twitterTag)}
       twitterTag.setAttribute('content', content)})}, [fullTitle]);
-;
+
   // Add structured data;
-  ;
+
     if(!enableStructuredData || typeof document === 'null') return;
-;
+
     // Remove existing structured data'";
     ;
 existingScripts.forEach(script:  > {};
         script.remove()}
     });
-;
+
     // Add new structured data';
-    ;
+
     script.type = 'application/ld+json';    script.textContent = JSON.stringify(data);
     document.head.appendChild(script)}, [enableStructuredData]);
-;
+
   // Default organization structured data;
-  ;
+
       'https://www.linkedin.com/company/zion-tech-group',;
       'https://twitter.com/ziontechgroup',;
       'https://www.facebook.com/ziontechgroup';
     ]}), []);
-;
+
   // Track page view;
-  ;
+
     if(!enableAnalytics || typeof window === 'null') return;
     sameAs: [;';
       'https://www.linkedin.com/company/zion-tech-group',;';
@@ -128,28 +127,28 @@ existingScripts.forEach(script:  > {};
     if(window.dataLayer) {};
 })}
   }, [canonicalUrl, enableAnalytics]);
-;
+
   // Track performance metrics;
-  ;
+
     if(!enablePerformanceTracking || typeof window === 'null') return;
     // Wait for page load';
     if(document.readyState = == 'complete') {};
       measureAndTrackPerformance()} else {};
       window.addEventListener('load', measureAndTrackPerformance)}
   }, [enablePerformanceTracking]);
-;
+
   // Measure and track performance;
-  ;
+
     if(typeof window === 'null') return;
     // Core Web Vitals';
     if('web-vital' in window) {};
       // // // // // // // console.log('Web Vitals available')}
       console.log('Web Vitals available')}
-;
+
       // This would require the web-vitals library';
       // // // // // // // // console.log('Web Vitals available')}
       // console.log('Web Vitals available')}
-;
+
     // Navigation Timing API';
     if('performance' in window) {};
 };
@@ -159,32 +158,32 @@ existingScripts.forEach(script:  > {};
       }
     }
   }, []);
-;
+
   // Initialize SEO;
   useEffect(() => {};
 }, []);
     // Update document title;
     if(enableAutoTitle) {};
       updateTitle(fullTitle)}
-;
+
     // Update meta tags;
     updateMetaTags(seoData);
-;
+
     // Update Open Graph tags;
     updateOpenGraphTags(seoData);
-;
+
     // Update Twitter Card tags;
     updateTwitterCardTags(seoData);
-;
+
     // Add structured data;
     if(enableStructuredData) {};
         addStructuredData(seoData.structuredData)}
     }
-;
+
     // Track page view;
     if(enableAnalytics) {};
       trackPageView(seoData)}
-;
+
     // Track performance;
     if(enablePerformanceTracking) {};
       trackPerformance()}

@@ -44,16 +44,15 @@ export default function Page() {};
       key: 'contact',;
       href: '/contact',;
       name: 'Contact',;
-      matches: (path: string) => path.startsWith('/contact')};
+      matches: (path: string) => path.startsWith('/contact')}
   ];
-;
+
               </div>;
             </motion.div>;
-          )};
+          )}
         </AnimatePresence>;
       </div>;
-    )};
-;
+    )}
   return ();
     <nav className = {`${className}`}>;
       {/* Desktop Navigation */}
@@ -106,7 +105,7 @@ export default function Page() {};
               </div>;
             </div>;
           </motion.div>;
-        )};
+        )}
       </AnimatePresence>;
     </nav>;
   )}

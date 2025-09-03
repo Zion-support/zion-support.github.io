@@ -398,7 +398,7 @@ export function AppHeader() {};
     { name: 'About', href: '/about', current: false },;
     { name: 'Contact', href: '/contact', current: false },;
   ];
-;
+
   const services = [;
     { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' },;
     { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },;
@@ -407,7 +407,7 @@ export function AppHeader() {};
     { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' },;
     { name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' },;
   ];
-;
+
   return (;
     <>;
       <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">;
@@ -420,14 +420,13 @@ export function AppHeader() {};
               </h1>;
             </Link>;
           </div>;
-          ;
+
           {/* Desktop Navigation */}
           <nav className="hidden md:flex ml-8 space-x-8">;
             {};
                 {item.name}
               </Link>;
             ))}
-            ;
             {/* Services Dropdown */}
             <div className="relative">;
               <div>Broken JSX</div>
@@ -534,7 +533,6 @@ export function AppHeader() {};
                   {item.name}
                 </Link>;
               ))}
-              ;
               {/* Mobile Services */}
               <div className="px-3 py-2">;
                 <div className="text-slate-400 text-sm font-medium mb-2">Services</div>;
@@ -606,6 +604,5 @@ export function AppHeader() {};
           </motion.div>;
         )}
       </AnimatePresence>;
-    </header>  );,
-}
+    </header>  )}
 }}})))))

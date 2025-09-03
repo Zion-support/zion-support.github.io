@@ -15,7 +15,7 @@ function InterviewsContent() {}
     useEffect(() => {}
         // Modified to handle Promise<Interview[]> return type;
         const loadInterviews = async () => {}
-            await fetchInterviews () };
+            await fetchInterviews () }
         loadInterviews () }, []) ;
     // Filter interviews based on status and date;
     const now = new Date();
@@ -31,7 +31,7 @@ function InterviewsContent() {}
         return !isAfter(interviewDate, now) ||'';
             ['completed',declined',cancelled'].includes(interview.status)});
     // Group interviews by date;
-    const grouped = {};
+    const grouped = {}
         interviews.forEach((interview) => {}
 ';
 '';
@@ -40,7 +40,7 @@ function InterviewsContent() {}
             if (!grouped[dateKey]) {}
                 grouped[dateKey] = []}
             grouped[dateKey].push (interview) }) ;
-        return grouped};
+        return grouped}
     const upcomingGrouped = groupInterviewsByDate (upcomingInterviews) ;
     const pastGrouped = groupInterviewsByDate (pastInterviews) ;
     const renderInterviewGroups = (groupedInterviews) => {}
@@ -106,14 +106,10 @@ function InterviewsContent() {}
     return (<ProtectedRoute>;
       <InterviewsContent />;
     </ProtectedRoute>)}
-;
 
-export { InterviewsContent, Interviews };
-;
-export { InterviewsContent, Interviews };
-;
-export { InterviewsContent, Interviews };
-;
-export { InterviewsContent, Interviews };
-;
-export { InterviewsContent };
+
+export { InterviewsContent, Interviews }
+export { InterviewsContent, Interviews }
+export { InterviewsContent, Interviews }
+export { InterviewsContent, Interviews }
+export { InterviewsContent }

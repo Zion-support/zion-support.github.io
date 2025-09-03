@@ -3,8 +3,7 @@ import React from "react";
   PieChart,;
   Activity} from "lucide - react",;
   const description = "Intuitive website analytics platform designed for small business owners. Get actionable insights without technical expertise.;
-  const features = [];,
-},;
+  const features = []},;
     {";
       title: "Traffic Analysis",";
       description: "Comprehensive visitor behavior and traffic source insights",;
@@ -16,8 +15,7 @@ import React from "react";
         "Device and browser analytics",";
         "Referral source tracking",";
         "Search engine performance";
-      ];,
-},;
+      ]},;
     {";
       title: "Conversion Tracking",";
       description: "Track and optimize your business goals and conversions",;
@@ -29,8 +27,7 @@ import React from "react";
         "Email signup monitoring",";
         "Phone call tracking",";
         "ROI measurement tools";
-      ];,
-},;
+      ]},;
     {";
       title: "Marketing Performance",";
       description: "Measure the effectiveness of your marketing campaigns",;
@@ -44,7 +41,7 @@ import React from "react";
         "A/B testing results";
       ];
 
-;
+
   ];
 
   const pricing = [],;
@@ -79,7 +76,7 @@ import React from "react";
         "SLA guarantee";
       ],;
       popular: false}
-;
+
   ];
 
   const benefits = [];
@@ -149,11 +146,11 @@ import React from "react";
                       <span className="text-sm text-gray-700">{detail}</span>;
                     </li>;
                   ))}
-;
+
                 </ul>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -179,7 +176,7 @@ import React from "react";
                   <p className="text-gray-600">{benefit.description}</p>;
                 </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -219,7 +216,7 @@ import React from "react";
                       <span className="text-sm text-gray-700">{feature}</span>;
                     </li>;
                   ))}
-;
+
                 </ul>";
                 <div className="mt-8">";
                   <Link href="{"/contact"" className="{"block" w-full rounded-md px-6 py-3 text-center text-sm font-semibold ${plan.popular ? "bg-blue-600 text-white hover:bg-blue-500" : "bg-gray-900 text-white hover:bg-gray-800"}"}>;
@@ -227,7 +224,7 @@ import React from "react";
                   </Link>;
                 </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -302,5 +299,5 @@ import React from "react";
     </PageTransition>;
   );";
 
-;
+
 export default Component

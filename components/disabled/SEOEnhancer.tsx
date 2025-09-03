@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React from "react";
-interface SEOEnhancerProps {;
-;
+interface SEOEnhancerProps {
+
   title?: string;
   description?: string;
   keywords?: string;
@@ -9,7 +9,7 @@ interface SEOEnhancerProps {;
   url?: string;
   type?: string;
   siteName?: string}
-;
+
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({",;
   title = "Zion Tech Group - Leading Technology Solutions Provider",";
   description = "Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.",";
@@ -17,8 +17,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({",;
   ogImage = "https:// comment;
   url = "https:// comment;
   type = "website",";
-  siteName = "Zion Tech Group";,
-}) => {";
+  siteName = "Zion Tech Group"}) => {";
   const fullTitle = title.includes("Zion Tech Group") ? title : "${title} - Zion Tech Group";
   const fullUrl = url.startsWith("http") ? url : "https:// comment;
   return (;
@@ -29,7 +28,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({",;
       <meta name="author" content="Zion Tech Group"  />";
       <meta name="robots" content="index, follow"  />";
       <meta name="viewport" content="width=device-width, initial-scale=1"  />;
-      ;
+
       {/* comment */}";
       <meta property="og:title" content="{fullTitle}"  />";
       <meta property="og:description" content="{description}"  />";
@@ -37,16 +36,16 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({",;
       <meta property="og:url" content="{fullUrl}"  />";
       <meta property="og:type" content="{type}"  />";
       <meta property="og:site_name" content="{siteName}"  />;
-      ;
+
       {/* comment */}";
       <meta name="twitter: card" content="summary_large_image"  />",;
       <meta name="twitter:title" content="{fullTitle}"  />";
       <meta name="twitter:description" content="{description}"  />";
       <meta name="twitter:image" content="{ogImage}"  />;
-      ;
+
       {/* comment */}";
       <link rel="canonical" href="{fullUrl}"  />;
-      ;
+
       {/* comment */}";
       <link rel="icon" href="/favicon.ico"  />";
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"  />";

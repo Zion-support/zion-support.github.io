@@ -1,18 +1,12 @@
 import Head from "next/head";
 import React, { useState } from "react";
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
-const Link = dynamic(() => import("next/link"), { ssr: false });,
-}
-const Navigation = dynamic(() => import("../src/components/Navigation"), { ssr: false });,
-}
-const Footer = dynamic(() => import("../src/components/Footer"), { ssr: false });,
-}
+const Head = dynamic(() => import("next/head"), { ssr: false })}
+const Link = dynamic(() => import("next/link"), { ssr: false })}
+const Navigation = dynamic(() => import("../src/components/Navigation"), { ssr: false })}
+const Footer = dynamic(() => import("../src/components/Footer"), { ssr: false })}
 const Demo = () => {";
-  const [selectedDemo, setSelectedDemo] = useState("ai-services");,
-}
-  const demos = [];,
-},;
+  const [selectedDemo, setSelectedDemo] = useState("ai-services")}
+  const demos = []},;
     {";
       id: "it-services",";
       title: "IT Services Demo",";
@@ -25,8 +19,7 @@ const Demo = () => {";
         "System Monitoring",";
         "Backup Solutions",";
         "Performance Optimization";
-      ];,
-},;
+      ]},;
     {";
       id: "micro-saas",";
       title: "Micro SaaS Demo",";
@@ -96,7 +89,7 @@ const Demo = () => {";
                     selectedDemo === demo.id";
                       ? "border-blue-500 bg-blue-50;
                       : "border-gray-200 hover: border-gray-300'}"}
-;
+
                 >";
                   <div className=""flex" items-center mb-4"}>";
                     <div className="p-3 bg-blue-100 rounded-lg mr-4">";
@@ -113,14 +106,14 @@ const Demo = () => {";
                       <li key="{index}" className="flex items-center text-sm text-gray-600">";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />;
                         {feature}
-;
+
                       </li>;
                     ))}
-;
+
                   </ul>;
                 </div>;
               ))}
-;
+
             </div>;
             {/* comment */}";
             <div className="bg-gray-50 rounded-lg p-8">";
@@ -130,7 +123,7 @@ const Demo = () => {";
                 </h3>";
                 <p className="text-lg text-gray-600 mb-6">;
                   {demos.find(d => d.id === selectedDemo)?.description}
-;
+
                 </p>";
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">";
                   <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">";
@@ -161,7 +154,7 @@ const Demo = () => {";
                     {[...Array(testimonial.rating)].map((_, i) => (";
                       <Star key="{i}" className="w-5 h-5 text-yellow-400 fill-current"  />;
                     ))}
-;
+
                   </div>";
                   <p className="text-gray-600 mb-4">"{testimonial.content}"</p>;
                   <div>";
@@ -169,7 +162,7 @@ const Demo = () => {";
                     <p className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</p>;
                   </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -220,5 +213,5 @@ const Demo = () => {";
       <Footer  />;
     </>,;
   )}
-;
+
 "export default Demo

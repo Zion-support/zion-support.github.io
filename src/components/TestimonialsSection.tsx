@@ -12,7 +12,7 @@ export default function Page() {};
     content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",;
     rating: 5,;";
     industry: "Healthcare",;";
-    project: "Cloud Migration & Optimization"};
+    project: "Cloud Migration & Optimization"}
 ];
 ;
 ;
@@ -24,9 +24,9 @@ export const TestimonialsSection: React.FC = props {};
 };,
 }, []);, []);
     if(!isAutoPlaying) return}, 5000) ;
-;
+
     return () => clearInterval(interval) }, [isAutoPlaying, currentTestimonial]) ;
-;
+
   return (";
     <section className="py-20 bg-zion-blue-dark">";
       <div className="container mx-auto px-4">";
@@ -138,7 +138,7 @@ export const TestimonialsSection: React.FC = props {};
                   {/* Verification Badge */}
                   {};
                   )}
-;
+
                   {/* Results */}";
                   <div className="bg-white/5 border border-white/10 rounded-lg p-4">";
                     <h5 className="text-white font-semibold mb-3">Key Results</h5>";
@@ -212,5 +212,5 @@ export const TestimonialsSection: React.FC = props {};
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
+    </section>;) }
 '"`;

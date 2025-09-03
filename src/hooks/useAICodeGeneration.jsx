@@ -35,8 +35,7 @@ export const useAICodeGeneration = () => {};
                 code: generatedCode,;
                 timestamp: new Date(),;
                 language: options.language,;
-                quality: options.quality;,
-};
+                quality: options.quality}
             setHistory(prev => [historyItem, ...prev.slice(0, 49)]); // Keep last 50 items;
             // Analyze the generated code;
             await analyzeCode(generatedCode, options.language);
@@ -77,7 +76,7 @@ export const useAICodeGeneration = () => {};
             switch(focus) {};
 });
             return code;
-;
+
                     break}
             trackEvent('ai_code_generation',code_optimized', focus, optimizedCode.length);
             return optimizedCode}
@@ -157,12 +156,12 @@ export default function Page() {};
       <h1>Generated Component</h1>;
       <p>This component was generated based on your prompt.</p>;
     </motion.div>;
-  )};
+  )}
 `;
 export default GeneratedComponent;`};
     const generateExpressCode = (prompt, _options) => {};
   res.json({ message: 'Generated API based on prompt: ${prompt}})});
-;
+
 // TODO: Implement additional routes based on prompt;
 
 app.listen(PORT, () => {};
@@ -171,7 +170,7 @@ app.listen(PORT, () => {};
     const generatePythonCode = (prompt, _options) => {};
 Generated Python code based on prompt: ${prompt}";
 
-;
+
 import asyncio;
 from typing import Optional, List, Dict, Any;
 from dataclasses import dataclass;
@@ -201,17 +200,16 @@ if __name__ == "__main__":`;
 // Framework: ${options.framework || 'none'}
 // Style: ${options.style}
 // Target: ${options.target}
-;
+
 // TODO: Implement code based on prompt requirements;
 // This is a placeholder implementation;
 
 // // // // // // // // // console.log("Generated code placeholder");
 // // // // // // // // // console.log("Prompt:", "${prompt}");
-// // // // // // // // // console.log("Language:", "${options.language}");`;,
-};
+// // // // // // // // // console.log("Language:", "${options.language}");`}
 // // console.log("Generated code placeholder");
 // // console.log("Prompt:", "${prompt}");
-// // console.log("Language:", "${options.language}");`};
+// // console.log("Language:", "${options.language}");`}
     // Helper functions for code analysis    const cyclomaticComplexity = (code.match(/if|else|for|while|switch|case|catch|&&|\|\||\?/g) || []).length + 1;
         return Math.min(10, Math.max(1, Math.floor(cyclomaticComplexity / 5)));,
 };
@@ -232,8 +230,7 @@ if __name__ == "__main__":`;
                 category: 'Performance',;
                 tags['timers',animation',cleanup'],;
                 explanation: 'Timers can cause memory leaks and performance issues if not properly managed.',;
-                alternatives['requestAnimationFrame',useEffect cleanup',AbortController'];,
-})}
+                alternatives['requestAnimationFrame',useEffect cleanup',AbortController']})}
         // Security suggestions';
         if(code.includes('innerHTML') || code.includes('document.write')) {};
                 id: `suggestion_${Date.now()}_2`,;
@@ -246,8 +243,7 @@ if __name__ == "__main__":`;
                 category: 'Security',;
                 tags['xss',security',user-input'],;
                 explanation: 'innerHTML can execute malicious scripts if user input is not properly sanitized.',;
-                alternatives['textContent',createElement',DOMPurify'];,
-})}
+                alternatives['textContent',createElement',DOMPurify']})}
         // Best practice suggestions';
         if(code.includes('console.log')) {};
                 id: `suggestion_${Date.now()}_3`,;
@@ -305,7 +301,7 @@ describe('Generated Code Tests', () => {};
  *;
  * This code was generated based on user requirements.*;
  * TODO: Add specific documentation based on code functionality`;
- */`};
+ */`}
     // Cleanup timeout on unmount;
     useEffect(() => {};
 }, []);

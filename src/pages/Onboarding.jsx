@@ -27,7 +27,7 @@ export {};
                 return "employer";";
             default:"";
                 return "buyer"}
-    };
+    }
     const handleUserTypeSelect = (type) => {}
         setUserType(type);";
         // Direct to specific registration page based on user type"";
@@ -41,10 +41,9 @@ export {};
 '';
 ''';
             router('/talent-onboarding');
-            return;,
-}
+            return}
         // Continue with the onboarding flow for clients;
-        setCurrentStep(1) };
+        setCurrentStep(1) }
     const handleProfileComplete = async(data) => {}
         if(!user || !userType) {}
             toast({}
@@ -54,8 +53,7 @@ export {};
                 description: "Your session may have expired. Please log in again.","";
                 variant: "destructive"});';
             router('/login');
-            return;,
-}
+            return}
         const dbUserType = mapUserTypeToDatabase(userType) ;
         try {}
             await updateProfile({}
@@ -64,14 +62,12 @@ export {};
                 bio: data.bio, // This is now valid since we added bio to UserDetails;
                 userType: dbUserType,;
                 headline: data.headline,;
-                profileComplete: true;,
-});';
+                profileComplete: true});';
             // Update onboarding milestone'';
             await supabase.rpc('update_onboarding_milestone', {}
                 _user_id: user.id,';
                 _milestone: 'profile_completed',;
-                _status: true;,
-}) ;
+                _status: true}) ;
             toast({}
 ';
                 title: 'Profile completed!',';
@@ -81,8 +77,7 @@ export {};
                 ? "/client-dashboard"";
                 : "/talent-dashboard";
             // Redirect to dashboard;
-            router(dashboardRoute) ;,
-}
+            router(dashboardRoute) }
         catch (error) {}
 ';
 '';
@@ -103,8 +98,7 @@ export {};
 '';
 ''';
         router('/login');
-        return null;,
-}
+        return null}
     return (<>";
 "";
       <div className="min-h-screen bg-zion-blue py-12 px-4">"";
@@ -136,16 +130,12 @@ export {};
           </div>;
         </div>;
       </div>;
-      ;
-    </>)}
-;
 
-export { Onboarding };
-;
-export { Onboarding };
-;
-export { Onboarding };
-;
-export { Onboarding };
-;
-export { Onboarding };
+    </>)}
+
+
+export { Onboarding }
+export { Onboarding }
+export { Onboarding }
+export { Onboarding }
+export { Onboarding }

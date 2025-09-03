@@ -1,6 +1,6 @@
 import React from 'react';''';
 import { Phone, Mail, MapPin, ArrowRight import { Footer } from '@/components/Footer';
-;
+
 const ZionHireAI = () => {}
   return <div>Component</div>;
 };
@@ -13,7 +13,7 @@ const ZionHireAI = () => {}
     { metric: '92%', label: 'Cost Reduction' },''';
     { metric: '89%', label: 'Candidate Satisfaction' }
   ];
-;
+
   return();
     <>;
       <main className="flex-1">";
@@ -90,17 +90,11 @@ const ZionHireAI = () => {}
         </div>;
       </main>;
       <Footer />;
-    </>) };
-;
-export default ZionHireAI;,
-}
-;
-export { ZionHireAI };
-;
-export { ZionHireAI };
-;
-export { ZionHireAI };
-;
-export { ZionHireAI };
-;
-export { ZionHireAI };
+    </>) }
+export default ZionHireAI}
+
+export { ZionHireAI }
+export { ZionHireAI }
+export { ZionHireAI }
+export { ZionHireAI }
+export { ZionHireAI }

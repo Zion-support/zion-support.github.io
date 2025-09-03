@@ -13,8 +13,7 @@ const Badge = ({ children, className = '', variant = 'default' }) => {}
   default: 'border-transparent bg-primary text-primary-foreground',''';
     secondary: 'border-transparent bg-secondary text-secondary-foreground',''';
     destructive: 'border-transparent bg-destructive text-destructive-foreground',''';
-  outline: 'text-foreground';,
-};';
+  outline: 'text-foreground'};';
   '';
 import React from 'react';
 ';
@@ -30,25 +29,15 @@ const Badge = ({ children, className = '', variant = 'default' }) => {}
     default: 'border-transparent bg-primary text-primary-foreground',''';
     secondary: 'border-transparent bg-secondary text-secondary-foreground',''';
     destructive: 'border-transparent bg-destructive text-destructive-foreground',''';
-    outline: 'text-foreground';,
-};
-;
+    outline: 'text-foreground'}
   return();
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>;
       {children}
     </div>;
-  );,
-};
-;
-export { Badge };
-;
-
-export { Badge, Badge };
-;
-export { Badge, Badge };
-;
-export { Badge, Badge };
-;
-export { Badge, Badge };
-;
-export { Badge, Badge };
+  )}
+export { Badge }
+export { Badge, Badge }
+export { Badge, Badge }
+export { Badge, Badge }
+export { Badge, Badge }
+export { Badge, Badge }

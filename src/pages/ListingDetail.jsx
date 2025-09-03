@@ -45,10 +45,8 @@ export {};
   return <div>Component</div>;
 };
         if (user) {}
-            setIsChatOpen(true)}
-        else {}
-            setIsContactDialogOpen(true)}";,
-};"";
+            setIsChatOpen(true)} else {}
+            setIsContactDialogOpen(true)}"};"";
     return (<div className="min-h-screen bg-zion-blue py-12 px-4">"";
         <div className="container mx-auto">"";
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">";
@@ -68,8 +66,7 @@ export {};
   cn("w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2","";
   index === selectedImageIndex ? "border-zion-purple" : "border-transparent");
 
-";,
-}>"";
+"}>"";
                         <ImageWithRetry src={image} alt={`${listing.title} - image ${index + 1}`} className="w-full h-full object-cover" fallbackSrc="/placeholder.svg"/>;
                       </div>))}
                   </div>)}
@@ -139,7 +136,6 @@ export {};
                     <span className="text-sm text-zion - slate -light">;
                       {listing.rating.toFixed(1) } ({listing.reviewCount} reviews) </span>;
                   </div>) }
-;,
 }/>))}";
                     </div>"";
                     <span className="text-sm text-zion-slate-light">;

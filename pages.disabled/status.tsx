@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { CheckCircle, AlertCircle, XCircle, Clock, RefreshCw, Activity } from 'lucide-react';
-;
-const Status: NextPage = () => {;
+
+const Status: NextPage = () => {
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
-;
+
   const services = [;
-    {;
+    {
       name: 'API Services',;
       status: 'operational',;
       uptime: '99.9%',;
@@ -16,90 +16,79 @@ const Status: NextPage = () => {;
       description: 'Core API endpoints and authentication services';
       responseTime: '45ms',;
       icon: Database,;
-      description: 'Primary database and data storage';,
-},;
-    {;
+      description: 'Primary database and data storage'},;
+    {
       name: 'Web Application',;
       status: 'operational',;
       uptime: '99.8%',;
       responseTime: '120ms',;
-      description: 'Main website and user interface';,
-},;
-    {;
+      description: 'Main website and user interface'},;
+    {
       name: 'Database',;
       status: 'operational',;
       uptime: '99.95%',;
       responseTime: '8ms',;
-      description: 'Primary database and data storage';,
-},;
-    {;
+      description: 'Primary database and data storage'},;
+    {
       name: 'AI Services',;
       status: 'operational',;
       uptime: '99.7%',;
       responseTime: '350ms',;
       icon: Activity,;
-      description: 'AI and machine learning services';,
-},;
-    {;
+      description: 'AI and machine learning services'},;
+    {
       name: 'Authentication',;
       status: 'operational',;
       uptime: '99.9%',;
       responseTime: '25ms',;
-      description: 'Content delivery network and static assets';,
-},;
-    {;
+      description: 'Content delivery network and static assets'},;
+    {
       name: 'Email Services',;
       status: 'operational',;
       uptime: '99.7%',;
       responseTime: '200ms',;
-      description: 'Email delivery and notification services';,
-},;
-    {;
+      description: 'Email delivery and notification services'},;
+    {
       name: 'File Storage',;
       status: 'operational',;
       uptime: '99.9%',;
       responseTime: '85ms',;
-      description: 'File upload and storage services';,
-},;
-    {;
+      description: 'File upload and storage services'},;
+    {
       name: 'Analytics',;
       status: 'operational',;
       uptime: '99.8%',;
       responseTime: '150ms',;
-      description: 'Analytics and reporting services';,
-},;
-    {;
+      description: 'Analytics and reporting services'},;
+    {
       name: 'Authentication',;
       status: 'operational',;
       uptime: '99.9%',;
       responseTime: '30ms',;
-      description: 'System monitoring and alerting';,
-}
+      description: 'System monitoring and alerting'}
   ];
-;
+
   const incidents = [;
-    {;
+    {
       id: 1,;
       title: 'Scheduled Maintenance - API Services',;
       status: 'resolved',;
       severity: 'minor',;
       startTime: '2025-01-25T02:00:00Z',;
       endTime: '2025-01-25T04:00:00Z',;
-      description: 'Scheduled maintenance window for API infrastructure updates. All services restored successfully.';,
-},;
-    {;
+      description: 'Scheduled maintenance window for API infrastructure updates. All services restored successfully.'},;
+    {
       id: 2,;
       title: 'Database Performance Issue',;
       status: 'resolved',;
       severity: 'major',;
       startTime: '2025-01-20T14:30:00Z',;
       endTime: '2025-01-20T16:45:00Z',;
-      description: 'Temporary performance degradation in database queries. Issue resolved with query optimization.';,
-}
+      description: 'Temporary performance degradation in database queries. Issue resolved with query optimization.'}
   ];
-;
-  const getStatusIcon = (status: string) => {;
-    switch (status) {;
+
+  const getStatusIcon = (status: string) => {
+    switch (status) {
       case 'operational':;
         return <CheckCircle className="w-5 h-5 text-green-500" />;
       case 'degraded':;
@@ -107,12 +96,10 @@ const Status: NextPage = () => {;
       case 'outage':;
         return <XCircle className="w-5 h-5 text-red-500" />;
       default:;
-        return <Clock className="w-5 h-5 text-gray-500" />;,
-}
-  };
-;
-  const getStatusColor = (status: string) => {;
-    switch (status) {;
+        return <Clock className="w-5 h-5 text-gray-500" />}
+  }
+  const getStatusColor = (status: string) => {
+    switch (status) {
       case 'operational':;
         return 'bg-green-100 text-green-800';
       case 'degraded':;
@@ -120,12 +107,10 @@ const Status: NextPage = () => {;
       case 'outage':;
         return 'bg-red-100 text-red-800';
       default:;
-        return 'bg-gray-100 text-gray-800';,
-}
-  };
-;
-  const getSeverityColor = (severity: string) => {;
-    switch (severity) {;
+        return 'bg-gray-100 text-gray-800'}
+  }
+  const getSeverityColor = (severity: string) => {
+    switch (severity) {
       case 'critical':;
         return 'bg-red-100 text-red-800';
       case 'major':;
@@ -133,26 +118,20 @@ const Status: NextPage = () => {;
       case 'minor':;
         return 'bg-yellow-100 text-yellow-800';
       default:;
-        return 'bg-gray-100 text-gray-800';,
-}
-  };
-;
-  const refreshStatus = async () => {;
+        return 'bg-gray-100 text-gray-800'}
+  }
+  const refreshStatus = async () => {
     setIsRefreshing(true);
     // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 1000));
     setLastUpdated(new Date());
-    setIsRefreshing(false);,
-};
-;
-  useEffect(() => {;
-    const interval = setInterval(() => {;
-      setLastUpdated(new Date());,
-}, 60000); // Update every minute;
+    setIsRefreshing(false)}
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLastUpdated(new Date())}, 60000); // Update every minute;
 
-    return () => clearInterval(interval);,
-}, []);
-;
+    return () => clearInterval(interval)}, []);
+
   return (;
     <MainLayout;
       title="System Status - Zion Tech Group";
@@ -216,10 +195,8 @@ const Status: NextPage = () => {;
                       </div>;
                     </div>;
                     <div className="mt-4">;
-                      <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}`}>;,
-}
-  };
-;
+                      <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}`}>}
+  }
   return (;
     <MainLayout;
       title="System Status - Zion Tech Group";
@@ -281,7 +258,7 @@ const Status: NextPage = () => {;
           </motion.div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {systemStatus.map((service, index) => {;
+            {systemStatus.map((service, index) => {
               const StatusIcon = getStatusIcon(service.status);
               return (;
                 <motion.div;
@@ -299,21 +276,19 @@ const Status: NextPage = () => {;
                       <StatusIcon className={`w-5 h-5 ${;
                         service.status === 'operational' ? 'text-green-500' :;
                         service.status === 'degraded' ? 'text-yellow-500' :;
-                        'text-red-500';,
-}`} />;
+                        'text-red-500'}`} />;
                       <span className={`text-sm font-semibold capitalize ${;
                         service.status === 'operational' ? 'text-green-600' :;
                         service.status === 'degraded' ? 'text-yellow-600' :;
-                        'text-red-600';,
-}`}>;
+                        'text-red-600'}`}>;
                         {service.status}
                       </span>;
                     </div>;
                   </div>;
-                  ;
+
                   <h3 className="text-xl font-semibold mb-2 text-gray-800">{service.name}</h3>;
                   <p className="text-gray-600 text-sm mb-4">{service.description}</p>;
-                  ;
+
                   <div className="space-y-2">;
                     <div className="flex justify-between text-sm">;
                       <span className="text-gray-500">Uptime</span>;
@@ -325,8 +300,7 @@ const Status: NextPage = () => {;
                     </div>;
                   </div>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -365,9 +339,9 @@ const Status: NextPage = () => {;
                       {incident.impact}
                     </span>;
                   </div>;
-                  ;
+
                   <p className="text-gray-600 mb-4">{incident.description}</p>;
-                  ;
+
                   <div className="flex items-center justify-between text-sm text-gray-500">;
                     <div className="flex items-center space-x-4">;
                       <span>{new Date(incident.date).toLocaleDateString()}</span>;
@@ -460,7 +434,5 @@ const Status: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
-};
-;
+  )}
 export default Status;)))

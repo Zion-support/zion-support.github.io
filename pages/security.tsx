@@ -34,7 +34,7 @@ export default function Security() {};
             {/* Security Features */}
             <section className="mb-16">;
               <h2 className="text-3xl font-bold mb-8 text-cyan-400">Security Features</h2>;
-              ;
+
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
                 {/* Authentication & Access Control */}
                 <div className="bg-white/5 p-8 rounded-2xl border border-white/10">;
@@ -153,7 +153,7 @@ export default function Security() {};
                 Our security practices align with industry standards and regulatory requirements to ensure your data ;
                 protection needs are met across various compliance frameworks.;
               </p>;
-              ;
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
                 <div className="bg-slate-900 p-6 rounded-lg text-center">;
                   <div className="text-3xl mb-3">🔐</div>;
@@ -191,7 +191,7 @@ export default function Security() {};
             {/* Security Practices */}
             <section className="mb-16">;
               <h2 className="text-3xl font-bold mb-8 text-yellow-400">Security Practices</h2>;
-              ;
+
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
                 {/* Development Security */}
                 <div className="bg-white/5 p-8 rounded-2xl border border-white/10">;
@@ -261,7 +261,7 @@ export default function Security() {};
               <p className="text-white/80 mb-6">;
                 Real-time security metrics and system health indicators from our autonomous monitoring systems.;
               </p>;
-              ;
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
                 <div className="text-center p-4 bg-green-500/20 rounded-lg border border-green-500/30">;
                   <div className="text-2xl font-bold text-green-400">99.9%</div>;
@@ -280,7 +280,7 @@ export default function Security() {};
                   <div className="text-white/80 text-sm">Encrypted</div>;
                 </div>;
               </div>;
-              ;
+
               <div className="mt-6 text-center">;
                 <a href="/reports/performance-metrics" className="text-cyan-400 hover:text-cyan-300 text-sm">;
                   View detailed security metrics →;
@@ -294,7 +294,7 @@ export default function Security() {};
               <p className="text-white/80 mb-6">;
                 Access our security documentation, best practices, and incident response procedures.;
               </p>;
-              ;
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
                 <div className="bg-slate-900 p-6 rounded-lg">;
                   <h3 className="text-lg font-semibold text-white mb-3">Security Documentation</h3>;
@@ -304,7 +304,7 @@ export default function Security() {};
                     <li><a href="/automation" className="text-cyan-400 hover:text-cyan-300">Automation Security</a></li>;
                   </ul>;
                 </div>;
-                ;
+
                 <div className="bg-slate-900 p-6 rounded-lg">;
                   <h3 className="text-lg font-semibold text-white mb-3">Incident Response</h3>;
                   <ul className="space-y-2 text-white/80">;
@@ -323,7 +323,7 @@ export default function Security() {};
                 If you've discovered a security vulnerability or have security concerns, please report them immediately. ;
                 Our security team is available 24/7 to respond to security incidents.;
               </p>;
-              ;
+
               <div className="flex flex-wrap gap-4">;
                 <a href="/contact" className="px-6 py-3 bg-red-500 hover:bg-red-600 text-white rounded-lg transition-colors">;
                   Report Security Issue;
@@ -335,7 +335,7 @@ export default function Security() {};
                   View Security Status;
                 </a>;
               </div>;
-              ;
+
               <div className="mt-6 p-4 bg-slate-900 rounded-lg">;
                 <h3 className="text-lg font-semibold text-white mb-2">Emergency Contact</h3>;
                 <p className="text-white/80 text-sm">;
@@ -348,5 +348,4 @@ export default function Security() {};
         </main>;
       </div>;
     </>;
-  );,
-}
+  )}

@@ -16,7 +16,7 @@ export default function Terms() {};
     {};
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-white">;
       {/* Header */}
@@ -34,16 +34,11 @@ export default function Terms() {};
         </div>;
       </main>;
       <Footer />;
-    </>);,
-}
-;
+    </>)}
 
-export { Terms };
-;
-export { Terms };
-;
-export { Terms };
-;
-export { Terms };
-;
-export { Terms };
+
+export { Terms }
+export { Terms }
+export { Terms }
+export { Terms }
+export { Terms }

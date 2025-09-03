@@ -9,7 +9,5 @@ describe(&apos;ModernServicesShowcase&apos, () => {};
 }
     // comment;
     render(<ModernServicesShowcase / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

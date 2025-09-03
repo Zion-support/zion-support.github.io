@@ -20,8 +20,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             responseTime: 1200,'';
             lastChecked: new Date(),''';
             parentPage: 'Homepage',''';
-            linkText: 'LinkedIn';,
-},;
+            linkText: 'LinkedIn'},;
         {}
 ';
 '';
@@ -32,8 +31,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             responseTime: 800,'';
             lastChecked: new Date(),''';
             parentPage: 'Homepage',''';
-            linkText: 'Twitter';,
-},;
+            linkText: 'Twitter'},;
         {}
 ';
 '';
@@ -44,8 +42,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             responseTime: 50,'';
             lastChecked: new Date(),''';
             parentPage: 'Contact',''';
-            linkText: 'Phone Number';,
-},;
+            linkText: 'Phone Number'},;
         {}
 ';
 '';
@@ -74,12 +71,12 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             brokenLinks,;
             externalLinks,;
             averageResponseTime: avgResponseTime,;
-            lastUpdated: new Date () }) };
+            lastUpdated: new Date () }) }
     const startMonitoring = async () => {}
         setIsMonitoring(true) ;
         // Simulate link checking;
         await new Promise(resolve => setTimeout (resolve, 2000) ) ;
-        setIsMonitoring(false) };
+        setIsMonitoring(false) }
     const getStatusIcon = (status) => {}
         switch (status) {}
 ';
@@ -91,7 +88,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                 return <ExternalLink className="w-4 h-4 text-blue-400"/>;";
             default:"";
                 return <RefreshCw className="w-4 h-4 text-yellow-400"/>}
-    };
+    }
     const getStatusColor = (status) => {}
         switch (status) {}
 ';
@@ -105,7 +102,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                 return 'text-blue-400';''';
             default:'''';
                 return 'text-yellow-400'}
-    };
+    }
     const filteredLinks = linkStatuses.filter(link => {}
 ';
 '';
@@ -262,16 +259,11 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             </div>;
           </motion.div>;
         </motion.div>)}
-    </>)};
-export default LinkHealthMonitor;,
-}}}}
-;
-export { LinkHealthMonitor };
-;
-export { LinkHealthMonitor };
-;
-export { LinkHealthMonitor };
-;
-export { LinkHealthMonitor };
-;
-export { LinkHealthMonitor };
+    </>)}
+export default LinkHealthMonitor}}}}
+
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }
+export { LinkHealthMonitor }

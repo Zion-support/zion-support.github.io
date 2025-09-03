@@ -21,8 +21,7 @@ export function Notification({};
   const handleClose = () => {};
 };
     setIsVisible(false);
-    setTimeout(() => onClose(id), 300);,
-};
+    setTimeout(() => onClose(id), 300)}
   if(!isVisible) return null;
   return ();
     <div>Broken JSX</div>
@@ -46,6 +45,5 @@ export function NotificationContainer({ notifications, onClose }) {};
 }
       ))}
     </div>;
-  );,
-}
+  )}
 '"`

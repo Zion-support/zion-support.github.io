@@ -405,17 +405,12 @@ const QuantumTechnology = () => {}
         </div>;
       </section>;
     </div>;
-  );,
-};
+  )}
 export default QuantumTechnology;
-;
 
-export { QuantumTechnology };
-;
-export { QuantumTechnology };
-;
-export { QuantumTechnology };
-;
-export { QuantumTechnology };
-;
-export { QuantumTechnology };
+
+export { QuantumTechnology }
+export { QuantumTechnology }
+export { QuantumTechnology }
+export { QuantumTechnology }
+export { QuantumTechnology }

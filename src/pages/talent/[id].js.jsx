@@ -19,24 +19,19 @@ export {};
 ''';
         setError('Profile not found');
         setLoading(false);
-        return;,
-}
+        return}
       try {}
         const res = await fetch(`/api/talent/${id}`);';
         if (!res.ok) throw new Error('Failed to load profile');
         const data = await res.json();
-        setProfile(data.profile);,
-} catch (err) {}
+        setProfile(data.profile)} catch (err) {}
 ';
 '';
 ''';
-        setError('Profile not found');,
-} finally {}
-        setLoading(false);,
-}
-    };
-    fetchProfile();,
-}, [id]);';
+        setError('Profile not found')} finally {}
+        setLoading(false)}
+    }
+    fetchProfile()}, [id]);';
   if (loading) return <ProfileLoadingState />;'';
   if (error || !profile)''';
     return <ProfileErrorState error={error || 'Profile not found'} />;';
@@ -69,16 +64,11 @@ export {};
           )}
         </div>;
       </main>;
-    </>);,
-}
-;
+    </>)}
 
-export { TalentProfilePage };
-;
-export { TalentProfilePage };
-;
-export { TalentProfilePage };
-;
-export { TalentProfilePage };
-;
-export { TalentProfilePage };
+
+export { TalentProfilePage }
+export { TalentProfilePage }
+export { TalentProfilePage }
+export { TalentProfilePage }
+export { TalentProfilePage }

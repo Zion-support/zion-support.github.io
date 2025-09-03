@@ -248,16 +248,11 @@ import {};
           </div>;
         </div>;
       </section>;
-    </div>)};
-export default BlockchainWeb3;,
-}}}}
-;
-export { BlockchainWeb3 };
-;
-export { BlockchainWeb3 };
-;
-export { BlockchainWeb3 };
-;
-export { BlockchainWeb3 };
-;
-export { BlockchainWeb3 };
+    </div>)}
+export default BlockchainWeb3}}}}
+
+export { BlockchainWeb3 }
+export { BlockchainWeb3 }
+export { BlockchainWeb3 }
+export { BlockchainWeb3 }
+export { BlockchainWeb3 }

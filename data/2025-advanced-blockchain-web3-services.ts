@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface AdvancedBlockchainWeb3Service {;
+export interface AdvancedBlockchainWeb3Service {
   id: string;
   name: string;
   tagline: string;
@@ -25,7 +25,7 @@ export interface AdvancedBlockchainWeb3Service {;
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -35,18 +35,17 @@ export interface AdvancedBlockchainWeb3Service {;
   launchDate: string;
   customers: number;
   rating: number;
-const contact = {;
+const contact = {
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709";
-  ;
-  ;
-  ;
-  ;
-  website: "https://ziontechgroup.com";,;,
-}
+
+
+
+
+  website: "https://ziontechgroup.com"}
 export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[] = [;
-  {;
+  {
     id: "ai-powered-defi-protocol",;
     name: "AI-Powered DeFi Protocol",;
     tagline: "Intelligent decentralized finance with AI-driven optimization",;
@@ -89,9 +88,8 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     launchDate: "2024-12-01",;
     customers: 15,;
     rating: 4.8,;
-    reviews: 28;,;,
-},;
-  {;
+    reviews: 28},;
+  {
     id: "quantum-resistant-blockchain",;
     name: "Quantum-Resistant Blockchain",;
     tagline: "Future-proof blockchain that withstands quantum computing attacks",;
@@ -134,9 +132,8 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     launchDate: "2024-11-15",;
     customers: 8,;
     rating: 4.9,;
-    reviews: 15;,;,
-},;
-  {;
+    reviews: 15},;
+  {
     id: "web3-identity-platform",;
     name: "Web3 Identity Platform",;
     tagline: "Decentralized identity management for the future web",;
@@ -179,9 +176,8 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     launchDate: "2024-10-20",;
     customers: 32,;
     rating: 4.7,;
-    reviews: 58;,;,
-},;
-  {;
+    reviews: 58},;
+  {
     id: "ai-nft-marketplace",;
     name: "AI NFT Marketplace",;
     tagline: "Intelligent NFT trading with AI-powered insights and automation",;
@@ -224,9 +220,8 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     launchDate: "2024-09-25",;
     customers: 45,;
     rating: 4.6,;
-    reviews: 89;,;,
-},;
-  {;
+    reviews: 89},;
+  {
     id: "blockchain-supply-chain-orchestrator",;
     name: "Blockchain Supply Chain Orchestrator",;
     tagline: "Transparent and efficient supply chain management with blockchain",;
@@ -269,9 +264,8 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     launchDate: "2024-08-30",;
     customers: 28,;
     rating: 4.8,;
-    reviews: 52;,;,
-},;
-  {;
+    reviews: 52},;
+  {
     id: "metaverse-development-platform",;
     name: "Metaverse Development Platform",;
     tagline: "Build immersive virtual worlds with AI and blockchain",;

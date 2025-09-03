@@ -29,10 +29,8 @@ export {};
   const [posts, setPosts] = useState([...BLOG_POSTS]);
   useEffect(() => {}
     const interval = setInterval(() => {}
-      setPosts(prev => [...prev, generateRandomBlogPost()]);,
-}, 120000); // every 2 minutes;
-    return () => clearInterval(interval);,
-}, []);
+      setPosts(prev => [...prev, generateRandomBlogPost()])}, 120000); // every 2 minutes;
+    return () => clearInterval(interval)}, []);
   // Filter blog posts based on search and category;
   const filteredPosts = posts.filter(post => {}
 ';
@@ -41,8 +39,7 @@ export {};
     const matchesCategory ='''';
       selectedCategory === 'All Categories' ||;
       post.category === selectedCategory;
-    return matchesSearch && matchesCategory;,
-});
+    return matchesSearch && matchesCategory});
   // Get featured posts;
   const featuredPosts = posts.filter(post => post.isFeatured);
   return();
@@ -62,8 +59,7 @@ export {};
           {};
                     onError={e => {}
                       const target = e.currentTarget;';
-                      target.src = '/images/blog-placeholder.svg';,
-}}
+                      target.src = '/images/blog-placeholder.svg'}}
                   />";
                 </div>"";
                 <div className="flex flex-col justify-center">"";
@@ -80,8 +76,7 @@ export {};
                     <div>Broken JSX</div>
                       onError={e => {}
                         const target = e.currentTarget;';
-                        target.src = '/images/blog-placeholder.svg';,
-}}
+                        target.src = '/images/blog-placeholder.svg'}}
                     />";
                     <div>"";
                       <p className="text-white font-medium">;
@@ -131,8 +126,7 @@ export {};
           {};
                       onError={e => {}
                         const target = e.currentTarget;';
-                        target.src = '/images/blog-placeholder.svg';,
-}}
+                        target.src = '/images/blog-placeholder.svg'}}
                     />";
                   </div>"";
                   <CardContent className="p-6">"";
@@ -154,8 +148,7 @@ export {};
                       <div>Broken JSX</div>
                         onError={e => {}
                           const target = e.currentTarget;';
-                          target.src = '/images/blog-placeholder.svg';,
-}}";
+                          target.src = '/images/blog-placeholder.svg'}}";
                       />"";
                       <span className="text-sm text-white">;
                         {post.author.name}
@@ -183,8 +176,7 @@ export {};
                 onClick={() => {}
 ';
                   setSearchQuery('');';
-                  setSelectedCategory('All Categories');";,
-}}"";
+                  setSelectedCategory('All Categories');"}}"";
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;
                 Clear all filters;
               </Button>;
@@ -193,14 +185,10 @@ export {};
         </div>;
       </div>;
     </>)}
-;
 
-export { CATEGORIES, Blog };
-;
-export { CATEGORIES, Blog };
-;
-export { CATEGORIES, Blog };
-;
-export { CATEGORIES, Blog };
-;
-export { CATEGORIES, Blog };
+
+export { CATEGORIES, Blog }
+export { CATEGORIES, Blog }
+export { CATEGORIES, Blog }
+export { CATEGORIES, Blog }
+export { CATEGORIES, Blog }

@@ -179,8 +179,7 @@ export default function Page() {};
       { label: 'Webinars', href: '/webinars' },;
       { label: 'White Papers', href: '/white-papers' },;
       { label: 'Sitemap', href: '/sitemap' }
-    ];,
-},;
+    ]},;
   { label: 'Contact', href: '/contact' }
 ];
 ;
@@ -222,7 +221,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({};
                     className="px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">;
                     {item.label}
                   </Link>) }
-;
+
                 {/* Dropdown Menu */}
                 {};
                             {item.icon}
@@ -309,7 +308,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({};
                               {item.label}
                             </Link>) }
                         </div>) ) }
-;
+
               {/* Mobile Actions */}";
               <div className="pt-4 border-t border-slate-700/50 space-y-3">";
                 <div className="flex items-center space-x-4 text-slate-400">";
@@ -334,4 +333,4 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({};
     </nav>;
   )};'"`;
 
-;,"});,})";
+;,"});})";

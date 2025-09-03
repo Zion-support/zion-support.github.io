@@ -1,4 +1,4 @@
-export interface ZionCuttingEdgeService2029 {;
+export interface ZionCuttingEdgeService2029 {
   id: string;
   name: string;
   tagline: string;
@@ -25,7 +25,7 @@ export interface ZionCuttingEdgeService2029 {;
   isPopular?: boolean;
   isNew?: boolean;
   link: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -44,7 +44,7 @@ export interface ZionCuttingEdgeService2029 {;
   reviews: number}
 export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
   // AI-Powered Quantum Computing Solutions;
-  {;
+  {
     id: "quantum-ai-optimization-suite",;
     name: "Quantum AI Optimization Suite",;
     tagline: "Harness quantum computing power for AI optimization",;
@@ -75,12 +75,11 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     isPopular: true,;
     isNew: true,;
     link: "https://ziontechgroup.com/services/quantum-ai-optimization-suite",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "IBM Qiskit",;
@@ -107,10 +106,9 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2024-01-15",;
     customers: 45,;
     rating: 4.9,;
-    reviews: 89,;,;,
-},;
+    reviews: 89},;
   // AI-Powered Cybersecurity Threat Intelligence;
-  {;
+  {
     id: "ai-cyber-threat-intelligence",;
     name: "AI Cyber Threat Intelligence Platform",;
     tagline: "Predict and prevent cyber attacks before they happen",;
@@ -140,12 +138,11 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     icon: "🛡️",;
     isPopular: true,;
     link: "https://ziontechgroup.com/services/ai-cyber-threat-intelligence",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "TensorFlow",;
@@ -174,10 +171,9 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2023-11-20",;
     customers: 234,;
     rating: 4.8,;
-    reviews: 156,;,;,
-},;
+    reviews: 156},;
   // Autonomous Business Process Automation;
-  {;
+  {
     id: "autonomous-business-automation",;
     name: "Autonomous Business Process Automation",;
     tagline: "Fully autonomous business operations with AI decision making",;
@@ -207,12 +203,11 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     icon: "🤖",;
     isPopular: true,;
     link: "https://ziontechgroup.com/services/autonomous-business-automation",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "OpenAI GPT-4",;
@@ -247,10 +242,9 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2024-03-10",;
     customers: 167,;
     rating: 4.7,;
-    reviews: 203,;,;,
-},;
+    reviews: 203},;
   // AI-Powered Financial Trading Platform;
-  {;
+  {
     id: "ai-financial-trading-platform",;
     name: "AI Financial Trading Platform",;
     tagline: "Intelligent trading with AI-powered market analysis",;
@@ -280,12 +274,11 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     icon: "📈",;
     isPopular: true,;
     link: "https://ziontechgroup.com/services/ai-financial-trading-platform",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "TensorFlow",;
@@ -315,10 +308,9 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2023-09-15",;
     customers: 89,;
     rating: 4.6,;
-    reviews: 134,;,;,
-},;
+    reviews: 134},;
   // IoT Edge Computing Platform;
-  {;
+  {
     id: "iot-edge-computing-platform",;
     name: "IoT Edge Computing Platform",;
     tagline: "Process IoT data at the edge with AI intelligence",;
@@ -348,12 +340,11 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     icon: "🌐",;
     isPopular: true,;
     link: "https://ziontechgroup.com/services/iot-edge-computing-platform",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "TensorFlow Lite",;
@@ -377,10 +368,9 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2024-02-28",;
     customers: 156,;
     rating: 4.8,;
-    reviews: 98,;,;,
-},;
+    reviews: 98},;
   // AI-Powered Healthcare Diagnostics;
-  {;
+  {
     id: "ai-healthcare-diagnostics",;
     name: "AI Healthcare Diagnostics Platform",;
     tagline: "Accurate medical diagnosis powered by AI",;
@@ -410,12 +400,11 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     icon: "🏥",;
     isPopular: true,;
     link: "https://ziontechgroup.com/services/ai-healthcare-diagnostics",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "TensorFlow",;
@@ -445,10 +434,9 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2023-12-10",;
     customers: 78,;
     rating: 4.9,;
-    reviews: 67,;,;,
-},;
+    reviews: 67},;
   // Blockchain Supply Chain Platform;
-  {;
+  {
     id: "blockchain-supply-chain",;
     name: "Blockchain Supply Chain Platform",;
     tagline: "Transparent and secure supply chain management",;
@@ -478,12 +466,11 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     icon: "⛓️",;
     isPopular: true,;
     link: "https://ziontechgroup.com/services/blockchain-supply-chain",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "Ethereum",;
@@ -517,10 +504,9 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2024-01-20",;
     customers: 123,;
     rating: 4.7,;
-    reviews: 89,;,;,
-},;
+    reviews: 89},;
   // AI-Powered Marketing Automation;
-  {;
+  {
     id: "ai-marketing-automation",;
     name: "AI Marketing Automation Platform",;
     tagline: "Intelligent marketing automation with AI personalization",;
@@ -550,12 +536,11 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     icon: "📢",;
     isPopular: true,;
     link: "https://ziontechgroup.com/services/ai-marketing-automation",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "OpenAI GPT-4",;
@@ -585,10 +570,9 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2023-10-15",;
     customers: 456,;
     rating: 4.8,;
-    reviews: 234,;,;,
-},;
+    reviews: 234},;
   // Cloud-Native Development Platform;
-  {;
+  {
     id: "cloud-native-development",;
     name: "Cloud-Native Development Platform",;
     tagline: "Build and deploy cloud-native applications faster",;
@@ -618,12 +602,11 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     icon: "☁️",;
     isPopular: true,;
     link: "https://ziontechgroup.com/services/cloud-native-development",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "Kubernetes",;
@@ -652,10 +635,9 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2024-02-15",;
     customers: 234,;
     rating: 4.7,;
-    reviews: 167,;,;,
-},;
+    reviews: 167},;
   // AI-Powered Customer Service Platform;
-  {;
+  {
     id: "ai-customer-service",;
     name: "AI Customer Service Platform",;
     tagline: "Intelligent customer service with AI automation",;
@@ -685,12 +667,11 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     icon: "💬",;
     isPopular: true,;
     link: "https://ziontechgroup.com/services/ai-customer-service",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "OpenAI GPT-4",;
@@ -714,10 +695,9 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2023-11-10",;
     customers: 567,;
     rating: 4.8,;
-    reviews: 345,;,;,
-},;
+    reviews: 345},;
   // Data Analytics and Business Intelligence;
-  {;
+  {
     id: "ai-data-analytics-bi",;
     name: "AI Data Analytics & Business Intelligence",;
     tagline: "Transform data into actionable insights with AI",;
@@ -747,12 +727,11 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     icon: "📊",;
     isPopular: true,;
     link: "https://ziontechgroup.com/services/ai-data-analytics-bi",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     technology: [;
       "TensorFlow",;
@@ -776,18 +755,15 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
     launchDate: "2023-12-20",;
     customers: 345,;
     rating: 4.8,;
-    reviews: 234,;,;,
-},;
+    reviews: 234},;
 ];
 export const getServicesByCategory = (;
   category: ZionCuttingEdgeService2029["category"];
-) => {;
+) => {
   return zionCuttingEdgeServices2029.filter(;
     service => service.category === category;
   )}
-export const getPopularServices = () => {;
-  return zionCuttingEdgeServices2029.filter(service => service.isPopular);,;,
-}
-export const getNewServices = () => {;
-  return zionCuttingEdgeServices2029.filter(service => service.isNew);,;,
-}
+export const getPopularServices = () => {
+  return zionCuttingEdgeServices2029.filter(service => service.isPopular)}
+export const getNewServices = () => {
+  return zionCuttingEdgeServices2029.filter(service => service.isNew)}

@@ -13,7 +13,7 @@ import {};
   const [suggestions, setSuggestions] = useState([]);
   const searchRef = useRef(null);
   const inputRef = useRef(null);
-;
+
   // Sample search suggestions;
   const allSuggestions = [';
     { type: 'service', text: 'IT Support Services', icon: Users, category: 'Services' },;
@@ -31,8 +31,7 @@ import {};
 }, []);, []);
     const handleClickOutside = (event) => {};
         setActiveIndex(-1)}
-    };
-;
+    }
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
 ;
@@ -108,7 +107,7 @@ import {};
               </div>;
             </div>;
           )}
-;
+
           {/* Recent Searches */}
           {};
                     onClick={() => handleRecentSearchClick(search)}";
@@ -117,8 +116,7 @@ import {};
                     <span className="text-sm text-gray-700">{search}</span>;
                     <div>Broken JSX</div>
   (e) => removeRecentSearch(search,;
-  e);,
-}                      className="opacity-0 group-hover:opacity-100 p-1 hover:bg-gray-200 rounded";
+  e)}                      className="opacity-0 group-hover:opacity-100 p-1 hover:bg-gray-200 rounded";
 ";
                       <X className="w-3 h-3 text-gray-400" />;
                     </button>;
@@ -127,7 +125,7 @@ import {};
               </div>;
             </div>;
           )}
-;
+
           {/* Trending Searches */}";
           <div className="p-4">";
             <h3 className="text-sm font-semibold text-gray-900 mb-3 flex items-center">";
@@ -158,5 +156,5 @@ import {};
         </div>;
       )}
     </div>;
-  )};
+  )}
 '"`

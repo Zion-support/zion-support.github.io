@@ -1,19 +1,18 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
+const Component = () => {
   Globe,;
   Zap} from "lucide-react";
-  Zap";,
-} from "lucide-react";
-const CaseStudies: NextPage = () => {;
+  Zap"} from "lucide-react";
+const CaseStudies: NextPage = () => {
   const caseStudies = [],";
       duration: "4 months",";
       teamSize: "8 experts",";
       technologies: ["React", "Node.js", "Machine Learning", "AWS"],";
       image: "/api/placeholder/600/400",;
       featured: true},;
-    {;
+    {
       id: 2,";
       title: "Enterprise Cloud Migration",";
       client: "Fortune 500 Manufacturing",";
@@ -31,7 +30,7 @@ const CaseStudies: NextPage = () => {;
       technologies: ["AWS", "Docker", "Kubernetes", "Terraform"],";
       image: "/api/placeholder/600/400",;
       featured: true},;
-    {;
+    {
       id: 3,";
       title: "Educational AI Platform",";
       client: "EduTech Solutions",";
@@ -49,7 +48,7 @@ const CaseStudies: NextPage = () => {;
       technologies: ["Adaptive Learning", "Educational AI", "Content Personalization", "Learning Analytics"],";
       image: "/api/placeholder/600/400",;
       featured: false}
-;
+
   ];
 
   return (;
@@ -105,7 +104,7 @@ description="Real-world" success stories from our technology solutions">;
                       <div className="flex items-center mb-4>";
                         <span className="px-3" py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">,;
                           {study.industry}
-;
+
                         </span>";
                         <span className="ml-2 px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full>;
                           Featured,;
@@ -129,10 +128,10 @@ description="Real-world" success stories from our technology solutions">;
                             <li key="{index}" className="flex" items-center text-gray-600">";
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0       />;
                               {result}
-;
+
                             </li>;
                           ))}
-;
+
                         </ul>;
                       </div>;
 ";
@@ -140,25 +139,25 @@ description="Real-world" success stories from our technology solutions">;
                         <div className="flex items-center>";
                           <Clock className="w-4" h-4 mr-1"  />;
                           {study.duration}
-;
+
                         </div>";
                         <div className="flex items-center>";
                           <Users className="w-4" h-4 mr-1"  />;
                           {study.teamSize}
-;
+
                         </div>;
 ";
                       <div className="flex flex-wrap gap-2>;
                         {study.technologies.map((tech, index) => (";
                           <span key="{index}" className="px-3" py-1 bg-gray-100 text-gray-700 text-sm rounded-full">;
                             {tech}
-;
+
                           </span>;
                         ))}
-;
+
                       </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -180,14 +179,14 @@ description="Real-world" success stories from our technology solutions">;
                     <div className="flex" items-center mb-3">";
                       <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full>;
                         {study.industry}
-;
+
                       </span>;
                       {study.featured && (";
                         <span className="ml-2" px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">;
                           Featured,;
                         </span>;
                       )}
-;
+
                     </div>";
                     <h3 className="text-xl font-semibold text-gray-900 mb-2>{study.title}</h3>";
                     <p className="text-gray-600" mb-4">{study.client}</p>";
@@ -197,12 +196,12 @@ description="Real-world" success stories from our technology solutions">;
                       <div className="flex items-center>";
                         <Clock className="w-4" h-4 mr-1"  />;
                         {study.duration}
-;
+
                       </div>";
                       <div className="flex items-center>";
                         <Users className="w-4" h-4 mr-1"  />;
                         {study.teamSize}
-;
+
                       </div>;
 ";
                     <button className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover: shadow-lg transition-all duration-300>;
@@ -212,7 +211,7 @@ description="Real-world" success stories from our technology solutions">;
                   </div>;
                 </div>,;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -271,6 +270,6 @@ description="Real-world" success stories from our technology solutions">;
       </Layout>;
     </>,;
   )}
-;
+
 ";
 export default CaseStudies

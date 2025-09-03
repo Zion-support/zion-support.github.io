@@ -151,8 +151,7 @@ export {};
                     ))}
                   </ul>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -255,16 +254,11 @@ export {};
           </div>;
         </div>;
       </section>;
-    </div>);,
-}
-;
+    </div>)}
 
-export { HealthcareSolutions, Icon };
-;
-export { HealthcareSolutions, Icon };
-;
-export { HealthcareSolutions, Icon };
-;
-export { HealthcareSolutions, Icon };
-;
-export { HealthcareSolutions, Icon };
+
+export { HealthcareSolutions, Icon }
+export { HealthcareSolutions, Icon }
+export { HealthcareSolutions, Icon }
+export { HealthcareSolutions, Icon }
+export { HealthcareSolutions, Icon }

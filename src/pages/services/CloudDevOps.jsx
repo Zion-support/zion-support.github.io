@@ -15,7 +15,7 @@ const CloudDevOps = () => {};
     {};
 }
   ];
-;
+
   const platforms = [;
     {};
 },;
@@ -26,14 +26,14 @@ const CloudDevOps = () => {};
     {};
 }
   ];
-;
+
   const devOpsTools = [;
     { category: "CI/CD", tools: ["Jenkins", "GitLab CI", "GitHub Actions", "CircleCI", "ArgoCD"] },;
     { category: "Infrastructure", tools: ["Terraform", "Ansible", "Puppet", "Chef", "CloudFormation"] },;
     { category: "Monitoring", tools: ["Prometheus", "Grafana", "ELK Stack", "Datadog", "New Relic"] },;
     { category: "Security", tools: ["Vault", "AWS IAM", "Azure AD", "Google IAM", "Prisma Cloud"] }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div>Broken JSX</div>
@@ -142,18 +142,12 @@ const CloudDevOps = () => {};
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default CloudDevOps;
-;
 
-export { CloudDevOps };
-;
-export { CloudDevOps };
-;
-export { CloudDevOps };
-;
-export { CloudDevOps };
-;
-export { CloudDevOps };
+
+export { CloudDevOps }
+export { CloudDevOps }
+export { CloudDevOps }
+export { CloudDevOps }
+export { CloudDevOps }

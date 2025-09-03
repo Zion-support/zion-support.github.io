@@ -18,9 +18,7 @@
           </motion.div>;
         </div>;
       </section>;
-  );,
-};
-;
+  )}
 export default ComprehensivePricing2027;
 import React from "react";
 import { SEO } from "@/components/SEO";

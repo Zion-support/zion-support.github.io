@@ -51,7 +51,7 @@ const QuantumSecureInfrastructure = () => {};
         <meta name="description" content="Future-proof quantum-secure infrastructure that protects against quantum computing threats with military-grade security and post-quantum cryptography." />;
         <meta name="keywords" content="quantum security, post-quantum cryptography, quantum key distribution, zero-trust architecture, quantum-safe infrastructure" />;
       </Head>;
-      ;
+
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 py-20 text-center">;
@@ -83,7 +83,7 @@ const QuantumSecureInfrastructure = () => {};
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Quantum-Safe Security Features</h2>;
             <p className="text-gray-600 text-lg">Advanced quantum-resistant technologies that protect your infrastructure from future threats</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {};
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">;
@@ -104,7 +104,7 @@ const QuantumSecureInfrastructure = () => {};
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Quantum Security Advantages</h2>;
               <p className="text-gray-600 text-lg">Protect your organization from the quantum computing revolution</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-2 gap-8">;
               <div>;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Key Benefits</h3>;
@@ -117,7 +117,7 @@ const QuantumSecureInfrastructure = () => {};
                   ))}
                 </ul>;
               </div>;
-              ;
+
               <div className="bg-white rounded-xl p-6 shadow-lg">;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Use Cases</h3>;
                 <ul className="space-y-3">;
@@ -139,7 +139,7 @@ const QuantumSecureInfrastructure = () => {};
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Quantum-Safe Technology Stack</h2>;
             <p className="text-gray-600 text-lg">Built on cutting-edge quantum-resistant technologies</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-3 gap-8">;
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">;
@@ -148,7 +148,7 @@ const QuantumSecureInfrastructure = () => {};
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Post-Quantum Cryptography</h3>;
               <p className="text-gray-600">Implementation of NIST-approved post-quantum cryptographic algorithms that resist quantum computer attacks.</p>;
             </div>;
-            ;
+
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">;
                 <Network className="w-6 h-6 text-white" />;
@@ -156,7 +156,7 @@ const QuantumSecureInfrastructure = () => {};
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Quantum Key Distribution</h3>;
               <p className="text-gray-600">Secure key exchange using quantum mechanics principles that detect any eavesdropping attempts.</p>;
             </div>;
-            ;
+
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">;
                 <Shield className="w-6 h-6 text-white" />;
@@ -174,7 +174,7 @@ const QuantumSecureInfrastructure = () => {};
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Quantum Security Investment Plans</h2>;
               <p className="text-gray-600 text-lg">Protect your organization with quantum-safe infrastructure</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-3 gap-8">;
               {};
                 <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.name === 'Enterprise' ? 'border-2 border-indigo-500 bg-indigo-50' : 'border border-gray-200 bg-white'}`}>;
@@ -207,7 +207,7 @@ const QuantumSecureInfrastructure = () => {};
               <h2 className="text-3xl font-bold mb-4">Ready to Secure Your Future?</h2>;
               <p className="text-gray-300 text-lg">Contact our quantum security experts today</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-2 gap-8">;
               <div>;
                 <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>;
@@ -226,7 +226,7 @@ const QuantumSecureInfrastructure = () => {};
                   </div>;
                 </div>;
               </div>;
-              ;
+
               <div className="bg-white rounded-xl p-6">;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Schedule Security Assessment</h3>;
                 <p className="text-gray-600 mb-4">Get a comprehensive quantum security assessment for your organization</p>;

@@ -15,9 +15,7 @@ export default function Page() {};
   const closeModal = () => {};
 };
     setShowModal(false) ;
-    setSelectedService(null) ;,
-};
-;
+    setSelectedService(null) }
   return (<div  className="min - h-screen futuristic -bg">;
       {/* Matrix Rain Background Effect */}
       <div  className="matrix -rain"></div>;

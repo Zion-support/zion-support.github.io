@@ -11,17 +11,16 @@ const EnhancedServicesShowcase = () => {}"});,"})";
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;,"});,"})";
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;,"});,"})";
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase());,"});,"})";
-    return matchesCategory && matchesSearch,"});,"});";,
-});,"});,"})";
+    return matchesCategory && matchesSearch,"});,"});"});,"});,"})";
   const containerVariants = {}"});,"})";
-    hidden: { opacity: 0 },,"});,"})";
+    hidden: { opacity: 0 },"});,"})";
     visible: {}"});,"})";
       opacity: 1,"});,"})";
       transition: {}"});,"})";
         staggerChildren: 0.1,"});,"})";
         delayChildren: 0.2}}};,"});,"})";
   const itemVariants = {}"});,"})";
-    hidden: { opacity: 0, y: 20 },,"});,"})";
+    hidden: { opacity: 0, y: 20 },"});,"})";
     visible: {}"});,"})";
       opacity: 1,"});,"})";
       y: 0,"});,"})";
@@ -41,7 +40,7 @@ const EnhancedServicesShowcase = () => {}"});,"})";
           </motion.h1>""";,"});,"})";
           <div>Broken JSX</div>
             transition="{{" duration: 0.6, delay: 0.2 }}"});,"})">;,"});,"})";
-            Discover our extensive portfolio of innovative micro SAAS services,,"});,"})";
+            Discover our extensive portfolio of innovative micro SAAS services,"});,"})";
             enterprise IT solutions, cutting-edge AI services, and emerging,"});,"})";
             technology solutions designed to transform your business.</motion.p>;,"});,"})";
           {/* comment */}""";,"});,"})";
@@ -75,8 +74,7 @@ const EnhancedServicesShowcase = () => {}"});,"})";
 ";,"});,"})";
                     selectedCategory === category.id"";,"});,"})";
                       ? "bg-blue-600 border-blue-400 text-white"""";,"});,"})";
-                      : "bg-white/10 border-white/20 text-gray-300 hover: bg-white/20 hover:border-white/40"","});,"});";,
-}"}""";,"});,"})">"""";,"});,"})";
+                      : "bg-white/10 border-white/20 text-gray-300 hover: bg-white/20 hover:border-white/40"","});,"});"}"}""";,"});,"})">"""";,"});,"})";
                   <span className="mr-2">{category.icon}</span>;,"});,"})";
                   {category.name}"});,"})";
                 </button>;,"});,"})";
@@ -193,8 +191,7 @@ const EnhancedServicesShowcase = () => {}"});,"})";
                 onClick="{()" => {}"});,"})";
 ";,"});,"})";
                   setSelectedCategory("all");,"});,"})";
-                  setSearchTerm("");""";,"});,"});";,
-}}"""";,"});,"})";
+                  setSearchTerm("");""";,"});,"});"}}"""";,"});,"})";
                 className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors duration-300"","});,"})">;,"});,"})";
                 View All Services,"});,"})";
               </button>;,"});,"})";
@@ -286,25 +283,23 @@ const EnhancedServicesShowcase = () => {}
   const [searchTerm, setSearchTerm] = useState("")";
   const categories = [];
   const filteredServices = enhancedServices2025.filter(service => {}
-;
+
     const matchesSearch =;
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());,
-}
-    return matchesCategory && matchesSearch});,
-}  const containerVariants = {}
-;
+      service.tagline.toLowerCase().includes(searchTerm.toLowerCase())}
+    return matchesCategory && matchesSearch})}  const containerVariants = {}
+
     hidden: { opacity: 0 }, visible: {}
-;
+
       opacity: 1, transition: {}
-;
+
         staggerChildren: 0.1, delayChildren: 0.2}}}
-;
+
   const itemVariants = {}
-;
+
     hidden: { opacity: 0, y: 20 }, visible: {}
-;
+
       opacity: 1, y: 0, transition: { duration: 0.5 }}}";
   return()";
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">""";
@@ -319,7 +314,7 @@ const EnhancedServicesShowcase = () => {}
             Comprehensive"";
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">";
               {" "}
-;
+
               Technology Solutions";
             </span>;
           </motion.h1>""";
@@ -361,17 +356,16 @@ technology solutions designed to transform your business.</motion.p>;
               {};
                   onClick="{()" ="> setSelectedCategory(category.id)}
                   className="{"px-4" py-2 rounded-lg border transition-all duration-300 ${}
-;
+
                     selectedCategory === category.id"";
                       ? "bg-blue-600 border-blue-400 text-white"""""";
-                      : "bg - white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40""", ",;,
-}"}""">"";
+                      : "bg - white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40""", "}"}""">"";
                   <span className = "mr-2">{category.icon}</span>;
                   {category.name}
-;
+
                 </button>;
               ))}
-;
+
             </div>;
           </motion.div>;
         </div>";
@@ -398,7 +392,7 @@ technology solutions designed to transform your business.</motion.p>;
                   </h3>""";
                   <p className="text-sm text-blue-400 font-medium">";
                     {service.category.replace("-").toUpperCase()}
-;
+
                   </p>";
                 </div>;
 """;
@@ -427,10 +421,10 @@ technology solutions designed to transform your business.</motion.p>;
                   <ul className="space-y-1">";
                     {};
                         {feature}
-;
+
                       </li>;
                     ))}
-;
+
                   </ul>";
                 </div>;
 """;
@@ -442,10 +436,10 @@ technology solutions designed to transform your business.</motion.p>;
                   <ul className="space-y-1">";
                     {};
                         {benefit}
-;
+
                       </li>;
                     ))}
-;
+
                   </ul>";
                 </div>;
 """;
@@ -458,9 +452,9 @@ technology solutions designed to transform your business.</motion.p>;
                     </div>""";
                     <div>""""";
                       <span className="text-blue-400 font-medium">Setup:</span>{" "}
-;
+
                       {service.setupTime}
-;
+
                     </div>;
                   </div>";
                 </div>;
@@ -486,7 +480,7 @@ technology solutions designed to transform your business.</motion.p>;
                 </div>;
               </motion.div>;
             ))}
-;
+
           </motion.div>";
           {/* comment */}
           {};
@@ -512,7 +506,7 @@ technology solutions designed to transform your business.</motion.p>;
               </button>;
             </motion.div>,;
           )}
-;
+
         </div>";
       </section>;
 """;
@@ -593,16 +587,12 @@ https: // comment;
           </motion.div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default EnhancedServicesShowcase;
-;
 
-export { EnhancedServicesShowcase };
-;
-export { EnhancedServicesShowcase };
-;
-export { EnhancedServicesShowcase };
-;
-export { EnhancedServicesShowcase };
-;
-export { EnhancedServicesShowcase };
+
+export { EnhancedServicesShowcase }
+export { EnhancedServicesShowcase }
+export { EnhancedServicesShowcase }
+export { EnhancedServicesShowcase }
+export { EnhancedServicesShowcase }

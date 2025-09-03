@@ -24,8 +24,7 @@ export default function DisputeManagement() {};
 '''`;
                   activeTab === 'overview''''`'`;
                     ? 'bg-zion-cyan text-zion-blue-dark'''`'`'`;
-                    : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'````;,
-}`}
+                    : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'````}`}
               >;
                 Overview;
               </button>';
@@ -37,8 +36,7 @@ export default function DisputeManagement() {};
 '''`;
                   activeTab === 'disputes''''`'`;
                     ? 'bg-zion-cyan text-zion-blue-dark'''`'`'`;
-                    : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'````;,
-}`}
+                    : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'````}`}
               >;
                 Active Disputes;
               </button>';
@@ -50,8 +48,7 @@ export default function DisputeManagement() {};
 '''`;
                   activeTab === 'resolutions''''`'`;
                     ? 'bg-zion-cyan text-zion-blue-dark'''`'`'`;
-                    : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'````;,
-}`}
+                    : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'````}`}
               >;
                 Resolutions;
               </button>';
@@ -63,8 +60,7 @@ export default function DisputeManagement() {};
 '''`;
                   activeTab === 'settings''''`'`;
                     ? 'bg-zion-cyan text-zion-blue-dark'''`'`'`;
-                    : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'````;,
-}`}
+                    : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'````}`}
               >;
                 Settings;
               </button>;
@@ -251,14 +247,10 @@ export default function DisputeManagement() {};
         </div>;
       </main>;
     </>)}
-;
 
-export { DisputeManagement };
-;
-export { DisputeManagement };
-;
-export { DisputeManagement };
-;
-export { DisputeManagement };
-;
-export { DisputeManagement };
+
+export { DisputeManagement }
+export { DisputeManagement }
+export { DisputeManagement }
+export { DisputeManagement }
+export { DisputeManagement }

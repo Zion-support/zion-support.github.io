@@ -14,7 +14,7 @@ const CloudMigrationServices = () => {};
     'Compliance & governance',;
     'Training & documentation';
   ];
-;
+
   const benefits = [;
     'Reduce infrastructure costs by 40%',;
     'Improve scalability & flexibility',;
@@ -25,7 +25,7 @@ const CloudMigrationServices = () => {};
     'Better performance & reliability',;
     'Future-proof technology stack';
   ];
-;
+
   const migrationSteps = [;
     {};
 },;
@@ -91,7 +91,7 @@ const CloudMigrationServices = () => {};
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Comprehensive Migration Features</h2>;
           <p className="text-xl text-gray-600">Everything you need for a successful cloud migration</p>;
         </div>;
-        ;
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
           {};
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature}</h3>;
@@ -107,7 +107,7 @@ const CloudMigrationServices = () => {};
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Migration Process</h2>;
             <p className="text-xl text-gray-600">A proven 5-step approach to successful cloud migration</p>;
           </div>;
-          ;
+
           <div className="space-y-8">;
             {};
                   {step.step}
@@ -131,7 +131,7 @@ const CloudMigrationServices = () => {};
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Cloud Migration?</h2>;
           <p className="text-xl text-gray-600">Measurable results that drive business growth</p>;
         </div>;
-        ;
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
           {};
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit}</h3>;
@@ -147,11 +147,10 @@ const CloudMigrationServices = () => {};
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Migration Pricing Plans</h2>;
             <p className="text-xl text-gray-600">Choose the plan that fits your migration needs</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-3 gap-8">;
             {};
                 )}
-                ;
                 <div className="text-center mb-6">;
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>;
                   <div className="text-4xl font-bold text-blue-600 mb-2">{plan.price}</div>;
@@ -159,7 +158,7 @@ const CloudMigrationServices = () => {};
                   <p className="text-green-600 font-semibold">Save up to 40%</p>;
                   <p className="text-gray-600 mt-2">{plan.description}</p>;
                 </div>;
-                ;
+
                 <ul className="space-y-3 mb-8">;
                   {};
                     <li key={featureIndex} className="flex items-center text-gray-600">;
@@ -186,7 +185,7 @@ const CloudMigrationServices = () => {};
             <h2 className="text-4xl font-bold mb-4">Ready to Migrate to the Cloud?</h2>;
             <p className="text-xl text-gray-300">Contact us today for a free migration assessment</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             <div className="text-center">;
               <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />;
@@ -228,7 +227,5 @@ const CloudMigrationServices = () => {};
         </div>;
       </footer>;
     </div>;
-  );,
-};
-;
+  )}
 export default CloudMigrationServices;

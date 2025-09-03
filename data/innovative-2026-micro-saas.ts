@@ -1,4 +1,4 @@
-export interface Innovative2026MicroSaas {;
+export interface Innovative2026MicroSaas {
   id: string;
   name: string;
   tagline: string;
@@ -8,11 +8,11 @@ export interface Innovative2026MicroSaas {;
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
 export const innovative2026MicroSaasServices: Innovative2026MicroSaas[] = [;
-  {;
+  {
     id: "2026-micro-saas",;
     name: "2026 Micro SAAS Platform",;
     tagline: "Next-generation micro SAAS solutions",;
@@ -28,7 +28,7 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaas[] = [;
     link: "/services/2026-micro-saas",;
     category: "Innovative 2026 Micro SAAS",;
     realImplementation: true,;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709";

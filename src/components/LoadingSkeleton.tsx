@@ -61,32 +61,30 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({};
               <Skeleton height="h-10" width="w-24"  />";
               <Skeleton height="h-10" width="w-24"  />            </div>;
           </div>) ;
-;
+
       default:;
-        return < Skeleton />}  };
-;
+        return < Skeleton />}  }
   return ()`;
     <div className={`animate-pulse ${className}`}>;
       {renderSkeleton()}
     </div>;
-  )};
-;
+  )}
 // Specialized skeleton components;
 export const HeroSkeleton: React.FC = (): JSX.Element => (";
   <LoadingSkeleton type="hero"  />);
-;
+
 export const CardSkeleton: React.FC<{ count?: number }> = ({ count = 3 }) => (";
   <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-6">;
     {Array.from({ length: count }).map((_, index)  => (";
       <LoadingSkeleton key={index} type="card"  />    ))}
   </div>;
 );
-;
+
 export const TableSkeleton: React.FC<{ count?: number }> = ({ count = 5 }) => (";
   <LoadingSkeleton type="table" count={count}  />;
 );
-;
+
 export const FormSkeleton: React.FC<{ count?: number }> = ({ count = 4 }) => (";
   <LoadingSkeleton type="form" count={count}  />);
-;
+
 export default LoadingSkeleton;'"`;

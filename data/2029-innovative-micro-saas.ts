@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface Innovative2029MicroSaasService {;
+export interface Innovative2029MicroSaasService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface Innovative2029MicroSaasService {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface Innovative2029MicroSaasService {;
   rating: number;
 export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] = [;
   // AI & Machine Learning Services;
-  {;
+  {
     id: "ai-emotional-intelligence-platform",;
     name: "AI Emotional Intelligence Platform",;
     tagline: "Advanced AI that understands and responds to human emotions",;
@@ -76,20 +76,18 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     marketSize: "$35B emotional AI market",;
     growthRate: "280% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced emotional intelligence platform with real-time emotion detection, AI-powered responses, and comprehensive emotional analytics. Includes multi-modal recognition and empathy simulation.",;
     launchDate: "2029-01-20",;
     customers: 156,;
     rating: 4.8,;
-    reviews: 289;,;,
-},;
-  {;
+    reviews: 289},;
+  {
     id: "ai-multimodal-fusion-platform",;
     name: "AI Multimodal Fusion Platform",;
     tagline: "Seamlessly combine text, image, audio, and video AI processing",;
@@ -127,21 +125,19 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     marketSize: "$45B multimodal AI market",;
     growthRate: "320% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced multimodal AI platform with unified processing capabilities, cross-modal understanding, and seamless data integration. Includes comprehensive API access and real-time processing.",;
     launchDate: "2029-02-01",;
     customers: 89,;
     rating: 4.7,;
-    reviews: 167;,;,
-},;
+    reviews: 167},;
   // Blockchain & Web3 Services;
-  {;
+  {
     id: "quantum-blockchain-platform",;
     name: "Quantum Blockchain Platform",;
     tagline: "Quantum-resistant blockchain with enhanced security and performance",;
@@ -179,21 +175,19 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     marketSize: "$60B blockchain market",;
     growthRate: "400% annual growth",;
     variant: "blockchain-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum blockchain platform with quantum-resistant cryptography, enhanced security, and high-performance capabilities. Includes smart contract automation and cross-chain interoperability.",;
     launchDate: "2029-02-15",;
     customers: 45,;
     rating: 4.9,;
-    reviews: 89;,;,
-},;
+    reviews: 89},;
   // Healthcare & Biotech Services;
-  {;
+  {
     id: "ai-personalized-medicine-platform",;
     name: "AI Personalized Medicine Platform",;
     tagline: "AI-powered personalized treatment and drug discovery",;
@@ -231,21 +225,19 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     marketSize: "$80B personalized medicine market",;
     growthRate: "350% annual growth",;
     variant: "ai-healthcare",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced personalized medicine platform with AI-powered treatment planning, genetic analysis, drug discovery acceleration, and comprehensive clinical tools. Includes research collaboration features.",;
     launchDate: "2029-01-30",;
     customers: 67,;
     rating: 4.8,;
-    reviews: 134;,;,
-},;
+    reviews: 134},;
   // Smart City & Infrastructure Services;
-  {;
+  {
     id: "ai-smart-city-orchestrator",;
     name: "AI Smart City Orchestrator",;
     tagline: "Comprehensive AI management for smart city infrastructure",;
@@ -283,12 +275,11 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     marketSize: "$100B smart city market",;
     growthRate: "450% annual growth",;
     variant: "it-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced smart city orchestrator with comprehensive infrastructure management, AI optimization, and real-time monitoring. Includes predictive maintenance and emergency response coordination.",;
     launchDate: "2029-03-01",;

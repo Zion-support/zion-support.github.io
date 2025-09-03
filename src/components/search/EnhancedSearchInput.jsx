@@ -23,7 +23,7 @@ import React { useState, useEffect, useRef } from "react" break}"}"" return: (<d
       setIsOpen(true)} else {};
 }
       setIsOpen(false)}
-;
+
     const [query, setQuery] = useState('');
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [filteredSuggestions, setFilteredSuggestions] = useState([]);
@@ -43,7 +43,7 @@ import React { useState, useEffect, useRef } from "react" break}"}"" return: (<d
 }, []);, []);
         const handleClickOutside = (event) => {};
                 setShowSuggestions(false)}
-        };
+        }
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
     const handleClear = () => {};
@@ -67,7 +67,7 @@ import React { useState, useEffect, useRef } from "react" break}"}"" return: (<d
                 setShowSuggestions(false);
                 setSelectedIndex(-1);
                 break}
-    };
+    }
     return (<div className={`relative ${className}`} ref={suggestionsRef}>";
       <form onSubmit={handleSubmit} className="relative">";
         <div className="relative">";
@@ -89,18 +89,15 @@ import React { useState, useEffect, useRef } from "react" break}"}"" return: (<d
   const handleKeyDown = (e) => {};
 }
         setHighlightedIndex(prev = > ;
-          prev < filteredSuggestions.length - 1 ? prev + 1 : prev ); break; case "ArrowUp": e.preventDefault(); setHighlightedIndex(prev => prev > 0 ? prev - 1 : -1);,
-}
+          prev < filteredSuggestions.length - 1 ? prev + 1 : prev ); break; case "ArrowUp": e.preventDefault(); setHighlightedIndex(prev => prev > 0 ? prev - 1 : -1)}
         break,;
       case "Enter":;
           prev <div>Broken JSX</div>
       case "Enter": e.preventDefault()>;
         if (highlightedIndex >= 0 && filteredSuggestions[highlightedIndex]) {};
           handleSuggestionSelect(filteredSuggestions[highlightedIndex])}";
-      case "Escape": setIsOpen(false);,
-}
-        inputRef.current?.blur();,
-}
+      case "Escape": setIsOpen(false)}
+        inputRef.current?.blur()}
         break}
 ;
   const handleSuggestionSelect = (suggestion) => {};
@@ -108,7 +105,7 @@ import React { useState, useEffect, useRef } from "react" break}"}"" return: (<d
     setIsOpen(false);,
 }
     setHighlightedIndex(-1)}
-;
+
 ";
   const handleClear = () => {};
 };
@@ -126,7 +123,7 @@ import React { useState, useEffect, useRef } from "react" break}"}"" return: (<d
 }
     if (lowerSuggestion.includes("service") || lowerSuggestion.includes("solution")) {};
       return Briefcase} else if (lowerSuggestion.includes("user") || lowerSuggestion.includes("team")) {return Users} else if (lowerSuggestion.includes("document") || lowerSuggestion.includes("guide")) {return FileText} else if (lowerSuggestion.includes("trend") || lowerSuggestion.includes("popular")) {return TrendingUp} else {return Globe}
-;
+
 ";
   const recentSearches = [];
 ";
@@ -150,7 +147,7 @@ import React { useState, useEffect, useRef } from "react" break}"}"" return: (<d
 } else if (lowerSuggestion.includes("trend") || lowerSuggestion.includes("popular")) {};
       return TrendingUp} else {};
       return Globe}
-;
+
 ";
   const recentSearches = [";
     "AI Services", ";
@@ -184,7 +181,7 @@ import React { useState, useEffect, useRef } from "react" break}"}"" return: (<d
           placeholder="{placeholder}";
           className="{};
     s:border-transparent transition-all duration-200 ${className}"}
-;
+
        />;
         {};
           placeholder="{placeholder}
@@ -196,7 +193,7 @@ import React { useState, useEffect, useRef } from "react" break}"}"" return: (<d
             <X className="h-4 w-4" /">";
           </button>,;
         )}
-;
+
       </div>;
       {/* comment */} {};
         <div ref="{suggestionsRef}" className="absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50 max-h-96 overflow-y-auto">;
@@ -212,7 +209,7 @@ import React { useState, useEffect, useRef } from "react" break}"}"" return: (<d
                     onClick="{()" => handleSuggestionSelect(suggestion)}
                     className="{};
     r: bg-zion-purple/10""}"}
-;
+
                   >;
                     <Icon className=""h-4" w-4 mr-3 text-zion-cyan flex-shrink-0"  />;
                   <button key="{suggestion}" onClick="{()" => handleSuggestionSelect(suggestion)}";

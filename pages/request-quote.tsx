@@ -13,8 +13,6 @@ const RequestQuotePage = () => {};
         <ContactForm />;
       </main>;
     </>;
-  );,
-};
-;
+  )}
 export default RequestQuotePage;
-;
+

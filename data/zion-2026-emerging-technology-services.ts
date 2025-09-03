@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../src/types/service-variants";
-export interface Zion2026EmergingTechnologyService {;
+export interface Zion2026EmergingTechnologyService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface Zion2026EmergingTechnologyService {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -37,19 +37,18 @@ export interface Zion2026EmergingTechnologyService {;
   customers: number;
   rating: number;
   reviews: number}
-const contact = {;
+const contact = {
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709";
-  ;
-  ;
-  ;
-  ;
-  website: "https://ziontechgroup.com";,;,
-}
+
+
+
+
+  website: "https://ziontechgroup.com"}
 export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyService[] = [;
   // Quantum-Enhanced Blockchain and Web3 Platform;
-  {;
+  {
     id: "quantum-enhanced-blockchain-web3-platform-2026",;
     name: "Quantum-Enhanced Blockchain and Web3 Platform 2026",;
     tagline: "Next-generation blockchain with quantum computing and AI-powered smart contract optimization",;
@@ -93,10 +92,9 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     launchDate: "2026-01-15",;
     customers: 1100,;
     rating: 4.9,;
-    reviews: 580;,;,
-},;
+    reviews: 580},;
   // AI-Powered Autonomous Metaverse Development Platform;
-  {;
+  {
     id: "ai-autonomous-metaverse-development-platform-2026",;
     name: "AI Autonomous Metaverse Development Platform 2026",;
     tagline: "Fully autonomous metaverse development with AI-driven creation and optimization",;
@@ -140,10 +138,9 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     launchDate: "2026-01-20",;
     customers: 950,;
     rating: 4.9,;
-    reviews: 480;,;,
-},;
+    reviews: 480},;
   // Quantum-Enhanced Internet of Things (IoT) Platform;
-  {;
+  {
     id: "quantum-enhanced-iot-platform-2026",;
     name: "Quantum-Enhanced Internet of Things (IoT) Platform 2026",;
     tagline: "Next-generation IoT with quantum computing and AI-powered device optimization",;
@@ -187,10 +184,9 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     launchDate: "2026-01-25",;
     customers: 2100,;
     rating: 4.8,;
-    reviews: 1050;,;,
-},;
+    reviews: 1050},;
   // AI-Powered Autonomous Space Technology Platform;
-  {;
+  {
     id: "ai-autonomous-space-technology-platform-2026",;
     name: "AI Autonomous Space Technology Platform 2026",;
     tagline: "Fully autonomous space operations with AI-driven mission optimization and satellite management",;
@@ -234,10 +230,9 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     launchDate: "2026-02-01",;
     customers: 650,;
     rating: 4.9,;
-    reviews: 320;,;,
-},;
+    reviews: 320},;
   // Quantum-Enhanced Neural Network and Brain-Computer Interface Platform;
-  {;
+  {
     id: "quantum-enhanced-neural-network-bci-platform-2026",;
     name: "Quantum-Enhanced Neural Network and Brain-Computer Interface Platform 2026",;
     tagline: "Next-generation neural networks with quantum computing and AI-powered brain-computer interfaces",;
@@ -281,10 +276,9 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     launchDate: "2026-02-15",;
     customers: 450,;
     rating: 4.9,;
-    reviews: 220;,;,
-},;
+    reviews: 220},;
   // AI-Powered Autonomous Biotechnology and Synthetic Biology Platform;
-  {;
+  {
     id: "ai-autonomous-biotechnology-synthetic-biology-platform-2026",;
     name: "AI Autonomous Biotechnology and Synthetic Biology Platform 2026",;
     tagline: "Fully autonomous biotechnology operations with AI-driven genetic engineering and synthetic biology",;
@@ -328,10 +322,9 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     launchDate: "2026-01-30",;
     customers: 780,;
     rating: 4.9,;
-    reviews: 390;,;,
-},;
+    reviews: 390},;
   // Quantum-Enhanced Climate and Environmental Technology Platform;
-  {;
+  {
     id: "quantum-enhanced-climate-environmental-technology-platform-2026",;
     name: "Quantum-Enhanced Climate and Environmental Technology Platform 2026",;
     tagline: "Next-generation climate technology with quantum computing and AI-powered environmental optimization",;
@@ -375,10 +368,9 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     launchDate: "2026-02-05",;
     customers: 1200,;
     rating: 4.9,;
-    reviews: 600;,;,
-},;
+    reviews: 600},;
   // AI-Powered Autonomous Robotics and Automation Platform;
-  {;
+  {
     id: "ai-autonomous-robotics-automation-platform-2026",;
     name: "AI Autonomous Robotics and Automation Platform 2026",;
     tagline: "Fully autonomous robotics operations with AI-driven automation and optimization",;

@@ -43,8 +43,7 @@ function ProjectDetailsContent() {}
             if (projectData) {}
                 setProject(projectData);
                 // Now fetch notes;
-                fetchProjectNotes(projectId)}
-            else {}
+                fetchProjectNotes(projectId)} else {}
                 toast({}
 ";
 "";
@@ -72,7 +71,7 @@ function ProjectDetailsContent() {}
 ";
 "";
             // console.error("Error fetching project notes:", err)}
-    };
+    }
     const handleSubmitNote = async () => {}
         if (!newNote.trim() || !project || !user);
             return;
@@ -108,7 +107,7 @@ function ProjectDetailsContent() {}
                 variant: "destructive"})}
         finally {}
             setIsSubmittingNote(false)}
-    };
+    }
     const handleStatusChange = async (newStatus) => {}
         if (!project);
             return;
@@ -125,7 +124,7 @@ function ProjectDetailsContent() {}
                     title: "Offer Accepted! 🎉","";
                     description: "The project is now in progress. Congratulations!"})}
         }
-    };
+    }
     const getStatusBadge = (status) => {}
         switch (status) {}
 ";
@@ -144,7 +143,7 @@ function ProjectDetailsContent() {}
                 return <Badge variant="destructive">Canceled</Badge>;";
             default:"";
                 return <Badge variant="outline">{status}</Badge>}
-    };
+    }
     if (isLoading) {}
 ";
 "";
@@ -474,19 +473,14 @@ function ProjectDetailsContent() {}
           </div>;
         </div>;
       </main>;
-    </>) ;,
-}
+    </>) }
   return (<ProtectedRoute>;
       <ProjectDetailsContent />;
     </ProtectedRoute>)}
-;
 
-export { ProjectDetailsContent, ProjectDetails };
-;
-export { ProjectDetailsContent, ProjectDetails };
-;
-export { ProjectDetailsContent, ProjectDetails };
-;
-export { ProjectDetailsContent, ProjectDetails };
-;
-export { ProjectDetailsContent };
+
+export { ProjectDetailsContent, ProjectDetails }
+export { ProjectDetailsContent, ProjectDetails }
+export { ProjectDetailsContent, ProjectDetails }
+export { ProjectDetailsContent, ProjectDetails }
+export { ProjectDetailsContent }

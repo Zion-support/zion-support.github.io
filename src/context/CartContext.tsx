@@ -10,11 +10,11 @@ function cartReducer(state: CartState, action: CartAction): CartState {};
         items = [...state.items, action.payload]}
       return { items }}
     case 'REMOVE_ITEM':;
-      return { items: state.items.filter(i => i.id !== action.payload) };
+      return { items: state.items.filter(i => i.id !== action.payload) }
     case 'CLEAR_CART':;
-      return { items: [] };
+      return { items: [] }
     case 'SET_ITEMS':;
-      return { items: action.payload };
+      return { items: action.payload }
     default:;
       return state}
 }

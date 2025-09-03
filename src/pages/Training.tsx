@@ -46,6 +46,5 @@ const Training = () => {};
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default Training;

@@ -12,16 +12,14 @@ export {};
     e.preventDefault();
     e.stopPropagation();
     if(onBook) {}
-      onBook(talent);,
-}
-  };
+      onBook(talent)}
+  }
   const handleViewProfile = () => {}
   return <div>Component</div>;
 };
 `;
 ``;
-    navigate(`/talent/${talent.id}`);,
-};
+    navigate(`/talent/${talent.id}`)}
   // Extract skills - limit to 5 for display;
   const skills = talent.skills?.slice(0, 5) || [];
   return ();
@@ -104,17 +102,11 @@ export {};
         </div>;
       </div>;
     </Card>;
-  );,
-};
-;
+  )}
 export default TalentCardComponent;
-;
-export { TalentCardComponent };
-;
-export { TalentCardComponent };
-;
-export { TalentCardComponent };
-;
-export { TalentCardComponent };
-;
-export { Page };
+
+export { TalentCardComponent }
+export { TalentCardComponent }
+export { TalentCardComponent }
+export { TalentCardComponent }
+export { Page }

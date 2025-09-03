@@ -5,7 +5,7 @@ interface User {};
 ;
 interface AuthTokens {};
   refreshToken: string | null}
-;
+
   accessToken: string | null;
   refreshToken: string | null;,
 }
@@ -29,8 +29,7 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
       } catch(error) {};
         // console.error('Error checking auth state:', error)} finally {};
         setIsLoading(false)}
-    };
-;
+    }
     checkAuthState()}, []);
 ;
   return {};

@@ -13,7 +13,7 @@ export default function SmartContractRiskScanner(...args: []):  {};
     {};
 };
   ];
-;
+
   const scanningCapabilities = [;
     {};
 },;
@@ -24,7 +24,7 @@ export default function SmartContractRiskScanner(...args: []):  {};
     {};
 };
   ];
-;
+
   const pricing = [;
     {};
 },;
@@ -47,7 +47,7 @@ export default function SmartContractRiskScanner(...args: []):  {};
     'Optimism',;
     'Base';
   ];
-;
+
   const securityStandards = [;
     'OWASP Top 10',;
     'Smart Contract Security Verification Standard',;
@@ -56,7 +56,7 @@ export default function SmartContractRiskScanner(...args: []):  {};
     'ISO 27001 Compliance',;
     'SOC 2 Type II';
   ];
-;
+
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div>Broken JSX</div>
@@ -239,7 +239,7 @@ export default function SmartContractRiskScanner(...args: []):  {};
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">;
             {};
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <div className="flex items-baseline justify-center space-x-1 mb-4">;
@@ -291,15 +291,10 @@ export default function SmartContractRiskScanner(...args: []):  {};
         </div>;
       </section>;
     </div>;
-  );,
-}}}}}
-;
-export { SmartContractRiskScanner };
-;
-export { SmartContractRiskScanner };
-;
-export { SmartContractRiskScanner };
-;
-export { SmartContractRiskScanner };
-;
-export { SmartContractRiskScanner };
+  )}}}}}
+
+export { SmartContractRiskScanner }
+export { SmartContractRiskScanner }
+export { SmartContractRiskScanner }
+export { SmartContractRiskScanner }
+export { SmartContractRiskScanner }

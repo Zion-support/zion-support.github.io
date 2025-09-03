@@ -46,10 +46,10 @@ export function ApiPlayground({ method, path, params = [] }) {};
         {loading ? "Sending..." : "Send Request"}
       </Button>";
       {response && <CodeBlock code={response} language="json"/>}
-    </div>)};
-export { ApiPlayground };
+    </div>)}
+export { ApiPlayground }
 export default ApiPlayground;
-;
+
 export default ApiPlayground;
 export default ApiPlayground;
 export default ApiPlayground;

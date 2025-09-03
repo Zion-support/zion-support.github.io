@@ -1,4 +1,4 @@
-export interface EmergingTechService {;
+export interface EmergingTechService {
   id: string;
   name: string;
   tagline: string;
@@ -24,7 +24,7 @@ export interface EmergingTechService {;
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -34,18 +34,17 @@ export interface EmergingTechService {;
   launchDate: string;
   customers: number;
   rating: number;
-const contact = {;
+const contact = {
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709";
-  ;
-  ;
-  ;
-  ;
-  website: "https://ziontechgroup.com";,;,
-}
+
+
+
+
+  website: "https://ziontechgroup.com"}
 export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
-  {;
+  {
     id: "space-mining-platform",;
     name: "Space Mining Platform",;
     tagline: "Revolutionary asteroid mining and space resource extraction",;
@@ -88,10 +87,9 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     launchDate: "2025-01-01",;
     customers: 8,;
     rating: 5.0,;
-    reviews: 6;,;,
-},;
+    reviews: 6},;
   // Brain-Computer Interface Platform;
-  {;
+  {
     id: "quantum-bio-computing",;
     name: "Quantum Bio-Computing",;
     tagline: "Revolutionary fusion of quantum computing and biological systems",;
@@ -129,21 +127,19 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     marketSize: "$1.8B quantum bio market",;
     growthRate: "700% annual growth",;
     variant: "quantum-bio-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum bio-computing platform with hybrid processing, biological integration, and comprehensive research tools.",;
     launchDate: "2024-11-15",;
     customers: 15,;
     rating: 4.8,;
-    reviews: 9;,;,
-},;
+    reviews: 9},;
   // Brain-Computer Interface Platform;
-  {;
+  {
     id: "brain-computer-interface",;
     name: "Brain-Computer Interface Platform",;
     tagline: "Direct neural interface for human-computer interaction",;
@@ -181,21 +177,19 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     marketSize: "$1.5B BCI market",;
     growthRate: "300% annual growth",;
     variant: "bci-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced BCI platform with neural signal processing, real-time monitoring, and comprehensive research tools.",;
     launchDate: "2024-10-20",;
     customers: 23,;
     rating: 4.7,;
-    reviews: 16;,;,
-},;
+    reviews: 16},;
   // Quantum Energy Platform;
-  {;
+  {
     id: "quantum-energy-platform",;
     name: "Quantum Energy Platform",;
     tagline: "Revolutionary energy solutions powered by quantum technology",;
@@ -233,21 +227,19 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     marketSize: "$25B quantum energy market",;
     growthRate: "400% annual growth",;
     variant: "quantum-energy-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy management tools.",;
     launchDate: "2024-09-25",;
     customers: 18,;
     rating: 4.8,;
-    reviews: 12;,;,
-},;
+    reviews: 12},;
   // Autonomous Vehicle AI Platform;
-  {;
+  {
     id: "autonomous-vehicle-ai-platform",;
     name: "Autonomous Vehicle AI Platform",;
     tagline: "Intelligent self-driving AI for next-generation transportation",;
@@ -285,21 +277,19 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     marketSize: "$45.2B autonomous vehicle market",;
     growthRate: "45% annual growth",;
     variant: "autonomous-vehicle-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Autonomous vehicle AI platform with intelligent driving, safety systems, and fleet management capabilities.",;
     launchDate: "2024-09-15",;
     customers: 8,;
     rating: 4.8,;
-    reviews: 4;,;,
-},;
+    reviews: 4},;
   // Quantum Materials Discovery Platform;
-  {;
+  {
     id: "quantum-materials-discovery-platform",;
     name: "Quantum Materials Discovery Platform",;
     tagline: "Quantum-accelerated materials science and discovery",;
@@ -337,21 +327,19 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     marketSize: "$2.8B quantum materials market",;
     growthRate: "500% annual growth",;
     variant: "quantum-materials-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum materials discovery platform with simulation capabilities, AI discovery, and comprehensive research tools.",;
     launchDate: "2024-07-20",;
     customers: 28,;
     rating: 4.8,;
-    reviews: 19;,;,
-},;
+    reviews: 19},;
   // Quantum Robotics Platform;
-  {;
+  {
     id: "quantum-robotics",;
     name: "Quantum Robotics Platform",;
     tagline: "Next-generation robotics powered by quantum computing",;
@@ -389,21 +377,19 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     marketSize: "$45B quantum robotics market",;
     growthRate: "350% annual growth",;
     variant: "quantum-robotics-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum robotics platform with enhanced capabilities, AI control, and comprehensive robotic management tools.",;
     launchDate: "2024-06-25",;
     customers: 42,;
     rating: 4.7,;
-    reviews: 31;,;,
-},;
+    reviews: 31},;
   // Quantum Internet Security Platform;
-  {;
+  {
     id: "quantum-internet-security",;
     name: "Quantum Internet Security Platform",;
     tagline: "Unbreakable internet security with quantum technology",;
@@ -441,21 +427,19 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     marketSize: "$22B quantum internet market",;
     growthRate: "450% annual growth",;
     variant: "quantum-internet-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum internet security platform with unbreakable encryption, real-time monitoring, and comprehensive security management.",;
     launchDate: "2024-05-30",;
     customers: 67,;
     rating: 4.8,;
-    reviews: 45;,;,
-},;
+    reviews: 45},;
   // Quantum Logistics Platform;
-  {;
+  {
     id: "quantum-logistics-optimization",;
     name: "Quantum Logistics Platform",;
     tagline: "Optimize supply chains with quantum computing power",;
@@ -493,21 +477,19 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     marketSize: "$15B quantum logistics market",;
     growthRate: "380% annual growth",;
     variant: "quantum-logistics-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum logistics platform with optimization algorithms, real-time tracking, and comprehensive supply chain management.",;
     launchDate: "2024-04-25",;
     customers: 89,;
     rating: 4.7,;
-    reviews: 62;,;,
-},;
+    reviews: 62},;
   // Metaverse AI Development Platform;
-  {;
+  {
     id: "metaverse-ai-development-platform",;
     name: "Metaverse AI Development Platform",;
     tagline: "Intelligent AI-powered metaverse creation and management",;
@@ -545,21 +527,19 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     marketSize: "$38.5B metaverse market",;
     growthRate: "52% annual growth",;
     variant: "metaverse-ai-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Metaverse AI development platform with intelligent systems, content generation, and comprehensive development tools.",;
     launchDate: "2024-03-20",;
     customers: 156,;
     rating: 4.6,;
-    reviews: 98;,;,
-},;
+    reviews: 98},;
   // Quantum Machine Learning Platform;
-  {;
+  {
     id: "quantum-machine-learning-platform",;
     name: "Quantum Machine Learning Platform",;
     tagline: "Unlock quantum advantage in machine learning",;
@@ -597,21 +577,19 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     marketSize: "$8.9B quantum computing market",;
     growthRate: "45% annual growth",;
     variant: "quantum-ml-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Quantum machine learning platform with hybrid quantum-classical algorithms and comprehensive ML tools.",;
     launchDate: "2024-12-01",;
     customers: 8,;
     rating: 4.9,;
-    reviews: 12;,;,
-},;
+    reviews: 12},;
   // Quantum Energy Platform;
-  {;
+  {
     id: "neuromorphic-computing-platform",;
     name: "Neuromorphic Computing Platform",;
     tagline: "Brain-inspired computing for the future",;
@@ -649,21 +627,19 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     marketSize: "$6.8B neuromorphic computing market",;
     growthRate: "38% annual growth",;
     variant: "neuromorphic-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Neuromorphic computing platform with spiking neural networks and hardware acceleration support.",;
     launchDate: "2024-11-15",;
     customers: 15,;
     rating: 4.8,;
-    reviews: 18;,;,
-},;
+    reviews: 18},;
   // Synthetic Biology Platform;
-  {;
+  {
     id: "synthetic-biology-platform",;
     name: "Synthetic Biology Platform",;
     tagline: "Design and engineer biological systems",;
@@ -706,10 +682,9 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     launchDate: "2024-10-15",;
     customers: 12,;
     rating: 4.9,;
-    reviews: 16;,;,
-},;
+    reviews: 16},;
   // Space Resource Mining Platform;
-  {;
+  {
     id: "space-resource-mining-platform",;
     name: "Space Resource Mining Platform",;
     tagline: "Asteroid mining and space resource extraction",;
@@ -747,21 +722,19 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     marketSize: "$100B+ potential market",;
     growthRate: "800%+ annual growth",;
     variant: "space-mining",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced space resource mining platform with automated robotics, resource processing, and comprehensive space operations management.",;
     launchDate: "2025-01-25",;
     customers: 3,;
     rating: 5.0,;
-    reviews: 2;,;,
-},;
+    reviews: 2},;
   // Brain-Computer Interface Platform;
-  {;
+  {
     id: "brain-computer-interface-platform",;
     name: "Brain-Computer Interface Platform",;
     tagline: "Neural interface technology for human-computer interaction",;
@@ -799,21 +772,19 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     marketSize: "$18B brain-computer interface market",;
     growthRate: "45% annual growth",;
     variant: "neural-interface",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive brain-computer interface platform with advanced neural processing, real-time communication, and extensive application development capabilities.",;
     launchDate: "2025-02-20",;
     customers: 12,;
     rating: 4.9,;
-    reviews: 8;,;,
-},;
+    reviews: 8},;
   // Quantum Robotics;
-  {;
+  {
     id: "quantum-materials-discovery-platform",;
     name: "Quantum Materials Discovery Platform",;
     tagline: "Accelerate materials science with quantum computing",;
@@ -851,21 +822,19 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     marketSize: "$45B+ potential market",;
     growthRate: "600%+ annual growth",;
     variant: "quantum-materials",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum materials discovery platform with quantum computing integration, automated workflows, and comprehensive materials science capabilities.",;
     launchDate: "2025-03-05",;
     customers: 8,;
     rating: 5.0,;
-    reviews: 5;,;,
-},;
+    reviews: 5},;
   // Autonomous Vehicle AI Platform;
-  {;
+  {
     id: "autonomous-vehicle-ai-platform",;
     name: "Autonomous Vehicle AI Platform",;
     tagline: "Advanced AI for self-driving vehicles and transportation",;
@@ -903,21 +872,19 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     marketSize: "$22B autonomous vehicle market",;
     growthRate: "55% annual growth",;
     variant: "autonomous-vehicles",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive autonomous vehicle AI platform with advanced perception, decision-making, and safety systems for next-generation transportation.",;
     launchDate: "2025-03-20",;
     customers: 15,;
     rating: 4.8,;
-    reviews: 11;,;,
-},;
+    reviews: 11},;
   // Quantum Bio-Computing Platform;
-  {;
+  {
     id: "quantum-bio-computing-platform",;
     name: "Quantum Bio-Computing Platform",;
     tagline: "Quantum computing meets biological systems",;
@@ -955,21 +922,19 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     marketSize: "$65B+ potential market",;
     growthRate: "700%+ annual growth",;
     variant: "quantum-biology",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum bio-computing platform with quantum-biological hybrid processing, comprehensive biological simulation, and extensive research capabilities.",;
     launchDate: "2025-04-10",;
     customers: 6,;
     rating: 5.0,;
-    reviews: 4;,;,
-},;
+    reviews: 4},;
   // Quantum Energy Platform;
-  {;
+  {
     id: "quantum-energy-platform",;
     name: "Quantum Energy Platform",;
     tagline: "Quantum computing for energy optimization and fusion",;
@@ -1007,12 +972,11 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     marketSize: "$35B+ potential market",;
     growthRate: "500%+ annual growth",;
     variant: "quantum-energy",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum energy platform with quantum-powered optimization, fusion simulation, and comprehensive energy system management capabilities.",;
     launchDate: "2025-04-25',;

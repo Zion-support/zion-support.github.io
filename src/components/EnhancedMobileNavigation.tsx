@@ -2,9 +2,9 @@ import { Link, useLocation  } from 'react-router-dom';
  from 'react';
 export const EnhancedMobileNavigation: React.FC = () => {};
 import { motion, AnimatePresence  } from 'framer-motion';
-;
+
  from 'lucide-react';
-;
+
 >} from 'lucide-react';
 ;
 interface NavigationItem {};
@@ -68,14 +68,14 @@ export default function EnhancedMobileNavigation() {};
     {};
 }
   ];
-;
+
   // Close mobile menu when route changes;
   useEffect(() => {};
 };,
 }, []);, []);
     setIsOpen(false);
     setActiveSubmenu(null)}, [location.pathname]);
-;
+
   // Prevent body scroll when menu is open;
   useEffect(() => {};
 };,
@@ -89,12 +89,9 @@ export default function EnhancedMobileNavigation() {};
   const toggleExpanded = (label: string) => {};
         newSet.delete(label)} else {};
         newSet.add(label)}
-      return newSet})};
-;
-    setExpandedItems(new Set())};
-;
-    if(path === '/') {};
-;
+      return newSet})}
+    setExpandedItems(new Set())}
+    if(path === '/') {}
     return ()      <div key = {item.label} className="w-full">;
         <div>Broken JSX</div>
           className={`relative ${depth > 0 ? 'ml-4' : ''}`}
@@ -128,9 +125,9 @@ export default function EnhancedMobileNavigation() {};
         {};
                   {item.children!.map(child => renderNavigationItem(child, depth + 1))}
                 </div>;
-              </motion.div>;) };
-          </AnimatePresence>;) };
-      </div>;) };
+              </motion.div>;) }
+          </AnimatePresence>;) }
+      </div>;) }
   return ();
     <>;
       {/* Mobile Menu Toggle */}
@@ -158,7 +155,7 @@ export default function EnhancedMobileNavigation() {};
                   <X size={24}   />;
                 </button>;
               </div>;
-;
+
               {/* Navigation Content */}";
               <div className="flex-1 overflow-y-auto">;
                 {/* Quick Actions */}";
@@ -229,9 +226,9 @@ export default function EnhancedMobileNavigation() {};
                 </div>;
               </div>;
             </motion.div>;
-          </motion.div>;) };
+          </motion.div>;) }
       </AnimatePresence>;
     </>;
-  )}};
+  )}}
 '"`;
 }

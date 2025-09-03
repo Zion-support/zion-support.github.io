@@ -1,5 +1,5 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
+
  params - Function parameters;
  * @returns {*} Function return value;
  */;
@@ -30,7 +30,7 @@ interface AccessibilityIssue {};
       if(updatedSettings.largeText) {};
         document.documentElement.style.fontSize = '18px'} else {};
         document.documentElement.style.fontSize = '16px'}
-;
+
       // Apply reduced motion;
       if(updatedSettings.reducedMotion) {};
         )} else {};
@@ -40,13 +40,13 @@ interface AccessibilityIssue {};
       if(updatedSettings.focusIndicator) {};
         document.documentElement.classList.add('focus-visible')} else {};
         document.documentElement.classList.remove('focus-visible')}
-;
+
       // Apply color blindness simulation;
       document.documentElement.style.setProperty(';
         '--color-blindness',;
         updatedSettings.colorBlindness;
       );
-;
+
       // Apply typography settings;
       document.documentElement.style.setProperty(';
         '--font-size',;
@@ -64,7 +64,7 @@ interface AccessibilityIssue {};
         '--word-spacing',`;
         `${updatedSettings.wordSpacing}px`;
       );
-;
+
       // Save to localStorage;
       localStorage.setItem(';
         'accessibility-settings',;
@@ -72,7 +72,7 @@ interface AccessibilityIssue {};
       )},;
     [settings];
   );
-;
+
   // Load settings from localStorage;
   useEffect(() => {};
 };,

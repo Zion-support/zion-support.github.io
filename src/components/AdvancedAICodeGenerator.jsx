@@ -55,8 +55,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 ;
 @keyframes shimmer {};
   0% { background-position: -200% 0}
-  100% { background-position: 200% 0}`;,
-}`,;
+  100% { background-position: 200% 0}`}`,;
         tags['css',tailwind',animations',utilities'],;
         complexity: 'low',;
         rating: 4.6,;
@@ -78,7 +77,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   validateField(field) {};
         fieldErrors.push(result)}
     }
-;
+
     this.errors.set(field, fieldErrors) ;
     this.updateFieldUI(field) ;
     return fieldErrors.length === 0}
@@ -95,8 +94,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     if(this.options.validateOnSubmit) {};
           e.preventDefault()}
       })}
-  }`;,
-}`,;
+  }`}`,;
         tags['javascript',forms',validation',class'],;
         complexity: 'high',;
         rating: 4.9,;
@@ -121,7 +119,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {};
 }
       window.localStorage.setItem(key, JSON.stringify(valueToStore))} catch(error) {};
       // console.error(\`Error setting localStorage key "\${key}":\`, error)}
-  };
+  }
 `;
   return [storedValue, setValue] as const}`,;
         language: 'typescript',;
@@ -148,7 +146,7 @@ export function AdvancedAICodeGenerator() {};
                 alternatives[;
                     'Alternative 1: Functional approach',Alternative 2: Class-based approach',Alternative 3: Async/await pattern';
                 ],;
-                timestamp: new Date () .toISOString () };
+                timestamp: new Date () .toISOString () }
             setAiGenerations(prev => [newGeneration, ...prev]) ;
             setGeneratedCode(newGeneration.generatedCode) ;
             setIsGenerating(false) }, 2000) };

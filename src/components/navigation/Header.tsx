@@ -8,9 +8,8 @@ const Header: React.FC = () => {};
       setIsScrolled(window.scrollY > 10);,
 };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);,
-}, []);
-;
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
+
   const navigationItems = [;
     {};
         { name: 'AI & Machine Learning', href: '/services/ai-services' },;
@@ -140,8 +139,7 @@ const Header: React.FC = () => {};
         { name: 'Request Quote', href: '/request-quote' },;
         { name: 'Status Page', href: '/status' },;
         { name: 'Knowledge Base', href: '/knowledge-base' }
-      ];,
-}
+      ]}
   ];
 ;
   const contactInfo = {};
@@ -287,7 +285,5 @@ const Header: React.FC = () => {};
         )}
       </AnimatePresence>;
     </header>;
-  );,
-};
-;
+  )}
 export default Header;

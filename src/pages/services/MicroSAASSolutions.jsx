@@ -176,15 +176,10 @@ export default function MicroSAASSolutions() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
-export { MicroSAASSolutions };
-;
-export { MicroSAASSolutions };
-;
-export { MicroSAASSolutions };
-;
-export { MicroSAASSolutions };
-;
-export { MicroSAASSolutions };
+  )}
+
+export { MicroSAASSolutions }
+export { MicroSAASSolutions }
+export { MicroSAASSolutions }
+export { MicroSAASSolutions }
+export { MicroSAASSolutions }

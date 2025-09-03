@@ -14,7 +14,7 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({};
                     setShowPrompt(true)}
                 }
               }) }          });
-          ;
+
           // Listen for controller change(update applied);
           navigator.serviceWorker.addEventListener('controllerchange', () => {};
               setUpdateComplete(false)}, 3000)})});
@@ -32,8 +32,7 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({};
 ;
       // console.log('Service Worker update check completed')} catch(error) {};
       // console.error('Service Worker update check failed:', error)}
-  };
-;
+  }
     setUpdating(true) ;
     setShowPrompt(false) ;
 ;
@@ -43,13 +42,11 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({};
       setTimeout(() => {};
         window.location.reload () }, 1000) } catch(error) {};
       setShowPrompt(true)}
-  };
-;
+  }
     // Auto - show again after 1 hour;
     setTimeout(() => {};
         setShowPrompt(true)}
-    }, 3600000) };
-;
+    }, 3600000) }
   // Don't render anything if no update is available;
   if(!updateAvailable && !updating && !updateComplete) {};
     return null}
@@ -84,6 +81,6 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({};
             </div>;
           </div>;
         </motion.div>) }
-    </>) };
+    </>) }
 export default PWAUpdater;
 '";

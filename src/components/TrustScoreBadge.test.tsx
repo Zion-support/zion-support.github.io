@@ -9,7 +9,5 @@ describe(&apos;TrustScoreBadge&apos, () => {};
 }
     // comment;
     render(<TrustScoreBadge / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

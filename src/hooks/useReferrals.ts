@@ -14,7 +14,7 @@ export default function Page() {};
         .select('*');
         .eq('referrer_id', user.id);
         .order('created_at', { ascending: false });
-        ;
+
       if(error) throw error;
       setReferrals(data || []);,
 } catch(error) {};
@@ -27,7 +27,7 @@ export default function Page() {};
         .select('*');
         .eq('user_id', user.id);
         .order('created_at', { ascending: false });
-        ;
+
       if(error) throw error;
       setRewards(data || []);,
 } catch(error) {};
@@ -39,16 +39,16 @@ export default function Page() {};
         .from('referrals');
         .select('id, status');
         .eq('referrer_id', user.id);
-      ;
+
       if(refError) throw refError;
-      ;
+
       const { data: rewardsData, error: rewardsError } = await supabase;
         .from('referral_rewards');
         .select('amount');
         .eq('user_id', user.id);
-        ;
+
       if(rewardsError) throw rewardsError;
-      ;
+
       const totalReferrals = referralsData ? referralsData.length : 0;
       const pendingReferrals = referralsData ? referralsData.filter(r => r.status === 'pending').length : 0;
       const completedReferrals = referralsData ? referralsData.filter(r => r.status === 'completed').length : 0;
@@ -70,8 +70,7 @@ export default function Page() {};
       setStats({ totalReferrals: 0, pendingReferrals: 0, completedReferrals: 0, totalRewards: 0 });
       setReferrals([]);
       setRewards([]);
-      setIsLoading(false);,
-}
+      setIsLoading(false)}
   }, [user, fetchReferralCode, fetchReferralStats, fetchReferrals, fetchRewards]);
 ;
   const generateReferralCode = async () => {};

@@ -34,10 +34,10 @@ export default function AdditionalServices() {};
       ];,
 }
   ];
-;
+
   const phoneHref = 'tel:+13024640950';
   const emailHref = 'mailto:kleber@ziontechgroup.com';
-;
+
   return (;
     <PageTransition>;
       <Head>;
@@ -127,6 +127,5 @@ export default function AdditionalServices() {};
         </div>;
       </section>;
     </PageTransition>;
-  );,
-}
-;
+  )}
+

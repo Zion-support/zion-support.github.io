@@ -184,7 +184,6 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {};
                 >;
                   {};
                   )}
-                  ;
                   <div className="text-center mb-6">;
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                     <div className="flex items-baseline justify-center">;
@@ -193,7 +192,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {};
                     </div>;
                     <p className="text-gray-300 mt-2">{plan.description}</p>;
                   </div>;
-                  ;
+
                   <ul className="space-y-3 mb-8">;
                     {};
                       <li key={featureIndex} className="flex items-center text-white">;
@@ -234,7 +233,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {};
               <p className="text-xl text-gray-300 mb-8">;
                 Join leading organizations who trust our AI-powered platform to revolutionize their IoT deployments.;
               </p>;
-              ;
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">;
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">;
                   <h3 className="text-xl font-semibold text-white mb-3">Contact Information</h3>;
@@ -244,7 +243,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {};
                     <p>📍 <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span></p>;
                   </div>;
                 </div>;
-                ;
+
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">;
                   <h3 className="text-xl font-semibold text-white mb-3">Quick Actions</h3>;
                   <div className="space-y-3">;
@@ -260,7 +259,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {};
                   </div>;
                 </div>;
               </div>;
-              ;
+
               <div className="text-gray-300">;
                 <p>Visit our website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">https://ziontechgroup.com</a></p>;
               </div>;
@@ -269,17 +268,11 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {};
         </section>;
       </div>;
     </>;
-  );,
-};
-;
+  )}
 export default AIIoTEdgeComputingPlatform;
-;
-export { AIIoTEdgeComputingPlatform };
-;
-export { AIIoTEdgeComputingPlatform };
-;
-export { AIIoTEdgeComputingPlatform };
-;
-export { AIIoTEdgeComputingPlatform };
-;
-export { AIIoTEdgeComputingPlatform };
+
+export { AIIoTEdgeComputingPlatform }
+export { AIIoTEdgeComputingPlatform }
+export { AIIoTEdgeComputingPlatform }
+export { AIIoTEdgeComputingPlatform }
+export { AIIoTEdgeComputingPlatform }

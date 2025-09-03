@@ -13,7 +13,7 @@ export default function AiDigitalTwinPlatform() {};
     {};
 }
   ];
-;
+
   ];
   return (;
     <div className="min-h-screen bg-white">;
@@ -40,7 +40,7 @@ export default function AiDigitalTwinPlatform() {};
                   <span className="text-gray-700">{feature}</span>;
                 </li>;
               ))}
-;
+
             </ul>;
             <div className="mt-6 text-sm text-gray-600">;
               Built with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.;
@@ -56,11 +56,11 @@ export default function AiDigitalTwinPlatform() {};
                     {};
                       <li key={detailIndex}>{detail}</li>;
                     ))}
-;
+
                   </ul>;
                 </div>;
               ))}
-;
+
             </div>;
             <div className="mt-6 flex flex-wrap gap-3">;
               <Link href="/pricing" className="px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">;
@@ -84,7 +84,7 @@ export default function AiDigitalTwinPlatform() {};
                 <p className="text-gray-600">{benefit}</p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       <section className="py-16">;
@@ -100,7 +100,7 @@ export default function AiDigitalTwinPlatform() {};
                 <p className="text-gray-600">Comprehensive ai digital twin platform solutions tailored for {industry.toLowerCase()}.</p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       <section className="py-16 bg-indigo-600">;

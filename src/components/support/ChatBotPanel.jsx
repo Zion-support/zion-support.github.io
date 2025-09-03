@@ -6,8 +6,8 @@ import { useTheme } from "@/hooks/useTheme";
 import { cn } from "@/lib/utils";
 import { apiClient } from "@/utils/apiClient";
 import { Loader2, Send import { useEffect, useRef, useState } from "react";
-;
-;
+
+
 // Define suggested quick replies;
 const QUICK_REPLIES = [;
     { id: "hire", text: "How do I hire?" },;
@@ -48,7 +48,7 @@ export {};
             id: `user-${Date.now()}`,;
             content: text,";
             sender: "user",;
-            timestamp: new Date()};
+            timestamp: new Date()}
         setMessages((prev) => [...prev, userMessage]);";
         setInputValue("");
         setIsLoading(true);
@@ -56,7 +56,7 @@ export {};
                 id: `bot-${Date.now()}`,";
                 content: response.message || "Sorry, I couldn't process your request.Please try again.",";
                 sender: "bot",;
-                timestamp: new Date()};
+                timestamp: new Date()}
             setMessages((prev) => [...prev, botMessage]);
             // Check if the request was successful;
             if(!response.success) {};
@@ -94,7 +94,7 @@ export {};
             id: `bot-escalation-${Date.now()}`,";
             content: "I'm having trouble understanding your request.Would you like to speak with a human support agent or send an email to our support team?",";
             sender: "bot",;
-            timestamp: new Date()};
+            timestamp: new Date()}
         setMessages((prev) => [...prev, escalationMessage]);
         // Log this interaction for the support team;
         logSupportEscalation()};
@@ -140,8 +140,7 @@ export {};
                 id: `bot-${Date.now()}`,";
                 content: "Please send your question to support@ziontechgroup.com. Our team will get back to you within 24 hours.",";
                 sender: "bot",;
-                timestamp: new Date();,
-}
+                timestamp: new Date()}
         ])};";
     return (<div className="flex flex-col h-full">";
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>";

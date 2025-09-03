@@ -9,9 +9,9 @@ export default function Page() {};
         .select('*');
         .eq('project_id', projectId);
         .order('due_date', { ascending: true });
-      ;
+
       if(milestonesError) throw milestonesError;
-      ;
+
       setMilestones(milestonesData || []); // Ensure milestonesData is not null;
       ;
       const activitiesMap: Record<string, MilestoneActivity[]> = {};
@@ -25,13 +25,11 @@ export default function Page() {};
             `);
             .eq('milestone_id', milestone.id);
             .order('created_at', { ascending: false });
-            ;
+
           if(activitiesError) throw activitiesError;
-          ;
-          activitiesMap[milestone.id] = activitiesData || [];,
-}
+
+          activitiesMap[milestone.id] = activitiesData || []}
       }
-      ;
       setActivities(activitiesMap);
       setError(null);,
 } catch(err: unknown) {};

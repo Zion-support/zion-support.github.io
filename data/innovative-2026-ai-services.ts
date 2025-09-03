@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface Innovative2026AIService {;
+export interface Innovative2026AIService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface Innovative2026AIService {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface Innovative2026AIService {;
   rating: number;
 export const innovative2026AIServices: Innovative2026AIService[] = [;
   // AI-Powered Business Intelligence;
-  {;
+  {
     id: "ai-business-intelligence-suite",;
     name: "AI Business Intelligence Suite",;
     tagline: "Transform data into actionable insights with AI",;
@@ -76,21 +76,19 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     marketSize: "$29.9B market",;
     growthRate: "220% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full-stack BI platform with real-time data processing, advanced ML models, interactive dashboards, and enterprise-grade security. Includes API access and custom integrations.",;
     launchDate: "2025-03-15",;
     customers: 1800,;
     rating: 4.9,;
-    reviews: 950;,;,
-},;
+    reviews: 950},;
   // AI-Powered Customer Experience Platform;
-  {;
+  {
     id: "ai-customer-experience-platform",;
     name: "AI Customer Experience Platform",;
     tagline: "Deliver personalized experiences at scale",;
@@ -128,21 +126,19 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     marketSize: "$15.8B market",;
     growthRate: "180% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade CX platform with real-time personalization, advanced ML algorithms, comprehensive analytics, and seamless integrations. Includes mobile SDK and API access.",;
     launchDate: "2025-04-20",;
     customers: 2200,;
     rating: 4.8,;
-    reviews: 1100;,;,
-},;
+    reviews: 1100},;
   // AI-Powered Cybersecurity Suite;
-  {;
+  {
     id: "ai-cybersecurity-suite",;
     name: "AI Cybersecurity Suite",;
     tagline: "Protect your business with intelligent threat detection",;
@@ -180,21 +176,19 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     marketSize: "$173.5B market",;
     growthRate: "250% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade cybersecurity platform with advanced AI algorithms, real-time monitoring, automated response capabilities, and comprehensive reporting. Includes SOC services and 24/7 support.",;
     launchDate: "2025-02-10",;
     customers: 1500,;
     rating: 4.9,;
-    reviews: 800;,;,
-},;
+    reviews: 800},;
   // AI-Powered Marketing Automation;
-  {;
+  {
     id: "ai-marketing-automation-suite",;
     name: "AI Marketing Automation Suite",;
     tagline: "Automate and optimize your marketing campaigns",;
@@ -232,21 +226,19 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     marketSize: "$25.1B market",;
     growthRate: "200% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive marketing automation platform with AI-powered optimization, multi-channel capabilities, advanced analytics, and seamless integrations. Includes mobile app and API access.",;
     launchDate: "2025-05-15",;
     customers: 2800,;
     rating: 4.7,;
-    reviews: 1400;,;,
-},;
+    reviews: 1400},;
   // AI-Powered Sales Intelligence;
-  {;
+  {
     id: "ai-sales-intelligence-platform",;
     name: "AI Sales Intelligence Platform",;
     tagline: "Boost sales performance with AI-powered insights",;
@@ -284,12 +276,11 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     marketSize: "$18.2B market",;
     growthRate: "190% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.",;
     launchDate: "2025-06-20",;
@@ -298,6 +289,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     reviews: 950;
 ];
   )}
-export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
-  return innovative2026AIServices.filter(service => {;
+export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+  return innovative2026AIServices.filter(service => {
     const price = parseInt(service.price.replace("$", "").replace(",", ""))}}}

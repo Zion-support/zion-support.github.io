@@ -316,16 +316,11 @@ export {};
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
 
-export { Partners };
-;
-export { Partners };
-;
-export { Partners };
-;
-export { Partners };
-;
-export { Partners };
+
+export { Partners }
+export { Partners }
+export { Partners }
+export { Partners }
+export { Partners }

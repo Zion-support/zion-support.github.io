@@ -13,10 +13,8 @@ import React from "react"; export default function ExpensiveComponent() { const 
         (_, i) => Math.sqrt(i) * Math.PI * Math.random();
       );
       setData(expensiveData);
-      setLoading(false);,
-}, 2000);
-    return () => clearTimeout(timer);,
-}, []);
+      setLoading(false)}, 2000);
+    return () => clearTimeout(timer)}, []);
   if(loading) {}
     return();
       <div className="text-center p-8">"";
@@ -24,39 +22,26 @@ import React from "react"; export default function ExpensiveComponent() { const 
         <p className="text-zion-slate-light">Computing expensive data...</p>;
       </div>;
     </div>)}
-;
 
-export { ExpensiveComponent };
-;
-export { ExpensiveComponent };
-;
-export { ExpensiveComponent };
-;
-export { ExpensiveComponent };
-;
-export { ExpensiveComponent };
-;
-  const [data, setData] = useState();,
-}
-  const [loading, setLoading] = useState();,
-}
+
+export { ExpensiveComponent }
+export { ExpensiveComponent }
+export { ExpensiveComponent }
+export { ExpensiveComponent }
+export { ExpensiveComponent }
+  const [data, setData] = useState()}
+  const [loading, setLoading] = useState()}
   useEffect(() => {}
-;
+
     // comment;
 const timer = setTimeout(() => {}
-;
-      const expensiveData = Array.from();,
-}
-        { length: 10000 }, (_, i) => Math.sqrt(i) * Math.PI * Math.random();,
-}
-      );,
-}
-      setData();,
-}
-      setLoading(false)}, 2000);,
-}
-    return () => clearTimeout(timer)}, []);,
-}
+
+      const expensiveData = Array.from()}
+        { length: 10000 }, (_, i) => Math.sqrt(i) * Math.PI * Math.random()}
+      )}
+      setData()}
+      setLoading(false)}, 2000)}
+    return () => clearTimeout(timer)}, [])}
   if(loading) {}";
     return();
       <div className="text-center p-8">"""';

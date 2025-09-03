@@ -44,14 +44,12 @@ export {};
           service.tags.some(tag =>;
             tag.toLowerCase().includes(searchQuery.toLowerCase());
           );
-      );,
-}';
+      )}';
     // Filter by category'';
     if (selectedCategory !== 'all') {}
       filtered = filtered.filter();
         service => service.category === selectedCategory;
-      );,
-}
+      )}
     // Sort services;
     filtered.sort((a, b) => {}
 ';
@@ -60,10 +58,8 @@ export {};
       if (sortBy === 'rating') return b.rating - a.rating;''';
       if (sortBy === 'price') return a.price - b.price;''';
       if (sortBy === 'aiScore') return b.aiScore - a.aiScore;
-      return 0;,
-});
-    setFilteredServices(filtered);,
-}, [searchQuery, selectedCategory, sortBy]);
+      return 0});
+    setFilteredServices(filtered)}, [searchQuery, selectedCategory, sortBy]);
   const getCategoryIcon = category => {}
     switch (category) {}
 ';
@@ -78,9 +74,8 @@ export {};
       case 'Digital Services':'''';
         return '🚀';''';
       default:'''';
-        return '⚡';,
-}
-  };
+        return '⚡'}
+  }
   const getPricingModelColor = model => {}
     switch (model) {}
 ';
@@ -95,9 +90,8 @@ export {};
       case 'usage-based':'''';
         return 'bg-orange-100 text-orange-800';''';
       default:'''';
-        return 'bg-gray-100 text-gray-800';,
-}
-  };
+        return 'bg-gray-100 text-gray-800'}
+  }
   return();
     <div className="min-h-screen bg-background">";
       {/* Hero Section */}"";
@@ -175,7 +169,7 @@ export {};
                     </div>;
                     <div>Broken JSX</div>
                     >';
-                      {service.pricingModel.replace('-',)}
+                      {service.pricingModel.replace('-')}
                     </Badge>";
                   </div>"";
                   <CardTitle className="text-xl text-zion-blue-dark">;
@@ -410,14 +404,10 @@ export {};
 
       <TrustedBySection />;
     </div>)}
-;
 
-export { ExpandedServicesPage };
-;
-export { ExpandedServicesPage };
-;
-export { ExpandedServicesPage };
-;
-export { ExpandedServicesPage };
-;
-export { ExpandedServicesPage };
+
+export { ExpandedServicesPage }
+export { ExpandedServicesPage }
+export { ExpandedServicesPage }
+export { ExpandedServicesPage }
+export { ExpandedServicesPage }

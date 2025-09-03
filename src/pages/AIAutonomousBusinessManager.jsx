@@ -575,13 +575,11 @@ import {}
   CheckCircle,';
   Shield,'';
   Zap,''';
-  Brain'''';,
-} from 'lucide-react';
-;
-    technologies["AI", "Financial Analytics", "Risk Models", "Machine Learning"];,
-}
+  Brain''''} from 'lucide-react';
+
+    technologies["AI", "Financial Analytics", "Risk Models", "Machine Learning"]}
 ];
-;
+
 const businessTechnologies = [];
   {}
 ";
@@ -590,8 +588,7 @@ const businessTechnologies = [];
     description: "Advanced AI algorithms for business intelligence",";
     icon: Brain,"";
     useCase: "Business Intelligence","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -599,8 +596,7 @@ const businessTechnologies = [];
     description: "Comprehensive data analysis and visualization",";
     icon: BarChart3,"";
     useCase: "Data Insights","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -608,8 +604,7 @@ const businessTechnologies = [];
     description: "Intelligent automation of business processes",";
     icon: Cog,"";
     useCase: "Process Optimization","";
-    reliability: "High";,
-},;
+    reliability: "High"},;
   {}
 ";
 "";
@@ -619,7 +614,7 @@ const businessTechnologies = [];
     useCase: "Strategic Planning","";
     reliability: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -629,8 +624,7 @@ const successStories = [];
     challenge: "Needed AI-powered business intelligence for 50+ global facilities","";
     solution: "Built comprehensive AI business manager with predictive analytics and process automation","";
     results: "30% cost reduction, 40% efficiency improvement, 25% revenue increase, better decision making","";
-    logo: "GMC";,
-},;
+    logo: "GMC"},;
   {}
 ";
     id: 2,"";
@@ -639,8 +633,7 @@ const successStories = [];
     challenge: "Required autonomous financial management and risk assessment","";
     solution: "Implemented AI-driven financial planning and risk management system","";
     results: "50% faster financial planning, 60% risk reduction, improved compliance, better ROI","";
-    logo: "FSG";,
-},;
+    logo: "FSG"},;
   {}
 ";
     id: 3,"";
@@ -651,7 +644,7 @@ const successStories = [];
     results: "35% customer satisfaction increase, 45% marketing ROI improvement, better customer retention","";
     logo: "RCN";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -659,24 +652,21 @@ const processSteps = [];
     title: "Business Assessment","";
     description: "Evaluate current business processes and identify AI opportunities",";
     icon: FileText,"";
-    duration: "2-4 weeks";,
-},;
+    duration: "2-4 weeks"},;
   {}
 ";
     step: 2,"";
     title: "AI Strategy Development","";
     description: "Develop AI strategy and implementation roadmap",";
     icon: Code,"";
-    duration: "4-8 weeks";,
-},;
+    duration: "4-8 weeks"},;
   {}
 ";
     step: 3,"";
     title: "System Implementation","";
     description: "Build and deploy AI business management systems",";
     icon: Wrench,"";
-    duration: "16-40 weeks";,
-},;
+    duration: "16-40 weeks"},;
   {}
 ";
     step: 4,"";
@@ -685,7 +675,7 @@ const processSteps = [];
     icon: Gauge,"";
     duration: "4-8 weeks";
 ];
-;
+
 const businessBenefits = [];
   {}
 ";
@@ -693,32 +683,28 @@ const businessBenefits = [];
     title: "Intelligent Decision Making","";
     description: "AI-powered insights enable better, data-driven business decisions",";
     icon: Brain,"";
-    examples["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"];,
-},;
+    examples["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"]},;
   {}
 ";
 "";
     title: "Process Automation","";
     description: "Automated workflows reduce manual effort and improve efficiency",";
     icon: Zap,"";
-    examples["Workflow automation", "Process optimization", "Reduced errors", "Faster execution"];,
-},;
+    examples["Workflow automation", "Process optimization", "Reduced errors", "Faster execution"]},;
   {}
 ";
 "";
     title: "Cost Optimization","";
     description: "AI identifies cost-saving opportunities and optimizes resource allocation",";
     icon: TrendingUp,"";
-    examples["Resource optimization", "Cost reduction", "Efficiency improvement", "Better ROI"];,
-},;
+    examples["Resource optimization", "Cost reduction", "Efficiency improvement", "Better ROI"]},;
   {}
 ";
 "";
     title: "Competitive Advantage","";
     description: "AI capabilities provide strategic advantages in the marketplace",";
     icon: Rocket,"";
-    examples["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"];,
-}
+    examples["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"]}
 ];
 ;
 export {};
@@ -879,9 +865,8 @@ export {};
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -889,9 +874,8 @@ export {};
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {};
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -1002,14 +986,10 @@ export {};
       </section>;
     </div>;
   )}
-;
 
-export { AIAutonomousBusinessManager };
-;
-export { AIAutonomousBusinessManager };
-;
-export { AIAutonomousBusinessManager };
-;
-export { AIAutonomousBusinessManager };
-;
-export { AIAutonomousBusinessManager };
+
+export { AIAutonomousBusinessManager }
+export { AIAutonomousBusinessManager }
+export { AIAutonomousBusinessManager }
+export { AIAutonomousBusinessManager }
+export { AIAutonomousBusinessManager }

@@ -245,14 +245,10 @@ export {};
 
       <TrustedBySection />;
     </div>)}
-;
 
-export { IoTServicesPage };
-;
-export { IoTServicesPage };
-;
-export { IoTServicesPage };
-;
-export { IoTServicesPage };
-;
-export { IoTServicesPage };
+
+export { IoTServicesPage }
+export { IoTServicesPage }
+export { IoTServicesPage }
+export { IoTServicesPage }
+export { IoTServicesPage }

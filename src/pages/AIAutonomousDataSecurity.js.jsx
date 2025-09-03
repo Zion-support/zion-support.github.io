@@ -238,16 +238,12 @@ const AIAutonomousDataSecurity = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default AIAutonomousDataSecurity;
-;
 
-export { AIAutonomousDataSecurity };
-;
-export { AIAutonomousDataSecurity };
-;
-export { AIAutonomousDataSecurity };
-;
-export { AIAutonomousDataSecurity };
-;
-export { AIAutonomousDataSecurity };
+
+export { AIAutonomousDataSecurity }
+export { AIAutonomousDataSecurity }
+export { AIAutonomousDataSecurity }
+export { AIAutonomousDataSecurity }
+export { AIAutonomousDataSecurity }

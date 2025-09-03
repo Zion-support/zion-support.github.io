@@ -2,8 +2,8 @@ import type { NextPage } from 'next';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 import { DollarSign, Shield, Database, Users, CheckCircle, Zap, Globe, Lock, TrendingUp, BarChart3 } from 'lucide-react';
-;
-const FinanceSolutions: NextPage = () => {;
+
+const FinanceSolutions: NextPage = () => {
   return (;
     <Layout;
       title="Financial Services Solutions - Zion Tech Group";
@@ -19,7 +19,7 @@ const FinanceSolutions: NextPage = () => {;
             Transform financial services with secure, compliant, and innovative technology solutions. ;
             We help financial institutions modernize their operations and enhance customer experience.;
           </p>;
-          ;
+
           <div className="flex flex-col sm:flex-row justify-center gap-4">;
             <Link href="/contact">;
               <a className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
@@ -44,7 +44,7 @@ const FinanceSolutions: NextPage = () => {;
               Comprehensive solutions designed to meet the complex needs of financial institutions, ensuring compliance, security, and operational excellence.;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">;
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">;
@@ -202,7 +202,7 @@ const FinanceSolutions: NextPage = () => {;
               Ensuring your financial technology solutions meet all regulatory requirements and security standards.;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 gap-12 items-center">;
             <div>;
               <h3 className="text-3xl font-bold text-gray-900 mb-6">Regulatory Compliance</h3>;
@@ -230,7 +230,7 @@ const FinanceSolutions: NextPage = () => {;
                 </div>;
               </div>;
             </div>;
-            ;
+
             <div className="bg-gray-50 rounded-lg p-8">;
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Security Features</h3>;
               <ul className="space-y-3">;
@@ -273,26 +273,26 @@ const FinanceSolutions: NextPage = () => {;
               Track and optimize key financial metrics with our advanced analytics and reporting solutions.;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             <div className="bg-white rounded-lg p-6 shadow-lg text-center">;
               <TrendingUp className="w-12 h-12 text-green-600 mx-auto mb-4" />;
               <h3 className="text-2xl font-bold text-gray-900 mb-2">ROI Tracking</h3>;
               <p className="text-gray-600">Monitor return on investment across all financial products and services.</p>;
             </div>;
-            ;
+
             <div className="bg-white rounded-lg p-6 shadow-lg text-center">;
               <BarChart3 className="w-12 h-12 text-blue-600 mx-auto mb-4" />;
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Risk Analysis</h3>;
               <p className="text-gray-600">Advanced risk assessment and management tools for financial institutions.</p>;
             </div>;
-            ;
+
             <div className="bg-white rounded-lg p-6 shadow-lg text-center">;
               <DollarSign className="w-12 h-12 text-purple-600 mx-auto mb-4" />;
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Cost Optimization</h3>;
               <p className="text-gray-600">Identify opportunities to reduce operational costs and improve efficiency.</p>;
             </div>;
-            ;
+
             <div className="bg-white rounded-lg p-6 shadow-lg text-center">;
               <Users className="w-12 h-12 text-indigo-600 mx-auto mb-4" />;
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Customer Analytics</h3>;
@@ -324,7 +324,5 @@ const FinanceSolutions: NextPage = () => {;
         </div>;
       </section>;
     </Layout>;
-  );,
-};
-;
+  )}
 export default FinanceSolutions;

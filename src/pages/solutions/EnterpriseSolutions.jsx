@@ -71,8 +71,7 @@ export default function EnterpriseSolutions() {};
                         {feature}
                       </li>))}
                   </ul>;
-                </div>);,
-})}
+                </div>)})}
           </div>;
         </div>;
       </section>;
@@ -161,15 +160,10 @@ export default function EnterpriseSolutions() {};
           </div>;
         </div>;
       </section>;
-    </div>);,
-}}}}
-;
-export { EnterpriseSolutions, Icon };
-;
-export { EnterpriseSolutions, Icon };
-;
-export { EnterpriseSolutions, Icon };
-;
-export { EnterpriseSolutions, Icon };
-;
-export { EnterpriseSolutions, Icon };
+    </div>)}}}}
+
+export { EnterpriseSolutions, Icon }
+export { EnterpriseSolutions, Icon }
+export { EnterpriseSolutions, Icon }
+export { EnterpriseSolutions, Icon }
+export { EnterpriseSolutions, Icon }

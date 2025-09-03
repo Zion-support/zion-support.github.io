@@ -25,7 +25,7 @@ const ComprehensiveServicesShowcase2025 = () => {};
         visible: {};
 }
         }
-    };
+    }
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">;
       {/* Hero Section */}
       <div className="relative overflow-hidden">;
@@ -271,8 +271,7 @@ const ComprehensiveServicesShowcase2025 = () => {};
 ';
                 setSearchTerm('');';
                 setSelectedCategory('all');';
-                setSelectedIndustry('all');";,
-}}"";
+                setSelectedIndustry('all');"}}"";
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">;
               View All Services;
             </button>;
@@ -301,16 +300,12 @@ const ComprehensiveServicesShowcase2025 = () => {};
           </div>;
         </div>;
       </div>;
-    </div>)};
+    </div>)}
 export default ComprehensiveServicesShowcase2025;
-;
 
-export { ComprehensiveServicesShowcase2025 };
-;
-export { ComprehensiveServicesShowcase2025 };
-;
-export { ComprehensiveServicesShowcase2025 };
-;
-export { ComprehensiveServicesShowcase2025 };
-;
-export { ComprehensiveServicesShowcase2025 };
+
+export { ComprehensiveServicesShowcase2025 }
+export { ComprehensiveServicesShowcase2025 }
+export { ComprehensiveServicesShowcase2025 }
+export { ComprehensiveServicesShowcase2025 }
+export { ComprehensiveServicesShowcase2025 }

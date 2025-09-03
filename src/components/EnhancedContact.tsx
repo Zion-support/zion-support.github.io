@@ -13,13 +13,13 @@ export function EnhancedContact(...args[]):  {};
   const [errors, setErrors] = useState<any> ({}) ;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-;
+
     { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },;
     { value: 'cybersecurity', label: 'Cybersecurity' },;
     { value: 'digital-transformation', label: 'Digital Transformation' },;
     { value: 'consulting', label: 'IT Consulting' },;
     { value: 'quantum-computing', label: 'Quantum Computing' },;
-    { value: 'green-it', label: 'Green IT Solutions' };
+    { value: 'green-it', label: 'Green IT Solutions' }
   ];
 ;
     const newErrors: ContactFormErrors = {};      // console.error('Error submitting form:', error)} finally {};
@@ -142,8 +142,7 @@ export function EnhancedContact(...args[]):  {};
                   </label>;
                   <div>Broken JSX</div>
   (e) => handleInputChange('phone',;
-  e.target.value);,
-}";
+  e.target.value)}";
                     className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light";
                     placeholder="Enter your phone number";
                   />;
@@ -153,8 +152,7 @@ export function EnhancedContact(...args[]):  {};
                     Comp </label>;
                   <div>Broken JSX</div>
   (e) => handleInputChange('company',;
-  e.target.value);,
-}";
+  e.target.value)}";
                     className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light";
                     placeholder="Enter your comp name";
                   />;
@@ -168,8 +166,7 @@ export function EnhancedContact(...args[]):  {};
                 </label>;
                 <div>Broken JSX</div>
   (e) => handleInputChange('service',;
-  e.target.value);,
-}";
+  e.target.value)}";
                   className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white">;
                   {services.map(service  => (<option key={service.value} value={service.value}>;
                       {service.label}

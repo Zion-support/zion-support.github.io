@@ -368,5 +368,4 @@ export default function QuantumFinancialTradingPlatform() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

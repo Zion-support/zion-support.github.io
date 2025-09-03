@@ -18,11 +18,8 @@ function cartReducer(state, action) {};
             return {};
                     item.id === id ? { ...item, quantity } : item";
                 )}}";
-        case "CLEAR_CART": return { items: [] };
+        case "CLEAR_CART": return { items: [] }
         case "SET_ITEMS": return { items: action.payload }
-;
-        default: return state}
-;
 
 ;
 const CartContext = createContext(null);,
@@ -31,7 +28,7 @@ export function useCart() {};
   return null;
 }
         throw new Error("useCart must be used within a CartProvider")}
-;
+
     return ctx}
 ;
 export function CartProvider({ children }) {};
@@ -50,7 +47,7 @@ export function CartProvider({ children }) {};
 } catch {};
 }
     }
-;
+
     // Merge guest cart when user logs in;
     if(user?.id) {};
 } catch {};
@@ -58,10 +55,9 @@ export function CartProvider({ children }) {};
         safeStorage.removeItem(getCartKey());,
 }
     }
-;
-    dispatch({ type: 'SET_ITEMS', payload: items });,
-}, [cartKey]);
-;
+
+    dispatch({ type: 'SET_ITEMS', payload: items })}, [cartKey]);
+
   // Save cart to storage whenever it changes;
   useEffect(() => {};
 }, []);
@@ -110,9 +106,8 @@ export function CartProvider({ children }) {};
 }
         if (stored) {};
                 items = JSON.parse(stored)} catch {                items = []}
-;,
 }
-;
+
         // comment;
 if (user?.id) {};
 }
@@ -120,9 +115,8 @@ if (user?.id) {};
 }
                     items = mergeCartItems(items, guestItems)} catch {};
                     /* comment */}
-;
+
                 safeStorage.removeItem(getCartKey())}
-;,
 }";
 
         dispatch({ type: "SET_ITEMS", payload: items })}, [cartKey, user?.id]);,
@@ -134,7 +128,6 @@ if (user?.id) {};
         removeItem: (id) => dispatch({ type: "REMOVE_ITEM", payload: id }), ";
         updateQuantity: (id, quantity) => dispatch({ type: "UPDATE_QUANTITY", payload: { id, quantity } }), ;
         clearCart: () => dispatch({ type: "CLEAR_CART' }), getTotalItems: () => state.items.reduce((total, item) => total + item.quantity, 0), getTotalPrice: () => state.items.reduce((total, item) => total + (item.price * item.quantity), 0)}
-;
+
 ";
-    return <CartContext .Provider value={value}">{children}</CartContext.Provider>;,";,
-}""
+    return <CartContext .Provider value={value}">{children}</CartContext.Provider>;,"}""

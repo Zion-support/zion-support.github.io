@@ -54,12 +54,10 @@ export {};
                     description: "The requested project could not be found.","";
                     variant: "destructive"});"";
                 router("/dashboard");"";
-                navigate("/dashboard");,
-}
+                navigate("/dashboard")}
             setIsLoading(false) ;
-;
-        loadProject () ;,
-}, [projectId]) ;
+
+        loadProject () }, [projectId]) ;
     const fetchProjectNotes = async(projectId) => {}
         try {}
 ";
@@ -73,14 +71,13 @@ export {};
                 .order("created_at", { ascending: false });
             if (error)";
                 throw error;"";
-            // // // // // // // // console.error("Error fetching project notes:", err);,
-}
+            // // // // // // // // console.error("Error fetching project notes:", err)}
             setNotes (data || []) }
         catch (err) {}
 ";
 "";
             // console.error("Error fetching project notes:", err)}
-    };
+    }
     const handleSubmitNote = async () => {}
         if(!newNote.trim () || !project || !user) return;
         setIsSubmittingNote(true) ;
@@ -115,7 +112,7 @@ export {};
                 variant: "destructive"})}
         finally {}
             setIsSubmittingNote(false) }
-    };
+    }
     const handleStatusChange = async(newStatus) => {}
         if(!project) return;
         const success = await updateProjectStatus(project.id, newStatus) ;
@@ -131,7 +128,7 @@ export {};
                     title: "Offer Accepted! 🎉","";
                     description: "The project is now in progress. Congratulations!"})}
         }
-    };
+    }
     const getStatusBadge = (status) => {}
         switch (status) {}
 ";
@@ -150,7 +147,7 @@ export {};
                 return <Badge variant="destructive">Canceled</Badge>;";
             default:"";
                 return <Badge variant="outline">{status}</Badge>}
-    };
+    }
     if (isLoading) {}
 ";
 "";
@@ -187,8 +184,7 @@ export {};
 "";
         router("/unauthorized");"";
         navigate("/unauthorized");
-        return null;";,
-}"";
+        return null;"}"";
     const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);'"`;
     return (<>'"`'"`;
       <SEO title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} description="View and manage your project details and collaboration."/>";
@@ -490,21 +486,17 @@ export {};
           </div>;
         </div>;
       </main>;
-      ;
+
     </>)}
 export default function ProjectDetails() {};
   return null;
 }
     </ProtectedRoute>)}
-;
 
-export { ProjectDetailsContent, ProjectDetails };
-;
-export { ProjectDetailsContent, ProjectDetails };
-;
-export { ProjectDetailsContent, ProjectDetails };
-;
-export { ProjectDetailsContent, ProjectDetails };
-;
-export { ProjectDetailsContent, Page, ProjectDetails };
+
+export { ProjectDetailsContent, ProjectDetails }
+export { ProjectDetailsContent, ProjectDetails }
+export { ProjectDetailsContent, ProjectDetails }
+export { ProjectDetailsContent, ProjectDetails }
+export { ProjectDetailsContent, Page, ProjectDetails }
 )))

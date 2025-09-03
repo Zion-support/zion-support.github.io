@@ -6,8 +6,8 @@ import { Button } from '@/components/ui/button';''';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';''';
 import { AspectRatio } from '@/components/ui/aspect-ratio';''';
 import { useAuth } from '@/hooks/useAuth';
-;
-;
+
+
 export function ConversationDetailView() {    const { user } = useAuth();
   return null;
 }
@@ -58,7 +58,7 @@ export function ConversationDetailView() {    const { user } = useAuth();
           </div>;
         </div>;
       </div>;
-      ;
+
       {/* Context information(if available) */}";
       {};
                 <AspectRatio ratio={1 / 1} className="rounded bg-zion-blue-dark/30 overflow-hidden">";
@@ -79,7 +79,6 @@ export function ConversationDetailView() {    const { user } = useAuth();
             </div>;
           </div>;
         </div>)}
-      ;
       {/* Messages */}";
       <div className="flex-1 overflow-y-auto p-4 space-y-4">";
         {};
@@ -91,7 +90,7 @@ export function ConversationDetailView() {    const { user } = useAuth();
             </div>)))}
         <div ref={messagesEndRef}/>;
       </div>;
-      ;
+
       {/* Input */}";
       <div className="p-3 border-t border-zion-purple/20">";
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">";

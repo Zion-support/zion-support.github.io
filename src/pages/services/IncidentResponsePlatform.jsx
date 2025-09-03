@@ -105,7 +105,7 @@ import {};
 }}>;
                   {};
                     </div>)}
-;
+
                   <div className="text-center mb-6">;
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                     <div className="text-4xl font-bold text-red-400 mb-2">;
@@ -217,17 +217,11 @@ import {};
           </div>;
         </section>;
       </div>;
-    </>);,
-};
-export default IncidentResponsePlatform;,
-}}}}
-;
-export { IncidentResponsePlatform };
-;
-export { IncidentResponsePlatform };
-;
-export { IncidentResponsePlatform };
-;
-export { IncidentResponsePlatform };
-;
-export { IncidentResponsePlatform };
+    </>)}
+export default IncidentResponsePlatform}}}}
+
+export { IncidentResponsePlatform }
+export { IncidentResponsePlatform }
+export { IncidentResponsePlatform }
+export { IncidentResponsePlatform }
+export { IncidentResponsePlatform }

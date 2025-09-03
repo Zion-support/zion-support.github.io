@@ -30,15 +30,14 @@ export {};
         toast.success("Video call started", {}
 ";
 "";
-            description: "Others can join with the project room link";,
-});';
+            description: "Others can join with the project room link"});';
         // Switch to video tab if not already there'';
         if (activeTab !== 'video') {}
 ';
 '';
 ''';
             setActiveTab('video')}
-    };
+    }
     const endVideoCall = () => {}
   return <div>Component</div>;
 };
@@ -47,8 +46,7 @@ export {};
         toast.info("Video call ended", {}
 ";
 "";
-            description: "Call duration and participants will be logged";,
-}) };
+            description: "Call duration and participants will be logged"}) }
     const simulateUserJoining = () => {}
   return <div>Component</div>;
 };
@@ -210,16 +208,12 @@ export {};
           </TabsContent>;
         </Tabs>;
       </main>;
-      ;
-    </>)}
-;
 
-export { ProjectRoom };
-;
-export { ProjectRoom };
-;
-export { ProjectRoom };
-;
-export { ProjectRoom };
-;
-export { ProjectRoom };
+    </>)}
+
+
+export { ProjectRoom }
+export { ProjectRoom }
+export { ProjectRoom }
+export { ProjectRoom }
+export { ProjectRoom }

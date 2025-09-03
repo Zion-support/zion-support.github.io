@@ -88,18 +88,13 @@ export default function Page() {};
         </div>;
       </form>;
     </Form>;
-  );,
-}
-;
-export default LoginForm;
-;
+  )}
 
-export { LoginForm };
-;
-export { LoginForm };
-;
-export { LoginForm };
-;
-export { LoginForm };
-;
-export { Page, LoginForm };
+export default LoginForm;
+
+
+export { LoginForm }
+export { LoginForm }
+export { LoginForm }
+export { LoginForm }
+export { Page, LoginForm }

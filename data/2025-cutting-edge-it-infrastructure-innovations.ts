@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface CuttingEdgeITInfrastructureInnovation2025 {;
+export interface CuttingEdgeITInfrastructureInnovation2025 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface CuttingEdgeITInfrastructureInnovation2025 {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,19 +38,18 @@ export interface CuttingEdgeITInfrastructureInnovation2025 {;
   rating: number;
 export const cuttingEdgeITInfrastructureInnovations2025 = [;
   // Quantum-Safe Cloud Infrastructure Platform;
-  {;
+  {
     id: "quantum-safe-cloud-infrastructure-platform",;
     name: "Quantum-Safe Cloud Infrastructure Platform",;
     tagline: "Future-proof cloud infrastructure resistant to quantum computing attacks",;
     description: "Revolutionary cloud infrastructure platform built with quantum-resistant cryptography and advanced security protocols. Ensures data protection against both current and future quantum computing threats while maintaining exceptional performance.",;
     category: "IT Infrastructure & Security",;
     type: "Micro SAAS",;
-    pricing: {;
+    pricing: {
       starter: "$899/month",;
       professional: "$1,999/month",;
       enterprise: "$4,999/month",;
-      custom: "Contact for pricing";,;,
-},;
+      custom: "Contact for pricing"},;
     features[;
       "Quantum-resistant encryption algorithms",;
       "Post-quantum cryptography implementation",;
@@ -90,22 +89,20 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [;
     mobile: "+1 302 464 0950",;
     address: "364 E Main St STE 1008 Middletown DE 19709",;
     website: "https://ziontechgroup.com",;
-    slug: "/quantum-safe-cloud-infrastructure-platform";,;,
-},;
+    slug: "/quantum-safe-cloud-infrastructure-platform"},;
   // Autonomous Edge Computing Network;
-  {;
+  {
     id: "autonomous-edge-computing-network",;
     name: "Autonomous Edge Computing Network",;
     tagline: "Self-managing edge computing infrastructure with AI-driven optimization",;
     description: "Intelligent edge computing network that autonomously manages, optimizes, and scales computing resources at the network edge. Uses AI to predict demand, optimize performance, and ensure seamless user experiences worldwide.",;
     category: "Edge Computing & AI",;
     type: "Micro SAAS",;
-    pricing: {;
+    pricing: {
       starter: "$599/month",;
       professional: "$1,299/month",;
       enterprise: "$2,999/month",;
-      custom: "Contact for pricing";,;,
-},;
+      custom: "Contact for pricing"},;
     features[;
       "AI-powered edge resource management",;
       "Autonomous load balancing and scaling",;
@@ -145,22 +142,20 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [;
     mobile: "+1 302 464 0950",;
     address: "364 E Main St STE 1008 Middletown DE 19709",;
     website: "https://ziontechgroup.com",;
-    slug: "/autonomous-edge-computing-network";,;,
-},;
+    slug: "/autonomous-edge-computing-network"},;
   // Neuromorphic Computing Infrastructure;
-  {;
+  {
     id: "neuromorphic-computing-infrastructure",;
     name: "Neuromorphic Computing Infrastructure",;
     tagline: "Brain-inspired computing infrastructure for next-generation AI applications",;
     description: "Revolutionary computing infrastructure based on neuromorphic principles that mimics the human brain\"s neural structure. Enables ultra-efficient AI processing, real-time learning, and cognitive computing capabilities.",;
     category: "Neuromorphic Computing & AI",;
     type: "Micro SAAS",;
-    pricing: {;
+    pricing: {
       starter: "$2,999/month",;
       professional: "$6,999/month",;
       enterprise: "$14,999/month",;
-      custom: "Contact for pricing";,;,
-},;
+      custom: "Contact for pricing"},;
     features[;
       "Neuromorphic chip architecture",;
       "Brain-inspired neural networks",;
@@ -200,22 +195,20 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [;
     mobile: "+1 302 464 0950",;
     address: "364 E Main St STE 1008 Middletown DE 19709",;
     website: "https://ziontechgroup.com",;
-    slug: "/neuromorphic-computing-infrastructure";,;,
-},;
+    slug: "/neuromorphic-computing-infrastructure"},;
   // Autonomous Data Center Management Platform;
-  {;
+  {
     id: "autonomous-data-center-management-platform",;
     name: "Autonomous Data Center Management Platform",;
     tagline: "Fully autonomous data center operations with AI-driven optimization",;
     description: "Intelligent platform that autonomously manages entire data center operations including power management, cooling optimization, security monitoring, and resource allocation. Ensures maximum efficiency and uptime without human intervention.",;
     category: "Data Center & Automation",;
     type: "Micro SAAS",;
-    pricing: {;
+    pricing: {
       starter: "$1,499/month",;
       professional: "$3,499/month",;
       enterprise: "$7,999/month",;
-      custom: "Contact for pricing";,;,
-},;
+      custom: "Contact for pricing"},;
     features[;
       "Autonomous power management",;
       "AI-driven cooling optimization",;

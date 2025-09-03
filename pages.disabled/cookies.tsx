@@ -2,12 +2,12 @@ import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Cookie, Settings, Shield, Eye, Database } from 'lucide-react';
-;
-const Cookies: NextPage = () => {;
+
+const Cookies: NextPage = () => {
   const lastUpdated = 'January 27, 2025';
-;
+
   const cookieTypes = [;
-    {;
+    {
       icon: Settings,;
       title: 'Essential Cookies',;
       description: 'These cookies are necessary for the website to function properly.',;
@@ -17,9 +17,8 @@ const Cookies: NextPage = () => {;
         'Security and fraud prevention',;
         'Load balancing and performance';
       ],;
-      required: true;,
-},;
-    {;
+      required: true},;
+    {
       icon: Eye,;
       title: 'Analytics Cookies',;
       description: 'These cookies help us understand how visitors interact with our website.',;
@@ -29,9 +28,8 @@ const Cookies: NextPage = () => {;
         'Popular content and features',;
         'Performance metrics and errors';
       ],;
-      required: false;,
-},;
-    {;
+      required: false},;
+    {
       icon: Database,;
       title: 'Functional Cookies',;
       description: 'These cookies enable enhanced functionality and personalization.',;
@@ -41,9 +39,8 @@ const Cookies: NextPage = () => {;
         'Remembered form data',;
         'Location-based features';
       ],;
-      required: false;,
-},;
-    {;
+      required: false},;
+    {
       icon: Shield,;
       title: 'Marketing Cookies',;
       description: 'These cookies are used to deliver relevant advertisements.',;
@@ -53,17 +50,15 @@ const Cookies: NextPage = () => {;
         'Social media integration',;
         'Retargeting and remarketing';
       ],;
-      required: false;,
-},;
-    {;
+      required: false},;
+    {
       icon: Database,;
       title: 'Marketing Cookies',;
       description: 'These cookies are used to track visitors across websites to display relevant and engaging advertisements.',;
       examples: ['Ad targeting', 'Campaign tracking', 'Conversion tracking'],;
-      required: false;,
-}
+      required: false}
   ];
-;
+
   return (;
     <MainLayout;
       title="Cookie Policy - Zion Tech Group";
@@ -115,8 +110,7 @@ const Cookies: NextPage = () => {;
                           <span className={`px-3 py-1 rounded-full text-sm font-medium ${;
                             cookie.required ;
                               ? 'bg-red-100 text-red-800' ;
-                              : 'bg-green-100 text-green-800';,
-}`}>;
+                              : 'bg-green-100 text-green-800'}`}>;
                             {cookie.required ? 'Required' : 'Optional'}
                           </span>;
                         </div>;
@@ -166,7 +160,7 @@ const Cookies: NextPage = () => {;
                       </li>;
                     </ul>;
                   </div>;
-                  ;
+
                   <div>;
                     <h3 className="text-lg font-semibold mb-2 text-gray-900">Cookie Consent</h3>;
                     <p className="text-gray-600">;
@@ -322,7 +316,7 @@ const Cookies: NextPage = () => {;
                 <Settings className="w-8 h-8 text-blue-600 mr-3" />;
                 <h2 className="text-3xl font-bold text-gray-900">Managing Your Cookie Preferences</h2>;
               </div>;
-              ;
+
               <div className="bg-gray-50 p-6 rounded-lg mb-6">;
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">Browser Settings</h3>;
                 <p className="text-gray-700 mb-4">;
@@ -347,7 +341,7 @@ const Cookies: NextPage = () => {;
                   </li>;
                 </ul>;
               </div>;
-              ;
+
               <div className="grid md:grid-cols-2 gap-6">;
                 <div className="bg-blue-50 p-6 rounded-lg">;
                   <h3 className="text-xl font-semibold mb-4 text-gray-900">Cookie Consent</h3>;
@@ -360,7 +354,7 @@ const Cookies: NextPage = () => {;
                     in our website footer.;
                   </p>;
                 </div>;
-                ;
+
                 <div className="bg-green-50 p-6 rounded-lg">;
                   <h3 className="text-xl font-semibold mb-4 text-gray-900">Opt-Out Options</h3>;
                   <p className="text-gray-700 mb-4">;
@@ -379,7 +373,5 @@ const Cookies: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
-};
-;
+  )}
 export default Cookies;

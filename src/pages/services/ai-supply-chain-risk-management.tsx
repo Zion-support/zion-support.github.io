@@ -368,5 +368,4 @@ export default function AISupplyChainRiskManagement() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

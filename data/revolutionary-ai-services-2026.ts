@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface RevolutionaryAIService2026 {;
+export interface RevolutionaryAIService2026 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface RevolutionaryAIService2026 {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface RevolutionaryAIService2026 {;
   rating: number;
 export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [;
   // AI Multimodal Fusion Platform;
-  {;
+  {
     id: "ai-multimodal-fusion-platform",;
     name: "AI Multimodal Fusion Platform",;
     tagline: "Unify text, image, audio, and video with AI intelligence",;
@@ -76,21 +76,19 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [;
     marketSize: "$30B market",;
     growthRate: "320% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced multimodal AI platform with real-time processing, fusion algorithms, and comprehensive integration capabilities.",;
     launchDate: "2026-02-20",;
     customers: 280,;
     rating: 4.9,;
-    reviews: 145;,;,
-},;
+    reviews: 145},;
   // AI Autonomous Business Platform;
-  {;
+  {
     id: "ai-autonomous-business-platform",;
     name: "AI Autonomous Business Platform",;
     tagline: "Run your entire business with AI automation",;
@@ -128,21 +126,19 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [;
     marketSize: "$50B market",;
     growthRate: "400% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete autonomous business platform with AI decision-making, process automation, and comprehensive business management capabilities.",;
     launchDate: "2026-03-01",;
     customers: 95,;
     rating: 4.8,;
-    reviews: 67;,;,
-},;
+    reviews: 67},;
   // AI Creative Studio Platform;
-  {;
+  {
     id: "ai-creative-studio-platform",;
     name: "AI Creative Studio Platform",;
     tagline: "Unlimited AI-powered creativity and content generation",;
@@ -180,21 +176,19 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [;
     marketSize: "$25B market",;
     growthRate: "350% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced creative AI platform with unlimited content generation, style customization, and comprehensive creative tools.",;
     launchDate: "2026-02-25",;
     customers: 650,;
     rating: 4.9,;
-    reviews: 389;,;,
-},;
+    reviews: 389},;
   // AI Healthcare Companion Platform;
-  {;
+  {
     id: "ai-healthcare-companion-platform",;
     name: "AI Healthcare Companion Platform",;
     tagline: "Personalized AI healthcare companion for 24/7 support",;
@@ -232,21 +226,19 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [;
     marketSize: "$40B market",;
     growthRate: "380% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced healthcare AI platform with 24/7 support, personalized monitoring, and comprehensive healthcare capabilities.",;
     launchDate: "2026-03-05",;
     customers: 180,;
     rating: 4.9,;
-    reviews: 112;,;,
-},;
+    reviews: 112},;
   // Quantum Logistics Platform;
-  {;
+  {
     id: "quantum-logistics-platform",;
     name: "Quantum Logistics Platform",;
     tagline: "Optimize supply chains with quantum computing precision",;
@@ -284,12 +276,11 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [;
     marketSize: "$35B market",;
     growthRate: "300% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum logistics platform with optimization algorithms, real-time processing, and comprehensive logistics management capabilities.",;
     launchDate: "2026-03-10",;

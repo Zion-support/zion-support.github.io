@@ -23,18 +23,12 @@ const SpaceTech = () => {};
           </Link>;
         </div>;
       </section>;
-    </div>);,
-};
-;
+    </div>)}
 export default SpaceTech;
-;
 
-export { SpaceTech };
-;
-export { SpaceTech };
-;
-export { SpaceTech };
-;
-export { SpaceTech };
-;
-export { SpaceTech };
+
+export { SpaceTech }
+export { SpaceTech }
+export { SpaceTech }
+export { SpaceTech }
+export { SpaceTech }

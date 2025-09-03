@@ -50,7 +50,6 @@ interface TestimonialsProps {};
         </div>;
       </div>;
     </section>;
-  );,
-}
-;
+  )}
+
 export default Testimonials;

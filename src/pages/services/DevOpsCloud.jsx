@@ -320,15 +320,10 @@ export default function DevOpsCloudServices() {};
           </div>;
         </div>;
       </section>;
-    </div>);,
-}}}}}
-;
-export { DevOpsCloudServices };
-;
-export { DevOpsCloudServices };
-;
-export { DevOpsCloudServices };
-;
-export { DevOpsCloudServices };
-;
-export { DevOpsCloudServices };
+    </div>)}}}}}
+
+export { DevOpsCloudServices }
+export { DevOpsCloudServices }
+export { DevOpsCloudServices }
+export { DevOpsCloudServices }
+export { DevOpsCloudServices }

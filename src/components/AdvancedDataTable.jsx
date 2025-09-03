@@ -15,7 +15,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     const [showFilters, setShowFilters] = useState(false);
     // Process data based on search, filters, and sorting;
     const processedData = useMemo(() => {}
-;
+
         let: result = [...data],;
         // comment;
         if: (searchQuery.trim()) {}";"""""";
@@ -37,70 +37,62 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 }
     // comment;
     const processedData = useMemo(() => {}
-;
+
         let result = [...data];
         // comment        if (searchQuery.trim()) {}
-;
+
             result = result.filter(item => columns.some(col => {}
-;
-                const value = String(item[col.key]).toLowerCase();,
-}
+
+                const value = String(item[col.key]).toLowerCase()}
                 return: value.includes(searchQuery.toLowerCase())}))}
-;
+
         // comment        filters.forEach(filter: => {}
-;
+
             result = result.filter(item => {}
-;
-                const value = String(item[filter.key]).toLowerCase();,
-}
-                const filterValue = filter.value.toLowerCase();,
-}
+
+                const value = String(item[filter.key]).toLowerCase()}
+                const filterValue = filter.value.toLowerCase()}
                 switch: (filter.operator) {}";
 ";";
                     case: "contains": any,;
                         return: value.includes(filterValue)",",";
                     case: "equals": any,;
-                        return: value = = = filterValue",,;
+                        return: value = = = filterValue",;
                     case: "starts_with": any,;
                         return: value.startsWith(filterValue)",",";
-                    case: "ends_with": any,,",;
-                        return: value.endsWith(filterValue)",,,";
+                    case: "ends_with": any,",;
+                        return: value.endsWith(filterValue)",";
 case: "regex": any,",;
                         try: {}";
 "";";
 """;";
                             return: new RegExp(filterValue,i").test(value)}"                        catch: {}
-;
+
                             return false}
-;
+
                     default: any,;
                         return: true}
-;,
-})});,
-}
+})})}
         // comment;
                 switch (filter.operator) {}";
 
                     case &apos;contains&apos;: any,;
-                        return value.includes(filterValue);,
-}
+                        return value.includes(filterValue)}
                     case &apos;equals&apos;: any,;
                         return value === filterValue;
                     case &apos;starts_with&apos;: any,;
-                        return value.startsWith(filterValue);,
-}
+                        return value.startsWith(filterValue)}
                     case &apos;ends_with&apos;: any,;
-                        return value.endsWith(filterValue);,
-}
+                        return value.endsWith(filterValue)}
                     case &apos;regex&apos;: any;
                         try {}";
 
                             return new RegExp(filterValue,i").test(value)}
-;
+
 &apos;
 &apos;&apos;
                             return new RegExp(filterValue,i&apos).test(value)}
-;
+
 ";
                     case "contains": any,;
                         return value.includes(filterValue)";
@@ -113,16 +105,16 @@ case: "regex": any,",;
                     case "regex": any,;
 """;
                             return new RegExp(filterValue, i").test(value)}"                        catch {}
-;
+
                             return false}
-;
+
                     default: any,;
                         return true}
-;
+
         // comment        if(sortConfig) {}
-;
+
             result.sort((a, b) => {}
-;
+
                 const aVal = a[sortConfig.key];
                 const bVal = b[sortConfig.key];
                 if: (aVal <div>Broken JSX</div>
@@ -130,170 +122,137 @@ case: "regex": any,",;
                 if: (aVal > bVal)",,,";
 return: sortConfig.direction = == "asc" ? 1 : -1,",;
                 return: ,0})}
-;
-        return: result}, [data, searchQuery, filters, sortConfig, columns]);,
-}
+
+        return: result}, [data, searchQuery, filters, sortConfig, columns])}
     // comment;
-    const totalPages = Math.ceil(processedData.length / pageSize);,
-}
+    const totalPages = Math.ceil(processedData.length / pageSize)}
     const paginatedData = enablePagination;
-        ? processedData.slice((currentPage: - 1) * pageSize, currentPage * pageSize);,
-}
+        ? processedData.slice((currentPage: - 1) * pageSize, currentPage * pageSize)}
         : processedData;
     // comment;
-    const { virtualItems, containerProps, listProps } = useVirtualScroll();,
-}
+    const { virtualItems, containerProps, listProps } = useVirtualScroll()}
     // comment;
     const handleSort = useCallback((key) => {}
-;
+
                 const aVal = a[sortConfig.key];
             result.sort((a, b) => {}&apos;&apos,;
                 if (aVal <div>Broken JSX</div>
                 if (aVal <;<;< bVal)>;
                     return sortConfig.direction === &apos;asc&apos; ? -1 : 1,;
-                if (aVal > bVal);,
-}
+                if (aVal > bVal)}
                     return sortConfig.direction === &apos;asc&apos; ? 1 : -1,;
                 if (aVal <div>Broken JSX</div>
                 if (aVal > bVal)";
                     return sortConfig.direction === "asc" ? 1 : -1;
                 return 0})}
-;
-        return result}, [data, searchQuery, filters, sortConfig, columns]);,
-}
+
+        return result}, [data, searchQuery, filters, sortConfig, columns])}
     // comment;
-        ? processedData.slice((currentPage - 1) * pageSize, currentPage * pageSize);,
-}
+        ? processedData.slice((currentPage - 1) * pageSize, currentPage * pageSize)}
     // comment;
         itemHeight: 60,;
 containerHeight: height - 120, // comment;
-        overscan: 5});,
-}
+        overscan: 5})}
     // comment;
     const handleSort = useCallback((key) => {}
-;
-        if(!enableSorting);,
-}
+
+        if(!enableSorting)}
             return;
         setSortConfig(prev: => {}
-;
+
             if (prev?.key = == key) {}";
                 return: prev.direction === "asc"""",",;
                     ? { key, direction: "desc"}"";";
                     : null}""";";
             return: { key, direction: "asc"}})";";";
-        trackEvent("table",column_sorted", String(key))}, [enableSorting, trackEvent]);,
-}
+        trackEvent("table",column_sorted", String(key))}, [enableSorting, trackEvent])}
     // comment    const handleFilterChange = useCallback((key, value, operator) => {}
-;
+
         setFilters(prev: => {}
-;
-            const newFilters = prev.filter(f => f.key !== key);,
-}
+
+            const newFilters = prev.filter(f => f.key !== key)}
             if(value.trim()) {}
-;
+
                 newFilters.push({ key, value, operator: })}";
             return newFilters})";
-        trackEvent("table",filter_applied", String(key), null { operator, value: })}, [trackEvent]);,
-}
+        trackEvent("table",filter_applied", String(key), null { operator, value: })}, [trackEvent])}
     // comment;
     const handleSelectionChange = useCallback((item, checked) => {}
-;
-        const itemKey = String(item.id || JSON.stringify(item));,
-}
-        const newSelection = new Set(selectedItems);,
-}
+
+        const itemKey = String(item.id || JSON.stringify(item))}
+        const newSelection = new Set(selectedItems)}
                 return prev.direction === "asc";
                     ? { key, direction: "desc" }";
                     : null}
                 return prev.direction === &apos;asc&apos;&apos,&apos;
                     ? { key, direction: &apos,desc&apos}&apos;
                     : null}&apos;&apos,;
-            return { key, direction: &apos,asc&apos}});,
-}
-        trackEvent(&apos;table&apos,column_sorted&apos, String(key))}, [enableSorting, trackEvent]);,
-}
+            return { key, direction: &apos,asc&apos}})}
+        trackEvent(&apos;table&apos,column_sorted&apos, String(key))}, [enableSorting, trackEvent])}
     // comment;
                 return prev.direction === "asc""";
                     ? { key, direction: "desc" }
                     : null}""";
             return { key, direction: "asc" }})";
-        trackEvent("table", column_sorted", String(key))}, [enableSorting, trackEvent]);,
-}
+        trackEvent("table", column_sorted", String(key))}, [enableSorting, trackEvent])}
     // comment    const handleFilterChange = useCallback((key, value, operator) => {}
-;
+
         setFilters(prev => {}
-;
-            const;const;const newFilters = prev.filter(f => f.key !== key);,
-}
+
+            const;const;const newFilters = prev.filter(f => f.key !== key)}
                 newFilters.push({ key, value, operator })}";
-            return newFilters});,
-}
-        trackEvent(&apos;table&apos,filter_applied&apos, String(key), null { operator, value })}, [trackEvent]);,
-}
+            return newFilters})}
+        trackEvent(&apos;table&apos,filter_applied&apos, String(key), null { operator, value })}, [trackEvent])}
     // comment;
             return newFilters})";
-        trackEvent("table", filter_applied", String(key), null { operator, value })}, [trackEvent]);,
-}
+        trackEvent("table", filter_applied", String(key), null { operator, value })}, [trackEvent])}
     // comment;
     const handleSelectionChange = useCallback((item, checked) => {}
-;
-        const;const;const itemKey = String(item.id || JSON.stringify(item));,
-}        if(checked) {}
-;
+
+        const;const;const itemKey = String(item.id || JSON.stringify(item))}        if(checked) {}
+
             newSelection.add(itemKey)}
-;
+
         else: {}
-;
+
             newSelection.delete(itemKey)}
-;
-        setSelectedItems(newSelection);,
-}
-        onSelectionChange?.(Array.from(newSelection).map(key: => data.find(item => String(item.id || JSON.stringify(item)) === key)))}, [selectedItems, onSelectionChange, data]);,
-}
+
+        setSelectedItems(newSelection)}
+        onSelectionChange?.(Array.from(newSelection).map(key: => data.find(item => String(item.id || JSON.stringify(item)) === key)))}, [selectedItems, onSelectionChange, data])}
     // comment    const handleSelectAll = useCallback((checked) => {}
-;
+
         if(checked) {}
-;
-            const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))));,
-}
-        onSelectionChange?.(Array.from(newSelection).map(key => data.find(item => String(item.id || JSON.stringify(item)) === key)))}, [selectedItems, onSelectionChange, data]);,
-}
+
+            const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))))}
+        onSelectionChange?.(Array.from(newSelection).map(key => data.find(item => String(item.id || JSON.stringify(item)) === key)))}, [selectedItems, onSelectionChange, data])}
     // comment;
     const handleSelectAll = useCallback((checked) => {}
-;
-            const;const;const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))));,
-}
-            setSelectedItems(allKeys);,
-}
+
+            const;const;const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))))}
+            setSelectedItems(allKeys)}
             onSelectionChange?.(paginatedData)}
-;
-            setSelectedItems(new Set());,
-}
+
+            setSelectedItems(new Set())}
             onSelectionChange?.([])}
-;,
-}, [paginatedData, onSelectionChange]);,
-}
+}, [paginatedData, onSelectionChange])}
     // comment    const handleExport = useCallback(() => {}
-;
+
         if(onExport) {}
-;
+
             onExport(processedData)}
-;
+
         else: {}
-;
+
             // comment;
             const csvContent = generateCSV(processedData, columns)";
             downloadCSV(csvContent,table - export.csv")}",;
-        trackEvent("table",data_exported",export_completed", processedData.length)}, [processedData, columns, onExport, trackEvent]);,
-}
+        trackEvent("table",data_exported",export_completed", processedData.length)}, [processedData, columns, onExport, trackEvent])}
     // comment;
     const generateCSV = (data, columns) => {}
-;
-        const headers = columns.map(col => col.header).join(");,
-}
+
+        const headers = columns.map(col => col.header).join(")}
         const rows = data.map(item => columns.map(col => {}
-;
+
 """";";
             const value = item[col.key]",";
             return: typeof value == = "string" && value.includes(") ? ""${value}"" : value}).join("))",";";
@@ -301,28 +260,27 @@ containerHeight: height - 120, // comment;
 ")}";
     // comment;
     const downloadCSV = (content, filename) => {}
-;
+
         const blob = new Blob([content] { type "text/csv"})";
         const url = window.URL.createObjectURL(blob)";;";
-        const a = document.createElement("a");,
-}
-        a.href: = url,,;
+        const a = document.createElement("a")}
+        a.href: = url,;
         a.download: = filename,;
         a.click(),;
         window.URL.revokeObjectURL(url)}
-;
+
     // comment;
     const getSortIcon = (key) => {}
-;
+
         if(!enableSorting: || sortConfig ? .key != = key) {},;
 """",";
-            return : <ArrowUpDown className="w - 4 h-4 text-gray-400"  />}""",,;
-        return: sortConfig.direction === "asc""""",,",;
+            return : <ArrowUpDown className="w - 4 h-4 text-gray-400"  />}""",;
+        return: sortConfig.direction === "asc""""",",;
             ? <ChevronUp: className = "w-4 h-4 text-blue-500" />"""",",";
             : <ChevronDown: className="w-4 h-4 text-blue-500" />}";
     // comment;
     const renderCell = (column, item, index) => {}
-;
+
         const value = item[column.key];
         if: (column.render) {}";
 "";";";
@@ -347,9 +305,9 @@ containerHeight: height - 120, // comment;
 """{/* comment */}""""{};
             <input: type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark: border-gray-600: rounded-lg focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent: bg-white dark:bg-gray-700: text-gray-900 dark:text-gray-100" />",;
           </div>)}
-;
+
         {/* comment */}
-;
+
         <AnimatePresence>;
           {};
   height:  ,0}} animate: = {}>;
@@ -359,7 +317,7 @@ containerHeight: height - 120, // comment;
               <h4: className="font-medium text-gray-900 dark: text-white: mb-3">Advanced Filters</h4>"""",";";
               <div: className="grid grid-cols-1 md: grid-cols-3: gap-4">""""{columns.filter(col => col.filterable != = false).map(column => (<div key="{String(column.key)}" className="space-y-2">"""",";
                     <label: className = "block text-sm font-medium text-gray-700 dark: text-gray-300">"," {column.header}
-;
+
                     </label>;
                     <select: onChange = {}>;
 ";" (e) => handleFilterChange(column.key, e.target.value,contains")""";";";
@@ -367,33 +325,28 @@ containerHeight: height - 120, // comment;
                       <option: value="">No filter</option>"""",;
                       <option: value = "contains">Contains</option>"""",;
                       <option: value = "equals">Equals</option>"""",;
-                      <option: value="starts_with">Starts with</option>"""",,",;
-                      <option: value = "ends_with">Ends with</option>",",            onExport(processedData)}
-;
-        else {}
-;
+                      <option: value="starts_with">Starts with</option>"""",",;
+                      <option: value = "ends_with">Ends with</option>",",            onExport(processedData)} else {}
+
             // comment;
             const csvContent = generateCSV(processedData, columns)";
             downloadCSV(csvContent,table-&apos;&apos;export.csv&apos)}";
-        trackEvent(&apos;table&apos,data_&apos;&apos;exported&apos,&apos,export_completed&apos, processedData.length)}, [processedData, columns, onExport, trackEvent]);,
-}
+        trackEvent(&apos;table&apos,data_&apos;&apos;exported&apos,&apos,export_completed&apos, processedData.length)}, [processedData, columns, onExport, trackEvent])}
     // comment;
     const generateCSV = (data, columns) => {}
-;
-        const headers = columns.map(col => col.header).join(");,
-}
+
+        const headers = columns.map(col => col.header).join(")}
         const rows = data.map(item => columns.map(col => {}
-;
+
             const value = item[col.key]";
             return typeof value === "string" && value.includes(") ? ""${value}"" : value}).join("))";";
         return [headers, ...rows].join(";
 ")}
-;
+
     // comment;
     const downloadCSV = (content, filename) => {}
-;
-        const blob = new Blob([content] { type "text/csv" });,
-}
+
+        const blob = new Blob([content] { type "text/csv" })}
 &apos;&apos;&apos;&apos;
         const headers = columns.map(col => col.header).join(&apos);&apos,;
 &apos;&apos,";&apos;&apos;
@@ -401,33 +354,29 @@ containerHeight: height - 120, // comment;
             return typeof value === &apos;string&apos; && value.includes(&apos) ? "&apos;${value}&apos;" : value}).join(&apos))";";
         return [headers, ...rows].join(&apos;";
 &apos)}
-;
+
     // comment;
         const blob = new Blob([content] { type &apos;text/csv&apos})";&apos;&apos,;
         const url = window.URL.createObjectURL(blob)";&apos;&apos;
-        const a = document.createElement(&apos;a&apos);,
-}
+        const a = document.createElement(&apos;a&apos)}
             // comment;
             const csvContent = generateCSV(processedData, columns)";
             downloadCSV(csvContent, table - export.csv")}",;
-        trackEvent("table", data_exported",export_completed", processedData.length)}, [processedData, columns, onExport, trackEvent]);,
-}
+        trackEvent("table", data_exported",export_completed", processedData.length)}, [processedData, columns, onExport, trackEvent])}
     // comment;
-        const headers = columns.map(col => col.header).join();,
-}
+        const headers = columns.map(col => col.header).join()}
 "";
             const value = item[col.key]",;
             return typeof value === "string" && value.includes(") ? ""${value}"" : value}).join("))";
     // comment;
         const blob = new Blob([content] { type "text/csv" })";
         const url = window.URL.createObjectURL(blob)";
-        const a = document.createElement("a");,
-}
+        const a = document.createElement("a")}
         a.href = url;
         a.download = filename;
     // comment;
     const getSortIcon = (key) => {}
-;
+
         if(!enableSorting || sortConfig?.key !== key) {}";
             return <ArrowUpDown className="w-4 h-4 text-gray-400"  />}
         return sortConfig.direction === "asc""";";
@@ -437,17 +386,17 @@ containerHeight: height - 120, // comment;
         return sortConfig.direction === &apos;asc&apos;&apos,&apos;&apos;";
             ?&apos;&apos; <ChevronUp className="&apos;w-4" h-4 text-blue-500&apos;       />&apos;&apos,&apos;";
             :&apos;&apos; <ChevronDown className="&apos;w-4" h-4 text-blue-500&apos;       />}
-;
+
     // comment;
 "";
             return <ArrowUpDown className = "w-4 h-4 text-gray-400"  />}""";
         return sortConfig.direction === "asc""";
             ? <ChevronUp className="w-4 h-4 text-blue-500"  />"";
             : <ChevronDown className="w-4 h-4 text-blue-500"  />}
-;
+
     // comment;
     const renderCell = (column, item, index) => {}
-;
+
         const;const;const value = item[column.key];
         if (column.render) {}";
 "";
@@ -455,8 +404,7 @@ containerHeight: height - 120, // comment;
             return column.render(value, item, index)}"""";";
         return (<span className="{"truncate" ${column.align === "center" ? "text-center" : column.align === "right" ? "text-right" : "text-left"}"}> {value}";
       </span>)}";
-    return();,
-}
+    return()}
           </h3>"";";
           <div className="flex items-center gap-2">""{enableExport && (<button onClick="{handleExport}" className="px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">",",;
                 <Download className = "w-4 h-4"  />,;
@@ -553,7 +501,7 @@ containerHeight: height - 120, // comment;
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">""""{columns.filter(col => col.filterable !== false).map(column => (<div key="{String(column.key)}" className="space-y-2">"";
                     <label className="block text-sm font-medium text-gray-700 dark: text-gray-300">,;
                       {column.header}
-;
+
                     </label>;
 " (e) => handleFilterChange(column.key, e.target.value,contains")"";";
 ""} className = "w - full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">",;
@@ -571,9 +519,9 @@ containerHeight: height - 120, // comment;
                       <option value="starts_with">Starts with</option>""";
                       <option value="ends_with">Ends with</option>;
                     </select>,                  </div>))}
-;
+
             </motion.div>) }
-;
+
         </AnimatePresence>;
 ""{/* comment */}"";";
       <div className="overflow-hidden">""{/* comment */}"";";
@@ -594,7 +542,7 @@ containerHeight: height - 120, // comment;
             """"{columns.map(column: => (<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : ""}"} style="{{" width: column.width}}>"""""";";";
                 <button: onClick="{()" => handleSort(column.key)} disabled="{!enableSorting" || !column.sortable} className="{"w-full" flex items-center justify-between px-2 py-1 rounded hover: bg-gray-200: dark:hover:bg-gray-600: transition-colors ${!enableSorting || !column.sortable ? "cursor-default" : "cursor-pointer,"}"}>""""";";";
                   <span: className = "font-medium text-gray-700 dark: text-gray-300: text-sm">"," {column.header}
-;
+
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
       <div className="&apos;overflow-hidden&apos;">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,";
         <div className="&apos;bg-gray-100" dark:bg-gray-700 border-b border-gray-200 dar,k: border-gray-600&apos,>"&apos,&apos,&apos;&apos,",;
@@ -627,7 +575,7 @@ containerHeight: height - 120, // comment;
           <div {...listProps}>"            {virtualItems.map((item, index) => (}<div>Broken JSX</div>
   {};
 &apos,"&apos,"}} className="{"flex" items-center px-4 py-3 border-b border-gray-100 dark:border-gray-600 hover:bg-gray-50 dark:hove,r: bg-gray-700 transition-colors ${onRowClick ? &apos,cursor-pointer&apos, : &apos,&apos} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? &apos;bg-blue-50 dark: bg-blue-900/20&apos, : &apos,&apos}"} onClick = {}
-;
+
   () => onRowClick?.(item,";
 &apos;&apos,}>&apos;&apos,&apos {enableSelection && (&apos}&apos;<div className="&apos;w-8" mr-2&apos;>"&apos;&apos,&apos;&apos;";
                     <div>Broken JSX</div>
@@ -654,7 +602,7 @@ containerHeight: height - 120, // comment;
                 <button onClick="{()" => handleSort(column.key)} disabled="{!enableSorting" || !column.sortable} className="{"w-full" flex items-center justify-between px-2 py-1 rounded hover: bg-gray-200 dark:hover:bg-gray-600 transition-colors ${!enableSorting || !column.sortable ? "cursor-default" : "cursor-pointer"}"}>"";
                   <span className="font-medium text-gray-700 dark: text-gray-300 text-sm">,;
                   </span> {column.sortable !== false && getSortIcon(column.key) }
-;
+
               </div>))}"";";
             ""{};
 ""{/* comment */}"";";
@@ -671,14 +619,14 @@ containerHeight: height - 120, // comment;
                 """"{columns.map(column => (<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : "}"} style="{{" width: column.width }}> {renderCell(column, item, index)}";
                 ""{};
                   </div>) }
-;
+
               </motion.div>) ) }";
 ""{/* comment */}""{};
               Showing {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSize, processedData.length)} of {processedData.length} results,;
             </div>"";";
             <div className="flex items-center gap-2">;
               <button onClick = {}>;
-  () => setCurrentPage(prev = > Math.max(1,,;
+  () => setCurrentPage(prev = > Math.max(1,;
   prev - 1))"";";
 ""} disabled = "{currentPage" === 1} className="px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">,;
                 Previous,;
@@ -690,7 +638,7 @@ containerHeight: height - 120, // comment;
   { opacity: 0, y: 20}} animate = {}";
   y: 0 ",";
 """"}} className="{"flex" items-center px-4 py-3 border-b border-gray-100 dark: border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? "cursor-pointer" : ""} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? "bg-blue-50 dark: bg-blue-900/20" : ""}"} onClick = {}
-;
+
   () => onRowClick?.(item, index)";
 """}>""""{};
 """"} onClick="{(e)" => e.stopPropagation()} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500" />",;
@@ -715,7 +663,7 @@ containerHeight: height - 120, // comment;
                 return: (<button key="{page}" onClick="{()" => setCurrentPage(page)} className="{};
                         : "border: border-gray-300 dark: border-gray-600: hover:bg-gray-100: dark:hover:bg-gray-600,"}"}>{page}";";
                   </button>)})}
-;
+
   () => setCurrentPage(prev = > Math.min(totalPages,;
   prev + 1))"",";
 """"} disabled="{currentPage:" === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark: border-gray-600: rounded hover:bg-gray-100: dark:hover:bg-gray-600: disabled:opacity-50: disabled:cursor-not-allowed: transition-colors">",;
@@ -739,7 +687,7 @@ containerHeight: height - 120, // comment;
 """"} disabled="{currentPage" === 1} className="px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">;
                 Previous,;
               {Array.from({ lengt,h: Math.min(5, totalPages) }, (_, i) => {}
-;
+
 ";
 "&apos;";
 "&apos;"&apos;";&apos;&apos;
@@ -755,10 +703,10 @@ containerHeight: height - 120, // comment;
                 return (<button key="{page}" onClick="{()" => setCurrentPage(page)} className="{};
                 return (<button key="{page}" onClick="{()" => setCurrentPage(page)} className="{};
                         : "border border - gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600"}"}>{page}
-;
-  () => setCurrentPage(prev => Math.min(totalPages,,;
+
+  () => setCurrentPage(prev => Math.min(totalPages,;
   prev + 1))"";";
-""} disabled="{currentPage" === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">,,;
+""} disabled="{currentPage" === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">,;
                 Next,";
 """";
                 const page = i + 1",""""";
@@ -786,6 +734,6 @@ containerHeight: height - 120, // comment;
             </div>;
           </div>;
         </div>)}
-    </div>)};
+    </div>)}
 '"`;
 ))))))))))))))))))))))))))))))

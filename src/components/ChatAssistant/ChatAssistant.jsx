@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import { AuthContext } from "../../context/auth/AuthContext";
-;
-;
-;
+
+
+
 import { ChatInput } from "./ChatInput.jsx";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";import { X import { focusManagement } from '@/utils/accessibility';
@@ -43,7 +43,7 @@ export {};
     const currentMessages = isGuest ? displayGuestMessages : loggedInMessages;
     const setCurrentMessages = (valueOrFn) => {};
             setLoggedInMessages(newMessages)}
-    };
+    }
     const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000);
     useEffect(() => {};
 }, []);
@@ -84,7 +84,7 @@ export {};
             return;
         const handleKey = (e) => {};
                 handleModalCancel()}
-        };
+        }
         const removeTrap = guestModalRef.current ? focusManagement.trapFocus(guestModalRef.current) : null;
         document.addEventListener('keydown', handleKey);
         return () => {};
@@ -95,7 +95,7 @@ export {};
             return;
         const handleKeyDown = (e) => {};
                 onClose()}
-        };
+        }
         document.addEventListener('keydown', handleKeyDown);
         return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, onClose]);
     if(!isOpen);
@@ -127,7 +127,7 @@ export {};
         {};
             {contextHeader}
           </div>)}
-;
+
         {/* Messages */}";
         <div className="flex-1 overflow-y-auto p-4 space-y-4" aria-live="polite">";
           {};
@@ -137,15 +137,11 @@ export {};
         </div>;
 
         {/* Input */}";
-            {contextHeader}"});,"});,
-}
-          </div>)}});,
-}
+            {contextHeader}"});,"})}
+          </div>)}})}
   })";
-"";";,
-});,"})";
-        {/* comment */}"";,"});,
-}
+"";"});,"})";
+        {/* comment */}"";,"})}
   })";
         <div className="flex-1" overflow-y-auto p-4 space-y-4" aria-live="polite>"";";,
 });,"})";
@@ -155,21 +151,14 @@ export {};
 }
   })";
             </div>) : (currentMessages.map((msg) => (<ChatMessage key="{msg.id}" role="{msg.role}" message="{msg.message}/">)))}});,"})";
-          <div ref="{messagesEndRef}/">;,"});,
-}
-  });,
-}
-        </div>;";,
-});,"})";
+          <div ref="{messagesEndRef}/">;,"})}
+  })}
+        </div>;"});,"})";
 ";,"});,"})";
         {/* comment */}
-  });,
-}
+  })}
   })";
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">;,
-});,
-}
+        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">})}
   })";
-          <ChatInput onSend="{handleSendMessage}/">);,
-}
+          <ChatInput onSend="{handleSendMessage}/">)}
 "export default ComponentName;"

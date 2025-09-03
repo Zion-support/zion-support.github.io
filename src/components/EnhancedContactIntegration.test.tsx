@@ -9,7 +9,5 @@ describe(&apos;EnhancedContactIntegration&apos, () => {};
 }
     // comment;
     render(<EnhancedContactIntegration / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

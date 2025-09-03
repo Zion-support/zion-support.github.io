@@ -1,16 +1,15 @@
 import React from "react";
-interface StructuredDataProps {;
-;
+interface StructuredDataProps {
+
   data: any}
-;
-export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {;
+
+export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {
   return (";
     <script";
       type = "application/ld+json;
       dangerouslySetInnerHTML="{{" __html: JSON.stringify(data) }}>;
    />;
-  );,
-}
+  )}
 export const OrganizationSchema = () => {";
   const organizationData = {},";
     contactPoint: {",;
@@ -28,21 +27,19 @@ export const OrganizationSchema = () => {";
       "https:// comment;
     "foundingDate": "2020",";
     "numberOfEmployees": "50-100",";
-    "industry": "Technology Services";,
-}";
+    "industry": "Technology Services"}";
     foundingDate: "2020",";
     numberOfEmployees: "50-100",";
     industry: "Technology Services"}
-;
+
 ";
   return <StructuredData data="{organizationData}"  />;
 
-;
+
 export const WebSiteSchema = () => {";
   const websiteData = {}",";
       "query-input": "required name=search_term_string";
 
-;,
 }";
     "@context": "https:// comment;
     "@type": "WebSite",";
@@ -63,7 +60,7 @@ export const WebSiteSchema = () => {";
 ";
   return <StructuredData data="{websiteData}"  />;
 
-;
+
 export const ServiceSchema = () => {";
   const serviceData = {},";
     serviceType: "Artificial Intelligence",";
@@ -77,12 +74,12 @@ export const ServiceSchema = () => {";
           itemOffered: {",;
             "@type": "Service",";
             name: "Content Creation"}},";
-        {;
+        {
           "@type": "Offer",";
           itemOffered: {",;
             "@type": "Service",";
             name: "Email Automation"}},";
-        {;
+        {
           "@type": "Offer",";
           itemOffered: {",;
             "@type": "Service",";
@@ -93,26 +90,23 @@ export const ServiceSchema = () => {";
             "@type": "Service",";
             "name": "Business Intelligence";
 
-;,
 }
-;
+
       ];
 
-;,
 }
-;
+
 ";
-  return <StructuredData data="{serviceData}"  />;,
-}";
-        {;
+  return <StructuredData data="{serviceData}"  />}";
+        {
           "@type": "Offer",";
           itemOffered: {",;
             "@type": "Service",";
             name: "Business Intelligence"}}]}}
-;
+
 ";
   return <StructuredData data="{serviceData}"  />;
 
-;
+
 ";
 export default Component

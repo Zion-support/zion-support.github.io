@@ -1,11 +1,10 @@
 import Head from "next/head";
 import React, { useState } from "react";
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
+const Head = dynamic(() => import("next/head"), { ssr: false })}
   Mail,;
   MapPin} from "lucide-react";
-export default function RequestQuote() {;
-;
+export default function RequestQuote() {
+
   const [formData, setFormData] = useState({";
     name: ",";
     email: ",";
@@ -16,29 +15,22 @@ export default function RequestQuote() {;
     timeline: ",";
     budget: ",";
     description: ",";
-    requirements: ""});,
-}
-  const [isSubmitting, setIsSubmitting] = useState(false);,
-}
-  const [isSubmitted, setIsSubmitted] = useState(false);,
-}
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,,;
+    requirements: ""})}
+  const [isSubmitting, setIsSubmitting] = useState(false)}
+  const [isSubmitted, setIsSubmitted] = useState(false)}
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,;
     const { name, value } = e.target;
     setFormData(prev = > ({;
       ...prev,;
-      [name]: value}));,
-}
+      [name]: value}))}
   const handleSubmit = async (e: React.FormEvent) => {,;
     e.preventDefault(),;
     setIsSubmitting(true),;
     // comment;
-await new Promise(resolve => setTimeout(resolve, 2000));,
-}
-    setIsSubmitting(false);,
-}
-    setIsSubmitted(true);,
-}
-;
+await new Promise(resolve => setTimeout(resolve, 2000))}
+    setIsSubmitting(false)}
+    setIsSubmitted(true)}
+
   const serviceTypes = [];
 
   const projectSizes = [];
@@ -47,7 +39,7 @@ await new Promise(resolve => setTimeout(resolve, 2000));,
 
   const benefits = [];
 
-  if (isSubmitted) {;
+  if (isSubmitted) {
     return (;
       <>;
 <Head>;
@@ -101,7 +93,7 @@ initial="{{" scale: 0 }}";
         </div>;
       </>;
     )}
-;
+
   return (;
     <>;
 <Head>;
@@ -142,15 +134,15 @@ key="{index}
                   </div>";
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">;
                     {benefit.title}
-;
+
                   </h3>";
                   <p className="text-gray-600">;
                     {benefit.description}
-;
+
                   </p>;
                 </motion.div>;
               ))}
-;
+
             </div>;
         {/* comment */}";
         <div className="py-16">";
@@ -236,10 +228,10 @@ value="{formData.serviceType}
                       {serviceTypes.map((service) => (",;
                         <option key="{service}" value="{service}">;
                           {service}
-;
+
                         </option>;
                       ))}
-;
+
                     </select>;
                   </div>;
                   <div>";
@@ -255,10 +247,10 @@ value="{formData.serviceType}
                       {projectSizes.map((size) => (",;
                         <option key="{size}" value="{size}">;
                           {size}
-;
+
                         </option>;
                       ))}
-;
+
                     </select>;
                   </div>;
 ";
@@ -276,10 +268,10 @@ value="{formData.serviceType}
                       {timelines.map((time) => (",;
                         <option key="{time}" value="{time}">;
                           {time}
-;
+
                         </option>;
                       ))}
-;
+
                     </select>;
                   </div>;
                   <div>";
@@ -335,7 +327,7 @@ rows="{4}
                         <ArrowRight className="ml-2 w-5 h-5"  />;
                       </>;
                     )}
-;
+
                   </button>;
                 </div>;
               </form>;

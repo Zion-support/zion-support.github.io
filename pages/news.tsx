@@ -11,8 +11,6 @@ const NewsPage = () => {};
         <p className="text-gray-600">Stay tuned for company announcements, product updates, and industry insights.</p>;
       </main>;
     </>;
-  );,
-};
-;
+  )}
 export default NewsPage;
-;
+

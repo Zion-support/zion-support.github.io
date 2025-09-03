@@ -39,8 +39,7 @@ function LoginForm() {}
             if(error) {}
 ";
 "";
-                form.setError("root", { message: error })}
-            else {}
+                form.setError("root", { message: error })} else {}
 ";
 "";
                 router("/")}
@@ -93,19 +92,15 @@ function LoginForm() {}
         </Button>;
       </form>;
       <LoadingOverlay visible={isLoading || isSubmitting}/>;
-    </Form>)};
-export { LoginForm };
+    </Form>)}
+export { LoginForm }
 export default LoginForm;
-;
+
 export default LoginForm;
 export default LoginForm;
-;
-export { LoginForm };
-;
-export { LoginForm };
-;
-export { LoginForm };
-;
-export { LoginForm };
-;
-export { LoginForm };
+
+export { LoginForm }
+export { LoginForm }
+export { LoginForm }
+export { LoginForm }
+export { LoginForm }

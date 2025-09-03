@@ -2,21 +2,20 @@ import React, { useState } from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Code, Key, Book, Download, Play, Copy, Check } from 'lucide-react';
-;
-const API: NextPage = () => {;
+
+const API: NextPage = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
-;
+
   const apiEndpoints = [;
-    {;
+    {
       method: 'GET',;
       endpoint: '/api/v1/users',;
       description: 'Retrieve user information',;
       parameters: [;
         { name: 'id', type: 'string', required: true, description: 'User ID' },;
         { name: 'include', type: 'string', required: false, description: 'Additional data to include' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       method: 'POST',;
       endpoint: '/api/v1/users',;
       description: 'Create a new user',;
@@ -24,9 +23,8 @@ const API: NextPage = () => {;
         { name: 'name', type: 'string', required: true, description: 'User name' },;
         { name: 'email', type: 'string', required: true, description: 'User email' },;
         { name: 'role', type: 'string', required: false, description: 'User role' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       method: 'PUT',;
       endpoint: '/api/v1/users/{id}',;
       description: 'Update user information',;
@@ -34,65 +32,55 @@ const API: NextPage = () => {;
         { name: 'id', type: 'string', required: true, description: 'User ID' },;
         { name: 'name', type: 'string', required: false, description: 'Updated name' },;
         { name: 'email', type: 'string', required: false, description: 'Updated email' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       method: 'DELETE',;
       endpoint: '/api/v1/users/{id}',;
       description: 'Delete a user',;
       parameters: [;
         { name: 'id', type: 'string', required: true, description: 'User ID' }
-      ];,
-}
+      ]}
   ];
-;
+
   const codeExamples = [;
-    {;
+    {
       language: 'JavaScript',;
-      code: `const response = await fetch('https://api.ziontechgroup.com/v1/users', {;
+      code: `const response = await fetch('https://api.ziontechgroup.com/v1/users', {
   method: 'GET',;
-  headers: {;
+  headers: {
     'Authorization': 'Bearer YOUR_API_KEY',;
-    'Content-Type': 'application/json';,
-}
+    'Content-Type': 'application/json'}
 });
-;
+
 const data = await response.json();
-console.log(data);`;,
-},;
-    {;
+console.log(data);`},;
+    {
       language: 'Python',;
       code: `import requests;
 
-headers = {;
+headers = {
     'Authorization': 'Bearer YOUR_API_KEY',;
-    'Content-Type': 'application/json';,
-}
-;
+    'Content-Type': 'application/json'}
+
 response = requests.get('https://api.ziontechgroup.com/v1/users', headers=headers);
 data = response.json();
-print(data)`;,
-},;
-    {;
+print(data)`},;
+    {
       language: 'cURL',;
       code: `curl -X GET "https://api.ziontechgroup.com/v1/users" \\;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
-  -H "Content-Type: application/json"`;,
-}
+  -H "Content-Type: application/json"`}
   ];
-;
-  const copyToClipboard = async (code: string, language: string) => {;
-    try {;
+
+  const copyToClipboard = async (code: string, language: string) => {
+    try {
       await navigator.clipboard.writeText(code);
       setCopiedCode(language);
-      setTimeout(() => setCopiedCode(null), 2000);,
-} catch (err) {;
-      console.error('Failed to copy code:', err);,
-}
-  };
-;
-  const getMethodColor = (method: string) => {;
-    switch (method) {;
+      setTimeout(() => setCopiedCode(null), 2000)} catch (err) {
+      console.error('Failed to copy code:', err)}
+  }
+  const getMethodColor = (method: string) => {
+    switch (method) {
       case 'GET':;
         return 'bg-green-100 text-green-800';
       case 'POST':;
@@ -102,10 +90,8 @@ print(data)`;,
       case 'DELETE':;
         return 'bg-red-100 text-red-800';
       default:;
-        return 'bg-gray-100 text-gray-800';,
-}
-  };
-;
+        return 'bg-gray-100 text-gray-800'}
+  }
   return (;
     <MainLayout;
       title="API Reference - Zion Tech Group";
@@ -194,8 +180,7 @@ print(data)`;,
                                   <td className="py-2 text-gray-600">{param.type}</td>;
                                   <td className="py-2">;
                                     <span className={`px-2 py-1 rounded-full text-xs ${;
-                                      param.required ? 'bg-red-100 text-red-800' : 'bg-gray-100 text-gray-800';,
-}`}>;
+                                      param.required ? 'bg-red-100 text-red-800' : 'bg-gray-100 text-gray-800'}`}>;
                                       {param.required ? 'Required' : 'Optional'}
                                     </span>;
                                   </td>;
@@ -310,7 +295,5 @@ print(data)`;,
         </section>;
       </div>;
     </MainLayout>;
-  );,
-};
-;
+  )}
 export default API;

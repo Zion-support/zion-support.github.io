@@ -34,7 +34,7 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {};
           <div>Broken JSX</div>
           />;
         );
-;
+
       case 'themed':;
         return (";
           <div className="relative">;
@@ -72,11 +72,11 @@ export default function EnhancedLoadingSpinner({};
       >;
         {/* Outer ring */}
         <div className={`${sizeClasses[size]} border-4 border-blue-200 rounded-full`} />;
-        ;
+
         {/* Inner spinning ring */}
         <div>Broken JSX</div>
         />;
-        ;
+
         {/* Center dot */}
         <div>Broken JSX</div>
         >;
@@ -94,22 +94,20 @@ export default function EnhancedLoadingSpinner() {};
 ';
   sm: 'text-sm',';
     md: 'text-base',;
-  lg: 'text-lg';,
-};
-;
+  lg: 'text-lg'}
   const sizeClasses = {}"}>;
       <div>Broken JSX</div>
       >;
         {/* comment */}";
         <div className="{"${sizeClasses[size]}" border-4 border-blue-200 rounded-full"}       />;
-        ;
+
         {/* comment */}";
           className="{"${sizeClasses[size]}" border-4 border-transparent border-t-blue-600 rounded-full absolute inset-0"}";
           animate="{{" rotate: -360 }}";
           transition="{{" duration: 0.8, repeat: Infinity, ease: "linear" }}
-;
+
        />;
-        ;
+
         {/* comment */}";
           className="absolute inset-0 flex items-center justify-center;
           animate="{{" scale: [1, 1.2, 1] }}";
@@ -119,9 +117,9 @@ export default function EnhancedLoadingSpinner() {};
         className="{"text-gray-600" font-medium ${textSizes[size]}"}";
         animate="{{" opacity: [0.5, 1, 0.5] }}";
         transition="{{" duration: 2, repeat: Infinity, ease: "easeInOut"} }}
-;
+
         {text}
-;
+
       {/* comment */}";
       <div className="flex space-x-1">;
         {};
@@ -131,19 +129,17 @@ export default function EnhancedLoadingSpinner() {};
 }}";
             transition="{};
         ))}
-;
+
       </div>;
-  );,
-}
+  )}
           className="absolute inset-0 flex items-center justify-center""          animate="{{" scale: [1, 1.2, 1] }}"          transition="{{" duration: 1.5, repeat: Infinity, ease: "easeInOut" }}">"          <div className="w-2 h-2 bg-blue-600 rounded-full"  />"        </motion.div>"      </motion.div>;
-      ;
+
 ";
 ,"});,"})","});,"})";
 interface EnhancedLoadingSpinnerProps {"});,"})";
   size?: "sm" | "md" | "lg";,"});,"})";
   text?: string,"});,"})";
-  className?: string,"});,"});";,
-}"});,"})";
+  className?: string,"});,"});"}"});,"})";
 ;,"});,"})";
 export default function EnhancedLoadingSpinner({"});,"})";
   size = "md",,"});,"})";
@@ -155,8 +151,7 @@ export default function EnhancedLoadingSpinner({"});,"})";
     lg: "w-16 h-16","});,"})";
   const textSizes = {});,"})";
     md: "text-base","});,"})";
-    lg: "text-lg","});,"});,
-}
+    lg: "text-lg","});,"})}
   return (";
     <div className="{"flex" flex-col items-center justify-center space-y-4 ${className}"}>;,"});,"})";
       <div>Broken JSX</div>
@@ -183,9 +178,8 @@ export default function EnhancedLoadingSpinner({"});,"})";
         {[0, 1, 2].map((i) => (;,"});,"})";
             key={i}"});,"})";
             className="w-2 h-2 bg-blue-600 rounded-full";,"});,"})";
-            animate="{{" scale: [1, 1.5, 1],,"});,"})";
-              opacity: [0.5, 1, 0.5],"});,"});";,
-}}"});,"})";
+            animate="{{" scale: [1, 1.5, 1],"});,"})";
+              opacity: [0.5, 1, 0.5],"});,"});"}}"});,"})";
             transition="{{" duration: 1.5,"});,"})";
               repeat: Infinity,"});,"})";
               delay: i * 0.2,"});,"})";
@@ -200,12 +194,12 @@ export default function EnhancedLoadingSpinner({"});,"})";
   className = ""}: EnhancedLoadingSpinnerProps) {};
   const sizeClasses = {}";
   const textSizes = {}
-;
+
   return (";
     <div className="{"flex" flex-col items-center justify-center space-y-4 ${className}"}>";
         animate="{{" rotate: 360  }}";
         transition="{{" duration: 1, repeat: Infinity, ease: "linear" }}
-;
+
       > {/* comment */};";
   text: = "Loading...",";";
   className: = ""}: EnhancedLoadingSpinnerProps) {};
@@ -226,7 +220,7 @@ export default function EnhancedLoadingSpinner({"});,"})";
         className="{"text-gray-600" font-medium ${textSizes[size]}"}";";
         animate = "{{" opacity: [0.,5, 1, 0.5] }}";
         transition="{{" duration:  ,2, repeat: Infinit,y, ease: "easeInOut"}}">{text}
-;
+
       {/* comment */}";
       <div className="flex space - x-1">", {};
               ease: "easeInOut,"}}";";";
@@ -250,7 +244,7 @@ export default function EnhancedLoadingSpinner({""}";
 ";
   const textSizes = {}: EnhancedLoadingSpinnerProps) {};
   const textSizes = {}
-;
+
   return (";
     <div className="{"flex" flex-col items-center justify-center space-y-4 ${className}"}">";
       <div>Broken JSX</div>
@@ -258,7 +252,7 @@ export default function EnhancedLoadingSpinner({""}";
       >{/* comment */}";
         <div className="{"${sizeClasses[size]}" border-4 border-blue-200 rounded-full"}       /> {/* comment */}";
         transition="{{" duration: 1, repeat: Infinity, ease: &apos,linear&apos}}
-;
+
       >{/* comment */}&apos;";
         animate = "{{" rotate: 360  }}";
         transition="{{" duration: 1, repeat: Infinity, ease: "linear" }}">";
@@ -267,17 +261,17 @@ export default function EnhancedLoadingSpinner({""}";
           animate="{{" rotate: -360    }}";
           animate="{{" rotate: -360  }}";
           transition="{{" duration: 0.8, repeat: Infinity, ease: "linear" }}
-;
+
        />{/* comment */}";
           className="absolute inset-0 flex items-center justify-center";";
           transition = "{{" duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-;
+
         >;";
           <div className="w-2 h-2 bg-blue-600 rounded-full"  />;
         </motion.div>;
       </motion.div> {/* comment */}";
           transition = "{{" duration: 0.8, repeat: Infinity, ease: &apos,linear&apos}}
-;
+
        />{/* comment */}&apos;
         <div>Broken JSX</div>
           transition = "{{" duration: 1.5, repeat: Infinity, ease: &apos,easeInOut&apos}}>;
@@ -289,25 +283,25 @@ export default function EnhancedLoadingSpinner({""}";
           transition="{{" duration: 1.5, repeat: Infinity, ease: "easeInOut" }}">;
           <div className="w-2 h-2 bg-blue-600 rounded-full" /">;
         transition="{{" duration: 2, repeat: Infinity, ease: "easeInOut" }}
-;
+
       </motion.div> {/* comment */}";
       <div className="flex space-x-1"> {};
               opacity: [0.5, 1, 0.5]}}";
             transition = "{};
 ease: "easeInOut"}}
-;
+
          />))}
-;
+
       </div>;";
         transition = "{{" duration: 2, repeat: Infinity, ease: &apos,easeInOut&apos}}
-;
+
       >{text}&apos;";
       <div className="&apos;flex" space-x-1&apos;>;
         {[0, 1, 2].map((i) => (&apos}";
             className="&apos;w-2" h-2 bg-blue-600 rounded-full";";
             animate = "{};
               ease: &apos,easeInOut&apos}}
-;
+
          />))}&apos;&apos;";
         animate = "{{" opacity: [0.5, 1, 0.5] }}";
         transition="{{" duration: 2, repeat: Infinity, ease: "easeInOut" }}">;

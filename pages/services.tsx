@@ -1284,7 +1284,7 @@ export default function Services() {};
 							Our pricing reflects the true value of cutting-edge technology solutions, with transparent costs and exceptional ROI.;
 						</p>;
 					</div>;
-					;
+
 					{/* Pricing Tiers */}
 					<div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16'>;
 						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300'>;
@@ -1389,7 +1389,7 @@ export default function Services() {};
 								We combine cutting-edge technology with proven expertise to deliver solutions that drive real business value.;
 							</p>;
 						</div>;
-						;
+
 						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
 							<div className='text-center'>;
 								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 mb-4'>;
@@ -1450,6 +1450,5 @@ export default function Services() {};
 			</section>;
 		</PageTransition>;
 		</Layout>;
-	);,
-}
-;
+	)}
+

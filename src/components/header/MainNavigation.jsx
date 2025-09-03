@@ -69,9 +69,9 @@ export default function Page() {};
         { name: "Documentation", href: "/docs" },;
         { name: "Training", href: "/training" },;
         { name: "Contact", href: "/contact" }
-;
+
       ]}
-;
+
 ";
   return (";
     <nav className="flex space-x-8">";
@@ -81,7 +81,7 @@ export default function Page() {};
               <button onClick="{()" => handleDropdownToggle(index)}
                 className="{};
     r: bg-zion-purple/10""}"}
-;
+
               >;
                 <span>{item.name}</span>;
                 <div>Broken JSX</div>
@@ -94,7 +94,7 @@ export default function Page() {};
 ;
   const handleDropdownToggle = (index) => {};
     setActiveDropdown(activeDropdown === index ? null : index)}
-;
+
 ";
   return (";
       {};
@@ -117,13 +117,13 @@ export default function Page() {};
               {};
                         onClick="{()" ="> setActiveDropdown(null)}";
                         {child.name}
-;
+
                       </Link>;
                     ))}
-;
+
                   </div>;
               )}
-;
+
           ) : (";
               to="{item.href}";
               className="{};
@@ -131,7 +131,7 @@ export default function Page() {};
             <div>Broken JSX</div>
 }"}">";
               {item.name}
-;
+
     </nav>";
   )} ("")"}
 "";

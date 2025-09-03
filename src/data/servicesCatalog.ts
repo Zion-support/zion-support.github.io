@@ -28,7 +28,7 @@ export {};
 export {};
   name: string;
   slug: string;
-  items: ServiceItem[]};
+  items: ServiceItem[]}
 ;export const servicesCatalog: ServiceCategory[] = [];
   {}
 ';

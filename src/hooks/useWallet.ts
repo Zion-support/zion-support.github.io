@@ -40,7 +40,7 @@ export function useWallet() {};
         .select('*');
         .eq('user_id', user.id);
         .order('created_at', { ascending: false });
-;
+
       if(supabaseError) throw supabaseError;
       setTransactions((data || []) as TokenTransaction[]);,
 } catch(err: unknown) {};
@@ -79,8 +79,7 @@ export function useWallet() {};
 } else {};
 }
     }
-    loadData();,
-}, [user?.id, fetchWallet, fetchTransactions]); // Added fetchWallet and fetchTransactions;
+    loadData()}, [user?.id, fetchWallet, fetchTransactions]); // Added fetchWallet and fetchTransactions;
 
   return {};
 };,

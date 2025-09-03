@@ -17,7 +17,7 @@ export default function EventsPage() {};
     {};
 }
   ];
-;
+
   const pastEvents = [;
     {};
 },;
@@ -26,9 +26,9 @@ export default function EventsPage() {};
     {};
 }
   ];
-;
+
   const eventCategories = ["All", "Webinar", "Workshop", "Conference", "Panel Discussion", "AI & Technology", "Cloud & Infrastructure", "Cybersecurity", "Digital Transformation", "AI Ethics", "Quantum Computing"];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark text-white">;
       {/* Hero Section */}
@@ -73,10 +73,10 @@ export default function EventsPage() {};
                       {event.category}
                     </span>;
                   </div>;
-                  ;
+
                   <h3 className="text-2xl font-bold text-white mb-3">{event.title}</h3>;
                   <p className="text-zion-slate-light mb-4">{event.description}</p>;
-                  ;
+
                   <div className="space-y-2 mb-4">;
                     <div className="flex items-center text-sm text-zion-slate-light">;
                       <Calendar className="w-4 h-4 mr-2" />;
@@ -95,7 +95,7 @@ export default function EventsPage() {};
                       {event.speaker}
                     </div>;
                   </div>;
-                  ;
+
                   <a href={event.registrationUrl} className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-center py-3 rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 flex items-center justify-center">;
                     <Calendar className="w-4 h-4 mr-2" />;
                     Register Now;
@@ -131,10 +131,10 @@ export default function EventsPage() {};
                       {event.category}
                     </span>;
                   </div>;
-                  ;
+
                   <h3 className="text-lg font-semibold text-white mb-3">{event.title}</h3>;
                   <p className="text-zion-slate-light text-sm mb-4">{event.description}</p>;
-                  ;
+
                   <div className="space-y-2 mb-4 text-sm text-zion-slate-light">;
                     <div className="flex items-center">;
                       <Calendar className="w-3 h-3 mr-2" />;
@@ -149,7 +149,7 @@ export default function EventsPage() {};
                       {event.attendees}
                     </div>;
                   </div>;
-                  ;
+
                   <a href={event.registrationUrl} className="w-full border border-zion-cyan text-zion-cyan text-center py-2 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 text-sm">;
                     Register;
                   </a>;
@@ -177,7 +177,7 @@ export default function EventsPage() {};
               <div key={index} className="bg-zion-blue-dark rounded-lg border border-zion-purple/30 overflow-hidden hover:border-zion-cyan/50 transition-all duration-300">;
                 <div className="p-6">;
                   <h3 className="text-xl font-semibold text-white mb-3">{event.title}</h3>;
-                  ;
+
                   <div className="space-y-2 mb-4 text-sm text-zion-slate-light">;
                     <div className="flex items-center">;
                       <Calendar className="w-4 h-4 mr-2" />;
@@ -188,7 +188,7 @@ export default function EventsPage() {};
                       {event.attendees}
                     </div>;
                   </div>;
-                  ;
+
                   <div className="mb-4">;
                     <h4 className="text-sm font-semibold text-white mb-2">Highlights:</h4>;
                     <ul className="space-y-1">;
@@ -200,7 +200,7 @@ export default function EventsPage() {};
                       ))}
                     </ul>;
                   </div>;
-                  ;
+
                   <a href={event.recordingUrl} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light text-sm font-medium transition-colors">;
                     <Video className="w-4 h-4 mr-2" />;
                     Watch Recording;
@@ -253,5 +253,4 @@ export default function EventsPage() {};
         </div>;
       </section>;
     </div>;
-  );,
-} ;
+  )}

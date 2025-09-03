@@ -22,17 +22,14 @@ export default function Page() {};
     const handleSubmit = async(values) => {};
 }) ;
             // Redirect back to the post;
-            router(`/community / post/${postId}`) ;,
-}
+            router(`/community / post/${postId}`) }
         catch(error) {}
             toast({}
 ";
 "";
                 title: "Error","";
                 description: "There was a problem updating your post","";
-                variant: "destructive";,
-})}";,
-};"";
+                variant: "destructive"})}"};"";
     return (<SEO title="Edit Post | Community Forum | Zion AI Marketplace" description="Edit your discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, edit post"/>";
         ,"";
             <div className="container py-8">"";
@@ -52,14 +49,10 @@ export default function Page() {};
 
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} isEditing={true}/>;
       </div>)}
-;
 
-export { EditPostPage };
-;
-export { EditPostPage };
-;
-export { EditPostPage };
-;
-export { EditPostPage };
-;
-export { EditPostPage };
+
+export { EditPostPage }
+export { EditPostPage }
+export { EditPostPage }
+export { EditPostPage }
+export { EditPostPage }

@@ -16,7 +16,7 @@ const AISolutions: React.FC = () => {};
     {};
 }
   ];
-;
+
   const industries = [;
     {};
 },;
@@ -31,7 +31,7 @@ const AISolutions: React.FC = () => {};
     {};
 }
   ];
-;
+
   const benefits = [;
     {};
 },;
@@ -42,7 +42,7 @@ const AISolutions: React.FC = () => {};
     {};
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50">;
       {/* Hero Section */}
@@ -103,8 +103,7 @@ const AISolutions: React.FC = () => {};
                     ))}
                   </ul>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -129,8 +128,7 @@ const AISolutions: React.FC = () => {};
                     {industry.description}
                   </p>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -160,8 +158,7 @@ const AISolutions: React.FC = () => {};
                     {benefit.description}
                   </p>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -189,7 +186,5 @@ const AISolutions: React.FC = () => {};
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default AISolutions;

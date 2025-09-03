@@ -58,15 +58,12 @@ export {};
 '';
 ''';
       setTxHash('0xabc123');
-      setStatus(`ZION$ arrived on ${toChain} in 12s`);,
-}, 1200);,
-};
+      setStatus(`ZION$ arrived on ${toChain} in 12s`)}, 1200)}
   const handleSuggest = () => {}
   return <div>Component</div>;
 };
     const chain = suggestChain(region.toLowerCase () , stake) ;
-    setSuggested(chain) ;,
-};
+    setSuggested(chain) }
   return (<div>;
       <Header />;
       <div className="min-h-screen bg-zion-blue pt-12 pb-20">"";
@@ -76,7 +73,7 @@ export {};
           {};
             <p className="text-white">Connected wallet: {address}</p>;
           )}
-;
+
           <Card>;
             <CardHeader>;
               <CardTitle>LayerZero Cross-Chain Bridge</CardTitle>";
@@ -157,14 +154,10 @@ export {};
       </div>;
       <Footer />;
     </div>)}
-;
 
-export { CHAINS, TokenIntegrations };
-;
-export { CHAINS, TokenIntegrations };
-;
-export { CHAINS, TokenIntegrations };
-;
-export { CHAINS, TokenIntegrations };
-;
-export { CHAINS, TokenIntegrations };
+
+export { CHAINS, TokenIntegrations }
+export { CHAINS, TokenIntegrations }
+export { CHAINS, TokenIntegrations }
+export { CHAINS, TokenIntegrations }
+export { CHAINS, TokenIntegrations }

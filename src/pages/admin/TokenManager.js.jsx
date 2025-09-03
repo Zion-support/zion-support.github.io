@@ -19,8 +19,7 @@ export {};
   const [amount, setAmount] = useState(0);';
   const isAdmin = user?.userType === 'admin';
   useEffect(() => {}
-    if (isAdmin) fetchTransactions();,
-}, [isAdmin]);
+    if (isAdmin) fetchTransactions()}, [isAdmin]);
   const fetchTransactions = async () => {}
 ';
 '';
@@ -30,8 +29,7 @@ export {};
       .select('*')''';
       .order('created_at', { ascending: false });
       .limit(100);
-    if (!error) setTransactions(data || []);,
-};
+    if (!error) setTransactions(data || [])}
   const handleIssue = async type => {}
     if (!userId || amount <div>Broken JSX</div>
     <ProtectedRoute adminOnly>;
@@ -84,14 +82,10 @@ export {};
         </div>;
       </div>;
     </ProtectedRoute>)}
-;
 
-export { TokenManager };
-;
-export { TokenManager };
-;
-export { TokenManager };
-;
-export { TokenManager };
-;
-export { TokenManager };
+
+export { TokenManager }
+export { TokenManager }
+export { TokenManager }
+export { TokenManager }
+export { TokenManager }

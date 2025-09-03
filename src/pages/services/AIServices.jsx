@@ -29,12 +29,10 @@ const AIServices = () => {}
 "";
                 starter: "$150/hour","";
                 professional: "$250/hour","";
-                enterprise: "$350/hour"";,
-},"";
+                enterprise: "$350/hour""},"";
             freeTrial: "1-hour consultation",;
             rating: 4.9,;
-            reviewCount: 156;,
-},;
+            reviewCount: 156},;
         {}
 "";
             id: "machine-learning","";
@@ -59,12 +57,10 @@ const AIServices = () => {}
 "";
                 starter: "$5,000 - $15,000","";
                 professional: "$15,000 - $50,000","";
-                enterprise: "$50,000 - $200,000"";,
-},"";
+                enterprise: "$50,000 - $200,000""},"";
             freeTrial: "Proof of concept",;
             rating: 4.8,;
-            reviewCount: 234;,
-},;
+            reviewCount: 234},;
         {}
 "";
             id: "natural-language-processing","";
@@ -89,12 +85,10 @@ const AIServices = () => {}
 "";
                 starter: "$8,000 - $25,000","";
                 professional: "$25,000 - $75,000","";
-                enterprise: "$75,000 - $250,000"";,
-},"";
+                enterprise: "$75,000 - $250,000""},"";
             freeTrial: "Demo version",;
             rating: 4.9,;
-            reviewCount: 189;,
-},;
+            reviewCount: 189},;
         {}
 "";
             id: "computer-vision","";
@@ -119,12 +113,10 @@ const AIServices = () => {}
 "";
                 starter: "$12,000 - $35,000","";
                 professional: "$35,000 - $100,000","";
-                enterprise: "$100,000 - $300,000"";,
-},"";
+                enterprise: "$100,000 - $300,000""},"";
             freeTrial: "Pilot project",;
             rating: 4.8,;
-            reviewCount: 145;,
-},;
+            reviewCount: 145},;
         {}
 "";
             id: "predictive-analytics","";
@@ -149,12 +141,10 @@ const AIServices = () => {}
 "";
                 starter: "$6,000 - $20,000","";
                 professional: "$20,000 - $60,000","";
-                enterprise: "$60,000 - $180,000"";,
-},"";
+                enterprise: "$60,000 - $180,000""},"";
             freeTrial: "30-day trial",;
             rating: 4.7,;
-            reviewCount: 198;,
-},;
+            reviewCount: 198},;
         {}
 "";
             id: "ai-automation","";
@@ -179,12 +169,10 @@ const AIServices = () => {}
 "";
                 starter: "$4,000 - $15,000","";
                 professional: "$15,000 - $45,000","";
-                enterprise: "$45,000 - $150,000"";,
-},"";
+                enterprise: "$45,000 - $150,000""},"";
             freeTrial: "Process assessment",;
             rating: 4.8,;
-            reviewCount: 267;,
-},;
+            reviewCount: 267},;
         {}
 "";
             id: "ai-ethics","";
@@ -209,12 +197,10 @@ const AIServices = () => {}
 "";
                 starter: "$200/hour","";
                 professional: "$300/hour","";
-                enterprise: "$400/hour"";,
-},"";
+                enterprise: "$400/hour""},"";
             freeTrial: "Ethics assessment",;
             rating: 4.9,;
-            reviewCount: 89;,
-},;
+            reviewCount: 89},;
         {}
 "";
             id: "ai-infrastructure","";
@@ -239,12 +225,10 @@ const AIServices = () => {}
 "";
                 starter: "$15,000 - $50,000","";
                 professional: "$50,000 - $150,000","";
-                enterprise: "$150,000 - $500,000"";,
-},"";
+                enterprise: "$150,000 - $500,000""},"";
             freeTrial: "Infrastructure audit",;
             rating: 4.8,;
-            reviewCount: 134;,
-},;
+            reviewCount: 134},;
         {}
 "";
             id: "ai-integration","";
@@ -269,12 +253,10 @@ const AIServices = () => {}
 "";
                 starter: "$3,000 - $12,000","";
                 professional: "$12,000 - $40,000","";
-                enterprise: "$40,000 - $120,000"";,
-},"";
+                enterprise: "$40,000 - $120,000""},"";
             freeTrial: "Integration assessment",;
             rating: 4.7,;
-            reviewCount: 178;,
-},;
+            reviewCount: 178},;
         {}
 "";
             id: "ai-training","";
@@ -299,16 +281,14 @@ const AIServices = () => {}
 "";
                 starter: "$500/person","";
                 professional: "$1,000/person","";
-                enterprise: "$2,500/person"";,
-},"";
+                enterprise: "$2,500/person""},"";
             freeTrial: "Introductory session",;
             rating: 4.8,;
-            reviewCount: 223;,
-}
+            reviewCount: 223}
     ];
 "";
     const categories = ["All Services", "Strategy", "ML", "NLP", "Vision", "Analytics", "Automation", "Ethics", "Infrastructure", "Integration", "Training"];
-;
+
     return ("";
         <div className="min-h-screen bg-background">;
             <div>Broken JSX</div>
@@ -466,19 +446,12 @@ const AIServices = () => {}
                 </div>;
             </section>;
         </div>;
-    );,
-};
-;
-export { AIServices };
-export default AIServices;,
-}}
-;
-export { AIServices };
-;
-export { AIServices };
-;
-export { AIServices };
-;
-export { AIServices };
-;
-export { AIServices };
+    )}
+export { AIServices }
+export default AIServices}}
+
+export { AIServices }
+export { AIServices }
+export { AIServices }
+export { AIServices }
+export { AIServices }

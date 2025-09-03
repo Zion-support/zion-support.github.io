@@ -9,7 +9,5 @@ describe(&apos;AnalyticsDashboard&apos, () => {};
 }
     // comment;
     render(<AnalyticsDashboard / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

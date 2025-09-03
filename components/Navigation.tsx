@@ -1,21 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
-;
-const Navigation: React.FC = () => {;
+
+const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-;
-  useEffect(() => {;
-    const handleScroll = () => {;
-      setIsScrolled(window.scrollY > 50);,
-};
-;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)}
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);,
-}, []);
-;
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
+
   const navigationItems = [;
     { name: 'Home', href: '/' },;
     { ;
@@ -27,8 +24,7 @@ const Navigation: React.FC = () => {;
         { name: 'Cybersecurity', href: '/services/cybersecurity' },;
         { name: 'Data Analytics', href: '/services/data-analytics' },;
         { name: 'DevOps', href: '/services/devops' },;
-      ];,
-},;
+      ]},;
     { ;
       name: 'Solutions', ;
       href: '/solutions',;
@@ -36,18 +32,16 @@ const Navigation: React.FC = () => {;
         { name: 'Blockchain Solutions', href: '/blockchain-solutions' },;
         { name: 'IoT Platforms', href: '/iot-platforms' },;
         { name: 'Digital Transformation', href: '/solutions/digital-transformation' },;
-      ];,
-},;
+      ]},;
     { name: 'About', href: '/about' },;
     { name: 'Contact', href: '/contact' },;
   ];
-;
+
   return (;
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${;
       isScrolled ;
         ? 'bg-black/90 backdrop-blur-md border-b border-white/10' ;
-        : 'bg-transparent';,
-}`}>;
+        : 'bg-transparent'}`}>;
       <div className="container mx-auto px-4">;
         <div className="flex items-center justify-between h-16">;
           {/* Logo */}
@@ -71,7 +65,7 @@ const Navigation: React.FC = () => {;
                   <span>{item.name}</span>;
                   {item.dropdown && <ChevronDown className="w-4 h-4" />}
                 </Link>;
-                ;
+
                 {/* Dropdown Menu */}
                 {item.dropdown && activeDropdown === item.name && (;
                   <div className="absolute top-full left-0 mt-2 w-64 bg-black/95 backdrop-blur-md border border-white/10 rounded-lg shadow-xl py-2">;
@@ -150,7 +144,5 @@ const Navigation: React.FC = () => {;
         )}
       </div>;
     </nav>;
-  );,
-};
-;
+  )}
 export default Navigation;

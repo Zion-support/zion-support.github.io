@@ -7,10 +7,8 @@ export default function Help() {};
 }
 }"react"framer - motion",../components/SEO";"""";
   Search, MessageCircle, Phone, Mail, Clock, BookOpen, Video, FileText, Users, ChevronDown,;
-  ChevronUp, HelpCircle, CheckCircle, ArrowRight";,
-} from "lucide-react";";
-  ChevronUp, HelpCircle, CheckCircle, ArrowRight;", ";";,
-} from "lucide-react";";
+  ChevronUp, HelpCircle, CheckCircle, ArrowRight"} from "lucide-react";";
+  ChevronUp, HelpCircle, CheckCircle, ArrowRight;", ";"} from "lucide-react";";
   Search, MessageCircle, Phone, Mail, Clock,;
   BookOpen, Video, FileText, Users, ChevronDown,;
   ChevronUp, HelpCircle, CheckCircle, ArrowRight} from "lucide-react;
@@ -28,9 +26,9 @@ export default function Help() {};
   const contactMethods = [];
   const toggleFAQ = (id: number) => {};
     setExpandedFAQ(expandedFAQ === id ? null : id)}
-;
+
   return (;
-    ;
+
     <>;
       <div>Broken JSX</div>
         keywords="help, support, documentation, FAQ, customer service, Zion Tech Group">;
@@ -44,12 +42,12 @@ export default function Help() {};
               className="text-center max-w-4xl mx-auto">;
             >;";
               <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,;
-                Help Center,,;
+                Help Center,;
               </h1>,";
               <p className = "text-xl text-gray-300 mb-8">,;
                 Find answers to your questions, access documentation, and get support from our expert team;
               </p>;
-              ;
+
               {/*   */}";
               <div className="max-w-2xl mx-auto">;";
                 <div className="relative">;";
@@ -59,12 +57,12 @@ export default function Help() {};
                     className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
                   />;
                 </div>,;
-            </motion.div>,,;
+            </motion.div>,;
           </div>,;
         </section>,;
-;
+
   return (;
-    ;
+
     <>;
       <div>Broken JSX</div>
         keywords="help, support, documentation, FAQ, customer service, Zion Tech Group">;
@@ -78,7 +76,7 @@ export default function Help() {};
               className="text-center max-w-4xl mx-auto">;
             >;";
               <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,;
-                Help Center,,;
+                Help Center,;
               </h1>,";
               <p className = "text-xl text-gray-300 mb-8">,;
                 Find answers to your questions, access documentation, and get support from our expert team;
@@ -91,7 +89,7 @@ export default function Help() {};
                     onChange="{(e)" => setSearchQuery(e.target.value)}";
                     className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />;
                 </div>,;
-            </motion.div>,,;
+            </motion.div>,;
           </div>,;
         </section>,;
         {/* comment */}";
@@ -110,17 +108,15 @@ export default function Help() {};
               {};
   ChevronUp, HelpCircle, CheckCircle, ArrowRight} from &apos;lucide-react";&apos;&apos;
 export default function Help() ;{}
-;
+
   const [searchQuery, setSearchQuery] = useState(&apos;&apos);&apos;&apos>;
-  const [expandedFAQ, setExpandedFAQ] = useState<;<;<number | null>(null);,
-}
+  const [expandedFAQ, setExpandedFAQ] = useState<;<;<number | null>(null)}
   const faqs = []&quot;
   const helpCategories = []&quot;
   const contactMethods = []&quot;
-  const toggleFAQ = (id: number) => {,,    setExpandedFAQ(expandedFAQ === id ? null : id)}
-;,
+  const toggleFAQ = (id: number) => {,    setExpandedFAQ(expandedFAQ === id ? null : id)}
 }
-;
+
   return (;
     <>";
       <div>Broken JSX</div>
@@ -199,7 +195,7 @@ transition="{{" duration: 0.8 }}";
                   </div>;
                 </motion.div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -239,14 +235,14 @@ transition="{{" duration: 0.8 }}";
                       <div className = "flex items-center mb-2">,";
                         <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs mr-3">,;
                           {faq.category}
-;
+
                         </span>;
                       </div>;";
                       <h3 className="text-lg font-semibold text-white">{faq.question}</h3>;
                     </div>;
                     {};
                     )}
-;
+
                   </button>;
                   {};
                   <button onClick = "{()" => toggleFAQ(faq.id)}";
@@ -261,7 +257,7 @@ transition="{{" duration: 0.8 }}";
                       <div className="flex items-center mb-2">";
                         <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs mr-3">,;
                           {faq.category}
-;
+
                         </span>;
                       </div>";
                       <h3 className="&quot;text-lg" font-semibold text-white&quot;>{faq.question}&quot;</h3>;
@@ -286,10 +282,10 @@ transition="{{" duration: 0.8 }}";
                       <p className="&quot;text-gray-300" leading-relaxed&quot;>{faq.answer}&quot;</p>;
                     </motion.div>;
                   )}
-;
+
                 </motion.div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -322,21 +318,21 @@ transition="{{" duration: 0.8 }}";
                     <div className="flex items-center text-sm text-gray-400">;";
                       <Clock className="w-4 h-4 mr-2"  />;
                       {method.availability}
-;
+
                     </div>;";
                     <div className="flex items-center text-sm text-gray-400">;";
                       <CheckCircle className="w-4 h-4 mr-2"  />;
                       Response: {method.responseTime}
-;
+
                     </div>;
                   </div>;";
                   <button className = "w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-200">,;
                     {method.title}
-;
+
                   </button>;
                 </motion.div>;
               ))}
-;
+
             </div>;
         </section>;
       </div>;
@@ -363,14 +359,12 @@ transition="{{" duration: 0.8 }}";
                   </button>;
                 </motion.div>;
               ))}
-;
+
             </div>;
         </section>;
       </div>;
 </>;
-  );,
-}
-  );,
-}
+  )}
+  )}
 }";
   ChevronUp, HelpCircle, CheckCircle, ArrowRight;"} from 'lucide-react))))))

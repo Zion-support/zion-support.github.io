@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';''';
 import { motion } from 'framer-motion';''';
 import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Zap, Target, Rocket, CheckCircle, Star, Lightbulb, Cloud, Settings, Brain, Server, Printer, Clock, Globe, BarChart3 } from 'lucide-react';
 import SEOHead from "../components/SEOHead.jsx";
-;
+
 const AIPoweredITAssetManagement = () => {}
   return <div>Component</div>;
 };
@@ -12,58 +12,50 @@ const AIPoweredITAssetManagement = () => {}
 ";
       icon: Monitor,"";
       title: "Intelligent Asset Discovery","";
-      description: "AI-powered automatic discovery and classification of all IT assets across your network infrastructure.";,
-},;
+      description: "AI-powered automatic discovery and classification of all IT assets across your network infrastructure."},;
     {}
 ";
       icon: Shield,"";
       title: "Security & Compliance","";
-      description: "Continuous monitoring of asset health, performance, and utilization with instant alerts and notifications.";,
-},;
+      description: "Continuous monitoring of asset health, performance, and utilization with instant alerts and notifications."},;
     {}
 ";
       icon: Target,"";
       title: "Predictive Maintenance","";
-      description: "AI algorithms predict potential failures and maintenance needs before they impact your operations.";,
-},;
+      description: "AI algorithms predict potential failures and maintenance needs before they impact your operations."},;
     {}
 ";
       icon: Rocket,"";
       title: "Lifecycle Management","";
-      description: "Complete asset lifecycle tracking from procurement to retirement with optimization recommendations.";,
-},;
+      description: "Complete asset lifecycle tracking from procurement to retirement with optimization recommendations."},;
     {}
 ";
       icon: Globe,"";
       title: "Multi-Platform Support","";
       description: "Unified management across Windows, Linux, macOS, cloud platforms, and mobile devices.";
   ];
-;
+
   const capabilities = [];
     {}
 ";
       icon: Cpu,"";
       title: "Intelligent Asset Discovery","";
-      description: "AI-powered scanning and discovery of all IT assets across your infrastructure.";,
-},;
+      description: "AI-powered scanning and discovery of all IT assets across your infrastructure."},;
     {}
 ";
       icon: Shield,"";
       title: "Security Monitoring","";
-      description: "Continuous security assessment and threat detection for all managed assets.";,
-},;
+      description: "Continuous security assessment and threat detection for all managed assets."},;
     {}
 ";
       icon: TrendingUp,"";
       title: "Performance Analytics","";
-      description: "Real-time performance monitoring and predictive maintenance insights.";,
-},;
+      description: "Real-time performance monitoring and predictive maintenance insights."},;
     {}
 ";
       icon: Database,"";
       title: "Centralized Management","";
-      description: "Single platform for managing all IT assets across your entire infrastructure.";,
-},;
+      description: "Single platform for managing all IT assets across your entire infrastructure."},;
     {}
 ";
       icon: Network,"";
@@ -151,17 +143,11 @@ const AIPoweredITAssetManagement = () => {}
           </motion.div>;
         </div>;
       </section>;
-    </div>) };
-;
-export default AIPoweredITAssetManagement;,
-}}}
-;
-export { AIPoweredITAssetManagement };
-;
-export { AIPoweredITAssetManagement };
-;
-export { AIPoweredITAssetManagement };
-;
-export { AIPoweredITAssetManagement };
-;
-export { AIPoweredITAssetManagement };
+    </div>) }
+export default AIPoweredITAssetManagement}}}
+
+export { AIPoweredITAssetManagement }
+export { AIPoweredITAssetManagement }
+export { AIPoweredITAssetManagement }
+export { AIPoweredITAssetManagement }
+export { AIPoweredITAssetManagement }

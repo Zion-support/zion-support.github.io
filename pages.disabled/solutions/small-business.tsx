@@ -4,62 +4,54 @@ import MainLayout from '../../components/layout/MainLayout';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Cloud } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-;
-const SmallBusiness: NextPage = () => {;
+
+const SmallBusiness: NextPage = () => {
   const solutions = [;
-    {;
+    {
       title: 'Affordable Cloud Solutions',;
       description: 'Cost-effective cloud infrastructure designed for small businesses',;
       features: ['Scalable hosting', 'Data backup', 'Security monitoring', '24/7 support'],;
       icon: Cloud,;
-      price: 'Starting at $99/month';,
-},;
-    {;
+      price: 'Starting at $99/month'},;
+    {
       title: 'Business Automation',;
       description: 'Streamline operations with intelligent automation tools',;
       features: ['Workflow automation', 'Email marketing', 'Customer management', 'Reporting'],;
       icon: Zap,;
-      price: 'Starting at $49/month';,
-},;
-    {;
+      price: 'Starting at $49/month'},;
+    {
       title: 'Digital Marketing Suite',;
       description: 'Complete digital marketing tools for growth',;
       features: ['SEO optimization', 'Social media management', 'Analytics dashboard', 'Content creation'],;
       icon: Target,;
-      price: 'Starting at $79/month';,
-},;
-    {;
+      price: 'Starting at $79/month'},;
+    {
       title: 'E-commerce Platform',;
       description: 'Professional online store with payment processing',;
       features: ['Online store setup', 'Payment integration', 'Inventory management', 'Order tracking'],;
       icon: Globe,;
-      price: 'Starting at $129/month';,
-}
+      price: 'Starting at $129/month'}
   ];
-;
+
   const benefits = [;
-    {;
+    {
       title: 'Cost-Effective',;
       description: 'Affordable solutions that fit your budget',;
-      icon: DollarSign;,
-},;
-    {;
+      icon: DollarSign},;
+    {
       title: 'Quick Setup',;
       description: 'Get up and running in days, not months',;
-      icon: Clock;,
-},;
-    {;
+      icon: Clock},;
+    {
       title: 'Scalable Growth',;
       description: 'Solutions that grow with your business',;
-      icon: TrendingUp;,
-},;
-    {;
+      icon: TrendingUp},;
+    {
       title: 'Expert Support',;
       description: 'Dedicated support team for small businesses',;
-      icon: Users;,
-}
+      icon: Users}
   ];
-;
+
   return (;
     <MainLayout;
       title="Small Business Solutions - Zion Tech Group";
@@ -86,7 +78,7 @@ const SmallBusiness: NextPage = () => {;
             Professional technology solutions designed specifically for small businesses. ;
             Get enterprise-grade tools without the enterprise price tag.;
           </motion.p>;
-          ;
+
           <motion.div ;
             className="flex flex-col sm:flex-row justify-center gap-4";
             initial={{ opacity: 0, y: 30 }}
@@ -117,7 +109,7 @@ const SmallBusiness: NextPage = () => {;
               that address your specific needs while staying within your budget.;
             </p>;
           </div>;
-          ;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {benefits.map((benefit, index) => (;
               <motion.div;
@@ -147,7 +139,7 @@ const SmallBusiness: NextPage = () => {;
               Comprehensive technology solutions designed to help your small business thrive in the digital age.;
             </p>;
           </div>;
-          ;
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {solutions.map((solution, index) => (;
               <motion.div;
@@ -166,9 +158,9 @@ const SmallBusiness: NextPage = () => {;
                     <p className="text-blue-600 font-semibold">{solution.price}</p>;
                   </div>;
                 </div>;
-                ;
+
                 <p className="text-gray-600 mb-6 leading-relaxed">{solution.description}</p>;
-                ;
+
                 <div className="mb-6">;
                   <h4 className="font-semibold text-gray-900 mb-3">What's Included:</h4>;
                   <ul className="space-y-2">;
@@ -180,7 +172,7 @@ const SmallBusiness: NextPage = () => {;
                     ))}
                   </ul>;
                 </div>;
-                ;
+
                 <div className="flex space-x-3">;
                   <Link;
                     href="/contact";
@@ -208,24 +200,21 @@ const SmallBusiness: NextPage = () => {;
               See how we've helped small businesses like yours achieve their goals.;
             </p>;
           </div>;
-          ;
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {[;
-              {;
+              {
                 company: "Local Bakery",;
                 result: "300% increase in online orders",;
-                quote: "Zion Tech Group helped us build an online presence that transformed our business.";,
-},;
-              {;
+                quote: "Zion Tech Group helped us build an online presence that transformed our business."},;
+              {
                 company: "Consulting Firm",;
                 result: "50% reduction in administrative time",;
-                quote: "Their automation solutions freed up our time to focus on what we do best.";,
-},;
-              {;
+                quote: "Their automation solutions freed up our time to focus on what we do best."},;
+              {
                 company: "Retail Store",;
                 result: "200% growth in customer base",;
-                quote: "The digital marketing tools helped us reach customers we never knew existed.";,
-}
+                quote: "The digital marketing tools helped us reach customers we never knew existed."}
             ].map((story, index) => (;
               <motion.div;
                 key={story.company}
@@ -288,7 +277,5 @@ const SmallBusiness: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
-};
-;
+  )}
 export default SmallBusiness;

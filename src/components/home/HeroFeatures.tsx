@@ -30,14 +30,13 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {};
           {/* Hover indicator */}";
           <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover:w-1/2 transition-all duration-500" />;
         </motion.div>;
-      ))};
+      ))}
     </motion.div>;
-  )};
+  )}
           {/* Hover indicator */};";
           <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover:w-1/2 transition-all duration-500" />;
         </motion.div>;
-      ))};
+      ))}
     </motion.div>;
-  )};
-;
+  )}
 export default HeroFeatures}}'"`;

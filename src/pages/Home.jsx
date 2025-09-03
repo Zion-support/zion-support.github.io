@@ -15,7 +15,7 @@ export default function Home() {};
     {};
 }
   ];
-;
+
       <HeroSection />;
       <QuickAccess />;
       <FeatureCTAs />;
@@ -29,16 +29,11 @@ export default function Home() {};
       <ITServiceRequestHero />;
       <FloatingCTA />;
     </>;
-  );,
-}
-;
+  )}
 
-export { Home };
-;
-export { Home };
-;
-export { Home };
-;
-export { Home };
-;
-export { Home };
+
+export { Home }
+export { Home }
+export { Home }
+export { Home }
+export { Home }

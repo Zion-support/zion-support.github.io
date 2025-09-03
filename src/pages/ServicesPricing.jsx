@@ -26,8 +26,7 @@ const pricingTiers = [];
             "Advanced Analytics"";
         ],;"";
         color: "from-emerald-500 to-green-600",;
-        popular: false;,
-},;
+        popular: false},;
     {}
 ";
 "";
@@ -51,8 +50,7 @@ const pricingTiers = [];
             "Dedicated Account Manager"";
         ],;"";
         color: "from-blue-500 to-indigo-600",;
-        popular: true;,
-},;
+        popular: true},;
     {}
 ";
 "";
@@ -87,8 +85,7 @@ const serviceCategories = [];
             { name: "Content Generation Suite", starter: 499, professional: 899, enterprise: 1999 },"";
             { name: "Data Analytics Platform", starter: 999, professional: 1999, enterprise: 4999 },"";
             { name: "Computer Vision API", starter: 799, professional: 1499, enterprise: 3999 }
-        ];,
-},;
+        ]},;
     {}
 ";
 "";
@@ -99,8 +96,7 @@ const serviceCategories = [];
             { name: "Cybersecurity Audit", starter: 1499, professional: 3999, enterprise: 7999 },"";
             { name: "DevOps Automation", starter: 999, professional: 3499, enterprise: 6999 },"";
             { name: "Infrastructure Setup", starter: 1299, professional: 2999, enterprise: 5999 }
-        ];,
-},;
+        ]},;
     {}
 ";
 "";
@@ -111,8 +107,7 @@ const serviceCategories = [];
             { name: "Customer Support System", starter: 599, professional: 1799, enterprise: 3999 },"";
             { name: "Project Management", starter: 699, professional: 1999, enterprise: 4499 },"";
             { name: "HR Management Suite", starter: 899, professional: 2499, enterprise: 5499 }
-        ];,
-},;
+        ]},;
     {}
 ";
 "";
@@ -132,36 +127,31 @@ const benefits = [];
 "";
         icon: <CheckCircle className="w-8 h-8"/>,"";
         title: "Scalable Solutions","";
-        description: "Start with what you need and scale up as your business grows";,
-},;
+        description: "Start with what you need and scale up as your business grows"},;
     {}
 ";
 "";
         icon: <Shield className="w-8 h-8"/>,"";
         title: "Enterprise Security","";
-        description: "Bank-level security and compliance for all our solutions";,
-},;
+        description: "Bank-level security and compliance for all our solutions"},;
     {}
 ";
 "";
         icon: <Clock className="w-8 h-8"/>,"";
         title: "Rapid Deployment","";
-        description: "Get up and running in days, not months";,
-},;
+        description: "Get up and running in days, not months"},;
     {}
 ";
 "";
         icon: <Users className="w-8 h-8"/>,"";
         title: "Expert Support","";
-        description: "24/7 technical support and dedicated account management";,
-},;
+        description: "24/7 technical support and dedicated account management"},;
     {}
 ";
 "";
         icon: <TrendingUp className="w-8 h-8"/>,"";
         title: "Proven ROI","";
-        description: "Track record of delivering measurable business outcomes";,
-},;
+        description: "Track record of delivering measurable business outcomes"},;
     {}
 ";
 "";
@@ -379,14 +369,10 @@ export {};
         </div>;
       </div>;
     </div>)}
-;
 
-export { ServicesPricing };
-;
-export { ServicesPricing };
-;
-export { ServicesPricing };
-;
-export { ServicesPricing };
-;
-export { ServicesPricing };
+
+export { ServicesPricing }
+export { ServicesPricing }
+export { ServicesPricing }
+export { ServicesPricing }
+export { ServicesPricing }

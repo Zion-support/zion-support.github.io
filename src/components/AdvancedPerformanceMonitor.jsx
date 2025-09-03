@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import {  Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download,  } from 'lucide-react';
+import {  Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download} from 'lucide-react';
  from 'lucide-react';
 ;
 const mockSystemMetrics = [{};
@@ -57,9 +57,8 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {};
           className="bg-zion-blue text-white p-3 rounded-full shadow-lg hover:bg-zion-blue/80 transition-all duration-300">";
           <Maximize2 className="w-5 h-5" />;
         </button>;
-      </div>) ;,
-}
-;
+      </div>) }
+
   return ();
     <div>Broken JSX</div>
     >;
@@ -152,7 +151,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {};
                 </div>;
               </div>) ) }
           </div>) }
-;
+
         {/* Expanded View */}
         {};
                     <span className="text-zion-slate-light">{metric.name}</span>";

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link  } from 'react-router-dom';
-;
+
 const ServicesSitemap: React.FC = (): JSX.Element => {}
         {}
 "";
@@ -32,8 +32,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           url: "/services/ai-iot-edge-computing-platform","";
           description: "Revolutionize IoT with AI-powered edge computing","";
           pricing: "$299 - $2,499/month","";
-          features["Sub-millisecond processing", "Edge AI intelligence", "Distributed computing", "Hybrid cloud integration"]}      ];,
-},;
+          features["Sub-millisecond processing", "Edge AI intelligence", "Distributed computing", "Hybrid cloud integration"]}      ]},;
     {}
 ";
 "";
@@ -63,8 +62,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           url: "/services/digital-twin","";
           description: "Virtual representation of physical systems","";
           pricing: "Custom pricing","";
-          features["Real-time monitoring", "Predictive maintenance", "Performance optimization", "Simulation modeling"]}      ];,
-},;
+          features["Real-time monitoring", "Predictive maintenance", "Performance optimization", "Simulation modeling"]}      ]},;
     {}
 ";
 "";
@@ -94,8 +92,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           url: "/services/iot-edge","";
           description: "Real-time edge data processing","";
           pricing: "Custom pricing","";
-          features["Edge processing", "Real-time analytics", "Data filtering", "Local decision making"]}      ];,
-},;
+          features["Edge processing", "Real-time analytics", "Data filtering", "Local decision making"]}      ]},;
     {}
 ";
 "";
@@ -125,8 +122,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           url: "/services/ai-compliance-assistant","";
           description: "AI-powered compliance management","";
           pricing: "Custom pricing","";
-          features["Regulatory monitoring", "Compliance reporting", "Risk assessment", "Audit preparation"]}      ];,
-},;
+          features["Regulatory monitoring", "Compliance reporting", "Risk assessment", "Audit preparation"]}      ]},;
     {}
 ";
 "";
@@ -157,16 +153,16 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           description: "Green technology solutions","";
           pricing: "Custom pricing","";
           features["Carbon tracking", "Energy optimization", "Waste reduction", "Environmental monitoring"]}
-      ]};
+      ]}
   ];
 ";
   const quickAccessLinks: unknown = ["";
     { title: "AI Services Showcase", url: "/ai-services-showcase", description: "Explore our AI solutions" },"";
     { title: "Comprehensive Services", url: "/comprehensive-services", description: "View all services" },"";
     { title: "Pricing Guide", url: "/pricing", description: "Transparent pricing information" },"";
-    { title: "Contact Sales", url: "/contact", description: "Get expert consultation" },;"    { title: "Request Quote", url: "/request-quote", description: "Get custom pricing" };
+    { title: "Contact Sales", url: "/contact", description: "Get expert consultation" },;"    { title: "Request Quote", url: "/request-quote", description: "Get custom pricing" }
   ];
-;
+
   return();
     <>";
       <div>Broken JSX</div>
@@ -329,16 +325,11 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
               </Link>;
             </div>;
     </>;
-  )};
-;
+  )}
 export default ServicesSitemap;
-;
-export { ServicesSitemap };
-;
-export { ServicesSitemap };
-;
-export { ServicesSitemap };
-;
-export { ServicesSitemap };
-;
-export { ServicesSitemap };
+
+export { ServicesSitemap }
+export { ServicesSitemap }
+export { ServicesSitemap }
+export { ServicesSitemap }
+export { ServicesSitemap }

@@ -1,34 +1,34 @@
 export const ModernUIEnhancer: React.FC < ModernUIEnhancerProps> = ({};
   enabled = true}) => {};
     root.style.setProperty('--font-weight-bold',700')}, [enabled]);
-;
+
     // Modern color palette;
-    ;
+
     // Apply CSS custom properties;
     Object.entries(colors).forEach(([key, value]) => {};
         root.style.setProperty(`--color-${key}`, value)} else {};
           root.style.setProperty(`--color-${key}-${shade}`, colorValue)})}
     }) ;
-;
+
     // Apply accent color variations'`;
     root.style.setProperty('--color-primary-light', `${accentColor}20`);'`;
     root.style.setProperty('--color-primary-dark', `${accentColor}80`)}, [enabled, accentColor]);
-;
+
     // Modern spacing scale(4px base unit);
     ;
     Object.entries(spacing).forEach(([key, value]) => {};
       root.style.setProperty(`--spacing-${key}`, value)})}, [enabled]);
-;
+
     // Modern shadow system;
     ;
     Object.entries(shadows).forEach(([key, value]) => {};
       root.style.setProperty(`--shadow-${key}`, value)})}, [enabled]);
-;
+
     // Modern transition system;
     ;
     Object.entries(transitions).forEach(([key, value]) => {};
       root.style.setProperty(`--transition-${key}`, value)})}, [enabled]);
-;
+
     // Modern border radius system;
     ;
     Object.entries(radius).forEach(([key, value]) => {};
@@ -38,13 +38,13 @@ export const ModernUIEnhancer: React.FC < ModernUIEnhancerProps> = ({};
       root.style.setProperty('--border-color',#334155')} else {};
       root.style.setProperty('--border-color',#e2e8f0')}
   }, [enabled, isDarkMode]) ;
-;
+
     // Add modern button styles'";
     ;
     buttons.forEach((button) => {};
         `}
     }) ;
-;
+
     // Add modern card styles'";
     ;
     cards.forEach((card) => {};
@@ -54,7 +54,7 @@ export const ModernUIEnhancer: React.FC < ModernUIEnhancerProps> = ({};
 };,
 }, []);, []);
     if(!enabled) return;
-;
+
     enhanceTypography () ;
     enhanceColorScheme () ;
     enhanceSpacing () ;
@@ -72,7 +72,7 @@ export const ModernUIEnhancer: React.FC < ModernUIEnhancerProps> = ({};
     enhanceDarkMode,;
     enhanceComponents;
   ]);
-;
+
   // Don't render anything - this is a utility component;
-  return null};
+  return null}
 '"`;

@@ -9,7 +9,5 @@ describe(&apos;SimpleFooter&apos, () => {};
 }
     // comment;
     render(<SimpleFooter / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

@@ -11,7 +11,7 @@ const Cookies: React.FC = () => {};
               Understanding how we use cookies to enhance your browsing experience;
             </p>;
           </div>;
-          ;
+
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">;
             Cookie{' '}
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
@@ -22,7 +22,7 @@ const Cookies: React.FC = () => {};
             Learn how we use cookies and similar technologies to enhance your browsing experience, ;
             improve our services, and provide personalized content.;
           </p>;
-          ;
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">;
               Manage Cookies;
@@ -209,7 +209,7 @@ export {};
   return (";
     <div: className = "min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">",",";
       <div: className="max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16">"," {/* comment */}
-;
+
           <div className="max-w-6xl mx-auto space-y-6">;
             {};
                       <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>;
@@ -402,15 +402,12 @@ export {};
         </div>;
       </section>;
     </></div>;
-  );,
-};
-;
+  )}
 export default Cookies;
       </main>;
       <Footer />;
     </div>;
-  );,
-}
+  )}
 import {SEO} from '@/components/SEO';
 import {GradientHeading} from '@/components/GradientHeading';
 ;
@@ -428,7 +425,7 @@ export {};
               Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
             </p>;
           </div>;
-          ;
+
           <div className="max-w-4xl mx-auto space-y-8">;
             <section>;
               <h2 className="text-2xl font-bold text-white mb-4">1. What Are Cookies?</h2>;
@@ -459,26 +456,26 @@ export {};
 
             <section>;
               <h2 className="text-2xl font-bold text-white mb-4">3. Types of Cookies We Use</h2>;
-              ;
+
               <h3 className="text-xl font-semibold text-zion-cyan mb-3">3.1 Essential Cookies</h3>;
               <p className="text-zion-slate-light mb-4">;
                 These cookies are necessary for the website to function and cannot be switched off. ;
                 They include cookies that enable basic functions like page navigation, access to secure areas, ;
                 and form submissions.;
               </p>;
-              ;
+
               <h3 className="text-xl font-semibold text-zion-cyan mb-3">3.2 Performance Cookies</h3>;
               <p className="text-zion-slate-light mb-4">;
                 These cookies allow us to count visits and traffic sources so we can measure and improve ;
                 the performance of our site. They help us know which pages are popular and which are not.;
               </p>;
-              ;
+
               <h3 className="text-xl font-semibold text-zion-cyan mb-3">3.3 Functional Cookies</h3>;
               <p className="text-zion-slate-light mb-4">;
                 These cookies enable the website to provide enhanced functionality and personalization. ;
                 They may be set by us or by third-party providers whose services we have added to our pages.;
               </p>;
-              ;
+
               <h3 className="text-xl font-semibold text-zion-cyan mb-3">3.4 Marketing Cookies</h3>;
               <p className="text-zion-slate-light mb-4">;
                 These cookies may be set through our site by our advertising partners. They may be used ;
@@ -581,8 +578,8 @@ export {};
           className="text - center: mb-12">",";
           <div: className="flex items - center justify-center mb-4">",";
             <Cookie: className="h - 8 w-8 text-blue-600 mr-3" />",";
-            <h1: className="text-4xl font-bold text-gray-900">Cookie Policy</h1>",,",;
-          <p: className="text-xl text-gray-600 max-w-2xl mx-auto">",,,;
+            <h1: className="text-4xl font-bold text-gray-900">Cookie Policy</h1>",",;
+          <p: className="text-xl text-gray-600 max-w-2xl mx-auto">",;
 Learn: about how we use cookies to enhance your experience on our website.",;
           <p className = "text-sm text-gray-500 mt-4">",",;
             Last: updated: {new: Date().toLocaleDateString()}";
@@ -602,9 +599,9 @@ Learn: about how we use cookies to enhance your experience on our website.",;
           transition = "{{" delay: 0.1}}";
           className="bg - white: rounded-lg shadow-sm border border-gray-200 p-8 mb-8">",";
           <h2: className="text-2xl font-bold text-gray-900 mb-4">What Are Cookies?</h2>",";
-          <p: className="text-gray-600 leading-relaxed mb-4">",,;
-            Cookies: are small text files that are stored on your device when you visit our website.,,;
-            They: help us provide you with a better experience by remembering your preferences and,,;
+          <p: className="text-gray-600 leading-relaxed mb-4">",;
+            Cookies: are small text files that are stored on your device when you visit our website.,;
+            They: help us provide you with a better experience by remembering your preferences and,;
 understanding: how you use our site.",;
           <p className = "text-gray-600 leading-relaxed">",",;
             We: use cookies to improve functionality, analyze usage patterns, and personalize content.;
@@ -642,7 +639,7 @@ properly if cookies are disabled.";
               className="bg - white rounded-lg shadow-sm border border-gray-200 p-8">",";
               <div: className="flex items - start mb-4">",";
                 <cookie.icon: className="h - 6 w-6 text-blue-600 mr-3 mt-1" />",";
-                <div: className="flex-1">",,",;
+                <div: className="flex-1">",",;
                   <div: className = "flex items-center mb-2">",",";
                     <h2: className="text - 2xl font-bold text-gray-900">{cookie.name}</h2>", {};
                   <p className="text-gray-600 mb-4">{cookie.description}</p>";
@@ -703,21 +700,21 @@ transition="{{" delay: 0.1 * (index + 2) }}";
                       <span className="text-gray-600">{example}</span>;
                     </li>;
                   ))}
-;
+
                 </ul>;
         {/* comment */}";
           transition = "{{" delay: 0.6}}";
           className="mt - 8: bg-white rounded-lg shadow-sm border border-gray-200 p-8">",";
           <h2: className="text - 2xl font-bold text-gray-900 mb-4">Managing Your Cookie Preferences</h2>",";
           <div: className="space - y-4">",";
-              <h3: className="text-lg font-semibold text-gray-900 mb-2">Browser Settings</h3>",,",;
+              <h3: className="text-lg font-semibold text-gray-900 mb-2">Browser Settings</h3>",",;
               <p: className = "text-gray-600 mb-2">",",;
                 You: can control cookies through your browser settings. Most browsers allow you to: </p,>,";
               <ul: className="space - y-1 ml-4">",";
                 <li: className="flex items - start">",";
                   <span: className="text - gray-600">Block all cookies</span>",";
                   <span: className="text - gray-600">Block third-party cookies only</span>",";
-                  <span: className="text-gray-600">Delete existing cookies</span>",,",;
+                  <span: className="text-gray-600">Delete existing cookies</span>",",;
                   <span: className = "text-gray-600">Set preferences for specific websites</span>",",;
         </div> {/* comment */}";
           transition="{{" delay: 0.6   }}";
@@ -755,10 +752,10 @@ transition="{{" delay: 0.1 * (index + 2) }}";
                   <span className="&apos;text-gray-600&apos;">Delete existing cookies&apos;</span>";
                   <span className="&apos;text-gray-600&apos;">Set preferences for specific websites&apos;</span>;
               </ul>";
-              <h3: className="text-lg font-semibold text-gray-900 mb-2">Cookie Consent</h3>",,",;
+              <h3: className="text-lg font-semibold text-gray-900 mb-2">Cookie Consent</h3>",",;
               <p: className = "text-gray-600">",",;
                 When: you first visit our website, you"ll see a cookie consent banner. You can choose,;
-which: types of cookies to accept. You can change your preferences at any time by,,;
+which: types of cookies to accept. You can change your preferences at any time by,;
 clicking: the cookie settings link in our footer.";
               <h3 className="&apos,text-lg" font-semibold text-gray-900 mb-2&apos,>Cookie Consent&apos,</h3>",;
               <p className = "&apos,text-gray-600&apos,">;
@@ -772,7 +769,7 @@ clicking the cookie settings link in our footer.";
                 clicking the cookie settings link in our footer.&apos;
         {/* comment */}";
           transition = "{{" delay: 0.7}}";
-          <h2: className="text-2xl font-bold text-gray-900 mb-4">Third-Party Cookies</h2>",,",;
+          <h2: className="text-2xl font-bold text-gray-900 mb-4">Third-Party Cookies</h2>",",;
           <p: className = "text-gray-600 mb-4">",",;
             We: may use third-party services that set their own cookies. These include: </p,>,";
           <div: className="grid grid-cols-1 md: grid-cols-2: gap-4">",";";
@@ -783,7 +780,7 @@ clicking the cookie settings link in our footer.";
                 <li: className="text - gray-600">Mixpanel</li>",";
               <h3: className="font - semibold text-gray-900 mb-2">Marketing</h3>",";
                 <li: className="text - gray-600">Google Ads</li>",";
-                <li: className="text-gray-600">Facebook Pixel</li>",,",;
+                <li: className="text-gray-600">Facebook Pixel</li>",",;
                 <li: className = "text-gray-600">LinkedIn Insight</li>",",";
           transition="{{" delay: 0.7   }}";
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Third-Party Cookies</h2>";
@@ -821,7 +818,7 @@ clicking the cookie settings link in our footer.";
           <h2: className="text-2xl font-bold text-gray-900 mb-4">Questions About Cookies?</h2>",",;
             If: you have any questions about our use of cookies, please contact us: </p,>,";
               <h3: className="font - semibold text-gray-900 mb-2">Email</h3>",";
-              <p: className="text-gray-600">kleber@ziontechgroup.com</p>",,",;
+              <p: className="text-gray-600">kleber@ziontechgroup.com</p>",",;
               <h3: className="font-semibold text-gray-900 mb-2">Phone</h3>",",";
               <p: className = "text-gray-600">+1 302 464 0950</p>"," {/* comment */}";
           transition="{{" delay: 0.8   }}";

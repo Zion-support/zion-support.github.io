@@ -31,8 +31,7 @@ const InnovativeServices2025 = () => {}
                     marketPosition: "Leading AI-powered HR solution for mid-market companies","";
                     useCases["Recruitment agencies", "HR departments", "Startups", "Enterprise companies"],;"";
                     competitors["BambooHR", "Workday", "Zenefits"],;"";
-                    competitiveAdvantage: "Advanced AI algorithms, comprehensive automation, and bias-free hiring processes";,
-},;
+                    competitiveAdvantage: "Advanced AI algorithms, comprehensive automation, and bias-free hiring processes"},;
                 {}
 ";
 "";
@@ -56,8 +55,7 @@ const InnovativeServices2025 = () => {}
                     marketPosition: "Next-generation inventory management for retail and manufacturing","";
                     useCases["Retail chains", "Manufacturing", "E-commerce", "Distribution centers"],;"";
                     competitors["TradeGecko", "Zoho Inventory", "Fishbowl"],;"";
-                    competitiveAdvantage: "AI-powered forecasting, real-time optimization, and seamless ERP integration";,
-},;
+                    competitiveAdvantage: "AI-powered forecasting, real-time optimization, and seamless ERP integration"},;
                 {}
 ";
 "";
@@ -81,10 +79,8 @@ const InnovativeServices2025 = () => {}
                     marketPosition: "Cutting-edge legal AI for law firms and corporate legal departments","";
                     useCases["Law firms", "Corporate legal", "Compliance teams", "Contract management"],;"";
                     competitors["Kira Systems", "Luminance", "eBrevia"],;"";
-                    competitiveAdvantage: "Advanced NLP, comprehensive risk assessment, and seamless legal workflow integration";,
-}
-            ];,
-},;
+                    competitiveAdvantage: "Advanced NLP, comprehensive risk assessment, and seamless legal workflow integration"}
+            ]},;
         {}
 ";
 "";
@@ -114,8 +110,7 @@ const InnovativeServices2025 = () => {}
                     marketPosition: "Leading AI fraud detection for financial institutions and e-commerce","";
                     useCases["Banks", "Credit card companies", "E-commerce platforms", "Insurance companies"],;"";
                     competitors["Sift", "Signifyd", "Forter"],;"";
-                    competitiveAdvantage: "Advanced ML algorithms, real-time processing, and industry-leading accuracy rates";,
-},;
+                    competitiveAdvantage: "Advanced ML algorithms, real-time processing, and industry-leading accuracy rates"},;
                 {}
 ";
 "";
@@ -139,8 +134,7 @@ const InnovativeServices2025 = () => {}
                     marketPosition: "Advanced supply chain optimization for global enterprises","";
                     useCases["Manufacturing", "Logistics", "Retail", "Healthcare"],;"";
                     competitors["Llamasoft", "AnyLogic", "FlexSim"],;"";
-                    competitiveAdvantage: "AI-powered optimization, real-time visibility, and comprehensive risk management";,
-},;
+                    competitiveAdvantage: "AI-powered optimization, real-time visibility, and comprehensive risk management"},;
                 {}
 ";
 "";
@@ -164,10 +158,8 @@ const InnovativeServices2025 = () => {}
                     marketPosition: "Leading healthcare AI for hospitals and medical institutions","";
                     useCases["Hospitals", "Medical clinics", "Research institutions", "Pharmaceutical companies"],;"";
                     competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare"],;"";
-                    competitiveAdvantage: "Advanced medical AI, comprehensive healthcare integration, and regulatory compliance";,
-}
-            ];,
-},;
+                    competitiveAdvantage: "Advanced medical AI, comprehensive healthcare integration, and regulatory compliance"}
+            ]},;
         {}
 ";
 "";
@@ -197,8 +189,7 @@ const InnovativeServices2025 = () => {}
                     marketPosition: "Premier quantum computing consulting for Fortune 500 companies","";
                     useCases["Financial services", "Pharmaceutical", "Logistics", "Research institutions"],;"";
                     competitors["McKinsey", "BCG", "Deloitte"],;"";
-                    competitiveAdvantage: "Deep quantum expertise, practical implementation experience, and strategic business focus";,
-},;
+                    competitiveAdvantage: "Deep quantum expertise, practical implementation experience, and strategic business focus"},;
                 {}
 ";
 "";
@@ -222,8 +213,7 @@ const InnovativeServices2025 = () => {}
                     marketPosition: "Leading metaverse development for brands and enterprises","";
                     useCases["Brand marketing", "Virtual events", "Training and education", "Entertainment"],;"";
                     competitors["Meta", "Microsoft", "Unity"],;"";
-                    competitiveAdvantage: "Custom development, rapid prototyping, and comprehensive platform solutions";,
-},;
+                    competitiveAdvantage: "Custom development, rapid prototyping, and comprehensive platform solutions"},;
                 {}
 ";
 "";
@@ -247,10 +237,8 @@ const InnovativeServices2025 = () => {}
                     marketPosition: "Expert Web3 development for fintech and innovative businesses","";
                     useCases["Financial services", "Gaming", "Art and collectibles", "Supply chain"],;"";
                     competitors["Consensys", "Chainlink Labs", "Alchemy"],;"";
-                    competitiveAdvantage: "Full-stack Web3 development, rapid deployment, and comprehensive blockchain expertise";,
-}
-            ];,
-},;
+                    competitiveAdvantage: "Full-stack Web3 development, rapid deployment, and comprehensive blockchain expertise"}
+            ]},;
         {}
 ";
 "";
@@ -280,8 +268,7 @@ const InnovativeServices2025 = () => {}
                     marketPosition: "Leading zero trust implementation for enterprise organizations","";
                     useCases["Financial services", "Healthcare", "Government", "Technology companies"],;"";
                     competitors["Palo Alto Networks", "Cisco", "Microsoft"],;"";
-                    competitiveAdvantage: "Comprehensive implementation, rapid deployment, and ongoing optimization support";,
-},;
+                    competitiveAdvantage: "Comprehensive implementation, rapid deployment, and ongoing optimization support"},;
                 {}
 ";
 "";
@@ -305,10 +292,8 @@ const InnovativeServices2025 = () => {}
                     marketPosition: "Advanced AI cybersecurity for high-security environments","";
                     useCases["Critical infrastructure", "Financial institutions", "Healthcare", "Government"],;"";
                     competitors["Darktrace", "CrowdStrike", "SentinelOne"],;"";
-                    competitiveAdvantage: "Advanced AI algorithms, real-time protection, and comprehensive threat intelligence";,
-}
-            ];,
-}";
+                    competitiveAdvantage: "Advanced AI algorithms, real-time protection, and comprehensive threat intelligence"}
+            ]}";
     ];"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">";
       {/* Hero Section */}"";
@@ -443,16 +428,12 @@ const InnovativeServices2025 = () => {}
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default InnovativeServices2025;
-;
 
-export { InnovativeServices2025 };
-;
-export { InnovativeServices2025 };
-;
-export { InnovativeServices2025 };
-;
-export { InnovativeServices2025 };
-;
-export { InnovativeServices2025 };
+
+export { InnovativeServices2025 }
+export { InnovativeServices2025 }
+export { InnovativeServices2025 }
+export { InnovativeServices2025 }
+export { InnovativeServices2025 }

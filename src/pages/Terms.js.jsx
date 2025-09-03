@@ -17,14 +17,10 @@ export {};
       </main>;
       <Footer />;
     </>)}
-;
 
-export { Terms };
-;
-export { Terms };
-;
-export { Terms };
-;
-export { Terms };
-;
-export { Terms };
+
+export { Terms }
+export { Terms }
+export { Terms }
+export { Terms }
+export { Terms }

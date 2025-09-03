@@ -16,8 +16,7 @@ const TalentDirectory = () => {}
             skills["Machine Learning", "Python", "TensorFlow", "Computer Vision"],;
             rating: 4.9,";
             projects: 24,"";
-            avatar: "👩‍💻";,
-},;
+            avatar: "👩‍💻"},;
         {}
 ";
             id: 2,"";
@@ -28,8 +27,7 @@ const TalentDirectory = () => {}
             skills["AWS", "Kubernetes", "Terraform", "DevOps"],;
             rating: 4.8,";
             projects: 31,"";
-            avatar: "👨‍💻";,
-},;
+            avatar: "👨‍💻"},;
         {}
 ";
             id: 3,"";
@@ -40,8 +38,7 @@ const TalentDirectory = () => {}
             skills["Penetration Testing", "SOC", "Compliance", "Incident Response"],;
             rating: 4.9,";
             projects: 18,"";
-            avatar: "👩‍💻";,
-},;
+            avatar: "👩‍💻"},;
         {}
 ";
             id: 4,"";
@@ -52,8 +49,7 @@ const TalentDirectory = () => {}
             skills["Data Analytics", "SQL", "R", "Tableau"],;
             rating: 4.7,";
             projects: 22,"";
-            avatar: "👨‍💻";,
-},;
+            avatar: "👨‍💻"},;
         {}
 ";
             id: 5,"";
@@ -64,8 +60,7 @@ const TalentDirectory = () => {}
             skills["React", "Node.js", "Python", "MongoDB"],;
             rating: 4.8,";
             projects: 19,"";
-            avatar: "👩‍💻";,
-},;
+            avatar: "👩‍💻"},;
         {}
 ";
             id: 6,"";
@@ -214,17 +209,12 @@ const TalentDirectory = () => {}
           </div>;
         </div>;
       </section>;
-    </div>)};
-export default TalentDirectory;,
-}}
-;
-export { TalentDirectory };
-;
-export { TalentDirectory };
-;
-export { TalentDirectory };
-;
-export { TalentDirectory };
-;
-export { TalentDirectory };
+    </div>)}
+export default TalentDirectory}}
+
+export { TalentDirectory }
+export { TalentDirectory }
+export { TalentDirectory }
+export { TalentDirectory }
+export { TalentDirectory }
 ))

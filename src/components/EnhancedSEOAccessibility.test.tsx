@@ -9,7 +9,5 @@ describe(&apos;EnhancedSEOAccessibility&apos, () => {};
 }
     // comment;
     render(<EnhancedSEOAccessibility / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

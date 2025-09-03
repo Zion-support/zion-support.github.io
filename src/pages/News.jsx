@@ -12,7 +12,7 @@ import {}
   TrendingUp,'';
   Award,''';
   Globe} from 'lucide-react';
-;
+
 const News = () => {}
   return <div>Component</div>;
 };
@@ -31,7 +31,7 @@ const News = () => {}
   const timeframes = ['';
     'All Time',Last 24 Hours',Last Week',Last Month',Last 3 Months',Last Year';
   ];
-;
+
   const newsItems = [];
     {}
       id: 1,';
@@ -93,16 +93,15 @@ const News = () => {}
       image: '/images/news/market-trends.jpg',;
       featured: false}
   ];
-;
+
   const filteredNews = newsItems.filter(item => {}
     const matchesSearch =;
       item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       item.excerpt.toLowerCase().includes(searchTerm.toLowerCase());';
     const matchesCategory ='';
       selectedCategory === 'All' || item.category === selectedCategory;
-    return matchesSearch && matchesCategory;,
-}) ;
-;
+    return matchesSearch && matchesCategory}) ;
+
   return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">"";
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">"";
@@ -175,7 +174,7 @@ const News = () => {}
                   ))}
               </div>;
             </div>) }
-;
+
           {/* All News */}";
           <div>"";
             <h2 className="text-2xl font-bold mb-8 text-center">Latest News</h2>"";
@@ -213,17 +212,11 @@ const News = () => {}
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default News;
-;
-export { News };
-;
-export { News };
-;
-export { News };
-;
-export { News };
-;
-export { News };
+
+export { News }
+export { News }
+export { News }
+export { News }
+export { News }

@@ -36,7 +36,7 @@ export default function Page() {};
       newWebhook.eventTypes, ;
       newWebhook.secret || undefined;
     );
-    ;
+
     // Reset form;
     setNewWebhook({};
 });,
@@ -60,7 +60,7 @@ export default function Page() {};
                 onChange={(e) => setNewWebhook({...newWebhook, name: e.target.value})}
               />;
             </div>;
-            ;
+
             <div className="space-y-2">;
               <Label htmlFor="webhook-url">URL</Label>;
               <div>Broken JSX</div>
@@ -68,7 +68,7 @@ export default function Page() {};
               />;
             </div>;
           </div>;
-          ;
+
           <div className="space-y-2">;
             <Label>Events</Label>;
             <div className="flex flex-wrap gap-2 mb-2">;
@@ -99,7 +99,7 @@ export default function Page() {};
               </Button>;
             </div>;
           </div>;
-          ;
+
           <div className="space-y-2">;
             <Label htmlFor="webhook-secret">Secret(optional)</Label>;
             <div>Broken JSX</div>
@@ -115,7 +115,7 @@ export default function Page() {};
           </Button>;
         </CardFooter>;
       </Card>;
-      ;
+
       <div>;
         <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>;
         ;
@@ -214,5 +214,4 @@ export default function Page() {};
         )}
       </div>;
     </div>;
-  );,
-}
+  )}

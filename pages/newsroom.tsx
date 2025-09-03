@@ -11,7 +11,7 @@ const Newsroom: React.FC = () => {};
     { id: 'awards', name: 'Awards & Recognition', count: 12 },;
     { id: 'thought-leadership', name: 'Thought Leadership', count: 24 },;
   ];
-;
+
   const featuredNews = [;
     {};
 },;
@@ -20,7 +20,7 @@ const Newsroom: React.FC = () => {};
     {};
 },;
   ];
-;
+
   const recentNews = [;
     {};
 },;
@@ -35,7 +35,7 @@ const Newsroom: React.FC = () => {};
     {};
 },;
   ];
-;
+
   const pressReleases = [;
     {};
 },;
@@ -262,7 +262,5 @@ const Newsroom: React.FC = () => {};
         </div>;
       </div>;
     </div>;
-  );,
-};
-;
+  )}
 export default Newsroom;

@@ -23,10 +23,9 @@ export default function InnovativeAIServicesShowcase(...args: unknown[]): unknow
 },;
     {};
       pricing: { starter: '$299/mo', professional: '$799/mo', enterprise: '$1,999/mo' },;
-      route: '/services/ai-supply-chain-optimization';,
-};
+      route: '/services/ai-supply-chain-optimization'}
   ];
-;
+
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;
       <div>Broken JSX</div>
@@ -171,15 +170,10 @@ export default function InnovativeAIServicesShowcase(...args: unknown[]): unknow
         </div>;
       </section>;
     </div>;
-  );,
-}}}
-;
-export { InnovativeAIServicesShowcase };
-;
-export { InnovativeAIServicesShowcase };
-;
-export { InnovativeAIServicesShowcase };
-;
-export { InnovativeAIServicesShowcase };
-;
-export { InnovativeAIServicesShowcase };
+  )}}}
+
+export { InnovativeAIServicesShowcase }
+export { InnovativeAIServicesShowcase }
+export { InnovativeAIServicesShowcase }
+export { InnovativeAIServicesShowcase }
+export { InnovativeAIServicesShowcase }

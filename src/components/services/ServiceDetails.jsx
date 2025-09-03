@@ -8,4 +8,4 @@ export {};
         const dataCenters = {}
 ";
 "";
-export { Page };
+export { Page }

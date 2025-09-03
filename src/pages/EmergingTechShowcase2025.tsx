@@ -13,9 +13,9 @@ export default function Page() {};
     { id: 'Autonomous Systems', name: 'Autonomous', icon: Car, color: 'from - gray - 500 to - slate - 600' },;
     { id: 'Biocomputing', name: 'Biocomputing', icon: Cpu, color: 'from - lime - 500 to - green - 600' },;
     { id: 'Nanotechnology', name: 'Nanotechnology', icon: Microscope, color: 'from - amber - 500 to - yellow-600' },;
-    { id: 'Advanced Robotics', name: 'Robotics', icon: Bot, color: 'from - slate - 500 to - gray - 600' };
+    { id: 'Advanced Robotics', name: 'Robotics', icon: Bot, color: 'from - slate - 500 to - gray - 600' }
   ];
-;
+
     const filteredServices = selectedCategory === 'all';
     ? EMERGING_TECH_SERVICES_2025;
     : EMERGING_TECH_SERVICES_2025.filter(service => service.category === selectedCategory) ;
@@ -25,7 +25,6 @@ export default function Page() {};
     if(autoPlay) {};
 }, 5000) ;
       return () => clearInterval(interval) ;
-;,
 }, [autoPlay, filteredServices.length]) ;
 ;
   const getCategoryIcon = (category: string) => {};
@@ -34,7 +33,7 @@ export default function Page() {};
           <div  className="grid md: grid - cols - 2 lg:grid - cols - 3 gap-8">;
             {};
                 onClick={ () => setSelectedService(service.id) }
-;
+
                 <div  className="flex items - center gap-3 mb-4">;
                   <div  className={`p - 3 rounded-xl bg-gradient - to - r ${getCategoryColor(service.category) }`}>;
                     {React.createElement(getCategoryIcon (service.category) , { className: "w-6 h-6 text-white" }) }
@@ -193,9 +192,8 @@ export default function Page() {};
                         Close;
                       </motion.button>;
                     </div>;
-                  </div>;) ;,
-}) () }
+                  </div>;) }) () }
             </motion.div>;
           </motion.div>) }
       </AnimatePresence>;
-    </div>) };
+    </div>) }

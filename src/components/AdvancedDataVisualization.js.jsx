@@ -258,7 +258,7 @@ export function AdvancedDataVisualization() {};
           <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg">;
             {renderChart()}
           </div>;
-          ;
+
           {/* Data Summary */}";
           <div className="mt-6 grid grid-cols-3 gap-4">";
             <div className="bg-zion-cyan/10 p-4 rounded-lg border border-zion-cyan/20">";

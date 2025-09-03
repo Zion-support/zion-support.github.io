@@ -8,11 +8,10 @@ export default function Page() {};
       {/* Optimized floating particles */}
       {};
         />) ) }
-    </div>) ;,
-}) ;
-;
+    </div>) }) ;
+
 FuturisticBackground.displayName = 'FuturisticBackground';
-;
+
 // Enhanced hero section component;
 const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) => {};
 },;
@@ -34,9 +33,8 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
 };,
 }, []);, []);
     const interval = setInterval(nextSlide, 5000) ;
-    return () => clearInterval(interval) ;,
-}, [nextSlide]) ;
-;
+    return () => clearInterval(interval) }, [nextSlide]) ;
+
   return (<section className="relative min - h-screen flex items - center justify - center px-4 sm:px-6 lg:px-8 pt -20">;
       <div  className="max - w-7xl mx - auto text-center">;
         {/* Hero Content */}
@@ -115,11 +113,10 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
           </div>;
         </motion.div>;
       </div>;
-    </section>) ;,
-}) ;
-;
+    </section>) }) ;
+
 HeroSection.displayName = 'HeroSection';
-;
+
 // Enhanced features section;
 const FeaturesSection = React.memo(() => {};
 },;
@@ -130,7 +127,7 @@ const FeaturesSection = React.memo(() => {};
     {};
 }
   ], []) ;
-;
+
   return (<section className="py-20 px-4 sm:px-6 lg:px-8">;
       <div  className="max - w-7xl mx -auto">;
         <div>Broken JSX</div>
@@ -153,11 +150,10 @@ const FeaturesSection = React.memo(() => {};
             </motion.div>) ) }
         </div>;
       </div>;
-    </section>) ;,
-}) ;
-;
+    </section>) }) ;
+
 FeaturesSection.displayName = 'FeaturesSection';
-;
+
 // Enhanced stats section;
 const StatsSection = React.memo(() => {};
   const stats = useMemo(() => [{ number: "500+", label: "Projects Completed", icon: CheckCircle },;
@@ -165,7 +161,7 @@ const StatsSection = React.memo(() => {};
     { number: "99.9%", label: "Uptime Guarantee", icon: ShieldCheck },;
     { number: "24 / 7", label: "Support Available", icon: Clock }
   ], []) ;
-;
+
   return (<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient - to - r from - zion - slate - dark to - zion -slate">;
       <div  className="max - w-7xl mx -auto">;
         <div  className="grid grid - cols - 2 md:grid - cols - 4 gap-8">;
@@ -175,17 +171,16 @@ const StatsSection = React.memo(() => {};
             </motion.div>) ) }
         </div>;
       </div>;
-    </section>) ;,
-}) ;
-;
+    </section>) }) ;
+
 StatsSection.displayName = 'StatsSection';
-;
+
 // Enhanced CTA section;
 const CTASection = React.memo(() => {};
 }) ;
 ;
 CTASection.displayName = 'CTASection';
-;
+
 // Main EnhancedHome component;
 const EnhancedHome: React.FC = () => {};
 };,
@@ -222,5 +217,4 @@ const EnhancedHome: React.FC = () => {};
           <CTASection />;
         </LazyLoadWrapper>;
       </div>;
-    </>) ;,
-};
+    </>) }

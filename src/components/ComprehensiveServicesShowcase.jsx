@@ -105,27 +105,25 @@ id: &apos,micro-saas&apos,"&apos;&apos,;
     icon: &apos,&apos, <Brain className="&apos,w-6" h-6&apos,       />,;
     color: &apos,from-blue-600 to-cyan-600&apos,;
     services: revolutionary2027AIInnovationServices}
-;
+
 ];&apos;&apos;
 export function ComprehensiveServicesShowcase() {}";
   return null;
 }
 
-  const [selectedCategory, setSelectedCategory] = useState("micro-saas");,
-}
-  const [selectedService, setSelectedService] = useState(null);,
-}
+  const [selectedCategory, setSelectedCategory] = useState("micro-saas")}
+  const [selectedService, setSelectedService] = useState(null)}
   const containerVariants = {}
-;
+
     hidden: { opacity: 0 },;
     visible: {}
-;
+
       opacity: 1,;
 transition: {}
-;
+
         staggerChildren: 0.1,;
 delayChildren: 0.2}
-;
+
 &apos;
 &apos;&apos;&apos;&apos;
   const [selectedCategory, setSelectedCategory] = useState(&apos;micro-saas&apos);&apos;
@@ -143,15 +141,14 @@ delayChildren: 0.2}
     name: "AI Innovation Services", "";
     icon: <Brain className="w-6 h-6"  />,",";
     color: "from - blue-600 to-cyan-600", services: revolutionary2027AIInnovationServices}
-;
+
 ],;
 "",;
     hidden: { opacity: 0 }, visible: {}
-;
+
       opacity: 1,        staggerChildren: 0.1, delayChildren: 0.2}
-;,
 }
-;
+
   const itemVariants = {}
 ;
   hidden: {};
@@ -169,7 +166,7 @@ duration: 0.5,;
         ease: &apos,easeOut&apos,&apos,"}";
         duration: 0.5, "";
         ease: "easeOut"""}
-;
+
   const cardVariants = {}
 ;
   hidden: {};
@@ -187,11 +184,10 @@ duration: 0.5,;
         {/* comment */}&apos;&apos,&apos;&apos,;
         <div>Broken JSX</div>
           className="&apos;text-center" mb-16&apos;&apos>;
-        duration: 0.4, "";,
-}";
+        duration: 0.4, ""}";
   return ("";
     <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"";
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",,;
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",;
         {/* comment */}"";
         <div>Broken JSX</div>
   {};
@@ -220,7 +216,7 @@ y: 0}}">;
               <p className="text - zion-cyan-light">,;
                 <strong>Contact:</strong> +1 302 464 0950 | kleber@ziontechgroup.com",;
               </p>"";";
-              <p className="text-zion-cyan-light text-sm">,,;
+              <p className="text-zion-cyan-light text-sm">,;
                 364 E Main St STE 1008 Middletown DE 19709,;
             </div>,";
         </motion.div> {/* comment */}"";";
@@ -285,22 +281,22 @@ designed to transform your business and drive exponential growth.;
         >{};
               onClick="{()" => setSelectedCategory(category.id)}";
               className="{"flex" items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${}
-;
+
 ";
 """;
 """;
                 selectedCategory = == category.id""""""";
                   ? "bg-gradient-to-r ${category.color} text-white shadow-lg""""""";
                   : "bg-zion-slate-dark text-zion-cyan-light hover:bg-zion-slate hover:text-zion-cyan border border-zion-cyan/30"""""}"}
-;
+
             >{category.icon}
-;
+
 "&apos;";
 "&apos;"&apos;";
                 selectedCategory === category.id"&apos;"&apos;"&apos;";
                   ? "bg-gradient-to-r ${category.color} text-white shadow-lg"&apos;&apos;"&apos;"&apos;";
                   : &apos;bg-zion-slate-dark text-zion-cyan-light hover:bg-zion-slate hove,r: text-zion-cyan border border-zion-cyan/30&apos,""""}"}
-;
+
             >{category.icon}&apos;&apos;
               <span>{category.name}</span>;
             </button>) ) }";
@@ -312,7 +308,7 @@ designed to transform your business and drive exponential growth.;
               className="&apos;group" cursor-pointer&apos;&apos;";
               variants = "{itemVariants}
               onClick="{" () => setSelectedService (service) }
-;
+
             >&apos;&apos,&apos;&apos,;
               <div>Broken JSX</div>
                   boxShadow: &apos,0 20px 40px rgba(0, 0, 0,&apos;&apos,>;
@@ -390,7 +386,7 @@ designed to transform your business and drive exponential growth.;
                 <h3 className="text - xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors"> {service.name}",;
                 </h3>"";";
                 <p className = "text-zion-cyan-light text-sm mb-4 line-clamp-2"> {service.tagline}
-;
+
 ""{/* comment */}"";";
                 <div className="flex items-center justify-between mb-4">"";";
                   <div className="flex items-center space-x-2">"";";
@@ -406,7 +402,7 @@ designed to transform your business and drive exponential growth.;
                   <div className = "flex flex - wrap gap-2"> {};
                         key={index}"";";
                         className = "bg-zion-slate/50 text-zion-cyan-light text-xs px-2 py-1 rounded-full ">{feature}
-;
+
                       </span>;
                     ))}""{};
                         +{service.features.length-3} more,;
@@ -498,7 +494,7 @@ delay: 0.4}}"">"";
                 Schedule Consultation,;
               <a"">;
                 href="tel: +13024640950",";
-                className="bg-zion-slate-dark text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate hover:border-zion-cyan/50 transition-all duration-300 ">,,;
+                className="bg-zion-slate-dark text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate hover:border-zion-cyan/50 transition-all duration-300 ">,;
                 Call Now: +1 302 464 0950,;
               </a>,;
       </div> {/* comment */}";
@@ -536,7 +532,7 @@ delay: 0.4}}"">"";
                 Call Now: +1 302 464 0950,;
               </a>,;
       {/* comment */}
-;
+
       <AnimatePresence>;
         {selectedService && (&apos;&apos,&apos}&apos;";
             className="&apos;fixed" inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4&apos;&apos {};
@@ -553,14 +549,14 @@ opacity: 0}}";
 ;
   {};
 opacity: 1}}
-;
+
               exit = {}";
               onClick="{(e)" => e.stopPropagation()}"">"";";
               <div className="flex items-start justify-between mb-6">"";";
                 <div className="text - 6xl">{selectedService.icon}</div>,;
                 <div>Broken JSX</div>
                   onClick="{()" => setSelectedService(null)}"";";
-                  className="text-zion-cyan-light hover: text-white transition-colors ">,,;
+                  className="text-zion-cyan-light hover: text-white transition-colors ">,;
                   ✕,;
                 </button>,";
               <h2 className="text-3xl font-bold text-white mb-4">{selectedService.name}</h2>"";";
@@ -574,7 +570,7 @@ opacity: 1}}
                         <span className="text-zion-cyan-light">{feature}</span>;
                       </li>;
                     ))}
-;
+
                   </ul>;";
                   <h3 className="text-xl font-semibold text-white mb-4">Service Details</h3>"";";
                   <div className="space-y-3">"";";
@@ -600,7 +596,7 @@ opacity: 1}}
                     className = "bg-zion-slate text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate-dark transition-all duration-300 text-center ">,;
                     Call for Consultation,;
           </motion.div>) }
-;
+
       </AnimatePresence>;
     </section>;
   )}
@@ -685,7 +681,7 @@ opacity: 1}}
                     <h4 className="text-lg font-semibold text-white mb-2">ROI</h4>"";
                     <p className="text-zion-cyan-light text-sm">{selectedService.roi}</p>";
               <div className="mt-8 pt-6 border-t border-zion-cyan/20">"";
-                <div className="flex flex-col sm: flex-row gap-4 justify-center">",,;
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">",;
                     to={selectedService.link}"""";";
                     className = "bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover: shadow-lg transition-all duration-300 text-center ">,;
                     Get Started Now,";

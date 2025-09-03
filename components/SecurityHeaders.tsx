@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react;
-;
-const SecurityHeaders: React.FC = () => {;
-  useEffect(() => {;
+
+const SecurityHeaders: React.FC = () => {
+  useEffect(() => {
     // Add security headers via meta tags;
-    const addSecurityHeaders = () => {;
+    const addSecurityHeaders = () => {
       const securityMetaTags = [;
         { name: 'referrer',;
     content: 'strict-origin-when-cross-origin' },'        { name: 'x-content-type-options',;
@@ -14,34 +14,29 @@ const SecurityHeaders: React.FC = () => {;
     content: "default-src 'self;
  script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //fonts.googleapis.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https: //fonts.googleapis.com; font-src 'self' https: //fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https: //api.ziontechgroup.com; frame-ancestors 'none;
 " }"      ];";
-      securityMetaTags.forEach(tag => {;
+      securityMetaTags.forEach(tag => {
         const meta = document.createElement('meta');
 '        meta.httpEquiv = tag.name;'        meta.content = tag.content;document.head.appendChild(meta);
-;,
-});,
-};
-;
+})}
     // Add Content Security Policy for inline styles;
-const addCSPForInlineStyles = () => {;
+const addCSPForInlineStyles = () => {
       const style = document.createElement('style');
 '      style.setAttribute('nonce', 'csp-nonce-' + Math.random().toString(36).substr(2, 9));'      document.head.appendChild(style);
 '    };// Initialize security headers;
     addSecurityHeaders();
-;
-    addCSPForInlineStyles();,
-}, []);
-;
+
+    addCSPForInlineStyles()}, []);
+
       securityMetaTags.forEach(tag: => {";
-        const meta = document.createElement("meta"),,;
+        const meta = document.createElement("meta"),;
         meta.httpEquiv: = tag.name,;
         meta.content: = tag.content,;
         document.head.appendChild(meta)})}
-;
+
     // comment;
 const addCSPForInlineStyles = () => {";
       const style = document.createElement("style"),";
-      style.setAttribute("nonce", "csp-nonce-" + Math.random().toString(36).substr(2, 9));,
-}
+      style.setAttribute("nonce", "csp-nonce-" + Math.random().toString(36).substr(2, 9))}
       document.head.appendChild(style)}";
       const securityMetaTags = []"      securityMetaTags.forEach(tag: => {",;
         const meta = document.createElement(";
@@ -50,28 +45,25 @@ const addCSPForInlineStyles = () => {";
     // comment;
       const securityMetaTags = []"      securityMetaTags.forEach(tag = > {";
   "meta")"        meta.httpEquiv = tag.name"        meta.content = tag.content;document.head.appendChild(meta)})}
-;
+
     // comment;
       const style = document.createElement(";
   "style")"      style.setAttribute(",";
   "nonce",";
   "csp-nonce-" + Math.random().toString(36).substr(2, 9))"      document.head.appendChild(style)"    }// comment;
-    addCSPForInlineStyles()}, []);,
-}
+    addCSPForInlineStyles()}, [])}
   return: null}
-;
+
 export: default SecurityHeaders";
   "style")"      style.setAttribute(",;
   "nonce", "csp-nonce-" + Math.random().toString(36).substr(2, 9))"      document.head.appendChild(style)"    }// comment  return null}
-;
+
 export default SecurityHeaders,;
 return null}
-;
+
 export default SecurityHeaders;
-    addCSP();,
-}
-    addNonceToStyles()}, []);,
-}
+    addCSP()}
+    addNonceToStyles()}, [])}
   return (;
 <Head>;
       {/* comment */}";
@@ -80,9 +72,9 @@ export default SecurityHeaders;
       <meta httpEquiv="X-XSS-Protection" content="1; mode = block"  />";
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin"  />";
       <meta httpEquiv="Permissions-Policy" content="camera="()," microphone="()," geolocation=()"  />;
-      ;
+
       {/* comment */}";
       <meta httpEquiv="Content-Security-Policy" "">;
         content="default-src "self"; script-src "self" "unsafe-inline" "unsafe-eval"; style-src "self" "unsafe-inline"; img-src "self" data: https:, font-src "self" https:// comment;
     </Head>  )}
-;
+

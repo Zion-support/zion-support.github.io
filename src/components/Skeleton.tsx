@@ -2,15 +2,15 @@ import React from "react";
 import { cn } from "@/lib/utils";
 interface SkeletonProps {};
   className?: string  lines?: number}
-;
+
   );
 export default function Skeleton() {};
   return null;
 }
           className)}
-;
+
      />    )}
-;
+
   return (";
     <div className="space-y-2">;
       {Array.from({ length: lines }).map((_, i) => (;
@@ -44,10 +44,10 @@ interface SkeletonProps {};
       <div>Broken JSX</div>
           className>;
         )}
-;
+
      />;
     )}
-;
+
   return (";
     <div className = "space-y-2">;
       {Array.from({ length: lines   }).map((_, i) => (;
@@ -57,12 +57,12 @@ interface SkeletonProps {};
         <div>Broken JSX</div>
           className="{};
             i === lines - 1 ? &apos;w-3/4&apos; : &apos;w-full&apos)}
-;
+
        />;
       ))}&apos;
     </div>;
   )}
-;
+
     return (";
     <div>Broken JSX</div>
       /"">;
@@ -79,10 +79,10 @@ interface SkeletonProps {};
       <div>Broken JSX</div>
           className>;
         )}
-;
+
      />;
     )}
-;
+
   return (";
     <div className="space-y-2">";
       <div>Broken JSX</div>
@@ -96,13 +96,13 @@ interface SkeletonProps {};
             "animate - pulse bg-gray-200 rounded h-4",>;
             i === lines - 1 ? "w-3/4" : "w-full>;
           )}
-;
+
        />;
       ))}
-;
+
     </div>;
   )}
-;
+
        />;
       ))}";
     </div>;

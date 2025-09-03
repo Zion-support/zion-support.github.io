@@ -163,16 +163,11 @@ export {};
         </div>;
       </main>;
     </div>;
-  );,
-}
-;
+  )}
 
-export { Cookies };
-;
-export { Cookies };
-;
-export { Cookies };
-;
-export { Cookies };
-;
-export { Cookies };
+
+export { Cookies }
+export { Cookies }
+export { Cookies }
+export { Cookies }
+export { Cookies }

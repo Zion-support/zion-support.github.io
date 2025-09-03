@@ -23,8 +23,7 @@ const ServiceInnovationHub = () => {}
             title: 'Artificial Intelligence',';
             description: 'Advanced AI consciousness, governance, and neural network optimization',';
             trends['AI Consciousness',AI Governance',Neural Optimization'],;';
-            investment: '$300B+';,
-},;
+            investment: '$300B+'},;
         {}
 ";
 "";
@@ -32,8 +31,7 @@ const ServiceInnovationHub = () => {}
             title: 'Space Technology',';
             description: 'Space mining, propulsion, habitats, and debris cleanup systems',';
             trends['Space Mining',Space Propulsion',Space Habitats'],;';
-            investment: '$200B+';,
-},;
+            investment: '$200B+'},;
         {}
 ";
 "";
@@ -41,8 +39,7 @@ const ServiceInnovationHub = () => {}
             title: 'Biotech AI',';
             description: 'Synthetic biology, brain-computer interfaces, and AI-powered drug discovery',';
             trends['Synthetic Biology',Brain-Computer Interfaces',AI Drug Discovery'],;';
-            investment: '$100B+';,
-},;
+            investment: '$100B+'},;
         {}
 ";
 "";
@@ -50,8 +47,7 @@ const ServiceInnovationHub = () => {}
             title: 'Green Technology',';
             description: 'Fusion energy, climate engineering, and sustainable technology solutions',';
             trends['Fusion Energy',Climate Engineering',Sustainable Tech'],;';
-            investment: '$500B+';,
-},;
+            investment: '$500B+'},;
         {}
 ";
 "";
@@ -70,8 +66,7 @@ const ServiceInnovationHub = () => {}
             title: 'Quantum Revolution',''';
             description: 'Quantum computing will transform industries from finance to pharmaceuticals within the next decade',''';
             impact: 'High',''';
-            timeline: '2025-2035';,
-},;
+            timeline: '2025-2035'},;
         {}
 ';
 '';
@@ -79,8 +74,7 @@ const ServiceInnovationHub = () => {}
             title: 'AI Consciousness',''';
             description: 'The development of self-aware AI systems will create new ethical and technological paradigms',''';
             impact: 'High',''';
-            timeline: '2030-2040';,
-},;
+            timeline: '2030-2040'},;
         {}
 ';
 '';
@@ -88,8 +82,7 @@ const ServiceInnovationHub = () => {}
             title: 'Space Economy',''';
             description: 'Space mining and colonization will create trillion-dollar economic opportunities',''';
             impact: 'High',''';
-            timeline: '2030-2060';,
-},;
+            timeline: '2030-2060'},;
         {}
 ';
             title: 'Synthetic Biology',';
@@ -267,16 +260,14 @@ const ServiceInnovationHub = () => {}
               <div>Broken JSX</div>
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Leadership Consultation',_blank');
 
-";,
-}>"";
+"}>"";
                 <Rocket className="w-5 h-5 mr-2"/>;
                 Lead Innovation";
               </Button>"";
               <div>Broken JSX</div>
   () => window.open('tel:+13024640950',_blank');
 
-";,
-}>"";
+"}>"";
                 <Shield className="w-5 h-5 mr-2"/>;
                 Speak with an Expert;
               </Button>;
@@ -284,17 +275,12 @@ const ServiceInnovationHub = () => {}
           </motion.div>;
         </div>;
       </section>;
-    </div>)};
-export default ServiceInnovationHub;,
-}}}
-;
-export { ServiceInnovationHub };
-;
-export { ServiceInnovationHub };
-;
-export { ServiceInnovationHub };
-;
-export { ServiceInnovationHub };
-;
-export { ServiceInnovationHub };
+    </div>)}
+export default ServiceInnovationHub}}}
+
+export { ServiceInnovationHub }
+export { ServiceInnovationHub }
+export { ServiceInnovationHub }
+export { ServiceInnovationHub }
+export { ServiceInnovationHub }
 ))))

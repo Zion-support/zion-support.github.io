@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface EmergingTechSpaceService2025 {;
+export interface EmergingTechSpaceService2025 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface EmergingTechSpaceService2025 {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface EmergingTechSpaceService2025 {;
   rating: number;
 export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [;
   // Space Technology & Mining;
-  {;
+  {
     id: "quantum-space-mining-platform",;
     name: "Quantum Space Mining Platform",;
     tagline: "Revolutionary space resource exploration and mining",;
@@ -76,20 +76,18 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [;
     marketSize: "$3.8B space mining market",;
     growthRate: "400% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full-stack quantum space mining platform with satellite integration, real-time monitoring, and comprehensive mining optimization. Includes custom mining strategy development and regulatory compliance.",;
     launchDate: "2025-01-30",;
     customers: 25,;
     rating: 4.9,;
-    reviews: 18;,;,
-},;
-  {;
+    reviews: 18},;
+  {
     id: "quantum-space-communication-network",;
     name: "Quantum Space Communication Network",;
     tagline: "Ultra-secure quantum communication across space",;
@@ -127,21 +125,19 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [;
     marketSize: "$12B space communication market",;
     growthRate: "280% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade quantum space communication network with satellite integration, ground station support, and comprehensive security. Includes custom communication protocols and mission support.",;
     launchDate: "2025-02-05",;
     customers: 45,;
     rating: 4.8,;
-    reviews: 32;,;,
-},;
+    reviews: 32},;
   // Advanced Space Technology;
-  {;
+  {
     id: "space-colony-automation-platform",;
     name: "Space Colony Automation Platform",;
     tagline: "AI-powered automation for space colonies and habitats",;
@@ -179,21 +175,19 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [;
     marketSize: "$2.5B space habitat market",;
     growthRate: "350% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive space colony automation platform with life support integration, robotic systems, and environmental controls. Includes custom automation development and colony planning services.",;
     launchDate: "2025-02-15",;
     customers: 15,;
     rating: 4.7,;
-    reviews: 12;,;,
-},;
+    reviews: 12},;
   // Emerging Space Technologies;
-  {;
+  {
     id: "quantum-space-propulsion-system",;
     name: "Quantum Space Propulsion System",;
     tagline: "Revolutionary quantum-powered space propulsion technology",;
@@ -231,21 +225,19 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [;
     marketSize: "$8B space propulsion market",;
     growthRate: "250% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum space propulsion system with spacecraft integration, mission planning, and comprehensive monitoring. Includes custom propulsion design and mission optimization services.",;
     launchDate: "2025-02-20",;
     customers: 8,;
     rating: 4.9,;
-    reviews: 6;,;,
-},;
+    reviews: 6},;
   // Space Research & Development;
-  {;
+  {
     id: "space-research-automation-platform",;
     name: "Space Research Automation Platform",;
     tagline: "AI-powered automation for space research and development",;
@@ -283,12 +275,11 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [;
     marketSize: "$5B space research market",;
     growthRate: "200% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive space research automation platform with data collection, analysis, and collaboration tools. Includes custom research workflow development and integration services.",;
     launchDate: "2025-02-25",;

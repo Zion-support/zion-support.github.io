@@ -23,16 +23,12 @@ export {};
           <CategoriesSection showTitle={false} />;
         </div>;
       </div>;
-      ;
-    </>)}
-;
 
-export { Categories };
-;
-export { Categories };
-;
-export { Categories };
-;
-export { Categories };
-;
-export { Categories };
+    </>)}
+
+
+export { Categories }
+export { Categories }
+export { Categories }
+export { Categories }
+export { Categories }

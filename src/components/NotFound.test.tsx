@@ -9,7 +9,5 @@ describe(&apos;NotFound&apos, () => {};
 }
     // comment;
     render(<NotFound / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

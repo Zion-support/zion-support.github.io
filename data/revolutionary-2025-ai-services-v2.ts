@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface RevolutionaryAI2025ServiceV2 {;
+export interface RevolutionaryAI2025ServiceV2 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface RevolutionaryAI2025ServiceV2 {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface RevolutionaryAI2025ServiceV2 {;
   rating: number;
 export const revolutionaryAI2025ServicesV2: RevolutionaryAI2025ServiceV2[] = [;
   // AI Consciousness & Advanced Intelligence;
-  {;
+  {
     id: "ai-consciousness-simulator-pro",;
     name: "AI Consciousness Simulator Pro",;
     tagline: "Simulate human-like consciousness in AI systems",;
@@ -76,20 +76,18 @@ export const revolutionaryAI2025ServicesV2: RevolutionaryAI2025ServiceV2[] = [;
     marketSize: "$15B AI research market",;
     growthRate: "250% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced AI consciousness simulation platform with real-time monitoring, ethical frameworks, and research collaboration tools. Includes API access and custom consciousness model development.",;
     launchDate: "2025-01-15",;
     customers: 150,;
     rating: 4.9,;
-    reviews: 89;,;,
-},;
-  {;
+    reviews: 89},;
+  {
     id: "ai-quantum-hybrid-computing-platform",;
     name: "AI Quantum Hybrid Computing Platform",;
     tagline: "Hybrid AI-Quantum computing for complex problem solving",;
@@ -127,20 +125,18 @@ export const revolutionaryAI2025ServicesV2: RevolutionaryAI2025ServiceV2[] = [;
     marketSize: "$8.6B quantum computing market",;
     growthRate: "300% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full-stack hybrid AI-Quantum computing platform with cloud deployment, real-time processing, and comprehensive API access. Includes quantum algorithm library and AI optimization tools.",;
     launchDate: "2025-01-20",;
     customers: 75,;
     rating: 4.8,;
-    reviews: 45;,;,
-},;
-  {;
+    reviews: 45},;
+  {
     id: "ai-multimodal-fusion-platform",;
     name: "AI Multimodal Fusion Platform",;
     tagline: "Unified AI platform for text, image, audio, and video processing",;
@@ -178,20 +174,18 @@ export const revolutionaryAI2025ServicesV2: RevolutionaryAI2025ServiceV2[] = [;
     marketSize: "$25B AI content market",;
     growthRate: "180% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade multimodal AI platform with real-time processing, unlimited usage, and comprehensive API access. Includes custom model training and enterprise security features.",;
     launchDate: "2025-01-25",;
     customers: 1200,;
     rating: 4.7,;
-    reviews: 680;,;,
-},;
-  {;
+    reviews: 680},;
+  {
     id: "ai-autonomous-decision-engine",;
     name: "AI Autonomous Decision Engine",;
     tagline: "AI system that makes complex decisions autonomously",;
@@ -229,21 +223,19 @@ export const revolutionaryAI2025ServicesV2: RevolutionaryAI2025ServiceV2[] = [;
     marketSize: "$12B decision intelligence market",;
     growthRate: "220% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade autonomous AI decision engine with real-time processing, comprehensive audit trails, and regulatory compliance. Includes custom decision framework development and integration services.",;
     launchDate: "2025-02-01",;
     customers: 85,;
     rating: 4.8,;
-    reviews: 52;,;,
-},;
+    reviews: 52},;
   // Advanced AI Research & Development;
-  {;
+  {
     id: "ai-research-automation-platform",;
     name: "AI Research Automation Platform",;
     tagline: "Automate scientific research with AI-powered discovery",;
@@ -281,21 +273,19 @@ export const revolutionaryAI2025ServicesV2: RevolutionaryAI2025ServiceV2[] = [;
     marketSize: "$18B research tools market",;
     growthRate: "200% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive AI research automation platform with hypothesis generation, data analysis, and publication assistance. Includes custom research workflow development and integration services.",;
     launchDate: "2025-02-05",;
     customers: 95,;
     rating: 4.7,;
-    reviews: 63;,;,
-},;
+    reviews: 63},;
   // AI Ethics & Governance;
-  {;
+  {
     id: "ai-ethics-governance-suite",;
     name: "AI Ethics & Governance Suite",;
     tagline: "Comprehensive AI ethics, compliance, and governance platform",;
@@ -333,12 +323,11 @@ export const revolutionaryAI2025ServicesV2: RevolutionaryAI2025ServiceV2[] = [;
     marketSize: "$8B AI governance market",;
     growthRate: "180% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade AI ethics and governance platform with comprehensive monitoring, compliance tools, and audit capabilities. Includes custom policy development and integration services.",;
     launchDate: "2025-02-10",;

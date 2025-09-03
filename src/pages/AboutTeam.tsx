@@ -15,7 +15,7 @@ const AboutTeam = () => {};
     {};
 }
   ];
-;
+
   const companyValues = [;
     {};
 },;
@@ -30,14 +30,14 @@ const AboutTeam = () => {};
     {};
 }
   ];
-;
+
   const teamStats = [;
     { number: '500+', label: 'Team Members', icon: Users },;
     { number: '50+', label: 'Countries Served', icon: Globe },;
     { number: '1000+', label: 'Projects Delivered', icon: Award },;
     { number: '99.9%', label: 'Uptime SLA', icon: Star }
   ];
-;
+
   const cultureHighlights = [;
     {};
 },;
@@ -48,7 +48,7 @@ const AboutTeam = () => {};
     {};
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
       {/* Hero Section */}
@@ -233,7 +233,5 @@ const AboutTeam = () => {};
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default AboutTeam;

@@ -7,8 +7,7 @@ export const Sidebar = React.forwardRef((props, ref) => {};
     if (props.collapsible === "none") {};
 } ref={ref} {...props}>        {props.children}
       </div>;
-    );,
-}
+    )}
   if (isMobile) {}
     return();
       <Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>;
@@ -21,8 +20,7 @@ export const Sidebar = React.forwardRef((props, ref) => {};
           <div className="flex h-full w-full flex-col">{props.children}</div>;
         </SheetContent>;
       </Sheet>;
-    );,
-}
+    )}
   return();
     <div>Broken JSX</div>
     >';
@@ -37,22 +35,19 @@ export const Sidebar = React.forwardRef((props, ref) => {};
         </div>;
       </div>;
     </div>';
-  );'';,
-});''';
+  );''});''';
 Sidebar.displayName = 'Sidebar';
 export {};
   const { toggleSidebar } = useSidebar();
   return();
     <div>Broken JSX</div>
     />';
-  );'';,
-});''';
+  );''});''';
 SidebarRail.displayName = 'SidebarRail';
 export {};
   return();
     <div>Broken JSX</div>
     />;
-  );,
-});';
+  )});';
 SidebarInset.displayName = 'SidebarInset';'";
 '"'"

@@ -12,7 +12,7 @@ export default function PricingPage() {};
     {};
 }
   ];
-;
+
   const servicePackages = [;
     {};
 },;
@@ -23,7 +23,7 @@ export default function PricingPage() {};
     {};
 }
   ];
-;
+
   const addOns = [;
     {};
 },;
@@ -97,15 +97,14 @@ export default function PricingPage() {};
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {};
                 )}
-                ;
                 <div className="p-8">;
                   <div className={`w-16 h-16 bg-gradient-to-r ${plan.color} rounded-lg flex items-center justify-center mx-auto mb-6`}>;
                     <plan.icon className="w-8 h-8 text-white" />;
                   </div>;
-                  ;
+
                   <h3 className="text-2xl font-bold text-gray-900 text-center mb-2">{plan.name}</h3>;
                   <p className="text-gray-600 text-center mb-6">{plan.description}</p>;
-                  ;
+
                   <div className="text-center mb-8">;
                     <div className="text-4xl font-bold text-gray-900">;
                       ${billingCycle === 'monthly' ? plan.monthlyPrice : plan.yearlyPrice}
@@ -114,7 +113,7 @@ export default function PricingPage() {};
                       {billingCycle === 'monthly' ? 'per month' : 'per year'}
                     </div>;
                   </div>;
-                  ;
+
                   <ul className="space-y-4 mb-8">;
                     {};
                       <li key={featureIndex} className="flex items-start space-x-3">;
@@ -266,5 +265,4 @@ export default function PricingPage() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

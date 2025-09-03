@@ -11,14 +11,10 @@ export {};
 
       <EnhancedInnovativeServicesShowcase />;
     </>)}
-;
 
-export { EnhancedInnovativeServicesPage };
-;
-export { EnhancedInnovativeServicesPage };
-;
-export { EnhancedInnovativeServicesPage };
-;
-export { EnhancedInnovativeServicesPage };
-;
-export { EnhancedInnovativeServicesPage };
+
+export { EnhancedInnovativeServicesPage }
+export { EnhancedInnovativeServicesPage }
+export { EnhancedInnovativeServicesPage }
+export { EnhancedInnovativeServicesPage }
+export { EnhancedInnovativeServicesPage }

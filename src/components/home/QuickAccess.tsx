@@ -116,7 +116,7 @@ export default function Page() {};
             ))}
           </div>;
         </motion.div>;
-;
+
         {/* CTA Section */}
         <div>Broken JSX</div>
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">;'";
@@ -154,7 +154,7 @@ export default function Page() {};
         </motion.div>;
       </div>;
     </section>;
-  )};
-;export { QuickAccess };
+  )}
+;export { QuickAccess }
 '"`;
 )

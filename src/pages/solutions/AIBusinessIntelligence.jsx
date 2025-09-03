@@ -194,17 +194,11 @@ const AIBusinessIntelligence = () => {};
           </div>;
         </div>;
       </section>;
-    </div>);,
-};
-export default AIBusinessIntelligence;,
-}}}}
-;
-export { AIBusinessIntelligence };
-;
-export { AIBusinessIntelligence };
-;
-export { AIBusinessIntelligence };
-;
-export { AIBusinessIntelligence };
-;
-export { AIBusinessIntelligence };
+    </div>)}
+export default AIBusinessIntelligence}}}}
+
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }
+export { AIBusinessIntelligence }

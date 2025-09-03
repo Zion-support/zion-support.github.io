@@ -11,8 +11,7 @@ export {};
             title: 'Intelligent Literature Review',''';
             description: 'AI-powered analysis of research papers, journals, and academic sources',''';
             icon: '📚',''';
-            benefits['Faster research discovery',Comprehensive coverage',Trend analysis'];,
-},;
+            benefits['Faster research discovery',Comprehensive coverage',Trend analysis']},;
         {}
 ';
 '';
@@ -20,8 +19,7 @@ export {};
             title: 'Data Mining & Analysis',''';
             description: 'Advanced algorithms to extract insights from large datasets',''';
             icon: '🔍',''';
-            benefits['Pattern recognition',Statistical analysis',Predictive modeling'];,
-},;
+            benefits['Pattern recognition',Statistical analysis',Predictive modeling']},;
         {}
 ';
 '';
@@ -29,8 +27,7 @@ export {};
             title: 'Citation Management',''';
             description: 'Automated citation tracking and bibliography generation',''';
             icon: '📝',''';
-            benefits['Multiple format support',Auto-updating',Collaboration tools'];,
-},;
+            benefits['Multiple format support',Auto-updating',Collaboration tools']},;
         {}
 ';
 '';
@@ -38,8 +35,7 @@ export {};
             title: 'Research Collaboration',''';
             description: 'Real-time collaboration tools for research teams',''';
             icon: '👥',''';
-            benefits['Shared workspaces',Version control',Communication tools'];,
-}
+            benefits['Shared workspaces',Version control',Communication tools']}
     ];
     const useCases = [];
         {}
@@ -47,29 +43,25 @@ export {};
 '';
 ''';
             industry: 'Academic Research',''';
-            applications['Literature reviews',Meta-analyses',Systematic reviews',Grant writing'];,
-},;
+            applications['Literature reviews',Meta-analyses',Systematic reviews',Grant writing']},;
         {}
 ';
 '';
 ''';
             industry: 'Market Research',''';
-            applications['Competitive analysis',Trend forecasting',Customer insights',Industry reports'];,
-},;
+            applications['Competitive analysis',Trend forecasting',Customer insights',Industry reports']},;
         {}
 ';
 '';
 ''';
             industry: 'Scientific Research',''';
-            applications['Data analysis',Hypothesis testing',Experimental design',Publication support'];,
-},;
+            applications['Data analysis',Hypothesis testing',Experimental design',Publication support']},;
         {}
 ';
 '';
 ''';
             industry: 'Business Intelligence',''';
-            applications['Market analysis',Risk assessment',Strategic planning',Performance metrics'];';,
-}'';
+            applications['Market analysis',Risk assessment',Strategic planning',Performance metrics'];'}'';
     ];''';
     const tools = ['''';
         { name: 'Semantic Scholar', url: 'https://www.semanticscholar.org/', description: 'AI-powered academic search engine' },''';
@@ -165,14 +157,10 @@ export {};
         </div>;
       </div>;
     </div>)}
-;
 
-export { AIResearchAssistant };
-;
-export { AIResearchAssistant };
-;
-export { AIResearchAssistant };
-;
-export { AIResearchAssistant };
-;
-export { AIResearchAssistant };
+
+export { AIResearchAssistant }
+export { AIResearchAssistant }
+export { AIResearchAssistant }
+export { AIResearchAssistant }
+export { AIResearchAssistant }

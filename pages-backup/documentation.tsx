@@ -1,6 +1,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
+const Component = () => {
           <div className="container mx-auto px-4 text-center">";
             <h2 className="text-3xl font-bold mb-4">Need Help?</h2>";
             <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">;
@@ -20,5 +20,5 @@ const Component = () => {;
       </div>;
     </MainLayout>;,;
   )}
-;
+
 "export default Documentation

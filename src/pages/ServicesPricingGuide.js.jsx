@@ -64,9 +64,8 @@ export {};
       case 'Enterprise':'''';
         return 'bg-purple-500';''';
       default:'''';
-        return 'bg-gray-500';,
-}
-  };
+        return 'bg-gray-500'}
+  }
   const getServiceIcon = category => {}
     switch (category) {}
 ';
@@ -87,8 +86,7 @@ export {};
       case 'AR/VR & Metaverse':"";
         return <Globe className="w-5 h-5 text-pink-500" />;";
       default:"";
-        return <TrendingUp className="w-5 h-5 text-gray-500" />;,
-}
+        return <TrendingUp className="w-5 h-5 text-gray-500" />}
   };";
   return ("";
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">";
@@ -160,8 +158,7 @@ export {};
 ''';
                 selectedCategory === 'all''''';
                   ? 'bg-zion-purple text-white''''';
-                  : 'border-zion-purple/50 text-zion-purple hover:bg-zion-purple/10';,
-}
+                  : 'border-zion-purple/50 text-zion-purple hover:bg-zion-purple/10'}
             >;
               All Services;
             </Button>;
@@ -173,8 +170,7 @@ export {};
 ''';
                   selectedCategory === category.value'''';
                     ? 'bg-zion-purple text-white''''';
-                    : 'border-zion-purple/50 text-zion-purple hover:bg-zion-purple/10';,
-}
+                    : 'border-zion-purple/50 text-zion-purple hover:bg-zion-purple/10'}
               >;
                 {category.label}
               </Button>;
@@ -468,14 +464,10 @@ export {};
         </div>;
       </div>;
     </div>)}
-;
 
-export { ServicesPricingGuide };
-;
-export { ServicesPricingGuide };
-;
-export { ServicesPricingGuide };
-;
-export { ServicesPricingGuide };
-;
-export { ServicesPricingGuide };
+
+export { ServicesPricingGuide }
+export { ServicesPricingGuide }
+export { ServicesPricingGuide }
+export { ServicesPricingGuide }
+export { ServicesPricingGuide }

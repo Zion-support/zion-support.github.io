@@ -1,24 +1,22 @@
-export interface Service {;
+export interface Service {
   id: string;
   name: string;
   category: "micro-saas" | "it-services" | "ai-services";
   description: string;
   features: string[];
-  pricing: {;
+  pricing: {
     starter: number;
     professional: number;
     enterprise: number;
-    currency: string;,
-};
+    currency: string}
   benefits: string[];
   useCases: string[];
   technologies: string[];
   link: string;
-  icon: string;,
-}
-;
+  icon: string}
+
 export const services: Service[] = [;
-  {;
+  {
     id: "ai-content-generator",;
     name: "AI Content Generator Pro",;
     category: "micro-saas",;
@@ -33,12 +31,11 @@ export const services: Service[] = [;
       "Plagiarism detection",;
       "Content templates library";
     ],;
-    pricing: {;
+    pricing: {
       starter: 29,;
       professional: 79,;
       enterprise: 199,;
-      currency: "USD";,
-},;
+      currency: "USD"},;
     benefits: [;
       "10x faster content creation",;
       "Consistent brand messaging",;
@@ -55,9 +52,8 @@ export const services: Service[] = [;
     ],;
     technologies: ["OpenAI GPT-4", "React", "Node.js", "PostgreSQL", "Stripe"],;
     link: "https://ziontechgroup.com/services/ai-content-generator",;
-    icon: "📝";,
-},;
-  {;
+    icon: "📝"},;
+  {
     id: "ai-email-responder",;
     name: "AI Email Responder Pro",;
     category: "micro-saas",;
@@ -72,12 +68,11 @@ export const services: Service[] = [;
       "Integration with CRM systems",;
       "Analytics dashboard";
     ],;
-    pricing: {;
+    pricing: {
       starter: 35,;
       professional: 89,;
       enterprise: 249,;
-      currency: "USD";,
-},;
+      currency: "USD"},;
     benefits: [;
       "Reduce email response time by 80%",;
       "24/7 email handling",;
@@ -93,9 +88,8 @@ export const services: Service[] = [;
     ],;
     technologies: ["OpenAI GPT-4", "React", "Node.js", "PostgreSQL", "Email APIs"],;
     link: "https://ziontechgroup.com/services/ai-email-responder",;
-    icon: "📧";,
-},;
-  {;
+    icon: "📧"},;
+  {
     id: "social-media-scheduler",;
     name: "Social Media Scheduler Pro",;
     category: "micro-saas",;
@@ -110,12 +104,11 @@ export const services: Service[] = [;
       "Auto-posting",;
       "Engagement tracking";
     ],;
-    pricing: {;
+    pricing: {
       starter: 19,;
       professional: 49,;
       enterprise: 129,;
-      currency: "USD";,
-},;
+      currency: "USD"},;
     benefits: [;
       "Save 10+ hours per week",;
       "Increase engagement by 40%",;
@@ -130,9 +123,8 @@ export const services: Service[] = [;
     ],;
     technologies: ["React", "Node.js", "MongoDB", "Social APIs"],;
     link: "https://ziontechgroup.com/services/social-media-scheduler",;
-    icon: "📱";,
-},;
-  {;
+    icon: "📱"},;
+  {
     id: "ai-seo-optimizer",;
     name: "AI SEO Content Optimizer",;
     category: "micro-saas",;
@@ -147,12 +139,11 @@ export const services: Service[] = [;
       "Content scoring",;
       "Automated reports";
     ],;
-    pricing: {;
+    pricing: {
       starter: 39,;
       professional: 99,;
       enterprise: 249,;
-      currency: "USD";,
-},;
+      currency: "USD"},;
     benefits: [;
       "Improve search rankings by 50%",;
       "Increase organic traffic",;
@@ -168,9 +159,8 @@ export const services: Service[] = [;
     ],;
     technologies: ["AI/ML", "React", "Node.js", "SEO APIs", "Analytics"],;
     link: "https://ziontechgroup.com/services/ai-seo-optimizer",;
-    icon: "🔍";,
-},;
-  {;
+    icon: "🔍"},;
+  {
     id: "event-management-dashboard",;
     name: "Smart Event Management Dashboard",;
     category: "micro-saas",;
@@ -185,12 +175,11 @@ export const services: Service[] = [;
       "Mobile check-in",;
       "Post-event surveys";
     ],;
-    pricing: {;
+    pricing: {
       starter: 45,;
       professional: 119,;
       enterprise: 299,;
-      currency: "USD";,
-},;
+      currency: "USD"},;
     benefits: [;
       "Streamline event planning",;
       "Increase ticket sales",;
@@ -206,9 +195,8 @@ export const services: Service[] = [;
     ],;
     technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Analytics"],;
     link: "https://ziontechgroup.com/services/event-management-dashboard",;
-    icon: "🎪";,
-},;
-  {;
+    icon: "🎪"},;
+  {
     id: "ai-talent-matching",;
     name: "AI Talent Matching Platform",;
     category: "micro-saas",;
@@ -223,12 +211,11 @@ export const services: Service[] = [;
       "Integration with job boards",;
       "Analytics dashboard";
     ],;
-    pricing: {;
+    pricing: {
       starter: 199,;
       professional: 499,;
       enterprise: 1299,;
-      currency: "USD";,
-},;
+      currency: "USD"},;
     benefits: [;
       "Reduce hiring time by 70%",;
       "Better candidate matches",;
@@ -244,9 +231,8 @@ export const services: Service[] = [;
     ],;
     technologies: ["AI/ML", "React", "Node.js", "PostgreSQL", "Matching Algorithms"],;
     link: "https://ziontechgroup.com/services/ai-talent-matching",;
-    icon: "👥";,
-},;
-  {;
+    icon: "👥"},;
+  {
     id: "cloud-migration",;
     name: "Cloud Migration Expert",;
     category: "it-services",;
@@ -261,12 +247,11 @@ export const services: Service[] = [;
       "Cost optimization",;
       "24/7 monitoring";
     ],;
-    pricing: {;
+    pricing: {
       starter: 5000,;
       professional: 15000,;
       enterprise: 50000,;
-      currency: "USD";,
-},;
+      currency: "USD"},;
     benefits: [;
       "Reduced infrastructure costs by 40%",;
       "Improved scalability",;
@@ -282,9 +267,8 @@ export const services: Service[] = [;
     ],;
     technologies: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform"],;
     link: "https://ziontechgroup.com/services/cloud-migration",;
-    icon: "☁️";,
-},;
-  {;
+    icon: "☁️"},;
+  {
     id: "zero-trust-security",;
     name: "Zero Trust Security Architecture",;
     category: "it-services",;
@@ -299,12 +283,11 @@ export const services: Service[] = [;
       "Compliance automation",;
       "Incident response planning";
     ],;
-    pricing: {;
+    pricing: {
       starter: 20000,;
       professional: 60000,;
       enterprise: 150000,;
-      currency: "USD";,
-},;
+      currency: "USD"},;
     benefits: [;
       "Enhanced security posture",;
       "Reduced attack surface",;
@@ -320,9 +303,8 @@ export const services: Service[] = [;
     ],;
     technologies: ["Zero Trust", "SIEM", "SOAR", "Identity Management", "Network Security"],;
     link: "https://ziontechgroup.com/services/zero-trust-security",;
-    icon: "🔒";,
-},;
-  {;
+    icon: "🔒"},;
+  {
     id: "custom-ai-models",;
     name: "Custom AI Model Development",;
     category: "ai-services",;
@@ -337,12 +319,11 @@ export const services: Service[] = [;
       "Model versioning",;
       "Performance monitoring";
     ],;
-    pricing: {;
+    pricing: {
       starter: 10000,;
       professional: 30000,;
       enterprise: 100000,;
-      currency: "USD";,
-},;
+      currency: "USD"},;
     benefits: [;
       "Tailored to your data",;
       "Better accuracy",;
@@ -359,9 +340,8 @@ export const services: Service[] = [;
     ],;
     technologies: ["TensorFlow", "PyTorch", "Scikit-learn", "Python", "Docker", "MLflow"],;
     link: "https://ziontechgroup.com/services/custom-ai-models",;
-    icon: "🧠";,
-},;
-  {;
+    icon: "🧠"},;
+  {
     id: "computer-vision-solutions",;
     name: "Computer Vision & Image Recognition",;
     category: "ai-services",;
@@ -376,12 +356,11 @@ export const services: Service[] = [;
       "Custom model training",;
       "API integration";
     ],;
-    pricing: {;
+    pricing: {
       starter: 8000,;
       professional: 25000,;
       enterprise: 75000,;
-      currency: "USD";,
-},;
+      currency: "USD"},;
     benefits: [;
       "Automated visual inspection",;
       "Enhanced security",;
@@ -397,14 +376,11 @@ export const services: Service[] = [;
     ],;
     technologies: ["OpenCV", "TensorFlow", "PyTorch", "YOLO", "ResNet", "CUDA"],;
     link: "https://ziontechgroup.com/services/computer-vision-solutions",;
-    icon: "👁️";,
-}
+    icon: "👁️"}
 ];
-;
-export function getServicesByCategory(category: "micro-saas" | "it-services" | "ai-services"): Service[] {;
-  return services.filter(service => service.category === category);,
-}
-;
-export function getServiceById(id: string): Service | undefined {;
-  return services.find(service => service.id === id);,
-}
+
+export function getServicesByCategory(category: "micro-saas" | "it-services" | "ai-services"): Service[] {
+  return services.filter(service => service.category === category)}
+
+export function getServiceById(id: string): Service | undefined {
+  return services.find(service => service.id === id)}

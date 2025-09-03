@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface RealMarketService {;
+export interface RealMarketService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface RealMarketService {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface RealMarketService {;
   rating: number;
 export const realMarketServices: RealMarketService[] = [;
   // AI-Powered Business Intelligence;
-  {;
+  {
     id: "ai-business-intelligence-pro",;
     name: "AI Business Intelligence Pro",;
     tagline: "Transform data into actionable insights with AI",;
@@ -76,21 +76,19 @@ export const realMarketServices: RealMarketService[] = [;
     marketSize: "$29.48B market",;
     growthRate: "15.7% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Production-ready SaaS platform with real-time data processing, machine learning models, and comprehensive analytics dashboard. Includes data connectors for major business tools.",;
     launchDate: "2024-03-01",;
     customers: 1800,;
     rating: 4.7,;
-    reviews: 950;,;,
-},;
+    reviews: 950},;
   // Customer Success Automation Platform;
-  {;
+  {
     id: "customer-success-automation",;
     name: "Customer Success Automation Platform",;
     tagline: "Automate customer success and reduce churn",;
@@ -128,21 +126,19 @@ export const realMarketServices: RealMarketService[] = [;
     marketSize: "$1.5B market",;
     growthRate: "25% annual growth",;
     variant: "micro-saas-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully functional customer success platform with automated workflows, health scoring algorithms, and comprehensive reporting. Includes mobile app for field teams.",;
     launchDate: "2024-02-15",;
     customers: 1200,;
     rating: 4.8,;
-    reviews: 680;,;,
-},;
+    reviews: 680},;
   // API Security & Monitoring Suite;
-  {;
+  {
     id: "api-security-monitoring-suite",;
     name: "API Security & Monitoring Suite",;
     tagline: "Protect and monitor your APIs in real-time",;
@@ -180,21 +176,19 @@ export const realMarketServices: RealMarketService[] = [;
     marketSize: "$4.5B market",;
     growthRate: "18.5% annual growth",;
     variant: "enterprise-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Production-ready API security platform with real-time threat detection, comprehensive monitoring, and automated security testing. Includes Kubernetes deployment support.",;
     launchDate: "2024-01-20",;
     customers: 950,;
     rating: 4.6,;
-    reviews: 520;,;,
-},;
+    reviews: 520},;
   // E-commerce Automation Platform;
-  {;
+  {
     id: "ecommerce-automation-platform",;
     name: "E-commerce Automation Platform",;
     tagline: "Automate your entire e-commerce operation",;
@@ -232,21 +226,19 @@ export const realMarketServices: RealMarketService[] = [;
     marketSize: "$18.2B market",;
     growthRate: "22% annual growth",;
     variant: "micro-saas-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive e-commerce automation platform with real-time inventory tracking, automated order processing, and intelligent marketing automation. Includes mobile apps for customers and staff.",;
     launchDate: "2024-02-01",;
     customers: 2100,;
     rating: 4.7,;
-    reviews: 1100;,;,
-},;
+    reviews: 1100},;
   // HR Automation Suite;
-  {;
+  {
     id: "hr-automation-suite",;
     name: "HR Automation Suite",;
     tagline: "Streamline HR processes with intelligent automation",;
@@ -284,21 +276,19 @@ export const realMarketServices: RealMarketService[] = [;
     marketSize: "$15.6B market",;
     growthRate: "12.8% annual growth",;
     variant: "hr-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full-featured HR automation platform with AI-powered recruitment, comprehensive employee management, and automated compliance reporting. Includes mobile apps and integration capabilities.",;
     launchDate: "2024-01-10",;
     customers: 1600,;
     rating: 4.8,;
-    reviews: 890;,;,
-},;
+    reviews: 890},;
   // Financial Analytics Platform;
-  {;
+  {
     id: "financial-analytics-platform",;
     name: "Financial Analytics Platform",;
     tagline: "Real-time financial insights and forecasting",;
@@ -336,21 +326,19 @@ export const realMarketServices: RealMarketService[] = [;
     marketSize: "$11.9B market",;
     growthRate: "16.2% annual growth",;
     variant: "micro-saas-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Production-ready financial analytics platform with real-time data processing, AI-powered forecasting models, and comprehensive reporting. Includes mobile apps and API access.",;
     launchDate: "2024-02-20",;
     customers: 1400,;
     rating: 4.7,;
-    reviews: 780;,;,
-},;
+    reviews: 780},;
   // Project Management AI Platform;
-  {;
+  {
     id: "project-management-ai-platform",;
     name: "Project Management AI Platform",;
     tagline: "AI-powered project management and team collaboration",;
@@ -388,21 +376,19 @@ export const realMarketServices: RealMarketService[] = [;
     marketSize: "$6.68B market",;
     growthRate: "14.3% annual growth",;
     variant: "micro-saas-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full-featured project management platform with AI-powered insights, comprehensive collaboration tools, and automated workflow optimization. Includes mobile apps and extensive integrations.",;
     launchDate: "2024-01-25",;
     customers: 1900,;
     rating: 4.8,;
-    reviews: 1050;,;,
-},;
+    reviews: 1050},;
   // Marketing Automation Suite;
-  {;
+  {
     id: "marketing-automation-suite",;
     name: "Marketing Automation Suite",;
     tagline: "Automate your entire marketing operation",;
@@ -440,21 +426,19 @@ export const realMarketServices: RealMarketService[] = [;
     marketSize: "$25.1B market",;
     growthRate: "19.8% annual growth",;
     variant: "marketing-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive marketing automation platform with AI-powered personalization, comprehensive analytics, and automated campaign management. Includes mobile apps and extensive integrations.",;
     launchDate: "2024-02-10",;
     customers: 2300,;
     rating: 4.7,;
-    reviews: 1250;,;,
-},;
+    reviews: 1250},;
   // Legal Document Automation;
-  {;
+  {
     id: "legal-document-automation",;
     name: "Legal Document Automation Platform",;
     tagline: "Automate legal document creation and management",;
@@ -492,12 +476,11 @@ export const realMarketServices: RealMarketService[] = [;
     marketSize: "$2.8B market",;
     growthRate: "28.5% annual growth",;
     variant: "legal-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Production-ready legal automation platform with AI-powered document generation, comprehensive workflow management, and compliance checking. Includes mobile apps and extensive integrations.",;
     launchDate: "2024-01-15",;

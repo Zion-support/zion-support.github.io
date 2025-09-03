@@ -29,9 +29,8 @@ export {};
     setShowDetails(true);';
     // If status is new, mark as viewed'';
     if (quote.status === 'new') {}
-      markAsViewed(quote.id);,
-}
-  };
+      markAsViewed(quote.id)}
+  }
   // Filter quotes by archive status;
   const archivedQuotes = quotes.filter(q => q.is_archived);
   return();
@@ -66,19 +65,14 @@ export {};
         <div>Broken JSX</div>
           onClose={() => {}
             setShowDetails(false);
-            setSelectedQuote(null);,
-}}
+            setSelectedQuote(null)}}
         />;
       </div>;
     </ProtectedRoute>)}
-;
 
-export { RequestsPanel };
-;
-export { RequestsPanel };
-;
-export { RequestsPanel };
-;
-export { RequestsPanel };
-;
-export { RequestsPanel };
+
+export { RequestsPanel }
+export { RequestsPanel }
+export { RequestsPanel }
+export { RequestsPanel }
+export { RequestsPanel }

@@ -14,7 +14,7 @@ const SmartCRMPlatform = () => {};
     'Integration with 500+ apps',;
     '24/7 customer support';
   ];
-;
+
   const benefits = [;
     'Increase sales by 25%',;
     'Improve customer retention',;
@@ -25,7 +25,7 @@ const SmartCRMPlatform = () => {};
     'Automated follow-ups',;
     'Team collaboration tools';
   ];
-;
+
   const integrations = [;
     'Gmail & Outlook',;
     'Slack & Teams',;
@@ -89,7 +89,7 @@ const SmartCRMPlatform = () => {};
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Powerful CRM Features</h2>;
           <p className="text-xl text-gray-600">Everything you need to manage customer relationships effectively</p>;
         </div>;
-        ;
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
           {};
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature}</h3>;
@@ -105,7 +105,7 @@ const SmartCRMPlatform = () => {};
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Smart CRM?</h2>;
             <p className="text-xl text-gray-600">Measurable results that drive business growth</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {};
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit}</h3>;
@@ -121,7 +121,7 @@ const SmartCRMPlatform = () => {};
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Seamless Integrations</h2>;
           <p className="text-xl text-gray-600">Connect with the tools you already use</p>;
         </div>;
-        ;
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
           {};
               <h3 className="text-lg font-semibold text-gray-900">{integration}</h3>;
@@ -137,11 +137,10 @@ const SmartCRMPlatform = () => {};
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Flexible Pricing Plans</h2>;
             <p className="text-xl text-gray-600">Choose the plan that fits your team size</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-3 gap-8">;
             {};
                 )}
-                ;
                 <div className="text-center mb-6">;
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>;
                   <div className="text-4xl font-bold text-green-600 mb-2">{plan.price}</div>;
@@ -149,7 +148,7 @@ const SmartCRMPlatform = () => {};
                   <p className="text-green-600 font-semibold">Save up to 25%</p>;
                   <p className="text-gray-600 mt-2">{plan.users}</p>;
                 </div>;
-                ;
+
                 <ul className="space-y-3 mb-8">;
                   {};
                     <li key={featureIndex} className="flex items-center text-gray-600">;
@@ -176,7 +175,7 @@ const SmartCRMPlatform = () => {};
             <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Sales Process?</h2>;
             <p className="text-xl text-gray-300">Contact us today for a free CRM consultation</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             <div className="text-center">;
               <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />;
@@ -218,7 +217,5 @@ const SmartCRMPlatform = () => {};
         </div>;
       </footer>;
     </div>;
-  );,
-};
-;
+  )}
 export default SmartCRMPlatform;

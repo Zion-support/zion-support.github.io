@@ -1,4 +1,4 @@
-export interface SpecializedAIService {;
+export interface SpecializedAIService {
   id: string;
   name: string;
   tagline: string;
@@ -25,7 +25,7 @@ export interface SpecializedAIService {;
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -36,7 +36,7 @@ export interface SpecializedAIService {;
   customers: number;
   rating: number;
 export const specializedAIServices: SpecializedAIService[] = [;
-  {;
+  {
     id: "ai-powered-legal-contract-analyzer",;
     name: "AI-Powered Legal Contract Analyzer",;
     tagline: "Intelligent legal document analysis and risk assessment",;
@@ -74,20 +74,18 @@ export const specializedAIServices: SpecializedAIService[] = [;
     marketSize: "$15B legal tech market",;
     growthRate: "200% annual growth",;
     variant: "legal-ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete legal AI platform with contract analysis, risk assessment, and compliance checking capabilities.",;
     launchDate: "2024-09-01",;
     customers: 156,;
     rating: 4.7,;
-    reviews: 89;,;,
-},;
-  {;
+    reviews: 89},;
+  {
     id: "ai-powered-hr-recruitment-platform",;
     name: "AI-Powered HR Recruitment Platform",;
     tagline: "Intelligent talent acquisition and HR management",;
@@ -125,20 +123,18 @@ export const specializedAIServices: SpecializedAIService[] = [;
     marketSize: "$25B HR tech market",;
     growthRate: "180% annual growth",;
     variant: "hr-ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete HR AI platform with recruitment automation, predictive analytics, and performance optimization.",;
     launchDate: "2024-08-01",;
     customers: 234,;
     rating: 4.6,;
-    reviews: 123;,;,
-},;
-  {;
+    reviews: 123},;
+  {
     id: "ai-powered-market-research-platform",;
     name: "AI-Powered Market Research Platform",;
     tagline: "Intelligent market analysis and competitive intelligence",;
@@ -176,20 +172,18 @@ export const specializedAIServices: SpecializedAIService[] = [;
     marketSize: "$20B market research market",;
     growthRate: "220% annual growth",;
     variant: "market-ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete market research AI platform with real-time monitoring, competitive intelligence, and predictive analytics.",;
     launchDate: "2024-07-01",;
     customers: 189,;
     rating: 4.7,;
-    reviews: 98;,;,
-},;
-  {;
+    reviews: 98},;
+  {
     id: "ai-powered-sales-automation-platform",;
     name: "AI-Powered Sales Automation Platform",;
     tagline: "Intelligent sales process automation and optimization",;
@@ -227,20 +221,18 @@ export const specializedAIServices: SpecializedAIService[] = [;
     marketSize: "$30B sales automation market",;
     growthRate: "200% annual growth",;
     variant: "sales-ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete sales AI platform with lead scoring, predictive analytics, and process automation capabilities.",;
     launchDate: "2024-08-15",;
     customers: 312,;
     rating: 4.8,;
-    reviews: 167;,;,
-},;
-  {;
+    reviews: 167},;
+  {
     id: "ai-powered-video-editing-platform",;
     name: "AI-Powered Video Editing Platform",;
     tagline: "Intelligent video creation and editing automation",;
@@ -278,20 +270,18 @@ export const specializedAIServices: SpecializedAIService[] = [;
     marketSize: "$15B video editing market",;
     growthRate: "180% annual growth",;
     variant: "video-ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete video AI platform with automated editing, content creation, and optimization capabilities.",;
     launchDate: "2024-07-15",;
     customers: 456,;
     rating: 4.6,;
-    reviews: 234;,;,
-},;
-  {;
+    reviews: 234},;
+  {
     id: "ai-powered-website-personalization",;
     name: "AI-Powered Website Personalization",;
     tagline: "Intelligent website personalization and optimization",;
@@ -329,20 +319,18 @@ export const specializedAIServices: SpecializedAIService[] = [;
     marketSize: "$12B personalization market",;
     growthRate: "200% annual growth",;
     variant: "personalization-ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete personalization AI platform with real-time optimization, A/B testing, and conversion optimization capabilities.",;
     launchDate: "2024-09-15",;
     customers: 234,;
     rating: 4.7,;
-    reviews: 123;,;,
-},;
-  {;
+    reviews: 123},;
+  {
     id: "ai-powered-customer-service-platform",;
     name: "AI-Powered Customer Service Platform",;
     tagline: "Intelligent customer service automation and optimization",;
@@ -380,20 +368,18 @@ export const specializedAIServices: SpecializedAIService[] = [;
     marketSize: "$18B customer service market",;
     growthRate: "180% annual growth",;
     variant: "customer-service-ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete customer service AI platform with chatbot automation, intelligent routing, and satisfaction optimization.",;
     launchDate: "2024-08-01",;
     customers: 345,;
     rating: 4.7,;
-    reviews: 178;,;,
-},;
-  {;
+    reviews: 178},;
+  {
     id: "ai-powered-data-analytics-platform",;
     name: "AI-Powered Data Analytics Platform",;
     tagline: "Intelligent data analysis and business intelligence",;
@@ -431,20 +417,18 @@ export const specializedAIServices: SpecializedAIService[] = [;
     marketSize: "$35B business intelligence market",;
     growthRate: "200% annual growth",;
     variant: "analytics-ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete analytics AI platform with predictive modeling, automated reporting, and intelligent insights.",;
     launchDate: "2024-07-01",;
     customers: 189,;
     rating: 4.8,;
-    reviews: 98;,;,
-},;
-  {;
+    reviews: 98},;
+  {
     id: "ai-powered-seo-optimization-platform",;
     name: "AI-Powered SEO Optimization Platform",;
     tagline: "Intelligent search engine optimization and content optimization",;
@@ -482,12 +466,11 @@ export const specializedAIServices: SpecializedAIService[] = [;
     marketSize: "$8B SEO market",;
     growthRate: "180% annual growth",;
     variant: "seo-ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete SEO AI platform with content optimization, search analysis, and performance tracking capabilities.",;
     launchDate: "2024-08-01",;

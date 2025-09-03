@@ -71,8 +71,7 @@ export {};
 ''';
                 form.setError('email', { message: resData.message });''';
                 toast.error('Email already registered – please login.');
-                return;,
-}
+                return}
             // Check for successful response;
             if (res.ok && resData.token && resData.user) {}
 ';
@@ -85,8 +84,7 @@ export {};
                 // Handle email verification required case;
                 if (resData?.emailVerificationRequired) {}
                     setShowVerificationMessage(true);
-                    // Do not proceed to set session or navigate;,
-}
+                    // Do not proceed to set session or navigate}
                 else if (resData?.session) {}
                     // Set the session directly if verification is not required;
                     const { error: sessionError } = await supabase.auth.setSession(resData.session);
@@ -96,23 +94,19 @@ export {};
                         // console.error("Error setting session:", sessionError);"";
                         form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." });"";
                         toast.error(sessionError.message || "Failed to set session. Please try logging in.");
-                        return;,
-}
+                        return}
                     // The onAuthStateChange listener in AuthProvider should now handle;
                     // updating user state and navigating if necessary for other cases.";
                     // For direct signup with session, we can navigate."";
                     toast.success("Welcome to ZionAI 🎉");"";
-                    navigate("/dashboard");,
-}
-                else {}
+                    navigate("/dashboard")} else {}
 ";
                     // This case might indicate an unexpected response from the API"";
                     // console.error("Registration response did not include session or emailVerificationRequired flag.", resData);"";
                     form.setError("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." });"";
                     toast.error("Registration complete, but an unexpected issue occurred. Please try logging in manually.");
                     // Potentially navigate to login or show a more specific error;
-                    return;,
-}
+                    return}
                 // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification);
                 if (data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {}
                     try {}
@@ -120,49 +114,40 @@ export {};
                             email: data.email,;
                             mergeFields: { FNAME: data.displayName }
                         });';
-                        await mailchimpService.sendWelcomeEmail(data.email,NEW10');,
-}
+                        await mailchimpService.sendWelcomeEmail(data.email,NEW10')}
                     catch (err) {}
 ';
                         // console.error('Mailchimp subscription failed', err);';
-                        // Non-critical error, don't block user flow;,
-}
+                        // Non-critical error, don't block user flow}
                 }
                 // Toast and navigation are handled above if session is present;
-                // If emailVerificationRequired, no toast/navigation here, message is shown;,
-}
+                // If emailVerificationRequired, no toast/navigation here, message is shown}
             try { }
             catch (err) {}
 ";
 "";
                 const message = err.message ?? "Registration failed";"";
                 form.setError("root", { message });
-                toast.error(message);,
-}
+                toast.error(message)}
             finally {}
-                setIsSubmitting(false);,
-}
+                setIsSubmitting(false)}
         }
         finally { }
-        ;
         const onInvalid = (errors) => {}
             const firstError = Object.keys(errors)[0];
             if (firstError) {}
-                form.setFocus(firstError);,
-}
-        };
+                form.setFocus(firstError)}
+        }
         // Redirect if user is already logged in and has completed profile;
         if (isAuthenticated && user?.profileComplete) {}
 ";
 "";
-            return <Navigate to="/"/>;,
-}';
+            return <Navigate to="/"/>}';
         // Redirect to onboarding if user is authenticated but hasn't completed profile;
         if (isAuthenticated && !user?.profileComplete) {}
 ";
 "";
-            return <Navigate to="/onboarding"/>;,
-}
+            return <Navigate to="/onboarding"/>}
         return (<>";
       "";
       <div className="flex min-h-screen bg-zion-blue">"";
@@ -255,8 +240,7 @@ export {};
                     />;
 
                     field.onBlur();";
-                    setConfirmPasswordValue(e.target.value);"";,
-}} autoComplete="new-password"/>"";
+                    setConfirmPasswordValue(e.target.value);""}} autoComplete="new-password"/>"";
                             <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>"";
                             <Button type="button" variant="ghost" size="sm" className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan" onClick={() => setShowConfirmPassword(!showConfirmPassword)}>"";
                               {showConfirmPassword ? (<EyeOff className="h-4 w-4"/>) : (<Eye className="h-4 w-4"/>)}"";
@@ -343,18 +327,12 @@ export {};
           </div>;
         </div>;
       </div>;
-      ;
-    </>);,
-};,
-}
-;
 
-export { Signup };
-;
-export { Signup };
-;
-export { Signup };
-;
-export { Signup };
-;
-export { Signup };
+    </>)}}
+
+
+export { Signup }
+export { Signup }
+export { Signup }
+export { Signup }
+export { Signup }

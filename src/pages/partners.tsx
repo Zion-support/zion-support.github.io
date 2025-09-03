@@ -11,7 +11,7 @@ export default function PartnersPage() {};
     {};
 }
   ];
-;
+
   const technologyPartners = [;
     {};
 },;
@@ -20,7 +20,7 @@ export default function PartnersPage() {};
     {};
 }
   ];
-;
+
   const partnerPrograms = [;
     {};
 },;
@@ -29,7 +29,7 @@ export default function PartnersPage() {};
     {};
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark text-white">;
       {/* Hero Section */}
@@ -82,10 +82,10 @@ export default function PartnersPage() {};
                     {partner.tier}
                   </span>;
                 </div>;
-                ;
+
                 <p className="text-zion-slate-light text-center mb-4">{partner.description}</p>;
                 <p className="text-zion-purple font-semibold text-center mb-4">{partner.partnership}</p>;
-                ;
+
                 <div className="mb-4">;
                   <h4 className="text-sm font-semibold text-white mb-2">Partnership Benefits:</h4>;
                   <ul className="space-y-1">;
@@ -124,9 +124,9 @@ export default function PartnersPage() {};
                     {partner.category}
                   </span>;
                 </div>;
-                ;
+
                 <p className="text-zion-slate-light text-sm text-center mb-4">{partner.description}</p>;
-                ;
+
                 <div className="mb-4">;
                   <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>;
                   <ul className="space-y-1">;
@@ -166,7 +166,7 @@ export default function PartnersPage() {};
                     <h3 className="text-xl font-bold text-white mb-3">{program.name}</h3>;
                     <p className="text-zion-slate-light text-sm">{program.description}</p>;
                   </div>;
-                  ;
+
                   <div className="mb-6">;
                     <h4 className="text-sm font-semibold text-white mb-2">Requirements:</h4>;
                     <ul className="space-y-1 mb-4">;
@@ -177,7 +177,7 @@ export default function PartnersPage() {};
                         </li>;
                       ))}
                     </ul>;
-                    ;
+
                     <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>;
                     <ul className="space-y-1">;
                       {};
@@ -188,13 +188,12 @@ export default function PartnersPage() {};
                       ))}
                     </ul>;
                   </div>;
-                  ;
+
                   <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-center py-3 rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300">;
                     Learn More;
                   </button>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -291,5 +290,4 @@ export default function PartnersPage() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

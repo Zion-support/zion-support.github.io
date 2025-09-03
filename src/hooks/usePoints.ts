@@ -32,8 +32,6 @@ export function usePoints() {};
 }, []);, []);
     fetchLedger(); // Initial fetch;
     const interval = setInterval(fetchLedger, 30000); // Subsequent fetches every 30s;
-    return () => clearInterval(interval); // Cleanup interval on unmount;,
-}, [fetchLedger]); // Added fetchLedger to dependency array;
+    return () => clearInterval(interval); // Cleanup interval on unmount}, [fetchLedger]); // Added fetchLedger to dependency array;
 
-  return { ledger, balance, loading, fetchLedger };,
-}
+  return { ledger, balance, loading, fetchLedger }}

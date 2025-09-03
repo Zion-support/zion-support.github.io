@@ -11,7 +11,7 @@ export default function ResourcesPage() {};
     {};
 }
   ];
-;
+
   const caseStudies = [;
     {};
 },;
@@ -20,7 +20,7 @@ export default function ResourcesPage() {};
     {};
 }
   ];
-;
+
   const guides = [;
     {};
 },;
@@ -29,14 +29,14 @@ export default function ResourcesPage() {};
     {};
 }
   ];
-;
+
   const webinars = [;
     {};
 },;
     {};
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark text-white">;
       {/* Hero Section */}
@@ -81,10 +81,10 @@ export default function ResourcesPage() {};
                     {paper.rating}
                   </div>;
                 </div>;
-                ;
+
                 <h3 className="text-xl font-semibold text-white mb-3">{paper.title}</h3>;
                 <p className="text-zion-slate-light text-sm mb-4">{paper.description}</p>;
-                ;
+
                 <div className="flex items-center justify-between text-xs text-zion-slate-light mb-4">;
                   <span>📥 {paper.downloadCount} downloads</span>;
                   <span>📁 {paper.fileSize}</span>;
@@ -121,10 +121,10 @@ export default function ResourcesPage() {};
                     {study.industry}
                   </span>;
                 </div>;
-                ;
+
                 <h3 className="text-xl font-semibold text-white mb-2">{study.title}</h3>;
                 <p className="text-zion-cyan font-medium mb-3">{study.company}</p>;
-                ;
+
                 <div className="mb-4">;
                   <h4 className="text-sm font-semibold text-white mb-2">Key Results:</h4>;
                   <ul className="space-y-1">;
@@ -136,7 +136,7 @@ export default function ResourcesPage() {};
                     ))}
                   </ul>;
                 </div>;
-                ;
+
                 <div className="flex items-center justify-between">;
                   <span className="text-xs text-zion-slate-light">{study.readTime}</span>;
                   <a href={study.url} className="text-zion-cyan hover:text-zion-cyan-light text-sm font-medium flex items-center">;
@@ -173,17 +173,17 @@ export default function ResourcesPage() {};
                     {guide.level}
                   </span>;
                 </div>;
-                ;
+
                 <h3 className="text-xl font-semibold text-white mb-3">{guide.title}</h3>;
                 <p className="text-zion-slate-light text-sm mb-4">{guide.description}</p>;
-                ;
+
                 <div className="flex items-center justify-between text-xs text-zion-slate-light mb-4">;
                   <span className="flex items-center">;
                     <Clock className="w-3 h-3 mr-1" />;
                     {guide.estimatedTime}
                   </span>;
                 </div>;
-                ;
+
                 <a href={guide.url} className="w-full border border-zion-cyan text-zion-cyan text-center py-3 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center">;
                   <BookOpen className="w-4 h-4 mr-2" />;
                   Read Guide;
@@ -215,10 +215,10 @@ export default function ResourcesPage() {};
                   </span>;
                   <span className="text-zion-slate-light text-sm">{webinar.date}</span>;
                 </div>;
-                ;
+
                 <h3 className="text-xl font-semibold text-white mb-3">{webinar.title}</h3>;
                 <p className="text-zion-slate-light text-sm mb-4">{webinar.description}</p>;
-                ;
+
                 <div className="mb-4">;
                   <p className="text-zion-cyan text-sm font-medium mb-1">Speaker: {webinar.speaker}</p>;
                   <p className="text-zion-slate-light text-sm flex items-center">;
@@ -226,7 +226,7 @@ export default function ResourcesPage() {};
                     {webinar.date} at {webinar.time}
                   </p>;
                 </div>;
-                ;
+
                 <a href={webinar.registrationUrl} className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-center py-3 rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 flex items-center justify-center">;
                   <Video className="w-4 h-4 mr-2" />;
                   Register Now;
@@ -256,5 +256,4 @@ export default function ResourcesPage() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

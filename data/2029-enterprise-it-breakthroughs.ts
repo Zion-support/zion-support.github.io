@@ -1,4 +1,4 @@
-export interface EnterpriseITBreakthroughService2029 {;
+export interface EnterpriseITBreakthroughService2029 {
   id: string;
   name: string;
   tagline: string;
@@ -13,7 +13,7 @@ export interface EnterpriseITBreakthroughService2029 {;
   marketSize: string;
   growthRate: string;
   realImplementation: boolean;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string}
@@ -22,7 +22,7 @@ export interface EnterpriseITBreakthroughService2029 {;
   benefits: string[];
   useCases: string[];
 export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughService2029[] = [;
-  {;
+  {
     id: "ai-business-intelligence-suite",;
     name: "AI Business Intelligence Suite",;
     tagline: "Intelligent insights and analytics for enterprise decision making",;
@@ -46,11 +46,10 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     marketSize: "$3.8B",;
     growthRate: "35% annually",;
     realImplementation: true,;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
     category: "Business Intelligence",;
     technology["AI/ML", "Data Analytics", "Predictive Modeling", "Real-time Processing"],;
     benefits[;
@@ -70,9 +69,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       "Predictive insights",;
       "Real-time monitoring",;
       "Decision support";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "smart-supply-chain-optimization",;
     name: "Smart Supply Chain Optimization Platform",;
     tagline: "AI-powered supply chain intelligence and optimization",;
@@ -96,11 +94,10 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     marketSize: "$5.2B",;
     growthRate: "45% annually",;
     realImplementation: true,;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
     category: "Supply Chain Management",;
     technology["AI/ML", "Predictive Analytics", "IoT", "Blockchain"],;
     benefits[;
@@ -120,9 +117,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       "Inventory optimization",;
       "Logistics management",;
       "Risk mitigation";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "intelligent-hr-management-system",;
     name: "Intelligent HR Management System",;
     tagline: "AI-powered HR optimization and talent management",;
@@ -146,11 +142,10 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     marketSize: "$2.4B",;
     growthRate: "28% annually",;
     realImplementation: true,;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
     category: "HR Management",;
     technology["AI/ML", "People Analytics", "Predictive Modeling", "Machine Learning"],;
     benefits[;
@@ -170,9 +165,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       "Performance analytics",;
       "Employee engagement",;
       "Talent management";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "smart-financial-management-platform",;
     name: "Smart Financial Management Platform",;
     tagline: "AI-powered financial planning and optimization",;
@@ -196,11 +190,10 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     marketSize: "$4.1B",;
     growthRate: "32% annually",;
     realImplementation: true,;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
     category: "Financial Management",;
     technology["AI/ML", "Financial Analytics", "Risk Modeling", "Predictive Analytics"],;
     benefits[;
@@ -220,9 +213,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       "Risk management",;
       "Investment optimization",;
       "Performance monitoring";
-    ];,;,
-},;
-  {;
+    ]},;
+  {
     id: "intelligent-cybersecurity-platform",;
     name: "Intelligent Cybersecurity Platform",;
     tagline: "AI-powered threat detection and prevention",;
@@ -246,11 +238,10 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     marketSize: "$6.8B",;
     growthRate: "55% annually",;
     realImplementation: true,;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
     category: "Cybersecurity",;
     technology["AI/ML", "Threat Detection", "Behavioral Analytics", "Security Automation"],;
     benefits[;

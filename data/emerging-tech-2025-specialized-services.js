@@ -1,7 +1,7 @@
 export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
   // ===== BLOCKCHAIN & WEB3 SERVICES =====;
     // 1. Decentralized Identity Management Platform;
-    {;
+    {
   id: "decentralized-identity-platform",;
         name: "Decentralized Identity Management Platform",;
         tagline: "Self-sovereign identity with zero-knowledge proofs",;
@@ -67,21 +67,19 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         competitors["Microsoft Entra", "Okta", "Auth0", "Spruce ID"],;
         marketSize: "$18.7B identity and access management market",;
         growthRate: "320% annual growth in decentralized identity",;
-        contactInfo: {;
+        contactInfo: {
   phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
-            address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+            address: "364 E Main St STE 1008 Middletown DE 19709"},;
         websiteUrl: "https://ziontechgroup.com/decentralized-identity-platform",;
         demoUrl: "https://ziontechgroup.com/decentralized-identity-platform/demo",;
         trialDays: 30,;
         setupTime: "2-3 weeks",;
         complianceStandards["GDPR", "CCPA", "SOC2", "ISO 27001", "NIST"],;
-        supportLevel: "enterprise";,;,
-},;
+        supportLevel: "enterprise"},;
     // 2. AI-Powered DeFi Analytics Platform;
-    {;
+    {
   id: "ai-defi-analytics-platform",;
         name: "AI-Powered DeFi Analytics Platform",;
         tagline: "Intelligent DeFi analytics and portfolio optimization",;
@@ -147,22 +145,20 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         competitors["DeFi Pulse", "DeFi Llama", "Zapper", "DeBank"],;
         marketSize: "$12.8B DeFi analytics market",;
         growthRate: "450% annual growth in DeFi analytics",;
-        contactInfo: {;
+        contactInfo: {
   phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
-            address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+            address: "364 E Main St STE 1008 Middletown DE 19709"},;
         websiteUrl: "https://ziontechgroup.com/ai-defi-analytics",;
         demoUrl: "https://ziontechgroup.com/ai-defi-analytics/demo",;
         trialDays: 14,;
         setupTime: "1 hour",;
         complianceStandards["GDPR", "CCPA", "SOC2"],;
-        supportLevel: "premium";,;,
-},;
+        supportLevel: "premium"},;
     // ===== IoT & EDGE COMPUTING SERVICES =====;
     // 3. Autonomous IoT Fleet Management System;
-    {;
+    {
   id: "autonomous-iot-fleet-management",;
         name: "Autonomous IoT Fleet Management System",;
         tagline: "AI-powered fleet optimization with real-time IoT monitoring",;
@@ -228,21 +224,19 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         competitors["Samsara", "Verizon Connect", "Geotab", "Fleet Complete"],;
         marketSize: "$25.5B fleet management market",;
         growthRate: "280% annual growth in IoT fleet management",;
-        contactInfo: {;
+        contactInfo: {
   phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
-            address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+            address: "364 E Main St STE 1008 Middletown DE 19709"},;
         websiteUrl: "https://ziontechgroup.com/autonomous-iot-fleet-management",;
         demoUrl: "https://ziontechgroup.com/autonomous-iot-fleet-management/demo",;
         trialDays: 30,;
         setupTime: "2-4 weeks",;
         complianceStandards["ISO 27001", "SOC2", "GDPR", "CCPA"],;
-        supportLevel: "enterprise";,;,
-},;
+        supportLevel: "enterprise"},;
     // 4. Edge AI Manufacturing Intelligence Platform;
-    {;
+    {
   id: "edge-ai-manufacturing-intelligence",;
         name: "Edge AI Manufacturing Intelligence Platform",;
         tagline: "Real-time manufacturing optimization at the edge",;
@@ -308,22 +302,20 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         competitors["Siemens Mindsphere", "GE Predix", "PTC ThingWorx", "SAP Leonardo"],;
         marketSize: "$18.2B edge computing market",;
         growthRate: "380% annual growth in edge AI manufacturing",;
-        contactInfo: {;
+        contactInfo: {
   phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
-            address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+            address: "364 E Main St STE 1008 Middletown DE 19709"},;
         websiteUrl: "https://ziontechgroup.com/edge-ai-manufacturing-intelligence",;
         demoUrl: "https://ziontechgroup.com/edge-ai-manufacturing-intelligence/demo",;
         trialDays: 30,;
         setupTime: "4-6 weeks",;
         complianceStandards["ISO 27001", "SOC2", "ISO 9001", "IATF 16949"],;
-        supportLevel: "enterprise";,;,
-},;
+        supportLevel: "enterprise"},;
     // ===== SUSTAINABLE TECHNOLOGY SERVICES =====;
     // 5. AI-Powered Carbon Footprint Management;
-    {;
+    {
   id: "ai-carbon-footprint-management",;
         name: "AI-Powered Carbon Footprint Management",;
         tagline: "Intelligent carbon tracking and sustainability optimization",;
@@ -389,12 +381,11 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         competitors["Watershed", "Normative", "Persefoni", "Carbon Analytics"],;
         marketSize: "$8.9B sustainability management market",;
         growthRate: "420% annual growth in AI sustainability",;
-        contactInfo: {;
+        contactInfo: {
   phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
-            address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+            address: "364 E Main St STE 1008 Middletown DE 19709"},;
         websiteUrl: "https://ziontechgroup.com/ai-carbon-footprint-management",;
         demoUrl: "https://ziontechgroup.com/ai-carbon-footprint-management/demo",;
         trialDays: 30,;
@@ -407,10 +398,9 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
             "Waste reduction percentage",;
             "ESG score improvement",;
             "Sustainability compliance rate";
-        ];,;,
-},;
+        ]},;
     // 6. Smart Grid Energy Optimization Platform;
-    {;
+    {
   id: "smart-grid-energy-optimization",;
         name: "Smart Grid Energy Optimization Platform",;
         tagline: "AI-powered smart grid management for sustainable energy",;
@@ -476,22 +466,20 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         competitors["Schneider Electric", "Siemens", "GE Grid Solutions", "ABB"],;
         marketSize: "$32.1B smart grid market",;
         growthRate: "350% annual growth in AI smart grid",;
-        contactInfo: {;
+        contactInfo: {
   phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
-            address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+            address: "364 E Main St STE 1008 Middletown DE 19709"},;
         websiteUrl: "https://ziontechgroup.com/smart-grid-energy-optimization",;
         demoUrl: "https://ziontechgroup.com/smart-grid-energy-optimization/demo",;
         trialDays: 30,;
         setupTime: "6-8 weeks",;
         complianceStandards["ISO 27001", "SOC2", "NERC CIP", "IEEE Standards"],;
-        supportLevel: "enterprise";,;,
-},;
+        supportLevel: "enterprise"},;
     // ===== SPACE TECHNOLOGY SERVICES =====;
     // 7. Satellite Data Analytics Platform;
-    {;
+    {
   id: "satellite-data-analytics-platform",;
         name: "Satellite Data Analytics Platform",;
         tagline: "AI-powered satellite data analysis for global insights",;
@@ -557,22 +545,20 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         competitors["Planet Labs", "Maxar Technologies", "Airbus Defence and Space", "DigitalGlobe"],;
         marketSize: "$4.2B satellite data analytics market",;
         growthRate: "280% annual growth in satellite analytics",;
-        contactInfo: {;
+        contactInfo: {
   phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
-            address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+            address: "364 E Main St STE 1008 Middletown DE 19709"},;
         websiteUrl: "https://ziontechgroup.com/satellite-data-analytics",;
         demoUrl: "https://ziontechgroup.com/satellite-data-analytics/demo",;
         trialDays: 30,;
         setupTime: "2-3 weeks",;
         complianceStandards["ISO 27001", "SOC2", "GDPR", "Space Data Regulations"],;
-        supportLevel: "enterprise";,;,
-},;
+        supportLevel: "enterprise"},;
     // ===== BIOTECHNOLOGY SERVICES =====;
     // 8. AI-Powered Synthetic Biology Platform;
-    {;
+    {
   id: "ai-synthetic-biology-platform",;
         name: "AI-Powered Synthetic Biology Platform",;
         tagline: "Revolutionary synthetic biology design and optimization",;
@@ -638,22 +624,21 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [;
         competitors["Ginkgo Bioworks", "Twist Bioscience", "Benchling", "DNA Script"],;
         marketSize: "$15.8B synthetic biology market",;
         growthRate: "450% annual growth in AI synthetic biology",;
-        contactInfo: {;
+        contactInfo: {
   phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
-            address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
+            address: "364 E Main St STE 1008 Middletown DE 19709"},;
         websiteUrl: "https://ziontechgroup.com/ai-synthetic-biology",;
         demoUrl: "https://ziontechgroup.com/ai-synthetic-biology/demo",;
         trialDays: 30,;
         setupTime: "4-6 weeks",;
         complianceStandards["FDA", "EPA", "USDA", "Biosafety Guidelines", "GMO Regulations"],;
         supportLevel: "enterprise";
-;
+
 ];
 // Market analysis for emerging technology services;
-export const EMERGING_TECH_MARKET_ANALYSIS = {;
+export const EMERGING_TECH_MARKET_ANALYSIS = {
   totalMarketSize: "$892B",;
     growthRate: "18.4% CAGR",;
     keyTrends[;
@@ -672,11 +657,10 @@ export const EMERGING_TECH_MARKET_ANALYSIS = {;
         "Regulatory compliance expertise",;
   "Sustainable technology focus";
     ];
-;
-;
-;
-;
-;
-;,;,
+
+
+
+
+
 }
 }

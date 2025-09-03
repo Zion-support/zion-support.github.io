@@ -326,8 +326,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {}
         </Tabs>;
       </CardContent>;
     </Card>;
-  );,
-}
+  )}
 // Helper component for API endpoint documentation;
 function EndpointSection({}
   method,;
@@ -395,6 +394,5 @@ function EndpointSection({}
         </div>;
       )}
     </div>;
-  );,
-}'"`;
+  )}'"`;
 '"`'"`;

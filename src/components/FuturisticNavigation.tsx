@@ -8,7 +8,7 @@ export default function Page() {};
   ;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown) };
   // Enhanced service categories with better organization;
-  ;
+
         { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },;
         { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },;
         { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' },;
@@ -58,8 +58,8 @@ export default function Page() {};
         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },;
         { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },;
         { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },;
-        { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculator, description: 'Complete pricing and ROI analysis' };
-      ]};
+        { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculator, description: 'Complete pricing and ROI analysis' }
+      ]}
   ];
   return ();
     <>`;
@@ -161,7 +161,7 @@ export default function Page() {};
         </div>;
       </header>;
     </>;
-  )};
+  )}
 '"`;
 
-;,"});,})";
+;,"});})";

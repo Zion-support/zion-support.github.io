@@ -14,7 +14,7 @@ export function AccessibilityPage() {};
     {};
 }
   ];
-;
+
   const standards = [;
     {};
 },;
@@ -25,7 +25,7 @@ export function AccessibilityPage() {};
     {};
 }
   ];
-;
+
   const assistiveTechnologies = [;
     {};
 },;
@@ -36,7 +36,7 @@ export function AccessibilityPage() {};
     {};
 }
   ];
-;
+
   const accessibilityTools = [;
     {};
 },;
@@ -47,7 +47,7 @@ export function AccessibilityPage() {};
     {};
 }
   ];
-;
+
   const keyboardShortcuts = [;
     { key: 'Tab', description: 'Navigate to next interactive element' },;
     { key: 'Shift + Tab', description: 'Navigate to previous interactive element' },;
@@ -58,7 +58,7 @@ export function AccessibilityPage() {};
     { key: 'Home', description: 'Go to beginning of page' },;
     { key: 'End', description: 'Go to end of page' }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -72,7 +72,7 @@ export function AccessibilityPage() {};
               Zion Tech Group is committed to ensuring digital accessibility for all users. ;
               We strive to provide an inclusive experience that works for everyone, regardless of ability.;
             </p>;
-            ;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <div>Broken JSX</div>
                 className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">;
@@ -106,7 +106,7 @@ export function AccessibilityPage() {};
                   <feature.icon className="w-10 h-10 text-zion-cyan" />;
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>;
                 </div>;
-                ;
+
                 <p className="text-zion-slate-light mb-4 leading-relaxed">;
                   {feature.description}
                 </p>;
@@ -175,7 +175,7 @@ export function AccessibilityPage() {};
                     <p className="text-zion-slate-light text-sm">{tech.description}</p>;
                   </div>;
                 </div>;
-                ;
+
                 <div>;
                   <h4 className="text-sm font-semibold text-zion-cyan mb-2">Supported Technologies:</h4>;
                   <div className="flex flex-wrap gap-2">;
@@ -233,7 +233,7 @@ export function AccessibilityPage() {};
                 Our website can be fully navigated using only the keyboard. Use these keyboard shortcuts ;
                 to navigate efficiently through our content.;
               </p>;
-              ;
+
               <div className="space-y-3">;
                 {};
                   <div key={index} className="flex items-center justify-between">;
@@ -284,7 +284,7 @@ export function AccessibilityPage() {};
                 If you encounter any accessibility barriers or have suggestions for improvement, ;
                 please contact us.;
               </p>;
-              ;
+
               <div className="space-y-4">;
                 <div className="flex items-center space-x-3">;
                   <Mail className="w-5 h-5 text-zion-cyan" />;
@@ -306,7 +306,7 @@ export function AccessibilityPage() {};
               <p className="text-zion-slate-light mb-6">;
                 Help us improve by reporting accessibility issues or suggesting enhancements.;
               </p>;
-              ;
+
               <div className="space-y-4">;
                 <div>Broken JSX</div>
                 />;
@@ -354,7 +354,6 @@ export function AccessibilityPage() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
+
 export default AccessibilityPage;

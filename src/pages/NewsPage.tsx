@@ -15,7 +15,7 @@ export function NewsPage() {};
     { id: 'company', name: 'Company News', icon: Award },;
     { id: 'industry', name: 'Industry Trends', icon: TrendingUp }
   ];
-;
+
   const newsArticles = [;
     {};
 },;
@@ -36,7 +36,7 @@ export function NewsPage() {};
 ;
   const featuredArticles = newsArticles.filter(article => article.isFeatured);
   const regularArticles = filteredArticles.filter(article => !article.isFeatured);
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -50,7 +50,7 @@ export function NewsPage() {};
               Stay informed about the latest developments in technology, our company milestones, ;
               and industry insights from our expert team.;
             </p>;
-            ;
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">;
               <div className="relative">;
@@ -113,7 +113,7 @@ export function NewsPage() {};
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">;
                       {article.title}
                     </h3>;
-                    ;
+
                     <p className="text-zion-slate-light mb-4 leading-relaxed">;
                       {article.excerpt}
                     </p>;
@@ -158,7 +158,7 @@ export function NewsPage() {};
           </div>;
         </section>;
       )}
-;
+
       {/* Regular Articles */}
       <section className="py-16 bg-zion-slate-darker">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
@@ -193,7 +193,7 @@ export function NewsPage() {};
                   <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors line-clamp-2">;
                     {article.title}
                   </h3>;
-                  ;
+
                   <p className="text-zion-slate-light text-sm mb-4 leading-relaxed line-clamp-3">;
                     {article.excerpt}
                   </p>;
@@ -248,7 +248,7 @@ export function NewsPage() {};
             <p className="text-xl text-zion-slate-light mb-8">;
               Subscribe to our newsletter for the latest technology insights, company updates, and industry trends.;
             </p>;
-            ;
+
             <div className="max-w-md mx-auto">;
               <div className="flex space-x-2">;
                 <div>Broken JSX</div>
@@ -287,7 +287,6 @@ export function NewsPage() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
+
 export default NewsPage;

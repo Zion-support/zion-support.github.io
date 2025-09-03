@@ -2,10 +2,10 @@ import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Accessibility, Eye, Volume2, MousePointer, Keyboard, Monitor, CheckCircle } from 'lucide-react';
-;
-const AccessibilityPage: NextPage = () => {;
+
+const AccessibilityPage: NextPage = () => {
   const accessibilityFeatures = [;
-    {;
+    {
       icon: Eye,;
       title: 'Visual Accessibility',;
       description: 'Features to support users with visual impairments',;
@@ -16,9 +16,8 @@ const AccessibilityPage: NextPage = () => {;
         'Alternative text for all images',;
         'Color-blind friendly color schemes',;
         'Focus indicators for keyboard navigation';
-      ];,
-},;
-    {;
+      ]},;
+    {
       icon: Volume2,;
       title: 'Audio Accessibility',;
       description: 'Support for users with hearing impairments',;
@@ -29,9 +28,8 @@ const AccessibilityPage: NextPage = () => {;
         'Sign language interpretation available',;
         'Audio descriptions for visual content',;
         'Volume control options';
-      ];,
-},;
-    {;
+      ]},;
+    {
       icon: Keyboard,;
       title: 'Motor Accessibility',;
       description: 'Support for users with motor impairments',;
@@ -42,9 +40,8 @@ const AccessibilityPage: NextPage = () => {;
         'Customizable keyboard shortcuts',;
         'Switch navigation support',;
         'Touch-friendly interface design';
-      ];,
-},;
-    {;
+      ]},;
+    {
       icon: Monitor,;
       title: 'Cognitive Accessibility',;
       description: 'Features to support users with cognitive differences',;
@@ -55,54 +52,46 @@ const AccessibilityPage: NextPage = () => {;
         'Error prevention and clear error messages',;
         'Help and support documentation',;
         'Customizable interface complexity';
-      ];,
-}
+      ]}
   ];
-;
+
   const standards = [;
-    {;
+    {
       name: 'WCAG 2.1 AA',;
       description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',;
       status: 'Compliant',;
-      details: 'Our website meets or exceeds WCAG 2.1 AA standards for web accessibility.';,
-},;
-    {;
+      details: 'Our website meets or exceeds WCAG 2.1 AA standards for web accessibility.'},;
+    {
       name: 'Section 508',;
       description: 'U.S. federal accessibility standards for electronic and information technology',;
       status: 'Compliant',;
-      details: 'We comply with Section 508 requirements for federal accessibility standards.';,
-},;
-    {;
+      details: 'We comply with Section 508 requirements for federal accessibility standards.'},;
+    {
       name: 'ADA Compliance',;
       description: 'Americans with Disabilities Act compliance for digital accessibility',;
       status: 'Compliant',;
-      details: 'Our digital services are designed to be accessible under ADA guidelines.';,
-}
+      details: 'Our digital services are designed to be accessible under ADA guidelines.'}
   ];
-;
+
   const assistiveTechnologies = [;
-    {;
+    {
       name: 'Screen Readers',;
       description: 'Compatible with popular screen reading software',;
-      technologies: ['NVDA', 'JAWS', 'VoiceOver', 'TalkBack'];,
-},;
-    {;
+      technologies: ['NVDA', 'JAWS', 'VoiceOver', 'TalkBack']},;
+    {
       name: 'Voice Control',;
       description: 'Support for voice control software',;
-      technologies: ['Dragon NaturallySpeaking', 'Voice Control (macOS)', 'Voice Access (Android)'];,
-},;
-    {;
+      technologies: ['Dragon NaturallySpeaking', 'Voice Control (macOS)', 'Voice Access (Android)']},;
+    {
       name: 'Switch Navigation',;
       description: 'Compatible with switch navigation devices',;
-      technologies: ['Switch Control (iOS)', 'Switch Access (Android)', 'External switch devices'];,
-},;
-    {;
+      technologies: ['Switch Control (iOS)', 'Switch Access (Android)', 'External switch devices']},;
+    {
       name: 'Magnification',;
       description: 'Works with screen magnification software',;
-      technologies: ['ZoomText', 'MAGic', 'Built-in browser zoom', 'OS magnification tools'];,
-}
+      technologies: ['ZoomText', 'MAGic', 'Built-in browser zoom', 'OS magnification tools']}
   ];
-;
+
   return (;
     <MainLayout;
       title="Accessibility - Zion Tech Group";
@@ -249,7 +238,5 @@ const AccessibilityPage: NextPage = () => {;
         </section>;
       </div>;
     </MainLayout>;
-  );,
-};
-;
+  )}
 export default AccessibilityPage;

@@ -72,9 +72,9 @@ id: 2,"";
     price: "From $200,000",;"";
     timeline: "18-30 weeks",;"";
     category: "Integration",;"";
-    technologies: ["Integration", "APIs", "Migration", "Legacy Systems"]};
+    technologies: ["Integration", "APIs", "Migration", "Legacy Systems"]}
 ];
-;
+
 const blockchainTechnologies: unknown = [];
   {}
 ";
@@ -83,8 +83,7 @@ const blockchainTechnologies: unknown = [];
     description: "Enterprise blockchain platforms and frameworks",";
     icon: Building,"";
     useCase: "Platform Development","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -92,8 +91,7 @@ const blockchainTechnologies: unknown = [];
     description: "Self-executing contracts with business logic",";
     icon: Code,"";
     useCase: "Business Automation","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -106,7 +104,7 @@ const blockchainTechnologies: unknown = [];
   {};
     reliability: "High"};
 ];
-;
+
 const successStories: unknown = [];
   {}
 ";
@@ -116,8 +114,7 @@ const successStories: unknown = [];
     challenge: "Needed transparent supply chain tracking across 50+ countries","";
     solution: "Built comprehensive blockchain supply chain platform with IoT integration","";
     results: "100% supply chain transparency, 40% cost reduction, 60% efficiency improvement, better compliance","";
-    logo: "GSC";,
-},;
+    logo: "GSC"},;
   {}
 ";
     id: 2,"";
@@ -126,8 +123,7 @@ const successStories: unknown = [];
     challenge: "Required blockchain-based cross-border payment system","";
     solution: "Implemented blockchain payment platform with smart contracts","";
     results: "80% faster payments, 70% cost reduction, 100% transparency, better compliance","";
-    logo: "DBI";,
-},;
+    logo: "DBI"},;
   {}
 ";
     id: 3,"";
@@ -136,17 +132,16 @@ const successStories: unknown = [];
     challenge: "Needed secure patient identity management system",;"";
     solution: "Built blockchain-based identity management platform",;"";
     results: "100% data security, 90% faster verification, better privacy, improved compliance",;"";
-    logo: "HIS"};
+    logo: "HIS"}
 ];
-;
+
 ";
     step: 4,;"";
     title: "Testing & Deployment",;"";
     description: "Test blockchain systems and deploy to production",;";
     icon: Gauge,;"";
-    duration: "4-8 weeks"};
-];,
-},;  {}
+    duration: "4-8 weeks"}
+]},;  {}
 ";
 "";
     title: "Security & Privacy","";
@@ -167,38 +162,33 @@ const successStories: unknown = [];
     description: "Blockchain eliminates intermediaries and reduces operational costs",;";
     icon: TrendingUp,;"";
     examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]};];
-;
+
 const blockchainBenefits: unknown = [{}
     title: "Transparency & Trust",;
     description: "Blockchain provides immutable, transparent records that build trust",;
     icon: Eye,;
-    examples["Immutable records", "Transparent transactions", "Audit trails", "Trust building"];,
-},;
+    examples["Immutable records", "Transparent transactions", "Audit trails", "Trust building"]},;
   {}
     title: "Security & Privacy",;
     description: "Advanced cryptography ensures data security and privacy protection",;
     icon: Shield,;
-    examples["Cryptographic security", "Data privacy", "Access control", "Fraud prevention"];,
-},;
+    examples["Cryptographic security", "Data privacy", "Access control", "Fraud prevention"]},;
   {}
     title: "Automation & Efficiency",;
     description: "Smart contracts automate business processes and reduce manual effort",;
     icon: Zap,;
-    examples["Process automation", "Smart contracts", "Reduced errors", "Faster execution"];,
-},;
+    examples["Process automation", "Smart contracts", "Reduced errors", "Faster execution"]},;
   {}
-    examples["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"];,
-};
+    examples["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]}
     title: "Cost Reduction",;
     description: "Blockchain eliminates intermediaries and reduces operational costs",;
     icon: TrendingUp,;
-    examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"];,
-};
+    examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]}
 ];
-;
+
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
-;
+
   ";
   return ("    <div className = "min-h-screen bg-futuristic">";
       {/* Hero Section */}"";
@@ -214,8 +204,7 @@ const blockchainBenefits: unknown = [{}
               <Building className="w-10 h-10 text-white" />;
             </motion.div>;
 
-";,
-}}"";
+"}}"";
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"";
 "";
               <Building className="w-10 h-10 text-white"  />            </motion.div>";
@@ -346,9 +335,8 @@ const blockchainBenefits: unknown = [{}
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -356,9 +344,8 @@ const blockchainBenefits: unknown = [{}
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;
             {};
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -465,14 +452,10 @@ const blockchainBenefits: unknown = [{}
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
 
-export { BlockchainEnterpriseSolutions };
-;
-export { BlockchainEnterpriseSolutions };
-;
-export { BlockchainEnterpriseSolutions };
-;
-export { BlockchainEnterpriseSolutions };
+
+export { BlockchainEnterpriseSolutions }
+export { BlockchainEnterpriseSolutions }
+export { BlockchainEnterpriseSolutions }
+export { BlockchainEnterpriseSolutions }

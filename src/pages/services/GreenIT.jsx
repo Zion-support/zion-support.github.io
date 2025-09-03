@@ -19,7 +19,7 @@ export default function GreenIT() {};
     {};
 }
   ];
-;
+
   const benefits = [;
     {};
 },;
@@ -30,7 +30,7 @@ export default function GreenIT() {};
     {};
 }
   ];
-;
+
   const technologies = [;
     {};
 },;
@@ -41,12 +41,12 @@ export default function GreenIT() {};
     {};
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div>Broken JSX</div>
       />;
-      ;
+
       {/* Hero Section */}
       <section className="relative py-20 px-4">;
         <div className="container mx-auto text-center">;
@@ -184,16 +184,11 @@ export default function GreenIT() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
 
-export { GreenIT };
-;
-export { GreenIT };
-;
-export { GreenIT };
-;
-export { GreenIT };
-;
-export { GreenIT };
+
+export { GreenIT }
+export { GreenIT }
+export { GreenIT }
+export { GreenIT }
+export { GreenIT }

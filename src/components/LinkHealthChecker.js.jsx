@@ -108,8 +108,7 @@ export default function Page() {};
                 )}
               </div>;
             </div>;
-          );,
-})}
+          )})}
       </div>;
 
       {/* Recommendations */}
@@ -122,16 +121,12 @@ export default function Page() {};
 ;
       {};
         </div>)}
-    </div>)};
+    </div>)}
 export default LinkHealthChecker;
-;
 
-export { LinkHealthChecker };
-;
-export { LinkHealthChecker };
-;
-export { LinkHealthChecker };
-;
-export { LinkHealthChecker };
-;
-export { LinkHealthChecker };
+
+export { LinkHealthChecker }
+export { LinkHealthChecker }
+export { LinkHealthChecker }
+export { LinkHealthChecker }
+export { LinkHealthChecker }

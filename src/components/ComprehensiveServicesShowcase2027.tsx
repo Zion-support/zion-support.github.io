@@ -26,8 +26,8 @@ const features = [";
   {};
     description: "30-day money-back guarantee with free migration support"};
 ];
-;
-;
+
+
   ;      <div className="container mx-auto px-4">;
         {/* Header */}";
         <div className="text-center mb-16">";

@@ -1,4 +1,4 @@
-export: function HomepagePromotion () {;
-;
-export function HomepagePromotion () {;
+export: function HomepagePromotion () {
+
+export function HomepagePromotion () {
 }}

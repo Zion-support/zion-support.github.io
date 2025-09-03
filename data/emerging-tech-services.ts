@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface EmergingTechService {;
+export interface EmergingTechService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface EmergingTechService {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface EmergingTechService {;
   rating: number;
 export const emergingTechServices: EmergingTechService[] = [;
   // Quantum Internet Security Platform;
-  {;
+  {
     id: "quantum-internet-security-platform",;
     name: "Quantum Internet Security Platform",;
     tagline: "Unbreakable security using quantum cryptography for the post-quantum era",;
@@ -76,21 +76,19 @@ export const emergingTechServices: EmergingTechService[] = [;
     marketSize: "$15B quantum security market",;
     growthRate: "800% annual growth",;
     variant: "quantum-advanced",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full quantum security platform with QKD hardware, post-quantum algorithms, comprehensive monitoring, and government compliance.",;
     launchDate: "2024-01-01",;
     customers: 12,;
     rating: 5.0,;
-    reviews: 8;,;,
-},;
+    reviews: 8},;
   // Neural Interface Development Platform;
-  {;
+  {
     id: "neural-interface-development-platform",;
     name: "Neural Interface Development Platform",;
     tagline: "Build brain-computer interfaces for the next generation of human-computer interaction",;
@@ -128,21 +126,19 @@ export const emergingTechServices: EmergingTechService[] = [;
     marketSize: "$8B neural interface market",;
     growthRate: "600% annual growth",;
     variant: "neural-quantum",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full development platform with EEG processing, ML algorithms, comprehensive APIs, and medical device compliance.",;
     launchDate: "2024-02-15",;
     customers: 34,;
     rating: 4.9,;
-    reviews: 28;,;,
-},;
+    reviews: 28},;
   // Autonomous Vehicle AI Platform;
-  {;
+  {
     id: "autonomous-vehicle-ai-platform",;
     name: "Autonomous Vehicle AI Platform",;
     tagline: "Build self-driving vehicles with advanced AI and computer vision",;
@@ -180,21 +176,19 @@ export const emergingTechServices: EmergingTechService[] = [;
     marketSize: "$65B autonomous vehicle market",;
     growthRate: "450% annual growth",;
     variant: "neural-cyberpunk",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full autonomous vehicle platform with advanced AI, computer vision, safety systems, and comprehensive testing tools.",;
     launchDate: "2024-01-15",;
     customers: 18,;
     rating: 4.9,;
-    reviews: 15;,;,
-},;
+    reviews: 15},;
   // Space Technology Development Platform;
-  {;
+  {
     id: "space-technology-development-platform",;
     name: "Space Technology Development Platform",;
     tagline: "Build next-generation space technologies with AI and advanced materials",;
@@ -232,21 +226,19 @@ export const emergingTechServices: EmergingTechService[] = [;
     marketSize: "$450B space economy",;
     growthRate: "700% annual growth",;
     variant: "quantum-space",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full space technology platform with AI algorithms, materials science, mission planning, and comprehensive development tools.",;
     launchDate: "2024-01-01",;
     customers: 8,;
     rating: 5.0,;
-    reviews: 6;,;,
-},;
+    reviews: 6},;
   // Biotech AI Development Platform;
-  {;
+  {
     id: "biotech-ai-development-platform",;
     name: "Biotech AI Development Platform",;
     tagline: "Accelerate drug discovery and biotechnology research with AI",;
@@ -284,12 +276,11 @@ export const emergingTechServices: EmergingTechService[] = [;
     marketSize: "$95B biotech market",;
     growthRate: "350% annual growth",;
     variant: "neural-quantum",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full biotech AI platform with advanced algorithms, computational biology tools, research collaboration, and regulatory compliance.",;
     launchDate: "2024-02-01",;

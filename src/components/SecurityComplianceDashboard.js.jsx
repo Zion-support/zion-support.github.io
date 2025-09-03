@@ -46,8 +46,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {};
             status: 'pending_review',''';
             requirements['Requirement 1',Requirement 2'],;
   violations[];
-';,
-};'';
+'};'';
         addComplianceRule(newRule);''';
         trackEvent('security',dashboard',compliance_rule_added')}, [addComplianceRule, trackEvent]);
     const getSeverityColor = (severity) => {}
@@ -60,7 +59,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {};
             case 'medium': return 'text-yellow-600 bg-yellow-100';''';
             case 'low': return 'text-green-600 bg-green-100';''';
             default: return 'text-gray-600 bg-gray-100'}
-    };
+    }
     const getStatusColor = (status) => {}
         switch (status) {}
 ';
@@ -70,7 +69,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {};
             case 'non_compliant': return 'text-red-600 bg-red-100';''';
             case 'pending_review': return 'text-yellow-600 bg-yellow-100';''';
             default: return 'text-gray-600 bg-gray-100'}
-    };
+    }
     const getThreatLevelColor = (level) => {}
         switch (level) {}
 ';
@@ -78,8 +77,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {};
             case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';';
             case 'medium': return 'text-yellow-600 bg-yellow-100 border-yellow-200';';
             case 'low': return 'text-green-600 bg-green-100 border-green-200';';
-            default: return 'text-gray-600 bg-gray-100 border-gray-200'}`;,
-};``;
+            default: return 'text-gray-600 bg-gray-100 border-gray-200'}`};``;
     return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>";
       {/* Header */}"";
       <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">"";

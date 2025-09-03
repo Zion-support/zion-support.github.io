@@ -1,19 +1,18 @@
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
-class $1 {;
-  constructor() {;
-  this.templates = {;
+class $1 {
+  constructor() {
+  this.templates = {
   blog: this.getBlogTemplate(),;
       component: this.getComponentTemplate(),;
-      page: this.getPageTemplate(),;,;,
-}
+      page: this.getPageTemplate(),;}
   }
-;
-  getBlogTemplate() {;
+
+  getBlogTemplate() {
   return `import type { NextPage } from "next";
 import Head from "next/head";
-const BlogPost: NextPage = () => {;
+const BlogPost: NextPage = () => {
   return (;
     <>;
       <Head>;
@@ -27,31 +26,26 @@ const BlogPost: NextPage = () => {;
         </div>;
       </div>;
     </>;
-  );,;,
-}
-export default BlogPost;`;,;,
-}
-;
-  getComponentTemplate() {;
+  );}
+export default BlogPost;`;}
+
+  getComponentTemplate() {
   return `import React from "react";
-interface ComponentProps {;
-  // Add props here;,;,
-}
-;
-const Component: React.FC<ComponentProps> = ({}) => {;
+interface ComponentProps {
+  // Add props here;}
+
+const Component: React.FC<ComponentProps> = ({}) => {
   return (;
     <div className="">;
       {/* Component content */}
     </div>;
-  );,;,
-}
-export default Component;`;,;,
-}
-;
-  getPageTemplate() {;
+  );}
+export default Component;`;}
+
+  getPageTemplate() {
   return `import type { NextPage } from "next";
 import Head from "next/head";
-const Page: NextPage = () => {;
+const Page: NextPage = () => {
   return (;
     <>;
       <Head>;
@@ -63,18 +57,15 @@ const Page: NextPage = () => {;
         {/* Page content */}
       </div>;
     </>;
-  );,;,
-}
-export default Page;`;,;,
-}
-;
-  generateContent(type, name, options = {}) {;
+  );}
+export default Page;`;}
+
+  generateContent(type, name, options = {}) {
   const template = this.templates[type];
-    if (!template) {;
+    if (!template) {
   console.error("Unknown content type:", type);
-      return;,;,
-}
-;
+      return;}
+
     const content = template;
       .replace(/Blog Post Title/g, options.title || name);
       .replace(;
@@ -87,15 +78,13 @@ export default Page;`;,;,
     const filePath = path.join(__dirname, "..", "..", `generated`, fileName);
     // Ensure directory exists;
     const dir = path.dirname(filePath);
-    if (!fs.existsSync(dir)) {;
-  fs.mkdirSync(dir, { recursive: true });,;,
-}
-;
+    if (!fs.existsSync(dir)) {
+  fs.mkdirSync(dir, { recursive: true });}
+
     fs.writeFileSync(filePath, content);
-    console.log(`✅ Generated ${type}: ${fileName}`);,;,
+    console.log(`✅ Generated ${type}: ${fileName}`);}
 }
-}
-;
+
 // Example usage:;
 // const generator = new ContentGenerator();
 // generator.generateContent(`blog`, "My Blog Post", { title: "My Blog Post", description: "A great blog post" });

@@ -15,7 +15,7 @@ export function ITServiceRequestHero() {};
     return (<section className="relative py-20 overflow-hidden">;
       <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple-dark/80"></div>;
       <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/5 opacity-20"></div>;
-      ;
+
       <div className="relative container mx-auto px-4 text-center">;
         <NeonGlow color="zion-cyan" intensity="high">          <GradientHeading size="6xl" className="mb-6">;
             Zion Tech Group;
@@ -57,6 +57,5 @@ export function ITServiceRequestHero() {};
         </div>;
       </div>;
     </section>;
-  );,
-}'";
+  )}'";
 '"'"

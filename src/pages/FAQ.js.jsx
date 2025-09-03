@@ -150,14 +150,10 @@ export {};
       </main>;
       <Footer />;
     </>)}
-;
 
-export { FAQ };
-;
-export { FAQ };
-;
-export { FAQ };
-;
-export { FAQ };
-;
-export { FAQ };
+
+export { FAQ }
+export { FAQ }
+export { FAQ }
+export { FAQ }
+export { FAQ }

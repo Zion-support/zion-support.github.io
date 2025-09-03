@@ -23,7 +23,7 @@ const ServicesOverview: React.FC = () => {};
     {};
 }
   ];
-;
+
   const allServices = [;
     // AI & Machine Learning;
     {};
@@ -57,7 +57,7 @@ const ServicesOverview: React.FC = () => {};
     {};
 }
   ];
-;
+
   // Calculate category counts;
   serviceCategories.forEach(category => {};
 });
@@ -112,7 +112,7 @@ const ServicesOverview: React.FC = () => {};
                 />;
               </div>;
             </div>;
-            ;
+
             <div className="flex flex-wrap gap-2">;
               {};
                   onClick={() => setSelectedCategory(category.id)}
@@ -141,15 +141,13 @@ const ServicesOverview: React.FC = () => {};
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
               {};
                 ? `Showing results for "${searchTerm || serviceCategories.find(c => c.id === selectedCategory)?.name}"`;
-                : 'Explore our comprehensive range of innovative technology services';,
-}
+                : 'Explore our comprehensive range of innovative technology services'}
             </p>;
           </div>;
-          ;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {};
                 )}
-                ;
                 <div className="mb-6">;
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">;
                     <service.icon className="w-8 h-8 text-white" />;
@@ -158,7 +156,7 @@ const ServicesOverview: React.FC = () => {};
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">{service.description}</p>;
                   <div className="text-2xl font-bold text-cyan-600 mb-4">{service.price}</div>;
                 </div>;
-                ;
+
                 <div className="mb-6">;
                   <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>;
                   <ul className="space-y-2">;
@@ -170,7 +168,7 @@ const ServicesOverview: React.FC = () => {};
                     ))}
                   </ul>;
                 </div>;
-                ;
+
                 <div className="mb-6">;
                   <div className="flex flex-wrap gap-2">;
                     {};
@@ -210,13 +208,13 @@ const ServicesOverview: React.FC = () => {};
               transform your business with innovative technology solutions.;
             </p>;
           </div>;
-          ;
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
             <div>;
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">;
                 Get in Touch;
               </h3>;
-              ;
+
               <div className="space-y-6">;
                 <div className="flex items-center space-x-4">;
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">;
@@ -229,7 +227,7 @@ const ServicesOverview: React.FC = () => {};
                     </a>;
                   </div>;
                 </div>;
-                ;
+
                 <div className="flex items-center space-x-4">;
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">;
                     <Mail className="w-6 h-6 text-white" />;
@@ -241,7 +239,7 @@ const ServicesOverview: React.FC = () => {};
                     </a>;
                   </div>;
                 </div>;
-                ;
+
                 <div className="flex items-center space-x-4">;
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">;
                     <MapPin className="w-6 h-6 text-white" />;
@@ -253,12 +251,12 @@ const ServicesOverview: React.FC = () => {};
                 </div>;
               </div>;
             </div>;
-            ;
+
             <div className="bg-white p-8 rounded-xl shadow-lg">;
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">;
                 Request Information;
               </h3>;
-              ;
+
               <form className="space-y-4">;
                 <div>;
                   <label className="block text-sm font-medium text-gray-700 mb-2">;
@@ -267,7 +265,7 @@ const ServicesOverview: React.FC = () => {};
                   <div>Broken JSX</div>
                   />;
                 </div>;
-                ;
+
                 <div>;
                   <label className="block text-sm font-medium text-gray-700 mb-2">;
                     Email Address;
@@ -275,7 +273,7 @@ const ServicesOverview: React.FC = () => {};
                   <div>Broken JSX</div>
                   />;
                 </div>;
-                ;
+
                 <div>;
                   <label className="block text-sm font-medium text-gray-700 mb-2">;
                     Services of Interest;
@@ -292,7 +290,7 @@ const ServicesOverview: React.FC = () => {};
                     <option>Specialized Solutions</option>;
                   </select>;
                 </div>;
-                ;
+
                 <div>;
                   <label className="block text-sm font-medium text-gray-700 mb-2">;
                     Message;
@@ -335,7 +333,5 @@ const ServicesOverview: React.FC = () => {};
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default ServicesOverview;

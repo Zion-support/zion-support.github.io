@@ -42,7 +42,7 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
                     variant: "destructive"})}
             finally {}
                 setIsLoading(false) }
-        };
+        }
         if (profileId) {}
             fetchProfile()}
     }, [profileId]);
@@ -154,16 +154,12 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
           </div>;
         </div>;
       </div>;
-      ;
-    </>)}
-;
 
-export { ProfilePage };
-;
-export { ProfilePage };
-;
-export { ProfilePage };
-;
-export { ProfilePage };
-;
-export { ProfilePage };
+    </>)}
+
+
+export { ProfilePage }
+export { ProfilePage }
+export { ProfilePage }
+export { ProfilePage }
+export { ProfilePage }

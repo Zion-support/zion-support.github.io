@@ -23,8 +23,7 @@ export {};
                     description: 'Intelligent financial planning and investment advisory system',''';
                     price: '$2,500/month',''';
                     features['Personalized portfolios',Risk assessment',Market analysis'],;''';
-                    path: '/comprehensive-services-showcase';,
-},;
+                    path: '/comprehensive-services-showcase'},;
                 {}
 ';
 '';
@@ -33,8 +32,7 @@ export {};
                     description: 'Advanced legal research platform with NLP capabilities',''';
                     price: '$1,800/month',''';
                     features['Case law analysis',Contract review',Compliance checking'],;''';
-                    path: '/comprehensive-services-showcase';,
-},;
+                    path: '/comprehensive-services-showcase'},;
                 {}
 ';
 '';
@@ -43,10 +41,8 @@ export {};
                     description: 'Medical imaging analysis platform with deep learning',''';
                     price: '$3,500/month',''';
                     features['Disease detection',Diagnostic support',Patient monitoring'],;''';
-                    path: '/comprehensive-services-showcase';,
-}
-            ];,
-},;
+                    path: '/comprehensive-services-showcase'}
+            ]},;
         {}
 ';
 '';
@@ -65,8 +61,7 @@ export {};
                     description: 'Comprehensive zero trust security and access management',''';
                     price: '$2,800/month',''';
                     features['Continuous verification',Least privilege access',Threat detection'],;''';
-                    path: '/comprehensive-services-showcase';,
-},;
+                    path: '/comprehensive-services-showcase'},;
                 {}
 ';
 '';
@@ -75,8 +70,7 @@ export {};
                     description: 'Advanced threat detection with machine learning',''';
                     price: '$3,200/month',''';
                     features['Real-time detection',Behavioral analytics',Automated response'],;''';
-                    path: '/comprehensive-services-showcase';,
-},;
+                    path: '/comprehensive-services-showcase'},;
                 {}
 ';
 '';
@@ -85,10 +79,8 @@ export {};
                     description: 'Multi-cloud security monitoring and optimization',''';
                     price: '$2,400/month',''';
                     features['Multi-cloud monitoring',Configuration management',Compliance'],;''';
-                    path: '/comprehensive-services-showcase';,
-}
-            ];,
-},;
+                    path: '/comprehensive-services-showcase'}
+            ]},;
         {}
 ';
 '';
@@ -107,8 +99,7 @@ export {};
                     description: 'Complete GitOps platform for infrastructure management',''';
                     price: '$2,200/month',''';
                     features['Infrastructure as Code',Git-based deployments',Drift detection'],;''';
-                    path: '/comprehensive-services-showcase';,
-},;
+                    path: '/comprehensive-services-showcase'},;
                 {}
 ';
 '';
@@ -117,8 +108,7 @@ export {};
                     description: 'Unified management across AWS, Azure, GCP, and more',''';
                     price: '$2,800/month',''';
                     features['Cost optimization',Resource monitoring',Compliance management'],;''';
-                    path: '/comprehensive-services-showcase';,
-},;
+                    path: '/comprehensive-services-showcase'},;
                 {}
 ';
 '';
@@ -127,10 +117,8 @@ export {};
                     description: 'Comprehensive Kubernetes operations and security',''';
                     price: '$2,500/month',''';
                     features['Multi-cluster management',Security policies',Monitoring'],;''';
-                    path: '/comprehensive-services-showcase';,
-}
-            ];,
-},;
+                    path: '/comprehensive-services-showcase'}
+            ]},;
         {}
 ';
 '';
@@ -149,8 +137,7 @@ export {};
                     description: 'High-performance real-time data processing and analytics',''';
                     price: '$3,200/month',''';
                     features['Real-time processing',Stream analytics',Live dashboards'],;''';
-                    path: '/comprehensive-services-showcase';,
-},;
+                    path: '/comprehensive-services-showcase'},;
                 {}
 ';
 '';
@@ -159,8 +146,7 @@ export {};
                     description: 'Advanced forecasting and pattern recognition',''';
                     price: '$2,800/month',''';
                     features['Machine learning models',Time series forecasting',Anomaly detection'],;''';
-                    path: '/comprehensive-services-showcase';,
-},;
+                    path: '/comprehensive-services-showcase'},;
                 {}
 ';
 '';
@@ -169,10 +155,8 @@ export {};
                     description: '360-degree customer view and behavioral analysis',''';
                     price: '$2,100/month',''';
                     features['Customer segmentation',Behavioral analysis',Personalization'],;''';
-                    path: '/comprehensive-services-showcase';,
-}
-            ];,
-},;
+                    path: '/comprehensive-services-showcase'}
+            ]},;
         {}
 ';
 '';
@@ -191,8 +175,7 @@ export {};
                     description: 'Comprehensive healthcare AI platform for patient care',''';
                     price: '$4,500/month',''';
                     features['Clinical decision support',Patient monitoring',Predictive analytics'],;''';
-                    path: '/comprehensive-services-showcase';,
-},;
+                    path: '/comprehensive-services-showcase'},;
                 {}
 ';
 '';
@@ -201,8 +184,7 @@ export {};
                     description: 'AI-powered risk assessment and fraud detection',''';
                     price: '$3,800/month',''';
                     features['Risk assessment',Fraud detection',Compliance automation'],;''';
-                    path: '/comprehensive-services-showcase';,
-},;
+                    path: '/comprehensive-services-showcase'},;
                 {}
 ';
 '';
@@ -211,36 +193,30 @@ export {};
                     description: 'IoT platform for manufacturing optimization',''';
                     price: '$3,200/month',''';
                     features['Predictive maintenance',Quality control',Production monitoring'],;''';
-                    path: '/comprehensive-services-showcase';,
-}
-            ];,
-}
+                    path: '/comprehensive-services-showcase'}
+            ]}
     ];
     const benefits = [];
         {}
             icon: Brain,';
             title: 'AI-First Approach',';
             description: 'Leverage cutting-edge artificial intelligence and machine learning technologies',';
-            color: 'text-blue-400';,
-},;
+            color: 'text-blue-400'},;
         {}
             icon: Shield,';
             title: 'Enterprise Security',';
             description: 'Bank-grade security and compliance built into every solution',';
-            color: 'text-green-400';,
-},;
+            color: 'text-green-400'},;
         {}
             icon: Rocket,';
             title: 'Rapid Deployment',';
             description: 'Get up and running quickly with proven implementation methodologies',';
-            color: 'text-purple-400';,
-},;
+            color: 'text-purple-400'},;
         {}
             icon: Users,';
             title: 'Expert Support',';
             description: '24/7 technical support and dedicated success managers',';
-            color: 'text-yellow-400';,
-}
+            color: 'text-yellow-400'}
     ];';
     const stats = ['';
         { icon: UsersIcon, value: '500+', label: 'Happy Clients', description: 'Trusted by businesses worldwide' },';
@@ -433,14 +409,10 @@ export {};
         </div>;
       </div>;
     </div>)}
-;
 
-export { NewServicesOverview };
-;
-export { NewServicesOverview };
-;
-export { NewServicesOverview };
-;
-export { NewServicesOverview };
-;
-export { NewServicesOverview };
+
+export { NewServicesOverview }
+export { NewServicesOverview }
+export { NewServicesOverview }
+export { NewServicesOverview }
+export { NewServicesOverview }

@@ -8,7 +8,7 @@ declare module 'react' {};
   export type RefCallback<T> = value: unknownT void;
   export type Ref<T> = RefObject<T> | RefCallback<T> | null;
   export type LegacyRef<T> = Ref<T>;
-  export function useRef<T = any>(initial: T): { current: T };
+  export function useRef<T = any>(initial: T): { current: T }
   const react: ;
   export {};
 ;

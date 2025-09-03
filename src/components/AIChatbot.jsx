@@ -31,8 +31,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                     "Tell me about your services",";
                     "How can I get a quote?", "What technologies do you use?",";
                     "Contact information";
-                ];,
-})}
+                ]})}
     }, [isOpen, messages.length, welcomeMessage]);
     // Auto-scroll to bottom;
     useEffect(() => {};
@@ -63,10 +62,10 @@ useEffect(() => {};
 }
     // comment;
     const addMessage = useCallback((message) => {}
-;
+
         const;const;const newMessage = {}_${Math.random().toString(36).substr(2, 9)}",;
             timestamp: new Date()}
-;
+
         setMessages(prev = > {}";
     // comment;
     useEffect(() => {};
@@ -88,9 +87,9 @@ if (enableContext && message.content.length > 10) {};
     // comment;
 const addBotMessage = useCallback((content, metadata) => {};
         const newMessage = {}_${Math.random().toString(36).substr(2, 9)}", timestamp: new Date()}
-;
+
             ...message, id: "msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}", timestamp: new Date()}
-;
+
             ...message, id: "msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}", timestamp: new Date()}
 ;
         setMessages(prev = > {};
@@ -127,8 +126,7 @@ const simulateAIProcessing = useCallback(async (userInput) => {};
 }
         // comment;
 
-        const input = userInput.toLowerCase();,
-}
+        const input = userInput.toLowerCase()}
         // comment;
         if (input.includes("service") || input.includes("offer")) {};
 }";
@@ -150,8 +148,7 @@ const simulateAIProcessing = useCallback(async (userInput) => {};
         if (input.includes("experience") || input.includes("portfolio") || input.includes("work")) {};
             return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions. Would you like me to share some case studies?"}";
         // comment;
-        return "I understand you&apos;re asking about " + userInput + ". Let me help you better. Could you provide more details about what you&apos;re looking for?"}, [responseDelay]);,
-}
+        return "I understand you&apos;re asking about " + userInput + ". Let me help you better. Could you provide more details about what you&apos;re looking for?"}, [responseDelay])}
         // comment;
 if (input.includes(&apos;service&apos) || input.includes(&apos;offer&apos)) {};
 }";
@@ -171,9 +168,7 @@ if (input.includes(&apos;service&apos) || input.includes(&apos;offer&apos)) {};
 }
 ;
         // comment;
-return &quot;I understand you&apos;re asking about &apos;&quot; + userInput + "&apos;. Let me help you better. Could you provide more details about what you&apos;re looking for?";,
-}, [responseDelay]);,
-}
+return &quot;I understand you&apos;re asking about &apos;&quot; + userInput + "&apos;. Let me help you better. Could you provide more details about what you&apos;re looking for?"}, [responseDelay])}
     // comment;
     const handleUserInput = useCallback(async (input) => {};
 }
@@ -201,8 +196,7 @@ trackChatbotInteraction(&apos;user_input&apos, {};
                     "Tell me more",;
                     "Get a quote",;
                     "View services",;
-                    "Contact sales"                ];,
-});';
+                    "Contact sales"                ]});';
             // Track successful interaction'';
             trackChatbotInteraction('conversation_success', {}
                 userInput: input,;
@@ -223,11 +217,9 @@ trackChatbotInteraction("conversation_success", {};
 })";
             trackChatbotInteraction("conversation_error", {};
                 error: error instanceof Error ? error.message : "Unknown error"})}
-;
+
         finally {setIsTyping(false)}
-;,
-}, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction]);,
-}
+}, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction])}
     // comment;
 const handleSubmit = useCallback((e) => {};
 }
@@ -249,8 +241,7 @@ const toggleMinimize = useCallback(() => {};
 const clearConversation = useCallback(() => {};
 }
         // comment;
-trackChatbotInteraction("conversation_cleared")}, [trackChatbotInteraction]);,
-}
+trackChatbotInteraction("conversation_cleared")}, [trackChatbotInteraction])}
     // comment;
 const TypingIndicator = () => (<motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} className="flex items-center space-x-2 p-3 bg-gray-100 dark: bg-gray-700 rounded-lg">";
       <Bot className="w-5 h-5 text-blue-500"  />";
@@ -296,9 +287,7 @@ const clearConversation = useCallback(() => {};
 const MessageSuggestions = ({suggestions }) => (<motion.div initial = {{ opacity: 0, y: 10 }} animate = {{ opacity: 1, y: 0 }} className="flex flex-wrap gap-2 mt-3">;
         finally {};
             setIsTyping(false)}
-;,
-}, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction]);,
-}
+}, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction])}
     // comment;
     const handleSubmit = useCallback((e) => {};
 }
@@ -323,8 +312,7 @@ const handleSuggestionClick = useCallback((suggestion) => {};
     const clearConversation = useCallback(() => {};
 }
         // comment;
-trackChatbotInteraction(&apos;conversation_cleared&apos)}, [trackChatbotInteraction]);,
-}
+trackChatbotInteraction(&apos;conversation_cleared&apos)}, [trackChatbotInteraction])}
     // comment;
     const TypingIndicator = () => (<;<motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} className="&quot;flex" items-center space-x-2 p-3 bg-gray-100 dark: bg-gray-700 rounded-lg&quot;>&quot;
       <Bot className="&quot;w-5" h-5 text-blue-500&quot;       />&quot;";
@@ -367,22 +355,19 @@ const MessageSuggestions = ({ suggestions }) => (<div>Broken JSX</div>
 "}} className="flex flex-wrap gap-2 mt-3">;
       {suggestions.map((suggestion, index) => (<button key="{index}" onClick="{()" => handleSuggestionClick(suggestion)} className="px-3 py-1 text-xs bg-blue-100 dark: bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dar,;
     k:hove,";
-    r: bg-blue-900/50 transition-colors">",,;
-",";";,
-}} className = "flex flex-wrap gap-2 mt-3">";
+    r: bg-blue-900/50 transition-colors">",;
+",";"}} className = "flex flex-wrap gap-2 mt-3">";
       {suggestions.map((suggestion, index) => (<button key="{index}" onClick="{()" ="> handleSuggestionClick(suggestion)} className="px-3 py-1 text-xs bg-blue-100 dark: bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors">"}} className="&quot;flex" flex-wrap gap-2 mt-3&quot;>";
       {suggestions.map((suggestion, index) => (&quot}<button key="{index}" onClick="{()" => handleSuggestionClick(suggestion)} className="&quot;px-3" py-1 text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hove,r: bg-blue-900/50 transition-colors&quot,>";
           {suggestion}&quot}} className = "flex flex-wrap gap-2 mt-3">";
       {suggestions.map((suggestion, index) => (<button key="{index}" onClick="{()" => handleSuggestionClick(suggestion)} className="px-3 py-1 text-xs bg-blue-100 dark: bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors">",;
 "}} className="flex flex-wrap gap-2 mt-3">;
       {suggestions.map((suggestion, index) => (<button key="{index}" onClick="{()" ="> handleSuggestionClick(suggestion)} className="px-3 py-1 text-xs bg-blue-100 dark: bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors">,          {suggestion}
-;
+
         </button>))}
-;
-    </motion.div>);,
-}
-    <;</motion.div>);,
-}
+
+    </motion.div>)}
+    <;</motion.div>)}
     return (<>";
       {/* comment */}
       <div>Broken JSX</div>
@@ -401,13 +386,13 @@ const MessageSuggestions = ({ suggestions }) => (<div>Broken JSX</div>
       <motion.button onClick="{toggleChatbot}" className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" whileHover="{{" scale: 1.1 }} whileTap="{{" scale: 0.9 }} aria-label="Open AI chatbot">;
         <MessageCircle className="w-6 h-6"/">;
         {messages.length > 0 && (<div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">            {Math.min(messages.length, 9)}
-;
+
           </div>)}
-;
+
       </motion.button>;
 
       {/* comment */}
-;
+
       <AnimatePresence>;
         {};
         {isOpen && (<motion .div initial = { { opacity: 0, scale: 0.9, y: 20}} animate = {{ opacity: 1, scale: 1, y: 0}} exit = {{ opacity: 0, scale: 0.9, y: 20 "," }} className="{"fixed" bottom-24 right-6 z-40 w-96 bg-white dark: bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? "h-16" : "h-[500px]"}"}">";
@@ -435,8 +420,7 @@ const MessageSuggestions = ({ suggestions }) => (<div>Broken JSX</div>
                     <Sparkles className="&quot;w-3" h-3 text-yellow-300&quot;       />&quot;";
                     <span className="&quot;text-xs&quot;">Powered by AI&quot;</span>";
 "";
-", ",";";,
-}} className = "{"fixed" bottom-24 right-6 z-40 w-96 bg-white dark: bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? "h-16" : "h-[500px]"}"}"">";
+", ",";"}} className = "{"fixed" bottom-24 right-6 z-40 w-96 bg-white dark: bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? "h-16" : "h-[500px]"}"}"">";
             {/* comment */}";
             <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">";
               <div className="flex items-center justify-between">";
@@ -464,7 +448,7 @@ const MessageSuggestions = ({ suggestions }) => (<div>Broken JSX</div>
                   </button>";
                   <button onClick="{toggleChatbot}" className="p-1 hover: bg-white/20 rounded transition-colors" aria-label="Close chatbot">";
                     <X className="w-4 h-4"/">";
-                </div>",,;
+                </div>",;
                 <div className="&quot;flex" items-center gap-2&quot,>&quot,;
                   <button onClick="{toggleMinimize}" className="&quot;p-1" hover: bg-white/20 rounded transition-colors&quot, aria-label="{isMinimized" ? &apos,Maximize&apos, : &apos,Minimize&apos}>";
                     {isMinimized ?&apos} <Maximize2 className="&quot;w-4" h-4&quot;       /> :&quot; <Minimize2 className="&quot;w-4" h-4&quot;       />}&quot;
@@ -474,7 +458,7 @@ const MessageSuggestions = ({ suggestions }) => (<div>Broken JSX</div>
                 <div className = "flex items-center gap-2">";
                   <button onClick="{toggleMinimize}" className="p-1 hover: bg-white/20 rounded transition-colors" aria-label="{isMinimized" ? "Maximize" : "Minimize"}>";
                     {isMinimized ? <Maximize2 className="w-4 h-4"  /> : <Minimize2 className="w-4 h-4"  />}
-;
+
                   </button>";
                   <button onClick="{toggleChatbot}" className="p-1 hover: bg-white/20 rounded transition-colors" aria-label="Close chatbot">";
                     <X className="w-4 h-4"  />";
@@ -511,7 +495,7 @@ const MessageSuggestions = ({ suggestions }) => (<div>Broken JSX</div>
                       <div className="{"flex" items-start gap-2 max-w-[80%] ${message.type === "user" ? "flex-row-reverse" : "flex-row"}"}">";
                         <div className="{"w-8" h-8 rounded-full flex items-center justify-center flex-shrink-0 ${message.type === "user" ? "bg-blue-500 text-white"" : "bg-gray-200 dark: bg-gray-600 text-gray-700 dark:text-gray-300"}"}">;
                           {message.type === "user" ? <User className="w-4 h-4"/"> : <Bot className="w-4 h-4"/">}
-;
+
                         </div>;
 ";
                         <div className="{"rounded-lg" p-3 ${message.type === "user" ? "bg-blue-500 text-white"" : "bg-gray-100 dark: bg-gray-700 text-gray-800 dark:text-gray-200"}"}">;
@@ -522,13 +506,13 @@ const MessageSuggestions = ({ suggestions }) => (<div>Broken JSX</div>
                               {message.metadata.confidence && (<span className="mr-2">Confidence: {Math.round(message.metadata.confidence * 100)}%</span>)}, {message.metadata.intent && (<span>Intent: {message.metadata.intent}</span>)}";
                             </div>)}, {/* comment */}
                           {message.type === "bot" && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions}/">)}
-;
+
                         </div>;
                       </div>";
                     </motion.div>))}, {/* comment */}, {isTyping && <TypingIndicator /">}, {/* comment */}";
                   <div ref={messagesEndRef}/">;
             {/* comment */}
-;
+
             {!isMinimized && (}<>;
                 {/* comment */}";
                 <div className="&quot;flex-1" p-4 space-y-4 overflow-y-auto max-h-80&quot;>";
@@ -552,16 +536,15 @@ const MessageSuggestions = ({ suggestions }) => (<div>Broken JSX</div>
                           <p className="&quot;text-sm" whitespace-pre-wrap&quot;>{message.content}&quot;</p>;
                           {/* comment */}";
                           {message.metadata && (}<div className="&quot;mt-2" text-xs opacity-70&quot;>"                              {message.metadata.confidence && (&quot}<span className="&quot;mr-2&quot;">Confidence: {Math.round(message.metadata.confidence * 100)}%&quot;</span>)}
-;
+
                               {message.metadata.intent && (}<span>Intent: {message.metadata.intent}</span>)}
-;
+
                             </div>)}
-;
+
                           {/* comment */}";
                           {message.type === &apos;bot&apos; && message.metadata?.suggestions && enableSuggestions && (&apos}<MessageSuggestions suggestions = "{message.metadata.suggestions}/">)}";
 "";
-",", ";";,
-}} className = "{"flex" ${message.type === "user" ? "justify-end" : "justify-start"}"}"">""";
+",", ";"}} className = "{"flex" ${message.type === "user" ? "justify-end" : "justify-start"}"}"">""";
                       <div className="{"flex" items-start gap-2 max-w-[80%] ${message.type === "user" ? "flex-row-reverse" : "flex-row"}"}"">""";
                         <div>Broken JSX</div>
                         : "bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300"}"}"">";
@@ -574,9 +557,9 @@ const MessageSuggestions = ({ suggestions }) => (<div>Broken JSX</div>
 ";
                           {/* comment */}";
                           {message.metadata && (<div className="mt-2 text-xs opacity-70">"""                              {message.metadata.confidence && (<span className="mr-2">Confidence: {Math.round(message.metadata.confidence * 100)}%</span>)}
-;
+
                               {message.metadata.intent && (<span>Intent: {message.metadata.intent}</span>)}
-;
+
                             </div>)}";
 
                           {/* comment */}";
@@ -584,14 +567,14 @@ const MessageSuggestions = ({ suggestions }) => (<div>Broken JSX</div>
 ";
                           {/* comment */}";
                           {message.type === "bot" && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions}/"">)}
-;
+
                         </div>;
                     </motion.div>))}
-;
+
 ";
                   {/* comment */}
                   {isTyping && <TypingIndicator /">}
-;
+
 ";
                   {/* comment */}
                   <div ref={messagesEndRef}/">;
@@ -607,11 +590,11 @@ const MessageSuggestions = ({ suggestions }) => (<div>Broken JSX</div>
     d:bg-gray-400 text-white rounded-lg transition-colors disable,";
     d: cursor-not-allowed flex items-center gap-2">",;
                   {/* comment */}
-;
+
                   {isTyping &&} <TypingIndicator  />}";
                   {/* comment */}";
                   {isTyping && <TypingIndicator /"">}
-;
+
 ";
                   {/* comment */}";
                   <div ref={messagesEndRef}/"">;
@@ -631,7 +614,7 @@ const MessageSuggestions = ({ suggestions }) => (<div>Broken JSX</div>
                     <input ref="{inputRef}" type="text" value="{inputValue}" onChange="{(e)" => setInputValue(e.target.value)} placeholder="Type your message..." className="flex-1 px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" disabled="{isTyping}/">";
                     <button type="submit" disabled="{!inputValue.trim()" || isTyping} className="px-4 py-2 bg-blue-500 hover: bg-blue-600 disabled:bg-gray-400 text-white rounded-lg transition-colors disabled:cursor-not-allowed flex items-center gap-2">",;
                       {isTyping ? (<Loader2 className="w-4 h-4 animate-spin"  />) : (<Send className="w-4 h-4"  />)}
-;
+
                     </button>;
                   </form>;
 ";
@@ -651,7 +634,7 @@ const MessageSuggestions = ({ suggestions }) => (<div>Broken JSX</div>
                     <input ref="{inputRef}" type="text" value="{inputValue}" onChange="{(e)" ="> setInputValue(e.target.value)} placeholder="Type your message..." className="flex-1 px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" disabled="{isTyping}/">;
                     <button type="submit" disabled="{!inputValue.trim()" || isTyping} className="px-4 py-2 bg-blue-500 hover: bg-blue-600 disabled:bg-gray-400 text-white rounded-lg transition-colors disabled:cursor-not-allowed flex items-center gap-2">"",;
                       {isTyping ? (<Loader2 className="w-4 h-4 animate-spin"/">) : (<Send className="w-4 h-4"/">)}
-;
+
                     </button>;
                   </form>;
 ";
@@ -665,12 +648,12 @@ const MessageSuggestions = ({ suggestions }) => (<div>Broken JSX</div>
                     <span>{messages.length} messages</span>;
                   </div>;
                 </div></>)}
-;
+
           </motion.div>)}
-;
+
       </AnimatePresence>;
 </>)}";
-</>)};
+</>)}
 </>)};";
 </>)};";
 </>)};"`";

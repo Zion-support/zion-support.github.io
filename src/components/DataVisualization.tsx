@@ -20,12 +20,12 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({};
     {};
       color: 'text-purple-400'};
   ]) ;
-;
+
   // Simulate data refresh;
-  ;
+
     setIsLoading(true) ;    // Simulate API call;
     await new Promise(resolve => setTimeout (resolve, 1000) ) ;
-;
+
     // Update chart data with new random values;
 setChartData(prev:  > ({};
         data: prev.datasets[0].data.map ( () => Math.floor(Math.random () * 100) + 20) }]}) ) ;

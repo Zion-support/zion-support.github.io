@@ -232,16 +232,12 @@ const AIAutonomousInvention = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default AIAutonomousInvention;
-;
 
-export { AIAutonomousInvention };
-;
-export { AIAutonomousInvention };
-;
-export { AIAutonomousInvention };
-;
-export { AIAutonomousInvention };
-;
-export { AIAutonomousInvention };
+
+export { AIAutonomousInvention }
+export { AIAutonomousInvention }
+export { AIAutonomousInvention }
+export { AIAutonomousInvention }
+export { AIAutonomousInvention }

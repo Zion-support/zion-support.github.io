@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {;
+import {
 
   TrendingUp, ;
   TrendingDown, ;
@@ -15,10 +15,9 @@ import {;
   Target,;
   BarChart3,;
   LineChart,;
-  PieChart';,
-} from 'lucide-react';
-;
-interface PerformanceMetric {;
+  PieChart'} from 'lucide-react';
+
+interface PerformanceMetric {
 
   id: string;
   name: string;
@@ -30,29 +29,27 @@ interface PerformanceMetric {;
   status: 'excellent' | 'good' | 'warning' | 'critical';
   icon: React.ComponentType<any>;
   description: string;
-;,
 }
-;
-interface PerformanceMetricsProps {;
+
+interface PerformanceMetricsProps {
 
   // Add your props here;
 
-;
+
   title?: string;
   subtitle?: string;
   showCharts?: boolean;
   autoRefresh?: boolean;
-;
+
 const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({;
 
   title = "Real-Time Performance Metrics",";
   subtitle = "Monitor your system's performance with live data and intelligent insights",;
   showCharts = true,;
-  autoRefresh = true;,
-}) => {;
+  autoRefresh = true}) => {
 
   const [metrics, setMetrics] = useState<PerformanceMetric[]>([;
-    {;
+    {
 
       id: 'response-time',;
       name: 'Response Time',;
@@ -63,9 +60,8 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({;
       target: 150,;
       status: 'excellent',;
       icon: Clock,;
-      description: 'Average API response time across all endpoints';,
-},;
-    {;
+      description: 'Average API response time across all endpoints'},;
+    {
 
       id: 'throughput',;
       name: 'Throughput',;
@@ -76,9 +72,8 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({;
       target: 12000,;
       status: 'excellent',;
       icon: Zap,;
-      description: 'Requests processed per second';,
-},;
-    {;
+      description: 'Requests processed per second'},;
+    {
 
       id: 'error-rate',;
       name: 'Error Rate',;
@@ -89,9 +84,8 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({;
       target: 1.0,;
       status: 'excellent',;
       icon: Activity,;
-      description: 'Percentage of failed requests';,
-},;
-    {;
+      description: 'Percentage of failed requests'},;
+    {
 
       id: 'cpu-usage',;
       name: 'CPU Usage',;
@@ -102,9 +96,8 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({;
       target: 80,;
       status: 'good',;
       icon: BarChart3,;
-      description: 'Current CPU utilization across all cores';,
-},;
-    {;
+      description: 'Current CPU utilization across all cores'},;
+    {
 
       id: 'memory-usage',;
       name: 'Memory Usage',;
@@ -115,9 +108,8 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({;
       target: 85,;
       status: 'warning',;
       icon: Database,;
-      description: 'RAM utilization percentage';,
-},;
-    {;
+      description: 'RAM utilization percentage'},;
+    {
 
       id: 'active-users',;
       name: 'Active Users',;
@@ -128,77 +120,65 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({;
       target: 1000,;
       status: 'excellent',;
       icon: Users,;
-      description: 'Concurrent users currently online';,
-}
+      description: 'Concurrent users currently online'}
   ]);
-;
+
   const [selectedMetric, setSelectedMetric] = useState<string | null>(null);
   const [timeRange, setTimeRange] = useState<'1h' | '6h' | '24h' | '7d'>('1h');
-;
-  useEffect(: unknown {;
+
+  useEffect(: unknown {
 
     if (!autoRefresh) return;
-;
-    const interval = setInterval(: unknown {;
+
+    const interval = setInterval(: unknown {
 
       setMetrics(prevMetrics => ;
         prevMetrics.map(metric => ({;
 
           ...metric,;
           value: metric.value + (Math.random() - 0.5) * metric.value * 0.1,;
-          change: metric.change + (Math.random() - 0.5) * 2;,
-}));
-      );,
-}, 5000);
-;
-    return : unknown clearInterval(interval);,
-}, [autoRefresh]);
-;
-  const getStatusColor = (status: string) => {;
+          change: metric.change + (Math.random() - 0.5) * 2}));
+      )}, 5000);
 
-    switch (status) {;
+    return : unknown clearInterval(interval)}, [autoRefresh]);
+
+  const getStatusColor = (status: string) => {
+
+    switch (status) {
 
       case 'excellent': return 'text-green-500 bg-green-100';
       case 'good': return 'text-blue-500 bg-blue-100';
       case 'warning': return 'text-yellow-500 bg-yellow-100';
       case 'critical': return 'text-red-500 bg-red-100';
-      default: return 'text-gray-500 bg-gray-100';,
-}
-  };
-;
-  const getChangeIcon = (changeType: string) => {;
+      default: return 'text-gray-500 bg-gray-100'}
+  }
+  const getChangeIcon = (changeType: string) => {
 
-    return changeType === 'increase' ? ArrowUpRight : ArrowDownRight;,
-};
-;
-  const getChangeColor = (changeType: string) => {;
+    return changeType === 'increase' ? ArrowUpRight : ArrowDownRight}
+  const getChangeColor = (changeType: string) => {
 
-    return changeType === 'increase' ? 'text-green-600' : 'text-red-600';,
-};
-;
-  const containerVariants = {;
+    return changeType === 'increase' ? 'text-green-600' : 'text-red-600'}
+  const containerVariants = {
 
     hidden: { opacity: 0 },;
-    visible: {;
+    visible: {
 
       opacity: 1,;
-      transition: {;
+      transition: {
 
         staggerChildren: 0.1,;
-        delayChildren: 0.2}}};
-;
-  const itemVariants = {;
+        delayChildren: 0.2}}}
+  const itemVariants = {
 
     hidden: { y: 20, opacity: 0 },;
-    visible: {;
+    visible: {
 
       y: 0,;
       opacity: 1,;
-      transition: {;
+      transition: {
 
         duration: 0.5,";
-        ease: "easeOut"}}};
-;
+        ease: "easeOut"}}}
   return (";
     <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">";
       <div className="container mx-auto px-4">;
@@ -232,8 +212,7 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({;
 
                   timeRange === range';
                     ? 'bg-blue-600 text-white shadow-lg'';
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'`;,
-}`}
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'`}`}
               >;
                 {range}
               </button>;
@@ -248,11 +227,11 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({;
           whileInView="visible";
           viewport={{ once: true }}";
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
-          {metrics.map((metric) => {;
+          {metrics.map((metric) => {
 
             const IconComponent = metric.icon;
             const ChangeIcon = getChangeIcon(metric.changeType);
-            ;
+
             return();
               <motion.div;
                 key={metric.id}
@@ -278,8 +257,7 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({;
                   <span className="text-3xl font-bold text-gray-900">;
                     {typeof metric.value === 'number' && metric.value % 1 !== 0 ;
                       ? metric.value.toFixed(1) ;
-                      : Math.round(metric.value);,
-}
+                      : Math.round(metric.value)}
                   </span>";
                   <span className="text-lg text-gray-600 mb-1">;
                     {metric.unit}
@@ -309,8 +287,7 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({;
                       className={`h-2 rounded-full transition-all duration-500 ${;
 
                         metric.value / metric.target > 0.9 ? 'bg-red-500' :';
-                        metric.value / metric.target > 0.7 ? 'bg-yellow-500' : 'bg-green-500'`;,
-}`}`;
+                        metric.value / metric.target > 0.7 ? 'bg-yellow-500' : 'bg-green-500'`}`}`;
                       style={{ width: `${Math.min((metric.value / metric.target) * 100, 100)}%` }}
                     />;
                   </div>;
@@ -345,8 +322,7 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({;
                   )}
                 </AnimatePresence>;
               </motion.div>;
-            );,
-})}
+            )})}
         </motion.div>;
 
         {/* Summary Stats */}
@@ -382,7 +358,5 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({;
         </motion.div>;
       </div>;
     </section>;
-  );,
-};
-;
+  )}
 export default EnhancedPerformanceMetrics;'"`}

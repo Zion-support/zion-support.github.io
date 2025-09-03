@@ -27,14 +27,10 @@ export {};
         <code>{content}</code>;
       </pre>;
     </div>)}
-;
 
-export { CodeBlock };
-;
-export { CodeBlock };
-;
-export { CodeBlock };
-;
-export { CodeBlock };
-;
-export { CodeBlock };
+
+export { CodeBlock }
+export { CodeBlock }
+export { CodeBlock }
+export { CodeBlock }
+export { CodeBlock }

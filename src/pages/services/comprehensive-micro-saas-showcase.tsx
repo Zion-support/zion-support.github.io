@@ -29,9 +29,9 @@ const ComprehensiveMicroSaasShowcase: React.FC = () => {};
     {};
 }
   ];
-;
+
   const featuredServices = REAL_MICRO_SAAS_SERVICES_2025.filter(service => service.featured).slice(0, 6);
-;
+
   return (;
     <div className="min-h-screen bg-white">;
       {/* Hero Section */}
@@ -203,8 +203,7 @@ const ComprehensiveMicroSaasShowcase: React.FC = () => {};
                     </div>;
                   )}
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -339,7 +338,5 @@ const ComprehensiveMicroSaasShowcase: React.FC = () => {};
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default ComprehensiveMicroSaasShowcase;

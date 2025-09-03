@@ -16,7 +16,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {};
     {};
 }
   ];
-;
+
   const benefits = [;
     "Reduce project delivery time by 30-50%",;
     "Improve resource utilization by 40-60%",;
@@ -25,7 +25,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {};
     "Eliminate manual reporting by 80%",;
     "Improve stakeholder communication by 50%";
   ];
-;
+
   const solutions = [;
     {};
 },;
@@ -36,7 +36,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {};
     {};
 }
   ];
-;
+
   const projectTypes = [;
     "Software Development",;
     "Construction & Engineering",;
@@ -45,12 +45,12 @@ export default function AIProjectManagement(...args: unknown[]): unknown {};
     "Research & Development",;
     "Event Management";
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div>Broken JSX</div>
       />;
-      ;
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">;
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10"></div>;
@@ -61,7 +61,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {};
               <Target className="w-5 h-5 text-orange-400 mr-2" />;
               <span className="text-orange-300 font-medium">AI Project Management</span>;
             </div>;
-            ;
+
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">;
               <span className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">;
                 AI Project Management;
@@ -69,13 +69,13 @@ export default function AIProjectManagement(...args: unknown[]): unknown {};
               <br />;
               <span className="text-white">That Delivers Results</span>;
             </h1>;
-            ;
+
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">;
               Transform your project delivery with AI-powered management that optimizes ;
               planning, resource allocation, and risk management. Deliver projects faster, ;
               cheaper, and with unprecedented success rates.;
             </p>;
-            ;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <div>Broken JSX</div>
                 className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 flex items-center justify-center">;
@@ -157,7 +157,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {};
             {};
                 <h3 className="text-2xl font-semibold text-white mb-4">{solution.title}</h3>;
                 <p className="text-gray-300 mb-6">{solution.description}</p>;
-                ;
+
                 <div className="space-y-3 mb-6">;
                   {};
                     <div key={featureIndex} className="flex items-center space-x-3">;
@@ -166,7 +166,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {};
                     </div>;
                   ))}
                 </div>;
-                ;
+
                 <div className="text-3xl font-bold text-orange-400 mb-6">{solution.price}</div>;
                 <button className="w-full py-4 px-6 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300">;
                   Get Started;
@@ -228,15 +228,10 @@ export default function AIProjectManagement(...args: unknown[]): unknown {};
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
-export { AIProjectManagement };
-;
-export { AIProjectManagement };
-;
-export { AIProjectManagement };
-;
-export { AIProjectManagement };
-;
-export { AIProjectManagement };
+  )}
+
+export { AIProjectManagement }
+export { AIProjectManagement }
+export { AIProjectManagement }
+export { AIProjectManagement }
+export { AIProjectManagement }

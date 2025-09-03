@@ -1,8 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
-const MainLayout = dynamic(() => import("../components/layout/MainLayout"), { ssr: false });,
-}
-const TermsOfService: NextPage = () => {;
+const MainLayout = dynamic(() => import("../components/layout/MainLayout"), { ssr: false })}
+const TermsOfService: NextPage = () => {
   return (;
     <MainLayout title="Terms of Service - Zion Tech Group;
       description="Terms of Service for Zion Tech Group. Read our terms and conditions for using our services.">";
@@ -14,7 +13,7 @@ const TermsOfService: NextPage = () => {;
             <div className="prose prose-lg max-w-none">";
               <p className="text-gray-600 mb-6">,;
                 <strong>Last updated:</strong> {new Date().toLocaleDateString()}
-;
+
               </p>;
               ";
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Acceptance of Terms</h2>";

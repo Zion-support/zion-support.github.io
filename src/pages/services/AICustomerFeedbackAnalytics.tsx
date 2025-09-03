@@ -17,7 +17,7 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
     {};
 };
   ];
-;
+
   const benefits = [;
     {};
 },;
@@ -32,7 +32,7 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
     {};
 };
   ];
-;
+
   const pricingPlans = [;
     {};
 },;
@@ -41,7 +41,7 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
     {};
 };
   ];
-;
+
   const useCases = [;
     {};
 },;
@@ -56,7 +56,7 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
     {};
 };
   ];
-;
+
   const integrations = [;
     {};
 },;
@@ -71,16 +71,16 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
     {};
 };
   ];
-;
+
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div>Broken JSX</div>
       />;
-      ;
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">;
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20"></div>;
-        ;
+
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
           <div>Broken JSX</div>
           >;
@@ -208,7 +208,7 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
           <div className="grid grid-cols-1 md: unknowngrid-cols-3 gap-8">;
             {};
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <p className="text-gray-400 text-sm mb-4">{plan.description}</p>;
@@ -332,15 +332,10 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
-export { AICustomerFeedbackAnalytics };
-;
-export { AICustomerFeedbackAnalytics };
-;
-export { AICustomerFeedbackAnalytics };
-;
-export { AICustomerFeedbackAnalytics };
-;
-export { AICustomerFeedbackAnalytics };
+  )}
+
+export { AICustomerFeedbackAnalytics }
+export { AICustomerFeedbackAnalytics }
+export { AICustomerFeedbackAnalytics }
+export { AICustomerFeedbackAnalytics }
+export { AICustomerFeedbackAnalytics }

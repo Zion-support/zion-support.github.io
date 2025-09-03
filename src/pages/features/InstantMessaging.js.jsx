@@ -17,7 +17,7 @@ export {};
     name: 'Instant Messaging',''';
     description:'''';
       'Chat in real time with clients and freelancers using Socket.IO based messaging.',''';
-    url: 'https://app.ziontechgroup.com/features/instant-messaging'};
+    url: 'https://app.ziontechgroup.com/features/instant-messaging'}
   return();
     <>;
       <div>Broken JSX</div>
@@ -73,14 +73,10 @@ export {};
       </main>;
       <Footer />;
     </>)}
-;
 
-export { InstantMessaging };
-;
-export { InstantMessaging };
-;
-export { InstantMessaging };
-;
-export { InstantMessaging };
-;
-export { InstantMessaging };
+
+export { InstantMessaging }
+export { InstantMessaging }
+export { InstantMessaging }
+export { InstantMessaging }
+export { InstantMessaging }

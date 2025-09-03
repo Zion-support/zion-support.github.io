@@ -23,16 +23,14 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
             "addressRegion": "DE","";
             "postalCode": "19709","";
   "addressCountry": "US";
-";,
-},"";
+"},"";
         "contactPoint": {}
 ";
 "";
             "@type": "ContactPoint","";
             "telephone": "+1-302-464-0950","";
             "contactType": "customer service","";
-            "email": "kleber@ziontechgroup.com"";,
-},"";
+            "email": "kleber@ziontechgroup.com""},"";
         "sameAs"[;"";
             "https://linkedin.com/company/ziontechgroup","";
             "https://twitter.com/ziontechgroup","";
@@ -56,8 +54,7 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
 "";
                         "@type": "Service","";
                         "name": "AI Strategy Consulting","";
-                        "description": "Comprehensive AI strategy development and implementation consulting for enterprises";,
-},;
+                        "description": "Comprehensive AI strategy development and implementation consulting for enterprises"},;
                 {}
 ";
 "";
@@ -69,8 +66,7 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
                         "name": "Quantum AI Fusion Platform","";
                         "description": "Revolutionary platform combining quantum computing with artificial intelligence";
             ];
-;,
-};
+}
     const finalStructuredData = structuredData || defaultStructuredData;
     return (<Helmet>;
       {/* Basic Meta Tags */}";
@@ -141,16 +137,11 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
       {/* Performance Meta Tags */}"";
       <meta name="renderer" content="webkit"/>"";
       <meta name="force-rendering" content="webkit"/>;
-    </Helmet>)};
-export default SEOMeta;,
-}}}}
-;
-export { SEOMeta };
-;
-export { SEOMeta };
-;
-export { SEOMeta };
-;
-export { SEOMeta };
-;
-export { SEOMeta };
+    </Helmet>)}
+export default SEOMeta}}}}
+
+export { SEOMeta }
+export { SEOMeta }
+export { SEOMeta }
+export { SEOMeta }
+export { SEOMeta }

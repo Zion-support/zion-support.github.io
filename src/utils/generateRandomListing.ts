@@ -1,5 +1,5 @@
 
-;
+
   'Quantum Computing Hardware',;
   'Data Science Consulting',;
   'Blockchain Development Service',;
@@ -7,7 +7,7 @@
   'DevOps Automation Tool',;
   'Network Security Solution';
 ];
-;
+
   'State-of-the-art quantum computing components for research and development.',;
   'Expert data science consulting services for machine learning and analytics projects.',;
   'Blockchain development and implementation services for decentralized applications.',;
@@ -15,7 +15,7 @@
   'DevOps automation tools for continuous integration and deployment pipelines.',;
   'Network security solution with advanced threat detection and prevention.';
 ];
-;
+
   ['Quantum',Research',Hardware'],;
   ['Data Science',Machine Learning',Consulting'],;
   ['Blockchain',Development',DApps'],;
@@ -40,13 +40,13 @@ const categories: Array<any> = ['';
   'SecureNet Professionals',;''';
 ''';
 
-;
+
   '$500',$1,200',$2,500',$5,000',$8,500',$15,000',$25,000',$50,000';
 ];
-;
+
   'San Francisco, CA',New York, NY',Austin, TX',Seattle, WA',Boston, MA',Remote';
 ];
-;
+
   'QuantumTech Labs',;
   'CloudMasters Inc',;
   'IoT Solutions Pro',;

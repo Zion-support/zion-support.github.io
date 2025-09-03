@@ -4,14 +4,10 @@ export default function CreatePostButton({ categoryId }) {};
   return null;
 }
     </Button>)}
-;
 
-export { CreatePostButton };
-;
-export { CreatePostButton };
-;
-export { CreatePostButton };
-;
-export { CreatePostButton };
-;
-export { CreatePostButton };
+
+export { CreatePostButton }
+export { CreatePostButton }
+export { CreatePostButton }
+export { CreatePostButton }
+export { CreatePostButton }

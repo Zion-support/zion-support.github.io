@@ -5,7 +5,7 @@ import { Input } from './ui/input';
 import { Textarea } from './ui/textarea.jsx';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';import { Checkbox } from './ui/checkbox';
 import {}
-;
+
   const;const;const [formData, setFormData] = useState({}";
 
 &apos;
@@ -23,10 +23,8 @@ import {}
     contactMethod: &apos,email&apos,;
     agreeToTerms: false,;
     agreeToMarketing: false})&apos;&apos;
-  const [isSubmitting, setIsSubmitting] = useState (false);,
-}
-  const [isSubmitted, setIsSubmitted] = useState (false);,
-}
+  const [isSubmitting, setIsSubmitting] = useState (false)}
+  const [isSubmitted, setIsSubmitted] = useState (false)}
   const [errors, setErrors] = useState ({}) ";&apos;&apos;
   const serviceTypes = []";&apos;&apos;
   const timelineOptions = []";&apos;&apos;
@@ -58,53 +56,45 @@ export {};
     urgency: "medium",;
     contactMethod: "email",;
 agreeToTerms: false,;
-agreeToMarketing: false});,
-}
-  const [isSubmitting, setIsSubmitting] = useState (false);,
-}
-  const [isSubmitted, setIsSubmitted] = useState (false);,
-}
+agreeToMarketing: false})}
+  const [isSubmitting, setIsSubmitting] = useState (false)}
+  const [isSubmitted, setIsSubmitted] = useState (false)}
   const [errors, setErrors] = useState ({}) ";
   const serviceTypes = []";
   const timelineOptions = []";
   const budgetRanges = []";
-  const urgencyLevels = [] = useState();,
-}
+  const urgencyLevels = [] = useState()}
   const [isSubmitting, setIsSubmitting] = useState (false) ";
-  const [isSubmitted, setIsSubmitted] = useState (false);,
-}
+  const [isSubmitted, setIsSubmitted] = useState (false)}
   const [errors, setErrors] = useState ({}) ";
   const serviceTypes = []";
   const timelineOptions = []";
   const budgetRanges = []";
   const urgencyLevels = []  const handleChange = (field, value) => {}
-;
+
     setFormData(prev => ({}
-;
+
       ...prev,;
-      [field]: value}));,
-}
-      ...prev, [field]: value}));,
-}
+      [field]: value}))}
+      ...prev, [field]: value}))}
     // comment    if(errors[field]) {}
-;
+
       setErrors(prev = > ({}
-;
+
         ...prev,";
         [field]: "}))}
-;
+
         [field]: &apos;&apos}))}";
         ...prev, ";
         [field]: ""}))}
-;,
 }
-;
+
 ;&apos;&apos  const validateForm = () => {}
   return <div>Component</div>;
 };
 ;
     const;const;const newErrors = {}
-;
+
     if (!formData.firstName.trim())";
       newErrors.firstName = &apos;First name is required";
     if (!formData.lastName.trim()) newErrors.lastName = &apos;Last name is required";
@@ -129,27 +119,22 @@ agreeToMarketing: false});,
       newErrors.projectDescription = "Project description is required",;
     if (!formData.agreeToTerms)";
       newErrors.agreeToTerms = "You must agree to the terms and conditions;
-    setErrors(newErrors);,
-}
+    setErrors(newErrors)}
     return Object.keys(newErrors) .length = == 0}
-;
+
 ;&apos;&apos;
   const handleSubmit = async e => {}
-;
-    e.preventDefault();,
-}    if(!validateForm()) {}
-;
+
+    e.preventDefault()}    if(!validateForm()) {}
+
       return}
-;
-    setIsSubmitting(true);,
-}
+
+    setIsSubmitting(true)}
     try {}
-;
+
       // comment;
-      await new Promise(resolve => setTimeout(resolve, 2000));,
-}
-      setIsSubmitted(true);,
-}
+      await new Promise(resolve => setTimeout(resolve, 2000))}
+      setIsSubmitted(true)}
       // comment;
       setFormData({}";
 
@@ -173,7 +158,7 @@ agreeToMarketing: false});,
 &apos;&apos;
       // comment;
 ";
-;
+
         firstName: ",;
         lastName: ",;
         email: ",;
@@ -204,15 +189,14 @@ agreeToMarketing: false})} catch (error) {}";
         contactMethod: "email", agreeToTerms: false,;
         agreeToMarketing: false})} catch (error) {}";
 ";
-;
+
 """;
       // comment;
       setIsSubmitting(false)}
-;,
 }
-;
+
   if(isSubmitted) {}
-;
+
     return();";
       <Card className="max-w-2xl mx-auto">"";";
         <CardContent className="p-8 text-center">"";";
@@ -243,7 +227,7 @@ agreeToMarketing: false})} catch (error) {}";
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">",;
             <div>"";";
               <label className="block text-sm font-medium text-gray-700 mb-2">;
-                First Name *,,;
+                First Name *,;
               </label>,";
               <div>Broken JSX</div>
                 onChange = "{e" => handleChange("firstName", e.target.value)}"",;
@@ -253,7 +237,7 @@ agreeToMarketing: false})} catch (error) {}";
              />""{};
                 <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>;
               )}
-;
+
             </div>;
 
             <div>"";";
@@ -269,7 +253,7 @@ agreeToMarketing: false})} catch (error) {}";
              />""{};
                 <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>;
               )}
-;
+
             </div>;
 ""{/* comment */}"";";
           <div className="grid grid - cols-1 md: grid-cols-2 gap-4">",;
@@ -287,7 +271,7 @@ agreeToMarketing: false})} catch (error) {}";
              />""{};
                 <p className="text-red-500 text-sm mt-1">{errors.email}</p>;
               )}
-;
+
             </div>;
 
             <div>"";";
@@ -313,7 +297,7 @@ agreeToMarketing: false})} catch (error) {}";
            />""{};
               <p className="text-red-500 text-sm mt-1">{errors.company}</p>;
             )}
-;
+
           </div>;
 ""{/* comment */}"";";
           <div className="grid grid - cols-1 md: grid-cols-2 gap-4">",;
@@ -368,7 +352,7 @@ get back to you within 24 hours.&apos,</p>";
                 className="{errors.firstName" ? &apos;border-red-500&apos; : &apos;&apos}" />&apos;&apos,{errors.firstName && (&apos;&apos,&apos;&apos}";
                 <p className="&apos;text-red-500" text-sm mt-1&apos;>{errors.firstName}&apos;</p>;
               )}
-;
+
             </div>";
 &apos;&apos,&apos;&apos,;
             <div>&apos;&apos,&apos;&apos,";
@@ -382,7 +366,7 @@ get back to you within 24 hours.&apos,</p>";
                 className="{errors.lastName" ? &apos;border-red-500&apos; : &apos;&apos}" />&apos;&apos,{errors.lastName && (&apos;&apos,&apos;&apos}";
                 <p className="&apos;text-red-500" text-sm mt-1&apos;>{errors.lastName}&apos;</p>;
               )}
-;
+
             </div>;
           </div>";
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
@@ -399,7 +383,7 @@ get back to you within 24 hours.&apos,</p>";
                 className="{errors.email" ? &apos;border-red-500&apos; : &apos;&apos}" />&apos;&apos,{errors.email && (&apos;&apos,&apos;&apos}";
                 <p className="&apos;text-red-500" text-sm mt-1&apos;>{errors.email}&apos;</p>;
               )}
-;
+
             </div>";
 &apos;&apos,&apos;&apos,;
             <div>&apos;&apos,&apos;&apos,";
@@ -429,7 +413,7 @@ get back to you within 24 hours.&apos,</p>";
                 className="{errors.firstName" ? "border-red-500" : ""}" />"""{};
                 <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>;
               )}
-;
+
             </div>";
 """;
             <div>"";
@@ -443,7 +427,7 @@ get back to you within 24 hours.&apos,</p>";
                 className="{errors.lastName" ? "border-red-500" : ""}" />"""{};
                 <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>;
               )}
-;
+
             </div>;
           </div>";
 """{/* comment */}""";
@@ -460,7 +444,7 @@ get back to you within 24 hours.&apos,</p>";
                 className="{errors.email" ? "border-red-500" : ""}" />"""{};
                 <p className="text-red-500 text-sm mt-1">{errors.email}</p>;
               )}
-;
+
             </div>";
 """;
             <div>"";
@@ -489,7 +473,7 @@ get back to you within 24 hours.&apos,</p>";
               className="{errors.company" ? &apos;border-red-500&apos; : &apos;&apos}" />&apos;&apos,{errors.company && (&apos;&apos,&apos;&apos}";
               <p className="&apos;text-red-500" text-sm mt-1&apos;>{errors.company}&apos;</p>;
             )}
-;
+
           </div>";
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
           <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,;
@@ -514,17 +498,17 @@ get back to you within 24 hours.&apos,</p>";
               className="{errors.company" ? "border-red-500" : ""}" />"""{};
               <p className="text-red-500 text-sm mt-1">{errors.company}</p>;
             )}
-;
+
           </div>";
 """{/* comment */}""";
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">""";
             <div>"";
               <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Service Type *;
-              </label>",,;
+              </label>",;
               <Select value={formData.serviceType}">;
                 onValueChange = "{value" => handleChange("serviceType", value)}
-;
+
               >";
                 <div>Broken JSX</div>
                   className="{errors.serviceType" ? "border - red-500" : "}"">",;
@@ -533,9 +517,9 @@ get back to you within 24 hours.&apos,</p>";
                 <SelectContent>;
                   {};
                     <SelectItem key="{service.value}" value="{service.value}">                      {service.label}
-;
+
                     </SelectItem>) ) }
-;
+
                 </SelectContent>;
               </Select>""{};
                   className = "{errors.serviceType" ? "border-red-500" : ""}""">"""";
@@ -544,16 +528,16 @@ get back to you within 24 hours.&apos,</p>";
                 <SelectContent>;
                   {serviceTypes.map(service => (}";
                     <SelectItem key="{service.value}" value="{service.value}">                      {service.label}
-;
+
                     </SelectItem>) ) }
-;
+
                 </SelectContent>;
               </Select>&apos;&apos,{errors.serviceType && (&apos;&apos,&apos;&apos}";
                 <p className="&apos;text-red-500" text-sm mt-1&apos;>;
                   {errors.serviceType}&apos;
                 </p>;
               )}
-;
+
             </div>";
 &apos;&apos,&apos;&apos,;
             <div>&apos;&apos,&apos;&apos,";
@@ -567,10 +551,10 @@ get back to you within 24 hours.&apos,</p>";
                   <SelectValue placeholder="&apos;Select" timeline&apos;       />&apos,;
               </Select>"""{};
                   {errors.serviceType}
-;
+
                 </p>;
               )}
-;
+
             </div>;
 
             <div>"";";
@@ -586,7 +570,7 @@ get back to you within 24 hours.&apos,</p>";
               <div>Broken JSX</div>
                 value = {formData.timeline}">;
                 onValueChange = "{value" => handleChange("timeline", value)}
-;
+
               >;
                 <SelectTrigger>;
                   <SelectValue placeholder="Select timeline"  />;
@@ -594,9 +578,9 @@ get back to you within 24 hours.&apos,</p>";
                 <SelectContent>;
                   {};
                     <SelectItem key="{timeline.value}" value="{timeline.value}">                      {timeline.label}
-;
+
                     </SelectItem>) ) }
-;
+
                 </SelectContent>;
               </Select>;
             </div>;
@@ -604,7 +588,7 @@ get back to you within 24 hours.&apos,</p>";
 "";";
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">",;
             <div>"";";
-              <label className="block text-sm font-medium text-gray-700 mb-2">,,;
+              <label className="block text-sm font-medium text-gray-700 mb-2">,;
                 Budget Range,;
               </label>,">""";
                 <SelectTrigger>""";
@@ -613,9 +597,9 @@ get back to you within 24 hours.&apos,</p>";
                 <SelectContent>;
                   {timelineOptions.map(timeline => (}";
                     <SelectItem key="{timeline.value}" value="{timeline.value}">                      {timeline.label}
-;
+
                     </SelectItem>) ) }
-;
+
                 </SelectContent>;
               </Select>;
             </div>";
@@ -640,7 +624,7 @@ get back to you within 24 hours.&apos,</p>";
               </label>";,;
               <Select value = {formData.budget}">;
                 onValueChange = "{value" => handleChange("budget", value)}
-;
+
               >;
                 <SelectTrigger>;
                   <SelectValue placeholder="Select budget range"  />;
@@ -648,9 +632,9 @@ get back to you within 24 hours.&apos,</p>";
                 <SelectContent>;
                   {};
                     <SelectItem key="{budget.value}" value="{budget.value}">                      {budget.label}
-;
+
                     </SelectItem>) ) }
-;
+
                 </SelectContent>;
               </Select>;
             </div>;
@@ -666,9 +650,9 @@ get back to you within 24 hours.&apos,</p>";
                 <SelectContent>;
                   {budgetRanges.map(budget => (}";
                     <SelectItem key="{budget.value}" value="{budget.value}">                      {budget.label}
-;
+
                     </SelectItem>) ) }
-;
+
                 </SelectContent>;
               </Select>;
             </div>;
@@ -680,7 +664,7 @@ get back to you within 24 hours.&apos,</p>";
               <Select>;
                 value={formData.urgency}";";
                 onValueChange="{value" => handleChange(&apos;urgency&apos, value)}
-;
+
               >&apos;&apos,;
 """;
             <div>"";
@@ -690,7 +674,7 @@ get back to you within 24 hours.&apos,</p>";
               <div>Broken JSX</div>
                 value = {formData.urgency}">;
                 onValueChange = "{value" => handleChange("urgency", value)}
-;
+
               >;
                 <SelectTrigger>;
                   <SelectValue  />;
@@ -698,9 +682,9 @@ get back to you within 24 hours.&apos,</p>";
                 <SelectContent>;
                   {};
                     <SelectItem key="{urgency.value}" value="{urgency.value}">                      {urgency.label}
-;
+
                     </SelectItem>) ) }
-;
+
                 </SelectContent>;
               </Select>;
             </div>;
@@ -719,9 +703,9 @@ get back to you within 24 hours.&apos,</p>";
            />""{};
                   {urgencyLevels.map(urgency = > (}";
                     <SelectItem key="{urgency.value}" value="{urgency.value}">                      {urgency.label}
-;
+
                     </SelectItem>) ) }
-;
+
                 </SelectContent>;
               </Select>;
             </div>;
@@ -740,7 +724,7 @@ get back to you within 24 hours.&apos,</p>";
                 {errors.projectDescription}&apos;
               </p>;
             )}
-;
+
           </div>";
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
           <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,;
@@ -750,7 +734,7 @@ get back to you within 24 hours.&apos,</p>";
               </label>";
               <div>Broken JSX</div>
                 onValueChange="{value" => handleChange(&apos;contactMethod&apos, value)}
-;
+
               >&apos;&apos;
                 <SelectTrigger>;
                   <SelectValue  />";
@@ -771,15 +755,15 @@ get back to you within 24 hours.&apos,</p>";
               rows = {6}
               className="{errors.projectDescription" ? "border-red-500" : ""}" />"""{};
                 {errors.projectDescription}
-;
+
               </p>;
             )}
-;
+
           </div>;
 ""{/* comment */}"";";
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">",;
             <div>"";";
-              <label className="block text-sm font-medium text-gray-700 mb-2">,,;
+              <label className="block text-sm font-medium text-gray-700 mb-2">,;
                 Preferred Contact Method,;
               </label>,;
           </div>";
@@ -791,7 +775,7 @@ get back to you within 24 hours.&apos,</p>";
               </label>";,;
               <Select value = {formData.contactMethod}">;
                 onValueChange = "{value" => handleChange("contactMethod", value)}
-;
+
               >;
                 <SelectTrigger>;
                   <SelectValue / >,;
@@ -816,7 +800,7 @@ get back to you within 24 hours.&apos,</p>";
                 <a href = "/terms" className="text-blue-600 hover: underline">",";
                   Terms and Conditions",";
                 </a>{" "}
-;
+
                 *;
               </label>;
             </div>""{};
@@ -840,13 +824,12 @@ get back to you within 24 hours.&apos,</p>";
               disabled={isSubmitting}"";";
               className="px - 8 py-3 text-lg ">{};
                 </>) }
-;
+
             </Button>;
           </div>;
         </form>;
       </CardContent>;";
-    </Card>) }";";,
-}">;
+    </Card>) }";"}">;
                 <SelectTrigger>;
                   <SelectValue  />";
                 </SelectTrigger>""";
@@ -869,7 +852,7 @@ get back to you within 24 hours.&apos,</p>";
                 <a href="&apos;/terms&apos;" className="&apos;text-blue-600" hover: underline&apos,>",",;
                   Terms and Conditions&apos;&apos,;
                 </a>{&apos, &apos}
-;
+
                 *&apos;&apos;
               </label>";
             </div>&apos;&apos,{errors.agreeToTerms && (&apos;&apos,&apos;&apos}";
@@ -912,7 +895,7 @@ get back to you within 24 hours.&apos,</p>";
                 <a href="/terms" className="text-blue-600 hover: underline">";
                   Terms and Conditions"",;
                 </a>{" "}
-;
+
                 *;
               </label>";
             </div>"""{};
@@ -935,20 +918,17 @@ get back to you within 24 hours.&apos,</p>";
               disabled={isSubmitting}"""";";
               className = "px-8 py-3 text-lg ">{};
 </>) }
-;
+
             </Button>;
           </div>;
         </form>;
       </CardContent>;
-    </Card>) ;";,
-}"";";,
-}
+    </Card>) ;"}"";"}
 """";
     </Card>) }&apos;&quot}&apos,;
 &apos;&apos,&apos;&apos,";
 &apos,";
-    </Card>) }"";,
-}"";";
+    </Card>) }""}"";";
 """"""';
 ";";
 ;";

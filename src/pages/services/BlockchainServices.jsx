@@ -28,16 +28,12 @@ const BlockchainServices = () => {};
           </Link>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default BlockchainServices;
-;
 
-export { BlockchainServices };
-;
-export { BlockchainServices };
-;
-export { BlockchainServices };
-;
-export { BlockchainServices };
-;
-export { BlockchainServices };
+
+export { BlockchainServices }
+export { BlockchainServices }
+export { BlockchainServices }
+export { BlockchainServices }
+export { BlockchainServices }

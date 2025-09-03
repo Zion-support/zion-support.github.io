@@ -28,7 +28,7 @@ const MicroSAAS: React.FC = () => {};
     {};
 }
   ];
-;
+
   return (;
     <>;
       <Helmet>;
@@ -36,7 +36,7 @@ const MicroSAAS: React.FC = () => {};
         <meta name="description" content="Innovative micro SAAS solutions including productivity tools, marketing platforms, e-commerce solutions, and business automation tools." />;
         <meta name="keywords" content="micro SAAS, productivity tools, marketing automation, e-commerce solutions, business software, cloud applications" />;
       </Helmet>;
-      ;
+
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">;
         {/* Hero Section */}
         <section className="relative py-20 bg-gradient-to-r from-green-900 via-blue-900 to-purple-900 text-white">;
@@ -80,7 +80,7 @@ const MicroSAAS: React.FC = () => {};
                 Focused software solutions across all major business domains;
               </p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {};
                 <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">;
@@ -128,25 +128,24 @@ const MicroSAAS: React.FC = () => {};
                 Our most popular and innovative software solutions;
               </p>;
             </div>;
-            ;
+
             <div className="grid lg:grid-cols-2 gap-8">;
               {};
                 <div key={index} className={`relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 ${service.popular ? 'ring-2 ring-cyan-500' : ''}`}>;
                   {};
                   )}
-                  ;
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6`}>;
                     <service.icon className="h-8 w-8 text-white" />;
                   </div>;
-                  ;
+
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">;
                     {service.title}
                   </h3>;
-                  ;
+
                   <p className="text-gray-600 mb-6">;
                     {service.description}
                   </p>;
-                  ;
+
                   <div className="mb-6">;
                     <p className="text-3xl font-bold text-gray-900 mb-2">;
                       {service.price}
@@ -183,7 +182,7 @@ const MicroSAAS: React.FC = () => {};
                 Get in touch with our experts for a free consultation;
               </p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-3 gap-8 mb-12">;
               <div className="text-center">;
                 <Phone className="h-12 w-12 text-cyan-400 mx-auto mb-4" />;
@@ -201,7 +200,7 @@ const MicroSAAS: React.FC = () => {};
                 <p className="text-gray-200">364 E Main St STE 1008<br />Middletown DE 19709</p>;
               </div>;
             </div>;
-            ;
+
             <div className="text-center">;
               <div>Broken JSX</div>
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center">;
@@ -213,7 +212,5 @@ const MicroSAAS: React.FC = () => {};
         </section>;
       </div>;
     </>;
-  );,
-};
-;
+  )}
 export default MicroSAAS;

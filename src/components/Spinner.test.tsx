@@ -9,7 +9,5 @@ describe(&apos;Spinner&apos, () => {};
 }
     // comment;
     render(<Spinner / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

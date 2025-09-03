@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface NextGenAIService {;
+export interface NextGenAIService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface NextGenAIService {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface NextGenAIService {;
   rating: number;
 export const nextGenAIServices: NextGenAIService[] = [;
   // Advanced AI & Neural Network Services;
-  {;
+  {
     id: "neural-quantum-brain-interface",;
     name: "Neural Quantum Brain Interface",;
     tagline: "Direct neural interface with quantum AI for cognitive enhancement",;
@@ -76,21 +76,19 @@ export const nextGenAIServices: NextGenAIService[] = [;
     marketSize: "$2B brain-computer interface market, 500% annual growth",;
     growthRate: "500% annual growth",;
     variant: "neural-quantum",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully functional neural quantum brain interface with direct neural signal processing and quantum AI cognitive enhancement. Includes neural support center and 24/7 monitoring.",;
     launchDate: "2024-12-20",;
     customers: 3,;
     rating: 4.9,;
-    reviews: 2;,;,
-},;
+    reviews: 2},;
   // Quantum AI Content Factory;
-  {;
+  {
     id: "quantum-ai-content-factory",;
     name: "Quantum AI Content Factory",;
     tagline: "Massive-scale content generation with quantum AI creativity",;
@@ -128,21 +126,19 @@ export const nextGenAIServices: NextGenAIService[] = [;
     marketSize: "$5B AI content market, 300% annual growth",;
     growthRate: "300% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully functional quantum AI content factory with massive-scale content generation and multi-media creation capabilities. Includes content operations center and 24/7 support.",;
     launchDate: "2024-11-20",;
     customers: 180,;
     rating: 4.8,;
-    reviews: 95;,;,
-},;
+    reviews: 95},;
   // AI Autonomous Research Platform;
-  {;
+  {
     id: "ai-autonomous-research-platform",;
     name: "AI Autonomous Research Platform",;
     tagline: "Fully autonomous AI research with breakthrough discoveries",;
@@ -180,21 +176,19 @@ export const nextGenAIServices: NextGenAIService[] = [;
     marketSize: "$200B research market, autonomous AI segment growing 600% annually",;
     growthRate: "600% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully functional AI autonomous research platform with breakthrough discovery capabilities and cross-domain knowledge synthesis. Includes research operations center and 24/7 autonomous research.",;
     launchDate: "2024-12-10",;
     customers: 12,;
     rating: 4.9,;
-    reviews: 6;,;,
-},;
+    reviews: 6},;
   // Quantum AI Video Production Studio;
-  {;
+  {
     id: "quantum-ai-video-studio",;
     name: "Quantum AI Video Production Studio",;
     tagline: "Hollywood-quality video production with quantum AI creativity",;
@@ -232,21 +226,19 @@ export const nextGenAIServices: NextGenAIService[] = [;
     marketSize: "$100B video production market, AI segment growing 400% annually",;
     growthRate: "400% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully functional quantum AI video production studio with Hollywood-quality output and 100x faster production capabilities. Includes video production center and 24/7 support.",;
     launchDate: "2024-11-25",;
     customers: 45,;
     rating: 4.7,;
-    reviews: 23;,;,
-},;
+    reviews: 23},;
   // AI Quantum Computing Platform;
-  {;
+  {
     id: "ai-quantum-computing-platform",;
     name: "AI Quantum Computing Platform",;
     tagline: "Accessible quantum computing with AI optimization",;
@@ -284,21 +276,19 @@ export const nextGenAIServices: NextGenAIService[] = [;
     marketSize: "$500M quantum computing market, 400% annual growth",;
     growthRate: "400% annual growth",;
     variant: "quantum-advanced",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully functional AI quantum computing platform with accessible quantum computing and AI optimization capabilities. Includes quantum operations center and 24/7 support.",;
     launchDate: "2024-12-05",;
     customers: 8,;
     rating: 4.8,;
-    reviews: 4;,;,
-},;
+    reviews: 4},;
   // Neural Network Evolution Platform;
-  {;
+  {
     id: "neural-network-evolution",;
     name: "Neural Network Evolution Platform",;
     tagline: "Self-evolving neural networks with continuous improvement",;
@@ -336,21 +326,19 @@ export const nextGenAIServices: NextGenAIService[] = [;
     marketSize: "$50B machine learning market, evolution segment growing 500% annually",;
     growthRate: "500% annual growth",;
     variant: "neural-quantum",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully functional neural network evolution platform with self-evolving capabilities and continuous improvement. Includes evolution monitoring center and 24/7 support.",;
     launchDate: "2024-12-15",;
     customers: 6,;
     rating: 4.9,;
-    reviews: 3;,;,
-},;
+    reviews: 3},;
   // Quantum AI Creativity Engine;
-  {;
+  {
     id: "quantum-ai-creativity-engine",;
     name: "Quantum AI Creativity Engine",;
     tagline: "Unlimited creative content generation with quantum AI",;
@@ -388,21 +376,19 @@ export const nextGenAIServices: NextGenAIService[] = [;
     marketSize: "$150B creative market, AI segment growing 350% annually",;
     growthRate: "350% annual growth",;
     variant: "quantum-advanced",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully functional quantum AI creativity engine with unlimited creative content generation and multi-domain capabilities. Includes creative operations center and 24/7 support.",;
     launchDate: "2024-11-30",;
     customers: 75,;
     rating: 4.6,;
-    reviews: 38;,;,
-},;
+    reviews: 38},;
   // New AI Services;
-  {;
+  {
     id: "ai-neural-interface-pro",;
     name: "AI Neural Interface Pro",;
     tagline: "Direct brain-computer interface with AI enhancement",;
@@ -440,20 +426,18 @@ export const nextGenAIServices: NextGenAIService[] = [;
     marketSize: "$2.5B BCI market",;
     growthRate: "500% annual growth",;
     variant: "neural-quantum",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced neural interface system with AI enhancement capabilities, real-time processing, and secure quantum encryption.",;
     launchDate: "2024-12-01",;
     customers: 15,;
     rating: 4.9,;
-    reviews: 8;,;,
-},;
-  {;
+    reviews: 8},;
+  {
     id: "ai-quantum-computing-platform",;
     name: "AI Quantum Computing Platform",;
     tagline: "Enterprise quantum computing with AI optimization",;
@@ -491,20 +475,18 @@ export const nextGenAIServices: NextGenAIService[] = [;
     marketSize: "$1.8B quantum computing market",;
     growthRate: "400% annual growth",;
     variant: "quantum-advanced",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise quantum computing platform with AI optimization, hybrid computing capabilities, and comprehensive quantum development tools.",;
     launchDate: "2024-11-15",;
     customers: 25,;
     rating: 4.8,;
-    reviews: 12;,;,
-},;
-  {;
+    reviews: 12},;
+  {
     id: "ai-space-mission-control",;
     name: "AI Space Mission Control",;
     tagline: "Intelligent space mission management and automation",;
@@ -542,20 +524,18 @@ export const nextGenAIServices: NextGenAIService[] = [;
     marketSize: "$450B space industry",;
     growthRate: "300% annual growth in AI space applications",;
     variant: "quantum-space",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced AI-powered space mission control system with autonomous decision-making, real-time optimization, and comprehensive mission management capabilities.",;
     launchDate: "2024-10-01",;
     customers: 8,;
     rating: 4.9,;
-    reviews: 5;,;,
-},;
-  {;
+    reviews: 5},;
+  {
     id: "ai-biotech-discovery-platform",;
     name: "AI Biotech Discovery Platform",;
     tagline: "AI-powered drug discovery and biotechnology research",;
@@ -593,20 +573,18 @@ export const nextGenAIServices: NextGenAIService[] = [;
     marketSize: "$150B drug discovery market",;
     growthRate: "250% annual growth in AI applications",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive AI biotech platform with drug discovery algorithms, genetic analysis tools, and clinical trial optimization capabilities.",;
     launchDate: "2024-09-15",;
     customers: 18,;
     rating: 4.7,;
-    reviews: 245;,;,
-},;
-  {;
+    reviews: 245},;
+  {
     id: "ai-predictive-maintenance-platform",;
     name: "AI Predictive Maintenance Platform",;
     tagline: "Predictive maintenance with AI and IoT integration",;
@@ -644,21 +622,19 @@ export const nextGenAIServices: NextGenAIService[] = [;
     marketSize: "$18B predictive maintenance market",;
     growthRate: "220% annual growth",;
     variant: "quantum-cyberpunk",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive predictive maintenance platform with IoT integration, AI algorithms, and enterprise-grade monitoring capabilities.",;
     launchDate: "2024-08-01",;
     customers: 180,;
     rating: 4.8,;
-    reviews: 156;,;,
-},;
+    reviews: 156},;
   // AI-Powered Predictive Analytics Platform;
-  {;
+  {
     id: "ai-predictive-analytics-platform",;
     name: "AI Predictive Analytics Platform",;
     tagline: "Predict business outcomes with 95% accuracy using advanced AI",;
@@ -696,21 +672,19 @@ export const nextGenAIServices: NextGenAIService[] = [;
     marketSize: "$23B business intelligence market",;
     growthRate: "300% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full enterprise platform with advanced ML models, real-time data processing, comprehensive security, and scalable architecture.",;
     launchDate: "2024-02-15",;
     customers: 89,;
     rating: 4.9,;
-    reviews: 67;,;,
-},;
+    reviews: 67},;
   // AI-Powered Customer Experience Platform;
-  {;
+  {
     id: "ai-customer-experience-platform",;
     name: "AI Customer Experience Platform",;
     tagline: "Deliver personalized experiences that increase customer lifetime value by 300%",;
@@ -748,21 +722,19 @@ export const nextGenAIServices: NextGenAIService[] = [;
     marketSize: "$18B customer experience market",;
     growthRate: "220% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full SaaS platform with advanced AI models, real-time personalization, comprehensive analytics, and enterprise-grade security.",;
     launchDate: "2024-01-20",;
     customers: 342,;
     rating: 4.8,;
-    reviews: 289;,;,
-},;
+    reviews: 289},;
   // AI-Powered Supply Chain Optimization;
-  {;
+  {
     id: "ai-supply-chain-optimization",;
     name: "AI Supply Chain Optimization",;
     tagline: "Optimize supply chains and reduce costs by up to 40%",;
@@ -800,21 +772,19 @@ export const nextGenAIServices: NextGenAIService[] = [;
     marketSize: "$28B supply chain management market",;
     growthRate: "280% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full enterprise platform with advanced ML models, real-time optimization, comprehensive analytics, and enterprise integration capabilities.",;
     launchDate: "2024-03-10",;
     customers: 67,;
     rating: 4.9,;
-    reviews: 45;,;,
-},;
+    reviews: 45},;
   // AI-Powered Financial Trading Platform;
-  {;
+  {
     id: "ai-financial-trading-platform",;
     name: "AI Financial Trading Platform",;
     tagline: "Automated trading with 85% win rate using advanced AI algorithms",;
@@ -852,21 +822,19 @@ export const nextGenAIServices: NextGenAIService[] = [;
     marketSize: "$35B algorithmic trading market",;
     growthRate: "400% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full professional trading platform with advanced AI models, real-time execution, comprehensive risk management, and regulatory compliance.",;
     launchDate: "2024-02-01",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 18;,;,
-},;
+    reviews: 18},;
   // AI-Powered Healthcare Diagnostics;
-  {;
+  {
     id: "ai-healthcare-diagnostics",;
     name: "AI Healthcare Diagnostics Platform",;
     tagline: "Accurate medical diagnostics with 95% accuracy using AI",;
@@ -904,12 +872,11 @@ export const nextGenAIServices: NextGenAIService[] = [;
     marketSize: "$45B AI healthcare market",;
     growthRate: "350% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full healthcare platform with advanced AI models, HIPAA compliance, comprehensive security, and medical device integration.",;
     launchDate: "2024-01-10",;

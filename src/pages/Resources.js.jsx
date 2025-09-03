@@ -29,16 +29,12 @@ const Resources = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default Resources;
-;
 
-export { Resources };
-;
-export { Resources };
-;
-export { Resources };
-;
-export { Resources };
-;
-export { Resources };
+
+export { Resources }
+export { Resources }
+export { Resources }
+export { Resources }
+export { Resources }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 export const InteractiveHero = ({ title, subtitle, description, primaryAction, secondaryAction, stats = [import { motion  } from 'framer-motion';
-;
+
     { value: '500+', label: 'Happy Clients', color: 'text-blue - 400' },;
     { value: '1000+', label: 'Projects Delivered', color: 'text-green - 400' },;
     { value: '99.9%', label: 'Uptime SLA', color: 'text-purple - 400' },;

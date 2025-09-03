@@ -9,7 +9,5 @@ describe(&apos;EnhancedInteractiveFeatures&apos, () => {};
 }
     // comment;
     render(<EnhancedInteractiveFeatures / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

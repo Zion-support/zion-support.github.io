@@ -12,7 +12,7 @@ const ContentHub: React.FC = () => {};
     { id: 'webinars', name: 'Webinars', count: 8 },;
     { id: 'news', name: 'News & Updates', count: 28 },;
   ];
-;
+
   const featuredContent = [;
     {};
 },;
@@ -21,7 +21,7 @@ const ContentHub: React.FC = () => {};
     {};
 },;
   ];
-;
+
   const recentContent = [;
     {};
 },;
@@ -193,7 +193,5 @@ const ContentHub: React.FC = () => {};
         </div>;
       </div>;
     </div>;
-  );,
-};
-;
+  )}
 export default ContentHub;

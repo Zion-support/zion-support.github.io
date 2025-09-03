@@ -224,16 +224,12 @@ const ServicePortfolioDashboard = () => {};
           </motion.div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default ServicePortfolioDashboard;
-;
 
-export { ServicePortfolioDashboard };
-;
-export { ServicePortfolioDashboard };
-;
-export { ServicePortfolioDashboard };
-;
-export { ServicePortfolioDashboard };
-;
-export { ServicePortfolioDashboard };
+
+export { ServicePortfolioDashboard }
+export { ServicePortfolioDashboard }
+export { ServicePortfolioDashboard }
+export { ServicePortfolioDashboard }
+export { ServicePortfolioDashboard }

@@ -1,6 +1,6 @@
-const Component = () => {;
+const Component = () => {
 import React from "react";
-      description: "AI solutions that grow with your business and adapt to changing needs.",,;
+      description: "AI solutions that grow with your business and adapt to changing needs.",;
   ];
   return (";
     <MainLayout title = "AI & Machine Learning Services - Zion Tech Group,";
@@ -67,7 +67,7 @@ description="Custom" AI model development, process automation, analytics platfor
                 <p className="text-gray-600>{benefit.description}</p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -99,10 +99,10 @@ description="Custom" AI model development, process automation, analytics platfor
                       <li key="{index}" className="flex items-center text-gray-600>";
                         <CheckCircle className="w-5" h-5 text-green-500 mr-2 flex-shrink-0"  />;
                         {feature}
-;
+
                       </li>;
                     ))}
-;
+
                   </ul>;
                 </div>;
 ";
@@ -113,10 +113,10 @@ description="Custom" AI model development, process automation, analytics platfor
                       <li key="{index}" className="flex" items-center text-gray-600">";
                         <CheckCircle className="w-5 h-5 text-green-500 mr-2 flex-shrink-0       />;
                         {benefit}
-;
+
                       </li>;
                     ))}
-;
+
                   </ul>;
                 </div>;
 ";
@@ -127,10 +127,10 @@ description="Custom" AI model development, process automation, analytics platfor
                       <li key="{index}" className="flex items-center text-gray-600>";
                         <CheckCircle className="w-5" h-5 text-green-500 mr-2 flex-shrink-0"  />;
                         {useCase}
-;
+
                       </li>;
                     ))}
-;
+
                   </ul>;
                 </div>;
 ";
@@ -140,10 +140,10 @@ description="Custom" AI model development, process automation, analytics platfor
                     {service.technologies.map((tech, index) => (";
                       <span key="{index}" className="bg-blue-100" text-blue-800 px-3 py-1 rounded-full text-sm">;
                         {tech}
-;
+
                       </span>;
                     ))}
-;
+
                   </div>;
 ";
                 <div className="flex justify-between items-center>";
@@ -161,7 +161,7 @@ description="Custom" AI model development, process automation, analytics platfor
                 </div>;
               </div>,;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -402,7 +402,7 @@ description="Custom" AI model development, process automation, analytics platfor
             ))}
           </div>;
       </section>;
-;
+
       {/*   */}";
       <section className="py-20" bg-gray-50">";
         <div className="container mx-auto px-4>";
@@ -488,7 +488,7 @@ description="Custom" AI model development, process automation, analytics platfor
             ))}
           </div>;
       </section>;
-;
+
       {/*   */}";
       <section className=py-20">";
         <div className="container mx-auto px-4>";
@@ -525,7 +525,7 @@ description="Custom" AI model development, process automation, analytics platfor
               <p className="text-gray-600>Production deployment with monitoring and ongoing optimization.</p>;
             </div>;
       </section>;
-;
+
       {/*   */}";
       <section className="py-20" bg-gray-50">";
         <div className="container mx-auto px-4>";
@@ -694,7 +694,6 @@ description="Custom" AI model development, process automation, analytics platfor
           </div>;
       </section>;
     </MainLayout>,;
-  ),;,;,
-}
+  )}
 ";
 export default AIServicesPage

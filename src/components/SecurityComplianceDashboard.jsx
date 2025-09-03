@@ -39,7 +39,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {};
     };
     const getThreatLevelColor = (level) => {};
             default: return 'text-gray-600 bg-gray-100 border-gray-200'}
-    };
+    }
     return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>      {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">"";
         <div className="flex items-center space-x-3">"";

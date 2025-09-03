@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface EmergingTechnologyService {;
+export interface EmergingTechnologyService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface EmergingTechnologyService {;
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface EmergingTechnologyService {;
   rating: number;
 export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[] = [;
   // Quantum Computing as a Service;
-  {;
+  {
     id: "quantum-computing-as-a-service",;
     name: "Quantum Computing as a Service",;
     tagline: "Access to quantum computing power through the cloud",;
@@ -76,21 +76,19 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     marketSize: "$1.8B quantum computing market",;
     growthRate: "45% annual growth",;
     variant: "quantum-computing-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade quantum computing platform with access to multiple quantum processors and comprehensive development tools.",;
     launchDate: "2024-10-15",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 18;,;,
-},;
+    reviews: 18},;
   // Blockchain Infrastructure Platform;
-  {;
+  {
     id: "blockchain-infrastructure-platform",;
     name: "Blockchain Infrastructure Platform",;
     tagline: "Enterprise blockchain infrastructure and development tools",;
@@ -128,21 +126,19 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     marketSize: "$19.9B blockchain market",;
     growthRate: "87% annual growth",;
     variant: "blockchain-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade blockchain infrastructure platform with multi-chain support and comprehensive development tools.",;
     launchDate: "2024-11-01",;
     customers: 89,;
     rating: 4.8,;
-    reviews: 67;,;,
-},;
+    reviews: 67},;
   // Edge Computing Orchestration Platform;
-  {;
+  {
     id: "edge-computing-orchestration-platform",;
     name: "Edge Computing Orchestration Platform",;
     tagline: "Intelligent edge computing management and optimization",;
@@ -180,21 +176,19 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     marketSize: "$11.2B edge computing market",;
     growthRate: "37% annual growth",;
     variant: "edge-computing-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive edge computing orchestration platform with intelligent resource management and real-time processing capabilities.",;
     launchDate: "2024-11-20",;
     customers: 156,;
     rating: 4.7,;
-    reviews: 98;,;,
-},;
+    reviews: 98},;
   // Metaverse Development Platform;
-  {;
+  {
     id: "metaverse-development-platform",;
     name: "Metaverse Development Platform",;
     tagline: "Complete metaverse development and deployment solution",;
@@ -232,21 +226,19 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     marketSize: "$47.5B metaverse market",;
     growthRate: "42% annual growth",;
     variant: "metaverse-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Comprehensive metaverse development platform with integrated tools for creating immersive virtual experiences.",;
     launchDate: "2024-12-01",;
     customers: 67,;
     rating: 4.8,;
-    reviews: 45;,;,
-},;
+    reviews: 45},;
   // Space Technology Platform;
-  {;
+  {
     id: "space-technology-platform",;
     name: "Space Technology Platform",;
     tagline: "Advanced space technology solutions and satellite management",;
@@ -284,12 +276,11 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     marketSize: "$469B space economy",;
     growthRate: "8% annual growth",;
     variant: "space-technology-enterprise",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade space technology platform with comprehensive satellite management and space data analytics capabilities.",;
     launchDate: "2024-10-01",;

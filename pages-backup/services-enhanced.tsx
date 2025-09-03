@@ -1,6 +1,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
+const Component = () => {
   const description = "Comprehensive AI, IT, and Micro SaaS solutions for modern businesses.;
   const mainServices = [],";
       deliveryTime: "2-4 weeks",";
@@ -50,7 +50,7 @@ const Component = () => {;
       ],";
       deliveryTime: "6-12 weeks",";
       href: "/micro-saas"}
-;
+
   ];
 
   const newServices = [],";
@@ -95,10 +95,10 @@ const Component = () => {;
       price: "From $30/month",";
       features: ["Custom ticketing system", "Client portals", "Knowledge bases", "IT tool integration"],";
       href: "/services/it-helpdesk-software"}
-;
+
   ];
 
-  const getColorClasses = (color: string) => {;
+  const getColorClasses = (color: string) => {
     const colors = {},;
       green: {,";
 bg: "bg-green-600",";
@@ -135,11 +135,10 @@ bg: "bg-gray-600",";
         hover: "hover:bg-gray-700",";
         text: "text-gray-600",";
         hoverText: "hover:text-gray-500","        border: "hover:border-gray-300"}
-;,
 }
-;
+
     return colors[color as keyof typeof colors] || colors.blue}
-;
+
   return (;
     <PageTransition>;
       {/* comment */}";
@@ -175,7 +174,7 @@ that transform your business operations and drive growth.;
               return (";
                 <div key="{service.id}
                   className="{"group" relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 ${colors.border}"}
-;
+
                 >";
                   <div className=""flex" items-center gap-x-3 mb-6">";
                     <div className="{"flex" h-12 w-12 items-center justify-center rounded-lg ${colors.bg} ${colors.hover} transition-colors"}>";
@@ -184,17 +183,17 @@ that transform your business operations and drive growth.;
                     <div>";
                       <h2 className="{"text-xl" font-semibold text-gray-900">;
                         {service.title}
-;
+
                       </h2>";
                       <p className="{"text-sm" ${colors.text} font-medium"}>;
                         {service.subtitle}
-;
+
                       </p>;
                     </div>;
                   </div>";
                   <p className=""text-gray-600" mb-6"}>;
                     {service.description}
-;
+
                   </p>";
                   <ul className="space-y-3 mb-6">;
                     {service.features.map((feature, index) => (";
@@ -202,11 +201,11 @@ that transform your business operations and drive growth.;
                         <CheckCircle className="{"h-4" w-4 ${colors.text}"}       />";
                         <span className=""text-sm" text-gray-700"}>;
                           {feature}
-;
+
                         </span>;
                       </li>;
                     ))}
-;
+
                   </ul>";
                   <div className="flex items-center justify-between">";
                     <div className="flex items-center space-x-2 text-sm text-gray-500">";
@@ -215,14 +214,14 @@ that transform your business operations and drive growth.;
                     </div>";
                     <Link to="{service.href}
                       className="{"inline-flex" items-center text-sm font-semibold ${colors.text} ${colors.hoverText} transition-colors group"}
-;
+
                     >;
                       Learn More";
                       <ArrowRight className=""ml-2" h-4 w-4 group-hover: translate-x-1 transition-transform"}       />;
                     </Link>;
                   </div>;
               )})}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -233,10 +232,9 @@ that transform your business operations and drive growth.;
             <p className="text-xl text-gray-600">Cutting-edge tools and platforms for modern businesses</p>;
           </div>,;
 ",;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,,;
-            {newServices.map((service, index) => {;
-              const colors = getColorClasses(service.color);,
-}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,;
+            {newServices.map((service, index) => {
+              const colors = getColorClasses(service.color)}
               return (";
                 <div key = "{index}
                   className="group relative rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-gray-300">";
@@ -247,17 +245,17 @@ that transform your business operations and drive growth.;
                     <div>";
                       <h3 className="{"text-lg" font-semibold text-gray-900">;
                         {service.title}
-;
+
                       </h3>";
                       <p className="{"text-sm" ${colors.text} font-medium"}>;
                         {service.price}
-;
+
                       </p>;
                     </div>;
                   </div>";
                   <p className=""text-gray-600" mb-4 text-sm"}>;
                     {service.description}
-;
+
                   </p>";
                   <ul className="space-y-2 mb-6">;
                     {service.features.slice(0, 2).map((feature, featureIndex) => (";
@@ -265,22 +263,22 @@ that transform your business operations and drive growth.;
                         <CheckCircle className="{"h-3" w-3 ${colors.text}"}       />";
                         <span className=""text-xs" text-gray-700">;
                           {feature}
-;
+
                         </span>;
                       </li>;
                     ))}
-;
+
                   </ul>";
                   <Link to="{service.href}
                     className="{"inline-flex" items-center text-sm font-semibold ${colors.text} ${colors.hoverText} transition-colors group"}
-;
+
                   >;
                     Learn More";
                     <ArrowRight className=""ml-2" h-4 w-4 group-hover: translate-x-1 transition-transform"}       />;
                   </Link>;
                 </div>;
               )})}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -310,7 +308,7 @@ that transform your business operations and drive growth.;
               <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>;
             </div>;
       </section>;
-    </PageTransition>",,;
+    </PageTransition>",;
   )}
-;
+
 export default Component

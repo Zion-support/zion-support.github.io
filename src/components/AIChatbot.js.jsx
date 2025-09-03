@@ -162,22 +162,21 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                         <div>Broken JSX</div>
                         : 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200'}`}>";
                           <p className="text-sm whitespace-pre-wrap">{message.content}</p>;
-                          ;
+
                           {/* Message Metadata */}";
                           {};
                               {message.metadata.confidence && (<span className="mr-2">Confidence: {Math.round(message.metadata.confidence * 100)}%</span>)}
                               {message.metadata.intent && (<span>Intent: {message.metadata.intent}</span>)}
                             </div>)}
-                          ;
                           {/* Suggestions */}
                           {message.type === 'bot' && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions}/>)}
                         </div>;
                       </div>;
                     </motion.div>) ) }
-;
+
                   {/* Typing Indicator */}
                   {isTyping && <TypingIndicator />}
-;
+
                   {/* Scroll anchor */}
                   <div ref={messagesEndRef} />;
                 </div>;
@@ -190,7 +189,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                       {isTyping ? (<Loader2 className="w-4 h-4 animate-spin"/>) : (<Send className="w-4 h-4"/>)}
                     </button>;
                   </form>;
-                  ;
+
                   {/* Quick Actions */}";
                   <div className="flex items-center justify-between mt-3 text-xs text-gray-500">";
                     <button onClick={clearConversation} className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">;
@@ -202,6 +201,6 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
               </>) }
           </motion.div>) }
       </AnimatePresence>;
-    </>)};
+    </>)}
 '"`;
 " export const AIChatbot = ({ welcomeMessage = "Hello! I"m Zion Tech Group"s AI assistant.How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => { const { trackEvent } = useAnalytics({ enableTracking: true, enableUserBehaviorTracking: true }); const [isOpen, setIsOpen] = useState(false); const [isMinimized, setIsMinimized] = useState(false); const [messages, setMessages] = useState([]); const [inputValue, setInputValue] = useState("); const [isTyping, setIsTyping] = useState(false); const messagesEndRef = useRef(null); const inputRef = useRef(null);

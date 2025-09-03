@@ -15,7 +15,7 @@ interface AdvancedAnalyticsDashboardProps {};
           trend: change > 2 ? 'up' : change <div>Broken JSX</div>
     setTimeout(() => {};
       setIsLoading(false) }, 1000) }, [generateAnalyticsData]) ;
-;
+
   // Export data;
   ;,
 } else {};
@@ -38,7 +38,7 @@ interface AdvancedAnalyticsDashboardProps {};
     if(isOpen) {};
       generateAnalyticsData()}
   }, [isOpen, generateAnalyticsData]) ;
-;
+
   // Get trend icon and color';
 
     return ()`      <div className={`flex items-center space-x-1 ${colors[trend]}`}>;
@@ -47,18 +47,16 @@ interface AdvancedAnalyticsDashboardProps {};
           {change > 0 ? '+' : ''}
           {change}%;
         </span>;
-      </div>) };
-;
+      </div>) }
   // Get category icon;
   const getCategoryIcon = (category: string) => {};
     const icons: { [key: string]: React.ReactNode } = {};
       technical: <Cpu className="w-5 h-5"  />};";
-    return icons[category] || <Activity className="w-5 h-5"  />};
-;
+    return icons[category] || <Activity className="w-5 h-5"  />}
   // Filter data by selected metrics;
-  ;
+
   if(!enabled) return null;
-;
+
   return ();
     <>;
       {/* Floating Analytics Button */}

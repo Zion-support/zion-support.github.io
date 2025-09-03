@@ -9,7 +9,5 @@ describe(&apos;EnhancedSecurity&apos, () => {};
 }
     // comment;
     render(<EnhancedSecurity / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

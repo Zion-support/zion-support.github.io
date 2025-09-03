@@ -7,14 +7,10 @@ export default function Training() {};
 };
 ;
 export default Training;
-;
 
-export { Training };
-;
-export { Training };
-;
-export { Training };
-;
-export { Training };
-;
-export { Training };
+
+export { Training }
+export { Training }
+export { Training }
+export { Training }
+export { Training }

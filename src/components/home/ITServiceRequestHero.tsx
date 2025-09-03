@@ -18,17 +18,17 @@
   const features = [{ icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },;
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },;
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },;
-    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
+    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" }
   ];
-;
+
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 import { Link  } from 'react-router-dom';
-;
+
 ,";
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },";
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },;";
-    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
+    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" }
   ];
 ;
 export function ITServiceRequestHero() {};

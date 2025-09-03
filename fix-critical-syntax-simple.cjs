@@ -1,19 +1,17 @@
 #!/usr/bin/env node;
-;
+
 const fs = require("fs");
 const path = require("path");
-class $1 {;
-  constructor() {;
+class $1 {
+  constructor() {
   this.projectRoot = process.cwd();
-    this.fixedCount = 0;,;,
-}
-;
-  log(message) {;
-  console.log(`[${new Date().toISOString()}] ${message}`);,;,
-}
-;
-  async fixFile(filePath) {;
-  try {;
+    this.fixedCount = 0;}
+
+  log(message) {
+  console.log(`[${new Date().toISOString()}] ${message}`);}
+
+  async fixFile(filePath) {
+  try {
   const content = fs.readFileSync(filePath, "utf8");
       let fixed = content;
       // Fix the specific patterns that are causing build failures;
@@ -29,20 +27,17 @@ class $1 {;
       // Fix missing commas in arrays;
       fixed = fixed.replace(/Master\\"s degree in Computer Science or related field",\s*"/g, ;
         "Master\\"s degree in Computer Science or related field\",\n        \"");
-      if (content !== fixed) {;
+      if (content !== fixed) {
   fs.writeFileSync(filePath, fixed);
         this.log(`✅ Fixed ${path.basename(filePath)}`);
         this.fixedCount++;
-        return true;,;,
-}
-      return false;,;,
-} catch (error) {;
+        return true;}
+      return false;} catch (error) {
   this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`);
-      return false;,;,
-}
+      return false;}
   }
-;
-  async run() {;
+
+  async run() {
   this.log("🔧 Fixing critical syntax errors...");
     const files = [;
   "pages/api.tsx",;
@@ -51,16 +46,14 @@ class $1 {;
       "pages/help.tsx",;
       "pages/press.tsx';
     ];
-;
-    for (const file of files) {;
+
+    for (const file of files) {
   const filePath = path.join(this.projectRoot, file);
-      if (fs.existsSync(filePath)) {;
-  await this.fixFile(filePath);,;,
-}
+      if (fs.existsSync(filePath)) {
+  await this.fixFile(filePath);}
     }
-;
-    this.log(`✅ Fixed ${this.fixedCount} files`);,;,
+
+    this.log(`✅ Fixed ${this.fixedCount} files`);}
 }
-}
-;
+
 new SimpleSyntaxFixer().run().catch(console.error)

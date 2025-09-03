@@ -68,8 +68,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
     visible: {};
       transition: { duration: 0.6 }
     }
-  };
-;
+  }
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">;
       <div>Broken JSX</div>
@@ -129,8 +128,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
 '''`;
                   activeCategory === 'all''''`'`;
                     ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'''`'`'`;
-                    : 'bg-slate-700 text-slate-300 hover:bg-slate-600'````;,
-}`}
+                    : 'bg-slate-700 text-slate-300 hover:bg-slate-600'````}`}
               >;
                 All Services;
               </button>;
@@ -142,8 +140,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
 '''`;
                     activeCategory === category.id'''`'`;
                       ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'''`'`'`;
-                      : 'bg-slate-700 text-slate-300 hover:bg-slate-600'````;,
-}`}
+                      : 'bg-slate-700 text-slate-300 hover:bg-slate-600'````}`}
                 >;
                   {category.name}
                 </button>) ) }
@@ -353,16 +350,11 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
 
-export { InnovativeServicesShowcase2028 };
-;
-export { InnovativeServicesShowcase2028 };
-;
-export { InnovativeServicesShowcase2028 };
-;
-export { InnovativeServicesShowcase2028 };
-;
-export { InnovativeServicesShowcase2028 };
+
+export { InnovativeServicesShowcase2028 }
+export { InnovativeServicesShowcase2028 }
+export { InnovativeServicesShowcase2028 }
+export { InnovativeServicesShowcase2028 }
+export { InnovativeServicesShowcase2028 }

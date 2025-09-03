@@ -169,16 +169,12 @@ const ServiceComparison = () => {};
           </motion.div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default ServiceComparison;
-;
 
-export { ServiceComparison };
-;
-export { ServiceComparison };
-;
-export { ServiceComparison };
-;
-export { ServiceComparison };
-;
-export { ServiceComparison };
+
+export { ServiceComparison }
+export { ServiceComparison }
+export { ServiceComparison }
+export { ServiceComparison }
+export { ServiceComparison }

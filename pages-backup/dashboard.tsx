@@ -1,26 +1,22 @@
 import Head from "next/head";
 import React, { useState } from "react";
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
+const Head = dynamic(() => import("next/head"), { ssr: false })}
   Code,;
   Cloud} from "lucide-react";
 
 export default function Dashboard() {";
-  const [activeTab, setActiveTab] = useState("overview");,
-}
+  const [activeTab, setActiveTab] = useState("overview")}
   const stats = [];
 
-  const recentProjects = [];,
-},;
-    {;
+  const recentProjects = []},;
+    {
       id: 2,";
       name: "Cloud Migration",";
       status: "Planning",;
       progress: 25,";
       dueDate: "2024-03-01",";
-      team: ["Sarah Wilson", "David Brown"];,
-},;
-    {;
+      team: ["Sarah Wilson", "David Brown"]},;
+    {
       id: 3,";
       name: "Mobile App Development",";
       status: "Completed",;
@@ -28,7 +24,7 @@ export default function Dashboard() {";
       dueDate: "2024-01-30",";
       team: ["Alex Chen", "Lisa Garcia"];
 
-;
+
   ];
 
   const notifications = [];
@@ -93,14 +89,14 @@ key="{index}
                   </div>;
               </motion.div>;
             ))}
-;
+
           </div>;
 ";
           <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">,;
             {/* comment */}";
             <div className="lg: col-span-2 space-y-8">,;
               {/* comment */}
-;
+
               <motion.div,";
 initial="{{" opacity: 0, y: 20 }}";
                 animate="{{" opacity: 1, y: 0 }}";
@@ -120,12 +116,12 @@ initial="{{" opacity: 0, y: 20 }}";
                       </div>;
                     </a>;
                   ))}
-;
+
                 </div>;
               </motion.div>;
 
               {/* comment */}
-;
+
               <motion.div,";
 initial="{{" opacity: 0, y: 20 }}";
                 animate="{{" opacity: 1, y: 0 }}";
@@ -146,10 +142,9 @@ initial="{{" opacity: 0, y: 20 }}";
                         <span className="{"px-2" py-1 text-xs font-medium rounded-full ${";
                           project.status === "Completed" ? "bg-green-100 text-green-800" :";
                           project.status === "In Progress" ? "bg-blue-100 text-blue-800" :;
-                          "bg-yellow-100 text-yellow-800>;,
-}"}>;
+                          "bg-yellow-100 text-yellow-800>}"}>;
                           {project.status}
-;
+
                         </span>;
                       </div>;
                       ";
@@ -161,7 +156,7 @@ initial="{{" opacity: 0, y: 20 }}";
                         <div className="w-full bg-gray-200 rounded-full h-2">";
                           <div className="{"bg-blue-600" h-2 rounded-full transition-all duration-300;
                             style="{{" width: "${project.progress}%" }}
-;
+
                           ></div>;
                         </div>;
                       ";
@@ -170,12 +165,12 @@ initial="{{" opacity: 0, y: 20 }}";
                         <span>{project.team.length} team members</span>;
                       </div>;
                   ))}
-;
+
                 </div>;
               </motion.div>;
 
               {/* comment */}
-;
+
               <motion.div,";
 initial="{{" opacity: 0, y: 20 }}";
                 animate="{{" opacity: 1, y: 0 }}";
@@ -194,14 +189,14 @@ initial="{{" opacity: 0, y: 20 }}";
                       <p className="text-sm text-gray-600">{service.description}</p>;
                     </a>;
                   ))}
-;
+
                 </div>;
               </motion.div>;
             </div>;
             {/* comment */}";
             <div className="space-y-8">;
               {/* comment */}
-;
+
               <motion.div,";
 initial="{{" opacity: 0, x: 20 }}";
                 animate="{{" opacity: 1, x: 0 }}";
@@ -214,15 +209,14 @@ initial="{{" opacity: 0, x: 20 }}";
                       <div className="{"w-2" h-2 rounded-full mt-2 ${";
                         notification.type === "success" ? "bg-green-500" :";
                         notification.type === "warning" ? "bg-yellow-500" :;
-                        'bg-blue-500>;,
-}"}></div>";
+                        'bg-blue-500>}"}></div>";
                       <div className = ""flex-1"}">";
                         <h4 className="text-sm font-medium text-gray-900">{notification.title}</h4>";
                         <p className="text-sm text-gray-600">{notification.message}</p>";
                         <p className="text-xs text-gray-500 mt-1">{notification.time}</p>;
                       </div>;
                   ))}
-;
+
                 </div>";
                 <a href="/notifications" className="block text-center text-blue-600 hover: text-blue-500 text-sm font-medium mt-4">;
                   View all notifications,;
@@ -230,7 +224,7 @@ initial="{{" opacity: 0, x: 20 }}";
               </motion.div>;
 ,;
               {/* comment */}
-;
+
               <motion.div,";
 initial="{{" opacity: 0, x: 20 }}";
                 animate="{{" opacity: 1, x: 0 }}";

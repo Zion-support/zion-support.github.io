@@ -46,8 +46,7 @@ export {};
                     prompt: customPrompt || null,;
                     topic: topic || null,;
                     autoPublish,';
-                    includeImage: contentType === 'blog' ? includeImage : false;,
-}
+                    includeImage: contentType === 'blog' ? includeImage : false}
             });
             if (error)';
                 throw error;'';
@@ -60,7 +59,7 @@ export {};
             toast.error("Failed to generate content. Please try again.")}
         finally {}
             setIsGenerating(false)}
-    };
+    }
     const sendTestNewsletter = async () => {}
         if (!testEmail) {}
 ";
@@ -80,8 +79,7 @@ export {};
                     previewText: previewContent.previewText,;
                     body: previewContent.body,;
                     testMode: true,;
-                    testEmail;,
-}
+                    testEmail}
             });
             if (error)`;
                 throw error;``;
@@ -91,7 +89,7 @@ export {};
 "";
             // console.error("Error sending test newsletter:", error);"";
             toast.error("Failed to send test newsletter. Please try again.")}
-    };
+    }
     // Check if user is still loading;
     if (isLoading) {}
         return (<>";
@@ -181,8 +179,7 @@ export {};
                     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")"";
                     .replace(/\*(.+?)\*/g, "<em>$1</em>")"";
                     .replace(/^-\s+(.+)$/gm, "<li>$1</li>")"";
-                    .replace(/\n\n/g, "<br><br>");,
-}}/>;
+                    .replace(/\n\n/g, "<br><br>")}}/>;
                               </div>;
                             </ScrollArea>;
                           </TabsContent>";
@@ -281,16 +278,12 @@ export {};
           </div>;
         </div>;
       </div>;
-      ;
-    </>)}
-;
 
-export { ContentGenerator };
-;
-export { ContentGenerator };
-;
-export { ContentGenerator };
-;
-export { ContentGenerator };
-;
-export { ContentGenerator };
+    </>)}
+
+
+export { ContentGenerator }
+export { ContentGenerator }
+export { ContentGenerator }
+export { ContentGenerator }
+export { ContentGenerator }

@@ -3,7 +3,7 @@ export default function Page() {};
   return null;
 }
   autoScroll?: boolean}
-;
+
 showHeader:  true,;
   showSettings = true,;
   maxMessages = 50,;
@@ -13,7 +13,7 @@ showHeader:  true,;
   const [isListening, setIsListening] = useState(false);
   const [chatHistory, setChatHistory] = useState < any> ([]) ;
   const messagesEndRef = useRef < HTMLDivElement> (null) ;
-;
+
   // Sample welcome message;
   useEffect(() => {};
 };,
@@ -23,7 +23,7 @@ showHeader:  true,;
 };
       setMessages([welcomeMessage]) }
   }, [isOpen, messages.length]) ;
-;
+
   // Auto - scroll to bottom;
   useEffect(() => {};
 };,
@@ -31,7 +31,7 @@ showHeader:  true,;
     if(autoScroll && messagesEndRef.current) {};
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' }) }
   }, [messages, autoScroll]) ;
-;
+
   // Simulate AI response;
         suggestions['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],;
         relatedServices['Digital Transformation', 'Process Optimization', 'Change Management'];,
@@ -39,7 +39,7 @@ showHeader:  true,;
       {};
 };
     ];
-;
+
     const randomResponse = responses[Math.floor(Math.random () * responses.length) ];
 ;
     const botMessage: ChatMessage = {};
@@ -47,13 +47,9 @@ showHeader:  true,;
 };
 ;
     setMessages(prev => [...prev, botMessage]) ;
-    setIsTyping(false) ;,
-};
-;
+    setIsTyping(false) }
   // Handle message submission;
-      setMessages(prev = > [...prev, fileMessage]) };,
-};
-;
+      setMessages(prev = > [...prev, fileMessage]) }}
   // Handle suggestion click;
   const handleSuggestionClick = useCallback((suggestion: string) => {};
 };
@@ -61,15 +57,12 @@ showHeader:  true,;
   // Rate response;
   const rateResponse = (messageId: string, rating: 'positive' | 'negative') => {};
         ? { ...msg, metadata: { ...msg.metadata, userRating: rating } }
-        : msg) ) ;,
-};
-;
+        : msg) ) }
   // Clear chat;
   const clearChat = () => {};
 };
     setMessages([]) ;
-    setChatHistory([]) };
-;
+    setChatHistory([]) }
   return (<>;
       {/* Chat Toggle Button */}
       <div>Broken JSX</div>
@@ -77,7 +70,7 @@ showHeader:  true,;
         className="fixed bottom - 4 right - 4 z - 50 p - 4 bg-zion - cyan text-white rounded-full shadow-lg hover:shadow-xl transition - all duration - 300 focus:outline - none focus:ring - 2 focus:ring - zion - cyan focus:ring - offset - 2 focus:ring - offset - zinc -900";
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-;
+
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
       </motion.button>;
 
@@ -95,7 +88,7 @@ showHeader:  true,;
                   </div>;
                 </div>;
               </div>) }
-;
+
             {/* Settings Panel */}
             <AnimatePresence>;
               {};
@@ -177,7 +170,7 @@ showHeader:  true,;
                       </div>) }
                   </div>;
                 </motion.div>) ) }
-;
+
               {/* Typing Indicator */}
               {};
                       <div  className="w-2 h-2 bg-zinc - 400 rounded-full animate -bounce" style={{ animationDelay: '0.1s' }}></div>;
@@ -186,7 +179,7 @@ showHeader:  true,;
                     <span className="text-sm text-zinc -400">Zion AI is typing...</span>;
                   </div>;
                 </motion.div>;) }
-;
+
               <div  ref={messagesEndRef} />;
             </div>;
 
@@ -213,7 +206,7 @@ showHeader:  true,;
                 {};
                     {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
                   </button>) }
-;
+
                 {/* Send Button */}
                 <div>Broken JSX</div>
                   <Send className="w-4 h-4" />;
@@ -232,7 +225,6 @@ showHeader:  true,;
                 </div>;
               </div>;
             </div>;
-          </motion.div>;) };
+          </motion.div>;) }
       </AnimatePresence>;
-    </>;) ;,
-};
+    </>;) }

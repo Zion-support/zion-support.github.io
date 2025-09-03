@@ -9,11 +9,10 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
             resetErrorBoundary();
             // // // // // // // // console.error('Error during retry:', retryError);
             Sentry.captureException(retryError);
-;,
 }
         catch(retryError) {};
             Sentry.captureException(retryError)}
-    };
+    }
     return (<div className="flex items-center justify-center min-h-[400px] p-6">";
       <div className="max-w-md w-full space-y-4">";
         <Alert variant="destructive">";
@@ -48,7 +47,7 @@ export function MarketplaceErrorBoundary({ children }) {};
 }
                 componentStack: errorInfo.componentStack || null});
             scope.setLevel('error');
-            Sentry.captureException(error)})};
+            Sentry.captureException(error)})}
     return (<ErrorBoundary FallbackComponent={MarketplaceErrorFallback} onError={handleError}>;
       {children}
     </ErrorBoundary>)}

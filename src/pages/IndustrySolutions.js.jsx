@@ -34,8 +34,7 @@ const IndustrySolutions = () => {}
     const matchesSolutionType ='''';
       selectedSolutionType === 'all' ||;
       solution.solutionType === selectedSolutionType;
-    return matchesSearch && matchesIndustry && matchesSolutionType;,
-});
+    return matchesSearch && matchesIndustry && matchesSolutionType});
   const formatPrice = (price, model) => {}
     switch (model) {}
 ';
@@ -46,9 +45,8 @@ const IndustrySolutions = () => {}
       case 'project-based':``;
         return `$${price.toLocaleString()}`;`;
       default:``;
-        return `$${price.toLocaleString()}`;,
-}
-  };
+        return `$${price.toLocaleString()}`}
+  }
   const getIndustryColor = score => {}
 ';
 '';
@@ -56,8 +54,7 @@ const IndustrySolutions = () => {}
     if (score >= 95) return 'text-green-500';''';
     if (score >= 90) return 'text-blue-500';''';
     if (score >= 85) return 'text-yellow-500';''';
-    return 'text-orange-500';,
-};
+    return 'text-orange-500'}
   const getIndustryIcon = industry => {}
     switch (industry) {}
 ';
@@ -78,8 +75,7 @@ const IndustrySolutions = () => {}
       case 'Energy':"";
         return <Zap className="w-6 h-6" />;";
       default:"";
-        return <Building className="w-6 h-6" />;,
-}
+        return <Building className="w-6 h-6" />}
   };";
   return ("";
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">"";
@@ -155,7 +151,7 @@ const IndustrySolutions = () => {}
                   {formatPrice(solution.price, solution.pricingModel)}";
                 </div>"";
                 <div className="text-sm text-gray-400">';
-                  {solution.pricingModel.replace('-',)}
+                  {solution.pricingModel.replace('-')}
                 </div>;
               </div>";
 "";
@@ -234,16 +230,12 @@ const IndustrySolutions = () => {}
           </div>;
         </div>;
       </div>;
-    </div>)};
+    </div>)}
 export default IndustrySolutions;
-;
 
-export { IndustrySolutions };
-;
-export { IndustrySolutions };
-;
-export { IndustrySolutions };
-;
-export { IndustrySolutions };
-;
-export { IndustrySolutions };
+
+export { IndustrySolutions }
+export { IndustrySolutions }
+export { IndustrySolutions }
+export { IndustrySolutions }
+export { IndustrySolutions }

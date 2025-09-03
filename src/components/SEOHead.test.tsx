@@ -9,7 +9,5 @@ describe(&apos;SEOHead&apos, () => {};
 }
     // comment;
     render(<SEOHead / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

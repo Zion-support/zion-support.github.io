@@ -12,23 +12,19 @@ const AutonomousBusinessOperationsPlatform = () => {}
                                             {}
                                                 icon: Bot,';
                                                 title: 'Intelligent Automation',';
-                                                description: 'AI-powered automation that learns from your business processes and continuously improves efficiency.';,
-},;
+                                                description: 'AI-powered automation that learns from your business processes and continuously improves efficiency.'},;
                                             {}
                                                 icon: Workflow,';
                                                 title: 'Process Orchestration',';
-                                                description: 'Seamlessly orchestrate complex business workflows across multiple systems and departments.';,
-},;
+                                                description: 'Seamlessly orchestrate complex business workflows across multiple systems and departments.'},;
                                             {}
                                                 icon: Zap,';
                                                 title: 'Real-time Optimization',';
-                                                description: 'Dynamic optimization of business operations based on real-time data and market conditions.';,
-},;
+                                                description: 'Dynamic optimization of business operations based on real-time data and market conditions.'},;
                                             {}
                                                 icon: Shield,';
                                                 title: 'Secure Operations',';
-                                                description: 'Enterprise-grade security with role-based access control and audit trails for all operations.';,
-}
+                                                description: 'Enterprise-grade security with role-based access control and audit trails for all operations.'}
                                         ];
                                         const useCases = [];
                                             {}
@@ -37,32 +33,28 @@ const AutonomousBusinessOperationsPlatform = () => {}
 ''';
                                                 title: 'Supply Chain Management',''';
                                                 description: 'Automated inventory management, demand forecasting, and supplier coordination.',;
-                                                icon: Workflow;,
-},;
+                                                icon: Workflow},;
                                             {}
 ';
 '';
 ''';
                                                 title: 'Customer Service',''';
                                                 description: 'Intelligent chatbots, ticket routing, and automated customer support workflows.',;
-                                                icon: Users;,
-},;
+                                                icon: Users},;
                                             {}
 ';
 '';
 ''';
                                                 title: 'Financial Operations',''';
                                                 description: 'Automated invoicing, expense management, and financial reporting.',;
-                                                icon: BarChart3;,
-},;
+                                                icon: BarChart3},;
                                             {}
 ';
 '';
 ''';
                                                 title: 'HR & Recruitment',''';
                                                 description: 'Automated candidate screening, onboarding processes, and performance management.',;
-                                                icon: Users;,
-}
+                                                icon: Users}
                                         ];';
                                         const benefits = ['';
                                             'Reduce operational costs by up to 40%',Improve process efficiency by 60%',Eliminate manual errors and delays',24/7 automated operations',Scalable infrastructure for growth',Real-time monitoring and analytics';
@@ -1045,22 +1037,19 @@ export default function AutonomousBusinessOperationsPlatform() {}";
       comp: "Global Manufacturing Co.","'";
       content: "The autonomous operations platform has transformed our business. We've achieved 60% efficiency gains and 24/7 operations.",";
       rating: 5,"";
-      avatar: "👨‍💼"";,
-},"";
+      avatar: "👨‍💼""},"";
     {name}: "Sarah Operations","";
       role: "VP of Operations","";
       comp: "Tech Solutions Inc.","'";
       content: "The platform's autonomous decision-making capabilities have revolutionized how we manage our operations.",";
       rating: 5,"";
-      avatar: "👩‍💼"";,
-},"";
+      avatar: "👩‍💼""},"";
     {name}: "Michael Operations","";
       role: "Operations Manager","";
       comp: "Innovation Corp","'";
       content: "We've seen unprecedented improvements in efficiency and cost reduction with this platform.",";
       rating: 5,"";
-      avatar: "👨‍💻";,
-}
+      avatar: "👨‍💻"}
   ];
 ";
   return ("";
@@ -1336,18 +1325,13 @@ export default function AutonomousBusinessOperationsPlatform() {}";
         </div>;
       </section>;
     </div>;
-  )};
-;
+  )}
 export default AutonomousBusinessOperationsPlatform;
-;
 
-export { AutonomousBusinessOperationsPlatform, AutonomousBusinessOperationsPlatform, IconComponent, IconComponent };
-;
-export { AutonomousBusinessOperationsPlatform, AutonomousBusinessOperationsPlatform, IconComponent, IconComponent };
-;
-export { AutonomousBusinessOperationsPlatform, AutonomousBusinessOperationsPlatform, IconComponent, IconComponent };
-;
-export { AutonomousBusinessOperationsPlatform, AutonomousBusinessOperationsPlatform, IconComponent, IconComponent };
-;
-export { AutonomousBusinessOperationsPlatform, AutonomousBusinessOperationsPlatform, IconComponent, IconComponent };
+
+export { AutonomousBusinessOperationsPlatform, AutonomousBusinessOperationsPlatform, IconComponent, IconComponent }
+export { AutonomousBusinessOperationsPlatform, AutonomousBusinessOperationsPlatform, IconComponent, IconComponent }
+export { AutonomousBusinessOperationsPlatform, AutonomousBusinessOperationsPlatform, IconComponent, IconComponent }
+export { AutonomousBusinessOperationsPlatform, AutonomousBusinessOperationsPlatform, IconComponent, IconComponent }
+export { AutonomousBusinessOperationsPlatform, AutonomousBusinessOperationsPlatform, IconComponent, IconComponent }
 )))

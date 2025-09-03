@@ -9,7 +9,7 @@ const GitHub: React.FC = () => {};
     { id: 'help', name: 'Help', icon: '❓' },;
     { id: 'showcase', name: 'Showcase', icon: '🎨' },;
   ];
-;
+
   const discussions = [;
     {};
 },;
@@ -24,7 +24,7 @@ const GitHub: React.FC = () => {};
     {};
 },;
   ];
-;
+
   const filteredDiscussions = discussions.filter(discussion => ;
     activeCategory === 'all' || discussion.category === activeCategory;
   );
@@ -40,7 +40,7 @@ const GitHub: React.FC = () => {};
         <meta name="description" content="Join GitHub discussions about AI integration, development, and marketplace features" />;
         <meta name="keywords" content="github, discussions, AI, development, community" />;
       </Head>;
-      ;
+
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">;
         {/* Header */}
         <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30">;
@@ -54,7 +54,7 @@ const GitHub: React.FC = () => {};
                   Join the conversation about AI development and marketplace features;
                 </p>;
               </div>;
-              ;
+
               <div className="text-right">;
                 <div className="text-6xl mb-4">🐙</div>;
                 <button className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-gray-600">;
@@ -118,13 +118,13 @@ const GitHub: React.FC = () => {};
               Start New Discussion;
             </button>;
           </div>;
-          ;
+
           <div className="space-y-4">;
             {};
               <article key={discussion.id} className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 hover:border-blue-400 transition-colors">;
                 <div className="flex items-start gap-4">;
                   <div className="text-2xl">{discussion.authorAvatar}</div>;
-                  ;
+
                   <div className="flex-1">;
                     <div className="flex items-center gap-3 mb-2">;
                       <h3 className="text-lg font-semibold text-white hover:text-blue-400 transition-colors cursor-pointer">;
@@ -134,20 +134,20 @@ const GitHub: React.FC = () => {};
                         {discussion.status}
                       </span>;
                     </div>;
-                    ;
+
                     <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">;
                       <span>By {discussion.author}</span>;
                       <span>•</span>;
                       <span>{discussion.lastActivity}</span>;
                     </div>;
-                    ;
+
                     <div className="flex flex-wrap gap-2 mb-4">;
                       {};
                           #{tag}
                         </span>;
                       ))}
                     </div>;
-                    ;
+
                     <div className="flex items-center gap-6 text-sm text-gray-400">;
                       <span className="flex items-center gap-1">;
                         💬 {discussion.replies} replies;
@@ -180,7 +180,7 @@ const GitHub: React.FC = () => {};
                 </span>;
               </div>;
             </div>;
-            ;
+
             <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 text-center">;
               <div className="text-4xl mb-4">🤖</div>;
               <h3 className="text-lg font-semibold text-white mb-2">AI Models</h3>;
@@ -191,7 +191,7 @@ const GitHub: React.FC = () => {};
                 </span>;
               </div>;
             </div>;
-            ;
+
             <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 text-center">;
               <div className="text-4xl mb-4">🔧</div>;
               <h3 className="text-lg font-semibold text-white mb-2">Troubleshooting</h3>;
@@ -202,7 +202,7 @@ const GitHub: React.FC = () => {};
                 </span>;
               </div>;
             </div>;
-            ;
+
             <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 text-center">;
               <div className="text-4xl mb-4">💡</div>;
               <h3 className="text-lg font-semibold text-white mb-2">Feature Requests</h3>;
@@ -251,7 +251,7 @@ const GitHub: React.FC = () => {};
                 <li>• Respect different skill levels</li>;
               </ul>;
             </div>;
-            ;
+
             <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">;
               <h3 className="text-xl font-semibold text-white mb-4">Stay Organized</h3>;
               <ul className="text-gray-300 space-y-2">;
@@ -279,7 +279,5 @@ const GitHub: React.FC = () => {};
         </footer>;
       </div>;
     </>;
-  );,
-};
-;
+  )}
 export default GitHub;

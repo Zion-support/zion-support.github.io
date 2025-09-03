@@ -56,9 +56,8 @@ export {};
         actioned_count:';
           data?.filter('';
             flag => flag.action_taken && flag.action_taken !== 'none';
-          ).length || 0};
-      setStats(newStats);,
-} catch (error) {}
+          ).length || 0}
+      setStats(newStats)} catch (error) {}
       // console.error("Error fetching fraud flags:", error);
       toast({}
 ';
@@ -66,14 +65,11 @@ export {};
 ''';
         title: 'Error',''';
         description: 'Failed to load fraud detection data',''';
-        variant: 'destructive'});,
-} finally {}
-      setIsLoading(false);,
-}
-  };
+        variant: 'destructive'})} finally {}
+      setIsLoading(false)}
+  }
   useEffect(() => {}
-    fetchFraudFlags();,
-}, []);
+    fetchFraudFlags()}, []);
   // Apply filters;
   useEffect(() => {}
     let result = [...flags];
@@ -85,22 +81,17 @@ export {};
           flag.user_email?.toLowerCase().includes(query) ||;
           flag.content_excerpt.toLowerCase().includes(query) ||;
           flag.reason.toLowerCase().includes(query);
-      );,
-}
+      )}
     // Apply status filter;
     if (statusFilter) {}
-      result = result.filter(flag => flag.status === statusFilter);,
-}
+      result = result.filter(flag => flag.status === statusFilter)}
     // Apply severity filter;
     if (severityFilter) {}
-      result = result.filter(flag => flag.severity === severityFilter);,
-}
+      result = result.filter(flag => flag.severity === severityFilter)}
     // Apply content type filter;
     if (contentTypeFilter) {}
-      result = result.filter(flag => flag.content_type === contentTypeFilter);,
-}
-    setFilteredFlags(result);,
-}, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
+      result = result.filter(flag => flag.content_type === contentTypeFilter)}
+    setFilteredFlags(result)}, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
   const handleAction = async (flagId, action) => {}
     try {}
 ';
@@ -125,8 +116,7 @@ export {};
         title: 'Flag updated',''';
         description: `Action '${action}' was applied successfully.`});
       // Refresh the data;
-      fetchFraudFlags();,
-} catch (error) {}
+      fetchFraudFlags()} catch (error) {}
 ";
 "";
       // console.error("Error updating fraud flag:", error);
@@ -136,9 +126,8 @@ export {};
 ''';
         title: 'Error',''';
         description: 'Failed to update flag',''';
-        variant: 'destructive'});,
-}
-  };
+        variant: 'destructive'})}
+  }
   const resetFilters = () => {}
   return <div>Component</div>;
 };
@@ -148,8 +137,7 @@ export {};
     setSearchQuery('');
     setStatusFilter(null);
     setSeverityFilter(null);
-    setContentTypeFilter(null);,
-};
+    setContentTypeFilter(null)}
   const hasFilters = !!(;
     searchQuery ||;
     statusFilter ||;
@@ -220,14 +208,10 @@ export {};
           </TabsContent>;
         </Tabs>;
       </div>)}
-;
 
-export { FraudDetection };
-;
-export { FraudDetection };
-;
-export { FraudDetection };
-;
-export { FraudDetection };
-;
-export { FraudDetection };
+
+export { FraudDetection }
+export { FraudDetection }
+export { FraudDetection }
+export { FraudDetection }
+export { FraudDetection }

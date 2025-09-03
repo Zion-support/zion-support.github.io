@@ -10,29 +10,25 @@ const AICodeReviewAssistant = () => {}
         {}
             title: "Automated Security Vulnerability Detection","";
             description: "AI-powered scanning identifies security flaws, SQL injections, and common vulnerabilities before they reach production","";
-            icon: <Shield className="w-6 h-6"/>;,
-},;
+            icon: <Shield className="w-6 h-6"/>},;
         {}
 ";
 "";
             title: "Code Quality Scoring & Metrics","";
             description: "Comprehensive code quality assessment with detailed metrics and improvement recommendations","";
-            icon: <BarChart3 className="w-6 h-6"/>;,
-},;
+            icon: <BarChart3 className="w-6 h-6"/>},;
         {}
 ";
 "";
             title: "Best Practice Recommendations","";
             description: "Intelligent suggestions for code improvements, design patterns, and industry best practices","";
-            icon: <CheckCircle className="w-6 h-6"/>;,
-},;
+            icon: <CheckCircle className="w-6 h-6"/>},;
         {}
 ";
 "";
             title: "Git Integration & Automation","";
             description: "Seamless integration with GitHub, GitLab, and Bitbucket with automated PR comments and reviews","";
-            icon: <GitBranch className="w-6 h-6"/>;,
-}
+            icon: <GitBranch className="w-6 h-6"/>}
     ];
     const benefits = [];
         {}
@@ -40,29 +36,25 @@ const AICodeReviewAssistant = () => {}
 "";
             metric: "40-60%","";
             description: "Reduction in code review time","";
-            icon: <Clock className="w-5 h-5"/>;,
-},;
+            icon: <Clock className="w-5 h-5"/>},;
         {}
 ";
 "";
             metric: "25%","";
             description: "Improvement in code quality","";
-            icon: <TrendingUp className="w-5 h-5"/>;,
-},;
+            icon: <TrendingUp className="w-5 h-5"/>},;
         {}
 ";
 "";
             metric: "90%","";
             description: "Security issues caught early","";
-            icon: <Shield className="w-5 h-5"/>;,
-},;
+            icon: <Shield className="w-5 h-5"/>},;
         {}
 ";
 "";
             metric: "24/7","";
             description: "Automated review coverage","";
-            icon: <Zap className="w-5 h-5"/>;,
-}
+            icon: <Zap className="w-5 h-5"/>}
     ];
     const pricingPlans = [];
         {}
@@ -79,8 +71,7 @@ const AICodeReviewAssistant = () => {}
                 "Standard reporting","";
                 "Email support";
             ],;
-            popular: false;,
-},;
+            popular: false},;
         {}
 ";
 "";
@@ -96,8 +87,7 @@ const AICodeReviewAssistant = () => {}
                 "Priority support","";
                 "Team analytics";
             ],;
-            popular: true;,
-},;
+            popular: true},;
         {}
 ";
 "";
@@ -113,8 +103,7 @@ const AICodeReviewAssistant = () => {}
                 "Custom training","";
                 "SLA guarantees";
             ],;
-            popular: false;,
-}
+            popular: false}
     ];";
     const integrations = ["";
         "GitHub", "GitLab", "Bitbucket", "Jira", "Slack", "Microsoft Teams", "Discord", "Email";
@@ -333,16 +322,12 @@ const AICodeReviewAssistant = () => {}
           </div>;
         </section>;
       </div>;
-    </>)};
+    </>)}
 export default AICodeReviewAssistant;
-;
 
-export { AICodeReviewAssistant };
-;
-export { AICodeReviewAssistant };
-;
-export { AICodeReviewAssistant };
-;
-export { AICodeReviewAssistant };
-;
-export { AICodeReviewAssistant };
+
+export { AICodeReviewAssistant }
+export { AICodeReviewAssistant }
+export { AICodeReviewAssistant }
+export { AICodeReviewAssistant }
+export { AICodeReviewAssistant }

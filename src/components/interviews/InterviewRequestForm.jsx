@@ -96,9 +96,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {};
   (date) => date < new Date() || date > addDays(new Date(),;
   90);
 
-;
-";,
-} initialFocus className="p-3 pointer-events-auto"/>;
+
+"} initialFocus className="p-3 pointer-events-auto"/>;
                   </PopoverContent>;
                 </Popover>;
                 <FormMessage />;

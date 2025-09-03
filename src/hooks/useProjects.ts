@@ -5,9 +5,9 @@ export default function Page() {};
 }
 }
       // Consider if a case where userType is none of these should fetch all or none;
-      ;
+
       const { data, error: fetchError } = await query;
-      ;
+
       if(fetchError) throw fetchError;
       ;
       const transformedData = data.map((project: unknown) => ({};
@@ -33,7 +33,7 @@ export default function Page() {};
         `);
         .eq("id", projectId);
         .single();
-      ;
+
       if(error) throw error;
       ;
       const transformedProject = {};
@@ -50,13 +50,13 @@ export default function Page() {};
         .from("projects");
         .update({ status });
         .eq("id", projectId);
-      ;
+
       if(error) throw error;
-      ;
+
       setProjects(prev => ;
         prev.map(project => project.id === projectId ? { ...project, status } : project);
       );
-      ;
+
       toast.success(`Project status updated to ${status}`);
       return true;,
 } catch(err: unknown) {};

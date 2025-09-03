@@ -24,9 +24,7 @@ export {};
       prev.includes(category);
         ? prev.filter(c => c !== category);
         : [...prev, category];
-    );,
-};
-;
+    )}
   const helpCategories = {}
 ';
     'getting-started': {}
@@ -299,16 +297,11 @@ export {};
         </section>;
       </div>;
     </>;
-  );,
-}
-;
+  )}
 
-export { HelpCenter };
-;
-export { HelpCenter };
-;
-export { HelpCenter };
-;
-export { HelpCenter };
-;
-export { HelpCenter };
+
+export { HelpCenter }
+export { HelpCenter }
+export { HelpCenter }
+export { HelpCenter }
+export { HelpCenter }

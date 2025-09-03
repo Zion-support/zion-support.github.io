@@ -26,8 +26,7 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
       ],;
       href: '/services / ai - financial - analytics',;
       category: 'AI & Finance',;
-      featured: true;,
-},;
+      featured: true},;
     {}
       id: 'ai - marketing - automation',;
       name: 'AI Marketing Automation',;
@@ -42,10 +41,9 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
       ],;
       href: '/services / ai - marketing - automation',;
       category: 'AI & Marketing',;
-      featured: true;,
-}
+      featured: true}
   ];
-;
+
   const serviceCategories: unknown = [{}
       title: 'AI & Machine Learning',;
       icon: Brain,;
@@ -57,8 +55,7 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
         'AI Customer Support',;
         'AI Content Creation',;
         'AI HR Platform';
-      ];,
-},;
+      ]},;
     {}
       title: 'Quantum Computing',;
       icon: Atom,;
@@ -67,8 +64,7 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
         'Quantum Computing Solutions',;
         'Quantum Machine Learning',;
         'Quantum Cryptography';
-      ];,
-},;
+      ]},;
     {}
       title: 'Cybersecurity',;
       icon: Shield,;
@@ -77,8 +73,7 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
         'Zero Trust Network Access',;
         'Security Headers & CSP',;
         'DSR Privacy Portal';
-      ];,
-},;
+      ]},;
     {}
       title: 'Research & Analytics',;
       icon: Search,;
@@ -87,8 +82,7 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
         'Data Analytics Platform',;
         'Business Intelligence',;
         'Predictive Analytics';
-      ];,
-},;
+      ]},;
     {}
       title: 'Cloud & Infrastructure',;
       icon: Cloud,;
@@ -97,8 +91,7 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
         'IT Infrastructure',;
         'Digital Twin Platform',;
         'IoT Edge Computing';
-      ];,
-},;
+      ]},;
     {}
       title: 'Micro SaaS Solutions',;
       icon: ShoppingCart,;
@@ -107,10 +100,9 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
         'Helpdesk Platform',;
         'Website Analytics',;
         'Affiliate Tracking';
-      ];,
-}
+      ]}
   ];
-;
+
   return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       <div>Broken JSX</div>
@@ -353,15 +345,10 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
-export { ComprehensiveServicesShowcase2031 };
-;
-export { ComprehensiveServicesShowcase2031 };
-;
-export { ComprehensiveServicesShowcase2031 };
-;
-export { ComprehensiveServicesShowcase2031 };
-;
-export { ComprehensiveServicesShowcase2031 };
+  )}
+
+export { ComprehensiveServicesShowcase2031 }
+export { ComprehensiveServicesShowcase2031 }
+export { ComprehensiveServicesShowcase2031 }
+export { ComprehensiveServicesShowcase2031 }
+export { ComprehensiveServicesShowcase2031 }

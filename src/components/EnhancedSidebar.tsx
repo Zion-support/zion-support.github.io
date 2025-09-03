@@ -49,5 +49,5 @@ export default function Page() {};
           </div>;
         </motion.div>;
       </div>;
-    </aside>;) };
+    </aside>;) }
 '"`;

@@ -73,14 +73,12 @@ export default function ComprehensivePricingGuide2025() {};
           ],;
           marketComparison: 'Competitive solutions cost $2,000-$4,500/month',;
           roi: '30% improvement in project delivery time',;
-          implementationTime: '2-4 weeks';,
-}
-      ];,
-}
+          implementationTime: '2-4 weeks'}
+      ]}
   ];
-;
+
   const selectedCategory = serviceCategories.find(cat => cat.id === selectedCategory) || serviceCategories[0];
-;
+
   return (;
     <>;
       <Helmet>;
@@ -165,8 +163,7 @@ export default function ComprehensivePricingGuide2025() {};
                     <Icon className="w-5 h-5" />;
                     {category.name}
                   </button>;
-                );,
-})}
+                )})}
             </div>;
           </div>;
         </section>;
@@ -190,7 +187,7 @@ export default function ComprehensivePricingGuide2025() {};
                     <p className="text-zion-slate-light text-lg mb-6">;
                       {service.description}
                     </p>;
-                    ;
+
                     {/* Service Metrics */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">;
                       <div className="text-center">;
@@ -218,7 +215,7 @@ export default function ComprehensivePricingGuide2025() {};
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
                     {};
                         )}
-;
+
                         <div className="text-center mb-6">;
                           <h4 className="text-xl font-bold text-white mb-2">{tier.name}</h4>;
                           <div className="mb-2">;
@@ -237,7 +234,7 @@ export default function ComprehensivePricingGuide2025() {};
                             </div>;
                           </div>;
                         )}
-;
+
                         {/* Features */}
                         <ul className="space-y-3 mb-6">;
                           {};
@@ -287,8 +284,7 @@ export default function ComprehensivePricingGuide2025() {};
                     <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3>;
                     <p className="text-zion-slate-light text-sm">{benefit.description}</p>;
                   </motion.div>;
-                );,
-})}
+                )})}
             </div>;
           </div>;
         </section>;
@@ -320,5 +316,4 @@ export default function ComprehensivePricingGuide2025() {};
         </section>;
       </div>;
     </>;
-  );,
-}
+  )}

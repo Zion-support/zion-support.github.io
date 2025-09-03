@@ -43,12 +43,10 @@ export {};
   // Check if user has admin role'''';
   const isAdmin = user?.role === 'admin';
   if (!isAdmin) {}
-    return <Navigate to="/unauthorized" />;,
-}
+    return <Navigate to="/unauthorized" />}
   const handleInputChange = e => {}
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));,
-};
+    setFormData(prev => ({ ...prev, [name]: value }))}
   const handleSubmit = async e => {}
     e.preventDefault();
     setIsSubmitting(true);
@@ -56,7 +54,7 @@ export {};
       // Generate subdomain if not provided;
       const subdomain =';
         formData.subdomain ||';
-        formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g,);
+        formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g);
       // Create landing page copy;
       const landingPageCopy = {}
 ';
@@ -67,8 +65,7 @@ export {};
 '`;
 '`'`;
 '`'`'`;
-          formData.industry || 'comp'``'`'`;,
-}`,''';
+          formData.industry || 'comp'``'`'`}`,''';
         cta: 'Get Started'};'';
       // Submit to Supabase''';
       const { data, error } = await supabase'''';
@@ -107,17 +104,14 @@ export {};
         comp_size: '',''';
         industry: '',''';
         custom_domain: '',;
-        is_co_branded: true});,
-} catch (error) {}
+        is_co_branded: true})} catch (error) {}
 ";
 "";
       // console.error("Error creating tenant:", error);';
       toast.error('Failed to create tenant', {}
-        description: error.message});,
-} finally {}
-      setIsSubmitting(false);,
-}
-  };
+        description: error.message})} finally {}
+      setIsSubmitting(false)}
+  }
   return();
     <>";
       <div>Broken JSX</div>
@@ -310,16 +304,12 @@ export {};
           </Card>;
         </div>;
       </main>;
-      ;
-    </>)}
-;
 
-export { TenantOnboarding };
-;
-export { TenantOnboarding };
-;
-export { TenantOnboarding };
-;
-export { TenantOnboarding };
-;
-export { TenantOnboarding };
+    </>)}
+
+
+export { TenantOnboarding }
+export { TenantOnboarding }
+export { TenantOnboarding }
+export { TenantOnboarding }
+export { TenantOnboarding }

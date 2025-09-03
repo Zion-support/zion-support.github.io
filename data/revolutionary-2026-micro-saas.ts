@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface Revolutionary2026MicroSaasService {;
+export interface Revolutionary2026MicroSaasService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface Revolutionary2026MicroSaasService {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -37,7 +37,7 @@ export interface Revolutionary2026MicroSaasService {;
   customers: number;
   rating: number;
 export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasService[] = [;
-  {;
+  {
     id: "ai-business-intelligence-pro",;
     name: "AI Business Intelligence Pro",;
     tagline: "Transform data into actionable insights with AI",;
@@ -75,20 +75,18 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
     marketSize: "$25B market",;
     growthRate: "180% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full AI-powered BI platform with advanced analytics, real-time insights, and comprehensive reporting tools.",;
     launchDate: "2026-01-15",;
     customers: 2500,;
     rating: 4.7,;
-    reviews: 1250;,;,
-},;
-  {;
+    reviews: 1250},;
+  {
     id: "ai-customer-service-automation",;
     name: "AI Customer Service Automation",;
     tagline: "Automate customer support with intelligent AI agents",;
@@ -126,20 +124,18 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
     marketSize: "$18B market",;
     growthRate: "220% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full AI customer service platform with intelligent automation, real-time responses, and comprehensive analytics.",;
     launchDate: "2026-01-20",;
     customers: 3200,;
     rating: 4.6,;
-    reviews: 1600;,;,
-},;
-  {;
+    reviews: 1600},;
+  {
     id: "ai-marketing-automation-suite",;
     name: "AI Marketing Automation Suite",;
     tagline: "Intelligent marketing automation powered by AI",;
@@ -177,20 +173,18 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
     marketSize: "$22B market",;
     growthRate: "200% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full AI marketing automation suite with intelligent optimization, personalization, and comprehensive analytics.",;
     launchDate: "2026-01-25",;
     customers: 1800,;
     rating: 4.7,;
-    reviews: 900;,;,
-},;
-  {;
+    reviews: 900},;
+  {
     id: "ai-sales-intelligence-platform",;
     name: "AI Sales Intelligence Platform",;
     tagline: "Boost sales performance with AI-powered insights",;
@@ -228,20 +222,18 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
     marketSize: "$20B market",;
     growthRate: "190% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full AI sales intelligence platform with advanced insights, lead scoring, and performance optimization.",;
     launchDate: "2026-01-30",;
     customers: 2200,;
     rating: 4.6,;
-    reviews: 1100;,;,
-},;
-  {;
+    reviews: 1100},;
+  {
     id: "ai-content-generation-elite",;
     name: "AI Content Generation Elite",;
     tagline: "Professional AI-powered content creation at scale",;
@@ -279,20 +271,18 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
     marketSize: "$15B market",;
     growthRate: "180% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full AI content generation platform with advanced SEO optimization, multi-language support, and comprehensive analytics.",;
     launchDate: "2026-02-01",;
     customers: 4500,;
     rating: 4.7,;
-    reviews: 2250;,;,
-},;
-  {;
+    reviews: 2250},;
+  {
     id: "ai-seo-optimization-pro",;
     name: "AI SEO Optimization Pro",;
     tagline: "AI-powered SEO optimization for maximum visibility",;
@@ -330,20 +320,18 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
     marketSize: "$12B market",;
     growthRate: "160% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full AI SEO optimization platform with advanced analysis, optimization tools, and comprehensive tracking.",;
     launchDate: "2026-02-05",;
     customers: 1800,;
     rating: 4.6,;
-    reviews: 900;,;,
-},;
-  {;
+    reviews: 900},;
+  {
     id: "ai-social-media-automation",;
     name: "AI Social Media Automation",;
     tagline: "Intelligent social media management with AI",;
@@ -381,20 +369,18 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
     marketSize: "$14B market",;
     growthRate: "170% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full AI social media automation platform with intelligent optimization, scheduling, and comprehensive analytics.",;
     launchDate: "2026-02-10",;
     customers: 2800,;
     rating: 4.5,;
-    reviews: 1400;,;,
-},;
-  {;
+    reviews: 1400},;
+  {
     id: "ai-email-marketing-pro",;
     name: "AI Email Marketing Pro",;
     tagline: "AI-powered email marketing for maximum engagement",;
@@ -432,20 +418,18 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
     marketSize: "$16B market",;
     growthRate: "180% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full AI email marketing platform with intelligent optimization, personalization, and comprehensive analytics.",;
     launchDate: "2026-02-15",;
     customers: 3200,;
     rating: 4.6,;
-    reviews: 1600;,;,
-},;
-  {;
+    reviews: 1600},;
+  {
     id: "ai-analytics-dashboard",;
     name: "AI Analytics Dashboard",;
     tagline: "Intelligent analytics dashboard powered by AI",;
@@ -483,12 +467,11 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
     marketSize: "$18B market",;
     growthRate: "160% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full AI analytics dashboard with intelligent insights, real-time monitoring, and comprehensive analytics.",;
     launchDate: "2026-02-20",;

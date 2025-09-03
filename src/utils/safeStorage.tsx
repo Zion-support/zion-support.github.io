@@ -34,7 +34,6 @@ function isLocalStorageAvailable() {};
   get length() {};
 } catch(error) {};
       return 0;    }
-  }};
-;
+  }}
 export default safeStorage;
 }

@@ -1,17 +1,15 @@
 #!/usr/bin/env node;
-;
+
 const fs = require("fs");
 const path = require("path");
-class $1 {;
-  constructor() {;
-  this.projectRoot = process.cwd();,;,
-}
-;
-  log(message) {;
-  console.log(`[${new Date().toISOString()}] ${message}`);,;,
-}
-;
-  fixNotFoundPage() {;
+class $1 {
+  constructor() {
+  this.projectRoot = process.cwd();}
+
+  log(message) {
+  console.log(`[${new Date().toISOString()}] ${message}`);}
+
+  fixNotFoundPage() {
   const filePath = path.join(this.projectRoot, "pages/NotFound.tsx");
     if (!fs.existsSync(filePath)) return false;
     let content = fs.readFileSync(filePath, "utf8");
@@ -22,10 +20,9 @@ class $1 {;
     );
     fs.writeFileSync(filePath, content, "utf8");
     this.log("✅ Fixed NotFound.tsx");
-    return true;,;,
-}
-;
-  fixContactPage() {;
+    return true;}
+
+  fixContactPage() {
   const filePath = path.join(this.projectRoot, "pages/contact.tsx");
     if (!fs.existsSync(filePath)) return false;
     let content = fs.readFileSync(filePath, "utf8");
@@ -36,10 +33,9 @@ class $1 {;
     );
     fs.writeFileSync(filePath, content, "utf8");
     this.log("✅ Fixed contact.tsx");
-    return true;,;,
-}
-;
-  fixPricingGuidePage() {;
+    return true;}
+
+  fixPricingGuidePage() {
   const filePath = path.join(this.projectRoot, "pages/pricing-guide.tsx");
     if (!fs.existsSync(filePath)) return false;
     let content = fs.readFileSync(filePath, "utf8");
@@ -50,10 +46,9 @@ class $1 {;
     );
     fs.writeFileSync(filePath, content, "utf8");
     this.log("✅ Fixed pricing-guide.tsx");
-    return true;,;,
-}
-;
-  fixSitemapPage() {;
+    return true;}
+
+  fixSitemapPage() {
   const filePath = path.join(this.projectRoot, "pages/sitemap.tsx");
     if (!fs.existsSync(filePath)) return false;
     let content = fs.readFileSync(filePath, "utf8");
@@ -64,10 +59,9 @@ class $1 {;
     );
     fs.writeFileSync(filePath, content, "utf8");
     this.log("✅ Fixed sitemap.tsx");
-    return true;,;,
-}
-;
-  async fixAllSpecificIssues() {;
+    return true;}
+
+  async fixAllSpecificIssues() {
   this.log("🔧 Fixing specific syntax issues...");
     const fixes = [;
   () => this.fixNotFoundPage(),;
@@ -75,33 +69,28 @@ class $1 {;
       () => this.fixPricingGuidePage(),;
       () => this.fixSitemapPage(),;
     ];
-;
+
     let fixedCount = 0;
-    for (const fix of fixes) {;
-  if (fix()) {;
-  fixedCount++;,;,
-}
+    for (const fix of fixes) {
+  if (fix()) {
+  fixedCount++;}
     }
-;
+
     this.log(`🎉 Fixed ${fixedCount} specific syntax issues!`);
-    return fixedCount > 0;,;,
+    return fixedCount > 0;}
 }
-}
-;
+
 // Run the fixer;
 const fixer = new SpecificSyntaxFixer();
 fixer;
   .fixAllSpecificIssues();
-  .then(success => {;
-  if (success) {;
+  .then(success => {
+  if (success) {
   console.log("✅ Specific syntax issues fixed successfully!");
-      process.exit(0);,;,
-} else {;
+      process.exit(0);} else {
   console.log("❌ No specific issues found to fix.");
-      process.exit(0);,;,
-}
+      process.exit(0);}
   });
-  .catch(error => {;
+  .catch(error => {
   console.error("❌ Fatal error:', error);
-    process.exit(1);,;,
-})}}
+    process.exit(1);})}}

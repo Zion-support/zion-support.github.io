@@ -43,9 +43,9 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
       url: '/services/ai-iot-edge-computing-platform',''';
       icon: '🌐',''';
       category: 'IoT & Edge Computing',''';
-      benefits['Reduce latency by 90%',Lower bandwidth costs by 70%',Real-time decision making']};
+      benefits['Reduce latency by 90%',Lower bandwidth costs by 70%',Real-time decision making']}
   ];
-;
+
   return();
     <>;
       <div>Broken JSX</div>
@@ -168,29 +168,25 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
 "";
                   title: "Proven Results","";
                   description: "Measurable outcomes with quantifiable business impact across all our solutions.","";
-                  icon: "📈";,
-},;
+                  icon: "📈"},;
                 {}
 ";
 "";
                   title: "Industry Expertise","";
                   description: "Deep understanding of various industries with specialized solutions for specific sectors.","";
-                  icon: "🏢";,
-},;
+                  icon: "🏢"},;
                 {}
 ";
 "";
                   title: "Scalable Architecture","";
                   description: "Solutions that grow with your business, from startup to enterprise scale.","";
-                  icon: "⚡";,
-},;
+                  icon: "⚡"},;
                 {}
 ";
 "";
                   title: "Compliance Ready","";
                   description: "Built-in security and compliance features for regulated industries.","";
-                  icon: "🔒";,
-},;
+                  icon: "🔒"},;
                 {}
 ";
 "";
@@ -255,16 +251,11 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
         </section>;
       </div>;
     </>;
-  )};
-;
+  )}
 export default AIServicesShowcase;
-;
-export { AIServicesShowcase };
-;
-export { AIServicesShowcase };
-;
-export { AIServicesShowcase };
-;
-export { AIServicesShowcase };
-;
-export { AIServicesShowcase };
+
+export { AIServicesShowcase }
+export { AIServicesShowcase }
+export { AIServicesShowcase }
+export { AIServicesShowcase }
+export { AIServicesShowcase }

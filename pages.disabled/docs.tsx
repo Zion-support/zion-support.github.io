@@ -2,10 +2,10 @@ import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { FileText, Code, BookOpen, Search, ArrowRight, Download, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
-;
-const DocsPage: NextPage = () => {;
+
+const DocsPage: NextPage = () => {
   const docCategories = [;
-    {;
+    {
       title: 'Getting Started',;
       description: 'Quick start guides and setup instructions',;
       icon: <BookOpen className="w-6 h-6" />,;
@@ -13,9 +13,8 @@ const DocsPage: NextPage = () => {;
         { title: 'Installation Guide', description: 'Step-by-step installation instructions', type: 'Guide' },;
         { title: 'Quick Start Tutorial', description: 'Get up and running in 5 minutes', type: 'Tutorial' },;
         { title: 'Configuration', description: 'Basic configuration options', type: 'Reference' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'API Reference',;
       description: 'Complete API documentation and examples',;
       icon: <Code className="w-6 h-6" />,;
@@ -23,9 +22,8 @@ const DocsPage: NextPage = () => {;
         { title: 'REST API', description: 'Complete REST API documentation', type: 'API' },;
         { title: 'GraphQL API', description: 'GraphQL schema and queries', type: 'API' },;
         { title: 'Webhooks', description: 'Webhook configuration and events', type: 'Reference' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'SDKs & Libraries',;
       description: 'Client libraries and SDKs for various languages',;
       icon: <FileText className="w-6 h-6" />,;
@@ -33,9 +31,8 @@ const DocsPage: NextPage = () => {;
         { title: 'JavaScript SDK', description: 'Node.js and browser SDK', type: 'SDK' },;
         { title: 'Python SDK', description: 'Python client library', type: 'SDK' },;
         { title: 'React Components', description: 'Ready-to-use React components', type: 'Library' }
-      ];,
-},;
-    {;
+      ]},;
+    {
       title: 'Guides & Tutorials',;
       description: 'In-depth guides and best practices',;
       icon: <BookOpen className="w-6 h-6" />,;
@@ -43,17 +40,16 @@ const DocsPage: NextPage = () => {;
         { title: 'Authentication', description: 'User authentication and authorization', type: 'Guide' },;
         { title: 'Data Management', description: 'Working with data and databases', type: 'Tutorial' },;
         { title: 'Deployment', description: 'Deployment strategies and best practices', type: 'Guide' }
-      ];,
-}
+      ]}
   ];
-;
+
   const popularDocs = [;
     { title: 'API Authentication', views: '12.5k', updated: '2 days ago' },;
     { title: 'Getting Started Guide', views: '8.9k', updated: '1 week ago' },;
     { title: 'Error Handling', views: '6.7k', updated: '3 days ago' },;
     { title: 'Rate Limiting', views: '5.2k', updated: '1 week ago' }
   ];
-;
+
   return (;
     <MainLayout>;
       {/* Hero Section */}
@@ -65,7 +61,7 @@ const DocsPage: NextPage = () => {;
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">;
             Comprehensive guides, API references, and resources to help you build with our platform;
           </p>;
-          ;
+
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto">;
             <div className="relative">;
@@ -89,7 +85,7 @@ const DocsPage: NextPage = () => {;
               Most viewed and recently updated documentation;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {popularDocs.map((doc, index) => (;
               <div key={index} className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow">;
@@ -119,7 +115,7 @@ const DocsPage: NextPage = () => {;
               Find the documentation you need organized by topic;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 gap-8">;
             {docCategories.map((category, index) => (;
               <div key={index} className="bg-white p-8 rounded-lg shadow-lg">;
@@ -132,7 +128,7 @@ const DocsPage: NextPage = () => {;
                     <p className="text-gray-600">{category.description}</p>;
                   </div>;
                 </div>;
-                ;
+
                 <div className="space-y-4">;
                   {category.docs.map((doc, docIndex) => (;
                     <div key={docIndex} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">;
@@ -168,7 +164,7 @@ const DocsPage: NextPage = () => {;
               Tools and resources to help you succeed;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-3 gap-8">;
             <div className="text-center p-8 bg-gray-50 rounded-lg">;
               <Download className="w-12 h-12 text-zion-cyan mx-auto mb-4" />;
@@ -178,7 +174,7 @@ const DocsPage: NextPage = () => {;
                 Browse Downloads;
               </Link>;
             </div>;
-            ;
+
             <div className="text-center p-8 bg-gray-50 rounded-lg">;
               <Code className="w-12 h-12 text-zion-cyan mx-auto mb-4" />;
               <h3 className="text-xl font-semibold mb-3">Code Examples</h3>;
@@ -187,7 +183,7 @@ const DocsPage: NextPage = () => {;
                 View Examples;
               </Link>;
             </div>;
-            ;
+
             <div className="text-center p-8 bg-gray-50 rounded-lg">;
               <FileText className="w-12 h-12 text-zion-cyan mx-auto mb-4" />;
               <h3 className="text-xl font-semibold mb-3">API Changelog</h3>;
@@ -219,7 +215,5 @@ const DocsPage: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
-};
-;
+  )}
 export default DocsPage;

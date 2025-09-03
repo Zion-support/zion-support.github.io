@@ -27,17 +27,12 @@ const QuantumNeuralNetworkPlatform = () => {}
         </div>;
       </section>;
     </div>;
-  );,
-};
+  )}
 export default QuantumNeuralNetworkPlatform;
-;
 
-export { QuantumNeuralNetworkPlatform };
-;
-export { QuantumNeuralNetworkPlatform };
-;
-export { QuantumNeuralNetworkPlatform };
-;
-export { QuantumNeuralNetworkPlatform };
-;
-export { QuantumNeuralNetworkPlatform };
+
+export { QuantumNeuralNetworkPlatform }
+export { QuantumNeuralNetworkPlatform }
+export { QuantumNeuralNetworkPlatform }
+export { QuantumNeuralNetworkPlatform }
+export { QuantumNeuralNetworkPlatform }

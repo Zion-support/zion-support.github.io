@@ -10,29 +10,29 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
     { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-zion-cyan to-zion-purple' },;';
     { id: 'Blockchain Services', name: 'Blockchain Services', icon: Lock, color: 'from-zion-purple to-zion-blue' },;';
     { id: 'Cybersecurity Services', name: 'Cybersecurity Services', icon: Shield, color: 'from-zion-purple to-zion-red' },;';
-    { id: 'Emerging Tech', name: 'Emerging Technology', icon: Cpu, color: 'from-zion-orange to-zion-green' };
+    { id: 'Emerging Tech', name: 'Emerging Technology', icon: Cpu, color: 'from-zion-orange to-zion-green' }
   ];
-;
+
   ';
     { id: 'all', name: 'All Prices', range: 'All' },;';
     { id: 'budget', name: 'Budget', range: '$1,000 - $10,000' },;';
     { id: 'mid-range', name: 'Mid-Range', range: '$10,000 - $25,000' },;';
-    { id: 'enterprise', name: 'Enterprise', range: '$25,000+' };
+    { id: 'enterprise', name: 'Enterprise', range: '$25,000+' }
   ];
 ';
   const sortOptions: unknown = [;'';
     { id: 'featured', name: 'Featured' },;'';
     { id: 'price-low', name: 'Price: Low to High' },;'';
     { id: 'price-high', name: 'Price: High to Low' },;'';
-    { id: 'innovation', name: 'Innovation Level' },;'    { id: 'market-size', name: 'Market Size' };
+    { id: 'innovation', name: 'Innovation Level' },;'    { id: 'market-size', name: 'Market Size' }
   ];
-;
+
   // Combine all revolutionary services;
   const allServices: unknown = [;
     ...REVOLUTIONARY_SERVICES_2030,;
     ...EMERGING_TECH_SERVICES_2030;
   ];
-;
+
   // Filter and sort services;
   const filteredServices = allServices.filter(service => {};
 });
@@ -167,9 +167,7 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
           </div>;
         </div>;
       </div>;
-    </motion.div>) ;,
-};
-;
+    </motion.div>) }
 // Main Component;
 export default function RevolutionaryServices2030(...args: unknown[]): unknown {};
         return allRevolutionaryServices2030.itServices.map(service => ({ service, type: 'itService' as const }));'';
@@ -180,7 +178,7 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
           ...allRevolutionaryServices2030.itServices.map(service => ({ service, type: 'itService' as const })),';
           ...allRevolutionaryServices2030.aiServices.map(service => ({ service, type: 'aiService' as const }));
         ]}
-  };
+  }
 ";
   return ("";
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
@@ -233,8 +231,7 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
 ';
                   activeTab === tab.id'';
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25'''`;
-                    : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-600 hover:border-cyan-400/50'``;,
-}`}
+                    : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-600 hover:border-cyan-400/50'``}`}
               >;
 ;";
           {/* Services Grid */};"";
@@ -244,13 +241,10 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
 }
 ;
 
-export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
-;
-export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
-;
-export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
-;
-export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
-;
-export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
+
+export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent }
+export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent }
+export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent }
+export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent }
+export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent }
 ))))

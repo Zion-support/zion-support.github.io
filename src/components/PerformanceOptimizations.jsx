@@ -25,8 +25,7 @@ import { LoadingSpinner } from './ui / loading -spinner';
         </div>;
       ))}
     </div>;
-  );,
-});
+  )});
 MemoizedDataGrid.displayName = 'MemoizedDataGrid';
 // Virtual scrolling component for large lists;
 const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {};
@@ -51,8 +50,7 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {};
         ))}
       </div>;
     </div>;
-  );,
-};
+  )}
 // Main performance optimizations component;
 export function PerformanceOptimizations() {};
   return null;
@@ -70,8 +68,7 @@ export function PerformanceOptimizations() {};
         title: `Service ${prev.length + 1}`,`;
         description: `Description ${prev.length + 1}`,;
         value: Math.floor(Math.random() * 1000)},;
-    ]);,
-}, []);
+    ])}, []);
   return (";
     <div className="space-y-8 p-6">";
       <div className="text-center">";
@@ -82,6 +79,5 @@ export function PerformanceOptimizations() {};
           Advanced performance features for better user experience;
         </p>;
       </div>;
-  );,
-}
+  )}
 }

@@ -60,8 +60,7 @@ export {};
         service.price > 2000 &&''';
         service.price <div>Broken JSX</div>
       (selectedPriceRange === 'enterprise' && service.price > 8000);
-    return matchesSearch && matchesCategory && matchesPrice;,
-});
+    return matchesSearch && matchesCategory && matchesPrice});
   const getCategoryIcon = category => {}
     switch (category.toLowerCase()) {}
 ';
@@ -93,9 +92,8 @@ export {};
       case 'quantum computing':"";
         return <Zap className="w-5 h-5" />;";
       default:"";
-        return <Code className="w-5 h-5" />;,
-}
-  };
+        return <Code className="w-5 h-5" />}
+  }
   const getPriceRange = price => {}
 ';
     if (price <div>Broken JSX</div>
@@ -455,8 +453,7 @@ export {};
               <div>Broken JSX</div>
                 onClick={};
                     `mailto:${CONTACT_INFO.email}?subject=Enterprise%20Inquiry`,_self';
-                  );,
-}
+                  )}
               >;
                 Request Enterprise Consultation;
               </Button>;
@@ -465,14 +462,10 @@ export {};
         </div>;
       </section>;
     </div>)}
-;
 
-export { EnhancedServicesPage };
-;
-export { EnhancedServicesPage };
-;
-export { EnhancedServicesPage };
-;
-export { EnhancedServicesPage };
-;
-export { EnhancedServicesPage };
+
+export { EnhancedServicesPage }
+export { EnhancedServicesPage }
+export { EnhancedServicesPage }
+export { EnhancedServicesPage }
+export { EnhancedServicesPage }

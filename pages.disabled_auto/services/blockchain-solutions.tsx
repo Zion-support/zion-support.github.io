@@ -2,8 +2,8 @@ import type { NextPage } from 'next';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 import { CheckCircle, Shield, Zap, BarChart, Users, Award, Globe } from 'lucide-react';
-;
-const BlockchainSolutions: NextPage = () => {;
+
+const BlockchainSolutions: NextPage = () => {
   return (;
     <Layout;
       title="Blockchain Solutions - Zion Tech Group";
@@ -19,7 +19,7 @@ const BlockchainSolutions: NextPage = () => {;
             Innovative blockchain technology for secure, transparent business processes. ;
             From smart contracts to DeFi applications, we build the future of decentralized systems.;
           </p>;
-          ;
+
           <div className="flex flex-col sm:flex-row justify-center gap-4">;
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
               Start Your Blockchain Project;
@@ -41,7 +41,7 @@ const BlockchainSolutions: NextPage = () => {;
               and efficiency for your business processes and applications.;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">;
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">;
@@ -199,7 +199,7 @@ const BlockchainSolutions: NextPage = () => {;
               We work with leading blockchain platforms to provide the best solutions for your specific needs.;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             <div className="bg-white rounded-lg p-6 shadow-lg text-center">;
               <h3 className="text-lg font-semibold mb-4">Ethereum</h3>;
@@ -262,7 +262,5 @@ const BlockchainSolutions: NextPage = () => {;
         </div>;
       </section>;
     </Layout>;
-  );,
-};
-;
+  )}
 export default BlockchainSolutions;

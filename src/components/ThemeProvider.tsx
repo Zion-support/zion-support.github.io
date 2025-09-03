@@ -6,7 +6,7 @@ type Theme = 'light' | 'dark' | 'system';
 ;
 interface ThemeContextType {};
   isDark: boolean}
-;
+
 export ;
   ;
   if(context = == null) {};
@@ -19,7 +19,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {};
         return saved}
     }
     return 'system'});
-;
+
   const [isDark, setIsDark] = useState(false);
 ;
   useEffect(() => {};

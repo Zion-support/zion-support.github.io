@@ -1,8 +1,7 @@
 export interface MicroSaasService {};
 };
   images: string[];
-  createdAt: string;,
-}
+  createdAt: string}
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
   {};
 },;
@@ -117,8 +116,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;
   {};
 },;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
-    createdAt: "2024-01-15T10:00:00.000Z";,
-}
+    createdAt: "2024-01-15T10:00:00.000Z"}
 ];
 export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined => {};
 };

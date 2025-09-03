@@ -34,8 +34,7 @@ interface ServicesGridProps {};
         </div>;
       ))}
     </div>;
-  );,
-}
-;
+  )}
+
 export default ServicesGrid;
 }))

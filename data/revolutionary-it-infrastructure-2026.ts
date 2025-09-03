@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface RevolutionaryITInfrastructure2026 {;
+export interface RevolutionaryITInfrastructure2026 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface RevolutionaryITInfrastructure2026 {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -36,18 +36,17 @@ export interface RevolutionaryITInfrastructure2026 {;
   launchDate: string;
   customers: number;
   rating: number;
-const contact = {;
+const contact = {
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709";
-  ;
-  ;
-  ;
-  ;
-  website: "https://ziontechgroup.com";,;,
-}
+
+
+
+
+  website: "https://ziontechgroup.com"}
 export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure2026[] = [;
-  {;
+  {
     id: "quantum-resistant-cybersecurity-suite",;
     name: "Quantum-Resistant Cybersecurity Suite",;
     tagline: "Future-proof security for the quantum computing era",;
@@ -91,9 +90,8 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     launchDate: "2025-08-15",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 67;,;,
-},;
-  {;
+    reviews: 67},;
+  {
     id: "edge-computing-orchestration-platform",;
     name: "Edge Computing Orchestration Platform",;
     tagline: "Intelligent edge computing management and optimization",;
@@ -137,9 +135,8 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     launchDate: "2025-05-20",;
     customers: 34,;
     rating: 4.8,;
-    reviews: 89;,;,
-},;
-  {;
+    reviews: 89},;
+  {
     id: "ai-powered-devops-automation",;
     name: "AI-Powered DevOps Automation",;
     tagline: "Intelligent automation for modern software delivery",;
@@ -183,9 +180,8 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     launchDate: "2025-03-10",;
     customers: 67,;
     rating: 4.7,;
-    reviews: 156;,;,
-},;
-  {;
+    reviews: 156},;
+  {
     id: "blockchain-infrastructure-platform",;
     name: "Blockchain Infrastructure Platform",;
     tagline: "Enterprise blockchain infrastructure and management",;
@@ -229,9 +225,8 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     launchDate: "2025-06-25",;
     customers: 45,;
     rating: 4.6,;
-    reviews: 123;,;,
-},;
-  {;
+    reviews: 123},;
+  {
     id: "quantum-cloud-hybrid-platform",;
     name: "Quantum Cloud Hybrid Platform",;
     tagline: "Seamless integration of quantum and classical computing",;

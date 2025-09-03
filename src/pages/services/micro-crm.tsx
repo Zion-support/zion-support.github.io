@@ -23,7 +23,7 @@ const MicroCRM = () => {};
     {};
 }
   ];
-;
+
   const pricingPlans = [;
     {};
 },;
@@ -32,7 +32,7 @@ const MicroCRM = () => {};
     {};
 }
   ];
-;
+
   const testimonials = [;
     {};
 },;
@@ -41,7 +41,7 @@ const MicroCRM = () => {};
     {};
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">;
       {/* Header */}
@@ -54,7 +54,7 @@ const MicroCRM = () => {};
               <ArrowLeft className="w-4 h-4 mr-2" />;
               Back to Services;
             </Link>;
-            ;
+
             <div className="text-center mb-12">;
               <div className="flex items-center justify-center mb-6">;
                 <Users className="w-16 h-16 text-purple-400 mr-4" />;
@@ -65,7 +65,7 @@ const MicroCRM = () => {};
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;
                 Lightweight CRM solution for small businesses with essential customer management features, lead tracking, and sales pipeline management.;
               </p>;
-              ;
+
               {/* Contact Info */}
               <div className="flex flex-wrap justify-center gap-6 mb-8">;
                 <a href={`tel:${contactInfo.phone}`} className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors">;
@@ -135,7 +135,7 @@ const MicroCRM = () => {};
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {};
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <div className="flex items-baseline justify-center mb-4">;
@@ -219,7 +219,5 @@ const MicroCRM = () => {};
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default MicroCRM;

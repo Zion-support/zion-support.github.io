@@ -5,7 +5,7 @@ export interface PricingTier {};
   popular?: boolean}
 export interface ServicePricing {};
     address: string}}
-;
+
 // Zion Tech Group Contact Information;
 
 export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Services;
@@ -15,7 +15,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
 },;
       {};
     enterpriseFeatures["Custom AI models", "On-premise deployment", "Dedicated support", "White-label solutions"]},;
-;
+
   // AI-Powered Metaverse Development Platform;
   {};
 },;
@@ -23,7 +23,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
 },;
       {};
     enterpriseFeatures["Custom AI models", "White-label solutions", "Enterprise support", "Custom integrations"]},;
-;
+
   // Zero-Trust Network Access Platform;
   {};
 },;
@@ -31,7 +31,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
 },;
       {};
     enterpriseFeatures["Custom integrations", "White-label solutions", "Enterprise support", "Custom compliance"]},;
-;
+
   // AI-Powered Medical Imaging Analysis;
   {};
 },;
@@ -39,7 +39,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
 },;
       {};
     enterpriseFeatures["Custom AI models", "White-label solutions", "Enterprise support", "Custom integrations"]},;
-;
+
   // AI-Powered Risk Assessment Platform;
   {};
 },;
@@ -48,7 +48,7 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
       {};
     enterpriseFeatures["Custom risk models", "White-label solutions", "Enterprise support", "Custom integrations"]}
 ];
-;
+
 // Pricing Analysis and Insights;
 export const PRICING_ANALYSIS_2030 = {};
 },;

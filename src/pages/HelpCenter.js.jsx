@@ -13,7 +13,7 @@ export {};
     const toggleCategory = (category) => {}
         setExpandedCategories(prev => prev.includes(category);
             ? prev.filter(c => c !== category);
-            [...prev, category])};
+            [...prev, category])}
     const helpCategories = {}
 ';
   'getting-started': {}
@@ -26,8 +26,7 @@ export {};
                 { title: 'Complete profile setup guide', href: '/help/profile-setup' },';
                 { title: 'Understanding the marketplace', href: '/help/marketplace-guide' },';
                 { title: 'First steps for new users', href: '/help/first-steps' }
-            ];,
-},;';
+            ]},;';
         'marketplace': {}
 ';
             title: 'Marketplace',;
@@ -37,8 +36,7 @@ export {};
                 { title: 'Managing your listings', href: '/help/manage-listings' },';
                 { title: 'Understanding pricing and fees', href: '/help/pricing-fees' },';
                 { title: 'Marketplace policies and guidelines', href: '/help/marketplace-policies' }
-            ];,
-},;';
+            ]},;';
         'talent': {}
 ';
             title: 'Talent & Hiring',;
@@ -48,8 +46,7 @@ export {};
                 { title: 'Finding and hiring talent', href: '/help/hire-talent' },';
                 { title: 'Managing projects and contracts', href: '/help/manage-projects' },';
                 { title: 'Payment and escrow system', href: '/help/payment-system' }
-            ];,
-},;';
+            ]},;';
         'technical': {}
 ';
             title: 'Technical Support',;
@@ -59,8 +56,7 @@ export {};
                 { title: 'Browser compatibility', href: '/help/browser-compatibility' },';
                 { title: 'Mobile app troubleshooting', href: '/help/mobile-troubleshooting' },';
                 { title: 'API and integration support', href: '/help/api-support' }
-            ];,
-},;';
+            ]},;';
         'billing': {}
 ';
             title: 'Billing & Payments',;
@@ -70,8 +66,7 @@ export {};
                 { title: 'Payment methods and security', href: '/help/payment-methods' },';
                 { title: 'Refund and cancellation policy', href: '/help/refund-policy' },';
                 { title: 'Tax information and reporting', href: '/help/tax-information' }
-            ];,
-},;';
+            ]},;';
         'account': {}
 ';
 '';
@@ -83,9 +78,7 @@ export {};
                 { title: 'Two-factor authentication setup', href: '/help/2fa-setup' },''';
                 { title: 'Password reset and recovery', href: '/help/password-recovery' },''';
                 { title: 'Privacy settings and data control', href: '/help/privacy-settings' }
-            ]';,
-}'';,
-};''';
+            ]'}''};''';
     const popularArticles = ['''';
         'How to create your first account',Understanding the marketplace',Creating a talent profile',Finding and hiring talent',Payment and escrow system',Account security best practices';
     ];
@@ -207,14 +200,10 @@ export {};
         </section>;
       </div>;
     </>)}
-;
 
-export { HelpCenter };
-;
-export { HelpCenter };
-;
-export { HelpCenter };
-;
-export { HelpCenter };
-;
-export { HelpCenter };
+
+export { HelpCenter }
+export { HelpCenter }
+export { HelpCenter }
+export { HelpCenter }
+export { HelpCenter }

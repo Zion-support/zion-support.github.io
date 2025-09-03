@@ -13,7 +13,7 @@ const features = [;
   {};
 }
 ];
-;
+
 const useCases = [;
   {};
 },;
@@ -24,7 +24,7 @@ const useCases = [;
   {};
 }
 ];
-;
+
 const technologies = [;
   { name: 'TensorFlow', description: 'Advanced deep learning framework', icon: Code },;
   { name: 'PyTorch', description: 'Flexible machine learning library', icon: Brain },;
@@ -44,7 +44,7 @@ export default function AIAnalytics() {};
           <div className="absolute bottom-32 right-32 w-32 h-32 border border-zion-purple rounded-full animate-pulse delay-1000"></div>;
           <div className="absolute top-1/2 left-1/2 w-24 h-24 border border-zion-blue rounded-full animate-pulse delay-2000"></div>;
         </div>;
-        ;
+
         <div className="container-responsive relative z-10">;
           <div>Broken JSX</div>
             className="text-center max-w-4xl mx-auto">;
@@ -183,5 +183,4 @@ export default function AIAnalytics() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

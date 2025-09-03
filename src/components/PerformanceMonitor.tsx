@@ -12,10 +12,10 @@ import { motion, AnimatePresence  } from 'framer-motion';
 };,
 }, []);, []);
     // Show monitor after 3 seconds;
-    ;
+
     return () => clearTimeout(timer) }, []) ;
   if(!isVisible || !showDetails) return null;
-;
+
   return (;
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
       <div className="bg-white p-4 rounded-lg shadow">;
@@ -31,5 +31,4 @@ import { motion, AnimatePresence  } from 'framer-motion';
         <p className="text-2xl font-bold text-purple-600">{metrics.cpuUsage.toFixed(1)}%</p>;
       </div>;
     </div>;
-  );,
-}
+  )}

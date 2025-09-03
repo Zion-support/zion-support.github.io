@@ -2,8 +2,8 @@ import type { NextPage } from 'next';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 import { CheckCircle, Smartphone, Zap, Shield, BarChart, Users, Award } from 'lucide-react';
-;
-const MobileDevelopment: NextPage = () => {;
+
+const MobileDevelopment: NextPage = () => {
   return (;
     <Layout;
       title="Mobile Development Services - Zion Tech Group";
@@ -19,7 +19,7 @@ const MobileDevelopment: NextPage = () => {;
             Native and cross-platform mobile applications for iOS and Android. ;
             We create intuitive, high-performance mobile experiences that engage your users.;
           </p>;
-          ;
+
           <div className="flex flex-col sm:flex-row justify-center gap-4">;
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
               Start Your Mobile Project;
@@ -41,7 +41,7 @@ const MobileDevelopment: NextPage = () => {;
               and drive engagement across iOS and Android platforms.;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">;
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">;
@@ -199,7 +199,7 @@ const MobileDevelopment: NextPage = () => {;
               We develop various types of mobile applications to meet different business needs and user requirements.;
             </p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <div className="bg-white rounded-lg p-8 shadow-lg text-center">;
               <div className="w-20 h-20 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-6">;
@@ -294,7 +294,5 @@ const MobileDevelopment: NextPage = () => {;
         </div>;
       </section>;
     </Layout>;
-  );,
-};
-;
+  )}
 export default MobileDevelopment;

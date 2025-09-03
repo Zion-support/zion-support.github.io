@@ -1,108 +1,93 @@
 #!/usr/bin/env node;
-;
+
 const fs = require("fs");
 const path = require("path");
-class $1 {;
-  constructor() {;
+class $1 {
+  constructor() {
   this.projectRoot = process.cwd();
     this.fixedFiles = [];
-    this.errors = [];,;,
-}
-;
-  log(message) {;
+    this.errors = [];}
+
+  log(message) {
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);,;,
-}
-;
-  fixFile(filePath) {;
-  try {;
+    console.log(`[${timestamp}] ${message}`);}
+
+  fixFile(filePath) {
+  try {
   const content = fs.readFileSync(filePath, "utf8");
       let fixedContent = content;
       let hasChanges = false;
       // Fix specific patterns found in the linting errors;
       const fixes = [;
   // Fix missing semicolons after import statements;
-        {;
+        {
   pattern: /^import\s+.*from\s+[""][^""]+[""]\s*$/gm,;
-          replacement: (match) => match.endsWith(";") ? match : match + ";";,;,
-},;
+          replacement: (match) => match.endsWith(";") ? match : match + ";";},;
         // Fix missing semicolons after export statements;
-        {;
+        {
   pattern: /^export\s+.*from\s+[""][^""]+[""]\s*$/gm,;
-          replacement: (match) => match.endsWith(";") ? match : match + ";";,;,
-},;
+          replacement: (match) => match.endsWith(";") ? match : match + ";";},;
         // Fix unterminated string literals;
-        {;
+        {
   pattern: /([""])([^""]*?)(\n|$)/g,;
-          replacement: (match, quote, content, newline) => {;
+          replacement: (match, quote, content, newline) => {
   if (content.includes("\\" + quote) || content.includes("`")) return match;
-            return quote + content + quote + ";" + newline;,;,
-}
+            return quote + content + quote + ";" + newline;}
         },;
         // Fix missing commas in object literals;
-        {;
-  pattern: /(\w+)\s*:\s*([^,}]+)(\s*[^,}])/g,;
-          replacement: (match, key, value, next) => {;
+        {
+  pattern: /(\w+)\s*:\s*([^}]+)(\s*[^}])/g,;
+          replacement: (match, key, value, next) => {
   if (next.includes("}")) return match;
-            return key + ": " + value + "," + next;,;,
-}
+            return key + ": " + value + "," + next;}
         },;
         // Fix missing colons in object properties;
-        {;
+        {
   pattern: /(\w+)\s+([^:]+)(\s*[^:])/g,;
-          replacement: (match, key, value, next) => {;
+          replacement: (match, key, value, next) => {
   if (next.includes(":")) return match;
-            return key + ": " + value + next;,;,
-}
+            return key + ": " + value + next;}
         }
       ];
-;
-      fixes.forEach(fix => {;
+
+      fixes.forEach(fix => {
   const newContent = fixedContent.replace(fix.pattern, fix.replacement);
-        if (newContent !== fixedContent) {;
+        if (newContent !== fixedContent) {
   fixedContent = newContent;
-          hasChanges = true;,;,
-}
+          hasChanges = true;}
       });
-      if (hasChanges) {;
+      if (hasChanges) {
   fs.writeFileSync(filePath, fixedContent, "utf8");
         this.fixedFiles.push(filePath);
-        this.log(`Fixed: ${filePath}`);,;,
-}
-;,;,
-} catch (error) {;
+        this.log(`Fixed: ${filePath}`);}
+;} catch (error) {
   this.errors.push({ file: filePath, error: error.message });
-      this.log(`Error fixing ${filePath}: ${error.message}`);,;,
-}
+      this.log(`Error fixing ${filePath}: ${error.message}`);}
   }
-;
-  async processDirectory(dirPath) {;
+
+  async processDirectory(dirPath) {
   const items = fs.readdirSync(dirPath);
-    for (const item of items) {;
+    for (const item of items) {
   const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
-      if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {;
-  await this.processDirectory(fullPath);,;,
-} else if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".jsx") || item.endsWith(".js"))) {;
-  this.fixFile(fullPath);,;,
-}
+      if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
+  await this.processDirectory(fullPath);} else if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".jsx") || item.endsWith(".js"))) {
+  this.fixFile(fullPath);}
     }
   }
-;
-  async run() {;
+
+  async run() {
   this.log("Starting targeted syntax fixing...");
     await this.processDirectory(this.projectRoot);
     this.log(`\nTargeted syntax fixing completed!`);
     this.log(`Fixed files: ${this.fixedFiles.length}`);
     this.log(`Errors: ${this.errors.length}`);
-    if (this.errors.length > 0) {;
+    if (this.errors.length > 0) {
   this.log("\nErrors encountered:");
-      this.errors.forEach(error => {;
-  this.log(`  ${error.file}: ${error.error}`);,;,
-});,;,
-}
+      this.errors.forEach(error => {
+  this.log(`  ${error.file}: ${error.error}`);});}
   }
 }
-;
+
 const fixer = new TargetedSyntaxFixer();
 fixer.run().catch(console.error)

@@ -1,4 +1,4 @@
-export interface EmergingTechnologyService {;
+export interface EmergingTechnologyService {
   id: string;
   name: string;
   tagline: string;
@@ -24,7 +24,7 @@ export interface EmergingTechnologyService {;
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -34,18 +34,17 @@ export interface EmergingTechnologyService {;
   launchDate: string;
   customers: number;
   rating: number;
-const contact = {;
+const contact = {
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709";
-  ;
-  ;
-  ;
-  ;
-  website: "https://ziontechgroup.com";,;,
-}
+
+
+
+
+  website: "https://ziontechgroup.com"}
 export const emergingTechnologyServices2026: EmergingTechnologyService[] = [;
-  {;
+  {
     id: "ai-powered-autonomous-vehicles-platform",;
     name: "AI Autonomous Vehicles Platform",;
     tagline: "Develop and test autonomous vehicle systems with AI simulation",;
@@ -88,9 +87,8 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [;
     launchDate: "2026-01-20",;
     customers: 28,;
     rating: 4.9,;
-    reviews: 67;,;,
-},;
-  {;
+    reviews: 67},;
+  {
     id: "quantum-machine-learning-platform",;
     name: "Quantum Machine Learning Platform",;
     tagline: "Accelerate AI training with quantum computing algorithms",;
@@ -133,9 +131,8 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [;
     launchDate: "2026-02-10",;
     customers: 34,;
     rating: 4.8,;
-    reviews: 78;,;,
-},;
-  {;
+    reviews: 78},;
+  {
     id: "blockchain-decentralized-finance-platform",;
     name: "DeFi Development Platform",;
     tagline: "Build and deploy decentralized financial applications",;
@@ -178,9 +175,8 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [;
     launchDate: "2026-01-25",;
     customers: 89,;
     rating: 4.7,;
-    reviews: 234;,;,
-},;
-  {;
+    reviews: 234},;
+  {
     id: "ai-powered-healthcare-diagnostics-platform",;
     name: "AI Healthcare Diagnostics Platform",;
     tagline: "Advanced medical imaging and diagnostic AI for healthcare providers",;
@@ -223,9 +219,8 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [;
     launchDate: "2026-02-05",;
     customers: 67,;
     rating: 4.9,;
-    reviews: 189;,;,
-},;
-  {;
+    reviews: 189},;
+  {
     id: "iot-smart-city-platform",;
     name: "Smart City IoT Platform",;
     tagline: "Build intelligent cities with IoT sensors and AI analytics",;
@@ -268,9 +263,8 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [;
     launchDate: "2026-03-01",;
     customers: 23,;
     rating: 4.6,;
-    reviews: 56;,;,
-},;
-  {;
+    reviews: 56},;
+  {
     id: "ai-powered-cybersecurity-threat-intelligence",;
     name: "AI Cybersecurity Threat Intelligence",;
     tagline: "Real-time threat detection and response with AI-powered security",;
@@ -313,9 +307,8 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [;
     launchDate: "2026-01-30",;
     customers: 145,;
     rating: 4.8,;
-    reviews: 378;,;,
-},;
-  {;
+    reviews: 378},;
+  {
     id: "quantum-cryptography-platform",;
     name: "Quantum Cryptography Platform",;
     tagline: "Future-proof encryption with quantum key distribution",;
@@ -358,9 +351,8 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [;
     launchDate: "2026-02-25",;
     customers: 18,;
     rating: 4.9,;
-    reviews: 34;,;,
-},;
-  {;
+    reviews: 34},;
+  {
     id: "ai-powered-robotics-automation-platform",;
     name: "AI Robotics Automation Platform",;
     tagline: "Intelligent robotics automation for manufacturing and logistics",;

@@ -1,7 +1,7 @@
-module.exports = {;
+module.exports = {
   apps: [;
     // Main application;
-    {;
+    {
       name: 'zion-website',;
       script: 'npm',;
       args: 'run dev',;
@@ -10,23 +10,20 @@ module.exports = {;
       autorestart: true,;
       watch: false,;
       max_memory_restart: '1G',;
-      env: {;
+      env: {
         NODE_ENV: 'development',;
-        PORT: 3000;,
-},;
-      env_production: {;
+        PORT: 3000},;
+      env_production: {
         NODE_ENV: 'production',;
-        PORT: 3000;,
-},;
+        PORT: 3000},;
       log_file: './logs/zion-website.log',;
       out_file: './logs/zion-website-out.log',;
       error_file: './logs/zion-website-error.log',;
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',;
-      merge_logs: true;,
-},;
+      merge_logs: true},;
 
     // Error Monitor - Monitors and detects errors;
-    {;
+    {
       name: 'error-monitor',;
       script: './scripts/automation/error-monitor.cjs',;
       cwd: './',;
@@ -44,11 +41,10 @@ module.exports = {;
       time: true,;
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',;
       merge_logs: true,;
-      pmx: true;,
-},;
+      pmx: true},;
 
     // Syntax Fixer - Automatically fixes syntax errors;
-    {;
+    {
       name: 'syntax-fixer',;
       script: './scripts/automation/syntax-fixer.cjs',;
       cwd: './',;
@@ -66,11 +62,10 @@ module.exports = {;
       time: true,;
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',;
       merge_logs: true,;
-      pmx: true;,
-},;
+      pmx: true},;
 
     // Dependency Manager - Manages dependencies and vulnerabilities;
-    {;
+    {
       name: 'dependency-manager',;
       script: './scripts/automation/dependency-manager.cjs',;
       cwd: './',;
@@ -88,11 +83,10 @@ module.exports = {;
       time: true,;
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',;
       merge_logs: true,;
-      pmx: true;,
-},;
+      pmx: true},;
 
     // Build Monitor - Monitors build health and performance;
-    {;
+    {
       name: 'build-monitor',;
       script: './scripts/automation/build-monitor.cjs',;
       cwd: './',;
@@ -110,20 +104,18 @@ module.exports = {;
       time: true,;
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',;
       merge_logs: true,;
-      pmx: true;,
-},;
+      pmx: true},;
 
     // Health Checker - Performs health checks;
-    {;
+    {
       name: 'health-checker',;
       script: './scripts/health-checker.js',;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: '300M',;
-      env: {;
-        NODE_ENV: 'production';,
-},;
+      env: {
+        NODE_ENV: 'production'},;
       error_file: './logs/health-checker-error.log',;
       out_file: './logs/health-checker-out.log',;
       log_file: './logs/health-checker-combined.log',;
@@ -134,20 +126,18 @@ module.exports = {;
       min_uptime: '5s',;
       restart_delay: 2000,;
       cron_restart: '*/5 * * * *', // Run every 5 minutes;
-      pmx: true;,
-},;
+      pmx: true},;
 
     // Auto Fixer - Automatically fixes detected errors;
-    {;
+    {
       name: 'auto-fixer',;
       script: './scripts/auto-fixer.js',;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: '1G',;
-      env: {;
-        NODE_ENV: 'production';,
-},;
+      env: {
+        NODE_ENV: 'production'},;
       error_file: './logs/auto-fixer-error.log',;
       out_file: './logs/auto-fixer-out.log',;
       log_file: './logs/auto-fixer-combined.log',;
@@ -158,20 +148,18 @@ module.exports = {;
       min_uptime: '10s',;
       restart_delay: 5000,;
       cron_restart: '0 */2 * * *', // Run every 2 hours;
-      pmx: true;,
-},;
+      pmx: true},;
 
     // Log Cleaner - Manages log files and cleanup;
-    {;
+    {
       name: 'log-cleaner',;
       script: './scripts/log-cleaner.js',;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: '200M',;
-      env: {;
-        NODE_ENV: 'production';,
-},;
+      env: {
+        NODE_ENV: 'production'},;
       cron_restart: '0 2 * * *', // Run daily at 2 AM;
       log_file: './logs/log-cleaner.log',;
       out_file: './logs/log-cleaner-out.log',;
@@ -182,21 +170,19 @@ module.exports = {;
       max_restarts: 3,;
       min_uptime: '5s',;
       restart_delay: 2000,;
-      pmx: true;,
-},;
+      pmx: true},;
 
     // Security Audit - Runs security checks;
-    {;
+    {
       name: 'security-audit',;
       script: './scripts/automation/security-audit.cjs',;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: '1G',;
-      env: {;
+      env: {
         NODE_ENV: 'production',;
-        PM2_PROCESS: 'security-audit';,
-},;
+        PM2_PROCESS: 'security-audit'},;
       cron_restart: '0 4 * * 1', // Restart every Monday at 4 AM;
       log_file: './logs/security-audit.log',;
       out_file: './logs/security-audit-out.log',;
@@ -204,21 +190,19 @@ module.exports = {;
       time: true,;
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',;
       merge_logs: true,;
-      pmx: true;,
-},;
+      pmx: true},;
 
     // Performance Monitor - Monitors application performance;
-    {;
+    {
       name: 'performance-monitor',;
       script: './scripts/automation/performance-monitor.cjs',;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: '1G',;
-      env: {;
+      env: {
         NODE_ENV: 'production',;
-        PM2_PROCESS: 'performance-monitor';,
-},;
+        PM2_PROCESS: 'performance-monitor'},;
       cron_restart: '0 */4 * * *', // Restart every 4 hours;
       log_file: './logs/performance-monitor.log',;
       out_file: './logs/performance-monitor-out.log',;
@@ -226,21 +210,19 @@ module.exports = {;
       time: true,;
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',;
       merge_logs: true,;
-      pmx: true;,
-},;
+      pmx: true},;
 
     // Quality Checks - Runs quality assurance checks;
-    {;
+    {
       name: 'quality-checks',;
       script: './scripts/automation/quality-checks.cjs',;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: '1G',;
-      env: {;
+      env: {
         NODE_ENV: 'production',;
-        PM2_PROCESS: 'quality-checks';,
-},;
+        PM2_PROCESS: 'quality-checks'},;
       cron_restart: '0 5 * * *', // Restart daily at 5 AM;
       log_file: './logs/quality-checks.log',;
       out_file: './logs/quality-checks-out.log',;
@@ -248,21 +230,19 @@ module.exports = {;
       time: true,;
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',;
       merge_logs: true,;
-      pmx: true;,
-},;
+      pmx: true},;
 
     // Link Integrity - Ensures link integrity;
-    {;
+    {
       name: 'link-integrity',;
       script: './scripts/automation/link-checker-automation.cjs',;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: '1G',;
-      env: {;
+      env: {
         NODE_ENV: 'production',;
-        PM2_PROCESS: 'link-integrity';,
-},;
+        PM2_PROCESS: 'link-integrity'},;
       cron_restart: '0 6 * * *', // Restart daily at 6 AM;
       log_file: './logs/link-integrity.log',;
       out_file: './logs/link-integrity-out.log',;
@@ -270,21 +250,19 @@ module.exports = {;
       time: true,;
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',;
       merge_logs: true,;
-      pmx: true;,
-},;
+      pmx: true},;
 
     // Front Maximizer - Optimizes frontend performance;
-    {;
+    {
       name: 'front-maximizer',;
       script: './scripts/automation/front-maximizer.cjs',;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: '1G',;
-      env: {;
+      env: {
         NODE_ENV: 'production',;
-        PM2_PROCESS: 'front-maximizer';,
-},;
+        PM2_PROCESS: 'front-maximizer'},;
       cron_restart: '0 7 * * *', // Restart daily at 7 AM;
       log_file: './logs/front-maximizer.log',;
       out_file: './logs/front-maximizer-out.log',;
@@ -292,21 +270,19 @@ module.exports = {;
       time: true,;
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',;
       merge_logs: true,;
-      pmx: true;,
-},;
+      pmx: true},;
 
     // Sitemap Runner - Generates and updates sitemap;
-    {;
+    {
       name: 'sitemap-runner',;
       script: './scripts/automation/sitemap-runner.cjs',;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: '1G',;
-      env: {;
+      env: {
         NODE_ENV: 'production',;
-        PM2_PROCESS: 'sitemap-runner';,
-},;
+        PM2_PROCESS: 'sitemap-runner'},;
       cron_restart: '0 8 * * *', // Restart daily at 8 AM;
       log_file: './logs/sitemap-runner.log',;
       out_file: './logs/sitemap-runner-out.log',;
@@ -314,11 +290,10 @@ module.exports = {;
       time: true,;
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',;
       merge_logs: true,;
-      pmx: true;,
-},;
+      pmx: true},;
 
     // Automated Build & Lint fixer;
-    {;
+    {
       name: 'auto-fix-and-build',;
       script: 'bash',;
       args: '-lc "npm install --silent && npm run lint || true && npm run type-check || true && npm run build"',;
@@ -326,9 +301,8 @@ module.exports = {;
       autorestart: true,;
       watch: false,;
       max_memory_restart: '1G',;
-      env: {;
-        NODE_ENV: 'production';,
-},;
+      env: {
+        NODE_ENV: 'production'},;
       cron_restart: '0 */6 * * *', // Every 6 hours;
       log_file: './logs/auto-fix-and-build.log',;
       error_file: './logs/auto-fix-and-build-error.log',;
@@ -336,11 +310,10 @@ module.exports = {;
       time: true,;
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',;
       merge_logs: true,;
-      pmx: true;,
-},;
+      pmx: true},;
 
     // Watcher to rebuild on changes;
-    {;
+    {
       name: 'dev-watch-build',;
       script: 'bash',;
       args: '-lc "npm run build"',;
@@ -355,12 +328,11 @@ module.exports = {;
       time: true,;
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',;
       merge_logs: true,;
-      pmx: true;,
-}
+      pmx: true}
   ],;
 
-  deploy: {;
-    production: {;
+  deploy: {
+    production: {
       user: 'ubuntu',;
       host: 'localhost',;
       ref: 'origin/main',;
@@ -368,7 +340,6 @@ module.exports = {;
       path: '/var/www/zion.app',;
       'pre-deploy-local': '',;
       'post-deploy': 'npm install --legacy-peer-deps && npm run build && pm2 reload ecosystem.config.cjs --env production',;
-      'pre-setup': 'mkdir -p /var/www/zion.app/logs';,
-}
+      'pre-setup': 'mkdir -p /var/www/zion.app/logs'}
   }
-};
+}

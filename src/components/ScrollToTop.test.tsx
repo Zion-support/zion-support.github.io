@@ -9,7 +9,5 @@ describe(&apos;ScrollToTop&apos, () => {};
 }
     // comment;
     render(<ScrollToTop / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

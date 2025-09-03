@@ -7,7 +7,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {};
     ;
     switch (activeTab) {};
         break}
-;
+
     // Filter by price range;
     services = services.filter(service => {};
       services = services.filter(service => service.category === selectedCategory)};
@@ -33,8 +33,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {};
     if(activeTab = == 'it') {};
       return [min, max]} else {};
       return [min, max]}
-  };
-;
+  }
   const renderPricingCard: unknown = (service)  => {}
 ';
     if (activeTab === 'microsaas') {}
@@ -250,8 +249,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {};
           </div>;
         </div>;
       )}
-  };
-;
+  }
   return ();
     <>;
       <div>Broken JSX</div>
@@ -353,13 +351,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {};
                   <div className="flex items-center gap-4">;
                     <div>Broken JSX</div>
   (e) => setPriceRange([priceRange[0],;
-  parseInt(e.target.value)]);,
-}                      className="flex-1";
+  parseInt(e.target.value)])}                      className="flex-1";
                     />;
                     <div>Broken JSX</div>
   (e) => setPriceRange([parseInt(e.target.value),;
-  priceRange[1]]);,
-}                      className="flex-1";
+  priceRange[1]])}                      className="flex-1";
                     />;
                   </div>";
                   <div className="flex justify-between text-sm text-gray-500 mt-1">;
@@ -435,7 +431,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {};
               </button>;
             </div>;
           )}
-;
+
           {/* Pricing Comparison */}";
           <div className="mt-16 bg-white rounded-2xl p-8 shadow-lg">";
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Why Choose Zion Tech Group?</h2>";
@@ -494,17 +490,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {};
         </div>;
       </div>;
     </>;
-  );,
-};
-;
+  )}
 export default ComprehensivePricingGuide2030;}}}}}}}
-;
-export { ComprehensivePricingGuide2030 };
-;
-export { ComprehensivePricingGuide2030 };
-;
-export { ComprehensivePricingGuide2030 };
-;
-export { ComprehensivePricingGuide2030 };
-;
-export { ComprehensivePricingGuide2030 };
+
+export { ComprehensivePricingGuide2030 }
+export { ComprehensivePricingGuide2030 }
+export { ComprehensivePricingGuide2030 }
+export { ComprehensivePricingGuide2030 }
+export { ComprehensivePricingGuide2030 }

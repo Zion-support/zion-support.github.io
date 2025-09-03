@@ -12,40 +12,32 @@ import { enterpriseITInfrastructureServices2025 } from '../../data / 2025 - ente
 import { innovativeMicroSaasSolutions2025 } from '../../data / 2025 - innovative - micro - saas -solutions';
 import { motion  } from 'framer-motion';
 import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - innovative - services -expansion';
-;
+
  from 'lucide - react';
-;
+
 // Import the new services;
-  ;
-  ;
-  ;
-  website: 'https://ziontechgroup.com';,
-};
-;
-;
+
+
+
+  website: 'https://ziontechgroup.com'}
     name: 'Micro SAAS Solutions',;
     description: 'Innovative software solutions for small businesses',;";
     icon: <Code className="w-8 h-8"  />,;
     color: 'from-green-600 to-emerald-700',;
-    services: innovativeMicroSaasSolutions2025};
+    services: innovativeMicroSaasSolutions2025}
 ];
-;
-;
-  ;
+
   ;  ;
-  ;
-  'Emerging': 'from-green-600 to-emerald-700';,
-};
-;
-;
-  ;
-  ;
+
+  'Emerging': 'from-green-600 to-emerald-700'}
+
+
 ';
   'Patented': 'from-green-600 to-emerald-700',';
   'Patent Pending': 'from-yellow-600 to-orange-700',';
   'Trade Secret': 'from-blue-600 to-indigo-700',;  ;
-  ;
-  ;
+
+
   'Open Source': 'from-purple-600 to-violet-700';
 ;
 ;,
@@ -309,7 +301,7 @@ export function UltimateServicesShowcase(...args[]):  {};
               </div>;
             </div>;
           </div>;
-        </div>;) };
+        </div>;) }
     </section>;) }
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;

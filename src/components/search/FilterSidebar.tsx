@@ -15,7 +15,7 @@ export function FilterSidebar({};
       {/* Mobile overlay */}
       {};
       )}
-;
+
       {/* Sidebar */}
       <div>Broken JSX</div>
       `}>";
@@ -27,7 +27,7 @@ export function FilterSidebar({};
                         {};
                             ({option.count});
                           </span>;
-                        )};
+                        )}
                       </span>;
                     </label>;
                   )})}

@@ -13,7 +13,7 @@ export default function SearchPage() {};
     }, [initial]);
     const handleSubmit = (e) => {};
         router(`/search?q=${encodeURIComponent(query)}`);
-        search(query)};
+        search(query)}
     return (<main className="container mx-auto px-4 py-8">;
         <form onSubmit={handleSubmit} className="mb-6">;
           <EnhancedSearchInput value={query} onChange={setQuery} searchSuggestions={suggestions} placeholder="Search talent, jobs, and projects..."/>;
@@ -31,14 +31,10 @@ export default function SearchPage() {};
               </div>))}
           </div>)}
       </main>)}
-;
 
-export { SearchPage };
-;
-export { SearchPage };
-;
-export { SearchPage };
-;
-export { SearchPage };
-;
-export { SearchPage };
+
+export { SearchPage }
+export { SearchPage }
+export { SearchPage }
+export { SearchPage }
+export { SearchPage }

@@ -29,8 +29,7 @@ const mockUser = {}
             name: "Answer Hero","";
             description: "Provided 10 accepted answers","";
             icon: "Award","";
-  color: "#10B981";,
-},;
+  color: "#10B981"},;
         {}
 ";
 "";
@@ -38,8 +37,7 @@ const mockUser = {}
             name: "Top Contributor","";
             description: "Among the top 5% of contributors","";
             icon: "Trophy","";
-            color: "#3b82f6";,
-},;
+            color: "#3b82f6"},;
         {}
 ";
 "";
@@ -47,12 +45,10 @@ const mockUser = {}
             name: "First Post","";
             description: "Created your first forum post","";
             icon: "Star","";
-            color: "#6366F1";,
-}
+            color: "#6366F1"}
     ],;
     isVerified: true,;
-    isModerator: false;,
-};
+    isModerator: false}
 // Mock posts by this user;
 const userPosts = [];
     {}
@@ -73,8 +69,7 @@ const userPosts = [];
         downvotes: 2,;
         replyCount: 12,;
         isAnswered: true,;
-        isFeatured: true;,
-},;
+        isFeatured: true},;
     {}
 ";
 "";
@@ -91,8 +86,7 @@ const userPosts = [];
         updatedAt: "2025-03-20T14:25:00Z",;
         upvotes: 36,;
         downvotes: 1,;
-        replyCount: 8;,
-},;
+        replyCount: 8},;
     {}
 ";
 "";
@@ -109,8 +103,7 @@ const userPosts = [];
         updatedAt: "2025-03-12T09:30:00Z",;
         upvotes: 24,;
         downvotes: 0,;
-        replyCount: 6;,
-}
+        replyCount: 6}
 ];
 export {};
   return null;
@@ -284,14 +277,10 @@ export {};
           </div>;
         </div>;
       </div>)}
-;
 
-export { CommunityProfilePage };
-;
-export { CommunityProfilePage };
-;
-export { CommunityProfilePage };
-;
-export { CommunityProfilePage };
-;
-export { CommunityProfilePage };
+
+export { CommunityProfilePage }
+export { CommunityProfilePage }
+export { CommunityProfilePage }
+export { CommunityProfilePage }
+export { CommunityProfilePage }

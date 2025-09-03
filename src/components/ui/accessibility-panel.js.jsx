@@ -13,8 +13,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
         screenReader: false,;
         focusIndicator: true,;
         keyboardNavigation: true,;
-        ...defaultSettings;,
-});
+        ...defaultSettings});
     const [notifications, setNotifications] = useState([]);
     // Apply accessibility settings to the document;
     useEffect(() => {}
@@ -27,8 +26,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 '';
 ''';
             root.style.setProperty('--high-contrast',true');''';
-            root.classList.add('high-contrast')}
-        else {}
+            root.classList.add('high-contrast')} else {}
 ';
 '';
 ''';
@@ -40,8 +38,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 '';
 ''';
             root.style.setProperty('--large-text',true');''';
-            root.classList.add('large-text')}
-        else {}
+            root.classList.add('large-text')} else {}
 ';
 '';
 ''';
@@ -57,8 +54,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 '';
 ''';
             root.style.setProperty('--reduced-motion',true');''';
-            root.classList.add('reduced-motion')}
-        else {}
+            root.classList.add('reduced-motion')} else {}
 ';
 '';
 ''';
@@ -70,8 +66,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 '';
 ''';
             root.style.setProperty('--focus-indicator',true');''';
-            root.classList.add('focus-indicator')}
-        else {}
+            root.classList.add('focus-indicator')} else {}
 ';
 '';
 ''';
@@ -83,8 +78,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 '';
 ''';
             root.style.setProperty('--keyboard-navigation',true');''';
-            root.classList.add('keyboard-navigation')}
-        else {}
+            root.classList.add('keyboard-navigation')} else {}
 ';
 '';
 ''';
@@ -103,7 +97,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             announcement.textContent = message;
             document.body.appendChild(announcement);
             setTimeout(() => {}
-                document.body.removeChild(announcement)}, 1000)};
+                document.body.removeChild(announcement)}, 1000)}
         // Announce important changes;
         if (settings.highContrast) {}
 ';
@@ -125,8 +119,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
         setSettings(prev => {}
             const newSettings = {}
   ...prev,;
-  [key]: value;,
-};
+  [key]: value}
             // Add notification;
             const notification = {}
 `;
@@ -136,8 +129,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                 message: `${};
 } ${value ? 'enabled' : 'disabled'}`,''';
                 type: 'success',;
-                timestamp: Date.now();,
-};
+                timestamp: Date.now()}
             setNotifications(prev => [notification, ...prev.slice(0, 2)]);
             return newSettings})}, []);
     const resetToDefaults = useCallback(() => {}
@@ -149,15 +141,13 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             reducedMotion: false,;
             screenReader: false,;
             focusIndicator: true,;
-  keyboardNavigation: true;,
-};
+  keyboardNavigation: true}
         setSettings(defaultSettings);
         const notification = {}
   id: Date.now().toString(),';
             message: 'Accessibility settings reset to defaults',';
             type: 'info',;
-  timestamp: Date.now();,
-};
+  timestamp: Date.now()}
         setNotifications(prev => [notification, ...prev.slice(0, 2)])}, []);
     const increaseFontSize = useCallback(() => {}
 ';
@@ -192,9 +182,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     case 'a': any;
                         e.preventDefault();
                         setIsOpen(!isOpen);
-                        break}';,
-}'';,
-};''';
+                        break}'}''};''';
         document.addEventListener('keydown', handleKeyDown);''';
         return () => document.removeEventListener('keydown', handleKeyDown)}, [enabled, settings.highContrast, settings.largeText, settings.reducedMotion, isOpen, updateSetting]);
     if (!enabled);
@@ -240,8 +228,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     <div>Broken JSX</div>
   (e) => updateSetting('highContrast',;
   e.target.checked)";
-"";,
-} className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>;
+""} className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>;
                     High Contrast";
                   </label>"";
                   <span className="text-xs text-zinc-400">Ctrl/Cmd + H</span>;
@@ -253,8 +240,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     <div>Broken JSX</div>
   (e) => updateSetting('largeText',;
   e.target.checked)";
-"";,
-} className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>;
+""} className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>;
                     Large Text";
                   </label>"";
                   <span className="text-xs text-zinc-400">Ctrl/Cmd + L</span>;
@@ -282,8 +268,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                   <div>Broken JSX</div>
   (e) => updateSetting('colorBlindMode',;
   e.target.value)";
-"";,
-} className="w-full p-2 bg-zion-blue/20 border border-zion-cyan/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan/50">"";
+""} className="w-full p-2 bg-zion-blue/20 border border-zion-cyan/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan/50">"";
                     <option value="none">None</option>"";
                     <option value="protanopia">Protanopia (Red-Blind)</option>"";
                     <option value="deuteranopia">Deuteranopia (Green-Blind)</option>"";
@@ -305,8 +290,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     <div>Broken JSX</div>
   (e) => updateSetting('reducedMotion',;
   e.target.checked)";
-"";,
-} className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>;
+""} className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>;
                     Reduced Motion";
                   </label>"";
                   <span className="text-xs text-zinc-400">Ctrl/Cmd + R</span>;
@@ -318,8 +302,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     <div>Broken JSX</div>
   (e) => updateSetting('screenReader',;
   e.target.checked)";
-"";,
-} className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>;
+""} className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>;
                     Screen Reader Support;
                   </label>;
                 </div>;
@@ -338,8 +321,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     <div>Broken JSX</div>
   (e) => updateSetting('focusIndicator',;
   e.target.checked)";
-"";,
-} className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>;
+""} className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>;
                     Focus Indicator;
                   </label>;
                 </div>;
@@ -350,8 +332,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     <div>Broken JSX</div>
   (e) => updateSetting('keyboardNavigation',;
   e.target.checked)";
-"";,
-} className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>;
+""} className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>;
                     Keyboard Navigation;
                   </label>;
                 </div>;
@@ -395,18 +376,13 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 '"'"`'"`;
 '"'"`'"`'"`;
             filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="tritanopia"><feColorMatrix type="matrix" values="0.95,0.05,0,0,0 0,0.433,0.567,0,0 0,0.475,0.525,0,0 0,0,0,1,0"/></filter></svg>#tritanopia')}````;
-        `;,
-}}/>;
-    </>)};
+        `}}/>;
+    </>)}
 export default AccessibilityPanel;
-;
 
-export { AccessibilityPanel };
-;
-export { AccessibilityPanel };
-;
-export { AccessibilityPanel };
-;
-export { AccessibilityPanel };
-;
-export { AccessibilityPanel };
+
+export { AccessibilityPanel }
+export { AccessibilityPanel }
+export { AccessibilityPanel }
+export { AccessibilityPanel }
+export { AccessibilityPanel }

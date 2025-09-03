@@ -73,7 +73,7 @@ export default function AIAutonomousBusinessOrchestrator() {};
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Autonomous AI Capabilities</h2>;
             <p className="text-gray-600 text-lg">Powered by advanced machine learning and decision-making algorithms</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {};
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">;
@@ -103,7 +103,7 @@ export default function AIAutonomousBusinessOrchestrator() {};
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Transformative Business Impact</h2>;
               <p className="text-gray-600 text-lg">Proven results from autonomous business operations</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {};
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm">;
@@ -123,7 +123,7 @@ export default function AIAutonomousBusinessOrchestrator() {};
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced AI Capabilities</h2>;
             <p className="text-gray-600 text-lg">Comprehensive autonomous business intelligence</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {};
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 text-center">;
@@ -144,7 +144,7 @@ export default function AIAutonomousBusinessOrchestrator() {};
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>;
               <p className="text-gray-600 text-lg">Ideal solutions for complex business operations</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-3 gap-8">;
               {};
                 <div key={index} className="text-center">;
@@ -166,7 +166,7 @@ export default function AIAutonomousBusinessOrchestrator() {};
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Enterprise Pricing</h2>;
               <p className="text-gray-600 text-lg">Scale with your autonomous operations</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-3 gap-8">;
               {};
                 <div key={index} className={`bg-white rounded-xl p-8 shadow-lg border ${tier.name === 'Enterprise' ? 'ring-2 ring-indigo-500 relative' : ''}`}>;
@@ -222,5 +222,4 @@ export default function AIAutonomousBusinessOrchestrator() {};
         </section>;
       </div>;
     </>;
-  );,
-}
+  )}

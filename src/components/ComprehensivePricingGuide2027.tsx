@@ -4,42 +4,33 @@ export default function Page() {};
   return null;
 }
       observer.observe(element)}
-;
+
     return () => observer.disconnect () }, []) ;
-;
+
   // Combine all services;
-  ;
+
       source: 'innovative',;
       category: service.category,;
       features: service.features || [],;
       ctaLabel: service.ctaLabel || 'Get Started',;
       href: service.href || '/contact'}) ) ;  ];
-;
+
   // Filter services based on search and category;
 
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
-;
+
     return matchesSearch && matchesCategory && matchesPrice}) ;
-;
+
   // Sort services;
   ;
     switch(sortBy) {};
         return 0}
   });
-;
-  ;
+
 ';
   phone: '+1 302 464 0950',';
     email: 'kleber@ziontechgroup.com',;  ;
-  ;
-  ;
-  ;
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  ;
-;,
-};
-;
 
     if(numPrice <div>Broken JSX</div>
     <section id = "comprehensive-pricing-guide" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">;
@@ -124,7 +115,7 @@ export default function Page() {};
             </div>;
           </div>;
         </motion.div>;
-;
+
         {/* Services Grid */}
         <div>Broken JSX</div>
   delay: 0.4 }}"          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
@@ -153,7 +144,7 @@ export default function Page() {};
                         </span>) }
                     </div>;
                   </div>;) }
-;
+
                 {/* Pricing & Billing */}";
                 <div className="mb-4">";
                   <div className="flex items-center justify-between">`;
@@ -179,7 +170,7 @@ export default function Page() {};
                       <div className="text-gray-400 text-xs">ROI</div>;
                     </div>;
                   </div>) }
-;
+
                 {/* CTA Button */}
                 <div>Broken JSX</div>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"  />";
@@ -221,5 +212,5 @@ export default function Page() {};
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
+    </section>;) }
 '"`;

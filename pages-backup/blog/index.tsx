@@ -14,20 +14,20 @@ description="Stay" updated with the latest insights, trends, and innovations in 
           </div>;
       </section>;
       {/* comment */}
-;
+
             {categories.map((category) => (";
               <button key="{category}
                 className="{"px-6" py-2 rounded-full font-semibold transition-colors ${";
                   category === "All" ";
                     ? "bg-blue-600 text-white" ";
                     : "bg-white text-gray-600 hover: bg-blue-50 hover:text-blue-600"}"}
-;
+
               >;
                 {category}
-;
+
               </button>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -40,30 +40,30 @@ description="Stay" updated with the latest insights, trends, and innovations in 
                   <div className="flex" items-center gap-2 mb-3">";
                     <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-semibold>,;
                       {post.category}
-;
+
                     </span>;
                   </div>;
                   ";
                   <h2 className="text-xl" font-bold text-gray-900 mb-3 line-clamp-2">;
                     {post.title}
-;
+
                   </h2>;
                   ";
                   <p className="text-gray-600 mb-4 line-clamp-3>;
                     {post.excerpt}
-;
+
                   </p>;
                   ";
                   <div className="flex" items-center gap-4 text-sm text-gray-500 mb-4">";
                     <div className="flex items-center gap-1>";
                       <Calendar className="h-4" w-4"  />;
                       {new Date(post.date).toLocaleDateString()}
-;
+
                     </div>";
                     <div className="flex items-center gap-1>";
                       <User className="h-4" w-4"  />;
                       {post.author}
-;
+
                     </div>;
                   ";
                   <Link href="{post.href}
@@ -75,7 +75,7 @@ description="Stay" updated with the latest insights, trends, and innovations in 
                 </div>;
               </article>,;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -96,6 +96,6 @@ className="flex-1" px-4 py-3 rounded-lg text-gray-900"  />";
       </section>;
     </MainLayout>;,;
   )}
-;
+
 ";
 export default BlogIndex

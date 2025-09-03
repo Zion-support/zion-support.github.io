@@ -1,4 +1,4 @@
-export interface BiotechAIService {;
+export interface BiotechAIService {
   id: string;
   name: string;
   tagline: string;
@@ -25,7 +25,7 @@ export interface BiotechAIService {;
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -36,7 +36,7 @@ export interface BiotechAIService {;
   customers: number;
   rating: number;
 export const biotechAIServices: BiotechAIService[] = [;
-  {;
+  {
     id: "ai-drug-discovery-platform",;
     name: "AI Drug Discovery Platform",;
     tagline: "Accelerate drug development with AI-powered discovery",;
@@ -74,20 +74,18 @@ export const biotechAIServices: BiotechAIService[] = [;
     marketSize: "$150B AI in healthcare market",;
     growthRate: "250% annual growth",;
     variant: "biotech-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.",;
     launchDate: "2024-01-15",;
     customers: 120,;
     rating: 5.0,;
-    reviews: 60;,;,
-},;
-  {;
+    reviews: 60},;
+  {
     id: "ai-genetic-engineering-suite",;
     name: "AI Genetic Engineering Suite",;
     tagline: "Revolutionary genetic engineering with AI precision",;
@@ -125,20 +123,18 @@ export const biotechAIServices: BiotechAIService[] = [;
     marketSize: "$50B genetic engineering market",;
     growthRate: "300% annual growth",;
     variant: "biotech-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete genetic engineering platform with AI algorithms, synthetic biology tools, and comprehensive safety features. Includes mobile app and lab integration.",;
     launchDate: "2024-02-01",;
     customers: 80,;
     rating: 5.0,;
-    reviews: 40;,;,
-},;
-  {;
+    reviews: 40},;
+  {
     id: "ai-protein-design-platform",;
     name: "AI Protein Design Platform",;
     tagline: "Design novel proteins with AI-powered algorithms",;
@@ -176,20 +172,18 @@ export const biotechAIServices: BiotechAIService[] = [;
     marketSize: "$30B protein engineering market",;
     growthRate: "280% annual growth",;
     variant: "biotech-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete protein design platform with AI algorithms, comprehensive tools, and collaboration features. Includes mobile app and lab integration.",;
     launchDate: "2024-02-10",;
     customers: 150,;
     rating: 4.9,;
-    reviews: 75;,;,
-},;
-  {;
+    reviews: 75},;
+  {
     id: "ai-clinical-trial-optimization",;
     name: "AI Clinical Trial Optimization Platform",;
     tagline: "Optimize clinical trials with AI-powered insights",;
@@ -227,20 +221,18 @@ export const biotechAIServices: BiotechAIService[] = [;
     marketSize: "$45B clinical trial market",;
     growthRate: "220% annual growth",;
     variant: "biotech-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete clinical trial platform with AI optimization, comprehensive analytics, and regulatory tools. Includes mobile app and system integration.",;
     launchDate: "2024-02-15",;
     customers: 200,;
     rating: 4.9,;
-    reviews: 100;,;,
-},;
-  {;
+    reviews: 100},;
+  {
     id: "ai-biomarker-discovery",;
     name: "AI Biomarker Discovery Platform",;
     tagline: "Discover biomarkers with AI-powered analysis",;
@@ -278,20 +270,18 @@ export const biotechAIServices: BiotechAIService[] = [;
     marketSize: "$25B biomarker market",;
     growthRate: "240% annual growth",;
     variant: "biotech-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete biomarker discovery platform with AI algorithms, comprehensive analysis, and collaboration tools. Includes mobile app and research integration.",;
     launchDate: "2024-02-20",;
     customers: 180,;
     rating: 4.8,;
-    reviews: 90;,;,
-},;
-  {;
+    reviews: 90},;
+  {
     id: "ai-personalized-medicine",;
     name: "AI Personalized Medicine Platform",;
     tagline: "Enable personalized medicine with AI-powered genomics",;
@@ -329,20 +319,18 @@ export const biotechAIServices: BiotechAIService[] = [;
     marketSize: "$60B personalized medicine market",;
     growthRate: "260% annual growth",;
     variant: "biotech-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete personalized medicine platform with AI genomics, clinical decision support, and healthcare integration. Includes mobile app and comprehensive analytics.",;
     launchDate: "2024-02-25",;
     customers: 120,;
     rating: 5.0,;
-    reviews: 60;,;,
-},;
-  {;
+    reviews: 60},;
+  {
     id: "ai-drug-repurposing",;
     name: "AI Drug Repurposing Platform",;
     tagline: "Discover new uses for existing drugs with AI",;
@@ -380,20 +368,18 @@ export const biotechAIServices: BiotechAIService[] = [;
     marketSize: "$20B drug repurposing market",;
     growthRate: "200% annual growth",;
     variant: "biotech-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete drug repurposing platform with AI discovery, comprehensive analysis, and collaboration tools. Includes mobile app and research integration.",;
     launchDate: "2024-03-01",;
     customers: 160,;
     rating: 4.9,;
-    reviews: 80;,;,
-},;
-  {;
+    reviews: 80},;
+  {
     id: "ai-bioinformatics-platform",;
     name: "AI Bioinformatics Platform",;
     tagline: "Advanced bioinformatics with AI-powered analysis",;
@@ -431,20 +417,18 @@ export const biotechAIServices: BiotechAIService[] = [;
     marketSize: "$35B bioinformatics market",;
     growthRate: "230% annual growth",;
     variant: "biotech-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete bioinformatics platform with AI analysis, multi-omics tools, and comprehensive research features. Includes mobile app and cloud computing.",;
     launchDate: "2024-03-05",;
     customers: 300,;
     rating: 4.8,;
-    reviews: 150;,;,
-},;
-  {;
+    reviews: 150},;
+  {
     id: "ai-biomanufacturing-optimization",;
     name: "AI Biomanufacturing Optimization Platform",;
     tagline: "Optimize biomanufacturing with AI-powered insights",;
@@ -482,12 +466,11 @@ export const biotechAIServices: BiotechAIService[] = [;
     marketSize: "$40B biomanufacturing market",;
     growthRate: "210% annual growth",;
     variant: "biotech-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete biomanufacturing platform with AI optimization, real-time monitoring, and automation tools. Includes mobile app and system integration.",;
     launchDate: "2024-03-10",;

@@ -26,8 +26,6 @@ export function ReferralMiddleware({ children }: Props) {};
 } catch(err) {};
 }
     }
-    sendReferral();,
-}, [user?.id, user?.email]); // Added user?.email;
+    sendReferral()}, [user?.id, user?.email]); // Added user?.email;
 
-  return <>{children}</>;,
-}
+  return <>{children}</>}

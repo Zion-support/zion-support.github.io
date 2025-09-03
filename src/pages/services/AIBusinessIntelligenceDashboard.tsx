@@ -20,7 +20,7 @@ const AIBusinessIntelligenceDashboard = () => {};
     {};
 }
   ];
-;
+
   const pricingPlans = [;
     {};
 },;
@@ -29,7 +29,7 @@ const AIBusinessIntelligenceDashboard = () => {};
     {};
 }
   ];
-;
+
   const useCases = [;
     {};
 },;
@@ -40,7 +40,7 @@ const AIBusinessIntelligenceDashboard = () => {};
     {};
 }
   ];
-;
+
   const testimonials = [;
     {};
 },;
@@ -49,12 +49,12 @@ const AIBusinessIntelligenceDashboard = () => {};
     {};
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">;
       <div>Broken JSX</div>
       />;
-      ;
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
         <div className="max-w-7xl mx-auto">;
@@ -64,7 +64,7 @@ const AIBusinessIntelligenceDashboard = () => {};
               <Brain className="w-4 h-4 mr-2 text-cyan-400" />;
               AI-Powered Business Intelligence;
             </div>;
-            ;
+
             <h1 className="text-5xl md:text-7xl font-bold mb-6">;
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">;
                 AI Business Intelligence;
@@ -72,12 +72,12 @@ const AIBusinessIntelligenceDashboard = () => {};
               <br />;
               <span className="text-white">Dashboard</span>;
             </h1>;
-            ;
+
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">;
               Transform your business data into actionable insights with our AI-powered business intelligence platform. ;
               Get real-time analytics, predictive insights, and automated reporting that drives growth.;
             </p>;
-            ;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
               <div>Broken JSX</div>
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center group">;
@@ -92,7 +92,7 @@ const AIBusinessIntelligenceDashboard = () => {};
             </div>;
           </motion.div>;
         </div>;
-        ;
+
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">;
           <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"></div>;
@@ -114,7 +114,7 @@ const AIBusinessIntelligenceDashboard = () => {};
               Everything you need to transform your business data into actionable intelligence;
             </p>;
           </motion.div>;
-          ;
+
           <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">;
             {};
                     {feature.title}
@@ -143,7 +143,7 @@ const AIBusinessIntelligenceDashboard = () => {};
               See how businesses are using our AI BI platform to drive growth and efficiency;
             </p>;
           </motion.div>;
-          ;
+
           <div className="grid grid-cols-1 md: unknowngrid-cols-2 gap-8">;
             {};
                     {useCase.title}
@@ -172,7 +172,7 @@ const AIBusinessIntelligenceDashboard = () => {};
               Choose the plan that fits your business needs. All plans include a 14-day free trial.;
             </p>;
           </motion.div>;
-          ;
+
           <div className="grid grid-cols-1 lg: unknowngrid-cols-3 gap-8">;
             {};
                 )}
@@ -187,7 +187,7 @@ const AIBusinessIntelligenceDashboard = () => {};
                     </div>;
                     <p className="text-gray-300 mt-2">{plan.description}</p>;
                   </div>;
-                  ;
+
                   <ul className="space-y-4 mb-8">;
                     {};
                       <li key={idx} className="flex items-center text-gray-300">;
@@ -219,7 +219,7 @@ const AIBusinessIntelligenceDashboard = () => {};
               </span>;
             </h2>;
           </motion.div>;
-          ;
+
           <div className="grid grid-cols-1 md: unknowngrid-cols-3 gap-8">;
             {};
                       <Star key={i} className="w-5 h-5 fill-current text-yellow-400" />;
@@ -296,17 +296,11 @@ const AIBusinessIntelligenceDashboard = () => {};
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default AIBusinessIntelligenceDashboard;
-;
-export { AIBusinessIntelligenceDashboard };
-;
-export { AIBusinessIntelligenceDashboard };
-;
-export { AIBusinessIntelligenceDashboard };
-;
-export { AIBusinessIntelligenceDashboard };
-;
-export { AIBusinessIntelligenceDashboard };
+
+export { AIBusinessIntelligenceDashboard }
+export { AIBusinessIntelligenceDashboard }
+export { AIBusinessIntelligenceDashboard }
+export { AIBusinessIntelligenceDashboard }
+export { AIBusinessIntelligenceDashboard }

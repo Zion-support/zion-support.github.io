@@ -15,7 +15,7 @@ export function MarketplacePage() {};
     { id: 'automation', name: 'Automation', icon: Settings },;
     { id: 'analytics', name: 'Analytics', icon: BarChart3 }
   ];
-;
+
   const marketplaceProducts = [;
     {};
 },;
@@ -47,7 +47,7 @@ export function MarketplacePage() {};
               Discover, purchase, and deploy cutting-edge technology solutions from our curated marketplace. ;
               All products are enterprise-ready and backed by our support team.;
             </p>;
-            ;
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">;
               <div className="relative">;
@@ -123,7 +123,7 @@ export function MarketplacePage() {};
                 {/* Product Image/Icon */}
                 <div className="relative p-6 bg-gradient-to-br from-zion-blue-dark to-zion-slate-darker">;
                   <div className="text-6xl text-center mb-4">{product.image}</div>;
-                  ;
+
                   {/* Badges */}
                   <div className="absolute top-4 left-4 flex flex-col space-y-2">;
                     {};
@@ -159,7 +159,7 @@ export function MarketplacePage() {};
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors">;
                     {product.title}
                   </h3>;
-                  ;
+
                   <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">;
                     {product.description}
                   </p>;
@@ -298,7 +298,6 @@ export function MarketplacePage() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
+
 export default MarketplacePage;

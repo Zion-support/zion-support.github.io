@@ -33,7 +33,7 @@ const zionContact: ServiceContact = {};
     compliance["Environmental regulations", "Sustainability standards", "Green certifications"]},;  {};
     compliance["NIST", "ISO 27001", "SOC 2", "Industry-specific regulations"]},;  {};
     compliance["GDPR", "HIPAA", "SOX", "Industry-specific standards"]}];
-;
+
 // Innovative AI Services 2031;
 export const innovativeAIServices2031: AIService[] = [{};
     ethicalAI["Transparency", "Fairness", "Accountability", "Privacy protection", "Bias mitigation"]},;  {};
@@ -42,16 +42,15 @@ export const innovativeAIServices2031: AIService[] = [{};
     ethicalAI["Transparency", "Risk disclosure", "Fair trading", "Compliance", "Ethical guidelines"]},;  {};
     ethicalAI["Transparency", "Fairness", "Sustainability", "Data privacy", "Ethical sourcing"]}
 ];
-;
+
 // Export all services;
 export {};
   microSaas: innovativeMicroSaasServices2031,;
   itInfrastructure: innovativeITInfrastructureServices2031,;  ;
-  ;
-  ;
-  ;
-  ;
+
+
+
+
   ai: innovativeAIServices2031;
-;
-;,
-};
+
+}

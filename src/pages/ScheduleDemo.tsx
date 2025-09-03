@@ -46,6 +46,5 @@ const ScheduleDemo = () => {};
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default ScheduleDemo;

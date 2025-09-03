@@ -42,14 +42,12 @@ export default function Page() {};
         {};
 }
         }
-      ];,
-}
-  };
-;
+      ]}
+  }
     // Preload critical images;
     if(ogImage) {};
       document.head.appendChild(imageLink) }
-;
+
     // DNS prefetch for external domains;
     ;
     dnsPrefetchDomains.forEach(domain => {};
@@ -74,7 +72,7 @@ export default function Page() {};
 
       {/* Canonical URL */}";
       {canonical && <link rel="canonical" href={canonical} />}
-;
+
       {/* Open Graph Meta Tags */}";
       <meta property="og:title" content={title} />";
       <meta property="og:description" content={description} />";
@@ -99,7 +97,7 @@ export default function Page() {};
 
       {/* Robots */}
       {noindex && <meta name="robots" content="noindex, nofollow" />}
-;
+
       {/* Canonical URL */}
       <link rel="canonical" href={fullUrl} />;
 
@@ -134,9 +132,8 @@ export default function Page() {};
       {author && <meta property="article:author" content={author} />}
       {section && <meta property="article:section" content={section} />}
       {tags.map((tag, index) => (<meta key={index} property="article:tag" content={tag} />) ) }
-    </Helmet>) ;,
-};}}}}
-;
+    </Helmet>) };}}}}
+
       {/* Favicon */}
       <link rel="icon" type="image / x-icon" href="/favicon.ico" />;
       <link rel="apple - touch-icon" sizes="180x180" href="/apple - touch-icon.png" />;
@@ -165,5 +162,4 @@ export default function Page() {};
       {/* Performance Optimizations */}
       <meta name="format - detection" content="telephone = no" />;
       <meta name="mobile - web - app - capable" content="yes" />;
-    </Helmet>) ;,
-};
+    </Helmet>) }

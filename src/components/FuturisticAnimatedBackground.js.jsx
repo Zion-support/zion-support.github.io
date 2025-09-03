@@ -10,8 +10,7 @@ export const FuturisticAnimatedBackground = ({};
     const resizeCanvas = () => {};
 };
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;,
-};
+      canvas.height = window.innerHeight}
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Particle system;
@@ -47,7 +46,6 @@ export const FuturisticAnimatedBackground = ({};
   return ();
     <div>Broken JSX</div>
     />;
-  );,
-};
+  )}
 export default FuturisticAnimatedBackground;
 '`;

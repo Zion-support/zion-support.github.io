@@ -152,8 +152,7 @@ export {};
                     ))}
                   </ul>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -256,16 +255,11 @@ export {};
           </div>;
         </div>;
       </section>;
-    </div>);,
-}
-;
+    </div>)}
 
-export { EnterpriseSolutions, Icon };
-;
-export { EnterpriseSolutions, Icon };
-;
-export { EnterpriseSolutions, Icon };
-;
-export { EnterpriseSolutions, Icon };
-;
-export { EnterpriseSolutions, Icon };
+
+export { EnterpriseSolutions, Icon }
+export { EnterpriseSolutions, Icon }
+export { EnterpriseSolutions, Icon }
+export { EnterpriseSolutions, Icon }
+export { EnterpriseSolutions, Icon }

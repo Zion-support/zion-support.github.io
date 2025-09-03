@@ -161,12 +161,9 @@ export default function Page() {};
           </div>;
         </div>;
       </div>)}
-;
 
-export { CommunityProfilePage };
-;
-export { CommunityProfilePage };
-;
-export { CommunityProfilePage };
-;
-export { CommunityProfilePage };
+
+export { CommunityProfilePage }
+export { CommunityProfilePage }
+export { CommunityProfilePage }
+export { CommunityProfilePage }

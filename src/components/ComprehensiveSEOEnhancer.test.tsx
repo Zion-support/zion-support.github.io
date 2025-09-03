@@ -9,7 +9,5 @@ describe(&apos;ComprehensiveSEOEnhancer&apos, () => {};
 }
     // comment;
     render(<ComprehensiveSEOEnhancer / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

@@ -222,16 +222,12 @@ const AIAutonomousFinance = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default AIAutonomousFinance;
-;
 
-export { AIAutonomousFinance };
-;
-export { AIAutonomousFinance };
-;
-export { AIAutonomousFinance };
-;
-export { AIAutonomousFinance };
-;
-export { AIAutonomousFinance };
+
+export { AIAutonomousFinance }
+export { AIAutonomousFinance }
+export { AIAutonomousFinance }
+export { AIAutonomousFinance }
+export { AIAutonomousFinance }

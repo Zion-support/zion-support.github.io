@@ -1,17 +1,16 @@
 import { MicroSaasService  } from "./enhanced-real-micro-saas-services";
-const contact = {;
+const contact = {
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709";
-  ;
-  ;
-  ;
-  ;
-  website: "https://ziontechgroup.com";,;,
-}
+
+
+
+
+  website: "https://ziontechgroup.com"}
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services;
-  {;
+  {
     id: "quantum-computing-as-a-service",;
     name: "Quantum Computing as a Service",;
     tagline: "Access to quantum computing power for complex problem solving and optimization",;
@@ -55,10 +54,9 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     launchDate: "2025-01-10",;
     customers: 8,;
     rating: 4.9,;
-    reviews: 6;,;,
-},;
+    reviews: 6},;
   // Blockchain & Web3 Services;
-  {;
+  {
     id: "enterprise-blockchain-platform",;
     name: "Enterprise Blockchain Platform",;
     tagline: "Scalable blockchain solutions for enterprise applications and DeFi protocols",;
@@ -102,10 +100,9 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     launchDate: "2025-01-15",;
     customers: 15,;
     rating: 4.8,;
-    reviews: 12;,;,
-},;
+    reviews: 12},;
   // Space Technology Services;
-  {;
+  {
     id: "space-data-analytics-platform",;
     name: "Space Data Analytics Platform",;
     tagline: "Satellite data analysis and space technology insights for commercial applications",;
@@ -149,10 +146,9 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     launchDate: "2025-01-20",;
     customers: 12,;
     rating: 4.9,;
-    reviews: 9;,;,
-},;
+    reviews: 9},;
   // Internet of Things (IoT) Services;
-  {;
+  {
     id: "enterprise-iot-platform",;
     name: "Enterprise IoT Platform",;
     tagline: "Scalable IoT platform for connected devices, edge computing, and data analytics",;
@@ -196,10 +192,9 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     launchDate: "2025-01-25",;
     customers: 28,;
     rating: 4.7,;
-    reviews: 22;,;,
-},;
+    reviews: 22},;
   // Augmented Reality & Virtual Reality Services;
-  {;
+  {
     id: "enterprise-ar-vr-platform",;
     name: "Enterprise AR/VR Platform",;
     tagline: "Immersive technology solutions for training, design, and customer engagement",;
@@ -243,10 +238,9 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     launchDate: "2025-02-01",;
     customers: 19,;
     rating: 4.8,;
-    reviews: 15;,;,
-},;
+    reviews: 15},;
   // Autonomous Systems & Robotics Services;
-  {;
+  {
     id: "autonomous-systems-platform",;
     name: "Autonomous Systems Platform",;
     tagline: "AI-powered autonomous systems for robotics, drones, and autonomous vehicles",;
@@ -290,10 +284,9 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     launchDate: "2025-02-05",;
     customers: 11,;
     rating: 4.9,;
-    reviews: 8;,;,
-},;
+    reviews: 8},;
   // Biotechnology & Synthetic Biology Services;
-  {;
+  {
     id: "synthetic-biology-platform",;
     name: "Synthetic Biology Platform",;
     tagline: "AI-powered synthetic biology platform for drug discovery and bioengineering",;
@@ -337,10 +330,9 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     launchDate: "2025-02-10",;
     customers: 7,;
     rating: 4.9,;
-    reviews: 5;,;,
-},;
+    reviews: 5},;
   // Energy & Sustainability Services;
-  {;
+  {
     id: "smart-energy-management-platform",;
     name: "Smart Energy Management Platform",;
     tagline: "AI-powered energy optimization for renewable energy and smart grid management",;
@@ -384,10 +376,9 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     launchDate: "2025-02-15",;
     customers: 16,;
     rating: 4.8,;
-    reviews: 13;,;,
-},;
+    reviews: 13},;
   // Transportation & Mobility Services;
-  {;
+  {
     id: "intelligent-transportation-platform",;
     name: "Intelligent Transportation Platform",;
     tagline: "AI-powered transportation optimization for smart cities and logistics",;
@@ -431,10 +422,9 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     launchDate: "2025-02-20",;
     customers: 14,;
     rating: 4.8,;
-    reviews: 11;,;,
-},;
+    reviews: 11},;
   // Cybersecurity & Privacy Services;
-  {;
+  {
     id: "quantum-cybersecurity-platform",;
     name: "Quantum Cybersecurity Platform",;
     tagline: "Post-quantum cryptography and quantum-resistant security solutions",;

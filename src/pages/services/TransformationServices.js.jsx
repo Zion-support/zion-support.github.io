@@ -33,17 +33,12 @@ const TransformationServices = () => {}
         </div>;
       </section>;
     </div>;
-  );,
-};
+  )}
 export default TransformationServices;
-;
 
-export { TransformationServices };
-;
-export { TransformationServices };
-;
-export { TransformationServices };
-;
-export { TransformationServices };
-;
-export { TransformationServices };
+
+export { TransformationServices }
+export { TransformationServices }
+export { TransformationServices }
+export { TransformationServices }
+export { TransformationServices }

@@ -222,7 +222,7 @@ const ServicesOverview = () => {};
             <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>;
             <p className="text-xl text-gray-300">Contact us today for a free consultation</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             <div className="text-center">;
               <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />;
@@ -264,7 +264,5 @@ const ServicesOverview = () => {};
         </div>;
       </footer>;
     </div>;
-  );,
-};
-;
+  )}
 export default ServicesOverview;

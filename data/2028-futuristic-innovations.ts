@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface Futuristic2028Service {;
+export interface Futuristic2028Service {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface Futuristic2028Service {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface Futuristic2028Service {;
   rating: number;
 export const futuristic2028Services: Futuristic2028Service[] = [;
   // AI-Powered Climate Prediction Platform;
-  {;
+  {
     id: "ai-climate-prediction-platform",;
     name: "AI Climate Prediction Platform",;
     tagline: "Predict climate changes with 99.9% accuracy using AI",;
@@ -76,21 +76,19 @@ export const futuristic2028Services: Futuristic2028Service[] = [;
     marketSize: "$8.5B weather forecasting market",;
     growthRate: "25% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Full AI climate prediction system with real-time data processing, machine learning models, and comprehensive reporting tools. Includes mobile apps and API access.",;
     launchDate: "2028-01-15",;
     customers: 150,;
     rating: 4.8,;
-    reviews: 89;,;,
-},;
+    reviews: 89},;
   // Quantum Cybersecurity Firewall;
-  {;
+  {
     id: "quantum-cybersecurity-firewall",;
     name: "Quantum Cybersecurity Firewall",;
     tagline: "Unbreakable quantum encryption for enterprise security",;
@@ -128,21 +126,19 @@ export const futuristic2028Services: Futuristic2028Service[] = [;
     marketSize: "$45B cybersecurity market",;
     growthRate: "35% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete quantum cybersecurity platform with quantum key distribution, post-quantum cryptography, and AI-powered threat detection. Includes enterprise integration and compliance tools.",;
     launchDate: "2028-02-01",;
     customers: 75,;
     rating: 4.9,;
-    reviews: 52;,;,
-},;
+    reviews: 52},;
   // Autonomous Drone Delivery Network;
-  {;
+  {
     id: "autonomous-drone-delivery-network",;
     name: "Autonomous Drone Delivery Network",;
     tagline: "Revolutionary last-mile delivery with AI-powered drones",;
@@ -180,21 +176,19 @@ export const futuristic2028Services: Futuristic2028Service[] = [;
     marketSize: "$12B drone delivery market",;
     growthRate: "45% annual growth",;
     variant: "ai-autonomous",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete autonomous drone delivery system with AI navigation, computer vision, and fleet management. Includes customer apps and business analytics.",;
     launchDate: "2028-01-20",;
     customers: 200,;
     rating: 4.7,;
-    reviews: 156;,;,
-},;
+    reviews: 156},;
   // AI-Powered Healthcare Diagnosis;
-  {;
+  {
     id: "ai-healthcare-diagnosis-platform",;
     name: "AI Healthcare Diagnosis Platform",;
     tagline: "Revolutionary medical diagnosis with 95% accuracy",;
@@ -232,21 +226,19 @@ export const futuristic2028Services: Futuristic2028Service[] = [;
     marketSize: "$67B AI healthcare market",;
     growthRate: "40% annual growth",;
     variant: "ai-healthcare",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete AI healthcare diagnosis platform with medical image analysis, symptom assessment, and treatment recommendations. Includes compliance tools and analytics.",;
     launchDate: "2028-01-10",;
     customers: 120,;
     rating: 4.9,;
-    reviews: 78;,;,
-},;
+    reviews: 78},;
   // Smart City Infrastructure Management;
-  {;
+  {
     id: "smart-city-infrastructure-management",;
     name: "Smart City Infrastructure Management",;
     tagline: "Intelligent urban infrastructure with IoT and AI",;
@@ -284,21 +276,19 @@ export const futuristic2028Services: Futuristic2028Service[] = [;
     marketSize: "$25B smart city market",;
     growthRate: "30% annual growth",;
     variant: "iot-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete smart city platform with IoT sensors, AI analytics, and real-time monitoring. Includes citizen engagement tools and predictive maintenance.",;
     launchDate: "2028-02-15",;
     customers: 45,;
     rating: 4.8,;
-    reviews: 32;,;,
-},;
+    reviews: 32},;
   // Quantum Financial Trading Platform;
-  {;
+  {
     id: "quantum-financial-trading-platform",;
     name: "Quantum Financial Trading Platform",;
     tagline: "Quantum-powered trading with millisecond precision",;
@@ -336,21 +326,19 @@ export const futuristic2028Services: Futuristic2028Service[] = [;
     marketSize: "$35B algorithmic trading market",;
     growthRate: "50% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete quantum trading platform with quantum market analysis, real-time predictions, and high-frequency trading capabilities. Includes risk management and compliance tools.",;
     launchDate: "2028-01-25",;
     customers: 85,;
     rating: 4.9,;
-    reviews: 67;,;,
-},;
+    reviews: 67},;
   // AI-Powered Education Platform;
-  {;
+  {
     id: "ai-education-platform",;
     name: "AI Education Platform",;
     tagline: "Personalized learning with artificial intelligence",;
@@ -388,21 +376,19 @@ export const futuristic2028Services: Futuristic2028Service[] = [;
     marketSize: "$18B AI education market",;
     growthRate: "35% annual growth",;
     variant: "ai-education",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete AI education platform with personalized learning, AI tutoring, and adaptive assessments. Includes analytics and mobile apps.",;
     launchDate: "2028-02-01",;
     customers: 300,;
     rating: 4.8,;
-    reviews: 245;,;,
-},;
+    reviews: 245},;
   // Autonomous Manufacturing AI;
-  {;
+  {
     id: "autonomous-manufacturing-ai",;
     name: "Autonomous Manufacturing AI",;
     tagline: "Self-optimizing factories with artificial intelligence",;
@@ -440,21 +426,19 @@ export const futuristic2028Services: Futuristic2028Service[] = [;
     marketSize: "$30B smart manufacturing market",;
     growthRate: "40% annual growth",;
     variant: "ai-autonomous",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete autonomous manufacturing platform with AI optimization, predictive maintenance, and quality control. Includes analytics and mobile management.",;
     launchDate: "2028-01-30",;
     customers: 95,;
     rating: 4.8,;
-    reviews: 73;,;,
-},;
+    reviews: 73},;
   // Quantum Internet Security Gateway;
-  {;
+  {
     id: "quantum-internet-security-gateway",;
     name: "Quantum Internet Security Gateway",;
     tagline: "Unbreakable internet security with quantum encryption",;
@@ -492,12 +476,11 @@ export const futuristic2028Services: Futuristic2028Service[] = [;
     marketSize: "$45B cybersecurity market",;
     growthRate: "35% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete quantum internet security platform with quantum encryption, threat detection, and secure communications. Includes compliance tools and analytics.",;
     launchDate: "2028-02-10",;

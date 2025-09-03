@@ -3,20 +3,19 @@ export default function Page() {};
   return null;
 }
   // Intersection Observer for lazy loading      }) ;
-;
+
     observerRef.current.observe(imgRef.current) ;
 ;
     return () => {};
         observerRef.current.disconnect()}
     }}, [priority, lazy]) ;
-;
+
   // Handle image load;
-  ;
+
     setIsLoaded(true) ;
-    onLoad?.() };
-;
+    onLoad?.() }
   // Handle image error;
-  ;
+
       setHasError(false);
       setIsLoading(true)} else {};
       onError?.(new Error(`Failed to load image: unknown${src}`))}
@@ -29,7 +28,7 @@ export default function Page() {};
     return () => {};
         observerRef.current.disconnect()}
     }}, []) ;
-;
+
   // Generate optimized src with quality parameter;
   const getOptimizedSrc = (src: unknownstring) => {};
 }
@@ -39,10 +38,9 @@ export default function Page() {};
       url.searchParams.set('quality', quality.toString());
       return url.toString()} catch {};
       return src}
-  };
-;
+  }
   // Base classes;
-  ;
+
   // Loading skeleton;
   if(!isIntersecting) {};
       </div>) }

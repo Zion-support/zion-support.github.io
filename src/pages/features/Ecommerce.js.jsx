@@ -17,7 +17,7 @@ export {};
     name: 'E-commerce Platform',''';
     description:'''';
       'Sell or purchase AI solutions and IT equipment through our secure marketplace.',''';
-    url: 'https://app.ziontechgroup.com/features/e-commerce'};
+    url: 'https://app.ziontechgroup.com/features/e-commerce'}
   return();
     <>;
       <div>Broken JSX</div>
@@ -77,14 +77,10 @@ export {};
       </main>;
       <Footer />;
     </>)}
-;
 
-export { Ecommerce };
-;
-export { Ecommerce };
-;
-export { Ecommerce };
-;
-export { Ecommerce };
-;
-export { Ecommerce };
+
+export { Ecommerce }
+export { Ecommerce }
+export { Ecommerce }
+export { Ecommerce }
+export { Ecommerce }

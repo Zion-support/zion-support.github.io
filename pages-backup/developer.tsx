@@ -1,14 +1,14 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
+const Component = () => {
   Globe,;
   Database} from "lucide-react";
 
-const Developer: NextPage = () => {;
+const Developer: NextPage = () => {
   const resources = [],";
       link: "/docs"},;
-    {;
+    {
       icon: Code,";
       title: "Code Samples",";
       description: "Ready-to-use code examples and templates",;
@@ -19,7 +19,7 @@ const Developer: NextPage = () => {;
         "Mobile SDKs";
       ],";
       link: "/examples"},;
-    {;
+    {
       icon: Users,";
       title: "Community",";
       description: "Connect with other developers and get support",;
@@ -30,18 +30,16 @@ const Developer: NextPage = () => {;
         "Developer Blog";
       ],";
       link: "/community"}
-;
+
   ];
 
-  const tutorials = [];,
-},;
+  const tutorials = []},;
     {";
       title: "Cloud Deployment Best Practices",";
       description: "Deploy your applications to the cloud with confidence",";
       duration: "25 min read",";
       difficulty: "Intermediate",";
-      tags: ["Cloud", "DevOps", "AWS"];,
-},;
+      tags: ["Cloud", "DevOps", "AWS"]},;
     {";
       title: "Building Scalable APIs",";
       description: "Create robust and scalable API endpoints",";
@@ -49,7 +47,7 @@ const Developer: NextPage = () => {;
       difficulty: "Advanced",";
       tags: ["API", "Node.js", "Performance"];
 
-;
+
   ];
 
   const tools = [];
@@ -106,10 +104,10 @@ const Developer: NextPage = () => {;
                       <li key="{i}" className="flex items-center text-sm text-gray-600">";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />;
                         {feature}
-;
+
                       </li>;
                     ))}
-;
+
                   </ul>";
                   <button className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover: shadow-lg transition-all duration-300">;
                     Explore";
@@ -117,7 +115,7 @@ const Developer: NextPage = () => {;
                   </button>;
                 </div>,;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -139,7 +137,7 @@ const Developer: NextPage = () => {;
                         tutorial.difficulty === "Intermediate" ? "bg-yellow-100 text-yellow-800" :">;
                         "bg-red-100 text-red-800"}"}>;
                         {tutorial.difficulty}
-;
+
                       </span>";
                       <span className=""text-sm" text-gray-500"}>{tutorial.duration}</span>;
                     </div>";
@@ -149,10 +147,10 @@ const Developer: NextPage = () => {;
                       {tutorial.tags.map((tag, i) => (";
                         <span key="{i}" className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">;
                           {tag}
-;
+
                         </span>;
                       ))}
-;
+
                     </div>";
                     <button className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover: shadow-lg transition-all duration-300">;
                       Read Tutorial";
@@ -161,7 +159,7 @@ const Developer: NextPage = () => {;
                   </div>;
                 </div>,;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -187,7 +185,7 @@ const Developer: NextPage = () => {;
                   </button>;
                 </div>,;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -249,5 +247,5 @@ const Developer: NextPage = () => {;
       </Layout>;
     </>,;
   )}
-;
+
 "export default Developer

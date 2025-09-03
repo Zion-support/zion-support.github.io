@@ -7,55 +7,47 @@ const AIAutonomousBusinessOperations = () => {}
         {}
             title: "Process Automation","";
             description: "AI-powered automation of repetitive business processes","";
-            icon: "⚙️";,
-},;
+            icon: "⚙️"},;
         {}
 ";
 "";
             title: "Decision Support","";
             description: "Intelligent decision-making assistance and recommendations","";
-            icon: "🧠";,
-},;
+            icon: "🧠"},;
         {}
 ";
 "";
             title: "Resource Optimization","";
             description: "AI-driven optimization of business resources and operations","";
-            icon: "📊";,
-},;
+            icon: "📊"},;
         {}
 ";
 "";
             title: "Predictive Analytics","";
             description: "Forecast trends and optimize business performance","";
-            icon: "🔮";,
-}
+            icon: "🔮"}
     ];
     const businessAreas = [];
         {}
 ";
 "";
             category: "Operations Management","";
-            capabilities["Process optimization", "Workflow automation", "Quality control", "Performance monitoring"];,
-},;
+            capabilities["Process optimization", "Workflow automation", "Quality control", "Performance monitoring"]},;
         {}
 ";
 "";
             category: "Financial Operations","";
-            capabilities["Budget optimization", "Cost analysis", "Revenue forecasting", "Risk management"];,
-},;
+            capabilities["Budget optimization", "Cost analysis", "Revenue forecasting", "Risk management"]},;
         {}
 ";
 "";
             category: "Human Resources","";
-            capabilities["Talent acquisition", "Performance evaluation", "Training optimization", "Workforce planning"];,
-},;
+            capabilities["Talent acquisition", "Performance evaluation", "Training optimization", "Workforce planning"]},;
         {}
 ";
 "";
             category: "Customer Operations","";
-            capabilities["Customer service automation", "Support ticket routing", "Feedback analysis", "Customer journey optimization"];,
-}
+            capabilities["Customer service automation", "Support ticket routing", "Feedback analysis", "Customer journey optimization"]}
     ];
     const useCases = [];
         {}
@@ -63,29 +55,25 @@ const AIAutonomousBusinessOperations = () => {}
 "";
             title: "Manufacturing","";
             description: "Optimize production processes and quality control","";
-            icon: "🏭";,
-},;
+            icon: "🏭"},;
         {}
 ";
 "";
             title: "Retail","";
             description: "Inventory management and customer experience optimization","";
-            icon: "🛍️";,
-},;
+            icon: "🛍️"},;
         {}
 ";
 "";
             title: "Healthcare","";
             description: "Patient care optimization and resource management","";
-            icon: "🏥";,
-},;
+            icon: "🏥"},;
         {}
 ";
 "";
             title: "Finance","";
             description: "Risk assessment and portfolio optimization","";
-            icon: "💼";,
-}
+            icon: "💼"}
     ];
     const benefits = [];
         {}
@@ -93,29 +81,25 @@ const AIAutonomousBusinessOperations = () => {}
 "";
             title: "Efficiency Gains","";
             description: "Improve operational efficiency by 40%","";
-            metric: "40%";,
-},;
+            metric: "40%"},;
         {}
 ";
 "";
             title: "Cost Reduction","";
             description: "Reduce operational costs through optimization","";
-            metric: "30%";,
-},;
+            metric: "30%"},;
         {}
 ";
 "";
             title: "Error Reduction","";
             description: "Minimize human errors in business processes","";
-            metric: "90%";,
-},;
+            metric: "90%"},;
         {}
 ";
 "";
             title: "Scalability","";
             description: "Easily scale operations as business grows","";
-            metric: "Unlimited";,
-}";
+            metric: "Unlimited"}";
     ];"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"";
       <section className="py-20 px-4 sm:px-6 lg:px-8">"";
@@ -276,16 +260,12 @@ const AIAutonomousBusinessOperations = () => {}
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default AIAutonomousBusinessOperations;
-;
 
-export { AIAutonomousBusinessOperations };
-;
-export { AIAutonomousBusinessOperations };
-;
-export { AIAutonomousBusinessOperations };
-;
-export { AIAutonomousBusinessOperations };
-;
-export { AIAutonomousBusinessOperations };
+
+export { AIAutonomousBusinessOperations }
+export { AIAutonomousBusinessOperations }
+export { AIAutonomousBusinessOperations }
+export { AIAutonomousBusinessOperations }
+export { AIAutonomousBusinessOperations }

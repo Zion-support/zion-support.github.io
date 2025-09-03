@@ -66,10 +66,8 @@ const ComponentLibrary: React.FC = () => {};
       case 'feedback':;
         return <div className={getAlertClasses(component.variant)}>{component.name}</div>;
       default:;
-        return null;,
-}
-  };
-;
+        return null}
+  }
   return (;
     <div className="min-h-screen bg-gray-50">;
       <Head>;
@@ -130,21 +128,21 @@ const ComponentLibrary: React.FC = () => {};
                       Use components consistently across your application to maintain visual harmony and improve user experience.;
                     </p>;
                   </div>;
-                  ;
+
                   <div className="bg-green-50 p-4 rounded-lg">;
                     <h3 className="font-medium text-green-800 mb-2">Accessibility</h3>;
                     <p className="text-green-700 text-sm">;
                       All components are built with accessibility in mind, including proper ARIA labels and keyboard navigation.;
                     </p>;
                   </div>;
-                  ;
+
                   <div className="bg-purple-50 p-4 rounded-lg">;
                     <h3 className="font-medium text-purple-800 mb-2">Customization</h3>;
                     <p className="text-purple-700 text-sm">;
                       Components can be customized using Tailwind CSS classes or by extending the base component classes.;
                     </p>;
                   </div>;
-                  ;
+
                   <div className="bg-orange-50 p-4 rounded-lg">;
                     <h3 className="font-medium text-orange-800 mb-2">Responsive Design</h3>;
                     <p className="text-orange-700 text-sm">;
@@ -173,7 +171,5 @@ const ComponentLibrary: React.FC = () => {};
         </div>;
       </div>;
     </div>;
-  );,
-};
-;
+  )}
 export default ComponentLibrary;

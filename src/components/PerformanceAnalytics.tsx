@@ -23,9 +23,8 @@ export default function Page() {};
       default: return <Activity className="w-4 h-4 text-blue-400"  />};
 ;
     setIsMonitoring(true) ;
-    setPerformanceData(generateMockData () ) };
-;
-    setIsMonitoring(false) };
+    setPerformanceData(generateMockData () ) }
+    setIsMonitoring(false) }
   return (";
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-6">";
       <div className="max-w-7xl mx-auto">;
@@ -85,7 +84,7 @@ export default function Page() {};
                 </div>;
               </motion.div>) ) }
           </motion.div>) }
-;
+
         {/* Alerts and Recommendations */}
         {};
             {/* Alerts */}";
@@ -118,7 +117,7 @@ export default function Page() {};
               </div>;
             </div>;
           </motion.div>) }
-;
+
         {/* Performance Chart Placeholder */}
         <div>Broken JSX</div>
           className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-xl p - 8 text-center">;
@@ -137,9 +136,8 @@ export default function Page() {};
                 Last updated: {new Date(performanceData.timestamp).toLocaleTimeString()};
               </span>;
             </div>;
-          </motion.div>;) };
+          </motion.div>;) }
       </div>;
     </div>;) ;
-</div>};
-;
+</div>}
 export default PerformanceAnalytics}}}}}}}}'"`;

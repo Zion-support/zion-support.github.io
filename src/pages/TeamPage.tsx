@@ -18,7 +18,7 @@ export function TeamPage() {};
     {};
 }
   ];
-;
+
   const teamStats = [;
     {};
 },;
@@ -29,7 +29,7 @@ export function TeamPage() {};
     {};
 }
   ];
-;
+
   const values = [;
     {};
 },;
@@ -44,7 +44,7 @@ export function TeamPage() {};
     {};
 }
   ];
-;
+
   const departments = [;
     {};
 },;
@@ -55,7 +55,7 @@ export function TeamPage() {};
     {};
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -69,7 +69,7 @@ export function TeamPage() {};
               A diverse group of passionate technologists, innovators, and problem-solvers ;
               dedicated to transforming businesses through cutting-edge technology.;
             </p>;
-            ;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <div>Broken JSX</div>
                 className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">;
@@ -185,7 +185,7 @@ export function TeamPage() {};
                     <p className="text-sm text-zion-cyan">{dept.teamSize}</p>;
                   </div>;
                 </div>;
-                ;
+
                 <p className="text-zion-slate-light mb-4 leading-relaxed">;
                   {dept.description}
                 </p>;
@@ -246,7 +246,7 @@ export function TeamPage() {};
                 At Zion Tech Group, we foster a culture of innovation, collaboration, and continuous learning. ;
                 We believe that great technology comes from great people working together toward a common vision.;
               </p>;
-              ;
+
               <div className="space-y-4">;
                 <div className="flex items-center space-x-3">;
                   <CheckCircle className="w-5 h-5 text-zion-cyan" />;
@@ -320,7 +320,6 @@ export function TeamPage() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
+
 export default TeamPage;

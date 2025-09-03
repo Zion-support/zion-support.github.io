@@ -9,7 +9,5 @@ describe(&apos;ContactForm&apos, () => {};
 }
     // comment;
     render(<ContactForm / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

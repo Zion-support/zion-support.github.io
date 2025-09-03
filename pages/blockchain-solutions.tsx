@@ -12,7 +12,7 @@ const BlockchainSolutions: NextPage = () => {};
     {};
 }
   ];
-;
+
   return (;
     <>;
       <Head>;
@@ -125,6 +125,5 @@ const BlockchainSolutions: NextPage = () => {};
         </section>;
       </Layout>;
     </>;
-  )};
-;
+  )}
 export default BlockchainSolutions;

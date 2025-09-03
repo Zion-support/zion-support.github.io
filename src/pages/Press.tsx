@@ -46,6 +46,5 @@ const Press = () => {};
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default Press;

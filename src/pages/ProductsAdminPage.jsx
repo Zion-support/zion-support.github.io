@@ -34,8 +34,7 @@ export {};
               status: p.status === 'approved' ? 'rejected' : 'approved'}
           : p;
       );
-    );,
-};
+    )}
   return();
     <AdminLayout>;
       <div className="space-y-4">"";
@@ -74,14 +73,10 @@ export {};
         </div>;
       </div>;
     </AdminLayout>)}
-;
 
-export { ProductsAdminPage };
-;
-export { ProductsAdminPage };
-;
-export { ProductsAdminPage };
-;
-export { ProductsAdminPage };
-;
-export { ProductsAdminPage };
+
+export { ProductsAdminPage }
+export { ProductsAdminPage }
+export { ProductsAdminPage }
+export { ProductsAdminPage }
+export { ProductsAdminPage }

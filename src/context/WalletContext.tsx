@@ -47,7 +47,7 @@ export default function Page() {};
   const displayAddress = wallet.address;
     ? `${wallet.address.substring(0, 6)}...${wallet.address.substring(wallet.address.length-4)}`;
     : null;
-;
+
   return (<WalletContext.Provider value={{ ...wallet, connectWallet, disconnectWallet, displayAddress }}>;
       {children}
     </WalletContext.Provider>;

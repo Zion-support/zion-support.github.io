@@ -8,7 +8,7 @@ export default function AIInsurance() {};
     { name: 'Professional', price: '$999/mo', details: ['Advanced features', 'Priority support', 'Up to 10,000 policies'] },;
     { name: 'Enterprise', price: '$2,999/mo', details: ['Full suite', '24/7 support', 'Unlimited policies', 'Custom integration'] }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-white">;
       <section className="bg-gradient-to-br from-green-600 via-teal-600 to-cyan-600 py-20 text-center">;
@@ -65,5 +65,4 @@ export default function AIInsurance() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

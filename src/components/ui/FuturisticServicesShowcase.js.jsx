@@ -13,8 +13,7 @@ const services = [];
         color: 'from-purple-500 to-pink-500',''';
         price: '$199/month',''';
         features['AI Code Review',Testing Automation',DevOps Intelligence',Security Automation'],;
-        popular: true;,
-},;
+        popular: true},;
     {}
 ';
         id: 'micro-saas',';
@@ -23,8 +22,7 @@ const services = [];
         icon: <Zap className="w-8 h-8"/>,';
         color: 'from-cyan-500 to-blue-500',';
         price: '$99/month',';
-        features['Custom Development',API Integration',Cloud Deployment',24/7 Support'];,
-},;
+        features['Custom Development',API Integration',Cloud Deployment',24/7 Support']},;
     {}
 ';
         id: 'cloud-infrastructure',';
@@ -33,8 +31,7 @@ const services = [];
         icon: <Globe className="w-8 h-8"/>,';
         color: 'from-green-500 to-emerald-500',';
         price: '$299/month',';
-        features['AWS/Azure/GCP',Container Orchestration',Serverless Architecture',Disaster Recovery'];,
-},;
+        features['AWS/Azure/GCP',Container Orchestration',Serverless Architecture',Disaster Recovery']},;
     {}
 ';
         id: 'cybersecurity',';
@@ -43,8 +40,7 @@ const services = [];
         icon: <Shield className="w-8 h-8"/>,';
         color: 'from-red-500 to-pink-500',';
         price: '$399/month',';
-        features['Threat Detection',Penetration Testing',Compliance Auditing',Incident Response'];,
-},;
+        features['Threat Detection',Penetration Testing',Compliance Auditing',Incident Response']},;
     {}
 ';
         id: 'quantum-computing',';
@@ -53,8 +49,7 @@ const services = [];
         icon: <Rocket className="w-8 h-8"/>,';
         color: 'from-indigo-500 to-purple-500',';
         price: '$599/month',';
-        features['Quantum Algorithms',Optimization Problems',Cryptography',Research Support'];,
-},;
+        features['Quantum Algorithms',Optimization Problems',Cryptography',Research Support']},;
     {}
 ';
         id: 'blockchain-web3',';
@@ -63,8 +58,7 @@ const services = [];
         icon: <Star className="w-8 h-8"/>,';
         color: 'from-yellow-500 to-orange-500',';
         price: '$249/month',';
-        features['Smart Contracts',DeFi Platforms',NFT Marketplaces',DAO Governance'];,
-}
+        features['Smart Contracts',DeFi Platforms',NFT Marketplaces',DAO Governance']}
 ];
 export { function };
 export {};
@@ -204,14 +198,10 @@ export {};
         </motion.div>;
       </div>;
     </section>)}
-;
 
-export { FuturisticServicesShowcase };
-;
-export { FuturisticServicesShowcase };
-;
-export { FuturisticServicesShowcase };
-;
-export { FuturisticServicesShowcase };
-;
-export { FuturisticServicesShowcase };
+
+export { FuturisticServicesShowcase }
+export { FuturisticServicesShowcase }
+export { FuturisticServicesShowcase }
+export { FuturisticServicesShowcase }
+export { FuturisticServicesShowcase }

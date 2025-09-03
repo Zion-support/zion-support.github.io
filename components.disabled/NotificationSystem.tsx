@@ -1,4 +1,4 @@
-import React, {;
+import React, {
 
   useState,;
   useEffect,;
@@ -6,107 +6,94 @@ import React, {;
   useContext,;
   useCallback} from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-;
+
 export type NotificationType = 'success' | 'error' | 'warning' | 'info';
-;
-export interface Notification {;
+
+export interface Notification {
 
   id: string;
   type: NotificationType;
   title: string;
   message: string;
   duration?: number;
-  action?: {;
+  action?: {
 
     label: string;
     onClick: : unknown void;
-  ;,
-};
-  dismissible?: boolean;,
-}
-;
-interface NotificationContextType {;
+  }
+  dismissible?: boolean}
+
+interface NotificationContextType {
 
   notifications: Notification[];
   addNotification: (notification: Omit<Notification,id'>) => void;
   removeNotification: (id: string) => void;
-  clearAll: () => void;,
-}
-;
+  clearAll: () => void}
+
 const NotificationContext = createContext<NotificationContextType | undefined>(;
   undefined;
 );
-;
-export const useNotifications = () => {;
+
+export const useNotifications = () => {
 
   const context = useContext(NotificationContext);
-  if (!context) {;
+  if (!context) {
 
     throw new Error(';
       'useNotifications must be used within a NotificationProvider';
-    );,
-}
-  return context;,
-};
-;
-interface NotificationProviderProps {;
+    )}
+  return context}
+interface NotificationProviderProps {
 
   // Add your props here;
 
-;
+
   children: React.ReactNode;
   maxNotifications?: number;
-;
+
 export function NotificationProvider({;
 
   children,;
-  maxNotifications = 5}: NotificationProviderProps) {;
+  maxNotifications = 5}: NotificationProviderProps) {
 
   const [notifications, setNotifications] = useState<Notification[]>([]);
-;
-  const removeNotification = useCallback((id: string) => {;
 
-    setNotifications(prev => prev.filter(n => n.id !== id));,
-}, []);
-;
+  const removeNotification = useCallback((id: string) => {
+
+    setNotifications(prev => prev.filter(n => n.id !== id))}, []);
+
   const addNotification = useCallback(';
-    (notification: Omit<Notification,id'>) => {;
+    (notification: Omit<Notification,id'>) => {
 
       const id = Math.random().toString(36).substr(2, 9);
-      const newNotification: Notification = {;
+      const newNotification: Notification = {
 
         id,;
         duration: 5000,;
         dismissible: true,;
-        ...notification};
-;
-      setNotifications(prev => {;
+        ...notification}
+      setNotifications(prev => {
 
         const updated = [newNotification, ...prev];
-        if (updated.length > maxNotifications) {;
+        if (updated.length > maxNotifications) {
 
-          return updated.slice(0, maxNotifications);,
-}
-        return updated;,
-});
-;
+          return updated.slice(0, maxNotifications)}
+        return updated});
+
       // Auto-dismiss;
-      if (newNotification.duration && newNotification.duration > 0) {;
+      if (newNotification.duration && newNotification.duration > 0) {
 
-        setTimeout(() => {;
+        setTimeout(() => {
 
-          removeNotification(id);,
-}, newNotification.duration);,
-}
+          removeNotification(id)}, newNotification.duration)}
     },;
     [maxNotifications, removeNotification];
   );
-;
-  const clearAll = useCallback(: unknown {;
 
-    setNotifications([]);,
-}, []);
-;
+  const clearAll = useCallback(: unknown {
+
+    setNotifications([])}, []);
+
   return();
     <NotificationContext.Provider;
       value={{ notifications, addNotification, removeNotification, clearAll }}
@@ -114,15 +101,14 @@ export function NotificationProvider({;
       {children}
       <NotificationContainer />;
     </NotificationContext.Provider>;
-  );,
-}
-;
-function NotificationContainer(...args: unknown[]): unknown {;
+  )}
+
+function NotificationContainer(...args: unknown[]): unknown {
 
   const { notifications, removeNotification, clearAll } = useNotifications();
-;
+
   if (notifications.length === 0) return null;
-;
+
   return();
     <div className="fixed top-4 right-4 z-50 space-y-2 max-w-sm">;
       <AnimatePresence>;
@@ -146,22 +132,21 @@ function NotificationContainer(...args: unknown[]): unknown {;
         </motion.button>;
       )}
     </div>;
-  );,
-}
-;
-interface NotificationItemProps {;
+  )}
+
+interface NotificationItemProps {
 
   // Add your props here;
 
-;
+
   notification: Notification;
   onRemove: id: string void;
-;
-function NotificationItem({ notification, onRemove }: NotificationItemProps) {;
 
-  const getIcon = (type: NotificationType) => {;
+function NotificationItem({ notification, onRemove }: NotificationItemProps) {
 
-    switch (type) {;
+  const getIcon = (type: NotificationType) => {
+
+    switch (type) {
 
       case 'success':';
         return '✅';
@@ -172,13 +157,11 @@ function NotificationItem({ notification, onRemove }: NotificationItemProps) {;
       case 'info':';
         return 'ℹ️';
       default:';
-        return '📢';,
-}
-  };
-;
-  const getColors = (type: NotificationType) => {;
+        return '📢'}
+  }
+  const getColors = (type: NotificationType) => {
 
-    switch (type) {;
+    switch (type) {
 
       case 'success':';
         return 'bg-green-600 border-green-500';
@@ -189,13 +172,11 @@ function NotificationItem({ notification, onRemove }: NotificationItemProps) {;
       case 'info':';
         return 'bg-blue-600 border-blue-500';
       default:';
-        return 'bg-gray-600 border-gray-500';,
-}
-  };
-;
-  const getProgressColor = (type: NotificationType) => {;
+        return 'bg-gray-600 border-gray-500'}
+  }
+  const getProgressColor = (type: NotificationType) => {
 
-    switch (type) {;
+    switch (type) {
 
       case 'success':';
         return 'bg-green-400';
@@ -206,10 +187,8 @@ function NotificationItem({ notification, onRemove }: NotificationItemProps) {;
       case 'info':';
         return 'bg-blue-400';
       default:';
-        return 'bg-gray-400';,
-}
-  };
-;
+        return 'bg-gray-400'}
+  }
   return();
     <motion.div;
       initial={{ opacity: 0, x: 300, scale: 0.8 }}
@@ -264,55 +243,48 @@ function NotificationItem({ notification, onRemove }: NotificationItemProps) {;
         />;
       )}
     </motion.div>;
-  );,
-}
-;
+  )}
+
 // Hook for easy notification creation;
-export const useNotificationActions = (...args: unknown[]): unknown => {;
+export const useNotificationActions = (...args: unknown[]): unknown => {
 
   const { addNotification } = useNotifications();
-;
+
   const showSuccess = useCallback();
-    (title: string, message: string, options?: Partial<Notification>) => {;
+    (title: string, message: string, options?: Partial<Notification>) => {
 
-      addNotification({ type: 'success', title, message, ...options });,
-},;
+      addNotification({ type: 'success', title, message, ...options })},;
     [addNotification];
   );
-;
+
   const showError = useCallback();
-    (title: string, message: string, options?: Partial<Notification>) => {;
+    (title: string, message: string, options?: Partial<Notification>) => {
 
-      addNotification({ type: 'error', title, message, ...options });,
-},;
+      addNotification({ type: 'error', title, message, ...options })},;
     [addNotification];
   );
-;
+
   const showWarning = useCallback();
-    (title: string, message: string, options?: Partial<Notification>) => {;
+    (title: string, message: string, options?: Partial<Notification>) => {
 
-      addNotification({ type: 'warning', title, message, ...options });,
-},;
+      addNotification({ type: 'warning', title, message, ...options })},;
     [addNotification];
   );
-;
+
   const showInfo = useCallback();
-    (title: string, message: string, options?: Partial<Notification>) => {;
+    (title: string, message: string, options?: Partial<Notification>) => {
 
-      addNotification({ type: 'info', title, message, ...options });,
-},;
+      addNotification({ type: 'info', title, message, ...options })},;
     [addNotification];
   );
-;
-  return { showSuccess, showError, showWarning, showInfo };,
-};
-;
+
+  return { showSuccess, showError, showWarning, showInfo }}
 // Example usage component;
-export function NotificationExample() {;
+export function NotificationExample() {
 
   const { showSuccess, showError, showWarning, showInfo } =;
     useNotificationActions();
-;
+
   return (";
     <div className="space-y-4 p-6">";
       <h2 className="text-2xl font-bold">Notification Examples</h2>;
@@ -320,16 +292,14 @@ export function NotificationExample() {;
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">;
         <button;
           onClick={() =>;
-            showSuccess('Success!',Operation completed successfully.');,
-}";
+            showSuccess('Success!',Operation completed successfully.')}";
           className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors">;
           Show Success;
         </button>;
 
         <button;
           onClick={() =>;
-            showError('Error!',Something went wrong. Please try again.');,
-}";
+            showError('Error!',Something went wrong. Please try again.')}";
           className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors">;
           Show Error;
         </button>;
@@ -338,8 +308,7 @@ export function NotificationExample() {;
           onClick={() =>;
             showWarning(';
               'Warning!',Please review your input before proceeding.';
-            );,
-}";
+            )}";
           className="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700 transition-colors">;
           Show Warning;
         </button>;
@@ -354,19 +323,17 @@ export function NotificationExample() {;
       <div className="mt-8">;
         <button;
           onClick={() =>;
-            showSuccess('Custom Action',Click the action button below.', {;
+            showSuccess('Custom Action',Click the action button below.', {
 
-              action: {;
+              action: {
 
                 label: 'View Details',;
                 onClick: () => alert('Action clicked!')},;
-              duration: 10000});,
-}";
+              duration: 10000})}";
           className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">;
           Show Custom Action Notification;
         </button>;
       </div>;
     </div>;
-  );,
-}
+  )}
 '"`}}

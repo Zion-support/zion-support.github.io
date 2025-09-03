@@ -16,7 +16,7 @@ export default function AutomationPage() {};
     {};
 }
   ];
-;
+
   const automationStats = [;
     { label: 'Active Automations', value: '227', color: 'text-cyan-400' },;
     { label: 'Pages Generated', value: '2,960+', color: 'text-fuchsia-400' },;
@@ -73,7 +73,7 @@ export default function AutomationPage() {};
                     decisions about when and how to automate processes.;
                   </p>;
                 </div>;
-                ;
+
                 <div className="text-center">;
                   <div className="w-20 h-20 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">;
                     <span className="text-3xl">⚡</span>;
@@ -84,7 +84,7 @@ export default function AutomationPage() {};
                     and adjust strategies in real-time.;
                   </p>;
                 </div>;
-                ;
+
                 <div className="text-center">;
                   <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">;
                     <span className="text-3xl">🔄</span>;
@@ -113,7 +113,7 @@ export default function AutomationPage() {};
                     <li>• Scalable operations that grow with demand</li>;
                   </ul>;
                 </div>;
-                ;
+
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">;
                   <h3 className="text-2xl font-bold mb-4 text-fuchsia-400">Cost Optimization</h3>;
                   <ul className="space-y-3 text-white/70">;
@@ -123,7 +123,7 @@ export default function AutomationPage() {};
                     <li>• Automated scaling based on actual demand</li>;
                   </ul>;
                 </div>;
-                ;
+
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">;
                   <h3 className="text-2xl font-bold mb-4 text-green-400">Quality & Consistency</h3>;
                   <ul className="space-y-3 text-white/70">;
@@ -133,7 +133,7 @@ export default function AutomationPage() {};
                     <li>• Reduced variability in outcomes</li>;
                   </ul>;
                 </div>;
-                ;
+
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">;
                   <h3 className="text-2xl font-bold mb-4 text-blue-400">Innovation & Growth</h3>;
                   <ul className="space-y-3 text-white/70">;
@@ -168,5 +168,4 @@ export default function AutomationPage() {};
         </main>;
       </div>;
     </>;
-  );,
-}
+  )}

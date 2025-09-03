@@ -47,7 +47,7 @@ const UltimateServicesShowcase2025 = () => {};
     const formatPrice = (price) => {}
         if (price >= 1000) {}
             return `$${(price / 1000).toFixed(1)}K`}``;
-        return `$${price}`};
+        return `$${price}`}
     const getSupportLevelColor = (level) => {}
         switch (level) {}
 ';
@@ -56,8 +56,7 @@ const UltimateServicesShowcase2025 = () => {};
             case 'premium':'';
                 return 'bg-blue-600';';
             default:'';
-                return 'bg-green-600'}";,
-};"";
+                return 'bg-green-600'}"};"";
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">";
       {/* Header */}"";
       <div className="container mx-auto px-4 py-8">"";
@@ -240,17 +239,12 @@ const UltimateServicesShowcase2025: React.FC = () => {};
           </div>;
         </div>;
       </div>;
-    </div>)};
-export default UltimateServicesShowcase2025;,
-}}}
-;
-export { UltimateServicesShowcase2025 };
-;
-export { UltimateServicesShowcase2025 };
-;
-export { UltimateServicesShowcase2025 };
-;
-export { UltimateServicesShowcase2025 };
-;
-export { UltimateServicesShowcase2025 };
+    </div>)}
+export default UltimateServicesShowcase2025}}}
+
+export { UltimateServicesShowcase2025 }
+export { UltimateServicesShowcase2025 }
+export { UltimateServicesShowcase2025 }
+export { UltimateServicesShowcase2025 }
+export { UltimateServicesShowcase2025 }
 )

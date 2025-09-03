@@ -10,9 +10,8 @@ export function AppHeader() {};
       setScrolled(window.scrollY > 20);,
 };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);,
-}, []);
-;
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
+
   // Close mobile menu when route changes;
   useEffect(() => {};
 }, [location.pathname]);
@@ -28,14 +27,13 @@ export function AppHeader() {};
         { name: 'FinTech Solutions', path: '/services?category=fintech', icon: Database, color: 'from-yellow-500 to-orange-500' },;
         { name: 'Green Technology', path: '/services?category=green-tech', icon: Shield, color: 'from-green-400 to-teal-500' },;
         { name: 'Cybersecurity', path: '/services?category=cybersecurity', icon: Lock, color: 'from-red-500 to-pink-500' },;
-      ];,
-},;
+      ]},;
     { name: 'About', path: '/about', icon: null },;
     { name: 'Contact', path: '/contact', icon: null },;
   ];
-;
+
   const isActive = (path) => location.pathname === path;
-;
+
   return (;
     <div>Broken JSX</div>
     >;
@@ -78,7 +76,7 @@ export function AppHeader() {};
                     {item.name}
                   </Link>;
                 )}
-;
+
                 {/* Dropdown Menu */}
                 {};
                     onMouseEnter={() => setActiveDropdown(item.name)}
@@ -144,7 +142,6 @@ export function AppHeader() {};
                   )}
                 </div>;
               ))}
-              ;
               <div className="pt-4 border-t border-zion-cyan/30">;
                 <div>Broken JSX</div>
                   onClick={() => setMobileMenuOpen(false)}
@@ -157,5 +154,4 @@ export function AppHeader() {};
         )}
       </AnimatePresence>;
     </motion.header>;
-  );,
-}
+  )}

@@ -38,9 +38,8 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
       };,
 }
   }, [user, notificationOps]); // Added notificationOps;
-  ;
+
   return (<NotificationContext.Provider value={notificationOps}>;
       {children}
     </NotificationContext.Provider>;
-  );,
-};
+  )}

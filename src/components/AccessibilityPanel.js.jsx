@@ -101,8 +101,7 @@ export default function Page() {};
                         <div>Broken JSX</div>
   (e) => updateSetting('highContrast',;
   e.target.checked);
-";,
-} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>";
+"} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>";
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">;
                           High Contrast Mode;
                         </span>;
@@ -119,8 +118,7 @@ export default function Page() {};
                       <div>Broken JSX</div>
   (e) => updateSetting('fontSize',;
   parseInt(e.target.value));
-";,
-} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"/>;
+"} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"/>;
                     </div>;
 
                     <div>";
@@ -128,8 +126,7 @@ export default function Page() {};
                         <div>Broken JSX</div>
   (e) => updateSetting('reducedMotion',;
   e.target.checked);
-";,
-} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>";
+"} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>";
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">;
                           Reduced Motion;
                         </span>;
@@ -149,8 +146,7 @@ export default function Page() {};
                       <div>Broken JSX</div>
   (e) => updateSetting('colorBlindness',;
   e.target.value);
-";,
-} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">";
+"} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">";
                         <option value="none">None</option>";
                         <option value="protanopia">Protanopia(Red-Blind)</option>";
                         <option value="deuteranopia">Deuteranopia(Green-Blind)</option>";
@@ -163,8 +159,7 @@ export default function Page() {};
                         <div>Broken JSX</div>
   (e) => updateSetting('focusIndicator',;
   e.target.checked);
-";,
-} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>";
+"} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>";
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">;
                           Enhanced Focus Indicators;
                         </span>;
@@ -182,8 +177,7 @@ export default function Page() {};
                         <div>Broken JSX</div>
   (e) => updateSetting('screenReader',;
   e.target.checked);
-";,
-} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>";
+"} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>";
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">;
                           Screen Reader Mode;
                         </span>;
@@ -213,8 +207,7 @@ export default function Page() {};
                         <div>Broken JSX</div>
   (e) => updateSetting('keyboardNavigation',;
   e.target.checked);
-";,
-} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>";
+"} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>";
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">;
                           Enhanced Keyboard Navigation;
                         </span>;
@@ -252,6 +245,6 @@ export default function Page() {};
             </div>;
           </motion.div>) }
       </AnimatePresence>;
-    </>)};
+    </>)}
 export default AccessibilityPanel;
 '"`;

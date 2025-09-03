@@ -9,7 +9,5 @@ describe(&apos;ModernTestimonials&apos, () => {};
 }
     // comment;
     render(<ModernTestimonials / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

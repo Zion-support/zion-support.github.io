@@ -66,14 +66,10 @@ export {};
       </div>;
       <SidebarTrigger />;
     </SidebarProvider>)}
-;
 
-export { CreatorDashboard };
-;
-export { CreatorDashboard };
-;
-export { CreatorDashboard };
-;
-export { CreatorDashboard };
-;
-export { CreatorDashboard };
+
+export { CreatorDashboard }
+export { CreatorDashboard }
+export { CreatorDashboard }
+export { CreatorDashboard }
+export { CreatorDashboard }

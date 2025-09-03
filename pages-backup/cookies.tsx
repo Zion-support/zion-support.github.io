@@ -1,8 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
-const MainLayout = dynamic(() => import("../components/layout/MainLayout"), { ssr: false });,
-}
-const CookiePolicy: NextPage = () => {;
+const MainLayout = dynamic(() => import("../components/layout/MainLayout"), { ssr: false })}
+const CookiePolicy: NextPage = () => {
   return (;
     <MainLayout title="Cookie Policy - Zion Tech Group;
       description="Cookie Policy for Zion Tech Group. Learn about how we use cookies and similar technologies.">";
@@ -14,7 +13,7 @@ const CookiePolicy: NextPage = () => {;
             <div className="prose prose-lg max-w-none">";
               <p className="text-gray-600 mb-6">,;
                 <strong>Last updated:</strong> {new Date().toLocaleDateString()}
-;
+
               </p>;
               ";
               <h2 className="text-2xl font-bold text-gray-900 mb-4">What Are Cookies</h2>";

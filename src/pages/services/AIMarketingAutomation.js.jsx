@@ -10,29 +10,25 @@ const AIMarketingAutomation = () => {}
             icon: Brain,;
             title: "AI-Powered Campaign Optimization","";
             description: "Machine learning algorithms that automatically optimize marketing campaigns for maximum performance and ROI","";
-            benefits["Real-time optimization", "A/B testing automation", "Performance prediction", "Budget allocation"];,
-},;
+            benefits["Real-time optimization", "A/B testing automation", "Performance prediction", "Budget allocation"]},;
         {}
 ";
             icon: Users,"";
             title: "Intelligent Customer Segmentation","";
             description: "Advanced AI algorithms that automatically segment customers based on behavior, preferences, and engagement patterns","";
-            benefits["Dynamic segmentation", "Behavioral analysis", "Predictive modeling", "Personalization"];,
-},;
+            benefits["Dynamic segmentation", "Behavioral analysis", "Predictive modeling", "Personalization"]},;
         {}
 ";
             icon: BarChart3,"";
             title: "Predictive Analytics","";
             description: "Forecast customer behavior, campaign performance, and market trends using historical data and AI models","";
-            benefits["Customer lifetime value", "Churn prediction", "Demand forecasting", "Market trends"];,
-},;
+            benefits["Customer lifetime value", "Churn prediction", "Demand forecasting", "Market trends"]},;
         {}
 ";
             icon: Zap,"";
             title: "Automated Workflows","";
             description: "Intelligent automation of marketing processes, from lead generation to customer retention","";
-            benefits["Lead nurturing", "Email automation", "Social media management", "Content scheduling"];,
-}
+            benefits["Lead nurturing", "Email automation", "Social media management", "Content scheduling"]}
     ];
     const solutions = [];
         {}
@@ -46,8 +42,7 @@ const AIMarketingAutomation = () => {}
                 "Subject line optimization","";
                 "Content recommendations","";
                 "Automated drip campaigns";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -59,8 +54,7 @@ const AIMarketingAutomation = () => {}
                 "Audience engagement analysis","";
                 "Trend identification","";
                 "Automated content scheduling";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -72,8 +66,7 @@ const AIMarketingAutomation = () => {}
                 "Ad creative optimization","";
                 "Performance forecasting","";
                 "Cross-channel attribution";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -85,8 +78,7 @@ const AIMarketingAutomation = () => {}
                 "SEO optimization","";
                 "Content scheduling","";
                 "ROI measurement";
-            ];,
-}
+            ]}
     ];
     const technologies = [];
         {}
@@ -94,43 +86,37 @@ const AIMarketingAutomation = () => {}
 "";
             name: "Machine Learning","";
             description: "Advanced ML algorithms for pattern recognition and prediction",;
-            icon: Brain;,
-},;
+            icon: Brain},;
         {}
 ";
 "";
             name: "Natural Language Processing","";
             description: "AI-powered content analysis and generation",;
-            icon: MessageSquare;,
-},;
+            icon: MessageSquare},;
         {}
 ";
 "";
             name: "Predictive Analytics","";
             description: "Data-driven forecasting and optimization",;
-            icon: BarChart3;,
-},;
+            icon: BarChart3},;
         {}
 ";
 "";
             name: "Marketing Automation","";
             description: "Intelligent workflow automation",;
-            icon: Zap;,
-},;
+            icon: Zap},;
         {}
 ";
 "";
             name: "Real-time Analytics","";
             description: "Instant performance monitoring and optimization",;
-            icon: Clock;,
-},;
+            icon: Clock},;
         {}
 ";
 "";
             name: "Multi-channel Integration","";
             description: "Seamless integration across all marketing channels",;
-            icon: Globe;,
-}
+            icon: Globe}
     ];
     const benefits = [];
         {}
@@ -138,39 +124,34 @@ const AIMarketingAutomation = () => {}
 "";
             title: "Increased ROI","";
             description: "AI optimization typically delivers 20-40% improvement in marketing ROI",;
-            icon: TrendingUp;,
-},;
+            icon: TrendingUp},;
         {}
 ";
 "";
             title: "Time Savings","";
             description: "Automate repetitive tasks and save 15-20 hours per week",;
-            icon: Clock;,
-},;
+            icon: Clock},;
         {}
 ";
 "";
             title: "Better Targeting","";
             description: "Improve conversion rates by 25-35% with AI-powered segmentation",;
-            icon: Target;,
-},;
+            icon: Target},;
         {}
 ";
 "";
             title: "Scalable Growth","";
             description: "Scale marketing efforts without proportional increase in resources",;
-            icon: Users;,
-}
+            icon: Users}
     ];
     const containerVariants = {}
         hidden: { opacity: 0 },;
         visible: {}
             opacity: 1,;
             transition: {}
-                staggerChildren: 0.1;,
-}
+                staggerChildren: 0.1}
         }
-    };
+    }
     const itemVariants = {}
   hidden: {};
 },;
@@ -178,10 +159,8 @@ const AIMarketingAutomation = () => {}
             y: 0,;
             opacity: 1,;
             transition: {}
-                duration: 0.5;,
-}
-        }";,
-};"";
+                duration: 0.5}
+        }"};"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       {/* Hero Section */}"";
       <div className="relative overflow-hidden">"";
@@ -351,16 +330,12 @@ const AIMarketingAutomation = () => {}
           </div>;
         </motion.div>;
       </div>;
-    </div>)};
+    </div>)}
 export default AIMarketingAutomation;
-;
 
-export { AIMarketingAutomation };
-;
-export { AIMarketingAutomation };
-;
-export { AIMarketingAutomation };
-;
-export { AIMarketingAutomation };
-;
-export { AIMarketingAutomation };
+
+export { AIMarketingAutomation }
+export { AIMarketingAutomation }
+export { AIMarketingAutomation }
+export { AIMarketingAutomation }
+export { AIMarketingAutomation }

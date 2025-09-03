@@ -260,7 +260,7 @@ export function AdvancedAIBusinessProcessAutomation() {};
                     {process.priority}
                   </span>`;
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getAutomationLevelColor(process.automationLevel)}`}>;
-                    {process.automationLevel.replace('-',)}
+                    {process.automationLevel.replace('-')}
                   </span>;
                 </div>;
 ";

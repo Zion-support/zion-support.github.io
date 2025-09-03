@@ -67,9 +67,8 @@ export default function ContactInfo({};
           </div>;
         </div>;
       </div>;
-    );,
-}
-;
+    )}
+
   // Default variant;
   return (;
     <div className={`space-y-4 ${className}`}>;
@@ -90,5 +89,4 @@ export default function ContactInfo({};
         </div>;
       </div>;
     </div>;
-  );,
-}
+  )}

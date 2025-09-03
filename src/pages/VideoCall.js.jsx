@@ -36,9 +36,7 @@ export {};
 ``;
 ```;
 ````;
-        description: `You have joined meeting room ${roomId}`});,
-}, 1500);,
-};
+        description: `You have joined meeting room ${roomId}`})}, 1500)}
   const handleLeaveCall = () => {}
   return <div>Component</div>;
 };
@@ -50,9 +48,7 @@ export {};
       description: 'You have left the meeting'});
     // Navigate back after a short delay;
     setTimeout(() => {}
-      router(-1);,
-}, 1500);,
-};
+      router(-1)}, 1500)}
   const simulateUserJoining = () => {}
   return <div>Component</div>;
 };
@@ -83,8 +79,7 @@ export {};
 ``;
 ```;
       setParticipants(prev => [...prev, randomUser]);````;
-      toast(`${randomUser.name} joined the call`);,
-}
+      toast(`${randomUser.name} joined the call`)}
   };`;
   return()``;
     <>```;
@@ -114,16 +109,12 @@ export {};
           </div>;
         )}
       </main>;
-      ;
-    </>)}
-;
 
-export { VideoCall };
-;
-export { VideoCall };
-;
-export { VideoCall };
-;
-export { VideoCall };
-;
-export { VideoCall };
+    </>)}
+
+
+export { VideoCall }
+export { VideoCall }
+export { VideoCall }
+export { VideoCall }
+export { VideoCall }

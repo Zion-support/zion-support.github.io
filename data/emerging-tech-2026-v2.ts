@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface EmergingTech2026ServiceV2 {;
+export interface EmergingTech2026ServiceV2 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface EmergingTech2026ServiceV2 {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface EmergingTech2026ServiceV2 {;
   rating: number;
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
   // Photonic Computing Platform;
-  {;
+  {
     id: "photonic-computing-platform-2026",;
     name: "Photonic Computing Platform 2026",;
     tagline: "Light-speed computing with photonic processors and quantum photonics",;
@@ -76,21 +76,19 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
     marketSize: "$3B market",;
     growthRate: "600% annual growth",;
     variant: "emerging-tech",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced photonic computing platform with cloud access, development tools, and research collaboration features. Includes academic partnerships and hardware integration.",;
     launchDate: "2026-03-20",;
     customers: 100,;
     rating: 4.9,;
-    reviews: 50;,;,
-},;
+    reviews: 50},;
   // Holographic Display Platform;
-  {;
+  {
     id: "holographic-display-platform-2026",;
     name: "Holographic Display Platform 2026",;
     tagline: "Next-generation 3D holographic visualization and interaction",;
@@ -128,21 +126,19 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
     marketSize: "$12B market",;
     growthRate: "350% annual growth",;
     variant: "emerging-tech",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete holographic platform with projection technology, content creation tools, and collaboration features. Includes mobile apps and hardware integration.",;
     launchDate: "2026-02-25",;
     customers: 300,;
     rating: 4.8,;
-    reviews: 180;,;,
-},;
+    reviews: 180},;
   // Quantum Internet Security Platform;
-  {;
+  {
     id: "quantum-internet-security-platform-2026",;
     name: "Quantum Internet Security Platform 2026",;
     tagline: "Secure the future of the internet with quantum-resistant protocols",;
@@ -180,21 +176,19 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
     marketSize: "$20B market",;
     growthRate: "400% annual growth",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum internet security platform with comprehensive protection, monitoring tools, and integration capabilities. Includes compliance certifications and 24/7 support.",;
     launchDate: "2026-03-05",;
     customers: 250,;
     rating: 4.9,;
-    reviews: 150;,;,
-},;
+    reviews: 150},;
   // AI Autonomous Business Platform;
-  {;
+  {
     id: "ai-autonomous-business-platform-2026",;
     name: "AI Autonomous Business Platform 2026",;
     tagline: "Run your business with autonomous AI agents and intelligent automation",;
@@ -232,21 +226,19 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
     marketSize: "$50B market",;
     growthRate: "300% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete autonomous business platform with AI agents, decision-making systems, and comprehensive business automation. Includes enterprise security and compliance.",;
     launchDate: "2026-01-30",;
     customers: 50,;
     rating: 4.9,;
-    reviews: 30;,;,
-},;
+    reviews: 30},;
   // Biotech AI Research Platform;
-  {;
+  {
     id: "biotech-ai-research-platform-2026",;
     name: "Biotech AI Research Platform 2026",;
     tagline: "AI-powered biotechnology research and drug discovery platform",;
@@ -284,21 +276,19 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
     marketSize: "$15B market",;
     growthRate: "450% annual growth",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced biotech AI platform with comprehensive research tools, collaboration features, and regulatory compliance. Includes academic partnerships and research support.",;
     launchDate: "2026-03-25",;
     customers: 120,;
     rating: 4.9,;
-    reviews: 80;,;,
-},;
+    reviews: 80},;
   // Edge Computing Orchestration;
-  {;
+  {
     id: "edge-computing-orchestration-2026",;
     name: "Edge Computing Orchestration 2026",;
     tagline: "Intelligent edge computing management and optimization platform",;
@@ -336,21 +326,19 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
     marketSize: "$18B market",;
     growthRate: "380% annual growth",;
     variant: "emerging-tech",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete edge computing orchestration platform with AI-powered management, monitoring tools, and automation features. Includes enterprise security and compliance.",;
     launchDate: "2026-02-28",;
     customers: 180,;
     rating: 4.8,;
-    reviews: 120;,;,
-},;
+    reviews: 120},;
   // 5G Private Network Solutions;
-  {;
+  {
     id: "5g-private-network-solutions-2026",;
     name: "5G Private Network Solutions 2026",;
     tagline: "Enterprise-grade 5G private networks for industrial applications",;
@@ -388,12 +376,11 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
     marketSize: "$22B market",;
     growthRate: "420% annual growth",;
     variant: "emerging-tech",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete 5G private network solution with deployment tools, management platform, and monitoring systems. Includes enterprise security and compliance features.",;
     launchDate: "2026-03-30",;

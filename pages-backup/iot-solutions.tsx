@@ -1,13 +1,12 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })}
   ArrowRight,;
   CheckCircle} from "lucide-react";
-export default function IoTSolutions() {;
-;
+export default function IoTSolutions() {
+
   const features = [];
   const benefits = [];
 
@@ -57,12 +56,12 @@ Internet of Things solutions and smart device integration.;
                   </div>";
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">;
                     {feature.title}
-;
+
                   </h3>";
                   <p className="text-gray-600">{feature.description}</p>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -85,7 +84,7 @@ Internet of Things solutions and smart device integration.;
                   <span className="text-gray-700">{benefit}</span>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -105,12 +104,12 @@ Internet of Things solutions and smart device integration.;
                 <div key="{index}" className="bg-gray-50 rounded-lg p-6">";
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">;
                     {industry.title}
-;
+
                   </h3>";
                   <p className="text-gray-600">{industry.description}</p>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";

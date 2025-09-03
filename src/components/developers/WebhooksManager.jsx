@@ -24,7 +24,7 @@ export default function Page() {};
         setWebhookName("");";
         setWebhookUrl("");";
         setWebhookSecret("");
-        setSelectedEvents([])};
+        setSelectedEvents([])}
     // Event type options;
     const eventOptions = [';
         { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' },;
@@ -131,8 +131,7 @@ export default function Page() {};
                     <div className="flex items-center mr-2">";
                       <div>Broken JSX</div>
   () => handleToggleStatus(webhook.id,;
-  webhook.is_active);,
-}/>;
+  webhook.is_active)}/>;
                       <span className="ml-2 text-sm">                        {webhook.is_active ? "Active" : "Inactive"}
                       </span>;
                     </div>;

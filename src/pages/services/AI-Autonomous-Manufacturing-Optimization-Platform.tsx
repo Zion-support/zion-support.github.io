@@ -13,7 +13,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {};
     {};
 }
   ];
-;
+
   const pricingPlans = [;
     {};
 },;
@@ -22,7 +22,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {};
     {};
 }
   ];
-;
+
   const useCases = [;
     {};
 },;
@@ -33,7 +33,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {};
     {};
 }
   ];
-;
+
   const benefits = [;
     {};
 },;
@@ -44,7 +44,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {};
     {};
 }
   ];
-;
+
   const manufacturingProcesses = [;
     "Production Planning",;
     "Quality Control",;
@@ -55,7 +55,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {};
     "Predictive Analytics",;
     "Process Optimization";
   ];
-;
+
   const industryStandards = [;
     "ISO 9001",;
     "ISO 14001",;
@@ -66,7 +66,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {};
     "Smart Factory",;
     "Digital Twin";
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">;
       <div>Broken JSX</div>
@@ -85,15 +85,15 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {};
                 <Factory className="w-8 h-8 text-white" />;
               </div>;
             </div>;
-            ;
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
               AI Autonomous Manufacturing Optimization Platform;
             </h1>;
-            ;
+
             <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed">;
               Transform your manufacturing operations with the world's most advanced AI platform for autonomous production optimization, quality control, and predictive maintenance.;
             </p>;
-            ;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-xl hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105">;
@@ -151,7 +151,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {};
             {};
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>;
                 <p className="text-slate-300 mb-6 leading-relaxed">{feature.description}</p>;
-                ;
+
                 <ul className="space-y-3">;
                   {};
                     <li key={idx} className="flex items-center text-slate-300">;
@@ -226,11 +226,11 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {};
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {};
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <p className="text-slate-400 mb-6">{plan.description}</p>;
-                  ;
+
                   <div className="flex items-baseline justify-center">;
                     <span className="text-5xl font-bold text-white">{plan.price}</span>;
                     <span className="text-slate-400 ml-1">{plan.period}</span>;
@@ -287,12 +287,12 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {};
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Ready to Transform Your Manufacturing?;
             </h2>;
-            ;
+
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">;
               Join the future of manufacturing with our AI Autonomous Optimization Platform. ;
               Get in touch today to schedule a personalized demo and see how we can improve your production efficiency.;
             </p>;
-            ;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-xl hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105">;
@@ -304,7 +304,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {};
                 Contact Sales;
               </a>;
             </div>;
-            ;
+
             <div className="mt-8 text-slate-400">;
               <p>Questions? Call us at <a href="tel:+13024640950" className="text-orange-400 hover:text-orange-300">+1 302 464 0950</a></p>;
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
@@ -313,7 +313,5 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {};
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default AIAutonomousManufacturingOptimizationPlatform;

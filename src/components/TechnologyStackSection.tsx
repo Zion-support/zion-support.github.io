@@ -1,5 +1,5 @@
 import {  import { motion  } from 'framer-motion';
-;
+
  params - Function parameters;
  * @returns {*} Function return value;
  */;
@@ -50,7 +50,7 @@ function TechnologyStackSection () {};
               )})}
           </div>;
         </motion.div>;
-;
+
         {/* Technology Philosophy */}
         <div>Broken JSX</div>
         >";
@@ -107,8 +107,7 @@ function TechnologyStackSection () {};
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
-;
+    </section>;) }
 export default TechnologyStackSection;";
             <span className="text-2xl">→</span>;
           </div>;

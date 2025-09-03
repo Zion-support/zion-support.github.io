@@ -17,7 +17,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         const summary = getAnalyticsSummary();
         if (summary) {};
             setAnalyticsSummary(summary)}
-    };
+    }
     // Update summary when events change;
     useEffect(() => {};
         updateAnalyticsSummary()}, [events, currentSession]);
@@ -54,17 +54,16 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             score -= 25;
         else if (performanceMetrics.cumulativeLayoutShift > 0.05);
             score -= 10;
-        return Math.max(0, score)};
+        return Math.max(0, score)}
     // Format duration;
     const formatDuration = (seconds) => {};
             return `${(num / 1000000).toFixed(1)}M`;
         if (num >= 1000);
             return `${(num / 1000).toFixed(1)}K`;
-        return num.toString()};
+        return num.toString()}
     return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/* Header */}
-;,
 }
-  };
+  }
   // Update summary when events change;
   useEffect(() => {};
 }, []);
@@ -82,9 +81,8 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 ;
             <div>Broken JSX</div>
               onChange="{e" => {}
-;
-                setSelectedTimeRange(e.target.value);,
-}
+
+                setSelectedTimeRange(e.target.value)}
                 handleDashboardInteraction(&apos;time_range_changed&apos, {}";
                   timeRange: e.target.value})";&apos}}&apos;&apos,";";
               className="&apos;px-2" py-1 bg-white/20 rounded text-xs focus:outline-none focus:ring-2 focu,s: ring-white/50&apos,&apos,&apos;>"&apos;&apos,&apos;&apos;";
@@ -109,7 +107,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
               <option value="1h">1 Hour</option>",;
               <option value="24h">24 Hours</option>",;
               <option value="7d">7 Days</option>",;
-              <option value="30d">30 Days</option>,,;
+              <option value="30d">30 Days</option>,;
             </select>,";
             <div>Broken JSX</div>
               onClick="{()" => setIsExpanded(!isExpanded)}"";";
@@ -119,7 +117,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 
                 isExpanded ? "Collapse dashboard"  : "Expand dashboard"}",;
             >""{isExpanded ? "−" : }
-;
+
             </button>;
           </div>;
 ""{/* comment */}"";";
@@ -134,7 +132,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                 : "N/A"}",;
             </div>"";";
             <div className="text-xs text-gray-600 dark: text-gray-400">,;
-              Session Duration,,;
+              Session Duration,;
             </div>,;
           </div>,";
 ""{/* comment */}"";";
@@ -146,7 +144,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
               {analyticsSummary?.pageViews || 0}",;
             </div>"";";
             <div className="text-xs text-gray-600 dark: text-gray-400">,;
-              Page Views,,;
+              Page Views,;
             </div>,;
           </div>,";
 ""{/* comment */}"";";
@@ -158,7 +156,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
               {formatNumber(events.length)}
             </div>"";";
             <div className="text-xs text-gray-600 dark: text-gray-400">,;
-              Total Events,,;
+              Total Events,;
             </div>,;
           </div>,";
 ""{/* comment */}"";";
@@ -172,7 +170,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             <div className="text-xs text-gray-600 dark: text-gray-400">;
               Performance,;
             </div>,;
-          </div>,,;
+          </div>,;
         </div>,;
       </div>,";
 ""{/* comment */}"";";
@@ -181,7 +179,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           <Activity className="w-4 h-4"  />,",;
           Real-time Events""{};
           )}
-;
+
         </h4>;
 "";";
         <div className="space-y-2 max-h-32 overflow-y-auto">;
@@ -208,11 +206,11 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                   </span>"";";
                   <span className = "text-gray-800 dark: text-gray-200">,;
                     {event.action}
-;
+
                   </span>;
                 </div>"";";
                 <span className = "text - xs text-gray-500">,;
-                  timeRange: e.target.value})",}}"""";";
+                  timeRange: e.target.value})"}}"""";";
               className = "px-2 py-1 bg-white/20 rounded text-xs focus: outline-none focus:ring-2 focus:ring-white/50""">"""";
               <option value="1h">1 Hour</option>""";
               <option value="24h">24 Hours</option>""";
@@ -224,7 +222,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
               className = "p-1 hover: bg-white/20 rounded transition-colors",";
               aria-label="{}";
 ";
-;
+
 """;
                 isExpanded ? "Collapse dashboard" : "Expand dashboard""}"">"""{isExpanded ? "−" : }";
             </button>;
@@ -337,7 +335,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           Real-time Events&apos;&apos,{showRealTime && (&apos;&apos,"&apos,&apos}";
             <div className="&apos;w-2" h-2 bg-green-500 rounded-full animate-pulse&apos;>&apos,</div>;
           )}
-;
+
         </h4>&apos;&apos,;
 &apos;&apos,&apos;&apos,";
         <div className="&apos;space-y-2" max-h-32 overflow-y-auto&apos;>;
@@ -346,7 +344,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             .reverse();,
 }
             .map(event = > (&apos}
-;
+
               <div&apos;&apos>;
                 key={event.id}&apos;&apos,";";
                 className="&apos;flex" items-center justify-between text-sm p-2 bg-gray-50 dark: bg-gray-700 rounded&apos,&apos,&apos;>"&apos;&apos,&apos;&apos,",;
@@ -407,13 +405,13 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                 </div>"";
                 <span className="text-xs text-gray-500">;
                   {new Date(event.timestamp).toLocaleTimeString()}
-;
+
                 </span>;
               </div>;
             ))}";
 ""{};
           )}
-;
+
         </div>;
       {/* comment */}""{};
           {/* comment */}""{};
@@ -442,7 +440,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                   </span>",";
                   <span className = "font-medium">,;
                     {performanceMetrics.cumulativeLayoutShift.toFixed(3)}
-;
+
                   </span>;
                 </div>;
           )}";
@@ -464,7 +462,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
               No events tracked yet,;
             </div>;
           )}
-;
+
         </div>;
       {/* comment */}&apos;&apos,{isExpanded && (&apos;&apos,&apos;&apos}
         <div className="&apos;border-t" border-gray-200 dark: border-gray-700 p-4 bg-gray-50 dark:bg-gray-800&apos,>"&apos,&apos,&apos,&apos,";
@@ -534,11 +532,11 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                   </span>"";
                   <span className="font-medium">,;
                     {performanceMetrics.cumulativeLayoutShift.toFixed(3)}
-;
+
                   </span>;
                 </div>;
           )}
-;
+
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
           <div className="&apos;mb-4" p-3 bg-green-50 dark: bg-green-900/20 rounded-lg&apos,>"&apos,&apos,&apos,&apos,";
             <h5 className="&apos,font-medium" text-green-800 dar,k: text-green-200 mb-2&apos,>";
@@ -546,7 +544,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             </h5>&apos;&apos,&apos;&apos,",;
             <div className = "&apos,space-y-2&apos,">;
               {getEventsByCategory().map(item => (&apos}
-;
+
                 <div&apos;&apos>;
                   key={item.category}&apos;&apos,";";
                   className="&apos;flex" items-center justify-between&apos;&apos,&apos;>"&apos;&apos,&apos;&apos;";
@@ -572,20 +570,20 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                       <div>Broken JSX</div>
 "">;
                           width: "${(item.count / Math.max(...getEventsByCategory().map(e = > e.count))) * 100}%"}}
-;
+
                       ></div>;
                     </div>"";";
                     <span className = "text-green-700 dark: text-green-300 text-sm font-medium w-8 text-right">,;
                       {item.count}
-;
+
                     </span>;
                   </div>;
               ))}
-;
+
             </div>;
           {/* comment */}""{};
                     {currentSession.id.slice(-8)}
-;
+
                   </span>;
                 </div>"";";
                 <div className="flex justify-between">"";";
@@ -594,24 +592,24 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                   </span>",";
                   <span className = "font-medium capitalize">,;
                     {currentSession.deviceInfo.type}
-;
+
                   </span>;
                 </div>"";";
                 <div className="flex justify-between">"";";
-                  <span className="text-purple-700 dark: text-purple-300">,,";
+                  <span className="text-purple-700 dark: text-purple-300">,";
 Screen: ",",;
                   </span>",";
                   <span className = "font-medium">,;
                     {currentSession.deviceInfo.screen.width}×{currentSession.deviceInfo.screen.height}
-;
+
                   </span>;
                 </div>"";";
                 <div className="flex justify-between">"";";
-                  <span className="text-purple-700 dark: text-purple-300">,,";
+                  <span className="text-purple-700 dark: text-purple-300">,";
 Referrer:",";
                   </span>",";
                   <span className = "font-medium text-xs max-w-32 truncate">"{currentSession.referrer || "Direct"}
-;
+
                   </span>;
                 </div>;
                       >&apos;&apos;</div>&apos;&apos,&apos;&apos,;
@@ -622,11 +620,11 @@ Referrer:",";
                     </div>"";
                     <span className = "text-green-700 dark: text-green-300 text-sm font-medium w-8 text-right">,;
                       {item.count}
-;
+
                     </span>;
                   </div>;
               ))}
-;
+
             </div>;
           {/* comment */}&apos;&apos,{currentSession && (&apos;&apos,&apos;&apos}
             <div className="&apos;mb-4" p-3 bg-purple-50 dark: bg-purple-900/20 rounded-lg&apos,>"&apos,&apos,&apos;&apos;";
@@ -691,7 +689,7 @@ Referrer: """;
                   </span>;
                 </div>;
           )}
-;
+
         </div>;
       )}";
 ""{/* comment */}"";";
@@ -701,16 +699,15 @@ Referrer: """;
       <div className="&apos;p-4" border-t border-gray-200 dark:border-gray-700 bg-gray-50 dar,k: bg-gray-800&apos,>"&apos,&apos,&apos;&apos,",;
         <div className="&apos;flex" gap-2&apos;>&apos,";
           <button onClick = "{()" => {}
-;
-              handleDashboardInteraction();,
-}
+
+              handleDashboardInteraction()}
               updateAnalyticsSummary()";&apos}}&apos;&apos,";";
             className="&apos;flex-1" px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2&apos,&apos,&apos;>"&apos;&apos,&apos;&apos;";
             <RefreshCw className="&apos;w-4" h-4&apos,       />,;
             Refresh Data&apos,;
           </button>";
           <button onClick = "{()" => {}
-;
+
               handleTrackConversion()";
               handleDashboardInteraction(&apos;conversion_tracked&apos)";&apos}}&apos;&apos,";";
             className="&apos;px-3" py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2&apos,&apos,&apos;>"&apos;&apos,&apos;&apos,",;
@@ -720,25 +717,24 @@ Referrer: """;
       <div className = "p-4 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-800">"";
         <div className="flex gap-2">",;
           <button onClick="{()" => {}
-;
+
 ";
-              handleDashboardInteraction();,
-}
+              handleDashboardInteraction()}
               updateAnalyticsSummary()";"}}""";
               updateAnalyticsSummary()";"}}"";";
             className="flex-1 px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2">",";
             <RefreshCw className="w-4 h-4"  />,;
-            Refresh Data,,;
+            Refresh Data,;
           </button>,";
           <button onClick = "{()" => {}
-;
+
               handleTrackConversion()";
               handleDashboardInteraction("conversion_tracked")";"}}"";";
             className="px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">"";";
             <Target className="w-4 h-4"  />;
             Track Goal,;
           </button>,;
-        </div>,,;
+        </div>,;
       </div>,;
     </div>,";
   )}
@@ -749,7 +745,7 @@ Referrer: """;
             Refresh Data,;
           </button>",;
           <button onClick="{()" => {}
-;
+
               handleTrackConversion()";
               handleDashboardInteraction("conversion_tracked")";"}}"";
             className = "px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2""">""";
@@ -764,8 +760,7 @@ Referrer: """;
 &apos;&apos;"&apos;&apos;"";
   )}";
 """"'";
-`;,
-}";
+`}";
 ";
 
 export {};

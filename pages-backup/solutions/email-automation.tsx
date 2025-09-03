@@ -2,8 +2,8 @@ import Head from "next/head";
 import React from "react";
   Aperture,;
   Clock} from "lucide-react";
-export default function EmailAutomation() {;
-;
+export default function EmailAutomation() {
+
   const features = [];
 
   const pricingPlans = [],;
@@ -37,7 +37,7 @@ export default function EmailAutomation() {;
         "24/7 phone support";
       ],;
       popular: false}
-;
+
   ];
 
   return (;
@@ -100,7 +100,7 @@ export default function EmailAutomation() {;
                 <p className="text-gray-600">{feature.description}</p>;
               </Card>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -125,7 +125,7 @@ export default function EmailAutomation() {;
                     </Badge>;
                   </div>;
                 )}
-;
+
                 ";
                 <div className="text-center mb-6">";
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>";
@@ -142,18 +142,18 @@ export default function EmailAutomation() {;
                       <span className="{"text-gray-600"">{feature}</span>;
                     </li>;
                   ))}
-;
+
                 </ul>;
 ";
                 <Button className="{"w-full" ${plan.popular ? "bg-blue-600 hover:bg-blue-700" : ""}"}";
                   variant="{plan.popular" ? "default" : "outline'}
-;
+
                 >;
                   Get Started,;
                 </Button>;
               </Card>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";

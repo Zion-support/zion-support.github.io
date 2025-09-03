@@ -19,7 +19,7 @@ const pricingTiers = [{};
 ";
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,;
         {/* comment */}
-;
+
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
       <div className="max - w-7xl mx - auto px-6">;
         <div>Broken JSX</div>
@@ -55,7 +55,7 @@ className="{};
                 Save {savings}%;
               </motion.span>;
             )}
-;
+
           </div>;
         </motion.div>;
 
@@ -68,7 +68,7 @@ className="{};
                     <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">";
                       <Star className="{};
                   </div>                )}
-;
+
                 {/*   */}";
                 <div className="{};
                   plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}`}>;
@@ -76,7 +76,7 @@ className="{};
                   <div className="{`w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>";
                     <IconComponent className="`w-8" h-8`} />;
                   </div>;
-;
+
                 {/* comment */}";
                 <div className="{};
                   plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}"}>;
@@ -94,15 +94,15 @@ className="{};
                         <span className=""text-zion-slate-light"}">/month</span>;
                         {};
                             ${plan.originalPrice}
-;
+
                           </span>;
                         )}
-;
+
                       </div>;
                     ) : (";
                       <div className=""text-3xl" font-bold text-white"}>{plan.price}</div>;
                     )}
-;
+
                   </div>;
                   {/* comment */}";
                   <ul className="space-y-3 mb-8">;
@@ -112,13 +112,13 @@ className="{};
                         <span className="text-zion-slate-light">{feature}</span>;
                       </li>;
                     ))}
-;
+
                   </ul>;
                   {/* comment */}";
                   <div>Broken JSX</div>
                     className="{};
                           : "border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white"}"}
-;
+
                     >;
                       {plan.cta}";
                       <ArrowRight className=""w-4" h-4"}       />;
@@ -129,7 +129,7 @@ className="{};
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 group-hover: opacity-20 transition-opacity duration-300 -z-10"></div>;
               </motion.div>,;
             )})}
-;
+
         </div>;
         {/* comment */}
 ;

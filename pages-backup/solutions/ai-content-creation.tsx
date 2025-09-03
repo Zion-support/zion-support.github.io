@@ -2,7 +2,7 @@ import Head from "next/head";
 import React from "react";
   PenTool,;
   BarChart3} from "lucide-react;
-export default function AIContentCreation() {;
+export default function AIContentCreation() {
 
   const features = [];
 
@@ -37,7 +37,7 @@ export default function AIContentCreation() {;
         "24/7 phone support";
       ],;
       popular: false}
-;
+
   ];
 
   return (;
@@ -100,7 +100,7 @@ export default function AIContentCreation() {;
                 <p className="text-gray-600">{feature.description}</p>;
               </Card>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -125,7 +125,7 @@ export default function AIContentCreation() {;
                     </Badge>;
                   </div>;
                 )}
-;
+
                 ";
                 <div className="text-center mb-6">";
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>";
@@ -142,18 +142,18 @@ export default function AIContentCreation() {;
                       <span className="{"text-gray-600"">{feature}</span>;
                     </li>;
                   ))}
-;
+
                 </ul>;
 ";
                 <Button className="{"w-full" ${plan.popular ? "bg-blue-600 hover:bg-blue-700" : ""}"}";
                   variant="{plan.popular" ? "default" : "outline"}
-;
+
                 >;
                   Get Started,;
                 </Button>;
               </Card>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";

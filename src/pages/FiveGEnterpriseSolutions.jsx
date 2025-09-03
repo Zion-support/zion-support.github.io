@@ -575,13 +575,11 @@ import {}
   CheckCircle,';
   Shield,'';
   Zap,''';
-  Brain'''';,
-} from 'lucide-react';
-;
-    technologies["5G Analytics", "Performance Insights", "Predictive", "Reporting"];,
-}
+  Brain''''} from 'lucide-react';
+
+    technologies["5G Analytics", "Performance Insights", "Predictive", "Reporting"]}
 ];
-;
+
 const fiveGTechnologies = [];
   {}
 ";
@@ -590,8 +588,7 @@ const fiveGTechnologies = [];
     description: "Advanced 5G core network technologies",";
     icon: Network,"";
     useCase: "Network Infrastructure","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -599,8 +596,7 @@ const fiveGTechnologies = [];
     description: "Radio access network technologies",";
     icon: Wifi,"";
     useCase: "Wireless Access","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -608,8 +604,7 @@ const fiveGTechnologies = [];
     description: "5G network slicing capabilities",";
     icon: Layers,"";
     useCase: "Network Management","";
-    reliability: "High";,
-},;
+    reliability: "High"},;
   {}
 ";
 "";
@@ -619,7 +614,7 @@ const fiveGTechnologies = [];
     useCase: "Edge Processing","";
     reliability: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -629,8 +624,7 @@ const successStories = [];
     challenge: "Needed 5G network infrastructure for smart factory operations","";
     solution: "Built comprehensive 5G network with edge computing and IoT solutions","";
     results: "50% efficiency improvement, 60% cost reduction, real-time operations, better connectivity","";
-    logo: "GMC";,
-},;
+    logo: "GMC"},;
   {}
 ";
     id: 2,"";
@@ -639,8 +633,7 @@ const successStories = [];
     challenge: "Required 5G solutions for remote patient monitoring and telemedicine","";
     solution: "Implemented 5G network with custom healthcare applications","";
     results: "70% faster data transmission, 80% improved patient care, better connectivity, enhanced services","";
-    logo: "HTL";,
-},;
+    logo: "HTL"},;
   {}
 ";
     id: 3,"";
@@ -651,7 +644,7 @@ const successStories = [];
     results: "40% operational improvement, 50% cost savings, better citizen services, enhanced monitoring","";
     logo: "SCS";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -659,24 +652,21 @@ const processSteps = [];
     title: "5G Assessment","";
     description: "Evaluate current network and identify 5G opportunities",";
     icon: FileText,"";
-    duration: "2-4 weeks";,
-},;
+    duration: "2-4 weeks"},;
   {}
 ";
     step: 2,"";
     title: "5G Strategy Development","";
     description: "Develop 5G strategy and implementation roadmap",";
     icon: Code,"";
-    duration: "4-8 weeks";,
-},;
+    duration: "4-8 weeks"},;
   {}
 ";
     step: 3,"";
     title: "5G Implementation","";
     description: "Build and deploy 5G network and applications",";
     icon: Wrench,"";
-    duration: "18-48 weeks";,
-},;
+    duration: "18-48 weeks"},;
   {}
 ";
     step: 4,"";
@@ -685,7 +675,7 @@ const processSteps = [];
     icon: Gauge,"";
     duration: "4-8 weeks";
 ];
-;
+
 const fiveGBenefits = [];
   {}
 ";
@@ -693,32 +683,28 @@ const fiveGBenefits = [];
     title: "Ultra-Fast Connectivity","";
     description: "5G provides unprecedented speed and bandwidth for enterprise operations",";
     icon: Zap,"";
-    examples["High speed", "Low latency", "High bandwidth", "Better performance"];,
-},;
+    examples["High speed", "Low latency", "High bandwidth", "Better performance"]},;
   {}
 ";
 "";
     title: "Network Slicing","";
     description: "Custom network slices for different enterprise applications and requirements",";
     icon: Layers,"";
-    examples["Custom networks", "Application isolation", "Better security", "Optimized performance"];,
-},;
+    examples["Custom networks", "Application isolation", "Better security", "Optimized performance"]},;
   {}
 ";
 "";
     title: "Edge Computing","";
     description: "Local processing and reduced latency for enterprise applications",";
     icon: Server,"";
-    examples["Local processing", "Reduced latency", "Better performance", "Cost optimization"];,
-},;
+    examples["Local processing", "Reduced latency", "Better performance", "Cost optimization"]},;
   {}
 ";
 "";
     title: "IoT Integration","";
     description: "Seamless integration of IoT devices and applications",";
     icon: Wifi,"";
-    examples["Device connectivity", "Data collection", "Real-time monitoring", "Automation"];,
-}
+    examples["Device connectivity", "Data collection", "Real-time monitoring", "Automation"]}
 ];
 ;
 export {};
@@ -879,9 +865,8 @@ export {};
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -889,9 +874,8 @@ export {};
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {};
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -1002,14 +986,10 @@ export {};
       </section>;
     </div>;
   )}
-;
 
-export { FiveGEnterpriseSolutions };
-;
-export { FiveGEnterpriseSolutions };
-;
-export { FiveGEnterpriseSolutions };
-;
-export { FiveGEnterpriseSolutions };
-;
-export { FiveGEnterpriseSolutions };
+
+export { FiveGEnterpriseSolutions }
+export { FiveGEnterpriseSolutions }
+export { FiveGEnterpriseSolutions }
+export { FiveGEnterpriseSolutions }
+export { FiveGEnterpriseSolutions }

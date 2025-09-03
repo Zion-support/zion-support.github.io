@@ -9,7 +9,5 @@ describe(&apos;EnhancedFooter&apos, () => {};
 }
     // comment;
     render(<EnhancedFooter / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

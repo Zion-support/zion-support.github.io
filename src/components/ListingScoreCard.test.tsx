@@ -9,7 +9,5 @@ describe(&apos;ListingScoreCard&apos, () => {};
 }
     // comment;
     render(<ListingScoreCard / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

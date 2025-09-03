@@ -31,7 +31,7 @@ export const ContactForm: React.FC = () => {};
     'Machine Learning',;
     'Space Technology';
   ];
-;
+
   const budgets = [;
     'Under $10,000',;
     '$10,000 - $50,000',;
@@ -39,7 +39,7 @@ export const ContactForm: React.FC = () => {};
     '$100,000 - $500,000',;
     'Over $500,000';
   ];
-;
+
   const timelines = [;
     'ASAP',;
     '1-3 months',;
@@ -54,9 +54,8 @@ export const ContactForm: React.FC = () => {};
           Send Another Message;
         </button>;
       </div>;
-    );,
-}
-;
+    )}
+
   return (;
     <div className="bg-white/10 backdrop-blur-md border border-purple-200 rounded-2xl p-8">;
       <div className="text-center mb-8">;
@@ -208,7 +207,5 @@ export const ContactForm: React.FC = () => {};
         </form>;
       </div>;
     </div>;
-  );,
-};
-;
+  )}
 export default ContactForm;

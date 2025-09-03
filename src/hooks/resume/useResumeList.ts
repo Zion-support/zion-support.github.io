@@ -4,7 +4,7 @@ export default function Page() {};
   return null;
 }
         .order('created_at', { ascending: false });
-      ;
+
       if(resumeError) throw resumeError;
       ;
       if(!resumeData || resumeData.length === 0) {};
@@ -16,9 +16,8 @@ export default function Page() {};
         education: [],;
         skills: [],;
         certifications: [],;
-        is_active: resume.is_active;,
-}));
-      ;
+        is_active: resume.is_active}));
+
       setResumes(transformedResumes);
       return transformedResumes;,
 } catch(e: unknown) {};

@@ -9,7 +9,5 @@ describe(&apos;AIServiceRecommendationEngine&apos, () => {};
 }
     // comment;
     render(<AIServiceRecommendationEngine / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

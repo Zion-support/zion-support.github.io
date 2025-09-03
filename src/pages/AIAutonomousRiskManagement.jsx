@@ -280,16 +280,12 @@ const AIAutonomousRiskManagement = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default AIAutonomousRiskManagement;
-;
 
-export { AIAutonomousRiskManagement };
-;
-export { AIAutonomousRiskManagement };
-;
-export { AIAutonomousRiskManagement };
-;
-export { AIAutonomousRiskManagement };
-;
+
+export { AIAutonomousRiskManagement }
+export { AIAutonomousRiskManagement }
+export { AIAutonomousRiskManagement }
+export { AIAutonomousRiskManagement }
 export { AIAutonomousRiskManagement };)

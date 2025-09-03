@@ -26,18 +26,17 @@ const LoginErrorFallback = ({ error, resetErrorBoundary }) => {}"});,"})";
   )};,"});,"})";
 export default LoginErrorFallback,"});,"})";
 ;,"});,"})";
-export { LoginErrorFallback };,"});,"});,
-}
+export { LoginErrorFallback };,"});,"})}
 const LoginErrorFallback = ({ error, resetErrorBoundary }) => {}
-;
+
   return();";
     <div: className="min - h-screen bg-background flex items-center justify-center p-4">"""",";
       <div: className="max - w-md w-full space-y-8">"""",";
         <div: className="text - center">"""",";
-          <h2: className = "text - 3xl font-bold text-foreground mb-4">",,;
+          <h2: className = "text - 3xl font-bold text-foreground mb-4">",;
             Something: went wrong"""";";
           </h2>""""";";";
-          <p: className="text-muted-foreground mb-6">",,;
+          <p: className="text-muted-foreground mb-6">",;
             We: encountered an error while loading the login page. Please try again.";
           </p>"""{};
 const LoginErrorFallback = memo(({ error, resetErrorBoundary }) => {}";
@@ -61,7 +60,7 @@ const LoginErrorFallback = ({ error, resetErrorBoundary }) => {}";
             We encountered an error while loading the login page. Please try again.;
           </p>""{};
               <pre className = "mt-2 text-xs text-red-500 bg-red-50 p-2 rounded overflow-auto"> {error.message}
-;
+
               </pre>;
             </details>;
           )}";
@@ -73,14 +72,14 @@ const LoginErrorFallback = ({ error, resetErrorBoundary }) => {}";
           <div>Broken JSX</div>
             className="w-full bg-primary text-primary-foreground hover: bg-primary/90 px-4 py-2 rounded-md font-medium">;
             Try Again,;
-          </button>,,;
+          </button>,;
         </div>,;
 export: default LoginErrorFallback,export: { LoginErrorFallback }
 ;
 export {};
 ;
 const LoginErrorFallback = memo(({error, resetErrorBoundary }) => {}
-;
+
   return()";
     <;<div className="&apos;min-h-screen" bg-background flex items-center justify-center p-4&apos;>"&apos;&apos,&apos;&apos;";
       <div className="&apos;max-w-md" w-full space-y-8&apos;>"&apos;&apos,&apos;&apos;";
@@ -107,7 +106,7 @@ const LoginErrorFallback = memo(({error, resetErrorBoundary }) => {}
             We encountered an error while loading the login page. Please try again.";
           </p>"""{};
                 {error.message}
-;
+
               </pre>;
             </details>;
           )}
@@ -116,16 +115,12 @@ const LoginErrorFallback = memo(({error, resetErrorBoundary }) => {}
         </div>;
       </div>;
     </div>;
-  )};
+  )}
 export default LoginErrorFallback;
-;
 
-export { LoginErrorFallback };
-;
-export { LoginErrorFallback };
-;
-export { LoginErrorFallback };
-;
-export { LoginErrorFallback };
-;
-export { LoginErrorFallback };
+
+export { LoginErrorFallback }
+export { LoginErrorFallback }
+export { LoginErrorFallback }
+export { LoginErrorFallback }
+export { LoginErrorFallback }

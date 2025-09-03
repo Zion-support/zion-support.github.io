@@ -4,7 +4,7 @@
 export interface ExpandedService2027 {};
 };
     freeTier: boolean;
-    trialPeriod: string};
+    trialPeriod: string}
   marketPrice: string;
   competitors: string[];
   roi: string;
@@ -23,13 +23,12 @@ export interface ExpandedService2027 {};
   reviews: number;
   launchDate: string;
   status: 'active' | 'beta' | 'coming-soon'}
-;
+
 // 1.ADVANCED CYBERSECURITY & THREAT INTELLIGENCE;
 export const advancedCybersecurityServices: ExpandedService2027[] = [{};
 },;
       freeTier: false,;
-      trialPeriod: '30 days';,
-},;
+      trialPeriod: '30 days'},;
     marketPrice: '$2,500 - $15,000/month',;
     competitors['CrowdStrike',SentinelOne',Palo Alto Networks'],;
     roi: '400-600% through threat prevention',;
@@ -52,8 +51,7 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [{};
   {};
 },;
       freeTier: true,;
-      trialPeriod: '14 days';,
-},;
+      trialPeriod: '14 days'},;
     marketPrice: '$1,500 - $8,000/month',;
     competitors['OneTrust',TrustArc',LogicGate'],;
     roi: '300-500% through automation',;
@@ -74,13 +72,12 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [{};
     status: 'active';
 
 ];
-;
+
 // 2.ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE;
 export const advancedDataAnalyticsServices: ExpandedService2027[] = [{};
 },;
       freeTier: true,;
-      trialPeriod: '21 days';,
-},;
+      trialPeriod: '21 days'},;
     marketPrice: '$1,800 - $10,000/month',;
     competitors['Tableau',Power BI',Qlik',Looker'],;
     roi: '250-400% through improved decisions',;
@@ -103,8 +100,7 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [{};
   {};
 },;
       freeTier: false,;
-      trialPeriod: '14 days';,
-},;
+      trialPeriod: '14 days'},;
     marketPrice: '$2,200 - $12,000/month',;
     competitors['Apache Kafka',Amazon Kinesis',Google Cloud Dataflow'],;
     roi: '300-500% through real-time insights',;
@@ -125,13 +121,12 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [{};
     status: 'active';
 
 ];
-;
+
 // 3.ADVANCED CLOUD & DEVOPS SOLUTIONS;
 export const advancedCloudDevOpsServices: ExpandedService2027[] = [{};
 },;
       freeTier: false,;
-      trialPeriod: '30 days';,
-},;
+      trialPeriod: '30 days'},;
     marketPrice: '$2,000 - $15,000/month',;
     competitors['Terraform',Ansible',HashiCorp',AWS Systems Manager'],;
     roi: '200-400% through cost optimization',;
@@ -154,8 +149,7 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [{};
   {};
 },;
       freeTier: true,;
-      trialPeriod: '21 days';,
-},;
+      trialPeriod: '21 days'},;
     marketPrice: '$1,200 - $8,000/month',;
     competitors['Jenkins',GitLab CI/CD',GitHub Actions',CircleCI'],;
     roi: '300-500% through automation',;
@@ -176,13 +170,12 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [{};
     status: 'active';
 
 ];
-;
+
 // 4.ADVANCED IOT & EDGE COMPUTING;
 export const advancedIoTServices: ExpandedService2027[] = [{};
 },;
       freeTier: false,;
-      trialPeriod: '30 days';,
-},;
+      trialPeriod: '30 days'},;
     marketPrice: '$2,800 - $18,000/month',;
     competitors['PTC ThingWorx',Siemens Mindsphere',GE Predix',IBM Watson IoT'],;
     roi: '250-400% through operational efficiency',;
@@ -205,8 +198,7 @@ export const advancedIoTServices: ExpandedService2027[] = [{};
   {};
 },;
       freeTier: false,;
-      trialPeriod: '60 days';,
-},;
+      trialPeriod: '60 days'},;
     marketPrice: '$5,000 - $50,000/month',;
     competitors['Cisco Smart Cities',IBM Smart Cities',Microsoft CityNext',Siemens Smart Cities'],;
     roi: '200-350% through operational efficiency',;
@@ -227,13 +219,12 @@ export const advancedIoTServices: ExpandedService2027[] = [{};
     status: 'active';
 
 ];
-;
+
 // 5.ADVANCED FINANCIAL TECHNOLOGY;
 export const advancedFinTechServices: ExpandedService2027[] = [{};
 },;
       freeTier: false,;
-      trialPeriod: '30 days';,
-},;
+      trialPeriod: '30 days'},;
     marketPrice: '$8,000 - $50,000/month',;
     competitors['Bloomberg Terminal',Thomson Reuters',FactSet',Refinitiv'],;
     roi: '500-1000% through superior returns',;
@@ -256,8 +247,7 @@ export const advancedFinTechServices: ExpandedService2027[] = [{};
   {};
 },;
       freeTier: true,;
-      trialPeriod: 'Immediate';,
-},;
+      trialPeriod: 'Immediate'},;
     marketPrice: 'Transaction fees only',;
     competitors['Uniswap',Compound',Aave',MakerDAO'],;
     roi: 'Variable based on DeFi yields',;
@@ -278,13 +268,12 @@ export const advancedFinTechServices: ExpandedService2027[] = [{};
     status: 'active';
 
 ];
-;
+
 // 6.ADVANCED HEALTHCARE TECHNOLOGY;
 export const advancedHealthcareServices: ExpandedService2027[] = [{};
 },;
       freeTier: false,;
-      trialPeriod: '30 days';,
-},;
+      trialPeriod: '30 days'},;
     marketPrice: '$3,500 - $25,000/month',;
     competitors['IBM Watson Health',Google Health',Microsoft Healthcare',Philips Healthcare'],;
     roi: '300-600% through improved outcomes',;
@@ -307,8 +296,7 @@ export const advancedHealthcareServices: ExpandedService2027[] = [{};
   {};
 },;
       freeTier: false,;
-      trialPeriod: '30 days';,
-},;
+      trialPeriod: '30 days'},;
     marketPrice: '$2,500 - $20,000/month',;
     competitors['Teladoc',Amwell',MDLive',Doxy.me'],;
     roi: '250-400% through increased efficiency',;
@@ -329,7 +317,7 @@ export const advancedHealthcareServices: ExpandedService2027[] = [{};
     status: 'active';
 
 ];
-;
+
 // Export all expanded services;
 export const ALL_EXPANDED_SERVICES_2027: unknown = [;  ...advancedCybersecurityServices,;
   ...advancedDataAnalyticsServices,;
@@ -338,7 +326,7 @@ export const ALL_EXPANDED_SERVICES_2027: unknown = [;  ...advancedCybersecurityS
   ...advancedFinTechServices,;
   ...advancedHealthcareServices;
 ];
-;
+
 // Service categories for filtering;
 export ;
   'Cybersecurity',;
@@ -348,7 +336,7 @@ export ;
   'Financial Technology',;
   'Healthcare Technology';
 ];
-;
+
 // Helper function to get services by category;
 export ;
   if(category === 'All') {};
@@ -356,8 +344,7 @@ export ;
 ;
 // Helper function to get services by subcategory;
 export ;
-  return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory)};
-;
+  return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory)}
 // Helper function to search services;
 export;
   const lowercaseQuery: unknown = query.toLowerCase();  return ALL_EXPANDED_SERVICES_2027.filter(service =>;
@@ -366,5 +353,5 @@ export;
     service.category.toLowerCase().includes(lowercaseQuery) ||;
     service.subcategory.toLowerCase().includes(lowercaseQuery) ||;
     service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery));
-  )};
+  )}
 }}}}}}

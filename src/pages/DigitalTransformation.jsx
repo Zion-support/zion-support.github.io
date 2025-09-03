@@ -9,8 +9,7 @@ const transformationServices = [];
         description: "Comprehensive digital transformation roadmap aligned with business objectives and market opportunities.",";
         icon: Rocket,"";
         features: ["Digital Maturity Assessment", "Technology Roadmap", "Change Management Strategy", "ROI Analysis"],"";
-        color: "from-purple-500 to-pink-500";,
-},;
+        color: "from-purple-500 to-pink-500"},;
     {}
 ";
 "";
@@ -18,8 +17,7 @@ const transformationServices = [];
         description: "Intelligent automation solutions that streamline operations and eliminate manual workflows.",";
         icon: Zap,"";
         features: ["Workflow Automation", "RPA Implementation", "Process Optimization", "Performance Monitoring"],"";
-        color: "from-blue-500 to-cyan-500";,
-},;
+        color: "from-blue-500 to-cyan-500"},;
     {}
 ";
 "";
@@ -27,8 +25,7 @@ const transformationServices = [];
         description: "Legacy system modernization and cloud-native architecture implementation.",";
         icon: Cpu,"";
         features: ["Legacy Migration", "Cloud Architecture", "API Development", "Microservices"],"";
-        color: "from-green-500 to-emerald-500";,
-},;
+        color: "from-green-500 to-emerald-500"},;
     {}
 ";
 "";
@@ -36,8 +33,7 @@ const transformationServices = [];
         description: "Data-driven insights and business intelligence solutions for informed decision-making.",";
         icon: Database,"";
         features: ["Data Strategy", "Business Intelligence", "Predictive Analytics", "Data Governance"],"";
-        color: "from-orange-500 to-red-500";,
-},;
+        color: "from-orange-500 to-red-500"},;
     {}
 ";
 "";
@@ -45,8 +41,7 @@ const transformationServices = [];
         description: "Omnichannel customer experience optimization and digital touchpoint enhancement.",";
         icon: Users,"";
         features: ["CX Strategy", "Digital Channels", "Personalization", "Customer Journey Mapping"],"";
-        color: "from-indigo-500 to-purple-500";,
-},;
+        color: "from-indigo-500 to-purple-500"},;
     {}
 ";
 "";
@@ -63,24 +58,21 @@ const transformationPhases = [];
         phase: "01","";
         title: "Discovery & Assessment","";
         description: "Evaluate current state, identify opportunities, and assess digital maturity","";
-        duration: "2-4 weeks";,
-},;
+        duration: "2-4 weeks"},;
     {}
 ";
 "";
         phase: "02","";
         title: "Strategy Development","";
         description: "Create comprehensive digital transformation roadmap and business case","";
-        duration: "4-6 weeks";,
-},;
+        duration: "4-6 weeks"},;
     {}
 ";
 "";
         phase: "03","";
         title: "Pilot & Validation","";
         description: "Implement proof-of-concept and validate approach with stakeholders","";
-        duration: "6-8 weeks";,
-},;
+        duration: "6-8 weeks"},;
     {}
 ";
 "";
@@ -98,16 +90,14 @@ const testimonials = [];
         content: "Zion's digital transformation approach was game-changing. They didn't just implement technology - they transformed our entire business model.","";
         name: "Carlos Rodriguez","";
         role: "CEO, InnovateCorp",;
-        rating: 5;,
-},;
+        rating: 5},;
     {}
 ";
 "";
         content: "The process automation they implemented saved us 40 hours per week and improved our customer satisfaction scores significantly.","";
         name: "Lisa Chang","";
         role: "COO, TechFlow Solutions",;
-        rating: 5;,
-},;
+        rating: 5},;
     {}
 '";
 '"'";
@@ -260,22 +250,19 @@ export {};
 "";
                 title: "Operational Efficiency","";
                 description: "Streamlined processes and automation reduce costs and improve productivity by up to 60%.",;
-                icon: Zap;,
-},;
+                icon: Zap},;
             {}
 ";
 "";
                 title: "Customer Experience","";
                 description: "Enhanced digital touchpoints and personalized experiences increase customer satisfaction and loyalty.",;
-                icon: Users;,
-},;
+                icon: Users},;
             {}
 ";
 "";
                 title: "Data-Driven Insights","";
                 description: "Real-time analytics and business intelligence enable informed decision-making and strategic planning.",;
-                icon: TrendingUp;,
-},;
+                icon: TrendingUp},;
             {}
 ";
 "";
@@ -353,14 +340,10 @@ export {};
         </div>;
       </section>;
     </div>)}
-;
 
-export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
-;
-export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
-;
-export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
-;
-export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
-;
-export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
+
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent }
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent }
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent }
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent }
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent }

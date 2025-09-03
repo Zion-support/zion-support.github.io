@@ -9,7 +9,5 @@ describe(&apos;EnhancedTestimonials&apos, () => {};
 }
     // comment;
     render(<EnhancedTestimonials / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

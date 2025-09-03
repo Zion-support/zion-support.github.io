@@ -25,7 +25,7 @@ export default function Page() {};
         // Log to console for development';
         if(process.env.NODE_ENV === 'development') {};
         // Example: Sentry.captureException(error, { extra: errorReport });
-;
+
             // console.log('Error ID:', errorReport.id);
             // console.log('Error Details:', errorReport);
             console.groupEnd()}
@@ -38,7 +38,7 @@ export default function Page() {};
     handleReportIssue = () => {};
             const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;
             window.open(issueUrl,_blank')}
-    };
+    }
                 return this.props.fallback}
             // Default error UI;
             return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">;
@@ -100,16 +100,12 @@ export default function Page() {};
         </motion.div>;
       </div>;
     );
-;
-    return fallback || defaultFallback;,
-}
-;
-  return children;,
-};
-;
-export { EnhancedErrorBoundary };
-export default EnhancedErrorBoundary;'"`;,
-}}}}}}}}}}}}}'"`'"`;
 
-;
-export { Page };
+    return fallback || defaultFallback}
+
+  return children}
+export { EnhancedErrorBoundary }
+export default EnhancedErrorBoundary;'"`}}}}}}}}}}}}}'"`'"`;
+
+
+export { Page }

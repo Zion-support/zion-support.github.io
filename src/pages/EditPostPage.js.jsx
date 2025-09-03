@@ -75,8 +75,7 @@ export {};
         categoryId: post.categoryId,"";
         tags: post.tags.join(","";
   ");
-;,
-};
+}
     const handleSubmit = async (values) => {}
         try {}
 ';
@@ -86,8 +85,7 @@ export {};
 ";
 "";
                 title: "Post updated","";
-                description: "Your post has been updated successfully";,
-});`;
+                description: "Your post has been updated successfully"});`;
             // Redirect back to the post``;
             router(`/community/post/${postId}`)}
         catch (error) {}
@@ -96,9 +94,7 @@ export {};
 "";
                 title: "Error","";
                 description: "There was a problem updating your post","";
-                variant: "destructive";,
-})}";,
-};"";
+                variant: "destructive"})}"};"";
     return (<SEO title="Edit Post | Community Forum | Zion AI Marketplace" description="Edit your discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, edit post"/>";
         ,"";
             <div className="container py-8">"";
@@ -118,14 +114,10 @@ export {};
 
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} isEditing={true}/>;
       </div>)}
-;
 
-export { EditPostPage };
-;
-export { EditPostPage };
-;
-export { EditPostPage };
-;
-export { EditPostPage };
-;
-export { EditPostPage };
+
+export { EditPostPage }
+export { EditPostPage }
+export { EditPostPage }
+export { EditPostPage }
+export { EditPostPage }

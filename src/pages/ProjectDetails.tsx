@@ -46,6 +46,5 @@ const ProjectDetails = () => {};
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default ProjectDetails;

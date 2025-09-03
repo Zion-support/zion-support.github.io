@@ -18,7 +18,7 @@ export default function AICybersecurityThreatIntelligencePlatform() {};
     {};
 }
   ];
-;
+
   const pricingPlans = [;
     {};
 },;
@@ -27,7 +27,7 @@ export default function AICybersecurityThreatIntelligencePlatform() {};
     {};
 }
   ];
-;
+
   const benefits = [;
     {};
 },;
@@ -38,7 +38,7 @@ export default function AICybersecurityThreatIntelligencePlatform() {};
     {};
 }
   ];
-;
+
   const securityMetrics = [;
     {};
 },;
@@ -220,5 +220,4 @@ export default function AICybersecurityThreatIntelligencePlatform() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

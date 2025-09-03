@@ -5,4 +5,4 @@ export default function StarRating({ value }) {}"});,"});,
 }
 }
 '";
-export { StarRating };
+export { StarRating }

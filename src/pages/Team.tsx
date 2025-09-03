@@ -46,6 +46,5 @@ const Team = () => {};
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default Team;

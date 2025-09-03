@@ -14,7 +14,7 @@ export default function AIBiotechnology() {};
     {};
 }
   ];
-;
+
   const useCases = [;
     {};
 },;
@@ -25,7 +25,7 @@ export default function AIBiotechnology() {};
     {};
 }
   ];
-;
+
   const technologies = [;
     {};
 },;
@@ -36,7 +36,7 @@ export default function AIBiotechnology() {};
     {};
 }
   ];
-;
+
   const industries = [;
     {};
 },;
@@ -47,12 +47,12 @@ export default function AIBiotechnology() {};
     {};
 }
   ];
-;
+
   return (;
     <>;
       <div>Broken JSX</div>
       />;
-      ;
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">;
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">;
@@ -216,7 +216,6 @@ export default function AIBiotechnology() {};
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
               {};
                   )}
-                  ;
                   <div className="text-center mb-8">;
                     <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>;
                     <p className="text-gray-400 mb-4">{tier.description}</p>;
@@ -298,5 +297,4 @@ export default function AIBiotechnology() {};
         </section>;
       </div>;
     </>;
-  );,
-}
+  )}

@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
-;
-const ModernHeader: React.FC = () => {;
+
+const ModernHeader: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-;
-  const toggleMenu = () => {;
-    setIsMenuOpen(!isMenuOpen);,
-};
-;
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)}
   return (;
     <header className="bg-white shadow-lg">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -109,7 +107,5 @@ const ModernHeader: React.FC = () => {;
         )}
       </div>;
     </header>;
-  );,
-};
-;
+  )}
 export default ModernHeader;

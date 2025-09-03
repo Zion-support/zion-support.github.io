@@ -23,14 +23,10 @@ export {};
         </div>;
       </div>;
     </>)}
-;
 
-export { Featured };
-;
-export { Featured };
-;
-export { Featured };
-;
-export { Featured };
-;
-export { Featured };
+
+export { Featured }
+export { Featured }
+export { Featured }
+export { Featured }
+export { Featured }

@@ -11,8 +11,6 @@ const RDPage = () => {};
         <p className="text-gray-600">We invest in cutting-edge research across AI, cloud, and edge computing to build the future.</p>;
       </main>;
     </>;
-  );,
-};
-;
+  )}
 export default RDPage;
-;
+

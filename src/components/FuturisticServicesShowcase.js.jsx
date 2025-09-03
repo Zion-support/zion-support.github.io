@@ -34,7 +34,7 @@ const ServiceCard = ({ service, index, isVisible }) => {};
                   </span>"";
                   <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">;
                     {service.subcategory}
-;
+
                   </span>;
                 </div>";
               </div>;
@@ -69,7 +69,7 @@ const ServiceCard = ({ service, index, isVisible }) => {};
                     <div className="w-1 h-1 bg-green-400 rounded-full"></div>;
                     <span>{benefit}</span>;
                   </div>) ) }
-;
+
               </div>";
             </div>;
 """;
@@ -91,9 +91,9 @@ const ServiceCard = ({ service, index, isVisible }) => {};
             {/* comment */}""";
             {};
                   {service.technologyStack.slice(0, 4).map((tech, idx) => (<span key="{idx}" className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded border border-purple-500/30">                      {tech}
-;
+
                     </span>) ) }
-;
+
                 </div>";
               </div>) }
 """;
@@ -112,7 +112,7 @@ const ServiceCard = ({ service, index, isVisible }) => {};
                   <span className="text-purple-400">🌐</span>"";
                   <a href="{service.contactInfo.website}" className="hover: text-purple-300 transition-colors">,;
                     {service.contactInfo.website}
-;
+
                   </a>;
                 </div>;
             </div>";
@@ -135,7 +135,7 @@ export {};
     const [visibleServices, setVisibleServices] = useState(new Set())";
     const categories = [];
     const filteredServices = ADVANCED_MICRO_SERVICES.filter(service => {}
-;
+
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -191,9 +191,9 @@ export {};
               {categories.map((category) => (<button key="{category}" onClick="{()" ="> setSelectedCategory(category)} className="{};
                 : "bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20"}"}>";
                   {category === "all" ? "All Services" : category}
-;
+
                 </button>) ) }
-;
+
             </div>;
           </div>";
         </motion.div>;

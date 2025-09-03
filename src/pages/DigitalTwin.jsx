@@ -37,13 +37,11 @@ import {}
   MapPin,';
   Layers,'';
   RefreshCw,''';
-  AlertTriangle'''';,
-} from 'lucide-react';
-;
-    technologies["BMS Integration", "IoT Sensors", "3D Modeling", "AI Analytics"];,
-}
+  AlertTriangle''''} from 'lucide-react';
+
+    technologies["BMS Integration", "IoT Sensors", "3D Modeling", "AI Analytics"]}
 ];
-;
+
 const digitalTwinTechnologies = [];
   {}
 ";
@@ -52,8 +50,7 @@ const digitalTwinTechnologies = [];
     description: "Real-time data collection from physical assets",";
     icon: Activity,"";
     useCase: "Data Collection","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -61,8 +58,7 @@ const digitalTwinTechnologies = [];
     description: "Digital representation of physical objects and spaces",";
     icon: Layers,"";
     useCase: "Visualization","";
-    reliability: "High";,
-},;
+    reliability: "High"},;
   {}
 ";
 "";
@@ -70,8 +66,7 @@ const digitalTwinTechnologies = [];
     description: "Intelligent analysis and prediction capabilities",";
     icon: Brain,"";
     useCase: "Analytics","";
-    reliability: "High";,
-},;
+    reliability: "High"},;
   {}
 ";
 "";
@@ -81,7 +76,7 @@ const digitalTwinTechnologies = [];
     useCase: "Monitoring","";
     reliability: "Critical";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -91,8 +86,7 @@ const successStories = [];
     challenge: "Needed real-time monitoring and optimization of 50+ production lines","";
     solution: "Built comprehensive digital twin platform with IoT integration and AI analytics","";
     results: "30% increase in production efficiency, 50% reduction in downtime, improved quality control","";
-    logo: "AMC";,
-},;
+    logo: "AMC"},;
   {}
 ";
     id: 2,"";
@@ -101,8 +95,7 @@ const successStories = [];
     challenge: "Required comprehensive monitoring of city infrastructure and services","";
     solution: "Implemented smart city digital twin with real-time monitoring and predictive analytics","";
     results: "25% improvement in traffic flow, 20% reduction in energy consumption, enhanced public safety","";
-    logo: "MC";,
-},;
+    logo: "MC"},;
   {}
 ";
     id: 3,"";
@@ -113,7 +106,7 @@ const successStories = [];
     results: "15% improvement in grid efficiency, 40% reduction in outages, optimized energy distribution","";
     logo: "RPG";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -121,24 +114,21 @@ const processSteps = [];
     title: "Asset Assessment","";
     description: "Evaluate physical assets and determine digital twin requirements",";
     icon: FileText,"";
-    duration: "2-4 weeks";,
-},;
+    duration: "2-4 weeks"},;
   {}
 ";
     step: 2,"";
     title: "Data Integration","";
     description: "Integrate IoT sensors and data sources for real-time monitoring",";
     icon: Database,"";
-    duration: "4-8 weeks";,
-},;
+    duration: "4-8 weeks"},;
   {}
 ";
     step: 3,"";
     title: "Digital Modeling","";
     description: "Create 3D digital models and simulation environments",";
     icon: Code,"";
-    duration: "8-20 weeks";,
-},;
+    duration: "8-20 weeks"},;
   {}
 ";
     step: 4,"";
@@ -147,7 +137,7 @@ const processSteps = [];
     icon: Brain,"";
     duration: "4-8 weeks";
 ];
-;
+
 const digitalTwinBenefits = [];
   {}
 ";
@@ -155,32 +145,28 @@ const digitalTwinBenefits = [];
     title: "Real-time Monitoring","";
     description: "Continuous monitoring of physical assets and systems",";
     icon: Eye,"";
-    examples["Live data feeds", "Instant alerts", "Performance tracking"];,
-},;
+    examples["Live data feeds", "Instant alerts", "Performance tracking"]},;
   {}
 ";
 "";
     title: "Predictive Analytics","";
     description: "AI-powered predictions for maintenance and optimization",";
     icon: TrendingUp,"";
-    examples["Predictive maintenance", "Performance forecasting", "Risk assessment"];,
-},;
+    examples["Predictive maintenance", "Performance forecasting", "Risk assessment"]},;
   {}
 ";
 "";
     title: "Simulation & Testing","";
     description: "Virtual testing of scenarios and what-if analysis",";
     icon: Monitor,"";
-    examples["Process simulation", "Scenario testing", "Optimization modeling"];,
-},;
+    examples["Process simulation", "Scenario testing", "Optimization modeling"]},;
   {}
 ";
 "";
     title: "Cost Optimization","";
     description: "Reduced operational costs through better resource management",";
     icon: Gauge,"";
-    examples["Energy optimization", "Maintenance planning", "Resource allocation"];,
-}
+    examples["Energy optimization", "Maintenance planning", "Resource allocation"]}
 ];
 ;
 export {};
@@ -341,9 +327,8 @@ export {};
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -351,9 +336,8 @@ export {};
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {};
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -464,14 +448,10 @@ export {};
       </section>;
     </div>;
   )}
-;
 
-export { DigitalTwin };
-;
-export { DigitalTwin };
-;
-export { DigitalTwin };
-;
-export { DigitalTwin };
-;
-export { DigitalTwin };
+
+export { DigitalTwin }
+export { DigitalTwin }
+export { DigitalTwin }
+export { DigitalTwin }
+export { DigitalTwin }

@@ -46,6 +46,5 @@ const Profile = () => {};
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default Profile;

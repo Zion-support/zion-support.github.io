@@ -15,7 +15,7 @@ const EnhancedNavigation: React.FC = () => {};
     {};
 }
   ];
-;
+
   const implementationSteps = [;
     {};
 },;
@@ -50,9 +50,8 @@ const EnhancedNavigation: React.FC = () => {};
         </div>;
       )}
     </div>;
-  );,
-};`,;
-    ;
+  )};`,;
+
     breadcrumbs: `// Breadcrumb navigation;
 const Breadcrumbs = ({ path }) => {};
           <li key={index}>;
@@ -67,9 +66,8 @@ const Breadcrumbs = ({ path }) => {};
         ))}
       </ol>;
     </nav>;
-  );,
-};`,;
-    ;
+  )};`,;
+
     megaMenu: `// Mega menu component;
 const MegaMenu = ({ isOpen, onClose }) => {};
     <div className={\`mega-menu \${isOpen ? 'open' : ''}\`}>;
@@ -92,10 +90,7 @@ const MegaMenu = ({ isOpen, onClose }) => {};
         </div>;
       </div>;
     </div>;
-  );,
-};`;,
-};
-;
+  )};`}
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">;
       <Head>;
@@ -131,7 +126,7 @@ const MegaMenu = ({ isOpen, onClose }) => {};
             {/* Overview Section */}
             {};
             )}
-;
+
             {/* Features Section */}
             {};
                   <div key={index} className="bg-gray-50 p-6 rounded-lg border border-gray-200">;
@@ -150,7 +145,7 @@ const MegaMenu = ({ isOpen, onClose }) => {};
                 ))}
               </div>;
             )}
-;
+
             {/* Implementation Section */}
             {};
                         <div key={step.step} className="flex items-start gap-4">;
@@ -166,7 +161,7 @@ const MegaMenu = ({ isOpen, onClose }) => {};
                       ))}
                     </div>;
                   </div>;
-                  ;
+
                   <div className="bg-yellow-50 p-6 rounded-lg">;
                     <h3 className="text-lg font-semibold text-yellow-800 mb-3">Best Practices</h3>;
                     <ul className="space-y-2 text-yellow-700 text-sm">;
@@ -180,7 +175,7 @@ const MegaMenu = ({ isOpen, onClose }) => {};
                 </div>;
               </div>;
             )}
-;
+
             {/* Code Section */}
             {};
                       {codeExamples.search}
@@ -201,7 +196,7 @@ const MegaMenu = ({ isOpen, onClose }) => {};
                 </div>;
               </div>;
             )}
-;
+
             {/* Benefits Section */}
             {};
             )}
@@ -209,7 +204,5 @@ const MegaMenu = ({ isOpen, onClose }) => {};
         </div>;
       </div>;
     </div>;
-  );,
-};
-;
+  )}
 export default EnhancedNavigation;

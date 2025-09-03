@@ -86,8 +86,7 @@ export default function EnhancedServices() {};
                     <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>;
                     <div className="text-gray-600">{stat.label}</div>;
                   </div>;
-                );,
-})}
+                )})}
             </div>;
           </div>;
         </section>;
@@ -106,13 +105,13 @@ export default function EnhancedServices() {};
                         <p className="text-lg text-gray-600">{category.description}</p>;
                       </div>;
                     </div>;
-                    ;
+
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
                       {};
                         <div key={index} className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">;
                           <h4 className="text-xl font-semibold text-gray-900 mb-3">{service.name}</h4>;
                           <p className="text-gray-600 mb-4">{service.description}</p>;
-                          ;
+
                           <div className="mb-4">;
                             <h5 className="font-semibold text-gray-900 mb-2">Key Features:</h5>;
                             <ul className="text-sm text-gray-600 space-y-1">;
@@ -153,8 +152,7 @@ export default function EnhancedServices() {};
                       ))}
                     </div>;
                   </div>;
-                );,
-})}
+                )})}
             </div>;
           </div>;
         </section>;
@@ -227,5 +225,4 @@ export default function EnhancedServices() {};
         </section>;
       </div>;
     </>;
-  );,
-}
+  )}

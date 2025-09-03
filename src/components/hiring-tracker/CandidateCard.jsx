@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Avatar } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, } from "@/components/ui/dropdown-menu";
+import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
 import { toast } from "@/hooks/use-toast";
 ;
@@ -22,9 +22,8 @@ export function CandidateCard({ application, index }) {};
 ";
 "";
             title: "Notes saved","";
-            description: "Your notes have been saved";,
-});
-        setShowNotes(false)};
+            description: "Your notes have been saved"});
+        setShowNotes(false)}
     const handleHireConfirmed = () => {}
   return <div>Component</div>;
 };
@@ -33,8 +32,7 @@ export function CandidateCard({ application, index }) {};
 ";
 "";
             title: "Hiring process initiated","";
-            description: "Offer has been sent to the talent.";,
-})};
+            description: "Offer has been sent to the talent."})}
     return (<>";
       <Draggable draggableId={application.id} index={index}>"";
         {(provided) => (<Card className="mb-2 p-0 shadow-sm border" ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>"";
@@ -97,7 +95,7 @@ export function CandidateCard({ application, index }) {};
               {};
                   <ScoreBadge application={application}/>;
                 </div>)}
-;
+
               {/* Notes Section */}";
               {};
                   <Textarea placeholder="Add private notes about this candidate..." className="text-xs min-h-[60px]" value={notes} onChange={(e) => setNotes(e.target.value)}/>";
@@ -105,7 +103,7 @@ export function CandidateCard({ application, index }) {};
                     <Button size="sm" onClick={handleSaveNotes}>Save Notes</Button>;
                   </div>;
                 </div>)}
-;
+
               {/* Action Buttons */}";
               <div className="flex justify-between mt-2 gap-1">";
                 <Button variant="outline" size="sm" className="flex-1" asChild>`;

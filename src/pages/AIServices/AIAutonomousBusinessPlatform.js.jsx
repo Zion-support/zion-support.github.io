@@ -2,7 +2,7 @@ import React from 'react';''';
 import { motion } from 'framer-motion';''';
 import { Link } from 'react-router-dom';
 import { Brain, TrendingUp, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Cpu, Database } from 'lucide-react';
-;
+
 const features = [;
     {};
 },;
@@ -122,8 +122,7 @@ export {};
                     {feature.description}
                   </p>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -181,8 +180,7 @@ export {};
                     {module.description}
                   </p>;
                 </motion.div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
       </section>;
@@ -215,14 +213,10 @@ export {};
         </div>;
       </section>;
     </div>)}
-;
 
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
+
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }

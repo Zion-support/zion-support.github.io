@@ -19,7 +19,7 @@ const ComprehensivePricing2026 = () => {};
     ];
     const getCategoryServices = (category) => {};
                 return allServices}
-    };
+    }
     const filteredServices = getCategoryServices(selectedCategory);
     const getAnnualPrice = (monthlyPrice) => {};
         return `$${annualPrice.toLocaleString()}`};
@@ -34,7 +34,7 @@ const ComprehensivePricing2026 = () => {};
         visible: {};
 }
         }
-    };
+    }
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">;
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -114,8 +114,7 @@ const ComprehensivePricing2026 = () => {};
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'''`'`'`;
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'```'`;,
-}`}'';
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'```'`}`}'';
               >''';
                 {category === 'all' ? 'All Services' : category}
               </button>;
@@ -396,16 +395,12 @@ const ComprehensivePricing2026 = () => {};
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default ComprehensivePricing2026;
-;
 
-export { ComprehensivePricing2026 };
-;
-export { ComprehensivePricing2026 };
-;
-export { ComprehensivePricing2026 };
-;
-export { ComprehensivePricing2026 };
-;
-export { ComprehensivePricing2026 };
+
+export { ComprehensivePricing2026 }
+export { ComprehensivePricing2026 }
+export { ComprehensivePricing2026 }
+export { ComprehensivePricing2026 }
+export { ComprehensivePricing2026 }

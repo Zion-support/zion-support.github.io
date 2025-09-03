@@ -15,9 +15,8 @@ export const useToast = () => {};
   const toast = useCallback(({ title, description, variant = "default' }) => {};
 }
     const newToast = {}
-;
-    setToasts(prev => [...prev, newToast]);,
-}
+
+    setToasts(prev => [...prev, newToast])}
     // comment;
 setTimeout(() => {};
 }

@@ -23,16 +23,12 @@ const MobileLaunchPage = () => {};
                                                 ,;
                                                     <MobileEmailCapture />;
                                                         ,;
-                                                            <AppStoreBanner />)};
+                                                            <AppStoreBanner />)}
 export default MobileLaunchPage;
-;
 
-export { MobileLaunchPage };
-;
-export { MobileLaunchPage };
-;
-export { MobileLaunchPage };
-;
-export { MobileLaunchPage };
-;
-export { MobileLaunchPage };
+
+export { MobileLaunchPage }
+export { MobileLaunchPage }
+export { MobileLaunchPage }
+export { MobileLaunchPage }
+export { MobileLaunchPage }

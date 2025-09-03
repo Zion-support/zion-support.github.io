@@ -12,7 +12,7 @@ export default function API() {};
     {};
 }
   ];
-;
+
   return (;
     <>;
       <Head>;
@@ -20,7 +20,7 @@ export default function API() {};
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group services and integrations." />;
         <meta name="viewport" content="width=device-width, initial-scale=1" />;
       </Head>;
-      ;
+
       <div className="min-h-screen bg-gray-50">;
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">;

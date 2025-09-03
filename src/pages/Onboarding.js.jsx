@@ -27,26 +27,22 @@ export {};
       case 'client':'''';
         return 'employer';''';
       default:'''';
-        return 'buyer';,
-}
-  };
+        return 'buyer'}
+  }
   const handleUserTypeSelect = type => {}
     setUserType(type);';
     // Direct to specific registration page based on user type'';
     if (type === 'serviceProvider') {}
 ';
       router('/service-onboarding');
-      return;';,
-} else if (type === 'talent') {}
+      return;'} else if (type === 'talent') {}
 ';
 '';
 ''';
       router('/talent-onboarding');
-      return;,
-}
+      return}
     // Continue with the onboarding flow for clients;
-    setCurrentStep(1);,
-};
+    setCurrentStep(1)}
   const handleProfileComplete = async data => {}
     if (!user || !userType) {}
       toast({}
@@ -57,8 +53,7 @@ export {};
         description: 'Your session may have expired. Please log in again.',''';
         variant: 'destructive'});''';
       router('/login');
-      return;,
-}
+      return}
     const dbUserType = mapUserTypeToDatabase(userType);
     try {}
       await updateProfile({}
@@ -83,8 +78,7 @@ export {};
       const dashboardRoute ='''';
         userType === 'client' ? '/client-dashboard' : '/talent-dashboard';
       // Redirect to dashboard;
-      router(dashboardRoute);,
-} catch (error) {}
+      router(dashboardRoute)} catch (error) {}
 ';
 '';
 ''';
@@ -94,8 +88,7 @@ export {};
         title: 'Error',';
         description:'';
           'There was a problem updating your profile. Please try again.',';
-        variant: 'destructive'});,
-}
+        variant: 'destructive'})}
   };';
   const steps = ['';
     { label: 'Select Role', description: "Choose how you'll use the platform" },';
@@ -106,8 +99,7 @@ export {};
 '';
 ''';
     router('/login');
-    return null;,
-}
+    return null}
   return()";
     <>"";
       <div className="min-h-screen bg-zion-blue py-12 px-4">"";
@@ -146,16 +138,12 @@ export {};
           </div>;
         </div>;
       </div>;
-      ;
-    </>)}
-;
 
-export { Onboarding };
-;
-export { Onboarding };
-;
-export { Onboarding };
-;
-export { Onboarding };
-;
-export { Onboarding };
+    </>)}
+
+
+export { Onboarding }
+export { Onboarding }
+export { Onboarding }
+export { Onboarding }
+export { Onboarding }

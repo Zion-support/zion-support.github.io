@@ -5,17 +5,10 @@ function Skeleton({ className, ...props }) {}
   return()';
     <div>Broken JSX</div>
     />;
-  );,
-}
-export { Skeleton };
-;
-
-export { Skeleton };
-;
-export { Skeleton };
-;
-export { Skeleton };
-;
-export { Skeleton };
-;
-export { Skeleton };
+  )}
+export { Skeleton }
+export { Skeleton }
+export { Skeleton }
+export { Skeleton }
+export { Skeleton }
+export { Skeleton }

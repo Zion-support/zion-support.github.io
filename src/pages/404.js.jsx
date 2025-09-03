@@ -132,16 +132,12 @@ const NotFoundPage = () => {}
           </p>;
         </div>;
       </div>;
-    </div>)};
+    </div>)}
 export default NotFoundPage;
-;
 
-export { NotFoundPage };
-;
-export { NotFoundPage };
-;
-export { NotFoundPage };
-;
-export { NotFoundPage };
-;
-export { NotFoundPage };
+
+export { NotFoundPage }
+export { NotFoundPage }
+export { NotFoundPage }
+export { NotFoundPage }
+export { NotFoundPage }

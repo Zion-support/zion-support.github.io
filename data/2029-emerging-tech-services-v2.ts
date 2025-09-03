@@ -1,4 +1,4 @@
-export interface EmergingTechService2029V2 {;
+export interface EmergingTechService2029V2 {
   id: string;
   name: string;
   description: string;
@@ -32,12 +32,12 @@ export interface EmergingTechService2029V2 {;
   partnership: string;
   funding: string;
   exit: string;
-  contact: {;
+  contact: {
     mobile: string;
     email: string;
     website: string;
 export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
-  {;
+  {
     id: "quantum-internet-security-gateway",;
     name: "Quantum Internet Security Gateway",;
     description: "Next-generation quantum internet security platform that provides unbreakable encryption and quantum-safe communication protocols for the future quantum internet infrastructure.",;
@@ -94,13 +94,12 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     partnership: "Strategic security partnerships",;
     funding: "Series C funding, $300M valuation",;
     exit: "IPO or security acquisition",;
-    contact: {;
+    contact: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
-  {;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
+  {
     id: "biotech-dna-computing-platform",;
     name: "Biotech DNA Computing Platform",;
     description: "Revolutionary DNA-based computing platform that uses biological molecules for data storage and computation, offering unprecedented storage density and parallel processing capabilities.",;
@@ -157,13 +156,12 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     partnership: "Research institution partnerships",;
     funding: "Series B funding, $150M valuation",;
     exit: "IPO or biotech acquisition",;
-    contact: {;
+    contact: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
-  {;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
+  {
     id: "quantum-financial-trading-platform",;
     name: "Quantum Financial Trading Platform",;
     description: "Advanced quantum-powered financial trading platform that uses quantum algorithms to analyze market data, predict trends, and execute trades with unprecedented speed and accuracy.",;
@@ -220,13 +218,12 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     partnership: "Financial institution partnerships",;
     funding: "Series C funding, $500M valuation",;
     exit: "IPO or financial acquisition",;
-    contact: {;
+    contact: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
-},;
-  {;
+      address: "364 E Main St STE 1008 Middletown DE 19709"},;
+  {
     id: "quantum-creativity-studio",;
     name: "Quantum Creativity Studio",;
     description: "Innovative quantum-enhanced creativity platform that uses quantum algorithms to generate unique artistic content, design solutions, and creative concepts that push the boundaries of human imagination.",;
@@ -283,7 +280,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     partnership: "Creative agency partnerships",;
     funding: "Series A funding, $80M valuation",;
     exit: "Acquisition by major creative platform",;
-    contact: {;
+    contact: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;

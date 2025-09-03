@@ -26,7 +26,7 @@ class MimeTypeFallback {};
       if(!contentType) {};
         // console.warn(`No content-type header for: ${url}`);
         return false}
-;
+
       if();
         contentType.includes(expectedType) ||';
         contentType.includes('application/octet-stream');
@@ -34,7 +34,7 @@ class MimeTypeFallback {};
 }
 `;
       // console.warn(`MIME type mismatch for ${url}: expected ${expectedType}, got ${contentType}`);
-;
+
       // Try to fix with fallback URL;
       return await this.tryFallbackUrl(url)} catch(error) {};
       // console.error(`Error checking MIME type for ${url}:`, error);
@@ -51,12 +51,12 @@ class MimeTypeFallback {};
         }
       } catch(error) {};
         // console.error(`Fallback URL failed: ${fallbackUrl}`, error)}    }
-;
+
     return false}
 ;
   private replaceResource(originalUrl: string, fallbackUrl: string) {};
       // console.log(`Replaced script source: ${originalUrl} -> ${fallbackUrl}`)});
-;
+
     // Replace stylesheet links"`;
     ;
     links.forEach(link => {};
@@ -67,7 +67,7 @@ class MimeTypeFallback {};
       } catch(error) {};
         // console.error(`Error preloading resource: ${resource}`, error)}    }
   }
-;
+
   createResourceElement();
     url: string,;
     type: 'script' | 'stylesheet';
@@ -88,7 +88,7 @@ class MimeTypeFallback {};
         document.head.appendChild(element)} else {};
         document.head.appendChild(element)}
     })}}
-;
+
 // Create singleton instance;
 
 export default mimeTypeFallback;

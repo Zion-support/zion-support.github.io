@@ -24,10 +24,9 @@ export default function Page() {};
       const params = new URLSearchParams(location.search);
       const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
       navigate(next, { replace: true });
-;
-      return { error: null }; // Successful login;,
-}
-;
+
+      return { error: null }; // Successful login}
+
     // Handle errors from the API call(res.status !== 200);
     // data is expected to be { error: "message", code: "ERROR_CODE" }
     let toastMessage = data?.error || "An unknown error occurred.";
@@ -68,17 +67,16 @@ export default function Page() {};
         if(sessionError) {};
 });
           setIsLoading(false);
-          return { error: "Failed to initialize session.", emailVerificationRequired: false };,
-}
-;
+          return { error: "Failed to initialize session.", emailVerificationRequired: false }}
+
         // setTokens is handled by onAuthStateChange or if direct setting is preferred:;
         setTokens({ accessToken: data.session.access_token, refreshToken: data.session.refresh_token });
-;
+
         // The user object from /api/auth/register might need mapping.// For now, we assume data.user is compatible or onAuthStateChange will handle it.// setUser(data.user); // This will be handled by onAuthStateChange after setSession;
 
         const firstName = (data.user.user_metadata?.display_name || name).split(' ')[0];
         toast({ title: `Welcome, ${firstName}!` });
-;
+
         const params = new URLSearchParams(location.search);
         const next = params.get('redirectTo') || params.get('next') || '/dashboard';
         navigate(next, { replace: true });
@@ -127,8 +125,7 @@ export default function Page() {};
         } else {};
 }
         }
-        setIsLoading(false);,
-}
+        setIsLoading(false)}
     );
 ;
     return () => {};
@@ -153,5 +150,4 @@ export default function Page() {};
   return (<AuthContext.Provider value={authContextValue}>;
       {children}
     </AuthContext.Provider>;
-  );,
-};
+  )}

@@ -22,7 +22,7 @@ const InnovationServicesMarketing = () => {};
             return `$${price}/attorney/month`}
         else {};
             return `$${price}/${model}`}
-    };
+    }
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-32">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
         {/* Hero Section */}
@@ -150,8 +150,7 @@ const InnovationServicesMarketing = () => {};
                     )}
                   </div>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
 ";
@@ -189,8 +188,7 @@ const InnovationServicesMarketing = () => {};
                     ))}
                   </div>;
                 </div>;
-              );,
-})}
+              )})}
           </div>;
         </div>;
 ";
@@ -361,16 +359,12 @@ const InnovationServicesMarketing = () => {};
           </div>;
         </div>;
       </div>;
-    </div>)};
+    </div>)}
 export default InnovationServicesMarketing;
-;
 
-export { InnovationServicesMarketing };
-;
-export { InnovationServicesMarketing };
-;
-export { InnovationServicesMarketing };
-;
-export { InnovationServicesMarketing };
-;
-export { InnovationServicesMarketing };
+
+export { InnovationServicesMarketing }
+export { InnovationServicesMarketing }
+export { InnovationServicesMarketing }
+export { InnovationServicesMarketing }
+export { InnovationServicesMarketing }

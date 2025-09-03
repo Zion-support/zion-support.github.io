@@ -15,8 +15,7 @@ const CloudDevOpsServices = () => {}
                 "Cost Optimization","";
                 "Performance Optimization","";
                 "Security Assessment";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -29,8 +28,7 @@ const CloudDevOpsServices = () => {}
                 "Automated Testing","";
                 "Deployment Automation","";
                 "Monitoring & Alerting";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -43,8 +41,7 @@ const CloudDevOpsServices = () => {}
                 "Service Mesh","";
                 "Auto-scaling","";
                 "Load Balancing";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -57,8 +54,7 @@ const CloudDevOpsServices = () => {}
                 "Backup & Recovery","";
                 "High Availability","";
                 "Data Security";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -71,8 +67,7 @@ const CloudDevOpsServices = () => {}
                 "Data Encryption","";
                 "Compliance Auditing","";
                 "Threat Detection";
-            ];,
-},;
+            ]},;
         {}
 ";
 "";
@@ -85,8 +80,7 @@ const CloudDevOpsServices = () => {}
                 "Performance Metrics","";
                 "Alert Management","";
                 "Troubleshooting Tools";
-            ];,
-}
+            ]}
     ];";
     const benefits = ["";
         "Faster time to market with automated deployments","";
@@ -110,22 +104,19 @@ const CloudDevOpsServices = () => {}
 "";
             name: "Amazon Web Services","";
             description: "Leading cloud platform with comprehensive services","";
-            features["EC2, S3, RDS", "Lambda Functions", "CloudFormation", "CloudWatch"];,
-},;
+            features["EC2, S3, RDS", "Lambda Functions", "CloudFormation", "CloudWatch"]},;
         {}
 ";
 "";
             name: "Microsoft Azure","";
             description: "Enterprise-grade cloud solutions for Windows environments","";
-            features["Virtual Machines", "Azure DevOps", "Azure Functions", "Application Insights"];,
-},;
+            features["Virtual Machines", "Azure DevOps", "Azure Functions", "Application Insights"]},;
         {}
 ";
 "";
             name: "Google Cloud Platform","";
             description: "Innovative cloud services with AI and ML capabilities","";
-            features["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"];,
-}";
+            features["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"]}";
     ];"";
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">";
       {/* Hero Section */}"";
@@ -284,16 +275,12 @@ const CloudDevOpsServices = () => {}
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default CloudDevOpsServices;
-;
 
-export { CloudDevOpsServices };
-;
-export { CloudDevOpsServices };
-;
-export { CloudDevOpsServices };
-;
-export { CloudDevOpsServices };
-;
-export { CloudDevOpsServices };
+
+export { CloudDevOpsServices }
+export { CloudDevOpsServices }
+export { CloudDevOpsServices }
+export { CloudDevOpsServices }
+export { CloudDevOpsServices }

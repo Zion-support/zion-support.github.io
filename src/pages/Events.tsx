@@ -20,8 +20,7 @@ export {};
       "Business intelligence tools",;
       "ROI measurement strategies";
     ],;
-    image: "/images / data - analytics - webinar.jpg";,
-},;
+    image: "/images / data - analytics - webinar.jpg"},;
   {}
     id: 5,;
     title: "IoT & Edge Computing Symposium",;
@@ -40,8 +39,7 @@ export {};
       "Security considerations",;
       "Industry applications";
     ],;
-    image: "/images / iot - symposium.jpg";,
-},;
+    image: "/images / iot - symposium.jpg"},;
   {}
     id: 6,;
     title: "Digital Transformation Summit",;
@@ -60,10 +58,9 @@ export {};
       "Technology selection",;
       "Success metrics";
     ],;
-    image: "/images / digital - transformation - summit.jpg";,
-}
+    image: "/images / digital - transformation - summit.jpg"}
 ];
-;
+
 const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];
 const categories = ['All', 'AI & ML', 'Cybersecurity', 'Cloud & DevOps', 'Data Analytics', 'IoT & Edge', 'Digital Transformation'];
 const statuses = ['All', 'upcoming', 'past'];
@@ -80,7 +77,7 @@ export default function Events(...args: unknown[]): unknown {};
     { id: 'digital - transformation', name: 'Digital Transformation', icon: TrendingUp, count: 9 },;
     { id: 'startup - tech', name: 'Startup Technology', icon: Rocket, count: 3 }
   ];
-;
+
   const eventTypes = [;
     { id: 'all', name: 'All Types', icon: Calendar },;
     { id: 'webinar', name: 'Webinar', icon: Video },;
@@ -90,7 +87,7 @@ export default function Events(...args: unknown[]): unknown {};
     { id: 'meetup', name: 'Meetup', icon: Users },;
     { id: 'summit', name: 'Summit', icon: Star }
   ];
-;
+
   const events = [;
     {};
 },;
@@ -126,9 +123,6 @@ export default function Events(...args: unknown[]): unknown {};
   const getStatusBadge = (status: unknownstring)  => {};
 } else {};
 }
-;,
-};
-;
   return (;
     <div className="min-h-screen bg-zion-blue">;
       {/* Hero Section */}
@@ -324,8 +318,7 @@ export default function Events(...args: unknown[]): unknown {};
 ';
                           selectedCategory === category.id'';
                             ? 'bg-zion-cyan text-zion-blue'''`;
-                            : 'text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'``;,
-}`}">"";
+                            : 'text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'``}`}">"";
                         <span className="flex items-center gap-2">"";
                           <category.icon className="w-4 h-4" />;
                           {category.name}
@@ -338,11 +331,11 @@ export default function Events(...args: unknown[]): unknown {};
                   </div>;
                 </div>;
 
-;
+
             <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">;
               {};
                 </div>;) }
-;
+
               {/* Load More Button */}";
               {};
 const Events: React.FC = () => {}
@@ -436,16 +429,11 @@ const Events: React.FC = () => {}
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
-export { Events, CategoryIcon, CategoryIcon };
-;
-export { Events, CategoryIcon, CategoryIcon };
-;
-export { Events, CategoryIcon, CategoryIcon };
-;
-export { Events, CategoryIcon, CategoryIcon };
-;
-export { Page, Events, CategoryIcon, CategoryIcon, Events };
+  )}
+
+export { Events, CategoryIcon, CategoryIcon }
+export { Events, CategoryIcon, CategoryIcon }
+export { Events, CategoryIcon, CategoryIcon }
+export { Events, CategoryIcon, CategoryIcon }
+export { Page, Events, CategoryIcon, CategoryIcon, Events }
 )

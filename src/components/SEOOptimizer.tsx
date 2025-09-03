@@ -196,14 +196,13 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({};
               </motion.div>;) };
           </AnimatePresence>;
         </>;
-      ) : null};
+      ) : null}
     </div>;
-  )};
-;
+  )}
 // Hook for using SEO optimization;
   const [analysis, setAnalysis] = useState < SEOAnalysis | null> (null) ;
   const [isOptimizing, setIsOptimizing] = useState(false);
-;
+
     setIsOptimizing(true) ;    // Implement actual optimization logic here;
     await new Promise(resolve => setTimeout (resolve, 3000) ) ;
     setIsOptimizing(false) }, []) ;
@@ -212,4 +211,4 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({};
 }};
 '"`;
 
-;,"});,})";
+;,"});})";

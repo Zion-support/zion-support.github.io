@@ -1,4 +1,4 @@
-export interface NextGenerationAIService {;
+export interface NextGenerationAIService {
   id: string;
   name: string;
   tagline: string;
@@ -25,7 +25,7 @@ export interface NextGenerationAIService {;
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -36,7 +36,7 @@ export interface NextGenerationAIService {;
   customers: number;
   rating: number;
 export const nextGenerationAIServices: NextGenerationAIService[] = [;
-  {;
+  {
     id: "quantum-ai-brain-computer-interface",;
     name: "Quantum AI Brain-Computer Interface",;
     tagline: "World\"s first quantum-enhanced AI with human-like reasoning",;
@@ -74,20 +74,18 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [;
     marketSize: "$1.5B BCI market",;
     growthRate: "300% annual growth",;
     variant: "quantum-neural-advanced",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully functional quantum BCI platform with FDA approval pathway, quantum encryption, real-time neural processing, and comprehensive research tools.",;
     launchDate: "2024-06-01",;
     customers: 150,;
     rating: 4.9,;
-    reviews: 89;,;,
-},;
-  {;
+    reviews: 89},;
+  {
     id: "autonomous-ai-venture-capital",;
     name: "Autonomous AI Venture Capital Platform",;
     tagline: "AI-powered investment decisions with quantum precision",;
@@ -125,20 +123,18 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [;
     marketSize: "$300B venture capital market",;
     growthRate: "200% annual growth",;
     variant: "quantum-financial-advanced",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully autonomous AI platform with SEC compliance, real-time market analysis, automated investment execution, and comprehensive reporting.",;
     launchDate: "2024-05-15",;
     customers: 75,;
     rating: 4.8,;
-    reviews: 156;,;,
-},;
-  {;
+    reviews: 156},;
+  {
     id: "quantum-ai-drug-discovery",;
     name: "Quantum AI Drug Discovery Platform",;
     tagline: "Accelerate drug development by 100x with quantum precision",;
@@ -176,20 +172,18 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [;
     marketSize: "$150B AI in healthcare market",;
     growthRate: "250% annual growth",;
     variant: "quantum-biotech-advanced",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully functional quantum AI platform with FDA collaboration, real-time molecular simulation, automated drug screening, and comprehensive research tools.",;
     launchDate: "2024-04-01",;
     customers: 45,;
     rating: 4.9,;
-    reviews: 234;,;,
-},;
-  {;
+    reviews: 234},;
+  {
     id: "quantum-ai-space-mission-control",;
     name: "Quantum AI Space Mission Control",;
     tagline: "Autonomous space mission management with quantum precision",;
@@ -227,20 +221,18 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [;
     marketSize: "$469B space economy",;
     growthRate: "400% annual growth",;
     variant: "quantum-space-advanced",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully autonomous space mission control platform with regulatory compliance, real-time mission management, automated operations, and comprehensive analytics.",;
     launchDate: "2024-03-15",;
     customers: 25,;
     rating: 4.9,;
-    reviews: 67;,;,
-},;
-  {;
+    reviews: 67},;
+  {
     id: "quantum-ai-cybersecurity-fortress",;
     name: "Quantum AI Cybersecurity Fortress",;
     tagline: "Unbreakable quantum encryption with AI threat detection",;
@@ -278,20 +270,18 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [;
     marketSize: "$200B cybersecurity market",;
     growthRate: "180% annual growth",;
     variant: "quantum-cyberpunk-advanced",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully functional quantum cybersecurity platform with regulatory compliance, real-time threat detection, automated response, and comprehensive security analytics.",;
     launchDate: "2024-02-01",;
     customers: 320,;
     rating: 4.9,;
-    reviews: 456;,;,
-},;
-  {;
+    reviews: 456},;
+  {
     id: "quantum-ai-logistics-orchestrator",;
     name: "Quantum AI Logistics Orchestrator",;
     tagline: "Autonomous supply chain optimization with quantum precision",;
@@ -329,12 +319,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [;
     marketSize: "$15T global logistics market",;
     growthRate: "150% annual growth",;
     variant: "quantum-logistics-advanced",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Fully autonomous logistics platform with real-time optimization, automated decision making, comprehensive analytics, and regulatory compliance.",;
     launchDate: "2024-01-15',;

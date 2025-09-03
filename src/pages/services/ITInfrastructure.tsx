@@ -11,21 +11,21 @@ const ITInfrastructure: React.FC = () => {};
     {};
 }
   ];
-;
+
   const infrastructureAreas = [;
     { area: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },;
     { area: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },;
     { area: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },;
     { area: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
   ];
-;
+
   const keyFeatures = [;
     { name: "High Availability", icon: "🔄", description: "99.9% uptime guarantee with redundancy" },;
     { name: "Scalable Solutions", icon: "📈", description: "Infrastructure that grows with your business" },;
     { name: "Proactive Monitoring", icon: "👁️", description: "24/7 monitoring and alerting" },;
     { name: "Expert Support", icon: "👨‍💻", description: "Certified engineers and technicians" }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-background">;
       <div>Broken JSX</div>
@@ -33,32 +33,28 @@ const ITInfrastructure: React.FC = () => {};
       title: "Network Infrastructure",;
       description: "Design, implement, and maintain robust network solutions",;
       features: ["Network Design", "Wireless Solutions", "VPN Implementation", "Network Security"],;
-      icon: "🌐";,
-},;
+      icon: "🌐"},;
     {title}: "Server Management",;
       description: "Comprehensive server infrastructure and management services",;
       features: ["Server Setup", "Virtualization", "Performance Optimization", "Backup Solutions"],;
-      icon: "🖥️";,
-},;
+      icon: "🖥️"},;
     {title}: "Storage Solutions",;
       description: "Scalable storage infrastructure for growing businesses",;
       features: ["Storage Design", "Data Backup", "Disaster Recovery", "Cloud Storage"],;
-      icon: "💾";,
-},;
+      icon: "💾"},;
     {title}: "Security Infrastructure",;
       description: "Multi-layered security infrastructure protection",;
       features: ["Firewall Management", "Intrusion Detection", "Access Control", "Security Monitoring"],;
-      icon: "🔒";,
-}
+      icon: "🔒"}
   ];
-;
+
   const infrastructureAreas = [;
     {area}: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },;
     {area}: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },;
     {area}: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },;
     {area}: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
   ];
-;
+
   return (;
     <>;
       <Helmet>;
@@ -108,7 +104,7 @@ const ITInfrastructure: React.FC = () => {};
                 Comprehensive solutions to build and maintain your IT foundation;
               </p>;
             </div>;
-            ;
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
               {};
                     <h3 className="text-2xl font-semibold text-white">{service.title}</h3>;
@@ -139,7 +135,7 @@ const ITInfrastructure: React.FC = () => {};
                 Enterprise-grade solutions with unmatched reliability and support;
               </p>;
             </div>;
-            ;
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
               {};
                   <div className="text-4xl mb-4">{feature.icon}</div>;
@@ -162,7 +158,7 @@ const ITInfrastructure: React.FC = () => {};
                 Comprehensive coverage across all infrastructure domains;
               </p>;
             </div>;
-            ;
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
               {};
                   <h3 className="text-2xl font-semibold text-white mb-4">{area.area}</h3>;
@@ -203,7 +199,5 @@ const ITInfrastructure: React.FC = () => {};
         </section>;
       </div>;
     </div>;
-  );,
-};
-;
+  )}
 export default ITInfrastructure;)

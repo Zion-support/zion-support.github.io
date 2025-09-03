@@ -171,17 +171,12 @@ const QuantumAIServices = () => {}
         </div>;
       </div>;
     </div>;
-  );,
-};
+  )}
 export default QuantumAIServices;
-;
 
-export { QuantumAIServices };
-;
-export { QuantumAIServices };
-;
-export { QuantumAIServices };
-;
-export { QuantumAIServices };
-;
-export { QuantumAIServices };
+
+export { QuantumAIServices }
+export { QuantumAIServices }
+export { QuantumAIServices }
+export { QuantumAIServices }
+export { QuantumAIServices }

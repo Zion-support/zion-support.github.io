@@ -17,10 +17,10 @@ export {};
     isLoading,';
     error} = useQuery(['posts', slug], () => fetchPostsByCategory(slug), {}
     enabled: !!slug});
-;
+
   if (isLoading) return <Skeleton count={5} />;
   if (error) return <Alert variant="destructive">Failed to load posts</Alert>;
-;
+
   return posts.length ? (";
     <div className="space-y-4">;
       {};
@@ -29,7 +29,6 @@ export {};
     </div>;
   ) : (";
     <Empty message="Be the first to post!" />;
-  );,
-}
+  )}
 '";
-export { Category };
+export { Category }

@@ -8,12 +8,9 @@ export default function NewProductsPage() {};
 }}/>)}
 ;
 
-export { CATEGORY_FILTERS, NewProductsPage };
-;
-export { CATEGORY_FILTERS, NewProductsPage };
-;
-export { CATEGORY_FILTERS, NewProductsPage };
-;
-export { CATEGORY_FILTERS, NewProductsPage };
-;
-export { CATEGORY_FILTERS, NewProductsPage };
+
+export { CATEGORY_FILTERS, NewProductsPage }
+export { CATEGORY_FILTERS, NewProductsPage }
+export { CATEGORY_FILTERS, NewProductsPage }
+export { CATEGORY_FILTERS, NewProductsPage }
+export { CATEGORY_FILTERS, NewProductsPage }

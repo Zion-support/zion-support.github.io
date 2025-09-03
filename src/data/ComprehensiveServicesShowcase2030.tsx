@@ -316,8 +316,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {};
           </div>;
         </div>;
       )}
-  };
-;
+  }
   return ();
     <>;
       <div>Broken JSX</div>
@@ -439,7 +438,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {};
               </button>;
             </div>;
           )}
-;
+
           {/* Contact CTA */}";
           <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">";
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>";
@@ -455,6 +454,5 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {};
         </div>;
       </div>;
     </>;
-  )};
-;
+  )}
 export default ComprehensiveServicesShowcase2030}}}}}'"`;

@@ -46,6 +46,5 @@ const PricingComparison = () => {};
               </Link>;
             </div>;
     </>;
-  );,
-}
+  )}
 export default PricingComparison;

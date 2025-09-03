@@ -64,8 +64,7 @@ const NotFound = () => {}
         </div>;
       </div>;
     </div>;
-  );,
-};
+  )}
 const ServerError = () => {}
   return <div>Component</div>;
 };
@@ -113,16 +112,12 @@ const ErrorRoutes = () => {};
       <Route path="/404" element={<NotFound />}/>;
       <Route path="/500" element={<ServerError />}/>;
       <Route path="*" element={<NotFound />}/>;
-    </Routes>)};
+    </Routes>)}
 export default ErrorRoutes;
-;
 
-export { NotFound, ServerError, ErrorRoutes };
-;
-export { NotFound, ServerError, ErrorRoutes };
-;
-export { NotFound, ServerError, ErrorRoutes };
-;
-export { NotFound, ServerError, ErrorRoutes };
-;
-export { NotFound, ServerError, ErrorRoutes };
+
+export { NotFound, ServerError, ErrorRoutes }
+export { NotFound, ServerError, ErrorRoutes }
+export { NotFound, ServerError, ErrorRoutes }
+export { NotFound, ServerError, ErrorRoutes }
+export { NotFound, ServerError, ErrorRoutes }

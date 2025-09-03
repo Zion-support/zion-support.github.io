@@ -19,7 +19,7 @@ const AIAffiliateMarketingTrackingPlatform = () => {};
     {};
 }
   ];
-;
+
   const pricingTiers = [;
     {};
 },;
@@ -28,7 +28,7 @@ const AIAffiliateMarketingTrackingPlatform = () => {};
     {};
 }
   ];
-;
+
   const benefits = [;
     {};
 },;
@@ -39,7 +39,7 @@ const AIAffiliateMarketingTrackingPlatform = () => {};
     {};
 }
   ];
-;
+
   const integrations = [;
     { name: "Shopify", logo: "🛍️" },;
     { name: "WooCommerce", logo: "🛒" },;
@@ -54,7 +54,7 @@ const AIAffiliateMarketingTrackingPlatform = () => {};
     { name: "PayPal", logo: "💰" },;
     { name: "Zapier", logo: "⚡" }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       {/* Hero Section */}
@@ -184,7 +184,6 @@ const AIAffiliateMarketingTrackingPlatform = () => {};
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {};
                 )}
-                ;
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">;
                     {tier.name}
@@ -290,7 +289,5 @@ const AIAffiliateMarketingTrackingPlatform = () => {};
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default AIAffiliateMarketingTrackingPlatform;

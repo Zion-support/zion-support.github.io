@@ -1,27 +1,21 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
-const Link = dynamic(() => import("next/link"), { ssr: false });,
-}
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })}
+const Link = dynamic(() => import("next/link"), { ssr: false })}
   Shield,;
   Cloud} from "lucide - react",;
-const SEO = dynamic(() => import("../components/SEO"), { ssr: false });,
-}
-export default function Partners() {;
+const SEO = dynamic(() => import("../components/SEO"), { ssr: false })}
+export default function Partners() {
 
-  const partnerBenefits = [];,
-}, {;
+  const partnerBenefits = []}, {
       icon: Award,";
       title: "Technology Partners", description: "Integration partnerships with leading technology providers.",";
-      benefits: ["API integrations", "Technical support", "Co-marketing opportunities"];,
-}, {;
+      benefits: ["API integrations", "Technical support", "Co-marketing opportunities"]}, {
       icon: Users,";
       title: "Channel Partners", description: "Reseller and distribution partnerships for market reach.",";
-      benefits: ["Revenue sharing", "Training programs", "Marketing support"];,
-}, {;
+      benefits: ["Revenue sharing", "Training programs", "Marketing support"]}, {
       icon: Globe,";
       title: "Global Partners", description: "International partnerships for worldwide market presence.",";
       benefits: ["Local expertise", "Regional support", "Cultural adaptation"];
@@ -29,30 +23,30 @@ export default function Partners() {;
       title: "Access to Our Network",";
       description: ",;
         "Connect with our extensive network of clients and partners worldwide."},;
-    {;
+    {
       icon: Award,";
       title: "Certification Programs",";
       description: ",;
         "Get certified in our technologies and solutions with comprehensive training."},;
-    {;
+    {
       icon: Target,";
       title: "Joint Marketing",";
       description: ",;
         "Collaborate on marketing initiatives and co-branded campaigns."},;
-    {;
+    {
       icon: Zap,";
       title: "Technical Support",";
       description: ",;
         "Receive dedicated technical support and resources for your team."},;
-    {;
+    {
       icon: Shield,";
       title: "Revenue Sharing",";
       description: ",;
         "Earn competitive commissions and revenue sharing opportunities."},;
-    {;
+    {
       icon: Globe,;
       title: "Global Reach",;
-      description: ",,;
+      description: ",;
         "Expand your business reach with our global partner network."}];
 ";
       description: "Team communication and collaboration tools",;
@@ -91,7 +85,7 @@ export default function Partners() {;
               Partner With;
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">",;
                 {" "}
-;
+
                 Zion Tech Group,;
               </span>";
             </h1>";
@@ -179,13 +173,13 @@ partners succeed and grow their business.;
                   </div>;
                   <h3 className="text-xl font-semibold text-gray-900">,;
                     {benefit.title}
-;
+
                   </h3>";
                 </div>;
                 <p className="text-gray-600">{benefit.description}</p>;
               </Card>;
             ))}
-;
+
           </div>;
       </section>;
 ";
@@ -225,11 +219,11 @@ partners succeed and grow their business.;
                   </div>";
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">,;
                     {type.title}
-;
+
                   </h3>";
                   <p className="text-gray-600 mb-6 text-center">;
                     {type.description}
-;
+
                   </p>";
                   <ul className="space-y-3">;
                     {type.benefits.map((benefit, benefitIndex) => (";
@@ -238,11 +232,11 @@ partners succeed and grow their business.;
                         <span className="text-gray-700">{benefit}</span>;
                       </li>;
                     ))}
-;
+
                   </ul>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
       {/* comment */}";
@@ -295,24 +289,24 @@ and goals.;
                           : partner.tier === "Gold;
                             ? "bg-gray-100 text-gray-800"">;
                             : "bg-orange-100 text-orange-800"}"}
-;
+
                     >;
                       {partner.tier}
-;
+
                     </span>;
                   </div>";
                   <h3 className=""text-xl" font-bold text-gray-900 mb-2"}>;
                     {partner.name}
-;
+
                   </h3>";
                   <p className="text-blue-600 font-semibold mb-2">;
                     {partner.category}
-;
+
                   </p>";
                   <p className="text-gray-600 text-sm">{partner.description}</p>;
                 </div>;
               ))}
-;
+
             </div>;
           </div>";
 
@@ -342,12 +336,12 @@ and goals.;
                   </div>";
                   <h3 className="text-xl font-bold text-gray-900 mb-3">;
                     {benefit.title}
-;
+
                   </h3>";
                   <p className="text-gray-600">{benefit.description}</p>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -421,17 +415,17 @@ and goals.;
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">";
                     <span className="text-2xl font-bold text-white">;
                       {step.step}
-;
+
                     </span>;
                   </div>";
                   <h3 className="text-xl font-bold text-gray-900 mb-3">;
                     {step.title}
-;
+
                   </h3>";
                   <p className="text-gray-600">{step.description}</p>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -475,7 +469,7 @@ and innovation.;
                       <span className="text-gray-600">{feature}</span>;
                     </li>;
                   ))}
-;
+
                 </ul>";
 
                 <Button className="w-full">";
@@ -484,7 +478,7 @@ and innovation.;
                 </Button>;
               </Card>;
             ))}
-;
+
           </div>;
       </section>;
 ";
@@ -520,7 +514,6 @@ Zion Tech Group. Our team is ready to help you succeed.";
       </main>;
     </>;
   )}
-;
-  );,
-}
+
+  )}
 }")))

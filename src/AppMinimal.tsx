@@ -7,5 +7,4 @@ export default function AppMinimal() {};
           Professional AppMinimal services to help your business grow.;
         </p>;
       </div>;
-  );,
-}
+  )}

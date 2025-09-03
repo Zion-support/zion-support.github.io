@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-;
-;
+
+
 import { AuthContext } from "./AuthContext";
 import { cleanupAuthState } from "../../utils/authUtils";
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -52,8 +52,7 @@ export {};
         const params = new URLSearchParams(location.search);
         const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
         router(next, { replace: true });
-        return { error: null }; // Successful login;,
-};
+        return { error: null }; // Successful login}
     // Register via backend and persist auth info;
     const register = async(name, email, password) => {};
             const { res, data } = await registerUser(name, email, password);
@@ -65,7 +64,7 @@ export {};
             return { error: null }}
         catch(err) {};
             return { error: err?.message || 'Registration failed' }}
-    };
+    }
     // Wrapper for signup to match the AuthContextType interface;
     const signup = async(email, password, userData) => {};
         const result = await signupImpl({ email, password, display_name: userData });
@@ -73,8 +72,7 @@ export {};
                 toast({ title: `Welcome, ${firstName}!` });
                 const params = new URLSearchParams(location.search);
                 const next = params.get('redirectTo') || params.get('next') || '/dashboard';
-                router(next, { replace: true });,
-}
+                router(next, { replace: true })}
         }
         return result};
     useEffect(() => {};
@@ -115,6 +113,6 @@ export {};
 };
     return (<AuthContext.Provider value={authContextValue}>;
       {children}
-    </AuthContext.Provider>)};
+    </AuthContext.Provider>)}
 '"`;
 import React, { useEffect } from "react"";"""""""""'"; ";

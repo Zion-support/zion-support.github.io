@@ -45,12 +45,13 @@ export default function ApplicationStatusTracker() {};
     </ProtectedRoute>)}
 ;
 
-export { ApplicationStatusTrackerContent, ApplicationStatusTracker };
-;
-export { ApplicationStatusTrackerContent, ApplicationStatusTracker };
-;
-export { ApplicationStatusTrackerContent, ApplicationStatusTracker };
-;
-export { ApplicationStatusTrackerContent, ApplicationStatusTracker };
-;
-export { ApplicationStatusTrackerContent, ApplicationStatusTracker };
+        <ApplicationStatusTrackerContent />;
+
+    </ProtectedRoute>)}
+
+
+export { ApplicationStatusTrackerContent, ApplicationStatusTracker }
+export { ApplicationStatusTrackerContent, ApplicationStatusTracker }
+export { ApplicationStatusTrackerContent, ApplicationStatusTracker }
+export { ApplicationStatusTrackerContent, ApplicationStatusTracker }
+export { ApplicationStatusTrackerContent, ApplicationStatusTracker }

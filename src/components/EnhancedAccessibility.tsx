@@ -9,9 +9,9 @@ export const EnhancedAccessibility: React.FC = () => {};
 }) ;
 ;
   // Apply accessibility settings to document;
-  ;
+
   const [isVisible, setIsVisible] = useState(false);
-  ;
+
   // Auto - hide accessibility panel;
   useEffect(() => {};
 };,
@@ -19,7 +19,7 @@ export const EnhancedAccessibility: React.FC = () => {};
       if(timeoutRef.current) clearTimeout(timeoutRef.current)} else {};
       timeoutRef.current = setTimeout(() => setIsVisible(false), 300)}
   }, [isOpen]) ;
-;
+
   // Apply accessibility settings;
   useEffect(() => {};
 };,
@@ -50,7 +50,7 @@ export const EnhancedAccessibility: React.FC = () => {};
     if(settings.largeText) {};
       document.documentElement.classList.add('large-text')} else {};
       document.documentElement.classList.remove('large-text')}
-;
+
     // Save settings to localStorage';
     localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
 ;
@@ -61,28 +61,27 @@ export const EnhancedAccessibility: React.FC = () => {};
     const saved = localStorage.getItem('accessibility-settings');    if(saved) {};
       setSettings(JSON.parse(saved))}
   }, []);
-;
-      [key]: !prev[key]}) ) };
-;
+
+      [key]: !prev[key]}) ) }
   // Screen reader announcements';
-  ;
+
     announcement.setAttribute('aria-live',polite');
     announcement.setAttribute('aria-atomic',true');
     announcement.className="sr-only";    announcement.textContent = message;
-;
+
     document.body.appendChild(announcement) ;
-;
+
     // Remove after announcement;
     setTimeout(() => {};
       document.body.removeChild(announcement) }, 1000) ;
-;
+
     setAnnouncements(prev => [...prev, message]) }, []) ;
   // Enhanced keyboard navigation;
   useEffect(() => {};
 };,
 }, []);, []);
     if(!settings.keyboardNavigation) return;
-;
+
       // Skip if in input/textarea'      if(target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
 ;
       switch(e.key) {};
@@ -92,15 +91,15 @@ export const EnhancedAccessibility: React.FC = () => {};
         case ' ':';
           if(target.tagName = == 'BUTTON' || target.getAttribute('role') === 'button') {};
             announce(`Activated ${target.textContent || target.getAttribute('aria-label') || 'button'}`);
-;
+
           break;
-;
+
         case 'Escape':;
           // Close modals, dropdowns, etc.';
           ;
 modals.forEach(modal:  > {};
               (modal as HTMLElement).click()}) ;          break;
-;
+
   // Keyboard navigation support;
   useEffect(() => {};
 };,
@@ -109,29 +108,26 @@ modals.forEach(modal:  > {};
 ;
         if(mainContent) {};
           (mainContent as HTMLElement).focus()}      }
-;
+
       // Skip to navigation';
       if(e.key === 'Tab' && e.shiftKey && e.altKey) {};
           (navigation as HTMLElement).focus()}
       }
-    };
-;
+    }
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
-;
+
                      target.getAttribute('title') || ;
                      target.textContent;`;
-        if(label) announce(`Focused on ${label}`)};
-;
+        if(label) announce(`Focused on ${label}`)}
       target.style.outline = '';
-      target.style.outlineOffset = ''};
-;
+      target.style.outlineOffset = ''}
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
 ;
     return () => {};
       document.removeEventListener('focusout', handleFocusOut)}}, [settings.focusIndicator, settings.screenReader, announce]) ;
-;
+
   // Skip to main content link;
   useEffect(() => {};
 };,

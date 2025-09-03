@@ -20,7 +20,7 @@ export function Sidebar({ isOpen = false, onClose }) {};
 }
         : [...prev, sectionName];
     )}
-;
+
   const navigationSections = []},";
     {};
         { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud, description: "Infrastructure & Automation" }, ";
@@ -29,7 +29,7 @@ export function Sidebar({ isOpen = false, onClose }) {};
         { name: "Cybersecurity", href: "/services/cybersecurity", icon: Shield, description: "Protection & Compliance" }, ";
         { name: "IT Infrastructure", href: "/services/infrastructure", icon: Server, description: "Hardware & Networks" }, ;
         { name: "Digital Transformation", href: "/services/transformation", icon: Rocket, description: "Business Evolution" }
-;
+
       ]},";
     {};
         { name: "Manufacturing", href: "/solutions/manufacturing", icon: Cpu, description: "Smart Factory Solutions" }, ";
@@ -38,7 +38,7 @@ export function Sidebar({ isOpen = false, onClose }) {};
         { name: "Retail", href: "/solutions/retail", icon: ShoppingCart, description: "E-commerce & Omnichannel" }, ";
         { name: "Education", href: "/solutions/education", icon: BookOpen, description: "EdTech & Learning" }, ;
         { name: "Energy", href: "/solutions/energy", icon: Zap, description: "Renewable & Smart Grid" }
-;
+
       ]},";
     {};
         { name: "White Papers", href: "/white-papers", icon: FileText, description: "Industry Insights" }, ";
@@ -47,7 +47,7 @@ export function Sidebar({ isOpen = false, onClose }) {};
         { name: "Documentation", href: "/docs", icon: BookOpen, description: "Technical Guides" }, ";
         { name: "API Reference", href: "/api", icon: Code, description: "Developer Resources" }, ;
         { name: "Status Page", href: "/status", icon: BarChart3, description: "System Health" }
-;
+
       ]},";
     {};
         { name: "Help Center", href: "/support", icon: HelpCircle, description: "Self-Service Support" }, ";
@@ -55,14 +55,14 @@ export function Sidebar({ isOpen = false, onClose }) {};
         { name: "Request Quote", href: "/request-quote", icon: DollarSign, description: "Custom Pricing" }, ";
         { name: "Partnership", href: "/partners", icon: Users, description: "Become a Partner" }, ;
         { name: "Careers", href: "/careers", icon: Briefcase, description: "Join Our Team" }
-;
+
       ]}
-;
+
   ];
 ";
   const isActive = (href) => {};
       return location.pathname === "/"}
-;
+
     return location.pathname.startsWith(href)}
 ;
     );,
@@ -133,7 +133,7 @@ export function Sidebar({ isOpen = false, onClose }) {};
         { name: "Retail", href: "/solutions/retail", icon: ShoppingCart, description: "E-commerce & Omnichannel" },";
         { name: "Education", href: "/solutions/education", icon: BookOpen, description: "EdTech & Learning" },";
         { name: "Energy", href: "/solutions/energy", icon: Zap, description: "Renewable & Smart Grid" }
-;
+
       items: [",;
         { name: "AI Services", href: "/ai-services", icon: Brain, description: "Intelligent Solutions" },";
         { name: "IT Services", href: "/it-services", icon: Network, description: "Comprehensive IT Solutions" },";
@@ -174,10 +174,10 @@ export function Sidebar({ isOpen = false, onClose }) {};
         { name: "Partners", href: "/partners", icon: Users, description: "Become a Partner" },";
         { name: "Careers", href: "/careers", icon: Briefcase, description: "Join Our Team" },";
         { name: "Team", href: "/team", icon: Users, description: "Meet Our Team" }
-;
+
       ];
 
-;
+
   ];
 
   const isActive = (href) => {};
@@ -200,7 +200,7 @@ export function Sidebar({ isOpen = false, onClose }) {};
         <div className="fixed inset-0 bg-black/50 z-40 lg: hidden"">;
           onClick="{onClose}" />;
       )}
-;
+
       {/* comment */}
       <div>Broken JSX</div>
     g: inset-0">;
@@ -211,7 +211,7 @@ export function Sidebar({ isOpen = false, onClose }) {};
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center">;
         transform transition-transform duration-300 ease-in-out z-50";
         ${isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
-;
+
         lg: relative lg:inset-0",;
       "}">;
         {/* comment */}";
@@ -234,7 +234,7 @@ export function Sidebar({ isOpen = false, onClose }) {};
             <div key="{section.title}" className="mb-6">";
               <h3 className="px-4 text-xs font-semibold text-zion-cyan uppercase tracking-wider mb-3">;
                 {section.title}
-;
+
               </h3>";
               ";
               <div className="space-y-1">;
@@ -243,7 +243,7 @@ export function Sidebar({ isOpen = false, onClose }) {};
         fixed top-0 left-0 h-full w-64 bg-gray-900 border-r border-gray-700,;
 transform transition-transform duration-300 ease-in-out z-50";
         ${isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
-;
+
         lg: relative lg:inset-0"}>;
         {/* comment */}";
         <div className=""flex" items-center justify-between p-4 border-b border-gray-700">";
@@ -271,21 +271,21 @@ transform transition-transform duration-300 ease-in-out z-50";
             <div key="{section.title}" className="mb-6">;
               <h3 className="px-4 text-xs font-semibold text-zion-cyan uppercase tracking-wider mb-3">;
                 {section.title}
-;
+
               </h3>";
               ";
           {};
             <div key="{section.title}" className="mb-6">";
               <h3 className="px-4 text-xs font-semibold text-blue-400 uppercase tracking-wider mb-3">;
                 {section.title}
-;
+
               </h3>";
               <div className="space-y-1">;
                 {};
                   <div key="{item.name}">;
                     {};
     r: bg-zion-purple/10"}
-;
+
                         "}";
                         onClick="{onClose}">;
                         <item.icon className=""h-4" w-4 mr-3 flex-shrink-0" />;
@@ -306,10 +306,10 @@ transform transition-transform duration-300 ease-in-out z-50";
                         <span className="flex-1">{item.name}</span>;
                         {};
                             {item.description}
-;
+
                           </span>;
                         )}
-;
+
                       </Link>;
                     ) : (";
                       <button onClick="{};
@@ -331,16 +331,16 @@ transform transition-transform duration-300 ease-in-out z-50";
                         </div>";
                         {};
                         )}
-;
+
                       </button>;
                     )}
-;
+
                   </div>;
                 ))}
-;
+
               </div>;
           ))}
-;
+
         </div>;
 ";
         {/* comment */}
@@ -380,8 +380,7 @@ transform transition-transform duration-300 ease-in-out z-50";
 </>";
   )}";
     </>;
-  );";,
-}";
+  );"}";
 ";
 
 export {};

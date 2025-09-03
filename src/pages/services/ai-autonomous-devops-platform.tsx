@@ -51,7 +51,7 @@ const AIAutonomousDevOpsPlatform = () => {};
         <meta name="description" content="Revolutionary AI-powered autonomous DevOps platform that eliminates 95% of manual tasks and reduces deployment time by 80%." />;
         <meta name="keywords" content="AI DevOps, autonomous deployment, infrastructure automation, CI/CD, cloud operations" />;
       </Head>;
-      ;
+
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center">;
@@ -83,7 +83,7 @@ const AIAutonomousDevOpsPlatform = () => {};
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Autonomous DevOps Capabilities</h2>;
             <p className="text-gray-600 text-lg">AI-driven automation that handles complex DevOps operations without human intervention</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {};
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">;
@@ -104,7 +104,7 @@ const AIAutonomousDevOpsPlatform = () => {};
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven DevOps Transformation Results</h2>;
               <p className="text-gray-600 text-lg">Join 300+ engineering teams that have revolutionized their DevOps with AI automation</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-2 gap-8">;
               <div>;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Key Benefits</h3>;
@@ -117,7 +117,7 @@ const AIAutonomousDevOpsPlatform = () => {};
                   ))}
                 </ul>;
               </div>;
-              ;
+
               <div className="bg-white rounded-xl p-6 shadow-lg">;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Use Cases</h3>;
                 <ul className="space-y-3">;
@@ -139,7 +139,7 @@ const AIAutonomousDevOpsPlatform = () => {};
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced AI Architecture</h2>;
             <p className="text-gray-600 text-lg">Built on cutting-edge AI and machine learning technologies</p>;
           </div>;
-          ;
+
           <div className="grid md:grid-cols-3 gap-8">;
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">;
@@ -148,7 +148,7 @@ const AIAutonomousDevOpsPlatform = () => {};
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Machine Learning Engine</h3>;
               <p className="text-gray-600">Advanced ML algorithms that learn from your infrastructure patterns and optimize operations automatically.</p>;
             </div>;
-            ;
+
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">;
                 <Shield className="w-6 h-6 text-white" />;
@@ -156,7 +156,7 @@ const AIAutonomousDevOpsPlatform = () => {};
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Security-First Design</h3>;
               <p className="text-gray-600">Built-in security scanning, vulnerability detection, and compliance monitoring for enterprise-grade protection.</p>;
             </div>;
-            ;
+
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
               <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">;
                 <Zap className="w-6 h-6 text-white" />;
@@ -174,7 +174,7 @@ const AIAutonomousDevOpsPlatform = () => {};
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Flexible Pricing Plans</h2>;
               <p className="text-gray-600 text-lg">Choose the plan that scales with your DevOps needs</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-3 gap-8">;
               {};
                 <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.name === 'Enterprise' ? 'border-2 border-blue-500 bg-blue-50' : 'border border-gray-200 bg-white'}`}>;
@@ -207,7 +207,7 @@ const AIAutonomousDevOpsPlatform = () => {};
               <h2 className="text-3xl font-bold mb-4">Ready to Automate Your DevOps?</h2>;
               <p className="text-gray-300 text-lg">Contact our DevOps automation experts today</p>;
             </div>;
-            ;
+
             <div className="grid md:grid-cols-2 gap-8">;
               <div>;
                 <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>;
@@ -226,7 +226,7 @@ const AIAutonomousDevOpsPlatform = () => {};
                   </div>;
                 </div>;
               </div>;
-              ;
+
               <div className="bg-white rounded-xl p-6">;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Start Your Free Trial</h3>;
                 <p className="text-gray-600 mb-4">Experience autonomous DevOps automation with our 14-day free trial</p>;

@@ -1,4 +1,4 @@
-export interface EnterpriseITInfrastructureService {;
+export interface EnterpriseITInfrastructureService {
   id: string;
   name: string;
   tagline: string;
@@ -24,7 +24,7 @@ export interface EnterpriseITInfrastructureService {;
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -39,19 +39,18 @@ export interface EnterpriseITInfrastructureService {;
   patentStatus: "Patented" | "Patent Pending" | "Trade Secret" | "Open Source";
   aiCapabilities: string[];
   marketDisruption: string}
-const contact = {;
+const contact = {
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709";
-  ;
-  ;
-  ;
-  ;
-  website: "https://ziontechgroup.com";,;,
-}
+
+
+
+
+  website: "https://ziontechgroup.com"}
 export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureService[] = [;
   // HYBRID CLOUD ORCHESTRATION;
-  {;
+  {
     id: "hybrid-cloud-orchestration-platform",;
     name: "Hybrid Cloud Orchestration Platform",;
     tagline: "Seamless multi-cloud management with AI-powered optimization",;
@@ -98,10 +97,9 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     innovationLevel: "Breakthrough",;
     patentStatus: "Patent Pending",;
     aiCapabilities["AI Cost Optimization", "Automated Scaling", "Performance Monitoring", "Resource Allocation"],;
-    marketDisruption: "Revolutionizes multi-cloud management with AI";,;,
-},;
+    marketDisruption: "Revolutionizes multi-cloud management with AI"},;
   // EDGE COMPUTING INFRASTRUCTURE;
-  {;
+  {
     id: "edge-computing-infrastructure-platform",;
     name: "Edge Computing Infrastructure Platform",;
     tagline: "Distributed edge computing with 10x faster processing and 90% lower latency",;
@@ -148,10 +146,9 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     innovationLevel: "Revolutionary",;
     patentStatus: "Patent Pending",;
     aiCapabilities["Edge AI Processing", "Real-time Analytics", "IoT Integration", "Automatic Scaling"],;
-    marketDisruption: "Revolutionizes computing with distributed edge processing";,;,
-},;
+    marketDisruption: "Revolutionizes computing with distributed edge processing"},;
   // QUANTUM-SAFE CYBERSECURITY;
-  {;
+  {
     id: "quantum-safe-cybersecurity-platform",;
     name: "Quantum-Safe Cybersecurity Platform",;
     tagline: "Post-quantum cryptography that protects against quantum computer attacks",;
@@ -198,10 +195,9 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     innovationLevel: "Revolutionary",;
     patentStatus: "Patent Pending",;
     aiCapabilities["Quantum-resistant Encryption", "Advanced Threat Detection", "Zero-trust Security", "Future-proof Protection"],;
-    marketDisruption: "Revolutionizes cybersecurity with quantum-safe protection";,;,
-},;
+    marketDisruption: "Revolutionizes cybersecurity with quantum-safe protection"},;
   // AUTONOMOUS DATA CENTER MANAGEMENT;
-  {;
+  {
     id: "autonomous-data-center-management",;
     name: "Autonomous Data Center Management Platform",;
     tagline: "Self-managing data centers with 99.99% uptime and zero human intervention",;
@@ -248,10 +244,9 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     innovationLevel: "Revolutionary",;
     patentStatus: "Patent Pending",;
     aiCapabilities["Autonomous Operation", "Predictive Maintenance", "AI Optimization", "Zero Human Intervention"],;
-    marketDisruption: "Eliminates need for data center staff with autonomous AI";,;,
-},;
+    marketDisruption: "Eliminates need for data center staff with autonomous AI"},;
   // 6G NETWORK INFRASTRUCTURE;
-  {;
+  {
     id: "6g-network-infrastructure-platform",;
     name: "6G Network Infrastructure Platform",;
     tagline: "Next-generation 6G networks with 100x faster speeds and ultra-low latency",;
@@ -298,10 +293,9 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     innovationLevel: "Revolutionary",;
     patentStatus: "Patent Pending",;
     aiCapabilities["AI Network Optimization", "Holographic Communications", "Brain-Computer Interfaces", "Future Applications"],;
-    marketDisruption: "Revolutionizes telecommunications with 6G technology";,;,
-},;
+    marketDisruption: "Revolutionizes telecommunications with 6G technology"},;
   // QUANTUM INTERNET INFRASTRUCTURE;
-  {;
+  {
     id: "quantum-internet-infrastructure",;
     name: "Quantum Internet Infrastructure Platform",;
     tagline: "Quantum internet with unbreakable encryption and instant global communication",;
@@ -348,10 +342,9 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     innovationLevel: "Revolutionary",;
     patentStatus: "Patent Pending",;
     aiCapabilities["Quantum Communications", "Unbreakable Encryption", "Instant Global Communication", "Future Technology"],;
-    marketDisruption: "Revolutionizes internet with quantum technology";,;,
-},;
+    marketDisruption: "Revolutionizes internet with quantum technology"},;
   // AUTONOMOUS SOFTWARE DEVELOPMENT;
-  {;
+  {
     id: "autonomous-software-development-platform",;
     name: "Autonomous Software Development Platform",;
     tagline: "AI-powered software development that writes, tests, and deploys code automatically",;
@@ -398,10 +391,9 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     innovationLevel: "Breakthrough",;
     patentStatus: "Trade Secret",;
     aiCapabilities["AI Code Generation", "Automated Testing", "Bug Detection", "Code Optimization"],;
-    marketDisruption: "Revolutionizes software development with autonomous AI";,;,
-},;
+    marketDisruption: "Revolutionizes software development with autonomous AI"},;
   // INTELLIGENT IT SERVICE DESK;
-  {;
+  {
     id: "intelligent-it-service-desk",;
     name: "Intelligent IT Service Desk Platform",;
     tagline: "AI-powered IT support that resolves 95% of issues automatically",;
@@ -448,10 +440,9 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     innovationLevel: "Breakthrough",;
     patentStatus: "Trade Secret",;
     aiCapabilities["AI Issue Resolution", "Predictive Maintenance", "Instant Support", "Knowledge Management"],;
-    marketDisruption: "Revolutionizes IT support with AI automation";,;,
-},;
+    marketDisruption: "Revolutionizes IT support with AI automation"},;
   // AUTONOMOUS NETWORK MANAGEMENT;
-  {;
+  {
     id: "autonomous-network-management",;
     name: "Autonomous Network Management Platform",;
     tagline: "Self-optimizing networks that adapt and improve performance automatically",;

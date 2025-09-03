@@ -1,15 +1,12 @@
 import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
-const Component = () => {;
-const Head = dynamic(() => import("next/head"), { ssr: false });,
-}
-const Link = dynamic(() => import("next/link"), { ssr: false });,
-}
+const Component = () => {
+const Head = dynamic(() => import("next/head"), { ssr: false })}
+const Link = dynamic(() => import("next/link"), { ssr: false })}
   Satellite,;
   TreePine} from "lucide - react",;
-const PageTransition = dynamic(() => import("../src/components/PageTransition"), { ssr: false });,
-}
+const PageTransition = dynamic(() => import("../src/components/PageTransition"), { ssr: false })}
 export default function ITServices() {";
   const title = "IT Services — Zion Tech Group";
   const description = "Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and digital transformation solutions.;
@@ -246,8 +243,7 @@ export default function ITServices() {";
       ],";
       pricing: "$2,000 - $12,000/month",";
       delivery: "3-6 weeks",";
-      category: "MSP Services",;,
-},;
+      category: "MSP Services"},;
     {";
       title: "Cloud Cost Optimization & FinOps Platform",";
       description: "Intelligent cloud cost management and optimization with automated resource scaling",;
@@ -257,8 +253,7 @@ export default function ITServices() {";
       ],";
       pricing: "$3,000 - $18,000/month",";
       delivery: "4-8 weeks",";
-      category: "Cloud Optimization Services",;,
-},;
+      category: "Cloud Optimization Services"},;
     {";
       title: "API Management & Developer Portal Platform",";
       description: "Comprehensive API management solution with developer portal and analytics",;
@@ -268,8 +263,7 @@ export default function ITServices() {";
       ],";
       pricing: "$2,500 - $15,000/month",";
       delivery: "4-10 weeks",";
-      category: "API Management Services",;,
-},;
+      category: "API Management Services"},;
     {";
       title: "Digital Workplace & Collaboration Platform",";
       description: "Comprehensive digital workplace solution with unified communication and collaboration tools",;
@@ -279,8 +273,7 @@ export default function ITServices() {";
       ],";
       pricing: "$4,000 - $25,000/month",";
       delivery: "6-12 weeks",";
-      category: "Digital Workplace Services",;,
-},;
+      category: "Digital Workplace Services"},;
     {";
       title: "AI-Powered IT Service Management (ITSM)",";
       description: "Intelligent IT service management with AI-driven automation and predictive analytics",;
@@ -290,8 +283,7 @@ export default function ITServices() {";
       ],";
       pricing: "$5,000 - $30,000/month",";
       delivery: "6-14 weeks",";
-      category: "ITSM Services",;,
-},;
+      category: "ITSM Services"},;
     {";
       title: "Cybersecurity Operations Center (SOC)",";
       description: "24/7 security operations center and threat monitoring services",;
@@ -1212,7 +1204,7 @@ export default function ITServices() {";
       pricing: "$40,000 - $400,000/month",";
       delivery: "24-48 weeks",";
       category: "Autonomous Systems Services"}
-;
+
   ];
 
   const technologies = [];
@@ -1292,7 +1284,7 @@ export default function ITServices() {";
                 <p className="text-gray-600">{benefit.description}</p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -1318,7 +1310,7 @@ export default function ITServices() {";
                 <p className="text-gray-600">{tech.description}</p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -1338,7 +1330,7 @@ export default function ITServices() {";
               <a href="tel: +13024640950" className="text-green-600 hover:text-green-500">;
                 +1 302 464 0950",;
               </a>{" "}
-;
+
               for custom pricing.;
             </p>;
           </div>";
@@ -1362,7 +1354,7 @@ export default function ITServices() {";
                       <span className="text-sm text-gray-700">{feature}</span>;
                     </li>;
                   ))}
-;
+
                 </ul>";
                 <div className="flex items-center justify-between">";
                   <div className="flex items-center space-x-4 text-sm text-gray-500">";
@@ -1380,7 +1372,7 @@ export default function ITServices() {";
                 </div>;
               </div>,;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";

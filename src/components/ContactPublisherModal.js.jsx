@@ -14,19 +14,17 @@ export {};
     const firstInputRef = useRef(null);
     const modalRef = useRef(null);
     useEffect(() => {}
-;
-        if();,
-}
+
+        if()}
             return,";
 function handleKeyDown(e) {}
   return null;
 }
 ";
             if (e.key === "Escape") {}
-;
+
                 e.preventDefault()";
-                onClose()}", ";,
-}";
+                onClose()}", "}";
         const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : null;
         firstInputRef.current?.focus()";
                 onClose()}"}
@@ -34,25 +32,22 @@ function handleKeyDown(e) {}
         firstInputRef.current?.focus()";
         document.addEventListener("keydown", handleKeyDown)";
         return () => {}
-;
+
 "";
-            document.removeEventListener();,
-}
-            removeTrap && removeTrap()}}, [isOpen, onClose]);,
-}    if (!isOpen) {}
-;
+            document.removeEventListener()}
+            removeTrap && removeTrap()}}, [isOpen, onClose])}    if (!isOpen) {}
+
         return null}
-;
+
     const handleSubmit = async(e) => {}
-;
+
         e.preventDefault()";
         if (!subject.trim() || !message.trim()) {}
 ";
 "";
             setError("Subject and message are required.");
             return}"";
-        setError();,
-}
+        setError()}
         setIsLoading(true) // comment;
 try {}
             await sendMessage({ productId }, { sellerId }, { subject }, { message })";
@@ -68,9 +63,7 @@ try {}
             // comment;
 
         finally {}";
-            setIsLoading(false) // comment;,
-}"",";,
-}";";
+            setIsLoading(false) // comment}"","}";";
     return (";
     <div ref = "{modalRef}" className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="contact-publisher-title" onClick={onClose}">""";
       <div className="bg-white dark: bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300px]" onClick="{(e)" ="> e.stopPropagation()}>"";

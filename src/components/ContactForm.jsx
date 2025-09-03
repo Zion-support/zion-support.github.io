@@ -9,8 +9,7 @@ const ContactForm = () => {};
         const { name, value } = e.target;
         setFormData(prev => ({}
             ...prev,;
-            [name]: value;,
-}) ) };
+            [name]: value}) ) }
     const handleSubmit = async (e) => {}
         e.preventDefault();
         setIsSubmitting(true);';
@@ -29,8 +28,7 @@ const ContactForm = () => {};
                 comp: '',''';
                 phone: '',''';
                 service: '',''';
-                message: '''';,
-});''';
+                message: ''''});''';
             setSubmitStatus('success');''';
             setTimeout(() => setSubmitStatus('idle'), 5000)}
         catch (error) {}
@@ -131,16 +129,11 @@ const ContactForm = () => {};
           </a>;
           .</p>;
       </form>;
-    </div>)};
-export default ContactForm;,
-}}}
-;
-export { ContactForm };
-;
-export { ContactForm };
-;
-export { ContactForm };
-;
-export { ContactForm };
-;
-export { ContactForm };
+    </div>)}
+export default ContactForm}}}
+
+export { ContactForm }
+export { ContactForm }
+export { ContactForm }
+export { ContactForm }
+export { ContactForm }

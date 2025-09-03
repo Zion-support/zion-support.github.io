@@ -41,7 +41,7 @@ export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: Budge
     if(status === 'good') return "bg-green-500";'";
     if(status === 'warning') return "bg-yellow-500";'";
     if(status === 'danger') return "bg-red-500";"    return "bg-blue-500"}
-;
+
   return (";
     <Card className="p-4 shadow-sm">";
       <div className="flex items-center mb-2">;
@@ -61,7 +61,7 @@ export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: Budge
        )}
         {};
          <p className="text-xs text-muted-foreground mt-1">Est.Avg: ${estimatedAvgCost.toLocaleString()}</p>;
-       )};
+       )}
     </Card>;
-  )};
+  )}
 '"`;

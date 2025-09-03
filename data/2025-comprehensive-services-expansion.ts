@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface ComprehensiveService {;
+export interface ComprehensiveService {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface ComprehensiveService {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -36,18 +36,17 @@ export interface ComprehensiveService {;
   launchDate: string;
   customers: number;
   rating: number;
-const contact = {;
+const contact = {
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709";
-  ;
-  ;
-  ;
-  ;
-  website: "https://ziontechgroup.com";,;,
-}
+
+
+
+
+  website: "https://ziontechgroup.com"}
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
-  {;
+  {
     id: "ai-powered-code-review-assistant",;
     name: "AI-Powered Code Review Assistant",;
     tagline: "Automated code quality analysis, security scanning, and best practice recommendations",;
@@ -90,9 +89,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-01-15",;
     customers: 156,;
     rating: 4.8,;
-    reviews: 89;,;,
-},;
-  {;
+    reviews: 89},;
+  {
     id: "intelligent-incident-response-platform",;
     name: "Intelligent Incident Response Platform",;
     tagline: "AI-driven incident detection, automated response, and post-mortem analysis",;
@@ -135,9 +133,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-02-01",;
     customers: 89,;
     rating: 4.7,;
-    reviews: 67;,;,
-},;
-  {;
+    reviews: 67},;
+  {
     id: "quantum-resistant-cryptography-suite",;
     name: "Quantum-Resistant Cryptography Suite",;
     tagline: "Future-proof encryption for post-quantum computing era",;
@@ -180,9 +177,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-01-20",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 18;,;,
-},;
-  {;
+    reviews: 18},;
+  {
     id: "autonomous-devops-orchestrator",;
     name: "Autonomous DevOps Orchestrator",;
     tagline: "Self-healing infrastructure with intelligent automation and optimization",;
@@ -225,9 +221,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-02-10",;
     customers: 134,;
     rating: 4.8,;
-    reviews: 92;,;,
-},;
-  {;
+    reviews: 92},;
+  {
     id: "edge-ai-inference-platform",;
     name: "Edge AI Inference Platform",;
     tagline: "Deploy and manage AI models at the edge for real-time performance",;
@@ -270,9 +265,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-01-25",;
     customers: 67,;
     rating: 4.6,;
-    reviews: 41;,;,
-},;
-  {;
+    reviews: 41},;
+  {
     id: "blockchain-governance-automation",;
     name: "Blockchain Governance Automation",;
     tagline: "Automated governance, compliance, and risk management for blockchain networks",;
@@ -315,9 +309,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-02-05",;
     customers: 45,;
     rating: 4.7,;
-    reviews: 33;,;,
-},;
-  {;
+    reviews: 33},;
+  {
     id: "ai-powered-customer-success-platform",;
     name: "AI-Powered Customer Success Platform",;
     tagline: "Predictive customer health scoring and proactive retention strategies",;
@@ -360,9 +353,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-01-30",;
     customers: 178,;
     rating: 4.8,;
-    reviews: 124;,;,
-},;
-  {;
+    reviews: 124},;
+  {
     id: "quantum-machine-learning-platform",;
     name: "Quantum Machine Learning Platform",;
     tagline: "Quantum computing-powered ML for complex optimization and simulation",;
@@ -405,9 +397,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-02-15",;
     customers: 28,;
     rating: 4.9,;
-    reviews: 22;,;,
-},;
-  {;
+    reviews: 22},;
+  {
     id: "intelligent-supply-chain-optimizer",;
     name: "Intelligent Supply Chain Optimizer",;
     tagline: "AI-driven supply chain optimization and risk management",;
@@ -450,9 +441,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-02-20",;
     customers: 89,;
     rating: 4.7,;
-    reviews: 67;,;,
-},;
-  {;
+    reviews: 67},;
+  {
     id: "cybersecurity-threat-intelligence-hub",;
     name: "Cybersecurity Threat Intelligence Hub",;
     tagline: "Real-time threat detection, analysis, and automated response",;
@@ -495,9 +485,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-02-25",;
     customers: 156,;
     rating: 4.8,;
-    reviews: 118;,;,
-},;
-  {;
+    reviews: 118},;
+  {
     id: "ai-powered-content-creation-suite",;
     name: "AI-Powered Content Creation Suite",;
     tagline: "Automated content generation, optimization, and multi-channel distribution",;
@@ -540,9 +529,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-03-01",;
     customers: 234,;
     rating: 4.7,;
-    reviews: 167;,;,
-},;
-  {;
+    reviews: 167},;
+  {
     id: "intelligent-data-governance-platform",;
     name: "Intelligent Data Governance Platform",;
     tagline: "Automated data quality, compliance, and lifecycle management",;
@@ -585,9 +573,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-03-05",;
     customers: 78,;
     rating: 4.6,;
-    reviews: 56;,;,
-},;
-  {;
+    reviews: 56},;
+  {
     id: "quantum-financial-trading-engine",;
     name: "Quantum Financial Trading Engine",;
     tagline: "Quantum computing-powered algorithmic trading and risk management",;
@@ -630,9 +617,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-03-10",;
     customers: 34,;
     rating: 4.9,;
-    reviews: 28;,;,
-},;
-  {;
+    reviews: 28},;
+  {
     id: "ai-powered-hr-automation-suite",;
     name: "AI-Powered HR Automation Suite",;
     tagline: "Intelligent recruitment, employee management, and performance optimization",;
@@ -675,9 +661,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-03-15",;
     customers: 189,;
     rating: 4.7,;
-    reviews: 134;,;,
-},;
-  {;
+    reviews: 134},;
+  {
     id: "intelligent-iot-platform",;
     name: "Intelligent IoT Platform",;
     tagline: "AI-powered IoT device management, analytics, and automation",;
@@ -720,9 +705,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-03-20",;
     customers: 67,;
     rating: 4.6,;
-    reviews: 45;,;,
-},;
-  {;
+    reviews: 45},;
+  {
     id: "quantum-cybersecurity-platform",;
     name: "Quantum Cybersecurity Platform",;
     tagline: "Quantum-resistant security and post-quantum cryptography",;
@@ -765,9 +749,8 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-03-25",;
     customers: 19,;
     rating: 4.9,;
-    reviews: 15;,;,
-},;
-  {;
+    reviews: 15},;
+  {
     id: "ai-powered-sales-intelligence-platform",;
     name: "AI-Powered Sales Intelligence Platform",;
     tagline: "Predictive sales analytics, lead scoring, and revenue optimization",;

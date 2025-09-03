@@ -1,5 +1,5 @@
 #!/usr/bin/env node;
-;
+
 import fs from "fs";
 import path from "path";
 import { fileURLToPath  } from "url";
@@ -140,7 +140,7 @@ const corruptedFiles = [;
   "src/pages/resources.tsx",;
   "src/pages/ai-services.tsx",;
   "src/pages/ai-solutions.tsx",;
-  ;
+
   // Service files that still have issues;
   "src/pages/services/AI-Autonomous-Research-Assistant.tsx",;
   "src/pages/services/AI-Carbon-Footprint-Management-Platform.tsx",;
@@ -161,20 +161,20 @@ const corruptedFiles = [;
   "src/pages/services/AI-Supply-Chain-Optimization.tsx";
 ];
 // Function to create a proper React component;
-function createPageComponent(fileName) {;
+function createPageComponent(fileName) {
   const componentName = fileName.replace(/[^a-zA-Z0-9]/g, "");
   const displayName = fileName.replace(/\.tsx|\.jsx/g, "").replace(/([A-Z])/g, " $1").trim();
   return `import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-const ${componentName} = () => {;
+const ${componentName} = () => {
   return (;
     <>;
       <Head>;
         <title>${displayName} - Zion Tech Group</title>;
         <meta name="description" content="Professional ${displayName} services" />;
       </Head>;
-      ;
+
       <div className="min-h-screen bg-gray-50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
           <div className="text-center">;
@@ -184,7 +184,7 @@ const ${componentName} = () => {;
             <p className="text-xl text-gray-600 mb-12">;
               Professional ${displayName} services and solutions;
             </p>;
-            ;
+
             <div className="grid md:grid-cols-2 gap-8 mb-12">;
               <div className="bg-white p-6 rounded-lg shadow-md">;
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>;
@@ -195,7 +195,7 @@ const ${componentName} = () => {;
                   <li>• Custom Development</li>;
                 </ul>;
               </div>;
-              ;
+
               <div className="bg-white p-6 rounded-lg shadow-md">;
                 <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
                 <ul className="text-gray-600 space-y-2">;
@@ -206,7 +206,7 @@ const ${componentName} = () => {;
                 </ul>;
               </div>;
             </div>;
-            ;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
                 View Pricing;
@@ -219,21 +219,19 @@ const ${componentName} = () => {;
         </div>;
       </div>;
     </>;
-  );,;,
-}
-export default ${componentName};`;,;,
-}
-;
+  )}
+export default ${componentName};`}
+
 // Function to fix Redux files properly;
-function $1() {;
+function $1() {
   const reduxFiles = [;
   "src/store/hooks.ts",;
     "src/store/index.ts",;
     "src/store/wishlistSlice.ts";
   ];
-  reduxFiles.forEach(filePath => {;
-  try {;
-  if (fs.existsSync(filePath)) {;
+  reduxFiles.forEach(filePath => {
+  try {
+  if (fs.existsSync(filePath)) {
   let content = fs.readFileSync(filePath, "utf8");
         // Fix common TypeScript syntax errors;
         content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]react-redux[""];/, ;
@@ -245,66 +243,55 @@ function $1() {;
         content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]@reduxjs\/toolkit[""];/, ;
           "import { $1  } from "@reduxjs/toolkit";");
         fs.writeFileSync(filePath, content);
-        console.log(`Fixed Redux file: ${filePath}`);,;,
-}
-    } catch (error) {;
-  console.error(`Error fixing Redux file ${filePath}:`, error.message);,;,
-}
-  });,;,
-}
-;
+        console.log(`Fixed Redux file: ${filePath}`)}
+    } catch (error) {
+  console.error(`Error fixing Redux file ${filePath}:`, error.message)}
+  })}
+
 // Function to fix test files;
-function fixTestFiles() {;
+function fixTestFiles() {
   const testFiles = [;
   "src/test/App.test.tsx";
   ];
-  testFiles.forEach(filePath => {;
-  try {;
-  if (fs.existsSync(filePath)) {;
+  testFiles.forEach(filePath => {
+  try {
+  if (fs.existsSync(filePath)) {
   let content = fs.readFileSync(filePath, "utf8");
         // Fix common test syntax errors;
         content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]@testing-library\/react[""];/, ;
           "import { $1  } from "@testing-library/react";");
         fs.writeFileSync(filePath, content);
-        console.log(`Fixed test file: ${filePath}`);,;,
-}
-    } catch (error) {;
-  console.error(`Error fixing test file ${filePath}:`, error.message);,;,
-}
-  });,;,
-}
-;
+        console.log(`Fixed test file: ${filePath}`)}
+    } catch (error) {
+  console.error(`Error fixing test file ${filePath}:`, error.message)}
+  })}
+
 // Function to remove problematic files;
-function removeProblematicFiles() {;
+function removeProblematicFiles() {
   const problematicFiles = [;
   "src/pages/EnterpriseIT.js.jsx",;
     "src/pages/launch/index.js.jsx";
   ];
-  problematicFiles.forEach(filePath => {;
-  try {;
-  if (fs.existsSync(filePath)) {;
+  problematicFiles.forEach(filePath => {
+  try {
+  if (fs.existsSync(filePath)) {
   fs.unlinkSync(filePath);
-        console.log(`Removed problematic file: ${filePath}`);,;,
-}
-    } catch (error) {;
-  console.error(`Error removing ${filePath}:`, error.message);,;,
-}
-  });,;,
-}
-;
+        console.log(`Removed problematic file: ${filePath}`)}
+    } catch (error) {
+  console.error(`Error removing ${filePath}:`, error.message)}
+  })}
+
 // Main execution;
 console.log("Starting final comprehensive fix...");
 // 1. Fix corrupted files by rewriting them;
 console.log("Fixing corrupted files...");
-corruptedFiles.forEach(filePath => {;
-  try {;
+corruptedFiles.forEach(filePath => {
+  try {
   const fileName = path.basename(filePath, path.extname(filePath));
     const newContent = createPageComponent(fileName);
     fs.writeFileSync(filePath, newContent);
-    console.log(`Rewrote corrupted file: ${filePath}`);,;,
-} catch (error) {;
-  console.error(`Error rewriting ${filePath}:`, error.message);,;,
-}
+    console.log(`Rewrote corrupted file: ${filePath}`)} catch (error) {
+  console.error(`Error rewriting ${filePath}:`, error.message)}
 });
 // 2. Fix Redux files;
 console.log("Fixing Redux files...");

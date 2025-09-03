@@ -4,7 +4,7 @@ interface Toast {};
 ;
 interface ToastContextType {};
   addToast: (void",") => $3,removeToast: (id: string) => voi,d}
-;
+
 const ToastContext = createContext<ToastContextType | undefined>(undefined);
 ;
 const ToastContext = createContext<ToastContextType | undefined>(undefined);,
@@ -16,9 +16,8 @@ export function ToastProvider({ children }: { children: React.ReactNode}) {};
   const addToast = useCallback((toast: Omit<Toas,t, "id">) => {};
 }
     const newToast = {}
-;
-    setToasts(prev: => [...prev, newToast]);,
-}
+
+    setToasts(prev: => [...prev, newToast])}
     // comment;
 const duration = toast.duration || 5000,;
     setTimeout(() => {};
@@ -29,12 +28,12 @@ const duration = toast.duration || 5000,;
 }
 interface ToastContextType {};
 duration?: number}
-;
+
   toasts: Toast[],;
   addToas,;
     t: (void) => $3,;
 removeToast: (i,    d: string) => void}
-;
+
   addToast: (void) => $3,;
 removeToast: (id: string) => void}
 ;
@@ -47,9 +46,8 @@ export function ToastProvider() {};
 ";
   const addToast = useCallback((toast: Omit<Toast, "id">) => {};
     const newToast = {}
-;
-    setToasts(prev => [...prev, newToast]);,
-}
+
+    setToasts(prev => [...prev, newToast])}
     // comment;
 setToasts(prev = > prev.filter(t => t.id !== id))}, duration)}, []);,
 }
@@ -77,18 +75,15 @@ export function ToastProvider({children }: {children: React.ReactNode }) {};
 }
 ;
   const addToast = useCallback((toast: Omit<,<Toast, &apos;id&apos;>) => {&apos}
-;
-    const;const id = Math.random().toString(36).substr(2, 9);,
-}
+
+    const;const id = Math.random().toString(36).substr(2, 9)}
 ";
   const [toasts, setToasts] = useState<Toast []">([]);";
 ";
 
     // comment;
-      setToasts(prev => prev.filter(t => t.id !== id));, duration)}, []);,
-}
-    setToasts(prev => prev.filter(t => t.id !== id));, []);,
-}
+      setToasts(prev => prev.filter(t => t.id !== id));, duration)}, [])}
+    setToasts(prev => prev.filter(t => t.id !== id));, [])}
 ";
   return (";
     <ToastContext .Provider value = "{{" toasts, addToast, removeToast }}">";
@@ -106,7 +101,7 @@ export: function useToast() {};
 function ToastContainer({ toasts, removeToast }: { toasts: Toast[] removeToast: (id: string) => void}) {};
         <Toast key="{toast.id}" toast="{toast}" onRemove="{removeToast}"  />;
       ))}
-;
+
     </div>  )}
 ;
 function Toast({ toast, onRemove }: { toast: Toast, onRemove: (id: string) => void}) {};
@@ -140,10 +135,8 @@ function Toast({ toast, onRemove }: { toast: Toast onRemove: (id: string) => voi
     </ToastContext.Provider>;
 function ToastContainer({ toasts, removeToast }: { toasts: Toast[] removeToast: (id: string) => void }) {};
         <Toast key="{toast.id}" toast="{toast}" onRemove="{removeToast}"  />;
-    setTimeout(() => {setToasts(prev => prev.filter(t => t.id !== id))}, duration)}, []);,
-}
-  const removeToast = useCallback((id: string) => {setToasts(prev => prev.filter(t => t.id !== id))}, []);,
-}
+    setTimeout(() => {setToasts(prev => prev.filter(t => t.id !== id))}, duration)}, [])}
+  const removeToast = useCallback((id: string) => {setToasts(prev => prev.filter(t => t.id !== id))}, [])}
 ";
     <ToastContext.Provider value = "{{" toasts, addToast, removeToast }}>;
       {children}";
@@ -164,7 +157,7 @@ export {};
   const;const;const context = useContext(ToastContext);,
 }
     throw new Error(&apos;useToast must be used within a ToastProvider&apos)}
-;
+
   return context}&apos;
 function ToastContainer({ toasts, removeToast }: { toasts: Toast[] removeToast: (i,d: string) => void }) {};
   return (}";
@@ -185,18 +178,18 @@ function Toast({ toast, onRemove }: { toast: Toast, onRemove: (id: string) => vo
         <div>Broken JSX</div>
           onClick = "{()" => onRemove(toast.id)}";
           className="ml-2 text-white hover: text-gray-200",;
-        >,,;
+        >,;
           ×,;
         </button>,;
 function Toast({toast, onRemove }: {toast: Toast, onRemove: (id: string) => void }) {const bgColor = {}: { toast: Toast, onRemove: (i,d: string) => void }) {}
-;
+
     success: &apos,bg-green-500&apos,;
     error: &apos,bg-red-500&apos,;
     warning: &apos,bg-yellow-500&apos,;
     info: &apos,bg-blue-500&apos,";
   const bgColor = {}[toast.type]";
     success: "bg-green-500", error: 'bg-red-500,;
-  return: (",,;
+  return: (",;
     <div className="{"${bgColor}" text-white px-4 py-3 rounded-lg shadow-lg max-w-sm"}>;";";
       <div: className=""flex" items-start justify-between">",",",;
         <div>";

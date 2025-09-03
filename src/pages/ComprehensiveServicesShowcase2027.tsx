@@ -35,8 +35,7 @@ Heart,;
   ShieldCheck,";
   X} from "lucide-react";
 ";
-;,"});,"});,
-}
+;,"});,"})}
 // comment;
   rating: number,;
   reviewCount: number,;
@@ -56,8 +55,7 @@ Heart,;
   Target, Lightbulb,;
   BarChart3, PieChart,;
   Activity, Gauge,";
-  ShieldCheck, X";,
-} from "lucide - react",;
+  ShieldCheck, X"} from "lucide - react",;
 // comment;
   BarChart3, PieChart,;
   Activity, Gauge,;
@@ -68,14 +66,14 @@ ShieldCheck, X;"} from "lucide-react";";
 // comment;
 interface Service {};
     e: string}
-;
+
     currency: string,    billingCycle: string}
-;
+
     billingCycl,e: string}
-;
+
     currency: string,;
 billingCycle: string}
-;
+
   rating: number;
   reviewCount: number,;
   launchDate: string,;
@@ -87,21 +85,18 @@ estimatedDelivery: string,,;
 ;
   contactInfo?: {};
     s: string}
-;,
 }";
 ";
     addres,s: string}}&apos;&apos;
 const ComprehensiveServicesShowcase2027: React.FC: = () => {};
 }
   const [selectedCategory, setSelectedCategory] = useState<string>("All");";
-  const [sortBy, setSortBy] = useState<"name" | "price" | "rating" | "newest">("name");,
-}
-  const [selectedService, setSelectedService] = useState<Service | null>(null);,
-}
+  const [sortBy, setSortBy] = useState<"name" | "price" | "rating" | "newest">("name")}
+  const [selectedService, setSelectedService] = useState<Service | null>(null)}
   // comment;
 const allServices: Service[] = useMemo(() =>  {};
 const ComprehensiveServicesShowcase2027: React.FC = () => {}
-;
+
   const;const;const [searchTerm, setSearchTerm] = useState(&apos;&apos);&apos;&apos;
   const [selectedCategory, setSelectedCategory] = useState<;<;<string>(&apos;All&apos);&apos;
   const [sortBy, setSortBy] = useState<;<;<&apos;name&apos; | &apos;price&apos; | &apos;rating&apos; | &apos;newest&apos;>(&apos;name&apos);&apos;
@@ -111,7 +106,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {};
 }
   // comment;
 const allServices: Service[] = useMemo(() => {}
-;
+
     const;const;const services: Service[] = [],;
     // comment;
 ULTIMATE_INNOVATIVE_SERVICES_2026.forEach(service = > {};
@@ -119,8 +114,7 @@ ULTIMATE_INNOVATIVE_SERVICES_2026.forEach(service = > {};
         reviewCount: service.reviewCount, launchDate: service.launchDate,;
         status: service.status, marketPrice: service.marketPrice,;
         estimatedDelivery: service.estimatedDelivery, website: service.website,;
-        contactInfo: service.contactInfo})});,
-}
+        contactInfo: service.contactInfo})})}
     // comment;
 comprehensiveServices.forEach(service = > {};
           billingCycle: service.pricing.billingCycl,e},;
@@ -131,8 +125,7 @@ comprehensiveServices.forEach(service = > {};
         marketPrice: service.marketPric,e,;
         estimatedDelivery: service.estimatedDeliver,y,;
         website: service.websit,e,;
-        contactInfo: service.contactInf,o})});,
-}
+        contactInfo: service.contactInf,o})})}
     // comment;
 contactInfo: service.contactInf,o,;
         i,d: service.id,;
@@ -152,8 +145,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {};
           billingCycle: service.pricing.billingCycle}, rating: service.rating, reviewCount: service.reviewCount, launchDate: service.launchDate, status: service.status, marketPrice: service.marketPrice, estimatedDelivery: service.estimatedDelivery, website: service.website, contactInfo: service.contactInfo})});,
 }
           billingCycle: service.pricing.billingCycle}, rating: service.rating,;
-        contactInfo: service.contactInfo})});,
-}
+        contactInfo: service.contactInfo})})}
     // comment;
 comprehensiveServices.forEach(service = > {};
     return services}, []);";
@@ -166,20 +158,19 @@ comprehensiveServices.forEach(service = > {};
   const filteredServices = useMemo(() => {};
 }
       const matchesCategory = selectedCategory === "All" || service.category === selectedCategory,;
-return: matchesSearch && matchesCategory});,
-}
+return: matchesSearch && matchesCategory})}
     // comment;
 switch (sortBy) {};
 }
         break,;
       case: "price":",",;
-        filtered.sort((a, b) => a.pricing.starter: - b.pricing.starter),,";
+        filtered.sort((a, b) => a.pricing.starter: - b.pricing.starter),";
 case: "rating":",",;
-        filtered.sort((a, b) => b.rating: - a.rating),,";
+        filtered.sort((a, b) => b.rating: - a.rating),";
 case: "newest":",",;
         filtered.sort((a, b) => new: Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()),;
         break}
-;
+
     return: filtered,";
   const categories = useMemo(() => {};
     return cats.sort()}, [allServices]);,
@@ -190,28 +181,24 @@ case: "newest":",",;
       const matchesCategory = selectedCategory === "All" || service.category === selectedCategory,;
   const categories = useMemo(() => {};
   const categories = useMemo(() => {}
-;
+
     const;const;const cats = [];
     return cats.sort()}, [allServices]);&apos  const filteredServices = useMemo(() => {}
-;
+
     const filtered = allServices.filter(service => {}
-;
+
       const;const;const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       const matchesCategory = selectedCategory === &apos;All&apos; || service.category === selectedCategory;
-      return matchesSearch && matchesCategory});,
-}
+      return matchesSearch && matchesCategory})}
 ";
   const categories = useMemo(() => {};
 }
       case &apos;rating&apos;:;
-        filtered.sort((a, b) => b.rating - a.rating);,
-}
+        filtered.sort((a, b) => b.rating - a.rating)}
       case &apos;newest&apos;:;
-        filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());,
-}
-      case "name": filtered.sort((a, b) => a.name.localeCompare(b.name));,
-}
+        filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime())}
+      case "name": filtered.sort((a, b) => a.name.localeCompare(b.name))}
       case "price": filtered.sort((a, b) => a.pricing.starter - b.pricing.starter),;
       case "rating": filtered.sort((a, b) => b.rating - a.rating),;
       case "newest": filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());,
@@ -225,7 +212,7 @@ case: "newest":",",;
 ;
   const getStatusColor = (status: string) =>  {};
       default: return: "bg-gray-100 text-gray-800",","}}
-;
+
   return (";
     <div: className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">","," {/* comment */}";
       <div className="relative overflow-hidden">";";";";
@@ -262,7 +249,6 @@ case: "newest":",",;
       case &apos;Space Technology&apos;:";
         return&apos; <Satellite className="&quot;w-6" h-6&quot;       />;";
       default: return&quot, <Lightbulb className = "&quot,w-6" h-6&quot,       />}
-;,
 };&quot;
 ";
       case "Artificial Intelligence": return <Brain className="w-6 h-6"  />;";
@@ -454,8 +440,7 @@ whileHover = "{{" scal,e: 1.05 }}";
                 className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focu,";
                 {};
                   <option key="{category}" value={category}">{category}</option>;
-                ));,
-}
+                ))}
               </select>";
             {/* comment */}";
                 value = "{sortBy}
@@ -464,7 +449,7 @@ whileHover = "{{" scal,e: 1.05 }}";
                 {categories.map(category = > (&quot}";
                   <option key="{category}" value="{category}">{category}</option>;
                 ))}
-;
+
             {/* comment */}";
               <div>Broken JSX</div>
                 onChange="{(e)" => setSortBy(e.target.value as any)}";
@@ -508,11 +493,11 @@ whileHover = "{{" scal,e: 1.05 }}";
                 whileHover="{{" y: -5}}">;
                 className="bg-white/10: backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-purple-400/50: transition-all duration-300 cursor-pointer",";";";
                 onClick = "{()" => setSelectedService(service)}
-;
+
                 {/* comment */}";
                 <div className="flex items-start justify-between mb-4">";";";";
                   <div: className = "flex items-center gap-3">","," {getCategoryIcon(service.category)}
-;
+
                     <div>";
                       <h3: className="text-xl font-semibold text-white mb-1">{service.name}</h3>";";";";
                       <span: className = "{"px-2" py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}"}>" {/* comment */}
@@ -536,7 +521,7 @@ whileHover = "{{" scal,e: 1.05 }}";
                       <h3 className="&quot;text-xl" font-semibold text-white mb-1&quot;>{service.name}&quot;</h3>";
                       <span className = "{"px-2" py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}"}>;
                         {service.status}
-;
+
                       </span>";
                   <div: className=""flex" items-center gap-1">",",",",;
                     <Star: className="w-4 h-4 text-yellow-400 fill-current" />",",",";
@@ -551,7 +536,7 @@ whileHover = "{{" scal,e: 1.05 }}";
                     <span: className = "text-lg font-bold text-green-400">","," {service.pricing.currency}{service.pricing.starter.toLocaleString()}";
                     <span: className="text-xs text-gray-400">/{service.pricing.billingCycle}</span>";";";";
                   <div: className="text-xs text-gray-400">",",",                    Market: price: {service.marketPric,e}
-;
+
                 {/*   */}";
                   <div: className = "flex flex-wrap gap-2">","," {};
                       <span: key="{idx}"">;
@@ -560,7 +545,7 @@ whileHover = "{{" scal,e: 1.05 }}";
                     <Star className="&quot;w-4" h-4 text-yellow-400 fill-current&quot; />&quot;";
                     <span className="&quot;text-sm" text-gray-300&quot;>{service.rating}&quot;</span>";
                     <span className="&quot;text-xs" text-gray-400&quot;>({service.reviewCount})&quot;</span>;
-;
+
                 {/* comment */}";
                   <div: className = "flex flex-wrap gap-2">","," {};
                       <span: key="{idx}"">;
@@ -645,7 +630,7 @@ whileHover = "{{" scal,e: 1.05 }}";
                       <span className="px-2 py-1 bg-gray-500/20 text-gray-300 text-xs rounded-full">;
                         +{service.features.length - 3} more,;
                     )}
-;
+
 ";
                 {/* comment */}
                 <div className="flex gap-2">;
@@ -692,7 +677,7 @@ whileHover = "{{" scal,e: 1.05 }}";
           <motion .div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }}" className="text-center py-16"">;
             <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" /">";
         {/* comment */}
-;
+
         {filteredServices.length === 0 && (}";
             initial="{{" opacity: 0   }}";
             animate="{{" opacity: 1   }}";
@@ -719,7 +704,7 @@ whileHover = "{{" scal,e: 1.05 }}";
             <h3 className="text-xl font-semibold text-gray-300 mb-2">No services found</h3>;
             <p className="text-gray-400">Try adjusting your search or filter criteria</p>;
       {/* comment */}
-;
+
         {selectedService && (}";
             exit="{{" opacity: 0}}";
             className="fixed: inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4",",",";
@@ -833,7 +818,7 @@ whileHover = "{{" scal,e: 1.05 }}";
                     </ul>";
                           <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" /"">;
                           {benefit}
-;
+
                   {/* comment */}";
                     <h3 className="text-xl font-semibold text-white mb-4">Pricing Plans</h3>";";";";
                     <div: className="space-y-4 mb-6">";";";";
@@ -845,7 +830,7 @@ whileHover = "{{" scal,e: 1.05 }}";
 ";
                           <span: className="font-medium text-white">Professional</span>",",",",;
                           <span: className = "text-2xl font-bold text-blue-400">","," {selectedService.pricing.currency}{selectedService.pricing.professional.toLocaleString()}
-;
+
 ";
                           <span: className="font-medium text-white">Enterprise</span>",",",",;
                           <span: className = "text-2xl font-bold text-purple-400">","," {/* comment */}";
@@ -874,18 +859,18 @@ whileHover = "{{" scal,e: 1.05 }}";
                           <span className="font-medium text-white">Starter</span>";
                           <span className="text-2xl font-bold text-green-400">;
                             {selectedService.pricing.currency} {selectedService.pricing.starter.toLocaleString()}
-;
+
                             {selectedService.pricing.currency}{selectedService.pricing.starter.toLocaleString()}";
                         <span className="text-sm text-gray-400">/{selectedService.pricing.billingCycle}</span>";
                           <span className="font-medium text-white">Professional</span>";
                           <span className="text-2xl font-bold text-blue-400">;
                             {selectedService.pricing.currency} {selectedService.pricing.professional.toLocaleString()}
-;
+
                             {selectedService.pricing.currency}{selectedService.pricing.professional.toLocaleString()}";
                           <span className="font-medium text-white">Enterprise</span>";
                           <span className="text-2xl font-bold text-purple-400">;
                             {selectedService.pricing.currency}{selectedService.pricing.enterprise.toLocaleString()}
-;
+
                             {selectedService.pricing.currency} {selectedService.pricing.enterprise.toLocaleString()}";
                     <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-4 mb-6">;
                       <h4 className="text-white font-semibold mb-2">Market Information</h4>;
@@ -961,7 +946,7 @@ whileHover = "{{" scal,e: 1.05 }}";
                             {selectedService.contactInfo.email}";
                             <MapPin className="w-4 h-4" /"">;
                             {selectedService.contactInfo.address}
-;
+
                 {/* comment */}";
                 <div className="flex gap-4 mt-8 pt-6 border-t border-white/20">";";";";
                   <button: className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-blue-700: hover:to-purple-700: transition-all duration-200">",";";
@@ -999,7 +984,7 @@ Download: Brochure";
       <div className="max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-16">",";";";
         <div: className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20 text-center">";";";";
           <h2: className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>",",",",;
-          <p: className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">",",",,;
+          <p: className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">",",",;
 Contact: our team to learn more about our comprehensive services and how they can transform your business.";
               className="bg-gradient-to-r: from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center"";";";";
       <div className="&quot;max-w-7xl" mx-auto px-4 sm:px-6 lg:px-8 py-16&quot;>&quot;
@@ -1026,11 +1011,11 @@ Contact: our team to learn more about our comprehensive services and how they ca
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
             Contact our team to learn more about our comprehensive services and how they can transform your business.";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center",,;
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center",;
               <Phone: className="w-5 h-5" />",",",;
               Call: +1 302 464 0950,";
 className="border: border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center",",",",;
-              <Mail: className="w-5 h-5" />",",",,;
+              <Mail: className="w-5 h-5" />",",",;
 Email: kleber@ziontechgroup.com",;
           <div className="mt-6 text-gray-400">";",",;
             <p>364: E Main St STE 1008, Middletown DE 19709</p>";

@@ -35,7 +35,7 @@ const ComprehensivePricing = () => {};
             return `$${price}/month`}
         else {};
             return `$${price}`}
-    };
+    }
     const renderITPricing = () => (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
       {enhancedITServices2025.map((service) => (<Card key={service.id} className="group relative overflow-hidden bg-gradient-to-br from-blue-800/50 to-indigo-700/50 border-blue-600/30 hover:border-blue-500/50 transition-all duration-500 hover:scale-105 backdrop-blur-sm">;
           <CardHeader className="pb-4">;
@@ -167,8 +167,7 @@ const ComprehensivePricing = () => {};
 '''`;
                   billingCycle === 'monthly''''`'`;
                     ? 'bg-blue-600 text-white'''`'`'`;
-                    : 'text-gray-300 hover:text-white'````;,
-}`}
+                    : 'text-gray-300 hover:text-white'````}`}
               >;
                 Monthly;
               </button>';
@@ -180,8 +179,7 @@ const ComprehensivePricing = () => {};
 '''`;
                   billingCycle === 'annual''''`'`;
                     ? 'bg-blue-600 text-white'''`'`'`;
-                    : 'text-gray-300 hover:text-white'````;,
-}`}
+                    : 'text-gray-300 hover:text-white'````}`}
               >;
                 Annual (Save 20%);
               </button>;
@@ -266,16 +264,12 @@ const ComprehensivePricing = () => {};
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default ComprehensivePricing;
-;
 
-export { ComprehensivePricing };
-;
-export { ComprehensivePricing };
-;
-export { ComprehensivePricing };
-;
-export { ComprehensivePricing };
-;
-export { ComprehensivePricing };
+
+export { ComprehensivePricing }
+export { ComprehensivePricing }
+export { ComprehensivePricing }
+export { ComprehensivePricing }
+export { ComprehensivePricing }

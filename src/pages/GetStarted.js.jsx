@@ -11,8 +11,7 @@ const GetStarted = () => {}
             description: "Transform your operations with intelligent automation",";
             icon: Brain,"";
             color: "from-violet-500 to-purple-600","";
-            features["AI Legal Research", "Financial Risk Management", "Healthcare Diagnostics", "Supply Chain Optimization"];,
-},;
+            features["AI Legal Research", "Financial Risk Management", "Healthcare Diagnostics", "Supply Chain Optimization"]},;
         {}
 ";
 "";
@@ -20,8 +19,7 @@ const GetStarted = () => {}
             description: "Leverage next-generation computing power",";
             icon: Zap,"";
             color: "from-blue-500 to-indigo-600","";
-            features["Edge Computing", "Neuromorphic Infrastructure", "Holographic Data Centers", "Quantum Internet"];,
-},;
+            features["Edge Computing", "Neuromorphic Infrastructure", "Holographic Data Centers", "Quantum Internet"]},;
         {}
 ";
 "";
@@ -29,8 +27,7 @@ const GetStarted = () => {}
             description: "Protect your business with advanced security",";
             icon: Shield,"";
             color: "from-red-500 to-pink-600","";
-            features["Zero Trust Architecture", "Threat Intelligence", "Compliance Automation", "Penetration Testing"];,
-},;
+            features["Zero Trust Architecture", "Threat Intelligence", "Compliance Automation", "Penetration Testing"]},;
         {}
 ";
 "";
@@ -38,8 +35,7 @@ const GetStarted = () => {}
             description: "Modernize your technology foundation",";
             icon: Zap,"";
             color: "from-green-500 to-teal-600","";
-            features["Cloud Migration", "DevOps Automation", "Edge Computing", "Data Center Optimization"];,
-}
+            features["Cloud Migration", "DevOps Automation", "Edge Computing", "Data Center Optimization"]}
     ];";
     const benefits = ["";
         "Free initial consultation","";
@@ -241,16 +237,12 @@ const GetStarted = () => {}
           </div>;
         </div>;
       </section>;
-    </div>)};
+    </div>)}
 export default GetStarted;
-;
 
-export { GetStarted };
-;
-export { GetStarted };
-;
-export { GetStarted };
-;
-export { GetStarted };
-;
-export { GetStarted };
+
+export { GetStarted }
+export { GetStarted }
+export { GetStarted }
+export { GetStarted }
+export { GetStarted }

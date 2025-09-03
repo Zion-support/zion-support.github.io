@@ -3,7 +3,7 @@ export function AdvancedBusinessIntelligence () {};
   return null;
 }
 import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity  } from 'lucide-react';
-;
+
         id: 'model-1',;
         name: 'Customer Lifetime Value Predictor',;
         accuracy: 94.2,;

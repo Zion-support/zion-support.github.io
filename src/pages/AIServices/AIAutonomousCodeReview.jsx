@@ -2,7 +2,7 @@ import React from 'react';''';
 import { motion } from 'framer-motion';''';
 import { Link } from 'react-router-dom';''';
 import { Code, Shield, Zap, CheckCircle, ArrowRight, Play } from 'lucide-react';
-;
+
 const features = [;
     {};
         color: "from-purple-500 to-pink-500"    },;
@@ -12,16 +12,14 @@ const features = [;
         title: "Security Vulnerability Detection","";
         description: "Advanced security scanning that identifies potential security risks and compliance violations.",";
         icon: Shield,"";
-        color: "from-blue-500 to-cyan-500";,
-},;
+        color: "from-blue-500 to-cyan-500"},;
     {}
 ";
 "";
         title: "Performance Optimization","";
         description: "Intelligent suggestions for code optimization and performance improvements.",";
         icon: Zap,"";
-        color: "from-green-500 to-emerald-500";,
-},;
+        color: "from-green-500 to-emerald-500"},;
     {}
 ";
 "";
@@ -194,14 +192,10 @@ export {};
         </div>;
       </section>;
     </div>)}
-;
 
-export { AIAutonomousCodeReview, IconComponent };
-;
-export { AIAutonomousCodeReview, IconComponent };
-;
-export { AIAutonomousCodeReview, IconComponent };
-;
-export { AIAutonomousCodeReview, IconComponent };
-;
-export { AIAutonomousCodeReview, IconComponent };
+
+export { AIAutonomousCodeReview, IconComponent }
+export { AIAutonomousCodeReview, IconComponent }
+export { AIAutonomousCodeReview, IconComponent }
+export { AIAutonomousCodeReview, IconComponent }
+export { AIAutonomousCodeReview, IconComponent }

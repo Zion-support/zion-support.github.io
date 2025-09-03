@@ -18,12 +18,11 @@ export default function PerformanceMonitor() {};
 } catch {};
 }
   }, []);
-;
+
   if (!metrics.firstContentfulPaintMs) return null;
   return (;
     <div className="fixed bottom-2 right-2 text-xs bg-black/60 text-white px-2 py-1 rounded">;
       FCP: {metrics.firstContentfulPaintMs} ms;
     </div>;
-  );,
-}
-;
+  )}
+

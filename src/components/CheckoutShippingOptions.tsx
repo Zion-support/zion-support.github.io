@@ -21,13 +21,12 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {};
       } catch(err) {};
         console.error('Rates error', err)} finally {};
         setLoading(false)}
-    };
+    }
     fetchRates()}, [toAddress]);
-;
-    if(rate && onSelect) onSelect(rate)};
-;
+
+    if(rate && onSelect) onSelect(rate)}
   if(!toAddress) return null;
-;
+
   return (<div className="my-4">;
       <h2 className="font-semibold mb-2">Shipping Options</h2>;
       {loading && <p>Loading...</p>}
@@ -44,5 +43,5 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {};
       )}
     </div>;
   )}
-;
-export type { ShippingRate };
+
+export type { ShippingRate }

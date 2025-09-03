@@ -22,13 +22,11 @@ import {}
   Code,';
   FileText,'';
   PieChart,''';
-  LineChart'''';,
-} from 'lucide-react';
-;
-    integrations["Python", "Scikit - learn", "TensorFlow", "Custom APIs"];,
-}
+  LineChart''''} from 'lucide-react';
+
+    integrations["Python", "Scikit - learn", "TensorFlow", "Custom APIs"]}
 ];
-;
+
 const aiCapabilities = [];
   {}
 ";
@@ -36,24 +34,21 @@ const aiCapabilities = [];
     title: "Machine Learning","";
     description: "Advanced algorithms that learn from data and improve over time",";
     icon: Brain,"";
-    impact: "High";,
-},;
+    impact: "High"},;
   {}
 ";
 "";
     title: "Deep Learning","";
     description: "Neural networks for complex pattern recognition and analysis",";
     icon: Code,"";
-    impact: "High";,
-},;
+    impact: "High"},;
   {}
 ";
 "";
     title: "Natural Language Processing","";
     description: "Understanding and processing human language for insights",";
     icon: FileText,"";
-    impact: "Critical";,
-},;
+    impact: "Critical"},;
   {}
 ";
 "";
@@ -62,7 +57,7 @@ const aiCapabilities = [];
     icon: Eye,"";
     impact: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -72,8 +67,7 @@ const successStories = [];
     challenge: "Needed predictive analytics for inventory management","";
     solution: "Built AI-powered forecasting system with 95% accuracy","";
     results: "30% reduction in stockouts, 25% cost savings, improved customer satisfaction","";
-    logo: "EG";,
-},;
+    logo: "EG"},;
   {}
 ";
     id: 2,"";
@@ -82,8 +76,7 @@ const successStories = [];
     challenge: "Required real-time fraud detection system","";
     solution: "Implemented AI-powered anomaly detection with machine learning","";
     results: "90% fraud detection rate, 60% reduction in false positives, $2M saved","";
-    logo: "FS";,
-},;
+    logo: "FS"},;
   {}
 ";
     id: 3,"";
@@ -94,7 +87,7 @@ const successStories = [];
     results: "40% improvement in patient outcomes, 35% reduction in readmissions","";
     logo: "HN";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -102,24 +95,21 @@ const processSteps = [];
     title: "Data Assessment","";
     description: "Evaluate data quality, sources, and requirements for AI implementation",";
     icon: Database,"";
-    duration: "1-2 weeks";,
-},;
+    duration: "1-2 weeks"},;
   {}
 ";
     step: 2,"";
     title: "AI Model Design","";
     description: "Design and select appropriate AI/ML models for the use case",";
     icon: Brain,"";
-    duration: "2-3 weeks";,
-},;
+    duration: "2-3 weeks"},;
   {}
 ";
     step: 3,"";
     title: "Development & Training","";
     description: "Build AI models and train them with relevant data",";
     icon: Code,"";
-    duration: "8-20 weeks";,
-},;
+    duration: "8-20 weeks"},;
   {}
 ";
     step: 4,"";
@@ -257,9 +247,8 @@ export {};
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -267,9 +256,8 @@ export {};
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {};
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -380,14 +368,10 @@ export {};
       </section>;
     </div>;
   )}
-;
 
-export { AIAnalytics };
-;
-export { AIAnalytics };
-;
-export { AIAnalytics };
-;
-export { AIAnalytics };
-;
-export { AIAnalytics };
+
+export { AIAnalytics }
+export { AIAnalytics }
+export { AIAnalytics }
+export { AIAnalytics }
+export { AIAnalytics }

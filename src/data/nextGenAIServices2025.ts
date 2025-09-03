@@ -94,4 +94,4 @@ export ;
   if(category === 'All') {};
   return NEXT_GEN_AI_SERVICES_2025.filter(service => service.category === category)};
 export ;
-  return NEXT_GEN_AI_SERVICES_2025};
+  return NEXT_GEN_AI_SERVICES_2025}

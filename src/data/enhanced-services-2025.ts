@@ -119,8 +119,7 @@ export const enhancedServices2025: EnhancedService[] = [{};
         icon: '📊',;
         color: 'from-cyan-600 to-blue-700',;
         link: '/services/analytics-dashboard',;
-        contactInfo: CONTACT;,
-},;
+        contactInfo: CONTACT},;
     // IT services;
     {};
         pricing: { monthly: '$1,500/month', yearly: '$15,000/year', enterprise: 'Custom', setup: '$2,000 one-time' },;
@@ -156,8 +155,7 @@ export const enhancedServices2025: EnhancedService[] = [{};
         icon: '🏷️',;
         color: 'from-green-600 to-emerald-700',;
         link: '/services/asset-management',;
-        contactInfo: CONTACT;,
-},;
+        contactInfo: CONTACT},;
     // AI services;
     {};
         pricing: { monthly: '$2,000/month', yearly: '$20,000/year', enterprise: 'Custom', setup: '$5,000 one-time' },;
@@ -193,8 +191,7 @@ export const enhancedServices2025: EnhancedService[] = [{};
         icon: '👁️',;
         color: 'from-cyan-600 to-blue-700',;
         link: '/services/computer-vision',;
-        contactInfo: CONTACT;,
-},;
+        contactInfo: CONTACT},;
     // Emerging tech;
     {};
         pricing: { monthly: '$10,000/month', yearly: '$100,000/year', enterprise: 'Custom', setup: '$25,000 one-time' },;
@@ -218,8 +215,7 @@ export const enhancedServices2025: EnhancedService[] = [{};
         icon: '🔗',;
         color: 'from-orange-600 to-red-700',;
         link: '/services/blockchain-web3',;
-        contactInfo: CONTACT;,
-},;
+        contactInfo: CONTACT},;
     // New additions;
     {};
         pricing: { monthly: '$129/month', yearly: '$1,290/year', enterprise: 'Custom', setup: '$199 one-time' },;
@@ -291,8 +287,7 @@ export const enhancedServices2025: EnhancedService[] = [{};
         icon: '📡',;
         color: 'from-lime-600 to-green-700',;
         link: '/services/edge-iot-observability',;
-        contactInfo: CONTACT;,
-}
+        contactInfo: CONTACT}
   },;
   // Quantum Computing Services;
   {};
@@ -314,8 +309,7 @@ export const enhancedServices2025: EnhancedService[] = [{};
     icon: '🔍',;
     color: 'from-blue-600 to-indigo-700',;
     link: '/services/ai-code-review-assistant',;
-    contactInfo;,
-},;
+    contactInfo},;
   // Advanced Cybersecurity Services;
   {};
       setup: '$499 one-time'},;
@@ -355,8 +349,7 @@ export const enhancedServices2025: EnhancedService[] = [{};
     icon: '🚨',;
     color: 'from-red-600 to-pink-700',;
     link: '/services/incident-response-platform',;
-    contactInfo;,
-},;
+    contactInfo},;
   // AI-Powered Healthcare Services;
   {};
       setup: '$199 one-time'},;
@@ -377,8 +370,7 @@ export const enhancedServices2025: EnhancedService[] = [{};
     icon: '📄',;
     color: 'from-green-600 to-emerald-700',;
     link: '/services/invoice-management',;
-    contactInfo;,
-},;
+    contactInfo},;
   // Financial AI Services;
   {};
       setup: '$299 one-time'},;
@@ -418,8 +410,7 @@ export const enhancedServices2025: EnhancedService[] = [{};
     icon: '🎯',;
     color: 'from-purple-600 to-violet-700',;
     link: '/services/customer-success-automation',;
-    contactInfo;,
-},;
+    contactInfo},;
   // Marketing AI Services;
   {};
       setup: '$399 one-time'},;
@@ -440,8 +431,7 @@ export const enhancedServices2025: EnhancedService[] = [{};
     icon: '📊',;
     color: 'from-cyan-600 to-blue-700',;
     link: '/services/analytics-dashboard',;
-    contactInfo;,
-},;
+    contactInfo},;
   // Supply Chain AI Services;
   {};
       setup: '$2,000 one-time'},;
@@ -462,8 +452,7 @@ export const enhancedServices2025: EnhancedService[] = [{};
     icon: '🛡️',;
     color: 'from-red-600 to-orange-700',;
     link: '/services/network-security-monitoring',;
-    contactInfo;,
-},;
+    contactInfo},;
   // Education AI Services;
   {};
       setup: '$1,500 one-time'},;
@@ -505,8 +494,7 @@ export const enhancedServices2025: EnhancedService[] = [{};
     icon: '🏷️',;
     color: 'from-green-600 to-emerald-700',;
     link: '/services/asset-management',;
-    contactInfo;,
-},;
+    contactInfo},;
   // AI SERVICES;
   {};
       setup: '$5,000 one-time'},;
@@ -569,8 +557,7 @@ export const enhancedServices2025: EnhancedService[] = [{};
     icon: '👁️',;
     color: 'from-cyan-600 to-blue-700',;
     link: '/services/computer-vision',;
-    contactInfo;,
-},;
+    contactInfo},;
   // EMERGING TECH SERVICES;
   {};
       setup: '$25,000 one-time'},;
@@ -612,8 +599,7 @@ export const enhancedServices2025: EnhancedService[] = [{};
     icon: '🔗',;
     color: 'from-orange-600 to-red-700',;
     link: '/services/blockchain-web3',;
-    contactInfo;,
-}
+    contactInfo}
 ];
 ;
 export {};

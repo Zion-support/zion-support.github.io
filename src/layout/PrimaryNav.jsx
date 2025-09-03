@@ -7,9 +7,8 @@ export default function Page() {};
             router(`/search/${slugify(query)}`);
             // console.log('PrimaryNav search submit:', query);`;
             navigate(`/search/${slugify(query)}`);
-            setQuery('');,
-}
-    };
+            setQuery('')}
+    }
     return (<>;
       <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation"  data-testid="header">";
         <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">;

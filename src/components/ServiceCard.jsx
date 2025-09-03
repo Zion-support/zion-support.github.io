@@ -26,7 +26,7 @@ export default function Page() {};
             ⭐ Most Popular;
           </div>;
         </motion.div>) }
-;
+
       {/* Enhanced New Badge */}";
       {};
 }}>";
@@ -72,7 +72,7 @@ export default function Page() {};
                   </motion.li>) ) }
               </ul>;
             </div>) }
-;
+
           {/* Enhanced Price */}";
           <div className="text-center mb-6">";
             <motion.div className="text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent mb-2" whileHover={{ scale: 1.1 }}>;
@@ -109,16 +109,11 @@ export default function Page() {};
         <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-zion-purple/50 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-float transition-all duration-500 delay-200"/>";
         <div className="absolute top-1/2 left-2 w-1 h-1 bg-zion-blue/50 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-float transition-all duration-500 delay-400"/>;
       </div>;
-    </motion.div>)};
-export default ServiceCard;,
-}}}}}}}}}}
-;
-export { ServiceCard };
-;
-export { ServiceCard };
-;
-export { ServiceCard };
-;
-export { ServiceCard };
-;
-export { ServiceCard };
+    </motion.div>)}
+export default ServiceCard}}}}}}}}}}
+
+export { ServiceCard }
+export { ServiceCard }
+export { ServiceCard }
+export { ServiceCard }
+export { ServiceCard }

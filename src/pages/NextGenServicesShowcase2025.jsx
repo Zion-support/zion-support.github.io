@@ -23,8 +23,7 @@ export {};
             popular: true,''';
             demoUrl: 'https://ziontechgroup.com/demo/ai-consciousness',''';
             ctaText: 'Explore AI Consciousness',''';
-            path: '/ai-consciousness-simulation';,
-},;
+            path: '/ai-consciousness-simulation'},;
         {}
 ';
 '';
@@ -41,8 +40,7 @@ export {};
             popular: false,''';
             demoUrl: 'https://ziontechgroup.com/demo/quantum-ai',''';
             ctaText: 'Experience Quantum Power',''';
-            path: '/quantum-ai-optimization';,
-},;
+            path: '/quantum-ai-optimization'},;
         {}
 ';
 '';
@@ -312,15 +310,11 @@ export {};
         </div>;
       </section>;
     </div>)}
-;
 
-export { NextGenServicesShowcase2025 };
-;
-export { NextGenServicesShowcase2025 };
-;
-export { NextGenServicesShowcase2025 };
-;
-export { NextGenServicesShowcase2025 };
-;
-export { NextGenServicesShowcase2025 };
+
+export { NextGenServicesShowcase2025 }
+export { NextGenServicesShowcase2025 }
+export { NextGenServicesShowcase2025 }
+export { NextGenServicesShowcase2025 }
+export { NextGenServicesShowcase2025 }
 ))))))

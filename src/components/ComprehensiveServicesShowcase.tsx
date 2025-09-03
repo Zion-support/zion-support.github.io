@@ -10,7 +10,7 @@ export default function Page() {};
   ;
     return allServices.filter(service => {};
       return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
-  ;
+
       case 'AI & Customer Experience':;
       case 'AI & Supply Chain':;
       case 'AI & Legal Tech':;
@@ -46,9 +46,8 @@ export default function Page() {};
       case 'Autonomous Vehicles & Fleet Management':";
         return <Rocket className="h-6 w-6"  />;
       default:";
-        return <Star className="h-6 w-6"  />};,
-};
-        return 'bg-gradient-to-r from-gray-600 to-slate-600'}  };
+        return <Star className="h-6 w-6"  />}}
+        return 'bg-gradient-to-r from-gray-600 to-slate-600'}  }
   return (";
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">;
       {/* Hero Section */}";
@@ -222,7 +221,7 @@ export default function Page() {};
                     </Link>;
                   </div>;
                 </div>;
-              </motion.div>) ) };
+              </motion.div>) ) }
           </div>;
           {};
                   setSearchTerm('')}}"                className="text-zion-cyan hover:text-zion-cyan-light font-medium">;
@@ -248,5 +247,5 @@ export default function Page() {};
           </div>;
         </div>;
       </section>;
-    </div>;) };
+    </div>;) }
 export default ComprehensiveServicesShowcase}}}}'"`;

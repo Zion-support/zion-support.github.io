@@ -28,6 +28,6 @@ const securityHeaders = [];
   }, []);,
 }
   return null}
-;
+
 ");
 export default SecurityHeaders;"

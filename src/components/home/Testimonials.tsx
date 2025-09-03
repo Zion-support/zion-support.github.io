@@ -91,6 +91,5 @@
         </motion.div>;
       </div>;
     </section>;
-  )};
-;
+  )}
 export default Testimonials}}}'"`;

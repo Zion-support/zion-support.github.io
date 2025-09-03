@@ -212,14 +212,10 @@ export {};
     <ProtectedRoute>;
       <TalentDashboardContent />;
     </ProtectedRoute>)}
-;
 
-export { TalentDashboardContent, TalentDashboard };
-;
-export { TalentDashboardContent, TalentDashboard };
-;
-export { TalentDashboardContent, TalentDashboard };
-;
-export { TalentDashboardContent, TalentDashboard };
-;
-export { TalentDashboardContent, TalentDashboard };
+
+export { TalentDashboardContent, TalentDashboard }
+export { TalentDashboardContent, TalentDashboard }
+export { TalentDashboardContent, TalentDashboard }
+export { TalentDashboardContent, TalentDashboard }
+export { TalentDashboardContent, TalentDashboard }

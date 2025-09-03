@@ -37,10 +37,8 @@ export {};
           .eq('id', profileId);
           .single();
         if (error) {}
-          throw error;,
-}
-        setProfileData(data);,
-} catch (error) {}
+          throw error}
+        setProfileData(data)} catch (error) {}
         // console.error("Error fetching profile:", error);
         setIsError(true);
         toast({}
@@ -49,14 +47,11 @@ export {};
 ''';
           title: 'Error',''';
           description: 'Failed to load profile. Please try again later.',''';
-          variant: 'destructive'});,
-} finally {}
-        setIsLoading(false);,
-}
-    };
+          variant: 'destructive'})} finally {}
+        setIsLoading(false)}
+    }
     if (profileId) {}
-      fetchProfile();,
-}
+      fetchProfile()}
   }, [profileId]);
   if (isLoading) {}
 ";
@@ -64,16 +59,14 @@ export {};
       <div className="min-h-screen flex items-center justify-center">"";
         <span className="loading loading-ring loading-lg"></span>;
       </div>;
-    );,
-}
+    )}
   if (isError || !profileData) {}
 ";
     return ("";
       <div className="min-h-screen flex items-center justify-center">"";
         <p className="text-red-500">Failed to load profile.</p>;
       </div>;
-    );,
-}
+    )}
   return();
     <>;
       <div>Broken JSX</div>
@@ -191,16 +184,12 @@ export {};
           </div>;
         </div>;
       </div>;
-      ;
-    </>)}
-;
 
-export { ProfilePage };
-;
-export { ProfilePage };
-;
-export { ProfilePage };
-;
-export { ProfilePage };
-;
-export { ProfilePage };
+    </>)}
+
+
+export { ProfilePage }
+export { ProfilePage }
+export { ProfilePage }
+export { ProfilePage }
+export { ProfilePage }

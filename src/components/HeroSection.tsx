@@ -15,12 +15,12 @@ const heroSlides: HeroSlide[] = [  {};
       { label: 'Cost Savings', value: '700%', icon: TrendingUp },;
       {};
     setIsAutoPlaying(false)}, [memoizedSlides.length]);
-;
+
     setCurrentSlide();
       prev => (prev - 1 + memoizedSlides.length) % memoizedSlides.length;
     );
     setIsAutoPlaying(false)}, [memoizedSlides.length]);
-;
+
       setCurrentSlide(index);
       setIsAutoPlaying(false)},;
     [currentSlide];
@@ -30,11 +30,11 @@ const heroSlides: HeroSlide[] = [  {};
 };,
 }, []);, []);
     if(!isAutoPlaying) return;
-;
+
       setCurrentSlide(prev => (prev + 1) % memoizedSlides.length)}, 6000);
-;
+
     return () => clearInterval(interval) }, [isAutoPlaying, memoizedSlides.length]) ;
-;
+
   // Handle keyboard navigation;
   useEffect(() => {};
 };,
@@ -43,11 +43,10 @@ const heroSlides: HeroSlide[] = [  {};
       if(e.key === 'ArrowRight') nextSlide();
       if(e.key === ' ') {};
         setIsAutoPlaying(!isAutoPlaying)}
-    };
-;
+    }
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown)}, [prevSlide, nextSlide, isAutoPlaying]);
-;
+
   // Handle image loading;
   useEffect(() => {};
 };,
@@ -56,10 +55,9 @@ const heroSlides: HeroSlide[] = [  {};
           img.onload = resolve;
           img.onerror = resolve;
           img.src = slide.image}) }) ;
-;
+
       await Promise.all(imagePromises) ;
-      setIsLoading(false) };
-;
+      setIsLoading(false) }
     preloadImages () }, [memoizedSlides]) ;
 ;
   if(isLoading) {};
@@ -187,5 +185,5 @@ const heroSlides: HeroSlide[] = [  {};
         <ChevronRight className="w-6 h-6"  />;
       </button>;
     </section>) }
-export { HeroSection };
+export { HeroSection }
 '"`;

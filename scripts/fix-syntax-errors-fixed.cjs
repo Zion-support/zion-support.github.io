@@ -1,19 +1,17 @@
-#!/usr/bin/env node;
-const fs = require("$1");
+#!/usr/bin/env node
+const fs = require("fs");
 const path = require("path");
-class SyntaxErrorFixer {;
-  constructor() {;
+class SyntaxErrorFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
-    this.errors = [],;,
-}
-;
-  log(message) {;
-    console.log(`[${new Date().toISOString()}] ${message}`),;,
-}
-;
-  fixFile(filePath) {;
-    try {;
+    this.errors = []}
+
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`)}
+
+  fixFile(filePath) {
+    try {
       let content = fs.readFileSync(filePath, "utf8");
       let originalContent = content;
       let fixed = false;
@@ -29,22 +27,19 @@ class SyntaxErrorFixer {;
       content = content.replace(/""\s*>/gm, "">");
       content = content.replace(/""\s*,/gm, ", ");
       content = content.replace(/""\s*\)/gm, "")");
-      if (content !== originalContent) {;
+      if (content !== originalContent) {
         fs.writeFileSync(filePath, content, "utf8");
         this.fixedFiles.push(filePath);
         fixed = true;
-        this.log(`✅ Fixed syntax errors in ${filePath}`),;,
-}
-;
-      return fixed,;,
-} catch (error) {;
+        this.log(`✅ Fixed syntax errors in ${filePath}`)}
+
+      return fixed} catch (error) {
       this.errors.push({ file: filePath, error: error.message });
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false,;,
-}
+      return false}
   }
-;
-  fixAllFiles() {;
+
+  fixAllFiles() {
     this.log("🔧 Starting syntax error fixing...");
     const filesToFix = [;
       "pages/blog.tsx",;
@@ -52,34 +47,28 @@ class SyntaxErrorFixer {;
       "pages/pricing-guide.tsx",;
       "pages/pricing.tsx",;
       "pages/terms.tsx'];
-    for (const file of filesToFix) {;
+    for (const file of filesToFix) {
       const filePath = path.join(this.projectRoot, file);
-      if (fs.existsSync(filePath)) {;
-        this.fixFile(filePath),;,
-} else {;
-        this.log(`⚠️ File not found: ${filePath}`),;,
-}
+      if (fs.existsSync(filePath)) {
+        this.fixFile(filePath)} else {
+        this.log(`⚠️ File not found: ${filePath}`)}
     }
-;
+
     this.log(`🎉 Syntax fixing completed. Fixed ${this.fixedFiles.length} files.`);
-    if (this.errors.length > 0) {;
+    if (this.errors.length > 0) {
       this.log(`❌ ${this.errors.length} errors encountered:`);
-      this.errors.forEach(err => {;
-        this.log(`   - ${err.file}: ${err.error}`),;,
-}),;,
-}
-;
-    return {;
+      this.errors.forEach(err => {
+        this.log(`   - ${err.file}: ${err.error}`)})}
+
+    return {
       fixedFiles: this.fixedFiles,;
-      errors: this.errors,;,
-}
+      errors: this.errors}
   }
 }
-;
+
 // Run the fixer;
-if (require.main === module) {;
+if (require.main === module) {
   const fixer = new SyntaxErrorFixer();
-  fixer.fixAllFiles(),;,
-}
-;
+  fixer.fixAllFiles()}
+
 module.exports = SyntaxErrorFixer

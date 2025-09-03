@@ -4,18 +4,18 @@ export default function Page() {};
 }
     { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },;
     { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },;
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' }
   ];
-;
+
     { id: 'all', name: 'All Levels', icon: '🌟' },;
     { id: 'Advanced', name: 'Advanced', icon: '🚀' },;
     { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' },;
-    { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
+    { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' }
   ];
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    ;
+
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}) ;
 ;
     switch(sortBy) {};
@@ -25,7 +25,7 @@ export default function Page() {};
         return a.category.localeCompare(b.category) ;
       default:;
         return 0}) ;
-;
+
     hidden: { opacity: 0 },;
     visible: {};
 };,
@@ -107,14 +107,12 @@ export default function Page() {};
               <div className="flex gap-4 items-center">;
                 <div>Broken JSX</div>
   (e) => setPriceRange([parseInt(e.target.value),;
-  priceRange[1]]);,
-}";
+  priceRange[1]])}";
                   className="flex-1 h-2 bg-zion-slate-600 rounded-lg appearance-none cursor-pointer slider";
                 />;
                 <div>Broken JSX</div>
   (e) => setPriceRange([priceRange[0],;
-  parseInt(e.target.value)]);,
-}";
+  parseInt(e.target.value)])}";
                   className="flex-1 h-2 bg-zion-slate-600 rounded-lg appearance-none cursor-pointer slider";
                 />;
               </div>;
@@ -356,7 +354,7 @@ export default function Page() {};
                       </div>;
                     </div>;
                   </div>) }
-;
+
                 {/* Contact and CTA */}";
                 <div className="border-t border-zion-slate-700 pt-6">";
                   <div className="flex flex-col md:flex-row items-center justify-between gap-4">";
@@ -379,9 +377,8 @@ export default function Page() {};
                 </div>;
               </div>;
             </motion.div>;
-          </motion.div>;) };
+          </motion.div>;) }
       </AnimatePresence>;
     </div>;) ;
-</div></div></div></div></div></div></div>};
-;
+</div></div></div></div></div></div></div>}
 export default ComprehensiveServicesShowcase2025}}}}}}}}}}'"`;

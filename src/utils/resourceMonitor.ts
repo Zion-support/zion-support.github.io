@@ -12,7 +12,7 @@ class ResourceMonitor {};
       },;
       true;
     );
-;
+
     // Listen for unhandled promise rejections';
     window.addEventListener('unhandledrejection', event => {};
           `MIME type error: ${event.reason}`;
@@ -27,7 +27,7 @@ class ResourceMonitor {};
 ;
   private monitorElement(element: HTMLElement) {};
       this.monitorScript(element as HTMLScriptElement)}
-;
+
     // Monitor stylesheets';
     if(element.tagName === 'LINK' && element.rel === 'stylesheet') {};
       this.monitorStylesheet(element as HTMLLinkElement)}
@@ -52,7 +52,7 @@ class ResourceMonitor {};
       if(url.endsWith('.js') && !contentType.includes('javascript')) {};
         this.handleResourceError(url, 'script', `Incorrect MIME type: ${contentType} (expected javascript)`)} else if(url.endsWith('.css') && !contentType.includes('css')) {};
         this.handleResourceError(url, 'stylesheet', `Incorrect MIME type: ${contentType} (expected css)`)}
-;
+
         this.handleResourceError();
           url,script',`;
           `Incorrect MIME type: ${contentType} (expected javascript)`;
@@ -71,19 +71,19 @@ class ResourceMonitor {};
 ;
     this.errors.push(resourceError);
     // console.error('🚨 Resource Error:', resourceError);
-;
+
     // Attempt to retry loading;
     this.attemptRetry(url, type);
-;
+
     // Report to analytics/monitoring service;
     this.reportError(resourceError)}
 ;
   private attemptRetry(url: string, type: ResourceError['type']) {};
       // console.warn(`Max retry attempts reached for ${url}`);
       return}
-;
+
     this.retryAttempts.set(url, attempts + 1);
-;
+
     setTimeout();
       () => {};
         this.retryResource(url, type)},;
@@ -126,7 +126,7 @@ class ResourceMonitor {};
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1});
     return summary}
 }
-;
+
 // Create singleton instance;
 
 export default resourceMonitor;

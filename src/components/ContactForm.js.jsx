@@ -18,7 +18,7 @@ const ContactForm = () => {};
             setTimeout(() => setSubmitStatus('idle'), 5000)}
         finally {};
             setIsSubmitting(false)}
-    };
+    }
     const isFormValid = formData.firstName && formData.lastName && formData.email && formData.message;
     return (<div className="max-w-2xl mx-auto">;
       {};
@@ -37,7 +37,7 @@ const ContactForm = () => {};
           </div>;
     </div>;,;
   )}
-;
+
           <div>";
             <div>Broken JSX</div>
               className="block text-sm font-medium text-gray-300 mb-2">;
@@ -127,16 +127,12 @@ const ContactForm = () => {};
           </a>;
           .</p>;
       </form>;
-    </div>)};
+    </div>)}
 export default ContactForm;
-;
 
-export { ContactForm };
-;
-export { ContactForm };
-;
-export { ContactForm };
-;
-export { ContactForm };
-;
-export { ContactForm };
+
+export { ContactForm }
+export { ContactForm }
+export { ContactForm }
+export { ContactForm }
+export { ContactForm }

@@ -2,7 +2,7 @@ import React from 'react';''';
 import { motion } from 'framer-motion';''';
 import { Link } from 'react-router-dom';''';
 import { Brain, TrendingUp, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Cpu, Database } from 'lucide-react';
-;
+
 const features = [;
     {};
         color: "from-purple-500 to-pink-500"    },;
@@ -12,16 +12,14 @@ const features = [;
         title: "AI-Powered Automation","";
         description: "Intelligent automation that learns from your business patterns and optimizes processes automatically.",";
         icon: Brain,"";
-        color: "from-blue-500 to-cyan-500";,
-},;
+        color: "from-blue-500 to-cyan-500"},;
     {}
 ";
 "";
         title: "Real-time Data Integration","";
         description: "Seamlessly connect all your business data sources for comprehensive insights and decision-making.",";
         icon: Database,"";
-        color: "from-green-500 to-emerald-500";,
-},;
+        color: "from-green-500 to-emerald-500"},;
     {}
 ";
 "";
@@ -44,22 +42,19 @@ const modules = [];
 "";
         title: "Customer Management","";
         description: "Comprehensive CRM with AI-powered insights and automation.",;
-        icon: Users;,
-},;
+        icon: Users},;
     {}
 ";
 "";
         title: "Financial Operations","";
         description: "Automated accounting, invoicing, and financial reporting.",;
-        icon: BarChart3;,
-},;
+        icon: BarChart3},;
     {}
 ";
 "";
         title: "Inventory Management","";
         description: "Smart inventory tracking with predictive restocking.",;
-        icon: Target;,
-},;
+        icon: Target},;
     {}
 ";
 "";
@@ -216,14 +211,10 @@ export {};
         </div>;
       </section>;
     </div>)}
-;
 
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
-;
-export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
+
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent }

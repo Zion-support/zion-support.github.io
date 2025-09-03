@@ -45,13 +45,11 @@ import {}
   Satellite,';
   Antenna,'';
   Router,''';
-  Tower'''';,
-} from 'lucide-react';
-;
-    technologies["5G Networks", "Industrial IoT", "AI Analytics", "Predictive Maintenance"];,
-}
+  Tower''''} from 'lucide-react';
+
+    technologies["5G Networks", "Industrial IoT", "AI Analytics", "Predictive Maintenance"]}
 ];
-;
+
 const fiveGTechnologies = [];
   {}
 ";
@@ -60,8 +58,7 @@ const fiveGTechnologies = [];
     description: "Next-generation core network architecture for 5G services",";
     icon: Server,"";
     useCase: "Network Services","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -69,8 +66,7 @@ const fiveGTechnologies = [];
     description: "Advanced radio technologies for high-speed wireless connectivity",";
     icon: Antenna,"";
     useCase: "Wireless Access","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical"},;
   {}
 ";
 "";
@@ -78,8 +74,7 @@ const fiveGTechnologies = [];
     description: "Distributed computing at the network edge for low-latency applications",";
     icon: Cloud,"";
     useCase: "Low-latency Apps","";
-    reliability: "High";,
-},;
+    reliability: "High"},;
   {}
 ";
 "";
@@ -89,7 +84,7 @@ const fiveGTechnologies = [];
     useCase: "Service Isolation","";
     reliability: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -99,8 +94,7 @@ const successStories = [];
     challenge: "Needed high-speed connectivity for smart city infrastructure across 100+ locations","";
     solution: "Deployed comprehensive 5G network with edge computing and IoT integration","";
     results: "10x faster data transmission, 50% reduction in response times, enhanced smart city services","";
-    logo: "MC";,
-},;
+    logo: "MC"},;
   {}
 ";
     id: 2,"";
@@ -109,8 +103,7 @@ const successStories = [];
     challenge: "Required real-time monitoring and control of 500+ production machines","";
     solution: "Built private 5G network with industrial IoT and edge computing","";
     results: "Real-time machine monitoring, 30% improvement in production efficiency, predictive maintenance","";
-    logo: "AMC";,
-},;
+    logo: "AMC"},;
   {}
 ";
     id: 3,"";
@@ -121,7 +114,7 @@ const successStories = [];
     results: "Enhanced telemedicine capabilities, improved patient monitoring, reduced hospital visits","";
     logo: "RHN";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -129,24 +122,21 @@ const processSteps = [];
     title: "5G Assessment","";
     description: "Evaluate 5G requirements and network planning",";
     icon: FileText,"";
-    duration: "2-4 weeks";,
-},;
+    duration: "2-4 weeks"},;
   {}
 ";
     step: 2,"";
     title: "Network Design","";
     description: "Design 5G network architecture and infrastructure",";
     icon: Code,"";
-    duration: "4-8 weeks";,
-},;
+    duration: "4-8 weeks"},;
   {}
 ";
     step: 3,"";
     title: "Infrastructure Deployment","";
     description: "Deploy 5G core network, RAN, and edge computing",";
     icon: Wrench,"";
-    duration: "24-72 weeks";,
-},;
+    duration: "24-72 weeks"},;
   {}
 ";
     step: 4,"";
@@ -155,7 +145,7 @@ const processSteps = [];
     icon: Gauge,"";
     duration: "4-8 weeks";
 ];
-;
+
 const fiveGBenefits = [];
   {}
 ";
@@ -163,32 +153,28 @@ const fiveGBenefits = [];
     title: "Ultra-High Speed","";
     description: "10-100x faster than 4G for lightning-fast data transmission",";
     icon: Zap,"";
-    examples["Gigabit speeds", "Instant downloads", "Real-time streaming"];,
-},;
+    examples["Gigabit speeds", "Instant downloads", "Real-time streaming"]},;
   {}
 ";
 "";
     title: "Low Latency","";
     description: "Ultra-low latency for real-time applications and services",";
     icon: Clock,"";
-    examples["Real-time gaming", "Autonomous vehicles", "Remote surgery"];,
-},;
+    examples["Real-time gaming", "Autonomous vehicles", "Remote surgery"]},;
   {}
 ";
 "";
     title: "Massive Connectivity","";
     description: "Support for millions of IoT devices per square kilometer",";
     icon: Network,"";
-    examples["Smart cities", "Industrial IoT", "Connected devices"];,
-},;
+    examples["Smart cities", "Industrial IoT", "Connected devices"]},;
   {}
 ";
 "";
     title: "Network Slicing","";
     description: "Virtual network segmentation for different service requirements",";
     icon: Layers,"";
-    examples["Customized services", "Service isolation", "Quality guarantees"];,
-}
+    examples["Customized services", "Service isolation", "Quality guarantees"]}
 ];
 ;
 export {};
@@ -349,9 +335,8 @@ export {};
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -359,9 +344,8 @@ export {};
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {};
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -472,14 +456,10 @@ export {};
       </section>;
     </div>;
   )}
-;
 
-export { FiveGSolutions };
-;
-export { FiveGSolutions };
-;
-export { FiveGSolutions };
-;
-export { FiveGSolutions };
-;
-export { FiveGSolutions };
+
+export { FiveGSolutions }
+export { FiveGSolutions }
+export { FiveGSolutions }
+export { FiveGSolutions }
+export { FiveGSolutions }

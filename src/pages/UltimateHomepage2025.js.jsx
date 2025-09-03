@@ -36,7 +36,7 @@ export default function UltimateHomepage2025() {};
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
       <SEO title="Zion Tech Group - Revolutionary AI & Quantum Solutions 2025" description="Transform your business with our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Leading the future of technology." keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group, innovative solutions"/>;
-      ;
+
       {/* Hero Section */}
       <div className="relative overflow-hidden">;
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>;
@@ -102,8 +102,7 @@ export default function UltimateHomepage2025() {};
                       <span className="text-4xl">;
                         {}
                           ultimateInnovativeServices2025[currentServiceIndex];
-                            .icon;,
-}
+                            .icon}
                       </span>";
                     </div>"";
                     <h4 className="text-xl font-bold text-white mb-2">;
@@ -112,19 +111,16 @@ export default function UltimateHomepage2025() {};
                     <p className="text-gray-300 mb-4">;
                       {}
                         ultimateInnovativeServices2025[currentServiceIndex];
-                          .tagline;,
-}";
+                          .tagline}";
                     </p>"";
                     <div className="text-3xl font-bold text-blue-400 mb-4">;
                       {}
                         ultimateInnovativeServices2025[currentServiceIndex];
-                          .price";,
-}"";
+                          .price"}"";
                       <span className="text-lg text-gray-400">;
                         {}
                           ultimateInnovativeServices2025[currentServiceIndex];
-                            .period;,
-}
+                            .period}
                       </span>;
                     </div>`;
                     <div>Broken JSX</div>
@@ -387,14 +383,10 @@ export default function UltimateHomepage2025() {};
         </div>;
       </div>;
     </div>)}
-;
 
-export { UltimateHomepage2025 };
-;
-export { UltimateHomepage2025 };
-;
-export { UltimateHomepage2025 };
-;
-export { UltimateHomepage2025 };
-;
-export { UltimateHomepage2025 };
+
+export { UltimateHomepage2025 }
+export { UltimateHomepage2025 }
+export { UltimateHomepage2025 }
+export { UltimateHomepage2025 }
+export { UltimateHomepage2025 }

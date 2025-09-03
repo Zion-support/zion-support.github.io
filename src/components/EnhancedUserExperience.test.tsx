@@ -9,7 +9,5 @@ describe(&apos;EnhancedUserExperience&apos, () => {};
 }
     // comment;
     render(<EnhancedUserExperience / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}}))

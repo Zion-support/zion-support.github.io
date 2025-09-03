@@ -29,7 +29,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {};
           );
         `);
         .eq("job_id", jobId);
-;
+
       if(error) throw error;
       setTalents(data || []);,
 } catch(error) {};
@@ -71,7 +71,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {};
       <CardHeader>;
         <CardTitle>{jobTitle ? `Talents for ${jobTitle}` : 'Suggested Talents'}</CardTitle>;
       </CardHeader>;
-      ;
+
       <CardContent className="pt-6">;
         {};
           <EmptyMatchesCard onRefresh={handleRefresh} isProcessing={isProcessing} />;
@@ -87,5 +87,4 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {};
         )}
       </CardContent>;
     </Card>;
-  );,
-}
+  )}

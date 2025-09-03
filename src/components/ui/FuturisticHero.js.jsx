@@ -129,14 +129,10 @@ export {};
                 delay: Math.random() * 2}}/>))}
       </div>;
     </section>)}
-;
 
-export { FuturisticHero };
-;
-export { FuturisticHero };
-;
-export { FuturisticHero };
-;
-export { FuturisticHero };
-;
-export { FuturisticHero };
+
+export { FuturisticHero }
+export { FuturisticHero }
+export { FuturisticHero }
+export { FuturisticHero }
+export { FuturisticHero }

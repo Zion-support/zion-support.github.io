@@ -11,14 +11,14 @@ export default function TeamPage() {};
     {};
 }
   ];
-;
+
   const advisors = [;
     {};
 },;
     {};
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark text-white">;
       {/* Hero Section */}
@@ -61,7 +61,7 @@ export default function TeamPage() {};
                   <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>;
                   <p className="text-zion-cyan font-semibold mb-3">{member.title}</p>;
                   <p className="text-zion-slate-light text-sm mb-4">{member.bio}</p>;
-                  ;
+
                   <div className="flex flex-wrap gap-2 mb-4 justify-center">;
                     {};
                       <span key={skillIndex} className="px-3 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full">;
@@ -113,7 +113,7 @@ export default function TeamPage() {};
                   <h3 className="text-xl font-bold text-white mb-2">{advisor.name}</h3>;
                   <p className="text-zion-purple font-semibold mb-3">{advisor.title}</p>;
                   <p className="text-zion-slate-light text-sm mb-4">{advisor.bio}</p>;
-                  ;
+
                   <div className="flex flex-wrap gap-2 justify-center">;
                     {};
                       <span key={skillIndex} className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">;
@@ -205,5 +205,4 @@ export default function TeamPage() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
+  )}

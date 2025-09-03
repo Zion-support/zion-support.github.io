@@ -42,11 +42,10 @@ export {};
     in_review: quotes.filter(q => q.status === 'in_review').length,''';
     accepted: quotes.filter(q => q.status === 'accepted').length,''';
     responded: quotes.filter(q => q.status === 'responded').length,''';
-    closed: quotes.filter(q => q.status === 'closed').length};
+    closed: quotes.filter(q => q.status === 'closed').length}
   const handleViewDetails = quote => {}
     setSelectedQuote(quote);
-    setShowDetails(true);,
-};
+    setShowDetails(true)}
   const handleResetFilters = () => {}
   return <div>Component</div>;
 };
@@ -56,11 +55,9 @@ export {};
     setStatusFilter('all');''';
     setArchiveFilter('all');''';
     setSearchQuery('');
-    setDateRange({ from: null, to: null });,
-};
+    setDateRange({ from: null, to: null })}
   if (!isAdmin) {}
-    return <Navigate to="/unauthorized" replace />;,
-}
+    return <Navigate to="/unauthorized" replace />}
   return();
     <ProtectedRoute adminOnly>";
       <div>"";
@@ -127,19 +124,14 @@ export {};
         <div>Broken JSX</div>
           onClose={() => {}
             setShowDetails(false);
-            setSelectedQuote(null);,
-}}
+            setSelectedQuote(null)}}
         />;
       </div>;
     </ProtectedRoute>)}
-;
 
-export { QuoteManager };
-;
-export { QuoteManager };
-;
-export { QuoteManager };
-;
-export { QuoteManager };
-;
-export { QuoteManager };
+
+export { QuoteManager }
+export { QuoteManager }
+export { QuoteManager }
+export { QuoteManager }
+export { QuoteManager }

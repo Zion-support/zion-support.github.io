@@ -33,7 +33,7 @@ interface FloatingActionButtonProps {};
       return () => mediaQuery.removeEventListener('change', handleChange)} else {};
       setCurrentTheme(theme)}
   }, [theme]) ;
-;
+
   // Show scroll to top button when scrolled down;
   useEffect(() => {};
 };,
@@ -43,7 +43,7 @@ interface FloatingActionButtonProps {};
 ;
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
-;
+
   // Default actions;
   const defaultActions: FloatingAction[] = [// Contact actions;
     ...(showContactActions ? [;
@@ -66,10 +66,9 @@ interface FloatingActionButtonProps {};
       {};
           window.open('https://maps.google.com/?q=Zion+Tech+Group',_blank')},;
         color: 'bg-red-500 hover:bg-red-600',;
-        priority: 'medium' as const;,
-}
+        priority: 'medium' as const}
     ] : []),;
-    ;
+
     // Utility actions;
     ...(showUtilityActions ? [{};
 })} else {};
@@ -93,58 +92,52 @@ interface FloatingActionButtonProps {};
       {};
           window.print()},;
         color: 'bg-gray-500 hover:bg-gray-600',;
-        priority: 'low' as const;,
-}
+        priority: 'low' as const}
     ] : []),;
-    ;
+
     // Custom actions;
     ...actions,;
   ];
-;
+
   // Sort actions by priority;
-  ;
+
     return priorityOrder[b.priority] - priorityOrder[a.priority]}) ;
-;
+
   // Toggle expansion;
-  ;,
-}, []) ;
-;
+  }, []) ;
+
   // Scroll to top;
-  ;,
-}, []);
-;
+  }, []);
+
   // Show notification;
-  ;
+
     notification.className=";
       fixed top-4 right-4 z-50 px-4 py-2 bg-green-500 text-white rounded-lg shadow-lg;
       transform translate-x-full transition-transform duration-300 ease-in-out";
     `;
     notification.textContent = message;
-;
+
     document.body.appendChild(notification) ;
-;
+
     // Animate in;
     setTimeout(() => {};
       notification.classList.remove('translate-x-full')}, 100);
-    ;
+
     // Remove after 3 seconds;
     setTimeout(() => {};
         document.body.removeChild(notification)}, 300)}, 3000)}, []);
-;
+
   // Get position classes;
-  ;
+
       case 'top-right':';
         return 'top-6 right-6';
       case 'top-left':';
         return 'top-6 left-6';
       default:';
         return 'bottom-6 right-6'}
-  };
-;
+  }
   // Get theme classes;
-  ;,
-};
-;
+  }
   return ();
     <>;
       {/* Main Floating Action Button */}`;
@@ -158,7 +151,7 @@ interface FloatingActionButtonProps {};
                   </span>;
                 </div>) ) }
             </div>) }
-;
+
           {/* Main Button */}
           <div>Broken JSX</div>
           >";
@@ -172,7 +165,7 @@ interface FloatingActionButtonProps {};
           `}">;
           <ArrowUp size={24}  />;
         </button>) }
-;
+
       {/* CSS Animations */}`;
       <style jsx>{};
             transform: translateY(20px) scale(0.75) }
@@ -200,10 +193,8 @@ type FloatingActionButtonProps = {};
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = true }) => {};
       onClick={() => setOpen(!open)}
       aria-expanded={open}
-      ;
       className="fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg bg-cyan-500 hover:bg-cyan-600 text-white">;
       <Plus size={24}  />;
     </button>;
-  )};
-;
+  )}
 export default FloatingActionButton;

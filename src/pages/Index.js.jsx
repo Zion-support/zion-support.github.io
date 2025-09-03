@@ -132,14 +132,10 @@ export {};
       <FloatingCTA />;
       <Footer />;
     </div>)}
-;
 
-export { Index };
-;
-export { Index };
-;
-export { Index };
-;
-export { Index };
-;
-export { Index };
+
+export { Index }
+export { Index }
+export { Index }
+export { Index }
+export { Index }

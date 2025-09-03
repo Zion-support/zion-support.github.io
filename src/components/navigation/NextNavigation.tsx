@@ -16,17 +16,13 @@ const NextNavigation = () => {};
 }
     }";
 ";
-    window.addEventListener();,
-}
-    return () => window.removeEventListener("scroll", handleScroll);,
-}
-  }, []);,
-}
-  const navigationItems = [] ;,
-},";
+    window.addEventListener()}
+    return () => window.removeEventListener("scroll", handleScroll)}
+  }, [])}
+  const navigationItems = [] },";
     { name: "About", href: "/about" },";
     { name: "Contact", href: "/contact" }
-;
+
   ];
 
   const contactInfo = [];
@@ -77,36 +73,36 @@ const NextNavigation = () => {};
                                 <div className="flex-1 min-w-0">";
                                   <p className="text-sm font-medium text-white group-hover:text-cyan-300 transition-colors">,;
                                     {dropdownItem.name}
-;
+
                                   </p>";
                                   <p className="{};
                                     {dropdownItem.description}
-;
+
                                   </p>;
                                 </div>;
                               </Link>;
                             ))}
-;
+
                           </div>;
                         </motion.div>;
                       )}
-;
+
                     </AnimatePresence>;
                   </div>;
                 ) : (";
                   <div>Broken JSX</div>
                     className="{};
                       router.pathname === item.href ? "text-cyan-400" : ""}"}
-;
+
                   >;
                     {item.name}
-;
+
                   </Link>;
                 )}
-;
+
               </div>;
             ))}
-;
+
           </div>;
           {/* comment */}";
           <div className=""hidden" lg:block"}>";
@@ -121,11 +117,11 @@ const NextNavigation = () => {};
             className="lg: hidden p-2 rounded-lg text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 transition-colors duration-200;
             aria-label="Toggle mobile menu">",;
             {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
-;
+
           </button>;
         </div>;
       {/* comment */}
-;
+
       <AnimatePresence>;
         {};
               {/* comment */}";
@@ -138,7 +134,7 @@ const NextNavigation = () => {};
                       <span>{contact.text}</span>;
                     </a>;
                   ))}
-;
+
                 </div>;
               {/* comment */}";
               <div className="space-y-2">;
@@ -156,23 +152,23 @@ const NextNavigation = () => {};
                                   <span>{dropdownItem.name}</span>;
                                 </Link>;
                               ))}
-;
+
                             </motion.div>;
                           )}
-;
+
                         </AnimatePresence>;
                       </div>;
                     ) : (";
                       <div>Broken JSX</div>
                       >;
                         {item.name}
-;
+
                       </Link>;
                     )}
-;
+
                   </div>;
                 ))}
-;
+
               </div>;
               {/* comment */}";
               <div className=""pt-4" border-t border-gray-700"}>";
@@ -183,7 +179,7 @@ const NextNavigation = () => {};
               </div>;
           </motion.div>,;
         )}
-;
+
       </AnimatePresence>;
     </nav>;
   )}

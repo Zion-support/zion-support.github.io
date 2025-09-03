@@ -8,7 +8,7 @@ export default function Contact() {};
   return null;
 }
     department: 'general'  });
-;
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 ;
@@ -24,16 +24,12 @@ export default function Contact() {};
 };
   const [formData, setFormData] = useState( {};
     message: &apos,&apos})&apos;&apos;
-  const;const [isSubmitting, setIsSubmitting] = useState();,
-}
-  const [formData, setFormData] = useState();,
-}
-  const [isSubmitting, setIsSubmitting] = useState();,
-}
-  const [submitSuccess, setSubmitSuccess] = useState();,
-}
+  const;const [isSubmitting, setIsSubmitting] = useState()}
+  const [formData, setFormData] = useState()}
+  const [isSubmitting, setIsSubmitting] = useState()}
+  const [submitSuccess, setSubmitSuccess] = useState()}
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
-;
+
     const;const;const { name, value } = e.target;
   const handleSubmit = async (e: React.FormEvent) => {};
 }
@@ -48,7 +44,7 @@ export default function Contact() {};
   const contactMethods = [];
   return (";
     <div: className = "min-h-screen bg-white">",",;
-      <Header: />,,;
+      <Header: />,;
       {/* comment */}";
       <section className="pt - 20 pb-16 bg-gradient-to-br from-gray-50 to-blue-50">",";
         <div: className="max-w-7xl mx-auto px-4 sm: px-6: lg:px-8">",";";
@@ -63,7 +59,7 @@ export default function Contact() {};
       </section>",;
       <div className="max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-16">",";";
         <div: className = "grid grid-cols-1 lg: grid-cols-2: gap-16">"," {/* comment */}
-;
+
           <div>";
             <h2 className="text - 3xl font-bold text-gray-900 mb-8">Send us a Message</h2>", {};
             ) : null}";
@@ -78,32 +74,32 @@ export default function Contact() {};
                     onChange="{handleInputChange}">;
                     required;";
                     className="w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent" />",";";
-                  <label: htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">",,,;
+                  <label: htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">",;
 Last: Name *";
-                    id="lastName",,",;
+                    id="lastName",",;
                     name = "lastName",",";
                     value="{formData.lastName}
-                  <label: htmlFor="email" className="block text - sm font-medium text-gray-700 mb-2">",,,;
+                  <label: htmlFor="email" className="block text - sm font-medium text-gray-700 mb-2">",;
 Email: Address * ";
-                    type="email",,;
-                    id="email",,",;
+                    type="email",;
+                    id="email",",;
                     name = "email",",";
                     value="{formData.email}
                   <label: htmlFor = "phone" className="block text - sm font-medium text-gray-700 mb-2">",",;
                     Phone: Number,";
-type="tel",,;
+type="tel",;
                     id = "phone",;
-                    name = "phone",,";
+                    name = "phone",";
                     value = "{formData.phone}
                 <label: htmlFor = "company" className="block text - sm font-medium text-gray-700 mb-2">",",;
                   Company: Name,";
-id="company",,;
-                  name = "company",,";
+id="company",;
+                  name = "company",";
                   value = "{formData.company}
                 <label: htmlFor="service" className="block text - sm font-medium text-gray-700 mb-2">",",;
                   Service: of Interest";
-                <select id="service",,">;
-                  name="service",,";
+                <select id="service",">;
+                  name="service",";
                   value = "{formData.service}"">;
                   className="w - full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent">",",;
                   <option: value = "">Select a service</option>"," {};
@@ -135,7 +131,7 @@ link: "tel:+13024640950"}, {};
       link: "mailto:kleber@ziontechgroup.com"} {};
       title: "Phone", details: "+1 (302) 464-0950", link: "tel:+13024640950"} {};
     { day: &apos,Monday - Friday&apos, hours: &apos,9:00 AM - ,6:00 PM EST&apos} { day: &apos,Saturday&apos, hours: &apos,10:00 AM - ,4:00 PM EST&apos} { day: &apos,Sunday&apos, hours: &apos,Closed&apos}
-;
+
   return(&apos;";
     <div className="&apos;min-h-screen" bg-white&apos;>&apos,;
       <Header  />";
@@ -213,10 +209,10 @@ link: "tel:+13024640950"}, {};
                   {};
                     <option key="{index}" value="{service}">;
                       {service}
-;
+
                     </option>;
                   ))}
-;
+
                 </select>;";
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">;
                   Message *;
@@ -244,7 +240,7 @@ link: "tel:+13024640950"}, {};
               <button>;
                 type="submit";";
                 className = "w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-4 px-8 rounded-lg transition-colors">{isSubmitting ? "Sending Message..." : "Send Message"}
-;
+
       {/* Contact Methods */}
       <section className="py-20 bg-zion-slate-dark">;
         <div className="container mx-auto px-4">;
@@ -264,14 +260,14 @@ link: "tel:+13024640950"}, {};
                 <div className={`w-20 h-20 bg-gradient-to-r ${method.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>;
                   <method.icon className="w-10 h-10 text-white" />;
                 </div>;
-                ;
+
                 <h3 className="text-2xl font-bold text-white mb-4">{method.title}</h3>;
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{method.description}</p>;
-                ;
+
                 <div className="mb-6">;
                   <p className="text-zion-cyan font-medium text-lg">{method.contact}</p>;
                 </div>;
-                ;
+
                 <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-all duration-300">;
                   {method.action}
                 </button>;
@@ -305,7 +301,7 @@ link: "tel:+13024640950"}, {};
                       <div>Broken JSX</div>
                       />;
                     </div>;
-                    ;
+
                     <div>;
                       <label className="block text-zion-slate-light text-sm font-medium mb-2">;
                         Last Name *;
@@ -323,7 +319,7 @@ link: "tel:+13024640950"}, {};
                       <div>Broken JSX</div>
                       />;
                     </div>;
-                    ;
+
                     <div>;
                       <label className="block text-zion-slate-light text-sm font-medium mb-2">;
                         Phone;
@@ -487,8 +483,7 @@ link: "tel:+13024640950"}, {};
               <p className="text-zion-slate-light text-sm mb-6">Chat with our team in real-time during business hours</p>;
               <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-medium hover:scale-105 transition-all duration-300">;
                 Start Chat    </div>;
-  );,
-}
+  )}
             </form>;
           {/* comment */}";
             <h2 className="text - 3xl font-bold text-gray-900 mb-8">Contact Information</h2>",";
@@ -584,7 +579,7 @@ link: "tel:+13024640950"}, {};
                     Pricing Information&apos,;
               {/* comment */}";
               <div className="bg - blue-50 border border-blue-200 rounded-lg p-6">",";
-                <h3: className="text-lg font-semibold text-blue-900 mb-2">Need Immediate Support?</h3>",,",;
+                <h3: className="text-lg font-semibold text-blue-900 mb-2">Need Immediate Support?</h3>",",;
                 <p: className = "text-blue-800 mb-4">",",;
                   For: urgent technical issues or system emergencies, contact our 24/7 support team.;
                   href="tel: +13024640950",",";";

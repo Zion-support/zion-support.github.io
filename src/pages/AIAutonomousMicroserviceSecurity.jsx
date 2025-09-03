@@ -300,16 +300,12 @@ const AIAutonomousMicroserviceSecurity = () => {}
           </div>;
         </div>;
       </div>;
-    </>)};
+    </>)}
 export default AIAutonomousMicroserviceSecurity;
-;
 
-export { AIAutonomousMicroserviceSecurity };
-;
-export { AIAutonomousMicroserviceSecurity };
-;
-export { AIAutonomousMicroserviceSecurity };
-;
-export { AIAutonomousMicroserviceSecurity };
-;
+
+export { AIAutonomousMicroserviceSecurity }
+export { AIAutonomousMicroserviceSecurity }
+export { AIAutonomousMicroserviceSecurity }
+export { AIAutonomousMicroserviceSecurity }
 export { AIAutonomousMicroserviceSecurity };)

@@ -12,24 +12,20 @@ function DisputeDetailPage() {}
         <DisputeDetail />;
 
       </>;
-    </ProtectedRoute>)};
-export { DisputeDetailPage };
+    </ProtectedRoute>)}
+export { DisputeDetailPage }
 export default DisputeDetailPage;
-;
-export default DisputeDetailPage;
-export default DisputeDetailPage;
-export default DisputeDetailPage;
-export default DisputeDetailPage;
-export default DisputeDetailPage;
-export default DisputeDetailPage;
-;
 
-export { DisputeDetailPage };
-;
-export { DisputeDetailPage };
-;
-export { DisputeDetailPage };
-;
-export { DisputeDetailPage };
-;
-export { DisputeDetailPage };
+export default DisputeDetailPage;
+export default DisputeDetailPage;
+export default DisputeDetailPage;
+export default DisputeDetailPage;
+export default DisputeDetailPage;
+export default DisputeDetailPage;
+
+
+export { DisputeDetailPage }
+export { DisputeDetailPage }
+export { DisputeDetailPage }
+export { DisputeDetailPage }
+export { DisputeDetailPage }

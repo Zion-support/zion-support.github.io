@@ -12,7 +12,7 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
     {};
 }
   ];
-;
+
   const threatTypes = [;
     {};
 },;
@@ -23,7 +23,7 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
     {};
 }
   ];
-;
+
   const pricing = [;
     {};
 },;
@@ -32,7 +32,7 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
     {};
 }
   ];
-;
+
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-orange-900 text-white">;
       {/* Hero Section */}
@@ -41,7 +41,7 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(239,68,68,0.3),transparent_50%)]"></div>;
           <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_30%,rgba(239,68,68,0.1)_50%,transparent_70%)] animate-pulse"></div>;
         </div>;
-        ;
+
         <div className="relative max-w-7xl mx-auto text-center">;
           <div>Broken JSX</div>
           >;
@@ -50,16 +50,16 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
                 <Shield className="h-8 w-8 text-white" />;
               </div>;
             </div>;
-            ;
+
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6">;
               AI Autonomous Threat Intelligence;
             </h1>;
-            ;
+
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">;
               The world's most advanced AI-powered threat intelligence platform that autonomously detects, ;
               analyzes, and neutralizes cyber threats in real-time.;
             </p>;
-            ;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <div>Broken JSX</div>
                 className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 rounded-full font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-red-500/25">;
@@ -91,11 +91,11 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
             {};
                   <h3 className="text-2xl font-bold">{feature.title}</h3>;
                 </div>;
-                ;
+
                 <p className="text-gray-300 mb-6 text-lg leading-relaxed">;
                   {feature.description}
                 </p>;
-                ;
+
                 <ul className="space-y-3">;
                   {};
                     <li key={idx} className="flex items-center text-gray-200">;
@@ -127,11 +127,11 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
             {};
                   <h3 className="text-lg font-semibold">{threat.title}</h3>;
                 </div>;
-                ;
+
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">;
                   {threat.description}
                 </p>;
-                ;
+
                 <div className="text-red-400 font-semibold text-lg mb-4">;
                   {threat.price}
                 </div>;
@@ -166,7 +166,6 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
           <div className="grid md: unknowngrid-cols-3 gap-8">;
             {};
                 )}
-                ;
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold mb-4">{plan.name}</h3>;
                   <div className="mb-2">;
@@ -175,7 +174,7 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
                   </div>;
                   <p className="text-gray-300">{plan.description}</p>;
                 </div>;
-                ;
+
                 <ul className="space-y-4 mb-8">;
                   {};
                     <li key={idx} className="flex items-center text-gray-200">;
@@ -206,7 +205,7 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">;
               Join the cybersecurity revolution with autonomous AI threat intelligence;
             </p>;
-            ;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <div>Broken JSX</div>
                 className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 rounded-full font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-red-500/25">;
@@ -244,16 +243,11 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
 
-export { AIAutonomousThreatIntelligence };
-;
-export { AIAutonomousThreatIntelligence };
-;
-export { AIAutonomousThreatIntelligence };
-;
-export { AIAutonomousThreatIntelligence };
-;
-export { AIAutonomousThreatIntelligence };
+
+export { AIAutonomousThreatIntelligence }
+export { AIAutonomousThreatIntelligence }
+export { AIAutonomousThreatIntelligence }
+export { AIAutonomousThreatIntelligence }
+export { AIAutonomousThreatIntelligence }

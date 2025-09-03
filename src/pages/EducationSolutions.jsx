@@ -23,13 +23,11 @@ import {}
   Headphones,';
   Monitor,'';
   Brain,''';
-  Code'''';,
-} from 'lucide-react';
-;
-    integrations["Google Analytics", "Tableau", "Power BI", "Custom APIs"];,
-}
+  Code''''} from 'lucide-react';
+
+    integrations["Google Analytics", "Tableau", "Power BI", "Custom APIs"]}
 ];
-;
+
 const edTechTrends = [];
   {}
 ";
@@ -37,24 +35,21 @@ const edTechTrends = [];
     title: "Personalized Learning","";
     description: "AI-driven adaptive learning that customizes content for each student",";
     icon: Brain,"";
-    impact: "High";,
-},;
+    impact: "High"},;
   {}
 ";
 "";
     title: "Hybrid Learning Models","";
     description: "Combination of in-person and online learning experiences",";
     icon: Globe,"";
-    impact: "Critical";,
-},;
+    impact: "Critical"},;
   {}
 ";
 "";
     title: "Immersive Technologies","";
     description: "VR/AR for enhanced learning experiences and engagement",";
     icon: Monitor,"";
-    impact: "High";,
-},;
+    impact: "High"},;
   {}
 ";
 "";
@@ -63,7 +58,7 @@ const edTechTrends = [];
     icon: BarChart3,"";
     impact: "High";
 ];
-;
+
 const successStories = [];
   {}
 ";
@@ -73,8 +68,7 @@ const successStories = [];
     challenge: "Needed comprehensive LMS for 50,000+ students","";
     solution: "Built custom LMS with AI-powered personalization","";
     results: "30% improvement in student engagement, 25% higher completion rates","";
-    logo: "TU";,
-},;
+    logo: "TU"},;
   {}
 ";
     id: 2,"";
@@ -83,8 +77,7 @@ const successStories = [];
     challenge: "Required mobile learning platform for remote students","";
     solution: "Developed cross-platform mobile app with offline capabilities","";
     results: "40% increase in mobile learning, 90% student satisfaction","";
-    logo: "GL";,
-},;
+    logo: "GL"},;
   {}
 ";
     id: 3,"";
@@ -95,7 +88,7 @@ const successStories = [];
     results: "60% faster skill acquisition, 80% reduction in training costs","";
     logo: "CT";
 ];
-;
+
 const processSteps = [];
   {}
 ";
@@ -103,24 +96,21 @@ const processSteps = [];
     title: "Educational Assessment","";
     description: "Analyze learning objectives and technology requirements",";
     icon: Target,"";
-    duration: "1-2 weeks";,
-},;
+    duration: "1-2 weeks"},;
   {}
 ";
     step: 2,"";
     title: "Solution Design","";
     description: "Design customized educational technology solution",";
     icon: FileText,"";
-    duration: "2-3 weeks";,
-},;
+    duration: "2-3 weeks"},;
   {}
 ";
     step: 3,"";
     title: "Development & Testing","";
     description: "Build and thoroughly test the educational solution",";
     icon: Code,"";
-    duration: "12-32 weeks";,
-},;
+    duration: "12-32 weeks"},;
   {}
 ";
     step: 4,"";
@@ -259,9 +249,8 @@ export {};
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
-}`}
-;
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````}`}
+
                 {category}
               </button>) ) }
           </div>";
@@ -269,9 +258,8 @@ export {};
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {};
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
-}}"";
+
+"}}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
 "";
@@ -382,14 +370,10 @@ export {};
       </section>;
     </div>;
   )}
-;
 
-export { EducationSolutions };
-;
-export { EducationSolutions };
-;
-export { EducationSolutions };
-;
-export { EducationSolutions };
-;
-export { EducationSolutions };
+
+export { EducationSolutions }
+export { EducationSolutions }
+export { EducationSolutions }
+export { EducationSolutions }
+export { EducationSolutions }

@@ -13,7 +13,7 @@ export function EventsPage() {};
     { id: 'meetup', name: 'Meetups', icon: Globe },;
     { id: 'training', name: 'Training', icon: Award }
   ];
-;
+
   const events = [;
     {};
 },;
@@ -34,7 +34,7 @@ export function EventsPage() {};
 ;
   const upcomingEvents = filteredEvents.filter(event => event.isUpcoming);
   const featuredEvents = upcomingEvents.filter(event => event.isFeatured);
-;
+
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -48,7 +48,7 @@ export function EventsPage() {};
               Join our expert-led events, webinars, and workshops to stay ahead of the latest ;
               technology trends and learn from industry leaders.;
             </p>;
-            ;
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">;
               <div className="relative">;
@@ -135,7 +135,7 @@ export function EventsPage() {};
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">;
                       {event.title}
                     </h3>;
-                    ;
+
                     <p className="text-zion-slate-light mb-4 leading-relaxed">;
                       {event.description}
                     </p>;
@@ -179,7 +179,7 @@ export function EventsPage() {};
           </div>;
         </section>;
       )}
-;
+
       {/* All Events */}
       <section className="py-16 bg-zion-slate-darker">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
@@ -214,7 +214,7 @@ export function EventsPage() {};
                   <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors line-clamp-2">;
                     {event.title}
                   </h3>;
-                  ;
+
                   <p className="text-zion-slate-light text-sm mb-4 leading-relaxed line-clamp-3">;
                     {event.description}
                   </p>;
@@ -285,7 +285,7 @@ export function EventsPage() {};
               Subscribe to our events newsletter and be the first to know about upcoming webinars, ;
               workshops, and conferences.;
             </p>;
-            ;
+
             <div className="max-w-md mx-auto">;
               <div className="flex space-x-2">;
                 <div>Broken JSX</div>
@@ -325,7 +325,6 @@ export function EventsPage() {};
         </div>;
       </section>;
     </div>;
-  );,
-}
-;
+  )}
+
 export default EventsPage;

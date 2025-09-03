@@ -1,7 +1,7 @@
 var __rest =;
   (this && this.__rest) ||;
   function (s, e) {}
-    var t = {};
+    var t = {}
     for (var p in s);
       if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) <div>Broken JSX</div>
 const Badge = React.forwardRef((_a, ref) => {}
@@ -28,18 +28,11 @@ const Badge = React.forwardRef((_a, ref) => {}
         )},;
       props;
     );
-  );,
-});';
+  )});';
 Badge.displayName = 'Badge';
-export { Badge };
-;
-
-export { Badge };
-;
-export { Badge };
-;
-export { Badge };
-;
-export { Badge };
-;
-export { Badge };
+export { Badge }
+export { Badge }
+export { Badge }
+export { Badge }
+export { Badge }
+export { Badge }

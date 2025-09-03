@@ -17,7 +17,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         const summary = getAnalyticsSummary();
         if (summary) {};
             setAnalyticsSummary(summary)}
-    };
+    }
     // Update summary when events change;
     useEffect(() => {};
         updateAnalyticsSummary()}, [events, currentSession]);
@@ -54,15 +54,15 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             score -= 25;
         else if (performanceMetrics.cumulativeLayoutShift > 0.05);
             score -= 10;
-        return Math.max(0, score)};
+        return Math.max(0, score)}
     // Format duration;
     const formatDuration = (seconds) => {};
             return `${(num / 1000000).toFixed(1)}M`;
         if (num >= 1000);
             return `${(num / 1000).toFixed(1)}K`;
-        return num.toString()};
+        return num.toString()}
     return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/* Header */}
-;
+
     // comment;
 useEffect(() => {};
         updateAnalyticsSummary()}, [events, currentSession]);,
@@ -70,12 +70,12 @@ useEffect(() => {};
     // comment;
 const handleDashboardInteraction = (action, metadata) => {};
         trackEvent("dashboard", action, "dashboard_interaction", null, metadata)}
-;
+
     // comment;
 const handleTrackConversion = () => {};
 };
         trackConversion("dashboard_engagement", 1, { timeRange: selectedTimeRange })}
-;
+
     // comment;
 const getEventsByCategory = () => {};
 };
@@ -84,7 +84,7 @@ const getEventsByCategory = () => {};
             return [];
         return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({};
             category, count: count}))}
-;
+
     // comment;
 const getPerformanceScore = () => {};
 };
@@ -93,37 +93,30 @@ const getPerformanceScore = () => {};
             return 0,;
 let score = 100;
         // comment;
-if();,
-}
+if()}
             score -= 20,;
-else if();,
-}
+else if()}
             score -= 10,;
-if();,
-}
+if()}
             score -= 15,;
-else if();,
-}
+else if()}
             score -= 5,;
-if();,
-}
+if()}
             score -= 25,;
-else if();,
-}
+else if()}
             score -= 10,;
 return Math.max(0, score)}
-;
+
     // comment;
 const formatDuration = () => {};
 };
         if();,
 }
             return "${seconds}s";
-        const minutes = Math.floor();,
-}
+        const minutes = Math.floor()}
         const remainingSeconds = seconds % 60";
         return "${minutes}m ${remainingSeconds}s"}
-;
+
     // comment;
 const formatNumber = () => {};
 };
@@ -147,16 +140,16 @@ const formatNumber = () => {};
               <div>Broken JSX</div>
                 className="{"w-2" h-2 rounded-full ${isTracking ? "bg-green-400" : "bg-red-400"}"}""></div>";
               {isTracking ? "Tracking" : "Stopped"}
-;
+
             </div>;
             {/* comment */}";
             <select value="{selectedTimeRange}"">;
               onChange = "{e" ="> {}",;
                 setSelectedTimeRange(e.target.value)"";";
-                handleDashboardInteraction("time_range_changed", {};
+                handleDashboardInteraction("time_range_changed", {}
                   timeRange: e.target.value})";"}}""";
               className = "px-2 py-1 bg-white/20 rounded text-xs focus: outline-none focus:ring-2 focus:ring-white/50""";
-                setSelectedTimeRange(e.target.value)",,;
+                setSelectedTimeRange(e.target.value)",;
                 handleDashboardInteraction("time_range_changed", {};";
                   timeRange: e.target.value})}}""";
               className = "px-2 py-1 bg-white/20 rounded text-xs focus: outline-none focus:ring-2 focus:ring-white/50;
@@ -178,10 +171,9 @@ const formatNumber = () => {};
 
 ";
 "";
-                isExpanded ? "Collapse dashboard"  : "Expand dashboard", ",;,
-}">""";
+                isExpanded ? "Collapse dashboard"  : "Expand dashboard", "}">""";
               {isExpanded ? "−" : }
-;
+
             </button>;
           </div>;
         </div>";
@@ -271,8 +263,7 @@ const formatNumber = () => {};
                           ? "bg-green-500"";
                           : event.category === "error"""";
                             ? "bg-red-500"""""""">;
-                            : "bg-gray-500""", "";";,
-}"}"""></span>"""";
+                            : "bg-gray-500""", "";"}"}"""></span>"""";
                   <span className = "text-gray-600 dark: text-gray-400">",;
                     {event.category}""";
                   </span>"";
@@ -282,14 +273,14 @@ const formatNumber = () => {};
                 </div>"";
                 <span className="text-xs text-gray-500">;
                   {new Date(event.timestamp).toLocaleTimeString()}
-;
+
                 </span>;
               </div>";
             ))}
 """;
           {};
           )}
-;
+
         </div>";
       </div>;
       {/* comment */}""";
@@ -321,7 +312,7 @@ const formatNumber = () => {};
                   </span>"";
                   <span className="font-medium">,;
                     {performanceMetrics.cumulativeLayoutShift.toFixed(3)}
-;
+
                   </span>;
                 </div>;
             </div>";
@@ -354,11 +345,11 @@ const formatNumber = () => {};
                     </div>"";
                     <span className="text-green-700 dark: text-green-300 text-sm font-medium w-8 text-right">,;
                       {item.count}
-;
+
                     </span>;
                   </div>;
               ))}
-;
+
             </div>";
           </div>;
           {/* comment */}""";
@@ -389,11 +380,11 @@ Referrer: """;
                   </span>"";
                   <span className="font-medium text-xs max-w-32 truncate">"",;
                     {currentSession.referrer || "Direct"}
-;
+
                   </span>;
                 </div>;
           )}
-;
+
         </div>";
       )}
 """;
@@ -426,8 +417,7 @@ Referrer: """;
           </button>;
         </div>;
     </div>";,;
-  )","";";,
-}""""";
+  )","";"}""""";
 """""""";
 ";
 

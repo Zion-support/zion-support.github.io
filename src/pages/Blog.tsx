@@ -38,7 +38,7 @@ featured: false}
   const regularPosts = blogPosts.filter(post => !post.featured);,
 }
   return (;
-    ;
+
     <>";
       <div>Broken JSX</div>
         keywords="technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news">;
@@ -52,7 +52,7 @@ featured: false}
               className="text-center max-w-4xl mx-auto">;
             >;";
               <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,;
-                Technology Insights,,;
+                Technology Insights,;
               </h1>,";
               <p className = "text-xl text-gray-300 mb-8">,;
                 Stay ahead of the curve with expert insights on AI, quantum computing,;
@@ -61,7 +61,7 @@ featured: false}
               <div className="flex flex-wrap justify-center gap-4">;
                 {};
                     {category.name}
-;
+
                   </span>;
 export default function Blog() {};
   return null;
@@ -72,7 +72,7 @@ export default function Blog() {};
       featured: false}, { id: 5}, {};
       featured: false}, { id: 6}, {};
       featured: false}
-;
+
   ]&quot;
   const categories = []&quot;
 ";
@@ -82,13 +82,11 @@ export default function Blog() {};
       tags: ["Cloud", "Infrastructure", "Enterprise"], image: "/api/placeholder/600/400",";
       tags: ["Cloud,Infrastructure,Enterprise"], image: "/api/placeholder/600/400",;
       featured: false}
-;
+
   ];
   const categories = [];
-  const featuredPosts = blogPosts.filter(post => post.featured);,
-}
-  const regularPosts = blogPosts.filter();,
-}
+  const featuredPosts = blogPosts.filter(post => post.featured)}
+  const regularPosts = blogPosts.filter()}
   return (;
     <>";
       <div>Broken JSX</div>
@@ -128,7 +126,7 @@ transition="{{" duration: 0.8 }}";
                     {category.name}&quot;
                   </span>;
                 ))}
-;
+
               </div>;
             </motion.div>;
           </div>;
@@ -148,7 +146,7 @@ transition="{{" duration: 0.8 }}";
             {/* comment */}";
             <div className="lg: col-span-3">,;
               {/* comment */}
-;
+
               {featuredPosts.length > 0 && (&quot}";
                 <section className="&quot;mb-16&quot;">&quot;
                   <h2 className="&quot;text-3xl" font-bold text-white mb-8 flex items-center&quot;>&quot;
@@ -168,14 +166,14 @@ transition="{{" duration: 0.8 }}";
                             {post.category === "Quantum Computing" && <Atom  />}";
                             {post.category === "Micro SaaS" && <Rocket  />}";
                             {post.category === "Cybersecurity" && <Shield  />}
-;
+
                           </div>;
                         </div>;";
                         <div className="p-6">;";
                           <div className="flex items-center gap-4 mb-3">;";
                             <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">;
                               {post.category}
-;
+
                             </span>;";
                             <span className="text-yellow-400 text-xs font-medium">Featured</span>;
                           </div>;";
@@ -188,18 +186,18 @@ transition="{{" duration: 0.8 }}";
                               <span className="flex items-center">;";
                                 <User className="w-4 h-4 mr-1"  />;
                                 {post.author}
-;
+
                               </span>;";
                               <span className="flex items-center">;";
                                 <Calendar className="w-4 h-4 mr-1"  />;
                                 {new Date(post.date).toLocaleDateString()}
-;
+
                               </span>;
                             </div>;";
                             <span className="flex items-center">;";
                               <Clock className="w-4 h-4 mr-1"  />;
                               {post.readTime}
-;
+
                             </span>;
                           </div>;
                       </motion.article>;";
@@ -211,7 +209,7 @@ transition="{{" duration: 0.8 }}";
                             {post.category === &quot;Quantum Computing&quot; &&"}&quot; <Atom  />}";
                             {post.category === &quot;Micro SaaS&quot; &&"}&quot; <Rocket  />}";
                             {post.category === &quot;Cybersecurity&quot; &&"}&quot; <Shield  />}
-;
+
                           </div>;
                         </div>";
                         <div className="&quot;p-6&quot;">&quot;
@@ -243,13 +241,13 @@ transition="{{" duration: 0.8 }}";
                           </div>;
                       </motion.article>;
                     ))}
-;
+
                   </div>;
                 </section>;
               )}
-;
+
               {/* comment */}
-;
+
               <section>;";
                 <h2 className="text-3xl font-bold text-white mb-8">Latest Articles</h2>;";
                 <div className="space-y-8">;
@@ -268,14 +266,14 @@ transition="{{" duration: 0.8 }}";
                             {post.category === "Cybersecurity" && <Shield  />}";
                             {post.category === "Digital Transformation" && <Globe  />}";
                             {post.category === "Cloud Computing" && <Code  />}
-;
+
                           </div>;
                         </div>;";
                         <div className="flex-1">;";
                           <div className="flex items-center gap-4 mb-3">;";
                             <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">;
                               {post.category}
-;
+
                             </span>;
                           </div>;";
                           <h3 className = "{};
@@ -287,17 +285,17 @@ transition="{{" duration: 0.8 }}";
                               <span className="flex items-center">;";
                                 <User className="w-4 h-4 mr-1"  />;
                                 {post.author}
-;
+
                               </span>;";
                               <span className="flex items-center">;";
                                 <Calendar className="w-4 h-4 mr-1"  />;
                                 {new Date(post.date).toLocaleDateString()}
-;
+
                               </span>;";
                               <span className="flex items-center">;";
                                 <Clock className="{};
                                 {post.readTime}
-;
+
                               </span>;
                             </div>;
                             <div>Broken JSX</div>
@@ -319,7 +317,7 @@ transition="{{" duration: 0.8 }}";
                             {post.category === &quot;Cybersecurity&quot; &&"}&quot; <Shield  />}";
                             {post.category === &quot;Digital Transformation&quot; &&"}&quot; <Globe  />}";
                             {post.category === &quot;Cloud Computing&quot; &&"}&quot; <Code  />}
-;
+
                           </div>;
                         </div>";
                         <div className="&quot;flex-1&quot;">&quot;
@@ -356,7 +354,7 @@ transition="{{" duration: 0.8 }}";
                           </div>;
                     </motion.article>;
                   ))}
-;
+
                 </div>;
               </section>;
             </div>;
@@ -393,7 +391,7 @@ transition="{{" duration: 0.8 }}";
                       </Link>;";
                         to = "{"/blog/category/${category.name.toLowerCase().replace(/\s+/g," "-')}"}";
                         className=""flex" items-center justify-between p-3 rounded-lg hover: bg-slate-700/50 transition-colors group"}
-;
+
                       >";
                         <div className="flex items-center">";
                           <category.icon className="w-5 h-5 text-blue-400 mr-3 group-hover: text-blue-300" />",;
@@ -402,7 +400,7 @@ transition="{{" duration: 0.8 }}";
                         <span className="&quot;text-sm" text-gray-400&quot;>{category.count}&quot;</span>;
                       </Link>;
                     ))}
-;
+
                   </div>;
                 {/* comment */}";
                 <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30">;";

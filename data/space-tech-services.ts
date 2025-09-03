@@ -1,4 +1,4 @@
-export interface SpaceTechService {;
+export interface SpaceTechService {
   id: string;
   name: string;
   tagline: string;
@@ -25,7 +25,7 @@ export interface SpaceTechService {;
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -36,7 +36,7 @@ export interface SpaceTechService {;
   customers: number;
   rating: number;
 export const spaceTechServices: SpaceTechService[] = [;
-  {;
+  {
     id: "space-mission-management-platform",;
     name: "Space Mission Management Platform",;
     tagline: "Complete space mission planning and execution platform",;
@@ -74,20 +74,18 @@ export const spaceTechServices: SpaceTechService[] = [;
     marketSize: "$469B space economy",;
     growthRate: "400% annual growth",;
     variant: "space-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real-time monitoring and regulatory compliance.",;
     launchDate: "2024-01-15",;
     customers: 25,;
     rating: 5.0,;
-    reviews: 12;,;,
-},;
-  {;
+    reviews: 12},;
+  {
     id: "satellite-constellation-management",;
     name: "Satellite Constellation Management System",;
     tagline: "Manage large satellite networks with AI-powered optimization",;
@@ -125,20 +123,18 @@ export const spaceTechServices: SpaceTechService[] = [;
     marketSize: "$150B satellite services market",;
     growthRate: "300% annual growth",;
     variant: "space-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete constellation management system with AI optimization, real-time monitoring, and comprehensive analytics. Includes mobile app and API access.",;
     launchDate: "2024-02-01",;
     customers: 40,;
     rating: 4.9,;
-    reviews: 20;,;,
-},;
-  {;
+    reviews: 20},;
+  {
     id: "space-debris-monitoring-system",;
     name: "Space Debris Monitoring & Avoidance System",;
     tagline: "Protect satellites from space debris with AI-powered monitoring",;
@@ -176,20 +172,18 @@ export const spaceTechServices: SpaceTechService[] = [;
     marketSize: "$50B space safety market",;
     growthRate: "250% annual growth",;
     variant: "space-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete debris monitoring system with AI risk assessment, real-time tracking, and avoidance planning. Includes mobile app and satellite integration.",;
     launchDate: "2024-02-10",;
     customers: 60,;
     rating: 4.9,;
-    reviews: 30;,;,
-},;
-  {;
+    reviews: 30},;
+  {
     id: "space-weather-forecasting",;
     name: "Space Weather Forecasting & Alert System",;
     tagline: "Predict space weather events that impact satellite operations",;
@@ -227,20 +221,18 @@ export const spaceTechServices: SpaceTechService[] = [;
     marketSize: "$30B space weather market",;
     growthRate: "200% annual growth",;
     variant: "space-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete space weather system with AI forecasting, real-time monitoring, and impact assessment. Includes mobile app and comprehensive analytics.",;
     launchDate: "2024-02-15",;
     customers: 80,;
     rating: 4.8,;
-    reviews: 40;,;,
-},;
-  {;
+    reviews: 40},;
+  {
     id: "orbital-launch-coordination",;
     name: "Orbital Launch Coordination Platform",;
     tagline: "Coordinate complex orbital launches with precision timing",;
@@ -278,20 +270,18 @@ export const spaceTechServices: SpaceTechService[] = [;
     marketSize: "$20B launch services market",;
     growthRate: "180% annual growth",;
     variant: "space-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete launch coordination platform with precision timing, trajectory planning, and mission tracking. Includes mobile app and comprehensive analytics.",;
     launchDate: "2024-02-20",;
     customers: 35,;
     rating: 4.9,;
-    reviews: 18;,;,
-},;
-  {;
+    reviews: 18},;
+  {
     id: "ground-station-network-management",;
     name: "Ground Station Network Management System",;
     tagline: "Manage global ground station networks for satellite operations",;
@@ -329,20 +319,18 @@ export const spaceTechServices: SpaceTechService[] = [;
     marketSize: "$25B ground station market",;
     growthRate: "220% annual growth",;
     variant: "space-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete ground station management system with global coordination, network optimization, and real-time monitoring. Includes mobile app and comprehensive analytics.",;
     launchDate: "2024-02-25",;
     customers: 50,;
     rating: 4.8,;
-    reviews: 25;,;,
-},;
-  {;
+    reviews: 25},;
+  {
     id: "space-research-data-platform",;
     name: "Space Research Data & Analytics Platform",;
     tagline: "Access and analyze space research data with AI-powered insights",;
@@ -380,20 +368,18 @@ export const spaceTechServices: SpaceTechService[] = [;
     marketSize: "$15B space research market",;
     growthRate: "180% annual growth",;
     variant: "space-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete research data platform with comprehensive access, AI analysis, and collaboration tools. Includes mobile app and API access.",;
     launchDate: "2024-03-01",;
     customers: 200,;
     rating: 4.9,;
-    reviews: 100;,;,
-},;
-  {;
+    reviews: 100},;
+  {
     id: "space-commerce-platform",;
     name: "Space Commerce & Trading Platform",;
     tagline: "Trade space assets and services in a secure marketplace",;
@@ -431,20 +417,18 @@ export const spaceTechServices: SpaceTechService[] = [;
     marketSize: "$100B space services market",;
     growthRate: "300% annual growth",;
     variant: "space-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete space commerce platform with secure trading, smart contracts, and comprehensive analytics. Includes mobile app and trading tools.",;
     launchDate: "2024-03-05",;
     customers: 30,;
     rating: 5.0,;
-    reviews: 15;,;,
-},;
-  {;
+    reviews: 15},;
+  {
     id: "space-education-platform",;
     name: "Space Education & Training Platform",;
     tagline: "Learn space technology and operations with interactive courses",;
@@ -482,12 +466,11 @@ export const spaceTechServices: SpaceTechService[] = [;
     marketSize: "$8B space education market",;
     growthRate: "200% annual growth",;
     variant: "space-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.",;
     launchDate: "2024-03-10",;

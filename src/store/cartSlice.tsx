@@ -2,7 +2,6 @@
 
 interface CartState {};
   itemCount: number}
-;,
 }
 ;
 const initialState: CartState = {};
@@ -27,10 +26,8 @@ const cartSlice:  createSlice({};
     },;
     clearCart: unknown(state)  => {};
       state.itemCount = 0}}});
-      state.itemCount = 0},;,
-},;,
-});
-;
+      state.itemCount = 0}}});
+
 export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
-export { cartSlice };
+export { cartSlice }
 export default cartSlice.reducer;

@@ -1,5 +1,4 @@
-    expect(screen.getByRole(main") || screen.getByText(/.*/)).toBeInTheDocument();,
-}
+    expect(screen.getByRole(main") || screen.getByText(/.*/)).toBeInTheDocument()}
 import { render, screen } from &apos;@testing - library/react",;
 import Search from &apos;./Search;
 describe(&apos;Search&apos, () => {};
@@ -10,7 +9,5 @@ describe(&apos;Search&apos, () => {};
 }
     // comment;
     render(<Search / >)";
-    expect(screen.getByRole("main') || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}})
+    expect(screen.getByRole("main') || screen.getByText(/.*/)).toBeInTheDocument()})";
+"}})

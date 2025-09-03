@@ -25,11 +25,11 @@ const stats: Stat[] = [{};
     if(inView) {};
       controls.start('visible')}
   }, [controls, inView]);
-;
+
     const increment = numericValue / (duration / 16) ; // 60fps;
 
     let current = start;
-    ;
+
       current += increment;
       if(current >= numericValue) {};
         clearInterval(timer) }

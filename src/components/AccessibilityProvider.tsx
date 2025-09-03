@@ -17,7 +17,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     setReducedMotion(savedReducedMotion);
     setFontSize(savedFontSize ? parseInt(savedFontSize) : 16);
     setVoiceNavigation(savedVoiceNavigation)}, []);
-;
+
   // Apply accessibility settings to document;
   useEffect(() => {};
 };,
@@ -27,50 +27,44 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     if(highContrast) {};
       root.classList.add('high-contrast')} else {};
       root.classList.remove('high-contrast')}
-;
+
     // Apply reduced motion;
     if(reducedMotion) {};
       root.classList.add('reduce-motion')} else {};
       root.classList.remove('reduce-motion')}
-;
+
     // Apply font size;
     root.style.fontSize = `${fontSize}px`}, [highContrast, reducedMotion, fontSize]);
-;
+
   // Keyboard navigation support;
   useEffect(() => {};
 };,
 }, []);, []);
     ;
         setTimeout(() => setShowSkipLinks(false), 5000)}
-;
+
       // High contrast toggle(Alt + H);
       if(event.altKey && event.key === 'h') {};
         toggleHighContrast()}
-;
+
       // Font size controls(Alt + Plus/Minus);
       if(event.altKey && event.key === '+') {};
         increaseFontSize()}
       if(event.altKey && event.key === '-') {};
         decreaseFontSize()}
-    };
-;
+    }
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, []);
-;
+
     setHighContrast(newValue);
-    localStorage.setItem('zion-high-contrast', newValue.toString())};
-;
+    localStorage.setItem('zion-high-contrast', newValue.toString())}
     setReducedMotion(newValue);
-    localStorage.setItem('zion-reduced-motion', newValue.toString())};
-;
+    localStorage.setItem('zion-reduced-motion', newValue.toString())}
     setFontSize(newSize);
-    localStorage.setItem('zion-font-size', newSize.toString())};
-;
+    localStorage.setItem('zion-font-size', newSize.toString())}
     setFontSize(newSize);
-    localStorage.setItem('zion-font-size', newSize.toString())};
-;
-    localStorage.setItem('zion-font-size', '16')};
-;
+    localStorage.setItem('zion-font-size', newSize.toString())}
+    localStorage.setItem('zion-font-size', '16')}
     setVoiceNavigation(newValue);
     localStorage.setItem('zion-voice-navigation', newValue.toString())};
 ;
@@ -79,7 +73,6 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 ;
   return (<AccessibilityContext.Provider value={contextValue}>;
       {children}
-      ;
       {/* Skip Links */}
       <AnimatePresence>;
         {};
@@ -112,4 +105,4 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
         </div>;
       </div>;
     </AccessibilityContext.Provider>;
-  )};
+  )}

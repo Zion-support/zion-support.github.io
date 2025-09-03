@@ -1,5 +1,5 @@
 import { ServiceVariant  } from "../types/service-variants";
-export interface EnterpriseITService2030 {;
+export interface EnterpriseITService2030 {
   id: string;
   name: string;
   tagline: string;
@@ -26,7 +26,7 @@ export interface EnterpriseITService2030 {;
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {;
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -38,7 +38,7 @@ export interface EnterpriseITService2030 {;
   rating: number;
 export const enterpriseITServices2030: EnterpriseITService2030[] = [;
   // Autonomous DevOps Platform 2030;
-  {;
+  {
     id: "autonomous-devops-platform-2030",;
     name: "Autonomous DevOps Platform 2030",;
     tagline: "Fully autonomous DevOps operations",;
@@ -76,21 +76,19 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [;
     marketSize: "Growing market - $250B+ potential",;
     growthRate: "1500%+ annual growth potential",;
     variant: "it-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced autonomous DevOps platform with self-optimizing, self-healing, and self-improving operations.",;
     launchDate: "2030-01-01",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 15;,;,
-},;
+    reviews: 15},;
   // Zero Trust Network Architecture 2030;
-  {;
+  {
     id: "zero-trust-network-architecture-2030",;
     name: "Zero Trust Network Architecture 2030",;
     tagline: "Never trust, always verify",;
@@ -128,21 +126,19 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [;
     marketSize: "Growing market - $180B+ potential",;
     growthRate: "1200%+ annual growth potential",;
     variant: "security-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced zero trust network architecture platform with continuous verification and comprehensive security.",;
     launchDate: "2030-01-15",;
     customers: 18,;
     rating: 5.0,;
-    reviews: 12;,;,
-},;
+    reviews: 12},;
   // Edge Computing Orchestration 2030;
-  {;
+  {
     id: "edge-computing-orchestration-2030",;
     name: "Edge Computing Orchestration 2030",;
     tagline: "Distributed edge computing intelligence",;
@@ -180,21 +176,19 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [;
     marketSize: "Growing market - $150B+ potential",;
     growthRate: "1000%+ annual growth potential",;
     variant: "edge-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced edge computing orchestration platform with intelligent distributed computing and real-time processing.",;
     launchDate: "2030-02-01",;
     customers: 31,;
     rating: 4.8,;
-    reviews: 20;,;,
-},;
+    reviews: 20},;
   // AI-Powered IT Operations Center 2030;
-  {;
+  {
     id: "ai-it-operations-center-2030",;
     name: "AI-Powered IT Operations Center 2030",;
     tagline: "Intelligent IT operations",;
@@ -232,21 +226,19 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [;
     marketSize: "Growing market - $200B+ potential",;
     growthRate: "1300%+ annual growth potential",;
     variant: "ai-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced AI-powered IT operations platform with intelligent monitoring, automation, and optimization.",;
     launchDate: "2030-02-15",;
     customers: 27,;
     rating: 4.9,;
-    reviews: 18;,;,
-},;
+    reviews: 18},;
   // Quantum-Secure Infrastructure 2030;
-  {;
+  {
     id: "quantum-secure-infrastructure-2030",;
     name: "Quantum-Secure Infrastructure 2030",;
     tagline: "Quantum-proof infrastructure security",;
@@ -284,12 +276,11 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [;
     marketSize: "Emerging market - $300B+ potential",;
     growthRate: "2000%+ annual growth potential",;
     variant: "quantum-futuristic",;
-    contactInfo: {;
+    contactInfo: {
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,;,
-},;
+      website: "https://ziontechgroup.com"},;
     realImplementation: true,;
     implementationDetails: "Advanced quantum-secure infrastructure platform with quantum-proof security and comprehensive protection.",;
     launchDate: "2030-01-10",;

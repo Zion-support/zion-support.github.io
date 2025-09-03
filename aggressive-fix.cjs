@@ -17,14 +17,14 @@ const filesToRewrite = [;
   "src/pages/ServicesPage.tsx",;
   "src/pages/ComprehensiveSitemap.tsx",;
 ];
-function createBasicPage(filePath) {;
+function createBasicPage(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
   const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
   let content = "";
-  if (filePath.endsWith(".tsx")) {;
+  if (filePath.endsWith(".tsx")) {
   content = `import React from "react";
 import { Link } from `react-router-dom`;
-export default function ${componentName}() {;
+export default function ${componentName}() {
   return (;
     <div className="min-h-screen bg-gray-50 py-12">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -36,7 +36,7 @@ export default function ${componentName}() {;
             Welcome to our ${componentName.toLowerCase()} page;
           </p>;
         </div>;
-        ;
+
         <div className="text-center">;
           <Link;
             to="/contact" ;
@@ -47,12 +47,10 @@ export default function ${componentName}() {;
         </div>;
       </div>;
     </div>;
-  );,;,
-}`;,;,
-} else {;
+  );}`;} else {
   content = `import React from `react`;
 import { Link } from `react-router-dom`;
-export default function ${componentName}() {;
+export default function ${componentName}() {
   return (;
     <div className="min-h-screen bg-gray-50 py-12">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -64,7 +62,7 @@ export default function ${componentName}() {;
             Welcome to our ${componentName.toLowerCase()} page;
           </p>;
         </div>;
-        ;
+
         <div className="text-center">;
           <Link;
             to="/contact" ;
@@ -75,25 +73,20 @@ export default function ${componentName}() {;
         </div>;
       </div>;
     </div>;
-  );,;,
-}`;,;,
-}
-;
-  return content;,;,
-}
-;
+  );}`;}
+
+  return content;}
+
 console.log(`Starting aggressive syntax fixes...`);
 let fixedCount = 0;
-filesToRewrite.forEach(filePath => {;
-  if (fs.existsSync(filePath)) {;
-  try {;
+filesToRewrite.forEach(filePath => {
+  if (fs.existsSync(filePath)) {
+  try {
   const content = createBasicPage(filePath);
       fs.writeFileSync(filePath, content, "utf8");
       console.log(`Rewrote: ${filePath}`);
-      fixedCount++;,;,
-} catch (error) {;
-  console.error(`Error rewriting ${filePath }:`, error.message);,;,
-}
+      fixedCount++;} catch (error) {
+  console.error(`Error rewriting ${filePath }:`, error.message);}
   }
 });
 console.log(`Fixed ${fixedCount} files.`)

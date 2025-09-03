@@ -17,7 +17,7 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {};
     {};
 }
   ];
-;
+
   const useCases = [;
     {};
 },;
@@ -28,7 +28,7 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {};
     {};
 }
   ];
-;
+
   const pricingPlans = [;
     {};
 },;
@@ -84,7 +84,7 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {};
               unprecedented business intelligence capabilities.;
             </p>;
           </div>;
-          ;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {};
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>;
@@ -107,7 +107,7 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {};
               every aspect of your business.;
             </p>;
           </div>;
-          ;
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {};
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">{useCase.title}</h3>;
@@ -132,11 +132,10 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {};
               our core AI capabilities with enterprise-grade security.;
             </p>;
           </div>;
-          ;
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {};
                 )}
-                ;
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>;
                   <p className="text-gray-600 mb-6">{plan.description}</p>;
@@ -145,7 +144,7 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {};
                     <span className="text-gray-600 ml-2">/{plan.period}</span>;
                   </div>;
                 </div>;
-                ;
+
                 <ul className="space-y-4 mb-8">;
                   {};
                     <li key={feature} className="flex items-center space-x-3">;
@@ -177,7 +176,7 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {};
               and performance at scale.;
             </p>;
           </div>;
-          ;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             <div className="text-center">;
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">;
@@ -186,7 +185,7 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {};
               <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Models</h3>;
               <p className="text-gray-600">GPT-4, Claude, Custom Models</p>;
             </div>;
-            ;
+
             <div className="text-center">;
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">;
                 <Database className="w-8 h-8 text-white" />;
@@ -194,7 +193,7 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {};
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Data Sources</h3>;
               <p className="text-gray-600">100+ Integrations</p>;
             </div>;
-            ;
+
             <div className="text-center">;
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">;
                 <Shield className="w-8 h-8 text-white" />;
@@ -202,7 +201,7 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {};
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Security</h3>;
               <p className="text-gray-600">SOC 2 Type II, GDPR</p>;
             </div>;
-            ;
+
             <div className="text-center">;
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">;
                 <Zap className="w-8 h-8 text-white" />;
@@ -226,13 +225,13 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {};
               can revolutionize your operations and drive unprecedented growth.;
             </p>;
           </div>;
-          ;
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
             <div>;
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">;
                 Get in Touch;
               </h3>;
-              ;
+
               <div className="space-y-6">;
                 <div className="flex items-center space-x-4">;
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">;
@@ -245,7 +244,7 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {};
                     </a>;
                   </div>;
                 </div>;
-                ;
+
                 <div className="flex items-center space-x-4">;
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">;
                     <Mail className="w-6 h-6 text-white" />;
@@ -257,7 +256,7 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {};
                     </a>;
                   </div>;
                 </div>;
-                ;
+
                 <div className="flex items-center space-x-4">;
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">;
                     <MapPin className="w-6 h-6 text-white" />;
@@ -267,7 +266,7 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {};
                     <p className="text-gray-600">{contactInfo.address}</p>;
                   </div>;
                 </div>;
-                ;
+
                 <div className="flex items-center space-x-4">;
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">;
                     <Globe className="w-6 h-6 text-white" />;
@@ -281,12 +280,12 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {};
                 </div>;
               </div>;
             </div>;
-            ;
+
             <div className="bg-gray-50 p-8 rounded-xl">;
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">;
                 Request a Demo;
               </h3>;
-              ;
+
               <form className="space-y-4">;
                 <div>;
                   <label className="block text-sm font-medium text-gray-700 mb-2">;
@@ -295,7 +294,7 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {};
                   <div>Broken JSX</div>
                   />;
                 </div>;
-                ;
+
                 <div>;
                   <label className="block text-sm font-medium text-gray-700 mb-2">;
                     Email Address;
@@ -303,7 +302,7 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {};
                   <div>Broken JSX</div>
                   />;
                 </div>;
-                ;
+
                 <div>;
                   <label className="block text-sm font-medium text-gray-700 mb-2">;
                     Phone Number;
@@ -311,7 +310,7 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {};
                   <div>Broken JSX</div>
                   />;
                 </div>;
-                ;
+
                 <div>;
                   <label className="block text-sm font-medium text-gray-700 mb-2">;
                     Message;
@@ -354,7 +353,5 @@ const AIAutonomousBusinessIntelligence: React.FC = () => {};
         </div>;
       </section>;
     </div>;
-  );,
-};
-;
+  )}
 export default AIAutonomousBusinessIntelligence;

@@ -11,9 +11,8 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
         budget: ",""";,"});,"})";
         timeline: ",""";,"});,"})";
         technologyMaturity: ","});,"})";
-        primaryGoals[],,"});,"})";
-        challenges[];,"});,"});";,
-});,"});,"})";
+        primaryGoals[],"});,"})";
+        challenges[];,"});,"});"});,"});,"})";
     const [recommendations, setRecommendations] = useState([]);,"});,"})";
     const [isAnalyzing, setIsAnalyzing] = useState();";,"});,"})";
     const [showResults, setShowResults] = useState();"";,"});,"})";
@@ -35,15 +34,14 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
             price: "$25,000/month",""";,"});,"})";
             duration: "6-12 months",""";,"});,"})";
             tags["AI",CRM",Automation",Analytics"],""";,"});,"})";
-            features["AI - powered insights",Automated workflows",Predictive analytics"],,"";,"});,"})";
+            features["AI - powered insights",Automated workflows",Predictive analytics"],"";,"});,"})";
             benefits["Improved customer retention",Increased sales efficiency",Better decision making"],""";,"});,"})";
-            technology["AI / ML",Cloud Computing",Big Data",Automation"],,"";,"});,"})";
+            technology["AI / ML",Cloud Computing",Big Data",Automation"],"";,"});,"})";
             targetAudience["Enterprise",Financial Services",Healthcare",Technology Companies"],""";,"});,"})";
             image: "/images/services/ai-crm.jpg",""";,"});,"})";
             link: "https:// comment;
             contactInfo: "+1 302 464 0950",""";,"});,"})";
-            email: "kleber@ziontechgroup.com","});,"});";,
-},,"});,"})";
+            email: "kleber@ziontechgroup.com","});,"});"},"});,"})";
         {}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
@@ -62,8 +60,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
             image: "/images/services/quantum-computing.jpg",""";,"});,"})";
             link: "https:// comment;
             contactInfo: "+1 302 464 0950",""";,"});,"})";
-            email: "kleber@ziontechgroup.com","});,"});";,
-},,"});,"})";
+            email: "kleber@ziontechgroup.com","});,"});"},"});,"})";
         {}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
@@ -75,15 +72,14 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
             price: "$75,000/month",""";,"});,"})";
             duration: "8-14 months",""";,"});,"})";
             tags["Blockchain",Supply Chain",Transparency"],""";,"});,"})";
-            features["End - to-end tracking",Smart contracts",Transparency"],,"";,"});,"})";
+            features["End - to-end tracking",Smart contracts",Transparency"],"";,"});,"})";
             benefits["Enhanced transparency",Reduced fraud",Improved efficiency"],""";,"});,"})";
             technology["Blockchain",Smart Contracts",IoT",Cloud Computing"],""";,"});,"})";
             targetAudience["Manufacturing",Retail",Logistics",Food & Beverage"],""";,"});,"})";
             image: "/images/services/blockchain-supply-chain.jpg",""";,"});,"})";
             link: "https:// comment;
             contactInfo: "+1 302 464 0950",""";,"});,"})";
-            email: "kleber@ziontechgroup.com","});,"});";,
-}"});,"})";
+            email: "kleber@ziontechgroup.com","});,"});"}"});,"})";
     ],"});,"})";
     const calculateMatchScore = (service, profile) => {}"});,"})";
         let score = 0,"});,"})";
@@ -140,12 +136,9 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
                     complexity = "Moderate";,"});,"})";
                 else"";,"});,"})";
                     complexity = "Simple";,"});,"})";
-                const reasoning = [];,"});,"});,
-}
-                    "High match with ${clientProfile.industry} industry requirements","";,"});,"});,
-}
-                    "Budget alignment with ${clientProfile.budget} range","";,"});,"});,
-}
+                const reasoning = [];,"});,"})}
+                    "High match with ${clientProfile.industry} industry requirements","";,"});,"})}
+                    "Budget alignment with ${clientProfile.budget} range","";,"});,"})}
                     "Timeline compatibility with ${clientProfile.timeline} expectations","";,"});,"})";
                     "Technology maturity level appropriate for ${clientProfile.technologyMaturity}";,"});,"})";
                 ],"});,"})";
@@ -154,14 +147,13 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
                 const timeToValue = complexity === "Simple" ? "2-4 months" :"";,"});,"})";
                     complexity === "Moderate" ? "4-8 months" : "8-12 months";,"});,"})";
                 return {}"});,"})";
-                    service,,"});,"})";
-                    matchScore,,"});,"})";
-                    reasoning,,"});,"})";
-                    priority,,"});,"})";
+                    service,"});,"})";
+                    matchScore,"});,"})";
+                    reasoning,"});,"})";
+                    priority,"});,"})";
                     implementationComplexity: complexity,"});,"})";
-                    expectedROI,,"});,"})";
-                    timeToValue,"});,"});";,
-}}) .sort((a, b) => b.matchScore - a.matchScore) ;,"});,"})";
+                    expectedROI,"});,"})";
+                    timeToValue,"});,"});"}}) .sort((a, b) => b.matchScore - a.matchScore) ;,"});,"})";
             setRecommendations(recs) ;,"});,"})";
             setIsAnalyzing(false) ;,"});,"})";
             setShowResults(true) }, 2000) };,"});,"})";
@@ -173,8 +165,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
             case "High": return "bg - red-100 text-red-800",";,"});,"})";
             case "Medium": return "bg - yellow-100 text-yellow-800",";,"});,"})";
             case "Low": return "bg - green-100 text-green-800",";,"});,"})";
-            default: return "bg-gray-100 text-gray-800"}"});,"});";,
-};,"});,"})";
+            default: return "bg-gray-100 text-gray-800"}"});,"});"};,"});,"})";
     const getComplexityColor = (complexity) => {}"});,"})";
         switch (complexity) {}"});,"})";
 ";,"});,"})";
@@ -183,15 +174,13 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
             case "Complex": return "bg - red-100 text-red-800",";,"});,"})";
             case "Moderate": return "bg - yellow-100 text-yellow-800",";,"});,"})";
             case "Simple": return "bg - green-100 text-green-800",";,"});,"})";
-            default: return "bg-gray-100 text-gray-800"}"});,"});";,
-};,"});,"})";
+            default: return "bg-gray-100 text-gray-800"}"});,"});"};,"});,"})";
     const isFormComplete = () => {}"});,"})";
   return <div>Component</div>;
 };
         return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&;,"});,"})";
             clientProfile.timeline && clientProfile.technologyMaturity &&""";,"});,"})";
-            clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0};"""";,"});,"});,
-}
+            clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0};"""";,"});,"})}
     return (";
     <div className="max-w-7xl mx-auto p-6">;,"});,"})";
       {/* comment */}"});,"})";
@@ -217,8 +206,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
             <div>Broken JSX</div>
   (e) => setClientProfile(prev => ({ ...prev,,"});,"})";
   industry: e.target.value "","});,"})";
-"""";,"});,"});";,
-}))} className="w-full p-3 border border-zion-slate-light rounded-md">"""";,"});,"})";
+"""";,"});,"});"}))} className="w-full p-3 border border-zion-slate-light rounded-md">"""";,"});,"})";
               <option value="">Select Industry</option>;,"});,"})";
               {industries.map(industry => (<option key="{industry}" value="{industry}">{industry}</option>) ) }"});,"})";
             </select>;,"});,"})";
@@ -229,8 +217,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
             <div>Broken JSX</div>
   (e) => setClientProfile(prev => ({ ...prev,,"});,"})";
   compSize: e.target.value "","});,"})";
-"""";,"});,"});";,
-}))} className="w-full p-3 border border-zion-slate-light rounded-md">"""";,"});,"})";
+"""";,"});,"});"}))} className="w-full p-3 border border-zion-slate-light rounded-md">"""";,"});,"})";
               <option value="">Select Comp Size</option>;,"});,"})";
               {compSizes.map(size => (<option key="{size}" value="{size}">{size}</option>) ) }"});,"})";
             </select>;,"});,"})";
@@ -241,8 +228,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
             <div>Broken JSX</div>
   (e) => setClientProfile(prev => ({ ...prev,,"});,"})";
   budget: e.target.value "","});,"})";
-"""";,"});,"});";,
-}))} className="w-full p-3 border border-zion-slate-light rounded-md">"""";,"});,"})";
+"""";,"});,"});"}))} className="w-full p-3 border border-zion-slate-light rounded-md">"""";,"});,"})";
               <option value="">Select Budget Range</option>;,"});,"})";
               {budgets.map(budget => (<option key="{budget}" value="{budget}">{budget}</option>) ) }"});,"})";
             </select>;,"});,"})";
@@ -253,8 +239,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
             <div>Broken JSX</div>
   (e) => setClientProfile(prev => ({ ...prev,,"});,"})";
   timeline: e.target.value "","});,"})";
-"""";,"});,"});";,
-}))} className="w-full p-3 border border-zion-slate-light rounded-md">"""";,"});,"})";
+"""";,"});,"});"}))} className="w-full p-3 border border-zion-slate-light rounded-md">"""";,"});,"})";
               <option value="">Select Timeline</option>;,"});,"})";
               {timelines.map(timeline => (<option key="{timeline}" value="{timeline}">{timeline}</option>) ) }"});,"})";
             </select>;,"});,"})";
@@ -265,8 +250,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
             <div>Broken JSX</div>
   (e) => setClientProfile(prev => ({ ...prev,,"});,"})";
   technologyMaturity: e.target.value "","});,"})";
-"""";,"});,"});";,
-}))} className="w-full p-3 border border-zion-slate-light rounded-md">"""";,"});,"})";
+"""";,"});,"});"}))} className="w-full p-3 border border-zion-slate-light rounded-md">"""";,"});,"})";
               <option value="">Select Technology Maturity</option>;,"});,"})";
               {technologyMaturityLevels.map(level => (<option key="{level}" value="{level}">{level}</option>) ) }"});,"})";
             </select>;,"});,"})";
@@ -280,14 +264,12 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
                 <div>Broken JSX</div>
   (e) => {}"});,"})";
                 if(e.target.checked) {}"});,"})";
-                    setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,,"});,"})";
+                    setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,"});,"})";
   goal] ;,"});,"})";
-;,"});,"});";,
-}) ) }"});,"})";
+;,"});,"});"}) ) }"});,"})";
                 else {}"});,"})";
 """;,"});,"})";
-                    setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}"""";,"});,"});";,
-}} className="rounded text-zion-cyan" />"""";,"});,"})";
+                    setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}"""";,"});,"});"}} className="rounded text-zion-cyan" />"""";,"});,"})";
                 <span className="text-sm text-zion-slate-light">{goal}</span>;,"});,"})";
               </label>))}"});,"})";
           </div>;,"});,"})";
@@ -300,14 +282,12 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
                 <div>Broken JSX</div>
   (e) => {}"});,"})";
                 if(e.target.checked) {}"});,"})";
-                    setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,,"});,"})";
+                    setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,"});,"})";
   challenge] ;,"});,"})";
-;,"});,"});";,
-}) ) }"});,"})";
+;,"});,"});"}) ) }"});,"})";
                 else {}"});,"})";
 """;,"});,"})";
-                    setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}"""";,"});,"});";,
-}} className="rounded text-zion-cyan" />"""";,"});,"})";
+                    setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}"""";,"});,"});"}} className="rounded text-zion-cyan" />"""";,"});,"})";
                 <span className="text-sm text-zion-slate-light">{challenge}</span>;,"});,"})";
               </label>))}"});,"})";
           </div>;,"});,"})";
@@ -429,15 +409,13 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
               <div className="flex flex-col sm: flex-row gap-4 justify-center">""","});,"})";
                 <div>Broken JSX</div>
   () => window.open("mailto:kleber@ziontechgroup.com?subject="Service" Recommendation Consultation",_blank");,"});,"})";
-""";,"});,"});";,
-}>"""";,"});,"})";
+""";,"});,"});"}>"""";,"});,"})";
                   <Users className="w-5 h-5 mr-2"  />;,"});,"})";
                   Get Expert Consultation""";,"});,"})";
                 </Button>"""";,"});,"})";
                 <div>Broken JSX</div>
   () => window.open("tel:+13024640950",_blank");,"});,"})";
-""";,"});,"});";,
-}>"""";,"});,"})";
+""";,"});,"});"}>"""";,"});,"})";
                   <Zap className="w-5 h-5 mr-2"  />;,"});,"})";
                   Call Now,"});,"})";
                 </Button>;,"});,"})";
@@ -482,8 +460,7 @@ const AdvancedServiceRecommendation = () => {}";
         timeline: ",;
         technologyMaturity: ", primaryGoals[], challenges[]});
     const [recommendations, setRecommendations] = useState([])";
-    const [isAnalyzing, setIsAnalyzing] = useState();,
-}
+    const [isAnalyzing, setIsAnalyzing] = useState()}
     const [showResults, setShowResults] = useState(false)";
     const industries = []";
     const compSizes = [];
@@ -589,10 +566,10 @@ const AdvancedServiceRecommendation = () => {}";
             link: "https:// comment;
             contactInfo: "+1 302 464 0950,";
             email: "kleber@ziontechgroup.com"}
-;
+
     ];
     const calculateMatchScore = (service, profile) => {}
-;
+
         let score = 0,;
         // comment;
 if(service.targetAudience?.some((audience) => audience.toLowerCase().includes(profile.industry.toLowerCase()))) {}
@@ -624,7 +601,7 @@ if(service.targetAudience?.some((audience) => audience.toLowerCase().includes(pr
         // comment;
 const goalMatches = profile.primaryGoals.filter(goal => service.benefits.some ( (benefit) => benefit.toLowerCase () .includes(goal.toLowerCase () ) ) ) .length,;
 score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, score) }
-;
+
     const generateRecommendations = () => {}
   return <div>Component</div>;
 };
@@ -632,9 +609,9 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
         setIsAnalyzing();,
 }
         // commentsetTimeout(() => {}
-;
+
             const recs = mockServices.map(service => {}
-;
+
                 const matchScore = calculateMatchScore(service, clientProfile)";
                 let priority";
                 if (matchScore >= 80)";
@@ -661,15 +638,12 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
                 const timeToValue = complexity === "Simple" ? "2-4 months" :";
                     complexity === "Moderate" ? "4-8 months" : "8-12 months;
                 return {}
-;
-                    service, matchScore, reasoning, priority, implementationComplexity: complexity, expectedROI, timeToValue}}) .sort((a, b) => b.matchScore - a.matchScore);,
-}
-            setRecommendations();,
-}
-            setIsAnalyzing();,
-}
+
+                    service, matchScore, reasoning, priority, implementationComplexity: complexity, expectedROI, timeToValue}}) .sort((a, b) => b.matchScore - a.matchScore)}
+            setRecommendations()}
+            setIsAnalyzing()}
             setShowResults(true) }, 2000) }
-;
+
     const getPriorityColor = (priority) => {}";
         switch (priority) {}
 ";
@@ -678,9 +652,8 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
             case "Medium": return "bg-yellow-100 text-yellow-800"";
             case "Low": return "bg-green-100 text-green-800"";
             default: return "bg-gray-100 text-gray-800"}
-;,
 }
-;
+
     const getComplexityColor = (complexity) => {}";
         switch (complexity) {}
 ";
@@ -689,9 +662,8 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
             case "Moderate": return "bg-yellow-100 text-yellow-800"";
             case "Simple": return "bg-green-100 text-green-800"";
             default: return "bg-gray-100 text-gray-800"}
-;,
 }
-;
+
     const isFormComplete = () => {}";
   return <div>Component</div>;
 };
@@ -816,7 +788,7 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
           <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4" onClick="{generateRecommendations}" disabled="{!isFormComplete()" || isAnalyzing}">"";
             {};
 </>) }
-;
+
           </Button>;
         </div>;
       </motion.div>;
@@ -824,8 +796,7 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
 ;
       {};
   { opacity: 0, y: 20}} animate = {}""">;
-  { opacity: 1, y: 0","}} transition="{{" delay: 0.2 }}">"""";";,
-}} animate = {}
+  { opacity: 1, y: 0","}} transition="{{" delay: 0.2 }}">"""";"}} animate = {}
   { opacity: 1, y: 0}} transition="{{" delay: 0.2 }}">"";
           <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 text-center">";
             Your Personalized Service Recommendations;
@@ -850,7 +821,7 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
                         <div className="flex flex-wrap gap-2 mb-4">";
                           <Badge className={getPriorityColor(rec.priority)}">";
                             Priority: {rec.priority}
-;
+
                           </Badge>";
                           <Badge className="{getComplexityColor" (rec.implementationComplexity) }">";
                             Complexity: {rec.implementationComplexity}""";
@@ -867,7 +838,7 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
                         </div>"";
                         <div className="text-sm text-zion-slate-light">;
                           {rec.service.duration}
-;
+
                         </div>;
                     </div>";
                   </CardHeader>;
@@ -882,9 +853,9 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
                         <ul className="space-y-2">""",;
                           {rec.reasoning.map((reason, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";
                               <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"/">"                              {reason}
-;
+
                             </li>) ) }
-;
+
                         </ul>";
                       </div>;
                       """;
@@ -906,7 +877,7 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
                             <span className="text-sm text-zion-slate-light">Category: </span>"";
                             <Badge variant="outline" className="text-xs">,;
                               {rec.service.category.toUpperCase()}
-;
+
                             </Badge>";
                           </div>;
                         </div>""";
@@ -914,8 +885,7 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
                         <div className="mt-4">"";
                           <div>Broken JSX</div>
 "">;
-  () ="> window.open(rec.service.link, _blank")", ";,
-}>""";
+  () ="> window.open(rec.service.link, _blank")", "}>""";
                             Learn More"";
                             <ArrowRight className = "w-4 h-4 ml-2"/">";
                           </Button>;
@@ -923,7 +893,7 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
                   </CardContent>;
                 </Card>;
               </motion.div>) ) }
-;
+
           </div>;
           {/* comment */}
 ;
@@ -939,15 +909,13 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
               <div className="flex flex-col sm: flex-row gap-4 justify-center">""",;
                 <div>Broken JSX</div>
   () ="> window.open("mailto: kleber@ziontechgroup.com?subject="Service" Recommendation Consultation", _blank")";
-"", ";,
-}>"";
+"", "}>"";
                   <Users className = "w-5 h-5 mr-2"/">";
                   Get Expert Consultation""";
                 </Button>""";
                 <div>Broken JSX</div>
   () ="> window.open("tel: +13024640950", _blank")";
-"", ";,
-}>"""';
+"", "}>"""';
                   <Zap className = "w-5 h-5 mr-2"/">";
                   Call Now,;
                 </Button>;
@@ -955,16 +923,12 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
             </div>;
           </motion.div>;
         </motion.div>)}
-    </div>)};
+    </div>)}
 export default AdvancedServiceRecommendation;
-;
 
-export { AdvancedServiceRecommendation };
-;
-export { AdvancedServiceRecommendation };
-;
-export { AdvancedServiceRecommendation };
-;
-export { AdvancedServiceRecommendation };
-;
-export { AdvancedServiceRecommendation };
+
+export { AdvancedServiceRecommendation }
+export { AdvancedServiceRecommendation }
+export { AdvancedServiceRecommendation }
+export { AdvancedServiceRecommendation }
+export { AdvancedServiceRecommendation }

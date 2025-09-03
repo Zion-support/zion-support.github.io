@@ -22,8 +22,7 @@ export {};
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    URL.revokeObjectURL(url);,
-};
+    URL.revokeObjectURL(url)}
   const handleResend = async () => {}
     if (!order || !user?.email) return;
     try {}
@@ -36,21 +35,18 @@ export {};
           to: user.email,```'`;
           subject: `Receipt for order ${order.orderId}`,``'`'`;
           html: `<p>Thank you for your purchase. Total ${order.total}.</p>`}});''';
-      toast({ title: 'Receipt sent!' });,
-} catch (err) {}
+      toast({ title: 'Receipt sent!' })} catch (err) {}
 ';
 '';
 ''';
-      toast({ title: 'Failed to send receipt', variant: 'destructive' });,
-}
-  };
+      toast({ title: 'Failed to send receipt', variant: 'destructive' })}
+  }
   if (isLoading || !order) {}
     return();
       <div className="container max-w-3xl py-10">"";
         <Skeleton className="h-6 w-full" />;
       </div>;
-    );,
-}";
+    )}";
   return ("";
     <div className="container max-w-3xl py-10 space-y-6">"";
       <h1 className="text-3xl font-bold">Order #{order.orderId}</h1>;
@@ -90,14 +86,10 @@ export {};
         Back to orders;
       </Link>;
     </div>)}
-;
 
-export { OrderDetailPage };
-;
-export { OrderDetailPage };
-;
-export { OrderDetailPage };
-;
-export { OrderDetailPage };
-;
-export { OrderDetailPage };
+
+export { OrderDetailPage }
+export { OrderDetailPage }
+export { OrderDetailPage }
+export { OrderDetailPage }
+export { OrderDetailPage }

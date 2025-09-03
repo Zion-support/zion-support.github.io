@@ -8,7 +8,7 @@ export default function Page() {};
 ;
     const newScore = calculateScore () ;
     setScore(newScore) ;
-;
+
     // Show component after score calculation;
     if(newScore > 0) {};
       setTimeout(() => setIsVisible(true), 1000)}
@@ -18,21 +18,21 @@ export default function Page() {};
 }, []);
     // Only run in browser environment';
     if(typeof window === 'null') return;
-;
+
     // Performance Observer for Core Web Vitals';
     if('PerformanceObserver' in window) {};
             setMetrics(prev => ({ ...prev, fcp: Math.round(fcpEntry.startTime) }))}
         });
         fcpObserver.observe({ entryTypes['paint'] })} catch(e) {};
         // console.warn('FCP observer failed:', e)}
-;
+
       // Largest Contentful Paint;
       try {};
             setMetrics(prev => ({ ...prev, lcp: Math.round(lastEntry.startTime) }))}
         });
         lcpObserver.observe({ entryTypes['largest-contentful-paint'] })} catch(e) {};
         // console.warn('LCP observer failed:', e)}
-;
+
       // First Input Delay;
       try {};
               setMetrics(prev => ({ ...prev, fid: Math.round(fid) }))}
@@ -48,13 +48,13 @@ export default function Page() {};
         clsObserver.observe({ entryTypes['layout-shift'] })} catch(e) {};
         // console.warn('CLS observer failed:', e)}
     }
-;
+
     // Time to First Byte(from navigation timing);
     const navigationEntry = performance.getEntriesByType('navigation')[0];
     if(navigationEntry) {};
       setMetrics(prev => ({ ...prev, ttfb: Math.round (ttfb) }) ) }
   }, []) ;
-;
+
   if(!isVisible) return null;
 ;
   const getScoreColor = (score) => {};

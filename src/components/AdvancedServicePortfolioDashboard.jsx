@@ -24,7 +24,7 @@ export default function Page() {};
     };
     const getTechnologyMaturityColor = (maturity) => {};
             default: return 'bg-gray-100 text-gray-800'}
-    };
+    }
     const categories = [';
         { id: 'all', name: 'All Categories', count: portfolioData.length },;
         { id: 'ai', name: 'AI & Machine Learning', count: portfolioData.filter(s => s.category === 'ai').length },;
@@ -390,16 +390,11 @@ export default function Page() {};
           </div>;
         </div>;
       </motion.div>;
-    </div>)};
-export default AdvancedServicePortfolioDashboard;,
-}}}}}}
-;
-export { AdvancedServicePortfolioDashboard };
-;
-export { AdvancedServicePortfolioDashboard };
-;
-export { AdvancedServicePortfolioDashboard };
-;
-export { AdvancedServicePortfolioDashboard };
-;
-export { AdvancedServicePortfolioDashboard };
+    </div>)}
+export default AdvancedServicePortfolioDashboard}}}}}}
+
+export { AdvancedServicePortfolioDashboard }
+export { AdvancedServicePortfolioDashboard }
+export { AdvancedServicePortfolioDashboard }
+export { AdvancedServicePortfolioDashboard }
+export { AdvancedServicePortfolioDashboard }
