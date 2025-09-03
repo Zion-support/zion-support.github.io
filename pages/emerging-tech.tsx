@@ -1,319 +1,346 @@
-const React = dynamic(() => import('react'), { ssr: false })
-const Head = dynamic(() => import('next/head'), { ssr: false })
-export default function EmergingTech() {
+import React from 'react'
+import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { 
+  Brain, 
+  Lock, 
+  Zap, 
+  Globe, 
+  ArrowRight, 
+  CheckCircle, 
+  Star,
+  Users,
+  Clock,
+  Shield,
+  Database,
+  Cloud
+} from 'lucide-react'
 
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+
+const EmergingTechPage: React.FC = () => {
   const technologies = [
     {
-      icon: Brain,'
-      title: 'Artificial Intelligence','
-      description: 'Advanced AI solutions including machine learning, deep learning, and neural networks for intelligent automation.','
-      features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
-},
+      icon: <Brain className="w-8 h-8" />,
+      title: 'Artificial Intelligence',
+      description: 'Advanced AI solutions including machine learning, deep learning, and neural networks for intelligent automation.',
+      features: [
+        'Machine Learning Models',
+        'Natural Language Processing',
+        'Computer Vision',
+        'Predictive Analytics'
+      ],
+      category: 'AI & ML',
+      pricing: 'Starting at $5,000',
+      delivery: '2-8 weeks'
+    },
     {
-      icon: Lock,'
-      title: 'Blockchain & Web3','
-      description: 'Decentralized applications, smart contracts, and blockchain solutions for secure, transparent operations.','
-      features: ['Smart Contracts', 'DeFi Solutions', 'NFT Platforms', 'Cryptocurrency Integration']
-},
+      icon: <Lock className="w-8 h-8" />,
+      title: 'Blockchain & Web3',
+      description: 'Decentralized applications, smart contracts, and blockchain solutions for secure, transparent operations.',
+      features: [
+        'Smart Contract Development',
+        'DeFi Solutions',
+        'NFT Platforms',
+        'Cryptocurrency Integration'
+      ],
+      category: 'Blockchain',
+      pricing: 'Starting at $8,000',
+      delivery: '4-12 weeks'
+    },
     {
-      icon: Globe,'
-      title: 'Internet of Things (IoT)','
-      description: 'Connected devices and IoT ecosystems for smart homes, cities, and industrial automation.','
-      features: ['Device Management', 'Data Analytics', 'Remote Monitoring', 'Automation Systems']
-},
+      icon: <Zap className="w-8 h-8" />,
+      title: 'Quantum Computing',
+      description: 'Next-generation quantum computing solutions for complex problem-solving and optimization.',
+      features: [
+        'Quantum Algorithms',
+        'Optimization Problems',
+        'Cryptography',
+        'Simulation'
+      ],
+      category: 'Quantum',
+      pricing: 'Starting at $15,000',
+      delivery: '6-16 weeks'
+    },
     {
-      icon: Eye,'
-      title: 'Augmented & Virtual Reality','
-      description: 'Immersive AR/VR experiences for training, entertainment, and business applications.','
-      features: ['AR Applications', 'VR Experiences', 'Mixed Reality', '3D Visualization']
-},
+      icon: <Globe className="w-8 h-8" />,
+      title: 'Edge Computing',
+      description: 'Distributed computing solutions that bring processing power closer to data sources.',
+      features: [
+        'Edge Infrastructure',
+        'Real-time Processing',
+        'IoT Integration',
+        'Low Latency'
+      ],
+      category: 'Edge',
+      pricing: 'Starting at $6,000',
+      delivery: '3-10 weeks'
+    },
     {
-      icon: Zap,'
-      title: 'Edge Computing','
-      description: 'Distributed computing solutions that bring processing power closer to data sources.','
-      features: ['Real-time Processing', 'Reduced Latency', 'Bandwidth Optimization', 'Offline Capabilities']
-},
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Zero Trust Security',
+      description: 'Advanced security framework that assumes no trust and verifies everything.',
+      features: [
+        'Identity Verification',
+        'Access Control',
+        'Network Segmentation',
+        'Continuous Monitoring'
+      ],
+      category: 'Security',
+      pricing: 'Starting at $4,000',
+      delivery: '2-6 weeks'
+    },
     {
-      icon: Database,'
-      title: 'Quantum Computing','
-      description: 'Next-generation computing solutions leveraging quantum mechanics for complex problem solving.','
-      features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Simulation']
-}
+      icon: <Database className="w-8 h-8" />,
+      title: 'Augmented Reality',
+      description: 'Immersive AR solutions that overlay digital information onto the real world.',
+      features: [
+        'AR Applications',
+        '3D Visualization',
+        'Interactive Experiences',
+        'Mobile Integration'
+      ],
+      category: 'AR/VR',
+      pricing: 'Starting at $7,000',
+      delivery: '4-14 weeks'
+    }
   ]
 
   const benefits = [
     {
-      icon: Rocket,'
-      title: 'Competitive Advantage','
-      description: 'Stay ahead of the competition by adopting cutting-edge technologies before your competitors.'},
+      icon: <Star className="w-6 h-6" />,
+      title: 'Cutting-Edge Technology',
+      description: 'Stay ahead with the latest emerging technologies and innovations'
+    },
     {
-      icon: Zap,'
-      title: 'Innovation Leadership','
-      description: 'Position your company as an innovation leader in your industry with emerging technology solutions.'},
+      icon: <Users className="w-6 h-6" />,
+      title: 'Expert Team',
+      description: 'Experienced professionals with deep knowledge in emerging technologies'
+    },
     {
-      icon: Globe,'
-      title: 'Future-Proof Solutions','
-      description: 'Build solutions that are designed to evolve and adapt to future technological advancements.'},
+      icon: <Clock className="w-6 h-6" />,
+      title: 'Rapid Development',
+      description: 'Fast implementation and deployment of emerging technology solutions'
+    },
     {
-      icon: Shield,'
-      title: 'Risk Mitigation','
-      description: 'Early adoption of emerging technologies helps identify and mitigate potential risks and challenges.'}
-  ]
-
-  const applications = [
-    {'
-      industry: 'Healthcare','
-      technologies: ['AI Diagnostics', 'IoT Monitoring', 'Blockchain Records', 'AR Surgery'],'
-      description: 'Revolutionary healthcare solutions improving patient outcomes and operational efficiency.'},
-    {'
-      industry: 'Finance','
-      technologies: ['Blockchain Payments', 'AI Fraud Detection', 'Quantum Security', 'IoT Banking'],'
-      description: 'Next-generation financial services with enhanced security and user experience.'},
-    {'
-      industry: 'Manufacturing','
-      technologies: ['IoT Sensors', 'AI Quality Control', 'AR Training', 'Edge Computing'],'
-      description: 'Smart manufacturing solutions for increased productivity and quality control.'},
-    {'
-      industry: 'Retail','
-      technologies: ['AR Shopping', 'AI Personalization', 'IoT Inventory', 'Blockchain Supply Chain'],'
-      description: 'Immersive retail experiences with intelligent automation and supply chain transparency.'}
+      icon: <Shield className="w-6 h-6" />,
+      title: 'Future-Proof',
+      description: 'Solutions designed to adapt and scale with evolving technology trends'
+    }
   ]
 
   return (
     <>
-<Head>
-        <title>Emerging Technologies - Zion Tech Group</title>
-        <meta name = "description" content="Explore cutting-edge emerging technologies including AI, blockchain, IoT, AR/VR, and quantum computing solutions." />"
-        <meta name="viewport" content="width="device-width," initial-scale=1" />
-      </Head>
+      <SEO
+        title="Emerging Technologies - Zion Tech Group"
+        description="Explore cutting-edge emerging technologies including AI, blockchain, quantum computing, and more with Zion Tech Group."
+        keywords="emerging technologies, AI, blockchain, quantum computing, edge computing, AR/VR, Zion Tech Group"
+        canonical="https://ziontechgroup.com/emerging-tech"
+      />
       
-      <SimpleNavigation />
-      "
-      <main className="min-h-screen bg-white">
-        {/*   */}"
-        <section className="bg-gradient-to-br from-slate-50 to-orange-50 py-20 sm: py-32">"
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">"
-            <div className="mx-auto max-w-3xl text-center">"
-              <div className="flex items-center justify-center mb-4">"
-                <Rocket className="h-8 w-8 text-orange-600 mr-3" />"
-                <span className="text-base font-semibold leading-7 text-orange-600">Emerging Technologies</span>
-              </div>"
-              <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Shape the Future with Emerging Tech,
-              </h1>"
-              <p className="mt-6 text-lg leading-8 text-gray-600">,
-                Explore the cutting edge of technology with our emerging tech solutions. From AI and blockchain,'
-to IoT and quantum computing, we help you leverage tomorrow's technologies today to create,
-innovative solutions and gain competitive advantages.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/*   */}"
-        <section className="py-16 sm: py-24">"
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">"
-            <div className="text-center mb-12">"
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Emerging Technologies We Work With</h2>"
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Cutting-edge technologies that are shaping the future of business and society,
-              </p>
-            </div>"
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">,
-              {technologies.map((tech, index) => ("
-                <div key="{index}" className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200 hover: shadow-xl transition-shadow">"
-                  <div className="flex items-center space-x-4 mb-6">"
-                    <div className="p-3 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg">"
-                      <tech.icon className="w-8 h-8 text-white" />
-                    </div>",
-                    <h3 className="text-xl font-bold text-gray-900">{tech.title}</h3>
-                  </div>"
-                  <p className="text-gray-600 mb-6">{tech.description}</p>"
-                  <ul className="space-y-2">
-                    {tech.features.map((feature, featureIndex) => ("
-                      <li key="{featureIndex}" className="flex items-center space-x-2">"
-                        <CheckCircle className="w-4 h-4 text-green-500" />"
-                        <span className="text-gray-600">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+      <PageTransition>
+        <main className="min-h-screen bg-white">
+          {/* Hero Section */}
+          <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center"
+              >
+                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                  Emerging <span className="text-blue-600">Technologies</span>
+                </h1>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Explore cutting-edge technologies that are shaping the future of business and innovation.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <motion.a
+                    href="#technologies"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                    Explore Technologies
+                  </motion.a>
+                  <motion.a
+                    href="/contact"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                    Get Started
+                  </motion.a>
                 </div>
-              ))}
+              </motion.div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/*   */}"
-        <section className="py-16 sm: py-24 bg-gray-50">"
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">"
-            <div className="text-center mb-12">"
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Invest in Emerging Technologies?</h2>"
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Strategic advantages of early adoption and innovation leadership,
-              </p>
-            </div>"
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">,
-              {benefits.map((benefit, index) => ("
-                <div key="{index}" className="bg-white rounded-2xl shadow-lg p-8 text-center border border-gray-200">"
-                  <div className="flex justify-center mb-6">"
-                    <div className="p-4 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl">"
-                      <benefit.icon className="w-8 h-8 text-white" />
+          {/* Technologies Grid */}
+          <section id="technologies" className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Emerging Technologies
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Discover the latest technologies that are transforming industries and creating new opportunities.
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {technologies.map((tech, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+                  >
+                    <div className="p-8">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-blue-600">
+                          {tech.icon}
+                        </div>
+                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                          {tech.category}
+                        </span>
+                      </div>
+                      
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">
+                        {tech.title}
+                      </h3>
+                      
+                      <p className="text-gray-600 mb-6">
+                        {tech.description}
+                      </p>
+                      
+                      <div className="mb-6">
+                        <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                        <ul className="space-y-2">
+                          {tech.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
+                              <CheckCircle className="w-4 h-4 text-green-500" />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div className="flex items-center justify-between text-sm text-gray-500 mb-6">
+                        <span className="font-semibold text-green-600">{tech.pricing}</span>
+                        <span>{tech.delivery}</span>
+                      </div>
+                      
+                      <motion.button
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors"
+                      >
+                        <ArrowRight className="w-5 h-5" />
+                        Learn More
+                      </motion.button>
                     </div>
-                  </div>"
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>"
-                  <p className="text-gray-600">{benefit.description}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Benefits Section */}
+          <section className="bg-gray-50 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Why Choose Emerging Technologies?
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Stay competitive and innovative with cutting-edge technology solutions.
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
+                  >
+                    <div className="text-blue-600 mb-4 flex justify-center">
+                      {benefit.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-gray-600">
+                      {benefit.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Ready to Embrace the Future?
+                </h2>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Let us help you implement emerging technologies that will transform your business and give you a competitive edge.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <motion.a
+                    href="/contact"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                    Get Started Today
+                  </motion.a>
+                  <motion.a
+                    href="tel:+13024640950"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                    Call Us: +1 302 464 0950
+                  </motion.a>
                 </div>
-              ))}
+              </motion.div>
             </div>
-          </div>
-        </section>
+          </section>
+        </main>
+      </PageTransition>
+    </>
+  )
+}
 
-        {/*   */}"
-        <section className="py-16 sm: py-24">"
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">"
-            <div className="text-center mb-12">"
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Industry Applications</h2>"
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                How emerging technologies are transforming different industries,
-              </p>
-            </div>"
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">,
-              {applications.map((app, index) => ("
-                <div key="{index}" className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">"
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{app.industry}</h3>"
-                  <p className="text-gray-600 mb-6">{app.description}</p>"
-                  <div className="flex flex-wrap gap-2">
-                    {app.technologies.map((tech, techIndex) => ("
-                      <span key="{techIndex}" className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/*   */}"
-        <section className="py-16 sm: py-24 bg-gray-50">"
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">"
-            <div className="text-center mb-12">"
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Technology Trends 2024-2025</h2>"
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Key emerging technology trends that will shape the future,
-              </p>
-            </div>"
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">"
-              <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">"
-                <div className="flex items-center space-x-4 mb-6">"
-                  <div className="p-3 bg-blue-100 rounded-lg">"
-                    <Brain className="w-8 h-8 text-blue-600" />
-                  </div>"
-                  <h3 className="text-xl font-bold text-gray-900">Generative AI</h3>
-                </div>"
-                <p className="text-gray-600 mb-4">,
-                  AI systems that can create content, code, and solutions autonomously, revolutionizing creativity and problem-solving.
-                </p>"
-                <ul className="space-y-2">"
-                  <li className="flex items-center space-x-2">"
-                    <CheckCircle className="w-4 h-4 text-green-500" />"
-                    <span className="text-gray-600 text-sm">Content Generation</span>
-                  </li>"
-                  <li className="flex items-center space-x-2">"
-                    <CheckCircle className="w-4 h-4 text-green-500" />"
-                    <span className="text-gray-600 text-sm">Code Automation</span>
-                  </li>"
-                  <li className="flex items-center space-x-2">"
-                    <CheckCircle className="w-4 h-4 text-green-500" />"
-                    <span className="text-gray-600 text-sm">Design Assistance</span>
-                  </li>
-                </ul>
-              </div>
-"
-              <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">"
-                <div className="flex items-center space-x-4 mb-6">"
-                  <div className="p-3 bg-green-100 rounded-lg">"
-                    <Network className="w-8 h-8 text-green-600" />
-                  </div>"
-                  <h3 className="text-xl font-bold text-gray-900">5G & Edge Computing</h3>
-                </div>"
-                <p className="text-gray-600 mb-4">
-                  Ultra-fast connectivity combined with distributed computing for real-time applications and IoT ecosystems.
-                </p>"
-                <ul className="space-y-2">"
-                  <li className="flex items-center space-x-2">"
-                    <CheckCircle className="w-4 h-4 text-green-500" />"
-                    <span className="text-gray-600 text-sm">Real-time Processing</span>
-                  </li>"
-                  <li className="flex items-center space-x-2">"
-                    <CheckCircle className="w-4 h-4 text-green-500" />"
-                    <span className="text-gray-600 text-sm">IoT Connectivity</span>
-                  </li>"
-                  <li className="flex items-center space-x-2">"
-                    <CheckCircle className="w-4 h-4 text-green-500" />"
-                    <span className="text-gray-600 text-sm">Low Latency</span>
-                  </li>
-                </ul>
-              </div>
-"
-              <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">"
-                <div className="flex items-center space-x-4 mb-6">"
-                  <div className="p-3 bg-purple-100 rounded-lg">"
-                    <Lock className="w-8 h-8 text-purple-600" />
-                  </div>"
-                  <h3 className="text-xl font-bold text-gray-900">Web3 & Metaverse</h3>
-                </div>"
-                <p className="text-gray-600 mb-4">
-                  Decentralized web technologies and virtual worlds creating new digital economies and experiences.
-                </p>"
-                <ul className="space-y-2">"
-                  <li className="flex items-center space-x-2">"
-                    <CheckCircle className="w-4 h-4 text-green-500" />"
-                    <span className="text-gray-600 text-sm">Decentralized Apps</span>
-                  </li>"
-                  <li className="flex items-center space-x-2">"
-                    <CheckCircle className="w-4 h-4 text-green-500" />"
-                    <span className="text-gray-600 text-sm">Virtual Worlds</span>
-                  </li>"
-                  <li className="flex items-center space-x-2">"
-                    <CheckCircle className="w-4 h-4 text-green-500" />"
-                    <span className="text-gray-600 text-sm">Digital Assets</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/*   */}"
-        <section className="py-16 sm: py-24 bg-gradient-to-br from-orange-600 to-red-600">"
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">"
-            <div className="text-center">"
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Ready to Explore Emerging Technologies?
-              </h2>"
-              <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">'
-                Let's discuss how emerging technologies can transform your business and create new opportunities for growth.
-              </p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-                <a href="/contact""
-                  className="bg-white text-orange-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors flex items-center justify-center space-x-2"
-                >
-                  <span>Explore Emerging Tech</span>"
-                  <ArrowRight className="w-5 h-5" />
-                </a>"
-                <a href="/services""
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-orange-600 transition-colors"
-                >
-                  View All Services,
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <SimpleFooter />
-    </>",
-  )}
+export default EmergingTechPage

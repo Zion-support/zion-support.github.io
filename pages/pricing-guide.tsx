@@ -1,32 +1,61 @@
-const React = dynamic(() => import('react'), { ssr: false })
-} from'
-  'lucide-react
+import React from 'react'
+import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { 
+  DollarSign, 
+  CheckCircle, 
+  Star, 
+  ArrowRight, 
+  Clock, 
+  Users,
+  Globe,
+  Shield,
+  Zap,
+  Database,
+  Cloud
+} from 'lucide-react'
 
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+
+const PricingGuidePage: React.FC = () => {
   return (
     <>
-<Head>
-        <title>Pricing Guide - Zion Tech Group</title>"
-        <meta name = "description" content="Transparent pricing for AI services, cloud solutions, cybersecurity, and micro SaaS platforms. Get custom quotes for your business needs." />"
-        <meta name="viewport" content="width="device-width," initial-scale=1" />"
-        <link rel="canonical" href="https: //ziontechgroup.com/pricing-guide" />
-      </Head>
+      <SEO
+        title="Pricing Guide - Zion Tech Group"
+        description="Transparent pricing for AI services, cloud solutions, cybersecurity, and micro SaaS platforms. Get custom quotes for your business needs."
+        keywords="pricing, AI services, cloud solutions, cybersecurity, micro SaaS, Zion Tech Group"
+        canonical="https://ziontechgroup.com/pricing-guide"
+      />
       
-      <ModernHeader />
-      "
-      <main className="min-h-screen bg-white">,
-        {/*   */}"
-        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
-            <div className="text-center">"
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-                Transparent Pricing for"
-                <span className="text-blue-600 block">Technology Solutions</span>
-              </h1>"
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">,
-                Get clear, upfront pricing for our AI services, cloud solutions, and custom development. 
-                No hidden fees, no surprises.
-              </p>
+      <PageTransition>
+        <main className="min-h-screen bg-white">
+          <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center"
+              >
+                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                  Pricing <span className="text-blue-600">Guide</span>
+                </h1>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Transparent pricing for AI services, cloud solutions, cybersecurity, and micro SaaS platforms.
+                </p>
+              </motion.div>
             </div>
+          </section>
+        </main>
+      </PageTransition>
+    </>
+  )
+}
+
+export default PricingGuidePage
           </div>
         </section>
 

@@ -1,321 +1,346 @@
-,"});,"})"
-;,"});,"})"
-export default function Index() {,"});,"})"
-  return ("});,"})"
-    <>;,"});,"})"
-<Head>;,"});,"})"
-        <title>Zion Tech Group - Leading Technology Solutions Provider</title>;,"});,"})"
-        <meta name="description" content="Zion Tech Group delivers cutting-edge AI, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with our innovative technology solutions." />;,"});,"})"
-        <meta name="keywords" content="AI services, cybersecurity, cloud computing, digital transformation, technology consulting, Zion Tech Group" />;,"});,"})"
-        <meta property="og: title" content="Zion Tech Group - Leading Technology Solutions Provider" />,"});,"})"
-        <meta property="og:description" content="Transform your business with our cutting-edge AI, cybersecurity, and cloud solutions. Expert technology consulting and implementation services." />;,"});,"})"
-        <meta property="og: type" content="website" />,"});,"})"
-        <meta property="og: url" content="https://ziontechgroup.com" />,"});,"})"
-        <meta property="og: image" content="https://ziontechgroup.com/og-image.jpg" />,"});,"})"
-        <meta name="twitter: card" content="summary_large_image" />,"});,"})"
-        <meta name="twitter: title" content="Zion Tech Group - Leading Technology Solutions Provider" />,"});,"})"
-        <meta name="twitter:description" content="Transform your business with our cutting-edge AI, cybersecurity, and cloud solutions." />;,"});,"})"
-        <meta name="twitter: image" content="https://ziontechgroup.com/og-image.jpg" />,"});,"})"
-        <link rel="canonical" href="https: //ziontechgroup.com" />,"});,"})"
-        <script,"});,"})"
-          type="application/ld+json";,"});,"})"
-          dangerouslySetInnerHTML={{,"});,"})"
-            __html: JSON.stringify({,"});,"})"
-              "@context": "https: //schema.org","});,"})"
-              "@type": "Organization",,"});,"})"
-              "name": "Zion Tech Group",,"});,"})"
-              "url": "https: //ziontechgroup.com","});,"})"
-              "logo": "https: //ziontechgroup.com/logo.png","});,"})"
-              "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",,"});,"})"
-              "address": {,"});,"})"
-                "@type": "PostalAddress",,"});,"})"
-                "addressCountry": "US";,"});,"});"
-},,"});,"})"
-              "contactPoint": {,"});,"})"
-                "@type": "ContactPoint",,"});,"})"
-                "contactType": "customer service",,"});,"})"
-                "url": "https: //ziontechgroup.com/contact","});,"})"
-              "sameAs": [;,"});,"})"
-                "https: //linkedin.com/company/zion-tech-group","});,"})"
-                "https: //twitter.com/ziontechgroup","});,"})"
-              ],"});,"});"
-});,"});,"});"
-}}"});,"})"
-        />;,"});,"})"
-      </Head>;,"});,"})"
-      <div style={{,"});,"})"
-        padding: '40px 20px',"});,"})"
-        color: '#fff',"});,"})"
-        background: 'linear-gradient(135deg, #0b1220 0%, #1a2332 100%)',,"});,"})"
-        minHeight: '100vh',"});,"})"
-        display: 'flex',"});,"})"
-        flexDirection: 'column',"});,"})"
-        alignItems: 'center',"});,"})"
-        justifyContent: 'center',"});,"})"
-        textAlign: 'center',"});,"});"
-}}>;,"});,"})"
-        <h1 style={{,"});,"})"
-          fontSize: '3rem',"});,"})"
-          fontWeight: 'bold',"});,"})"
-          marginBottom: '1rem',"});,"})"
-          background: 'linear-gradient(45deg, #00d4ff, #0099cc)',,"});,"})"
-          WebkitBackgroundClip: 'text',"});,"})"
-          WebkitTextFillColor: 'transparent',"});,"})"
-          backgroundClip: 'text',"});,"})"
-          Zion Tech Group,"});,"})"
-        </h1>;,"});,"})"
-        <p style={{,"});,"})"
-          fontSize: '1.2rem',"});,"})"
-          marginBottom: '2rem',"});,"})"
-          color: '#a0aec0',"});,"})"
-          maxWidth: '600px',"});,"})"
-          Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.;,"});,"})"
-        </p>;,"});,"})"
-          gap: '1rem',"});,"})"
-          flexWrap: 'wrap',"});,"})"
-          justifyContent: 'center',"});,"})"
-          <a,"});,"})"
-            href="/services";,"});,"})"
-            style={{,"});,"})"
-              padding: '12px 24px',"});,"})"
-              color: 'white',"});,"})"
-              textDecoration: 'none',"});,"})"
-              borderRadius: '8px',"});,"})"
-              fontWeight: '600',"});,"})"
-              transition: 'transform 0.2s',"});,"})"
-            onMouseOver="{(e)" => e.target.style.transform = 'translateY(-2px)'}"});,"})"
-            onMouseOut="{(e)" => e.target.style.transform = 'translateY(0)'}"});,"})"
-          >;,"});,"})"
-            Our Services,"});,"})"
-          </a>;,"});,"})"
-            href="/contact";,"});,"})"
-              background: 'transparent',"});,"})"
-              color: '#00d4ff',"});,"})"
-              border: '2px solid #00d4ff',"});,"})"
-              transition: 'all 0.2s',"});,"})"
-            onMouseOver="{(e)" => {,"});,"})"
-              e.target.style.background = '#00d4ff';,"});,"})"
-              e.target.style.color = '#0b1220';,"});,"})"
-            onMouseOut="{(e)" => {,"});,"})"
-              e.target.style.background = 'transparent';,"});,"})"
-              e.target.style.color = '#00d4ff';,"});,"})"
-            Get Started,"});,"})"
-        </div>;,"});,"})"
-    </>"});,"})"
-  );,"});,"});"
-}"});,"})'
+import React from 'react'
+import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { 
+  Brain, 
+  Server, 
+  Zap, 
+  Shield, 
+  ArrowRight, 
+  CheckCircle, 
+  Star,
+  Users,
+  Clock,
+  Globe,
+  Award,
+  TrendingUp
+} from 'lucide-react'
 
-export default function Index() {
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
 
-  return ('
-const React = dynamic(() => import('react') { ssr: false })
-const Head = dynamic(() => import('next/head') { ssr: false })
+const IndexPage: React.FC = () => {
+  const features = [
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: 'AI-Powered Solutions',
+      description: 'Cutting-edge artificial intelligence to transform your business operations',
+      benefits: [
+        'Machine Learning Models',
+        'Natural Language Processing',
+        'Computer Vision',
+        'Predictive Analytics'
+      ]
+    },
+    {
+      icon: <Server className="w-8 h-8" />,
+      title: 'IT Infrastructure',
+      description: 'Robust and scalable IT infrastructure solutions for modern businesses',
+      benefits: [
+        'Cloud Migration',
+        'Network Setup',
+        'System Integration',
+        '24/7 Support'
+      ]
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: 'Micro SaaS Development',
+      description: 'Innovative micro SaaS solutions to streamline your business processes',
+      benefits: [
+        'Custom SaaS Development',
+        'API Integration',
+        'Scalable Architecture',
+        'Performance Optimization'
+      ]
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets',
+      benefits: [
+        'Security Assessment',
+        'Threat Monitoring',
+        'Incident Response',
+        'Compliance Management'
+      ]
+    }
+  ]
+
+  const stats = [
+    {
+      number: '500+',
+      label: 'Projects Completed',
+      icon: <Award className="w-6 h-6" />
+    },
+    {
+      number: '98%',
+      label: 'Client Satisfaction',
+      icon: <Star className="w-6 h-6" />
+    },
+    {
+      number: '24/7',
+      label: 'Support Available',
+      icon: <Clock className="w-6 h-6" />
+    },
+    {
+      number: '50+',
+      label: 'Expert Team Members',
+      icon: <Users className="w-6 h-6" />
+    }
+  ]
+
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      company: 'TechCorp Inc.',
+      role: 'CTO',
+      content: 'Zion Tech Group transformed our infrastructure and helped us scale our operations efficiently.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      company: 'InnovateLab',
+      role: 'Founder',
+      content: 'Their AI solutions have revolutionized our data processing capabilities and improved our decision-making.',
+      rating: 5
+    },
+    {
+      name: 'Emily Rodriguez',
+      company: 'Global Solutions',
+      role: 'IT Director',
+      content: 'Outstanding cybersecurity services that have kept our systems secure and compliant.',
+      rating: 5
+    }
+  ]
 
   return (
     <>
+      <SEO
+        title="Zion Tech Group - Leading Technology Solutions Provider"
+        description="Zion Tech Group delivers cutting-edge AI, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with our innovative technology solutions."
+        keywords="AI services, cybersecurity, cloud computing, digital transformation, technology consulting, Zion Tech Group"
+        canonical="https://ziontechgroup.com"
+      />
       
-    <>
-<Head>
-        <title>Zion: Tech Group - Leading Technology Solutions Provider</title>',
-        <meta name = 'description' content='Zion Tech Group delivers cutting-edge AI, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with our innovative technology solutions.' />,
-        <meta: name='keywords' content='AI services, cybersecurity, cloud computing, digital transformation, technology consulting, Zion Tech Group' />,
-        <meta: property = 'og: title' content='Zion: Tech Group - Leading Technology Solutions Provider' />'',,
-        <meta: property='og: description' content='Transform: your business with our cutting-edge A,I, cybersecurity, and cloud solutions. Expert technology consulting and implementation services.' />,
-        <meta: property = 'og: type' content='website' />''
-        <meta: property='og: url' content='https://ziontechgroup.com' />''
-        <meta: property='og: image' content='https://ziontechgroup.com/og - image.jpg' />''
-        <meta: name='twitter: card' content='summary_large_image' />''
-        <meta: name='twitter: title' content='Zion: Tech Group - Leading Technology Solutions Provider' />'',,
-        <meta: name='twitter: description' content='Transform: your business with our cutting-edge A,I, cybersecurity, and cloud solutions.' />,
-        <meta: name = 'twitter: image' content='https://ziontechgroup.com/og-image.jpg' />''
-        <link: rel='canonical' href='https: //ziontechgroup.com' />'',
-        <script: type='application/ld+json',"
-          dangerouslySetInnerHTML="{{"
-            __html: JSON.stringify( {,>
-              '@context': 'https: //schema.org,', '@type': 'Organization',
-              'name': 'Zion: Tech Group', 'url': 'https: //ziontechgroup.com,',
-              'logo': 'https: //ziontechgroup.com / logo.png,', 'description': 'Leading: technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.', 'address': {'
-                '@type': 'PostalAddress',,
-                'addressCountry': 'US'}, 'contactPoint': {'
-                '@type': 'ContactPoint',
-                'contactType': 'customer: service', 'url': 'https: //ziontechgroup.com / contact'',},'
-              'sameAs': [,
-                'https: //linkedin.com/company/zion-tech-group,', 'https: //twitter.com/ziontechgroup'''
-        <title>Zion Tech Group - Leading Technology Solutions Provider</title>'',
-        <meta name = 'description' content='Zion Tech Group delivers cutting-edge AI, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with our innovative technology solutions.' />'
-        <meta name='keywords' content='AI services, cybersecurity, cloud computing, digital transformation, technology consulting, Zion Tech Group' />'
-        <meta property='og: title' content='Zion Tech Group - Leading Technology Solutions Provider' />',
-        <meta property='o,'
-    g:description' content='Transform your business with our cutting-edge AI, cybersecurity, and cloud solutions. Expert technology consulting and implementation services.' />'
-        <meta property='og: type' content='website' />'
-        <meta property='og:url' content='https://ziontechgroup.com' />'
-        <meta property='og:image' content='https://ziontechgroup.com/og-image.jpg' />'
-        <meta name='twitter:card' content='summary_large_image' />',
-        <meta name='twitte,'
-    r: title' content='Zion Tech Group - Leading Technology Solutions Provider' />,'
-r:description' content='Transform your business with our cutting-edge AI, cybersecurity, and cloud solutions.' />'
-        <meta name='twitter: image' content='https://ziontechgroup.com/og-image.jpg' />'
-        <link rel='canonical' href='https://ziontechgroup.com' />'
-        <script''
-          type='application/ld+json',
-            __htm,'
-    l: JSON.stringify({''>
-              '@context': 'http,'
-    s://schema.org', '@type': 'Organization','
-              'name': 'Zion Tech Group', 'url': 'https://ziontechgroup.com','
-              'logo': 'https://ziontechgroup.com/logo.png', 'description': 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.', 'address': {''
-                '@type': 'PostalAddress',>
-                'addressCountry': 'US''
-}, 'contactPoint': {''
-                '@type': 'ContactPoint','
-                'contactType': 'customer service', 'url': 'https: //ziontechgroup.com/contact'},'
-              'sameAs': [''
-                'https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup'
-              ],
-})}}
-        />
-      </Head>"
-      <div: style = "{{,">
-padding: '40px: 20px,', color: '#fff,',
-        background: 'linear - gradient(135de,g, #0b1220: 0%, #1a2332 100%)', minHeight: '100vh,',,
-        display: 'flex,', flexDirection: 'column,',
-        alignItems: 'center,', justifyContent: 'center,',
-        textAlign: 'center'',}}>"
-        <h1: style = "{{,">
-fontSize: '3rem,', fontWeight: 'bold,',
-          marginBottom: '1rem,', background: 'linear - gradient(45de,g, #00d4ff, #0099cc)', WebkitBackgroundClip: 'text,',,
-          WebkitTextFillColor: 'transparent,', backgroundClip: 'text'',}}>
-          Zion: Tech Group,
-        </h1>",
-        <p style = "{{,">
-fontSize: '1.2rem,',
-          marginBottom: '2rem,', color: '#a0aec0,',
-          maxWidth: '600px'',}}>
-          Leading: technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
-        </p>"
-        <div style = "{{">
-          display: 'flex,',
-          gap: '1rem,', flexWrap: 'wrap,',
-          justifyContent: 'center'',}}>'
-          <a: href = '/services',"
-            style="{{">
-              padding: '12px: 24px,', background: 'linear - gradient(45de,g, #00d4ff, #0099cc)', color: 'white,',,
-              textDecoration: 'none,', borderRadius: '8px,',
-              fontWeight: '600,', transition: 'transform: 0.2s'',}}"
-            onMouseOver="{(e)" => e.target.style.transform: = 'translateY(-2px)'};"
-            onMouseOut="{(e)" => e.target.style.transform: = 'translateY(0)'},
-      <div style = {{''
-        padding: '40px 20px', color: '#fff','
-        background: 'linear-gradient(135deg, #0b1220 0%, #1a2332 100%), minHeight: '100vh','
-        display: 'flex', flexDirection: 'column','
-        alignItems: 'center', justifyContent: 'center',>
-        textAlign: 'center'}}>
-        <h1 style = {{''
-          fontSize: '3rem', fontWeight: 'bold','
-          marginBottom: '1rem', background: 'linear-gradient(45deg, #00d4ff, #0099cc), WebkitBackgroundClip: 'text','
-          WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-          Zion Tech Group,'
-        <p style={{''
-          fontSize: '1.2rem','
-          marginBottom: '2rem', color: '#a0aec0','
-          maxWidth: '600px'>
-          Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.'
-          display: 'flex','
-          gap: '1rem', flexWrap: 'wrap','
-          justifyContent: 'center'}}>'
-          <a''
-            href='/services''
-            style={{''
-              padding: '12px 24px', background: 'linear-gradient(45deg, #00d4ff, #0099cc), color: 'white','
-              textDecoration: 'none', borderRadius: '8px','
-              fontWeight: '600', transition: 'transform 0.2s'}}"
-            onMouseOver="{(e)" => e.target.style.transform = 'translateY(-2px)}"
-            onMouseOut="{(e)" => e.target.style.transform = 'translateY(0)}
-          >
-            Our: Services,
-          </a>',
-          <a href='/contact',>
-              padding: '12px: 24px,', background: 'transparent,',
-              color: '#00d4ff,', textDecoration: 'none,',
-              borderRadius: '8px,', fontWeight: '600,',
-              border: '2px: solid #00d4ff,', transition: 'all: 0.2s'',}}"
-            onMouseOver = "{(e)" => {'
-              e.target.style.background: = '#00d4ff,'
-              e.target.style.color: = '#0b1220}}"
-            onMouseOut="{(e)" => {'
-              e.target.style.background: = 'transparent,'
-              e.target.style.color: = '#00d4ff,'
-            href='/contact''
-              padding: '12px 24px', background: 'transparent','
-              color: '#00d4ff', textDecoration: 'none','
-              borderRadius: '8px', fontWeight: '600','
-              border: '2px solid #00d4ff', transition: 'all 0.2s'
-            onMouseOver="{(e)" => {'',
-              e.target.style.background = '#00d4ff','
-              e.target.style.color = '#0b1220'}}"
-            onMouseOut="{(e)" => {
-<Head>
-        <title>Zion Tech Group - Leading Technology Solutions Provider</title>,
-        <meta name = 'keywords' content='AI services, cybersecurity, cloud computing, digital transformation, technology consulting, Zion Tech Group' />,
-        <meta property = 'og: title' content='Zion Tech Group - Leading Technology Solutions Provider' />,
-        <meta property = 'og:description' content='Transform your business with our cutting - edge AI, cybersecurity, and cloud solutions. Expert technology consulting and implementation services.' />,
-        <meta property='og: type' content='website' />,
-        <meta property='og:url' content='https://ziontechgroup.com' />,
-        <meta property='og:image' content='https://ziontechgroup.com/og-image.jpg' />,',
-        <meta name = 'twitter:card' content='summary_large_image' />,'
-        <meta name='twitter:title' content='Zion Tech Group - Leading Technology Solutions Provider' />,
-        <meta name='twitter:description' content='Transform your business with our cutting - edge AI, cybersecurity, and cloud solutions.' />,
-        <meta name='twitter: image' content='https://ziontechgroup.com/og - image.jpg' />,
-        <link rel='canonical' href='https://ziontechgroup.com' />,',
-        <script type = 'application/ld + json',
-            __html: JSON.stringify({',,
-              '@context': 'https://schema.org', '@type': 'Organization',,
-              'name': 'Zion Tech Group', 'url': 'https: //ziontechgroup.com'',
-              'logo': 'https://ziontechgroup.com/logo.png', 'description': 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.', 'address': {'
-                'contactType': 'customer service', 'url': 'https://ziontechgroup.com/contact'},,
-                'https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup'>
-              ]})}}
-        />
-      </Head>
-        padding: '40px 20px', color: '#fff','
-background: 'linear-gradient(135deg, #0b1220 0%, #1a2332 100%)', minHeight: '100vh','
-display: 'flex', flexDirection: 'column','
-alignItems: 'center', justifyContent: 'center','
-textAlign: 'center'}}>;"
-        <h1 style = "{{"
-          fontSize: '3rem', fontWeight: 'bold','
-marginBottom: '1rem', background: 'linear-gradient(45deg, #00d4ff, #0099cc)', WebkitBackgroundClip: 'text',>
-WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
-        </h1>
-          fontSize: '1.2rem','
-marginBottom: '2rem', color: '#a0aec0','
-maxWidth: '600px'}}>
-          Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
-        </p>
-          display: 'flex','
-gap: '1rem', flexWrap: 'wrap','
-justifyContent: 'center'}}>
-          <a,
-            href = '/services'>
-              padding: '12px 24px', background: 'linear-gradient(45deg, #00d4ff, #0099cc)', color: 'white','
-textDecoration: 'none', borderRadius: '8px','
-fontWeight: '600', transition: 'transform 0.2s'}}"'
-            onMouseOver = "{(e)" => e.target.style.transform = 'translateY(-2px)'}"
-            onMouseOut="{(e)" => e.target.style.transform = 'translateY(0)'}
-          >
-            Our Services
-          </a>
-              padding: '12px 24px', background: 'transparent','
-color: '#00d4ff', textDecoration: 'none','
-borderRadius: '8px', fontWeight: '600','
-border: '2px solid #00d4ff', transition: 'all 0.2s'}}'
-              e.target.style.background = 'transparent',
-              e.target.style.color = '#00d4ff'
-            Get: Started,
-        </div>
+      <PageTransition>
+        <main className="min-h-screen bg-white">
+          {/* Hero Section */}
+          <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center"
+              >
+                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                  Welcome to <span className="text-blue-600">Zion Tech Group</span>
+                </h1>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Your trusted partner for innovative AI services, IT solutions, micro SaaS development, and comprehensive cybersecurity solutions.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <motion.a
+                    href="#services"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                    Explore Services
+                  </motion.a>
+                  <motion.a
+                    href="/contact"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                    Get Started
+                  </motion.a>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+
+          {/* Stats Section */}
+          <section className="py-16 bg-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {stats.map((stat, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="text-center"
+                  >
+                    <div className="text-blue-600 mb-4 flex justify-center">
+                      {stat.icon}
+                    </div>
+                    <div className="text-3xl font-bold text-gray-900 mb-2">
+                      {stat.number}
+                    </div>
+                    <div className="text-gray-600">
+                      {stat.label}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Services Section */}
+          <section id="services" className="py-20 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Our Services
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Comprehensive technology solutions to meet all your business needs.
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {features.map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg p-8"
+                  >
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="text-blue-600">
+                        {feature.icon}
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900">
+                        {feature.title}
+                      </h3>
+                    </div>
+                    
+                    <p className="text-gray-600 mb-6">
+                      {feature.description}
+                    </p>
+                    
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-3">Key Benefits:</h4>
+                      <ul className="space-y-2">
+                        {feature.benefits.map((benefit, idx) => (
+                          <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
+                            <CheckCircle className="w-4 h-4 text-green-500" />
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Testimonials Section */}
+          <section className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  What Our Clients Say
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Hear from our satisfied clients about their experience with Zion Tech Group.
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {testimonials.map((testimonial, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg p-8"
+                  >
+                    <div className="flex items-center gap-1 mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
+                      ))}
+                    </div>
+                    
+                    <p className="text-gray-600 mb-6 italic">
+                      "{testimonial.content}"
+                    </p>
+                    
+                    <div>
+                      <div className="font-semibold text-gray-900">
+                        {testimonial.name}
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        {testimonial.role}, {testimonial.company}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="bg-gray-50 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Ready to Transform Your Business?
+                </h2>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Let us help you achieve your goals with our comprehensive technology solutions.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <motion.a
+                    href="/contact"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                    Get Started Today
+                  </motion.a>
+                  <motion.a
+                    href="tel:+13024640950"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                    Call Us: +1 302 464 0950
+                  </motion.a>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+        </main>
+      </PageTransition>
     </>
-  )}
-            Get Started
-        </div>
-    </>
-  )}"
+  )
+}
+
+export default IndexPage

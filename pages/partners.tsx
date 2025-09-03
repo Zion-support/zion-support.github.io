@@ -1,41 +1,70 @@
-const React = dynamic(() => import('react'), { ssr: false })
-const Head = dynamic(() => import('next/head'), { ssr: false })
-const Link = dynamic(() => import('next/link'), { ssr: false })
+import React from 'react'
+import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { 
+  Users, 
+  Handshake, 
+  Star, 
+  Globe, 
+  ArrowRight, 
+  CheckCircle, 
+  Clock,
+  Zap,
   Shield,
-  Cloud} from 'lucide - react',
-const SEO = dynamic(() => import('../components/SEO'), { ssr: false })
-export default function Partners() {
+  Cloud
+} from 'lucide-react'
+
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+
+const PartnersPage: React.FC = () => {
+  const partnerBenefits = [
+    {
+      icon: Handshake,
+      title: 'Strategic Partners',
+      description: 'Long-term partnerships that drive mutual growth and innovation.',
+      benefits: ['Joint product development', 'Shared resources', 'Market expansion']
+    },
+    {
+      icon: Award,
+      title: 'Technology Partners',
+      description: 'Integration partnerships with leading technology providers.',
+      benefits: ['API integrations', 'Technical support', 'Co-marketing opportunities']
+    },
+    {
+      icon: Users,
+      title: 'Channel Partners',
+      description: 'Reseller and distribution partnerships for market reach.',
+      benefits: ['Revenue sharing', 'Training programs', 'Marketing support']
+    },
+    {
+      icon: Globe,
+      title: 'Global Partners',
+      description: 'International partnerships for worldwide market presence.',
+      benefits: ['Local expertise', 'Regional support', 'Cultural adaptation']
+    }
+  ]
 
   const partnerBenefits = [
-    {'
-      icon: Handshake, title: 'Strategic Partners','
-      description: 'Long-term partnerships that drive mutual growth and innovation.', benefits: ['Joint product development', 'Shared resources', 'Market expansion']
-}, {
-      icon: Award,'
-      title: 'Technology Partners', description: 'Integration partnerships with leading technology providers.','
-      benefits: ['API integrations', 'Technical support', 'Co-marketing opportunities']
-}, {
-      icon: Users,'
-      title: 'Channel Partners', description: 'Reseller and distribution partnerships for market reach.','
-      benefits: ['Revenue sharing', 'Training programs', 'Marketing support']
-}, {
-      icon: Globe,'
-      title: 'Global Partners', description: 'International partnerships for worldwide market presence.','
-      benefits: ['Local expertise', 'Regional support', 'Cultural adaptation']
-      icon: Users,'
-      title: 'Access to Our Network','
-      description: '',
-        'Connect with our extensive network of clients and partners worldwide.'},
     {
-      icon: Award,'
-      title: 'Certification Programs','
-      description: '',
-        'Get certified in our technologies and solutions with comprehensive training.'},
+      icon: Users,
+      title: 'Access to Our Network',
+      description: 'Connect with our global network of partners and clients',
+      benefits: ['Global network access', 'Partner referrals', 'Joint opportunities']
+    },
     {
-      icon: Target,'
-      title: 'Joint Marketing','
-      description: '',
-        'Collaborate on marketing initiatives and co-branded campaigns.'},
+      icon: Award,
+      title: 'Certification Programs',
+      description: 'Get certified in our technologies and solutions with comprehensive training.',
+      benefits: ['Technical certification', 'Sales training', 'Marketing support']
+    },
+    {
+      icon: Target,
+      title: 'Joint Marketing',
+      description: 'Collaborate on marketing initiatives and co-branded campaigns.',
+      benefits: ['Co-marketing campaigns', 'Lead sharing', 'Brand partnerships']
     {
       icon: Zap,'
       title: 'Technical Support','

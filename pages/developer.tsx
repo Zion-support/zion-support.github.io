@@ -1,287 +1,446 @@
-const React = dynamic(() => import('react'), { ssr: false })
-  Globe,
-  Database} from 'lucide-react'
+import React from 'react'
+import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { 
+  BookOpen, 
+  Code, 
+  Globe, 
+  Database,
+  ArrowRight, 
+  Download, 
+  ExternalLink,
+  Star,
+  Users,
+  Clock
+} from 'lucide-react'
 
-const Developer: NextPage = () => {
-  const resources = [,
-    {,
-icon: BookOpen,'
-      title: 'Documentation','
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+
+const DeveloperPage: React.FC = () => {
+  const resources = [
+    {
+      icon: <BookOpen className="w-8 h-8" />,
+      title: 'Documentation',
       description: 'Comprehensive guides and API references',
-      features: [',
-        'API Documentation','
-        'SDK Guides','
-        'Code Examples','
+      category: 'Documentation',
+      features: [
+        'API Documentation',
+        'Integration Guides',
+        'Code Examples',
         'Best Practices'
-      ],'
-      link: '/docs'},
+      ],
+      link: '/docs',
+      type: 'Internal'
+    },
     {
-      icon: Code,'
-      title: 'Code Samples','
-      description: 'Ready-to-use code examples and templates',
-      features: [',
-        'React Components','
-        'Node.js Examples','
-        'Python Scripts','
-        'Mobile SDKs'
-      ],'
-      link: '/examples'},
+      icon: <Code className="w-8 h-8" />,
+      title: 'SDKs & Libraries',
+      description: 'Ready-to-use SDKs and libraries for popular programming languages',
+      category: 'Development',
+      features: [
+        'JavaScript/TypeScript SDK',
+        'Python SDK',
+        'Java SDK',
+        'REST API Client'
+      ],
+      link: '/sdk',
+      type: 'Download'
+    },
     {
-      icon: Users,'
-      title: 'Community','
-      description: 'Connect with other developers and get support',
-      features: [',
-        'Discord Community','
-        'GitHub Discussions','
-        'Stack Overflow','
-        'Developer Blog'
-      ],'
-      link: '/community'}
+      icon: <Globe className="w-8 h-8" />,
+      title: 'Webhooks',
+      description: 'Real-time event notifications and data synchronization',
+      category: 'Integration',
+      features: [
+        'Event Notifications',
+        'Data Synchronization',
+        'Custom Endpoints',
+        'Retry Logic'
+      ],
+      link: '/webhooks',
+      type: 'Internal'
+    },
+    {
+      icon: <Database className="w-8 h-8" />,
+      title: 'Database APIs',
+      description: 'Direct access to our database services and data management',
+      category: 'Data',
+      features: [
+        'Data Query APIs',
+        'Real-time Updates',
+        'Data Export',
+        'Backup Services'
+      ],
+      link: '/database',
+      type: 'Internal'
+    }
   ]
 
-  const tutorials = [
-    {'
-      title: 'Building Your First AI Application','
-      description: 'Learn how to integrate AI services into your application','
-      duration: '15 min read','
-      difficulty: 'Beginner','
-      tags: ['AI', 'JavaScript', 'API']
-},
-    {'
-      title: 'Cloud Deployment Best Practices','
-      description: 'Deploy your applications to the cloud with confidence','
-      duration: '25 min read','
-      difficulty: 'Intermediate','
-      tags: ['Cloud', 'DevOps', 'AWS']
-},
-    {'
-      title: 'Building Scalable APIs','
-      description: 'Create robust and scalable API endpoints','
-      duration: '30 min read','
-      difficulty: 'Advanced','
-      tags: ['API', 'Node.js', 'Performance']
-}
+  const codeExamples = [
+    {
+      language: 'JavaScript',
+      title: 'AI Service Integration',
+      code: `// Initialize AI service
+const aiService = new ZionAI({
+  apiKey: 'your-api-key',
+  environment: 'production'
+});
+
+// Process text with AI
+const result = await aiService.processText({
+  text: 'Hello, world!',
+  model: 'gpt-4',
+  options: {
+    maxTokens: 100,
+    temperature: 0.7
+  }
+});
+
+console.log(result);`
+    },
+    {
+      language: 'Python',
+      title: 'Micro SaaS API',
+      code: `import ziontech
+
+# Initialize client
+client = ziontech.Client(api_key='your-api-key')
+
+# Create a new project
+project = client.projects.create({
+    name: 'My Project',
+    description: 'A new micro SaaS project',
+    type: 'web_application'
+})
+
+# Deploy project
+deployment = client.deployments.create(
+    project_id=project.id,
+    environment='production'
+)
+
+print(f"Project deployed: {deployment.url}")`
+    },
+    {
+      language: 'cURL',
+      title: 'REST API Example',
+      code: `curl -X POST https://api.ziontechgroup.com/v1/ai/process \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "text": "Analyze this data",
+    "model": "gpt-4",
+    "options": {
+      "max_tokens": 150,
+      "temperature": 0.5
+    }
+  }'`
+    }
   ]
 
-  const tools = [
-    {'
-      name: 'Zion CLI','
-      description: 'Command-line interface for managing your projects',
-      icon: Code,'
-      link: '/cli'},
-    {'
-      name: 'API Explorer','
-      description: 'Interactive tool for testing our APIs',
-      icon: Globe,'
-      link: '/api-explorer'},
-    {'
-      name: 'Code Generator','
-      description: 'Generate boilerplate code for common patterns',
-      icon: Zap,'
-      link: '/generator'},
-    {'
-      name: 'Database Manager','
-      description: 'Manage your databases with our web interface',
-      icon: Database,'
-      link: '/database'}
+  const apis = [
+    {
+      name: 'AI Services API',
+      description: 'Access our AI and machine learning capabilities',
+      version: 'v1',
+      endpoints: 15,
+      rateLimit: '1000/hour'
+    },
+    {
+      name: 'Micro SaaS API',
+      description: 'Manage and deploy micro SaaS applications',
+      version: 'v2',
+      endpoints: 25,
+      rateLimit: '500/hour'
+    },
+    {
+      name: 'IT Infrastructure API',
+      description: 'Monitor and manage IT infrastructure',
+      version: 'v1',
+      endpoints: 20,
+      rateLimit: '2000/hour'
+    },
+    {
+      name: 'Cybersecurity API',
+      description: 'Security monitoring and threat detection',
+      version: 'v1',
+      endpoints: 12,
+      rateLimit: '800/hour'
+    }
   ]
 
   return (
     <>
-<Head>
-        <title>Developer Resources - Zion Tech Group</title>
-        <meta name = "description" content="Developer resources, documentation, code samples, and tools to help you build amazing applications with Zion Tech Group services." />"
-        <meta name="viewport" content="width="device-width," initial-scale=1" />
-      </Head>
-      "
-<Layout title = "Developer Resources""
-        description="Everything you need to build amazing applications"
-      >
-        {/*   */}"
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
-          <div className="container mx-auto px-4 text-center">"
-            <h1 className="text-5xl md: text-6xl font-bold mb-6">"
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Developer</span> Resources,
-            </h1>"
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">,
-              Everything you need to build amazing applications with our services. Documentation, code samples, tools, and community support.
-            </p>"
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
-              <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
-                Get Started"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </button>"
-              <button className="inline-flex items-center px-8 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-                View Documentation,
-              </button>
-            </div>
-          </div>
-        </section>
-,
-        {/*   */}"
-        <section className="py-20 bg-white">"
-          <div className="container mx-auto px-4">"
-            <div className="text-center mb-16">"
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Developer Resources</h2>"
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Comprehensive resources to help you succeed with our platform,
-              </p>
-            </div>"
-            <div className="grid md: grid-cols-3 gap-8">,
-              {resources.map((resource, index) => ("
-                <div key="{index}" className="bg-white border border-gray-200 rounded-xl p-6 hover: shadow-lg transition-shadow duration-300">"
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">"
-                    <resource.icon className="w-8 h-8 text-white" />
-                  </div>",
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{resource.title}</h3>"
-                  <p className="text-gray-600 mb-4">{resource.description}</p>"
-                  <ul className="space-y-2 mb-6">
-                    {resource.features.map((feature, i) => ("
-                      <li key="{i}" className="flex items-center text-sm text-gray-600">"
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>"
-                  <button className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover: shadow-lg transition-all duration-300">
-                    Explore"
-                    <ExternalLink className="ml-2 w-4 h-4" />
-                  </button>
-                </div>,
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/*   */}"
-        <section className="py-20 bg-gray-50">"
-          <div className="container mx-auto px-4">"
-            <div className="text-center mb-16">"
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Tutorials & Guides</h2>"
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Step-by-step tutorials to help you master our platform,
-              </p>
-            </div>"
-            <div className="grid md: grid-cols-3 gap-8">,
-              {tutorials.map((tutorial, index) => ("
-                <div key="{index}" className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow duration-300">"
-                  <div className="p-6">"
-                    <div className="{`flex" items-center justify-between mb-3`>"
-                      <span className="{`px-3" py-1 rounded-full text-sm font-medium ${'
-                        tutorial.difficulty === 'Beginner' ? 'bg-green-100 text-green-800' :'
-                        tutorial.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-800' :'>
-                        'bg-red-100 text-red-800'}`}>
-                        {tutorial.difficulty}
-                      </span>"
-                      <span className="`text-sm" text-gray-500`}>{tutorial.duration}</span>
-                    </div>"
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{tutorial.title}</h3>"
-                    <p className="text-gray-600 mb-4">{tutorial.description}</p>"
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {tutorial.tags.map((tag, i) => ("
-                        <span key="{i}" className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>"
-                    <button className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover: shadow-lg transition-all duration-300">
-                      Read Tutorial"
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </button>
-                  </div>
-                </div>,
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/*   */}"
-        <section className="py-20 bg-white">"
-          <div className="container mx-auto px-4">"
-            <div className="text-center mb-16">"
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Developer Tools</h2>"
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Powerful tools to accelerate your development workflow,
-              </p>
-            </div>"
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">,
-              {tools.map((tool, index) => ("
-                <div key="{index}" className="bg-gray-50 rounded-lg p-6 text-center hover: bg-gray-100 transition-colors duration-300">"
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                    <tool.icon className="w-6 h-6 text-white" />
-                  </div>",
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{tool.name}</h3>"
-                  <p className="text-gray-600 text-sm mb-4">{tool.description}</p>"
-                  <button className="inline-flex items-center text-blue-600 hover: text-blue-700 font-medium">
-                    Try Now"
-                    <ExternalLink className="ml-1 w-4 h-4" />
-                  </button>
-                </div>,
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/*   */}"
-        <section className="py-20 bg-gray-50">"
-          <div className="container mx-auto px-4">"
-            <div className="max-w-4xl mx-auto text-center">"
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Join Our Developer Community</h2>"
-              <p className="text-xl text-gray-600 mb-8">
-                Connect with thousands of developers, share knowledge, and get help when you need it,
-              </p>"
-              <div className="grid md: grid-cols-3 gap-8 mb-12">"
-                <div className="text-center">"
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">"
-                    <MessageSquare className="w-8 h-8 text-blue-600" />
-                  </div>"
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Discord Community</h3>",
-                  <p className="text-gray-600">Join our active Discord server with 10,000+ developers</p>
-                </div>"
-                <div className="text-center">"
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">"
-                    <Github className="w-8 h-8 text-green-600" />
-                  </div>"
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">GitHub Discussions</h3>"
-                  <p className="text-gray-600">Technical discussions and Q&A on our GitHub repository</p>
-                </div>"
-                <div className="text-center">"
-                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">"
-                    <Users className="w-8 h-8 text-purple-600" />
-                  </div>"
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Developer Blog</h3>"
-                  <p className="text-gray-600">Latest updates, tutorials, and best practices</p>
+      <SEO
+        title="Developer Resources - Zion Tech Group"
+        description="Developer resources, APIs, SDKs, and documentation for integrating with Zion Tech Group services."
+        keywords="developer, API, SDK, documentation, integration, Zion Tech Group"
+        canonical="https://ziontechgroup.com/developer"
+      />
+      
+      <PageTransition>
+        <main className="min-h-screen bg-white">
+          {/* Hero Section */}
+          <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center"
+              >
+                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                  Developer <span className="text-blue-600">Resources</span>
+                </h1>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Everything you need to integrate with our AI services, IT solutions, and micro SaaS platforms.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <motion.a
+                    href="#resources"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                    Explore Resources
+                  </motion.a>
+                  <motion.a
+                    href="/contact"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                    Get API Key
+                  </motion.a>
                 </div>
-              </div>"
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">"
-                <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
-                  Join Discord"
-                  <MessageSquare className="ml-2 w-5 h-5" />
-                </button>"
-                <button className="inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300">
-                  View on GitHub"
-                  <Github className="ml-2 w-5 h-5" />
-                </button>
+              </motion.div>
+            </div>
+          </section>
+
+          {/* Resources Grid */}
+          <section id="resources" className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Developer Resources
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Comprehensive tools and resources to help you build with our platform.
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {resources.map((resource, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+                  >
+                    <div className="p-8">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-blue-600">
+                          {resource.icon}
+                        </div>
+                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                          {resource.category}
+                        </span>
+                      </div>
+                      
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">
+                        {resource.title}
+                      </h3>
+                      
+                      <p className="text-gray-600 mb-6">
+                        {resource.description}
+                      </p>
+                      
+                      <div className="mb-6">
+                        <h4 className="font-semibold text-gray-900 mb-3">Features:</h4>
+                        <ul className="space-y-2">
+                          {resource.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
+                              <Star className="w-4 h-4 text-yellow-500" />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <motion.button
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors"
+                      >
+                        {resource.type === 'Download' ? (
+                          <Download className="w-5 h-5" />
+                        ) : (
+                          <ExternalLink className="w-5 h-5" />
+                        )}
+                        {resource.type === 'Download' ? 'Download' : 'View'}
+                      </motion.button>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </div>
-          </div>
-        </section>
-,
-        {/*   */}"
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
-          <div className="container mx-auto px-4 text-center">"
-            <h2 className="text-4xl font-bold mb-6">Ready to Start Building?</h2>"
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Get started with our developer resources and build your next amazing application,
-            </p>"
-            <button className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover: bg-gray-100 transition-all duration-300">
-              Get API Key"
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </button>
-          </div>
-        </section>
-      </Layout>
-    </>,
-  )}
-"
-export default Developer
+          </section>
+
+          {/* Code Examples */}
+          <section className="bg-gray-50 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Code Examples
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Get started quickly with these code examples and integration guides.
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                {codeExamples.map((example, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg overflow-hidden"
+                  >
+                    <div className="p-6 border-b border-gray-200">
+                      <div className="flex items-center justify-between">
+                        <h3 className="text-lg font-semibold text-gray-900">
+                          {example.title}
+                        </h3>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
+                          {example.language}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
+                        <code>{example.code}</code>
+                      </pre>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* API Overview */}
+          <section className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  API Overview
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Explore our comprehensive API offerings and their capabilities.
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {apis.map((api, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg p-8"
+                  >
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-xl font-bold text-gray-900">
+                        {api.name}
+                      </h3>
+                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                        {api.version}
+                      </span>
+                    </div>
+                    
+                    <p className="text-gray-600 mb-6">
+                      {api.description}
+                    </p>
+                    
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <p className="text-gray-500">Endpoints</p>
+                        <p className="font-semibold text-gray-900">{api.endpoints}</p>
+                      </div>
+                      <div>
+                        <p className="text-gray-500">Rate Limit</p>
+                        <p className="font-semibold text-gray-900">{api.rateLimit}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="bg-gray-50 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Ready to Start Building?
+                </h2>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Get your API key and start integrating with our services today.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <motion.a
+                    href="/contact"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                    Get API Key
+                  </motion.a>
+                  <motion.a
+                    href="tel:+13024640950"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+                  >
+                    <ArrowRight className="w-5 h-5" />
+                    Call Us: +1 302 464 0950
+                  </motion.a>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+        </main>
+      </PageTransition>
+    </>
+  )
+}
+
+export default DeveloperPage

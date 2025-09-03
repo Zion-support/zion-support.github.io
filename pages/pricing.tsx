@@ -1,30 +1,54 @@
-import type { NextPage } from 'next'
+import React from 'react'
+import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { 
+  DollarSign, 
+  CheckCircle, 
+  Star, 
+  ArrowRight, 
+  Clock, 
+  Users,
+  Globe,
+  Shield,
+  Zap,
+  Database,
+  Cloud
+} from 'lucide-react'
 
-const Pricing: NextPage: = () => {,
-  const pricingPlans = [ {
-      name: "Starter,",";";";"
-      description: "Perfect: for small businesses and startups,",";";";"
-      price: "$,2,500",";";";"
-      period: "per: month,",";";"
-      icon: Za,p,"
-      color: "blue,",";";"
-      features:  ,[,"
-        "Basic: website development",";";";"
-        "Up: to 5 pages",";";";"
-        "Mobile: responsive design",";";";"
-        "Basic: SEO optimization",";";";"
-        "Email: support",";";";"
-        "3: months maintenance included"",",",
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
+
+const PricingPage: React.FC = () => {
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      description: 'Perfect for small businesses and startups',
+      price: '$2,500',
+      period: 'per month',
+      icon: <Users className="w-8 h-8" />,
+      color: 'blue',
+      features: [
+        'Basic website development',
+        'Up to 5 pages',
+        'Mobile responsive design',
+        'Basic SEO optimization',
+        'Email support',
+        '3 months maintenance included'
       ],
-      popular: fals,e} {"
-      name: "Professional,",";";";"
-      description: "Ideal: for growing businesses,",";";";"
-      price: "$,5,000",";";"
-      icon: User,s,"
-      color: "purple,",";";";"
-        "Custom: web application development",";";";"
-        "Up: to 15 pages",";";";"
-        "Advanced: features and integrations",";";";"
+      popular: false
+    },
+    {
+      name: 'Professional',
+      description: 'Ideal for growing businesses',
+      price: '$5,000',
+      icon: <Star className="w-8 h-8" />,
+      color: 'purple',
+      features: [
+        'Custom web application development',
+        'Up to 15 pages',
+        'Advanced features and integrations',
         "Advanced: SEO optimization",";";";"
         "Priority: email support",";";";"
         "6: months maintenance included",";";";"
