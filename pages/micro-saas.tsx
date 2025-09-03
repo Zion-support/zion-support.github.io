@@ -868,6 +868,248 @@ export default function MicroSaaS() {
         'Improved user onboarding'
       ],
       category: 'Identity Management'
+    },
+    {
+      icon: Code,
+      name: 'AI Code Review Assistant',
+      description: 'Automated code review, security scanning, and quality assurance for development teams.',
+      features: [
+        'Automated code review and suggestions',
+        'Security vulnerability detection',
+        'Code quality metrics and scoring',
+        'Performance optimization recommendations',
+        'Integration with CI/CD pipelines',
+        'Custom rule configuration'
+      ],
+      pricing: '$199 – $1,999/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '50% faster code review process',
+        'Reduced security vulnerabilities',
+        'Improved code quality',
+        'Automated quality assurance'
+      ],
+      category: 'Development Tools'
+    },
+    {
+      icon: Globe,
+      name: 'Multi-Language Website Translator',
+      description: 'AI-powered website translation with SEO optimization and cultural adaptation.',
+      features: [
+        'Automatic website translation',
+        'SEO-optimized multilingual content',
+        'Cultural adaptation and localization',
+        'Real-time translation updates',
+        'Multi-language SEO management',
+        'Translation quality assurance'
+      ],
+      pricing: '$299 – $2,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '90% faster website localization',
+        'Improved global SEO rankings',
+        'Cultural adaptation accuracy',
+        'Reduced translation costs'
+      ],
+      category: 'Localization'
+    },
+    {
+      icon: BarChart3,
+      name: 'Real-Time Business Intelligence Dashboard',
+      description: 'Live business metrics, KPI tracking, and automated reporting for data-driven decisions.',
+      features: [
+        'Real-time KPI monitoring',
+        'Automated report generation',
+        'Custom dashboard creation',
+        'Data visualization and analytics',
+        'Alert and notification system',
+        'Integration with business tools'
+      ],
+      pricing: '$149 – $1,299/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        'Real-time business insights',
+        'Automated reporting processes',
+        'Improved decision making',
+        'Reduced manual reporting time'
+      ],
+      category: 'Business Intelligence'
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Customer Churn Predictor',
+      description: 'Predictive analytics to identify at-risk customers and prevent churn with targeted interventions.',
+      features: [
+        'Machine learning churn prediction',
+        'Customer risk scoring',
+        'Automated intervention triggers',
+        'Retention campaign automation',
+        'Customer health monitoring',
+        'ROI tracking and optimization'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '2–4 weeks',
+      benefits: [
+        '40% reduction in customer churn',
+        'Proactive retention strategies',
+        'Improved customer lifetime value',
+        'Automated intervention workflows'
+      ],
+      category: 'Customer Analytics'
+    },
+    {
+      icon: Mail,
+      name: 'Smart Email Marketing Automation',
+      description: 'AI-driven email campaigns with personalization, A/B testing, and behavioral triggers.',
+      features: [
+        'AI-powered email personalization',
+        'Behavioral trigger automation',
+        'A/B testing and optimization',
+        'Send time optimization',
+        'Content recommendation engine',
+        'Performance analytics and insights'
+      ],
+      pricing: '$199 – $1,599/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '35% increase in email engagement',
+        'Automated campaign optimization',
+        'Personalized customer experiences',
+        'Improved conversion rates'
+      ],
+      category: 'Email Marketing'
+    },
+    {
+      icon: Shield,
+      name: 'Automated Compliance Monitor',
+      description: 'Real-time compliance monitoring for GDPR, HIPAA, SOX, and other regulatory requirements.',
+      features: [
+        'Multi-regulation compliance tracking',
+        'Automated compliance reporting',
+        'Risk assessment and scoring',
+        'Policy violation detection',
+        'Audit trail management',
+        'Regulatory update notifications'
+      ],
+      pricing: '$299 – $2,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '99% compliance accuracy',
+        'Automated audit preparation',
+        'Reduced compliance risks',
+        'Streamlined regulatory reporting'
+      ],
+      category: 'Compliance'
+    },
+    {
+      icon: Clock,
+      name: 'Intelligent Resource Scheduler',
+      description: 'AI-powered resource allocation and scheduling optimization for teams and equipment.',
+      features: [
+        'Smart resource allocation algorithms',
+        'Conflict detection and resolution',
+        'Capacity planning and optimization',
+        'Real-time schedule updates',
+        'Resource utilization analytics',
+        'Integration with calendar systems'
+      ],
+      pricing: '$149 – $1,199/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '30% improvement in resource utilization',
+        'Automated conflict resolution',
+        'Optimized capacity planning',
+        'Reduced scheduling overhead'
+      ],
+      category: 'Resource Management'
+    },
+    {
+      icon: TrendingUp,
+      name: 'Dynamic Pricing Optimization Engine',
+      description: 'AI-driven pricing strategies that maximize revenue through real-time market analysis.',
+      features: [
+        'Real-time market price analysis',
+        'Competitive pricing intelligence',
+        'Demand-based pricing algorithms',
+        'Revenue optimization modeling',
+        'Price elasticity analysis',
+        'Automated pricing adjustments'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '2–4 weeks',
+      benefits: [
+        '15% increase in revenue',
+        'Automated pricing optimization',
+        'Competitive market positioning',
+        'Dynamic pricing strategies'
+      ],
+      category: 'Revenue Optimization'
+    },
+    {
+      icon: FileText,
+      name: 'Smart Contract Management System',
+      description: 'AI-powered contract analysis, risk assessment, and automated contract lifecycle management.',
+      features: [
+        'Contract analysis and risk assessment',
+        'Automated contract generation',
+        'Renewal and expiration tracking',
+        'Compliance monitoring',
+        'Contract performance analytics',
+        'Digital signature integration'
+      ],
+      pricing: '$249 – $1,999/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '60% faster contract processing',
+        'Reduced contract risks',
+        'Automated compliance monitoring',
+        'Improved contract performance'
+      ],
+      category: 'Contract Management'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Knowledge Base Assistant',
+      description: 'Intelligent knowledge management with semantic search and automated content curation.',
+      features: [
+        'Semantic search and discovery',
+        'Automated content categorization',
+        'Knowledge gap identification',
+        'Expert recommendation system',
+        'Content quality scoring',
+        'Integration with collaboration tools'
+      ],
+      pricing: '$199 – $1,599/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '80% faster knowledge discovery',
+        'Improved content organization',
+        'Enhanced team collaboration',
+        'Reduced information silos'
+      ],
+      category: 'Knowledge Management'
+    },
+    {
+      icon: Zap,
+      name: 'Smart Workflow Automation Platform',
+      description: 'No-code workflow automation with AI-powered process optimization and intelligent routing.',
+      features: [
+        'Visual workflow designer',
+        'AI-powered process optimization',
+        'Intelligent task routing',
+        'Integration with 500+ apps',
+        'Performance analytics',
+        'Custom automation templates'
+      ],
+      pricing: '$99 – $999/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '70% reduction in manual tasks',
+        'Automated process optimization',
+        'Improved workflow efficiency',
+        'No-code automation capabilities'
+      ],
+      category: 'Workflow Automation'
     }
   ];
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search } from 'lucide-react';
+import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search, BarChart3, Users, Globe } from 'lucide-react';
 
 export default function AIServices() {
   const contact = {
@@ -625,6 +625,248 @@ export default function AIServices() {
         'Improved accuracy in legal analysis',
         'Automated compliance checking',
         'Better risk identification'
+      ]
+    },
+    {
+      icon: Zap,
+      name: 'AI-Powered Supply Chain Optimization',
+      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',
+      features: [
+        'Demand forecasting and planning',
+        'Inventory optimization algorithms',
+        'Route optimization and logistics',
+        'Supplier risk assessment',
+        'Real-time supply chain monitoring',
+        'Automated procurement decisions'
+      ],
+      pricing: '$8,000 – $50,000 setup',
+      perUnit: '$0.05 – $0.50 per transaction',
+      timeline: '8–16 weeks',
+      benefits: [
+        '25% reduction in inventory costs',
+        'Improved supply chain efficiency',
+        'Reduced stockouts and overstock',
+        'Automated logistics optimization'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI-Powered Quality Control System',
+      description: 'Computer vision-based quality inspection with defect detection and automated quality assurance.',
+      features: [
+        'Real-time defect detection',
+        'Quality scoring and classification',
+        'Automated inspection workflows',
+        'Statistical process control',
+        'Predictive quality analytics',
+        'Integration with production systems'
+      ],
+      pricing: '$10,000 – $60,000 setup',
+      perUnit: '$0.01 – $0.10 per inspection',
+      timeline: '6–12 weeks',
+      benefits: [
+        '99.5% defect detection accuracy',
+        '50% reduction in quality control time',
+        'Improved product quality',
+        'Automated quality assurance'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI-Powered Market Research & Intelligence',
+      description: 'Automated market analysis, competitor intelligence, and trend prediction using advanced AI algorithms.',
+      features: [
+        'Automated market data collection',
+        'Competitor analysis and benchmarking',
+        'Trend prediction and forecasting',
+        'Sentiment analysis and monitoring',
+        'Market opportunity identification',
+        'Custom research report generation'
+      ],
+      pricing: '$3,000 – $25,000 setup',
+      perUnit: '$0.10 – $1.00 per report',
+      timeline: '4–8 weeks',
+      benefits: [
+        '90% faster market research',
+        'Improved strategic decision making',
+        'Automated competitive intelligence',
+        'Data-driven market insights'
+      ]
+    },
+    {
+      icon: Database,
+      name: 'AI-Powered Data Governance & Privacy',
+      description: 'Intelligent data governance with automated privacy compliance, data classification, and access control.',
+      features: [
+        'Automated data classification',
+        'Privacy compliance monitoring',
+        'Data lineage tracking',
+        'Access control optimization',
+        'Data quality assessment',
+        'Regulatory compliance automation'
+      ],
+      pricing: '$5,000 – $35,000 setup',
+      perUnit: '$0.001 – $0.01 per data point',
+      timeline: '6–12 weeks',
+      benefits: [
+        '99% compliance accuracy',
+        'Automated data governance',
+        'Reduced privacy risks',
+        'Improved data quality'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Drug Discovery & Research',
+      description: 'Machine learning solutions for pharmaceutical research, drug discovery, and clinical trial optimization.',
+      features: [
+        'Molecular property prediction',
+        'Drug-target interaction modeling',
+        'Clinical trial optimization',
+        'Adverse event prediction',
+        'Biomarker discovery',
+        'Personalized medicine algorithms'
+      ],
+      pricing: '$15,000 – $100,000 setup',
+      perUnit: 'Custom pricing based on research scope',
+      timeline: '12–24 weeks',
+      benefits: [
+        '50% faster drug discovery',
+        'Improved clinical trial success',
+        'Reduced research costs',
+        'Enhanced patient outcomes'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Threat Intelligence Platform',
+      description: 'Advanced threat detection and intelligence with automated incident response and security orchestration.',
+      features: [
+        'Real-time threat detection',
+        'Automated incident response',
+        'Threat intelligence correlation',
+        'Security orchestration and automation',
+        'Behavioral anomaly detection',
+        'Predictive threat modeling'
+      ],
+      pricing: '$10,000 – $75,000 setup',
+      perUnit: '$0.10 – $1.00 per event',
+      timeline: '8–16 weeks',
+      benefits: [
+        '99.9% threat detection accuracy',
+        'Automated security response',
+        'Reduced false positives',
+        'Enhanced security posture'
+      ]
+    },
+    {
+      icon: Mic,
+      name: 'AI-Powered Voice Analytics & Insights',
+      description: 'Advanced voice analysis for customer service optimization, sentiment analysis, and quality assurance.',
+      features: [
+        'Real-time voice sentiment analysis',
+        'Customer service quality scoring',
+        'Voice biometric authentication',
+        'Conversation analytics and insights',
+        'Automated call routing',
+        'Performance coaching recommendations'
+      ],
+      pricing: '$4,000 – $30,000 setup',
+      perUnit: '$0.02 – $0.20 per minute',
+      timeline: '4–8 weeks',
+      benefits: [
+        '40% improvement in customer satisfaction',
+        'Automated quality monitoring',
+        'Enhanced security with voice biometrics',
+        'Data-driven service optimization'
+      ]
+    },
+    {
+      icon: Code,
+      name: 'AI-Powered Code Generation & Optimization',
+      description: 'Intelligent code generation, optimization, and automated software development assistance.',
+      features: [
+        'Automated code generation',
+        'Code optimization and refactoring',
+        'Bug detection and fixing',
+        'Performance optimization',
+        'Code documentation generation',
+        'Testing automation'
+      ],
+      pricing: '$6,000 – $40,000 setup',
+      perUnit: '$0.01 – $0.10 per line of code',
+      timeline: '6–12 weeks',
+      benefits: [
+        '60% faster development cycles',
+        'Improved code quality',
+        'Automated testing and optimization',
+        'Reduced development costs'
+      ]
+    },
+    {
+      icon: BarChart3,
+      name: 'AI-Powered Financial Risk Management',
+      description: 'Advanced financial risk assessment, credit scoring, and automated risk monitoring systems.',
+      features: [
+        'Real-time risk assessment',
+        'Credit scoring and analysis',
+        'Market risk modeling',
+        'Fraud detection and prevention',
+        'Regulatory compliance monitoring',
+        'Automated risk reporting'
+      ],
+      pricing: '$8,000 – $50,000 setup',
+      perUnit: '$0.05 – $0.50 per assessment',
+      timeline: '8–16 weeks',
+      benefits: [
+        '95% accuracy in risk assessment',
+        'Automated risk monitoring',
+        'Reduced financial losses',
+        'Improved compliance management'
+      ]
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Talent Acquisition & HR Analytics',
+      description: 'Intelligent recruitment, candidate screening, and HR analytics for optimized talent management.',
+      features: [
+        'Automated candidate screening',
+        'Skills assessment and matching',
+        'Predictive hiring analytics',
+        'Employee performance prediction',
+        'Retention risk analysis',
+        'Diversity and inclusion optimization'
+      ],
+      pricing: '$5,000 – $35,000 setup',
+      perUnit: '$0.10 – $1.00 per candidate',
+      timeline: '6–12 weeks',
+      benefits: [
+        '50% faster hiring process',
+        'Improved candidate quality',
+        'Reduced turnover rates',
+        'Data-driven HR decisions'
+      ]
+    },
+    {
+      icon: Globe,
+      name: 'AI-Powered Climate & Environmental Analytics',
+      description: 'Environmental monitoring, climate prediction, and sustainability analytics using advanced AI models.',
+      features: [
+        'Climate change prediction',
+        'Environmental impact assessment',
+        'Carbon footprint optimization',
+        'Renewable energy forecasting',
+        'Ecosystem monitoring',
+        'Sustainability reporting automation'
+      ],
+      pricing: '$7,000 – $45,000 setup',
+      perUnit: 'Custom pricing based on data volume',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Accurate climate predictions',
+        'Optimized environmental strategies',
+        'Automated sustainability reporting',
+        'Improved environmental compliance'
       ]
     }
   ];
