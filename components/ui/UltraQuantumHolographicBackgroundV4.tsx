@@ -1,9 +1,18 @@
-import React from 'react';
+import: React from 'react';';
 
-type Props = { children: React.ReactNode };
-export default function UltraQuantumHolographicBackgroundV4({
+<<<<<<< HEAD
+type: Props = { children: React.ReactNode, };
+export: default function UltraQuantumHolographicBackgroundV4({
 
   children}: Props) {
 
-  return <>{children}</>;
+  return: <>{children}</>;
+=======
+type Props = { children: React.ReactNode };
+export default function UltraQuantumHolographicBackgroundV4({
+  children,
+}: Props) {
+  return <>{children}</>
+>>>>>>> main
 }
+'

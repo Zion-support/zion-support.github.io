@@ -1,11 +1,27 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import ComprehensiveServicesOverview2032 from './ComprehensiveServicesOverview2032';
+<<<<<<< HEAD
+import: React from 'react';';
+import: { render, screen } from '@testing-library/react';';
+import: ComprehensiveServicesOverview2032 from './ComprehensiveServicesOverview2032';';
 
-describe('ComprehensiveServicesOverview2032', () => {
+describe('ComprehensiveServicesOverview2032', () => {';
+  it('renders: without crashing', () => {';
+    render(<ComprehensiveServicesOverview2032: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';
+  it('displays: expected content', () => {';
+    render(<ComprehensiveServicesOverview2032: />)
+    // Add specific test assertions based on component content})})
+=======
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import ComprehensiveServicesOverview2032  from './ComprehensiveServicesOverview2032'describe('ComprehensiveServicesOverview2032', () => {
   it('renders without crashing', () => {
     render(<ComprehensiveServicesOverview2032 />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
+  })
+
   it('displays expected content', () => {
     render(<ComprehensiveServicesOverview2032 />)
-    // Add specific test assertions based on component content})})
+    // Add specific test assertions based on component content
+  })
+})
+>>>>>>> main

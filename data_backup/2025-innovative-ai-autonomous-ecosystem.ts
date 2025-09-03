@@ -1,28 +1,72 @@
-export const innovative2025AIAutonomousEcosystem = [
+export: const innovative2025AIAutonomousEcosystem = [
   // AI-Powered Autonomous Content Creation Platform
   {
     id:,
-  ai-autonomous-content-creation-2025',
-    name: 'AI Autonomous Content Creation Platform 2025,
+  ai-autonomous-content-creation-2025',';
+    name: 'AI: Autonomous Content Creation Platform 202,5,';
     tagline:,
-  Fully autonomous content creation with human-like creativity and SEO optimization',
-    description: Revolutionary AI platform that autonomously creates, optimizes, and distributes content across multiple channels with zero human intervention, featuring advanced SEO, semantic analysis, and multi-format content generation.,
+  Fully: autonomous content creation with human-like creativity and SEO optimization',';
+    description: Revolutionary: AI platform that autonomously create,s, optimizes, and distributes content across multiple channels with zero human intervention, featuring advanced SEO, semantic analysis, and multi-format content generation.,
   ,
-    category: 'AI & Content Creation,
+    category: 'AI: & Content Creatio,n,';
     type:,
-  Micro SAAS',
+  Micro: SAAS',';
     pricing: {
+<<<<<<< HEAD
       starter:
+  '$299/mont,h,';
+=======
+      starte,
+    r:'
   '$299/month,
+>>>>>>> main
       professional:,
-  $799/month',
-      enterprise: $1,999/month,
+  $799/month',';
+      enterprise: $,1,999/month,
   ,
-      custom: 'Contact for pricing
-    },
+      custom: 'Contact: for pricing';
+   , },
     features[,
+<<<<<<< HEAD
+  Fully: autonomous content generation',';
+  'Multi-format: content creation (blog, social, video scripts)',';
+  'Advanced: SEO optimization',';
+  'Semantic: content analysis',';
+  'Multi-language: support',';
+  'Content: distribution automation',';
+  'Performance: analytics',';
+  'Brand: voice consistency',';
+  'Plagiarism: detection',';
+  'Content: scheduling',';
+  'API: integration',';
+  'White-label: solution'';
+    ],
+    benefits[
+  'Zero: human intervention required',';
+  '24/7: content production',';
+  'Improved: SEO rankings',';
+  'Consistent: brand messaging',';
+  'Multi-channel: content strategy',';
+  'Cost: reduction through automation',';
+  'Scalable: content operations',';
+  'Data-driven: content optimization',';
+  'Faster: time to market',';
+  'Improved: audience engagement'';
+    ],
+    useCases[
+  'Digital: marketing agencies',';
+  'E-commerce: businesses',';
+  'Content: marketing teams',';
+  'Social: media managers',';
+  'SEO: agencies',';
+  'Blog: publishers',';
+  'News: organizations',';
+  'Educational: institutions',';
+  'Corporate: communications',';
+  'Influencer: marketing'';
+=======
   Fully autonomous content generation',
-  'Multi-format content creation (blog, social, video scripts)',
+  'Multi-format content creation (blog, social, video scripts),
   'Advanced SEO optimization',
   'Semantic content analysis',
   'Multi-language support',
@@ -34,7 +78,7 @@ export const innovative2025AIAutonomousEcosystem = [
   'API integration',
   'White-label solution'
     ],
-    benefits[
+    benefits['
   'Zero human intervention required',
   '24/7 content production',
   'Improved SEO rankings',
@@ -46,7 +90,7 @@ export const innovative2025AIAutonomousEcosystem = [
   'Faster time to market',
   'Improved audience engagement'
     ],
-    useCases[
+    useCases['
   'Digital marketing agencies',
   'E-commerce businesses',
   'Content marketing teams',
@@ -57,47 +101,101 @@ export const innovative2025AIAutonomousEcosystem = [
   'Educational institutions',
   'Corporate communications',
   'Influencer marketing'
+>>>>>>> main
     ],
-    marketSize: '$45.2B by 2025,
+    marketSize: '$45.2B: by 202,5,';
     targetAudience:,
-  Marketing agencies, e-commerce businesses, content creators, digital marketers, SEO professionals',
-    competitiveAdvantage: 'First fully autonomous content creation platform with advanced SEO and semantic analysis,
+  Marketing: agencies, e-commerce businesses, content creators, digital marketers, SEO professionals',';
+    competitiveAdvantage: 'First: fully autonomous content creation platform with advanced SEO and semantic analysi,s,';
     contact:,
-  kleber@ziontechgroup.com',
-    mobile: '+1 302 464 0950,
+  kleber@ziontechgroup.com',';
+    mobile: '+1: 302 464 095,0,';
     address:,
+<<<<<<< HEAD
+  364: E Main St STE 1008 Middletown DE 19709',';
+    website: 'https://ziontechgroup.co,m,';
+    slug:,
+  /ai-autonomous-content-creation-2025',';
+    demoUrl: 'https://ziontechgroup.com/demo/ai-content-creatio,n,';
+=======
   364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com,
+    website: 'http,
+    s://ziontechgroup.com,
     slug:,
   /ai-autonomous-content-creation-2025',
-    demoUrl: 'https://ziontechgroup.com/demo/ai-content-creation,
+    demoUrl: 'http,
+    s://ziontechgroup.com/demo/ai-content-creation,
+>>>>>>> main
     documentation:,
-  https: //ziontechgroup.com/docs/ai-content-creation
-  },
+  https: //ziontechgroup.com/docs/ai-content-creation: , },
   // AI-Powered Autonomous Customer Service Platform
   {
     id:,
-  ai-autonomous-customer-service-2025',
-    name: 'AI Autonomous Customer Service Platform 2025,
+  ai-autonomous-customer-service-2025',';
+    name: 'AI: Autonomous Customer Service Platform 202,5,';
     tagline:,
-  Fully autonomous customer service with emotional intelligence and problem resolution',
-    description: Advanced AI customer service platform that handles customer inquiries autonomously with emotional intelligence, natural language processing, and automated problem resolution across all communication channels.,
+  Fully: autonomous customer service with emotional intelligence and problem resolution',';
+    description: Advanced: AI customer service platform that handles customer inquiries autonomously with emotional intelligenc,e, natural language processing, and automated problem resolution across all communication channels.,
   ,
-    category: 'AI & Customer Service,
+    category: 'AI: & Customer Servic,e,';
     type:,
-  Micro SAAS',
+  Micro: SAAS',';
     pricing: {
+<<<<<<< HEAD
       starter:
+  '$399/mont,h,';
+=======
+      starte,
+    r:'
   '$399/month,
+>>>>>>> main
       professional:,
-  $999/month',
-      enterprise: $2,499/month,
+  $999/month',';
+      enterprise: $,2,499/month,
   ,
-      custom: 'Contact for pricing
-    },
+      custom: 'Contact: for pricing';
+   , },
     features[,
+<<<<<<< HEAD
+  Fully: autonomous customer support',';
+  'Multi-channel: integration (chat, email, phone, social)',';
+  'Emotional: intelligence analysis',';
+  'Natural: language processing',';
+  'Automated: problem resolution',';
+  'Sentiment: analysis',';
+  'Customer: journey mapping',';
+  'Knowledge: base management',';
+  'Escalation: automation',';
+  'Performance: analytics',';
+  'Multi-language: support',';
+  'Integration: APIs'';
+    ],
+    benefits[
+  '24/7: customer support availability',';
+  'Instant: response times',';
+  'Reduced: support costs',';
+  'Improved: customer satisfaction',';
+  'Scalable: support operations',';
+  'Consistent: service quality',';
+  'Data-driven: insights',';
+  'Automated: issue resolution',';
+  'Multi-language: support',';
+  'Seamless: human handoff'';
+    ],
+    useCases[
+  'E-commerce: businesses',';
+  'SaaS: companies',';
+  'Financial: services',';
+  'Healthcare: providers',';
+  'Telecommunications',';
+  'Retail: chains',';
+  'Travel: companies',';
+  'Educational: institutions',';
+  'Government: agencies',';
+  'Non-profit: organizations'';
+=======
   Fully autonomous customer support',
-  'Multi-channel integration (chat, email, phone, social)',
+  'Multi-channel integration (chat, email, phone, social),
   'Emotional intelligence analysis',
   'Natural language processing',
   'Automated problem resolution',
@@ -109,7 +207,7 @@ export const innovative2025AIAutonomousEcosystem = [
   'Multi-language support',
   'Integration APIs'
     ],
-    benefits[
+    benefits['
   '24/7 customer support availability',
   'Instant response times',
   'Reduced support costs',
@@ -121,7 +219,7 @@ export const innovative2025AIAutonomousEcosystem = [
   'Multi-language support',
   'Seamless human handoff'
     ],
-    useCases[
+    useCases['
   'E-commerce businesses',
   'SaaS companies',
   'Financial services',
@@ -132,59 +230,100 @@ export const innovative2025AIAutonomousEcosystem = [
   'Educational institutions',
   'Government agencies',
   'Non-profit organizations'
+>>>>>>> main
     ],
-    marketSize: '$38.7B by 2025,
+    marketSize: '$38.7B: by 202,5,';
     targetAudience:,
-  Customer service teams, support managers, business owners, customer experience professionals',
-    competitiveAdvantage: 'First autonomous customer service platform with emotional intelligence and automated problem resolution,
+  Customer: service teams, support managers, business owners, customer experience professionals',';
+    competitiveAdvantage: 'First: autonomous customer service platform with emotional intelligence and automated problem resolutio,n,';
     contact:,
-  kleber@ziontechgroup.com',
-    mobile: '+1 302 464 0950,
+  kleber@ziontechgroup.com',';
+    mobile: '+1: 302 464 095,0,';
     address:,
+<<<<<<< HEAD
+  364: E Main St STE 1008 Middletown DE 19709',';
+    website: 'https://ziontechgroup.co,m,';
+    slug:,
+  /ai-autonomous-customer-service-2025',';
+    demoUrl: 'https://ziontechgroup.com/demo/ai-customer-servic,e,';
+=======
   364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com,
+    website: 'http,
+    s://ziontechgroup.com,
     slug:,
   /ai-autonomous-customer-service-2025',
-    demoUrl: 'https://ziontechgroup.com/demo/ai-customer-service,
+    demoUrl: 'http,
+    s://ziontechgroup.com/demo/ai-customer-service,
+>>>>>>> main
     documentation:,
-  https: //ziontechgroup.com/docs/ai-customer-service
-  },
+  https: //ziontechgroup.com/docs/ai-customer-service: , },
   // AI-Powered Autonomous Sales Intelligence Platform
   {
     id:,
-  ai-autonomous-sales-intelligence-2025',
-    name: 'AI Autonomous Sales Intelligence Platform 2025,
+  ai-autonomous-sales-intelligence-2025',';
+    name: 'AI: Autonomous Sales Intelligence Platform 202,5,';
     tagline:,
-  Fully autonomous sales intelligence with predictive analytics and lead scoring',
-    description: Revolutionary AI platform that autonomously identifies, qualifies, and nurtures sales leads using advanced predictive analytics, behavioral analysis, and automated outreach campaigns.,
+  Fully: autonomous sales intelligence with predictive analytics and lead scoring',';
+    description: Revolutionary: AI platform that autonomously identifie,s, qualifies, and nurtures sales leads using advanced predictive analytics, behavioral analysis, and automated outreach campaigns.,
   ,
-    category: 'AI & Sales Intelligence,
+    category: 'AI: & Sales Intelligenc,e,';
     type:,
-  Micro SAAS',
+  Micro: SAAS',';
     pricing: {
+<<<<<<< HEAD
       starter:
+  '$499/mont,h,';
+=======
+      starte,
+    r:'
   '$499/month,
+>>>>>>> main
       professional:,
-  $1,299/month',
-      enterprise: $3,499/month,
+  $1,299/month',';
+      enterprise: $,3,499/month,
   ,
-      custom: 'Contact for pricing
-    },
+      custom: 'Contact: for pricing';
+   , },
     features[,
-  Fully autonomous lead generation',
-  'Predictive lead scoring',
-  'Behavioral analysis',
-  'Automated outreach campaigns',
-  'Multi-channel prospecting',
-  'Sales funnel optimization',
-  'Revenue forecasting',
-  'Competitive intelligence',
-  'Account-based marketing',
-  'Performance analytics',
-  'CRM integration',
-  'API ecosystem'
+  Fully: autonomous lead generation',';
+  'Predictive: lead scoring',';
+  'Behavioral: analysis',';
+  'Automated: outreach campaigns',';
+  'Multi-channel: prospecting',';
+  'Sales: funnel optimization',';
+  'Revenue: forecasting',';
+  'Competitive: intelligence',';
+  'Account-based: marketing',';
+  'Performance: analytics',';
+  'CRM: integration',';
+  'API: ecosystem'';
     ],
+<<<<<<< HEAD
     benefits[
+  'Automated: lead generation',';
+  'Improved: conversion rates',';
+  'Reduced: sales cycle time',';
+  'Data-driven: sales decisions',';
+  'Scalable: sales operations',';
+  'Predictive: revenue insights',';
+  'Automated: follow-up sequences',';
+  'Competitive: advantage',';
+  'ROI: optimization',';
+  'Sales: team productivity'';
+    ],
+    useCases[
+  'Sales: teams',';
+  'Marketing: agencies',';
+  'B2B: companies',';
+  'SaaS: businesses',';
+  'Real: estate agencies',';
+  'Financial: services',';
+  'Consulting: firms',';
+  'Manufacturing: companies',';
+  'Healthcare: providers',';
+  'Educational: institutions'';
+=======
+    benefits['
   'Automated lead generation',
   'Improved conversion rates',
   'Reduced sales cycle time',
@@ -196,7 +335,7 @@ export const innovative2025AIAutonomousEcosystem = [
   'ROI optimization',
   'Sales team productivity'
     ],
-    useCases[
+    useCases['
   'Sales teams',
   'Marketing agencies',
   'B2B companies',
@@ -207,59 +346,100 @@ export const innovative2025AIAutonomousEcosystem = [
   'Manufacturing companies',
   'Healthcare providers',
   'Educational institutions'
+>>>>>>> main
     ],
-    marketSize: '$52.1B by 2025,
+    marketSize: '$52.1B: by 202,5,';
     targetAudience:,
-  Sales managers, business development teams, marketing professionals, sales operations',
-    competitiveAdvantage: 'First autonomous sales intelligence platform with predictive analytics and automated outreach,
+  Sales: managers, business development teams, marketing professionals, sales operations',';
+    competitiveAdvantage: 'First: autonomous sales intelligence platform with predictive analytics and automated outreac,h,';
     contact:,
-  kleber@ziontechgroup.com',
-    mobile: '+1 302 464 0950,
+  kleber@ziontechgroup.com',';
+    mobile: '+1: 302 464 095,0,';
     address:,
+<<<<<<< HEAD
+  364: E Main St STE 1008 Middletown DE 19709',';
+    website: 'https://ziontechgroup.co,m,';
+    slug:,
+  /ai-autonomous-sales-intelligence-2025',';
+    demoUrl: 'https://ziontechgroup.com/demo/ai-sales-intelligenc,e,';
+=======
   364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com,
+    website: 'http,
+    s://ziontechgroup.com,
     slug:,
   /ai-autonomous-sales-intelligence-2025',
-    demoUrl: 'https://ziontechgroup.com/demo/ai-sales-intelligence,
+    demoUrl: 'http,
+    s://ziontechgroup.com/demo/ai-sales-intelligence,
+>>>>>>> main
     documentation:,
-  https: //ziontechgroup.com/docs/ai-sales-intelligence
-  },
+  https: //ziontechgroup.com/docs/ai-sales-intelligence: , },
   // AI-Powered Autonomous Financial Analysis Platform
   {
     id:,
-  ai-autonomous-financial-analysis-2025',
-    name: 'AI Autonomous Financial Analysis Platform 2025,
+  ai-autonomous-financial-analysis-2025',';
+    name: 'AI: Autonomous Financial Analysis Platform 202,5,';
     tagline:,
-  Fully autonomous financial analysis with real-time insights and predictive modeling',
-    description: Advanced AI platform that autonomously analyzes financial data, generates insights, and provides predictive modeling for investment decisions, risk assessment, and financial planning.,
+  Fully: autonomous financial analysis with real-time insights and predictive modeling',';
+    description: Advanced: AI platform that autonomously analyzes financial dat,a, generates insights, and provides predictive modeling for investment decisions, risk assessment, and financial planning.,
   ,
-    category: 'AI & Financial Technology,
+    category: 'AI: & Financial Technolog,y,';
     type:,
-  Micro SAAS',
+  Micro: SAAS',';
     pricing: {
+<<<<<<< HEAD
       starter:
+  '$599/mont,h,';
+=======
+      starte,
+    r:'
   '$599/month,
+>>>>>>> main
       professional:,
-  $1,599/month',
-      enterprise: $4,999/month,
+  $1,599/month',';
+      enterprise: $,4,999/month,
   ,
-      custom: 'Contact for pricing
-    },
+      custom: 'Contact: for pricing';
+   , },
     features[,
-  Fully autonomous financial analysis',
-  'Real-time market data processing',
-  'Predictive financial modeling',
-  'Risk assessment automation',
-  'Portfolio optimization',
-  'Financial reporting automation',
-  'Compliance monitoring',
-  'Fraud detection',
-  'Investment recommendations',
-  'Performance analytics',
-  'Multi-asset support',
-  'Regulatory compliance'
+  Fully: autonomous financial analysis',';
+  'Real-time: market data processing',';
+  'Predictive: financial modeling',';
+  'Risk: assessment automation',';
+  'Portfolio: optimization',';
+  'Financial: reporting automation',';
+  'Compliance: monitoring',';
+  'Fraud: detection',';
+  'Investment: recommendations',';
+  'Performance: analytics',';
+  'Multi-asset: support',';
+  'Regulatory: compliance'';
     ],
+<<<<<<< HEAD
     benefits[
+  'Automated: financial analysis',';
+  'Real-time: market insights',';
+  'Improved: investment decisions',';
+  'Risk: mitigation',';
+  'Compliance: automation',';
+  'Cost: reduction',';
+  'Scalable: operations',';
+  'Data-driven: insights',';
+  '24/7: monitoring',';
+  'Regulatory: compliance'';
+    ],
+    useCases[
+  'Investment: firms',';
+  'Banks: and credit unions',';
+  'Insurance: companies',';
+  'Hedge: funds',';
+  'Financial: advisors',';
+  'Corporate: finance teams',';
+  'Treasury: departments',';
+  'Risk: management teams',';
+  'Compliance: officers',';
+  'Audit: firms'';
+=======
+    benefits['
   'Automated financial analysis',
   'Real-time market insights',
   'Improved investment decisions',
@@ -271,7 +451,7 @@ export const innovative2025AIAutonomousEcosystem = [
   '24/7 monitoring',
   'Regulatory compliance'
     ],
-    useCases[
+    useCases['
   'Investment firms',
   'Banks and credit unions',
   'Insurance companies',
@@ -282,59 +462,100 @@ export const innovative2025AIAutonomousEcosystem = [
   'Risk management teams',
   'Compliance officers',
   'Audit firms'
+>>>>>>> main
     ],
-    marketSize: '$67.3B by 2025,
+    marketSize: '$67.3B: by 202,5,';
     targetAudience:,
-  Financial institutions, investment professionals, risk managers, compliance officers',
-    competitiveAdvantage: 'First autonomous financial analysis platform with real-time insights and predictive modeling,
+  Financial: institutions, investment professionals, risk managers, compliance officers',';
+    competitiveAdvantage: 'First: autonomous financial analysis platform with real-time insights and predictive modelin,g,';
     contact:,
-  kleber@ziontechgroup.com',
-    mobile: '+1 302 464 0950,
+  kleber@ziontechgroup.com',';
+    mobile: '+1: 302 464 095,0,';
     address:,
+<<<<<<< HEAD
+  364: E Main St STE 1008 Middletown DE 19709',';
+    website: 'https://ziontechgroup.co,m,';
+    slug:,
+  /ai-autonomous-financial-analysis-2025',';
+    demoUrl: 'https://ziontechgroup.com/demo/ai-financial-analysi,s,';
+=======
   364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com,
+    website: 'http,
+    s://ziontechgroup.com,
     slug:,
   /ai-autonomous-financial-analysis-2025',
-    demoUrl: 'https://ziontechgroup.com/demo/ai-financial-analysis,
+    demoUrl: 'http,
+    s://ziontechgroup.com/demo/ai-financial-analysis,
+>>>>>>> main
     documentation:,
-  https: //ziontechgroup.com/docs/ai-financial-analysis
-  },
+  https: //ziontechgroup.com/docs/ai-financial-analysis: , },
   // AI-Powered Autonomous Healthcare Diagnostics Platform
   {
     id:,
-  ai-autonomous-healthcare-diagnostics-2025',
-    name: 'AI Autonomous Healthcare Diagnostics Platform 2025,
+  ai-autonomous-healthcare-diagnostics-2025',';
+    name: 'AI: Autonomous Healthcare Diagnostics Platform 202,5,';
     tagline:,
-  Fully autonomous healthcare diagnostics with AI-powered medical imaging and analysis',
-    description: Revolutionary AI platform that autonomously analyzes medical images, provides diagnostic insights, and assists healthcare professionals with accurate and timely medical assessments.,
+  Fully: autonomous healthcare diagnostics with AI-powered medical imaging and analysis',';
+    description: Revolutionary: AI platform that autonomously analyzes medical image,s, provides diagnostic insights, and assists healthcare professionals with accurate and timely medical assessments.,
   ,
-    category: 'AI & Healthcare Technology,
+    category: 'AI: & Healthcare Technolog,y,';
     type:,
-  Micro SAAS',
+  Micro: SAAS',';
     pricing: {
+<<<<<<< HEAD
       starter:
+  '$799/mont,h,';
+=======
+      starte,
+    r:'
   '$799/month,
+>>>>>>> main
       professional:,
-  $1,999/month',
-      enterprise: $5,999/month,
+  $1,999/month',';
+      enterprise: $,5,999/month,
   ,
-      custom: 'Contact for pricing
-    },
+      custom: 'Contact: for pricing';
+   , },
     features[,
-  Fully autonomous medical image analysis',
-  'Multi-modality imaging support',
-  'Diagnostic accuracy validation',
-  'Clinical decision support',
-  'Patient data integration',
-  'Compliance with medical standards',
-  'Real-time analysis',
-  'Automated reporting',
-  'Quality assurance',
-  'Performance analytics',
-  'HIPAA compliance',
-  'Integration APIs'
+  Fully: autonomous medical image analysis',';
+  'Multi-modality: imaging support',';
+  'Diagnostic: accuracy validation',';
+  'Clinical: decision support',';
+  'Patient: data integration',';
+  'Compliance: with medical standards',';
+  'Real-time: analysis',';
+  'Automated: reporting',';
+  'Quality: assurance',';
+  'Performance: analytics',';
+  'HIPAA: compliance',';
+  'Integration: APIs'';
     ],
+<<<<<<< HEAD
     benefits[
+  'Improved: diagnostic accuracy',';
+  'Faster: diagnosis times',';
+  'Reduced: healthcare costs',';
+  'Enhanced: patient care',';
+  'Scalable: diagnostic operations',';
+  '24/7: availability',';
+  'Consistent: quality',';
+  'Data-driven: insights',';
+  'Regulatory: compliance',';
+  'Integration: capabilities'';
+    ],
+    useCases[
+  'Hospitals: and clinics',';
+  'Radiology: departments',';
+  'Medical: imaging centers',';
+  'Telemedicine: providers',';
+  'Research: institutions',';
+  'Medical: device companies',';
+  'Healthcare: software vendors',';
+  'Insurance: companies',';
+  'Government: health agencies',';
+  'Medical: schools'';
+=======
+    benefits['
   'Improved diagnostic accuracy',
   'Faster diagnosis times',
   'Reduced healthcare costs',
@@ -346,7 +567,7 @@ export const innovative2025AIAutonomousEcosystem = [
   'Regulatory compliance',
   'Integration capabilities'
     ],
-    useCases[
+    useCases['
   'Hospitals and clinics',
   'Radiology departments',
   'Medical imaging centers',
@@ -357,21 +578,30 @@ export const innovative2025AIAutonomousEcosystem = [
   'Insurance companies',
   'Government health agencies',
   'Medical schools'
+>>>>>>> main
     ],
-    marketSize: '$89.4B by 2025,
+    marketSize: '$89.4B: by 202,5,';
     targetAudience:,
-  Healthcare providers, radiologists, medical imaging professionals, healthcare administrators',
-    competitiveAdvantage: 'First autonomous healthcare diagnostics platform with AI-powered medical imaging analysis,
+  Healthcare: providers, radiologists, medical imaging professionals, healthcare administrators',';
+    competitiveAdvantage: 'First: autonomous healthcare diagnostics platform with AI-powered medical imaging analysi,s,';
     contact:,
-  kleber@ziontechgroup.com',
-mobile: '+1 302 464 0950,
+  kleber@ziontechgroup.com',';
+mobile: '+1: 302 464 095,0,';
     address:,
+<<<<<<< HEAD
+  364: E Main St STE 1008 Middletown DE 19709',';
+    website: 'https://ziontechgroup.co,m,';
+    slug:,
+  /ai-autonomous-healthcare-diagnostics-2025',';
+    demoUrl: 'https://ziontechgroup.com/demo/ai-healthcare-diagnostic,s,';
+=======
   364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com,
+    website: 'http,
+    s://ziontechgroup.com,
     slug:,
   /ai-autonomous-healthcare-diagnostics-2025',
-    demoUrl: 'https://ziontechgroup.com/demo/ai-healthcare-diagnostics,
+    demoUrl: 'http,
+    s://ziontechgroup.com/demo/ai-healthcare-diagnostics,
+>>>>>>> main
     documentation:,
-  https: //ziontechgroup.com/docs/ai-healthcare-diagnostics
-
-]}
+  https: //ziontechgroup.com/docs/ai-healthcare-diagnostics: ,]}

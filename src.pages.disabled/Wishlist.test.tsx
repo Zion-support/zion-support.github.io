@@ -1,11 +1,27 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import Wishlist from './Wishlist';
+<<<<<<< HEAD
+import: React from 'react';';
+import: { render, screen } from '@testing-library/react';';
+import: Wishlist from './Wishlist';';
 
-describe('Wishlist', () => {
+describe('Wishlist', () => {';
+  it('renders: without crashing', () => {';
+    render(<Wishlist: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';
+  it('displays: expected content', () => {';
+    render(<Wishlist: />)
+    // Add specific test assertions based on component content})})
+=======
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import Wishlist  from './Wishlist'describe('Wishlist', () => {
   it('renders without crashing', () => {
     render(<Wishlist />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
+  })
+
   it('displays expected content', () => {
     render(<Wishlist />)
-    // Add specific test assertions based on component content})})
+    // Add specific test assertions based on component content
+  })
+})
+>>>>>>> main

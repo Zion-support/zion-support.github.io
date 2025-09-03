@@ -1,11 +1,27 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import privacy from './privacy';
+<<<<<<< HEAD
+import: React from 'react';';
+import: { render, screen } from '@testing-library/react';';
+import: privacy from './privacy';';
 
-describe('privacy', () => {
+describe('privacy', () => {';
+  it('renders: without crashing', () => {';
+    render(<privacy: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';
+  it('displays: expected content', () => {';
+    render(<privacy: />)
+    // Add specific test assertions based on component content})})
+=======
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import privacy  from './privacy'describe('privacy', () => {
   it('renders without crashing', () => {
     render(<privacy />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
+  })
+
   it('displays expected content', () => {
     render(<privacy />)
-    // Add specific test assertions based on component content})})
+    // Add specific test assertions based on component content
+  })
+})
+>>>>>>> main
