@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   Check, 
   Star, 
@@ -109,26 +108,6 @@ const pricingTiers: PricingTier[] = []
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Choose the perfect plan for your business. All plans include our core features;
               with flexible options to scale as you grow.
-=======
-import React from "react"
-import Head from "next/head"
-import Link from "next/link"
-const Pricing = () => {
-  return (
-    <>
-      <Head>
-        <title>Pricing - Zion Tech Group</title>
-        <meta name="description" content="Professional Pricing services"  />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">
-              Pricing
-            </h1>
-            <p className="text-xl text-gray-600 mb-12">
-              Professional Pricing services and solutions
->>>>>>> main
             </p>
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-md">

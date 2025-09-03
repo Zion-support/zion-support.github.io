@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Comprehensive Pricing Guide 2030 - Zion Tech Group
 // Complete pricing information for all innovative services
 
@@ -10,7 +8,6 @@ export interface PricingTier {
   features: string[];
   recommended: boolean;
   popular?: boolean}
-;
 export interface ServicePricing {
   serviceId: string;
   serviceName: string;
@@ -351,8 +348,6 @@ export const PRICING_ANALYSIS_2030 = {
   priceRange: {
     min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
   max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
-  ;;
-;
 },;
   categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce(acc: unknown, service: unknown {;
     if (!acc[service.category]) {;
@@ -381,13 +376,9 @@ export const PAYMENT_OPTIONS_2030 = {
     "White-label solutions","
     "Dedicated support","
     "On-premise deployment","
-    "Custom integrations",;
-  ;
-  ;
+    "Custom integrations",
   ;"
   "SLA guarantees";
   ];
-;
 };
 '"
->>>>>>> main

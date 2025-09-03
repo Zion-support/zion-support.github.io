@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from "react";""""
 import { useParams, Link } from "react-router-dom";""""
 import SEO from "@/components/SEO";""""
@@ -430,5 +429,3 @@ export { ForumPostPage };
 export { ForumPostPage };
 
 export { ForumPostPage };
-=======
->>>>>>> main

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 :src/store/wishlistSlice.tsx
 
 interface WishlistState {
@@ -51,4 +49,3 @@ const wishlistSlice:  createSlice({;
 export const { addToWishlist, removeFromWishlist, clearWishlist } = wishlistSlice.actions;
 export { wishlistSlice };
 export default wishlistSlice.reducer;
->>>>>>> main

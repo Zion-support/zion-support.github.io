@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { api, ApiResponse } from '@/services / api';
 export default function Page() {
@@ -178,9 +175,3 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
     </div>;) };
 
 export default ApiDemo}}}}}}}'"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

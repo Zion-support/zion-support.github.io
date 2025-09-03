@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import AIChatbotSystem from './AIChatbotSystem;
 
 describe('AIChatbotSystem', () => {
@@ -17,5 +16,3 @@ describe('AIChatbotSystem', () => {
 // Add interaction tests based on component functionality
   });
 });
-=======
->>>>>>> main

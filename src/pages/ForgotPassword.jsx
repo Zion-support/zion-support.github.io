@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from "react";""""
 import { Link } from "react-router-dom";""""
 import { z } from "zod";""""
@@ -144,5 +143,3 @@ export { ForgotPassword };
 export { ForgotPassword };
 
 export { ForgotPassword };
-=======
->>>>>>> main

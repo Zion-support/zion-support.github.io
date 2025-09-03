@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 interface HeroFeature {
 icon: React.ComponentType<{ className?: string}>;
@@ -84,4 +82,3 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
   )};
 
 export default HeroFeatures}}'"`
->>>>>>> main
