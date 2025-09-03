@@ -17,6 +17,10 @@ const ServicesOverview = lazy(() => import('./pages/services-overview'));
 const AIContentGenerationSuite = lazy(() => import('./pages/services/ai-content-generation-suite'));
 const CloudMigrationServices = lazy(() => import('./pages/services/cloud-migration-services'));
 const SmartCRMPlatform = lazy(() => import('./pages/services/smart-crm-platform'));
+const AIEmailAutomationPlatform = lazy(() => import('./pages/services/ai-email-automation-platform'));
+const SmartSurveyAnalyticsPlatform = lazy(() => import('./pages/services/smart-survey-analytics-platform'));
+const ComprehensiveITSolutions = lazy(() => import('./pages/services/comprehensive-it-solutions'));
+const AdvancedAISolutions = lazy(() => import('./pages/services/advanced-ai-solutions'));
 
 // Simple Header component
 const Header = () => (
@@ -69,6 +73,10 @@ function App() {
             <Route path="/services/ai-content-generation-suite" element={<AIContentGenerationSuite />} />
             <Route path="/services/cloud-migration-services" element={<CloudMigrationServices />} />
             <Route path="/services/smart-crm-platform" element={<SmartCRMPlatform />} />
+            <Route path="/services/ai-email-automation-platform" element={<AIEmailAutomationPlatform />} />
+            <Route path="/services/smart-survey-analytics-platform" element={<SmartSurveyAnalyticsPlatform />} />
+            <Route path="/services/comprehensive-it-solutions" element={<ComprehensiveITSolutions />} />
+            <Route path="/services/advanced-ai-solutions" element={<AdvancedAISolutions />} />
             <Route path="*" element={<HomePage />} />
           </Routes>
         </Suspense>

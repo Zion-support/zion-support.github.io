@@ -108,39 +108,43 @@ const ServicesOverview = () => {
                   <Brain className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900">AI & Machine Learning</h3>
-                  <p className="text-sm text-gray-500">From $199/month</p>
+                  <h3 className="text-xl font-semibold text-gray-900">Advanced AI Solutions</h3>
+                  <p className="text-sm text-gray-500">From $1,999/month</p>
                 </div>
               </div>
-              <p className="text-gray-600 mb-4">Revolutionary AI solutions that transform business operations</p>
+              <p className="text-gray-600 mb-4">Cutting-edge AI solutions including business intelligence, automation, and customer experience</p>
               <div className="mb-4">
                 <h4 className="font-semibold text-gray-900 mb-2">Services:</h4>
                 <ul className="space-y-1">
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    AI Content Generation
+                    AI Business Intelligence
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    Customer Analytics
+                    Intelligent Automation
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    Workflow Automation
+                    AI Customer Experience
+                  </li>
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    AI Cybersecurity
                   </li>
                 </ul>
               </div>
               <div className="mb-4 p-3 bg-gray-50 rounded-lg">
                 <p className="text-sm text-gray-600">
-                  <span className="font-semibold">Market Price:</span> $299-1299/month
+                  <span className="font-semibold">Market Price:</span> $4,999-22,999/month
                 </p>
                 <p className="text-sm text-green-600 font-semibold">
-                  Save up to 40% with Zion Tech Group
+                  Save up to 44% with Zion Tech Group
                 </p>
               </div>
               <div className="flex flex-col gap-2">
                 <Link
-                  to="/services/ai-content-generation-suite"
+                  to="/services/advanced-ai-solutions"
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center flex items-center justify-center"
                 >
                   Learn More
@@ -171,39 +175,43 @@ const ServicesOverview = () => {
                   <Server className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900">IT Services</h3>
-                  <p className="text-sm text-gray-500">From $199/month</p>
+                  <h3 className="text-xl font-semibold text-gray-900">Comprehensive IT Solutions</h3>
+                  <p className="text-sm text-gray-500">From $999/month</p>
                 </div>
               </div>
-              <p className="text-gray-600 mb-4">Comprehensive IT services for modern businesses</p>
+              <p className="text-gray-600 mb-4">Complete IT services including cloud migration, cybersecurity, and infrastructure management</p>
               <div className="mb-4">
                 <h4 className="font-semibold text-gray-900 mb-2">Services:</h4>
                 <ul className="space-y-1">
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    Cloud Migration
+                    Cloud Migration & Management
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    DevOps Automation
+                    Cybersecurity & Compliance
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    Cybersecurity
+                    Infrastructure Management
+                  </li>
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    Database Administration
                   </li>
                 </ul>
               </div>
               <div className="mb-4 p-3 bg-gray-50 rounded-lg">
                 <p className="text-sm text-gray-600">
-                  <span className="font-semibold">Market Price:</span> $299-3999/month
+                  <span className="font-semibold">Market Price:</span> $2,999-15,999/month
                 </p>
                 <p className="text-sm text-green-600 font-semibold">
-                  Save up to 40% with Zion Tech Group
+                  Save up to 50% with Zion Tech Group
                 </p>
               </div>
               <div className="flex flex-col gap-2">
                 <Link
-                  to="/services/cloud-migration-services"
+                  to="/services/comprehensive-it-solutions"
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center flex items-center justify-center"
                 >
                   Learn More
@@ -267,6 +275,140 @@ const ServicesOverview = () => {
               <div className="flex flex-col gap-2">
                 <Link
                   to="/services/smart-crm-platform"
+                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center flex items-center justify-center"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+                <a
+                  href={`tel:${contactInfo.phone}`}
+                  className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-center flex items-center justify-center"
+                >
+                  <Phone className="w-4 h-4 mr-2" />
+                  Call Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* AI Email Automation */}
+          <div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+          >
+            <div className="h-2 bg-gradient-to-r from-blue-500 to-purple-600"></div>
+            <div className="p-6">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center mr-4">
+                  <Mail className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900">AI Email Automation</h3>
+                  <p className="text-sm text-gray-500">From $199/month</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">Revolutionary AI-powered email automation with intelligent responses and analytics</p>
+              <div className="mb-4">
+                <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
+                <ul className="space-y-1">
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    AI-Powered Email Analysis
+                  </li>
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    Automated Response Generation
+                  </li>
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    Email Analytics Dashboard
+                  </li>
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    Team Collaboration
+                  </li>
+                </ul>
+              </div>
+              <div className="mb-4 p-3 bg-gray-50 rounded-lg">
+                <p className="text-sm text-gray-600">
+                  <span className="font-semibold">Market Price:</span> $399-2,999/month
+                </p>
+                <p className="text-sm text-green-600 font-semibold">
+                  Save up to 50% with Zion Tech Group
+                </p>
+              </div>
+              <div className="flex flex-col gap-2">
+                <Link
+                  to="/services/ai-email-automation-platform"
+                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center flex items-center justify-center"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+                <a
+                  href={`tel:${contactInfo.phone}`}
+                  className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-center flex items-center justify-center"
+                >
+                  <Phone className="w-4 h-4 mr-2" />
+                  Call Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Smart Survey Analytics */}
+          <div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+          >
+            <div className="h-2 bg-gradient-to-r from-green-500 to-blue-600"></div>
+            <div className="p-6">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-green-500 to-blue-600 flex items-center justify-center mr-4">
+                  <BarChart3 className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900">Smart Survey Analytics</h3>
+                  <p className="text-sm text-gray-500">From $149/month</p>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4">AI-powered survey platform with advanced analytics and mobile-first design</p>
+              <div className="mb-4">
+                <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
+                <ul className="space-y-1">
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    AI-Powered Survey Design
+                  </li>
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    Mobile-First Experience
+                  </li>
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    Advanced Analytics Engine
+                  </li>
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    Audience Segmentation
+                  </li>
+                </ul>
+              </div>
+              <div className="mb-4 p-3 bg-gray-50 rounded-lg">
+                <p className="text-sm text-gray-600">
+                  <span className="font-semibold">Market Price:</span> $299-1,999/month
+                </p>
+                <p className="text-sm text-green-600 font-semibold">
+                  Save up to 50% with Zion Tech Group
+                </p>
+              </div>
+              <div className="flex flex-col gap-2">
+                <Link
+                  to="/services/smart-survey-analytics-platform"
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center flex items-center justify-center"
                 >
                   Learn More
