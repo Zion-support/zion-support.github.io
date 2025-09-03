@@ -79,7 +79,6 @@ const Analytics: React.FC<AnalyticsProps> = ({ ;,
           const loadTime = perfData.loadEventEnd - perfData.fetchStart;
           trackEvent('page_load_time', 'Performance', 'Page Load', Math.round(loadTime));,
 }
-    }
     window.addEventListener('load', trackPerformance);
     return () => window.removeEventListener('load', trackPerformance);,
 }, []);

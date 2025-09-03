@@ -199,7 +199,7 @@ export default function ServicesCatalog(): any {
                 "email": "kleber@ziontechgroup.com"
               }
             })
-          }}
+          }
         />
       </Head>
 

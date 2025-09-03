@@ -56,7 +56,6 @@ const [timeRange, setTimeRange] = useState<'24h' | '7d' | '30d' | '90d'>('24h');
   // Mock data generator - replace with real analytics API;
   const generateMockAnalytics = useCallback((): AnalyticsData => {;const baseViews = Math.floor(Math.random() * 1000) + 500;
     const baseVisitors = Math.floor(baseViews * 0.7);
-    ;
     return {;
 pageViews: baseViews, uniqueVisitors: baseVisitors,;
       bounceRate: Math.random() * 30 + 20, // 20-50%;

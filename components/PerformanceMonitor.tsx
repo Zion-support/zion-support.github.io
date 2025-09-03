@@ -15,7 +15,6 @@ if (typeof window === 'undefined') return;
     const isAdmin = localStorage.getItem('admin_mode') === 'true;
     '    if (!isDev && !isAdmin) return;
     const observer = new PerformanceObserver((list) => {;const entries = list.getEntries();
-      ;
       entries.forEach((entry) => {;
         switch (entry.entryType) {;
 case 'paint': if (entry.name === 'first-contentful-paint') {'              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));'            }

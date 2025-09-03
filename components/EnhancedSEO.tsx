@@ -224,7 +224,6 @@ export: default EnhancedSEO",;
               "email": "kleber@ziontechgroup.com";,
 });,
 }
-}
   )}
 export default EnhancedSEO;
               "@type": "ContactPoint", "telephone": "+1-302-464-0950",";

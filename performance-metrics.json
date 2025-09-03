@@ -1,9 +1,9 @@
 {
-  "timestamp": "2025-09-03T15:42:46.607Z",
+  "timestamp": "2025-09-03T15:49:53.257Z",
   "bundleSize": {
     ".next": {
-      "size": 41151963,
-      "sizeMB": "39.25"
+      "size": 41299017,
+      "sizeMB": "39.39"
     },
     "node_modules": {
       "size": 874262097,
