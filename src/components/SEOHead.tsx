@@ -11,12 +11,11 @@ interface SEOHeadProps {
   structuredData?: object;
 }
 
-<<<<<<< HEAD
 export default function SEOHead({
-  title = 'Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions',
-  description = 'Transform your business with cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000+ companies worldwide.',
-  keywords = 'AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology',
-  image = '/images/zion-tech-group-og.jpg',
+  title = 'Zion Tech Group - AI, IT & Micro SaaS',
+  description = 'Transform your business with AI, IT and Micro SaaS solutions.',
+  keywords = 'AI, IT services, micro saas, automation, cloud',
+  image = '/images/og-default.jpg',
   url = 'https://ziontechgroup.com',
   type = 'website',
   structuredData
