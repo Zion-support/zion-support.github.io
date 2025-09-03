@@ -1,0 +1,114 @@
+{
+  "timestamp": "2025-09-02T23:48:04.363Z",
+  "vulnerabilities": [
+    {
+      "file": "src/api/auth.js",
+      "type": "SQL Injection Risk",
+      "severity": "medium",
+      "count": 12
+    },
+    {
+      "file": "src/api/community.js",
+      "type": "SQL Injection Risk",
+      "severity": "medium",
+      "count": 2
+    },
+    {
+      "file": "src/components/AIChatbot.jsx",
+      "type": "SQL Injection Risk",
+      "severity": "medium",
+      "count": 7
+    },
+    {
+      "file": "src/components/AICodeGenerator.jsx",
+      "type": "Hardcoded Secrets",
+      "severity": "high",
+      "count": 5
+    },
+    {
+      "file": "src/components/AICodeGenerator.jsx",
+      "type": "SQL Injection Risk",
+      "severity": "medium",
+      "count": 8
+    },
+    {
+      "file": "src/components/AdvancedAnalyticsDashboard.jsx",
+      "type": "SQL Injection Risk",
+      "severity": "medium",
+      "count": 7
+    },
+    {
+      "file": "src/components/AdvancedDataTable.jsx",
+      "type": "SQL Injection Risk",
+      "severity": "medium",
+      "count": 10
+    },
+    {
+      "file": "src/components/AdvancedForm.jsx",
+      "type": "SQL Injection Risk",
+      "severity": "medium",
+      "count": 8
+    },
+    {
+      "file": "src/components/AdvancedServiceInnovationHub.jsx",
+      "type": "SQL Injection Risk",
+      "severity": "medium",
+      "count": 1
+    },
+    {
+      "file": "src/components/AdvancedServiceRecommendation.jsx",
+      "type": "SQL Injection Risk",
+      "severity": "medium",
+      "count": 4
+    },
+    {
+      "file": "src/components/AnalyticsDashboard.jsx",
+      "type": "SQL Injection Risk",
+      "severity": "medium",
+      "count": 10
+    },
+    {
+      "file": "src/components/BlockchainWeb3Dashboard.jsx",
+      "type": "Hardcoded Secrets",
+      "severity": "high",
+      "count": 4
+    },
+    {
+      "file": "src/components/BlockchainWeb3Dashboard.jsx",
+      "type": "SQL Injection Risk",
+      "severity": "medium",
+      "count": 5
+    },
+    {
+      "file": "src/components/BlogSection.jsx",
+      "type": "SQL Injection Risk",
+      "severity": "medium",
+      "count": 2
+    },
+    {
+      "file": "src/components/CaseStudiesSection.jsx",
+      "type": "SQL Injection Risk",
+      "severity": "medium",
+      "count": 2
+    },
+    {
+      "file": "src/components/CategoriesSection.jsx",
+      "type": "SQL Injection Risk",
+      "severity": "medium",
+      "count": 2
+    },
+    {
+      "file": "src/components/CollaborationPlatform.jsx",
+      "type": "SQL Injection Risk",
+      "severity": "medium",
+      "count": 22
+    }
+  ],
+  "recommendations": [
+    "Review and remove hardcoded secrets",
+    "Implement proper input validation",
+    "Use parameterized queries for database operations",
+    "Sanitize user input to prevent XSS"
+  ],
+  "securityScore": 15
+}
