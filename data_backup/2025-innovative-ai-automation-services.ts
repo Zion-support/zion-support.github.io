@@ -17,26 +17,30 @@ export const innovativeAIAutomationServices2025 = [{
   'Performance analytics and continuous improvement';
     ],
     pricing: {
-starter: {
-        price: 299,
+starte,
+    r: {
+        pric,
+    e: 299,
         period:,
   month',
-        features: [
+        features: ['
   'Basic business management,
   'Process automation',
   'Email support',
   'Standard reporting']},
       professional: {
-        price: 799,
+        pric,
+    e: 799,
         period:,
   month',
-        features: [
+        features: ['
   'Advanced AI decision-making,
   'Strategic planning',
   'Priority support',
   'Custom integrations']},
       enterprise: {
-        price: 1999,
+        pric,
+    e: 1999,
         period:,
   month',
         features: [;
@@ -52,9 +56,11 @@ starter: {
   'Business Intelligence',
   'Process Automation',
   'Strategic Planning'],
-    website: 'https://ziontechgroup.com/ai-autonomous-business-manager,
+    website: 'http,
+    s://ziontechgroup.com/ai-autonomous-business-manager,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -81,13 +87,13 @@ starter: {
   ', 'Project management tools;
   ', 'Communication platforms;
   '],
-    compliance['GDPR
+    compliance['GDPR'
   ', 'CCPA;
   ', 'SOC2;
   ', 'ISO 27001;
   ', 'SOX;
   ']},
-  {
+  {'
     id: 'ai-emotional-intelligence-platform,
     name:,
   AI Emotional Intelligence Platform;
@@ -117,26 +123,30 @@ starter: {
   ';
     ],
     pricing: {
-starter: {
-        price: 149,
+starte,
+    r: {
+        pric,
+    e: 149,
         period:,
   month;
   ',
-        features: ['Basic emotion recognition, 'Text analysis
+        features: ['Basic emotion recognition, 'Text analysis'
   ', 'Email support;
   ', 'Standard API access;
   ']},
       professional: {
-        price: 399,
+        pric,
+    e: 399,
         period:,
   month;
   ',
-        features: ['Multi-modal analysis, 'Advanced AI models
+        features: ['Multi-modal analysis, 'Advanced AI models'
   ', 'Priority support;
   ', 'Custom training;
   ']},
       enterprise: {
-        price: 999,
+        pric,
+    e: 999,
         period:,
   month;
   ',
@@ -153,9 +163,11 @@ starter: {
   ', 'Customer Experience;
   ', 'Mental Health;
   '],
-    website: 'https://ziontechgroup.com/ai-emotional-intelligence-platform,
+    website: 'http,
+    s://ziontechgroup.com/ai-emotional-intelligence-platform,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com},
@@ -184,13 +196,13 @@ starter: {
   ', 'Communication tools;
   ', 'Analytics platforms;
   '],
-    compliance['HIPAA
+    compliance['HIPAA'
   ', 'GDPR;
   ', 'CCPA;
   ', 'SOC2;
   ', 'ISO 27001;
   ']},
-  {
+  {'
     id: 'ai-quantum-creativity-studio,
     name:,
   AI Quantum Creativity Studio;
@@ -220,26 +232,30 @@ starter: {
   ';
     ],
     pricing: {
-starter: {
-        price: 99,
+starte,
+    r: {
+        pric,
+    e: 99,
         period:,
   month;
   ',
-        features: ['Basic content generation, 'Standard templates
+        features: ['Basic content generation, 'Standard templates'
   ', 'Email support;
   ', 'Limited API calls;
   ']},
       professional: {
-        price: 299,
+        pric,
+    e: 299,
         period:,
   month;
   ',
-        features: ['Advanced AI models, 'Custom styles
+        features: ['Advanced AI models, 'Custom styles'
   ', 'Priority support;
   ', 'Extended API access;
   ']},
       enterprise: {
-        price: 799,
+        pric,
+    e: 799,
         period:,
   month;
   ',
@@ -256,9 +272,11 @@ starter: {
   ', 'Artistic Intelligence;
   ', 'Design Automation;
   '],
-    website: 'https://ziontechgroup.com/ai-quantum-creativity-studio,
+    website: 'http,
+    s://ziontechgroup.com/ai-quantum-creativity-studio,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com},
@@ -287,12 +305,12 @@ starter: {
   ', 'Social media platforms;
   ', 'E-commerce platforms;
   '],
-    compliance['Copyright protection
+    compliance['Copyright protection'
   ', 'Intellectual property rights;
   ', 'Creative commons licensing;
   ', 'Commercial usage rights;
   ']},
-  {
+  {'
     id: 'ai-predictive-healthcare-diagnostics,
     name:,
   AI Predictive Healthcare Diagnostics;
@@ -322,26 +340,30 @@ starter: {
   ';
     ],
     pricing: {
-starter: {
-        price: 199,
+starte,
+    r: {
+        pric,
+    e: 199,
         period:,
   month;
   ',
-        features: ['Basic diagnostics, 'Health monitoring
+        features: ['Basic diagnostics, 'Health monitoring'
   ', 'Email support;
   ', 'Standard reports;
   ']},
       professional: {
-        price: 599,
+        pric,
+    e: 599,
         period:,
   month;
   ',
-        features: ['Advanced AI models, 'Predictive analytics
+        features: ['Advanced AI models, 'Predictive analytics'
   ', 'Priority support;
   ', 'Custom integrations;
   ']},
       enterprise: {
-        price: 1499,
+        pric,
+    e: 1499,
         period:,
   month;
   ',
@@ -358,9 +380,11 @@ starter: {
   ', 'Medical Diagnostics;
   ', 'Preventive Medicine;
   '],
-    website: 'https://ziontechgroup.com/ai-predictive-healthcare-diagnostics,
+    website: 'http,
+    s://ziontechgroup.com/ai-predictive-healthcare-diagnostics,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com},
@@ -389,13 +413,13 @@ starter: {
   ', 'Pharmacy systems;
   ', 'Insurance platforms;
   '],
-    compliance['HIPAA
+    compliance['HIPAA'
   ', 'FDA;
   ', 'SOC2;
   ', 'ISO 27001;
   ', 'HITECH;
   ']},
-  {
+  {'
     id: 'ai-autonomous-financial-advisor,
     name:,
   AI Autonomous Financial Advisor;
@@ -425,26 +449,30 @@ starter: {
   ';
     ],
     pricing: {
-starter: {
-        price: 79,
+starte,
+    r: {
+        pric,
+    e: 79,
         period:,
   month;
   ',
-        features: ['Basic financial planning, 'Portfolio monitoring
+        features: ['Basic financial planning, 'Portfolio monitoring'
   ', 'Email support;
   ', 'Standard reports;
   ']},
       professional: {
-        price: 199,
+        pric,
+    e: 199,
         period:,
   month;
   ',
-        features: ['Advanced AI models, 'Portfolio optimization
+        features: ['Advanced AI models, 'Portfolio optimization'
   ', 'Priority support;
   ', 'Custom strategies;
   ']},
       enterprise: {
-        price: 499,
+        pric,
+    e: 499,
         period:,
   month;
   ',
@@ -461,9 +489,11 @@ starter: {
   ', 'Wealth Management;
   ', 'Portfolio Optimization;
   '],
-    website: 'https://ziontechgroup.com/ai-autonomous-financial-advisor,
+    website: 'http,
+    s://ziontechgroup.com/ai-autonomous-financial-advisor,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com},
@@ -492,7 +522,7 @@ integrations: ['Brokerage platforms, ,
   ', 'Insurance platforms;
   ', 'Real estate platforms;
   '],
-    compliance: ['SEC, 'FINRA
+    compliance: ['SEC, 'FINRA'
   ', 'SOC2;
   ', 'ISO 27001;
   ', 'Financial regulations'];

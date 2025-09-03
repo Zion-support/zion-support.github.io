@@ -1,568 +1,1295 @@
-import React from &apos;react&apos;;
-import Head from &apos;next/head&apos;;
-import Link from &apos;next/link&apos;;
-import {
-  Server,
-  Cloud,
-  Shield,
-  Database,
-  Network,
-  Monitor,
-  Smartphone,
-  Globe,
-  Lock,
-  Settings,
-  Zap,
-  Users,
-  BarChart3,
-  CheckCircle,
-  ArrowRight,
-  Clock,
-  Award,
-  Star,
-  Cpu,
-  HardDrive,
-  Wifi,
-  Code,
-  Terminal,
-  FileText,
-  Mail,
-  Phone,
-  MapPin,
-  TrendingUp
-} from &apos;lucide-react&apos;;
-import PageTransition from &apos;../src/components/PageTransition&apos;;
-
-export default function ITServices() {
-  const title = &apos;IT Services — Zion Tech Group&apos;;
-  const description = &apos;Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and digital transformation solutions.&apos;;
+import React from 'react';
+<<<<<<< HEAD
+import { ArrowRight, Award, BarChart3, Brain, Carbon, CheckCircle, Clock, Cloud, Code, Cpu, Cross, Database, Flexible, From, Globe, Grid, Link2, Mail, MapPin, Monitor, Network, Now, Phone, Server, Settings, Shield, TrendingUp, User, Users, Wifi, Zap } from 'lucide-react';
+'
+=======
+>>>>>>> main
+import Head from 'next/head';
+import Link from 'next/link';
+import {;
+  Server,;
+  Cloud,;
+  Shield,;
+  Database,;
+  Network,;
+  Monitor,;
+  Smartphone,;
+  Globe,;
+  Lock,;
+  Settings,;
+  Zap,;
+  Users,;
+  BarChart3,;
+  CheckCircle,;
+  ArrowRight,;
+  Clock,;
+  Award,;
+  Star,;
+  Cpu,;
+  HardDrive,;
+  Wifi,;
+  Code,;
+  Terminal,;
+  FileText,;
+  Mail,;
+  Phone,;
+  MapPin;
+} from 'lucide-react';
+import PageTransition from '../src/components/PageTransition';
+<<<<<<< HEAD
+export default function ITServices() {'
+  const title = 'IT Services — Zion Tech Group';
+  const description ='
+    'Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and digital transformation solutions.';
 
   const itServices = [
-    {
-      title: &apos;Cloud Infrastructure & Migration&apos;,
-      description: &apos;Complete cloud transformation with AWS, Azure, and Google Cloud Platform&apos;,
+    {'
+      title: 'Cloud Infrastructure & Migration',
+      description:'
+        'Complete cloud transformation with AWS, Azure, and Google Cloud Platform',
       icon: Cloud,
-      features: [
-        &apos;Multi-cloud architecture design and implementation&apos;,
-        &apos;Legacy system migration and modernization&apos;,
-        &apos;Serverless computing and containerization&apos;,
-        &apos;Auto-scaling and load balancing&apos;,
-        &apos;Cost optimization and FinOps practices&apos;,
-        &apos;Disaster recovery and backup solutions&apos;
+      features: ['
+        'Multi-cloud architecture design and implementation',
+        'Legacy system migration and modernization',
+        'Serverless computing and containerization',
+        'Auto-scaling and load balancing',
+        'Cost optimization and FinOps practices',
+        'Disaster recovery and backup solutions',
       ],
-      pricing: &apos;$5,000 - $50,000/month&apos;,
-      delivery: &apos;4-12 weeks&apos;,
-      category: &apos;Cloud Services&apos;
+      pricing: '$5,000 - $50, 000/month',
+      delivery: '4-12 weeks',
+      category: 'Cloud Services',
     },
-    {
-      title: &apos;Cybersecurity & Compliance&apos;,
-      description: &apos;Enterprise-grade security solutions and compliance management&apos;,
+    {'
+      title: 'Cybersecurity & Compliance',
+      description:'
+        'Enterprise-grade security solutions and compliance management',
       icon: Shield,
-      features: [
-        &apos;Zero-trust security architecture&apos;,
-        &apos;SOC 2, GDPR, HIPAA compliance automation&apos;,
-        &apos;Penetration testing and vulnerability assessments&apos;,
-        &apos;Security monitoring and incident response&apos;,
-        &apos;Identity and access management (IAM)&apos;,
-        &apos;Data encryption and privacy protection&apos;
+      features: ['
+        'Zero-trust security architecture',
+        'SOC 2, GDPR, HIPAA compliance automation',
+        'Penetration testing and vulnerability assessments',
+        'Security monitoring and incident response',
+        'Identity and access management (IAM),
+        'Data encryption and privacy protection',
       ],
-      pricing: &apos;$3,000 - $25,000/month&apos;,
-      delivery: &apos;3-8 weeks&apos;,
-      category: &apos;Security Services&apos;
+      pricing: '$3,000 - $25, 000/month',
+      delivery: '3-8 weeks',
+      category: 'Security Services',
     },
-    {
-      title: &apos;Network Infrastructure&apos;,
-      description: &apos;Design, implementation, and management of enterprise networks&apos;,
+    {'
+      title: 'Network Infrastructure',
+      description:'
+        'Design, implementation, and management of enterprise networks',
       icon: Network,
-      features: [
-        &apos;SD-WAN and hybrid network solutions&apos;,
-        &apos;Network security and firewall management&apos;,
-        &apos;Wireless network design and optimization&apos;,
-        &apos;Network monitoring and performance tuning&apos;,
-        &apos;VoIP and unified communications&apos;,
-        &apos;Network documentation and training&apos;
+      features: ['
+        'SD-WAN and hybrid network solutions',
+        'Network security and firewall management',
+        'Wireless network design and optimization',
+        'Network monitoring and performance tuning',
+        'VoIP and unified communications',
+        'Network documentation and training',
       ],
-      pricing: &apos;$2,000 - $15,000/month&apos;,
-      delivery: &apos;2-6 weeks&apos;,
-      category: &apos;Network Services&apos;
+      pricing: '$2,000 - $15, 000/month',
+      delivery: '2-6 weeks',
+      category: 'Network Services',
     },
-    {
-      title: &apos;IT Support & Helpdesk&apos;,
-      description: &apos;24/7 technical support and helpdesk services&apos;,
+    {'
+      title: 'IT Support & Helpdesk',
+      description: '24/7 technical support and helpdesk services',
       icon: Users,
-      features: [
-        &apos;24/7/365 technical support coverage&apos;,
-        &apos;Remote desktop and troubleshooting&apos;,
-        &apos;Software installation and updates&apos;,
-        &apos;Hardware procurement and management&apos;,
-        &apos;User training and documentation&apos;,
-        &apos;SLA-based response times&apos;
+      features: ['
+        '24/7/365 technical support coverage',
+        'Remote desktop and troubleshooting',
+        'Software installation and updates',
+        'Hardware procurement and management',
+        'User training and documentation',
+        'SLA-based response times',
       ],
-      pricing: &apos;$1,500 - $8,000/month&apos;,
-      delivery: &apos;1-2 weeks&apos;,
-      category: &apos;Support Services&apos;
+      pricing: '$1,500 - $8, 000/month',
+      delivery: '1-2 weeks',
+      category: 'Support Services',
     },
-    {
-      title: &apos;Data Management & Analytics&apos;,
-      description: &apos;Data warehousing, analytics, and business intelligence solutions&apos;,
+    {'
+      title: 'Data Management & Analytics',
+      description:'
+        'Data warehousing, analytics, and business intelligence solutions',
       icon: Database,
-      features: [
-        &apos;Data warehouse design and implementation&apos;,
-        &apos;ETL/ELT pipeline development&apos;,
-        &apos;Business intelligence dashboards&apos;,
-        &apos;Data governance and quality management&apos;,
-        &apos;Real-time analytics and reporting&apos;,
-        &apos;Machine learning data preparation&apos;
+      features: ['
+        'Data warehouse design and implementation',
+        'ETL/ELT pipeline development',
+        'Business intelligence dashboards',
+        'Data governance and quality management',
+        'Real-time analytics and reporting',
+        'Machine learning data preparation',
       ],
-      pricing: &apos;$4,000 - $30,000/month&apos;,
-      delivery: &apos;6-16 weeks&apos;,
-      category: &apos;Data Services&apos;
+      pricing: '$4,000 - $30, 000/month',
+      delivery: '6-16 weeks',
+      category: 'Data Services',
     },
-    {
-      title: &apos;DevOps & CI/CD&apos;,
-      description: &apos;Automated deployment pipelines and infrastructure as code&apos;,
+    {'
+      title: 'DevOps & CI/CD',
+      description: 'Automated deployment pipelines and infrastructure as code',
       icon: Settings,
-      features: [
-        &apos;CI/CD pipeline setup and optimization&apos;,
-        &apos;Infrastructure as Code (IaC) implementation&apos;,
-        &apos;Container orchestration with Kubernetes&apos;,
-        &apos;Monitoring and logging solutions&apos;,
-        &apos;Automated testing and quality gates&apos;,
-        &apos;DevSecOps and security integration&apos;
+      features: ['
+        'CI/CD pipeline setup and optimization',
+        'Infrastructure as Code (IaC) implementation',
+        'Container orchestration with Kubernetes',
+        'Monitoring and logging solutions',
+        'Automated testing and quality gates',
+        'DevSecOps and security integration',
       ],
-      pricing: &apos;$3,500 - $20,000/month&apos;,
-      delivery: &apos;4-10 weeks&apos;,
-      category: &apos;DevOps Services&apos;
+      pricing: '$3,500 - $20, 000/month',
+      delivery: '4-10 weeks',
+      category: 'DevOps Services',
     },
-    {
-      title: &apos;Digital Transformation&apos;,
-      description: &apos;End-to-end digital transformation consulting and implementation&apos;,
+    {'
+      title: 'Digital Transformation',
+      description:'
+        'End-to-end digital transformation consulting and implementation',
       icon: Zap,
-      features: [
-        &apos;Digital strategy and roadmap development&apos;,
-        &apos;Process automation and optimization&apos;,
-        &apos;Legacy system modernization&apos;,
-        &apos;Change management and training&apos;,
-        &apos;Technology stack evaluation&apos;,
-        &apos;ROI measurement and optimization&apos;
+      features: ['
+        'Digital strategy and roadmap development',
+        'Process automation and optimization',
+        'Legacy system modernization',
+        'Change management and training',
+        'Technology stack evaluation',
+        'ROI measurement and optimization',
       ],
-      pricing: &apos;$10,000 - $100,000/month&apos;,
-      delivery: &apos;12-24 weeks&apos;,
-      category: &apos;Consulting Services&apos;
+      pricing: '$10,000 - $100, 000/month',
+      delivery: '12-24 weeks',
+      category: 'Consulting Services',
     },
-    {
-      title: &apos;Managed IT Services&apos;,
-      description: &apos;Comprehensive IT management and monitoring services&apos;,
+    {'
+      title: 'Managed IT Services',
+      description: 'Comprehensive IT management and monitoring services',
       icon: Monitor,
-      features: [
-        &apos;Proactive monitoring and maintenance&apos;,
-        &apos;Patch management and updates&apos;,
-        &apos;Performance optimization&apos;,
-        &apos;Capacity planning and scaling&apos;,
-        &apos;Vendor management and procurement&apos;,
-        &apos;IT strategy and planning&apos;
+      features: ['
+        'Proactive monitoring and maintenance',
+        'Patch management and updates',
+        'Performance optimization',
+        'Capacity planning and scaling',
+        'Vendor management and procurement',
+        'IT strategy and planning',
       ],
-      pricing: &apos;$2,500 - $15,000/month&apos;,
-      delivery: &apos;2-4 weeks&apos;,
-      category: &apos;Managed Services&apos;
+      pricing: '$2,500 - $15, 000/month',
+      delivery: '2-4 weeks',
+      category: 'Managed Services',
     },
-    {
-      title: &apos;Blockchain & Web3 Solutions&apos;,
-      description: &apos;Blockchain development, smart contracts, and decentralized applications&apos;,
+    {'
+      title: 'Blockchain & Web3 Solutions',
+      description:'
+        'Blockchain development, smart contracts, and decentralized applications',
       icon: Network,
-      features: [
-        &apos;Smart contract development and auditing&apos;,
-        &apos;DeFi and NFT platform development&apos;,
-        &apos;Blockchain integration and consulting&apos;,
-        &apos;Cryptocurrency wallet development&apos;,
-        &apos;Tokenomics and governance design&apos;,
-        &apos;Cross-chain interoperability solutions&apos;
+      features: ['
+        'Smart contract development and auditing',
+        'DeFi and NFT platform development',
+        'Blockchain integration and consulting',
+        'Cryptocurrency wallet development',
+        'Tokenomics and governance design',
+        'Cross-chain interoperability solutions',
       ],
-      pricing: &apos;$8,000 - $50,000/month&apos;,
-      delivery: &apos;8-20 weeks&apos;,
-      category: &apos;Blockchain Services&apos;
+      pricing: '$8,000 - $50, 000/month',
+      delivery: '8-20 weeks',
+      category: 'Blockchain Services',
     },
-    {
-      title: &apos;IoT & Edge Computing&apos;,
-      description: &apos;Internet of Things solutions and edge computing infrastructure&apos;,
+    {'
+      title: 'IoT & Edge Computing',
+      description:'
+        'Internet of Things solutions and edge computing infrastructure',
       icon: Cpu,
-      features: [
-        &apos;IoT device development and integration&apos;,
-        &apos;Edge computing platform setup&apos;,
-        &apos;Real-time data processing and analytics&apos;,
-        &apos;IoT security and device management&apos;,
-        &apos;Sensor network design and deployment&apos;,
-        &apos;Edge AI and machine learning integration&apos;
+      features: ['
+        'IoT device development and integration',
+        'Edge computing platform setup',
+        'Real-time data processing and analytics',
+        'IoT security and device management',
+        'Sensor network design and deployment',
+        'Edge AI and machine learning integration',
       ],
-      pricing: &apos;$5,000 - $30,000/month&apos;,
-      delivery: &apos;6-16 weeks&apos;,
-      category: &apos;IoT Services&apos;
+      pricing: '$5,000 - $30, 000/month',
+      delivery: '6-16 weeks',
+      category: 'IoT Services',
     },
-    {
-      title: &apos;Quantum Computing Consulting&apos;,
-      description: &apos;Quantum computing strategy, algorithm development, and implementation&apos;,
+    {'
+      title: 'Quantum Computing Consulting',
+      description:'
+        'Quantum computing strategy, algorithm development, and implementation',
       icon: Cpu,
-      features: [
-        &apos;Quantum algorithm development&apos;,
-        &apos;Quantum computing strategy consulting&apos;,
-        &apos;Hybrid classical-quantum solutions&apos;,
-        &apos;Quantum security and cryptography&apos;,
-        &apos;Quantum machine learning applications&apos;,
-        &apos;Quantum hardware evaluation and selection&apos;
+      features: ['
+        'Quantum algorithm development',
+        'Quantum computing strategy consulting',
+        'Hybrid classical-quantum solutions',
+        'Quantum security and cryptography',
+        'Quantum machine learning applications',
+        'Quantum hardware evaluation and selection',
       ],
-      pricing: &apos;$15,000 - $100,000/month&apos;,
-      delivery: &apos;12-24 weeks&apos;,
-      category: &apos;Quantum Services&apos;
+      pricing: '$15,000 - $100, 000/month',
+      delivery: '12-24 weeks',
+      category: 'Quantum Services',
     },
-    {
-      title: &apos;5G & Network Modernization&apos;,
-      description: &apos;5G network implementation and legacy network modernization&apos;,
+    {'
+      title: '5G & Network Modernization',
+      description: '5G network implementation and legacy network modernization',
       icon: Wifi,
-      features: [
-        &apos;5G network planning and deployment&apos;,
-        &apos;Network slicing and optimization&apos;,
-        &apos;Legacy network migration&apos;,
-        &apos;Private 5G network setup&apos;,
-        &apos;Network performance monitoring&apos;,
-        &apos;Edge computing integration&apos;
+      features: ['
+        '5G network planning and deployment',
+        'Network slicing and optimization',
+        'Legacy network migration',
+        'Private 5G network setup',
+        'Network performance monitoring',
+        'Edge computing integration',
       ],
-      pricing: &apos;$10,000 - $75,000/month&apos;,
-      delivery: &apos;8-20 weeks&apos;,
-      category: &apos;Network Services&apos;
+      pricing: '$10,000 - $75, 000/month',
+      delivery: '8-20 weeks',
+      category: 'Network Services',
     },
-    {
-      title: &apos;AR/VR Development & Implementation&apos;,
-      description: &apos;Augmented and virtual reality solutions for business applications&apos;,
+    {'
+      title: 'AR/VR Development & Implementation',
+      description:'
+        'Augmented and virtual reality solutions for business applications',
       icon: Monitor,
-      features: [
-        &apos;AR/VR application development&apos;,
-        &apos;3D modeling and animation&apos;,
-        &apos;Immersive training and simulation&apos;,
-        &apos;Virtual showroom and retail solutions&apos;,
-        &apos;AR/VR hardware integration&apos;,
-        &apos;Performance optimization and testing&apos;
+      features: ['
+        'AR/VR application development',
+        '3D modeling and animation',
+        'Immersive training and simulation',
+        'Virtual showroom and retail solutions',
+        'AR/VR hardware integration',
+        'Performance optimization and testing',
       ],
-      pricing: &apos;$6,000 - $40,000/month&apos;,
-      delivery: &apos;8-16 weeks&apos;,
-      category: &apos;AR/VR Services&apos;
+      pricing: '$6,000 - $40, 000/month',
+      delivery: '8-16 weeks',
+      category: 'AR/VR Services',
     },
-    {
-      title: &apos;API Management & Integration&apos;,
-      description: &apos;Comprehensive API strategy, development, and management platform&apos;,
+    {'
+      title: 'API Management & Integration',
+      description:'
+        'Comprehensive API strategy, development, and management platform',
       icon: Code,
-      features: [
-        &apos;API design and development&apos;,
-        &apos;API gateway setup and management&apos;,
-        &apos;Third-party API integration&apos;,
-        &apos;API security and authentication&apos;,
-        &apos;API analytics and monitoring&apos;,
-        &apos;Microservices architecture design&apos;
+      features: ['
+        'API design and development',
+        'API gateway setup and management',
+        'Third-party API integration',
+        'API security and authentication',
+        'API analytics and monitoring',
+        'Microservices architecture design',
       ],
-      pricing: &apos;$3,000 - $20,000/month&apos;,
-      delivery: &apos;4-12 weeks&apos;,
-      category: &apos;API Services&apos;
+      pricing: '$3,000 - $20, 000/month',
+      delivery: '4-12 weeks',
+      category: 'API Services',
     },
-    {
-      title: &apos;Disaster Recovery & Business Continuity&apos;,
-      description: &apos;Comprehensive disaster recovery planning and implementation&apos;,
+    {'
+      title: 'Disaster Recovery & Business Continuity',
+      description:'
+        'Comprehensive disaster recovery planning and implementation',
       icon: Shield,
-      features: [
-        &apos;Disaster recovery strategy development&apos;,
-        &apos;Backup and replication solutions&apos;,
-        &apos;Business continuity planning&apos;,
-        &apos;Recovery time objective optimization&apos;,
-        &apos;Testing and validation services&apos;,
-        &apos;Compliance and audit support&apos;
+      features: ['
+        'Disaster recovery strategy development',
+        'Backup and replication solutions',
+        'Business continuity planning',
+        'Recovery time objective optimization',
+        'Testing and validation services',
+        'Compliance and audit support',
       ],
-      pricing: &apos;$5,000 - $35,000/month&apos;,
-      delivery: &apos;6-16 weeks&apos;,
-      category: &apos;Recovery Services&apos;
+      pricing: '$5,000 - $35, 000/month',
+      delivery: '6-16 weeks',
+      category: 'Recovery Services',
     },
-    {
-      title: &apos;Green IT & Sustainability Solutions&apos;,
-      description: &apos;Sustainable IT practices and carbon footprint reduction&apos;,
+    {'
+      title: 'Green IT & Sustainability Solutions',
+      description: 'Sustainable IT practices and carbon footprint reduction',
       icon: Globe,
-      features: [
-        &apos;Energy-efficient infrastructure design&apos;,
-        &apos;Carbon footprint assessment and reduction&apos;,
-        &apos;Sustainable cloud migration&apos;,
-        &apos;Green data center optimization&apos;,
-        &apos;E-waste management and recycling&apos;,
-        &apos;Sustainability reporting and compliance&apos;
+      features: ['
+        'Energy-efficient infrastructure design',
+        'Carbon footprint assessment and reduction',
+        'Sustainable cloud migration',
+        'Green data center optimization',
+        'E-waste management and recycling',
+        'Sustainability reporting and compliance',
       ],
-      pricing: &apos;$4,000 - $25,000/month&apos;,
-      delivery: &apos;6-14 weeks&apos;,
-      category: &apos;Sustainability Services&apos;
+      pricing: '$4,000 - $25, 000/month',
+      delivery: '6-14 weeks',
+      category: 'Sustainability Services',
     },
-    {
-      title: &apos;FinTech & Payment Solutions&apos;,
-      description: &apos;Financial technology solutions and payment system integration&apos;,
+    {'
+      title: 'FinTech & Payment Solutions',
+      description:'
+        'Financial technology solutions and payment system integration',
       icon: Database,
-      features: [
-        &apos;Payment gateway integration&apos;,
-        &apos;Financial API development&apos;,
-        &apos;Compliance and regulatory solutions&apos;,
-        &apos;Fraud detection and prevention&apos;,
-        &apos;Digital banking solutions&apos;,
-        &apos;Cryptocurrency integration&apos;
+      features: ['
+        'Payment gateway integration',
+        'Financial API development',
+        'Compliance and regulatory solutions',
+        'Fraud detection and prevention',
+        'Digital banking solutions',
+        'Cryptocurrency integration',
       ],
-      pricing: &apos;$8,000 - $60,000/month&apos;,
-      delivery: &apos;10-24 weeks&apos;,
-      category: &apos;FinTech Services&apos;
-    }
-  ];
-
-  const technologies = [
-    { name: &apos;Cloud Platforms&apos;, icon: Cloud, description: &apos;AWS, Azure, GCP, DigitalOcean&apos; },
-    { name: &apos;Containerization&apos;, icon: Server, description: &apos;Docker, Kubernetes, OpenShift&apos; },
-    { name: &apos;Security Tools&apos;, icon: Shield, description: &apos;SIEM, WAF, IAM, Encryption&apos; },
-    { name: &apos;Monitoring&apos;, icon: BarChart3, description: &apos;Prometheus, Grafana, ELK Stack&apos; },
-    { name: &apos;Databases&apos;, icon: Database, description: &apos;PostgreSQL, MongoDB, Redis&apos; },
-    { name: &apos;Networking&apos;, icon: Network, description: &apos;Cisco, Fortinet, SD-WAN&apos; }
-  ];
-
-  const benefits = [
-    {
-      title: &apos;Reduced Downtime&apos;,
-      description: &apos;Proactive monitoring and maintenance&apos;,
-      icon: Clock,
-      stat: &apos;99.9%&apos;
+      pricing: '$8,000 - $60, 000/month',
+      delivery: '10-24 weeks',
+      category: 'FinTech Services',
     },
-    {
-      title: &apos;Cost Savings&apos;,
-      description: &apos;Optimized infrastructure and processes&apos;,
-      icon: Zap,
-      stat: &apos;40%&apos;
+    {'
+      title: 'Advanced Blockchain & Web3 Infrastructure',
+      description:'
+        'Enterprise blockchain solutions with smart contracts and DeFi integration',
+      icon: Network,
+      features: ['
+        'Multi-chain blockchain architecture design',
+        'Smart contract development and auditing',
+        'DeFi protocol integration and optimization',
+        'NFT marketplace and tokenization platforms',
+        'Cross-chain bridge development',
+        'Regulatory compliance and KYC/AML solutions',
+      ],
+      pricing: '$15,000 - $80,000/month',
+      delivery: '12-32 weeks',
+      category: 'Blockchain Services',
     },
-    {
-      title: &apos;Enhanced Security&apos;,
-      description: &apos;Enterprise-grade protection&apos;,
+    {'
+      title: 'IoT & Edge Computing Solutions',
+      description:'
+        'Comprehensive IoT ecosystem with edge computing and real-time analytics',
+      icon: Cpu,
+      features: ['
+        'IoT device integration and management',
+        'Edge computing infrastructure deployment',
+        'Real-time data processing and analytics',
+        'Industrial IoT (IIoT) solutions',
+        'Smart city and building automation',
+        'Predictive maintenance and monitoring',
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '8-24 weeks',
+      category: 'IoT Services',
+    },
+    {'
+      title: 'Advanced Cybersecurity & Zero Trust',
+      description:'
+        'Next-generation security architecture with AI-powered threat detection',
       icon: Shield,
-      stat: &apos;100%&apos;
+      features: ['
+        'Zero Trust security architecture implementation',
+        'AI-powered threat detection and response',
+        'Advanced persistent threat (APT) protection',
+        'Security orchestration and automation (SOAR),
+        'Identity and access management (IAM),
+        'Compliance automation and reporting',
+      ],
+      pricing: '$12,000 - $60,000/month',
+      delivery: '10-28 weeks',
+      category: 'Advanced Security',
     },
-    {
-      title: &apos;Scalability&apos;,
-      description: &apos;Flexible and scalable solutions&apos;,
-      icon: TrendingUp,
-      stat: &apos;Unlimited&apos;
-    }
+    {'
+      title: 'Quantum Computing & Cryptography',
+      description:'
+        'Quantum computing solutions and post-quantum cryptography implementation',
+      icon: Cpu,
+      features: ['
+        'Quantum algorithm development and optimization',
+        'Post-quantum cryptography implementation',
+        'Quantum key distribution (QKD) systems',
+        'Quantum simulation and modeling',
+        'Hybrid classical-quantum computing',
+        'Quantum security assessment and consulting',
+      ],
+      pricing: '$25,000 - $150,000/month',
+      delivery: '20-48 weeks',
+      category: 'Quantum Services',
+    },
+    {'
+      title: 'Advanced Data Engineering & Analytics',
+      description:'
+        'Enterprise data platforms with real-time processing and AI integration',
+      icon: Database,
+      features: ['
+        'Real-time data streaming and processing',
+        'Advanced analytics and machine learning pipelines',
+        'Data lake and data warehouse architecture',
+        'ETL/ELT automation and optimization',
+        'Data governance and quality management',
+        'Business intelligence and visualization',
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '8-20 weeks',
+      category: 'Data Services',
+    },
+    {'
+      title: 'Microservices & API Architecture',
+      description:'
+        'Scalable microservices architecture with API management and governance',
+      icon: Code,
+      features: ['
+        'Microservices architecture design and implementation',
+        'API gateway and management platform',
+        'Service mesh implementation (Istio, Linkerd),
+        'Container orchestration and management',
+        'API security and rate limiting',
+        'Service discovery and load balancing',
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '6-16 weeks',
+      category: 'Architecture Services',
+    },
+    {'
+      title: 'Advanced Cloud Native Solutions',
+      description:'
+        'Cloud-native application development with serverless and containerization',
+      icon: Cloud,
+      features: ['
+        'Serverless architecture design and implementation',
+        'Kubernetes cluster management and optimization',
+        'Cloud-native CI/CD pipeline development',
+        'Multi-cloud and hybrid cloud solutions',
+        'Cloud cost optimization and FinOps',
+        'Disaster recovery and backup automation',
+      ],
+      pricing: '$10,000 - $45,000/month',
+      delivery: '8-20 weeks',
+      category: 'Cloud Native Services',
+    },
+    {'
+      title: 'Advanced Network & SD-WAN Solutions',
+      description:'
+        'Software-defined networking with AI-powered optimization and security',
+      icon: Network,
+      features: ['
+        'SD-WAN design and implementation',
+        'Network function virtualization (NFV),
+        'AI-powered network optimization',
+        'Software-defined perimeter (SDP),
+        'Network automation and orchestration',
+        '5G network integration and optimization',
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '6-18 weeks',
+      category: 'Network Services',
+    },
+    {'
+      title: 'Advanced DevOps & SRE Solutions',
+      description:'
+        'Site reliability engineering with advanced monitoring and automation',
+      icon: Settings,
+      features: ['
+        'SRE implementation and best practices',
+        'Advanced monitoring and observability',
+        'Chaos engineering and resilience testing',
+        'Infrastructure as code (IaC) automation',
+        'Performance optimization and tuning',
+        'Incident response and post-mortem automation',
+      ],
+      pricing: '$7,000 - $32,000/month',
+      delivery: '6-16 weeks',
+      category: 'DevOps Services',
+    },
+    {'
+      title: 'Advanced AI/ML Infrastructure',
+      description:'
+        'Machine learning operations (MLOps) with model deployment and monitoring',
+      icon: Brain,
+      features: ['
+        'MLOps pipeline development and automation',
+        'Model training and deployment infrastructure',
+        'AI model monitoring and drift detection',
+        'Distributed training and inference systems',
+        'AI model versioning and governance',
+        'Edge AI deployment and optimization',
+      ],
+      pricing: '$12,000 - $55,000/month',
+      delivery: '10-24 weeks',
+      category: 'AI/ML Services',
+    },
+    {'
+      title: 'Advanced Compliance & Governance',
+      description:'
+        'Regulatory compliance automation with audit trails and reporting',
+      icon: Shield,
+      features: ['
+        'Automated compliance monitoring and reporting',
+        'Regulatory framework implementation (GDPR, HIPAA, SOX),
+        'Audit trail and evidence collection',
+        'Risk assessment and management automation',
+        'Policy management and enforcement',
+        'Third-party risk management',
+      ],
+      pricing: '$6,000 - $28,000/month',
+      delivery: '6-14 weeks',
+      category: 'Compliance Services',
+    },
+    {'
+      title: 'Advanced Performance Engineering',
+      description:'
+        'Application performance optimization with load testing and monitoring',
+      icon: BarChart3,
+      features: ['
+        'Performance testing and optimization',
+        'Load testing and capacity planning',
+        'Application performance monitoring (APM),
+        'Database performance tuning',
+        'Caching strategy implementation',
+        'Performance regression testing',
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '4-12 weeks',
+      category: 'Performance Services',
+    },
+    {'
+      title: 'Advanced Integration & Middleware',
+      description:'
+        'Enterprise integration with API management and data synchronization',
+      icon: Link2,
+      features: ['
+        'Enterprise service bus (ESB) implementation',
+        'API integration and management',
+        'Data synchronization and replication',
+        'Message queuing and event streaming',
+        'Legacy system integration and modernization',
+        'Real-time data integration',
+      ],
+      pricing: '$7,000 - $35,000/month',
+      delivery: '6-18 weeks',
+      category: 'Integration Services',
+    },
+    {'
+      title: 'Advanced Backup & Disaster Recovery',
+      description:'
+        'Comprehensive backup and disaster recovery with automation and testing',
+      icon: Shield,
+      features: ['
+        'Automated backup and recovery systems',
+        'Disaster recovery planning and testing',
+        'Business continuity management',
+        'Data replication and synchronization',
+        'Recovery time objective (RTO) optimization',
+        'Cloud-based backup and recovery',
+      ],
+      pricing: '$4,000 - $20,000/month',
+      delivery: '4-12 weeks',
+      category: 'Backup Services',
+    },
   ];
-
+  const technologies = [
+    {'
+      name: 'Cloud Platforms',
+      icon: Cloud,
+      description: 'AWS, Azure, GCP, DigitalOcean',
+    },
+    {'
+      name: 'Containerization',
+      icon: Server,
+      description: 'Docker, Kubernetes, OpenShift',
+    },
+    {'
+      name: 'Security Tools',
+      icon: Shield,
+      description: 'SIEM, WAF, IAM, Encryption',
+    },
+    {'
+      name: 'Monitoring',
+      icon: BarChart3,
+      description: 'Prometheus, Grafana, ELK Stack',
+    },
+    {'
+      name: 'Databases',
+      icon: Database,
+      description: 'PostgreSQL, MongoDB, Redis',
+    },
+    {'
+      name: 'Networking',
+      icon: Network,
+      description: 'Cisco, Fortinet, SD-WAN',
+    },
+  ];
+  const benefits = [
+    {'
+      title: 'Reduced Downtime',
+      description: 'Proactive monitoring and maintenance',
+      icon: Clock,
+      stat: '99.9%',
+    },
+    {'
+      title: 'Cost Savings',
+      description: 'Optimized infrastructure and processes',
+      icon: Zap,
+      stat: '40%',
+    },
+    {'
+      title: 'Enhanced Security',
+      description: 'Enterprise-grade protection',
+      icon: Shield,
+      stat: '100%',
+    },
+    {'
+      title: 'Scalability',
+      description: 'Flexible and scalable solutions',
+      icon: TrendingUp,
+      stat: 'Unlimited',
+    },
+  ];
   return (
     <PageTransition>
       <Head>
-        <title>{title}</title>
-        <meta name=&quot;description&quot; content={description} />
-        <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; />
-        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/it-services&quot; />
+        <title>{title}</title>'
+        <meta name="description" content={description} />"
+        <meta name="viewport" content="width=device-width, initial-scale=1" />"
+        <link rel="canonical" href="https: //ziontechgroup.com/it-services" />
       </Head>
 
-      {/* Hero Section */}
-      <section className=&quot;bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 py-20 sm:py-32&quot;>
-        <div className=&quot;mx-auto max-w-7xl px-6 lg:px-8&quot;>
-          <div className=&quot;mx-auto max-w-3xl text-center&quot;>
-            <div className=&quot;flex items-center justify-center mb-6&quot;>
-              <Server className=&quot;h-12 w-12 text-green-600 mr-4&quot; />
-              <Award className=&quot;h-6 w-6 text-green-600 mr-2&quot; />
-              <span className=&quot;text-base font-semibold leading-7 text-green-600&quot;>IT Services</span>
-            </div>
-            <h1 className=&quot;text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl&quot;>
+      {/* Hero Section */}"
+      <section className="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 py-20 sm: py-32">"
+        <div className="mx-auto max-w-7xl px-6 l,
+    g:px-8">"
+          <div className="mx-auto max-w-3xl text-center">"
+            <div className="flex items-center justify-center mb-6">"
+              <Server className="h-12 w-12 text-green-600 mr-4" />"
+              <Award className="h-6 w-6 text-green-600 mr-2" />"
+              <span className="text-base font-semibold leading-7 text-green-600">
+                IT Services
+              </span>
+            </div>"
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 s,
+    m:text-6xl">
               Information Technology Solutions
-            </h1>
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-600&quot;>
-              Comprehensive IT services that keep your business running smoothly. From cloud infrastructure 
-              to cybersecurity, we provide end-to-end technology solutions.
-            </p>
-            <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>
-              <Link
-                href=&quot;/contact&quot;
-                className=&quot;rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600&quot;
+            </h1>"
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Comprehensive IT services that keep your business running
+              smoothly. From cloud infrastructure to cybersecurity, we provide
+              end-to-end technology solutions.
+            </p>"
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <Link"
+                href="/contact""
+                className="rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visibl,
+    e:outline-green-600"
               >
-                Get Started
-                <ArrowRight className=&quot;ml-2 h-4 w-4 inline&quot; />
+                Get Started"
+                <ArrowRight className="ml-2 h-4 w-4 inline" />
               </Link>
-              <Link
-                href=&quot;/pricing-guide&quot;
-                className=&quot;text-sm font-semibold leading-6 text-gray-900 hover:text-green-600&quot;
-              >
-                View Pricing <span aria-hidden=&quot;true&quot;>→</span>
+              <Link"
+                href="/pricing-guide""
+                className="text-sm font-semibold leading-6 text-gray-900 hove,
+    r:text-green-600"
+              >"
+                View Pricing <span aria-hidden="true">→</span>
               </Link>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Benefits Section */}"
+      <section className="py-24 sm: py-32 bg-white">"
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">"
+          <div className="mx-auto max-w-2xl text-center mb-16">"
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Why Choose Our IT Services?
+            </h2>"
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Proven expertise and measurable results for your technology
+              infrastructure
+            </p>
+          </div>"
+          <div className="grid grid-cols-1 gap-8 s,
+    m:grid-cols-2 l,
+    g:grid-cols-4">
+            {benefits.map((benefit, index) => ("
+              <div key={index} className="text-center">"
+                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mx-auto mb-4">"
+                  <benefit.icon className="h-8 w-8 text-green-600" />
+                </div>"
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  {benefit.stat}
+                </h3>"
+                <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                  {benefit.title}
+                </h4>"
+                <p className="text-gray-600">{benefit.description}</p>
+              </div>
+=======
+;
+export default function ITServices() {;
+  const title = 'IT Services — Zion Tech Group';
+  const description = 'Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and digital transformation solutions.';
+;
+  const itServices = [;
+    {;
+      title: 'Cloud Infrastructure & Migration',;
+      description: 'Complete cloud transformation with AWS, Azure, and Google Cloud Platform',;
+      icon: Cloud,;
+      features: [;
+        'Multi-cloud architecture design and implementation',;
+        'Legacy system migration and modernization',;
+        'Serverless computing and containerization',;
+        'Auto-scaling and load balancing',;
+        'Cost optimization and FinOps practices',;
+        'Disaster recovery and backup solutions';
+      ],;
+      pricing: '$5,000 - $50,000/month',;
+      delivery: '4-12 weeks',;
+      category: 'Cloud Services';
+    },;
+    {;
+      title: 'Cybersecurity & Compliance',;
+      description: 'Enterprise-grade security solutions and compliance management',;
+      icon: Shield,;
+      features: [;
+        'Zero-trust security architecture',;
+        'SOC 2, GDPR, HIPAA compliance automation',;
+        'Penetration testing and vulnerability assessments',;
+        'Security monitoring and incident response',;
+        'Identity and access management (IAM)',;
+        'Data encryption and privacy protection';
+      ],;
+      pricing: '$3,000 - $25,000/month',;
+      delivery: '3-8 weeks',;
+      category: 'Security Services';
+    },;
+    {;
+      title: 'Network Infrastructure',;
+      description: 'Design, implementation, and management of enterprise networks',;
+      icon: Network,;
+      features: [;
+        'SD-WAN and hybrid network solutions',;
+        'Network security and firewall management',;
+        'Wireless network design and optimization',;
+        'Network monitoring and performance tuning',;
+        'VoIP and unified communications',;
+        'Network documentation and training';
+      ],;
+      pricing: '$2,000 - $15,000/month',;
+      delivery: '2-6 weeks',;
+      category: 'Network Services';
+    },;
+    {;
+      title: 'IT Support & Helpdesk',;
+      description: '24/7 technical support and helpdesk services',;
+      icon: Users,;
+      features: [;
+        '24/7/365 technical support coverage',;
+        'Remote desktop and troubleshooting',;
+        'Software installation and updates',;
+        'Hardware procurement and management',;
+        'User training and documentation',;
+        'SLA-based response times';
+      ],;
+      pricing: '$1,500 - $8,000/month',;
+      delivery: '1-2 weeks',;
+      category: 'Support Services';
+    },;
+    {;
+      title: 'Data Management & Analytics',;
+      description: 'Data warehousing, analytics, and business intelligence solutions',;
+      icon: Database,;
+      features: [;
+        'Data warehouse design and implementation',;
+        'ETL/ELT pipeline development',;
+        'Business intelligence dashboards',;
+        'Data governance and quality management',;
+        'Real-time analytics and reporting',;
+        'Machine learning data preparation';
+      ],;
+      pricing: '$4,000 - $30,000/month',;
+      delivery: '6-16 weeks',;
+      category: 'Data Services';
+    },;
+    {;
+      title: 'DevOps & CI/CD',;
+      description: 'Automated deployment pipelines and infrastructure as code',;
+      icon: Settings,;
+      features: [;
+        'CI/CD pipeline setup and optimization',;
+        'Infrastructure as Code (IaC) implementation',;
+        'Container orchestration with Kubernetes',;
+        'Monitoring and logging solutions',;
+        'Automated testing and quality gates',;
+        'DevSecOps and security integration';
+      ],;
+      pricing: '$3,500 - $20,000/month',;
+      delivery: '4-10 weeks',;
+      category: 'DevOps Services';
+    },;
+    {;
+      title: 'Digital Transformation',;
+      description: 'End-to-end digital transformation consulting and implementation',;
+      icon: Zap,;
+      features: [;
+        'Digital strategy and roadmap development',;
+        'Process automation and optimization',;
+        'Legacy system modernization',;
+        'Change management and training',;
+        'Technology stack evaluation',;
+        'ROI measurement and optimization';
+      ],;
+      pricing: '$10,000 - $100,000/month',;
+      delivery: '12-24 weeks',;
+      category: 'Consulting Services';
+    },;
+    {;
+      title: 'Managed IT Services',;
+      description: 'Comprehensive IT management and monitoring services',;
+      icon: Monitor,;
+      features: [;
+        'Proactive monitoring and maintenance',;
+        'Patch management and updates',;
+        'Performance optimization',;
+        'Capacity planning and scaling',;
+        'Vendor management and procurement',;
+        'IT strategy and planning';
+      ],;
+      pricing: '$2,500 - $15,000/month',;
+      delivery: '2-4 weeks',;
+      category: 'Managed Services';
+    }
+  ];
+;
+  const technologies = [;
+    { name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },;
+    { name: 'Containerization', icon: Server, description: 'Docker, Kubernetes, OpenShift' },;
+    { name: 'Security Tools', icon: Shield, description: 'SIEM, WAF, IAM, Encryption' },;
+    { name: 'Monitoring', icon: BarChart3, description: 'Prometheus, Grafana, ELK Stack' },;
+    { name: 'Databases', icon: Database, description: 'PostgreSQL, MongoDB, Redis' },;
+    { name: 'Networking', icon: Network, description: 'Cisco, Fortinet, SD-WAN' }
+  ];
+;
+  const benefits = [;
+    {;
+      title: 'Reduced Downtime',;
+      description: 'Proactive monitoring and maintenance',;
+      icon: Clock,;
+      stat: '99.9%';
+    },;
+    {;
+      title: 'Cost Savings',;
+      description: 'Optimized infrastructure and processes',;
+      icon: Zap,;
+      stat: '40%';
+    },;
+    {;
+      title: 'Enhanced Security',;
+      description: 'Enterprise-grade protection',;
+      icon: Shield,;
+      stat: '100%';
+    },;
+    {;
+      title: 'Scalability',;
+      description: 'Flexible and scalable solutions',;
+      icon: TrendingUp,;
+      stat: 'Unlimited';
+    }
+  ];
+;
+  return (;
+    <PageTransition>;
+      <Head>;
+        <title>{title}</title>;
+        <meta name="description" content={description} />;
+        <meta name="viewport" content="width=device-width, initial-scale=1" />;
+        <link rel="canonical" href="https://ziontechgroup.com/it-services" />;
+      </Head>;
+
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 py-20 sm:py-32">;
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">;
+          <div className="mx-auto max-w-3xl text-center">;
+            <div className="flex items-center justify-center mb-6">;
+              <Server className="h-12 w-12 text-green-600 mr-4" />;
+              <Award className="h-6 w-6 text-green-600 mr-2" />;
+              <span className="text-base font-semibold leading-7 text-green-600">IT Services</span>;
+            </div>;
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">;
+              Information Technology Solutions;
+            </h1>;
+            <p className="mt-6 text-lg leading-8 text-gray-600">;
+              Comprehensive IT services that keep your business running smoothly. From cloud infrastructure ;
+              to cybersecurity, we provide end-to-end technology solutions.;
+            </p>;
+            <div className="mt-10 flex items-center justify-center gap-x-6">;
+              <Link;
+                href="/contact";
+                className="rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600";
+              >;
+                Get Started;
+                <ArrowRight className="ml-2 h-4 w-4 inline" />;
+              </Link>;
+              <Link;
+                href="/pricing-guide";
+                className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-600";
+              >;
+                View Pricing <span aria-hidden="true">→</span>;
+              </Link>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
 
       {/* Benefits Section */}
-      <section className=&quot;py-24 sm:py-32 bg-white&quot;>
-        <div className=&quot;mx-auto max-w-7xl px-6 lg:px-8&quot;>
-          <div className=&quot;mx-auto max-w-2xl text-center mb-16&quot;>
-            <h2 className=&quot;text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl&quot;>
-              Why Choose Our IT Services?
-            </h2>
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-600&quot;>
-              Proven expertise and measurable results for your technology infrastructure
-            </p>
-          </div>
-          <div className=&quot;grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4&quot;>
-            {benefits.map((benefit, index) => (
-              <div key={index} className=&quot;text-center&quot;>
-                <div className=&quot;flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mx-auto mb-4&quot;>
-                  <benefit.icon className=&quot;h-8 w-8 text-green-600&quot; />
-                </div>
-                <h3 className=&quot;text-2xl font-bold text-gray-900 mb-2&quot;>{benefit.stat}</h3>
-                <h4 className=&quot;text-lg font-semibold text-gray-900 mb-2&quot;>{benefit.title}</h4>
-                <p className=&quot;text-gray-600&quot;>{benefit.description}</p>
-              </div>
+      <section className="py-24 sm:py-32 bg-white">;
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">;
+          <div className="mx-auto max-w-2xl text-center mb-16">;
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">;
+              Why Choose Our IT Services?;
+            </h2>;
+            <p className="mt-6 text-lg leading-8 text-gray-600">;
+              Proven expertise and measurable results for your technology infrastructure;
+            </p>;
+          </div>;
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">;
+            {benefits.map((benefit, index) => (;
+              <div key={index} className="text-center">;
+                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mx-auto mb-4">;
+                  <benefit.icon className="h-8 w-8 text-green-600" />;
+                </div>;
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{benefit.stat}</h3>;
+                <h4 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h4>;
+                <p className="text-gray-600">{benefit.description}</p>;
+              </div>;
+>>>>>>> main
             ))}
-          </div>
-        </div>
-      </section>
+          </div>;
+        </div>;
+      </section>;
 
-      {/* Technologies Section */}
-      <section className=&quot;py-24 sm:py-32 bg-gray-50&quot;>
-        <div className=&quot;mx-auto max-w-7xl px-6 lg:px-8&quot;>
-          <div className=&quot;mx-auto max-w-2xl text-center mb-16&quot;>
-            <h2 className=&quot;text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl&quot;>
+<<<<<<< HEAD
+      {/* Technologies Section */}"
+      <section className="py-24 sm: py-32 bg-gray-50">"
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">"
+          <div className="mx-auto max-w-2xl text-center mb-16">"
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Technologies We Master
-            </h2>
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-600&quot;>
+            </h2>"
+            <p className="mt-6 text-lg leading-8 text-gray-600">
               Cutting-edge technologies powering modern IT infrastructure
             </p>
-          </div>
-          <div className=&quot;grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3&quot;>
+          </div>"
+          <div className="grid grid-cols-1 gap-8 s,
+    m:grid-cols-2 l,
+    g:grid-cols-3">
             {technologies.map((tech, index) => (
-              <div key={index} className=&quot;bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow&quot;>
-                <div className=&quot;flex items-center mb-4&quot;>
-                  <div className=&quot;flex h-12 w-12 items-center justify-center rounded-lg bg-green-100&quot;>
-                    <tech.icon className=&quot;h-6 w-6 text-green-600&quot; />
-                  </div>
-                  <h3 className=&quot;text-lg font-semibold text-gray-900 ml-4&quot;>{tech.name}</h3>
-                </div>
-                <p className=&quot;text-gray-600&quot;>{tech.description}</p>
+              <div
+                key={index}"
+                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+              >"
+                <div className="flex items-center mb-4">"
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">"
+                    <tech.icon className="h-6 w-6 text-green-600" />
+                  </div>"
+                  <h3 className="text-lg font-semibold text-gray-900 ml-4">
+                    {tech.name}
+                  </h3>
+                </div>"
+                <p className="text-gray-600">{tech.description}</p>
               </div>
+=======
+      {/* Technologies Section */}
+      <section className="py-24 sm:py-32 bg-gray-50">;
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">;
+          <div className="mx-auto max-w-2xl text-center mb-16">;
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">;
+              Technologies We Master;
+            </h2>;
+            <p className="mt-6 text-lg leading-8 text-gray-600">;
+              Cutting-edge technologies powering modern IT infrastructure;
+            </p>;
+          </div>;
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">;
+            {technologies.map((tech, index) => (;
+              <div key={index} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">;
+                <div className="flex items-center mb-4">;
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">;
+                    <tech.icon className="h-6 w-6 text-green-600" />;
+                  </div>;
+                  <h3 className="text-lg font-semibold text-gray-900 ml-4">{tech.name}</h3>;
+                </div>;
+                <p className="text-gray-600">{tech.description}</p>;
+              </div>;
+>>>>>>> main
             ))}
-          </div>
-        </div>
-      </section>
+          </div>;
+        </div>;
+      </section>;
 
-      {/* IT Services Grid */}
-      <section className=&quot;py-24 sm:py-32 bg-white&quot;>
-        <div className=&quot;mx-auto max-w-7xl px-6 lg:px-8&quot;>
-          <div className=&quot;mx-auto max-w-2xl text-center mb-16&quot;>
-            <h2 className=&quot;text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl&quot;>
+<<<<<<< HEAD
+      {/* IT Services Grid */}"
+      <section className="py-24 sm: py-32 bg-white">"
+        <div className="mx-auto max-w-7xl px-6 l,
+    g:px-8">"
+          <div className="mx-auto max-w-2xl text-center mb-16">"
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 s,
+    m:text-4xl">
               Our IT Service Portfolio
-            </h2>
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-600&quot;>
-              Comprehensive IT solutions tailored to your business needs. All services include implementation, 
-              training, and ongoing support. Contact us at{&apos; &apos;}
-              <a href=&quot;mailto:kleber@ziontechgroup.com&quot; className=&quot;text-green-600 hover:text-green-500&quot;>
-                kleber@ziontechgroup.com
-              </Link>{&apos; &apos;}
-              or call{&apos; &apos;}
-              <a href=&quot;tel:+13024640950&quot; className=&quot;text-green-600 hover:text-green-500&quot;>
-                +1 302 464 0950
-              </Link>{&apos; &apos;}
+            </h2>"
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Comprehensive IT solutions tailored to your business needs. All
+              services include implementation, training, and ongoing support."
+              Contact us at{' '}
+              <a'
+                href="mailto:kleber@ziontechgroup.com""
+                className="text-green-600 hove,
+    r:text-green-500"
+              >
+                kleber@ziontechgroup.com"
+              </a>{' '}
+              or call{' '}
+              <a'
+                href="tel:+13024640950""
+                className="text-green-600 hove,
+    r:text-green-500"
+              >
+                +1 302 464 0950"
+              </a>{' '}
               for custom pricing.
             </p>
-          </div>
-          <div className=&quot;grid grid-cols-1 gap-8 lg:grid-cols-2&quot;>
+          </div>'
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             {itServices.map((service, index) => (
-              <div key={index} className=&quot;group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300&quot;>
-                <div className=&quot;flex items-center gap-x-3 mb-6&quot;>
-                  <div className=&quot;flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700 transition-colors&quot;>
-                    <service.icon className=&quot;h-7 w-7 text-white&quot; />
+              <div
+                key={index}"
+                className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300"
+              >"
+                <div className="flex items-center gap-x-3 mb-6">"
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hove,
+    r:bg-green-700 transition-colors">"
+                    <service.icon className="h-7 w-7 text-white" />
                   </div>
-                  <div>
-                    <h3 className=&quot;text-xl font-semibold text-gray-900&quot;>{service.title}</h3>
-                    <p className=&quot;text-sm text-green-600 font-medium&quot;>{service.category}</p>
+                  <div>"
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      {service.title}
+                    </h3>"
+                    <p className="text-sm text-green-600 font-medium">
+                      {service.category}
+                    </p>
                   </div>
-                </div>
-                <p className=&quot;text-gray-600 mb-6&quot;>{service.description}</p>
-                <ul className=&quot;space-y-3 mb-6&quot;>
+                </div>"
+                <p className="text-gray-600 mb-6">{service.description}</p>"
+                <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className=&quot;flex items-center gap-x-3&quot;>
-                      <CheckCircle className=&quot;h-4 w-4 text-green-600 flex-shrink-0&quot; />
-                      <span className=&quot;text-sm text-gray-700&quot;>{feature}</span>
+                    <li
+                      key={featureIndex}"
+                      className="flex items-center gap-x-3"
+                    >"
+                      <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />"
+                      <span className="text-sm text-gray-700">{feature}</span>
                     </li>
                   ))}
-                </ul>
-                <div className=&quot;flex items-center justify-between&quot;>
-                  <div className=&quot;flex items-center space-x-4 text-sm text-gray-500&quot;>
-                    <div className=&quot;flex items-center space-x-1&quot;>
-                      <Clock className=&quot;h-4 w-4&quot; />
+                </ul>"
+                <div className="flex items-center justify-between">"
+                  <div className="flex items-center space-x-4 text-sm text-gray-500">"
+                    <div className="flex items-center space-x-1">"
+                      <Clock className="h-4 w-4" />
                       <span>{service.delivery}</span>
+                    </div>"
+                    <div className="font-semibold text-green-600">
+                      {service.pricing}
                     </div>
-                    <div className=&quot;font-semibold text-green-600&quot;>{service.pricing}</div>
                   </div>
-                  <Link
-                    href=&quot;/contact&quot;
-                    className=&quot;inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group&quot;
+                  <Link"
+                    href="/contact""
+                    className="inline-flex items-center text-sm font-semibold text-green-600 hover: text-green-500 transition-colors group"
                   >
-                    Get Started
-                    <ArrowRight className=&quot;ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform&quot; />
+                    Get Started"
+                    <ArrowRight className="ml-2 h-4 w-4 group-hove,
+    r:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>
+=======
+      {/* IT Services Grid */}
+      <section className="py-24 sm:py-32 bg-white">;
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">;
+          <div className="mx-auto max-w-2xl text-center mb-16">;
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">;
+              Our IT Service Portfolio;
+            </h2>;
+            <p className="mt-6 text-lg leading-8 text-gray-600">;
+              Comprehensive IT solutions tailored to your business needs. All services include implementation, ;
+              training, and ongoing support. Contact us at{' '}
+              <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 hover:text-green-500">;
+                kleber@ziontechgroup.com;
+              </a>{' '}
+              or call{' '}
+              <a href="tel:+13024640950" className="text-green-600 hover:text-green-500">;
+                +1 302 464 0950;
+              </a>{' '}
+              for custom pricing.;
+            </p>;
+          </div>;
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">;
+            {itServices.map((service, index) => (;
+              <div key={index} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">;
+                <div className="flex items-center gap-x-3 mb-6">;
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700 transition-colors">;
+                    <service.icon className="h-7 w-7 text-white" />;
+                  </div>;
+                  <div>;
+                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>;
+                    <p className="text-sm text-green-600 font-medium">{service.category}</p>;
+                  </div>;
+                </div>;
+                <p className="text-gray-600 mb-6">{service.description}</p>;
+                <ul className="space-y-3 mb-6">;
+                  {service.features.map((feature, featureIndex) => (;
+                    <li key={featureIndex} className="flex items-center gap-x-3">;
+                      <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />;
+                      <span className="text-sm text-gray-700">{feature}</span>;
+                    </li>;
+                  ))}
+                </ul>;
+                <div className="flex items-center justify-between">;
+                  <div className="flex items-center space-x-4 text-sm text-gray-500">;
+                    <div className="flex items-center space-x-1">;
+                      <Clock className="h-4 w-4" />;
+                      <span>{service.delivery}</span>;
+                    </div>;
+                    <div className="font-semibold text-green-600">{service.pricing}</div>;
+                  </div>;
+                  <Link;
+                    href="/contact";
+                    className="inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group";
+                  >;
+                    Get Started;
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />;
+                  </Link>;
+                </div>;
+              </div>;
+>>>>>>> main
             ))}
-          </div>
-        </div>
-      </section>
+          </div>;
+        </div>;
+      </section>;
 
-      {/* Contact Information Section */}
-      <section className=&quot;bg-gray-50 py-16 sm:py-24&quot;>
-        <div className=&quot;mx-auto max-w-7xl px-6 lg:px-8&quot;>
-          <div className=&quot;mx-auto max-w-2xl text-center&quot;>
-            <h2 className=&quot;text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl&quot;>
+<<<<<<< HEAD
+      {/* Contact Information Section */}"
+      <section className="bg-gray-50 py-16 sm: py-24">"
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">"
+          <div className="mx-auto max-w-2xl text-center">"
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Ready to Transform Your IT Infrastructure?
-            </h2>
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-600&quot;>
-              Let&apos;s discuss how our IT services can optimize your technology infrastructure. 
-              Get a free consultation and custom proposal.
-            </p>
-            <div className=&quot;mt-10 grid grid-cols-1 gap-8 sm:grid-cols-3&quot;>
-              <div className=&quot;text-center&quot;>
-                <div className=&quot;flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4&quot;>
-                  <Phone className=&quot;h-6 w-6 text-green-600&quot; />
-                </div>
-                <h3 className=&quot;text-lg font-semibold text-gray-900 mb-2&quot;>Call Us</h3>
-                <a href=&quot;tel:+13024640950&quot; className=&quot;text-green-600 hover:text-green-500&quot;>
+            </h2>"
+            <p className="mt-6 text-lg leading-8 text-gray-600">"
+              Let's discuss how our IT services can optimize your technology
+              infrastructure. Get a free consultation and custom proposal.
+            </p>'
+            <div className="mt-10 grid grid-cols-1 gap-8 sm: grid-cols-3">"
+              <div className="text-center">"
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">"
+                  <Phone className="h-6 w-6 text-green-600" />
+                </div>"
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Call Us
+                </h3>
+                <a"
+                  href="tel:+13024640950""
+                  className="text-green-600 hover:text-green-500"
+                >
                   +1 302 464 0950
-                </Link>
-              </div>
-              <div className=&quot;text-center&quot;>
-                <div className=&quot;flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4&quot;>
-                  <Mail className=&quot;h-6 w-6 text-green-600&quot; />
-                </div>
-                <h3 className=&quot;text-lg font-semibold text-gray-900 mb-2&quot;>Email Us</h3>
-                <a href=&quot;mailto:kleber@ziontechgroup.com&quot; className=&quot;text-green-600 hover:text-green-500&quot;>
+                </a>
+              </div>"
+              <div className="text-center">"
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">"
+                  <Mail className="h-6 w-6 text-green-600" />
+                </div>"
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Email Us
+                </h3>
+                <a"
+                  href="mailto:kleber@ziontechgroup.com""
+                  className="text-green-600 hover:text-green-500"
+                >
                   kleber@ziontechgroup.com
-                </Link>
+                </a>
+              </div>"
+              <div className="text-center">"
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">"
+                  <MapPin className="h-6 w-6 text-green-600" />
+                </div>"
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Visit Us
+                </h3>"
+                <p className="text-gray-600">
+                  364 E Main St STE 1008
+                  <br />
+                  Middletown DE 19709
+                </p>
               </div>
-              <div className=&quot;text-center&quot;>
-                <div className=&quot;flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4&quot;>
-                  <MapPin className=&quot;h-6 w-6 text-green-600&quot; />
-                </div>
-                <h3 className=&quot;text-lg font-semibold text-gray-900 mb-2&quot;>Visit Us</h3>
-                <p className=&quot;text-gray-600&quot;>364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
-            </div>
-            <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>
-              <Link
-                href=&quot;/contact&quot;
-                className=&quot;rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600&quot;
+            </div>"
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <Link"
+                href="/contact""
+                className="rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
               >
                 Schedule Consultation
               </Link>
-              <a
-                href=&quot;tel:+13024640950&quot;
-                className=&quot;text-sm font-semibold leading-6 text-gray-900 hover:text-green-600&quot;
-              >
-                Call Now <span aria-hidden=&quot;true&quot;>→</span>
-              </Link>
+              <a"
+                href="te,
+    l:+13024640950""
+                className="text-sm font-semibold leading-6 text-gray-900 hove,
+    r:text-green-600"
+              >"
+                Call Now <span aria-hidden="true">→</span>
+              </a>
             </div>
           </div>
         </div>
       </section>
     </PageTransition>
+  )
+}
+"
+=======
+      {/* Contact Information Section */}
+      <section className="bg-gray-50 py-16 sm:py-24">;
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">;
+          <div className="mx-auto max-w-2xl text-center">;
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">;
+              Ready to Transform Your IT Infrastructure?;
+            </h2>;
+            <p className="mt-6 text-lg leading-8 text-gray-600">;
+              Let's discuss how our IT services can optimize your technology infrastructure. ;
+              Get a free consultation and custom proposal.;
+            </p>;
+            <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-3">;
+              <div className="text-center">;
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">;
+                  <Phone className="h-6 w-6 text-green-600" />;
+                </div>;
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Call Us</h3>;
+                <a href="tel:+13024640950" className="text-green-600 hover:text-green-500">;
+                  +1 302 464 0950;
+                </a>;
+              </div>;
+              <div className="text-center">;
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">;
+                  <Mail className="h-6 w-6 text-green-600" />;
+                </div>;
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>;
+                <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 hover:text-green-500">;
+                  kleber@ziontechgroup.com;
+                </a>;
+              </div>;
+              <div className="text-center">;
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">;
+                  <MapPin className="h-6 w-6 text-green-600" />;
+                </div>;
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Us</h3>;
+                <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>;
+              </div>;
+            </div>;
+            <div className="mt-10 flex items-center justify-center gap-x-6">;
+              <Link;
+                href="/contact";
+                className="rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600";
+              >;
+                Schedule Consultation;
+              </Link>;
+              <a;
+                href="tel:+13024640950";
+                className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-600";
+              >;
+                Call Now <span aria-hidden="true">→</span>;
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </PageTransition>;
   );
 }
+>>>>>>> main

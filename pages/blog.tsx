@@ -1,240 +1,967 @@
-import type { NextPage } from &apos;next&apos;;
-import Layout from &apos;../components/Layout&apos;;
-import Link from &apos;next/link&apos;;
-import { Calendar, User, ArrowRight, Tag, Clock } from &apos;lucide-react&apos;;
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react';
+<<<<<<< HEAD
+;
+const Blog: NextPage = () => {;
+  const blogPosts = [;
+    {;
+      id: 1,;
+      title: "The Future of AI in Business: Trends and Predictions for 2024",;
+      excerpt: "Explore the latest AI trends that are reshaping how businesses operate, from automation to predictive analytics.",;
+      author: "Kleber Santos",;
+      date: "2024-01-15",;
+      readTime: "5 min read",;
+      category: "AI & Machine Learning",;
+      image: "/api/placeholder/600/400",;
+      slug: "future-of-ai-in-business-2024";
+    },;
+    {;
+      id: 2,;
+      title: "Cloud Migration Best Practices: A Complete Guide",;
+      excerpt: "Learn the essential steps and strategies for successfully migrating your business to the cloud.",;
+      author: "Zion Tech Team",;
+      date: "2024-01-10",;
+      readTime: "8 min read",;
+      category: "Cloud Services",;
+      image: "/api/placeholder/600/400",;
+      slug: "cloud-migration-best-practices";
+    },;
+    {;
+      id: 3,;
+      title: "Building Scalable Web Applications with Modern Technologies",;
+      excerpt: "Discover the latest technologies and frameworks for creating robust, scalable web applications.",;
+      author: "Development Team",;
+      date: "2024-01-05",;
+      readTime: "6 min read",;
+      category: "Web Development",;
+      image: "/api/placeholder/600/400",;
+      slug: "scalable-web-applications-modern-tech";
+    },;
+    {;
+      id: 4,;
+      title: "Cybersecurity in 2024: Protecting Your Digital Assets",;
+      excerpt: "Essential cybersecurity strategies and tools to protect your business from evolving threats.",;
+      author: "Security Team",;
+      date: "2024-01-01",;
+      readTime: "7 min read",;
+      category: "Cybersecurity",;
+      image: "/api/placeholder/600/400",;
+      slug: "cybersecurity-2024-protecting-digital-assets";
+    },;
+    {;
+      id: 5,;
+      title: "Mobile App Development: Native vs Cross-Platform",;
+      excerpt: "Compare native and cross-platform development approaches to choose the best solution for your mobile app.",;
+      author: "Mobile Team",;
+      date: "2023-12-28",;
+      readTime: "9 min read",;
+      category: "Mobile Development",;
+      image: "/api/placeholder/600/400",;
+      slug: "mobile-app-development-native-vs-cross-platform";
+    },;
+    {;
+      id: 6,;
+      title: "Blockchain Technology: Beyond Cryptocurrency",;
+      excerpt: "Explore real-world applications of blockchain technology in various industries beyond digital currencies.",;
+      author: "Blockchain Team",;
+      date: "2023-12-25",;
+      readTime: "6 min read",;
+      category: "Blockchain",;
+      image: "/api/placeholder/600/400",;
+      slug: "blockchain-technology-beyond-cryptocurrency";
+    }
+  ];
+;
+  const categories = [;
+    "All Posts",;
+    "AI & Machine Learning",;
+    "Cloud Services",;
+    "Web Development",;
+    "Mobile Development",;
+    "Blockchain",;
+    "Cybersecurity",;
+    "IoT",;
+    "Industry Insights";
+  ];
+;
+  return (;
+    <Layout;
+      title="Blog - Zion Tech Group";
+      description="Stay updated with the latest technology trends, insights, and best practices from Zion Tech Group's expert team.";
+    >;
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;
+        <div className="container mx-auto px-4 text-center">;
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">;
+            Tech;
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Blog</span>;
+          </h1>;
+          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">;
+            Stay ahead of the curve with insights, trends, and best practices from our technology experts.;
+          </p>;
+        </div>;
+      </section>;
 
-const Blog: NextPage = () => {
+      {/* Blog Content */}
+      <section className="py-20 bg-white">;
+        <div className="container mx-auto px-4">;
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">;
+=======
+
+export default function Blog() {
   const blogPosts = [
+    {'
+      title: 'The Future of AI in Busines,
+    s: Trends and Predictions for 2025',
+      excerpt: 'Explore the latest AI trends that are reshaping how businesses operate and compete in the digital landscape.',
+      author: 'Sarah Johnson',
+      date: '2025-01-15',
+      readTime: '5 min read',
+      category: 'AI & Technology',
+      image: '/api/placeholder/400/250',
+      slug: 'future-of-ai-in-business-2025'
+    },
+    {'
+      title: 'Micro Saa,
+    S: Building Scalable Solutions for Modern Businesses',
+      excerpt: 'Learn how micro SaaS architecture can help you build cost-effective, scalable solutions for your business needs.',
+      author: 'Michael Chen',
+      date: '2025-01-12',
+      readTime: '7 min read',
+      category: 'SaaS Development',
+      image: '/api/placeholder/400/250',
+      slug: 'micro-saas-scalable-solutions'
+    },
+    {'
+      title: 'Cloud Migration Best Practice,
+    s: A Complete Guide',
+      excerpt: 'Discover the essential steps and best practices for successfully migrating your infrastructure to the cloud.',
+      author: 'Emily Rodriguez',
+      date: '2025-01-10',
+      readTime: '8 min read',
+      category: 'Cloud Solutions',
+      image: '/api/placeholder/400/250',
+      slug: 'cloud-migration-best-practices'
+    },
+    {'
+      title: 'Cybersecurity in 202,
+    5: Protecting Your Digital Assets',
+      excerpt: 'Stay ahead of cyber threats with our comprehensive guide to modern cybersecurity practices and tools.',
+      author: 'David Kim',
+      date: '2025-01-08',
+      readTime: '6 min read',
+      category: 'Security',
+      image: '/api/placeholder/400/250',
+      slug: 'cybersecurity-2025-protecting-digital-assets'
+    },
+    {'
+      title: 'Digital Transformatio,
+    n: A Step-by-Step Implementation Guide',
+      excerpt: 'Learn how to successfully implement digital transformation initiatives in your organization.',
+      author: 'Lisa Wang',
+      date: '2025-01-05',
+      readTime: '9 min read',
+      category: 'Digital Transformation',
+      image: '/api/placeholder/400/250',
+      slug: 'digital-transformation-implementation-guide'
+    },
+    {'
+      title: 'Building High-Performance Web Applications with Modern Frameworks',
+      excerpt: 'Explore the latest web development frameworks and techniques for building fast, scalable applications.',
+      author: 'Alex Thompson',
+      date: '2025-01-03',
+      readTime: '6 min read',
+      category: 'Web Development',
+      image: '/api/placeholder/400/250',
+      slug: 'high-performance-web-applications'
+    }
+=======
+<<<<<<< HEAD
+import type { NextPage } from 'next';
+const Layout = dynamic(() => import('../components/Layout'), { ssr: false });;
+const Link = dynamic(() => import('next/link'), { ssr: false });;
+import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react';
+=======
+import React from 'react';
+import Head from 'next/head';
+import { Header } from '../src/components/Header';
+import Footer from '../src/components/Footer';
+import { Calendar, User, ArrowRight, Tag, Search } from 'lucide-react';
+>>>>>>> main
+
+export default function Blog() {
+  const blogPosts = [
+<<<<<<< HEAD
     {
+      id: 1, title: "The Future of AI in Business: Trends and Predictions for 2024",
+      excerpt: "Explore the latest AI trends that are reshaping how businesses operate, from automation to predictive analytics.",
+      author: "Kleber Santos", date: "2024-01-15",
+      readTime: "5 min read", category: "AI & Machine Learning",
+      image: "/api/placeholder/600/400", slug: "future-of-ai-in-business-2024"
+    },
+    {
+      id: 2, title: "Cloud Migration Best Practices: A Complete Guide",
+      excerpt: "Learn the essential steps and strategies for successfully migrating your business to the cloud.", author: "Zion Tech Team",
+      date: "2024-01-10", readTime: "8 min read",
+      category: "Cloud Services", image: "/api/placeholder/600/400",
+      slug: "cloud-migration-best-practices"
+    }, {
+      id: 3,
+      title: "Building Scalable Web Applications with Modern Technologies", excerpt: "Discover the latest technologies and frameworks for creating robust, scalable web applications.", author: "Development Team",
+      date: "2024-01-05", readTime: "6 min read",
+      category: "Web Development", image: "/api/placeholder/600/400",
+      slug: "scalable-web-applications-modern-tech"
+    }, {
+      id: 4,
+      title: "Cybersecurity in 2024: Protecting Your Digital Assets", excerpt: "Essential cybersecurity strategies and tools to protect your business from evolving threats.",
+      author: "Security Team", date: "2024-01-01",
+      readTime: "7 min read", category: "Cybersecurity",
+      image: "/api/placeholder/600/400", slug: "cybersecurity-2024-protecting-digital-assets"
+    },
+    {
+      id: 5, title: "Mobile App Development: Native vs Cross-Platform",
+      excerpt: "Compare native and cross-platform development approaches to choose the best solution for your mobile app.", author: "Mobile Team",
+      date: "2023-12-28", readTime: "9 min read",
+      category: "Mobile Development", image: "/api/placeholder/600/400",
+      slug: "mobile-app-development-native-vs-cross-platform"
+    }, {
+      id: 6,
+      title: "Blockchain Technology: Beyond Cryptocurrency", excerpt: "Explore real-world applications of blockchain technology in various industries beyond digital currencies.",
+      author: "Blockchain Team", date: "2023-12-25",
+      readTime: "6 min read", category: "Blockchain",
+      image: "/api/placeholder/600/400", slug: "blockchain-technology-beyond-cryptocurrency"
+=======
+  {
       id: 1,
-      title: &quot;The Future of AI in Business: Trends and Predictions for 2024&quot;,
-      excerpt: &quot;Explore the latest AI trends that are reshaping how businesses operate, from automation to predictive analytics.&quot;,
-      author: &quot;Kleber Santos&quot;,
-      date: &quot;2024-01-15&quot;,
-      readTime: &quot;5 min read&quot;,
-      category: &quot;AI & Machine Learning&quot;,
-      image: &quot;/api/placeholder/600/400&quot;,
-      slug: &quot;future-of-ai-in-business-2024&quot;
+      title: 'The Future of AI in Business: Trends to Watch in 2024',
+      excerpt:
+        'Explore the latest AI trends that are reshaping how businesses operate and compete in the digital landscape.',
+      author: 'Kleber Santos',
+      date: '2024-01-15',
+      readTime: '5 min read',
+      category: 'AI & Machine Learning',
+      image: '/images/blog/ai-trends-2024.jpg',
+      featured: true,
     },
     {
       id: 2,
-      title: &quot;Cloud Migration Best Practices: A Complete Guide&quot;,
-      excerpt: &quot;Learn the essential steps and strategies for successfully migrating your business to the cloud.&quot;,
-      author: &quot;Zion Tech Team&quot;,
-      date: &quot;2024-01-10&quot;,
-      readTime: &quot;8 min read&quot;,
-      category: &quot;Cloud Services&quot;,
-      image: &quot;/api/placeholder/600/400&quot;,
-      slug: &quot;cloud-migration-best-practices&quot;
+      title: 'Micro SaaS: Building Scalable Solutions for Modern Businesses',
+      excerpt:
+        'Learn how micro SaaS platforms are revolutionizing software delivery and creating new opportunities for businesses.',
+      author: 'Sarah Johnson',
+      date: '2024-01-12',
+      readTime: '7 min read',
+      category: 'Micro SaaS',
+      image: '/images/blog/micro-saas-guide.jpg',
+      featured: false,
     },
     {
       id: 3,
-      title: &quot;Building Scalable Web Applications with Modern Technologies&quot;,
-      excerpt: &quot;Discover the latest technologies and frameworks for creating robust, scalable web applications.&quot;,
-      author: &quot;Development Team&quot;,
-      date: &quot;2024-01-05&quot;,
-      readTime: &quot;6 min read&quot;,
-      category: &quot;Web Development&quot;,
-      image: &quot;/api/placeholder/600/400&quot;,
-      slug: &quot;scalable-web-applications-modern-tech&quot;
+      title: 'Cybersecurity Best Practices for Small to Medium Businesses',
+      excerpt:
+        'Essential security measures every SMB should implement to protect their digital assets and customer data.',
+      author: 'Michael Chen',
+      date: '2024-01-10',
+      readTime: '6 min read',
+      category: 'Cybersecurity',
+      image: '/images/blog/cybersecurity-smb.jpg',
+      featured: false,
     },
     {
       id: 4,
-      title: &quot;Cybersecurity in 2024: Protecting Your Digital Assets&quot;,
-      excerpt: &quot;Essential cybersecurity strategies and tools to protect your business from evolving threats.&quot;,
-      author: &quot;Security Team&quot;,
-      date: &quot;2024-01-01&quot;,
-      readTime: &quot;7 min read&quot;,
-      category: &quot;Cybersecurity&quot;,
-      image: &quot;/api/placeholder/600/400&quot;,
-      slug: &quot;cybersecurity-2024-protecting-digital-assets&quot;
+      title: 'Cloud Migration Strategies: A Complete Guide',
+      excerpt:
+        'Step-by-step guide to successfully migrating your business to the cloud while minimizing risks and downtime.',
+      author: 'Emily Rodriguez',
+      date: '2024-01-08',
+      readTime: '8 min read',
+      category: 'Cloud Computing',
+      image: '/images/blog/cloud-migration.jpg',
+      featured: false,
     },
     {
       id: 5,
-      title: &quot;Mobile App Development: Native vs Cross-Platform&quot;,
-      excerpt: &quot;Compare native and cross-platform development approaches to choose the best solution for your mobile app.&quot;,
-      author: &quot;Mobile Team&quot;,
-      date: &quot;2023-12-28&quot;,
-      readTime: &quot;9 min read&quot;,
-      category: &quot;Mobile Development&quot;,
-      image: &quot;/api/placeholder/600/400&quot;,
-      slug: &quot;mobile-app-development-native-vs-cross-platform&quot;
+      title: 'Digital Transformation: Where to Start and How to Succeed',
+      excerpt:
+        'Practical advice for businesses embarking on their digital transformation journey.',
+      author: 'Kleber Santos',
+      date: '2024-01-05',
+      readTime: '6 min read',
+      category: 'Digital Transformation',
+      image: '/images/blog/digital-transformation.jpg',
+      featured: false,
     },
     {
       id: 6,
-      title: &quot;Blockchain Technology: Beyond Cryptocurrency&quot;,
-      excerpt: &quot;Explore real-world applications of blockchain technology in various industries beyond digital currencies.&quot;,
-      author: &quot;Blockchain Team&quot;,
-      date: &quot;2023-12-25&quot;,
-      readTime: &quot;6 min read&quot;,
-      category: &quot;Blockchain&quot;,
-      image: &quot;/api/placeholder/600/400&quot;,
-      slug: &quot;blockchain-technology-beyond-cryptocurrency&quot;
+      title: 'Building Custom APIs: Best Practices and Common Pitfalls',
+      excerpt:
+        'Learn the essential practices for building robust, scalable APIs that serve your business needs.',
+      author: 'Michael Chen',
+      date: '2024-01-03',
+      readTime: '9 min read',
+      category: 'Development',
+      image: '/images/blog/api-development.jpg',
+<<<<<<< HEAD
+      featured: false,
+    },
+>>>>>>> main
+  ];
+
+  const categories = ['
+    'All Posts',
+<<<<<<< HEAD
+    'AI & Machine Learning',
+    'Cloud Services',
+    'Web Development',
+    'Mobile Development',
+    'Blockchain',
+    'Cybersecurity',
+    'IoT',
+    'Industry Insights',
+  ]
+=======
+<<<<<<< HEAD
+    'AI & Technology',
+    'SaaS Development',
+    'Cloud Solutions',
+    'Security',
+    'Digital Transformation',
+    'Web Development'
+  ];
+
+>>>>>>> main
+  return (
+    <>
+      <Head>
+        <title>Blog - Zion Tech Group</title>'
+        <meta name="description" content="Stay updated with the latest insights on technology, AI, cloud solutions, and digital transformation from Zion Tech Group experts." />"
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      "
+      <main className="min-h-screen bg-white">
+<<<<<<< HEAD
+        {/* Hero Section */}"
+        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">"
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 l,
+    g:px-8">"
+            <div className="text-center">"
+=======
+=======
+    'AI & Machine Learning',
+    'Micro SaaS',
+    'Cybersecurity',
+    'Cloud Computing',
+    'Digital Transformation',
+    'Development',
+=======
+      featured: false
+>>>>>>> main
     }
   ];
 
   const categories = [
-    &quot;All Posts&quot;,
-    &quot;AI & Machine Learning&quot;,
-    &quot;Cloud Services&quot;,
-    &quot;Web Development&quot;,
-    &quot;Mobile Development&quot;,
-    &quot;Blockchain&quot;,
-    &quot;Cybersecurity&quot;,
-    &quot;IoT&quot;,
-    &quot;Industry Insights&quot;
+<<<<<<< HEAD
+    "All Posts", "AI & Machine Learning",
+    "Cloud Services", "Web Development",
+    "Mobile Development", "Blockchain",
+    "Cybersecurity", "IoT",
+    "Industry Insights"
+=======
+    'All Posts,AI & Machine Learning,Micro SaaS,Cybersecurity,Cloud Computing,Digital Transformation,Development'
+>>>>>>> main
+>>>>>>> main
   ];
 
+  const featuredPost = blogPosts.find(post => post.featured);
+  const regularPosts = blogPosts.filter(post => !post.featured);
+
   return (
+<<<<<<< HEAD
     <Layout
-      title=&quot;Blog - Zion Tech Group&quot;
-      description=&quot;Stay updated with the latest technology trends, insights, and best practices from Zion Tech Group&apos;s expert team.&quot;
+      title="Blog - Zion Tech Group"
+      description="Stay updated with the latest technology trends, insights, and best practices from Zion Tech Group's expert team."
     >
       {/* Hero Section */}
-      <section className=&quot;bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20&quot;>
-        <div className=&quot;container mx-auto px-4 text-center&quot;>
-          <h1 className=&quot;text-5xl md:text-6xl font-bold mb-6&quot;>
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Tech
-            <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400&quot;> Blog</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Blog</span>
           </h1>
-          <p className=&quot;text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200&quot;>
+          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
             Stay ahead of the curve with insights, trends, and best practices from our technology experts.
           </p>
         </div>
       </section>
 
       {/* Blog Content */}
-      <section className=&quot;py-20 bg-white&quot;>
-        <div className=&quot;container mx-auto px-4&quot;>
-          <div className=&quot;grid grid-cols-1 lg:grid-cols-4 gap-8&quot;>
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg: grid-cols-4 gap-8">
+>>>>>>> main
             {/* Sidebar */}
-            <div className=&quot;lg:col-span-1&quot;>
-              <div className=&quot;sticky top-8&quot;>
+            <div className="lg:col-span-1">;
+              <div className="sticky top-8">;
                 {/* Categories */}
-                <div className=&quot;bg-gray-50 rounded-lg p-6 mb-8&quot;>
-                  <h3 className=&quot;text-lg font-semibold text-gray-900 mb-4&quot;>Categories</h3>
-                  <ul className=&quot;space-y-2&quot;>
-                    {categories.map((category, index) => (
-                      <li key={index}>
-                        <a
-                          href=&quot;#&quot;
-                          className={`block px-3 py-2 rounded-md text-sm transition-colors ${
-                            index === 0
-                              ? &apos;bg-blue-100 text-blue-700 font-medium&apos;
-                              : &apos;text-gray-600 hover:bg-gray-100 hover:text-gray-900&apos;
+                <div className="bg-gray-50 rounded-lg p-6 mb-8">;
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Categories</h3>;
+                  <ul className="space-y-2">;
+                    {categories.map((category, index) => (;
+                      <li key={index}>;
+                        <a;
+                          href="#";
+                          className={`block px-3 py-2 rounded-md text-sm transition-colors ${;
+                            index === 0;
+                              ? 'bg-blue-100 text-blue-700 font-medium';
+                              : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900';
                           }`}
-                        >
+                        >;
                           {category}
-                        </Link>
-                      </li>
+                        </a>;
+                      </li>;
                     ))}
-                  </ul>
-                </div>
+                  </ul>;
+                </div>;
 
                 {/* Newsletter Signup */}
-                <div className=&quot;bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg p-6 text-white&quot;>
-                  <h3 className=&quot;text-lg font-semibold mb-4&quot;>Stay Updated</h3>
-                  <p className=&quot;text-sm text-blue-100 mb-4&quot;>
+<<<<<<< HEAD
+                <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg p-6 text-white">;
+                  <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>;
+                  <p className="text-sm text-blue-100 mb-4">;
+                    Subscribe to our newsletter for the latest tech insights and updates.;
+                  </p>;
+                  <form className="space-y-3">;
+                    <input;
+                      type="email";
+                      placeholder="Enter your email";
+                      className="w-full px-3 py-2 rounded-md text-gray-900 text-sm";
+                    />;
+                    <button;
+                      type="submit";
+                      className="w-full bg-white text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-md font-semibold text-sm transition-colors";
+                    >;
+                      Subscribe;
+                    </button>;
+                  </form>;
+                </div>;
+              </div>;
+            </div>;
+=======
+                <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg p-6 text-white">
+                  <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
+                  <p className="text-sm text-blue-100 mb-4">
                     Subscribe to our newsletter for the latest tech insights and updates.
                   </p>
-                  <form className=&quot;space-y-3&quot;>
+                  <form className="space-y-3">
                     <input
-                      type=&quot;email&quot;
-                      placeholder=&quot;Enter your email&quot;
-                      className=&quot;w-full px-3 py-2 rounded-md text-gray-900 text-sm&quot;
+                      type="email"
+                      placeholder="Enter your email"
+                      className="w-full px-3 py-2 rounded-md text-gray-900 text-sm"
                     />
                     <button
-                      type=&quot;submit&quot;
-                      className=&quot;w-full bg-white text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-md font-semibold text-sm transition-colors&quot;
+                      type="submit"
+                      className="w-full bg-white text-blue-600 hover: bg-gray-100 px-4 py-2 rounded-md font-semibold text-sm transition-colors"
                     >
                       Subscribe
                     </button>
                   </form>
                 </div>
               </div>
-            </div>
+=======
+    <>
+      <Head>
+        <title>Blog - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Stay updated with the latest insights on AI, IT services, micro SaaS, and technology trends from Zion Tech Group experts."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https: //ziontechgroup.com/blog" />
+      </Head>
+>>>>>>> main
 
+      <Header />
+
+      <main className="min-h-screen bg-white pt-16">
+>>>>>>> main
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+>>>>>>> main
+              <h1 className="text-4xl font-bold text-gray-900 mb-6">
+<<<<<<< HEAD
+                Technology Insights & News
+              </h1>"
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Stay informed with the latest trends, insights, and best practices in technology, AI, and digital transformation.
+              </p>
+=======
+                Technology Insights & Updates
+              </h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Stay informed with the latest trends, best practices, and
+                insights in AI, IT services, micro SaaS, and digital
+                transformation.
+              </p>
+>>>>>>> main
+>>>>>>> main
+            </div>
+          </div>
+        </section>
+
+<<<<<<< HEAD
+        {/* Categories Filter */}"
+        <section className="py-8 bg-white border-b">"
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 l,
+    g:px-8">"
+=======
+<<<<<<< HEAD
+        {/* Categories Filter */}
+        <section className="py-8 bg-white border-b">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> main
+            <div className="flex flex-wrap gap-4 justify-center">
+              {categories.map((category, index) => (
+                <button
+                  key={index}"
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                    index === 0 `
+                      ? 'bg-blue-600 text-white' '
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200''
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+=======
+<<<<<<< HEAD
             {/* Blog Posts */}
-            <div className=&quot;lg:col-span-3&quot;>
-              <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
+<<<<<<< HEAD
+            <div className="lg:col-span-3">;
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
+                {blogPosts.map((post) => (;
+                  <article key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">;
+                    <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500"></div>;
+                    <div className="p-6">;
+                      <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">;
+                        <span className="flex items-center">;
+                          <Tag className="w-4 h-4 mr-1" />;
+=======
+            <div className="lg:col-span-3">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {blogPosts.map((post) => (
-                  <article key={post.id} className=&quot;bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow&quot;>
-                    <div className=&quot;h-48 bg-gradient-to-br from-blue-400 to-purple-500&quot;></div>
-                    <div className=&quot;p-6&quot;>
-                      <div className=&quot;flex items-center space-x-4 text-sm text-gray-500 mb-3&quot;>
-                        <span className=&quot;flex items-center&quot;>
-                          <Tag className=&quot;w-4 h-4 mr-1&quot; />
+                  <article key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">
+                    <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500"></div>
+                    <div className="p-6">
+                      <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
+                        <span className="flex items-center">
+                          <Tag className="w-4 h-4 mr-1" />
+>>>>>>> main
                           {post.category}
-                        </span>
-                        <span className=&quot;flex items-center&quot;>
-                          <Clock className=&quot;w-4 h-4 mr-1&quot; />
+                        </span>;
+                        <span className="flex items-center">;
+                          <Clock className="w-4 h-4 mr-1" />;
                           {post.readTime}
-                        </span>
-                      </div>
-                      
-                      <h2 className=&quot;text-xl font-semibold text-gray-900 mb-3 line-clamp-2&quot;>
+                        </span>;
+                      </div>;
+                      ;
+                      <h2 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">;
                         {post.title}
-                      </h2>
-                      
-                      <p className=&quot;text-gray-600 mb-4 line-clamp-3&quot;>
+                      </h2>;
+                      ;
+                      <p className="text-gray-600 mb-4 line-clamp-3">;
                         {post.excerpt}
-                      </p>
-                      
-                      <div className=&quot;flex items-center justify-between&quot;>
-                        <div className=&quot;flex items-center space-x-3 text-sm text-gray-500&quot;>
-                          <span className=&quot;flex items-center&quot;>
-                            <User className=&quot;w-4 h-4 mr-1&quot; />
+                      </p>;
+                      ;
+                      <div className="flex items-center justify-between">;
+                        <div className="flex items-center space-x-3 text-sm text-gray-500">;
+                          <span className="flex items-center">;
+                            <User className="w-4 h-4 mr-1" />;
                             {post.author}
-                          </span>
-                          <span className=&quot;flex items-center&quot;>
-                            <Calendar className=&quot;w-4 h-4 mr-1&quot; />
+                          </span>;
+                          <span className="flex items-center">;
+                            <Calendar className="w-4 h-4 mr-1" />;
                             {new Date(post.date).toLocaleDateString()}
-                          </span>
-                        </div>
-                        
-                        <Link
+                          </span>;
+                        </div>;
+                        ;
+                        <Link;
                           href={`/blog/${post.slug}`}
-                          className=&quot;text-blue-600 hover:text-blue-700 font-medium flex items-center text-sm&quot;
+<<<<<<< HEAD
+                          className="text-blue-600 hover:text-blue-700 font-medium flex items-center text-sm";
+                        >;
+                          Read More;
+                          <ArrowRight className="w-4 h-4 ml-1" />;
+                        </Link>;
+                      </div>;
+                    </div>;
+                  </article>;
+=======
+                          className="text-blue-600 hover: text-blue-700 font-medium flex items-center text-sm"
                         >
                           Read More
-                          <ArrowRight className=&quot;w-4 h-4 ml-1&quot; />
+                          <ArrowRight className="w-4 h-4 ml-1" />
                         </Link>
                       </div>
                     </div>
                   </article>
+>>>>>>> main
                 ))}
-              </div>
+              </div>;
 
               {/* Load More Button */}
-              <div className=&quot;text-center mt-12&quot;>
-                <button className=&quot;bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors&quot;>
+<<<<<<< HEAD
+              <div className="text-center mt-12">;
+                <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">;
+                  Load More Posts;
+                </button>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+=======
+              <div className="text-center mt-12">
+                <button className="bg-blue-600 hover: bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                   Load More Posts
                 </button>
               </div>
+=======
+        {/* Search and Filter */}
+        <section className="py-8 bg-white border-b">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+              <div className="relative flex-1 max-w-md">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search articles..."
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {categories.map((category, index) => (
+                  <button
+                    key={index}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                      index === 0
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
+>>>>>>> main
+>>>>>>> main
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+>>>>>>> main
 
+<<<<<<< HEAD
+        {/* Blog Posts */}`
+        <section className="py-20">"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
+            <div className="grid grid-cols-1 m,
+    d:grid-cols-2 l,
+    g:grid-cols-3 gap-8">
+              {blogPosts.map((post, index) => ("
+                <article key={index} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">"
+                  <div className="aspect-w-16 aspect-h-9 bg-gray-200">"
+                    <div className="w-full h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">"
+=======
+<<<<<<< HEAD
+        {/* Blog Posts */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {blogPosts.map((post, index) => (
+                <article key={index} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                  <div className="aspect-w-16 aspect-h-9 bg-gray-200">
+                    <div className="w-full h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+>>>>>>> main
+                      <span className="text-gray-500 text-sm">Featured Image</span>
+                    </div>
+                  </div>
+                  "
+                  <div className="p-6">"
+                    <div className="flex items-center mb-3">"
+                      <Tag className="w-4 h-4 text-blue-600 mr-2" />"
+                      <span className="text-sm text-blue-600 font-medium">{post.category}</span>
+                    </div>
+                    "
+                    <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                      {post.title}
+                    </h2>
+                    "
+                    <p className="text-gray-600 mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    "
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">"
+                      <div className="flex items-center">"
+                        <User className="w-4 h-4 mr-1" />
+                        <span>{post.author}</span>
+                      </div>"
+                      <div className="flex items-center">"
+                        <Calendar className="w-4 h-4 mr-1" />
+                        <span>{new Date(post.date).toLocaleDateString()}</span>
+                      </div>
+                    </div>
+                    "
+                    <div className="flex items-center justify-between">"
+                      <div className="flex items-center text-sm text-gray-500">"
+                        <Clock className="w-4 h-4 mr-1" />
+                        <span>{post.readTime}</span>
+                      </div>
+                      
+                      <Link "
+                        href={`/blog/${post.slug}`}`
+                        className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+                      >
+                        Read More"
+                        <ArrowRight className="w-4 h-4 ml-1" />
+                      </Link>
+=======
+<<<<<<< HEAD
       {/* CTA Section */}
-      <section className=&quot;py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white&quot;>
-        <div className=&quot;container mx-auto px-4 text-center&quot;>
-          <h2 className=&quot;text-4xl font-bold mb-6&quot;>Ready to Transform Your Business?</h2>
-          <p className=&quot;text-xl mb-8 max-w-3xl mx-auto&quot;>
-            Let&apos;s discuss how our technology solutions can help you achieve your goals and stay ahead of the competition.
-          </p>
-          <div className=&quot;flex flex-col sm:flex-row justify-center gap-4&quot;>
-            <Link href=&quot;/contact&quot; className=&quot;bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg&quot;>
-              Get Started Today
-            </Link>
-            <Link href=&quot;/services&quot; className=&quot;bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg&quot;>
-              View Our Services
-            </Link>
-          </div>
-        </div>
-      </section>
-    </Layout>
+<<<<<<< HEAD
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
+        <div className="container mx-auto px-4 text-center">;
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>;
+          <p className="text-xl mb-8 max-w-3xl mx-auto">;
+            Let's discuss how our technology solutions can help you achieve your goals and stay ahead of the competition.;
+          </p>;
+          <div className="flex flex-col sm:flex-row justify-center gap-4">;
+            <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
+              Get Started Today;
+            </Link>;
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
+              View Our Services;
+            </Link>;
+          </div>;
+        </div>;
+      </section>;
+    </Layout>;
   );
 };
-
+<<<<<<< HEAD
+export default Blog
+=======
+;
 export default Blog;
+=======
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+            Let&apos;s discuss how our technology solutions can help you achieve your goals and stay ahead of the competition.'
+          </p>
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
+            <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+              Get Started Today
+            </Link>
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+              View Our Services
+            </Link>
+=======
+        {/* Featured Post */}
+        {featuredPost && (
+          <section className="py-16 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+              <div className="mb-8">
+                <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  Featured Post
+                </span>
+              </div>
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div className="md:flex">
+                  <div className="md:w-1/2">
+                    <div className="h-64 md:h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                      <span className="text-white text-6xl font-bold">
+                        {featuredPost.title.charAt(0)}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="md: w-1/2 p-8">
+                    <div className="flex items-center space-x-4 mb-4">
+                      <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">
+                        {featuredPost.category}
+                      </span>
+                      <span className="text-gray-500 text-sm">
+                        {featuredPost.readTime}
+                      </span>
+                    </div>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                      {featuredPost.title}
+                    </h2>
+                    <p className="text-gray-600 mb-6">{featuredPost.excerpt}</p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                          <span className="text-white text-sm font-bold">
+                            {featuredPost.author
+                              .split(' ')
+                              .map(n => n[0])
+                              .join('')}
+                          </span>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">
+                            {featuredPost.author}
+                          </p>
+                          <p className="text-sm text-gray-500">
+                            {featuredPost.date}
+                          </p>
+                        </div>
+                      </div>
+                      <a
+                        href={`/blog/${featuredPost.id}`}
+                        className="flex items-center space-x-2 text-blue-600 hover: text-blue-700 font-medium"
+                      >
+                        <span>Read More</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Blog Posts Grid */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {regularPosts.map(post => (
+                <article
+                  key={post.id}
+                  className="bg-white rounded-lg shadow-sm hover: shadow-md transition-shadow overflow-hidden"
+                >
+                  <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                    <span className="text-white text-4xl font-bold">
+                      {post.title.charAt(0)}
+                    </span>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center space-x-2 mb-3">
+                      <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-medium">
+                        {post.category}
+                      </span>
+                      <span className="text-gray-500 text-xs">
+                        {post.readTime}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-6 h-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                          <span className="text-white text-xs font-bold">
+                            {post.author
+                              .split(' ')
+                              .map(n => n[0])
+                              .join('')}
+                          </span>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">
+                            {post.author}
+                          </p>
+                          <p className="text-xs text-gray-500">{post.date}</p>
+                        </div>
+                      </div>
+                      <a
+                        href={`/blog/${post.id}`}
+                        className="flex items-center space-x-1 text-blue-600 hover: text-blue-700 text-sm font-medium"
+                      >
+                        <span>Read</span>
+                        <ArrowRight className="w-3 h-3" />
+                      </a>
+>>>>>>> main
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
+          </div>
+        </section>
+
+<<<<<<< HEAD
+        {/* Newsletter Signup */}"
+        <section className="py-20 bg-gray-50">"
+          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
+=======
+        {/* Newsletter Signup */}
+<<<<<<< HEAD
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+=======
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+>>>>>>> main
+>>>>>>> main
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Stay Updated
+            </h2>"
+            <p className="text-lg text-gray-600 mb-8">
+<<<<<<< HEAD
+              Subscribe to our newsletter and never miss the latest insights on technology and digital transformation.
+            </p>
+<<<<<<< HEAD
+            "
+=======
+            
+=======
+              Subscribe to our newsletter for the latest technology insights and
+              updates.
+            </p>
+>>>>>>> main
+>>>>>>> main
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <input"
+                type="email""
+                placeholder="Enter your email""
+                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focu,
+    s:border-transparent"
+              />"
+              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hove,
+    r:bg-blue-700 transition-colors">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+<<<<<<< HEAD
+    </>
+  );
+<<<<<<< HEAD
+}"
+=======
+}
+=======
+
+      <Footer />
+    </>
+  );
+}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

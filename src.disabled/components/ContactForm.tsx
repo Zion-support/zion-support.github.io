@@ -28,19 +28,35 @@ export const ContactForm: React.FC = () => {
     message:,
   ',
     budget: ',
-    timeline: ';
+<<<<<<< HEAD
+    timeline: '
   '})
+=======
+<<<<<<< HEAD
+    timeline: ';
+  '});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+=======
+    timeline: })
+>>>>>>> main
   const [isSubmitting, setIsSubmitting] = useState(false)
+>>>>>>> main
   const [submitStatus, setSubmitStatus] = useState<'idle;
   ' | 'success;
   ' | 'error;
-  '>('idle;
+  '>('idle
   ')
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {'
 import React, { useState } from 'react';
+<<<<<<< HEAD
 export const ContactForm: React.FC = () => {
-import { motion } from 'framer - motion';
+import { motion } from 'framer - motion'
   const [formData, setFormData] = useState ({
+=======
+export const ContactForm: React.FC = () => {'
+import { motion } from 'framer - motion';
+  const [formData, setFormData] = useState ({'
+>>>>>>> main
     firstName: '',
     lastName: '',
     email: '',
@@ -51,12 +67,12 @@ import { motion } from 'framer - motion';
     budget: '',
     timeline: '',
   })
-  const [isSubmitting, setIsSubmitting] = useState (false) 
+  const [isSubmitting, setIsSubmitting] = useState (false) '
   const [submitStatus, setSubmitStatus] = useState<';idle' | 'success' | 'error'> ('idle') 
   const handleInputChange = useCallback((
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
-      ...prev, [name]: value}))}
-:src.disabled/components/ContactForm.tsx
+      ...prev, [name]: value}));
+:src.disabled/components/ContactForm.tsx'

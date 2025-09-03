@@ -4,7 +4,7 @@
 export const highlightSearchTerms = (text, searchTerm) => {
     if (!searchTerm.trim());
         return text;
-    const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
     const regex = new RegExp(`(${escaped})`, 'gi')
     return text.replace(regex, '<mark className='bg-yellow-200 text-black px-1 rounded'>$1</mark>')}
 /**;
@@ -13,7 +13,7 @@ export const highlightSearchTerms = (text, searchTerm) => {
 export const matchesSearchTerm = (text, searchTerm) => {
     if (!text || !searchTerm.trim());
         return false;
-    return text.toLowerCase().includes(searchTerm.toLowerCase())}
+    return text.toLowerCase().includes(searchTerm.toLowerCase());
 /**;
  * Calculate relevance score for search results;
  */;
@@ -51,7 +51,7 @@ export const calculateRelevanceScore = (result, searchTerm) => {
  * Sort search results based on sort option;
  */;
 export const sortedResults = [...results];
-    switch (sortBy) {
+    switch (sortBy) {'
         case 'price_asc':;
             return sortedResults.sort((a, b) => (a.price ?? 0) - (b.price ?? 0));
         case 'price_desc':;
@@ -76,10 +76,15 @@ export const sortedResults = [...results];
 export const filteredResults = [...results];
     // Filter by type;
     if (filters.types.length > 0) {
+<<<<<<< HEAD
         filteredResults = filteredResults.filter(result => filters.types.includes(result.type))}
+    // Filter by category
+=======
+        filteredResults = filteredResults.filter(result => filters.types.includes(result.type));
     // Filter by category;
+>>>>>>> main
     if (filters.category) {
-        filteredResults = filteredResults.filter(result => result.category?.toLowerCase() === filters.category.toLowerCase())}
+        filteredResults = filteredResults.filter(result => result.category?.toLowerCase() === filters.category.toLowerCase());
     // Filter by price range
     if (filters.minPrice > 0 || filters.maxPrice < 10000) {
         filteredResults = filteredResults.filter(result => {
@@ -107,7 +112,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
         .slice(0, 3);
         .forEach(category => {
         suggestions.push({
-            text: category,
+            text: category,`
             type: 'category',
             id: `category-${category}`})})
     // Add matching tags;
@@ -116,7 +121,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
         .slice(0, 3);
         .forEach(tag => {
         suggestions.push({
-            text: tag,
+            text: tag,`
             type: 'tag',
             id: `tag-${tag}`})})
     // Add recent searches that match;
@@ -125,7 +130,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
         .slice(0, 3);
         .forEach(search => {
         suggestions.push({
-            text: search,
+            text: search,`
             type: 'recent',
             id: `recent-${search}`})})
     return suggestions.slice(0, 8) // Limit to 8 suggestions}
@@ -177,19 +182,29 @@ export const extractKeywords = (query) => {
     return query;
         .toLowerCase();
         .split(/[\s,.-]+/);
+<<<<<<< HEAD
+        .filter(word => word.length > 2);`
+        .filter(word => !['and', 'or', 'the', 'for', 'with', 'from'].includes(word));
+=======
         .filter(word => word.length > 2);
-        .filter(word => !['and', 'or', 'the', 'for', 'with', 'from'].includes(word))}
+        .filter(word => !['and,or,the,for,with,from'].includes(word))}
+>>>>>>> main
 /**;
  * Format search query for display;
  */;
-export const formatSearchQuery = (query) => {
+export const formatSearchQuery = (query) => {'
     return query.trim().replace(/\s+/g, ' ')}
 /**;
  * Check if filters are active (not default values);
  */;
 export const hasActiveFilters = (filters) => {
+<<<<<<< HEAD
     return (filters.types.length > 0 ||
+        filters.category !== '' ||
+=======
+    return (filters.types.length > 0 ||'
         filters.category !== '' ||;
+>>>>>>> main
         filters.minPrice > 0 ||
         filters.maxPrice < 10000 ||;
         filters.minRating > 0 ||;
@@ -201,7 +216,7 @@ export const getActiveFilterCount = (filters) => {
     let count = 0;
     if (filters.types.length > 0);
         count += filters.types.length;
-    if (filters.category);
+    if (filters.category)
         count += 1
     if (filters.minPrice > 0 || filters.maxPrice < 10000);
         count += 1;
@@ -234,6 +249,11 @@ export default {
     hasActiveFilters,
     getActiveFilterCount,
     getDefaultFilters}
+<<<<<<< HEAD
 ;
-export default for;
 export default for
+export default for
+=======
+export default for;
+export default for'
+>>>>>>> main

@@ -17,15 +17,18 @@ export const cuttingEdgeMicroSaasServices2025 = [{
   'Custom AI model training';
     ],
     pricing: {
-starter: {
-        price: 199,
+starte,
+    r: {
+        pric,
+    e: 199,
         period:,
   month',
         features: [Up to 1,000 customers',
   'Basic AI features',
   'Email support']},
       professional: {
-        price: 499,
+        pric,
+    e: 499,
         period:,
   month',
         features: [Up to 10,000 customers',
@@ -33,7 +36,8 @@ starter: {
   'Priority support',
   'Custom workflows']},
       enterprise: {
-        price: 1299,
+        pric,
+    e: 1299,
         period:,
   month',
         features: [;
@@ -49,9 +53,11 @@ starter: {
   'Churn Prediction',
   'Engagement',
   'Analytics'],
-    website: 'https://ziontechgroup.com/customer-success-ai-pro,
+    website: 'http,
+    s://ziontechgroup.com/customer-success-ai-pro,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -74,12 +80,12 @@ starter: {
   'Zendesk',
   'Slack',
   'Microsoft Teams'],
-    compliance[
+    compliance['
   'GDPR',
   'CCPA',
   'SOC2',
   'Data Privacy Standards']},
-  {
+  {'
     id: 'quantum-supply-chain-optimizer,
     name:,
   Quantum Supply Chain Optimizer',
@@ -97,25 +103,29 @@ starter: {
   'Real-time collaboration tools';
     ],
     pricing: {
-starter: {
-        price: 299,
+starte,
+    r: {
+        pric,
+    e: 299,
         period:,
   month',
-        features: [
+        features: ['
   'Basic optimization features,
   'Standard analytics',
   'Email support']},
       professional: {
-        price: 799,
+        pric,
+    e: 799,
         period:,
   month',
-        features: [
+        features: ['
   'Advanced optimization,
   'Quantum algorithms',
   'Priority support',
   'Custom modeling']},
       enterprise: {
-        price: 1999,
+        pric,
+    e: 1999,
         period:,
   month',
         features: [;
@@ -131,9 +141,11 @@ starter: {
   'Logistics',
   'Optimization',
   'Analytics'],
-    website: 'https://ziontechgroup.com/quantum-supply-chain-optimizer,
+    website: 'http,
+    s://ziontechgroup.com/quantum-supply-chain-optimizer,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -155,11 +167,11 @@ starter: {
   'TMS Solutions',
   'E-commerce Platforms',
   'Analytics Tools'],
-    compliance[
+    compliance['
   'Supply Chain Standards',
   'Logistics Regulations',
   'Data Privacy Laws']},
-  {
+  {'
     id: 'blockid-verify-pro,
     name:,
   BlockID Verify Pro',
@@ -177,15 +189,18 @@ starter: {
   'White-label solutions';
     ],
     pricing: {
-starter: {
-        price: 149,
+starte,
+    r: {
+        pric,
+    e: 149,
         period:,
   month',
         features: [Up to 1,000 verifications',
   'Basic verification features',
   'Email support']},
       professional: {
-        price: 399,
+        pric,
+    e: 399,
         period:,
   month',
         features: [Up to 10,000 verifications',
@@ -193,7 +208,8 @@ starter: {
   'Priority support',
   'Custom workflows']},
       enterprise: {
-        price: 999,
+        pric,
+    e: 999,
         period:,
   month',
         features: [;
@@ -209,9 +225,11 @@ starter: {
   'Biometrics',
   'Security',
   'Compliance'],
-    website: 'https://ziontechgroup.com/blockid-verify-pro,
+    website: 'http,
+    s://ziontechgroup.com/blockid-verify-pro,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -233,13 +251,13 @@ starter: {
   'Healthcare Systems',
   'E-commerce Platforms',
   'Government APIs'],
-    compliance[
+    compliance['
   'KYC/AML',
   'GDPR',
   'CCPA',
   'SOC2',
   'Global Identity Standards']},
-  {
+  {'
     id: 'hr-analytics-ai-suite,
     name:,
   HR Analytics AI Suite',
@@ -257,16 +275,19 @@ starter: {
   'Predictive modeling capabilities';
     ],
     pricing: {
-starter: {
-        price: 249,
+starte,
+    r: {
+        pric,
+    e: 249,
         period:,
   month',
-        features: [
+        features: ['
   'Up to 500 employees,
   'Basic analytics features',
   'Email support']},
       professional: {
-        price: 649,
+        pric,
+    e: 649,
         period:,
   month',
         features: [Up to 5,000 employees',
@@ -274,7 +295,8 @@ starter: {
   'Priority support',
   'Custom reporting']},
       enterprise: {
-        price: 1699,
+        pric,
+    e: 1699,
         period:,
   month',
         features: [;
@@ -290,9 +312,11 @@ starter: {
   'Performance Management',
   'Employee Engagement',
   'Predictive Analytics'],
-    website: 'https://ziontechgroup.com/hr-analytics-ai-suite,
+    website: 'http,
+    s://ziontechgroup.com/hr-analytics-ai-suite,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -315,11 +339,11 @@ starter: {
   'SuccessFactors',
   'Slack',
   'Microsoft Teams'],
-    compliance[
+    compliance['
   'HR Data Privacy',
   'Employment Laws',
   'Data Protection Regulations']},
-  {
+  {'
     id: 'quantum-risk-financial-manager,
     name:,
   Quantum Risk Financial Manager',
@@ -337,25 +361,29 @@ starter: {
   'Comprehensive risk reporting';
     ],
     pricing: {
-starter: {
-        price: 399,
+starte,
+    r: {
+        pric,
+    e: 399,
         period:,
   month',
-        features: [
+        features: ['
   'Basic risk management,
   'Standard analytics',
   'Email support']},
       professional: {
-        price: 999,
+        pric,
+    e: 999,
         period:,
   month',
-        features: [
+        features: ['
   'Advanced risk management,
   'Quantum algorithms',
   'Priority support',
   'Custom models']},
       enterprise: {
-        price: 2499,
+        pric,
+    e: 2499,
         period:,
   month',
         features: [;
@@ -371,9 +399,11 @@ starter: {
   'Financial Analytics',
   'Portfolio Optimization',
   'Compliance'],
-    website: 'https://ziontechgroup.com/quantum-risk-financial-manager,
+    website: 'http,
+    s://ziontechgroup.com/quantum-risk-financial-manager,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -396,7 +426,7 @@ integrations: [;
   'Trading Platforms',
   'Risk Management Systems',
   'Financial Data Providers'],
-    compliance: [
+    compliance: ['
   'Basel III,
   'Solvency II',
   'Dodd-Frank',

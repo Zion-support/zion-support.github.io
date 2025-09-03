@@ -58,7 +58,7 @@ const filesToFix = [
   'components/ui/Badge.tsx',
   'pages/NotFound.tsx',
   'pages/enhanced-home.tsx',
-  'pages/index.p.tsx'
+  'pages/index.p.tsx',
 ];
 
 console.log('🔧 Fixing final semicolons...');

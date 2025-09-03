@@ -1,6 +1,7 @@
 export default {
   apps: [{
-      name:,
+      nam,
+    e:,
   main-app',
       script: 'npm,
       args:,
@@ -12,11 +13,13 @@ export default {
       max_memory_restart:,
   1G',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         PORT: 3000},
       env_production: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production',
         PORT: 3000},
       log_file:,
@@ -24,7 +27,7 @@ export default {
       error_file: '/workspace/logs/pm2/main-app-error.log,
       out_file:,
   /workspace/logs/pm2/main-app-out.log'},
-    {
+    {'
       name: 'syntax-error-fixer,
       script:;
   '/workspace/scripts/pm2/syntax-error-fixer.js',
@@ -34,7 +37,8 @@ export default {
       max_memory_restart:,
   512M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'development,
         PM2_PROCESS_NAME:,
   syntax-error-fixer',
@@ -47,7 +51,7 @@ export default {
       error_file: 'logs/pm2/syntax-error-fixer-error.log,
       out_file:,
   logs/pm2/syntax-error-fixer-out.log'},
-    {
+    {'
       name: 'typescript-error-monitor,
       script:;
   '/workspace/scripts/pm2/typescript-error-monitor.js',
@@ -57,7 +61,8 @@ export default {
       max_memory_restart:,
   768M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'development,
         PM2_PROCESS_NAME:,
   typescript-error-monitor',
@@ -81,7 +86,8 @@ export default {
       max_memory_restart:,
   512M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'development,
         PM2_PROCESS_NAME:,
   dependency-error-resolver',
@@ -105,7 +111,8 @@ export default {
       max_memory_restart:,
   1G',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'development,
         PM2_PROCESS_NAME:,
   build-error-monitor',
@@ -129,7 +136,8 @@ export default {
       max_memory_restart:,
   512M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'development,
         PM2_PROCESS_NAME:,
   lint-error-auto-fixer',
@@ -153,7 +161,8 @@ export default {
       max_memory_restart:,
   512M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'development,
         PM2_PROCESS_NAME:,
   runtime-error-detector',
@@ -177,7 +186,8 @@ export default {
       max_memory_restart:,
   256M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'development,
         PM2_PROCESS_NAME:,
   error-report-generator',
@@ -191,4 +201,3 @@ export default {
       error_file:,
   logs/pm2/error-report-generator-error.log',
       out_file: 'logs/pm2/error-report-generator-out.log}]}
-;

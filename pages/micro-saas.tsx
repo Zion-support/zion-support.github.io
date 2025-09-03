@@ -1,620 +1,1423 @@
-import React from &apos;react&apos;;
-import Head from &apos;next/head&apos;;
-import Link from &apos;next/link&apos;;
-import {
-  Code,
-  Cloud,
-  Zap,
-  Users,
-  BarChart3,
-  Shield,
-  Smartphone,
-  Globe,
-  Database,
-  Settings,
-  CheckCircle,
-  ArrowRight,
-  Clock,
-  Award,
-  Star,
-  TrendingUp,
-  Target,
-  FileText,
-  MessageSquare,
-  Eye,
-  Brain,
-  Mail,
-  Phone,
-  MapPin,
-  Monitor,
-  Server,
-  Lock,
-  Cpu,
-  Network,
-  Terminal,
-  Calendar
-} from &apos;lucide-react&apos;;
-import PageTransition from &apos;../src/components/PageTransition&apos;;
-
-export default function MicroSaaS() {
-  const title = &apos;Micro SaaS Solutions — Zion Tech Group&apos;;
-  const description = &apos;Custom micro SaaS applications and software solutions tailored to your business needs. Scalable, secure, and innovative.&apos;;
+import React from 'react';
+<<<<<<< HEAD
+import { ArrowRight, Award, BarChart3, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Database, FileText, From, Globe, Grid, MessageSquare, Mobile, Monitor, Network, No, Rapid, Server, Settings, Shield, Smartphone, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
+'
+=======
+>>>>>>> main
+import Head from 'next/head';
+import Link from 'next/link';
+import {;
+  Code,;
+  Cloud,;
+  Zap,;
+  Users,;
+  BarChart3,;
+  Shield,;
+  Smartphone,;
+  Globe,;
+  Database,;
+  Settings,;
+  CheckCircle,;
+  ArrowRight,;
+  Clock,;
+  Award,;
+  Star,;
+  TrendingUp,;
+  Target,;
+  FileText,;
+  MessageSquare,;
+  Eye,;
+  Brain,;
+  Mail,;
+  Phone,;
+  MapPin,;
+  Monitor,;
+  Server,;
+  Lock,;
+  Cpu,;
+  Network,;
+  Terminal;
+} from 'lucide-react';
+import PageTransition from '../src/components/PageTransition';
+<<<<<<< HEAD
+export default function MicroSaaS() {'
+  const title = 'Micro SaaS Solutions — Zion Tech Group';
+  const description ='
+    'Custom micro SaaS applications and software solutions tailored to your business needs. Scalable, secure, and innovative.';
 
   const microSaaSServices = [
-    {
-      title: &apos;AI-Powered Email Responder&apos;,
-      description: &apos;Intelligent email automation with sentiment analysis and smart categorization&apos;,
+    {'
+      title: 'AI-Powered Email Responder',
+      description:'
+        'Intelligent email automation with sentiment analysis and smart categorization',
       icon: MessageSquare,
-      features: [
-        &apos;Automated email responses with personalization&apos;,
-        &apos;Smart categorization and priority handling&apos;,
-        &apos;Sentiment analysis and escalation triggers&apos;,
-        &apos;CRM and helpdesk integration&apos;,
-        &apos;Multi-language support and compliance&apos;,
-        &apos;Analytics and performance tracking&apos;
+      features: ['
+        'Automated email responses with personalization',
+        'Smart categorization and priority handling',
+        'Sentiment analysis and escalation triggers',
+        'CRM and helpdesk integration',
+        'Multi-language support and compliance',
+        'Analytics and performance tracking',
       ],
-      pricing: &apos;$2,500 - $8,000/month&apos;,
-      delivery: &apos;2-3 weeks&apos;,
-      category: &apos;Communication SaaS&apos;
+      pricing: '$2,500 - $8, 000/month',
+      delivery: '2-3 weeks',
+      category: 'Communication SaaS',
     },
-    {
-      title: &apos;Mobile-First Survey Platform&apos;,
-      description: &apos;Responsive survey tool optimized for mobile devices with real-time analytics&apos;,
+    {'
+      title: 'Mobile-First Survey Platform',
+      description:'
+        'Responsive survey tool optimized for mobile devices with real-time analytics',
       icon: Smartphone,
-      features: [
-        &apos;Mobile-optimized survey creation&apos;,
-        &apos;Real-time response analytics&apos;,
-        &apos;Adaptive questioning and branching&apos;,
-        &apos;Multi-channel distribution&apos;,
-        &apos;Data export and integration&apos;,
-        &apos;White-label customization&apos;
+      features: ['
+        'Mobile-optimized survey creation',
+        'Real-time response analytics',
+        'Adaptive questioning and branching',
+        'Multi-channel distribution',
+        'Data export and integration',
+        'White-label customization',
       ],
-      pricing: &apos;$1,500 - $5,000/month&apos;,
-      delivery: &apos;2-4 weeks&apos;,
-      category: &apos;Survey SaaS&apos;
+      pricing: '$1,500 - $5, 000/month',
+      delivery: '2-4 weeks',
+      category: 'Survey SaaS',
     },
-    {
-      title: &apos;Niche Productivity Planner&apos;,
-      description: &apos;Industry-specific productivity tools with customized workflows and templates&apos;,
+    {'
+      title: 'Niche Productivity Planner',
+      description:'
+        'Industry-specific productivity tools with customized workflows and templates',
       icon: Target,
-      features: [
-        &apos;Industry-specific templates and workflows&apos;,
-        &apos;Project management and task tracking&apos;,
-        &apos;Team collaboration features&apos;,
-        &apos;Performance analytics and reporting&apos;,
-        &apos;Integration with popular tools&apos;,
-        &apos;Custom branding and white-labeling&apos;
+      features: ['
+        'Industry-specific templates and workflows',
+        'Project management and task tracking',
+        'Team collaboration features',
+        'Performance analytics and reporting',
+        'Integration with popular tools',
+        'Custom branding and white-labeling',
       ],
-      pricing: &apos;$2,000 - $6,000/month&apos;,
-      delivery: &apos;3-5 weeks&apos;,
-      category: &apos;Productivity SaaS&apos;
+      pricing: '$2,000 - $6, 000/month',
+      delivery: '3-5 weeks',
+      category: 'Productivity SaaS',
     },
-    {
-      title: &apos;Event Management Dashboard&apos;,
-      description: &apos;Comprehensive event planning and management platform with ticketing and analytics&apos;,
+    {'
+      title: 'Event Management Dashboard',
+      description:'
+        'Comprehensive event planning and management platform with ticketing and analytics',
       icon: Calendar,
-      features: [
-        &apos;Event creation and management&apos;,
-        &apos;Ticketing and registration system&apos;,
-        &apos;Attendee engagement tools&apos;,
-        &apos;Real-time analytics and reporting&apos;,
-        &apos;Payment processing integration&apos;,
-        &apos;Mobile app for attendees&apos;
+      features: ['
+        'Event creation and management',
+        'Ticketing and registration system',
+        'Attendee engagement tools',
+        'Real-time analytics and reporting',
+        'Payment processing integration',
+        'Mobile app for attendees',
       ],
-      pricing: &apos;$3,000 - $10,000/month&apos;,
-      delivery: &apos;4-6 weeks&apos;,
-      category: &apos;Event SaaS&apos;
+      pricing: '$3,000 - $10, 000/month',
+      delivery: '4-6 weeks',
+      category: 'Event SaaS',
     },
-    {
-      title: &apos;AI Content Creation Suite&apos;,
-      description: &apos;AI-powered content generation platform for marketing and documentation&apos;,
+    {'
+      title: 'AI Content Creation Suite',
+      description:'
+        'AI-powered content generation platform for marketing and documentation',
       icon: FileText,
-      features: [
-        &apos;Automated content generation&apos;,
-        &apos;SEO optimization and keyword integration&apos;,
-        &apos;Multi-format content creation&apos;,
-        &apos;Brand voice consistency&apos;,
-        &apos;Content scheduling and publishing&apos;,
-        &apos;Performance analytics and optimization&apos;
+      features: ['
+        'Automated content generation',
+        'SEO optimization and keyword integration',
+        'Multi-format content creation',
+        'Brand voice consistency',
+        'Content scheduling and publishing',
+        'Performance analytics and optimization',
       ],
-      pricing: &apos;$2,500 - $8,000/month&apos;,
-      delivery: &apos;3-5 weeks&apos;,
-      category: &apos;Content SaaS&apos;
+      pricing: '$2,500 - $8, 000/month',
+      delivery: '3-5 weeks',
+      category: 'Content SaaS',
     },
-    {
-      title: &apos;Customer Support Platform&apos;,
-      description: &apos;Comprehensive helpdesk solution with AI chatbots and ticket management&apos;,
+    {'
+      title: 'Customer Support Platform',
+      description:'
+        'Comprehensive helpdesk solution with AI chatbots and ticket management',
       icon: Users,
-      features: [
-        &apos;Multi-channel ticket management&apos;,
-        &apos;AI-powered chatbot integration&apos;,
-        &apos;Knowledge base and FAQ system&apos;,
-        &apos;Live chat and video support&apos;,
-        &apos;Performance metrics and SLA tracking&apos;,
-        &apos;Integration with CRM systems&apos;
+      features: ['
+        'Multi-channel ticket management',
+        'AI-powered chatbot integration',
+        'Knowledge base and FAQ system',
+        'Live chat and video support',
+        'Performance metrics and SLA tracking',
+        'Integration with CRM systems',
       ],
-      pricing: &apos;$2,000 - $7,000/month&apos;,
-      delivery: &apos;3-4 weeks&apos;,
-      category: &apos;Support SaaS&apos;
+      pricing: '$2,000 - $7, 000/month',
+      delivery: '3-4 weeks',
+      category: 'Support SaaS',
     },
-    {
-      title: &apos;AI Recruiting Platform&apos;,
-      description: &apos;Intelligent recruitment system with automated screening and matching&apos;,
+    {'
+      title: 'AI Recruiting Platform',
+      description:'
+        'Intelligent recruitment system with automated screening and matching',
       icon: Brain,
-      features: [
-        &apos;Resume parsing and skill extraction&apos;,
-        &apos;Automated candidate screening&apos;,
-        &apos;Interview scheduling and management&apos;,
-        &apos;Bias detection and elimination&apos;,
-        &apos;Candidate matching algorithms&apos;,
-        &apos;Analytics and reporting dashboard&apos;
+      features: ['
+        'Resume parsing and skill extraction',
+        'Automated candidate screening',
+        'Interview scheduling and management',
+        'Bias detection and elimination',
+        'Candidate matching algorithms',
+        'Analytics and reporting dashboard',
       ],
-      pricing: &apos;$4,000 - $15,000/month&apos;,
-      delivery: &apos;5-8 weeks&apos;,
-      category: &apos;HR SaaS&apos;
+      pricing: '$4,000 - $15, 000/month',
+      delivery: '5-8 weeks',
+      category: 'HR SaaS',
     },
-    {
-      title: &apos;Document Processing Automation&apos;,
-      description: &apos;AI-powered document analysis and processing for business automation&apos;,
+    {'
+      title: 'Document Processing Automation',
+      description:'
+        'AI-powered document analysis and processing for business automation',
       icon: FileText,
-      features: [
-        &apos;Automated data extraction&apos;,
-        &apos;Document classification and routing&apos;,
-        &apos;OCR with high accuracy&apos;,
-        &apos;Contract analysis and risk assessment&apos;,
-        &apos;Compliance monitoring&apos;,
-        &apos;Workflow automation&apos;
+      features: ['
+        'Automated data extraction',
+        'Document classification and routing',
+        'OCR with high accuracy',
+        'Contract analysis and risk assessment',
+        'Compliance monitoring',
+        'Workflow automation',
       ],
-      pricing: &apos;$3,500 - $12,000/month&apos;,
-      delivery: &apos;4-6 weeks&apos;,
-      category: &apos;Document SaaS&apos;
+      pricing: '$3,500 - $12, 000/month',
+      delivery: '4-6 weeks',
+      category: 'Document SaaS',
     },
-    {
-      title: &apos;Analytics Dashboard Platform&apos;,
-      description: &apos;Custom business intelligence and analytics platform with real-time insights&apos;,
+    {'
+      title: 'Analytics Dashboard Platform',
+      description:'
+        'Custom business intelligence and analytics platform with real-time insights',
       icon: BarChart3,
-      features: [
-        &apos;Real-time data visualization&apos;,
-        &apos;Custom dashboard creation&apos;,
-        &apos;Data integration and ETL&apos;,
-        &apos;Predictive analytics and forecasting&apos;,
-        &apos;Mobile-responsive design&apos;,
-        &apos;API and third-party integrations&apos;
+      features: ['
+        'Real-time data visualization',
+        'Custom dashboard creation',
+        'Data integration and ETL',
+        'Predictive analytics and forecasting',
+        'Mobile-responsive design',
+        'API and third-party integrations',
       ],
-      pricing: &apos;$5,000 - $20,000/month&apos;,
-      delivery: &apos;6-10 weeks&apos;,
-      category: &apos;Analytics SaaS&apos;
+      pricing: '$5,000 - $20, 000/month',
+      delivery: '6-10 weeks',
+      category: 'Analytics SaaS',
     },
-    {
-      title: &apos;Workflow Automation Engine&apos;,
-      description: &apos;No-code workflow automation platform for business process optimization&apos;,
+    {'
+      title: 'Workflow Automation Engine',
+      description:'
+        'No-code workflow automation platform for business process optimization',
       icon: Settings,
-      features: [
-        &apos;Visual workflow builder&apos;,
-        &apos;API integrations and webhooks&apos;,
-        &apos;Conditional logic and branching&apos;,
-        &apos;Task automation and scheduling&apos;,
-        &apos;User management and permissions&apos;,
-        &apos;Audit trails and compliance&apos;
+      features: ['
+        'Visual workflow builder',
+        'API integrations and webhooks',
+        'Conditional logic and branching',
+        'Task automation and scheduling',
+        'User management and permissions',
+        'Audit trails and compliance',
       ],
-      pricing: &apos;$3,000 - $10,000/month&apos;,
-      delivery: &apos;4-7 weeks&apos;,
-      category: &apos;Automation SaaS&apos;
+      pricing: '$3,000 - $10, 000/month',
+      delivery: '4-7 weeks',
+      category: 'Automation SaaS',
     },
-    {
-      title: &apos;AI-Powered E-commerce Return Manager&apos;,
-      description: &apos;Intelligent return processing system with automated decision making and fraud detection&apos;,
+    {'
+      title: 'AI-Powered E-commerce Return Manager',
+      description:'
+        'Intelligent return processing system with automated decision making and fraud detection',
       icon: ArrowRight,
-      features: [
-        &apos;Automated return request processing&apos;,
-        &apos;AI-powered fraud detection and prevention&apos;,
-        &apos;Smart return label generation&apos;,
-        &apos;Real-time inventory updates&apos;,
-        &apos;Customer satisfaction tracking&apos;,
-        &apos;Analytics and reporting dashboard&apos;
+      features: ['
+        'Automated return request processing',
+        'AI-powered fraud detection and prevention',
+        'Smart return label generation',
+        'Real-time inventory updates',
+        'Customer satisfaction tracking',
+        'Analytics and reporting dashboard',
       ],
-      pricing: &apos;$1,500 - $5,000/month&apos;,
-      delivery: &apos;3-5 weeks&apos;,
-      category: &apos;E-commerce SaaS&apos;
+      pricing: '$1,500 - $5, 000/month',
+      delivery: '3-5 weeks',
+      category: 'E-commerce SaaS',
     },
-    {
-      title: &apos;Smart Inventory Optimization Platform&apos;,
-      description: &apos;AI-driven inventory management with demand forecasting and automated reordering&apos;,
+    {'
+      title: 'Smart Inventory Optimization Platform',
+      description:'
+        'AI-driven inventory management with demand forecasting and automated reordering',
       icon: BarChart3,
-      features: [
-        &apos;Demand forecasting with machine learning&apos;,
-        &apos;Automated reorder point calculations&apos;,
-        &apos;Multi-location inventory tracking&apos;,
-        &apos;Supplier performance analytics&apos;,
-        &apos;Cost optimization recommendations&apos;,
-        &apos;Integration with ERP and POS systems&apos;
+      features: ['
+        'Demand forecasting with machine learning',
+        'Automated reorder point calculations',
+        'Multi-location inventory tracking',
+        'Supplier performance analytics',
+        'Cost optimization recommendations',
+        'Integration with ERP and POS systems',
       ],
-      pricing: &apos;$2,500 - $8,000/month&apos;,
-      delivery: &apos;4-6 weeks&apos;,
-      category: &apos;Inventory SaaS&apos;
+      pricing: '$2,500 - $8, 000/month',
+      delivery: '4-6 weeks',
+      category: 'Inventory SaaS',
     },
-    {
-      title: &apos;AI-Powered SEO Content Optimizer&apos;,
-      description: &apos;Intelligent content optimization platform that enhances web page performance and rankings&apos;,
+    {'
+      title: 'AI-Powered SEO Content Optimizer',
+      description:'
+        'Intelligent content optimization platform that enhances web page performance and rankings',
       icon: TrendingUp,
-      features: [
-        &apos;Real-time SEO analysis and recommendations&apos;,
-        &apos;Content optimization suggestions&apos;,
-        &apos;Keyword research and competitor analysis&apos;,
-        &apos;Technical SEO audits and fixes&apos;,
-        &apos;Performance tracking and reporting&apos;,
-        &apos;Multi-language SEO support&apos;
+      features: ['
+        'Real-time SEO analysis and recommendations',
+        'Content optimization suggestions',
+        'Keyword research and competitor analysis',
+        'Technical SEO audits and fixes',
+        'Performance tracking and reporting',
+        'Multi-language SEO support',
       ],
-      pricing: &apos;$199 - $799/month&apos;,
-      delivery: &apos;1-2 weeks&apos;,
-      category: &apos;SEO SaaS&apos;
+      pricing: '$199 - $799/month',
+      delivery: '1-2 weeks',
+      category: 'SEO SaaS',
     },
-    {
-      title: &apos;Intelligent Lead Scoring Platform&apos;,
-      description: &apos;AI-powered lead qualification and scoring system with behavioral analysis&apos;,
+    {'
+      title: 'Intelligent Lead Scoring Platform',
+      description:'
+        'AI-powered lead qualification and scoring system with behavioral analysis',
       icon: Target,
-      features: [
-        &apos;Behavioral lead scoring algorithms&apos;,
-        &apos;Multi-channel lead tracking&apos;,
-        &apos;Automated lead qualification&apos;,
-        &apos;CRM integration and synchronization&apos;,
-        &apos;Predictive analytics and insights&apos;,
-        &apos;Custom scoring model creation&apos;
+      features: ['
+        'Behavioral lead scoring algorithms',
+        'Multi-channel lead tracking',
+        'Automated lead qualification',
+        'CRM integration and synchronization',
+        'Predictive analytics and insights',
+        'Custom scoring model creation',
       ],
-      pricing: &apos;$299 - $1,200/month&apos;,
-      delivery: &apos;2-4 weeks&apos;,
-      category: &apos;Sales SaaS&apos;
+      pricing: '$299 - $1,200/month',
+      delivery: '2-4 weeks',
+      category: 'Sales SaaS',
     },
-    {
-      title: &apos;AI-Powered Social Media Manager&apos;,
-      description: &apos;Comprehensive social media management with AI content creation and scheduling&apos;,
+    {'
+      title: 'AI-Powered Social Media Manager',
+      description:'
+        'Comprehensive social media management with AI content creation and scheduling',
       icon: Globe,
-      features: [
-        &apos;AI-generated social media content&apos;,
-        &apos;Optimal posting time recommendations&apos;,
-        &apos;Hashtag research and optimization&apos;,
-        &apos;Engagement analytics and insights&apos;,
-        &apos;Multi-platform scheduling&apos;,
-        &apos;Brand voice consistency monitoring&apos;
+      features: ['
+        'AI-generated social media content',
+        'Optimal posting time recommendations',
+        'Hashtag research and optimization',
+        'Engagement analytics and insights',
+        'Multi-platform scheduling',
+        'Brand voice consistency monitoring',
       ],
-      pricing: &apos;$149 - $599/month&apos;,
-      delivery: &apos;2-3 weeks&apos;,
-      category: &apos;Social Media SaaS&apos;
+      pricing: '$149 - $599/month',
+      delivery: '2-3 weeks',
+      category: 'Social Media SaaS',
     },
-    {
-      title: &apos;Smart Expense Management System&apos;,
-      description: &apos;AI-powered expense tracking and approval workflow with receipt processing&apos;,
+    {'
+      title: 'Smart Expense Management System',
+      description:'
+        'AI-powered expense tracking and approval workflow with receipt processing',
       icon: FileText,
-      features: [
-        &apos;Automated receipt scanning and processing&apos;,
-        &apos;Expense categorization with AI&apos;,
-        &apos;Approval workflow automation&apos;,
-        &apos;Policy compliance checking&apos;,
-        &apos;Real-time expense reporting&apos;,
-        &apos;Integration with accounting software&apos;
+      features: ['
+        'Automated receipt scanning and processing',
+        'Expense categorization with AI',
+        'Approval workflow automation',
+        'Policy compliance checking',
+        'Real-time expense reporting',
+        'Integration with accounting software',
       ],
-      pricing: &apos;$99 - $399/month&apos;,
-      delivery: &apos;2-3 weeks&apos;,
-      category: &apos;Finance SaaS&apos;
+      pricing: '$99 - $399/month',
+      delivery: '2-3 weeks',
+      category: 'Finance SaaS',
     },
-    {
-      title: &apos;AI-Powered Customer Onboarding Platform&apos;,
-      description: &apos;Intelligent customer onboarding with personalized journey mapping and automation&apos;,
+    {'
+      title: 'AI-Powered Customer Onboarding Platform',
+      description:'
+        'Intelligent customer onboarding with personalized journey mapping and automation',
       icon: Users,
-      features: [
-        &apos;Personalized onboarding workflows&apos;,
-        &apos;Progress tracking and analytics&apos;,
-        &apos;Automated email sequences&apos;,
-        &apos;Interactive tutorials and guides&apos;,
-        &apos;Success metrics and optimization&apos;,
-        &apos;Integration with CRM and support tools&apos;
+      features: ['
+        'Personalized onboarding workflows',
+        'Progress tracking and analytics',
+        'Automated email sequences',
+        'Interactive tutorials and guides',
+        'Success metrics and optimization',
+        'Integration with CRM and support tools',
       ],
-      pricing: &apos;$199 - $799/month&apos;,
-      delivery: &apos;3-4 weeks&apos;,
-      category: &apos;Customer Success SaaS&apos;
+      pricing: '$199 - $799/month',
+      delivery: '3-4 weeks',
+      category: 'Customer Success SaaS',
     },
-    {
-      title: &apos;Intelligent Meeting Scheduler&apos;,
-      description: &apos;AI-powered meeting scheduling with time zone optimization and conflict resolution&apos;,
+    {'
+      title: 'Intelligent Meeting Scheduler',
+      description:'
+        'AI-powered meeting scheduling with time zone optimization and conflict resolution',
       icon: Calendar,
-      features: [
-        &apos;Smart time zone handling&apos;,
-        &apos;Automatic conflict detection and resolution&apos;,
-        &apos;Meeting room and resource booking&apos;,
-        &apos;Calendar integration across platforms&apos;,
-        &apos;Meeting preparation automation&apos;,
-        &apos;Follow-up task generation&apos;
+      features: ['
+        'Smart time zone handling',
+        'Automatic conflict detection and resolution',
+        'Meeting room and resource booking',
+        'Calendar integration across platforms',
+        'Meeting preparation automation',
+        'Follow-up task generation',
       ],
-      pricing: &apos;$49 - $199/month&apos;,
-      delivery: &apos;1-2 weeks&apos;,
-      category: &apos;Productivity SaaS&apos;
+      pricing: '$49 - $199/month',
+      delivery: '1-2 weeks',
+      category: 'Productivity SaaS',
     },
-    {
-      title: &apos;AI-Powered Code Review Assistant&apos;,
-      description: &apos;Intelligent code analysis and review platform with automated quality checks&apos;,
+    {'
+      title: 'AI-Powered Code Review Assistant',
+      description:'
+        'Intelligent code analysis and review platform with automated quality checks',
       icon: Code,
-      features: [
-        &apos;Automated code quality analysis&apos;,
-        &apos;Security vulnerability detection&apos;,
-        &apos;Performance optimization suggestions&apos;,
-        &apos;Code style and best practices enforcement&apos;,
-        &apos;Integration with Git and CI/CD&apos;,
-        &apos;Team collaboration and feedback tools&apos;
+      features: ['
+        'Automated code quality analysis',
+        'Security vulnerability detection',
+        'Performance optimization suggestions',
+        'Code style and best practices enforcement',
+        'Integration with Git and CI/CD',
+        'Team collaboration and feedback tools',
       ],
-      pricing: &apos;$299 - $1,200/month&apos;,
-      delivery: &apos;3-5 weeks&apos;,
-      category: &apos;Development SaaS&apos;
-    }
-  ];
-
-  const technologies = [
-    { name: &apos;Frontend&apos;, icon: Monitor, description: &apos;React, Next.js, Vue.js, Angular&apos; },
-    { name: &apos;Backend&apos;, icon: Server, description: &apos;Node.js, Python, Go, Java&apos; },
-    { name: &apos;Database&apos;, icon: Database, description: &apos;PostgreSQL, MongoDB, Redis&apos; },
-    { name: &apos;Cloud&apos;, icon: Cloud, description: &apos;AWS, Azure, GCP, DigitalOcean&apos; },
-    { name: &apos;Security&apos;, icon: Shield, description: &apos;OAuth, JWT, SSL, Encryption&apos; },
-    { name: &apos;Mobile&apos;, icon: Smartphone, description: &apos;React Native, Flutter, PWA&apos; }
-  ];
-
-  const benefits = [
-    {
-      title: &apos;Faster Development&apos;,
-      description: &apos;Rapid prototyping and deployment&apos;,
-      icon: Zap,
-      stat: &apos;50%&apos;
+      pricing: '$299 - $1,200/month',
+      delivery: '3-5 weeks',
+      category: 'Development SaaS',
     },
-    {
-      title: &apos;Cost Effective&apos;,
-      description: &apos;Lower development and maintenance costs&apos;,
+    {'
+      title: 'AI-Powered Legal Document Analyzer',
+      description:'
+        'Intelligent contract analysis and legal document processing with risk assessment',
+      icon: FileText,
+      features: ['
+        'Automated contract review and analysis',
+        'Risk assessment and compliance checking',
+        'Clause extraction and comparison',
+        'Legal precedent research integration',
+        'Document version control and tracking',
+        'Multi-jurisdiction compliance support',
+      ],
+      pricing: '$1,200 - $4,500/month',
+      delivery: '4-6 weeks',
+      category: 'Legal Tech SaaS',
+    },
+    {'
+      title: 'Smart Healthcare Appointment Scheduler',
+      description:'
+        'AI-powered healthcare scheduling with patient preference learning and optimization',
+      icon: Calendar,
+      features: ['
+        'Intelligent appointment optimization',
+        'Patient preference learning and adaptation',
+        'Provider availability management',
+        'Automated reminder and follow-up system',
+        'Telehealth integration and scheduling',
+        'Insurance verification and pre-authorization',
+      ],
+      pricing: '$800 - $2,500/month',
+      delivery: '3-4 weeks',
+      category: 'Healthcare SaaS',
+    },
+    {'
+      title: 'AI-Powered Real Estate Valuation Platform',
+      description:'
+        'Intelligent property valuation with market analysis and investment insights',
       icon: TrendingUp,
-      stat: &apos;60%&apos;
+      features: ['
+        'Automated property valuation using ML models',
+        'Market trend analysis and forecasting',
+        'Investment opportunity scoring',
+        'Comparative market analysis (CMA),
+        'Property condition assessment via AI',
+        'ROI and cash flow projections',
+      ],
+      pricing: '$1,500 - $5,000/month',
+      delivery: '4-6 weeks',
+      category: 'PropTech SaaS',
     },
-    {
-      title: &apos;Scalable Solutions&apos;,
-      description: &apos;Built to grow with your business&apos;,
+    {'
+      title: 'Smart Restaurant Inventory Manager',
+      description:'
+        'AI-driven restaurant inventory optimization with waste reduction and cost control',
+      icon: BarChart3,
+      features: ['
+        'Predictive inventory management',
+        'Waste reduction and cost optimization',
+        'Supplier price comparison and negotiation',
+        'Menu engineering and profitability analysis',
+        'Food safety compliance tracking',
+        'Integration with POS and accounting systems',
+      ],
+      pricing: '$600 - $2,000/month',
+      delivery: '2-4 weeks',
+      category: 'Restaurant SaaS',
+    },
+    {'
+      title: 'AI-Powered Fitness Coach Platform',
+      description:'
+        'Personalized fitness coaching with AI-driven workout optimization and nutrition planning',
       icon: Target,
-      stat: &apos;Unlimited&apos;
+      features: ['
+        'Personalized workout plan generation',
+        'AI-powered form analysis and correction',
+        'Nutrition tracking and meal planning',
+        'Progress monitoring and goal setting',
+        'Injury prevention and recovery guidance',
+        'Social features and community building',
+      ],
+      pricing: '$400 - $1,500/month',
+      delivery: '3-5 weeks',
+      category: 'Fitness SaaS',
     },
-    {
-      title: &apos;Custom Features&apos;,
-      description: &apos;Tailored to your specific needs&apos;,
+    {'
+      title: 'Smart Energy Management System',
+      description:'
+        'AI-powered energy optimization for buildings with cost reduction and sustainability tracking',
+      icon: Zap,
+      features: ['
+        'Real-time energy consumption monitoring',
+        'Predictive energy usage optimization',
+        'Renewable energy integration management',
+        'Carbon footprint tracking and reporting',
+        'Automated demand response systems',
+        'Cost savings analytics and reporting',
+      ],
+      pricing: '$1,000 - $3,500/month',
+      delivery: '4-6 weeks',
+      category: 'Energy SaaS',
+    },
+    {'
+      title: 'AI-Powered Learning Management System',
+      description:'
+        'Intelligent educational platform with personalized learning paths and progress tracking',
+      icon: Brain,
+      features: ['
+        'Personalized learning path generation',
+        'Adaptive content delivery and assessment',
+        'Student progress analytics and insights',
+        'Automated grading and feedback systems',
+        'Collaborative learning tools and forums',
+        'Integration with educational standards',
+      ],
+      pricing: '$800 - $2,800/month',
+      delivery: '3-5 weeks',
+      category: 'EdTech SaaS',
+    },
+    {'
+      title: 'Smart Fleet Management Platform',
+      description:'
+        'AI-driven fleet optimization with route planning, maintenance scheduling, and cost control',
+      icon: Network,
+      features: ['
+        'Intelligent route optimization and planning',
+        'Predictive maintenance scheduling',
+        'Driver behavior analysis and coaching',
+        'Fuel consumption optimization',
+        'Real-time tracking and monitoring',
+        'Compliance and safety management',
+      ],
+      pricing: '$1,200 - $4,000/month',
+      delivery: '4-6 weeks',
+      category: 'Fleet SaaS',
+    },
+    {'
+      title: 'AI-Powered Insurance Claims Processor',
+      description:'
+        'Intelligent insurance claims processing with fraud detection and automated settlement',
+      icon: Shield,
+      features: ['
+        'Automated claims processing and validation',
+        'AI-powered fraud detection and prevention',
+        'Damage assessment using computer vision',
+        'Automated settlement calculations',
+        'Customer communication and updates',
+        'Regulatory compliance and reporting',
+      ],
+      pricing: '$2,000 - $6,000/month',
+      delivery: '5-8 weeks',
+      category: 'InsurTech SaaS',
+    },
+    {'
+      title: 'Smart Agriculture Monitoring System',
+      description:'
+        'AI-powered agricultural monitoring with crop health analysis and yield optimization',
+      icon: Globe,
+      features: ['
+        'Crop health monitoring using satellite imagery',
+        'Soil analysis and nutrient optimization',
+        'Weather prediction and irrigation management',
+        'Pest and disease detection and prevention',
+        'Yield prediction and optimization',
+        'Supply chain and logistics management',
+      ],
+      pricing: '$1,500 - $4,500/month',
+      delivery: '4-6 weeks',
+      category: 'AgTech SaaS',
+    },
+    {'
+      title: 'AI-Powered Mental Health Companion',
+      description:'
+        'Intelligent mental health support platform with mood tracking and therapeutic interventions',
+      icon: Users,
+      features: ['
+        'Mood tracking and pattern analysis',
+        'Personalized therapeutic interventions',
+        'Crisis detection and emergency protocols',
+        'Progress monitoring and goal setting',
+        'Integration with healthcare providers',
+        'Privacy-compliant data handling',
+      ],
+      pricing: '$600 - $2,200/month',
+      delivery: '3-5 weeks',
+      category: 'HealthTech SaaS',
+    },
+    {'
+      title: 'Smart Waste Management System',
+      description:'
+        'AI-driven waste optimization with collection scheduling and recycling analytics',
+      icon: Globe,
+      features: ['
+        'Intelligent waste collection scheduling',
+        'Recycling optimization and tracking',
+        'Waste composition analysis',
+        'Route optimization for collection vehicles',
+        'Environmental impact reporting',
+        'Community engagement and education tools',
+      ],
+      pricing: '$800 - $2,800/month',
+      delivery: '3-4 weeks',
+      category: 'CleanTech SaaS',
+    },
+    {'
+      title: 'AI-Powered Personal Finance Manager',
+      description:'
+        'Intelligent personal finance platform with budgeting, investment advice, and goal tracking',
+      icon: TrendingUp,
+      features: ['
+        'Automated expense categorization and tracking',
+        'Personalized budgeting and savings recommendations',
+        'Investment portfolio analysis and optimization',
+        'Goal-based financial planning',
+        'Bill payment automation and reminders',
+        'Credit score monitoring and improvement tips',
+      ],
+      pricing: '$300 - $1,200/month',
+      delivery: '2-4 weeks',
+      category: 'FinTech SaaS',
+    },
+    {'
+      title: 'Smart Home Automation Platform',
+      description:'
+        'AI-powered home automation with energy optimization and security management',
       icon: Settings,
-      stat: &apos;100%&apos;
-    }
+      features: ['
+        'Intelligent device control and automation',
+        'Energy usage optimization and cost reduction',
+        'Security monitoring and alert systems',
+        'Predictive maintenance for home systems',
+        'Voice control and mobile app integration',
+        'Learning user preferences and patterns',
+      ],
+      pricing: '$500 - $1,800/month',
+      delivery: '3-4 weeks',
+      category: 'Smart Home SaaS',
+    },
+    {'
+      title: 'AI-Powered Supply Chain Visibility Platform',
+      description:'
+        'End-to-end supply chain monitoring with risk assessment and optimization recommendations',
+      icon: Network,
+      features: ['
+        'Real-time supply chain visibility and tracking',
+        'Risk assessment and mitigation strategies',
+        'Supplier performance monitoring and scoring',
+        'Demand forecasting and inventory optimization',
+        'Compliance monitoring and reporting',
+        'Sustainability and ESG tracking',
+      ],
+      pricing: '$2,500 - $8,000/month',
+      delivery: '5-8 weeks',
+      category: 'Supply Chain SaaS',
+    },
   ];
-
+  const technologies = [
+    {'
+      name: 'Frontend',
+      icon: Monitor,
+      description: 'React, Next.js, Vue.js, Angular',
+    },
+    { name: 'Backend', icon: Server, description: 'Node.js, Python, Go, Java' },
+    {'
+      name: 'Database',
+      icon: Database,
+      description: 'PostgreSQL, MongoDB, Redis',
+    },
+    {'
+      name: 'Cloud',
+      icon: Cloud,
+      description: 'AWS, Azure, GCP, DigitalOcean',
+    },
+    {'
+      name: 'Security',
+      icon: Shield,
+      description: 'OAuth, JWT, SSL, Encryption',
+    },
+    {'
+      name: 'Mobile',
+      icon: Smartphone,
+      description: 'React Native, Flutter, PWA',
+    },
+  ];
+  const benefits = [
+    {'
+      title: 'Faster Development',
+      description: 'Rapid prototyping and deployment',
+      icon: Zap,
+      stat: '50%',
+    },
+    {'
+      title: 'Cost Effective',
+      description: 'Lower development and maintenance costs',
+      icon: TrendingUp,
+      stat: '60%',
+    },
+    {'
+      title: 'Scalable Solutions',
+      description: 'Built to grow with your business',
+      icon: Target,
+      stat: 'Unlimited',
+    },
+    {'
+      title: 'Custom Features',
+      description: 'Tailored to your specific needs',
+      icon: Settings,
+      stat: '100%',
+    },
+  ];
   return (
     <PageTransition>
       <Head>
-        <title>{title}</title>
-        <meta name=&quot;description&quot; content={description} />
-        <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; />
-        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/micro-saas&quot; />
+        <title>{title}</title>'
+        <meta name="description" content={description} />"
+        <meta name="viewport" content="width=device-width, initial-scale=1" />"
+        <link rel="canonical" href="https: //ziontechgroup.com/micro-saas" />
       </Head>
 
-      {/* Hero Section */}
-      <section className=&quot;bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-20 sm:py-32&quot;>
-        <div className=&quot;mx-auto max-w-7xl px-6 lg:px-8&quot;>
-          <div className=&quot;mx-auto max-w-3xl text-center&quot;>
-            <div className=&quot;flex items-center justify-center mb-6&quot;>
-              <Code className=&quot;h-12 w-12 text-orange-600 mr-4&quot; />
-              <Award className=&quot;h-6 w-6 text-orange-600 mr-2&quot; />
-              <span className=&quot;text-base font-semibold leading-7 text-orange-600&quot;>Micro SaaS</span>
-            </div>
-            <h1 className=&quot;text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl&quot;>
+      {/* Hero Section */}"
+      <section className="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-20 sm: py-32">"
+        <div className="mx-auto max-w-7xl px-6 l,
+    g:px-8">"
+          <div className="mx-auto max-w-3xl text-center">"
+            <div className="flex items-center justify-center mb-6">"
+              <Code className="h-12 w-12 text-orange-600 mr-4" />"
+              <Award className="h-6 w-6 text-orange-600 mr-2" />"
+              <span className="text-base font-semibold leading-7 text-orange-600">
+                Micro SaaS
+              </span>
+            </div>"
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 s,
+    m:text-6xl">
               Micro SaaS Solutions
-            </h1>
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-600&quot;>
-              Custom software solutions that solve specific business problems. From concept to deployment, 
-              we build scalable micro SaaS applications tailored to your needs.
-            </p>
-            <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>
-              <Link
-                href=&quot;/contact&quot;
-                className=&quot;rounded-md bg-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600&quot;
+            </h1>"
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Custom software solutions that solve specific business problems.
+              From concept to deployment, we build scalable micro SaaS
+              applications tailored to your needs.
+            </p>"
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <Link"
+                href="/contact""
+                className="rounded-md bg-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visibl,
+    e:outline-orange-600"
               >
-                Get Started
-                <ArrowRight className=&quot;ml-2 h-4 w-4 inline&quot; />
+                Get Started"
+                <ArrowRight className="ml-2 h-4 w-4 inline" />
               </Link>
-              <Link
-                href=&quot;/pricing-guide&quot;
-                className=&quot;text-sm font-semibold leading-6 text-gray-900 hover:text-orange-600&quot;
-              >
-                View Pricing <span aria-hidden=&quot;true&quot;>→</span>
+              <Link"
+                href="/pricing-guide""
+                className="text-sm font-semibold leading-6 text-gray-900 hove,
+    r:text-orange-600"
+              >"
+                View Pricing <span aria-hidden="true">→</span>
               </Link>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Benefits Section */}"
+      <section className="py-24 sm: py-32 bg-white">"
+        <div className="mx-auto max-w-7xl px-6 l,
+    g:px-8">"
+          <div className="mx-auto max-w-2xl text-center mb-16">"
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 s,
+    m:text-4xl">
+              Why Choose Our Micro SaaS Solutions?
+            </h2>"
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Proven expertise in building scalable, secure, and innovative
+              software solutions
+            </p>
+          </div>"
+          <div className="grid grid-cols-1 gap-8 sm: grid-cols-2 l,
+    g:grid-cols-4">
+            {benefits.map((benefit, index) => ("
+              <div key={index} className="text-center">"
+                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">"
+                  <benefit.icon className="h-8 w-8 text-orange-600" />
+                </div>"
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  {benefit.stat}
+                </h3>"
+                <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                  {benefit.title}
+                </h4>"
+                <p className="text-gray-600">{benefit.description}</p>
+              </div>
+=======
+;
+export default function MicroSaaS() {;
+  const title = 'Micro SaaS Solutions — Zion Tech Group';
+  const description = 'Custom micro SaaS applications and software solutions tailored to your business needs. Scalable, secure, and innovative.';
+;
+  const microSaaSServices = [;
+    {;
+      title: 'AI-Powered Email Responder',;
+      description: 'Intelligent email automation with sentiment analysis and smart categorization',;
+      icon: MessageSquare,;
+      features: [;
+        'Automated email responses with personalization',;
+        'Smart categorization and priority handling',;
+        'Sentiment analysis and escalation triggers',;
+        'CRM and helpdesk integration',;
+        'Multi-language support and compliance',;
+        'Analytics and performance tracking';
+      ],;
+      pricing: '$2,500 - $8,000/month',;
+      delivery: '2-3 weeks',;
+      category: 'Communication SaaS';
+    },;
+    {;
+      title: 'Mobile-First Survey Platform',;
+      description: 'Responsive survey tool optimized for mobile devices with real-time analytics',;
+      icon: Smartphone,;
+      features: [;
+        'Mobile-optimized survey creation',;
+        'Real-time response analytics',;
+        'Adaptive questioning and branching',;
+        'Multi-channel distribution',;
+        'Data export and integration',;
+        'White-label customization';
+      ],;
+      pricing: '$1,500 - $5,000/month',;
+      delivery: '2-4 weeks',;
+      category: 'Survey SaaS';
+    },;
+    {;
+      title: 'Niche Productivity Planner',;
+      description: 'Industry-specific productivity tools with customized workflows and templates',;
+      icon: Target,;
+      features: [;
+        'Industry-specific templates and workflows',;
+        'Project management and task tracking',;
+        'Team collaboration features',;
+        'Performance analytics and reporting',;
+        'Integration with popular tools',;
+        'Custom branding and white-labeling';
+      ],;
+      pricing: '$2,000 - $6,000/month',;
+      delivery: '3-5 weeks',;
+      category: 'Productivity SaaS';
+    },;
+    {;
+      title: 'Event Management Dashboard',;
+      description: 'Comprehensive event planning and management platform with ticketing and analytics',;
+      icon: Calendar,;
+      features: [;
+        'Event creation and management',;
+        'Ticketing and registration system',;
+        'Attendee engagement tools',;
+        'Real-time analytics and reporting',;
+        'Payment processing integration',;
+        'Mobile app for attendees';
+      ],;
+      pricing: '$3,000 - $10,000/month',;
+      delivery: '4-6 weeks',;
+      category: 'Event SaaS';
+    },;
+    {;
+      title: 'AI Content Creation Suite',;
+      description: 'AI-powered content generation platform for marketing and documentation',;
+      icon: FileText,;
+      features: [;
+        'Automated content generation',;
+        'SEO optimization and keyword integration',;
+        'Multi-format content creation',;
+        'Brand voice consistency',;
+        'Content scheduling and publishing',;
+        'Performance analytics and optimization';
+      ],;
+      pricing: '$2,500 - $8,000/month',;
+      delivery: '3-5 weeks',;
+      category: 'Content SaaS';
+    },;
+    {;
+      title: 'Customer Support Platform',;
+      description: 'Comprehensive helpdesk solution with AI chatbots and ticket management',;
+      icon: Users,;
+      features: [;
+        'Multi-channel ticket management',;
+        'AI-powered chatbot integration',;
+        'Knowledge base and FAQ system',;
+        'Live chat and video support',;
+        'Performance metrics and SLA tracking',;
+        'Integration with CRM systems';
+      ],;
+      pricing: '$2,000 - $7,000/month',;
+      delivery: '3-4 weeks',;
+      category: 'Support SaaS';
+    },;
+    {;
+      title: 'AI Recruiting Platform',;
+      description: 'Intelligent recruitment system with automated screening and matching',;
+      icon: Brain,;
+      features: [;
+        'Resume parsing and skill extraction',;
+        'Automated candidate screening',;
+        'Interview scheduling and management',;
+        'Bias detection and elimination',;
+        'Candidate matching algorithms',;
+        'Analytics and reporting dashboard';
+      ],;
+      pricing: '$4,000 - $15,000/month',;
+      delivery: '5-8 weeks',;
+      category: 'HR SaaS';
+    },;
+    {;
+      title: 'Document Processing Automation',;
+      description: 'AI-powered document analysis and processing for business automation',;
+      icon: FileText,;
+      features: [;
+        'Automated data extraction',;
+        'Document classification and routing',;
+        'OCR with high accuracy',;
+        'Contract analysis and risk assessment',;
+        'Compliance monitoring',;
+        'Workflow automation';
+      ],;
+      pricing: '$3,500 - $12,000/month',;
+      delivery: '4-6 weeks',;
+      category: 'Document SaaS';
+    },;
+    {;
+      title: 'Analytics Dashboard Platform',;
+      description: 'Custom business intelligence and analytics platform with real-time insights',;
+      icon: BarChart3,;
+      features: [;
+        'Real-time data visualization',;
+        'Custom dashboard creation',;
+        'Data integration and ETL',;
+        'Predictive analytics and forecasting',;
+        'Mobile-responsive design',;
+        'API and third-party integrations';
+      ],;
+      pricing: '$5,000 - $20,000/month',;
+      delivery: '6-10 weeks',;
+      category: 'Analytics SaaS';
+    },;
+    {;
+      title: 'Workflow Automation Engine',;
+      description: 'No-code workflow automation platform for business process optimization',;
+      icon: Settings,;
+      features: [;
+        'Visual workflow builder',;
+        'API integrations and webhooks',;
+        'Conditional logic and branching',;
+        'Task automation and scheduling',;
+        'User management and permissions',;
+        'Audit trails and compliance';
+      ],;
+      pricing: '$3,000 - $10,000/month',;
+      delivery: '4-7 weeks',;
+      category: 'Automation SaaS';
+    }
+  ];
+;
+  const technologies = [;
+    { name: 'Frontend', icon: Monitor, description: 'React, Next.js, Vue.js, Angular' },;
+    { name: 'Backend', icon: Server, description: 'Node.js, Python, Go, Java' },;
+    { name: 'Database', icon: Database, description: 'PostgreSQL, MongoDB, Redis' },;
+    { name: 'Cloud', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },;
+    { name: 'Security', icon: Shield, description: 'OAuth, JWT, SSL, Encryption' },;
+    { name: 'Mobile', icon: Smartphone, description: 'React Native, Flutter, PWA' }
+  ];
+;
+  const benefits = [;
+    {;
+      title: 'Faster Development',;
+      description: 'Rapid prototyping and deployment',;
+      icon: Zap,;
+      stat: '50%';
+    },;
+    {;
+      title: 'Cost Effective',;
+      description: 'Lower development and maintenance costs',;
+      icon: TrendingUp,;
+      stat: '60%';
+    },;
+    {;
+      title: 'Scalable Solutions',;
+      description: 'Built to grow with your business',;
+      icon: Target,;
+      stat: 'Unlimited';
+    },;
+    {;
+      title: 'Custom Features',;
+      description: 'Tailored to your specific needs',;
+      icon: Settings,;
+      stat: '100%';
+    }
+  ];
+;
+  return (;
+    <PageTransition>;
+      <Head>;
+        <title>{title}</title>;
+        <meta name="description" content={description} />;
+        <meta name="viewport" content="width=device-width, initial-scale=1" />;
+        <link rel="canonical" href="https://ziontechgroup.com/micro-saas" />;
+      </Head>;
+
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-20 sm:py-32">;
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">;
+          <div className="mx-auto max-w-3xl text-center">;
+            <div className="flex items-center justify-center mb-6">;
+              <Code className="h-12 w-12 text-orange-600 mr-4" />;
+              <Award className="h-6 w-6 text-orange-600 mr-2" />;
+              <span className="text-base font-semibold leading-7 text-orange-600">Micro SaaS</span>;
+            </div>;
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">;
+              Micro SaaS Solutions;
+            </h1>;
+            <p className="mt-6 text-lg leading-8 text-gray-600">;
+              Custom software solutions that solve specific business problems. From concept to deployment, ;
+              we build scalable micro SaaS applications tailored to your needs.;
+            </p>;
+            <div className="mt-10 flex items-center justify-center gap-x-6">;
+              <Link;
+                href="/contact";
+                className="rounded-md bg-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600";
+              >;
+                Get Started;
+                <ArrowRight className="ml-2 h-4 w-4 inline" />;
+              </Link>;
+              <Link;
+                href="/pricing-guide";
+                className="text-sm font-semibold leading-6 text-gray-900 hover:text-orange-600";
+              >;
+                View Pricing <span aria-hidden="true">→</span>;
+              </Link>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
 
       {/* Benefits Section */}
-      <section className=&quot;py-24 sm:py-32 bg-white&quot;>
-        <div className=&quot;mx-auto max-w-7xl px-6 lg:px-8&quot;>
-          <div className=&quot;mx-auto max-w-2xl text-center mb-16&quot;>
-            <h2 className=&quot;text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl&quot;>
-              Why Choose Our Micro SaaS Solutions?
-            </h2>
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-600&quot;>
-              Proven expertise in building scalable, secure, and innovative software solutions
-            </p>
-          </div>
-          <div className=&quot;grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4&quot;>
-            {benefits.map((benefit, index) => (
-              <div key={index} className=&quot;text-center&quot;>
-                <div className=&quot;flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4&quot;>
-                  <benefit.icon className=&quot;h-8 w-8 text-orange-600&quot; />
-                </div>
-                <h3 className=&quot;text-2xl font-bold text-gray-900 mb-2&quot;>{benefit.stat}</h3>
-                <h4 className=&quot;text-lg font-semibold text-gray-900 mb-2&quot;>{benefit.title}</h4>
-                <p className=&quot;text-gray-600&quot;>{benefit.description}</p>
-              </div>
+      <section className="py-24 sm:py-32 bg-white">;
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">;
+          <div className="mx-auto max-w-2xl text-center mb-16">;
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">;
+              Why Choose Our Micro SaaS Solutions?;
+            </h2>;
+            <p className="mt-6 text-lg leading-8 text-gray-600">;
+              Proven expertise in building scalable, secure, and innovative software solutions;
+            </p>;
+          </div>;
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">;
+            {benefits.map((benefit, index) => (;
+              <div key={index} className="text-center">;
+                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">;
+                  <benefit.icon className="h-8 w-8 text-orange-600" />;
+                </div>;
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{benefit.stat}</h3>;
+                <h4 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h4>;
+                <p className="text-gray-600">{benefit.description}</p>;
+              </div>;
+>>>>>>> main
             ))}
-          </div>
-        </div>
-      </section>
+          </div>;
+        </div>;
+      </section>;
 
-      {/* Technologies Section */}
-      <section className=&quot;py-24 sm:py-32 bg-gray-50&quot;>
-        <div className=&quot;mx-auto max-w-7xl px-6 lg:px-8&quot;>
-          <div className=&quot;mx-auto max-w-2xl text-center mb-16&quot;>
-            <h2 className=&quot;text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl&quot;>
+<<<<<<< HEAD
+      {/* Technologies Section */}"
+      <section className="py-24 sm: py-32 bg-gray-50">"
+        <div className="mx-auto max-w-7xl px-6 l,
+    g:px-8">"
+          <div className="mx-auto max-w-2xl text-center mb-16">"
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 s,
+    m:text-4xl">
               Technologies We Use
-            </h2>
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-600&quot;>
-              Modern, proven technologies for building robust and scalable applications
+            </h2>"
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Modern, proven technologies for building robust and scalable
+              applications
             </p>
-          </div>
-          <div className=&quot;grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3&quot;>
+          </div>"
+          <div className="grid grid-cols-1 gap-8 sm: grid-cols-2 l,
+    g:grid-cols-3">
             {technologies.map((tech, index) => (
-              <div key={index} className=&quot;bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow&quot;>
-                <div className=&quot;flex items-center mb-4&quot;>
-                  <div className=&quot;flex h-12 w-12 items-center justify-center rounded-lg bg-orange-100&quot;>
-                    <tech.icon className=&quot;h-6 w-6 text-orange-600&quot; />
-                  </div>
-                  <h3 className=&quot;text-lg font-semibold text-gray-900 ml-4&quot;>{tech.name}</h3>
-                </div>
-                <p className=&quot;text-gray-600&quot;>{tech.description}</p>
+              <div
+                key={index}"
+                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+              >"
+                <div className="flex items-center mb-4">"
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-100">"
+                    <tech.icon className="h-6 w-6 text-orange-600" />
+                  </div>"
+                  <h3 className="text-lg font-semibold text-gray-900 ml-4">
+                    {tech.name}
+                  </h3>
+                </div>"
+                <p className="text-gray-600">{tech.description}</p>
               </div>
+=======
+      {/* Technologies Section */}
+      <section className="py-24 sm:py-32 bg-gray-50">;
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">;
+          <div className="mx-auto max-w-2xl text-center mb-16">;
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">;
+              Technologies We Use;
+            </h2>;
+            <p className="mt-6 text-lg leading-8 text-gray-600">;
+              Modern, proven technologies for building robust and scalable applications;
+            </p>;
+          </div>;
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">;
+            {technologies.map((tech, index) => (;
+              <div key={index} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">;
+                <div className="flex items-center mb-4">;
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-100">;
+                    <tech.icon className="h-6 w-6 text-orange-600" />;
+                  </div>;
+                  <h3 className="text-lg font-semibold text-gray-900 ml-4">{tech.name}</h3>;
+                </div>;
+                <p className="text-gray-600">{tech.description}</p>;
+              </div>;
+>>>>>>> main
             ))}
-          </div>
-        </div>
-      </section>
+          </div>;
+        </div>;
+      </section>;
 
-      {/* Micro SaaS Services Grid */}
-      <section className=&quot;py-24 sm:py-32 bg-white&quot;>
-        <div className=&quot;mx-auto max-w-7xl px-6 lg:px-8&quot;>
-          <div className=&quot;mx-auto max-w-2xl text-center mb-16&quot;>
-            <h2 className=&quot;text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl&quot;>
+<<<<<<< HEAD
+      {/* Micro SaaS Services Grid */}"
+      <section className="py-24 sm: py-32 bg-white">"
+        <div className="mx-auto max-w-7xl px-6 l,
+    g:px-8">"
+          <div className="mx-auto max-w-2xl text-center mb-16">"
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 s,
+    m:text-4xl">
               Our Micro SaaS Portfolio
-            </h2>
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-600&quot;>
-              Custom software solutions tailored to your business needs. All applications include design, 
-              development, testing, and deployment. Contact us at{&apos; &apos;}
-              <a href=&quot;mailto:kleber@ziontechgroup.com&quot; className=&quot;text-orange-600 hover:text-orange-500&quot;>
-                kleber@ziontechgroup.com
-              </Link>{&apos; &apos;}
-              or call{&apos; &apos;}
-              <a href=&quot;tel:+13024640950&quot; className=&quot;text-orange-600 hover:text-orange-500&quot;>
-                +1 302 464 0950
-              </Link>{&apos; &apos;}
+            </h2>"
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Custom software solutions tailored to your business needs. All
+              applications include design, development, testing, and deployment."
+              Contact us at{' '}
+              <a'
+                href="mailto:kleber@ziontechgroup.com""
+                className="text-orange-600 hove,
+    r:text-orange-500"
+              >
+                kleber@ziontechgroup.com"
+              </a>{' '}
+              or call{' '}
+              <a'
+                href="tel:+13024640950""
+                className="text-orange-600 hove,
+    r:text-orange-500"
+              >
+                +1 302 464 0950"
+              </a>{' '}
               for custom pricing.
             </p>
-          </div>
-          <div className=&quot;grid grid-cols-1 gap-8 lg:grid-cols-2&quot;>
+          </div>'
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             {microSaaSServices.map((service, index) => (
-              <div key={index} className=&quot;group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300&quot;>
-                <div className=&quot;flex items-center gap-x-3 mb-6&quot;>
-                  <div className=&quot;flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors&quot;>
-                    <service.icon className=&quot;h-7 w-7 text-white&quot; />
+              <div
+                key={index}"
+                className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300"
+              >"
+                <div className="flex items-center gap-x-3 mb-6">"
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hove,
+    r:bg-orange-700 transition-colors">"
+                    <service.icon className="h-7 w-7 text-white" />
                   </div>
-                  <div>
-                    <h3 className=&quot;text-xl font-semibold text-gray-900&quot;>{service.title}</h3>
-                    <p className=&quot;text-sm text-orange-600 font-medium&quot;>{service.category}</p>
+                  <div>"
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      {service.title}
+                    </h3>"
+                    <p className="text-sm text-orange-600 font-medium">
+                      {service.category}
+                    </p>
                   </div>
-                </div>
-                <p className=&quot;text-gray-600 mb-6&quot;>{service.description}</p>
-                <ul className=&quot;space-y-3 mb-6&quot;>
+                </div>"
+                <p className="text-gray-600 mb-6">{service.description}</p>"
+                <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className=&quot;flex items-center gap-x-3&quot;>
-                      <CheckCircle className=&quot;h-4 w-4 text-orange-600 flex-shrink-0&quot; />
-                      <span className=&quot;text-sm text-gray-700&quot;>{feature}</span>
+                    <li
+                      key={featureIndex}"
+                      className="flex items-center gap-x-3"
+                    >"
+                      <CheckCircle className="h-4 w-4 text-orange-600 flex-shrink-0" />"
+                      <span className="text-sm text-gray-700">{feature}</span>
                     </li>
                   ))}
-                </ul>
-                <div className=&quot;flex items-center justify-between&quot;>
-                  <div className=&quot;flex items-center space-x-4 text-sm text-gray-500&quot;>
-                    <div className=&quot;flex items-center space-x-1&quot;>
-                      <Clock className=&quot;h-4 w-4&quot; />
+                </ul>"
+                <div className="flex items-center justify-between">"
+                  <div className="flex items-center space-x-4 text-sm text-gray-500">"
+                    <div className="flex items-center space-x-1">"
+                      <Clock className="h-4 w-4" />
                       <span>{service.delivery}</span>
+                    </div>"
+                    <div className="font-semibold text-orange-600">
+                      {service.pricing}
                     </div>
-                    <div className=&quot;font-semibold text-orange-600&quot;>{service.pricing}</div>
                   </div>
-                  <Link
-                    href=&quot;/contact&quot;
-                    className=&quot;inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group&quot;
+                  <Link"
+                    href="/contact""
+                    className="inline-flex items-center text-sm font-semibold text-orange-600 hover: text-orange-500 transition-colors group"
                   >
-                    Get Started
-                    <ArrowRight className=&quot;ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform&quot; />
+                    Get Started"
+                    <ArrowRight className="ml-2 h-4 w-4 group-hove,
+    r:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>
+=======
+      {/* Micro SaaS Services Grid */}
+      <section className="py-24 sm:py-32 bg-white">;
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">;
+          <div className="mx-auto max-w-2xl text-center mb-16">;
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">;
+              Our Micro SaaS Portfolio;
+            </h2>;
+            <p className="mt-6 text-lg leading-8 text-gray-600">;
+              Custom software solutions tailored to your business needs. All applications include design, ;
+              development, testing, and deployment. Contact us at{' '}
+              <a href="mailto:kleber@ziontechgroup.com" className="text-orange-600 hover:text-orange-500">;
+                kleber@ziontechgroup.com;
+              </a>{' '}
+              or call{' '}
+              <a href="tel:+13024640950" className="text-orange-600 hover:text-orange-500">;
+                +1 302 464 0950;
+              </a>{' '}
+              for custom pricing.;
+            </p>;
+          </div>;
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">;
+            {microSaaSServices.map((service, index) => (;
+              <div key={index} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">;
+                <div className="flex items-center gap-x-3 mb-6">;
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors">;
+                    <service.icon className="h-7 w-7 text-white" />;
+                  </div>;
+                  <div>;
+                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>;
+                    <p className="text-sm text-orange-600 font-medium">{service.category}</p>;
+                  </div>;
+                </div>;
+                <p className="text-gray-600 mb-6">{service.description}</p>;
+                <ul className="space-y-3 mb-6">;
+                  {service.features.map((feature, featureIndex) => (;
+                    <li key={featureIndex} className="flex items-center gap-x-3">;
+                      <CheckCircle className="h-4 w-4 text-orange-600 flex-shrink-0" />;
+                      <span className="text-sm text-gray-700">{feature}</span>;
+                    </li>;
+                  ))}
+                </ul>;
+                <div className="flex items-center justify-between">;
+                  <div className="flex items-center space-x-4 text-sm text-gray-500">;
+                    <div className="flex items-center space-x-1">;
+                      <Clock className="h-4 w-4" />;
+                      <span>{service.delivery}</span>;
+                    </div>;
+                    <div className="font-semibold text-orange-600">{service.pricing}</div>;
+                  </div>;
+                  <Link;
+                    href="/contact";
+                    className="inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group";
+                  >;
+                    Get Started;
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />;
+                  </Link>;
+                </div>;
+              </div>;
+>>>>>>> main
             ))}
-          </div>
-        </div>
-      </section>
+          </div>;
+        </div>;
+      </section>;
 
-      {/* Development Process Section */}
-      <section className=&quot;py-24 sm:py-32 bg-gray-50&quot;>
-        <div className=&quot;mx-auto max-w-7xl px-6 lg:px-8&quot;>
-          <div className=&quot;mx-auto max-w-2xl text-center mb-16&quot;>
-            <h2 className=&quot;text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl&quot;>
+<<<<<<< HEAD
+      {/* Development Process Section */}"
+      <section className="py-24 sm: py-32 bg-gray-50">"
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">"
+          <div className="mx-auto max-w-2xl text-center mb-16">"
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Our Development Process
-            </h2>
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-600&quot;>
-              A proven methodology for delivering high-quality software solutions
+            </h2>"
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              A proven methodology for delivering high-quality software
+              solutions
             </p>
-          </div>
-          <div className=&quot;grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4&quot;>
-            <div className=&quot;text-center&quot;>
-              <div className=&quot;flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4&quot;>
-                <span className=&quot;text-2xl font-bold text-orange-600&quot;>1</span>
-              </div>
-              <h3 className=&quot;text-lg font-semibold text-gray-900 mb-2&quot;>Discovery</h3>
-              <p className=&quot;text-gray-600&quot;>Requirements gathering and project planning</p>
-            </div>
-            <div className=&quot;text-center&quot;>
-              <div className=&quot;flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4&quot;>
-                <span className=&quot;text-2xl font-bold text-orange-600&quot;>2</span>
-              </div>
-              <h3 className=&quot;text-lg font-semibold text-gray-900 mb-2&quot;>Design</h3>
-              <p className=&quot;text-gray-600&quot;>UI/UX design and system architecture</p>
-            </div>
-            <div className=&quot;text-center&quot;>
-              <div className=&quot;flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4&quot;>
-                <span className=&quot;text-2xl font-bold text-orange-600&quot;>3</span>
-              </div>
-              <h3 className=&quot;text-lg font-semibold text-gray-900 mb-2&quot;>Development</h3>
-              <p className=&quot;text-gray-600&quot;>Agile development with regular updates</p>
-            </div>
-            <div className=&quot;text-center&quot;>
-              <div className=&quot;flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4&quot;>
-                <span className=&quot;text-2xl font-bold text-orange-600&quot;>4</span>
-              </div>
-              <h3 className=&quot;text-lg font-semibold text-gray-900 mb-2&quot;>Deployment</h3>
-              <p className=&quot;text-gray-600&quot;>Testing, deployment, and ongoing support</p>
+          </div>"
+          <div className="grid grid-cols-1 gap-8 s,
+    m:grid-cols-2 l,
+    g:grid-cols-4">"
+            <div className="text-center">"
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">"
+                <span className="text-2xl font-bold text-orange-600">1</span>
+              </div>"
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Discovery
+              </h3>"
+              <p className="text-gray-600">
+                Requirements gathering and project planning
+              </p>
+            </div>"
+            <div className="text-center">"
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">"
+                <span className="text-2xl font-bold text-orange-600">2</span>
+              </div>"
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Design
+              </h3>"
+              <p className="text-gray-600">
+                UI/UX design and system architecture
+              </p>
+            </div>"
+            <div className="text-center">"
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">"
+                <span className="text-2xl font-bold text-orange-600">3</span>
+              </div>"
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Development
+              </h3>"
+              <p className="text-gray-600">
+                Agile development with regular updates
+              </p>
+            </div>"
+            <div className="text-center">"
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">"
+                <span className="text-2xl font-bold text-orange-600">4</span>
+              </div>"
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Deployment
+              </h3>"
+              <p className="text-gray-600">
+                Testing, deployment, and ongoing support
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className=&quot;bg-orange-600 py-16 sm:py-24&quot;>
-        <div className=&quot;mx-auto max-w-7xl px-6 lg:px-8&quot;>
-          <div className=&quot;mx-auto max-w-2xl text-center&quot;>
-            <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+      {/* CTA Section */}"
+      <section className="bg-orange-600 py-16 sm: py-24">"
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">"
+          <div className="mx-auto max-w-2xl text-center">"
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Ready to Build Your Custom SaaS Solution?
-            </h2>
-            <p className=&quot;mt-6 text-lg leading-8 text-orange-100&quot;>
-              Let&apos;s discuss your requirements and create a custom solution that drives your business forward. 
-              Get a free consultation and project estimate.
-            </p>
-            <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>
-              <Link
-                href=&quot;/contact&quot;
-                className=&quot;rounded-md bg-white px-6 py-3 text-sm font-semibold text-orange-600 shadow-sm hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white&quot;
+            </h2>"
+            <p className="mt-6 text-lg leading-8 text-orange-100">"
+              Let's discuss your requirements and create a custom solution that
+              drives your business forward. Get a free consultation and project
+              estimate.
+            </p>'
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <Link"
+                href="/contact""
+                className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-orange-600 shadow-sm hover: bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Start Your Project
               </Link>
-              <a
-                href=&quot;tel:+13024640950&quot;
-                className=&quot;text-sm font-semibold leading-6 text-white hover:text-orange-100&quot;
-              >
-                Call +1 302 464 0950 <span aria-hidden=&quot;true&quot;>→</span>
-              </Link>
+              <a"
+                href="te,
+    l:+13024640950""
+                className="text-sm font-semibold leading-6 text-white hove,
+    r:text-orange-100"
+              >"
+                Call +1 302 464 0950 <span aria-hidden="true">→</span>
+              </a>
             </div>
           </div>
         </div>
       </section>
     </PageTransition>
+  )
+}
+"
+=======
+      {/* Development Process Section */}
+      <section className="py-24 sm:py-32 bg-gray-50">;
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">;
+          <div className="mx-auto max-w-2xl text-center mb-16">;
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">;
+              Our Development Process;
+            </h2>;
+            <p className="mt-6 text-lg leading-8 text-gray-600">;
+              A proven methodology for delivering high-quality software solutions;
+            </p>;
+          </div>;
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">;
+            <div className="text-center">;
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">;
+                <span className="text-2xl font-bold text-orange-600">1</span>;
+              </div>;
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Discovery</h3>;
+              <p className="text-gray-600">Requirements gathering and project planning</p>;
+            </div>;
+            <div className="text-center">;
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">;
+                <span className="text-2xl font-bold text-orange-600">2</span>;
+              </div>;
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Design</h3>;
+              <p className="text-gray-600">UI/UX design and system architecture</p>;
+            </div>;
+            <div className="text-center">;
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">;
+                <span className="text-2xl font-bold text-orange-600">3</span>;
+              </div>;
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Development</h3>;
+              <p className="text-gray-600">Agile development with regular updates</p>;
+            </div>;
+            <div className="text-center">;
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">;
+                <span className="text-2xl font-bold text-orange-600">4</span>;
+              </div>;
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Deployment</h3>;
+              <p className="text-gray-600">Testing, deployment, and ongoing support</p>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+
+      {/* CTA Section */}
+      <section className="bg-orange-600 py-16 sm:py-24">;
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">;
+          <div className="mx-auto max-w-2xl text-center">;
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">;
+              Ready to Build Your Custom SaaS Solution?;
+            </h2>;
+            <p className="mt-6 text-lg leading-8 text-orange-100">;
+              Let's discuss your requirements and create a custom solution that drives your business forward. ;
+              Get a free consultation and project estimate.;
+            </p>;
+            <div className="mt-10 flex items-center justify-center gap-x-6">;
+              <Link;
+                href="/contact";
+                className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-orange-600 shadow-sm hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
+              >;
+                Start Your Project;
+              </Link>;
+              <a;
+                href="tel:+13024640950";
+                className="text-sm font-semibold leading-6 text-white hover:text-orange-100";
+              >;
+                Call +1 302 464 0950 <span aria-hidden="true">→</span>;
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </PageTransition>;
   );
 }
+>>>>>>> main

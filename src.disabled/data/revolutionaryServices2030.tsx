@@ -8,8 +8,12 @@ export interface RevolutionaryService2030 {
    yearly: number;
    custom: string;
    currency: string;
-   pricingModel: string;
-   marketPrice: string} features: string[] benefits: string[] useCases: string[] targetAudience: string[] technologies: string[] integrations: string[] support: string[] website: string contactEmail: string phone: string email: string website: string address: string}  export interface MicroSaasService {
+   pricingMode,
+    l: string;
+   marketPric,
+    e: string} features: string[] benefits: string[] useCases: string[] targetAudience: string[] technologies: string[] integrations: string[] support: string[] website: string contactEmail: string phone: string email: string websit,
+    e: string addres,
+    s: string}  export interface MicroSaasService {
    id: number;
    name: string;
    category: string;
@@ -31,8 +35,10 @@ export interface RevolutionaryService2030 {
    freeTier: boolean;
    trialPeriod: string;
    innovationLevel: string;
-   marketSize: string;
-   growthRate: string}  export interface ITService {
+   marketSiz,
+    e: string;
+   growthRat,
+    e: string}  export interface ITService {
    id: number;
    name: string;
    category: string;
@@ -51,8 +57,10 @@ export interface RevolutionaryService2030 {
    deliveryTime: string;
    support: string;
    innovationLevel: string;
-   marketSize: string;
-   compliance: string[]}  export interface AIService {
+   marketSiz,
+    e: string;
+   complianc,
+    e: string[]}  export interface AIService {
    id: number;
    name: string;
    category: string;
@@ -73,5 +81,7 @@ export interface RevolutionaryService2030 {
    aiScore: number;
    useCases: string[];
    innovationLevel: string;
-   marketSize: string;
-   ethicalAI: string[]}
+   marketSiz,
+    e: string;
+   ethicalA,
+    I: string[]}

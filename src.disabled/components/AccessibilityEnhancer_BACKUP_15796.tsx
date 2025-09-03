@@ -7,5 +7,7 @@ import React, { useEffect, useState, useCallback } from;
    reducedMotion: boolean;
    highSaturation: boolean;
    fontSize: number;
-   lineHeight: number;
-   letterSpacing: number} interface AccessibilityEnhancerProps extends React.PropsWithChildren<{}> { enabled?: boolean showSettings?: boolean  } export function AccessibilityEnhancer(...args: any[]): any { const [isVisible, setIsVisible] = useState(false) const [isExpanded, setIsExpanded] = useState(showSettings) const [settings, setSettings] = useState<any>({ highContrast: false, largeText: false, reducedMotion: false, highSaturation: false, fontSize: 16, lineHeight: 1.5, letterSpacing: 0 }) const [issues, setIssues] = useState<any>([]) const [isScanning, setIsScanning] = useState(false)  const [notifications, setNotifications] = useState<any>([]) '
+   lineHeigh,
+    t: number;
+   letterSpacin,
+    g: number} interface AccessibilityEnhancerProps extends React.PropsWithChildren<{}> { enabled?: boolean showSettings?: boolean  } export function AccessibilityEnhancer(...args: any[]): any { const [isVisible, setIsVisible] = useState(false) const [isExpanded, setIsExpanded] = useState(showSettings) const [settings, setSettings] = useState<any>({ highContrast: false, largeText: false, reducedMotion: false, highSaturation: false, fontSize: 16, lineHeight: 1.5, letterSpacing: 0 }) const [issues, setIssues] = useState<any>([]) const [isScanning, setIsScanning] = useState(false)  const [notifications, setNotifications] = useState<any>([]) ''

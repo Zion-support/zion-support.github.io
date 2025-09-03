@@ -58,7 +58,7 @@ const filesToFix = [
   'pages/enhanced-home.tsx',
   'pages/index.p.tsx',
   'pages/pricing-guide.tsx',
-  'pages/sitemap.tsx'
+  'pages/sitemap.tsx',
 ];
 
 console.log('🔧 Fixing JSX syntax errors...');

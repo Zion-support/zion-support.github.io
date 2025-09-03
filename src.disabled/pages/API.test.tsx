@@ -1,5 +1,15 @@
 describe (
+<<<<<<< HEAD
   'API', () => {}' it ('renders without crashing
-  ', () => {} render (<API />) '; expect (screen.getByRole (
+  ', () => {} render (<API />) ' expect (screen.getByRole (
+=======
+<<<<<<< HEAD
+  'API', () => {} it('renders without crashing', () => {} render (<API />) '; expect (screen.getByRole ('
+  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content'
+  ', () => {} render (<API />) '''
+=======
+  'API', () => {}' it('renders without crashing', () => {} render (<API />) ' expect (screen.getByRole (
+>>>>>>> main
   'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
   ', () => {} render (<API />) ''
+>>>>>>> main
