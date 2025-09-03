@@ -1,4 +1,6 @@
 
+import React from 'react';
+
 interface InteractiveSearchProps {
   placeholder?: string;
   onSearch?: (query: string) => void;

@@ -1,152 +1,386 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+import { ChevronDown, Menu, X } from 'lucide-react';
 
 const EnhancedNavigation: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const services = [
-    { name: 'AI Development', href: '/services/ai-development' },
-    { name: 'Cloud Services', href: '/services/cloud-services' },
-    { name: 'Data Analytics', href: '/services/data-analytics' },
-    { name: 'Blockchain Solutions', href: '/services/blockchain-solutions' },
-    { name: 'IoT Platforms', href: '/services/iot-platforms' },
-    { name: 'AI Content Creation', href: '/services/ai-content-creation' },
-    { name: 'Affiliate Marketing Tools', href: '/services/affiliate-marketing' },
-    { name: 'AI Email Responder', href: '/services/ai-email-responder' },
-    { name: 'Customer Support Platform', href: '/services/customer-support' },
-    { name: 'E-commerce Return Management', href: '/services/ecommerce-returns' },
-    { name: 'AI SEO Optimization', href: '/services/ai-seo-optimization' },
-    { name: 'Web Development', href: '/services/web-development' },
-    { name: 'Mobile App Development', href: '/services/mobile-development' },
-    { name: 'UI/UX Design', href: '/services/ui-ux-design' },
-    { name: 'Quality Assurance', href: '/services/quality-assurance' },
-    { name: 'Security Auditing', href: '/services/security-auditing' },
-    { name: 'System Administration', href: '/services/system-administration' },
-    { name: 'Technical Documentation', href: '/services/technical-documentation' },
-    { name: 'Performance Optimization', href: '/services/performance-optimization' },
-    { name: 'Network Security', href: '/services/network-security' },
-    { name: 'Database Design', href: '/services/database-design' },
-    { name: 'Data Pipeline Engineering', href: '/services/data-pipeline-engineering' },
-    { name: 'Business Intelligence', href: '/services/business-intelligence' },
-    { name: 'API Development', href: '/services/api-development' },
-    { name: 'Cloud Migration', href: '/services/cloud-migration' }
-  ];
+=======
+import { ChevronDown, Cloud, Home, Menu, X } from 'lucide-react';
 
+const EnhancedNavigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
+>>>>>>> main
   return (
-    <nav className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 shadow-xl sticky top-0 z-50">
+    <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <Link href="/"><a className="text-2xl font-bold text-white hover:text-blue-200 transition-colors">
-            Zion Tech Group
-          </a></Link>
-          
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xl">Z</span>
+              </div>
+              <div className="text-xl font-bold text-gray-800">
+                Zion Tech Group
+              </div>
+            </div>
+          </Link>
+
           {/* Desktop Navigation */}
+<<<<<<< HEAD
+          <div className='hidden lg: flex items-center space-x-8'>
+            <Link href='/' className='text-gray-600 hover:text-blue-600 transition-colors'>
+=======
+<<<<<<< HEAD
+          <div className="hidden lg: flex items-center space-x-8">
+=======
           <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/"><a className="text-white hover:text-blue-200 transition-colors font-medium">
+>>>>>>> main
+            <Link
+              href="/"
+              className="text-gray-600 hover:text-blue-600 transition-colors"
+            >
+>>>>>>> main
               Home
-            </a></Link>
-            
+            </Link>
+
+            {/* Services Dropdown */}
             <div className="relative group">
-              <button 
-                className="text-white hover:text-blue-200 transition-colors font-medium flex items-center"
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
+              <button
+                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
               >
                 Services
-                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+                <ChevronDown className="ml-1 w-4 h-4" />
               </button>
-              
-              {isServicesOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
-                  onMouseEnter={() => setIsServicesOpen(true)}
-                  onMouseLeave={() => setIsServicesOpen(false)}
+              <div
+                className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${servicesOpen ? 'block' : 'hidden'}`}
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+              >
+<<<<<<< HEAD
+                <Link href='/services/ai-services' className='block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600'>
+                  AI Services
+=======
+                <Link
+                  href="/services/ai-development"
+<<<<<<< HEAD
+                  className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600"
+=======
+                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+>>>>>>> main
                 >
-                  <div className="grid grid-cols-2 gap-1 p-2">
-                    {services.map((service) => (
-                      <Link href="#"><a className="px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors">
-                        {service.name}
-                      </a></Link>
-                    ))}
-                  </div>
-                </div>
-              )}
+                  AI Development
+>>>>>>> main
+                </Link>
+                <Link
+                  href="/services/cloud-services"
+                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                >
+                  Cloud Services
+                </Link>
+                <Link
+                  href="/services/web-development"
+                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                >
+                  Web Development
+                </Link>
+                <Link
+                  href="/services/mobile-development"
+                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                >
+                  Mobile Development
+                </Link>
+                <Link
+                  href="/services/blockchain-solutions"
+                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                >
+                  Blockchain Solutions
+                </Link>
+                <Link
+                  href="/services/iot-platforms"
+                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                >
+                  IoT Platforms
+                </Link>
+                <Link
+                  href="/services/cybersecurity"
+                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                >
+                  Cybersecurity
+                </Link>
+              </div>
             </div>
-            
-            <Link href="/products"><a className="text-white hover:text-blue-200 transition-colors font-medium">
+
+            {/* Solutions Dropdown */}
+            <div className="relative group">
+              <button
+                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                onMouseEnter={() => setSolutionsOpen(true)}
+                onMouseLeave={() => setSolutionsOpen(false)}
+              >
+                Solutions
+                <ChevronDown className="ml-1 w-4 h-4" />
+              </button>
+              <div
+                className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${solutionsOpen ? 'block' : 'hidden'}`}
+                onMouseEnter={() => setSolutionsOpen(true)}
+                onMouseLeave={() => setSolutionsOpen(false)}
+              >
+<<<<<<< HEAD
+                <Link href='/solutions' className='block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600'>
+                  Solutions Overview
+                </Link>
+                <Link href='/solutions/enterprise' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>
+=======
+                <Link
+                  href="/solutions/enterprise"
+<<<<<<< HEAD
+                  className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600"
+=======
+                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+>>>>>>> main
+                >
+>>>>>>> main
+                  Enterprise Solutions
+                </Link>
+                <Link
+                  href="/solutions/small-business"
+                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                >
+                  Small Business
+                </Link>
+                <Link
+                  href="/solutions/startups"
+                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                >
+                  Startups
+                </Link>
+                <Link
+                  href="/solutions/healthcare"
+                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                >
+                  Healthcare
+                </Link>
+                <Link
+                  href="/solutions/finance"
+                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                >
+                  Finance
+                </Link>
+              </div>
+            </div>
+
+            <Link
+              href="/products"
+              className="text-gray-600 hover:text-blue-600 transition-colors"
+            >
               Products
-            </a></Link>
-            <Link href="/about"><a className="text-white hover:text-blue-200 transition-colors font-medium">
+            </Link>
+            <Link
+              href="/solutions"
+              className="text-gray-600 hover:text-blue-600 transition-colors"
+            >
+              Solutions
+            </Link>
+            <Link
+              href="/about"
+              className="text-gray-600 hover:text-blue-600 transition-colors"
+            >
               About
-            </a></Link>
-            <Link href="/contact"><a className="text-white hover:text-blue-200 transition-colors font-medium">
-              Contact
-            </a></Link>
-            <Link href="/blog"><a className="text-white hover:text-blue-200 transition-colors font-medium">
+            </Link>
+            <Link
+              href="/blog"
+              className="text-gray-600 hover:text-blue-600 transition-colors"
+            >
               Blog
-            </a></Link>
+            </Link>
+            <Link
+              href="/careers"
+              className="text-gray-600 hover:text-blue-600 transition-colors"
+            >
+              Careers
+            </Link>
+            <Link
+              href="/contact"
+              className="text-gray-600 hover:text-blue-600 transition-colors"
+            >
+              Contact
+            </Link>
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden lg:block">
+            <Link
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block"
+            >
+              Get Started
+            </Link>
           </div>
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden text-white hover:text-blue-200 transition-colors"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+<<<<<<< HEAD
+            className='lg:hidden text-gray-600 hover:text-gray-900'
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
+            {mobileMenuOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
+=======
+            className="lg:hidden text-gray-600 hover:text-gray-900"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+>>>>>>> main
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden bg-white rounded-lg shadow-lg mt-2 p-4">
-            <div className="space-y-4">
-              <Link href="/"><a className="block text-gray-700 hover:text-blue-600 font-medium">
+<<<<<<< HEAD
+        {mobileMenuOpen && (
+          <div className='lg:hidden border-t border-gray-200 py-4'>
+            <div className='space-y-2'>
+              <Link href='/' className='block py-2 text-gray-600 hover:text-blue-600'>
+=======
+        {isOpen && (
+          <div className="lg:hidden border-t border-gray-200 py-4">
+            <div className="space-y-2">
+              <Link
+                href="/"
+                className="block py-2 text-gray-600 hover:text-blue-600"
+              >
+>>>>>>> main
                 Home
-              </a></Link>
-              
-              <div>
-                <button 
-                  className="flex items-center justify-between w-full text-gray-700 hover:text-blue-600 font-medium"
-                  onClick={() => setIsServicesOpen(!isServicesOpen)}
-                >
-                  Services
-                  <svg className={`h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                
-                {isServicesOpen && (
-                  <div className="mt-2 pl-4 space-y-2">
-                    {services.map((service) => (
-                      <Link href="#"><a className="block text-sm text-gray-600 hover:text-blue-600">
-                        {service.name}
-                      </a></Link>
-                    ))}
-                  </div>
-                )}
+              </Link>
+              <div className="py-2">
+                <div className="text-gray-600 font-semibold mb-2">Services</div>
+                <div className="pl-4 space-y-2">
+                  <Link
+                    href="/services/ai-development"
+                    className="block py-1 text-gray-500 hover:text-blue-600"
+                  >
+                    AI Development
+                  </Link>
+                  <Link
+                    href="/services/cloud-services"
+                    className="block py-1 text-gray-500 hover:text-blue-600"
+                  >
+                    Cloud Services
+                  </Link>
+                  <Link
+                    href="/services/web-development"
+                    className="block py-1 text-gray-500 hover:text-blue-600"
+                  >
+                    Web Development
+                  </Link>
+                  <Link
+                    href="/services/mobile-development"
+                    className="block py-1 text-gray-500 hover:text-blue-600"
+                  >
+                    Mobile Development
+                  </Link>
+                  <Link
+                    href="/services/blockchain-solutions"
+                    className="block py-1 text-gray-500 hover:text-blue-600"
+                  >
+                    Blockchain Solutions
+                  </Link>
+                  <Link
+                    href="/services/iot-platforms"
+                    className="block py-1 text-gray-500 hover:text-blue-600"
+                  >
+                    IoT Platforms
+                  </Link>
+                  <Link
+                    href="/services/cybersecurity"
+                    className="block py-1 text-gray-500 hover:text-blue-600"
+                  >
+                    Cybersecurity
+                  </Link>
+                </div>
               </div>
-              
-              <Link href="/products"><a className="block text-gray-700 hover:text-blue-600 font-medium">
+              <div className="py-2">
+                <div className="text-gray-600 font-semibold mb-2">
+                  Solutions
+                </div>
+                <div className="pl-4 space-y-2">
+                  <Link
+                    href="/solutions/enterprise"
+                    className="block py-1 text-gray-500 hover:text-blue-600"
+                  >
+                    Enterprise Solutions
+                  </Link>
+                  <Link
+                    href="/solutions/small-business"
+                    className="block py-1 text-gray-500 hover:text-blue-600"
+                  >
+                    Small Business
+                  </Link>
+                  <Link
+                    href="/solutions/startups"
+                    className="block py-1 text-gray-500 hover:text-blue-600"
+                  >
+                    Startups
+                  </Link>
+                  <Link
+                    href="/solutions/healthcare"
+                    className="block py-1 text-gray-500 hover:text-blue-600"
+                  >
+                    Healthcare
+                  </Link>
+                  <Link
+                    href="/solutions/finance"
+                    className="block py-1 text-gray-500 hover:text-blue-600"
+                  >
+                    Finance
+                  </Link>
+                </div>
+              </div>
+              <Link
+                href="/products"
+                className="block py-2 text-gray-600 hover:text-blue-600"
+              >
                 Products
-              </a></Link>
-              <Link href="/about"><a className="block text-gray-700 hover:text-blue-600 font-medium">
+              </Link>
+              <Link
+                href="/about"
+                className="block py-2 text-gray-600 hover:text-blue-600"
+              >
                 About
-              </a></Link>
-              <Link href="/contact"><a className="block text-gray-700 hover:text-blue-600 font-medium">
-                Contact
-              </a></Link>
-              <Link href="/blog"><a className="block text-gray-700 hover:text-blue-600 font-medium">
+              </Link>
+              <Link
+                href="/blog"
+                className="block py-2 text-gray-600 hover:text-blue-600"
+              >
                 Blog
-              </a></Link>
+              </Link>
+              <Link
+                href="/careers"
+                className="block py-2 text-gray-600 hover:text-blue-600"
+              >
+                Careers
+              </Link>
+              <Link
+                href="/contact"
+                className="block py-2 text-gray-600 hover:text-blue-600"
+              >
+                Contact
+              </Link>
+              <div className="pt-4">
+                <Link
+                  href="/contact"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block w-full text-center"
+                >
+                  Get Started
+                </Link>
+              </div>
             </div>
           </div>
         )}
@@ -154,5 +388,4 @@ const EnhancedNavigation: React.FC = () => {
     </nav>
   );
 };
-
 export default EnhancedNavigation;
