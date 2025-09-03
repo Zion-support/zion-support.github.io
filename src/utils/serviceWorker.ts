@@ -1,22 +1,43 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
-import {SEO } from '@/components/SEO';
+// Service Worker utility functions
 
-<<<<<<< HEAD
-;,"});,"})
-=======
-export default function serviceWorker() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <SEO title="serviceWorker - Zion Tech Group" description="Professional serviceWorker services by Zion Tech Group" />
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold text-white mb-8">serviceWorker</h1>
-        <p className="text-gray-300 text-lg">
-          Professional serviceWorker services to help your business grow.
-        </p>
-      </div>
-    </div>
-  );
-}
->>>>>>> main
->>>>>>> main
+export const registerServiceWorker = async (): Promise<ServiceWorkerRegistration | null> => {
+  if ('serviceWorker' in navigator) {
+    try {
+      const registration = await navigator.serviceWorker.register('/sw.js');
+      console.log('Service Worker registered successfully:', registration);
+      return registration;
+    } catch (error) {
+      console.error('Service Worker registration failed:', error);
+      return null;
+    }
+  }
+  return null;
+};
+
+export const unregisterServiceWorker = async (): Promise<void> => {
+  if ('serviceWorker' in navigator) {
+    try {
+      const registrations = await navigator.serviceWorker.getRegistrations();
+      await Promise.all(registrations.map(registration => registration.unregister()));
+      console.log('Service Workers unregistered successfully');
+    } catch (error) {
+      console.error('Service Worker unregistration failed:', error);
+    }
+  }
+};
+
+export const updateServiceWorker = async (): Promise<void> => {
+  if ('serviceWorker' in navigator) {
+    try {
+      const registration = await navigator.serviceWorker.ready;
+      await registration.update();
+      console.log('Service Worker updated successfully');
+    } catch (error) {
+      console.error('Service Worker update failed:', error);
+    }
+  }
+};
+
+export const isServiceWorkerSupported = (): boolean => {
+  return 'serviceWorker' in navigator;
+};
