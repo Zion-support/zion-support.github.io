@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import '../styles/globals.css';
 
 function Header(): any {
@@ -25,6 +26,24 @@ function Header(): any {
           backgroundClip: 'text',
           textDecoration: 'none'
         }}>Zion Tech Group</Link>
+        
+        {/* Mobile Menu Toggle */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          style={{
+            display: 'block',
+            background: 'none',
+            border: 'none',
+            color: 'white',
+            fontSize: '1.5rem',
+            cursor: 'pointer',
+            padding: '8px'
+          }}
+          className="md:hidden"
+          aria-label="Toggle mobile menu"
+        >
+          {mobileMenuOpen ? '✕' : '☰'}
+        </button>
         
         {/* Desktop Navigation */}
         <div style={{ 
@@ -98,7 +117,8 @@ function Header(): any {
           position: 'absolute', top: '100%', left: 0, right: 0, 
           background: 'rgba(11, 18, 32, 0.98)', backdropFilter: 'blur(10px)',
           borderBottom: '1px solid rgba(255,255,255,0.1)',
-          padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px'
+          padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px',
+          zIndex: 1000
         }}>
           <Link href="/" style={{ 
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
@@ -217,7 +237,6 @@ function Footer(): any {
             <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Main Website</a>
           </div>
         </div>
-        </div>
 
         {/* Contact CTA */}
         <div style={{ display: 'grid', gap: 12 }}>
@@ -262,6 +281,7 @@ function Footer(): any {
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ErrorBoundary>
+      <PerformanceOptimizer />
       <PerformanceMonitor />
       <Header />
       <Component {...pageProps} />
