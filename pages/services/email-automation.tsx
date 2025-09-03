@@ -1,13 +1,12 @@
 import React from 'react';
 import { ArrowRight, CheckCircle, Mail, Clock, Users, BarChart3, Zap, Target, TrendingUp, Star, Shield } from 'lucide-react';
-import PageTransition from '../../src/components/PageTransition';
 
 export default function EmailAutomation() {
 	const title = 'Automated Email Follow-up Service — Zion Tech Group'
 	const description = 'Intelligent email automation platform with AI-powered personalization, drip campaigns, and advanced analytics.'
 
 	return (
-		<PageTransition>
+		<>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -354,6 +353,6 @@ export default function EmailAutomation() {
 					</div>
 				</div>
 			</section>
-		</PageTransition>
+		</>
 	)
 }

@@ -30,7 +30,6 @@ import {
   PieChart,
   Activity
 } from 'lucide-react';
-import PageTransition from '../../src/components/PageTransition';
 
 export default function WebsiteAnalytics() {
   const title = 'Website Analytics for Small Businesses — Zion Tech Group';
@@ -165,7 +164,7 @@ export default function WebsiteAnalytics() {
   ];
 
   return (
-    <PageTransition>
+    <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -392,6 +391,6 @@ export default function WebsiteAnalytics() {
           </div>
         </div>
       </section>
-    </PageTransition>
+    </>
   );
 }

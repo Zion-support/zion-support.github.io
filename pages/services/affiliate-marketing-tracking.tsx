@@ -29,7 +29,6 @@ import {
   FileText,
   MessageSquare
 } from 'lucide-react';
-import PageTransition from '../../src/components/PageTransition';
 
 export default function AffiliateMarketingTracking() {
   const title = 'Affiliate Marketing Tracking Software — Zion Tech Group';
@@ -141,7 +140,7 @@ export default function AffiliateMarketingTracking() {
   ];
 
   return (
-    <PageTransition>
+    <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -345,6 +344,6 @@ export default function AffiliateMarketingTracking() {
           </div>
         </div>
       </section>
-    </PageTransition>
+    </>
   );
 }

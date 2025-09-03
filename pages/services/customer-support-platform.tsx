@@ -32,7 +32,6 @@ import {
   Search,
   Bell
 } from 'lucide-react';
-import PageTransition from '../../src/components/PageTransition';
 
 export default function CustomerSupportPlatform() {
   const title = 'Customer Support & Helpdesk Solutions — Zion Tech Group';
@@ -167,7 +166,7 @@ export default function CustomerSupportPlatform() {
   ];
 
   return (
-    <PageTransition>
+    <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -394,6 +393,6 @@ export default function CustomerSupportPlatform() {
           </div>
         </div>
       </section>
-    </PageTransition>
+    </>
   );
 }

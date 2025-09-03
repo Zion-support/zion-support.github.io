@@ -40,7 +40,6 @@ import {
   Satellite,
   Mic
 } from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
 
 export default function MicroSaaS() {
   const title = 'Micro SaaS Solutions — Zion Tech Group';
@@ -1395,7 +1394,7 @@ export default function MicroSaaS() {
   ];
 
   return (
-    <PageTransition>
+    <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -1629,6 +1628,6 @@ export default function MicroSaaS() {
           </div>
         </div>
       </section>
-    </PageTransition>
+    </>
   );
 }

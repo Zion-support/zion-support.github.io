@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Globe, Database, Network, Brain, Cloud } from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
 
 export default function Products() {
   const products = [
@@ -171,7 +170,7 @@ export default function Products() {
 >>>>>>> main
 
   return (
-    <PageTransition>
+    <>
       <Head>
         <title>Products & Solutions — Zion Tech Group</title>
         <meta name="description" content="Explore Zion Tech Group's comprehensive suite of technology products and solutions designed to transform your business." />
@@ -369,6 +368,6 @@ export default function Products() {
           </Link>
         </div>
       </section>
-    </PageTransition>
+    </>
   );
 }

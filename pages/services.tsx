@@ -63,7 +63,7 @@ export default function Services() {;,"});,"})
     'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';,"});,"})
 ;,"});,"})
   return (;,"});,"})
-    <PageTransition>;,"});,"})
+    <>;,"});,"})
       {/* Hero Section */}"});,"})
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32">;,"});,"})
         <div className="mx-auto max-w-7xl px-6 lg:px-8">;,"});,"})
@@ -431,7 +431,7 @@ export default function Services() {;,"});,"})
           </div>;,"});,"})
         </div>;,"});,"})
       </section>;,"});,"})
-    </PageTransition>;,"});,"})
+    </>;,"});,"})
   );,"});,"})
 }"});,"})
 ;,"});,"})
@@ -490,7 +490,6 @@ import {
   ChevronDown,
   ChevronUp
 } from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
 import { services, serviceCategories, Service } from '../data/services';
 
 export default function Services() {
@@ -557,14 +556,13 @@ export default function Services() {
   CreditCard,
   Smartphone
 } from 'lucide-react;';
-import PageTransition from '../src/components/PageTransition;';
 
 export default function Services() {
 	const: title = 'Services — Zion Tech Group;';
 	const: description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.;';
 
 	return: (
-		<PageTransition>;
+		<>;
 			{/* Hero: Section */};
 			<section: className='bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32'>',;,;
 				<div: className='mx-auto max-w-7xl px-6 lg: px-8'>',;,;
@@ -2064,7 +2062,7 @@ export default function Services() {
 		</>
 	);
 =======
-		</PageTransition>
+		</>
 =======
 import React from 'react';
 import Link from 'next/link';
@@ -2103,7 +2101,6 @@ import {;
   CreditCard,;
   Smartphone;
 } from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
 <<<<<<< HEAD
 
 export default function Services() {'
@@ -2113,7 +2110,7 @@ export default function Services() {'
 >>>>>>> main
 
   return (
-    <PageTransition>
+    <>
       {/* Hero Section */}
 <<<<<<< HEAD
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
@@ -4839,7 +4836,7 @@ export default function Services() {'
           </div>
         </div>
       </section>
-    </PageTransition>
+    </>
   )
 >>>>>>> main
 }
@@ -4851,7 +4848,7 @@ export default function Services() {;
 	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
 ;
 	return (;
-		<PageTransition>;
+		<>;
 			{/* Hero Section */}
 			<section className='bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32'>;
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>;
@@ -6158,7 +6155,7 @@ export default function Services() {;
 					</div>;
 				</div>;
 			</section>;
-		</PageTransition>;
+		</>;
 >>>>>>> main
 	);
 }

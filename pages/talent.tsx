@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Users, MapPin, Clock, ArrowRight, CheckCircle, Star, Award } from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
 
 export default function Talent() {
   const openPositions = [
@@ -74,7 +73,7 @@ export default function Talent() {
   ];
 
   return (
-    <PageTransition>
+    <>
       <Head>
         <title>Join Our Team — Zion Tech Group</title>
         <meta name="description" content="Join Zion Tech Group and be part of a team that's shaping the future of technology. Explore our open positions and career opportunities." />
@@ -243,6 +242,6 @@ export default function Talent() {
           </Link>
         </div>
       </section>
-    </PageTransition>
+    </>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import { Header } from '../src/components/Header';
-import Footer from '../src/components/Footer';
+import { ModernHeader } from '../src/components/header/ModernHeader';
+import { SimpleFooter } from '../src/components/layout/SimpleFooter';
 import {
   Wifi,
   Cpu,
@@ -39,16 +39,12 @@ export default function IoTSolutions() {
   ];
 
   const benefits = [
-<<<<<<< HEAD
     'Real-time monitoring and control',
     'Predictive maintenance capabilities',
     'Improved operational efficiency',
     'Cost reduction through automation',
     'Enhanced customer experiences',
-    'Data-driven decision making',
-=======
-    'Real-time monitoring and control,Predictive maintenance capabilities,Improved operational efficiency,Cost reduction through automation,Enhanced customer experiences,Data-driven decision making'
->>>>>>> main
+    'Data-driven decision making'
   ];
 
   const industries = [
@@ -85,7 +81,7 @@ export default function IoTSolutions() {
         <link rel="canonical" href="https: //ziontechgroup.com/iot-solutions" />
       </Head>
 
-      <Header />
+      <ModernHeader />
 
       <main className="min-h-screen bg-white pt-16">
         {/* Hero Section */}
@@ -211,7 +207,7 @@ export default function IoTSolutions() {
         </section>
       </main>
 
-      <Footer />
+      <SimpleFooter />
     </>
   );
 }
