@@ -29,9 +29,9 @@ export default function Home() {
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-              We deliver cutting-edge technology solutions with 40+ micro SaaS products, 
-              advanced AI services, and comprehensive IT solutions. From cloud optimization 
-              to AI automation, we help businesses scale efficiently and securely.
+              We deliver cutting-edge technology solutions with 30+ micro SaaS products, 
+              32+ advanced AI services, and 32+ comprehensive IT solutions. From quantum computing 
+              to AI-powered drug discovery, we help businesses pioneer the future of technology.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -48,15 +48,15 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-blue-400 mb-2">40+</h3>
+                <h3 className="text-2xl font-bold text-blue-400 mb-2">30+</h3>
                 <p className="text-slate-300">Micro SaaS Products</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-purple-400 mb-2">16+</h3>
+                <h3 className="text-2xl font-bold text-purple-400 mb-2">32+</h3>
                 <p className="text-slate-300">AI Services</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-green-400 mb-2">16+</h3>
+                <h3 className="text-2xl font-bold text-green-400 mb-2">32+</h3>
                 <p className="text-slate-300">IT Solutions</p>
               </div>
             </div>
@@ -79,9 +79,9 @@ export default function Home() {
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
                   <li>• Cloud Cost Guard (FinOps Assistant)</li>
-                  <li>• Customer Churn Predictor</li>
-                  <li>• API Rate Limiter & Analytics</li>
-                  <li>• Smart Document Processing</li>
+                  <li>• Smart Contract Security Auditor</li>
+                  <li>• AI-Powered Code Review Assistant</li>
+                  <li>• Predictive Maintenance System</li>
                 </ul>
                 <Link href="/services" className="text-blue-400 hover:text-blue-300 font-semibold">
                   View All Micro SaaS →
@@ -95,10 +95,10 @@ export default function Home() {
                   natural language processing, fraud detection, and conversational AI platforms.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• Computer Vision & Image Analysis</li>
-                  <li>• AI-Powered Fraud Detection</li>
-                  <li>• Conversational AI Platform</li>
-                  <li>• Predictive Analytics & Forecasting</li>
+                  <li>• AI-Powered Drug Discovery Platform</li>
+                  <li>• Quantum Machine Learning Platform</li>
+                  <li>• Autonomous Vehicle AI System</li>
+                  <li>• AI-Powered Climate Modeling</li>
                 </ul>
                 <Link href="/services" className="text-purple-400 hover:text-purple-300 font-semibold">
                   View All AI Services →
@@ -112,10 +112,10 @@ export default function Home() {
                   DevOps, Kubernetes orchestration, and data engineering services.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• Cloud Migration & Modernization</li>
-                  <li>• Kubernetes & Container Orchestration</li>
-                  <li>• Cybersecurity Hardening & SOC</li>
-                  <li>• Data Engineering & Analytics</li>
+                  <li>• Quantum Computing Infrastructure</li>
+                  <li>• Metaverse & Web3 Infrastructure</li>
+                  <li>• Edge Computing & 5G Networks</li>
+                  <li>• Digital Twin Platform Development</li>
                 </ul>
                 <Link href="/services" className="text-green-400 hover:text-green-300 font-semibold">
                   View All IT Services →

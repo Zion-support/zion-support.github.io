@@ -19,14 +19,16 @@ export default function ServicesCatalog() {
       items: [
         {
           name: 'Cloud Cost Guard (FinOps Assistant)',
-          blurb: 'Automated cloud cost anomaly detection, budget guardrails, and rightsizing recommendations across AWS/Azure/GCP.',
+          blurb: 'Automated cloud cost anomaly detection, budget guardrails, and rightsizing recommendations across AWS/Azure/GCP. Save 15-40% on cloud costs with intelligent optimization.',
           price: '$299 – $1,499/month',
           eta: '1–2 weeks',
           bullets: [
-            'Anomaly detection on daily spend and resources',
-            'Idle/overprovisioned resource cleanup suggestions',
-            'Forecasting, budgets, and team alerts (Slack/Email)',
-            'Executive savings dashboards and benchmarks'
+            'Real-time anomaly detection on daily spend and resources',
+            'AI-powered idle/overprovisioned resource cleanup suggestions',
+            'Advanced forecasting, budgets, and team alerts (Slack/Email)',
+            'Executive savings dashboards and industry benchmarks',
+            'Automated rightsizing recommendations with risk assessment',
+            'Multi-cloud cost allocation and chargeback reporting'
           ],
           link: '/micro-saas'
         },
@@ -58,14 +60,46 @@ export default function ServicesCatalog() {
         },
         {
           name: 'Customer Churn Predictor',
-          blurb: 'Machine learning models to predict and prevent customer churn with actionable insights and automated interventions.',
+          blurb: 'Machine learning models to predict and prevent customer churn with actionable insights and automated interventions. Reduce churn by 25-50% with proactive retention strategies.',
           price: '$399 – $1,599/month',
           eta: '2–4 weeks',
           bullets: [
-            'Real-time churn risk scoring',
-            'Automated retention campaign triggers',
-            'Customer health dashboards',
-            'ROI tracking and success metrics'
+            'Real-time churn risk scoring with 85%+ accuracy',
+            'Automated retention campaign triggers and workflows',
+            'Customer health dashboards and segmentation',
+            'ROI tracking and success metrics with A/B testing',
+            'Integration with CRM, email, and support systems',
+            'Predictive lifetime value and upsell opportunities'
+          ],
+          link: '/micro-saas'
+        },
+        {
+          name: 'Smart Contract Security Auditor',
+          blurb: 'Automated smart contract vulnerability scanning, gas optimization, and security best practices enforcement. Protect your DeFi protocols and NFT projects.',
+          price: '$499 – $2,499/month',
+          eta: '1–3 weeks',
+          bullets: [
+            'Automated vulnerability detection and risk assessment',
+            'Gas optimization recommendations and cost analysis',
+            'Security best practices enforcement and compliance',
+            'Multi-blockchain support (Ethereum, Polygon, BSC, etc.)',
+            'Integration with development workflows and CI/CD',
+            'Real-time monitoring and alert system'
+          ],
+          link: '/micro-saas'
+        },
+        {
+          name: 'AI-Powered Code Review Assistant',
+          blurb: 'Automated code quality analysis, security vulnerability detection, and performance optimization suggestions. Improve code quality by 40% and reduce bugs by 60%.',
+          price: '$199 – $999/month',
+          eta: '1–2 weeks',
+          bullets: [
+            'Automated code quality analysis and scoring',
+            'Security vulnerability detection and remediation',
+            'Performance optimization suggestions and refactoring',
+            'Integration with GitHub, GitLab, and Bitbucket',
+            'Custom rule sets and team coding standards',
+            'Detailed reports and actionable recommendations'
           ],
           link: '/micro-saas'
         }
@@ -117,14 +151,46 @@ export default function ServicesCatalog() {
         },
         {
           name: 'Conversational AI Platform',
-          blurb: 'Multi-channel chatbots, voice assistants, and intelligent virtual agents with natural language understanding.',
+          blurb: 'Multi-channel chatbots, voice assistants, and intelligent virtual agents with natural language understanding. Handle 80% of customer inquiries automatically with 95% satisfaction.',
           price: '$8,000 – $35,000 setup',
           eta: '6–14 weeks',
           bullets: [
-            'Multi-language conversational AI',
-            'Voice and text interaction capabilities',
-            'Integration with existing business systems',
-            'Continuous learning and improvement'
+            'Multi-language conversational AI with 50+ languages',
+            'Voice and text interaction capabilities with emotion detection',
+            'Integration with existing business systems and APIs',
+            'Continuous learning and improvement with feedback loops',
+            'Advanced intent recognition and context management',
+            'Analytics dashboard with conversation insights and metrics'
+          ],
+          link: '/ai-services'
+        },
+        {
+          name: 'AI-Powered Drug Discovery Platform',
+          blurb: 'Molecular property prediction, drug-target interaction modeling, and compound optimization for pharmaceutical research. Accelerate drug discovery by 3-5x.',
+          price: '$25,000 – $150,000 project',
+          eta: '12–24 weeks',
+          bullets: [
+            'Advanced molecular property prediction and optimization',
+            'Drug-target interaction modeling and validation',
+            'Compound library screening and lead optimization',
+            'Integration with existing research workflows and databases',
+            'Custom model training for specific therapeutic areas',
+            'Regulatory compliance and documentation support'
+          ],
+          link: '/ai-services'
+        },
+        {
+          name: 'Quantum Machine Learning Platform',
+          blurb: 'Quantum algorithm development, quantum neural networks, and hybrid classical-quantum ML solutions. Unlock quantum advantage for complex optimization problems.',
+          price: '$40,000 – $250,000 project',
+          eta: '16–32 weeks',
+          bullets: [
+            'Quantum algorithm development and optimization',
+            'Quantum neural networks and hybrid architectures',
+            'Quantum advantage demonstration and benchmarking',
+            'Integration with existing classical ML pipelines',
+            'Custom quantum circuit design and implementation',
+            'Performance monitoring and quantum error correction'
           ],
           link: '/ai-services'
         }
@@ -176,14 +242,46 @@ export default function ServicesCatalog() {
         },
         {
           name: 'Data Engineering & Analytics',
-          blurb: 'Modern data pipeline development, ETL processes, data warehousing, and analytics platform setup.',
+          blurb: 'Modern data pipeline development, ETL processes, data warehousing, and analytics platform setup. Transform raw data into actionable insights with 99.9% uptime.',
           price: '$12,000 – $60,000 project',
           eta: '8–16 weeks',
           bullets: [
-            'Data pipeline architecture and development',
-            'ETL/ELT process automation',
-            'Data warehouse and lake setup',
-            'Business intelligence and analytics dashboards'
+            'Scalable data pipeline architecture and development',
+            'Automated ETL/ELT processes with real-time streaming',
+            'Modern data warehouse and lake setup (Snowflake, BigQuery, etc.)',
+            'Advanced business intelligence and analytics dashboards',
+            'Data governance, quality, and lineage tracking',
+            'Machine learning model deployment and monitoring'
+          ],
+          link: '/it-services'
+        },
+        {
+          name: 'Quantum Computing Infrastructure',
+          blurb: 'Quantum computer setup, quantum algorithm development, and hybrid classical-quantum system integration. Pioneer the next generation of computing.',
+          price: '$50,000 – $500,000 project',
+          eta: '20–40 weeks',
+          bullets: [
+            'Quantum hardware setup and configuration',
+            'Quantum algorithm development and optimization',
+            'Hybrid classical-quantum system integration',
+            'Quantum error correction and fault tolerance',
+            'Performance benchmarking and optimization',
+            'Team training and knowledge transfer'
+          ],
+          link: '/it-services'
+        },
+        {
+          name: 'Metaverse & Web3 Infrastructure',
+          blurb: 'Virtual world development, NFT marketplace creation, and decentralized application architecture. Build the future of digital experiences.',
+          price: '$30,000 – $200,000 project',
+          eta: '12–24 weeks',
+          bullets: [
+            'Immersive virtual world and metaverse development',
+            'NFT marketplace creation and smart contract integration',
+            'Decentralized application (dApp) architecture',
+            'Blockchain integration and Web3 protocols',
+            'Virtual economy design and tokenomics',
+            'Cross-platform compatibility and interoperability'
           ],
           link: '/it-services'
         }
