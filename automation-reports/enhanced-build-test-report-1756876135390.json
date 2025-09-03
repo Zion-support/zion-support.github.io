@@ -1,0 +1,56 @@
+{
+  "timestamp": "2025-09-03T05:08:54.537Z",
+  "steps": [
+    {
+      "name": "ESLint Check",
+      "command": "npm run lint",
+      "startTime": 1756876134540,
+      "status": "failed",
+      "endTime": 1756876134631,
+      "duration": 91,
+      "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
+    },
+    {
+      "name": "TypeScript Type Check",
+      "command": "npm run type-check",
+      "startTime": 1756876134631,
+      "status": "failed",
+      "endTime": 1756876134713,
+      "duration": 82,
+      "error": "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: tsc: not found\n"
+    },
+    {
+      "name": "Next.js Build",
+      "command": "npm run build",
+      "startTime": 1756876134713,
+      "status": "failed",
+      "endTime": 1756876134875,
+      "duration": 162,
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
+    },
+    {
+      "name": "Jest Tests",
+      "command": "npm test",
+      "startTime": 1756876134876,
+      "status": "failed",
+      "endTime": 1756876134952,
+      "duration": 76,
+      "error": "Command failed: npm test\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n"
+    },
+    {
+      "name": "Security Audit",
+      "command": "npm audit --audit-level=moderate",
+      "startTime": 1756876134953,
+      "status": "success",
+      "endTime": 1756876135389,
+      "duration": 436,
+      "output": "found 0 vulnerabilities\n"
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "passed": 1,
+    "failed": 4,
+    "warnings": 0
+  }
+}

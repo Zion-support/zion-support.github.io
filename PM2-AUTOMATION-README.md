@@ -86,26 +86,31 @@ pm2 status
 ## Error Fixer Details
 
 ### Console Error Fixer
+
 - **Frequency**: Every 15 minutes
 - **Purpose**: Detects and fixes console.log, console.error, etc.
 - **Logs**: `logs/console-error-fixer.log`
 
 ### TypeScript Error Fixer
+
 - **Frequency**: Every 45 minutes
 - **Purpose**: Fixes TypeScript type errors, import issues, property access
 - **Logs**: `logs/typescript-error-fixer.log`
 
 ### JSX Error Fixer
+
 - **Frequency**: Every 40 minutes
 - **Purpose**: Fixes JSX syntax errors, closing tags, expressions
 - **Logs**: `logs/jsx-error-fixer.log`
 
 ### Comprehensive Error Fixer
+
 - **Frequency**: Every 30 minutes
 - **Purpose**: Runs multiple checks and applies auto-fixes
 - **Logs**: `logs/comprehensive-error-fixer.log`
 
 ### Master Error Fixer
+
 - **Frequency**: Every hour
 - **Purpose**: Coordinates all fixers, ensures system health
 - **Logs**: `logs/master-error-fixer.log`
@@ -113,12 +118,14 @@ pm2 status
 ## Log Management
 
 ### Log Rotation
+
 - **Max Size**: 10MB per log file
 - **Retention**: 30 log files
 - **Compression**: Enabled
 - **Format**: YYYY-MM-DD_HH-mm-ss
 
 ### Log Locations
+
 - All logs are stored in the `logs/` directory
 - Each fixer has its own log file
 - Error logs are separated for easier debugging
@@ -126,10 +133,12 @@ pm2 status
 ## Configuration
 
 ### Environment Variables
+
 - `NODE_ENV`: Set to 'production' for production deployments
 - `AUTOMATION_INTERVAL`: Override default intervals (in milliseconds)
 
 ### PM2 Settings
+
 - **Auto-restart**: Enabled for all processes
 - **Memory limits**: 512MB for fixers, 1GB for main apps
 - **Watch mode**: Disabled (processes restart on completion)
@@ -139,16 +148,19 @@ pm2 status
 ### Common Issues
 
 1. **PM2 not found**
+
    ```bash
    npm install -g pm2
    ```
 
 2. **Permission denied on startup script**
+
    ```bash
    chmod +x start-automation.sh
    ```
 
 3. **Processes not starting**
+
    ```bash
    pm2 kill
    pm2 start ecosystem.config.cjs
@@ -190,6 +202,7 @@ pm2 start ecosystem.config.cjs --only typescript-error-fixer
 ## Production Deployment
 
 ### Startup Script
+
 The system automatically sets up PM2 to start on system boot:
 
 ```bash
@@ -198,6 +211,7 @@ pm2 save
 ```
 
 ### Monitoring
+
 - Use `pm2 monit` for real-time monitoring
 - Set up external monitoring for PM2 processes
 - Configure log aggregation for centralized logging
@@ -212,6 +226,7 @@ pm2 save
 ## Support
 
 For issues with the automation system:
+
 1. Check PM2 status: `pm2 status`
 2. Review logs: `pm2 logs`
 3. Restart processes: `pm2 restart all`

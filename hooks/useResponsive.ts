@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 interface ResponsiveState {
@@ -20,7 +21,7 @@ const useResponsive = (): ResponsiveState => {
   });
 
   useEffect(() => {
-    const updateDimensions = () => {
+    const updateState = () => {
       const width = window.innerWidth;
       const height = window.innerHeight;
       
@@ -34,13 +35,15 @@ const useResponsive = (): ResponsiveState => {
       });
     };
 
-    updateDimensions();
-    window.addEventListener('resize', updateDimensions);
+    updateState();
+    window.addEventListener('resize', updateState);
     
-    return () => window.removeEventListener('resize', updateDimensions);
+    return () => window.removeEventListener('resize', updateState);
   }, []);
 
   return state;
 };
 
 export default useResponsive;
+=======
+>>>>>>> main
