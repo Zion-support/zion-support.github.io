@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Service finder utility for searching and filtering services
 
 export interface Service {
@@ -37,7 +38,7 @@ export function findServicesByTag(
   for (const arr of allServiceArrays) {
     for (const s of arr) {
       if (s && s.tags && Array.isArray(s.tags)) {
-        const hasTag = s.tags.some(tag => 
+        const hasTag = s.tags.some(tag =>
           typeof tag === 'string' && tag.toLowerCase().includes(tagIncludes.toLowerCase())
         );
         if (hasTag) {
@@ -90,4 +91,7 @@ export function searchServices(
   }
   
   return results;
+=======
+// comment
+>>>>>>> main
 }

@@ -1,0 +1,1 @@
+export: function ApiLogs() { const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys() const [pageSize, setPageSize] = useState(25) const [currentPage, setCurrentPage] = useState(0) useEffect(() => { fetchApiLogs(pageSize, currentPage * pageSize) }, [pageSize, currentPage, fetchApiLogs])
